@@ -1,0 +1,40 @@
+:root {
+  color-scheme: light;
+  --color-canvas: #fbf3e8;
+  --color-canvas-deep: #f5e6d7;
+  --color-surface-raised: #fffaf4;
+  --color-surface-muted: #f2dfd0;
+  --color-text: #2d2525;
+  --color-text-muted: #6d5e5d;
+  --color-accent: #c94637;
+  --color-accent-strong: #a9312d;
+  --color-on-accent: #fffaf4;
+  --color-plum: #4c2539;
+  --color-plum-soft: #7f5265;
+  --color-border: #dbc9bb;
+  --color-success: #286b4a;
+  --color-warning: #8a5716;
+  --color-focus: #176f86;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.1rem, 1rem + 0.4vw, 1.35rem);
+  --text-xl: clamp(1.8rem, 1.25rem + 2.5vw, 3.5rem);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+  --shadow-card: 0 18px 50px rgb(77 38 56 / 8%);
+  --motion-fast: 160ms ease;
+  --motion-medium: 280ms ease;
+}

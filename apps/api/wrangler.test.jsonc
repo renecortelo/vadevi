@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "vadevi-api-test",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-08-11",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "vadevi-test",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+    },
+  ],
+  "vars": {
+    "APP_ENV": "local",
+    "APP_VERSION": "0.1.0",
+    "AI_PROVIDER": "none",
+    "FIREBASE_AUTH_EMULATOR_HOST": "127.0.0.1:9099",
+    "FIREBASE_PROJECT_ID": "demo-vadevi",
+  },
+}

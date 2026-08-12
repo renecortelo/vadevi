@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Va de Vi placeholder mark">
+  <rect width="512" height="512" rx="128" fill="#fbf3e8"/>
+  <circle cx="256" cy="256" r="172" fill="#c94637"/>
+  <path d="M168 156h52l36 178 36-178h52l-58 232h-60z" fill="#fffaf4"/>
+</svg>

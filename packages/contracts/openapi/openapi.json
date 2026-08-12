@@ -1,0 +1,332 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Va de Vi API",
+    "version": "0.1.0",
+    "description": "Space-scoped API contracts for the private Va de Vi application."
+  },
+  "components": {
+    "securitySchemes": {
+      "FirebaseBearer": {
+        "bearerFormat": "Firebase ID token",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "ok"
+                ]
+              },
+              "service": {
+                "type": "string",
+                "enum": [
+                  "vadevi-api"
+                ]
+              },
+              "version": {
+                "type": "string",
+                "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[a-z0-9.-]+)?$/i"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "status",
+              "service",
+              "version",
+              "timestamp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "BootstrapResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "features": {
+                "type": "object",
+                "properties": {
+                  "assistant": {
+                    "type": "boolean"
+                  },
+                  "externalResearch": {
+                    "type": "boolean"
+                  },
+                  "priceLookup": {
+                    "type": "boolean"
+                  },
+                  "voiceInput": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "assistant",
+                  "externalResearch",
+                  "priceLookup",
+                  "voiceInput"
+                ],
+                "additionalProperties": false
+              },
+              "spaces": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120
+                    },
+                    "role": {
+                      "type": "string",
+                      "enum": [
+                        "owner",
+                        "admin",
+                        "member"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "personal",
+                        "couple",
+                        "group"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name",
+                    "role",
+                    "type"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "user": {
+                "type": "object",
+                "properties": {
+                  "activeSpaceId": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "displayName": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "preferredLocale": {
+                    "type": "string",
+                    "enum": [
+                      "ca",
+                      "es",
+                      "fr",
+                      "en",
+                      "it",
+                      "pt-PT",
+                      "nl",
+                      "de"
+                    ]
+                  }
+                },
+                "required": [
+                  "activeSpaceId",
+                  "displayName",
+                  "id",
+                  "preferredLocale"
+                ],
+                "additionalProperties": false
+              },
+              "versions": {
+                "type": "object",
+                "properties": {
+                  "api": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "i18nCatalog": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "tastingOntology": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "api",
+                  "i18nCatalog",
+                  "tastingOntology"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "features",
+              "spaces",
+              "user",
+              "versions"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "ErrorEnvelope": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "$ref": "#/components/schemas/ErrorCode"
+              },
+              "message": {
+                "type": "string",
+                "minLength": 1
+              },
+              "requestId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "details": {
+                "type": "object",
+                "additionalProperties": {
+                  "nullable": true
+                }
+              }
+            },
+            "required": [
+              "code",
+              "message",
+              "requestId"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "ErrorCode": {
+        "type": "string",
+        "enum": [
+          "AUTH_REQUIRED",
+          "AUTH_INVALID",
+          "FORBIDDEN",
+          "NOT_FOUND",
+          "VALIDATION_FAILED",
+          "VERSION_CONFLICT",
+          "IDEMPOTENCY_CONFLICT",
+          "RATE_LIMITED",
+          "QUOTA_EXHAUSTED",
+          "FEATURE_UNAVAILABLE",
+          "EXTERNAL_SOURCE_UNAVAILABLE",
+          "MEDIA_REJECTED",
+          "SYNC_CURSOR_EXPIRED",
+          "INVITE_INVALID",
+          "INVITE_EXPIRED",
+          "INTERNAL_ERROR"
+        ]
+      }
+    },
+    "parameters": {}
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "getHealth",
+        "tags": [
+          "Runtime"
+        ],
+        "summary": "Check the API process without authentication",
+        "responses": {
+          "200": {
+            "description": "The API process is available.",
+            "headers": {
+              "X-Request-Id": {
+                "description": "Opaque request correlation identifier.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/bootstrap": {
+      "get": {
+        "operationId": "getBootstrap",
+        "tags": [
+          "Session"
+        ],
+        "summary": "Create or load the authenticated user's private bootstrap state",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The authenticated user, active memberships, and runtime feature state.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BootstrapResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "A valid Firebase ID token is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

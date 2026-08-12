@@ -1,0 +1,39 @@
+{
+  "appName": "Va de Vi",
+  "skipToContent": "Ga naar de inhoud",
+  "previewSpace": "Persoonlijke ruimte · lokale preview",
+  "phaseEyebrow": "Je persoonlijke wijngeheugen",
+  "welcomeTitle": "Een plek voor elke fles die het onthouden waard is.",
+  "welcomeBody": "Leg een wijn in een oogwenk vast, houd ieders mening apart en maak je eigen geschiedenis steeds waardevoller.",
+  "quickLog": "Wijn vastleggen",
+  "exploreMemory": "Geheugen verkennen",
+  "foundationTitle": "Het eerste glas",
+  "foundationBody": "De basis van fase 0 draait: een offline-klare interface, een getypeerd API-contract en lokale ontwikkeling zonder productiegegevens.",
+  "healthChecking": "Lokale API controleren…",
+  "healthReady": "Lokale API gereed",
+  "healthUnavailable": "API niet beschikbaar · de interface blijft offline veilig",
+  "offline": "Offline",
+  "online": "Online",
+  "updateReady": "Er staat een nieuwe versie klaar.",
+  "reload": "Vernieuwen",
+  "dismiss": "Niet nu",
+  "nav": {
+    "home": "Home",
+    "log": "Vastleggen",
+    "sessions": "Sessies",
+    "memory": "Geheugen",
+    "assistant": "Vicenç"
+  },
+  "pages": {
+    "logTitle": "Snel vastleggen",
+    "logBody": "Handmatige wijninvoer komt in fase 2. Deze route maakt al deel uit van de offline interface.",
+    "sessionsTitle": "Proefsessies",
+    "sessionsBody": "Gedeelde proeverijen bewaren de afzonderlijke notitie van elke deelnemer.",
+    "memoryTitle": "Wijngeheugen",
+    "memoryBody": "Je persoonlijke kaarten, tabel, tijdlijn, filters en export komen hier.",
+    "assistantTitle": "Vicenç Vinyes",
+    "assistantBody": "De bronbewuste begeleider komt achter servergeautoriseerde hulpmiddelen; deze basis simuleert geen assistent.",
+    "notFoundTitle": "Die pagina ligt niet in de kelder.",
+    "notFoundBody": "Ga terug naar home en kies een ander pad."
+  }
+}

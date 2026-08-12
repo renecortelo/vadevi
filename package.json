@@ -1,0 +1,47 @@
+{
+  "name": "va-de-vi",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Private, collaborative wine memory and tasting PWA.",
+  "packageManager": "pnpm@11.16.0",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=11.0.0"
+  },
+  "scripts": {
+    "build": "pnpm --filter @vadevi/web build && pnpm --filter @vadevi/api build",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm openapi:check && pnpm i18n:check && pnpm build",
+    "dev": "concurrently -k -n api,web -c magenta,cyan \"pnpm dev:api\" \"pnpm dev:web\"",
+    "dev:api": "wrangler dev --config wrangler.example.jsonc --local --port 8787",
+    "dev:auth": "firebase emulators:start --only auth --project demo-vadevi",
+    "dev:web": "pnpm --filter @vadevi/web dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "i18n:check": "tsx scripts/verify-i18n.ts",
+    "lint": "eslint \"apps/**/*.{ts,tsx}\" \"packages/**/*.{ts,tsx}\" \"scripts/**/*.ts\" --max-warnings 0",
+    "openapi:check": "tsx scripts/export-openapi.ts --check",
+    "openapi:generate": "tsx scripts/export-openapi.ts",
+    "test": "pnpm --workspace-concurrency=1 -r --if-present test",
+    "test:auth-emulator": "firebase emulators:exec --only auth --project demo-vadevi \"tsx scripts/probe-auth-emulator.ts\"",
+    "typecheck": "tsc --noEmit --project tsconfig.scripts.json && pnpm -r --if-present typecheck",
+    "validate:env": "tsx scripts/validate-env.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "*",
+    "@types/node": "*",
+    "concurrently": "*",
+    "dotenv": "*",
+    "eslint": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-react-refresh": "*",
+    "firebase-tools": "*",
+    "globals": "*",
+    "prettier": "*",
+    "tsx": "*",
+    "typescript": "6.0.3",
+    "typescript-eslint": "*",
+    "wrangler": "*",
+    "zod": "*"
+  }
+}

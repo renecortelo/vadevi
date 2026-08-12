@@ -1,0 +1,39 @@
+{
+  "appName": "Va de Vi",
+  "skipToContent": "Skip to content",
+  "previewSpace": "Personal space · local preview",
+  "phaseEyebrow": "Your private wine memory",
+  "welcomeTitle": "A place for every bottle worth remembering.",
+  "welcomeBody": "Log a wine in a moment, keep each person's opinion distinct, and let your own history become useful over time.",
+  "quickLog": "Log a wine",
+  "exploreMemory": "Explore memory",
+  "foundationTitle": "The first pour",
+  "foundationBody": "The Phase 0 foundation is running: an offline-ready shell, a typed API contract, and local-first development without production credentials.",
+  "healthChecking": "Checking the local API…",
+  "healthReady": "Local API ready",
+  "healthUnavailable": "API unavailable · your app shell is still safe offline",
+  "offline": "Offline",
+  "online": "Online",
+  "updateReady": "A fresh version is ready.",
+  "reload": "Reload",
+  "dismiss": "Not now",
+  "nav": {
+    "home": "Home",
+    "log": "Log",
+    "sessions": "Sessions",
+    "memory": "Memory",
+    "assistant": "Vicenç"
+  },
+  "pages": {
+    "logTitle": "Quick log",
+    "logBody": "Manual wine capture arrives in Phase 2. This route is already part of the offline app shell.",
+    "sessionsTitle": "Tasting sessions",
+    "sessionsBody": "Shared flights will preserve each participant's individual note.",
+    "memoryTitle": "Wine Memory",
+    "memoryBody": "Your private cards, table, timeline, filters, and export will live here.",
+    "assistantTitle": "Vicenç Vinyes",
+    "assistantBody": "The evidence-aware companion arrives behind server-authorized tools; no assistant is simulated in this foundation.",
+    "notFoundTitle": "That page is not in the cellar.",
+    "notFoundBody": "Return home and choose another path."
+  }
+}

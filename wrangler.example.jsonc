@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vadevi-local-placeholder",
+  "main": "apps/api/src/worker.ts",
+  "compatibility_date": "2026-08-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "apps/web/dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/health", "/openapi.json"],
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "vadevi-local",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "vadevi-local-media",
+    },
+  ],
+  "vars": {
+    "APP_ENV": "local",
+    "APP_VERSION": "0.1.0",
+    "AI_PROVIDER": "none",
+    "FIREBASE_AUTH_EMULATOR_HOST": "127.0.0.1:9099",
+    "FIREBASE_PROJECT_ID": "demo-vadevi",
+  },
+}

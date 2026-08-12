@@ -1,0 +1,39 @@
+{
+  "appName": "Va de Vi",
+  "skipToContent": "Aller au contenu",
+  "previewSpace": "Espace personnel · aperçu local",
+  "phaseEyebrow": "Votre mémoire privée du vin",
+  "welcomeTitle": "Un lieu pour chaque bouteille qui mérite d'être retenue.",
+  "welcomeBody": "Enregistrez un vin en un instant, gardez l'avis de chacun distinct et rendez votre propre histoire utile avec le temps.",
+  "quickLog": "Enregistrer un vin",
+  "exploreMemory": "Explorer la mémoire",
+  "foundationTitle": "Le premier verre",
+  "foundationBody": "La base de la phase 0 fonctionne : une interface prête hors ligne, un contrat d'API typé et un développement local sans identifiants de production.",
+  "healthChecking": "Vérification de l'API locale…",
+  "healthReady": "API locale prête",
+  "healthUnavailable": "API indisponible · l'interface reste sûre hors ligne",
+  "offline": "Hors ligne",
+  "online": "En ligne",
+  "updateReady": "Une nouvelle version est prête.",
+  "reload": "Actualiser",
+  "dismiss": "Plus tard",
+  "nav": {
+    "home": "Accueil",
+    "log": "Ajouter",
+    "sessions": "Sessions",
+    "memory": "Mémoire",
+    "assistant": "Vicenç"
+  },
+  "pages": {
+    "logTitle": "Ajout rapide",
+    "logBody": "La saisie manuelle des vins arrivera en phase 2. Cette route fait déjà partie de l'interface hors ligne.",
+    "sessionsTitle": "Sessions de dégustation",
+    "sessionsBody": "Les dégustations partagées préserveront la note individuelle de chaque participant.",
+    "memoryTitle": "Mémoire du vin",
+    "memoryBody": "Vos cartes privées, tableau, chronologie, filtres et exportation seront ici.",
+    "assistantTitle": "Vicenç Vinyes",
+    "assistantBody": "Le compagnon attentif aux preuves arrivera via des outils autorisés par le serveur ; cette base ne simule aucun assistant.",
+    "notFoundTitle": "Cette page n'est pas dans la cave.",
+    "notFoundBody": "Revenez à l'accueil et choisissez un autre chemin."
+  }
+}

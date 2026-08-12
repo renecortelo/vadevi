@@ -1,0 +1,39 @@
+{
+  "appName": "Va de Vi",
+  "skipToContent": "Vai al contenuto",
+  "previewSpace": "Spazio personale · anteprima locale",
+  "phaseEyebrow": "La tua memoria privata del vino",
+  "welcomeTitle": "Un posto per ogni bottiglia che vale la pena ricordare.",
+  "welcomeBody": "Registra un vino in un attimo, mantieni distinta l'opinione di ciascuno e rendi utile la tua storia nel tempo.",
+  "quickLog": "Registra un vino",
+  "exploreMemory": "Esplora la memoria",
+  "foundationTitle": "Il primo calice",
+  "foundationBody": "La base della fase 0 è attiva: un'interfaccia pronta offline, un contratto API tipizzato e sviluppo locale senza credenziali di produzione.",
+  "healthChecking": "Controllo dell'API locale…",
+  "healthReady": "API locale pronta",
+  "healthUnavailable": "API non disponibile · l'interfaccia resta sicura offline",
+  "offline": "Offline",
+  "online": "Online",
+  "updateReady": "È pronta una nuova versione.",
+  "reload": "Aggiorna",
+  "dismiss": "Non ora",
+  "nav": {
+    "home": "Home",
+    "log": "Registra",
+    "sessions": "Sessioni",
+    "memory": "Memoria",
+    "assistant": "Vicenç"
+  },
+  "pages": {
+    "logTitle": "Registro rapido",
+    "logBody": "L'inserimento manuale dei vini arriverà nella fase 2. Questa pagina fa già parte dell'interfaccia offline.",
+    "sessionsTitle": "Sessioni di degustazione",
+    "sessionsBody": "Le degustazioni condivise conserveranno la nota individuale di ogni partecipante.",
+    "memoryTitle": "Memoria del vino",
+    "memoryBody": "Qui troverai schede private, tabella, cronologia, filtri ed esportazione.",
+    "assistantTitle": "Vicenç Vinyes",
+    "assistantBody": "Il compagno attento alle fonti arriverà tramite strumenti autorizzati dal server; questa base non simula alcun assistente.",
+    "notFoundTitle": "Questa pagina non è in cantina.",
+    "notFoundBody": "Torna alla home e scegli un altro percorso."
+  }
+}

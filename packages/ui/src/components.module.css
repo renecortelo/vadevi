@@ -1,0 +1,60 @@
+.button {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  gap: var(--space-2);
+  justify-content: center;
+  min-block-size: 2.75rem;
+  padding: 0.65rem 1.1rem;
+  text-decoration: none;
+  transition:
+    background-color var(--motion-fast),
+    border-color var(--motion-fast),
+    color var(--motion-fast),
+    transform var(--motion-fast);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.buttonPrimary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.buttonPrimary:hover {
+  background: var(--color-accent-strong);
+}
+
+.buttonSecondary {
+  background: var(--color-surface-raised);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.buttonSecondary:hover {
+  border-color: var(--color-plum-soft);
+}
+
+.card {
+  background: color-mix(in srgb, var(--color-surface-raised) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+}

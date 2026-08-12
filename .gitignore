@@ -1,0 +1,29 @@
+# Dependencies and build output
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Local provider and emulator state
+.wrangler/
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Temporary and editor files
+tmp/
+.DS_Store
+Thumbs.db
+*.log
+*.tsbuildinfo
