@@ -20,8 +20,8 @@ Implemented:
 
 Phase 0 exit evidence captured on 2026-08-12:
 
-- a clean dependency materialization completed from `pnpm-lock.yaml` with no production credentials
-- formatting, lint, strict typechecks, 13 tests, generated-contract checks, i18n checks, PWA build, and Worker dry-run all pass
+- a true clone of baseline commit `64a691a` installed from `pnpm-lock.yaml` with no production credentials
+- formatting, lint, strict typechecks, 16 tests, generated-contract checks, i18n checks, PWA build, and Worker dry-run all pass in that clone
 - no real Firebase/Cloudflare identifier or secret is required by the local configuration
 - `/health` passes both contract and Workers-runtime tests
 - the installed PWA shell reloads after the preview server is stopped
