@@ -21,8 +21,36 @@ body {
 }
 
 button,
+a,
+input,
+select {
+  font: inherit;
+}
+
+button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:disabled,
+select:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.sr-only {
+  block-size: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
 }
 
 :focus-visible {
@@ -81,14 +109,33 @@ a {
   gap: var(--space-1);
 }
 
-.space-chip {
+.space-switcher {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.space-switcher select {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
   color: var(--color-plum);
   font-size: var(--text-xs);
-  font-weight: 700;
-  max-inline-size: 13rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-weight: 750;
+  max-inline-size: 14rem;
+  min-block-size: 2.3rem;
+  padding: 0.35rem 2rem 0.35rem 0.8rem;
+}
+
+.text-button {
+  background: transparent;
+  border: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  padding: var(--space-1);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .connection-status {
@@ -159,6 +206,124 @@ a {
   margin-inline: auto;
   max-inline-size: 74rem;
   padding: clamp(var(--space-5), 4vw, var(--space-7)) var(--space-4) calc(var(--space-7) + 1rem);
+}
+
+.access-page {
+  align-items: center;
+  display: grid;
+  min-block-size: 100vh;
+  padding: clamp(var(--space-4), 6vw, var(--space-7));
+  place-items: center;
+}
+
+.access-card {
+  background: rgb(255 250 244 / 92%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 28px 90px rgb(76 37 57 / 12%);
+  inline-size: min(100%, 34rem);
+  padding: clamp(var(--space-5), 7vw, var(--space-7));
+}
+
+.access-card--signin {
+  text-align: center;
+}
+
+.access-card h1 {
+  font-size: clamp(2.1rem, 8vw, 4.2rem);
+}
+
+.access-card__wordmark {
+  color: var(--color-plum);
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-block-end: var(--space-7);
+}
+
+.access-card--signin .eyebrow,
+.access-card--signin p {
+  margin-inline: auto;
+}
+
+.access-card--signin > p:not(.access-card__wordmark, .eyebrow, .local-note, .form-error) {
+  max-inline-size: 27rem;
+}
+
+.primary-button {
+  align-items: center;
+  background: var(--color-accent);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  color: var(--color-on-accent);
+  display: inline-flex;
+  font-weight: 800;
+  gap: var(--space-3);
+  justify-content: center;
+  min-block-size: 3rem;
+  padding: 0.75rem 1.35rem;
+}
+
+.access-card--signin .primary-button {
+  margin-block-start: var(--space-3);
+}
+
+.google-mark {
+  align-items: center;
+  background: white;
+  border-radius: 50%;
+  color: #4285f4;
+  display: inline-flex;
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+  block-size: 1.6rem;
+  inline-size: 1.6rem;
+  justify-content: center;
+}
+
+.local-note {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  margin-block: var(--space-4) 0;
+}
+
+.form-error {
+  color: var(--color-danger, #9f2737);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  margin: 0;
+}
+
+.profile-form {
+  display: grid;
+  gap: var(--space-3);
+  margin-block-start: var(--space-6);
+}
+
+.profile-form label {
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 750;
+}
+
+.profile-form input,
+.profile-form select {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  min-block-size: 3rem;
+  padding: 0.7rem 0.85rem;
+}
+
+.profile-form label:not(:first-child) {
+  margin-block-start: var(--space-2);
+}
+
+.profile-form .primary-button {
+  justify-self: start;
+  margin-block-start: var(--space-4);
 }
 
 .home-page {
@@ -334,6 +499,10 @@ p {
     flex-direction: row;
     inline-size: 100%;
     justify-content: space-between;
+  }
+
+  .space-switcher {
+    align-items: flex-start;
   }
 
   .primary-nav {

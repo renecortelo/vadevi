@@ -1,31 +1,82 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import type { ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router";
 import { beforeAll, describe, expect, it } from "vitest";
 
+import { AuthenticatedRoutes } from "./App";
 import { i18n } from "./i18n";
-import { App } from "./App";
+import { OnboardingPage } from "./pages/OnboardingPage";
+import { SessionContext, type SessionContextValue } from "./session/SessionContext";
 
 beforeAll(async () => {
   await i18n.changeLanguage("en");
 });
 
-function renderRoute(route: string): string {
+const session: SessionContextValue = {
+  bootstrap: {
+    data: {
+      features: {
+        assistant: false,
+        externalResearch: false,
+        priceLookup: false,
+        voiceInput: false,
+      },
+      spaces: [
+        {
+          id: "01J00000000000000000000001",
+          name: "Personal space",
+          role: "owner",
+          type: "personal",
+        },
+        {
+          id: "01J00000000000000000000002",
+          name: "Friday table",
+          role: "member",
+          type: "group",
+        },
+      ],
+      user: {
+        activeSpaceId: "01J00000000000000000000001",
+        displayName: "René",
+        id: "01J00000000000000000000003",
+        onboardingComplete: true,
+        preferredLocale: "en",
+      },
+      versions: {
+        api: "1",
+        i18nCatalog: "2026.1",
+        tastingOntology: "2026.1",
+      },
+    },
+  },
+  isUpdating: false,
+  signOut: async () => undefined,
+  updateProfile: async () => session.bootstrap,
+};
+
+function renderWithSession(node: ReactNode, route = "/"): string {
   return renderToStaticMarkup(
     <QueryClientProvider client={new QueryClient()}>
       <MemoryRouter initialEntries={[route]}>
-        <App />
+        <SessionContext.Provider value={session}>{node}</SessionContext.Provider>
       </MemoryRouter>
     </QueryClientProvider>,
   );
 }
 
-describe("Phase 0 app shell", () => {
+function renderRoute(route: string): string {
+  return renderWithSession(<AuthenticatedRoutes />, route);
+}
+
+describe("authenticated app shell", () => {
   it("renders named primary navigation and the active Space", () => {
     const markup = renderRoute("/");
 
     expect(markup).toContain('<nav aria-label="Primary"');
-    expect(markup).toContain("Personal space · local preview");
+    expect(markup).toContain('<label class="sr-only" for="active-space">Active Space</label>');
+    expect(markup).toContain("Personal space");
+    expect(markup).toContain("Friday table");
     expect(markup).toContain("A place for every bottle worth remembering.");
   });
 
@@ -35,5 +86,15 @@ describe("Phase 0 app shell", () => {
     expect(markup).toContain("Wine Memory");
     expect(markup).toMatch(/<a[^>]*aria-current="page"[^>]*href="\/memory"/);
     expect(markup).toContain("Your private cards, table, timeline, filters, and export");
+  });
+
+  it("offers every supported locale in resumable onboarding", () => {
+    const markup = renderWithSession(<OnboardingPage />);
+
+    expect(markup).toContain('for="display-name"');
+    expect(markup).toContain('value="René"');
+    expect(markup).toContain("Català");
+    expect(markup).toContain("Português");
+    expect(markup.match(/<option/g)).toHaveLength(8);
   });
 });

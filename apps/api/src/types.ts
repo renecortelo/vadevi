@@ -11,7 +11,9 @@ export type WorkerBindings = {
   APP_VERSION?: string;
   AI_PROVIDER?: "none" | "cloudflare";
   FIREBASE_AUTH_EMULATOR_HOST?: string;
+  FIREBASE_AUTH_DOMAIN?: string;
   FIREBASE_PROJECT_ID?: string;
+  FIREBASE_WEB_API_KEY?: string;
   DB?: D1Database;
   MEDIA?: R2Bucket;
   ASSETS?: Fetcher;

@@ -25,7 +25,9 @@ const EnvironmentSchema = z
       .default("0.1.0"),
     AI_PROVIDER: z.enum(["none", "cloudflare"]).default("none"),
     FIREBASE_AUTH_EMULATOR_HOST: z.string().optional(),
+    FIREBASE_AUTH_DOMAIN: z.string().min(1).default("localhost"),
     FIREBASE_PROJECT_ID: z.string().min(1).default("demo-vadevi"),
+    FIREBASE_WEB_API_KEY: z.string().min(1).default("local-emulator-placeholder"),
     VITE_API_BASE_URL: z.string().startsWith("/").default("/api/v1"),
     VITE_FIREBASE_USE_EMULATOR: z.enum(["true", "false"]).default("true"),
   })

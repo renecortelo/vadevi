@@ -1,5 +1,6 @@
 import { BootstrapResponseSchema, ErrorEnvelopeSchema } from "@vadevi/contracts";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
+import { ulid } from "ulid";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { emulatorIdToken } from "./fixtures/firebase-token";
@@ -74,12 +75,109 @@ describe("Workers runtime", () => {
       `SELECT
         (SELECT COUNT(*) FROM users WHERE firebase_uid = ?) AS users,
         (SELECT COUNT(*) FROM spaces WHERE type = 'personal' AND deleted_at IS NULL) AS spaces,
-        (SELECT COUNT(*) FROM space_memberships WHERE status = 'active') AS memberships,
+        (SELECT COUNT(*)
+          FROM space_memberships membership
+          JOIN spaces space ON space.id = membership.space_id
+          WHERE membership.status = 'active' AND space.type = 'personal') AS memberships,
         (SELECT COUNT(*) FROM audit_events WHERE action = 'personal_space.created') AS audits`,
     )
       .bind("firebase-emulator-user-phase-1")
       .first<{ audits: number; memberships: number; spaces: number; users: number }>();
 
     expect(counts).toEqual({ audits: 1, memberships: 1, spaces: 1, users: 1 });
+  });
+
+  it("rejects empty updates and Spaces outside the user's memberships", async () => {
+    const token = emulatorIdToken();
+    await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    const emptyResponse = await SELF.fetch("https://vadevi.test/api/v1/me", {
+      body: JSON.stringify({}),
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    });
+    const emptyBody = ErrorEnvelopeSchema.parse(await emptyResponse.json());
+
+    expect(emptyResponse.status).toBe(400);
+    expect(emptyBody.error.code).toBe("VALIDATION_FAILED");
+
+    const unavailableResponse = await SELF.fetch("https://vadevi.test/api/v1/me", {
+      body: JSON.stringify({ activeSpaceId: ulid() }),
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    });
+    const unavailableBody = ErrorEnvelopeSchema.parse(await unavailableResponse.json());
+
+    expect(unavailableResponse.status).toBe(404);
+    expect(unavailableBody.error.code).toBe("NOT_FOUND");
+  });
+
+  it("completes onboarding and switches only to an active Space membership", async () => {
+    const token = emulatorIdToken();
+    const bootstrapResponse = await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    const bootstrap = BootstrapResponseSchema.parse(await bootstrapResponse.json());
+    const groupSpaceId = ulid();
+    const now = new Date().toISOString();
+
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO spaces (
+          id, type, name, default_locale, created_by_user_id, version,
+          created_at, updated_at, deleted_at
+        ) VALUES (?, 'group', 'Friday table', 'en', ?, 1, ?, ?, NULL)`,
+      ).bind(groupSpaceId, bootstrap.data.user.id, now, now),
+      env.DB.prepare(
+        `INSERT INTO space_memberships (
+          space_id, user_id, role, status, joined_at, removed_at, version, created_at, updated_at
+        ) VALUES (?, ?, 'owner', 'active', ?, NULL, 1, ?, ?)`,
+      ).bind(groupSpaceId, bootstrap.data.user.id, now, now, now),
+    ]);
+
+    const response = await SELF.fetch("https://vadevi.test/api/v1/me", {
+      body: JSON.stringify({
+        activeSpaceId: groupSpaceId,
+        completeOnboarding: true,
+        displayName: "René",
+        preferredLocale: "ca",
+      }),
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    });
+    const body = BootstrapResponseSchema.parse(await response.json());
+
+    expect(response.status).toBe(200);
+    expect(body.data.user).toMatchObject({
+      activeSpaceId: groupSpaceId,
+      displayName: "René",
+      onboardingComplete: true,
+      preferredLocale: "ca",
+    });
+    expect(body.data.spaces[0]).toMatchObject({
+      id: groupSpaceId,
+      name: "Friday table",
+      role: "owner",
+      type: "group",
+    });
+
+    const events = await env.DB.prepare(
+      `SELECT
+        (SELECT COUNT(*) FROM audit_events WHERE action = 'profile.updated') AS audits,
+        (SELECT COUNT(*) FROM change_events WHERE resource_type = 'user_profile') AS changes`,
+    ).first<{ audits: number; changes: number }>();
+
+    expect(events).toEqual({ audits: 1, changes: 1 });
   });
 });

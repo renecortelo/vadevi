@@ -30,20 +30,32 @@ Automated Playwright/axe route coverage and service-worker update recovery remai
 
 ## Current milestone: Phase 1 — identity, onboarding, and Spaces
 
-Completed first vertical slice:
+Completed identity/onboarding vertical slice:
 
 - Firebase bearer-token middleware with full production claim/signature verification
 - explicitly local-only support for unsigned Auth Emulator tokens under `demo-*` configuration
 - non-interactive real Auth Emulator token probe with no Firebase login
+- pinned Firebase Web SDK with Google redirect sign-in and Auth Emulator account flow
+- public, validated `/runtime-config` with non-secret Firebase web configuration and feature flags
 - generated `/api/v1/me/bootstrap` contract and authenticated Worker route
 - D1 user upsert, unique personal Space, owner membership, active-Space selection, change event, and audit event in one batch
 - Workers-runtime proof that bootstrap retries create exactly one user, Space, membership, and audit event
+- resumable display-name/locale onboarding backed by `PATCH /api/v1/me`
+- membership-validated active-Space updates with change and audit events
+- accessible authenticated Space switcher, one forced token-refresh retry, sign-out, and eight localized auth/onboarding catalogs
+
+Evidence captured on 2026-08-13:
+
+- the full `pnpm check` gate passes: formatting, lint, strict typechecks, 20 tests, generated-contract checks, all eight catalogs, PWA build, and Worker dry-run
+- a real browser flow passes through Firebase Auth Emulator Google redirect, local account creation, first-run profile, locale change, reload/resume, persistent authorized Space switching, and sign-out
+- the sign-in UI remains functional at 320 CSS px
+- an unauthorized active-Space ID receives the same safe `404 NOT_FOUND` response and cannot change the stored preference
 
 Next:
 
-1. Build resumable onboarding and an active-Space switcher over the real bootstrap response.
-2. Add profile/locale and active-Space update commands.
-3. Prove the same-/other-Space/removed-member authorization matrix.
-4. Add couple/group creation and invitation links only after isolation is proven.
+1. Add couple/group creation with owner membership and auditable idempotency.
+2. Add hashed, expiring, single-use invitation preview/acceptance links.
+3. Complete the same-/other-Space/removed-member authorization matrix across new Space routes.
+4. Add route-level component/accessibility coverage for creation and invitation acceptance.
 
-The owner/admin/member invitation flow follows only after bootstrap isolation is proven.
+Bootstrap and active-Space isolation are now proven; the next slice can safely introduce the owner/admin/member invitation flow.

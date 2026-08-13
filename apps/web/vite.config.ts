@@ -53,6 +53,7 @@ export default defineConfig({
       "/api": "http://localhost:8787",
       "/health": "http://localhost:8787",
       "/openapi.json": "http://localhost:8787",
+      "/runtime-config": "http://localhost:8787",
     },
   },
 });

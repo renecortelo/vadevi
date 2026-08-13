@@ -1,6 +1,12 @@
+import type { BootstrapResponse } from "@vadevi/contracts";
 import { ConnectionStatus } from "./ConnectionStatus";
+import { useState } from "react";
 import { NavLink, Outlet } from "react-router";
 import { useTranslation } from "react-i18next";
+
+import { useSession } from "../session/SessionContext";
+
+type SpaceOption = BootstrapResponse["data"]["spaces"][number];
 
 const navigation = [
   { to: "/", key: "home", glyph: "⌂", end: true },
@@ -11,7 +17,18 @@ const navigation = [
 ] as const;
 
 export function AppShell() {
+  const { bootstrap, isUpdating, signOut, updateProfile } = useSession();
   const { t } = useTranslation();
+  const [switchError, setSwitchError] = useState(false);
+
+  async function switchSpace(activeSpaceId: string) {
+    setSwitchError(false);
+    try {
+      await updateProfile({ activeSpaceId });
+    } catch {
+      setSwitchError(true);
+    }
+  }
 
   return (
     <div className="app-shell">
@@ -24,8 +41,33 @@ export function AppShell() {
           {t("appName")}
         </NavLink>
         <div className="topbar__context">
-          <span className="space-chip">{t("previewSpace")}</span>
+          <div className="space-switcher">
+            <label className="sr-only" htmlFor="active-space">
+              {t("space.switchLabel")}
+            </label>
+            <select
+              aria-busy={isUpdating}
+              disabled={isUpdating}
+              id="active-space"
+              onChange={(event) => void switchSpace(event.target.value)}
+              value={bootstrap.data.user.activeSpaceId}
+            >
+              {bootstrap.data.spaces.map((space: SpaceOption) => (
+                <option key={space.id} value={space.id}>
+                  {space.name}
+                </option>
+              ))}
+            </select>
+            {switchError ? (
+              <span className="form-error" role="alert">
+                {t("space.switchError")}
+              </span>
+            ) : null}
+          </div>
           <ConnectionStatus />
+          <button className="text-button" onClick={() => void signOut()} type="button">
+            {t("auth.signOut")}
+          </button>
         </div>
       </header>
 

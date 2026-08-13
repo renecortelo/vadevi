@@ -55,6 +55,85 @@
         ],
         "additionalProperties": false
       },
+      "RuntimeConfigResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "appEnvironment": {
+                "type": "string",
+                "enum": [
+                  "local",
+                  "preview",
+                  "production"
+                ]
+              },
+              "firebase": {
+                "type": "object",
+                "properties": {
+                  "apiKey": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "authDomain": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "emulatorHost": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "projectId": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "apiKey",
+                  "authDomain",
+                  "projectId"
+                ],
+                "additionalProperties": false
+              },
+              "features": {
+                "type": "object",
+                "properties": {
+                  "assistant": {
+                    "type": "boolean"
+                  },
+                  "externalResearch": {
+                    "type": "boolean"
+                  },
+                  "priceLookup": {
+                    "type": "boolean"
+                  },
+                  "voiceInput": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "assistant",
+                  "externalResearch",
+                  "priceLookup",
+                  "voiceInput"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "appEnvironment",
+              "firebase",
+              "features"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
       "BootstrapResponse": {
         "type": "object",
         "properties": {
@@ -141,6 +220,9 @@
                     "type": "string",
                     "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
                   },
+                  "onboardingComplete": {
+                    "type": "boolean"
+                  },
                   "preferredLocale": {
                     "type": "string",
                     "enum": [
@@ -159,6 +241,7 @@
                   "activeSpaceId",
                   "displayName",
                   "id",
+                  "onboardingComplete",
                   "preferredLocale"
                 ],
                 "additionalProperties": false
@@ -258,6 +341,40 @@
           "INVITE_EXPIRED",
           "INTERNAL_ERROR"
         ]
+      },
+      "UpdateProfileRequest": {
+        "type": "object",
+        "properties": {
+          "activeSpaceId": {
+            "type": "string",
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "completeOnboarding": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "displayName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "preferredLocale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "es",
+              "fr",
+              "en",
+              "it",
+              "pt-PT",
+              "nl",
+              "de"
+            ]
+          }
+        },
+        "additionalProperties": false
       }
     },
     "parameters": {}
@@ -292,6 +409,27 @@
         }
       }
     },
+    "/runtime-config": {
+      "get": {
+        "operationId": "getRuntimeConfig",
+        "tags": [
+          "Runtime"
+        ],
+        "summary": "Get non-secret browser and feature configuration",
+        "responses": {
+          "200": {
+            "description": "Public environment, Firebase web, and feature configuration.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RuntimeConfigResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/me/bootstrap": {
       "get": {
         "operationId": "getBootstrap",
@@ -317,6 +455,72 @@
           },
           "401": {
             "description": "A valid Firebase ID token is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me": {
+      "patch": {
+        "operationId": "updateProfile",
+        "tags": [
+          "Session"
+        ],
+        "summary": "Update the authenticated profile or active Space",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated bootstrap state.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BootstrapResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The profile update is invalid.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "A valid Firebase ID token is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested active Space is not available to this user.",
             "content": {
               "application/json": {
                 "schema": {

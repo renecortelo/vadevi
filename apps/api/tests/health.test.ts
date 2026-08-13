@@ -1,4 +1,8 @@
-import { ErrorEnvelopeSchema, HealthResponseSchema } from "@vadevi/contracts";
+import {
+  ErrorEnvelopeSchema,
+  HealthResponseSchema,
+  RuntimeConfigResponseSchema,
+} from "@vadevi/contracts";
 import { describe, expect, it } from "vitest";
 
 import { createApi } from "../src/app";
@@ -28,5 +32,41 @@ describe("runtime routes", () => {
     });
 
     expect(response.headers.get("X-Request-Id")).toMatch(/^[0-9A-HJKMNP-TV-Z]{26}$/);
+  });
+
+  it("serves only public browser runtime configuration", async () => {
+    const response = await createApi().request(
+      "/runtime-config",
+      {},
+      {
+        AI_PROVIDER: "none",
+        APP_ENV: "local",
+        FIREBASE_AUTH_DOMAIN: "localhost",
+        FIREBASE_AUTH_EMULATOR_HOST: "127.0.0.1:9099",
+        FIREBASE_PROJECT_ID: "demo-vadevi",
+        FIREBASE_WEB_API_KEY: "local-emulator-placeholder",
+      },
+    );
+    const body = RuntimeConfigResponseSchema.parse(await response.json());
+
+    expect(response.status).toBe(200);
+    expect(body).toEqual({
+      data: {
+        appEnvironment: "local",
+        features: {
+          assistant: false,
+          externalResearch: false,
+          priceLookup: false,
+          voiceInput: false,
+        },
+        firebase: {
+          apiKey: "local-emulator-placeholder",
+          authDomain: "localhost",
+          emulatorHost: "127.0.0.1:9099",
+          projectId: "demo-vadevi",
+        },
+      },
+    });
+    expect(JSON.stringify(body)).not.toContain("secret");
   });
 });
