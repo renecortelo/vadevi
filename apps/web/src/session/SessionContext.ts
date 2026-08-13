@@ -1,9 +1,29 @@
-import type { BootstrapResponse, UpdateProfileRequest } from "@vadevi/contracts";
+import type {
+  BootstrapResponse,
+  CreateInvitationRequest,
+  CreateInvitationResponse,
+  CreateSpaceRequest,
+  RemoveMemberRequest,
+  SpaceDetailResponse,
+  UpdateProfileRequest,
+} from "@vadevi/contracts";
 import { createContext, useContext } from "react";
 
 export type SessionContextValue = {
   bootstrap: BootstrapResponse;
+  acceptInvitation: (token: string) => Promise<BootstrapResponse>;
+  createInvitation: (
+    spaceId: string,
+    request: CreateInvitationRequest,
+  ) => Promise<CreateInvitationResponse>;
+  createSpace: (request: CreateSpaceRequest) => Promise<SpaceDetailResponse>;
+  getSpace: (spaceId: string, signal?: AbortSignal) => Promise<SpaceDetailResponse>;
   isUpdating: boolean;
+  removeMember: (
+    spaceId: string,
+    memberId: string,
+    request: RemoveMemberRequest,
+  ) => Promise<SpaceDetailResponse>;
   signOut: () => Promise<void>;
   updateProfile: (update: UpdateProfileRequest) => Promise<BootstrapResponse>;
 };

@@ -17,7 +17,7 @@ describe("runtime routes", () => {
   });
 
   it("returns a safe envelope without enumerating unknown resources", async () => {
-    const response = await createApi().request("/api/v1/spaces/not-real");
+    const response = await createApi().request("/api/v1/not-real");
     const body = ErrorEnvelopeSchema.parse(await response.json());
 
     expect(response.status).toBe(404);

@@ -41,28 +41,33 @@ export function AppShell() {
           {t("appName")}
         </NavLink>
         <div className="topbar__context">
-          <div className="space-switcher">
-            <label className="sr-only" htmlFor="active-space">
-              {t("space.switchLabel")}
-            </label>
-            <select
-              aria-busy={isUpdating}
-              disabled={isUpdating}
-              id="active-space"
-              onChange={(event) => void switchSpace(event.target.value)}
-              value={bootstrap.data.user.activeSpaceId}
-            >
-              {bootstrap.data.spaces.map((space: SpaceOption) => (
-                <option key={space.id} value={space.id}>
-                  {space.name}
-                </option>
-              ))}
-            </select>
-            {switchError ? (
-              <span className="form-error" role="alert">
-                {t("space.switchError")}
-              </span>
-            ) : null}
+          <div className="space-context">
+            <div className="space-switcher">
+              <label className="sr-only" htmlFor="active-space">
+                {t("space.switchLabel")}
+              </label>
+              <select
+                aria-busy={isUpdating}
+                disabled={isUpdating}
+                id="active-space"
+                onChange={(event) => void switchSpace(event.target.value)}
+                value={bootstrap.data.user.activeSpaceId}
+              >
+                {bootstrap.data.spaces.map((space: SpaceOption) => (
+                  <option key={space.id} value={space.id}>
+                    {space.name}
+                  </option>
+                ))}
+              </select>
+              {switchError ? (
+                <span className="form-error" role="alert">
+                  {t("space.switchError")}
+                </span>
+              ) : null}
+            </div>
+            <NavLink className="text-link" to="/spaces">
+              {t("spaces.manageAction")}
+            </NavLink>
           </div>
           <ConnectionStatus />
           <button className="text-button" onClick={() => void signOut()} type="button">

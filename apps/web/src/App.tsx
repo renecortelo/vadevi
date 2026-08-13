@@ -6,14 +6,18 @@ import { AppShell } from "./components/AppShell";
 import { PwaUpdatePrompt } from "./components/PwaUpdatePrompt";
 import { HomePage } from "./pages/HomePage";
 import { InfoPage } from "./pages/InfoPage";
+import { InvitationAcceptPage, InvitationSignInPage } from "./pages/InvitationPage";
+import { NewSpacePage } from "./pages/NewSpacePage";
 import { SessionStatusPage } from "./pages/SessionStatusPage";
 import { SignInPage } from "./pages/SignInPage";
+import { SpaceSettingsPage } from "./pages/SpaceSettingsPage";
 import { SessionBoundary } from "./session/SessionProvider";
 
 export function AuthenticatedRoutes() {
   return (
     <>
       <Routes>
+        <Route element={<InvitationAcceptPage />} path="invitations/:token" />
         <Route element={<AppShell />}>
           <Route index element={<HomePage />} />
           <Route
@@ -32,6 +36,8 @@ export function AuthenticatedRoutes() {
             element={<InfoPage bodyKey="pages.assistantBody" titleKey="pages.assistantTitle" />}
             path="vicenc"
           />
+          <Route element={<SpaceSettingsPage />} path="spaces" />
+          <Route element={<NewSpacePage />} path="spaces/new" />
           <Route
             element={<InfoPage bodyKey="pages.notFoundBody" titleKey="pages.notFoundTitle" />}
             path="*"
@@ -40,6 +46,15 @@ export function AuthenticatedRoutes() {
       </Routes>
       <PwaUpdatePrompt />
     </>
+  );
+}
+
+function SignedOutRoutes() {
+  return (
+    <Routes>
+      <Route element={<InvitationSignInPage />} path="invitations/:token" />
+      <Route element={<SignInPage />} path="*" />
+    </Routes>
   );
 }
 
@@ -62,7 +77,7 @@ function AuthGate() {
   }
 
   if (auth.status === "signed-out" || auth.user === null) {
-    return <SignInPage />;
+    return <SignedOutRoutes />;
   }
 
   return (

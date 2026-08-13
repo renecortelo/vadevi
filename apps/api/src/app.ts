@@ -11,6 +11,7 @@ import { authentication } from "./middleware/authentication";
 import { requestContext } from "./middleware/request-context";
 import { security } from "./middleware/security";
 import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
+import { registerSpaceRoutes } from "./routes/spaces";
 import type { ApiEnvironment } from "./types";
 
 const healthRoute = createRoute({
@@ -197,6 +198,9 @@ export function createApi() {
   app.use("*", security);
   app.use("/api/v1/me", authentication);
   app.use("/api/v1/me/*", authentication);
+  app.use("/api/v1/spaces", authentication);
+  app.use("/api/v1/spaces/*", authentication);
+  app.use("/api/v1/invitations/:token/accept", authentication);
 
   app.openapi(healthRoute, (context) => context.json(healthPayload(context.env?.APP_VERSION), 200));
   app.openapi(runtimeConfigRoute, (context) =>
@@ -249,6 +253,8 @@ export function createApi() {
     }
     return context.json(BootstrapResponseSchema.parse(response), 200);
   });
+
+  registerSpaceRoutes(app);
 
   app.get("/openapi.json", (context) =>
     context.json(

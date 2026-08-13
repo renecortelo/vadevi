@@ -1,10 +1,25 @@
-import type { UpdateProfileRequest } from "@vadevi/contracts";
+import type {
+  CreateInvitationRequest,
+  CreateSpaceRequest,
+  RemoveMemberRequest,
+  UpdateProfileRequest,
+} from "@vadevi/contracts";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { type ReactNode, useEffect, useMemo } from "react";
 
 import type { FirebaseUser } from "../auth/firebase";
 import { i18n } from "../i18n";
-import { ApiError, getBootstrap, updateProfile } from "../services/api";
+import { createIdempotencyKey } from "../security/idempotency";
+import {
+  acceptInvitation,
+  ApiError,
+  createInvitation,
+  createSpace,
+  getBootstrap,
+  getSpace,
+  removeMember,
+  updateProfile,
+} from "../services/api";
 import { OnboardingPage } from "../pages/OnboardingPage";
 import { SessionStatusPage } from "../pages/SessionStatusPage";
 import { SessionContext, type SessionContextValue } from "./SessionContext";
@@ -30,6 +45,33 @@ export function SessionBoundary({
     mutationFn: (update: UpdateProfileRequest) => updateProfile(user, update),
     onSuccess: (response) => queryClient.setQueryData(queryKey, response),
   });
+  const createSpaceMutation = useMutation({
+    mutationFn: async (request: CreateSpaceRequest) => {
+      const response = await createSpace(user, request, createIdempotencyKey());
+      const bootstrap = await getBootstrap(user);
+      return { bootstrap, response };
+    },
+    onSuccess: ({ bootstrap }) => queryClient.setQueryData(queryKey, bootstrap),
+  });
+  const createInvitationMutation = useMutation({
+    mutationFn: ({ request, spaceId }: { request: CreateInvitationRequest; spaceId: string }) =>
+      createInvitation(user, spaceId, request, createIdempotencyKey()),
+  });
+  const acceptInvitationMutation = useMutation({
+    mutationFn: (token: string) => acceptInvitation(user, token),
+    onSuccess: (bootstrap) => queryClient.setQueryData(queryKey, bootstrap),
+  });
+  const removeMemberMutation = useMutation({
+    mutationFn: ({
+      memberId,
+      request,
+      spaceId,
+    }: {
+      memberId: string;
+      request: RemoveMemberRequest;
+      spaceId: string;
+    }) => removeMember(user, spaceId, memberId, request),
+  });
 
   useEffect(() => {
     if (bootstrapQuery.error instanceof ApiError && bootstrapQuery.error.status === 401) {
@@ -47,12 +89,33 @@ export function SessionBoundary({
   const value = useMemo<SessionContextValue | null>(() => {
     if (bootstrapQuery.data === undefined) return null;
     return {
+      acceptInvitation: (token) => acceptInvitationMutation.mutateAsync(token),
       bootstrap: bootstrapQuery.data,
-      isUpdating: updateMutation.isPending,
+      createInvitation: (spaceId, request) =>
+        createInvitationMutation.mutateAsync({ request, spaceId }),
+      createSpace: async (request) => (await createSpaceMutation.mutateAsync(request)).response,
+      getSpace: (spaceId, signal) => getSpace(user, spaceId, signal),
+      isUpdating:
+        updateMutation.isPending ||
+        createSpaceMutation.isPending ||
+        createInvitationMutation.isPending ||
+        acceptInvitationMutation.isPending ||
+        removeMemberMutation.isPending,
+      removeMember: (spaceId, memberId, request) =>
+        removeMemberMutation.mutateAsync({ memberId, request, spaceId }),
       signOut,
       updateProfile: (update) => updateMutation.mutateAsync(update),
     };
-  }, [bootstrapQuery.data, signOut, updateMutation]);
+  }, [
+    acceptInvitationMutation,
+    bootstrapQuery.data,
+    createInvitationMutation,
+    createSpaceMutation,
+    removeMemberMutation,
+    signOut,
+    updateMutation,
+    user,
+  ]);
 
   if (bootstrapQuery.isPending) {
     return <SessionStatusPage bodyKey="auth.loadingBody" titleKey="auth.loadingTitle" />;

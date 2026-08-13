@@ -375,6 +375,292 @@
           }
         },
         "additionalProperties": false
+      },
+      "SpaceDetailResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "members": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "displayName": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "joinedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "role": {
+                      "type": "string",
+                      "enum": [
+                        "owner",
+                        "admin",
+                        "member"
+                      ]
+                    },
+                    "version": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "exclusiveMinimum": true
+                    }
+                  },
+                  "required": [
+                    "displayName",
+                    "id",
+                    "joinedAt",
+                    "role",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "space": {
+                "type": "object",
+                "properties": {
+                  "defaultLocale": {
+                    "type": "string",
+                    "enum": [
+                      "ca",
+                      "es",
+                      "fr",
+                      "en",
+                      "it",
+                      "pt-PT",
+                      "nl",
+                      "de"
+                    ]
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120
+                  },
+                  "role": {
+                    "type": "string",
+                    "enum": [
+                      "owner",
+                      "admin",
+                      "member"
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "personal",
+                      "couple",
+                      "group"
+                    ]
+                  },
+                  "version": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "exclusiveMinimum": true
+                  }
+                },
+                "required": [
+                  "defaultLocale",
+                  "id",
+                  "name",
+                  "role",
+                  "type",
+                  "version"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "members",
+              "space"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "CreateSpaceRequest": {
+        "type": "object",
+        "properties": {
+          "defaultLocale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "es",
+              "fr",
+              "en",
+              "it",
+              "pt-PT",
+              "nl",
+              "de"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "couple",
+              "group"
+            ]
+          }
+        },
+        "required": [
+          "defaultLocale",
+          "name",
+          "type"
+        ],
+        "additionalProperties": false
+      },
+      "CreateInvitationResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "expiresAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "intendedRole": {
+                "type": "string",
+                "enum": [
+                  "admin",
+                  "member"
+                ]
+              },
+              "invitationPath": {
+                "type": "string",
+                "pattern": "^\\/invitations\\/[A-Za-z0-9_-]{43}$"
+              },
+              "spaceId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              }
+            },
+            "required": [
+              "expiresAt",
+              "id",
+              "intendedRole",
+              "invitationPath",
+              "spaceId"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "CreateInvitationRequest": {
+        "type": "object",
+        "properties": {
+          "intendedRole": {
+            "type": "string",
+            "enum": [
+              "admin",
+              "member"
+            ]
+          }
+        },
+        "required": [
+          "intendedRole"
+        ],
+        "additionalProperties": false
+      },
+      "InvitationPreviewResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "expiresAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "intendedRole": {
+                "type": "string",
+                "enum": [
+                  "admin",
+                  "member"
+                ]
+              },
+              "inviterDisplayName": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "spaceName": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "spaceType": {
+                "type": "string",
+                "enum": [
+                  "couple",
+                  "group"
+                ]
+              }
+            },
+            "required": [
+              "expiresAt",
+              "intendedRole",
+              "inviterDisplayName",
+              "spaceName",
+              "spaceType"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "RemoveMemberRequest": {
+        "type": "object",
+        "properties": {
+          "baseVersion": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "removed"
+            ]
+          }
+        },
+        "required": [
+          "baseVersion",
+          "status"
+        ],
+        "additionalProperties": false
       }
     },
     "parameters": {}
@@ -521,6 +807,469 @@
           },
           "404": {
             "description": "The requested active Space is not available to this user.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces": {
+      "post": {
+        "operationId": "createSpace",
+        "tags": [
+          "Spaces"
+        ],
+        "summary": "Create a couple or group Space",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "header",
+            "name": "Idempotency-Key"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSpaceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The Space and its owner membership were created.",
+            "headers": {
+              "Location": {
+                "description": "The new Space resource.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Idempotency-Replayed": {
+                "description": "True when a prior successful command was replayed.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpaceDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency conflict.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}": {
+      "get": {
+        "operationId": "getSpace",
+        "tags": [
+          "Spaces"
+        ],
+        "summary": "Get one Space and its active memberships",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized Space detail.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpaceDetailResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space not available.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/invitations": {
+      "post": {
+        "operationId": "createSpaceInvitation",
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Create a seven-day single-use invitation link",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "header",
+            "name": "Idempotency-Key"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateInvitationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The raw invitation capability is returned once through its path and is never stored.",
+            "headers": {
+              "Location": {
+                "description": "The shareable invitation path.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Idempotency-Replayed": {
+                "description": "True when replayed.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateInvitationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space not available or invitation capacity reached.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency conflict.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/invitations/{token}/preview": {
+      "get": {
+        "operationId": "previewSpaceInvitation",
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Preview a valid invitation capability without authentication",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Safe invitation preview.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvitationPreviewResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Invitation invalid, expired, revoked, or already used.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/invitations/{token}/accept": {
+      "post": {
+        "operationId": "acceptSpaceInvitation",
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Accept a valid invitation idempotently",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated session with the accepted Space active.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BootstrapResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Invitation unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/members/{memberId}": {
+      "patch": {
+        "operationId": "removeSpaceMember",
+        "tags": [
+          "Members"
+        ],
+        "summary": "Remove a non-owner member with optimistic concurrency",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "memberId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveMemberRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updated active membership list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpaceDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space or target membership unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Membership version conflict.",
             "content": {
               "application/json": {
                 "schema": {

@@ -14,6 +14,7 @@ beforeAll(async () => {
 });
 
 const session: SessionContextValue = {
+  acceptInvitation: async () => session.bootstrap,
   bootstrap: {
     data: {
       features: {
@@ -50,7 +51,37 @@ const session: SessionContextValue = {
       },
     },
   },
+  createInvitation: async () => {
+    throw new Error("Not used by this render test.");
+  },
+  createSpace: async () => {
+    throw new Error("Not used by this render test.");
+  },
+  getSpace: async () => ({
+    data: {
+      members: [
+        {
+          displayName: "René",
+          id: "01J00000000000000000000003",
+          joinedAt: "2026-08-13T00:00:00.000Z",
+          role: "owner",
+          version: 1,
+        },
+      ],
+      space: {
+        defaultLocale: "en",
+        id: "01J00000000000000000000001",
+        name: "Personal space",
+        role: "owner",
+        type: "personal",
+        version: 1,
+      },
+    },
+  }),
   isUpdating: false,
+  removeMember: async () => {
+    throw new Error("Not used by this render test.");
+  },
   signOut: async () => undefined,
   updateProfile: async () => session.bootstrap,
 };
@@ -96,5 +127,16 @@ describe("authenticated app shell", () => {
     expect(markup).toContain("Català");
     expect(markup).toContain("Português");
     expect(markup.match(/<option/g)).toHaveLength(8);
+  });
+
+  it("renders an accessible couple/group Space creation form", () => {
+    const markup = renderRoute("/spaces/new");
+
+    expect(markup).toContain("Create a Space.");
+    expect(markup).toContain('<fieldset class="choice-fieldset">');
+    expect(markup).toContain('name="space-type"');
+    expect(markup).toContain('for="space-name"');
+    expect(markup).toContain('for="space-locale"');
+    expect(markup).toContain("A private Space designed for exactly two active members.");
   });
 });

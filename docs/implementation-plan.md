@@ -28,7 +28,7 @@ Phase 0 exit evidence captured on 2026-08-12:
 
 Automated Playwright/axe route coverage and service-worker update recovery remain continuous quality work; they are not Phase 0 exit criteria and will grow with Phase 1 routes.
 
-## Current milestone: Phase 1 — identity, onboarding, and Spaces
+## Completed milestone: Phase 1 — identity, onboarding, and Spaces
 
 Completed identity/onboarding vertical slice:
 
@@ -43,19 +43,35 @@ Completed identity/onboarding vertical slice:
 - resumable display-name/locale onboarding backed by `PATCH /api/v1/me`
 - membership-validated active-Space updates with change and audit events
 - accessible authenticated Space switcher, one forced token-refresh retry, sign-out, and eight localized auth/onboarding catalogs
+- auditable, idempotent couple/group Space creation with the creator as owner
+- owner/admin invitation capability with seven-day expiry and couple-Space capacity enforcement
+- SHA-256 token hashes at rest; raw 256-bit invitation capabilities are returned only in private links
+- public non-enumerating invitation preview and authenticated single-use, idempotent acceptance
+- active-member detail views and two-step owner/admin removal of non-owner members
+- immediate active-Space fallback and access denial after membership removal
+- localized creation, member management, invitation preview/acceptance, and invalid-link UI across all eight catalogs
 
 Evidence captured on 2026-08-13:
 
-- the full `pnpm check` gate passes: formatting, lint, strict typechecks, 20 tests, generated-contract checks, all eight catalogs, PWA build, and Worker dry-run
+- the full `pnpm check` gate passes: formatting, lint, strict typechecks, 25 tests, generated-contract checks, all eight catalogs, PWA build, and Worker dry-run
 - a real browser flow passes through Firebase Auth Emulator Google redirect, local account creation, first-run profile, locale change, reload/resume, persistent authorized Space switching, and sign-out
 - the sign-in UI remains functional at 320 CSS px
 - an unauthorized active-Space ID receives the same safe `404 NOT_FOUND` response and cannot change the stored preference
+- the Workers authorization matrix covers same-Space access, outsider denial, member invite denial, expired invites, couple capacity, idempotency conflicts, and removed-member denial
+- a real two-account browser flow passes group creation, invitation preview, guest onboarding/acceptance, switching, owner removal, immediate guest fallback, and used-link invalidation
+- the new Space form remains functional at 320 CSS px
+
+Phase 1 exit criteria:
+
+- E2E users can create, accept, and switch Spaces
+- the authorization matrix proves no cross-Space access
+- a removed member loses server access on the next request
+
+## Current milestone: Phase 2 — Wine Memory and Quick Log
 
 Next:
 
-1. Add couple/group creation with owner membership and auditable idempotency.
-2. Add hashed, expiring, single-use invitation preview/acceptance links.
-3. Complete the same-/other-Space/removed-member authorization matrix across new Space routes.
-4. Add route-level component/accessibility coverage for creation and invitation acceptance.
-
-Bootstrap and active-Space isolation are now proven; the next slice can safely introduce the owner/admin/member invitation flow.
+1. Add Space-scoped wine/media migrations, transport contracts, and repository boundaries.
+2. Build manual wine confirmation with duplicate suggestions and explicit draft handling.
+3. Add quick tasting and Wine Memory card/table/search views.
+4. Introduce offline drafts, an idempotent mutation queue, and visible sync/conflict states before optional photo-assisted identification.

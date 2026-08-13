@@ -1,12 +1,24 @@
 import {
   BootstrapResponseSchema,
+  CreateInvitationRequestSchema,
+  CreateInvitationResponseSchema,
+  CreateSpaceRequestSchema,
   ErrorEnvelopeSchema,
   HealthResponseSchema,
+  InvitationPreviewResponseSchema,
+  RemoveMemberRequestSchema,
   RuntimeConfigResponseSchema,
+  SpaceDetailResponseSchema,
   UpdateProfileRequestSchema,
   type BootstrapResponse,
+  type CreateInvitationRequest,
+  type CreateInvitationResponse,
+  type CreateSpaceRequest,
   type HealthResponse,
+  type InvitationPreviewResponse,
+  type RemoveMemberRequest,
   type RuntimeConfigResponse,
+  type SpaceDetailResponse,
   type UpdateProfileRequest,
 } from "@vadevi/contracts";
 
@@ -103,4 +115,99 @@ export async function updateProfile(
 
   if (!response.ok) throw await apiError(response);
   return BootstrapResponseSchema.parse(await response.json());
+}
+
+export async function createSpace(
+  tokenSource: TokenSource,
+  request: CreateSpaceRequest,
+  idempotencyKey: string,
+): Promise<SpaceDetailResponse> {
+  const response = await authenticatedFetch(tokenSource, "/api/v1/spaces", {
+    body: JSON.stringify(CreateSpaceRequestSchema.parse(request)),
+    headers: {
+      "Content-Type": "application/json",
+      "Idempotency-Key": idempotencyKey,
+    },
+    method: "POST",
+  });
+
+  if (!response.ok) throw await apiError(response);
+  return SpaceDetailResponseSchema.parse(await response.json());
+}
+
+export async function getSpace(
+  tokenSource: TokenSource,
+  spaceId: string,
+  signal?: AbortSignal,
+): Promise<SpaceDetailResponse> {
+  const response = await authenticatedFetch(tokenSource, `/api/v1/spaces/${spaceId}`, {
+    ...(signal === undefined ? {} : { signal }),
+  });
+
+  if (!response.ok) throw await apiError(response);
+  return SpaceDetailResponseSchema.parse(await response.json());
+}
+
+export async function createInvitation(
+  tokenSource: TokenSource,
+  spaceId: string,
+  request: CreateInvitationRequest,
+  idempotencyKey: string,
+): Promise<CreateInvitationResponse> {
+  const response = await authenticatedFetch(tokenSource, `/api/v1/spaces/${spaceId}/invitations`, {
+    body: JSON.stringify(CreateInvitationRequestSchema.parse(request)),
+    headers: {
+      "Content-Type": "application/json",
+      "Idempotency-Key": idempotencyKey,
+    },
+    method: "POST",
+  });
+
+  if (!response.ok) throw await apiError(response);
+  return CreateInvitationResponseSchema.parse(await response.json());
+}
+
+export async function getInvitationPreview(
+  token: string,
+  signal?: AbortSignal,
+): Promise<InvitationPreviewResponse> {
+  const response = await fetch(`/api/v1/invitations/${token}/preview`, {
+    headers: { Accept: "application/json" },
+    ...(signal === undefined ? {} : { signal }),
+  });
+
+  if (!response.ok) throw await apiError(response);
+  return InvitationPreviewResponseSchema.parse(await response.json());
+}
+
+export async function acceptInvitation(
+  tokenSource: TokenSource,
+  token: string,
+): Promise<BootstrapResponse> {
+  const response = await authenticatedFetch(tokenSource, `/api/v1/invitations/${token}/accept`, {
+    method: "POST",
+  });
+
+  if (!response.ok) throw await apiError(response);
+  return BootstrapResponseSchema.parse(await response.json());
+}
+
+export async function removeMember(
+  tokenSource: TokenSource,
+  spaceId: string,
+  memberId: string,
+  request: RemoveMemberRequest,
+): Promise<SpaceDetailResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/members/${memberId}`,
+    {
+      body: JSON.stringify(RemoveMemberRequestSchema.parse(request)),
+      headers: { "Content-Type": "application/json" },
+      method: "PATCH",
+    },
+  );
+
+  if (!response.ok) throw await apiError(response);
+  return SpaceDetailResponseSchema.parse(await response.json());
 }
