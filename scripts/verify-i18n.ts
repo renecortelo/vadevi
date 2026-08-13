@@ -1,6 +1,8 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
+import { tastingDescriptors } from "../packages/i18n/src/ontology";
+
 const locales = ["ca", "es", "fr", "en", "it", "pt-PT", "nl", "de"] as const;
 const source = JSON.parse(
   await readFile(resolve("packages/i18n/src/locales/en/common.json"), "utf8"),
@@ -32,8 +34,26 @@ for (const locale of locales) {
   }
 }
 
+const descriptorCodes = new Set<string>();
+for (const descriptor of tastingDescriptors) {
+  if (descriptorCodes.has(descriptor.code)) {
+    failed = true;
+    console.error(`Duplicate tasting descriptor code: ${descriptor.code}`);
+  }
+  descriptorCodes.add(descriptor.code);
+  for (const locale of locales) {
+    const text = descriptor.text[locale];
+    if (text.label.trim().length === 0 || text.help.trim().length === 0) {
+      failed = true;
+      console.error(`${descriptor.code}: missing ${locale} label or help text`);
+    }
+  }
+}
+
 if (failed) {
   process.exitCode = 1;
 } else {
-  console.info(`All ${locales.length} catalogs match the English source keys.`);
+  console.info(
+    `All ${locales.length} catalogs match the English source keys and ${tastingDescriptors.length} ontology descriptors are localized.`,
+  );
 }

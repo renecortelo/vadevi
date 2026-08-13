@@ -1,7 +1,11 @@
 import type {
   BootstrapResponse,
   CreateWineRequest,
+  DeepTastingNote,
+  DeepTastingRequest,
   QuickTastingRequest,
+  SessionComparisonResponse,
+  TastingSessionDetailResponse,
   WineSummary,
 } from "@vadevi/contracts";
 import Dexie, { type EntityTable } from "dexie";
@@ -32,14 +36,21 @@ export type QuickLogDraft = {
 };
 
 export type QueuedMutation = {
+  baseVersion?: number;
   id: string;
   lastError?: string;
   localMedia?: LocalMedia;
   occurredAt: string;
-  operation: "create";
+  operation: "create" | "reorder" | "save";
   payload: Record<string, unknown>;
   resourceId: string;
-  resourceType: "tasting_note" | "wine_record";
+  resourceType:
+    | "deep_tasting_note"
+    | "session_order"
+    | "session_wines"
+    | "tasting_note"
+    | "tasting_session"
+    | "wine_record";
   spaceId: string;
   state: "needs_attention" | "queued" | "syncing";
   userId: string;
@@ -60,6 +71,27 @@ export type SessionSnapshot = {
   userId: string;
 };
 
+export type DeepTastingDraft = {
+  id: string;
+  note: DeepTastingNote | null;
+  noteId: string;
+  payload: DeepTastingRequest;
+  sessionId: string | null;
+  spaceId: string;
+  updatedAt: string;
+  userId: string;
+};
+
+export type TastingSessionSnapshot = {
+  comparison: SessionComparisonResponse | null;
+  detail: TastingSessionDetailResponse;
+  id: string;
+  sessionId: string;
+  spaceId: string;
+  updatedAt: string;
+  userId: string;
+};
+
 export type SyncMetadata = {
   id: string;
   cursor: string | null;
@@ -72,7 +104,7 @@ export type SyncConflict = {
   id: string;
   localPayload: Record<string, unknown>;
   resourceId: string;
-  resourceType: "tasting_note" | "wine_record";
+  resourceType: QueuedMutation["resourceType"];
   serverPayload?: unknown;
   spaceId: string;
   userId: string;
@@ -80,11 +112,13 @@ export type SyncConflict = {
 
 class OfflineDatabase extends Dexie {
   conflicts!: EntityTable<SyncConflict, "id">;
+  deepDrafts!: EntityTable<DeepTastingDraft, "id">;
   drafts!: EntityTable<QuickLogDraft, "id">;
   mutations!: EntityTable<QueuedMutation, "id">;
   sessions!: EntityTable<SessionSnapshot, "id">;
   snapshots!: EntityTable<MemorySnapshot, "id">;
   syncMetadata!: EntityTable<SyncMetadata, "id">;
+  tastingSessions!: EntityTable<TastingSessionSnapshot, "id">;
 
   constructor() {
     super("vadevi-offline-v1");
@@ -103,6 +137,16 @@ class OfflineDatabase extends Dexie {
       snapshots: "id, userId, [userId+spaceId], updatedAt",
       syncMetadata: "id, userId, [userId+spaceId]",
     });
+    this.version(3).stores({
+      conflicts: "id, userId, [userId+spaceId]",
+      deepDrafts: "id, userId, [userId+spaceId], noteId, updatedAt",
+      drafts: "id, userId, [userId+spaceId], updatedAt",
+      mutations: "id, userId, [userId+spaceId], [userId+spaceId+state], occurredAt",
+      sessions: "id, userId, updatedAt",
+      snapshots: "id, userId, [userId+spaceId], updatedAt",
+      syncMetadata: "id, userId, [userId+spaceId]",
+      tastingSessions: "id, userId, [userId+spaceId], sessionId, updatedAt",
+    });
   }
 }
 
@@ -117,20 +161,24 @@ export async function clearOfflineDataForUser(userId: string): Promise<void> {
     "rw",
     [
       offlineDatabase.conflicts,
+      offlineDatabase.deepDrafts,
       offlineDatabase.drafts,
       offlineDatabase.mutations,
       offlineDatabase.sessions,
       offlineDatabase.snapshots,
       offlineDatabase.syncMetadata,
+      offlineDatabase.tastingSessions,
     ],
     async () => {
       await Promise.all([
         offlineDatabase.conflicts.where("userId").equals(userId).delete(),
+        offlineDatabase.deepDrafts.where("userId").equals(userId).delete(),
         offlineDatabase.drafts.where("userId").equals(userId).delete(),
         offlineDatabase.mutations.where("userId").equals(userId).delete(),
         offlineDatabase.sessions.where("userId").equals(userId).delete(),
         offlineDatabase.snapshots.where("userId").equals(userId).delete(),
         offlineDatabase.syncMetadata.where("userId").equals(userId).delete(),
+        offlineDatabase.tastingSessions.where("userId").equals(userId).delete(),
       ]);
     },
   );
@@ -150,18 +198,22 @@ export async function purgeUnavailableSpaces(
     "rw",
     [
       offlineDatabase.conflicts,
+      offlineDatabase.deepDrafts,
       offlineDatabase.drafts,
       offlineDatabase.mutations,
       offlineDatabase.snapshots,
       offlineDatabase.syncMetadata,
+      offlineDatabase.tastingSessions,
     ],
     async () => {
       for (const table of [
         offlineDatabase.conflicts,
+        offlineDatabase.deepDrafts,
         offlineDatabase.drafts,
         offlineDatabase.mutations,
         offlineDatabase.snapshots,
         offlineDatabase.syncMetadata,
+        offlineDatabase.tastingSessions,
       ]) {
         const records = await table.where("userId").equals(userId).toArray();
         const ids = records

@@ -1109,7 +1109,432 @@ p {
   white-space: pre-wrap;
 }
 
+.sessions-page,
+.tasting-page {
+  display: grid;
+  gap: var(--space-6);
+  margin-inline: auto;
+  max-inline-size: 70rem;
+}
+
+.sessions-heading,
+.session-detail-heading,
+.tasting-heading,
+.section-heading-row {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: space-between;
+  max-inline-size: none;
+}
+
+.session-card-grid,
+.comparison-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+.session-card,
+.comparison-card,
+.session-section {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.session-card {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.session-card h2,
+.session-card p,
+.comparison-card h3,
+.comparison-card p {
+  margin: 0;
+}
+
+.session-card__meta,
+.session-card__counts {
+  align-items: center;
+  color: var(--color-text-muted);
+  display: flex;
+  font-size: var(--text-xs);
+  gap: var(--space-3);
+  justify-content: space-between;
+}
+
+.status-chip {
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-pill);
+  color: var(--color-plum);
+  font-size: var(--text-xs);
+  font-weight: 750;
+  padding: 0.35rem 0.65rem;
+}
+
+.status-chip[data-status="active"] {
+  background: #e9f4ea;
+  color: #2d6a36;
+}
+
+.wine-picker-grid {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+}
+
+.wine-picker {
+  align-items: center;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex !important;
+  flex-direction: row;
+  gap: var(--space-3) !important;
+  padding: var(--space-3);
+}
+
+.wine-picker:has(input:checked) {
+  background: var(--color-surface-muted);
+  border-color: var(--color-accent);
+}
+
+.wine-picker span {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.wine-picker small {
+  color: var(--color-text-muted);
+}
+
+.session-section {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.section-heading-row > span {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.flight-list,
+.memory-timeline {
+  display: grid;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flight-card {
+  align-items: center;
+  border-block-start: 1px solid var(--color-border);
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: auto minmax(0, 1fr) minmax(8rem, auto) auto;
+  padding-block: var(--space-4);
+}
+
+.flight-position {
+  align-items: center;
+  background: var(--color-plum);
+  block-size: 2rem;
+  border-radius: 50%;
+  color: white;
+  display: inline-flex;
+  font-weight: 750;
+  inline-size: 2rem;
+  justify-content: center;
+}
+
+.flight-card__wine p,
+.flight-card__wine h3,
+.flight-card__wine span {
+  margin: 0;
+}
+
+.flight-card__wine p,
+.flight-card__wine span,
+.flight-card__state {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.flight-card__state,
+.flight-card__actions {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.flight-card__actions {
+  align-items: center;
+  flex-direction: row;
+}
+
+.icon-button {
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  block-size: 2.5rem;
+  color: var(--color-plum);
+  inline-size: 2.5rem;
+}
+
+.comparison-card {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.comparison-card[data-divisive="true"] {
+  border-color: var(--color-warning);
+}
+
+.comparison-card dl {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+}
+
+.comparison-card dl > div {
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.comparison-card dt {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.comparison-card dd {
+  color: var(--color-plum);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  margin: var(--space-1) 0 0;
+}
+
+.participant-list {
+  display: grid;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.participant-list li {
+  border-block-start: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  padding-block-start: var(--space-2);
+}
+
+.tasting-progress {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.tasting-progress button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-block-end: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+  display: flex;
+  font-size: var(--text-xs);
+  gap: var(--space-2);
+  justify-content: center;
+  min-block-size: 3.5rem;
+  padding: var(--space-2);
+}
+
+.tasting-progress button span {
+  align-items: center;
+  background: var(--color-surface-muted);
+  block-size: 1.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  inline-size: 1.5rem;
+  justify-content: center;
+}
+
+.tasting-progress__active {
+  border-block-end-color: var(--color-accent) !important;
+  color: var(--color-plum) !important;
+  font-weight: 750;
+}
+
+.tasting-section {
+  max-inline-size: none;
+}
+
+.scale-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.scale-grid label,
+.descriptor-choice {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.descriptor-grid--detailed {
+  align-items: start;
+}
+
+.descriptor-choice {
+  background: rgb(255 250 244 / 70%);
+  border-radius: var(--radius-md);
+  max-inline-size: 15rem;
+  padding: var(--space-2);
+}
+
+.descriptor-choice small {
+  color: var(--color-text-muted);
+  line-height: 1.35;
+  padding-inline: var(--space-2);
+}
+
+.descriptor-choice select {
+  min-block-size: 2.25rem;
+}
+
+.tasting-actions {
+  background: rgb(255 250 244 / 94%);
+  border-block-start: 1px solid var(--color-border);
+  bottom: 4.2rem;
+  display: grid;
+  gap: var(--space-3);
+  padding-block: var(--space-4);
+  position: sticky;
+  z-index: 8;
+}
+
+.tasting-actions__buttons {
+  justify-content: flex-end;
+}
+
+.conflict-text-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.conflict-text-grid > div {
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.memory-timeline {
+  position: relative;
+}
+
+.memory-timeline::before {
+  background: var(--color-border);
+  content: "";
+  inset-block: 0;
+  inset-inline-start: 8.8rem;
+  position: absolute;
+  inline-size: 2px;
+}
+
+.memory-timeline li {
+  align-items: center;
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 7.5rem minmax(0, 1fr) auto;
+  min-block-size: 6rem;
+  position: relative;
+}
+
+.memory-timeline li::before {
+  background: var(--color-accent);
+  block-size: 0.75rem;
+  border: 3px solid var(--color-canvas);
+  border-radius: 50%;
+  content: "";
+  inline-size: 0.75rem;
+  inset-inline-start: 8.5rem;
+  position: absolute;
+}
+
+.memory-timeline time,
+.memory-timeline span {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.memory-timeline h2,
+.memory-timeline p {
+  margin: 0;
+}
+
 @media (max-width: 520px) {
+  .app-shell,
+  .main-content,
+  .memory-page,
+  .sessions-page,
+  .tasting-page,
+  .topbar,
+  .topbar__context {
+    max-inline-size: 100%;
+    min-inline-size: 0;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .topbar__context {
+    flex: 1 1 auto;
+  }
+
+  .space-context,
+  .space-switcher {
+    max-inline-size: 100%;
+    min-inline-size: 0;
+  }
+
+  .space-switcher select {
+    inline-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  .memory-heading {
+    align-items: stretch;
+    display: grid;
+    inline-size: 100%;
+  }
+
+  .segmented-control {
+    border-radius: var(--radius-md);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    inline-size: 100%;
+  }
+
+  .segmented-control button {
+    min-inline-size: 0;
+    padding-inline: var(--space-2);
+  }
+
+  .table-scroll {
+    inline-size: 100%;
+    min-inline-size: 0;
+  }
+
   .form-grid,
   .form-grid--three,
   .memory-filters {
@@ -1118,6 +1543,45 @@ p {
 
   .review-list > div {
     grid-template-columns: 1fr;
+  }
+
+  .flight-card,
+  .memory-timeline li {
+    align-items: start;
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .flight-card__state,
+  .flight-card__actions {
+    align-items: flex-start;
+    grid-column: 2;
+  }
+
+  .memory-timeline::before,
+  .memory-timeline li::before {
+    display: none;
+  }
+
+  .memory-timeline li > a {
+    grid-column: 2;
+  }
+
+  .scale-grid,
+  .conflict-text-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tasting-progress {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .tasting-progress button {
+    flex: 0 0 auto;
+  }
+
+  .tasting-progress button span {
+    display: none;
   }
 }
 
@@ -1213,6 +1677,10 @@ p {
 
   .update-prompt {
     bottom: var(--space-5);
+  }
+
+  .tasting-actions {
+    bottom: 0;
   }
 }
 

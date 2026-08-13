@@ -20,6 +20,7 @@ import {
 import {
   addSessionWines,
   createTastingSession,
+  getDeepTastingNote,
   getSessionComparison,
   getTastingSessionDetail,
   listTastingSessions,
@@ -207,6 +208,23 @@ const updateDeepNoteRoute = createRoute({
   },
 });
 
+const getDeepNoteRoute = createRoute({
+  method: "get",
+  path: "/api/v1/spaces/{spaceId}/tasting-notes/{noteId}",
+  operationId: "getDeepTastingNote",
+  tags: ["Tastings"],
+  summary: "Read only the authenticated author's deep-tasting note",
+  security: [{ FirebaseBearer: [] }],
+  request: { params: TastingNoteIdPathSchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: DeepTastingResponseSchema } },
+      description: "The author-owned deep-tasting note.",
+    },
+    ...commonErrors,
+  },
+});
+
 const submitDeepNoteRoute = createRoute({
   method: "post",
   path: "/api/v1/spaces/{spaceId}/tasting-notes/{noteId}/submit",
@@ -362,6 +380,21 @@ export function registerTastingSessionRoutes(app: OpenAPIHono<ApiEnvironment>) {
           404,
         )
       : context.json(SessionComparisonResponseSchema.parse(response), 200);
+  });
+
+  app.openapi(getDeepNoteRoute, async (context) => {
+    const params = context.req.valid("param");
+    const response = await getDeepTastingNote(context.env.DB!, {
+      noteId: params.noteId,
+      principal: context.get("principal"),
+      spaceId: params.spaceId,
+    });
+    return response === null
+      ? context.json(
+          errorEnvelope(context.get("requestId"), "NOT_FOUND", "The resource was not found."),
+          404,
+        )
+      : context.json(DeepTastingResponseSchema.parse(response), 200);
   });
 
   app.openapi(updateDeepNoteRoute, async (context) => {

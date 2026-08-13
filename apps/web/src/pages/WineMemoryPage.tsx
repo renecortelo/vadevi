@@ -1,10 +1,11 @@
-import type { WineSummary } from "@vadevi/contracts";
+import type { TastingSessionResponse, WineSummary } from "@vadevi/contracts";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, type SyncConflict } from "../offline/database";
-import { memoryChangedEvent } from "../offline/events";
+import { memoryChangedEvent, sessionsChangedEvent } from "../offline/events";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { createUlid } from "../security/ulid";
 import { getPrivateMedia, getWineMemory } from "../services/api";
@@ -168,7 +169,7 @@ function ConflictPanel({
 }
 
 export function WineMemoryPage() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const { clearOfflineData, flush, pendingCount, refreshStatus, status } = useOfflineSync();
@@ -177,31 +178,48 @@ export function WineMemoryPage() {
   const [wines, setWines] = useState<WineSummary[]>([]);
   const [query, setQuery] = useState("");
   const [wineType, setWineType] = useState("");
-  const [view, setView] = useState<"cards" | "table">("cards");
+  const [view, setView] = useState<"cards" | "sessions" | "table" | "timeline">("cards");
+  const [sessions, setSessions] = useState<TastingSessionResponse["data"][]>([]);
   const [usingCache, setUsingCache] = useState(false);
   const [conflicts, setConflicts] = useState<SyncConflict[]>([]);
   const [confirmClear, setConfirmClear] = useState(false);
 
-  const loadLocal = useCallback(async () => {
+  const loadSessionCache = useCallback(async () => {
     if (userId.length === 0) return;
-    const [snapshots, nextConflicts] = await Promise.all([
-      offlineDatabase.snapshots.where("[userId+spaceId]").equals([userId, spaceId]).toArray(),
-      offlineDatabase.conflicts.where("[userId+spaceId]").equals([userId, spaceId]).toArray(),
-    ]);
-    const normalizedQuery = normalize(query);
-    setWines(
+    const snapshots = await offlineDatabase.tastingSessions
+      .where("[userId+spaceId]")
+      .equals([userId, spaceId])
+      .toArray();
+    setSessions(
       snapshots
-        .map((snapshot) => snapshot.wine)
-        .filter(
-          (wine) =>
-            (normalizedQuery.length === 0 ||
-              normalize(`${wine.producerName} ${wine.displayName}`).includes(normalizedQuery)) &&
-            (wineType.length === 0 || wine.wineType === wineType),
-        ),
+        .map((snapshot) => snapshot.detail.data.session)
+        .sort((left, right) => right.startsAt.localeCompare(left.startsAt)),
     );
-    setConflicts(nextConflicts);
-    setUsingCache(true);
-  }, [query, spaceId, userId, wineType]);
+  }, [spaceId, userId]);
+
+  const loadLocal = useCallback(
+    async (showCacheNotice = true) => {
+      if (userId.length === 0) return;
+      const [snapshots, nextConflicts] = await Promise.all([
+        offlineDatabase.snapshots.where("[userId+spaceId]").equals([userId, spaceId]).toArray(),
+        offlineDatabase.conflicts.where("[userId+spaceId]").equals([userId, spaceId]).toArray(),
+      ]);
+      const normalizedQuery = normalize(query);
+      setWines(
+        snapshots
+          .map((snapshot) => snapshot.wine)
+          .filter(
+            (wine) =>
+              (normalizedQuery.length === 0 ||
+                normalize(`${wine.producerName} ${wine.displayName}`).includes(normalizedQuery)) &&
+              (wineType.length === 0 || wine.wineType === wineType),
+          ),
+      );
+      setConflicts(nextConflicts);
+      setUsingCache(showCacheNotice);
+    },
+    [query, spaceId, userId, wineType],
+  );
 
   useEffect(() => {
     const controller = new AbortController();
@@ -236,11 +254,22 @@ export function WineMemoryPage() {
   useEffect(() => {
     const changed = (event: Event) => {
       const detail = (event as CustomEvent<{ spaceId: string }>).detail;
-      if (detail.spaceId === spaceId) void loadLocal();
+      if (detail.spaceId === spaceId) {
+        void loadLocal(!navigator.onLine);
+        void loadSessionCache();
+      }
     };
     globalThis.addEventListener(memoryChangedEvent, changed);
-    return () => globalThis.removeEventListener(memoryChangedEvent, changed);
-  }, [loadLocal, spaceId]);
+    globalThis.addEventListener(sessionsChangedEvent, changed);
+    return () => {
+      globalThis.removeEventListener(memoryChangedEvent, changed);
+      globalThis.removeEventListener(sessionsChangedEvent, changed);
+    };
+  }, [loadLocal, loadSessionCache, spaceId]);
+
+  useEffect(() => {
+    queueMicrotask(() => void loadSessionCache());
+  }, [loadSessionCache]);
 
   const duplicateCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -270,6 +299,20 @@ export function WineMemoryPage() {
           </button>
           <button aria-pressed={view === "table"} onClick={() => setView("table")} type="button">
             {t("memory.table")}
+          </button>
+          <button
+            aria-pressed={view === "timeline"}
+            onClick={() => setView("timeline")}
+            type="button"
+          >
+            {t("memory.timeline")}
+          </button>
+          <button
+            aria-pressed={view === "sessions"}
+            onClick={() => setView("sessions")}
+            type="button"
+          >
+            {t("memory.sessions")}
           </button>
         </div>
       </header>
@@ -352,13 +395,13 @@ export function WineMemoryPage() {
           {t("memory.cached")}
         </p>
       ) : null}
-      {wines.length === 0 ? (
+      {view !== "sessions" && wines.length === 0 ? (
         <div className="empty-state">
           <h2>{t("memory.emptyTitle")}</h2>
           <p>{t("memory.emptyBody")}</p>
-          <a className="action-link action-link--primary" href="/log/new">
+          <Link className="action-link action-link--primary" to="/log/new">
             {t("quickLog.title")}
-          </a>
+          </Link>
         </div>
       ) : null}
 
@@ -395,6 +438,9 @@ export function WineMemoryPage() {
                   </span>
                   <span>{t("memory.noteCount", { count: wine.noteCount })}</span>
                 </div>
+                <Link className="text-link" to={`/wines/${wine.id}/taste`}>
+                  {t("tasting.startAction")}
+                </Link>
               </div>
             </article>
           ))}
@@ -413,6 +459,7 @@ export function WineMemoryPage() {
                 <th>{t("quickLog.region")}</th>
                 <th>{t("quickLog.score")}</th>
                 <th>{t("memory.notes")}</th>
+                <th>{t("tasting.startAction")}</th>
               </tr>
             </thead>
             <tbody>
@@ -432,11 +479,80 @@ export function WineMemoryPage() {
                   <td>{wine.region ?? "—"}</td>
                   <td>{wine.score100 ?? "—"}</td>
                   <td>{wine.noteCount}</td>
+                  <td>
+                    <Link className="text-link" to={`/wines/${wine.id}/taste`}>
+                      {t("tasting.startAction")}
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+      ) : null}
+
+      {view === "timeline" && wines.length > 0 ? (
+        <ol className="memory-timeline">
+          {[...wines]
+            .sort((left, right) =>
+              (right.lastTastedAt ?? right.createdAt).localeCompare(
+                left.lastTastedAt ?? left.createdAt,
+              ),
+            )
+            .map((wine) => {
+              const timestamp = wine.lastTastedAt ?? wine.createdAt;
+              return (
+                <li key={wine.id}>
+                  <time dateTime={timestamp}>
+                    {new Intl.DateTimeFormat(i18n.language, { dateStyle: "medium" }).format(
+                      new Date(timestamp),
+                    )}
+                  </time>
+                  <div>
+                    <p>{wine.producerName}</p>
+                    <h2>{wine.displayName}</h2>
+                    <span>
+                      {wine.lastTastedAt === null
+                        ? t("memory.loggedOnly")
+                        : t("memory.noteCount", { count: wine.noteCount })}
+                    </span>
+                  </div>
+                  <Link className="text-link" to={`/wines/${wine.id}/taste`}>
+                    {t("tasting.startAction")}
+                  </Link>
+                </li>
+              );
+            })}
+        </ol>
+      ) : null}
+
+      {view === "sessions" ? (
+        sessions.length === 0 ? (
+          <div className="empty-state">
+            <h2>{t("memory.noSessionsTitle")}</h2>
+            <p>{t("memory.noSessionsBody")}</p>
+            <Link className="action-link action-link--primary" to="/sessions/new">
+              {t("sessions.newAction")}
+            </Link>
+          </div>
+        ) : (
+          <div className="session-card-grid">
+            {sessions.map((session) => (
+              <article className="session-card" key={session.id}>
+                <time dateTime={session.startsAt}>
+                  {new Intl.DateTimeFormat(i18n.language, { dateStyle: "medium" }).format(
+                    new Date(session.startsAt),
+                  )}
+                </time>
+                <h2>{session.name}</h2>
+                <p>{t("sessions.wineCount", { count: session.wineCount })}</p>
+                <Link className="text-link" to={`/sessions/${session.id}`}>
+                  {t("sessions.openAction")}
+                </Link>
+              </article>
+            ))}
+          </div>
+        )
       ) : null}
     </section>
   );

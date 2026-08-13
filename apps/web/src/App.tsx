@@ -1,3 +1,5 @@
+import { lazy, type ReactNode, Suspense } from "react";
+import { useTranslation } from "react-i18next";
 import { Route, Routes } from "react-router";
 
 import { useAuth } from "./auth/AuthContext";
@@ -8,13 +10,46 @@ import { HomePage } from "./pages/HomePage";
 import { InfoPage } from "./pages/InfoPage";
 import { InvitationAcceptPage, InvitationSignInPage } from "./pages/InvitationPage";
 import { NewSpacePage } from "./pages/NewSpacePage";
-import { QuickLogPage } from "./pages/QuickLogPage";
 import { SessionStatusPage } from "./pages/SessionStatusPage";
 import { SignInPage } from "./pages/SignInPage";
 import { SpaceSettingsPage } from "./pages/SpaceSettingsPage";
-import { WineMemoryPage } from "./pages/WineMemoryPage";
 import { SessionBoundary } from "./session/SessionProvider";
 import { OfflineSyncProvider } from "./offline/OfflineSyncProvider";
+
+const DeepTastingPage = lazy(() =>
+  import("./pages/DeepTastingPage").then((module) => ({ default: module.DeepTastingPage })),
+);
+const NewSessionPage = lazy(() =>
+  import("./pages/NewSessionPage").then((module) => ({ default: module.NewSessionPage })),
+);
+const QuickLogPage = lazy(() =>
+  import("./pages/QuickLogPage").then((module) => ({ default: module.QuickLogPage })),
+);
+const SessionDetailPage = lazy(() =>
+  import("./pages/SessionDetailPage").then((module) => ({ default: module.SessionDetailPage })),
+);
+const SessionsPage = lazy(() =>
+  import("./pages/SessionsPage").then((module) => ({ default: module.SessionsPage })),
+);
+const WineMemoryPage = lazy(() =>
+  import("./pages/WineMemoryPage").then((module) => ({ default: module.WineMemoryPage })),
+);
+
+function DeferredPage({ children }: { children: ReactNode }) {
+  const { t } = useTranslation();
+  return (
+    <Suspense
+      fallback={
+        <section aria-live="polite" className="empty-state">
+          <h1>{t("auth.loadingTitle")}</h1>
+          <p>{t("auth.loadingBody")}</p>
+        </section>
+      }
+    >
+      {children}
+    </Suspense>
+  );
+}
 
 export function AuthenticatedRoutes() {
   return (
@@ -23,12 +58,54 @@ export function AuthenticatedRoutes() {
         <Route element={<InvitationAcceptPage />} path="invitations/:token" />
         <Route element={<AppShell />}>
           <Route index element={<HomePage />} />
-          <Route element={<QuickLogPage />} path="log/new" />
           <Route
-            element={<InfoPage bodyKey="pages.sessionsBody" titleKey="pages.sessionsTitle" />}
+            element={
+              <DeferredPage>
+                <QuickLogPage />
+              </DeferredPage>
+            }
+            path="log/new"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <SessionsPage />
+              </DeferredPage>
+            }
             path="sessions"
           />
-          <Route element={<WineMemoryPage />} path="memory" />
+          <Route
+            element={
+              <DeferredPage>
+                <NewSessionPage />
+              </DeferredPage>
+            }
+            path="sessions/new"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <SessionDetailPage />
+              </DeferredPage>
+            }
+            path="sessions/:sessionId"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <DeepTastingPage />
+              </DeferredPage>
+            }
+            path="wines/:wineId/taste"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <WineMemoryPage />
+              </DeferredPage>
+            }
+            path="memory"
+          />
           <Route
             element={<InfoPage bodyKey="pages.assistantBody" titleKey="pages.assistantTitle" />}
             path="vicenc"

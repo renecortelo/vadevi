@@ -32,7 +32,9 @@ Every Phase 2 tenant table carries a `space_id` directly or is reached only thro
 
 ## Browser offline storage
 
-Dexie stores session bootstrap snapshots, Wine Memory snapshots, Quick Log drafts, pending mutations, processed photo blobs, sync cursors, and conflicts. Records are partitioned by Firebase user and, for tenant content, by Space. Sign-out and account switching remove the outgoing user's partition; refreshed bootstrap data purges records for Spaces that are no longer available.
+Dexie stores authenticated bootstrap snapshots, Wine Memory snapshots, Quick Log and deep-tasting drafts, cached tasting-session details and comparisons, pending mutations, processed photo blobs, sync cursors, and conflicts. Records are partitioned by Firebase user and, for tenant content, by Space. Stable client resource IDs allow offline creates to be referenced by dependent commands. Sign-out and account switching remove the outgoing user's partition; refreshed bootstrap data purges records for Spaces that are no longer available.
+
+Phase 2 wine and quick-note mutations use the batched sync endpoint. Phase 3 session and deep-note mutations replay their existing endpoints sequentially with deterministic idempotency keys derived from immutable mutation IDs. Optimistic-version conflicts retain both the local payload and the authorized current server payload until the user chooses a resolution.
 
 ## Deep tasting and sessions
 

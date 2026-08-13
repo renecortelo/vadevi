@@ -98,29 +98,38 @@ Phase 2 exit criteria:
 - cross-Space Wine Memory, tasting, sync, and private-media access is denied at the repository boundary
 - duplicate suggestions never silently merge user records
 
-## Current milestone: Phase 3 — Deep tasting and sessions
+## Completed milestone: Phase 3 — Deep tasting and sessions
 
-Server-foundation checkpoint implemented on 2026-08-13:
+Implemented:
 
 - migration `0006` extends tasting notes and contexts with every Phase 3 structured field and adds sessions, ordered flight entries, and reproducible summary storage
 - reviewed ontology contract version `2026.1` with stable numeric scales, descriptor codes, context codes, and translated-label separation
 - contract-first deep-note create/update/submit, session create/list/detail, batch flight append, exact reordering, and deterministic comparison endpoints
 - active-membership checks at every session boundary and author-only deep-note reads/updates/submission
 - one active note per participant/flight entry enforced in D1; another member's draft content is never returned in session detail or comparison
+- author-only deep-note retrieval so a participant can resume a saved draft without exposing it through shared session reads
 - optimistic version conflicts return the authorized current note while preserving the client's unsent local text for explicit resolution
 - comparisons use submitted notes only, suppress group scores below two scored submissions, rank deterministically, compute dispersion/descriptor overlap/buy-again count, and persist an algorithm-versioned summary with a hashed source-version input
-- a real Workers-runtime test covers two members, separate notes, every structured section/context, descriptor replacement, flight ordering, author isolation, conflict data, submission, comparison, summary persistence, and outsider denial
+- progressive Appearance, Nose, Palate, Context, and Conclusion UI with autosave, explicit draft submission, complete structured fields, and visible local/server conflict resolution
+- private session index, offline-ready session creation, stable flight ordering, participant state, and submitted-only comparison UI
+- Dexie v3 deep drafts, session/comparison snapshots, sequential dependent replay, deterministic endpoint idempotency keys, and user/Space-partitioned cleanup
+- versioned ontology `2026.1` with 14 stable descriptor codes and localized labels/help text across all eight supported locales
+- Wine Memory Cards, Table, Timeline, and Sessions views with direct tasting and session actions
+- route-level code splitting and on-demand non-default locale loading so the initial JavaScript remains inside the Phase 3 performance target
+- ADR-0005 documenting exactly-once offline replay, dependency ordering, conflict preservation, and local privacy boundaries
 
-Checkpoint validation:
+Phase 3 exit evidence captured on 2026-08-13:
 
-- strict contracts and API typechecks pass
-- all pre-existing Phase 2 API tests pass with migration `0006`
-- the focused two-member Phase 3 Workers-runtime integration test passes
-- generated OpenAPI includes the Phase 3 endpoints and schemas
+- the complete `pnpm check` gate passes: formatting, lint, strict typechecks, 36 tests, generated OpenAPI, eight-catalog and ontology validation, PWA build, and Worker dry-run
+- the Workers-runtime suite covers two members, separate notes, every structured section/context, descriptor replacement, flight ordering, author-only retrieval, conflict data, submission, comparison, summary persistence, and outsider denial
+- a real Auth Emulator browser flow creates an ordered session, saves and resumes a complete deep draft, submits it, and verifies the flight and one-participant comparison without exposing draft content
+- stopping the API still allows cached session index, flight, comparison, and author-owned deep-note resume views to render from the user/Space partition
+- measured 320 CSS px and 1280 CSS px layouts have no document-level horizontal overflow; narrow Memory controls and session/deep-tasting views remain usable
+- the production build splits Phase 3 routes and non-default locale catalogs; initial module plus preloads total approximately 247 KiB gzip against the 250 KiB target
+- the public-worktree scan finds no private keys or common Firebase, OpenAI, GitHub, AWS, Slack, or similar credential formats; checked-in runtime identifiers remain synthetic placeholders
 
-Remaining after the Mac handoff:
+Phase 3 exit criteria:
 
-1. Build the progressive deep-tasting, session/flight, and participant-comparison web UI.
-2. Extend Dexie drafts, queued mutations, sync conflict resolution, and cached session snapshots for Phase 3 resources.
-3. Add all eight localized ontology labels/help text and timeline/session Wine Memory views.
-4. Complete responsive browser evidence and the full Phase 3 exit gate before marking the phase complete.
+- a deep tasting can be drafted offline, resumed by its author, submitted exactly once, and compared only after submission
+- session flights retain explicit order and every participant's opinion remains distinct
+- all structured codes remain locale-independent while labels and help text are complete in every supported locale

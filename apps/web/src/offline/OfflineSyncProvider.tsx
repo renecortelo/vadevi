@@ -1,9 +1,35 @@
-import type { BootstrapResponse, SyncMutation, WineSummary } from "@vadevi/contracts";
+import {
+  AddSessionWinesRequestSchema,
+  CreateTastingSessionRequestSchema,
+  DeepTastingRequestSchema,
+  ReorderSessionWinesRequestSchema,
+  UpdateDeepTastingRequestSchema,
+  type BootstrapResponse,
+  type DeepTastingRequest,
+  type SyncMutation,
+  type UpdateDeepTastingRequest,
+  type WineSummary,
+} from "@vadevi/contracts";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useAuth } from "../auth/AuthContext";
+import { idempotencyKeyForMutation } from "../security/idempotency";
 import { createUlid } from "../security/ulid";
-import { getWineMemory, identifyWine, reserveMedia, syncSpace, uploadMedia } from "../services/api";
+import {
+  addTastingSessionWines,
+  ApiError,
+  createDeepTastingNote,
+  createTastingSession,
+  getWineMemory,
+  identifyWine,
+  listTastingSessions,
+  reorderTastingSessionWines,
+  reserveMedia,
+  submitDeepTastingNote,
+  syncSpace,
+  updateDeepTastingNote,
+  uploadMedia,
+} from "../services/api";
 import { useSession } from "../session/SessionContext";
 import {
   clearOfflineDataForUser,
@@ -14,7 +40,8 @@ import {
   type QuickLogDraft,
 } from "./database";
 import { OfflineSyncContext, type SyncStatus } from "./OfflineSyncContext";
-import { memoryChangedEvent } from "./events";
+import { memoryChangedEvent, sessionsChangedEvent } from "./events";
+import { cacheSessionDetail, cacheSessionList, storeSyncedDeepNote } from "./phase3";
 
 function asSyncMutation(mutation: QueuedMutation): SyncMutation {
   return {
@@ -26,6 +53,19 @@ function asSyncMutation(mutation: QueuedMutation): SyncMutation {
     resourceId: mutation.resourceId,
     resourceType: mutation.resourceType,
   } as SyncMutation;
+}
+
+function isPhaseTwoMutation(mutation: QueuedMutation): boolean {
+  return (
+    mutation.operation === "create" &&
+    (mutation.resourceType === "wine_record" || mutation.resourceType === "tasting_note")
+  );
+}
+
+function deepUpdateRequest(request: DeepTastingRequest, version: number): UpdateDeepTastingRequest {
+  const immutable = new Set(["clientId", "mode", "sessionWineId", "state", "wineId"]);
+  const fields = Object.fromEntries(Object.entries(request).filter(([key]) => !immutable.has(key)));
+  return UpdateDeepTastingRequestSchema.parse({ ...fields, version });
 }
 
 export function OfflineSyncProvider({ children }: { children: ReactNode }) {
@@ -50,7 +90,7 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
     else if (mutations.some((mutation) => mutation.state === "needs_attention")) {
       setStatus("needs_attention");
     } else if (mutations.length > 0) setStatus("saved");
-    else setStatus((current) => (current === "syncing" ? current : "synced"));
+    else setStatus("synced");
   }, [userId]);
 
   const refreshMemory = useCallback(
@@ -79,6 +119,77 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
     [user],
   );
 
+  const refreshSessions = useCallback(
+    async (spaceId: string) => {
+      if (user === null) return;
+      const response = await listTastingSessions(user, spaceId);
+      await cacheSessionList(user.uid, spaceId, response.data);
+    },
+    [user],
+  );
+
+  const applyPhaseThreeMutation = useCallback(
+    async (mutation: QueuedMutation) => {
+      if (user === null) return;
+      const idempotencyKey = await idempotencyKeyForMutation(mutation.id);
+      if (mutation.resourceType === "tasting_session") {
+        await createTastingSession(
+          user,
+          mutation.spaceId,
+          CreateTastingSessionRequestSchema.parse(mutation.payload),
+          idempotencyKey,
+        );
+        return;
+      }
+      if (mutation.resourceType === "session_wines") {
+        const detail = await addTastingSessionWines(
+          user,
+          mutation.spaceId,
+          mutation.resourceId,
+          AddSessionWinesRequestSchema.parse(mutation.payload),
+          idempotencyKey,
+        );
+        await cacheSessionDetail(user.uid, mutation.spaceId, detail);
+        return;
+      }
+      if (mutation.resourceType === "session_order") {
+        const request = ReorderSessionWinesRequestSchema.parse(mutation.payload);
+        const detail = await reorderTastingSessionWines(
+          user,
+          mutation.spaceId,
+          mutation.resourceId,
+          request.orderedSessionWineIds,
+        );
+        await cacheSessionDetail(user.uid, mutation.spaceId, detail);
+        return;
+      }
+      if (mutation.resourceType === "deep_tasting_note") {
+        const request = DeepTastingRequestSchema.parse(mutation.payload.request);
+        const submit = mutation.payload.submit === true;
+        const note =
+          mutation.baseVersion === undefined
+            ? await createDeepTastingNote(
+                user,
+                mutation.spaceId,
+                { ...request, state: submit ? "submitted" : "draft" },
+                idempotencyKey,
+              )
+            : await updateDeepTastingNote(
+                user,
+                mutation.spaceId,
+                mutation.resourceId,
+                deepUpdateRequest(request, mutation.baseVersion),
+              );
+        const synced =
+          submit && note.state === "draft"
+            ? await submitDeepTastingNote(user, mutation.spaceId, note.id, note.version)
+            : note;
+        await storeSyncedDeepNote(user.uid, mutation.spaceId, synced);
+      }
+    },
+    [user],
+  );
+
   const flush = useCallback(
     async (requestedSpaceId?: string) => {
       const spaceId = requestedSpaceId ?? activeSpaceId;
@@ -95,7 +206,7 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
           .filter((mutation) => mutation.state === "queued" || mutation.state === "syncing")
           .sortBy("occurredAt");
         if (mutations.length === 0) {
-          await refreshMemory(spaceId);
+          await Promise.all([refreshMemory(spaceId), refreshSessions(spaceId)]);
           setStatus("synced");
           return;
         }
@@ -139,13 +250,14 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
           spaceId,
           userId: user.uid,
         };
+        const phaseTwo = batch.filter(isPhaseTwoMutation);
         const response = await syncSpace(user, spaceId, {
           cursor: metadata.cursor,
           deviceId: metadata.deviceId,
-          mutations: batch.map(asSyncMutation),
+          mutations: phaseTwo.map(asSyncMutation),
         });
         for (const result of response.data.mutationResults) {
-          const mutation = batch.find((candidate) => candidate.id === result.mutationId);
+          const mutation = phaseTwo.find((candidate) => candidate.id === result.mutationId);
           if (mutation === undefined) continue;
           if (result.status === "applied" || result.status === "replayed") {
             await offlineDatabase.mutations.delete(mutation.id);
@@ -166,11 +278,36 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
             });
           }
         }
+        for (const mutation of batch.filter((candidate) => !isPhaseTwoMutation(candidate))) {
+          try {
+            await applyPhaseThreeMutation(mutation);
+            await offlineDatabase.mutations.delete(mutation.id);
+          } catch (error) {
+            if (!(error instanceof ApiError) || error.status >= 500) throw error;
+            await offlineDatabase.mutations.put({
+              ...mutation,
+              lastError: error.code,
+              state: "needs_attention",
+            });
+            await offlineDatabase.conflicts.put({
+              id: mutation.id,
+              localPayload: mutation.payload,
+              resourceId: mutation.resourceId,
+              resourceType: mutation.resourceType,
+              ...(error.details?.current === undefined
+                ? {}
+                : { serverPayload: error.details.current }),
+              spaceId,
+              userId: user.uid,
+            });
+          }
+        }
         await offlineDatabase.syncMetadata.put({
           ...metadata,
           cursor: response.data.nextCursor,
         });
-        await refreshMemory(spaceId);
+        await Promise.all([refreshMemory(spaceId), refreshSessions(spaceId)]);
+        globalThis.dispatchEvent(new CustomEvent(sessionsChangedEvent, { detail: { spaceId } }));
       } catch {
         const syncing = await offlineDatabase.mutations
           .where("[userId+spaceId]")
@@ -185,7 +322,15 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
         await refreshStatus();
       }
     },
-    [activeSpaceId, bootstrap.data.user.preferredLocale, refreshMemory, refreshStatus, user],
+    [
+      activeSpaceId,
+      applyPhaseThreeMutation,
+      bootstrap.data.user.preferredLocale,
+      refreshMemory,
+      refreshSessions,
+      refreshStatus,
+      user,
+    ],
   );
 
   const queueDraft = useCallback(
@@ -207,7 +352,9 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
       if (draft.includeNote) {
         mutations.push({
           id: draft.noteMutationId,
-          occurredAt: now,
+          // The wine is the note's parent resource. Keep their replay order
+          // deterministic even when Dexie sorts records with identical clocks.
+          occurredAt: new Date(Date.parse(now) + 1).toISOString(),
           operation: "create",
           payload: { ...draft.notePayload, wineId: draft.wineId },
           resourceId: draft.noteId,

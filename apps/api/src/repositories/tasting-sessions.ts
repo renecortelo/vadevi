@@ -698,6 +698,14 @@ async function getDeepNote(
   };
 }
 
+export async function getDeepTastingNote(
+  database: D1Database,
+  options: { noteId: string; principal: FirebasePrincipal; spaceId: string },
+): Promise<{ data: DeepTastingNote } | null> {
+  const note = await getDeepNote(database, options.principal, options.spaceId, options.noteId);
+  return note === null ? null : { data: note };
+}
+
 function deepValues(request: DeepTastingRequest | UpdateDeepTastingRequest) {
   return [
     request.score100 ?? null,
