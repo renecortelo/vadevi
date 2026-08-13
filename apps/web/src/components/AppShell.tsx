@@ -1,5 +1,6 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
 import { ConnectionStatus } from "./ConnectionStatus";
+import { SyncStatus } from "./SyncStatus";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router";
 import { useTranslation } from "react-i18next";
@@ -70,6 +71,7 @@ export function AppShell() {
             </NavLink>
           </div>
           <ConnectionStatus />
+          <SyncStatus />
           <button className="text-button" onClick={() => void signOut()} type="button">
             {t("auth.signOut")}
           </button>

@@ -35,5 +35,5 @@ for (const locale of locales) {
 if (failed) {
   process.exitCode = 1;
 } else {
-  console.info(`All ${locales.length} Phase 0 catalogs match the English source keys.`);
+  console.info(`All ${locales.length} catalogs match the English source keys.`);
 }

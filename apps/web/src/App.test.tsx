@@ -5,7 +5,10 @@ import { MemoryRouter } from "react-router";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { AuthenticatedRoutes } from "./App";
+import { AuthContext, type AuthContextValue } from "./auth/AuthContext";
+import type { FirebaseUser } from "./auth/firebase";
 import { i18n } from "./i18n";
+import { OfflineSyncContext, type OfflineSyncContextValue } from "./offline/OfflineSyncContext";
 import { OnboardingPage } from "./pages/OnboardingPage";
 import { SessionContext, type SessionContextValue } from "./session/SessionContext";
 
@@ -86,11 +89,39 @@ const session: SessionContextValue = {
   updateProfile: async () => session.bootstrap,
 };
 
+const firebaseUser = {
+  getIdToken: async () => "test-token",
+  uid: "firebase-web-test-user",
+} as FirebaseUser;
+
+const auth: AuthContextValue = {
+  appEnvironment: "local",
+  error: null,
+  isEmulator: true,
+  signIn: async () => undefined,
+  signOut: async () => undefined,
+  status: "signed-in",
+  user: firebaseUser,
+};
+
+const offlineSync: OfflineSyncContextValue = {
+  clearOfflineData: async () => undefined,
+  flush: async () => undefined,
+  pendingCount: 0,
+  queueDraft: async () => undefined,
+  refreshStatus: async () => undefined,
+  status: "synced",
+};
+
 function renderWithSession(node: ReactNode, route = "/"): string {
   return renderToStaticMarkup(
     <QueryClientProvider client={new QueryClient()}>
       <MemoryRouter initialEntries={[route]}>
-        <SessionContext.Provider value={session}>{node}</SessionContext.Provider>
+        <AuthContext.Provider value={auth}>
+          <SessionContext.Provider value={session}>
+            <OfflineSyncContext.Provider value={offlineSync}>{node}</OfflineSyncContext.Provider>
+          </SessionContext.Provider>
+        </AuthContext.Provider>
       </MemoryRouter>
     </QueryClientProvider>,
   );
@@ -116,7 +147,9 @@ describe("authenticated app shell", () => {
 
     expect(markup).toContain("Wine Memory");
     expect(markup).toMatch(/<a[^>]*aria-current="page"[^>]*href="\/memory"/);
-    expect(markup).toContain("Your private cards, table, timeline, filters, and export");
+    expect(markup).toContain("Search the bottles and opinions that belong to this Space");
+    expect(markup).toContain("Cards");
+    expect(markup).toContain("Table");
   });
 
   it("offers every supported locale in resumable onboarding", () => {
@@ -138,5 +171,16 @@ describe("authenticated app shell", () => {
     expect(markup).toContain('for="space-name"');
     expect(markup).toContain('for="space-locale"');
     expect(markup).toContain("A private Space designed for exactly two active members.");
+  });
+
+  it("renders a manual, explicitly confirmed, offline-ready Quick Log", () => {
+    const markup = renderRoute("/log/new");
+
+    expect(markup).toContain('for="producer-name"');
+    expect(markup).toContain('for="wine-name"');
+    expect(markup).toContain('type="file"');
+    expect(markup).toContain("Add a quick tasting note");
+    expect(markup).toContain("Draft saved on this device");
+    expect(markup).toContain("Review wine");
   });
 });

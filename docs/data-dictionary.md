@@ -16,3 +16,20 @@ Application identifiers are ULIDs stored as text. Timestamps are UTC ISO 8601 st
 - a partial unique index permits at most one active personal Space per creator
 - `change_events` records user-visible resource changes for future incremental sync
 - `audit_events` records security-relevant actions without token or private-content payloads
+
+## Wine Memory and Quick Log
+
+`0005_wine_memory_quick_log.sql` introduces the Phase 2 memory and capture model:
+
+- `wine_records` stores a user-confirmed wine identity inside one Space. Normalized producer/name columns support matching without replacing the user's display text.
+- `wine_grapes` and `wine_aliases` retain ordered grape snapshots and searchable alternate names.
+- `media_assets` stores only private R2 metadata and an opaque server-side object key; `wine_media` associates ready media with a wine.
+- `tasting_notes` stores quick or future deep notes, author attribution, score, sentiment, and drink/buy intent.
+- `tasting_contexts` and `tasting_descriptors` hold optional food/environment/glass context and structured descriptor snapshots.
+- `sync_mutations` records the user-scoped mutation identity needed for exact-once application semantics.
+
+Every Phase 2 tenant table carries a `space_id` directly or is reached only through a same-Space parent. Repository methods verify active membership before reading or mutating these rows. Duplicate candidates are suggestions, not database merges.
+
+## Browser offline storage
+
+Dexie stores session bootstrap snapshots, Wine Memory snapshots, Quick Log drafts, pending mutations, processed photo blobs, sync cursors, and conflicts. Records are partitioned by Firebase user and, for tenant content, by Space. Sign-out and account switching remove the outgoing user's partition; refreshed bootstrap data purges records for Spaces that are no longer available.

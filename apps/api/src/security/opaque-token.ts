@@ -4,8 +4,9 @@ function bytesToBase64Url(bytes: Uint8Array): string {
   return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
 }
 
-export async function sha256Base64Url(value: string): Promise<string> {
-  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+export async function sha256Base64Url(value: string | Uint8Array<ArrayBuffer>): Promise<string> {
+  const source = typeof value === "string" ? new TextEncoder().encode(value) : value;
+  const digest = await crypto.subtle.digest("SHA-256", source);
   return bytesToBase64Url(new Uint8Array(digest));
 }
 

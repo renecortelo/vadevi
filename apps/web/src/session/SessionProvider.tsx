@@ -1,11 +1,12 @@
 import type {
+  BootstrapResponse,
   CreateInvitationRequest,
   CreateSpaceRequest,
   RemoveMemberRequest,
   UpdateProfileRequest,
 } from "@vadevi/contracts";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { type ReactNode, useEffect, useMemo } from "react";
+import { type ReactNode, useEffect, useMemo, useState } from "react";
 
 import type { FirebaseUser } from "../auth/firebase";
 import { i18n } from "../i18n";
@@ -22,6 +23,7 @@ import {
 } from "../services/api";
 import { OnboardingPage } from "../pages/OnboardingPage";
 import { SessionStatusPage } from "../pages/SessionStatusPage";
+import { offlineDatabase } from "../offline/database";
 import { SessionContext, type SessionContextValue } from "./SessionContext";
 
 export function SessionBoundary({
@@ -34,8 +36,33 @@ export function SessionBoundary({
   user: FirebaseUser;
 }) {
   const queryClient = useQueryClient();
-  const queryKey = ["bootstrap", user.uid] as const;
+  const queryKey = useMemo(() => ["bootstrap", user.uid] as const, [user.uid]);
+  const [offlineSessionLoaded, setOfflineSessionLoaded] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+
+    async function restoreOfflineSession() {
+      try {
+        const snapshot = await offlineDatabase.sessions.get(user.uid);
+        if (active && snapshot !== undefined) {
+          queryClient.setQueryData(queryKey, snapshot.bootstrap);
+        }
+      } catch {
+        // IndexedDB can be unavailable in restrictive browser modes; online bootstrap still works.
+      } finally {
+        if (active) setOfflineSessionLoaded(true);
+      }
+    }
+
+    void restoreOfflineSession();
+    return () => {
+      active = false;
+    };
+  }, [queryClient, queryKey, user.uid]);
+
   const bootstrapQuery = useQuery({
+    enabled: offlineSessionLoaded,
     queryFn: ({ signal }) => getBootstrap(user, signal),
     queryKey,
     retry: (failureCount, error) =>
@@ -82,9 +109,21 @@ export function SessionBoundary({
   useEffect(() => {
     const bootstrap = bootstrapQuery.data;
     if (bootstrap === undefined) return;
+    const snapshot: {
+      bootstrap: BootstrapResponse;
+      id: string;
+      updatedAt: string;
+      userId: string;
+    } = {
+      bootstrap,
+      id: user.uid,
+      updatedAt: new Date().toISOString(),
+      userId: user.uid,
+    };
+    void offlineDatabase.sessions.put(snapshot);
     globalThis.localStorage?.setItem("vadevi.activeSpaceId", bootstrap.data.user.activeSpaceId);
     void i18n.changeLanguage(bootstrap.data.user.preferredLocale);
-  }, [bootstrapQuery.data]);
+  }, [bootstrapQuery.data, user.uid]);
 
   const value = useMemo<SessionContextValue | null>(() => {
     if (bootstrapQuery.data === undefined) return null;

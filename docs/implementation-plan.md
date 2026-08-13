@@ -67,11 +67,41 @@ Phase 1 exit criteria:
 - the authorization matrix proves no cross-Space access
 - a removed member loses server access on the next request
 
-## Current milestone: Phase 2 — Wine Memory and Quick Log
+## Completed milestone: Phase 2 — Wine Memory and Quick Log
+
+Implemented:
+
+- Space-scoped wine, alias, grape, private-media, quick-tasting, descriptor, context, and sync-mutation storage
+- contract-first Wine Memory, Quick Log, media, identification-fallback, and sync APIs with generated OpenAPI
+- manual wine confirmation with explicit duplicate suggestions; similar wines remain separate unless a user chooses otherwise
+- stable cursor pagination plus accent-insensitive producer, wine-name, region, and alias search
+- Quick Log for vintage/NV, wine type, score, sentiment, drink/buy intent, descriptors, food, and a short comment
+- private photo preprocessing in the browser and authenticated R2 reservation, upload, validation, and read routes
+- offline drafts, user/Space-partitioned Dexie snapshots, an idempotent mutation queue, conflict preservation, and visible sync state
+- cached authenticated bootstrap state so a previously visited user can reopen Quick Log during an API outage
+- card and table Wine Memory views with cached fallback, type filters, search, private image loading, and explicit offline-data clearing
+- truthful manual fallback when optional barcode/OCR identification is unavailable
+- all Phase 2 interface strings translated across the eight supported locale catalogs
+
+Phase 2 exit evidence captured on 2026-08-13:
+
+- Workers-runtime integration tests cover exact-once retry, non-merging duplicate suggestions, accent-insensitive search, conflict payloads, and complete Quick Note persistence
+- the authorization matrix denies outsider wine reads/writes and private-media reads with the same safe not-found response
+- media tests reject MIME spoofing, hash mismatch, EXIF-bearing images, and oversized uploads; valid private images remain membership-gated
+- web component tests cover the Quick Log and Wine Memory routes, while TypeScript, lint, generated-contract, localization, and production-build gates pass
+- offline session, draft, mutation, snapshot, and conflict records are partitioned by Firebase user and Space; logout/account switching clears the outgoing user's records
+- the in-app browser could not open the listening local dev URL because its local-address policy blocked the alias; automated UI and Workers-runtime evidence is retained instead of claiming a manual browser pass
+
+Phase 2 exit criteria:
+
+- a restaurant Quick Log can be captured into the local queue without the API, survive reload, and sync through mutation IDs exactly once
+- cross-Space Wine Memory, tasting, sync, and private-media access is denied at the repository boundary
+- duplicate suggestions never silently merge user records
+
+## Current milestone: Phase 3 — Deep tasting and sessions
 
 Next:
 
-1. Add Space-scoped wine/media migrations, transport contracts, and repository boundaries.
-2. Build manual wine confirmation with duplicate suggestions and explicit draft handling.
-3. Add quick tasting and Wine Memory card/table/search views.
-4. Introduce offline drafts, an idempotent mutation queue, and visible sync/conflict states before optional photo-assisted identification.
+1. Add structured deep-tasting drafts and submission contracts.
+2. Build shared tasting sessions, wine lineups, and participant comparison views.
+3. Extend offline/conflict handling to deep-tasting drafts and session participation.

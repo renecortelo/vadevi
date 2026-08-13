@@ -8,10 +8,13 @@ import { HomePage } from "./pages/HomePage";
 import { InfoPage } from "./pages/InfoPage";
 import { InvitationAcceptPage, InvitationSignInPage } from "./pages/InvitationPage";
 import { NewSpacePage } from "./pages/NewSpacePage";
+import { QuickLogPage } from "./pages/QuickLogPage";
 import { SessionStatusPage } from "./pages/SessionStatusPage";
 import { SignInPage } from "./pages/SignInPage";
 import { SpaceSettingsPage } from "./pages/SpaceSettingsPage";
+import { WineMemoryPage } from "./pages/WineMemoryPage";
 import { SessionBoundary } from "./session/SessionProvider";
+import { OfflineSyncProvider } from "./offline/OfflineSyncProvider";
 
 export function AuthenticatedRoutes() {
   return (
@@ -20,18 +23,12 @@ export function AuthenticatedRoutes() {
         <Route element={<InvitationAcceptPage />} path="invitations/:token" />
         <Route element={<AppShell />}>
           <Route index element={<HomePage />} />
-          <Route
-            element={<InfoPage bodyKey="pages.logBody" titleKey="pages.logTitle" />}
-            path="log/new"
-          />
+          <Route element={<QuickLogPage />} path="log/new" />
           <Route
             element={<InfoPage bodyKey="pages.sessionsBody" titleKey="pages.sessionsTitle" />}
             path="sessions"
           />
-          <Route
-            element={<InfoPage bodyKey="pages.memoryBody" titleKey="pages.memoryTitle" />}
-            path="memory"
-          />
+          <Route element={<WineMemoryPage />} path="memory" />
           <Route
             element={<InfoPage bodyKey="pages.assistantBody" titleKey="pages.assistantTitle" />}
             path="vicenc"
@@ -82,7 +79,9 @@ function AuthGate() {
 
   return (
     <SessionBoundary signOut={auth.signOut} user={auth.user}>
-      <AuthenticatedRoutes />
+      <OfflineSyncProvider>
+        <AuthenticatedRoutes />
+      </OfflineSyncProvider>
     </SessionBoundary>
   );
 }

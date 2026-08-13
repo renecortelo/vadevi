@@ -11,6 +11,7 @@ declare global {
       FIREBASE_PROJECT_ID: string;
       FIREBASE_WEB_API_KEY: string;
       DB: D1Database;
+      MEDIA: R2Bucket;
       TEST_MIGRATIONS: D1Migration[];
     }
   }

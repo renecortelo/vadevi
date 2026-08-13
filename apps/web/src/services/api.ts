@@ -20,6 +20,20 @@ import {
   type RuntimeConfigResponse,
   type SpaceDetailResponse,
   type UpdateProfileRequest,
+  IdentificationRequestSchema,
+  IdentificationResponseSchema,
+  MediaReservationRequestSchema,
+  MediaReservationResponseSchema,
+  MediaUploadResponseSchema,
+  SyncRequestSchema,
+  SyncResponseSchema,
+  WineMemoryResponseSchema,
+  type IdentificationRequest,
+  type MediaReservationRequest,
+  type MediaReservationResponse,
+  type SyncRequest,
+  type SyncResponse,
+  type WineMemoryResponse,
 } from "@vadevi/contracts";
 
 type TokenSource = {
@@ -210,4 +224,108 @@ export async function removeMember(
 
   if (!response.ok) throw await apiError(response);
   return SpaceDetailResponseSchema.parse(await response.json());
+}
+
+export async function getWineMemory(
+  tokenSource: TokenSource,
+  spaceId: string,
+  options: { cursor?: string; limit?: number; query?: string; wineType?: string } = {},
+  signal?: AbortSignal,
+): Promise<WineMemoryResponse> {
+  const parameters = new URLSearchParams();
+  if (options.cursor !== undefined) parameters.set("cursor", options.cursor);
+  if (options.limit !== undefined) parameters.set("limit", String(options.limit));
+  if (options.query !== undefined && options.query.trim().length > 0) {
+    parameters.set("query", options.query.trim());
+  }
+  if (options.wineType !== undefined && options.wineType.length > 0) {
+    parameters.set("wineType", options.wineType);
+  }
+  const query = parameters.size === 0 ? "" : `?${parameters.toString()}`;
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/wines${query}`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return WineMemoryResponseSchema.parse(await response.json());
+}
+
+export async function reserveMedia(
+  tokenSource: TokenSource,
+  spaceId: string,
+  request: MediaReservationRequest,
+  idempotencyKey: string,
+): Promise<MediaReservationResponse> {
+  const response = await authenticatedFetch(tokenSource, `/api/v1/spaces/${spaceId}/media`, {
+    body: JSON.stringify(MediaReservationRequestSchema.parse(request)),
+    headers: {
+      "Content-Type": "application/json",
+      "Idempotency-Key": idempotencyKey,
+    },
+    method: "POST",
+  });
+  if (!response.ok) throw await apiError(response);
+  return MediaReservationResponseSchema.parse(await response.json());
+}
+
+export async function uploadMedia(
+  tokenSource: TokenSource,
+  uploadPath: string,
+  blob: Blob,
+): Promise<string> {
+  const response = await authenticatedFetch(tokenSource, uploadPath, {
+    body: blob,
+    headers: { "Content-Type": blob.type },
+    method: "PUT",
+  });
+  if (!response.ok) throw await apiError(response);
+  return MediaUploadResponseSchema.parse(await response.json()).data.media.id;
+}
+
+export async function getPrivateMedia(
+  tokenSource: TokenSource,
+  spaceId: string,
+  mediaId: string,
+  signal?: AbortSignal,
+): Promise<Blob> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/media/${mediaId}/content`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return response.blob();
+}
+
+export async function identifyWine(
+  tokenSource: TokenSource,
+  spaceId: string,
+  request: IdentificationRequest,
+) {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/identifications`,
+    {
+      body: JSON.stringify(IdentificationRequestSchema.parse(request)),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return IdentificationResponseSchema.parse(await response.json());
+}
+
+export async function syncSpace(
+  tokenSource: TokenSource,
+  spaceId: string,
+  request: SyncRequest,
+): Promise<SyncResponse> {
+  const response = await authenticatedFetch(tokenSource, `/api/v1/spaces/${spaceId}/sync`, {
+    body: JSON.stringify(SyncRequestSchema.parse(request)),
+    headers: { "Content-Type": "application/json" },
+    method: "POST",
+  });
+  if (!response.ok) throw await apiError(response);
+  return SyncResponseSchema.parse(await response.json());
 }

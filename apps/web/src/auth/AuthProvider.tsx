@@ -15,6 +15,7 @@ import { webEnvironment } from "../config/env";
 import { getRuntimeConfig } from "../services/api";
 import { AuthContext, type AuthContextValue, type AuthStatus } from "./AuthContext";
 import { createFirebaseAuth, type FirebaseUser } from "./firebase";
+import { clearOfflineDataForUser } from "../offline/database";
 
 function localRuntimeConfig(): RuntimeConfigResponse {
   return {
@@ -38,6 +39,7 @@ function localRuntimeConfig(): RuntimeConfigResponse {
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const authRef = useRef<Auth | null>(null);
+  const previousUserIdRef = useRef<string | null>(null);
   const [status, setStatus] = useState<AuthStatus>("loading");
   const [user, setUser] = useState<FirebaseUser | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -69,6 +71,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           auth,
           (nextUser) => {
             if (!active) return;
+            const previousUserId = previousUserIdRef.current;
+            if (previousUserId !== null && previousUserId !== nextUser?.uid) {
+              void clearOfflineDataForUser(previousUserId);
+            }
+            previousUserIdRef.current = nextUser?.uid ?? null;
             setUser(nextUser);
             setError(null);
             setStatus(nextUser === null ? "signed-out" : "signed-in");
@@ -107,6 +114,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       },
       signOut: async () => {
         const auth = authRef.current;
+        if (user !== null) await clearOfflineDataForUser(user.uid);
         if (auth !== null) await firebaseSignOut(auth);
       },
       status,

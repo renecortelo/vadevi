@@ -23,7 +23,8 @@ body {
 button,
 a,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 
@@ -173,6 +174,44 @@ select:disabled {
 
 .connection-status[data-online="true"] .connection-status__dot {
   background: var(--color-success);
+}
+
+.sync-status {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--color-text-muted);
+  display: inline-flex;
+  font-size: var(--text-xs);
+  gap: var(--space-2);
+  padding: var(--space-1);
+}
+
+.sync-status__dot {
+  background: var(--color-warning);
+  block-size: 0.5rem;
+  border-radius: 50%;
+  inline-size: 0.5rem;
+}
+
+.sync-status[data-state="synced"] .sync-status__dot {
+  background: var(--color-success);
+}
+
+.sync-status[data-state="needs_attention"] .sync-status__dot {
+  background: var(--color-danger, #9f2737);
+}
+
+.sync-status__count {
+  align-items: center;
+  background: var(--color-plum);
+  block-size: 1.25rem;
+  border-radius: var(--radius-pill);
+  color: white;
+  display: inline-flex;
+  font-size: 0.65rem;
+  inline-size: 1.25rem;
+  justify-content: center;
 }
 
 .primary-nav {
@@ -637,6 +676,449 @@ p {
   margin-inline: auto;
   max-inline-size: 46rem;
   padding-block-start: clamp(var(--space-6), 8vw, 6rem);
+}
+
+.quick-log-page,
+.memory-page {
+  display: grid;
+  gap: var(--space-6);
+  margin-inline: auto;
+  max-inline-size: 66rem;
+}
+
+.page-heading {
+  max-inline-size: 48rem;
+  padding-block-start: clamp(var(--space-4), 4vw, var(--space-7));
+}
+
+.page-heading > p:last-child {
+  font-size: var(--text-lg);
+}
+
+.quick-log-form {
+  display: grid;
+  gap: var(--space-5);
+  max-inline-size: 48rem;
+}
+
+.form-section {
+  background: rgb(255 250 244 / 84%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  min-inline-size: 0;
+  padding: clamp(var(--space-4), 5vw, var(--space-6));
+}
+
+.form-section > legend {
+  color: var(--color-plum);
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  padding-inline: var(--space-2);
+}
+
+.form-section label,
+.note-fields > label,
+.form-grid label,
+.memory-filters label {
+  color: var(--color-text);
+  display: grid;
+  font-size: var(--text-sm);
+  font-weight: 750;
+  gap: var(--space-2);
+}
+
+.form-section input:not([type="checkbox"], [type="file"]),
+.form-section select,
+.form-section textarea,
+.memory-filters input,
+.memory-filters select {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  inline-size: 100%;
+  min-block-size: 3rem;
+  min-inline-size: 0;
+  padding: 0.7rem 0.85rem;
+}
+
+.form-section textarea {
+  min-block-size: 7rem;
+  resize: vertical;
+}
+
+.section-help,
+.descriptor-fieldset p {
+  font-size: var(--text-sm);
+  margin-block-end: var(--space-2);
+}
+
+.form-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.check-row {
+  align-items: center;
+  display: flex !important;
+  gap: var(--space-3) !important;
+}
+
+.check-row input,
+.descriptor-chip input {
+  block-size: 1.15rem;
+  inline-size: 1.15rem;
+  margin: 0;
+}
+
+.photo-picker {
+  align-items: center;
+  background: var(--color-surface-raised);
+  border: 1px dashed var(--color-accent);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  min-block-size: 5rem;
+  padding: var(--space-4);
+  place-items: center;
+}
+
+.photo-picker input {
+  inline-size: min(100%, 24rem);
+}
+
+.photo-preview {
+  align-items: center;
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+}
+
+.photo-preview img {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  max-block-size: 20rem;
+  max-inline-size: 100%;
+  object-fit: contain;
+}
+
+.form-warning {
+  color: var(--color-warning);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.note-fields {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.descriptor-fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.descriptor-fieldset > legend {
+  font-size: var(--text-sm);
+  font-weight: 750;
+}
+
+.descriptor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.descriptor-chip {
+  align-items: center;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  display: inline-flex !important;
+  flex-direction: row;
+  gap: var(--space-2) !important;
+  padding: 0.55rem 0.8rem;
+}
+
+.descriptor-chip:has(input:checked) {
+  background: var(--color-surface-muted);
+  border-color: var(--color-accent);
+}
+
+.local-save-state,
+.cache-note {
+  color: var(--color-success);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  margin: 0;
+}
+
+.notice-card,
+.empty-state,
+.clear-confirm {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.notice-card p,
+.empty-state p,
+.clear-confirm p {
+  margin-block-end: 0;
+}
+
+.review-dialog {
+  align-items: center;
+  background: rgb(45 37 37 / 42%);
+  display: grid;
+  inset: 0;
+  overflow-y: auto;
+  padding: var(--space-4);
+  place-items: center;
+  position: fixed;
+  z-index: 30;
+}
+
+.review-dialog__card {
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 28px 90px rgb(45 37 37 / 30%);
+  inline-size: min(100%, 34rem);
+  padding: clamp(var(--space-5), 6vw, var(--space-7));
+}
+
+.review-list {
+  display: grid;
+  gap: 0;
+  margin-block: var(--space-5);
+}
+
+.review-list > div {
+  border-block-start: 1px solid var(--color-border);
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: minmax(6rem, 0.7fr) minmax(0, 1.3fr);
+  padding-block: var(--space-3);
+}
+
+.review-list dt {
+  color: var(--color-text-muted);
+}
+
+.review-list dd {
+  font-weight: 750;
+  margin: 0;
+}
+
+.memory-heading {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  justify-content: space-between;
+  max-inline-size: none;
+}
+
+.memory-heading > div:first-child {
+  max-inline-size: 48rem;
+}
+
+.segmented-control {
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  padding: var(--space-1);
+}
+
+.segmented-control button {
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+  min-block-size: 2.5rem;
+  padding-inline: var(--space-4);
+}
+
+.segmented-control button[aria-pressed="true"] {
+  background: var(--color-surface-raised);
+  color: var(--color-plum);
+  font-weight: 750;
+}
+
+.memory-sync-bar {
+  align-items: center;
+  background: rgb(255 250 244 / 76%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+}
+
+.memory-sync-bar > div:first-child {
+  display: grid;
+  font-size: var(--text-sm);
+  gap: var(--space-1);
+}
+
+.memory-sync-bar span {
+  color: var(--color-text-muted);
+}
+
+.memory-filters {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: minmax(0, 2fr) minmax(10rem, 1fr);
+}
+
+.wine-card-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+}
+
+.wine-card {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  min-inline-size: 0;
+  overflow: hidden;
+}
+
+.wine-card__image {
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface-muted);
+}
+
+.wine-card__image img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.wine-card__placeholder {
+  align-items: center;
+  block-size: 100%;
+  color: var(--color-plum);
+  display: flex;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  inline-size: 100%;
+  justify-content: center;
+}
+
+.wine-card__body {
+  padding: var(--space-5);
+}
+
+.wine-card__producer {
+  color: var(--color-accent-strong);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-block-end: var(--space-2);
+  text-transform: uppercase;
+}
+
+.wine-card__body h2 {
+  margin-block-end: var(--space-2);
+}
+
+.wine-card__facts {
+  border-block-start: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  display: flex;
+  font-size: var(--text-xs);
+  gap: var(--space-4);
+  justify-content: space-between;
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-3);
+}
+
+.warning-chip {
+  background: #fff1cf;
+  border-radius: var(--radius-pill);
+  color: #6d4a00;
+  display: inline-flex;
+  font-size: var(--text-xs);
+  font-weight: 750;
+  margin-block-end: var(--space-3);
+  padding: 0.35rem 0.6rem;
+}
+
+.table-scroll {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  max-inline-size: 100%;
+  overflow-x: auto;
+}
+
+.table-scroll table {
+  background: var(--color-surface-raised);
+  border-collapse: collapse;
+  inline-size: 100%;
+  min-inline-size: 50rem;
+}
+
+.table-scroll th,
+.table-scroll td {
+  border-block-end: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+  text-align: start;
+}
+
+.table-scroll th {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.attention-panel {
+  background: #fff8e9;
+  border: 1px solid #d8a43c;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.conflict-card {
+  border-block-start: 1px solid #d8a43c;
+  display: grid;
+  gap: var(--space-4);
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-4);
+}
+
+.conflict-card pre {
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  max-block-size: 14rem;
+  overflow: auto;
+  padding: var(--space-3);
+  white-space: pre-wrap;
+}
+
+@media (max-width: 520px) {
+  .form-grid,
+  .form-grid--three,
+  .memory-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .review-list > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 .update-prompt {
