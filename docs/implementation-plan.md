@@ -100,8 +100,27 @@ Phase 2 exit criteria:
 
 ## Current milestone: Phase 3 — Deep tasting and sessions
 
-Next:
+Server-foundation checkpoint implemented on 2026-08-13:
 
-1. Add structured deep-tasting drafts and submission contracts.
-2. Build shared tasting sessions, wine lineups, and participant comparison views.
-3. Extend offline/conflict handling to deep-tasting drafts and session participation.
+- migration `0006` extends tasting notes and contexts with every Phase 3 structured field and adds sessions, ordered flight entries, and reproducible summary storage
+- reviewed ontology contract version `2026.1` with stable numeric scales, descriptor codes, context codes, and translated-label separation
+- contract-first deep-note create/update/submit, session create/list/detail, batch flight append, exact reordering, and deterministic comparison endpoints
+- active-membership checks at every session boundary and author-only deep-note reads/updates/submission
+- one active note per participant/flight entry enforced in D1; another member's draft content is never returned in session detail or comparison
+- optimistic version conflicts return the authorized current note while preserving the client's unsent local text for explicit resolution
+- comparisons use submitted notes only, suppress group scores below two scored submissions, rank deterministically, compute dispersion/descriptor overlap/buy-again count, and persist an algorithm-versioned summary with a hashed source-version input
+- a real Workers-runtime test covers two members, separate notes, every structured section/context, descriptor replacement, flight ordering, author isolation, conflict data, submission, comparison, summary persistence, and outsider denial
+
+Checkpoint validation:
+
+- strict contracts and API typechecks pass
+- all pre-existing Phase 2 API tests pass with migration `0006`
+- the focused two-member Phase 3 Workers-runtime integration test passes
+- generated OpenAPI includes the Phase 3 endpoints and schemas
+
+Remaining after the Mac handoff:
+
+1. Build the progressive deep-tasting, session/flight, and participant-comparison web UI.
+2. Extend Dexie drafts, queued mutations, sync conflict resolution, and cached session snapshots for Phase 3 resources.
+3. Add all eight localized ontology labels/help text and timeline/session Wine Memory views.
+4. Complete responsive browser evidence and the full Phase 3 exit gate before marking the phase complete.

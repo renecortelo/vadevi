@@ -12,6 +12,7 @@ import { requestContext } from "./middleware/request-context";
 import { security } from "./middleware/security";
 import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
 import { registerSpaceRoutes } from "./routes/spaces";
+import { registerTastingSessionRoutes } from "./routes/tasting-sessions";
 import { registerWineMemoryRoutes } from "./routes/wine-memory";
 import type { ApiEnvironment } from "./types";
 
@@ -257,6 +258,7 @@ export function createApi() {
 
   registerSpaceRoutes(app);
   registerWineMemoryRoutes(app);
+  registerTastingSessionRoutes(app);
 
   app.get("/openapi.json", (context) =>
     context.json(

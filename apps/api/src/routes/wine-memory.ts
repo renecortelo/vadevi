@@ -2,6 +2,8 @@ import { createRoute, type OpenAPIHono } from "@hono/zod-openapi";
 import {
   CreateWineRequestSchema,
   CreateWineResponseSchema,
+  DeepTastingRequestSchema,
+  DeepTastingResponseSchema,
   ErrorEnvelopeSchema,
   IdempotencyKeySchema,
   IdentificationRequestSchema,
@@ -21,6 +23,7 @@ import {
 import { z } from "zod";
 
 import { readMedia, reserveMedia, uploadMedia } from "../repositories/media";
+import { createDeepTastingNote } from "../repositories/tasting-sessions";
 import { createTastingNote, createWine, listWines, syncSpace } from "../repositories/wine-memory";
 import type { ApiEnvironment } from "../types";
 
@@ -101,22 +104,33 @@ const listWinesRoute = createRoute({
 const createTastingRoute = createRoute({
   method: "post",
   path: "/api/v1/spaces/{spaceId}/tasting-notes",
-  operationId: "createQuickTastingNote",
+  operationId: "createTastingNote",
   tags: ["Tastings"],
-  summary: "Create one author-owned quick tasting note",
+  summary: "Create one author-owned quick or deep tasting note",
   security: [{ FirebaseBearer: [] }],
   request: {
     params: SpaceIdPathSchema,
     headers: IdempotencyHeadersSchema,
     body: {
-      content: { "application/json": { schema: QuickTastingRequestSchema } },
+      content: {
+        "application/json": {
+          schema: z.discriminatedUnion("mode", [
+            QuickTastingRequestSchema,
+            DeepTastingRequestSchema,
+          ]),
+        },
+      },
       required: true,
     },
   },
   responses: {
     201: {
-      content: { "application/json": { schema: TastingNoteResponseSchema } },
-      description: "The quick tasting note.",
+      content: {
+        "application/json": {
+          schema: z.union([TastingNoteResponseSchema, DeepTastingResponseSchema]),
+        },
+      },
+      description: "The quick or deep tasting note.",
       headers: {
         Location: { description: "The new note resource.", schema: { type: "string" } },
         "Idempotency-Replayed": { description: "True when replayed.", schema: { type: "string" } },
@@ -374,12 +388,21 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
   });
 
   app.openapi(createTastingRoute, async (context) => {
-    const result = await createTastingNote(context.env.DB!, {
-      idempotencyKey: context.req.valid("header")["Idempotency-Key"],
-      principal: context.get("principal"),
-      request: context.req.valid("json"),
-      spaceId: context.req.valid("param").spaceId,
-    });
+    const request = context.req.valid("json");
+    const result =
+      request.mode === "deep"
+        ? await createDeepTastingNote(context.env.DB!, {
+            idempotencyKey: context.req.valid("header")["Idempotency-Key"],
+            principal: context.get("principal"),
+            request,
+            spaceId: context.req.valid("param").spaceId,
+          })
+        : await createTastingNote(context.env.DB!, {
+            idempotencyKey: context.req.valid("header")["Idempotency-Key"],
+            principal: context.get("principal"),
+            request,
+            spaceId: context.req.valid("param").spaceId,
+          });
     if (result.kind !== "success") {
       const conflict = result.kind === "conflict";
       return context.json(
@@ -398,7 +421,12 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
       `/api/v1/spaces/${context.req.valid("param").spaceId}/tasting-notes/${result.response.data.id}`,
     );
     context.header("Idempotency-Replayed", String(result.replayed));
-    return context.json(TastingNoteResponseSchema.parse(result.response), 201);
+    return context.json(
+      request.mode === "deep"
+        ? DeepTastingResponseSchema.parse(result.response)
+        : TastingNoteResponseSchema.parse(result.response),
+      201,
+    );
   });
 
   app.openapi(reserveMediaRoute, async (context) => {

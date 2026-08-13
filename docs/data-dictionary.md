@@ -33,3 +33,14 @@ Every Phase 2 tenant table carries a `space_id` directly or is reached only thro
 ## Browser offline storage
 
 Dexie stores session bootstrap snapshots, Wine Memory snapshots, Quick Log drafts, pending mutations, processed photo blobs, sync cursors, and conflicts. Records are partitioned by Firebase user and, for tenant content, by Space. Sign-out and account switching remove the outgoing user's partition; refreshed bootstrap data purges records for Spaces that are no longer available.
+
+## Deep tasting and sessions
+
+`0006_deep_tasting_sessions.sql` extends the shared `tasting_notes` and `tasting_contexts` records with the complete Phase 3 appearance, nose, palate, conclusion, serving, glass, and environment fields. Structured scales use values 1–5; labels live in the versioned ontology catalogs and are not stored as canonical prose.
+
+- `tasting_sessions` is a named, dated Space resource with `draft`, `active`, or `completed` lifecycle state. Blind mode remains constrained off for MVP.
+- `session_wines` records the ordered flight. A unique `(session_id, position)` constraint prevents ambiguous ordering.
+- a partial unique index allows one active note per author and session-wine entry while permitting each participant to retain a separate note.
+- `session_wine_summaries` is disposable derived data keyed by flight entry and algorithm version. It stores the included-note count, score/dispersion in milli-units, deterministic comparison JSON, and a hash of the included note IDs/versions.
+
+Session detail exposes only each caller's own note identity/state plus aggregate submitted-note counts. Comparison reads submitted notes only. Draft text remains author-private at the repository boundary.

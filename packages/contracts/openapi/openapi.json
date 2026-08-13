@@ -1223,6 +1223,417 @@
         ],
         "additionalProperties": false
       },
+      "DeepTastingResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "acidity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "alcoholPerception": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "appearanceClarity": {
+                "type": "string",
+                "enum": [
+                  "clear",
+                  "hazy"
+                ]
+              },
+              "appearanceColorFamily": {
+                "type": "string",
+                "enum": [
+                  "white",
+                  "rose",
+                  "red",
+                  "orange",
+                  "brown"
+                ]
+              },
+              "appearanceHue": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "appearanceIntensity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "appearanceText": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "balance": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "body": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "complexity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "conclusionText": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "context": {
+                "type": "object",
+                "nullable": true,
+                "properties": {
+                  "aerationMinutes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10080
+                  },
+                  "ambientSmellLevel": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5
+                  },
+                  "bottleCondition": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  },
+                  "decanted": {
+                    "type": "boolean"
+                  },
+                  "environment": {
+                    "type": "string",
+                    "enum": [
+                      "home",
+                      "restaurant",
+                      "bar",
+                      "winery",
+                      "class",
+                      "event",
+                      "outdoors",
+                      "other"
+                    ]
+                  },
+                  "foodText": {
+                    "type": "string",
+                    "maxLength": 500
+                  },
+                  "glass": {
+                    "type": "string",
+                    "enum": [
+                      "tulip",
+                      "bordeaux",
+                      "burgundy",
+                      "flute",
+                      "small_wine",
+                      "tumbler",
+                      "restaurant_generic",
+                      "other"
+                    ]
+                  },
+                  "lightLevel": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5
+                  },
+                  "minutesOpen": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10080
+                  },
+                  "noiseLevel": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5
+                  },
+                  "openedState": {
+                    "type": "string",
+                    "enum": [
+                      "just_opened",
+                      "open",
+                      "preserved",
+                      "unknown"
+                    ]
+                  },
+                  "palateCleanser": {
+                    "type": "string",
+                    "maxLength": 160
+                  },
+                  "preservationMethod": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  },
+                  "previousSessionWineId": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "roomTemperatureTenthsC": {
+                    "type": "integer",
+                    "minimum": -100,
+                    "maximum": 600
+                  },
+                  "servingTemperatureTenthsC": {
+                    "type": "integer",
+                    "minimum": -100,
+                    "maximum": 500
+                  }
+                },
+                "additionalProperties": false
+              },
+              "descriptors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+                    },
+                    "intensity": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 5
+                    },
+                    "phase": {
+                      "type": "string",
+                      "enum": [
+                        "appearance",
+                        "nose",
+                        "palate"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "phase"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 60,
+                "default": []
+              },
+              "expectationResult": {
+                "type": "string",
+                "enum": [
+                  "below",
+                  "met",
+                  "above",
+                  "unknown"
+                ]
+              },
+              "finishLength": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "flavorIntensity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "memorable": {
+                "type": "boolean"
+              },
+              "mode": {
+                "type": "string",
+                "enum": [
+                  "deep"
+                ]
+              },
+              "noseCondition": {
+                "type": "string",
+                "enum": [
+                  "clean",
+                  "possible_fault"
+                ]
+              },
+              "noseDevelopment": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "noseFreshness": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "noseIntensity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "noseText": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "pairingSuccess": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "palateText": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "palateTexture": {
+                "type": "string",
+                "enum": [
+                  "lean",
+                  "round",
+                  "creamy",
+                  "oily",
+                  "other"
+                ]
+              },
+              "perceivedValue": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "rimEvolution": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "score100": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "sentiment": {
+                "type": "string",
+                "enum": [
+                  "dislike",
+                  "neutral",
+                  "like"
+                ]
+              },
+              "sessionWineId": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "draft",
+                  "submitted"
+                ]
+              },
+              "sweetness": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "tanninLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "tanninTexture": {
+                "type": "string",
+                "enum": [
+                  "silky",
+                  "fine",
+                  "grippy",
+                  "coarse"
+                ]
+              },
+              "tastedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "tastingConfidence": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "viscosity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "wineId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "wouldBuy": {
+                "type": "string",
+                "enum": [
+                  "yes",
+                  "no",
+                  "unsure"
+                ]
+              },
+              "wouldDrinkAgain": {
+                "type": "string",
+                "enum": [
+                  "yes",
+                  "no",
+                  "unsure"
+                ]
+              },
+              "authorUserId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "ontologyVersion": {
+                "type": "string",
+                "enum": [
+                  "2026.1"
+                ]
+              },
+              "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "version": {
+                "type": "integer",
+                "minimum": 0,
+                "exclusiveMinimum": true
+              }
+            },
+            "required": [
+              "context",
+              "mode",
+              "sessionWineId",
+              "state",
+              "tastedAt",
+              "wineId",
+              "authorUserId",
+              "createdAt",
+              "id",
+              "ontologyVersion",
+              "updatedAt",
+              "version"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
       "QuickTastingRequest": {
         "type": "object",
         "properties": {
@@ -1276,6 +1687,376 @@
           "tastedAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "wineId": {
+            "type": "string",
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "wouldBuy": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "unsure"
+            ]
+          },
+          "wouldDrinkAgain": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "unsure"
+            ]
+          }
+        },
+        "required": [
+          "mode",
+          "state",
+          "tastedAt",
+          "wineId"
+        ],
+        "additionalProperties": false
+      },
+      "DeepTastingRequest": {
+        "type": "object",
+        "properties": {
+          "acidity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "alcoholPerception": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "appearanceClarity": {
+            "type": "string",
+            "enum": [
+              "clear",
+              "hazy"
+            ]
+          },
+          "appearanceColorFamily": {
+            "type": "string",
+            "enum": [
+              "white",
+              "rose",
+              "red",
+              "orange",
+              "brown"
+            ]
+          },
+          "appearanceHue": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "appearanceIntensity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "appearanceText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "balance": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "body": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "clientId": {
+            "type": "string",
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "complexity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "conclusionText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "context": {
+            "type": "object",
+            "properties": {
+              "aerationMinutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10080
+              },
+              "ambientSmellLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "bottleCondition": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "decanted": {
+                "type": "boolean"
+              },
+              "environment": {
+                "type": "string",
+                "enum": [
+                  "home",
+                  "restaurant",
+                  "bar",
+                  "winery",
+                  "class",
+                  "event",
+                  "outdoors",
+                  "other"
+                ]
+              },
+              "foodText": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "glass": {
+                "type": "string",
+                "enum": [
+                  "tulip",
+                  "bordeaux",
+                  "burgundy",
+                  "flute",
+                  "small_wine",
+                  "tumbler",
+                  "restaurant_generic",
+                  "other"
+                ]
+              },
+              "lightLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "minutesOpen": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10080
+              },
+              "noiseLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "openedState": {
+                "type": "string",
+                "enum": [
+                  "just_opened",
+                  "open",
+                  "preserved",
+                  "unknown"
+                ]
+              },
+              "palateCleanser": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "preservationMethod": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "previousSessionWineId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "roomTemperatureTenthsC": {
+                "type": "integer",
+                "minimum": -100,
+                "maximum": 600
+              },
+              "servingTemperatureTenthsC": {
+                "type": "integer",
+                "minimum": -100,
+                "maximum": 500
+              }
+            },
+            "additionalProperties": false
+          },
+          "descriptors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+                },
+                "intensity": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "phase": {
+                  "type": "string",
+                  "enum": [
+                    "appearance",
+                    "nose",
+                    "palate"
+                  ]
+                }
+              },
+              "required": [
+                "code",
+                "phase"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 60,
+            "default": []
+          },
+          "expectationResult": {
+            "type": "string",
+            "enum": [
+              "below",
+              "met",
+              "above",
+              "unknown"
+            ]
+          },
+          "finishLength": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "flavorIntensity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "memorable": {
+            "type": "boolean"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "deep"
+            ]
+          },
+          "noseCondition": {
+            "type": "string",
+            "enum": [
+              "clean",
+              "possible_fault"
+            ]
+          },
+          "noseDevelopment": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "noseFreshness": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "noseIntensity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "noseText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "pairingSuccess": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "palateText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "palateTexture": {
+            "type": "string",
+            "enum": [
+              "lean",
+              "round",
+              "creamy",
+              "oily",
+              "other"
+            ]
+          },
+          "perceivedValue": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "rimEvolution": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "score100": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "sentiment": {
+            "type": "string",
+            "enum": [
+              "dislike",
+              "neutral",
+              "like"
+            ]
+          },
+          "sessionWineId": {
+            "type": "string",
+            "nullable": true,
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "submitted"
+            ]
+          },
+          "sweetness": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "tanninLevel": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "tanninTexture": {
+            "type": "string",
+            "enum": [
+              "silky",
+              "fine",
+              "grippy",
+              "coarse"
+            ]
+          },
+          "tastedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tastingConfidence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "viscosity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
           },
           "wineId": {
             "type": "string",
@@ -2000,6 +2781,1013 @@
           "cursor",
           "deviceId",
           "mutations"
+        ],
+        "additionalProperties": false
+      },
+      "TastingSessionResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdByUserId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "endsAt": {
+                "type": "string",
+                "nullable": true,
+                "format": "date-time"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "name": {
+                "type": "string"
+              },
+              "startsAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "draft",
+                  "active",
+                  "completed"
+                ]
+              },
+              "submittedNoteCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "venueText": {
+                "type": "string",
+                "nullable": true
+              },
+              "version": {
+                "type": "integer",
+                "minimum": 0,
+                "exclusiveMinimum": true
+              },
+              "wineCount": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "createdAt",
+              "createdByUserId",
+              "description",
+              "endsAt",
+              "id",
+              "name",
+              "startsAt",
+              "status",
+              "submittedNoteCount",
+              "venueText",
+              "version",
+              "wineCount"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "CreateTastingSessionRequest": {
+        "type": "object",
+        "properties": {
+          "clientId": {
+            "type": "string",
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "endsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "startsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "active",
+              "completed"
+            ],
+            "default": "draft"
+          },
+          "venueText": {
+            "type": "string",
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "name",
+          "startsAt"
+        ],
+        "additionalProperties": false
+      },
+      "TastingSessionListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdByUserId": {
+                  "type": "string",
+                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                },
+                "description": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "endsAt": {
+                  "type": "string",
+                  "nullable": true,
+                  "format": "date-time"
+                },
+                "id": {
+                  "type": "string",
+                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "startsAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "draft",
+                    "active",
+                    "completed"
+                  ]
+                },
+                "submittedNoteCount": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "venueText": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "version": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "exclusiveMinimum": true
+                },
+                "wineCount": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "createdAt",
+                "createdByUserId",
+                "description",
+                "endsAt",
+                "id",
+                "name",
+                "startsAt",
+                "status",
+                "submittedNoteCount",
+                "venueText",
+                "version",
+                "wineCount"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "TastingSessionDetailResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "session": {
+                "type": "object",
+                "properties": {
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "createdByUserId": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "description": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "endsAt": {
+                    "type": "string",
+                    "nullable": true,
+                    "format": "date-time"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "startsAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "draft",
+                      "active",
+                      "completed"
+                    ]
+                  },
+                  "submittedNoteCount": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "venueText": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "version": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "exclusiveMinimum": true
+                  },
+                  "wineCount": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "createdAt",
+                  "createdByUserId",
+                  "description",
+                  "endsAt",
+                  "id",
+                  "name",
+                  "startsAt",
+                  "status",
+                  "submittedNoteCount",
+                  "venueText",
+                  "version",
+                  "wineCount"
+                ],
+                "additionalProperties": false
+              },
+              "wines": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "ownNoteId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "ownNoteState": {
+                      "type": "string",
+                      "nullable": true,
+                      "enum": [
+                        "draft",
+                        "submitted",
+                        null
+                      ]
+                    },
+                    "position": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "servingLabel": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "submittedNoteCount": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "version": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "exclusiveMinimum": true
+                    },
+                    "wine": {
+                      "type": "object",
+                      "properties": {
+                        "appellation": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "countryCode": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "displayName": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "identityStatus": {
+                          "type": "string",
+                          "enum": [
+                            "draft",
+                            "confirmed",
+                            "needs_review"
+                          ]
+                        },
+                        "lastTastedAt": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date-time"
+                        },
+                        "mediaId": {
+                          "type": "string",
+                          "nullable": true,
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "noteCount": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "nonVintage": {
+                          "type": "boolean"
+                        },
+                        "producerName": {
+                          "type": "string"
+                        },
+                        "region": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "score100": {
+                          "type": "integer",
+                          "nullable": true,
+                          "minimum": 0,
+                          "maximum": 100
+                        },
+                        "vintageYear": {
+                          "type": "integer",
+                          "nullable": true
+                        },
+                        "version": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "exclusiveMinimum": true
+                        },
+                        "wineType": {
+                          "type": "string",
+                          "nullable": true,
+                          "enum": [
+                            "red",
+                            "white",
+                            "rose",
+                            "sparkling",
+                            "fortified",
+                            "orange",
+                            "other",
+                            null
+                          ]
+                        }
+                      },
+                      "required": [
+                        "appellation",
+                        "countryCode",
+                        "createdAt",
+                        "displayName",
+                        "id",
+                        "identityStatus",
+                        "lastTastedAt",
+                        "mediaId",
+                        "noteCount",
+                        "nonVintage",
+                        "producerName",
+                        "region",
+                        "score100",
+                        "vintageYear",
+                        "version",
+                        "wineType"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "ownNoteId",
+                    "ownNoteState",
+                    "position",
+                    "servingLabel",
+                    "submittedNoteCount",
+                    "version",
+                    "wine"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "session",
+              "wines"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "AddSessionWinesRequest": {
+        "type": "object",
+        "properties": {
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "clientId": {
+                  "type": "string",
+                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                },
+                "servingLabel": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "wineId": {
+                  "type": "string",
+                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                }
+              },
+              "required": [
+                "wineId"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 50
+          }
+        },
+        "required": [
+          "entries"
+        ],
+        "additionalProperties": false
+      },
+      "ReorderSessionWinesRequest": {
+        "type": "object",
+        "properties": {
+          "orderedSessionWineIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "minItems": 1,
+            "maxItems": 50
+          }
+        },
+        "required": [
+          "orderedSessionWineIds"
+        ],
+        "additionalProperties": false
+      },
+      "SessionComparisonResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "algorithmVersion": {
+                "type": "string",
+                "enum": [
+                  "2026.1"
+                ]
+              },
+              "mostDivisiveSessionWineId": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "sessionId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "wines": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "buyAgainCount": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "descriptorOverlap": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "dispersion": {
+                      "type": "number",
+                      "nullable": true,
+                      "minimum": 0
+                    },
+                    "groupScore": {
+                      "type": "number",
+                      "nullable": true,
+                      "minimum": 0,
+                      "maximum": 100
+                    },
+                    "noteCount": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "participants": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "authorUserId": {
+                            "type": "string",
+                            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                          },
+                          "displayName": {
+                            "type": "string"
+                          },
+                          "score100": {
+                            "type": "integer",
+                            "nullable": true,
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "wouldBuy": {
+                            "type": "string",
+                            "nullable": true,
+                            "enum": [
+                              "yes",
+                              "no",
+                              "unsure",
+                              null
+                            ]
+                          }
+                        },
+                        "required": [
+                          "authorUserId",
+                          "displayName",
+                          "score100",
+                          "wouldBuy"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "rank": {
+                      "type": "integer",
+                      "nullable": true,
+                      "minimum": 0,
+                      "exclusiveMinimum": true
+                    },
+                    "sessionWineId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "wineId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    }
+                  },
+                  "required": [
+                    "buyAgainCount",
+                    "descriptorOverlap",
+                    "dispersion",
+                    "groupScore",
+                    "noteCount",
+                    "participants",
+                    "rank",
+                    "sessionWineId",
+                    "wineId"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "algorithmVersion",
+              "mostDivisiveSessionWineId",
+              "sessionId",
+              "wines"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "UpdateDeepTastingRequest": {
+        "type": "object",
+        "properties": {
+          "acidity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "alcoholPerception": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "appearanceClarity": {
+            "type": "string",
+            "enum": [
+              "clear",
+              "hazy"
+            ]
+          },
+          "appearanceColorFamily": {
+            "type": "string",
+            "enum": [
+              "white",
+              "rose",
+              "red",
+              "orange",
+              "brown"
+            ]
+          },
+          "appearanceHue": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "appearanceIntensity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "appearanceText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "balance": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "body": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "complexity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "conclusionText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "expectationResult": {
+            "type": "string",
+            "enum": [
+              "below",
+              "met",
+              "above",
+              "unknown"
+            ]
+          },
+          "finishLength": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "flavorIntensity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "memorable": {
+            "type": "boolean"
+          },
+          "noseCondition": {
+            "type": "string",
+            "enum": [
+              "clean",
+              "possible_fault"
+            ]
+          },
+          "noseDevelopment": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "noseFreshness": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "noseIntensity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "noseText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "pairingSuccess": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "palateText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "palateTexture": {
+            "type": "string",
+            "enum": [
+              "lean",
+              "round",
+              "creamy",
+              "oily",
+              "other"
+            ]
+          },
+          "perceivedValue": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "rimEvolution": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "score100": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "sentiment": {
+            "type": "string",
+            "enum": [
+              "dislike",
+              "neutral",
+              "like"
+            ]
+          },
+          "sweetness": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "tanninLevel": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "tanninTexture": {
+            "type": "string",
+            "enum": [
+              "silky",
+              "fine",
+              "grippy",
+              "coarse"
+            ]
+          },
+          "tastedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tastingConfidence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "viscosity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "wouldBuy": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "unsure"
+            ]
+          },
+          "wouldDrinkAgain": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "unsure"
+            ]
+          },
+          "context": {
+            "type": "object",
+            "properties": {
+              "aerationMinutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10080
+              },
+              "ambientSmellLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "bottleCondition": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "decanted": {
+                "type": "boolean"
+              },
+              "environment": {
+                "type": "string",
+                "enum": [
+                  "home",
+                  "restaurant",
+                  "bar",
+                  "winery",
+                  "class",
+                  "event",
+                  "outdoors",
+                  "other"
+                ]
+              },
+              "foodText": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "glass": {
+                "type": "string",
+                "enum": [
+                  "tulip",
+                  "bordeaux",
+                  "burgundy",
+                  "flute",
+                  "small_wine",
+                  "tumbler",
+                  "restaurant_generic",
+                  "other"
+                ]
+              },
+              "lightLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "minutesOpen": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10080
+              },
+              "noiseLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "openedState": {
+                "type": "string",
+                "enum": [
+                  "just_opened",
+                  "open",
+                  "preserved",
+                  "unknown"
+                ]
+              },
+              "palateCleanser": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "preservationMethod": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "previousSessionWineId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "roomTemperatureTenthsC": {
+                "type": "integer",
+                "minimum": -100,
+                "maximum": 600
+              },
+              "servingTemperatureTenthsC": {
+                "type": "integer",
+                "minimum": -100,
+                "maximum": 500
+              }
+            },
+            "additionalProperties": false
+          },
+          "descriptors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+                },
+                "intensity": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "phase": {
+                  "type": "string",
+                  "enum": [
+                    "appearance",
+                    "nose",
+                    "palate"
+                  ]
+                }
+              },
+              "required": [
+                "code",
+                "phase"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 60
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "additionalProperties": false
+      },
+      "SubmitTastingRequest": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          }
+        },
+        "required": [
+          "version"
         ],
         "additionalProperties": false
       }
@@ -2845,11 +4633,11 @@
     },
     "/api/v1/spaces/{spaceId}/tasting-notes": {
       "post": {
-        "operationId": "createQuickTastingNote",
+        "operationId": "createTastingNote",
         "tags": [
           "Tastings"
         ],
-        "summary": "Create one author-owned quick tasting note",
+        "summary": "Create one author-owned quick or deep tasting note",
         "security": [
           {
             "FirebaseBearer": []
@@ -2880,14 +4668,28 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/QuickTastingRequest"
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/QuickTastingRequest"
+                  },
+                  {
+                    "$ref": "#/components/schemas/DeepTastingRequest"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "mode",
+                  "mapping": {
+                    "quick": "#/components/schemas/QuickTastingRequest",
+                    "deep": "#/components/schemas/DeepTastingRequest"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "201": {
-            "description": "The quick tasting note.",
+            "description": "The quick or deep tasting note.",
             "headers": {
               "Location": {
                 "description": "The new note resource.",
@@ -2905,7 +4707,14 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TastingNoteResponse"
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/TastingNoteResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/DeepTastingResponse"
+                    }
+                  ]
                 }
               }
             }
@@ -3364,6 +5173,702 @@
           },
           "404": {
             "description": "Space unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/sessions": {
+      "post": {
+        "operationId": "createTastingSession",
+        "tags": [
+          "Sessions"
+        ],
+        "summary": "Create a private collaborative tasting session",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "header",
+            "name": "Idempotency-Key"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTastingSessionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The new tasting session.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TastingSessionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency or resource conflict.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "listTastingSessions",
+        "tags": [
+          "Sessions"
+        ],
+        "summary": "List the authorized Space's tasting sessions",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Private sessions ordered by date.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TastingSessionListResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/sessions/{sessionId}": {
+      "get": {
+        "operationId": "getTastingSession",
+        "tags": [
+          "Sessions"
+        ],
+        "summary": "Get one session flight without exposing other members' draft content",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "sessionId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The ordered flight and completion state.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TastingSessionDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/sessions/{sessionId}/wines": {
+      "post": {
+        "operationId": "addSessionWines",
+        "tags": [
+          "Sessions"
+        ],
+        "summary": "Append one or more authorized wines to a session flight",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "sessionId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "header",
+            "name": "Idempotency-Key"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSessionWinesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated flight.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TastingSessionDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency, duplicate, or ordering conflict.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/sessions/{sessionId}/wines/order": {
+      "put": {
+        "operationId": "reorderSessionWines",
+        "tags": [
+          "Sessions"
+        ],
+        "summary": "Replace the flight order with the exact authorized entry set",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "sessionId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReorderSessionWinesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The reordered flight.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TastingSessionDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/sessions/{sessionId}/comparison": {
+      "get": {
+        "operationId": "getSessionComparison",
+        "tags": [
+          "Sessions"
+        ],
+        "summary": "Compute a deterministic comparison from submitted notes only",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "sessionId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Versioned comparison with no group score below two scored submissions.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionComparisonResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/tasting-notes/{noteId}": {
+      "patch": {
+        "operationId": "updateDeepTastingNote",
+        "tags": [
+          "Tastings"
+        ],
+        "summary": "Update only the authenticated author's deep-tasting draft",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "noteId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDeepTastingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated author-owned note.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeepTastingResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The note version changed; current authorized data is returned in details.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/tasting-notes/{noteId}/submit": {
+      "post": {
+        "operationId": "submitDeepTastingNote",
+        "tags": [
+          "Tastings"
+        ],
+        "summary": "Submit the authenticated author's deep-tasting draft",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "noteId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitTastingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The submitted note.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeepTastingResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The note version changed.",
             "content": {
               "application/json": {
                 "schema": {
