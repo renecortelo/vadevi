@@ -5,6 +5,7 @@ import { useState } from "react";
 import { NavLink, Outlet } from "react-router";
 import { useTranslation } from "react-i18next";
 
+import { webEnvironment } from "../config/env";
 import { useSession } from "../session/SessionContext";
 
 type SpaceOption = BootstrapResponse["data"]["spaces"][number];
@@ -100,6 +101,17 @@ export function AppShell() {
       <main className="main-content" id="main-content" tabIndex={-1}>
         <Outlet />
       </main>
+
+      {/*
+        AGPL-3.0 §13: a user interacting with this application over a network
+        must be offered its Corresponding Source. The link is part of the shell
+        so the offer reaches every authenticated screen.
+      */}
+      <footer className="app-footer">
+        <a href={webEnvironment.sourceUrl} rel="noreferrer noopener" target="_blank">
+          {t("licenseSource")}
+        </a>
+      </footer>
     </div>
   );
 }

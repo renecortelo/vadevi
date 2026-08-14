@@ -4,7 +4,7 @@ import type { WorkerBindings } from "../types";
 
 /** Mirrors `UsageMetricSchema`; declared locally so budget lookups stay exhaustive. */
 export type UsageMetric =
-  "ai_language_calls" | "barcode_lookups" | "price_lookups" | "research_lookups";
+  "ai_language_calls" | "barcode_lookups" | "ocr_reads" | "price_lookups" | "research_lookups";
 
 /**
  * Application budgets sit below the documented provider free allocations in
@@ -17,6 +17,7 @@ type Budget = { global: number; user: number };
 export const dailyBudgets = {
   ai_language_calls: { global: 400, user: 60 },
   barcode_lookups: { global: 500, user: 60 },
+  ocr_reads: { global: 300, user: 40 },
   price_lookups: { global: 500, user: 60 },
   research_lookups: { global: 300, user: 40 },
 } as const satisfies Record<UsageMetric, Budget>;

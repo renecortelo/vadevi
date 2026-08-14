@@ -103,7 +103,7 @@ and holds your real identifiers:
   "assets": {
     "directory": "apps/web/dist",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/*", "/health", "/openapi.json", "/runtime-config"],
+    "run_worker_first": ["/api/*", "/health", "/openapi.json", "/runtime-config", "/__/auth/*"],
     "not_found_handling": "single-page-application",
   },
   "d1_databases": [
@@ -122,6 +122,10 @@ and holds your real identifiers:
     "AI_PROVIDER": "none",
     "RESEARCH_PROVIDER": "none",
     "FIREBASE_AUTH_DOMAIN": "<from step 1>",
+    // Serves /__/auth/* from this origin so sign-in is same-origin. Browsers
+    // partition third-party storage, which breaks both popup and redirect
+    // sign-in when the auth domain differs from the application origin.
+    "FIREBASE_AUTH_PROXY": "true",
     "FIREBASE_PROJECT_ID": "<from step 1>",
     "FIREBASE_WEB_API_KEY": "<from step 1>",
   },
@@ -138,6 +142,32 @@ Add the file to `.gitignore` if it is not already covered:
 ```
 wrangler.preview.jsonc
 ```
+
+### 4b. Authorize the redirect URI on the OAuth client
+
+Because the application serves the Firebase auth handler from its **own** origin
+(see `FIREBASE_AUTH_PROXY` below), Google must be told that this origin is a
+legitimate destination. Firebase's authorized-domain list is **not** enough —
+the underlying Google OAuth client keeps its own, stricter list, and a mismatch
+fails with `Error 400: redirect_uri_mismatch` _after_ the account chooser.
+
+1. Open **https://console.cloud.google.com/apis/credentials** and select your
+   preview project.
+2. Under **OAuth 2.0 Client IDs**, open the entry named
+   **Web client (auto created by Google Service)**. Firebase created it when you
+   enabled Google sign-in.
+3. Under **Authorized JavaScript origins**, add your deployed origin:
+   ```
+   https://<your-worker>.<your-subdomain>.workers.dev
+   ```
+4. Under **Authorized redirect URIs**, add the handler path:
+   ```
+   https://<your-worker>.<your-subdomain>.workers.dev/__/auth/handler
+   ```
+5. **Save.** Google can take several minutes to propagate the change.
+
+Skipping this step is the single most common reason a correctly configured
+deployment still cannot sign in.
 
 ### 5. Deploy
 

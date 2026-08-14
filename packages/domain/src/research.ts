@@ -114,3 +114,34 @@ export function sanitizeExternalText(input: string, maximumLength: number): Sani
     value: normalized.slice(0, maximumLength),
   };
 }
+
+/**
+ * Optional label reading.
+ *
+ * OCR returns bounded text only — never a stored image and never a wine record.
+ * The text is treated exactly like any other external string: sanitized,
+ * length-bounded, and rejected before model input when it looks like an
+ * instruction. A deployment with no OCR provider returns a degraded result and
+ * the manual form stays available, which is what `AC-014` requires.
+ */
+export type OcrLine = Readonly<{
+  confidence: "high" | "low" | "medium";
+  text: string;
+}>;
+
+export type OcrResult = Readonly<{
+  lines: OcrLine[];
+  provider: "cloudflare_ai";
+  warnings: string[];
+}>;
+
+export type OcrRequest = Readonly<{
+  /** Re-encoded, EXIF-stripped image bytes. Never persisted by the adapter. */
+  bytes: ArrayBuffer;
+  locale: string;
+  mimeType: "image/jpeg" | "image/webp";
+}>;
+
+export interface OcrPort {
+  readLabel(input: OcrRequest): Promise<ExternalResult<OcrResult>>;
+}

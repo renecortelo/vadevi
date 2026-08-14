@@ -95,4 +95,34 @@ core flow — search, filters, tasting, sessions, comparison, cellar, evidence,
 export, and deletion — works with both disabled. Enabling either requires a
 deployment-specific privacy review.
 
+## License
+
+Va de Vi is licensed under the **GNU Affero General Public License v3.0 only**
+(`AGPL-3.0-only`). The full text is in [LICENSE](LICENSE).
+
+The Affero clause is the reason this license was chosen over a permissive one:
+§13 extends the copyleft obligation to **network use**. If you modify Va de Vi
+and let other people use it over a network — which is the normal way anyone will
+run it — you must offer those users the Corresponding Source of your modified
+version. Merely not distributing a binary is not enough.
+
+What this means in practice:
+
+- Running an unmodified copy for yourself or your household: nothing to do.
+- Running a modified copy that only you can reach: nothing to do.
+- Running a modified copy other people can reach: publish your source.
+
+To meet §13 the application shows a **Source code** link in its shell. Point it
+at your own source before deploying a modified version:
+
+```
+VITE_SOURCE_URL=https://your-host/your-fork
+```
+
+Leaving it pointing at the upstream repository while running modified code does
+not satisfy the obligation — the link must reach _your_ Corresponding Source.
+
+Every dependency in the tree is permissively licensed, so nothing here forces a
+different outcome; AGPL is a deliberate choice, not an inherited constraint.
+
 The source of truth for scope and acceptance is `vadevi_implementation_spec.md`.

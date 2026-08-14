@@ -9,12 +9,14 @@ export type FirebasePrincipal = Readonly<{
 export type WorkerBindings = {
   AI?: Ai;
   AI_MODEL?: string;
+  AI_OCR_MODEL?: string;
   APP_ENV?: "local" | "preview" | "production";
   APP_VERSION?: string;
   AI_PROVIDER?: "none" | "cloudflare";
   EXTERNAL_API_USER_AGENT?: string;
   FIREBASE_AUTH_EMULATOR_HOST?: string;
   FIREBASE_AUTH_DOMAIN?: string;
+  FIREBASE_AUTH_PROXY?: string;
   FIREBASE_PROJECT_ID?: string;
   FIREBASE_WEB_API_KEY?: string;
   RESEARCH_PROVIDER?: "none" | "open_data";

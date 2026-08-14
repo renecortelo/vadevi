@@ -1,6 +1,7 @@
 {
   "appName": "Va de Vi",
   "skipToContent": "Aller au contenu",
+  "licenseSource": "Code source (AGPL-3.0)",
   "previewSpace": "Espace personnel · aperçu local",
   "phaseEyebrow": "Votre mémoire privée du vin",
   "welcomeTitle": "Un lieu pour chaque bouteille qui mérite d'être retenue.",
@@ -27,6 +28,7 @@
     "redirecting": "Ouverture de Google…",
     "localEmulator": "Mode de développement local · aucun compte Google réel n'est utilisé.",
     "signInError": "La connexion n'a pas pu démarrer. Réessayez.",
+    "signInErrorCode": "Code d'erreur : {{code}}",
     "onboardingEyebrow": "Un dernier détail",
     "onboardingTitle": "Faites de cet Espace le vôtre.",
     "onboardingBody": "Choisissez votre nom d'affichage et votre langue. Vous pourrez les modifier plus tard.",
@@ -902,5 +904,47 @@
     "updateBody": "Rechargez pour obtenir la dernière version. Votre travail en attente est conservé.",
     "storageWarning": "Le stockage hors ligne est presque plein. Synchronisez ou effacez des données pour continuer à enregistrer des photos.",
     "storageCritical": "Le stockage hors ligne est plein. Les nouvelles photos ne sont pas conservées sur cet appareil, mais vos notes texte sont enregistrées."
+  },
+  "identify": {
+    "eyebrow": "Saisie assistée par photo",
+    "title": "Identifier une bouteille",
+    "body": "Scannez un code-barres ou saisissez ce que vous lisez. Rien n'est enregistré avant votre confirmation.",
+    "scanTitle": "Scanner",
+    "scanBody": "Seuls les chiffres du code sont envoyés. Aucune photo n'est prise ni conservée pour un scan.",
+    "startScan": "Lancer le scan",
+    "stopScan": "Arrêter le scan",
+    "cameraLabel": "Aperçu de la caméra",
+    "scanUnsupported": "Ce navigateur ne peut pas scanner de code-barres. Saisissez ce que vous lisez.",
+    "cameraUnavailable": "La caméra est indisponible. Saisissez ce que vous lisez.",
+    "scanTimeout": "Aucun code-barres trouvé. Réessayez ou saisissez ce que vous lisez.",
+    "hintLabel": "Ou saisissez ce que vous lisez",
+    "hintPlaceholder": "Producteur, nom du vin, millésime",
+    "searchAction": "Rechercher",
+    "candidatesTitle": "Suggestions",
+    "noCandidates": "Aucune correspondance. Complétez les champs ci-dessous.",
+    "unknownProducer": "Producteur inconnu",
+    "reviewTitle": "Vérifier et corriger",
+    "reviewBody": "Tous les champs sont modifiables. Le vin n'est créé qu'à la confirmation.",
+    "confirmAction": "Confirmer et créer le vin",
+    "expiryNote": "Cette suggestion expire dans 30 minutes.",
+    "identifyError": "La recherche n'a pas abouti. Vérifiez votre connexion et réessayez.",
+    "confirmError": "Le vin n'a pas été créé. Vérifiez les champs et réessayez.",
+    "confidence": {
+      "high": "Confiance élevée",
+      "medium": "Confiance moyenne",
+      "low": "Confiance faible"
+    },
+    "evidence": {
+      "observed": "de votre Espace",
+      "researched": "d'une source publique",
+      "inferred": "lu sur l'étiquette",
+      "personal": "de vos notes"
+    },
+    "origin": {
+      "space_barcode": "Code-barres de votre Espace",
+      "space_text": "Correspondance de nom dans votre Espace",
+      "open_food_facts": "Données produit publiques",
+      "ocr": "Lu sur l'étiquette"
+    }
   }
 }

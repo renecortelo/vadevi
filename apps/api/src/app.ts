@@ -145,6 +145,57 @@ const updateProfileRoute = createRoute({
   },
 });
 
+/**
+ * Firebase reserves `/__/auth/*` for its sign-in handler and iframe. When an app
+ * is hosted outside Firebase Hosting, the browser treats the Firebase auth
+ * domain as third-party storage and partitions it, which breaks both redirect
+ * and popup sign-in. Firebase's documented remedy is to serve the handler from
+ * the application's own origin, which is what this proxy does.
+ *
+ * The upstream host is fixed deployment configuration, never user input or
+ * anything read from a response, and it is constrained to the Firebase-issued
+ * auth domains. Only the reserved `/__/auth/` prefix is forwarded, so this
+ * cannot be used as a general proxy.
+ */
+const firebaseAuthPrefix = "/__/auth/";
+
+export function firebaseAuthUpstream(environment: ApiEnvironment["Bindings"]): string | null {
+  const host = environment.FIREBASE_AUTH_DOMAIN;
+  if (host === undefined || environment.FIREBASE_AUTH_PROXY !== "true") return null;
+  // A bare hostname only: no scheme, credentials, port, path, or query.
+  if (!/^[a-z0-9-]+(?:\.[a-z0-9-]+)+$/i.test(host)) return null;
+  const lower = host.toLowerCase();
+  if (!lower.endsWith(".firebaseapp.com") && !lower.endsWith(".web.app")) return null;
+  return lower;
+}
+
+async function proxyFirebaseAuth(request: Request, upstream: string): Promise<Response> {
+  const incoming = new URL(request.url);
+  const target = new URL(`https://${upstream}${incoming.pathname}${incoming.search}`);
+
+  const headers = new Headers(request.headers);
+  headers.delete("host");
+  headers.set("X-Forwarded-Host", incoming.host);
+
+  const response = await fetch(target, {
+    body: request.method === "GET" || request.method === "HEAD" ? null : request.body,
+    headers,
+    method: request.method,
+    redirect: "manual",
+  });
+
+  // Strip transport-hop headers so the streamed body stays valid.
+  const safeHeaders = new Headers(response.headers);
+  safeHeaders.delete("content-encoding");
+  safeHeaders.delete("content-length");
+  safeHeaders.delete("transfer-encoding");
+  return new Response(response.body, {
+    headers: safeHeaders,
+    status: response.status,
+    statusText: response.statusText,
+  });
+}
+
 function healthPayload(version: string | undefined) {
   return {
     data: {
@@ -156,14 +207,17 @@ function healthPayload(version: string | undefined) {
   };
 }
 
-function runtimeConfigPayload(environment: ApiEnvironment["Bindings"]) {
+function runtimeConfigPayload(environment: ApiEnvironment["Bindings"], requestHost: string) {
   const appEnvironment = environment.APP_ENV ?? "local";
+  // With the proxy enabled the browser must treat this origin as the auth
+  // domain, otherwise the handler stays cross-origin and nothing is gained.
+  const proxied = firebaseAuthUpstream(environment) === null ? null : requestHost;
   return {
     data: {
       appEnvironment,
       firebase: {
         apiKey: environment.FIREBASE_WEB_API_KEY ?? "local-emulator-placeholder",
-        authDomain: environment.FIREBASE_AUTH_DOMAIN ?? "localhost",
+        authDomain: proxied ?? environment.FIREBASE_AUTH_DOMAIN ?? "localhost",
         projectId: environment.FIREBASE_PROJECT_ID ?? "demo-vadevi",
         ...(appEnvironment === "local" && environment.FIREBASE_AUTH_EMULATOR_HOST !== undefined
           ? { emulatorHost: environment.FIREBASE_AUTH_EMULATOR_HOST }
@@ -205,6 +259,25 @@ export function createApi() {
 
   app.use("*", requestContext);
   app.use("*", security);
+
+  // Registered before authentication middleware: the sign-in handler is what
+  // establishes identity, so it cannot require one.
+  app.all(`${firebaseAuthPrefix}*`, async (context) => {
+    const upstream = firebaseAuthUpstream(context.env);
+    if (upstream === null) {
+      return context.json(
+        ErrorEnvelopeSchema.parse({
+          error: {
+            code: "FEATURE_UNAVAILABLE",
+            message: "The Firebase auth handler proxy is not configured.",
+            requestId: context.get("requestId"),
+          },
+        }),
+        404,
+      );
+    }
+    return proxyFirebaseAuth(context.req.raw, upstream);
+  });
   app.use("/api/v1/me", authentication);
   app.use("/api/v1/me/*", authentication);
   app.use("/api/v1/spaces", authentication);
@@ -213,7 +286,12 @@ export function createApi() {
 
   app.openapi(healthRoute, (context) => context.json(healthPayload(context.env?.APP_VERSION), 200));
   app.openapi(runtimeConfigRoute, (context) =>
-    context.json(RuntimeConfigResponseSchema.parse(runtimeConfigPayload(context.env)), 200),
+    context.json(
+      RuntimeConfigResponseSchema.parse(
+        runtimeConfigPayload(context.env, new URL(context.req.url).host),
+      ),
+      200,
+    ),
   );
 
   // The versioned alias keeps ordinary clients under /api/v1 while /health remains a minimal

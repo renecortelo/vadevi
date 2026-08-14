@@ -20,8 +20,11 @@ import {
   type RuntimeConfigResponse,
   type SpaceDetailResponse,
   type UpdateProfileRequest,
+  ConfirmIdentificationRequestSchema,
+  ConfirmIdentificationResponseSchema,
   IdentificationRequestSchema,
   IdentificationResponseSchema,
+  type ConfirmIdentificationRequest,
   MediaReservationRequestSchema,
   MediaReservationResponseSchema,
   MediaUploadResponseSchema,
@@ -318,6 +321,25 @@ export async function getPrivateMedia(
   );
   if (!response.ok) throw await apiError(response);
   return response.blob();
+}
+
+export async function confirmIdentification(
+  tokenSource: TokenSource,
+  spaceId: string,
+  identificationId: string,
+  request: ConfirmIdentificationRequest,
+): Promise<string> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/identifications/${identificationId}/confirm`,
+    {
+      body: JSON.stringify(ConfirmIdentificationRequestSchema.parse(request)),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return ConfirmIdentificationResponseSchema.parse(await response.json()).data.wineId;
 }
 
 export async function identifyWine(

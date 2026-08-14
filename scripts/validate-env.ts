@@ -28,9 +28,14 @@ const EnvironmentSchema = z
       .string()
       .regex(/^@cf\/[a-z0-9][a-z0-9._/-]{2,119}$/)
       .optional(),
+    AI_OCR_MODEL: z
+      .string()
+      .regex(/^@cf\/[a-z0-9][a-z0-9._/-]{2,119}$/)
+      .optional(),
     EXTERNAL_API_USER_AGENT: z.string().min(16).max(300).optional(),
     FIREBASE_AUTH_EMULATOR_HOST: z.string().optional(),
     FIREBASE_AUTH_DOMAIN: z.string().min(1).default("localhost"),
+    FIREBASE_AUTH_PROXY: z.enum(["true", "false"]).default("false"),
     FIREBASE_PROJECT_ID: z.string().min(1).default("demo-vadevi"),
     FIREBASE_WEB_API_KEY: z.string().min(1).default("local-emulator-placeholder"),
     RESEARCH_PROVIDER: z.enum(["none", "open_data"]).default("none"),
@@ -59,6 +64,18 @@ const EnvironmentSchema = z
         message:
           "Open-data research requires an identifying VaDeVi/* user agent with HTTPS contact.",
         path: ["EXTERNAL_API_USER_AGENT"],
+      });
+    }
+
+    if (
+      environment.FIREBASE_AUTH_PROXY === "true" &&
+      !/\.(firebaseapp\.com|web\.app)$/i.test(environment.FIREBASE_AUTH_DOMAIN)
+    ) {
+      context.addIssue({
+        code: "custom",
+        message:
+          "The auth handler proxy only forwards to a Firebase-issued auth domain (*.firebaseapp.com or *.web.app).",
+        path: ["FIREBASE_AUTH_PROXY"],
       });
     }
 

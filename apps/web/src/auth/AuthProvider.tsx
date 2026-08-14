@@ -5,6 +5,7 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   setPersistence,
+  signInWithPopup,
   signInWithRedirect,
   signOut as firebaseSignOut,
   type Auth,
@@ -110,7 +111,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       signIn: async () => {
         const auth = authRef.current;
         if (auth === null) throw new Error("Authentication is not ready.");
-        await signInWithRedirect(auth, new GoogleAuthProvider());
+        const provider = new GoogleAuthProvider();
+
+        // Redirect sign-in needs the app and the Firebase auth domain to share
+        // an origin. When the app is hosted elsewhere — a Workers subdomain, for
+        // instance — browsers that partition third-party storage drop the
+        // redirect state and sign-in fails. A popup carries its own state, so it
+        // is tried first and redirect remains the fallback for environments that
+        // block popups, such as an installed PWA.
+        try {
+          await signInWithPopup(auth, provider);
+        } catch (popupError) {
+          const code = (popupError as { code?: string } | null)?.code ?? "";
+          const popupUnavailable =
+            code === "auth/popup-blocked" ||
+            code === "auth/popup-closed-by-user" ||
+            code === "auth/cancelled-popup-request" ||
+            code === "auth/operation-not-supported-in-this-environment";
+          if (!popupUnavailable) throw popupError;
+          await signInWithRedirect(auth, provider);
+        }
       },
       signOut: async () => {
         const auth = authRef.current;

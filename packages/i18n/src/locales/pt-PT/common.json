@@ -1,6 +1,7 @@
 {
   "appName": "Va de Vi",
   "skipToContent": "Ir para o conteúdo",
+  "licenseSource": "Código-fonte (AGPL-3.0)",
   "previewSpace": "Espaço pessoal · pré-visualização local",
   "phaseEyebrow": "A sua memória privada do vinho",
   "welcomeTitle": "Um lugar para cada garrafa que merece ser recordada.",
@@ -27,6 +28,7 @@
     "redirecting": "A abrir o Google…",
     "localEmulator": "Modo de desenvolvimento local · não é usada nenhuma conta Google real.",
     "signInError": "Não foi possível iniciar a sessão. Tente novamente.",
+    "signInErrorCode": "Código de erro: {{code}}",
     "onboardingEyebrow": "Um último detalhe",
     "onboardingTitle": "Torne este Espaço seu.",
     "onboardingBody": "Escolha como quer aparecer e o idioma que prefere. Poderá alterar ambos mais tarde.",
@@ -902,5 +904,47 @@
     "updateBody": "Recarregue para obter a versão mais recente. O trabalho em fila é mantido.",
     "storageWarning": "O armazenamento offline está quase cheio. Sincronize ou limpe dados para continuar a guardar fotografias.",
     "storageCritical": "O armazenamento offline está cheio. As fotografias novas não ficam neste dispositivo, mas as notas de texto continuam a ser guardadas."
+  },
+  "identify": {
+    "eyebrow": "Introdução com fotografia",
+    "title": "Identificar uma garrafa",
+    "body": "Digitalize um código de barras ou escreva o que conseguir ler. Nada é guardado até confirmar.",
+    "scanTitle": "Digitalizar",
+    "scanBody": "Apenas os dígitos do código são enviados. Não é tirada nem guardada qualquer fotografia para digitalizar.",
+    "startScan": "Começar a digitalizar",
+    "stopScan": "Parar a digitalização",
+    "cameraLabel": "Pré-visualização da câmara",
+    "scanUnsupported": "Este navegador não consegue ler códigos de barras. Escreva o que conseguir ler.",
+    "cameraUnavailable": "A câmara não está disponível. Escreva o que conseguir ler.",
+    "scanTimeout": "Não foi encontrado nenhum código. Tente de novo ou escreva o que conseguir ler.",
+    "hintLabel": "Ou escreva o que conseguir ler",
+    "hintPlaceholder": "Produtor, nome do vinho, colheita",
+    "searchAction": "Procurar",
+    "candidatesTitle": "Sugestões",
+    "noCandidates": "Sem correspondências. Preencha os dados abaixo.",
+    "unknownProducer": "Produtor desconhecido",
+    "reviewTitle": "Verifique e corrija",
+    "reviewBody": "Todos os campos são editáveis. O vinho só é criado quando confirmar.",
+    "confirmAction": "Confirmar e criar o vinho",
+    "expiryNote": "Esta sugestão expira dentro de 30 minutos.",
+    "identifyError": "A pesquisa não foi feita. Verifique a ligação e tente novamente.",
+    "confirmError": "O vinho não foi criado. Verifique os campos e tente novamente.",
+    "confidence": {
+      "high": "Confiança alta",
+      "medium": "Confiança média",
+      "low": "Confiança baixa"
+    },
+    "evidence": {
+      "observed": "do seu Espaço",
+      "researched": "de uma fonte pública",
+      "inferred": "lido do rótulo",
+      "personal": "das suas notas"
+    },
+    "origin": {
+      "space_barcode": "Código de barras no seu Espaço",
+      "space_text": "Correspondência de nome no seu Espaço",
+      "open_food_facts": "Dados públicos de produto",
+      "ocr": "Lido do rótulo"
+    }
   }
 }
