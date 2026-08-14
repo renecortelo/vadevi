@@ -24,6 +24,7 @@ import {
   removeMember,
 } from "../repositories/spaces";
 import type { ApiEnvironment } from "../types";
+import { externalResearchEnabled } from "../adapters/research-factory";
 
 const IdempotencyHeadersSchema = z.object({
   "Idempotency-Key": IdempotencyKeySchema.openapi({
@@ -334,6 +335,7 @@ export function registerSpaceRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(acceptInvitationRoute, async (context) => {
     const result = await acceptInvitation(context.env.DB!, {
       aiProvider: context.env.AI_PROVIDER ?? "none",
+      externalResearch: externalResearchEnabled(context.env),
       principal: context.get("principal"),
       requestId: context.get("requestId"),
       token: context.req.valid("param").token,

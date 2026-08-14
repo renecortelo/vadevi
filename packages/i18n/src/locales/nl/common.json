@@ -222,6 +222,7 @@
     "noteCount": "{{count}} notitie",
     "noteCount_other": "{{count}} notities",
     "notes": "Notities",
+    "actions": "Acties",
     "conflictTitle": "Een lokale versie heeft aandacht nodig",
     "conflictBody": "Je lokale werk is niet weggegooid. Vergelijk beide versies en kies wat je wilt bewaren.",
     "localVersion": "Op dit apparaat opgeslagen",
@@ -234,6 +235,164 @@
     "loggedOnly": "Wijn vastgelegd zonder proefnotitie",
     "noSessionsTitle": "Nog geen sessie in dit Geheugen.",
     "noSessionsBody": "Maak een reeks zodat de notitie van iedere deelnemer apart blijft."
+  },
+  "evidence": {
+    "openAction": "Bewijs",
+    "backAction": "Terug naar Geheugen",
+    "eyebrow": "Herkomst",
+    "title": "Bewijs bij de wijn",
+    "body": "Zie wat waargenomen, onderzocht, afgeleid of persoonlijk is en waar elke onderzochte bewering vandaan komt.",
+    "wineBody": "Beweringen en bronnen voor een wijn van {{producer}}.",
+    "loadingTitle": "Bewijs laden…",
+    "loadingBody": "Bevoegde beweringen en brongegevens voor deze Ruimte controleren.",
+    "loadError": "Het bewijs kon niet worden geladen. Probeer het opnieuw wanneer er verbinding is.",
+    "acceptError": "De voorkeursbewering kon niet worden gewijzigd. Laad opnieuw en bekijk de huidige versie.",
+    "conflictTitle": "Tegenstrijdige beweringen blijven bewaard",
+    "conflictBody": "{{count}} eigenschap heeft verschillende waarden. Kies een voorkeur zonder de alternatieven te verwijderen.",
+    "emptyTitle": "Er is nog geen bewijs.",
+    "emptyBody": "Onderzoek en handmatig bewijs verschijnen hier met bron en raadpleegdatum.",
+    "claimLabel": "Bewering",
+    "claimCount": "{{count}} bewering",
+    "claimCount_other": "{{count}} beweringen",
+    "class": {
+      "observed": "Waargenomen",
+      "researched": "Onderzocht",
+      "inferred": "Afgeleid",
+      "personal": "Persoonlijk"
+    },
+    "status": {
+      "proposed": "Voorgesteld",
+      "accepted": "Voorkeur",
+      "disputed": "Betwist",
+      "retired": "Ingetrokken"
+    },
+    "sourcesLabel": "Bronnen",
+    "sourceType": {
+      "producer": "Producent",
+      "regulator": "Toezichthouder",
+      "specialist": "Gespecialiseerde bron",
+      "open_dataset": "Open gegevens",
+      "other_web": "Andere webbron",
+      "user_artifact": "Aangeleverde bron"
+    },
+    "support": {
+      "direct": "Direct bewijs",
+      "supporting": "Ondersteunend bewijs",
+      "context": "Context"
+    },
+    "retrieved": "Geraadpleegd op {{date}}",
+    "license": "Licentie {{license}}",
+    "confidence": "Vastgelegd vertrouwen: {{value}}%",
+    "noCitations": "Geen externe bron: dit wordt niet als onderzocht bewijs gepresenteerd.",
+    "acceptAction": "Als voorkeur kiezen",
+    "accepting": "Kiezen…",
+    "valueYes": "Ja",
+    "valueNo": "Nee",
+    "monthCount": "{{count}} maand",
+    "monthCount_other": "{{count}} maanden",
+    "predicate": {
+      "identity_canonical_name": "Canonieke naam",
+      "identity_grape_codes": "Druiven",
+      "producer_founded_year": "Oprichting producent",
+      "producer_history": "Geschiedenis producent",
+      "producer_name": "Naam producent",
+      "region_name": "Regio",
+      "production_aging_months": "Rijpingstijd",
+      "production_method": "Productiemethode",
+      "curiosity_note": "Wetenswaardigheid",
+      "further_reading_summary": "Verder lezen"
+    },
+    "research": {
+      "eyebrow": "Optioneel onderzoek",
+      "title": "Breid dit bewijs uit",
+      "body": "Voer begrensde zoekopdrachten in open data uit. Nieuwe beweringen blijven voorstellen en behouden altijd hun bron.",
+      "disabled": "Extern onderzoek is in deze implementatie uitgeschakeld. Handmatig bewijs en Wine Memory blijven beschikbaar.",
+      "wineEntity": "Wikidata-ID van wijn (optioneel)",
+      "producerEntity": "Wikidata-ID van producent (optioneel)",
+      "regionEntity": "Wikidata-ID van regio (optioneel)",
+      "entityHelp": "Gebruik alleen een Wikidata Q-ID wanneer de entiteit bevestigd is. Zoeken op barcode gebeurt automatisch als de wijn er een heeft.",
+      "action": "Onderzoek deze wijn",
+      "running": "Bezig met onderzoeken…",
+      "offline": "Onderzoek vereist een verbinding. Bestaand bewijs blijft offline beschikbaar.",
+      "error": "Het onderzoek kon niet worden voltooid. Bestaand bewijs is niet gewijzigd.",
+      "factCount": "{{count}} voorgesteld feit toegevoegd",
+      "factCount_other": "{{count}} voorgestelde feiten toegevoegd",
+      "status": {
+        "running": "Onderzoek wordt uitgevoerd",
+        "completed": "Onderzoek voltooid",
+        "degraded": "Onderzoek voltooid met beperkte resultaten",
+        "failed": "Onderzoek mislukt"
+      },
+      "warning": {
+        "provider_disabled": "De externe provider is uitgeschakeld.",
+        "missing_barcode": "Deze wijn heeft geen barcode voor productonderzoek.",
+        "missing_wikidata_entity": "Voor een of meer onderwerpen is geen bevestigde Wikidata-ID opgegeven.",
+        "no_results": "Er zijn geen veilige, geciteerde feiten gevonden.",
+        "partial_results": "Een of meer bronnen waren niet beschikbaar; gedeeltelijke resultaten worden getoond.",
+        "source_limit_reached": "De bronlimiet is bereikt."
+      }
+    }
+  },
+  "assistant": {
+    "eyebrow": "Je wijnmetgezel met begrensde toegang",
+    "title": "Vicenç Vinyes",
+    "body": "Vraag naar wijnen in je actieve Space. Elk resultaat komt uit geautoriseerde gestructureerde gegevens en toont het bewijs.",
+    "privacyTitle": "Standaard tijdelijk",
+    "privacyBody": "Deze beurt wordt niet opgeslagen als chatgeschiedenis. Alleen een geredigeerde toolaudit blijft bewaard; je bericht wordt er niet in gekopieerd.",
+    "messageLabel": "Wat wil je vinden?",
+    "messagePlaceholder": "Bijvoorbeeld: Vind de witte wijn uit de kustregio",
+    "activeSpaceOnly": "Alleen zoeken in de actieve Space",
+    "sendAction": "Vraag Vicenç",
+    "sending": "Zoeken…",
+    "error": "Vicenç kan nu niet zoeken. Wine Memory en de normale formulieren blijven beschikbaar.",
+    "emptyTitle": "Begin met je eigen Wine Memory.",
+    "emptyBody": "Met AI uit voert Vicenç nog steeds een directe gestructureerde zoekopdracht uit zonder een antwoord te verzinnen.",
+    "ephemeralBadge": "Niet opgeslagen in chatgeschiedenis",
+    "evidenceTitle": "Bewijsbasis",
+    "resultsTitle": "Overeenkomende wijnen",
+    "sourcesTitle": "Bronnen",
+    "openEvidence": "Bekijk bewijs",
+    "availabilityTitle": "Beschikbaarheid van tools",
+    "contextTitle": "Geautoriseerde wijncontext",
+    "contextEmpty": "Voor deze wijn zijn nog geen gestructureerde feiten toegevoegd.",
+    "profileTitle": "Je smaakprofiel",
+    "profileInsufficient": "Tot nu toe is er {{count}} ingediende notitie; er zijn er minstens {{minimum}} nodig om een voorkeur te beschrijven.",
+    "profileAverage": "Gemiddelde ingediende score",
+    "profileWouldBuy": "Zou opnieuw kopen: ja",
+    "comparisonTitle": "Gestructureerde vergelijking",
+    "factualTitle": "Feitelijk overzicht",
+    "personalTitle": "Persoonlijke interpretatie",
+    "personalInsufficient": "Gebaseerd op {{count}} van je ingediende notities: onvoldoende voor een persoonlijke uitspraak.",
+    "personalAverage": "Je gemiddelde is {{score}}, gebaseerd op {{count}} ingediende notities.",
+    "mode": {
+      "deterministic": "Gestructureerd zoeken",
+      "provider": "Bewijsbewust antwoord"
+    },
+    "availability": {
+      "ai": {
+        "available": "AI-provider beschikbaar",
+        "disabled": "AI-provider uitgeschakeld",
+        "unavailable": "AI-provider tijdelijk niet beschikbaar"
+      },
+      "searchMemory": {
+        "available": "Geautoriseerd zoeken in Wine Memory beschikbaar",
+        "disabled": "Zoeken in Wine Memory uitgeschakeld",
+        "unavailable": "Zoeken in Wine Memory niet beschikbaar"
+      },
+      "externalResearch": {
+        "available": "Extern onderzoek beschikbaar",
+        "disabled": "Extern onderzoek uitgeschakeld",
+        "unavailable": "Extern onderzoek niet beschikbaar"
+      },
+      "getWineContext": { "available": "Geautoriseerde wijncontext beschikbaar" },
+      "getTasteProfile": { "available": "Smaakprofiel met begrensde steekproef beschikbaar" },
+      "compareWines": { "available": "Deterministische wijnvergelijking beschikbaar" },
+      "researchWine": {
+        "available": "Begrensd en geciteerd wijnonderzoek beschikbaar",
+        "disabled": "Begrensd wijnonderzoek uitgeschakeld",
+        "unavailable": "Begrensd wijnonderzoek niet beschikbaar"
+      }
+    }
   },
   "sessions": {
     "eyebrow": "Een gedeelde tafel",

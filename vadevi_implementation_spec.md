@@ -940,14 +940,14 @@ Authorization: Bearer <firebase-id-token>
   "data": {
     "user": {
       "id": "01JUSER...",
-      "displayName": "René",
+      "displayName": "Sample Taster",
       "preferredLocale": "ca",
       "activeSpaceId": "01JSPACE..."
     },
     "spaces": [
       {
         "id": "01JSPACE...",
-        "name": "René & María",
+        "name": "Sample Couple",
         "type": "couple",
         "role": "owner"
       }
@@ -992,7 +992,7 @@ Identification creates an expiring draft; it does not create a wine.
       {
         "candidateId": "candidate-1",
         "fields": {
-          "producerName": { "value": "Álvaro Palacios", "confidence": "high", "evidence": "observed" },
+          "producerName": { "value": "Synthetic Estate", "confidence": "high", "evidence": "observed" },
           "displayName": { "value": "Camins del Priorat", "confidence": "high", "evidence": "observed" },
           "vintageYear": { "value": 2023, "confidence": "medium", "evidence": "observed" },
           "region": { "value": "Priorat", "confidence": "high", "evidence": "researched", "sourceIds": ["01JSOURCE"] }

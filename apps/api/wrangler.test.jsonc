@@ -20,9 +20,11 @@
     "APP_ENV": "local",
     "APP_VERSION": "0.1.0",
     "AI_PROVIDER": "none",
+    "EXTERNAL_API_USER_AGENT": "VaDeVi/0.1 (https://example.invalid/contact)",
     "FIREBASE_AUTH_EMULATOR_HOST": "127.0.0.1:9099",
     "FIREBASE_AUTH_DOMAIN": "localhost",
     "FIREBASE_PROJECT_ID": "demo-vadevi",
     "FIREBASE_WEB_API_KEY": "local-emulator-placeholder",
+    "RESEARCH_PROVIDER": "none",
   },
 }

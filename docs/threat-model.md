@@ -22,7 +22,18 @@ Memberships, wine and tasting data, private media, location text, provider crede
 - Session views expose another participant's completion state only; draft text and structured input remain author-private.
 - Deep-note mutations require the authenticated author and an exact resource version; stale conflicts return only that author's current authorized note.
 - Group comparisons consume submitted notes only, suppress misleading one-person group scores, and hash source-version inputs before persistence.
+- Provenance repositories require active Space membership, return the same not-found envelope to outsiders, and never store full third-party pages.
+- Source inputs accept only credential-free public HTTPS URLs and reject literal loopback, private, link-local, and metadata-service addresses before any future adapter receives them.
+- Registered fact predicates validate value shapes, researched facts require citations, and optimistic acceptance preserves conflicting alternatives.
+- Current public-data adapters use fixed official HTTPS hosts, identifying user agents, short timeouts, manual same-host redirect validation, bounded field selection, TTL caches, and application limits below documented provider ceilings.
+- Provider responses must be JSON, are canceled above a fixed byte budget, and contribute only schema-selected normalized fields.
+- Adapter caches contain normalized public candidates and attribution only; Open Food Facts images and complete provider/page payloads are not retained.
+- External strings are Unicode-normalized, stripped of control/bidirectional characters, bounded, and excluded before model input when they resemble prompt instructions, tool execution, secret extraction, or active markup.
+- Research jobs are membership-gated and idempotent; provider candidates can create only cited proposed facts and cannot mark them human-verified.
+- Vicenç turn input is strict, defaults to no history, cannot provide server authorization context, and is intersected with live active memberships before the already Space-scoped Wine Memory repository executes a read.
+- The AI-disabled assistant path invokes neither a model nor an external fetch. Prompt-like user text is treated only as bounded search data, and its audit record contains a hash/result count rather than the message.
+- The optional language adapter receives bounded structured statements and no tool interface. Model claims must reference known statement IDs; researched claims inherit source IDs and are rendered with claim-level citations, otherwise the whole provider result is discarded for deterministic fallback.
 
 ## Required follow-up
 
-Later phases add SSRF defenses, prompt-injection controls, provider-specific privacy review, export/deletion tests, and broader manual accessibility/browser evidence as mapped in the implementation specification. Secret scanning and dependency review remain release gates even though production credentials are not required for local development.
+DNS resolution and private-address rechecks are mandatory before any future fetch boundary permits a non-fixed or user-selected host. Full page-content extraction remains disabled; current adapters select small official API fields only. Provider-specific privacy review remains mandatory before optional AI or research is enabled. Later phases add export/deletion tests and broader manual accessibility/browser evidence as mapped in the implementation specification. Secret scanning and dependency review remain release gates even though production credentials are not required for local development.

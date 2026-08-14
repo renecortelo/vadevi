@@ -24,14 +24,44 @@ const EnvironmentSchema = z
       .regex(/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/i)
       .default("0.1.0"),
     AI_PROVIDER: z.enum(["none", "cloudflare"]).default("none"),
+    AI_MODEL: z
+      .string()
+      .regex(/^@cf\/[a-z0-9][a-z0-9._/-]{2,119}$/)
+      .optional(),
+    EXTERNAL_API_USER_AGENT: z.string().min(16).max(300).optional(),
     FIREBASE_AUTH_EMULATOR_HOST: z.string().optional(),
     FIREBASE_AUTH_DOMAIN: z.string().min(1).default("localhost"),
     FIREBASE_PROJECT_ID: z.string().min(1).default("demo-vadevi"),
     FIREBASE_WEB_API_KEY: z.string().min(1).default("local-emulator-placeholder"),
+    RESEARCH_PROVIDER: z.enum(["none", "open_data"]).default("none"),
     VITE_API_BASE_URL: z.string().startsWith("/").default("/api/v1"),
     VITE_FIREBASE_USE_EMULATOR: z.enum(["true", "false"]).default("true"),
   })
   .superRefine((environment, context) => {
+    if (environment.AI_PROVIDER === "cloudflare" && environment.AI_MODEL === undefined) {
+      context.addIssue({
+        code: "custom",
+        message: "Cloudflare AI requires an explicit @cf/* model allowlist entry.",
+        path: ["AI_MODEL"],
+      });
+    }
+
+    if (
+      environment.RESEARCH_PROVIDER === "open_data" &&
+      (environment.EXTERNAL_API_USER_AGENT === undefined ||
+        !/VaDeVi\//.test(environment.EXTERNAL_API_USER_AGENT) ||
+        !/https:\/\//.test(environment.EXTERNAL_API_USER_AGENT) ||
+        environment.EXTERNAL_API_USER_AGENT.includes("\r") ||
+        environment.EXTERNAL_API_USER_AGENT.includes("\n"))
+    ) {
+      context.addIssue({
+        code: "custom",
+        message:
+          "Open-data research requires an identifying VaDeVi/* user agent with HTTPS contact.",
+        path: ["EXTERNAL_API_USER_AGENT"],
+      });
+    }
+
     if (environment.APP_ENV === "local" && !environment.FIREBASE_PROJECT_ID.startsWith("demo-")) {
       context.addIssue({
         code: "custom",

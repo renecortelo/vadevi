@@ -133,3 +133,48 @@ Phase 3 exit criteria:
 - a deep tasting can be drafted offline, resumed by its author, submitted exactly once, and compared only after submission
 - session flights retain explicit order and every participant's opinion remains distinct
 - all structured codes remain locale-independent while labels and help text are complete in every supported locale
+
+## Completed milestone: Phase 4 — Provenance, learning, and Vicenç read path
+
+Implemented:
+
+- migration `0007` adds Space-scoped sources, typed facts, and fact citations without storing full third-party page content
+- registered fact predicates validate value shapes; researched facts cannot be persisted without at least one citation
+- conflicting claims coexist, exactly one claim per Space/subject/predicate may be accepted, and selecting a new preferred claim marks the old one disputed
+- contract-first source create/read, wine-fact create/list, and fact-acceptance endpoints with generated OpenAPI
+- idempotent source/fact creation, optimistic fact acceptance, change events, and safe audit events
+- active-membership authorization at every repository boundary with non-enumerating outsider responses
+- initial URL boundary rejects non-HTTPS credentials, loopback, private, link-local, metadata-service, and local-only literal targets
+- Workers-runtime coverage for citations, conflicts, preference changes, idempotent replay, stale versions, outsider denial, predicate validation, and unsafe source URLs
+- Wine Memory links into a localized evidence screen that distinguishes every evidence class and fact state, shows citation publisher/type/retrieval/license metadata, preserves visible alternatives, and makes preference changes explicit
+- domain-owned external-research ports plus fixed-host Open Food Facts and Wikidata adapters with bounded response fields, identifying user agents, source/license attribution, D1 TTL caches, application rate budgets, timeouts, manual redirect validation, and deterministic degraded results
+- migration `0008` persists only bounded public adapter results and provider rate windows; no full third-party page, image, user note, or provider credential enters that cache
+- migration `0009` adds redacted assistant tool-run audit records containing argument hashes, outcomes, counts, citation IDs, and rule/model versions rather than chat text or raw arguments
+- migration `0010` adds authorized, idempotent research jobs with explicit provider mode, bounded attempts, warnings, and created fact/source IDs
+- research orchestration converts normalized adapter candidates into cited `proposed` facts, reuses canonical sources safely, never auto-verifies a claim, and returns deterministic `degraded` results when providers are disabled or incomplete
+- the evidence screen includes an online-only research action, optional confirmed Wikidata IDs, status/warning feedback, fact refresh, and an explicit disabled-provider state without weakening offline/manual flows
+- all provider URLs are application-owned fixed official HTTPS hosts; redirects stay on the allowlist, JSON is content-type and byte bounded, and the fetcher is not a general URL/DNS boundary
+- external strings are normalized, stripped of control/bidirectional characters, length bounded, and rejected before model input when they resemble instructions, tool requests, credential extraction, or active markup
+- contract-first, ephemeral Vicenç turns intersect requested Spaces with live memberships and expose `search_memory`, `get_wine_context`, `get_taste_profile`, deterministic `compare_wines`, and bounded research availability without saved history
+- personal profiles require three submitted notes, expose the sample count, and return `insufficient` with no preference values below that threshold; per-wine personal comparison follows the same rule
+- researched wine context returns each fact with its stored citations, and the localized UI renders the evidence class plus claim-level sources
+- optional Workers AI language rendering receives only bounded structured statements, exposes no tools, and is accepted only when every returned claim maps to known statement IDs; researched claims inherit stored source IDs or the response falls back to deterministic mode
+- the public/default `AI_PROVIDER=none` and `RESEARCH_PROVIDER=none` path keeps structured search, wine context, profile thresholds, comparison, evidence, logging, sessions, and offline flows operational without external AI or research calls
+- all new research, evidence, profile, comparison, provider-availability, and degraded/offline copy is translated across the eight supported catalogs
+
+Phase 4 exit evidence captured on 2026-08-14:
+
+- the complete `pnpm check` gate passes formatting, lint, strict typechecks, 71 tests, generated OpenAPI, eight-catalog/ontology validation, the PWA production build, and the Worker dry-run
+- Workers tests cover researched-fact citations and proposal state, idempotent job replay, disabled-provider degradation, outsider denial, canonical-source reuse, redacted tool audits, cross-Space intersection, personal sample thresholds, deterministic comparisons, and provider claim enforcement
+- hostile-provider suites reject same-host escapes, non-JSON and oversized bodies, instruction-like product/entity fields, unknown model statement IDs, and external prompt text before any language-provider call
+- web tests cover provenance attribution, the disabled research state, deterministic Vicenç results, and structured tool availability; strict typechecks pass for AI-disabled and service-worker paths
+- the current public worktree contains no private-key or common Firebase, OpenAI, GitHub, AWS, Slack, Stripe, or webhook-secret patterns; email-like strings are synthetic test domains, an official Firebase service-account endpoint, or dependency metadata, and checked-in UUID/config values are placeholders
+
+Phase 4 exit criteria:
+
+- every researched statement displayed by Vicenç retains a claim-level mapping to one or more stored sources
+- personal claims show their submitted-note sample basis and are withheld below the minimum threshold
+- hostile source content cannot select tools, override authorization, make arbitrary HTTP requests, or trigger durable writes
+- all core read tools return structured results with AI disabled, while research/manual fallbacks remain explicit and usable
+
+The fetch boundary must add DNS resolution and private-address rechecks before a future phase permits user-selected or non-fixed provider hosts. Provider-specific privacy review remains required before a private deployment enables optional language or research bindings.

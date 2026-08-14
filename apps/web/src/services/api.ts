@@ -1,4 +1,6 @@
 import {
+  AssistantTurnRequestSchema,
+  AssistantTurnResponseSchema,
   BootstrapResponseSchema,
   CreateInvitationRequestSchema,
   CreateInvitationResponseSchema,
@@ -53,6 +55,18 @@ import {
   type TastingSessionDetailResponse,
   type TastingSessionResponse,
   type UpdateDeepTastingRequest,
+  AcceptFactRequestSchema,
+  FactResponseSchema,
+  WineFactsResponseSchema,
+  type AcceptFactRequest,
+  type AssistantTurnRequest,
+  type AssistantTurnResponse,
+  type FactResponse,
+  type WineFactsResponse,
+  CreateResearchJobRequestSchema,
+  ResearchJobResponseSchema,
+  type CreateResearchJobRequest,
+  type ResearchJobResponse,
 } from "@vadevi/contracts";
 
 type TokenSource = {
@@ -274,6 +288,96 @@ export async function getWineMemory(
   );
   if (!response.ok) throw await apiError(response);
   return WineMemoryResponseSchema.parse(await response.json());
+}
+
+export async function getWineFacts(
+  tokenSource: TokenSource,
+  spaceId: string,
+  wineId: string,
+  signal?: AbortSignal,
+): Promise<WineFactsResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/wines/${wineId}/facts`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return WineFactsResponseSchema.parse(await response.json());
+}
+
+export async function acceptFact(
+  tokenSource: TokenSource,
+  spaceId: string,
+  factId: string,
+  request: AcceptFactRequest,
+): Promise<FactResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/facts/${factId}/accept`,
+    {
+      body: JSON.stringify(AcceptFactRequestSchema.parse(request)),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return FactResponseSchema.parse(await response.json());
+}
+
+export async function createResearchJob(
+  tokenSource: TokenSource,
+  spaceId: string,
+  wineId: string,
+  request: CreateResearchJobRequest,
+  idempotencyKey: string,
+): Promise<ResearchJobResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/wines/${wineId}/research-jobs`,
+    {
+      body: JSON.stringify(CreateResearchJobRequestSchema.parse(request)),
+      headers: {
+        "Content-Type": "application/json",
+        "Idempotency-Key": idempotencyKey,
+      },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return ResearchJobResponseSchema.parse(await response.json());
+}
+
+export async function getResearchJob(
+  tokenSource: TokenSource,
+  spaceId: string,
+  jobId: string,
+  signal?: AbortSignal,
+): Promise<ResearchJobResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/research-jobs/${jobId}`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return ResearchJobResponseSchema.parse(await response.json());
+}
+
+export async function createAssistantTurn(
+  tokenSource: TokenSource,
+  spaceId: string,
+  request: AssistantTurnRequest,
+): Promise<AssistantTurnResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/assistant/turns`,
+    {
+      body: JSON.stringify(AssistantTurnRequestSchema.parse(request)),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return AssistantTurnResponseSchema.parse(await response.json());
 }
 
 export async function reserveMedia(

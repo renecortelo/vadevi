@@ -10,6 +10,8 @@ declare global {
       FIREBASE_AUTH_DOMAIN: string;
       FIREBASE_PROJECT_ID: string;
       FIREBASE_WEB_API_KEY: string;
+      EXTERNAL_API_USER_AGENT: string;
+      RESEARCH_PROVIDER: "none";
       DB: D1Database;
       MEDIA: R2Bucket;
       TEST_MIGRATIONS: D1Migration[];

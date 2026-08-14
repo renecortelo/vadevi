@@ -19,6 +19,9 @@ import { OfflineSyncProvider } from "./offline/OfflineSyncProvider";
 const DeepTastingPage = lazy(() =>
   import("./pages/DeepTastingPage").then((module) => ({ default: module.DeepTastingPage })),
 );
+const AssistantPage = lazy(() =>
+  import("./pages/AssistantPage").then((module) => ({ default: module.AssistantPage })),
+);
 const NewSessionPage = lazy(() =>
   import("./pages/NewSessionPage").then((module) => ({ default: module.NewSessionPage })),
 );
@@ -33,6 +36,9 @@ const SessionsPage = lazy(() =>
 );
 const WineMemoryPage = lazy(() =>
   import("./pages/WineMemoryPage").then((module) => ({ default: module.WineMemoryPage })),
+);
+const WineEvidencePage = lazy(() =>
+  import("./pages/WineEvidencePage").then((module) => ({ default: module.WineEvidencePage })),
 );
 
 function DeferredPage({ children }: { children: ReactNode }) {
@@ -107,7 +113,19 @@ export function AuthenticatedRoutes() {
             path="memory"
           />
           <Route
-            element={<InfoPage bodyKey="pages.assistantBody" titleKey="pages.assistantTitle" />}
+            element={
+              <DeferredPage>
+                <WineEvidencePage />
+              </DeferredPage>
+            }
+            path="wines/:wineId/evidence"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <AssistantPage />
+              </DeferredPage>
+            }
             path="vicenc"
           />
           <Route element={<SpaceSettingsPage />} path="spaces" />

@@ -230,6 +230,7 @@
     "noteCount": "{{count}} note",
     "noteCount_other": "{{count}} notes",
     "notes": "Notes",
+    "actions": "Actions",
     "conflictTitle": "A local version needs attention",
     "conflictBody": "Your local work has not been discarded. Compare both versions and choose what to keep.",
     "localVersion": "Saved on this device",
@@ -242,6 +243,164 @@
     "loggedOnly": "Wine logged without a tasting note",
     "noSessionsTitle": "No session in this Memory yet.",
     "noSessionsBody": "Create a flight to keep each participant's note separate."
+  },
+  "evidence": {
+    "openAction": "Evidence",
+    "backAction": "Back to Wine Memory",
+    "eyebrow": "Provenance",
+    "title": "Wine evidence",
+    "body": "See what is observed, researched, inferred, or personal—and where each researched claim came from.",
+    "wineBody": "Claims and sources for a wine by {{producer}}.",
+    "loadingTitle": "Loading the evidence…",
+    "loadingBody": "Checking authorized claims and citation metadata for this Space.",
+    "loadError": "The evidence could not be loaded. Try again when the connection is available.",
+    "acceptError": "The preferred claim could not be changed. Reload and review the current version.",
+    "conflictTitle": "Conflicting claims are preserved",
+    "conflictBody": "{{count}} attribute has different values. Choose a preferred claim without deleting the alternatives.",
+    "emptyTitle": "No evidence has been added yet.",
+    "emptyBody": "Research and manual evidence will appear here with its source and retrieval date.",
+    "claimLabel": "Claim",
+    "claimCount": "{{count}} claim",
+    "claimCount_other": "{{count}} claims",
+    "class": {
+      "observed": "Observed",
+      "researched": "Researched",
+      "inferred": "Inferred",
+      "personal": "Personal"
+    },
+    "status": {
+      "proposed": "Proposed",
+      "accepted": "Preferred",
+      "disputed": "Disputed",
+      "retired": "Retired"
+    },
+    "sourcesLabel": "Sources",
+    "sourceType": {
+      "producer": "Producer",
+      "regulator": "Regulator",
+      "specialist": "Specialist source",
+      "open_dataset": "Open dataset",
+      "other_web": "Other web source",
+      "user_artifact": "User-provided source"
+    },
+    "support": {
+      "direct": "Direct support",
+      "supporting": "Supporting evidence",
+      "context": "Context"
+    },
+    "retrieved": "Retrieved {{date}}",
+    "license": "License {{license}}",
+    "confidence": "Recorded confidence: {{value}}%",
+    "noCitations": "No external citation — this is not presented as researched evidence.",
+    "acceptAction": "Choose as preferred",
+    "accepting": "Choosing…",
+    "valueYes": "Yes",
+    "valueNo": "No",
+    "monthCount": "{{count}} month",
+    "monthCount_other": "{{count}} months",
+    "predicate": {
+      "identity_canonical_name": "Canonical name",
+      "identity_grape_codes": "Grapes",
+      "producer_founded_year": "Producer founded",
+      "producer_history": "Producer history",
+      "producer_name": "Producer name",
+      "region_name": "Region",
+      "production_aging_months": "Aging time",
+      "production_method": "Production method",
+      "curiosity_note": "Curiosity",
+      "further_reading_summary": "Further reading"
+    },
+    "research": {
+      "eyebrow": "Optional research",
+      "title": "Expand this evidence",
+      "body": "Run bounded open-data lookups. New claims stay proposed and always retain their source.",
+      "disabled": "External research is disabled in this deployment. Manual evidence and Wine Memory remain available.",
+      "wineEntity": "Wine Wikidata ID (optional)",
+      "producerEntity": "Producer Wikidata ID (optional)",
+      "regionEntity": "Region Wikidata ID (optional)",
+      "entityHelp": "Use a Wikidata Q identifier only when you have confirmed the entity. Barcode lookup runs automatically when the wine has one.",
+      "action": "Research this wine",
+      "running": "Researching…",
+      "offline": "Research needs a connection. Existing evidence remains available offline.",
+      "error": "The research job could not be completed. Existing evidence was not changed.",
+      "factCount": "{{count}} proposed fact added",
+      "factCount_other": "{{count}} proposed facts added",
+      "status": {
+        "running": "Research is running",
+        "completed": "Research completed",
+        "degraded": "Research completed with limited results",
+        "failed": "Research failed"
+      },
+      "warning": {
+        "provider_disabled": "The external provider is disabled.",
+        "missing_barcode": "This wine has no barcode for product lookup.",
+        "missing_wikidata_entity": "No confirmed Wikidata ID was supplied for one or more topics.",
+        "no_results": "No safe cited facts were found.",
+        "partial_results": "One or more sources were unavailable; partial results are shown.",
+        "source_limit_reached": "The source limit was reached."
+      }
+    }
+  },
+  "assistant": {
+    "eyebrow": "Your scoped wine companion",
+    "title": "Vicenç Vinyes",
+    "body": "Ask about wines already in your active Space. Every result comes from authorized structured data, with evidence made visible.",
+    "privacyTitle": "Ephemeral by default",
+    "privacyBody": "This turn is not saved as chat history. Only a redacted tool audit is retained; your message is not copied into it.",
+    "messageLabel": "What would you like to find?",
+    "messagePlaceholder": "For example: Find the white wine from the coastal region",
+    "activeSpaceOnly": "Searching the active Space only",
+    "sendAction": "Ask Vicenç",
+    "sending": "Searching…",
+    "error": "Vicenç could not search right now. Wine Memory and normal forms are still available.",
+    "emptyTitle": "Start with your own Wine Memory.",
+    "emptyBody": "With AI disabled, Vicenç still performs a direct, structured search without inventing an answer.",
+    "ephemeralBadge": "Not saved to chat history",
+    "evidenceTitle": "Evidence basis",
+    "resultsTitle": "Matching wines",
+    "sourcesTitle": "Sources",
+    "openEvidence": "Review evidence",
+    "availabilityTitle": "Tool availability",
+    "contextTitle": "Authorized wine context",
+    "contextEmpty": "No structured facts have been added for this wine.",
+    "profileTitle": "Your taste profile",
+    "profileInsufficient": "{{count}} submitted note so far; at least {{minimum}} are required before describing a preference.",
+    "profileAverage": "Average submitted score",
+    "profileWouldBuy": "Would-buy yes",
+    "comparisonTitle": "Structured comparison",
+    "factualTitle": "Factual record",
+    "personalTitle": "Personal interpretation",
+    "personalInsufficient": "Based on {{count}} of your submitted notes—insufficient for a personal claim.",
+    "personalAverage": "Your average is {{score}}, based on {{count}} submitted notes.",
+    "mode": {
+      "deterministic": "Structured search",
+      "provider": "Evidence-aware answer"
+    },
+    "availability": {
+      "ai": {
+        "available": "AI provider available",
+        "disabled": "AI provider disabled",
+        "unavailable": "AI provider temporarily unavailable"
+      },
+      "searchMemory": {
+        "available": "Authorized Wine Memory search available",
+        "disabled": "Wine Memory search disabled",
+        "unavailable": "Wine Memory search unavailable"
+      },
+      "externalResearch": {
+        "available": "External research available",
+        "disabled": "External research disabled",
+        "unavailable": "External research unavailable"
+      },
+      "getWineContext": { "available": "Authorized wine context available" },
+      "getTasteProfile": { "available": "Sample-bounded taste profile available" },
+      "compareWines": { "available": "Deterministic wine comparison available" },
+      "researchWine": {
+        "available": "Bounded cited wine research available",
+        "disabled": "Bounded wine research disabled",
+        "unavailable": "Bounded wine research unavailable"
+      }
+    }
   },
   "sessions": {
     "eyebrow": "A shared table",

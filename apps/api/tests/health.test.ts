@@ -54,7 +54,7 @@ describe("runtime routes", () => {
       data: {
         appEnvironment: "local",
         features: {
-          assistant: false,
+          assistant: true,
           externalResearch: false,
           priceLookup: false,
           voiceInput: false,

@@ -222,6 +222,7 @@
     "noteCount": "{{count}} nota",
     "noteCount_other": "{{count}} note",
     "notes": "Note",
+    "actions": "Azioni",
     "conflictTitle": "Una versione locale richiede attenzione",
     "conflictBody": "Il lavoro locale non è stato eliminato. Confronta entrambe le versioni e scegli quale conservare.",
     "localVersion": "Salvato su questo dispositivo",
@@ -234,6 +235,164 @@
     "loggedOnly": "Vino registrato senza nota di degustazione",
     "noSessionsTitle": "Nessuna sessione in questa Memoria.",
     "noSessionsBody": "Crea una batteria per tenere separata la nota di ogni partecipante."
+  },
+  "evidence": {
+    "openAction": "Evidenze",
+    "backAction": "Torna alla Memoria",
+    "eyebrow": "Provenienza",
+    "title": "Evidenze sul vino",
+    "body": "Distingui ciò che è osservato, ricercato, dedotto o personale e verifica l'origine di ogni affermazione documentata.",
+    "wineBody": "Affermazioni e fonti per un vino di {{producer}}.",
+    "loadingTitle": "Caricamento delle evidenze…",
+    "loadingBody": "Verifica delle affermazioni autorizzate e delle citazioni in questo Spazio.",
+    "loadError": "Impossibile caricare le evidenze. Riprova quando la connessione è disponibile.",
+    "acceptError": "Impossibile cambiare l'affermazione preferita. Ricarica e controlla la versione corrente.",
+    "conflictTitle": "Le affermazioni in conflitto vengono conservate",
+    "conflictBody": "{{count}} attributo presenta valori diversi. Scegli quello preferito senza eliminare le alternative.",
+    "emptyTitle": "Non ci sono ancora evidenze.",
+    "emptyBody": "Le ricerche e le evidenze manuali appariranno qui con fonte e data di consultazione.",
+    "claimLabel": "Affermazione",
+    "claimCount": "{{count}} affermazione",
+    "claimCount_other": "{{count}} affermazioni",
+    "class": {
+      "observed": "Osservato",
+      "researched": "Ricercato",
+      "inferred": "Dedotto",
+      "personal": "Personale"
+    },
+    "status": {
+      "proposed": "Proposta",
+      "accepted": "Preferita",
+      "disputed": "Contestata",
+      "retired": "Ritirata"
+    },
+    "sourcesLabel": "Fonti",
+    "sourceType": {
+      "producer": "Produttore",
+      "regulator": "Ente regolatore",
+      "specialist": "Fonte specializzata",
+      "open_dataset": "Dati aperti",
+      "other_web": "Altra fonte web",
+      "user_artifact": "Fonte fornita"
+    },
+    "support": {
+      "direct": "Prova diretta",
+      "supporting": "Evidenza di supporto",
+      "context": "Contesto"
+    },
+    "retrieved": "Consultato il {{date}}",
+    "license": "Licenza {{license}}",
+    "confidence": "Affidabilità registrata: {{value}}%",
+    "noCitations": "Nessuna citazione esterna: non viene presentata come evidenza ricercata.",
+    "acceptAction": "Scegli come preferita",
+    "accepting": "Selezione…",
+    "valueYes": "Sì",
+    "valueNo": "No",
+    "monthCount": "{{count}} mese",
+    "monthCount_other": "{{count}} mesi",
+    "predicate": {
+      "identity_canonical_name": "Nome canonico",
+      "identity_grape_codes": "Uve",
+      "producer_founded_year": "Fondazione del produttore",
+      "producer_history": "Storia del produttore",
+      "producer_name": "Nome del produttore",
+      "region_name": "Regione",
+      "production_aging_months": "Durata dell'affinamento",
+      "production_method": "Metodo di produzione",
+      "curiosity_note": "Curiosità",
+      "further_reading_summary": "Per approfondire"
+    },
+    "research": {
+      "eyebrow": "Ricerca facoltativa",
+      "title": "Amplia queste evidenze",
+      "body": "Esegui ricerche limitate su dati aperti. Le nuove affermazioni restano proposte e conservano sempre la fonte.",
+      "disabled": "La ricerca esterna è disattivata in questa distribuzione. Le evidenze manuali e Wine Memory restano disponibili.",
+      "wineEntity": "ID Wikidata del vino (facoltativo)",
+      "producerEntity": "ID Wikidata del produttore (facoltativo)",
+      "regionEntity": "ID Wikidata della regione (facoltativo)",
+      "entityHelp": "Usa un identificatore Q di Wikidata solo dopo aver confermato l’entità. La ricerca per codice a barre parte automaticamente se il vino ne ha uno.",
+      "action": "Cerca informazioni sul vino",
+      "running": "Ricerca in corso…",
+      "offline": "La ricerca richiede una connessione. Le evidenze esistenti restano disponibili offline.",
+      "error": "Impossibile completare la ricerca. Le evidenze esistenti non sono state modificate.",
+      "factCount": "Aggiunto {{count}} fatto proposto",
+      "factCount_other": "Aggiunti {{count}} fatti proposti",
+      "status": {
+        "running": "Ricerca in corso",
+        "completed": "Ricerca completata",
+        "degraded": "Ricerca completata con risultati limitati",
+        "failed": "Ricerca non riuscita"
+      },
+      "warning": {
+        "provider_disabled": "Il provider esterno è disattivato.",
+        "missing_barcode": "Questo vino non ha un codice a barre per la ricerca del prodotto.",
+        "missing_wikidata_entity": "Non è stato fornito un ID Wikidata confermato per uno o più argomenti.",
+        "no_results": "Non sono stati trovati fatti sicuri e citati.",
+        "partial_results": "Una o più fonti non erano disponibili; vengono mostrati risultati parziali.",
+        "source_limit_reached": "È stato raggiunto il limite di fonti."
+      }
+    }
+  },
+  "assistant": {
+    "eyebrow": "Il tuo compagno del vino con accesso limitato",
+    "title": "Vicenç Vinyes",
+    "body": "Chiedi dei vini nello Spazio attivo. Ogni risultato proviene da dati strutturati autorizzati e mostra le prove.",
+    "privacyTitle": "Effimero per impostazione predefinita",
+    "privacyBody": "Questo turno non viene salvato nella cronologia. Viene conservato solo un audit oscurato dello strumento; il messaggio non viene copiato.",
+    "messageLabel": "Cosa vorresti trovare?",
+    "messagePlaceholder": "Per esempio: Trova il vino bianco della regione costiera",
+    "activeSpaceOnly": "Ricerca solo nello Spazio attivo",
+    "sendAction": "Chiedi a Vicenç",
+    "sending": "Ricerca…",
+    "error": "Vicenç non può cercare in questo momento. Wine Memory e i moduli normali restano disponibili.",
+    "emptyTitle": "Inizia dalla tua Wine Memory.",
+    "emptyBody": "Con l’IA disattivata, Vicenç esegue comunque una ricerca strutturata diretta senza inventare una risposta.",
+    "ephemeralBadge": "Non salvato nella cronologia",
+    "evidenceTitle": "Base delle prove",
+    "resultsTitle": "Vini corrispondenti",
+    "sourcesTitle": "Fonti",
+    "openEvidence": "Esamina le prove",
+    "availabilityTitle": "Disponibilità degli strumenti",
+    "contextTitle": "Contesto autorizzato del vino",
+    "contextEmpty": "Non sono ancora stati aggiunti fatti strutturati per questo vino.",
+    "profileTitle": "Il tuo profilo di gusto",
+    "profileInsufficient": "Finora c’è {{count}} nota inviata; ne servono almeno {{minimum}} per descrivere una preferenza.",
+    "profileAverage": "Punteggio medio inviato",
+    "profileWouldBuy": "Lo ricomprerebbe: sì",
+    "comparisonTitle": "Confronto strutturato",
+    "factualTitle": "Dati fattuali",
+    "personalTitle": "Interpretazione personale",
+    "personalInsufficient": "Basato su {{count}} tue note inviate: non bastano per un’affermazione personale.",
+    "personalAverage": "La tua media è {{score}}, basata su {{count}} note inviate.",
+    "mode": {
+      "deterministic": "Ricerca strutturata",
+      "provider": "Risposta basata su prove"
+    },
+    "availability": {
+      "ai": {
+        "available": "Provider IA disponibile",
+        "disabled": "Provider IA disattivato",
+        "unavailable": "Provider IA temporaneamente non disponibile"
+      },
+      "searchMemory": {
+        "available": "Ricerca autorizzata in Wine Memory disponibile",
+        "disabled": "Ricerca in Wine Memory disattivata",
+        "unavailable": "Ricerca in Wine Memory non disponibile"
+      },
+      "externalResearch": {
+        "available": "Ricerca esterna disponibile",
+        "disabled": "Ricerca esterna disattivata",
+        "unavailable": "Ricerca esterna non disponibile"
+      },
+      "getWineContext": { "available": "Contesto autorizzato del vino disponibile" },
+      "getTasteProfile": { "available": "Profilo di gusto con campione limitato disponibile" },
+      "compareWines": { "available": "Confronto deterministico dei vini disponibile" },
+      "researchWine": {
+        "available": "Ricerca limitata e citata sul vino disponibile",
+        "disabled": "Ricerca limitata sul vino disattivata",
+        "unavailable": "Ricerca limitata sul vino non disponibile"
+      }
+    }
   },
   "sessions": {
     "eyebrow": "Un tavolo condiviso",

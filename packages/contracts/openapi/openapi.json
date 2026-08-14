@@ -662,6 +662,1010 @@
         ],
         "additionalProperties": false
       },
+      "AssistantTurnResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "citations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "canonicalUrl": {
+                      "type": "string",
+                      "maxLength": 2048,
+                      "format": "uri"
+                    },
+                    "contentHash": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9_-]{43}$"
+                    },
+                    "lastCheckedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "licenseIdentifier": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "retrievedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "sourceType": {
+                      "type": "string",
+                      "enum": [
+                        "producer",
+                        "regulator",
+                        "specialist",
+                        "open_dataset",
+                        "other_web",
+                        "user_artifact"
+                      ]
+                    },
+                    "title": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "createdByProvider": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "createdByUserId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  },
+                  "required": [
+                    "canonicalUrl",
+                    "publisher",
+                    "retrievedAt",
+                    "sourceType",
+                    "title",
+                    "createdAt",
+                    "createdByProvider",
+                    "createdByUserId",
+                    "id",
+                    "updatedAt"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 8
+              },
+              "comparisons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "factual": {
+                      "type": "object",
+                      "properties": {
+                        "noteCount": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "region": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "score100": {
+                          "type": "integer",
+                          "nullable": true,
+                          "minimum": 0,
+                          "maximum": 100
+                        },
+                        "vintageYear": {
+                          "type": "integer",
+                          "nullable": true,
+                          "minimum": 1800,
+                          "maximum": 2200
+                        },
+                        "wineType": {
+                          "type": "string",
+                          "nullable": true
+                        }
+                      },
+                      "required": [
+                        "noteCount",
+                        "region",
+                        "score100",
+                        "vintageYear",
+                        "wineType"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "personal": {
+                      "type": "object",
+                      "properties": {
+                        "averageScore": {
+                          "type": "number",
+                          "nullable": true,
+                          "minimum": 0,
+                          "maximum": 100
+                        },
+                        "confidence": {
+                          "type": "string",
+                          "enum": [
+                            "insufficient",
+                            "low",
+                            "medium",
+                            "high"
+                          ]
+                        },
+                        "sampleSize": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "required": [
+                        "averageScore",
+                        "confidence",
+                        "sampleSize"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "spaceId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "wineId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "wineName": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    }
+                  },
+                  "required": [
+                    "factual",
+                    "personal",
+                    "spaceId",
+                    "wineId",
+                    "wineName"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 6
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "evidenceClass": {
+                      "type": "string",
+                      "enum": [
+                        "observed",
+                        "researched",
+                        "inferred",
+                        "personal"
+                      ]
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "sampleSize": {
+                      "type": "integer",
+                      "nullable": true,
+                      "minimum": 0
+                    },
+                    "sourceIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                      },
+                      "maxItems": 8
+                    }
+                  },
+                  "required": [
+                    "evidenceClass",
+                    "label",
+                    "sampleSize",
+                    "sourceIds"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 8
+              },
+              "mode": {
+                "type": "string",
+                "enum": [
+                  "deterministic",
+                  "provider"
+                ]
+              },
+              "renderedClaims": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "evidenceClass": {
+                      "type": "string",
+                      "enum": [
+                        "observed",
+                        "researched",
+                        "inferred",
+                        "personal"
+                      ]
+                    },
+                    "sampleSize": {
+                      "type": "integer",
+                      "nullable": true,
+                      "minimum": 0
+                    },
+                    "sourceIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                      },
+                      "maxItems": 8
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 500
+                    }
+                  },
+                  "required": [
+                    "evidenceClass",
+                    "sampleSize",
+                    "sourceIds",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 8
+              },
+              "renderedText": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "results": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "spaceId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "spaceName": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120
+                    },
+                    "wine": {
+                      "type": "object",
+                      "properties": {
+                        "appellation": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "countryCode": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "displayName": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "identityStatus": {
+                          "type": "string",
+                          "enum": [
+                            "draft",
+                            "confirmed",
+                            "needs_review"
+                          ]
+                        },
+                        "lastTastedAt": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date-time"
+                        },
+                        "mediaId": {
+                          "type": "string",
+                          "nullable": true,
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "noteCount": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "nonVintage": {
+                          "type": "boolean"
+                        },
+                        "producerName": {
+                          "type": "string"
+                        },
+                        "region": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "score100": {
+                          "type": "integer",
+                          "nullable": true,
+                          "minimum": 0,
+                          "maximum": 100
+                        },
+                        "vintageYear": {
+                          "type": "integer",
+                          "nullable": true
+                        },
+                        "version": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "exclusiveMinimum": true
+                        },
+                        "wineType": {
+                          "type": "string",
+                          "nullable": true,
+                          "enum": [
+                            "red",
+                            "white",
+                            "rose",
+                            "sparkling",
+                            "fortified",
+                            "orange",
+                            "other",
+                            null
+                          ]
+                        }
+                      },
+                      "required": [
+                        "appellation",
+                        "countryCode",
+                        "createdAt",
+                        "displayName",
+                        "id",
+                        "identityStatus",
+                        "lastTastedAt",
+                        "mediaId",
+                        "noteCount",
+                        "nonVintage",
+                        "producerName",
+                        "region",
+                        "score100",
+                        "vintageYear",
+                        "version",
+                        "wineType"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "spaceId",
+                    "spaceName",
+                    "wine"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 25
+              },
+              "tasteProfile": {
+                "type": "object",
+                "nullable": true,
+                "properties": {
+                  "averageScore": {
+                    "type": "number",
+                    "nullable": true,
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "insufficient",
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  },
+                  "descriptorCodes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 100
+                    },
+                    "maxItems": 10
+                  },
+                  "minimumSubmittedNotes": {
+                    "type": "number",
+                    "enum": [
+                      3
+                    ]
+                  },
+                  "sampleSize": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "subject": {
+                    "type": "string",
+                    "enum": [
+                      "current_user"
+                    ]
+                  },
+                  "wouldBuyYesCount": {
+                    "type": "integer",
+                    "nullable": true,
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "averageScore",
+                  "confidence",
+                  "descriptorCodes",
+                  "minimumSubmittedNotes",
+                  "sampleSize",
+                  "subject",
+                  "wouldBuyYesCount"
+                ],
+                "additionalProperties": false
+              },
+              "threadId": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "toolAvailability": {
+                "type": "object",
+                "properties": {
+                  "ai": {
+                    "type": "string",
+                    "enum": [
+                      "available",
+                      "disabled",
+                      "unavailable"
+                    ]
+                  },
+                  "externalResearch": {
+                    "type": "string",
+                    "enum": [
+                      "available",
+                      "disabled",
+                      "unavailable"
+                    ]
+                  },
+                  "compareWines": {
+                    "type": "string",
+                    "enum": [
+                      "available",
+                      "disabled",
+                      "unavailable"
+                    ]
+                  },
+                  "getTasteProfile": {
+                    "type": "string",
+                    "enum": [
+                      "available",
+                      "disabled",
+                      "unavailable"
+                    ]
+                  },
+                  "getWineContext": {
+                    "type": "string",
+                    "enum": [
+                      "available",
+                      "disabled",
+                      "unavailable"
+                    ]
+                  },
+                  "researchWine": {
+                    "type": "string",
+                    "enum": [
+                      "available",
+                      "disabled",
+                      "unavailable"
+                    ]
+                  },
+                  "searchMemory": {
+                    "type": "string",
+                    "enum": [
+                      "available",
+                      "disabled",
+                      "unavailable"
+                    ]
+                  }
+                },
+                "required": [
+                  "ai",
+                  "externalResearch",
+                  "compareWines",
+                  "getTasteProfile",
+                  "getWineContext",
+                  "researchWine",
+                  "searchMemory"
+                ],
+                "additionalProperties": false
+              },
+              "turnId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "usage": {
+                "type": "object",
+                "properties": {
+                  "externalResearchCalls": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2
+                  },
+                  "maxExternalResearchCalls": {
+                    "type": "number",
+                    "enum": [
+                      2
+                    ]
+                  },
+                  "maxToolCalls": {
+                    "type": "number",
+                    "enum": [
+                      6
+                    ]
+                  },
+                  "toolCalls": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 6
+                  }
+                },
+                "required": [
+                  "externalResearchCalls",
+                  "maxExternalResearchCalls",
+                  "maxToolCalls",
+                  "toolCalls"
+                ],
+                "additionalProperties": false
+              },
+              "warnings": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ai_disabled",
+                    "deterministic_search",
+                    "no_matches",
+                    "provider_unavailable"
+                  ]
+                },
+                "maxItems": 4
+              },
+              "wineContext": {
+                "type": "object",
+                "nullable": true,
+                "properties": {
+                  "conflicts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "acceptedFactId": {
+                          "type": "string",
+                          "nullable": true,
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "factIds": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                          },
+                          "minItems": 2
+                        },
+                        "predicate": {
+                          "type": "string",
+                          "enum": [
+                            "identity.canonical_name",
+                            "identity.grape_codes",
+                            "producer.founded_year",
+                            "producer.history",
+                            "producer.name",
+                            "region.name",
+                            "production.aging_months",
+                            "production.method",
+                            "curiosity.note",
+                            "further_reading.summary"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "acceptedFactId",
+                        "factIds",
+                        "predicate"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "maxItems": 25
+                  },
+                  "facts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "citations": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "locator": {
+                                "type": "string",
+                                "nullable": true
+                              },
+                              "source": {
+                                "type": "object",
+                                "properties": {
+                                  "canonicalUrl": {
+                                    "type": "string",
+                                    "maxLength": 2048,
+                                    "format": "uri"
+                                  },
+                                  "contentHash": {
+                                    "type": "string",
+                                    "pattern": "^[A-Za-z0-9_-]{43}$"
+                                  },
+                                  "lastCheckedAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "licenseIdentifier": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 120
+                                  },
+                                  "publisher": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 160
+                                  },
+                                  "retrievedAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "sourceType": {
+                                    "type": "string",
+                                    "enum": [
+                                      "producer",
+                                      "regulator",
+                                      "specialist",
+                                      "open_dataset",
+                                      "other_web",
+                                      "user_artifact"
+                                    ]
+                                  },
+                                  "title": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 300
+                                  },
+                                  "createdAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "createdByProvider": {
+                                    "type": "string",
+                                    "nullable": true
+                                  },
+                                  "createdByUserId": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                                  },
+                                  "id": {
+                                    "type": "string",
+                                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                                  },
+                                  "updatedAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  }
+                                },
+                                "required": [
+                                  "canonicalUrl",
+                                  "publisher",
+                                  "retrievedAt",
+                                  "sourceType",
+                                  "title",
+                                  "createdAt",
+                                  "createdByProvider",
+                                  "createdByUserId",
+                                  "id",
+                                  "updatedAt"
+                                ],
+                                "additionalProperties": false
+                              },
+                              "supportStrength": {
+                                "type": "string",
+                                "enum": [
+                                  "direct",
+                                  "supporting",
+                                  "context"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "locator",
+                              "source",
+                              "supportStrength"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "confidenceMilli": {
+                          "type": "integer",
+                          "nullable": true,
+                          "minimum": 0,
+                          "maximum": 1000
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "evidenceClass": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "researched",
+                            "inferred",
+                            "personal"
+                          ]
+                        },
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "observedByUserId": {
+                          "type": "string",
+                          "nullable": true,
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "predicate": {
+                          "type": "string",
+                          "enum": [
+                            "identity.canonical_name",
+                            "identity.grape_codes",
+                            "producer.founded_year",
+                            "producer.history",
+                            "producer.name",
+                            "region.name",
+                            "production.aging_months",
+                            "production.method",
+                            "curiosity.note",
+                            "further_reading.summary"
+                          ]
+                        },
+                        "researchMethod": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "proposed",
+                            "accepted",
+                            "disputed",
+                            "retired"
+                          ]
+                        },
+                        "subjectId": {
+                          "type": "string",
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "subjectType": {
+                          "type": "string",
+                          "enum": [
+                            "wine",
+                            "producer",
+                            "grape",
+                            "region",
+                            "price_observation"
+                          ]
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "value": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 2000
+                            },
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+                              },
+                              "minItems": 1,
+                              "maxItems": 20
+                            }
+                          ]
+                        },
+                        "verifiedAt": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date-time"
+                        },
+                        "verifiedByUserId": {
+                          "type": "string",
+                          "nullable": true,
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "version": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "exclusiveMinimum": true
+                        }
+                      },
+                      "required": [
+                        "citations",
+                        "confidenceMilli",
+                        "createdAt",
+                        "evidenceClass",
+                        "id",
+                        "observedByUserId",
+                        "predicate",
+                        "researchMethod",
+                        "status",
+                        "subjectId",
+                        "subjectType",
+                        "updatedAt",
+                        "value",
+                        "verifiedAt",
+                        "verifiedByUserId",
+                        "version"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "maxItems": 50
+                  },
+                  "spaceId": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "wineId": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  }
+                },
+                "required": [
+                  "conflicts",
+                  "facts",
+                  "spaceId",
+                  "wineId"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "citations",
+              "comparisons",
+              "evidence",
+              "mode",
+              "renderedClaims",
+              "renderedText",
+              "results",
+              "tasteProfile",
+              "threadId",
+              "toolAvailability",
+              "turnId",
+              "usage",
+              "warnings",
+              "wineContext"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "AssistantTurnRequest": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "type": "object",
+            "properties": {
+              "allowedCrossSpaceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                },
+                "maxItems": 8
+              },
+              "visibleWineId": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              }
+            },
+            "required": [
+              "allowedCrossSpaceIds",
+              "visibleWineId"
+            ],
+            "additionalProperties": false
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "es",
+              "fr",
+              "en",
+              "it",
+              "pt-PT",
+              "nl",
+              "de"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "saveHistory": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "threadId": {
+            "nullable": true
+          }
+        },
+        "required": [
+          "context",
+          "locale",
+          "message",
+          "saveHistory",
+          "threadId"
+        ],
+        "additionalProperties": false
+      },
       "CreateWineResponse": {
         "type": "object",
         "properties": {
@@ -3790,6 +4794,1073 @@
           "version"
         ],
         "additionalProperties": false
+      },
+      "SourceResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "canonicalUrl": {
+                "type": "string",
+                "maxLength": 2048,
+                "format": "uri"
+              },
+              "contentHash": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{43}$"
+              },
+              "lastCheckedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "licenseIdentifier": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "publisher": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "retrievedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "sourceType": {
+                "type": "string",
+                "enum": [
+                  "producer",
+                  "regulator",
+                  "specialist",
+                  "open_dataset",
+                  "other_web",
+                  "user_artifact"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdByProvider": {
+                "type": "string",
+                "nullable": true
+              },
+              "createdByUserId": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "canonicalUrl",
+              "publisher",
+              "retrievedAt",
+              "sourceType",
+              "title",
+              "createdAt",
+              "createdByProvider",
+              "createdByUserId",
+              "id",
+              "updatedAt"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "CreateSourceRequest": {
+        "type": "object",
+        "properties": {
+          "canonicalUrl": {
+            "type": "string",
+            "maxLength": 2048,
+            "format": "uri"
+          },
+          "clientId": {
+            "type": "string",
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "contentHash": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{43}$"
+          },
+          "lastCheckedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "licenseIdentifier": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "retrievedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sourceType": {
+            "type": "string",
+            "enum": [
+              "producer",
+              "regulator",
+              "specialist",
+              "open_dataset",
+              "other_web",
+              "user_artifact"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "canonicalUrl",
+          "publisher",
+          "retrievedAt",
+          "sourceType",
+          "title"
+        ],
+        "additionalProperties": false
+      },
+      "FactResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "citations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "locator": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "source": {
+                      "type": "object",
+                      "properties": {
+                        "canonicalUrl": {
+                          "type": "string",
+                          "maxLength": 2048,
+                          "format": "uri"
+                        },
+                        "contentHash": {
+                          "type": "string",
+                          "pattern": "^[A-Za-z0-9_-]{43}$"
+                        },
+                        "lastCheckedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "licenseIdentifier": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 120
+                        },
+                        "publisher": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 160
+                        },
+                        "retrievedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "sourceType": {
+                          "type": "string",
+                          "enum": [
+                            "producer",
+                            "regulator",
+                            "specialist",
+                            "open_dataset",
+                            "other_web",
+                            "user_artifact"
+                          ]
+                        },
+                        "title": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 300
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "createdByProvider": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "createdByUserId": {
+                          "type": "string",
+                          "nullable": true,
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        }
+                      },
+                      "required": [
+                        "canonicalUrl",
+                        "publisher",
+                        "retrievedAt",
+                        "sourceType",
+                        "title",
+                        "createdAt",
+                        "createdByProvider",
+                        "createdByUserId",
+                        "id",
+                        "updatedAt"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "supportStrength": {
+                      "type": "string",
+                      "enum": [
+                        "direct",
+                        "supporting",
+                        "context"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "locator",
+                    "source",
+                    "supportStrength"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "confidenceMilli": {
+                "type": "integer",
+                "nullable": true,
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "evidenceClass": {
+                "type": "string",
+                "enum": [
+                  "observed",
+                  "researched",
+                  "inferred",
+                  "personal"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "observedByUserId": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "predicate": {
+                "type": "string",
+                "enum": [
+                  "identity.canonical_name",
+                  "identity.grape_codes",
+                  "producer.founded_year",
+                  "producer.history",
+                  "producer.name",
+                  "region.name",
+                  "production.aging_months",
+                  "production.method",
+                  "curiosity.note",
+                  "further_reading.summary"
+                ]
+              },
+              "researchMethod": {
+                "type": "string",
+                "nullable": true
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "proposed",
+                  "accepted",
+                  "disputed",
+                  "retired"
+                ]
+              },
+              "subjectId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "subjectType": {
+                "type": "string",
+                "enum": [
+                  "wine",
+                  "producer",
+                  "grape",
+                  "region",
+                  "price_observation"
+                ]
+              },
+              "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 2000
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 20
+                  }
+                ]
+              },
+              "verifiedAt": {
+                "type": "string",
+                "nullable": true,
+                "format": "date-time"
+              },
+              "verifiedByUserId": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "version": {
+                "type": "integer",
+                "minimum": 0,
+                "exclusiveMinimum": true
+              }
+            },
+            "required": [
+              "citations",
+              "confidenceMilli",
+              "createdAt",
+              "evidenceClass",
+              "id",
+              "observedByUserId",
+              "predicate",
+              "researchMethod",
+              "status",
+              "subjectId",
+              "subjectType",
+              "updatedAt",
+              "value",
+              "verifiedAt",
+              "verifiedByUserId",
+              "version"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "CreateWineFactRequest": {
+        "type": "object",
+        "properties": {
+          "citations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "locator": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                },
+                "sourceId": {
+                  "type": "string",
+                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                },
+                "supportStrength": {
+                  "type": "string",
+                  "enum": [
+                    "direct",
+                    "supporting",
+                    "context"
+                  ]
+                }
+              },
+              "required": [
+                "sourceId",
+                "supportStrength"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 8,
+            "default": []
+          },
+          "clientId": {
+            "type": "string",
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "confidenceMilli": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000
+          },
+          "evidenceClass": {
+            "type": "string",
+            "enum": [
+              "observed",
+              "researched",
+              "inferred",
+              "personal"
+            ]
+          },
+          "predicate": {
+            "type": "string",
+            "enum": [
+              "identity.canonical_name",
+              "identity.grape_codes",
+              "producer.founded_year",
+              "producer.history",
+              "producer.name",
+              "region.name",
+              "production.aging_months",
+              "production.method",
+              "curiosity.note",
+              "further_reading.summary"
+            ]
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+                },
+                "minItems": 1,
+                "maxItems": 20
+              }
+            ]
+          }
+        },
+        "required": [
+          "evidenceClass",
+          "predicate",
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "WineFactsResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "acceptedFactId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "factIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                      },
+                      "minItems": 2
+                    },
+                    "predicate": {
+                      "type": "string",
+                      "enum": [
+                        "identity.canonical_name",
+                        "identity.grape_codes",
+                        "producer.founded_year",
+                        "producer.history",
+                        "producer.name",
+                        "region.name",
+                        "production.aging_months",
+                        "production.method",
+                        "curiosity.note",
+                        "further_reading.summary"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "acceptedFactId",
+                    "factIds",
+                    "predicate"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "facts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "citations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "locator": {
+                            "type": "string",
+                            "nullable": true
+                          },
+                          "source": {
+                            "type": "object",
+                            "properties": {
+                              "canonicalUrl": {
+                                "type": "string",
+                                "maxLength": 2048,
+                                "format": "uri"
+                              },
+                              "contentHash": {
+                                "type": "string",
+                                "pattern": "^[A-Za-z0-9_-]{43}$"
+                              },
+                              "lastCheckedAt": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "licenseIdentifier": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 120
+                              },
+                              "publisher": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 160
+                              },
+                              "retrievedAt": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "sourceType": {
+                                "type": "string",
+                                "enum": [
+                                  "producer",
+                                  "regulator",
+                                  "specialist",
+                                  "open_dataset",
+                                  "other_web",
+                                  "user_artifact"
+                                ]
+                              },
+                              "title": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 300
+                              },
+                              "createdAt": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "createdByProvider": {
+                                "type": "string",
+                                "nullable": true
+                              },
+                              "createdByUserId": {
+                                "type": "string",
+                                "nullable": true,
+                                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                              },
+                              "updatedAt": {
+                                "type": "string",
+                                "format": "date-time"
+                              }
+                            },
+                            "required": [
+                              "canonicalUrl",
+                              "publisher",
+                              "retrievedAt",
+                              "sourceType",
+                              "title",
+                              "createdAt",
+                              "createdByProvider",
+                              "createdByUserId",
+                              "id",
+                              "updatedAt"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "supportStrength": {
+                            "type": "string",
+                            "enum": [
+                              "direct",
+                              "supporting",
+                              "context"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "locator",
+                          "source",
+                          "supportStrength"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "confidenceMilli": {
+                      "type": "integer",
+                      "nullable": true,
+                      "minimum": 0,
+                      "maximum": 1000
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "evidenceClass": {
+                      "type": "string",
+                      "enum": [
+                        "observed",
+                        "researched",
+                        "inferred",
+                        "personal"
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "observedByUserId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "predicate": {
+                      "type": "string",
+                      "enum": [
+                        "identity.canonical_name",
+                        "identity.grape_codes",
+                        "producer.founded_year",
+                        "producer.history",
+                        "producer.name",
+                        "region.name",
+                        "production.aging_months",
+                        "production.method",
+                        "curiosity.note",
+                        "further_reading.summary"
+                      ]
+                    },
+                    "researchMethod": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "proposed",
+                        "accepted",
+                        "disputed",
+                        "retired"
+                      ]
+                    },
+                    "subjectId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "subjectType": {
+                      "type": "string",
+                      "enum": [
+                        "wine",
+                        "producer",
+                        "grape",
+                        "region",
+                        "price_observation"
+                      ]
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 2000
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+                          },
+                          "minItems": 1,
+                          "maxItems": 20
+                        }
+                      ]
+                    },
+                    "verifiedAt": {
+                      "type": "string",
+                      "nullable": true,
+                      "format": "date-time"
+                    },
+                    "verifiedByUserId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "version": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "exclusiveMinimum": true
+                    }
+                  },
+                  "required": [
+                    "citations",
+                    "confidenceMilli",
+                    "createdAt",
+                    "evidenceClass",
+                    "id",
+                    "observedByUserId",
+                    "predicate",
+                    "researchMethod",
+                    "status",
+                    "subjectId",
+                    "subjectType",
+                    "updatedAt",
+                    "value",
+                    "verifiedAt",
+                    "verifiedByUserId",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "conflicts",
+              "facts"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "AcceptFactRequest": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "additionalProperties": false
+      },
+      "ResearchJobResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "attempts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "cached": {
+                      "type": "boolean",
+                      "nullable": true
+                    },
+                    "provider": {
+                      "type": "string",
+                      "enum": [
+                        "open_food_facts",
+                        "wikidata"
+                      ]
+                    },
+                    "reason": {
+                      "type": "string",
+                      "nullable": true,
+                      "enum": [
+                        "invalid_input",
+                        "not_found",
+                        "provider_error",
+                        "rate_limited",
+                        "timeout",
+                        "unsafe_redirect",
+                        null
+                      ]
+                    },
+                    "retryAfterSeconds": {
+                      "type": "integer",
+                      "nullable": true,
+                      "minimum": 0
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "success",
+                        "unavailable"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "cached",
+                    "provider",
+                    "reason",
+                    "retryAfterSeconds",
+                    "status"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 4
+              },
+              "completedAt": {
+                "type": "string",
+                "nullable": true,
+                "format": "date-time"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "factIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                }
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "locale": {
+                "type": "string",
+                "enum": [
+                  "ca",
+                  "es",
+                  "fr",
+                  "en",
+                  "it",
+                  "pt-PT",
+                  "nl",
+                  "de"
+                ]
+              },
+              "providerMode": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "open_data"
+                ]
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                }
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "running",
+                  "completed",
+                  "degraded",
+                  "failed"
+                ]
+              },
+              "topics": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "identity",
+                    "grapes",
+                    "region",
+                    "producer",
+                    "production",
+                    "curiosities",
+                    "further_reading"
+                  ]
+                },
+                "minItems": 1,
+                "maxItems": 7
+              },
+              "warnings": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "provider_disabled",
+                    "missing_barcode",
+                    "missing_wikidata_entity",
+                    "no_results",
+                    "partial_results",
+                    "source_limit_reached"
+                  ]
+                },
+                "maxItems": 6
+              },
+              "wineId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              }
+            },
+            "required": [
+              "attempts",
+              "completedAt",
+              "createdAt",
+              "factIds",
+              "id",
+              "locale",
+              "providerMode",
+              "sourceIds",
+              "status",
+              "topics",
+              "warnings",
+              "wineId"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "CreateResearchJobRequest": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "es",
+              "fr",
+              "en",
+              "it",
+              "pt-PT",
+              "nl",
+              "de"
+            ]
+          },
+          "maxSources": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8,
+            "default": 4
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "identity",
+                "grapes",
+                "region",
+                "producer",
+                "production",
+                "curiosities",
+                "further_reading"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 7
+          },
+          "wikidataEntityIds": {
+            "type": "object",
+            "properties": {
+              "producer": {
+                "type": "string",
+                "pattern": "^Q[1-9]\\d{0,11}$"
+              },
+              "region": {
+                "type": "string",
+                "pattern": "^Q[1-9]\\d{0,11}$"
+              },
+              "wine": {
+                "type": "string",
+                "pattern": "^Q[1-9]\\d{0,11}$"
+              }
+            },
+            "default": {},
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "locale",
+          "topics"
+        ],
+        "additionalProperties": false
       }
     },
     "parameters": {}
@@ -4399,6 +6470,83 @@
           },
           "409": {
             "description": "Membership version conflict.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/assistant/turns": {
+      "post": {
+        "operationId": "createAssistantTurn",
+        "tags": [
+          "Assistant"
+        ],
+        "summary": "Run one ephemeral, bounded Vicenç turn over authorized data",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssistantTurnRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "An ephemeral assistant turn. AI-disabled deployments return deterministic structured search.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistantTurnResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The bounded turn request is invalid.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The active Space is unavailable to the caller.",
             "content": {
               "application/json": {
                 "schema": {
@@ -5943,6 +8091,624 @@
           },
           "409": {
             "description": "The note version changed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/sources": {
+      "post": {
+        "operationId": "createSource",
+        "tags": [
+          "Provenance"
+        ],
+        "summary": "Store citation metadata without retaining a third-party page",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "header",
+            "name": "Idempotency-Key"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSourceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Stored citation metadata.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The idempotency key conflicts with an earlier request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/sources/{sourceId}": {
+      "get": {
+        "operationId": "getSource",
+        "tags": [
+          "Provenance"
+        ],
+        "summary": "Read one authorized source's citation metadata",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "sourceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Citation metadata without cached page content.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/wines/{wineId}/facts": {
+      "post": {
+        "operationId": "createWineFact",
+        "tags": [
+          "Provenance"
+        ],
+        "summary": "Create a proposed wine fact with typed evidence and citations",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "wineId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "header",
+            "name": "Idempotency-Key"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWineFactRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "A proposed fact; researched facts always include a citation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FactResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The idempotency key or client resource ID conflicts.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "listWineFacts",
+        "tags": [
+          "Provenance"
+        ],
+        "summary": "List authorized wine facts, citations, and visible conflicts",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "wineId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "All current claims with alternatives preserved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WineFactsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/facts/{factId}/accept": {
+      "post": {
+        "operationId": "acceptFact",
+        "tags": [
+          "Provenance"
+        ],
+        "summary": "Human-verify a preferred fact while preserving conflicting claims",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "factId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptFactRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The accepted preferred fact.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FactResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Space-scoped resource is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The fact version changed; current authorized data is returned.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/wines/{wineId}/research-jobs": {
+      "post": {
+        "operationId": "createResearchJob",
+        "tags": [
+          "Research"
+        ],
+        "summary": "Run bounded optional enrichment and store only proposed cited facts",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "wineId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            },
+            "required": true,
+            "in": "header",
+            "name": "Idempotency-Key"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateResearchJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Completed or explicitly degraded bounded research job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResearchJobResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The research request is invalid.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The authorized wine is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The idempotency key conflicts with an earlier request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/research-jobs/{jobId}": {
+      "get": {
+        "operationId": "getResearchJob",
+        "tags": [
+          "Research"
+        ],
+        "summary": "Read an authorized research job without provider payloads",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "jobId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bounded job status, safe attempts, and created resource IDs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResearchJobResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The research job is unavailable to the caller.",
             "content": {
               "application/json": {
                 "schema": {

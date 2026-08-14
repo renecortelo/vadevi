@@ -8,9 +8,13 @@ import {
 } from "@vadevi/contracts";
 
 import { authentication } from "./middleware/authentication";
+import { externalResearchEnabled } from "./adapters/research-factory";
 import { requestContext } from "./middleware/request-context";
 import { security } from "./middleware/security";
 import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
+import { registerAssistantRoutes } from "./routes/assistant";
+import { registerProvenanceRoutes } from "./routes/provenance";
+import { registerResearchRoutes } from "./routes/research";
 import { registerSpaceRoutes } from "./routes/spaces";
 import { registerTastingSessionRoutes } from "./routes/tasting-sessions";
 import { registerWineMemoryRoutes } from "./routes/wine-memory";
@@ -163,8 +167,8 @@ function runtimeConfigPayload(environment: ApiEnvironment["Bindings"]) {
           : {}),
       },
       features: {
-        assistant: environment.AI_PROVIDER === "cloudflare",
-        externalResearch: false,
+        assistant: true,
+        externalResearch: externalResearchEnabled(environment),
         priceLookup: false,
         voiceInput: false,
       },
@@ -223,6 +227,7 @@ export function createApi() {
 
     const response = await bootstrapUser(database, {
       aiProvider: context.env.AI_PROVIDER ?? "none",
+      externalResearch: externalResearchEnabled(context.env),
       principal: context.get("principal"),
       requestId: context.get("requestId"),
     });
@@ -237,6 +242,7 @@ export function createApi() {
 
     const response = await updateUserProfile(database, {
       aiProvider: context.env.AI_PROVIDER ?? "none",
+      externalResearch: externalResearchEnabled(context.env),
       principal: context.get("principal"),
       requestId: context.get("requestId"),
       update: context.req.valid("json"),
@@ -257,8 +263,11 @@ export function createApi() {
   });
 
   registerSpaceRoutes(app);
+  registerAssistantRoutes(app);
   registerWineMemoryRoutes(app);
   registerTastingSessionRoutes(app);
+  registerProvenanceRoutes(app);
+  registerResearchRoutes(app);
 
   app.get("/openapi.json", (context) =>
     context.json(
