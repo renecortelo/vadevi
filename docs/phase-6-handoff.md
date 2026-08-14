@@ -60,28 +60,27 @@ pnpm audit --audit-level high
 These are judgement or environment items that code cannot close. They are the
 gate between "Phase 6 is code-complete" and "the MVP is production-ready".
 
-1. **Fluent-human catalog review.** §13.4 permits machine translation as a draft
-   only and makes English fallback in a non-English production screen a release
-   blocker. All seven non-English catalogs are drafts. The sign-off table is
-   `docs/localization-review.md`.
-2. **Browser drills for the Phase 6 screens.** The service-worker update
-   handshake, the install prompt, offline quota exhaustion, axe scans of the
-   Data and privacy screen and the extended Memory filters, and a 320 CSS px
-   layout check are all unrecorded. The in-app browser's local-address policy
-   blocks the local dev URL, so these need an ordinary desktop browser.
-3. **Preview-environment acceptance.** `docs/preview-environment.md` defines the
-   run against isolated non-production Firebase, D1, and R2 resources. It has
-   not been executed, because doing so needs deployment credentials that a
-   credential-free public repository deliberately lacks.
-4. **Measured performance numbers.** The initial-route JavaScript budget is
+1. **Authenticated browser coverage.** A 20-test Playwright suite now covers the
+   offline shell, service-worker update, manifest, accessibility, 320 px layout,
+   and storage pressure on signed-out routes. The app signs in only through
+   Google redirect, so an emulator-backed sign-in fixture is still needed before
+   axe and layout checks reach the authenticated screens.
+2. **Preview-environment acceptance.** `docs/preview-environment.md` now carries
+   both the setup steps and the acceptance checklist. It has not been executed,
+   because doing so needs deployment credentials that a credential-free public
+   repository deliberately lacks.
+3. **Measured performance numbers.** The initial-route JavaScript budget is
    enforced at 247.3 KiB gzip against 250 KiB, but LCP, INP, and API p95 have
    not been measured on a mid-range mobile profile.
-5. **Remaining §22.2 sign-offs.** Accessibility, threat-model, privacy, and
+4. **Remaining §22.2 sign-offs.** Accessibility, threat-model, privacy, and
    restore/delete reviews are unsigned.
-6. **Open §23 product-owner decisions**, in particular the exact Space-deletion
-   grace period. It is implemented as a documented seven-day default, with 24
-   hours for an account, pending that review. Changing it is a constant change,
-   not a redesign.
+5. **Localization wording.** The product owner waived the §13.4 fluent-reviewer
+   gate on 2026-08-14. The catalogs are structurally complete and free of English
+   fallback, but the non-English wording has not been judged by a speaker of
+   those languages. Recorded as an accepted risk in
+   `docs/localization-review.md`.
+6. **The §23 license decision**, which blocks Phase 7. The dependency tree
+   carries no copyleft obligation, so every option remains open.
 
 Do not enable non-fixed external hosts without DNS resolution plus
 private-address rechecks. Do not enable an optional AI or research provider

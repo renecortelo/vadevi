@@ -139,7 +139,7 @@ export function DataRightsPage() {
     await run(async () => {
       const job = await scheduleAccountDeletion(user!);
       setAccountConfirm("");
-      return t("dataRights.accountScheduled", { hours: job.data.gracePeriodSeconds / 3_600 });
+      return t("dataRights.accountScheduled", { days: job.data.gracePeriodSeconds / 86_400 });
     });
   }
 

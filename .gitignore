@@ -27,3 +27,7 @@ tmp/
 Thumbs.db
 *.log
 *.tsbuildinfo
+
+# Deployment-specific Wrangler configuration
+wrangler.preview.jsonc
+wrangler.production.jsonc

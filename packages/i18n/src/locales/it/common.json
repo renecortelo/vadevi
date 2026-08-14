@@ -889,7 +889,7 @@
     "deleteAccountBody": "Questo rimuove il tuo Spazio personale e i dati privati. I record condivisi restano nel loro Spazio. Serve un accesso recente.",
     "deleteAccountLabel": "Digita DELETE per confermare",
     "deleteAccountAction": "Pianifica l'eliminazione dell'account",
-    "accountScheduled": "L'eliminazione dell'account è pianificata tra {{hours}} ore.",
+    "accountScheduled": "L'eliminazione dell'account è pianificata tra {{days}} giorni.",
     "retentionTitle": "Cosa fa e cosa non fa l'eliminazione",
     "retentionBody": "L'eliminazione rimuove i dati applicativi attivi e le foto archiviate. I backup gestiti dal fornitore seguono la propria pianificazione e non vengono cancellati istantaneamente.",
     "actionError": "Non ha funzionato. Controlla la connessione e riprova."

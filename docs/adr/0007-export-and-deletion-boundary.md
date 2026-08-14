@@ -46,9 +46,9 @@ than handed to a packaging service, because the bytes are private photos.
 Space deletion requires a typed confirmation matching the Space name and is
 owner-only. Account deletion requires a sign-in within the last 15 minutes.
 
-Both create a job with a recoverable grace period rather than purging inline:
-seven days for a Space, 24 hours for an account. §23 leaves the exact period
-open pending privacy review; these are the documented defaults until it lands.
+Both create a job with a recoverable grace period rather than purging inline.
+The product owner set this to **one month for both** on 2026-08-14, closing the
+§23 decision that was previously open.
 
 A partial unique index allows at most one open job per target, so repeating a
 confirmation returns the job that already exists instead of scheduling a second
@@ -78,5 +78,7 @@ falsified. A personal Space is deleted with the account rather than left.
 - Deletion depends on the cron trigger being configured. A deployment without
   it will schedule jobs that never execute, which the preview-environment
   checklist covers.
-- The seven-day and 24-hour periods are provisional and will change if the
-  §23 privacy review lands on different numbers.
+- A one-month window means a scheduled deletion sits in the database for a
+  month. That is deliberate — it is what makes the action recoverable — but it
+  also means an operator reading the table sees pending jobs for far longer than
+  the confirmation suggested.

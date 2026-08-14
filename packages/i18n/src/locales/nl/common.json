@@ -889,7 +889,7 @@
     "deleteAccountBody": "Dit verwijdert uw persoonlijke Ruimte en privégegevens. Gedeelde records blijven bij hun Ruimte. Een recente aanmelding is vereist.",
     "deleteAccountLabel": "Typ DELETE om te bevestigen",
     "deleteAccountAction": "Accountverwijdering inplannen",
-    "accountScheduled": "De accountverwijdering staat over {{hours}} uur ingepland.",
+    "accountScheduled": "De accountverwijdering staat over {{days}} dagen ingepland.",
     "retentionTitle": "Wat verwijderen wel en niet doet",
     "retentionBody": "Verwijderen wist de actieve toepassingsgegevens en opgeslagen foto's. Back-ups van de aanbieder volgen hun eigen bewaartermijn en worden niet direct gewist.",
     "actionError": "Dat is niet gelukt. Controleer uw verbinding en probeer het opnieuw."

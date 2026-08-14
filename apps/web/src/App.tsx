@@ -184,9 +184,6 @@ export function AuthenticatedRoutes() {
           />
         </Route>
       </Routes>
-      <PwaUpdatePrompt />
-      <InstallPrompt />
-      <StoragePressureNotice />
     </>
   );
 }
@@ -235,6 +232,13 @@ export function App() {
   return (
     <AuthProvider>
       <AuthGate />
+      {/*
+        Registered outside the auth gate so the offline shell, update prompt,
+        install guidance, and storage warning work for a signed-out visitor too.
+      */}
+      <PwaUpdatePrompt />
+      <InstallPrompt />
+      <StoragePressureNotice />
     </AuthProvider>
   );
 }

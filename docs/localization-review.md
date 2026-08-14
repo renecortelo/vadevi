@@ -30,25 +30,46 @@ is actually talked about in each language. Only a fluent reviewer can judge that
 and §13.4 makes English fallback in a non-English production screen a release
 blocker.
 
+## Product-owner decision, 2026-08-14
+
+§13.4 makes fluent-human sign-off a release gate and treats English fallback in
+a non-English screen as a release blocker. The product owner has **waived the
+sign-off gate** for this release: no fluent reviewers are available, and the
+release proceeds with machine-drafted catalogs.
+
+This is a recorded, accepted risk, not a satisfied requirement. What it means
+concretely:
+
+- The catalogs are complete and structurally correct. The automated gate proves
+  there is no missing key, no broken interpolation, and no English fallback.
+- The wording in the seven non-English catalogs has not been judged by a speaker
+  of that language. Expect register and terminology to need correction.
+- Any locale can be revised later without a schema or code change, because
+  stable domain codes are never translated in storage — only their labels are.
+- If a reviewer does become available, the table below is where their sign-off
+  is recorded, and this waiver should be replaced by their entry.
+
 ## Sign-off table
 
 English is the source catalog and needs no translation review.
 
-| Locale  | Catalog state                    | Reviewer | Date | Notes                                 |
-| ------- | -------------------------------- | -------- | ---- | ------------------------------------- |
-| `en`    | source                           | —        | —    | Source of truth for key completeness. |
-| `ca`    | draft — awaiting fluent reviewer |          |      |                                       |
-| `es`    | draft — awaiting fluent reviewer |          |      |                                       |
-| `fr`    | draft — awaiting fluent reviewer |          |      |                                       |
-| `it`    | draft — awaiting fluent reviewer |          |      |                                       |
-| `pt-PT` | draft — awaiting fluent reviewer |          |      |                                       |
-| `nl`    | draft — awaiting fluent reviewer |          |      |                                       |
-| `de`    | draft — awaiting fluent reviewer |          |      |                                       |
+| Locale  | Catalog state          | Reviewer | Date       | Notes                                 |
+| ------- | ---------------------- | -------- | ---------- | ------------------------------------- |
+| `en`    | source                 | —        | —          | Source of truth for key completeness. |
+| `ca`    | machine draft — waived | —        | 2026-08-14 | Shipped under the waiver above.       |
+| `es`    | machine draft — waived | —        | 2026-08-14 | Shipped under the waiver above.       |
+| `fr`    | machine draft — waived | —        | 2026-08-14 | Shipped under the waiver above.       |
+| `it`    | machine draft — waived | —        | 2026-08-14 | Shipped under the waiver above.       |
+| `pt-PT` | machine draft — waived | —        | 2026-08-14 | Shipped under the waiver above.       |
+| `nl`    | machine draft — waived | —        | 2026-08-14 | Shipped under the waiver above.       |
+| `de`    | machine draft — waived | —        | 2026-08-14 | Shipped under the waiver above.       |
 
-No locale has been signed off. The MVP is not production-ready until every row
-above carries a reviewer name and date.
+No locale carries a fluent reviewer's name. The release proceeds anyway by the
+decision above.
 
 ## Review procedure
+
+Kept for whenever a reviewer becomes available.
 
 1. Run `pnpm dev` and switch the interface language from the profile settings.
 2. Walk the main flow: sign-in, onboarding, Quick Log, Wine Memory with the full
