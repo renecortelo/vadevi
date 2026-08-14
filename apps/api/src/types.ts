@@ -16,6 +16,7 @@ export type WorkerBindings = {
   EXTERNAL_API_USER_AGENT?: string;
   FIREBASE_AUTH_EMULATOR_HOST?: string;
   FIREBASE_AUTH_DOMAIN?: string;
+  FIREBASE_AUTH_PROXY?: string;
   FIREBASE_PROJECT_ID?: string;
   FIREBASE_WEB_API_KEY?: string;
   RESEARCH_PROVIDER?: "none" | "open_data";
