@@ -377,6 +377,120 @@ describe("Vicenç deterministic read path", () => {
     });
   });
 
+  it("returns only real candidates with qualitative recommendation reasons and timestamped prices", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    const alpha = await createWine(ownerToken, spaceId, "Recommendation Alpha");
+    const beta = await createWine(ownerToken, spaceId, "Recommendation Beta");
+    for (const [index, score] of [90, 92, 94].entries()) {
+      const note = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes`, {
+        body: JSON.stringify({
+          descriptorCodes: ["fruit.citrus.lemon"],
+          mode: "quick",
+          score100: score,
+          state: "submitted",
+          tastedAt: `2026-08-${String(10 + index).padStart(2, "0")}T18:00:00.000Z`,
+          wineId: alpha.id,
+          wouldBuy: "yes",
+        }),
+        headers: {
+          Authorization: `Bearer ${ownerToken}`,
+          "Content-Type": "application/json",
+          "Idempotency-Key": randomOpaqueToken(),
+        },
+        method: "POST",
+      });
+      expect(note.status).toBe(201);
+    }
+    const price = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${alpha.id}/prices`,
+      {
+        body: JSON.stringify({
+          amountMinor: 1995,
+          channel: "online",
+          currency: "EUR",
+          merchantName: "Example Recommendation Merchant",
+          merchantUrl: "https://merchant.example.test/recommendation-alpha",
+          observedAt: "2026-08-14T09:45:00.000Z",
+          sourceType: "merchant",
+          vintageMatch: "yes",
+        }),
+        headers: {
+          Authorization: `Bearer ${ownerToken}`,
+          "Content-Type": "application/json",
+          "Idempotency-Key": randomOpaqueToken(),
+        },
+        method: "POST",
+      },
+    );
+    expect(price.status).toBe(201);
+
+    const response = await assistantTurn(
+      ownerToken,
+      spaceId,
+      "Recommend Recommendation Alpha or Recommendation Beta and show prices",
+    );
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(response.status).toBe(200);
+    expect(body.data.recommendations.map((item: { wineId: string }) => item.wineId)).toEqual(
+      expect.arrayContaining([alpha.id, beta.id]),
+    );
+    expect(body.data.recommendations[0]).toMatchObject({
+      averageScore: 92,
+      label: "strong",
+      rank: 1,
+      reasonCodes: expect.arrayContaining([
+        "personal_high_score",
+        "would_buy_history",
+        "recent_price",
+      ]),
+      sampleSize: 3,
+      wineId: alpha.id,
+    });
+    expect(body.data.priceObservations).toEqual([
+      expect.objectContaining({
+        amountMinor: 1995,
+        currency: "EUR",
+        observedAt: "2026-08-14T09:45:00.000Z",
+        sourceType: "merchant",
+        wineId: alpha.id,
+      }),
+    ]);
+    expect(JSON.stringify(body.data.recommendations)).not.toMatch(/%|probability|matchPercent/i);
+    expect(body.data.warnings).toContain("price_coverage_limited");
+
+    const genericResponse = await assistantTurn(ownerToken, spaceId, "What should I buy?");
+    const generic = AssistantTurnResponseSchema.parse(await genericResponse.json());
+    expect(genericResponse.status).toBe(200);
+    expect(generic.data.recommendations.length).toBeGreaterThan(0);
+    const storedWineIds = new Set(
+      (
+        await env.DB.prepare(
+          "SELECT id FROM wine_records WHERE space_id = ? AND deleted_at IS NULL",
+        )
+          .bind(spaceId)
+          .all<{ id: string }>()
+      ).results.map((wine) => wine.id),
+    );
+    expect(
+      generic.data.recommendations.every((item: { wineId: string }) =>
+        storedWineIds.has(item.wineId),
+      ),
+    ).toBe(true);
+    expect(JSON.stringify(generic.data.recommendations)).not.toMatch(/%|probability|matchPercent/i);
+    const tools = await env.DB.prepare(
+      `SELECT tool_name, outcome FROM assistant_tool_runs
+      WHERE turn_id = ? AND tool_name IN ('find_price_observations', 'build_recommendation')
+      ORDER BY tool_name`,
+    )
+      .bind(body.data.turnId)
+      .all<{ outcome: string; tool_name: string }>();
+    expect(tools.results).toEqual([
+      { outcome: "ok", tool_name: "build_recommendation" },
+      { outcome: "ok", tool_name: "find_price_observations" },
+    ]);
+  });
+
   it("uses optional provider language only after sentence-to-statement enforcement", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;

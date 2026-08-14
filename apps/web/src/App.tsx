@@ -19,6 +19,9 @@ import { OfflineSyncProvider } from "./offline/OfflineSyncProvider";
 const DeepTastingPage = lazy(() =>
   import("./pages/DeepTastingPage").then((module) => ({ default: module.DeepTastingPage })),
 );
+const CellarPage = lazy(() =>
+  import("./pages/CellarPage").then((module) => ({ default: module.CellarPage })),
+);
 const AssistantPage = lazy(() =>
   import("./pages/AssistantPage").then((module) => ({ default: module.AssistantPage })),
 );
@@ -39,6 +42,12 @@ const WineMemoryPage = lazy(() =>
 );
 const WineEvidencePage = lazy(() =>
   import("./pages/WineEvidencePage").then((module) => ({ default: module.WineEvidencePage })),
+);
+const ShopPage = lazy(() =>
+  import("./pages/ShopPage").then((module) => ({ default: module.ShopPage })),
+);
+const WishlistPage = lazy(() =>
+  import("./pages/WishlistPage").then((module) => ({ default: module.WishlistPage })),
 );
 
 function DeferredPage({ children }: { children: ReactNode }) {
@@ -111,6 +120,30 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="memory"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <CellarPage />
+              </DeferredPage>
+            }
+            path="cellar"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <WishlistPage />
+              </DeferredPage>
+            }
+            path="wishlist"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <ShopPage />
+              </DeferredPage>
+            }
+            path="shop"
           />
           <Route
             element={

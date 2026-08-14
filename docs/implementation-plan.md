@@ -178,3 +178,37 @@ Phase 4 exit criteria:
 - all core read tools return structured results with AI disabled, while research/manual fallbacks remain explicit and usable
 
 The fetch boundary must add DNS resolution and private-address rechecks before a future phase permits user-selected or non-fixed provider hosts. Provider-specific privacy review remains required before a private deployment enables optional language or research bindings.
+
+## Completed milestone: Phase 5 — Cellar, wishlist, shopping, and confirmed actions
+
+Implemented:
+
+- migration `0011` adds Space-scoped purchases, individual bottles, wishlist items, sourced price observations, and user-bound action drafts
+- idempotent purchase creation can create the requested bottle rows and a purchase-sourced price observation in one command
+- bottle lifecycle transitions enforce valid state changes and inventory is derived directly from bottle rows rather than a writable aggregate
+- wishlist items retain reason, priority, optional target price/currency, referrer, notes, and explicit active/purchased/dismissed state
+- manual price observations require amount, currency, source type, observed time, channel, and vintage-match quality; stored observations expose visible staleness and disabled external lookup as degraded coverage
+- active-membership authorization and non-enumerating outsider responses protect every cellar, wishlist, purchase, price, and action-draft repository boundary
+- Vicenç price results contain only authorized stored observations with their source and observed time
+- deterministic recommendation output ranks only real authorized candidates, returns qualitative evidence/reason codes, and never exposes a percentage or hidden numeric match score
+- assistant writes are limited to strictly validated 30-minute review drafts for wishlist and price actions; cancellation writes no domain record and repeated confirmation returns the one idempotently created resource
+- confirmed, canceled, and expired drafts discard their payload and user-written summary while retaining a hash and minimal replay/audit tombstone; scheduled cleanup enforces expiry independently of later access
+- localized Cellar, Wishlist, Shopping, price, recommendation, and action-review UI is complete across all eight catalogs
+- Dexie v4 caches user/Space-partitioned cellar, wishlist, and stored-price snapshots for read-only offline views; writes and current lookup remain explicitly online-only
+- ADR-0006 records the confirmed-action boundary and payload-retention decision
+
+Phase 5 exit evidence captured on 2026-08-14:
+
+- the complete `pnpm check` gate passes formatting, lint, strict typechecks, 78 tests, generated OpenAPI, eight-catalog/ontology validation, the PWA production build, and the Worker dry-run
+- Workers tests cover idempotent purchase/bottle creation, derived inventory, lifecycle conflicts, wishlist transition, timestamp/source validation, stale-price labeling, degraded lookup, outsider denial, cancellation without writes, confirmation replay, and expired-payload deletion
+- assistant tests prove recommendation candidates originate in authorized stored Wine Memory, use qualitative labels without probabilities, and expose price sources/observation times only for stored observations
+- web tests cover authenticated Phase 5 routes and render the new Cellar, Wishlist, and Shopping views; strict web and service-worker typechecks pass
+- the generated OpenAPI contract includes the Phase 5 endpoints and is current with the route schemas
+
+Phase 5 exit criteria:
+
+- every displayed price has a source type and observed time, with stale and incomplete coverage called out explicitly
+- recommendation output contains only real authorized candidates and qualitative reason codes, never fabricated offers or percentages
+- canceling or expiring an action draft creates no domain record, while repeated confirmation creates exactly one resource
+
+The Phase 0–5 release-candidate audit and explicit Phase 6 handoff are recorded in `docs/phase-6-handoff.md`. That audit distinguishes completed phase commitments from full-MVP acceptance work that intentionally belongs to Phase 6.

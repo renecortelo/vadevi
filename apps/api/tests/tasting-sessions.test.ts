@@ -81,11 +81,11 @@ async function sharedSpace() {
     { headers: { Authorization: `Bearer ${memberToken}` }, method: "POST" },
   );
   expect(acceptResponse.status).toBe(200);
-  await bootstrap(outsiderToken);
-  return { owner: await bootstrap(ownerToken), spaceId };
+  const outsider = await bootstrap(outsiderToken);
+  return { outsider, owner: await bootstrap(ownerToken), spaceId };
 }
 
-async function createWine(spaceId: string, displayName: string) {
+async function createWine(spaceId: string, displayName: string, token = ownerToken) {
   const response = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
     body: JSON.stringify({
       displayName,
@@ -95,7 +95,7 @@ async function createWine(spaceId: string, displayName: string) {
       vintageYear: 2024,
       wineType: "red",
     }),
-    headers: headers(ownerToken, randomOpaqueToken()),
+    headers: headers(token, randomOpaqueToken()),
     method: "POST",
   });
   expect(response.status).toBe(201);
@@ -182,7 +182,7 @@ async function createDeepNote(
 
 describe("Deep tasting and collaborative sessions", () => {
   it("keeps notes separate, round-trips structured fields, and compares submitted notes", async () => {
-    const { owner, spaceId } = await sharedSpace();
+    const { outsider, owner, spaceId } = await sharedSpace();
     const firstWine = await createWine(spaceId, "First Flight Wine");
     const secondWine = await createWine(spaceId, "Second Flight Wine");
     const sessionResponse = await SELF.fetch(
@@ -247,6 +247,47 @@ describe("Deep tasting and collaborative sessions", () => {
       ontologyVersion: "2026.1",
       palateTexture: "round",
     });
+
+    const outsiderSpaceId = outsider.data.user.activeSpaceId!;
+    const outsiderWine = await createWine(outsiderSpaceId, "Foreign Context Wine", outsiderToken);
+    const outsiderSessionResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${outsiderSpaceId}/sessions`,
+      {
+        body: JSON.stringify({
+          name: "Foreign context session",
+          startsAt: "2026-08-13T17:00:00.000Z",
+          status: "active",
+        }),
+        headers: headers(outsiderToken, randomOpaqueToken()),
+        method: "POST",
+      },
+    );
+    const outsiderSession = TastingSessionResponseSchema.parse(
+      await outsiderSessionResponse.json(),
+    ).data;
+    const outsiderFlightResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${outsiderSpaceId}/sessions/${outsiderSession.id}/wines`,
+      {
+        body: JSON.stringify({ entries: [{ wineId: outsiderWine.id }] }),
+        headers: headers(outsiderToken, randomOpaqueToken()),
+        method: "POST",
+      },
+    );
+    const outsiderFlight = TastingSessionDetailResponseSchema.parse(
+      await outsiderFlightResponse.json(),
+    ).data.wines[0]!;
+    const foreignContext = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${ownerNote.id}`,
+      {
+        body: JSON.stringify({
+          context: { previousSessionWineId: outsiderFlight.id },
+          version: ownerNote.version,
+        }),
+        headers: headers(ownerToken),
+        method: "PATCH",
+      },
+    );
+    expect(foreignContext.status).toBe(404);
 
     const ownerRead = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${ownerNote.id}`,

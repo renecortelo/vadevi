@@ -12,7 +12,9 @@ import { externalResearchEnabled } from "./adapters/research-factory";
 import { requestContext } from "./middleware/request-context";
 import { security } from "./middleware/security";
 import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
+import { registerActionDraftRoutes } from "./routes/action-drafts";
 import { registerAssistantRoutes } from "./routes/assistant";
+import { registerCellarRoutes } from "./routes/cellar";
 import { registerProvenanceRoutes } from "./routes/provenance";
 import { registerResearchRoutes } from "./routes/research";
 import { registerSpaceRoutes } from "./routes/spaces";
@@ -263,7 +265,9 @@ export function createApi() {
   });
 
   registerSpaceRoutes(app);
+  registerActionDraftRoutes(app);
   registerAssistantRoutes(app);
+  registerCellarRoutes(app);
   registerWineMemoryRoutes(app);
   registerTastingSessionRoutes(app);
   registerProvenanceRoutes(app);

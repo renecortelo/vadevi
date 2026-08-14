@@ -1,10 +1,13 @@
 import type {
+  ActionDraft,
   AssistantEvidenceChip,
+  AssistantRecommendation,
   AssistantRenderedClaim,
   AssistantSearchResult,
   AssistantTurnResponse,
   AssistantWineComparison,
   Fact,
+  PriceObservation,
   Source,
   SupportedLocale,
 } from "@vadevi/contracts";
@@ -13,7 +16,13 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { createAssistantTurn } from "../services/api";
+import { createIdempotencyKey } from "../security/idempotency";
+import {
+  cancelActionDraft,
+  confirmActionDraft,
+  createActionDraft,
+  createAssistantTurn,
+} from "../services/api";
 import { useSession } from "../session/SessionContext";
 
 const supportedLocales = new Set<SupportedLocale>([
@@ -32,7 +41,15 @@ function currentLocale(language: string): SupportedLocale {
   return supportedLocales.has(candidate as SupportedLocale) ? (candidate as SupportedLocale) : "en";
 }
 
-export function AssistantResult({ response }: { response: AssistantTurnResponse }) {
+export function AssistantResult({
+  drafting = false,
+  onDraftWishlist,
+  response,
+}: {
+  drafting?: boolean;
+  onDraftWishlist?: (wineId: string, wineName: string) => void;
+  response: AssistantTurnResponse;
+}) {
   const { i18n, t } = useTranslation();
   const sourceById = new Map<string, Source>(
     response.data.citations.map((source: Source): [string, Source] => [source.id, source]),
@@ -118,6 +135,16 @@ export function AssistantResult({ response }: { response: AssistantTurnResponse 
                 <Link className="text-link" to={`/wines/${result.wine.id}/evidence`}>
                   {t("assistant.openEvidence")}
                 </Link>
+                {onDraftWishlist === undefined ? null : (
+                  <button
+                    className="text-button"
+                    disabled={drafting}
+                    onClick={() => onDraftWishlist(result.wine.id, result.wine.displayName)}
+                    type="button"
+                  >
+                    {t("actions.draftWishlist")}
+                  </button>
+                )}
               </article>
             ))}
           </div>
@@ -233,6 +260,88 @@ export function AssistantResult({ response }: { response: AssistantTurnResponse 
         </div>
       )}
 
+      {response.data.recommendations.length === 0 ? null : (
+        <div>
+          <h2>{t("assistant.recommendationsTitle")}</h2>
+          <p>{t("assistant.recommendationsBody")}</p>
+          <div className="assistant-comparison-grid">
+            {response.data.recommendations.map((recommendation: AssistantRecommendation) => (
+              <article className="assistant-comparison-card" key={recommendation.wineId}>
+                <p className="eyebrow">#{recommendation.rank}</p>
+                <h3>{recommendation.wineName}</h3>
+                <strong>{t(`assistant.recommendationLabel.${recommendation.label}`)}</strong>
+                <ul>
+                  {recommendation.reasonCodes.map((reason: string) => (
+                    <li key={reason}>{t(`assistant.recommendationReason.${reason}`)}</li>
+                  ))}
+                </ul>
+                <p>
+                  {recommendation.sampleSize < 3
+                    ? t("assistant.recommendationSampleInsufficient", {
+                        count: recommendation.sampleSize,
+                      })
+                    : t("assistant.recommendationSample", {
+                        count: recommendation.sampleSize,
+                      })}
+                </p>
+                {recommendation.latestPrice === null ? null : (
+                  <p>
+                    {new Intl.NumberFormat(i18n.language, {
+                      currency: recommendation.latestPrice.currency,
+                      style: "currency",
+                    }).format(recommendation.latestPrice.amountMinor / 100)}{" "}
+                    · {t(`shop.sourceValue.${recommendation.latestPrice.sourceType}`)} ·{" "}
+                    <time dateTime={recommendation.latestPrice.observedAt}>
+                      {new Intl.DateTimeFormat(i18n.language, { dateStyle: "medium" }).format(
+                        new Date(recommendation.latestPrice.observedAt),
+                      )}
+                    </time>
+                  </p>
+                )}
+                {onDraftWishlist === undefined ? null : (
+                  <button
+                    className="primary-button"
+                    disabled={drafting}
+                    onClick={() => onDraftWishlist(recommendation.wineId, recommendation.wineName)}
+                    type="button"
+                  >
+                    {t("actions.draftWishlist")}
+                  </button>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {response.data.priceObservations.length === 0 ? null : (
+        <div>
+          <h2>{t("assistant.pricesTitle")}</h2>
+          <p>{t("assistant.pricesCoverage")}</p>
+          <div className="price-grid">
+            {response.data.priceObservations.map((price: PriceObservation) => (
+              <article className="price-card" key={price.id}>
+                <strong>
+                  {new Intl.NumberFormat(i18n.language, {
+                    currency: price.currency,
+                    style: "currency",
+                  }).format(price.amountMinor / 100)}
+                </strong>
+                <p>{price.merchantName ?? t("shop.merchantUnknown")}</p>
+                <p>
+                  {t(`shop.sourceValue.${price.sourceType}`)} ·{" "}
+                  <time dateTime={price.observedAt}>
+                    {new Intl.DateTimeFormat(i18n.language, { dateStyle: "medium" }).format(
+                      new Date(price.observedAt),
+                    )}
+                  </time>
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+
       {response.data.citations.length === 0 ? null : (
         <div>
           <h2>{t("assistant.sourcesTitle")}</h2>
@@ -275,6 +384,9 @@ export function AssistantResult({ response }: { response: AssistantTurnResponse 
           <li>{t("assistant.availability.getWineContext.available")}</li>
           <li>{t("assistant.availability.getTasteProfile.available")}</li>
           <li>{t("assistant.availability.compareWines.available")}</li>
+          <li>{t("assistant.availability.findPriceObservations.available")}</li>
+          <li>{t("assistant.availability.buildRecommendation.available")}</li>
+          <li>{t("assistant.availability.createActionDraft.available")}</li>
           <li>
             {t(
               `assistant.availability.researchWine.${response.data.toolAvailability.researchWine}`,
@@ -294,6 +406,9 @@ export function AssistantPage() {
   const [response, setResponse] = useState<AssistantTurnResponse | null>(null);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
+  const [draft, setDraft] = useState<ActionDraft | null>(null);
+  const [drafting, setDrafting] = useState(false);
+  const [draftError, setDraftError] = useState(false);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -314,6 +429,61 @@ export function AssistantPage() {
       setError(true);
     } finally {
       setSending(false);
+    }
+  }
+
+  async function draftWishlist(wineId: string, wineName: string) {
+    if (user === null || !navigator.onLine) return;
+    setDrafting(true);
+    setDraftError(false);
+    try {
+      const created = await createActionDraft(
+        user,
+        bootstrap.data.user.activeSpaceId,
+        {
+          action: "add_wishlist_item",
+          payload: {
+            priority: 2,
+            reason: t("actions.assistantWishlistReason", { wine: wineName }),
+            wineId,
+          },
+          summary: t("actions.assistantWishlistSummary", { wine: wineName }),
+        },
+        createIdempotencyKey(),
+      );
+      setDraft(created.data);
+    } catch {
+      setDraftError(true);
+    } finally {
+      setDrafting(false);
+    }
+  }
+
+  async function confirmDraft() {
+    if (user === null || draft === null) return;
+    setDrafting(true);
+    setDraftError(false);
+    try {
+      const confirmed = await confirmActionDraft(user, bootstrap.data.user.activeSpaceId, draft.id);
+      setDraft(confirmed.data);
+    } catch {
+      setDraftError(true);
+    } finally {
+      setDrafting(false);
+    }
+  }
+
+  async function cancelDraft() {
+    if (user === null || draft === null) return;
+    setDrafting(true);
+    setDraftError(false);
+    try {
+      const canceled = await cancelActionDraft(user, bootstrap.data.user.activeSpaceId, draft.id);
+      setDraft(canceled.data);
+    } catch {
+      setDraftError(true);
+    } finally {
+      setDrafting(false);
     }
   }
 
@@ -360,7 +530,45 @@ export function AssistantPage() {
           <p>{t("assistant.emptyBody")}</p>
         </div>
       ) : null}
-      {response === null ? null : <AssistantResult response={response} />}
+      {response === null ? null : (
+        <AssistantResult
+          drafting={drafting}
+          onDraftWishlist={(wineId, wineName) => void draftWishlist(wineId, wineName)}
+          response={response}
+        />
+      )}
+      {draft === null ? null : (
+        <section aria-live="polite" className="action-draft-card">
+          <p className="eyebrow">{t("actions.reviewEyebrow")}</p>
+          <h2>{t("actions.reviewTitle")}</h2>
+          <p>{draft.summary ?? t("actions.contentCleared")}</p>
+          <p>{t(`actions.state.${draft.state}`)}</p>
+          {draft.state === "pending" ? (
+            <div className="hero__actions">
+              <button
+                className="primary-button"
+                disabled={drafting}
+                onClick={() => void confirmDraft()}
+                type="button"
+              >
+                {t("actions.confirm")}
+              </button>
+              <button
+                className="action-link action-link--secondary"
+                disabled={drafting}
+                onClick={() => void cancelDraft()}
+                type="button"
+              >
+                {t("actions.cancel")}
+              </button>
+            </div>
+          ) : null}
+          {draft.state === "confirmed" ? (
+            <Link to="/wishlist">{t("actions.openWishlist")}</Link>
+          ) : null}
+          {draftError ? <p className="form-error">{t("actions.error")}</p> : null}
+        </section>
+      )}
     </section>
   );
 }
