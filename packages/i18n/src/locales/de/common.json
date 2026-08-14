@@ -121,7 +121,11 @@
     "notFoundTitle": "Diese Seite liegt nicht im Weinkeller.",
     "notFoundBody": "Kehren Sie zur Startseite zurück und wählen Sie einen anderen Weg."
   },
-  "commonChoice": { "yes": "Ja", "no": "Nein", "unsure": "Nicht sicher" },
+  "commonChoice": {
+    "yes": "Ja",
+    "no": "Nein",
+    "unsure": "Nicht sicher"
+  },
   "sync": {
     "idle": "Bereit zum Synchronisieren",
     "offline": "Auf diesem Gerät gespeichert",
@@ -238,7 +242,44 @@
     "sessions": "Sitzungen",
     "loggedOnly": "Wein ohne Verkostungsnotiz erfasst",
     "noSessionsTitle": "Noch keine Sitzung in diesem Gedächtnis.",
-    "noSessionsBody": "Erstellen Sie eine Reihe, damit die Notiz jedes Teilnehmers getrennt bleibt."
+    "noSessionsBody": "Erstellen Sie eine Reihe, damit die Notiz jedes Teilnehmers getrennt bleibt.",
+    "countryFilter": "Land",
+    "countryPlaceholder": "ES",
+    "regionFilter": "Region",
+    "grapeFilter": "Rebsorte",
+    "vintageFrom": "Jahrgang ab",
+    "vintageTo": "Jahrgang bis",
+    "minScore": "Mindestbewertung",
+    "maxScore": "Höchstbewertung",
+    "sentimentFilter": "Eindruck",
+    "anySentiment": "Jeder Eindruck",
+    "sentimentOption": {
+      "like": "Gefallen",
+      "neutral": "Neutral",
+      "dislike": "Nicht gefallen"
+    },
+    "mediaFilter": "Foto",
+    "anyMedia": "Mit oder ohne Foto",
+    "withMedia": "Mit Foto",
+    "withoutMedia": "Ohne Foto",
+    "sortLabel": "Sortieren nach",
+    "sort": {
+      "recent": "Kürzlich aktualisiert",
+      "tasted": "Zuletzt verkostet",
+      "score": "Bewertung",
+      "name": "Erzeuger und Name"
+    },
+    "clearFilters": "Filter löschen",
+    "duplicateTitle": "Mögliche Duplikate",
+    "duplicateBody": "Diese Einträge ähneln sich. Nichts wird zusammengeführt, bis Sie es bestätigen.",
+    "keepRecord": "Zu behaltender Eintrag",
+    "duplicateRecord": "Mögliches Duplikat",
+    "mergeAction": "Mit dem behaltenen Eintrag zusammenführen",
+    "mergeConfirmTitle": "Zusammenführung bestätigen",
+    "mergeConfirmBody": "{{source}} wird mit {{target}} zusammengeführt. Verkostungen, Flaschen, Käufe, Preise und Belege wandern mit, der alte Name bleibt auffindbar.",
+    "mergeConfirmAction": "Diese Einträge zusammenführen",
+    "mergeDone": "Die Einträge wurden zusammengeführt.",
+    "mergeError": "Die Zusammenführung lief nicht. Einer der Einträge hat sich womöglich geändert."
   },
   "evidence": {
     "openAction": "Belege",
@@ -407,14 +448,24 @@
         "disabled": "Externe Recherche deaktiviert",
         "unavailable": "Externe Recherche nicht verfügbar"
       },
-      "getWineContext": { "available": "Autorisierter Weinkontext verfügbar" },
-      "getTasteProfile": { "available": "Geschmacksprofil mit begrenzter Stichprobe verfügbar" },
-      "compareWines": { "available": "Deterministischer Weinvergleich verfügbar" },
+      "getWineContext": {
+        "available": "Autorisierter Weinkontext verfügbar"
+      },
+      "getTasteProfile": {
+        "available": "Geschmacksprofil mit begrenzter Stichprobe verfügbar"
+      },
+      "compareWines": {
+        "available": "Deterministischer Weinvergleich verfügbar"
+      },
       "findPriceObservations": {
         "available": "Suche nach datierten gespeicherten Preisen verfügbar"
       },
-      "buildRecommendation": { "available": "Qualitative Empfehlungssortierung verfügbar" },
-      "createActionDraft": { "available": "Bestätigungspflichtige Aktionsentwürfe verfügbar" },
+      "buildRecommendation": {
+        "available": "Qualitative Empfehlungssortierung verfügbar"
+      },
+      "createActionDraft": {
+        "available": "Bestätigungspflichtige Aktionsentwürfe verfügbar"
+      },
       "researchWine": {
         "available": "Begrenzte, zitierte Weinrecherche verfügbar",
         "disabled": "Begrenzte Weinrecherche deaktiviert",
@@ -494,8 +545,16 @@
     "priorityDisplay": "Priorität {{priority}}",
     "markPurchased": "Als gekauft markieren",
     "dismiss": "Verwerfen",
-    "priorityValue": { "1": "Niedrig", "2": "Mittel", "3": "Hoch" },
-    "state": { "active": "Aktiv", "purchased": "Gekauft", "dismissed": "Verworfen" }
+    "priorityValue": {
+      "1": "Niedrig",
+      "2": "Mittel",
+      "3": "Hoch"
+    },
+    "state": {
+      "active": "Aktiv",
+      "purchased": "Gekauft",
+      "dismissed": "Verworfen"
+    }
   },
   "shop": {
     "eyebrow": "Beobachtet, nicht versprochen",
@@ -525,7 +584,11 @@
     "recent": "Aktuell",
     "merchantUnknown": "Händler nicht erfasst",
     "observedAt": "Beobachtet",
-    "channelValue": { "physical": "Ladengeschäft", "online": "Online", "unknown": "Unbekannt" },
+    "channelValue": {
+      "physical": "Ladengeschäft",
+      "online": "Online",
+      "unknown": "Unbekannt"
+    },
     "sourceValue": {
       "purchase": "Kauf",
       "receipt": "Beleg",
@@ -571,7 +634,11 @@
     "wineCount_other": "{{count}} Weine",
     "submissionCount": "{{count}} eingereichte Notiz",
     "submissionCount_other": "{{count}} eingereichte Notizen",
-    "status": { "draft": "Entwurf", "active": "Aktiv", "completed": "Abgeschlossen" },
+    "status": {
+      "draft": "Entwurf",
+      "active": "Aktiv",
+      "completed": "Abgeschlossen"
+    },
     "newEyebrow": "Tisch decken",
     "newTitle": "Verkostungssitzung erstellen",
     "newBody": "Wählen Sie Zeit und erste Reihe. Das funktioniert offline mit auf diesem Gerät gespeicherten Weinen.",
@@ -638,7 +705,13 @@
       "conclusion": "Das persönliche Urteil bleibt Ihres. Eine gemeinsame Sitzung macht daraus nie die Notiz einer anderen Person."
     },
     "notSet": "Nicht angegeben",
-    "scale": { "1": "Sehr niedrig", "2": "Niedrig", "3": "Mittel", "4": "Hoch", "5": "Sehr hoch" },
+    "scale": {
+      "1": "Sehr niedrig",
+      "2": "Niedrig",
+      "3": "Mittel",
+      "4": "Hoch",
+      "5": "Sehr hoch"
+    },
     "descriptors": "Gedächtnisanker",
     "descriptorHelp": "Wählen Sie nur tatsächlich wahrgenommene Eindrücke. Bezeichnungen bleiben sprachübergreifend stabil.",
     "descriptorIntensity": "Intensität von {{descriptor}}",
@@ -740,5 +813,94 @@
     "conflictBody": "Beide Versionen sind erhalten. Wählen Sie das lokale Formular oder die aktuelle Servernotiz.",
     "keepLocal": "Meine lokale Version verwenden",
     "noConclusion": "Diese Version enthält keinen Fazittext."
+  },
+  "dataRights": {
+    "navAction": "Daten und Datenschutz",
+    "eyebrow": "Ihre Daten",
+    "title": "Daten und Datenschutz",
+    "body": "Exportieren Sie, was Ihnen gehört, prüfen Sie die Nutzung und löschen Sie zu Ihren Bedingungen.",
+    "exportTitle": "Export",
+    "exportBody": "JSON ist der vollständige, versionierte Export. CSV deckt jeweils eine gewählte Tabelle ab.",
+    "exportJsonAction": "JSON exportieren",
+    "csvAction": "CSV für {{dataset}} exportieren",
+    "exportReady": "Der versionierte JSON-Export (Schema {{version}}) wurde heruntergeladen.",
+    "csvReady": "Die CSV-Datei für {{dataset}} wurde heruntergeladen.",
+    "dataset": {
+      "wines": "Weine",
+      "tastings": "Verkostungen",
+      "bottles": "Flaschen",
+      "purchases": "Käufe",
+      "prices": "Preise"
+    },
+    "mediaTitle": "Fotos",
+    "mediaBody": "Fotos werden nie automatisch mitgeliefert. Exportieren Sie zuerst das JSON und wählen Sie dann die gewünschten Fotos für ein ZIP.",
+    "mediaEmpty": "Exportieren Sie das JSON, um die wählbaren Fotos zu sehen.",
+    "mediaAction": "{{count}} gewähltes Foto herunterladen",
+    "mediaAction_other": "{{count}} gewählte Fotos herunterladen",
+    "mediaReady": "{{count}} Foto wurde verpackt.",
+    "mediaReady_other": "{{count}} Fotos wurden verpackt.",
+    "mediaKind": {
+      "label": "Etikettenfoto",
+      "receipt": "Belegfoto",
+      "shelf": "Regalfoto",
+      "avatar": "Profilfoto",
+      "other": "Anderes Foto"
+    },
+    "usageTitle": "Nutzung und Budgets",
+    "usageBody": "Nur aggregierte Zählwerte. Hier wird kein Weinname, keine Notiz, keine Nachricht und kein Kontodetail gespeichert.",
+    "usageUnavailable": "Der Nutzungsbericht ist derzeit nicht verfügbar.",
+    "providerModes": "KI-Anbieter: {{ai}}. Recherche-Anbieter: {{research}}.",
+    "usageMetric": "Funktion",
+    "usageScope": "Bereich",
+    "usageUsed": "Heute genutzt",
+    "usageLimit": "Tageslimit",
+    "usageStatus": "Status",
+    "usageResets": "Die Zähler werden am {{date}} zurückgesetzt.",
+    "metric": {
+      "ai_language_calls": "Assistenzsprache",
+      "research_lookups": "Externe Recherche",
+      "barcode_lookups": "Barcode-Abfrage",
+      "price_lookups": "Preisabfrage"
+    },
+    "scope": {
+      "global": "Gesamte Installation",
+      "space": "Dieser Bereich",
+      "user": "Sie"
+    },
+    "budgetStatus": {
+      "ok": "Im Budget",
+      "warning": "Nähert sich dem Limit",
+      "critical": "Nahe am Limit",
+      "capped": "Am Limit — der Offline-Weg wird genutzt"
+    },
+    "leaveTitle": "Diesen Bereich verlassen",
+    "leaveBody": "Geteilte Einträge bleiben im Bereich. Sie verlieren den Zugriff bei der nächsten Anfrage.",
+    "leaveAction": "Diesen Bereich verlassen",
+    "leftSpace": "Sie haben den Bereich verlassen.",
+    "deleteSpaceTitle": "Diesen Bereich löschen",
+    "deleteSpaceBody": "Geben Sie den Bereichsnamen {{name}} ein, um zu bestätigen. Vor dem Löschen gilt eine widerrufbare Karenzzeit.",
+    "confirmationLabel": "Bereichsname",
+    "deleteSpaceAction": "Löschung planen",
+    "cancelDeletionAction": "Löschung abbrechen",
+    "deletionScheduled": "Die Löschung ist geplant. Sie können sie noch abbrechen.",
+    "deletionCanceled": "Die Löschung wurde abgebrochen.",
+    "deletionPending": "Die Daten werden nach {{purgeAfter}} gelöscht, sofern Sie nicht abbrechen.",
+    "deleteAccountTitle": "Ihr Konto löschen",
+    "deleteAccountBody": "Dies entfernt Ihren persönlichen Bereich und private Daten. Geteilte Einträge bleiben in ihrem Bereich. Eine kürzliche Anmeldung ist erforderlich.",
+    "deleteAccountLabel": "Geben Sie DELETE ein, um zu bestätigen",
+    "deleteAccountAction": "Kontolöschung planen",
+    "accountScheduled": "Die Kontolöschung ist in {{hours}} Stunden geplant.",
+    "retentionTitle": "Was Löschen leistet und was nicht",
+    "retentionBody": "Das Löschen entfernt aktive Anwendungsdaten und gespeicherte Fotos. Vom Anbieter verwaltete Sicherungen folgen ihrem eigenen Zeitplan und werden nicht sofort gelöscht.",
+    "actionError": "Das hat nicht geklappt. Prüfen Sie die Verbindung und versuchen Sie es erneut."
+  },
+  "pwa": {
+    "installTitle": "Va de Vi installieren",
+    "installBody": "Fügen Sie die App Ihrem Gerät hinzu, damit sie sofort startet und offline funktioniert.",
+    "installAction": "Installieren",
+    "updateTitle": "Eine neue Version ist bereit",
+    "updateBody": "Laden Sie neu, um die neueste Version zu erhalten. Ihre Warteschlange bleibt erhalten.",
+    "storageWarning": "Der Offline-Speicher ist fast voll. Synchronisieren oder löschen Sie Daten, um weiter Fotos zu sichern.",
+    "storageCritical": "Der Offline-Speicher ist voll. Neue Fotos bleiben nicht auf diesem Gerät, Ihre Textnotizen werden aber gespeichert."
   }
 }

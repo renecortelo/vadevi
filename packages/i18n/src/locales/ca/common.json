@@ -121,7 +121,11 @@
     "notFoundTitle": "Aquesta pàgina no és al celler.",
     "notFoundBody": "Torna a l'inici i tria un altre camí."
   },
-  "commonChoice": { "yes": "Sí", "no": "No", "unsure": "No ho sé" },
+  "commonChoice": {
+    "yes": "Sí",
+    "no": "No",
+    "unsure": "No ho sé"
+  },
   "sync": {
     "idle": "A punt per sincronitzar",
     "offline": "Desat en aquest dispositiu",
@@ -167,7 +171,11 @@
     "tastedAt": "Tastat el",
     "score": "Puntuació (0–100)",
     "sentiment": "Impressió general",
-    "sentimentValue": { "dislike": "No m'agrada", "neutral": "Neutre", "like": "M'agrada" },
+    "sentimentValue": {
+      "dislike": "No m'agrada",
+      "neutral": "Neutre",
+      "like": "M'agrada"
+    },
     "drinkAgain": "En tornaries a beure?",
     "buyAgain": "En tornaries a comprar?",
     "descriptors": "Fins a tres descriptors",
@@ -234,7 +242,44 @@
     "sessions": "Sessions",
     "loggedOnly": "Vi registrat sense nota de tast",
     "noSessionsTitle": "Encara no hi ha cap sessió en aquesta Memòria.",
-    "noSessionsBody": "Crea un vol per mantenir separada la nota de cada participant."
+    "noSessionsBody": "Crea un vol per mantenir separada la nota de cada participant.",
+    "countryFilter": "País",
+    "countryPlaceholder": "ES",
+    "regionFilter": "Regió",
+    "grapeFilter": "Varietat",
+    "vintageFrom": "Anyada des de",
+    "vintageTo": "Anyada fins a",
+    "minScore": "Puntuació mínima",
+    "maxScore": "Puntuació màxima",
+    "sentimentFilter": "Impressió",
+    "anySentiment": "Qualsevol impressió",
+    "sentimentOption": {
+      "like": "M'ha agradat",
+      "neutral": "Neutral",
+      "dislike": "No m'ha agradat"
+    },
+    "mediaFilter": "Fotografia",
+    "anyMedia": "Amb o sense fotografia",
+    "withMedia": "Amb fotografia",
+    "withoutMedia": "Sense fotografia",
+    "sortLabel": "Ordena per",
+    "sort": {
+      "recent": "Actualitzat recentment",
+      "tasted": "Darrer tast",
+      "score": "Puntuació",
+      "name": "Productor i nom"
+    },
+    "clearFilters": "Neteja els filtres",
+    "duplicateTitle": "Possibles duplicats",
+    "duplicateBody": "Aquests registres s'assemblen. No es fusiona res fins que ho confirmis.",
+    "keepRecord": "Registre que es conserva",
+    "duplicateRecord": "Possible duplicat",
+    "mergeAction": "Fusiona amb el registre conservat",
+    "mergeConfirmTitle": "Confirma aquesta fusió",
+    "mergeConfirmBody": "{{source}} es fusionarà amb {{target}}. Els tasts, ampolles, compres, preus i evidències es traslladen, i el nom antic continua sent cercable.",
+    "mergeConfirmAction": "Fusiona aquests registres",
+    "mergeDone": "Els registres s'han fusionat.",
+    "mergeError": "La fusió no s'ha fet. Potser un dels registres ha canviat."
   },
   "evidence": {
     "openAction": "Evidència",
@@ -403,12 +448,24 @@
         "disabled": "Recerca externa desactivada",
         "unavailable": "Recerca externa no disponible"
       },
-      "getWineContext": { "available": "Context autoritzat del vi disponible" },
-      "getTasteProfile": { "available": "Perfil de gust amb mostra limitada disponible" },
-      "compareWines": { "available": "Comparació determinista de vins disponible" },
-      "findPriceObservations": { "available": "Cerca de preus desats amb data disponible" },
-      "buildRecommendation": { "available": "Ordenació qualitativa de recomanacions disponible" },
-      "createActionDraft": { "available": "Esborranys d'acció amb confirmació disponibles" },
+      "getWineContext": {
+        "available": "Context autoritzat del vi disponible"
+      },
+      "getTasteProfile": {
+        "available": "Perfil de gust amb mostra limitada disponible"
+      },
+      "compareWines": {
+        "available": "Comparació determinista de vins disponible"
+      },
+      "findPriceObservations": {
+        "available": "Cerca de preus desats amb data disponible"
+      },
+      "buildRecommendation": {
+        "available": "Ordenació qualitativa de recomanacions disponible"
+      },
+      "createActionDraft": {
+        "available": "Esborranys d'acció amb confirmació disponibles"
+      },
       "researchWine": {
         "available": "Recerca limitada i citada disponible",
         "disabled": "Recerca limitada de vins desactivada",
@@ -488,8 +545,16 @@
     "priorityDisplay": "Prioritat {{priority}}",
     "markPurchased": "Marca com a comprat",
     "dismiss": "Descarta",
-    "priorityValue": { "1": "Baixa", "2": "Mitjana", "3": "Alta" },
-    "state": { "active": "Actiu", "purchased": "Comprat", "dismissed": "Descartat" }
+    "priorityValue": {
+      "1": "Baixa",
+      "2": "Mitjana",
+      "3": "Alta"
+    },
+    "state": {
+      "active": "Actiu",
+      "purchased": "Comprat",
+      "dismissed": "Descartat"
+    }
   },
   "shop": {
     "eyebrow": "Observat, no promès",
@@ -519,7 +584,11 @@
     "recent": "Recent",
     "merchantUnknown": "Comerç no registrat",
     "observedAt": "Observat",
-    "channelValue": { "physical": "Botiga física", "online": "En línia", "unknown": "Desconegut" },
+    "channelValue": {
+      "physical": "Botiga física",
+      "online": "En línia",
+      "unknown": "Desconegut"
+    },
     "sourceValue": {
       "purchase": "Compra",
       "receipt": "Rebut",
@@ -565,7 +634,11 @@
     "wineCount_other": "{{count}} vins",
     "submissionCount": "{{count}} nota enviada",
     "submissionCount_other": "{{count}} notes enviades",
-    "status": { "draft": "Esborrany", "active": "Activa", "completed": "Completada" },
+    "status": {
+      "draft": "Esborrany",
+      "active": "Activa",
+      "completed": "Completada"
+    },
     "newEyebrow": "Para taula",
     "newTitle": "Crea una sessió de tast",
     "newBody": "Tria l'hora i el vol inicial. Pots fer-ho fora de línia amb vins desats al dispositiu.",
@@ -632,7 +705,13 @@
       "conclusion": "El veredicte personal és teu. Una sessió compartida mai no el converteix en la nota d'una altra persona."
     },
     "notSet": "Sense indicar",
-    "scale": { "1": "Molt baix", "2": "Baix", "3": "Mitjà", "4": "Alt", "5": "Molt alt" },
+    "scale": {
+      "1": "Molt baix",
+      "2": "Baix",
+      "3": "Mitjà",
+      "4": "Alt",
+      "5": "Molt alt"
+    },
     "descriptors": "Pistes de memòria",
     "descriptorHelp": "Tria només les pistes que hagis notat. Les etiquetes són estables entre idiomes.",
     "descriptorIntensity": "Intensitat de {{descriptor}}",
@@ -734,5 +813,94 @@
     "conflictBody": "Les dues versions s'han conservat. Tria el formulari local o la nota actual del servidor.",
     "keepLocal": "Utilitza la meva versió local",
     "noConclusion": "Aquesta versió no té text de conclusió."
+  },
+  "dataRights": {
+    "navAction": "Dades i privadesa",
+    "eyebrow": "Les teves dades",
+    "title": "Dades i privadesa",
+    "body": "Exporta el que és teu, revisa l'ús i esborra quan vulguis.",
+    "exportTitle": "Exportació",
+    "exportBody": "El JSON és l'exportació completa i versionada. El CSV cobreix una taula seleccionada cada vegada.",
+    "exportJsonAction": "Exporta JSON",
+    "csvAction": "Exporta CSV de {{dataset}}",
+    "exportReady": "S'ha baixat l'exportació JSON versionada (esquema {{version}}).",
+    "csvReady": "S'ha baixat el CSV de {{dataset}}.",
+    "dataset": {
+      "wines": "vins",
+      "tastings": "tasts",
+      "bottles": "ampolles",
+      "purchases": "compres",
+      "prices": "preus"
+    },
+    "mediaTitle": "Fotografies",
+    "mediaBody": "Les fotografies no s'inclouen mai automàticament. Exporta primer el JSON i després tria les fotos que vols en un ZIP.",
+    "mediaEmpty": "Exporta el JSON per veure les fotos que pots triar.",
+    "mediaAction": "Baixa {{count}} foto seleccionada",
+    "mediaAction_other": "Baixa {{count}} fotos seleccionades",
+    "mediaReady": "S'ha empaquetat {{count}} foto.",
+    "mediaReady_other": "S'han empaquetat {{count}} fotos.",
+    "mediaKind": {
+      "label": "Foto d'etiqueta",
+      "receipt": "Foto de tiquet",
+      "shelf": "Foto de prestatgeria",
+      "avatar": "Foto de perfil",
+      "other": "Altra foto"
+    },
+    "usageTitle": "Ús i pressupostos",
+    "usageBody": "Només recomptes agregats. Aquí no es desa cap nom de vi, nota, missatge ni detall del compte.",
+    "usageUnavailable": "L'informe d'ús no està disponible ara mateix.",
+    "providerModes": "Proveïdor d'IA: {{ai}}. Proveïdor de recerca: {{research}}.",
+    "usageMetric": "Capacitat",
+    "usageScope": "Àmbit",
+    "usageUsed": "Usat avui",
+    "usageLimit": "Límit diari",
+    "usageStatus": "Estat",
+    "usageResets": "Els comptadors es reinicien el {{date}}.",
+    "metric": {
+      "ai_language_calls": "Llenguatge de l'assistent",
+      "research_lookups": "Recerca externa",
+      "barcode_lookups": "Consulta de codi de barres",
+      "price_lookups": "Consulta de preus"
+    },
+    "scope": {
+      "global": "Tot el desplegament",
+      "space": "Aquest Espai",
+      "user": "Tu"
+    },
+    "budgetStatus": {
+      "ok": "Dins del pressupost",
+      "warning": "S'acosta al límit",
+      "critical": "Molt a prop del límit",
+      "capped": "Al límit — s'usa la via fora de línia"
+    },
+    "leaveTitle": "Deixa aquest Espai",
+    "leaveBody": "Els registres compartits es queden a l'Espai. Perds l'accés a la següent petició.",
+    "leaveAction": "Deixa aquest Espai",
+    "leftSpace": "Has deixat l'Espai.",
+    "deleteSpaceTitle": "Esborra aquest Espai",
+    "deleteSpaceBody": "Escriu el nom de l'Espai, {{name}}, per confirmar-ho. Hi ha un període de gràcia recuperable abans d'esborrar res.",
+    "confirmationLabel": "Nom de l'Espai",
+    "deleteSpaceAction": "Programa l'esborrat",
+    "cancelDeletionAction": "Cancel·la l'esborrat",
+    "deletionScheduled": "L'esborrat està programat. Encara el pots cancel·lar.",
+    "deletionCanceled": "S'ha cancel·lat l'esborrat.",
+    "deletionPending": "Les dades s'esborren després de {{purgeAfter}} si no ho cancel·les.",
+    "deleteAccountTitle": "Esborra el teu compte",
+    "deleteAccountBody": "Això elimina el teu Espai personal i les dades privades. Els registres compartits es queden al seu Espai. Cal haver iniciat sessió fa poc.",
+    "deleteAccountLabel": "Escriu DELETE per confirmar",
+    "deleteAccountAction": "Programa l'esborrat del compte",
+    "accountScheduled": "L'esborrat del compte està programat d'aquí a {{hours}} hores.",
+    "retentionTitle": "Què fa i què no fa l'esborrat",
+    "retentionBody": "L'esborrat elimina les dades actives de l'aplicació i les fotos desades. Les còpies de seguretat gestionades pel proveïdor segueixen el seu propi calendari i no s'esborren a l'instant.",
+    "actionError": "No ha funcionat. Comprova la connexió i torna-ho a provar."
+  },
+  "pwa": {
+    "installTitle": "Instal·la Va de Vi",
+    "installBody": "Afegeix-la al dispositiu perquè s'obri a l'instant i funcioni fora de línia.",
+    "installAction": "Instal·la",
+    "updateTitle": "Hi ha una versió nova a punt",
+    "updateBody": "Torna a carregar per obtenir la darrera versió. La feina en cua es conserva.",
+    "storageWarning": "L'emmagatzematge fora de línia és gairebé ple. Sincronitza o neteja les dades per continuar desant fotos.",
+    "storageCritical": "L'emmagatzematge fora de línia és ple. Les fotos noves no es guarden en aquest dispositiu, però les notes de text sí."
   }
 }

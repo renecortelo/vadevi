@@ -4,6 +4,7 @@ export * from "./cellar";
 export * from "./errors";
 export * from "./health";
 export * from "./provenance";
+export * from "./release";
 export * from "./research";
 export * from "./session";
 export * from "./spaces";

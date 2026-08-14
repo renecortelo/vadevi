@@ -10,7 +10,8 @@ import { Link } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
-import { createPriceObservation, getPriceObservations, getWineMemory } from "../services/api";
+import { getWineMemory } from "../services/api";
+import { createPriceObservation, getPriceObservations } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
 
 function priceSnapshotId(userId: string, spaceId: string, wineId: string) {

@@ -94,6 +94,7 @@ const session: SessionContextValue = {
     },
   }),
   isUpdating: false,
+  refresh: async () => undefined,
   removeMember: async () => {
     throw new Error("Not used by this render test.");
   },

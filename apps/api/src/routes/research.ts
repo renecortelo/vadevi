@@ -10,6 +10,7 @@ import {
 
 import { createResearchPorts } from "../adapters/research-factory";
 import { createResearchJob, getResearchJob } from "../repositories/research";
+import { reserveProviderBudget } from "../services/usage";
 import type { ApiEnvironment } from "../types";
 
 const IdempotencyHeadersSchema = z.object({
@@ -92,9 +93,20 @@ function errorEnvelope(
 export function registerResearchRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(startResearchRoute, async (context) => {
     const params = context.req.valid("param");
+    const ports = createResearchPorts(context.env.DB!, context.env);
+    // At the daily research cap the job runs with disabled providers, which
+    // yields the same explicit degraded result as an unconfigured deployment.
+    const withinBudget =
+      ports.providerMode === "none" ||
+      (await reserveProviderBudget(context.env.DB!, {
+        firebaseUid: context.get("principal").firebaseUid,
+        metric: "research_lookups",
+        nowIso: new Date().toISOString(),
+        spaceId: params.spaceId,
+      }));
     const result = await createResearchJob(context.env.DB!, {
       idempotencyKey: context.req.valid("header")["Idempotency-Key"],
-      ports: createResearchPorts(context.env.DB!, context.env),
+      ports: withinBudget ? ports : { knowledge: null, product: null, providerMode: "none" },
       principal: context.get("principal"),
       request: context.req.valid("json"),
       requestId: context.get("requestId"),

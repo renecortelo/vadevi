@@ -6,3 +6,4 @@ pnpm-lock.yaml
 apps/web/public
 packages/contracts/openapi/openapi.json
 vadevi_implementation_spec.md
+.claude

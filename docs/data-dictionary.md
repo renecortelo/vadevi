@@ -90,3 +90,15 @@ Migration `0011` also extends the registered assistant tool names with price loo
 ## Phase 5 browser cache
 
 Dexie version 4 adds user/Space-partitioned cellar, wishlist, and price snapshots for read-only offline rendering. Purchase, bottle, wishlist, price, and assistant-confirmation writes remain visibly disabled offline; they are not added to the existing tasting mutation queue. Logout, account switching, removed-Space cleanup, and explicit offline-data clearing include the new snapshot tables.
+
+## Data rights, budgets, and merge tombstones
+
+`0012_release_hardening.sql` introduces the Phase 6 release-hardening model:
+
+- `deletion_jobs` stores one confirmed deletion request per target: its type (`space` or `account`), the requester, state, grace period, purge deadline, and the counts of rows and R2 objects removed. A partial unique index over `(target_type, target_id)` where `state = 'scheduled'` permits at most one open job per target, so repeating a confirmation returns the existing job instead of scheduling a second purge. The scheduled Worker handler executes due jobs and is safe to re-run.
+- `usage_counters` stores one aggregate integer per `(usage_date, scope, scope_id, metric)`. Scope is `global`, `space`, or `user`; metric is one of the four optional-provider capabilities. No wine name, note text, chat text, email, location, or provider payload is stored. Counters are the enforcement point for the daily caps that keep the deployment inside its zero-cost profile.
+- `wine_records.merged_into_wine_id` and `merged_at` record a confirmed merge. The losing record keeps a tombstone pointing at the surviving wine, so existing references and audit entries stay resolvable after the merge and the export can still describe what happened.
+- `wine_records.normalized_region`, `wine_records.normalized_country_code`, and `wine_grapes.normalized_name` back the broader MVP filter surface. Application writes populate them with the same NFKD normalizer the Wine Memory repository uses for names; the migration additionally folds the Latin accents and separators used by the eight supported locales so rows written before it still match an unaccented filter.
+- Supporting indexes cover the merge tombstone, the type-plus-recency sort, and the region, country, and grape filters.
+
+Deletion purges Space-scoped rows in dependency order and deletes the matching R2 objects. Account deletion purges the personal Space, detaches the account from shared Spaces, anonymizes the user row, and removes that user's action drafts and idempotency keys; shared records other members rely on are left intact.

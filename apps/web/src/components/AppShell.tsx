@@ -69,6 +69,9 @@ export function AppShell() {
             <NavLink className="text-link" to="/spaces">
               {t("spaces.manageAction")}
             </NavLink>
+            <NavLink className="text-link" to="/settings/data">
+              {t("dataRights.navAction")}
+            </NavLink>
           </div>
           <ConnectionStatus />
           <SyncStatus />

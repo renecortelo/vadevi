@@ -11,7 +11,8 @@ import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { acceptFact, createResearchJob, getWineFacts, getWineMemory } from "../services/api";
+import { getWineMemory } from "../services/api";
+import { acceptFact, createResearchJob, getWineFacts } from "../services/assistant";
 import { useSession } from "../session/SessionContext";
 
 function translationCode(value: string) {

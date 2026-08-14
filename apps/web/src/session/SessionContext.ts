@@ -19,6 +19,8 @@ export type SessionContextValue = {
   createSpace: (request: CreateSpaceRequest) => Promise<SpaceDetailResponse>;
   getSpace: (spaceId: string, signal?: AbortSignal) => Promise<SpaceDetailResponse>;
   isUpdating: boolean;
+  /** Re-read bootstrap after a membership change so access reflects the server. */
+  refresh: () => Promise<void>;
   removeMember: (
     spaceId: string,
     memberId: string,

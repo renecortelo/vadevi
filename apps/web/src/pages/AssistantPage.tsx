@@ -17,12 +17,8 @@ import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
-import {
-  cancelActionDraft,
-  confirmActionDraft,
-  createActionDraft,
-  createAssistantTurn,
-} from "../services/api";
+import { createAssistantTurn } from "../services/assistant";
+import { cancelActionDraft, confirmActionDraft, createActionDraft } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
 
 const supportedLocales = new Set<SupportedLocale>([

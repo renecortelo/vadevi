@@ -16,7 +16,7 @@ import { deepTastingChangedEvent } from "../offline/events";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { deepDraftId, deepNoteToRequest, queueDeepTasting } from "../offline/phase3";
 import { createUlid } from "../security/ulid";
-import { getDeepTastingNote } from "../services/api";
+import { getDeepTastingNote } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
 
 type TastingContext = z.infer<typeof TastingContextSchema>;

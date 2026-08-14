@@ -662,6 +662,877 @@
         ],
         "additionalProperties": false
       },
+      "ExportDocument": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "audit": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string"
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "targetId": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "targetType": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "createdAt",
+                    "id",
+                    "targetId",
+                    "targetType"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "bottles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "acquiredAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "purchaseId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "storageLocationText": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "wineId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    }
+                  },
+                  "required": [
+                    "acquiredAt",
+                    "id",
+                    "purchaseId",
+                    "state",
+                    "storageLocationText",
+                    "wineId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "facts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "citationSourceIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                      }
+                    },
+                    "evidenceClass": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "predicate": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "subjectId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "valueJson": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "citationSourceIds",
+                    "evidenceClass",
+                    "id",
+                    "predicate",
+                    "state",
+                    "subjectId",
+                    "valueJson"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "generatedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "media": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "byteSize": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "exclusiveMinimum": true
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "kind": {
+                      "type": "string"
+                    },
+                    "mimeType": {
+                      "type": "string"
+                    },
+                    "selectionRequired": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "byteSize",
+                    "id",
+                    "kind",
+                    "mimeType",
+                    "selectionRequired"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "prices": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "amountMinor": {
+                      "type": "integer"
+                    },
+                    "channel": {
+                      "type": "string"
+                    },
+                    "currency": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "merchantName": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "observedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "sourceType": {
+                      "type": "string"
+                    },
+                    "vintageMatch": {
+                      "type": "string"
+                    },
+                    "wineId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    }
+                  },
+                  "required": [
+                    "amountMinor",
+                    "channel",
+                    "currency",
+                    "id",
+                    "merchantName",
+                    "observedAt",
+                    "sourceType",
+                    "vintageMatch",
+                    "wineId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "purchases": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "merchantName": {
+                      "type": "string"
+                    },
+                    "purchasedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "purchaserUserId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "unitAmountMinor": {
+                      "type": "integer"
+                    },
+                    "wineId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "id",
+                    "merchantName",
+                    "purchasedAt",
+                    "purchaserUserId",
+                    "quantity",
+                    "unitAmountMinor",
+                    "wineId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "schemaVersion": {
+                "type": "string",
+                "enum": [
+                  "2026.1"
+                ]
+              },
+              "scope": {
+                "type": "string",
+                "enum": [
+                  "space",
+                  "own"
+                ]
+              },
+              "sources": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "licenseCode": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "retrievedAt": {
+                      "type": "string",
+                      "nullable": true,
+                      "format": "date-time"
+                    },
+                    "sourceType": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "url": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "licenseCode",
+                    "publisher",
+                    "retrievedAt",
+                    "sourceType",
+                    "title",
+                    "url"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "space": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "personal",
+                      "couple",
+                      "group"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "type"
+                ],
+                "additionalProperties": false
+              },
+              "tastings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "authorUserId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "comment": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "descriptorCodes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "foodText": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "mode": {
+                      "type": "string",
+                      "enum": [
+                        "quick",
+                        "deep"
+                      ]
+                    },
+                    "score100": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "sentiment": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "draft",
+                        "submitted"
+                      ]
+                    },
+                    "tastedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "wineId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "wouldBuy": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "wouldDrinkAgain": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  },
+                  "required": [
+                    "authorUserId",
+                    "comment",
+                    "descriptorCodes",
+                    "foodText",
+                    "id",
+                    "mode",
+                    "score100",
+                    "sentiment",
+                    "state",
+                    "tastedAt",
+                    "wineId",
+                    "wouldBuy",
+                    "wouldDrinkAgain"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "wines": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "appellation": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "countryCode": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "displayName": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "identityStatus": {
+                      "type": "string",
+                      "enum": [
+                        "draft",
+                        "confirmed",
+                        "needs_review"
+                      ]
+                    },
+                    "mergedIntoWineId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "nonVintage": {
+                      "type": "boolean"
+                    },
+                    "producerName": {
+                      "type": "string"
+                    },
+                    "region": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "vintageYear": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "wineType": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  },
+                  "required": [
+                    "appellation",
+                    "countryCode",
+                    "createdAt",
+                    "displayName",
+                    "id",
+                    "identityStatus",
+                    "mergedIntoWineId",
+                    "nonVintage",
+                    "producerName",
+                    "region",
+                    "updatedAt",
+                    "vintageYear",
+                    "wineType"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "wishlist": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    },
+                    "priority": {
+                      "type": "integer"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "targetAmountMinor": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "targetCurrency": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "wineId": {
+                      "type": "string",
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "priority",
+                    "reason",
+                    "state",
+                    "targetAmountMinor",
+                    "targetCurrency",
+                    "wineId"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "audit",
+              "bottles",
+              "facts",
+              "generatedAt",
+              "media",
+              "prices",
+              "purchases",
+              "schemaVersion",
+              "scope",
+              "sources",
+              "space",
+              "tastings",
+              "wines",
+              "wishlist"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "ExportMediaRequest": {
+        "type": "object",
+        "properties": {
+          "confirm": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "mediaIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "minItems": 1,
+            "maxItems": 200
+          }
+        },
+        "required": [
+          "confirm",
+          "mediaIds"
+        ],
+        "additionalProperties": false
+      },
+      "DeletionJobResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "canceledAt": {
+                "type": "string",
+                "nullable": true,
+                "format": "date-time"
+              },
+              "completedAt": {
+                "type": "string",
+                "nullable": true,
+                "format": "date-time"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "gracePeriodSeconds": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "mediaObjectsRemoved": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "purgeAfter": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "rowsRemoved": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "scheduled",
+                  "canceled",
+                  "completed"
+                ]
+              },
+              "targetId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "targetType": {
+                "type": "string",
+                "enum": [
+                  "space",
+                  "account"
+                ]
+              }
+            },
+            "required": [
+              "canceledAt",
+              "completedAt",
+              "createdAt",
+              "gracePeriodSeconds",
+              "id",
+              "mediaObjectsRemoved",
+              "purgeAfter",
+              "rowsRemoved",
+              "state",
+              "targetId",
+              "targetType"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "DeleteSpaceRequest": {
+        "type": "object",
+        "properties": {
+          "confirm": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "confirmationText": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          }
+        },
+        "required": [
+          "confirm",
+          "confirmationText"
+        ],
+        "additionalProperties": false
+      },
+      "LeaveSpaceRequest": {
+        "type": "object",
+        "properties": {
+          "confirm": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "pseudonymizeAuthorship": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "confirm"
+        ],
+        "additionalProperties": false
+      },
+      "DeleteAccountRequest": {
+        "type": "object",
+        "properties": {
+          "confirm": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "confirmationText": {
+            "type": "string",
+            "enum": [
+              "DELETE"
+            ]
+          }
+        },
+        "required": [
+          "confirm",
+          "confirmationText"
+        ],
+        "additionalProperties": false
+      },
+      "UsageReportResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "counters": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "limit": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "exclusiveMinimum": true
+                    },
+                    "metric": {
+                      "type": "string",
+                      "enum": [
+                        "ai_language_calls",
+                        "research_lookups",
+                        "barcode_lookups",
+                        "price_lookups"
+                      ]
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "ok",
+                        "warning",
+                        "critical",
+                        "capped"
+                      ]
+                    },
+                    "scope": {
+                      "type": "string",
+                      "enum": [
+                        "global",
+                        "space",
+                        "user"
+                      ]
+                    },
+                    "used": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "limit",
+                    "metric",
+                    "status",
+                    "scope",
+                    "used"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "providers": {
+                "type": "object",
+                "properties": {
+                  "aiProvider": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "cloudflare"
+                    ]
+                  },
+                  "researchProvider": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "open_data"
+                    ]
+                  }
+                },
+                "required": [
+                  "aiProvider",
+                  "researchProvider"
+                ],
+                "additionalProperties": false
+              },
+              "resetsAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "thresholds": {
+                "type": "object",
+                "properties": {
+                  "critical": {
+                    "type": "number"
+                  },
+                  "warning": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "critical",
+                  "warning"
+                ],
+                "additionalProperties": false
+              },
+              "usageDate": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 10
+              }
+            },
+            "required": [
+              "counters",
+              "providers",
+              "resetsAt",
+              "thresholds",
+              "usageDate"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
       "ActionDraftResponse": {
         "type": "object",
         "properties": {
@@ -5238,6 +6109,218 @@
         ],
         "additionalProperties": false
       },
+      "MergeWinesResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "merged": {
+                "type": "object",
+                "properties": {
+                  "aliasesAdded": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "bottles": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "facts": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "mediaLinks": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "priceObservations": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "purchases": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "tastingNotes": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "wishlistItems": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "aliasesAdded",
+                  "bottles",
+                  "facts",
+                  "mediaLinks",
+                  "priceObservations",
+                  "purchases",
+                  "tastingNotes",
+                  "wishlistItems"
+                ],
+                "additionalProperties": false
+              },
+              "replayed": {
+                "type": "boolean"
+              },
+              "sourceWineId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "wine": {
+                "type": "object",
+                "properties": {
+                  "appellation": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "countryCode": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "displayName": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "identityStatus": {
+                    "type": "string",
+                    "enum": [
+                      "draft",
+                      "confirmed",
+                      "needs_review"
+                    ]
+                  },
+                  "lastTastedAt": {
+                    "type": "string",
+                    "nullable": true,
+                    "format": "date-time"
+                  },
+                  "mediaId": {
+                    "type": "string",
+                    "nullable": true,
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "noteCount": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "nonVintage": {
+                    "type": "boolean"
+                  },
+                  "producerName": {
+                    "type": "string"
+                  },
+                  "region": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "score100": {
+                    "type": "integer",
+                    "nullable": true,
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "vintageYear": {
+                    "type": "integer",
+                    "nullable": true
+                  },
+                  "version": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "exclusiveMinimum": true
+                  },
+                  "wineType": {
+                    "type": "string",
+                    "nullable": true,
+                    "enum": [
+                      "red",
+                      "white",
+                      "rose",
+                      "sparkling",
+                      "fortified",
+                      "orange",
+                      "other",
+                      null
+                    ]
+                  }
+                },
+                "required": [
+                  "appellation",
+                  "countryCode",
+                  "createdAt",
+                  "displayName",
+                  "id",
+                  "identityStatus",
+                  "lastTastedAt",
+                  "mediaId",
+                  "noteCount",
+                  "nonVintage",
+                  "producerName",
+                  "region",
+                  "score100",
+                  "vintageYear",
+                  "version",
+                  "wineType"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "merged",
+              "replayed",
+              "sourceWineId",
+              "wine"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "MergeWinesRequest": {
+        "type": "object",
+        "properties": {
+          "confirm": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "sourceWineId": {
+            "type": "string",
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "sourceVersion": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          },
+          "targetVersion": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          }
+        },
+        "required": [
+          "confirm",
+          "sourceWineId",
+          "sourceVersion",
+          "targetVersion"
+        ],
+        "additionalProperties": false
+      },
       "SyncResponse": {
         "type": "object",
         "properties": {
@@ -8318,6 +9401,604 @@
         }
       }
     },
+    "/api/v1/spaces/{spaceId}/export": {
+      "get": {
+        "operationId": "exportSpace",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Export the authorized scope as versioned JSON or a selected CSV dataset",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "wines",
+                "tastings",
+                "bottles",
+                "purchases",
+                "prices"
+              ]
+            },
+            "required": false,
+            "name": "dataset",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "json",
+                "csv"
+              ],
+              "default": "json"
+            },
+            "required": false,
+            "name": "format",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The versioned export document, or one selected CSV dataset. Media bytes require an explicit selection.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportDocument"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid export selection.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/export/media": {
+      "post": {
+        "operationId": "exportSelectedMedia",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Package explicitly selected private media into a ZIP archive",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportMediaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A private ZIP archive containing only the selected authorized media.",
+            "content": {
+              "application/zip": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid selection.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/deletion": {
+      "post": {
+        "operationId": "scheduleSpaceDeletion",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Schedule confirmed Space deletion after a typed confirmation",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteSpaceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "The deletion job, including its recoverable grace period.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletionJobResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The typed confirmation did not match the Space name.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space unavailable or the actor is not an owner.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "getSpaceDeletion",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Read the latest Space deletion job",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The latest deletion job for this Space.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletionJobResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No deletion job is available to this actor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/deletion/cancel": {
+      "post": {
+        "operationId": "cancelSpaceDeletion",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Cancel a scheduled Space deletion during its grace period",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The canceled deletion job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletionJobResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No cancelable job is available to this actor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/leave": {
+      "post": {
+        "operationId": "leaveSpace",
+        "tags": [
+          "Members"
+        ],
+        "summary": "Leave a non-personal Space without deleting shared records",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveSpaceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The membership is no longer active; shared records are unchanged.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "left": {
+                          "type": "boolean",
+                          "enum": [
+                            true
+                          ]
+                        }
+                      },
+                      "required": [
+                        "left"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A personal Space is deleted rather than left.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/deletion": {
+      "post": {
+        "operationId": "scheduleAccountDeletion",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Schedule account deletion after a recent sign-in",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "The account deletion job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletionJobResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid confirmation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "A more recent sign-in is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/usage": {
+      "get": {
+        "operationId": "getUsageReport",
+        "tags": [
+          "Operations"
+        ],
+        "summary": "Read the private daily usage and budget report",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Aggregate counters, application budgets, and provider modes.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsageReportResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/spaces/{spaceId}/action-drafts": {
       "post": {
         "operationId": "createActionDraft",
@@ -9718,10 +11399,53 @@
           {
             "schema": {
               "type": "string",
+              "pattern": "^[A-Za-z]{2}$"
+            },
+            "required": false,
+            "name": "countryCode",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
               "pattern": "^[A-Za-z0-9_-]+$"
             },
             "required": false,
             "name": "cursor",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "maxLength": 120
+            },
+            "required": false,
+            "name": "grape",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "true",
+                "false"
+              ]
+            },
+            "required": false,
+            "name": "hasMedia",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "draft",
+                "confirmed",
+                "needs_review"
+              ]
+            },
+            "required": false,
+            "name": "identityStatus",
             "in": "query"
           },
           {
@@ -9737,11 +11461,108 @@
           },
           {
             "schema": {
+              "type": "integer",
+              "nullable": true,
+              "minimum": 0,
+              "maximum": 100
+            },
+            "required": false,
+            "name": "maxScore",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "nullable": true,
+              "minimum": 0,
+              "maximum": 100
+            },
+            "required": false,
+            "name": "minScore",
+            "in": "query"
+          },
+          {
+            "schema": {
               "type": "string",
               "maxLength": 120
             },
             "required": false,
             "name": "query",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "maxLength": 160
+            },
+            "required": false,
+            "name": "region",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "dislike",
+                "neutral",
+                "like"
+              ]
+            },
+            "required": false,
+            "name": "sentiment",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "recent",
+                "tasted",
+                "score",
+                "name"
+              ],
+              "default": "recent"
+            },
+            "required": false,
+            "name": "sort",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "required": false,
+            "name": "tastedFrom",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "required": false,
+            "name": "tastedTo",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 1000,
+              "maximum": 2100
+            },
+            "required": false,
+            "name": "vintageFrom",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 1000,
+              "maximum": 2100
+            },
+            "required": false,
+            "name": "vintageTo",
             "in": "query"
           },
           {
@@ -10271,6 +12092,102 @@
           },
           "404": {
             "description": "Space or media unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/wines/{wineId}/merge": {
+      "post": {
+        "operationId": "mergeWines",
+        "tags": [
+          "Wines"
+        ],
+        "summary": "Merge a confirmed duplicate into this wine after explicit confirmation",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "wineId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MergeWinesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The surviving wine, moved reference counts, and the merged record id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeWinesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid merge request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space or wine unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "A wine changed or was already merged before this confirmation.",
             "content": {
               "application/json": {
                 "schema": {
