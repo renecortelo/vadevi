@@ -1,6 +1,7 @@
 {
   "appName": "Va de Vi",
   "skipToContent": "Ga naar de inhoud",
+  "licenseSource": "Broncode (AGPL-3.0)",
   "previewSpace": "Persoonlijke ruimte · lokale preview",
   "phaseEyebrow": "Je persoonlijke wijngeheugen",
   "welcomeTitle": "Een plek voor elke fles die het onthouden waard is.",
@@ -903,5 +904,47 @@
     "updateBody": "Herlaad om de nieuwste versie op te halen. Uw werk in de wachtrij blijft bewaard.",
     "storageWarning": "De offlineopslag is bijna vol. Synchroniseer of wis gegevens om foto's te blijven bewaren.",
     "storageCritical": "De offlineopslag is vol. Nieuwe foto's blijven niet op dit apparaat, maar uw tekstnotities worden wel opgeslagen."
+  },
+  "identify": {
+    "eyebrow": "Invoer met foto",
+    "title": "Een fles identificeren",
+    "body": "Scan een streepjescode of typ wat u kunt lezen. Er wordt niets opgeslagen tot u bevestigt.",
+    "scanTitle": "Scannen",
+    "scanBody": "Alleen de cijfers van de code worden verstuurd. Er wordt geen foto gemaakt of bewaard om te scannen.",
+    "startScan": "Beginnen met scannen",
+    "stopScan": "Scannen stoppen",
+    "cameraLabel": "Camerabeeld",
+    "scanUnsupported": "Deze browser kan geen streepjescodes scannen. Typ wat u kunt lezen.",
+    "cameraUnavailable": "De camera is niet beschikbaar. Typ wat u kunt lezen.",
+    "scanTimeout": "Geen streepjescode gevonden. Probeer opnieuw of typ wat u kunt lezen.",
+    "hintLabel": "Of typ wat u kunt lezen",
+    "hintPlaceholder": "Producent, wijnnaam, jaargang",
+    "searchAction": "Zoeken",
+    "candidatesTitle": "Suggesties",
+    "noCandidates": "Geen overeenkomsten. Vul de gegevens hieronder in.",
+    "unknownProducer": "Onbekende producent",
+    "reviewTitle": "Controleer en corrigeer",
+    "reviewBody": "Elk veld is bewerkbaar. De wijn wordt pas bij bevestiging aangemaakt.",
+    "confirmAction": "Bevestigen en wijn aanmaken",
+    "expiryNote": "Deze suggestie verloopt over 30 minuten.",
+    "identifyError": "De zoekopdracht is niet uitgevoerd. Controleer uw verbinding en probeer opnieuw.",
+    "confirmError": "De wijn is niet aangemaakt. Controleer de velden en probeer opnieuw.",
+    "confidence": {
+      "high": "Hoge zekerheid",
+      "medium": "Gemiddelde zekerheid",
+      "low": "Lage zekerheid"
+    },
+    "evidence": {
+      "observed": "uit uw Ruimte",
+      "researched": "uit een openbare bron",
+      "inferred": "van het etiket gelezen",
+      "personal": "uit uw notities"
+    },
+    "origin": {
+      "space_barcode": "Streepjescode in uw Ruimte",
+      "space_text": "Naamovereenkomst in uw Ruimte",
+      "open_food_facts": "Openbare productgegevens",
+      "ocr": "Van het etiket gelezen"
+    }
   }
 }

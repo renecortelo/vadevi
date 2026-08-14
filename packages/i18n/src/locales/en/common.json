@@ -1,6 +1,7 @@
 {
   "appName": "Va de Vi",
   "skipToContent": "Skip to content",
+  "licenseSource": "Source code (AGPL-3.0)",
   "previewSpace": "Personal space · local preview",
   "phaseEyebrow": "Your private wine memory",
   "welcomeTitle": "A place for every bottle worth remembering.",
@@ -903,5 +904,47 @@
     "updateBody": "Reload to pick up the latest version. Your queued work is kept.",
     "storageWarning": "Offline storage is nearly full. Sync or clear offline data to keep saving photos.",
     "storageCritical": "Offline storage is full. New photos are not kept on this device, but your text notes still save."
+  },
+  "identify": {
+    "eyebrow": "Photo-assisted entry",
+    "title": "Identify a bottle",
+    "body": "Scan a barcode or type what you can read. Nothing is saved until you confirm it.",
+    "scanTitle": "Scan",
+    "scanBody": "Only the barcode digits are sent. No photo is taken or stored for a scan.",
+    "startScan": "Start scanning",
+    "stopScan": "Stop scanning",
+    "cameraLabel": "Camera preview",
+    "scanUnsupported": "This browser cannot scan barcodes. Type what you can read instead.",
+    "cameraUnavailable": "The camera is unavailable. Type what you can read instead.",
+    "scanTimeout": "No barcode was found. Try again or type what you can read.",
+    "hintLabel": "Or type what you can read",
+    "hintPlaceholder": "Producer, wine name, vintage",
+    "searchAction": "Search",
+    "candidatesTitle": "Suggestions",
+    "noCandidates": "Nothing matched. Fill in the details below.",
+    "unknownProducer": "Unknown producer",
+    "reviewTitle": "Check and correct",
+    "reviewBody": "Every field is editable. The wine is created only when you confirm.",
+    "confirmAction": "Confirm and create wine",
+    "expiryNote": "This suggestion expires in 30 minutes.",
+    "identifyError": "The search did not run. Check your connection and try again.",
+    "confirmError": "The wine was not created. Check the fields and try again.",
+    "confidence": {
+      "high": "High confidence",
+      "medium": "Medium confidence",
+      "low": "Low confidence"
+    },
+    "evidence": {
+      "observed": "from your Space",
+      "researched": "from a public source",
+      "inferred": "read from the label",
+      "personal": "from your notes"
+    },
+    "origin": {
+      "space_barcode": "Barcode match in your Space",
+      "space_text": "Name match in your Space",
+      "open_food_facts": "Public product data",
+      "ocr": "Read from the label"
+    }
   }
 }

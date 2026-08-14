@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Private, collaborative wine memory and tasting PWA.",
+  "license": "AGPL-3.0-only",
   "packageManager": "pnpm@11.16.0",
   "engines": {
     "node": ">=24.0.0",

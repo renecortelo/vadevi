@@ -1,6 +1,7 @@
 {
   "appName": "Va de Vi",
   "skipToContent": "Ir al contenido",
+  "licenseSource": "Código fuente (AGPL-3.0)",
   "previewSpace": "Espacio personal · vista local",
   "phaseEyebrow": "Tu memoria privada del vino",
   "welcomeTitle": "Un lugar para cada botella que merece ser recordada.",
@@ -903,5 +904,47 @@
     "updateBody": "Recarga para obtener la última versión. Tu trabajo en cola se conserva.",
     "storageWarning": "El almacenamiento sin conexión está casi lleno. Sincroniza o borra datos para seguir guardando fotos.",
     "storageCritical": "El almacenamiento sin conexión está lleno. Las fotos nuevas no se guardan en este dispositivo, pero tus notas de texto sí."
+  },
+  "identify": {
+    "eyebrow": "Entrada con fotografía",
+    "title": "Identifica una botella",
+    "body": "Escanea un código de barras o escribe lo que puedas leer. No se guarda nada hasta que lo confirmes.",
+    "scanTitle": "Escanear",
+    "scanBody": "Solo se envían los dígitos del código. No se toma ni se guarda ninguna fotografía para escanear.",
+    "startScan": "Empezar a escanear",
+    "stopScan": "Detener el escaneo",
+    "cameraLabel": "Vista de la cámara",
+    "scanUnsupported": "Este navegador no puede escanear códigos. Escribe lo que puedas leer.",
+    "cameraUnavailable": "La cámara no está disponible. Escribe lo que puedas leer.",
+    "scanTimeout": "No se encontró ningún código. Inténtalo otra vez o escribe lo que puedas leer.",
+    "hintLabel": "O escribe lo que puedas leer",
+    "hintPlaceholder": "Productor, nombre del vino, añada",
+    "searchAction": "Buscar",
+    "candidatesTitle": "Sugerencias",
+    "noCandidates": "No hubo coincidencias. Rellena los datos abajo.",
+    "unknownProducer": "Productor desconocido",
+    "reviewTitle": "Comprueba y corrige",
+    "reviewBody": "Todos los campos son editables. El vino se crea solo cuando lo confirmas.",
+    "confirmAction": "Confirmar y crear el vino",
+    "expiryNote": "Esta sugerencia caduca en 30 minutos.",
+    "identifyError": "La búsqueda no se realizó. Revisa la conexión e inténtalo de nuevo.",
+    "confirmError": "El vino no se creó. Revisa los campos e inténtalo de nuevo.",
+    "confidence": {
+      "high": "Confianza alta",
+      "medium": "Confianza media",
+      "low": "Confianza baja"
+    },
+    "evidence": {
+      "observed": "de tu Espacio",
+      "researched": "de una fuente pública",
+      "inferred": "leído de la etiqueta",
+      "personal": "de tus notas"
+    },
+    "origin": {
+      "space_barcode": "Código de barras en tu Espacio",
+      "space_text": "Coincidencia de nombre en tu Espacio",
+      "open_food_facts": "Datos públicos de producto",
+      "ocr": "Leído de la etiqueta"
+    }
   }
 }

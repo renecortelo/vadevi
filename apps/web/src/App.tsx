@@ -23,6 +23,9 @@ import { OfflineSyncProvider } from "./offline/OfflineSyncProvider";
 const DeepTastingPage = lazy(() =>
   import("./pages/DeepTastingPage").then((module) => ({ default: module.DeepTastingPage })),
 );
+const IdentifyPage = lazy(() =>
+  import("./pages/IdentifyPage").then((module) => ({ default: module.IdentifyPage })),
+);
 const DataRightsPage = lazy(() =>
   import("./pages/DataRightsPage").then((module) => ({ default: module.DataRightsPage })),
 );
@@ -87,6 +90,14 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="log/new"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <IdentifyPage />
+              </DeferredPage>
+            }
+            path="log/identify"
           />
           <Route
             element={

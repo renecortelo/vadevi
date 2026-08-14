@@ -1,6 +1,7 @@
 {
   "appName": "Va de Vi",
   "skipToContent": "Zum Inhalt springen",
+  "licenseSource": "Quellcode (AGPL-3.0)",
   "previewSpace": "Persönlicher Bereich · lokale Vorschau",
   "phaseEyebrow": "Ihr privates Weingedächtnis",
   "welcomeTitle": "Ein Ort für jede Flasche, die in Erinnerung bleiben soll.",
@@ -903,5 +904,47 @@
     "updateBody": "Laden Sie neu, um die neueste Version zu erhalten. Ihre Warteschlange bleibt erhalten.",
     "storageWarning": "Der Offline-Speicher ist fast voll. Synchronisieren oder löschen Sie Daten, um weiter Fotos zu sichern.",
     "storageCritical": "Der Offline-Speicher ist voll. Neue Fotos bleiben nicht auf diesem Gerät, Ihre Textnotizen werden aber gespeichert."
+  },
+  "identify": {
+    "eyebrow": "Eingabe mit Foto",
+    "title": "Eine Flasche identifizieren",
+    "body": "Scannen Sie einen Barcode oder tippen Sie, was Sie lesen können. Nichts wird gespeichert, bevor Sie bestätigen.",
+    "scanTitle": "Scannen",
+    "scanBody": "Es werden nur die Ziffern des Codes gesendet. Für einen Scan wird kein Foto aufgenommen oder gespeichert.",
+    "startScan": "Scannen starten",
+    "stopScan": "Scannen beenden",
+    "cameraLabel": "Kameravorschau",
+    "scanUnsupported": "Dieser Browser kann keine Barcodes scannen. Tippen Sie, was Sie lesen können.",
+    "cameraUnavailable": "Die Kamera ist nicht verfügbar. Tippen Sie, was Sie lesen können.",
+    "scanTimeout": "Kein Barcode gefunden. Versuchen Sie es erneut oder tippen Sie, was Sie lesen können.",
+    "hintLabel": "Oder tippen Sie, was Sie lesen",
+    "hintPlaceholder": "Erzeuger, Weinname, Jahrgang",
+    "searchAction": "Suchen",
+    "candidatesTitle": "Vorschläge",
+    "noCandidates": "Keine Treffer. Füllen Sie die Felder unten aus.",
+    "unknownProducer": "Unbekannter Erzeuger",
+    "reviewTitle": "Prüfen und korrigieren",
+    "reviewBody": "Jedes Feld ist bearbeitbar. Der Wein wird erst mit der Bestätigung angelegt.",
+    "confirmAction": "Bestätigen und Wein anlegen",
+    "expiryNote": "Dieser Vorschlag läuft in 30 Minuten ab.",
+    "identifyError": "Die Suche lief nicht. Prüfen Sie die Verbindung und versuchen Sie es erneut.",
+    "confirmError": "Der Wein wurde nicht angelegt. Prüfen Sie die Felder und versuchen Sie es erneut.",
+    "confidence": {
+      "high": "Hohe Sicherheit",
+      "medium": "Mittlere Sicherheit",
+      "low": "Geringe Sicherheit"
+    },
+    "evidence": {
+      "observed": "aus Ihrem Bereich",
+      "researched": "aus einer öffentlichen Quelle",
+      "inferred": "vom Etikett gelesen",
+      "personal": "aus Ihren Notizen"
+    },
+    "origin": {
+      "space_barcode": "Barcode-Treffer in Ihrem Bereich",
+      "space_text": "Namenstreffer in Ihrem Bereich",
+      "open_food_facts": "Öffentliche Produktdaten",
+      "ocr": "Vom Etikett gelesen"
+    }
   }
 }

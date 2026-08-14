@@ -1,6 +1,7 @@
 {
   "appName": "Va de Vi",
   "skipToContent": "Ves al contingut",
+  "licenseSource": "Codi font (AGPL-3.0)",
   "previewSpace": "Espai personal · previsualització local",
   "phaseEyebrow": "La teva memòria privada del vi",
   "welcomeTitle": "Un lloc per a cada ampolla que val la pena recordar.",
@@ -903,5 +904,47 @@
     "updateBody": "Torna a carregar per obtenir la darrera versió. La feina en cua es conserva.",
     "storageWarning": "L'emmagatzematge fora de línia és gairebé ple. Sincronitza o neteja les dades per continuar desant fotos.",
     "storageCritical": "L'emmagatzematge fora de línia és ple. Les fotos noves no es guarden en aquest dispositiu, però les notes de text sí."
+  },
+  "identify": {
+    "eyebrow": "Entrada amb fotografia",
+    "title": "Identifica una ampolla",
+    "body": "Escaneja un codi de barres o escriu el que puguis llegir. No es desa res fins que ho confirmis.",
+    "scanTitle": "Escaneja",
+    "scanBody": "Només s'envien els dígits del codi. No es fa ni es desa cap fotografia per escanejar.",
+    "startScan": "Comença a escanejar",
+    "stopScan": "Atura l'escaneig",
+    "cameraLabel": "Vista de la càmera",
+    "scanUnsupported": "Aquest navegador no pot escanejar codis. Escriu el que puguis llegir.",
+    "cameraUnavailable": "La càmera no està disponible. Escriu el que puguis llegir.",
+    "scanTimeout": "No s'ha trobat cap codi. Torna-ho a provar o escriu el que puguis llegir.",
+    "hintLabel": "O escriu el que puguis llegir",
+    "hintPlaceholder": "Productor, nom del vi, anyada",
+    "searchAction": "Cerca",
+    "candidatesTitle": "Suggeriments",
+    "noCandidates": "No hi ha coincidències. Omple les dades a sota.",
+    "unknownProducer": "Productor desconegut",
+    "reviewTitle": "Comprova i corregeix",
+    "reviewBody": "Tots els camps són editables. El vi es crea només quan ho confirmes.",
+    "confirmAction": "Confirma i crea el vi",
+    "expiryNote": "Aquest suggeriment caduca d'aquí a 30 minuts.",
+    "identifyError": "La cerca no s'ha fet. Comprova la connexió i torna-ho a provar.",
+    "confirmError": "El vi no s'ha creat. Revisa els camps i torna-ho a provar.",
+    "confidence": {
+      "high": "Confiança alta",
+      "medium": "Confiança mitjana",
+      "low": "Confiança baixa"
+    },
+    "evidence": {
+      "observed": "del teu Espai",
+      "researched": "d'una font pública",
+      "inferred": "llegit de l'etiqueta",
+      "personal": "de les teves notes"
+    },
+    "origin": {
+      "space_barcode": "Codi de barres del teu Espai",
+      "space_text": "Coincidència de nom al teu Espai",
+      "open_food_facts": "Dades públiques de producte",
+      "ocr": "Llegit de l'etiqueta"
+    }
   }
 }

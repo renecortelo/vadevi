@@ -15,6 +15,7 @@ import { OfflineSyncContext, type OfflineSyncContextValue } from "./offline/Offl
 import { CellarPage } from "./pages/CellarPage";
 import { DataRightsPage } from "./pages/DataRightsPage";
 import { HomePage } from "./pages/HomePage";
+import { IdentifyPage } from "./pages/IdentifyPage";
 import { QuickLogPage } from "./pages/QuickLogPage";
 import { SessionsPage } from "./pages/SessionsPage";
 import { WineMemoryPage } from "./pages/WineMemoryPage";
@@ -99,6 +100,12 @@ function render(node: ReactNode, route: string, path: string): string {
 const mainFlow = [
   { node: <HomePage />, path: "", route: "/", titleKey: "welcomeTitle" },
   { node: <QuickLogPage />, path: "log/new", route: "/log/new", titleKey: "quickLog.title" },
+  {
+    node: <IdentifyPage />,
+    path: "log/identify",
+    route: "/log/identify",
+    titleKey: "identify.title",
+  },
   { node: <WineMemoryPage />, path: "memory", route: "/memory", titleKey: "memory.title" },
   { node: <SessionsPage />, path: "sessions", route: "/sessions", titleKey: "sessions.title" },
   { node: <CellarPage />, path: "cellar", route: "/cellar", titleKey: "cellar.title" },
