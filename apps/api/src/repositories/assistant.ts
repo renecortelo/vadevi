@@ -1,4 +1,5 @@
 import type {
+  AssistantRecommendation,
   AssistantSearchResult,
   AssistantTasteProfile,
   AssistantTurnRequest,
@@ -6,6 +7,7 @@ import type {
   AssistantWineComparison,
   AssistantWineContext,
   Fact,
+  PriceObservation,
   Source,
   SupportedLocale,
   WineSummary,
@@ -15,7 +17,8 @@ import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
-import { listWineFacts } from "./provenance";
+import { listPriceObservations } from "./cellar";
+import { getSource, listWineFacts } from "./provenance";
 import { listWines, normalizeWineText } from "./wine-memory";
 
 type AllowedSpaceRow = {
@@ -59,6 +62,20 @@ function requestsTasteProfile(message: string): boolean {
 function requestsComparison(message: string): boolean {
   const normalized = normalizeWineText(message);
   return /\b(compare|comparison|versus|vs|comparar|comparacion|comparació|compara|comparer|confronta|confronto|vergelijken|vergelijk|vergleichen|vergleich)\b/i.test(
+    normalized,
+  );
+}
+
+function requestsPrice(message: string): boolean {
+  const normalized = normalizeWineText(message);
+  return /\b(price|prices|cost|offer|offers|precio|precios|preu|preus|prix|prezzo|prezzi|prijs|prijzen|preis|preise|custa|preco|precos)\b/i.test(
+    normalized,
+  );
+}
+
+function requestsRecommendation(message: string): boolean {
+  const normalized = normalizeWineText(message);
+  return /\b(recommend|recommendation|recommended|buy|recomienda|recomendacion|recomana|recomanacio|recommande|recommandation|consiglia|consiglio|aanbeveling|aanraden|empfehlung|empfehlen|recomenda|recomendacao)\b/i.test(
     normalized,
   );
 }
@@ -173,6 +190,7 @@ async function searchMemory(
   spaces: AllowedSpaceRow[],
   message: string,
   visibleWineId: string | null,
+  broadFallback: boolean,
 ): Promise<{ results: AssistantSearchResult[]; terms: string[] }> {
   const terms = searchTerms(message);
   const results = new Map<string, AssistantSearchResult>();
@@ -201,6 +219,18 @@ async function searchMemory(
       }
     }
   }
+  if (results.size === 0 && broadFallback) {
+    for (const space of spaces) {
+      const response = await listWines(database, { limit: 10, principal, spaceId: space.id });
+      for (const wine of response?.data ?? []) {
+        results.set(`${space.id}:${wine.id}`, {
+          spaceId: space.id,
+          spaceName: space.name,
+          wine,
+        });
+      }
+    }
+  }
   const ordered = [...results.values()].sort((left, right) => {
     if (visibleWineId === null) return 0;
     return Number(right.wine.id === visibleWineId) - Number(left.wine.id === visibleWineId);
@@ -209,7 +239,14 @@ async function searchMemory(
 }
 
 type AssistantToolName =
-  "compare_wines" | "get_taste_profile" | "get_wine_context" | "research_wine" | "search_memory";
+  | "build_recommendation"
+  | "compare_wines"
+  | "create_action_draft"
+  | "find_price_observations"
+  | "get_taste_profile"
+  | "get_wine_context"
+  | "research_wine"
+  | "search_memory";
 
 async function auditToolRun(
   database: D1Database,
@@ -381,10 +418,123 @@ async function compareSearchResults(
   return comparisons;
 }
 
+async function findStoredPrices(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  results: AssistantSearchResult[],
+): Promise<PriceObservation[]> {
+  const observations: PriceObservation[] = [];
+  for (const result of results.slice(0, 6)) {
+    const response = await listPriceObservations(database, {
+      freshnessDays: 90,
+      principal,
+      spaceId: result.spaceId,
+      wineId: result.wine.id,
+    });
+    observations.push(...(response?.data.observations.slice(0, 5) ?? []));
+  }
+  return observations
+    .sort(
+      (left, right) =>
+        right.observedAt.localeCompare(left.observedAt) || left.id.localeCompare(right.id),
+    )
+    .slice(0, 25);
+}
+
+async function buildRecommendations(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  results: AssistantSearchResult[],
+): Promise<AssistantRecommendation[]> {
+  const ranked: Array<AssistantRecommendation & { deterministicScore: number }> = [];
+  for (const result of results.slice(0, 12)) {
+    const aggregate = await database
+      .prepare(
+        `SELECT COUNT(*) AS sample_size, AVG(note.score_100) AS average_score,
+          SUM(CASE WHEN note.would_buy = 'yes' THEN 1 ELSE 0 END) AS would_buy_yes_count
+        FROM tasting_notes note
+        JOIN users actor ON actor.id = note.author_user_id
+        JOIN space_memberships membership ON membership.space_id = note.space_id
+          AND membership.user_id = actor.id
+        WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
+          AND membership.status = 'active' AND note.space_id = ? AND note.wine_id = ?
+          AND note.state = 'submitted' AND note.deleted_at IS NULL`,
+      )
+      .bind(principal.firebaseUid, result.spaceId, result.wine.id)
+      .first<{
+        average_score: number | null;
+        sample_size: number;
+        would_buy_yes_count: number | null;
+      }>();
+    const sampleSize = aggregate?.sample_size ?? 0;
+    const averageScore = sampleSize >= 3 ? (aggregate?.average_score ?? null) : null;
+    const wouldBuyYesCount = sampleSize >= 3 ? (aggregate?.would_buy_yes_count ?? 0) : 0;
+    const prices = await listPriceObservations(database, {
+      freshnessDays: 90,
+      principal,
+      spaceId: result.spaceId,
+      wineId: result.wine.id,
+    });
+    const latestPrice = prices?.data.observations[0] ?? null;
+    const reasonCodes: AssistantRecommendation["reasonCodes"] = [];
+    if (sampleSize < 3) reasonCodes.push("limited_history");
+    if (averageScore !== null && averageScore >= 85) reasonCodes.push("personal_high_score");
+    if (wouldBuyYesCount > 0) reasonCodes.push("would_buy_history");
+    if (latestPrice === null) reasonCodes.push("price_unknown");
+    else if (!latestPrice.isStale) reasonCodes.push("recent_price");
+    const deterministicScore =
+      (averageScore ?? 0) * 10 +
+      wouldBuyYesCount * 25 +
+      (latestPrice !== null && !latestPrice.isStale ? 5 : 0);
+    const label: AssistantRecommendation["label"] =
+      sampleSize < 3
+        ? "insufficient"
+        : averageScore !== null && averageScore >= 88 && wouldBuyYesCount > 0
+          ? "strong"
+          : averageScore !== null && averageScore >= 82
+            ? "good"
+            : "explore";
+    ranked.push({
+      averageScore,
+      deterministicScore,
+      label,
+      latestPrice,
+      rank: 1,
+      reasonCodes: reasonCodes.length === 0 ? ["limited_history"] : reasonCodes,
+      sampleSize,
+      spaceId: result.spaceId,
+      wineId: result.wine.id,
+      wineName: result.wine.displayName,
+      wouldBuyYesCount,
+    });
+  }
+  return ranked
+    .sort(
+      (left, right) =>
+        right.deterministicScore - left.deterministicScore ||
+        left.wineName.localeCompare(right.wineName) ||
+        left.wineId.localeCompare(right.wineId),
+    )
+    .map((recommendation, index) => ({
+      averageScore: recommendation.averageScore,
+      label: recommendation.label,
+      latestPrice: recommendation.latestPrice,
+      rank: index + 1,
+      reasonCodes: recommendation.reasonCodes,
+      sampleSize: recommendation.sampleSize,
+      spaceId: recommendation.spaceId,
+      wineId: recommendation.wineId,
+      wineName: recommendation.wineName,
+      wouldBuyYesCount: recommendation.wouldBuyYesCount,
+    }));
+}
+
 function languageStatements(
   results: AssistantSearchResult[],
   context: AssistantWineContext | null,
   profile: AssistantTasteProfile | null,
+  prices: PriceObservation[],
+  recommendations: AssistantRecommendation[],
 ): AssistantLanguageStatement[] {
   const statements: AssistantLanguageStatement[] = results.map((result) => ({
     evidenceClass: "observed",
@@ -424,6 +574,33 @@ function languageStatements(
       ].join("; "),
     });
   }
+  for (const price of prices.slice(0, 10)) {
+    statements.push({
+      evidenceClass: "observed",
+      id: `price-${price.id}`,
+      sampleSize: 1,
+      sourceIds: price.sourceId === null ? [] : [price.sourceId],
+      text: [
+        `price ${price.amountMinor} ${price.currency} minor units`,
+        `observed ${price.observedAt}`,
+        `source type ${price.sourceType}`,
+        price.merchantName,
+        `vintage match ${price.vintageMatch}`,
+      ]
+        .filter((value) => value !== null)
+        .join("; "),
+    });
+  }
+  for (const recommendation of recommendations.slice(0, 6)) {
+    statements.push({
+      evidenceClass: recommendation.sampleSize >= 3 ? "personal" : "inferred",
+      id: `recommendation-${recommendation.wineId}`,
+      sampleSize: recommendation.sampleSize,
+      sourceIds:
+        recommendation.latestPrice?.sourceId == null ? [] : [recommendation.latestPrice.sourceId],
+      text: `${recommendation.wineName}; qualitative label ${recommendation.label}; reasons ${recommendation.reasonCodes.join(", ")}`,
+    });
+  }
   return statements.slice(0, 30);
 }
 
@@ -455,6 +632,7 @@ export async function runDeterministicAssistantTurn(
     spaces,
     options.request.message,
     options.request.context.visibleWineId,
+    requestsRecommendation(options.request.message) || requestsPrice(options.request.message),
   );
   await auditToolRun(database, {
     actorId: spaces[0]!.actor_user_id,
@@ -551,6 +729,58 @@ export async function runDeterministicAssistantTurn(
     toolCalls += 1;
   }
 
+  let priceObservations: PriceObservation[] = [];
+  if (requestsPrice(options.request.message)) {
+    const priceStartedAt = Date.now();
+    priceObservations = await findStoredPrices(database, options.principal, results);
+    await auditToolRun(database, {
+      actorId: spaces[0]!.actor_user_id,
+      arguments: {
+        freshnessDays: 90,
+        includeExternal: false,
+        spaceIds: [...new Set(results.slice(0, 6).map((result) => result.spaceId))],
+        wineIds: results.slice(0, 6).map((result) => result.wine.id),
+      },
+      latencyMs: Math.max(0, Date.now() - priceStartedAt),
+      outcome: priceObservations.length === 0 ? "not_found" : "ok",
+      provider: options.aiProvider,
+      resultCount: priceObservations.length,
+      ruleVersion: "stored-price-observations-2026.1",
+      spaceId: options.spaceId,
+      toolName: "find_price_observations",
+      turnId,
+    });
+    toolCalls += 1;
+  }
+
+  let recommendations: AssistantRecommendation[] = [];
+  if (requestsRecommendation(options.request.message)) {
+    const recommendationStartedAt = Date.now();
+    recommendations = await buildRecommendations(database, options.principal, results);
+    await auditToolRun(database, {
+      actorId: spaces[0]!.actor_user_id,
+      arguments: {
+        candidateWineIds: results.slice(0, 12).map((result) => result.wine.id),
+        qualitativeOnly: true,
+        ruleVersion: "recommendation-2026.1",
+        target: "current_user",
+      },
+      latencyMs: Math.max(0, Date.now() - recommendationStartedAt),
+      outcome:
+        recommendations.length === 0 ||
+        recommendations.every((item) => item.label === "insufficient")
+          ? "insufficient_data"
+          : "ok",
+      provider: options.aiProvider,
+      resultCount: recommendations.length,
+      ruleVersion: "recommendation-2026.1",
+      spaceId: options.spaceId,
+      toolName: "build_recommendation",
+      turnId,
+    });
+    toolCalls += 1;
+  }
+
   const noMatches = results.length === 0;
   const evidence: AssistantTurnResponse["data"]["evidence"] = noMatches
     ? []
@@ -570,13 +800,39 @@ export async function runDeterministicAssistantTurn(
       sourceIds: [],
     });
   }
+  const citationMap = new Map(visibleContext.citations.map((source) => [source.id, source]));
+  const priceSourceIds = new Set(
+    [...priceObservations, ...recommendations.map((item) => item.latestPrice)]
+      .filter((price): price is PriceObservation => price !== null)
+      .map((price) => price.sourceId)
+      .filter((sourceId): sourceId is string => sourceId !== null),
+  );
+  for (const sourceId of priceSourceIds) {
+    for (const space of spaces) {
+      const response = await getSource(database, {
+        principal: options.principal,
+        sourceId,
+        spaceId: space.id,
+      });
+      if (response !== null) {
+        citationMap.set(sourceId, response.data);
+        break;
+      }
+    }
+  }
   const languageResult =
     options.language === null
       ? null
       : await options.language.render({
           locale: options.request.locale,
           message: options.request.message,
-          statements: languageStatements(results, visibleContext.context, tasteProfile),
+          statements: languageStatements(
+            results,
+            visibleContext.context,
+            tasteProfile,
+            priceObservations,
+            recommendations,
+          ),
         });
   if (languageResult !== null) {
     await database
@@ -587,10 +843,12 @@ export async function runDeterministicAssistantTurn(
   const renderedClaims = languageResult?.claims ?? [];
   return {
     data: {
-      citations: visibleContext.citations,
+      citations: [...citationMap.values()].slice(0, 8),
       comparisons,
       evidence,
       mode: languageResult === null ? "deterministic" : "provider",
+      priceObservations,
+      recommendations,
       renderedClaims,
       renderedText:
         languageResult === null
@@ -609,8 +867,11 @@ export async function runDeterministicAssistantTurn(
             : options.language === null
               ? "unavailable"
               : "available",
+        buildRecommendation: "available",
         compareWines: "available",
+        createActionDraft: "available",
         externalResearch: options.externalResearch ? "available" : "disabled",
+        findPriceObservations: "available",
         getTasteProfile: "available",
         getWineContext: "available",
         researchWine: options.externalResearch ? "available" : "disabled",
@@ -627,6 +888,11 @@ export async function runDeterministicAssistantTurn(
         ...(options.aiProvider === "none" ? (["ai_disabled"] as const) : []),
         "deterministic_search",
         ...(noMatches ? (["no_matches"] as const) : []),
+        ...(requestsPrice(options.request.message) ? (["price_coverage_limited"] as const) : []),
+        ...(recommendations.length > 0 &&
+        recommendations.every((recommendation) => recommendation.label === "insufficient")
+          ? (["recommendation_insufficient"] as const)
+          : []),
         ...(options.aiProvider === "cloudflare" && languageResult === null
           ? (["provider_unavailable"] as const)
           : []),

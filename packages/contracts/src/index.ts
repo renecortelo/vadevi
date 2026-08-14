@@ -1,4 +1,6 @@
+export * from "./actions";
 export * from "./assistant";
+export * from "./cellar";
 export * from "./errors";
 export * from "./health";
 export * from "./provenance";

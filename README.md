@@ -1,13 +1,15 @@
 # Va de Vi
 
-Va de Vi is a private, collaborative wine memory, tasting, and discovery PWA. The Phase 0 foundation is complete and Phase 1 identity, onboarding, and Spaces work is underway.
+Va de Vi is a private, collaborative wine memory, tasting, and discovery PWA. Phases 0–5 are complete: the repository includes identity and shared Spaces, Wine Memory and offline logging, deep tasting sessions, sourced research and deterministic Vicenç reads, plus a light cellar, wishlist, sourced prices, and confirmed assistant actions.
+
+Phase 6 is the next milestone and focuses on release hardening, data rights, accessibility, performance, and human review. See `docs/phase-6-handoff.md` for the verified baseline and remaining acceptance work.
 
 ## Prerequisites
 
 - Node.js 24 or newer
 - Corepack (included with Node.js)
 
-No production Firebase or Cloudflare credentials are needed for the Phase 0 local workflow.
+No production Firebase, Cloudflare, AI, research, or price-provider credentials are needed for the local workflow.
 
 ## Start locally
 
@@ -64,7 +66,7 @@ pnpm openapi:generate
 - `apps/api` — Hono Cloudflare Worker
 - `packages/contracts` — strict transport schemas and generated OpenAPI
 - `packages/domain` — provider-independent domain rules
-- `packages/i18n` — locale catalogs and, later, the tasting ontology
+- `packages/i18n` — eight locale catalogs and the versioned tasting ontology
 - `packages/ui` — accessible primitives and design tokens
 - `migrations` — immutable D1 migrations
 - `docs/adr` — architecture decisions

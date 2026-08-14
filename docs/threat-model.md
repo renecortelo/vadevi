@@ -33,6 +33,13 @@ Memberships, wine and tasting data, private media, location text, provider crede
 - Vicenç turn input is strict, defaults to no history, cannot provide server authorization context, and is intersected with live active memberships before the already Space-scoped Wine Memory repository executes a read.
 - The AI-disabled assistant path invokes neither a model nor an external fetch. Prompt-like user text is treated only as bounded search data, and its audit record contains a hash/result count rather than the message.
 - The optional language adapter receives bounded structured statements and no tool interface. Model claims must reference known statement IDs; researched claims inherit source IDs and are rendered with claim-level citations, otherwise the whole provider result is discarded for deterministic fallback.
+- Cellar, wishlist, price, and action-draft repositories repeat active-membership checks and use non-enumerating responses at each Space boundary.
+- Inventory is derived from authorized bottle rows and lifecycle transitions; clients cannot write a cached aggregate count.
+- Price schemas and database rows require currency, source type, observation time, and vintage-match quality. Disabled or incomplete optional lookup is reported explicitly instead of fabricating an offer.
+- Recommendation candidates are selected only from authorized stored wines and return qualitative reason codes; internal deterministic ordering scores are never exposed as probabilities.
+- Assistant write proposals are user-bound, 30-minute action drafts. Only an explicit confirmation endpoint can call the normal validated, authorized, idempotent command; cancel and expiry perform no domain mutation.
+- Action-draft payloads and user-written summaries are removed on confirmation, cancellation, or expiry, with scheduled cleanup independent of later access. Repeated confirmation replays the recorded resource reference rather than applying the write again.
+- Same-Space relationship checks cover nested references as well as top-level resources, including purchase-to-bottle wine identity and deep-tasting previous-flight context.
 
 ## Required follow-up
 

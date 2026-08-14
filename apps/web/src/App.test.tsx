@@ -13,11 +13,14 @@ import { i18n } from "./i18n";
 import { OfflineSyncContext, type OfflineSyncContextValue } from "./offline/OfflineSyncContext";
 import { DeepTastingPage } from "./pages/DeepTastingPage";
 import { AssistantPage, AssistantResult } from "./pages/AssistantPage";
+import { CellarPage } from "./pages/CellarPage";
 import { NewSessionPage } from "./pages/NewSessionPage";
 import { OnboardingPage } from "./pages/OnboardingPage";
 import { QuickLogPage } from "./pages/QuickLogPage";
 import { SessionsPage } from "./pages/SessionsPage";
+import { ShopPage } from "./pages/ShopPage";
 import { WineMemoryPage } from "./pages/WineMemoryPage";
+import { WishlistPage } from "./pages/WishlistPage";
 import { FactCard, WineEvidencePage } from "./pages/WineEvidencePage";
 import { SessionContext, type SessionContextValue } from "./session/SessionContext";
 
@@ -255,6 +258,19 @@ describe("authenticated app shell", () => {
     expect(markup).toContain("direct, structured search");
   });
 
+  it("renders the Phase 5 cellar, wishlist, and sourced-price routes", () => {
+    const cellar = renderShellRoute(<CellarPage />, "/cellar", "cellar");
+    const wishlist = renderShellRoute(<WishlistPage />, "/wishlist", "wishlist");
+    const shop = renderShellRoute(<ShopPage />, "/shop", "shop");
+
+    expect(cellar).toContain("Inventory is always derived");
+    expect(cellar).toContain("Record purchase and bottles");
+    expect(wishlist).toContain("Why do you want it?");
+    expect(wishlist).toContain("Target price in EUR");
+    expect(shop).toContain("Source type");
+    expect(shop).toContain("External coverage is optional");
+  });
+
   it("renders deterministic assistant results with an explicit sample basis", () => {
     const response: AssistantTurnResponse = {
       data: {
@@ -269,6 +285,8 @@ describe("authenticated app shell", () => {
           },
         ],
         mode: "deterministic",
+        priceObservations: [],
+        recommendations: [],
         renderedClaims: [],
         renderedText:
           "I found 1 matching wine in your authorized Wine Memory. AI is off, so this is a direct structured search—not a generated answer.",
@@ -300,8 +318,11 @@ describe("authenticated app shell", () => {
         threadId: null,
         toolAvailability: {
           ai: "disabled",
+          buildRecommendation: "available",
           compareWines: "available",
+          createActionDraft: "available",
           externalResearch: "disabled",
+          findPriceObservations: "available",
           getTasteProfile: "available",
           getWineContext: "available",
           researchWine: "disabled",

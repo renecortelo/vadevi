@@ -9,7 +9,7 @@ Runtime boundaries:
 - `packages/contracts` contains transport schemas only.
 - `packages/domain` contains provider-independent policy and value objects.
 
-Phases 0–4 are complete. Phase 4 adds a provider-neutral evidence boundary:
+Phases 0–5 are complete. Phase 4 adds a provider-neutral evidence boundary:
 
 - contracts expose typed facts/citations and ephemeral assistant turns without provider response shapes
 - domain ports define bounded product lookup, knowledge-research, and optional statement-rendering candidates
@@ -18,3 +18,12 @@ Phases 0–4 are complete. Phase 4 adds a provider-neutral evidence boundary:
 - the public/default `AI_PROVIDER=none` mode executes deterministic structured reads and normal application flows without making an external AI call
 
 Open Food Facts and Wikidata are exposed only through fixed official HTTPS hosts; neither user input nor model output can select a URL. Authorized research jobs persist normalized output as cited proposed facts and never human-verify it. An optional Workers AI adapter can render bounded structured statements, but claim-to-statement and sentence-to-source enforcement rejects invented or uncited output. A future non-fixed fetch boundary must add DNS resolution and private-address rechecks before it is allowed.
+
+Phase 5 adds the light-cellar and confirmed-action boundary:
+
+- purchases create immutable purchase evidence and optional individual bottle rows in one idempotent command; inventory is always derived from bottle lifecycle rows
+- wishlist items and price observations remain separate Space-scoped relationships instead of becoming overloaded wine status fields
+- every price contract requires source type, observation time, currency, and vintage-match quality; optional live lookup remains disabled by default and reports degraded coverage
+- deterministic recommendation candidates come only from authorized Wine Memory records and expose qualitative reason codes, not percentages or hidden confidence scores
+- Vicenç cannot call a write repository directly; it may create a user-bound review draft that expires after 30 minutes, and only explicit client confirmation invokes the normal idempotent command path
+- confirmed, canceled, and expired action drafts discard their payload and user-written summary while retaining a payload hash and small audit/confirmation tombstone; a scheduled cleanup enforces expiry independently of user access

@@ -36,6 +36,27 @@ export function HomePage() {
         </div>
       </section>
 
+      <section aria-labelledby="collection-tools-title" className="home-tools">
+        <div>
+          <p className="eyebrow">{t("homeTools.eyebrow")}</p>
+          <h2 id="collection-tools-title">{t("homeTools.title")}</h2>
+        </div>
+        <div className="home-tools__grid">
+          <Link to="/cellar">
+            <strong>{t("homeTools.cellarTitle")}</strong>
+            <span>{t("homeTools.cellarBody")}</span>
+          </Link>
+          <Link to="/wishlist">
+            <strong>{t("homeTools.wishlistTitle")}</strong>
+            <span>{t("homeTools.wishlistBody")}</span>
+          </Link>
+          <Link to="/shop">
+            <strong>{t("homeTools.shopTitle")}</strong>
+            <span>{t("homeTools.shopBody")}</span>
+          </Link>
+        </div>
+      </section>
+
       <Card aria-labelledby="foundation-title" className="foundation-card">
         <div aria-hidden="true" className="foundation-card__mark">
           V

@@ -74,3 +74,19 @@ Registered predicates validate their JSON value shape before persistence. Resear
 - Provider candidates are normalized before persistence. Sources are canonical-URL deduplicated, every new researched fact has a direct citation, and status begins as `proposed` with no verifier or verification timestamp.
 
 Assistant tool audits now allow `search_memory`, `get_wine_context`, `get_taste_profile`, `compare_wines`, and `research_wine`. Personal profile values remain null below three submitted notes; audit rows retain the sample count and outcome but never the underlying notes or question.
+
+## Cellar, wishlist, shopping, and confirmed actions
+
+`0011_cellar_shopping.sql` introduces the Phase 5 operational model:
+
+- `purchases` stores Space-scoped merchant, timestamp, quantity, unit price, currency, optional evidence, and purchaser attribution. One idempotent purchase may create individual `bottles` and one purchase-sourced price observation.
+- `bottles` stores one physical bottle per row with `owned`, `opened`, `finished`, `gifted`, or `removed` lifecycle state. Available inventory is derived from current bottle rows; no mutable count column exists.
+- `wishlist_items` stores reason, priority, optional target price/currency, referrer, notes, and lifecycle state. A partial unique index permits only one active item for a Space/wine.
+- `price_observations` stores amount, currency, merchant/location, channel, vintage-match quality, source type, source/capture links, observed time, and retrieved time. Source type and observation time are non-null database and contract fields.
+- `action_drafts` stores a user/Space-bound action, payload hash, temporary review summary, 30-minute expiry, terminal state timestamps, and the confirmed resource reference. The full payload and user-written summary exist only while the draft is pending and are cleared on confirmation, cancellation, or expiry. A minute-scheduled Worker cleanup removes expired content even when the user does not reopen the draft.
+
+Migration `0011` also extends the registered assistant tool names with price lookup, qualitative recommendation, and action-draft operations. Tool audits continue to store hashes, outcomes, counts, source IDs, and rule/provider metadata rather than raw prompts or draft payloads.
+
+## Phase 5 browser cache
+
+Dexie version 4 adds user/Space-partitioned cellar, wishlist, and price snapshots for read-only offline rendering. Purchase, bottle, wishlist, price, and assistant-confirmation writes remain visibly disabled offline; they are not added to the existing tasting mutation queue. Logout, account switching, removed-Space cleanup, and explicit offline-data clearing include the new snapshot tables.

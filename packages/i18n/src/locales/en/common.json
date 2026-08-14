@@ -372,6 +372,25 @@
     "personalTitle": "Personal interpretation",
     "personalInsufficient": "Based on {{count}} of your submitted notes—insufficient for a personal claim.",
     "personalAverage": "Your average is {{score}}, based on {{count}} submitted notes.",
+    "recommendationsTitle": "Qualitative recommendations",
+    "recommendationsBody": "Only real wines from the displayed candidate set are ranked. Labels are explanations, not percentages.",
+    "recommendationSample": "Based on {{count}} of your submitted notes.",
+    "recommendationSampleInsufficient": "Only {{count}} submitted notes for this wine; preference evidence is insufficient.",
+    "pricesTitle": "Stored price observations",
+    "pricesCoverage": "Coverage is incomplete. Every price shown includes its source type and observation date.",
+    "recommendationLabel": {
+      "strong": "Strong personal fit",
+      "good": "Good personal fit",
+      "explore": "Worth exploring",
+      "insufficient": "Insufficient history"
+    },
+    "recommendationReason": {
+      "limited_history": "Limited submitted history",
+      "personal_high_score": "High scores in your submitted notes",
+      "price_unknown": "No stored price for this candidate",
+      "recent_price": "A recent sourced price is available",
+      "would_buy_history": "You previously marked that you would buy it"
+    },
     "mode": {
       "deterministic": "Structured search",
       "provider": "Evidence-aware answer"
@@ -395,11 +414,162 @@
       "getWineContext": { "available": "Authorized wine context available" },
       "getTasteProfile": { "available": "Sample-bounded taste profile available" },
       "compareWines": { "available": "Deterministic wine comparison available" },
+      "findPriceObservations": { "available": "Timestamped stored-price search available" },
+      "buildRecommendation": { "available": "Qualitative recommendation ranking available" },
+      "createActionDraft": { "available": "Confirmed action drafts available" },
       "researchWine": {
         "available": "Bounded cited wine research available",
         "disabled": "Bounded wine research disabled",
         "unavailable": "Bounded wine research unavailable"
       }
+    }
+  },
+  "homeTools": {
+    "eyebrow": "Your collection",
+    "title": "Keep bottles, wishes, and prices useful.",
+    "cellarTitle": "Cellar",
+    "cellarBody": "Track physical bottles and their lifecycle.",
+    "wishlistTitle": "Wishlist",
+    "wishlistBody": "Remember what to buy and why.",
+    "shopTitle": "Prices",
+    "shopBody": "Keep timestamped observations with visible sources."
+  },
+  "cellar": {
+    "eyebrow": "Your physical bottles",
+    "title": "Cellar",
+    "body": "Purchases and bottle events stay separate from the wine record. Inventory is always derived from the bottles below.",
+    "relatedLabel": "Cellar links",
+    "openWishlist": "Open wishlist",
+    "openShop": "Review prices",
+    "cached": "Showing the private cellar copy saved on this device. Changes require a connection.",
+    "error": "The cellar could not be refreshed. Any cached copy remains available.",
+    "inventoryTitle": "Derived inventory",
+    "available": "Available now",
+    "purchaseTitle": "Record a purchase",
+    "purchaseBody": "A purchase can create physical bottles and always creates a timestamped purchase-price observation.",
+    "onlineRequired": "Connect to record purchases or lifecycle changes. Cached bottles remain visible offline.",
+    "wine": "Wine",
+    "chooseWine": "Choose a wine",
+    "merchant": "Merchant",
+    "unitPrice": "Unit price",
+    "currency": "Currency",
+    "quantity": "Quantity",
+    "saving": "Saving…",
+    "recordPurchase": "Record purchase and bottles",
+    "bottlesTitle": "Bottles",
+    "loading": "Opening the cellar…",
+    "empty": "No physical bottle has been recorded yet.",
+    "unknownWine": "Wine from this Space",
+    "openBottle": "Mark opened",
+    "giftBottle": "Mark gifted",
+    "finishBottle": "Mark finished",
+    "removeBottle": "Remove from inventory",
+    "state": {
+      "owned": "Owned",
+      "opened": "Opened",
+      "finished": "Finished",
+      "gifted": "Gifted",
+      "removed": "Removed"
+    }
+  },
+  "wishlist": {
+    "eyebrow": "For another day",
+    "title": "Wishlist",
+    "body": "Keep the reason, priority, and target price without turning the wine itself into a status flag.",
+    "relatedLabel": "Wishlist links",
+    "openCellar": "Open cellar",
+    "openShop": "Review prices",
+    "cached": "Showing the private wishlist copy saved on this device. Changes require a connection.",
+    "error": "The wishlist change could not be completed. Reload and try again.",
+    "addTitle": "Add a wine",
+    "wine": "Wine",
+    "chooseWine": "Choose a wine",
+    "reason": "Why do you want it?",
+    "priority": "Priority",
+    "targetPrice": "Target price in EUR (optional)",
+    "saving": "Saving…",
+    "addAction": "Add to wishlist",
+    "onlineRequired": "Connect to change the wishlist. The cached list remains visible offline.",
+    "itemsTitle": "Wishlist items",
+    "empty": "Your wishlist is empty.",
+    "unknownWine": "Wine from this Space",
+    "priorityDisplay": "Priority {{priority}}",
+    "markPurchased": "Mark purchased",
+    "dismiss": "Dismiss",
+    "priorityValue": {
+      "1": "Low",
+      "2": "Medium",
+      "3": "High"
+    },
+    "state": {
+      "active": "Active",
+      "purchased": "Purchased",
+      "dismissed": "Dismissed"
+    }
+  },
+  "shop": {
+    "eyebrow": "Observed, not promised",
+    "title": "Prices",
+    "body": "Record only prices you actually observed. Source, date, channel, and vintage match stay visible.",
+    "relatedLabel": "Price links",
+    "openCellar": "Open cellar",
+    "openWishlist": "Open wishlist",
+    "cached": "Showing saved price observations from this device.",
+    "error": "Prices could not be refreshed. A cached copy may still be shown.",
+    "wine": "Wine",
+    "chooseWine": "Choose a wine",
+    "recordTitle": "Record a price observation",
+    "coverageWarning": "External coverage is optional and incomplete. Manual shelf, receipt, merchant, and purchase observations remain useful.",
+    "amount": "Observed price",
+    "currency": "Currency",
+    "merchant": "Merchant (optional)",
+    "channel": "Channel",
+    "sourceType": "Source type",
+    "vintageMatch": "Vintage match",
+    "saving": "Saving…",
+    "recordAction": "Record observation",
+    "onlineRequired": "Connect to record a price. Saved observations remain visible offline.",
+    "observationsTitle": "Price observations",
+    "empty": "Choose a wine or record its first price observation.",
+    "stale": "Stale",
+    "recent": "Recent",
+    "merchantUnknown": "Merchant not recorded",
+    "observedAt": "Observed",
+    "channelValue": {
+      "physical": "Physical shop",
+      "online": "Online",
+      "unknown": "Unknown"
+    },
+    "sourceValue": {
+      "purchase": "Purchase",
+      "receipt": "Receipt",
+      "shelf": "Shelf",
+      "open_prices": "Open Prices",
+      "merchant": "Merchant",
+      "search": "Search result"
+    },
+    "matchValue": {
+      "yes": "Exact vintage",
+      "no": "Different vintage",
+      "unknown": "Vintage unknown"
+    }
+  },
+  "actions": {
+    "draftWishlist": "Prepare wishlist draft",
+    "assistantWishlistReason": "Suggested for review from Vicenç: {{wine}}",
+    "assistantWishlistSummary": "Add {{wine}} to this Space's wishlist",
+    "reviewEyebrow": "Nothing written yet",
+    "reviewTitle": "Review the action draft",
+    "confirm": "Confirm and write",
+    "cancel": "Cancel draft",
+    "openWishlist": "Open wishlist",
+    "contentCleared": "The proposal content has been cleared.",
+    "error": "The draft could not be updated. No unconfirmed action was written.",
+    "state": {
+      "pending": "Waiting for your confirmation",
+      "confirmed": "Confirmed exactly once",
+      "canceled": "Canceled without writing",
+      "expired": "Expired without writing"
     }
   },
   "sessions": {

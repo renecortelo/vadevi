@@ -132,6 +132,21 @@ async function activeUserId(
   return row?.id ?? null;
 }
 
+async function sessionWineBelongsToSpace(
+  database: D1Database,
+  sessionWineId: string,
+  spaceId: string,
+): Promise<boolean> {
+  const row = await database
+    .prepare(
+      `SELECT id FROM session_wines
+      WHERE id = ? AND space_id = ? AND deleted_at IS NULL`,
+    )
+    .bind(sessionWineId, spaceId)
+    .first<{ id: string }>();
+  return row !== null;
+}
+
 function sessionResource(row: SessionRow): TastingSessionResponse["data"] {
   return {
     createdAt: row.created_at,
@@ -754,6 +769,16 @@ export async function createDeepTastingNote(
     spaceId: string;
   },
 ): Promise<CommandResult<{ data: DeepTastingNote }>> {
+  if (
+    options.request.context?.previousSessionWineId !== undefined &&
+    !(await sessionWineBelongsToSpace(
+      database,
+      options.request.context.previousSessionWineId,
+      options.spaceId,
+    ))
+  ) {
+    return { kind: "unavailable" };
+  }
   const now = new Date().toISOString();
   const noteId = options.request.clientId ?? ulid();
   const routeScope = `POST:/api/v1/spaces/${options.spaceId}/tasting-notes`;
@@ -945,6 +970,16 @@ export async function updateDeepTastingNote(
   if (current === null) return { kind: "unavailable" };
   if (current.version !== options.request.version) {
     return { kind: "conflict", current: { data: current } };
+  }
+  if (
+    options.request.context?.previousSessionWineId !== undefined &&
+    !(await sessionWineBelongsToSpace(
+      database,
+      options.request.context.previousSessionWineId,
+      options.spaceId,
+    ))
+  ) {
+    return { kind: "unavailable" };
   }
   const now = new Date().toISOString();
   const values = deepValues(options.request);
