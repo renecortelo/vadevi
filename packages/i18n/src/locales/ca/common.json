@@ -27,6 +27,7 @@
     "redirecting": "Obrint Google…",
     "localEmulator": "Mode de desenvolupament local · no s'utilitza cap compte real de Google.",
     "signInError": "No s'ha pogut iniciar la sessió. Torna-ho a provar.",
+    "signInErrorCode": "Codi d'error: {{code}}",
     "onboardingEyebrow": "Un últim detall",
     "onboardingTitle": "Fes teu aquest Espai.",
     "onboardingBody": "Tria com vols aparèixer i la llengua que prefereixes. Ho podràs canviar més endavant.",

@@ -27,6 +27,7 @@
     "redirecting": "Google openen…",
     "localEmulator": "Lokale ontwikkelmodus · er wordt geen echt Google-account gebruikt.",
     "signInError": "Aanmelden kon niet worden gestart. Probeer het opnieuw.",
+    "signInErrorCode": "Foutcode: {{code}}",
     "onboardingEyebrow": "Nog één detail",
     "onboardingTitle": "Maak deze Ruimte van jou.",
     "onboardingBody": "Kies je weergavenaam en voorkeurstaal. Je kunt beide later wijzigen.",

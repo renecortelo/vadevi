@@ -27,6 +27,7 @@
     "redirecting": "Google wird geöffnet…",
     "localEmulator": "Lokaler Entwicklungsmodus · es wird kein echtes Google-Konto verwendet.",
     "signInError": "Die Anmeldung konnte nicht gestartet werden. Versuchen Sie es erneut.",
+    "signInErrorCode": "Fehlercode: {{code}}",
     "onboardingEyebrow": "Ein letztes Detail",
     "onboardingTitle": "Machen Sie diesen Bereich zu Ihrem.",
     "onboardingBody": "Wählen Sie Ihren Anzeigenamen und Ihre bevorzugte Sprache. Beides lässt sich später ändern.",

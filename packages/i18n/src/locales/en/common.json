@@ -27,6 +27,7 @@
     "redirecting": "Opening Google…",
     "localEmulator": "Local development mode · no real Google account is used.",
     "signInError": "Sign-in could not start. Please try again.",
+    "signInErrorCode": "Error code: {{code}}",
     "onboardingEyebrow": "One last detail",
     "onboardingTitle": "Make this Space yours.",
     "onboardingBody": "Choose how you appear and the language you prefer. You can change both later.",

@@ -27,6 +27,7 @@
     "redirecting": "Ouverture de Google…",
     "localEmulator": "Mode de développement local · aucun compte Google réel n'est utilisé.",
     "signInError": "La connexion n'a pas pu démarrer. Réessayez.",
+    "signInErrorCode": "Code d'erreur : {{code}}",
     "onboardingEyebrow": "Un dernier détail",
     "onboardingTitle": "Faites de cet Espace le vôtre.",
     "onboardingBody": "Choisissez votre nom d'affichage et votre langue. Vous pourrez les modifier plus tard.",

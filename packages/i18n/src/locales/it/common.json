@@ -27,6 +27,7 @@
     "redirecting": "Apertura di Google…",
     "localEmulator": "Modalità di sviluppo locale · non viene usato alcun account Google reale.",
     "signInError": "Non è stato possibile avviare l'accesso. Riprova.",
+    "signInErrorCode": "Codice di errore: {{code}}",
     "onboardingEyebrow": "Un ultimo dettaglio",
     "onboardingTitle": "Rendi tuo questo Spazio.",
     "onboardingBody": "Scegli come apparire e la lingua che preferisci. Potrai cambiarli in seguito.",
