@@ -222,6 +222,7 @@
     "noteCount": "{{count}} nota",
     "noteCount_other": "{{count}} notes",
     "notes": "Notes",
+    "actions": "Accions",
     "conflictTitle": "Una versió local requereix atenció",
     "conflictBody": "La feina local no s'ha descartat. Compara les dues versions i tria què vols conservar.",
     "localVersion": "Desat en aquest dispositiu",
@@ -234,6 +235,164 @@
     "loggedOnly": "Vi registrat sense nota de tast",
     "noSessionsTitle": "Encara no hi ha cap sessió en aquesta Memòria.",
     "noSessionsBody": "Crea un vol per mantenir separada la nota de cada participant."
+  },
+  "evidence": {
+    "openAction": "Evidència",
+    "backAction": "Torna a la Memòria",
+    "eyebrow": "Procedència",
+    "title": "Evidència del vi",
+    "body": "Distingeix allò observat, investigat, inferit o personal i consulta l'origen de cada afirmació investigada.",
+    "wineBody": "Afirmacions i fonts per a un vi de {{producer}}.",
+    "loadingTitle": "Carregant l'evidència…",
+    "loadingBody": "Comprovant les afirmacions autoritzades i les citacions d'aquest Espai.",
+    "loadError": "No s'ha pogut carregar l'evidència. Torna-ho a provar quan hi hagi connexió.",
+    "acceptError": "No s'ha pogut canviar l'afirmació preferida. Recarrega i revisa la versió actual.",
+    "conflictTitle": "Les afirmacions contradictòries es conserven",
+    "conflictBody": "{{count}} atribut té valors diferents. Tria'n un com a preferit sense esborrar les alternatives.",
+    "emptyTitle": "Encara no hi ha evidència.",
+    "emptyBody": "La recerca i l'evidència manual apareixeran aquí amb la font i la data de consulta.",
+    "claimLabel": "Afirmació",
+    "claimCount": "{{count}} afirmació",
+    "claimCount_other": "{{count}} afirmacions",
+    "class": {
+      "observed": "Observat",
+      "researched": "Investigat",
+      "inferred": "Inferit",
+      "personal": "Personal"
+    },
+    "status": {
+      "proposed": "Proposada",
+      "accepted": "Preferida",
+      "disputed": "Discutida",
+      "retired": "Retirada"
+    },
+    "sourcesLabel": "Fonts",
+    "sourceType": {
+      "producer": "Productor",
+      "regulator": "Organisme regulador",
+      "specialist": "Font especialitzada",
+      "open_dataset": "Dades obertes",
+      "other_web": "Una altra font web",
+      "user_artifact": "Font aportada"
+    },
+    "support": {
+      "direct": "Suport directe",
+      "supporting": "Evidència de suport",
+      "context": "Context"
+    },
+    "retrieved": "Consultat el {{date}}",
+    "license": "Llicència {{license}}",
+    "confidence": "Confiança registrada: {{value}} %",
+    "noCitations": "Sense citació externa: no es presenta com a evidència investigada.",
+    "acceptAction": "Tria com a preferida",
+    "accepting": "Triant…",
+    "valueYes": "Sí",
+    "valueNo": "No",
+    "monthCount": "{{count}} mes",
+    "monthCount_other": "{{count}} mesos",
+    "predicate": {
+      "identity_canonical_name": "Nom canònic",
+      "identity_grape_codes": "Raïms",
+      "producer_founded_year": "Fundació del productor",
+      "producer_history": "Història del productor",
+      "producer_name": "Nom del productor",
+      "region_name": "Regió",
+      "production_aging_months": "Temps de criança",
+      "production_method": "Mètode de producció",
+      "curiosity_note": "Curiositat",
+      "further_reading_summary": "Per saber-ne més"
+    },
+    "research": {
+      "eyebrow": "Recerca opcional",
+      "title": "Amplia aquesta evidència",
+      "body": "Fes consultes limitades a dades obertes. Les noves afirmacions queden com a propostes i conserven sempre la font.",
+      "disabled": "La recerca externa està desactivada en aquest desplegament. L’evidència manual i Wine Memory continuen disponibles.",
+      "wineEntity": "ID de Wikidata del vi (opcional)",
+      "producerEntity": "ID de Wikidata del productor (opcional)",
+      "regionEntity": "ID de Wikidata de la regió (opcional)",
+      "entityHelp": "Fes servir un identificador Q de Wikidata només quan hagis confirmat l’entitat. La cerca per codi de barres s’executa automàticament si el vi en té.",
+      "action": "Investiga aquest vi",
+      "running": "Investigant…",
+      "offline": "La recerca necessita connexió. L’evidència existent continua disponible sense connexió.",
+      "error": "No s’ha pogut completar la recerca. L’evidència existent no ha canviat.",
+      "factCount": "S’ha afegit {{count}} dada proposada",
+      "factCount_other": "S’han afegit {{count}} dades proposades",
+      "status": {
+        "running": "La recerca està en curs",
+        "completed": "Recerca completada",
+        "degraded": "Recerca completada amb resultats limitats",
+        "failed": "La recerca ha fallat"
+      },
+      "warning": {
+        "provider_disabled": "El proveïdor extern està desactivat.",
+        "missing_barcode": "Aquest vi no té codi de barres per a la cerca de producte.",
+        "missing_wikidata_entity": "No s’ha indicat cap ID de Wikidata confirmat per a un o més temes.",
+        "no_results": "No s’han trobat dades segures i citades.",
+        "partial_results": "Una o més fonts no estaven disponibles; es mostren resultats parcials.",
+        "source_limit_reached": "S’ha assolit el límit de fonts."
+      }
+    }
+  },
+  "assistant": {
+    "eyebrow": "El teu acompanyant de vins amb accés limitat",
+    "title": "Vicenç Vinyes",
+    "body": "Pregunta pels vins de l’Espai actiu. Cada resultat prové de dades estructurades autoritzades i mostra l’evidència.",
+    "privacyTitle": "Efímer per defecte",
+    "privacyBody": "Aquest torn no es desa com a historial de xat. Només es conserva una auditoria redactada de l’eina; el missatge no s’hi copia.",
+    "messageLabel": "Què t’agradaria trobar?",
+    "messagePlaceholder": "Per exemple: Troba el vi blanc de la regió costanera",
+    "activeSpaceOnly": "Cercant només a l’Espai actiu",
+    "sendAction": "Pregunta a Vicenç",
+    "sending": "Cercant…",
+    "error": "Vicenç no pot cercar ara mateix. Wine Memory i els formularis normals continuen disponibles.",
+    "emptyTitle": "Comença per la teva Wine Memory.",
+    "emptyBody": "Amb la IA desactivada, Vicenç fa una cerca estructurada directa sense inventar cap resposta.",
+    "ephemeralBadge": "No es desa a l’historial del xat",
+    "evidenceTitle": "Base d’evidència",
+    "resultsTitle": "Vins coincidents",
+    "sourcesTitle": "Fonts",
+    "openEvidence": "Revisa l’evidència",
+    "availabilityTitle": "Disponibilitat d’eines",
+    "contextTitle": "Context autoritzat del vi",
+    "contextEmpty": "Encara no hi ha dades estructurades per a aquest vi.",
+    "profileTitle": "El teu perfil de gust",
+    "profileInsufficient": "Hi ha {{count}} nota enviada; en calen almenys {{minimum}} abans de descriure una preferència.",
+    "profileAverage": "Puntuació mitjana enviada",
+    "profileWouldBuy": "Sí a tornar a comprar",
+    "comparisonTitle": "Comparació estructurada",
+    "factualTitle": "Registre factual",
+    "personalTitle": "Interpretació personal",
+    "personalInsufficient": "Basat en {{count}} notes teves enviades: no n’hi ha prou per a una afirmació personal.",
+    "personalAverage": "La teva mitjana és {{score}}, basada en {{count}} notes enviades.",
+    "mode": {
+      "deterministic": "Cerca estructurada",
+      "provider": "Resposta basada en evidència"
+    },
+    "availability": {
+      "ai": {
+        "available": "Proveïdor d’IA disponible",
+        "disabled": "Proveïdor d’IA desactivat",
+        "unavailable": "Proveïdor d’IA temporalment no disponible"
+      },
+      "searchMemory": {
+        "available": "Cerca autoritzada a Wine Memory disponible",
+        "disabled": "Cerca a Wine Memory desactivada",
+        "unavailable": "Cerca a Wine Memory no disponible"
+      },
+      "externalResearch": {
+        "available": "Recerca externa disponible",
+        "disabled": "Recerca externa desactivada",
+        "unavailable": "Recerca externa no disponible"
+      },
+      "getWineContext": { "available": "Context autoritzat del vi disponible" },
+      "getTasteProfile": { "available": "Perfil de gust amb mostra limitada disponible" },
+      "compareWines": { "available": "Comparació determinista de vins disponible" },
+      "researchWine": {
+        "available": "Recerca limitada i citada disponible",
+        "disabled": "Recerca limitada de vins desactivada",
+        "unavailable": "Recerca limitada de vins no disponible"
+      }
+    }
   },
   "sessions": {
     "eyebrow": "Una taula compartida",

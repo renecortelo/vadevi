@@ -122,7 +122,7 @@ describe("Wine Memory and Quick Log", () => {
       displayName: "Camins del Priorat",
       identityStatus: "confirmed",
       nonVintage: false,
-      producerName: "Álvaro Palacios",
+      producerName: "Bodega Álba de Prueba",
       region: "Priorat",
       vintageYear: 2023,
       wineType: "red",
@@ -158,7 +158,7 @@ describe("Wine Memory and Quick Log", () => {
     );
 
     const memoryResponse = await SELF.fetch(
-      `https://vadevi.test/api/v1/spaces/${spaceId}/wines?query=alvaro&limit=1`,
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines?query=alba&limit=1`,
       { headers: { Authorization: `Bearer ${ownerToken}` } },
     );
     const memory = WineMemoryResponseSchema.parse(await memoryResponse.json());

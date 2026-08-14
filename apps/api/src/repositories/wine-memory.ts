@@ -391,7 +391,7 @@ export async function listWines(
     .bind(options.principal.firebaseUid, options.spaceId)
     .first<{ allowed: number }>();
   if (membership === null) return null;
-  const query = options.query === undefined ? null : `${normalizeWineText(options.query)}%`;
+  const query = options.query === undefined ? null : `%${normalizeWineText(options.query)}%`;
   const result = await database
     .prepare(
       `${wineSelect}

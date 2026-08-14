@@ -20,10 +20,17 @@ describe("Workers runtime", () => {
     expect(tables).toEqual(
       expect.arrayContaining([
         "d1_migrations",
+        "assistant_tool_runs",
+        "external_adapter_cache",
+        "external_rate_windows",
+        "facts",
+        "fact_citations",
+        "research_jobs",
         "space_invitations",
         "space_memberships",
         "spaces",
         "users",
+        "sources",
       ]),
     );
   });
@@ -147,7 +154,7 @@ describe("Workers runtime", () => {
       body: JSON.stringify({
         activeSpaceId: groupSpaceId,
         completeOnboarding: true,
-        displayName: "René",
+        displayName: "Sample Taster",
         preferredLocale: "ca",
       }),
       headers: {
@@ -161,7 +168,7 @@ describe("Workers runtime", () => {
     expect(response.status).toBe(200);
     expect(body.data.user).toMatchObject({
       activeSpaceId: groupSpaceId,
-      displayName: "René",
+      displayName: "Sample Taster",
       onboardingComplete: true,
       preferredLocale: "ca",
     });

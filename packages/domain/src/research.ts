@@ -1,0 +1,116 @@
+export type ResearchLocale = "ca" | "de" | "en" | "es" | "fr" | "it" | "nl" | "pt-PT";
+
+export type ExternalSourceCandidate = Readonly<{
+  canonicalUrl: string;
+  licenseIdentifier: string;
+  publisher: string;
+  retrievedAt: string;
+  sourceType: "open_dataset";
+  title: string;
+}>;
+
+export type ProductCandidate = Readonly<{
+  barcode: string;
+  brands: string[];
+  categories: string[];
+  countryTags: string[];
+  name: string | null;
+  provider: "open_food_facts";
+  source: ExternalSourceCandidate;
+  warnings: string[];
+}>;
+
+export type ProposedFact = Readonly<{
+  confidenceMilli: number;
+  predicate: "identity.canonical_name" | "producer.history" | "producer.name" | "region.name";
+  researchMethod: string;
+  source: ExternalSourceCandidate;
+  value: string;
+}>;
+
+export type ExternalUnavailableReason =
+  "invalid_input" | "not_found" | "provider_error" | "rate_limited" | "timeout" | "unsafe_redirect";
+
+export type ExternalResult<T> =
+  | { cached: boolean; data: T; status: "success" }
+  | { reason: ExternalUnavailableReason; retryAfterSeconds: number | null; status: "unavailable" };
+
+export type BarcodeLookup = Readonly<{
+  barcode: string;
+  locale: ResearchLocale;
+}>;
+
+export type KnowledgeResearchRequest = Readonly<{
+  entityId: string;
+  locale: ResearchLocale;
+  subjectType: "producer" | "region" | "wine";
+}>;
+
+export interface ProductLookupPort {
+  lookupBarcode(input: BarcodeLookup): Promise<ExternalResult<ProductCandidate>>;
+}
+
+export interface KnowledgeResearchPort {
+  research(input: KnowledgeResearchRequest): Promise<ExternalResult<ProposedFact[]>>;
+}
+
+export type ResearchPorts = Readonly<{
+  knowledge: KnowledgeResearchPort | null;
+  product: ProductLookupPort | null;
+  providerMode: "none" | "open_data";
+}>;
+
+export interface ExternalCachePort {
+  get<T>(provider: string, key: string, now: string): Promise<T | null>;
+  put<T>(provider: string, key: string, value: T, expiresAt: string, now: string): Promise<void>;
+}
+
+export interface ExternalRateLimitPort {
+  consume(
+    provider: string,
+    limit: number,
+    windowSeconds: number,
+    now: string,
+  ): Promise<{ allowed: boolean; retryAfterSeconds: number }>;
+}
+
+export type SanitizedExternalText = Readonly<{
+  flaggedPromptLike: boolean;
+  truncated: boolean;
+  value: string;
+}>;
+
+const promptLikePatterns = [
+  /(?:ignore|disregard|override)\s+(?:all\s+|the\s+)?(?:previous|prior|earlier|above)?\s*(?:instructions|messages|rules)/i,
+  /(?:system|developer)\s+(?:prompt|message|instructions)/i,
+  /(?:call|invoke|execute|run)\s+(?:the\s+)?(?:tool|function|command)/i,
+  /(?:reveal|print|return|expose)\s+(?:the\s+)?(?:prompt|secret|token|credentials)/i,
+  /(?:act\s+as|you\s+are\s+now)\s+(?:a\s+)?(?:system|assistant|developer)/i,
+  /<\/?(?:script|iframe|form|object|embed)\b/i,
+  /BEGIN\s+(?:SYSTEM|DEVELOPER)\s+MESSAGE/i,
+] as const;
+
+export function sanitizeExternalText(input: string, maximumLength: number): SanitizedExternalText {
+  const withoutControls = [...input.normalize("NFKC")]
+    .map((character) => {
+      const code = character.codePointAt(0) ?? 0;
+      return code <= 8 ||
+        code === 11 ||
+        code === 12 ||
+        (code >= 14 && code <= 31) ||
+        (code >= 127 && code <= 159)
+        ? " "
+        : character;
+    })
+    .join("");
+  const normalized = withoutControls
+    .replace(/[\u202A-\u202E\u2066-\u2069]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const flaggedPromptLike = promptLikePatterns.some((pattern) => pattern.test(normalized));
+  return {
+    flaggedPromptLike,
+    truncated: normalized.length > maximumLength,
+    value: normalized.slice(0, maximumLength),
+  };
+}

@@ -9,4 +9,12 @@ Runtime boundaries:
 - `packages/contracts` contains transport schemas only.
 - `packages/domain` contains provider-independent policy and value objects.
 
-The current implementation is Phase 0. Identity verification, Space services, and their integration tests arrive in Phase 1; their database shape begins in migration `0001_identity_spaces.sql` so local D1 workflow can be validated now.
+Phases 0–4 are complete. Phase 4 adds a provider-neutral evidence boundary:
+
+- contracts expose typed facts/citations and ephemeral assistant turns without provider response shapes
+- domain ports define bounded product lookup, knowledge-research, and optional statement-rendering candidates
+- API adapters own official-host fetching, attribution, local caching/rate budgets, external-text sanitization, and degraded results
+- repositories remain the only path from assistant tools to Space-scoped private data
+- the public/default `AI_PROVIDER=none` mode executes deterministic structured reads and normal application flows without making an external AI call
+
+Open Food Facts and Wikidata are exposed only through fixed official HTTPS hosts; neither user input nor model output can select a URL. Authorized research jobs persist normalized output as cited proposed facts and never human-verify it. An optional Workers AI adapter can render bounded structured statements, but claim-to-statement and sentence-to-source enforcement rejects invented or uncited output. A future non-fixed fetch boundary must add DNS resolution and private-address rechecks before it is allowed.

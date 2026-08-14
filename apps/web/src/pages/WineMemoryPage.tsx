@@ -438,9 +438,14 @@ export function WineMemoryPage() {
                   </span>
                   <span>{t("memory.noteCount", { count: wine.noteCount })}</span>
                 </div>
-                <Link className="text-link" to={`/wines/${wine.id}/taste`}>
-                  {t("tasting.startAction")}
-                </Link>
+                <div className="wine-card__actions">
+                  <Link className="text-link" to={`/wines/${wine.id}/evidence`}>
+                    {t("evidence.openAction")}
+                  </Link>
+                  <Link className="text-link" to={`/wines/${wine.id}/taste`}>
+                    {t("tasting.startAction")}
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
@@ -459,7 +464,7 @@ export function WineMemoryPage() {
                 <th>{t("quickLog.region")}</th>
                 <th>{t("quickLog.score")}</th>
                 <th>{t("memory.notes")}</th>
-                <th>{t("tasting.startAction")}</th>
+                <th>{t("memory.actions")}</th>
               </tr>
             </thead>
             <tbody>
@@ -480,9 +485,14 @@ export function WineMemoryPage() {
                   <td>{wine.score100 ?? "—"}</td>
                   <td>{wine.noteCount}</td>
                   <td>
-                    <Link className="text-link" to={`/wines/${wine.id}/taste`}>
-                      {t("tasting.startAction")}
-                    </Link>
+                    <div className="table-actions">
+                      <Link className="text-link" to={`/wines/${wine.id}/evidence`}>
+                        {t("evidence.openAction")}
+                      </Link>
+                      <Link className="text-link" to={`/wines/${wine.id}/taste`}>
+                        {t("tasting.startAction")}
+                      </Link>
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -517,9 +527,14 @@ export function WineMemoryPage() {
                         : t("memory.noteCount", { count: wine.noteCount })}
                     </span>
                   </div>
-                  <Link className="text-link" to={`/wines/${wine.id}/taste`}>
-                    {t("tasting.startAction")}
-                  </Link>
+                  <div className="table-actions">
+                    <Link className="text-link" to={`/wines/${wine.id}/evidence`}>
+                      {t("evidence.openAction")}
+                    </Link>
+                    <Link className="text-link" to={`/wines/${wine.id}/taste`}>
+                      {t("tasting.startAction")}
+                    </Link>
+                  </div>
                 </li>
               );
             })}

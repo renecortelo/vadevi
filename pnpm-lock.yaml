@@ -74,6 +74,9 @@ importers:
       '@vadevi/contracts':
         specifier: workspace:*
         version: link:../../packages/contracts
+      '@vadevi/domain':
+        specifier: workspace:*
+        version: link:../../packages/domain
       hono:
         specifier: '*'
         version: 4.13.1

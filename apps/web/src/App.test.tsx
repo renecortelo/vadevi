@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import type { AssistantTurnResponse, Fact } from "@vadevi/contracts";
 import type { ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter, Route, Routes } from "react-router";
@@ -11,11 +12,13 @@ import { AppShell } from "./components/AppShell";
 import { i18n } from "./i18n";
 import { OfflineSyncContext, type OfflineSyncContextValue } from "./offline/OfflineSyncContext";
 import { DeepTastingPage } from "./pages/DeepTastingPage";
+import { AssistantPage, AssistantResult } from "./pages/AssistantPage";
 import { NewSessionPage } from "./pages/NewSessionPage";
 import { OnboardingPage } from "./pages/OnboardingPage";
 import { QuickLogPage } from "./pages/QuickLogPage";
 import { SessionsPage } from "./pages/SessionsPage";
 import { WineMemoryPage } from "./pages/WineMemoryPage";
+import { FactCard, WineEvidencePage } from "./pages/WineEvidencePage";
 import { SessionContext, type SessionContextValue } from "./session/SessionContext";
 
 beforeAll(async () => {
@@ -27,7 +30,7 @@ const session: SessionContextValue = {
   bootstrap: {
     data: {
       features: {
-        assistant: false,
+        assistant: true,
         externalResearch: false,
         priceLookup: false,
         voiceInput: false,
@@ -48,7 +51,7 @@ const session: SessionContextValue = {
       ],
       user: {
         activeSpaceId: "01J00000000000000000000001",
-        displayName: "René",
+        displayName: "Sample Taster",
         id: "01J00000000000000000000003",
         onboardingComplete: true,
         preferredLocale: "en",
@@ -70,7 +73,7 @@ const session: SessionContextValue = {
     data: {
       members: [
         {
-          displayName: "René",
+          displayName: "Sample Taster",
           id: "01J00000000000000000000003",
           joinedAt: "2026-08-13T00:00:00.000Z",
           role: "owner",
@@ -175,7 +178,7 @@ describe("authenticated app shell", () => {
     const markup = renderWithSession(<OnboardingPage />);
 
     expect(markup).toContain('for="display-name"');
-    expect(markup).toContain('value="René"');
+    expect(markup).toContain('value="Sample Taster"');
     expect(markup).toContain("Català");
     expect(markup).toContain("Português");
     expect(markup.match(/<option/g)).toHaveLength(8);
@@ -226,5 +229,154 @@ describe("authenticated app shell", () => {
     expect(markup).toContain("Appearance");
     expect(markup).toContain("Memory cues");
     expect(markup).toContain("Save draft");
+  });
+
+  it("renders a localized evidence route with explicit provenance states", () => {
+    const markup = renderShellRoute(
+      <WineEvidencePage />,
+      "/wines/01J00000000000000000000004/evidence",
+      "wines/:wineId/evidence",
+    );
+
+    expect(markup).toContain("Wine evidence");
+    expect(markup).toContain("Back to Wine Memory");
+    expect(markup).toContain("Loading the evidence");
+    expect(markup).toContain("observed, researched, inferred, or personal");
+    expect(markup).toContain("External research is disabled in this deployment");
+  });
+
+  it("renders the ephemeral Vicenç composer when AI is disabled", () => {
+    const markup = renderShellRoute(<AssistantPage />, "/vicenc", "vicenc");
+
+    expect(markup).toContain("Vicenç Vinyes");
+    expect(markup).toContain("Ephemeral by default");
+    expect(markup).toContain('id="assistant-message"');
+    expect(markup).toContain("Searching the active Space only");
+    expect(markup).toContain("direct, structured search");
+  });
+
+  it("renders deterministic assistant results with an explicit sample basis", () => {
+    const response: AssistantTurnResponse = {
+      data: {
+        citations: [],
+        comparisons: [],
+        evidence: [
+          {
+            evidenceClass: "observed",
+            label: "1 matching Wine Memory record",
+            sampleSize: 1,
+            sourceIds: [],
+          },
+        ],
+        mode: "deterministic",
+        renderedClaims: [],
+        renderedText:
+          "I found 1 matching wine in your authorized Wine Memory. AI is off, so this is a direct structured search—not a generated answer.",
+        results: [
+          {
+            spaceId: "01J00000000000000000000001",
+            spaceName: "Personal space",
+            wine: {
+              appellation: null,
+              countryCode: "ES",
+              createdAt: "2026-08-13T20:00:00.000Z",
+              displayName: "Synthetic Coastal White",
+              id: "01J00000000000000000000004",
+              identityStatus: "confirmed",
+              lastTastedAt: null,
+              mediaId: null,
+              nonVintage: false,
+              noteCount: 1,
+              producerName: "Synthetic Cellar",
+              region: "Test Region",
+              score100: null,
+              version: 1,
+              vintageYear: 2024,
+              wineType: "white",
+            },
+          },
+        ],
+        tasteProfile: null,
+        threadId: null,
+        toolAvailability: {
+          ai: "disabled",
+          compareWines: "available",
+          externalResearch: "disabled",
+          getTasteProfile: "available",
+          getWineContext: "available",
+          researchWine: "disabled",
+          searchMemory: "available",
+        },
+        turnId: "01J00000000000000000000007",
+        usage: {
+          externalResearchCalls: 0,
+          maxExternalResearchCalls: 2,
+          maxToolCalls: 6,
+          toolCalls: 1,
+        },
+        warnings: ["ai_disabled", "deterministic_search"],
+        wineContext: null,
+      },
+    };
+
+    const markup = renderWithSession(<AssistantResult response={response} />);
+
+    expect(markup).toContain("Structured search");
+    expect(markup).toContain("1 matching Wine Memory record");
+    expect(markup).toContain("Synthetic Coastal White");
+    expect(markup).toContain("AI provider disabled");
+    expect(markup).toContain("Authorized Wine Memory search available");
+    expect(markup).toContain("Deterministic wine comparison available");
+  });
+
+  it("renders researched fact attribution, license, and a contextual acceptance action", () => {
+    const fact: Fact = {
+      citations: [
+        {
+          locator: "Technical sheet, p. 2",
+          source: {
+            canonicalUrl: "https://producer.example.test/technical-sheet",
+            createdAt: "2026-08-13T20:00:00.000Z",
+            createdByProvider: "synthetic-test-provider",
+            createdByUserId: null,
+            id: "01J00000000000000000000005",
+            licenseIdentifier: "CC-BY-4.0",
+            publisher: "Synthetic Producer",
+            retrievedAt: "2026-08-13T20:00:00.000Z",
+            sourceType: "producer",
+            title: "Synthetic technical sheet",
+            updatedAt: "2026-08-13T20:00:00.000Z",
+          },
+          supportStrength: "direct",
+        },
+      ],
+      confidenceMilli: 900,
+      createdAt: "2026-08-13T20:00:00.000Z",
+      evidenceClass: "researched",
+      id: "01J00000000000000000000006",
+      observedByUserId: null,
+      predicate: "production.aging_months",
+      researchMethod: "synthetic.test.v1",
+      status: "disputed",
+      subjectId: "01J00000000000000000000004",
+      subjectType: "wine",
+      updatedAt: "2026-08-13T20:00:00.000Z",
+      value: 12,
+      verifiedAt: null,
+      verifiedByUserId: null,
+      version: 2,
+    };
+
+    const markup = renderWithSession(
+      <FactCard accepting={false} fact={fact} onAccept={() => undefined} />,
+    );
+
+    expect(markup).toContain("Researched");
+    expect(markup).toContain("Disputed");
+    expect(markup).toContain("12 months");
+    expect(markup).toContain("Synthetic technical sheet");
+    expect(markup).toContain("License CC-BY-4.0");
+    expect(markup).toContain("Technical sheet, p. 2");
+    expect(markup).toContain('aria-describedby="fact-value-01J00000000000000000000006"');
   });
 });

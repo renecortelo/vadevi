@@ -1,0 +1,242 @@
+import {
+  BootstrapResponseSchema,
+  CreateWineResponseSchema,
+  type Fact,
+  ResearchJobResponseSchema,
+  WineFactsResponseSchema,
+} from "@vadevi/contracts";
+import type { ResearchPorts } from "@vadevi/domain";
+import { applyD1Migrations, env, SELF } from "cloudflare:test";
+import { beforeAll, describe, expect, it } from "vitest";
+
+import { createResearchJob } from "../src/repositories/research";
+import { randomOpaqueToken } from "../src/security/opaque-token";
+import type { FirebasePrincipal } from "../src/types";
+import { emulatorIdToken } from "./fixtures/firebase-token";
+
+beforeAll(async () => {
+  await applyD1Migrations(env.DB, env.TEST_MIGRATIONS);
+});
+
+const ownerUid = "firebase-emulator-user-phase-4-research-owner";
+const ownerToken = emulatorIdToken({
+  email: "research-owner@example.test",
+  name: "Research Owner",
+  sub: ownerUid,
+});
+const outsiderToken = emulatorIdToken({
+  email: "research-outsider@example.test",
+  name: "Research Outsider",
+  sub: "firebase-emulator-user-phase-4-research-outsider",
+});
+const principal: FirebasePrincipal = {
+  authTime: Math.floor(Date.now() / 1_000),
+  displayName: "Research Owner",
+  email: "research-owner@example.test",
+  firebaseUid: ownerUid,
+};
+
+function headers(token: string, idempotencyKey?: string): Record<string, string> {
+  return {
+    Authorization: `Bearer ${token}`,
+    "Content-Type": "application/json",
+    ...(idempotencyKey === undefined ? {} : { "Idempotency-Key": idempotencyKey }),
+  };
+}
+
+async function bootstrap(token: string) {
+  const response = await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  expect(response.status).toBe(200);
+  return BootstrapResponseSchema.parse(await response.json());
+}
+
+async function createWine(spaceId: string) {
+  const response = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+    body: JSON.stringify({
+      barcode: "8410000000099",
+      displayName: "Research Wine",
+      identityStatus: "confirmed",
+      nonVintage: false,
+      producerName: "Synthetic Research Estate",
+      vintageYear: 2022,
+      wineType: "red",
+    }),
+    headers: headers(ownerToken, randomOpaqueToken()),
+    method: "POST",
+  });
+  expect(response.status).toBe(201);
+  return CreateWineResponseSchema.parse(await response.json()).data.wine;
+}
+
+describe("bounded wine research jobs", () => {
+  it("degrades explicitly with providers disabled and protects the job from outsiders", async () => {
+    const owner = await bootstrap(ownerToken);
+    await bootstrap(outsiderToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(spaceId);
+    const key = randomOpaqueToken();
+    const request = () =>
+      SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/research-jobs`, {
+        body: JSON.stringify({ locale: "en", topics: ["identity", "producer"] }),
+        headers: headers(ownerToken, key),
+        method: "POST",
+      });
+
+    const firstResponse = await request();
+    const first = ResearchJobResponseSchema.parse(await firstResponse.json());
+    expect(firstResponse.status).toBe(201);
+    expect(first.data).toMatchObject({
+      attempts: [],
+      factIds: [],
+      providerMode: "none",
+      sourceIds: [],
+      status: "degraded",
+      warnings: expect.arrayContaining(["provider_disabled", "no_results"]),
+    });
+
+    const replay = await request();
+    expect(replay.status).toBe(201);
+    expect(replay.headers.get("Idempotency-Replayed")).toBe("true");
+    expect(ResearchJobResponseSchema.parse(await replay.json()).data.id).toBe(first.data.id);
+
+    const ownerRead = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/research-jobs/${first.data.id}`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    expect(ownerRead.status).toBe(200);
+    const outsiderRead = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/research-jobs/${first.data.id}`,
+      { headers: { Authorization: `Bearer ${outsiderToken}` } },
+    );
+    expect(outsiderRead.status).toBe(404);
+  });
+
+  it("persists enabled-provider output only as cited proposed facts and replays safely", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(spaceId);
+    const retrievedAt = "2026-08-14T07:00:00.000Z";
+    const source = {
+      canonicalUrl: "https://www.wikidata.org/wiki/Q999",
+      licenseIdentifier: "CC0-1.0",
+      publisher: "Wikidata",
+      retrievedAt,
+      sourceType: "open_dataset" as const,
+      title: "Synthetic Research Estate",
+    };
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async () => ({
+          cached: false,
+          data: [
+            {
+              confidenceMilli: 750,
+              predicate: "producer.name",
+              researchMethod: "wikidata.entity.v1",
+              source,
+              value: "Synthetic Research Estate",
+            },
+            {
+              confidenceMilli: 600,
+              predicate: "producer.history",
+              researchMethod: "wikidata.entity.v1",
+              source,
+              value: "A fictional estate used to verify provenance behavior.",
+            },
+          ],
+          status: "success",
+        }),
+      },
+      product: {
+        lookupBarcode: async ({ barcode }) => ({
+          cached: false,
+          data: {
+            barcode,
+            brands: ["Synthetic Research Estate"],
+            categories: ["en:wines"],
+            countryTags: ["en:spain"],
+            name: "Research Wine",
+            provider: "open_food_facts",
+            source: {
+              canonicalUrl: `https://world.openfoodfacts.org/product/${barcode}`,
+              licenseIdentifier: "ODbL-1.0",
+              publisher: "Open Food Facts",
+              retrievedAt,
+              sourceType: "open_dataset",
+              title: "Research Wine",
+            },
+            warnings: ["coverage_and_accuracy_uncertain"],
+          },
+          status: "success",
+        }),
+      },
+      providerMode: "open_data",
+    };
+    const idempotencyKey = randomOpaqueToken();
+    const options = {
+      idempotencyKey,
+      ports,
+      principal,
+      request: {
+        locale: "en" as const,
+        maxSources: 4,
+        topics: ["identity", "producer"] as const,
+        wikidataEntityIds: { producer: "Q999" },
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    };
+
+    const first = await createResearchJob(env.DB, options);
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    expect(first).toMatchObject({ replayed: false, response: { data: { status: "completed" } } });
+    expect(first.response.data.factIds).toHaveLength(3);
+    expect(first.response.data.sourceIds).toHaveLength(2);
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    expect(facts).toHaveLength(3);
+    expect(facts).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          citations: [expect.objectContaining({ supportStrength: "direct" })],
+          evidenceClass: "researched",
+          status: "proposed",
+          verifiedAt: null,
+          verifiedByUserId: null,
+        }),
+      ]),
+    );
+    expect(facts.every((fact: Fact) => fact.citations[0]?.source.createdByProvider !== null)).toBe(
+      true,
+    );
+
+    const replay = await createResearchJob(env.DB, {
+      ...options,
+      ports: { knowledge: null, product: null, providerMode: "none" },
+      requestId: randomOpaqueToken(),
+    });
+    expect(replay).toMatchObject({
+      kind: "success",
+      replayed: true,
+      response: { data: { id: first.response.data.id, status: "completed" } },
+    });
+    const counts = await env.DB.prepare(
+      `SELECT
+        (SELECT COUNT(*) FROM facts WHERE subject_id = ?) AS facts,
+        (SELECT COUNT(*) FROM fact_citations citation
+          JOIN facts fact ON fact.id = citation.fact_id WHERE fact.subject_id = ?) AS citations,
+        (SELECT COUNT(*) FROM audit_events WHERE target_id = ? AND action = 'research.completed') AS audits`,
+    )
+      .bind(wine.id, wine.id, first.response.data.id)
+      .first<{ audits: number; citations: number; facts: number }>();
+    expect(counts).toEqual({ audits: 1, citations: 3, facts: 3 });
+  });
+});
