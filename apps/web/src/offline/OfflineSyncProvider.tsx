@@ -16,18 +16,11 @@ import { useAuth } from "../auth/AuthContext";
 import { idempotencyKeyForMutation } from "../security/idempotency";
 import { createUlid } from "../security/ulid";
 import {
-  addTastingSessionWines,
   ApiError,
-  createDeepTastingNote,
-  createTastingSession,
   getWineMemory,
   identifyWine,
-  listTastingSessions,
-  reorderTastingSessionWines,
   reserveMedia,
-  submitDeepTastingNote,
   syncSpace,
-  updateDeepTastingNote,
   uploadMedia,
 } from "../services/api";
 import { useSession } from "../session/SessionContext";
@@ -122,6 +115,9 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
   const refreshSessions = useCallback(
     async (spaceId: string) => {
       if (user === null) return;
+      // Session clients load on demand so their schemas stay out of the
+      // initial bundle while offline replay keeps working.
+      const { listTastingSessions } = await import("../services/tasting");
       const response = await listTastingSessions(user, spaceId);
       await cacheSessionList(user.uid, spaceId, response.data);
     },
@@ -132,6 +128,14 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
     async (mutation: QueuedMutation) => {
       if (user === null) return;
       const idempotencyKey = await idempotencyKeyForMutation(mutation.id);
+      const {
+        addTastingSessionWines,
+        createDeepTastingNote,
+        createTastingSession,
+        reorderTastingSessionWines,
+        submitDeepTastingNote,
+        updateDeepTastingNote,
+      } = await import("../services/tasting");
       if (mutation.resourceType === "tasting_session") {
         await createTastingSession(
           user,

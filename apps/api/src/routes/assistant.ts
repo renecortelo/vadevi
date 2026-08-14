@@ -7,6 +7,7 @@ import {
 } from "@vadevi/contracts";
 
 import { createAssistantLanguagePort } from "../adapters/assistant-language";
+import { reserveProviderBudget } from "../services/usage";
 import { externalResearchEnabled } from "../adapters/research-factory";
 import { runDeterministicAssistantTurn } from "../repositories/assistant";
 import type { ApiEnvironment } from "../types";
@@ -48,14 +49,26 @@ const assistantTurnRoute = createRoute({
 
 export function registerAssistantRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(assistantTurnRoute, async (context) => {
+    const spaceId = context.req.valid("param").spaceId;
+    const language = createAssistantLanguagePort(context.env);
+    // Reaching the application's daily language budget degrades this turn to the
+    // deterministic path instead of erroring or spending beyond the cap.
+    const withinBudget =
+      language === null ||
+      (await reserveProviderBudget(context.env.DB!, {
+        firebaseUid: context.get("principal").firebaseUid,
+        metric: "ai_language_calls",
+        nowIso: new Date().toISOString(),
+        spaceId,
+      }));
     const response = await runDeterministicAssistantTurn(context.env.DB!, {
       aiProvider: context.env.AI_PROVIDER ?? "none",
       externalResearch: externalResearchEnabled(context.env),
-      language: createAssistantLanguagePort(context.env),
+      language: withinBudget ? language : null,
       principal: context.get("principal"),
       request: context.req.valid("json"),
       requestId: context.get("requestId"),
-      spaceId: context.req.valid("param").spaceId,
+      spaceId,
     });
     if (response === null) {
       return context.json(

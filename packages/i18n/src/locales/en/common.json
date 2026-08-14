@@ -242,7 +242,44 @@
     "sessions": "Sessions",
     "loggedOnly": "Wine logged without a tasting note",
     "noSessionsTitle": "No session in this Memory yet.",
-    "noSessionsBody": "Create a flight to keep each participant's note separate."
+    "noSessionsBody": "Create a flight to keep each participant's note separate.",
+    "countryFilter": "Country",
+    "countryPlaceholder": "ES",
+    "regionFilter": "Region",
+    "grapeFilter": "Grape",
+    "vintageFrom": "Vintage from",
+    "vintageTo": "Vintage to",
+    "minScore": "Minimum score",
+    "maxScore": "Maximum score",
+    "sentimentFilter": "Impression",
+    "anySentiment": "Any impression",
+    "sentimentOption": {
+      "like": "Liked",
+      "neutral": "Neutral",
+      "dislike": "Disliked"
+    },
+    "mediaFilter": "Photo",
+    "anyMedia": "With or without a photo",
+    "withMedia": "Has a photo",
+    "withoutMedia": "No photo",
+    "sortLabel": "Sort by",
+    "sort": {
+      "recent": "Recently updated",
+      "tasted": "Last tasted",
+      "score": "Score",
+      "name": "Producer and name"
+    },
+    "clearFilters": "Clear filters",
+    "duplicateTitle": "Possible duplicates",
+    "duplicateBody": "These records look similar. Nothing is merged until you confirm it.",
+    "keepRecord": "Record to keep",
+    "duplicateRecord": "Possible duplicate",
+    "mergeAction": "Merge into the kept record",
+    "mergeConfirmTitle": "Confirm this merge",
+    "mergeConfirmBody": "{{source}} will be merged into {{target}}. Tastings, bottles, purchases, prices, and evidence move across, and the old name stays searchable.",
+    "mergeConfirmAction": "Merge these records",
+    "mergeDone": "The records were merged.",
+    "mergeError": "The merge did not run. One of the records may have changed."
   },
   "evidence": {
     "openAction": "Evidence",
@@ -411,12 +448,24 @@
         "disabled": "External research disabled",
         "unavailable": "External research unavailable"
       },
-      "getWineContext": { "available": "Authorized wine context available" },
-      "getTasteProfile": { "available": "Sample-bounded taste profile available" },
-      "compareWines": { "available": "Deterministic wine comparison available" },
-      "findPriceObservations": { "available": "Timestamped stored-price search available" },
-      "buildRecommendation": { "available": "Qualitative recommendation ranking available" },
-      "createActionDraft": { "available": "Confirmed action drafts available" },
+      "getWineContext": {
+        "available": "Authorized wine context available"
+      },
+      "getTasteProfile": {
+        "available": "Sample-bounded taste profile available"
+      },
+      "compareWines": {
+        "available": "Deterministic wine comparison available"
+      },
+      "findPriceObservations": {
+        "available": "Timestamped stored-price search available"
+      },
+      "buildRecommendation": {
+        "available": "Qualitative recommendation ranking available"
+      },
+      "createActionDraft": {
+        "available": "Confirmed action drafts available"
+      },
       "researchWine": {
         "available": "Bounded cited wine research available",
         "disabled": "Bounded wine research disabled",
@@ -764,5 +813,94 @@
     "conflictBody": "Both versions are preserved. Choose the local form or the current server note.",
     "keepLocal": "Use my local version",
     "noConclusion": "No conclusion text in this version."
+  },
+  "dataRights": {
+    "navAction": "Data and privacy",
+    "eyebrow": "Your data",
+    "title": "Data and privacy",
+    "body": "Export what belongs to you, review usage, and delete on your terms.",
+    "exportTitle": "Export",
+    "exportBody": "JSON is the complete, versioned export. CSV covers one selected table at a time.",
+    "exportJsonAction": "Export JSON",
+    "csvAction": "Export {{dataset}} CSV",
+    "exportReady": "The versioned JSON export (schema {{version}}) was downloaded.",
+    "csvReady": "The {{dataset}} CSV was downloaded.",
+    "dataset": {
+      "wines": "wines",
+      "tastings": "tastings",
+      "bottles": "bottles",
+      "purchases": "purchases",
+      "prices": "prices"
+    },
+    "mediaTitle": "Photos",
+    "mediaBody": "Photos are never included automatically. Export the JSON first, then select the photos you want in a ZIP.",
+    "mediaEmpty": "Export the JSON to list the photos you can select.",
+    "mediaAction": "Download {{count}} selected photo",
+    "mediaAction_other": "Download {{count}} selected photos",
+    "mediaReady": "{{count}} photo was packaged.",
+    "mediaReady_other": "{{count}} photos were packaged.",
+    "mediaKind": {
+      "label": "Label photo",
+      "receipt": "Receipt photo",
+      "shelf": "Shelf photo",
+      "avatar": "Profile photo",
+      "other": "Other photo"
+    },
+    "usageTitle": "Usage and budgets",
+    "usageBody": "Aggregate counts only. No wine name, note, message, or account detail is recorded here.",
+    "usageUnavailable": "The usage report is not available right now.",
+    "providerModes": "AI provider: {{ai}}. Research provider: {{research}}.",
+    "usageMetric": "Capability",
+    "usageScope": "Scope",
+    "usageUsed": "Used today",
+    "usageLimit": "Daily cap",
+    "usageStatus": "State",
+    "usageResets": "Counters reset at {{date}}.",
+    "metric": {
+      "ai_language_calls": "Assistant language",
+      "research_lookups": "External research",
+      "barcode_lookups": "Barcode lookup",
+      "price_lookups": "Price lookup"
+    },
+    "scope": {
+      "global": "Whole deployment",
+      "space": "This Space",
+      "user": "You"
+    },
+    "budgetStatus": {
+      "ok": "Within budget",
+      "warning": "Approaching the cap",
+      "critical": "Close to the cap",
+      "capped": "Capped — using the offline path"
+    },
+    "leaveTitle": "Leave this Space",
+    "leaveBody": "Shared records stay with the Space. You lose access on your next request.",
+    "leaveAction": "Leave this Space",
+    "leftSpace": "You left the Space.",
+    "deleteSpaceTitle": "Delete this Space",
+    "deleteSpaceBody": "Type the Space name, {{name}}, to confirm. There is a recoverable grace period before anything is purged.",
+    "confirmationLabel": "Space name",
+    "deleteSpaceAction": "Schedule deletion",
+    "cancelDeletionAction": "Cancel deletion",
+    "deletionScheduled": "Deletion is scheduled. You can still cancel it.",
+    "deletionCanceled": "Deletion was canceled.",
+    "deletionPending": "Data is purged after {{purgeAfter}} unless you cancel.",
+    "deleteAccountTitle": "Delete your account",
+    "deleteAccountBody": "This removes your personal Space and private data. Shared records stay with their Space. A recent sign-in is required.",
+    "deleteAccountLabel": "Type DELETE to confirm",
+    "deleteAccountAction": "Schedule account deletion",
+    "accountScheduled": "Account deletion is scheduled in {{hours}} hours.",
+    "retentionTitle": "What deletion does and does not do",
+    "retentionBody": "Deletion removes active application data and stored photos. Provider-managed backups follow their own retention schedule and are not erased instantly.",
+    "actionError": "That did not work. Check your connection and try again."
+  },
+  "pwa": {
+    "installTitle": "Install Va de Vi",
+    "installBody": "Add it to your device so the app opens instantly and works offline.",
+    "installAction": "Install",
+    "updateTitle": "A new version is ready",
+    "updateBody": "Reload to pick up the latest version. Your queued work is kept.",
+    "storageWarning": "Offline storage is nearly full. Sync or clear offline data to keep saving photos.",
+    "storageCritical": "Offline storage is full. New photos are not kept on this device, but your text notes still save."
   }
 }

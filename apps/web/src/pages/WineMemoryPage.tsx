@@ -9,6 +9,7 @@ import { memoryChangedEvent, sessionsChangedEvent } from "../offline/events";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { createUlid } from "../security/ulid";
 import { getPrivateMedia, getWineMemory } from "../services/api";
+import { mergeWines } from "../services/data-rights";
 import { useSession } from "../session/SessionContext";
 
 function normalize(value: string): string {
@@ -19,6 +20,37 @@ function normalize(value: string): string {
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 }
+
+/**
+ * The MVP filter surface. Server-side filtering keeps pagination stable, and
+ * the same predicates run against the offline snapshot so a cached view does
+ * not silently ignore the filters the user set.
+ */
+type MemoryFilterState = {
+  countryCode: string;
+  grape: string;
+  hasMedia: string;
+  maxScore: string;
+  minScore: string;
+  region: string;
+  sentiment: string;
+  sort: string;
+  vintageFrom: string;
+  vintageTo: string;
+};
+
+const emptyFilters: MemoryFilterState = {
+  countryCode: "",
+  grape: "",
+  hasMedia: "",
+  maxScore: "",
+  minScore: "",
+  region: "",
+  sentiment: "",
+  sort: "recent",
+  vintageFrom: "",
+  vintageTo: "",
+};
 
 function duplicateKey(wine: WineSummary): string {
   return [
@@ -178,6 +210,11 @@ export function WineMemoryPage() {
   const [wines, setWines] = useState<WineSummary[]>([]);
   const [query, setQuery] = useState("");
   const [wineType, setWineType] = useState("");
+  const [filters, setFilters] = useState<MemoryFilterState>(emptyFilters);
+  const [mergePlan, setMergePlan] = useState<{ source: WineSummary; target: WineSummary } | null>(
+    null,
+  );
+  const [mergeStatus, setMergeStatus] = useState<"error" | "merged" | null>(null);
   const [view, setView] = useState<"cards" | "sessions" | "table" | "timeline">("cards");
   const [sessions, setSessions] = useState<TastingSessionResponse["data"][]>([]);
   const [usingCache, setUsingCache] = useState(false);
@@ -205,6 +242,7 @@ export function WineMemoryPage() {
         offlineDatabase.conflicts.where("[userId+spaceId]").equals([userId, spaceId]).toArray(),
       ]);
       const normalizedQuery = normalize(query);
+      const normalizedRegion = normalize(filters.region);
       setWines(
         snapshots
           .map((snapshot) => snapshot.wine)
@@ -212,13 +250,27 @@ export function WineMemoryPage() {
             (wine) =>
               (normalizedQuery.length === 0 ||
                 normalize(`${wine.producerName} ${wine.displayName}`).includes(normalizedQuery)) &&
-              (wineType.length === 0 || wine.wineType === wineType),
+              (wineType.length === 0 || wine.wineType === wineType) &&
+              (filters.countryCode.length === 0 ||
+                wine.countryCode?.toUpperCase() === filters.countryCode.toUpperCase()) &&
+              (normalizedRegion.length === 0 ||
+                normalize(wine.region ?? "").includes(normalizedRegion)) &&
+              (filters.vintageFrom.length === 0 ||
+                (wine.vintageYear ?? 0) >= Number(filters.vintageFrom)) &&
+              (filters.vintageTo.length === 0 ||
+                (wine.vintageYear ?? 0) <= Number(filters.vintageTo)) &&
+              (filters.minScore.length === 0 ||
+                (wine.score100 ?? -1) >= Number(filters.minScore)) &&
+              (filters.maxScore.length === 0 ||
+                (wine.score100 ?? Number.POSITIVE_INFINITY) <= Number(filters.maxScore)) &&
+              (filters.hasMedia.length === 0 ||
+                (filters.hasMedia === "true") === (wine.mediaId !== null)),
           ),
       );
       setConflicts(nextConflicts);
       setUsingCache(showCacheNotice);
     },
-    [query, spaceId, userId, wineType],
+    [filters, query, spaceId, userId, wineType],
   );
 
   useEffect(() => {
@@ -231,7 +283,12 @@ export function WineMemoryPage() {
       void getWineMemory(
         user,
         spaceId,
-        { limit: 100, query, ...(wineType.length === 0 ? {} : { wineType }) },
+        {
+          limit: 100,
+          query,
+          ...(wineType.length === 0 ? {} : { wineType }),
+          ...Object.fromEntries(Object.entries(filters).filter(([, value]) => value.length > 0)),
+        },
         controller.signal,
       )
         .then((response) => {
@@ -249,7 +306,7 @@ export function WineMemoryPage() {
       controller.abort();
       globalThis.clearTimeout(timeout);
     };
-  }, [loadLocal, query, spaceId, user, wineType]);
+  }, [filters, loadLocal, query, spaceId, user, wineType]);
 
   useEffect(() => {
     const changed = (event: Event) => {
@@ -277,6 +334,41 @@ export function WineMemoryPage() {
       counts.set(duplicateKey(wine), (counts.get(duplicateKey(wine)) ?? 0) + 1);
     return counts;
   }, [wines]);
+
+  /**
+   * Duplicate candidates are surfaced for review, never merged automatically.
+   * The record with the most notes is proposed as the survivor so the merge
+   * moves the smaller history.
+   */
+  const duplicateGroups = useMemo(() => {
+    const groups = new Map<string, WineSummary[]>();
+    for (const wine of wines) {
+      const key = duplicateKey(wine);
+      groups.set(key, [...(groups.get(key) ?? []), wine]);
+    }
+    return [...groups.values()]
+      .filter((group) => group.length > 1)
+      .map((group) => [...group].sort((left, right) => right.noteCount - left.noteCount));
+  }, [wines]);
+
+  async function confirmMerge() {
+    if (mergePlan === null || user === null) return;
+    setMergeStatus(null);
+    try {
+      await mergeWines(user, spaceId, mergePlan.target.id, {
+        confirm: true,
+        sourceVersion: mergePlan.source.version,
+        sourceWineId: mergePlan.source.id,
+        targetVersion: mergePlan.target.version,
+      });
+      setMergePlan(null);
+      setMergeStatus("merged");
+      const response = await getWineMemory(user, spaceId, { limit: 100 });
+      setWines(response.data);
+    } catch {
+      setMergeStatus("error");
+    }
+  }
 
   async function clearData() {
     await clearOfflineData();
@@ -388,7 +480,167 @@ export function WineMemoryPage() {
             )}
           </select>
         </label>
+        <label>
+          <span>{t("memory.countryFilter")}</span>
+          <input
+            maxLength={2}
+            onChange={(event) => setFilters({ ...filters, countryCode: event.target.value })}
+            placeholder={t("memory.countryPlaceholder")}
+            value={filters.countryCode}
+          />
+        </label>
+        <label>
+          <span>{t("memory.regionFilter")}</span>
+          <input
+            onChange={(event) => setFilters({ ...filters, region: event.target.value })}
+            value={filters.region}
+          />
+        </label>
+        <label>
+          <span>{t("memory.grapeFilter")}</span>
+          <input
+            onChange={(event) => setFilters({ ...filters, grape: event.target.value })}
+            value={filters.grape}
+          />
+        </label>
+        <label>
+          <span>{t("memory.vintageFrom")}</span>
+          <input
+            inputMode="numeric"
+            onChange={(event) => setFilters({ ...filters, vintageFrom: event.target.value })}
+            value={filters.vintageFrom}
+          />
+        </label>
+        <label>
+          <span>{t("memory.vintageTo")}</span>
+          <input
+            inputMode="numeric"
+            onChange={(event) => setFilters({ ...filters, vintageTo: event.target.value })}
+            value={filters.vintageTo}
+          />
+        </label>
+        <label>
+          <span>{t("memory.minScore")}</span>
+          <input
+            inputMode="numeric"
+            onChange={(event) => setFilters({ ...filters, minScore: event.target.value })}
+            value={filters.minScore}
+          />
+        </label>
+        <label>
+          <span>{t("memory.maxScore")}</span>
+          <input
+            inputMode="numeric"
+            onChange={(event) => setFilters({ ...filters, maxScore: event.target.value })}
+            value={filters.maxScore}
+          />
+        </label>
+        <label>
+          <span>{t("memory.sentimentFilter")}</span>
+          <select
+            onChange={(event) => setFilters({ ...filters, sentiment: event.target.value })}
+            value={filters.sentiment}
+          >
+            <option value="">{t("memory.anySentiment")}</option>
+            {(["like", "neutral", "dislike"] as const).map((value) => (
+              <option key={value} value={value}>
+                {t(`memory.sentimentOption.${value}`)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          <span>{t("memory.mediaFilter")}</span>
+          <select
+            onChange={(event) => setFilters({ ...filters, hasMedia: event.target.value })}
+            value={filters.hasMedia}
+          >
+            <option value="">{t("memory.anyMedia")}</option>
+            <option value="true">{t("memory.withMedia")}</option>
+            <option value="false">{t("memory.withoutMedia")}</option>
+          </select>
+        </label>
+        <label>
+          <span>{t("memory.sortLabel")}</span>
+          <select
+            onChange={(event) => setFilters({ ...filters, sort: event.target.value })}
+            value={filters.sort}
+          >
+            {(["recent", "tasted", "score", "name"] as const).map((value) => (
+              <option key={value} value={value}>
+                {t(`memory.sort.${value}`)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <button className="text-button" onClick={() => setFilters(emptyFilters)} type="button">
+          {t("memory.clearFilters")}
+        </button>
       </div>
+
+      {duplicateGroups.length > 0 ? (
+        <section aria-labelledby="duplicate-title" className="attention-panel">
+          <h2 id="duplicate-title">{t("memory.duplicateTitle")}</h2>
+          <p>{t("memory.duplicateBody")}</p>
+          {duplicateGroups.map(([target, ...others]) => (
+            <article className="conflict-card" key={target.id}>
+              <div>
+                <h3>{t("memory.keepRecord")}</h3>
+                <p>
+                  {target.producerName} — {target.displayName}
+                </p>
+                <p>{t("memory.noteCount", { count: target.noteCount })}</p>
+              </div>
+              {others.map((source) => (
+                <div key={source.id}>
+                  <h3>{t("memory.duplicateRecord")}</h3>
+                  <p>
+                    {source.producerName} — {source.displayName}
+                  </p>
+                  <p>{t("memory.noteCount", { count: source.noteCount })}</p>
+                  <button
+                    className="text-button"
+                    onClick={() => setMergePlan({ source, target })}
+                    type="button"
+                  >
+                    {t("memory.mergeAction")}
+                  </button>
+                </div>
+              ))}
+            </article>
+          ))}
+        </section>
+      ) : null}
+
+      {mergePlan === null ? null : (
+        <div aria-labelledby="merge-confirm-title" className="clear-confirm" role="alertdialog">
+          <h2 id="merge-confirm-title">{t("memory.mergeConfirmTitle")}</h2>
+          <p>
+            {t("memory.mergeConfirmBody", {
+              source: `${mergePlan.source.producerName} ${mergePlan.source.displayName}`,
+              target: `${mergePlan.target.producerName} ${mergePlan.target.displayName}`,
+            })}
+          </p>
+          <div className="hero__actions">
+            <button className="primary-button" onClick={() => void confirmMerge()} type="button">
+              {t("memory.mergeConfirmAction")}
+            </button>
+            <button
+              className="action-link action-link--secondary"
+              onClick={() => setMergePlan(null)}
+              type="button"
+            >
+              {t("spaces.cancelAction")}
+            </button>
+          </div>
+        </div>
+      )}
+      {mergeStatus === "merged" ? <p role="status">{t("memory.mergeDone")}</p> : null}
+      {mergeStatus === "error" ? (
+        <p className="form-error" role="alert">
+          {t("memory.mergeError")}
+        </p>
+      ) : null}
 
       {usingCache ? (
         <p className="cache-note" role="status">

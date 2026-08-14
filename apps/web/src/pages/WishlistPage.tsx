@@ -6,12 +6,8 @@ import { Link } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, partitionId } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
-import {
-  createWishlistItem,
-  getWineMemory,
-  getWishlist,
-  updateWishlistItem,
-} from "../services/api";
+import { getWineMemory } from "../services/api";
+import { createWishlistItem, getWishlist, updateWishlistItem } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
 
 export function WishlistPage() {

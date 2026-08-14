@@ -140,6 +140,9 @@ export function SessionBoundary({
         createInvitationMutation.isPending ||
         acceptInvitationMutation.isPending ||
         removeMemberMutation.isPending,
+      refresh: async () => {
+        queryClient.setQueryData(queryKey, await getBootstrap(user));
+      },
       removeMember: (spaceId, memberId, request) =>
         removeMemberMutation.mutateAsync({ memberId, request, spaceId }),
       signOut,
@@ -150,6 +153,8 @@ export function SessionBoundary({
     bootstrapQuery.data,
     createInvitationMutation,
     createSpaceMutation,
+    queryClient,
+    queryKey,
     removeMemberMutation,
     signOut,
     updateMutation,

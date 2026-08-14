@@ -121,7 +121,11 @@
     "notFoundTitle": "Die pagina ligt niet in de kelder.",
     "notFoundBody": "Ga terug naar home en kies een ander pad."
   },
-  "commonChoice": { "yes": "Ja", "no": "Nee", "unsure": "Niet zeker" },
+  "commonChoice": {
+    "yes": "Ja",
+    "no": "Nee",
+    "unsure": "Niet zeker"
+  },
   "sync": {
     "idle": "Klaar om te synchroniseren",
     "offline": "Op dit apparaat opgeslagen",
@@ -167,7 +171,11 @@
     "tastedAt": "Geproefd op",
     "score": "Score (0–100)",
     "sentiment": "Algemene indruk",
-    "sentimentValue": { "dislike": "Niet lekker", "neutral": "Neutraal", "like": "Lekker" },
+    "sentimentValue": {
+      "dislike": "Niet lekker",
+      "neutral": "Neutraal",
+      "like": "Lekker"
+    },
     "drinkAgain": "Opnieuw drinken?",
     "buyAgain": "Opnieuw kopen?",
     "descriptors": "Maximaal drie kenmerken",
@@ -234,7 +242,44 @@
     "sessions": "Sessies",
     "loggedOnly": "Wijn vastgelegd zonder proefnotitie",
     "noSessionsTitle": "Nog geen sessie in dit Geheugen.",
-    "noSessionsBody": "Maak een reeks zodat de notitie van iedere deelnemer apart blijft."
+    "noSessionsBody": "Maak een reeks zodat de notitie van iedere deelnemer apart blijft.",
+    "countryFilter": "Land",
+    "countryPlaceholder": "ES",
+    "regionFilter": "Regio",
+    "grapeFilter": "Druif",
+    "vintageFrom": "Jaargang vanaf",
+    "vintageTo": "Jaargang tot",
+    "minScore": "Minimale score",
+    "maxScore": "Maximale score",
+    "sentimentFilter": "Indruk",
+    "anySentiment": "Elke indruk",
+    "sentimentOption": {
+      "like": "Goed",
+      "neutral": "Neutraal",
+      "dislike": "Niet goed"
+    },
+    "mediaFilter": "Foto",
+    "anyMedia": "Met of zonder foto",
+    "withMedia": "Met foto",
+    "withoutMedia": "Zonder foto",
+    "sortLabel": "Sorteren op",
+    "sort": {
+      "recent": "Onlangs bijgewerkt",
+      "tasted": "Laatst geproefd",
+      "score": "Score",
+      "name": "Producent en naam"
+    },
+    "clearFilters": "Filters wissen",
+    "duplicateTitle": "Mogelijke duplicaten",
+    "duplicateBody": "Deze records lijken op elkaar. Er wordt niets samengevoegd tot u bevestigt.",
+    "keepRecord": "Record dat blijft",
+    "duplicateRecord": "Mogelijk duplicaat",
+    "mergeAction": "Samenvoegen met het behouden record",
+    "mergeConfirmTitle": "Bevestig deze samenvoeging",
+    "mergeConfirmBody": "{{source}} wordt samengevoegd met {{target}}. Proeverijen, flessen, aankopen, prijzen en bewijs verhuizen mee, en de oude naam blijft doorzoekbaar.",
+    "mergeConfirmAction": "Deze records samenvoegen",
+    "mergeDone": "De records zijn samengevoegd.",
+    "mergeError": "De samenvoeging is niet uitgevoerd. Een van de records is mogelijk gewijzigd."
   },
   "evidence": {
     "openAction": "Bewijs",
@@ -403,14 +448,24 @@
         "disabled": "Extern onderzoek uitgeschakeld",
         "unavailable": "Extern onderzoek niet beschikbaar"
       },
-      "getWineContext": { "available": "Geautoriseerde wijncontext beschikbaar" },
-      "getTasteProfile": { "available": "Smaakprofiel met begrensde steekproef beschikbaar" },
-      "compareWines": { "available": "Deterministische wijnvergelijking beschikbaar" },
+      "getWineContext": {
+        "available": "Geautoriseerde wijncontext beschikbaar"
+      },
+      "getTasteProfile": {
+        "available": "Smaakprofiel met begrensde steekproef beschikbaar"
+      },
+      "compareWines": {
+        "available": "Deterministische wijnvergelijking beschikbaar"
+      },
       "findPriceObservations": {
         "available": "Zoeken in gedateerde opgeslagen prijzen beschikbaar"
       },
-      "buildRecommendation": { "available": "Kwalitatieve aanbevelingsrangschikking beschikbaar" },
-      "createActionDraft": { "available": "Actieconcepten met bevestiging beschikbaar" },
+      "buildRecommendation": {
+        "available": "Kwalitatieve aanbevelingsrangschikking beschikbaar"
+      },
+      "createActionDraft": {
+        "available": "Actieconcepten met bevestiging beschikbaar"
+      },
       "researchWine": {
         "available": "Begrensd en geciteerd wijnonderzoek beschikbaar",
         "disabled": "Begrensd wijnonderzoek uitgeschakeld",
@@ -490,8 +545,16 @@
     "priorityDisplay": "Prioriteit {{priority}}",
     "markPurchased": "Markeer als gekocht",
     "dismiss": "Verwijderen",
-    "priorityValue": { "1": "Laag", "2": "Middel", "3": "Hoog" },
-    "state": { "active": "Actief", "purchased": "Gekocht", "dismissed": "Verwijderd" }
+    "priorityValue": {
+      "1": "Laag",
+      "2": "Middel",
+      "3": "Hoog"
+    },
+    "state": {
+      "active": "Actief",
+      "purchased": "Gekocht",
+      "dismissed": "Verwijderd"
+    }
   },
   "shop": {
     "eyebrow": "Waargenomen, niet beloofd",
@@ -521,7 +584,11 @@
     "recent": "Recent",
     "merchantUnknown": "Verkoper niet vastgelegd",
     "observedAt": "Waargenomen",
-    "channelValue": { "physical": "Fysieke winkel", "online": "Online", "unknown": "Onbekend" },
+    "channelValue": {
+      "physical": "Fysieke winkel",
+      "online": "Online",
+      "unknown": "Onbekend"
+    },
     "sourceValue": {
       "purchase": "Aankoop",
       "receipt": "Bon",
@@ -567,7 +634,11 @@
     "wineCount_other": "{{count}} wijnen",
     "submissionCount": "{{count}} ingediende notitie",
     "submissionCount_other": "{{count}} ingediende notities",
-    "status": { "draft": "Concept", "active": "Actief", "completed": "Voltooid" },
+    "status": {
+      "draft": "Concept",
+      "active": "Actief",
+      "completed": "Voltooid"
+    },
     "newEyebrow": "Dek de tafel",
     "newTitle": "Maak een proefsessie",
     "newBody": "Kies een tijd en eerste reeks. Dit kan offline met wijnen die op het apparaat zijn opgeslagen.",
@@ -634,7 +705,13 @@
       "conclusion": "Het persoonlijke oordeel blijft van jou. Een gedeelde sessie maakt er nooit de notitie van iemand anders van."
     },
     "notSet": "Niet ingevuld",
-    "scale": { "1": "Zeer laag", "2": "Laag", "3": "Gemiddeld", "4": "Hoog", "5": "Zeer hoog" },
+    "scale": {
+      "1": "Zeer laag",
+      "2": "Laag",
+      "3": "Gemiddeld",
+      "4": "Hoog",
+      "5": "Zeer hoog"
+    },
     "descriptors": "Geheugenankers",
     "descriptorHelp": "Kies alleen wat je echt hebt waargenomen. Labels blijven stabiel tussen talen.",
     "descriptorIntensity": "Intensiteit van {{descriptor}}",
@@ -736,5 +813,94 @@
     "conflictBody": "Beide versies zijn bewaard. Kies het lokale formulier of de huidige servernotitie.",
     "keepLocal": "Mijn lokale versie gebruiken",
     "noConclusion": "Deze versie bevat geen conclusietekst."
+  },
+  "dataRights": {
+    "navAction": "Gegevens en privacy",
+    "eyebrow": "Uw gegevens",
+    "title": "Gegevens en privacy",
+    "body": "Exporteer wat van u is, bekijk het gebruik en verwijder op uw voorwaarden.",
+    "exportTitle": "Export",
+    "exportBody": "JSON is de volledige, geversioneerde export. CSV dekt telkens één gekozen tabel.",
+    "exportJsonAction": "JSON exporteren",
+    "csvAction": "CSV van {{dataset}} exporteren",
+    "exportReady": "De geversioneerde JSON-export (schema {{version}}) is gedownload.",
+    "csvReady": "De CSV van {{dataset}} is gedownload.",
+    "dataset": {
+      "wines": "wijnen",
+      "tastings": "proeverijen",
+      "bottles": "flessen",
+      "purchases": "aankopen",
+      "prices": "prijzen"
+    },
+    "mediaTitle": "Foto's",
+    "mediaBody": "Foto's worden nooit automatisch meegestuurd. Exporteer eerst de JSON en kies daarna de foto's die u in een ZIP wilt.",
+    "mediaEmpty": "Exporteer de JSON om de foto's te zien die u kunt kiezen.",
+    "mediaAction": "{{count}} gekozen foto downloaden",
+    "mediaAction_other": "{{count}} gekozen foto's downloaden",
+    "mediaReady": "{{count}} foto is ingepakt.",
+    "mediaReady_other": "{{count}} foto's zijn ingepakt.",
+    "mediaKind": {
+      "label": "Etiketfoto",
+      "receipt": "Bonfoto",
+      "shelf": "Schapfoto",
+      "avatar": "Profielfoto",
+      "other": "Andere foto"
+    },
+    "usageTitle": "Gebruik en budgetten",
+    "usageBody": "Alleen samengevoegde tellingen. Hier wordt geen wijnnaam, notitie, bericht of accountgegeven bewaard.",
+    "usageUnavailable": "Het gebruiksrapport is nu niet beschikbaar.",
+    "providerModes": "AI-aanbieder: {{ai}}. Onderzoeksaanbieder: {{research}}.",
+    "usageMetric": "Functie",
+    "usageScope": "Bereik",
+    "usageUsed": "Vandaag gebruikt",
+    "usageLimit": "Daglimiet",
+    "usageStatus": "Status",
+    "usageResets": "De tellers worden op {{date}} teruggezet.",
+    "metric": {
+      "ai_language_calls": "Assistenttaal",
+      "research_lookups": "Extern onderzoek",
+      "barcode_lookups": "Streepjescode opzoeken",
+      "price_lookups": "Prijzen opzoeken"
+    },
+    "scope": {
+      "global": "Hele installatie",
+      "space": "Deze Ruimte",
+      "user": "U"
+    },
+    "budgetStatus": {
+      "ok": "Binnen budget",
+      "warning": "Nadert de limiet",
+      "critical": "Dicht bij de limiet",
+      "capped": "Op de limiet — de offlineroute wordt gebruikt"
+    },
+    "leaveTitle": "Deze Ruimte verlaten",
+    "leaveBody": "Gedeelde records blijven bij de Ruimte. U verliest toegang bij uw volgende verzoek.",
+    "leaveAction": "Deze Ruimte verlaten",
+    "leftSpace": "U hebt de Ruimte verlaten.",
+    "deleteSpaceTitle": "Deze Ruimte verwijderen",
+    "deleteSpaceBody": "Typ de naam van de Ruimte, {{name}}, om te bevestigen. Er geldt een herstelbare respijtperiode voordat er iets wordt gewist.",
+    "confirmationLabel": "Naam van de Ruimte",
+    "deleteSpaceAction": "Verwijdering inplannen",
+    "cancelDeletionAction": "Verwijdering annuleren",
+    "deletionScheduled": "De verwijdering staat ingepland. U kunt die nog annuleren.",
+    "deletionCanceled": "De verwijdering is geannuleerd.",
+    "deletionPending": "Gegevens worden na {{purgeAfter}} gewist, tenzij u annuleert.",
+    "deleteAccountTitle": "Uw account verwijderen",
+    "deleteAccountBody": "Dit verwijdert uw persoonlijke Ruimte en privégegevens. Gedeelde records blijven bij hun Ruimte. Een recente aanmelding is vereist.",
+    "deleteAccountLabel": "Typ DELETE om te bevestigen",
+    "deleteAccountAction": "Accountverwijdering inplannen",
+    "accountScheduled": "De accountverwijdering staat over {{hours}} uur ingepland.",
+    "retentionTitle": "Wat verwijderen wel en niet doet",
+    "retentionBody": "Verwijderen wist de actieve toepassingsgegevens en opgeslagen foto's. Back-ups van de aanbieder volgen hun eigen bewaartermijn en worden niet direct gewist.",
+    "actionError": "Dat is niet gelukt. Controleer uw verbinding en probeer het opnieuw."
+  },
+  "pwa": {
+    "installTitle": "Va de Vi installeren",
+    "installBody": "Voeg de app toe aan uw apparaat zodat die direct opent en offline werkt.",
+    "installAction": "Installeren",
+    "updateTitle": "Er staat een nieuwe versie klaar",
+    "updateBody": "Herlaad om de nieuwste versie op te halen. Uw werk in de wachtrij blijft bewaard.",
+    "storageWarning": "De offlineopslag is bijna vol. Synchroniseer of wis gegevens om foto's te blijven bewaren.",
+    "storageCritical": "De offlineopslag is vol. Nieuwe foto's blijven niet op dit apparaat, maar uw tekstnotities worden wel opgeslagen."
   }
 }

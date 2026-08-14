@@ -92,6 +92,7 @@ function wineSummary(row: WineRow): WineSummary {
 const wineSelect = `SELECT wine.id, wine.display_name, wine.producer_name, wine.vintage_year,
   wine.non_vintage, wine.wine_type, wine.country_code, wine.region, wine.appellation,
   wine.identity_status, wine.version, wine.created_at, wine.updated_at,
+  wine.normalized_name, wine.normalized_producer_name,
   (SELECT MAX(note.tasted_at) FROM tasting_notes note
     WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
   ) AS last_tasted_at,
@@ -221,11 +222,12 @@ export async function createWine(
         `INSERT INTO wine_records (
           id, space_id, display_name, normalized_name, producer_name,
           normalized_producer_name, vintage_year, non_vintage, wine_type,
-          country_code, region, appellation, bottle_size_ml, barcode, style_text,
+          country_code, normalized_country_code, region, normalized_region,
+          appellation, bottle_size_ml, barcode, style_text,
           identity_status, created_by_user_id, confirmed_by_user_id,
           version, created_at, updated_at, deleted_at
         )
-        SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, actor.id,
+        SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, actor.id,
           CASE WHEN ? = 'confirmed' THEN actor.id ELSE NULL END, 1, ?, ?, NULL
         FROM users actor
         JOIN idempotency_keys command ON command.user_id = actor.id
@@ -245,7 +247,9 @@ export async function createWine(
         options.request.nonVintage ? 1 : 0,
         options.request.wineType ?? null,
         options.request.countryCode ?? null,
+        options.request.countryCode?.toUpperCase() ?? null,
         options.request.region ?? null,
+        options.request.region === undefined ? null : normalizeWineText(options.request.region),
         options.request.appellation ?? null,
         options.request.bottleSizeMl ?? null,
         options.request.barcode ?? null,
@@ -346,36 +350,67 @@ export async function createWine(
   };
 }
 
-function encodeCursor(updatedAt: string, id: string): string {
-  return btoa(`${updatedAt}\n${id}`).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
+function encodeCursor(sortValue: string, id: string): string {
+  return btoa(`${sortValue}\n${id}`).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
 }
 
-function decodeCursor(cursor: string | undefined): { id: string; updatedAt: string } | null {
+function decodeCursor(cursor: string | undefined): { id: string; sortValue: string } | null {
   if (cursor === undefined) return null;
   try {
     const padded = cursor
       .replaceAll("-", "+")
       .replaceAll("_", "/")
       .padEnd(Math.ceil(cursor.length / 4) * 4, "=");
-    const [updatedAt, id, ...rest] = atob(padded).split("\n");
-    return updatedAt !== undefined && id !== undefined && rest.length === 0
-      ? { id, updatedAt }
+    const [sortValue, id, ...rest] = atob(padded).split("\n");
+    return sortValue !== undefined && id !== undefined && rest.length === 0
+      ? { id, sortValue }
       : null;
   } catch {
     return null;
   }
 }
 
+/**
+ * Sort keys are `(value, id)` pairs so a page boundary stays stable while other
+ * members keep writing. Every key falls back to a sortable constant when its
+ * value is missing, which keeps a null-valued row from disappearing between
+ * pages.
+ */
+const sortKeys = {
+  name: {
+    direction: "ASC",
+    expression: "(wine.normalized_producer_name || ' ' || wine.normalized_name)",
+  },
+  recent: { direction: "DESC", expression: "wine.updated_at" },
+  score: { direction: "DESC", expression: "COALESCE(printf('%03d', score_100), '-1')" },
+  tasted: { direction: "DESC", expression: "COALESCE(last_tasted_at, '')" },
+} as const;
+
+export type ListWinesFilters = {
+  countryCode?: string;
+  cursor?: string;
+  grape?: string;
+  hasMedia?: "false" | "true";
+  identityStatus?: "confirmed" | "draft" | "needs_review";
+  limit: number;
+  maxScore?: number;
+  minScore?: number;
+  principal: FirebasePrincipal;
+  query?: string;
+  region?: string;
+  sentiment?: "dislike" | "like" | "neutral";
+  sort: "name" | "recent" | "score" | "tasted";
+  spaceId: string;
+  tastedFrom?: string;
+  tastedTo?: string;
+  vintageFrom?: number;
+  vintageTo?: number;
+  wineType?: WineSummary["wineType"];
+};
+
 export async function listWines(
   database: D1Database,
-  options: {
-    cursor?: string;
-    limit: number;
-    principal: FirebasePrincipal;
-    query?: string;
-    spaceId: string;
-    wineType?: WineSummary["wineType"];
-  },
+  options: ListWinesFilters,
 ): Promise<WineMemoryResponse | null> {
   const cursor = decodeCursor(options.cursor);
   if (options.cursor !== undefined && cursor === null) return null;
@@ -391,37 +426,110 @@ export async function listWines(
     .bind(options.principal.firebaseUid, options.spaceId)
     .first<{ allowed: number }>();
   if (membership === null) return null;
+
   const query = options.query === undefined ? null : `%${normalizeWineText(options.query)}%`;
+  const region = options.region === undefined ? null : `%${normalizeWineText(options.region)}%`;
+  const grape = options.grape === undefined ? null : `%${normalizeWineText(options.grape)}%`;
+  const sort = sortKeys[options.sort];
+  const comparison = sort.direction === "DESC" ? "<" : ">";
+
   const result = await database
     .prepare(
-      `${wineSelect}
-      JOIN space_memberships membership ON membership.space_id = wine.space_id
-      JOIN users actor ON actor.id = membership.user_id
-      WHERE wine.space_id = ? AND wine.deleted_at IS NULL
-        AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
-        AND membership.status = 'active'
-        AND (? IS NULL OR wine.wine_type = ?)
-        AND (? IS NULL OR wine.normalized_name LIKE ? OR wine.normalized_producer_name LIKE ?
-          OR (wine.normalized_producer_name || ' ' || wine.normalized_name) LIKE ?)
-        AND (? IS NULL OR wine.updated_at < ? OR (wine.updated_at = ? AND wine.id < ?))
-      ORDER BY wine.updated_at DESC, wine.id DESC LIMIT ?`,
+      `SELECT * FROM (
+        ${wineSelect}
+        JOIN space_memberships membership ON membership.space_id = wine.space_id
+        JOIN users actor ON actor.id = membership.user_id
+        WHERE wine.space_id = ? AND wine.deleted_at IS NULL
+          AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
+          AND membership.status = 'active'
+          AND (? IS NULL OR wine.wine_type = ?)
+          AND (? IS NULL OR wine.identity_status = ?)
+          AND (? IS NULL OR wine.normalized_country_code = ?)
+          AND (? IS NULL OR wine.normalized_region LIKE ?)
+          AND (? IS NULL OR wine.vintage_year >= ?)
+          AND (? IS NULL OR wine.vintage_year <= ?)
+          AND (? IS NULL OR EXISTS (
+            SELECT 1 FROM wine_grapes grape
+            WHERE grape.wine_id = wine.id AND grape.space_id = wine.space_id
+              AND grape.normalized_name LIKE ?
+          ))
+          AND (? IS NULL OR (? = 'true') = EXISTS (
+            SELECT 1 FROM wine_media link
+            JOIN media_assets media ON media.id = link.media_id AND media.space_id = wine.space_id
+            WHERE link.wine_id = wine.id AND media.processing_status = 'ready'
+              AND media.deleted_at IS NULL
+          ))
+          AND (? IS NULL OR EXISTS (
+            SELECT 1 FROM tasting_notes note
+            WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
+              AND note.deleted_at IS NULL AND note.sentiment = ?
+          ))
+          AND (? IS NULL OR EXISTS (
+            SELECT 1 FROM tasting_notes note
+            WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
+              AND note.deleted_at IS NULL AND note.tasted_at >= ?
+          ))
+          AND (? IS NULL OR EXISTS (
+            SELECT 1 FROM tasting_notes note
+            WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
+              AND note.deleted_at IS NULL AND note.tasted_at <= ?
+          ))
+          AND (? IS NULL OR wine.normalized_name LIKE ? OR wine.normalized_producer_name LIKE ?
+            OR (wine.normalized_producer_name || ' ' || wine.normalized_name) LIKE ?
+            OR EXISTS (
+              SELECT 1 FROM wine_aliases alias
+              WHERE alias.wine_id = wine.id AND alias.space_id = wine.space_id
+                AND alias.normalized_alias LIKE ?
+            ))
+      ) AS wine
+      WHERE (? IS NULL OR score_100 >= ?)
+        AND (? IS NULL OR score_100 <= ?)
+        AND (? IS NULL OR ${sort.expression} ${comparison} ?
+          OR (${sort.expression} = ? AND wine.id ${comparison} ?))
+      ORDER BY ${sort.expression} ${sort.direction}, wine.id ${sort.direction}
+      LIMIT ?`,
     )
     .bind(
       options.spaceId,
       options.principal.firebaseUid,
       options.wineType ?? null,
       options.wineType ?? null,
+      options.identityStatus ?? null,
+      options.identityStatus ?? null,
+      options.countryCode?.toUpperCase() ?? null,
+      options.countryCode?.toUpperCase() ?? null,
+      region,
+      region,
+      options.vintageFrom ?? null,
+      options.vintageFrom ?? null,
+      options.vintageTo ?? null,
+      options.vintageTo ?? null,
+      grape,
+      grape,
+      options.hasMedia ?? null,
+      options.hasMedia ?? null,
+      options.sentiment ?? null,
+      options.sentiment ?? null,
+      options.tastedFrom ?? null,
+      options.tastedFrom ?? null,
+      options.tastedTo ?? null,
+      options.tastedTo ?? null,
       query,
       query,
       query,
       query,
-      cursor?.updatedAt ?? null,
-      cursor?.updatedAt ?? null,
-      cursor?.updatedAt ?? null,
+      query,
+      options.minScore ?? null,
+      options.minScore ?? null,
+      options.maxScore ?? null,
+      options.maxScore ?? null,
+      cursor?.sortValue ?? null,
+      cursor?.sortValue ?? null,
+      cursor?.sortValue ?? null,
       cursor?.id ?? null,
       options.limit + 1,
     )
-    .all<WineRow & { updated_at: string }>();
+    .all<WineRow & { last_tasted_at: string | null; updated_at: string }>();
 
   if (!result.success) return null;
   const hasMore = result.results.length > options.limit;
@@ -431,9 +539,32 @@ export async function listWines(
     data: rows.map(wineSummary),
     page: {
       hasMore,
-      nextCursor: hasMore && last !== undefined ? encodeCursor(last.updated_at, last.id) : null,
+      nextCursor:
+        hasMore && last !== undefined
+          ? encodeCursor(sortValueOf(options.sort, last), last.id)
+          : null,
     },
   };
+}
+
+function sortValueOf(
+  sort: ListWinesFilters["sort"],
+  row: WineRow & { last_tasted_at: string | null; updated_at: string },
+): string {
+  switch (sort) {
+    case "name": {
+      return `${normalizeWineText(row.producer_name)} ${normalizeWineText(row.display_name)}`;
+    }
+    case "score": {
+      return row.score_100 === null ? "-1" : String(row.score_100).padStart(3, "0");
+    }
+    case "tasted": {
+      return row.last_tasted_at ?? "";
+    }
+    default: {
+      return row.updated_at;
+    }
+  }
 }
 
 export async function createTastingNote(

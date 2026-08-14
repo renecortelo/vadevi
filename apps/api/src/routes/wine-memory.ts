@@ -12,8 +12,11 @@ import {
   MediaReservationRequestSchema,
   MediaReservationResponseSchema,
   MediaUploadResponseSchema,
+  MergeWinesRequestSchema,
+  MergeWinesResponseSchema,
   QuickTastingRequestSchema,
   SpaceIdPathSchema,
+  WineIdPathSchema,
   SyncRequestSchema,
   SyncResponseSchema,
   TastingNoteResponseSchema,
@@ -24,6 +27,7 @@ import { z } from "zod";
 
 import { readMedia, reserveMedia, uploadMedia } from "../repositories/media";
 import { createDeepTastingNote } from "../repositories/tasting-sessions";
+import { mergeWines } from "../repositories/wine-merge";
 import { createTastingNote, createWine, listWines, syncSpace } from "../repositories/wine-memory";
 import type { ApiEnvironment } from "../types";
 
@@ -327,9 +331,49 @@ const syncRoute = createRoute({
   },
 });
 
+const mergeWinesRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/wines/{wineId}/merge",
+  operationId: "mergeWines",
+  tags: ["Wines"],
+  summary: "Merge a confirmed duplicate into this wine after explicit confirmation",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    params: WineIdPathSchema,
+    body: { content: { "application/json": { schema: MergeWinesRequestSchema } }, required: true },
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: MergeWinesResponseSchema } },
+      description: "The surviving wine, moved reference counts, and the merged record id.",
+    },
+    400: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Invalid merge request.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Space or wine unavailable.",
+    },
+    409: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "A wine changed or was already merged before this confirmation.",
+    },
+  },
+});
+
 function errorEnvelope(
   requestId: string,
-  code: "IDEMPOTENCY_CONFLICT" | "MEDIA_REJECTED" | "NOT_FOUND" | "VALIDATION_FAILED",
+  code:
+    | "IDEMPOTENCY_CONFLICT"
+    | "MEDIA_REJECTED"
+    | "NOT_FOUND"
+    | "VALIDATION_FAILED"
+    | "VERSION_CONFLICT",
   message: string,
 ) {
   return ErrorEnvelopeSchema.parse({ error: { code, message, requestId } });
@@ -368,12 +412,9 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(listWinesRoute, async (context) => {
     const query = context.req.valid("query");
     const response = await listWines(context.env.DB!, {
-      cursor: query.cursor,
-      limit: query.limit,
+      ...query,
       principal: context.get("principal"),
-      query: query.query,
       spaceId: context.req.valid("param").spaceId,
-      wineType: query.wineType,
     });
     return response === null
       ? context.json(
@@ -552,6 +593,48 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
           }),
           200,
         );
+  });
+
+  app.openapi(mergeWinesRoute, async (context) => {
+    const params = context.req.valid("param");
+    const result = await mergeWines(context.env.DB!, {
+      principal: context.get("principal"),
+      request: context.req.valid("json"),
+      requestId: context.get("requestId"),
+      spaceId: params.spaceId,
+      targetWineId: params.wineId,
+    });
+    if (result.kind === "invalid") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "VALIDATION_FAILED",
+          "A wine cannot be merged into itself.",
+        ),
+        400,
+      );
+    }
+    if (result.kind === "conflict") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "VERSION_CONFLICT",
+          "One of the wines changed before this confirmation.",
+        ),
+        409,
+      );
+    }
+    if (result.kind === "unavailable") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "NOT_FOUND",
+          "The requested resource was not found.",
+        ),
+        404,
+      );
+    }
+    return context.json(MergeWinesResponseSchema.parse(result.response), 200);
   });
 
   app.openapi(syncRoute, async (context) => {

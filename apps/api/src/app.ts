@@ -16,6 +16,7 @@ import { registerActionDraftRoutes } from "./routes/action-drafts";
 import { registerAssistantRoutes } from "./routes/assistant";
 import { registerCellarRoutes } from "./routes/cellar";
 import { registerProvenanceRoutes } from "./routes/provenance";
+import { registerReleaseRoutes } from "./routes/release";
 import { registerResearchRoutes } from "./routes/research";
 import { registerSpaceRoutes } from "./routes/spaces";
 import { registerTastingSessionRoutes } from "./routes/tasting-sessions";
@@ -265,6 +266,7 @@ export function createApi() {
   });
 
   registerSpaceRoutes(app);
+  registerReleaseRoutes(app);
   registerActionDraftRoutes(app);
   registerAssistantRoutes(app);
   registerCellarRoutes(app);

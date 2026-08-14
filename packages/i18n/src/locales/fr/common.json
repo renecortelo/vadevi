@@ -121,7 +121,11 @@
     "notFoundTitle": "Cette page n'est pas dans la cave.",
     "notFoundBody": "Revenez à l'accueil et choisissez un autre chemin."
   },
-  "commonChoice": { "yes": "Oui", "no": "Non", "unsure": "Je ne sais pas" },
+  "commonChoice": {
+    "yes": "Oui",
+    "no": "Non",
+    "unsure": "Je ne sais pas"
+  },
   "sync": {
     "idle": "Prêt à synchroniser",
     "offline": "Enregistré sur cet appareil",
@@ -167,7 +171,11 @@
     "tastedAt": "Dégusté le",
     "score": "Note (0–100)",
     "sentiment": "Impression générale",
-    "sentimentValue": { "dislike": "Je n'aime pas", "neutral": "Neutre", "like": "J'aime" },
+    "sentimentValue": {
+      "dislike": "Je n'aime pas",
+      "neutral": "Neutre",
+      "like": "J'aime"
+    },
     "drinkAgain": "En reboire ?",
     "buyAgain": "En racheter ?",
     "descriptors": "Jusqu'à trois descripteurs",
@@ -234,7 +242,44 @@
     "sessions": "Sessions",
     "loggedOnly": "Vin enregistré sans note de dégustation",
     "noSessionsTitle": "Aucune session dans cette Mémoire.",
-    "noSessionsBody": "Créez une série pour séparer la note de chaque participant."
+    "noSessionsBody": "Créez une série pour séparer la note de chaque participant.",
+    "countryFilter": "Pays",
+    "countryPlaceholder": "ES",
+    "regionFilter": "Région",
+    "grapeFilter": "Cépage",
+    "vintageFrom": "Millésime à partir de",
+    "vintageTo": "Millésime jusqu'à",
+    "minScore": "Note minimale",
+    "maxScore": "Note maximale",
+    "sentimentFilter": "Impression",
+    "anySentiment": "Toute impression",
+    "sentimentOption": {
+      "like": "Apprécié",
+      "neutral": "Neutre",
+      "dislike": "Peu apprécié"
+    },
+    "mediaFilter": "Photo",
+    "anyMedia": "Avec ou sans photo",
+    "withMedia": "Avec photo",
+    "withoutMedia": "Sans photo",
+    "sortLabel": "Trier par",
+    "sort": {
+      "recent": "Mis à jour récemment",
+      "tasted": "Dernière dégustation",
+      "score": "Note",
+      "name": "Producteur et nom"
+    },
+    "clearFilters": "Effacer les filtres",
+    "duplicateTitle": "Doublons possibles",
+    "duplicateBody": "Ces fiches se ressemblent. Rien n'est fusionné avant votre confirmation.",
+    "keepRecord": "Fiche conservée",
+    "duplicateRecord": "Doublon possible",
+    "mergeAction": "Fusionner dans la fiche conservée",
+    "mergeConfirmTitle": "Confirmer cette fusion",
+    "mergeConfirmBody": "{{source}} sera fusionné dans {{target}}. Les dégustations, bouteilles, achats, prix et preuves sont transférés, et l'ancien nom reste consultable.",
+    "mergeConfirmAction": "Fusionner ces fiches",
+    "mergeDone": "Les fiches ont été fusionnées.",
+    "mergeError": "La fusion n'a pas eu lieu. Une des fiches a peut-être changé."
   },
   "evidence": {
     "openAction": "Preuves",
@@ -403,14 +448,24 @@
         "disabled": "Recherche externe désactivée",
         "unavailable": "Recherche externe indisponible"
       },
-      "getWineContext": { "available": "Contexte autorisé du vin disponible" },
-      "getTasteProfile": { "available": "Profil gustatif à échantillon limité disponible" },
-      "compareWines": { "available": "Comparaison déterministe des vins disponible" },
-      "findPriceObservations": { "available": "Recherche de prix enregistrés et datés disponible" },
+      "getWineContext": {
+        "available": "Contexte autorisé du vin disponible"
+      },
+      "getTasteProfile": {
+        "available": "Profil gustatif à échantillon limité disponible"
+      },
+      "compareWines": {
+        "available": "Comparaison déterministe des vins disponible"
+      },
+      "findPriceObservations": {
+        "available": "Recherche de prix enregistrés et datés disponible"
+      },
       "buildRecommendation": {
         "available": "Classement qualitatif des recommandations disponible"
       },
-      "createActionDraft": { "available": "Brouillons d'action avec confirmation disponibles" },
+      "createActionDraft": {
+        "available": "Brouillons d'action avec confirmation disponibles"
+      },
       "researchWine": {
         "available": "Recherche de vin limitée et citée disponible",
         "disabled": "Recherche de vin limitée désactivée",
@@ -490,8 +545,16 @@
     "priorityDisplay": "Priorité {{priority}}",
     "markPurchased": "Marquer acheté",
     "dismiss": "Écarter",
-    "priorityValue": { "1": "Faible", "2": "Moyenne", "3": "Élevée" },
-    "state": { "active": "Active", "purchased": "Acheté", "dismissed": "Écarté" }
+    "priorityValue": {
+      "1": "Faible",
+      "2": "Moyenne",
+      "3": "Élevée"
+    },
+    "state": {
+      "active": "Active",
+      "purchased": "Acheté",
+      "dismissed": "Écarté"
+    }
   },
   "shop": {
     "eyebrow": "Observé, jamais promis",
@@ -521,7 +584,11 @@
     "recent": "Récent",
     "merchantUnknown": "Commerçant non renseigné",
     "observedAt": "Observé",
-    "channelValue": { "physical": "Magasin physique", "online": "En ligne", "unknown": "Inconnu" },
+    "channelValue": {
+      "physical": "Magasin physique",
+      "online": "En ligne",
+      "unknown": "Inconnu"
+    },
     "sourceValue": {
       "purchase": "Achat",
       "receipt": "Ticket",
@@ -567,7 +634,11 @@
     "wineCount_other": "{{count}} vins",
     "submissionCount": "{{count}} note soumise",
     "submissionCount_other": "{{count}} notes soumises",
-    "status": { "draft": "Brouillon", "active": "Active", "completed": "Terminée" },
+    "status": {
+      "draft": "Brouillon",
+      "active": "Active",
+      "completed": "Terminée"
+    },
     "newEyebrow": "Dressez la table",
     "newTitle": "Créer une session de dégustation",
     "newBody": "Choisissez l'heure et la série initiale. Cela fonctionne hors ligne avec les vins enregistrés sur l'appareil.",
@@ -634,7 +705,13 @@
       "conclusion": "Le verdict personnel reste le vôtre. Une session partagée ne le transforme jamais en note de quelqu'un d'autre."
     },
     "notSet": "Non renseigné",
-    "scale": { "1": "Très faible", "2": "Faible", "3": "Moyen", "4": "Élevé", "5": "Très élevé" },
+    "scale": {
+      "1": "Très faible",
+      "2": "Faible",
+      "3": "Moyen",
+      "4": "Élevé",
+      "5": "Très élevé"
+    },
     "descriptors": "Repères de mémoire",
     "descriptorHelp": "Choisissez uniquement les repères réellement perçus. Les libellés restent stables entre les langues.",
     "descriptorIntensity": "Intensité de {{descriptor}}",
@@ -736,5 +813,94 @@
     "conflictBody": "Les deux versions sont conservées. Choisissez le formulaire local ou la note actuelle du serveur.",
     "keepLocal": "Utiliser ma version locale",
     "noConclusion": "Cette version ne contient aucune conclusion."
+  },
+  "dataRights": {
+    "navAction": "Données et confidentialité",
+    "eyebrow": "Vos données",
+    "title": "Données et confidentialité",
+    "body": "Exportez ce qui vous appartient, consultez l'usage et supprimez à vos conditions.",
+    "exportTitle": "Export",
+    "exportBody": "Le JSON est l'export complet et versionné. Le CSV couvre une table sélectionnée à la fois.",
+    "exportJsonAction": "Exporter le JSON",
+    "csvAction": "Exporter le CSV {{dataset}}",
+    "exportReady": "L'export JSON versionné (schéma {{version}}) a été téléchargé.",
+    "csvReady": "Le CSV {{dataset}} a été téléchargé.",
+    "dataset": {
+      "wines": "vins",
+      "tastings": "dégustations",
+      "bottles": "bouteilles",
+      "purchases": "achats",
+      "prices": "prix"
+    },
+    "mediaTitle": "Photos",
+    "mediaBody": "Les photos ne sont jamais incluses automatiquement. Exportez d'abord le JSON, puis choisissez les photos souhaitées dans un ZIP.",
+    "mediaEmpty": "Exportez le JSON pour lister les photos sélectionnables.",
+    "mediaAction": "Télécharger {{count}} photo sélectionnée",
+    "mediaAction_other": "Télécharger {{count}} photos sélectionnées",
+    "mediaReady": "{{count}} photo a été empaquetée.",
+    "mediaReady_other": "{{count}} photos ont été empaquetées.",
+    "mediaKind": {
+      "label": "Photo d'étiquette",
+      "receipt": "Photo de ticket",
+      "shelf": "Photo de rayon",
+      "avatar": "Photo de profil",
+      "other": "Autre photo"
+    },
+    "usageTitle": "Usage et budgets",
+    "usageBody": "Uniquement des compteurs agrégés. Aucun nom de vin, note, message ou détail de compte n'est enregistré ici.",
+    "usageUnavailable": "Le rapport d'usage n'est pas disponible pour le moment.",
+    "providerModes": "Fournisseur d'IA : {{ai}}. Fournisseur de recherche : {{research}}.",
+    "usageMetric": "Capacité",
+    "usageScope": "Portée",
+    "usageUsed": "Utilisé aujourd'hui",
+    "usageLimit": "Plafond quotidien",
+    "usageStatus": "État",
+    "usageResets": "Les compteurs sont remis à zéro le {{date}}.",
+    "metric": {
+      "ai_language_calls": "Langage de l'assistant",
+      "research_lookups": "Recherche externe",
+      "barcode_lookups": "Lecture de code-barres",
+      "price_lookups": "Recherche de prix"
+    },
+    "scope": {
+      "global": "Tout le déploiement",
+      "space": "Cet Espace",
+      "user": "Vous"
+    },
+    "budgetStatus": {
+      "ok": "Dans le budget",
+      "warning": "Approche du plafond",
+      "critical": "Très près du plafond",
+      "capped": "Plafonné — la voie hors ligne est utilisée"
+    },
+    "leaveTitle": "Quitter cet Espace",
+    "leaveBody": "Les enregistrements partagés restent dans l'Espace. Vous perdez l'accès dès la requête suivante.",
+    "leaveAction": "Quitter cet Espace",
+    "leftSpace": "Vous avez quitté l'Espace.",
+    "deleteSpaceTitle": "Supprimer cet Espace",
+    "deleteSpaceBody": "Saisissez le nom de l'Espace, {{name}}, pour confirmer. Un délai de grâce récupérable précède toute purge.",
+    "confirmationLabel": "Nom de l'Espace",
+    "deleteSpaceAction": "Programmer la suppression",
+    "cancelDeletionAction": "Annuler la suppression",
+    "deletionScheduled": "La suppression est programmée. Vous pouvez encore l'annuler.",
+    "deletionCanceled": "La suppression a été annulée.",
+    "deletionPending": "Les données sont purgées après {{purgeAfter}} sauf annulation.",
+    "deleteAccountTitle": "Supprimer votre compte",
+    "deleteAccountBody": "Ceci supprime votre Espace personnel et vos données privées. Les enregistrements partagés restent dans leur Espace. Une connexion récente est requise.",
+    "deleteAccountLabel": "Saisissez DELETE pour confirmer",
+    "deleteAccountAction": "Programmer la suppression du compte",
+    "accountScheduled": "La suppression du compte est programmée dans {{hours}} heures.",
+    "retentionTitle": "Ce que la suppression fait et ne fait pas",
+    "retentionBody": "La suppression retire les données applicatives actives et les photos stockées. Les sauvegardes gérées par le fournisseur suivent leur propre calendrier et ne sont pas effacées instantanément.",
+    "actionError": "Cela n'a pas fonctionné. Vérifiez votre connexion et réessayez."
+  },
+  "pwa": {
+    "installTitle": "Installer Va de Vi",
+    "installBody": "Ajoutez-la à votre appareil pour un lancement instantané et un usage hors ligne.",
+    "installAction": "Installer",
+    "updateTitle": "Une nouvelle version est prête",
+    "updateBody": "Rechargez pour obtenir la dernière version. Votre travail en attente est conservé.",
+    "storageWarning": "Le stockage hors ligne est presque plein. Synchronisez ou effacez des données pour continuer à enregistrer des photos.",
+    "storageCritical": "Le stockage hors ligne est plein. Les nouvelles photos ne sont pas conservées sur cet appareil, mais vos notes texte sont enregistrées."
   }
 }

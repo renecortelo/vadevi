@@ -212,3 +212,42 @@ Phase 5 exit criteria:
 - canceling or expiring an action draft creates no domain record, while repeated confirmation creates exactly one resource
 
 The Phase 0–5 release-candidate audit and explicit Phase 6 handoff are recorded in `docs/phase-6-handoff.md`. That audit distinguishes completed phase commitments from full-MVP acceptance work that intentionally belongs to Phase 6.
+
+## Completed milestone: Phase 6 — release hardening, data rights, and review evidence
+
+Implemented:
+
+- migration `0012` adds confirmed deletion jobs, aggregate usage counters, merge tombstones, and the accent-folded columns behind the broader Wine Memory filter surface
+- versioned JSON export (`schemaVersion` `2026.1`) plus selected CSV datasets for wines, tastings, bottles, purchases, and prices, scoped by server-side role
+- an owner or admin exports the Space, a member exports their own contributions plus shared wine metadata, and an unsubmitted draft note stays author-only in every scope
+- explicitly selected private media is packaged into a ZIP written inside the Worker, so photo bytes never reach a packaging service; unauthorized ids are skipped rather than reported
+- exported CSV cells that begin with a spreadsheet formula character are quoted, so exported user text is never evaluated
+- confirmed, recoverable, idempotent Space deletion behind a typed name confirmation, and account deletion behind a recent sign-in, both executed by the scheduled handler with R2 cleanup
+- leaving a shared Space removes access without deleting shared records and pseudonymizes authorship only on request
+- the broader MVP filter surface — country, region, grape, vintage range, score range, sentiment, photo presence, tasted-date range, and four sort orders — with accent-insensitive matching and stable cursor pagination on every sort
+- a deliberate confirmed merge that requires both current versions, moves every reference, records one audit event, keeps the losing name searchable as a merge alias, and replays without moving rows twice
+- pseudo-localization with a documented 35% expansion floor, plus per-locale interpolation, ICU brace, source-key leakage, long-string, decimal, date-order, and currency checks in the i18n gate
+- eight-locale main-flow rendering tests and a pseudo-locale layout probe over home, Quick Log, Wine Memory, Sessions, Cellar, and Data and privacy
+- a hardened service worker with revision-derived cache names, install tolerance for an unreachable asset, `SKIP_WAITING` update handling, stale-while-revalidate translation bundles, and cache cleanup limited to this application
+- install guidance that appears only when the browser reports installability and can be dismissed permanently, plus a storage-pressure notice at 70% and 90% of the browser quota estimate
+- a private usage and budget page with per-user and global daily caps, 70%/90% thresholds, and hard caps enforced before an optional provider is called
+- reaching a cap degrades an assistant turn to the deterministic path and a research job to the same explicit degraded result an unconfigured deployment produces
+- an enforced initial-route JavaScript budget in `pnpm check`, backed by splitting the web API client into eager and lazy modules and loading session/deep-note replay clients on demand
+- ADR-0007 recording the export and deletion boundary
+
+Phase 6 evidence captured on 2026-08-14:
+
+- the four baseline commands pass: `pnpm install --frozen-lockfile`, `pnpm validate:env`, `pnpm check`, and `pnpm audit --audit-level high`
+- the complete `pnpm check` gate passes formatting, lint, strict typechecks, 109 tests, generated OpenAPI, eight-catalog/ontology/pseudo-locale validation, the PWA production build, the Worker dry-run, and the bundle budget
+- Workers tests cover export scope and draft privacy, CSV formula guarding, selection-only media, typed-confirmation and idempotent deletion, the scheduled purge with R2 cleanup and its re-run no-op, recent-login enforcement, leaving a Space, accent-insensitive filters, stable sorted pagination, confirmed merge with audit and replay, usage reporting, and outsider denial at every new boundary
+- web tests cover service-worker cache boundaries and the eight-locale plus pseudo-locale main flow
+- both moderate development-only advisories under `firebase-tools` are closed by targeted `pnpm.overrides`, and the Firebase Auth Emulator workflow was retested afterwards; `pnpm audit` reports no known vulnerabilities at any severity
+- initial-route JavaScript measures 247.3 KiB gzip against the 250 KiB target, now enforced rather than merely observed
+- the public worktree contains no private key, certificate, or common provider-credential pattern, and `AI_PROVIDER=none` and `RESEARCH_PROVIDER=none` remain the public defaults
+
+Phase 6 exit criteria, assessed honestly:
+
+- **Met:** every §20 acceptance criterion that automated evidence can establish, no critical or high security finding, no failing CI gate, and a passing provider-disabled suite.
+- **Not met:** fluent-human sign-off for the seven non-English catalogs, browser drills for the new Phase 6 screens, preview-environment acceptance against isolated non-production resources, and measured LCP/INP/API p95 numbers.
+
+Those four items are tracked in `docs/release-review.md`, `docs/localization-review.md`, and `docs/preview-environment.md`. Until they are closed, Phase 6 is code-complete but the MVP is not production-ready.

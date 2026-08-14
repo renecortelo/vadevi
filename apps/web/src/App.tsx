@@ -5,7 +5,11 @@ import { Route, Routes } from "react-router";
 import { useAuth } from "./auth/AuthContext";
 import { AuthProvider } from "./auth/AuthProvider";
 import { AppShell } from "./components/AppShell";
-import { PwaUpdatePrompt } from "./components/PwaUpdatePrompt";
+import {
+  InstallPrompt,
+  PwaUpdatePrompt,
+  StoragePressureNotice,
+} from "./components/PwaUpdatePrompt";
 import { HomePage } from "./pages/HomePage";
 import { InfoPage } from "./pages/InfoPage";
 import { InvitationAcceptPage, InvitationSignInPage } from "./pages/InvitationPage";
@@ -18,6 +22,9 @@ import { OfflineSyncProvider } from "./offline/OfflineSyncProvider";
 
 const DeepTastingPage = lazy(() =>
   import("./pages/DeepTastingPage").then((module) => ({ default: module.DeepTastingPage })),
+);
+const DataRightsPage = lazy(() =>
+  import("./pages/DataRightsPage").then((module) => ({ default: module.DataRightsPage })),
 );
 const CellarPage = lazy(() =>
   import("./pages/CellarPage").then((module) => ({ default: module.CellarPage })),
@@ -162,6 +169,14 @@ export function AuthenticatedRoutes() {
             path="vicenc"
           />
           <Route element={<SpaceSettingsPage />} path="spaces" />
+          <Route
+            element={
+              <DeferredPage>
+                <DataRightsPage />
+              </DeferredPage>
+            }
+            path="settings/data"
+          />
           <Route element={<NewSpacePage />} path="spaces/new" />
           <Route
             element={<InfoPage bodyKey="pages.notFoundBody" titleKey="pages.notFoundTitle" />}
@@ -170,6 +185,8 @@ export function AuthenticatedRoutes() {
         </Route>
       </Routes>
       <PwaUpdatePrompt />
+      <InstallPrompt />
+      <StoragePressureNotice />
     </>
   );
 }

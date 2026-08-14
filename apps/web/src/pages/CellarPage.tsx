@@ -6,7 +6,8 @@ import { Link } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, partitionId } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
-import { createPurchase, getBottles, getWineMemory, updateBottle } from "../services/api";
+import { getWineMemory } from "../services/api";
+import { createPurchase, getBottles, updateBottle } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
 
 const emptyInventory: BottleListResponse["data"]["inventory"] = {

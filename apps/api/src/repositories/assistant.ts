@@ -201,6 +201,7 @@ async function searchMemory(
         limit: 10,
         principal,
         ...(query === undefined ? {} : { query }),
+        sort: "recent",
         spaceId: space.id,
       });
       for (const wine of response?.data ?? []) {
@@ -212,7 +213,12 @@ async function searchMemory(
       }
     }
     if (visibleWineId !== null && !results.has(`${space.id}:${visibleWineId}`)) {
-      const response = await listWines(database, { limit: 100, principal, spaceId: space.id });
+      const response = await listWines(database, {
+        limit: 100,
+        principal,
+        sort: "recent",
+        spaceId: space.id,
+      });
       const wine = response?.data.find((candidate: WineSummary) => candidate.id === visibleWineId);
       if (wine !== undefined) {
         results.set(`${space.id}:${wine.id}`, { spaceId: space.id, spaceName: space.name, wine });
@@ -221,7 +227,12 @@ async function searchMemory(
   }
   if (results.size === 0 && broadFallback) {
     for (const space of spaces) {
-      const response = await listWines(database, { limit: 10, principal, spaceId: space.id });
+      const response = await listWines(database, {
+        limit: 10,
+        principal,
+        sort: "recent",
+        spaceId: space.id,
+      });
       for (const wine of response?.data ?? []) {
         results.set(`${space.id}:${wine.id}`, {
           spaceId: space.id,

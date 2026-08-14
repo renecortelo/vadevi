@@ -18,7 +18,8 @@ import {
   queueSessionWines,
   sessionSnapshotId,
 } from "../offline/phase3";
-import { getSessionComparison, getTastingSession, getWineMemory } from "../services/api";
+import { getWineMemory } from "../services/api";
+import { getSessionComparison, getTastingSession } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
 
 type SessionWine = TastingSessionDetailResponse["data"]["wines"][number];

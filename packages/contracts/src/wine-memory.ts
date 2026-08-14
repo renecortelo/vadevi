@@ -101,17 +101,117 @@ export const WineMemoryResponseSchema = z
   .strict()
   .openapi("WineMemoryResponse");
 
+export const WineMemorySortSchema = z.enum(["recent", "tasted", "score", "name"]);
+
 export const WineMemoryQuerySchema = z
   .object({
+    countryCode: z
+      .string()
+      .regex(/^[A-Za-z]{2}$/)
+      .optional(),
     cursor: z
       .string()
       .regex(/^[A-Za-z0-9_-]+$/)
       .optional(),
+    grape: z.string().trim().max(120).optional(),
+    hasMedia: z.enum(["true", "false"]).optional(),
+    identityStatus: z.enum(["draft", "confirmed", "needs_review"]).optional(),
     limit: z.coerce.number().int().min(1).max(100).default(25),
+    maxScore: z.coerce.number().int().min(0).max(100).optional(),
+    minScore: z.coerce.number().int().min(0).max(100).optional(),
     query: z.string().trim().max(120).optional(),
+    region: z.string().trim().max(160).optional(),
+    sentiment: z.enum(["dislike", "neutral", "like"]).optional(),
+    sort: WineMemorySortSchema.default("recent"),
+    tastedFrom: ResourceTimestampSchema.optional(),
+    tastedTo: ResourceTimestampSchema.optional(),
+    vintageFrom: z.coerce.number().int().min(1000).max(2100).optional(),
+    vintageTo: z.coerce.number().int().min(1000).max(2100).optional(),
     wineType: WineTypeSchema.optional(),
   })
-  .strict();
+  .strict()
+  .superRefine(
+    (
+      value: {
+        maxScore?: number;
+        minScore?: number;
+        tastedFrom?: string;
+        tastedTo?: string;
+        vintageFrom?: number;
+        vintageTo?: number;
+      },
+      context: z.RefinementCtx,
+    ) => {
+      if (
+        value.minScore !== undefined &&
+        value.maxScore !== undefined &&
+        value.minScore > value.maxScore
+      ) {
+        context.addIssue({
+          code: "custom",
+          message: "minScore cannot exceed maxScore.",
+          path: ["minScore"],
+        });
+      }
+      if (
+        value.vintageFrom !== undefined &&
+        value.vintageTo !== undefined &&
+        value.vintageFrom > value.vintageTo
+      ) {
+        context.addIssue({
+          code: "custom",
+          message: "vintageFrom cannot exceed vintageTo.",
+          path: ["vintageFrom"],
+        });
+      }
+      if (
+        value.tastedFrom !== undefined &&
+        value.tastedTo !== undefined &&
+        Date.parse(value.tastedFrom) > Date.parse(value.tastedTo)
+      ) {
+        context.addIssue({
+          code: "custom",
+          message: "tastedFrom cannot be later than tastedTo.",
+          path: ["tastedFrom"],
+        });
+      }
+    },
+  );
+
+export const MergeWinesRequestSchema = z
+  .object({
+    confirm: z.literal(true),
+    sourceWineId: ResourceIdSchema,
+    sourceVersion: z.number().int().positive(),
+    targetVersion: z.number().int().positive(),
+  })
+  .strict()
+  .openapi("MergeWinesRequest");
+
+export const MergeWinesResponseSchema = z
+  .object({
+    data: z
+      .object({
+        merged: z
+          .object({
+            aliasesAdded: z.number().int().nonnegative(),
+            bottles: z.number().int().nonnegative(),
+            facts: z.number().int().nonnegative(),
+            mediaLinks: z.number().int().nonnegative(),
+            priceObservations: z.number().int().nonnegative(),
+            purchases: z.number().int().nonnegative(),
+            tastingNotes: z.number().int().nonnegative(),
+            wishlistItems: z.number().int().nonnegative(),
+          })
+          .strict(),
+        replayed: z.boolean(),
+        sourceWineId: ResourceIdSchema,
+        wine: WineSummarySchema,
+      })
+      .strict(),
+  })
+  .strict()
+  .openapi("MergeWinesResponse");
 
 export const QuickTastingRequestSchema = z
   .object({
@@ -325,6 +425,9 @@ export const MediaIdPathSchema = z
   .strict();
 
 export type CreateWineRequest = z.infer<typeof CreateWineRequestSchema>;
+export type MergeWinesRequest = z.infer<typeof MergeWinesRequestSchema>;
+export type MergeWinesResponse = z.infer<typeof MergeWinesResponseSchema>;
+export type WineMemoryQuery = z.infer<typeof WineMemoryQuerySchema>;
 export type CreateWineResponse = z.infer<typeof CreateWineResponseSchema>;
 export type IdentificationRequest = z.infer<typeof IdentificationRequestSchema>;
 export type MediaReservationRequest = z.infer<typeof MediaReservationRequestSchema>;

@@ -9,7 +9,7 @@ Runtime boundaries:
 - `packages/contracts` contains transport schemas only.
 - `packages/domain` contains provider-independent policy and value objects.
 
-Phases 0–5 are complete. Phase 4 adds a provider-neutral evidence boundary:
+Phases 0–6 are implemented. Phase 4 adds a provider-neutral evidence boundary:
 
 - contracts expose typed facts/citations and ephemeral assistant turns without provider response shapes
 - domain ports define bounded product lookup, knowledge-research, and optional statement-rendering candidates
@@ -27,3 +27,13 @@ Phase 5 adds the light-cellar and confirmed-action boundary:
 - deterministic recommendation candidates come only from authorized Wine Memory records and expose qualitative reason codes, not percentages or hidden confidence scores
 - Vicenç cannot call a write repository directly; it may create a user-bound review draft that expires after 30 minutes, and only explicit client confirmation invokes the normal idempotent command path
 - confirmed, canceled, and expired action drafts discard their payload and user-written summary while retaining a payload hash and small audit/confirmation tombstone; a scheduled cleanup enforces expiry independently of user access
+
+Phase 6 adds the data-rights, budget, and release-hardening boundary:
+
+- export and deletion are contract-first routes whose scope is derived from the server-side role, never from a client claim; author-private draft notes stay author-only in every export scope
+- deletion is a scheduled job with a recoverable grace period and a partial unique index that keeps at most one open job per target, so repeated confirmation is safe and the executor is re-runnable
+- the media archive is assembled inside the Worker with a small stored-method ZIP writer, so private photo bytes never reach a packaging service
+- a confirmed merge is an explicit versioned command that moves references and leaves a tombstone on the losing record; duplicate suggestions still never merge on their own
+- optional-provider budgets are reserved before the provider is called, and reaching a cap routes the request to the same deterministic or manual path an unconfigured deployment uses
+- service-worker cache policy lives in a plain module so the boundaries in §14.2 are asserted by tests as well as applied by the worker
+- the web API client is split into eager and lazy modules so contract schemas for cellar, tasting, assistant, and data-rights routes load with those routes, keeping initial-route JavaScript inside its budget

@@ -7,7 +7,7 @@ import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase } from "../offline/database";
 import { sessionsChangedEvent } from "../offline/events";
 import { cacheSessionList } from "../offline/phase3";
-import { listTastingSessions } from "../services/api";
+import { listTastingSessions } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
 
 type SessionSummary = TastingSessionResponse["data"];
