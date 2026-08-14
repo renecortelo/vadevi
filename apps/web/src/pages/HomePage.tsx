@@ -28,7 +28,7 @@ export function HomePage() {
         <p className="hero__lede">{t("welcomeBody")}</p>
         <div className="hero__actions">
           <Link className="action-link action-link--primary" to="/log/new">
-            {t("quickLog")}
+            {t("quickLogCta")}
           </Link>
           <Link className="action-link action-link--secondary" to="/memory">
             {t("exploreMemory")}

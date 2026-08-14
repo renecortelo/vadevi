@@ -9,7 +9,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { type ReactNode, useEffect, useMemo, useState } from "react";
 
 import type { FirebaseUser } from "../auth/firebase";
-import { i18n } from "../i18n";
+import { changeLanguage } from "../i18n";
 import { createIdempotencyKey } from "../security/idempotency";
 import {
   acceptInvitation,
@@ -122,7 +122,7 @@ export function SessionBoundary({
     };
     void offlineDatabase.sessions.put(snapshot);
     globalThis.localStorage?.setItem("vadevi.activeSpaceId", bootstrap.data.user.activeSpaceId);
-    void i18n.changeLanguage(bootstrap.data.user.preferredLocale);
+    void changeLanguage(bootstrap.data.user.preferredLocale);
   }, [bootstrapQuery.data, user.uid]);
 
   const value = useMemo<SessionContextValue | null>(() => {

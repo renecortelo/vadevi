@@ -1,15 +1,21 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter, Route, Routes } from "react-router";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { AuthenticatedRoutes } from "./App";
 import { AuthContext, type AuthContextValue } from "./auth/AuthContext";
 import type { FirebaseUser } from "./auth/firebase";
+import { AppShell } from "./components/AppShell";
 import { i18n } from "./i18n";
 import { OfflineSyncContext, type OfflineSyncContextValue } from "./offline/OfflineSyncContext";
+import { DeepTastingPage } from "./pages/DeepTastingPage";
+import { NewSessionPage } from "./pages/NewSessionPage";
 import { OnboardingPage } from "./pages/OnboardingPage";
+import { QuickLogPage } from "./pages/QuickLogPage";
+import { SessionsPage } from "./pages/SessionsPage";
+import { WineMemoryPage } from "./pages/WineMemoryPage";
 import { SessionContext, type SessionContextValue } from "./session/SessionContext";
 
 beforeAll(async () => {
@@ -131,6 +137,17 @@ function renderRoute(route: string): string {
   return renderWithSession(<AuthenticatedRoutes />, route);
 }
 
+function renderShellRoute(node: ReactNode, route: string, path: string): string {
+  return renderWithSession(
+    <Routes>
+      <Route element={<AppShell />}>
+        <Route element={node} path={path} />
+      </Route>
+    </Routes>,
+    route,
+  );
+}
+
 describe("authenticated app shell", () => {
   it("renders named primary navigation and the active Space", () => {
     const markup = renderRoute("/");
@@ -143,13 +160,15 @@ describe("authenticated app shell", () => {
   });
 
   it("keeps each core route inside the same shell and marks it active", () => {
-    const markup = renderRoute("/memory");
+    const markup = renderShellRoute(<WineMemoryPage />, "/memory", "memory");
 
     expect(markup).toContain("Wine Memory");
     expect(markup).toMatch(/<a[^>]*aria-current="page"[^>]*href="\/memory"/);
     expect(markup).toContain("Search the bottles and opinions that belong to this Space");
     expect(markup).toContain("Cards");
     expect(markup).toContain("Table");
+    expect(markup).toContain("Timeline");
+    expect(markup).toContain("Sessions");
   });
 
   it("offers every supported locale in resumable onboarding", () => {
@@ -174,7 +193,7 @@ describe("authenticated app shell", () => {
   });
 
   it("renders a manual, explicitly confirmed, offline-ready Quick Log", () => {
-    const markup = renderRoute("/log/new");
+    const markup = renderWithSession(<QuickLogPage />, "/log/new");
 
     expect(markup).toContain('for="producer-name"');
     expect(markup).toContain('for="wine-name"');
@@ -182,5 +201,30 @@ describe("authenticated app shell", () => {
     expect(markup).toContain("Add a quick tasting note");
     expect(markup).toContain("Draft saved on this device");
     expect(markup).toContain("Review wine");
+  });
+
+  it("renders offline-ready session creation and the private session index", () => {
+    const indexMarkup = renderWithSession(<SessionsPage />, "/sessions");
+    const newMarkup = renderWithSession(<NewSessionPage />, "/sessions/new");
+
+    expect(indexMarkup).toContain("Tasting sessions");
+    expect(indexMarkup).toContain('href="/sessions/new"');
+    expect(newMarkup).toContain('id="session-name"');
+    expect(newMarkup).toContain('type="datetime-local"');
+    expect(newMarkup).toContain("replayed exactly once");
+  });
+
+  it("renders the progressive localized deep-tasting form", () => {
+    const markup = renderShellRoute(
+      <DeepTastingPage />,
+      "/wines/01J00000000000000000000004/taste",
+      "wines/:wineId/taste",
+    );
+
+    expect(markup).toContain("Deep tasting");
+    expect(markup).toContain('aria-label="Tasting sections"');
+    expect(markup).toContain("Appearance");
+    expect(markup).toContain("Memory cues");
+    expect(markup).toContain("Save draft");
   });
 });

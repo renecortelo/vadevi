@@ -1,4 +1,5 @@
 import { type FormEvent, useEffect, useMemo, useState } from "react";
+import { resolveSupportedLocale, tastingDescriptors } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
@@ -11,17 +12,7 @@ import { useSession } from "../session/SessionContext";
 
 type WineType = "fortified" | "orange" | "other" | "red" | "rose" | "sparkling" | "white";
 
-const descriptors = [
-  ["fruit.red.cherry", "Cherry"],
-  ["fruit.red.strawberry", "Strawberry"],
-  ["fruit.citrus.lemon", "Lemon"],
-  ["fruit.tree.apple", "Apple"],
-  ["floral.violet", "Violet"],
-  ["herbal.mint", "Mint"],
-  ["spice.black_pepper", "Black pepper"],
-  ["production.oak.vanilla", "Vanilla"],
-  ["age.leather", "Leather"],
-] as const;
+const descriptors = tastingDescriptors.filter((descriptor) => descriptor.phase !== "appearance");
 
 function newDraft(userId: string, spaceId: string): QuickLogDraft {
   const now = new Date().toISOString();
@@ -58,7 +49,8 @@ function localDateTime(iso: string): string {
 }
 
 export function QuickLogPage() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const locale = resolveSupportedLocale(i18n.language);
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const { queueDraft, status } = useOfflineSync();
@@ -416,10 +408,10 @@ export function QuickLogPage() {
                 <legend>{t("quickLog.descriptors")}</legend>
                 <p>{t("quickLog.descriptorHelp")}</p>
                 <div className="descriptor-grid">
-                  {descriptors.map(([code, label]) => {
-                    const checked = selectedDescriptors.includes(code);
+                  {descriptors.map((descriptor) => {
+                    const checked = selectedDescriptors.includes(descriptor.code);
                     return (
-                      <label className="descriptor-chip" key={code}>
+                      <label className="descriptor-chip" key={descriptor.code}>
                         <input
                           checked={checked}
                           disabled={!checked && selectedDescriptors.length >= 3}
@@ -427,13 +419,15 @@ export function QuickLogPage() {
                             updateNote(
                               "descriptorCodes",
                               event.target.checked
-                                ? [...selectedDescriptors, code]
-                                : selectedDescriptors.filter((entry: string) => entry !== code),
+                                ? [...selectedDescriptors, descriptor.code]
+                                : selectedDescriptors.filter(
+                                    (entry: string) => entry !== descriptor.code,
+                                  ),
                             )
                           }
                           type="checkbox"
                         />
-                        <span>{label}</span>
+                        <span>{descriptor.text[locale].label}</span>
                       </label>
                     );
                   })}

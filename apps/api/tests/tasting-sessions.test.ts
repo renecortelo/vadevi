@@ -248,6 +248,18 @@ describe("Deep tasting and collaborative sessions", () => {
       palateTexture: "round",
     });
 
+    const ownerRead = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${ownerNote.id}`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    expect(ownerRead.status).toBe(200);
+    expect(DeepTastingResponseSchema.parse(await ownerRead.json()).data.id).toBe(ownerNote.id);
+    const hiddenRead = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${ownerNote.id}`,
+      { headers: { Authorization: `Bearer ${memberToken}` } },
+    );
+    expect(hiddenRead.status).toBe(404);
+
     const forbiddenEdit = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${ownerNote.id}`,
       {

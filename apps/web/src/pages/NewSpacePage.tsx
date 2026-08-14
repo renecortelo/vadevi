@@ -1,5 +1,5 @@
 import type { CreateSpaceRequest } from "@vadevi/contracts";
-import { supportedLocales, type SupportedLocale } from "@vadevi/i18n";
+import { supportedLocales, type SupportedLocale } from "@vadevi/i18n/runtime";
 import { type FormEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";

@@ -1,8 +1,8 @@
-import { supportedLocales, type SupportedLocale } from "@vadevi/i18n";
+import { supportedLocales, type SupportedLocale } from "@vadevi/i18n/runtime";
 import { type FormEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { i18n } from "../i18n";
+import { changeLanguage } from "../i18n";
 import { useSession } from "../session/SessionContext";
 
 const localeLabels: Record<SupportedLocale, string> = {
@@ -32,7 +32,7 @@ export function OnboardingPage() {
         displayName,
         preferredLocale: locale,
       });
-      await i18n.changeLanguage(locale);
+      await changeLanguage(locale);
     } catch {
       setError(true);
     }
