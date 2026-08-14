@@ -5,7 +5,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter, Route, Routes } from "react-router";
 import { beforeAll, describe, expect, it } from "vitest";
 
-import { AuthenticatedRoutes } from "./App";
+import { AuthenticatedRoutes } from "./AuthenticatedApp";
 import { AuthContext, type AuthContextValue } from "./auth/AuthContext";
 import type { FirebaseUser } from "./auth/firebase";
 import { AppShell } from "./components/AppShell";
