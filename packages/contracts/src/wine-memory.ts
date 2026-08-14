@@ -316,36 +316,104 @@ export const IdentificationRequestSchema = z
     locale: SupportedLocaleSchema,
     manualHint: z.string().trim().max(500).optional(),
     mediaId: ResourceIdSchema.optional(),
+    /** Text a client-side reader lifted off the label. Never a raw image. */
+    scannedText: z.string().trim().max(2_000).optional(),
   })
   .strict()
   .refine(
-    (value: { barcode?: string; mediaId?: string }) =>
-      value.barcode !== undefined || value.mediaId !== undefined,
-    {
-      message: "Provide a processed photo or barcode.",
-    },
+    (value: { barcode?: string; manualHint?: string; mediaId?: string; scannedText?: string }) =>
+      value.barcode !== undefined ||
+      value.mediaId !== undefined ||
+      value.manualHint !== undefined ||
+      value.scannedText !== undefined,
+    { message: "Provide a barcode, a processed photo, scanned text, or a manual hint." },
   )
   .openapi("IdentificationRequest");
+
+/**
+ * How much the application trusts a proposed field. These are deliberately
+ * qualitative: §21 rules out presenting an uncalibrated numeric match score.
+ */
+export const CandidateConfidenceSchema = z.enum(["high", "medium", "low"]);
+
+/**
+ * Where a proposed field came from, reusing the evidence vocabulary the rest of
+ * the application already displays.
+ */
+export const CandidateEvidenceSchema = z.enum(["observed", "researched", "inferred", "personal"]);
+
+const CandidateFieldSchema = <T extends z.ZodTypeAny>(value: T) =>
+  z
+    .object({
+      confidence: CandidateConfidenceSchema,
+      evidence: CandidateEvidenceSchema,
+      sourceIds: z.array(ResourceIdSchema).default([]),
+      value,
+    })
+    .strict();
+
+export const IdentificationCandidateSchema = z
+  .object({
+    candidateId: z.string().min(1).max(100),
+    fields: z
+      .object({
+        countryCode: CandidateFieldSchema(z.string().regex(/^[A-Z]{2}$/)).optional(),
+        displayName: CandidateFieldSchema(z.string().min(1).max(160)).optional(),
+        producerName: CandidateFieldSchema(z.string().min(1).max(160)).optional(),
+        region: CandidateFieldSchema(z.string().min(1).max(160)).optional(),
+        vintageYear: CandidateFieldSchema(z.number().int().min(1000).max(2100)).optional(),
+        wineType: CandidateFieldSchema(WineTypeSchema).optional(),
+      })
+      .strict(),
+    /** An existing Space wine this candidate came from, when it was a match. */
+    matchedWineId: ResourceIdSchema.nullable().default(null),
+    origin: z.enum(["space_barcode", "space_text", "open_food_facts", "ocr"]),
+    possibleDuplicateWineIds: z.array(ResourceIdSchema).default([]),
+  })
+  .strict();
 
 export const IdentificationResponseSchema = z
   .object({
     data: z
       .object({
-        candidates: z.array(
-          z
-            .object({
-              candidateId: z.string().min(1),
-              possibleDuplicateWineIds: z.array(ResourceIdSchema),
-            })
-            .strict(),
-        ),
-        status: z.literal("manual_required"),
+        candidates: z.array(IdentificationCandidateSchema),
+        expiresAt: ResourceTimestampSchema,
+        id: ResourceIdSchema,
+        /** `manual_required` whenever nothing could be proposed. */
+        status: z.enum(["needs_confirmation", "manual_required"]),
         warnings: z.array(z.string().min(1)),
       })
       .strict(),
   })
   .strict()
   .openapi("IdentificationResponse");
+
+/**
+ * Confirmation carries the user's final, possibly edited values. The server
+ * revalidates them rather than trusting the candidate it proposed earlier.
+ */
+export const ConfirmIdentificationRequestSchema = z
+  .object({
+    candidateId: z.string().min(1).max(100).optional(),
+    confirm: z.literal(true),
+    wine: CreateWineFieldsSchema.omit({ clientId: true }).superRefine(validateVintage),
+  })
+  .strict()
+  .openapi("ConfirmIdentificationRequest");
+
+export const ConfirmIdentificationResponseSchema = z
+  .object({ data: z.object({ wineId: ResourceIdSchema }).strict() })
+  .strict()
+  .openapi("ConfirmIdentificationResponse");
+
+export const IdentificationPathSchema = z
+  .object({
+    identificationId: ResourceIdSchema.openapi({
+      param: { in: "path", name: "identificationId" },
+    }),
+    spaceId: ResourceIdSchema.openapi({ param: { in: "path", name: "spaceId" } }),
+  })
+  .strict();
 
 const SyncMutationBaseSchema = z.object({
   baseVersion: z.null(),
@@ -429,7 +497,10 @@ export type MergeWinesRequest = z.infer<typeof MergeWinesRequestSchema>;
 export type MergeWinesResponse = z.infer<typeof MergeWinesResponseSchema>;
 export type WineMemoryQuery = z.infer<typeof WineMemoryQuerySchema>;
 export type CreateWineResponse = z.infer<typeof CreateWineResponseSchema>;
+export type ConfirmIdentificationRequest = z.infer<typeof ConfirmIdentificationRequestSchema>;
+export type IdentificationCandidate = z.infer<typeof IdentificationCandidateSchema>;
 export type IdentificationRequest = z.infer<typeof IdentificationRequestSchema>;
+export type IdentificationResponse = z.infer<typeof IdentificationResponseSchema>;
 export type MediaReservationRequest = z.infer<typeof MediaReservationRequestSchema>;
 export type MediaReservationResponse = z.infer<typeof MediaReservationResponseSchema>;
 export type QuickTastingRequest = z.infer<typeof QuickTastingRequestSchema>;

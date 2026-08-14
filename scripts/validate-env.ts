@@ -28,6 +28,10 @@ const EnvironmentSchema = z
       .string()
       .regex(/^@cf\/[a-z0-9][a-z0-9._/-]{2,119}$/)
       .optional(),
+    AI_OCR_MODEL: z
+      .string()
+      .regex(/^@cf\/[a-z0-9][a-z0-9._/-]{2,119}$/)
+      .optional(),
     EXTERNAL_API_USER_AGENT: z.string().min(16).max(300).optional(),
     FIREBASE_AUTH_EMULATOR_HOST: z.string().optional(),
     FIREBASE_AUTH_DOMAIN: z.string().min(1).default("localhost"),

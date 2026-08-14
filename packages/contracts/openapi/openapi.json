@@ -1433,7 +1433,8 @@
                         "ai_language_calls",
                         "research_lookups",
                         "barcode_lookups",
-                        "price_lookups"
+                        "price_lookups",
+                        "ocr_reads"
                       ]
                     },
                     "status": {
@@ -6031,26 +6032,311 @@
                   "properties": {
                     "candidateId": {
                       "type": "string",
-                      "minLength": 1
+                      "minLength": 1,
+                      "maxLength": 100
+                    },
+                    "fields": {
+                      "type": "object",
+                      "properties": {
+                        "countryCode": {
+                          "type": "object",
+                          "properties": {
+                            "confidence": {
+                              "type": "string",
+                              "enum": [
+                                "high",
+                                "medium",
+                                "low"
+                              ]
+                            },
+                            "evidence": {
+                              "type": "string",
+                              "enum": [
+                                "observed",
+                                "researched",
+                                "inferred",
+                                "personal"
+                              ]
+                            },
+                            "sourceIds": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                              },
+                              "default": []
+                            },
+                            "value": {
+                              "type": "string",
+                              "pattern": "^[A-Z]{2}$"
+                            }
+                          },
+                          "required": [
+                            "confidence",
+                            "evidence",
+                            "value"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "displayName": {
+                          "type": "object",
+                          "properties": {
+                            "confidence": {
+                              "type": "string",
+                              "enum": [
+                                "high",
+                                "medium",
+                                "low"
+                              ]
+                            },
+                            "evidence": {
+                              "type": "string",
+                              "enum": [
+                                "observed",
+                                "researched",
+                                "inferred",
+                                "personal"
+                              ]
+                            },
+                            "sourceIds": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                              },
+                              "default": []
+                            },
+                            "value": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 160
+                            }
+                          },
+                          "required": [
+                            "confidence",
+                            "evidence",
+                            "value"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "producerName": {
+                          "type": "object",
+                          "properties": {
+                            "confidence": {
+                              "type": "string",
+                              "enum": [
+                                "high",
+                                "medium",
+                                "low"
+                              ]
+                            },
+                            "evidence": {
+                              "type": "string",
+                              "enum": [
+                                "observed",
+                                "researched",
+                                "inferred",
+                                "personal"
+                              ]
+                            },
+                            "sourceIds": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                              },
+                              "default": []
+                            },
+                            "value": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 160
+                            }
+                          },
+                          "required": [
+                            "confidence",
+                            "evidence",
+                            "value"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "region": {
+                          "type": "object",
+                          "properties": {
+                            "confidence": {
+                              "type": "string",
+                              "enum": [
+                                "high",
+                                "medium",
+                                "low"
+                              ]
+                            },
+                            "evidence": {
+                              "type": "string",
+                              "enum": [
+                                "observed",
+                                "researched",
+                                "inferred",
+                                "personal"
+                              ]
+                            },
+                            "sourceIds": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                              },
+                              "default": []
+                            },
+                            "value": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 160
+                            }
+                          },
+                          "required": [
+                            "confidence",
+                            "evidence",
+                            "value"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "vintageYear": {
+                          "type": "object",
+                          "properties": {
+                            "confidence": {
+                              "type": "string",
+                              "enum": [
+                                "high",
+                                "medium",
+                                "low"
+                              ]
+                            },
+                            "evidence": {
+                              "type": "string",
+                              "enum": [
+                                "observed",
+                                "researched",
+                                "inferred",
+                                "personal"
+                              ]
+                            },
+                            "sourceIds": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                              },
+                              "default": []
+                            },
+                            "value": {
+                              "type": "integer",
+                              "minimum": 1000,
+                              "maximum": 2100
+                            }
+                          },
+                          "required": [
+                            "confidence",
+                            "evidence",
+                            "value"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "wineType": {
+                          "type": "object",
+                          "properties": {
+                            "confidence": {
+                              "type": "string",
+                              "enum": [
+                                "high",
+                                "medium",
+                                "low"
+                              ]
+                            },
+                            "evidence": {
+                              "type": "string",
+                              "enum": [
+                                "observed",
+                                "researched",
+                                "inferred",
+                                "personal"
+                              ]
+                            },
+                            "sourceIds": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                              },
+                              "default": []
+                            },
+                            "value": {
+                              "type": "string",
+                              "enum": [
+                                "red",
+                                "white",
+                                "rose",
+                                "sparkling",
+                                "fortified",
+                                "orange",
+                                "other"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "confidence",
+                            "evidence",
+                            "value"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "matchedWineId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$",
+                      "default": null
+                    },
+                    "origin": {
+                      "type": "string",
+                      "enum": [
+                        "space_barcode",
+                        "space_text",
+                        "open_food_facts",
+                        "ocr"
+                      ]
                     },
                     "possibleDuplicateWineIds": {
                       "type": "array",
                       "items": {
                         "type": "string",
                         "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
-                      }
+                      },
+                      "default": []
                     }
                   },
                   "required": [
                     "candidateId",
-                    "possibleDuplicateWineIds"
+                    "fields",
+                    "origin"
                   ],
                   "additionalProperties": false
                 }
               },
+              "expiresAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
               "status": {
                 "type": "string",
                 "enum": [
+                  "needs_confirmation",
                   "manual_required"
                 ]
               },
@@ -6064,6 +6350,8 @@
             },
             "required": [
               "candidates",
+              "expiresAt",
+              "id",
               "status",
               "warnings"
             ],
@@ -6102,10 +6390,140 @@
           "mediaId": {
             "type": "string",
             "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "scannedText": {
+            "type": "string",
+            "maxLength": 2000
           }
         },
         "required": [
           "locale"
+        ],
+        "additionalProperties": false
+      },
+      "ConfirmIdentificationResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "wineId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              }
+            },
+            "required": [
+              "wineId"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "ConfirmIdentificationRequest": {
+        "type": "object",
+        "properties": {
+          "candidateId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "confirm": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "wine": {
+            "type": "object",
+            "properties": {
+              "appellation": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "barcode": {
+                "type": "string",
+                "pattern": "^\\d{8,14}$"
+              },
+              "bottleSizeMl": {
+                "type": "integer",
+                "minimum": 50,
+                "maximum": 20000
+              },
+              "countryCode": {
+                "type": "string",
+                "pattern": "^[A-Z]{2}$"
+              },
+              "displayName": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "identityStatus": {
+                "type": "string",
+                "enum": [
+                  "draft",
+                  "confirmed",
+                  "needs_review"
+                ]
+              },
+              "mediaId": {
+                "type": "string",
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
+              "nonVintage": {
+                "type": "boolean",
+                "default": false
+              },
+              "producerName": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "region": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "styleText": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "vintageYear": {
+                "type": "integer",
+                "nullable": true,
+                "minimum": 1000,
+                "maximum": 2100
+              },
+              "wineType": {
+                "type": "string",
+                "enum": [
+                  "red",
+                  "white",
+                  "rose",
+                  "sparkling",
+                  "fortified",
+                  "orange",
+                  "other"
+                ]
+              }
+            },
+            "required": [
+              "displayName",
+              "identityStatus",
+              "producerName"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "confirm",
+          "wine"
         ],
         "additionalProperties": false
       },
@@ -12092,6 +12510,116 @@
           },
           "404": {
             "description": "Space or media unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/identifications/{identificationId}/confirm": {
+      "post": {
+        "operationId": "confirmIdentification",
+        "tags": [
+          "Identification"
+        ],
+        "summary": "Confirm or correct an identification draft and create the wine",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "identificationId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmIdentificationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The confirmed wine. Repeating a confirmation returns the same wine.",
+            "headers": {
+              "Location": {
+                "description": "The confirmed wine resource.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Idempotency-Replayed": {
+                "description": "True when replayed.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfirmIdentificationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The draft expired or the corrected wine is invalid.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space or identification unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Idempotency conflict.",
             "content": {
               "application/json": {
                 "schema": {

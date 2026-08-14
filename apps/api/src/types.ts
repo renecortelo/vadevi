@@ -9,6 +9,7 @@ export type FirebasePrincipal = Readonly<{
 export type WorkerBindings = {
   AI?: Ai;
   AI_MODEL?: string;
+  AI_OCR_MODEL?: string;
   APP_ENV?: "local" | "preview" | "production";
   APP_VERSION?: string;
   AI_PROVIDER?: "none" | "cloudflare";
