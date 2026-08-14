@@ -2,7 +2,7 @@
 
 ## Baseline
 
-Phases 0–5 are implemented as one credential-free, strict-TypeScript Cloudflare/Firebase-emulator development baseline. `main` through Phase 4 is synchronized with GitHub; the Phase 5 release branch adds the cellar, shopping, confirmed-action, offline-cache, localization, and documentation work described below. The public/default provider mode remains `AI_PROVIDER=none` and `RESEARCH_PROVIDER=none`.
+Phases 0–5 are implemented on a synchronized, green `main` as one credential-free, strict-TypeScript Cloudflare/Firebase-emulator development baseline. Phase 5 adds the cellar, shopping, confirmed-action, offline-cache, localization, and documentation work described below. The public/default provider mode remains `AI_PROVIDER=none` and `RESEARCH_PROVIDER=none`.
 
 The release candidate must continue to pass:
 
