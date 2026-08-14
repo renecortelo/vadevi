@@ -1,0 +1,56 @@
+import { defineConfig, devices } from "@playwright/test";
+
+/**
+ * Core browser tests.
+ *
+ * §18.5 expects Playwright on protected `main`. These tests exist to convert
+ * the browser drills that were previously only described in prose — offline
+ * shell recovery, service-worker update, install guidance, storage pressure,
+ * accessibility, and narrow-viewport layout — into evidence a clean clone can
+ * reproduce.
+ *
+ * The suite runs against the production build served by Wrangler at one origin,
+ * because a service worker and an installable manifest do not behave the same
+ * under the Vite dev server.
+ */
+const port = 8788;
+const baseURL = `http://127.0.0.1:${port}`;
+
+export default defineConfig({
+  testDir: "e2e",
+  outputDir: "test-results",
+  // The offline and update drills mutate service-worker and cache state, so
+  // they run one at a time against a single origin.
+  fullyParallel: false,
+  workers: 1,
+  forbidOnly: process.env.CI === "true",
+  retries: process.env.CI === "true" ? 1 : 0,
+  reporter: process.env.CI === "true" ? [["github"], ["list"]] : [["list"]],
+  timeout: 60_000,
+  expect: { timeout: 10_000 },
+  use: {
+    baseURL,
+    trace: "retain-on-failure",
+    screenshot: "only-on-failure",
+  },
+  projects: [
+    {
+      name: "chromium-desktop",
+      use: { ...devices["Desktop Chrome"] },
+    },
+    {
+      // 320 CSS px is the narrowest layout the spec supports.
+      name: "chromium-320",
+      testMatch: /narrow-layout\.spec\.ts/,
+      use: { ...devices["Desktop Chrome"], viewport: { width: 320, height: 720 } },
+    },
+  ],
+  webServer: {
+    command: `pnpm exec wrangler dev --config wrangler.example.jsonc --local --port ${port}`,
+    url: `${baseURL}/health`,
+    reuseExistingServer: process.env.CI !== "true",
+    timeout: 120_000,
+    stdout: "ignore",
+    stderr: "pipe",
+  },
+});

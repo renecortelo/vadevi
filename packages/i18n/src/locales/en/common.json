@@ -889,7 +889,7 @@
     "deleteAccountBody": "This removes your personal Space and private data. Shared records stay with their Space. A recent sign-in is required.",
     "deleteAccountLabel": "Type DELETE to confirm",
     "deleteAccountAction": "Schedule account deletion",
-    "accountScheduled": "Account deletion is scheduled in {{hours}} hours.",
+    "accountScheduled": "Account deletion is scheduled in {{days}} days.",
     "retentionTitle": "What deletion does and does not do",
     "retentionBody": "Deletion removes active application data and stored photos. Provider-managed backups follow their own retention schedule and are not erased instantly.",
     "actionError": "That did not work. Check your connection and try again."

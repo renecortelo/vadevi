@@ -889,7 +889,7 @@
     "deleteAccountBody": "Dies entfernt Ihren persönlichen Bereich und private Daten. Geteilte Einträge bleiben in ihrem Bereich. Eine kürzliche Anmeldung ist erforderlich.",
     "deleteAccountLabel": "Geben Sie DELETE ein, um zu bestätigen",
     "deleteAccountAction": "Kontolöschung planen",
-    "accountScheduled": "Die Kontolöschung ist in {{hours}} Stunden geplant.",
+    "accountScheduled": "Die Kontolöschung ist in {{days}} Tagen geplant.",
     "retentionTitle": "Was Löschen leistet und was nicht",
     "retentionBody": "Das Löschen entfernt aktive Anwendungsdaten und gespeicherte Fotos. Vom Anbieter verwaltete Sicherungen folgen ihrem eigenen Zeitplan und werden nicht sofort gelöscht.",
     "actionError": "Das hat nicht geklappt. Prüfen Sie die Verbindung und versuchen Sie es erneut."

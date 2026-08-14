@@ -889,7 +889,7 @@
     "deleteAccountBody": "Isto remove o seu Espaço pessoal e os dados privados. Os registos partilhados ficam no seu Espaço. É necessário um início de sessão recente.",
     "deleteAccountLabel": "Escreva DELETE para confirmar",
     "deleteAccountAction": "Agendar a eliminação da conta",
-    "accountScheduled": "A eliminação da conta está agendada daqui a {{hours}} horas.",
+    "accountScheduled": "A eliminação da conta está agendada daqui a {{days}} dias.",
     "retentionTitle": "O que a eliminação faz e não faz",
     "retentionBody": "A eliminação remove os dados ativos da aplicação e as fotografias guardadas. As cópias de segurança geridas pelo fornecedor seguem o seu próprio calendário e não são apagadas de imediato.",
     "actionError": "Não resultou. Verifique a ligação e tente novamente."

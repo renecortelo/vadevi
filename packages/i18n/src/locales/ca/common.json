@@ -889,7 +889,7 @@
     "deleteAccountBody": "Això elimina el teu Espai personal i les dades privades. Els registres compartits es queden al seu Espai. Cal haver iniciat sessió fa poc.",
     "deleteAccountLabel": "Escriu DELETE per confirmar",
     "deleteAccountAction": "Programa l'esborrat del compte",
-    "accountScheduled": "L'esborrat del compte està programat d'aquí a {{hours}} hores.",
+    "accountScheduled": "L'esborrat del compte està programat d'aquí a {{days}} dies.",
     "retentionTitle": "Què fa i què no fa l'esborrat",
     "retentionBody": "L'esborrat elimina les dades actives de l'aplicació i les fotos desades. Les còpies de seguretat gestionades pel proveïdor segueixen el seu propi calendari i no s'esborren a l'instant.",
     "actionError": "No ha funcionat. Comprova la connexió i torna-ho a provar."

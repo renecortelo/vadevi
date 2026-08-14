@@ -181,40 +181,66 @@ secret pattern. Checked-in configuration contains placeholders only, and
 
 ## 2. Browser evidence
 
-Recorded against the local Vite dev server and Worker with the Firebase Auth
-Emulator:
+Browser drills now run in Playwright against the production build served by
+Wrangler at one origin, because a service worker and an installable manifest do
+not behave the same under the Vite dev server. Run them with `pnpm e2e`; CI runs
+them as a separate `e2e` job.
 
-- The Firebase Auth Emulator issues a valid local-only `demo-vadevi` ID token
-  through the non-interactive probe, with no Firebase login.
+**20 tests pass**, covering:
 
-**Not yet recorded in a browser for Phase 6**, and therefore listed as
-outstanding rather than claimed:
+- a service worker registering on a first visit, caching the shell, and serving
+  it when every network request fails — verified both by route-level abort and
+  by the browser's own offline emulation
+- API, `/health`, and `/runtime-config` never being answerable from a cache
+- a valid installable manifest with 192 px, 512 px, and maskable icons,
+  `standalone` display, and a defined scope and start URL
+- the `SKIP_WAITING` handshake the update prompt depends on
+- exactly one live shell cache after activation, named with the layout version
+- shell recovery after its cache is deleted
+- no serious or critical axe violation on the signed-out routes, a single main
+  landmark, and a visible focus indicator on first Tab
+- no document-level horizontal overflow at a 320 px viewport, and no interactive
+  control escaping the viewport
+- the storage-pressure notice staying quiet below 70%, warning at 70%, and at
+  90% explaining that photos stop being kept while text notes still save — and
+  being announced politely rather than as an alert
 
-- installed-PWA update prompt taking effect through `SKIP_WAITING`
-- install prompt appearing and being dismissed on a real installable origin
-- offline quota exhaustion producing the storage-pressure notice
-- axe scans of the new Data and privacy screen and the extended Memory filters
-- 320 CSS px layout check of the new filter row and Data and privacy screen
+The Firebase Auth Emulator also issues a valid local-only `demo-vadevi` ID token
+through the non-interactive probe, with no Firebase login.
 
-The Phase 2 note still applies: the in-app browser's local-address policy blocks
-the local dev URL, so these must be run from an ordinary desktop browser.
+### Two defects these drills found and fixed
+
+1. **Client-side deep links returned a 404 envelope.** The Wrangler assets
+   configuration had no not-found handling, so `/memory`, `/cellar`, and
+   critically `/invitations/:token` — the only way an invitation is shared —
+   served the Worker's JSON 404 instead of the app shell on a first visit.
+   Fixed by `"not_found_handling": "single-page-application"`.
+2. **The service worker only registered after sign-in.** `PwaUpdatePrompt`,
+   `InstallPrompt`, and `StoragePressureNotice` lived inside the authenticated
+   routes, so a signed-out visit registered no worker and AC-050's "after one
+   successful online visit" did not hold for a first-time visitor. Fixed by
+   mounting all three above the auth gate.
+
+### Still not covered in a browser
+
+Authenticated screens. The app signs in only through Google redirect, and an
+emulator-backed sign-in fixture does not exist yet, so axe scans and 320 px
+checks of the Data and privacy screen and the extended Memory filter row are
+covered by component render tests rather than a real browser. That fixture is
+the next E2E increment.
 
 ## 3. Human review
 
-**Localization sign-off is outstanding.** §13.4 requires a fluent human reviewer
-per production catalog and states that machine translation may produce a draft
-only. The Phase 6 strings added for data rights, usage and budgets, the extended
-Memory filters, the confirmed merge, and the PWA install/update/storage messages
-are drafts. `docs/localization-review.md` tracks the sign-off table; every
-non-English locale is currently `draft — awaiting fluent reviewer`.
-
-Per §13.4, English fallback in a non-English production screen is a release
-blocker. The automated gate proves there is no fallback and no missing key; it
-cannot prove the wording is idiomatic. **The MVP is not production-ready until
-that table is signed.**
+**Localization sign-off has been waived by the product owner (2026-08-14).** No
+fluent reviewers are available, and the release proceeds with machine-drafted
+catalogs. This is a recorded, accepted risk rather than a satisfied requirement:
+the automated gate proves there is no missing key, no broken interpolation, and
+no English fallback, but it cannot prove the wording is idiomatic. The decision
+and its consequences are recorded in `docs/localization-review.md`, where the
+sign-off table remains available if a reviewer becomes available later.
 
 The accessibility, threat-model, privacy, and restore/delete sign-offs listed in
-§22.2 are likewise unsigned.
+§22.2 remain unsigned.
 
 ## 4. Preview environment
 
@@ -226,13 +252,14 @@ repository.
 
 ## Outstanding before the MVP is production-ready
 
-1. Fluent-human sign-off for all seven non-English catalogs.
-2. Browser drills: service-worker update, install prompt, offline quota, axe
-   scans, and 320 px layout for the Phase 6 screens.
-3. Preview-environment acceptance against isolated non-production Firebase, D1,
+1. An emulator-backed sign-in fixture, so the authenticated screens get real
+   browser axe and layout coverage instead of component render coverage.
+2. Preview-environment acceptance against isolated non-production Firebase, D1,
    and R2 resources.
-4. Measured `LCP`, `INP`, and API p95 numbers on a mid-range mobile profile.
-5. Accessibility, threat-model, privacy, and restore/delete sign-offs (§22.2).
-6. Product-owner decisions still open in §23, in particular the exact
-   Space-deletion grace period, which is implemented as a documented seven-day
-   default (24 hours for an account) pending that review.
+3. Measured `LCP`, `INP`, and API p95 numbers on a mid-range mobile profile.
+4. Accessibility, threat-model, privacy, and restore/delete sign-offs (§22.2).
+5. The §23 license decision, which blocks Phase 7.
+
+Closed since the first draft of this document: the localization sign-off gate
+(waived by the product owner), the Space and account deletion grace periods (set
+to one month each), and the Phase 6 browser drills (now automated in Playwright).

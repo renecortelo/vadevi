@@ -4,17 +4,12 @@ import { ulid } from "ulid";
 import type { FirebasePrincipal } from "../types";
 
 /**
- * Space deletion keeps a short recoverable grace period so an owner can undo a
- * typed confirmation. Section 23 leaves the exact period open pending privacy
- * review; seven days is the documented default until that review lands.
+ * Deletion keeps a recoverable grace period so a confirmation can be undone.
+ * The product owner set this to one month for both Spaces and accounts on
+ * 2026-08-14, resolving the §23 decision that was previously open.
  */
-export const spaceGracePeriodSeconds = 7 * 24 * 60 * 60;
-
-/**
- * Account deletion follows the same recoverable shape with a shorter window,
- * because the request already required a recent sign-in.
- */
-export const accountGracePeriodSeconds = 24 * 60 * 60;
+export const spaceGracePeriodSeconds = 30 * 24 * 60 * 60;
+export const accountGracePeriodSeconds = 30 * 24 * 60 * 60;
 
 /** A confirmed account deletion requires a sign-in within the last 15 minutes. */
 export const recentLoginSeconds = 15 * 60;

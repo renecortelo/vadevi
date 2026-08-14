@@ -889,7 +889,7 @@
     "deleteAccountBody": "Ceci supprime votre Espace personnel et vos données privées. Les enregistrements partagés restent dans leur Espace. Une connexion récente est requise.",
     "deleteAccountLabel": "Saisissez DELETE pour confirmer",
     "deleteAccountAction": "Programmer la suppression du compte",
-    "accountScheduled": "La suppression du compte est programmée dans {{hours}} heures.",
+    "accountScheduled": "La suppression du compte est programmée dans {{days}} jours.",
     "retentionTitle": "Ce que la suppression fait et ne fait pas",
     "retentionBody": "La suppression retire les données applicatives actives et les photos stockées. Les sauvegardes gérées par le fournisseur suivent leur propre calendrier et ne sont pas effacées instantanément.",
     "actionError": "Cela n'a pas fonctionné. Vérifiez votre connexion et réessayez."

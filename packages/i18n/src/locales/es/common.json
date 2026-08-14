@@ -889,7 +889,7 @@
     "deleteAccountBody": "Esto elimina tu Espacio personal y los datos privados. Los registros compartidos se quedan en su Espacio. Se requiere un inicio de sesión reciente.",
     "deleteAccountLabel": "Escribe DELETE para confirmar",
     "deleteAccountAction": "Programar la eliminación de la cuenta",
-    "accountScheduled": "La eliminación de la cuenta está programada dentro de {{hours}} horas.",
+    "accountScheduled": "La eliminación de la cuenta está programada dentro de {{days}} días.",
     "retentionTitle": "Qué hace y qué no hace la eliminación",
     "retentionBody": "La eliminación borra los datos activos de la aplicación y las fotos guardadas. Las copias de seguridad gestionadas por el proveedor siguen su propio calendario y no se borran al instante.",
     "actionError": "No funcionó. Revisa tu conexión e inténtalo de nuevo."

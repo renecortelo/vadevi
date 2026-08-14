@@ -5,10 +5,11 @@ preview acceptance against isolated non-production resources a Phase 6 exit
 condition before the MVP is called production-ready.
 
 **Status: not executed.** No preview Firebase project, D1 database, or R2 bucket
-exists for this repository. Creating one requires deployment credentials and
+exists for this repository. Creating them requires deployment credentials and
 real project identifiers, which are deliberately absent from a credential-free
-public repository. This document defines the run so the acceptance is
-reproducible once a deployer supplies their own resources.
+public repository — so the setup below is written for the deployer to run under
+their own accounts, and the acceptance checklist that follows is what to verify
+once it is standing.
 
 ## Isolation requirements
 
@@ -45,6 +46,118 @@ RESEARCH_PROVIDER=none
 ```
 
 Enabling either without that review is out of scope for preview acceptance.
+
+## Setup: creating the isolated resources
+
+These steps create the preview resources under your own accounts. Nothing here
+is committed — every identifier and secret produced below stays in your local
+ignored configuration or in Cloudflare secret bindings.
+
+### 1. Firebase preview project
+
+1. In the Firebase console, create a **new project** — do not reuse production.
+   Name it something unmistakable such as `vadevi-preview`.
+2. **Authentication → Sign-in method → Google**: enable it, and set a support
+   email.
+3. **Authentication → Settings → Authorized domains**: add only your preview
+   origin (for example `vadevi-preview.<your-subdomain>.workers.dev`). Remove
+   any domain you do not control.
+4. **Project settings → General → Your apps → Web app**: register a web app and
+   copy the `apiKey`, `authDomain`, and `projectId`. These three are public
+   browser configuration, not secrets, but they are still environment
+   identifiers and must not be committed.
+
+### 2. Cloudflare D1
+
+```bash
+npx wrangler d1 create vadevi-preview
+```
+
+Copy the returned `database_id`. Then apply the migrations:
+
+```bash
+npx wrangler d1 migrations apply vadevi-preview --remote --config wrangler.preview.jsonc
+```
+
+### 3. Cloudflare R2
+
+```bash
+npx wrangler r2 bucket create vadevi-preview-media
+```
+
+Leave it private. Do not add a public bucket URL or a custom domain — the
+application serves media only through authorized Worker routes.
+
+### 4. Preview Wrangler configuration
+
+Create `wrangler.preview.jsonc` next to the example file. **It is git-ignored**
+and holds your real identifiers:
+
+```jsonc
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vadevi-preview",
+  "main": "apps/api/src/worker.ts",
+  "compatibility_date": "2026-08-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "apps/web/dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/health", "/openapi.json", "/runtime-config"],
+    "not_found_handling": "single-page-application",
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "vadevi-preview",
+      "database_id": "<the id from step 2>",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "vadevi-preview-media" }],
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "vars": {
+    "APP_ENV": "preview",
+    "APP_VERSION": "0.1.0",
+    "AI_PROVIDER": "none",
+    "RESEARCH_PROVIDER": "none",
+    "FIREBASE_AUTH_DOMAIN": "<from step 1>",
+    "FIREBASE_PROJECT_ID": "<from step 1>",
+    "FIREBASE_WEB_API_KEY": "<from step 1>",
+  },
+}
+```
+
+Two things matter here. `APP_ENV` must be `preview`, not `local`, so real
+Firebase signature verification runs — `pnpm validate:env` fails if a non-local
+environment still points at the emulator. And the cron trigger must exist, or
+confirmed deletions will be scheduled but never executed.
+
+Add the file to `.gitignore` if it is not already covered:
+
+```
+wrangler.preview.jsonc
+```
+
+### 5. Deploy
+
+```bash
+pnpm --filter @vadevi/web build
+npx wrangler deploy --config wrangler.preview.jsonc
+```
+
+Then return to step 3 of the Firebase setup and confirm the deployed origin is
+the authorized domain.
+
+### 6. Confirm isolation before testing
+
+```bash
+npx wrangler d1 execute vadevi-preview --remote --config wrangler.preview.jsonc \
+  --command "SELECT COUNT(*) AS users FROM users"
+```
+
+A fresh preview database returns zero. If it does not, you are pointed at the
+wrong database and the acceptance run is invalid.
 
 ## Acceptance checklist
 
