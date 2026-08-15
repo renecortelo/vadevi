@@ -30,6 +30,7 @@
     "openapi:check": "tsx scripts/export-openapi.ts --check",
     "openapi:generate": "tsx scripts/export-openapi.ts",
     "scan:release": "tsx scripts/scan-public-release.ts",
+    "seed:demo": "tsx scripts/seed-demo-data.ts",
     "test": "pnpm --workspace-concurrency=1 -r --if-present test",
     "test:auth-emulator": "firebase emulators:exec --only auth --project demo-vadevi \"tsx scripts/probe-auth-emulator.ts\"",
     "typecheck": "tsc --noEmit --project tsconfig.scripts.json && tsc --noEmit --project tsconfig.e2e.json && pnpm -r --if-present typecheck",

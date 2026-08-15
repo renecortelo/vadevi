@@ -251,3 +251,57 @@ Phase 6 exit criteria, assessed honestly:
 - **Not met:** fluent-human sign-off for the seven non-English catalogs, browser drills for the new Phase 6 screens, preview-environment acceptance against isolated non-production resources, and measured LCP/INP/API p95 numbers.
 
 Those four items are tracked in `docs/release-review.md`, `docs/localization-review.md`, and `docs/preview-environment.md`. Until they are closed, Phase 6 is code-complete but the MVP is not production-ready.
+
+## In progress: Phase 7 — public template preparation
+
+Implemented:
+
+- AGPL-3.0-only licensing: verbatim licence text, an SPDX identifier on every
+  workspace package, and the §13 network source offer rendered in the shell from
+  `VITE_SOURCE_URL`
+- a public-release scanner that fails on credentials, real project or
+  environment identifiers, deployment hostnames, personal addresses, and binary
+  media, scanning tracked plus untracked-not-ignored files and asserting that
+  deployment configuration is ignored and untracked
+- third-party notices and a CycloneDX SBOM generated from the installed tree,
+  with a licence policy that fails on any copyleft or undeclared licence outside
+  a reviewed allowlist
+- a public mirror builder that exports a single-root-commit repository with no
+  ancestry, re-runs the scanner against the export, and never pushes
+- a self-hosting guide written from a real preview deployment
+- a security reporting policy and dependency update process
+- clearly fictional demonstration data, local-only and idempotent
+- an emulator-backed browser sign-in fixture, taking end-to-end coverage to 30
+  tests including authenticated axe and 320 px drills
+
+Phase 7 evidence captured on 2026-08-15:
+
+- `pnpm check` runs ten gates: formatting, lint, strict typechecks, 132 tests,
+  generated OpenAPI, eight-catalog and pseudo-locale validation, licence policy,
+  the production build, the bundle budget, and the release scan
+- 30 browser tests pass from a clean database, reproducing a fresh runner
+- the release scanner caught a real leak on its first run: test fixtures had
+  hardcoded a real preview project name
+- the authenticated browser drills caught two defects in the data-rights screen:
+  a table that forced the document to 852 px at a 320 px viewport, and a
+  scrollable region without keyboard access
+
+Corrections recorded during this phase:
+
+- an earlier dependency-licence scan used a `find` depth that matched nothing,
+  so its "no copyleft dependencies" conclusion was unfounded. The verified
+  position is 1,136 third-party packages, one copyleft
+  (`@img/sharp-libvips-*`, LGPL-3.0-or-later, development-only) and one
+  undeclared (`valid-url`, which ships verbatim MIT text). The AGPL decision is
+  unaffected, but the evidence behind it has been replaced.
+
+Phase 7 exit criteria, assessed honestly:
+
+- **Met:** the scan finds no secret, identifier, personal data, media, or
+  private history; the mirror workflow exists and is verified; a general
+  technical user can follow the documented setup.
+- **Not met:** the mirror has not been built and pushed, because publication is
+  the owner's decision; the preview acceptance run, performance measurements,
+  and §22.2 sign-offs remain outstanding.
+
+Outstanding owner actions are tracked in `docs/your-desk-todo.md`.
