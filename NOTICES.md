@@ -36,9 +36,9 @@ licence expressions. **1** carry a copyleft licence; each is reviewed below.
 
 ## Copyleft dependencies
 
-### `@img/sharp-libvips-darwin-arm64@1.3.1` — LGPL-3.0-or-later
+### `@img/sharp-libvips-*@platform-specific` — LGPL-3.0-or-later
 
-LGPL-3.0-or-later. A macOS-ARM native binary reached through sharp → miniflare → wrangler, so it is a development dependency only and is never shipped in the Worker or the web bundle. LGPL is in any case compatible with AGPL-3.0.
+LGPL-3.0-or-later. Platform-specific native binaries of libvips, reached through sharp → miniflare → wrangler, so they are development dependencies only and are never shipped in the Worker or the web bundle. LGPL is in any case compatible with AGPL-3.0.
 
 ## Packages with no declared licence
 
@@ -152,7 +152,7 @@ Declares no license field, but ships a LICENSE file carrying the verbatim MIT te
 | `@cloudflare/kv-asset-handler` | 0.5.0 | MIT OR Apache-2.0 |
 | `@cloudflare/unenv-preset` | 2.16.1 | MIT OR Apache-2.0 |
 | `@cloudflare/vitest-pool-workers` | 0.21.1 | MIT |
-| `@cloudflare/workerd-darwin-arm64` | 1.20260804.1 | Apache-2.0 |
+| `@cloudflare/workerd-*` | platform-specific | Apache-2.0 |
 | `@cloudflare/workers-types` | 5.20260811.1 | MIT OR Apache-2.0 |
 | `@colors/colors` | 1.5.0 | MIT |
 | `@colors/colors` | 1.6.0 | MIT |
@@ -242,8 +242,8 @@ Declares no license field, but ships a LICENSE file carrying the verbatim MIT te
 | `@humanwhocodes/module-importer` | 1.0.1 | Apache-2.0 |
 | `@humanwhocodes/retry` | 0.4.3 | Apache-2.0 |
 | `@img/colour` | 1.1.0 | MIT |
-| `@img/sharp-darwin-arm64` | 0.35.2 | Apache-2.0 |
-| `@img/sharp-libvips-darwin-arm64` | 1.3.1 | LGPL-3.0-or-later |
+| `@img/sharp-*` | platform-specific | Apache-2.0 |
+| `@img/sharp-libvips-*` | platform-specific | LGPL-3.0-or-later |
 | `@inquirer/ansi` | 1.0.2 | MIT |
 | `@inquirer/checkbox` | 4.3.2 | MIT |
 | `@inquirer/confirm` | 5.1.21 | MIT |
@@ -296,14 +296,14 @@ Declares no license field, but ships a LICENSE file carrying the verbatim MIT te
 | `@protobufjs/path` | 1.1.2 | BSD-3-Clause |
 | `@protobufjs/pool` | 1.1.0 | BSD-3-Clause |
 | `@protobufjs/utf8` | 1.1.2 | BSD-3-Clause |
-| `@rolldown/binding-darwin-arm64` | 1.2.3 | MIT |
+| `@rolldown/binding-*` | platform-specific | MIT |
 | `@rolldown/pluginutils` | 1.0.1 | MIT |
 | `@rollup/plugin-babel` | 6.1.0 | MIT |
 | `@rollup/plugin-node-resolve` | 16.0.3 | MIT |
 | `@rollup/plugin-replace` | 6.0.3 | MIT |
 | `@rollup/plugin-terser` | 1.0.0 | MIT |
 | `@rollup/pluginutils` | 5.4.0 | MIT |
-| `@rollup/rollup-darwin-arm64` | 4.62.4 | MIT |
+| `@rollup/rollup-*` | platform-specific | MIT |
 | `@sindresorhus/is` | 4.6.0 | MIT |
 | `@sindresorhus/is` | 7.2.0 | MIT |
 | `@so-ric/colorspace` | 1.1.6 | MIT |
@@ -770,7 +770,7 @@ Declares no license field, but ships a LICENSE file carrying the verbatim MIT te
 | `libsodium` | 0.7.16 | ISC |
 | `libsodium-wrappers` | 0.7.16 | ISC |
 | `lightningcss` | 1.33.0 | MPL-2.0 |
-| `lightningcss-darwin-arm64` | 1.33.0 | MPL-2.0 |
+| `lightningcss-*` | platform-specific | MPL-2.0 |
 | `locate-path` | 6.0.0 | MIT |
 | `lodash` | 4.18.1 | MIT |
 | `lodash._objecttypes` | 2.4.1 | MIT |

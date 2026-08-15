@@ -18,7 +18,9 @@ const baseURL = `http://127.0.0.1:${port}`;
 
 export default defineConfig({
   testDir: "e2e",
+  globalSetup: "./e2e/global-setup.ts",
   outputDir: "test-results",
+  testIgnore: ["**/global-setup.ts", "**/fixtures/**"],
   // The offline and update drills mutate service-worker and cache state, so
   // they run one at a time against a single origin.
   fullyParallel: false,

@@ -25,10 +25,10 @@ const copyleftMarkers = ["AGPL", "GPL", "SSPL", "BUSL", "CC-BY-SA", "EUPL", "OSL
  * looked at rather than absorbed.
  */
 const reviewedExceptions: Record<string, string> = {
-  "@img/sharp-libvips-darwin-arm64":
-    "LGPL-3.0-or-later. A macOS-ARM native binary reached through sharp → miniflare → " +
-    "wrangler, so it is a development dependency only and is never shipped in the Worker " +
-    "or the web bundle. LGPL is in any case compatible with AGPL-3.0.",
+  "@img/sharp-libvips-*":
+    "LGPL-3.0-or-later. Platform-specific native binaries of libvips, reached through " +
+    "sharp → miniflare → wrangler, so they are development dependencies only and are never " +
+    "shipped in the Worker or the web bundle. LGPL is in any case compatible with AGPL-3.0.",
   "valid-url":
     "Declares no license field, but ships a LICENSE file carrying the verbatim MIT text " +
     "(Copyright 2013 Odysseas Tsatalos and oDesk Corporation).",
@@ -49,6 +49,19 @@ function normalizeLicense(raw: unknown): string {
     return String((raw as { type: unknown }).type);
   }
   return "UNKNOWN";
+}
+
+/**
+ * Native packages published one-per-platform. The installed set differs between
+ * a macOS laptop and a Linux runner, so comparing them byte-for-byte would make
+ * the check fail purely on where it ran. They are collapsed into a family entry
+ * instead, which keeps the licence disclosure without the platform noise.
+ */
+function platformFamily(name: string): string | null {
+  const match = name.match(
+    /^(.*?)-(?:darwin|linux|win32|freebsd|openbsd|android|sunos)-(?:x64|arm64|arm|ia32|ppc64|s390x|riscv64|loong64|mips64el)(?:-(?:musl|gnu|gnueabihf|msvc))?$/,
+  );
+  return match === null ? null : `${match[1]}-*`;
 }
 
 function installedPackages(): Package[] {
@@ -87,7 +100,24 @@ function installedPackages(): Package[] {
   );
 }
 
-const packages = installedPackages();
+const allPackages = installedPackages();
+
+// Collapse platform variants to one family row, keyed by licence.
+const familyLicenses = new Map<string, string>();
+const packages: Package[] = [];
+for (const entry of allPackages) {
+  const family = platformFamily(entry.name);
+  if (family === null) {
+    packages.push(entry);
+    continue;
+  }
+  familyLicenses.set(family, entry.license);
+}
+for (const [name, license] of familyLicenses) {
+  packages.push({ license, name, version: "platform-specific" });
+}
+packages.sort((left, right) => left.name.localeCompare(right.name));
+
 const byLicense = new Map<string, Package[]>();
 for (const entry of packages) {
   byLicense.set(entry.license, [...(byLicense.get(entry.license) ?? []), entry]);
