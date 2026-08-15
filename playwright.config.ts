@@ -18,7 +18,9 @@ const baseURL = `http://127.0.0.1:${port}`;
 
 export default defineConfig({
   testDir: "e2e",
+  globalSetup: "./e2e/global-setup.ts",
   outputDir: "test-results",
+  testIgnore: ["**/global-setup.ts", "**/fixtures/**"],
   // The offline and update drills mutate service-worker and cache state, so
   // they run one at a time against a single origin.
   fullyParallel: false,
@@ -45,12 +47,24 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"], viewport: { width: 320, height: 720 } },
     },
   ],
-  webServer: {
-    command: `pnpm exec wrangler dev --config wrangler.example.jsonc --local --port ${port}`,
-    url: `${baseURL}/health`,
-    reuseExistingServer: process.env.CI !== "true",
-    timeout: 120_000,
-    stdout: "ignore",
-    stderr: "pipe",
-  },
+  webServer: [
+    {
+      // Identity for the authenticated drills. The emulator uses the synthetic
+      // demo-vadevi project and never contacts a real Firebase account.
+      command: "pnpm dev:auth",
+      url: "http://127.0.0.1:9099/emulator/v1/projects/demo-vadevi/config",
+      reuseExistingServer: process.env.CI !== "true",
+      timeout: 120_000,
+      stdout: "ignore",
+      stderr: "pipe",
+    },
+    {
+      command: `pnpm exec wrangler dev --config wrangler.example.jsonc --local --port ${port}`,
+      url: `${baseURL}/health`,
+      reuseExistingServer: process.env.CI !== "true",
+      timeout: 120_000,
+      stdout: "ignore",
+      stderr: "pipe",
+    },
+  ],
 });

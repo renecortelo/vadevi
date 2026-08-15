@@ -413,6 +413,10 @@ select:disabled {
   background: rgb(255 250 244 / 82%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  /* A grid item defaults to min-width:auto and refuses to shrink below its
+     content, so a wide table inside would push the whole document wider than
+     the viewport instead of scrolling within its own container. */
+  min-inline-size: 0;
   padding: clamp(var(--space-4), 4vw, var(--space-6));
 }
 
@@ -1473,6 +1477,8 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   max-inline-size: 100%;
+  /* Same reason: without this the scroll container itself cannot shrink. */
+  min-inline-size: 0;
   overflow-x: auto;
 }
 

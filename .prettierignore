@@ -9,3 +9,5 @@ vadevi_implementation_spec.md
 .claude
 playwright-report
 test-results
+sbom.json
+NOTICES.md

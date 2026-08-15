@@ -705,7 +705,7 @@ export function WineMemoryPage() {
       ) : null}
 
       {view === "table" && wines.length > 0 ? (
-        <div className="table-scroll">
+        <div aria-label={t("memory.table")} className="table-scroll" role="region" tabIndex={0}>
           <table>
             <thead>
               <tr>

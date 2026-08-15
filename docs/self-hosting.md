@@ -1,0 +1,209 @@
+# Self-hosting Va de Vi
+
+This guide takes a general technical user from a clean clone to a running
+private deployment. It assumes no prior Cloudflare or Firebase knowledge, but it
+does assume you are comfortable in a terminal.
+
+Va de Vi is designed for a household or a small group of friends. It is **not**
+a multi-tenant service, and nothing here is a public wine database.
+
+## What it costs
+
+Nothing, under current provider free allowances, for a group of this size. The
+application enforces its own daily caps below the provider limits so it stops
+before a bill could start (§16).
+
+Two honest caveats. Cloudflare requires a **payment method on file to enable
+R2**, even though the 10 GB free allowance costs €0 — if you would rather not,
+skip R2 and lose photo storage only. And free allowances are the providers' to
+change; recheck them before you rely on them.
+
+## What you need
+
+- Node.js 24 or newer
+- A Cloudflare account
+- A Google account, for Firebase
+- About 30 minutes
+
+## 1. Install
+
+```bash
+git clone <your-fork-or-this-repository>
+cd vadevi
+npm install -g pnpm@11.16.0
+pnpm install
+```
+
+Check it works locally before touching any provider:
+
+```bash
+pnpm dev
+```
+
+Open `http://localhost:5173`. You will see the sign-in screen. Local development
+uses the Firebase Auth Emulator against a synthetic `demo-vadevi` project, so
+nothing here touches a real account:
+
+```bash
+pnpm dev:auth
+```
+
+## 2. Firebase
+
+Firebase provides identity only. It stores no wine data.
+
+1. At **https://console.firebase.google.com**, create a project. Turn Google
+   Analytics **off** — this application ships no third-party analytics and §15.8
+   intends to keep it that way.
+2. **Build → Authentication → Get started → Sign-in method → Google.** Enable it
+   and set a support email.
+3. **Project settings → Your apps → Web.** Register an app and copy the
+   `apiKey`, `authDomain`, and `projectId`. These are public browser
+   configuration, not secrets, but they are still environment identifiers and
+   must not be committed.
+
+## 3. Cloudflare
+
+```bash
+pnpm exec wrangler login
+pnpm exec wrangler d1 create vadevi
+pnpm exec wrangler r2 bucket create vadevi-media   # optional; skip for no photos
+```
+
+Copy the `database_id` that `d1 create` prints.
+
+## 4. Configure
+
+Create `wrangler.production.jsonc` from `wrangler.example.jsonc`. It is
+git-ignored, so your real identifiers stay out of the repository.
+
+Replace the placeholder `database_id`, set the three Firebase values, and set:
+
+```jsonc
+"vars": {
+  "APP_ENV": "production",
+  "FIREBASE_AUTH_PROXY": "true",
+  "AI_PROVIDER": "none",
+  "RESEARCH_PROVIDER": "none"
+}
+```
+
+Three lines matter more than they look:
+
+- **`APP_ENV`** must not be `local`, or the app stays in emulator mode and real
+  token verification never runs. `pnpm validate:env` enforces this.
+- **`FIREBASE_AUTH_PROXY`** serves Firebase's sign-in handler from your own
+  origin. Without it, browsers that partition third-party storage break sign-in
+  entirely, because your app and `*.firebaseapp.com` are different origins.
+- **`crons`** must be present, or confirmed deletions are scheduled and never
+  executed.
+
+If you skipped R2, remove the `r2_buckets` block. Photo upload then reports
+itself unavailable rather than failing.
+
+## 5. Deploy
+
+```bash
+pnpm exec wrangler d1 migrations apply vadevi --remote --config wrangler.production.jsonc
+pnpm --filter @vadevi/web build
+pnpm exec wrangler deploy --config wrangler.production.jsonc
+```
+
+Copy the URL it prints.
+
+## 6. Authorize your origin — twice
+
+Sign-in fails unless **both** of these are done. They are separate lists in
+separate consoles, and the second is the one everyone misses.
+
+**Firebase** → Authentication → **Settings** → Authorized domains → add your
+hostname, with no scheme and no trailing slash:
+
+```
+your-app.your-subdomain.workers.dev
+```
+
+**Google Cloud** → https://console.cloud.google.com/apis/credentials → your
+project → **OAuth 2.0 Client IDs** → _Web client (auto created by Google
+Service)_ → add:
+
+- Authorized JavaScript origins: `https://your-app.your-subdomain.workers.dev`
+- Authorized redirect URIs: `https://your-app.your-subdomain.workers.dev/__/auth/handler`
+
+Google can take a few minutes to propagate. A `redirect_uri_mismatch` after the
+account chooser means the second list is missing your origin.
+
+Also set the source link the AGPL requires, before building:
+
+```
+VITE_SOURCE_URL=https://your-host/your-fork
+```
+
+## 7. Verify
+
+```bash
+curl -s https://your-app.your-subdomain.workers.dev/health
+```
+
+Then open the app, sign in with Google, and complete the first-run profile. You
+should reach the home screen with an empty Wine Memory.
+
+## Optional providers
+
+Both are **off** by default and neither is required. The application is fully
+usable with structured search, manual entry, deterministic comparisons, and all
+data rights while they stay off.
+
+Before enabling either, read and decide on its privacy review — each explains
+exactly what leaves your deployment:
+
+- `docs/privacy-review-open-food-facts.md` — sends a barcode. Wine coverage in a
+  food database is thin, so the benefit is modest.
+- `docs/privacy-review-label-ocr.md` — sends a **photograph**. Deserves more
+  scrutiny, and requires checking Cloudflare's current Workers AI retention
+  terms on the day you enable it.
+
+## Updating
+
+```bash
+git pull
+pnpm install
+pnpm exec wrangler d1 migrations apply vadevi --remote --config wrangler.production.jsonc
+pnpm --filter @vadevi/web build
+pnpm exec wrangler deploy --config wrangler.production.jsonc
+```
+
+Migrations are immutable and forward-only. Apply them before deploying the
+Worker, never after.
+
+Installed clients pick up a new version through the service worker's update
+prompt; they are never force-reloaded mid-edit.
+
+## Backups
+
+D1 is the source of truth. Export it regularly:
+
+```bash
+pnpm exec wrangler d1 export vadevi --remote --config wrangler.production.jsonc --output backup.sql
+```
+
+Members can also export their own data from **Data and privacy** in the app —
+versioned JSON, selected CSV, and explicitly chosen photos.
+
+## What this is not
+
+Worth being clear before you invest time:
+
+- Not a public wine database, social feed, or rating site
+- Not comprehensive wine, price, or availability coverage
+- Not a guarantee of offline AI, OCR, research, or price lookup
+- Not multi-tenant, and not intended to serve strangers
+
+## If you get stuck
+
+- **Sign-in fails** — the page shows the Firebase error code. `auth/unauthorized-domain`
+  is step 6's first list, `redirect_uri_mismatch` is its second.
+- **Deep links 404** — `not_found_handling` is missing from the `assets` block.
+- **Deletions never execute** — the `crons` trigger is missing.
+- **Everything looks stale after deploying** — hard-reload; the service worker
+  is serving the previous build until you accept the update.
