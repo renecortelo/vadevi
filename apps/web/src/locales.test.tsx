@@ -35,6 +35,7 @@ const session: SessionContextValue = {
         id: "01J00000000000000000000003",
         onboardingComplete: true,
         preferredLocale: "en",
+        preferredTheme: "system",
       },
       versions: { api: "1", i18nCatalog: "2026.1", tastingOntology: "2026.1" },
     },

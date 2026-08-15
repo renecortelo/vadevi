@@ -4,6 +4,13 @@ const UlidSchema = z.string().regex(/^[0-9A-HJKMNP-TV-Z]{26}$/);
 
 export const SupportedLocaleSchema = z.enum(["ca", "es", "fr", "en", "it", "pt-PT", "nl", "de"]);
 
+/**
+ * `system` defers to the operating system. Storing the choice on the account
+ * rather than the device means it follows a member between their phone and
+ * their laptop.
+ */
+export const ThemePreferenceSchema = z.enum(["system", "light", "dark"]);
+
 export const RuntimeConfigResponseSchema = z
   .object({
     data: z
@@ -37,6 +44,7 @@ export const UpdateProfileRequestSchema = z
     completeOnboarding: z.literal(true).optional(),
     displayName: z.string().trim().min(1).max(120).optional(),
     preferredLocale: SupportedLocaleSchema.optional(),
+    preferredTheme: ThemePreferenceSchema.optional(),
   })
   .strict()
   .refine(
@@ -77,6 +85,7 @@ export const BootstrapResponseSchema = z
             id: UlidSchema,
             onboardingComplete: z.boolean(),
             preferredLocale: SupportedLocaleSchema,
+            preferredTheme: ThemePreferenceSchema,
           })
           .strict(),
         versions: z
@@ -95,4 +104,5 @@ export const BootstrapResponseSchema = z
 export type BootstrapResponse = z.infer<typeof BootstrapResponseSchema>;
 export type RuntimeConfigResponse = z.infer<typeof RuntimeConfigResponseSchema>;
 export type SupportedLocale = z.infer<typeof SupportedLocaleSchema>;
+export type ThemePreference = "system" | "light" | "dark";
 export type UpdateProfileRequest = z.infer<typeof UpdateProfileRequestSchema>;

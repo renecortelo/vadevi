@@ -952,5 +952,12 @@
       "open_food_facts": "Public product data",
       "ocr": "Read from the label"
     }
+  },
+  "theme": {
+    "label": "Theme",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark",
+    "saveError": "Theme not saved"
   }
 }

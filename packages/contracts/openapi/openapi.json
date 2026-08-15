@@ -235,6 +235,14 @@
                       "nl",
                       "de"
                     ]
+                  },
+                  "preferredTheme": {
+                    "type": "string",
+                    "enum": [
+                      "system",
+                      "light",
+                      "dark"
+                    ]
                   }
                 },
                 "required": [
@@ -242,7 +250,8 @@
                   "displayName",
                   "id",
                   "onboardingComplete",
-                  "preferredLocale"
+                  "preferredLocale",
+                  "preferredTheme"
                 ],
                 "additionalProperties": false
               },
@@ -371,6 +380,14 @@
               "pt-PT",
               "nl",
               "de"
+            ]
+          },
+          "preferredTheme": {
+            "type": "string",
+            "enum": [
+              "system",
+              "light",
+              "dark"
             ]
           }
         },

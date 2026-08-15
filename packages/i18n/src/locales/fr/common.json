@@ -952,5 +952,12 @@
       "open_food_facts": "Données produit publiques",
       "ocr": "Lu sur l'étiquette"
     }
+  },
+  "theme": {
+    "label": "Thème",
+    "system": "Système",
+    "light": "Clair",
+    "dark": "Sombre",
+    "saveError": "Thème non enregistré"
   }
 }

@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
 
   /* Brand palette, taken from the Va de Vi wordmark and app icon.
      Every foreground/background pair below is verified against WCAG AA
@@ -56,4 +56,59 @@
   --shadow-card: 0 18px 50px rgb(107 18 32 / 9%);
   --motion-fast: 160ms ease;
   --motion-medium: 280ms ease;
+}
+
+/* Dark theme.
+   Derived from the burgundy ground of the app icon, darkened for large surfaces
+   so it reads as comfortable rather than a saturated wall of red. Every text
+   pair below is verified at WCAG AA by packages/ui/tests/contrast.test.ts, the
+   same as the light palette.
+
+   The colours are declared three times on purpose: once for the system
+   preference, and once for each explicit choice, so an explicit setting wins in
+   both directions rather than only away from the system default. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-canvas: #210a0f;
+    --color-canvas-deep: #170609;
+    --color-surface-raised: #2e1017;
+    --color-surface-muted: #3b1720;
+    --color-text: #fbe9e5;
+    --color-text-muted: #d9afaa;
+    --color-accent: #f09a97;
+    --color-accent-strong: #f7bdb9;
+    --color-on-accent: #2a0c12;
+    --color-plum: #dd8a92;
+    --color-plum-soft: #c26a76;
+    --color-bottle-1: #4a1a22;
+    --color-bottle-2: #5c222c;
+    --color-bottle-3: #6e2a36;
+    --color-border: #6a2f3a;
+    --color-success: #7fd3a6;
+    --color-warning: #e8be7f;
+    --color-focus: #7fd3e8;
+    --shadow-card: 0 18px 50px rgb(0 0 0 / 45%);
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-canvas: #210a0f;
+  --color-canvas-deep: #170609;
+  --color-surface-raised: #2e1017;
+  --color-surface-muted: #3b1720;
+  --color-text: #fbe9e5;
+  --color-text-muted: #d9afaa;
+  --color-accent: #f09a97;
+  --color-accent-strong: #f7bdb9;
+  --color-on-accent: #2a0c12;
+  --color-plum: #dd8a92;
+  --color-plum-soft: #c26a76;
+  --color-bottle-1: #4a1a22;
+  --color-bottle-2: #5c222c;
+  --color-bottle-3: #6e2a36;
+  --color-border: #6a2f3a;
+  --color-success: #7fd3a6;
+  --color-warning: #e8be7f;
+  --color-focus: #7fd3e8;
+  --shadow-card: 0 18px 50px rgb(0 0 0 / 45%);
 }

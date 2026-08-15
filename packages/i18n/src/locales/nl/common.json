@@ -952,5 +952,12 @@
       "open_food_facts": "Openbare productgegevens",
       "ocr": "Van het etiket gelezen"
     }
+  },
+  "theme": {
+    "label": "Thema",
+    "system": "Systeem",
+    "light": "Licht",
+    "dark": "Donker",
+    "saveError": "Thema niet opgeslagen"
   }
 }

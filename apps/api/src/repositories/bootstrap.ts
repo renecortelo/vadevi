@@ -9,6 +9,7 @@ type BootstrapUserRow = {
   id: string;
   onboarding_completed_at: string | null;
   preferred_locale: SupportedLocale;
+  preferred_theme: "dark" | "light" | "system";
 };
 
 type BootstrapSpaceRow = {
@@ -169,7 +170,7 @@ export async function getBootstrapResponse(
 ): Promise<BootstrapResponse> {
   const user = await database
     .prepare(
-      `SELECT id, display_name, preferred_locale, active_space_id, onboarding_completed_at
+      `SELECT id, display_name, preferred_locale, preferred_theme, active_space_id, onboarding_completed_at
       FROM users
       WHERE firebase_uid = ? AND deleted_at IS NULL`,
     )
@@ -213,6 +214,7 @@ export async function getBootstrapResponse(
         id: user.id,
         onboardingComplete: user.onboarding_completed_at !== null,
         preferredLocale: user.preferred_locale,
+        preferredTheme: user.preferred_theme,
       },
       versions: {
         api: "1",
@@ -236,6 +238,7 @@ export async function updateUserProfile(
         `UPDATE users
         SET display_name = COALESCE(?, display_name),
             preferred_locale = COALESCE(?, preferred_locale),
+          preferred_theme = COALESCE(?, preferred_theme),
             active_space_id = COALESCE(?, active_space_id),
             onboarding_completed_at = CASE
               WHEN ? = 1 THEN COALESCE(onboarding_completed_at, ?)
@@ -259,6 +262,7 @@ export async function updateUserProfile(
       .bind(
         options.update.displayName ?? null,
         options.update.preferredLocale ?? null,
+        options.update.preferredTheme ?? null,
         activeSpaceId,
         options.update.completeOnboarding === true ? 1 : 0,
         now,
