@@ -122,7 +122,14 @@ VITE_SOURCE_URL=https://your-host/your-fork
 Leaving it pointing at the upstream repository while running modified code does
 not satisfy the obligation — the link must reach _your_ Corresponding Source.
 
-Every dependency in the tree is permissively licensed, so nothing here forces a
-different outcome; AGPL is a deliberate choice, not an inherited constraint.
+Of the 1,136 third-party packages in the tree, one carries a copyleft licence:
+`@img/sharp-libvips-darwin-arm64` (LGPL-3.0-or-later), reached through
+`sharp → miniflare → wrangler`. It is a development dependency only and never
+ships in the Worker or the web bundle, and LGPL is compatible with AGPL in any
+case. Nothing in the tree forced this licence — AGPL is a deliberate choice.
+
+Every dependency and its licence is listed in [NOTICES.md](NOTICES.md), with a
+CycloneDX SBOM in `sbom.json`. Both are generated from the installed tree and
+verified in CI, so they cannot drift.
 
 The source of truth for scope and acceptance is `vadevi_implementation_spec.md`.

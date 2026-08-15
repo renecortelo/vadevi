@@ -14,19 +14,19 @@ describe("Firebase auth handler upstream selection", () => {
   it("is disabled unless a deployment opts in", () => {
     expect(
       firebaseAuthUpstream({
-        FIREBASE_AUTH_DOMAIN: "vadevi-preview.firebaseapp.com",
+        FIREBASE_AUTH_DOMAIN: "demo-vadevi.firebaseapp.com",
       }),
     ).toBeNull();
     expect(
       firebaseAuthUpstream({
-        FIREBASE_AUTH_DOMAIN: "vadevi-preview.firebaseapp.com",
+        FIREBASE_AUTH_DOMAIN: "demo-vadevi.firebaseapp.com",
         FIREBASE_AUTH_PROXY: "false",
       }),
     ).toBeNull();
   });
 
   it("accepts only Firebase-issued auth domains", () => {
-    for (const host of ["vadevi-preview.firebaseapp.com", "vadevi-preview.web.app"]) {
+    for (const host of ["demo-vadevi.firebaseapp.com", "demo-vadevi.web.app"]) {
       expect(
         firebaseAuthUpstream({ FIREBASE_AUTH_DOMAIN: host, FIREBASE_AUTH_PROXY: "true" }),
       ).toBe(host);
@@ -36,7 +36,7 @@ describe("Firebase auth handler upstream selection", () => {
   it("refuses any host that is not a Firebase auth domain", () => {
     for (const host of [
       "evil.example.com",
-      "vadevi-preview.firebaseapp.com.evil.example",
+      "demo-vadevi.firebaseapp.com.evil.example",
       "localhost",
       "127.0.0.1",
       "169.254.169.254",
@@ -50,12 +50,12 @@ describe("Firebase auth handler upstream selection", () => {
 
   it("refuses a configured value carrying a scheme, credentials, port, or path", () => {
     for (const host of [
-      "https://vadevi-preview.firebaseapp.com",
-      "user:pass@vadevi-preview.firebaseapp.com",
-      "vadevi-preview.firebaseapp.com:8080",
-      "vadevi-preview.firebaseapp.com/../evil",
-      "vadevi-preview.firebaseapp.com?x=1",
-      "vadevi-preview.firebaseapp.com#f",
+      "https://demo-vadevi.firebaseapp.com",
+      "user:pass@demo-vadevi.firebaseapp.com",
+      "demo-vadevi.firebaseapp.com:8080",
+      "demo-vadevi.firebaseapp.com/../evil",
+      "demo-vadevi.firebaseapp.com?x=1",
+      "demo-vadevi.firebaseapp.com#f",
     ]) {
       expect(
         firebaseAuthUpstream({ FIREBASE_AUTH_DOMAIN: host, FIREBASE_AUTH_PROXY: "true" }),
