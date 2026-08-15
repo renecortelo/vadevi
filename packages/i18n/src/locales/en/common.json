@@ -894,7 +894,13 @@
     "accountScheduled": "Account deletion is scheduled in {{days}} days.",
     "retentionTitle": "What deletion does and does not do",
     "retentionBody": "Deletion removes active application data and stored photos. Provider-managed backups follow their own retention schedule and are not erased instantly.",
-    "actionError": "That did not work. Check your connection and try again."
+    "actionError": "That did not work. Check your connection and try again.",
+    "noticeTitle": "What this app does with your data",
+    "noticeScope": "Your wines, tastings, and photos live in the Space you chose. They are visible only to that Space's active members.",
+    "noticeNoAds": "No ads, no sale of data, no public profiles, and no third-party behavioural analytics.",
+    "noticeMedia": "Photos are resized and stripped of location metadata in your browser before upload, and are served only after a membership check.",
+    "noticeProviders": "Optional AI and research providers are off unless a deployer turns them on, and each has a written privacy review.",
+    "noticeRetention": "Assistant turns are not saved as chat history. Tool audits are redacted and keep no message text."
   },
   "pwa": {
     "installTitle": "Install Va de Vi",

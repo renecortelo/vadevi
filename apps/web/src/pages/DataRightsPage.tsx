@@ -337,6 +337,17 @@ export function DataRightsPage() {
         </button>
       </section>
 
+      <section aria-labelledby="notice-title" className="settings-card">
+        <h2 id="notice-title">{t("dataRights.noticeTitle")}</h2>
+        <ul>
+          <li>{t("dataRights.noticeScope")}</li>
+          <li>{t("dataRights.noticeNoAds")}</li>
+          <li>{t("dataRights.noticeMedia")}</li>
+          <li>{t("dataRights.noticeProviders")}</li>
+          <li>{t("dataRights.noticeRetention")}</li>
+        </ul>
+      </section>
+
       <section aria-labelledby="retention-title" className="settings-card">
         <h2 id="retention-title">{t("dataRights.retentionTitle")}</h2>
         <p>{t("dataRights.retentionBody")}</p>

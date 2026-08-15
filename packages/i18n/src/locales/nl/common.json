@@ -894,7 +894,13 @@
     "accountScheduled": "De accountverwijdering staat over {{days}} dagen ingepland.",
     "retentionTitle": "Wat verwijderen wel en niet doet",
     "retentionBody": "Verwijderen wist de actieve toepassingsgegevens en opgeslagen foto's. Back-ups van de aanbieder volgen hun eigen bewaartermijn en worden niet direct gewist.",
-    "actionError": "Dat is niet gelukt. Controleer uw verbinding en probeer het opnieuw."
+    "actionError": "Dat is niet gelukt. Controleer uw verbinding en probeer het opnieuw.",
+    "noticeTitle": "Wat deze app met uw gegevens doet",
+    "noticeScope": "Uw wijnen, proeverijen en foto's staan in de Ruimte die u koos. Alleen de actieve leden daarvan zien ze.",
+    "noticeNoAds": "Geen advertenties, geen verkoop van gegevens, geen openbare profielen en geen gedragsanalyse van derden.",
+    "noticeMedia": "Foto's worden in uw browser verkleind en van locatiegegevens ontdaan vóór het uploaden, en worden pas geserveerd na een lidmaatschapscontrole.",
+    "noticeProviders": "Optionele AI- en onderzoeksaanbieders staan uit tenzij de beheerder ze inschakelt, en elk heeft een geschreven privacybeoordeling.",
+    "noticeRetention": "Assistentbeurten worden niet als gespreksgeschiedenis bewaard. Auditlogs van tools zijn geredigeerd en bevatten geen berichttekst."
   },
   "pwa": {
     "installTitle": "Va de Vi installeren",

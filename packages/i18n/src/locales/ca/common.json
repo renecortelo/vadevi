@@ -894,7 +894,13 @@
     "accountScheduled": "L'esborrat del compte està programat d'aquí a {{days}} dies.",
     "retentionTitle": "Què fa i què no fa l'esborrat",
     "retentionBody": "L'esborrat elimina les dades actives de l'aplicació i les fotos desades. Les còpies de seguretat gestionades pel proveïdor segueixen el seu propi calendari i no s'esborren a l'instant.",
-    "actionError": "No ha funcionat. Comprova la connexió i torna-ho a provar."
+    "actionError": "No ha funcionat. Comprova la connexió i torna-ho a provar.",
+    "noticeTitle": "Què fa aquesta aplicació amb les teves dades",
+    "noticeScope": "Els teus vins, tasts i fotos viuen a l'Espai que has triat. Només els veuen els membres actius d'aquest Espai.",
+    "noticeNoAds": "Sense anuncis, sense venda de dades, sense perfils públics i sense analítica de comportament de tercers.",
+    "noticeMedia": "Les fotos es redimensionen i se'ls treuen les metadades d'ubicació al navegador abans de pujar-les, i només es serveixen després de comprovar la pertinença.",
+    "noticeProviders": "Els proveïdors opcionals d'IA i recerca estan desactivats si no els activa qui desplega, i cadascun té una revisió de privadesa escrita.",
+    "noticeRetention": "Els torns de l'assistent no es desen com a historial. Les auditories d'eines estan redactades i no conserven text dels missatges."
   },
   "pwa": {
     "installTitle": "Instal·la Va de Vi",

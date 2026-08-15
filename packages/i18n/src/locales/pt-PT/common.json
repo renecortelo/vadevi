@@ -894,7 +894,13 @@
     "accountScheduled": "A eliminação da conta está agendada daqui a {{days}} dias.",
     "retentionTitle": "O que a eliminação faz e não faz",
     "retentionBody": "A eliminação remove os dados ativos da aplicação e as fotografias guardadas. As cópias de segurança geridas pelo fornecedor seguem o seu próprio calendário e não são apagadas de imediato.",
-    "actionError": "Não resultou. Verifique a ligação e tente novamente."
+    "actionError": "Não resultou. Verifique a ligação e tente novamente.",
+    "noticeTitle": "O que esta aplicação faz com os seus dados",
+    "noticeScope": "Os seus vinhos, provas e fotografias vivem no Espaço que escolheu. Só os membros ativos desse Espaço os veem.",
+    "noticeNoAds": "Sem publicidade, sem venda de dados, sem perfis públicos e sem análise comportamental de terceiros.",
+    "noticeMedia": "As fotografias são redimensionadas e limpas de metadados de localização no seu navegador antes do envio, e só são servidas após verificação de pertença.",
+    "noticeProviders": "Os fornecedores opcionais de IA e pesquisa estão desligados salvo se quem instala os ligar, e cada um tem uma revisão de privacidade escrita.",
+    "noticeRetention": "Os turnos do assistente não são guardados como histórico. As auditorias de ferramentas são redigidas e não guardam texto das mensagens."
   },
   "pwa": {
     "installTitle": "Instalar o Va de Vi",

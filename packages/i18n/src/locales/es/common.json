@@ -894,7 +894,13 @@
     "accountScheduled": "La eliminación de la cuenta está programada dentro de {{days}} días.",
     "retentionTitle": "Qué hace y qué no hace la eliminación",
     "retentionBody": "La eliminación borra los datos activos de la aplicación y las fotos guardadas. Las copias de seguridad gestionadas por el proveedor siguen su propio calendario y no se borran al instante.",
-    "actionError": "No funcionó. Revisa tu conexión e inténtalo de nuevo."
+    "actionError": "No funcionó. Revisa tu conexión e inténtalo de nuevo.",
+    "noticeTitle": "Qué hace esta aplicación con tus datos",
+    "noticeScope": "Tus vinos, catas y fotos viven en el Espacio que elegiste. Solo los ven los miembros activos de ese Espacio.",
+    "noticeNoAds": "Sin anuncios, sin venta de datos, sin perfiles públicos y sin analítica de comportamiento de terceros.",
+    "noticeMedia": "Las fotos se redimensionan y se les quitan los metadatos de ubicación en tu navegador antes de subirlas, y solo se sirven tras comprobar la pertenencia.",
+    "noticeProviders": "Los proveedores opcionales de IA e investigación están desactivados salvo que quien despliega los active, y cada uno tiene una revisión de privacidad escrita.",
+    "noticeRetention": "Los turnos del asistente no se guardan como historial. Las auditorías de herramientas están redactadas y no conservan texto de los mensajes."
   },
   "pwa": {
     "installTitle": "Instala Va de Vi",
