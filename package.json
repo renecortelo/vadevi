@@ -24,6 +24,7 @@
     "format:check": "prettier --check .",
     "i18n:check": "tsx scripts/verify-i18n.ts",
     "lint": "eslint \"apps/**/*.{ts,tsx}\" \"packages/**/*.{ts,tsx}\" \"scripts/**/*.ts\" \"e2e/**/*.ts\" --max-warnings 0",
+    "mirror:build": "tsx scripts/build-public-mirror.ts",
     "notices:check": "tsx scripts/generate-notices.ts --check",
     "notices:generate": "tsx scripts/generate-notices.ts",
     "openapi:check": "tsx scripts/export-openapi.ts --check",

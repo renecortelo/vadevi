@@ -95,6 +95,22 @@ core flow — search, filters, tasting, sessions, comparison, cellar, evidence,
 export, and deletion — works with both disabled. Enabling either requires a
 deployment-specific privacy review.
 
+## Self-hosting
+
+`docs/self-hosting.md` takes a clean clone to a running private deployment,
+including the two separate origin-authorization lists that sign-in needs.
+
+Publishing a public mirror is scripted, because §15.9 forbids simply flipping a
+private repository to public:
+
+```bash
+pnpm mirror:build
+```
+
+That exports the tracked tree into a fresh repository with a single root commit
+and no ancestry, re-runs the release scanner against the export, and stops. It
+never pushes — publishing is irreversible and stays a manual decision.
+
 ## License
 
 Va de Vi is licensed under the **GNU Affero General Public License v3.0 only**
