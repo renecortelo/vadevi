@@ -231,7 +231,12 @@ export function DataRightsPage() {
                 research: usage.providers.researchProvider,
               })}
             </p>
-            <div className="table-scroll">
+            <div
+              aria-label={t("dataRights.usageTitle")}
+              className="table-scroll"
+              role="region"
+              tabIndex={0}
+            >
               <table>
                 <thead>
                   <tr>

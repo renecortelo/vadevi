@@ -221,13 +221,30 @@ through the non-interactive probe, with no Firebase login.
    successful online visit" did not hold for a first-time visitor. Fixed by
    mounting all three above the auth gate.
 
-### Still not covered in a browser
+### Authenticated screens are now covered
 
-Authenticated screens. The app signs in only through Google redirect, and an
-emulator-backed sign-in fixture does not exist yet, so axe scans and 320 px
-checks of the Data and privacy screen and the extended Memory filter row are
-covered by component render tests rather than a real browser. That fixture is
-the next E2E increment.
+An emulator-backed fixture establishes a real session, so axe and layout checks
+reach the authenticated screens. **30 E2E tests** now pass, 10 of them
+authenticated: axe on home, Wine Memory, Quick Log, Identify, Cellar, and Data
+and privacy; the identification screen keeping manual entry available; export
+and deletion controls including the typed-confirmation gate; the AGPL source
+offer; and 320 px layout across the main flow.
+
+The fixture seeds the session rather than driving the provider popup. The Auth
+Emulator's popup handler fails with `Auth Emulator Internal Error: No matching
+frame` because it cannot locate the initiating frame — an emulator limitation,
+not an application defect. The emulator issues a real local-only token over its
+REST API, which is written into the exact key the SDK reads; everything after
+that point is the real code path.
+
+These drills immediately found two defects in the new Data and privacy screen,
+both now fixed:
+
+- the usage table forced the document to 852 px at a 320 px viewport, because a
+  grid item will not shrink below its content without `min-inline-size: 0`
+- once it scrolled, axe reported `scrollable-region-focusable`: a scrollable
+  region needs keyboard access, so both table containers are now focusable and
+  labelled
 
 ## 3. Human review
 
