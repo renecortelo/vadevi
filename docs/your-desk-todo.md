@@ -71,6 +71,8 @@ verified by test, but colour is a matter of taste and a screen is not a swatch.
 - [ ] Install the PWA and confirm the home-screen icon and splash colours
 - [ ] Say if anything is off — the palette lives in one file
       (`packages/ui/src/styles/tokens.css`) and is cheap to adjust
+- [ ] Try the theme control in the top bar: System / Light / Dark. The choice is
+      stored on your account, so check it follows you from phone to laptop
 
 ---
 
@@ -125,7 +127,13 @@ That produces a clean single-commit export and verifies it. Then:
 - **Localization:** fluent-reviewer gate waived; catalogs ship as machine drafts,
   recorded as an accepted risk in `docs/localization-review.md`.
 - **Brand assets (§23 #1):** wordmark, app icon, maskable icon, and palette
-  applied from your supplied lockup. Every text pair verified at WCAG AA.
+  applied from your supplied lockup. Every text pair verified at WCAG AA in both
+  the light and the dark palette.
+- **Theme:** three states (System / Light / Dark), stored on the account so it
+  follows you between devices.
+- **Repository strategy:** option A — one codebase, differences by configuration.
+  The private repository is your personalised line; the public mirror is
+  generated from it. No third repository needed.
 - **Saved chat history (§23 #5):** never implemented. Assistant turns are
   ephemeral, which is the privacy-preserving default the spec asks for.
 - **Member email visibility (§23 #7):** not exposed in any contract, matching

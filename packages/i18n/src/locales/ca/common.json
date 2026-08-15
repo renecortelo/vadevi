@@ -952,5 +952,12 @@
       "open_food_facts": "Dades públiques de producte",
       "ocr": "Llegit de l'etiqueta"
     }
+  },
+  "theme": {
+    "label": "Tema",
+    "system": "Sistema",
+    "light": "Clar",
+    "dark": "Fosc",
+    "saveError": "Tema no desat"
   }
 }

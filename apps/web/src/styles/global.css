@@ -2288,3 +2288,23 @@ p {
     flex-direction: column;
   }
 }
+
+/* Theme control in the top bar. Compact so it does not crowd the Space
+   switcher, and hidden below the narrow breakpoint where the bar is tightest. */
+.theme-toggle {
+  align-items: center;
+  display: flex;
+  gap: var(--space-2);
+}
+
+.theme-toggle .segmented-control button {
+  font-size: var(--text-xs);
+  padding-block: var(--space-1);
+  padding-inline: var(--space-2);
+}
+
+@media (width <= 40rem) {
+  .theme-toggle {
+    display: none;
+  }
+}

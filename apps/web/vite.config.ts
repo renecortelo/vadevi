@@ -10,7 +10,7 @@ export default defineConfig({
       strategies: "injectManifest",
       srcDir: "src",
       filename: "sw.ts",
-      includeAssets: ["icon.svg", "brand/icon-maskable.svg", "brand/wordmark.svg"],
+      includeAssets: ["icon.svg", "theme-init.js", "brand/icon-maskable.svg", "brand/wordmark.svg"],
       manifest: {
         name: "Va de Vi — private wine memory",
         short_name: "Va de Vi",

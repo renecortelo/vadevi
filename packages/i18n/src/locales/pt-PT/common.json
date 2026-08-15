@@ -952,5 +952,12 @@
       "open_food_facts": "Dados públicos de produto",
       "ocr": "Lido do rótulo"
     }
+  },
+  "theme": {
+    "label": "Tema",
+    "system": "Sistema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "saveError": "Tema não guardado"
   }
 }

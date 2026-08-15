@@ -1,5 +1,6 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
 import { ConnectionStatus } from "./ConnectionStatus";
+import { ThemeToggle } from "./ThemeToggle";
 import { SyncStatus } from "./SyncStatus";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router";
@@ -76,6 +77,7 @@ export function AppShell() {
               {t("dataRights.navAction")}
             </NavLink>
           </div>
+          <ThemeToggle />
           <ConnectionStatus />
           <SyncStatus />
           <button className="text-button" onClick={() => void signOut()} type="button">

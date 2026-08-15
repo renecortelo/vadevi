@@ -93,3 +93,52 @@ test.describe("authenticated screens at 320 CSS px", () => {
     }
   });
 });
+
+test.describe("theme preference", () => {
+  test("switches the palette and remembers the choice across a reload", async ({ page }) => {
+    await signIn(page);
+    await completeOnboarding(page);
+
+    const group = page.getByRole("group", { name: /theme/i });
+    await expect(group).toBeVisible();
+
+    await group.getByRole("button", { name: /^dark$/i }).click();
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+
+    // The choice is stored on the account, so it survives a full reload rather
+    // than only living in component state.
+    await page.reload();
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+
+    await group.getByRole("button", { name: /^light$/i }).click();
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+
+    // `system` removes the attribute so the page keeps following the device.
+    await group.getByRole("button", { name: /^system$/i }).click();
+    await expect(page.locator("html")).not.toHaveAttribute("data-theme", /.+/);
+  });
+
+  test("has no serious or critical axe violation in dark mode", async ({ page }) => {
+    await signIn(page);
+    await completeOnboarding(page);
+    await page
+      .getByRole("group", { name: /theme/i })
+      .getByRole("button", { name: /^dark$/i })
+      .click();
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+
+    for (const path of ["/", "/memory", "/settings/data"]) {
+      await page.goto(path);
+      await page.waitForLoadState("networkidle");
+      const results = await new AxeBuilder({ page })
+        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+        .analyze();
+      const blocking = results.violations.filter(
+        (violation) => violation.impact === "serious" || violation.impact === "critical",
+      );
+      expect(blocking.map((violation) => `${path} ${violation.id} (${violation.impact})`)).toEqual(
+        [],
+      );
+    }
+  });
+});

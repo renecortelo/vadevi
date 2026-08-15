@@ -12,9 +12,15 @@ import { describe, expect, it } from "vitest";
  */
 const tokens = readFileSync(resolve(import.meta.dirname, "../src/styles/tokens.css"), "utf8");
 
-function token(name: string): string {
-  const value = tokens.match(new RegExp(`--${name}:\\s*(#[0-9a-f]{6})`, "i"))?.[1];
-  if (value === undefined) throw new Error(`Token --${name} is missing or not a six-digit hex.`);
+/** The explicit dark block; the media-query block declares the same values. */
+const darkBlock = tokens.slice(tokens.indexOf(':root[data-theme="dark"]'));
+
+function token(name: string, theme: "dark" | "light" = "light"): string {
+  const source = theme === "dark" ? darkBlock : tokens.slice(0, tokens.indexOf("@media"));
+  const value = source.match(new RegExp(`--${name}:\\s*(#[0-9a-f]{6})`, "i"))?.[1];
+  if (value === undefined) {
+    throw new Error(`Token --${name} is missing from the ${theme} palette.`);
+  }
   return value;
 }
 
@@ -53,14 +59,25 @@ const bodyTextPairs: [string, string, string][] = [
   ["warning text on canvas", "color-warning", "color-canvas"],
 ];
 
-describe("brand palette contrast", () => {
+describe.each(["light", "dark"] as const)("%s palette contrast", (theme) => {
   for (const [label, foreground, background] of bodyTextPairs) {
     it(`${label} meets WCAG AA for body text`, () => {
-      const ratio = contrastRatio(token(foreground), token(background));
-      expect(ratio, `${label} is ${ratio.toFixed(2)}:1`).toBeGreaterThanOrEqual(4.5);
+      const ratio = contrastRatio(token(foreground, theme), token(background, theme));
+      expect(ratio, `${label} is ${ratio.toFixed(2)}:1 in ${theme}`).toBeGreaterThanOrEqual(4.5);
     });
   }
 
+  it("declares every colour token the light palette declares", () => {
+    // A token missing from one palette would silently fall back to the other,
+    // which is how a dark theme ends up with an unreadable patch.
+    for (const [, foreground, background] of bodyTextPairs) {
+      expect(() => token(foreground, theme)).not.toThrow();
+      expect(() => token(background, theme)).not.toThrow();
+    }
+  });
+});
+
+describe("brand palette", () => {
   it("keeps the border visible against both canvas and raised surfaces", () => {
     // A border is a non-text element, so 3:1 is the applicable threshold.
     for (const background of ["color-canvas", "color-surface-raised"]) {
