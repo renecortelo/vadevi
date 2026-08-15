@@ -61,7 +61,20 @@ production-blocking bugs that no local test could reach.
 
 ---
 
-## 3. Measure performance — §18.4
+## 3. Look at the new brand
+
+The palette, icons, and wordmark now follow the supplied lockup. Contrast is
+verified by test, but colour is a matter of taste and a screen is not a swatch.
+
+- [ ] Open the preview deployment and check the sign-in screen, the shell
+      wordmark, and the app icon on a real device
+- [ ] Install the PWA and confirm the home-screen icon and splash colours
+- [ ] Say if anything is off — the palette lives in one file
+      (`packages/ui/src/styles/tokens.css`) and is cheap to adjust
+
+---
+
+## 4. Measure performance — §18.4
 
 Bundle budget is enforced at 239.4 KiB against 250 KiB. The rest is unmeasured.
 
@@ -73,7 +86,7 @@ Chrome DevTools against the preview deployment is enough for a first pass.
 
 ---
 
-## 4. Sign-offs — §22.2
+## 5. Sign-offs — §22.2
 
 - [ ] Accessibility
 - [ ] Threat model
@@ -85,7 +98,7 @@ missing is a person putting their name to it.
 
 ---
 
-## 5. When you decide to publish
+## 6. When you decide to publish
 
 Do **not** flip this repository to public — §15.9 forbids it, because the
 history goes with it.
@@ -111,3 +124,9 @@ That produces a clean single-commit export and verifies it. Then:
 - **Deletion grace periods:** one month for Spaces and accounts.
 - **Localization:** fluent-reviewer gate waived; catalogs ship as machine drafts,
   recorded as an accepted risk in `docs/localization-review.md`.
+- **Brand assets (§23 #1):** wordmark, app icon, maskable icon, and palette
+  applied from your supplied lockup. Every text pair verified at WCAG AA.
+- **Saved chat history (§23 #5):** never implemented. Assistant turns are
+  ephemeral, which is the privacy-preserving default the spec asks for.
+- **Member email visibility (§23 #7):** not exposed in any contract, matching
+  the specification's default of no.

@@ -894,7 +894,13 @@
     "accountScheduled": "La suppression du compte est programmée dans {{days}} jours.",
     "retentionTitle": "Ce que la suppression fait et ne fait pas",
     "retentionBody": "La suppression retire les données applicatives actives et les photos stockées. Les sauvegardes gérées par le fournisseur suivent leur propre calendrier et ne sont pas effacées instantanément.",
-    "actionError": "Cela n'a pas fonctionné. Vérifiez votre connexion et réessayez."
+    "actionError": "Cela n'a pas fonctionné. Vérifiez votre connexion et réessayez.",
+    "noticeTitle": "Ce que cette application fait de vos données",
+    "noticeScope": "Vos vins, dégustations et photos vivent dans l'Espace que vous avez choisi. Seuls ses membres actifs les voient.",
+    "noticeNoAds": "Pas de publicité, pas de vente de données, pas de profils publics et pas d'analyse comportementale tierce.",
+    "noticeMedia": "Les photos sont redimensionnées et débarrassées des métadonnées de localisation dans votre navigateur avant l'envoi, et ne sont servies qu'après vérification de l'appartenance.",
+    "noticeProviders": "Les fournisseurs d'IA et de recherche optionnels sont désactivés sauf activation par l'exploitant, et chacun a une revue de confidentialité écrite.",
+    "noticeRetention": "Les tours de l'assistant ne sont pas enregistrés en historique. Les audits d'outils sont expurgés et ne conservent aucun texte de message."
   },
   "pwa": {
     "installTitle": "Installer Va de Vi",

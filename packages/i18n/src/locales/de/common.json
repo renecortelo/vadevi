@@ -894,7 +894,13 @@
     "accountScheduled": "Die Kontolöschung ist in {{days}} Tagen geplant.",
     "retentionTitle": "Was Löschen leistet und was nicht",
     "retentionBody": "Das Löschen entfernt aktive Anwendungsdaten und gespeicherte Fotos. Vom Anbieter verwaltete Sicherungen folgen ihrem eigenen Zeitplan und werden nicht sofort gelöscht.",
-    "actionError": "Das hat nicht geklappt. Prüfen Sie die Verbindung und versuchen Sie es erneut."
+    "actionError": "Das hat nicht geklappt. Prüfen Sie die Verbindung und versuchen Sie es erneut.",
+    "noticeTitle": "Was diese App mit Ihren Daten macht",
+    "noticeScope": "Ihre Weine, Verkostungen und Fotos liegen in dem Bereich, den Sie gewählt haben. Nur dessen aktive Mitglieder sehen sie.",
+    "noticeNoAds": "Keine Werbung, kein Datenverkauf, keine öffentlichen Profile und keine Verhaltensanalyse durch Dritte.",
+    "noticeMedia": "Fotos werden vor dem Hochladen im Browser verkleinert und von Standortdaten befreit und erst nach einer Mitgliedschaftsprüfung ausgeliefert.",
+    "noticeProviders": "Optionale KI- und Recherche-Anbieter sind aus, sofern der Betreiber sie nicht einschaltet, und jeder hat eine schriftliche Datenschutzprüfung.",
+    "noticeRetention": "Assistenz-Turns werden nicht als Verlauf gespeichert. Werkzeug-Audits sind redigiert und enthalten keinen Nachrichtentext."
   },
   "pwa": {
     "installTitle": "Va de Vi installieren",

@@ -40,7 +40,9 @@ export function AppShell() {
 
       <header className="topbar">
         <NavLink aria-label={t("appName")} className="wordmark" to="/">
-          {t("appName")}
+          {/* The brand sets the name as one lowercase word. The accessible name
+              stays the translated "Va de Vi" via aria-label above. */}
+          <span aria-hidden="true">vadevi</span>
         </NavLink>
         <div className="topbar__context">
           <div className="space-context">

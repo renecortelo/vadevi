@@ -1,20 +1,39 @@
 :root {
   color-scheme: light;
-  --color-canvas: #fbf3e8;
-  --color-canvas-deep: #f5e6d7;
-  --color-surface-raised: #fffaf4;
-  --color-surface-muted: #f2dfd0;
-  --color-text: #2d2525;
-  --color-text-muted: #6d5e5d;
-  --color-accent: #c94637;
-  --color-accent-strong: #a9312d;
-  --color-on-accent: #fffaf4;
-  --color-plum: #4c2539;
-  --color-plum-soft: #7f5265;
-  --color-border: #dbc9bb;
-  --color-success: #286b4a;
-  --color-warning: #8a5716;
-  --color-focus: #176f86;
+
+  /* Brand palette, taken from the Va de Vi wordmark and app icon.
+     Every foreground/background pair below is verified against WCAG AA
+     (4.5:1 for body text), because a serious contrast violation is a release
+     blocker under §18.3. */
+
+  /* Blush canvas, from the light wordmark lockup. */
+  --color-canvas: #fbe9e5;
+  --color-canvas-deep: #f5d9d4;
+  --color-surface-raised: #fff4f2;
+  --color-surface-muted: #efcec9;
+
+  /* Deep wine ink. 13.98:1 on canvas, 15.22:1 on raised surfaces. */
+  --color-text: #3a1218;
+  --color-text-muted: #6e3a42;
+
+  /* Wine red, the wordmark colour on light. 7.56:1 on canvas. */
+  --color-accent: #8e1d2e;
+  --color-accent-strong: #6b1220;
+  --color-on-accent: #fbe9e5;
+
+  /* Burgundy, the dark icon and panel ground. 10.33:1 with cream. */
+  --color-plum: #6b1220;
+  --color-plum-soft: #9c3546;
+
+  /* Bottle silhouette tints, for decorative fills only. */
+  --color-bottle-1: #e8b4ae;
+  --color-bottle-2: #d99b96;
+  --color-bottle-3: #c9827e;
+
+  --color-border: #e3c2bd;
+  --color-success: #1f5d3f;
+  --color-warning: #7a4a0f;
+  --color-focus: #0f5f73;
   --font-display: Georgia, "Times New Roman", serif;
   --font-body:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -34,7 +53,7 @@
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
   --radius-pill: 999px;
-  --shadow-card: 0 18px 50px rgb(77 38 56 / 8%);
+  --shadow-card: 0 18px 50px rgb(107 18 32 / 9%);
   --motion-fast: 160ms ease;
   --motion-medium: 280ms ease;
 }
