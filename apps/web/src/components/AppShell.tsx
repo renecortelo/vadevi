@@ -1,5 +1,5 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
-import { CellarIcon, GrapesIcon, LabelledBottleIcon, PourIcon, ToastIcon } from "../brand/NavIcons";
+import { BarrelsIcon, CrateIcon, GrapesIcon, PourIcon, ToastIcon } from "../brand/NavIcons";
 import { BrandLockup } from "../brand/Wordmark";
 import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
@@ -15,10 +15,10 @@ import { useSession } from "../session/SessionContext";
 type SpaceOption = BootstrapResponse["data"]["spaces"][number];
 
 const navigation = [
-  { to: "/", key: "home", Icon: CellarIcon, end: true },
+  { to: "/", key: "home", Icon: BarrelsIcon, end: true },
   { to: "/log/new", key: "log", Icon: PourIcon, end: false },
   { to: "/sessions", key: "sessions", Icon: ToastIcon, end: false },
-  { to: "/memory", key: "memory", Icon: LabelledBottleIcon, end: false },
+  { to: "/memory", key: "memory", Icon: CrateIcon, end: false },
   { to: "/vicenc", key: "assistant", Icon: GrapesIcon, end: false },
 ] as const;
 
