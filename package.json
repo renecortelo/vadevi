@@ -13,7 +13,9 @@
   "scripts": {
     "build": "pnpm --filter @vadevi/web build && pnpm --filter @vadevi/api build",
     "bundle:check": "tsx scripts/check-bundle-budget.ts",
-    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm openapi:check && pnpm i18n:check && pnpm notices:check && pnpm build && pnpm bundle:check && pnpm scan:release",
+    "brand:generate": "tsx scripts/generate-brand.ts",
+    "brand:check": "tsx scripts/generate-brand.ts --check",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm openapi:check && pnpm i18n:check && pnpm brand:check && pnpm notices:check && pnpm build && pnpm bundle:check && pnpm scan:release",
     "dev": "concurrently -k -n api,web -c magenta,cyan \"pnpm dev:api\" \"pnpm dev:web\"",
     "dev:api": "wrangler dev --config wrangler.example.jsonc --local --port 8787",
     "dev:auth": "firebase emulators:start --only auth --project demo-vadevi",

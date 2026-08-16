@@ -87,10 +87,14 @@ describe("brand palette", () => {
   });
 
   it("declares the decorative bottle tints separately from text colours", () => {
-    // These fills sit behind content and must never be used for text, so they
-    // are deliberately not held to a text contrast ratio.
-    for (const name of ["color-bottle-1", "color-bottle-2", "color-bottle-3"]) {
-      expect(token(name)).toMatch(/^#[0-9a-f]{6}$/i);
+    // One tint per bottle in the lockup. These fills sit behind content and must
+    // never be used for text, so they are deliberately not held to a text
+    // contrast ratio — but a tint missing from one palette would leave that
+    // bottle painted in the other theme's colour, so both are checked.
+    for (const theme of ["light", "dark"] as const) {
+      for (let index = 1; index <= 7; index += 1) {
+        expect(token(`color-bottle-${index}`, theme)).toMatch(/^#[0-9a-f]{6}$/i);
+      }
     }
   });
 });

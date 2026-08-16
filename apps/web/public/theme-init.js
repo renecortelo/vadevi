@@ -10,12 +10,21 @@
  * the source of truth once bootstrap resolves.
  */
 (function applyStoredTheme() {
+  var stored = null;
   try {
-    var stored = window.localStorage.getItem("vadevi.theme");
-    if (stored === "light" || stored === "dark") {
-      document.documentElement.setAttribute("data-theme", stored);
-    }
+    stored = window.localStorage.getItem("vadevi.theme");
   } catch (error) {
     // A browser that refuses storage simply gets the system preference.
   }
+  if (stored === "light" || stored === "dark") {
+    document.documentElement.setAttribute("data-theme", stored);
+  }
+  // The browser paints its own chrome from this tag before the application
+  // runs, so a dark member would otherwise get a cream status bar for the first
+  // frame. Kept in step with the palette in packages/ui/src/styles/tokens.css.
+  var prefersDark =
+    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  var resolved = stored === null ? (prefersDark ? "dark" : "light") : stored;
+  var meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", resolved === "dark" ? "#2b0709" : "#fbeee5");
 })();

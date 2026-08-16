@@ -1,40 +1,53 @@
 :root {
   color-scheme: light dark;
 
-  /* Brand palette, taken from the Va de Vi wordmark and app icon.
+  /* Brand palette, sampled from the Va de Vi lockup and app icon and kept in
+     step with scripts/generate-brand.ts, which draws them.
+
      Every foreground/background pair below is verified against WCAG AA
-     (4.5:1 for body text), because a serious contrast violation is a release
-     blocker under §18.3. */
+     (4.5:1 for body text) by packages/ui/tests/contrast.test.ts, because a
+     serious contrast violation is a release blocker under §18.3. */
 
-  /* Blush canvas, from the light wordmark lockup. */
-  --color-canvas: #fbe9e5;
-  --color-canvas-deep: #f5d9d4;
-  --color-surface-raised: #fff4f2;
-  --color-surface-muted: #efcec9;
+  /* Cream ground, from the light lockup. */
+  --color-canvas: #fbeee5;
+  --color-canvas-deep: #f6e0d3;
+  --color-surface-raised: #fff7f1;
+  --color-surface-muted: #f6ddd0;
 
-  /* Deep wine ink. 13.98:1 on canvas, 15.22:1 on raised surfaces. */
-  --color-text: #3a1218;
-  --color-text-muted: #6e3a42;
+  /* Deep wine ink. 14.61:1 on canvas, 15.69:1 on raised surfaces. */
+  --color-text: #3d0d10;
+  --color-text-muted: #7b3128;
 
-  /* Wine red, the wordmark colour on light. 7.56:1 on canvas. */
-  --color-accent: #8e1d2e;
-  --color-accent-strong: #6b1220;
-  --color-on-accent: #fbe9e5;
+  /* The wine red the wordmark is set in on cream. 8.43:1 on canvas. */
+  --color-accent: #8b1116;
+  --color-accent-strong: #6d0c10;
+  --color-on-accent: #fbeee5;
 
-  /* Burgundy, the dark icon and panel ground. 10.33:1 with cream. */
-  --color-plum: #6b1220;
-  --color-plum-soft: #9c3546;
+  /* Ink for the lockup, which sits on top of the bottle tints rather than on a
+     surface: wine on the cream artwork, cream on the wine artwork. It is a
+     brand decision rather than a text colour, so it gets its own token instead
+     of borrowing one that inverts differently. */
+  --color-lockup-ink: #8b1116;
 
-  /* Bottle silhouette tints, for decorative fills only. */
-  --color-bottle-1: #e8b4ae;
-  --color-bottle-2: #d99b96;
-  --color-bottle-3: #c9827e;
+  /* The same wine as a panel ground, where cream sits on top of it. */
+  --color-plum: #8b1116;
+  --color-plum-soft: #b02a2c;
+
+  /* The seven bottles of the lockup, in order. Decorative fills only: they are
+     never used behind text, so they are not held to a text contrast ratio. */
+  --color-bottle-1: #f0917c;
+  --color-bottle-2: #ee5f5c;
+  --color-bottle-3: #f5b9ab;
+  --color-bottle-4: #f0918f;
+  --color-bottle-5: #e57a94;
+  --color-bottle-6: #ef8b71;
+  --color-bottle-7: #f09a86;
 
   /* Surfaces that need a variable alpha. Kept as raw channels so a rule can
      pick its own transparency while still inverting with the theme — a literal
      rgb() here is exactly how the navigation stayed light in dark mode. */
-  --color-surface-rgb: 255 250 244;
-  --color-ink-rgb: 45 37 37;
+  --color-surface-rgb: 255 247 241;
+  --color-ink-rgb: 61 13 16;
 
   /* Semantic chips. Each pair is contrast-checked in both palettes. */
   --color-info-surface: #e5eef8;
@@ -45,8 +58,8 @@
   --color-warning-text: #6d4a00;
   --color-warning-edge: #d8a43c;
   --color-note-surface: #fff8e9;
-  --color-plum-surface: #f3e7f1;
-  --color-border: #e3c2bd;
+  --color-plum-surface: #f7e0da;
+  --color-border: #e5bda6;
   --color-success: #1f5d3f;
   --color-warning: #7a4a0f;
   --color-focus: #0f5f73;
@@ -69,37 +82,43 @@
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
   --radius-pill: 999px;
-  --shadow-card: 0 18px 50px rgb(107 18 32 / 9%);
+  --shadow-card: 0 18px 50px rgb(139 17 22 / 9%);
   --motion-fast: 160ms ease;
   --motion-medium: 280ms ease;
 }
 
 /* Dark theme.
-   Derived from the burgundy ground of the app icon, darkened for large surfaces
-   so it reads as comfortable rather than a saturated wall of red. Every text
-   pair below is verified at WCAG AA by packages/ui/tests/contrast.test.ts, the
-   same as the light palette.
+   The wine ground of the app icon, darkened for large surfaces so it reads as
+   comfortable rather than a saturated wall of red, with the lockup's brighter
+   reds carried over for the bottles and the accent. Every text pair below is
+   verified at WCAG AA by packages/ui/tests/contrast.test.ts, the same as the
+   light palette.
 
    The colours are declared three times on purpose: once for the system
    preference, and once for each explicit choice, so an explicit setting wins in
    both directions rather than only away from the system default. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --color-canvas: #210a0f;
-    --color-canvas-deep: #170609;
-    --color-surface-raised: #2e1017;
-    --color-surface-muted: #3b1720;
-    --color-text: #fbe9e5;
-    --color-text-muted: #d9afaa;
-    --color-accent: #f09a97;
-    --color-accent-strong: #f7bdb9;
-    --color-on-accent: #2a0c12;
-    --color-plum: #dd8a92;
-    --color-plum-soft: #c26a76;
-    --color-bottle-1: #4a1a22;
-    --color-bottle-2: #5c222c;
-    --color-bottle-3: #6e2a36;
-    --color-surface-rgb: 46 16 23;
+    --color-canvas: #2b0709;
+    --color-canvas-deep: #1c0405;
+    --color-surface-raised: #3b0d10;
+    --color-surface-muted: #4c1215;
+    --color-text: #fbeee5;
+    --color-text-muted: #e2b0a4;
+    --color-accent: #f0917c;
+    --color-accent-strong: #f5b9ab;
+    --color-on-accent: #2b0709;
+    --color-lockup-ink: #f7cdc0;
+    --color-plum: #ef8b71;
+    --color-plum-soft: #d9614c;
+    --color-bottle-1: #e04a42;
+    --color-bottle-2: #cf3b3c;
+    --color-bottle-3: #e8574a;
+    --color-bottle-4: #de5265;
+    --color-bottle-5: #d9524f;
+    --color-bottle-6: #de3a34;
+    --color-bottle-7: #a52247;
+    --color-surface-rgb: 59 13 16;
     --color-ink-rgb: 0 0 0;
     --color-info-surface: #16303f;
     --color-info-text: #a9d4ec;
@@ -109,8 +128,8 @@
     --color-warning-text: #f0cb8d;
     --color-warning-edge: #a8792c;
     --color-note-surface: #2b2109;
-    --color-plum-surface: #33192c;
-    --color-border: #6a2f3a;
+    --color-plum-surface: #45161a;
+    --color-border: #7a2427;
     --color-success: #7fd3a6;
     --color-warning: #e8be7f;
     --color-focus: #7fd3e8;
@@ -119,21 +138,26 @@
 }
 
 :root[data-theme="dark"] {
-  --color-canvas: #210a0f;
-  --color-canvas-deep: #170609;
-  --color-surface-raised: #2e1017;
-  --color-surface-muted: #3b1720;
-  --color-text: #fbe9e5;
-  --color-text-muted: #d9afaa;
-  --color-accent: #f09a97;
-  --color-accent-strong: #f7bdb9;
-  --color-on-accent: #2a0c12;
-  --color-plum: #dd8a92;
-  --color-plum-soft: #c26a76;
-  --color-bottle-1: #4a1a22;
-  --color-bottle-2: #5c222c;
-  --color-bottle-3: #6e2a36;
-  --color-surface-rgb: 46 16 23;
+  --color-canvas: #2b0709;
+  --color-canvas-deep: #1c0405;
+  --color-surface-raised: #3b0d10;
+  --color-surface-muted: #4c1215;
+  --color-text: #fbeee5;
+  --color-text-muted: #e2b0a4;
+  --color-accent: #f0917c;
+  --color-accent-strong: #f5b9ab;
+  --color-on-accent: #2b0709;
+  --color-lockup-ink: #f7cdc0;
+  --color-plum: #ef8b71;
+  --color-plum-soft: #d9614c;
+  --color-bottle-1: #e04a42;
+  --color-bottle-2: #cf3b3c;
+  --color-bottle-3: #e8574a;
+  --color-bottle-4: #de5265;
+  --color-bottle-5: #d9524f;
+  --color-bottle-6: #de3a34;
+  --color-bottle-7: #a52247;
+  --color-surface-rgb: 59 13 16;
   --color-ink-rgb: 0 0 0;
   --color-info-surface: #16303f;
   --color-info-text: #a9d4ec;
@@ -143,8 +167,8 @@
   --color-warning-text: #f0cb8d;
   --color-warning-edge: #a8792c;
   --color-note-surface: #2b2109;
-  --color-plum-surface: #33192c;
-  --color-border: #6a2f3a;
+  --color-plum-surface: #45161a;
+  --color-border: #7a2427;
   --color-success: #7fd3a6;
   --color-warning: #e8be7f;
   --color-focus: #7fd3e8;

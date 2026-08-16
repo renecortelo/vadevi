@@ -78,3 +78,23 @@ both, so a reachable-only-by-URL screen fails a build.
   hidden below 640px entirely — so the control the report asked for did not
   exist on the device where it matters most. Both fixed: the controls wrap along
   a row instead of stacking, and neither is hidden.
+
+### Follow-up: the artwork itself
+
+Supplied afterwards as four images — the wordmark lockup and the app icon, each
+on a wine ground and on a cream one. The marks and the palette were rebuilt from
+them.
+
+The lesson from finding 1 is built into how: every mark now comes from
+`scripts/generate-brand.ts`, which describes the letterforms and the bottle
+silhouettes once and writes out the icon, the maskable icon, both lockups, and
+the geometry the application draws inline. `pnpm brand:check` fails the build if
+a committed asset stops matching that description, because hand-editing one file
+at a time is exactly how the icon drifted into a W while looking plausible on
+its own.
+
+The letterforms are drawn rather than set in a font. A geometric face is circles
+and straight strokes, so it can be built from them, and doing so avoids both a
+CSP exception for an external font host and the weight of self-hosting a whole
+typeface to draw six letters. The wordmark inherits `currentColor`, so one mark
+serves both themes.

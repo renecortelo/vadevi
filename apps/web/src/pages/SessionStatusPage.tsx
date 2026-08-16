@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { AccessBackdrop } from "../brand/AccessBackdrop";
+import { BrandLockup } from "../brand/Wordmark";
 
 export function SessionStatusPage({
   action,
@@ -15,8 +17,9 @@ export function SessionStatusPage({
 
   return (
     <main className="access-page" id="main-content">
+      <AccessBackdrop />
       <section aria-live="polite" className="access-card">
-        <p className="access-card__wordmark">{t("appName")}</p>
+        <BrandLockup className="access-card__lockup" />
         <h1>{t(titleKey)}</h1>
         <p>{t(bodyKey)}</p>
         {action !== undefined && actionKey !== undefined ? (

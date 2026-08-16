@@ -100,21 +100,18 @@ select:disabled {
 }
 
 .wordmark {
-  /* Geometric lowercase lockup, matching the brand wordmark. The body stack is
-     used rather than a webfont: the CSP forbids external font hosts, and a
-     self-hosted face would cost more than the mark is worth. */
+  /* The mark is drawn, not set: the letterforms come from the brand artwork via
+     apps/web/src/brand, so the top bar, the sign-in lockup and the installed
+     icon are the same geometry. It inherits `color`, so it follows the theme.
+     Its height follows the font-size, which is what sizes it here. */
   align-items: center;
   border-block-end: 1px solid var(--color-border);
   color: var(--color-accent);
   display: flex;
-  font-family: var(--font-body);
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1rem;
   grid-area: brand;
-  letter-spacing: -0.045em;
   padding: var(--space-2) var(--space-4);
   text-decoration: none;
-  text-transform: lowercase;
 }
 
 /*
@@ -297,23 +294,16 @@ select:disabled {
   position: relative;
 }
 
-/* Tonal bottle silhouettes behind the sign-in card, echoing the brand lockup.
-   Purely decorative: it sits under the content, ignores pointer events, and is
-   hidden from assistive technology by being a background rather than an image. */
-.access-page::before {
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent 0 3.5rem,
-    var(--color-bottle-1) 3.5rem 5rem,
-    transparent 5rem 8rem,
-    var(--color-bottle-2) 8rem 9.6rem
-  );
-  block-size: min(42vh, 22rem);
-  content: "";
+/* The bottle row behind the access cards, drawn from the brand geometry rather
+   than approximated with stripes. Purely decorative: it sits under the content,
+   ignores pointer events, and is hidden from assistive technology. */
+.access-page__bottles {
+  block-size: min(46vh, 24rem);
   inset-block-end: 0;
   inset-inline: 0;
-  mask-image: linear-gradient(to top, #000 15%, transparent 92%);
-  opacity: 0.5;
+  inline-size: 100%;
+  mask-image: linear-gradient(to top, #000 20%, transparent 94%);
+  opacity: 0.45;
   pointer-events: none;
   position: absolute;
   z-index: 0;
@@ -325,7 +315,7 @@ select:disabled {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .access-page::before {
+  .access-page__bottles {
     transition: opacity var(--motion-medium);
   }
 }
@@ -347,13 +337,16 @@ select:disabled {
   font-size: clamp(2.1rem, 8vw, 4.2rem);
 }
 
-.access-card__wordmark {
-  color: var(--color-plum);
-  font-family: var(--font-display);
-  font-size: 1.55rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  margin-block-end: var(--space-7);
+.access-card__lockup {
+  /* The full artwork, bottles and all. There is room for it here, and it is the
+     first thing anyone sees of the application, so it is centred on the card
+     rather than tucked into a corner of it. */
+  block-size: auto;
+  color: var(--color-lockup-ink);
+  display: block;
+  inline-size: min(20rem, 100%);
+  margin-block-end: var(--space-6);
+  margin-inline: auto;
 }
 
 .access-card--signin .eyebrow,
@@ -361,7 +354,7 @@ select:disabled {
   margin-inline: auto;
 }
 
-.access-card--signin > p:not(.access-card__wordmark, .eyebrow, .local-note, .form-error) {
+.access-card--signin > p:not(.eyebrow, .local-note, .form-error) {
   max-inline-size: 27rem;
 }
 
@@ -383,17 +376,21 @@ select:disabled {
   margin-block-start: var(--space-3);
 }
 
+/* Google's letterform, tinted to this palette rather than shown in Google's own
+   colours — see apps/web/src/brand/GoogleMark.tsx for why that is a deliberate
+   departure from their branding guidance. It inherits the button's colour, so
+   there is no second definition for the dark theme. */
 .google-mark {
   align-items: center;
-  background: white;
-  border-radius: 50%;
-  color: #4285f4;
+  block-size: 1.25rem;
   display: inline-flex;
-  font-family: Arial, sans-serif;
-  font-weight: 800;
-  block-size: 1.6rem;
-  inline-size: 1.6rem;
+  inline-size: 1.25rem;
   justify-content: center;
+}
+
+.google-mark svg {
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .local-note {
