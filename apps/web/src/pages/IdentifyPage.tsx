@@ -5,9 +5,10 @@ import { useNavigate } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import {
-  isBarcodeScanningSupported,
   openScannerStream,
+  prepareDecoder,
   scanFrame,
+  scanImageFile,
   stopStream,
 } from "../media/barcode";
 import { confirmIdentification, identifyWine } from "../services/api";
@@ -97,12 +98,13 @@ export function IdentifyPage() {
   // indicator lit even after the user navigates away.
   useEffect(() => () => stopStream(streamRef.current), []);
 
+  // Fetch the decoder while the member is still reading the screen, so pressing
+  // Scan does not begin with a wait. A browser with a native detector does
+  // nothing here.
+  useEffect(prepareDecoder, []);
+
   async function startScanning() {
     setScanNotice(null);
-    if (!isBarcodeScanningSupported()) {
-      setScanNotice(t("identify.scanUnsupported"));
-      return;
-    }
     const stream = await openScannerStream();
     if (stream === null) {
       setScanNotice(t("identify.cameraUnavailable"));
@@ -127,15 +129,26 @@ export function IdentifyPage() {
         await runIdentification({ barcode: outcome.barcode });
         return;
       }
-      if (outcome.kind === "unsupported") {
-        stopScanning();
-        setScanNotice(t("identify.scanUnsupported"));
-        return;
-      }
       await new Promise((resolve) => setTimeout(resolve, 400));
     }
     stopScanning();
     setScanNotice(t("identify.scanTimeout"));
+  }
+
+  async function readPhotograph(file: File | undefined) {
+    if (file === undefined) return;
+    setScanNotice(null);
+    setBusy(true);
+    try {
+      const outcome = await scanImageFile(file);
+      if (outcome.kind === "found") {
+        await runIdentification({ barcode: outcome.barcode });
+        return;
+      }
+      setScanNotice(t("identify.photoNoBarcode"));
+    } finally {
+      setBusy(false);
+    }
   }
 
   function stopScanning() {
@@ -225,6 +238,27 @@ export function IdentifyPage() {
               {t("identify.startScan")}
             </button>
           )}
+          {/*
+            One photograph, decoded on the device. It needs no live camera
+            stream, so it works where a stream is refused, where the browser is
+            older, and where a curved bottle will not hold focus long enough for
+            a live scan to lock on.
+          */}
+          <label className="action-link action-link--secondary" htmlFor="identify-photo">
+            {t("identify.photoAction")}
+          </label>
+          <input
+            accept="image/*"
+            capture="environment"
+            className="sr-only"
+            disabled={busy}
+            id="identify-photo"
+            onChange={(event) => {
+              void readPhotograph(event.target.files?.[0]);
+              event.target.value = "";
+            }}
+            type="file"
+          />
         </div>
         <video
           aria-label={t("identify.cameraLabel")}

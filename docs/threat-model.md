@@ -7,6 +7,29 @@ Memberships, wine and tasting data, private media, location text, provider crede
 ## Implemented controls
 
 - Single-origin deployment and restrictive browser headers.
+
+### One deliberate widening of the script policy
+
+`script-src` carries `'wasm-unsafe-eval'`. It is there so the barcode decoder
+can run, and it is worth being explicit about what it does and does not allow.
+
+Safari implements no `BarcodeDetector`, and on iOS no browser can — every one is
+required to use WebKit — so scanning a bottle needs a decoder of our own, which
+is WebAssembly. Compiling WebAssembly is blocked by `script-src 'self'` alone,
+and this is the directive that exists to permit exactly that and nothing else.
+
+What it allows: compiling and instantiating WebAssembly.
+What it does not allow: `eval`, `new Function`, or any other JavaScript from a
+string. `'unsafe-eval'` would have allowed all of those; this does not.
+
+Where the bytes can come from is still bounded by `connect-src 'self'`, so the
+only WebAssembly the page can obtain is the module served from this origin. The
+library reaches for a public CDN by default; that is overridden, and the policy
+would refuse it anyway.
+
+The alternative was no scanning on iPhone, which is the platform where
+photographing a bottle is most likely.
+
 - Strict Zod validation at HTTP boundaries and a stable, non-sensitive error envelope.
 - A request ID on every response without returning stack traces.
 - Placeholder-only checked-in environment configuration.

@@ -1,3 +1,8 @@
+import type { ReadInputBarcodeFormat, readBarcodes } from "zxing-wasm/reader";
+
+/** Just the part of the module this file uses, so the dynamic import stays typed. */
+type Decoder = { readBarcodes: typeof readBarcodes };
+
 /**
  * Barcode reading in the browser.
  *
@@ -5,9 +10,16 @@
  * scan, so scanning costs no storage, no upload, and no provider call. That
  * makes it the cheapest and most private of the identification paths.
  *
- * `BarcodeDetector` is available in Chromium browsers and Android. Safari does
- * not implement it, and photographing bottles is very likely an iPhone
- * activity, so callers must handle `unsupported` rather than assume a scanner.
+ * `BarcodeDetector` is available in Chromium browsers and Android, and Safari
+ * does not implement it — which used to mean no scanning on iPhone at all, on
+ * the platform where photographing bottles is most likely. Installing another
+ * browser there does not help: iOS requires every browser to use WebKit, so
+ * Chrome for iPhone is Safari with a different interface and the same gap.
+ *
+ * So where the browser has no detector, one is decoded here instead: ZXing,
+ * compiled to WebAssembly, imported only at the moment it is needed. Nothing
+ * changes for a browser that does have `BarcodeDetector` — it never downloads
+ * the module at all.
  */
 
 /** Symbologies that actually appear on wine bottles. */
@@ -30,8 +42,40 @@ function detectorConstructor(): BarcodeDetectorConstructor | null {
   return typeof candidate === "function" ? candidate : null;
 }
 
-export function isBarcodeScanningSupported(): boolean {
-  return detectorConstructor() !== null;
+/** Whether decoding will need the WebAssembly module fetched first. */
+export function needsDecoderDownload(): boolean {
+  return detectorConstructor() === null;
+}
+
+/**
+ * The decoder, fetched once and kept.
+ *
+ * Imported dynamically so it stays out of the initial route: a browser that
+ * never opens the identification screen never pays for it, and one with a
+ * native detector never fetches it at all.
+ */
+let decoderPromise: Promise<Decoder> | null = null;
+
+function loadDecoder(): Promise<Decoder> {
+  decoderPromise ??= (async () => {
+    const [reader, { default: wasmUrl }] = await Promise.all([
+      import("zxing-wasm/reader"),
+      import("zxing-wasm/reader/zxing_reader.wasm?url"),
+    ]);
+    // The library fetches its WebAssembly from a public CDN by default. That
+    // would be a request to a third party from a member's browser, and the
+    // deployed Content-Security-Policy blocks it outright — correctly. Vite
+    // emits the file as an asset of this origin, and this points the loader at
+    // it, so nothing leaves the deployment.
+    reader.prepareZXingModule({ overrides: { locateFile: () => wasmUrl } });
+    return reader;
+  })();
+  return decoderPromise;
+}
+
+/** Warm the decoder before the first frame, so scanning does not start by stalling. */
+export function prepareDecoder(): void {
+  if (needsDecoderDownload()) void loadDecoder().catch(() => undefined);
 }
 
 /**
@@ -49,35 +93,93 @@ export function hasValidCheckDigit(barcode: string): boolean {
   return (10 - (sum % 10)) % 10 === check;
 }
 
-export type ScanOutcome =
-  { barcode: string; kind: "found" } | { kind: "none" } | { kind: "unsupported" };
+export type ScanOutcome = { barcode: string; kind: "found" } | { kind: "none" };
 
 /**
- * Read a barcode from one video frame.
- *
- * Returns `unsupported` where `BarcodeDetector` is missing so the caller can
- * offer manual entry instead of appearing broken.
+ * Read a barcode from one video frame, by whichever route this browser has.
  */
 export async function scanFrame(source: CanvasImageSource): Promise<ScanOutcome> {
   const Detector = detectorConstructor();
-  if (Detector === null) return { kind: "unsupported" };
-
-  try {
-    const detector = new Detector({ formats: wineFormats });
-    const results = await detector.detect(source);
-    for (const result of results) {
-      const digits = result.rawValue.replaceAll(/\D/g, "");
-      // A UPC-A is an EAN-13 with a leading zero; normalizing here means a
-      // bottle scanned on either symbology matches the same stored record.
-      const normalized = digits.length === 12 ? `0${digits}` : digits;
-      if (hasValidCheckDigit(digits) || hasValidCheckDigit(normalized)) {
-        return { barcode: normalized, kind: "found" };
-      }
+  if (Detector !== null) {
+    try {
+      const detector = new Detector({ formats: wineFormats });
+      return firstValid((await detector.detect(source)).map((result) => result.rawValue));
+    } catch {
+      return { kind: "none" };
     }
-    return { kind: "none" };
+  }
+  // No native detector: draw the frame and hand the pixels to the decoder.
+  const pixels = toImageData(source);
+  return pixels === null ? { kind: "none" } : decodeImageData(pixels);
+}
+
+/**
+ * Decode a still image — a photograph the member just took.
+ *
+ * This is the path that works on every browser and every iOS version, because
+ * it needs no live camera stream: `<input type="file" capture>` opens the
+ * camera, and one frame comes back. It is also the honest fallback when a live
+ * scan cannot hold focus on a curved bottle.
+ */
+export async function scanImageFile(file: Blob): Promise<ScanOutcome> {
+  try {
+    const { readBarcodes } = await loadDecoder();
+    const results = await readBarcodes(file, { formats: zxingFormats, tryHarder: true });
+    return firstValid(results.map((result) => result.text));
   } catch {
     return { kind: "none" };
   }
+}
+
+async function decodeImageData(pixels: ImageData): Promise<ScanOutcome> {
+  try {
+    const { readBarcodes } = await loadDecoder();
+    // `tryHarder` is off for live frames: another frame arrives in a moment, and
+    // a slower, more thorough pass would cost more than it gains.
+    const results = await readBarcodes(pixels, { formats: zxingFormats, tryHarder: false });
+    return firstValid(results.map((result) => result.text));
+  } catch {
+    return { kind: "none" };
+  }
+}
+
+/** The same four symbologies, spelled the way ZXing spells them. */
+const zxingFormats: ReadInputBarcodeFormat[] = ["EAN-13", "EAN-8", "UPC-A", "UPC-E"];
+
+/** The first candidate whose check digit holds, normalized to EAN-13. */
+function firstValid(values: string[]): ScanOutcome {
+  for (const value of values) {
+    const digits = value.replaceAll(/\D/g, "");
+    // A UPC-A is an EAN-13 with a leading zero; normalizing here means a
+    // bottle scanned on either symbology matches the same stored record.
+    const normalized = digits.length === 12 ? `0${digits}` : digits;
+    if (hasValidCheckDigit(digits) || hasValidCheckDigit(normalized)) {
+      return { barcode: normalized, kind: "found" };
+    }
+  }
+  return { kind: "none" };
+}
+
+/** Pixels for the decoder, via a canvas the caller never sees. */
+function toImageData(source: CanvasImageSource): ImageData | null {
+  // `CanvasImageSource` spans several shapes; a video reports its intrinsic size
+  // under different names, and a `VideoFrame` under different ones again.
+  const sized = source as {
+    height?: number;
+    videoHeight?: number;
+    videoWidth?: number;
+    width?: number;
+  };
+  const width = sized.videoWidth ?? sized.width ?? 0;
+  const height = sized.videoHeight ?? sized.height ?? 0;
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width < 1 || height < 1) return null;
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  if (context === null) return null;
+  context.drawImage(source, 0, 0, width, height);
+  return context.getImageData(0, 0, width, height);
 }
 
 /**

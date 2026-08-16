@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { hasValidCheckDigit, isBarcodeScanningSupported, scanFrame } from "./barcode";
+import { hasValidCheckDigit, needsDecoderDownload } from "./barcode";
 
 describe("barcode check digits", () => {
   it("accepts real EAN-13 and EAN-8 codes", () => {
@@ -22,11 +22,10 @@ describe("barcode check digits", () => {
 });
 
 describe("scanner capability", () => {
-  it("reports unsupported rather than throwing where BarcodeDetector is missing", async () => {
-    // Node has no BarcodeDetector, which is the same situation as Safari.
-    expect(isBarcodeScanningSupported()).toBe(false);
-    const outcome = await scanFrame({} as CanvasImageSource);
-    // The caller must be able to offer manual entry instead of looking broken.
-    expect(outcome).toEqual({ kind: "unsupported" });
+  it("falls back to the decoder where the browser has no BarcodeDetector", () => {
+    // Node has none, which is the same situation as Safari and therefore as
+    // every browser on iOS. It used to mean no scanner at all; it now means the
+    // WebAssembly decoder does the work, which is what this reports.
+    expect(needsDecoderDownload()).toBe(true);
   });
 });

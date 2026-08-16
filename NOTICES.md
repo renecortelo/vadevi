@@ -12,14 +12,14 @@ The inventory is a snapshot of one installed tree. A few packages are published
 per platform, so a different operating system installs a slightly different set;
 those variants are collapsed into a single `-*` family row.
 
-**1136** third-party packages across **19** distinct
+**1140** third-party packages across **19** distinct
 licence expressions. **1** carry a copyleft licence; each is reviewed below.
 
 ## Summary by licence
 
 | Licence | Packages |
 | --- | --- |
-| MIT | 860 |
+| MIT | 863 |
 | Apache-2.0 | 128 |
 | ISC | 63 |
 | BSD-3-Clause | 27 |
@@ -27,8 +27,8 @@ licence expressions. **1** carry a copyleft licence; each is reviewed below.
 | BlueOak-1.0.0 | 14 |
 | MIT OR Apache-2.0 | 5 |
 | MPL-2.0 | 4 |
+| (MIT OR CC0-1.0) | 3 |
 | CC0-1.0 | 3 |
-| (MIT OR CC0-1.0) | 2 |
 | MIT-0 | 2 |
 | (BSD-2-Clause OR MIT OR Apache-2.0) | 1 |
 | 0BSD | 1 |
@@ -320,6 +320,7 @@ Declares no license field, but ships a LICENSE file carrying the verbatim MIT te
 | `@trickfilm400/rollup-plugin-off-main-thread` | 3.0.0-pre1 | Apache-2.0 |
 | `@types/chai` | 5.2.3 | MIT |
 | `@types/deep-eql` | 4.0.2 | MIT |
+| `@types/emscripten` | 1.41.5 | MIT |
 | `@types/esrecurse` | 4.3.1 | MIT |
 | `@types/estree` | 1.0.9 | MIT |
 | `@types/json-schema` | 7.0.15 | MIT |
@@ -1043,6 +1044,7 @@ Declares no license field, but ships a LICENSE file carrying the verbatim MIT te
 | `supports-hyperlinks` | 3.2.0 | MIT |
 | `supports-preserve-symlinks-flag` | 1.0.0 | MIT |
 | `symbol-tree` | 3.2.4 | MIT |
+| `tagged-tag` | 1.0.0 | MIT |
 | `tar` | 7.5.22 | BlueOak-1.0.0 |
 | `tar-stream` | 3.2.0 | MIT |
 | `tcp-port-used` | 1.0.3 | MIT |
@@ -1077,6 +1079,7 @@ Declares no license field, but ships a LICENSE file carrying the verbatim MIT te
 | `type-check` | 0.4.0 | MIT |
 | `type-fest` | 0.16.0 | (MIT OR CC0-1.0) |
 | `type-fest` | 0.20.2 | (MIT OR CC0-1.0) |
+| `type-fest` | 5.8.0 | (MIT OR CC0-1.0) |
 | `type-is` | 1.6.18 | MIT |
 | `type-is` | 2.1.0 | MIT |
 | `typed-array-buffer` | 1.0.3 | MIT |
@@ -1191,3 +1194,4 @@ Declares no license field, but ships a LICENSE file carrying the verbatim MIT te
 | `zod` | 4.4.3 | MIT |
 | `zod-to-json-schema` | 3.25.2 | ISC |
 | `zod-validation-error` | 4.0.2 | MIT |
+| `zxing-wasm` | 3.1.3 | MIT |
