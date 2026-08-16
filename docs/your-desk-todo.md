@@ -14,8 +14,8 @@ Each document has a decision line to sign.
 
 ### Open Food Facts barcode lookup — `docs/privacy-review-open-food-facts.md`
 
+- [x] Terms checked on 2026-08-16 and recorded in the review
 - [ ] Approve or reject
-- [ ] If approving, record the date you checked their current terms
 
 **What leaves your deployment:** the barcode digits, nothing else. No photo, no
 wine data, no user or Space identity.
@@ -26,10 +26,14 @@ needs no provider at all and is the higher-hit-rate path.
 
 ### Workers AI label OCR — `docs/privacy-review-label-ocr.md`
 
-- [ ] **Check Cloudflare's current Workers AI data-handling terms** — specifically
-      whether inputs may be retained or used for model improvement
-- [ ] Record the date and what you found
+- [x] Cloudflare terms checked on 2026-08-16 and recorded in the review
 - [ ] Approve or reject
+
+**What the terms say:** Cloudflare states it does not use Customer Content to
+train Workers AI models or improve its services, and that content is stored only
+if you use a storage service — which this OCR path does not. Request logging is
+not described on that page; if that matters to you, ask their support before
+enabling.
 
 **What leaves your deployment:** an actual **photograph**. This one deserves more
 thought than the barcode. I deliberately left the retention line blank rather
@@ -40,10 +44,14 @@ need no provider.
 
 ---
 
-## 2. Preview acceptance run — `docs/preview-environment.md`
+## 2. Preview acceptance run
 
-Your preview environment is live and sign-in works. The checklist has never been
-run end to end.
+**Work through `docs/manual-acceptance.md`** — an ordered ~45 minute script for
+web and mobile, arranged so anything that would invalidate the rest fails first.
+`docs/preview-environment.md` remains the formal checklist behind it.
+
+⚠️ **Migrate before you deploy.** Your preview database is two migrations behind
+(`0013`, `0014`); deploying first would 500 on identification and theme.
 
 - [ ] Data rights: JSON export, each CSV dataset, selected-media ZIP
 - [ ] Deletion: typed confirmation, cancel, then the scheduled purge and its

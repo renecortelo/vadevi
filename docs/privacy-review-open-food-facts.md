@@ -82,7 +82,20 @@ this application. **Recheck their current terms and privacy policy on the day
 you enable this**, and record the date below — the provider is free to change
 them.
 
-- Terms/policy checked on: ______________________
+- Terms/policy checked on: **2026-08-16**
+- Source: <https://world.openfoodfacts.org/terms-of-use>
+- **Licensing confirmed:** the database is Open Database License, individual
+  entries Database Contents License 1.0, and product images CC BY-SA. Re-users
+  must attribute Open Food Facts with a link. This application stores that
+  attribution alongside cached results and does not reuse provider images, which
+  is what keeps the share-alike obligation on images out of scope entirely.
+- **Accuracy disclaimer confirmed:** Open Food Facts states it "does not
+  guarantee the accuracy of the information and data present on the site and in
+  the database." This is why a candidate from this source is offered at low
+  confidence and never auto-accepted.
+- **Not established:** the terms page does not describe API request logging or
+  rate limits; those live in the separate API documentation. The application
+  keeps its own budget below the documented ceilings regardless.
 
 ## Limits and cost
 

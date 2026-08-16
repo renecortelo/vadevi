@@ -59,8 +59,21 @@ enable this**, specifically whether inputs may be retained or used for model
 improvement, and record the date and finding below. This is the single most
 important line in this document and it must not be filled in from memory.
 
-- Cloudflare Workers AI terms checked on: ______________________
-- Retention/training finding: ______________________
+- Cloudflare Workers AI terms checked on: **2026-08-16**
+- Source: <https://developers.cloudflare.com/workers-ai/platform/data-usage/>
+- **Retention finding:** inputs are not retained automatically. Cloudflare states
+  that Customer Content "may be stored by Cloudflare if you specifically use a
+  storage service (e.g., R2, KV, DO, Vectorize, etc.)" — this application uses
+  none of those for OCR, so the image is passed through and not persisted.
+- **Training finding:** Cloudflare states it "does not use your Customer Content
+  to (1) train any AI models made available on Workers AI or (2) improve any
+  Cloudflare or third-party services."
+- **Not established:** the page does not describe request logging. If logging of
+  inputs matters to you beyond retention and training, raise it with Cloudflare
+  support before enabling.
+
+Recheck this before enabling — a provider is free to change its terms, and this
+finding is only as current as the date above.
 
 ## What the application stores
 
