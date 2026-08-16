@@ -1,5 +1,5 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
-import { Wordmark } from "../brand/Wordmark";
+import { BrandLockup } from "../brand/Wordmark";
 import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
 import { ThemeToggle } from "./ThemeToggle";
@@ -45,9 +45,11 @@ export function AppShell() {
           occupy the navigation column on wide viewports, where the brand belongs
           above the navigation rather than beside the Space controls. */}
       <NavLink aria-label={t("appName")} className="wordmark" to="/">
-        {/* The mark is decorative; the accessible name stays the translated
-            "Va de Vi" via aria-label above. */}
-        <Wordmark />
+        {/* The full lockup, not just the letters: this is the one place in the
+            signed-in application where the brand appears, so it appears whole.
+            Decorative — the accessible name stays the translated "Va de Vi" via
+            aria-label above. */}
+        <BrandLockup />
       </NavLink>
 
       <header className="topbar">

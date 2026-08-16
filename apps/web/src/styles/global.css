@@ -100,18 +100,23 @@ select:disabled {
 }
 
 .wordmark {
-  /* The mark is drawn, not set: the letterforms come from the brand artwork via
-     apps/web/src/brand, so the top bar, the sign-in lockup and the installed
-     icon are the same geometry. It inherits `color`, so it follows the theme.
-     Its height follows the font-size, which is what sizes it here. */
+  /* The mark is drawn, not set: it comes from the brand artwork via
+     apps/web/src/brand, so this, the sign-in lockup and the installed icon are
+     the same geometry. It inherits `color`, so it follows the theme. */
   align-items: center;
   border-block-end: 1px solid var(--color-border);
-  color: var(--color-accent);
+  color: var(--color-lockup-ink);
   display: flex;
-  font-size: 1rem;
   grid-area: brand;
   padding: var(--space-2) var(--space-4);
   text-decoration: none;
+}
+
+.wordmark svg {
+  /* Small on a phone: the lockup is taller than a line of text, and this strip
+     sits above a top bar that already has to fit on a small screen. */
+  block-size: auto;
+  inline-size: min(100%, 5.25rem);
 }
 
 /*
@@ -2157,6 +2162,12 @@ p {
     background: rgb(var(--color-surface-rgb) / 68%);
     border-inline-end: 1px solid var(--color-border);
     padding: var(--space-4);
+  }
+
+  .wordmark svg {
+    /* The rail has room for the whole mark, but not for it to push the top bar
+       taller than the controls beside it need. */
+    inline-size: min(100%, 8.75rem);
   }
 
   .topbar__context {
