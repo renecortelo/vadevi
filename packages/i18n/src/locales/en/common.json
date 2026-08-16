@@ -969,6 +969,13 @@
       "space_text": "Name match in your Space",
       "open_food_facts": "Public product data",
       "ocr": "Read from the label"
+    },
+    "warning": {
+      "label_unreadable": "The label could not be read. Fill the fields in below.",
+      "label_reading_disabled": "Label reading is switched off in this deployment.",
+      "label_text_ignored": "Some text on the label was ignored because it read like an instruction.",
+      "product_lookup_empty": "The public product database has nothing for this barcode.",
+      "product_lookup_disabled": "Looking barcodes up elsewhere is switched off in this deployment."
     }
   },
   "theme": {

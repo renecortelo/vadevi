@@ -174,16 +174,12 @@ select:disabled {
   row-gap: var(--space-2);
 }
 
-/* Narrow enough that all three menus keep one row on a phone; a select
-   truncates its own label rather than pushing the next one onto a new line. The
-   Space takes the larger share, because its names are the ones worth reading. */
+/* Equal thirds. They sit in a row as one control each; different widths read as
+   three unrelated things, and a select truncates its own label rather than
+   pushing the next one onto a new line. */
 .controlbar > * {
-  flex: 1 1 6rem;
+  flex: 1 1 0;
   min-inline-size: 0;
-}
-
-.controlbar > .space-switcher {
-  flex-grow: 1.6;
 }
 
 .controlbar select {
@@ -205,10 +201,12 @@ select:disabled {
 }
 
 .wordmark svg {
-  /* Small on a phone: the lockup is taller than a line of text, and this strip
-     sits above a top bar that already has to fit on a small screen. */
+  /* An explicit width, not a percentage. In an auto-width grid column a
+     percentage is cyclic, and the mark resolved to its own max-content — 332px
+     of a 390px screen — which left the status and the way out stacked three
+     lines deep in what was left. */
   block-size: auto;
-  inline-size: min(100%, 5.25rem);
+  inline-size: 5.25rem;
 }
 
 .space-switcher {
@@ -2220,7 +2218,7 @@ p {
   .wordmark svg {
     /* The rail has room for the whole mark, but not for it to push the top bar
        taller than the controls beside it need. */
-    inline-size: min(100%, 8.75rem);
+    inline-size: 8.75rem;
   }
 
   .space-switcher {
@@ -2457,8 +2455,10 @@ p {
     white-space: nowrap;
   }
 
+  /* No cap: in the control bar the three menus size themselves as equal
+     thirds, and a cap here made one of them visibly the odd one. */
   .locale-toggle select {
-    max-inline-size: 7rem;
+    max-inline-size: none;
   }
 }
 
@@ -2506,4 +2506,44 @@ p {
 .about-license h2 {
   font-size: var(--text-lg);
   margin-block: 0 var(--space-2);
+}
+
+/*
+  A stack of label-then-field.
+
+  Where a label wraps its field, the label itself can be the grid. Here they are
+  siblings joined by `for`, which leaves them inline-level: without this they
+  flow like words in a paragraph, so a label ends up beside the previous field
+  and the form reads as nonsense.
+*/
+.field-stack {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: stretch;
+}
+
+.field-stack > label {
+  font-size: var(--text-sm);
+  font-weight: 750;
+  margin-block-start: var(--space-2);
+}
+
+.field-stack > label:first-of-type {
+  margin-block-start: 0;
+}
+
+.field-stack > input,
+.field-stack > select,
+.field-stack > textarea {
+  inline-size: 100%;
+}
+
+/* The provenance line belongs to the field above it, not to the next label. */
+.field-stack > .field-provenance {
+  margin-block-start: calc(var(--space-1) * -1);
+}
+
+.field-stack > button {
+  justify-self: start;
+  margin-block-start: var(--space-3);
 }

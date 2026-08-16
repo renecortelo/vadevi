@@ -6360,9 +6360,9 @@
               "warnings": {
                 "type": "array",
                 "items": {
-                  "type": "string",
-                  "minLength": 1
-                }
+                  "$ref": "#/components/schemas/IdentificationWarning"
+                },
+                "maxItems": 6
               }
             },
             "required": [
@@ -6379,6 +6379,17 @@
           "data"
         ],
         "additionalProperties": false
+      },
+      "IdentificationWarning": {
+        "type": "string",
+        "enum": [
+          "label_unreadable",
+          "label_reading_disabled",
+          "label_text_ignored",
+          "product_lookup_empty",
+          "product_lookup_disabled",
+          "no_candidates"
+        ]
       },
       "IdentificationRequest": {
         "type": "object",

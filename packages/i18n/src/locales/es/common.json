@@ -969,6 +969,13 @@
       "space_text": "Coincidencia de nombre en tu Espacio",
       "open_food_facts": "Datos públicos de producto",
       "ocr": "Leído de la etiqueta"
+    },
+    "warning": {
+      "label_unreadable": "No se pudo leer la etiqueta. Rellena los campos de abajo.",
+      "label_reading_disabled": "La lectura de etiquetas está desactivada en esta instalación.",
+      "label_text_ignored": "Se ignoró parte del texto de la etiqueta porque parecía una instrucción.",
+      "product_lookup_empty": "La base de datos pública no tiene nada para este código.",
+      "product_lookup_disabled": "La búsqueda de códigos fuera está desactivada en esta instalación."
     }
   },
   "theme": {

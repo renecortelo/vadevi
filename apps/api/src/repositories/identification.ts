@@ -3,6 +3,7 @@ import type {
   IdentificationCandidate,
   IdentificationRequest,
   IdentificationResponse,
+  IdentificationWarning,
 } from "@vadevi/contracts";
 import type { OcrLine, OcrPort, ProductLookupPort } from "@vadevi/domain";
 import { ulid } from "ulid";
@@ -173,7 +174,7 @@ export async function createIdentification(
   const now = new Date();
   const nowIso = now.toISOString();
   const candidates: IdentificationCandidate[] = [];
-  const warnings: string[] = [];
+  const warnings: IdentificationWarning[] = [];
   const seen = new Set<string>();
 
   function push(candidate: IdentificationCandidate) {
@@ -227,10 +228,10 @@ export async function createIdentification(
         });
       }
     } else {
-      warnings.push("The label could not be read. Confirm the wine using the manual fields.");
+      warnings.push("label_unreadable");
     }
   } else if (options.mediaBytes !== undefined) {
-    warnings.push("Label reading is not configured. Confirm the wine using the manual fields.");
+    warnings.push("label_reading_disabled");
   }
 
   // 3. Text match against the Space, from OCR output or the user's own hint.
@@ -265,17 +266,17 @@ export async function createIdentification(
       }
       warnings.push(...product.warnings);
     } else {
-      warnings.push("The public product lookup returned nothing for this barcode.");
+      warnings.push("product_lookup_empty");
     }
   } else if (options.request.barcode !== undefined && options.ports.product === null) {
-    warnings.push("External product lookup is disabled. Confirm the wine using the manual fields.");
+    warnings.push("product_lookup_disabled");
   }
 
   const id = ulid();
   const expiresAt = new Date(now.getTime() + identificationTtlSeconds * 1_000).toISOString();
   const status = candidates.length > 0 ? "needs_confirmation" : "manual_required";
   if (candidates.length === 0) {
-    warnings.push("No candidate could be proposed. Enter the wine details manually.");
+    warnings.push("no_candidates");
   }
 
   await database

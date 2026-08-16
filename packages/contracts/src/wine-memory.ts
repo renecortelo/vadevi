@@ -372,6 +372,28 @@ export const IdentificationCandidateSchema = z
   })
   .strict();
 
+/**
+ * Why an identification came back thinner than hoped, as codes rather than
+ * prose.
+ *
+ * The server used to send English sentences straight to the screen, which meant
+ * a Spanish interface reading an English apology — and one of them repeated a
+ * line the client already showed in the reader's own language. A code is
+ * translated where the reader is.
+ */
+export const IdentificationWarningSchema = z
+  .enum([
+    "label_unreadable",
+    "label_reading_disabled",
+    "label_text_ignored",
+    "product_lookup_empty",
+    "product_lookup_disabled",
+    "no_candidates",
+  ])
+  .openapi("IdentificationWarning");
+
+export type IdentificationWarning = z.infer<typeof IdentificationWarningSchema>;
+
 export const IdentificationResponseSchema = z
   .object({
     data: z
@@ -381,7 +403,7 @@ export const IdentificationResponseSchema = z
         id: ResourceIdSchema,
         /** `manual_required` whenever nothing could be proposed. */
         status: z.enum(["needs_confirmation", "manual_required"]),
-        warnings: z.array(z.string().min(1)),
+        warnings: z.array(IdentificationWarningSchema).max(6),
       })
       .strict(),
   })
