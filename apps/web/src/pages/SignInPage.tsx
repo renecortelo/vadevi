@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
+import { AccessBackdrop } from "../brand/AccessBackdrop";
+import { GoogleMark } from "../brand/GoogleMark";
+import { BrandLockup } from "../brand/Wordmark";
 
 export function SignInPage() {
   const { isEmulator, signIn } = useAuth();
@@ -25,8 +28,9 @@ export function SignInPage() {
 
   return (
     <main className="access-page" id="main-content">
+      <AccessBackdrop />
       <section className="access-card access-card--signin">
-        <p className="access-card__wordmark">{t("appName")}</p>
+        <BrandLockup className="access-card__lockup" />
         <p className="eyebrow">{t("auth.signInEyebrow")}</p>
         <h1>{t("auth.signInTitle")}</h1>
         <p>{t("auth.signInBody")}</p>
@@ -37,9 +41,7 @@ export function SignInPage() {
           onClick={() => void handleSignIn()}
           type="button"
         >
-          <span aria-hidden="true" className="google-mark">
-            G
-          </span>
+          <GoogleMark />
           {busy ? t("auth.redirecting") : t("auth.signInAction")}
         </button>
         {isEmulator ? <p className="local-note">{t("auth.localEmulator")}</p> : null}

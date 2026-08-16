@@ -7,6 +7,8 @@ import { useNavigate, useParams } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { getInvitationPreview } from "../services/api";
 import { useSession } from "../session/SessionContext";
+import { AccessBackdrop } from "../brand/AccessBackdrop";
+import { BrandLockup } from "../brand/Wordmark";
 
 function useInvitation() {
   const { token = "" } = useParams<{ token: string }>();
@@ -33,8 +35,9 @@ function InvitationCard({
   const { t } = useTranslation();
   return (
     <main className="access-page" id="main-content">
+      <AccessBackdrop />
       <section className="access-card invitation-card">
-        <p className="access-card__wordmark">{t("appName")}</p>
+        <BrandLockup className="access-card__lockup" />
         <p className="eyebrow">{t("invitation.eyebrow")}</p>
         <h1>{t("invitation.title", { space: preview.data.spaceName })}</h1>
         <p>
@@ -62,8 +65,9 @@ function InvitationUnavailable() {
   const { t } = useTranslation();
   return (
     <main className="access-page" id="main-content">
+      <AccessBackdrop />
       <section className="access-card">
-        <p className="access-card__wordmark">{t("appName")}</p>
+        <BrandLockup className="access-card__lockup" />
         <h1>{t("invitation.invalidTitle")}</h1>
         <p>{t("invitation.invalidBody")}</p>
       </section>
@@ -78,7 +82,12 @@ export function InvitationSignInPage() {
   const [busy, setBusy] = useState(false);
 
   if (query.isPending) {
-    return <main className="access-page">{t("invitation.loading")}</main>;
+    return (
+      <main className="access-page">
+        <AccessBackdrop />
+        {t("invitation.loading")}
+      </main>
+    );
   }
   if (query.isError) return <InvitationUnavailable />;
 

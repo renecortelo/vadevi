@@ -1,4 +1,5 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
+import { Wordmark } from "../brand/Wordmark";
 import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
 import { ThemeToggle } from "./ThemeToggle";
@@ -44,9 +45,9 @@ export function AppShell() {
           occupy the navigation column on wide viewports, where the brand belongs
           above the navigation rather than beside the Space controls. */}
       <NavLink aria-label={t("appName")} className="wordmark" to="/">
-        {/* The brand sets the name as one lowercase word. The accessible name
-            stays the translated "Va de Vi" via aria-label above. */}
-        <span aria-hidden="true">vadevi</span>
+        {/* The mark is decorative; the accessible name stays the translated
+            "Va de Vi" via aria-label above. */}
+        <Wordmark />
       </NavLink>
 
       <header className="topbar">

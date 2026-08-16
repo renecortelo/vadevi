@@ -27,8 +27,8 @@ export function resolveTheme(preference: ThemePreference): ResolvedTheme {
 
 /** Kept in step with the palette so the mobile status bar matches the page. */
 const themeColors: Record<ResolvedTheme, string> = {
-  dark: "#210a0f",
-  light: "#fbe9e5",
+  dark: "#2b0709",
+  light: "#fbeee5",
 };
 
 /**

@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { changeLanguage } from "../i18n";
 import { useSession } from "../session/SessionContext";
+import { AccessBackdrop } from "../brand/AccessBackdrop";
+import { BrandLockup } from "../brand/Wordmark";
 
 export function OnboardingPage() {
   const { bootstrap, isUpdating, updateProfile } = useSession();
@@ -29,8 +31,9 @@ export function OnboardingPage() {
 
   return (
     <main className="access-page" id="main-content">
+      <AccessBackdrop />
       <section className="access-card">
-        <p className="access-card__wordmark">{t("appName")}</p>
+        <BrandLockup className="access-card__lockup" />
         <p className="eyebrow">{t("auth.onboardingEyebrow")}</p>
         <h1>{t("auth.onboardingTitle")}</h1>
         <p>{t("auth.onboardingBody")}</p>

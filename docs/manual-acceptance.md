@@ -19,10 +19,11 @@ Deploy the current code and migrate first, or half of this tests an old build.
 The exact commands are in the chat message that accompanied this file, and in
 `docs/self-hosting.md`.
 
-Confirm you are on the new build: the sign-in screen should show the blush
-palette, the signed-in shell should show the lowercase `vadevi` wordmark above
-the navigation rail rather than a serif "Va de Vi", and the top bar should carry
-both a language menu and a System / Light / Dark control.
+Confirm you are on the new build: the sign-in screen should show the bottle-row
+lockup with the lowercase `vadevi` drawn across it, the signed-in shell should
+show that same wordmark above the navigation rail rather than a serif
+"Va de Vi", and the top bar should carry both a language menu and a
+System / Light / Dark control.
 
 ---
 
@@ -86,7 +87,8 @@ Use your phone against the same preview URL.
 
 23. [ ] Sign in on mobile. The Google flow completes.
 24. [ ] **Install the PWA** to the home screen. Check the icon: it should be the
-        burgundy tile with the VV monogram, not a generic screenshot.
+        wine-red tile with the bottle row and the `vdv` monogram, not a
+        generic screenshot.
 25. [ ] Open from the home screen. It launches standalone, with no browser
         chrome, and the status bar colour matches the theme.
 26. [ ] **The theme followed you.** If you set Dark on desktop, mobile opens
