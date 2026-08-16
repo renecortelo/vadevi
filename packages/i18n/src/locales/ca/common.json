@@ -110,7 +110,17 @@
     "log": "Registra",
     "sessions": "Sessions",
     "memory": "Memòria",
-    "assistant": "Vicenç"
+    "assistant": "Vicenç",
+    "about": "Quant a"
+  },
+  "about": {
+    "eyebrow": "La lletra petita",
+    "title": "Quant a Va de Vi",
+    "body": "On viuen les teves dades, qui les pot veure i com recuperar-les.",
+    "dataBody": "Exporta-ho tot, revisa què es desa, o esborra un Espai o el compte.",
+    "spacesBody": "Crea un Espai, convida algú o canvia qui pot fer què.",
+    "licenseTitle": "Codi i llicència",
+    "licenseBody": "Va de Vi és programari lliure sota l'AGPL-3.0. Qui l'usa per xarxa té dret al seu codi."
   },
   "pages": {
     "logTitle": "Registre ràpid",

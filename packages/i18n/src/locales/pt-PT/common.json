@@ -110,7 +110,17 @@
     "log": "Registar",
     "sessions": "Sessões",
     "memory": "Memória",
-    "assistant": "Vicenç"
+    "assistant": "Vicenç",
+    "about": "Sobre"
+  },
+  "about": {
+    "eyebrow": "As letras pequenas",
+    "title": "Sobre o Va de Vi",
+    "body": "Onde vivem os seus dados, quem os pode ver e como recuperá-los.",
+    "dataBody": "Exporte tudo, veja o que fica guardado, ou apague um Espaço ou a conta.",
+    "spacesBody": "Crie um Espaço, convide alguém ou mude quem pode fazer o quê.",
+    "licenseTitle": "Código e licença",
+    "licenseBody": "O Va de Vi é software livre sob a AGPL-3.0. Quem o usa em rede tem direito ao seu código."
   },
   "pages": {
     "logTitle": "Registo rápido",

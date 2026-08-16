@@ -35,10 +35,7 @@ test.describe("field styling", () => {
     test(`every field uses the palette surface in ${theme} mode`, async ({ page }) => {
       await signIn(page);
       await completeOnboarding(page);
-      await page
-        .getByRole("group", { name: /theme/i })
-        .getByRole("button", { name: new RegExp(`^${theme}$`, "i") })
-        .click();
+      await page.getByLabel(/^theme$/i).selectOption(theme);
       await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
 
       const offenders: string[] = [];
@@ -82,10 +79,7 @@ test.describe("field styling", () => {
   test("hands native control parts the same palette the page uses", async ({ page }) => {
     await signIn(page);
     await completeOnboarding(page);
-    await page
-      .getByRole("group", { name: /theme/i })
-      .getByRole("button", { name: /^light$/i })
-      .click();
+    await page.getByLabel(/^theme$/i).selectOption("light");
 
     // `color-scheme` drives the date picker, the number spinners, the select
     // popup and autofill. Left at `light dark` it follows the operating system
@@ -95,10 +89,7 @@ test.describe("field styling", () => {
       .poll(() => page.evaluate(() => getComputedStyle(document.documentElement).colorScheme))
       .toBe("light");
 
-    await page
-      .getByRole("group", { name: /theme/i })
-      .getByRole("button", { name: /^dark$/i })
-      .click();
+    await page.getByLabel(/^theme$/i).selectOption("dark");
     await expect
       .poll(() => page.evaluate(() => getComputedStyle(document.documentElement).colorScheme))
       .toBe("dark");

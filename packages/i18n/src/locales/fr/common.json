@@ -110,7 +110,17 @@
     "log": "Ajouter",
     "sessions": "Sessions",
     "memory": "Mémoire",
-    "assistant": "Vicenç"
+    "assistant": "Vicenç",
+    "about": "À propos"
+  },
+  "about": {
+    "eyebrow": "Les petits caractères",
+    "title": "À propos de Va de Vi",
+    "body": "Où vivent vos données, qui peut les voir et comment les récupérer.",
+    "dataBody": "Tout exporter, vérifier ce qui est conservé, ou supprimer un Espace ou le compte.",
+    "spacesBody": "Créer un Espace, inviter quelqu'un ou changer qui peut faire quoi.",
+    "licenseTitle": "Code source et licence",
+    "licenseBody": "Va de Vi est un logiciel libre sous AGPL-3.0. Quiconque l'utilise en réseau a droit à son code source."
   },
   "pages": {
     "logTitle": "Ajout rapide",

@@ -4,7 +4,7 @@
  * They were typographic characters — ⌂, +, ◇, ▦, ✦ — which render in whatever
  * the system font decides, at whatever weight it decides, and say nothing about
  * wine. These are drawn instead: one set, one stroke weight, one 24-unit grid,
- * so the rail reads as a family rather than as five borrowed symbols.
+ * so the rail reads as a family rather than as six borrowed symbols.
  *
  * Each is decorative; the link's own text names the destination.
  */
@@ -14,7 +14,7 @@ const stroke = {
   stroke: "currentColor",
   strokeLinecap: "round",
   strokeLinejoin: "round",
-  strokeWidth: 1.5,
+  strokeWidth: 1.4,
 } as const;
 
 function Frame({ children }: { children: React.ReactNode }) {
@@ -26,39 +26,61 @@ function Frame({ children }: { children: React.ReactNode }) {
 }
 
 /**
- * A wine glass: a bowl that curves in towards the stem rather than a trapezoid,
- * which is the difference between a wine glass and a tumbler. Drawn once and
- * placed twice, so the two icons that use it cannot drift apart.
+ * A wine glass: a balloon bowl with the wine still in it, a stem, and a foot
+ * that curves. Drawn once and placed twice, so the icons that use it cannot
+ * drift apart.
  */
 function Glass({ transform }: { transform: string }) {
   return (
     <g transform={transform}>
-      <path d="M-3.7 0h7.4c0 4.2-1.66 7.2-3.7 7.2S-3.7 4.2-3.7 0z" />
-      <path d="M0 7.2v4.9" />
-      <path d="M-2.7 13.2q2.7 1.1 5.4 0" />
+      <path d="M-4.1 0h8.2c0 3.9-1.84 6.7-4.1 6.7S-4.1 3.9-4.1 0z" />
+      <path d="M-3.5 2.5c1.17.85 2.33.85 3.5 0s2.33-.85 3.5 0" />
+      <path d="M0 6.7v4.5" />
+      <path d="M-3 12.5q3 1.2 6 0" />
+    </g>
+  );
+}
+
+/** One barrel head. The stave band and its bung stop a circle reading as a coin. */
+function BarrelHead({ cx, cy, r }: { cx: number; cy: number; r: number }) {
+  const band = r * 0.32;
+  const chord = Math.round(Math.sqrt(r * r - band * band) * 100) / 100;
+  return (
+    <g>
+      <circle cx={cx} cy={cy} r={r} />
+      <path d={`M${cx - band} ${cy - chord}V${cy + chord}`} />
+      <path d={`M${cx + band} ${cy - chord}V${cy + chord}`} />
+      <circle cx={cx} cy={cy} fill="currentColor" r={r * 0.14} stroke="none" />
     </g>
   );
 }
 
 /**
- * Home: three barrels stacked head-on, the way a cellar stacks them — two
- * below, one nested in the notch between. Each head carries the vertical stave
- * band and its bung, which is what stops a circle from reading as a coin.
+ * Home: three barrels stacked head-on, two below on their chocks and one nested
+ * in the notch between them — the way a cellar actually stacks them.
  */
 export function BarrelsIcon() {
-  const barrel = (cx: number, cy: number) => (
-    <g key={`${cx}-${cy}`}>
-      <circle cx={cx} cy={cy} r="4.2" />
-      <path d={`M${cx - 1.35} ${cy - 3.98}v7.96`} />
-      <path d={`M${cx + 1.35} ${cy - 3.98}v7.96`} />
-      <circle cx={cx} cy={cy} fill="currentColor" r="0.6" stroke="none" />
-    </g>
-  );
+  const chock = (cx: number) => `M${cx - 2.2} 21.2l.9-1.9h2.6l.9 1.9z`;
   return (
     <Frame>
-      {barrel(12, 8.3)}
-      {barrel(7.6, 15.4)}
-      {barrel(16.4, 15.4)}
+      <BarrelHead cx={12} cy={7.4} r={4.15} />
+      <BarrelHead cx={7.6} cy={14.9} r={4.15} />
+      <BarrelHead cx={16.4} cy={14.9} r={4.15} />
+      <path d={chock(7.6)} />
+      <path d={chock(16.4)} />
+    </Frame>
+  );
+}
+
+/** About: a single barrel from the side, hoops and staves and all. */
+export function BarrelIcon() {
+  return (
+    <Frame>
+      <path d="M8.1 3.7h7.8c1.75 2.3 2.6 5 2.6 8.3s-.85 6-2.6 8.3H8.1c-1.75-2.3-2.6-5-2.6-8.3s.85-6 2.6-8.3z" />
+      <path d="M5.9 8.3h12.2" />
+      <path d="M5.9 15.7h12.2" />
+      <path d="M10.6 3.7v16.6" />
+      <path d="M13.4 3.7v16.6" />
     </Frame>
   );
 }
@@ -67,22 +89,31 @@ export function BarrelsIcon() {
 export function PourIcon() {
   return (
     <Frame>
-      <Glass transform="translate(9 4.2)" />
-      <path d="M18.6 4.2v5.4" />
-      <path d="M15.9 6.9h5.4" />
+      <Glass transform="translate(8.4 2.9) scale(1.24)" />
+      <path d="M18.8 4.4v5.2" />
+      <path d="M16.2 7h5.2" />
     </Frame>
   );
 }
 
-/** Sessions: two glasses meeting, which is what a shared tasting is. */
+/**
+ * Sessions: two glasses meeting, which is what a shared tasting is.
+ *
+ * Each leans about its own foot rather than its rim. Leaning about the rim
+ * swung the feet inwards until they crossed and the pair read as one shape;
+ * about the foot, the feet stay planted and only the rims come together, which
+ * is what a toast actually looks like.
+ */
 export function ToastIcon() {
+  const lean = (footX: number, degrees: number) =>
+    `translate(${footX} 20.2) rotate(${degrees}) scale(1.05) translate(0 -12.5)`;
   return (
     <Frame>
-      <Glass transform="translate(7 7.4) rotate(-13) scale(0.86)" />
-      <Glass transform="translate(17 7.4) rotate(13) scale(0.86)" />
-      <path d="M12 4.5V2.7" />
-      <path d="M9.2 5.2 8.4 3.6" />
-      <path d="M14.8 5.2 15.6 3.6" />
+      <Glass transform={lean(6.6, 9)} />
+      <Glass transform={lean(17.4, -9)} />
+      <path d="M12 4.2V2.4" />
+      <path d="M9.1 4.9 8.3 3.3" />
+      <path d="M14.9 4.9 15.7 3.3" />
     </Frame>
   );
 }
@@ -90,16 +121,16 @@ export function ToastIcon() {
 /** Memory: the bottles you have kept, in the crate you keep them in. */
 export function CrateIcon() {
   const bottle = (cx: number) => (
-    <path d={`M${cx - 0.95} 4.2h1.9v2.4l1 1.5v3.5M${cx - 1.95} 11.6V8.1l1-1.5`} key={cx} />
+    <path d={`M${cx - 1} 3.6h2v2.5l1.05 1.6v3.5M${cx - 2.05} 11.2V7.7l1.05-1.6`} key={cx} />
   );
   return (
     <Frame>
-      {bottle(6.9)}
+      {bottle(6.8)}
       {bottle(12)}
-      {bottle(17.1)}
-      <path d="M3.3 11.6h17.4v8.5H3.3z" />
-      <path d="M3.3 14.4h17.4" />
-      <path d="M3.3 17.2h17.4" />
+      {bottle(17.2)}
+      <path d="M3.1 11.2h17.8v9.2H3.1z" />
+      <path d="M3.1 14.3h17.8" />
+      <path d="M3.1 17.3h17.8" />
     </Frame>
   );
 }
@@ -120,26 +151,34 @@ function spark(cx: number, cy: number, r: number): string {
   );
 }
 
+/** Grape positions, row by row, in the bunch Vicenç carries. */
+const bunch = [
+  [11.6, 11],
+  [14.6, 11],
+  [10.1, 13.8],
+  [13.1, 13.8],
+  [16.1, 13.8],
+  [11.6, 16.6],
+  [14.6, 16.6],
+  [13.1, 19.3],
+] as const;
+
 /**
- * Vicenç: a bunch of grapes with one grape replaced by a spark. He reads labels
- * and proposes; the grape that is not a grape is the whole of what he is.
- *
- * The leaf sits to the left of the stem so the spark has the top-right corner to
- * itself — together they merged into one unreadable shape.
+ * Vicenç: a bunch of grapes with the top-left one replaced by a spark. He reads
+ * labels and proposes; the grape that is not a grape is the whole of what he is,
+ * so it is kept clear of its neighbours — set among them it merged into the
+ * bunch and disappeared.
  */
 export function GrapesIcon() {
   return (
     <Frame>
-      <path d="M10.6 4.4v2.9" />
-      <path d="M10.4 5.5c-1.6-1.3-3.1-.9-3.6 0 1.1 1.2 2.7 1.1 3.6 0z" />
+      <path d="M14.4 5.6v3.9" />
+      <path d="M14.6 6.4c1.5-1.2 3-.8 3.5 0-1.1 1.2-2.7 1.1-3.5 0z" />
       <g fill="currentColor" stroke="none">
-        <circle cx="9" cy="11" r="1.55" />
-        <circle cx="7.4" cy="14" r="1.55" />
-        <circle cx="10.6" cy="14" r="1.55" />
-        <circle cx="13.8" cy="14" r="1.55" />
-        <circle cx="9" cy="17" r="1.55" />
-        <circle cx="12.2" cy="17" r="1.55" />
-        <path d={spark(12.2, 11, 2.3)} />
+        {bunch.map(([cx, cy]) => (
+          <circle cx={cx} cy={cy} key={`${cx}-${cy}`} r="1.45" />
+        ))}
+        <path d={spark(7.5, 10, 2.5)} />
       </g>
     </Frame>
   );

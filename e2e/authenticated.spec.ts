@@ -23,6 +23,7 @@ test.describe("authenticated screens", () => {
     { path: "/log/identify", name: "identify" },
     { path: "/cellar", name: "cellar" },
     { path: "/settings/data", name: "data and privacy" },
+    { path: "/about", name: "about" },
   ] as const;
 
   for (const screen of screens) {
@@ -80,9 +81,20 @@ test.describe("authenticated screens", () => {
     await expect(deleteButton).toBeEnabled();
   });
 
-  test("shows the AGPL source offer required for network use", async ({ page }) => {
-    await page.goto("/");
+  test("offers the source AGPL-3.0 requires, one click from anywhere", async ({ page }) => {
+    await page.goto("/memory");
     await page.waitForLoadState("networkidle");
+
+    // §13 obliges an operator to offer the Corresponding Source to anyone using
+    // the application over a network. It used to sit in the shell's footer on
+    // every screen; it now lives on About, which is reachable from the primary
+    // navigation on every screen. This walks that path rather than assuming it.
+    await page
+      .getByRole("navigation", { name: "Primary" })
+      .getByRole("link", { name: /about/i })
+      .click();
+    await expect(page).toHaveURL(/\/about$/);
+
     const link = page.getByRole("link", { name: /source code/i });
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute("href", /^https?:\/\//);
@@ -115,10 +127,10 @@ test.describe("theme preference", () => {
     await signIn(page);
     await completeOnboarding(page);
 
-    const group = page.getByRole("group", { name: /theme/i });
-    await expect(group).toBeVisible();
+    const control = page.getByLabel(/^theme$/i);
+    await expect(control).toBeVisible();
 
-    await group.getByRole("button", { name: /^dark$/i }).click();
+    await control.selectOption("dark");
     await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 
     // The choice is stored on the account, so it survives a full reload rather
@@ -126,24 +138,21 @@ test.describe("theme preference", () => {
     await page.reload();
     await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 
-    await group.getByRole("button", { name: /^light$/i }).click();
+    await control.selectOption("light");
     await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
 
     // `system` removes the attribute so the page keeps following the device.
-    await group.getByRole("button", { name: /^system$/i }).click();
+    await control.selectOption("system");
     await expect(page.locator("html")).not.toHaveAttribute("data-theme", /.+/);
   });
 
   test("has no serious or critical axe violation in dark mode", async ({ page }) => {
     await signIn(page);
     await completeOnboarding(page);
-    await page
-      .getByRole("group", { name: /theme/i })
-      .getByRole("button", { name: /^dark$/i })
-      .click();
+    await page.getByLabel(/^theme$/i).selectOption("dark");
     await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 
-    for (const path of ["/", "/memory", "/settings/data"]) {
+    for (const path of ["/", "/memory", "/about", "/settings/data"]) {
       await page.goto(path);
       await page.waitForLoadState("networkidle");
       const results = await new AxeBuilder({ page })

@@ -110,7 +110,17 @@
     "log": "Erfassen",
     "sessions": "Runden",
     "memory": "Erinnerungen",
-    "assistant": "Vicenç"
+    "assistant": "Vicenç",
+    "about": "Über"
+  },
+  "about": {
+    "eyebrow": "Das Kleingedruckte",
+    "title": "Über Va de Vi",
+    "body": "Wo deine Daten liegen, wer sie sehen kann und wie du sie zurückbekommst.",
+    "dataBody": "Alles exportieren, nachsehen was gespeichert wird, oder einen Space oder das Konto löschen.",
+    "spacesBody": "Einen Space anlegen, jemanden einladen oder ändern, wer was darf.",
+    "licenseTitle": "Quelltext und Lizenz",
+    "licenseBody": "Va de Vi ist freie Software unter der AGPL-3.0. Wer es über ein Netzwerk nutzt, hat Anspruch auf den Quelltext."
   },
   "pages": {
     "logTitle": "Schnellerfassung",
