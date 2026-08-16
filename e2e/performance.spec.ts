@@ -102,18 +102,29 @@ test.describe("performance budgets", () => {
     await completeOnboarding(page);
 
     // ---- Common API reads --------------------------------------------------
-    const reads = ["/api/v1/bootstrap", "/api/v1/wines", "/api/v1/sessions"];
-    for (const path of reads) {
-      const samples: number[] = [];
-      for (let run = 0; run < 25; run += 1) {
-        const elapsed = await page.evaluate(async (target) => {
-          const started = performance.now();
-          await fetch(target, { credentials: "include" });
-          return performance.now() - started;
-        }, path);
-        samples.push(elapsed);
+    // Measured from the requests the application itself makes, read back out of
+    // resource timing. Issuing them from the test instead would need the bearer
+    // token the app holds, and getting that wrong is how an earlier version of
+    // this file ended up timing 404s and reporting them as reads.
+    const readSamples = new Map<string, number[]>();
+    for (let run = 0; run < 12; run += 1) {
+      await page.goto("/memory");
+      await page.waitForLoadState("networkidle");
+      const entries = await page.evaluate(() =>
+        performance
+          .getEntriesByType("resource")
+          .filter((entry) => entry.name.includes("/api/v1/"))
+          .map((entry) => ({ duration: entry.duration, name: new URL(entry.name).pathname })),
+      );
+      expect(entries.length, "the screen made no API request to measure").toBeGreaterThan(0);
+      for (const entry of entries) {
+        // Collapse the identifiers so one route is one row.
+        const route = entry.name.replace(/\/[0-9A-HJKMNP-TV-Z]{26}/g, "/{id}");
+        readSamples.set(route, [...(readSamples.get(route) ?? []), entry.duration]);
       }
-      lines.push(report(`API read ${path}`, samples, budgets.apiReadP95));
+    }
+    for (const [route, samples] of [...readSamples].sort()) {
+      lines.push(report(`API read ${route}`, samples, budgets.apiReadP95));
     }
 
     // ---- Interaction latency, as a proxy for INP ---------------------------
