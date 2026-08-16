@@ -28,6 +28,32 @@ Status key: **automated** runs in `pnpm check`; **manual** needs you.
 - [x] **automated** — Secret, PII, project id, hostname, media, and fixture scan
       (`pnpm scan:release`).
 - [x] **automated** — Deployment configuration is git-ignored _and_ untracked.
+- [x] **automated** — The export is checked against `.mirror-denylist`, and is
+      deleted rather than left on disk if a denied term is found. The denylist
+      is untracked on purpose: writing those terms into a script that is itself
+      published would publish exactly what they exist to hold back.
+
+### What the by-hand review of the export found
+
+Run against the tree `pnpm mirror:build` produces, which is the only thing that
+would actually be published. The scanner had passed; these are what it does not
+look for.
+
+- **`vadevi_implementation_spec.md` named two other private repositories.** It
+  is the private brief this was built from, and it is now excluded from the
+  mirror altogether. What a reader of the public repository needs — architecture,
+  privacy, threat model, data dictionary, the ADRs, self-hosting — is in `docs/`.
+- **`docs/your-desk-todo.md` is the operator's own task list**, with the state of
+  their acceptance run. Excluded.
+- **`docs/acceptance-findings.md` carried a real name** in a run heading. The
+  findings themselves are worth publishing — they explain why several gates
+  exist — so the attribution was generalised rather than the file dropped.
+- `vadevi-preview` appears throughout `docs/preview-environment.md`, and that is
+  fine: it is offered as a name to choose, not a name in use.
+
+The denylist gate exists so this class of finding fails a command rather than
+depending on someone reading 274 files carefully.
+
 - [x] **automated** — Configuration files contain placeholders only.
 - [x] **automated** — Public template defaults to `AI_PROVIDER=none` and
       `RESEARCH_PROVIDER=none`.

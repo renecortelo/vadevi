@@ -6,7 +6,7 @@ attached to the report that produced it.
 
 ---
 
-## Round 1 — 16 August 2026, René Cortés, Google Chrome, desktop
+## Round 1 — 16 August 2026, the maintainer, Google Chrome, desktop
 
 Mobile was not exercised. Items 1–8 of that run passed; the run stopped at the
 identification step.

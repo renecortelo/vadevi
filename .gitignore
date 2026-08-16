@@ -31,3 +31,7 @@ Thumbs.db
 # Deployment-specific Wrangler configuration
 wrangler.preview.jsonc
 wrangler.production.jsonc
+
+# Terms that must never reach a public mirror. Local, never committed —
+# committing them would publish exactly what they exist to hold back.
+.mirror-denylist

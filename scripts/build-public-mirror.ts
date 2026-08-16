@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, rmSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync } from "node:fs";
 import { resolve } from "node:path";
 
 /**
@@ -33,7 +33,25 @@ const excluded = [
   ".env.local",
   "wrangler.preview.jsonc",
   "wrangler.production.jsonc",
+  // The planning document. It is the private brief this was built from, and it
+  // refers to the author's other private repositories by name. What a reader of
+  // the public repository needs — architecture, privacy, threat model, data
+  // dictionary, the ADRs, self-hosting — is in docs/ already.
+  "vadevi_implementation_spec.md",
+  // The operator's own task list, with the state of their acceptance run.
+  "docs/your-desk-todo.md",
 ];
+
+/**
+ * Optional local denylist, one term per line, for anything that must never
+ * appear in an export: other project names, a personal name, a hostname.
+ *
+ * It is read from an untracked file on purpose. Writing those terms into a
+ * script that is itself published would publish exactly what it is meant to
+ * keep back — which is the same trap the spec fell into by naming two private
+ * repositories in a document that was being mirrored.
+ */
+const denylistFile = resolve(".mirror-denylist");
 
 function run(command: string, args: string[], cwd?: string): string {
   return execFileSync(command, args, {
@@ -78,6 +96,42 @@ for (const entry of excluded) {
     rmSync(target, { force: true, recursive: true });
     console.info(`  removed ${entry}`);
   }
+}
+
+// Anything the operator has declared must never be exported. Checked after the
+// exclusions, against the tree that is actually about to be committed.
+const denied = existsSync(denylistFile)
+  ? readFileSync(denylistFile, "utf8")
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0 && !line.startsWith("#"))
+  : [];
+
+if (denied.length === 0) {
+  console.info(
+    "  no .mirror-denylist found — add one (untracked, one term per line) for other\n" +
+      "  project names, a personal name, or a hostname that must never be exported",
+  );
+} else {
+  const files = run("find", [outputDirectory, "-type", "f"]).split("\n").filter(Boolean);
+  const hits: string[] = [];
+  for (const file of files) {
+    const contents = readFileSync(file, "utf8").toLowerCase();
+    const relative = file.slice(outputDirectory.length + 1);
+    for (const term of denied) {
+      if (contents.includes(term.toLowerCase())) {
+        hits.push(`  ${relative} contains a denied term`);
+      }
+    }
+  }
+  if (hits.length > 0) {
+    rmSync(outputDirectory, { force: true, recursive: true });
+    fail(
+      `The export contains terms from .mirror-denylist:\n${[...new Set(hits)].join("\n")}\n` +
+        "The export has been removed. Fix the source, then run this again.",
+    );
+  }
+  console.info(`  checked ${files.length} files against ${denied.length} denied terms`);
 }
 
 // A single root commit: no ancestry to walk back into.
