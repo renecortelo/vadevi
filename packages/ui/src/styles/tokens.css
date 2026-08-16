@@ -30,6 +30,22 @@
   --color-bottle-2: #d99b96;
   --color-bottle-3: #c9827e;
 
+  /* Surfaces that need a variable alpha. Kept as raw channels so a rule can
+     pick its own transparency while still inverting with the theme — a literal
+     rgb() here is exactly how the navigation stayed light in dark mode. */
+  --color-surface-rgb: 255 250 244;
+  --color-ink-rgb: 45 37 37;
+
+  /* Semantic chips. Each pair is contrast-checked in both palettes. */
+  --color-info-surface: #e5eef8;
+  --color-info-text: #214c78;
+  --color-success-surface: #e9f4ea;
+  --color-success-text: #2d6a36;
+  --color-warning-surface: #fff1cf;
+  --color-warning-text: #6d4a00;
+  --color-warning-edge: #d8a43c;
+  --color-note-surface: #fff8e9;
+  --color-plum-surface: #f3e7f1;
   --color-border: #e3c2bd;
   --color-success: #1f5d3f;
   --color-warning: #7a4a0f;
@@ -83,6 +99,17 @@
     --color-bottle-1: #4a1a22;
     --color-bottle-2: #5c222c;
     --color-bottle-3: #6e2a36;
+    --color-surface-rgb: 46 16 23;
+    --color-ink-rgb: 0 0 0;
+    --color-info-surface: #16303f;
+    --color-info-text: #a9d4ec;
+    --color-success-surface: #14311f;
+    --color-success-text: #96dcb2;
+    --color-warning-surface: #362506;
+    --color-warning-text: #f0cb8d;
+    --color-warning-edge: #a8792c;
+    --color-note-surface: #2b2109;
+    --color-plum-surface: #33192c;
     --color-border: #6a2f3a;
     --color-success: #7fd3a6;
     --color-warning: #e8be7f;
@@ -106,6 +133,17 @@
   --color-bottle-1: #4a1a22;
   --color-bottle-2: #5c222c;
   --color-bottle-3: #6e2a36;
+  --color-surface-rgb: 46 16 23;
+  --color-ink-rgb: 0 0 0;
+  --color-info-surface: #16303f;
+  --color-info-text: #a9d4ec;
+  --color-success-surface: #14311f;
+  --color-success-text: #96dcb2;
+  --color-warning-surface: #362506;
+  --color-warning-text: #f0cb8d;
+  --color-warning-edge: #a8792c;
+  --color-note-surface: #2b2109;
+  --color-plum-surface: #33192c;
   --color-border: #6a2f3a;
   --color-success: #7fd3a6;
   --color-warning: #e8be7f;

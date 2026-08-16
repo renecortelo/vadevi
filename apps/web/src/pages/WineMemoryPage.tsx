@@ -211,6 +211,11 @@ export function WineMemoryPage() {
   const [query, setQuery] = useState("");
   const [wineType, setWineType] = useState("");
   const [filters, setFilters] = useState<MemoryFilterState>(emptyFilters);
+  // Sort order is excluded on purpose: it reorders the list but never hides a
+  // wine, so counting it would overstate how narrow the view is.
+  const activeFilterCount =
+    Object.entries(filters).filter(([key, value]) => key !== "sort" && value.length > 0).length +
+    (wineType.length > 0 ? 1 : 0);
   const [mergePlan, setMergePlan] = useState<{ source: WineSummary; target: WineSummary } | null>(
     null,
   );
@@ -457,8 +462,15 @@ export function WineMemoryPage() {
         }}
       />
 
+      {/*
+        Only the free-text search stays open. The eleven refinements below it
+        pushed the wines themselves off the first screen, which inverted the
+        point of the page: this is a place to look at what you drank, not a place
+        to fill in a form. They collapse by default, and the summary reports how
+        many are active so a narrowed list is never silently narrowed.
+      */}
       <div className="memory-filters">
-        <label>
+        <label className="memory-filters__search">
           <span>{t("memory.search")}</span>
           <input
             onChange={(event) => setQuery(event.target.value)}
@@ -467,115 +479,136 @@ export function WineMemoryPage() {
             value={query}
           />
         </label>
-        <label>
-          <span>{t("memory.typeFilter")}</span>
-          <select onChange={(event) => setWineType(event.target.value)} value={wineType}>
-            <option value="">{t("memory.allTypes")}</option>
-            {(["red", "white", "rose", "sparkling", "fortified", "orange", "other"] as const).map(
-              (type) => (
-                <option key={type} value={type}>
-                  {t(`quickLog.wineType.${type}`)}
-                </option>
-              ),
-            )}
-          </select>
-        </label>
-        <label>
-          <span>{t("memory.countryFilter")}</span>
-          <input
-            maxLength={2}
-            onChange={(event) => setFilters({ ...filters, countryCode: event.target.value })}
-            placeholder={t("memory.countryPlaceholder")}
-            value={filters.countryCode}
-          />
-        </label>
-        <label>
-          <span>{t("memory.regionFilter")}</span>
-          <input
-            onChange={(event) => setFilters({ ...filters, region: event.target.value })}
-            value={filters.region}
-          />
-        </label>
-        <label>
-          <span>{t("memory.grapeFilter")}</span>
-          <input
-            onChange={(event) => setFilters({ ...filters, grape: event.target.value })}
-            value={filters.grape}
-          />
-        </label>
-        <label>
-          <span>{t("memory.vintageFrom")}</span>
-          <input
-            inputMode="numeric"
-            onChange={(event) => setFilters({ ...filters, vintageFrom: event.target.value })}
-            value={filters.vintageFrom}
-          />
-        </label>
-        <label>
-          <span>{t("memory.vintageTo")}</span>
-          <input
-            inputMode="numeric"
-            onChange={(event) => setFilters({ ...filters, vintageTo: event.target.value })}
-            value={filters.vintageTo}
-          />
-        </label>
-        <label>
-          <span>{t("memory.minScore")}</span>
-          <input
-            inputMode="numeric"
-            onChange={(event) => setFilters({ ...filters, minScore: event.target.value })}
-            value={filters.minScore}
-          />
-        </label>
-        <label>
-          <span>{t("memory.maxScore")}</span>
-          <input
-            inputMode="numeric"
-            onChange={(event) => setFilters({ ...filters, maxScore: event.target.value })}
-            value={filters.maxScore}
-          />
-        </label>
-        <label>
-          <span>{t("memory.sentimentFilter")}</span>
-          <select
-            onChange={(event) => setFilters({ ...filters, sentiment: event.target.value })}
-            value={filters.sentiment}
-          >
-            <option value="">{t("memory.anySentiment")}</option>
-            {(["like", "neutral", "dislike"] as const).map((value) => (
-              <option key={value} value={value}>
-                {t(`memory.sentimentOption.${value}`)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          <span>{t("memory.mediaFilter")}</span>
-          <select
-            onChange={(event) => setFilters({ ...filters, hasMedia: event.target.value })}
-            value={filters.hasMedia}
-          >
-            <option value="">{t("memory.anyMedia")}</option>
-            <option value="true">{t("memory.withMedia")}</option>
-            <option value="false">{t("memory.withoutMedia")}</option>
-          </select>
-        </label>
-        <label>
-          <span>{t("memory.sortLabel")}</span>
-          <select
-            onChange={(event) => setFilters({ ...filters, sort: event.target.value })}
-            value={filters.sort}
-          >
-            {(["recent", "tasted", "score", "name"] as const).map((value) => (
-              <option key={value} value={value}>
-                {t(`memory.sort.${value}`)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button className="text-button" onClick={() => setFilters(emptyFilters)} type="button">
-          {t("memory.clearFilters")}
-        </button>
+
+        <details className="memory-filters__refine">
+          <summary>
+            <span>{t("memory.refineAction")}</span>
+            {activeFilterCount > 0 ? (
+              <span className="filter-count">
+                {t("memory.activeFilters", { count: activeFilterCount })}
+              </span>
+            ) : null}
+          </summary>
+
+          <div className="memory-filters__grid">
+            <label>
+              <span>{t("memory.typeFilter")}</span>
+              <select onChange={(event) => setWineType(event.target.value)} value={wineType}>
+                <option value="">{t("memory.allTypes")}</option>
+                {(
+                  ["red", "white", "rose", "sparkling", "fortified", "orange", "other"] as const
+                ).map((type) => (
+                  <option key={type} value={type}>
+                    {t(`quickLog.wineType.${type}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>{t("memory.countryFilter")}</span>
+              <input
+                maxLength={2}
+                onChange={(event) => setFilters({ ...filters, countryCode: event.target.value })}
+                placeholder={t("memory.countryPlaceholder")}
+                value={filters.countryCode}
+              />
+            </label>
+            <label>
+              <span>{t("memory.regionFilter")}</span>
+              <input
+                onChange={(event) => setFilters({ ...filters, region: event.target.value })}
+                value={filters.region}
+              />
+            </label>
+            <label>
+              <span>{t("memory.grapeFilter")}</span>
+              <input
+                onChange={(event) => setFilters({ ...filters, grape: event.target.value })}
+                value={filters.grape}
+              />
+            </label>
+            <label>
+              <span>{t("memory.vintageFrom")}</span>
+              <input
+                inputMode="numeric"
+                onChange={(event) => setFilters({ ...filters, vintageFrom: event.target.value })}
+                value={filters.vintageFrom}
+              />
+            </label>
+            <label>
+              <span>{t("memory.vintageTo")}</span>
+              <input
+                inputMode="numeric"
+                onChange={(event) => setFilters({ ...filters, vintageTo: event.target.value })}
+                value={filters.vintageTo}
+              />
+            </label>
+            <label>
+              <span>{t("memory.minScore")}</span>
+              <input
+                inputMode="numeric"
+                onChange={(event) => setFilters({ ...filters, minScore: event.target.value })}
+                value={filters.minScore}
+              />
+            </label>
+            <label>
+              <span>{t("memory.maxScore")}</span>
+              <input
+                inputMode="numeric"
+                onChange={(event) => setFilters({ ...filters, maxScore: event.target.value })}
+                value={filters.maxScore}
+              />
+            </label>
+            <label>
+              <span>{t("memory.sentimentFilter")}</span>
+              <select
+                onChange={(event) => setFilters({ ...filters, sentiment: event.target.value })}
+                value={filters.sentiment}
+              >
+                <option value="">{t("memory.anySentiment")}</option>
+                {(["like", "neutral", "dislike"] as const).map((value) => (
+                  <option key={value} value={value}>
+                    {t(`memory.sentimentOption.${value}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>{t("memory.mediaFilter")}</span>
+              <select
+                onChange={(event) => setFilters({ ...filters, hasMedia: event.target.value })}
+                value={filters.hasMedia}
+              >
+                <option value="">{t("memory.anyMedia")}</option>
+                <option value="true">{t("memory.withMedia")}</option>
+                <option value="false">{t("memory.withoutMedia")}</option>
+              </select>
+            </label>
+            <label>
+              <span>{t("memory.sortLabel")}</span>
+              <select
+                onChange={(event) => setFilters({ ...filters, sort: event.target.value })}
+                value={filters.sort}
+              >
+                {(["recent", "tasted", "score", "name"] as const).map((value) => (
+                  <option key={value} value={value}>
+                    {t(`memory.sort.${value}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <button
+              className="text-button"
+              onClick={() => {
+                setFilters(emptyFilters);
+                setWineType("");
+              }}
+              type="button"
+            >
+              {t("memory.clearFilters")}
+            </button>
+          </div>
+        </details>
       </div>
 
       {duplicateGroups.length > 0 ? (

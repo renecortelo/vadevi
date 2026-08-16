@@ -203,7 +203,8 @@
       "syncing": "S'està sincronitzant.",
       "synced": "S'ha sincronitzat exactament una vegada.",
       "needs_attention": "Es conserva localment i requereix la teva atenció."
-    }
+    },
+    "identifyAction": "Escaneja o llegeix una etiqueta"
   },
   "memory": {
     "eyebrow": "Historial privat",
@@ -222,6 +223,9 @@
     "clearAction": "Esborra aquest dispositiu",
     "search": "Cerca a la Memòria",
     "searchPlaceholder": "Productor o nom del vi",
+    "refineAction": "Més filtres",
+    "activeFilters": "{{count}} actiu",
+    "activeFilters_other": "{{count}} actius",
     "typeFilter": "Tipus de vi",
     "allTypes": "Tots els tipus",
     "cached": "Es mostra la còpia privada desada en aquest dispositiu.",
@@ -483,7 +487,9 @@
     "wishlistTitle": "Llista de desitjos",
     "wishlistBody": "Recorda què vols comprar i per què.",
     "shopTitle": "Preus",
-    "shopBody": "Desa observacions amb data i fonts visibles."
+    "shopBody": "Desa observacions amb data i fonts visibles.",
+    "identifyTitle": "Identifica una ampolla",
+    "identifyBody": "Escaneja un codi o llegeix una etiqueta, i revisa cada camp abans de desar."
   },
   "cellar": {
     "eyebrow": "Les teves ampolles físiques",
@@ -959,5 +965,9 @@
     "light": "Clar",
     "dark": "Fosc",
     "saveError": "Tema no desat"
+  },
+  "locale": {
+    "label": "Idioma de la interfície",
+    "saveError": "Idioma no desat"
   }
 }

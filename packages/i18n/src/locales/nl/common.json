@@ -203,7 +203,8 @@
       "syncing": "Het synchroniseert nu.",
       "synced": "Het is precies één keer gesynchroniseerd.",
       "needs_attention": "Het is lokaal bewaard en heeft je aandacht nodig."
-    }
+    },
+    "identifyAction": "Scan of lees een etiket"
   },
   "memory": {
     "eyebrow": "Privégeschiedenis",
@@ -222,6 +223,9 @@
     "clearAction": "Dit apparaat wissen",
     "search": "Geheugen doorzoeken",
     "searchPlaceholder": "Producent of wijnnaam",
+    "refineAction": "Meer filters",
+    "activeFilters": "{{count}} actief",
+    "activeFilters_other": "{{count}} actief",
     "typeFilter": "Wijnsoort",
     "allTypes": "Alle soorten",
     "cached": "De privékopie op dit apparaat wordt getoond.",
@@ -483,7 +487,9 @@
     "wishlistTitle": "Verlanglijst",
     "wishlistBody": "Onthoud wat je wilt kopen en waarom.",
     "shopTitle": "Prijzen",
-    "shopBody": "Bewaar gedateerde waarnemingen met zichtbare bronnen."
+    "shopBody": "Bewaar gedateerde waarnemingen met zichtbare bronnen.",
+    "identifyTitle": "Een fles identificeren",
+    "identifyBody": "Scan een code of lees een etiket en controleer elk veld voor het opslaan."
   },
   "cellar": {
     "eyebrow": "Je fysieke flessen",
@@ -959,5 +965,9 @@
     "light": "Licht",
     "dark": "Donker",
     "saveError": "Thema niet opgeslagen"
+  },
+  "locale": {
+    "label": "Taal van de interface",
+    "saveError": "Taal niet opgeslagen"
   }
 }

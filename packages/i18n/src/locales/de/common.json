@@ -203,7 +203,8 @@
       "syncing": "Er wird jetzt synchronisiert.",
       "synced": "Er wurde genau einmal synchronisiert.",
       "needs_attention": "Er bleibt lokal erhalten und benötigt Ihre Aufmerksamkeit."
-    }
+    },
+    "identifyAction": "Etikett scannen oder lesen"
   },
   "memory": {
     "eyebrow": "Private Historie",
@@ -222,6 +223,9 @@
     "clearAction": "Dieses Gerät bereinigen",
     "search": "Gedächtnis durchsuchen",
     "searchPlaceholder": "Erzeuger oder Weinname",
+    "refineAction": "Weitere Filter",
+    "activeFilters": "{{count}} aktiv",
+    "activeFilters_other": "{{count}} aktiv",
     "typeFilter": "Weinart",
     "allTypes": "Alle Arten",
     "cached": "Die auf diesem Gerät gespeicherte private Kopie wird angezeigt.",
@@ -483,7 +487,9 @@
     "wishlistTitle": "Wunschliste",
     "wishlistBody": "Merke dir, was du kaufen möchtest und warum.",
     "shopTitle": "Preise",
-    "shopBody": "Speichere datierte Beobachtungen mit sichtbaren Quellen."
+    "shopBody": "Speichere datierte Beobachtungen mit sichtbaren Quellen.",
+    "identifyTitle": "Eine Flasche identifizieren",
+    "identifyBody": "Scannen Sie einen Code oder lesen Sie ein Etikett und prüfen Sie jedes Feld vor dem Speichern."
   },
   "cellar": {
     "eyebrow": "Deine echten Flaschen",
@@ -959,5 +965,9 @@
     "light": "Hell",
     "dark": "Dunkel",
     "saveError": "Thema nicht gespeichert"
+  },
+  "locale": {
+    "label": "Sprache der Oberfläche",
+    "saveError": "Sprache nicht gespeichert"
   }
 }

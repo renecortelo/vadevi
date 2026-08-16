@@ -203,7 +203,8 @@
       "syncing": "Se está sincronizando.",
       "synced": "Se ha sincronizado exactamente una vez.",
       "needs_attention": "Se conserva localmente y necesita tu atención."
-    }
+    },
+    "identifyAction": "Escanear o leer una etiqueta"
   },
   "memory": {
     "eyebrow": "Historial privado",
@@ -222,6 +223,9 @@
     "clearAction": "Borrar este dispositivo",
     "search": "Buscar en la Memoria",
     "searchPlaceholder": "Productor o nombre del vino",
+    "refineAction": "Más filtros",
+    "activeFilters": "{{count}} activo",
+    "activeFilters_other": "{{count}} activos",
     "typeFilter": "Tipo de vino",
     "allTypes": "Todos los tipos",
     "cached": "Mostrando la copia privada guardada en este dispositivo.",
@@ -483,7 +487,9 @@
     "wishlistTitle": "Lista de deseos",
     "wishlistBody": "Recuerda qué comprar y por qué.",
     "shopTitle": "Precios",
-    "shopBody": "Guarda observaciones con fecha y fuentes visibles."
+    "shopBody": "Guarda observaciones con fecha y fuentes visibles.",
+    "identifyTitle": "Identificar una botella",
+    "identifyBody": "Escanea un código o lee una etiqueta, y revisa cada campo antes de guardar."
   },
   "cellar": {
     "eyebrow": "Tus botellas físicas",
@@ -959,5 +965,9 @@
     "light": "Claro",
     "dark": "Oscuro",
     "saveError": "Tema no guardado"
+  },
+  "locale": {
+    "label": "Idioma de la interfaz",
+    "saveError": "Idioma no guardado"
   }
 }
