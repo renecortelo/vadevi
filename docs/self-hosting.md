@@ -163,6 +163,67 @@ exactly what leaves your deployment:
   scrutiny, and requires checking Cloudflare's current Workers AI retention
   terms on the day you enable it.
 
+### What works with both off
+
+Worth knowing before you decide, because it is more than people expect:
+
+- The camera **barcode scan** itself. Reading the code off the bottle is done by
+  the browser; only looking that code up in an outside database needs a
+  provider.
+- **Searching your own Space** by producer or wine name, and everything the
+  identification screen proposes from wines you have already saved.
+- Manual entry, comparisons, exports, and every data right.
+
+What is off is: looking a barcode up in Open Food Facts, reading a label from a
+photograph, and Vicenç's language replies.
+
+### Turning them on
+
+1. **Decide the privacy review.** Each ends with a decision line. It is a real
+   decision — you are the one sending someone's photograph to a third party, and
+   the reviews exist so that is a choice rather than a default.
+
+2. **Add the Workers AI binding** to your own deployment config. It is not in
+   the example config, because the public default is to have no AI at all:
+
+   ```jsonc
+   "ai": { "binding": "AI" }
+   ```
+
+3. **Set the variables** you have approved, and only those:
+
+   | Variable            | Value                                      | Turns on                          |
+   | ------------------- | ------------------------------------------ | --------------------------------- |
+   | `AI_PROVIDER`       | `cloudflare`                               | required by both AI features      |
+   | `AI_OCR_MODEL`      | one of the three allowlisted vision models | reading a label from a photo      |
+   | `AI_MODEL`          | a `@cf/…` text model                       | Vicenç's replies                  |
+   | `RESEARCH_PROVIDER` | `open_data`                                | barcode lookup in Open Food Facts |
+
+   The OCR allowlist is fixed in code — `apps/api/src/adapters/label-ocr.ts` —
+   so a model outside it is refused rather than silently used. Check
+   Cloudflare's current model catalogue for the text model; names change.
+
+   Setting `AI_PROVIDER=cloudflare` without a valid model, or without the
+   binding, leaves the feature off rather than half-on. The adapters return
+   nothing and the screens fall back to manual entry.
+
+4. **Redeploy**, then open **Data and privacy** and check the usage counters
+   read what you expect.
+
+### The caps you get for free
+
+Every provider call is metered and refused past a daily budget, per member and
+across the deployment:
+
+| Metric            | Per member | Whole deployment |
+| ----------------- | ---------- | ---------------- |
+| Label reads (OCR) | 40         | 300              |
+| Barcode lookups   | 60         | 500              |
+| Vicenç replies    | 60         | 400              |
+
+These are hard caps, not warnings: past them the feature degrades to manual
+entry rather than continuing to spend. Warnings appear at 70% and 90%.
+
 ## Updating
 
 ```bash

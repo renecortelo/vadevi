@@ -110,7 +110,17 @@
     "log": "Log",
     "sessions": "Sessions",
     "memory": "Memory",
-    "assistant": "Vicenç"
+    "assistant": "Vicenç",
+    "about": "About"
+  },
+  "about": {
+    "eyebrow": "The small print",
+    "title": "About Va de Vi",
+    "body": "Where your data lives, who can see it, and how to get it back.",
+    "dataBody": "Export everything, review what is stored, or delete a Space or the account.",
+    "spacesBody": "Create a Space, invite someone, or change who can do what.",
+    "licenseTitle": "Source and licence",
+    "licenseBody": "Va de Vi is free software under the AGPL-3.0. Anyone using it over a network is entitled to its source."
   },
   "pages": {
     "logTitle": "Quick log",

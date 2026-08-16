@@ -55,18 +55,23 @@ export function ThemeToggle() {
 
   return (
     <div className="theme-toggle">
-      <div aria-label={t("theme.label")} className="segmented-control" role="group">
+      <label className="sr-only" htmlFor="preferred-theme">
+        {t("theme.label")}
+      </label>
+      {/* A menu rather than three buttons: it sits beside the Space and language
+          menus, and on a phone three segmented controls in a row is what made
+          the bar feel crowded. */}
+      <select
+        id="preferred-theme"
+        onChange={(event) => void choose(event.target.value as ThemePreference)}
+        value={preference}
+      >
         {themePreferences.map((option) => (
-          <button
-            aria-pressed={preference === option}
-            key={option}
-            onClick={() => void choose(option)}
-            type="button"
-          >
+          <option key={option} value={option}>
             {t(`theme.${option}`)}
-          </button>
+          </option>
         ))}
-      </div>
+      </select>
       {failed ? (
         <span className="form-error" role="alert">
           {t("theme.saveError")}

@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router";
 import type { FirebaseUser } from "./auth/firebase";
 import { AppShell } from "./components/AppShell";
 import { HomePage } from "./pages/HomePage";
+import { AboutPage } from "./pages/AboutPage";
 import { InfoPage } from "./pages/InfoPage";
 import { InvitationAcceptPage } from "./pages/InvitationPage";
 import { NewSpacePage } from "./pages/NewSpacePage";
@@ -171,6 +172,7 @@ export function AuthenticatedRoutes() {
             }
             path="vicenc"
           />
+          <Route element={<AboutPage />} path="about" />
           <Route element={<SpaceSettingsPage />} path="spaces" />
           <Route
             element={

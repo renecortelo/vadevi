@@ -1,15 +1,21 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
-import { BarrelsIcon, CrateIcon, GrapesIcon, PourIcon, ToastIcon } from "../brand/NavIcons";
+import {
+  BarrelIcon,
+  BarrelsIcon,
+  CrateIcon,
+  GrapesIcon,
+  PourIcon,
+  ToastIcon,
+} from "../brand/NavIcons";
 import { BrandLockup } from "../brand/Wordmark";
 import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
 import { ThemeToggle } from "./ThemeToggle";
 import { SyncStatus } from "./SyncStatus";
 import { useState } from "react";
-import { NavLink, Outlet } from "react-router";
+import { NavLink, Outlet, useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
 
-import { webEnvironment } from "../config/env";
 import { useSession } from "../session/SessionContext";
 
 type SpaceOption = BootstrapResponse["data"]["spaces"][number];
@@ -20,17 +26,33 @@ const navigation = [
   { to: "/sessions", key: "sessions", Icon: ToastIcon, end: false },
   { to: "/memory", key: "memory", Icon: CrateIcon, end: false },
   { to: "/vicenc", key: "assistant", Icon: GrapesIcon, end: false },
+  { to: "/about", key: "about", Icon: BarrelIcon, end: false },
 ] as const;
+
+/**
+ * The value that turns the Space menu into a way to reach Space management.
+ * A menu that also performs an action is a compromise — it is chosen here
+ * because the alternative was a separate link crowding the bar, and because the
+ * option reads as a destination rather than as a Space. The selection is put
+ * back immediately, so the menu never appears to hold a Space you are not in.
+ */
+const manageSpacesValue = "__manage__";
 
 export function AppShell() {
   const { bootstrap, isUpdating, signOut, updateProfile } = useSession();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [switchError, setSwitchError] = useState(false);
+  const activeSpaceId = bootstrap.data.user.activeSpaceId;
 
-  async function switchSpace(activeSpaceId: string) {
+  async function switchSpace(value: string) {
+    if (value === manageSpacesValue) {
+      void navigate("/spaces");
+      return;
+    }
     setSwitchError(false);
     try {
-      await updateProfile({ activeSpaceId });
+      await updateProfile({ activeSpaceId: value });
     } catch {
       setSwitchError(true);
     }
@@ -42,76 +64,56 @@ export function AppShell() {
         {t("skipToContent")}
       </a>
 
-      {/* The wordmark is a sibling of the header rather than a child so it can
-          occupy the navigation column on wide viewports, where the brand belongs
-          above the navigation rather than beside the Space controls. */}
+      {/* The wordmark is a sibling of the bars rather than a child, so it can
+          head the navigation column on wide viewports and sit beside the status
+          on narrow ones without the markup changing. */}
       <NavLink aria-label={t("appName")} className="wordmark" to="/">
-        {/* The full lockup, not just the letters: this is the one place in the
-            signed-in application where the brand appears, so it appears whole.
-            Decorative — the accessible name stays the translated "Va de Vi" via
-            aria-label above. */}
+        {/* Decorative; the accessible name is the aria-label above. */}
         <BrandLockup />
       </NavLink>
 
-      {/*
-        Two bands rather than one queue of eight controls. The first carries what
-        you act on and what you need to glance at: which Space you are in, whether
-        it is saved, and the way out. The second carries the things you set once
-        and rarely touch again. The bar is not sticky, so it scrolls away as soon
-        as you start reading.
-      */}
+      {/* Beside the brand: what you glance at, and the way out. */}
       <header className="topbar">
-        <div className="topbar__band topbar__band--primary">
-          <div className="space-switcher">
-            <label className="sr-only" htmlFor="active-space">
-              {t("space.switchLabel")}
-            </label>
-            <select
-              aria-busy={isUpdating}
-              disabled={isUpdating}
-              id="active-space"
-              onChange={(event) => void switchSpace(event.target.value)}
-              value={bootstrap.data.user.activeSpaceId}
-            >
-              {bootstrap.data.spaces.map((space: SpaceOption) => (
-                <option key={space.id} value={space.id}>
-                  {space.name}
-                </option>
-              ))}
-            </select>
-            {switchError ? (
-              <span className="form-error" role="alert">
-                {t("space.switchError")}
-              </span>
-            ) : null}
-          </div>
-
-          <div className="topbar__status">
-            <ConnectionStatus />
-            <SyncStatus />
-          </div>
-
-          <button className="text-button" onClick={() => void signOut()} type="button">
-            {t("auth.signOut")}
-          </button>
+        <div className="topbar__status">
+          <ConnectionStatus />
+          <SyncStatus />
         </div>
-
-        <div className="topbar__band topbar__band--secondary">
-          <nav aria-label={t("space.sectionLabel")} className="space-links">
-            <NavLink className="text-link" to="/spaces">
-              {t("spaces.manageAction")}
-            </NavLink>
-            <NavLink className="text-link" to="/settings/data">
-              {t("dataRights.navAction")}
-            </NavLink>
-          </nav>
-
-          <div className="topbar__preferences">
-            <LocaleToggle />
-            <ThemeToggle />
-          </div>
-        </div>
+        <button className="text-button" onClick={() => void signOut()} type="button">
+          {t("auth.signOut")}
+        </button>
       </header>
+
+      {/* Below it: three menus, and nothing else. Everything that used to sit
+          here as a link now lives on the About screen. */}
+      <div className="controlbar">
+        <div className="space-switcher">
+          <label className="sr-only" htmlFor="active-space">
+            {t("space.switchLabel")}
+          </label>
+          <select
+            aria-busy={isUpdating}
+            disabled={isUpdating}
+            id="active-space"
+            onChange={(event) => void switchSpace(event.target.value)}
+            value={activeSpaceId}
+          >
+            {bootstrap.data.spaces.map((space: SpaceOption) => (
+              <option key={space.id} value={space.id}>
+                {space.name}
+              </option>
+            ))}
+            <option value={manageSpacesValue}>{t("spaces.manageAction")}</option>
+          </select>
+          {switchError ? (
+            <span className="form-error" role="alert">
+              {t("space.switchError")}
+            </span>
+          ) : null}
+        </div>
+
+        <LocaleToggle />
+        <ThemeToggle />
+      </div>
 
       <nav aria-label="Primary" className="primary-nav">
         {navigation.map((item) => (
@@ -130,17 +132,6 @@ export function AppShell() {
       <main className="main-content" id="main-content" tabIndex={-1}>
         <Outlet />
       </main>
-
-      {/*
-        AGPL-3.0 §13: a user interacting with this application over a network
-        must be offered its Corresponding Source. The link is part of the shell
-        so the offer reaches every authenticated screen.
-      */}
-      <footer className="app-footer">
-        <a href={webEnvironment.sourceUrl} rel="noreferrer noopener" target="_blank">
-          {t("licenseSource")}
-        </a>
-      </footer>
     </div>
   );
 }

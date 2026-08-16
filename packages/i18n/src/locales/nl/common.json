@@ -110,7 +110,17 @@
     "log": "Vastleggen",
     "sessions": "Sessies",
     "memory": "Geheugen",
-    "assistant": "Vicenç"
+    "assistant": "Vicenç",
+    "about": "Over"
+  },
+  "about": {
+    "eyebrow": "De kleine lettertjes",
+    "title": "Over Va de Vi",
+    "body": "Waar je gegevens staan, wie ze kan zien en hoe je ze terugkrijgt.",
+    "dataBody": "Exporteer alles, bekijk wat er bewaard wordt, of verwijder een Space of het account.",
+    "spacesBody": "Maak een Space, nodig iemand uit of wijzig wie wat mag.",
+    "licenseTitle": "Broncode en licentie",
+    "licenseBody": "Va de Vi is vrije software onder de AGPL-3.0. Wie het over een netwerk gebruikt, heeft recht op de broncode."
   },
   "pages": {
     "logTitle": "Snel vastleggen",
