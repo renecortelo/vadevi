@@ -1,4 +1,5 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
+import { BarrelsIcon, CrateIcon, GrapesIcon, PourIcon, ToastIcon } from "../brand/NavIcons";
 import { BrandLockup } from "../brand/Wordmark";
 import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
@@ -14,11 +15,11 @@ import { useSession } from "../session/SessionContext";
 type SpaceOption = BootstrapResponse["data"]["spaces"][number];
 
 const navigation = [
-  { to: "/", key: "home", glyph: "⌂", end: true },
-  { to: "/log/new", key: "log", glyph: "+", end: false },
-  { to: "/sessions", key: "sessions", glyph: "◇", end: false },
-  { to: "/memory", key: "memory", glyph: "▦", end: false },
-  { to: "/vicenc", key: "assistant", glyph: "✦", end: false },
+  { to: "/", key: "home", Icon: BarrelsIcon, end: true },
+  { to: "/log/new", key: "log", Icon: PourIcon, end: false },
+  { to: "/sessions", key: "sessions", Icon: ToastIcon, end: false },
+  { to: "/memory", key: "memory", Icon: CrateIcon, end: false },
+  { to: "/vicenc", key: "assistant", Icon: GrapesIcon, end: false },
 ] as const;
 
 export function AppShell() {
@@ -52,50 +53,63 @@ export function AppShell() {
         <BrandLockup />
       </NavLink>
 
+      {/*
+        Two bands rather than one queue of eight controls. The first carries what
+        you act on and what you need to glance at: which Space you are in, whether
+        it is saved, and the way out. The second carries the things you set once
+        and rarely touch again. The bar is not sticky, so it scrolls away as soon
+        as you start reading.
+      */}
       <header className="topbar">
-        <div className="topbar__context">
-          <div className="space-context">
-            <div className="space-switcher">
-              <label className="sr-only" htmlFor="active-space">
-                {t("space.switchLabel")}
-              </label>
-              <select
-                aria-busy={isUpdating}
-                disabled={isUpdating}
-                id="active-space"
-                onChange={(event) => void switchSpace(event.target.value)}
-                value={bootstrap.data.user.activeSpaceId}
-              >
-                {bootstrap.data.spaces.map((space: SpaceOption) => (
-                  <option key={space.id} value={space.id}>
-                    {space.name}
-                  </option>
-                ))}
-              </select>
-              {switchError ? (
-                <span className="form-error" role="alert">
-                  {t("space.switchError")}
-                </span>
-              ) : null}
-            </div>
+        <div className="topbar__band topbar__band--primary">
+          <div className="space-switcher">
+            <label className="sr-only" htmlFor="active-space">
+              {t("space.switchLabel")}
+            </label>
+            <select
+              aria-busy={isUpdating}
+              disabled={isUpdating}
+              id="active-space"
+              onChange={(event) => void switchSpace(event.target.value)}
+              value={bootstrap.data.user.activeSpaceId}
+            >
+              {bootstrap.data.spaces.map((space: SpaceOption) => (
+                <option key={space.id} value={space.id}>
+                  {space.name}
+                </option>
+              ))}
+            </select>
+            {switchError ? (
+              <span className="form-error" role="alert">
+                {t("space.switchError")}
+              </span>
+            ) : null}
+          </div>
+
+          <div className="topbar__status">
+            <ConnectionStatus />
+            <SyncStatus />
+          </div>
+
+          <button className="text-button" onClick={() => void signOut()} type="button">
+            {t("auth.signOut")}
+          </button>
+        </div>
+
+        <div className="topbar__band topbar__band--secondary">
+          <nav aria-label={t("space.sectionLabel")} className="space-links">
             <NavLink className="text-link" to="/spaces">
               {t("spaces.manageAction")}
             </NavLink>
             <NavLink className="text-link" to="/settings/data">
               {t("dataRights.navAction")}
             </NavLink>
-          </div>
-          {/* Language and theme are grouped so they stay on one row when the
-              top bar stacks on a phone, rather than adding two more. */}
+          </nav>
+
           <div className="topbar__preferences">
             <LocaleToggle />
             <ThemeToggle />
           </div>
-          <ConnectionStatus />
-          <SyncStatus />
-          <button className="text-button" onClick={() => void signOut()} type="button">
-            {t("auth.signOut")}
-          </button>
         </div>
       </header>
 
@@ -107,9 +121,7 @@ export function AppShell() {
             key={item.key}
             to={item.to}
           >
-            <span aria-hidden="true" className="nav-link__glyph">
-              {item.glyph}
-            </span>
+            <item.Icon />
             <span>{t(`nav.${item.key}`)}</span>
           </NavLink>
         ))}

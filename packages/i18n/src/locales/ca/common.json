@@ -46,6 +46,7 @@
   },
   "space": {
     "switchLabel": "Espai actiu",
+    "sectionLabel": "Espai",
     "switchError": "No s'ha pogut obrir aquest Espai."
   },
   "spaces": {

@@ -46,6 +46,7 @@
   },
   "space": {
     "switchLabel": "Aktiver Bereich",
+    "sectionLabel": "Space",
     "switchError": "Dieser Bereich konnte nicht geöffnet werden."
   },
   "spaces": {

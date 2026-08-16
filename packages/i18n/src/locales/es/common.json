@@ -46,6 +46,7 @@
   },
   "space": {
     "switchLabel": "Espacio activo",
+    "sectionLabel": "Espacio",
     "switchError": "No se pudo abrir ese Espacio."
   },
   "spaces": {
