@@ -2,24 +2,22 @@
   <title>Va de Vi</title>
   <defs>
     <clipPath id="rounded"><rect width="512" height="512" rx="114" ry="114"/></clipPath>
-    <g id="bottle">
-      <path d="M12 0h16v20l7 14v78a6 6 0 0 1-6 6H11a6 6 0 0 1-6-6V34l7-14z"/>
-    </g>
+    <path id="bottle" d="M15 0h20v26l9 18v100a8 8 0 0 1-8 8H14a8 8 0 0 1-8-8V44l9-18z"/>
   </defs>
   <g clip-path="url(#rounded)">
     <rect width="512" height="512" fill="#6b1220"/>
     <!-- Tonal bottle silhouettes, echoing the wordmark lockup. -->
-    <g opacity="0.55">
-      <use href="#bottle" x="40"  y="150" transform="scale(1.28)" fill="#8e1d2e"/>
-      <use href="#bottle" x="118" y="176" transform="scale(1.28)" fill="#9c3546"/>
-      <use href="#bottle" x="196" y="158" transform="scale(1.28)" fill="#7d1826"/>
-      <use href="#bottle" x="274" y="182" transform="scale(1.28)" fill="#a53b4c"/>
-      <use href="#bottle" x="352" y="162" transform="scale(1.28)" fill="#8e1d2e"/>
+    <g opacity="0.85">
+      <use href="#bottle" x="28"  y="188" fill="#8e1d2e"/>
+      <use href="#bottle" x="118" y="164" fill="#a53b4c"/>
+      <use href="#bottle" x="208" y="196" fill="#7d1826"/>
+      <use href="#bottle" x="298" y="170" fill="#a53b4c"/>
+      <use href="#bottle" x="388" y="192" fill="#8e1d2e"/>
     </g>
     <!-- VV monogram. -->
     <g fill="#fbe9e5">
-      <path d="M132 236h44l40 108 40-108h44l-62 164h-44z"/>
-      <path d="M252 236h44l40 108 40-108h44l-62 164h-44z"/>
+      <path d="M111 250h34L176 340L207 250h34L193 400h-34z"/>
+      <path d="M271 250h34L336 340L367 250h34L353 400h-34z"/>
     </g>
   </g>
 </svg>

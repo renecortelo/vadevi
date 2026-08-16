@@ -1,6 +1,7 @@
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { resolveSupportedLocale, tastingDescriptors } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { preprocessImage } from "../media/image";
@@ -193,6 +194,11 @@ export function QuickLogPage() {
         <fieldset className="form-section">
           <legend>{t("quickLog.identityTitle")}</legend>
           <p className="section-help">{t("quickLog.identityHelp")}</p>
+          {/* §5.1 lists photo-assisted entry as an entry method for this flow,
+              so the way in belongs here, beside the manual fields it replaces. */}
+          <Link className="action-link action-link--secondary" to="/log/identify">
+            {t("quickLog.identifyAction")}
+          </Link>
           <label htmlFor="producer-name">{t("quickLog.producer")}</label>
           <input
             autoComplete="organization"

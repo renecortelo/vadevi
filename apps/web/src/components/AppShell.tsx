@@ -1,5 +1,6 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
 import { ConnectionStatus } from "./ConnectionStatus";
+import { LocaleToggle } from "./LocaleToggle";
 import { ThemeToggle } from "./ThemeToggle";
 import { SyncStatus } from "./SyncStatus";
 import { useState } from "react";
@@ -39,12 +40,16 @@ export function AppShell() {
         {t("skipToContent")}
       </a>
 
+      {/* The wordmark is a sibling of the header rather than a child so it can
+          occupy the navigation column on wide viewports, where the brand belongs
+          above the navigation rather than beside the Space controls. */}
+      <NavLink aria-label={t("appName")} className="wordmark" to="/">
+        {/* The brand sets the name as one lowercase word. The accessible name
+            stays the translated "Va de Vi" via aria-label above. */}
+        <span aria-hidden="true">vadevi</span>
+      </NavLink>
+
       <header className="topbar">
-        <NavLink aria-label={t("appName")} className="wordmark" to="/">
-          {/* The brand sets the name as one lowercase word. The accessible name
-              stays the translated "Va de Vi" via aria-label above. */}
-          <span aria-hidden="true">vadevi</span>
-        </NavLink>
         <div className="topbar__context">
           <div className="space-context">
             <div className="space-switcher">
@@ -77,7 +82,12 @@ export function AppShell() {
               {t("dataRights.navAction")}
             </NavLink>
           </div>
-          <ThemeToggle />
+          {/* Language and theme are grouped so they stay on one row when the
+              top bar stacks on a phone, rather than adding two more. */}
+          <div className="topbar__preferences">
+            <LocaleToggle />
+            <ThemeToggle />
+          </div>
           <ConnectionStatus />
           <SyncStatus />
           <button className="text-button" onClick={() => void signOut()} type="button">

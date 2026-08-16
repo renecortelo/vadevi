@@ -1,20 +1,9 @@
-import { supportedLocales, type SupportedLocale } from "@vadevi/i18n/runtime";
+import { localeLabels, supportedLocales, type SupportedLocale } from "@vadevi/i18n/runtime";
 import { type FormEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { changeLanguage } from "../i18n";
 import { useSession } from "../session/SessionContext";
-
-const localeLabels: Record<SupportedLocale, string> = {
-  ca: "Català",
-  de: "Deutsch",
-  en: "English",
-  es: "Español",
-  fr: "Français",
-  it: "Italiano",
-  nl: "Nederlands",
-  "pt-PT": "Português",
-};
 
 export function OnboardingPage() {
   const { bootstrap, isUpdating, updateProfile } = useSession();

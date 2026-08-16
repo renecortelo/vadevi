@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Va de Vi">
   <title>Va de Vi</title>
   <rect width="512" height="512" fill="#6b1220"/>
-  <!-- Scaled to 72% and centred so no part of the mark is cropped by a mask. -->
+  <!-- Scaled to 72% about the centre so no mask can crop the mark. -->
   <g transform="translate(256 256) scale(0.72) translate(-256 -256)" fill="#fbe9e5">
-    <path d="M132 236h44l40 108 40-108h44l-62 164h-44z"/>
-    <path d="M252 236h44l40 108 40-108h44l-62 164h-44z"/>
+    <path d="M111 250h34L176 340L207 250h34L193 400h-34z"/>
+    <path d="M271 250h34L336 340L367 250h34L353 400h-34z"/>
   </g>
 </svg>

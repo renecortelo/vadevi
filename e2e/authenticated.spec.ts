@@ -43,7 +43,23 @@ test.describe("authenticated screens", () => {
     });
   }
 
-  test("reaches the identification screen and keeps manual entry available", async ({ page }) => {
+  test("reaches identification by clicking, not only by URL", async ({ page }) => {
+    // A screen that exists but has no path to it is invisible to a real user.
+    // Acceptance found exactly that: identification shipped unreachable.
+    await page.goto("/");
+    await page.waitForLoadState("networkidle");
+    await page.getByRole("link", { name: /identify a bottle/i }).click();
+    await expect(page).toHaveURL(/\/log\/identify$/);
+    await expect(page.getByRole("button", { name: /start scanning/i })).toBeVisible();
+
+    // And from Quick Log, beside the manual fields it replaces.
+    await page.goto("/log/new");
+    await page.waitForLoadState("networkidle");
+    await page.getByRole("link", { name: /scan or read a label/i }).click();
+    await expect(page).toHaveURL(/\/log\/identify$/);
+  });
+
+  test("keeps manual entry available on the identification screen", async ({ page }) => {
     await page.goto("/log/identify");
     await page.waitForLoadState("networkidle");
 
@@ -140,5 +156,62 @@ test.describe("theme preference", () => {
         [],
       );
     }
+  });
+});
+
+test.describe("interface language", () => {
+  test("can be changed after onboarding and survives a reload", async ({ page }) => {
+    await signIn(page);
+    await completeOnboarding(page);
+
+    // The language was previously only asked once, during onboarding, which left
+    // a member who chose wrongly with no way back. This is the way back.
+    const control = page.getByLabel(/interface language/i);
+    await expect(control).toBeVisible();
+
+    await control.selectOption("es");
+    await expect(page.getByRole("navigation", { name: "Primary" })).toContainText(
+      /memòria|memoria/i,
+    );
+    await expect(page.getByRole("link", { name: /inicio/i })).toBeVisible();
+
+    // Stored on the account, so it follows the member to another device rather
+    // than living only in this tab.
+    await page.reload();
+    await expect(page.getByRole("link", { name: /inicio/i })).toBeVisible();
+
+    await page.getByLabel(/idioma de la interfaz/i).selectOption("en");
+    await expect(page.getByRole("link", { name: /^home$/i })).toBeVisible();
+  });
+});
+
+test.describe("Wine Memory filters", () => {
+  test("stay collapsed until asked for, and report how many are active", async ({ page }) => {
+    await signIn(page);
+    await completeOnboarding(page);
+    await page.goto("/memory");
+
+    // Search stays open: it is the reason people come to this screen.
+    await expect(page.getByLabel(/search memory/i)).toBeVisible();
+
+    // The eleven refinements do not, because they pushed the wines themselves
+    // off the first screen.
+    const region = page.getByLabel(/^region$/i);
+    await expect(region).toBeHidden();
+
+    const disclosure = page
+      .getByRole("group")
+      .filter({ hasText: /more filters/i })
+      .first();
+    await page.getByText(/more filters/i).click();
+    await expect(region).toBeVisible();
+
+    // A narrowed list is never silently narrowed: the summary says so even once
+    // the panel is closed again.
+    await region.fill("Priorat");
+    await expect(disclosure).toContainText(/1 active/i);
+    await page.getByText(/more filters/i).click();
+    await expect(region).toBeHidden();
+    await expect(disclosure).toContainText(/1 active/i);
   });
 });

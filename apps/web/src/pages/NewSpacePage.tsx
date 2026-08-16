@@ -1,21 +1,10 @@
 import type { CreateSpaceRequest } from "@vadevi/contracts";
-import { supportedLocales, type SupportedLocale } from "@vadevi/i18n/runtime";
+import { localeLabels, supportedLocales, type SupportedLocale } from "@vadevi/i18n/runtime";
 import { type FormEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 
 import { useSession } from "../session/SessionContext";
-
-const localeLabels: Record<SupportedLocale, string> = {
-  ca: "Català",
-  de: "Deutsch",
-  en: "English",
-  es: "Español",
-  fr: "Français",
-  it: "Italiano",
-  nl: "Nederlands",
-  "pt-PT": "Português",
-};
 
 export function NewSpacePage() {
   const { bootstrap, createSpace, isUpdating } = useSession();

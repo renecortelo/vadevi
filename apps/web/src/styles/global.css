@@ -76,42 +76,59 @@ select:disabled {
 
 .app-shell {
   display: grid;
+  /* The brand keeps its own grid cell so it can head the navigation rail on wide
+     viewports without the markup changing. On a phone it is a slim strip of its
+     own instead of a column, because taking width from the top bar there forces
+     every control onto a line of its own. */
   grid-template-areas:
+    "brand"
     "header"
     "main"
     "nav";
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   min-block-size: 100vh;
 }
 
 .topbar {
   align-items: center;
-  border-block-end: 1px solid rgb(76 37 57 / 10%);
+  border-block-end: 1px solid var(--color-border);
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-3);
   grid-area: header;
-  justify-content: space-between;
-  padding: var(--space-4);
+  justify-content: flex-end;
+  padding: var(--space-3) var(--space-4);
 }
 
 .wordmark {
   /* Geometric lowercase lockup, matching the brand wordmark. The body stack is
      used rather than a webfont: the CSP forbids external font hosts, and a
      self-hosted face would cost more than the mark is worth. */
+  align-items: center;
+  border-block-end: 1px solid var(--color-border);
   color: var(--color-accent);
+  display: flex;
   font-family: var(--font-body);
   font-size: 1.5rem;
   font-weight: 500;
+  grid-area: brand;
   letter-spacing: -0.045em;
+  padding: var(--space-2) var(--space-4);
   text-decoration: none;
   text-transform: lowercase;
 }
 
+/*
+  On a phone these controls wrap along a row rather than stacking. Stacked, the
+  top bar grew to nearly half the viewport, so the screen opened on chrome
+  instead of on wine.
+*/
 .topbar__context {
-  align-items: flex-end;
+  align-items: center;
+  column-gap: var(--space-3);
   display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: var(--space-2);
 }
 
 .space-switcher {
@@ -122,10 +139,12 @@ select:disabled {
 }
 
 .space-context {
-  align-items: flex-end;
+  align-items: center;
+  column-gap: var(--space-3);
   display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: var(--space-1);
 }
 
 .space-switcher select {
@@ -220,7 +239,7 @@ select:disabled {
 
 .primary-nav {
   backdrop-filter: blur(18px);
-  background: rgb(255 250 244 / 92%);
+  background: rgb(var(--color-surface-rgb) / 92%);
   border-block-start: 1px solid var(--color-border);
   bottom: 0;
   display: grid;
@@ -312,7 +331,7 @@ select:disabled {
 }
 
 .access-card {
-  background: rgb(255 244 242 / 94%);
+  background: rgb(var(--color-surface-rgb) / 94%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: 0 28px 90px rgb(107 18 32 / 14%);
@@ -448,7 +467,7 @@ select:disabled {
 }
 
 .settings-card {
-  background: rgb(255 250 244 / 82%);
+  background: rgb(var(--color-surface-rgb) / 82%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   /* A grid item defaults to min-width:auto and refuses to shrink below its
@@ -484,7 +503,7 @@ select:disabled {
 
 .choice-card:has(input:checked) {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 2px rgb(201 70 55 / 12%);
+  box-shadow: 0 0 0 2px rgb(var(--color-ink-rgb) / 12%);
 }
 
 .choice-card input {
@@ -744,7 +763,7 @@ p {
 }
 
 .form-section {
-  background: rgb(255 250 244 / 84%);
+  background: rgb(var(--color-surface-rgb) / 84%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   display: grid;
@@ -920,7 +939,7 @@ p {
 
 .review-dialog {
   align-items: center;
-  background: rgb(45 37 37 / 42%);
+  background: rgb(var(--color-ink-rgb) / 42%);
   display: grid;
   inset: 0;
   overflow-y: auto;
@@ -933,7 +952,7 @@ p {
 .review-dialog__card {
   background: var(--color-surface-raised);
   border-radius: var(--radius-lg);
-  box-shadow: 0 28px 90px rgb(45 37 37 / 30%);
+  box-shadow: 0 28px 90px rgb(var(--color-ink-rgb) / 30%);
   inline-size: min(100%, 34rem);
   padding: clamp(var(--space-5), 6vw, var(--space-7));
 }
@@ -998,7 +1017,7 @@ p {
 
 .memory-sync-bar {
   align-items: center;
-  background: rgb(255 250 244 / 76%);
+  background: rgb(var(--color-surface-rgb) / 76%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   display: flex;
@@ -1021,7 +1040,61 @@ p {
 .memory-filters {
   display: grid;
   gap: var(--space-3);
-  grid-template-columns: minmax(0, 2fr) minmax(10rem, 1fr);
+}
+
+.memory-filters__refine > summary {
+  align-items: center;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  font-size: var(--text-sm);
+  font-weight: 750;
+  gap: var(--space-2);
+  min-block-size: 3rem;
+  padding: 0.7rem 0.85rem;
+}
+
+/* The default triangle is replaced with a chevron that states the direction of
+   travel, so the control reads as "there is more below" rather than as a bullet. */
+.memory-filters__refine > summary::marker,
+.memory-filters__refine > summary::-webkit-details-marker {
+  content: "";
+  display: none;
+}
+
+.memory-filters__refine > summary::after {
+  content: "▾";
+  margin-inline-start: auto;
+  transition: transform 120ms ease;
+}
+
+.memory-filters__refine[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.filter-count {
+  background: var(--color-accent);
+  border-radius: 999px;
+  color: var(--color-on-accent);
+  font-size: var(--text-xs);
+  font-weight: 750;
+  padding: 0.15rem 0.55rem;
+}
+
+.memory-filters__grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  padding-block-start: var(--space-3);
+}
+
+.memory-filters__grid > .text-button {
+  align-self: end;
+  justify-self: start;
+  min-block-size: 3rem;
 }
 
 .wine-card-grid {
@@ -1168,7 +1241,7 @@ p {
 }
 
 .fact-group {
-  background: rgb(255 250 244 / 76%);
+  background: rgb(var(--color-surface-rgb) / 76%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: clamp(var(--space-4), 4vw, var(--space-6));
@@ -1201,7 +1274,7 @@ p {
 }
 
 .fact-card[data-status="disputed"] {
-  background: #fff8e9;
+  background: var(--color-note-surface);
 }
 
 .fact-card__heading,
@@ -1227,22 +1300,22 @@ p {
 }
 
 .evidence-chip[data-evidence="researched"] {
-  background: #e5eef8;
-  color: #214c78;
+  background: var(--color-info-surface);
+  color: var(--color-info-text);
 }
 
 .evidence-chip[data-evidence="observed"] {
-  background: #e9f4ea;
-  color: #2d6a36;
+  background: var(--color-success-surface);
+  color: var(--color-success-text);
 }
 
 .evidence-chip[data-evidence="inferred"] {
-  background: #fff1cf;
-  color: #6d4a00;
+  background: var(--color-warning-surface);
+  color: var(--color-warning-text);
 }
 
 .evidence-chip[data-evidence="personal"] {
-  background: #f3e7f1;
+  background: var(--color-plum-surface);
   color: var(--color-plum);
 }
 
@@ -1254,7 +1327,7 @@ p {
 
 .fact-status[data-status="accepted"] {
   border-color: var(--color-success);
-  color: #2d6a36;
+  color: var(--color-success-text);
 }
 
 .fact-card__value {
@@ -1501,9 +1574,9 @@ p {
 }
 
 .warning-chip {
-  background: #fff1cf;
+  background: var(--color-warning-surface);
   border-radius: var(--radius-pill);
-  color: #6d4a00;
+  color: var(--color-warning-text);
   display: inline-flex;
   font-size: var(--text-xs);
   font-weight: 750;
@@ -1541,14 +1614,14 @@ p {
 }
 
 .attention-panel {
-  background: #fff8e9;
-  border: 1px solid #d8a43c;
+  background: var(--color-note-surface);
+  border: 1px solid var(--color-warning-edge);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
 }
 
 .conflict-card {
-  border-block-start: 1px solid #d8a43c;
+  border-block-start: 1px solid var(--color-warning-edge);
   display: grid;
   gap: var(--space-4);
   margin-block-start: var(--space-4);
@@ -1633,8 +1706,8 @@ p {
 }
 
 .status-chip[data-status="active"] {
-  background: #e9f4ea;
-  color: #2d6a36;
+  background: var(--color-success-surface);
+  color: var(--color-success-text);
 }
 
 .wine-picker-grid {
@@ -1849,7 +1922,7 @@ p {
 }
 
 .descriptor-choice {
-  background: rgb(255 250 244 / 70%);
+  background: rgb(var(--color-surface-rgb) / 70%);
   border-radius: var(--radius-md);
   max-inline-size: 15rem;
   padding: var(--space-2);
@@ -1866,7 +1939,7 @@ p {
 }
 
 .tasting-actions {
-  background: rgb(255 250 244 / 94%);
+  background: rgb(var(--color-surface-rgb) / 94%);
   border-block-start: 1px solid var(--color-border);
   bottom: 4.2rem;
   display: grid;
@@ -2054,7 +2127,7 @@ p {
   background: var(--color-plum);
   border-radius: var(--radius-lg);
   bottom: 5.5rem;
-  box-shadow: 0 20px 60px rgb(45 37 37 / 25%);
+  box-shadow: 0 20px 60px rgb(var(--color-ink-rgb) / 25%);
   color: var(--color-surface-raised);
   inline-size: min(28rem, calc(100% - 2rem));
   padding: var(--space-5);
@@ -2071,7 +2144,7 @@ p {
 @media (min-width: 760px) {
   .app-shell {
     grid-template-areas:
-      "nav header"
+      "brand header"
       "nav main";
     grid-template-columns: 12.5rem 1fr;
     grid-template-rows: auto 1fr;
@@ -2082,7 +2155,11 @@ p {
   }
 
   .wordmark {
-    display: none;
+    /* Continues the navigation rail upwards, so the brand reads as the head of
+       the column rather than as a detached tile. */
+    background: rgb(var(--color-surface-rgb) / 68%);
+    border-inline-end: 1px solid var(--color-border);
+    padding: var(--space-4);
   }
 
   .topbar__context {
@@ -2098,25 +2175,18 @@ p {
 
   .space-context {
     align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   .primary-nav {
     align-content: start;
-    background: rgb(255 250 244 / 68%);
+    background: rgb(var(--color-surface-rgb) / 68%);
     border-block-start: 0;
-    border-inline-end: 1px solid rgb(76 37 57 / 10%);
+    border-inline-end: 1px solid var(--color-border);
     grid-template-columns: 1fr;
     padding: var(--space-6) var(--space-3);
     position: static;
-  }
-
-  .primary-nav::before {
-    color: var(--color-plum);
-    content: "Va de Vi";
-    font-family: var(--font-display);
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin: 0 var(--space-3) var(--space-7);
   }
 
   .nav-link {
@@ -2303,8 +2373,50 @@ p {
   padding-inline: var(--space-2);
 }
 
+.topbar__preferences {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: flex-end;
+}
+
+.locale-toggle select {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--text-xs);
+  min-block-size: 2.25rem;
+  padding: var(--space-1) var(--space-2);
+}
+
+/*
+  Both controls stay on small screens. Hiding them there was the wrong trade:
+  a phone is exactly where someone notices the interface is in a language or a
+  brightness they did not choose, and where they are least able to go and find a
+  settings page instead.
+*/
 @media (width <= 40rem) {
-  .theme-toggle {
-    display: none;
+  /*
+    Narrow viewports lay segmented controls out as a two-column grid, which suits
+    the four-way view switcher but breaks a three-way one: the odd option drops
+    onto a second row and the pill stops reading as a single control. The theme
+    toggle keeps its row and gives up padding instead.
+  */
+  .theme-toggle .segmented-control {
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    flex-wrap: nowrap;
+    inline-size: auto;
+  }
+
+  .theme-toggle .segmented-control button {
+    padding-inline: var(--space-1);
+    white-space: nowrap;
+  }
+
+  .locale-toggle select {
+    max-inline-size: 7rem;
   }
 }

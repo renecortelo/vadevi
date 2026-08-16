@@ -203,7 +203,8 @@
       "syncing": "It is syncing now.",
       "synced": "It has synced exactly once.",
       "needs_attention": "It is preserved locally and needs your attention."
-    }
+    },
+    "identifyAction": "Scan or read a label instead"
   },
   "memory": {
     "eyebrow": "Private history",
@@ -222,6 +223,9 @@
     "clearAction": "Clear this device",
     "search": "Search Memory",
     "searchPlaceholder": "Producer or wine name",
+    "refineAction": "More filters",
+    "activeFilters": "{{count}} active",
+    "activeFilters_other": "{{count}} active",
     "typeFilter": "Wine type",
     "allTypes": "All types",
     "cached": "Showing the private copy saved on this device.",
@@ -483,7 +487,9 @@
     "wishlistTitle": "Wishlist",
     "wishlistBody": "Remember what to buy and why.",
     "shopTitle": "Prices",
-    "shopBody": "Keep timestamped observations with visible sources."
+    "shopBody": "Keep timestamped observations with visible sources.",
+    "identifyTitle": "Identify a bottle",
+    "identifyBody": "Scan a barcode or read a label, then check every field before saving."
   },
   "cellar": {
     "eyebrow": "Your physical bottles",
@@ -959,5 +965,9 @@
     "light": "Light",
     "dark": "Dark",
     "saveError": "Theme not saved"
+  },
+  "locale": {
+    "label": "Interface language",
+    "saveError": "Language not saved"
   }
 }

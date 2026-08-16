@@ -42,6 +42,10 @@ export function HomePage() {
           <h2 id="collection-tools-title">{t("homeTools.title")}</h2>
         </div>
         <div className="home-tools__grid">
+          <Link to="/log/identify">
+            <strong>{t("homeTools.identifyTitle")}</strong>
+            <span>{t("homeTools.identifyBody")}</span>
+          </Link>
           <Link to="/cellar">
             <strong>{t("homeTools.cellarTitle")}</strong>
             <span>{t("homeTools.cellarBody")}</span>
