@@ -31,6 +31,7 @@
     "notices:generate": "tsx scripts/generate-notices.ts",
     "openapi:check": "tsx scripts/export-openapi.ts --check",
     "openapi:generate": "tsx scripts/export-openapi.ts",
+    "perf": "playwright test --project=performance",
     "scan:release": "tsx scripts/scan-public-release.ts",
     "seed:demo": "tsx scripts/seed-demo-data.ts",
     "test": "pnpm --workspace-concurrency=1 -r --if-present test",

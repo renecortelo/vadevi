@@ -38,6 +38,14 @@ export default defineConfig({
   projects: [
     {
       name: "chromium-desktop",
+      // The performance run is evidence, not a gate: its numbers depend on the
+      // machine, so a shared runner would turn them into noise. `pnpm perf`.
+      testIgnore: /performance\.spec\.ts/,
+      use: { ...devices["Desktop Chrome"] },
+    },
+    {
+      name: "performance",
+      testMatch: /performance\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
     {
