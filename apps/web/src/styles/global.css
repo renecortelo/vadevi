@@ -28,6 +28,51 @@ textarea {
   font: inherit;
 }
 
+/*
+  Every text-entry field, styled once by element.
+  This used to be repeated per container — .form-section, .profile-form,
+  .memory-filters, .phase5-form, .invitation-link — so a field on a screen
+  nobody had added to that list kept the browser's own appearance, which under a
+  dark palette is a black box on a wine page. The containers below set layout
+  only.
+*/
+input:not([type="button"], [type="checkbox"], [type="file"], [type="radio"], [type="submit"]),
+select,
+textarea {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  min-block-size: 3rem;
+  min-inline-size: 0;
+  padding: 0.7rem 0.85rem;
+}
+
+textarea {
+  min-block-size: 7rem;
+  resize: vertical;
+}
+
+::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+/* The picker button inside a date field and the spinners inside a number field
+   are drawn by the browser in its own colour. Inverting them is the only way to
+   make them match a dark page. */
+:root[data-theme="dark"] ::-webkit-calendar-picker-indicator,
+:root[data-theme="dark"] ::-webkit-inner-spin-button {
+  filter: invert(1) brightness(1.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) ::-webkit-calendar-picker-indicator,
+  :root:not([data-theme="light"]) ::-webkit-inner-spin-button {
+    filter: invert(1) brightness(1.4);
+  }
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
@@ -90,13 +135,43 @@ select:disabled {
 }
 
 .topbar {
-  align-items: center;
   border-block-end: 1px solid var(--color-border);
-  display: flex;
-  gap: var(--space-3);
+  display: grid;
+  gap: var(--space-2);
   grid-area: header;
-  justify-content: flex-end;
   padding: var(--space-3) var(--space-4);
+}
+
+/* Each band is a wrapping row, so a narrow screen moves a control to the next
+   line rather than squeezing it. */
+.topbar__band {
+  align-items: center;
+  column-gap: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--space-2);
+}
+
+/* The trailing control keeps the right edge whether or not the band wraps.
+   `space-between` would drop it to the left of a new line. */
+.topbar__band--primary > .text-button,
+.topbar__preferences {
+  margin-inline-start: auto;
+}
+
+/* The set-once controls sit below a rule, quieter than the band above them. */
+.topbar__band--secondary {
+  border-block-start: 1px solid var(--color-border);
+  padding-block-start: var(--space-2);
+}
+
+.topbar__status,
+.space-links {
+  align-items: center;
+  column-gap: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--space-1);
 }
 
 .wordmark {
@@ -119,34 +194,11 @@ select:disabled {
   inline-size: min(100%, 5.25rem);
 }
 
-/*
-  On a phone these controls wrap along a row rather than stacking. Stacked, the
-  top bar grew to nearly half the viewport, so the screen opened on chrome
-  instead of on wine.
-*/
-.topbar__context {
-  align-items: center;
-  column-gap: var(--space-3);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  row-gap: var(--space-2);
-}
-
 .space-switcher {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-}
-
-.space-context {
-  align-items: center;
-  column-gap: var(--space-3);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  row-gap: var(--space-1);
 }
 
 .space-switcher select {
@@ -261,6 +313,12 @@ select:disabled {
   min-block-size: 4.2rem;
   padding: var(--space-2) var(--space-1);
   text-decoration: none;
+}
+
+.nav-icon {
+  block-size: 1.55rem;
+  flex: 0 0 auto;
+  inline-size: 1.55rem;
 }
 
 .nav-link__glyph {
@@ -425,12 +483,7 @@ select:disabled {
 
 .profile-form input,
 .profile-form select {
-  background: var(--color-surface-raised);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  color: var(--color-text);
-  min-block-size: 3rem;
-  padding: 0.7rem 0.85rem;
+  inline-size: 100%;
 }
 
 .profile-form label:not(:first-child) {
@@ -566,14 +619,6 @@ select:disabled {
 }
 
 .inline-form select,
-.invitation-link input {
-  background: var(--color-surface-raised);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  min-block-size: 3rem;
-  padding: 0.7rem 0.85rem;
-}
-
 .invitation-link {
   display: grid;
   gap: var(--space-3);
@@ -798,19 +843,7 @@ p {
 .form-section textarea,
 .memory-filters input,
 .memory-filters select {
-  background: var(--color-surface-raised);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  color: var(--color-text);
   inline-size: 100%;
-  min-block-size: 3rem;
-  min-inline-size: 0;
-  padding: 0.7rem 0.85rem;
-}
-
-.form-section textarea {
-  min-block-size: 7rem;
-  resize: vertical;
 }
 
 .section-help,
@@ -2020,21 +2053,12 @@ p {
   .sessions-page,
   .tasting-page,
   .topbar,
-  .topbar__context {
+  .topbar__band {
     max-inline-size: 100%;
     min-inline-size: 0;
   }
 
-  .topbar {
-    align-items: flex-start;
-    gap: var(--space-2);
-  }
-
-  .topbar__context {
-    flex: 1 1 auto;
-  }
-
-  .space-context,
+  .space-links,
   .space-switcher {
     max-inline-size: 100%;
     min-inline-size: 0;
@@ -2170,21 +2194,8 @@ p {
     inline-size: min(100%, 8.75rem);
   }
 
-  .topbar__context {
-    align-items: center;
-    flex-direction: row;
-    inline-size: 100%;
-    justify-content: space-between;
-  }
-
   .space-switcher {
     align-items: flex-start;
-  }
-
-  .space-context {
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: nowrap;
   }
 
   .primary-nav {
@@ -2292,14 +2303,7 @@ p {
 .phase5-form input,
 .phase5-form select,
 .shop-wine-picker select {
-  background: var(--color-surface-raised);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  color: var(--color-text);
-  font: inherit;
-  min-height: 2.75rem;
-  padding: 0.65rem 0.75rem;
-  width: 100%;
+  inline-size: 100%;
 }
 
 .inventory-grid,

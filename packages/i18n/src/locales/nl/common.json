@@ -46,6 +46,7 @@
   },
   "space": {
     "switchLabel": "Actieve Ruimte",
+    "sectionLabel": "Ruimte",
     "switchError": "Deze Ruimte kon niet worden geopend."
   },
   "spaces": {

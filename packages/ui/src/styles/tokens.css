@@ -1,5 +1,10 @@
 :root {
-  color-scheme: light dark;
+  /* Declared per theme rather than as `light dark`, which would leave the
+     browser painting native control parts — the date picker, the number
+     spinners, the select popup, autofill, scrollbars — from the *system*
+     preference while the rest of the page follows the account's. That mismatch
+     is how a black date field turned up on a cream page. */
+  color-scheme: light;
 
   /* Brand palette, sampled from the Va de Vi lockup and app icon and kept in
      step with scripts/generate-brand.ts, which draws them.
@@ -99,6 +104,7 @@
    both directions rather than only away from the system default. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --color-canvas: #2b0709;
     --color-canvas-deep: #1c0405;
     --color-surface-raised: #3b0d10;
@@ -138,6 +144,7 @@
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --color-canvas: #2b0709;
   --color-canvas-deep: #1c0405;
   --color-surface-raised: #3b0d10;
