@@ -263,13 +263,15 @@ function bottlePaths(options: {
   baseline: number;
   bodyWidth: number;
   centre: number;
+  count?: number;
   tallest: number;
 }): string[] {
-  const { baseline, bodyWidth, centre, tallest } = options;
+  const { baseline, bodyWidth, centre, count = skyline.length, tallest } = options;
+  const heights = skyline.slice(0, count);
   const step = bodyWidth * 0.92;
-  const total = step * (skyline.length - 1) + bodyWidth;
+  const total = step * (heights.length - 1) + bodyWidth;
   const start = centre - total / 2;
-  return skyline.map((fraction, index) =>
+  return heights.map((fraction, index) =>
     bottle(start + index * step, baseline, bodyWidth, tallest * fraction),
   );
 }
@@ -335,9 +337,37 @@ ${renderShapes(word.shapes, ink, "    ")}
 `;
 }
 
-function icon(ground: string, ink: string, tints: string[], maskable: boolean): string {
-  const word = setWord("vdv");
-  const paths = bottlePaths({ baseline: 408, bodyWidth: 66, centre: 256, tallest: 312 });
+/**
+ * The icon layout.
+ *
+ * The bottles keep the lockup's silhouette exactly — the same width-to-height
+ * ratio, so the two marks are the same object at two sizes. Seven of them at
+ * that ratio make a row half again as wide as it is tall, which leaves a square
+ * tile mostly empty above them, so the icon shows five. Fewer bottles at the
+ * right proportion beats seven at the wrong one.
+ *
+ * The letters rest on the bottles' own writing line rather than below it.
+ */
+const iconRow = {
+  baseline: 430,
+  bodyWidth: 85.5,
+  centre: 256,
+  count: 5,
+  tallest: (85.5 * lockupRow.tallest) / lockupRow.bodyWidth,
+} as const;
+
+/** The monogram, and how wide it sits in the tile. */
+const iconWord = { text: "vdv", width: 356 } as const;
+
+function icon(
+  ground: string,
+  ink: string,
+  tints: string[],
+  options: { maskable?: boolean } = {},
+): string {
+  const { maskable = false } = options;
+  const block = setWord(iconWord.text);
+  const paths = bottlePaths(iconRow);
   // A maskable icon must survive any crop, so its content sits inside the 80%
   // safe zone the specification guarantees, on a ground that reaches the edge.
   const scale = maskable ? 0.72 : 1;
@@ -351,8 +381,8 @@ ${ledge}
     <g>
 ${renderBottles(paths, tints, "      ")}
     </g>
-    <g transform="${placeWord(word, 256, 432, 346)}">
-${renderShapes(word.shapes, ink, "      ")}
+    <g transform="${placeWord(block, iconRow.centre, iconRow.baseline, iconWord.width)}">
+${renderShapes(block.shapes, ink, "      ")}
     </g>
   </g>
 </svg>
@@ -433,9 +463,12 @@ ${paths.map((path) => `  "${path}",`).join("\n")}
 const root = resolve(import.meta.dirname, "..");
 
 const outputs: [string, string][] = [
-  ["apps/web/public/icon.svg", icon(wine, cream, bottlesOnWine, false)],
-  ["apps/web/public/brand/icon-maskable.svg", icon(wineDeep, cream, bottlesOnWine, true)],
-  ["apps/web/public/brand/icon-light.svg", icon(cream, wine, bottlesOnCream, false)],
+  ["apps/web/public/icon.svg", icon(wine, cream, bottlesOnWine)],
+  [
+    "apps/web/public/brand/icon-maskable.svg",
+    icon(wineDeep, cream, bottlesOnWine, { maskable: true }),
+  ],
+  ["apps/web/public/brand/icon-light.svg", icon(cream, wine, bottlesOnCream)],
   ["apps/web/public/brand/lockup-dark.svg", lockup(wine, cream, bottlesOnWine)],
   ["apps/web/public/brand/lockup-light.svg", lockup(cream, wine, bottlesOnCream)],
   ["apps/web/src/brand/marks.ts", marksModule()],
