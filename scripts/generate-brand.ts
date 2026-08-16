@@ -161,22 +161,46 @@ function eye(ox: number): Glyph {
 
 const glyphs: Record<string, (ox: number) => Glyph> = { a: ay, d: dee, e: ee, i: eye, v: vee };
 
-type Word = { height: number; shapes: Shape[]; top: number; width: number };
+/**
+ * Kerning. A `v` is mostly empty at the top and pointed at the bottom, so a flat
+ * sidebearing leaves it visibly adrift from its neighbours even though the gap
+ * is nominally the same as everywhere else. These pairs close that up.
+ */
+const kerning: Record<string, number> = {
+  ad: -3,
+  de: -3,
+  dv: -14,
+  ev: -16,
+  va: -16,
+  vd: -14,
+  vi: -8,
+};
 
-/** Lays a word out on the baseline, in a box whose left edge is x = 0. */
+type Word = { bottom: number; shapes: Shape[]; top: number; width: number };
+
+/**
+ * Lays a word out on the baseline, in a box whose left edge is x = 0. `top` and
+ * `bottom` report where the ink actually reaches, which is what the callers
+ * position it by.
+ */
 function setWord(text: string): Word {
   const shapes: Shape[] = [];
   let x = 0;
+  let previous = "";
   for (const character of text) {
     const build = glyphs[character];
     if (build === undefined) throw new Error(`No letterform for "${character}".`);
+    x += kerning[previous + character] ?? 0;
     const glyph = build(x);
     shapes.push(...glyph.shapes);
     x += glyph.advance + tracking;
+    previous = character;
   }
-  // The dot of `i` occupies the same band as the ascender of `d`.
-  const top = -ascender;
-  return { height: xHeight - top, shapes, top, width: x - tracking };
+  const width = x - tracking;
+
+  // The dot of `i` occupies the same band as the ascender of `d`, and nothing
+  // descends below the writing line.
+  return { bottom: xHeight, shapes, top: -ascender, width };
 }
 
 // ---------------------------------------------------------------------------
@@ -267,16 +291,15 @@ function renderShapes(shapes: Shape[], fill: string, indent: string): string {
 }
 
 /**
- * Places a word by its baseline and centre, scaled to a target width. The final
- * translate is what puts the *baseline* on the given line: the glyphs are drawn
- * with their baseline at y = xHeight, so without it the word hangs a full
- * x-height too low.
+ * Places a word by the line its ink rests on, and by its centre, scaled to a
+ * target width. The final translate is what does the resting: the glyphs are
+ * drawn below the origin, so without it the word hangs its own height too low.
  */
-function placeWord(word: Word, centre: number, baseline: number, width: number): string {
+function placeWord(word: Word, centre: number, restsOn: number, width: number): string {
   const scale = width / word.width;
   return (
-    `translate(${n(centre - width / 2)} ${n(baseline)}) ` +
-    `scale(${n(scale)}) translate(0 ${-xHeight})`
+    `translate(${n(centre - width / 2)} ${n(restsOn)}) ` +
+    `scale(${n(scale)}) translate(0 ${-word.bottom})`
   );
 }
 
@@ -290,9 +313,11 @@ function renderBottles(paths: string[], tints: string[], indent: string): string
  * The lockup layout, in a 1200 x 900 box. The wordmark is deliberately narrower
  * than the bottle row so the `v` and the `i` sit inside it rather than hanging
  * off the ends, as they do in the source artwork.
+ *
+ * The wordmark rests on the same writing line as the bottles.
  */
 const lockupRow = { baseline: 700, bodyWidth: 132, centre: 600, tallest: 520 } as const;
-const lockupWord = { baseline: 700, centre: 600, width: 820 } as const;
+const lockupWord = { baseline: 700, centre: 600, width: 754 } as const;
 
 function lockup(ground: string, ink: string, tints: string[]): string {
   const word = setWord("vadevi");
@@ -326,7 +351,7 @@ ${ledge}
     <g>
 ${renderBottles(paths, tints, "      ")}
     </g>
-    <g transform="${placeWord(word, 256, 432, 380)}">
+    <g transform="${placeWord(word, 256, 432, 346)}">
 ${renderShapes(word.shapes, ink, "      ")}
     </g>
   </g>
@@ -363,7 +388,7 @@ function marksModule(): string {
 export type BrandShape = { d: string; stroke?: number };
 
 export const wordmarkBox = {
-  height: ${n(word.height)},
+  height: ${n(word.bottom - word.top)},
   top: ${n(word.top)},
   width: ${n(word.width)},
 } as const;
@@ -373,7 +398,7 @@ ${serialise(word.shapes)}
 ];
 
 export const monogramBox = {
-  height: ${n(monogram.height)},
+  height: ${n(monogram.bottom - monogram.top)},
   top: ${n(monogram.top)},
   width: ${n(monogram.width)},
 } as const;

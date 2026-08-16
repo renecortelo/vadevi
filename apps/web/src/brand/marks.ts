@@ -12,33 +12,33 @@ export type BrandShape = { d: string; stroke?: number };
 export const wordmarkBox = {
   height: 142,
   top: -42,
-  width: 566,
+  width: 520,
 } as const;
 
 export const wordmarkShapes: readonly BrandShape[] = [
   { d: "M 0 0 L 50 100 L 100 0 L 70.93 0 L 50 41.86 L 29.07 0 Z" },
-  { d: "M 121 50 a 37 37 0 1 0 74 0 a 37 37 0 1 0 -74 0", stroke: 26 },
-  { d: "M 182 0 h 26 v 100 h -26 Z" },
-  { d: "M 229 50 a 37 37 0 1 0 74 0 a 37 37 0 1 0 -74 0", stroke: 26 },
-  { d: "M 290 -42 h 26 v 142 h -26 Z" },
-  { d: "M 411 50 A 37 37 0 1 0 406.67 67.37", stroke: 26 },
-  { d: "M 334 38.95 h 90 v 22.1 h -90 Z" },
-  { d: "M 432 0 L 482 100 L 532 0 L 502.93 0 L 482 41.86 L 461.07 0 Z" },
-  { d: "M 540 0 h 26 v 100 h -26 Z" },
-  { d: "M 536 -25 a 17 17 0 1 0 34 0 a 17 17 0 1 0 -34 0" },
+  { d: "M 105 50 a 37 37 0 1 0 74 0 a 37 37 0 1 0 -74 0", stroke: 26 },
+  { d: "M 166 0 h 26 v 100 h -26 Z" },
+  { d: "M 210 50 a 37 37 0 1 0 74 0 a 37 37 0 1 0 -74 0", stroke: 26 },
+  { d: "M 271 -42 h 26 v 142 h -26 Z" },
+  { d: "M 389 50 A 37 37 0 1 0 384.67 67.37", stroke: 26 },
+  { d: "M 312 38.95 h 90 v 22.1 h -90 Z" },
+  { d: "M 394 0 L 444 100 L 494 0 L 464.93 0 L 444 41.86 L 423.07 0 Z" },
+  { d: "M 494 0 h 26 v 100 h -26 Z" },
+  { d: "M 490 -25 a 17 17 0 1 0 34 0 a 17 17 0 1 0 -34 0" },
 ];
 
 export const monogramBox = {
   height: 142,
   top: -42,
-  width: 316,
+  width: 288,
 } as const;
 
 export const monogramShapes: readonly BrandShape[] = [
   { d: "M 0 0 L 50 100 L 100 0 L 70.93 0 L 50 41.86 L 29.07 0 Z" },
-  { d: "M 121 50 a 37 37 0 1 0 74 0 a 37 37 0 1 0 -74 0", stroke: 26 },
-  { d: "M 182 -42 h 26 v 142 h -26 Z" },
-  { d: "M 216 0 L 266 100 L 316 0 L 286.93 0 L 266 41.86 L 245.07 0 Z" },
+  { d: "M 107 50 a 37 37 0 1 0 74 0 a 37 37 0 1 0 -74 0", stroke: 26 },
+  { d: "M 168 -42 h 26 v 142 h -26 Z" },
+  { d: "M 188 0 L 238 100 L 288 0 L 258.93 0 L 238 41.86 L 217.07 0 Z" },
 ];
 
 /** Seven bottles on a common baseline, in a 1200 x 900 box. */
@@ -53,7 +53,7 @@ export const bottleRow = {
 export const lockupWordmark = {
   baseline: 700,
   centre: 600,
-  width: 820,
+  width: 754,
 } as const;
 
 export const bottleRowPaths: readonly string[] = [

@@ -91,7 +91,10 @@ export function BrandLockup({ className }: { className?: string }) {
       <g
         transform={
           `translate(${lockupWordmark.centre - lockupWordmark.width / 2} ${lockupWordmark.baseline}) ` +
-          `scale(${lockupWordmark.width / wordmarkBox.width}) translate(0 -100)`
+          `scale(${lockupWordmark.width / wordmarkBox.width}) ` +
+          // The word rests on its ink, not on the writing line: the counterweight
+          // under the opening `v` hangs below the baseline.
+          `translate(0 ${-(wordmarkBox.top + wordmarkBox.height)})`
         }
       >
         {shapes(wordmarkShapes)}
