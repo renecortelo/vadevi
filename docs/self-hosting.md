@@ -167,9 +167,12 @@ exactly what leaves your deployment:
 
 Worth knowing before you decide, because it is more than people expect:
 
-- The camera **barcode scan** itself. Reading the code off the bottle is done by
-  the browser; only looking that code up in an outside database needs a
-  provider.
+- The camera **barcode scan** itself, on every browser including Safari. Reading
+  the code off the bottle happens on the device — where the browser has no
+  `BarcodeDetector`, a WebAssembly decoder served from your own origin does it
+  instead. Only looking that code up in an outside database needs a provider.
+- **Photographing the barcode** rather than holding a live scan on it. The
+  photograph is decoded on the device too; nothing is uploaded.
 - **Searching your own Space** by producer or wine name, and everything the
   identification screen proposes from wines you have already saved.
 - Manual entry, comparisons, exports, and every data right.
