@@ -20,7 +20,7 @@
     "dev:api": "wrangler dev --config wrangler.example.jsonc --local --port 8787",
     "dev:auth": "firebase emulators:start --only auth --project demo-vadevi",
     "dev:web": "pnpm --filter @vadevi/web dev",
-    "e2e": "playwright test",
+    "e2e": "playwright test --project=chromium-desktop --project=chromium-320",
     "e2e:install": "playwright install chromium",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

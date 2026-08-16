@@ -44,6 +44,9 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
     {
+      // Not part of `pnpm e2e`, which names the projects it runs. Timings taken
+      // on a shared runner are noise, and gating on them means a red build for
+      // reasons that have nothing to do with the change. `pnpm perf` runs it.
       name: "performance",
       testMatch: /performance\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
