@@ -1,6 +1,8 @@
 import {
   type BrandShape,
+  bottleRow,
   bottleRowPaths,
+  lockupWordmark,
   monogramBox,
   monogramShapes,
   wordmarkBox,
@@ -81,14 +83,15 @@ export function BrandLockup({ className }: { className?: string }) {
       className={className}
       focusable="false"
       preserveAspectRatio="xMidYMax meet"
-      viewBox="60 150 1080 570"
+      viewBox={`${bottleRow.start - 24} 150 ${bottleRow.span + 48} 574`}
     >
       {bottleRowPaths.map((path, index) => (
         <path d={path} fill={`var(--color-bottle-${(index % 7) + 1})`} key={path} />
       ))}
       <g
         transform={
-          `translate(${600 - 900 / 2} 700) ` + `scale(${900 / wordmarkBox.width}) translate(0 -100)`
+          `translate(${lockupWordmark.centre - lockupWordmark.width / 2} ${lockupWordmark.baseline}) ` +
+          `scale(${lockupWordmark.width / wordmarkBox.width}) translate(0 -100)`
         }
       >
         {shapes(wordmarkShapes)}

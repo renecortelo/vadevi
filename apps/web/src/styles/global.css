@@ -376,22 +376,21 @@ select:disabled {
   margin-block-start: var(--space-3);
 }
 
-/* Google's mark on its own white disc, which is how their sign-in branding
-   specifies it on a coloured button. Deliberately not themed: it is their mark,
-   not part of this palette. */
+/* Google's letterform, tinted to this palette rather than shown in Google's own
+   colours — see apps/web/src/brand/GoogleMark.tsx for why that is a deliberate
+   departure from their branding guidance. It inherits the button's colour, so
+   there is no second definition for the dark theme. */
 .google-mark {
   align-items: center;
-  background: #fff;
-  block-size: 1.6rem;
-  border-radius: 50%;
+  block-size: 1.25rem;
   display: inline-flex;
-  inline-size: 1.6rem;
+  inline-size: 1.25rem;
   justify-content: center;
 }
 
 .google-mark svg {
-  block-size: 1.05rem;
-  inline-size: 1.05rem;
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .local-note {

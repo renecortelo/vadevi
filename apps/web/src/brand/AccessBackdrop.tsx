@@ -1,7 +1,6 @@
-import { bottleRowPaths } from "./marks";
+import { bottleRow, bottleRowPaths } from "./marks";
 
-/** How wide one repeat of the bottle row is, in the artwork's coordinates. */
-const rowWidth = 1080;
+/** Copies laid end to end, so the row continues rather than restarting. */
 const repeats = 3;
 
 /**
@@ -23,10 +22,10 @@ export function AccessBackdrop() {
       className="access-page__bottles"
       focusable="false"
       preserveAspectRatio="xMidYMax slice"
-      viewBox={`60 220 ${rowWidth * repeats} 480`}
+      viewBox={`${bottleRow.start} 220 ${bottleRow.span * repeats} 480`}
     >
       {Array.from({ length: repeats }, (_, copy) => (
-        <g key={copy} transform={`translate(${copy * rowWidth} 0)`}>
+        <g key={copy} transform={`translate(${copy * bottleRow.span} 0)`}>
           {bottleRowPaths.map((path, index) => (
             <path d={path} fill={`var(--color-bottle-${(index % 7) + 1})`} key={path} />
           ))}

@@ -228,6 +228,13 @@ function bottle(x: number, baseline: number, bodyWidth: number, height: number):
 /** The uneven skyline of the artwork, as a fraction of the tallest bottle. */
 const skyline = [0.9, 0.96, 0.85, 1, 0.77, 0.94, 0.81];
 
+/** Left edge and total width of a row, for cropping and for tiling it. */
+function rowSpan(): { span: number; start: number } {
+  const step = lockupRow.bodyWidth * 0.92;
+  const span = step * (skyline.length - 1) + lockupRow.bodyWidth;
+  return { span, start: lockupRow.centre - span / 2 };
+}
+
 function bottlePaths(options: {
   baseline: number;
   bodyWidth: number;
@@ -279,16 +286,24 @@ function renderBottles(paths: string[], tints: string[], indent: string): string
     .join("\n");
 }
 
+/**
+ * The lockup layout, in a 1200 x 900 box. The wordmark is deliberately narrower
+ * than the bottle row so the `v` and the `i` sit inside it rather than hanging
+ * off the ends, as they do in the source artwork.
+ */
+const lockupRow = { baseline: 700, bodyWidth: 132, centre: 600, tallest: 520 } as const;
+const lockupWord = { baseline: 700, centre: 600, width: 820 } as const;
+
 function lockup(ground: string, ink: string, tints: string[]): string {
   const word = setWord("vadevi");
-  const paths = bottlePaths({ baseline: 700, bodyWidth: 120, centre: 600, tallest: 520 });
+  const paths = bottlePaths(lockupRow);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="${title}">
   <title>${title}</title>
   <rect width="1200" height="900" fill="${ground}"/>
   <g>
 ${renderBottles(paths, tints, "    ")}
   </g>
-  <g transform="${placeWord(word, 600, 700, 900)}">
+  <g transform="${placeWord(word, lockupWord.centre, lockupWord.baseline, lockupWord.width)}">
 ${renderShapes(word.shapes, ink, "    ")}
   </g>
 </svg>
@@ -326,7 +341,7 @@ ${renderShapes(word.shapes, ink, "      ")}
 function marksModule(): string {
   const word = setWord("vadevi");
   const monogram = setWord("vdv");
-  const paths = bottlePaths({ baseline: 700, bodyWidth: 120, centre: 600, tallest: 520 });
+  const paths = bottlePaths(lockupRow);
   const serialise = (shapes: Shape[]): string =>
     shapes
       .map((shape) =>
@@ -368,6 +383,20 @@ ${serialise(monogram.shapes)}
 ];
 
 /** Seven bottles on a common baseline, in a 1200 x 900 box. */
+export const bottleRow = {
+  /** Left edge of the first bottle. */
+  start: ${n(rowSpan().start)},
+  /** Width of the whole row, which is also the pitch for repeating it. */
+  span: ${n(rowSpan().span)},
+} as const;
+
+/** Where the wordmark sits over that row. */
+export const lockupWordmark = {
+  baseline: ${lockupWord.baseline},
+  centre: ${lockupWord.centre},
+  width: ${lockupWord.width},
+} as const;
+
 export const bottleRowPaths: readonly string[] = [
 ${paths.map((path) => `  "${path}",`).join("\n")}
 ];
