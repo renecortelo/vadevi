@@ -1,6 +1,8 @@
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { resolveSupportedLocale, tastingDescriptors } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
+
+import { ModalDialog } from "../components/ModalDialog";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
@@ -473,56 +475,51 @@ export function QuickLogPage() {
         </button>
       </form>
 
-      {reviewing ? (
-        <div
-          aria-labelledby="confirm-wine-title"
-          aria-modal="true"
-          className="review-dialog"
-          role="dialog"
-        >
-          <div className="review-dialog__card">
-            <p className="eyebrow">{t("quickLog.confirmEyebrow")}</p>
-            <h2 id="confirm-wine-title">{t("quickLog.confirmTitle")}</h2>
-            <dl className="review-list">
-              <div>
-                <dt>{t("quickLog.producer")}</dt>
-                <dd>{draft.winePayload.producerName}</dd>
-              </div>
-              <div>
-                <dt>{t("quickLog.wineName")}</dt>
-                <dd>{draft.winePayload.displayName}</dd>
-              </div>
-              <div>
-                <dt>{t("quickLog.vintage")}</dt>
-                <dd>
-                  {draft.winePayload.nonVintage
-                    ? t("quickLog.nonVintageShort")
-                    : (draft.winePayload.vintageYear ?? "—")}
-                </dd>
-              </div>
-              <div>
-                <dt>{t("quickLog.photoTitle")}</dt>
-                <dd>
-                  {draft.photo === undefined ? t("quickLog.noPhoto") : t("quickLog.privatePhoto")}
-                </dd>
-              </div>
-            </dl>
-            <p>{t("quickLog.confirmHelp")}</p>
-            <div className="hero__actions">
-              <button className="primary-button" onClick={() => void confirm()} type="button">
-                {t("quickLog.confirmAction")}
-              </button>
-              <button
-                className="action-link action-link--secondary"
-                onClick={() => setReviewing(false)}
-                type="button"
-              >
-                {t("quickLog.editAction")}
-              </button>
-            </div>
+      <ModalDialog
+        labelledBy="confirm-wine-title"
+        onDismiss={() => setReviewing(false)}
+        open={reviewing}
+      >
+        <p className="eyebrow">{t("quickLog.confirmEyebrow")}</p>
+        <h2 id="confirm-wine-title">{t("quickLog.confirmTitle")}</h2>
+        <dl className="review-list">
+          <div>
+            <dt>{t("quickLog.producer")}</dt>
+            <dd>{draft.winePayload.producerName}</dd>
           </div>
+          <div>
+            <dt>{t("quickLog.wineName")}</dt>
+            <dd>{draft.winePayload.displayName}</dd>
+          </div>
+          <div>
+            <dt>{t("quickLog.vintage")}</dt>
+            <dd>
+              {draft.winePayload.nonVintage
+                ? t("quickLog.nonVintageShort")
+                : (draft.winePayload.vintageYear ?? "—")}
+            </dd>
+          </div>
+          <div>
+            <dt>{t("quickLog.photoTitle")}</dt>
+            <dd>
+              {draft.photo === undefined ? t("quickLog.noPhoto") : t("quickLog.privatePhoto")}
+            </dd>
+          </div>
+        </dl>
+        <p>{t("quickLog.confirmHelp")}</p>
+        <div className="hero__actions">
+          <button className="primary-button" onClick={() => void confirm()} type="button">
+            {t("quickLog.confirmAction")}
+          </button>
+          <button
+            className="action-link action-link--secondary"
+            onClick={() => setReviewing(false)}
+            type="button"
+          >
+            {t("quickLog.editAction")}
+          </button>
         </div>
-      ) : null}
+      </ModalDialog>
     </section>
   );
 }

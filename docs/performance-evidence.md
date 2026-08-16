@@ -11,14 +11,21 @@ shared runner would turn them into noise rather than evidence.
 
 ## What was measured
 
-| Measure                          | Median | p95     | Budget  | Verdict |
-| -------------------------------- | ------ | ------- | ------- | ------- |
-| LCP — sign-in, Slow 4G, 4× CPU   | 432 ms | 2148 ms | 2500 ms | within  |
-| API read `GET /bootstrap`        | 2 ms   | 4 ms    | 500 ms  | within  |
-| API read `GET /wines`            | 2 ms   | 3 ms    | 500 ms  | within  |
-| API read `GET /sessions`         | 2 ms   | 3 ms    | 500 ms  | within  |
-| Interaction — Memory view switch | 63 ms  | 77 ms   | 200 ms  | within  |
-| Quick-log save, online           | 26 ms  | 30 ms   | 800 ms  | within  |
+| Measure                              | Median | p95     | Budget  | Verdict |
+| ------------------------------------ | ------ | ------- | ------- | ------- |
+| LCP — sign-in, Slow 4G, 4× CPU       | 468 ms | 2172 ms | 2500 ms | within  |
+| API read `GET /me/bootstrap`         | 10 ms  | 15 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/wines`    | 10 ms  | 18 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/sessions` | 8 ms   | 10 ms   | 500 ms  | within  |
+| Interaction — Memory view switch     | 63 ms  | 73 ms   | 200 ms  | within  |
+| Quick-log save, online               | 25 ms  | 29 ms   | 800 ms  | within  |
+
+The API rows are read out of resource timing, from the requests the application
+itself makes. The first version of this file issued its own requests instead, at
+paths that do not exist and without the bearer token the application holds — so
+it timed three 404s and reported them as reads. The figures were an order of
+magnitude too good and measured nothing. Corrected here, and the measurement now
+fails if the screen made no API request at all.
 
 Run on a development machine, against the production build served by Wrangler at
 one origin — the same way the browser tests run.
