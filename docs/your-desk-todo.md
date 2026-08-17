@@ -64,37 +64,55 @@ Pay particular attention to the parts nothing automated can reach:
 
 Send me what comes back the way you did the first round.
 
-## 3. Both providers are now ON in your deployment — test them, and do the one check that is still yours
+## 3. The optional providers are now ON in your deployment — test them, and do the checks that are still yours
 
-You decided to enable OCR (Vicenç) and Open Food Facts. They are switched on in
+You decided to enable OCR (Vicenç), Open Food Facts, and the external evidence a
+wine can gather. They are switched on in
 `wrangler.preview.jsonc` — which is your machine's file, untracked, so the public
 default stays `none` and nothing about this is committed. What is set:
 
-| Variable / binding  | Value                                    | Turns on                          |
-| ------------------- | ---------------------------------------- | --------------------------------- |
-| `ai` binding        | `{ "binding": "AI" }`                    | Workers AI access                 |
-| `AI_PROVIDER`       | `cloudflare`                             | both AI features                  |
-| `AI_OCR_MODEL`      | `@cf/meta/llama-3.2-11b-vision-instruct` | reading a label from a photo      |
-| `AI_MODEL`          | `@cf/meta/llama-3.1-8b-instruct`         | Vicenç's replies                  |
-| `RESEARCH_PROVIDER` | `open_data`                              | barcode lookup in Open Food Facts |
+| Variable / binding        | Value                                                | Turns on                                       |
+| ------------------------- | ---------------------------------------------------- | ---------------------------------------------- |
+| `ai` binding              | `{ "binding": "AI" }`                                | Workers AI access                              |
+| `AI_PROVIDER`             | `cloudflare`                                         | both AI features                               |
+| `AI_OCR_MODEL`            | `@cf/meta/llama-3.2-11b-vision-instruct`             | reading a label from a photo                   |
+| `AI_MODEL`                | `@cf/meta/llama-3.1-8b-instruct`                     | Vicenç's replies                               |
+| `RESEARCH_PROVIDER`       | `open_data`                                          | external evidence on a wine                    |
+| `EXTERNAL_API_USER_AGENT` | `VaDeVi/0.1 (https://github.com/renecortelo/vadevi)` | the same — it is the second half of the switch |
 
 The OCR model is one of the three on the allowlist in `apps/api/src/adapters/label-ocr.ts`.
 The text model is a current Cloudflare one; if Vicenç ever answers with an error,
 check the model catalogue and swap `AI_MODEL` — the names change over time.
 
+**The external evidence took two variables, not one.** `RESEARCH_PROVIDER=open_data`
+alone left it off: the code also requires `EXTERNAL_API_USER_AGENT`, because Wikidata
+and Open Food Facts both require a request to identify itself with a contact. Until
+this session only the first was set, so _Research this wine_ on the evidence screen
+would have said "External research is disabled in this deployment". Both are set now.
+The user-agent uses your public repository as the contact URL — nothing private, the
+same URL the AGPL source offer already points at.
+
 A dry-run (`wrangler deploy --dry-run`) confirmed the config is valid and the `AI`
-binding resolves. It takes effect on your next real deploy (step 1).
+binding resolves. It all takes effect on your next real deploy (step 1).
 
-**One thing is still yours and I could not do it:** the label-OCR review asks you
-to read Cloudflare's _current_ Workers AI data-retention terms on the day you turn
-it on, because a photograph leaves your deployment for their model and the terms
-change. Read `docs/privacy-review-label-ocr.md`, confirm the terms are acceptable
-to you today, and if they are not, set `AI_PROVIDER` back to `none`.
+**Two things are still yours, and I could not do them:**
 
-Then test, after deploying: photograph a label and see it read fields (OCR),
-ask Vicenç something (text model), and scan a barcode you expect to be in a food
-database (Open Food Facts). Watch the usage counters on **Data and privacy** —
-every call is metered and capped per member and per deployment.
+1. The label-OCR review asks you to read Cloudflare's _current_ Workers AI
+   data-retention terms on the day you turn it on, because a photograph leaves your
+   deployment for their model and the terms change. Read
+   `docs/privacy-review-label-ocr.md`; if the terms are not acceptable today, set
+   `AI_PROVIDER` back to `none`.
+2. Know what the evidence research sends: the wine's **identity** — producer, region
+   and wine name — goes to **Wikidata**, and its **barcode** to **Open Food Facts**.
+   No photograph, no personal data; a lighter footprint than OCR. The Open Food Facts
+   review covers the barcode; the Wikidata lookup rides the same switch, so if you do
+   not want wine names leaving the deployment, set `RESEARCH_PROVIDER` back to `none`.
+
+Then test, after deploying: photograph a label and see it read fields (OCR), ask
+Vicenç something (text model), and open a wine → **Evidence** → **Research this wine**
+— proposed facts appear with their sources, and you accept the ones you want. Watch
+the usage counters on **Data and privacy**; every call is metered and capped per
+member and per deployment.
 
 ## 4. Watch the API while you are in there (0 min extra)
 
