@@ -6,6 +6,7 @@ import type {
   InvitationPreviewResponse,
   RemoveMemberRequest,
   SpaceDetailResponse,
+  UpdateSpaceRequest,
 } from "@vadevi/contracts";
 import { ulid } from "ulid";
 
@@ -803,4 +804,100 @@ export async function removeMember(
   if (results[0]?.meta.changes !== 1) return { kind: "conflict" };
   const response = await getSpaceDetail(database, options.principal, options.spaceId);
   return response === null ? { kind: "unavailable" } : { kind: "success", response };
+}
+
+/**
+ * Rename a Space, or change the language its content defaults to.
+ *
+ * Owners only. The name is what every member reads in their switcher, so this
+ * is not a personal preference — and until now a Space named in a hurry stayed
+ * named that way, because nothing could change it.
+ *
+ * `undefined` means "leave it", and the version check is the same optimistic
+ * lock the rest of these updates use.
+ */
+export async function updateSpace(
+  database: D1Database,
+  options: {
+    principal: FirebasePrincipal;
+    request: UpdateSpaceRequest;
+    requestId: string;
+    spaceId: string;
+  },
+): Promise<
+  | { current: SpaceDetailResponse; kind: "conflict" }
+  | { kind: "forbidden" }
+  | { kind: "success"; response: SpaceDetailResponse }
+  | { kind: "unavailable" }
+> {
+  const actor = await database
+    .prepare(
+      `SELECT actor.id, membership.role FROM users actor
+      JOIN space_memberships membership ON membership.user_id = actor.id
+      JOIN spaces space ON space.id = membership.space_id
+      WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
+        AND membership.space_id = ? AND membership.status = 'active'
+        AND space.deleted_at IS NULL`,
+    )
+    .bind(options.principal.firebaseUid, options.spaceId)
+    .first<{ id: string; role: string }>();
+  if (actor === null) return { kind: "unavailable" };
+  // A member seeing the Space is not a member who may rename it for everyone.
+  if (actor.role !== "owner") return { kind: "forbidden" };
+
+  const row = await database
+    .prepare(`SELECT version FROM spaces WHERE id = ? AND deleted_at IS NULL`)
+    .bind(options.spaceId)
+    .first<{ version: number }>();
+  if (row === null) return { kind: "unavailable" };
+  if (row.version !== options.request.version) {
+    const current = await getSpaceDetail(database, options.principal, options.spaceId);
+    if (current === null) return { kind: "unavailable" };
+    return { current, kind: "conflict" };
+  }
+
+  const now = new Date().toISOString();
+  await database.batch([
+    database
+      .prepare(
+        `UPDATE spaces SET
+          name = CASE WHEN ? = 1 THEN ? ELSE name END,
+          default_locale = CASE WHEN ? = 1 THEN ? ELSE default_locale END,
+          version = version + 1, updated_at = ?
+        WHERE id = ? AND version = ? AND deleted_at IS NULL`,
+      )
+      .bind(
+        options.request.name === undefined ? 0 : 1,
+        options.request.name ?? null,
+        options.request.defaultLocale === undefined ? 0 : 1,
+        options.request.defaultLocale ?? null,
+        now,
+        options.spaceId,
+        options.request.version,
+      ),
+    database
+      .prepare(
+        `INSERT INTO audit_events (
+          id, actor_user_id, space_id, action, target_type, target_id,
+          request_id, safe_metadata_json, created_at
+        ) VALUES (?, ?, ?, 'space.updated', 'space', ?, ?, ?, ?)`,
+      )
+      .bind(
+        ulid(),
+        actor.id,
+        options.spaceId,
+        options.spaceId,
+        options.requestId,
+        // Which fields changed, never what they were changed to: a Space's name
+        // is the members' own text.
+        JSON.stringify({
+          fields: Object.keys(options.request).filter((key) => key !== "version"),
+        }),
+        now,
+      ),
+  ]);
+
+  const response = await getSpaceDetail(database, options.principal, options.spaceId);
+  if (response === null) return { kind: "unavailable" };
+  return { kind: "success", response };
 }

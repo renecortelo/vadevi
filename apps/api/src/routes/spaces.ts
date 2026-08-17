@@ -10,6 +10,7 @@ import {
   InvitationTokenPathSchema,
   RemoveMemberRequestSchema,
   SpaceDetailResponseSchema,
+  UpdateSpaceRequestSchema,
   SpaceIdPathSchema,
   SpaceMemberPathSchema,
 } from "@vadevi/contracts";
@@ -22,6 +23,7 @@ import {
   getInvitationPreview,
   getSpaceDetail,
   removeMember,
+  updateSpace,
 } from "../repositories/spaces";
 import type { ApiEnvironment } from "../types";
 import { externalResearchEnabled } from "../adapters/research-factory";
@@ -97,6 +99,50 @@ const getSpaceRoute = createRoute({
     404: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "Space not available.",
+    },
+  },
+});
+
+/**
+ * Renaming a Space.
+ *
+ * Owners only, because the name is what every member reads in their switcher.
+ * §7 puts Space administration behind the owner role, and this is that.
+ */
+const updateSpaceRoute = createRoute({
+  method: "patch",
+  path: "/api/v1/spaces/{spaceId}",
+  operationId: "updateSpace",
+  tags: ["Spaces"],
+  summary: "Rename a Space, or change the language its content defaults to",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    params: SpaceIdPathSchema,
+    body: {
+      content: { "application/json": { schema: UpdateSpaceRequestSchema } },
+      required: true,
+    },
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: SpaceDetailResponseSchema } },
+      description: "The updated Space.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    403: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Only an owner may change a Space.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Space not available.",
+    },
+    409: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The Space changed before this update.",
     },
   },
 });
@@ -228,7 +274,7 @@ const removeMemberRoute = createRoute({
 
 function errorEnvelope(
   requestId: string,
-  code: "IDEMPOTENCY_CONFLICT" | "INVITE_INVALID" | "NOT_FOUND" | "VERSION_CONFLICT",
+  code: "FORBIDDEN" | "IDEMPOTENCY_CONFLICT" | "INVITE_INVALID" | "NOT_FOUND" | "VERSION_CONFLICT",
   message: string,
 ) {
   return ErrorEnvelopeSchema.parse({ error: { code, message, requestId } });
@@ -265,6 +311,46 @@ export function registerSpaceRoutes(app: OpenAPIHono<ApiEnvironment>) {
     context.header("Location", `/api/v1/spaces/${result.response.data.space.id}`);
     context.header("Idempotency-Replayed", String(result.replayed));
     return context.json(SpaceDetailResponseSchema.parse(result.response), 201);
+  });
+
+  app.openapi(updateSpaceRoute, async (context) => {
+    const result = await updateSpace(context.env.DB!, {
+      principal: context.get("principal"),
+      request: context.req.valid("json"),
+      requestId: context.get("requestId"),
+      spaceId: context.req.valid("param").spaceId,
+    });
+    if (result.kind === "unavailable") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "NOT_FOUND",
+          "The requested resource was not found.",
+        ),
+        404,
+      );
+    }
+    if (result.kind === "forbidden") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "FORBIDDEN",
+          "Only an owner can change this Space.",
+        ),
+        403,
+      );
+    }
+    if (result.kind === "conflict") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "VERSION_CONFLICT",
+          "The Space changed before this update.",
+        ),
+        409,
+      );
+    }
+    return context.json(SpaceDetailResponseSchema.parse(result.response), 200);
   });
 
   app.openapi(getSpaceRoute, async (context) => {

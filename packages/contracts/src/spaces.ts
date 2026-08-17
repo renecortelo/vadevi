@@ -18,6 +18,27 @@ export const CreateSpaceRequestSchema = z
   .strict()
   .openapi("CreateSpaceRequest");
 
+/**
+ * Renaming a Space, or changing the language its content defaults to.
+ *
+ * Owners only. A Space's name is what every member sees in their switcher, so
+ * this is not a personal preference — and a Space named in a hurry stayed named
+ * that way, because nothing could change it.
+ *
+ * `undefined` means "leave it", and `version` is the same optimistic lock the
+ * other updates use.
+ */
+export const UpdateSpaceRequestSchema = z
+  .object({
+    defaultLocale: SupportedLocaleSchema.optional(),
+    name: z.string().trim().min(1).max(120).optional(),
+    version: z.number().int().positive(),
+  })
+  .strict()
+  .openapi("UpdateSpaceRequest");
+
+export type UpdateSpaceRequest = z.infer<typeof UpdateSpaceRequestSchema>;
+
 export const SpaceDetailResponseSchema = z
   .object({
     data: z

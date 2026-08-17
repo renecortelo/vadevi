@@ -91,7 +91,13 @@
       "owner": "Eigentümer",
       "admin": "Administrator",
       "member": "Mitglied"
-    }
+    },
+    "renameTitle": "Name",
+    "renameBody": "Alle in diesem Space sehen diesen Namen in ihrer Auswahl.",
+    "renameAction": "Space umbenennen",
+    "renameSaving": "Wird umbenannt…",
+    "renameError": "Der Space konnte nicht umbenannt werden. Versuch es noch einmal.",
+    "renameConflict": "Jemand anderes hat diesen Space umbenannt, während du getippt hast. Lade neu und versuch es noch einmal."
   },
   "invitation": {
     "eyebrow": "Eine private Einladung",
@@ -296,7 +302,14 @@
     "mergeConfirmBody": "{{source}} wird mit {{target}} zusammengeführt. Verkostungen, Flaschen, Käufe, Preise und Belege wandern mit, der alte Name bleibt auffindbar.",
     "mergeConfirmAction": "Diese Einträge zusammenführen",
     "mergeDone": "Die Einträge wurden zusammengeführt.",
-    "mergeError": "Die Zusammenführung lief nicht. Einer der Einträge hat sich womöglich geändert."
+    "mergeError": "Die Zusammenführung lief nicht. Einer der Einträge hat sich womöglich geändert.",
+    "editAction": "Bearbeiten",
+    "editTitle": "Diesen Wein korrigieren",
+    "editSave": "Änderungen speichern",
+    "editSaving": "Wird gespeichert…",
+    "editCancel": "Abbrechen",
+    "editError": "Die Änderungen konnten nicht gespeichert werden. Versuch es noch einmal.",
+    "editConflict": "Jemand anderes hat diesen Wein geändert, während du bearbeitet hast. Lade neu und versuch es noch einmal — nichts von dem, was du getippt hast, wurde gesendet."
   },
   "evidence": {
     "openAction": "Belege",

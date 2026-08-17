@@ -10,6 +10,7 @@ import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { createUlid } from "../security/ulid";
 import { getPrivateMedia, getWineMemory } from "../services/api";
 import { mergeWines } from "../services/data-rights";
+import { EditWineDialog } from "../components/EditWineDialog";
 import { useSession } from "../session/SessionContext";
 
 function normalize(value: string): string {
@@ -223,6 +224,10 @@ export function WineMemoryPage() {
   const [usingCache, setUsingCache] = useState(false);
   const [conflicts, setConflicts] = useState<SyncConflict[]>([]);
   const [confirmClear, setConfirmClear] = useState(false);
+  const [editing, setEditing] = useState<WineSummary | null>(null);
+  // Bumped after a correction. The list is fetched by an effect keyed on the
+  // filters, so this is how a change made on this screen asks for it again.
+  const [reloadToken, setReloadToken] = useState(0);
 
   const loadSessionCache = useCallback(async () => {
     if (userId.length === 0) return;
@@ -309,7 +314,7 @@ export function WineMemoryPage() {
       controller.abort();
       globalThis.clearTimeout(timeout);
     };
-  }, [filters, loadLocal, query, spaceId, user, wineType]);
+  }, [filters, loadLocal, query, reloadToken, spaceId, user, wineType]);
 
   useEffect(() => {
     const changed = (event: Event) => {
@@ -451,6 +456,16 @@ export function WineMemoryPage() {
           </div>
         </div>
       ) : null}
+
+      {editing === null ? null : (
+        <EditWineDialog
+          onClose={() => setEditing(null)}
+          onSaved={() => {
+            setReloadToken((current) => current + 1);
+          }}
+          wine={editing}
+        />
+      )}
 
       <ConflictPanel
         conflicts={conflicts}
@@ -724,6 +739,10 @@ export function WineMemoryPage() {
                   <span>{t("memory.noteCount", { count: wine.noteCount })}</span>
                 </div>
                 <div className="wine-card__actions">
+                  {/* A wine logged in a hurry is a wine worth correcting. */}
+                  <button className="text-button" onClick={() => setEditing(wine)} type="button">
+                    {t("memory.editAction")}
+                  </button>
                   <Link className="text-link" to={`/wines/${wine.id}/evidence`}>
                     {t("evidence.openAction")}
                   </Link>

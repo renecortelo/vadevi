@@ -91,7 +91,13 @@
       "owner": "Propietari",
       "admin": "Administrador",
       "member": "Membre"
-    }
+    },
+    "renameTitle": "Nom",
+    "renameBody": "Tothom en aquest Espai veu aquest nom al seu selector.",
+    "renameAction": "Reanomena l'Espai",
+    "renameSaving": "Reanomenant…",
+    "renameError": "No s'ha pogut reanomenar l'Espai. Torna-ho a provar.",
+    "renameConflict": "Algú altre ha reanomenat aquest Espai mentre escrivies. Recarrega i torna-ho a provar."
   },
   "invitation": {
     "eyebrow": "Una invitació privada",
@@ -296,7 +302,14 @@
     "mergeConfirmBody": "{{source}} es fusionarà amb {{target}}. Els tasts, ampolles, compres, preus i evidències es traslladen, i el nom antic continua sent cercable.",
     "mergeConfirmAction": "Fusiona aquests registres",
     "mergeDone": "Els registres s'han fusionat.",
-    "mergeError": "La fusió no s'ha fet. Potser un dels registres ha canviat."
+    "mergeError": "La fusió no s'ha fet. Potser un dels registres ha canviat.",
+    "editAction": "Edita",
+    "editTitle": "Corregeix aquest vi",
+    "editSave": "Desa els canvis",
+    "editSaving": "Desant…",
+    "editCancel": "Cancel·la",
+    "editError": "No s'han pogut desar els canvis. Torna-ho a provar.",
+    "editConflict": "Algú altre ha canviat aquest vi mentre editaves. Recarrega i torna-ho a provar — no s'ha enviat res del que has escrit."
   },
   "evidence": {
     "openAction": "Evidència",

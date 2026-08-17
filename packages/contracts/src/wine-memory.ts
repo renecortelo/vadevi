@@ -55,6 +55,49 @@ export const CreateWineRequestSchema = CreateWineFieldsSchema.superRefine(
   },
 ).openapi("CreateWineRequest");
 
+/**
+ * Correcting a wine after it exists.
+ *
+ * A bottle logged in a restaurant is logged in a hurry: the vintage guessed, the
+ * producer half-read, no photograph. Until now the only way to change any of
+ * that was to log it again, which leaves two wines where there is one bottle.
+ *
+ * Every field is optional and `undefined` means "leave it": a screen that edits
+ * one field must not silently clear the four it did not show. `version` is the
+ * same optimistic lock the bottle and wishlist updates use, so two people
+ * editing the same wine get a conflict rather than one of them winning quietly.
+ */
+export const UpdateWineRequestSchema = z
+  .object({
+    appellation: z.string().trim().min(1).max(160).nullable().optional(),
+    countryCode: z
+      .string()
+      .trim()
+      .regex(/^[A-Za-z]{2}$/)
+      .nullable()
+      .optional(),
+    displayName: z.string().trim().min(1).max(160).optional(),
+    identityStatus: z.enum(["draft", "confirmed", "needs_review"]).optional(),
+    /** The label photograph, which a hurried entry rarely has. */
+    mediaId: ResourceIdSchema.nullable().optional(),
+    nonVintage: z.boolean().optional(),
+    producerName: z.string().trim().min(1).max(160).optional(),
+    region: z.string().trim().min(1).max(160).nullable().optional(),
+    styleText: z.string().trim().min(1).max(500).nullable().optional(),
+    version: z.number().int().positive(),
+    vintageYear: z.number().int().min(1000).max(2100).nullable().optional(),
+    wineType: WineTypeSchema.nullable().optional(),
+  })
+  .strict()
+  .superRefine(
+    (value: { nonVintage?: boolean; vintageYear?: number | null }, context: z.RefinementCtx) => {
+      validateVintage({ nonVintage: value.nonVintage ?? false, ...value }, context);
+    },
+  )
+  .openapi("UpdateWineRequest");
+
+export type UpdateWineRequest = z.infer<typeof UpdateWineRequestSchema>;
+
 export const WineSummarySchema = z
   .object({
     appellation: z.string().nullable(),
@@ -87,6 +130,20 @@ export const CreateWineResponseSchema = z
   })
   .strict()
   .openapi("CreateWineResponse");
+
+/**
+ * One wine, on its own.
+ *
+ * Creation answers with the duplicates it noticed; a correction has nothing to
+ * propose, so it says so by having a shape of its own rather than sending an
+ * empty list to satisfy a schema built for a different question.
+ */
+export const WineResponseSchema = z
+  .object({ data: z.object({ wine: WineSummarySchema }).strict() })
+  .strict()
+  .openapi("WineResponse");
+
+export type WineResponse = z.infer<typeof WineResponseSchema>;
 
 export const WineMemoryResponseSchema = z
   .object({

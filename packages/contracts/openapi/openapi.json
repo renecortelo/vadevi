@@ -547,6 +547,38 @@
         ],
         "additionalProperties": false
       },
+      "UpdateSpaceRequest": {
+        "type": "object",
+        "properties": {
+          "defaultLocale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "es",
+              "fr",
+              "en",
+              "it",
+              "pt-PT",
+              "nl",
+              "de"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "additionalProperties": false
+      },
       "CreateInvitationResponse": {
         "type": "object",
         "properties": {
@@ -4706,6 +4738,211 @@
           "displayName",
           "identityStatus",
           "producerName"
+        ],
+        "additionalProperties": false
+      },
+      "WineResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "wine": {
+                "type": "object",
+                "properties": {
+                  "appellation": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "countryCode": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "displayName": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "identityStatus": {
+                    "type": "string",
+                    "enum": [
+                      "draft",
+                      "confirmed",
+                      "needs_review"
+                    ]
+                  },
+                  "lastTastedAt": {
+                    "type": "string",
+                    "nullable": true,
+                    "format": "date-time"
+                  },
+                  "mediaId": {
+                    "type": "string",
+                    "nullable": true,
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                  },
+                  "noteCount": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "nonVintage": {
+                    "type": "boolean"
+                  },
+                  "producerName": {
+                    "type": "string"
+                  },
+                  "region": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "score100": {
+                    "type": "integer",
+                    "nullable": true,
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "vintageYear": {
+                    "type": "integer",
+                    "nullable": true
+                  },
+                  "version": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "exclusiveMinimum": true
+                  },
+                  "wineType": {
+                    "type": "string",
+                    "nullable": true,
+                    "enum": [
+                      "red",
+                      "white",
+                      "rose",
+                      "sparkling",
+                      "fortified",
+                      "orange",
+                      "other",
+                      null
+                    ]
+                  }
+                },
+                "required": [
+                  "appellation",
+                  "countryCode",
+                  "createdAt",
+                  "displayName",
+                  "id",
+                  "identityStatus",
+                  "lastTastedAt",
+                  "mediaId",
+                  "noteCount",
+                  "nonVintage",
+                  "producerName",
+                  "region",
+                  "score100",
+                  "vintageYear",
+                  "version",
+                  "wineType"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "wine"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "UpdateWineRequest": {
+        "type": "object",
+        "properties": {
+          "appellation": {
+            "type": "string",
+            "nullable": true,
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "countryCode": {
+            "type": "string",
+            "nullable": true,
+            "pattern": "^[A-Za-z]{2}$"
+          },
+          "displayName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "identityStatus": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "confirmed",
+              "needs_review"
+            ]
+          },
+          "mediaId": {
+            "type": "string",
+            "nullable": true,
+            "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "nonVintage": {
+            "type": "boolean"
+          },
+          "producerName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "region": {
+            "type": "string",
+            "nullable": true,
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "styleText": {
+            "type": "string",
+            "nullable": true,
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          },
+          "vintageYear": {
+            "type": "integer",
+            "nullable": true,
+            "minimum": 1000,
+            "maximum": 2100
+          },
+          "wineType": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "red",
+              "white",
+              "rose",
+              "sparkling",
+              "fortified",
+              "orange",
+              "other",
+              null
+            ]
+          }
+        },
+        "required": [
+          "version"
         ],
         "additionalProperties": false
       },
@@ -9486,6 +9723,91 @@
       }
     },
     "/api/v1/spaces/{spaceId}": {
+      "patch": {
+        "operationId": "updateSpace",
+        "tags": [
+          "Spaces"
+        ],
+        "summary": "Rename a Space, or change the language its content defaults to",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSpaceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated Space.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpaceDetailResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Only an owner may change a Space.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Space not available.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The Space changed before this update.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      },
       "get": {
         "operationId": "getSpace",
         "tags": [
@@ -12062,6 +12384,102 @@
           },
           "404": {
             "description": "Space unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/wines/{wineId}": {
+      "patch": {
+        "operationId": "updateWine",
+        "tags": [
+          "Wine memory"
+        ],
+        "summary": "Correct a wine's identity fields, or attach its label photograph",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "wineId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateWineRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The corrected wine.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WineResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The wine or the Space is unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The wine changed before this update, or has been merged away.",
             "content": {
               "application/json": {
                 "schema": {

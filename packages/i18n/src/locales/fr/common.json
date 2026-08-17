@@ -91,7 +91,13 @@
       "owner": "Propriétaire",
       "admin": "Administrateur",
       "member": "Membre"
-    }
+    },
+    "renameTitle": "Nom",
+    "renameBody": "Tout le monde dans cet Espace voit ce nom dans son sélecteur.",
+    "renameAction": "Renommer l'Espace",
+    "renameSaving": "Renommage…",
+    "renameError": "L'Espace n'a pas pu être renommé. Réessayez.",
+    "renameConflict": "Quelqu'un d'autre a renommé cet Espace pendant votre saisie. Rechargez et réessayez."
   },
   "invitation": {
     "eyebrow": "Une invitation privée",
@@ -296,7 +302,14 @@
     "mergeConfirmBody": "{{source}} sera fusionné dans {{target}}. Les dégustations, bouteilles, achats, prix et preuves sont transférés, et l'ancien nom reste consultable.",
     "mergeConfirmAction": "Fusionner ces fiches",
     "mergeDone": "Les fiches ont été fusionnées.",
-    "mergeError": "La fusion n'a pas eu lieu. Une des fiches a peut-être changé."
+    "mergeError": "La fusion n'a pas eu lieu. Une des fiches a peut-être changé.",
+    "editAction": "Modifier",
+    "editTitle": "Corriger ce vin",
+    "editSave": "Enregistrer",
+    "editSaving": "Enregistrement…",
+    "editCancel": "Annuler",
+    "editError": "Les modifications n'ont pas pu être enregistrées. Réessayez.",
+    "editConflict": "Quelqu'un d'autre a modifié ce vin pendant votre saisie. Rechargez et réessayez — rien de ce que vous avez tapé n'a été envoyé."
   },
   "evidence": {
     "openAction": "Preuves",
