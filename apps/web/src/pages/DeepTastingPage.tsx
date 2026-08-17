@@ -5,7 +5,7 @@ import {
   tastingDescriptors,
   type TastingPhase,
 } from "@vadevi/i18n/runtime";
-import { type ReactNode, useCallback, useEffect, useState } from "react";
+import { type ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams, useSearchParams } from "react-router";
 import type { z } from "zod";
@@ -186,6 +186,21 @@ export function DeepTastingPage() {
     }),
   );
   const [step, setStep] = useState<Step>("appearance");
+  // Each step replaces the one before it in the same place, so moving on leaves
+  // the scroll wherever the last step's buttons were — near the bottom — and the
+  // top of the new section starts off-screen. Bring the step's own heading back
+  // into view whenever the step changes, but not on the first render, which is
+  // already at the top and should not lurch.
+  const stepTopRef = useRef<HTMLElement>(null);
+  const firstStepRender = useRef(true);
+  useEffect(() => {
+    if (firstStepRender.current) {
+      firstStepRender.current = false;
+      return;
+    }
+    const reduced = globalThis.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+    stepTopRef.current?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+  }, [step]);
   const [ready, setReady] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState(false);
@@ -980,7 +995,7 @@ export function DeepTastingPage() {
         </Link>
       </header>
 
-      <nav aria-label={t("tasting.progressLabel")} className="tasting-progress">
+      <nav aria-label={t("tasting.progressLabel")} className="tasting-progress" ref={stepTopRef}>
         {steps.map((item, index) => (
           <button
             aria-current={item === step ? "step" : undefined}

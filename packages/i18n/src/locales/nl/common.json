@@ -158,7 +158,7 @@
     "title": "Snel vastleggen",
     "body": "Bevestig de wijn, voeg zo veel of weinig toe als je wilt en sla ook op als het restaurant geen bereik heeft.",
     "identityTitle": "Wijnidentiteit",
-    "identityHelp": "Producent en wijnnaam zijn genoeg. Niets wordt definitief voordat je het bevestigt.",
+    "identityHelp": "Producent en wijnnaam zijn genoeg. De wijn wordt pas bewaard als je hem bevestigt.",
     "producer": "Producent",
     "wineName": "Wijnnaam",
     "vintage": "Oogstjaar",
@@ -177,9 +177,9 @@
     "nonVintageShort": "NV",
     "region": "Regio (optioneel)",
     "photoTitle": "Privéfoto van het etiket",
-    "photoHelp": "De browser codeert de foto opnieuw, verwijdert metadata en verkleint hem vóór de privé-upload. Identificatie is optioneel; handmatige velden werken altijd.",
+    "photoHelp": "De foto blijft privé en de locatie wordt verwijderd voordat hij wordt bewaard. Een foto toevoegen is optioneel — je kunt de velden altijd zelf invullen.",
     "photoAction": "Kies een etiketfoto",
-    "photoProcessing": "Metadata verwijderen en foto voorbereiden…",
+    "photoProcessing": "Foto voorbereiden…",
     "photoPreviewAlt": "Privévoorbeeld van het verwerkte etiket",
     "photoRemove": "Foto verwijderen",
     "photoError": "Deze foto kon niet worden verwerkt. Je tekst is veilig en kan zonder foto worden opgeslagen.",
@@ -221,7 +221,8 @@
       "synced": "Het is precies één keer gesynchroniseerd.",
       "needs_attention": "Het is lokaal bewaard en heeft je aandacht nodig."
     },
-    "identifyAction": "Scan of lees een etiket"
+    "identifyAction": "Scan of lees een etiket",
+    "moreDetails": "Meer details"
   },
   "memory": {
     "eyebrow": "Privégeschiedenis",
@@ -930,7 +931,7 @@
     "noticeTitle": "Wat deze app met uw gegevens doet",
     "noticeScope": "Uw wijnen, proeverijen en foto's staan in de Ruimte die u koos. Alleen de actieve leden daarvan zien ze.",
     "noticeNoAds": "Geen advertenties, geen verkoop van gegevens, geen openbare profielen en geen gedragsanalyse van derden.",
-    "noticeMedia": "Foto's worden in uw browser verkleind en van locatiegegevens ontdaan vóór het uploaden, en worden pas geserveerd na een lidmaatschapscontrole.",
+    "noticeMedia": "Foto's worden op je apparaat verkleind en van hun locatie ontdaan voordat ze worden bewaard, en alleen leden van de Space kunnen ze zien.",
     "noticeProviders": "Optionele AI- en onderzoeksaanbieders staan uit tenzij de beheerder ze inschakelt, en elk heeft een geschreven privacybeoordeling.",
     "noticeRetention": "Assistentbeurten worden niet als gespreksgeschiedenis bewaard. Auditlogs van tools zijn geredigeerd en bevatten geen berichttekst."
   },

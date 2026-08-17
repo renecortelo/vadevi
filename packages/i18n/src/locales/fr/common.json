@@ -158,7 +158,7 @@
     "title": "Journal rapide",
     "body": "Confirmez le vin, ajoutez ce que vous voulez et enregistrez même sans réseau au restaurant.",
     "identityTitle": "Identité du vin",
-    "identityHelp": "Le producteur et le nom du vin suffisent. Rien ne devient canonique avant votre confirmation.",
+    "identityHelp": "Le producteur et le nom du vin suffisent. Le vin n'est enregistré qu'à votre confirmation.",
     "producer": "Producteur",
     "wineName": "Nom du vin",
     "vintage": "Millésime",
@@ -177,9 +177,9 @@
     "nonVintageShort": "SM",
     "region": "Région (facultatif)",
     "photoTitle": "Photo privée de l'étiquette",
-    "photoHelp": "Le navigateur réencode la photo, supprime ses métadonnées et la réduit avant l'envoi privé. L'identification est facultative ; les champs manuels fonctionnent toujours.",
+    "photoHelp": "La photo reste privée et sa localisation est retirée avant l'enregistrement. L'ajouter est facultatif : vous pouvez toujours remplir les champs à la main.",
     "photoAction": "Choisir une photo d'étiquette",
-    "photoProcessing": "Suppression des métadonnées et préparation…",
+    "photoProcessing": "Préparation de la photo…",
     "photoPreviewAlt": "Aperçu privé de l'étiquette traitée",
     "photoRemove": "Supprimer la photo",
     "photoError": "Cette photo n'a pas pu être traitée. Votre texte est intact et peut être enregistré sans elle.",
@@ -221,7 +221,8 @@
       "synced": "Il a été synchronisé exactement une fois.",
       "needs_attention": "Il est conservé localement et requiert votre attention."
     },
-    "identifyAction": "Scanner ou lire une étiquette"
+    "identifyAction": "Scanner ou lire une étiquette",
+    "moreDetails": "Plus de détails"
   },
   "memory": {
     "eyebrow": "Historique privé",
@@ -930,7 +931,7 @@
     "noticeTitle": "Ce que cette application fait de vos données",
     "noticeScope": "Vos vins, dégustations et photos vivent dans l'Espace que vous avez choisi. Seuls ses membres actifs les voient.",
     "noticeNoAds": "Pas de publicité, pas de vente de données, pas de profils publics et pas d'analyse comportementale tierce.",
-    "noticeMedia": "Les photos sont redimensionnées et débarrassées des métadonnées de localisation dans votre navigateur avant l'envoi, et ne sont servies qu'après vérification de l'appartenance.",
+    "noticeMedia": "Les photos sont redimensionnées et leur localisation retirée sur votre appareil avant l'enregistrement ; seuls les membres de l'Espace peuvent les voir.",
     "noticeProviders": "Les fournisseurs d'IA et de recherche optionnels sont désactivés sauf activation par l'exploitant, et chacun a une revue de confidentialité écrite.",
     "noticeRetention": "Les tours de l'assistant ne sont pas enregistrés en historique. Les audits d'outils sont expurgés et ne conservent aucun texte de message."
   },

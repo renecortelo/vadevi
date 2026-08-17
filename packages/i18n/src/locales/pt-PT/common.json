@@ -158,7 +158,7 @@
     "title": "Registo rápido",
     "body": "Confirme o vinho, acrescente o que quiser e guarde mesmo quando o restaurante não tem rede.",
     "identityTitle": "Identidade do vinho",
-    "identityHelp": "O produtor e o nome do vinho são suficientes. Nada se torna canónico antes da sua confirmação.",
+    "identityHelp": "O produtor e o nome do vinho bastam. O vinho só é guardado quando o confirma.",
     "producer": "Produtor",
     "wineName": "Nome do vinho",
     "vintage": "Colheita",
@@ -177,9 +177,9 @@
     "nonVintageShort": "SC",
     "region": "Região (opcional)",
     "photoTitle": "Foto privada do rótulo",
-    "photoHelp": "O navegador recodifica a foto, remove os metadados e reduz o tamanho antes do carregamento privado. A identificação é opcional; os campos manuais funcionam sempre.",
+    "photoHelp": "A foto é privada e a localização é removida antes de a guardar. Adicioná-la é opcional: pode sempre preencher os campos à mão.",
     "photoAction": "Escolher foto do rótulo",
-    "photoProcessing": "A remover metadados e a preparar a foto…",
+    "photoProcessing": "A preparar a foto…",
     "photoPreviewAlt": "Pré-visualização privada do rótulo processado",
     "photoRemove": "Remover foto",
     "photoError": "Não foi possível processar a foto. O texto continua seguro e pode ser guardado sem ela.",
@@ -221,7 +221,8 @@
       "synced": "Foi sincronizado exatamente uma vez.",
       "needs_attention": "Está preservado localmente e requer a sua atenção."
     },
-    "identifyAction": "Digitalizar ou ler um rótulo"
+    "identifyAction": "Digitalizar ou ler um rótulo",
+    "moreDetails": "Mais detalhes"
   },
   "memory": {
     "eyebrow": "Histórico privado",
@@ -930,7 +931,7 @@
     "noticeTitle": "O que esta aplicação faz com os seus dados",
     "noticeScope": "Os seus vinhos, provas e fotografias vivem no Espaço que escolheu. Só os membros ativos desse Espaço os veem.",
     "noticeNoAds": "Sem publicidade, sem venda de dados, sem perfis públicos e sem análise comportamental de terceiros.",
-    "noticeMedia": "As fotografias são redimensionadas e limpas de metadados de localização no seu navegador antes do envio, e só são servidas após verificação de pertença.",
+    "noticeMedia": "As fotos são redimensionadas e a localização removida no seu dispositivo antes de serem guardadas, e só os membros do Espaço as podem ver.",
     "noticeProviders": "Os fornecedores opcionais de IA e pesquisa estão desligados salvo se quem instala os ligar, e cada um tem uma revisão de privacidade escrita.",
     "noticeRetention": "Os turnos do assistente não são guardados como histórico. As auditorias de ferramentas são redigidas e não guardam texto das mensagens."
   },

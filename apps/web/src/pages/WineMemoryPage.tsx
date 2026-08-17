@@ -404,9 +404,14 @@ export function WineMemoryPage() {
 
   async function clearData() {
     await clearOfflineData();
-    setWines([]);
     setConflicts([]);
     setConfirmClear(false);
+    // Clearing empties the cached copy on this device, not the Space on the
+    // server. Re-run the loader rather than blanking the list, so what is still
+    // synced comes straight back instead of looking deleted until the next
+    // visit. Offline, the loader reads the now-empty cache, which is the honest
+    // state until the connection returns.
+    setReloadToken((current) => current + 1);
   }
 
   return (

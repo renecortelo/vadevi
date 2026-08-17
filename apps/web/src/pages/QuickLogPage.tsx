@@ -21,7 +21,10 @@ function newDraft(userId: string, spaceId: string): QuickLogDraft {
   const now = new Date().toISOString();
   return {
     id: partitionId(userId, spaceId),
-    includeNote: true,
+    // A quick log is a bottle worth remembering; the tasting note is opt-in, so
+    // the shortest path — producer, name, save — is not a scroll past a note
+    // nobody asked to write.
+    includeNote: false,
     noteId: createUlid(),
     noteMutationId: createUlid(),
     notePayload: {
@@ -67,6 +70,10 @@ export function QuickLogPage() {
   const [photoError, setPhotoError] = useState<string | null>(null);
   const [quotaWarning, setQuotaWarning] = useState(false);
   const [processingPhoto, setProcessingPhoto] = useState(false);
+  // The photo and the finer wine details are folded away so the shortest path —
+  // producer, name, save — is not a scroll past everything optional. The photo
+  // opens itself once one is attached, so a resumed draft shows what it holds.
+  const [photoOpen, setPhotoOpen] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -76,6 +83,7 @@ export function QuickLogPage() {
       setDraft(stored ?? newDraft(userId, spaceId));
       setReviewing(false);
       setSaved(false);
+      setPhotoOpen(stored?.photo !== undefined);
       setReady(true);
     });
     return () => {
@@ -132,6 +140,7 @@ export function QuickLogPage() {
         ...current,
         photo: { ...photo, idempotencyKey: createIdempotencyKey() },
       }));
+      setPhotoOpen(true);
     } catch {
       setPhotoError(t("quickLog.photoError"));
     } finally {
@@ -218,65 +227,75 @@ export function QuickLogPage() {
             required
             value={draft.winePayload.displayName}
           />
-          <div className="form-grid">
-            <label>
-              <span>{t("quickLog.vintage")}</span>
+          <details className="form-subsection">
+            <summary>{t("quickLog.moreDetails")}</summary>
+            <div className="form-grid">
+              <label>
+                <span>{t("quickLog.vintage")}</span>
+                <input
+                  disabled={draft.winePayload.nonVintage}
+                  inputMode="numeric"
+                  max="2100"
+                  min="1000"
+                  onChange={(event) =>
+                    updateWine(
+                      "vintageYear",
+                      event.target.value === "" ? null : Number(event.target.value),
+                    )
+                  }
+                  type="number"
+                  value={draft.winePayload.vintageYear ?? ""}
+                />
+              </label>
+              <label>
+                <span>{t("quickLog.type")}</span>
+                <select
+                  onChange={(event) =>
+                    updateWine(
+                      "wineType",
+                      (event.target.value || undefined) as WineType | undefined,
+                    )
+                  }
+                  value={draft.winePayload.wineType ?? ""}
+                >
+                  <option value="">{t("quickLog.typeUnknown")}</option>
+                  {(
+                    ["red", "white", "rose", "sparkling", "fortified", "orange", "other"] as const
+                  ).map((type) => (
+                    <option key={type} value={type}>
+                      {t(`quickLog.wineType.${type}`)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+            <label className="check-row">
               <input
-                disabled={draft.winePayload.nonVintage}
-                inputMode="numeric"
-                max="2100"
-                min="1000"
-                onChange={(event) =>
-                  updateWine(
-                    "vintageYear",
-                    event.target.value === "" ? null : Number(event.target.value),
-                  )
-                }
-                type="number"
-                value={draft.winePayload.vintageYear ?? ""}
+                checked={draft.winePayload.nonVintage}
+                onChange={(event) => {
+                  updateWine("nonVintage", event.target.checked);
+                  if (event.target.checked) updateWine("vintageYear", null);
+                }}
+                type="checkbox"
               />
+              <span>{t("quickLog.nonVintage")}</span>
             </label>
-            <label>
-              <span>{t("quickLog.type")}</span>
-              <select
-                onChange={(event) =>
-                  updateWine("wineType", (event.target.value || undefined) as WineType | undefined)
-                }
-                value={draft.winePayload.wineType ?? ""}
-              >
-                <option value="">{t("quickLog.typeUnknown")}</option>
-                {(
-                  ["red", "white", "rose", "sparkling", "fortified", "orange", "other"] as const
-                ).map((type) => (
-                  <option key={type} value={type}>
-                    {t(`quickLog.wineType.${type}`)}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <label className="check-row">
+            <label htmlFor="region">{t("quickLog.region")}</label>
             <input
-              checked={draft.winePayload.nonVintage}
-              onChange={(event) => {
-                updateWine("nonVintage", event.target.checked);
-                if (event.target.checked) updateWine("vintageYear", null);
-              }}
-              type="checkbox"
+              id="region"
+              maxLength={160}
+              onChange={(event) => updateWine("region", event.target.value || undefined)}
+              value={draft.winePayload.region ?? ""}
             />
-            <span>{t("quickLog.nonVintage")}</span>
-          </label>
-          <label htmlFor="region">{t("quickLog.region")}</label>
-          <input
-            id="region"
-            maxLength={160}
-            onChange={(event) => updateWine("region", event.target.value || undefined)}
-            value={draft.winePayload.region ?? ""}
-          />
+          </details>
         </fieldset>
 
-        <fieldset className="form-section">
-          <legend>{t("quickLog.photoTitle")}</legend>
+        <details
+          className="form-section form-section--collapsible"
+          onToggle={(event) => setPhotoOpen(event.currentTarget.open)}
+          open={photoOpen}
+        >
+          <summary>{t("quickLog.photoTitle")}</summary>
           <p className="section-help">{t("quickLog.photoHelp")}</p>
           <label className="photo-picker">
             <span>
@@ -313,7 +332,7 @@ export function QuickLogPage() {
               {photoError}
             </p>
           ) : null}
-        </fieldset>
+        </details>
 
         <fieldset className="form-section">
           <legend>{t("quickLog.noteTitle")}</legend>

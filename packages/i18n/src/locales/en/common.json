@@ -158,7 +158,7 @@
     "title": "Quick log",
     "body": "Confirm the wine, add as much or as little as you like, and save even when the restaurant has no signal.",
     "identityTitle": "Wine identity",
-    "identityHelp": "Producer and wine name are enough. Nothing becomes canonical until you confirm it.",
+    "identityHelp": "Producer and wine name are enough. The wine is saved only when you confirm it.",
     "producer": "Producer",
     "wineName": "Wine name",
     "vintage": "Vintage",
@@ -177,9 +177,9 @@
     "nonVintageShort": "NV",
     "region": "Region (optional)",
     "photoTitle": "Private label photo",
-    "photoHelp": "The browser re-encodes the photo, removes metadata, and downsizes it before private upload. Identification is optional; manual fields always work.",
+    "photoHelp": "The photo stays private, and its location is removed before it is saved. Adding one is optional — you can always fill in the details by hand.",
     "photoAction": "Choose a label photo",
-    "photoProcessing": "Removing metadata and preparing photo…",
+    "photoProcessing": "Preparing the photo…",
     "photoPreviewAlt": "Processed private label preview",
     "photoRemove": "Remove photo",
     "photoError": "That photo could not be processed. Your text is still safe and can be saved without it.",
@@ -221,7 +221,8 @@
       "synced": "It has synced exactly once.",
       "needs_attention": "It is preserved locally and needs your attention."
     },
-    "identifyAction": "Scan or read a label instead"
+    "identifyAction": "Scan or read a label instead",
+    "moreDetails": "More details"
   },
   "memory": {
     "eyebrow": "Private history",
@@ -930,7 +931,7 @@
     "noticeTitle": "What this app does with your data",
     "noticeScope": "Your wines, tastings, and photos live in the Space you chose. They are visible only to that Space's active members.",
     "noticeNoAds": "No ads, no sale of data, no public profiles, and no third-party behavioural analytics.",
-    "noticeMedia": "Photos are resized and stripped of location metadata in your browser before upload, and are served only after a membership check.",
+    "noticeMedia": "Photos are resized and their location removed on your device before they are saved, and only members of the Space can see them.",
     "noticeProviders": "Optional AI and research providers are off unless a deployer turns them on, and each has a written privacy review.",
     "noticeRetention": "Assistant turns are not saved as chat history. Tool audits are redacted and keep no message text."
   },
