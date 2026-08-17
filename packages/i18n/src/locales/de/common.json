@@ -969,6 +969,13 @@
       "space_text": "Namenstreffer in Ihrem Bereich",
       "open_food_facts": "Öffentliche Produktdaten",
       "ocr": "Vom Etikett gelesen"
+    },
+    "warning": {
+      "label_unreadable": "Das Etikett konnte nicht gelesen werden. Fülle die Felder unten aus.",
+      "label_reading_disabled": "Etiketten lesen ist in dieser Installation abgeschaltet.",
+      "label_text_ignored": "Ein Teil des Etikettentextes wurde ignoriert, weil er wie eine Anweisung aussah.",
+      "product_lookup_empty": "Die öffentliche Datenbank hat nichts zu diesem Strichcode.",
+      "product_lookup_disabled": "Strichcodes anderswo nachschlagen ist in dieser Installation abgeschaltet."
     }
   },
   "theme": {
@@ -977,6 +984,15 @@
     "light": "Hell",
     "dark": "Dunkel",
     "saveError": "Thema nicht gespeichert"
+  },
+  "winePicker": {
+    "choose": "Wein wählen",
+    "addOption": "＋ Einen Wein hinzufügen",
+    "addAction": "Wein hinzufügen",
+    "adding": "Wird hinzugefügt…",
+    "cancel": "Abbrechen",
+    "addHelp": "Erzeuger und Name genügen. Er wird als Entwurf gespeichert, wie jeder Wein.",
+    "addError": "Der Wein konnte nicht hinzugefügt werden. Versuch es noch einmal."
   },
   "locale": {
     "label": "Sprache der Oberfläche",

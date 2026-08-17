@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { AccessBackdrop } from "../brand/AccessBackdrop";
+import { SignedOutLocalePicker } from "../components/SignedOutLocalePicker";
 import { BrandLockup } from "../brand/Wordmark";
 
 export function SessionStatusPage({
@@ -18,6 +19,7 @@ export function SessionStatusPage({
   return (
     <main className="access-page" id="main-content">
       <AccessBackdrop />
+      <SignedOutLocalePicker />
       <section aria-live="polite" className="access-card">
         <BrandLockup className="access-card__lockup" />
         <h1>{t(titleKey)}</h1>

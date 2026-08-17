@@ -118,10 +118,22 @@ export function ToastIcon() {
   );
 }
 
-/** Memory: the bottles you have kept, in the crate you keep them in. */
+/**
+ * Memory: the bottles you have kept, in the crate you keep them in. A long
+ * narrow neck with a capsule band and a defined shoulder — the first attempt
+ * had a short wide neck, which is the silhouette of a soap dispenser.
+ */
 export function CrateIcon() {
   const bottle = (cx: number) => (
-    <path d={`M${cx - 1} 3.6h2v2.5l1.05 1.6v3.5M${cx - 2.05} 11.2V7.7l1.05-1.6`} key={cx} />
+    <path
+      d={
+        `M${cx - 0.8} 2.5h1.6v4.1l1.35 1.9v2.7` +
+        `M${cx - 2.15} 11.2V8.5l1.35-1.9` +
+        // The capsule band: the line that says wine rather than shampoo.
+        `M${cx - 0.8} 4.2h1.6`
+      }
+      key={cx}
+    />
   );
   return (
     <Frame>
@@ -153,32 +165,34 @@ function spark(cx: number, cy: number, r: number): string {
 
 /** Grape positions, row by row, in the bunch Vicenç carries. */
 const bunch = [
-  [11.6, 11],
-  [14.6, 11],
-  [10.1, 13.8],
-  [13.1, 13.8],
-  [16.1, 13.8],
-  [11.6, 16.6],
-  [14.6, 16.6],
-  [13.1, 19.3],
+  [11.9, 8],
+  [15.5, 8],
+  [6.5, 11.6],
+  [10.1, 11.6],
+  [13.7, 11.6],
+  [17.3, 11.6],
+  [8.3, 15.2],
+  [11.9, 15.2],
+  [15.5, 15.2],
+  [10.1, 18.8],
+  [13.7, 18.8],
 ] as const;
 
 /**
- * Vicenç: a bunch of grapes with the top-left one replaced by a spark. He reads
+ * Vicenç: a bunch of grapes with a spark where one of them would be. He reads
  * labels and proposes; the grape that is not a grape is the whole of what he is,
  * so it is kept clear of its neighbours — set among them it merged into the
- * bunch and disappeared.
+ * bunch and disappeared. No leaf and no stem: they crowded the box and left both
+ * the grapes and the spark smaller than they wanted to be.
  */
 export function GrapesIcon() {
   return (
     <Frame>
-      <path d="M14.4 5.6v3.9" />
-      <path d="M14.6 6.4c1.5-1.2 3-.8 3.5 0-1.1 1.2-2.7 1.1-3.5 0z" />
       <g fill="currentColor" stroke="none">
         {bunch.map(([cx, cy]) => (
-          <circle cx={cx} cy={cy} key={`${cx}-${cy}`} r="1.45" />
+          <circle cx={cx} cy={cy} key={`${cx}-${cy}`} r="1.8" />
         ))}
-        <path d={spark(7.5, 10, 2.5)} />
+        <path d={spark(6.6, 6.8, 2.7)} />
       </g>
     </Frame>
   );

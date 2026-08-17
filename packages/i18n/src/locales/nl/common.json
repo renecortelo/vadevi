@@ -969,6 +969,13 @@
       "space_text": "Naamovereenkomst in uw Ruimte",
       "open_food_facts": "Openbare productgegevens",
       "ocr": "Van het etiket gelezen"
+    },
+    "warning": {
+      "label_unreadable": "Het etiket kon niet gelezen worden. Vul de velden hieronder in.",
+      "label_reading_disabled": "Etiketten lezen staat uit in deze installatie.",
+      "label_text_ignored": "Een deel van de tekst op het etiket is genegeerd omdat het op een instructie leek.",
+      "product_lookup_empty": "De publieke database heeft niets voor deze streepjescode.",
+      "product_lookup_disabled": "Streepjescodes elders opzoeken staat uit in deze installatie."
     }
   },
   "theme": {
@@ -977,6 +984,15 @@
     "light": "Licht",
     "dark": "Donker",
     "saveError": "Thema niet opgeslagen"
+  },
+  "winePicker": {
+    "choose": "Kies een wijn",
+    "addOption": "＋ Een wijn toevoegen",
+    "addAction": "Wijn toevoegen",
+    "adding": "Toevoegen…",
+    "cancel": "Annuleren",
+    "addHelp": "Producent en naam zijn genoeg. Het wordt als concept bewaard, zoals elke wijn.",
+    "addError": "De wijn kon niet worden toegevoegd. Probeer het opnieuw."
   },
   "locale": {
     "label": "Taal van de interface",

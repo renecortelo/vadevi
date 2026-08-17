@@ -1,6 +1,8 @@
 import {
   ActionDraftResponseSchema,
   BottleListResponseSchema,
+  CreateWineRequestSchema,
+  CreateWineResponseSchema,
   BottleResponseSchema,
   CreateActionDraftRequestSchema,
   CreatePriceObservationRequestSchema,
@@ -15,6 +17,8 @@ import {
   WishlistListResponseSchema,
   type ActionDraftResponse,
   type BottleListResponse,
+  type CreateWineRequest,
+  type CreateWineResponse,
   type BottleResponse,
   type CreateActionDraftRequest,
   type CreatePriceObservationRequest,
@@ -238,4 +242,34 @@ export async function cancelActionDraft(
   );
   if (!response.ok) throw await apiError(response);
   return ActionDraftResponseSchema.parse(await response.json());
+}
+
+/**
+ * Create a wine from a screen that is not Quick Log.
+ *
+ * The cellar, the wishlist and the price list all needed a wine before they
+ * could record anything, and offered only a list of wines already saved — so
+ * buying a bottle you had never logged meant leaving, logging it, and coming
+ * back. This is the direct call those screens use; they are online-only
+ * already, so nothing here belongs in the offline queue.
+ *
+ * The wine is created as a draft. It becomes canonical the same way every other
+ * wine does: when someone confirms it.
+ */
+export async function createWineDirectly(
+  tokenSource: TokenSource,
+  spaceId: string,
+  request: CreateWineRequest,
+  idempotencyKey: string,
+): Promise<CreateWineResponse> {
+  const response = await authenticatedFetch(tokenSource, `/api/v1/spaces/${spaceId}/wines`, {
+    body: JSON.stringify(CreateWineRequestSchema.parse(request)),
+    headers: {
+      "Content-Type": "application/json",
+      "Idempotency-Key": idempotencyKey,
+    },
+    method: "POST",
+  });
+  if (!response.ok) throw await apiError(response);
+  return CreateWineResponseSchema.parse(await response.json());
 }

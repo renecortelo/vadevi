@@ -8,6 +8,7 @@ import { offlineDatabase, partitionId } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
 import { createWishlistItem, getWishlist, updateWishlistItem } from "../services/cellar";
+import { WinePicker } from "../components/WinePicker";
 import { useSession } from "../session/SessionContext";
 
 export function WishlistPage() {
@@ -132,17 +133,14 @@ export function WishlistPage() {
       <section className="phase5-form-card">
         <h2>{t("wishlist.addTitle")}</h2>
         <form className="phase5-form" onSubmit={(event) => void submit(event)}>
-          <label>
-            {t("wishlist.wine")}
-            <select onChange={(event) => setWineId(event.target.value)} required value={wineId}>
-              <option value="">{t("wishlist.chooseWine")}</option>
-              {wines.map((wine) => (
-                <option key={wine.id} value={wine.id}>
-                  {wine.producerName} · {wine.displayName}
-                </option>
-              ))}
-            </select>
-          </label>
+          <WinePicker
+            label={t("wishlist.wine")}
+            onChange={setWineId}
+            onCreated={() => load()}
+            required
+            value={wineId}
+            wines={wines}
+          />
           <label>
             {t("wishlist.reason")}
             <input

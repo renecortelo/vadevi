@@ -82,7 +82,7 @@ export class CloudflareLabelOcrAdapter implements OcrPort {
       if (sanitized.flaggedPromptLike) {
         // Label text that reads like an instruction is discarded rather than
         // carried forward into a candidate field.
-        warnings.push("Some label text was ignored because it resembled an instruction.");
+        warnings.push("label_text_ignored");
         continue;
       }
       lines.push({

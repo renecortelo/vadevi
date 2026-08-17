@@ -969,6 +969,13 @@
       "space_text": "Corrispondenza di nome nel tuo Spazio",
       "open_food_facts": "Dati pubblici di prodotto",
       "ocr": "Letto dall'etichetta"
+    },
+    "warning": {
+      "label_unreadable": "Non è stato possibile leggere l'etichetta. Compila i campi qui sotto.",
+      "label_reading_disabled": "La lettura delle etichette è disattivata in questa installazione.",
+      "label_text_ignored": "Parte del testo dell'etichetta è stata ignorata perché sembrava un'istruzione.",
+      "product_lookup_empty": "Il database pubblico non ha nulla per questo codice.",
+      "product_lookup_disabled": "La ricerca esterna dei codici è disattivata in questa installazione."
     }
   },
   "theme": {
@@ -977,6 +984,15 @@
     "light": "Chiaro",
     "dark": "Scuro",
     "saveError": "Tema non salvato"
+  },
+  "winePicker": {
+    "choose": "Scegli un vino",
+    "addOption": "＋ Aggiungi un vino",
+    "addAction": "Aggiungi vino",
+    "adding": "Aggiunta…",
+    "cancel": "Annulla",
+    "addHelp": "Bastano produttore e nome. Viene salvato come bozza, come ogni vino.",
+    "addError": "Non è stato possibile aggiungere il vino. Riprova."
   },
   "locale": {
     "label": "Lingua dell'interfaccia",

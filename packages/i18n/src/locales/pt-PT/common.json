@@ -969,6 +969,13 @@
       "space_text": "Correspondência de nome no seu Espaço",
       "open_food_facts": "Dados públicos de produto",
       "ocr": "Lido do rótulo"
+    },
+    "warning": {
+      "label_unreadable": "Não foi possível ler o rótulo. Preencha os campos abaixo.",
+      "label_reading_disabled": "A leitura de rótulos está desligada nesta instalação.",
+      "label_text_ignored": "Parte do texto do rótulo foi ignorada porque parecia uma instrução.",
+      "product_lookup_empty": "A base de dados pública não tem nada para este código.",
+      "product_lookup_disabled": "A procura externa de códigos está desligada nesta instalação."
     }
   },
   "theme": {
@@ -977,6 +984,15 @@
     "light": "Claro",
     "dark": "Escuro",
     "saveError": "Tema não guardado"
+  },
+  "winePicker": {
+    "choose": "Escolha um vinho",
+    "addOption": "＋ Adicionar um vinho",
+    "addAction": "Adicionar vinho",
+    "adding": "A adicionar…",
+    "cancel": "Cancelar",
+    "addHelp": "Produtor e nome chegam. Fica guardado como rascunho, como qualquer vinho.",
+    "addError": "Não foi possível adicionar o vinho. Tente outra vez."
   },
   "locale": {
     "label": "Idioma da interface",

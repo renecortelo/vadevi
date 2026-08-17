@@ -969,6 +969,13 @@
       "space_text": "Correspondance de nom dans votre Espace",
       "open_food_facts": "Données produit publiques",
       "ocr": "Lu sur l'étiquette"
+    },
+    "warning": {
+      "label_unreadable": "L'étiquette n'a pas pu être lue. Remplissez les champs ci-dessous.",
+      "label_reading_disabled": "La lecture d'étiquettes est désactivée sur cette installation.",
+      "label_text_ignored": "Une partie du texte de l'étiquette a été ignorée : elle ressemblait à une instruction.",
+      "product_lookup_empty": "La base publique n'a rien pour ce code-barres.",
+      "product_lookup_disabled": "La recherche externe de codes-barres est désactivée sur cette installation."
     }
   },
   "theme": {
@@ -977,6 +984,15 @@
     "light": "Clair",
     "dark": "Sombre",
     "saveError": "Thème non enregistré"
+  },
+  "winePicker": {
+    "choose": "Choisir un vin",
+    "addOption": "＋ Ajouter un vin",
+    "addAction": "Ajouter le vin",
+    "adding": "Ajout…",
+    "cancel": "Annuler",
+    "addHelp": "Le producteur et le nom suffisent. Il est enregistré comme brouillon, comme tout vin.",
+    "addError": "Le vin n'a pas pu être ajouté. Réessayez."
   },
   "locale": {
     "label": "Langue de l'interface",

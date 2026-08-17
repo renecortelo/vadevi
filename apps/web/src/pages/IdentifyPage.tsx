@@ -325,16 +325,20 @@ export function IdentifyPage() {
               ))}
             </ul>
           )}
-          {(draftResponse.warnings as string[]).map((warning: string) => (
-            <p className="cache-note" key={warning}>
-              {warning}
-            </p>
-          ))}
+          {(draftResponse.warnings as string[])
+            // `no_candidates` is skipped: the line above already says it, in the
+            // reader's own language, and saying it twice reads as a fault.
+            .filter((warning: string) => warning !== "no_candidates")
+            .map((warning: string) => (
+              <p className="cache-note" key={warning}>
+                {t(`identify.warning.${warning}`, { defaultValue: warning })}
+              </p>
+            ))}
         </section>
       )}
 
       {draftResponse === null ? null : (
-        <form className="settings-card" onSubmit={(event) => void confirm(event)}>
+        <form className="settings-card field-stack" onSubmit={(event) => void confirm(event)}>
           <h2>{t("identify.reviewTitle")}</h2>
           <p>{t("identify.reviewBody")}</p>
 

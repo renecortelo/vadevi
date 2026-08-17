@@ -969,6 +969,13 @@
       "space_text": "Coincidència de nom al teu Espai",
       "open_food_facts": "Dades públiques de producte",
       "ocr": "Llegit de l'etiqueta"
+    },
+    "warning": {
+      "label_unreadable": "No s'ha pogut llegir l'etiqueta. Omple els camps de sota.",
+      "label_reading_disabled": "La lectura d'etiquetes està desactivada en aquesta instal·lació.",
+      "label_text_ignored": "S'ha ignorat part del text de l'etiqueta perquè semblava una instrucció.",
+      "product_lookup_empty": "La base de dades pública no té res per a aquest codi.",
+      "product_lookup_disabled": "La cerca de codis a fora està desactivada en aquesta instal·lació."
     }
   },
   "theme": {
@@ -977,6 +984,15 @@
     "light": "Clar",
     "dark": "Fosc",
     "saveError": "Tema no desat"
+  },
+  "winePicker": {
+    "choose": "Tria un vi",
+    "addOption": "＋ Afegir un vi nou",
+    "addAction": "Afegir vi",
+    "adding": "Afegint…",
+    "cancel": "Cancel·la",
+    "addHelp": "Amb el productor i el nom n'hi ha prou. Es desa com a esborrany, com qualsevol vi.",
+    "addError": "No s'ha pogut afegir el vi. Torna-ho a provar."
   },
   "locale": {
     "label": "Idioma de la interfície",
