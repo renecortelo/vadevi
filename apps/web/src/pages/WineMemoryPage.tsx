@@ -87,9 +87,7 @@ function PrivateWineImage({
     };
   }, [mediaId, spaceId, user]);
   return url === null ? (
-    <div aria-hidden="true" className="wine-card__placeholder">
-      V
-    </div>
+    <div className="wine-card__placeholder">{name}</div>
   ) : (
     <img alt={name} src={url} />
   );
@@ -696,8 +694,10 @@ export function WineMemoryPage() {
             <article className="wine-card" key={wine.id}>
               <div className="wine-card__image">
                 {wine.mediaId === null ? (
-                  <div aria-hidden="true" className="wine-card__placeholder">
-                    V
+                  // No photograph: the wine's own name is more use than a
+                  // letter that is identical on every card.
+                  <div className="wine-card__placeholder">
+                    {wine.producerName} · {wine.displayName}
                   </div>
                 ) : (
                   <PrivateWineImage

@@ -58,6 +58,41 @@ textarea {
   opacity: 1;
 }
 
+/*
+  Checkboxes and radios, in the palette.
+
+  Left alone the browser draws the operating system's own control — a blue tick
+  on a wine-coloured page, and a different blue on every machine. `accent-color`
+  is the one line that changes the tick and the fill without giving up the
+  native control's keyboard behaviour, which a rebuilt one always costs
+  something to reproduce.
+*/
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--color-accent);
+  block-size: 1.15rem;
+  inline-size: 1.15rem;
+}
+
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/*
+  A date field carries the browser's own picker button inside it, and the
+  roomier padding every other field has pushed that button past the edge on a
+  narrow screen. These get their width back.
+*/
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"] {
+  max-inline-size: 100%;
+  padding-inline: var(--space-2);
+}
+
 /* The picker button inside a date field and the spinners inside a number field
    are drawn by the browser in its own colour. Inverting them is the only way to
    make them match a dark page. */
@@ -499,6 +534,10 @@ select:disabled {
   display: grid;
   gap: var(--space-3);
   margin-block-start: var(--space-6);
+  /* A single column of short fields stretched to the full content width — 766px
+     on a laptop — which is neither comfortable to fill in nor finished-looking.
+     The card and the form are the same element, so this bounds both. */
+  max-inline-size: 34rem;
 }
 
 .profile-form label {
@@ -1183,15 +1222,22 @@ p {
   object-fit: cover;
 }
 
+/* Now the wine's own name rather than one large letter, so it is sized to be
+   read and kept inside its tile. */
 .wine-card__placeholder {
   align-items: center;
   block-size: 100%;
   color: var(--color-plum);
   display: flex;
   font-family: var(--font-display);
-  font-size: 3rem;
+  font-size: var(--text-base);
+  hyphens: auto;
   inline-size: 100%;
   justify-content: center;
+  line-height: 1.25;
+  overflow: hidden;
+  padding: var(--space-3);
+  text-align: center;
 }
 
 .wine-card__body {
@@ -2582,4 +2628,12 @@ p {
 
 .wine-picker-new .cache-note {
   margin: 0;
+}
+
+/* The tool cards carry the same drawn icons as the rail. */
+.home-tools__grid .nav-icon {
+  block-size: 2rem;
+  color: var(--color-accent);
+  inline-size: 2rem;
+  margin-block-end: var(--space-2);
 }
