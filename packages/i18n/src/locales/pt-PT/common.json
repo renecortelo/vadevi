@@ -309,7 +309,8 @@
     "editSaving": "A guardar…",
     "editCancel": "Cancelar",
     "editError": "Não foi possível guardar as alterações. Tente outra vez.",
-    "editConflict": "Outra pessoa alterou este vinho enquanto editava. Recarregue e tente outra vez — nada do que escreveu foi enviado."
+    "editConflict": "Outra pessoa alterou este vinho enquanto editava. Recarregue e tente outra vez — nada do que escreveu foi enviado.",
+    "editPhotoAction": "Adicionar a foto do rótulo"
   },
   "evidence": {
     "openAction": "Evidência",

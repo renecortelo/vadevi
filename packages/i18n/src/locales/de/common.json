@@ -309,7 +309,8 @@
     "editSaving": "Wird gespeichert…",
     "editCancel": "Abbrechen",
     "editError": "Die Änderungen konnten nicht gespeichert werden. Versuch es noch einmal.",
-    "editConflict": "Jemand anderes hat diesen Wein geändert, während du bearbeitet hast. Lade neu und versuch es noch einmal — nichts von dem, was du getippt hast, wurde gesendet."
+    "editConflict": "Jemand anderes hat diesen Wein geändert, während du bearbeitet hast. Lade neu und versuch es noch einmal — nichts von dem, was du getippt hast, wurde gesendet.",
+    "editPhotoAction": "Etikettenfoto hinzufügen"
   },
   "evidence": {
     "openAction": "Belege",

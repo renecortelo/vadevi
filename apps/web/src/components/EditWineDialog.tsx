@@ -1,8 +1,11 @@
 import type { WineSummary } from "@vadevi/contracts";
-import { type FormEvent, useState } from "react";
+import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
+import { preprocessImage } from "../media/image";
+import { createIdempotencyKey } from "../security/idempotency";
+import { reserveMedia, uploadMedia } from "../services/api";
 import { updateWine } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
 import { ModalDialog } from "./ModalDialog";
@@ -37,14 +40,62 @@ export function EditWineDialog({
   const [region, setRegion] = useState(wine.region ?? "");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<"conflict" | "failed" | null>(null);
+  // A photograph chosen here is held until the edit is saved, so cancelling
+  // leaves nothing uploaded and nothing to clean up.
+  const [photo, setPhoto] = useState<Awaited<ReturnType<typeof preprocessImage>> | null>(null);
+  const [photoBusy, setPhotoBusy] = useState(false);
+  const [photoError, setPhotoError] = useState(false);
+  const preview = useMemo(() => (photo === null ? null : URL.createObjectURL(photo.blob)), [photo]);
+  useEffect(
+    () => () => {
+      if (preview !== null) URL.revokeObjectURL(preview);
+    },
+    [preview],
+  );
+
+  async function choosePhoto(file: File | undefined) {
+    if (file === undefined) return;
+    setPhotoError(false);
+    setPhotoBusy(true);
+    try {
+      // The same downscale-and-strip the Quick Log uses: the original never
+      // leaves the device, and its location metadata never leaves the file.
+      setPhoto(await preprocessImage(file));
+    } catch {
+      setPhotoError(true);
+    } finally {
+      setPhotoBusy(false);
+    }
+  }
 
   async function save(event: FormEvent) {
     event.preventDefault();
     if (user === null || saving) return;
     setSaving(true);
     setError(null);
+    const spaceId = bootstrap.data.user.activeSpaceId;
     try {
-      await updateWine(user, bootstrap.data.user.activeSpaceId, wine.id, {
+      // The photograph is reserved and uploaded first, so the wine is only
+      // pointed at media that already exists.
+      let mediaId: string | undefined;
+      if (photo !== null) {
+        const reservation = await reserveMedia(
+          user,
+          spaceId,
+          {
+            byteSize: photo.byteSize,
+            height: photo.height,
+            kind: "label",
+            mimeType: photo.mimeType,
+            sha256: photo.sha256,
+            width: photo.width,
+          },
+          createIdempotencyKey(),
+        );
+        mediaId = await uploadMedia(user, reservation.data.uploadPath, photo.blob);
+      }
+      await updateWine(user, spaceId, wine.id, {
+        ...(mediaId === undefined ? {} : { mediaId }),
         displayName: displayName.trim(),
         producerName: producerName.trim(),
         region: region.trim().length === 0 ? null : region.trim(),
@@ -97,8 +148,36 @@ export function EditWineDialog({
           onChange={(event) => setRegion(event.target.value)}
           value={region}
         />
+        {/* The label the hurried entry never had. */}
+        <label className="photo-picker">
+          <span>{photoBusy ? t("quickLog.photoProcessing") : t("memory.editPhotoAction")}</span>
+          <input
+            accept="image/jpeg,image/png,image/webp,image/heic,image/heif"
+            disabled={photoBusy || saving}
+            onChange={(event) => void choosePhoto(event.target.files?.[0])}
+            type="file"
+          />
+        </label>
+        {preview === null ? null : (
+          <div className="photo-preview">
+            <img alt={t("quickLog.photoPreviewAlt")} src={preview} />
+            <button
+              className="text-button text-button--danger"
+              onClick={() => setPhoto(null)}
+              type="button"
+            >
+              {t("quickLog.photoRemove")}
+            </button>
+          </div>
+        )}
+        {photoError ? (
+          <p className="form-error" role="alert">
+            {t("quickLog.photoError")}
+          </p>
+        ) : null}
+
         <div className="hero__actions">
-          <button className="primary-button" disabled={saving} type="submit">
+          <button className="primary-button" disabled={saving || photoBusy} type="submit">
             {saving ? t("memory.editSaving") : t("memory.editSave")}
           </button>
           <button className="action-link action-link--secondary" onClick={onClose} type="button">

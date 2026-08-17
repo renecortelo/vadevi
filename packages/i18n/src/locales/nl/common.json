@@ -309,7 +309,8 @@
     "editSaving": "Bewaren…",
     "editCancel": "Annuleren",
     "editError": "De wijzigingen konden niet worden bewaard. Probeer het opnieuw.",
-    "editConflict": "Iemand anders heeft deze wijn gewijzigd terwijl jij bezig was. Herlaad en probeer opnieuw — niets van wat je typte is verstuurd."
+    "editConflict": "Iemand anders heeft deze wijn gewijzigd terwijl jij bezig was. Herlaad en probeer opnieuw — niets van wat je typte is verstuurd.",
+    "editPhotoAction": "Voeg de foto van het etiket toe"
   },
   "evidence": {
     "openAction": "Bewijs",

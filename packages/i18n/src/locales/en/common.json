@@ -309,7 +309,8 @@
     "editSaving": "Saving…",
     "editCancel": "Cancel",
     "editError": "The changes could not be saved. Try again.",
-    "editConflict": "Someone else changed this wine while you were editing. Reload and try again — nothing you typed was sent."
+    "editConflict": "Someone else changed this wine while you were editing. Reload and try again — nothing you typed was sent.",
+    "editPhotoAction": "Add the label photograph"
   },
   "evidence": {
     "openAction": "Evidence",

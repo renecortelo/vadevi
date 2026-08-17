@@ -240,6 +240,28 @@ pnpm exec wrangler deploy --config wrangler.production.jsonc
 Migrations are immutable and forward-only. Apply them before deploying the
 Worker, never after.
 
+### An error you can ignore, once
+
+Applying migrations to a deployed database prints an API failure against
+`/d1/database/{id}/query`, and then succeeds. The migrations up to `0014` open
+with `PRAGMA foreign_keys = ON;`, and D1 does not accept `PRAGMA` over its HTTP
+API: the statement is refused, the rest of the file applies, and the run is
+recorded.
+
+The line does nothing on D1 in any case — it enforces foreign keys itself. It
+cannot be removed from the fourteen that carry it, because a migration that has
+been applied somewhere is immutable. `pnpm migrations:check` keeps it out of the
+next one.
+
+To satisfy yourself that a migration really landed rather than reading a
+reassuring message:
+
+```bash
+pnpm exec wrangler d1 migrations list vadevi --remote --config wrangler.production.jsonc
+```
+
+Nothing listed means nothing is pending.
+
 Installed clients pick up a new version through the service worker's update
 prompt; they are never force-reloaded mid-edit.
 

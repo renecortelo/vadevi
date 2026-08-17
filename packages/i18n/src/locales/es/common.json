@@ -309,7 +309,8 @@
     "editSaving": "Guardando…",
     "editCancel": "Cancelar",
     "editError": "No se pudieron guardar los cambios. Inténtalo otra vez.",
-    "editConflict": "Alguien más cambió este vino mientras editabas. Recarga e inténtalo de nuevo — no se envió nada de lo que escribiste."
+    "editConflict": "Alguien más cambió este vino mientras editabas. Recarga e inténtalo de nuevo — no se envió nada de lo que escribiste.",
+    "editPhotoAction": "Añadir la foto de la etiqueta"
   },
   "evidence": {
     "openAction": "Evidencia",
