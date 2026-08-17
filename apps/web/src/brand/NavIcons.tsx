@@ -41,20 +41,6 @@ function Glass({ transform }: { transform: string }) {
   );
 }
 
-/** One barrel head. The stave band and its bung stop a circle reading as a coin. */
-function BarrelHead({ cx, cy, r }: { cx: number; cy: number; r: number }) {
-  const band = r * 0.32;
-  const chord = Math.round(Math.sqrt(r * r - band * band) * 100) / 100;
-  return (
-    <g>
-      <circle cx={cx} cy={cy} r={r} />
-      <path d={`M${cx - band} ${cy - chord}V${cy + chord}`} />
-      <path d={`M${cx + band} ${cy - chord}V${cy + chord}`} />
-      <circle cx={cx} cy={cy} fill="currentColor" r={r * 0.14} stroke="none" />
-    </g>
-  );
-}
-
 /**
  * Home: the winery itself — an arched roof over a squared building, with the
  * cellar doors under it.
