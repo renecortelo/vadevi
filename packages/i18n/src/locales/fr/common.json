@@ -309,7 +309,8 @@
     "editSaving": "Enregistrement…",
     "editCancel": "Annuler",
     "editError": "Les modifications n'ont pas pu être enregistrées. Réessayez.",
-    "editConflict": "Quelqu'un d'autre a modifié ce vin pendant votre saisie. Rechargez et réessayez — rien de ce que vous avez tapé n'a été envoyé."
+    "editConflict": "Quelqu'un d'autre a modifié ce vin pendant votre saisie. Rechargez et réessayez — rien de ce que vous avez tapé n'a été envoyé.",
+    "editPhotoAction": "Ajouter la photo de l'étiquette"
   },
   "evidence": {
     "openAction": "Preuves",

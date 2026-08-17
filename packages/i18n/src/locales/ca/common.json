@@ -309,7 +309,8 @@
     "editSaving": "Desant…",
     "editCancel": "Cancel·la",
     "editError": "No s'han pogut desar els canvis. Torna-ho a provar.",
-    "editConflict": "Algú altre ha canviat aquest vi mentre editaves. Recarrega i torna-ho a provar — no s'ha enviat res del que has escrit."
+    "editConflict": "Algú altre ha canviat aquest vi mentre editaves. Recarrega i torna-ho a provar — no s'ha enviat res del que has escrit.",
+    "editPhotoAction": "Afegeix la foto de l'etiqueta"
   },
   "evidence": {
     "openAction": "Evidència",
