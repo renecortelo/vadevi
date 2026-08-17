@@ -336,9 +336,6 @@ export function SessionDetailPage() {
             <p className="eyebrow">{t("sessions.comparisonEyebrow")}</p>
             <h2 id="comparison-heading">{t("sessions.comparisonTitle")}</h2>
           </div>
-          {comparison === null ? null : (
-            <span>{t("sessions.algorithm", { version: comparison.data.algorithmVersion })}</span>
-          )}
         </div>
         {comparison === null ||
         comparison.data.wines.every((wine: ComparisonWine) => wine.noteCount === 0) ? (

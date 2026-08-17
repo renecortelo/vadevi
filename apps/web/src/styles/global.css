@@ -1776,6 +1776,43 @@ p {
   text-transform: uppercase;
 }
 
+/* A sortable header: the whole cell label is the button, so the target is the
+   size of the header rather than a small arrow beside it. */
+.th-sort {
+  align-items: center;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  gap: var(--space-1);
+  letter-spacing: inherit;
+  padding: 0;
+  text-transform: inherit;
+}
+
+.th-sort:hover {
+  color: var(--color-text);
+}
+
+/* The idle indicator is dimmer than the active one, so the column in force
+   reads at a glance while the others still say they can be sorted. */
+.th-sort__arrow {
+  font-size: 0.7em;
+  opacity: 0.45;
+}
+
+.table-scroll th[aria-sort="ascending"] .th-sort,
+.table-scroll th[aria-sort="descending"] .th-sort {
+  color: var(--color-text);
+}
+
+.table-scroll th[aria-sort="ascending"] .th-sort__arrow,
+.table-scroll th[aria-sort="descending"] .th-sort__arrow {
+  opacity: 1;
+}
+
 .attention-panel {
   background: var(--color-note-surface);
   border: 1px solid var(--color-warning-edge);

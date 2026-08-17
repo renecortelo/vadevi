@@ -708,7 +708,6 @@
     "groupScore": "Pontuação do grupo {{score}}/100",
     "comparisonEyebrow": "Opiniões distintas",
     "comparisonTitle": "Comparação dos participantes",
-    "algorithm": "Método {{version}}",
     "comparisonEmpty": "A comparação aparece quando os participantes submetem as suas notas.",
     "sampleSize": "Notas submetidas",
     "rank": "Posição",
