@@ -16,6 +16,10 @@ import { defineConfig, devices } from "@playwright/test";
 const port = 8788;
 const baseURL = `http://127.0.0.1:${port}`;
 
+/** The specs that take the network away on purpose. */
+const resilience =
+  /(offline-shell|offline-writes|service-worker-update|storage-pressure)\.spec\.ts/;
+
 export default defineConfig({
   testDir: "e2e",
   globalSetup: "./e2e/global-setup.ts",
@@ -40,7 +44,22 @@ export default defineConfig({
       name: "chromium-desktop",
       // The performance run is evidence, not a gate: its numbers depend on the
       // machine, so a shared runner would turn them into noise. `pnpm perf`.
-      testIgnore: /performance\.spec\.ts/,
+      testIgnore: [/performance\.spec\.ts/, resilience],
+      use: { ...devices["Desktop Chrome"] },
+    },
+    {
+      /*
+        The drills that deliberately break the network, kept apart.
+
+        They cut requests off mid-flight — that is the thing they exist to test —
+        and Wrangler has three times not survived it, taking every later test
+        with it and turning one broken server into a dozen confusing failures.
+        Two attempts to pin the cause were each only half right, so this is
+        containment rather than a third guess: when it happens now, it happens
+        to these and to nothing else.
+      */
+      name: "resilience",
+      testMatch: resilience,
       use: { ...devices["Desktop Chrome"] },
     },
     {

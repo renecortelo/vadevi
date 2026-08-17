@@ -4,6 +4,8 @@ import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 
 import { getHealth } from "../services/api";
+import { BarrelIcon, PriceIcon, ReadLabelIcon, WishlistIcon } from "../brand/NavIcons";
+import { Monogram } from "../brand/Wordmark";
 
 export function HomePage() {
   const { t } = useTranslation();
@@ -41,32 +43,29 @@ export function HomePage() {
           <p className="eyebrow">{t("homeTools.eyebrow")}</p>
           <h2 id="collection-tools-title">{t("homeTools.title")}</h2>
         </div>
+        {/* The same drawn family as the navigation rail, so a destination looks
+            the same wherever it is offered. */}
         <div className="home-tools__grid">
-          <Link to="/log/identify">
-            <strong>{t("homeTools.identifyTitle")}</strong>
-            <span>{t("homeTools.identifyBody")}</span>
-          </Link>
-          <Link to="/cellar">
-            <strong>{t("homeTools.cellarTitle")}</strong>
-            <span>{t("homeTools.cellarBody")}</span>
-          </Link>
-          <Link to="/wishlist">
-            <strong>{t("homeTools.wishlistTitle")}</strong>
-            <span>{t("homeTools.wishlistBody")}</span>
-          </Link>
-          <Link to="/shop">
-            <strong>{t("homeTools.shopTitle")}</strong>
-            <span>{t("homeTools.shopBody")}</span>
-          </Link>
+          {[
+            { Icon: ReadLabelIcon, key: "identify", to: "/log/identify" },
+            { Icon: BarrelIcon, key: "cellar", to: "/cellar" },
+            { Icon: WishlistIcon, key: "wishlist", to: "/wishlist" },
+            { Icon: PriceIcon, key: "shop", to: "/shop" },
+          ].map((tool) => (
+            <Link key={tool.key} to={tool.to}>
+              <tool.Icon />
+              <strong>{t(`homeTools.${tool.key}Title`)}</strong>
+              <span>{t(`homeTools.${tool.key}Body`)}</span>
+            </Link>
+          ))}
         </div>
       </section>
 
       <Card aria-labelledby="foundation-title" className="foundation-card">
         <div aria-hidden="true" className="foundation-card__mark">
-          V
+          <Monogram />
         </div>
         <div>
-          <p className="eyebrow">Phase 0</p>
           <h2 id="foundation-title">{t("foundationTitle")}</h2>
           <p>{t("foundationBody")}</p>
           <p aria-live="polite" className="health-state" data-state={health.status}>

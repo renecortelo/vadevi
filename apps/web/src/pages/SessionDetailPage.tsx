@@ -21,6 +21,7 @@ import {
 import { getWineMemory } from "../services/api";
 import { getSessionComparison, getTastingSession } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
+import { NewWineInline } from "../components/NewWineInline";
 
 type SessionWine = TastingSessionDetailResponse["data"]["wines"][number];
 type ComparisonWine = SessionComparisonResponse["data"]["wines"][number];
@@ -80,8 +81,8 @@ export function SessionDetailPage() {
     return () => controller.abort();
   }, [loadCached, sessionId, spaceId, user]);
 
-  useEffect(() => {
-    const controller = new AbortController();
+  // Named, so adding a wine from this screen can ask for the list again.
+  const loadAvailableWines = useCallback(async () => {
     const loadCachedWines = async () => {
       const snapshots = await offlineDatabase.snapshots
         .where("[userId+spaceId]")
@@ -89,14 +90,20 @@ export function SessionDetailPage() {
         .toArray();
       setAvailableWines(snapshots.map((snapshot) => snapshot.wine));
     };
-    if (user === null || !navigator.onLine) void loadCachedWines();
-    else {
-      void getWineMemory(user, spaceId, { limit: 100 }, controller.signal)
-        .then((response) => setAvailableWines(response.data))
-        .catch(loadCachedWines);
+    if (user === null || !navigator.onLine) {
+      await loadCachedWines();
+      return;
     }
-    return () => controller.abort();
+    try {
+      setAvailableWines((await getWineMemory(user, spaceId, { limit: 100 })).data);
+    } catch {
+      await loadCachedWines();
+    }
   }, [spaceId, user, userId]);
+
+  useEffect(() => {
+    queueMicrotask(() => void loadAvailableWines());
+  }, [loadAvailableWines]);
 
   useEffect(() => {
     const changed = (event: Event) => {
@@ -280,9 +287,14 @@ export function SessionDetailPage() {
         )}
       </section>
 
-      {winesNotInFlight.length === 0 ? null : (
-        <section aria-labelledby="add-wines-heading" className="session-section">
-          <h2 id="add-wines-heading">{t("sessions.addWinesTitle")}</h2>
+      {/*
+        Always shown, and always able to create. Hiding this whole section when
+        every saved wine was already in the flight meant a session you had sat
+        down to taste new bottles at offered you nothing at all.
+      */}
+      <section aria-labelledby="add-wines-heading" className="session-section">
+        <h2 id="add-wines-heading">{t("sessions.addWinesTitle")}</h2>
+        {winesNotInFlight.length === 0 ? null : (
           <div className="wine-picker-grid">
             {winesNotInFlight.map((wine) => (
               <label className="wine-picker" key={wine.id}>
@@ -304,6 +316,8 @@ export function SessionDetailPage() {
               </label>
             ))}
           </div>
+        )}
+        {winesNotInFlight.length === 0 ? null : (
           <button
             className="primary-button"
             disabled={selectedWineIds.length === 0}
@@ -312,8 +326,9 @@ export function SessionDetailPage() {
           >
             {t("sessions.addWinesAction")}
           </button>
-        </section>
-      )}
+        )}
+        <NewWineInline onCreated={() => loadAvailableWines()} />
+      </section>
 
       <section aria-labelledby="comparison-heading" className="session-section">
         <div className="section-heading-row">

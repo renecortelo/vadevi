@@ -42,8 +42,8 @@ function Glass({ transform }: { transform: string }) {
 }
 
 /**
- * Home: the winery itself — an arched roof over a squared building, with the
- * cellar doors under it.
+ * Home: the winery itself — a roof over a squared building, with a bunch inside
+ * it. What is in a winery is wine, not joinery.
  */
 export function WineryIcon() {
   return (
@@ -51,9 +51,11 @@ export function WineryIcon() {
       <path d="M4.4 9.6 12 3.4l7.6 6.2" />
       <path d="M6 9.6v10.9h12V9.6" />
       <path d="M3 20.5h18" />
-      <path d="M9.6 20.5v-4.2a2.4 2.4 0 0 1 4.8 0v4.2" />
-      <path d="M8.3 12.1h2.4v2.2H8.3z" />
-      <path d="M13.3 12.1h2.4v2.2h-2.4z" />
+      <g fill="currentColor" stroke="none">
+        <circle cx="10.3" cy="13.3" r="1.5" />
+        <circle cx="13.7" cy="13.3" r="1.5" />
+        <circle cx="12" cy="16.4" r="1.5" />
+      </g>
     </Frame>
   );
 }
@@ -114,19 +116,19 @@ export function ToastIcon() {
 }
 
 /**
- * Memory: the cabinet the bottles are kept in, with a glass behind its door and
- * the shelves either side of it.
+ * Memory: a notebook — the rules run out past the spine, which is what stops a
+ * rectangle reading as a cabinet — with a glass on the page.
  */
 export function CrateIcon() {
   return (
     <Frame>
-      <path d="M4.4 3.4h15.2v17.2H4.4z" />
-      <path d="M4.4 7.8h4.2" />
-      <path d="M4.4 12h4.2" />
-      <path d="M4.4 16.2h4.2" />
-      <path d="M10.6 7.4h5.6l-.5 3.4a2.3 2.3 0 0 1-4.6 0z" />
-      <path d="M13.4 13.1v3" />
-      <path d="M11.6 16.4h3.6" />
+      <path d="M6.2 3.4h13.4v17.2H6.2z" />
+      <path d="M3.4 7.8h5.6" />
+      <path d="M3.4 12h5.6" />
+      <path d="M3.4 16.2h5.6" />
+      <path d="M11.2 7.6h5.6l-.5 3.4a2.3 2.3 0 0 1-4.6 0z" />
+      <path d="M14 13.3v3" />
+      <path d="M12.2 16.6h3.6" />
     </Frame>
   );
 }
@@ -178,6 +180,39 @@ export function GrapesIcon() {
         {/* Where a leaf would be. He proposes; that is the whole of him. */}
         <path d={spark(16.9, 5.5, 2.6)} />
       </g>
+    </Frame>
+  );
+}
+
+/** Identify: a label under a lens — reading what is on the bottle. */
+export function ReadLabelIcon() {
+  return (
+    <Frame>
+      <path d="M8.4 2.8h7.2v11.4a3.6 3.6 0 0 1-7.2 0z" />
+      <path d="M8.4 6.4h7.2" />
+      <circle cx="13.9" cy="15.9" r="4.3" />
+      <path d="M17 19 20.6 22.6" />
+    </Frame>
+  );
+}
+
+/** Wishlist: a bottle you do not have yet, marked to remember. */
+export function WishlistIcon() {
+  return (
+    <Frame>
+      <path d="M9.6 2.9h3.6v3.4l1.7 2.6v10.9a1.2 1.2 0 0 1-1.2 1.2H9.1a1.2 1.2 0 0 1-1.2-1.2V8.9l1.7-2.6z" />
+      <path d="M17.6 3.2v5.6l2.4-1.6 2.4 1.6V3.2z" />
+    </Frame>
+  );
+}
+
+/** Prices: what a bottle costs, over time. */
+export function PriceIcon() {
+  return (
+    <Frame>
+      <circle cx="12" cy="12" r="8.6" />
+      <path d="M14.6 8.9a2.9 2.9 0 0 0-2.6-1.4c-1.7 0-2.8.9-2.8 2.1 0 3 5.6 1.6 5.6 4.6 0 1.3-1.2 2.3-3 2.3a3.1 3.1 0 0 1-2.8-1.5" />
+      <path d="M12 5.6v12.8" />
     </Frame>
   );
 }
