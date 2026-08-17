@@ -104,6 +104,33 @@ export function stripJpegSegments(bytes: Uint8Array): Uint8Array<ArrayBuffer> {
   return out;
 }
 
+/**
+ * Clean bytes that were already encoded and stored.
+ *
+ * A photograph queued before the strip existed carries the segment the server
+ * refuses, and the queue never re-encodes: it replays the bytes it kept. Those
+ * writes could not have succeeded on any later attempt, which is exactly what
+ * happened — two of them sat in a queue for days, blocking everything behind
+ * them.
+ *
+ * Returns null when there was nothing to remove, so a caller can tell the
+ * ordinary case from the one where the digest it recorded is now stale.
+ */
+export async function recleanEncodedImage(
+  blob: Blob,
+): Promise<{ blob: Blob; byteSize: number; sha256: string } | null> {
+  const original = new Uint8Array(await blob.arrayBuffer());
+  const cleaned = stripJpegSegments(original);
+  // Stripping only ever removes, so equal lengths mean nothing was removed.
+  if (cleaned.length === original.length) return null;
+  const digest = new Uint8Array(await crypto.subtle.digest("SHA-256", cleaned));
+  return {
+    blob: new Blob([cleaned], { type: blob.type }),
+    byteSize: cleaned.length,
+    sha256: base64Url(digest),
+  };
+}
+
 export async function preprocessImage(file: File): Promise<ProcessedImage> {
   if (!["image/jpeg", "image/png", "image/webp", "image/heic", "image/heif"].includes(file.type)) {
     throw new Error("Unsupported image type.");

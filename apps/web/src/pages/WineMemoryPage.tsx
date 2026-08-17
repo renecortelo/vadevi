@@ -111,6 +111,22 @@ function ConflictPanel({
       offlineDatabase.mutations,
       async () => {
         await offlineDatabase.conflicts.delete(conflict.id);
+        // Discarding a wine has to discard the notes that name it. Left behind
+        // they can never be sent — the wine they point at will not exist — and
+        // nothing surfaces them, so the queue would show a count that no
+        // amount of syncing could clear.
+        if (conflict.resourceType === "wine_record") {
+          const orphaned = await offlineDatabase.mutations
+            .where("[userId+spaceId]")
+            .equals([conflict.userId, conflict.spaceId])
+            .filter(
+              (candidate) =>
+                candidate.resourceType === "tasting_note" &&
+                candidate.payload.wineId === conflict.resourceId,
+            )
+            .primaryKeys();
+          await offlineDatabase.mutations.bulkDelete(orphaned);
+        }
         await offlineDatabase.mutations.delete(conflict.id);
       },
     );
@@ -138,10 +154,18 @@ function ConflictPanel({
             )
             .toArray();
           await offlineDatabase.mutations.bulkPut(
-            related.map((candidate) => ({
-              ...candidate,
-              payload: { ...candidate.payload, wineId: nextResourceId },
-            })),
+            related.map((candidate) => {
+              // A note whose wine was held back was held back with it, so
+              // releasing the wine has to release the note too — otherwise it
+              // stays behind, unqueued and with nothing left to surface it.
+              const released = { ...candidate };
+              delete released.lastError;
+              return {
+                ...released,
+                payload: { ...candidate.payload, wineId: nextResourceId },
+                state: "queued" as const,
+              };
+            }),
           );
         }
         await offlineDatabase.mutations.delete(mutation.id);
