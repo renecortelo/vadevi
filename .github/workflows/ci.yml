@@ -28,6 +28,18 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    # Split across two runners, each with its own server.
+    #
+    # The suite shares one Wrangler process, and on a two-core runner that
+    # process has twice fallen over part-way through — once during the offline
+    # drills, once during the accessibility sweep. Every test after it then
+    # fails with a refused connection, which reads as a broken change and is
+    # not one. Halving what any one server has to survive is the part of that
+    # we control.
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2]
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -42,11 +54,11 @@ jobs:
       # The suite runs against the production build served at one origin,
       # because a service worker does not behave the same under the dev server.
       - run: pnpm --filter @vadevi/web build
-      - run: pnpm e2e
+      - run: pnpm e2e -- --shard=${{ matrix.shard }}/2
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: playwright-report
+          name: playwright-report-${{ matrix.shard }}
           path: |
             playwright-report
             test-results
