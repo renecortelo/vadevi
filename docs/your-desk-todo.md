@@ -35,6 +35,14 @@ the device — a run on one browser is a data point, not a pass.
 
 Pay particular attention to the parts nothing automated can reach:
 
+- **Saving a label photograph on the iPhone**, in all three places: Quick Log,
+  the identification flow, and _Edit_ in Wine Memory. This is the one that was
+  broken, and it could only ever break on WebKit. Safari's JPEG encoder writes a
+  metadata segment the server refuses — deliberately, because that segment is
+  where a photograph's GPS coordinates live — so the bytes are now cleaned on
+  the device before they are sent. Chrome never wrote that segment, which is why
+  nothing on the desktop and nothing in CI ever saw it. Check the queue drains
+  to zero afterwards.
 - **Scanning on the iPhone**, both ways: the live scan and _Take a photo of the
   barcode_. This is the thing that did not exist at all before, and I cannot
   verify it on real hardware. Safari has no `BarcodeDetector`; a decoder of our
