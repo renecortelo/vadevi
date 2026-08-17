@@ -708,7 +708,6 @@
     "groupScore": "Groepsscore {{score}}/100",
     "comparisonEyebrow": "Afzonderlijke meningen",
     "comparisonTitle": "Vergelijking van deelnemers",
-    "algorithm": "Methode {{version}}",
     "comparisonEmpty": "De vergelijking verschijnt zodra deelnemers hun eigen notities indienen.",
     "sampleSize": "Ingediende notities",
     "rank": "Rang",

@@ -708,7 +708,6 @@
     "groupScore": "Puntuació del grup {{score}}/100",
     "comparisonEyebrow": "Opinions diferents",
     "comparisonTitle": "Comparació de participants",
-    "algorithm": "Mètode {{version}}",
     "comparisonEmpty": "La comparació apareix quan els participants envien les seves notes.",
     "sampleSize": "Notes enviades",
     "rank": "Posició",

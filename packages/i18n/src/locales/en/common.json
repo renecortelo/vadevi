@@ -708,7 +708,6 @@
     "groupScore": "Group score {{score}}/100",
     "comparisonEyebrow": "Distinct opinions",
     "comparisonTitle": "Participant comparison",
-    "algorithm": "Method {{version}}",
     "comparisonEmpty": "A comparison appears after participants submit their own notes.",
     "sampleSize": "Submitted notes",
     "rank": "Rank",

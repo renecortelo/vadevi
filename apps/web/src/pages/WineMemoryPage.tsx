@@ -223,6 +223,44 @@ function ConflictPanel({
   );
 }
 
+/** The table columns a reader can order by; actions is not one. */
+type SortColumn =
+  "displayName" | "noteCount" | "producerName" | "region" | "score100" | "vintageYear" | "wineType";
+
+type TableSort = { column: SortColumn; direction: "asc" | "desc" };
+
+/**
+ * A wine's value for one column, and whether it is empty. Empty cells sort last
+ * in both directions — a wine with no score belongs at the bottom whether the
+ * column is climbing or falling, not jumping to the top when it flips.
+ */
+function sortValue(
+  wine: WineSummary,
+  column: SortColumn,
+  typeLabel: (wine: WineSummary) => string,
+): { empty: boolean; value: number | string } {
+  switch (column) {
+    case "producerName":
+      return { empty: false, value: wine.producerName };
+    case "displayName":
+      return { empty: false, value: wine.displayName };
+    case "region":
+      return { empty: wine.region === null, value: wine.region ?? "" };
+    case "wineType":
+      return { empty: wine.wineType === null, value: typeLabel(wine) };
+    case "vintageYear":
+      // A non-vintage wine has a real, orderable answer — it is just not a year.
+      // Give it the lowest year so it groups at one end rather than as a gap.
+      return wine.nonVintage
+        ? { empty: false, value: -1 }
+        : { empty: wine.vintageYear === null, value: wine.vintageYear ?? 0 };
+    case "score100":
+      return { empty: wine.score100 === null, value: wine.score100 ?? 0 };
+    case "noteCount":
+      return { empty: false, value: wine.noteCount };
+  }
+}
+
 export function WineMemoryPage() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
@@ -252,6 +290,39 @@ export function WineMemoryPage() {
   // Bumped after a correction. The list is fetched by an effect keyed on the
   // filters, so this is how a change made on this screen asks for it again.
   const [reloadToken, setReloadToken] = useState(0);
+  // The table lets a reader order by any column, on top of whatever order the
+  // list arrived in. It sorts what is loaded rather than asking the server, so
+  // it stays instant and works offline; the dropdown still decides the fetch.
+  const [tableSort, setTableSort] = useState<TableSort | null>(null);
+
+  const typeLabel = useCallback(
+    (wine: WineSummary) => (wine.wineType === null ? "" : t(`quickLog.wineType.${wine.wineType}`)),
+    [t],
+  );
+
+  const sortedWines = useMemo(() => {
+    if (tableSort === null) return wines;
+    const collator = new Intl.Collator(i18n.language, { numeric: true, sensitivity: "base" });
+    return [...wines].sort((left, right) => {
+      const a = sortValue(left, tableSort.column, typeLabel);
+      const b = sortValue(right, tableSort.column, typeLabel);
+      if (a.empty !== b.empty) return a.empty ? 1 : -1;
+      if (a.empty && b.empty) return 0;
+      const cmp =
+        typeof a.value === "number" && typeof b.value === "number"
+          ? a.value - b.value
+          : collator.compare(String(a.value), String(b.value));
+      return tableSort.direction === "asc" ? cmp : -cmp;
+    });
+  }, [tableSort, wines, i18n.language, typeLabel]);
+
+  const toggleSort = useCallback((column: SortColumn) => {
+    setTableSort((current) =>
+      current?.column === column
+        ? { column, direction: current.direction === "asc" ? "desc" : "asc" }
+        : { column, direction: "asc" },
+    );
+  }, []);
 
   const loadSessionCache = useCallback(async () => {
     if (userId.length === 0) return;
@@ -790,18 +861,43 @@ export function WineMemoryPage() {
           <table>
             <thead>
               <tr>
-                <th>{t("quickLog.producer")}</th>
-                <th>{t("quickLog.wineName")}</th>
-                <th>{t("quickLog.vintage")}</th>
-                <th>{t("quickLog.type")}</th>
-                <th>{t("quickLog.region")}</th>
-                <th>{t("quickLog.score")}</th>
-                <th>{t("memory.notes")}</th>
+                {(
+                  [
+                    ["producerName", "quickLog.producer"],
+                    ["displayName", "quickLog.wineName"],
+                    ["vintageYear", "quickLog.vintage"],
+                    ["wineType", "quickLog.type"],
+                    ["region", "quickLog.region"],
+                    ["score100", "quickLog.score"],
+                    ["noteCount", "memory.notes"],
+                  ] as const
+                ).map(([column, labelKey]) => {
+                  const active = tableSort?.column === column;
+                  return (
+                    <th
+                      aria-sort={
+                        active
+                          ? tableSort.direction === "asc"
+                            ? "ascending"
+                            : "descending"
+                          : "none"
+                      }
+                      key={column}
+                    >
+                      <button className="th-sort" onClick={() => toggleSort(column)} type="button">
+                        {t(labelKey)}
+                        <span aria-hidden="true" className="th-sort__arrow">
+                          {active ? (tableSort.direction === "asc" ? "▲" : "▼") : "↕"}
+                        </span>
+                      </button>
+                    </th>
+                  );
+                })}
                 <th>{t("memory.actions")}</th>
               </tr>
             </thead>
             <tbody>
-              {wines.map((wine) => (
+              {sortedWines.map((wine) => (
                 <tr key={wine.id}>
                   <td>{wine.producerName}</td>
                   <td>
