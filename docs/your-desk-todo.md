@@ -64,21 +64,37 @@ Pay particular attention to the parts nothing automated can reach:
 
 Send me what comes back the way you did the first round.
 
-## 3. Two privacy decisions — only if you want OCR and Vicenç
+## 3. Both providers are now ON in your deployment — test them, and do the one check that is still yours
 
-Both providers are off, and the application is fully usable without them. The
-camera barcode scan and search within your own Space need neither.
+You decided to enable OCR (Vicenç) and Open Food Facts. They are switched on in
+`wrangler.preview.jsonc` — which is your machine's file, untracked, so the public
+default stays `none` and nothing about this is committed. What is set:
 
-- `docs/privacy-review-open-food-facts.md` — sends a barcode. Wine coverage in a
-  food database is thin, so the benefit is modest.
-- `docs/privacy-review-label-ocr.md` — sends a **photograph**. It deserves more
-  scrutiny, and it asks you to check Cloudflare's current Workers AI retention
-  terms _on the day you enable it_, because they change.
+| Variable / binding  | Value                                    | Turns on                          |
+| ------------------- | ---------------------------------------- | --------------------------------- |
+| `ai` binding        | `{ "binding": "AI" }`                    | Workers AI access                 |
+| `AI_PROVIDER`       | `cloudflare`                             | both AI features                  |
+| `AI_OCR_MODEL`      | `@cf/meta/llama-3.2-11b-vision-instruct` | reading a label from a photo      |
+| `AI_MODEL`          | `@cf/meta/llama-3.1-8b-instruct`         | Vicenç's replies                  |
+| `RESEARCH_PROVIDER` | `open_data`                              | barcode lookup in Open Food Facts |
 
-Each ends with a decision line. It is a real decision and it is yours: you are
-the one who would be sending someone's photograph to a third party. Once you
-have decided, the exact binding and variables are in `docs/self-hosting.md`
-under _Optional providers_.
+The OCR model is one of the three on the allowlist in `apps/api/src/adapters/label-ocr.ts`.
+The text model is a current Cloudflare one; if Vicenç ever answers with an error,
+check the model catalogue and swap `AI_MODEL` — the names change over time.
+
+A dry-run (`wrangler deploy --dry-run`) confirmed the config is valid and the `AI`
+binding resolves. It takes effect on your next real deploy (step 1).
+
+**One thing is still yours and I could not do it:** the label-OCR review asks you
+to read Cloudflare's _current_ Workers AI data-retention terms on the day you turn
+it on, because a photograph leaves your deployment for their model and the terms
+change. Read `docs/privacy-review-label-ocr.md`, confirm the terms are acceptable
+to you today, and if they are not, set `AI_PROVIDER` back to `none`.
+
+Then test, after deploying: photograph a label and see it read fields (OCR),
+ask Vicenç something (text model), and scan a barcode you expect to be in a food
+database (Open Food Facts). Watch the usage counters on **Data and privacy** —
+every call is metered and capped per member and per deployment.
 
 ## 4. Watch the API while you are in there (0 min extra)
 
