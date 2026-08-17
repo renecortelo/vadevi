@@ -37,7 +37,8 @@
     "test": "pnpm --workspace-concurrency=1 -r --if-present test",
     "test:auth-emulator": "firebase emulators:exec --only auth --project demo-vadevi \"tsx scripts/probe-auth-emulator.ts\"",
     "typecheck": "tsc --noEmit --project tsconfig.scripts.json && tsc --noEmit --project tsconfig.e2e.json && pnpm -r --if-present typecheck",
-    "validate:env": "tsx scripts/validate-env.ts"
+    "validate:env": "tsx scripts/validate-env.ts",
+    "e2e:resilience": "playwright test --project=resilience"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
