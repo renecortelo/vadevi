@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { stripJpegSegments } from "./image";
+import { recleanEncodedImage, stripJpegSegments } from "./image";
 
 /**
  * The bytes an iPhone produced could not be uploaded.
@@ -13,7 +13,7 @@ import { stripJpegSegments } from "./image";
  */
 
 /** A JPEG-shaped buffer: SOI, the given segments, SOF0, SOS, EOI. */
-function jpeg(segments: { marker: number; payload: number[] }[]): Uint8Array {
+function jpeg(segments: { marker: number; payload: number[] }[]): Uint8Array<ArrayBuffer> {
   const bytes: number[] = [0xff, 0xd8];
   for (const segment of segments) {
     const length = segment.payload.length + 2;
@@ -26,7 +26,10 @@ function jpeg(segments: { marker: number; payload: number[] }[]): Uint8Array {
   bytes.push(0xff, 0xc0, 0x00, 0x0b, 0x08, 0x00, 0x10, 0x00, 0x10, 0x01, 0x01, 0x11, 0x00);
   bytes.push(0xff, 0xda, 0x00, 0x08, 0x01, 0x00, 0x00, 0x3f, 0x00);
   bytes.push(0x12, 0x34, 0x56, 0xff, 0xd9);
-  return new Uint8Array(bytes);
+  // Backed by a plain ArrayBuffer, which is the only thing a Blob will take.
+  const out = new Uint8Array(new ArrayBuffer(bytes.length));
+  out.set(bytes);
+  return out;
 }
 
 /**
@@ -79,5 +82,43 @@ describe("stripping metadata from an encoded JPEG", () => {
   it("returns anything that is not a JPEG untouched", () => {
     const notJpeg = new Uint8Array([0x89, 0x50, 0x4e, 0x47, 1, 2, 3]);
     expect([...stripJpegSegments(notJpeg)]).toEqual([...notJpeg]);
+  });
+});
+
+/**
+ * Bytes that are already in the queue.
+ *
+ * These were encoded before the strip existed, and the queue replays what it
+ * kept rather than re-encoding, so nothing would ever have cleaned them. Two of
+ * them sat rejected for days and blocked every write behind them.
+ */
+describe("cleaning bytes that were already stored", () => {
+  it("re-derives the digest and the size, because both described the old bytes", async () => {
+    const withExif = jpeg([{ marker: app1, payload: [0x45, 0x78, 0x69, 0x66, 0, 0, 9, 9] }]);
+    const stale = new Blob([withExif], { type: "image/jpeg" });
+
+    const healed = await recleanEncodedImage(stale);
+    if (healed === null) throw new Error("the APP1 segment should have been removed");
+
+    expect(healed.byteSize).toBe(healed.blob.size);
+    expect(healed.byteSize).toBeLessThan(withExif.length);
+    expect(hasSegment(new Uint8Array(await healed.blob.arrayBuffer()), app1)).toBe(false);
+
+    // The digest has to be of what is actually sent. Recording the old one is
+    // how a cleaned upload would be rejected for not matching its reservation.
+    const expected = await crypto.subtle.digest(
+      "SHA-256",
+      new Uint8Array(await healed.blob.arrayBuffer()),
+    );
+    const base64Url = btoa(String.fromCharCode(...new Uint8Array(expected)))
+      .replaceAll("+", "-")
+      .replaceAll("/", "_")
+      .replace(/=+$/, "");
+    expect(healed.sha256).toBe(base64Url);
+  });
+
+  it("says nothing changed when there was nothing to remove", async () => {
+    const clean = jpeg([{ marker: app0, payload: [0x4a, 0x46, 0x49, 0x46, 0] }]);
+    expect(await recleanEncodedImage(new Blob([clean], { type: "image/jpeg" }))).toBeNull();
   });
 });

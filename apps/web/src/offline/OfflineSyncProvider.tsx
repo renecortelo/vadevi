@@ -13,7 +13,8 @@ import {
 import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useAuth } from "../auth/AuthContext";
-import { idempotencyKeyForMutation } from "../security/idempotency";
+import { recleanEncodedImage } from "../media/image";
+import { createIdempotencyKey, idempotencyKeyForMutation } from "../security/idempotency";
 import { createUlid } from "../security/ulid";
 import {
   ApiError,
@@ -29,6 +30,7 @@ import {
   offlineDatabase,
   partitionId,
   purgeUnavailableSpaces,
+  type LocalMedia,
   type QueuedMutation,
   type QuickLogDraft,
 } from "./database";
@@ -46,6 +48,34 @@ function asSyncMutation(mutation: QueuedMutation): SyncMutation {
     resourceId: mutation.resourceId,
     resourceType: mutation.resourceType,
   } as SyncMutation;
+}
+
+/**
+ * The photograph a queued write is carrying, cleaned if it needs it.
+ *
+ * The queue replays bytes rather than re-encoding them, so anything captured
+ * before the metadata strip existed still carries the segment the server
+ * refuses and could never have been accepted on any attempt. Cleaning it here
+ * is what lets those writes finish by themselves instead of asking someone to
+ * find and re-take a photograph they took weeks ago.
+ *
+ * Cleaning changes the bytes, so the digest and size the reservation was made
+ * with no longer describe them. Replaying an idempotency key with a different
+ * body is a conflict by design, so the cleaned bytes get a key of their own.
+ */
+async function healMedia(
+  mutation: QueuedMutation & { localMedia: LocalMedia },
+): Promise<LocalMedia> {
+  const recleaned = await recleanEncodedImage(mutation.localMedia.blob);
+  if (recleaned === null) return mutation.localMedia;
+  const healed: LocalMedia = {
+    ...mutation.localMedia,
+    ...recleaned,
+    idempotencyKey: createIdempotencyKey(),
+  };
+  // Kept, so a later failure does not repeat the work or mint a second key.
+  await offlineDatabase.mutations.put({ ...mutation, localMedia: healed });
+  return healed;
 }
 
 function isPhaseTwoMutation(mutation: QueuedMutation): boolean {
@@ -216,35 +246,74 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
         }
 
         const batch = mutations.slice(0, 50);
+        // Mutations this pass must not send. A photograph the server will never
+        // accept used to throw straight out of this loop, which reset the whole
+        // batch to queued and left it to be retried identically for ever —
+        // silently, and taking every later write down with it.
+        const held = new Set<string>();
         for (const mutation of batch) {
           if (mutation.resourceType !== "wine_record" || mutation.localMedia === undefined)
             continue;
-          const media = mutation.localMedia;
-          const reservation = await reserveMedia(
-            user,
-            spaceId,
-            {
-              byteSize: media.byteSize,
-              height: media.height,
-              kind: "label",
-              mimeType: media.mimeType,
-              sha256: media.sha256,
-              width: media.width,
-            },
-            media.idempotencyKey,
-          );
-          const mediaId = await uploadMedia(user, reservation.data.uploadPath, media.blob);
-          mutation.payload = { ...mutation.payload, mediaId };
-          delete mutation.localMedia;
-          await offlineDatabase.mutations.put(mutation);
-          void identifyWine(user, spaceId, {
-            locale: bootstrap.data.user.preferredLocale,
-            mediaId,
-          }).catch(() => undefined);
+          try {
+            const media = await healMedia({ ...mutation, localMedia: mutation.localMedia });
+            const reservation = await reserveMedia(
+              user,
+              spaceId,
+              {
+                byteSize: media.byteSize,
+                height: media.height,
+                kind: "label",
+                mimeType: media.mimeType,
+                sha256: media.sha256,
+                width: media.width,
+              },
+              media.idempotencyKey,
+            );
+            const mediaId = await uploadMedia(user, reservation.data.uploadPath, media.blob);
+            mutation.payload = { ...mutation.payload, mediaId };
+            delete mutation.localMedia;
+            await offlineDatabase.mutations.put(mutation);
+            void identifyWine(user, spaceId, {
+              locale: bootstrap.data.user.preferredLocale,
+              mediaId,
+            }).catch(() => undefined);
+          } catch (error) {
+            // A refusal is the client's to fix and will not come good on its
+            // own; anything else is the network or the server, and retrying is
+            // the right response to that.
+            if (!(error instanceof ApiError) || error.status >= 500) throw error;
+            // The note belongs to this wine and names it by an id the server
+            // has never seen, so it travels with it or not at all.
+            const family = [
+              mutation,
+              ...batch.filter(
+                (candidate) =>
+                  candidate.resourceType === "tasting_note" &&
+                  candidate.payload.wineId === mutation.resourceId,
+              ),
+            ];
+            for (const member of family) held.add(member.id);
+            await offlineDatabase.mutations.bulkPut(
+              family.map((member) => ({
+                ...member,
+                lastError: error.code,
+                state: "needs_attention" as const,
+              })),
+            );
+            await offlineDatabase.conflicts.put({
+              id: mutation.id,
+              localPayload: mutation.payload,
+              resourceId: mutation.resourceId,
+              resourceType: mutation.resourceType,
+              spaceId,
+              userId: user.uid,
+            });
+          }
         }
+        const ready = batch.filter((mutation) => !held.has(mutation.id));
 
         await offlineDatabase.mutations.bulkPut(
-          batch.map((mutation) => ({ ...mutation, state: "syncing" as const })),
+          ready.map((mutation) => ({ ...mutation, state: "syncing" as const })),
         );
         const metadataId = partitionId(user.uid, spaceId);
         const metadata = (await offlineDatabase.syncMetadata.get(metadataId)) ?? {
@@ -254,7 +323,7 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
           spaceId,
           userId: user.uid,
         };
-        const phaseTwo = batch.filter(isPhaseTwoMutation);
+        const phaseTwo = ready.filter(isPhaseTwoMutation);
         const response = await syncSpace(user, spaceId, {
           cursor: metadata.cursor,
           deviceId: metadata.deviceId,
@@ -282,7 +351,7 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
             });
           }
         }
-        for (const mutation of batch.filter((candidate) => !isPhaseTwoMutation(candidate))) {
+        for (const mutation of ready.filter((candidate) => !isPhaseTwoMutation(candidate))) {
           try {
             await applyPhaseThreeMutation(mutation);
             await offlineDatabase.mutations.delete(mutation.id);
