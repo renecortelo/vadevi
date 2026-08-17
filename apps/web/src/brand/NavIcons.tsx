@@ -41,46 +41,41 @@ function Glass({ transform }: { transform: string }) {
   );
 }
 
-/** One barrel head. The stave band and its bung stop a circle reading as a coin. */
-function BarrelHead({ cx, cy, r }: { cx: number; cy: number; r: number }) {
-  const band = r * 0.32;
-  const chord = Math.round(Math.sqrt(r * r - band * band) * 100) / 100;
-  return (
-    <g>
-      <circle cx={cx} cy={cy} r={r} />
-      <path d={`M${cx - band} ${cy - chord}V${cy + chord}`} />
-      <path d={`M${cx + band} ${cy - chord}V${cy + chord}`} />
-      <circle cx={cx} cy={cy} fill="currentColor" r={r * 0.14} stroke="none" />
-    </g>
-  );
-}
-
 /**
- * Home: three barrels stacked head-on, two below on their chocks and one nested
- * in the notch between them — the way a cellar actually stacks them.
+ * Home: the winery itself — an arched roof over a squared building, with the
+ * cellar doors under it.
  */
-export function BarrelsIcon() {
-  const chock = (cx: number) => `M${cx - 2.2} 21.2l.9-1.9h2.6l.9 1.9z`;
+export function WineryIcon() {
   return (
     <Frame>
-      <BarrelHead cx={12} cy={7.4} r={4.15} />
-      <BarrelHead cx={7.6} cy={14.9} r={4.15} />
-      <BarrelHead cx={16.4} cy={14.9} r={4.15} />
-      <path d={chock(7.6)} />
-      <path d={chock(16.4)} />
+      <path d="M4.4 9.6 12 3.4l7.6 6.2" />
+      <path d="M6 9.6v10.9h12V9.6" />
+      <path d="M3 20.5h18" />
+      <path d="M9.6 20.5v-4.2a2.4 2.4 0 0 1 4.8 0v4.2" />
+      <path d="M8.3 12.1h2.4v2.2H8.3z" />
+      <path d="M13.3 12.1h2.4v2.2h-2.4z" />
     </Frame>
   );
 }
 
-/** About: a single barrel from the side, hoops and staves and all. */
+/**
+ * About: a barrel seen from the side, with a small bunch on its face — the
+ * cellar's own mark, which is what an "about this" screen is.
+ */
 export function BarrelIcon() {
   return (
     <Frame>
-      <path d="M8.1 3.7h7.8c1.75 2.3 2.6 5 2.6 8.3s-.85 6-2.6 8.3H8.1c-1.75-2.3-2.6-5-2.6-8.3s.85-6 2.6-8.3z" />
-      <path d="M5.9 8.3h12.2" />
-      <path d="M5.9 15.7h12.2" />
-      <path d="M10.6 3.7v16.6" />
-      <path d="M13.4 3.7v16.6" />
+      <path d="M8.2 3.6h7.6c1.7 2.3 2.5 5 2.5 8.4s-.8 6.1-2.5 8.4H8.2c-1.7-2.3-2.5-5-2.5-8.4s.8-6.1 2.5-8.4z" />
+      <path d="M5.9 8h12.2" />
+      <path d="M5.9 16h12.2" />
+      <g fill="currentColor" stroke="none">
+        <circle cx="10.6" cy="10.6" r="1.15" />
+        <circle cx="13.4" cy="10.6" r="1.15" />
+        <circle cx="9.2" cy="12.9" r="1.15" />
+        <circle cx="12" cy="12.9" r="1.15" />
+        <circle cx="14.8" cy="12.9" r="1.15" />
+        <circle cx="12" cy="15.2" r="1.15" />
+      </g>
     </Frame>
   );
 }
@@ -119,30 +114,19 @@ export function ToastIcon() {
 }
 
 /**
- * Memory: the bottles you have kept, in the crate you keep them in. A long
- * narrow neck with a capsule band and a defined shoulder — the first attempt
- * had a short wide neck, which is the silhouette of a soap dispenser.
+ * Memory: the cabinet the bottles are kept in, with a glass behind its door and
+ * the shelves either side of it.
  */
 export function CrateIcon() {
-  const bottle = (cx: number) => (
-    <path
-      d={
-        `M${cx - 0.8} 2.5h1.6v4.1l1.35 1.9v2.7` +
-        `M${cx - 2.15} 11.2V8.5l1.35-1.9` +
-        // The capsule band: the line that says wine rather than shampoo.
-        `M${cx - 0.8} 4.2h1.6`
-      }
-      key={cx}
-    />
-  );
   return (
     <Frame>
-      {bottle(6.8)}
-      {bottle(12)}
-      {bottle(17.2)}
-      <path d="M3.1 11.2h17.8v9.2H3.1z" />
-      <path d="M3.1 14.3h17.8" />
-      <path d="M3.1 17.3h17.8" />
+      <path d="M4.4 3.4h15.2v17.2H4.4z" />
+      <path d="M4.4 7.8h4.2" />
+      <path d="M4.4 12h4.2" />
+      <path d="M4.4 16.2h4.2" />
+      <path d="M10.6 7.4h5.6l-.5 3.4a2.3 2.3 0 0 1-4.6 0z" />
+      <path d="M13.4 13.1v3" />
+      <path d="M11.6 16.4h3.6" />
     </Frame>
   );
 }
@@ -165,17 +149,14 @@ function spark(cx: number, cy: number, r: number): string {
 
 /** Grape positions, row by row, in the bunch Vicenç carries. */
 const bunch = [
-  [11.9, 8],
-  [15.5, 8],
-  [6.5, 11.6],
-  [10.1, 11.6],
-  [13.7, 11.6],
-  [17.3, 11.6],
-  [8.3, 15.2],
-  [11.9, 15.2],
-  [15.5, 15.2],
-  [10.1, 18.8],
-  [13.7, 18.8],
+  [8.9, 9.2],
+  [12.5, 9.2],
+  [7.1, 12.6],
+  [10.7, 12.6],
+  [14.3, 12.6],
+  [8.9, 16],
+  [12.5, 16],
+  [10.7, 19.4],
 ] as const;
 
 /**
@@ -188,11 +169,14 @@ const bunch = [
 export function GrapesIcon() {
   return (
     <Frame>
+      {/* The stalk the bunch hangs from. */}
+      <path d="M12.4 3.4v3" />
       <g fill="currentColor" stroke="none">
         {bunch.map(([cx, cy]) => (
           <circle cx={cx} cy={cy} key={`${cx}-${cy}`} r="1.8" />
         ))}
-        <path d={spark(6.6, 6.8, 2.7)} />
+        {/* Where a leaf would be. He proposes; that is the whole of him. */}
+        <path d={spark(16.9, 5.5, 2.6)} />
       </g>
     </Frame>
   );
