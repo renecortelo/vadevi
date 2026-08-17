@@ -6,26 +6,36 @@ that is yours to make and not mine.
 
 ---
 
-## 1. Migrate and deploy (5 min)
+## 1. Deploy the latest `main` (5 min)
 
-The database is two migrations behind the code — `0013` identification drafts and
-`0014` the theme preference. The first command is not optional; the application
-will fail to start without it.
+The database is already current — the last migration, `0014`, is applied, and
+nothing since has needed one. Everything merged since is client code, so a build
+and a deploy are all this takes. Rebuilding the web bundle is not optional: the
+photo fix and every UI change live in it, and deploying only the Worker would
+ship none of them.
 
 ```powershell
-npx wrangler d1 migrations apply vadevi-preview --remote --config wrangler.preview.jsonc
+pnpm install --frozen-lockfile
+```
+
+```powershell
+pnpm --filter @vadevi/web build
 ```
 
 ```powershell
 npx wrangler deploy --config wrangler.preview.jsonc
 ```
 
-If the build is not current, run `pnpm install` and `pnpm --filter @vadevi/web build`
-first. Migrations are forward-only: apply them before deploying the Worker, never
-after.
+Then, on the iPhone, close and reopen the app — or remove it from the home
+screen and install it again — so the service worker picks up the new bundle.
+With the old bundle still cached, none of the recent fixes are present.
 
-Already installed the app to your home screen? Remove it and install again. The
-icon changed, and the system does not re-read it otherwise.
+If a later change ever does add a migration, apply it before deploying the
+Worker, never after; migrations are forward-only:
+
+```powershell
+npx wrangler d1 migrations apply vadevi-preview --remote --config wrangler.preview.jsonc
+```
 
 ## 2. Work through the acceptance script (45 min)
 
@@ -107,7 +117,19 @@ by name — the brief because it refers to your other private repositories.
 
 Afterwards, point `VITE_SOURCE_URL` at the published repository and redeploy, so
 the AGPL §13 source offer resolves somewhere real rather than at a private
-repository nobody can open.
+repository nobody can open. The current default is
+`https://github.com/renecortelo/vadevi`; if the public repository is that same
+URL made public, nothing needs to change here.
+
+## 7. Optional: tidy the stale branches on GitHub
+
+Thirteen old `codex/phase-*` branches from before pull requests were set to
+delete on merge are still on the remote. They are all merged into `main` and
+harmless, only clutter. Delete them from the branches page, or:
+
+```powershell
+git branch -r | Select-String 'origin/codex/' | ForEach-Object { git push origin --delete ($_ -replace '\s*origin/','') }
+```
 
 ---
 
