@@ -985,6 +985,15 @@
     "dark": "Donker",
     "saveError": "Thema niet opgeslagen"
   },
+  "winePicker": {
+    "choose": "Kies een wijn",
+    "addOption": "＋ Een wijn toevoegen",
+    "addAction": "Wijn toevoegen",
+    "adding": "Toevoegen…",
+    "cancel": "Annuleren",
+    "addHelp": "Producent en naam zijn genoeg. Het wordt als concept bewaard, zoals elke wijn.",
+    "addError": "De wijn kon niet worden toegevoegd. Probeer het opnieuw."
+  },
   "locale": {
     "label": "Taal van de interface",
     "saveError": "Taal niet opgeslagen"

@@ -12,6 +12,7 @@ import { offlineDatabase } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
 import { createPriceObservation, getPriceObservations } from "../services/cellar";
+import { WinePicker } from "../components/WinePicker";
 import { useSession } from "../session/SessionContext";
 
 function priceSnapshotId(userId: string, spaceId: string, wineId: string) {
@@ -70,20 +71,29 @@ export function ShopPage() {
     }
   }, [spaceId, user, wineId]);
 
-  useEffect(() => {
+  // Named, so the picker can ask for the list again after adding a wine to it.
+  const loadWines = useCallback(async () => {
     if (user === null) return;
     if (!navigator.onLine) {
-      void offlineDatabase.snapshots
+      const rows = await offlineDatabase.snapshots
         .where("[userId+spaceId]")
         .equals([user.uid, spaceId])
-        .toArray()
-        .then((rows) => setWines(rows.map((row) => row.wine)));
+        .toArray();
+      setWines(rows.map((row) => row.wine));
       return;
     }
-    void getWineMemory(user, spaceId, { limit: 100 })
-      .then((response) => setWines(response.data))
-      .catch(() => setError(true));
+    try {
+      setWines((await getWineMemory(user, spaceId, { limit: 100 })).data);
+    } catch {
+      setError(true);
+    }
   }, [spaceId, user]);
+
+  useEffect(() => {
+    // Deferred, like the price load beside it: a state update made
+    // synchronously inside an effect cascades into another render.
+    queueMicrotask(() => void loadWines());
+  }, [loadWines]);
 
   useEffect(() => {
     queueMicrotask(() => void loadPrices());
@@ -136,17 +146,13 @@ export function ShopPage() {
       </header>
       {usingCache ? <p className="offline-banner">{t("shop.cached")}</p> : null}
       {error ? <p className="form-error">{t("shop.error")}</p> : null}
-      <label className="shop-wine-picker">
-        {t("shop.wine")}
-        <select onChange={(event) => setWineId(event.target.value)} value={wineId}>
-          <option value="">{t("shop.chooseWine")}</option>
-          {wines.map((wine) => (
-            <option key={wine.id} value={wine.id}>
-              {wine.producerName} · {wine.displayName}
-            </option>
-          ))}
-        </select>
-      </label>
+      <WinePicker
+        label={t("shop.wine")}
+        onChange={setWineId}
+        onCreated={() => loadWines()}
+        value={wineId}
+        wines={wines}
+      />
       <section className="phase5-form-card">
         <h2>{t("shop.recordTitle")}</h2>
         <p>{t("shop.coverageWarning")}</p>

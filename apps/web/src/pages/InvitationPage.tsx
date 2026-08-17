@@ -8,6 +8,7 @@ import { useAuth } from "../auth/AuthContext";
 import { getInvitationPreview } from "../services/api";
 import { useSession } from "../session/SessionContext";
 import { AccessBackdrop } from "../brand/AccessBackdrop";
+import { SignedOutLocalePicker } from "../components/SignedOutLocalePicker";
 import { BrandLockup } from "../brand/Wordmark";
 
 function useInvitation() {
@@ -36,6 +37,7 @@ function InvitationCard({
   return (
     <main className="access-page" id="main-content">
       <AccessBackdrop />
+      <SignedOutLocalePicker />
       <section className="access-card invitation-card">
         <BrandLockup className="access-card__lockup" />
         <p className="eyebrow">{t("invitation.eyebrow")}</p>
@@ -66,6 +68,7 @@ function InvitationUnavailable() {
   return (
     <main className="access-page" id="main-content">
       <AccessBackdrop />
+      <SignedOutLocalePicker />
       <section className="access-card">
         <BrandLockup className="access-card__lockup" />
         <h1>{t("invitation.invalidTitle")}</h1>
@@ -85,6 +88,7 @@ export function InvitationSignInPage() {
     return (
       <main className="access-page">
         <AccessBackdrop />
+        <SignedOutLocalePicker />
         {t("invitation.loading")}
       </main>
     );

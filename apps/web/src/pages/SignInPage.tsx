@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
 import { AccessBackdrop } from "../brand/AccessBackdrop";
+import { SignedOutLocalePicker } from "../components/SignedOutLocalePicker";
 import { GoogleMark } from "../brand/GoogleMark";
 import { BrandLockup } from "../brand/Wordmark";
 
@@ -29,6 +30,7 @@ export function SignInPage() {
   return (
     <main className="access-page" id="main-content">
       <AccessBackdrop />
+      <SignedOutLocalePicker />
       <section className="access-card access-card--signin">
         <BrandLockup className="access-card__lockup" />
         <p className="eyebrow">{t("auth.signInEyebrow")}</p>

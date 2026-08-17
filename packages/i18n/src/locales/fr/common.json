@@ -985,6 +985,15 @@
     "dark": "Sombre",
     "saveError": "Thème non enregistré"
   },
+  "winePicker": {
+    "choose": "Choisir un vin",
+    "addOption": "＋ Ajouter un vin",
+    "addAction": "Ajouter le vin",
+    "adding": "Ajout…",
+    "cancel": "Annuler",
+    "addHelp": "Le producteur et le nom suffisent. Il est enregistré comme brouillon, comme tout vin.",
+    "addError": "Le vin n'a pas pu être ajouté. Réessayez."
+  },
   "locale": {
     "label": "Langue de l'interface",
     "saveError": "Langue non enregistrée"

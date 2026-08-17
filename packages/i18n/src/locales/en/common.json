@@ -985,6 +985,15 @@
     "dark": "Dark",
     "saveError": "Theme not saved"
   },
+  "winePicker": {
+    "choose": "Choose a wine",
+    "addOption": "＋ Add a new wine",
+    "addAction": "Add wine",
+    "adding": "Adding…",
+    "cancel": "Cancel",
+    "addHelp": "Producer and name are enough. It is saved as a draft, like any wine you log.",
+    "addError": "The wine could not be added. Try again."
+  },
   "locale": {
     "label": "Interface language",
     "saveError": "Language not saved"

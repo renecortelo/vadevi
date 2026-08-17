@@ -985,6 +985,15 @@
     "dark": "Scuro",
     "saveError": "Tema non salvato"
   },
+  "winePicker": {
+    "choose": "Scegli un vino",
+    "addOption": "＋ Aggiungi un vino",
+    "addAction": "Aggiungi vino",
+    "adding": "Aggiunta…",
+    "cancel": "Annulla",
+    "addHelp": "Bastano produttore e nome. Viene salvato come bozza, come ogni vino.",
+    "addError": "Non è stato possibile aggiungere il vino. Riprova."
+  },
   "locale": {
     "label": "Lingua dell'interfaccia",
     "saveError": "Lingua non salvata"

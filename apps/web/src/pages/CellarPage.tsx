@@ -5,6 +5,7 @@ import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, partitionId } from "../offline/database";
+import { WinePicker } from "../components/WinePicker";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
 import { createPurchase, getBottles, updateBottle } from "../services/cellar";
@@ -176,17 +177,14 @@ export function CellarPage() {
         <h2>{t("cellar.purchaseTitle")}</h2>
         <p>{navigator.onLine ? t("cellar.purchaseBody") : t("cellar.onlineRequired")}</p>
         <form className="phase5-form" onSubmit={(event) => void submitPurchase(event)}>
-          <label>
-            {t("cellar.wine")}
-            <select onChange={(event) => setWineId(event.target.value)} required value={wineId}>
-              <option value="">{t("cellar.chooseWine")}</option>
-              {wines.map((wine) => (
-                <option key={wine.id} value={wine.id}>
-                  {wine.producerName} · {wine.displayName}
-                </option>
-              ))}
-            </select>
-          </label>
+          <WinePicker
+            label={t("cellar.wine")}
+            onChange={setWineId}
+            onCreated={() => load()}
+            required
+            value={wineId}
+            wines={wines}
+          />
           <label>
             {t("cellar.merchant")}
             <input

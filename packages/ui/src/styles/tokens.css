@@ -67,6 +67,7 @@
   --color-border: #e5bda6;
   --color-success: #1f5d3f;
   --color-warning: #7a4a0f;
+  --color-danger: #8f1f2d;
   --color-focus: #0f5f73;
   --font-display: Georgia, "Times New Roman", serif;
   --font-body:
@@ -83,6 +84,7 @@
   --space-5: 1.5rem;
   --space-6: 2rem;
   --space-7: 3rem;
+  --space-8: 4rem;
   --radius-sm: 0.75rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
@@ -138,6 +140,7 @@
     --color-border: #7a2427;
     --color-success: #7fd3a6;
     --color-warning: #e8be7f;
+    --color-danger: #f5a3a3;
     --color-focus: #7fd3e8;
     --shadow-card: 0 18px 50px rgb(0 0 0 / 45%);
   }
@@ -178,6 +181,7 @@
   --color-border: #7a2427;
   --color-success: #7fd3a6;
   --color-warning: #e8be7f;
+  --color-danger: #f5a3a3;
   --color-focus: #7fd3e8;
   --shadow-card: 0 18px 50px rgb(0 0 0 / 45%);
 }

@@ -985,6 +985,15 @@
     "dark": "Dunkel",
     "saveError": "Thema nicht gespeichert"
   },
+  "winePicker": {
+    "choose": "Wein wählen",
+    "addOption": "＋ Einen Wein hinzufügen",
+    "addAction": "Wein hinzufügen",
+    "adding": "Wird hinzugefügt…",
+    "cancel": "Abbrechen",
+    "addHelp": "Erzeuger und Name genügen. Er wird als Entwurf gespeichert, wie jeder Wein.",
+    "addError": "Der Wein konnte nicht hinzugefügt werden. Versuch es noch einmal."
+  },
   "locale": {
     "label": "Sprache der Oberfläche",
     "saveError": "Sprache nicht gespeichert"

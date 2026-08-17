@@ -246,7 +246,7 @@ select:disabled {
 }
 
 .text-button--danger {
-  color: var(--color-danger, #9f2737);
+  color: var(--color-danger);
 }
 
 .connection-status {
@@ -291,7 +291,7 @@ select:disabled {
 }
 
 .sync-status[data-state="needs_attention"] .sync-status__dot {
-  background: var(--color-danger, #9f2737);
+  background: var(--color-danger);
 }
 
 .sync-status__count {
@@ -478,7 +478,7 @@ select:disabled {
 }
 
 .form-error {
-  color: var(--color-danger, #9f2737);
+  color: var(--color-danger);
   font-size: var(--text-xs);
   font-weight: 700;
   margin: 0;
@@ -2546,4 +2546,38 @@ p {
 .field-stack > button {
   justify-self: start;
   margin-block-start: var(--space-3);
+}
+
+/* The language menu on the access screens: present, but not competing with the
+   one thing there is to do. */
+.access-locale {
+  inset-block-start: var(--space-4);
+  inset-inline-end: var(--space-4);
+  position: absolute;
+  z-index: 2;
+}
+
+.access-locale select {
+  font-size: var(--text-sm);
+  min-block-size: 2.5rem;
+}
+
+/* The wine picker: a menu, and the two fields that appear when the wine you
+   want is not in it yet. */
+.wine-picker-field {
+  display: grid;
+  font-weight: 650;
+  gap: var(--space-2);
+}
+
+.wine-picker-new {
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.wine-picker-new .cache-note {
+  margin: 0;
 }

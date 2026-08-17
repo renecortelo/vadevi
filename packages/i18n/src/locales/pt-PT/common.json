@@ -985,6 +985,15 @@
     "dark": "Escuro",
     "saveError": "Tema não guardado"
   },
+  "winePicker": {
+    "choose": "Escolha um vinho",
+    "addOption": "＋ Adicionar um vinho",
+    "addAction": "Adicionar vinho",
+    "adding": "A adicionar…",
+    "cancel": "Cancelar",
+    "addHelp": "Produtor e nome chegam. Fica guardado como rascunho, como qualquer vinho.",
+    "addError": "Não foi possível adicionar o vinho. Tente outra vez."
+  },
   "locale": {
     "label": "Idioma da interface",
     "saveError": "Idioma não guardado"
