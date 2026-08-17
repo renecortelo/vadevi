@@ -169,6 +169,9 @@ test.describe("offline writes", () => {
 
     await page.goto("/log/new");
     await page.waitForLoadState("networkidle");
+    // The photo section folds away so the shortest path does not scroll past it;
+    // open it before reaching for the picker inside.
+    await page.getByText(/private label photo|foto privada/i).click();
     await page.setInputFiles(".photo-picker input[type=file]", {
       buffer: labelPhoto(),
       mimeType: "image/png",

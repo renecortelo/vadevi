@@ -221,7 +221,8 @@
       "synced": "It has synced exactly once.",
       "needs_attention": "It is preserved locally and needs your attention."
     },
-    "identifyAction": "Scan or read a label instead"
+    "identifyAction": "Scan or read a label instead",
+    "moreDetails": "More details"
   },
   "memory": {
     "eyebrow": "Private history",

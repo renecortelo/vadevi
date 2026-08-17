@@ -221,7 +221,8 @@
       "synced": "S'ha sincronitzat exactament una vegada.",
       "needs_attention": "Es conserva localment i requereix la teva atenció."
     },
-    "identifyAction": "Escaneja o llegeix una etiqueta"
+    "identifyAction": "Escaneja o llegeix una etiqueta",
+    "moreDetails": "Més detalls"
   },
   "memory": {
     "eyebrow": "Historial privat",

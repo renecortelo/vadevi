@@ -893,6 +893,61 @@ p {
   padding-inline: var(--space-2);
 }
 
+/* A whole section that folds away. The summary stands in for the legend, so it
+   carries the same display type, and a chevron says there is more below. */
+.form-section--collapsible > summary {
+  align-items: center;
+  color: var(--color-plum);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+/* The finer wine details, folded inside the identity section. Lighter than a
+   section of its own — it is a row of the same card, not a new one. */
+.form-subsection {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.form-subsection > summary {
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 750;
+  list-style: none;
+}
+
+.form-section--collapsible > summary,
+.form-subsection > summary {
+  align-items: center;
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* The default disclosure triangle, gone in every engine, replaced by a chevron
+   that turns — so the control reads as "more below", not as a bullet. */
+.form-section--collapsible > summary::-webkit-details-marker,
+.form-subsection > summary::-webkit-details-marker {
+  display: none;
+}
+
+.form-section--collapsible > summary::after,
+.form-subsection > summary::after {
+  content: "▾";
+  font-family: system-ui, sans-serif;
+  margin-inline-start: auto;
+  transition: transform 120ms ease;
+}
+
+.form-section--collapsible[open] > summary::after,
+.form-subsection[open] > summary::after {
+  transform: rotate(180deg);
+}
+
 .form-section label,
 .note-fields > label,
 .form-grid label,

@@ -221,7 +221,8 @@
       "synced": "Het is precies één keer gesynchroniseerd.",
       "needs_attention": "Het is lokaal bewaard en heeft je aandacht nodig."
     },
-    "identifyAction": "Scan of lees een etiket"
+    "identifyAction": "Scan of lees een etiket",
+    "moreDetails": "Meer details"
   },
   "memory": {
     "eyebrow": "Privégeschiedenis",

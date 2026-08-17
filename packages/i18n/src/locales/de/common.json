@@ -221,7 +221,8 @@
       "synced": "Er wurde genau einmal synchronisiert.",
       "needs_attention": "Er bleibt lokal erhalten und benötigt Ihre Aufmerksamkeit."
     },
-    "identifyAction": "Etikett scannen oder lesen"
+    "identifyAction": "Etikett scannen oder lesen",
+    "moreDetails": "Mehr Details"
   },
   "memory": {
     "eyebrow": "Private Historie",

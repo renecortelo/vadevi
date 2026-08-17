@@ -221,7 +221,8 @@
       "synced": "Foi sincronizado exatamente uma vez.",
       "needs_attention": "Está preservado localmente e requer a sua atenção."
     },
-    "identifyAction": "Digitalizar ou ler um rótulo"
+    "identifyAction": "Digitalizar ou ler um rótulo",
+    "moreDetails": "Mais detalhes"
   },
   "memory": {
     "eyebrow": "Histórico privado",

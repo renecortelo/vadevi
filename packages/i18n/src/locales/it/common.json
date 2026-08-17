@@ -221,7 +221,8 @@
       "synced": "È stato sincronizzato esattamente una volta.",
       "needs_attention": "È conservato localmente e richiede la tua attenzione."
     },
-    "identifyAction": "Scansiona o leggi un'etichetta"
+    "identifyAction": "Scansiona o leggi un'etichetta",
+    "moreDetails": "Altri dettagli"
   },
   "memory": {
     "eyebrow": "Cronologia privata",
