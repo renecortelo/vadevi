@@ -310,7 +310,8 @@
     "editCancel": "Annuleren",
     "editError": "De wijzigingen konden niet worden bewaard. Probeer het opnieuw.",
     "editConflict": "Iemand anders heeft deze wijn gewijzigd terwijl jij bezig was. Herlaad en probeer opnieuw — niets van wat je typte is verstuurd.",
-    "editPhotoAction": "Voeg de foto van het etiket toe"
+    "editPhotoAction": "Voeg de foto van het etiket toe",
+    "editPhotoError": "De foto kon niet worden opgeslagen, er is niets gewijzigd. De gegevens bewaren wel als je hem verwijdert."
   },
   "evidence": {
     "openAction": "Bewijs",

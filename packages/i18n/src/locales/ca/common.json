@@ -310,7 +310,8 @@
     "editCancel": "Cancel·la",
     "editError": "No s'han pogut desar els canvis. Torna-ho a provar.",
     "editConflict": "Algú altre ha canviat aquest vi mentre editaves. Recarrega i torna-ho a provar — no s'ha enviat res del que has escrit.",
-    "editPhotoAction": "Afegeix la foto de l'etiqueta"
+    "editPhotoAction": "Afegeix la foto de l'etiqueta",
+    "editPhotoError": "No s'ha pogut desar la foto, així que no ha canviat res. Les dades es desen si la treus."
   },
   "evidence": {
     "openAction": "Evidència",

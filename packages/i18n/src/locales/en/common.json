@@ -310,7 +310,8 @@
     "editCancel": "Cancel",
     "editError": "The changes could not be saved. Try again.",
     "editConflict": "Someone else changed this wine while you were editing. Reload and try again — nothing you typed was sent.",
-    "editPhotoAction": "Add the label photograph"
+    "editPhotoAction": "Add the label photograph",
+    "editPhotoError": "The photograph could not be stored, so nothing changed. The details will save if you remove it."
   },
   "evidence": {
     "openAction": "Evidence",

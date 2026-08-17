@@ -310,7 +310,8 @@
     "editCancel": "Annulla",
     "editError": "Non è stato possibile salvare le modifiche. Riprova.",
     "editConflict": "Qualcun altro ha modificato questo vino mentre lo modificavi. Ricarica e riprova — nulla di ciò che hai scritto è stato inviato.",
-    "editPhotoAction": "Aggiungi la foto dell'etichetta"
+    "editPhotoAction": "Aggiungi la foto dell'etichetta",
+    "editPhotoError": "Non è stato possibile salvare la foto, non è cambiato nulla. I dati si salvano se la togli."
   },
   "evidence": {
     "openAction": "Evidenze",
