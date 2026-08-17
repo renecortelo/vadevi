@@ -91,7 +91,13 @@
       "owner": "Proprietario",
       "admin": "Amministratore",
       "member": "Membro"
-    }
+    },
+    "renameTitle": "Nome",
+    "renameBody": "Tutti in questo Spazio vedono questo nome nel loro selettore.",
+    "renameAction": "Rinomina lo Spazio",
+    "renameSaving": "Rinomina…",
+    "renameError": "Non è stato possibile rinominare lo Spazio. Riprova.",
+    "renameConflict": "Qualcun altro ha rinominato questo Spazio mentre scrivevi. Ricarica e riprova."
   },
   "invitation": {
     "eyebrow": "Un invito privato",
@@ -296,7 +302,14 @@
     "mergeConfirmBody": "{{source}} sarà unito a {{target}}. Degustazioni, bottiglie, acquisti, prezzi ed evidenze vengono trasferiti e il vecchio nome resta ricercabile.",
     "mergeConfirmAction": "Unisci queste schede",
     "mergeDone": "Le schede sono state unite.",
-    "mergeError": "L'unione non è avvenuta. Una delle schede potrebbe essere cambiata."
+    "mergeError": "L'unione non è avvenuta. Una delle schede potrebbe essere cambiata.",
+    "editAction": "Modifica",
+    "editTitle": "Correggi questo vino",
+    "editSave": "Salva le modifiche",
+    "editSaving": "Salvataggio…",
+    "editCancel": "Annulla",
+    "editError": "Non è stato possibile salvare le modifiche. Riprova.",
+    "editConflict": "Qualcun altro ha modificato questo vino mentre lo modificavi. Ricarica e riprova — nulla di ciò che hai scritto è stato inviato."
   },
   "evidence": {
     "openAction": "Evidenze",

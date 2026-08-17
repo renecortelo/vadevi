@@ -91,7 +91,13 @@
       "owner": "Eigenaar",
       "admin": "Beheerder",
       "member": "Lid"
-    }
+    },
+    "renameTitle": "Naam",
+    "renameBody": "Iedereen in deze Space ziet deze naam in hun kiezer.",
+    "renameAction": "Space hernoemen",
+    "renameSaving": "Hernoemen…",
+    "renameError": "De Space kon niet worden hernoemd. Probeer het opnieuw.",
+    "renameConflict": "Iemand anders hernoemde deze Space terwijl je typte. Herlaad en probeer opnieuw."
   },
   "invitation": {
     "eyebrow": "Een privé-uitnodiging",
@@ -296,7 +302,14 @@
     "mergeConfirmBody": "{{source}} wordt samengevoegd met {{target}}. Proeverijen, flessen, aankopen, prijzen en bewijs verhuizen mee, en de oude naam blijft doorzoekbaar.",
     "mergeConfirmAction": "Deze records samenvoegen",
     "mergeDone": "De records zijn samengevoegd.",
-    "mergeError": "De samenvoeging is niet uitgevoerd. Een van de records is mogelijk gewijzigd."
+    "mergeError": "De samenvoeging is niet uitgevoerd. Een van de records is mogelijk gewijzigd.",
+    "editAction": "Bewerken",
+    "editTitle": "Deze wijn corrigeren",
+    "editSave": "Wijzigingen bewaren",
+    "editSaving": "Bewaren…",
+    "editCancel": "Annuleren",
+    "editError": "De wijzigingen konden niet worden bewaard. Probeer het opnieuw.",
+    "editConflict": "Iemand anders heeft deze wijn gewijzigd terwijl jij bezig was. Herlaad en probeer opnieuw — niets van wat je typte is verstuurd."
   },
   "evidence": {
     "openAction": "Bewijs",

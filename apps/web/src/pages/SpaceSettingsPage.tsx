@@ -2,6 +2,9 @@ import type { CreateInvitationResponse, SpaceDetailResponse } from "@vadevi/cont
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { type FormEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { useAuth } from "../auth/AuthContext";
+import { updateSpace } from "../services/cellar";
 import { Link } from "react-router";
 
 import { useSession } from "../session/SessionContext";
@@ -11,6 +14,7 @@ type Member = SpaceDetailResponse["data"]["members"][number];
 export function SpaceSettingsPage() {
   const { bootstrap, createInvitation, getSpace, isUpdating, removeMember } = useSession();
   const queryClient = useQueryClient();
+  const { user } = useAuth();
   const { t } = useTranslation();
   const spaceId = bootstrap.data.user.activeSpaceId;
   const queryKey = ["space", spaceId] as const;
@@ -22,6 +26,36 @@ export function SpaceSettingsPage() {
   const [invitation, setInvitation] = useState<CreateInvitationResponse | null>(null);
   const [status, setStatus] = useState<"copied" | "error" | null>(null);
   const [pendingRemovalId, setPendingRemovalId] = useState<string | null>(null);
+  // `null` means untouched, so the field shows the Space's current name without
+  // a copy of it in state — which would need an effect to seed, and would be
+  // overwritten by any background refetch.
+  const [typedName, setTypedName] = useState<string | null>(null);
+  const [renaming, setRenaming] = useState(false);
+  const [renameError, setRenameError] = useState<"conflict" | "failed" | null>(null);
+
+  async function rename() {
+    const current = detailQuery.data;
+    if (user === null || current === undefined || renaming) return;
+    const nextName = (typedName ?? current.data.space.name).trim();
+    if (nextName.length === 0 || nextName === current.data.space.name) return;
+    setRenaming(true);
+    setRenameError(null);
+    try {
+      const updated = await updateSpace(user, spaceId, {
+        name: nextName,
+        version: current.data.space.version,
+      });
+      queryClient.setQueryData(queryKey, updated);
+      setTypedName(null);
+      // The switcher in the top bar reads the name from bootstrap, so it has to
+      // hear about this too.
+      await queryClient.invalidateQueries({ queryKey: ["bootstrap"] });
+    } catch (cause) {
+      setRenameError((cause as { status?: number }).status === 409 ? "conflict" : "failed");
+    } finally {
+      setRenaming(false);
+    }
+  }
 
   async function invite(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -92,6 +126,40 @@ export function SpaceSettingsPage() {
           {t("spaces.newAction")}
         </Link>
       </div>
+
+      {/* Owners only: the name is what every member reads in their switcher, so
+          renaming it is not a personal preference. */}
+      {detail.data.space.role === "owner" ? (
+        <section aria-labelledby="rename-title" className="settings-card field-stack">
+          <h2 id="rename-title">{t("spaces.renameTitle")}</h2>
+          <p>{t("spaces.renameBody")}</p>
+          <label htmlFor="space-rename">{t("spaces.nameLabel")}</label>
+          <input
+            id="space-rename"
+            maxLength={120}
+            onChange={(event) => setTypedName(event.target.value)}
+            value={typedName ?? detail.data.space.name}
+          />
+          <button
+            className="primary-button"
+            disabled={
+              renaming ||
+              typedName === null ||
+              typedName.trim().length === 0 ||
+              typedName.trim() === detail.data.space.name
+            }
+            onClick={() => void rename()}
+            type="button"
+          >
+            {renaming ? t("spaces.renameSaving") : t("spaces.renameAction")}
+          </button>
+          {renameError === null ? null : (
+            <p className="form-error" role="alert">
+              {t(renameError === "conflict" ? "spaces.renameConflict" : "spaces.renameError")}
+            </p>
+          )}
+        </section>
+      ) : null}
 
       <section aria-labelledby="members-title" className="settings-card">
         <h2 id="members-title">{t("spaces.membersTitle")}</h2>

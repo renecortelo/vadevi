@@ -19,7 +19,9 @@ import {
   MergeWinesResponseSchema,
   QuickTastingRequestSchema,
   SpaceIdPathSchema,
+  UpdateWineRequestSchema,
   WineIdPathSchema,
+  WineResponseSchema,
   SyncRequestSchema,
   SyncResponseSchema,
   TastingNoteResponseSchema,
@@ -35,7 +37,13 @@ import { createResearchPorts } from "../adapters/research-factory";
 import { confirmIdentification, createIdentification } from "../repositories/identification";
 import { reserveProviderBudget } from "../services/usage";
 import { mergeWines } from "../repositories/wine-merge";
-import { createTastingNote, createWine, listWines, syncSpace } from "../repositories/wine-memory";
+import {
+  createTastingNote,
+  createWine,
+  listWines,
+  syncSpace,
+  updateWine,
+} from "../repositories/wine-memory";
 import type { ApiEnvironment } from "../types";
 
 const IdempotencyHeadersSchema = z.object({
@@ -80,6 +88,51 @@ const createWineRoute = createRoute({
     409: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "Idempotency or resource collision.",
+    },
+  },
+});
+
+/**
+ * Correcting a wine after the fact.
+ *
+ * §10 keeps identity confirmable rather than fixed: a wine logged in a hurry is
+ * a draft until someone says otherwise, and saying otherwise has to be possible
+ * without logging the bottle a second time.
+ */
+const updateWineRoute = createRoute({
+  method: "patch",
+  path: "/api/v1/spaces/{spaceId}/wines/{wineId}",
+  operationId: "updateWine",
+  tags: ["Wine memory"],
+  summary: "Correct a wine's identity fields, or attach its label photograph",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    params: WineIdPathSchema,
+    body: {
+      content: { "application/json": { schema: UpdateWineRequestSchema } },
+      required: true,
+    },
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: WineResponseSchema } },
+      description: "The corrected wine.",
+    },
+    400: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Invalid request.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The wine or the Space is unavailable.",
+    },
+    409: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The wine changed before this update, or has been merged away.",
     },
   },
 });
@@ -456,6 +509,44 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
     );
     context.header("Idempotency-Replayed", String(result.replayed));
     return context.json(CreateWineResponseSchema.parse(result.response), 201);
+  });
+
+  app.openapi(updateWineRoute, async (context) => {
+    const params = context.req.valid("param");
+    const result = await updateWine(context.env.DB!, {
+      principal: context.get("principal"),
+      request: context.req.valid("json"),
+      requestId: context.get("requestId"),
+      spaceId: params.spaceId,
+      wineId: params.wineId,
+    });
+    if (result.kind === "unavailable") {
+      return context.json(
+        errorEnvelope(context.get("requestId"), "NOT_FOUND", "The resource was not found."),
+        404,
+      );
+    }
+    if (result.kind === "merged") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "VERSION_CONFLICT",
+          "This wine was merged into another one. Edit the wine it was merged into.",
+        ),
+        409,
+      );
+    }
+    if (result.kind === "conflict") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "VERSION_CONFLICT",
+          "The wine changed before this update.",
+        ),
+        409,
+      );
+    }
+    return context.json(WineResponseSchema.parse({ data: { wine: result.wine } }), 200);
   });
 
   app.openapi(listWinesRoute, async (context) => {

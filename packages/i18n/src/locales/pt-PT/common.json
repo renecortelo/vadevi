@@ -91,7 +91,13 @@
       "owner": "Proprietário",
       "admin": "Administrador",
       "member": "Membro"
-    }
+    },
+    "renameTitle": "Nome",
+    "renameBody": "Todos neste Espaço veem este nome no seu seletor.",
+    "renameAction": "Mudar o nome do Espaço",
+    "renameSaving": "A mudar…",
+    "renameError": "Não foi possível mudar o nome do Espaço. Tente outra vez.",
+    "renameConflict": "Outra pessoa mudou o nome deste Espaço enquanto escrevia. Recarregue e tente outra vez."
   },
   "invitation": {
     "eyebrow": "Um convite privado",
@@ -296,7 +302,14 @@
     "mergeConfirmBody": "{{source}} será fundido em {{target}}. Provas, garrafas, compras, preços e evidências passam para lá, e o nome antigo continua pesquisável.",
     "mergeConfirmAction": "Fundir estes registos",
     "mergeDone": "Os registos foram fundidos.",
-    "mergeError": "A fusão não foi feita. Um dos registos pode ter mudado."
+    "mergeError": "A fusão não foi feita. Um dos registos pode ter mudado.",
+    "editAction": "Editar",
+    "editTitle": "Corrigir este vinho",
+    "editSave": "Guardar alterações",
+    "editSaving": "A guardar…",
+    "editCancel": "Cancelar",
+    "editError": "Não foi possível guardar as alterações. Tente outra vez.",
+    "editConflict": "Outra pessoa alterou este vinho enquanto editava. Recarregue e tente outra vez — nada do que escreveu foi enviado."
   },
   "evidence": {
     "openAction": "Evidência",

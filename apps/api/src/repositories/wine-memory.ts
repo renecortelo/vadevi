@@ -5,6 +5,7 @@ import type {
   SyncMutation,
   SyncResponse,
   TastingNoteResponse,
+  UpdateWineRequest,
   WineMemoryResponse,
   WineSummary,
 } from "@vadevi/contracts";
@@ -900,4 +901,189 @@ export async function syncSpace(
       nextCursor: String(changes.at(-1)?.seq ?? rawCursor),
     },
   };
+}
+
+/** The acting member, or null when they are not in this Space. */
+async function activeWineMemberId(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  spaceId: string,
+): Promise<string | null> {
+  const row = await database
+    .prepare(
+      `SELECT actor.id FROM users actor
+      JOIN space_memberships membership ON membership.user_id = actor.id
+      JOIN spaces space ON space.id = membership.space_id
+      WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
+        AND membership.space_id = ? AND membership.status = 'active'
+        AND space.deleted_at IS NULL`,
+    )
+    .bind(principal.firebaseUid, spaceId)
+    .first<{ id: string }>();
+  return row?.id ?? null;
+}
+
+/**
+ * Correct a wine that already exists.
+ *
+ * A bottle logged in a restaurant is logged in a hurry — the vintage guessed,
+ * the producer half-read, no photograph — and until now the only way to change
+ * any of it was to log the bottle again, which leaves two wines where there is
+ * one bottle.
+ *
+ * Every field is optional and `undefined` means "leave it", so a screen that
+ * edits one field cannot silently clear the ones it did not show. The version
+ * check is the same optimistic lock the bottle and wishlist updates use.
+ */
+export async function updateWine(
+  database: D1Database,
+  options: {
+    principal: FirebasePrincipal;
+    request: UpdateWineRequest;
+    requestId: string;
+    spaceId: string;
+    wineId: string;
+  },
+): Promise<
+  | { current: WineSummary; kind: "conflict" }
+  | { kind: "merged" }
+  | { kind: "success"; wine: WineSummary }
+  | { kind: "unavailable" }
+> {
+  const actorId = await activeWineMemberId(database, options.principal, options.spaceId);
+  if (actorId === null) return { kind: "unavailable" };
+
+  const row = await database
+    .prepare(
+      `SELECT version, merged_into_wine_id FROM wine_records
+      WHERE id = ? AND space_id = ? AND deleted_at IS NULL`,
+    )
+    .bind(options.wineId, options.spaceId)
+    .first<{ merged_into_wine_id: string | null; version: number }>();
+  if (row === null) return { kind: "unavailable" };
+  // A merged wine is a tombstone pointing at its survivor. Editing it would
+  // write to a record nothing reads.
+  if (row.merged_into_wine_id !== null) return { kind: "merged" };
+
+  if (row.version !== options.request.version) {
+    const current = await getWineSummary(
+      database,
+      options.principal,
+      options.spaceId,
+      options.wineId,
+    );
+    if (current === null) return { kind: "unavailable" };
+    return { current, kind: "conflict" };
+  }
+
+  const now = new Date().toISOString();
+  const next = options.request;
+  const set = (given: unknown) => (given === undefined ? 0 : 1);
+  const auditId = ulid();
+
+  await database.batch([
+    database
+      .prepare(
+        `UPDATE wine_records SET
+          display_name = CASE WHEN ? = 1 THEN ? ELSE display_name END,
+          normalized_name = CASE WHEN ? = 1 THEN ? ELSE normalized_name END,
+          producer_name = CASE WHEN ? = 1 THEN ? ELSE producer_name END,
+          normalized_producer_name = CASE WHEN ? = 1 THEN ? ELSE normalized_producer_name END,
+          vintage_year = CASE WHEN ? = 1 THEN ? ELSE vintage_year END,
+          non_vintage = CASE WHEN ? = 1 THEN ? ELSE non_vintage END,
+          wine_type = CASE WHEN ? = 1 THEN ? ELSE wine_type END,
+          country_code = CASE WHEN ? = 1 THEN ? ELSE country_code END,
+          normalized_country_code = CASE WHEN ? = 1 THEN ? ELSE normalized_country_code END,
+          region = CASE WHEN ? = 1 THEN ? ELSE region END,
+          normalized_region = CASE WHEN ? = 1 THEN ? ELSE normalized_region END,
+          appellation = CASE WHEN ? = 1 THEN ? ELSE appellation END,
+          style_text = CASE WHEN ? = 1 THEN ? ELSE style_text END,
+          identity_status = CASE WHEN ? = 1 THEN ? ELSE identity_status END,
+          confirmed_by_user_id = CASE WHEN ? = 'confirmed' THEN ? ELSE confirmed_by_user_id END,
+          version = version + 1, updated_at = ?
+        WHERE id = ? AND space_id = ? AND version = ? AND deleted_at IS NULL`,
+      )
+      .bind(
+        set(next.displayName),
+        next.displayName ?? null,
+        set(next.displayName),
+        next.displayName === undefined ? null : normalizeWineText(next.displayName),
+        set(next.producerName),
+        next.producerName ?? null,
+        set(next.producerName),
+        next.producerName === undefined ? null : normalizeWineText(next.producerName),
+        set(next.vintageYear),
+        next.vintageYear ?? null,
+        set(next.nonVintage),
+        next.nonVintage === true ? 1 : 0,
+        set(next.wineType),
+        next.wineType ?? null,
+        set(next.countryCode),
+        next.countryCode?.toUpperCase() ?? null,
+        set(next.countryCode),
+        next.countryCode?.toUpperCase() ?? null,
+        set(next.region),
+        next.region ?? null,
+        set(next.region),
+        next.region === undefined || next.region === null ? null : normalizeWineText(next.region),
+        set(next.appellation),
+        next.appellation ?? null,
+        set(next.styleText),
+        next.styleText ?? null,
+        set(next.identityStatus),
+        next.identityStatus ?? null,
+        next.identityStatus ?? "",
+        actorId,
+        now,
+        options.wineId,
+        options.spaceId,
+        options.request.version,
+      ),
+    // A photograph attaches or detaches here, which is how a hurried entry gets
+    // its label later without being logged a second time.
+    database
+      .prepare(`DELETE FROM wine_media WHERE wine_id = ? AND ? = 1`)
+      .bind(options.wineId, set(next.mediaId)),
+    database
+      .prepare(
+        `INSERT INTO wine_media (wine_id, media_id, role, sort_order, created_at)
+        SELECT wine.id, media.id, 'front_label', 0, ?
+        FROM wine_records wine
+        JOIN media_assets media ON media.id = ? AND media.space_id = wine.space_id
+        WHERE wine.id = ? AND wine.space_id = ? AND media.processing_status = 'ready'
+        ON CONFLICT(wine_id, media_id) DO NOTHING`,
+      )
+      .bind(now, next.mediaId ?? null, options.wineId, options.spaceId),
+    database
+      .prepare(
+        `INSERT INTO change_events (
+          space_id, resource_type, resource_id, operation, resource_version, changed_at
+        )
+        SELECT space_id, 'wine_record', id, 'update', version, ?
+        FROM wine_records WHERE id = ? AND space_id = ?`,
+      )
+      .bind(now, options.wineId, options.spaceId),
+    database
+      .prepare(
+        `INSERT INTO audit_events (
+          id, actor_user_id, space_id, action, target_type, target_id,
+          request_id, safe_metadata_json, created_at
+        ) VALUES (?, ?, ?, 'wine.updated', 'wine_record', ?, ?, ?, ?)`,
+      )
+      .bind(
+        auditId,
+        actorId,
+        options.spaceId,
+        options.wineId,
+        options.requestId,
+        // Field names only. What a wine is called is the member's own text and
+        // has no place in an audit row.
+        JSON.stringify({ fields: Object.keys(next).filter((key) => key !== "version") }),
+        now,
+      ),
+  ]);
+
+  const wine = await getWineSummary(database, options.principal, options.spaceId, options.wineId);
+  if (wine === null) return { kind: "unavailable" };
+  return { kind: "success", wine };
 }

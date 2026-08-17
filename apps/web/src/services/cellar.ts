@@ -3,6 +3,10 @@ import {
   BottleListResponseSchema,
   CreateWineRequestSchema,
   CreateWineResponseSchema,
+  SpaceDetailResponseSchema,
+  UpdateSpaceRequestSchema,
+  UpdateWineRequestSchema,
+  WineResponseSchema,
   BottleResponseSchema,
   CreateActionDraftRequestSchema,
   CreatePriceObservationRequestSchema,
@@ -19,6 +23,10 @@ import {
   type BottleListResponse,
   type CreateWineRequest,
   type CreateWineResponse,
+  type SpaceDetailResponse,
+  type UpdateSpaceRequest,
+  type UpdateWineRequest,
+  type WineResponse,
   type BottleResponse,
   type CreateActionDraftRequest,
   type CreatePriceObservationRequest,
@@ -272,4 +280,45 @@ export async function createWineDirectly(
   });
   if (!response.ok) throw await apiError(response);
   return CreateWineResponseSchema.parse(await response.json());
+}
+
+/**
+ * Correct a wine that already exists.
+ *
+ * Online only, like the rest of this file: a correction is a considered act at
+ * a screen, not something typed in a restaurant with no signal, and putting it
+ * through the offline queue would mean reconciling two versions of an edit.
+ */
+export async function updateWine(
+  tokenSource: TokenSource,
+  spaceId: string,
+  wineId: string,
+  request: UpdateWineRequest,
+): Promise<WineResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/wines/${wineId}`,
+    {
+      body: JSON.stringify(UpdateWineRequestSchema.parse(request)),
+      headers: { "Content-Type": "application/json" },
+      method: "PATCH",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return WineResponseSchema.parse(await response.json());
+}
+
+/** Rename a Space, or change the language its content defaults to. Owners only. */
+export async function updateSpace(
+  tokenSource: TokenSource,
+  spaceId: string,
+  request: UpdateSpaceRequest,
+): Promise<SpaceDetailResponse> {
+  const response = await authenticatedFetch(tokenSource, `/api/v1/spaces/${spaceId}`, {
+    body: JSON.stringify(UpdateSpaceRequestSchema.parse(request)),
+    headers: { "Content-Type": "application/json" },
+    method: "PATCH",
+  });
+  if (!response.ok) throw await apiError(response);
+  return SpaceDetailResponseSchema.parse(await response.json());
 }
