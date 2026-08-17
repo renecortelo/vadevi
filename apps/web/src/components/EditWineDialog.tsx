@@ -39,7 +39,11 @@ export function EditWineDialog({
   );
   const [region, setRegion] = useState(wine.region ?? "");
   const [saving, setSaving] = useState(false);
-  const [error, setError] = useState<"conflict" | "failed" | null>(null);
+  // Which step failed, not merely that one did. "The changes could not be
+  // saved" is the same sentence whether the photograph never reached storage or
+  // the wine itself was refused, and those need different things from the
+  // reader.
+  const [error, setError] = useState<"conflict" | "failed" | "photo" | null>(null);
   // A photograph chosen here is held until the edit is saved, so cancelling
   // leaves nothing uploaded and nothing to clean up.
   const [photo, setPhoto] = useState<Awaited<ReturnType<typeof preprocessImage>> | null>(null);
@@ -73,45 +77,61 @@ export function EditWineDialog({
     if (user === null || saving) return;
     setSaving(true);
     setError(null);
-    const spaceId = bootstrap.data.user.activeSpaceId;
     try {
       // The photograph is reserved and uploaded first, so the wine is only
       // pointed at media that already exists.
       let mediaId: string | undefined;
       if (photo !== null) {
-        const reservation = await reserveMedia(
-          user,
-          spaceId,
-          {
-            byteSize: photo.byteSize,
-            height: photo.height,
-            kind: "label",
-            mimeType: photo.mimeType,
-            sha256: photo.sha256,
-            width: photo.width,
-          },
-          createIdempotencyKey(),
-        );
-        mediaId = await uploadMedia(user, reservation.data.uploadPath, photo.blob);
+        try {
+          mediaId = await storePhoto();
+        } catch {
+          // Storage is a separate system with its own way of being unavailable,
+          // and the wine is untouched when it is.
+          setError("photo");
+          return;
+        }
       }
-      await updateWine(user, spaceId, wine.id, {
-        ...(mediaId === undefined ? {} : { mediaId }),
-        displayName: displayName.trim(),
-        producerName: producerName.trim(),
-        region: region.trim().length === 0 ? null : region.trim(),
-        version: wine.version,
-        vintageYear: vintageYear.trim().length === 0 ? null : Number(vintageYear),
-      });
-      await onSaved();
-      onClose();
+      await saveFields(mediaId);
     } catch (cause) {
-      // A conflict is not a failure: someone else got there first, and saying so
-      // is the difference between "try again" and "your work is gone".
       const status = (cause as { status?: number }).status;
       setError(status === 409 ? "conflict" : "failed");
     } finally {
       setSaving(false);
     }
+  }
+
+  /** Reserve, upload, and return the id the wine will point at. */
+  async function storePhoto(): Promise<string> {
+    if (user === null || photo === null) throw new Error("No photograph to store.");
+    const spaceId = bootstrap.data.user.activeSpaceId;
+    const reservation = await reserveMedia(
+      user,
+      spaceId,
+      {
+        byteSize: photo.byteSize,
+        height: photo.height,
+        kind: "label",
+        mimeType: photo.mimeType,
+        sha256: photo.sha256,
+        width: photo.width,
+      },
+      createIdempotencyKey(),
+    );
+    return uploadMedia(user, reservation.data.uploadPath, photo.blob);
+  }
+
+  async function saveFields(mediaId: string | undefined) {
+    if (user === null) return;
+    await updateWine(user, bootstrap.data.user.activeSpaceId, wine.id, {
+      ...(mediaId === undefined ? {} : { mediaId }),
+      displayName: displayName.trim(),
+      producerName: producerName.trim(),
+      region: region.trim().length === 0 ? null : region.trim(),
+      version: wine.version,
+      vintageYear: vintageYear.trim().length === 0 ? null : Number(vintageYear),
+    });
+    await onSaved();
+    onClose();
   }
 
   return (
@@ -186,7 +206,9 @@ export function EditWineDialog({
         </div>
         {error === null ? null : (
           <p className="form-error" role="alert">
-            {t(error === "conflict" ? "memory.editConflict" : "memory.editError")}
+            {t(
+              `memory.edit${error === "conflict" ? "Conflict" : error === "photo" ? "PhotoError" : "Error"}`,
+            )}
           </p>
         )}
       </form>

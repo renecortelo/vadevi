@@ -31,11 +31,14 @@ jobs:
     # Split across two runners, each with its own server.
     #
     # The suite shares one Wrangler process, and on a two-core runner that
-    # process has twice fallen over part-way through — once during the offline
-    # drills, once during the accessibility sweep. Every test after it then
-    # fails with a refused connection, which reads as a broken change and is
-    # not one. Halving what any one server has to survive is the part of that
-    # we control.
+    # process has fallen over part-way through several times now — during the
+    # offline drills, during the accessibility sweep, and after an editing
+    # test. Every test after it fails with a refused connection, which reads as
+    # a broken change and is not one. There is no test in common between the
+    # occurrences and Wrangler prints `✘ [ERROR]` with an empty body, so the
+    # cause is still unknown; halving what any one server has to survive is the
+    # part of it we control, and the log capture below is how the next one gets
+    # diagnosed rather than guessed at.
     strategy:
       fail-fast: false
       matrix:
@@ -62,6 +65,16 @@ jobs:
           path: |
             playwright-report
             test-results
+          retention-days: 7
+      # Wrangler names this file on its way out and we have never read one.
+      # When the server dies the console message is empty, so this is the only
+      # place the reason can be.
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: wrangler-log-${{ matrix.shard }}
+          path: ~/.config/.wrangler/logs
+          if-no-files-found: ignore
           retention-days: 7
 
   # The offline and service-worker drills, on a server of their own. They cut
@@ -90,4 +103,11 @@ jobs:
           path: |
             playwright-report
             test-results
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: wrangler-log-resilience
+          path: ~/.config/.wrangler/logs
+          if-no-files-found: ignore
           retention-days: 7
