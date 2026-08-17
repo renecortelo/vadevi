@@ -184,35 +184,64 @@ export function GrapesIcon() {
   );
 }
 
-/** Identify: a label under a lens — reading what is on the bottle. */
+/** Identify: a bottle held under a magnifier — looking closely at what it is. */
 export function ReadLabelIcon() {
   return (
     <Frame>
-      <path d="M8.4 2.8h7.2v11.4a3.6 3.6 0 0 1-7.2 0z" />
-      <path d="M8.4 6.4h7.2" />
-      <circle cx="13.9" cy="15.9" r="4.3" />
-      <path d="M17 19 20.6 22.6" />
+      <path d="M10.0 6.3H11.0V8.73C11.0 9.46 12.0 9.46 12.0 9.95V13.89Q12.0 14.4 11.49 14.4H9.51Q9.0 14.4 9.0 13.89V9.95C9.0 9.46 10.0 9.46 10.0 8.73Z" />
+      <circle cx="10.5" cy="10.5" r="7.2" />
+      <path d="M15.6 15.6 20.9 20.9" />
     </Frame>
   );
 }
 
-/** Wishlist: a bottle you do not have yet, marked to remember. */
+/**
+ * Cellar: three bottles standing together, in the artwork's own silhouette —
+ * long neck, curved shoulder, straight body — at the skyline heights the
+ * wordmark repeats.
+ */
+export function CellarIcon() {
+  return (
+    <Frame>
+      <path d="M5.68 5.2H6.92V9.76C6.92 11.13 8.35 11.13 8.35 12.04V19.7Q8.35 20.4 7.65 20.4H4.95Q4.25 20.4 4.25 19.7V12.04C4.25 11.13 5.68 11.13 5.68 9.76Z" />
+      <path d="M11.34 3.6H12.66V8.64C12.66 10.15 14.15 10.15 14.15 11.16V19.67Q14.15 20.4 13.42 20.4H10.58Q9.85 20.4 9.85 19.67V11.16C9.85 10.15 11.34 10.15 11.34 8.64Z" />
+      <path d="M17.1 6.0H18.3V10.32C18.3 11.62 19.7 11.62 19.7 12.48V19.72Q19.7 20.4 19.02 20.4H16.38Q15.7 20.4 15.7 19.72V12.48C15.7 11.62 17.1 11.62 17.1 10.32Z" />
+    </Frame>
+  );
+}
+
+/**
+ * Wishlist: a corkscrew, the vintage kind — a T-handle, a rounded frame, and a
+ * helix — set on the diagonal it is actually held at. It is the bottle you mean
+ * to open, once you have it.
+ */
 export function WishlistIcon() {
   return (
     <Frame>
-      <path d="M9.6 2.9h3.6v3.4l1.7 2.6v10.9a1.2 1.2 0 0 1-1.2 1.2H9.1a1.2 1.2 0 0 1-1.2-1.2V8.9l1.7-2.6z" />
-      <path d="M17.6 3.2v5.6l2.4-1.6 2.4 1.6V3.2z" />
+      <g transform="rotate(-24 12 12)">
+        <path d="M8.6 4H15.4" />
+        <path d="M12 4V6" />
+        <ellipse cx="12" cy="8.2" rx="2.9" ry="2.1" />
+        <path d="M12 10.3V11.4" />
+        <path d="M12 11.6q2.1 1.1 0 2.2 -2.1 1.1 0 2.2 2.1 1.1 0 2.2 -2.1 1.1 0 2.2" />
+        <path d="M12 20V21" />
+      </g>
     </Frame>
   );
 }
 
-/** Prices: what a bottle costs, over time. */
+/** Prices: a shopping bag with a bunch of grapes — what a bottle costs to buy. */
 export function PriceIcon() {
   return (
     <Frame>
-      <circle cx="12" cy="12" r="8.6" />
-      <path d="M14.6 8.9a2.9 2.9 0 0 0-2.6-1.4c-1.7 0-2.8.9-2.8 2.1 0 3 5.6 1.6 5.6 4.6 0 1.3-1.2 2.3-3 2.3a3.1 3.1 0 0 1-2.8-1.5" />
-      <path d="M12 5.6v12.8" />
+      <path d="M8.5 8.7 7.4 19.3a1.1 1.1 0 0 0 1.1 1.2H15.5a1.1 1.1 0 0 0 1.1-1.2L15.5 8.7Z" />
+      <path d="M9.6 8.7v-.6a1.3 1.3 0 0 1 2.6 0v.6" />
+      <path d="M11.8 8.7v-.6a1.3 1.3 0 0 1 2.6 0v.6" />
+      <g fill="currentColor" stroke="none">
+        <circle cx="10.7" cy="13.8" r="1.3" />
+        <circle cx="13.3" cy="13.8" r="1.3" />
+        <circle cx="12" cy="16.1" r="1.3" />
+      </g>
     </Frame>
   );
 }
