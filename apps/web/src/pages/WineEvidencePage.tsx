@@ -150,9 +150,6 @@ export function WineEvidencePage() {
   const [researching, setResearching] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
   const [researchError, setResearchError] = useState<string | null>(null);
-  const [wineEntityId, setWineEntityId] = useState("");
-  const [producerEntityId, setProducerEntityId] = useState("");
-  const [regionEntityId, setRegionEntityId] = useState("");
   const [online, setOnline] = useState(() => navigator.onLine);
 
   useEffect(() => {
@@ -228,11 +225,10 @@ export function WineEvidencePage() {
     setResearching(true);
     setResearchError(null);
     try {
-      const wikidataEntityIds = {
-        ...(producerEntityId.length === 0 ? {} : { producer: producerEntityId }),
-        ...(regionEntityId.length === 0 ? {} : { region: regionEntityId }),
-        ...(wineEntityId.length === 0 ? {} : { wine: wineEntityId }),
-      };
+      // No hand-typed Wikidata IDs: the barcode lookup runs automatically on the
+      // server, and searching a source by name is coming with the knowledge
+      // layer. Asking a reader for a "Q…" identifier was never something they
+      // could answer.
       const result = await createResearchJob(
         user,
         spaceId,
@@ -240,12 +236,8 @@ export function WineEvidencePage() {
         {
           locale: researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
           maxSources: 4,
-          topics: [
-            "identity",
-            ...(producerEntityId.length === 0 ? [] : (["producer"] as const)),
-            ...(regionEntityId.length === 0 ? [] : (["region"] as const)),
-          ],
-          wikidataEntityIds,
+          topics: ["identity"],
+          wikidataEntityIds: {},
         },
         crypto.randomUUID(),
       );
@@ -295,42 +287,6 @@ export function WineEvidencePage() {
           <p className="research-panel__notice">{t("evidence.research.disabled")}</p>
         ) : (
           <>
-            <div className="research-fields">
-              <label htmlFor="research-wine-entity">
-                {t("evidence.research.wineEntity")}
-                <input
-                  id="research-wine-entity"
-                  inputMode="text"
-                  onChange={(event) => setWineEntityId(event.target.value.trim().toUpperCase())}
-                  pattern="Q[1-9][0-9]{0,11}"
-                  placeholder="Q…"
-                  value={wineEntityId}
-                />
-              </label>
-              <label htmlFor="research-producer-entity">
-                {t("evidence.research.producerEntity")}
-                <input
-                  id="research-producer-entity"
-                  inputMode="text"
-                  onChange={(event) => setProducerEntityId(event.target.value.trim().toUpperCase())}
-                  pattern="Q[1-9][0-9]{0,11}"
-                  placeholder="Q…"
-                  value={producerEntityId}
-                />
-              </label>
-              <label htmlFor="research-region-entity">
-                {t("evidence.research.regionEntity")}
-                <input
-                  id="research-region-entity"
-                  inputMode="text"
-                  onChange={(event) => setRegionEntityId(event.target.value.trim().toUpperCase())}
-                  pattern="Q[1-9][0-9]{0,11}"
-                  placeholder="Q…"
-                  value={regionEntityId}
-                />
-              </label>
-            </div>
-            <p className="field-help">{t("evidence.research.entityHelp")}</p>
             <button
               className="action-link action-link--secondary"
               disabled={researching || !online}
