@@ -554,6 +554,52 @@ describe("Vicenç deterministic read path", () => {
     ]);
   });
 
+  it("surfaces a wine by a semantic note match when the term search would miss it", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    // The wine's name shares no word with the question; only its note does.
+    const wine = await createWine(ownerToken, spaceId, "Unrelated Name Zzz");
+    const noteId = randomOpaqueToken();
+    const now = new Date().toISOString();
+    await env.DB.prepare(
+      `INSERT INTO tasting_notes
+        (id, space_id, wine_id, author_user_id, mode, state, tasted_at, comment, version, created_at, updated_at)
+        VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, ?, 1, ?, ?)`,
+    )
+      .bind(noteId, spaceId, wine.id, owner.data.user.id, now, "molt fresc i mineral", now, now)
+      .run();
+
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "none",
+      externalResearch: false,
+      language: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "es",
+        message: "vinos minerales",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: {
+        index: async () => {},
+        remove: async () => {},
+        search: async () => [{ noteId, score: 0.92, spaceId, wineId: wine.id }],
+      },
+      spaceId,
+    });
+    const ids = (response?.data.results ?? []).map(
+      (result: AssistantSearchResult) => result.wine.id,
+    );
+    expect(ids).toContain(wine.id);
+  });
+
   it("uses optional provider language only after sentence-to-statement enforcement", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;
@@ -588,6 +634,7 @@ describe("Vicenç deterministic read path", () => {
         threadId: null,
       },
       requestId: randomOpaqueToken(),
+      semanticNotes: null,
       spaceId,
     });
     expect(response?.data).toMatchObject({

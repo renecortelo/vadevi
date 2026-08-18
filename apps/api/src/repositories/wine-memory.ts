@@ -111,7 +111,7 @@ const wineSelect = `SELECT wine.id, wine.display_name, wine.producer_name, wine.
   ) AS media_id
 FROM wine_records wine`;
 
-async function getWineSummary(
+export async function getWineSummary(
   database: D1Database,
   principal: FirebasePrincipal,
   spaceId: string,
