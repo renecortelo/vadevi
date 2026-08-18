@@ -76,13 +76,20 @@ default stays `none` and nothing about this is committed. What is set:
 | `ai` binding              | `{ "binding": "AI" }`                                | Workers AI access                              |
 | `AI_PROVIDER`             | `cloudflare`                                         | both AI features                               |
 | `AI_OCR_MODEL`            | `@cf/meta/llama-3.2-11b-vision-instruct`             | reading a label from a photo                   |
-| `AI_MODEL`                | `@cf/meta/llama-3.1-8b-instruct`                     | Vicenç's replies                               |
+| `AI_MODEL`                | `@cf/meta/llama-3.3-70b-instruct-fp8-fast`           | Vicenç's replies                               |
 | `RESEARCH_PROVIDER`       | `open_data`                                          | external evidence on a wine                    |
 | `EXTERNAL_API_USER_AGENT` | `VaDeVi/0.1 (https://github.com/renecortelo/vadevi)` | the same — it is the second half of the switch |
 
 The OCR model is one of the three on the allowlist in `apps/api/src/adapters/label-ocr.ts`.
-The text model is a current Cloudflare one; if Vicenç ever answers with an error,
-check the model catalogue and swap `AI_MODEL` — the names change over time.
+
+**The text model changed once already.** The first choice,
+`@cf/meta/llama-3.1-8b-instruct`, turned out to be deprecated (Cloudflare retired
+it on 2026-05-30), so Vicenç fell back to structured search and `wrangler tail`
+showed error `5028`. `AI_MODEL` is now `@cf/meta/llama-3.3-70b-instruct-fp8-fast`,
+a current one. Model names change; if Vicenç ever degrades again, run
+`wrangler tail` — the adapter logs the exact model error now — and swap `AI_MODEL`
+for one from the current catalogue. Worth checking `AI_OCR_MODEL` the same way the
+first time you try a photo, in case that vision model has been retired too.
 
 **The external evidence took two variables, not one.** `RESEARCH_PROVIDER=open_data`
 alone left it off: the code also requires `EXTERNAL_API_USER_AGENT`, because Wikidata
