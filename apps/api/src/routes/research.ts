@@ -3,13 +3,15 @@ import {
   CreateResearchJobRequestSchema,
   ErrorEnvelopeSchema,
   IdempotencyKeySchema,
+  ResearchCandidatesQuerySchema,
+  ResearchCandidatesResponseSchema,
   ResearchJobPathSchema,
   ResearchJobResponseSchema,
   WineFactsPathSchema,
 } from "@vadevi/contracts";
 
 import { createResearchPorts } from "../adapters/research-factory";
-import { createResearchJob, getResearchJob } from "../repositories/research";
+import { createResearchJob, getResearchJob, researchCandidates } from "../repositories/research";
 import { reserveProviderBudget } from "../services/usage";
 import type { ApiEnvironment } from "../types";
 
@@ -82,6 +84,30 @@ const getResearchRoute = createRoute({
   },
 });
 
+const researchCandidatesRoute = createRoute({
+  method: "get",
+  path: "/api/v1/spaces/{spaceId}/wines/{wineId}/research-candidates",
+  operationId: "researchCandidates",
+  tags: ["Research"],
+  summary: "Offer matching Wikidata entities for the wine's producer and region",
+  security: [{ FirebaseBearer: [] }],
+  request: { params: WineFactsPathSchema, query: ResearchCandidatesQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: ResearchCandidatesResponseSchema } },
+      description: "Matching entities per subject for the reader to disambiguate.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication is required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The authorized wine is unavailable.",
+    },
+  },
+});
+
 function errorEnvelope(
   requestId: string,
   code: "IDEMPOTENCY_CONFLICT" | "NOT_FOUND",
@@ -132,6 +158,25 @@ export function registerResearchRoutes(app: OpenAPIHono<ApiEnvironment>) {
       `/api/v1/spaces/${params.spaceId}/research-jobs/${result.response.data.id}`,
     );
     return context.json(ResearchJobResponseSchema.parse(result.response), 201);
+  });
+
+  app.openapi(researchCandidatesRoute, async (context) => {
+    const params = context.req.valid("param");
+    const query = context.req.valid("query");
+    const ports = createResearchPorts(context.env.DB!, context.env);
+    const result = await researchCandidates(context.env.DB!, {
+      locale: query.locale,
+      ports,
+      principal: context.get("principal"),
+      spaceId: params.spaceId,
+      wineId: params.wineId,
+    });
+    return result === null
+      ? context.json(
+          errorEnvelope(context.get("requestId"), "NOT_FOUND", "The resource was not found."),
+          404,
+        )
+      : context.json(ResearchCandidatesResponseSchema.parse(result), 200);
   });
 
   app.openapi(getResearchRoute, async (context) => {

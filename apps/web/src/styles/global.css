@@ -1397,6 +1397,72 @@ p {
   padding-inline-start: var(--space-5);
 }
 
+.research-picker {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.research-picker__help {
+  color: var(--color-text-muted);
+}
+
+.research-picker__subject {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+}
+
+.research-picker__legend {
+  color: var(--color-text-muted);
+  padding-inline: var(--space-2);
+}
+
+.research-picker__legend strong {
+  color: var(--color-text);
+}
+
+.research-picker__option {
+  align-items: start;
+  cursor: pointer;
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: auto 1fr;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.research-picker__option:hover {
+  background: var(--color-surface-muted);
+}
+
+.research-picker__option input {
+  margin-block-start: 0.2rem;
+}
+
+.research-picker__option-body {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.research-picker__option-label {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.research-picker__option-desc {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.research-picker__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
 .fact-groups,
 .fact-group {
   display: grid;

@@ -408,6 +408,16 @@
         "no_results": "Não foram encontrados factos seguros e citados.",
         "partial_results": "Uma ou mais fontes estavam indisponíveis; são mostrados resultados parciais.",
         "source_limit_reached": "Foi atingido o limite de fontes."
+      },
+      "searching": "A procurar correspondências…",
+      "picker": {
+        "help": "Escolha a que entidade se refere cada nome. Só o que escolher é investigado, e os resultados chegam à mesma como propostas para aceitar.",
+        "noneFound": "Não encontrámos entidades correspondentes para desambiguar. Ainda pode investigar os dados do vinho a partir do código de barras.",
+        "producer": "Produtor",
+        "region": "Região",
+        "none": "Nenhuma destas",
+        "confirm": "Investigar a selecionada",
+        "cancel": "Cancelar"
       }
     }
   },
