@@ -2529,6 +2529,10 @@
                     "wine": {
                       "type": "object",
                       "properties": {
+                        "alcoholAbv": {
+                          "type": "number",
+                          "nullable": true
+                        },
                         "appellation": {
                           "type": "string",
                           "nullable": true
@@ -2543,6 +2547,26 @@
                         },
                         "displayName": {
                           "type": "string"
+                        },
+                        "grapes": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "percentage": {
+                                "type": "number",
+                                "nullable": true
+                              }
+                            },
+                            "required": [
+                              "name",
+                              "percentage"
+                            ],
+                            "additionalProperties": false
+                          }
                         },
                         "id": {
                           "type": "string",
@@ -2611,10 +2635,12 @@
                         }
                       },
                       "required": [
+                        "alcoholAbv",
                         "appellation",
                         "countryCode",
                         "createdAt",
                         "displayName",
+                        "grapes",
                         "id",
                         "identityStatus",
                         "lastTastedAt",
@@ -4435,6 +4461,10 @@
                 "items": {
                   "type": "object",
                   "properties": {
+                    "alcoholAbv": {
+                      "type": "number",
+                      "nullable": true
+                    },
                     "appellation": {
                       "type": "string",
                       "nullable": true
@@ -4449,6 +4479,26 @@
                     },
                     "displayName": {
                       "type": "string"
+                    },
+                    "grapes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "percentage": {
+                            "type": "number",
+                            "nullable": true
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "percentage"
+                        ],
+                        "additionalProperties": false
+                      }
                     },
                     "id": {
                       "type": "string",
@@ -4517,10 +4567,12 @@
                     }
                   },
                   "required": [
+                    "alcoholAbv",
                     "appellation",
                     "countryCode",
                     "createdAt",
                     "displayName",
+                    "grapes",
                     "id",
                     "identityStatus",
                     "lastTastedAt",
@@ -4540,6 +4592,10 @@
               "wine": {
                 "type": "object",
                 "properties": {
+                  "alcoholAbv": {
+                    "type": "number",
+                    "nullable": true
+                  },
                   "appellation": {
                     "type": "string",
                     "nullable": true
@@ -4554,6 +4610,26 @@
                   },
                   "displayName": {
                     "type": "string"
+                  },
+                  "grapes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "percentage": {
+                          "type": "number",
+                          "nullable": true
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "percentage"
+                      ],
+                      "additionalProperties": false
+                    }
                   },
                   "id": {
                     "type": "string",
@@ -4622,10 +4698,12 @@
                   }
                 },
                 "required": [
+                  "alcoholAbv",
                   "appellation",
                   "countryCode",
                   "createdAt",
                   "displayName",
+                  "grapes",
                   "id",
                   "identityStatus",
                   "lastTastedAt",
@@ -4657,6 +4735,12 @@
       "CreateWineRequest": {
         "type": "object",
         "properties": {
+          "alcoholAbv": {
+            "type": "number",
+            "nullable": true,
+            "minimum": 0,
+            "maximum": 100
+          },
           "appellation": {
             "type": "string",
             "minLength": 1,
@@ -4683,6 +4767,30 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 160
+          },
+          "grapes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "percentage": {
+                  "type": "number",
+                  "nullable": true,
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 12
           },
           "identityStatus": {
             "type": "string",
@@ -4750,6 +4858,10 @@
               "wine": {
                 "type": "object",
                 "properties": {
+                  "alcoholAbv": {
+                    "type": "number",
+                    "nullable": true
+                  },
                   "appellation": {
                     "type": "string",
                     "nullable": true
@@ -4764,6 +4876,26 @@
                   },
                   "displayName": {
                     "type": "string"
+                  },
+                  "grapes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "percentage": {
+                          "type": "number",
+                          "nullable": true
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "percentage"
+                      ],
+                      "additionalProperties": false
+                    }
                   },
                   "id": {
                     "type": "string",
@@ -4832,10 +4964,12 @@
                   }
                 },
                 "required": [
+                  "alcoholAbv",
                   "appellation",
                   "countryCode",
                   "createdAt",
                   "displayName",
+                  "grapes",
                   "id",
                   "identityStatus",
                   "lastTastedAt",
@@ -4866,6 +5000,12 @@
       "UpdateWineRequest": {
         "type": "object",
         "properties": {
+          "alcoholAbv": {
+            "type": "number",
+            "nullable": true,
+            "minimum": 0,
+            "maximum": 100
+          },
           "appellation": {
             "type": "string",
             "nullable": true,
@@ -4881,6 +5021,30 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 160
+          },
+          "grapes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "percentage": {
+                  "type": "number",
+                  "nullable": true,
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 12
           },
           "identityStatus": {
             "type": "string",
@@ -4954,6 +5118,10 @@
             "items": {
               "type": "object",
               "properties": {
+                "alcoholAbv": {
+                  "type": "number",
+                  "nullable": true
+                },
                 "appellation": {
                   "type": "string",
                   "nullable": true
@@ -4968,6 +5136,26 @@
                 },
                 "displayName": {
                   "type": "string"
+                },
+                "grapes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "percentage": {
+                        "type": "number",
+                        "nullable": true
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "percentage"
+                    ],
+                    "additionalProperties": false
+                  }
                 },
                 "id": {
                   "type": "string",
@@ -5036,10 +5224,12 @@
                 }
               },
               "required": [
+                "alcoholAbv",
                 "appellation",
                 "countryCode",
                 "createdAt",
                 "displayName",
+                "grapes",
                 "id",
                 "identityStatus",
                 "lastTastedAt",
@@ -6705,6 +6895,12 @@
           "wine": {
             "type": "object",
             "properties": {
+              "alcoholAbv": {
+                "type": "number",
+                "nullable": true,
+                "minimum": 0,
+                "maximum": 100
+              },
               "appellation": {
                 "type": "string",
                 "minLength": 1,
@@ -6727,6 +6923,30 @@
                 "type": "string",
                 "minLength": 1,
                 "maxLength": 160
+              },
+              "grapes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120
+                    },
+                    "percentage": {
+                      "type": "number",
+                      "nullable": true,
+                      "minimum": 0,
+                      "maximum": 100
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 12
               },
               "identityStatus": {
                 "type": "string",
@@ -6856,6 +7076,10 @@
               "wine": {
                 "type": "object",
                 "properties": {
+                  "alcoholAbv": {
+                    "type": "number",
+                    "nullable": true
+                  },
                   "appellation": {
                     "type": "string",
                     "nullable": true
@@ -6870,6 +7094,26 @@
                   },
                   "displayName": {
                     "type": "string"
+                  },
+                  "grapes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "percentage": {
+                          "type": "number",
+                          "nullable": true
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "percentage"
+                      ],
+                      "additionalProperties": false
+                    }
                   },
                   "id": {
                     "type": "string",
@@ -6938,10 +7182,12 @@
                   }
                 },
                 "required": [
+                  "alcoholAbv",
                   "appellation",
                   "countryCode",
                   "createdAt",
                   "displayName",
+                  "grapes",
                   "id",
                   "identityStatus",
                   "lastTastedAt",
@@ -7160,6 +7406,12 @@
                     "payload": {
                       "type": "object",
                       "properties": {
+                        "alcoholAbv": {
+                          "type": "number",
+                          "nullable": true,
+                          "minimum": 0,
+                          "maximum": 100
+                        },
                         "appellation": {
                           "type": "string",
                           "minLength": 1,
@@ -7182,6 +7434,30 @@
                           "type": "string",
                           "minLength": 1,
                           "maxLength": 160
+                        },
+                        "grapes": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 120
+                              },
+                              "percentage": {
+                                "type": "number",
+                                "nullable": true,
+                                "minimum": 0,
+                                "maximum": 100
+                              }
+                            },
+                            "required": [
+                              "name"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "maxItems": 12
                         },
                         "identityStatus": {
                           "type": "string",
@@ -7724,6 +8000,10 @@
                     "wine": {
                       "type": "object",
                       "properties": {
+                        "alcoholAbv": {
+                          "type": "number",
+                          "nullable": true
+                        },
                         "appellation": {
                           "type": "string",
                           "nullable": true
@@ -7738,6 +8018,26 @@
                         },
                         "displayName": {
                           "type": "string"
+                        },
+                        "grapes": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "percentage": {
+                                "type": "number",
+                                "nullable": true
+                              }
+                            },
+                            "required": [
+                              "name",
+                              "percentage"
+                            ],
+                            "additionalProperties": false
+                          }
                         },
                         "id": {
                           "type": "string",
@@ -7806,10 +8106,12 @@
                         }
                       },
                       "required": [
+                        "alcoholAbv",
                         "appellation",
                         "countryCode",
                         "createdAt",
                         "displayName",
+                        "grapes",
                         "id",
                         "identityStatus",
                         "lastTastedAt",

@@ -15,8 +15,27 @@ export const WineTypeSchema = z.enum([
 ]);
 export const TernaryChoiceSchema = z.enum(["yes", "no", "unsure"]);
 
+// A grape variety on the label, with an optional blend percentage. The reader
+// types a name; the percentage is theirs to leave blank when the bottle does not
+// state it. Percentages need not sum to 100 — a label often lists only the
+// majority grapes.
+export const WineGrapeSchema = z
+  .object({
+    name: z.string().trim().min(1).max(120),
+    percentage: z.number().min(0).max(100).nullable().optional(),
+  })
+  .strict();
+
+export const WineGrapeSummarySchema = z
+  .object({
+    name: z.string(),
+    percentage: z.number().nullable(),
+  })
+  .strict();
+
 const CreateWineFieldsSchema = z
   .object({
+    alcoholAbv: z.number().min(0).max(100).nullable().optional(),
     appellation: z.string().trim().min(1).max(160).optional(),
     barcode: z
       .string()
@@ -29,6 +48,7 @@ const CreateWineFieldsSchema = z
       .regex(/^[A-Z]{2}$/)
       .optional(),
     displayName: z.string().trim().min(1).max(160),
+    grapes: z.array(WineGrapeSchema).max(12).optional(),
     identityStatus: z.enum(["draft", "confirmed", "needs_review"]),
     mediaId: ResourceIdSchema.optional(),
     nonVintage: z.boolean().default(false),
@@ -69,6 +89,7 @@ export const CreateWineRequestSchema = CreateWineFieldsSchema.superRefine(
  */
 export const UpdateWineRequestSchema = z
   .object({
+    alcoholAbv: z.number().min(0).max(100).nullable().optional(),
     appellation: z.string().trim().min(1).max(160).nullable().optional(),
     countryCode: z
       .string()
@@ -77,6 +98,8 @@ export const UpdateWineRequestSchema = z
       .nullable()
       .optional(),
     displayName: z.string().trim().min(1).max(160).optional(),
+    /** Replaces the whole varietal list when given; omit to leave it untouched. */
+    grapes: z.array(WineGrapeSchema).max(12).optional(),
     identityStatus: z.enum(["draft", "confirmed", "needs_review"]).optional(),
     /** The label photograph, which a hurried entry rarely has. */
     mediaId: ResourceIdSchema.nullable().optional(),
@@ -100,10 +123,12 @@ export type UpdateWineRequest = z.infer<typeof UpdateWineRequestSchema>;
 
 export const WineSummarySchema = z
   .object({
+    alcoholAbv: z.number().nullable(),
     appellation: z.string().nullable(),
     countryCode: z.string().nullable(),
     createdAt: ResourceTimestampSchema,
     displayName: z.string(),
+    grapes: z.array(WineGrapeSummarySchema),
     id: ResourceIdSchema,
     identityStatus: z.enum(["draft", "confirmed", "needs_review"]),
     lastTastedAt: ResourceTimestampSchema.nullable(),
@@ -587,5 +612,7 @@ export type SyncMutation = z.infer<typeof SyncMutationSchema>;
 export type SyncRequest = z.infer<typeof SyncRequestSchema>;
 export type SyncResponse = z.infer<typeof SyncResponseSchema>;
 export type TastingNoteResponse = z.infer<typeof TastingNoteResponseSchema>;
+export type WineGrape = z.infer<typeof WineGrapeSchema>;
+export type WineGrapeSummary = z.infer<typeof WineGrapeSummarySchema>;
 export type WineMemoryResponse = z.infer<typeof WineMemoryResponseSchema>;
 export type WineSummary = z.infer<typeof WineSummarySchema>;

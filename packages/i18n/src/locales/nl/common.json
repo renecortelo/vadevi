@@ -1025,5 +1025,15 @@
   "locale": {
     "label": "Taal van de interface",
     "saveError": "Taal niet opgeslagen"
+  },
+  "wineDetails": {
+    "alcohol": "Alcoholpercentage (% vol.)",
+    "alcoholPlaceholder": "bijv. 13,5",
+    "grapes": "Druivenrassen",
+    "grapesEmpty": "Nog geen rassen.",
+    "grapeName": "Ras",
+    "grapePercentage": "Percentage",
+    "grapeRemove": "Ras verwijderen",
+    "grapeAdd": "Ras toevoegen"
   }
 }

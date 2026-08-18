@@ -1025,5 +1025,15 @@
   "locale": {
     "label": "Idioma da interface",
     "saveError": "Idioma não guardado"
+  },
+  "wineDetails": {
+    "alcohol": "Teor de álcool (% vol.)",
+    "alcoholPlaceholder": "p. ex. 13,5",
+    "grapes": "Castas",
+    "grapesEmpty": "Ainda não há castas.",
+    "grapeName": "Casta",
+    "grapePercentage": "Percentagem",
+    "grapeRemove": "Remover casta",
+    "grapeAdd": "Adicionar casta"
   }
 }

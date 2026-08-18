@@ -1,4 +1,4 @@
-import type { WineSummary } from "@vadevi/contracts";
+import type { WineGrapeSummary, WineSummary } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -38,6 +38,15 @@ export function EditWineDialog({
     wine.vintageYear === null ? "" : String(wine.vintageYear),
   );
   const [region, setRegion] = useState(wine.region ?? "");
+  const [alcoholAbv, setAlcoholAbv] = useState(
+    wine.alcoholAbv === null ? "" : String(wine.alcoholAbv),
+  );
+  const [grapes, setGrapes] = useState<{ name: string; percentage: string }[]>(
+    wine.grapes.map((grape: WineGrapeSummary) => ({
+      name: grape.name,
+      percentage: grape.percentage === null ? "" : String(grape.percentage),
+    })),
+  );
   const [saving, setSaving] = useState(false);
   // Which step failed, not merely that one did. "The changes could not be
   // saved" is the same sentence whether the photograph never reached storage or
@@ -122,9 +131,24 @@ export function EditWineDialog({
 
   async function saveFields(mediaId: string | undefined) {
     if (user === null) return;
+    const alcoholParsed = Number(alcoholAbv.replace(",", ".").trim());
+    const grapePayload = grapes
+      .map((row) => {
+        const parsed = Number(row.percentage.replace(",", ".").trim());
+        return {
+          name: row.name.trim(),
+          percentage:
+            row.percentage.trim().length === 0 || !Number.isFinite(parsed) ? null : parsed,
+        };
+      })
+      .filter((grape) => grape.name.length > 0)
+      .slice(0, 12);
     await updateWine(user, bootstrap.data.user.activeSpaceId, wine.id, {
       ...(mediaId === undefined ? {} : { mediaId }),
+      alcoholAbv:
+        alcoholAbv.trim().length === 0 || !Number.isFinite(alcoholParsed) ? null : alcoholParsed,
       displayName: displayName.trim(),
+      grapes: grapePayload,
       producerName: producerName.trim(),
       region: region.trim().length === 0 ? null : region.trim(),
       version: wine.version,
@@ -132,6 +156,10 @@ export function EditWineDialog({
     });
     await onSaved();
     onClose();
+  }
+
+  function updateGrape(index: number, patch: Partial<{ name: string; percentage: string }>) {
+    setGrapes((rows) => rows.map((row, i) => (i === index ? { ...row, ...patch } : row)));
   }
 
   return (
@@ -168,6 +196,55 @@ export function EditWineDialog({
           onChange={(event) => setRegion(event.target.value)}
           value={region}
         />
+        <label htmlFor="edit-alcohol">{t("wineDetails.alcohol")}</label>
+        <input
+          id="edit-alcohol"
+          inputMode="decimal"
+          onChange={(event) => setAlcoholAbv(event.target.value)}
+          placeholder={t("wineDetails.alcoholPlaceholder")}
+          value={alcoholAbv}
+        />
+        <fieldset className="grape-editor">
+          <legend>{t("wineDetails.grapes")}</legend>
+          {grapes.length === 0 ? (
+            <p className="cache-note">{t("wineDetails.grapesEmpty")}</p>
+          ) : (
+            grapes.map((grape, index) => (
+              <div className="grape-editor__row" key={index}>
+                <input
+                  aria-label={t("wineDetails.grapeName")}
+                  maxLength={120}
+                  onChange={(event) => updateGrape(index, { name: event.target.value })}
+                  placeholder={t("wineDetails.grapeName")}
+                  value={grape.name}
+                />
+                <input
+                  aria-label={t("wineDetails.grapePercentage")}
+                  className="grape-editor__percentage"
+                  inputMode="decimal"
+                  onChange={(event) => updateGrape(index, { percentage: event.target.value })}
+                  placeholder="%"
+                  value={grape.percentage}
+                />
+                <button
+                  aria-label={t("wineDetails.grapeRemove")}
+                  className="text-button text-button--danger"
+                  onClick={() => setGrapes((rows) => rows.filter((_, i) => i !== index))}
+                  type="button"
+                >
+                  ×
+                </button>
+              </div>
+            ))
+          )}
+          <button
+            className="action-link action-link--secondary"
+            onClick={() => setGrapes((rows) => [...rows, { name: "", percentage: "" }])}
+            type="button"
+          >
+            {t("wineDetails.grapeAdd")}
+          </button>
+        </fieldset>
         {/* The label the hurried entry never had. */}
         <label className="photo-picker">
           <span>{photoBusy ? t("quickLog.photoProcessing") : t("memory.editPhotoAction")}</span>
