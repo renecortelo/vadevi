@@ -12,14 +12,18 @@ import type {
   SupportedLocale,
   WineSummary,
 } from "@vadevi/contracts";
-import type { AssistantLanguagePort, AssistantLanguageStatement } from "@vadevi/domain";
+import type {
+  AssistantLanguagePort,
+  AssistantLanguageStatement,
+  SemanticNotePort,
+} from "@vadevi/domain";
 import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { listPriceObservations } from "./cellar";
 import { getSource, listWineFacts } from "./provenance";
-import { listWines, normalizeWineText } from "./wine-memory";
+import { getWineSummary, listWines, normalizeWineText } from "./wine-memory";
 
 type AllowedSpaceRow = {
   actor_user_id: string;
@@ -252,6 +256,58 @@ async function loadCollectionOverview(
     total: wines.length,
     wines,
   };
+}
+
+/**
+ * The reader's own notes that match the question by meaning, and the wines they
+ * belong to. The vector index returns note ids; the text and the wine are read
+ * back from the database behind the same membership check, so a note is only
+ * ever surfaced as the reader's own personal evidence, cited to their note.
+ */
+async function searchNotesSemantically(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  port: SemanticNotePort,
+  message: string,
+  spaces: AllowedSpaceRow[],
+  limit: number,
+): Promise<{ results: AssistantSearchResult[]; statements: AssistantLanguageStatement[] }> {
+  const spaceIds = spaces.map((space) => space.id);
+  const matches = await port.search({ limit, query: message, spaceIds });
+  if (matches.length === 0) return { results: [], statements: [] };
+  const noteIds = matches.map((match) => match.noteId);
+  const notePlaceholders = noteIds.map(() => "?").join(", ");
+  const spacePlaceholders = spaceIds.map(() => "?").join(", ");
+  const notes = await database
+    .prepare(
+      `SELECT note.id, note.comment, note.space_id, note.wine_id
+        FROM tasting_notes note
+        WHERE note.id IN (${notePlaceholders}) AND note.space_id IN (${spacePlaceholders})
+          AND note.deleted_at IS NULL AND note.comment IS NOT NULL AND note.comment <> ''`,
+    )
+    .bind(...noteIds, ...spaceIds)
+    .all<{ comment: string; id: string; space_id: string; wine_id: string }>();
+  const spaceById = new Map(spaces.map((space) => [space.id, space]));
+  const results = new Map<string, AssistantSearchResult>();
+  const statements: AssistantLanguageStatement[] = [];
+  for (const note of notes.results) {
+    const wine = await getWineSummary(database, principal, note.space_id, note.wine_id);
+    if (wine === null) continue;
+    const space = spaceById.get(note.space_id);
+    results.set(`${note.space_id}:${wine.id}`, {
+      spaceId: note.space_id,
+      spaceName: space?.name ?? "",
+      wine,
+    });
+    statements.push({
+      evidenceClass: "personal",
+      id: `note-${note.id}`,
+      sampleSize: null,
+      sourceIds: [],
+      text: `your note on ${wine.displayName}: ${note.comment}`,
+    });
+  }
+  return { results: [...results.values()], statements };
 }
 
 async function searchMemory(
@@ -712,6 +768,7 @@ export async function runDeterministicAssistantTurn(
     principal: FirebasePrincipal;
     request: AssistantTurnRequest;
     requestId: string;
+    semanticNotes: SemanticNotePort | null;
     spaceId: string;
   },
 ): Promise<AssistantTurnResponse | null> {
@@ -759,6 +816,31 @@ export async function runDeterministicAssistantTurn(
         sourceIds: [],
         text: `collection total ${collection.total} wines; ${collection.scored} scored; top by your score: ${top || "none scored yet"}`,
       };
+    }
+  }
+  // A note matches by meaning, so "mineral wines" finds a note that says fresh
+  // and mineral in any language. It rides alongside the term search — the note's
+  // wine joins the results, the note itself becomes personal evidence the model
+  // can cite. Skipped for a whole-collection question, which already has it all.
+  let semanticStatements: AssistantLanguageStatement[] = [];
+  if (options.semanticNotes !== null && !overview && terms.length > 0) {
+    const semantic = await searchNotesSemantically(
+      database,
+      options.principal,
+      options.semanticNotes,
+      options.request.message,
+      spaces,
+      5,
+    );
+    if (semantic.results.length > 0) {
+      const merged = new Map(
+        results.map((result) => [`${result.spaceId}:${result.wine.id}`, result]),
+      );
+      for (const result of semantic.results) {
+        merged.set(`${result.spaceId}:${result.wine.id}`, result);
+      }
+      results = [...merged.values()].slice(0, 12);
+      semanticStatements = semantic.statements;
     }
   }
   await auditToolRun(database, {
@@ -955,6 +1037,7 @@ export async function runDeterministicAssistantTurn(
           message: options.request.message,
           statements: [
             ...(collectionStatement === null ? [] : [collectionStatement]),
+            ...semanticStatements,
             ...languageStatements(
               results,
               visibleContext.context,

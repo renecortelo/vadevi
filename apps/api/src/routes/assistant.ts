@@ -7,6 +7,7 @@ import {
 } from "@vadevi/contracts";
 
 import { createAssistantLanguagePort } from "../adapters/assistant-language";
+import { createSemanticNotePort } from "../adapters/semantic-notes";
 import { reserveProviderBudget } from "../services/usage";
 import { externalResearchEnabled } from "../adapters/research-factory";
 import { runDeterministicAssistantTurn } from "../repositories/assistant";
@@ -68,6 +69,7 @@ export function registerAssistantRoutes(app: OpenAPIHono<ApiEnvironment>) {
       principal: context.get("principal"),
       request: context.req.valid("json"),
       requestId: context.get("requestId"),
+      semanticNotes: createSemanticNotePort(context.env),
       spaceId,
     });
     if (response === null) {
