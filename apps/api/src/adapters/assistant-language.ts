@@ -183,10 +183,15 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
     if (!response.success) return null;
     const claims: AssistantLanguageResult["claims"] = [];
     for (const providerClaim of response.data.claims) {
-      if (new Set(providerClaim.statementIds).size !== providerClaim.statementIds.length)
-        return null;
+      // An unsupported claim is dropped on its own — not the whole answer. One
+      // hallucinated or unsafe sentence among several must not discard the
+      // sound, cited ones; and a claim only survives when every statement it
+      // rests on is real and, if researched, actually sourced. So the guarantee
+      // is unchanged — nothing unsupported is ever emitted — while the sound
+      // claims still reach the reader.
+      if (new Set(providerClaim.statementIds).size !== providerClaim.statementIds.length) continue;
       const referenced = providerClaim.statementIds.map((id) => statementById.get(id));
-      if (referenced.some((statement) => statement === undefined)) return null;
+      if (referenced.some((statement) => statement === undefined)) continue;
       const typed = referenced as AssistantLanguageStatement[];
       if (
         typed.some(
@@ -194,10 +199,10 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
             statement.evidenceClass === "researched" && statement.sourceIds.length === 0,
         )
       ) {
-        return null;
+        continue;
       }
       const safeText = sanitizeExternalText(providerClaim.text, 500);
-      if (safeText.value.length === 0 || safeText.flaggedPromptLike) return null;
+      if (safeText.value.length === 0 || safeText.flaggedPromptLike) continue;
       const sampleSizes = typed.flatMap((statement) =>
         statement.sampleSize === null ? [] : [statement.sampleSize],
       );
