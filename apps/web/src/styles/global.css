@@ -1572,8 +1572,85 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   display: grid;
-  gap: var(--space-4);
-  padding: clamp(var(--space-4), 5vw, var(--space-6));
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+}
+
+/* The input and the send control on one line. */
+.assistant-composer__row {
+  align-items: end;
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* One line at rest, growing with what is typed and capping before it takes the
+   screen. `field-sizing` does this with no script where it is supported; older
+   engines simply keep the single starting row. */
+.assistant-composer__input {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  field-sizing: content;
+  flex: 1;
+  max-block-size: 8lh;
+  min-block-size: 1lh;
+  min-inline-size: 0;
+  padding: var(--space-2) var(--space-3);
+  resize: none;
+}
+
+/* Icon only: a round send button on the right — the destination is Vicenç, so
+   it needs no label but its own accessible name. */
+.assistant-composer__send {
+  align-items: center;
+  background: var(--color-accent);
+  block-size: 2.75rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  color: var(--color-on-accent);
+  cursor: pointer;
+  display: inline-flex;
+  flex: none;
+  inline-size: 2.75rem;
+  justify-content: center;
+}
+
+.assistant-composer__send:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.assistant-composer__hint {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+/* Matching wines are folded away so the answer leads; the reader opens them
+   only when they want the cards. Reuses the disclosure chevron. */
+.assistant-matches > summary {
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  list-style: none;
+}
+
+.assistant-matches > summary::-webkit-details-marker {
+  display: none;
+}
+
+.assistant-matches > summary::after {
+  content: "▾";
+  display: inline-block;
+  margin-inline-start: var(--space-1);
+  transition: transform 120ms ease;
+}
+
+.assistant-matches[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.assistant-matches[open] > summary {
+  margin-block-end: var(--space-3);
 }
 
 /* The answer inside a Vicenç bubble carries no card of its own — the bubble is
@@ -1627,7 +1704,10 @@ p {
   color: var(--color-on-accent);
 }
 
+/* The global `p` rule paints paragraphs muted; on the accent that is illegible,
+   so the reader's own words are set in the on-accent colour explicitly. */
 .chat-bubble--user p {
+  color: var(--color-on-accent);
   margin: 0;
 }
 
@@ -1638,30 +1718,16 @@ p {
   inline-size: 100%;
 }
 
+/* Vicenç's own words read as the primary text, not the muted default, so the
+   answer carries the conversation rather than receding into a caption. */
+.chat-bubble--vicenc .assistant-response__text p {
+  color: var(--color-text);
+}
+
 .chat-thinking {
   color: var(--color-text-muted);
   font-style: italic;
   margin: 0;
-}
-
-.assistant-composer textarea {
-  min-block-size: 7.5rem;
-  resize: vertical;
-}
-
-.assistant-composer__footer,
-.assistant-response__heading {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  justify-content: space-between;
-}
-
-.assistant-composer__footer span,
-.assistant-response__heading > span:last-child {
-  color: var(--color-text-muted);
-  font-size: var(--text-xs);
 }
 
 .assistant-response__text {
@@ -2306,8 +2372,7 @@ p {
     inline-size: 100%;
   }
 
-  .assistant-composer__footer,
-  .assistant-response__heading,
+  .assistant-chat__heading,
   .evidence-heading {
     align-items: stretch;
     display: grid;

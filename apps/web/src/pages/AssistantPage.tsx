@@ -67,6 +67,27 @@ function currentLocale(language: string): SupportedLocale {
   return supportedLocales.has(candidate as SupportedLocale) ? (candidate as SupportedLocale) : "en";
 }
 
+/** A paper-plane, so the send control needs no words — this is Vicenç already. */
+function SendIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      fill="none"
+      focusable="false"
+      height="20"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.6"
+      viewBox="0 0 24 24"
+      width="20"
+    >
+      <path d="M4 12 20 4l-6 16-3.2-6.4z" />
+      <path d="m10.8 13.6 3.2-3.2" />
+    </svg>
+  );
+}
+
 export function AssistantResult({
   drafting = false,
   onDraftWishlist,
@@ -90,8 +111,10 @@ export function AssistantResult({
       )}
 
       {response.data.results.length === 0 ? null : (
-        <div>
-          <h2>{t("assistant.resultsTitle")}</h2>
+        <details className="assistant-matches">
+          <summary>
+            {t("assistant.resultsTitle")} · {response.data.results.length}
+          </summary>
           <div className="assistant-result-grid">
             {response.data.results.map((result: AssistantSearchResult) => (
               <article
@@ -131,7 +154,7 @@ export function AssistantResult({
               </article>
             ))}
           </div>
-        </div>
+        </details>
       )}
 
       {response.data.wineContext === null ? null : (
@@ -382,8 +405,7 @@ export function AssistantPage() {
     threadRef.current?.scrollTo({ behavior: "smooth", top: threadRef.current.scrollHeight });
   }, [turns]);
 
-  async function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  async function sendMessage() {
     const question = message.trim();
     if (user === null || question.length === 0 || pending) return;
     const id = createUlid();
@@ -407,6 +429,11 @@ export function AssistantPage() {
         current.map((turn) => (turn.id === id ? { ...turn, status: "error" } : turn)),
       );
     }
+  }
+
+  function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    void sendMessage();
   }
 
   function clearChat() {
@@ -520,24 +547,37 @@ export function AssistantPage() {
         )}
       </div>
 
-      <form className="assistant-composer" onSubmit={(event) => void submit(event)}>
-        <label className="sr-only" htmlFor="assistant-message">
-          {t("assistant.messageLabel")}
-        </label>
-        <textarea
-          id="assistant-message"
-          maxLength={500}
-          onChange={(event) => setMessage(event.target.value)}
-          placeholder={t("assistant.messagePlaceholder")}
-          rows={2}
-          value={message}
-        />
-        <div className="assistant-composer__footer">
-          <span>{t("assistant.activeSpaceOnly")}</span>
-          <button className="primary-button" disabled={pending || message.trim().length === 0}>
-            {pending ? t("assistant.sending") : t("assistant.sendAction")}
+      <form className="assistant-composer" onSubmit={submit}>
+        <div className="assistant-composer__row">
+          <label className="sr-only" htmlFor="assistant-message">
+            {t("assistant.messageLabel")}
+          </label>
+          <textarea
+            className="assistant-composer__input"
+            id="assistant-message"
+            maxLength={500}
+            onChange={(event) => setMessage(event.target.value)}
+            onKeyDown={(event) => {
+              // Enter sends; Shift+Enter starts a new line — the chat convention.
+              if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                void sendMessage();
+              }
+            }}
+            placeholder={t("assistant.messagePlaceholder")}
+            rows={1}
+            value={message}
+          />
+          <button
+            aria-label={t("assistant.sendAction")}
+            className="assistant-composer__send"
+            disabled={pending || message.trim().length === 0}
+            title={t("assistant.sendAction")}
+          >
+            <SendIcon />
           </button>
         </div>
+        <span className="assistant-composer__hint">{t("assistant.activeSpaceOnly")}</span>
       </form>
 
       {draft === null ? null : (
