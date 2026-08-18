@@ -80,6 +80,20 @@ function requestsRecommendation(message: string): boolean {
   );
 }
 
+/**
+ * A question about the collection as a whole rather than one wine: how many
+ * there are, which scored best, the top few, what is in the cellar. These are
+ * answered from the reader's own wines, so the turn loads the collection and
+ * lets the grounded statements — one per wine, each carrying its score — be
+ * counted and ranked, every claim still cited to a wine the reader owns.
+ */
+function requestsCollectionOverview(message: string): boolean {
+  const normalized = normalizeWineText(message);
+  return /\b(how many|count|total|totals|highest|best|top|ranking|ranked|most|cuantos|cuantas|total|totales|mejor|mejores|puntuad|top|clasificaci|bodega|cava|celler|probado|probados|catado|catados|combien|meilleur|meilleurs|classement|quanti|quante|migliore|migliori|classifica|hoeveel|beste|meeste|wie viele|beste|meisten|rangliste|quantos|melhor|melhores|classificac)\b/i.test(
+    normalized,
+  );
+}
+
 function confidenceForSample(sampleSize: number): AssistantTasteProfile["confidence"] {
   if (sampleSize < 3) return "insufficient";
   if (sampleSize < 5) return "low";
@@ -208,6 +222,38 @@ async function allowedSpaces(
   return result.results.sort((left, right) => order.get(left.id)! - order.get(right.id)!);
 }
 
+/**
+ * The reader's whole collection across the Spaces they may see, ranked by their
+ * own score, with the total and how many are scored. Bounded to 100 per Space,
+ * which is where the count is honest for all but the largest cellars.
+ */
+async function loadCollectionOverview(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  spaces: AllowedSpaceRow[],
+): Promise<{ scored: number; total: number; wines: AssistantSearchResult[] }> {
+  const all = new Map<string, AssistantSearchResult>();
+  for (const space of spaces) {
+    const response = await listWines(database, {
+      limit: 100,
+      principal,
+      sort: "recent",
+      spaceId: space.id,
+    });
+    for (const wine of response?.data ?? []) {
+      all.set(`${space.id}:${wine.id}`, { spaceId: space.id, spaceName: space.name, wine });
+    }
+  }
+  const wines = [...all.values()].sort(
+    (left, right) => (right.wine.score100 ?? -1) - (left.wine.score100 ?? -1),
+  );
+  return {
+    scored: wines.filter((entry) => entry.wine.score100 !== null).length,
+    total: wines.length,
+    wines,
+  };
+}
+
 async function searchMemory(
   database: D1Database,
   principal: FirebasePrincipal,
@@ -221,19 +267,37 @@ async function searchMemory(
   for (const space of spaces) {
     const queries = terms.length === 0 ? [undefined] : terms;
     for (const query of queries) {
-      const response = await listWines(database, {
-        limit: 10,
-        principal,
-        ...(query === undefined ? {} : { query }),
-        sort: "recent",
-        spaceId: space.id,
-      });
-      for (const wine of response?.data ?? []) {
-        results.set(`${space.id}:${wine.id}`, {
+      // A term is matched against the wine's name, producer and aliases and,
+      // separately, its region — so "Parras" finds a wine from Parras even
+      // when the word is nowhere in its producer or name. Without the second
+      // pass the assistant looked rigid: it knew wines it could not be asked
+      // about by where they are from.
+      const passes = await Promise.all([
+        listWines(database, {
+          limit: 10,
+          principal,
+          ...(query === undefined ? {} : { query }),
+          sort: "recent",
           spaceId: space.id,
-          spaceName: space.name,
-          wine,
-        });
+        }),
+        query === undefined
+          ? null
+          : listWines(database, {
+              limit: 10,
+              principal,
+              region: query,
+              sort: "recent",
+              spaceId: space.id,
+            }),
+      ]);
+      for (const response of passes) {
+        for (const wine of response?.data ?? []) {
+          results.set(`${space.id}:${wine.id}`, {
+            spaceId: space.id,
+            spaceName: space.name,
+            wine,
+          });
+        }
       }
     }
     if (visibleWineId !== null && !results.has(`${space.id}:${visibleWineId}`)) {
@@ -661,14 +725,42 @@ export async function runDeterministicAssistantTurn(
   const turnId = ulid();
   let toolCalls = 0;
   const searchStartedAt = Date.now();
-  const { results, terms } = await searchMemory(
+  const overview = requestsCollectionOverview(options.request.message);
+  const searchResult = await searchMemory(
     database,
     options.principal,
     spaces,
     options.request.message,
     options.request.context.visibleWineId,
-    requestsRecommendation(options.request.message) || requestsPrice(options.request.message),
+    requestsRecommendation(options.request.message) ||
+      requestsPrice(options.request.message) ||
+      overview,
   );
+  const terms = searchResult.terms;
+  let results = searchResult.results;
+  // A question about the collection as a whole is answered from the whole
+  // collection: load it, rank it by the reader's own score, and hand the model
+  // a summary statement it can count from — so "how many have I tried?" and
+  // "which did I score highest?" are answered with cited facts, not a guess.
+  let collectionStatement: AssistantLanguageStatement | null = null;
+  if (overview) {
+    const collection = await loadCollectionOverview(database, options.principal, spaces);
+    if (collection.total > 0) {
+      results = collection.wines.slice(0, 20);
+      const top = collection.wines
+        .filter((entry) => entry.wine.score100 !== null)
+        .slice(0, 5)
+        .map((entry) => `${entry.wine.displayName} (${entry.wine.score100})`)
+        .join("; ");
+      collectionStatement = {
+        evidenceClass: "observed",
+        id: "collection-overview",
+        sampleSize: collection.total,
+        sourceIds: [],
+        text: `collection total ${collection.total} wines; ${collection.scored} scored; top by your score: ${top || "none scored yet"}`,
+      };
+    }
+  }
   await auditToolRun(database, {
     actorId: spaces[0]!.actor_user_id,
     arguments: {
@@ -861,13 +953,16 @@ export async function runDeterministicAssistantTurn(
       : await options.language.render({
           locale: options.request.locale,
           message: options.request.message,
-          statements: languageStatements(
-            results,
-            visibleContext.context,
-            tasteProfile,
-            priceObservations,
-            recommendations,
-          ),
+          statements: [
+            ...(collectionStatement === null ? [] : [collectionStatement]),
+            ...languageStatements(
+              results,
+              visibleContext.context,
+              tasteProfile,
+              priceObservations,
+              recommendations,
+            ),
+          ],
         });
   if (languageResult !== null) {
     await database
