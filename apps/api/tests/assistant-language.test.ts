@@ -55,6 +55,57 @@ describe("provider-backed assistant language enforcement", () => {
     expect(JSON.stringify(calls[0])).not.toContain("https://");
   });
 
+  it("falls back to a plain JSON prompt when the model rejects structured output", async () => {
+    const calls: Array<Record<string, unknown>> = [];
+    let attempt = 0;
+    const adapter = new CloudflareAssistantLanguageAdapter(
+      {
+        run: async (_model, input) => {
+          calls.push(input);
+          attempt += 1;
+          // A model that does not accept `response_format` throws on the first,
+          // structured attempt, exactly as Workers AI does for such models.
+          if (attempt === 1) throw new Error("response_format is not supported");
+          // The plain retry may wrap the object in prose and a ```json fence.
+          return {
+            response:
+              'Here you go:\n```json\n{"claims":[{"statementIds":["fact-1"],"text":"Aged eight months."}]}\n```',
+          };
+        },
+      },
+      "@cf/example/model",
+    );
+
+    await expect(
+      adapter.render({
+        locale: "en",
+        message: "How was it made?",
+        statements: [
+          {
+            evidenceClass: "researched",
+            id: "fact-1",
+            sampleSize: null,
+            sourceIds: [sourceId],
+            text: "production.aging_months: 8",
+          },
+        ],
+      }),
+    ).resolves.toEqual({
+      claims: [
+        {
+          evidenceClass: "researched",
+          sampleSize: null,
+          sourceIds: [sourceId],
+          text: "Aged eight months.",
+        },
+      ],
+      modelVersion: "@cf/example/model",
+    });
+    expect(calls).toHaveLength(2);
+    expect(calls[0]).toHaveProperty("response_format");
+    expect(calls[1]).not.toHaveProperty("response_format");
+  });
+
   it("rejects claims that reference unknown statement IDs", async () => {
     const adapter = new CloudflareAssistantLanguageAdapter(
       {
