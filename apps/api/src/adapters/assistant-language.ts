@@ -140,15 +140,40 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
     }
     try {
       const output = await this.ai.run(this.model, payload);
-      return extractClaims(output);
-    } catch {
+      const claims = extractClaims(output);
+      if (claims === null) {
+        // The model answered but not with recoverable JSON. Log the shape, never
+        // the content — the reply is generated from the reader's own wines.
+        const raw = output.response;
+        console.warn(
+          `assistant model returned no parseable JSON (structured=${structured}, model=${this.model}, responseType=${typeof raw})`,
+        );
+      }
+      return claims;
+    } catch (error) {
+      // The provider error is swallowed so a turn still returns a structured
+      // answer, but it is logged so an operator can see why the model is silent
+      // — a missing model, an unsupported response format, a quota. No wine data.
+      console.error(
+        `assistant model call failed (structured=${structured}, model=${this.model}): ${
+          error instanceof Error ? error.message : String(error)
+        }`,
+      );
       return null;
     }
   }
 
   async render(input: AssistantLanguageInput): Promise<AssistantLanguageResult | null> {
     const statements = safeStatements(input);
-    if (statements.length === 0) return null;
+    if (statements.length === 0) {
+      // No fact, note or context on the matched wines to ground a sentence on,
+      // so the model is not called at all. Logged to tell this apart from a
+      // model that was called and failed; the count is not wine data.
+      console.warn(
+        `assistant: no groundable statements for this turn (had ${input.statements.length})`,
+      );
+      return null;
+    }
     const statementById = new Map(statements.map((statement) => [statement.id, statement]));
     const parsed =
       (await this.callModel(input, statements, true)) ??
