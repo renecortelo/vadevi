@@ -418,7 +418,7 @@
     "privacyTitle": "Éphémère par défaut",
     "privacyBody": "Ce tour n’est pas enregistré dans l’historique. Seul un audit expurgé de l’outil est conservé ; votre message n’y est pas copié.",
     "messageLabel": "Que souhaitez-vous trouver ?",
-    "messagePlaceholder": "Par exemple : Trouve le vin blanc de la région côtière",
+    "messagePlaceholder": "Commencez à écrire…",
     "activeSpaceOnly": "Recherche dans l’Espace actif uniquement",
     "sendAction": "Demander à Vicenç",
     "sending": "Recherche…",

@@ -418,7 +418,7 @@
     "privacyTitle": "Efímero por defecto",
     "privacyBody": "Este turno no se guarda como historial de chat. Solo se conserva una auditoría redactada de la herramienta; tu mensaje no se copia en ella.",
     "messageLabel": "¿Qué te gustaría encontrar?",
-    "messagePlaceholder": "Por ejemplo: Encuentra el vino blanco de la región costera",
+    "messagePlaceholder": "Comienza a escribir…",
     "activeSpaceOnly": "Buscando solo en el Espacio activo",
     "sendAction": "Preguntar a Vicenç",
     "sending": "Buscando…",
