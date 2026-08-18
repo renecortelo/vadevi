@@ -26,6 +26,11 @@ const outsiderToken = emulatorIdToken({
   name: "Assistant Outsider",
   sub: "firebase-emulator-user-phase-4-assistant-outsider",
 });
+const collectionToken = emulatorIdToken({
+  email: "assistant-collection@example.test",
+  name: "Assistant Collection",
+  sub: "firebase-emulator-user-phase-4-assistant-collection",
+});
 
 async function bootstrap(token: string) {
   const response = await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
@@ -222,6 +227,26 @@ describe("Vicenç deterministic read path", () => {
         (result: AssistantSearchResult) => result.wine.region === "Parras Valley",
       ),
     ).toBe(true);
+  });
+
+  it("answers a collection question from the whole cellar, not only term matches", async () => {
+    const user = await bootstrap(collectionToken);
+    const spaceId = user.data.user.activeSpaceId;
+    // Neither name is a word in the question, so a term search alone would miss
+    // them; a collection question must still see the whole cellar.
+    const alpha = await createWine(collectionToken, spaceId, "Overview Alpha");
+    const beta = await createWine(collectionToken, spaceId, "Overview Beta");
+
+    const response = await assistantTurn(
+      collectionToken,
+      spaceId,
+      "How many wines have I tried in total?",
+    );
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(response.status).toBe(200);
+    const ids = body.data.results.map((result: AssistantSearchResult) => result.wine.id);
+    expect(ids).toContain(alpha.id);
+    expect(ids).toContain(beta.id);
   });
 
   it("returns the same non-enumerating denial to a caller outside the active Space", async () => {
