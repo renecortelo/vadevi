@@ -22,6 +22,7 @@ export type WorkerBindings = {
   RESEARCH_PROVIDER?: "none" | "open_data";
   DB?: D1Database;
   MEDIA?: R2Bucket;
+  NOTE_INDEX?: VectorizeIndex;
   ASSETS?: Fetcher;
 };
 
