@@ -408,6 +408,16 @@
         "no_results": "Er zijn geen veilige, geciteerde feiten gevonden.",
         "partial_results": "Een of meer bronnen waren niet beschikbaar; gedeeltelijke resultaten worden getoond.",
         "source_limit_reached": "De bronlimiet is bereikt."
+      },
+      "searching": "Overeenkomsten zoeken…",
+      "picker": {
+        "help": "Kies naar welke entiteit elke naam verwijst. Alleen je keuze wordt onderzocht, en de resultaten komen nog steeds als voorstellen om te accepteren.",
+        "noneFound": "We vonden geen overeenkomende entiteiten om te verduidelijken. Je kunt de gegevens van de wijn nog steeds onderzoeken via de barcode.",
+        "producer": "Producent",
+        "region": "Regio",
+        "none": "Geen van deze",
+        "confirm": "Onderzoek de selectie",
+        "cancel": "Annuleren"
       }
     }
   },

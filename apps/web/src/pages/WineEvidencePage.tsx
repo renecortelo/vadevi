@@ -1,5 +1,8 @@
 import type {
   Fact,
+  ResearchCandidate,
+  ResearchCandidateSubject,
+  ResearchCandidatesResponse,
   ResearchJob,
   ResearchJobWarning,
   SupportedLocale,
@@ -13,8 +16,16 @@ import { Link, useParams } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
-import { acceptFact, createResearchJob, getWineFacts } from "../services/assistant";
+import {
+  acceptFact,
+  createResearchJob,
+  getResearchCandidates,
+  getWineFacts,
+} from "../services/assistant";
 import { useSession } from "../session/SessionContext";
+
+type ResearchTopic = "identity" | "producer" | "region";
+type CandidateData = ResearchCandidatesResponse["data"];
 
 function translationCode(value: string) {
   return value.replaceAll(".", "_");
@@ -137,6 +148,61 @@ export function FactCard({
   );
 }
 
+function CandidateChoices({
+  choice,
+  name,
+  onChoose,
+  subject,
+  subjectLabel,
+}: {
+  choice: string;
+  name: string;
+  onChoose: (id: string) => void;
+  subject: ResearchCandidateSubject | null;
+  subjectLabel: string;
+}) {
+  const { t } = useTranslation();
+  if (subject === null || subject.candidates.length === 0) return null;
+  return (
+    <fieldset className="research-picker__subject">
+      <legend className="research-picker__legend">
+        {subjectLabel}: <strong>{subject.term}</strong>
+      </legend>
+      {subject.candidates.map((candidate: ResearchCandidate) => (
+        <label className="research-picker__option" key={candidate.id}>
+          <input
+            checked={choice === candidate.id}
+            name={name}
+            onChange={() => onChoose(candidate.id)}
+            type="radio"
+            value={candidate.id}
+          />
+          <span className="research-picker__option-body">
+            <span className="research-picker__option-label">{candidate.label}</span>
+            {candidate.description === null ? null : (
+              <span className="research-picker__option-desc">{candidate.description}</span>
+            )}
+          </span>
+        </label>
+      ))}
+      <label className="research-picker__option">
+        <input
+          checked={choice === "none"}
+          name={name}
+          onChange={() => onChoose("none")}
+          type="radio"
+          value="none"
+        />
+        <span className="research-picker__option-body">
+          <span className="research-picker__option-label">
+            {t("evidence.research.picker.none")}
+          </span>
+        </span>
+      </label>
+    </fieldset>
+  );
+}
+
 export function WineEvidencePage() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
@@ -151,6 +217,10 @@ export function WineEvidencePage() {
   const [researching, setResearching] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
   const [researchError, setResearchError] = useState<string | null>(null);
+  const [candidates, setCandidates] = useState<CandidateData | null>(null);
+  const [loadingCandidates, setLoadingCandidates] = useState(false);
+  const [producerChoice, setProducerChoice] = useState<string>("none");
+  const [regionChoice, setRegionChoice] = useState<string>("none");
   const [online, setOnline] = useState(() => navigator.onLine);
 
   useEffect(() => {
@@ -221,15 +291,57 @@ export function WineEvidencePage() {
     }
   }
 
-  async function researchWine() {
+  // Step one: offer the matching Wikidata entities for the producer and region
+  // so the reader can tell a wine region from a same-named genus of arachnids
+  // before anything is fetched. No hand-typed "Q…" codes; the barcode lookup for
+  // the wine's own identity still runs automatically when the reader confirms.
+  async function openResearch() {
+    if (user === null || wineId.length === 0 || !online) return;
+    setResearchError(null);
+    setResearchJob(null);
+    setCandidates(null);
+    setLoadingCandidates(true);
+    try {
+      const result = await getResearchCandidates(
+        user,
+        spaceId,
+        wineId,
+        researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
+      );
+      setCandidates(result.data);
+      setProducerChoice(result.data.producer?.candidates[0]?.id ?? "none");
+      setRegionChoice(result.data.region?.candidates[0]?.id ?? "none");
+    } catch {
+      setResearchError(t("evidence.research.error"));
+    } finally {
+      setLoadingCandidates(false);
+    }
+  }
+
+  function cancelResearch() {
+    setCandidates(null);
+    setResearchError(null);
+  }
+
+  // Step two: research only what the reader chose. Each picked entity becomes a
+  // Wikidata topic with its confirmed id; a "none" choice is left out entirely,
+  // so nothing is resolved behind the reader's back. Results still arrive as
+  // proposals to accept — confirming an entity is not the same as trusting a fact.
+  async function confirmResearch() {
     if (user === null || wineId.length === 0 || !online) return;
     setResearching(true);
     setResearchError(null);
     try {
-      // No hand-typed Wikidata IDs: the barcode lookup runs automatically on the
-      // server, and searching a source by name is coming with the knowledge
-      // layer. Asking a reader for a "Q…" identifier was never something they
-      // could answer.
+      const topics: ResearchTopic[] = ["identity"];
+      const wikidataEntityIds: { producer?: string; region?: string } = {};
+      if (producerChoice !== "none") {
+        wikidataEntityIds.producer = producerChoice;
+        topics.push("producer");
+      }
+      if (regionChoice !== "none") {
+        wikidataEntityIds.region = regionChoice;
+        topics.push("region");
+      }
       const result = await createResearchJob(
         user,
         spaceId,
@@ -237,17 +349,13 @@ export function WineEvidencePage() {
         {
           locale: researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
           maxSources: 4,
-          // The server resolves the producer and region to sources by name; the
-          // reader supplies no codes.
-          topics: ["identity", "producer", "region"],
-          wikidataEntityIds: {},
+          topics,
+          wikidataEntityIds,
         },
-        // Every other mutation uses a 43-char base64url key; a raw UUID here
-        // failed the Idempotency-Key contract and the request 400'd — which is
-        // why "Investigate this wine" always errored.
         createIdempotencyKey(),
       );
       setResearchJob(result.data);
+      setCandidates(null);
       await loadFacts();
     } catch {
       setResearchError(t("evidence.research.error"));
@@ -291,20 +399,63 @@ export function WineEvidencePage() {
         </div>
         {!bootstrap.data.features.externalResearch ? (
           <p className="research-panel__notice">{t("evidence.research.disabled")}</p>
-        ) : (
+        ) : candidates === null ? (
           <>
             <button
               className="action-link action-link--secondary"
-              disabled={researching || !online}
-              onClick={() => void researchWine()}
+              disabled={loadingCandidates || researching || !online}
+              onClick={() => void openResearch()}
               type="button"
             >
-              {researching ? t("evidence.research.running") : t("evidence.research.action")}
+              {loadingCandidates ? t("evidence.research.searching") : t("evidence.research.action")}
             </button>
             {online ? null : (
               <p className="research-panel__notice">{t("evidence.research.offline")}</p>
             )}
           </>
+        ) : (
+          <div className="research-picker">
+            {(candidates.producer?.candidates.length ?? 0) === 0 &&
+            (candidates.region?.candidates.length ?? 0) === 0 ? (
+              <p className="research-panel__notice">{t("evidence.research.picker.noneFound")}</p>
+            ) : (
+              <p className="research-picker__help">{t("evidence.research.picker.help")}</p>
+            )}
+            <CandidateChoices
+              choice={producerChoice}
+              name="research-producer"
+              onChoose={setProducerChoice}
+              subject={candidates.producer}
+              subjectLabel={t("evidence.research.picker.producer")}
+            />
+            <CandidateChoices
+              choice={regionChoice}
+              name="research-region"
+              onChoose={setRegionChoice}
+              subject={candidates.region}
+              subjectLabel={t("evidence.research.picker.region")}
+            />
+            <div className="research-picker__actions">
+              <button
+                className="action-link action-link--primary"
+                disabled={researching || !online}
+                onClick={() => void confirmResearch()}
+                type="button"
+              >
+                {researching
+                  ? t("evidence.research.running")
+                  : t("evidence.research.picker.confirm")}
+              </button>
+              <button
+                className="action-link action-link--secondary"
+                disabled={researching}
+                onClick={cancelResearch}
+                type="button"
+              >
+                {t("evidence.research.picker.cancel")}
+              </button>
+            </div>
+          </div>
         )}
         {researchError === null ? null : (
           <p className="form-error" role="alert">

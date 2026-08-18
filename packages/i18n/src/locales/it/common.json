@@ -408,6 +408,16 @@
         "no_results": "Non sono stati trovati fatti sicuri e citati.",
         "partial_results": "Una o più fonti non erano disponibili; vengono mostrati risultati parziali.",
         "source_limit_reached": "È stato raggiunto il limite di fonti."
+      },
+      "searching": "Ricerca corrispondenze…",
+      "picker": {
+        "help": "Scegli a quale entità si riferisce ogni nome. Viene ricercato solo ciò che scegli e i risultati arrivano comunque come proposte da accettare.",
+        "noneFound": "Non abbiamo trovato entità corrispondenti da disambiguare. Puoi comunque ricercare i dati del vino dal suo codice a barre.",
+        "producer": "Produttore",
+        "region": "Regione",
+        "none": "Nessuna di queste",
+        "confirm": "Ricerca la selezionata",
+        "cancel": "Annulla"
       }
     }
   },

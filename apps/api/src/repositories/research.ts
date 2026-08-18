@@ -2,6 +2,9 @@ import {
   HttpsSourceUrlSchema,
   type CreateResearchJobRequest,
   type ResearchAttempt,
+  type ResearchCandidate,
+  type ResearchCandidateSubject,
+  type ResearchCandidatesResponse,
   type ResearchJob,
   type ResearchJobResponse,
   type ResearchJobWarning,
@@ -25,6 +28,20 @@ function nameMatches(field: string, label: string): boolean {
   const b = normalizeWineText(label);
   if (a.length < 3 || b.length < 3) return false;
   return a === b || a.includes(b) || b.includes(a);
+}
+
+// The reader makes the final choice, so these only reorder the options — a wine
+// region floats above a same-named arachnid genus. Nothing is ever hidden: a
+// low-scoring candidate is still offered, just lower in the list. Descriptions
+// come back localized, so the vocabulary spans the languages we serve.
+const wineBoostPattern =
+  /\b(wine|vineyard|winery|vino|vinicol\w*|vin|vign\w*|wein|weingut|wijn|bodega|cantina|denomin\w*|appellation|region|regio\w*|province|provin\w*|comune|valley|vall\w*|comarca|estate|domaine|chateau|celler|winemaker|producer|productor\w*|produttore|producteur)\b/i;
+const nonPlacePattern =
+  /\b(genus|species|arachnid|spider|insect|beetle|moth|butterfly|animal|plant|fungus|alga|film|movie|album|song|band|novel|footballer|player|actor|actress|singer|politician|surname|given name|genere|genero|especie|especies|aracnid\w*|insecto|animal|planta|pelicula|cancion|apellido|gattung|art|tier|pflanze|geslacht|soort|espece|genre)\b/i;
+
+function candidateScore(description: string | null): number {
+  const text = description ?? "";
+  return (wineBoostPattern.test(text) ? 1 : 0) - (nonPlacePattern.test(text) ? 1 : 0);
 }
 
 type ResearchAccessRow = {
@@ -109,6 +126,63 @@ async function researchAccess(
     )
     .bind(principal.firebaseUid, spaceId, wineId)
     .first<ResearchAccessRow>();
+}
+
+async function subjectCandidates(
+  ports: ResearchPorts,
+  locale: CreateResearchJobRequest["locale"],
+  subjectType: "producer" | "region",
+  field: string | null,
+): Promise<ResearchCandidateSubject | null> {
+  const term = (field ?? "").trim();
+  if (ports.knowledge === null || term.length < 2) return null;
+  let candidates: ResearchCandidate[] = [];
+  try {
+    const found = await ports.knowledge.searchEntities({ locale, subjectType, term });
+    if (found.status === "success") {
+      candidates = found.data
+        .map((candidate, index) => ({
+          candidate,
+          index,
+          score: candidateScore(candidate.description),
+        }))
+        .sort((left, right) => right.score - left.score || left.index - right.index)
+        .map(({ candidate }) => ({
+          description: candidate.description,
+          id: candidate.id,
+          label: candidate.label,
+        }));
+    }
+  } catch {
+    candidates = [];
+  }
+  return { candidates, term };
+}
+
+/**
+ * The disambiguation step. Given the wine's own producer and region text, offer
+ * the matching Wikidata entities — each with its description — so the reader can
+ * tell a wine region from a same-named genus of arachnids before anything is
+ * researched. Returns null for a subject the wine does not name or that the
+ * provider could not search; the reader can still research the rest.
+ */
+export async function researchCandidates(
+  database: D1Database,
+  options: {
+    locale: CreateResearchJobRequest["locale"];
+    ports: ResearchPorts;
+    principal: FirebasePrincipal;
+    spaceId: string;
+    wineId: string;
+  },
+): Promise<ResearchCandidatesResponse | null> {
+  const access = await researchAccess(database, options.principal, options.spaceId, options.wineId);
+  if (access === null) return null;
+  const [producer, region] = await Promise.all([
+    subjectCandidates(options.ports, options.locale, "producer", access.producer_name),
+    subjectCandidates(options.ports, options.locale, "region", access.region),
+  ]);
+  return { data: { producer, region } };
 }
 
 async function jobById(database: D1Database, spaceId: string, jobId: string) {

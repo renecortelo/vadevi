@@ -408,6 +408,16 @@
         "no_results": "Es wurden keine sicheren, zitierten Tatsachen gefunden.",
         "partial_results": "Eine oder mehrere Quellen waren nicht verfügbar; Teilergebnisse werden angezeigt.",
         "source_limit_reached": "Das Quellenlimit wurde erreicht."
+      },
+      "searching": "Treffer werden gesucht…",
+      "picker": {
+        "help": "Wähle, worauf sich jeder Name bezieht. Nur deine Auswahl wird recherchiert, und die Ergebnisse kommen weiterhin als Vorschläge zum Bestätigen.",
+        "noneFound": "Wir haben keine passenden Einträge zur Unterscheidung gefunden. Du kannst die Angaben des Weins weiterhin über den Barcode recherchieren.",
+        "producer": "Erzeuger",
+        "region": "Region",
+        "none": "Keine davon",
+        "confirm": "Ausgewählte recherchieren",
+        "cancel": "Abbrechen"
       }
     }
   },
