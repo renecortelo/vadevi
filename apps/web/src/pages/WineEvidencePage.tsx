@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
 import { acceptFact, createResearchJob, getWineFacts } from "../services/assistant";
 import { useSession } from "../session/SessionContext";
@@ -241,7 +242,10 @@ export function WineEvidencePage() {
           topics: ["identity", "producer", "region"],
           wikidataEntityIds: {},
         },
-        crypto.randomUUID(),
+        // Every other mutation uses a 43-char base64url key; a raw UUID here
+        // failed the Idempotency-Key contract and the request 400'd — which is
+        // why "Investigate this wine" always errored.
+        createIdempotencyKey(),
       );
       setResearchJob(result.data);
       await loadFacts();
