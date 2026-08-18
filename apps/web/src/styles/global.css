@@ -910,7 +910,20 @@ p {
    section of its own — it is a row of the same card, not a new one. */
 .form-subsection {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-2);
+}
+
+/* Attach each label to the field below it: a small gap to its own input, a
+   larger step down from the field before. Without this the uniform gap made the
+   folded details read as one crowded ladder. */
+.form-subsection > label {
+  font-weight: 750;
+  margin-block-start: var(--space-3);
+}
+
+.form-subsection > label.check-row {
+  font-weight: inherit;
+  margin-block-start: var(--space-2);
 }
 
 .form-subsection > summary {
@@ -1467,9 +1480,9 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   display: grid;
-  gap: var(--space-2);
-  margin: 0;
-  padding: var(--space-3) var(--space-4);
+  gap: var(--space-3);
+  margin-block-start: var(--space-2);
+  padding: var(--space-4);
 }
 
 .grape-editor legend {
@@ -1482,10 +1495,6 @@ p {
   display: grid;
   gap: var(--space-2);
   grid-template-columns: 1fr 5rem auto;
-}
-
-.grape-editor__row--names {
-  grid-template-columns: 1fr auto;
 }
 
 .grape-editor__percentage {
