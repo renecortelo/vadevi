@@ -1025,5 +1025,15 @@
   "locale": {
     "label": "Langue de l'interface",
     "saveError": "Langue non enregistrée"
+  },
+  "wineDetails": {
+    "alcohol": "Degré d'alcool (% vol.)",
+    "alcoholPlaceholder": "p. ex. 13,5",
+    "grapes": "Cépages",
+    "grapesEmpty": "Aucun cépage pour l'instant.",
+    "grapeName": "Cépage",
+    "grapePercentage": "Pourcentage",
+    "grapeRemove": "Retirer le cépage",
+    "grapeAdd": "Ajouter un cépage"
   }
 }

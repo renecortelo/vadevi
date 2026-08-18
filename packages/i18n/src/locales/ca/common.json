@@ -1025,5 +1025,15 @@
   "locale": {
     "label": "Idioma de la interfície",
     "saveError": "Idioma no desat"
+  },
+  "wineDetails": {
+    "alcohol": "Grau d'alcohol (% vol.)",
+    "alcoholPlaceholder": "p. ex. 13,5",
+    "grapes": "Varietats de raïm",
+    "grapesEmpty": "Encara no hi ha varietats.",
+    "grapeName": "Varietat",
+    "grapePercentage": "Percentatge",
+    "grapeRemove": "Treu la varietat",
+    "grapeAdd": "Afegeix una varietat"
   }
 }

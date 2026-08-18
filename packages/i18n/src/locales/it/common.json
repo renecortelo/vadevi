@@ -1025,5 +1025,15 @@
   "locale": {
     "label": "Lingua dell'interfaccia",
     "saveError": "Lingua non salvata"
+  },
+  "wineDetails": {
+    "alcohol": "Gradazione alcolica (% vol.)",
+    "alcoholPlaceholder": "es. 13,5",
+    "grapes": "Vitigni",
+    "grapesEmpty": "Ancora nessun vitigno.",
+    "grapeName": "Vitigno",
+    "grapePercentage": "Percentuale",
+    "grapeRemove": "Rimuovi vitigno",
+    "grapeAdd": "Aggiungi un vitigno"
   }
 }

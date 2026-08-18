@@ -6,6 +6,7 @@ import type {
   SyncResponse,
   TastingNoteResponse,
   UpdateWineRequest,
+  WineGrape,
   WineMemoryResponse,
   WineSummary,
 } from "@vadevi/contracts";
@@ -20,10 +21,12 @@ type IdempotentResult<T> =
   | { kind: "unavailable" };
 
 type WineRow = {
+  alcohol_abv_milli: number | null;
   appellation: string | null;
   country_code: string | null;
   created_at: string;
   display_name: string;
+  grapes_json: string | null;
   id: string;
   identity_status: "confirmed" | "draft" | "needs_review";
   last_tasted_at: string | null;
@@ -69,12 +72,31 @@ function plusHours(timestamp: string, hours: number): string {
   return new Date(Date.parse(timestamp) + hours * 60 * 60 * 1_000).toISOString();
 }
 
+export function grapesFromJson(value: string | null): WineSummary["grapes"] {
+  if (value === null) return [];
+  try {
+    const parsed = JSON.parse(value) as unknown;
+    if (!Array.isArray(parsed)) return [];
+    return parsed.flatMap((entry): WineSummary["grapes"] => {
+      if (typeof entry !== "object" || entry === null) return [];
+      const name = (entry as { name?: unknown }).name;
+      const milli = (entry as { percentage_milli?: unknown }).percentage_milli;
+      if (typeof name !== "string" || name.length === 0) return [];
+      return [{ name, percentage: typeof milli === "number" ? milli / 1_000 : null }];
+    });
+  } catch {
+    return [];
+  }
+}
+
 function wineSummary(row: WineRow): WineSummary {
   return {
+    alcoholAbv: row.alcohol_abv_milli === null ? null : row.alcohol_abv_milli / 1_000,
     appellation: row.appellation,
     countryCode: row.country_code,
     createdAt: row.created_at,
     displayName: row.display_name,
+    grapes: grapesFromJson(row.grapes_json),
     id: row.id,
     identityStatus: row.identity_status,
     lastTastedAt: row.last_tasted_at,
@@ -92,8 +114,12 @@ function wineSummary(row: WineRow): WineSummary {
 
 const wineSelect = `SELECT wine.id, wine.display_name, wine.producer_name, wine.vintage_year,
   wine.non_vintage, wine.wine_type, wine.country_code, wine.region, wine.appellation,
-  wine.identity_status, wine.version, wine.created_at, wine.updated_at,
+  wine.alcohol_abv_milli, wine.identity_status, wine.version, wine.created_at, wine.updated_at,
   wine.normalized_name, wine.normalized_producer_name,
+  (SELECT json_group_array(json_object('name', g.name_snapshot, 'percentage_milli', g.percentage_milli))
+    FROM (SELECT name_snapshot, percentage_milli FROM wine_grapes g0
+      WHERE g0.wine_id = wine.id AND g0.space_id = wine.space_id ORDER BY g0.position) AS g
+  ) AS grapes_json,
   (SELECT MAX(note.tasted_at) FROM tasting_notes note
     WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
   ) AS last_tasted_at,
@@ -224,11 +250,11 @@ export async function createWine(
           id, space_id, display_name, normalized_name, producer_name,
           normalized_producer_name, vintage_year, non_vintage, wine_type,
           country_code, normalized_country_code, region, normalized_region,
-          appellation, bottle_size_ml, barcode, style_text,
+          appellation, alcohol_abv_milli, bottle_size_ml, barcode, style_text,
           identity_status, created_by_user_id, confirmed_by_user_id,
           version, created_at, updated_at, deleted_at
         )
-        SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, actor.id,
+        SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, actor.id,
           CASE WHEN ? = 'confirmed' THEN actor.id ELSE NULL END, 1, ?, ?, NULL
         FROM users actor
         JOIN idempotency_keys command ON command.user_id = actor.id
@@ -252,6 +278,7 @@ export async function createWine(
         options.request.region ?? null,
         options.request.region === undefined ? null : normalizeWineText(options.request.region),
         options.request.appellation ?? null,
+        options.request.alcoholAbv == null ? null : Math.round(options.request.alcoholAbv * 1_000),
         options.request.bottleSizeMl ?? null,
         options.request.barcode ?? null,
         options.request.styleText ?? null,
@@ -308,6 +335,40 @@ export async function createWine(
         now,
       ),
   ]);
+
+  // The varietal list belongs to the wine, so it is written only when the wine
+  // itself was just created (`created_at = now`). On a replay that guard is
+  // false and the rows already exist, so nothing is duplicated.
+  const grapes = options.request.grapes ?? [];
+  if (grapes.length > 0) {
+    await database.batch(
+      grapes.map((grape: WineGrape, index: number) =>
+        database
+          .prepare(
+            `INSERT INTO wine_grapes (
+              id, space_id, wine_id, grape_code, name_snapshot, normalized_name,
+              percentage_milli, position, created_at, updated_at
+            )
+            SELECT ?, wine.space_id, wine.id, NULL, ?, ?, ?, ?, ?, ?
+            FROM wine_records wine
+            WHERE wine.id = ? AND wine.space_id = ? AND wine.created_at = ?
+            ON CONFLICT(wine_id, position) DO NOTHING`,
+          )
+          .bind(
+            ulid(),
+            grape.name,
+            normalizeWineText(grape.name),
+            grape.percentage == null ? null : Math.round(grape.percentage * 1_000),
+            index,
+            now,
+            now,
+            candidateId,
+            options.spaceId,
+            now,
+          ),
+      ),
+    );
+  }
 
   const command = await database
     .prepare(
@@ -997,6 +1058,7 @@ export async function updateWine(
           region = CASE WHEN ? = 1 THEN ? ELSE region END,
           normalized_region = CASE WHEN ? = 1 THEN ? ELSE normalized_region END,
           appellation = CASE WHEN ? = 1 THEN ? ELSE appellation END,
+          alcohol_abv_milli = CASE WHEN ? = 1 THEN ? ELSE alcohol_abv_milli END,
           style_text = CASE WHEN ? = 1 THEN ? ELSE style_text END,
           identity_status = CASE WHEN ? = 1 THEN ? ELSE identity_status END,
           confirmed_by_user_id = CASE WHEN ? = 'confirmed' THEN ? ELSE confirmed_by_user_id END,
@@ -1028,6 +1090,8 @@ export async function updateWine(
         next.region === undefined || next.region === null ? null : normalizeWineText(next.region),
         set(next.appellation),
         next.appellation ?? null,
+        set(next.alcoholAbv),
+        next.alcoholAbv == null ? null : Math.round(next.alcoholAbv * 1_000),
         set(next.styleText),
         next.styleText ?? null,
         set(next.identityStatus),
@@ -1082,6 +1146,41 @@ export async function updateWine(
         now,
       ),
   ]);
+
+  // A given varietal list replaces the old one wholesale — the delete and the
+  // inserts share one batch, so the wine is never briefly left without grapes.
+  // Omitting `grapes` leaves the existing list untouched.
+  if (next.grapes !== undefined) {
+    await database.batch([
+      database
+        .prepare(`DELETE FROM wine_grapes WHERE wine_id = ? AND space_id = ?`)
+        .bind(options.wineId, options.spaceId),
+      ...next.grapes.map((grape: WineGrape, index: number) =>
+        database
+          .prepare(
+            `INSERT INTO wine_grapes (
+              id, space_id, wine_id, grape_code, name_snapshot, normalized_name,
+              percentage_milli, position, created_at, updated_at
+            )
+            SELECT ?, wine.space_id, wine.id, NULL, ?, ?, ?, ?, ?, ?
+            FROM wine_records wine
+            WHERE wine.id = ? AND wine.space_id = ?
+            ON CONFLICT(wine_id, position) DO NOTHING`,
+          )
+          .bind(
+            ulid(),
+            grape.name,
+            normalizeWineText(grape.name),
+            grape.percentage == null ? null : Math.round(grape.percentage * 1_000),
+            index,
+            now,
+            now,
+            options.wineId,
+            options.spaceId,
+          ),
+      ),
+    ]);
+  }
 
   const wine = await getWineSummary(database, options.principal, options.spaceId, options.wineId);
   if (wine === null) return { kind: "unavailable" };

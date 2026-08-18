@@ -1025,5 +1025,15 @@
   "locale": {
     "label": "Sprache der Oberfläche",
     "saveError": "Sprache nicht gespeichert"
+  },
+  "wineDetails": {
+    "alcohol": "Alkoholgehalt (% vol.)",
+    "alcoholPlaceholder": "z. B. 13,5",
+    "grapes": "Rebsorten",
+    "grapesEmpty": "Noch keine Rebsorten.",
+    "grapeName": "Rebsorte",
+    "grapePercentage": "Anteil",
+    "grapeRemove": "Rebsorte entfernen",
+    "grapeAdd": "Rebsorte hinzufügen"
   }
 }

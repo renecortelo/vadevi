@@ -1025,5 +1025,15 @@
   "locale": {
     "label": "Idioma de la interfaz",
     "saveError": "Idioma no guardado"
+  },
+  "wineDetails": {
+    "alcohol": "Grado de alcohol (% vol.)",
+    "alcoholPlaceholder": "p. ej. 13,5",
+    "grapes": "Variedades de uva",
+    "grapesEmpty": "Aún no hay variedades.",
+    "grapeName": "Variedad",
+    "grapePercentage": "Porcentaje",
+    "grapeRemove": "Quitar variedad",
+    "grapeAdd": "Añadir variedad"
   }
 }

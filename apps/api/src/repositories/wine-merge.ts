@@ -2,7 +2,7 @@ import type { MergeWinesRequest, MergeWinesResponse, WineSummary } from "@vadevi
 import { ulid } from "ulid";
 
 import type { FirebasePrincipal } from "../types";
-import { normalizeWineText } from "./wine-memory";
+import { grapesFromJson, normalizeWineText } from "./wine-memory";
 
 type MergeResult =
   | { kind: "conflict" }
@@ -259,7 +259,11 @@ async function targetSummary(
     .prepare(
       `SELECT wine.id, wine.display_name, wine.producer_name, wine.vintage_year,
         wine.non_vintage, wine.wine_type, wine.country_code, wine.region, wine.appellation,
-        wine.identity_status, wine.version, wine.created_at,
+        wine.alcohol_abv_milli, wine.identity_status, wine.version, wine.created_at,
+        (SELECT json_group_array(json_object('name', g.name_snapshot, 'percentage_milli', g.percentage_milli))
+          FROM (SELECT name_snapshot, percentage_milli FROM wine_grapes g0
+            WHERE g0.wine_id = wine.id AND g0.space_id = wine.space_id ORDER BY g0.position) AS g
+        ) AS grapes_json,
         (SELECT MAX(note.tasted_at) FROM tasting_notes note
           WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
         ) AS last_tasted_at,
@@ -284,10 +288,12 @@ async function targetSummary(
     )
     .bind(wineId, spaceId, principal.firebaseUid)
     .first<{
+      alcohol_abv_milli: number | null;
       appellation: string | null;
       country_code: string | null;
       created_at: string;
       display_name: string;
+      grapes_json: string | null;
       id: string;
       identity_status: "confirmed" | "draft" | "needs_review";
       last_tasted_at: string | null;
@@ -303,10 +309,12 @@ async function targetSummary(
     }>();
   if (row === null) return null;
   return {
+    alcoholAbv: row.alcohol_abv_milli === null ? null : row.alcohol_abv_milli / 1_000,
     appellation: row.appellation,
     countryCode: row.country_code,
     createdAt: row.created_at,
     displayName: row.display_name,
+    grapes: grapesFromJson(row.grapes_json),
     id: row.id,
     identityStatus: row.identity_status,
     lastTastedAt: row.last_tasted_at,

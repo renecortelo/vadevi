@@ -1463,6 +1463,31 @@ p {
   gap: var(--space-3);
 }
 
+.grape-editor {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+}
+
+.grape-editor legend {
+  color: var(--color-text-muted);
+  padding-inline: var(--space-2);
+}
+
+.grape-editor__row {
+  align-items: center;
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: 1fr 5rem auto;
+}
+
+.grape-editor__percentage {
+  text-align: end;
+}
+
 .fact-groups,
 .fact-group {
   display: grid;

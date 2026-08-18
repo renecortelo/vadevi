@@ -7,6 +7,7 @@ import {
   SyncResponseSchema,
   TastingNoteResponseSchema,
   WineMemoryResponseSchema,
+  WineResponseSchema,
 } from "@vadevi/contracts";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { ulid } from "ulid";
@@ -173,6 +174,57 @@ describe("Wine Memory and Quick Log", () => {
     const outsiderWrite = await createWine(spaceId, request, outsiderToken);
     expect(outsiderRead.status).toBe(404);
     expect(outsiderWrite.response.status).toBe(404);
+  });
+
+  it("records grape varieties and alcohol on create and replaces them on update", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    const created = await createWine(spaceId, {
+      alcoholAbv: 13.5,
+      displayName: "Varietal Proof",
+      grapes: [{ name: "Tempranillo", percentage: 85 }, { name: "Garnacha" }],
+      identityStatus: "confirmed",
+      nonVintage: false,
+      producerName: "Varietal Estate",
+    });
+    const wine = CreateWineResponseSchema.parse(await created.response.json()).data.wine;
+    expect(wine.alcoholAbv).toBe(13.5);
+    expect(wine.grapes).toEqual([
+      { name: "Tempranillo", percentage: 85 },
+      { name: "Garnacha", percentage: null },
+    ]);
+
+    const update = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}`,
+      {
+        body: JSON.stringify({
+          alcoholAbv: 14,
+          grapes: [{ name: "Monastrell", percentage: 100 }],
+          version: wine.version,
+        }),
+        headers: headers(ownerToken),
+        method: "PATCH",
+      },
+    );
+    expect(update.status).toBe(200);
+    const updated = WineResponseSchema.parse(await update.json()).data.wine;
+    expect(updated.alcoholAbv).toBe(14);
+    // The list replaces wholesale: Tempranillo and Garnacha are gone.
+    expect(updated.grapes).toEqual([{ name: "Monastrell", percentage: 100 }]);
+
+    // Clearing the list removes every varietal without touching other fields.
+    const cleared = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}`,
+      {
+        body: JSON.stringify({ grapes: [], version: updated.version }),
+        headers: headers(ownerToken),
+        method: "PATCH",
+      },
+    );
+    expect(cleared.status).toBe(200);
+    const clearedWine = WineResponseSchema.parse(await cleared.json()).data.wine;
+    expect(clearedWine.grapes).toEqual([]);
+    expect(clearedWine.alcoholAbv).toBe(14);
   });
 
   it("stores every quick-tasting field under the authenticated author", async () => {
