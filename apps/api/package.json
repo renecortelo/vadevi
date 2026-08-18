@@ -22,6 +22,6 @@
     "@cloudflare/workers-types": "*",
     "typescript": "catalog:",
     "vitest": "catalog:",
-    "wrangler": "*"
+    "wrangler": "^4.123.0"
   }
 }
