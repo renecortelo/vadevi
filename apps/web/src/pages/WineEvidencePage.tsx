@@ -236,7 +236,9 @@ export function WineEvidencePage() {
         {
           locale: researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
           maxSources: 4,
-          topics: ["identity"],
+          // The server resolves the producer and region to sources by name; the
+          // reader supplies no codes.
+          topics: ["identity", "producer", "region"],
           wikidataEntityIds: {},
         },
         crypto.randomUUID(),

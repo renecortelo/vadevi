@@ -2,6 +2,8 @@ import type {
   ExternalCachePort,
   ExternalRateLimitPort,
   ExternalResult,
+  KnowledgeEntityCandidate,
+  KnowledgeEntitySearch,
   KnowledgeResearchRequest,
   KnowledgeResearchPort,
   ProposedFact,
@@ -34,6 +36,23 @@ const WikidataResponseSchema = z
         .passthrough(),
     ),
     error: z.object({ code: z.string() }).passthrough().optional(),
+  })
+  .passthrough();
+
+const WikidataSearchResponseSchema = z
+  .object({
+    error: z.object({ code: z.string() }).passthrough().optional(),
+    search: z
+      .array(
+        z
+          .object({
+            description: z.string().optional(),
+            id: z.string(),
+            label: z.string().optional(),
+          })
+          .passthrough(),
+      )
+      .optional(),
   })
   .passthrough();
 
@@ -73,6 +92,107 @@ export class WikidataAdapter implements KnowledgeResearchPort {
     this.fetcher = options.fetcher ?? fetch;
     this.limitPerMinute = Math.min(options.limitPerMinute ?? 60, 200);
     this.now = options.now ?? (() => new Date());
+  }
+
+  async searchEntities(
+    input: KnowledgeEntitySearch,
+  ): Promise<ExternalResult<KnowledgeEntityCandidate[]>> {
+    const term = input.term.trim().slice(0, 200);
+    if (term.length < 2) {
+      return { reason: "invalid_input", retryAfterSeconds: null, status: "unavailable" };
+    }
+    const locale = providerLocale(input.locale);
+    const now = this.now();
+    const nowTimestamp = now.toISOString();
+    const cacheKey = `wbsearch-v1:${term.toLowerCase()}:${locale}:${input.subjectType}`;
+    const cached = await this.cache.get<KnowledgeEntityCandidate[]>(
+      "wikidata",
+      cacheKey,
+      nowTimestamp,
+    );
+    if (cached !== null) return { cached: true, data: cached, status: "success" };
+
+    const rate = await this.rateLimiter.consume("wikidata", this.limitPerMinute, 60, nowTimestamp);
+    if (!rate.allowed) {
+      return {
+        reason: "rate_limited",
+        retryAfterSeconds: rate.retryAfterSeconds,
+        status: "unavailable",
+      };
+    }
+
+    const url = new URL(this.baseUrl);
+    for (const [name, value] of Object.entries({
+      action: "wbsearchentities",
+      format: "json",
+      formatversion: "2",
+      language: locale,
+      limit: "5",
+      origin: "*",
+      search: term,
+      type: "item",
+      uselang: locale,
+    })) {
+      url.searchParams.set(name, value);
+    }
+
+    let response: Response;
+    try {
+      response = await fetchFromProvider(this.fetcher, url, {
+        allowedHosts: this.allowedHosts,
+        headers: {
+          Accept: "application/json",
+          "Accept-Encoding": "gzip, deflate",
+          "Api-User-Agent": this.userAgent,
+          "User-Agent": this.userAgent,
+        },
+      });
+    } catch (error) {
+      const reason = error instanceof ProviderFetchError ? error.reason : "provider_error";
+      return { reason, retryAfterSeconds: null, status: "unavailable" };
+    }
+    if (response.status === 429) {
+      return {
+        reason: "rate_limited",
+        retryAfterSeconds: retryAfterSeconds(response),
+        status: "unavailable",
+      };
+    }
+    if (!response.ok) {
+      return { reason: "provider_error", retryAfterSeconds: null, status: "unavailable" };
+    }
+    let payload: unknown;
+    try {
+      payload = await readBoundedJson(response);
+    } catch {
+      return { reason: "provider_error", retryAfterSeconds: null, status: "unavailable" };
+    }
+    const parsed = WikidataSearchResponseSchema.safeParse(payload);
+    if (!parsed.success || parsed.data.error !== undefined) {
+      return { reason: "provider_error", retryAfterSeconds: null, status: "unavailable" };
+    }
+    const candidates: KnowledgeEntityCandidate[] = [];
+    for (const entry of parsed.data.search ?? []) {
+      const id = entry.id.trim().toUpperCase();
+      if (!/^Q[1-9]\d{0,11}$/.test(id)) continue;
+      const sanitizedLabel = sanitizeExternalText(entry.label ?? "", 300);
+      if (sanitizedLabel.value.length === 0 || sanitizedLabel.flaggedPromptLike) continue;
+      const sanitizedDescription = sanitizeExternalText(entry.description ?? "", 2_000);
+      const description =
+        sanitizedDescription.value.length === 0 || sanitizedDescription.flaggedPromptLike
+          ? null
+          : sanitizedDescription.value;
+      candidates.push({ description, id, label: sanitizedLabel.value });
+      if (candidates.length >= 5) break;
+    }
+    await this.cache.put(
+      "wikidata",
+      cacheKey,
+      candidates,
+      new Date(now.getTime() + this.cacheTtlMilliseconds).toISOString(),
+      nowTimestamp,
+    );
+    return { cached: false, data: candidates, status: "success" };
   }
 
   async research(input: KnowledgeResearchRequest): Promise<ExternalResult<ProposedFact[]>> {

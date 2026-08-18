@@ -148,6 +148,7 @@ describe("bounded wine research jobs", () => {
           ],
           status: "success",
         }),
+        searchEntities: async () => ({ cached: false, data: [], status: "success" }),
       },
       product: {
         lookupBarcode: async ({ barcode }) => ({
@@ -238,5 +239,125 @@ describe("bounded wine research jobs", () => {
       .bind(wine.id, wine.id, first.response.data.id)
       .first<{ audits: number; citations: number; facts: number }>();
     expect(counts).toEqual({ audits: 1, citations: 3, facts: 3 });
+  });
+
+  it("resolves the producer to a Wikidata entity by name when no id is supplied", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(spaceId);
+    const retrievedAt = "2026-08-14T07:00:00.000Z";
+    const source = {
+      canonicalUrl: "https://www.wikidata.org/wiki/Q999",
+      licenseIdentifier: "CC0-1.0",
+      publisher: "Wikidata",
+      retrievedAt,
+      sourceType: "open_dataset" as const,
+      title: "Synthetic Research Estate",
+    };
+    const searchTerms: string[] = [];
+    const researchedIds: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async ({ entityId }) => {
+          researchedIds.push(entityId);
+          return {
+            cached: false,
+            data: [
+              {
+                confidenceMilli: 750,
+                predicate: "producer.name",
+                researchMethod: "wikidata.entity.v1",
+                source,
+                value: "Synthetic Research Estate",
+              },
+            ],
+            status: "success",
+          };
+        },
+        searchEntities: async ({ term }) => {
+          searchTerms.push(term);
+          return {
+            cached: false,
+            data: [
+              {
+                description: "a fictional estate",
+                id: "Q4242",
+                label: "Synthetic Research Estate",
+              },
+            ],
+            status: "success",
+          };
+        },
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "en" as const,
+        maxSources: 4,
+        topics: ["producer"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    expect(searchTerms).toContain("Synthetic Research Estate");
+    expect(researchedIds).toEqual(["Q4242"]);
+    expect(first.response.data.factIds).toHaveLength(1);
+    expect(first.response.data.warnings).not.toContain("missing_wikidata_entity");
+  });
+
+  it("leaves the producer unresolved when no candidate name is close enough", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(spaceId);
+    const researchedIds: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async ({ entityId }) => {
+          researchedIds.push(entityId);
+          return { cached: false, data: [], status: "success" };
+        },
+        searchEntities: async () => ({
+          cached: false,
+          data: [
+            {
+              description: "an unrelated thing",
+              id: "Q1",
+              label: "Something Completely Different",
+            },
+          ],
+          status: "success",
+        }),
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "en" as const,
+        maxSources: 4,
+        topics: ["producer"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    expect(researchedIds).toEqual([]);
+    expect(first.response.data.factIds).toHaveLength(0);
+    expect(first.response.data.warnings).toContain("missing_wikidata_entity");
   });
 });
