@@ -424,7 +424,7 @@
     "sending": "Suche…",
     "error": "Vicenç kann gerade nicht suchen. Wine Memory und die normalen Formulare bleiben verfügbar.",
     "emptyTitle": "Beginne mit deinem eigenen Wine Memory.",
-    "emptyBody": "Bei deaktivierter KI führt Vicenç weiterhin eine direkte strukturierte Suche durch, ohne eine Antwort zu erfinden.",
+    "emptyBody": "Frag nach den Weinen in deinem Keller: was du probiert und gemocht hast, was du öffnen solltest. Vicenç antwortet nur aus deinen eigenen Weinen.",
     "ephemeralBadge": "Nicht im Chatverlauf gespeichert",
     "evidenceTitle": "Beleggrundlage",
     "resultsTitle": "Passende Weine",
@@ -504,7 +504,10 @@
         "disabled": "Begrenzte Weinrecherche deaktiviert",
         "unavailable": "Begrenzte Weinrecherche nicht verfügbar"
       }
-    }
+    },
+    "clearAction": "Leeren",
+    "thinking": "Vicenç denkt nach…",
+    "chatNote": "Dieses Gespräch bleibt nur auf diesem Gerät und wird nach 15 Minuten gelöscht."
   },
   "homeTools": {
     "eyebrow": "Deine Sammlung",

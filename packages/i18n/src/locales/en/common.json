@@ -424,7 +424,7 @@
     "sending": "Searching…",
     "error": "Vicenç could not search right now. Wine Memory and normal forms are still available.",
     "emptyTitle": "Start with your own Wine Memory.",
-    "emptyBody": "With AI disabled, Vicenç still performs a direct, structured search without inventing an answer.",
+    "emptyBody": "Ask about the wines in your cellar — what you've tried, what you liked, what to open. Vicenç answers only from your own wines.",
     "ephemeralBadge": "Not saved to chat history",
     "evidenceTitle": "Evidence basis",
     "resultsTitle": "Matching wines",
@@ -504,7 +504,10 @@
         "disabled": "Bounded wine research disabled",
         "unavailable": "Bounded wine research unavailable"
       }
-    }
+    },
+    "clearAction": "Clear",
+    "thinking": "Vicenç is thinking…",
+    "chatNote": "This conversation stays only on this device and clears itself after 15 minutes."
   },
   "homeTools": {
     "eyebrow": "Your collection",

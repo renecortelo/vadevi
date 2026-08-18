@@ -250,14 +250,13 @@ describe("authenticated app shell", () => {
     expect(markup).toContain("External research is disabled in this deployment");
   });
 
-  it("renders the ephemeral Vicenç composer when AI is disabled", () => {
+  it("renders the Vicenç chat composer and its on-device note", () => {
     const markup = renderShellRoute(<AssistantPage />, "/vicenc", "vicenc");
 
     expect(markup).toContain("Vicenç Vinyes");
-    expect(markup).toContain("Ephemeral by default");
     expect(markup).toContain('id="assistant-message"');
     expect(markup).toContain("Searching the active Space only");
-    expect(markup).toContain("direct, structured search");
+    expect(markup).toContain("stays only on this device");
   });
 
   it("renders the Phase 5 cellar, wishlist, and sourced-price routes", () => {
@@ -344,12 +343,12 @@ describe("authenticated app shell", () => {
 
     const markup = renderWithSession(<AssistantResult response={response} />);
 
-    expect(markup).toContain("Structured search");
-    expect(markup).toContain("1 matching Wine Memory record");
+    // The answer reads as prose, and the wine it found is shown — without the
+    // developer-facing mode, evidence-class, or tool-availability scaffolding.
+    expect(markup).toContain("I found 1 matching wine");
     expect(markup).toContain("Synthetic Coastal White");
-    expect(markup).toContain("AI provider disabled");
-    expect(markup).toContain("Authorized Wine Memory search available");
-    expect(markup).toContain("Deterministic wine comparison available");
+    expect(markup).not.toContain("Structured search");
+    expect(markup).not.toContain("AI provider disabled");
   });
 
   it("renders researched fact attribution, license, and a contextual acceptance action", () => {
