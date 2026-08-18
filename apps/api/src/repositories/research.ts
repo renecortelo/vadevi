@@ -11,10 +11,28 @@ import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
+import { normalizeWineText } from "./wine-memory";
+
+/**
+ * Whether a candidate entity's label is close enough to the wine's own text to
+ * attach its facts. A resolved fact is only ever proposed, never applied, so a
+ * near miss is the reader's to reject — but a name that shares nothing is not
+ * offered at all, which is what stops "Casa Madero" from pulling in a person
+ * called Madero.
+ */
+function nameMatches(field: string, label: string): boolean {
+  const a = normalizeWineText(field);
+  const b = normalizeWineText(label);
+  if (a.length < 3 || b.length < 3) return false;
+  return a === b || a.includes(b) || b.includes(a);
+}
 
 type ResearchAccessRow = {
   actor_user_id: string;
   barcode: string | null;
+  display_name: string;
+  producer_name: string;
+  region: string | null;
   wine_id: string;
 };
 
@@ -79,7 +97,8 @@ async function researchAccess(
 ): Promise<ResearchAccessRow | null> {
   return database
     .prepare(
-      `SELECT actor.id AS actor_user_id, wine.id AS wine_id, wine.barcode
+      `SELECT actor.id AS actor_user_id, wine.id AS wine_id, wine.barcode,
+        wine.display_name, wine.producer_name, wine.region
       FROM wine_records wine
       JOIN space_memberships membership ON membership.space_id = wine.space_id
       JOIN users actor ON actor.id = membership.user_id
@@ -194,21 +213,66 @@ async function collectProposals(
     }
   }
 
+  // Resolve producer and region to Wikidata entities by name when the caller
+  // did not supply an id — nobody types "Q…". A name that resolves to nothing
+  // close enough is simply left unresolved. The wine itself is not resolved this
+  // way: a specific bottling rarely has its own entity, and a loose name match
+  // would attach the wrong one.
+  const entityIds = { ...request.wikidataEntityIds };
+  if (ports.knowledge !== null) {
+    const toResolve = [
+      request.topics.includes("producer") &&
+      entityIds.producer === undefined &&
+      access.producer_name.trim().length > 0
+        ? {
+            field: access.producer_name,
+            key: "producer" as const,
+            subjectType: "producer" as const,
+          }
+        : null,
+      request.topics.includes("region") &&
+      entityIds.region === undefined &&
+      (access.region ?? "").trim().length > 0
+        ? { field: access.region!, key: "region" as const, subjectType: "region" as const }
+        : null,
+    ].filter((candidate) => candidate !== null);
+    for (const target of toResolve) {
+      try {
+        const found = await ports.knowledge.searchEntities({
+          locale: request.locale,
+          subjectType: target.subjectType,
+          term: target.field,
+        });
+        if (found.status !== "success") continue;
+        const match = found.data.find((candidate) => nameMatches(target.field, candidate.label));
+        if (match !== undefined) entityIds[target.key] = match.id;
+      } catch {
+        // A failed resolution just leaves the topic unresolved.
+      }
+    }
+  }
+
   const knowledgeRequests = [
-    request.topics.includes("identity") && request.wikidataEntityIds.wine !== undefined
-      ? { entityId: request.wikidataEntityIds.wine, subjectType: "wine" as const }
+    request.topics.includes("identity") && entityIds.wine !== undefined
+      ? { entityId: entityIds.wine, subjectType: "wine" as const }
       : null,
-    request.topics.includes("producer") && request.wikidataEntityIds.producer !== undefined
-      ? { entityId: request.wikidataEntityIds.producer, subjectType: "producer" as const }
+    request.topics.includes("producer") && entityIds.producer !== undefined
+      ? { entityId: entityIds.producer, subjectType: "producer" as const }
       : null,
-    request.topics.includes("region") && request.wikidataEntityIds.region !== undefined
-      ? { entityId: request.wikidataEntityIds.region, subjectType: "region" as const }
+    request.topics.includes("region") && entityIds.region !== undefined
+      ? { entityId: entityIds.region, subjectType: "region" as const }
       : null,
   ].filter((candidate) => candidate !== null);
-  const requestedKnowledgeTopics = ["identity", "producer", "region"].filter((topic) =>
+  // The wine identity is served by the barcode, not a Wikidata entity, so only
+  // producer and region can be "missing" one — and now only when a name could
+  // not be resolved to a close-enough entity.
+  const requestedNameTopics = ["producer", "region"].filter((topic) =>
     request.topics.includes(topic as ResearchJob["topics"][number]),
   );
-  if (requestedKnowledgeTopics.length > knowledgeRequests.length) {
+  const resolvedNameTopics = knowledgeRequests.filter(
+    (candidate) => candidate.subjectType === "producer" || candidate.subjectType === "region",
+  ).length;
+  if (requestedNameTopics.length > resolvedNameTopics) {
     warnings.add("missing_wikidata_entity");
   }
   if (ports.knowledge !== null) {

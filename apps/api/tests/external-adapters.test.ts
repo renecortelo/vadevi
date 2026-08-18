@@ -183,6 +183,72 @@ describe("external research adapters", () => {
     expect(requests[0]?.searchParams.get("maxlag")).toBe("5");
   });
 
+  it("searches Wikidata by name and caches bounded entity candidates", async () => {
+    const requests: URL[] = [];
+    const fetcher: ProviderFetcher = async (input) => {
+      requests.push(new URL(String(input)));
+      return Response.json({
+        search: [
+          { description: "a Spanish winery", id: "Q4242", label: "Synthetic Estate" },
+          { description: "a lemma", id: "L500", label: "not an item" },
+          { description: "another winery", id: "Q77", label: "Second Estate" },
+        ],
+      });
+    };
+    const adapter = new WikidataAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      { fetcher, now: () => new Date("2026-08-13T20:05:00.000Z") },
+    );
+
+    const first = await adapter.searchEntities({
+      locale: "de",
+      subjectType: "producer",
+      term: "Synthetic Estate",
+    });
+    const second = await adapter.searchEntities({
+      locale: "de",
+      subjectType: "producer",
+      term: "Synthetic Estate",
+    });
+
+    expect(first).toEqual({
+      cached: false,
+      data: [
+        { description: "a Spanish winery", id: "Q4242", label: "Synthetic Estate" },
+        { description: "another winery", id: "Q77", label: "Second Estate" },
+      ],
+      status: "success",
+    });
+    expect(second).toMatchObject({ cached: true, status: "success" });
+    expect(requests).toHaveLength(1);
+    expect(requests[0]?.searchParams.get("action")).toBe("wbsearchentities");
+    expect(requests[0]?.searchParams.get("search")).toBe("Synthetic Estate");
+    expect(requests[0]?.searchParams.get("type")).toBe("item");
+  });
+
+  it("rejects a search term that is too short without calling the provider", async () => {
+    let called = false;
+    const adapter = new WikidataAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      {
+        fetcher: async () => {
+          called = true;
+          return Response.json({ search: [] });
+        },
+        now: () => new Date("2026-08-13T20:05:30.000Z"),
+      },
+    );
+
+    await expect(
+      adapter.searchEntities({ locale: "en", subjectType: "region", term: "a" }),
+    ).resolves.toEqual({ reason: "invalid_input", retryAfterSeconds: null, status: "unavailable" });
+    expect(called).toBe(false);
+  });
+
   it("drops prompt-like Open Food Facts identity text before it reaches a proposal", async () => {
     const adapter = new OpenFoodFactsAdapter(
       new D1ExternalCache(env.DB),

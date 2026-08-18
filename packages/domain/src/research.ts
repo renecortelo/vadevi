@@ -46,12 +46,27 @@ export type KnowledgeResearchRequest = Readonly<{
   subjectType: "producer" | "region" | "wine";
 }>;
 
+export type KnowledgeEntitySearch = Readonly<{
+  locale: ResearchLocale;
+  subjectType: "producer" | "region" | "wine";
+  term: string;
+}>;
+
+export type KnowledgeEntityCandidate = Readonly<{
+  description: string | null;
+  id: string;
+  label: string;
+}>;
+
 export interface ProductLookupPort {
   lookupBarcode(input: BarcodeLookup): Promise<ExternalResult<ProductCandidate>>;
 }
 
 export interface KnowledgeResearchPort {
   research(input: KnowledgeResearchRequest): Promise<ExternalResult<ProposedFact[]>>;
+  /** Resolve a producer/region/wine name to candidate entities, so research can
+   *  proceed from a name the reader typed rather than a code they never know. */
+  searchEntities(input: KnowledgeEntitySearch): Promise<ExternalResult<KnowledgeEntityCandidate[]>>;
 }
 
 export type ResearchPorts = Readonly<{
