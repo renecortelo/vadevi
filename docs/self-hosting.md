@@ -210,7 +210,26 @@ photograph, and Vicenç's language replies.
    binding, leaves the feature off rather than half-on. The adapters return
    nothing and the screens fall back to manual entry.
 
-4. **Redeploy**, then open **Data and privacy** and check the usage counters
+4. **Semantic note search (optional).** So a note logged in one language is
+   found from a question in another, tasting-note text is embedded with Workers
+   AI and stored in a Vectorize index. It is off unless both Workers AI and a
+   Vectorize binding named `NOTE_INDEX` are present. To enable, create an index
+   and bind it — the note text is embedded but never stored in the index, only
+   the vector and the ids to fetch the note back from the database:
+
+   ```sh
+   wrangler vectorize create vadevi-notes --dimensions=1024 --metric=cosine
+   ```
+
+   ```jsonc
+   "vectorize": [{ "binding": "NOTE_INDEX", "index_name": "vadevi-notes" }]
+   ```
+
+   Indexing is lazy: the scheduled handler embeds a batch of not-yet-embedded
+   notes each run, so new notes and the backfill of existing ones drain the same
+   way. `1024` matches the `@cf/baai/bge-m3` embedding model.
+
+5. **Redeploy**, then open **Data and privacy** and check the usage counters
    read what you expect.
 
 ### The caps you get for free
