@@ -316,7 +316,7 @@ export function QuickLogPage() {
                 <p className="cache-note">{t("wineDetails.grapesEmpty")}</p>
               ) : (
                 (draft.winePayload.grapes ?? []).map((grape: WineGrape, index: number) => (
-                  <div className="grape-editor__row grape-editor__row--names" key={index}>
+                  <div className="grape-editor__row" key={index}>
                     <input
                       aria-label={t("wineDetails.grapeName")}
                       maxLength={120}
@@ -330,6 +330,31 @@ export function QuickLogPage() {
                       }
                       placeholder={t("wineDetails.grapeName")}
                       value={grape.name}
+                    />
+                    <input
+                      aria-label={t("wineDetails.grapePercentage")}
+                      className="grape-editor__percentage"
+                      inputMode="decimal"
+                      max="100"
+                      min="0"
+                      onChange={(event) =>
+                        updateWine(
+                          "grapes",
+                          (draft.winePayload.grapes ?? []).map((entry: WineGrape, i: number) =>
+                            i === index
+                              ? {
+                                  ...entry,
+                                  percentage:
+                                    event.target.value === "" ? null : Number(event.target.value),
+                                }
+                              : entry,
+                          ),
+                        )
+                      }
+                      placeholder="%"
+                      step="0.1"
+                      type="number"
+                      value={grape.percentage ?? ""}
                     />
                     <button
                       aria-label={t("wineDetails.grapeRemove")}
