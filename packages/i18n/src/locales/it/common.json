@@ -418,7 +418,7 @@
     "privacyTitle": "Effimero per impostazione predefinita",
     "privacyBody": "Questo turno non viene salvato nella cronologia. Viene conservato solo un audit oscurato dello strumento; il messaggio non viene copiato.",
     "messageLabel": "Cosa vorresti trovare?",
-    "messagePlaceholder": "Per esempio: Trova il vino bianco della regione costiera",
+    "messagePlaceholder": "Inizia a scrivere…",
     "activeSpaceOnly": "Ricerca solo nello Spazio attivo",
     "sendAction": "Chiedi a Vicenç",
     "sending": "Ricerca…",

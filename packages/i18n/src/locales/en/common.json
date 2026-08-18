@@ -418,7 +418,7 @@
     "privacyTitle": "Ephemeral by default",
     "privacyBody": "This turn is not saved as chat history. Only a redacted tool audit is retained; your message is not copied into it.",
     "messageLabel": "What would you like to find?",
-    "messagePlaceholder": "For example: Find the white wine from the coastal region",
+    "messagePlaceholder": "Start typing…",
     "activeSpaceOnly": "Searching the active Space only",
     "sendAction": "Ask Vicenç",
     "sending": "Searching…",

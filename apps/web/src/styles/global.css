@@ -1598,6 +1598,13 @@ p {
   resize: none;
 }
 
+/* A quiet hint, small and faint, that never crowds the one-line input. */
+.assistant-composer__input::placeholder {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  opacity: 0.6;
+}
+
 /* Icon only: a round send button on the right — the destination is Vicenç, so
    it needs no label but its own accessible name. */
 .assistant-composer__send {
