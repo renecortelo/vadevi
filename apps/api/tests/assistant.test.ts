@@ -186,6 +186,44 @@ describe("Vicenç deterministic read path", () => {
     expect(JSON.stringify(body)).not.toContain("Outsider Hidden Red");
   });
 
+  it("matches a wine by its region, not only its name or producer", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    // "Parras" appears only in the region — never in the producer or the name —
+    // so a match proves the region is searched, not just those two fields.
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Reserva Tinto",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Casa Madero",
+        region: "Parras Valley",
+        vintageYear: 2022,
+        wineType: "red",
+      }),
+      headers: {
+        Authorization: `Bearer ${ownerToken}`,
+        "Content-Type": "application/json",
+        "Idempotency-Key": randomOpaqueToken(),
+      },
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+
+    const response = await assistantTurn(
+      ownerToken,
+      spaceId,
+      "Which wines have I tried from Parras?",
+    );
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(response.status).toBe(200);
+    expect(
+      body.data.results.some(
+        (result: AssistantSearchResult) => result.wine.region === "Parras Valley",
+      ),
+    ).toBe(true);
+  });
+
   it("returns the same non-enumerating denial to a caller outside the active Space", async () => {
     const owner = await bootstrap(ownerToken);
     await bootstrap(outsiderToken);

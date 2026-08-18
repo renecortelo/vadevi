@@ -221,19 +221,37 @@ async function searchMemory(
   for (const space of spaces) {
     const queries = terms.length === 0 ? [undefined] : terms;
     for (const query of queries) {
-      const response = await listWines(database, {
-        limit: 10,
-        principal,
-        ...(query === undefined ? {} : { query }),
-        sort: "recent",
-        spaceId: space.id,
-      });
-      for (const wine of response?.data ?? []) {
-        results.set(`${space.id}:${wine.id}`, {
+      // A term is matched against the wine's name, producer and aliases and,
+      // separately, its region — so "Parras" finds a wine from Parras even
+      // when the word is nowhere in its producer or name. Without the second
+      // pass the assistant looked rigid: it knew wines it could not be asked
+      // about by where they are from.
+      const passes = await Promise.all([
+        listWines(database, {
+          limit: 10,
+          principal,
+          ...(query === undefined ? {} : { query }),
+          sort: "recent",
           spaceId: space.id,
-          spaceName: space.name,
-          wine,
-        });
+        }),
+        query === undefined
+          ? null
+          : listWines(database, {
+              limit: 10,
+              principal,
+              region: query,
+              sort: "recent",
+              spaceId: space.id,
+            }),
+      ]);
+      for (const response of passes) {
+        for (const wine of response?.data ?? []) {
+          results.set(`${space.id}:${wine.id}`, {
+            spaceId: space.id,
+            spaceName: space.name,
+            wine,
+          });
+        }
       }
     }
     if (visibleWineId !== null && !results.has(`${space.id}:${visibleWineId}`)) {
