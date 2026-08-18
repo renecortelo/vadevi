@@ -106,6 +106,48 @@ describe("provider-backed assistant language enforcement", () => {
     expect(calls[1]).not.toHaveProperty("response_format");
   });
 
+  it("drops only the unsupported claim and keeps the cited ones", async () => {
+    const adapter = new CloudflareAssistantLanguageAdapter(
+      {
+        run: async () => ({
+          response: JSON.stringify({
+            claims: [
+              { statementIds: ["fact-1"], text: "It spent eight months ageing." },
+              { statementIds: ["invented"], text: "It won a gold medal." },
+            ],
+          }),
+        }),
+      },
+      "@cf/example/model",
+    );
+
+    await expect(
+      adapter.render({
+        locale: "en",
+        message: "Tell me about it",
+        statements: [
+          {
+            evidenceClass: "researched",
+            id: "fact-1",
+            sampleSize: null,
+            sourceIds: [sourceId],
+            text: "production.aging_months: 8",
+          },
+        ],
+      }),
+    ).resolves.toEqual({
+      claims: [
+        {
+          evidenceClass: "researched",
+          sampleSize: null,
+          sourceIds: [sourceId],
+          text: "It spent eight months ageing.",
+        },
+      ],
+      modelVersion: "@cf/example/model",
+    });
+  });
+
   it("rejects claims that reference unknown statement IDs", async () => {
     const adapter = new CloudflareAssistantLanguageAdapter(
       {
