@@ -22,6 +22,7 @@ import { ulid } from "ulid";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { listPriceObservations } from "./cellar";
+import { resolveCountryCodes } from "./country-terms";
 import { getSource, listWineFacts } from "./provenance";
 import { getWineSummary, listWines, normalizeWineText } from "./wine-memory";
 
@@ -319,6 +320,10 @@ async function searchMemory(
   broadFallback: boolean,
 ): Promise<{ results: AssistantSearchResult[]; terms: string[] }> {
   const terms = searchTerms(message);
+  // A place name the reader typed that the cellar records only as an ISO country
+  // code — "México" for a wine filed under MX. Resolved from the whole message
+  // so multi-word names ("estados unidos") survive the per-term split.
+  const countryCodes = resolveCountryCodes(message);
   const results = new Map<string, AssistantSearchResult>();
   for (const space of spaces) {
     const queries = terms.length === 0 ? [undefined] : terms;
@@ -354,6 +359,19 @@ async function searchMemory(
             wine,
           });
         }
+      }
+    }
+    // Every wine the reader owns from a country they named, by its stored code.
+    for (const countryCode of countryCodes) {
+      const response = await listWines(database, {
+        countryCode,
+        limit: 10,
+        principal,
+        sort: "recent",
+        spaceId: space.id,
+      });
+      for (const wine of response?.data ?? []) {
+        results.set(`${space.id}:${wine.id}`, { spaceId: space.id, spaceName: space.name, wine });
       }
     }
     if (visibleWineId !== null && !results.has(`${space.id}:${visibleWineId}`)) {
