@@ -424,7 +424,7 @@
     "sending": "Zoeken…",
     "error": "Vicenç kan nu niet zoeken. Wine Memory en de normale formulieren blijven beschikbaar.",
     "emptyTitle": "Begin met je eigen Wine Memory.",
-    "emptyBody": "Met AI uit voert Vicenç nog steeds een directe gestructureerde zoekopdracht uit zonder een antwoord te verzinnen.",
+    "emptyBody": "Vraag naar de wijnen in je kelder: wat je hebt geproefd, wat je lekker vond, wat je moet openen. Vicenç antwoordt alleen op basis van je eigen wijnen.",
     "ephemeralBadge": "Niet opgeslagen in chatgeschiedenis",
     "evidenceTitle": "Bewijsbasis",
     "resultsTitle": "Overeenkomende wijnen",
@@ -504,7 +504,10 @@
         "disabled": "Begrensd wijnonderzoek uitgeschakeld",
         "unavailable": "Begrensd wijnonderzoek niet beschikbaar"
       }
-    }
+    },
+    "clearAction": "Wissen",
+    "thinking": "Vicenç denkt na…",
+    "chatNote": "Dit gesprek blijft alleen op dit apparaat en wist zichzelf na 15 minuten."
   },
   "homeTools": {
     "eyebrow": "Je collectie",

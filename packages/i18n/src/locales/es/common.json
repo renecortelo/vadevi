@@ -424,7 +424,7 @@
     "sending": "Buscando…",
     "error": "Vicenç no puede buscar ahora. Wine Memory y los formularios normales siguen disponibles.",
     "emptyTitle": "Empieza por tu propia Wine Memory.",
-    "emptyBody": "Con la IA desactivada, Vicenç realiza una búsqueda estructurada directa sin inventar una respuesta.",
+    "emptyBody": "Pregúntale por los vinos de tu bodega: qué has probado, cuál te gustó, cuál abrir. Vicenç responde solo desde tus vinos.",
     "ephemeralBadge": "No se guarda en el historial del chat",
     "evidenceTitle": "Base de evidencia",
     "resultsTitle": "Vinos coincidentes",
@@ -504,7 +504,10 @@
         "disabled": "Investigación limitada de vinos desactivada",
         "unavailable": "Investigación limitada de vinos no disponible"
       }
-    }
+    },
+    "clearAction": "Limpiar",
+    "thinking": "Vicenç está pensando…",
+    "chatNote": "Esta conversación se guarda solo en este dispositivo y se borra a los 15 minutos."
   },
   "homeTools": {
     "eyebrow": "Tu colección",

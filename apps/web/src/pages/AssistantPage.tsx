@@ -1,6 +1,5 @@
 import type {
   ActionDraft,
-  AssistantEvidenceChip,
   AssistantRecommendation,
   AssistantRenderedClaim,
   AssistantSearchResult,
@@ -11,15 +10,46 @@ import type {
   Source,
   SupportedLocale,
 } from "@vadevi/contracts";
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
+import { createUlid } from "../security/ulid";
 import { createAssistantTurn } from "../services/assistant";
 import { cancelActionDraft, confirmActionDraft, createActionDraft } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
+
+/** The chat lives on the device for a quarter hour, then clears itself. */
+const chatStorageKey = "vadevi.vicenc.chat.v1";
+const chatTtlMs = 15 * 60 * 1_000;
+
+type ChatTurn = {
+  id: string;
+  question: string;
+  response: AssistantTurnResponse | null;
+  status: "done" | "error" | "pending";
+};
+
+function loadChat(): ChatTurn[] {
+  try {
+    const raw = globalThis.localStorage?.getItem(chatStorageKey);
+    if (raw === null || raw === undefined) return [];
+    const parsed = JSON.parse(raw) as { savedAt: number; turns: ChatTurn[] };
+    if (Date.now() - parsed.savedAt > chatTtlMs) {
+      globalThis.localStorage?.removeItem(chatStorageKey);
+      return [];
+    }
+    // A turn left mid-flight by a closed tab is shown as failed, never as still
+    // thinking — nothing is in flight after a reload.
+    return parsed.turns.map((turn) =>
+      turn.status === "pending" ? { ...turn, status: "error" as const } : turn,
+    );
+  } catch {
+    return [];
+  }
+}
 
 const supportedLocales = new Set<SupportedLocale>([
   "ca",
@@ -47,57 +77,14 @@ export function AssistantResult({
   response: AssistantTurnResponse;
 }) {
   const { i18n, t } = useTranslation();
-  const sourceById = new Map<string, Source>(
-    response.data.citations.map((source: Source): [string, Source] => [source.id, source]),
-  );
   return (
     <section aria-live="polite" className="assistant-response">
-      <div className="assistant-response__heading">
-        <span className="assistant-mode" data-mode={response.data.mode}>
-          {t(`assistant.mode.${response.data.mode}`)}
-        </span>
-        <span>{t("assistant.ephemeralBadge")}</span>
-      </div>
       {response.data.renderedClaims.length === 0 ? (
         <p className="assistant-response__text">{response.data.renderedText}</p>
       ) : (
-        <ul className="assistant-claim-list">
+        <div className="assistant-response__text">
           {response.data.renderedClaims.map((claim: AssistantRenderedClaim, index: number) => (
-            <li key={`${claim.evidenceClass}-${index}`}>
-              <span className="evidence-chip" data-evidence={claim.evidenceClass}>
-                {t(`evidence.class.${claim.evidenceClass}`)}
-              </span>
-              <p>{claim.text}</p>
-              {claim.sourceIds.length === 0 ? null : (
-                <ul className="citation-list">
-                  {claim.sourceIds.map((sourceId: string) => {
-                    const source = sourceById.get(sourceId);
-                    return source === undefined ? null : (
-                      <li key={source.id}>
-                        <a href={source.canonicalUrl} rel="noreferrer" target="_blank">
-                          {source.title}
-                        </a>
-                        <span>{source.publisher}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {response.data.evidence.length === 0 ? null : (
-        <div className="assistant-evidence" aria-label={t("assistant.evidenceTitle")}>
-          {response.data.evidence.map((evidence: AssistantEvidenceChip, index: number) => (
-            <span
-              className="evidence-chip"
-              data-evidence={evidence.evidenceClass}
-              key={`${evidence.evidenceClass}-${index}`}
-            >
-              {evidence.label}
-            </span>
+            <p key={`claim-${index}`}>{claim.text}</p>
           ))}
         </div>
       )}
@@ -157,9 +144,6 @@ export function AssistantResult({
               {response.data.wineContext.facts.map((fact: Fact) => (
                 <li key={fact.id}>
                   <div className="fact-card__heading">
-                    <span className="evidence-chip" data-evidence={fact.evidenceClass}>
-                      {t(`evidence.class.${fact.evidenceClass}`)}
-                    </span>
                     <span>{t(`evidence.predicate.${fact.predicate.replaceAll(".", "_")}`)}</span>
                   </div>
                   <strong>
@@ -362,34 +346,6 @@ export function AssistantResult({
           </ul>
         </div>
       )}
-
-      <details className="assistant-availability">
-        <summary>{t("assistant.availabilityTitle")}</summary>
-        <ul>
-          <li>{t(`assistant.availability.ai.${response.data.toolAvailability.ai}`)}</li>
-          <li>
-            {t(
-              `assistant.availability.searchMemory.${response.data.toolAvailability.searchMemory}`,
-            )}
-          </li>
-          <li>
-            {t(
-              `assistant.availability.externalResearch.${response.data.toolAvailability.externalResearch}`,
-            )}
-          </li>
-          <li>{t("assistant.availability.getWineContext.available")}</li>
-          <li>{t("assistant.availability.getTasteProfile.available")}</li>
-          <li>{t("assistant.availability.compareWines.available")}</li>
-          <li>{t("assistant.availability.findPriceObservations.available")}</li>
-          <li>{t("assistant.availability.buildRecommendation.available")}</li>
-          <li>{t("assistant.availability.createActionDraft.available")}</li>
-          <li>
-            {t(
-              `assistant.availability.researchWine.${response.data.toolAvailability.researchWine}`,
-            )}
-          </li>
-        </ul>
-      </details>
     </section>
   );
 }
@@ -399,33 +355,64 @@ export function AssistantPage() {
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const [message, setMessage] = useState("");
-  const [response, setResponse] = useState<AssistantTurnResponse | null>(null);
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState(false);
+  const [turns, setTurns] = useState<ChatTurn[]>(() => loadChat());
   const [draft, setDraft] = useState<ActionDraft | null>(null);
   const [drafting, setDrafting] = useState(false);
   const [draftError, setDraftError] = useState(false);
+  const threadRef = useRef<HTMLDivElement>(null);
+  // One question in flight at a time, so a second Enter cannot leave the first
+  // hanging — the earlier version reused a single response slot and a fast
+  // second ask sat there searching.
+  const pending = turns.some((turn) => turn.status === "pending");
+
+  useEffect(() => {
+    if (turns.length === 0) {
+      globalThis.localStorage?.removeItem(chatStorageKey);
+      return;
+    }
+    // Saving on every change also refreshes the clock, so the quarter hour runs
+    // from the last message, not the first.
+    globalThis.localStorage?.setItem(
+      chatStorageKey,
+      JSON.stringify({ savedAt: Date.now(), turns: turns.slice(-12) }),
+    );
+  }, [turns]);
+
+  useEffect(() => {
+    threadRef.current?.scrollTo({ behavior: "smooth", top: threadRef.current.scrollHeight });
+  }, [turns]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (user === null || message.trim().length === 0) return;
-    setSending(true);
-    setError(false);
+    const question = message.trim();
+    if (user === null || question.length === 0 || pending) return;
+    const id = createUlid();
+    setTurns((current) => [...current, { id, question, response: null, status: "pending" }]);
+    setMessage("");
     try {
-      setResponse(
-        await createAssistantTurn(user, bootstrap.data.user.activeSpaceId, {
-          context: { allowedCrossSpaceIds: [], visibleWineId: null },
-          locale: currentLocale(i18n.language),
-          message: message.trim(),
-          saveHistory: false,
-          threadId: null,
-        }),
+      const answer = await createAssistantTurn(user, bootstrap.data.user.activeSpaceId, {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: currentLocale(i18n.language),
+        message: question,
+        saveHistory: false,
+        threadId: null,
+      });
+      setTurns((current) =>
+        current.map((turn) =>
+          turn.id === id ? { ...turn, response: answer, status: "done" } : turn,
+        ),
       );
     } catch {
-      setError(true);
-    } finally {
-      setSending(false);
+      setTurns((current) =>
+        current.map((turn) => (turn.id === id ? { ...turn, status: "error" } : turn)),
+      );
     }
+  }
+
+  function clearChat() {
+    setTurns([]);
+    setMessage("");
+    globalThis.localStorage?.removeItem(chatStorageKey);
   }
 
   async function draftWishlist(wineId: string, wineName: string) {
@@ -484,55 +471,75 @@ export function AssistantPage() {
   }
 
   return (
-    <section className="assistant-page">
-      <header className="page-heading">
-        <p className="eyebrow">{t("assistant.eyebrow")}</p>
-        <h1>{t("assistant.title")}</h1>
-        <p>{t("assistant.body")}</p>
+    <section className="assistant-page assistant-chat">
+      <header className="page-heading assistant-chat__heading">
+        <div>
+          <p className="eyebrow">{t("assistant.eyebrow")}</p>
+          <h1>{t("assistant.title")}</h1>
+        </div>
+        {turns.length === 0 ? null : (
+          <button className="text-button" onClick={clearChat} type="button">
+            {t("assistant.clearAction")}
+          </button>
+        )}
       </header>
 
-      <aside className="privacy-note">
-        <strong>{t("assistant.privacyTitle")}</strong>
-        <span>{t("assistant.privacyBody")}</span>
-      </aside>
+      <p className="assistant-chat__note">{t("assistant.chatNote")}</p>
+
+      <div className="assistant-thread" ref={threadRef}>
+        {turns.length === 0 ? (
+          <div className="empty-state">
+            <h2>{t("assistant.emptyTitle")}</h2>
+            <p>{t("assistant.emptyBody")}</p>
+          </div>
+        ) : (
+          turns.map((turn) => (
+            <div className="assistant-turn" key={turn.id}>
+              <div className="chat-bubble chat-bubble--user">
+                <p>{turn.question}</p>
+              </div>
+              <div className="chat-bubble chat-bubble--vicenc">
+                {turn.status === "pending" ? (
+                  <p className="chat-thinking" role="status">
+                    {t("assistant.thinking")}
+                  </p>
+                ) : turn.status === "error" || turn.response === null ? (
+                  <p className="form-error" role="alert">
+                    {t("assistant.error")}
+                  </p>
+                ) : (
+                  <AssistantResult
+                    drafting={drafting}
+                    onDraftWishlist={(wineId, wineName) => void draftWishlist(wineId, wineName)}
+                    response={turn.response}
+                  />
+                )}
+              </div>
+            </div>
+          ))
+        )}
+      </div>
 
       <form className="assistant-composer" onSubmit={(event) => void submit(event)}>
-        <label htmlFor="assistant-message">{t("assistant.messageLabel")}</label>
+        <label className="sr-only" htmlFor="assistant-message">
+          {t("assistant.messageLabel")}
+        </label>
         <textarea
-          disabled={sending}
           id="assistant-message"
           maxLength={500}
           onChange={(event) => setMessage(event.target.value)}
           placeholder={t("assistant.messagePlaceholder")}
-          rows={4}
+          rows={2}
           value={message}
         />
         <div className="assistant-composer__footer">
           <span>{t("assistant.activeSpaceOnly")}</span>
-          <button className="primary-button" disabled={sending || message.trim().length === 0}>
-            {sending ? t("assistant.sending") : t("assistant.sendAction")}
+          <button className="primary-button" disabled={pending || message.trim().length === 0}>
+            {pending ? t("assistant.sending") : t("assistant.sendAction")}
           </button>
         </div>
       </form>
 
-      {error ? (
-        <p className="form-error" role="alert">
-          {t("assistant.error")}
-        </p>
-      ) : null}
-      {response === null && !sending ? (
-        <div className="empty-state">
-          <h2>{t("assistant.emptyTitle")}</h2>
-          <p>{t("assistant.emptyBody")}</p>
-        </div>
-      ) : null}
-      {response === null ? null : (
-        <AssistantResult
-          drafting={drafting}
-          onDraftWishlist={(wineId, wineName) => void draftWishlist(wineId, wineName)}
-          response={response}
-        />
-      )}
       {draft === null ? null : (
         <section aria-live="polite" className="action-draft-card">
           <p className="eyebrow">{t("actions.reviewEyebrow")}</p>

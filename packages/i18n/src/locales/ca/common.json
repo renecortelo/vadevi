@@ -424,7 +424,7 @@
     "sending": "Cercant…",
     "error": "Vicenç no pot cercar ara mateix. Wine Memory i els formularis normals continuen disponibles.",
     "emptyTitle": "Comença per la teva Wine Memory.",
-    "emptyBody": "Amb la IA desactivada, Vicenç fa una cerca estructurada directa sense inventar cap resposta.",
+    "emptyBody": "Pregunta pels vins del teu celler: què has tastat, quin t’ha agradat, quin obrir. En Vicenç respon només des dels teus vins.",
     "ephemeralBadge": "No es desa a l’historial del xat",
     "evidenceTitle": "Base d’evidència",
     "resultsTitle": "Vins coincidents",
@@ -504,7 +504,10 @@
         "disabled": "Recerca limitada de vins desactivada",
         "unavailable": "Recerca limitada de vins no disponible"
       }
-    }
+    },
+    "clearAction": "Neteja",
+    "thinking": "Vicenç està pensant…",
+    "chatNote": "Aquesta conversa es desa només en aquest dispositiu i s’esborra al cap de 15 minuts."
   },
   "homeTools": {
     "eyebrow": "La teva col·lecció",

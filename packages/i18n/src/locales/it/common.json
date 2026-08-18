@@ -424,7 +424,7 @@
     "sending": "Ricerca…",
     "error": "Vicenç non può cercare in questo momento. Wine Memory e i moduli normali restano disponibili.",
     "emptyTitle": "Inizia dalla tua Wine Memory.",
-    "emptyBody": "Con l’IA disattivata, Vicenç esegue comunque una ricerca strutturata diretta senza inventare una risposta.",
+    "emptyBody": "Chiedi dei vini della tua cantina: cosa hai assaggiato, cosa ti è piaciuto, cosa aprire. Vicenç risponde solo dai tuoi vini.",
     "ephemeralBadge": "Non salvato nella cronologia",
     "evidenceTitle": "Base delle prove",
     "resultsTitle": "Vini corrispondenti",
@@ -504,7 +504,10 @@
         "disabled": "Ricerca limitata sul vino disattivata",
         "unavailable": "Ricerca limitata sul vino non disponibile"
       }
-    }
+    },
+    "clearAction": "Svuota",
+    "thinking": "Vicenç sta pensando…",
+    "chatNote": "Questa conversazione resta solo su questo dispositivo e si cancella dopo 15 minuti."
   },
   "homeTools": {
     "eyebrow": "La tua collezione",
