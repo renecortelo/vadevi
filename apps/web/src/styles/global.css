@@ -1484,6 +1484,10 @@ p {
   grid-template-columns: 1fr 5rem auto;
 }
 
+.grape-editor__row--names {
+  grid-template-columns: 1fr auto;
+}
+
 .grape-editor__percentage {
   text-align: end;
 }
