@@ -1,3 +1,4 @@
+import type { WineGrape } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { resolveSupportedLocale, tastingDescriptors } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
@@ -174,6 +175,11 @@ export function QuickLogPage() {
         winePayload: {
           ...draft.winePayload,
           displayName: draft.winePayload.displayName.trim(),
+          // Empty varietal rows the reader added but never filled are dropped
+          // before the record is written.
+          grapes: (draft.winePayload.grapes ?? [])
+            .map((grape: WineGrape) => ({ ...grape, name: grape.name.trim() }))
+            .filter((grape: WineGrape) => grape.name.length > 0),
           producerName: draft.winePayload.producerName.trim(),
         },
       });
@@ -287,6 +293,72 @@ export function QuickLogPage() {
               onChange={(event) => updateWine("region", event.target.value || undefined)}
               value={draft.winePayload.region ?? ""}
             />
+            <label htmlFor="quicklog-alcohol">{t("wineDetails.alcohol")}</label>
+            <input
+              id="quicklog-alcohol"
+              inputMode="decimal"
+              max="100"
+              min="0"
+              onChange={(event) =>
+                updateWine(
+                  "alcoholAbv",
+                  event.target.value === "" ? null : Number(event.target.value),
+                )
+              }
+              placeholder={t("wineDetails.alcoholPlaceholder")}
+              step="0.1"
+              type="number"
+              value={draft.winePayload.alcoholAbv ?? ""}
+            />
+            <fieldset className="grape-editor">
+              <legend>{t("wineDetails.grapes")}</legend>
+              {(draft.winePayload.grapes ?? []).length === 0 ? (
+                <p className="cache-note">{t("wineDetails.grapesEmpty")}</p>
+              ) : (
+                (draft.winePayload.grapes ?? []).map((grape: WineGrape, index: number) => (
+                  <div className="grape-editor__row grape-editor__row--names" key={index}>
+                    <input
+                      aria-label={t("wineDetails.grapeName")}
+                      maxLength={120}
+                      onChange={(event) =>
+                        updateWine(
+                          "grapes",
+                          (draft.winePayload.grapes ?? []).map((entry: WineGrape, i: number) =>
+                            i === index ? { ...entry, name: event.target.value } : entry,
+                          ),
+                        )
+                      }
+                      placeholder={t("wineDetails.grapeName")}
+                      value={grape.name}
+                    />
+                    <button
+                      aria-label={t("wineDetails.grapeRemove")}
+                      className="text-button text-button--danger"
+                      onClick={() =>
+                        updateWine(
+                          "grapes",
+                          (draft.winePayload.grapes ?? []).filter(
+                            (_: WineGrape, i: number) => i !== index,
+                          ),
+                        )
+                      }
+                      type="button"
+                    >
+                      ×
+                    </button>
+                  </div>
+                ))
+              )}
+              <button
+                className="action-link action-link--secondary"
+                onClick={() =>
+                  updateWine("grapes", [...(draft.winePayload.grapes ?? []), { name: "" }])
+                }
+                type="button"
+              >
+                {t("wineDetails.grapeAdd")}
+              </button>
+            </fieldset>
           </details>
         </fieldset>
 
