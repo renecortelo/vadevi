@@ -517,7 +517,15 @@
     },
     "clearAction": "Leeren",
     "thinking": "Vicenç denkt nach…",
-    "chatNote": "Dieses Gespräch bleibt nur auf diesem Gerät und wird nach 15 Minuten gelöscht."
+    "chatNote": "Dieses Gespräch bleibt nur auf diesem Gerät und wird nach 15 Minuten gelöscht.",
+    "profileConfidence": "Verlässlichkeit",
+    "confidence": {
+      "low": "Niedrig",
+      "medium": "Mittel",
+      "high": "Hoch"
+    },
+    "profileBasis": "{{count}} eingereichte Notiz",
+    "profileBasis_other": "{{count}} eingereichte Notizen"
   },
   "homeTools": {
     "eyebrow": "Deine Sammlung",

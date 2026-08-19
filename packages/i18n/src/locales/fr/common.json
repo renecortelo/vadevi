@@ -517,7 +517,15 @@
     },
     "clearAction": "Effacer",
     "thinking": "Vicenç réfléchit…",
-    "chatNote": "Cette conversation reste uniquement sur cet appareil et s’efface au bout de 15 minutes."
+    "chatNote": "Cette conversation reste uniquement sur cet appareil et s’efface au bout de 15 minutes.",
+    "profileConfidence": "Confiance",
+    "confidence": {
+      "low": "Faible",
+      "medium": "Moyenne",
+      "high": "Élevée"
+    },
+    "profileBasis": "{{count}} note envoyée",
+    "profileBasis_other": "{{count}} notes envoyées"
   },
   "homeTools": {
     "eyebrow": "Votre collection",

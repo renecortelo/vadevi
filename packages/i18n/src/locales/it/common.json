@@ -517,7 +517,15 @@
     },
     "clearAction": "Svuota",
     "thinking": "Vicenç sta pensando…",
-    "chatNote": "Questa conversazione resta solo su questo dispositivo e si cancella dopo 15 minuti."
+    "chatNote": "Questa conversazione resta solo su questo dispositivo e si cancella dopo 15 minuti.",
+    "profileConfidence": "Affidabilità",
+    "confidence": {
+      "low": "Bassa",
+      "medium": "Media",
+      "high": "Alta"
+    },
+    "profileBasis": "{{count}} nota inviata",
+    "profileBasis_other": "{{count}} note inviate"
   },
   "homeTools": {
     "eyebrow": "La tua collezione",

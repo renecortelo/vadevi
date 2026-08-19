@@ -740,11 +740,26 @@ function languageStatements(
       id: "taste-profile-current-user",
       sampleSize: profile.sampleSize,
       sourceIds: [],
+      // The confidence and how many notes back it travel with the profile, so
+      // the reader is told how firm it is — "from 4 notes, low confidence" —
+      // rather than a bare average that reads more certain than it is.
       text: [
+        `taste profile inferred from ${profile.sampleSize} submitted notes`,
+        `confidence ${profile.confidence}`,
         `average submitted score ${profile.averageScore ?? "unavailable"}`,
         `would buy yes ${profile.wouldBuyYesCount ?? "unavailable"}`,
         `top descriptors ${profile.descriptorCodes.join(", ") || "unavailable"}`,
       ].join("; "),
+    });
+  } else if (profile !== null) {
+    // Cold start: the profile exists but rests on too few notes to describe.
+    // Say so plainly instead of guessing a preference from one or two bottles.
+    statements.push({
+      evidenceClass: "personal",
+      id: "taste-profile-current-user",
+      sampleSize: profile.sampleSize,
+      sourceIds: [],
+      text: `not enough submitted tasting notes yet to infer a taste profile: ${profile.sampleSize} of ${profile.minimumSubmittedNotes} needed. Say there is not enough history yet rather than describing a preference.`,
     });
   }
   for (const price of prices.slice(0, 10)) {

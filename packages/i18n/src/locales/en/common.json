@@ -517,7 +517,15 @@
     },
     "clearAction": "Clear",
     "thinking": "Vicenç is thinking…",
-    "chatNote": "This conversation stays only on this device and clears itself after 15 minutes."
+    "chatNote": "This conversation stays only on this device and clears itself after 15 minutes.",
+    "profileConfidence": "Confidence",
+    "confidence": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "profileBasis": "{{count}} submitted note",
+    "profileBasis_other": "{{count}} submitted notes"
   },
   "homeTools": {
     "eyebrow": "Your collection",

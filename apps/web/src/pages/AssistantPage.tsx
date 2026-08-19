@@ -204,6 +204,15 @@ export function AssistantResult({
           ) : (
             <dl>
               <div>
+                <dt>{t("assistant.profileConfidence")}</dt>
+                <dd>
+                  {t(`assistant.confidence.${response.data.tasteProfile.confidence}`)} ·{" "}
+                  {t("assistant.profileBasis", {
+                    count: response.data.tasteProfile.sampleSize,
+                  })}
+                </dd>
+              </div>
+              <div>
                 <dt>{t("assistant.profileAverage")}</dt>
                 <dd>{response.data.tasteProfile.averageScore?.toFixed(1) ?? "—"}</dd>
               </div>
