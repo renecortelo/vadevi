@@ -6,6 +6,7 @@ import {
   CreateWineResponseSchema,
   ErrorEnvelopeSchema,
 } from "@vadevi/contracts";
+import type { FoodPairingPort } from "@vadevi/domain";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
@@ -662,6 +663,7 @@ describe("Vicenç deterministic read path", () => {
       aiProvider: "none",
       externalResearch: false,
       language: null,
+      pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
         displayName: "Assistant Owner",
@@ -689,6 +691,82 @@ describe("Vicenç deterministic read path", () => {
     expect(ids).toContain(wine.id);
   });
 
+  it("ranks the reader's own wines for a dish using the pairing provider", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    // A Tempranillo red the reader owns; the pairing source will suggest that
+    // style for the dish, so their own bottle must surface.
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Pairing Tinto",
+        grapes: [{ name: "Tempranillo" }],
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Bodega Maridaje",
+        region: "Rioja",
+        wineType: "red",
+      }),
+      headers: {
+        Authorization: `Bearer ${ownerToken}`,
+        "Content-Type": "application/json",
+        "Idempotency-Key": randomOpaqueToken(),
+      },
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wineId = CreateWineResponseSchema.parse(await created.json()).data.wine.id;
+
+    const pairing: FoodPairingPort = {
+      pair: async () => ({
+        cached: false,
+        data: {
+          provider: "sommelierx",
+          styles: [
+            {
+              color: "red",
+              country: "Spain",
+              description: null,
+              grapes: ["Tempranillo"],
+              matchPercent: 90,
+              name: "Rioja",
+              rank: 1,
+              region: "Rioja",
+            },
+          ],
+        },
+        status: "success",
+      }),
+    };
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "none",
+      externalResearch: false,
+      language: null,
+      pairing,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "es",
+        message: "¿Cuál de mis vinos marida con jamón?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    const ids = (response?.data.results ?? []).map(
+      (result: AssistantSearchResult) => result.wine.id,
+    );
+    expect(ids).toContain(wineId);
+    // The pairing lookup counts as a tool call for this turn.
+    expect(response?.data.usage.toolCalls).toBeGreaterThanOrEqual(2);
+  });
+
   it("uses optional provider language only after sentence-to-statement enforcement", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;
@@ -709,6 +787,7 @@ describe("Vicenç deterministic read path", () => {
           modelVersion: "@cf/example/model",
         }),
       },
+      pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
         displayName: "Assistant Owner",

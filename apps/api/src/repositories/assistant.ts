@@ -15,6 +15,8 @@ import type {
 import type {
   AssistantLanguagePort,
   AssistantLanguageStatement,
+  FoodPairingPort,
+  PairingWineStyle,
   SemanticNotePort,
 } from "@vadevi/domain";
 import { ulid } from "ulid";
@@ -98,6 +100,98 @@ function requestsCollectionOverview(message: string): boolean {
   return /\b(how many|count|total|totals|highest|best|top|ranking|ranked|most|cuantos|cuantas|total|totales|mejor|mejores|puntuad|top|clasificaci|bodega|cava|celler|probado|probados|catado|catados|combien|meilleur|meilleurs|classement|quanti|quante|migliore|migliori|classifica|hoeveel|beste|meeste|wie viele|beste|meisten|rangliste|quantos|melhor|melhores|classificac)\b/i.test(
     normalized,
   );
+}
+
+// Verbs that ask for a pairing, across the eight locales, normalized so accents
+// do not matter. Also the words to strip when reducing the message to the dish.
+const pairingVerbs = new Set(
+  normalizeWineText(
+    "pair pairs pairing goes serve maridar marida maridaje marido combina combinar acompana acompanar abbina abbinare abbinamento accompagne accompagner accord accorder passt passen past bij combineren harmoniza harmonizar acompanha acompanhar kombiniert kombinieren",
+  ).split(" "),
+);
+
+function requestsPairing(message: string): boolean {
+  const normalized = normalizeWineText(message);
+  return normalized.split(" ").some((token) => pairingVerbs.has(token));
+}
+
+/**
+ * The dish out of a pairing question: everything left once the pairing verbs and
+ * the wine/question words are removed — "which of my wines pair with duck" leaves
+ * "duck". The whole message is the fallback, since the provider reads free text.
+ */
+function dishFromMessage(message: string): string {
+  const food = normalizeWineText(message)
+    .split(" ")
+    .filter((token) => token.length >= 2 && !ignoredTerms.has(token) && !pairingVerbs.has(token));
+  const dish = food.join(" ").slice(0, 200).trim();
+  return dish.length >= 2 ? dish : normalizeWineText(message).slice(0, 200);
+}
+
+function colorToWineType(color: string | null): WineSummary["wineType"] | null {
+  switch ((color ?? "").toLowerCase()) {
+    case "red":
+      return "red";
+    case "white":
+      return "white";
+    case "rose":
+    case "rosé":
+      return "rose";
+    case "sparkling":
+      return "sparkling";
+    case "fortified":
+      return "fortified";
+    case "orange":
+      return "orange";
+    default:
+      return null;
+  }
+}
+
+/**
+ * The reader's own wines that suit a dish, by the styles the pairing source
+ * returned: a wine matches when its type, one of its grapes, or its region lines
+ * up with a suggested style. Grounded entirely in the wine's own attributes; the
+ * styles only decide what to look for, never add a wine the reader does not own.
+ */
+function matchCellarToPairing(
+  wines: AssistantSearchResult[],
+  styles: PairingWineStyle[],
+): Array<{ reasons: string[]; result: AssistantSearchResult }> {
+  const styleGrapes = new Set(
+    styles.flatMap((style) => style.grapes.map((grape) => normalizeWineText(grape))),
+  );
+  const styleTypes = new Set(
+    styles.map((style) => colorToWineType(style.color)).filter((type) => type !== null),
+  );
+  const styleRegions = styles
+    .map((style) => normalizeWineText(style.region ?? ""))
+    .filter((region) => region.length >= 3);
+  const matched: Array<{ reasons: string[]; result: AssistantSearchResult }> = [];
+  for (const result of wines) {
+    const reasons: string[] = [];
+    if (result.wine.wineType !== null && styleTypes.has(result.wine.wineType)) {
+      reasons.push(`type ${result.wine.wineType}`);
+    }
+    for (const grape of result.wine.grapes) {
+      if (styleGrapes.has(normalizeWineText(grape.name))) reasons.push(`grape ${grape.name}`);
+    }
+    const region = normalizeWineText(result.wine.region ?? "");
+    if (
+      region.length >= 3 &&
+      styleRegions.some((candidate) => candidate.includes(region) || region.includes(candidate))
+    ) {
+      reasons.push(`region ${result.wine.region}`);
+    }
+    if (reasons.length > 0) matched.push({ reasons: [...new Set(reasons)], result });
+  }
+  return matched
+    .sort(
+      (left, right) =>
+        right.reasons.length - left.reasons.length ||
+        (right.result.wine.score100 ?? -1) - (left.result.wine.score100 ?? -1),
+    )
+    .slice(0, 6);
 }
 
 function confidenceForSample(sampleSize: number): AssistantTasteProfile["confidence"] {
@@ -842,6 +936,7 @@ export async function runDeterministicAssistantTurn(
     aiProvider: "cloudflare" | "none";
     externalResearch: boolean;
     language: AssistantLanguagePort | null;
+    pairing: FoodPairingPort | null;
     principal: FirebasePrincipal;
     request: AssistantTurnRequest;
     requestId: string;
@@ -939,6 +1034,56 @@ export async function runDeterministicAssistantTurn(
     turnId,
   });
   toolCalls += 1;
+
+  // "Which of MY wines go with duck?" — the pairing source says what styles suit
+  // the dish, and those criteria rank the reader's OWN wines, never a bottle they
+  // do not own. The dish leaves the device; the wines never do. Off unless the
+  // deployment enabled the provider.
+  let pairingStatements: AssistantLanguageStatement[] = [];
+  if (options.pairing !== null && requestsPairing(options.request.message)) {
+    const dish = dishFromMessage(options.request.message);
+    try {
+      const pairing = await options.pairing.pair({ dish, locale: options.request.locale });
+      if (pairing.status === "success" && pairing.data.styles.length > 0) {
+        const collection = await loadCollectionOverview(database, options.principal, spaces);
+        const matches = matchCellarToPairing(collection.wines, pairing.data.styles);
+        if (matches.length > 0) {
+          const merged = new Map(
+            results.map((result) => [`${result.spaceId}:${result.wine.id}`, result]),
+          );
+          for (const match of matches) {
+            merged.set(`${match.result.spaceId}:${match.result.wine.id}`, match.result);
+          }
+          results = [...merged.values()].slice(0, 12);
+        }
+        pairingStatements = [
+          {
+            evidenceClass: "inferred",
+            id: "pairing-criteria",
+            sampleSize: null,
+            sourceIds: [],
+            text: `SommelierX suggests these wine styles for "${dish}": ${pairing.data.styles
+              .map((style: PairingWineStyle) =>
+                [style.name, style.color, style.grapes.join("/"), style.region]
+                  .filter((value) => value !== null && value !== "")
+                  .join(" "),
+              )
+              .join("; ")}`,
+          },
+          ...matches.map((match) => ({
+            evidenceClass: "inferred" as const,
+            id: `pairing-${match.result.wine.id}`,
+            sampleSize: null,
+            sourceIds: [],
+            text: `from your cellar, ${match.result.wine.displayName} suits "${dish}": it matches ${match.reasons.join(", ")}`,
+          })),
+        ];
+      }
+    } catch {
+      // A failed pairing lookup just leaves the turn without pairing statements.
+    }
+    toolCalls += 1;
+  }
 
   const contextStartedAt = Date.now();
   const visibleContext = await getVisibleWineContext(
@@ -1115,6 +1260,7 @@ export async function runDeterministicAssistantTurn(
           statements: [
             ...(collectionStatement === null ? [] : [collectionStatement]),
             ...semanticStatements,
+            ...pairingStatements,
             ...languageStatements(
               results,
               visibleContext.context,
