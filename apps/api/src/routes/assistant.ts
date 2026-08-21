@@ -7,6 +7,7 @@ import {
 } from "@vadevi/contracts";
 
 import { createAssistantLanguagePort } from "../adapters/assistant-language";
+import { createFoodPairingPort } from "../adapters/pairing-factory";
 import { createSemanticNotePort } from "../adapters/semantic-notes";
 import { reserveProviderBudget } from "../services/usage";
 import { externalResearchEnabled } from "../adapters/research-factory";
@@ -66,6 +67,7 @@ export function registerAssistantRoutes(app: OpenAPIHono<ApiEnvironment>) {
       aiProvider: context.env.AI_PROVIDER ?? "none",
       externalResearch: externalResearchEnabled(context.env),
       language: withinBudget ? language : null,
+      pairing: withinBudget ? createFoodPairingPort(context.env.DB!, context.env) : null,
       principal: context.get("principal"),
       request: context.req.valid("json"),
       requestId: context.get("requestId"),
