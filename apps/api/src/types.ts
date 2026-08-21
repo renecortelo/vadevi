@@ -19,7 +19,9 @@ export type WorkerBindings = {
   FIREBASE_AUTH_PROXY?: string;
   FIREBASE_PROJECT_ID?: string;
   FIREBASE_WEB_API_KEY?: string;
+  PAIRING_PROVIDER?: "none" | "sommelierx";
   RESEARCH_PROVIDER?: "none" | "open_data";
+  SOMMELIERX_API_KEY?: string;
   DB?: D1Database;
   MEDIA?: R2Bucket;
   NOTE_INDEX?: VectorizeIndex;

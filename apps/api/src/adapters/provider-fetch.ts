@@ -27,8 +27,10 @@ export async function fetchFromProvider(
   initialUrl: string | URL,
   options: {
     allowedHosts: ReadonlySet<string>;
+    body?: BodyInit;
     headers: HeadersInit;
     maxRedirects?: number;
+    method?: string;
     timeoutMilliseconds?: number;
   },
 ): Promise<Response> {
@@ -38,7 +40,9 @@ export async function fetchFromProvider(
     let url = assertAllowedUrl(initialUrl, options.allowedHosts);
     for (let redirect = 0; redirect <= (options.maxRedirects ?? 2); redirect += 1) {
       const response = await fetcher(url, {
+        ...(options.body === undefined ? {} : { body: options.body }),
         headers: options.headers,
+        method: options.method ?? "GET",
         redirect: "manual",
         signal: controller.signal,
       });

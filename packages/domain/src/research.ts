@@ -75,6 +75,40 @@ export type ResearchPorts = Readonly<{
   providerMode: "none" | "open_data";
 }>;
 
+/**
+ * Optional food-and-wine pairing.
+ *
+ * A pairing source answers "what wine styles suit this dish" — knowledge the app
+ * does not hold and must not invent. It is only ever used to derive criteria for
+ * ranking the reader's OWN wines, never to recommend a bottle they do not have.
+ * The dish text leaves the device to reach the provider, so a deployment enables
+ * this only after its own privacy review, and it defaults off.
+ */
+export type FoodPairingRequest = Readonly<{
+  dish: string;
+  locale: ResearchLocale;
+}>;
+
+export type PairingWineStyle = Readonly<{
+  color: string | null;
+  country: string | null;
+  description: string | null;
+  grapes: string[];
+  matchPercent: number | null;
+  name: string;
+  rank: number;
+  region: string | null;
+}>;
+
+export type FoodPairingResult = Readonly<{
+  provider: "sommelierx";
+  styles: PairingWineStyle[];
+}>;
+
+export interface FoodPairingPort {
+  pair(input: FoodPairingRequest): Promise<ExternalResult<FoodPairingResult>>;
+}
+
 export interface ExternalCachePort {
   get<T>(provider: string, key: string, now: string): Promise<T | null>;
   put<T>(provider: string, key: string, value: T, expiresAt: string, now: string): Promise<void>;
