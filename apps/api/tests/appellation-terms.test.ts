@@ -11,6 +11,11 @@ describe("appellation resolution", () => {
     expect(resolveAppellationCountries("something from Napa Valley")).toEqual(["US"]);
     expect(resolveAppellationCountries("un vino de Parras")).toEqual(["MX"]);
     expect(resolveAppellationCountries("Barolo o Chianti")).toEqual(["IT"]);
+    // Entries added from the wider eAmbrosia subset.
+    expect(resolveAppellationCountries("un vino de Priorat")).toEqual(["ES"]);
+    expect(resolveAppellationCountries("something from Barossa")).toEqual(["AU"]);
+    expect(resolveAppellationCountries("vinho do Douro")).toEqual(["PT"]);
+    expect(resolveAppellationCountries("ein Wein aus Mosel")).toEqual(["DE"]);
   });
 
   it("returns nothing when no known appellation is named", () => {
