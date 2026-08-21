@@ -223,6 +223,35 @@ describe("provider-backed assistant language enforcement", () => {
     expect(calls[1]).not.toHaveProperty("response_format");
   });
 
+  it("recovers the claims object when the model wraps it in prose", async () => {
+    const adapter = new CloudflareAssistantLanguageAdapter(
+      {
+        run: async () => ({
+          response:
+            'Of course! Here is what you asked for:\n{"claims":[{"statementIds":["wine-1"],"text":"You have a Rioja."}]}\nHope that helps.',
+        }),
+      },
+      "@cf/example/model",
+    );
+
+    const result = await adapter.render({
+      locale: "en",
+      message: "What Rioja do I have?",
+      statements: [
+        {
+          evidenceClass: "observed",
+          id: "wine-1",
+          sampleSize: 1,
+          sourceIds: [],
+          text: "Rioja; 2019",
+        },
+      ],
+    });
+    expect(result?.claims).toEqual([
+      { evidenceClass: "observed", sampleSize: 1, sourceIds: [], text: "You have a Rioja." },
+    ]);
+  });
+
   it("drops only the unsupported claim and keeps the cited ones", async () => {
     const adapter = new CloudflareAssistantLanguageAdapter(
       {
