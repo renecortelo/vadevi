@@ -12,16 +12,19 @@ type WorkersAiRunner = Readonly<{
   run: (model: string, input: Record<string, unknown>) => Promise<Record<string, unknown>>;
 }>;
 
-const ProviderClaimSchema = z
-  .object({
-    statementIds: z.array(z.string().min(1).max(100)).min(1).max(8),
-    text: z.string().min(1).max(500),
-  })
-  .strict();
+// Not strict: a model told at length to honour each statement's evidenceClass
+// tends to echo an `evidenceClass` (or other) field onto the claims it returns,
+// and rejecting the whole answer for an extra key surfaces as "the AI could not
+// answer". Unknown keys are ignored; only text and statementIds are ever read,
+// and each id is still checked against a real statement downstream.
+const ProviderClaimSchema = z.object({
+  statementIds: z.array(z.string().min(1).max(100)).min(1).max(8),
+  text: z.string().min(1).max(500),
+});
 
-const ProviderResponseSchema = z
-  .object({ claims: z.array(ProviderClaimSchema).min(1).max(8) })
-  .strict();
+const ProviderResponseSchema = z.object({
+  claims: z.array(ProviderClaimSchema).min(1).max(8),
+});
 
 const evidencePriority: Record<AssistantEvidenceClass, number> = {
   inferred: 1,
@@ -180,7 +183,13 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
       (await this.callModel(input, statements, false));
     if (parsed === null) return null;
     const response = ProviderResponseSchema.safeParse(parsed);
-    if (!response.success) return null;
+    if (!response.success) {
+      // The model answered with JSON that is not the {claims:[{text,statementIds}]}
+      // shape. Logged (shape only, never wine data) so a silent schema drift is
+      // visible rather than surfacing as "the AI could not answer".
+      console.warn(`assistant: model output did not match the claims schema (model=${this.model})`);
+      return null;
+    }
     const claims: AssistantLanguageResult["claims"] = [];
     for (const providerClaim of response.data.claims) {
       // An unsupported claim is dropped on its own — not the whole answer. One
@@ -213,7 +222,17 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
         text: safeText.value,
       });
     }
-    return claims.length === 0 ? null : { claims, modelVersion: this.model };
+    if (claims.length === 0) {
+      // The model answered, but every claim was dropped as unsupported — a
+      // duplicate, an unknown statement id, an unsourced researched claim, or
+      // empty/prompt-like text. Logged (counts only) so this is visible instead
+      // of reading as "the AI could not answer".
+      console.warn(
+        `assistant: every model claim was dropped (claims=${response.data.claims.length}, statements=${statements.length})`,
+      );
+      return null;
+    }
+    return { claims, modelVersion: this.model };
   }
 }
 
