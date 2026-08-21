@@ -21,6 +21,7 @@ import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
+import { appellationsForCountry, resolveAppellationCountries } from "./appellation-terms";
 import { listPriceObservations } from "./cellar";
 import { resolveCountryCodes } from "./country-terms";
 import { getSource, listWineFacts } from "./provenance";
@@ -322,8 +323,18 @@ async function searchMemory(
   const terms = searchTerms(message);
   // A place name the reader typed that the cellar records only as an ISO country
   // code — "México" for a wine filed under MX. Resolved from the whole message
-  // so multi-word names ("estados unidos") survive the per-term split.
-  const countryCodes = resolveCountryCodes(message);
+  // so multi-word names ("estados unidos") survive the per-term split. A named
+  // appellation ("Rioja") also resolves to its country, so it reaches wines
+  // filed under Spain even when worded differently.
+  const countryCodes = [
+    ...new Set([...resolveCountryCodes(message), ...resolveAppellationCountries(message)]),
+  ].slice(0, 3);
+  // The appellations of each named country, so naming the country also reaches a
+  // wine whose region is one of them but whose country was never recorded — a
+  // Parras wine surfaces from "algo de México" even with no country code on it.
+  const appellationRegions = [
+    ...new Set(countryCodes.flatMap((code) => appellationsForCountry(code))),
+  ].slice(0, 8);
   const results = new Map<string, AssistantSearchResult>();
   for (const space of spaces) {
     const queries = terms.length === 0 ? [undefined] : terms;
@@ -367,6 +378,20 @@ async function searchMemory(
         countryCode,
         limit: 10,
         principal,
+        sort: "recent",
+        spaceId: space.id,
+      });
+      for (const wine of response?.data ?? []) {
+        results.set(`${space.id}:${wine.id}`, { spaceId: space.id, spaceName: space.name, wine });
+      }
+    }
+    // …and by the region text of that country's appellations, for wines whose
+    // country was never recorded but whose region names the place.
+    for (const region of appellationRegions) {
+      const response = await listWines(database, {
+        limit: 10,
+        principal,
+        region,
         sort: "recent",
         spaceId: space.id,
       });
