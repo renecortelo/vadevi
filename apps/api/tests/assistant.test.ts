@@ -265,6 +265,40 @@ describe("Vicenç deterministic read path", () => {
     ).toBe(true);
   });
 
+  it("reaches a wine by its region's country even when the country was never recorded", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    // No countryCode at all — only the region "Parras Valley". Parras is in
+    // Mexico, so naming the country must still reach it through the appellation
+    // knowledge, not the stored code (there is none).
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Sin País Tinto",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Bodega Anónima",
+        region: "Parras Valley",
+        vintageYear: 2021,
+        wineType: "red",
+      }),
+      headers: {
+        Authorization: `Bearer ${ownerToken}`,
+        "Content-Type": "application/json",
+        "Idempotency-Key": randomOpaqueToken(),
+      },
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wineId = CreateWineResponseSchema.parse(await created.json()).data.wine.id;
+
+    const response = await assistantTurn(ownerToken, spaceId, "¿He probado algo de México?");
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(response.status).toBe(200);
+    expect(
+      body.data.results.some((result: AssistantSearchResult) => result.wine.id === wineId),
+    ).toBe(true);
+  });
+
   it("answers a collection question from the whole cellar, not only term matches", async () => {
     const user = await bootstrap(collectionToken);
     const spaceId = user.data.user.activeSpaceId;
