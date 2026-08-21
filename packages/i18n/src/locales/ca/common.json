@@ -517,7 +517,15 @@
     },
     "clearAction": "Neteja",
     "thinking": "Vicenç està pensant…",
-    "chatNote": "Aquesta conversa es desa només en aquest dispositiu i s’esborra al cap de 15 minuts."
+    "chatNote": "Aquesta conversa es desa només en aquest dispositiu i s’esborra al cap de 15 minuts.",
+    "profileConfidence": "Confiança",
+    "confidence": {
+      "low": "Baixa",
+      "medium": "Mitjana",
+      "high": "Alta"
+    },
+    "profileBasis": "{{count}} nota enviada",
+    "profileBasis_other": "{{count}} notes enviades"
   },
   "homeTools": {
     "eyebrow": "La teva col·lecció",

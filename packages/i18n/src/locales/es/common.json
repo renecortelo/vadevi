@@ -517,7 +517,15 @@
     },
     "clearAction": "Limpiar",
     "thinking": "Vicenç está pensando…",
-    "chatNote": "Esta conversación se guarda solo en este dispositivo y se borra a los 15 minutos."
+    "chatNote": "Esta conversación se guarda solo en este dispositivo y se borra a los 15 minutos.",
+    "profileConfidence": "Confianza",
+    "confidence": {
+      "low": "Baja",
+      "medium": "Media",
+      "high": "Alta"
+    },
+    "profileBasis": "{{count}} nota enviada",
+    "profileBasis_other": "{{count}} notas enviadas"
   },
   "homeTools": {
     "eyebrow": "Tu colección",

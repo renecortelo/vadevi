@@ -517,7 +517,15 @@
     },
     "clearAction": "Limpar",
     "thinking": "O Vicenç está a pensar…",
-    "chatNote": "Esta conversa fica apenas neste dispositivo e é apagada ao fim de 15 minutos."
+    "chatNote": "Esta conversa fica apenas neste dispositivo e é apagada ao fim de 15 minutos.",
+    "profileConfidence": "Confiança",
+    "confidence": {
+      "low": "Baixa",
+      "medium": "Média",
+      "high": "Alta"
+    },
+    "profileBasis": "{{count}} nota submetida",
+    "profileBasis_other": "{{count}} notas submetidas"
   },
   "homeTools": {
     "eyebrow": "A sua coleção",

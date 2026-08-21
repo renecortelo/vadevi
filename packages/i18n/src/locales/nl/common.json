@@ -517,7 +517,15 @@
     },
     "clearAction": "Wissen",
     "thinking": "Vicenç denkt na…",
-    "chatNote": "Dit gesprek blijft alleen op dit apparaat en wist zichzelf na 15 minuten."
+    "chatNote": "Dit gesprek blijft alleen op dit apparaat en wist zichzelf na 15 minuten.",
+    "profileConfidence": "Betrouwbaarheid",
+    "confidence": {
+      "low": "Laag",
+      "medium": "Middel",
+      "high": "Hoog"
+    },
+    "profileBasis": "{{count}} ingediende notitie",
+    "profileBasis_other": "{{count}} ingediende notities"
   },
   "homeTools": {
     "eyebrow": "Je collectie",
