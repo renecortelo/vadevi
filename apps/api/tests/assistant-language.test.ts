@@ -52,6 +52,35 @@ describe("provider-backed assistant language enforcement", () => {
     });
   });
 
+  it("keeps a claim whose text runs long by truncating, not discarding the answer", async () => {
+    const longText = `You have a lovely Rioja. ${"x".repeat(700)}`;
+    const adapter = new CloudflareAssistantLanguageAdapter(
+      {
+        run: async () => ({
+          response: { claims: [{ statementIds: ["wine-1"], text: longText }] },
+        }),
+      },
+      "@cf/example/model",
+    );
+
+    const result = await adapter.render({
+      locale: "en",
+      message: "What Rioja do I have?",
+      statements: [
+        {
+          evidenceClass: "observed",
+          id: "wine-1",
+          sampleSize: 1,
+          sourceIds: [],
+          text: "Rioja Reserva; 2019",
+        },
+      ],
+    });
+    expect(result).not.toBeNull();
+    expect(result?.claims).toHaveLength(1);
+    expect(result?.claims[0]?.text.length).toBe(500);
+  });
+
   it("derives claim evidence and source IDs only from referenced structured statements", async () => {
     const calls: Array<Record<string, unknown>> = [];
     const adapter = new CloudflareAssistantLanguageAdapter(
