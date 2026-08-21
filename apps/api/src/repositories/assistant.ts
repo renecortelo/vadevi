@@ -406,6 +406,100 @@ async function searchNotesSemantically(
   return { results: [...results.values()], statements };
 }
 
+type TastingNoteDetailRow = {
+  acidity: number | null;
+  body: number | null;
+  comment: string | null;
+  finish_length: number | null;
+  id: string;
+  palate_text: string | null;
+  palate_texture: string | null;
+  score_100: number | null;
+  sweetness: number | null;
+  tannin_level: number | null;
+  tannin_texture: string | null;
+  wine_id: string;
+  would_buy: string | null;
+  would_drink_again: string | null;
+};
+
+function clip(value: string, max: number): string {
+  return value.length > max ? `${value.slice(0, max)}…` : value;
+}
+
+/**
+ * The reader's own tasting notes for the wines in hand — score, verdicts, the
+ * comment, and the deep-tasting structure (acidity, tannin, body, finish, …).
+ * This is what lets Vicenç answer "what did I say about it?" or "why did I score
+ * it 58?" from the reader's own words and ratings, not a guess. Only the reader's
+ * submitted notes, bounded per wine and overall.
+ */
+async function loadReaderTastingNotes(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  results: AssistantSearchResult[],
+  limit = 6,
+): Promise<AssistantLanguageStatement[]> {
+  const top = results.slice(0, limit);
+  if (top.length === 0) return [];
+  const wineById = new Map(top.map((result) => [result.wine.id, result.wine]));
+  const wineIds = [...wineById.keys()];
+  const placeholders = wineIds.map(() => "?").join(", ");
+  const rows = await database
+    .prepare(
+      `SELECT note.id, note.wine_id, note.score_100, note.would_buy, note.would_drink_again,
+        note.comment, note.sweetness, note.acidity, note.tannin_level,
+        note.tannin_texture, note.body, note.palate_texture, note.finish_length, note.palate_text
+      FROM tasting_notes note
+      JOIN users actor ON actor.id = note.author_user_id
+      JOIN space_memberships membership ON membership.space_id = note.space_id
+        AND membership.user_id = actor.id
+      WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL AND membership.status = 'active'
+        AND note.wine_id IN (${placeholders}) AND note.state = 'submitted' AND note.deleted_at IS NULL
+      ORDER BY note.tasted_at DESC
+      LIMIT 12`,
+    )
+    .bind(principal.firebaseUid, ...wineIds)
+    .all<TastingNoteDetailRow>();
+  const statements: AssistantLanguageStatement[] = [];
+  const perWine = new Map<string, number>();
+  for (const row of rows.results) {
+    const wine = wineById.get(row.wine_id);
+    if (wine === undefined) continue;
+    const seen = perWine.get(row.wine_id) ?? 0;
+    if (seen >= 2) continue;
+    perWine.set(row.wine_id, seen + 1);
+    const parts = [
+      row.score_100 === null ? null : `you rated it ${row.score_100}`,
+      row.would_buy === null ? null : `would buy: ${row.would_buy}`,
+      row.would_drink_again === null ? null : `would drink again: ${row.would_drink_again}`,
+      row.acidity === null ? null : `acidity ${row.acidity}/5`,
+      row.tannin_level === null
+        ? null
+        : `tannin ${row.tannin_level}/5${row.tannin_texture === null ? "" : ` (${row.tannin_texture})`}`,
+      row.body === null ? null : `body ${row.body}/5`,
+      row.sweetness === null ? null : `sweetness ${row.sweetness}/5`,
+      row.finish_length === null ? null : `finish ${row.finish_length}/5`,
+      row.palate_texture === null ? null : `palate ${row.palate_texture}`,
+      row.palate_text === null || row.palate_text.length === 0
+        ? null
+        : `palate note: ${clip(row.palate_text, 160)}`,
+      row.comment === null || row.comment.length === 0
+        ? null
+        : `you wrote: ${clip(row.comment, 200)}`,
+    ].filter((part): part is string => part !== null);
+    if (parts.length === 0) continue;
+    statements.push({
+      evidenceClass: "personal",
+      id: `note-detail-${row.id}`,
+      sampleSize: 1,
+      sourceIds: [],
+      text: `your tasting note on ${wine.displayName}: ${parts.join("; ")}`,
+    });
+  }
+  return statements.slice(0, 8);
+}
+
 async function searchMemory(
   database: D1Database,
   principal: FirebasePrincipal,
@@ -1251,6 +1345,13 @@ export async function runDeterministicAssistantTurn(
       }
     }
   }
+  // The reader's own detailed tasting notes for the wines in hand, so Vicenç can
+  // answer "what did I say?" or "why did I score it 58?" from their words and
+  // ratings. Skipped for a whole-collection question, which is aggregate.
+  const noteStatements =
+    options.language === null || overview
+      ? []
+      : await loadReaderTastingNotes(database, options.principal, results);
   const languageResult =
     options.language === null
       ? null
@@ -1261,6 +1362,7 @@ export async function runDeterministicAssistantTurn(
             ...(collectionStatement === null ? [] : [collectionStatement]),
             ...semanticStatements,
             ...pairingStatements,
+            ...noteStatements,
             ...languageStatements(
               results,
               visibleContext.context,
