@@ -767,6 +767,83 @@ describe("Vicenç deterministic read path", () => {
     expect(response?.data.usage.toolCalls).toBeGreaterThanOrEqual(2);
   });
 
+  it("feeds the reader's own tasting-note detail so Vicenç can explain a score", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    const wine = await createWine(ownerToken, spaceId, "Southern Ocean");
+    const now = new Date().toISOString();
+    await env.DB.prepare(
+      `INSERT INTO tasting_notes
+        (id, space_id, wine_id, author_user_id, mode, state, tasted_at, score_100, comment,
+         acidity, tannin_level, body, finish_length, version, created_at, updated_at)
+        VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 58, ?, 2, 4, 3, 2, 1, ?, ?)`,
+    )
+      .bind(
+        randomOpaqueToken(),
+        spaceId,
+        wine.id,
+        owner.data.user.id,
+        now,
+        "Fresh but a bit thin on the finish.",
+        now,
+        now,
+      )
+      .run();
+
+    let captured: Array<{
+      evidenceClass: string;
+      id: string;
+      sampleSize: number | null;
+      sourceIds: string[];
+      text: string;
+    }> = [];
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: {
+        render: async (input) => {
+          captured = input.statements;
+          const first = input.statements[0]!;
+          return {
+            claims: [
+              {
+                evidenceClass: first.evidenceClass,
+                sampleSize: first.sampleSize,
+                sourceIds: first.sourceIds,
+                text: "Here is your note.",
+              },
+            ],
+            modelVersion: "@cf/example/model",
+          };
+        },
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "en",
+        message: "What did I say about Southern Ocean?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    expect(response).not.toBeNull();
+    const detail = captured.find((statement) => statement.id.startsWith("note-detail-"));
+    expect(detail).toBeDefined();
+    expect(detail?.evidenceClass).toBe("personal");
+    expect(detail?.text).toContain("you rated it 58");
+    expect(detail?.text).toContain("Fresh but a bit thin");
+    expect(detail?.text).toContain("acidity 2/5");
+  });
+
   it("uses optional provider language only after sentence-to-statement enforcement", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;
