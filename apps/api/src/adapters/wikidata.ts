@@ -282,17 +282,11 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       return { reason: "not_found", retryAfterSeconds: null, status: "unavailable" };
     }
     const rawLabel = localizedTerm(entity.labels, locale);
-    const rawDescription = localizedTerm(entity.descriptions, locale);
     const sanitizedLabel = sanitizeExternalText(rawLabel ?? "", 300);
-    const sanitizedDescription = sanitizeExternalText(rawDescription ?? "", 2_000);
     const label =
       sanitizedLabel.value.length === 0 || sanitizedLabel.flaggedPromptLike
         ? null
         : sanitizedLabel.value;
-    const description =
-      sanitizedDescription.value.length === 0 || sanitizedDescription.flaggedPromptLike
-        ? null
-        : sanitizedDescription.value;
     const source = {
       canonicalUrl: `https://www.wikidata.org/wiki/${entityId}`,
       licenseIdentifier: "CC0-1.0",
@@ -316,15 +310,11 @@ export class WikidataAdapter implements KnowledgeResearchPort {
         value: label,
       });
     }
-    if (input.subjectType === "producer" && description !== null) {
-      facts.push({
-        confidenceMilli: 600,
-        predicate: "producer.history",
-        researchMethod: "wikidata.entity.v1",
-        source,
-        value: description,
-      });
-    }
+    // The Wikidata description was surfaced as a "producer.history" fact, but it
+    // is a generic one-liner ("winery in Spain") or, when the entity is only a
+    // loose match, plainly unrelated — the low-quality noise readers complained
+    // about. Wikidata now contributes only the cited canonical name; regulatory
+    // sources (eAmbrosia) carry the place facts, per the source-priority rule.
     if (facts.length === 0) {
       return { reason: "not_found", retryAfterSeconds: null, status: "unavailable" };
     }

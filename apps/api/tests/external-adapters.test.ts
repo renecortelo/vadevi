@@ -157,24 +157,22 @@ describe("external research adapters", () => {
       subjectType: "producer",
     });
 
-    expect(first).toMatchObject({
-      cached: false,
-      data: [
-        {
-          predicate: "producer.name",
-          source: {
-            canonicalUrl: "https://www.wikidata.org/wiki/Q123",
-            licenseIdentifier: "CC0-1.0",
-          },
-          value: "Synthetic Estate",
-        },
-        {
-          predicate: "producer.history",
-          value: "A synthetic winery used only in tests",
-        },
-      ],
-      status: "success",
-    });
+    // Only the cited canonical name — the generic Wikidata description is no
+    // longer surfaced as a "producer.history" fact (it was low-quality noise).
+    expect(first.status).toBe("success");
+    if (first.status !== "success") throw new Error("Expected a successful lookup.");
+    expect(first.data).toEqual([
+      {
+        confidenceMilli: 750,
+        predicate: "producer.name",
+        researchMethod: "wikidata.entity.v1",
+        source: expect.objectContaining({
+          canonicalUrl: "https://www.wikidata.org/wiki/Q123",
+          licenseIdentifier: "CC0-1.0",
+        }),
+        value: "Synthetic Estate",
+      },
+    ]);
     expect(second).toMatchObject({ cached: true, status: "success" });
     expect(requests).toHaveLength(1);
     expect(requests[0]?.searchParams.get("action")).toBe("wbgetentities");
