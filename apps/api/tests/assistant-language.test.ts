@@ -5,6 +5,53 @@ import { CloudflareAssistantLanguageAdapter } from "../src/adapters/assistant-la
 const sourceId = "01J00000000000000000000001";
 
 describe("provider-backed assistant language enforcement", () => {
+  it("keeps a claim even when the model echoes an extra field like evidenceClass", async () => {
+    const adapter = new CloudflareAssistantLanguageAdapter(
+      {
+        run: async () => ({
+          response: {
+            claims: [
+              {
+                // The model, told to honour evidenceClass, adds it to the claim.
+                // The extra key must not discard the whole answer.
+                evidenceClass: "observed",
+                statementIds: ["wine-1"],
+                text: "You have a Rioja from 2019.",
+              },
+            ],
+          },
+        }),
+      },
+      "@cf/example/model",
+    );
+
+    await expect(
+      adapter.render({
+        locale: "en",
+        message: "What Rioja do I have?",
+        statements: [
+          {
+            evidenceClass: "observed",
+            id: "wine-1",
+            sampleSize: 1,
+            sourceIds: [],
+            text: "Rioja Reserva; 2019",
+          },
+        ],
+      }),
+    ).resolves.toEqual({
+      claims: [
+        {
+          evidenceClass: "observed",
+          sampleSize: 1,
+          sourceIds: [],
+          text: "You have a Rioja from 2019.",
+        },
+      ],
+      modelVersion: "@cf/example/model",
+    });
+  });
+
   it("derives claim evidence and source IDs only from referenced structured statements", async () => {
     const calls: Array<Record<string, unknown>> = [];
     const adapter = new CloudflareAssistantLanguageAdapter(
