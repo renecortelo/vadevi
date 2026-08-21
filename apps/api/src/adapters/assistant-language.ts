@@ -12,18 +12,21 @@ type WorkersAiRunner = Readonly<{
   run: (model: string, input: Record<string, unknown>) => Promise<Record<string, unknown>>;
 }>;
 
-// Not strict: a model told at length to honour each statement's evidenceClass
-// tends to echo an `evidenceClass` (or other) field onto the claims it returns,
-// and rejecting the whole answer for an extra key surfaces as "the AI could not
-// answer". Unknown keys are ignored; only text and statementIds are ever read,
-// and each id is still checked against a real statement downstream.
+// Each claim is validated on its own below, so the response only needs `claims`
+// to be a list. One malformed or over-long claim — an extra `evidenceClass`
+// field the prompt made the model echo, a sentence past 500 chars, more than a
+// handful of cited ids — must never sink the whole answer, which is what a
+// strict, capped, all-or-nothing schema did (it read as "the AI could not
+// answer"). Unknown keys are ignored; over-long text is truncated and extra ids
+// are sliced downstream; only text and statementIds are ever read, and each id
+// is still checked against a real statement.
 const ProviderClaimSchema = z.object({
-  statementIds: z.array(z.string().min(1).max(100)).min(1).max(8),
-  text: z.string().min(1).max(500),
+  statementIds: z.array(z.string().min(1)).min(1),
+  text: z.string().min(1),
 });
 
 const ProviderResponseSchema = z.object({
-  claims: z.array(ProviderClaimSchema).min(1).max(8),
+  claims: z.array(z.unknown()),
 });
 
 const evidencePriority: Record<AssistantEvidenceClass, number> = {
@@ -191,15 +194,16 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
       return null;
     }
     const claims: AssistantLanguageResult["claims"] = [];
-    for (const providerClaim of response.data.claims) {
-      // An unsupported claim is dropped on its own — not the whole answer. One
-      // hallucinated or unsafe sentence among several must not discard the
-      // sound, cited ones; and a claim only survives when every statement it
-      // rests on is real and, if researched, actually sourced. So the guarantee
-      // is unchanged — nothing unsupported is ever emitted — while the sound
-      // claims still reach the reader.
-      if (new Set(providerClaim.statementIds).size !== providerClaim.statementIds.length) continue;
-      const referenced = providerClaim.statementIds.map((id) => statementById.get(id));
+    for (const rawClaim of response.data.claims) {
+      // Each claim is validated on its own — a malformed or unsupported one is
+      // dropped, never the whole answer. A claim survives only when every
+      // statement it rests on is real and, if researched, actually sourced, so
+      // the guarantee is unchanged; the sound claims still reach the reader.
+      const parsedClaim = ProviderClaimSchema.safeParse(rawClaim);
+      if (!parsedClaim.success) continue;
+      // At most a handful of ids matter; extras are sliced, duplicates collapsed.
+      const statementIds = [...new Set(parsedClaim.data.statementIds)].slice(0, 8);
+      const referenced = statementIds.map((id) => statementById.get(id));
       if (referenced.some((statement) => statement === undefined)) continue;
       const typed = referenced as AssistantLanguageStatement[];
       if (
@@ -210,7 +214,7 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
       ) {
         continue;
       }
-      const safeText = sanitizeExternalText(providerClaim.text, 500);
+      const safeText = sanitizeExternalText(parsedClaim.data.text, 500);
       if (safeText.value.length === 0 || safeText.flaggedPromptLike) continue;
       const sampleSizes = typed.flatMap((statement) =>
         statement.sampleSize === null ? [] : [statement.sampleSize],
