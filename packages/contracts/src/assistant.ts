@@ -98,7 +98,9 @@ export const AssistantWineComparisonSchema = z
   .strict();
 
 export const AssistantRecommendationReasonSchema = z.enum([
+  "in_cellar",
   "limited_history",
+  "not_in_cellar",
   "personal_high_score",
   "price_unknown",
   "recent_price",
@@ -107,11 +109,12 @@ export const AssistantRecommendationReasonSchema = z.enum([
 
 export const AssistantRecommendationSchema = z
   .object({
+    availableBottles: z.number().int().nonnegative(),
     averageScore: z.number().min(0).max(100).nullable(),
     label: z.enum(["strong", "good", "explore", "insufficient"]),
     latestPrice: PriceObservationSchema.nullable(),
     rank: z.number().int().min(1).max(12),
-    reasonCodes: z.array(AssistantRecommendationReasonSchema).min(1).max(5),
+    reasonCodes: z.array(AssistantRecommendationReasonSchema).min(1).max(6),
     sampleSize: z.number().int().nonnegative(),
     spaceId: ResourceIdSchema,
     wineId: ResourceIdSchema,

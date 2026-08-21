@@ -469,7 +469,9 @@
       "personal_high_score": "Punteggi alti nelle tue note inviate",
       "price_unknown": "Nessun prezzo salvato per questo candidato",
       "recent_price": "È disponibile un prezzo recente con fonte",
-      "would_buy_history": "In precedenza hai indicato che lo compreresti"
+      "would_buy_history": "In precedenza hai indicato che lo compreresti",
+      "in_cellar": "In cantina, pronta da aprire",
+      "not_in_cellar": "Non in cantina — da cercare"
     },
     "mode": {
       "deterministic": "Ricerca strutturata",

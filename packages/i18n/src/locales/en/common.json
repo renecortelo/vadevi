@@ -469,7 +469,9 @@
       "personal_high_score": "High scores in your submitted notes",
       "price_unknown": "No stored price for this candidate",
       "recent_price": "A recent sourced price is available",
-      "would_buy_history": "You previously marked that you would buy it"
+      "would_buy_history": "You previously marked that you would buy it",
+      "in_cellar": "In your cellar, ready to open",
+      "not_in_cellar": "Not in your cellar — one to seek out"
     },
     "mode": {
       "deterministic": "Structured search",

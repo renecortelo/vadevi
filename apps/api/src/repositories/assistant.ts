@@ -649,7 +649,20 @@ async function buildRecommendations(
       wineId: result.wine.id,
     });
     const latestPrice = prices?.data.observations[0] ?? null;
+    // How many unopened bottles the reader actually has, so a recommendation to
+    // open one is only ever made for a wine they can open — a finished, gifted,
+    // or never-stocked wine is one to seek out again, not to reach for tonight.
+    const availability = await database
+      .prepare(
+        `SELECT COUNT(*) AS owned FROM bottles
+        WHERE space_id = ? AND wine_id = ? AND state = 'owned' AND deleted_at IS NULL`,
+      )
+      .bind(result.spaceId, result.wine.id)
+      .first<{ owned: number }>();
+    const availableBottles = availability?.owned ?? 0;
     const reasonCodes: AssistantRecommendation["reasonCodes"] = [];
+    if (availableBottles > 0) reasonCodes.push("in_cellar");
+    else reasonCodes.push("not_in_cellar");
     if (sampleSize < 3) reasonCodes.push("limited_history");
     if (averageScore !== null && averageScore >= 85) reasonCodes.push("personal_high_score");
     if (wouldBuyYesCount > 0) reasonCodes.push("would_buy_history");
@@ -668,6 +681,7 @@ async function buildRecommendations(
             ? "good"
             : "explore";
     ranked.push({
+      availableBottles,
       averageScore,
       deterministicScore,
       label,
@@ -689,6 +703,7 @@ async function buildRecommendations(
         left.wineId.localeCompare(right.wineId),
     )
     .map((recommendation, index) => ({
+      availableBottles: recommendation.availableBottles,
       averageScore: recommendation.averageScore,
       label: recommendation.label,
       latestPrice: recommendation.latestPrice,
@@ -790,7 +805,7 @@ function languageStatements(
       sampleSize: recommendation.sampleSize,
       sourceIds:
         recommendation.latestPrice?.sourceId == null ? [] : [recommendation.latestPrice.sourceId],
-      text: `${recommendation.wineName}; qualitative label ${recommendation.label}; reasons ${recommendation.reasonCodes.join(", ")}`,
+      text: `${recommendation.wineName}; qualitative label ${recommendation.label}; ${recommendation.availableBottles > 0 ? `${recommendation.availableBottles} unopened bottles in the cellar to open` : "no unopened bottles in the cellar — one to seek out, not to open"}; reasons ${recommendation.reasonCodes.join(", ")}`,
     });
   }
   return statements.slice(0, 30);
