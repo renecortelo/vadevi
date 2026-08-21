@@ -15,7 +15,7 @@ export type UsageMetric =
 type Budget = { global: number; user: number };
 
 export const dailyBudgets = {
-  ai_language_calls: { global: 400, user: 60 },
+  ai_language_calls: { global: 1_000, user: 200 },
   barcode_lookups: { global: 500, user: 60 },
   ocr_reads: { global: 300, user: 40 },
   price_lookups: { global: 500, user: 60 },
