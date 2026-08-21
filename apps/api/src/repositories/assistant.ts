@@ -781,7 +781,11 @@ function languageStatements(
   }
   for (const recommendation of recommendations.slice(0, 6)) {
     statements.push({
-      evidenceClass: recommendation.sampleSize >= 3 ? "personal" : "inferred",
+      // A recommendation is a derived suggestion, not a fact the reader recorded,
+      // so it is always inferred — the model frames it as advice, never as one of
+      // the reader's own entries, however much of their history it rests on. How
+      // much history that is still travels in sampleSize.
+      evidenceClass: "inferred",
       id: `recommendation-${recommendation.wineId}`,
       sampleSize: recommendation.sampleSize,
       sourceIds:
