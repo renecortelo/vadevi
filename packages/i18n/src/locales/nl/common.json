@@ -469,7 +469,9 @@
       "personal_high_score": "Hoge scores in je ingediende notities",
       "price_unknown": "Geen opgeslagen prijs voor deze kandidaat",
       "recent_price": "Er is een recente prijs met bron beschikbaar",
-      "would_buy_history": "Je gaf eerder aan dat je hem zou kopen"
+      "would_buy_history": "Je gaf eerder aan dat je hem zou kopen",
+      "in_cellar": "In je kelder, klaar om te openen",
+      "not_in_cellar": "Niet in je kelder — om op te zoeken"
     },
     "mode": {
       "deterministic": "Gestructureerd zoeken",

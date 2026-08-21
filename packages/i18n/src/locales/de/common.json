@@ -469,7 +469,9 @@
       "personal_high_score": "Hohe Bewertungen in deinen eingereichten Notizen",
       "price_unknown": "Kein gespeicherter Preis für diesen Kandidaten",
       "recent_price": "Ein aktueller Preis mit Quelle ist verfügbar",
-      "would_buy_history": "Du hattest zuvor angegeben, ihn kaufen zu wollen"
+      "would_buy_history": "Du hattest zuvor angegeben, ihn kaufen zu wollen",
+      "in_cellar": "In deinem Keller, bereit zum Öffnen",
+      "not_in_cellar": "Nicht im Keller — eine zum Nachkaufen"
     },
     "mode": {
       "deterministic": "Strukturierte Suche",

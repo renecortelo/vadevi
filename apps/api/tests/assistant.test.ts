@@ -1,6 +1,7 @@
 import {
-  AssistantTurnResponseSchema,
+  type AssistantRecommendation,
   type AssistantSearchResult,
+  AssistantTurnResponseSchema,
   BootstrapResponseSchema,
   CreateWineResponseSchema,
   ErrorEnvelopeSchema,
@@ -522,6 +523,18 @@ describe("Vicenç deterministic read path", () => {
       },
     );
     expect(price.status).toBe(201);
+    // One unopened bottle for Alpha, none for Beta: Alpha is in the cellar and
+    // openable, Beta is one to seek out.
+    const bottle = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/bottles`, {
+      body: JSON.stringify({ acquiredAt: "2026-08-01T10:00:00.000Z", wineId: alpha.id }),
+      headers: {
+        Authorization: `Bearer ${ownerToken}`,
+        "Content-Type": "application/json",
+        "Idempotency-Key": randomOpaqueToken(),
+      },
+      method: "POST",
+    });
+    expect(bottle.status).toBe(201);
 
     const response = await assistantTurn(
       ownerToken,
@@ -534,10 +547,12 @@ describe("Vicenç deterministic read path", () => {
       expect.arrayContaining([alpha.id, beta.id]),
     );
     expect(body.data.recommendations[0]).toMatchObject({
+      availableBottles: 1,
       averageScore: 92,
       label: "strong",
       rank: 1,
       reasonCodes: expect.arrayContaining([
+        "in_cellar",
         "personal_high_score",
         "would_buy_history",
         "recent_price",
@@ -545,6 +560,11 @@ describe("Vicenç deterministic read path", () => {
       sampleSize: 3,
       wineId: alpha.id,
     });
+    const betaRec = body.data.recommendations.find(
+      (item: AssistantRecommendation) => item.wineId === beta.id,
+    );
+    expect(betaRec?.availableBottles).toBe(0);
+    expect(betaRec?.reasonCodes).toContain("not_in_cellar");
     expect(body.data.priceObservations).toEqual([
       expect.objectContaining({
         amountMinor: 1995,

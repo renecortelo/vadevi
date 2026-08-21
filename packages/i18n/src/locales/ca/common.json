@@ -469,7 +469,9 @@
       "personal_high_score": "Puntuacions altes a les teves notes enviades",
       "price_unknown": "No hi ha cap preu desat per a aquest candidat",
       "recent_price": "Hi ha un preu recent amb font",
-      "would_buy_history": "Abans vas indicar que el compraries"
+      "would_buy_history": "Abans vas indicar que el compraries",
+      "in_cellar": "Al teu celler, a punt per obrir",
+      "not_in_cellar": "No la tens al celler — per buscar-la"
     },
     "mode": {
       "deterministic": "Cerca estructurada",

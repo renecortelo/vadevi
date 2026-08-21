@@ -469,7 +469,9 @@
       "personal_high_score": "Notes élevées dans vos dégustations envoyées",
       "price_unknown": "Aucun prix enregistré pour ce candidat",
       "recent_price": "Un prix récent et sourcé est disponible",
-      "would_buy_history": "Vous aviez indiqué vouloir l'acheter"
+      "would_buy_history": "Vous aviez indiqué vouloir l'acheter",
+      "in_cellar": "Dans ta cave, prête à ouvrir",
+      "not_in_cellar": "Pas dans ta cave — à rechercher"
     },
     "mode": {
       "deterministic": "Recherche structurée",

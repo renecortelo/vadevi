@@ -2262,6 +2262,10 @@
                 "items": {
                   "type": "object",
                   "properties": {
+                    "availableBottles": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
                     "averageScore": {
                       "type": "number",
                       "nullable": true,
@@ -2416,7 +2420,9 @@
                       "items": {
                         "type": "string",
                         "enum": [
+                          "in_cellar",
                           "limited_history",
+                          "not_in_cellar",
                           "personal_high_score",
                           "price_unknown",
                           "recent_price",
@@ -2424,7 +2430,7 @@
                         ]
                       },
                       "minItems": 1,
-                      "maxItems": 5
+                      "maxItems": 6
                     },
                     "sampleSize": {
                       "type": "integer",
@@ -2449,6 +2455,7 @@
                     }
                   },
                   "required": [
+                    "availableBottles",
                     "averageScore",
                     "label",
                     "latestPrice",
