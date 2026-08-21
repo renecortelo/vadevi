@@ -411,6 +411,7 @@ type TastingNoteDetailRow = {
   body: number | null;
   comment: string | null;
   finish_length: number | null;
+  food_text: string | null;
   id: string;
   palate_text: string | null;
   palate_texture: string | null;
@@ -425,6 +426,36 @@ type TastingNoteDetailRow = {
 
 function clip(value: string, max: number): string {
   return value.length > max ? `${value.slice(0, max)}…` : value;
+}
+
+/**
+ * The readable descriptor labels the reader picked, per note and phase — "lemon,
+ * green apple" for the nose, "oak, vanilla" for the palate. Uses label_snapshot,
+ * the human label saved at tasting time, so no code or ontology lookup is needed.
+ */
+async function loadNoteDescriptors(
+  database: D1Database,
+  noteIds: string[],
+): Promise<Map<string, { nose: string[]; palate: string[] }>> {
+  const byNote = new Map<string, { nose: string[]; palate: string[] }>();
+  if (noteIds.length === 0) return byNote;
+  const placeholders = noteIds.map(() => "?").join(", ");
+  const rows = await database
+    .prepare(
+      `SELECT tasting_note_id, phase, label_snapshot FROM tasting_descriptors
+        WHERE tasting_note_id IN (${placeholders}) ORDER BY phase`,
+    )
+    .bind(...noteIds)
+    .all<{ label_snapshot: string; phase: string; tasting_note_id: string }>();
+  for (const row of rows.results) {
+    const label = row.label_snapshot.trim();
+    if (label.length === 0) continue;
+    const entry = byNote.get(row.tasting_note_id) ?? { nose: [], palate: [] };
+    if (row.phase === "nose" && entry.nose.length < 8) entry.nose.push(label);
+    else if (row.phase === "palate" && entry.palate.length < 8) entry.palate.push(label);
+    byNote.set(row.tasting_note_id, entry);
+  }
+  return byNote;
 }
 
 /**
@@ -449,11 +480,13 @@ async function loadReaderTastingNotes(
     .prepare(
       `SELECT note.id, note.wine_id, note.score_100, note.would_buy, note.would_drink_again,
         note.comment, note.sweetness, note.acidity, note.tannin_level,
-        note.tannin_texture, note.body, note.palate_texture, note.finish_length, note.palate_text
+        note.tannin_texture, note.body, note.palate_texture, note.finish_length, note.palate_text,
+        ctx.food_text
       FROM tasting_notes note
       JOIN users actor ON actor.id = note.author_user_id
       JOIN space_memberships membership ON membership.space_id = note.space_id
         AND membership.user_id = actor.id
+      LEFT JOIN tasting_contexts ctx ON ctx.tasting_note_id = note.id
       WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL AND membership.status = 'active'
         AND note.wine_id IN (${placeholders}) AND note.state = 'submitted' AND note.deleted_at IS NULL
       ORDER BY note.tasted_at DESC
@@ -461,14 +494,25 @@ async function loadReaderTastingNotes(
     )
     .bind(principal.firebaseUid, ...wineIds)
     .all<TastingNoteDetailRow>();
-  const statements: AssistantLanguageStatement[] = [];
+  // The notes that will become statements, capped to two per wine.
+  const kept: TastingNoteDetailRow[] = [];
   const perWine = new Map<string, number>();
   for (const row of rows.results) {
-    const wine = wineById.get(row.wine_id);
-    if (wine === undefined) continue;
+    if (!wineById.has(row.wine_id)) continue;
     const seen = perWine.get(row.wine_id) ?? 0;
     if (seen >= 2) continue;
     perWine.set(row.wine_id, seen + 1);
+    kept.push(row);
+    if (kept.length >= 8) break;
+  }
+  const descriptorsByNote = await loadNoteDescriptors(
+    database,
+    kept.map((row) => row.id),
+  );
+  const statements: AssistantLanguageStatement[] = [];
+  for (const row of kept) {
+    const wine = wineById.get(row.wine_id)!;
+    const descriptors = descriptorsByNote.get(row.id);
     const parts = [
       row.score_100 === null ? null : `you rated it ${row.score_100}`,
       row.would_buy === null ? null : `would buy: ${row.would_buy}`,
@@ -481,9 +525,18 @@ async function loadReaderTastingNotes(
       row.sweetness === null ? null : `sweetness ${row.sweetness}/5`,
       row.finish_length === null ? null : `finish ${row.finish_length}/5`,
       row.palate_texture === null ? null : `palate ${row.palate_texture}`,
+      descriptors === undefined || descriptors.nose.length === 0
+        ? null
+        : `aromas you noted: ${descriptors.nose.join(", ")}`,
+      descriptors === undefined || descriptors.palate.length === 0
+        ? null
+        : `flavours you noted: ${descriptors.palate.join(", ")}`,
       row.palate_text === null || row.palate_text.length === 0
         ? null
         : `palate note: ${clip(row.palate_text, 160)}`,
+      row.food_text === null || row.food_text.length === 0
+        ? null
+        : `you had it with: ${clip(row.food_text, 120)}`,
       row.comment === null || row.comment.length === 0
         ? null
         : `you wrote: ${clip(row.comment, 200)}`,
@@ -497,7 +550,7 @@ async function loadReaderTastingNotes(
       text: `your tasting note on ${wine.displayName}: ${parts.join("; ")}`,
     });
   }
-  return statements.slice(0, 8);
+  return statements;
 }
 
 async function searchMemory(
