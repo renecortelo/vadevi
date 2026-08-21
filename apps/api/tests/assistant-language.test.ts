@@ -182,6 +182,47 @@ describe("provider-backed assistant language enforcement", () => {
     expect(calls[1]).not.toHaveProperty("response_format");
   });
 
+  it("falls back to the plain prompt when the structured attempt returns no claims", async () => {
+    const calls: Array<Record<string, unknown>> = [];
+    const adapter = new CloudflareAssistantLanguageAdapter(
+      {
+        run: async (_model, input) => {
+          calls.push(input);
+          // The structured attempt satisfies the schema with an empty array;
+          // the plain retry actually generates.
+          return calls.length === 1
+            ? { response: { claims: [] } }
+            : {
+                response: JSON.stringify({
+                  claims: [{ statementIds: ["wine-1"], text: "You have a Rioja." }],
+                }),
+              };
+        },
+      },
+      "@cf/example/model",
+    );
+
+    const result = await adapter.render({
+      locale: "en",
+      message: "What Rioja do I have?",
+      statements: [
+        {
+          evidenceClass: "observed",
+          id: "wine-1",
+          sampleSize: 1,
+          sourceIds: [],
+          text: "Rioja; 2019",
+        },
+      ],
+    });
+    expect(result?.claims).toEqual([
+      { evidenceClass: "observed", sampleSize: 1, sourceIds: [], text: "You have a Rioja." },
+    ]);
+    expect(calls).toHaveLength(2);
+    expect(calls[0]).toHaveProperty("response_format");
+    expect(calls[1]).not.toHaveProperty("response_format");
+  });
+
   it("drops only the unsupported claim and keeps the cited ones", async () => {
     const adapter = new CloudflareAssistantLanguageAdapter(
       {

@@ -169,30 +169,13 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
     }
   }
 
-  async render(input: AssistantLanguageInput): Promise<AssistantLanguageResult | null> {
-    const statements = safeStatements(input);
-    if (statements.length === 0) {
-      // No fact, note or context on the matched wines to ground a sentence on,
-      // so the model is not called at all. Logged to tell this apart from a
-      // model that was called and failed; the count is not wine data.
-      console.warn(
-        `assistant: no groundable statements for this turn (had ${input.statements.length})`,
-      );
-      return null;
-    }
-    const statementById = new Map(statements.map((statement) => [statement.id, statement]));
-    const parsed =
-      (await this.callModel(input, statements, true)) ??
-      (await this.callModel(input, statements, false));
-    if (parsed === null) return null;
+  /** The supported, cited claims built from one model reply — empty if none. */
+  private claimsFrom(
+    parsed: unknown,
+    statementById: Map<string, AssistantLanguageStatement>,
+  ): AssistantLanguageResult["claims"] {
     const response = ProviderResponseSchema.safeParse(parsed);
-    if (!response.success) {
-      // The model answered with JSON that is not the {claims:[{text,statementIds}]}
-      // shape. Logged (shape only, never wine data) so a silent schema drift is
-      // visible rather than surfacing as "the AI could not answer".
-      console.warn(`assistant: model output did not match the claims schema (model=${this.model})`);
-      return null;
-    }
+    if (!response.success) return [];
     const claims: AssistantLanguageResult["claims"] = [];
     for (const rawClaim of response.data.claims) {
       // Each claim is validated on its own — a malformed or unsupported one is
@@ -226,17 +209,37 @@ export class CloudflareAssistantLanguageAdapter implements AssistantLanguagePort
         text: safeText.value,
       });
     }
-    if (claims.length === 0) {
-      // The model answered, but every claim was dropped as unsupported — a
-      // duplicate, an unknown statement id, an unsourced researched claim, or
-      // empty/prompt-like text. Logged (counts only) so this is visible instead
-      // of reading as "the AI could not answer".
+    return claims;
+  }
+
+  async render(input: AssistantLanguageInput): Promise<AssistantLanguageResult | null> {
+    const statements = safeStatements(input);
+    if (statements.length === 0) {
+      // No fact, note or context on the matched wines to ground a sentence on,
+      // so the model is not called at all. Logged to tell this apart from a
+      // model that was called and failed; the count is not wine data.
       console.warn(
-        `assistant: every model claim was dropped (claims=${response.data.claims.length}, statements=${statements.length})`,
+        `assistant: no groundable statements for this turn (had ${input.statements.length})`,
       );
       return null;
     }
-    return { claims, modelVersion: this.model };
+    const statementById = new Map(statements.map((statement) => [statement.id, statement]));
+    // Try the strict json_schema first, then the plain prompt. Some models
+    // satisfy a json_schema by returning an EMPTY claims array instead of
+    // generating — a non-null, valid-but-useless answer the `??` fallback would
+    // never retry — so the plain attempt runs whenever the structured one yields
+    // no usable claim, not only when it throws.
+    for (const structured of [true, false]) {
+      const parsed = await this.callModel(input, statements, structured);
+      if (parsed === null) continue;
+      const claims = this.claimsFrom(parsed, statementById);
+      if (claims.length > 0) return { claims, modelVersion: this.model };
+    }
+    // Both attempts returned but neither produced a supported, cited claim.
+    console.warn(
+      `assistant: no usable claims from either attempt (statements=${statements.length}, model=${this.model})`,
+    );
+    return null;
   }
 }
 
