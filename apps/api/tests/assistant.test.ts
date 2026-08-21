@@ -300,6 +300,39 @@ describe("Vicenç deterministic read path", () => {
     ).toBe(true);
   });
 
+  it("finds a wine by a grape synonym the reader typed", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    // The wine is made from Tempranillo; the reader asks by its synonym Tinto
+    // Fino, which nowhere appears in the name, producer, or region.
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Reserva",
+        grapes: [{ name: "Tempranillo" }],
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Bodega Uva",
+        region: "Ribera",
+        wineType: "red",
+      }),
+      headers: {
+        Authorization: `Bearer ${ownerToken}`,
+        "Content-Type": "application/json",
+        "Idempotency-Key": randomOpaqueToken(),
+      },
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wineId = CreateWineResponseSchema.parse(await created.json()).data.wine.id;
+
+    const response = await assistantTurn(ownerToken, spaceId, "¿tengo algo de Tinto Fino?");
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(response.status).toBe(200);
+    expect(
+      body.data.results.some((result: AssistantSearchResult) => result.wine.id === wineId),
+    ).toBe(true);
+  });
+
   it("answers a collection question from the whole cellar, not only term matches", async () => {
     const user = await bootstrap(collectionToken);
     const spaceId = user.data.user.activeSpaceId;
