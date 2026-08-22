@@ -117,22 +117,49 @@ describe("external research adapters", () => {
     );
   });
 
-  it("maps a bounded Wikidata entity response into cited fact proposals and caches it", async () => {
+  it("turns interesting Wikidata claims into localized, cited highlights and caches them", async () => {
     const requests: URL[] = [];
     const fetcher: ProviderFetcher = async (input, init) => {
-      requests.push(new URL(String(input)));
+      const url = new URL(String(input));
+      requests.push(url);
       const headers = new Headers(init?.headers);
       expect(headers.get("User-Agent")).toBe(userAgent);
       expect(headers.get("Api-User-Agent")).toBe(userAgent);
+      // First call fetches the entity with its claims; the second resolves the
+      // labels of the properties and entity-valued answers we picked out.
+      if (url.searchParams.get("props") === "labels|claims") {
+        return Response.json({
+          entities: {
+            Q123: {
+              claims: {
+                P112: [
+                  {
+                    mainsnak: {
+                      datavalue: { type: "wikibase-entityid", value: { id: "Q999" } },
+                      snaktype: "value",
+                    },
+                  },
+                ],
+                P571: [
+                  {
+                    mainsnak: {
+                      datavalue: { type: "time", value: { time: "+1870-01-01T00:00:00Z" } },
+                      snaktype: "value",
+                    },
+                  },
+                ],
+              },
+              id: "Q123",
+              labels: { de: { language: "de", value: "Synthetic Estate" } },
+            },
+          },
+        });
+      }
       return Response.json({
         entities: {
-          Q123: {
-            descriptions: {
-              en: { language: "en", value: "A synthetic winery used only in tests" },
-            },
-            id: "Q123",
-            labels: { en: { language: "en", value: "Synthetic Estate" } },
-          },
+          P112: { id: "P112", labels: { de: { language: "de", value: "gegründet von" } } },
+          P571: { id: "P571", labels: { de: { language: "de", value: "Gründung" } } },
+          Q999: { id: "Q999", labels: { de: { language: "de", value: "Miguel Torres" } } },
         },
       });
     };
@@ -157,28 +184,37 @@ describe("external research adapters", () => {
       subjectType: "producer",
     });
 
-    // Only the cited canonical name — the generic Wikidata description is no
-    // longer surfaced as a "producer.history" fact (it was low-quality noise).
+    // Open-ended highlights, each cited to the entity and labelled in the reader's
+    // language — never the redundant name we already registered.
     expect(first.status).toBe("success");
     if (first.status !== "success") throw new Error("Expected a successful lookup.");
     expect(first.data).toEqual([
       {
-        confidenceMilli: 750,
-        predicate: "producer.name",
-        researchMethod: "wikidata.entity.v1",
+        confidenceMilli: 800,
+        predicate: "curiosity.highlight",
+        researchMethod: "wikidata.highlight.v1",
         source: expect.objectContaining({
           canonicalUrl: "https://www.wikidata.org/wiki/Q123",
           licenseIdentifier: "CC0-1.0",
         }),
-        value: "Synthetic Estate",
+        value: "Gründung: 1870",
+      },
+      {
+        confidenceMilli: 800,
+        predicate: "curiosity.highlight",
+        researchMethod: "wikidata.highlight.v1",
+        source: expect.objectContaining({ canonicalUrl: "https://www.wikidata.org/wiki/Q123" }),
+        value: "gegründet von: Miguel Torres",
       },
     ]);
     expect(second).toMatchObject({ cached: true, status: "success" });
-    expect(requests).toHaveLength(1);
+    expect(requests).toHaveLength(2);
     expect(requests[0]?.searchParams.get("action")).toBe("wbgetentities");
     expect(requests[0]?.searchParams.get("ids")).toBe("Q123");
-    expect(requests[0]?.searchParams.get("props")).toBe("labels|descriptions");
+    expect(requests[0]?.searchParams.get("props")).toBe("labels|claims");
     expect(requests[0]?.searchParams.get("maxlag")).toBe("5");
+    expect(requests[1]?.searchParams.get("props")).toBe("labels");
+    expect(requests[1]?.searchParams.get("ids")).toBe("P571|P112|Q999");
   });
 
   it("searches Wikidata by name and caches bounded entity candidates", async () => {

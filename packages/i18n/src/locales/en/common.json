@@ -383,7 +383,9 @@
       "curiosity_note": "Curiosity",
       "further_reading_summary": "Further reading",
       "region_country": "Country of the region",
-      "region_classification": "Region classification"
+      "region_classification": "Region classification",
+      "curiosity_highlight": "Detail",
+      "research_summary": "Research summary"
     },
     "research": {
       "eyebrow": "Optional research",

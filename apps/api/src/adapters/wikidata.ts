@@ -56,6 +56,69 @@ const WikidataSearchResponseSchema = z
   })
   .passthrough();
 
+// Wikidata properties worth surfacing as human-readable highlights. Deliberately
+// broad and cross-cutting — a producer, a region, and a grape each expose a
+// different subset — because the goal is to expand what we know about THIS wine,
+// not to fill a fixed template. Wikidata returns each property's label in the
+// reader's language, so no field name is hardcoded here; each wine shows whatever
+// it happens to have.
+const highlightPropertyIds = [
+  "P571", // inception (when the producer was founded)
+  "P112", // founded by
+  "P127", // owned by
+  "P169", // chief executive officer
+  "P17", // country
+  "P159", // headquarters location
+  "P740", // location of formation
+  "P452", // industry
+  "P462", // color (of a grape variety)
+  "P495", // country of origin
+  "P189", // location of discovery / place of origin
+] as const;
+
+const maxHighlights = 8;
+
+const SnakSchema = z
+  .object({
+    mainsnak: z
+      .object({
+        datavalue: z
+          .object({ type: z.string().optional(), value: z.unknown() })
+          .passthrough()
+          .optional(),
+        snaktype: z.string().optional(),
+      })
+      .passthrough()
+      .optional(),
+  })
+  .passthrough();
+const ClaimsSchema = z.record(z.string(), z.array(SnakSchema));
+
+type HighlightValue = { id: string; kind: "entity" } | { kind: "literal"; text: string };
+
+/** The first usable value of a claim, as either an entity reference or a literal. */
+function claimValue(snak: z.infer<typeof SnakSchema>): HighlightValue | null {
+  const mainsnak = snak.mainsnak;
+  if (mainsnak?.snaktype !== "value" || mainsnak.datavalue === undefined) return null;
+  const { type, value } = mainsnak.datavalue;
+  if (type === "wikibase-entityid") {
+    const id = (value as { id?: unknown } | null)?.id;
+    return typeof id === "string" ? { id, kind: "entity" } : null;
+  }
+  if (type === "time") {
+    const time = (value as { time?: unknown } | null)?.time;
+    if (typeof time !== "string") return null;
+    const year = /^[+-](\d{1,4})-/.exec(time);
+    return year ? { kind: "literal", text: String(Number.parseInt(year[1]!, 10)) } : null;
+  }
+  if (type === "string" && typeof value === "string") return { kind: "literal", text: value };
+  if (type === "monolingualtext") {
+    const text = (value as { text?: unknown } | null)?.text;
+    return typeof text === "string" ? { kind: "literal", text } : null;
+  }
+  return null;
+}
+
 function providerLocale(locale: string) {
   return locale === "pt-PT" ? "pt" : locale;
 }
@@ -226,7 +289,7 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       languages: locale === "en" ? "en" : `${locale}|en`,
       maxlag: "5",
       origin: "*",
-      props: "labels|descriptions",
+      props: "labels|claims",
     })) {
       url.searchParams.set(name, value);
     }
@@ -295,26 +358,62 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       sourceType: "open_dataset" as const,
       title: label ?? `Wikidata ${entityId}`,
     };
+
+    // Open-ended enrichment: rather than re-proposing the name we already know,
+    // surface whatever interesting properties this particular entity carries.
+    // Each property and each entity-valued answer is resolved to its label in the
+    // reader's language, so the result reads as "{property}: {value}" with nothing
+    // hardcoded per field. The set of highlights naturally differs from one wine
+    // to the next.
+    const claims = ClaimsSchema.safeParse((entity as { claims?: unknown }).claims ?? {});
+    const picked: { propertyId: string; value: HighlightValue }[] = [];
+    if (claims.success) {
+      for (const propertyId of highlightPropertyIds) {
+        const snaks = claims.data[propertyId];
+        if (snaks === undefined) continue;
+        for (const snak of snaks) {
+          const value = claimValue(snak);
+          if (value !== null) {
+            picked.push({ propertyId, value });
+            break; // one representative value per property keeps the list tight
+          }
+        }
+      }
+    }
+
+    const idsToLabel = new Set<string>();
+    for (const { propertyId, value } of picked) {
+      idsToLabel.add(propertyId);
+      if (value.kind === "entity") idsToLabel.add(value.id);
+    }
+    const labels = idsToLabel.size === 0 ? new Map() : await this.fetchLabels(idsToLabel, locale);
+
     const facts: ProposedFact[] = [];
-    if (label !== null) {
+    for (const { propertyId, value } of picked) {
+      if (facts.length >= maxHighlights) break;
+      const propertyLabel = labels.get(propertyId);
+      if (propertyLabel === undefined) continue;
+      const rawValue = value.kind === "entity" ? labels.get(value.id) : value.text;
+      if (rawValue === undefined) continue;
+      const property = sanitizeExternalText(propertyLabel, 80);
+      const answer = sanitizeExternalText(rawValue, 200);
+      if (
+        property.value.length === 0 ||
+        answer.value.length === 0 ||
+        property.flaggedPromptLike ||
+        answer.flaggedPromptLike
+      ) {
+        continue;
+      }
       facts.push({
-        confidenceMilli: 750,
-        predicate:
-          input.subjectType === "producer"
-            ? "producer.name"
-            : input.subjectType === "region"
-              ? "region.name"
-              : "identity.canonical_name",
-        researchMethod: "wikidata.entity.v1",
+        confidenceMilli: 800,
+        predicate: "curiosity.highlight",
+        researchMethod: "wikidata.highlight.v1",
         source,
-        value: label,
+        value: `${property.value}: ${answer.value}`,
       });
     }
-    // The Wikidata description was surfaced as a "producer.history" fact, but it
-    // is a generic one-liner ("winery in Spain") or, when the entity is only a
-    // loose match, plainly unrelated — the low-quality noise readers complained
-    // about. Wikidata now contributes only the cited canonical name; regulatory
-    // sources (eAmbrosia) carry the place facts, per the source-priority rule.
+
     if (facts.length === 0) {
       return { reason: "not_found", retryAfterSeconds: null, status: "unavailable" };
     }
@@ -326,5 +425,57 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       nowTimestamp,
     );
     return { cached: false, data: facts, status: "success" };
+  }
+
+  /**
+   * Resolve a batch of property and item ids to their labels in the reader's
+   * language (falling back to English). Best-effort: any failure yields an empty
+   * map, and highlights that cannot be labelled are simply dropped.
+   */
+  private async fetchLabels(ids: Set<string>, locale: string): Promise<Map<string, string>> {
+    const map = new Map<string, string>();
+    const url = new URL(this.baseUrl);
+    for (const [name, value] of Object.entries({
+      action: "wbgetentities",
+      format: "json",
+      formatversion: "2",
+      ids: [...ids].join("|"),
+      languagefallback: "1",
+      languages: locale === "en" ? "en" : `${locale}|en`,
+      maxlag: "5",
+      origin: "*",
+      props: "labels",
+    })) {
+      url.searchParams.set(name, value);
+    }
+    let response: Response;
+    try {
+      response = await fetchFromProvider(this.fetcher, url, {
+        allowedHosts: this.allowedHosts,
+        headers: {
+          Accept: "application/json",
+          "Accept-Encoding": "gzip, deflate",
+          "Api-User-Agent": this.userAgent,
+          "User-Agent": this.userAgent,
+        },
+      });
+    } catch {
+      return map;
+    }
+    if (!response.ok) return map;
+    let payload: unknown;
+    try {
+      payload = await readBoundedJson(response);
+    } catch {
+      return map;
+    }
+    const parsed = WikidataResponseSchema.safeParse(payload);
+    if (!parsed.success || parsed.data.error !== undefined) return map;
+    for (const [id, entity] of Object.entries(parsed.data.entities)) {
+      if (entity.missing !== undefined) continue;
+      const label = localizedTerm(entity.labels, locale);
+      if (label !== null) map.set(id, label);
+    }
+    return map;
   }
 }

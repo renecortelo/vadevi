@@ -292,6 +292,38 @@ describe("Provenance foundation", () => {
     expect(rejectAccepted.status).toBe(404);
   }, 30_000);
 
+  it("does not flag additive highlights with distinct values as conflicts", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(spaceId);
+
+    for (const value of ["Gründung: 1870", "gegründet von: Miguel Torres"]) {
+      const response = await SELF.fetch(
+        `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+        {
+          body: JSON.stringify({
+            citations: [],
+            evidenceClass: "observed",
+            predicate: "curiosity.highlight",
+            value,
+          }),
+          headers: headers(ownerToken, randomOpaqueToken()),
+          method: "POST",
+        },
+      );
+      expect(response.status).toBe(201);
+    }
+
+    const listResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const listed = WineFactsResponseSchema.parse(await listResponse.json());
+    expect(listed.data.facts).toHaveLength(2);
+    // Two different highlights accumulate; they are not competing claims.
+    expect(listed.data.conflicts).toHaveLength(0);
+  }, 30_000);
+
   it("rejects uncited research, unregistered values, and unsafe source URLs", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;

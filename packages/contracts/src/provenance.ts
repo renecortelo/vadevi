@@ -23,6 +23,21 @@ export const FactPredicateSchema = z.enum([
   "production.aging_months",
   "production.method",
   "curiosity.note",
+  "curiosity.highlight",
+  "research.summary",
+  "further_reading.summary",
+]);
+
+/**
+ * Predicates that accumulate rather than compete. A wine has one canonical name,
+ * so two different names are a conflict to resolve — but it can have any number
+ * of curiosities, discovered highlights, or generated summaries, and those never
+ * dispute one another. Conflict detection skips these.
+ */
+export const ADDITIVE_FACT_PREDICATES: ReadonlySet<z.infer<typeof FactPredicateSchema>> = new Set([
+  "curiosity.note",
+  "curiosity.highlight",
+  "research.summary",
   "further_reading.summary",
 ]);
 export const SourceTypeSchema = z.enum([
@@ -53,6 +68,8 @@ function predicateValueIsValid(predicate: z.infer<typeof FactPredicateSchema>, v
     case "region.classification":
     case "production.method":
     case "curiosity.note":
+    case "curiosity.highlight":
+    case "research.summary":
     case "further_reading.summary":
       return typeof value === "string";
     case "identity.grape_codes":

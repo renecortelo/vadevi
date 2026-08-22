@@ -383,7 +383,9 @@
       "curiosity_note": "Curiositat",
       "further_reading_summary": "Per saber-ne més",
       "region_country": "País de la denominació",
-      "region_classification": "Classificació de la denominació"
+      "region_classification": "Classificació de la denominació",
+      "curiosity_highlight": "Detall",
+      "research_summary": "Resum de la recerca"
     },
     "research": {
       "eyebrow": "Recerca opcional",

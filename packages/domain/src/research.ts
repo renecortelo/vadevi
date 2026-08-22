@@ -23,6 +23,7 @@ export type ProductCandidate = Readonly<{
 export type ProposedFact = Readonly<{
   confidenceMilli: number;
   predicate:
+    | "curiosity.highlight"
     | "identity.canonical_name"
     | "producer.history"
     | "producer.name"

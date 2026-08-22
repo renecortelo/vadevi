@@ -383,7 +383,9 @@
       "curiosity_note": "Curiosité",
       "further_reading_summary": "Pour aller plus loin",
       "region_country": "Pays de l'appellation",
-      "region_classification": "Classification de l'appellation"
+      "region_classification": "Classification de l'appellation",
+      "curiosity_highlight": "Détail",
+      "research_summary": "Synthèse de la recherche"
     },
     "research": {
       "eyebrow": "Recherche facultative",
