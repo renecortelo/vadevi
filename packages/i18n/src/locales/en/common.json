@@ -347,6 +347,7 @@
     "sourcesLabel": "Sources",
     "sourceDetails": "Source",
     "highlightsTitle": "What we found",
+    "summaryTitle": "About this wine",
     "sourceType": {
       "producer": "Producer",
       "regulator": "Regulator",

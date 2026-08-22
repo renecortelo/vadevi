@@ -94,6 +94,20 @@ const SnakSchema = z
   .passthrough();
 const ClaimsSchema = z.record(z.string(), z.array(SnakSchema));
 
+const SitelinksSchema = z.record(z.string(), z.object({ title: z.string() }).passthrough());
+
+const WikipediaSummarySchema = z
+  .object({
+    content_urls: z
+      .object({ desktop: z.object({ page: z.string() }).passthrough().optional() })
+      .passthrough()
+      .optional(),
+    extract: z.string().optional(),
+    title: z.string().optional(),
+    type: z.string().optional(),
+  })
+  .passthrough();
+
 type HighlightValue = { id: string; kind: "entity" } | { kind: "literal"; text: string };
 
 /** The first usable value of a claim, as either an entity reference or a literal. */
@@ -289,7 +303,7 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       languages: locale === "en" ? "en" : `${locale}|en`,
       maxlag: "5",
       origin: "*",
-      props: "labels|claims",
+      props: "labels|claims|sitelinks",
     })) {
       url.searchParams.set(name, value);
     }
@@ -414,6 +428,22 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       });
     }
 
+    // A short readable paragraph from the matching Wikipedia article, when the
+    // entity has one in the reader's language (falling back to English). This is
+    // the narrative material; a later LLM pass may compact it further, but even
+    // raw it reads as "about this wine" prose rather than a lone data point.
+    const sitelinks = SitelinksSchema.safeParse(
+      (entity as { sitelinks?: unknown }).sitelinks ?? {},
+    );
+    if (sitelinks.success) {
+      const title = sitelinks.data[`${locale}wiki`]?.title ?? sitelinks.data.enwiki?.title ?? null;
+      const wikiLang = sitelinks.data[`${locale}wiki`] !== undefined ? locale : "en";
+      if (title !== null) {
+        const summary = await this.fetchWikipediaSummary(title, wikiLang, nowTimestamp);
+        if (summary !== null) facts.unshift(summary);
+      }
+    }
+
     if (facts.length === 0) {
       return { reason: "not_found", retryAfterSeconds: null, status: "unavailable" };
     }
@@ -425,6 +455,65 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       nowTimestamp,
     );
     return { cached: false, data: facts, status: "success" };
+  }
+
+  /**
+   * A short plain-text summary of the matching Wikipedia article, from the REST
+   * summary endpoint on the article's own language host. Best-effort: any
+   * failure, a disambiguation page, or prompt-like text yields null and the
+   * research simply proceeds without a narrative. Cited to Wikipedia (CC-BY-SA).
+   */
+  private async fetchWikipediaSummary(
+    title: string,
+    wikiLang: string,
+    nowTimestamp: string,
+  ): Promise<ProposedFact | null> {
+    const host = `${wikiLang}.wikipedia.org`;
+    const url = new URL(`https://${host}/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
+    let response: Response;
+    try {
+      response = await fetchFromProvider(this.fetcher, url, {
+        allowedHosts: new Set([host]),
+        headers: {
+          Accept: "application/json",
+          "Accept-Encoding": "gzip, deflate",
+          "Api-User-Agent": this.userAgent,
+          "User-Agent": this.userAgent,
+        },
+      });
+    } catch {
+      return null;
+    }
+    if (!response.ok) return null;
+    let payload: unknown;
+    try {
+      payload = await readBoundedJson(response);
+    } catch {
+      return null;
+    }
+    const parsed = WikipediaSummarySchema.safeParse(payload);
+    if (!parsed.success || parsed.data.type === "disambiguation") return null;
+    const extract = sanitizeExternalText(parsed.data.extract ?? "", 600);
+    if (extract.value.length === 0 || extract.flaggedPromptLike) return null;
+    const pageUrl = parsed.data.content_urls?.desktop?.page;
+    const canonicalUrl =
+      typeof pageUrl === "string" && pageUrl.startsWith(`https://${host}/`)
+        ? pageUrl
+        : `https://${host}/wiki/${encodeURIComponent(title)}`;
+    return {
+      confidenceMilli: 700,
+      predicate: "research.summary",
+      researchMethod: "wikipedia.summary.v1",
+      source: {
+        canonicalUrl,
+        licenseIdentifier: "CC-BY-SA-4.0",
+        publisher: "Wikipedia",
+        retrievedAt: nowTimestamp,
+        sourceType: "open_dataset" as const,
+        title: parsed.data.title ?? title,
+      },
+      value: extract.value,
+    };
   }
 
   /**
