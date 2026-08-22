@@ -378,7 +378,9 @@
       "production_aging_months": "Durata dell'affinamento",
       "production_method": "Metodo di produzione",
       "curiosity_note": "Curiosità",
-      "further_reading_summary": "Per approfondire"
+      "further_reading_summary": "Per approfondire",
+      "region_country": "Paese della denominazione",
+      "region_classification": "Classificazione della denominazione"
     },
     "research": {
       "eyebrow": "Ricerca facoltativa",

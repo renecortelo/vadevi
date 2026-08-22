@@ -378,7 +378,9 @@
       "production_aging_months": "Temps de criança",
       "production_method": "Mètode de producció",
       "curiosity_note": "Curiositat",
-      "further_reading_summary": "Per saber-ne més"
+      "further_reading_summary": "Per saber-ne més",
+      "region_country": "País de la denominació",
+      "region_classification": "Classificació de la denominació"
     },
     "research": {
       "eyebrow": "Recerca opcional",

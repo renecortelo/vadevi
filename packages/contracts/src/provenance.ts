@@ -18,6 +18,8 @@ export const FactPredicateSchema = z.enum([
   "producer.history",
   "producer.name",
   "region.name",
+  "region.country",
+  "region.classification",
   "production.aging_months",
   "production.method",
   "curiosity.note",
@@ -47,6 +49,8 @@ function predicateValueIsValid(predicate: z.infer<typeof FactPredicateSchema>, v
     case "producer.history":
     case "producer.name":
     case "region.name":
+    case "region.country":
+    case "region.classification":
     case "production.method":
     case "curiosity.note":
     case "further_reading.summary":
