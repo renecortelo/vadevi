@@ -7,6 +7,7 @@ import type {
   SourceResponse,
   WineFactsResponse,
 } from "@vadevi/contracts";
+import { ADDITIVE_FACT_PREDICATES } from "@vadevi/contracts";
 import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
@@ -380,6 +381,8 @@ export async function listWineFacts(
   }
   const conflicts: WineFactsResponse["data"]["conflicts"] = [];
   for (const [predicate, candidates] of byPredicate) {
+    // Additive predicates accumulate distinct values by design; they never dispute.
+    if (ADDITIVE_FACT_PREDICATES.has(predicate)) continue;
     if (new Set(candidates.map((candidate) => JSON.stringify(candidate.value))).size < 2) continue;
     conflicts.push({
       acceptedFactId: candidates.find((candidate) => candidate.status === "accepted")?.id ?? null,
