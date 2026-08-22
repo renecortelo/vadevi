@@ -378,7 +378,9 @@
       "production_aging_months": "Ausbauzeit",
       "production_method": "Herstellungsmethode",
       "curiosity_note": "Wissenswertes",
-      "further_reading_summary": "Weiterführende Informationen"
+      "further_reading_summary": "Weiterführende Informationen",
+      "region_country": "Land der Herkunft",
+      "region_classification": "Klassifizierung der Herkunft"
     },
     "research": {
       "eyebrow": "Optionale Recherche",

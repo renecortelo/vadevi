@@ -421,4 +421,59 @@ describe("bounded wine research jobs", () => {
     });
     expect(result).toBeNull();
   });
+
+  it("adds the region's country and category from eAmbrosia, cited, without a network call", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Rioja Reserva",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Bodega Ejemplo",
+        region: "Rioja",
+        vintageYear: 2019,
+        wineType: "red",
+      }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wine = CreateWineResponseSchema.parse(await created.json()).data.wine;
+    // Knowledge port returns nothing, so any place fact can only come from the
+    // offline eAmbrosia register — no network involved.
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async () => ({ cached: false, data: [], status: "success" }),
+        searchEntities: async () => ({ cached: false, data: [], status: "success" }),
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "en" as const,
+        maxSources: 4,
+        topics: ["region"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const country = facts.find((fact: Fact) => fact.predicate === "region.country");
+    expect(country?.value).toBe("Spain");
+    expect(country?.citations[0]?.source.publisher).toBe("eAmbrosia (European Commission)");
+    expect(facts.some((fact: Fact) => fact.predicate === "region.classification")).toBe(true);
+  });
 });

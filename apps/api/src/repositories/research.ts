@@ -14,6 +14,7 @@ import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
+import { resolveAppellationFacts } from "./eambrosia";
 import { normalizeWineText } from "./wine-memory";
 
 /**
@@ -285,6 +286,16 @@ async function collectProposals(
         attempts.push(unavailableAttempt("open_food_facts", "provider_error", null));
       }
     }
+  }
+
+  // eAmbrosia (the EU's regulatory register, curated offline): the wine's region
+  // resolved to the country it lies in and its protection category. Regulatory
+  // place facts — higher-confidence and cited — that carry the region dimension
+  // Wikidata handled badly. No network; the fact is authored and cited to the
+  // public register.
+  if (request.topics.includes("region")) {
+    const appellationFacts = resolveAppellationFacts(access.region, new Date().toISOString());
+    proposals.push(...appellationFacts);
   }
 
   // Resolve producer and region to Wikidata entities by name when the caller

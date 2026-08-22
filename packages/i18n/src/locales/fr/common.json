@@ -378,7 +378,9 @@
       "production_aging_months": "Durée d'élevage",
       "production_method": "Méthode de production",
       "curiosity_note": "Curiosité",
-      "further_reading_summary": "Pour aller plus loin"
+      "further_reading_summary": "Pour aller plus loin",
+      "region_country": "Pays de l'appellation",
+      "region_classification": "Classification de l'appellation"
     },
     "research": {
       "eyebrow": "Recherche facultative",

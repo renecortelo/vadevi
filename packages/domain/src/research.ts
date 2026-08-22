@@ -22,7 +22,13 @@ export type ProductCandidate = Readonly<{
 
 export type ProposedFact = Readonly<{
   confidenceMilli: number;
-  predicate: "identity.canonical_name" | "producer.history" | "producer.name" | "region.name";
+  predicate:
+    | "identity.canonical_name"
+    | "producer.history"
+    | "producer.name"
+    | "region.classification"
+    | "region.country"
+    | "region.name";
   researchMethod: string;
   source: ExternalSourceCandidate;
   value: string;
