@@ -805,14 +805,15 @@ describe("Vicenç deterministic read path", () => {
     const spaceId = owner.data.user.activeSpaceId;
     const wine = await createWine(ownerToken, spaceId, "Southern Ocean");
     const now = new Date().toISOString();
+    const noteId = randomOpaqueToken();
     await env.DB.prepare(
       `INSERT INTO tasting_notes
         (id, space_id, wine_id, author_user_id, mode, state, tasted_at, score_100, comment,
          acidity, tannin_level, body, finish_length, version, created_at, updated_at)
-        VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 58, ?, 2, 4, 3, 2, 1, ?, ?)`,
+        VALUES (?, ?, ?, ?, 'deep', 'submitted', ?, 58, ?, 2, 4, 3, 2, 1, ?, ?)`,
     )
       .bind(
-        randomOpaqueToken(),
+        noteId,
         spaceId,
         wine.id,
         owner.data.user.id,
@@ -821,6 +822,19 @@ describe("Vicenç deterministic read path", () => {
         now,
         now,
       )
+      .run();
+    await env.DB.prepare(
+      `INSERT INTO tasting_descriptors
+        (id, space_id, tasting_note_id, phase, descriptor_code, label_snapshot, created_at, updated_at)
+        VALUES (?, ?, ?, 'nose', 'fruit.citrus.lemon', 'Lemon', ?, ?)`,
+    )
+      .bind(randomOpaqueToken(), spaceId, noteId, now, now)
+      .run();
+    await env.DB.prepare(
+      `INSERT INTO tasting_contexts (tasting_note_id, space_id, food_text, created_at, updated_at)
+        VALUES (?, ?, ?, ?, ?)`,
+    )
+      .bind(noteId, spaceId, "Grilled sea bass", now, now)
       .run();
 
     let captured: Array<{
@@ -875,6 +889,9 @@ describe("Vicenç deterministic read path", () => {
     expect(detail?.text).toContain("you rated it 58");
     expect(detail?.text).toContain("Fresh but a bit thin");
     expect(detail?.text).toContain("acidity 2/5");
+    // Readable descriptor label and the food it was had with.
+    expect(detail?.text).toContain("aromas you noted: Lemon");
+    expect(detail?.text).toContain("you had it with: Grilled sea bass");
   });
 
   it("uses optional provider language only after sentence-to-statement enforcement", async () => {
