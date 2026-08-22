@@ -476,4 +476,91 @@ describe("bounded wine research jobs", () => {
     expect(country?.citations[0]?.source.publisher).toBe("eAmbrosia (European Commission)");
     expect(facts.some((fact: Fact) => fact.predicate === "region.classification")).toBe(true);
   });
+
+  it("resolves the wine's grapes by name and researches them for highlights", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Varietal Red",
+        grapes: [{ name: "Tempranillo", percentage: 100 }],
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Bodega Ejemplo",
+        vintageYear: 2019,
+        wineType: "red",
+      }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wine = CreateWineResponseSchema.parse(await created.json()).data.wine;
+
+    const searchedGrapes: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async ({ subjectType }) =>
+          subjectType === "grape"
+            ? {
+                cached: false,
+                data: [
+                  {
+                    confidenceMilli: 800,
+                    predicate: "curiosity.highlight",
+                    researchMethod: "wikidata.highlight.v1",
+                    source: {
+                      canonicalUrl: "https://www.wikidata.org/wiki/Q1122",
+                      licenseIdentifier: "CC0-1.0",
+                      publisher: "Wikidata",
+                      retrievedAt: "2026-08-14T07:00:00.000Z",
+                      sourceType: "open_dataset",
+                      title: "Tempranillo",
+                    },
+                    value: "color: tinta",
+                  },
+                ],
+                status: "success",
+              }
+            : { cached: false, data: [], status: "success" },
+        searchEntities: async ({ subjectType, term }) => {
+          if (subjectType === "grape") {
+            searchedGrapes.push(term);
+            return {
+              cached: false,
+              data: [{ description: "a grape variety", id: "Q1122", label: "Tempranillo" }],
+              status: "success",
+            };
+          }
+          return { cached: false, data: [], status: "success" };
+        },
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "en" as const,
+        maxSources: 4,
+        topics: ["grapes"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    expect(searchedGrapes).toEqual(["Tempranillo"]);
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const highlight = facts.find((fact: Fact) => fact.predicate === "curiosity.highlight");
+    expect(highlight?.value).toBe("color: tinta");
+  });
 });
