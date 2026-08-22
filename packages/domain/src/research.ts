@@ -51,12 +51,12 @@ export type BarcodeLookup = Readonly<{
 export type KnowledgeResearchRequest = Readonly<{
   entityId: string;
   locale: ResearchLocale;
-  subjectType: "producer" | "region" | "wine";
+  subjectType: "grape" | "producer" | "region" | "wine";
 }>;
 
 export type KnowledgeEntitySearch = Readonly<{
   locale: ResearchLocale;
-  subjectType: "producer" | "region" | "wine";
+  subjectType: "grape" | "producer" | "region" | "wine";
   term: string;
 }>;
 

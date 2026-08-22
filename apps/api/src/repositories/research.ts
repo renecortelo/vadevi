@@ -246,10 +246,30 @@ function productProposal(candidate: ProductCandidate): ProposedFact | null {
   };
 }
 
+/** The wine's registered grape names, in position order. */
+async function wineGrapeNames(
+  database: D1Database,
+  spaceId: string,
+  wineId: string,
+): Promise<string[]> {
+  const rows = await database
+    .prepare(
+      `SELECT grape.name_snapshot AS name
+        FROM wine_grapes grape
+        JOIN wine_records wine ON wine.id = grape.wine_id
+        WHERE grape.wine_id = ? AND wine.space_id = ?
+        ORDER BY grape.position`,
+    )
+    .bind(wineId, spaceId)
+    .all<{ name: string }>();
+  return rows.results.map((row) => row.name);
+}
+
 async function collectProposals(
   access: ResearchAccessRow,
   request: CreateResearchJobRequest,
   ports: ResearchPorts,
+  grapeNames: string[],
 ): Promise<{
   attempts: ResearchAttempt[];
   proposals: ProposedFact[];
@@ -378,6 +398,47 @@ async function collectProposals(
       }
     }
   }
+  // Grapes are resolved and researched by name too, so the wine's varieties
+  // contribute their own open highlights (colour, origin, and whatever else the
+  // entity carries). There is no picker for grapes — a blend has several and they
+  // are far less ambiguous than a producer — so a close-enough name match is
+  // researched directly, and a wrong one can be discarded like any other.
+  if (request.topics.includes("grapes") && ports.knowledge !== null) {
+    const seen = new Set<string>();
+    const names = grapeNames
+      .map((name) => name.trim())
+      .filter(
+        (name) =>
+          name.length > 0 && (seen.has(name.toLowerCase()) ? false : seen.add(name.toLowerCase())),
+      )
+      .slice(0, 4);
+    for (const name of names) {
+      try {
+        const found = await ports.knowledge.searchEntities({
+          locale: request.locale,
+          subjectType: "grape",
+          term: name,
+        });
+        if (found.status !== "success") continue;
+        const match = found.data.find((candidate) => nameMatches(name, candidate.label));
+        if (match === undefined) continue;
+        const result = await ports.knowledge.research({
+          entityId: match.id,
+          locale: request.locale,
+          subjectType: "grape",
+        });
+        if (result.status === "success") {
+          attempts.push(successAttempt("wikidata", result.cached));
+          proposals.push(...result.data);
+        } else {
+          attempts.push(unavailableAttempt("wikidata", result.reason, result.retryAfterSeconds));
+        }
+      } catch {
+        attempts.push(unavailableAttempt("wikidata", "provider_error", null));
+      }
+    }
+  }
+
   if (proposals.length === 0) warnings.add("no_results");
   if (attempts.some((attempt) => attempt.status === "unavailable") && proposals.length > 0) {
     warnings.add("partial_results");
@@ -661,7 +722,10 @@ export async function createResearchJob(
   ]);
   if (initial[1]?.meta.changes !== 1) return { kind: "conflict" };
 
-  const collected = await collectProposals(access, options.request, options.ports);
+  const grapeNames = options.request.topics.includes("grapes")
+    ? await wineGrapeNames(database, options.spaceId, options.wineId)
+    : [];
+  const collected = await collectProposals(access, options.request, options.ports, grapeNames);
   const resolved = await resolveStoredProposals(
     database,
     options.spaceId,

@@ -24,7 +24,7 @@ import {
 } from "../services/assistant";
 import { useSession } from "../session/SessionContext";
 
-type ResearchTopic = "identity" | "producer" | "region";
+type ResearchTopic = "grapes" | "identity" | "producer" | "region";
 type CandidateData = ResearchCandidatesResponse["data"];
 
 function translationCode(value: string) {
@@ -367,7 +367,10 @@ export function WineEvidencePage() {
     setResearching(true);
     setResearchError(null);
     try {
-      const topics: ResearchTopic[] = ["identity"];
+      // "grapes" is always requested: the wine's varieties are resolved and
+      // researched server-side by name, contributing their own highlights. There
+      // is nothing for the reader to pick, so it needs no entry in the picker.
+      const topics: ResearchTopic[] = ["identity", "grapes"];
       const wikidataEntityIds: { producer?: string; region?: string } = {};
       if (producerChoice !== "none") {
         wikidataEntityIds.producer = producerChoice;
