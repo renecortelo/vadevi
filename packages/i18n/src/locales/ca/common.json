@@ -345,6 +345,8 @@
       "retired": "Retirada"
     },
     "sourcesLabel": "Fonts",
+    "sourceDetails": "Font",
+    "highlightsTitle": "El que hem trobat",
     "sourceType": {
       "producer": "Productor",
       "regulator": "Organisme regulador",

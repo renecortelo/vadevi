@@ -351,7 +351,7 @@ describe("authenticated app shell", () => {
     expect(markup).not.toContain("AI provider disabled");
   });
 
-  it("renders researched fact attribution, license, and a contextual acceptance action", () => {
+  it("keeps a fact clean while tucking attribution and license behind a source toggle", () => {
     const fact: Fact = {
       citations: [
         {
@@ -390,21 +390,65 @@ describe("authenticated app shell", () => {
     };
 
     const markup = renderWithSession(
-      <FactCard
-        accepting={false}
-        fact={fact}
-        onAccept={() => undefined}
-        onReject={() => undefined}
-        rejecting={false}
-      />,
+      <FactCard fact={fact} onReject={() => undefined} rejecting={false} />,
     );
 
     expect(markup).toContain("Researched");
     expect(markup).toContain("Disputed");
     expect(markup).toContain("12 months");
+    // Provenance still ships, but behind the collapsed "Source" toggle.
+    expect(markup).toContain("Source");
     expect(markup).toContain("Synthetic technical sheet");
     expect(markup).toContain("License CC-BY-4.0");
     expect(markup).toContain("Technical sheet, p. 2");
     expect(markup).toContain('aria-describedby="fact-value-01J00000000000000000000006"');
+  });
+
+  it("renders a discovered highlight as a clean key/value pair", () => {
+    const fact: Fact = {
+      citations: [
+        {
+          locator: null,
+          source: {
+            canonicalUrl: "https://www.wikidata.org/wiki/Q123",
+            createdAt: "2026-08-13T20:00:00.000Z",
+            createdByProvider: "synthetic-test-provider",
+            createdByUserId: null,
+            id: "01J00000000000000000000007",
+            licenseIdentifier: "CC0-1.0",
+            publisher: "Wikidata",
+            retrievedAt: "2026-08-13T20:00:00.000Z",
+            sourceType: "open_dataset",
+            title: "Synthetic Estate",
+            updatedAt: "2026-08-13T20:00:00.000Z",
+          },
+          supportStrength: "supporting",
+        },
+      ],
+      confidenceMilli: 800,
+      createdAt: "2026-08-13T20:00:00.000Z",
+      evidenceClass: "researched",
+      id: "01J00000000000000000000008",
+      observedByUserId: null,
+      predicate: "curiosity.highlight",
+      researchMethod: "wikidata.highlight.v1",
+      status: "proposed",
+      subjectId: "01J00000000000000000000004",
+      subjectType: "wine",
+      updatedAt: "2026-08-13T20:00:00.000Z",
+      value: "Founded: 1870",
+      verifiedAt: null,
+      verifiedByUserId: null,
+      version: 1,
+    };
+
+    const markup = renderWithSession(
+      <FactCard fact={fact} onReject={() => undefined} rejecting={false} />,
+    );
+
+    expect(markup).toContain('data-highlight="true"');
+    expect(markup).toContain("fact-card__key");
+    expect(markup).toContain("Founded");
+    expect(markup).toContain("1870");
   });
 });

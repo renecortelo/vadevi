@@ -17,7 +17,6 @@ import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
 import {
-  acceptFact,
   createResearchJob,
   getResearchCandidates,
   getWineFacts,
@@ -70,96 +69,106 @@ function EvidenceChip({ fact }: { fact: Fact }) {
   );
 }
 
+function highlightParts(fact: Fact): { answer: string; key: string } | null {
+  if (fact.predicate !== "curiosity.highlight" || typeof fact.value !== "string") return null;
+  const separator = fact.value.indexOf(": ");
+  if (separator <= 0) return null;
+  return { answer: fact.value.slice(separator + 2), key: fact.value.slice(0, separator) };
+}
+
 export function FactCard({
-  accepting,
   fact,
-  onAccept,
   onReject,
   rejecting,
 }: {
-  accepting: boolean;
   fact: Fact;
-  onAccept: (fact: Fact) => void;
   onReject: (fact: Fact) => void;
   rejecting: boolean;
 }) {
   const { i18n, t } = useTranslation();
   const valueId = `fact-value-${fact.id}`;
+  const highlight = highlightParts(fact);
   return (
-    <article className="fact-card" data-status={fact.status}>
-      <div className="fact-card__heading">
-        <EvidenceChip fact={fact} />
-        <span className="fact-status" data-status={fact.status}>
-          {t(`evidence.status.${fact.status}`)}
-        </span>
-      </div>
-      <h3 className="fact-card__value" id={valueId}>
-        <FactValue fact={fact} />
-      </h3>
-      {fact.confidenceMilli === null ? null : (
-        <p className="fact-card__confidence">
-          {t("evidence.confidence", { value: Math.round(fact.confidenceMilli / 10) })}
+    <article className="fact-card" data-highlight={highlight !== null} data-status={fact.status}>
+      <div className="fact-card__body">
+        <p className="fact-card__value" id={valueId}>
+          {highlight === null ? (
+            <FactValue fact={fact} />
+          ) : (
+            <>
+              <span className="fact-card__key">{highlight.key}</span>
+              <span className="fact-card__answer">{highlight.answer}</span>
+            </>
+          )}
         </p>
-      )}
-      {fact.citations.length === 0 ? (
-        <p className="fact-card__uncited">{t("evidence.noCitations")}</p>
-      ) : (
-        <ul aria-label={t("evidence.sourcesLabel")} className="citation-list">
-          {fact.citations.map((citation: Fact["citations"][number]) => (
-            <li key={citation.source.id}>
-              <div>
-                <a href={citation.source.canonicalUrl} rel="noreferrer" target="_blank">
-                  {citation.source.title}
-                </a>
-                <span>
-                  {citation.source.publisher} ·{" "}
-                  {t(`evidence.sourceType.${citation.source.sourceType}`)}
-                </span>
-              </div>
-              <div className="citation-list__meta">
-                <span>{t(`evidence.support.${citation.supportStrength}`)}</span>
-                <time dateTime={citation.source.retrievedAt}>
-                  {t("evidence.retrieved", {
-                    date: new Intl.DateTimeFormat(i18n.language, { dateStyle: "medium" }).format(
-                      new Date(citation.source.retrievedAt),
-                    ),
-                  })}
-                </time>
-                {citation.source.licenseIdentifier === undefined ? null : (
-                  <span>
-                    {t("evidence.license", {
-                      license: citation.source.licenseIdentifier,
-                    })}
-                  </span>
-                )}
-                {citation.locator === null ? null : <span>{citation.locator}</span>}
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
-      {fact.status === "accepted" || fact.status === "retired" ? null : (
-        <div className="fact-card__actions">
+        {fact.status === "accepted" || fact.status === "retired" ? null : (
           <button
-            className="action-link action-link--secondary"
+            className="action-link action-link--quiet fact-card__dismiss"
             aria-describedby={valueId}
-            disabled={accepting || rejecting}
-            onClick={() => onAccept(fact)}
-            type="button"
-          >
-            {accepting ? t("evidence.accepting") : t("evidence.acceptAction")}
-          </button>
-          <button
-            className="action-link action-link--quiet"
-            aria-describedby={valueId}
-            disabled={accepting || rejecting}
+            aria-label={t("evidence.rejectAction")}
+            disabled={rejecting}
             onClick={() => onReject(fact)}
             type="button"
           >
             {rejecting ? t("evidence.rejecting") : t("evidence.rejectAction")}
           </button>
+        )}
+      </div>
+      {/* Provenance is kept, but tucked away: the reader wants the fact, not the
+          licence and support-strength metadata, unless they go looking for it. */}
+      <details className="fact-card__source">
+        <summary>{t("evidence.sourceDetails")}</summary>
+        <div className="fact-card__source-body">
+          <div className="fact-card__heading">
+            <EvidenceChip fact={fact} />
+            <span className="fact-status" data-status={fact.status}>
+              {t(`evidence.status.${fact.status}`)}
+            </span>
+            {fact.confidenceMilli === null ? null : (
+              <span className="fact-card__confidence">
+                {t("evidence.confidence", { value: Math.round(fact.confidenceMilli / 10) })}
+              </span>
+            )}
+          </div>
+          {fact.citations.length === 0 ? (
+            <p className="fact-card__uncited">{t("evidence.noCitations")}</p>
+          ) : (
+            <ul aria-label={t("evidence.sourcesLabel")} className="citation-list">
+              {fact.citations.map((citation: Fact["citations"][number]) => (
+                <li key={citation.source.id}>
+                  <div>
+                    <a href={citation.source.canonicalUrl} rel="noreferrer" target="_blank">
+                      {citation.source.title}
+                    </a>
+                    <span>
+                      {citation.source.publisher} ·{" "}
+                      {t(`evidence.sourceType.${citation.source.sourceType}`)}
+                    </span>
+                  </div>
+                  <div className="citation-list__meta">
+                    <span>{t(`evidence.support.${citation.supportStrength}`)}</span>
+                    <time dateTime={citation.source.retrievedAt}>
+                      {t("evidence.retrieved", {
+                        date: new Intl.DateTimeFormat(i18n.language, {
+                          dateStyle: "medium",
+                        }).format(new Date(citation.source.retrievedAt)),
+                      })}
+                    </time>
+                    {citation.source.licenseIdentifier === undefined ? null : (
+                      <span>
+                        {t("evidence.license", {
+                          license: citation.source.licenseIdentifier,
+                        })}
+                      </span>
+                    )}
+                    {citation.locator === null ? null : <span>{citation.locator}</span>}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-      )}
+      </details>
     </article>
   );
 }
@@ -229,7 +238,6 @@ export function WineEvidencePage() {
   const [wine, setWine] = useState<WineSummary | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [acceptingId, setAcceptingId] = useState<string | null>(null);
   const [rejectingId, setRejectingId] = useState<string | null>(null);
   const [researching, setResearching] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
@@ -293,20 +301,6 @@ export function WineEvidencePage() {
     }
     return [...groups.entries()];
   }, [response]);
-
-  async function chooseFact(fact: Fact) {
-    if (user === null) return;
-    setAcceptingId(fact.id);
-    setError(null);
-    try {
-      await acceptFact(user, spaceId, fact.id, { version: fact.version });
-      await loadFacts();
-    } catch {
-      setError(t("evidence.acceptError"));
-    } finally {
-      setAcceptingId(null);
-    }
-  }
 
   async function dismissFact(fact: Fact) {
     if (user === null) return;
@@ -527,21 +521,28 @@ export function WineEvidencePage() {
       ) : null}
       <div className="fact-groups">
         {factsByPredicate.map(([predicate, facts]) => (
-          <section className="fact-group" key={predicate}>
+          <section
+            className="fact-group"
+            data-highlights={predicate === "curiosity.highlight"}
+            key={predicate}
+          >
             <div className="section-heading-row">
-              <div>
-                <p className="eyebrow">{t("evidence.claimLabel")}</p>
-                <h2>{t(`evidence.predicate.${translationCode(predicate)}`)}</h2>
-              </div>
+              <h2>
+                {predicate === "curiosity.highlight"
+                  ? t("evidence.highlightsTitle")
+                  : t(`evidence.predicate.${translationCode(predicate)}`)}
+              </h2>
               <span>{t("evidence.claimCount", { count: facts.length })}</span>
             </div>
-            <div className="fact-card-grid">
+            <div
+              className={
+                predicate === "curiosity.highlight" ? "fact-highlight-grid" : "fact-card-grid"
+              }
+            >
               {facts.map((fact) => (
                 <FactCard
-                  accepting={acceptingId === fact.id}
                   fact={fact}
                   key={fact.id}
-                  onAccept={(candidate) => void chooseFact(candidate)}
                   onReject={(candidate) => void dismissFact(candidate)}
                   rejecting={rejectingId === fact.id}
                 />

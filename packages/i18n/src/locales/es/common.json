@@ -345,6 +345,8 @@
       "retired": "Retirada"
     },
     "sourcesLabel": "Fuentes",
+    "sourceDetails": "Fuente",
+    "highlightsTitle": "Lo que encontramos",
     "sourceType": {
       "producer": "Productor",
       "regulator": "Organismo regulador",
