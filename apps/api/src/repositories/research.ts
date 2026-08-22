@@ -31,10 +31,14 @@ function nameMatches(field: string, label: string): boolean {
   return a === b || a.includes(b) || b.includes(a);
 }
 
-// The reader makes the final choice, so these only reorder the options — a wine
-// region floats above a same-named arachnid genus. Nothing is ever hidden: a
-// low-scoring candidate is still offered, just lower in the list. Descriptions
-// come back localized, so the vocabulary spans the languages we serve.
+// Producer and wine names are fanciful — "Áster", "El Espino", "Mimo" — so a
+// name search hits unrelated Wikidata entities (a flower genus, a film, a
+// person) far more often than the actual winery. The wineBoost side ranks a real
+// wine entity first; the nonPlace side is now a HARD reject, not just a demotion:
+// a candidate that positively looks like a genus, species, film, person, etc. is
+// dropped entirely, so a producer that only collides with the Aster flower
+// yields nothing to research rather than a botany lesson. Descriptions come back
+// localized, so the vocabulary spans the languages we serve.
 const wineBoostPattern =
   /\b(wine|vineyard|winery|vino|vinicol\w*|vin|vign\w*|wein|weingut|wijn|bodega|cantina|denomin\w*|appellation|region|regio\w*|province|provin\w*|comune|valley|vall\w*|comarca|estate|domaine|chateau|celler|winemaker|producer|productor\w*|produttore|producteur)\b/i;
 const nonPlacePattern =
@@ -43,6 +47,14 @@ const nonPlacePattern =
 function candidateScore(description: string | null): number {
   const text = description ?? "";
   return (wineBoostPattern.test(text) ? 1 : 0) - (nonPlacePattern.test(text) ? 1 : 0);
+}
+
+// Whether a name-matched entity is plausibly the wine's producer or region, as
+// opposed to a same-named genus/film/person. Wine-looking (score > 0) and
+// neutral (score 0, e.g. a sparse description) pass; actively-unrelated
+// (score < 0) is rejected. Grapes are exempt — a grape variety IS a plant.
+function isPlausibleWineEntity(description: string | null): boolean {
+  return candidateScore(description) >= 0;
 }
 
 type ResearchAccessRow = {
@@ -147,6 +159,7 @@ async function subjectCandidates(
           index,
           score: candidateScore(candidate.description),
         }))
+        .filter(({ score }) => score >= 0)
         .sort((left, right) => right.score - left.score || left.index - right.index)
         .map(({ candidate }) => ({
           description: candidate.description,
@@ -349,7 +362,11 @@ async function collectProposals(
           term: target.field,
         });
         if (found.status !== "success") continue;
-        const match = found.data.find((candidate) => nameMatches(target.field, candidate.label));
+        const match = found.data.find(
+          (candidate) =>
+            isPlausibleWineEntity(candidate.description) &&
+            nameMatches(target.field, candidate.label),
+        );
         if (match !== undefined) entityIds[target.key] = match.id;
       } catch {
         // A failed resolution just leaves the topic unresolved.
