@@ -150,18 +150,21 @@ should reach the home screen with an empty Wine Memory.
 
 ## Optional providers
 
-Both are **off** by default and neither is required. The application is fully
+All are **off** by default and none is required. The application is fully
 usable with structured search, manual entry, deterministic comparisons, and all
 data rights while they stay off.
 
-Before enabling either, read and decide on its privacy review — each explains
-exactly what leaves your deployment:
+Before enabling any of them, read and decide on its privacy review — each
+explains exactly what leaves your deployment:
 
 - `docs/privacy-review-open-food-facts.md` — sends a barcode. Wine coverage in a
   food database is thin, so the benefit is modest.
 - `docs/privacy-review-label-ocr.md` — sends a **photograph**. Deserves more
   scrutiny, and requires checking Cloudflare's current Workers AI retention
   terms on the day you enable it.
+- `docs/privacy-review-sommelierx.md` — sends the **dish text** the reader types
+  to get pairing criteria, used only to rank the reader's own bottles. A
+  third-party service under its own terms.
 
 ### What works with both off
 
@@ -195,16 +198,23 @@ photograph, and Vicenç's language replies.
 
 3. **Set the variables** you have approved, and only those:
 
-   | Variable            | Value                                      | Turns on                          |
-   | ------------------- | ------------------------------------------ | --------------------------------- |
-   | `AI_PROVIDER`       | `cloudflare`                               | required by both AI features      |
-   | `AI_OCR_MODEL`      | one of the three allowlisted vision models | reading a label from a photo      |
-   | `AI_MODEL`          | a `@cf/…` text model                       | Vicenç's replies                  |
-   | `RESEARCH_PROVIDER` | `open_data`                                | barcode lookup in Open Food Facts |
+   | Variable             | Value                                      | Turns on                          |
+   | -------------------- | ------------------------------------------ | --------------------------------- |
+   | `AI_PROVIDER`        | `cloudflare`                               | required by both AI features      |
+   | `AI_OCR_MODEL`       | one of the three allowlisted vision models | reading a label from a photo      |
+   | `AI_MODEL`           | a `@cf/…` text model                       | Vicenç's replies                  |
+   | `RESEARCH_PROVIDER`  | `open_data`                                | barcode lookup in Open Food Facts |
+   | `PAIRING_PROVIDER`   | `sommelierx`                               | food-and-wine pairing (external)  |
+   | `SOMMELIERX_API_KEY` | a `sk_live_…` key (a secret, not a var)    | the same — pairing needs both     |
 
    The OCR allowlist is fixed in code — `apps/api/src/adapters/label-ocr.ts` —
    so a model outside it is refused rather than silently used. Check
    Cloudflare's current model catalogue for the text model; names change.
+
+   Pairing is a third-party service under its own terms and sends the reader's
+   dish text off-device — enable it only after reading
+   `docs/privacy-review-sommelierx.md`. It defaults off; without both
+   `PAIRING_PROVIDER=sommelierx` and a valid key, the assistant answers without it.
 
    Setting `AI_PROVIDER=cloudflare` without a valid model, or without the
    binding, leaves the feature off rather than half-on. The adapters return

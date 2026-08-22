@@ -8,14 +8,20 @@ that is yours to make and not mine.
 
 ## 1. Deploy the latest `main` (5 min)
 
-The database is already current — the last migration, `0014`, is applied, and
-nothing since has needed one. Everything merged since is client code, so a build
-and a deploy are all this takes. Rebuilding the web bundle is not optional: the
-photo fix and every UI change live in it, and deploying only the Worker would
-ship none of them.
+The latest migration is now `0015` (`0015_note_embeddings.sql`, the table behind
+Vicenç's semantic note search). If you have not applied it since it landed, run
+the migration step below **before** the deploy — migrations are forward-only, so
+they go on before the Worker, never after. Everything else merged since is code,
+so once the database is current a build and a deploy are all this takes.
+Rebuilding the web bundle is not optional: every UI change lives in it, and
+deploying only the Worker would ship none of them.
 
 ```powershell
 pnpm install --frozen-lockfile
+```
+
+```powershell
+npx wrangler d1 migrations apply vadevi-preview --remote --config wrangler.preview.jsonc
 ```
 
 ```powershell
@@ -29,13 +35,6 @@ npx wrangler deploy --config wrangler.preview.jsonc
 Then, on the iPhone, close and reopen the app — or remove it from the home
 screen and install it again — so the service worker picks up the new bundle.
 With the old bundle still cached, none of the recent fixes are present.
-
-If a later change ever does add a migration, apply it before deploying the
-Worker, never after; migrations are forward-only:
-
-```powershell
-npx wrangler d1 migrations apply vadevi-preview --remote --config wrangler.preview.jsonc
-```
 
 ## 2. Work through the acceptance script (45 min)
 
@@ -66,8 +65,8 @@ Send me what comes back the way you did the first round.
 
 ## 3. The optional providers are now ON in your deployment — test them, and do the checks that are still yours
 
-You decided to enable OCR (Vicenç), Open Food Facts, and the external evidence a
-wine can gather. They are switched on in
+You decided to enable OCR (Vicenç), Open Food Facts, the external evidence a
+wine can gather, and SommelierX food-and-wine pairing. They are switched on in
 `wrangler.preview.jsonc` — which is your machine's file, untracked, so the public
 default stays `none` and nothing about this is committed. What is set:
 
@@ -78,6 +77,8 @@ default stays `none` and nothing about this is committed. What is set:
 | `AI_OCR_MODEL`            | `@cf/meta/llama-3.2-11b-vision-instruct`             | reading a label from a photo                   |
 | `AI_MODEL`                | `@cf/meta/llama-3.3-70b-instruct-fp8-fast`           | Vicenç's replies                               |
 | `RESEARCH_PROVIDER`       | `open_data`                                          | external evidence on a wine                    |
+| `PAIRING_PROVIDER`        | `sommelierx`                                         | food-and-wine pairing (ranks your own bottles) |
+| `SOMMELIERX_API_KEY`      | _(secret, in `.dev.vars` / `wrangler secret`)_       | the same — pairing stays off without it        |
 | `EXTERNAL_API_USER_AGENT` | `VaDeVi/0.1 (https://github.com/renecortelo/vadevi)` | the same — it is the second half of the switch |
 
 The OCR model is one of the three on the allowlist in `apps/api/src/adapters/label-ocr.ts`.
@@ -102,7 +103,7 @@ same URL the AGPL source offer already points at.
 A dry-run (`wrangler deploy --dry-run`) confirmed the config is valid and the `AI`
 binding resolves. It all takes effect on your next real deploy (step 1).
 
-**Two things are still yours, and I could not do them:**
+**Three things are still yours, and I could not do them:**
 
 1. The label-OCR review asks you to read Cloudflare's _current_ Workers AI
    data-retention terms on the day you turn it on, because a photograph leaves your
@@ -114,6 +115,12 @@ binding resolves. It all takes effect on your next real deploy (step 1).
    No photograph, no personal data; a lighter footprint than OCR. The Open Food Facts
    review covers the barcode; the Wikidata lookup rides the same switch, so if you do
    not want wine names leaving the deployment, set `RESEARCH_PROVIDER` back to `none`.
+   (Region **country** and **classification** no longer need Wikidata at all: the
+   offline eAmbrosia gazetteer answers those from a local table, no network.)
+3. Pairing sends the **dish text you type** to SommelierX and nothing else — never
+   a bottle, never your cellar. Read `docs/privacy-review-sommelierx.md` before you
+   rely on it, and know it is a third-party service under its own terms. To turn it
+   off, set `PAIRING_PROVIDER` back to `none`; the assistant then answers without it.
 
 Then test, after deploying: photograph a label and see it read fields (OCR), ask
 Vicenç something (text model), and open a wine → **Evidence** → **Research this wine**
