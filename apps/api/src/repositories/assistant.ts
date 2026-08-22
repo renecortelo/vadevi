@@ -26,6 +26,7 @@ import type { FirebasePrincipal } from "../types";
 import { appellationsForCountry, resolveAppellationCountries } from "./appellation-terms";
 import { listPriceObservations } from "./cellar";
 import { resolveCountryCodes } from "./country-terms";
+import { resolveGrapeNamesFromMessage } from "./grape-terms";
 import { getSource, listWineFacts } from "./provenance";
 import { getWineSummary, listWines, normalizeWineText } from "./wine-memory";
 
@@ -523,6 +524,10 @@ async function searchMemory(
   const appellationRegions = [
     ...new Set(countryCodes.flatMap((code) => appellationsForCountry(code))),
   ].slice(0, 8);
+  // The grape names to search: every variety named in the question expanded by
+  // its known synonyms (so "Tinto Fino" finds a "Tempranillo"), plus the raw
+  // terms so an unlisted grape the reader named is still matched by its own name.
+  const grapeNames = [...new Set([...resolveGrapeNamesFromMessage(message), ...terms])].slice(0, 8);
   const results = new Map<string, AssistantSearchResult>();
   for (const space of spaces) {
     const queries = terms.length === 0 ? [undefined] : terms;
@@ -580,6 +585,20 @@ async function searchMemory(
         limit: 10,
         principal,
         region,
+        sort: "recent",
+        spaceId: space.id,
+      });
+      for (const wine of response?.data ?? []) {
+        results.set(`${space.id}:${wine.id}`, { spaceId: space.id, spaceName: space.name, wine });
+      }
+    }
+    // …and by grape, synonyms included, so a variety the reader named reaches
+    // their wines made from it however that grape was written down.
+    for (const grape of grapeNames) {
+      const response = await listWines(database, {
+        grape,
+        limit: 10,
+        principal,
         sort: "recent",
         spaceId: space.id,
       });
