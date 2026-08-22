@@ -116,7 +116,10 @@ binding resolves. It all takes effect on your next real deploy (step 1).
    review covers the barcode; the Wikidata lookup rides the same switch, so if you do
    not want wine names leaving the deployment, set `RESEARCH_PROVIDER` back to `none`.
    (Region **country** and **classification** no longer need Wikidata at all: the
-   offline eAmbrosia gazetteer answers those from a local table, no network.)
+   offline eAmbrosia gazetteer answers those from a local table, no network.) When
+   the matched Wikidata entity links to a **Wikipedia** article, its title is used to
+   fetch a short cited summary paragraph from Wikipedia — the same identity footprint,
+   under the same `RESEARCH_PROVIDER` switch, nothing extra about you.
 3. Pairing sends the **dish text you type** to SommelierX and nothing else — never
    a bottle, never your cellar. Read `docs/privacy-review-sommelierx.md` before you
    rely on it, and know it is a third-party service under its own terms. To turn it

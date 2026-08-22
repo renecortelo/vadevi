@@ -127,7 +127,7 @@ describe("external research adapters", () => {
       expect(headers.get("Api-User-Agent")).toBe(userAgent);
       // First call fetches the entity with its claims; the second resolves the
       // labels of the properties and entity-valued answers we picked out.
-      if (url.searchParams.get("props") === "labels|claims") {
+      if (url.searchParams.get("props") === "labels|claims|sitelinks") {
         return Response.json({
           entities: {
             Q123: {
@@ -211,10 +211,80 @@ describe("external research adapters", () => {
     expect(requests).toHaveLength(2);
     expect(requests[0]?.searchParams.get("action")).toBe("wbgetentities");
     expect(requests[0]?.searchParams.get("ids")).toBe("Q123");
-    expect(requests[0]?.searchParams.get("props")).toBe("labels|claims");
+    expect(requests[0]?.searchParams.get("props")).toBe("labels|claims|sitelinks");
     expect(requests[0]?.searchParams.get("maxlag")).toBe("5");
     expect(requests[1]?.searchParams.get("props")).toBe("labels");
     expect(requests[1]?.searchParams.get("ids")).toBe("P571|P112|Q999");
+  });
+
+  it("adds a cited Wikipedia summary as the research narrative when the entity links to one", async () => {
+    const hosts: string[] = [];
+    const fetcher: ProviderFetcher = async (input) => {
+      const url = new URL(String(input));
+      hosts.push(url.hostname);
+      if (url.hostname === "es.wikipedia.org") {
+        return Response.json({
+          content_urls: { desktop: { page: "https://es.wikipedia.org/wiki/Bodegas_Torres" } },
+          extract: "Bodegas Torres es una empresa vinícola familiar fundada en Vilafranca.",
+          title: "Bodegas Torres",
+          type: "standard",
+        });
+      }
+      if (url.searchParams.get("props") === "labels|claims|sitelinks") {
+        return Response.json({
+          entities: {
+            Q123: {
+              claims: {
+                P571: [
+                  {
+                    mainsnak: {
+                      datavalue: { type: "time", value: { time: "+1870-01-01T00:00:00Z" } },
+                      snaktype: "value",
+                    },
+                  },
+                ],
+              },
+              id: "Q123",
+              labels: { es: { language: "es", value: "Bodegas Torres" } },
+              sitelinks: { eswiki: { title: "Bodegas Torres" } },
+            },
+          },
+        });
+      }
+      return Response.json({
+        entities: { P571: { id: "P571", labels: { es: { language: "es", value: "fundación" } } } },
+      });
+    };
+    const adapter = new WikidataAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      { fetcher, now: () => new Date("2026-08-13T20:08:00.000Z") },
+    );
+
+    const result = await adapter.research({
+      entityId: "Q123",
+      locale: "es",
+      subjectType: "producer",
+    });
+
+    expect(result.status).toBe("success");
+    if (result.status !== "success") throw new Error("Expected a successful lookup.");
+    // The narrative comes first, cited to Wikipedia, then the data highlights.
+    expect(result.data[0]).toEqual({
+      confidenceMilli: 700,
+      predicate: "research.summary",
+      researchMethod: "wikipedia.summary.v1",
+      source: expect.objectContaining({
+        canonicalUrl: "https://es.wikipedia.org/wiki/Bodegas_Torres",
+        licenseIdentifier: "CC-BY-SA-4.0",
+        publisher: "Wikipedia",
+      }),
+      value: "Bodegas Torres es una empresa vinícola familiar fundada en Vilafranca.",
+    });
+    expect(result.data[1]?.predicate).toBe("curiosity.highlight");
+    expect(result.data[1]?.value).toBe("fundación: 1870");
+    expect(hosts).toContain("es.wikipedia.org");
   });
 
   it("searches Wikidata by name and caches bounded entity candidates", async () => {

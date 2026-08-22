@@ -1688,6 +1688,29 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
 }
 
+.research-narrative {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.research-narrative__text {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.research-narrative__footer {
+  align-items: center;
+  display: flex;
+  gap: var(--space-3);
+  justify-content: space-between;
+}
+
 .citation-list {
   display: grid;
   gap: var(--space-3);

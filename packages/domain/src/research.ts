@@ -29,7 +29,8 @@ export type ProposedFact = Readonly<{
     | "producer.name"
     | "region.classification"
     | "region.country"
-    | "region.name";
+    | "region.name"
+    | "research.summary";
   researchMethod: string;
   source: ExternalSourceCandidate;
   value: string;

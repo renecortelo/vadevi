@@ -292,9 +292,19 @@ export function WineEvidencePage() {
     return () => controller.abort();
   }, [spaceId, user, wineId]);
 
+  // The generated/gathered narrative is rendered on its own at the top, so it is
+  // pulled out of the per-predicate grouping. The most recent live one wins.
+  const narrative = useMemo(() => {
+    const summaries = (response?.data.facts ?? []).filter(
+      (fact: Fact) => fact.predicate === "research.summary" && fact.status !== "retired",
+    );
+    return summaries.length === 0 ? null : (summaries[summaries.length - 1] ?? null);
+  }, [response]);
+
   const factsByPredicate = useMemo(() => {
     const groups = new Map<Fact["predicate"], Fact[]>();
     for (const fact of response?.data.facts ?? []) {
+      if (fact.predicate === "research.summary") continue;
       const facts = groups.get(fact.predicate) ?? [];
       facts.push(fact);
       groups.set(fact.predicate, facts);
@@ -513,12 +523,37 @@ export function WineEvidencePage() {
           <p>{t("evidence.conflictBody", { count: response.data.conflicts.length })}</p>
         </section>
       ) : null}
-      {!loading && response !== null && factsByPredicate.length === 0 ? (
+      {!loading && response !== null && factsByPredicate.length === 0 && narrative === null ? (
         <div className="empty-state">
           <h2>{t("evidence.emptyTitle")}</h2>
           <p>{t("evidence.emptyBody")}</p>
         </div>
       ) : null}
+      {narrative === null ? null : (
+        <section aria-labelledby="research-narrative" className="research-narrative">
+          <h2 id="research-narrative">{t("evidence.summaryTitle")}</h2>
+          <p className="research-narrative__text">{String(narrative.value)}</p>
+          <div className="research-narrative__footer">
+            {narrative.citations[0] === undefined ? null : (
+              <a href={narrative.citations[0].source.canonicalUrl} rel="noreferrer" target="_blank">
+                {narrative.citations[0].source.publisher}
+              </a>
+            )}
+            {narrative.status === "accepted" || narrative.status === "retired" ? null : (
+              <button
+                className="action-link action-link--quiet"
+                disabled={rejectingId === narrative.id}
+                onClick={() => void dismissFact(narrative)}
+                type="button"
+              >
+                {rejectingId === narrative.id
+                  ? t("evidence.rejecting")
+                  : t("evidence.rejectAction")}
+              </button>
+            )}
+          </div>
+        </section>
+      )}
       <div className="fact-groups">
         {factsByPredicate.map(([predicate, facts]) => (
           <section
