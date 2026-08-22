@@ -5,7 +5,7 @@ import { D1ExternalCache, D1ExternalRateLimiter } from "../src/adapters/external
 import { OpenFoodFactsAdapter } from "../src/adapters/open-food-facts";
 import type { ProviderFetcher, ProviderFetchError } from "../src/adapters/provider-fetch";
 import { fetchFromProvider, readBoundedJson } from "../src/adapters/provider-fetch";
-import { BraveWebSearchAdapter } from "../src/adapters/web-search";
+import { BraveWebSearchAdapter, TavilyWebSearchAdapter } from "../src/adapters/web-search";
 import { WikidataAdapter } from "../src/adapters/wikidata";
 
 beforeAll(async () => {
@@ -480,5 +480,44 @@ describe("external research adapters", () => {
     });
     expect(requests[0]?.searchParams.get("q")).toBe("Áster El Espino Ribera");
     expect(requests[0]?.hostname).toBe("api.search.brave.com");
+  });
+
+  it("maps Tavily extracted content to cited snippets over its fixed host", async () => {
+    const hosts: string[] = [];
+    let sentBody: unknown = null;
+    const fetcher: ProviderFetcher = async (input, init) => {
+      hosts.push(new URL(String(input)).hostname);
+      sentBody = JSON.parse(String(init?.body ?? "{}"));
+      expect(new Headers(init?.headers).get("Authorization")).toBe("Bearer tvly-key-0123456789");
+      return Response.json({
+        answer: "An LLM answer we deliberately ignore.",
+        results: [
+          {
+            content: "El Espino is a red from Bodegas Áster in Ribera del Duero.",
+            title: "El Espino — Áster",
+            url: "https://example-winery.test/el-espino",
+          },
+          { content: "internal", title: "internal", url: "http://10.0.0.1/x" },
+        ],
+      });
+    };
+    const adapter = new TavilyWebSearchAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      "tvly-key-0123456789",
+      { fetcher, now: () => new Date("2026-08-22T11:00:00.000Z") },
+    );
+
+    const result = await adapter.search({ locale: "es", query: "Áster El Espino" });
+    expect(result.status).toBe("success");
+    if (result.status !== "success") throw new Error("Expected a successful search.");
+    expect(result.data).toHaveLength(1);
+    expect(result.data[0]?.snippet).toBe(
+      "El Espino is a red from Bodegas Áster in Ribera del Duero.",
+    );
+    expect(result.data[0]?.source.sourceType).toBe("other_web");
+    expect(hosts).toEqual(["api.tavily.com"]);
+    expect(sentBody).toMatchObject({ query: "Áster El Espino" });
   });
 });
