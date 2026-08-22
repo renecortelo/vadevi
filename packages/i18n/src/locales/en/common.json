@@ -345,6 +345,8 @@
       "retired": "Retired"
     },
     "sourcesLabel": "Sources",
+    "sourceDetails": "Source",
+    "highlightsTitle": "What we found",
     "sourceType": {
       "producer": "Producer",
       "regulator": "Regulator",

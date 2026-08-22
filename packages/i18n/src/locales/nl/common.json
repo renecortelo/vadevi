@@ -345,6 +345,8 @@
       "retired": "Ingetrokken"
     },
     "sourcesLabel": "Bronnen",
+    "sourceDetails": "Bron",
+    "highlightsTitle": "Wat we vonden",
     "sourceType": {
       "producer": "Producent",
       "regulator": "Toezichthouder",

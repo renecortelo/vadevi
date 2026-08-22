@@ -345,6 +345,8 @@
       "retired": "Zurückgezogen"
     },
     "sourcesLabel": "Quellen",
+    "sourceDetails": "Quelle",
+    "highlightsTitle": "Das haben wir gefunden",
     "sourceType": {
       "producer": "Erzeuger",
       "regulator": "Aufsichtsbehörde",
