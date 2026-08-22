@@ -7,6 +7,7 @@ import {
   FactIdPathSchema,
   FactResponseSchema,
   IdempotencyKeySchema,
+  RejectFactRequestSchema,
   SourceIdPathSchema,
   SourceResponseSchema,
   SpaceIdPathSchema,
@@ -20,6 +21,7 @@ import {
   createWineFact,
   getSource,
   listWineFacts,
+  rejectFact,
 } from "../repositories/provenance";
 import type { ApiEnvironment } from "../types";
 
@@ -161,6 +163,33 @@ const acceptFactRoute = createRoute({
   },
 });
 
+const rejectFactRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/facts/{factId}/reject",
+  operationId: "rejectFact",
+  tags: ["Provenance"],
+  summary: "Withdraw an unwanted claim, retiring it without deleting the record",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    params: FactIdPathSchema,
+    body: {
+      content: { "application/json": { schema: RejectFactRequestSchema } },
+      required: true,
+    },
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: FactResponseSchema } },
+      description: "The retired fact.",
+    },
+    ...commonErrors,
+    409: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The fact version changed; current authorized data is returned.",
+    },
+  },
+});
+
 function errorEnvelope(
   requestId: string,
   code: "IDEMPOTENCY_CONFLICT" | "NOT_FOUND" | "VERSION_CONFLICT",
@@ -268,6 +297,30 @@ export function registerProvenanceRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(acceptFactRoute, async (context) => {
     const params = context.req.valid("param");
     const result = await acceptFact(context.env.DB!, {
+      factId: params.factId,
+      principal: context.get("principal"),
+      requestId: context.get("requestId"),
+      spaceId: params.spaceId,
+      version: context.req.valid("json").version,
+    });
+    if (result.kind !== "success") {
+      const conflict = result.kind === "conflict";
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          conflict ? "VERSION_CONFLICT" : "NOT_FOUND",
+          conflict ? "The fact changed; review the current claim." : "The resource was not found.",
+          result.kind === "conflict" ? result.current?.data : undefined,
+        ),
+        conflict ? 409 : 404,
+      );
+    }
+    return context.json(FactResponseSchema.parse(result.response), 200);
+  });
+
+  app.openapi(rejectFactRoute, async (context) => {
+    const params = context.req.valid("param");
+    const result = await rejectFact(context.env.DB!, {
       factId: params.factId,
       principal: context.get("principal"),
       requestId: context.get("requestId"),

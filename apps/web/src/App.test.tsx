@@ -390,7 +390,13 @@ describe("authenticated app shell", () => {
     };
 
     const markup = renderWithSession(
-      <FactCard accepting={false} fact={fact} onAccept={() => undefined} />,
+      <FactCard
+        accepting={false}
+        fact={fact}
+        onAccept={() => undefined}
+        onReject={() => undefined}
+        rejecting={false}
+      />,
     );
 
     expect(markup).toContain("Researched");
