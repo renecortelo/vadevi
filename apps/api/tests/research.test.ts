@@ -621,4 +621,79 @@ describe("bounded wine research jobs", () => {
     const highlight = facts.find((fact: Fact) => fact.predicate === "curiosity.highlight");
     expect(highlight?.value).toBe("color: tinta");
   });
+
+  it("brings cited open-web snippets when a search provider is configured", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "El Espino",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Áster",
+        vintageYear: 2020,
+        wineType: "red",
+      }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wine = CreateWineResponseSchema.parse(await created.json()).data.wine;
+
+    const queries: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: null,
+      product: null,
+      providerMode: "open_data",
+      webSearch: {
+        search: async ({ query }) => {
+          queries.push(query);
+          return {
+            cached: false,
+            data: [
+              {
+                snippet: "El Espino es un tinto de la bodega Áster en Ribera del Duero.",
+                source: {
+                  canonicalUrl: "https://example-winery.test/el-espino",
+                  publisher: "example-winery.test",
+                  retrievedAt: "2026-08-22T10:00:00.000Z",
+                  sourceType: "other_web",
+                  title: "El Espino — Áster",
+                },
+                title: "El Espino — Áster",
+              },
+            ],
+            status: "success",
+          };
+        },
+      },
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "es" as const,
+        maxSources: 4,
+        topics: ["identity"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    expect(queries).toEqual(["Áster El Espino"]);
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const note = facts.find((fact: Fact) => fact.predicate === "curiosity.note");
+    expect(note?.value).toBe("El Espino es un tinto de la bodega Áster en Ribera del Duero.");
+    expect(note?.citations[0]?.source.sourceType).toBe("other_web");
+    expect(note?.citations[0]?.source.canonicalUrl).toBe("https://example-winery.test/el-espino");
+  });
 });

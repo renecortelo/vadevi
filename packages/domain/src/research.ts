@@ -2,10 +2,11 @@ export type ResearchLocale = "ca" | "de" | "en" | "es" | "fr" | "it" | "nl" | "p
 
 export type ExternalSourceCandidate = Readonly<{
   canonicalUrl: string;
-  licenseIdentifier: string;
+  /** Omitted for open-web results, which carry no single reusable licence. */
+  licenseIdentifier?: string;
   publisher: string;
   retrievedAt: string;
-  sourceType: "open_dataset";
+  sourceType: "open_dataset" | "other_web";
   title: string;
 }>;
 
@@ -24,6 +25,7 @@ export type ProposedFact = Readonly<{
   confidenceMilli: number;
   predicate:
     | "curiosity.highlight"
+    | "curiosity.note"
     | "identity.canonical_name"
     | "producer.history"
     | "producer.name"
@@ -77,10 +79,40 @@ export interface KnowledgeResearchPort {
   searchEntities(input: KnowledgeEntitySearch): Promise<ExternalResult<KnowledgeEntityCandidate[]>>;
 }
 
+/**
+ * Optional open-web discovery for wines that structured sources do not hold.
+ *
+ * A producer or bottle name is often fanciful and absent from Wikidata, so a
+ * name search over the open web is sometimes the only way to find anything at
+ * all. To stay inside the fixed-host trust boundary, this is a search PROVIDER
+ * (one official API host), not a crawler: it returns the provider's own result
+ * snippets and their source URLs, and the app never fetches the arbitrary pages
+ * itself. Each snippet is untrusted external text — sanitized, length-bounded,
+ * cited, and only ever a low-confidence proposal the reader confirms. The query
+ * leaves the device, so a deployment enables this only after its own privacy
+ * review, and it defaults off.
+ */
+export type WebSearchRequest = Readonly<{
+  locale: ResearchLocale;
+  query: string;
+}>;
+
+export type WebSearchResult = Readonly<{
+  snippet: string;
+  source: ExternalSourceCandidate;
+  title: string;
+}>;
+
+export interface WebSearchPort {
+  search(input: WebSearchRequest): Promise<ExternalResult<WebSearchResult[]>>;
+}
+
 export type ResearchPorts = Readonly<{
   knowledge: KnowledgeResearchPort | null;
   product: ProductLookupPort | null;
   providerMode: "none" | "open_data";
+  /** Optional open-web discovery; null unless a search provider is configured. */
+  webSearch?: WebSearchPort | null;
 }>;
 
 /**

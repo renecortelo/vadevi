@@ -22,6 +22,8 @@ export type WorkerBindings = {
   PAIRING_PROVIDER?: "none" | "sommelierx";
   RESEARCH_PROVIDER?: "none" | "open_data";
   SOMMELIERX_API_KEY?: string;
+  WEBSEARCH_PROVIDER?: "none" | "brave";
+  WEBSEARCH_API_KEY?: string;
   DB?: D1Database;
   MEDIA?: R2Bucket;
   NOTE_INDEX?: VectorizeIndex;

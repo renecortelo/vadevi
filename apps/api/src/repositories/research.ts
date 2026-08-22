@@ -456,6 +456,39 @@ async function collectProposals(
     }
   }
 
+  // Open web (optional): for wines the structured sources do not hold — a small
+  // producer with a fanciful name that is not in Wikidata — a single search over
+  // the wine's identity brings back cited snippets. They are low-confidence
+  // proposals, sanitized by the adapter, that the reader confirms or discards.
+  const webSearch = ports.webSearch ?? null;
+  if (webSearch !== null) {
+    const query = [access.producer_name, access.display_name, access.region]
+      .map((part) => (part ?? "").trim())
+      .filter((part) => part.length > 0)
+      .join(" ");
+    if (query.length >= 3) {
+      try {
+        const result = await webSearch.search({ locale: request.locale, query });
+        if (result.status === "success") {
+          attempts.push(successAttempt("web_search", result.cached));
+          for (const hit of result.data) {
+            proposals.push({
+              confidenceMilli: 400,
+              predicate: "curiosity.note",
+              researchMethod: "web_search.brave.v1",
+              source: hit.source,
+              value: hit.snippet,
+            });
+          }
+        } else {
+          attempts.push(unavailableAttempt("web_search", result.reason, result.retryAfterSeconds));
+        }
+      } catch {
+        attempts.push(unavailableAttempt("web_search", "provider_error", null));
+      }
+    }
+  }
+
   if (proposals.length === 0) warnings.add("no_results");
   if (attempts.some((attempt) => attempt.status === "unavailable") && proposals.length > 0) {
     warnings.add("partial_results");
@@ -537,7 +570,7 @@ async function persistCompletedJob(
               id, space_id, canonical_url, title, publisher, source_type,
               license_identifier, retrieved_at, last_checked_at, content_hash,
               created_by_user_id, created_by_provider, created_at, updated_at
-            ) VALUES (?, ?, ?, ?, ?, 'open_dataset', ?, ?, NULL, NULL, NULL, ?, ?, ?)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NULL, NULL, NULL, ?, ?, ?)
             ON CONFLICT(space_id, canonical_url) DO UPDATE SET
               canonical_url = excluded.canonical_url
             RETURNING id`,
@@ -548,7 +581,8 @@ async function persistCompletedJob(
           canonicalUrl,
           stored.proposal.source.title,
           stored.proposal.source.publisher,
-          stored.proposal.source.licenseIdentifier,
+          stored.proposal.source.sourceType,
+          stored.proposal.source.licenseIdentifier ?? null,
           stored.proposal.source.retrievedAt,
           stored.provider,
           now,
