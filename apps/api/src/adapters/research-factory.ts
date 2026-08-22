@@ -1,4 +1,4 @@
-import { BraveWebSearchAdapter } from "./web-search";
+import { BraveWebSearchAdapter, TavilyWebSearchAdapter } from "./web-search";
 import { D1ExternalCache, D1ExternalRateLimiter } from "./external-state";
 import { OpenFoodFactsAdapter } from "./open-food-facts";
 import { WikidataAdapter } from "./wikidata";
@@ -29,14 +29,14 @@ export function externalResearchEnabled(environment: WorkerBindings): boolean {
 
 /**
  * Whether open-web discovery is enabled. It rides on top of research being on,
- * and needs its own provider choice, a well-formed key, and a valid contact user
+ * and needs a supported provider, a well-formed key, and a valid contact user
  * agent — and only after the deployment's own privacy review, since the search
  * query leaves the device (see docs/privacy-review-websearch.md). Default off.
  */
 export function webSearchEnabled(environment: WorkerBindings): boolean {
   return (
     externalResearchEnabled(environment) &&
-    environment.WEBSEARCH_PROVIDER === "brave" &&
+    (environment.WEBSEARCH_PROVIDER === "brave" || environment.WEBSEARCH_PROVIDER === "tavily") &&
     validSearchKey(environment.WEBSEARCH_API_KEY)
   );
 }
@@ -51,9 +51,14 @@ export function createResearchPorts(
   const cache = new D1ExternalCache(database);
   const limiter = new D1ExternalRateLimiter(database);
   const userAgent = environment.EXTERNAL_API_USER_AGENT!;
-  const webSearch: WebSearchPort | null = webSearchEnabled(environment)
-    ? new BraveWebSearchAdapter(cache, limiter, userAgent, environment.WEBSEARCH_API_KEY!.trim())
-    : null;
+  let webSearch: WebSearchPort | null = null;
+  if (webSearchEnabled(environment)) {
+    const key = environment.WEBSEARCH_API_KEY!.trim();
+    webSearch =
+      environment.WEBSEARCH_PROVIDER === "tavily"
+        ? new TavilyWebSearchAdapter(cache, limiter, userAgent, key)
+        : new BraveWebSearchAdapter(cache, limiter, userAgent, key);
+  }
   return {
     knowledge: new WikidataAdapter(cache, limiter, userAgent),
     product: new OpenFoodFactsAdapter(cache, limiter, userAgent),
