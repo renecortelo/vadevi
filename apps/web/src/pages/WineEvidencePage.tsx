@@ -21,6 +21,7 @@ import {
   createResearchJob,
   getResearchCandidates,
   getWineFacts,
+  rejectFact,
 } from "../services/assistant";
 import { useSession } from "../session/SessionContext";
 
@@ -73,10 +74,14 @@ export function FactCard({
   accepting,
   fact,
   onAccept,
+  onReject,
+  rejecting,
 }: {
   accepting: boolean;
   fact: Fact;
   onAccept: (fact: Fact) => void;
+  onReject: (fact: Fact) => void;
+  rejecting: boolean;
 }) {
   const { i18n, t } = useTranslation();
   const valueId = `fact-value-${fact.id}`;
@@ -134,15 +139,26 @@ export function FactCard({
         </ul>
       )}
       {fact.status === "accepted" || fact.status === "retired" ? null : (
-        <button
-          className="action-link action-link--secondary"
-          aria-describedby={valueId}
-          disabled={accepting}
-          onClick={() => onAccept(fact)}
-          type="button"
-        >
-          {accepting ? t("evidence.accepting") : t("evidence.acceptAction")}
-        </button>
+        <div className="fact-card__actions">
+          <button
+            className="action-link action-link--secondary"
+            aria-describedby={valueId}
+            disabled={accepting || rejecting}
+            onClick={() => onAccept(fact)}
+            type="button"
+          >
+            {accepting ? t("evidence.accepting") : t("evidence.acceptAction")}
+          </button>
+          <button
+            className="action-link action-link--quiet"
+            aria-describedby={valueId}
+            disabled={accepting || rejecting}
+            onClick={() => onReject(fact)}
+            type="button"
+          >
+            {rejecting ? t("evidence.rejecting") : t("evidence.rejectAction")}
+          </button>
+        </div>
       )}
     </article>
   );
@@ -214,6 +230,7 @@ export function WineEvidencePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [acceptingId, setAcceptingId] = useState<string | null>(null);
+  const [rejectingId, setRejectingId] = useState<string | null>(null);
   const [researching, setResearching] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
   const [researchError, setResearchError] = useState<string | null>(null);
@@ -288,6 +305,20 @@ export function WineEvidencePage() {
       setError(t("evidence.acceptError"));
     } finally {
       setAcceptingId(null);
+    }
+  }
+
+  async function dismissFact(fact: Fact) {
+    if (user === null) return;
+    setRejectingId(fact.id);
+    setError(null);
+    try {
+      await rejectFact(user, spaceId, fact.id, { version: fact.version });
+      await loadFacts();
+    } catch {
+      setError(t("evidence.rejectError"));
+    } finally {
+      setRejectingId(null);
     }
   }
 
@@ -511,6 +542,8 @@ export function WineEvidencePage() {
                   fact={fact}
                   key={fact.id}
                   onAccept={(candidate) => void chooseFact(candidate)}
+                  onReject={(candidate) => void dismissFact(candidate)}
+                  rejecting={rejectingId === fact.id}
                 />
               ))}
             </div>

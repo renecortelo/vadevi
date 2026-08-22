@@ -241,6 +241,11 @@ export const AcceptFactRequestSchema = z
   .strict()
   .openapi("AcceptFactRequest");
 
+export const RejectFactRequestSchema = z
+  .object({ version: z.number().int().positive() })
+  .strict()
+  .openapi("RejectFactRequest");
+
 export const WineFactsPathSchema = z
   .object({
     spaceId: ResourceIdSchema.openapi({ param: { in: "path", name: "spaceId" } }),
@@ -263,6 +268,7 @@ export const SourceIdPathSchema = z
   .strict();
 
 export type AcceptFactRequest = z.infer<typeof AcceptFactRequestSchema>;
+export type RejectFactRequest = z.infer<typeof RejectFactRequestSchema>;
 export type CreateSourceRequest = z.infer<typeof CreateSourceRequestSchema>;
 export type CreateWineFactRequest = z.infer<typeof CreateWineFactRequestSchema>;
 export type Fact = z.infer<typeof FactSchema>;

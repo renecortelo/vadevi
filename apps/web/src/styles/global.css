@@ -802,6 +802,16 @@ p {
   color: var(--color-text);
 }
 
+.action-link--quiet {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-text-muted);
+}
+
+.action-link--quiet:hover {
+  color: var(--color-text);
+}
+
 .foundation-card {
   align-items: flex-start;
   display: grid;
@@ -1610,6 +1620,12 @@ p {
 .fact-card__uncited {
   font-size: var(--text-xs);
   margin: 0;
+}
+
+.fact-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
 }
 
 .fact-card__uncited {

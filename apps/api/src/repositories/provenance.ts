@@ -597,3 +597,75 @@ export async function acceptFact(
   const response = await factById(database, options.principal, options.spaceId, options.factId);
   return response === null ? { kind: "unavailable" } : { kind: "success", response };
 }
+
+/**
+ * Withdraw a claim the reader does not want kept — typically a wrong research
+ * proposal (an unrelated entity the picker did not catch). Retiring, never
+ * deleting: the row stays for the audit trail but leaves the actionable set, and
+ * an accepted fact is left alone so verified evidence cannot be discarded here.
+ */
+export async function rejectFact(
+  database: D1Database,
+  options: {
+    factId: string;
+    principal: FirebasePrincipal;
+    requestId: string;
+    spaceId: string;
+    version: number;
+  },
+): Promise<VersionedResult<FactResponse>> {
+  const actorId = await activeUserId(database, options.principal, options.spaceId);
+  if (actorId === null) return { kind: "unavailable" };
+  const current = await factById(database, options.principal, options.spaceId, options.factId);
+  if (current === null || current.data.status === "retired" || current.data.status === "accepted") {
+    return { kind: "unavailable" };
+  }
+  if (current.data.version !== options.version) return { current, kind: "conflict" };
+  const now = new Date().toISOString();
+  const results = await database.batch([
+    database
+      .prepare(
+        `UPDATE facts SET status = 'retired', version = version + 1, updated_at = ?
+        WHERE id = ? AND space_id = ? AND version = ? AND deleted_at IS NULL
+          AND status <> 'accepted' AND status <> 'retired'`,
+      )
+      .bind(now, options.factId, options.spaceId, options.version),
+    database
+      .prepare(
+        `INSERT INTO change_events (
+          space_id, resource_type, resource_id, operation, resource_version, changed_at
+        ) SELECT space_id, 'fact', id, 'update', version, ?
+          FROM facts WHERE id = ? AND space_id = ? AND updated_at = ?`,
+      )
+      .bind(now, options.factId, options.spaceId, now),
+    database
+      .prepare(
+        `INSERT INTO audit_events (
+          id, actor_user_id, space_id, action, target_type, target_id,
+          request_id, safe_metadata_json, created_at
+        ) SELECT ?, ?, ?, 'fact.rejected', 'fact', ?, ?, NULL, ?
+        WHERE EXISTS (
+          SELECT 1 FROM facts WHERE id = ? AND space_id = ? AND updated_at = ?
+        )`,
+      )
+      .bind(
+        ulid(),
+        actorId,
+        options.spaceId,
+        options.factId,
+        options.requestId,
+        now,
+        options.factId,
+        options.spaceId,
+        now,
+      ),
+  ]);
+  if (results[0]?.meta.changes !== 1) {
+    return {
+      current: await factById(database, options.principal, options.spaceId, options.factId),
+      kind: "conflict",
+    };
+  }
+  const response = await factById(database, options.principal, options.spaceId, options.factId);
+  return response === null ? { kind: "unavailable" } : { kind: "success", response };
+}

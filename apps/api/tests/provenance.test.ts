@@ -204,6 +204,94 @@ describe("Provenance foundation", () => {
     expect(outsiderSource.status).toBe(404);
   }, 30_000);
 
+  it("retires an unwanted proposal without deleting it, and guards accepted claims", async () => {
+    const owner = await bootstrap(ownerToken);
+    await bootstrap(outsiderToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(spaceId);
+    const source = await createSource(spaceId, "Unrelated genus sheet", "reject");
+
+    const created = await createFact(spaceId, wine.id, source.id, 24);
+    expect(created.response.status).toBe(201);
+    const proposal = FactResponseSchema.parse(created.body).data;
+    expect(proposal.status).toBe("proposed");
+
+    // An outsider cannot reject a claim in a Space they do not belong to.
+    const outsiderReject = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/facts/${proposal.id}/reject`,
+      {
+        body: JSON.stringify({ version: proposal.version }),
+        headers: headers(outsiderToken),
+        method: "POST",
+      },
+    );
+    expect(outsiderReject.status).toBe(404);
+
+    // A stale version is refused with the current claim, never a silent no-op.
+    const staleReject = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/facts/${proposal.id}/reject`,
+      {
+        body: JSON.stringify({ version: proposal.version + 1 }),
+        headers: headers(ownerToken),
+        method: "POST",
+      },
+    );
+    expect(staleReject.status).toBe(409);
+
+    const rejectResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/facts/${proposal.id}/reject`,
+      {
+        body: JSON.stringify({ version: proposal.version }),
+        headers: headers(ownerToken),
+        method: "POST",
+      },
+    );
+    expect(rejectResponse.status).toBe(200);
+    expect(FactResponseSchema.parse(await rejectResponse.json()).data.status).toBe("retired");
+
+    // Retired, not deleted: the row is still listed for the audit trail.
+    const listResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const listed = WineFactsResponseSchema.parse(await listResponse.json());
+    expect(listed.data.facts.find((fact: Fact) => fact.id === proposal.id)?.status).toBe("retired");
+
+    // A second reject finds nothing actionable.
+    const secondReject = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/facts/${proposal.id}/reject`,
+      {
+        body: JSON.stringify({ version: proposal.version + 1 }),
+        headers: headers(ownerToken),
+        method: "POST",
+      },
+    );
+    expect(secondReject.status).toBe(404);
+
+    // An accepted claim cannot be discarded through reject.
+    const keeper = await createFact(spaceId, wine.id, source.id, 30);
+    const accepted = FactResponseSchema.parse(keeper.body).data;
+    const acceptResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/facts/${accepted.id}/accept`,
+      {
+        body: JSON.stringify({ version: accepted.version }),
+        headers: headers(ownerToken),
+        method: "POST",
+      },
+    );
+    expect(acceptResponse.status).toBe(200);
+    const verified = FactResponseSchema.parse(await acceptResponse.json()).data;
+    const rejectAccepted = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/facts/${accepted.id}/reject`,
+      {
+        body: JSON.stringify({ version: verified.version }),
+        headers: headers(ownerToken),
+        method: "POST",
+      },
+    );
+    expect(rejectAccepted.status).toBe(404);
+  }, 30_000);
+
   it("rejects uncited research, unregistered values, and unsafe source URLs", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
