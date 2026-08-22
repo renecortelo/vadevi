@@ -344,8 +344,11 @@ export function WineEvidencePage() {
         researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
       );
       setCandidates(result.data);
-      setProducerChoice(result.data.producer?.candidates[0]?.id ?? "none");
-      setRegionChoice(result.data.region?.candidates[0]?.id ?? "none");
+      // Nothing is pre-selected: attaching an outside entity to the wine is a
+      // deliberate choice the reader makes after reading the descriptions, never
+      // a default they might confirm without noticing.
+      setProducerChoice("none");
+      setRegionChoice("none");
     } catch {
       setResearchError(t("evidence.research.error"));
     } finally {

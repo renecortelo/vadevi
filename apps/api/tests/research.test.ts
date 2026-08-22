@@ -362,7 +362,63 @@ describe("bounded wine research jobs", () => {
     expect(first.response.data.warnings).toContain("missing_wikidata_entity");
   });
 
-  it("offers producer candidates to disambiguate, ranking the wine sense first", async () => {
+  it("does not auto-resolve a producer to an unrelated entity with a matching name", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "El Espino",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Áster",
+        vintageYear: 2020,
+        wineType: "red",
+      }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wine = CreateWineResponseSchema.parse(await created.json()).data.wine;
+    const researchedIds: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async ({ entityId }) => {
+          researchedIds.push(entityId);
+          return { cached: false, data: [], status: "success" };
+        },
+        // The producer name matches the Aster flower genus exactly, but its
+        // description marks it as a genus — it must not be attached to the wine.
+        searchEntities: async () => ({
+          cached: false,
+          data: [{ description: "genus of flowering plants", id: "Q123", label: "Áster" }],
+          status: "success",
+        }),
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "en" as const,
+        maxSources: 4,
+        topics: ["producer"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    expect(researchedIds).toEqual([]);
+    expect(first.response.data.factIds).toHaveLength(0);
+    expect(first.response.data.warnings).toContain("missing_wikidata_entity");
+  });
+
+  it("offers only plausible producer candidates, dropping unrelated name collisions", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
     const wine = await createWine(spaceId);
@@ -393,10 +449,12 @@ describe("bounded wine research jobs", () => {
     });
     expect(result).not.toBeNull();
     expect(result?.data.producer?.term).toBe("Synthetic Research Estate");
-    // The arachnid genus is still offered, just below the wine region.
+    // The arachnid genus is a name collision, not a winery, so it is dropped
+    // entirely — only the wine region is offered. This is what stops a producer
+    // named "Áster" from resolving to the Aster flower genus.
     expect(
       result?.data.producer?.candidates.map((candidate: ResearchCandidate) => candidate.id),
-    ).toEqual(["Q2", "Q1"]);
+    ).toEqual(["Q2"]);
     // createWine records no region, so there is nothing to disambiguate there.
     expect(result?.data.region).toBeNull();
   });
