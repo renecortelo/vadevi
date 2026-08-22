@@ -49,7 +49,7 @@ export const CreateResearchJobRequestSchema = z
 export const ResearchAttemptSchema = z
   .object({
     cached: z.boolean().nullable(),
-    provider: z.enum(["open_food_facts", "wikidata"]),
+    provider: z.enum(["open_food_facts", "web_search", "wikidata"]),
     reason: z
       .enum([
         "invalid_input",
@@ -76,7 +76,7 @@ export const ResearchJobWarningSchema = z.enum([
 
 export const ResearchJobSchema = z
   .object({
-    attempts: z.array(ResearchAttemptSchema).max(4),
+    attempts: z.array(ResearchAttemptSchema).max(16),
     completedAt: ResourceTimestampSchema.nullable(),
     createdAt: ResourceTimestampSchema,
     factIds: z.array(ResourceIdSchema),

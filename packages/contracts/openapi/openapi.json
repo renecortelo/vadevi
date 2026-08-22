@@ -9592,6 +9592,7 @@
                       "type": "string",
                       "enum": [
                         "open_food_facts",
+                        "web_search",
                         "wikidata"
                       ]
                     },
@@ -9630,7 +9631,7 @@
                   ],
                   "additionalProperties": false
                 },
-                "maxItems": 4
+                "maxItems": 16
               },
               "completedAt": {
                 "type": "string",
