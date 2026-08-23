@@ -443,6 +443,92 @@ describe("bounded wine research jobs", () => {
     expect(highlight?.value).toBe("color: tinta");
   });
 
+  it("proposes a discarded claim again when the reader researches from scratch", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWineWithGrape(spaceId);
+    const source = {
+      canonicalUrl: "https://www.wikidata.org/wiki/Q1122",
+      licenseIdentifier: "CC0-1.0",
+      publisher: "Wikidata",
+      retrievedAt: "2026-08-23T10:00:00.000Z",
+      sourceType: "open_dataset" as const,
+      title: "Tempranillo",
+    };
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async () => ({
+          cached: false,
+          data: [
+            {
+              confidenceMilli: 800,
+              predicate: "curiosity.highlight",
+              researchMethod: "wikidata.highlight.v1",
+              source,
+              value: "color: tinta",
+            },
+          ],
+          status: "success",
+        }),
+        searchEntities: async () => ({
+          cached: false,
+          data: [{ description: "a grape variety", id: "Q1122", label: "Tempranillo" }],
+          status: "success",
+        }),
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const request = {
+      locale: "es" as const,
+      maxSources: 4,
+      topics: ["grapes"] as const,
+      wikidataEntityIds: {},
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request,
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    const factId = first.response.data.factIds[0]!;
+
+    const rejected = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/facts/${factId}/reject`,
+      {
+        body: JSON.stringify({ version: 1 }),
+        headers: headers(ownerToken),
+        method: "POST",
+      },
+    );
+    expect(rejected.status).toBe(200);
+
+    // Researching again is a fresh start: the discarded claim is proposed once
+    // more, rather than counted while staying invisible on the screen.
+    const second = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request,
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(second.kind).toBe("success");
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const revived = facts.find((fact: Fact) => fact.id === factId);
+    expect(revived?.status).toBe("proposed");
+  });
+
   it("does not research a grape name that matches something other than a grape", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;

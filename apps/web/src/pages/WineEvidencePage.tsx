@@ -292,13 +292,18 @@ export function WineEvidencePage() {
     setError(null);
     try {
       await rejectFact(user, spaceId, fact.id, { version: fact.version });
-      await loadFacts();
-      // The narrative was written from the facts, so discarding one can leave a
-      // wrong detail in the prose. Rewrite it from what survives — unless the
-      // reader discarded the narrative itself, which is theirs to leave gone.
-      if (fact.predicate !== "research.summary" && narrative !== null && online) {
-        await runResearch();
+      // The narrative is written FROM the facts, so discarding one can leave the
+      // wrong detail sitting in the prose. Retire the paragraph with it; asking to
+      // research again writes a fresh one from whatever the sources give then.
+      if (fact.predicate !== "research.summary" && narrative !== null) {
+        try {
+          await rejectFact(user, spaceId, narrative.id, { version: narrative.version });
+        } catch {
+          // A narrative that cannot be retired is left as it is; the discarded
+          // fact itself is already gone, which is what the reader asked for.
+        }
       }
+      await loadFacts();
     } catch {
       setError(t("evidence.rejectError"));
     } finally {

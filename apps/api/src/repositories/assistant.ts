@@ -1231,6 +1231,14 @@ export async function runDeterministicAssistantTurn(
       return name.length >= 3 && normalizeWineText(options.request.message).includes(name);
     }) ?? null;
   const namesOwnWine = namedWine !== null;
+  // A pairing question that names one bottle is about THAT bottle. Search also
+  // returns near matches, and handing them all to the model made it answer about
+  // another wine entirely ("what can I pair the Naltros with?" opening with El
+  // Coto). Narrowed to pairing only: comparisons and recommendations legitimately
+  // need the other results.
+  if (namedWine !== null && requestsPairing(options.request.message)) {
+    results = [namedWine];
+  }
   if (options.pairing !== null && requestsPairing(options.request.message) && !namesOwnWine) {
     const dish = dishFromMessage(options.request.message);
     try {
