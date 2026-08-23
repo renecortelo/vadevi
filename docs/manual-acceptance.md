@@ -124,6 +124,39 @@ This is destructive to the Space you name, so do it on a throwaway Space.
 38. [ ] Wait for the cron to fire, then confirm the Space rows and the R2 object
         are gone, and that the owner gets a not-found on the next request.
 
+## G. Research, Vicenç, and the entry shortcuts (15 min)
+
+Steps 39–46 need the optional providers on: `RESEARCH_PROVIDER=open_data`,
+`WEBSEARCH_PROVIDER` with its key, and `AI_PROVIDER=cloudflare`. With them off,
+each screen must still work — the research panel says so plainly, and the wine
+records fine — which is itself worth one pass.
+
+39. [ ] Open a wine → **Evidence** → **Investigate this wine**. It runs without
+        asking you to choose an entity from a list, and comes back with a
+        paragraph at the top and small "key → value" cards under "What we found".
+40. [ ] Read the paragraph and the cards **in your own language**. English text
+        here is a finding: translation runs when Workers AI is on.
+41. [ ] Check a card's **Source**: it expands to the publisher, the class, and
+        the licence. That detail belongs there, not on the face of the card.
+42. [ ] **Discard** one card. It asks for confirmation, then the card goes and
+        stays gone on reload. The paragraph is left alone.
+43. [ ] Press **Rewrite the text**. The paragraph is written again from the cards
+        that remain — the discarded detail must not survive in it.
+44. [ ] Discard everything, then **Investigate this wine** again. It starts from
+        zero: what you discarded is proposed again rather than counted while the
+        screen stays empty.
+45. [ ] Ask Vicenç "what can I pair the ⟨wine name⟩ with?" and then the same
+        question by style ("…with that cava?"). Both answer about **that** wine
+        and suggest dishes; an answer about a different bottle is a finding.
+46. [ ] Confirm the suggestions use what research found — a wine you have just
+        investigated should give more specific ideas than an empty one.
+47. [ ] In **Quick Log**, use "Prefill from a wine you have", pick a wine, change
+        only the year, and save. It creates a **new** wine, leaving the original
+        alone.
+48. [ ] In Wine Memory, **Edit** a wine and change its **type**. It saves.
+49. [ ] On the same form, the **country** is a list of country names in your
+        language — not a two-letter code — and the wine keeps the country it had.
+
 ---
 
 ## Recording results

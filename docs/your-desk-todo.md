@@ -38,7 +38,7 @@ With the old bundle still cached, none of the recent fixes are present.
 
 ## 2. Work through the acceptance script (45 min)
 
-`docs/manual-acceptance.md`, 38 items, ordered so the things that would
+`docs/manual-acceptance.md`, 49 items, ordered so the things that would
 invalidate everything below them come first. Record the date, the browser and
 the device — a run on one browser is a data point, not a pass.
 
