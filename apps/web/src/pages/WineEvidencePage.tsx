@@ -275,7 +275,9 @@ export function WineEvidencePage() {
   const factsByPredicate = useMemo(() => {
     const groups = new Map<Fact["predicate"], Fact[]>();
     for (const fact of response?.data.facts ?? []) {
-      if (fact.predicate === "research.summary") continue;
+      // A discarded claim is retired, not deleted — it stays in the record for the
+      // audit trail, but the reader threw it out, so it must leave their screen.
+      if (fact.predicate === "research.summary" || fact.status === "retired") continue;
       const facts = groups.get(fact.predicate) ?? [];
       facts.push(fact);
       groups.set(fact.predicate, facts);
@@ -291,6 +293,12 @@ export function WineEvidencePage() {
     try {
       await rejectFact(user, spaceId, fact.id, { version: fact.version });
       await loadFacts();
+      // The narrative was written from the facts, so discarding one can leave a
+      // wrong detail in the prose. Rewrite it from what survives — unless the
+      // reader discarded the narrative itself, which is theirs to leave gone.
+      if (fact.predicate !== "research.summary" && narrative !== null && online) {
+        await runResearch();
+      }
     } catch {
       setError(t("evidence.rejectError"));
     } finally {

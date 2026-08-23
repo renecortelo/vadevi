@@ -1218,7 +1218,16 @@ export async function runDeterministicAssistantTurn(
   // do not own. The dish leaves the device; the wines never do. Off unless the
   // deployment enabled the provider.
   let pairingStatements: AssistantLanguageStatement[] = [];
-  if (options.pairing !== null && requestsPairing(options.request.message)) {
+  // "What can I pair the Naltros with?" is the OTHER direction — a wine looking
+  // for a dish — and the provider only answers dish → wine styles. Sending the
+  // wine's own name as if it were a dish produced nonsense (a bottle unrelated to
+  // the question). When the message names one of the reader's own wines, skip the
+  // pairing lookup rather than answer the question that was not asked.
+  const namesOwnWine = results.some((result) => {
+    const name = normalizeWineText(result.wine.displayName);
+    return name.length >= 3 && normalizeWineText(options.request.message).includes(name);
+  });
+  if (options.pairing !== null && requestsPairing(options.request.message) && !namesOwnWine) {
     const dish = dishFromMessage(options.request.message);
     try {
       const pairing = await options.pairing.pair({ dish, locale: options.request.locale });

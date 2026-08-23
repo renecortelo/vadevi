@@ -49,9 +49,22 @@ function candidateScore(description: string | null): number {
 // Whether a name-matched entity is plausibly the wine's producer or region, as
 // opposed to a same-named genus/film/person. Wine-looking (score > 0) and
 // neutral (score 0, e.g. a sparse description) pass; actively-unrelated
-// (score < 0) is rejected. Grapes are exempt — a grape variety IS a plant.
+// (score < 0) is rejected.
 function isPlausibleWineEntity(description: string | null): boolean {
   return candidateScore(description) >= 0;
+}
+
+// Grape names collide with ordinary words far more than producer names do —
+// "garnacha" is also a Mexican antojito, "moscatel" a dessert, "malbec" a
+// restaurant. A grape entity is a plant, so the general non-place reject cannot
+// be used here; instead the description must POSITIVELY say it is a grape or
+// vine variety. A description that does not say so is not researched at all,
+// which is the honest outcome for a name we cannot confirm.
+const grapePattern =
+  /\b(grape|vine|vitis|cultivar|variet\w*|cepa|cepaje|uva|uvas|vid|vino|wine|rebsorte|traube|weinrebe|druif|druiven|vitigno|vigne|cepage|castas?|videira)\b/i;
+
+function isPlausibleGrapeEntity(description: string | null): boolean {
+  return grapePattern.test(description ?? "");
 }
 
 type ResearchAccessRow = {
@@ -376,7 +389,10 @@ async function collectProposals(
           term: name,
         });
         if (found.status !== "success") continue;
-        const match = found.data.find((candidate) => nameMatches(name, candidate.label));
+        const match = found.data.find(
+          (candidate) =>
+            isPlausibleGrapeEntity(candidate.description) && nameMatches(name, candidate.label),
+        );
         if (match === undefined) continue;
         const result = await ports.knowledge.research({
           entityId: match.id,
@@ -657,6 +673,21 @@ async function persistCompletedJob(
     const factId = existingFact?.id ?? stored.factId;
     factIds.add(factId);
     if (existingFact === null) {
+      // There is only ever one live narrative per wine: a freshly composed one
+      // replaces the last, so re-running research regenerates the paragraph
+      // instead of stacking a new copy beside the stale one.
+      if (stored.proposal.predicate === "research.summary") {
+        commands.push(
+          database
+            .prepare(
+              `UPDATE facts SET status = 'retired', version = version + 1, updated_at = ?
+              WHERE space_id = ? AND subject_type = 'wine' AND subject_id = ?
+                AND predicate = 'research.summary' AND id <> ?
+                AND status <> 'retired' AND deleted_at IS NULL`,
+            )
+            .bind(now, options.spaceId, options.wineId, factId),
+        );
+      }
       commands.push(
         database
           .prepare(
