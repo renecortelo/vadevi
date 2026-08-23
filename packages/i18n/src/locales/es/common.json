@@ -222,6 +222,9 @@
       "needs_attention": "Se conserva localmente y necesita tu atención."
     },
     "identifyAction": "Escanear o leer una etiqueta",
+    "prefillLabel": "Rellenar desde un vino que ya tienes",
+    "prefillPlaceholder": "Elige un vino…",
+    "prefillHelp": "Copia sus datos en un registro nuevo — luego solo cambia la añada.",
     "moreDetails": "Más detalles"
   },
   "memory": {

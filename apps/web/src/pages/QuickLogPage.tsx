@@ -1,12 +1,14 @@
-import type { WineGrape } from "@vadevi/contracts";
+import type { WineGrape, WineSummary } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { resolveSupportedLocale, tastingDescriptors } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 
 import { ModalDialog } from "../components/ModalDialog";
+import { wineOptionLabel } from "../components/wine-label";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { getWineMemory } from "../services/api";
 import { preprocessImage } from "../media/image";
 import { offlineDatabase, partitionId, type QuickLogDraft } from "../offline/database";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
@@ -75,6 +77,18 @@ export function QuickLogPage() {
   // producer, name, save — is not a scroll past everything optional. The photo
   // opens itself once one is attached, so a resumed draft shows what it holds.
   const [photoOpen, setPhotoOpen] = useState(false);
+  // Wines already saved, offered as a prefill source for a new vintage of a
+  // bottle already known. Best-effort: empty (and the control hidden) offline.
+  const [wines, setWines] = useState<WineSummary[]>([]);
+
+  useEffect(() => {
+    if (user === null) return;
+    const controller = new AbortController();
+    void getWineMemory(user, spaceId, { limit: 100 }, controller.signal)
+      .then((memory) => setWines(memory.data))
+      .catch(() => undefined);
+    return () => controller.abort();
+  }, [spaceId, user]);
 
   useEffect(() => {
     let active = true;
@@ -117,6 +131,33 @@ export function QuickLogPage() {
   ) {
     setSaved(false);
     setDraft((current) => ({ ...current, winePayload: { ...current.winePayload, [key]: value } }));
+  }
+
+  // Copy a saved wine's details into this NEW draft — a fresh record, not a link
+  // to the old bottle — so logging next year's vintage of the same wine is only a
+  // change of year. The reader can still edit anything afterwards.
+  function prefillFrom(wineId: string) {
+    const source = wines.find((candidate) => candidate.id === wineId);
+    if (source === undefined) return;
+    setSaved(false);
+    setDraft((current) => ({
+      ...current,
+      winePayload: {
+        ...current.winePayload,
+        alcoholAbv: source.alcoholAbv ?? undefined,
+        appellation: source.appellation ?? undefined,
+        countryCode: source.countryCode ?? undefined,
+        displayName: source.displayName,
+        grapes: source.grapes.map((grape: WineSummary["grapes"][number]) => ({
+          name: grape.name,
+          percentage: grape.percentage,
+        })),
+        producerName: source.producerName,
+        region: source.region ?? undefined,
+        vintageYear: source.vintageYear,
+        wineType: source.wineType ?? undefined,
+      },
+    }));
   }
 
   function updateNote<Key extends keyof QuickLogDraft["notePayload"]>(
@@ -216,6 +257,27 @@ export function QuickLogPage() {
           <Link className="action-link action-link--secondary" to="/log/identify">
             {t("quickLog.identifyAction")}
           </Link>
+          {wines.length === 0 ? null : (
+            <label className="quick-log-prefill" htmlFor="prefill-from">
+              <span>{t("quickLog.prefillLabel")}</span>
+              <select
+                id="prefill-from"
+                onChange={(event) => {
+                  if (event.target.value.length > 0) prefillFrom(event.target.value);
+                  event.target.selectedIndex = 0;
+                }}
+                value=""
+              >
+                <option value="">{t("quickLog.prefillPlaceholder")}</option>
+                {wines.map((candidate) => (
+                  <option key={candidate.id} value={candidate.id}>
+                    {wineOptionLabel(candidate)}
+                  </option>
+                ))}
+              </select>
+              <span className="section-help">{t("quickLog.prefillHelp")}</span>
+            </label>
+          )}
           <label htmlFor="producer-name">{t("quickLog.producer")}</label>
           <input
             autoComplete="organization"

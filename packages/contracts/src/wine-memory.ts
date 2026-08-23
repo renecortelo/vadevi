@@ -13,6 +13,7 @@ export const WineTypeSchema = z.enum([
   "orange",
   "other",
 ]);
+export type WineType = z.infer<typeof WineTypeSchema>;
 export const TernaryChoiceSchema = z.enum(["yes", "no", "unsure"]);
 
 // A grape variety on the label, with an optional blend percentage. The reader
