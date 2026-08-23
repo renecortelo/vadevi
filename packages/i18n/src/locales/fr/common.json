@@ -424,16 +424,6 @@
         "no_results": "Aucun fait sûr et cité n’a été trouvé.",
         "partial_results": "Une ou plusieurs sources étaient indisponibles ; les résultats partiels sont affichés.",
         "source_limit_reached": "La limite de sources a été atteinte."
-      },
-      "searching": "Recherche de correspondances…",
-      "picker": {
-        "help": "Choisissez à quelle entité correspond chaque nom. Seul votre choix est recherché, et les résultats arrivent toujours comme des propositions à accepter.",
-        "noneFound": "Nous n'avons trouvé aucune entité correspondante pour lever l'ambiguïté. Vous pouvez tout de même rechercher les informations du vin à partir de son code-barres.",
-        "producer": "Producteur",
-        "region": "Région",
-        "none": "Aucune de celles-ci",
-        "confirm": "Rechercher la sélection",
-        "cancel": "Annuler"
       }
     }
   },

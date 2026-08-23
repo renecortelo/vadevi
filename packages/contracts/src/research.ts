@@ -103,44 +103,8 @@ export const ResearchJobPathSchema = z
   })
   .strict();
 
-// Disambiguation: before any fact is fetched, the reader is offered the
-// matching Wikidata entities for the wine's producer and region, each with its
-// description, so "Rioja" the wine region can be told apart from "Rioja" the
-// arachnid genus. The reader picks one (or none); only then is it researched.
-export const ResearchCandidateSchema = z
-  .object({
-    description: z.string().max(2_000).nullable(),
-    id: z.string().regex(/^Q[1-9]\d{0,11}$/),
-    label: z.string().max(300),
-  })
-  .strict();
-
-export const ResearchCandidateSubjectSchema = z
-  .object({
-    candidates: z.array(ResearchCandidateSchema).max(5),
-    term: z.string().max(300),
-  })
-  .strict();
-
-export const ResearchCandidatesDataSchema = z
-  .object({
-    producer: ResearchCandidateSubjectSchema.nullable(),
-    region: ResearchCandidateSubjectSchema.nullable(),
-  })
-  .strict();
-
-export const ResearchCandidatesResponseSchema = z
-  .object({ data: ResearchCandidatesDataSchema })
-  .strict()
-  .openapi("ResearchCandidatesResponse");
-
-export const ResearchCandidatesQuerySchema = z.object({ locale: SupportedLocaleSchema }).strict();
-
 export type CreateResearchJobRequest = z.infer<typeof CreateResearchJobRequestSchema>;
 export type ResearchAttempt = z.infer<typeof ResearchAttemptSchema>;
-export type ResearchCandidate = z.infer<typeof ResearchCandidateSchema>;
-export type ResearchCandidateSubject = z.infer<typeof ResearchCandidateSubjectSchema>;
-export type ResearchCandidatesResponse = z.infer<typeof ResearchCandidatesResponseSchema>;
 export type ResearchJob = z.infer<typeof ResearchJobSchema>;
 export type ResearchJobResponse = z.infer<typeof ResearchJobResponseSchema>;
 export type ResearchJobWarning = z.infer<typeof ResearchJobWarningSchema>;
