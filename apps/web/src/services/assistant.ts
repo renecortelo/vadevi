@@ -5,7 +5,6 @@ import {
   CreateResearchJobRequestSchema,
   FactResponseSchema,
   RejectFactRequestSchema,
-  ResearchCandidatesResponseSchema,
   ResearchJobResponseSchema,
   WineFactsResponseSchema,
   type AcceptFactRequest,
@@ -14,9 +13,7 @@ import {
   type CreateResearchJobRequest,
   type FactResponse,
   type RejectFactRequest,
-  type ResearchCandidatesResponse,
   type ResearchJobResponse,
-  type SupportedLocale,
   type WineFactsResponse,
 } from "@vadevi/contracts";
 
@@ -40,22 +37,6 @@ export async function getWineFacts(
   );
   if (!response.ok) throw await apiError(response);
   return WineFactsResponseSchema.parse(await response.json());
-}
-
-export async function getResearchCandidates(
-  tokenSource: TokenSource,
-  spaceId: string,
-  wineId: string,
-  locale: SupportedLocale,
-  signal?: AbortSignal,
-): Promise<ResearchCandidatesResponse> {
-  const response = await authenticatedFetch(
-    tokenSource,
-    `/api/v1/spaces/${spaceId}/wines/${wineId}/research-candidates?locale=${encodeURIComponent(locale)}`,
-    signal === undefined ? {} : { signal },
-  );
-  if (!response.ok) throw await apiError(response);
-  return ResearchCandidatesResponseSchema.parse(await response.json());
 }
 
 export async function acceptFact(

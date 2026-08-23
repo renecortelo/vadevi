@@ -424,16 +424,6 @@
         "no_results": "No safe cited facts were found.",
         "partial_results": "One or more sources were unavailable; partial results are shown.",
         "source_limit_reached": "The source limit was reached."
-      },
-      "searching": "Finding matches…",
-      "picker": {
-        "help": "Choose which entity each name refers to. Only what you pick is researched, and the results still arrive as proposals to accept.",
-        "noneFound": "We found no matching entities to disambiguate. You can still research the wine's own details from its barcode.",
-        "producer": "Producer",
-        "region": "Region",
-        "none": "None of these",
-        "confirm": "Research the selected",
-        "cancel": "Cancel"
       }
     }
   },

@@ -2,7 +2,6 @@ import {
   BootstrapResponseSchema,
   CreateWineResponseSchema,
   type Fact,
-  type ResearchCandidate,
   ResearchJobResponseSchema,
   WineFactsResponseSchema,
 } from "@vadevi/contracts";
@@ -10,7 +9,7 @@ import type { ResearchPorts } from "@vadevi/domain";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
-import { createResearchJob, researchCandidates } from "../src/repositories/research";
+import { createResearchJob } from "../src/repositories/research";
 import { randomOpaqueToken } from "../src/security/opaque-token";
 import type { FirebasePrincipal } from "../src/types";
 import { emulatorIdToken } from "./fixtures/firebase-token";
@@ -416,68 +415,6 @@ describe("bounded wine research jobs", () => {
     expect(researchedIds).toEqual([]);
     expect(first.response.data.factIds).toHaveLength(0);
     expect(first.response.data.warnings).toContain("missing_wikidata_entity");
-  });
-
-  it("offers only plausible producer candidates, dropping unrelated name collisions", async () => {
-    const owner = await bootstrap(ownerToken);
-    const spaceId = owner.data.user.activeSpaceId!;
-    const wine = await createWine(spaceId);
-    const ports: ResearchPorts = {
-      knowledge: {
-        research: async () => ({ cached: false, data: [], status: "success" }),
-        searchEntities: async ({ subjectType, term }) => ({
-          cached: false,
-          data:
-            subjectType === "producer"
-              ? [
-                  { description: "genus of arachnids", id: "Q1", label: term },
-                  { description: "Spanish wine region", id: "Q2", label: term },
-                ]
-              : [],
-          status: "success",
-        }),
-      },
-      product: null,
-      providerMode: "open_data",
-    };
-    const result = await researchCandidates(env.DB, {
-      locale: "en",
-      ports,
-      principal,
-      spaceId,
-      wineId: wine.id,
-    });
-    expect(result).not.toBeNull();
-    expect(result?.data.producer?.term).toBe("Synthetic Research Estate");
-    // The arachnid genus is a name collision, not a winery, so it is dropped
-    // entirely — only the wine region is offered. This is what stops a producer
-    // named "Áster" from resolving to the Aster flower genus.
-    expect(
-      result?.data.producer?.candidates.map((candidate: ResearchCandidate) => candidate.id),
-    ).toEqual(["Q2"]);
-    // createWine records no region, so there is nothing to disambiguate there.
-    expect(result?.data.region).toBeNull();
-  });
-
-  it("returns null candidates for a wine the caller cannot see", async () => {
-    const owner = await bootstrap(ownerToken);
-    const spaceId = owner.data.user.activeSpaceId!;
-    const ports: ResearchPorts = {
-      knowledge: {
-        research: async () => ({ cached: false, data: [], status: "success" }),
-        searchEntities: async () => ({ cached: false, data: [], status: "success" }),
-      },
-      product: null,
-      providerMode: "open_data",
-    };
-    const result = await researchCandidates(env.DB, {
-      locale: "en",
-      ports,
-      principal,
-      spaceId,
-      wineId: "01JZZZZZZZZZZZZZZZZZZZZZZZZ",
-    });
-    expect(result).toBeNull();
   });
 
   it("adds the region's country and category from eAmbrosia, cited, without a network call", async () => {

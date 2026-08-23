@@ -2,9 +2,6 @@ import {
   HttpsSourceUrlSchema,
   type CreateResearchJobRequest,
   type ResearchAttempt,
-  type ResearchCandidate,
-  type ResearchCandidateSubject,
-  type ResearchCandidatesResponse,
   type ResearchJob,
   type ResearchJobResponse,
   type ResearchJobWarning,
@@ -139,64 +136,6 @@ async function researchAccess(
     )
     .bind(principal.firebaseUid, spaceId, wineId)
     .first<ResearchAccessRow>();
-}
-
-async function subjectCandidates(
-  ports: ResearchPorts,
-  locale: CreateResearchJobRequest["locale"],
-  subjectType: "producer" | "region",
-  field: string | null,
-): Promise<ResearchCandidateSubject | null> {
-  const term = (field ?? "").trim();
-  if (ports.knowledge === null || term.length < 2) return null;
-  let candidates: ResearchCandidate[] = [];
-  try {
-    const found = await ports.knowledge.searchEntities({ locale, subjectType, term });
-    if (found.status === "success") {
-      candidates = found.data
-        .map((candidate, index) => ({
-          candidate,
-          index,
-          score: candidateScore(candidate.description),
-        }))
-        .filter(({ score }) => score >= 0)
-        .sort((left, right) => right.score - left.score || left.index - right.index)
-        .map(({ candidate }) => ({
-          description: candidate.description,
-          id: candidate.id,
-          label: candidate.label,
-        }));
-    }
-  } catch {
-    candidates = [];
-  }
-  return { candidates, term };
-}
-
-/**
- * The disambiguation step. Given the wine's own producer and region text, offer
- * the matching Wikidata entities — each with its description — so the reader can
- * tell a wine region from a same-named genus of arachnids before anything is
- * researched. Returns null for a subject the wine does not name or that the
- * provider could not search; the reader can still research the rest.
- */
-export async function researchCandidates(
-  database: D1Database,
-  options: {
-    locale: CreateResearchJobRequest["locale"];
-    ports: ResearchPorts;
-    principal: FirebasePrincipal;
-    spaceId: string;
-    wineId: string;
-  },
-): Promise<ResearchCandidatesResponse | null> {
-  const access = await researchAccess(database, options.principal, options.spaceId, options.wineId);
-  if (access === null) return null;
-  const [producer, region] = await Promise.all([
-    subjectCandidates(options.ports, options.locale, "producer", access.producer_name),
-    subjectCandidates(options.ports, options.locale, "region", access.region),
-  ]);
-  return { data: { producer, region } };
 }
 
 async function jobById(database: D1Database, spaceId: string, jobId: string) {

@@ -424,16 +424,6 @@
         "no_results": "No s’han trobat dades segures i citades.",
         "partial_results": "Una o més fonts no estaven disponibles; es mostren resultats parcials.",
         "source_limit_reached": "S’ha assolit el límit de fonts."
-      },
-      "searching": "Cercant coincidències…",
-      "picker": {
-        "help": "Tria a quina entitat es refereix cada nom. Només s'investiga el que triïs, i els resultats arriben igualment com a propostes per acceptar.",
-        "noneFound": "No hem trobat entitats coincidents per desambiguar. Encara pots investigar les dades del vi a partir del seu codi de barres.",
-        "producer": "Productor",
-        "region": "Regió",
-        "none": "Cap d'aquestes",
-        "confirm": "Investiga la seleccionada",
-        "cancel": "Cancel·la"
       }
     }
   },
