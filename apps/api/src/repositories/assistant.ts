@@ -595,6 +595,21 @@ async function loadReaderTastingNotes(
   return statements;
 }
 
+/** The wine the screen says the reader is looking at, as a search result. */
+async function visibleWineResult(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  spaces: { id: string; name: string }[],
+  visibleWineId: string | null,
+): Promise<AssistantSearchResult | null> {
+  if (visibleWineId === null) return null;
+  for (const space of spaces) {
+    const wine = await getWineSummary(database, principal, space.id, visibleWineId);
+    if (wine !== null) return { spaceId: space.id, spaceName: space.name, wine };
+  }
+  return null;
+}
+
 async function searchMemory(
   database: D1Database,
   principal: FirebasePrincipal,
@@ -1278,8 +1293,23 @@ export async function runDeterministicAssistantTurn(
           const ofType = results.filter((result) => result.wine.wineType === askedType);
           return ofType.length === 1 ? ofType[0]! : null;
         })()) ??
-    null;
+    // "…and what can I pair IT with?" names nothing at all. The turn carries no
+    // history, so the antecedent has to come from the screen: the wine the reader
+    // is looking at, or the one this conversation last surfaced.
+    results.find((result) => result.wine.id === options.request.context.visibleWineId) ??
+    (await visibleWineResult(
+      database,
+      options.principal,
+      spaces,
+      options.request.context.visibleWineId,
+    ));
   const namesOwnWine = namedWine !== null;
+  // The antecedent may not be among the search hits — "pair it with" matches
+  // nothing in particular — so once found it joins the results, or the answer
+  // would be about a wine the reader never sees listed.
+  if (namedWine !== null && !results.some((result) => result.wine.id === namedWine.wine.id)) {
+    results = [namedWine, ...results];
+  }
   // A pairing question that names one bottle is about THAT bottle. Search also
   // returns near matches, and handing them all to the model made it answer about
   // another wine entirely ("what can I pair the Naltros with?" opening with El
