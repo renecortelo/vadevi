@@ -9,7 +9,7 @@ import type { ResearchPorts } from "@vadevi/domain";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
-import { createResearchJob } from "../src/repositories/research";
+import { createResearchJob, regenerateNarrative } from "../src/repositories/research";
 import { randomOpaqueToken } from "../src/security/opaque-token";
 import type { FirebasePrincipal } from "../src/types";
 import { emulatorIdToken } from "./fixtures/firebase-token";
@@ -527,6 +527,96 @@ describe("bounded wine research jobs", () => {
     const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
     const revived = facts.find((fact: Fact) => fact.id === factId);
     expect(revived?.status).toBe("proposed");
+  });
+
+  it("rewrites the narrative from the facts that are still live", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWineWithGrape(spaceId);
+    const source = {
+      canonicalUrl: "https://www.wikidata.org/wiki/Q1122",
+      licenseIdentifier: "CC0-1.0",
+      publisher: "Wikidata",
+      retrievedAt: "2026-08-23T10:00:00.000Z",
+      sourceType: "open_dataset" as const,
+      title: "Tempranillo",
+    };
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async () => ({
+          cached: false,
+          data: [
+            {
+              confidenceMilli: 800,
+              predicate: "curiosity.highlight",
+              researchMethod: "wikidata.highlight.v1",
+              source,
+              value: "color: tinta",
+            },
+            {
+              confidenceMilli: 800,
+              predicate: "curiosity.highlight",
+              researchMethod: "wikidata.highlight.v1",
+              source,
+              value: "origen: Espana",
+            },
+          ],
+          status: "success",
+        }),
+        searchEntities: async () => ({
+          cached: false,
+          data: [{ description: "a grape variety", id: "Q1122", label: "Tempranillo" }],
+          status: "success",
+        }),
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const job = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "es" as const,
+        maxSources: 4,
+        topics: ["grapes"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(job.kind).toBe("success");
+
+    let writtenFrom: string[] = [];
+    const outcome = await regenerateNarrative(env.DB, {
+      locale: "es",
+      narrative: {
+        compose: async ({ statements }) => {
+          writtenFrom = statements;
+          return "Un tinto de Tempranillo, de origen español.";
+        },
+      },
+      principal,
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(outcome).toBe("ok");
+    // Written from the live highlights, with no trip back out to the sources.
+    expect(writtenFrom).toEqual(["color: tinta", "origen: Espana"]);
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const summaries = facts.filter(
+      (fact: Fact) => fact.predicate === "research.summary" && fact.status !== "retired",
+    );
+    expect(summaries).toHaveLength(1);
+    expect(summaries[0]?.value).toBe("Un tinto de Tempranillo, de origen español.");
+    expect(summaries[0]?.citations.length).toBeGreaterThan(0);
   });
 
   it("does not research a grape name that matches something other than a grape", async () => {

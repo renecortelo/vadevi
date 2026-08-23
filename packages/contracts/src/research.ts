@@ -103,7 +103,21 @@ export const ResearchJobPathSchema = z
   })
   .strict();
 
+// Rewriting the narrative from the facts that survive is its own small command:
+// it needs no body, and answers only whether a fresh paragraph now exists.
+export const RegenerateNarrativeRequestSchema = z
+  .object({ locale: SupportedLocaleSchema })
+  .strict()
+  .openapi("RegenerateNarrativeRequest");
+
+export const RegenerateNarrativeResponseSchema = z
+  .object({ data: z.object({ status: z.enum(["regenerated", "no_material"]) }).strict() })
+  .strict()
+  .openapi("RegenerateNarrativeResponse");
+
 export type CreateResearchJobRequest = z.infer<typeof CreateResearchJobRequestSchema>;
+export type RegenerateNarrativeRequest = z.infer<typeof RegenerateNarrativeRequestSchema>;
+export type RegenerateNarrativeResponse = z.infer<typeof RegenerateNarrativeResponseSchema>;
 export type ResearchAttempt = z.infer<typeof ResearchAttemptSchema>;
 export type ResearchJob = z.infer<typeof ResearchJobSchema>;
 export type ResearchJobResponse = z.infer<typeof ResearchJobResponseSchema>;

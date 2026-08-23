@@ -1764,8 +1764,14 @@ p {
 .research-narrative__footer {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-3);
   justify-content: space-between;
+}
+
+.research-narrative__actions {
+  display: flex;
+  gap: var(--space-4);
 }
 
 .citation-list {

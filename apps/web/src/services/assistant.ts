@@ -4,6 +4,8 @@ import {
   AssistantTurnResponseSchema,
   CreateResearchJobRequestSchema,
   FactResponseSchema,
+  RegenerateNarrativeRequestSchema,
+  RegenerateNarrativeResponseSchema,
   RejectFactRequestSchema,
   ResearchJobResponseSchema,
   WineFactsResponseSchema,
@@ -12,8 +14,10 @@ import {
   type AssistantTurnResponse,
   type CreateResearchJobRequest,
   type FactResponse,
+  type RegenerateNarrativeResponse,
   type RejectFactRequest,
   type ResearchJobResponse,
+  type SupportedLocale,
   type WineFactsResponse,
 } from "@vadevi/contracts";
 
@@ -75,6 +79,25 @@ export async function rejectFact(
   );
   if (!response.ok) throw await apiError(response);
   return FactResponseSchema.parse(await response.json());
+}
+
+export async function regenerateNarrative(
+  tokenSource: TokenSource,
+  spaceId: string,
+  wineId: string,
+  locale: SupportedLocale,
+): Promise<RegenerateNarrativeResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/wines/${wineId}/narrative`,
+    {
+      body: JSON.stringify(RegenerateNarrativeRequestSchema.parse({ locale })),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return RegenerateNarrativeResponseSchema.parse(await response.json());
 }
 
 export async function createResearchJob(

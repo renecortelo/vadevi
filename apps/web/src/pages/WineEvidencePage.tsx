@@ -14,7 +14,12 @@ import { ModalDialog } from "../components/ModalDialog";
 import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
-import { createResearchJob, getWineFacts, rejectFact } from "../services/assistant";
+import {
+  createResearchJob,
+  getWineFacts,
+  regenerateNarrative,
+  rejectFact,
+} from "../services/assistant";
 import { useSession } from "../session/SessionContext";
 
 type ResearchTopic = "grapes" | "identity" | "producer" | "region";
@@ -214,6 +219,7 @@ export function WineEvidencePage() {
   const [error, setError] = useState<string | null>(null);
   const [rejectingId, setRejectingId] = useState<string | null>(null);
   const [pendingDiscard, setPendingDiscard] = useState<Fact | null>(null);
+  const [rewriting, setRewriting] = useState(false);
   const [researching, setResearching] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
   const [researchError, setResearchError] = useState<string | null>(null);
@@ -292,22 +298,33 @@ export function WineEvidencePage() {
     setError(null);
     try {
       await rejectFact(user, spaceId, fact.id, { version: fact.version });
-      // The narrative is written FROM the facts, so discarding one can leave the
-      // wrong detail sitting in the prose. Retire the paragraph with it; asking to
-      // research again writes a fresh one from whatever the sources give then.
-      if (fact.predicate !== "research.summary" && narrative !== null) {
-        try {
-          await rejectFact(user, spaceId, narrative.id, { version: narrative.version });
-        } catch {
-          // A narrative that cannot be retired is left as it is; the discarded
-          // fact itself is already gone, which is what the reader asked for.
-        }
-      }
       await loadFacts();
     } catch {
       setError(t("evidence.rejectError"));
     } finally {
       setRejectingId(null);
+    }
+  }
+
+  // Rewrite the paragraph from the facts that are still here — discard two of
+  // five and the text is rebuilt from the other three, without going back out to
+  // the sources. Researching again is the separate, heavier act.
+  async function rewriteNarrative() {
+    if (user === null || wineId.length === 0 || !online) return;
+    setRewriting(true);
+    setError(null);
+    try {
+      await regenerateNarrative(
+        user,
+        spaceId,
+        wineId,
+        researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
+      );
+      await loadFacts();
+    } catch {
+      setError(t("evidence.rewriteError"));
+    } finally {
+      setRewriting(false);
     }
   }
 
@@ -441,18 +458,28 @@ export function WineEvidencePage() {
                 {narrative.citations[0].source.publisher}
               </a>
             )}
-            {narrative.status === "accepted" || narrative.status === "retired" ? null : (
+            <div className="research-narrative__actions">
               <button
-                className="action-link action-link--quiet"
-                disabled={rejectingId === narrative.id}
-                onClick={() => setPendingDiscard(narrative)}
+                className="fact-card__discard"
+                disabled={rewriting || !online}
+                onClick={() => void rewriteNarrative()}
                 type="button"
               >
-                {rejectingId === narrative.id
-                  ? t("evidence.rejecting")
-                  : t("evidence.rejectAction")}
+                {rewriting ? t("evidence.rewriting") : t("evidence.rewriteAction")}
               </button>
-            )}
+              {narrative.status === "accepted" || narrative.status === "retired" ? null : (
+                <button
+                  className="fact-card__discard"
+                  disabled={rejectingId === narrative.id}
+                  onClick={() => setPendingDiscard(narrative)}
+                  type="button"
+                >
+                  {rejectingId === narrative.id
+                    ? t("evidence.rejecting")
+                    : t("evidence.rejectAction")}
+                </button>
+              )}
+            </div>
           </div>
         </section>
       )}
