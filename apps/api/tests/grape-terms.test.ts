@@ -14,14 +14,27 @@ describe("grape synonym resolution", () => {
   });
 
   it("returns just the term for an unlisted grape", () => {
-    expect(resolveGrapeGroup("bobal")).toEqual(["bobal"]);
+    expect(resolveGrapeGroup("uva inventada")).toEqual(["uva inventada"]);
     expect(resolveGrapeGroup("x")).toEqual([]);
   });
 
   it("knows which terms carry synonyms", () => {
     expect(isKnownGrapeSynonym("ull de llebre")).toBe(true);
+    // Listed, but with no synonym of its own.
     expect(isKnownGrapeSynonym("merlot")).toBe(false);
     expect(isKnownGrapeSynonym("bobal")).toBe(false);
+  });
+
+  it("covers the widened variety list", () => {
+    // Newly listed synonym groups, across the regions the reader's wines come from.
+    expect(resolveGrapeGroup("moscato")).toContain("moscatel");
+    expect(resolveGrapeGroup("periquita")).toContain("castelao");
+    expect(resolveGrapeGroup("kekfrankos")).toContain("blaufrankisch");
+    expect(resolveGrapeGroup("melon de bourgogne")).toContain("muscadet");
+    expect(resolveGrapeGroup("durif")).toContain("petite sirah");
+    // A single-name variety still resolves to itself, so it stays searchable.
+    expect(resolveGrapeGroup("parellada")).toEqual(["parellada"]);
+    expect(resolveGrapeNamesFromMessage("¿algo de Pedro Ximénez?")).toContain("pedro ximenez");
   });
 
   it("resolves a multi-word grape named anywhere in a question", () => {
