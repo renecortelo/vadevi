@@ -1,4 +1,5 @@
 import { BraveWebSearchAdapter, TavilyWebSearchAdapter } from "./web-search";
+import { createNarrativePort } from "./narrative";
 import { createTranslationPort } from "./translation";
 import { D1ExternalCache, D1ExternalRateLimiter } from "./external-state";
 import { OpenFoodFactsAdapter } from "./open-food-facts";
@@ -49,6 +50,7 @@ export function createResearchPorts(
   if (!externalResearchEnabled(environment)) {
     return {
       knowledge: null,
+      narrative: null,
       product: null,
       providerMode: "none",
       translation: null,
@@ -68,6 +70,7 @@ export function createResearchPorts(
   }
   return {
     knowledge: new WikidataAdapter(cache, limiter, userAgent),
+    narrative: createNarrativePort(environment),
     product: new OpenFoodFactsAdapter(cache, limiter, userAgent),
     providerMode: "open_data",
     translation: createTranslationPort(environment),

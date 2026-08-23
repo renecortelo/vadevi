@@ -712,4 +712,91 @@ describe("bounded wine research jobs", () => {
     // The page title used as the card heading is translated too.
     expect(note?.citations[0]?.source.title).toBe("El Espino — Áster");
   });
+
+  it("composes the research summary from the summary and highlights when AI is on", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(spaceId);
+    const wikipedia = {
+      canonicalUrl: "https://es.wikipedia.org/wiki/Bodegas_Aster",
+      licenseIdentifier: "CC-BY-SA-4.0",
+      publisher: "Wikipedia",
+      retrievedAt: "2026-08-23T10:00:00.000Z",
+      sourceType: "open_dataset" as const,
+      title: "Bodegas Áster",
+    };
+    const wikidata = {
+      canonicalUrl: "https://www.wikidata.org/wiki/Q999",
+      licenseIdentifier: "CC0-1.0",
+      publisher: "Wikidata",
+      retrievedAt: "2026-08-23T10:00:00.000Z",
+      sourceType: "open_dataset" as const,
+      title: "Bodegas Áster",
+    };
+    let composedFrom: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async () => ({
+          cached: false,
+          data: [
+            {
+              confidenceMilli: 700,
+              predicate: "research.summary",
+              researchMethod: "wikipedia.summary.v1",
+              source: wikipedia,
+              value: "Aster is a winery in the Ribera del Duero region.",
+            },
+            {
+              confidenceMilli: 800,
+              predicate: "curiosity.highlight",
+              researchMethod: "wikidata.highlight.v1",
+              source: wikidata,
+              value: "Fundación: 1870",
+            },
+          ],
+          status: "success",
+        }),
+        searchEntities: async () => ({ cached: false, data: [], status: "success" }),
+      },
+      narrative: {
+        compose: async ({ statements }) => {
+          composedFrom = statements;
+          return "Bodegas Áster, fundada en 1870, elabora en la Ribera del Duero.";
+        },
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "es" as const,
+        maxSources: 4,
+        topics: ["producer"] as const,
+        wikidataEntityIds: { producer: "Q999" },
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    // The model was given the raw summary plus the highlight to weave.
+    expect(composedFrom).toEqual([
+      "Aster is a winery in the Ribera del Duero region.",
+      "Fundación: 1870",
+    ]);
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const summary = facts.find((fact: Fact) => fact.predicate === "research.summary");
+    expect(summary?.value).toBe("Bodegas Áster, fundada en 1870, elabora en la Ribera del Duero.");
+    // Still cited to Wikipedia — the narrative only rephrases cited material.
+    expect(summary?.citations[0]?.source.publisher).toBe("Wikipedia");
+  });
 });

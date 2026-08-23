@@ -435,11 +435,51 @@ async function collectProposals(
   // are already localized by their source so they are left alone.
   const translated = await translateProse(proposals, ports.translation ?? null, request.locale);
 
-  if (translated.length === 0) warnings.add("no_results");
-  if (attempts.some((attempt) => attempt.status === "unavailable") && translated.length > 0) {
+  // With translation done, an LLM can weave the summary and the discovered
+  // highlights into one short, grounded "about this wine" paragraph in the
+  // reader's language, in place of the raw encyclopedic opener.
+  const composed = await composeNarrative(
+    translated,
+    ports.narrative ?? null,
+    request.locale,
+    access.display_name,
+  );
+
+  if (composed.length === 0) warnings.add("no_results");
+  if (attempts.some((attempt) => attempt.status === "unavailable") && composed.length > 0) {
     warnings.add("partial_results");
   }
-  return { attempts, proposals: translated, warnings: [...warnings] };
+  return { attempts, proposals: composed, warnings: [...warnings] };
+}
+
+/** Replace the research summary with a grounded paragraph the model writes from
+ *  the summary plus the discovered highlights. Only runs when a Wikipedia-backed
+ *  summary already exists (it carries the citation); keeps it on any failure. */
+async function composeNarrative(
+  proposals: ProposedFact[],
+  narrative: ResearchPorts["narrative"],
+  locale: CreateResearchJobRequest["locale"],
+  wine: string,
+): Promise<ProposedFact[]> {
+  if (narrative === null || narrative === undefined) return proposals;
+  const summaryIndex = proposals.findIndex((proposal) => proposal.predicate === "research.summary");
+  if (summaryIndex === -1) return proposals;
+  const statements = [
+    String(proposals[summaryIndex]!.value),
+    ...proposals
+      .filter((proposal) => proposal.predicate === "curiosity.highlight")
+      .map((proposal) => String(proposal.value)),
+  ];
+  let paragraph: string | null;
+  try {
+    paragraph = await narrative.compose({ locale, statements, wine });
+  } catch {
+    return proposals;
+  }
+  if (paragraph === null) return proposals;
+  return proposals.map((proposal, index) =>
+    index === summaryIndex ? { ...proposal, value: paragraph } : proposal,
+  );
 }
 
 /** Translate the value (and, for a web note, its source title) of every prose

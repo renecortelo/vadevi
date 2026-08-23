@@ -125,6 +125,25 @@ export interface TranslationPort {
   translate(input: TranslationRequest): Promise<(string | null)[] | null>;
 }
 
+/**
+ * Optional grounded narrative. Given the already-gathered, already-cited facts
+ * about one wine, an LLM composes a short "about this wine" paragraph in the
+ * reader's language. It is a synthesis of the supplied statements only — never a
+ * source of new claims — so it must not add flavours, ratings, or details the
+ * statements do not contain. Null on any failure; the caller keeps what it had.
+ */
+export type NarrativeRequest = Readonly<{
+  locale: ResearchLocale;
+  /** The wine, for address ("this wine"); not a fact to assert. */
+  wine: string;
+  /** The cited material to draw from — a summary paragraph and short highlights. */
+  statements: string[];
+}>;
+
+export interface NarrativePort {
+  compose(input: NarrativeRequest): Promise<string | null>;
+}
+
 export type ResearchPorts = Readonly<{
   knowledge: KnowledgeResearchPort | null;
   product: ProductLookupPort | null;
@@ -133,6 +152,8 @@ export type ResearchPorts = Readonly<{
   webSearch?: WebSearchPort | null;
   /** Optional translation of gathered text; null unless AI is configured. */
   translation?: TranslationPort | null;
+  /** Optional grounded narrative composition; null unless AI is configured. */
+  narrative?: NarrativePort | null;
 }>;
 
 /**
