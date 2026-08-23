@@ -784,3 +784,112 @@ export async function createResearchJob(
     ? { kind: "unavailable" }
     : { kind: "success", replayed: false, response };
 }
+
+/**
+ * Rewrite the "about this wine" paragraph from the facts that are still live.
+ *
+ * Discarding two of five claims should leave a paragraph written from the other
+ * three, without going back out to the sources — that is a different act from
+ * researching, so it has its own path: no network, no new facts, no budget for a
+ * provider call beyond the one model call that does the writing. The regenerated
+ * paragraph cites the same sources as the material it was written from, and the
+ * previous paragraph is retired so only one is ever live.
+ */
+export async function regenerateNarrative(
+  database: D1Database,
+  options: {
+    locale: CreateResearchJobRequest["locale"];
+    narrative: ResearchPorts["narrative"];
+    principal: FirebasePrincipal;
+    requestId: string;
+    spaceId: string;
+    wineId: string;
+  },
+): Promise<"unavailable" | "no_material" | "ok"> {
+  const narrative = options.narrative ?? null;
+  if (narrative === null) return "unavailable";
+  const access = await researchAccess(database, options.principal, options.spaceId, options.wineId);
+  if (access === null) return "unavailable";
+
+  const rows = await database
+    .prepare(
+      `SELECT fact.id, fact.predicate, fact.value_json, citation.source_id
+      FROM facts fact
+      LEFT JOIN fact_citations citation ON citation.fact_id = fact.id
+      WHERE fact.space_id = ? AND fact.subject_type = 'wine' AND fact.subject_id = ?
+        AND fact.status <> 'retired' AND fact.deleted_at IS NULL
+        AND fact.predicate IN ('curiosity.highlight', 'curiosity.note', 'research.summary')
+      ORDER BY fact.created_at`,
+    )
+    .bind(options.spaceId, options.wineId)
+    .all<{ id: string; predicate: string; source_id: string | null; value_json: string }>();
+
+  const statements: string[] = [];
+  const sourceIds = new Set<string>();
+  for (const row of rows.results) {
+    try {
+      const value = JSON.parse(row.value_json) as unknown;
+      if (typeof value === "string" && value.trim().length > 0) statements.push(value);
+    } catch {
+      continue;
+    }
+    if (row.source_id !== null) sourceIds.add(row.source_id);
+  }
+  if (statements.length === 0 || sourceIds.size === 0) return "no_material";
+
+  const paragraph = await narrative.compose({
+    locale: options.locale,
+    statements,
+    wine: access.display_name,
+  });
+  if (paragraph === null) return "no_material";
+
+  const now = new Date().toISOString();
+  const factId = ulid();
+  const commands: D1PreparedStatement[] = [
+    database
+      .prepare(
+        `UPDATE facts SET status = 'retired', version = version + 1, updated_at = ?
+        WHERE space_id = ? AND subject_type = 'wine' AND subject_id = ?
+          AND predicate = 'research.summary' AND status <> 'retired' AND deleted_at IS NULL`,
+      )
+      .bind(now, options.spaceId, options.wineId),
+    database
+      .prepare(
+        `INSERT INTO facts (
+          id, space_id, subject_type, subject_id, predicate, value_json,
+          evidence_class, confidence_milli, status, observed_by_user_id,
+          verified_by_user_id, verified_at, research_method, version,
+          created_at, updated_at, deleted_at
+        ) VALUES (?, ?, 'wine', ?, 'research.summary', ?, 'researched', 700, 'proposed', NULL,
+          NULL, NULL, 'narrative.regenerate.v1', 1, ?, ?, NULL)`,
+      )
+      .bind(factId, options.spaceId, options.wineId, JSON.stringify(paragraph), now, now),
+    ...[...sourceIds].slice(0, 8).map((sourceId) =>
+      database
+        .prepare(
+          `INSERT INTO fact_citations (
+            fact_id, source_id, locator, support_strength, created_at
+          ) VALUES (?, ?, NULL, 'supporting', ?)`,
+        )
+        .bind(factId, sourceId, now),
+    ),
+    database
+      .prepare(
+        `INSERT INTO change_events (
+          space_id, resource_type, resource_id, operation, resource_version, changed_at
+        ) VALUES (?, 'fact', ?, 'create', 1, ?)`,
+      )
+      .bind(options.spaceId, factId, now),
+    database
+      .prepare(
+        `INSERT INTO audit_events (
+          id, actor_user_id, space_id, action, target_type, target_id,
+          request_id, safe_metadata_json, created_at
+        ) VALUES (?, ?, ?, 'narrative.regenerated', 'fact', ?, ?, NULL, ?)`,
+      )
+      .bind(ulid(), access.actor_user_id, options.spaceId, factId, options.requestId, now),
+  ];
+  await database.batch(commands);
+  return "ok";
+}
