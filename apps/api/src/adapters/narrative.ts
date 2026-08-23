@@ -1,5 +1,13 @@
-import type { NarrativePort, NarrativeRequest, ResearchLocale } from "@vadevi/domain";
+import type {
+  FoodIdeasPort,
+  FoodIdeasRequest,
+  NarrativePort,
+  NarrativeRequest,
+  ResearchLocale,
+} from "@vadevi/domain";
 import { sanitizeExternalText } from "@vadevi/domain";
+
+import { extractStringArray } from "./translation";
 
 type WorkersAiRunner = Readonly<{
   run: (model: string, input: Record<string, unknown>) => Promise<Record<string, unknown>>;
@@ -71,6 +79,81 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
       return null;
     }
   }
+}
+
+/**
+ * Dish ideas for a wine, from the wine's own recorded attributes. The output is a
+ * short JSON array of dish phrases — no prose, no claims about the bottle — which
+ * the caller surfaces as an explicit suggestion.
+ */
+export class CloudflareFoodIdeasAdapter implements FoodIdeasPort {
+  constructor(
+    private readonly ai: WorkersAiRunner,
+    private readonly model: string,
+  ) {}
+
+  async suggest(input: FoodIdeasRequest): Promise<string[] | null> {
+    const attributes = input.attributes
+      .map((attribute) => attribute.trim())
+      .filter((attribute) => attribute.length > 0)
+      .slice(0, 10)
+      .map((attribute) => attribute.slice(0, 200));
+    if (attributes.length === 0) return null;
+    const language = languageNames[input.locale];
+    try {
+      const output = await this.ai.run(this.model, {
+        max_tokens: 300,
+        messages: [
+          {
+            content:
+              `You are a sommelier suggesting food for a wine, writing in ${language}. ` +
+              `From the wine's attributes, propose 2 to 4 dishes that would suit it. ` +
+              `Each entry is a short phrase naming the dish and, after an em dash, a ` +
+              `few words on why it works. Suggest dishes only — never state new facts ` +
+              `about the wine, never invent its flavours, score, or price. Reply with ` +
+              `ONLY a JSON array of strings. No markdown.`,
+            role: "system",
+          },
+          {
+            content: JSON.stringify({ attributes, wine: input.wine.slice(0, 200) }),
+            role: "user",
+          },
+        ],
+        temperature: 0.3,
+      });
+      const ideas = extractStringArray(output);
+      if (ideas === null || ideas.length === 0) return null;
+      const safe = ideas
+        .map((idea) => sanitizeExternalText(idea, 240))
+        .filter((idea) => idea.value.length > 0 && !idea.flaggedPromptLike)
+        .map((idea) => idea.value)
+        .slice(0, 4);
+      return safe.length === 0 ? null : safe;
+    } catch (error) {
+      console.warn(
+        `food ideas model call failed (model=${this.model}): ${
+          error instanceof Error ? error.name : "unknown"
+        }`,
+      );
+      return null;
+    }
+  }
+}
+
+export function createFoodIdeasPort(environment: {
+  AI?: WorkersAiRunner;
+  AI_MODEL?: string;
+  AI_PROVIDER?: "cloudflare" | "none";
+}): FoodIdeasPort | null {
+  if (
+    environment.AI_PROVIDER !== "cloudflare" ||
+    environment.AI === undefined ||
+    environment.AI_MODEL === undefined ||
+    !/^@cf\/[a-z0-9][a-z0-9._/-]{2,119}$/.test(environment.AI_MODEL)
+  ) {
+    return null;
+  }
+  return new CloudflareFoodIdeasAdapter(environment.AI, environment.AI_MODEL);
 }
 
 export function createNarrativePort(environment: {

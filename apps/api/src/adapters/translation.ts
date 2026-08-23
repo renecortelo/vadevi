@@ -17,7 +17,7 @@ const languageNames: Record<ResearchLocale, string> = {
 };
 
 /** Pull a JSON array of strings out of a model reply, tolerating code fences. */
-function extractStringArray(output: Record<string, unknown>): string[] | null {
+export function extractStringArray(output: Record<string, unknown>): string[] | null {
   const raw = output.response;
   if (typeof raw !== "string") return null;
   const start = raw.indexOf("[");

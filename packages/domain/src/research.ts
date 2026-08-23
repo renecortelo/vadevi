@@ -144,6 +144,28 @@ export interface NarrativePort {
   compose(input: NarrativeRequest): Promise<string | null>;
 }
 
+/**
+ * The other direction of pairing: a wine looking for dishes.
+ *
+ * The pairing provider maps a dish to wine styles, which cannot answer "what can
+ * I eat with this bottle?". This asks a model for dish ideas from the wine's own
+ * recorded attributes — type, grapes, region, and the reader's own tasting
+ * structure. The result is explicitly a SUGGESTION, never a stored fact: it is
+ * surfaced as inferred, and the wine's attributes are the only input, so it never
+ * claims something about the bottle that the record does not already hold.
+ */
+export type FoodIdeasRequest = Readonly<{
+  locale: ResearchLocale;
+  /** Short, factual lines about the wine — type, grapes, region, tasting notes. */
+  attributes: string[];
+  wine: string;
+}>;
+
+export interface FoodIdeasPort {
+  /** Two to four dish ideas, each a short phrase; null when unavailable. */
+  suggest(input: FoodIdeasRequest): Promise<string[] | null>;
+}
+
 export type ResearchPorts = Readonly<{
   knowledge: KnowledgeResearchPort | null;
   product: ProductLookupPort | null;

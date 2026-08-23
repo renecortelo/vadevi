@@ -10,11 +10,13 @@ import type {
   PriceObservation,
   Source,
   SupportedLocale,
+  WineGrapeSummary,
   WineSummary,
 } from "@vadevi/contracts";
 import type {
   AssistantLanguagePort,
   AssistantLanguageStatement,
+  FoodIdeasPort,
   FoodPairingPort,
   PairingWineStyle,
   SemanticNotePort,
@@ -1113,6 +1115,7 @@ export async function runDeterministicAssistantTurn(
   options: {
     aiProvider: "cloudflare" | "none";
     externalResearch: boolean;
+    foodIdeas?: FoodIdeasPort | null;
     language: AssistantLanguagePort | null;
     pairing: FoodPairingPort | null;
     principal: FirebasePrincipal;
@@ -1221,12 +1224,13 @@ export async function runDeterministicAssistantTurn(
   // "What can I pair the Naltros with?" is the OTHER direction — a wine looking
   // for a dish — and the provider only answers dish → wine styles. Sending the
   // wine's own name as if it were a dish produced nonsense (a bottle unrelated to
-  // the question). When the message names one of the reader's own wines, skip the
-  // pairing lookup rather than answer the question that was not asked.
-  const namesOwnWine = results.some((result) => {
-    const name = normalizeWineText(result.wine.displayName);
-    return name.length >= 3 && normalizeWineText(options.request.message).includes(name);
-  });
+  // the question), so that path is answered separately, below.
+  const namedWine =
+    results.find((result) => {
+      const name = normalizeWineText(result.wine.displayName);
+      return name.length >= 3 && normalizeWineText(options.request.message).includes(name);
+    }) ?? null;
+  const namesOwnWine = namedWine !== null;
   if (options.pairing !== null && requestsPairing(options.request.message) && !namesOwnWine) {
     const dish = dishFromMessage(options.request.message);
     try {
@@ -1270,6 +1274,48 @@ export async function runDeterministicAssistantTurn(
       // A failed pairing lookup just leaves the turn without pairing statements.
     }
     toolCalls += 1;
+  }
+
+  // The reverse question — "what can I eat with THIS bottle?" — answered from the
+  // wine's own recorded attributes. These are suggestions, not facts: they carry
+  // the inferred class, which the prompt already treats as "my idea, not
+  // established", and nothing here asserts anything new about the bottle.
+  const foodIdeas = options.foodIdeas ?? null;
+  if (foodIdeas !== null && namedWine !== null && requestsPairing(options.request.message)) {
+    const wine = namedWine.wine;
+    const attributes = [
+      wine.wineType === null ? null : `type: ${wine.wineType}`,
+      wine.grapes.length === 0
+        ? null
+        : `grapes: ${wine.grapes.map((grape: WineGrapeSummary) => grape.name).join(", ")}`,
+      wine.region === null ? null : `region: ${wine.region}`,
+      wine.vintageYear === null ? null : `vintage: ${wine.vintageYear}`,
+      ...(namedWine.notes ?? []).slice(0, 2),
+    ].filter((attribute): attribute is string => attribute !== null && attribute.length > 0);
+    if (attributes.length > 0) {
+      try {
+        const ideas = await foodIdeas.suggest({
+          attributes,
+          locale: options.request.locale,
+          wine: wine.displayName,
+        });
+        if (ideas !== null) {
+          pairingStatements = [
+            ...pairingStatements,
+            ...ideas.map((idea, index) => ({
+              evidenceClass: "inferred" as const,
+              id: `food-idea-${index}`,
+              sampleSize: null,
+              sourceIds: [],
+              text: `a dish that would suit ${wine.displayName}: ${idea}`,
+            })),
+          ];
+        }
+      } catch {
+        // A failed suggestion just leaves the turn without dish ideas.
+      }
+      toolCalls += 1;
+    }
   }
 
   const contextStartedAt = Date.now();
