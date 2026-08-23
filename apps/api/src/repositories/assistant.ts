@@ -1345,6 +1345,26 @@ export async function runDeterministicAssistantTurn(
   const foodIdeas = options.foodIdeas ?? null;
   if (foodIdeas !== null && namedWine !== null && requestsPairing(options.request.message)) {
     const wine = namedWine.wine;
+    // What the reader recorded, plus what research found about the bottle — the
+    // grape's own traits, the gathered notes, the narrative. A wine registered
+    // with little detail is exactly the one whose suggestions were generic, and
+    // those researched lines are what make them specific. Retired claims are
+    // excluded: the reader discarded them, so they cannot inform a suggestion.
+    const researched = await listWineFacts(database, {
+      principal: options.principal,
+      spaceId: namedWine.spaceId,
+      wineId: wine.id,
+    });
+    const researchedLines = (researched?.data.facts ?? [])
+      .filter(
+        (fact: Fact) =>
+          fact.status !== "retired" &&
+          (fact.predicate === "curiosity.highlight" ||
+            fact.predicate === "curiosity.note" ||
+            fact.predicate === "research.summary"),
+      )
+      .map((fact: Fact) => String(fact.value))
+      .slice(0, 5);
     const attributes = [
       wine.wineType === null ? null : `type: ${wine.wineType}`,
       wine.grapes.length === 0
@@ -1353,6 +1373,7 @@ export async function runDeterministicAssistantTurn(
       wine.region === null ? null : `region: ${wine.region}`,
       wine.vintageYear === null ? null : `vintage: ${wine.vintageYear}`,
       ...(namedWine.notes ?? []).slice(0, 2),
+      ...researchedLines,
     ].filter((attribute): attribute is string => attribute !== null && attribute.length > 0);
     if (attributes.length > 0) {
       try {
