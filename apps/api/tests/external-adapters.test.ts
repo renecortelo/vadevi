@@ -200,14 +200,14 @@ describe("external research adapters", () => {
           canonicalUrl: "https://www.wikidata.org/wiki/Q123",
           licenseIdentifier: "CC0-1.0",
         }),
-        value: "Gründung: 1870",
+        value: "Synthetic Estate · Gründung: 1870",
       },
       {
         confidenceMilli: 800,
         predicate: "curiosity.highlight",
         researchMethod: "wikidata.highlight.v1",
         source: expect.objectContaining({ canonicalUrl: "https://www.wikidata.org/wiki/Q123" }),
-        value: "gegründet von: Miguel Torres",
+        value: "Synthetic Estate · gegründet von: Miguel Torres",
       },
     ]);
     expect(second).toMatchObject({ cached: true, status: "success" });
@@ -286,7 +286,9 @@ describe("external research adapters", () => {
       value: "Bodegas Torres es una empresa vinícola familiar fundada en Vilafranca.",
     });
     expect(result.data[1]?.predicate).toBe("curiosity.highlight");
-    expect(result.data[1]?.value).toBe("fundación: 1870");
+    // The highlight names the entity it belongs to, so a grape's country of
+    // origin cannot be mistaken for the wine's own region.
+    expect(result.data[1]?.value).toBe("Bodegas Torres · fundación: 1870");
     expect(hosts).toContain("es.wikipedia.org");
   });
 
@@ -482,6 +484,43 @@ describe("external research adapters", () => {
     });
     expect(requests[0]?.searchParams.get("q")).toBe("Áster El Espino Ribera");
     expect(requests[0]?.hostname).toBe("api.search.brave.com");
+  });
+
+  it("decodes entities and drops a result that is mostly page furniture", async () => {
+    const fetcher: ProviderFetcher = async () =>
+      Response.json({
+        web: {
+          results: [
+            {
+              // Providers bold the match and leave entities encoded.
+              description:
+                "Kiwi Trail &gt; Sauvignon Blanc &amp; <b>Marlborough</b> &#8212; crisp.",
+              title: "Kiwi Trail &gt; 2019",
+              url: "https://example-wine.test/kiwi-trail",
+            },
+            {
+              // A navigation strip says nothing about the wine.
+              description: "Print · Share · Hide Side Panel · Browse · Add to cellar · Upload",
+              title: "CellarTracker",
+              url: "https://example-cellar.test/kiwi",
+            },
+          ],
+        },
+      });
+    const adapter = new BraveWebSearchAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      "brave-key-9876543210",
+      { fetcher, now: () => new Date("2026-08-24T10:00:00.000Z") },
+    );
+
+    const result = await adapter.search({ locale: "es", query: "Kiwi Trail Sauvignon Blanc" });
+    expect(result.status).toBe("success");
+    if (result.status !== "success") throw new Error("Expected a successful search.");
+    expect(result.data).toHaveLength(1);
+    expect(result.data[0]?.snippet).toBe("Kiwi Trail > Sauvignon Blanc & Marlborough — crisp.");
+    expect(result.data[0]?.title).toBe("Kiwi Trail > 2019");
   });
 
   it("maps Tavily extracted content to cited snippets over its fixed host", async () => {

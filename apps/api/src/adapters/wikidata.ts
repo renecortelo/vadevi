@@ -424,7 +424,14 @@ export class WikidataAdapter implements KnowledgeResearchPort {
         predicate: "curiosity.highlight",
         researchMethod: "wikidata.highlight.v1",
         source,
-        value: `${property.value}: ${answer.value}`,
+        // Say WHAT the fact is about. These are the grape's own properties, so a
+        // Sauvignon Blanc from New Zealand correctly reports France as the
+        // variety's country of origin — which reads as an error until the card
+        // names the grape it belongs to.
+        value:
+          label === null
+            ? `${property.value}: ${answer.value}`
+            : `${label} · ${property.value}: ${answer.value}`,
       });
     }
 
