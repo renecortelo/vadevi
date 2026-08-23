@@ -181,7 +181,7 @@ export class WikidataAdapter implements KnowledgeResearchPort {
     const locale = providerLocale(input.locale);
     const now = this.now();
     const nowTimestamp = now.toISOString();
-    const cacheKey = `wbsearch-v1:${term.toLowerCase()}:${locale}:${input.subjectType}`;
+    const cacheKey = `wbsearch-v2:${term.toLowerCase()}:${locale}:${input.subjectType}`;
     const cached = await this.cache.get<KnowledgeEntityCandidate[]>(
       "wikidata",
       cacheKey,
@@ -280,7 +280,12 @@ export class WikidataAdapter implements KnowledgeResearchPort {
     const locale = providerLocale(input.locale);
     const now = this.now();
     const nowTimestamp = now.toISOString();
-    const cacheKey = `wbgetentities-v1:${entityId}:${locale}:${input.subjectType}`;
+    // The version in this key is part of the contract: the cached value has a
+    // SHAPE, and changing how a result is built without bumping it serves the old
+    // shape from cache until the TTL expires — which is exactly what made a
+    // deployed fix look like it had not deployed at all. Bump on any change to
+    // what is stored here.
+    const cacheKey = `wbgetentities-v2:${entityId}:${locale}:${input.subjectType}`;
     const cached = await this.cache.get<ProposedFact[]>("wikidata", cacheKey, nowTimestamp);
     if (cached !== null) return { cached: true, data: cached, status: "success" };
 

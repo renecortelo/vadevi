@@ -175,7 +175,12 @@ export class BraveWebSearchAdapter implements WebSearchPort {
     const language = braveLanguage(input.locale);
     const now = this.now();
     const nowTimestamp = now.toISOString();
-    const cacheKey = `brave-v1:${query.toLowerCase()}:${language}`;
+    // The version in this key is part of the contract: the cached value has a
+    // SHAPE, and changing how a result is built without bumping it serves the old
+    // shape from cache until the TTL expires — which is exactly what made a
+    // deployed fix look like it had not deployed at all. Bump on any change to
+    // what is stored here.
+    const cacheKey = `brave-v2:${query.toLowerCase()}:${language}`;
     const cached = await this.cache.get<WebSearchResult[]>("web_search", cacheKey, nowTimestamp);
     if (cached !== null) return { cached: true, data: cached, status: "success" };
 
@@ -332,7 +337,7 @@ export class TavilyWebSearchAdapter implements WebSearchPort {
     }
     const now = this.now();
     const nowTimestamp = now.toISOString();
-    const cacheKey = `tavily-v1:${query.toLowerCase()}`;
+    const cacheKey = `tavily-v2:${query.toLowerCase()}`;
     const cached = await this.cache.get<WebSearchResult[]>("web_search", cacheKey, nowTimestamp);
     if (cached !== null) return { cached: true, data: cached, status: "success" };
 
