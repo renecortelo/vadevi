@@ -555,7 +555,7 @@ async function persistCompletedJob(
     // method or source — never stacks duplicate cards.
     const existingFact = await database
       .prepare(
-        `SELECT fact.id FROM facts fact
+        `SELECT fact.id, fact.status FROM facts fact
         WHERE fact.space_id = ? AND fact.subject_type = 'wine' AND fact.subject_id = ?
           AND fact.predicate = ? AND fact.value_json = ? AND fact.evidence_class = 'researched'
           AND fact.deleted_at IS NULL
@@ -567,9 +567,22 @@ async function persistCompletedJob(
         stored.proposal.predicate,
         JSON.stringify(stored.proposal.value),
       )
-      .first<{ id: string }>();
+      .first<{ id: string; status: string }>();
     const factId = existingFact?.id ?? stored.factId;
     factIds.add(factId);
+    // Asking to research again is a fresh start: a claim discarded earlier is
+    // proposed once more rather than silently reused in its retired state, which
+    // reported "4 facts added" while the screen stayed empty.
+    if (existingFact !== null && existingFact.status === "retired") {
+      commands.push(
+        database
+          .prepare(
+            `UPDATE facts SET status = 'proposed', version = version + 1, updated_at = ?
+            WHERE id = ? AND space_id = ? AND deleted_at IS NULL`,
+          )
+          .bind(now, factId, options.spaceId),
+      );
+    }
     if (existingFact === null) {
       // There is only ever one live narrative per wine: a freshly composed one
       // replaces the last, so re-running research regenerates the paragraph
