@@ -5,6 +5,39 @@ import { CloudflareAssistantLanguageAdapter } from "../src/adapters/assistant-la
 const sourceId = "01J00000000000000000000001";
 
 describe("provider-backed assistant language enforcement", () => {
+  it("names the reply language in words, not as a locale code", async () => {
+    let systemMessage = "";
+    const adapter = new CloudflareAssistantLanguageAdapter(
+      {
+        run: async (_model, input) => {
+          const messages = input.messages as { content: string; role: string }[];
+          systemMessage = messages.find((message) => message.role === "system")?.content ?? "";
+          return { response: { claims: [{ statementIds: ["wine-1"], text: "Tienes un Rioja." }] } };
+        },
+      },
+      "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    );
+
+    await adapter.render({
+      locale: "es",
+      message: "¿qué tengo?",
+      statements: [
+        {
+          evidenceClass: "personal",
+          id: "wine-1",
+          sampleSize: null,
+          sourceIds: [],
+          text: "Rioja 2019, scored 87",
+        },
+      ],
+    });
+
+    // The statements are assembled in English, so the model followed them and
+    // answered a Spanish reader in English. The target language is now named.
+    expect(systemMessage).toContain("Spanish");
+    expect(systemMessage).not.toContain("requested locale");
+  });
+
   it("keeps a claim even when the model echoes an extra field like evidenceClass", async () => {
     const adapter = new CloudflareAssistantLanguageAdapter(
       {
