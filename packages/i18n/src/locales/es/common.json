@@ -271,7 +271,7 @@
     "noSessionsTitle": "Todavía no hay sesiones en esta Memoria.",
     "noSessionsBody": "Crea una tanda para mantener separada la nota de cada participante.",
     "countryFilter": "País",
-    "countryPlaceholder": "ES",
+    "countryAny": "Cualquier país",
     "regionFilter": "Región",
     "grapeFilter": "Variedad",
     "vintageFrom": "Añada desde",

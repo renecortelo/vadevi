@@ -271,7 +271,7 @@
     "noSessionsTitle": "Noch keine Sitzung in diesem Gedächtnis.",
     "noSessionsBody": "Erstellen Sie eine Reihe, damit die Notiz jedes Teilnehmers getrennt bleibt.",
     "countryFilter": "Land",
-    "countryPlaceholder": "ES",
+    "countryAny": "Beliebiges Land",
     "regionFilter": "Region",
     "grapeFilter": "Rebsorte",
     "vintageFrom": "Jahrgang ab",

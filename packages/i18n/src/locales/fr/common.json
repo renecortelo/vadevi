@@ -271,7 +271,7 @@
     "noSessionsTitle": "Aucune session dans cette Mémoire.",
     "noSessionsBody": "Créez une série pour séparer la note de chaque participant.",
     "countryFilter": "Pays",
-    "countryPlaceholder": "ES",
+    "countryAny": "Tous les pays",
     "regionFilter": "Région",
     "grapeFilter": "Cépage",
     "vintageFrom": "Millésime à partir de",

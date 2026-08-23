@@ -271,7 +271,7 @@
     "noSessionsTitle": "No session in this Memory yet.",
     "noSessionsBody": "Create a flight to keep each participant's note separate.",
     "countryFilter": "Country",
-    "countryPlaceholder": "ES",
+    "countryAny": "Any country",
     "regionFilter": "Region",
     "grapeFilter": "Grape",
     "vintageFrom": "Vintage from",

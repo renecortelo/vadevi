@@ -271,7 +271,7 @@
     "noSessionsTitle": "Encara no hi ha cap sessió en aquesta Memòria.",
     "noSessionsBody": "Crea un vol per mantenir separada la nota de cada participant.",
     "countryFilter": "País",
-    "countryPlaceholder": "ES",
+    "countryAny": "Qualsevol país",
     "regionFilter": "Regió",
     "grapeFilter": "Varietat",
     "vintageFrom": "Anyada des de",
