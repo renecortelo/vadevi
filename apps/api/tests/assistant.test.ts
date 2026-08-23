@@ -475,6 +475,27 @@ describe("Vicenç deterministic read path", () => {
     });
   });
 
+  it("answers a follow-up about the wine on screen when the question names none", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const asked = await createWine(ownerToken, spaceId, "Kiwi Trail Follow Up");
+    await createWine(ownerToken, spaceId, "Other Bottle Entirely");
+
+    // "what can I pair it with?" names nothing; the turn keeps no history, so the
+    // wine the screen is showing is the only antecedent there is.
+    const response = await assistantTurn(
+      ownerToken,
+      spaceId,
+      "Con que puedo maridarlo?",
+      [],
+      asked.id,
+    );
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(
+      body.data.results.some((result: { wine: { id: string } }) => result.wine.id === asked.id),
+    ).toBe(true);
+  }, 30_000);
+
   it("withholds a personal profile below three notes and shows its sample basis at the threshold", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;

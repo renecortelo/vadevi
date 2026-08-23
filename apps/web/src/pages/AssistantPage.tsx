@@ -414,15 +414,29 @@ export function AssistantPage() {
     threadRef.current?.scrollTo({ behavior: "smooth", top: threadRef.current.scrollHeight });
   }, [turns]);
 
+  // The turn itself is stateless — nothing is saved on the server — so a question
+  // like "what can I pair it with?" has no antecedent unless the screen supplies
+  // one. The last wine this conversation actually surfaced is that antecedent,
+  // and it travels as the visible wine, exactly as it would from a wine's page.
+  function lastWineInConversation(): string | null {
+    for (let index = turns.length - 1; index >= 0; index -= 1) {
+      const results = turns[index]?.response?.data.results ?? [];
+      const wineId = results[0]?.wine.id;
+      if (typeof wineId === "string" && wineId.length > 0) return wineId;
+    }
+    return null;
+  }
+
   async function sendMessage() {
     const question = message.trim();
     if (user === null || question.length === 0 || pending) return;
     const id = createUlid();
+    const previousWineId = lastWineInConversation();
     setTurns((current) => [...current, { id, question, response: null, status: "pending" }]);
     setMessage("");
     try {
       const answer = await createAssistantTurn(user, bootstrap.data.user.activeSpaceId, {
-        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        context: { allowedCrossSpaceIds: [], visibleWineId: previousWineId },
         locale: currentLocale(i18n.language),
         message: question,
         saveHistory: false,
