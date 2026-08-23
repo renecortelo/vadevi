@@ -10,6 +10,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router";
 
+import { ModalDialog } from "../components/ModalDialog";
 import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
@@ -80,34 +81,37 @@ export function FactCard({
   const valueId = `fact-value-${fact.id}`;
   const highlight = highlightParts(fact);
   const dismissable = fact.status !== "accepted" && fact.status !== "retired";
-  // The discard control floats over the top-right corner so the fact text can run
-  // the full width of the card instead of being squeezed into a narrow column —
-  // the difference that made web notes wrap endlessly on a phone.
-  const dismiss = dismissable ? (
+  // A small "Discard" text sitting beside the heading — not a floating control.
+  // It asks for confirmation through the page, so a stray tap cannot delete a
+  // card. Inside a <summary> it also stops the click from toggling the card.
+  const discard = dismissable ? (
     <button
-      className="action-link action-link--quiet fact-card__dismiss"
-      aria-label={t("evidence.rejectAction")}
+      className="fact-card__discard"
       disabled={rejecting}
-      onClick={() => onReject(fact)}
+      onClick={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        onReject(fact);
+      }}
       type="button"
     >
-      {rejecting ? t("evidence.rejecting") : t("evidence.rejectAction")}
+      {t("evidence.rejectAction")}
     </button>
   ) : null;
 
-  // A web curiosity is a paragraph, not a data point: it collapses to a one-line
-  // lead and expands to the full text plus a small source link.
+  // A web curiosity leads with a short title; the full paragraph is what expands.
   if (fact.predicate === "curiosity.note") {
-    const text = String(fact.value);
-    const lead = text.length > 90 ? `${text.slice(0, 90).trimEnd()}…` : text;
     const citation = fact.citations[0];
+    const title = citation?.source.title ?? String(fact.value).slice(0, 60);
     return (
       <article className="fact-card" data-note="true" data-status={fact.status}>
-        {dismiss}
         <details className="fact-card__note">
-          <summary className="fact-card__note-lead">{lead}</summary>
+          <summary className="fact-card__head">
+            <span className="fact-card__note-title">{title}</span>
+            {discard}
+          </summary>
           <p className="fact-card__note-text" id={valueId}>
-            {text}
+            {String(fact.value)}
           </p>
           {citation === undefined ? null : (
             <a
@@ -126,17 +130,19 @@ export function FactCard({
 
   return (
     <article className="fact-card" data-highlight={highlight !== null} data-status={fact.status}>
-      {dismiss}
-      <p className="fact-card__value" id={valueId}>
-        {highlight === null ? (
-          <FactValue fact={fact} />
-        ) : (
-          <>
-            <span className="fact-card__key">{highlight.key}</span>
-            <span className="fact-card__answer">{highlight.answer}</span>
-          </>
-        )}
-      </p>
+      <div className="fact-card__head">
+        <p className="fact-card__value" id={valueId}>
+          {highlight === null ? (
+            <FactValue fact={fact} />
+          ) : (
+            <>
+              <span className="fact-card__key">{highlight.key}</span>
+              <span className="fact-card__answer">{highlight.answer}</span>
+            </>
+          )}
+        </p>
+        {discard}
+      </div>
       {/* Provenance is kept, but tucked away: the reader wants the fact, not the
           licence and support-strength metadata, unless they go looking for it. */}
       <details className="fact-card__source">
@@ -207,6 +213,7 @@ export function WineEvidencePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [rejectingId, setRejectingId] = useState<string | null>(null);
+  const [pendingDiscard, setPendingDiscard] = useState<Fact | null>(null);
   const [researching, setResearching] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
   const [researchError, setResearchError] = useState<string | null>(null);
@@ -278,6 +285,7 @@ export function WineEvidencePage() {
 
   async function dismissFact(fact: Fact) {
     if (user === null) return;
+    setPendingDiscard(null);
     setRejectingId(fact.id);
     setError(null);
     try {
@@ -424,7 +432,7 @@ export function WineEvidencePage() {
               <button
                 className="action-link action-link--quiet"
                 disabled={rejectingId === narrative.id}
-                onClick={() => void dismissFact(narrative)}
+                onClick={() => setPendingDiscard(narrative)}
                 type="button"
               >
                 {rejectingId === narrative.id
@@ -459,7 +467,7 @@ export function WineEvidencePage() {
                 <FactCard
                   fact={fact}
                   key={fact.id}
-                  onReject={(candidate) => void dismissFact(candidate)}
+                  onReject={(candidate) => setPendingDiscard(candidate)}
                   rejecting={rejectingId === fact.id}
                 />
               ))}
@@ -467,6 +475,24 @@ export function WineEvidencePage() {
           </section>
         ))}
       </div>
+      {pendingDiscard === null ? null : (
+        <ModalDialog labelledBy="discard-fact-title" onDismiss={() => setPendingDiscard(null)} open>
+          <h2 id="discard-fact-title">{t("evidence.discardConfirmTitle")}</h2>
+          <p>{t("evidence.discardConfirmBody")}</p>
+          <div className="hero__actions">
+            <button
+              className="action-link action-link--secondary"
+              onClick={() => void dismissFact(pendingDiscard)}
+              type="button"
+            >
+              {t("evidence.rejectAction")}
+            </button>
+            <button className="action-link" onClick={() => setPendingDiscard(null)} type="button">
+              {t("evidence.discardConfirmCancel")}
+            </button>
+          </div>
+        </ModalDialog>
+      )}
     </section>
   );
 }

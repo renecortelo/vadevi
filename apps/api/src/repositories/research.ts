@@ -471,30 +471,15 @@ async function collectProposals(
         const result = await webSearch.search({ locale: request.locale, query });
         if (result.status === "success") {
           attempts.push(successAttempt("web_search", result.cached));
-          // Web snippets come back mostly in English; translate them into the
-          // reader's language when a translator is configured. It is a faithful
-          // transform that falls back to the original on any failure, so a
-          // translation problem never loses a result.
-          let snippets = result.data.map((hit) => hit.snippet);
-          const translation = ports.translation ?? null;
-          if (translation !== null && request.locale !== "en" && snippets.length > 0) {
-            const translated = await translation.translate({
-              locale: request.locale,
-              texts: snippets,
-            });
-            if (translated !== null && translated.length === snippets.length) {
-              snippets = snippets.map((original, index) => translated[index] ?? original);
-            }
-          }
-          result.data.forEach((hit, index) => {
+          for (const hit of result.data) {
             proposals.push({
               confidenceMilli: 400,
               predicate: "curiosity.note",
               researchMethod: "web_search.v1",
               source: hit.source,
-              value: snippets[index] ?? hit.snippet,
+              value: hit.snippet,
             });
-          });
+          }
         } else {
           attempts.push(unavailableAttempt("web_search", result.reason, result.retryAfterSeconds));
         }
@@ -504,11 +489,64 @@ async function collectProposals(
     }
   }
 
-  if (proposals.length === 0) warnings.add("no_results");
-  if (attempts.some((attempt) => attempt.status === "unavailable") && proposals.length > 0) {
+  // Translate the prose we gathered into the reader's language in one pass — web
+  // snippets (and their page titles) come back mostly in English, and a Wikipedia
+  // summary falls back to the English article when there is no local one. It is a
+  // faithful transform that keeps the original on any failure, and the highlights
+  // are already localized by their source so they are left alone.
+  const translated = await translateProse(proposals, ports.translation ?? null, request.locale);
+
+  if (translated.length === 0) warnings.add("no_results");
+  if (attempts.some((attempt) => attempt.status === "unavailable") && translated.length > 0) {
     warnings.add("partial_results");
   }
-  return { attempts, proposals, warnings: [...warnings] };
+  return { attempts, proposals: translated, warnings: [...warnings] };
+}
+
+/** Translate the value (and, for a web note, its source title) of every prose
+ *  proposal, returning a new array; originals are kept on any failure. */
+async function translateProse(
+  proposals: ProposedFact[],
+  translation: ResearchPorts["translation"],
+  locale: CreateResearchJobRequest["locale"],
+): Promise<ProposedFact[]> {
+  if (translation === null || translation === undefined || locale === "en") return proposals;
+  const slots: { index: number; kind: "title" | "value" }[] = [];
+  const texts: string[] = [];
+  proposals.forEach((proposal, index) => {
+    if (proposal.predicate === "research.summary") {
+      slots.push({ index, kind: "value" });
+      texts.push(String(proposal.value));
+    } else if (proposal.predicate === "curiosity.note") {
+      slots.push({ index, kind: "title" });
+      texts.push(proposal.source.title);
+      slots.push({ index, kind: "value" });
+      texts.push(String(proposal.value));
+    }
+  });
+  if (texts.length === 0) return proposals;
+  let result: (string | null)[] | null;
+  try {
+    result = await translation.translate({ locale, texts });
+  } catch {
+    return proposals;
+  }
+  if (result === null || result.length !== texts.length) return proposals;
+  const patches = new Map<number, { title?: string; value?: string }>();
+  slots.forEach((slot, position) => {
+    const value = result[position];
+    if (value === null || value === undefined) return;
+    patches.set(slot.index, { ...patches.get(slot.index), [slot.kind]: value });
+  });
+  return proposals.map((proposal, index) => {
+    const patch = patches.get(index);
+    if (patch === undefined) return proposal;
+    return {
+      ...proposal,
+      ...(patch.value === undefined ? {} : { value: patch.value }),
+      ...(patch.title === undefined ? {} : { source: { ...proposal.source, title: patch.title } }),
+    };
+  });
 }
 
 async function resolveStoredProposals(
