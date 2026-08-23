@@ -451,4 +451,84 @@ describe("authenticated app shell", () => {
     expect(markup).toContain("Founded");
     expect(markup).toContain("1870");
   });
+  it("leads a web curiosity with its title and keeps the paragraph collapsed", () => {
+    const fact: Fact = {
+      citations: [
+        {
+          locator: null,
+          source: {
+            canonicalUrl: "https://example-winery.test/el-espino",
+            createdAt: "2026-08-23T10:00:00.000Z",
+            createdByProvider: "web_search",
+            createdByUserId: null,
+            id: "01J00000000000000000000009",
+            publisher: "example-winery.test",
+            retrievedAt: "2026-08-23T10:00:00.000Z",
+            sourceType: "other_web",
+            title: "El Espino, un tinto familiar",
+            updatedAt: "2026-08-23T10:00:00.000Z",
+          },
+          supportStrength: "supporting",
+        },
+      ],
+      confidenceMilli: 400,
+      createdAt: "2026-08-23T10:00:00.000Z",
+      evidenceClass: "researched",
+      id: "01J0000000000000000000000A",
+      observedByUserId: null,
+      predicate: "curiosity.note",
+      researchMethod: "web_search.v1",
+      status: "proposed",
+      subjectId: "01J00000000000000000000004",
+      subjectType: "wine",
+      updatedAt: "2026-08-23T10:00:00.000Z",
+      value: "El Espino proviene de una bodega familiar del Penedes con una larga historia.",
+      verifiedAt: null,
+      verifiedByUserId: null,
+      version: 1,
+    };
+
+    const markup = renderWithSession(
+      <FactCard fact={fact} onReject={() => undefined} rejecting={false} />,
+    );
+
+    // The source title is the heading, not a truncated run of the paragraph.
+    expect(markup).toContain("El Espino, un tinto familiar");
+    expect(markup).toContain("fact-card__note-title");
+    expect(markup).not.toContain("…");
+    // The paragraph and its source ride inside the collapsed details.
+    expect(markup).toContain("<details");
+    expect(markup).toContain("bodega familiar del Penedes");
+    expect(markup).toContain("example-winery.test");
+    // Discard sits beside the title rather than floating over the card.
+    expect(markup).toContain("fact-card__discard");
+  });
+
+  it("offers no discard on a claim the reader already discarded", () => {
+    const fact: Fact = {
+      citations: [],
+      confidenceMilli: 800,
+      createdAt: "2026-08-23T10:00:00.000Z",
+      evidenceClass: "researched",
+      id: "01J0000000000000000000000B",
+      observedByUserId: null,
+      predicate: "curiosity.highlight",
+      researchMethod: "wikidata.highlight.v1",
+      status: "retired",
+      subjectId: "01J00000000000000000000004",
+      subjectType: "wine",
+      updatedAt: "2026-08-23T10:00:00.000Z",
+      value: "Fundacion: 1870",
+      verifiedAt: null,
+      verifiedByUserId: null,
+      version: 2,
+    };
+
+    const markup = renderWithSession(
+      <FactCard fact={fact} onReject={() => undefined} rejecting={false} />,
+    );
+
+    expect(markup).toContain('data-status="retired"');
+    expect(markup).not.toContain("fact-card__discard");
+  });
 });
