@@ -411,6 +411,39 @@ describe("Vicenç deterministic read path", () => {
     );
     expect(factResponse.status).toBe(201);
 
+    // A second fact the reader discards must not reach the assistant.
+    const discardedResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      {
+        body: JSON.stringify({
+          citations: [],
+          evidenceClass: "observed",
+          predicate: "production.method",
+          value: "Discarded detail",
+        }),
+        headers: {
+          Authorization: `Bearer ${ownerToken}`,
+          "Content-Type": "application/json",
+          "Idempotency-Key": randomOpaqueToken(),
+        },
+        method: "POST",
+      },
+    );
+    expect(discardedResponse.status).toBe(201);
+    const discarded = (await discardedResponse.json()) as { data: { id: string; version: number } };
+    const rejectResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/facts/${discarded.data.id}/reject`,
+      {
+        body: JSON.stringify({ version: discarded.data.version }),
+        headers: {
+          Authorization: `Bearer ${ownerToken}`,
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      },
+    );
+    expect(rejectResponse.status).toBe(200);
+
     const response = await assistantTurn(ownerToken, spaceId, "Show this wine", [], wine.id);
     const body = AssistantTurnResponseSchema.parse(await response.json());
     expect(body.data.wineContext).toMatchObject({
@@ -423,6 +456,8 @@ describe("Vicenç deterministic read path", () => {
       ],
       wineId: wine.id,
     });
+    // Only the live fact is present; the retired one is filtered out.
+    expect(body.data.wineContext?.facts).toHaveLength(1);
     expect(body.data.citations.map((citation: { id: string }) => citation.id)).toEqual([
       source.data.id,
     ]);

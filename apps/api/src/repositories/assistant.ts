@@ -764,15 +764,18 @@ async function getVisibleWineContext(
     wineId: visibleWineId,
   });
   if (response === null) return { citations: [], context: null };
+  // A discarded (retired) fact must never reach Vicenç — the reader threw it out,
+  // so the assistant should not repeat it as if it were still evidence.
+  const liveFacts = response.data.facts.filter((fact: Fact) => fact.status !== "retired");
   const citations = new Map<string, Source>();
-  for (const fact of response.data.facts) {
+  for (const fact of liveFacts) {
     for (const citation of fact.citations) citations.set(citation.source.id, citation.source);
   }
   return {
     citations: [...citations.values()].slice(0, 8),
     context: {
       conflicts: response.data.conflicts.slice(0, 25),
-      facts: response.data.facts.slice(0, 50),
+      facts: liveFacts.slice(0, 50),
       spaceId: visible.spaceId,
       wineId: visibleWineId,
     },
@@ -1025,13 +1028,22 @@ function languageStatements(
       .filter((value) => value !== null)
       .join("; "),
   }));
+  // These predicates already read as a full phrase or "label: value" pair, so the
+  // raw predicate name would only add noise; other predicates keep it as a label.
+  const selfDescribing = new Set([
+    "curiosity.highlight",
+    "curiosity.note",
+    "research.summary",
+    "further_reading.summary",
+  ]);
   for (const fact of context?.facts ?? []) {
+    const value = Array.isArray(fact.value) ? fact.value.join(", ") : String(fact.value);
     statements.push({
       evidenceClass: fact.evidenceClass,
       id: `fact-${fact.id}`,
       sampleSize: null,
       sourceIds: fact.citations.map((citation: Fact["citations"][number]) => citation.source.id),
-      text: `${fact.predicate}: ${Array.isArray(fact.value) ? fact.value.join(", ") : String(fact.value)}`,
+      text: selfDescribing.has(fact.predicate) ? value : `${fact.predicate}: ${value}`,
     });
   }
   if (profile !== null && profile.confidence !== "insufficient") {
