@@ -1364,7 +1364,11 @@ export async function runDeterministicAssistantTurn(
             fact.predicate === "research.summary"),
       )
       .map((fact: Fact) => String(fact.value))
-      .slice(0, 5);
+      .slice(0, 8);
+    // What the bottle IS, then what the sources say about it — that is the basis
+    // for a pairing. The reader's own tasting lines travel separately and are
+    // marked as secondary: a pairing built entirely on one impression of one
+    // glass is not what someone asking "what goes with this?" wants back.
     const attributes = [
       wine.wineType === null ? null : `type: ${wine.wineType}`,
       wine.grapes.length === 0
@@ -1372,14 +1376,15 @@ export async function runDeterministicAssistantTurn(
         : `grapes: ${wine.grapes.map((grape: WineGrapeSummary) => grape.name).join(", ")}`,
       wine.region === null ? null : `region: ${wine.region}`,
       wine.vintageYear === null ? null : `vintage: ${wine.vintageYear}`,
-      ...(namedWine.notes ?? []).slice(0, 2),
       ...researchedLines,
     ].filter((attribute): attribute is string => attribute !== null && attribute.length > 0);
-    if (attributes.length > 0) {
+    const readerNotes = (namedWine.notes ?? []).slice(0, 2);
+    if (attributes.length > 0 || readerNotes.length > 0) {
       try {
         const ideas = await foodIdeas.suggest({
           attributes,
           locale: options.request.locale,
+          notes: readerNotes,
           wine: wine.displayName,
         });
         if (ideas !== null) {

@@ -97,8 +97,13 @@ export class CloudflareFoodIdeasAdapter implements FoodIdeasPort {
       .map((attribute) => attribute.trim())
       .filter((attribute) => attribute.length > 0)
       .slice(0, 10)
-      .map((attribute) => attribute.slice(0, 200));
-    if (attributes.length === 0) return null;
+      .map((attribute) => attribute.slice(0, 300));
+    const notes = input.notes
+      .map((note) => note.trim())
+      .filter((note) => note.length > 0)
+      .slice(0, 2)
+      .map((note) => note.slice(0, 200));
+    if (attributes.length === 0 && notes.length === 0) return null;
     const language = languageNames[input.locale];
     try {
       const output = await this.ai.run(this.model, {
@@ -107,15 +112,21 @@ export class CloudflareFoodIdeasAdapter implements FoodIdeasPort {
           {
             content:
               `You are a sommelier suggesting food for a wine, writing in ${language}. ` +
-              `From the wine's attributes, propose 2 to 4 dishes that would suit it. ` +
-              `Each entry is a short phrase naming the dish and, after an em dash, a ` +
-              `few words on why it works. Suggest dishes only — never state new facts ` +
-              `about the wine, never invent its flavours, score, or price. Reply with ` +
-              `ONLY a JSON array of strings. No markdown.`,
+              `Base the pairing on "wine" — what the bottle is, and what the sources ` +
+              `say about it or its grape. "readerNotes" is one person's impression of ` +
+              `one glass: use it only as secondary colour, and never let it override ` +
+              `what the wine is. Propose 2 to 4 dishes that would suit it. Each entry ` +
+              `is a short phrase naming the dish and, after an em dash, a few words on ` +
+              `why it works. Suggest dishes only — never state new facts about the ` +
+              `wine, never invent its flavours, score, or price. Reply with ONLY a ` +
+              `JSON array of strings. No markdown.`,
             role: "system",
           },
           {
-            content: JSON.stringify({ attributes, wine: input.wine.slice(0, 200) }),
+            content: JSON.stringify({
+              readerNotes: notes,
+              wine: { attributes, name: input.wine.slice(0, 200) },
+            }),
             role: "user",
           },
         ],
