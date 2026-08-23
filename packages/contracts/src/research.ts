@@ -19,29 +19,11 @@ const UniqueTopicsSchema = z
   .max(7)
   .refine((topics: string[]) => new Set(topics).size === topics.length, "Topics must be unique.");
 
-const WikidataEntityIdsSchema = z
-  .object({
-    producer: z
-      .string()
-      .regex(/^Q[1-9]\d{0,11}$/)
-      .optional(),
-    region: z
-      .string()
-      .regex(/^Q[1-9]\d{0,11}$/)
-      .optional(),
-    wine: z
-      .string()
-      .regex(/^Q[1-9]\d{0,11}$/)
-      .optional(),
-  })
-  .strict();
-
 export const CreateResearchJobRequestSchema = z
   .object({
     locale: SupportedLocaleSchema,
     maxSources: z.number().int().min(1).max(8).default(4),
     topics: UniqueTopicsSchema,
-    wikidataEntityIds: WikidataEntityIdsSchema.default({}),
   })
   .strict()
   .openapi("CreateResearchJobRequest");

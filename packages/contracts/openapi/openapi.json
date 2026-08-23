@@ -9786,25 +9786,6 @@
             },
             "minItems": 1,
             "maxItems": 7
-          },
-          "wikidataEntityIds": {
-            "type": "object",
-            "properties": {
-              "producer": {
-                "type": "string",
-                "pattern": "^Q[1-9]\\d{0,11}$"
-              },
-              "region": {
-                "type": "string",
-                "pattern": "^Q[1-9]\\d{0,11}$"
-              },
-              "wine": {
-                "type": "string",
-                "pattern": "^Q[1-9]\\d{0,11}$"
-              }
-            },
-            "default": {},
-            "additionalProperties": false
           }
         },
         "required": [
