@@ -1390,7 +1390,9 @@ export async function runDeterministicAssistantTurn(
               id: `food-idea-${index}`,
               sampleSize: null,
               sourceIds: [],
-              text: `a dish that would suit ${wine.displayName}: ${idea}`,
+              // The idea already comes back in the reader's language; an English
+              // wrapper here is what taught the model to answer in English.
+              text: `${wine.displayName} — ${idea}`,
             })),
           ];
         }
