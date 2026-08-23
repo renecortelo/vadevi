@@ -36,6 +36,11 @@ describe("provider-backed assistant language enforcement", () => {
     // answered a Spanish reader in English. The target language is now named.
     expect(systemMessage).toContain("Spanish");
     expect(systemMessage).not.toContain("requested locale");
+    // Naming it as the reply — "write your entire reply in Spanish" — made the
+    // model write prose and skip the JSON contract altogether. The language must
+    // be described as a property of the claim text, with the format stated first.
+    expect(systemMessage).not.toMatch(/write your (entire )?reply/i);
+    expect(systemMessage.slice(0, 60)).toContain("JSON");
   });
 
   it("keeps a claim even when the model echoes an extra field like evidenceClass", async () => {
