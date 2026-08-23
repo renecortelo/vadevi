@@ -650,6 +650,7 @@ describe("external research adapters", () => {
       adapter.suggest({
         attributes: ["type: red", "grapes: Tempranillo", "region: Rioja"],
         locale: "es",
+        notes: [],
         wine: "El Coto",
       }),
     ).resolves.toEqual([
@@ -659,7 +660,7 @@ describe("external research adapters", () => {
 
     // Nothing to work from, and a failed call, both yield null rather than guesses.
     await expect(
-      adapter.suggest({ attributes: [], locale: "es", wine: "El Coto" }),
+      adapter.suggest({ attributes: [], locale: "es", notes: [], wine: "El Coto" }),
     ).resolves.toBeNull();
     const broken = new CloudflareFoodIdeasAdapter(
       {
@@ -670,7 +671,39 @@ describe("external research adapters", () => {
       model,
     );
     await expect(
-      broken.suggest({ attributes: ["type: red"], locale: "es", wine: "X" }),
+      broken.suggest({ attributes: ["type: red"], locale: "es", notes: [], wine: "X" }),
     ).resolves.toBeNull();
+  });
+
+  it("puts the sources on the wine and the reader's notes in their own place", async () => {
+    let sent: { readerNotes?: unknown; wine?: unknown } = {};
+    const adapter = new CloudflareFoodIdeasAdapter(
+      {
+        run: async (_model, input) => {
+          const messages = input.messages as { content: string; role: string }[];
+          sent = JSON.parse(messages.find((message) => message.role === "user")?.content ?? "{}");
+          const system = messages.find((message) => message.role === "system")?.content ?? "";
+          // The instruction must say which one leads.
+          expect(system).toContain("secondary");
+          return { response: '["Ostras — su salinidad realza la acidez"]' };
+        },
+      },
+      "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    );
+
+    await adapter.suggest({
+      attributes: ["type: white", "Sauvignon Blanc · color: verde"],
+      locale: "es",
+      notes: ["me supo a manzana"],
+      wine: "Kiwi Trail",
+    });
+
+    // What the wine is, and what the sources say, travel together as the wine;
+    // one person's impression of one glass travels separately.
+    expect(sent.wine).toMatchObject({
+      attributes: ["type: white", "Sauvignon Blanc · color: verde"],
+      name: "Kiwi Trail",
+    });
+    expect(sent.readerNotes).toEqual(["me supo a manzana"]);
   });
 });

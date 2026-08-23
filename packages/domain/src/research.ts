@@ -156,8 +156,13 @@ export interface NarrativePort {
  */
 export type FoodIdeasRequest = Readonly<{
   locale: ResearchLocale;
-  /** Short, factual lines about the wine — type, grapes, region, tasting notes. */
+  /** What the bottle is, and what the sources say about it or its grape. This is
+   *  the basis for a pairing: the producer's and the reference works' account of
+   *  the wine, rather than one person's impression of one glass. */
   attributes: string[];
+  /** The reader's own tasting lines. Useful colour, deliberately secondary: a
+   *  pairing should follow what the wine IS, not only how it struck them once. */
+  notes: string[];
   wine: string;
 }>;
 
