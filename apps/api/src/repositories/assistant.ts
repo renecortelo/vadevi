@@ -131,6 +131,45 @@ function dishFromMessage(message: string): string {
   return dish.length >= 2 ? dish : normalizeWineText(message).slice(0, 200);
 }
 
+// A pairing question often points at a wine by its style rather than its name —
+// "what can I pair that cava with?". These terms let such a question narrow to
+// the reader's wines of that style, the same way naming a bottle narrows to it.
+const wineTypeTerms: [string, NonNullable<WineSummary["wineType"]>][] = [
+  ["cava", "sparkling"],
+  ["champan", "sparkling"],
+  ["champagne", "sparkling"],
+  ["prosecco", "sparkling"],
+  ["espumoso", "sparkling"],
+  ["espumante", "sparkling"],
+  ["sparkling", "sparkling"],
+  ["cremant", "sparkling"],
+  ["tinto", "red"],
+  ["red", "red"],
+  ["rouge", "red"],
+  ["rosso", "red"],
+  ["blanco", "white"],
+  ["white", "white"],
+  ["blanc", "white"],
+  ["bianco", "white"],
+  ["rosado", "rose"],
+  ["rose", "rose"],
+  ["rosat", "rose"],
+  ["naranja", "orange"],
+  ["orange", "orange"],
+  ["generoso", "fortified"],
+  ["fortified", "fortified"],
+  ["jerez", "fortified"],
+  ["oporto", "fortified"],
+];
+
+function wineTypeFromMessage(message: string): NonNullable<WineSummary["wineType"]> | null {
+  const padded = ` ${normalizeWineText(message)} `;
+  for (const [term, type] of wineTypeTerms) {
+    if (padded.includes(` ${term} `)) return type;
+  }
+  return null;
+}
+
 function colorToWineType(color: string | null): WineSummary["wineType"] | null {
   switch ((color ?? "").toLowerCase()) {
     case "red":
@@ -1225,19 +1264,34 @@ export async function runDeterministicAssistantTurn(
   // for a dish — and the provider only answers dish → wine styles. Sending the
   // wine's own name as if it were a dish produced nonsense (a bottle unrelated to
   // the question), so that path is answered separately, below.
+  const askedType = wineTypeFromMessage(options.request.message);
   const namedWine =
     results.find((result) => {
       const name = normalizeWineText(result.wine.displayName);
       return name.length >= 3 && normalizeWineText(options.request.message).includes(name);
-    }) ?? null;
+    }) ??
+    // "…with that cava?" points at a wine by style rather than by name. When the
+    // reader owns exactly one wine of that style, the question is about it.
+    (askedType === null
+      ? null
+      : (() => {
+          const ofType = results.filter((result) => result.wine.wineType === askedType);
+          return ofType.length === 1 ? ofType[0]! : null;
+        })()) ??
+    null;
   const namesOwnWine = namedWine !== null;
   // A pairing question that names one bottle is about THAT bottle. Search also
   // returns near matches, and handing them all to the model made it answer about
   // another wine entirely ("what can I pair the Naltros with?" opening with El
   // Coto). Narrowed to pairing only: comparisons and recommendations legitimately
   // need the other results.
-  if (namedWine !== null && requestsPairing(options.request.message)) {
+  if (requestsPairing(options.request.message) && namedWine !== null) {
     results = [namedWine];
+  } else if (requestsPairing(options.request.message) && askedType !== null) {
+    // Several wines of the named style: still better to answer about those than
+    // to hand the model the whole cellar as "matching wines".
+    const ofType = results.filter((result) => result.wine.wineType === askedType);
+    if (ofType.length > 0) results = ofType;
   }
   if (options.pairing !== null && requestsPairing(options.request.message) && !namesOwnWine) {
     const dish = dishFromMessage(options.request.message);
