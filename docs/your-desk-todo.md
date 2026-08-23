@@ -79,6 +79,8 @@ default stays `none` and nothing about this is committed. What is set:
 | `RESEARCH_PROVIDER`       | `open_data`                                          | external evidence on a wine                    |
 | `PAIRING_PROVIDER`        | `sommelierx`                                         | food-and-wine pairing (ranks your own bottles) |
 | `SOMMELIERX_API_KEY`      | _(secret, in `.dev.vars` / `wrangler secret`)_       | the same — pairing stays off without it        |
+| `WEBSEARCH_PROVIDER`      | `brave` (or `tavily`)                                | open-web wine discovery in research            |
+| `WEBSEARCH_API_KEY`       | _(secret, via `wrangler secret put`)_                | the same — web search stays off without it     |
 | `EXTERNAL_API_USER_AGENT` | `VaDeVi/0.1 (https://github.com/renecortelo/vadevi)` | the same — it is the second half of the switch |
 
 The OCR model is one of the three on the allowlist in `apps/api/src/adapters/label-ocr.ts`.
@@ -124,6 +126,13 @@ binding resolves. It all takes effect on your next real deploy (step 1).
    a bottle, never your cellar. Read `docs/privacy-review-sommelierx.md` before you
    rely on it, and know it is a third-party service under its own terms. To turn it
    off, set `PAIRING_PROVIDER` back to `none`; the assistant then answers without it.
+4. Web search (optional, for wines not in Wikidata) sends the **wine's identity**
+   — producer, name, region — to Brave or Tavily, the same footprint already going
+   to Wikidata. The app never fetches the result pages, only the provider's cited
+   snippets, shown as low-confidence proposals you confirm or discard. With
+   `AI_PROVIDER=cloudflare` on, those snippets are translated into your language.
+   Read `docs/privacy-review-websearch.md`; store the key with
+   `wrangler secret put WEBSEARCH_API_KEY`, set `WEBSEARCH_PROVIDER`, and redeploy.
 
 Then test, after deploying: photograph a label and see it read fields (OCR), ask
 Vicenç something (text model), and open a wine → **Evidence** → **Research this wine**

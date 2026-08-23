@@ -165,6 +165,11 @@ explains exactly what leaves your deployment:
 - `docs/privacy-review-sommelierx.md` — sends the **dish text** the reader types
   to get pairing criteria, used only to rank the reader's own bottles. A
   third-party service under its own terms.
+- `docs/privacy-review-websearch.md` — sends the **wine's identity** (producer,
+  name, region) to a search API (Brave or Tavily) to find wines the open-data
+  sources do not hold. Same identity footprint as the Wikidata lookup; results
+  are low-confidence, cited proposals the reader confirms. When Workers AI is on,
+  those snippets are also translated into the reader's language.
 
 ### What works with both off
 
@@ -206,6 +211,8 @@ photograph, and Vicenç's language replies.
    | `RESEARCH_PROVIDER`  | `open_data`                                | barcode lookup in Open Food Facts |
    | `PAIRING_PROVIDER`   | `sommelierx`                               | food-and-wine pairing (external)  |
    | `SOMMELIERX_API_KEY` | a `sk_live_…` key (a secret, not a var)    | the same — pairing needs both     |
+   | `WEBSEARCH_PROVIDER` | `brave` or `tavily`                        | open-web wine discovery           |
+   | `WEBSEARCH_API_KEY`  | the provider's key (a secret, not a var)   | the same — web search needs both  |
 
    The OCR allowlist is fixed in code — `apps/api/src/adapters/label-ocr.ts` —
    so a model outside it is refused rather than silently used. Check
@@ -215,6 +222,14 @@ photograph, and Vicenç's language replies.
    dish text off-device — enable it only after reading
    `docs/privacy-review-sommelierx.md`. It defaults off; without both
    `PAIRING_PROVIDER=sommelierx` and a valid key, the assistant answers without it.
+
+   Web search rides on top of research (`RESEARCH_PROVIDER=open_data`): it finds
+   wines the open-data sources do not hold by sending the wine's identity to Brave
+   or Tavily, and defaults off without both `WEBSEARCH_PROVIDER` and a valid
+   `WEBSEARCH_API_KEY`. Read `docs/privacy-review-websearch.md` first; the app
+   never fetches the result pages itself, only the provider's snippets. When
+   `AI_PROVIDER=cloudflare`, those snippets are translated into the reader's
+   language with the same model as Vicenç.
 
    Setting `AI_PROVIDER=cloudflare` without a valid model, or without the
    binding, leaves the feature off rather than half-on. The adapters return
