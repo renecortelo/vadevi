@@ -366,9 +366,16 @@ async function collectProposals(
   return { attempts, proposals: composed, warnings: [...warnings] };
 }
 
-/** Replace the research summary with a grounded paragraph the model writes from
- *  the summary plus the discovered highlights. Only runs when a Wikipedia-backed
- *  summary already exists (it carries the citation); keeps it on any failure. */
+/**
+ * Write the "about this wine" paragraph from everything research gathered.
+ *
+ * When a Wikipedia summary is present it is rewritten in place, keeping its
+ * citation. When there is none — the common case now that only the grape is
+ * looked up in Wikidata, so a wine whose winery has no article had no paragraph
+ * at all — the paragraph is composed from the web notes and highlights instead,
+ * and cited to the source of the material it was written from. Keeps whatever it
+ * had on any failure.
+ */
 async function composeNarrative(
   proposals: ProposedFact[],
   narrative: ResearchPorts["narrative"],
@@ -377,12 +384,14 @@ async function composeNarrative(
 ): Promise<ProposedFact[]> {
   if (narrative === null || narrative === undefined) return proposals;
   const summaryIndex = proposals.findIndex((proposal) => proposal.predicate === "research.summary");
-  if (summaryIndex === -1) return proposals;
+  const material = proposals.filter(
+    (proposal) =>
+      proposal.predicate === "curiosity.note" || proposal.predicate === "curiosity.highlight",
+  );
+  if (summaryIndex === -1 && material.length === 0) return proposals;
   const statements = [
-    String(proposals[summaryIndex]!.value),
-    ...proposals
-      .filter((proposal) => proposal.predicate === "curiosity.highlight")
-      .map((proposal) => String(proposal.value)),
+    ...(summaryIndex === -1 ? [] : [String(proposals[summaryIndex]!.value)]),
+    ...material.map((proposal) => String(proposal.value)),
   ];
   let paragraph: string | null;
   try {
@@ -391,9 +400,24 @@ async function composeNarrative(
     return proposals;
   }
   if (paragraph === null) return proposals;
-  return proposals.map((proposal, index) =>
-    index === summaryIndex ? { ...proposal, value: paragraph } : proposal,
-  );
+  if (summaryIndex !== -1) {
+    return proposals.map((proposal, index) =>
+      index === summaryIndex ? { ...proposal, value: paragraph } : proposal,
+    );
+  }
+  // No encyclopedic opener: the paragraph stands on the gathered material, cited
+  // to the source that material came from so it remains traceable.
+  const first = material[0]!;
+  return [
+    {
+      confidenceMilli: 600,
+      predicate: "research.summary",
+      researchMethod: "narrative.compose.v1",
+      source: first.source,
+      value: paragraph,
+    },
+    ...proposals,
+  ];
 }
 
 /** Translate the value (and, for a web note, its source title) of every prose

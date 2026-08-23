@@ -619,6 +619,86 @@ describe("bounded wine research jobs", () => {
     expect(summaries[0]?.citations.length).toBeGreaterThan(0);
   });
 
+  it("writes a narrative from web material when there is no encyclopedia summary", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "El Espino",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Bodega Pequena",
+        vintageYear: 2020,
+        wineType: "red",
+      }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wine = CreateWineResponseSchema.parse(await created.json()).data.wine;
+
+    let composedFrom: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: null,
+      narrative: {
+        compose: async ({ statements }) => {
+          composedFrom = statements;
+          return "El Espino es un tinto de una bodega familiar.";
+        },
+      },
+      product: null,
+      providerMode: "open_data",
+      webSearch: {
+        search: async () => ({
+          cached: false,
+          data: [
+            {
+              snippet: "El Espino proviene de una bodega familiar.",
+              source: {
+                canonicalUrl: "https://example-winery.test/el-espino-sin-wiki",
+                publisher: "example-winery.test",
+                retrievedAt: "2026-08-23T10:00:00.000Z",
+                sourceType: "other_web",
+                title: "El Espino sin wiki",
+              },
+              title: "El Espino sin wiki",
+            },
+          ],
+          status: "success",
+        }),
+      },
+    };
+    const job = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "es" as const,
+        maxSources: 4,
+        topics: ["identity"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(job.kind).toBe("success");
+    expect(composedFrom).toEqual(["El Espino proviene de una bodega familiar."]);
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const summary = facts.find((fact: Fact) => fact.predicate === "research.summary");
+    // A wine with no encyclopedia article still gets a paragraph, cited to the
+    // web source the material came from.
+    expect(summary?.value).toBe("El Espino es un tinto de una bodega familiar.");
+    expect(summary?.citations[0]?.source.canonicalUrl).toBe(
+      "https://example-winery.test/el-espino-sin-wiki",
+    );
+  });
+
   it("does not research a grape name that matches something other than a grape", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
