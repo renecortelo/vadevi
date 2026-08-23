@@ -53,3 +53,14 @@ own records, never presented as a fact the reader entered.
 4. Confirm the free-tier / paid terms and daily call allowance fit expected use.
 
 Until every step is done, pairing stays off and the assistant answers without it.
+
+## The other direction: dish ideas for a wine
+
+Asking "what can I eat with this bottle?" is not something this provider can
+answer — it maps a dish to wine styles, not the reverse. That question is instead
+answered by Workers AI (the same `AI_PROVIDER=cloudflare` used elsewhere) from the
+wine's **own recorded attributes** — type, grapes, region, vintage, and the
+reader's own tasting lines. Those attributes go to Cloudflare's model; no other
+wine, no cellar list, and no identifier is sent. The result is surfaced as an
+explicit suggestion (`inferred`), never as a stored fact about the bottle, and it
+is skipped entirely when Workers AI is off.

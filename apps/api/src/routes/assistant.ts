@@ -7,6 +7,7 @@ import {
 } from "@vadevi/contracts";
 
 import { createAssistantLanguagePort } from "../adapters/assistant-language";
+import { createFoodIdeasPort } from "../adapters/narrative";
 import { createFoodPairingPort } from "../adapters/pairing-factory";
 import { createSemanticNotePort } from "../adapters/semantic-notes";
 import { reserveProviderBudget } from "../services/usage";
@@ -66,6 +67,7 @@ export function registerAssistantRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const response = await runDeterministicAssistantTurn(context.env.DB!, {
       aiProvider: context.env.AI_PROVIDER ?? "none",
       externalResearch: externalResearchEnabled(context.env),
+      foodIdeas: withinBudget ? createFoodIdeasPort(context.env) : null,
       language: withinBudget ? language : null,
       pairing: withinBudget ? createFoodPairingPort(context.env.DB!, context.env) : null,
       principal: context.get("principal"),
