@@ -28,32 +28,6 @@ function nameMatches(field: string, label: string): boolean {
   return a === b || a.includes(b) || b.includes(a);
 }
 
-// Producer and wine names are fanciful — "Áster", "El Espino", "Mimo" — so a
-// name search hits unrelated Wikidata entities (a flower genus, a film, a
-// person) far more often than the actual winery. The wineBoost side ranks a real
-// wine entity first; the nonPlace side is now a HARD reject, not just a demotion:
-// a candidate that positively looks like a genus, species, film, person, etc. is
-// dropped entirely, so a producer that only collides with the Aster flower
-// yields nothing to research rather than a botany lesson. Descriptions come back
-// localized, so the vocabulary spans the languages we serve.
-const wineBoostPattern =
-  /\b(wine|vineyard|winery|vino|vinicol\w*|vin|vign\w*|wein|weingut|wijn|bodega|cantina|denomin\w*|appellation|region|regio\w*|province|provin\w*|comune|valley|vall\w*|comarca|estate|domaine|chateau|celler|winemaker|producer|productor\w*|produttore|producteur)\b/i;
-const nonPlacePattern =
-  /\b(genus|species|arachnid|spider|insect|beetle|moth|butterfly|animal|plant|fungus|alga|film|movie|album|song|band|novel|footballer|player|actor|actress|singer|politician|surname|given name|genere|genero|especie|especies|aracnid\w*|insecto|animal|planta|pelicula|cancion|apellido|gattung|art|tier|pflanze|geslacht|soort|espece|genre)\b/i;
-
-function candidateScore(description: string | null): number {
-  const text = description ?? "";
-  return (wineBoostPattern.test(text) ? 1 : 0) - (nonPlacePattern.test(text) ? 1 : 0);
-}
-
-// Whether a name-matched entity is plausibly the wine's producer or region, as
-// opposed to a same-named genus/film/person. Wine-looking (score > 0) and
-// neutral (score 0, e.g. a sparse description) pass; actively-unrelated
-// (score < 0) is rejected.
-function isPlausibleWineEntity(description: string | null): boolean {
-  return candidateScore(description) >= 0;
-}
-
 // Grape names collide with ordinary words far more than producer names do —
 // "garnacha" is also a Mexican antojito, "moscatel" a dessert, "malbec" a
 // restaurant. A grape entity is a plant, so the general non-place reject cannot
@@ -283,95 +257,19 @@ async function collectProposals(
     proposals.push(...appellationFacts);
   }
 
-  // Resolve producer and region to Wikidata entities by name when the caller
-  // did not supply an id — nobody types "Q…". A name that resolves to nothing
-  // close enough is simply left unresolved. The wine itself is not resolved this
-  // way: a specific bottling rarely has its own entity, and a loose name match
-  // would attach the wrong one.
-  const entityIds = { ...request.wikidataEntityIds };
-  if (ports.knowledge !== null) {
-    const toResolve = [
-      request.topics.includes("producer") &&
-      entityIds.producer === undefined &&
-      access.producer_name.trim().length > 0
-        ? {
-            field: access.producer_name,
-            key: "producer" as const,
-            subjectType: "producer" as const,
-          }
-        : null,
-      request.topics.includes("region") &&
-      entityIds.region === undefined &&
-      (access.region ?? "").trim().length > 0
-        ? { field: access.region!, key: "region" as const, subjectType: "region" as const }
-        : null,
-    ].filter((candidate) => candidate !== null);
-    for (const target of toResolve) {
-      try {
-        const found = await ports.knowledge.searchEntities({
-          locale: request.locale,
-          subjectType: target.subjectType,
-          term: target.field,
-        });
-        if (found.status !== "success") continue;
-        const match = found.data.find(
-          (candidate) =>
-            isPlausibleWineEntity(candidate.description) &&
-            nameMatches(target.field, candidate.label),
-        );
-        if (match !== undefined) entityIds[target.key] = match.id;
-      } catch {
-        // A failed resolution just leaves the topic unresolved.
-      }
-    }
-  }
-
-  const knowledgeRequests = [
-    request.topics.includes("identity") && entityIds.wine !== undefined
-      ? { entityId: entityIds.wine, subjectType: "wine" as const }
-      : null,
-    request.topics.includes("producer") && entityIds.producer !== undefined
-      ? { entityId: entityIds.producer, subjectType: "producer" as const }
-      : null,
-    request.topics.includes("region") && entityIds.region !== undefined
-      ? { entityId: entityIds.region, subjectType: "region" as const }
-      : null,
-  ].filter((candidate) => candidate !== null);
-  // The wine identity is served by the barcode, not a Wikidata entity, so only
-  // producer and region can be "missing" one — and now only when a name could
-  // not be resolved to a close-enough entity.
-  const requestedNameTopics = ["producer", "region"].filter((topic) =>
-    request.topics.includes(topic as ResearchJob["topics"][number]),
-  );
-  const resolvedNameTopics = knowledgeRequests.filter(
-    (candidate) => candidate.subjectType === "producer" || candidate.subjectType === "region",
-  ).length;
-  if (requestedNameTopics.length > resolvedNameTopics) {
-    warnings.add("missing_wikidata_entity");
-  }
-  if (ports.knowledge !== null) {
-    for (const knowledgeRequest of knowledgeRequests) {
-      try {
-        const result = await ports.knowledge.research({
-          ...knowledgeRequest,
-          locale: request.locale,
-        });
-        if (result.status === "success") {
-          attempts.push(successAttempt("wikidata", result.cached));
-          proposals.push(...result.data);
-        } else {
-          attempts.push(unavailableAttempt("wikidata", result.reason, result.retryAfterSeconds));
-        }
-      } catch {
-        attempts.push(unavailableAttempt("wikidata", "provider_error", null));
-      }
-    }
-  }
-  // Grapes are resolved and researched by name too, so the wine's varieties
+  // Wikidata is no longer asked about the producer or the region. Wine and winery
+  // names are fanciful, so name resolution kept attaching the wrong entity (a
+  // flower genus for "Áster") or the right entity's wrong detail (the winery's
+  // head office presented as the wine's appellation — a Penedès wine labelled
+  // Ribera del Duero). The open web answers those far better in prose, and the
+  // regulatory register still answers the region's country and category exactly.
+  // What Wikidata IS precise about is the grape, so that is all it is asked.
+  //
+  // Grapes are resolved and researched by name, so the wine's varieties
   // contribute their own open highlights (colour, origin, and whatever else the
-  // entity carries). There is no picker for grapes — a blend has several and they
-  // are far less ambiguous than a producer — so a close-enough name match is
-  // researched directly, and a wrong one can be discarded like any other.
+  // entity carries). There is no picker — a blend has several — so a close-enough
+  // name match whose description confirms it is a grape is researched directly,
+  // and a wrong one can be discarded like any other.
   if (request.topics.includes("grapes") && ports.knowledge !== null) {
     const seen = new Set<string>();
     const names = grapeNames
