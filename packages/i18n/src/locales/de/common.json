@@ -222,6 +222,9 @@
       "needs_attention": "Er bleibt lokal erhalten und benötigt Ihre Aufmerksamkeit."
     },
     "identifyAction": "Etikett scannen oder lesen",
+    "prefillLabel": "Aus einem vorhandenen Wein vorausfüllen",
+    "prefillPlaceholder": "Wein wählen…",
+    "prefillHelp": "Kopiert seine Angaben in einen neuen Eintrag — dann nur den Jahrgang ändern.",
     "moreDetails": "Mehr Details"
   },
   "memory": {

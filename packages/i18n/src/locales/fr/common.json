@@ -222,6 +222,9 @@
       "needs_attention": "Il est conservé localement et requiert votre attention."
     },
     "identifyAction": "Scanner ou lire une étiquette",
+    "prefillLabel": "Pré-remplir depuis un vin que vous avez",
+    "prefillPlaceholder": "Choisir un vin…",
+    "prefillHelp": "Copie ses informations dans une nouvelle entrée — changez ensuite le millésime.",
     "moreDetails": "Plus de détails"
   },
   "memory": {

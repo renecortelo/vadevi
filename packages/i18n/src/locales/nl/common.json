@@ -222,6 +222,9 @@
       "needs_attention": "Het is lokaal bewaard en heeft je aandacht nodig."
     },
     "identifyAction": "Scan of lees een etiket",
+    "prefillLabel": "Vooraf invullen vanuit een wijn die je hebt",
+    "prefillPlaceholder": "Kies een wijn…",
+    "prefillHelp": "Kopieert de gegevens naar een nieuwe invoer — wijzig daarna alleen het jaar.",
     "moreDetails": "Meer details"
   },
   "memory": {

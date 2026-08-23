@@ -1,4 +1,4 @@
-import type { WineGrapeSummary, WineSummary } from "@vadevi/contracts";
+import type { WineGrapeSummary, WineSummary, WineType } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -38,6 +38,7 @@ export function EditWineDialog({
     wine.vintageYear === null ? "" : String(wine.vintageYear),
   );
   const [region, setRegion] = useState(wine.region ?? "");
+  const [wineType, setWineType] = useState<WineType | "">(wine.wineType ?? "");
   const [alcoholAbv, setAlcoholAbv] = useState(
     wine.alcoholAbv === null ? "" : String(wine.alcoholAbv),
   );
@@ -153,6 +154,7 @@ export function EditWineDialog({
       region: region.trim().length === 0 ? null : region.trim(),
       version: wine.version,
       vintageYear: vintageYear.trim().length === 0 ? null : Number(vintageYear),
+      wineType: wineType === "" ? null : wineType,
     });
     await onSaved();
     onClose();
@@ -196,6 +198,21 @@ export function EditWineDialog({
           onChange={(event) => setRegion(event.target.value)}
           value={region}
         />
+        <label htmlFor="edit-type">{t("quickLog.type")}</label>
+        <select
+          id="edit-type"
+          onChange={(event) => setWineType((event.target.value || "") as WineType | "")}
+          value={wineType}
+        >
+          <option value="">{t("quickLog.typeUnknown")}</option>
+          {(["red", "white", "rose", "sparkling", "fortified", "orange", "other"] as const).map(
+            (type) => (
+              <option key={type} value={type}>
+                {t(`quickLog.wineType.${type}`)}
+              </option>
+            ),
+          )}
+        </select>
         <label htmlFor="edit-alcohol">{t("wineDetails.alcohol")}</label>
         <input
           id="edit-alcohol"

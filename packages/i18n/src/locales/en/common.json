@@ -222,6 +222,9 @@
       "needs_attention": "It is preserved locally and needs your attention."
     },
     "identifyAction": "Scan or read a label instead",
+    "prefillLabel": "Prefill from a wine you have",
+    "prefillPlaceholder": "Choose a wine…",
+    "prefillHelp": "Copies its details into a new entry — then just change the vintage.",
     "moreDetails": "More details"
   },
   "memory": {

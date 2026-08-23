@@ -222,6 +222,9 @@
       "needs_attention": "Es conserva localment i requereix la teva atenció."
     },
     "identifyAction": "Escaneja o llegeix una etiqueta",
+    "prefillLabel": "Emplenar des d'un vi que ja tens",
+    "prefillPlaceholder": "Tria un vi…",
+    "prefillHelp": "Copia les seves dades en un registre nou — després només canvia l'anyada.",
     "moreDetails": "Més detalls"
   },
   "memory": {
