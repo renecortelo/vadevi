@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
+import { parseDecimalInput } from "../lib/decimal";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
@@ -102,7 +103,7 @@ export function ShopPage() {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (user === null || !navigator.onLine || wineId.length === 0) return;
-    const parsedAmount = Number.parseFloat(amount);
+    const parsedAmount = parseDecimalInput(amount) ?? Number.NaN;
     if (!Number.isFinite(parsedAmount) || parsedAmount < 0) return;
     setSaving(true);
     setError(false);
@@ -160,11 +161,9 @@ export function ShopPage() {
           <label>
             {t("shop.amount")}
             <input
-              min="0"
+              inputMode="decimal"
               onChange={(event) => setAmount(event.target.value)}
               required
-              step="0.01"
-              type="number"
               value={amount}
             />
           </label>

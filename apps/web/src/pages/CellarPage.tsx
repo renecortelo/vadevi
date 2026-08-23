@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
+import { parseDecimalInput } from "../lib/decimal";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, partitionId } from "../offline/database";
 import { WinePicker } from "../components/WinePicker";
@@ -94,7 +95,7 @@ export function CellarPage() {
   async function submitPurchase(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (user === null || !navigator.onLine || wineId.length === 0) return;
-    const parsedAmount = Number.parseFloat(amount);
+    const parsedAmount = parseDecimalInput(amount) ?? Number.NaN;
     const parsedQuantity = Number.parseInt(quantity, 10);
     if (!Number.isFinite(parsedAmount) || parsedAmount < 0 || parsedQuantity < 1) return;
     setSaving(true);
@@ -197,11 +198,9 @@ export function CellarPage() {
           <label>
             {t("cellar.unitPrice")}
             <input
-              min="0"
+              inputMode="decimal"
               onChange={(event) => setAmount(event.target.value)}
               required
-              step="0.01"
-              type="number"
               value={amount}
             />
           </label>
