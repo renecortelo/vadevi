@@ -5,6 +5,7 @@ import { D1ExternalCache, D1ExternalRateLimiter } from "../src/adapters/external
 import { OpenFoodFactsAdapter } from "../src/adapters/open-food-facts";
 import type { ProviderFetcher, ProviderFetchError } from "../src/adapters/provider-fetch";
 import { fetchFromProvider, readBoundedJson } from "../src/adapters/provider-fetch";
+import { CloudflareNarrativeAdapter } from "../src/adapters/narrative";
 import { CloudflareTranslationAdapter } from "../src/adapters/translation";
 import { BraveWebSearchAdapter, TavilyWebSearchAdapter } from "../src/adapters/web-search";
 import { WikidataAdapter } from "../src/adapters/wikidata";
@@ -549,5 +550,45 @@ describe("external research adapters", () => {
       model,
     );
     await expect(broken.translate({ locale: "es", texts: ["a"] })).resolves.toBeNull();
+  });
+
+  it("composes a grounded narrative and falls back to null without material or on failure", async () => {
+    const model = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+    let sent: unknown = null;
+    const good = new CloudflareNarrativeAdapter(
+      {
+        run: async (_model, input) => {
+          sent = input;
+          return { response: "Bodegas Áster es una bodega de Ribera del Duero fundada en 1870." };
+        },
+      },
+      model,
+    );
+    await expect(
+      good.compose({
+        locale: "es",
+        statements: ["Aster is a winery in Ribera del Duero.", "Founded: 1870"],
+        wine: "El Espino",
+      }),
+    ).resolves.toBe("Bodegas Áster es una bodega de Ribera del Duero fundada en 1870.");
+    expect(sent).toMatchObject({
+      messages: [{ role: "system" }, { role: "user" }],
+    });
+
+    // Nothing to say without statements.
+    await expect(good.compose({ locale: "es", statements: [], wine: "X" })).resolves.toBeNull();
+
+    // A thrown call yields null, never invented prose.
+    const broken = new CloudflareNarrativeAdapter(
+      {
+        run: async () => {
+          throw new Error("model down");
+        },
+      },
+      model,
+    );
+    await expect(
+      broken.compose({ locale: "es", statements: ["a fact"], wine: "X" }),
+    ).resolves.toBeNull();
   });
 });
