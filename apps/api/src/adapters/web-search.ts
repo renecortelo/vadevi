@@ -46,8 +46,47 @@ function braveLanguage(locale: string): string {
 }
 
 /** Bounded, prompt-safe, tag-stripped text or null — provider strings are external. */
+// Search results are HTML fragments: providers bold the matched words and leave
+// entities encoded. Stripping the tags without decoding the entities is what put
+// a literal "&gt;" in front of the reader.
+const htmlEntities: Record<string, string> = {
+  amp: "&",
+  apos: "'",
+  gt: ">",
+  lt: "<",
+  nbsp: " ",
+  quot: '"',
+};
+
+function decodeEntities(value: string): string {
+  return value.replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, (match, body: string) => {
+    if (body.startsWith("#")) {
+      const code =
+        body.startsWith("#x") || body.startsWith("#X")
+          ? Number.parseInt(body.slice(2), 16)
+          : Number.parseInt(body.slice(1), 10);
+      return Number.isFinite(code) && code > 0 && code <= 0x10ffff
+        ? String.fromCodePoint(code)
+        : match;
+    }
+    return htmlEntities[body.toLowerCase()] ?? match;
+  });
+}
+
+// A result whose text is mostly a page's own furniture — navigation, buttons,
+// share links — says nothing about the wine. Better to drop it than to present
+// "Print · Share · Hide Side Panel" as a curiosity.
+const chromePattern =
+  /\b(print|share|hide side panel|browse|add to (?:wishlist|cellar|cart)|sign in|log in|register|upload|next back|add new vintage|cookie|newsletter|subscribe|iniciar sesion|anadir al carrito|suscrib\w*)\b/gi;
+
+function looksLikePageFurniture(text: string): boolean {
+  const hits = text.match(chromePattern)?.length ?? 0;
+  // Two or more of those phrases in one snippet is a navigation strip, not prose.
+  return hits >= 2;
+}
+
 function safeText(value: string | null | undefined, max: number): string | null {
-  const withoutTags = (value ?? "").replace(/<[^>]*>/g, " ");
+  const withoutTags = decodeEntities((value ?? "").replace(/<[^>]*>/g, " "));
   const sanitized = sanitizeExternalText(withoutTags, max);
   return sanitized.value.length === 0 || sanitized.flaggedPromptLike ? null : sanitized.value;
 }
@@ -207,6 +246,7 @@ export class BraveWebSearchAdapter implements WebSearchPort {
       const title = safeText(entry.title, 200);
       const snippet = safeText(entry.description, 600);
       if (canonicalUrl === null || title === null || snippet === null) continue;
+      if (looksLikePageFurniture(snippet)) continue;
       results.push({
         snippet,
         source: {
@@ -355,6 +395,7 @@ export class TavilyWebSearchAdapter implements WebSearchPort {
       const title = safeText(entry.title, 200);
       const snippet = safeText(entry.content, 600);
       if (canonicalUrl === null || title === null || snippet === null) continue;
+      if (looksLikePageFurniture(snippet)) continue;
       results.push({
         snippet,
         source: {
