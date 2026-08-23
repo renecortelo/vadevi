@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useParams, useSearchParams } from "react-router";
 import type { z } from "zod";
 
+import { DecimalInput } from "../components/DecimalInput";
 import { useAuth } from "../auth/AuthContext";
 import { type DeepTastingDraft, offlineDatabase, type SyncConflict } from "../offline/database";
 import { deepTastingChangedEvent } from "../offline/events";
@@ -632,22 +633,16 @@ export function DeepTastingPage() {
         <div className="form-grid">
           <label>
             <span>{t("tasting.field.servingTemperature")}</span>
-            <input
-              max={50}
-              min={-10}
-              onChange={(event) =>
+            <DecimalInput
+              onChange={(value) =>
                 updateContext(
                   "servingTemperatureTenthsC",
-                  event.target.value === ""
-                    ? undefined
-                    : Math.round(Number(event.target.value) * 10),
+                  value === null ? undefined : Math.round(value * 10),
                 )
               }
-              step="0.1"
-              type="number"
               value={
                 draft.payload.context?.servingTemperatureTenthsC === undefined
-                  ? ""
+                  ? null
                   : draft.payload.context.servingTemperatureTenthsC / 10
               }
             />
@@ -794,22 +789,16 @@ export function DeepTastingPage() {
         <div className="form-grid form-grid--three">
           <label>
             <span>{t("tasting.field.roomTemperature")}</span>
-            <input
-              max={60}
-              min={-10}
-              onChange={(event) =>
+            <DecimalInput
+              onChange={(value) =>
                 updateContext(
                   "roomTemperatureTenthsC",
-                  event.target.value === ""
-                    ? undefined
-                    : Math.round(Number(event.target.value) * 10),
+                  value === null ? undefined : Math.round(value * 10),
                 )
               }
-              step="0.1"
-              type="number"
               value={
                 draft.payload.context?.roomTemperatureTenthsC === undefined
-                  ? ""
+                  ? null
                   : draft.payload.context.roomTemperatureTenthsC / 10
               }
             />

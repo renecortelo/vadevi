@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
+import { parseDecimalInput } from "../lib/decimal";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, partitionId } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
@@ -75,7 +76,7 @@ export function WishlistPage() {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (user === null || !navigator.onLine || wineId.length === 0) return;
-    const parsedTarget = targetPrice.length === 0 ? null : Number.parseFloat(targetPrice);
+    const parsedTarget = parseDecimalInput(targetPrice);
     setSaving(true);
     setError(false);
     try {
@@ -161,10 +162,8 @@ export function WishlistPage() {
           <label>
             {t("wishlist.targetPrice")}
             <input
-              min="0"
+              inputMode="decimal"
               onChange={(event) => setTargetPrice(event.target.value)}
-              step="0.01"
-              type="number"
               value={targetPrice}
             />
           </label>

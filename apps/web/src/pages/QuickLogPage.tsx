@@ -3,6 +3,7 @@ import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { resolveSupportedLocale, tastingDescriptors } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 
+import { DecimalInput } from "../components/DecimalInput";
 import { ModalDialog } from "../components/ModalDialog";
 import { wineOptionLabel } from "../components/wine-label";
 import { Link } from "react-router";
@@ -356,21 +357,11 @@ export function QuickLogPage() {
               value={draft.winePayload.region ?? ""}
             />
             <label htmlFor="quicklog-alcohol">{t("wineDetails.alcohol")}</label>
-            <input
+            <DecimalInput
               id="quicklog-alcohol"
-              inputMode="decimal"
-              max="100"
-              min="0"
-              onChange={(event) =>
-                updateWine(
-                  "alcoholAbv",
-                  event.target.value === "" ? null : Number(event.target.value),
-                )
-              }
+              onChange={(value) => updateWine("alcoholAbv", value)}
               placeholder={t("wineDetails.alcoholPlaceholder")}
-              step="0.1"
-              type="number"
-              value={draft.winePayload.alcoholAbv ?? ""}
+              value={draft.winePayload.alcoholAbv ?? null}
             />
             <fieldset className="grape-editor">
               <legend>{t("wineDetails.grapes")}</legend>
@@ -393,30 +384,19 @@ export function QuickLogPage() {
                       placeholder={t("wineDetails.grapeName")}
                       value={grape.name}
                     />
-                    <input
+                    <DecimalInput
                       aria-label={t("wineDetails.grapePercentage")}
                       className="grape-editor__percentage"
-                      inputMode="decimal"
-                      max="100"
-                      min="0"
-                      onChange={(event) =>
+                      onChange={(value) =>
                         updateWine(
                           "grapes",
                           (draft.winePayload.grapes ?? []).map((entry: WineGrape, i: number) =>
-                            i === index
-                              ? {
-                                  ...entry,
-                                  percentage:
-                                    event.target.value === "" ? null : Number(event.target.value),
-                                }
-                              : entry,
+                            i === index ? { ...entry, percentage: value } : entry,
                           ),
                         )
                       }
                       placeholder="%"
-                      step="0.1"
-                      type="number"
-                      value={grape.percentage ?? ""}
+                      value={grape.percentage ?? null}
                     />
                     <button
                       aria-label={t("wineDetails.grapeRemove")}

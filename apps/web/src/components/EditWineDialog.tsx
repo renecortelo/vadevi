@@ -3,6 +3,7 @@ import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
+import { parseDecimalInput } from "../lib/decimal";
 import { preprocessImage } from "../media/image";
 import { createIdempotencyKey } from "../security/idempotency";
 import { reserveMedia, uploadMedia } from "../services/api";
@@ -132,22 +133,19 @@ export function EditWineDialog({
 
   async function saveFields(mediaId: string | undefined) {
     if (user === null) return;
-    const alcoholParsed = Number(alcoholAbv.replace(",", ".").trim());
+    const alcoholParsed = parseDecimalInput(alcoholAbv);
     const grapePayload = grapes
       .map((row) => {
-        const parsed = Number(row.percentage.replace(",", ".").trim());
         return {
           name: row.name.trim(),
-          percentage:
-            row.percentage.trim().length === 0 || !Number.isFinite(parsed) ? null : parsed,
+          percentage: parseDecimalInput(row.percentage),
         };
       })
       .filter((grape) => grape.name.length > 0)
       .slice(0, 12);
     await updateWine(user, bootstrap.data.user.activeSpaceId, wine.id, {
       ...(mediaId === undefined ? {} : { mediaId }),
-      alcoholAbv:
-        alcoholAbv.trim().length === 0 || !Number.isFinite(alcoholParsed) ? null : alcoholParsed,
+      alcoholAbv: alcoholParsed,
       displayName: displayName.trim(),
       grapes: grapePayload,
       producerName: producerName.trim(),
