@@ -70,6 +70,25 @@ async function createWine(spaceId: string) {
   return CreateWineResponseSchema.parse(await response.json()).data.wine;
 }
 
+async function createWineWithGrape(spaceId: string) {
+  const response = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+    body: JSON.stringify({
+      barcode: "8410000000099",
+      displayName: "Research Wine",
+      grapes: [{ name: "Tempranillo", percentage: 100 }],
+      identityStatus: "confirmed",
+      nonVintage: false,
+      producerName: "Synthetic Research Estate",
+      vintageYear: 2022,
+      wineType: "red",
+    }),
+    headers: headers(ownerToken, randomOpaqueToken()),
+    method: "POST",
+  });
+  expect(response.status).toBe(201);
+  return CreateWineResponseSchema.parse(await response.json()).data.wine;
+}
+
 describe("bounded wine research jobs", () => {
   it("degrades explicitly with providers disabled and protects the job from outsiders", async () => {
     const owner = await bootstrap(ownerToken);
@@ -116,7 +135,7 @@ describe("bounded wine research jobs", () => {
   it("persists enabled-provider output only as cited proposed facts and replays safely", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
-    const wine = await createWine(spaceId);
+    const wine = await createWineWithGrape(spaceId);
     const retrievedAt = "2026-08-14T07:00:00.000Z";
     const source = {
       canonicalUrl: "https://www.wikidata.org/wiki/Q999",
@@ -124,7 +143,7 @@ describe("bounded wine research jobs", () => {
       publisher: "Wikidata",
       retrievedAt,
       sourceType: "open_dataset" as const,
-      title: "Synthetic Research Estate",
+      title: "Tempranillo",
     };
     const ports: ResearchPorts = {
       knowledge: {
@@ -132,23 +151,27 @@ describe("bounded wine research jobs", () => {
           cached: false,
           data: [
             {
-              confidenceMilli: 750,
-              predicate: "producer.name",
-              researchMethod: "wikidata.entity.v1",
+              confidenceMilli: 800,
+              predicate: "curiosity.highlight",
+              researchMethod: "wikidata.highlight.v1",
               source,
-              value: "Synthetic Research Estate",
+              value: "color: tinta",
             },
             {
-              confidenceMilli: 600,
-              predicate: "producer.history",
-              researchMethod: "wikidata.entity.v1",
+              confidenceMilli: 800,
+              predicate: "curiosity.highlight",
+              researchMethod: "wikidata.highlight.v1",
               source,
-              value: "A fictional estate used to verify provenance behavior.",
+              value: "origen: Espana",
             },
           ],
           status: "success",
         }),
-        searchEntities: async () => ({ cached: false, data: [], status: "success" }),
+        searchEntities: async () => ({
+          cached: false,
+          data: [{ description: "a grape variety", id: "Q1122", label: "Tempranillo" }],
+          status: "success",
+        }),
       },
       product: {
         lookupBarcode: async ({ barcode }) => ({
@@ -183,8 +206,8 @@ describe("bounded wine research jobs", () => {
       request: {
         locale: "en" as const,
         maxSources: 4,
-        topics: ["identity", "producer"] as const,
-        wikidataEntityIds: { producer: "Q999" },
+        topics: ["identity", "grapes"] as const,
+        wikidataEntityIds: {},
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -241,101 +264,18 @@ describe("bounded wine research jobs", () => {
     expect(counts).toEqual({ audits: 1, citations: 3, facts: 3 });
   });
 
-  it("resolves the producer to a Wikidata entity by name when no id is supplied", async () => {
+  it("never asks Wikidata about the producer or the region", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
     const wine = await createWine(spaceId);
-    const retrievedAt = "2026-08-14T07:00:00.000Z";
-    const source = {
-      canonicalUrl: "https://www.wikidata.org/wiki/Q999",
-      licenseIdentifier: "CC0-1.0",
-      publisher: "Wikidata",
-      retrievedAt,
-      sourceType: "open_dataset" as const,
-      title: "Synthetic Research Estate",
-    };
-    const searchTerms: string[] = [];
-    const researchedIds: string[] = [];
+    const searchedSubjects: string[] = [];
     const ports: ResearchPorts = {
       knowledge: {
-        research: async ({ entityId }) => {
-          researchedIds.push(entityId);
-          return {
-            cached: false,
-            data: [
-              {
-                confidenceMilli: 750,
-                predicate: "producer.name",
-                researchMethod: "wikidata.entity.v1",
-                source,
-                value: "Synthetic Research Estate",
-              },
-            ],
-            status: "success",
-          };
-        },
-        searchEntities: async ({ term }) => {
-          searchTerms.push(term);
-          return {
-            cached: false,
-            data: [
-              {
-                description: "a fictional estate",
-                id: "Q4242",
-                label: "Synthetic Research Estate",
-              },
-            ],
-            status: "success",
-          };
-        },
-      },
-      product: null,
-      providerMode: "open_data",
-    };
-    const first = await createResearchJob(env.DB, {
-      idempotencyKey: randomOpaqueToken(),
-      ports,
-      principal,
-      request: {
-        locale: "en" as const,
-        maxSources: 4,
-        topics: ["producer"] as const,
-        wikidataEntityIds: {},
-      },
-      requestId: randomOpaqueToken(),
-      spaceId,
-      wineId: wine.id,
-    });
-    expect(first.kind).toBe("success");
-    if (first.kind !== "success") throw new Error("Expected a completed research job.");
-    expect(searchTerms).toContain("Synthetic Research Estate");
-    expect(researchedIds).toEqual(["Q4242"]);
-    expect(first.response.data.factIds).toHaveLength(1);
-    expect(first.response.data.warnings).not.toContain("missing_wikidata_entity");
-  });
-
-  it("leaves the producer unresolved when no candidate name is close enough", async () => {
-    const owner = await bootstrap(ownerToken);
-    const spaceId = owner.data.user.activeSpaceId!;
-    const wine = await createWine(spaceId);
-    const researchedIds: string[] = [];
-    const ports: ResearchPorts = {
-      knowledge: {
-        research: async ({ entityId }) => {
-          researchedIds.push(entityId);
+        research: async () => ({ cached: false, data: [], status: "success" }),
+        searchEntities: async ({ subjectType }) => {
+          searchedSubjects.push(subjectType);
           return { cached: false, data: [], status: "success" };
         },
-        searchEntities: async () => ({
-          cached: false,
-          data: [
-            {
-              description: "an unrelated thing",
-              id: "Q1",
-              label: "Something Completely Different",
-            },
-          ],
-          status: "success",
-        }),
       },
       product: null,
       providerMode: "open_data",
@@ -347,7 +287,7 @@ describe("bounded wine research jobs", () => {
       request: {
         locale: "en" as const,
         maxSources: 4,
-        topics: ["producer"] as const,
+        topics: ["producer", "region"] as const,
         wikidataEntityIds: {},
       },
       requestId: randomOpaqueToken(),
@@ -355,66 +295,10 @@ describe("bounded wine research jobs", () => {
       wineId: wine.id,
     });
     expect(first.kind).toBe("success");
-    if (first.kind !== "success") throw new Error("Expected a completed research job.");
-    expect(researchedIds).toEqual([]);
-    expect(first.response.data.factIds).toHaveLength(0);
-    expect(first.response.data.warnings).toContain("missing_wikidata_entity");
-  });
-
-  it("does not auto-resolve a producer to an unrelated entity with a matching name", async () => {
-    const owner = await bootstrap(ownerToken);
-    const spaceId = owner.data.user.activeSpaceId!;
-    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
-      body: JSON.stringify({
-        displayName: "El Espino",
-        identityStatus: "confirmed",
-        nonVintage: false,
-        producerName: "Áster",
-        vintageYear: 2020,
-        wineType: "red",
-      }),
-      headers: headers(ownerToken, randomOpaqueToken()),
-      method: "POST",
-    });
-    expect(created.status).toBe(201);
-    const wine = CreateWineResponseSchema.parse(await created.json()).data.wine;
-    const researchedIds: string[] = [];
-    const ports: ResearchPorts = {
-      knowledge: {
-        research: async ({ entityId }) => {
-          researchedIds.push(entityId);
-          return { cached: false, data: [], status: "success" };
-        },
-        // The producer name matches the Aster flower genus exactly, but its
-        // description marks it as a genus — it must not be attached to the wine.
-        searchEntities: async () => ({
-          cached: false,
-          data: [{ description: "genus of flowering plants", id: "Q123", label: "Áster" }],
-          status: "success",
-        }),
-      },
-      product: null,
-      providerMode: "open_data",
-    };
-    const first = await createResearchJob(env.DB, {
-      idempotencyKey: randomOpaqueToken(),
-      ports,
-      principal,
-      request: {
-        locale: "en" as const,
-        maxSources: 4,
-        topics: ["producer"] as const,
-        wikidataEntityIds: {},
-      },
-      requestId: randomOpaqueToken(),
-      spaceId,
-      wineId: wine.id,
-    });
-    expect(first.kind).toBe("success");
-    if (first.kind !== "success") throw new Error("Expected a completed research job.");
-    expect(researchedIds).toEqual([]);
-    expect(first.response.data.factIds).toHaveLength(0);
-    expect(first.response.data.warnings).toContain("missing_wikidata_entity");
+    // Producer and region name lookups caused the wrong-entity noise (a flower
+    // genus for "Áster", a winery head office read as the wine's appellation),
+    // so they are gone: only grapes are ever resolved through Wikidata.
+    expect(searchedSubjects).toEqual([]);
   });
 
   it("adds the region's country and category from eAmbrosia, cited, without a network call", async () => {
@@ -775,7 +659,7 @@ describe("bounded wine research jobs", () => {
   it("composes the research summary from the summary and highlights when AI is on", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
-    const wine = await createWine(spaceId);
+    const wine = await createWineWithGrape(spaceId);
     const wikipedia = {
       canonicalUrl: "https://es.wikipedia.org/wiki/Bodegas_Aster",
       licenseIdentifier: "CC-BY-SA-4.0",
@@ -815,7 +699,11 @@ describe("bounded wine research jobs", () => {
           ],
           status: "success",
         }),
-        searchEntities: async () => ({ cached: false, data: [], status: "success" }),
+        searchEntities: async () => ({
+          cached: false,
+          data: [{ description: "a grape variety", id: "Q1122", label: "Tempranillo" }],
+          status: "success",
+        }),
       },
       narrative: {
         compose: async ({ statements }) => {
@@ -833,8 +721,8 @@ describe("bounded wine research jobs", () => {
       request: {
         locale: "es" as const,
         maxSources: 4,
-        topics: ["producer"] as const,
-        wikidataEntityIds: { producer: "Q999" },
+        topics: ["grapes"] as const,
+        wikidataEntityIds: {},
       },
       requestId: randomOpaqueToken(),
       spaceId,
