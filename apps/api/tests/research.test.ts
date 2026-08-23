@@ -559,6 +559,65 @@ describe("bounded wine research jobs", () => {
     expect(highlight?.value).toBe("color: tinta");
   });
 
+  it("does not research a grape name that matches something other than a grape", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Varietal Red",
+        grapes: [{ name: "Garnacha", percentage: 100 }],
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Bodega Ejemplo",
+        vintageYear: 2019,
+        wineType: "red",
+      }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const wine = CreateWineResponseSchema.parse(await created.json()).data.wine;
+
+    const researchedIds: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: {
+        research: async ({ entityId }) => {
+          researchedIds.push(entityId);
+          return { cached: false, data: [], status: "success" };
+        },
+        // "Garnacha" is also a Mexican antojito; the label matches exactly but the
+        // description never says grape, so it must not be attached to the wine.
+        searchEntities: async () => ({
+          cached: false,
+          data: [
+            { description: "Mexican dish made of fried tortilla", id: "Q77", label: "Garnacha" },
+          ],
+          status: "success",
+        }),
+      },
+      product: null,
+      providerMode: "open_data",
+    };
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: {
+        locale: "es" as const,
+        maxSources: 4,
+        topics: ["grapes"] as const,
+        wikidataEntityIds: {},
+      },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+    if (first.kind !== "success") throw new Error("Expected a completed research job.");
+    expect(researchedIds).toEqual([]);
+    expect(first.response.data.factIds).toHaveLength(0);
+  });
+
   it("brings cited open-web snippets when a search provider is configured", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
