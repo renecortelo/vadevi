@@ -36,6 +36,20 @@ describe("eAmbrosia appellation facts", () => {
     expect(resolveAppellationFacts("Barolo DOCG", now)[0]?.value).toBe("Italy");
   });
 
+  it("covers the widened register, including the PGI tier", () => {
+    // Newly listed PDOs across the countries the register covers.
+    expect(resolveAppellationFacts("Penedès", now)[0]?.value).toBe("Spain");
+    expect(resolveAppellationFacts("Pessac-Léognan", now)[0]?.value).toBe("France");
+    expect(resolveAppellationFacts("Alto Adige", now)[0]?.value).toBe("Italy");
+    expect(resolveAppellationFacts("Tokaji", now)[0]?.value).toBe("Hungary");
+    // Toscana is an IGT, so it must report the PGI tier rather than PDO.
+    const toscana = resolveAppellationFacts("Toscana", now);
+    expect(toscana[0]?.value).toBe("Italy");
+    expect(toscana[1]?.value).toBe("Protected Geographical Indication (PGI)");
+    // A longer phrase still wins over a shorter one it contains.
+    expect(resolveAppellationFacts("Mosel Saar Ruwer", now)[0]?.value).toBe("Germany");
+  });
+
   it("yields nothing for a region that names no listed appellation", () => {
     expect(resolveAppellationFacts("Parras Valley", now)).toEqual([]);
     expect(resolveAppellationFacts(null, now)).toEqual([]);
