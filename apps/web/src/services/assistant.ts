@@ -1,5 +1,4 @@
 import {
-  AcceptFactRequestSchema,
   AssistantTurnRequestSchema,
   AssistantTurnResponseSchema,
   CreateResearchJobRequestSchema,
@@ -9,7 +8,6 @@ import {
   RejectFactRequestSchema,
   ResearchJobResponseSchema,
   WineFactsResponseSchema,
-  type AcceptFactRequest,
   type AssistantTurnRequest,
   type AssistantTurnResponse,
   type CreateResearchJobRequest,
@@ -41,25 +39,6 @@ export async function getWineFacts(
   );
   if (!response.ok) throw await apiError(response);
   return WineFactsResponseSchema.parse(await response.json());
-}
-
-export async function acceptFact(
-  tokenSource: TokenSource,
-  spaceId: string,
-  factId: string,
-  request: AcceptFactRequest,
-): Promise<FactResponse> {
-  const response = await authenticatedFetch(
-    tokenSource,
-    `/api/v1/spaces/${spaceId}/facts/${factId}/accept`,
-    {
-      body: JSON.stringify(AcceptFactRequestSchema.parse(request)),
-      headers: { "Content-Type": "application/json" },
-      method: "POST",
-    },
-  );
-  if (!response.ok) throw await apiError(response);
-  return FactResponseSchema.parse(await response.json());
 }
 
 export async function rejectFact(

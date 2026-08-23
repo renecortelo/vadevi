@@ -348,7 +348,6 @@ export function WineEvidencePage() {
           locale: researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
           maxSources: 6,
           topics,
-          wikidataEntityIds: {},
         },
         createIdempotencyKey(),
       );
