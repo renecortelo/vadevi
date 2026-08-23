@@ -47,12 +47,12 @@ export class CloudflareTranslationAdapter implements TranslationPort {
   ) {}
 
   async translate(input: TranslationRequest): Promise<(string | null)[] | null> {
-    const texts = input.texts.slice(0, 8).map((text) => text.slice(0, 600));
+    const texts = input.texts.slice(0, 16).map((text) => text.slice(0, 600));
     if (texts.length === 0) return [];
     const language = languageNames[input.locale];
     try {
       const output = await this.ai.run(this.model, {
-        max_tokens: 1_500,
+        max_tokens: 3_000,
         messages: [
           {
             content:

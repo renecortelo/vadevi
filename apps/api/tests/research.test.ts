@@ -721,9 +721,10 @@ describe("bounded wine research jobs", () => {
       product: null,
       providerMode: "open_data",
       translation: {
+        // The batch carries the note's page title and its snippet, in order.
         translate: async ({ texts }) => {
           asked = texts;
-          return ["El Espino es un tinto de Bodegas Áster."];
+          return ["El Espino — Áster", "El Espino es un tinto de Bodegas Áster."];
         },
       },
       webSearch: {
@@ -737,9 +738,9 @@ describe("bounded wine research jobs", () => {
                 publisher: "example-winery.test",
                 retrievedAt: "2026-08-23T10:00:00.000Z",
                 sourceType: "other_web",
-                title: "El Espino",
+                title: "El Espino red wine",
               },
-              title: "El Espino",
+              title: "El Espino red wine",
             },
           ],
           status: "success",
@@ -762,7 +763,7 @@ describe("bounded wine research jobs", () => {
     });
     expect(first.kind).toBe("success");
     if (first.kind !== "success") throw new Error("Expected a completed research job.");
-    expect(asked).toEqual(["El Espino is a red from Bodegas Áster."]);
+    expect(asked).toEqual(["El Espino red wine", "El Espino is a red from Bodegas Áster."]);
 
     const factsResponse = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
@@ -771,5 +772,7 @@ describe("bounded wine research jobs", () => {
     const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
     const note = facts.find((fact: Fact) => fact.predicate === "curiosity.note");
     expect(note?.value).toBe("El Espino es un tinto de Bodegas Áster.");
+    // The page title used as the card heading is translated too.
+    expect(note?.citations[0]?.source.title).toBe("El Espino — Áster");
   });
 });
