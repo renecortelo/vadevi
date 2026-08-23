@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
+import { countryOptionsFor } from "../components/country-options";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, type SyncConflict } from "../offline/database";
 import { memoryChangedEvent, sessionsChangedEvent } from "../offline/events";
@@ -619,12 +620,17 @@ export function WineMemoryPage() {
             </label>
             <label>
               <span>{t("memory.countryFilter")}</span>
-              <input
-                maxLength={2}
+              <select
                 onChange={(event) => setFilters({ ...filters, countryCode: event.target.value })}
-                placeholder={t("memory.countryPlaceholder")}
                 value={filters.countryCode}
-              />
+              >
+                <option value="">{t("memory.countryAny")}</option>
+                {countryOptionsFor(i18n.language, filters.countryCode).map((option) => (
+                  <option key={option.code} value={option.code}>
+                    {option.name}
+                  </option>
+                ))}
+              </select>
             </label>
             <label>
               <span>{t("memory.regionFilter")}</span>

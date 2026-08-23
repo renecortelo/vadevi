@@ -271,7 +271,7 @@
     "noSessionsTitle": "Nog geen sessie in dit Geheugen.",
     "noSessionsBody": "Maak een reeks zodat de notitie van iedere deelnemer apart blijft.",
     "countryFilter": "Land",
-    "countryPlaceholder": "ES",
+    "countryAny": "Elk land",
     "regionFilter": "Regio",
     "grapeFilter": "Druif",
     "vintageFrom": "Jaargang vanaf",

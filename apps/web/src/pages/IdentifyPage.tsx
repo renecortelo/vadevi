@@ -11,6 +11,7 @@ import {
   scanImageFile,
   stopStream,
 } from "../media/barcode";
+import { countryOptionsFor } from "../components/country-options";
 import { confirmIdentification, identifyWine } from "../services/api";
 import { useSession } from "../session/SessionContext";
 
@@ -77,7 +78,7 @@ function FieldProvenance({
  * screen works with every optional provider disabled.
  */
 export function IdentifyPage() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const navigate = useNavigate();
@@ -378,12 +379,18 @@ export function IdentifyPage() {
           {selected === null ? null : <FieldProvenance candidate={selected} name="region" />}
 
           <label htmlFor="wine-country">{t("memory.countryFilter")}</label>
-          <input
+          <select
             id="wine-country"
-            maxLength={2}
             onChange={(event) => setWine({ ...wine, countryCode: event.target.value })}
             value={wine.countryCode}
-          />
+          >
+            <option value="">{t("memory.countryAny")}</option>
+            {countryOptionsFor(i18n.language, wine.countryCode).map((option) => (
+              <option key={option.code} value={option.code}>
+                {option.name}
+              </option>
+            ))}
+          </select>
 
           <label htmlFor="wine-type">{t("quickLog.type")}</label>
           <select

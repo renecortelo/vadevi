@@ -271,7 +271,7 @@
     "noSessionsTitle": "Ainda não há sessões nesta Memória.",
     "noSessionsBody": "Crie uma prova para manter separada a nota de cada participante.",
     "countryFilter": "País",
-    "countryPlaceholder": "ES",
+    "countryAny": "Qualquer país",
     "regionFilter": "Região",
     "grapeFilter": "Casta",
     "vintageFrom": "Colheita desde",

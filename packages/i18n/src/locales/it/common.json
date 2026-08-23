@@ -271,7 +271,7 @@
     "noSessionsTitle": "Nessuna sessione in questa Memoria.",
     "noSessionsBody": "Crea una batteria per tenere separata la nota di ogni partecipante.",
     "countryFilter": "Paese",
-    "countryPlaceholder": "ES",
+    "countryAny": "Qualsiasi paese",
     "regionFilter": "Regione",
     "grapeFilter": "Vitigno",
     "vintageFrom": "Annata da",
