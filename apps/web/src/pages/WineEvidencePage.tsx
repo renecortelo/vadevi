@@ -1,8 +1,5 @@
 import type {
   Fact,
-  ResearchCandidate,
-  ResearchCandidateSubject,
-  ResearchCandidatesResponse,
   ResearchJob,
   ResearchJobWarning,
   SupportedLocale,
@@ -16,16 +13,10 @@ import { Link, useParams } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
-import {
-  createResearchJob,
-  getResearchCandidates,
-  getWineFacts,
-  rejectFact,
-} from "../services/assistant";
+import { createResearchJob, getWineFacts, rejectFact } from "../services/assistant";
 import { useSession } from "../session/SessionContext";
 
 type ResearchTopic = "grapes" | "identity" | "producer" | "region";
-type CandidateData = ResearchCandidatesResponse["data"];
 
 function translationCode(value: string) {
   return value.replaceAll(".", "_");
@@ -88,32 +79,64 @@ export function FactCard({
   const { i18n, t } = useTranslation();
   const valueId = `fact-value-${fact.id}`;
   const highlight = highlightParts(fact);
+  const dismissable = fact.status !== "accepted" && fact.status !== "retired";
+  // The discard control floats over the top-right corner so the fact text can run
+  // the full width of the card instead of being squeezed into a narrow column —
+  // the difference that made web notes wrap endlessly on a phone.
+  const dismiss = dismissable ? (
+    <button
+      className="action-link action-link--quiet fact-card__dismiss"
+      aria-label={t("evidence.rejectAction")}
+      disabled={rejecting}
+      onClick={() => onReject(fact)}
+      type="button"
+    >
+      {rejecting ? t("evidence.rejecting") : t("evidence.rejectAction")}
+    </button>
+  ) : null;
+
+  // A web curiosity is a paragraph, not a data point: it collapses to a one-line
+  // lead and expands to the full text plus a small source link.
+  if (fact.predicate === "curiosity.note") {
+    const text = String(fact.value);
+    const lead = text.length > 90 ? `${text.slice(0, 90).trimEnd()}…` : text;
+    const citation = fact.citations[0];
+    return (
+      <article className="fact-card" data-note="true" data-status={fact.status}>
+        {dismiss}
+        <details className="fact-card__note">
+          <summary className="fact-card__note-lead">{lead}</summary>
+          <p className="fact-card__note-text" id={valueId}>
+            {text}
+          </p>
+          {citation === undefined ? null : (
+            <a
+              className="fact-card__note-source"
+              href={citation.source.canonicalUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {citation.source.publisher}
+            </a>
+          )}
+        </details>
+      </article>
+    );
+  }
+
   return (
     <article className="fact-card" data-highlight={highlight !== null} data-status={fact.status}>
-      <div className="fact-card__body">
-        <p className="fact-card__value" id={valueId}>
-          {highlight === null ? (
-            <FactValue fact={fact} />
-          ) : (
-            <>
-              <span className="fact-card__key">{highlight.key}</span>
-              <span className="fact-card__answer">{highlight.answer}</span>
-            </>
-          )}
-        </p>
-        {fact.status === "accepted" || fact.status === "retired" ? null : (
-          <button
-            className="action-link action-link--quiet fact-card__dismiss"
-            aria-describedby={valueId}
-            aria-label={t("evidence.rejectAction")}
-            disabled={rejecting}
-            onClick={() => onReject(fact)}
-            type="button"
-          >
-            {rejecting ? t("evidence.rejecting") : t("evidence.rejectAction")}
-          </button>
+      {dismiss}
+      <p className="fact-card__value" id={valueId}>
+        {highlight === null ? (
+          <FactValue fact={fact} />
+        ) : (
+          <>
+            <span className="fact-card__key">{highlight.key}</span>
+            <span className="fact-card__answer">{highlight.answer}</span>
+          </>
         )}
-      </div>
+      </p>
       {/* Provenance is kept, but tucked away: the reader wants the fact, not the
           licence and support-strength metadata, unless they go looking for it. */}
       <details className="fact-card__source">
@@ -173,61 +196,6 @@ export function FactCard({
   );
 }
 
-function CandidateChoices({
-  choice,
-  name,
-  onChoose,
-  subject,
-  subjectLabel,
-}: {
-  choice: string;
-  name: string;
-  onChoose: (id: string) => void;
-  subject: ResearchCandidateSubject | null;
-  subjectLabel: string;
-}) {
-  const { t } = useTranslation();
-  if (subject === null || subject.candidates.length === 0) return null;
-  return (
-    <fieldset className="research-picker__subject">
-      <legend className="research-picker__legend">
-        {subjectLabel}: <strong>{subject.term}</strong>
-      </legend>
-      {subject.candidates.map((candidate: ResearchCandidate) => (
-        <label className="research-picker__option" key={candidate.id}>
-          <input
-            checked={choice === candidate.id}
-            name={name}
-            onChange={() => onChoose(candidate.id)}
-            type="radio"
-            value={candidate.id}
-          />
-          <span className="research-picker__option-body">
-            <span className="research-picker__option-label">{candidate.label}</span>
-            {candidate.description === null ? null : (
-              <span className="research-picker__option-desc">{candidate.description}</span>
-            )}
-          </span>
-        </label>
-      ))}
-      <label className="research-picker__option">
-        <input
-          checked={choice === "none"}
-          name={name}
-          onChange={() => onChoose("none")}
-          type="radio"
-          value="none"
-        />
-        <span className="research-picker__option-body">
-          <span className="research-picker__option-label">
-            {t("evidence.research.picker.none")}
-          </span>
-        </span>
-      </label>
-    </fieldset>
-  );
-}
-
 export function WineEvidencePage() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
@@ -242,10 +210,6 @@ export function WineEvidencePage() {
   const [researching, setResearching] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
   const [researchError, setResearchError] = useState<string | null>(null);
-  const [candidates, setCandidates] = useState<CandidateData | null>(null);
-  const [loadingCandidates, setLoadingCandidates] = useState(false);
-  const [producerChoice, setProducerChoice] = useState<string>("none");
-  const [regionChoice, setRegionChoice] = useState<string>("none");
   const [online, setOnline] = useState(() => navigator.onLine);
 
   useEffect(() => {
@@ -326,77 +290,31 @@ export function WineEvidencePage() {
     }
   }
 
-  // Step one: offer the matching Wikidata entities for the producer and region
-  // so the reader can tell a wine region from a same-named genus of arachnids
-  // before anything is fetched. No hand-typed "Q…" codes; the barcode lookup for
-  // the wine's own identity still runs automatically when the reader confirms.
-  async function openResearch() {
-    if (user === null || wineId.length === 0 || !online) return;
-    setResearchError(null);
-    setResearchJob(null);
-    setCandidates(null);
-    setLoadingCandidates(true);
-    try {
-      const result = await getResearchCandidates(
-        user,
-        spaceId,
-        wineId,
-        researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
-      );
-      setCandidates(result.data);
-      // Nothing is pre-selected: attaching an outside entity to the wine is a
-      // deliberate choice the reader makes after reading the descriptions, never
-      // a default they might confirm without noticing.
-      setProducerChoice("none");
-      setRegionChoice("none");
-    } catch {
-      setResearchError(t("evidence.research.error"));
-    } finally {
-      setLoadingCandidates(false);
-    }
-  }
-
-  function cancelResearch() {
-    setCandidates(null);
-    setResearchError(null);
-  }
-
-  // Step two: research only what the reader chose. Each picked entity becomes a
-  // Wikidata topic with its confirmed id; a "none" choice is left out entirely,
-  // so nothing is resolved behind the reader's back. Results still arrive as
-  // proposals to accept — confirming an entity is not the same as trusting a fact.
-  async function confirmResearch() {
+  // One tap: research the wine directly. Producer, region, and grapes are all
+  // resolved server-side by name — with the plausibility filter that keeps a
+  // producer called "Áster" from resolving to the Aster flower genus — so there
+  // is no list to pick from. Everything arrives as proposals to keep or discard,
+  // never applied behind the reader's back.
+  async function runResearch() {
     if (user === null || wineId.length === 0 || !online) return;
     setResearching(true);
     setResearchError(null);
+    setResearchJob(null);
     try {
-      // "grapes" is always requested: the wine's varieties are resolved and
-      // researched server-side by name, contributing their own highlights. There
-      // is nothing for the reader to pick, so it needs no entry in the picker.
-      const topics: ResearchTopic[] = ["identity", "grapes"];
-      const wikidataEntityIds: { producer?: string; region?: string } = {};
-      if (producerChoice !== "none") {
-        wikidataEntityIds.producer = producerChoice;
-        topics.push("producer");
-      }
-      if (regionChoice !== "none") {
-        wikidataEntityIds.region = regionChoice;
-        topics.push("region");
-      }
+      const topics: ResearchTopic[] = ["identity", "grapes", "producer", "region"];
       const result = await createResearchJob(
         user,
         spaceId,
         wineId,
         {
           locale: researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
-          maxSources: 4,
+          maxSources: 6,
           topics,
-          wikidataEntityIds,
+          wikidataEntityIds: {},
         },
         createIdempotencyKey(),
       );
       setResearchJob(result.data);
-      setCandidates(null);
       await loadFacts();
     } catch {
       setResearchError(t("evidence.research.error"));
@@ -440,63 +358,20 @@ export function WineEvidencePage() {
         </div>
         {!bootstrap.data.features.externalResearch ? (
           <p className="research-panel__notice">{t("evidence.research.disabled")}</p>
-        ) : candidates === null ? (
+        ) : (
           <>
             <button
               className="action-link action-link--secondary"
-              disabled={loadingCandidates || researching || !online}
-              onClick={() => void openResearch()}
+              disabled={researching || !online}
+              onClick={() => void runResearch()}
               type="button"
             >
-              {loadingCandidates ? t("evidence.research.searching") : t("evidence.research.action")}
+              {researching ? t("evidence.research.running") : t("evidence.research.action")}
             </button>
             {online ? null : (
               <p className="research-panel__notice">{t("evidence.research.offline")}</p>
             )}
           </>
-        ) : (
-          <div className="research-picker">
-            {(candidates.producer?.candidates.length ?? 0) === 0 &&
-            (candidates.region?.candidates.length ?? 0) === 0 ? (
-              <p className="research-panel__notice">{t("evidence.research.picker.noneFound")}</p>
-            ) : (
-              <p className="research-picker__help">{t("evidence.research.picker.help")}</p>
-            )}
-            <CandidateChoices
-              choice={producerChoice}
-              name="research-producer"
-              onChoose={setProducerChoice}
-              subject={candidates.producer}
-              subjectLabel={t("evidence.research.picker.producer")}
-            />
-            <CandidateChoices
-              choice={regionChoice}
-              name="research-region"
-              onChoose={setRegionChoice}
-              subject={candidates.region}
-              subjectLabel={t("evidence.research.picker.region")}
-            />
-            <div className="research-picker__actions">
-              <button
-                className="action-link action-link--primary"
-                disabled={researching || !online}
-                onClick={() => void confirmResearch()}
-                type="button"
-              >
-                {researching
-                  ? t("evidence.research.running")
-                  : t("evidence.research.picker.confirm")}
-              </button>
-              <button
-                className="action-link action-link--secondary"
-                disabled={researching}
-                onClick={cancelResearch}
-                type="button"
-              >
-                {t("evidence.research.picker.cancel")}
-              </button>
-            </div>
-          </div>
         )}
         {researchError === null ? null : (
           <p className="form-error" role="alert">

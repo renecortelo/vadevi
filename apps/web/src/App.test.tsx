@@ -401,7 +401,7 @@ describe("authenticated app shell", () => {
     expect(markup).toContain("Synthetic technical sheet");
     expect(markup).toContain("License CC-BY-4.0");
     expect(markup).toContain("Technical sheet, p. 2");
-    expect(markup).toContain('aria-describedby="fact-value-01J00000000000000000000006"');
+    expect(markup).toContain('id="fact-value-01J00000000000000000000006"');
   });
 
   it("renders a discovered highlight as a clean key/value pair", () => {
