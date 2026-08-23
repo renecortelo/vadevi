@@ -471,15 +471,30 @@ async function collectProposals(
         const result = await webSearch.search({ locale: request.locale, query });
         if (result.status === "success") {
           attempts.push(successAttempt("web_search", result.cached));
-          for (const hit of result.data) {
+          // Web snippets come back mostly in English; translate them into the
+          // reader's language when a translator is configured. It is a faithful
+          // transform that falls back to the original on any failure, so a
+          // translation problem never loses a result.
+          let snippets = result.data.map((hit) => hit.snippet);
+          const translation = ports.translation ?? null;
+          if (translation !== null && request.locale !== "en" && snippets.length > 0) {
+            const translated = await translation.translate({
+              locale: request.locale,
+              texts: snippets,
+            });
+            if (translated !== null && translated.length === snippets.length) {
+              snippets = snippets.map((original, index) => translated[index] ?? original);
+            }
+          }
+          result.data.forEach((hit, index) => {
             proposals.push({
               confidenceMilli: 400,
               predicate: "curiosity.note",
-              researchMethod: "web_search.brave.v1",
+              researchMethod: "web_search.v1",
               source: hit.source,
-              value: hit.snippet,
+              value: snippets[index] ?? hit.snippet,
             });
-          }
+          });
         } else {
           attempts.push(unavailableAttempt("web_search", result.reason, result.retryAfterSeconds));
         }
@@ -505,8 +520,11 @@ async function resolveStoredProposals(
   const deduplicated = new Map<string, ProposedFact>();
   for (const proposal of proposals) {
     if (!HttpsSourceUrlSchema.safeParse(proposal.source.canonicalUrl).success) continue;
-    const key = `${proposal.predicate}:${JSON.stringify(proposal.value)}:${proposal.source.canonicalUrl}`;
-    deduplicated.set(key, proposal);
+    // Deduplicate on predicate + value only, not the source: the same fact found
+    // through two entities (a producer and a grape both giving "Country: Spain")
+    // is one card, not two. The first occurrence — and its source — is kept.
+    const key = `${proposal.predicate}:${JSON.stringify(proposal.value)}`;
+    if (!deduplicated.has(key)) deduplicated.set(key, proposal);
   }
   const allowedSourceUrls = new Set(
     [...new Set([...deduplicated.values()].map((proposal) => proposal.source.canonicalUrl))].slice(
@@ -601,13 +619,15 @@ async function persistCompletedJob(
     const sourceId = sourceIdByUrl.get(stored.proposal.source.canonicalUrl);
     if (sourceId === undefined) throw new Error("Research source resolution failed.");
     sourceIds.add(sourceId);
+    // Reuse any researched fact already carrying this exact predicate+value, so
+    // researching the same wine twice — or reaching the same value by a different
+    // method or source — never stacks duplicate cards.
     const existingFact = await database
       .prepare(
         `SELECT fact.id FROM facts fact
-        JOIN fact_citations citation ON citation.fact_id = fact.id
         WHERE fact.space_id = ? AND fact.subject_type = 'wine' AND fact.subject_id = ?
-          AND fact.predicate = ? AND fact.value_json = ? AND fact.research_method = ?
-          AND fact.deleted_at IS NULL AND citation.source_id = ?
+          AND fact.predicate = ? AND fact.value_json = ? AND fact.evidence_class = 'researched'
+          AND fact.deleted_at IS NULL
         LIMIT 1`,
       )
       .bind(
@@ -615,8 +635,6 @@ async function persistCompletedJob(
         options.wineId,
         stored.proposal.predicate,
         JSON.stringify(stored.proposal.value),
-        stored.proposal.researchMethod,
-        sourceId,
       )
       .first<{ id: string }>();
     const factId = existingFact?.id ?? stored.factId;

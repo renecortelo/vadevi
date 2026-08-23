@@ -50,7 +50,14 @@ Result snippets (title, description, source URL). Every string is passed through
 rejection) and has HTML tags stripped; a snippet flagged as prompt-like is
 dropped. Results are stored as **low-confidence (`curiosity.note`), `other_web`,
 proposed** facts, each cited to its source URL, that the reader confirms or
-discards. They are never merged into the reader's own records and never presented
+discards.
+
+When the Workers AI provider is enabled (the same `AI_PROVIDER=cloudflare` used
+for the assistant), the snippets are additionally sent to Workers AI to be
+**translated** into the reader's language — a faithful, meaning-preserving
+transform that falls back to the original text on any failure. This sends the
+(already public) snippet text to Cloudflare's model; it never sends personal
+data. With AI off, snippets are shown untranslated. They are never merged into the reader's own records and never presented
 as something the reader entered. Web content is low-trust by design, which is why
 it sits at the bottom of the confidence scale and always requires confirmation.
 

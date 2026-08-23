@@ -5,6 +5,7 @@ import { D1ExternalCache, D1ExternalRateLimiter } from "../src/adapters/external
 import { OpenFoodFactsAdapter } from "../src/adapters/open-food-facts";
 import type { ProviderFetcher, ProviderFetchError } from "../src/adapters/provider-fetch";
 import { fetchFromProvider, readBoundedJson } from "../src/adapters/provider-fetch";
+import { CloudflareTranslationAdapter } from "../src/adapters/translation";
 import { BraveWebSearchAdapter, TavilyWebSearchAdapter } from "../src/adapters/web-search";
 import { WikidataAdapter } from "../src/adapters/wikidata";
 
@@ -519,5 +520,34 @@ describe("external research adapters", () => {
     expect(result.data[0]?.source.sourceType).toBe("other_web");
     expect(hosts).toEqual(["api.tavily.com"]);
     expect(sentBody).toMatchObject({ query: "Áster El Espino" });
+  });
+
+  it("translates snippets faithfully and falls back when the shape is wrong", async () => {
+    const model = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+    const good = new CloudflareTranslationAdapter(
+      { run: async () => ({ response: '["Hola mundo", "Segundo dato"]' }) },
+      model,
+    );
+    await expect(
+      good.translate({ locale: "es", texts: ["Hello world", "Second fact"] }),
+    ).resolves.toEqual(["Hola mundo", "Segundo dato"]);
+
+    // A reply whose array length does not match the input is discarded entirely.
+    const mismatched = new CloudflareTranslationAdapter(
+      { run: async () => ({ response: '["only one"]' }) },
+      model,
+    );
+    await expect(mismatched.translate({ locale: "es", texts: ["a", "b"] })).resolves.toBeNull();
+
+    // A thrown model call falls back to null, never to invented text.
+    const broken = new CloudflareTranslationAdapter(
+      {
+        run: async () => {
+          throw new Error("model down");
+        },
+      },
+      model,
+    );
+    await expect(broken.translate({ locale: "es", texts: ["a"] })).resolves.toBeNull();
   });
 });

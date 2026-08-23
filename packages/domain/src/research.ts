@@ -107,12 +107,32 @@ export interface WebSearchPort {
   search(input: WebSearchRequest): Promise<ExternalResult<WebSearchResult[]>>;
 }
 
+/**
+ * Optional faithful translation of gathered external text into the reader's
+ * language — the web returns mostly English snippets even for a Spanish wine.
+ * This is a meaning-preserving transform, never generation: an item is returned
+ * unchanged when already in the target language, and the whole thing falls back
+ * to the originals on any failure, so it can never invent or drop content.
+ */
+export type TranslationRequest = Readonly<{
+  locale: ResearchLocale;
+  texts: string[];
+}>;
+
+export interface TranslationPort {
+  /** Same length and order as the input; an item is null when untranslatable,
+   *  and the whole result is null when the call fails — callers keep originals. */
+  translate(input: TranslationRequest): Promise<(string | null)[] | null>;
+}
+
 export type ResearchPorts = Readonly<{
   knowledge: KnowledgeResearchPort | null;
   product: ProductLookupPort | null;
   providerMode: "none" | "open_data";
   /** Optional open-web discovery; null unless a search provider is configured. */
   webSearch?: WebSearchPort | null;
+  /** Optional translation of gathered text; null unless AI is configured. */
+  translation?: TranslationPort | null;
 }>;
 
 /**
