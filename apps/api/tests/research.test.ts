@@ -692,6 +692,84 @@ describe("bounded wine research jobs", () => {
     );
   });
 
+  it("replaces its own earlier harvest when the wording of a fact changes", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWineWithGrape(spaceId);
+    const source = {
+      canonicalUrl: "https://www.wikidata.org/wiki/Q1122",
+      licenseIdentifier: "CC0-1.0",
+      publisher: "Wikidata",
+      retrievedAt: "2026-08-24T10:00:00.000Z",
+      sourceType: "open_dataset" as const,
+      title: "Tempranillo",
+    };
+    const portsFor = (value: string): ResearchPorts => ({
+      knowledge: {
+        research: async () => ({
+          cached: false,
+          data: [
+            {
+              confidenceMilli: 800,
+              predicate: "curiosity.highlight",
+              researchMethod: "wikidata.highlight.v1",
+              source,
+              value,
+            },
+          ],
+          status: "success",
+        }),
+        searchEntities: async () => ({
+          cached: false,
+          data: [{ description: "a grape variety", id: "Q1122", label: "Tempranillo" }],
+          status: "success",
+        }),
+      },
+      product: null,
+      providerMode: "open_data",
+    });
+    const request = {
+      locale: "es" as const,
+      maxSources: 4,
+      topics: ["grapes"] as const,
+    };
+
+    // The first run stores the old wording.
+    const first = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports: portsFor("color: tinta"),
+      principal,
+      request,
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(first.kind).toBe("success");
+
+    // The second run returns the same fact worded better; the old one must go
+    // rather than sit on screen beside it.
+    const second = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports: portsFor("Tempranillo · color: tinta"),
+      principal,
+      request,
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(second.kind).toBe("success");
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const live = facts.filter(
+      (fact: Fact) => fact.predicate === "curiosity.highlight" && fact.status !== "retired",
+    );
+    expect(live.map((fact: Fact) => fact.value)).toEqual(["Tempranillo · color: tinta"]);
+  });
+
   it("does not research a grape name that matches something other than a grape", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;

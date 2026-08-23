@@ -699,6 +699,29 @@ async function persistCompletedJob(
         now,
       ),
   );
+  // Researching again replaces this run's own harvest. A method that produced
+  // results this time retires the claims IT left behind that did not come back —
+  // otherwise every improvement to how a fact is worded leaves the old wording on
+  // screen forever, beside the new one. Accepted claims are never touched: the
+  // reader kept those deliberately, and a method that returned nothing (a
+  // provider that was down) retires nothing, so a bad run cannot wipe good data.
+  const methodsThisRun = [
+    ...new Set(options.proposals.map((stored) => stored.proposal.researchMethod)),
+  ];
+  for (const method of methodsThisRun) {
+    const keptIds = [...persistedFactIds];
+    const placeholders = keptIds.map(() => "?").join(", ");
+    commands.push(
+      database
+        .prepare(
+          `UPDATE facts SET status = 'retired', version = version + 1, updated_at = ?
+          WHERE space_id = ? AND subject_type = 'wine' AND subject_id = ?
+            AND research_method = ? AND status = 'proposed' AND deleted_at IS NULL
+            ${keptIds.length === 0 ? "" : `AND id NOT IN (${placeholders})`}`,
+        )
+        .bind(now, options.spaceId, options.wineId, method, ...keptIds),
+    );
+  }
   await database.batch(commands);
 }
 
