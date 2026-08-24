@@ -7,7 +7,6 @@ import type {
   AssistantWineComparison,
   Fact,
   PriceObservation,
-  Source,
   SupportedLocale,
 } from "@vadevi/contracts";
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -339,31 +338,6 @@ export function AssistantResult({
               </article>
             ))}
           </div>
-        </div>
-      )}
-
-      {response.data.citations.length === 0 ? null : (
-        <div>
-          <h2>{t("assistant.sourcesTitle")}</h2>
-          <ul className="citation-list">
-            {response.data.citations.map((source: Source) => (
-              <li key={source.id}>
-                <a href={source.canonicalUrl} rel="noreferrer" target="_blank">
-                  {source.title}
-                </a>
-                <span>
-                  {source.publisher} · {t(`evidence.sourceType.${source.sourceType}`)}
-                </span>
-                <time dateTime={source.retrievedAt}>
-                  {t("evidence.retrieved", {
-                    date: new Intl.DateTimeFormat(i18n.language, { dateStyle: "medium" }).format(
-                      new Date(source.retrievedAt),
-                    ),
-                  })}
-                </time>
-              </li>
-            ))}
-          </ul>
         </div>
       )}
     </section>
