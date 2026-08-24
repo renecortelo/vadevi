@@ -51,7 +51,7 @@ export async function buildExportDocument(
 
   const wines = await database
     .prepare(
-      `SELECT id, display_name, producer_name, vintage_year, non_vintage, wine_type,
+      `SELECT id, display_name, producer_name, vintage_year, non_vintage, COALESCE(wine_type_free, wine_type) AS wine_type,
         country_code, region, appellation, identity_status, merged_into_wine_id,
         created_at, updated_at
       FROM wine_records WHERE space_id = ? AND deleted_at IS NULL

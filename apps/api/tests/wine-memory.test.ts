@@ -115,6 +115,35 @@ async function reserve(spaceId: string, bytes: Uint8Array<ArrayBuffer>, width = 
 }
 
 describe("Wine Memory and Quick Log", () => {
+  it("stores a wine type the old column CHECK would have rejected", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    // "vermouth_red" is not in the legacy wine_type CHECK; it must persist in the
+    // free-text column and read back unchanged.
+    const created = await createWine(spaceId, {
+      displayName: "Vermut de Prueba",
+      identityStatus: "confirmed",
+      nonVintage: true,
+      producerName: "Bodega Vermut",
+      wineType: "vermouth_red",
+    });
+    expect(created.response.status).toBe(201);
+    const wine = CreateWineResponseSchema.parse(await created.response.json()).data.wine;
+    expect(wine.wineType).toBe("vermouth_red");
+
+    // And it survives a read through the memory list.
+    const list = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines?limit=100`, {
+      headers: { Authorization: `Bearer ${ownerToken}` },
+    });
+    const body = WineMemoryResponseSchema.parse(await list.json());
+    expect(
+      body.data.some(
+        (entry: { id: string; wineType: string | null }) =>
+          entry.id === wine.id && entry.wineType === "vermouth_red",
+      ),
+    ).toBe(true);
+  });
+
   it("creates confirmed wines idempotently and only suggests duplicates", async () => {
     const owner = await bootstrap(ownerToken);
     await bootstrap(outsiderToken);

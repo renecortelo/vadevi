@@ -258,7 +258,7 @@ async function targetSummary(
   const row = await database
     .prepare(
       `SELECT wine.id, wine.display_name, wine.producer_name, wine.vintage_year,
-        wine.non_vintage, wine.wine_type, wine.country_code, wine.region, wine.appellation,
+        wine.non_vintage, COALESCE(wine.wine_type_free, wine.wine_type) AS wine_type, wine.country_code, wine.region, wine.appellation,
         wine.alcohol_abv_milli, wine.identity_status, wine.version, wine.created_at,
         (SELECT json_group_array(json_object('name', g.name_snapshot, 'percentage_milli', g.percentage_milli))
           FROM (SELECT name_snapshot, percentage_milli FROM wine_grapes g0
