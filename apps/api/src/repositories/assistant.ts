@@ -1708,6 +1708,14 @@ export async function runDeterministicAssistantTurn(
           ? (["provider_unavailable"] as const)
           : []),
       ],
+      // The thread of the conversation: the wine named or resolved this turn, else
+      // the one already on screen, else the sole match. Null when the turn was
+      // about the cellar at large. The chat sends it back as the next visible
+      // wine, so a follow-up that names nothing still lands on the right bottle.
+      focusWineId:
+        namedWine?.wine.id ??
+        options.request.context.visibleWineId ??
+        (results.length === 1 ? results[0]!.wine.id : null),
       wineContext: visibleContext.context,
     },
   };

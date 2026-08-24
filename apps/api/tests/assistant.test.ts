@@ -42,7 +42,12 @@ async function bootstrap(token: string) {
   return BootstrapResponseSchema.parse(await response.json());
 }
 
-async function createWine(token: string, spaceId: string, name: string) {
+async function createWine(
+  token: string,
+  spaceId: string,
+  name: string,
+  wineType: "white" | "red" | "rose" | "sparkling" | "fortified" | "orange" = "white",
+) {
   const response = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
     body: JSON.stringify({
       displayName: name,
@@ -51,7 +56,7 @@ async function createWine(token: string, spaceId: string, name: string) {
       producerName: "Synthetic Cellar",
       region: "Test Region",
       vintageYear: 2024,
-      wineType: "white",
+      wineType,
     }),
     headers: {
       Authorization: `Bearer ${token}`,
@@ -474,6 +479,21 @@ describe("Vicenç deterministic read path", () => {
       tool_name: "get_wine_context",
     });
   });
+
+  it("reports the wine a turn resolved by style as its focus, for the next turn to follow", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const cava = await createWine(ownerToken, spaceId, "Synthetic Sparkling", "sparkling");
+    await createWine(ownerToken, spaceId, "Synthetic Still One");
+    await createWine(ownerToken, spaceId, "Synthetic Still Two");
+
+    // "Do I have a cava?" names no wine, but the one sparkling bottle answers it.
+    // The turn's focus wine is that bottle even though three wines matched and it
+    // need not sort first — so "what can I pair it with?" next lands on it.
+    const response = await assistantTurn(ownerToken, spaceId, "do I have a cava?");
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(body.data.focusWineId).toBe(cava.id);
+  }, 30_000);
 
   it("answers a follow-up about the wine on screen when the question names none", async () => {
     const owner = await bootstrap(ownerToken);

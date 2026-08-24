@@ -132,6 +132,11 @@ export const AssistantTurnResponseSchema = z
         citations: z.array(SourceSchema).max(8),
         comparisons: z.array(AssistantWineComparisonSchema).max(6),
         evidence: z.array(AssistantEvidenceChipSchema).max(8),
+        // The wine this turn was actually about — the one named, or resolved from
+        // a style like "cava", or the wine on screen. The chat carries it into the
+        // next turn so "¿con qué lo marido?" refers to it, rather than guessing
+        // from the top search hit, which need not be the wine the answer discussed.
+        focusWineId: ResourceIdSchema.nullable(),
         mode: z.enum(["deterministic", "provider"]),
         priceObservations: z.array(PriceObservationSchema).max(25),
         recommendations: z.array(AssistantRecommendationSchema).max(12),
