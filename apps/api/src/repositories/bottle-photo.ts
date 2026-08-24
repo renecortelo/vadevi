@@ -52,6 +52,49 @@ export async function searchBottlePhotos(
   return result.status === "success" ? result.data : [];
 }
 
+/**
+ * Re-check a candidate thumbnail URL to be a public HTTPS address on the
+ * provider's own CDN, and return the exact host to pin. The client never fetches
+ * these directly — a strict content-security policy forbids it and the app keeps
+ * the browser off external hosts — so a bottle-photo thumbnail travels through the
+ * proxy below, and only a brave-owned host is ever fetched.
+ */
+function braveThumbnailHost(thumbnailUrl: string): string | null {
+  try {
+    const url = new URL(thumbnailUrl);
+    const host = url.hostname.toLowerCase();
+    if (url.protocol !== "https:" || url.username !== "" || url.password !== "") return null;
+    return host.endsWith(".brave.com") ? host : null;
+  } catch {
+    return null;
+  }
+}
+
+/** The bytes of a candidate thumbnail, fetched server-side from the fixed CDN. */
+export async function proxyBottlePhoto(options: {
+  fetcher?: ProviderFetcher;
+  thumbnailUrl: string;
+  userAgent: string;
+}): Promise<{ bytes: Uint8Array; mimeType: "image/jpeg" | "image/webp" } | null> {
+  const host = braveThumbnailHost(options.thumbnailUrl);
+  if (host === null) return null;
+  let response: Response;
+  try {
+    response = await fetchFromProvider(options.fetcher ?? fetch, options.thumbnailUrl, {
+      allowedHosts: new Set([host]),
+      headers: { Accept: "image/jpeg,image/webp", "User-Agent": options.userAgent },
+    });
+  } catch {
+    return null;
+  }
+  if (!response.ok) return null;
+  const buffer = await response.arrayBuffer();
+  if (buffer.byteLength === 0 || buffer.byteLength > maxPhotoBytes) return null;
+  const bytes = new Uint8Array(buffer);
+  const info = imageInfo(bytes);
+  return info === null ? null : { bytes, mimeType: info.mimeType };
+}
+
 export type ImportBottlePhotoOutcome =
   | { kind: "not_found" }
   | { kind: "rejected"; reason: string }

@@ -430,6 +430,20 @@
         "partial_results": "Une ou plusieurs sources étaient indisponibles ; les résultats partiels sont affichés.",
         "source_limit_reached": "La limite de sources a été atteinte."
       }
+    },
+    "bottlePhoto": {
+      "title": "Photo de la bouteille",
+      "body": "Trouvez une photo de produit nette et faites-en l'image principale de ce vin.",
+      "searchAction": "Rechercher des photos",
+      "searchError": "La recherche de photos n'a pas pu s'exécuter.",
+      "none": "Aucune photo trouvée pour ce vin.",
+      "chooseHelp": "Touchez la bonne bouteille.",
+      "confirmTitle": "Utiliser cette photo ?",
+      "confirmBody": "Elle devient l'image principale du vin. Votre photo précédente est conservée.",
+      "confirmAction": "Utiliser cette photo",
+      "cancel": "Annuler",
+      "adopted": "Enregistrée comme photo principale du vin.",
+      "adoptError": "La photo n'a pas pu être enregistrée."
     }
   },
   "assistant": {

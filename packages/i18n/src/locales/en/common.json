@@ -430,6 +430,20 @@
         "partial_results": "One or more sources were unavailable; partial results are shown.",
         "source_limit_reached": "The source limit was reached."
       }
+    },
+    "bottlePhoto": {
+      "title": "Bottle photo",
+      "body": "Find a clean product photo and make it this wine's main image.",
+      "searchAction": "Search bottle photos",
+      "searchError": "The photo search could not run.",
+      "none": "No photos were found for this wine.",
+      "chooseHelp": "Tap the correct bottle.",
+      "confirmTitle": "Use this photo?",
+      "confirmBody": "It becomes the wine's main image. Your previous photo is kept.",
+      "confirmAction": "Use this photo",
+      "cancel": "Cancel",
+      "adopted": "Saved as the wine's main photo.",
+      "adoptError": "The photo could not be saved."
     }
   },
   "assistant": {

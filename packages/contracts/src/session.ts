@@ -63,6 +63,7 @@ export const BootstrapResponseSchema = z
         features: z
           .object({
             assistant: z.boolean(),
+            bottlePhotoSearch: z.boolean(),
             externalResearch: z.boolean(),
             priceLookup: z.boolean(),
             voiceInput: z.boolean(),

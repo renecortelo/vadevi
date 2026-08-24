@@ -430,6 +430,20 @@
         "partial_results": "Een of meer bronnen waren niet beschikbaar; gedeeltelijke resultaten worden getoond.",
         "source_limit_reached": "De bronlimiet is bereikt."
       }
+    },
+    "bottlePhoto": {
+      "title": "Flesfoto",
+      "body": "Zoek een nette productfoto en maak die de hoofdafbeelding van deze wijn.",
+      "searchAction": "Flesfoto's zoeken",
+      "searchError": "De fotozoekopdracht kon niet worden uitgevoerd.",
+      "none": "Geen foto's gevonden voor deze wijn.",
+      "chooseHelp": "Tik op de juiste fles.",
+      "confirmTitle": "Deze foto gebruiken?",
+      "confirmBody": "Het wordt de hoofdafbeelding van de wijn. Je vorige foto blijft bewaard.",
+      "confirmAction": "Foto gebruiken",
+      "cancel": "Annuleren",
+      "adopted": "Opgeslagen als hoofdfoto van de wijn.",
+      "adoptError": "De foto kon niet worden opgeslagen."
     }
   },
   "assistant": {

@@ -8,7 +8,7 @@ import {
 } from "@vadevi/contracts";
 
 import { authentication } from "./middleware/authentication";
-import { externalResearchEnabled } from "./adapters/research-factory";
+import { externalResearchEnabled, imageSearchEnabled } from "./adapters/research-factory";
 import { requestContext } from "./middleware/request-context";
 import { security } from "./middleware/security";
 import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
@@ -308,6 +308,7 @@ export function createApi() {
 
     const response = await bootstrapUser(database, {
       aiProvider: context.env.AI_PROVIDER ?? "none",
+      bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
       principal: context.get("principal"),
       requestId: context.get("requestId"),
@@ -323,6 +324,7 @@ export function createApi() {
 
     const response = await updateUserProfile(database, {
       aiProvider: context.env.AI_PROVIDER ?? "none",
+      bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
       principal: context.get("principal"),
       requestId: context.get("requestId"),

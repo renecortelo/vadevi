@@ -21,6 +21,7 @@ type BootstrapSpaceRow = {
 
 export type BootstrapOptions = {
   aiProvider: "none" | "cloudflare";
+  bottlePhotoSearch: boolean;
   externalResearch: boolean;
   principal: FirebasePrincipal;
   requestId: string;
@@ -198,6 +199,7 @@ export async function getBootstrapResponse(
     data: {
       features: {
         assistant: true,
+        bottlePhotoSearch: options.bottlePhotoSearch,
         externalResearch: options.externalResearch,
         priceLookup: false,
         voiceInput: false,
