@@ -1250,12 +1250,14 @@ export async function runDeterministicAssistantTurn(
     }
   }
   // A note matches by meaning, so "mineral wines" finds a note that says fresh
-  // and mineral in any language. It rides alongside the term search — the note's
-  // wine joins the results, the note itself becomes personal evidence the model
-  // can cite. Skipped for a whole-collection question, which already has it all.
+  // and mineral in any language. It is a fallback for when the term search would
+  // MISS a wine — so it runs only when that search found nothing. Letting it ride
+  // alongside a search that already answered padded "matching wines" with a
+  // note-similar but off-topic bottle — a Rioja surfacing on "¿tengo un vino de
+  // Nueva Zelanda?". Skipped too for a whole-collection question, which has it all.
   let semanticStatements: AssistantLanguageStatement[] = [];
   let semanticStatementWineId = new Map<string, string>();
-  if (options.semanticNotes !== null && !overview && terms.length > 0) {
+  if (options.semanticNotes !== null && !overview && terms.length > 0 && results.length === 0) {
     const semantic = await searchNotesSemantically(
       database,
       options.principal,

@@ -1094,6 +1094,55 @@ describe("Vicenç deterministic read path", () => {
     expect(captured.some((statement) => statement.text.includes("Chateldon"))).toBe(false);
   }, 30_000);
 
+  it("does not pad the matching wines with a note-similar but off-topic bottle", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const direct = await createWine(ownerToken, spaceId, "Zzqvyx Direct White");
+    const offTopic = await createWine(ownerToken, spaceId, "Offtopic Rioja Red", "red");
+    const offNoteId = randomOpaqueToken();
+    const now = new Date().toISOString();
+    await env.DB.prepare(
+      `INSERT INTO tasting_notes
+        (id, space_id, wine_id, author_user_id, mode, state, tasted_at, comment, version, created_at, updated_at)
+        VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, ?, 1, ?, ?)`,
+    )
+      .bind(offNoteId, spaceId, offTopic.id, owner.data.user.id, now, "fresco y mineral", now, now)
+      .run();
+
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "none",
+      externalResearch: false,
+      language: null,
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        // The term search finds the Marlborough wine directly, so the semantic
+        // fallback must not run and add the unrelated Rioja.
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "es",
+        message: "Tengo un vino de Zzqvyx?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: {
+        index: async () => {},
+        remove: async () => {},
+        search: async () => [{ noteId: offNoteId, score: 0.9, spaceId, wineId: offTopic.id }],
+      },
+      spaceId,
+    });
+    const ids =
+      response?.data.results.map((result: { wine: { id: string } }) => result.wine.id) ?? [];
+    expect(ids).toContain(direct.id);
+    expect(ids).not.toContain(offTopic.id);
+  }, 30_000);
+
   it("hands Vicenç the researched pairing note, cited, even with the generator off", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
