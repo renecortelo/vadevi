@@ -1028,6 +1028,72 @@ describe("Vicenç deterministic read path", () => {
     expect(detail?.text).toContain("you had it with: Grilled sea bass");
   });
 
+  it("drops another wine's semantic note when a pairing narrows to one bottle", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const focus = await createWine(ownerToken, spaceId, "Focus Kiwi White");
+    const other = await createWine(ownerToken, spaceId, "Other Coto Red", "red");
+    // A note on the OTHER wine that a semantic search would surface — the very
+    // note that leaked "no hay información sobre EL COTO" into a Kiwi answer.
+    const otherNoteId = randomOpaqueToken();
+    const now = new Date().toISOString();
+    await env.DB.prepare(
+      `INSERT INTO tasting_notes
+        (id, space_id, wine_id, author_user_id, mode, state, tasted_at, comment, version, created_at, updated_at)
+        VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, ?, 1, ?, ?)`,
+    )
+      .bind(
+        otherNoteId,
+        spaceId,
+        other.id,
+        owner.data.user.id,
+        now,
+        "similar a Chateldon",
+        now,
+        now,
+      )
+      .run();
+
+    let captured: Array<{ id: string; text: string }> = [];
+    await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      foodIdeas: null,
+      language: {
+        render: async (input) => {
+          captured = input.statements;
+          return { claims: [], modelVersion: "@cf/example/model" };
+        },
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        // A pairing follow-up about the focus wine; names no wine of its own.
+        context: { allowedCrossSpaceIds: [], visibleWineId: focus.id },
+        locale: "es",
+        message: "Con que lo marido?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      // The semantic search offers the OTHER wine's note.
+      semanticNotes: {
+        index: async () => {},
+        remove: async () => {},
+        search: async () => [{ noteId: otherNoteId, score: 0.9, spaceId, wineId: other.id }],
+      },
+      spaceId,
+    });
+    // The other wine's note must not travel into a pairing about the focus wine.
+    expect(captured.some((statement) => statement.id === `note-${otherNoteId}`)).toBe(false);
+    expect(captured.some((statement) => statement.text.includes("Chateldon"))).toBe(false);
+  }, 30_000);
+
   it("hands Vicenç the researched pairing note, cited, even with the generator off", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
