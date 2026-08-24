@@ -1,3 +1,4 @@
+import { WineTypeSchema } from "@vadevi/contracts";
 import type { WineGrapeSummary, WineSummary, WineType } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -203,18 +204,7 @@ export function EditWineDialog({
           value={wineType}
         >
           <option value="">{t("quickLog.typeUnknown")}</option>
-          {(
-            [
-              "red",
-              "white",
-              "rose",
-              "sparkling",
-              "fortified",
-              "vermouth",
-              "orange",
-              "other",
-            ] as const
-          ).map((type) => (
+          {WineTypeSchema.options.map((type: WineType) => (
             <option key={type} value={type}>
               {t(`quickLog.wineType.${type}`)}
             </option>

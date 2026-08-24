@@ -3130,3 +3130,45 @@ p {
   inline-size: 2rem;
   margin-block-end: var(--space-2);
 }
+
+.research-panel__photos {
+  margin-block-start: var(--space-4);
+}
+
+.bottle-photo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bottle-photo__help {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* A responsive grid of candidate photos that never spills past the panel: the
+   columns shrink to fit, and each image is boxed and object-fit so a tall bottle
+   shot cannot stretch the card or overflow the viewport on a phone. */
+.bottle-photo__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+  gap: var(--space-2);
+  max-inline-size: 100%;
+}
+
+.bottle-photo__candidate {
+  aspect-ratio: 3 / 4;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+}
+
+.bottle-photo__candidate img {
+  block-size: 100%;
+  display: block;
+  inline-size: 100%;
+  object-fit: contain;
+}
