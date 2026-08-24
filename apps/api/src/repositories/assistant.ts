@@ -409,10 +409,16 @@ async function searchNotesSemantically(
   message: string,
   spaces: AllowedSpaceRow[],
   limit: number,
-): Promise<{ results: AssistantSearchResult[]; statements: AssistantLanguageStatement[] }> {
+): Promise<{
+  results: AssistantSearchResult[];
+  statements: AssistantLanguageStatement[];
+  // Which wine each statement is about, so a pairing question narrowed to one
+  // bottle can drop a semantically-similar note that belongs to a different wine.
+  statementWineId: Map<string, string>;
+}> {
   const spaceIds = spaces.map((space) => space.id);
   const matches = await port.search({ limit, query: message, spaceIds });
-  if (matches.length === 0) return { results: [], statements: [] };
+  if (matches.length === 0) return { results: [], statements: [], statementWineId: new Map() };
   const noteIds = matches.map((match) => match.noteId);
   const notePlaceholders = noteIds.map(() => "?").join(", ");
   const spacePlaceholders = spaceIds.map(() => "?").join(", ");
@@ -428,6 +434,7 @@ async function searchNotesSemantically(
   const spaceById = new Map(spaces.map((space) => [space.id, space]));
   const results = new Map<string, AssistantSearchResult>();
   const statements: AssistantLanguageStatement[] = [];
+  const statementWineId = new Map<string, string>();
   for (const note of notes.results) {
     const wine = await getWineSummary(database, principal, note.space_id, note.wine_id);
     if (wine === null) continue;
@@ -437,15 +444,17 @@ async function searchNotesSemantically(
       spaceName: space?.name ?? "",
       wine,
     });
+    const statementId = `note-${note.id}`;
     statements.push({
       evidenceClass: "personal",
-      id: `note-${note.id}`,
+      id: statementId,
       sampleSize: null,
       sourceIds: [],
       text: `your note on ${wine.displayName}: ${note.comment}`,
     });
+    statementWineId.set(statementId, wine.id);
   }
-  return { results: [...results.values()], statements };
+  return { results: [...results.values()], statements, statementWineId };
 }
 
 type TastingNoteDetailRow = {
@@ -1245,6 +1254,7 @@ export async function runDeterministicAssistantTurn(
   // wine joins the results, the note itself becomes personal evidence the model
   // can cite. Skipped for a whole-collection question, which already has it all.
   let semanticStatements: AssistantLanguageStatement[] = [];
+  let semanticStatementWineId = new Map<string, string>();
   if (options.semanticNotes !== null && !overview && terms.length > 0) {
     const semantic = await searchNotesSemantically(
       database,
@@ -1263,6 +1273,7 @@ export async function runDeterministicAssistantTurn(
       }
       results = [...merged.values()].slice(0, 12);
       semanticStatements = semantic.statements;
+      semanticStatementWineId = semantic.statementWineId;
     }
   }
   await auditToolRun(database, {
@@ -1339,6 +1350,13 @@ export async function runDeterministicAssistantTurn(
   // need the other results.
   if (requestsPairing(options.request.message) && namedWine !== null) {
     results = [namedWine];
+    // The pairing is about THIS bottle, so a note surfaced only because it reads
+    // similarly — the reader's note on another wine — must not travel with it. It
+    // was what put "no hay información sobre EL COTO" into an answer about the
+    // Kiwi Trail.
+    semanticStatements = semanticStatements.filter(
+      (statement) => semanticStatementWineId.get(statement.id) === namedWine.wine.id,
+    );
   } else if (requestsPairing(options.request.message) && askedType !== null) {
     // Several wines of the named style: still better to answer about those than
     // to hand the model the whole cellar as "matching wines".
