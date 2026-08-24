@@ -170,7 +170,8 @@
       "rose": "Rosé",
       "sparkling": "Espumante",
       "fortified": "Fortificado",
-      "vermouth": "Vermute",
+      "vermouth_red": "Vermute tinto",
+      "vermouth_white": "Vermute branco",
       "orange": "Laranja",
       "other": "Outro"
     },

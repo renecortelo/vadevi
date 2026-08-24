@@ -6,7 +6,7 @@ describe("tasting fields by wine type", () => {
   it("asks about tannin only where there is tannin to speak of", () => {
     expect(hasTannin("red")).toBe(true);
     expect(hasTannin("orange")).toBe(true);
-    expect(hasTannin("vermouth")).toBe(true);
+    expect(hasTannin("vermouth_red")).toBe(true);
     expect(hasTannin("white")).toBe(false);
     expect(hasTannin("rose")).toBe(false);
     expect(hasTannin("sparkling")).toBe(false);

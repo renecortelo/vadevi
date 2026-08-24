@@ -170,7 +170,8 @@
       "rose": "Rosat",
       "sparkling": "Escumós",
       "fortified": "Fortificat",
-      "vermouth": "Vermut",
+      "vermouth_red": "Vermut negre",
+      "vermouth_white": "Vermut blanc",
       "orange": "Taronja",
       "other": "Altres"
     },

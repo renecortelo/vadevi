@@ -170,7 +170,8 @@
       "rose": "Rosé",
       "sparkling": "Mousserend",
       "fortified": "Versterkt",
-      "vermouth": "Vermout",
+      "vermouth_red": "Rode vermout",
+      "vermouth_white": "Witte vermout",
       "orange": "Oranje",
       "other": "Overig"
     },

@@ -2644,7 +2644,8 @@
                             "rose",
                             "sparkling",
                             "fortified",
-                            "vermouth",
+                            "vermouth_red",
+                            "vermouth_white",
                             "orange",
                             "other",
                             null
@@ -4588,7 +4589,8 @@
                         "rose",
                         "sparkling",
                         "fortified",
-                        "vermouth",
+                        "vermouth_red",
+                        "vermouth_white",
                         "orange",
                         "other",
                         null
@@ -4720,7 +4722,8 @@
                       "rose",
                       "sparkling",
                       "fortified",
-                      "vermouth",
+                      "vermouth_red",
+                      "vermouth_white",
                       "orange",
                       "other",
                       null
@@ -4867,7 +4870,8 @@
               "rose",
               "sparkling",
               "fortified",
-              "vermouth",
+              "vermouth_red",
+              "vermouth_white",
               "orange",
               "other"
             ]
@@ -4988,7 +4992,8 @@
                       "rose",
                       "sparkling",
                       "fortified",
-                      "vermouth",
+                      "vermouth_red",
+                      "vermouth_white",
                       "orange",
                       "other",
                       null
@@ -5131,7 +5136,8 @@
               "rose",
               "sparkling",
               "fortified",
-              "vermouth",
+              "vermouth_red",
+              "vermouth_white",
               "orange",
               "other",
               null
@@ -5250,7 +5256,8 @@
                     "rose",
                     "sparkling",
                     "fortified",
-                    "vermouth",
+                    "vermouth_red",
+                    "vermouth_white",
                     "orange",
                     "other",
                     null
@@ -6874,7 +6881,8 @@
                                 "rose",
                                 "sparkling",
                                 "fortified",
-                                "vermouth",
+                                "vermouth_red",
+                                "vermouth_white",
                                 "orange",
                                 "other"
                               ]
@@ -7146,7 +7154,8 @@
                   "rose",
                   "sparkling",
                   "fortified",
-                  "vermouth",
+                  "vermouth_red",
+                  "vermouth_white",
                   "orange",
                   "other"
                 ]
@@ -7329,7 +7338,8 @@
                       "rose",
                       "sparkling",
                       "fortified",
-                      "vermouth",
+                      "vermouth_red",
+                      "vermouth_white",
                       "orange",
                       "other",
                       null
@@ -7659,7 +7669,8 @@
                             "rose",
                             "sparkling",
                             "fortified",
-                            "vermouth",
+                            "vermouth_red",
+                            "vermouth_white",
                             "orange",
                             "other"
                           ]
@@ -8255,7 +8266,8 @@
                             "rose",
                             "sparkling",
                             "fortified",
-                            "vermouth",
+                            "vermouth_red",
+                            "vermouth_white",
                             "orange",
                             "other",
                             null
@@ -12864,7 +12876,8 @@
                 "rose",
                 "sparkling",
                 "fortified",
-                "vermouth",
+                "vermouth_red",
+                "vermouth_white",
                 "orange",
                 "other"
               ]
