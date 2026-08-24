@@ -115,11 +115,16 @@ export class CloudflareFoodIdeasAdapter implements FoodIdeasPort {
               `Base the pairing on "wine" — what the bottle is, and what the sources ` +
               `say about it or its grape. "readerNotes" is one person's impression of ` +
               `one glass: use it only as secondary colour, and never let it override ` +
-              `what the wine is. Propose 2 to 4 dishes that would suit it. Each entry ` +
-              `is a short phrase naming the dish and, after an em dash, a few words on ` +
-              `why it works. Suggest dishes only — never state new facts about the ` +
-              `wine, never invent its flavours, score, or price. Reply with ONLY a ` +
-              `JSON array of strings. No markdown.`,
+              `what the wine is. The wine's "type" governs the pairing: a white, ` +
+              `rosé, sparkling or light wine goes with lighter fare — fish, poultry, ` +
+              `vegetables, fresh cheeses — and NOT with red meats or heavy stews; a ` +
+              `red goes with fuller dishes; a fortified or sweet wine with its own ` +
+              `matches. Never suggest a dish that contradicts the type. Propose 2 to ` +
+              `4 dishes that would suit it. Each entry is a short phrase naming the ` +
+              `dish and, after an em dash, a few words on why it works. Suggest ` +
+              `dishes only — never state new facts about the wine, never invent its ` +
+              `flavours, score, or price. Reply with ONLY a JSON array of strings. ` +
+              `No markdown.`,
             role: "system",
           },
           {
