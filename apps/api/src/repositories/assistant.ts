@@ -715,7 +715,18 @@ async function searchMemory(
         results.set(`${space.id}:${wine.id}`, { spaceId: space.id, spaceName: space.name, wine });
       }
     }
-    if (visibleWineId !== null && !results.has(`${space.id}:${visibleWineId}`)) {
+  }
+  // Whether the question found wines on its own terms. A fresh subject does; a
+  // pronoun follow-up ("…and pair it?") finds nothing, and leans on the wine
+  // carried from before instead.
+  const foundOwnMatches = results.size > 0;
+  // The carried wine resolves that follow-up — but ONLY when the question found
+  // nothing itself. Forcing it in, and to the front, on every turn is what made a
+  // conversation cling to one bottle: a later "¿hay un vino de Marlborough?" kept
+  // answering about the wine from three turns ago and showed its facts.
+  if (visibleWineId !== null && !foundOwnMatches) {
+    for (const space of spaces) {
+      if (results.has(`${space.id}:${visibleWineId}`)) continue;
       const response = await listWines(database, {
         limit: 100,
         principal,
@@ -746,7 +757,10 @@ async function searchMemory(
     }
   }
   const ordered = [...results.values()].sort((left, right) => {
-    if (visibleWineId === null) return 0;
+    // Bring the carried wine to the front only when it IS the subject — the
+    // follow-up case where the question found nothing of its own. On a fresh
+    // subject the genuine top match must lead, not the wine held from before.
+    if (visibleWineId === null || foundOwnMatches) return 0;
     return Number(right.wine.id === visibleWineId) - Number(left.wine.id === visibleWineId);
   });
   return { results: ordered.slice(0, 10), terms };
@@ -1297,16 +1311,20 @@ export async function runDeterministicAssistantTurn(
           const ofType = results.filter((result) => result.wine.wineType === askedType);
           return ofType.length === 1 ? ofType[0]! : null;
         })()) ??
-    // "…and what can I pair IT with?" names nothing at all. The turn carries no
-    // history, so the antecedent has to come from the screen: the wine the reader
-    // is looking at, or the one this conversation last surfaced.
-    results.find((result) => result.wine.id === options.request.context.visibleWineId) ??
-    (await visibleWineResult(
-      database,
-      options.principal,
-      spaces,
-      options.request.context.visibleWineId,
-    ));
+    // "…and what can I pair IT with?" names nothing at all, so the antecedent has
+    // to come from the screen: the wine last surfaced. But ONLY for a pronoun
+    // follow-up like this — a pairing question. A fresh subject question ("¿hay un
+    // vino de Marlborough?") must not drag the previously focused wine in and
+    // answer about it; that made a Marlborough search show a carried wine's facts.
+    (requestsPairing(options.request.message)
+      ? (results.find((result) => result.wine.id === options.request.context.visibleWineId) ??
+        (await visibleWineResult(
+          database,
+          options.principal,
+          spaces,
+          options.request.context.visibleWineId,
+        )))
+      : null);
   const namesOwnWine = namedWine !== null;
   // The antecedent may not be among the search hits — "pair it with" matches
   // nothing in particular — so once found it joins the results, or the answer
@@ -1741,14 +1759,15 @@ export async function runDeterministicAssistantTurn(
           ? (["provider_unavailable"] as const)
           : []),
       ],
-      // The thread of the conversation: the wine named or resolved this turn, else
-      // the one already on screen, else the sole match. Null when the turn was
-      // about the cellar at large. The chat sends it back as the next visible
-      // wine, so a follow-up that names nothing still lands on the right bottle.
+      // The wine this answer was about, for the next turn's pronoun to follow: the
+      // one named or resolved this turn, else the top match the answer led with
+      // (search ranks it first and the statements reach the model in that order),
+      // else the wine carried from before. The top match comes before the carried
+      // wine so a fresh subject — "¿hay un vino de Marlborough?" — becomes the new
+      // thread, while a pure follow-up, which sets namedWine to the carried wine,
+      // still stays on it.
       focusWineId:
-        namedWine?.wine.id ??
-        options.request.context.visibleWineId ??
-        (results.length === 1 ? results[0]!.wine.id : null),
+        namedWine?.wine.id ?? results[0]?.wine.id ?? options.request.context.visibleWineId ?? null,
       wineContext: visibleContext.context,
     },
   };

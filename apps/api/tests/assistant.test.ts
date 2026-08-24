@@ -480,6 +480,64 @@ describe("Vicenç deterministic read path", () => {
     });
   });
 
+  it("makes a fresh subject the new focus, not the wine carried from before", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    // The wine the region query is about, and an unrelated one carried in as the
+    // previous focus. "Marlborough" appears only in the first wine's region.
+    const marlborough = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Southern Kiwi",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Synthetic Cellar",
+        region: "Marlborough",
+        vintageYear: 2024,
+        wineType: "white",
+      }),
+      headers: {
+        Authorization: `Bearer ${ownerToken}`,
+        "Content-Type": "application/json",
+        "Idempotency-Key": randomOpaqueToken(),
+      },
+      method: "POST",
+    });
+    const marlboroughWine = CreateWineResponseSchema.parse(await marlborough.json()).data.wine;
+    const carried = await createWine(ownerToken, spaceId, "Carried Rioja Red", "red");
+
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      foodIdeas: null,
+      language: { render: async () => ({ claims: [], modelVersion: "@cf/example/model" }) },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        // A fresh subject question — not a pairing follow-up — while a wine is
+        // still carried as the visible one.
+        context: { allowedCrossSpaceIds: [], visibleWineId: carried.id },
+        locale: "es",
+        message: "Hay un vino de Marlborough?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    expect(response).not.toBeNull();
+    // The new thread is the wine the question found, not the one carried in.
+    expect(response?.data.focusWineId).toBe(marlboroughWine.id);
+    expect(response?.data.focusWineId).not.toBe(carried.id);
+    // And the carried wine's context is not dragged onto a question about another.
+    expect(response?.data.wineContext).toBeNull();
+  }, 30_000);
+
   it("reports the wine a turn resolved by style as its focus, for the next turn to follow", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
