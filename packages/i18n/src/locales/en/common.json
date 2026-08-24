@@ -170,7 +170,8 @@
       "rose": "Rosé",
       "sparkling": "Sparkling",
       "fortified": "Fortified",
-      "vermouth": "Vermouth",
+      "vermouth_red": "Red vermouth",
+      "vermouth_white": "White vermouth",
       "orange": "Orange",
       "other": "Other"
     },

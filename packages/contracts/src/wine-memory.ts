@@ -15,7 +15,8 @@ export const WineTypeSchema = z.enum([
   "rose",
   "sparkling",
   "fortified",
-  "vermouth",
+  "vermouth_red",
+  "vermouth_white",
   "orange",
   "other",
 ]);

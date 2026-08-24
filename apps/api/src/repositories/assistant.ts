@@ -160,9 +160,15 @@ const wineTypeTerms: [string, NonNullable<WineSummary["wineType"]>][] = [
   ["fortified", "fortified"],
   ["jerez", "fortified"],
   ["oporto", "fortified"],
-  ["vermut", "vermouth"],
-  ["vermouth", "vermouth"],
-  ["vermú", "vermouth"],
+  ["vermut tinto", "vermouth_red"],
+  ["vermut rojo", "vermouth_red"],
+  ["vermut negro", "vermouth_red"],
+  ["red vermouth", "vermouth_red"],
+  ["vermut blanco", "vermouth_white"],
+  ["white vermouth", "vermouth_white"],
+  ["vermut", "vermouth_red"],
+  ["vermouth", "vermouth_red"],
+  ["vermú", "vermouth_red"],
 ];
 
 function wineTypeFromMessage(message: string): NonNullable<WineSummary["wineType"]> | null {
@@ -186,8 +192,10 @@ function colorToWineType(color: string | null): WineSummary["wineType"] | null {
       return "sparkling";
     case "fortified":
       return "fortified";
-    case "vermouth":
-      return "vermouth";
+    case "vermouth_red":
+      return "vermouth_red";
+    case "vermouth_white":
+      return "vermouth_white";
     case "orange":
       return "orange";
     default:

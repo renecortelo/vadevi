@@ -170,7 +170,8 @@
       "rose": "Rosé",
       "sparkling": "Schaumwein",
       "fortified": "Aufgespritet",
-      "vermouth": "Wermut",
+      "vermouth_red": "Roter Wermut",
+      "vermouth_white": "Weißer Wermut",
       "orange": "Orange",
       "other": "Andere"
     },

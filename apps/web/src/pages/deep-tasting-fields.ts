@@ -10,7 +10,7 @@ export function hasTannin(type: WineType | null): boolean {
     type === "red" ||
     type === "orange" ||
     type === "fortified" ||
-    type === "vermouth"
+    type === "vermouth_red"
   );
 }
 
@@ -34,8 +34,11 @@ export function colorFamiliesFor(
     case "orange":
       return ["orange", "brown"];
     case "fortified":
-    case "vermouth":
       return ["white", "red", "brown"];
+    case "vermouth_red":
+      return ["red", "brown"];
+    case "vermouth_white":
+      return ["white", "orange", "brown"];
     default:
       return allColorFamilies;
   }
@@ -59,8 +62,10 @@ export function hueOptionsFor(type: WineType | null): readonly string[] {
       return ["gold", "amber", "copper", "orange", "brick"];
     case "fortified":
       return ["gold", "amber", "mahogany", "brick", "brown"];
-    case "vermouth":
-      return ["straw", "amber", "mahogany", "ruby", "brown"];
+    case "vermouth_red":
+      return ["amber", "mahogany", "ruby", "brick", "brown"];
+    case "vermouth_white":
+      return ["straw", "gold", "amber", "mahogany", "brown"];
     default:
       return [
         "straw",
