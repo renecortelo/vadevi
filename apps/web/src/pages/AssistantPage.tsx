@@ -420,9 +420,12 @@ export function AssistantPage() {
   // and it travels as the visible wine, exactly as it would from a wine's page.
   function lastWineInConversation(): string | null {
     for (let index = turns.length - 1; index >= 0; index -= 1) {
-      const results = turns[index]?.response?.data.results ?? [];
-      const wineId = results[0]?.wine.id;
-      if (typeof wineId === "string" && wineId.length > 0) return wineId;
+      // The wine the turn was ABOUT, which the server reports — not the top
+      // search hit, which need not be the one the answer discussed. Asking "tengo
+      // un cava?" answers about the Naltros though nineteen wines matched, so its
+      // focus wine is the Naltros, and "¿con qué lo marido?" follows to it.
+      const focusWineId = turns[index]?.response?.data.focusWineId;
+      if (typeof focusWineId === "string" && focusWineId.length > 0) return focusWineId;
     }
     return null;
   }

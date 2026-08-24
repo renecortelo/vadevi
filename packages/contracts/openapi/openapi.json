@@ -2118,6 +2118,11 @@
                 },
                 "maxItems": 8
               },
+              "focusWineId": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+              },
               "mode": {
                 "type": "string",
                 "enum": [
@@ -3216,6 +3221,7 @@
               "citations",
               "comparisons",
               "evidence",
+              "focusWineId",
               "mode",
               "priceObservations",
               "recommendations",
