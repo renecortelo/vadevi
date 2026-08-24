@@ -113,7 +113,7 @@ function wineSummary(row: WineRow): WineSummary {
 }
 
 const wineSelect = `SELECT wine.id, wine.display_name, wine.producer_name, wine.vintage_year,
-  wine.non_vintage, wine.wine_type, wine.country_code, wine.region, wine.appellation,
+  wine.non_vintage, COALESCE(wine.wine_type_free, wine.wine_type) AS wine_type, wine.country_code, wine.region, wine.appellation,
   wine.alcohol_abv_milli, wine.identity_status, wine.version, wine.created_at, wine.updated_at,
   wine.normalized_name, wine.normalized_producer_name,
   (SELECT json_group_array(json_object('name', g.name_snapshot, 'percentage_milli', g.percentage_milli))
@@ -248,7 +248,7 @@ export async function createWine(
       .prepare(
         `INSERT INTO wine_records (
           id, space_id, display_name, normalized_name, producer_name,
-          normalized_producer_name, vintage_year, non_vintage, wine_type,
+          normalized_producer_name, vintage_year, non_vintage, wine_type_free,
           country_code, normalized_country_code, region, normalized_region,
           appellation, alcohol_abv_milli, bottle_size_ml, barcode, style_text,
           identity_status, created_by_user_id, confirmed_by_user_id,
@@ -504,7 +504,7 @@ export async function listWines(
         WHERE wine.space_id = ? AND wine.deleted_at IS NULL
           AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
           AND membership.status = 'active'
-          AND (? IS NULL OR wine.wine_type = ?)
+          AND (? IS NULL OR COALESCE(wine.wine_type_free, wine.wine_type) = ?)
           AND (? IS NULL OR wine.identity_status = ?)
           AND (? IS NULL OR wine.normalized_country_code = ?)
           AND (? IS NULL OR wine.normalized_region LIKE ?)
@@ -1052,7 +1052,7 @@ export async function updateWine(
           normalized_producer_name = CASE WHEN ? = 1 THEN ? ELSE normalized_producer_name END,
           vintage_year = CASE WHEN ? = 1 THEN ? ELSE vintage_year END,
           non_vintage = CASE WHEN ? = 1 THEN ? ELSE non_vintage END,
-          wine_type = CASE WHEN ? = 1 THEN ? ELSE wine_type END,
+          wine_type_free = CASE WHEN ? = 1 THEN ? ELSE wine_type_free END,
           country_code = CASE WHEN ? = 1 THEN ? ELSE country_code END,
           normalized_country_code = CASE WHEN ? = 1 THEN ? ELSE normalized_country_code END,
           region = CASE WHEN ? = 1 THEN ? ELSE region END,

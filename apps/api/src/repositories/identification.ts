@@ -23,7 +23,7 @@ type WineMatchRow = {
   producer_name: string;
   region: string | null;
   vintage_year: number | null;
-  wine_type: "fortified" | "orange" | "other" | "red" | "rose" | "sparkling" | "white" | null;
+  wine_type: string | null;
 };
 
 export type IdentificationPorts = Readonly<{
@@ -94,7 +94,7 @@ async function membership(
     .first<ActorRow>();
 }
 
-const wineColumns = `id, display_name, producer_name, vintage_year, wine_type, country_code, region`;
+const wineColumns = `id, display_name, producer_name, vintage_year, COALESCE(wine_type_free, wine_type) AS wine_type, country_code, region`;
 
 /** Exact barcode hit inside the Space. No provider, works offline-first. */
 async function matchByBarcode(
