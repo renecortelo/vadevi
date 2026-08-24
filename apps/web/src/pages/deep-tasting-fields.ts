@@ -40,3 +40,43 @@ export function colorFamiliesFor(
       return allColorFamilies;
   }
 }
+
+// The specific hues offered for a wine, richer than the coarse colour family —
+// a red ranges purple → ruby → garnet → brick → tawny, a white straw → gold →
+// amber → copper. Codes, localized where they are shown. An unknown or "other"
+// wine gets a broad set so nothing a taster might see is missing.
+export function hueOptionsFor(type: WineType | null): readonly string[] {
+  switch (type) {
+    case "red":
+      return ["purple", "ruby", "garnet", "brick", "tawny"];
+    case "white":
+      return ["straw", "yellow", "gold", "amber", "copper"];
+    case "rose":
+      return ["pale_pink", "salmon", "raspberry", "coral", "copper"];
+    case "sparkling":
+      return ["straw", "yellow", "gold", "pale_pink", "salmon"];
+    case "orange":
+      return ["gold", "amber", "copper", "orange", "brick"];
+    case "fortified":
+      return ["gold", "amber", "mahogany", "brick", "brown"];
+    case "vermouth":
+      return ["straw", "amber", "mahogany", "ruby", "brown"];
+    default:
+      return [
+        "straw",
+        "yellow",
+        "gold",
+        "amber",
+        "copper",
+        "pale_pink",
+        "salmon",
+        "purple",
+        "ruby",
+        "garnet",
+        "brick",
+        "tawny",
+        "mahogany",
+        "brown",
+      ];
+  }
+}

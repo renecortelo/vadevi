@@ -11,7 +11,7 @@ import { Link, useParams, useSearchParams } from "react-router";
 import type { z } from "zod";
 
 import { DecimalInput } from "../components/DecimalInput";
-import { colorFamiliesFor, hasTannin } from "./deep-tasting-fields";
+import { colorFamiliesFor, hasTannin, hueOptionsFor } from "./deep-tasting-fields";
 import { useAuth } from "../auth/AuthContext";
 import { type DeepTastingDraft, offlineDatabase, type SyncConflict } from "../offline/database";
 import { deepTastingChangedEvent } from "../offline/events";
@@ -455,11 +455,28 @@ export function DeepTastingPage() {
         </div>
         <label>
           <span>{t("tasting.field.hue")}</span>
-          <input
-            maxLength={80}
+          <select
             onChange={(event) => update("appearanceHue", event.target.value || undefined)}
             value={draft.payload.appearanceHue ?? ""}
-          />
+          >
+            <option value="">{t("tasting.notSet")}</option>
+            {hueOptionsFor(wineType).map((code) => (
+              <option key={code} value={t(`tasting.hueOption.${code}`)}>
+                {t(`tasting.hueOption.${code}`)}
+              </option>
+            ))}
+            {/* A hue saved earlier that this type's list does not offer — a value
+                from another language, or before the wine's type was known — is
+                kept as its own option so choosing it again is possible and it is
+                never silently dropped. */}
+            {draft.payload.appearanceHue !== undefined &&
+            draft.payload.appearanceHue !== "" &&
+            !hueOptionsFor(wineType).some(
+              (code) => t(`tasting.hueOption.${code}`) === draft.payload.appearanceHue,
+            ) ? (
+              <option value={draft.payload.appearanceHue}>{draft.payload.appearanceHue}</option>
+            ) : null}
+          </select>
         </label>
         <div className="form-grid form-grid--three">
           <ScaleField
