@@ -157,39 +157,27 @@ export function AssistantResult({
         </details>
       )}
 
-      {response.data.wineContext === null ? null : (
-        <div className="assistant-context">
-          <h2>{t("assistant.contextTitle")}</h2>
-          {response.data.wineContext.facts.length === 0 ? (
-            <p>{t("assistant.contextEmpty")}</p>
-          ) : (
-            <ul className="assistant-fact-list">
-              {response.data.wineContext.facts.map((fact: Fact) => (
-                <li key={fact.id}>
-                  <div className="fact-card__heading">
-                    <span>{t(`evidence.predicate.${fact.predicate.replaceAll(".", "_")}`)}</span>
-                  </div>
-                  <strong>
-                    {Array.isArray(fact.value) ? fact.value.join(", ") : String(fact.value)}
-                  </strong>
-                  {fact.citations.length === 0 ? null : (
-                    <ul className="citation-list">
-                      {fact.citations.map((citation: Fact["citations"][number]) => (
-                        <li key={citation.source.id}>
-                          <a href={citation.source.canonicalUrl} rel="noreferrer" target="_blank">
-                            {citation.source.title}
-                          </a>
-                          <span>{citation.source.publisher}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
+      {(() => {
+        // This is a chat, not the evidence page. Show only the generated summary,
+        // collapsed like the matching wines — the reader consults the full,
+        // point-by-point evidence in Memoria, not here. Nothing shows when there
+        // is no summary yet.
+        const context = response.data.wineContext;
+        if (context === null) return null;
+        const summary = context.facts.find((fact: Fact) => fact.predicate === "research.summary");
+        if (summary === undefined) return null;
+        return (
+          <details className="assistant-context">
+            <summary>{t("assistant.summaryTitle")}</summary>
+            <p className="assistant-context__summary">
+              {Array.isArray(summary.value) ? summary.value.join(", ") : String(summary.value)}
+            </p>
+            <Link className="text-link" to={`/wines/${context.wineId}/evidence`}>
+              {t("assistant.openEvidence")}
+            </Link>
+          </details>
+        );
+      })()}
 
       {response.data.tasteProfile === null ? null : (
         <div className="assistant-profile">
