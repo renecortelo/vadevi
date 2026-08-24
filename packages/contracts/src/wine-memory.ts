@@ -10,6 +10,7 @@ export const WineTypeSchema = z.enum([
   "rose",
   "sparkling",
   "fortified",
+  "vermouth",
   "orange",
   "other",
 ]);
