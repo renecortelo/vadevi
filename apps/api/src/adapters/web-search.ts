@@ -41,7 +41,7 @@ const BraveResponseSchema = z
   .passthrough();
 
 // Brave maps some of our locales to its own language codes; the rest pass through.
-function braveLanguage(locale: string): string {
+export function braveLanguage(locale: string): string {
   return locale === "pt-PT" ? "pt" : locale;
 }
 
@@ -97,7 +97,7 @@ function safeText(value: string | null | undefined, max: number): string | null 
  * out before they ever reach a proposal, so an odd search hit cannot become an
  * SSRF-shaped or unciteable source.
  */
-function publicHttpsUrl(value: string): string | null {
+export function publicHttpsUrl(value: string): string | null {
   let url: URL;
   try {
     url = new URL(value);

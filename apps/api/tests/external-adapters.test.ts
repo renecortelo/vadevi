@@ -7,6 +7,7 @@ import type { ProviderFetcher, ProviderFetchError } from "../src/adapters/provid
 import { fetchFromProvider, readBoundedJson } from "../src/adapters/provider-fetch";
 import { CloudflareFoodIdeasAdapter, CloudflareNarrativeAdapter } from "../src/adapters/narrative";
 import { CloudflareTranslationAdapter } from "../src/adapters/translation";
+import { BraveImageSearchAdapter } from "../src/adapters/image-search";
 import { BraveWebSearchAdapter, TavilyWebSearchAdapter } from "../src/adapters/web-search";
 import { WikidataAdapter } from "../src/adapters/wikidata";
 
@@ -705,5 +706,44 @@ describe("external research adapters", () => {
       name: "Kiwi Trail",
     });
     expect(sent.readerNotes).toEqual(["me supo a manzana"]);
+  });
+});
+
+describe("Brave image search adapter", () => {
+  it("keeps only candidates whose thumbnail is on Brave's own CDN", async () => {
+    const fetcher: ProviderFetcher = async () =>
+      Response.json({
+        results: [
+          {
+            title: "Kiwi Trail Sauvignon Blanc bottle",
+            url: "https://example-wine.test/kiwi-trail",
+            thumbnail: { src: "https://imgs.search.brave.com/abc123.jpeg" },
+          },
+          {
+            // Thumbnail hosted off Brave — must be dropped, since a chosen photo
+            // is later fetched from the thumbnail host.
+            title: "Off-CDN image",
+            url: "https://example-wine.test/other",
+            thumbnail: { src: "https://cdn.random-host.test/photo.jpg" },
+          },
+        ],
+      });
+    const adapter = new BraveImageSearchAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      "brave-key-1234567890",
+      { fetcher, now: () => new Date("2026-08-24T12:00:00.000Z") },
+    );
+
+    const result = await adapter.search({ locale: "es", query: "Kiwi Trail Sauvignon Blanc" });
+    expect(result.status).toBe("success");
+    if (result.status !== "success") throw new Error("Expected a successful search.");
+    expect(result.data).toHaveLength(1);
+    expect(result.data[0]).toEqual({
+      sourceUrl: "https://example-wine.test/kiwi-trail",
+      thumbnailUrl: "https://imgs.search.brave.com/abc123.jpeg",
+      title: "Kiwi Trail Sauvignon Blanc bottle",
+    });
   });
 });

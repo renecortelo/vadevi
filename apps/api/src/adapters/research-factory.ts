@@ -1,10 +1,11 @@
+import { BraveImageSearchAdapter } from "./image-search";
 import { BraveWebSearchAdapter, TavilyWebSearchAdapter } from "./web-search";
 import { createNarrativePort } from "./narrative";
 import { createTranslationPort } from "./translation";
 import { D1ExternalCache, D1ExternalRateLimiter } from "./external-state";
 import { OpenFoodFactsAdapter } from "./open-food-facts";
 import { WikidataAdapter } from "./wikidata";
-import type { ResearchPorts, WebSearchPort } from "@vadevi/domain";
+import type { ImageSearchPort, ResearchPorts, WebSearchPort } from "@vadevi/domain";
 import type { WorkerBindings } from "../types";
 
 function validUserAgent(value: string | undefined): value is string {
@@ -40,6 +41,29 @@ export function webSearchEnabled(environment: WorkerBindings): boolean {
     externalResearchEnabled(environment) &&
     (environment.WEBSEARCH_PROVIDER === "brave" || environment.WEBSEARCH_PROVIDER === "tavily") &&
     validSearchKey(environment.WEBSEARCH_API_KEY)
+  );
+}
+
+/**
+ * Whether bottle-photo search is enabled. It reuses the Brave key and contact
+ * user agent that open-web discovery already needs, and only that provider —
+ * Brave's image CDN is the fixed host a chosen photo is later fetched from. Off
+ * unless research and Brave web search are both on.
+ */
+export function imageSearchEnabled(environment: WorkerBindings): boolean {
+  return webSearchEnabled(environment) && environment.WEBSEARCH_PROVIDER === "brave";
+}
+
+export function createImageSearchPort(
+  database: D1Database,
+  environment: WorkerBindings,
+): ImageSearchPort | null {
+  if (!imageSearchEnabled(environment)) return null;
+  return new BraveImageSearchAdapter(
+    new D1ExternalCache(database),
+    new D1ExternalRateLimiter(database),
+    environment.EXTERNAL_API_USER_AGENT!,
+    environment.WEBSEARCH_API_KEY!.trim(),
   );
 }
 
