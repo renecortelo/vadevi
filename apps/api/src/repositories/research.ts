@@ -6,7 +6,14 @@ import {
   type ResearchJobResponse,
   type ResearchJobWarning,
 } from "@vadevi/contracts";
-import type { ProposedFact, ProductCandidate, ResearchPorts } from "@vadevi/domain";
+import type {
+  ProposedFact,
+  ProductCandidate,
+  ResearchLocale,
+  ResearchPorts,
+  WebSearchPort,
+  WebSearchResult,
+} from "@vadevi/domain";
 import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
@@ -204,6 +211,38 @@ async function wineGrapeNames(
   return rows.results.map((row) => row.name);
 }
 
+// What to drink this with, from the open web. Two searches at most: the wine
+// itself first, because pairing written about a specific bottle is the most
+// specific answer there is; and only when that finds nothing — most small
+// bottlings have none — the grape, whose pairing advice is the honest fallback
+// and still particular to what is in the glass. A search that errors or returns
+// nothing simply yields no pairing notes; it never fails the research.
+async function searchPairing(
+  webSearch: WebSearchPort,
+  locale: ResearchLocale,
+  wineQuery: string,
+  grapeNames: string[],
+): Promise<WebSearchResult[]> {
+  async function run(query: string): Promise<WebSearchResult[]> {
+    if (query.trim().length < 3) return [];
+    try {
+      const result = await webSearch.search({ locale, query });
+      return result.status === "success" ? result.data : [];
+    } catch {
+      return [];
+    }
+  }
+
+  const fromWine = await run(`${wineQuery} food pairing`);
+  if (fromWine.length > 0) return fromWine;
+
+  // The grape is a genuine fallback, not an addition: ask only when the bottle
+  // itself said nothing, and ask about the first grape, which for a varietal wine
+  // is the wine, and for a blend is its lead.
+  const grape = grapeNames.map((name) => name.trim()).find((name) => name.length > 0);
+  return grape === undefined ? [] : run(`${grape} wine food pairing`);
+}
+
 async function collectProposals(
   access: ResearchAccessRow,
   request: CreateResearchJobRequest,
@@ -340,6 +379,24 @@ async function collectProposals(
         attempts.push(unavailableAttempt("web_search", "provider_error", null));
       }
     }
+
+    // A second, narrower search: what to eat with THIS wine. Asked separately
+    // because a general search returns the bottle's own page, which rarely says
+    // anything about food. When the wine itself yields nothing — most small
+    // bottlings have no pairing written about them — the grape is asked instead,
+    // since advice for the variety is the honest fallback and still specific
+    // enough to be worth having.
+    const pairingHits = await searchPairing(webSearch, request.locale, query, grapeNames);
+    for (const hit of pairingHits) {
+      proposals.push({
+        confidenceMilli: 400,
+        predicate: "pairing.note",
+        researchMethod: "web_search.pairing.v1",
+        source: hit.source,
+        value: hit.snippet,
+      });
+    }
+    if (pairingHits.length > 0) attempts.push(successAttempt("web_search", false));
   }
 
   // Translate the prose we gathered into the reader's language in one pass — web

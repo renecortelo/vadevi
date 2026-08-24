@@ -27,6 +27,7 @@ export type ProposedFact = Readonly<{
     | "curiosity.highlight"
     | "curiosity.note"
     | "identity.canonical_name"
+    | "pairing.note"
     | "producer.history"
     | "producer.name"
     | "region.classification"

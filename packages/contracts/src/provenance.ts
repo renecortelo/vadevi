@@ -24,6 +24,7 @@ export const FactPredicateSchema = z.enum([
   "production.method",
   "curiosity.note",
   "curiosity.highlight",
+  "pairing.note",
   "research.summary",
   "further_reading.summary",
 ]);
@@ -37,6 +38,7 @@ export const FactPredicateSchema = z.enum([
 export const ADDITIVE_FACT_PREDICATES: ReadonlySet<z.infer<typeof FactPredicateSchema>> = new Set([
   "curiosity.note",
   "curiosity.highlight",
+  "pairing.note",
   "research.summary",
   "further_reading.summary",
 ]);
@@ -69,6 +71,7 @@ function predicateValueIsValid(predicate: z.infer<typeof FactPredicateSchema>, v
     case "production.method":
     case "curiosity.note":
     case "curiosity.highlight":
+    case "pairing.note":
     case "research.summary":
     case "further_reading.summary":
       return typeof value === "string";
