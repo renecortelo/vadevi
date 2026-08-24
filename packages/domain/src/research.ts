@@ -109,6 +109,23 @@ export interface WebSearchPort {
 }
 
 /**
+ * A candidate bottle photo the reader can accept for a wine. The image itself is
+ * the provider's own thumbnail, on the provider's fixed CDN — never an arbitrary
+ * host — so accepting one downloads from the same trusted domain the search runs
+ * against, not from wherever the picture was found. The source page travels only
+ * for attribution.
+ */
+export type ImageCandidate = Readonly<{
+  title: string;
+  thumbnailUrl: string;
+  sourceUrl: string;
+}>;
+
+export interface ImageSearchPort {
+  search(input: WebSearchRequest): Promise<ExternalResult<ImageCandidate[]>>;
+}
+
+/**
  * Optional faithful translation of gathered external text into the reader's
  * language — the web returns mostly English snippets even for a Spanish wine.
  * This is a meaning-preserving transform, never generation: an item is returned
