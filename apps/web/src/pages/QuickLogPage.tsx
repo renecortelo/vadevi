@@ -1,4 +1,5 @@
-import type { WineGrape, WineSummary } from "@vadevi/contracts";
+import { WineTypeSchema } from "@vadevi/contracts";
+import type { WineGrape, WineSummary, WineType } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { resolveSupportedLocale, tastingDescriptors } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
@@ -16,8 +17,6 @@ import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { createUlid } from "../security/ulid";
 import { useSession } from "../session/SessionContext";
-
-type WineType = "fortified" | "orange" | "other" | "red" | "rose" | "sparkling" | "white";
 
 const descriptors = tastingDescriptors.filter((descriptor) => descriptor.phase !== "appearance");
 
@@ -328,18 +327,7 @@ export function QuickLogPage() {
                   value={draft.winePayload.wineType ?? ""}
                 >
                   <option value="">{t("quickLog.typeUnknown")}</option>
-                  {(
-                    [
-                      "red",
-                      "white",
-                      "rose",
-                      "sparkling",
-                      "fortified",
-                      "vermouth",
-                      "orange",
-                      "other",
-                    ] as const
-                  ).map((type) => (
+                  {WineTypeSchema.options.map((type: WineType) => (
                     <option key={type} value={type}>
                       {t(`quickLog.wineType.${type}`)}
                     </option>
