@@ -4,6 +4,11 @@ import { SupportedLocaleSchema } from "./session";
 
 export const ResourceIdSchema = z.string().regex(/^[0-9A-HJKMNP-TV-Z]{26}$/);
 export const ResourceTimestampSchema = z.string().datetime({ offset: true });
+const HttpsUrlSchema = z
+  .string()
+  .url()
+  .max(2_048)
+  .refine((value: string) => value.startsWith("https://"), "Use an HTTPS URL.");
 export const WineTypeSchema = z.enum([
   "red",
   "white",
@@ -598,6 +603,33 @@ export const MediaIdPathSchema = z
   })
   .strict();
 
+export const BottlePhotoSearchRequestSchema = z
+  .object({ locale: SupportedLocaleSchema })
+  .strict()
+  .openapi("BottlePhotoSearchRequest");
+
+export const BottlePhotoCandidateSchema = z
+  .object({
+    sourceUrl: HttpsUrlSchema,
+    thumbnailUrl: HttpsUrlSchema,
+    title: z.string().min(1).max(200),
+  })
+  .strict();
+
+export const BottlePhotoCandidatesResponseSchema = z
+  .object({ data: z.object({ candidates: z.array(BottlePhotoCandidateSchema).max(8) }).strict() })
+  .strict()
+  .openapi("BottlePhotoCandidatesResponse");
+
+export const ImportBottlePhotoRequestSchema = BottlePhotoCandidateSchema.openapi(
+  "ImportBottlePhotoRequest",
+);
+
+export const ImportBottlePhotoResponseSchema = z
+  .object({ data: z.object({ mediaId: ResourceIdSchema }).strict() })
+  .strict()
+  .openapi("ImportBottlePhotoResponse");
+
 export type CreateWineRequest = z.infer<typeof CreateWineRequestSchema>;
 export type MergeWinesRequest = z.infer<typeof MergeWinesRequestSchema>;
 export type MergeWinesResponse = z.infer<typeof MergeWinesResponseSchema>;
@@ -618,3 +650,6 @@ export type WineGrape = z.infer<typeof WineGrapeSchema>;
 export type WineGrapeSummary = z.infer<typeof WineGrapeSummarySchema>;
 export type WineMemoryResponse = z.infer<typeof WineMemoryResponseSchema>;
 export type WineSummary = z.infer<typeof WineSummarySchema>;
+export type BottlePhotoCandidate = z.infer<typeof BottlePhotoCandidateSchema>;
+export type BottlePhotoCandidatesResponse = z.infer<typeof BottlePhotoCandidatesResponseSchema>;
+export type ImportBottlePhotoRequest = z.infer<typeof ImportBottlePhotoRequestSchema>;

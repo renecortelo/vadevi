@@ -27,13 +27,22 @@ import {
   TastingNoteResponseSchema,
   WineMemoryQuerySchema,
   WineMemoryResponseSchema,
+  BottlePhotoSearchRequestSchema,
+  BottlePhotoCandidatesResponseSchema,
+  ImportBottlePhotoRequestSchema,
+  ImportBottlePhotoResponseSchema,
 } from "@vadevi/contracts";
 import { z } from "zod";
 
 import { readMedia, reserveMedia, uploadMedia } from "../repositories/media";
 import { createDeepTastingNote } from "../repositories/tasting-sessions";
 import { createLabelOcrPort } from "../adapters/label-ocr";
-import { createResearchPorts } from "../adapters/research-factory";
+import {
+  createResearchPorts,
+  createImageSearchPort,
+  imageSearchEnabled,
+} from "../adapters/research-factory";
+import { importBottlePhoto, searchBottlePhotos } from "../repositories/bottle-photo";
 import { confirmIdentification, createIdentification } from "../repositories/identification";
 import { reserveProviderBudget } from "../services/usage";
 import { mergeWines } from "../repositories/wine-merge";
@@ -471,6 +480,7 @@ const mergeWinesRoute = createRoute({
 function errorEnvelope(
   requestId: string,
   code:
+    | "FEATURE_UNAVAILABLE"
     | "IDEMPOTENCY_CONFLICT"
     | "MEDIA_REJECTED"
     | "NOT_FOUND"
@@ -480,6 +490,78 @@ function errorEnvelope(
 ) {
   return ErrorEnvelopeSchema.parse({ error: { code, message, requestId } });
 }
+
+const bottlePhotoSearchRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/wines/{wineId}/bottle-photo-candidates",
+  operationId: "searchBottlePhotoCandidates",
+  tags: ["Media"],
+  summary: "Search professional bottle photos for a wine",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    params: WineIdPathSchema,
+    body: {
+      content: { "application/json": { schema: BottlePhotoSearchRequestSchema } },
+      required: true,
+    },
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: BottlePhotoCandidatesResponseSchema } },
+      description: "Candidate bottle photos, thumbnails on the provider CDN.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Wine unavailable.",
+    },
+    503: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Bottle-photo search is not enabled.",
+    },
+  },
+});
+
+const importBottlePhotoRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/wines/{wineId}/bottle-photo",
+  operationId: "importBottlePhoto",
+  tags: ["Media"],
+  summary: "Adopt a chosen bottle photo as the wine's main image",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    params: WineIdPathSchema,
+    body: {
+      content: { "application/json": { schema: ImportBottlePhotoRequestSchema } },
+      required: true,
+    },
+  },
+  responses: {
+    201: {
+      content: { "application/json": { schema: ImportBottlePhotoResponseSchema } },
+      description: "The photo was downloaded and made the wine's main image.",
+    },
+    400: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The image could not be adopted.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Wine unavailable.",
+    },
+    503: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Bottle-photo search is not enabled.",
+    },
+  },
+});
 
 export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(createWineRoute, async (context) => {
@@ -606,6 +688,87 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
       request.mode === "deep"
         ? DeepTastingResponseSchema.parse(result.response)
         : TastingNoteResponseSchema.parse(result.response),
+      201,
+    );
+  });
+
+  app.openapi(bottlePhotoSearchRoute, async (context) => {
+    const params = context.req.valid("param");
+    const port = createImageSearchPort(context.env.DB!, context.env);
+    if (port === null) {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "FEATURE_UNAVAILABLE",
+          "Bottle-photo search is not enabled for this deployment.",
+        ),
+        503,
+      );
+    }
+    const candidates = await searchBottlePhotos(context.env.DB!, port, {
+      locale: context.req.valid("json").locale,
+      principal: context.get("principal"),
+      spaceId: params.spaceId,
+      wineId: params.wineId,
+    });
+    if (candidates === null) {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "NOT_FOUND",
+          "The requested resource was not found.",
+        ),
+        404,
+      );
+    }
+    return context.json(BottlePhotoCandidatesResponseSchema.parse({ data: { candidates } }), 200);
+  });
+
+  app.openapi(importBottlePhotoRoute, async (context) => {
+    if (context.env.MEDIA === undefined) throw new Error("The R2 binding is unavailable.");
+    const params = context.req.valid("param");
+    if (!imageSearchEnabled(context.env)) {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "FEATURE_UNAVAILABLE",
+          "Bottle-photo search is not enabled for this deployment.",
+        ),
+        503,
+      );
+    }
+    const body = context.req.valid("json");
+    const result = await importBottlePhoto(context.env.DB!, context.env.MEDIA, {
+      principal: context.get("principal"),
+      sourceUrl: body.sourceUrl,
+      spaceId: params.spaceId,
+      thumbnailUrl: body.thumbnailUrl,
+      title: body.title,
+      userAgent: context.env.EXTERNAL_API_USER_AGENT!,
+      wineId: params.wineId,
+    });
+    if (result.kind === "not_found") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "NOT_FOUND",
+          "The requested resource was not found.",
+        ),
+        404,
+      );
+    }
+    if (result.kind === "rejected") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "MEDIA_REJECTED",
+          "The chosen image could not be adopted as a bottle photo.",
+        ),
+        400,
+      );
+    }
+    return context.json(
+      ImportBottlePhotoResponseSchema.parse({ data: { mediaId: result.mediaId } }),
       201,
     );
   });
