@@ -203,13 +203,22 @@ export function EditWineDialog({
           value={wineType}
         >
           <option value="">{t("quickLog.typeUnknown")}</option>
-          {(["red", "white", "rose", "sparkling", "fortified", "orange", "other"] as const).map(
-            (type) => (
-              <option key={type} value={type}>
-                {t(`quickLog.wineType.${type}`)}
-              </option>
-            ),
-          )}
+          {(
+            [
+              "red",
+              "white",
+              "rose",
+              "sparkling",
+              "fortified",
+              "vermouth",
+              "orange",
+              "other",
+            ] as const
+          ).map((type) => (
+            <option key={type} value={type}>
+              {t(`quickLog.wineType.${type}`)}
+            </option>
+          ))}
         </select>
         <label htmlFor="edit-alcohol">{t("wineDetails.alcohol")}</label>
         <input

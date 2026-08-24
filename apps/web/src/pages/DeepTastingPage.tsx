@@ -1,4 +1,4 @@
-import { DeepTastingNoteSchema, type DeepTastingRequest } from "@vadevi/contracts";
+import { DeepTastingNoteSchema, type DeepTastingRequest, type WineType } from "@vadevi/contracts";
 import type { TastingContextSchema, TastingDescriptorInputSchema } from "@vadevi/contracts";
 import {
   resolveSupportedLocale,
@@ -11,6 +11,7 @@ import { Link, useParams, useSearchParams } from "react-router";
 import type { z } from "zod";
 
 import { DecimalInput } from "../components/DecimalInput";
+import { colorFamiliesFor, hasTannin } from "./deep-tasting-fields";
 import { useAuth } from "../auth/AuthContext";
 import { type DeepTastingDraft, offlineDatabase, type SyncConflict } from "../offline/database";
 import { deepTastingChangedEvent } from "../offline/events";
@@ -207,6 +208,10 @@ export function DeepTastingPage() {
   const [error, setError] = useState(false);
   const [conflict, setConflict] = useState<SyncConflict | null>(null);
   const [wineLabel, setWineLabel] = useState("");
+  // What kind of wine this is, so the form asks only what suits it — no tannin on
+  // a white, no red hues on a sparkling. Null until known, and then every field
+  // shows, since guessing wrong is worse than asking.
+  const [wineType, setWineType] = useState<WineType | null>(null);
 
   const draftId = deepDraftId(userId, spaceId, wineId, sessionWineId);
   const loadLocal = useCallback(async () => {
@@ -231,6 +236,7 @@ export function DeepTastingPage() {
     setConflict(conflicts ?? null);
     if (wineSnapshot !== undefined) {
       setWineLabel(`${wineSnapshot.wine.producerName} · ${wineSnapshot.wine.displayName}`);
+      setWineType(wineSnapshot.wine.wineType ?? null);
     }
     setReady(true);
   }, [draftId, existingNoteId, spaceId, userId, wineId]);
@@ -439,7 +445,7 @@ export function DeepTastingPage() {
               value={draft.payload.appearanceColorFamily ?? ""}
             >
               <option value="">{t("tasting.notSet")}</option>
-              {(["white", "rose", "red", "orange", "brown"] as const).map((value) => (
+              {colorFamiliesFor(wineType).map((value) => (
                 <option key={value} value={value}>
                   {t(`tasting.value.${value}`)}
                 </option>
@@ -559,36 +565,40 @@ export function DeepTastingPage() {
               ["balance", "balance"],
               ["complexity", "complexity"],
             ] as const
-          ).map(([field, label]) => (
-            <ScaleField
-              key={field}
-              label={t(`tasting.field.${label}`)}
-              onChange={(value) => update(field, value)}
-              value={draft.payload[field]}
-            />
-          ))}
+          )
+            .filter(([field]) => field !== "tanninLevel" || hasTannin(wineType))
+            .map(([field, label]) => (
+              <ScaleField
+                key={field}
+                label={t(`tasting.field.${label}`)}
+                onChange={(value) => update(field, value)}
+                value={draft.payload[field]}
+              />
+            ))}
         </div>
         <div className="form-grid">
-          <label>
-            <span>{t("tasting.field.tanninTexture")}</span>
-            <select
-              onChange={(event) =>
-                update(
-                  "tanninTexture",
-                  (event.target.value || undefined) as
-                    DeepTastingRequest["tanninTexture"] | undefined,
-                )
-              }
-              value={draft.payload.tanninTexture ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {(["silky", "fine", "grippy", "coarse"] as const).map((value) => (
-                <option key={value} value={value}>
-                  {t(`tasting.value.${value}`)}
-                </option>
-              ))}
-            </select>
-          </label>
+          {hasTannin(wineType) ? (
+            <label>
+              <span>{t("tasting.field.tanninTexture")}</span>
+              <select
+                onChange={(event) =>
+                  update(
+                    "tanninTexture",
+                    (event.target.value || undefined) as
+                      DeepTastingRequest["tanninTexture"] | undefined,
+                  )
+                }
+                value={draft.payload.tanninTexture ?? ""}
+              >
+                <option value="">{t("tasting.notSet")}</option>
+                {(["silky", "fine", "grippy", "coarse"] as const).map((value) => (
+                  <option key={value} value={value}>
+                    {t(`tasting.value.${value}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : null}
           <label>
             <span>{t("tasting.field.palateTexture")}</span>
             <select

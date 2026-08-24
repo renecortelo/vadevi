@@ -329,7 +329,16 @@ export function QuickLogPage() {
                 >
                   <option value="">{t("quickLog.typeUnknown")}</option>
                   {(
-                    ["red", "white", "rose", "sparkling", "fortified", "orange", "other"] as const
+                    [
+                      "red",
+                      "white",
+                      "rose",
+                      "sparkling",
+                      "fortified",
+                      "vermouth",
+                      "orange",
+                      "other",
+                    ] as const
                   ).map((type) => (
                     <option key={type} value={type}>
                       {t(`quickLog.wineType.${type}`)}
