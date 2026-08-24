@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { colorFamiliesFor, hasTannin } from "./deep-tasting-fields";
+import { colorFamiliesFor, hasTannin, hueOptionsFor } from "./deep-tasting-fields";
 
 describe("tasting fields by wine type", () => {
   it("asks about tannin only where there is tannin to speak of", () => {
@@ -24,5 +24,15 @@ describe("tasting fields by wine type", () => {
     // An unknown or "other" wine keeps the full set.
     expect(colorFamiliesFor(null)).toHaveLength(5);
     expect(colorFamiliesFor("other")).toHaveLength(5);
+  });
+
+  it("offers five specific hues each for red and white, from purple to copper", () => {
+    expect(hueOptionsFor("red")).toEqual(["purple", "ruby", "garnet", "brick", "tawny"]);
+    expect(hueOptionsFor("white")).toEqual(["straw", "yellow", "gold", "amber", "copper"]);
+    // Ruby is a red hue, never offered for a white.
+    expect(hueOptionsFor("white")).not.toContain("ruby");
+    expect(hueOptionsFor("red")).not.toContain("straw");
+    // An unknown wine keeps a broad set so nothing is missing.
+    expect(hueOptionsFor(null).length).toBeGreaterThan(10);
   });
 });
