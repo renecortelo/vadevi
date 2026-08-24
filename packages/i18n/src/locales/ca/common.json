@@ -430,6 +430,20 @@
         "partial_results": "Una o més fonts no estaven disponibles; es mostren resultats parcials.",
         "source_limit_reached": "S’ha assolit el límit de fonts."
       }
+    },
+    "bottlePhoto": {
+      "title": "Foto de l'ampolla",
+      "body": "Cerca una foto de producte neta i fes-la la imatge principal d'aquest vi.",
+      "searchAction": "Cerca fotos de l'ampolla",
+      "searchError": "No s'ha pogut fer la cerca de fotos.",
+      "none": "No s'han trobat fotos per a aquest vi.",
+      "chooseHelp": "Toca l'ampolla correcta.",
+      "confirmTitle": "Fer servir aquesta foto?",
+      "confirmBody": "Es converteix en la imatge principal del vi. La teva foto anterior es conserva.",
+      "confirmAction": "Fer servir aquesta foto",
+      "cancel": "Cancel·la",
+      "adopted": "Desada com a foto principal del vi.",
+      "adoptError": "No s'ha pogut desar la foto."
     }
   },
   "assistant": {

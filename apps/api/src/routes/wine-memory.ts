@@ -42,7 +42,11 @@ import {
   createImageSearchPort,
   imageSearchEnabled,
 } from "../adapters/research-factory";
-import { importBottlePhoto, searchBottlePhotos } from "../repositories/bottle-photo";
+import {
+  importBottlePhoto,
+  proxyBottlePhoto,
+  searchBottlePhotos,
+} from "../repositories/bottle-photo";
 import { confirmIdentification, createIdentification } from "../repositories/identification";
 import { reserveProviderBudget } from "../services/usage";
 import { mergeWines } from "../repositories/wine-merge";
@@ -563,6 +567,34 @@ const importBottlePhotoRoute = createRoute({
   },
 });
 
+const bottlePhotoProxyRoute = createRoute({
+  method: "get",
+  path: "/api/v1/spaces/{spaceId}/wines/{wineId}/bottle-photo-proxy",
+  operationId: "proxyBottlePhoto",
+  tags: ["Media"],
+  summary: "Stream a candidate bottle photo through the server",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    params: WineIdPathSchema,
+    query: z.object({ url: z.string().url().max(2_048) }).strict(),
+  },
+  responses: {
+    200: { description: "The candidate image bytes." },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The candidate could not be fetched.",
+    },
+    503: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Bottle-photo search is not enabled.",
+    },
+  },
+});
+
 export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(createWineRoute, async (context) => {
     const result = await createWine(context.env.DB!, {
@@ -771,6 +803,41 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
       ImportBottlePhotoResponseSchema.parse({ data: { mediaId: result.mediaId } }),
       201,
     );
+  });
+
+  app.openapi(bottlePhotoProxyRoute, async (context) => {
+    if (!imageSearchEnabled(context.env)) {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "FEATURE_UNAVAILABLE",
+          "Bottle-photo search is not enabled for this deployment.",
+        ),
+        503,
+      );
+    }
+    const image = await proxyBottlePhoto({
+      thumbnailUrl: context.req.valid("query").url,
+      userAgent: context.env.EXTERNAL_API_USER_AGENT!,
+    });
+    if (image === null) {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "NOT_FOUND",
+          "The requested resource was not found.",
+        ),
+        404,
+      );
+    }
+    return new Response(image.bytes, {
+      headers: {
+        "Cache-Control": "private, max-age=600",
+        "Content-Type": image.mimeType,
+        "X-Content-Type-Options": "nosniff",
+        "X-Request-Id": context.get("requestId"),
+      },
+    });
   });
 
   app.openapi(reserveMediaRoute, async (context) => {

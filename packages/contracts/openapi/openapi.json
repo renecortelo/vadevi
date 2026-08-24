@@ -146,6 +146,9 @@
                   "assistant": {
                     "type": "boolean"
                   },
+                  "bottlePhotoSearch": {
+                    "type": "boolean"
+                  },
                   "externalResearch": {
                     "type": "boolean"
                   },
@@ -158,6 +161,7 @@
                 },
                 "required": [
                   "assistant",
+                  "bottlePhotoSearch",
                   "externalResearch",
                   "priceLookup",
                   "voiceInput"
@@ -13302,6 +13306,85 @@
           },
           "404": {
             "description": "Wine unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Bottle-photo search is not enabled.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/wines/{wineId}/bottle-photo-proxy": {
+      "get": {
+        "operationId": "proxyBottlePhoto",
+        "tags": [
+          "Media"
+        ],
+        "summary": "Stream a candidate bottle photo through the server",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "wineId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "maxLength": 2048,
+              "format": "uri"
+            },
+            "required": true,
+            "name": "url",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The candidate image bytes."
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The candidate could not be fetched.",
             "content": {
               "application/json": {
                 "schema": {

@@ -430,6 +430,20 @@
         "partial_results": "Eine oder mehrere Quellen waren nicht verfügbar; Teilergebnisse werden angezeigt.",
         "source_limit_reached": "Das Quellenlimit wurde erreicht."
       }
+    },
+    "bottlePhoto": {
+      "title": "Flaschenfoto",
+      "body": "Finde ein sauberes Produktfoto und mach es zum Hauptbild dieses Weins.",
+      "searchAction": "Flaschenfotos suchen",
+      "searchError": "Die Fotosuche konnte nicht ausgeführt werden.",
+      "none": "Für diesen Wein wurden keine Fotos gefunden.",
+      "chooseHelp": "Tippe auf die richtige Flasche.",
+      "confirmTitle": "Dieses Foto verwenden?",
+      "confirmBody": "Es wird zum Hauptbild des Weins. Dein bisheriges Foto bleibt erhalten.",
+      "confirmAction": "Foto verwenden",
+      "cancel": "Abbrechen",
+      "adopted": "Als Hauptfoto des Weins gespeichert.",
+      "adoptError": "Das Foto konnte nicht gespeichert werden."
     }
   },
   "assistant": {

@@ -10,6 +10,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router";
 
+import { BottlePhotoPicker } from "../components/BottlePhotoPicker";
 import { ModalDialog } from "../components/ModalDialog";
 import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
@@ -222,6 +223,7 @@ export function WineEvidencePage() {
   const [pendingDiscard, setPendingDiscard] = useState<Fact | null>(null);
   const [rewriting, setRewriting] = useState(false);
   const [researching, setResearching] = useState(false);
+  const [photoAdopted, setPhotoAdopted] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
   const [researchError, setResearchError] = useState<string | null>(null);
   const [online, setOnline] = useState(() => navigator.onLine);
@@ -429,6 +431,22 @@ export function WineEvidencePage() {
             )}
           </div>
         )}
+        {bootstrap.data.features.bottlePhotoSearch ? (
+          <div className="research-panel__photos">
+            <h3>{t("evidence.bottlePhoto.title")}</h3>
+            <p>{t("evidence.bottlePhoto.body")}</p>
+            <BottlePhotoPicker
+              onAdopted={() => setPhotoAdopted(true)}
+              spaceId={spaceId}
+              wineId={wineId}
+            />
+            {photoAdopted ? (
+              <p className="research-panel__notice" role="status">
+                {t("evidence.bottlePhoto.adopted")}
+              </p>
+            ) : null}
+          </div>
+        ) : null}
       </section>
       {loading ? (
         <div aria-live="polite" className="empty-state">
