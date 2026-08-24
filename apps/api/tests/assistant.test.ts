@@ -970,6 +970,96 @@ describe("Vicenç deterministic read path", () => {
     expect(detail?.text).toContain("you had it with: Grilled sea bass");
   });
 
+  it("hands Vicenç the researched pairing note, cited, even with the generator off", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(ownerToken, spaceId, "Synthetic Pairing Red");
+
+    // A source and a cited pairing note, as research would have left them.
+    const sourceResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/sources`,
+      {
+        body: JSON.stringify({
+          canonicalUrl: "https://example-pairing.test/synthetic-red",
+          publisher: "example-pairing.test",
+          retrievedAt: "2026-08-24T10:00:00.000Z",
+          sourceType: "other_web",
+          title: "Pairing the Synthetic Red",
+        }),
+        headers: {
+          Authorization: `Bearer ${ownerToken}`,
+          "Content-Type": "application/json",
+          "Idempotency-Key": randomOpaqueToken(),
+        },
+        method: "POST",
+      },
+    );
+    expect(sourceResponse.status).toBe(201);
+    const sourceId = ((await sourceResponse.json()) as { data: { id: string } }).data.id;
+    const factResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      {
+        body: JSON.stringify({
+          citations: [{ sourceId, supportStrength: "direct" }],
+          evidenceClass: "researched",
+          predicate: "pairing.note",
+          value: "Serve with grilled lamb and hard cheeses.",
+        }),
+        headers: {
+          Authorization: `Bearer ${ownerToken}`,
+          "Content-Type": "application/json",
+          "Idempotency-Key": randomOpaqueToken(),
+        },
+        method: "POST",
+      },
+    );
+    expect(factResponse.status).toBe(201);
+
+    let captured: Array<{ evidenceClass: string; id: string; sourceIds: string[]; text: string }> =
+      [];
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      // The dish generator is deliberately off: the cited note must surface on its
+      // own, since it is real gathered advice, not an inference.
+      foodIdeas: null,
+      language: {
+        render: async (input) => {
+          captured = input.statements;
+          return { claims: [], modelVersion: "@cf/example/model" };
+        },
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "en",
+        message: "What can I pair the Synthetic Pairing Red with?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    expect(response).not.toBeNull();
+    const pairing = captured.find((statement) => statement.id.startsWith("pairing-"));
+    expect(pairing).toBeDefined();
+    expect(pairing?.evidenceClass).toBe("researched");
+    expect(pairing?.text).toBe("Serve with grilled lamb and hard cheeses.");
+    // It carries its citation, so Vicenç can attribute the advice.
+    expect(pairing?.sourceIds).toContain(sourceId);
+    // And the source reaches the turn's citations.
+    expect(response?.data.citations.some((source: { id: string }) => source.id === sourceId)).toBe(
+      true,
+    );
+  }, 30_000);
+
   it("uses optional provider language only after sentence-to-statement enforcement", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;

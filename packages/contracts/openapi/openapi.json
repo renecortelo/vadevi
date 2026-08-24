@@ -2932,6 +2932,7 @@
                             "production.method",
                             "curiosity.note",
                             "curiosity.highlight",
+                            "pairing.note",
                             "research.summary",
                             "further_reading.summary"
                           ]
@@ -3102,6 +3103,7 @@
                             "production.method",
                             "curiosity.note",
                             "curiosity.highlight",
+                            "pairing.note",
                             "research.summary",
                             "further_reading.summary"
                           ]
@@ -9029,6 +9031,7 @@
                   "production.method",
                   "curiosity.note",
                   "curiosity.highlight",
+                  "pairing.note",
                   "research.summary",
                   "further_reading.summary"
                 ]
@@ -9198,6 +9201,7 @@
               "production.method",
               "curiosity.note",
               "curiosity.highlight",
+              "pairing.note",
               "research.summary",
               "further_reading.summary"
             ]
@@ -9273,6 +9277,7 @@
                         "production.method",
                         "curiosity.note",
                         "curiosity.highlight",
+                        "pairing.note",
                         "research.summary",
                         "further_reading.summary"
                       ]
@@ -9442,6 +9447,7 @@
                         "production.method",
                         "curiosity.note",
                         "curiosity.highlight",
+                        "pairing.note",
                         "research.summary",
                         "further_reading.summary"
                       ]

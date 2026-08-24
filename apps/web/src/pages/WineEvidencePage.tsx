@@ -104,8 +104,9 @@ export function FactCard({
     </button>
   ) : null;
 
-  // A web curiosity leads with a short title; the full paragraph is what expands.
-  if (fact.predicate === "curiosity.note") {
+  // A web curiosity or a pairing note both lead with a short title; the full
+  // paragraph is what expands, with its source underneath.
+  if (fact.predicate === "curiosity.note" || fact.predicate === "pairing.note") {
     const citation = fact.citations[0];
     const title = citation?.source.title ?? String(fact.value).slice(0, 60);
     return (

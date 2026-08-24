@@ -692,6 +692,69 @@ describe("bounded wine research jobs", () => {
     );
   });
 
+  it("falls back to the grape for pairing when the wine itself yields none", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWineWithGrape(spaceId); // Tempranillo
+
+    const queries: string[] = [];
+    const ports: ResearchPorts = {
+      knowledge: null,
+      product: null,
+      providerMode: "open_data",
+      webSearch: {
+        search: async ({ query }) => {
+          queries.push(query);
+          // The wine itself and the general search find nothing; only the grape's
+          // pairing query returns anything, which is the honest fallback.
+          if (!query.includes("Tempranillo")) {
+            return { cached: false, data: [], status: "success" };
+          }
+          return {
+            cached: false,
+            data: [
+              {
+                snippet: "Tempranillo suits grilled lamb and aged cheeses.",
+                source: {
+                  canonicalUrl: "https://example-grape.test/tempranillo-food",
+                  publisher: "example-grape.test",
+                  retrievedAt: "2026-08-24T10:00:00.000Z",
+                  sourceType: "other_web",
+                  title: "Tempranillo pairings",
+                },
+                title: "Tempranillo pairings",
+              },
+            ],
+            status: "success",
+          };
+        },
+      },
+    };
+    const job = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports,
+      principal,
+      request: { locale: "en" as const, maxSources: 4, topics: ["identity", "grapes"] as const },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(job.kind).toBe("success");
+    // The wine pairing query ran and found nothing, so the grape was asked.
+    expect(
+      queries.some((query) => query.endsWith("food pairing") && !query.includes("Tempranillo")),
+    ).toBe(true);
+    expect(queries).toContain("Tempranillo wine food pairing");
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const pairing = facts.find((fact: Fact) => fact.predicate === "pairing.note");
+    expect(pairing?.value).toBe("Tempranillo suits grilled lamb and aged cheeses.");
+  });
+
   it("replaces its own earlier harvest when the wording of a fact changes", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
@@ -889,7 +952,8 @@ describe("bounded wine research jobs", () => {
     });
     expect(first.kind).toBe("success");
     if (first.kind !== "success") throw new Error("Expected a completed research job.");
-    expect(queries).toEqual(["Áster El Espino"]);
+    // The general search, then a second one for what to eat with this bottle.
+    expect(queries).toEqual(["Áster El Espino", "Áster El Espino food pairing"]);
 
     const factsResponse = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
@@ -900,6 +964,12 @@ describe("bounded wine research jobs", () => {
     expect(note?.value).toBe("El Espino es un tinto de la bodega Áster en Ribera del Duero.");
     expect(note?.citations[0]?.source.sourceType).toBe("other_web");
     expect(note?.citations[0]?.source.canonicalUrl).toBe("https://example-winery.test/el-espino");
+    // The pairing search stores its own cited note, ready for Vicenç.
+    const pairing = facts.find((fact: Fact) => fact.predicate === "pairing.note");
+    expect(pairing?.value).toBe("El Espino es un tinto de la bodega Áster en Ribera del Duero.");
+    expect(pairing?.citations[0]?.source.canonicalUrl).toBe(
+      "https://example-winery.test/el-espino",
+    );
   });
 
   it("translates web snippets into the reader's locale when a translator is present", async () => {

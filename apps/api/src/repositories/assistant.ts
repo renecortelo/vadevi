@@ -1089,6 +1089,7 @@ function languageStatements(
   const selfDescribing = new Set([
     "curiosity.highlight",
     "curiosity.note",
+    "pairing.note",
     "research.summary",
     "further_reading.summary",
   ]);
@@ -1275,6 +1276,9 @@ export async function runDeterministicAssistantTurn(
   // do not own. The dish leaves the device; the wines never do. Off unless the
   // deployment enabled the provider.
   let pairingStatements: AssistantLanguageStatement[] = [];
+  // Sources behind any cited pairing note surfaced below, merged into the turn's
+  // citations so the advice shows where it came from.
+  const pairingCitationSources: Source[] = [];
   // "What can I pair the Naltros with?" is the OTHER direction — a wine looking
   // for a dish — and the provider only answers dish → wine styles. Sending the
   // wine's own name as if it were a dish produced nonsense (a bottle unrelated to
@@ -1368,6 +1372,39 @@ export async function runDeterministicAssistantTurn(
     toolCalls += 1;
   }
 
+  // Pairing the reader asked about THIS bottle, gathered from the open web during
+  // research and cited: advice written about the wine, or failing that about its
+  // grape. Surfaced whenever it is a pairing question about a named wine, provider
+  // or not — the notes exist already and are the most grounded pairing there is,
+  // so they lead, ahead of any inferred suggestion below. Retired notes are
+  // excluded: the reader discarded them.
+  const wantsWinePairing = namedWine !== null && requestsPairing(options.request.message);
+  const pairingFacts = wantsWinePairing
+    ? await listWineFacts(database, {
+        principal: options.principal,
+        spaceId: namedWine.spaceId,
+        wineId: namedWine.wine.id,
+      })
+    : null;
+  if (pairingFacts !== null) {
+    const notes = pairingFacts.data.facts.filter(
+      (fact: Fact) => fact.status !== "retired" && fact.predicate === "pairing.note",
+    );
+    pairingStatements = [
+      ...notes.slice(0, 4).map((fact: Fact) => ({
+        evidenceClass: "researched" as const,
+        id: `pairing-${fact.id}`,
+        sampleSize: null,
+        sourceIds: fact.citations.map((citation: Fact["citations"][number]) => citation.source.id),
+        text: String(fact.value),
+      })),
+      ...pairingStatements,
+    ];
+    for (const fact of notes) {
+      for (const citation of fact.citations) pairingCitationSources.push(citation.source);
+    }
+  }
+
   // The reverse question — "what can I eat with THIS bottle?" — answered from the
   // wine's own recorded attributes. These are suggestions, not facts: they carry
   // the inferred class, which the prompt already treats as "my idea, not
@@ -1380,12 +1417,7 @@ export async function runDeterministicAssistantTurn(
     // with little detail is exactly the one whose suggestions were generic, and
     // those researched lines are what make them specific. Retired claims are
     // excluded: the reader discarded them, so they cannot inform a suggestion.
-    const researched = await listWineFacts(database, {
-      principal: options.principal,
-      spaceId: namedWine.spaceId,
-      wineId: wine.id,
-    });
-    const researchedLines = (researched?.data.facts ?? [])
+    const researchedLines = (pairingFacts?.data.facts ?? [])
       .filter(
         (fact: Fact) =>
           fact.status !== "retired" &&
@@ -1585,6 +1617,7 @@ export async function runDeterministicAssistantTurn(
     });
   }
   const citationMap = new Map(visibleContext.citations.map((source) => [source.id, source]));
+  for (const source of pairingCitationSources) citationMap.set(source.id, source);
   const priceSourceIds = new Set(
     [...priceObservations, ...recommendations.map((item) => item.latestPrice)]
       .filter((price): price is PriceObservation => price !== null)
