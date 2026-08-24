@@ -32,10 +32,18 @@ const problems: string[] = [];
 for (const name of files) {
   if (migrationNumber(name) <= grandfathered) continue;
   const contents = readFileSync(join(migrationsDirectory, name), "utf8");
-  if (/^\s*PRAGMA\b/im.test(contents)) {
+  // `PRAGMA foreign_keys` is the one D1 refuses over its API — connection-scoped
+  // and managed by D1 — and every migration up to 0014 carried it for no benefit.
+  // `PRAGMA defer_foreign_keys`, though, is transaction-scoped and IS honoured:
+  // it is the supported way to rebuild a table other tables reference, deferring
+  // the checks to commit instead of tripping the implicit delete a DROP performs.
+  // Allow that one; keep refusing the rest.
+  for (const match of contents.matchAll(/^\s*PRAGMA\s+([a-z_]+)/gim)) {
+    if (match[1]?.toLowerCase() === "defer_foreign_keys") continue;
     problems.push(
-      `  ${name} contains a PRAGMA. D1 refuses it over its API and prints an error to\n` +
-        `  whoever runs the migration, for no benefit: D1 enforces foreign keys itself.`,
+      `  ${name} contains PRAGMA ${match[1]}. D1 refuses it over its API and prints an\n` +
+        `  error to whoever runs the migration, for no benefit: D1 enforces foreign keys\n` +
+        `  itself. Only PRAGMA defer_foreign_keys, for a table rebuild, is allowed.`,
     );
   }
 }
@@ -56,5 +64,5 @@ if (problems.length > 0) {
 
 console.info(
   `Migrations look right: ${files.length} files, consecutively numbered, ` +
-    `and none added after 0014 uses a PRAGMA.`,
+    `and none added after 0014 uses a PRAGMA other than defer_foreign_keys.`,
 );

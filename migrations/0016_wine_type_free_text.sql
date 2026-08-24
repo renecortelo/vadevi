@@ -2,9 +2,15 @@
 -- without another migration each time. The value was pinned by a column CHECK, so
 -- a new kind meant rebuilding the table; it becomes free text here, validated at
 -- the API by the WineType schema — the same choice the fact predicates already
--- make. SQLite cannot drop a CHECK in place, so the table is rebuilt once, the
--- same copy-drop-rename this codebase already uses for a table (0013). D1 manages
--- foreign keys across a migration itself, so no PRAGMA is needed or accepted.
+-- make. SQLite cannot drop a CHECK in place, so the table is rebuilt once.
+--
+-- wine_records is referenced by several tables, so dropping it fires an implicit
+-- delete that trips their foreign keys. Deferring foreign keys moves those checks
+-- to the end of the transaction, by which point the table is back under its own
+-- name with every row copied across — the supported way to rebuild a referenced
+-- table on D1. (This is the one PRAGMA D1 honours; PRAGMA foreign_keys is not.)
+PRAGMA defer_foreign_keys = on;
+
 CREATE TABLE wine_records_new (
   id TEXT PRIMARY KEY,
   space_id TEXT NOT NULL REFERENCES spaces(id),
