@@ -69,3 +69,24 @@ export function imageInfo(bytes: Uint8Array): ImageInfo | null {
   if (webp !== null) return { ...webp, mimeType: "image/webp" };
   return null;
 }
+
+/** The largest edge a stored photo may have — the media table's own CHECK. */
+export const maxPhotoEdge = 2048;
+/** The largest a stored photo may be — the media table's own CHECK. */
+export const maxPhotoBytes = 5 * 1024 * 1024;
+
+/**
+ * Whether these bytes can actually be stored as a wine's photo.
+ *
+ * One predicate for both the proxy that SHOWS a candidate and the import that
+ * SAVES it. They had the rule twice and it drifted: the proxy checked the format
+ * but not the size, so an oversized thumbnail rendered in the picker and then
+ * failed on save, which looked to the reader like a photo that simply would not
+ * save. Whatever passes here is displayable and storable, by construction.
+ */
+export function storablePhoto(bytes: Uint8Array): ImageInfo | null {
+  if (bytes.byteLength === 0 || bytes.byteLength > maxPhotoBytes) return null;
+  const info = imageInfo(bytes);
+  if (info === null) return null;
+  return Math.max(info.width, info.height) > maxPhotoEdge ? null : info;
+}

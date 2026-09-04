@@ -1,7 +1,7 @@
 import type { TastingSessionResponse, WineSummary } from "@vadevi/contracts";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 import { countryOptionsFor } from "../components/country-options";
 import { useAuth } from "../auth/AuthContext";
@@ -264,6 +264,9 @@ function sortValue(
 
 export function WineMemoryPage() {
   const { i18n, t } = useTranslation();
+  // Set by the tasting screen when it sends the reader here after submitting.
+  const tastingSaved =
+    (useLocation().state as { tastingSaved?: boolean } | null)?.tastingSaved === true;
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const { clearOfflineData, flush, pendingCount, refreshStatus, status } = useOfflineSync();
@@ -787,6 +790,13 @@ export function WineMemoryPage() {
           </div>
         </div>
       )}
+      {/* Arriving straight from a submitted tasting: say it saved, here, where the
+          reader lands — rather than flashing a message on the page they left. */}
+      {tastingSaved ? (
+        <p className="cache-note" role="status">
+          {t("tasting.savedNotice")}
+        </p>
+      ) : null}
       {mergeStatus === "merged" ? <p role="status">{t("memory.mergeDone")}</p> : null}
       {mergeStatus === "error" ? (
         <p className="form-error" role="alert">

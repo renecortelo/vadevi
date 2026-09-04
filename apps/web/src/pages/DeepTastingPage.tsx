@@ -7,7 +7,7 @@ import {
 } from "@vadevi/i18n/runtime";
 import { type ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useParams, useSearchParams } from "react-router";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import type { z } from "zod";
 
 import { DecimalInput } from "../components/DecimalInput";
@@ -174,6 +174,7 @@ export function DeepTastingPage() {
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const { flush, refreshStatus, status } = useOfflineSync();
+  const navigate = useNavigate();
   const spaceId = bootstrap.data.user.activeSpaceId;
   const userId = user?.uid ?? "";
   const locale = resolveSupportedLocale(i18n.language);
@@ -342,6 +343,15 @@ export function DeepTastingPage() {
       setSaved(true);
       await refreshStatus();
       if (navigator.onLine) void flush(spaceId);
+      // Submitting finishes the tasting, so leave the form rather than sitting on
+      // it: back to the session it belongs to, or to the memory list, which says
+      // it saved on arrival. Saving a draft stays put — the reader is still
+      // working.
+      if (submit) {
+        navigate(sessionId === null ? "/memory" : `/sessions/${sessionId}`, {
+          state: { tastingSaved: true },
+        });
+      }
     } catch {
       setError(true);
     }

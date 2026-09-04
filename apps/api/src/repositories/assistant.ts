@@ -1324,11 +1324,16 @@ export async function runDeterministicAssistantTurn(
   // wine's own name as if it were a dish produced nonsense (a bottle unrelated to
   // the question), so that path is answered separately, below.
   const askedType = wineTypeFromMessage(options.request.message);
-  const namedWine =
+  // The wine the reader spelled out. Kept apart from the other ways a wine is
+  // resolved, because naming a bottle outright is the one unambiguous signal that
+  // the question is about that bottle and no other.
+  const wineNamedInMessage =
     results.find((result) => {
       const name = normalizeWineText(result.wine.displayName);
       return name.length >= 3 && normalizeWineText(options.request.message).includes(name);
-    }) ??
+    }) ?? null;
+  const namedWine =
+    wineNamedInMessage ??
     // "…with that cava?" points at a wine by style rather than by name. When the
     // reader owns exactly one wine of that style, the question is about it.
     (askedType === null
@@ -1363,15 +1368,29 @@ export async function runDeterministicAssistantTurn(
   // another wine entirely ("what can I pair the Naltros with?" opening with El
   // Coto). Narrowed to pairing only: comparisons and recommendations legitimately
   // need the other results.
-  if (requestsPairing(options.request.message) && namedWine !== null) {
-    results = [namedWine];
-    // The pairing is about THIS bottle, so a note surfaced only because it reads
-    // similarly — the reader's note on another wine — must not travel with it. It
-    // was what put "no hay información sobre EL COTO" into an answer about the
-    // Kiwi Trail.
+  // Asking about a wine by name is about THAT wine, whatever is being asked. Only
+  // three kinds of question legitimately want the others alongside it: comparing
+  // wines, asking for a recommendation, and surveying the whole collection. Any
+  // other question naming one bottle — "how did I rate the Kiwi Trail?" — was
+  // listing every near match as a "matching wine", which reads as though the
+  // answer covers them too.
+  const aboutSeveralWines =
+    overview ||
+    requestsComparison(options.request.message) ||
+    requestsRecommendation(options.request.message);
+  const focusOne = (wine: AssistantSearchResult) => {
+    results = [wine];
+    // A note surfaced only because it reads similarly — the reader's note on
+    // another wine — must not travel with it. It was what put "no hay información
+    // sobre EL COTO" into an answer about the Kiwi Trail.
     semanticStatements = semanticStatements.filter(
-      (statement) => semanticStatementWineId.get(statement.id) === namedWine.wine.id,
+      (statement) => semanticStatementWineId.get(statement.id) === wine.wine.id,
     );
+  };
+  if (requestsPairing(options.request.message) && namedWine !== null) {
+    focusOne(namedWine);
+  } else if (wineNamedInMessage !== null && !aboutSeveralWines) {
+    focusOne(wineNamedInMessage);
   } else if (requestsPairing(options.request.message) && askedType !== null) {
     // Several wines of the named style: still better to answer about those than
     // to hand the model the whole cellar as "matching wines".

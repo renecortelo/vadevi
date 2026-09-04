@@ -605,7 +605,7 @@ export const MediaIdPathSchema = z
   .strict();
 
 export const BottlePhotoSearchRequestSchema = z
-  .object({ locale: SupportedLocaleSchema })
+  .object({ locale: SupportedLocaleSchema, offset: z.number().int().min(0).max(9).optional() })
   .strict()
   .openapi("BottlePhotoSearchRequest");
 

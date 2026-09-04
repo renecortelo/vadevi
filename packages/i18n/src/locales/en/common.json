@@ -444,7 +444,9 @@
       "confirmAction": "Use this photo",
       "cancel": "Cancel",
       "adopted": "Saved as the wine's main photo.",
-      "adoptError": "The photo could not be saved."
+      "adoptError": "The photo could not be saved.",
+      "moreAction": "Show more photos",
+      "noMore": "No more photos were found for this wine."
     }
   },
   "assistant": {
@@ -912,7 +914,8 @@
     "conflictTitle": "Your note changed somewhere else",
     "conflictBody": "Both versions are preserved. Choose the local form or the current server note.",
     "keepLocal": "Use my local version",
-    "noConclusion": "No conclusion text in this version."
+    "noConclusion": "No conclusion text in this version.",
+    "savedNotice": "Tasting saved."
   },
   "dataRights": {
     "navAction": "Data and privacy",

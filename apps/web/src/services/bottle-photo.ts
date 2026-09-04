@@ -14,13 +14,14 @@ export async function searchBottlePhotoCandidates(
   spaceId: string,
   wineId: string,
   locale: SupportedLocale,
+  offset = 0,
   signal?: AbortSignal,
 ): Promise<BottlePhotoCandidate[]> {
   const response = await authenticatedFetch(
     tokenSource,
     `/api/v1/spaces/${spaceId}/wines/${wineId}/bottle-photo-candidates`,
     {
-      body: JSON.stringify({ locale }),
+      body: JSON.stringify({ locale, offset }),
       headers: { "Content-Type": "application/json" },
       method: "POST",
       ...(signal === undefined ? {} : { signal }),

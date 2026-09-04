@@ -444,7 +444,9 @@
       "confirmAction": "Fer servir aquesta foto",
       "cancel": "Cancel·la",
       "adopted": "Desada com a foto principal del vi.",
-      "adoptError": "No s'ha pogut desar la foto."
+      "adoptError": "No s'ha pogut desar la foto.",
+      "moreAction": "Mostra més fotos",
+      "noMore": "No s'han trobat més fotos per a aquest vi."
     }
   },
   "assistant": {
@@ -912,7 +914,8 @@
     "conflictTitle": "La teva nota ha canviat en un altre lloc",
     "conflictBody": "Les dues versions s'han conservat. Tria el formulari local o la nota actual del servidor.",
     "keepLocal": "Utilitza la meva versió local",
-    "noConclusion": "Aquesta versió no té text de conclusió."
+    "noConclusion": "Aquesta versió no té text de conclusió.",
+    "savedNotice": "Tast desat."
   },
   "dataRights": {
     "navAction": "Dades i privadesa",
