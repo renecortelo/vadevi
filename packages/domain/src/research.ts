@@ -121,8 +121,12 @@ export type ImageCandidate = Readonly<{
   sourceUrl: string;
 }>;
 
+/** A page of image results: the same query, further along, so a reader who liked
+ *  none of the first batch can ask for more. */
+export type ImageSearchRequest = WebSearchRequest & Readonly<{ offset?: number }>;
+
 export interface ImageSearchPort {
-  search(input: WebSearchRequest): Promise<ExternalResult<ImageCandidate[]>>;
+  search(input: ImageSearchRequest): Promise<ExternalResult<ImageCandidate[]>>;
 }
 
 /**

@@ -67,14 +67,28 @@ export function BottlePhotoPicker({
   const [pending, setPending] = useState<BottlePhotoCandidate | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Which page of results has been asked for, and whether the provider ran out —
+  // six photos are often none of the right bottle, so the reader can keep asking.
+  const [offset, setOffset] = useState(0);
+  const [exhausted, setExhausted] = useState(false);
 
-  async function runSearch() {
+  async function runSearch(nextOffset = 0) {
     if (user === null) return;
     setBusy(true);
     setError(null);
     try {
       const locale = (i18n.language.split("-")[0] as SupportedLocale) ?? "en";
-      setCandidates(await searchBottlePhotoCandidates(user, spaceId, wineId, locale));
+      const found = await searchBottlePhotoCandidates(user, spaceId, wineId, locale, nextOffset);
+      // A page that brings nothing new means the web has no more to offer for
+      // this bottle; say so rather than leaving the button looking broken.
+      const fresh = found.filter(
+        (candidate) =>
+          nextOffset === 0 ||
+          !(candidates ?? []).some((seen) => seen.thumbnailUrl === candidate.thumbnailUrl),
+      );
+      setExhausted(fresh.length === 0 && nextOffset > 0);
+      setCandidates(nextOffset === 0 ? found : [...(candidates ?? []), ...fresh]);
+      setOffset(nextOffset);
     } catch {
       setError(t("evidence.bottlePhoto.searchError"));
     } finally {
@@ -90,6 +104,8 @@ export function BottlePhotoPicker({
       await importBottlePhoto(user, spaceId, wineId, candidate);
       setPending(null);
       setCandidates(null);
+      setOffset(0);
+      setExhausted(false);
       onAdopted();
     } catch {
       setError(t("evidence.bottlePhoto.adoptError"));
@@ -125,6 +141,18 @@ export function BottlePhotoPicker({
               />
             ))}
           </div>
+          {exhausted ? (
+            <p className="research-panel__notice">{t("evidence.bottlePhoto.noMore")}</p>
+          ) : (
+            <button
+              className="action-link action-link--secondary"
+              disabled={busy}
+              onClick={() => void runSearch(offset + 1)}
+              type="button"
+            >
+              {t("evidence.bottlePhoto.moreAction")}
+            </button>
+          )}
         </>
       )}
       {pending === null ? null : (

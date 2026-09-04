@@ -444,7 +444,9 @@
       "confirmAction": "Foto verwenden",
       "cancel": "Abbrechen",
       "adopted": "Als Hauptfoto des Weins gespeichert.",
-      "adoptError": "Das Foto konnte nicht gespeichert werden."
+      "adoptError": "Das Foto konnte nicht gespeichert werden.",
+      "moreAction": "Mehr Fotos anzeigen",
+      "noMore": "Für diesen Wein wurden keine weiteren Fotos gefunden."
     }
   },
   "assistant": {
@@ -912,7 +914,8 @@
     "conflictTitle": "Ihre Notiz wurde anderswo geändert",
     "conflictBody": "Beide Versionen sind erhalten. Wählen Sie das lokale Formular oder die aktuelle Servernotiz.",
     "keepLocal": "Meine lokale Version verwenden",
-    "noConclusion": "Diese Version enthält keinen Fazittext."
+    "noConclusion": "Diese Version enthält keinen Fazittext.",
+    "savedNotice": "Verkostung gespeichert."
   },
   "dataRights": {
     "navAction": "Daten und Datenschutz",

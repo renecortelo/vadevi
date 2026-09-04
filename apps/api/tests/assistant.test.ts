@@ -480,6 +480,41 @@ describe("Vicenç deterministic read path", () => {
     });
   });
 
+  it("answers about the one wine named, without listing the rest as matches", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const asked = await createWine(ownerToken, spaceId, "Solene Unica Bottle");
+    await createWine(ownerToken, spaceId, "Another Cellar Red", "red");
+    await createWine(ownerToken, spaceId, "Third Cellar White");
+
+    // Naming one wine, asking something that is not a comparison: the answer is
+    // about that bottle, so the others must not ride along as "matching wines".
+    const response = await assistantTurn(ownerToken, spaceId, "Que sabes del Solene Unica Bottle?");
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(body.data.results).toHaveLength(1);
+    expect(body.data.results[0]?.wine.id).toBe(asked.id);
+  }, 30_000);
+
+  it("still gathers several wines when the question compares them", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const first = await createWine(ownerToken, spaceId, "Kompare Alpha White");
+    await createWine(ownerToken, spaceId, "Kompare Beta Red", "red");
+
+    // A comparison names a wine too, but narrowing it to one would defeat the
+    // question.
+    const response = await assistantTurn(
+      ownerToken,
+      spaceId,
+      "Compara el Kompare Alpha White con mis otros vinos",
+    );
+    const body = AssistantTurnResponseSchema.parse(await response.json());
+    expect(body.data.results.length).toBeGreaterThan(1);
+    expect(
+      body.data.results.some((result: { wine: { id: string } }) => result.wine.id === first.id),
+    ).toBe(true);
+  }, 30_000);
+
   it("makes a fresh subject the new focus, not the wine carried from before", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;

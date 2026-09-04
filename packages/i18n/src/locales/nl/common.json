@@ -444,7 +444,9 @@
       "confirmAction": "Foto gebruiken",
       "cancel": "Annuleren",
       "adopted": "Opgeslagen als hoofdfoto van de wijn.",
-      "adoptError": "De foto kon niet worden opgeslagen."
+      "adoptError": "De foto kon niet worden opgeslagen.",
+      "moreAction": "Meer foto's tonen",
+      "noMore": "Geen andere foto's gevonden voor deze wijn."
     }
   },
   "assistant": {
@@ -912,7 +914,8 @@
     "conflictTitle": "Je notitie is elders gewijzigd",
     "conflictBody": "Beide versies zijn bewaard. Kies het lokale formulier of de huidige servernotitie.",
     "keepLocal": "Mijn lokale versie gebruiken",
-    "noConclusion": "Deze versie bevat geen conclusietekst."
+    "noConclusion": "Deze versie bevat geen conclusietekst.",
+    "savedNotice": "Proefnotitie opgeslagen."
   },
   "dataRights": {
     "navAction": "Gegevens en privacy",

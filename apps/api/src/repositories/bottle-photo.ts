@@ -4,9 +4,7 @@ import { ulid } from "ulid";
 import { fetchFromProvider, type ProviderFetcher } from "../adapters/provider-fetch";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
-import { imageInfo } from "./bottle-photo-image";
-
-const maxPhotoBytes = 5 * 1024 * 1024;
+import { maxPhotoBytes, storablePhoto } from "./bottle-photo-image";
 
 type WineIdentity = { display_name: string; producer_name: string; vintage_year: number | null };
 
@@ -36,6 +34,7 @@ export async function searchBottlePhotos(
   port: ImageSearchPort,
   options: {
     locale: ResearchLocale;
+    offset?: number;
     principal: FirebasePrincipal;
     spaceId: string;
     wineId: string;
@@ -48,7 +47,7 @@ export async function searchBottlePhotos(
     .filter((part) => part.length > 0)
     .join(" ")
     .concat(" bottle");
-  const result = await port.search({ locale: options.locale, query });
+  const result = await port.search({ locale: options.locale, offset: options.offset ?? 0, query });
   return result.status === "success" ? result.data : [];
 }
 
@@ -89,9 +88,8 @@ export async function proxyBottlePhoto(options: {
   }
   if (!response.ok) return null;
   const buffer = await response.arrayBuffer();
-  if (buffer.byteLength === 0 || buffer.byteLength > maxPhotoBytes) return null;
   const bytes = new Uint8Array(buffer);
-  const info = imageInfo(bytes);
+  const info = storablePhoto(bytes);
   return info === null ? null : { bytes, mimeType: info.mimeType };
 }
 
@@ -157,9 +155,8 @@ export async function importBottlePhoto(
     return { kind: "rejected", reason: "too_large" };
   }
   const bytes = new Uint8Array(buffer);
-  const info = imageInfo(bytes);
+  const info = storablePhoto(bytes);
   if (info === null) return { kind: "rejected", reason: "unsupported_format" };
-  if (Math.max(info.width, info.height) > 2048) return { kind: "rejected", reason: "too_large" };
 
   const now = new Date().toISOString();
   const mediaId = ulid();

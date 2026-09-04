@@ -4,7 +4,7 @@ import type {
   ExternalResult,
   ImageCandidate,
   ImageSearchPort,
-  WebSearchRequest,
+  ImageSearchRequest,
 } from "@vadevi/domain";
 import { sanitizeExternalText } from "@vadevi/domain";
 import { z } from "zod";
@@ -90,7 +90,7 @@ export class BraveImageSearchAdapter implements ImageSearchPort {
     this.now = options.now ?? (() => new Date());
   }
 
-  async search(input: WebSearchRequest): Promise<ExternalResult<ImageCandidate[]>> {
+  async search(input: ImageSearchRequest): Promise<ExternalResult<ImageCandidate[]>> {
     const query = input.query.trim().slice(0, 300);
     if (query.length < 3) {
       return { reason: "invalid_input", retryAfterSeconds: null, status: "unavailable" };
@@ -99,7 +99,8 @@ export class BraveImageSearchAdapter implements ImageSearchPort {
     const now = this.now();
     const nowTimestamp = now.toISOString();
     // The version is part of the contract: bump it on any change to what is stored.
-    const cacheKey = `brave-images-v1:${query.toLowerCase()}:${language}`;
+    const offset = Math.min(Math.max(Math.trunc(input.offset ?? 0), 0), 9);
+    const cacheKey = `brave-images-v1:${query.toLowerCase()}:${language}:${offset}`;
     const cached = await this.cache.get<ImageCandidate[]>("image_search", cacheKey, nowTimestamp);
     if (cached !== null) return { cached: true, data: cached, status: "success" };
 
@@ -120,6 +121,7 @@ export class BraveImageSearchAdapter implements ImageSearchPort {
     const url = new URL(this.baseUrl);
     for (const [name, value] of Object.entries({
       count: "8",
+      offset: String(offset),
       q: query,
       safesearch: "strict",
       search_lang: language,

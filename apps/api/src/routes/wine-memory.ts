@@ -739,6 +739,7 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
     }
     const candidates = await searchBottlePhotos(context.env.DB!, port, {
       locale: context.req.valid("json").locale,
+      offset: context.req.valid("json").offset ?? 0,
       principal: context.get("principal"),
       spaceId: params.spaceId,
       wineId: params.wineId,

@@ -444,7 +444,9 @@
       "confirmAction": "Usar esta foto",
       "cancel": "Cancelar",
       "adopted": "Guardada como la foto principal del vino.",
-      "adoptError": "No se pudo guardar la foto."
+      "adoptError": "No se pudo guardar la foto.",
+      "moreAction": "Ver más fotos",
+      "noMore": "No se encontraron más fotos para este vino."
     }
   },
   "assistant": {
@@ -912,7 +914,8 @@
     "conflictTitle": "Tu nota cambió en otro lugar",
     "conflictBody": "Se han conservado ambas versiones. Elige el formulario local o la nota actual del servidor.",
     "keepLocal": "Usar mi versión local",
-    "noConclusion": "Esta versión no tiene texto de conclusión."
+    "noConclusion": "Esta versión no tiene texto de conclusión.",
+    "savedNotice": "Cata guardada."
   },
   "dataRights": {
     "navAction": "Datos y privacidad",
