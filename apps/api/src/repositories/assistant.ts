@@ -472,8 +472,12 @@ async function searchNotesSemantically(
 
 type TastingNoteDetailRow = {
   acidity: number | null;
+  appearance_text: string | null;
   body: number | null;
   comment: string | null;
+  conclusion_text: string | null;
+  nose_swirled_text: string | null;
+  nose_text: string | null;
   finish_length: number | null;
   food_text: string | null;
   id: string;
@@ -545,6 +549,7 @@ async function loadReaderTastingNotes(
       `SELECT note.id, note.wine_id, note.score_100, note.would_buy, note.would_drink_again,
         note.comment, note.sweetness, note.acidity, note.tannin_level,
         note.tannin_texture, note.body, note.palate_texture, note.finish_length, note.palate_text,
+        note.appearance_text, note.nose_text, note.nose_swirled_text, note.conclusion_text,
         ctx.food_text
       FROM tasting_notes note
       JOIN users actor ON actor.id = note.author_user_id
@@ -595,9 +600,21 @@ async function loadReaderTastingNotes(
       descriptors === undefined || descriptors.palate.length === 0
         ? null
         : `flavours you noted: ${descriptors.palate.join(", ")}`,
+      row.appearance_text === null || row.appearance_text.length === 0
+        ? null
+        : `appearance note: ${clip(row.appearance_text, 160)}`,
+      row.nose_text === null || row.nose_text.length === 0
+        ? null
+        : `nose note: ${clip(row.nose_text, 160)}`,
+      row.nose_swirled_text === null || row.nose_swirled_text.length === 0
+        ? null
+        : `nose after swirling: ${clip(row.nose_swirled_text, 160)}`,
       row.palate_text === null || row.palate_text.length === 0
         ? null
         : `palate note: ${clip(row.palate_text, 160)}`,
+      row.conclusion_text === null || row.conclusion_text.length === 0
+        ? null
+        : `your conclusion: ${clip(row.conclusion_text, 200)}`,
       row.food_text === null || row.food_text.length === 0
         ? null
         : `you had it with: ${clip(row.food_text, 120)}`,
