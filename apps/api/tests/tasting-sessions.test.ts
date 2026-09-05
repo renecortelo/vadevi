@@ -140,6 +140,10 @@ async function createDeepNote(
         preservationMethod: "none",
         roomTemperatureTenthsC: 210,
         servingTemperatureTenthsC: 160,
+        venueArea: "Catalunya",
+        venueCity: "Barcelona",
+        venueCountryCode: "ES",
+        venueName: "Casa de Prueba",
       },
       descriptors: [
         { code: "fruit.red.cherry", intensity: 4, phase: "nose" },
@@ -305,6 +309,9 @@ describe("Deep tasting and collaborative sessions", () => {
     expect(readBack.effervescence).toBe(4);
     expect(readBack.noseSwirledIntensity).toBe(5);
     expect(readBack.noseSwirledText).toBe(`${90} swirled`);
+    expect(readBack.context?.venueName).toBe("Casa de Prueba");
+    expect(readBack.context?.venueCity).toBe("Barcelona");
+    expect(readBack.context?.venueCountryCode).toBe("ES");
     const hiddenRead = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${ownerNote.id}`,
       { headers: { Authorization: `Bearer ${memberToken}` } },

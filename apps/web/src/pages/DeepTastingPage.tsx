@@ -11,6 +11,7 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import type { z } from "zod";
 
 import { DecimalInput } from "../components/DecimalInput";
+import { countryOptionsFor } from "../components/country-options";
 import { colorFamiliesFor, hasTannin, hueOptionsFor } from "./deep-tasting-fields";
 import { useAuth } from "../auth/AuthContext";
 import { type DeepTastingDraft, offlineDatabase, type SyncConflict } from "../offline/database";
@@ -874,6 +875,53 @@ export function DeepTastingPage() {
                   {t(`tasting.value.${value}`)}
                 </option>
               ))}
+            </select>
+          </label>
+        </div>
+        {/* Where the wine was tasted — the place, kept apart from the wine's own
+            origin. Helps Vicenç recall where a bottle was drunk. */}
+        <div className="form-grid">
+          <label>
+            <span>{t("tasting.field.venueName")}</span>
+            <input
+              maxLength={200}
+              onChange={(event) => updateContext("venueName", event.target.value || undefined)}
+              placeholder={t("tasting.venuePlaceholder")}
+              value={draft.payload.context?.venueName ?? ""}
+            />
+          </label>
+          <label>
+            <span>{t("tasting.field.venueCity")}</span>
+            <input
+              maxLength={160}
+              onChange={(event) => updateContext("venueCity", event.target.value || undefined)}
+              value={draft.payload.context?.venueCity ?? ""}
+            />
+          </label>
+          <label>
+            <span>{t("tasting.field.venueArea")}</span>
+            <input
+              maxLength={160}
+              onChange={(event) => updateContext("venueArea", event.target.value || undefined)}
+              value={draft.payload.context?.venueArea ?? ""}
+            />
+          </label>
+          <label>
+            <span>{t("tasting.field.venueCountry")}</span>
+            <select
+              onChange={(event) =>
+                updateContext("venueCountryCode", event.target.value || undefined)
+              }
+              value={draft.payload.context?.venueCountryCode ?? ""}
+            >
+              <option value="">{t("tasting.notSet")}</option>
+              {countryOptionsFor(i18n.language, draft.payload.context?.venueCountryCode ?? "").map(
+                (option) => (
+                  <option key={option.code} value={option.code}>
+                    {option.name}
+                  </option>
+                ),
+              )}
             </select>
           </label>
         </div>

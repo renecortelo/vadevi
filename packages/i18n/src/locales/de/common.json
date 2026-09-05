@@ -846,7 +846,11 @@
       "conclusionText": "Persönliches Fazit",
       "noseSwirledText": "Aromen nach dem Schwenken",
       "effervescence": "Perlage",
-      "beadSize": "Perlagegröße"
+      "beadSize": "Perlagegröße",
+      "venueName": "Ort",
+      "venueCity": "Stadt",
+      "venueArea": "Bundesland / Region",
+      "venueCountry": "Land"
     },
     "value": {
       "clear": "Klar",
@@ -925,7 +929,8 @@
     "nosePhase": {
       "still": "Frisch eingeschenkt",
       "swirled": "Nach dem Schwenken"
-    }
+    },
+    "venuePlaceholder": "z. B. ein Restaurant oder bei Freunden"
   },
   "dataRights": {
     "navAction": "Daten und Datenschutz",

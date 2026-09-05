@@ -846,7 +846,11 @@
       "conclusionText": "Conclusió personal",
       "noseSwirledText": "Aromes després de remoure",
       "effervescence": "Bombolla",
-      "beadSize": "Mida de la bombolla"
+      "beadSize": "Mida de la bombolla",
+      "venueName": "Lloc",
+      "venueCity": "Ciutat",
+      "venueArea": "Estat / regió",
+      "venueCountry": "País"
     },
     "value": {
       "clear": "Net",
@@ -925,7 +929,8 @@
     "nosePhase": {
       "still": "Acabat de servir",
       "swirled": "Després de remoure"
-    }
+    },
+    "venuePlaceholder": "p. ex. un restaurant o casa d'un amic"
   },
   "dataRights": {
     "navAction": "Dades i privadesa",

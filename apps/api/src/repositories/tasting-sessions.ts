@@ -105,6 +105,10 @@ type ContextRow = {
   preservation_method: string | null;
   previous_session_wine_id: string | null;
   room_temperature_tenths_c: number | null;
+  venue_area: string | null;
+  venue_city: string | null;
+  venue_country_code: string | null;
+  venue_name: string | null;
   serving_temperature_tenths_c: number | null;
 };
 
@@ -683,6 +687,10 @@ async function getDeepNote(
             preservationMethod: context.preservation_method ?? undefined,
             previousSessionWineId: context.previous_session_wine_id ?? undefined,
             roomTemperatureTenthsC: context.room_temperature_tenths_c ?? undefined,
+            venueArea: context.venue_area ?? undefined,
+            venueCity: context.venue_city ?? undefined,
+            venueCountryCode: context.venue_country_code ?? undefined,
+            venueName: context.venue_name ?? undefined,
             servingTemperatureTenthsC: context.serving_temperature_tenths_c ?? undefined,
           },
     createdAt: row.created_at,
@@ -890,8 +898,9 @@ export async function createDeepTastingNote(
             created_at, updated_at, serving_temperature_tenths_c, opened_state,
             minutes_open, decanted, aeration_minutes, preservation_method, bottle_condition,
             room_temperature_tenths_c, light_level, noise_level, ambient_smell_level,
-            palate_cleanser, previous_session_wine_id
-          ) SELECT id, space_id, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+            palate_cleanser, previous_session_wine_id,
+            venue_name, venue_city, venue_area, venue_country_code
+          ) SELECT id, space_id, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
           FROM tasting_notes WHERE id = ? AND space_id = ?
           ON CONFLICT(tasting_note_id) DO NOTHING`,
         )
@@ -914,6 +923,10 @@ export async function createDeepTastingNote(
           context.ambientSmellLevel ?? null,
           context.palateCleanser ?? null,
           context.previousSessionWineId ?? null,
+          context.venueName ?? null,
+          context.venueCity ?? null,
+          context.venueArea ?? null,
+          context.venueCountryCode ?? null,
           noteId,
           options.spaceId,
         ),
@@ -1062,8 +1075,9 @@ export async function updateDeepTastingNote(
             created_at, updated_at, serving_temperature_tenths_c, opened_state,
             minutes_open, decanted, aeration_minutes, preservation_method, bottle_condition,
             room_temperature_tenths_c, light_level, noise_level, ambient_smell_level,
-            palate_cleanser, previous_session_wine_id
-          ) SELECT id, space_id, ?, ?, ?, created_at, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+            palate_cleanser, previous_session_wine_id,
+            venue_name, venue_city, venue_area, venue_country_code
+          ) SELECT id, space_id, ?, ?, ?, created_at, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
           FROM tasting_notes WHERE id = ? AND space_id = ? AND updated_at = ?
           ON CONFLICT(tasting_note_id) DO UPDATE SET
             food_text = COALESCE(excluded.food_text, tasting_contexts.food_text),
@@ -1082,7 +1096,11 @@ export async function updateDeepTastingNote(
             noise_level = COALESCE(excluded.noise_level, tasting_contexts.noise_level),
             ambient_smell_level = COALESCE(excluded.ambient_smell_level, tasting_contexts.ambient_smell_level),
             palate_cleanser = COALESCE(excluded.palate_cleanser, tasting_contexts.palate_cleanser),
-            previous_session_wine_id = COALESCE(excluded.previous_session_wine_id, tasting_contexts.previous_session_wine_id)`,
+            previous_session_wine_id = COALESCE(excluded.previous_session_wine_id, tasting_contexts.previous_session_wine_id),
+            venue_name = COALESCE(excluded.venue_name, tasting_contexts.venue_name),
+            venue_city = COALESCE(excluded.venue_city, tasting_contexts.venue_city),
+            venue_area = COALESCE(excluded.venue_area, tasting_contexts.venue_area),
+            venue_country_code = COALESCE(excluded.venue_country_code, tasting_contexts.venue_country_code)`,
         )
         .bind(
           context.foodText ?? null,
@@ -1102,6 +1120,10 @@ export async function updateDeepTastingNote(
           context.ambientSmellLevel ?? null,
           context.palateCleanser ?? null,
           context.previousSessionWineId ?? null,
+          context.venueName ?? null,
+          context.venueCity ?? null,
+          context.venueArea ?? null,
+          context.venueCountryCode ?? null,
           options.noteId,
           options.spaceId,
           now,

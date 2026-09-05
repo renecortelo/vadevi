@@ -846,7 +846,11 @@
       "conclusionText": "Conclusion personnelle",
       "noseSwirledText": "Arômes après aération",
       "effervescence": "Bulles",
-      "beadSize": "Taille des bulles"
+      "beadSize": "Taille des bulles",
+      "venueName": "Lieu",
+      "venueCity": "Ville",
+      "venueArea": "État / région",
+      "venueCountry": "Pays"
     },
     "value": {
       "clear": "Limpide",
@@ -925,7 +929,8 @@
     "nosePhase": {
       "still": "Au service",
       "swirled": "Après aération"
-    }
+    },
+    "venuePlaceholder": "p. ex. un restaurant ou chez un ami"
   },
   "dataRights": {
     "navAction": "Données et confidentialité",

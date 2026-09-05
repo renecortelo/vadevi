@@ -5593,6 +5593,25 @@
                     "type": "integer",
                     "minimum": -100,
                     "maximum": 500
+                  },
+                  "venueArea": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  },
+                  "venueCity": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  },
+                  "venueCountryCode": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z]{2}$"
+                  },
+                  "venueName": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
                   }
                 },
                 "additionalProperties": false
@@ -6109,6 +6128,25 @@
                 "type": "integer",
                 "minimum": -100,
                 "maximum": 500
+              },
+              "venueArea": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "venueCity": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "venueCountryCode": {
+                "type": "string",
+                "pattern": "^[A-Za-z]{2}$"
+              },
+              "venueName": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
               }
             },
             "additionalProperties": false
@@ -8880,6 +8918,25 @@
                 "type": "integer",
                 "minimum": -100,
                 "maximum": 500
+              },
+              "venueArea": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "venueCity": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "venueCountryCode": {
+                "type": "string",
+                "pattern": "^[A-Za-z]{2}$"
+              },
+              "venueName": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
               }
             },
             "additionalProperties": false

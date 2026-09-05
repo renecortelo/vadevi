@@ -846,7 +846,11 @@
       "conclusionText": "Conclusione personale",
       "noseSwirledText": "Aromi dopo aver roteato",
       "effervescence": "Bollicine",
-      "beadSize": "Dimensione delle bollicine"
+      "beadSize": "Dimensione delle bollicine",
+      "venueName": "Luogo",
+      "venueCity": "Città",
+      "venueArea": "Stato / regione",
+      "venueCountry": "Paese"
     },
     "value": {
       "clear": "Limpido",
@@ -925,7 +929,8 @@
     "nosePhase": {
       "still": "Appena versato",
       "swirled": "Dopo aver roteato"
-    }
+    },
+    "venuePlaceholder": "es. un ristorante o da un amico"
   },
   "dataRights": {
     "navAction": "Dati e privacy",
