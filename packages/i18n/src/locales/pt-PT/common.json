@@ -846,7 +846,11 @@
       "conclusionText": "Conclusão pessoal",
       "noseSwirledText": "Aromas depois de agitar",
       "effervescence": "Bolha",
-      "beadSize": "Tamanho da bolha"
+      "beadSize": "Tamanho da bolha",
+      "venueName": "Local",
+      "venueCity": "Cidade",
+      "venueArea": "Estado / região",
+      "venueCountry": "País"
     },
     "value": {
       "clear": "Límpido",
@@ -925,7 +929,8 @@
     "nosePhase": {
       "still": "Acabado de servir",
       "swirled": "Depois de agitar"
-    }
+    },
+    "venuePlaceholder": "p. ex. um restaurante ou casa de um amigo"
   },
   "dataRights": {
     "navAction": "Dados e privacidade",

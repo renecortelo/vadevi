@@ -846,7 +846,11 @@
       "conclusionText": "Persoonlijke conclusie",
       "noseSwirledText": "Aroma's na walsen",
       "effervescence": "Belletjes",
-      "beadSize": "Belgrootte"
+      "beadSize": "Belgrootte",
+      "venueName": "Plek",
+      "venueCity": "Stad",
+      "venueArea": "Staat / regio",
+      "venueCountry": "Land"
     },
     "value": {
       "clear": "Helder",
@@ -925,7 +929,8 @@
     "nosePhase": {
       "still": "Net ingeschonken",
       "swirled": "Na walsen"
-    }
+    },
+    "venuePlaceholder": "bijv. een restaurant of bij een vriend"
   },
   "dataRights": {
     "navAction": "Gegevens en privacy",

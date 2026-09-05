@@ -50,6 +50,14 @@ export const TastingContextSchema = z
     previousSessionWineId: ResourceIdSchema.optional(),
     roomTemperatureTenthsC: z.number().int().min(-100).max(600).optional(),
     servingTemperatureTenthsC: z.number().int().min(-100).max(500).optional(),
+    venueArea: z.string().trim().min(1).max(160).optional(),
+    venueCity: z.string().trim().min(1).max(160).optional(),
+    venueCountryCode: z
+      .string()
+      .trim()
+      .regex(/^[A-Za-z]{2}$/)
+      .optional(),
+    venueName: z.string().trim().min(1).max(200).optional(),
   })
   .strict();
 

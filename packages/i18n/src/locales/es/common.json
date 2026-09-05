@@ -846,7 +846,11 @@
       "conclusionText": "Conclusión personal",
       "noseSwirledText": "Aromas tras remover",
       "effervescence": "Burbuja",
-      "beadSize": "Tamaño de burbuja"
+      "beadSize": "Tamaño de burbuja",
+      "venueName": "Lugar",
+      "venueCity": "Ciudad",
+      "venueArea": "Estado / región",
+      "venueCountry": "País"
     },
     "value": {
       "clear": "Limpio",
@@ -925,7 +929,8 @@
     "nosePhase": {
       "still": "Recién servido",
       "swirled": "Tras remover"
-    }
+    },
+    "venuePlaceholder": "p. ej. un restaurante o casa de un amigo"
   },
   "dataRights": {
     "navAction": "Datos y privacidad",

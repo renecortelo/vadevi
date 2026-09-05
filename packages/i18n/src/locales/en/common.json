@@ -846,7 +846,11 @@
       "conclusionText": "Personal conclusion",
       "noseSwirledText": "Aromas after swirling",
       "effervescence": "Bubbles",
-      "beadSize": "Bead size"
+      "beadSize": "Bead size",
+      "venueName": "Place",
+      "venueCity": "City",
+      "venueArea": "State / region",
+      "venueCountry": "Country"
     },
     "value": {
       "clear": "Clear",
@@ -925,7 +929,8 @@
     "nosePhase": {
       "still": "As poured",
       "swirled": "After swirling"
-    }
+    },
+    "venuePlaceholder": "e.g. a restaurant or a friend's home"
   },
   "dataRights": {
     "navAction": "Data and privacy",
