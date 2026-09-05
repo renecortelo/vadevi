@@ -1,8 +1,10 @@
 import { DeepTastingNoteSchema, type DeepTastingRequest, type WineType } from "@vadevi/contracts";
 import type { TastingContextSchema, TastingDescriptorInputSchema } from "@vadevi/contracts";
 import {
+  descriptorByCode,
+  descriptorsForWineType,
+  type OntologyWineType,
   resolveSupportedLocale,
-  tastingDescriptors,
   type TastingPhase,
 } from "@vadevi/i18n/runtime";
 import { type ReactNode, useCallback, useEffect, useRef, useState } from "react";
@@ -99,14 +101,24 @@ function DescriptorPicker({
   locale,
   onChange,
   phase,
+  wineType,
 }: {
   descriptors: Descriptor[];
   locale: ReturnType<typeof resolveSupportedLocale>;
   onChange: (descriptors: Descriptor[]) => void;
   phase: TastingPhase;
+  wineType: OntologyWineType | null;
 }) {
   const { t } = useTranslation();
-  const choices = tastingDescriptors.filter((descriptor) => descriptor.phase === phase);
+  // Only the words that belong to this wine: no oak on a cava, no brioche on a
+  // young red. Anything already ticked stays on screen even if the type changed
+  // since — a choice already made is never taken away quietly.
+  const offered = descriptorsForWineType(phase, wineType);
+  const chosenElsewhere = descriptors
+    .filter((entry) => entry.phase === phase && !offered.some((one) => one.code === entry.code))
+    .map((entry) => descriptorByCode(entry.code))
+    .filter((entry): entry is NonNullable<typeof entry> => entry !== undefined);
+  const choices = [...offered, ...chosenElsewhere];
   return (
     <fieldset className="descriptor-fieldset">
       <legend>{t("tasting.descriptors")}</legend>
@@ -511,6 +523,7 @@ export function DeepTastingPage() {
           locale={locale}
           onChange={(value) => updateDescriptors("appearance", value)}
           phase="appearance"
+          wineType={wineType}
         />
         <label>
           <span>{t("tasting.field.appearanceText")}</span>
@@ -593,6 +606,7 @@ export function DeepTastingPage() {
           locale={locale}
           onChange={(value) => updateDescriptors("nose", value)}
           phase="nose"
+          wineType={wineType}
         />
       </fieldset>
     ),
@@ -707,6 +721,7 @@ export function DeepTastingPage() {
           locale={locale}
           onChange={(value) => updateDescriptors("palate", value)}
           phase="palate"
+          wineType={wineType}
         />
         <label>
           <span>{t("tasting.field.palateText")}</span>

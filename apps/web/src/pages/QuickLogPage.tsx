@@ -1,7 +1,12 @@
 import { WineTypeSchema } from "@vadevi/contracts";
 import type { WineGrape, WineSummary, WineType } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
-import { resolveSupportedLocale, tastingDescriptors } from "@vadevi/i18n/runtime";
+import {
+  descriptorByCode,
+  descriptorsForWineType,
+  type OntologyWineType,
+} from "@vadevi/i18n/runtime";
+import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 
 import { DecimalInput } from "../components/DecimalInput";
@@ -17,8 +22,6 @@ import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { createUlid } from "../security/ulid";
 import { useSession } from "../session/SessionContext";
-
-const descriptors = tastingDescriptors.filter((descriptor) => descriptor.phase !== "appearance");
 
 function newDraft(userId: string, spaceId: string): QuickLogDraft {
   const now = new Date().toISOString();
@@ -233,6 +236,25 @@ export function QuickLogPage() {
   }
 
   const selectedDescriptors = draft.notePayload.descriptorCodes;
+  // The words offered follow the wine being logged: choose "sparkling" and the
+  // list becomes brioche and green apple, not oak and forest floor. Appearance
+  // is left out of the quick log, as before.
+  const loggedType = (draft.winePayload.wineType ?? null) as OntologyWineType | null;
+  const offeredDescriptors = [
+    ...descriptorsForWineType("nose", loggedType),
+    ...descriptorsForWineType("palate", loggedType),
+  ];
+  // Anything already ticked stays listed even if the type changed since.
+  const descriptors = [
+    ...offeredDescriptors,
+    ...selectedDescriptors
+      .filter((code: string) => !offeredDescriptors.some((one) => one.code === code))
+      .map((code: string) => descriptorByCode(code))
+      .filter(
+        (entry: ReturnType<typeof descriptorByCode>): entry is NonNullable<typeof entry> =>
+          entry !== undefined,
+      ),
+  ];
   return (
     <section className="quick-log-page">
       <header className="page-heading">
