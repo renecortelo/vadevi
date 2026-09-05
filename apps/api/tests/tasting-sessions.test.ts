@@ -14,6 +14,7 @@ import {
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
+import { runDeterministicAssistantTurn } from "../src/repositories/assistant";
 import { randomOpaqueToken } from "../src/security/opaque-token";
 import { emulatorIdToken } from "./fixtures/firebase-token";
 
@@ -83,6 +84,32 @@ async function sharedSpace() {
   expect(acceptResponse.status).toBe(200);
   const outsider = await bootstrap(outsiderToken);
   return { outsider, owner: await bootstrap(ownerToken), spaceId };
+}
+
+async function submitDeepNote(
+  spaceId: string,
+  token: string,
+  wineId: string,
+  score100: number,
+  noseText: string,
+) {
+  const response = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes`, {
+    body: JSON.stringify({
+      acidity: 3,
+      descriptors: [],
+      mode: "deep",
+      noseText,
+      score100,
+      state: "submitted",
+      tanninLevel: 3,
+      tastedAt: "2026-08-13T18:00:00.000Z",
+      wineId,
+    }),
+    headers: headers(token, randomOpaqueToken()),
+    method: "POST",
+  });
+  expect(response.status, JSON.stringify(await response.clone().json())).toBe(201);
+  return DeepTastingResponseSchema.parse(await response.json()).data;
 }
 
 async function createWine(spaceId: string, displayName: string, token = ownerToken) {
@@ -189,6 +216,52 @@ async function createDeepNote(
 }
 
 describe("Deep tasting and collaborative sessions", () => {
+  it("shares group members' scores with Vicenç but keeps their written notes private", async () => {
+    const { spaceId } = await sharedSpace();
+    const wine = await createWine(spaceId, "Group Shared Red");
+    await submitDeepNote(spaceId, ownerToken, wine.id, 88, "owner-private-nose-observation");
+    await submitDeepNote(spaceId, memberToken, wine.id, 92, "member-private-nose-observation");
+
+    let captured: Array<{ evidenceClass: string; text: string }> = [];
+    await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: {
+        render: async (input) => {
+          captured = input.statements;
+          return { claims: [], modelVersion: "@cf/example/model" };
+        },
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Session Owner",
+        email: "session-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-3-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "en",
+        message: "What did the group think of Group Shared Red?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    const all = captured.map((statement) => statement.text).join(" || ");
+    // Both members' SCORES reach Vicenç, the peer's attributed by name.
+    expect(all).toContain("you rated it 88");
+    expect(all).toContain("Session Member rated it 92");
+    // The reader's own written note travels; the other member's never does.
+    expect(all).toContain("owner-private-nose-observation");
+    expect(all).not.toContain("member-private-nose-observation");
+    // And a peer's shared note is an observation, not folded into "your" record.
+    const peer = captured.find((statement) => statement.text.includes("Session Member"));
+    expect(peer?.evidenceClass).toBe("observed");
+  }, 30_000);
+
   it("keeps notes separate, round-trips structured fields, and compares submitted notes", async () => {
     const { outsider, owner, spaceId } = await sharedSpace();
     const firstWine = await createWine(spaceId, "First Flight Wine");
