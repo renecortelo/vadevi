@@ -978,8 +978,8 @@ describe("Vicenç deterministic read path", () => {
     await env.DB.prepare(
       `INSERT INTO tasting_notes
         (id, space_id, wine_id, author_user_id, mode, state, tasted_at, score_100, comment,
-         acidity, tannin_level, body, finish_length, version, created_at, updated_at)
-        VALUES (?, ?, ?, ?, 'deep', 'submitted', ?, 58, ?, 2, 4, 3, 2, 1, ?, ?)`,
+         nose_text, acidity, tannin_level, body, finish_length, version, created_at, updated_at)
+        VALUES (?, ?, ?, ?, 'deep', 'submitted', ?, 58, ?, ?, 2, 4, 3, 2, 1, ?, ?)`,
     )
       .bind(
         noteId,
@@ -988,6 +988,7 @@ describe("Vicenç deterministic read path", () => {
         owner.data.user.id,
         now,
         "Fresh but a bit thin on the finish.",
+        "Wet stone and citrus zest — very Atlantic.",
         now,
         now,
       )
@@ -1061,6 +1062,9 @@ describe("Vicenç deterministic read path", () => {
     // Readable descriptor label and the food it was had with.
     expect(detail?.text).toContain("aromas you noted: Lemon");
     expect(detail?.text).toContain("you had it with: Grilled sea bass");
+    // The written nose observation — the kind of detail no column holds — reaches
+    // Vicenç too, not only the score and the palate note.
+    expect(detail?.text).toContain("nose note: Wet stone and citrus zest");
   });
 
   it("drops another wine's semantic note when a pairing narrows to one bottle", async () => {
