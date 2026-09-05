@@ -473,6 +473,7 @@ async function searchNotesSemantically(
 type TastingNoteDetailRow = {
   acidity: number | null;
   appearance_text: string | null;
+  author_name: string | null;
   body: number | null;
   comment: string | null;
   conclusion_text: string | null;
@@ -487,6 +488,7 @@ type TastingNoteDetailRow = {
   sweetness: number | null;
   tannin_level: number | null;
   tannin_texture: string | null;
+  is_self: number;
   wine_id: string;
   would_buy: string | null;
   would_drink_again: string | null;
@@ -527,11 +529,14 @@ async function loadNoteDescriptors(
 }
 
 /**
- * The reader's own tasting notes for the wines in hand — score, verdicts, the
- * comment, and the deep-tasting structure (acidity, tannin, body, finish, …).
- * This is what lets Vicenç answer "what did I say about it?" or "why did I score
- * it 58?" from the reader's own words and ratings, not a guess. Only the reader's
- * submitted notes, bounded per wine and overall.
+ * The tasting notes for the wines in hand, across the group.
+ *
+ * Everyone who shares a Space sees each other's SCORES and structured tasting —
+ * the rating, the verdicts, the acidity/tannin/body, the descriptors — so Vicenç
+ * can average them or compare them by person ("you rated it 88, Ana 92"). What
+ * stays private is the free text: each member's own written notes are theirs, so
+ * another member's comment and prose sections never travel. The reader's own note
+ * still carries its full text. One note per member per wine, bounded overall.
  */
 async function loadReaderTastingNotes(
   database: D1Database,
@@ -550,29 +555,36 @@ async function loadReaderTastingNotes(
         note.comment, note.sweetness, note.acidity, note.tannin_level,
         note.tannin_texture, note.body, note.palate_texture, note.finish_length, note.palate_text,
         note.appearance_text, note.nose_text, note.nose_swirled_text, note.conclusion_text,
-        ctx.food_text
+        ctx.food_text, author.display_name AS author_name,
+        CASE WHEN author.firebase_uid = ? THEN 1 ELSE 0 END AS is_self
       FROM tasting_notes note
-      JOIN users actor ON actor.id = note.author_user_id
-      JOIN space_memberships membership ON membership.space_id = note.space_id
-        AND membership.user_id = actor.id
+      JOIN users author ON author.id = note.author_user_id AND author.deleted_at IS NULL
+      JOIN space_memberships author_member ON author_member.space_id = note.space_id
+        AND author_member.user_id = author.id AND author_member.status = 'active'
+      -- The reader must actively belong to the note's Space to see it at all.
+      JOIN space_memberships reader_member ON reader_member.space_id = note.space_id
+        AND reader_member.status = 'active'
+      JOIN users reader ON reader.id = reader_member.user_id
+        AND reader.firebase_uid = ? AND reader.deleted_at IS NULL
       LEFT JOIN tasting_contexts ctx ON ctx.tasting_note_id = note.id
-      WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL AND membership.status = 'active'
-        AND note.wine_id IN (${placeholders}) AND note.state = 'submitted' AND note.deleted_at IS NULL
-      ORDER BY note.tasted_at DESC
-      LIMIT 12`,
+      WHERE note.wine_id IN (${placeholders}) AND note.state = 'submitted' AND note.deleted_at IS NULL
+      ORDER BY (CASE WHEN author.firebase_uid = ? THEN 0 ELSE 1 END), note.tasted_at DESC
+      LIMIT 24`,
     )
-    .bind(principal.firebaseUid, ...wineIds)
+    .bind(principal.firebaseUid, principal.firebaseUid, ...wineIds, principal.firebaseUid)
     .all<TastingNoteDetailRow>();
   // The notes that will become statements, capped to two per wine.
   const kept: TastingNoteDetailRow[] = [];
-  const perWine = new Map<string, number>();
+  const seenWineAuthor = new Set<string>();
   for (const row of rows.results) {
     if (!wineById.has(row.wine_id)) continue;
-    const seen = perWine.get(row.wine_id) ?? 0;
-    if (seen >= 2) continue;
-    perWine.set(row.wine_id, seen + 1);
+    // The most recent note each member wrote for a wine, so several people show
+    // without one prolific taster crowding out the rest.
+    const key = `${row.wine_id}:${row.author_name ?? ""}:${row.is_self}`;
+    if (seenWineAuthor.has(key)) continue;
+    seenWineAuthor.add(key);
     kept.push(row);
-    if (kept.length >= 8) break;
+    if (kept.length >= 12) break;
   }
   const descriptorsByNote = await loadNoteDescriptors(
     database,
@@ -582,10 +594,19 @@ async function loadReaderTastingNotes(
   for (const row of kept) {
     const wine = wineById.get(row.wine_id)!;
     const descriptors = descriptorsByNote.get(row.id);
+    const self = row.is_self === 1;
+    // Who the note belongs to. The reader is "you"; another member is named, so
+    // the model attributes each rating to the right person and never speaks a
+    // peer's rating in the second person.
+    const who = self ? "you" : (row.author_name ?? "a group member");
+    const rated = self ? "you rated it" : `${who} rated it`;
+    // The scores and structured tasting are shared across the group. The written
+    // sections are not: only the reader's own free text is included, so no member
+    // ever reads another's prose.
     const parts = [
-      row.score_100 === null ? null : `you rated it ${row.score_100}`,
-      row.would_buy === null ? null : `would buy: ${row.would_buy}`,
-      row.would_drink_again === null ? null : `would drink again: ${row.would_drink_again}`,
+      row.score_100 === null ? null : `${rated} ${row.score_100}`,
+      row.would_buy === null ? null : `${who} would buy: ${row.would_buy}`,
+      row.would_drink_again === null ? null : `${who} would drink again: ${row.would_drink_again}`,
       row.acidity === null ? null : `acidity ${row.acidity}/5`,
       row.tannin_level === null
         ? null
@@ -596,39 +617,44 @@ async function loadReaderTastingNotes(
       row.palate_texture === null ? null : `palate ${row.palate_texture}`,
       descriptors === undefined || descriptors.nose.length === 0
         ? null
-        : `aromas you noted: ${descriptors.nose.join(", ")}`,
+        : `aromas ${who} noted: ${descriptors.nose.join(", ")}`,
       descriptors === undefined || descriptors.palate.length === 0
         ? null
-        : `flavours you noted: ${descriptors.palate.join(", ")}`,
-      row.appearance_text === null || row.appearance_text.length === 0
+        : `flavours ${who} noted: ${descriptors.palate.join(", ")}`,
+      !self || row.appearance_text === null || row.appearance_text.length === 0
         ? null
         : `appearance note: ${clip(row.appearance_text, 160)}`,
-      row.nose_text === null || row.nose_text.length === 0
+      !self || row.nose_text === null || row.nose_text.length === 0
         ? null
         : `nose note: ${clip(row.nose_text, 160)}`,
-      row.nose_swirled_text === null || row.nose_swirled_text.length === 0
+      !self || row.nose_swirled_text === null || row.nose_swirled_text.length === 0
         ? null
         : `nose after swirling: ${clip(row.nose_swirled_text, 160)}`,
-      row.palate_text === null || row.palate_text.length === 0
+      !self || row.palate_text === null || row.palate_text.length === 0
         ? null
         : `palate note: ${clip(row.palate_text, 160)}`,
-      row.conclusion_text === null || row.conclusion_text.length === 0
+      !self || row.conclusion_text === null || row.conclusion_text.length === 0
         ? null
         : `your conclusion: ${clip(row.conclusion_text, 200)}`,
-      row.food_text === null || row.food_text.length === 0
+      !self || row.food_text === null || row.food_text.length === 0
         ? null
         : `you had it with: ${clip(row.food_text, 120)}`,
-      row.comment === null || row.comment.length === 0
+      !self || row.comment === null || row.comment.length === 0
         ? null
         : `you wrote: ${clip(row.comment, 200)}`,
     ].filter((part): part is string => part !== null);
     if (parts.length === 0) continue;
     statements.push({
-      evidenceClass: "personal",
+      // The reader's own note is personal; a peer's shared scores are an
+      // observation, never the reader's own — so the model does not fold another
+      // member's rating into "your" record.
+      evidenceClass: self ? "personal" : "observed",
       id: `note-detail-${row.id}`,
       sampleSize: 1,
       sourceIds: [],
-      text: `your tasting note on ${wine.displayName}: ${parts.join("; ")}`,
+      text: self
+        ? `your tasting note on ${wine.displayName}: ${parts.join("; ")}`
+        : `${who}'s tasting note on ${wine.displayName}: ${parts.join("; ")}`,
     });
   }
   return statements;
