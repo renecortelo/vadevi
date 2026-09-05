@@ -317,7 +317,9 @@
     "editError": "Não foi possível guardar as alterações. Tente outra vez.",
     "editConflict": "Outra pessoa alterou este vinho enquanto editava. Recarregue e tente outra vez — nada do que escreveu foi enviado.",
     "editPhotoAction": "Adicionar a foto do rótulo",
-    "editPhotoError": "Não foi possível guardar a foto, nada mudou. Os dados guardam-se se a remover."
+    "editPhotoError": "Não foi possível guardar a foto, nada mudou. Os dados guardam-se se a remover.",
+    "removeSavedPhoto": "Remover a foto guardada",
+    "photoWillBeRemoved": "A foto será removida ao guardar."
   },
   "evidence": {
     "openAction": "Evidência",
@@ -703,7 +705,8 @@
       "confirmed": "Confirmado exatamente uma vez",
       "canceled": "Cancelado sem escrever",
       "expired": "Expirado sem escrever"
-    }
+    },
+    "undo": "Anular"
   },
   "sessions": {
     "eyebrow": "Uma mesa partilhada",

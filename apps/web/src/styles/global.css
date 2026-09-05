@@ -1301,6 +1301,8 @@ p {
 .wine-card__image {
   aspect-ratio: 4 / 3;
   background: var(--color-surface-muted);
+  display: block;
+  overflow: hidden;
 }
 
 .wine-card__image img {
@@ -3171,4 +3173,17 @@ p {
   display: block;
   inline-size: 100%;
   object-fit: contain;
+}
+
+/* The card's name and image both open the wine's evidence. The link inherits the
+   heading's own type and colour so the card still reads as a card, not as a page
+   of links; the underline appears only on hover and focus. */
+.wine-card__title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wine-card__title-link:hover,
+.wine-card__title-link:focus-visible {
+  text-decoration: underline;
 }

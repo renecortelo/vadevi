@@ -317,7 +317,9 @@
     "editError": "No s'han pogut desar els canvis. Torna-ho a provar.",
     "editConflict": "Algú altre ha canviat aquest vi mentre editaves. Recarrega i torna-ho a provar — no s'ha enviat res del que has escrit.",
     "editPhotoAction": "Afegeix la foto de l'etiqueta",
-    "editPhotoError": "No s'ha pogut desar la foto, així que no ha canviat res. Les dades es desen si la treus."
+    "editPhotoError": "No s'ha pogut desar la foto, així que no ha canviat res. Les dades es desen si la treus.",
+    "removeSavedPhoto": "Treu la foto desada",
+    "photoWillBeRemoved": "La foto es traurà en desar."
   },
   "evidence": {
     "openAction": "Evidència",
@@ -703,7 +705,8 @@
       "confirmed": "Confirmat exactament una vegada",
       "canceled": "Cancel·lat sense desar",
       "expired": "Caducat sense desar"
-    }
+    },
+    "undo": "Desfés"
   },
   "sessions": {
     "eyebrow": "Una taula compartida",
