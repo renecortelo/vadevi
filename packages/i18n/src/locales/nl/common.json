@@ -317,7 +317,9 @@
     "editError": "De wijzigingen konden niet worden bewaard. Probeer het opnieuw.",
     "editConflict": "Iemand anders heeft deze wijn gewijzigd terwijl jij bezig was. Herlaad en probeer opnieuw — niets van wat je typte is verstuurd.",
     "editPhotoAction": "Voeg de foto van het etiket toe",
-    "editPhotoError": "De foto kon niet worden opgeslagen, er is niets gewijzigd. De gegevens bewaren wel als je hem verwijdert."
+    "editPhotoError": "De foto kon niet worden opgeslagen, er is niets gewijzigd. De gegevens bewaren wel als je hem verwijdert.",
+    "removeSavedPhoto": "Opgeslagen foto verwijderen",
+    "photoWillBeRemoved": "De foto wordt verwijderd bij opslaan."
   },
   "evidence": {
     "openAction": "Bewijs",
@@ -703,7 +705,8 @@
       "confirmed": "Precies één keer bevestigd",
       "canceled": "Geannuleerd zonder te schrijven",
       "expired": "Verlopen zonder te schrijven"
-    }
+    },
+    "undo": "Ongedaan maken"
   },
   "sessions": {
     "eyebrow": "Een gedeelde tafel",

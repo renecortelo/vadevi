@@ -317,7 +317,9 @@
     "editError": "Les modifications n'ont pas pu être enregistrées. Réessayez.",
     "editConflict": "Quelqu'un d'autre a modifié ce vin pendant votre saisie. Rechargez et réessayez — rien de ce que vous avez tapé n'a été envoyé.",
     "editPhotoAction": "Ajouter la photo de l'étiquette",
-    "editPhotoError": "La photo n'a pas pu être enregistrée, rien n'a changé. Les données s'enregistrent si vous la retirez."
+    "editPhotoError": "La photo n'a pas pu être enregistrée, rien n'a changé. Les données s'enregistrent si vous la retirez.",
+    "removeSavedPhoto": "Retirer la photo enregistrée",
+    "photoWillBeRemoved": "La photo sera retirée à l'enregistrement."
   },
   "evidence": {
     "openAction": "Preuves",
@@ -703,7 +705,8 @@
       "confirmed": "Confirmé exactement une fois",
       "canceled": "Annulé sans écriture",
       "expired": "Expiré sans écriture"
-    }
+    },
+    "undo": "Annuler"
   },
   "sessions": {
     "eyebrow": "Une table partagée",

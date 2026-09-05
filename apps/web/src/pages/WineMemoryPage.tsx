@@ -823,7 +823,11 @@ export function WineMemoryPage() {
         <div className="wine-card-grid">
           {wines.map((wine) => (
             <article className="wine-card" key={wine.id}>
-              <div className="wine-card__image">
+              <Link
+                aria-label={t("evidence.openAction")}
+                className="wine-card__image"
+                to={`/wines/${wine.id}/evidence`}
+              >
                 {wine.mediaId === null ? (
                   // No photograph: the wine's own name is more use than a
                   // letter that is identical on every card.
@@ -837,13 +841,19 @@ export function WineMemoryPage() {
                     spaceId={spaceId}
                   />
                 )}
-              </div>
+              </Link>
               <div className="wine-card__body">
                 {(duplicateCounts.get(duplicateKey(wine)) ?? 0) > 1 ? (
                   <span className="warning-chip">{t("memory.possibleDuplicate")}</span>
                 ) : null}
                 <p className="wine-card__producer">{wine.producerName}</p>
-                <h2>{wine.displayName}</h2>
+                {/* The name is the card's obvious click target: it opens the
+                    wine's evidence, so reaching it takes no hunting for a link. */}
+                <h2>
+                  <Link className="wine-card__title-link" to={`/wines/${wine.id}/evidence`}>
+                    {wine.displayName}
+                  </Link>
+                </h2>
                 <p>
                   {wine.nonVintage ? t("quickLog.nonVintageShort") : (wine.vintageYear ?? "—")}
                   {wine.region === null ? "" : ` · ${wine.region}`}

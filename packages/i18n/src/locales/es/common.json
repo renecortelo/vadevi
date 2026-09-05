@@ -317,7 +317,9 @@
     "editError": "No se pudieron guardar los cambios. Inténtalo otra vez.",
     "editConflict": "Alguien más cambió este vino mientras editabas. Recarga e inténtalo de nuevo — no se envió nada de lo que escribiste.",
     "editPhotoAction": "Añadir la foto de la etiqueta",
-    "editPhotoError": "No se pudo guardar la foto, así que nada cambió. Los datos sí se guardan si la quitas."
+    "editPhotoError": "No se pudo guardar la foto, así que nada cambió. Los datos sí se guardan si la quitas.",
+    "removeSavedPhoto": "Quitar la foto guardada",
+    "photoWillBeRemoved": "La foto se quitará al guardar."
   },
   "evidence": {
     "openAction": "Evidencia",
@@ -703,7 +705,8 @@
       "confirmed": "Confirmado exactamente una vez",
       "canceled": "Cancelado sin guardar",
       "expired": "Caducado sin guardar"
-    }
+    },
+    "undo": "Deshacer"
   },
   "sessions": {
     "eyebrow": "Una mesa compartida",

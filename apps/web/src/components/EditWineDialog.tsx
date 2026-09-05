@@ -60,6 +60,9 @@ export function EditWineDialog({
   // leaves nothing uploaded and nothing to clean up.
   const [photo, setPhoto] = useState<Awaited<ReturnType<typeof preprocessImage>> | null>(null);
   const [photoBusy, setPhotoBusy] = useState(false);
+  // The photo already on the wine can be taken off — until now only a freshly
+  // picked one could be discarded, so a wrong photo was stuck there for good.
+  const [removeSavedPhoto, setRemoveSavedPhoto] = useState(false);
   const [photoError, setPhotoError] = useState(false);
   const preview = useMemo(() => (photo === null ? null : URL.createObjectURL(photo.blob)), [photo]);
   useEffect(
@@ -92,7 +95,9 @@ export function EditWineDialog({
     try {
       // The photograph is reserved and uploaded first, so the wine is only
       // pointed at media that already exists.
-      let mediaId: string | undefined;
+      // undefined leaves the photo alone; null detaches it; an id points at a new
+      // one. The update contract treats a given null as "clear it".
+      let mediaId: string | null | undefined = removeSavedPhoto ? null : undefined;
       if (photo !== null) {
         try {
           mediaId = await storePhoto();
@@ -132,7 +137,7 @@ export function EditWineDialog({
     return uploadMedia(user, reservation.data.uploadPath, photo.blob);
   }
 
-  async function saveFields(mediaId: string | undefined) {
+  async function saveFields(mediaId: string | null | undefined) {
     if (user === null) return;
     const alcoholParsed = parseDecimalInput(alcoholAbv);
     const grapePayload = grapes
@@ -269,6 +274,26 @@ export function EditWineDialog({
             type="file"
           />
         </label>
+        {wine.mediaId === null || photo !== null ? null : removeSavedPhoto ? (
+          <p className="cache-note" role="status">
+            {t("memory.photoWillBeRemoved")}{" "}
+            <button
+              className="text-button"
+              onClick={() => setRemoveSavedPhoto(false)}
+              type="button"
+            >
+              {t("actions.undo")}
+            </button>
+          </p>
+        ) : (
+          <button
+            className="text-button text-button--danger"
+            onClick={() => setRemoveSavedPhoto(true)}
+            type="button"
+          >
+            {t("memory.removeSavedPhoto")}
+          </button>
+        )}
         {preview === null ? null : (
           <div className="photo-preview">
             <img alt={t("quickLog.photoPreviewAlt")} src={preview} />

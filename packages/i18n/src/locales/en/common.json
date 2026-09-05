@@ -317,7 +317,9 @@
     "editError": "The changes could not be saved. Try again.",
     "editConflict": "Someone else changed this wine while you were editing. Reload and try again — nothing you typed was sent.",
     "editPhotoAction": "Add the label photograph",
-    "editPhotoError": "The photograph could not be stored, so nothing changed. The details will save if you remove it."
+    "editPhotoError": "The photograph could not be stored, so nothing changed. The details will save if you remove it.",
+    "removeSavedPhoto": "Remove the saved photo",
+    "photoWillBeRemoved": "The photo will be removed when you save."
   },
   "evidence": {
     "openAction": "Evidence",
@@ -703,7 +705,8 @@
       "confirmed": "Confirmed exactly once",
       "canceled": "Canceled without writing",
       "expired": "Expired without writing"
-    }
+    },
+    "undo": "Undo"
   },
   "sessions": {
     "eyebrow": "A shared table",

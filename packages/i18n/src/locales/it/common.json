@@ -317,7 +317,9 @@
     "editError": "Non è stato possibile salvare le modifiche. Riprova.",
     "editConflict": "Qualcun altro ha modificato questo vino mentre lo modificavi. Ricarica e riprova — nulla di ciò che hai scritto è stato inviato.",
     "editPhotoAction": "Aggiungi la foto dell'etichetta",
-    "editPhotoError": "Non è stato possibile salvare la foto, non è cambiato nulla. I dati si salvano se la togli."
+    "editPhotoError": "Non è stato possibile salvare la foto, non è cambiato nulla. I dati si salvano se la togli.",
+    "removeSavedPhoto": "Rimuovi la foto salvata",
+    "photoWillBeRemoved": "La foto verrà rimossa al salvataggio."
   },
   "evidence": {
     "openAction": "Evidenze",
@@ -703,7 +705,8 @@
       "confirmed": "Confermato esattamente una volta",
       "canceled": "Annullato senza scrivere",
       "expired": "Scaduto senza scrivere"
-    }
+    },
+    "undo": "Annulla"
   },
   "sessions": {
     "eyebrow": "Un tavolo condiviso",
