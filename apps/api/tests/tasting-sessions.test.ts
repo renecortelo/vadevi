@@ -119,7 +119,9 @@ async function createDeepNote(
       appearanceIntensity: 4,
       appearanceText: `${score100} appearance`,
       balance: 4,
+      beadSize: "fine",
       body: 4,
+      effervescence: 4,
       complexity: 4,
       conclusionText: `${score100} conclusion`,
       context: {
@@ -153,6 +155,8 @@ async function createDeepNote(
       noseFreshness: 4,
       noseIntensity: 4,
       noseText: `${score100} nose`,
+      noseSwirledIntensity: 5,
+      noseSwirledText: `${score100} swirled`,
       pairingSuccess: 4,
       palateText: `${score100} palate`,
       palateTexture: "round",
@@ -294,7 +298,13 @@ describe("Deep tasting and collaborative sessions", () => {
       { headers: { Authorization: `Bearer ${ownerToken}` } },
     );
     expect(ownerRead.status).toBe(200);
-    expect(DeepTastingResponseSchema.parse(await ownerRead.json()).data.id).toBe(ownerNote.id);
+    const readBack = DeepTastingResponseSchema.parse(await ownerRead.json()).data;
+    expect(readBack.id).toBe(ownerNote.id);
+    // The bead and the second nose phase round-trip through storage.
+    expect(readBack.beadSize).toBe("fine");
+    expect(readBack.effervescence).toBe(4);
+    expect(readBack.noseSwirledIntensity).toBe(5);
+    expect(readBack.noseSwirledText).toBe(`${90} swirled`);
     const hiddenRead = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${ownerNote.id}`,
       { headers: { Authorization: `Bearer ${memberToken}` } },

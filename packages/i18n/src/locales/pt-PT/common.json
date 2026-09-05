@@ -843,7 +843,10 @@
       "confidence": "Confiança na prova",
       "expectation": "Esperado e real",
       "memorable": "Este vinho pareceu-me memorável",
-      "conclusionText": "Conclusão pessoal"
+      "conclusionText": "Conclusão pessoal",
+      "noseSwirledText": "Aromas depois de agitar",
+      "effervescence": "Bolha",
+      "beadSize": "Tamanho da bolha"
     },
     "value": {
       "clear": "Límpido",
@@ -884,7 +887,10 @@
       "outdoors": "Exterior",
       "below": "Abaixo das expectativas",
       "met": "Correspondeu às expectativas",
-      "above": "Acima das expectativas"
+      "above": "Acima das expectativas",
+      "bead_fine": "Fina",
+      "bead_medium": "Média",
+      "bead_coarse": "Grossa"
     },
     "hueOption": {
       "straw": "Palha",
@@ -915,7 +921,11 @@
     "conflictBody": "As duas versões foram preservadas. Escolha o formulário local ou a nota atual do servidor.",
     "keepLocal": "Usar a minha versão local",
     "noConclusion": "Esta versão não tem texto de conclusão.",
-    "savedNotice": "Prova guardada."
+    "savedNotice": "Prova guardada.",
+    "nosePhase": {
+      "still": "Acabado de servir",
+      "swirled": "Depois de agitar"
+    }
   },
   "dataRights": {
     "navAction": "Dados e privacidade",

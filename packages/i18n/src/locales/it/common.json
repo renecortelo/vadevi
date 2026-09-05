@@ -843,7 +843,10 @@
       "confidence": "Sicurezza nella degustazione",
       "expectation": "Atteso e reale",
       "memorable": "Questo vino mi è sembrato memorabile",
-      "conclusionText": "Conclusione personale"
+      "conclusionText": "Conclusione personale",
+      "noseSwirledText": "Aromi dopo aver roteato",
+      "effervescence": "Bollicine",
+      "beadSize": "Dimensione delle bollicine"
     },
     "value": {
       "clear": "Limpido",
@@ -884,7 +887,10 @@
       "outdoors": "All'aperto",
       "below": "Sotto le aspettative",
       "met": "Ha soddisfatto le aspettative",
-      "above": "Sopra le aspettative"
+      "above": "Sopra le aspettative",
+      "bead_fine": "Fine",
+      "bead_medium": "Media",
+      "bead_coarse": "Grossa"
     },
     "hueOption": {
       "straw": "Paglierino",
@@ -915,7 +921,11 @@
     "conflictBody": "Entrambe le versioni sono conservate. Scegli il modulo locale o la nota corrente del server.",
     "keepLocal": "Usa la mia versione locale",
     "noConclusion": "Questa versione non contiene una conclusione.",
-    "savedNotice": "Degustazione salvata."
+    "savedNotice": "Degustazione salvata.",
+    "nosePhase": {
+      "still": "Appena versato",
+      "swirled": "Dopo aver roteato"
+    }
   },
   "dataRights": {
     "navAction": "Dati e privacy",
