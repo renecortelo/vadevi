@@ -843,7 +843,10 @@
       "confidence": "Confiance de dégustation",
       "expectation": "Attendu et réel",
       "memorable": "Ce vin m'a semblé mémorable",
-      "conclusionText": "Conclusion personnelle"
+      "conclusionText": "Conclusion personnelle",
+      "noseSwirledText": "Arômes après aération",
+      "effervescence": "Bulles",
+      "beadSize": "Taille des bulles"
     },
     "value": {
       "clear": "Limpide",
@@ -884,7 +887,10 @@
       "outdoors": "Extérieur",
       "below": "Sous les attentes",
       "met": "Conforme aux attentes",
-      "above": "Au-dessus des attentes"
+      "above": "Au-dessus des attentes",
+      "bead_fine": "Fine",
+      "bead_medium": "Moyenne",
+      "bead_coarse": "Grossière"
     },
     "hueOption": {
       "straw": "Paille",
@@ -915,7 +921,11 @@
     "conflictBody": "Les deux versions sont conservées. Choisissez le formulaire local ou la note actuelle du serveur.",
     "keepLocal": "Utiliser ma version locale",
     "noConclusion": "Cette version ne contient aucune conclusion.",
-    "savedNotice": "Dégustation enregistrée."
+    "savedNotice": "Dégustation enregistrée.",
+    "nosePhase": {
+      "still": "Au service",
+      "swirled": "Après aération"
+    }
   },
   "dataRights": {
     "navAction": "Données et confidentialité",

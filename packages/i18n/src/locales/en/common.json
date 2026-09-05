@@ -843,7 +843,10 @@
       "confidence": "Tasting confidence",
       "expectation": "Expected versus actual",
       "memorable": "This wine felt memorable",
-      "conclusionText": "Personal conclusion"
+      "conclusionText": "Personal conclusion",
+      "noseSwirledText": "Aromas after swirling",
+      "effervescence": "Bubbles",
+      "beadSize": "Bead size"
     },
     "value": {
       "clear": "Clear",
@@ -884,7 +887,10 @@
       "outdoors": "Outdoors",
       "below": "Below expectations",
       "met": "Met expectations",
-      "above": "Above expectations"
+      "above": "Above expectations",
+      "bead_fine": "Fine",
+      "bead_medium": "Medium",
+      "bead_coarse": "Coarse"
     },
     "hueOption": {
       "straw": "Straw",
@@ -915,7 +921,11 @@
     "conflictBody": "Both versions are preserved. Choose the local form or the current server note.",
     "keepLocal": "Use my local version",
     "noConclusion": "No conclusion text in this version.",
-    "savedNotice": "Tasting saved."
+    "savedNotice": "Tasting saved.",
+    "nosePhase": {
+      "still": "As poured",
+      "swirled": "After swirling"
+    }
   },
   "dataRights": {
     "navAction": "Data and privacy",

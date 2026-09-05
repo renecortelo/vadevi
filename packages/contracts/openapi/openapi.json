@@ -5473,6 +5473,14 @@
                 "minimum": 1,
                 "maximum": 5
               },
+              "beadSize": {
+                "type": "string",
+                "enum": [
+                  "fine",
+                  "medium",
+                  "coarse"
+                ]
+              },
               "body": {
                 "type": "integer",
                 "minimum": 1,
@@ -5621,6 +5629,11 @@
                 "maxItems": 60,
                 "default": []
               },
+              "effervescence": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
               "expectationResult": {
                 "type": "string",
                 "enum": [
@@ -5672,6 +5685,15 @@
                 "maximum": 5
               },
               "noseText": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "noseSwirledIntensity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "noseSwirledText": {
                 "type": "string",
                 "maxLength": 2000
               },
@@ -5964,6 +5986,14 @@
             "minimum": 1,
             "maximum": 5
           },
+          "beadSize": {
+            "type": "string",
+            "enum": [
+              "fine",
+              "medium",
+              "coarse"
+            ]
+          },
           "body": {
             "type": "integer",
             "minimum": 1,
@@ -6115,6 +6145,11 @@
             "maxItems": 60,
             "default": []
           },
+          "effervescence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
           "expectationResult": {
             "type": "string",
             "enum": [
@@ -6166,6 +6201,15 @@
             "maximum": 5
           },
           "noseText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "noseSwirledIntensity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "noseSwirledText": {
             "type": "string",
             "maxLength": 2000
           },
@@ -8564,6 +8608,14 @@
             "minimum": 1,
             "maximum": 5
           },
+          "beadSize": {
+            "type": "string",
+            "enum": [
+              "fine",
+              "medium",
+              "coarse"
+            ]
+          },
           "body": {
             "type": "integer",
             "minimum": 1,
@@ -8577,6 +8629,11 @@
           "conclusionText": {
             "type": "string",
             "maxLength": 2000
+          },
+          "effervescence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
           },
           "expectationResult": {
             "type": "string",
@@ -8623,6 +8680,15 @@
             "maximum": 5
           },
           "noseText": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "noseSwirledIntensity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "noseSwirledText": {
             "type": "string",
             "maxLength": 2000
           },

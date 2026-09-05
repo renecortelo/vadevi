@@ -843,7 +843,10 @@
       "confidence": "Proefzekerheid",
       "expectation": "Verwachting tegenover werkelijkheid",
       "memorable": "Deze wijn voelde gedenkwaardig",
-      "conclusionText": "Persoonlijke conclusie"
+      "conclusionText": "Persoonlijke conclusie",
+      "noseSwirledText": "Aroma's na walsen",
+      "effervescence": "Belletjes",
+      "beadSize": "Belgrootte"
     },
     "value": {
       "clear": "Helder",
@@ -884,7 +887,10 @@
       "outdoors": "Buiten",
       "below": "Onder verwachting",
       "met": "Volgens verwachting",
-      "above": "Boven verwachting"
+      "above": "Boven verwachting",
+      "bead_fine": "Fijn",
+      "bead_medium": "Middel",
+      "bead_coarse": "Grof"
     },
     "hueOption": {
       "straw": "Strogeel",
@@ -915,7 +921,11 @@
     "conflictBody": "Beide versies zijn bewaard. Kies het lokale formulier of de huidige servernotitie.",
     "keepLocal": "Mijn lokale versie gebruiken",
     "noConclusion": "Deze versie bevat geen conclusietekst.",
-    "savedNotice": "Proefnotitie opgeslagen."
+    "savedNotice": "Proefnotitie opgeslagen.",
+    "nosePhase": {
+      "still": "Net ingeschonken",
+      "swirled": "Na walsen"
+    }
   },
   "dataRights": {
     "navAction": "Gegevens en privacy",

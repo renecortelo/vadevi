@@ -843,7 +843,10 @@
       "confidence": "Verkostungssicherheit",
       "expectation": "Erwartung und Realität",
       "memorable": "Dieser Wein war für mich einprägsam",
-      "conclusionText": "Persönliches Fazit"
+      "conclusionText": "Persönliches Fazit",
+      "noseSwirledText": "Aromen nach dem Schwenken",
+      "effervescence": "Perlage",
+      "beadSize": "Perlagegröße"
     },
     "value": {
       "clear": "Klar",
@@ -884,7 +887,10 @@
       "outdoors": "Draußen",
       "below": "Unter den Erwartungen",
       "met": "Erwartungen erfüllt",
-      "above": "Über den Erwartungen"
+      "above": "Über den Erwartungen",
+      "bead_fine": "Fein",
+      "bead_medium": "Mittel",
+      "bead_coarse": "Grob"
     },
     "hueOption": {
       "straw": "Strohgelb",
@@ -915,7 +921,11 @@
     "conflictBody": "Beide Versionen sind erhalten. Wählen Sie das lokale Formular oder die aktuelle Servernotiz.",
     "keepLocal": "Meine lokale Version verwenden",
     "noConclusion": "Diese Version enthält keinen Fazittext.",
-    "savedNotice": "Verkostung gespeichert."
+    "savedNotice": "Verkostung gespeichert.",
+    "nosePhase": {
+      "still": "Frisch eingeschenkt",
+      "swirled": "Nach dem Schwenken"
+    }
   },
   "dataRights": {
     "navAction": "Daten und Datenschutz",

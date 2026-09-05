@@ -843,7 +843,10 @@
       "confidence": "Confianza en la cata",
       "expectation": "Esperado frente a real",
       "memorable": "Este vino me ha parecido memorable",
-      "conclusionText": "Conclusión personal"
+      "conclusionText": "Conclusión personal",
+      "noseSwirledText": "Aromas tras remover",
+      "effervescence": "Burbuja",
+      "beadSize": "Tamaño de burbuja"
     },
     "value": {
       "clear": "Limpio",
@@ -884,7 +887,10 @@
       "outdoors": "Exterior",
       "below": "Por debajo de lo esperado",
       "met": "Cumplió las expectativas",
-      "above": "Por encima de lo esperado"
+      "above": "Por encima de lo esperado",
+      "bead_fine": "Fina",
+      "bead_medium": "Media",
+      "bead_coarse": "Gruesa"
     },
     "hueOption": {
       "straw": "Pajizo",
@@ -915,7 +921,11 @@
     "conflictBody": "Se han conservado ambas versiones. Elige el formulario local o la nota actual del servidor.",
     "keepLocal": "Usar mi versión local",
     "noConclusion": "Esta versión no tiene texto de conclusión.",
-    "savedNotice": "Cata guardada."
+    "savedNotice": "Cata guardada.",
+    "nosePhase": {
+      "still": "Recién servido",
+      "swirled": "Tras remover"
+    }
   },
   "dataRights": {
     "navAction": "Datos y privacidad",

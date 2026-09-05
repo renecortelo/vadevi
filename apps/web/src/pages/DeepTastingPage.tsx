@@ -542,6 +542,10 @@ export function DeepTastingPage() {
             <option value="possible_fault">{t("tasting.value.possible_fault")}</option>
           </select>
         </label>
+        {/* A nose changes between the pour and the swirl, so it is read twice —
+            first as poured, then after swirling. The descriptors are shared; what
+            changes is how it opens up, caught by each phase's intensity and note. */}
+        <h3 className="tasting-subhead">{t("tasting.nosePhase.still")}</h3>
         <div className="form-grid form-grid--three">
           <ScaleField
             label={t("tasting.field.intensity")}
@@ -559,12 +563,6 @@ export function DeepTastingPage() {
             value={draft.payload.noseDevelopment}
           />
         </div>
-        <DescriptorPicker
-          descriptors={phaseDescriptors("nose")}
-          locale={locale}
-          onChange={(value) => updateDescriptors("nose", value)}
-          phase="nose"
-        />
         <label>
           <span>{t("tasting.field.noseText")}</span>
           <textarea
@@ -573,12 +571,68 @@ export function DeepTastingPage() {
             value={draft.payload.noseText ?? ""}
           />
         </label>
+        <h3 className="tasting-subhead">{t("tasting.nosePhase.swirled")}</h3>
+        <div className="form-grid">
+          <ScaleField
+            label={t("tasting.field.intensity")}
+            onChange={(value) => update("noseSwirledIntensity", value)}
+            value={draft.payload.noseSwirledIntensity}
+          />
+        </div>
+        <label>
+          <span>{t("tasting.field.noseSwirledText")}</span>
+          <textarea
+            maxLength={2000}
+            onChange={(event) => update("noseSwirledText", event.target.value || undefined)}
+            value={draft.payload.noseSwirledText ?? ""}
+          />
+        </label>
+        <DescriptorPicker
+          descriptors={phaseDescriptors("nose")}
+          locale={locale}
+          onChange={(value) => updateDescriptors("nose", value)}
+          phase="nose"
+        />
       </fieldset>
     ),
     palate: (
       <fieldset className="form-section tasting-section">
         <legend>{t("tasting.step.palate")}</legend>
         <p className="section-help">{t("tasting.help.palate")}</p>
+        {/* The bead is a sparkling wine's own dimension — how lively, how fine —
+            so it is asked only there and never clutters a still wine. */}
+        {wineType === "sparkling" ? (
+          <>
+            <h3 className="tasting-subhead">{t("tasting.field.effervescence")}</h3>
+            <div className="form-grid">
+              <ScaleField
+                label={t("tasting.field.effervescence")}
+                onChange={(value) => update("effervescence", value)}
+                value={draft.payload.effervescence}
+              />
+              <label>
+                <span>{t("tasting.field.beadSize")}</span>
+                <select
+                  onChange={(event) =>
+                    update(
+                      "beadSize",
+                      (event.target.value || undefined) as
+                        DeepTastingRequest["beadSize"] | undefined,
+                    )
+                  }
+                  value={draft.payload.beadSize ?? ""}
+                >
+                  <option value="">{t("tasting.notSet")}</option>
+                  {(["fine", "medium", "coarse"] as const).map((value) => (
+                    <option key={value} value={value}>
+                      {t(`tasting.value.bead_${value}`)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+          </>
+        ) : null}
         <div className="scale-grid">
           {(
             [

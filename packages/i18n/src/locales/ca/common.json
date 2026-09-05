@@ -843,7 +843,10 @@
       "confidence": "Confiança en el tast",
       "expectation": "Esperat i real",
       "memorable": "Aquest vi m'ha semblat memorable",
-      "conclusionText": "Conclusió personal"
+      "conclusionText": "Conclusió personal",
+      "noseSwirledText": "Aromes després de remoure",
+      "effervescence": "Bombolla",
+      "beadSize": "Mida de la bombolla"
     },
     "value": {
       "clear": "Net",
@@ -884,7 +887,10 @@
       "outdoors": "Exterior",
       "below": "Per sota de les expectatives",
       "met": "Ha complert les expectatives",
-      "above": "Per sobre de les expectatives"
+      "above": "Per sobre de les expectatives",
+      "bead_fine": "Fina",
+      "bead_medium": "Mitjana",
+      "bead_coarse": "Grossa"
     },
     "hueOption": {
       "straw": "Palla",
@@ -915,7 +921,11 @@
     "conflictBody": "Les dues versions s'han conservat. Tria el formulari local o la nota actual del servidor.",
     "keepLocal": "Utilitza la meva versió local",
     "noConclusion": "Aquesta versió no té text de conclusió.",
-    "savedNotice": "Tast desat."
+    "savedNotice": "Tast desat.",
+    "nosePhase": {
+      "still": "Acabat de servir",
+      "swirled": "Després de remoure"
+    }
   },
   "dataRights": {
     "navAction": "Dades i privadesa",

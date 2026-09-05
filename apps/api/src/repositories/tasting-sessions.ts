@@ -57,10 +57,14 @@ type DeepRow = {
   flavor_intensity: number | null;
   id: string;
   memorable: number | null;
+  bead_size: "coarse" | "fine" | "medium" | null;
+  effervescence: number | null;
   nose_condition: "clean" | "possible_fault" | null;
   nose_development: number | null;
   nose_freshness: number | null;
   nose_intensity: number | null;
+  nose_swirled_intensity: number | null;
+  nose_swirled_text: string | null;
   nose_text: string | null;
   pairing_success: number | null;
   palate_text: string | null;
@@ -697,6 +701,10 @@ async function getDeepNote(
     noseDevelopment: row.nose_development ?? undefined,
     noseFreshness: row.nose_freshness ?? undefined,
     noseIntensity: row.nose_intensity ?? undefined,
+    beadSize: row.bead_size ?? undefined,
+    effervescence: row.effervescence ?? undefined,
+    noseSwirledIntensity: row.nose_swirled_intensity ?? undefined,
+    noseSwirledText: row.nose_swirled_text ?? undefined,
     noseText: row.nose_text ?? undefined,
     ontologyVersion: "2026.1",
     pairingSuccess: row.pairing_success ?? undefined,
@@ -766,6 +774,10 @@ function deepValues(request: DeepTastingRequest | UpdateDeepTastingRequest) {
     request.finishLength ?? null,
     request.balance ?? null,
     request.complexity ?? null,
+    request.beadSize ?? null,
+    request.effervescence ?? null,
+    request.noseSwirledIntensity ?? null,
+    request.noseSwirledText ?? null,
   ] as const;
 }
 
@@ -839,10 +851,11 @@ export async function createDeepTastingNote(
           conclusion_text, appearance_clarity, appearance_color_family, appearance_hue,
           appearance_intensity, rim_evolution, viscosity, nose_condition, nose_intensity,
           nose_freshness, nose_development, sweetness, acidity, tannin_level, tannin_texture,
-          alcohol_perception, body, flavor_intensity, palate_texture, finish_length, balance, complexity
+          alcohol_perception, body, flavor_intensity, palate_texture, finish_length, balance, complexity,
+          bead_size, effervescence, nose_swirled_intensity, nose_swirled_text
         )
         SELECT ?, ?, ?, ?, actor.id, 'deep', ?, ?, ?, ?, ?, ?, ?, NULL,
-          1, ?, ?, NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+          1, ?, ?, NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
         FROM users actor JOIN idempotency_keys command ON command.user_id = actor.id
         WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
           AND command.route_scope = ? AND command.key_hash = ?
@@ -1013,6 +1026,9 @@ export async function updateDeepTastingNote(
           body = COALESCE(?, body), flavor_intensity = COALESCE(?, flavor_intensity),
           palate_texture = COALESCE(?, palate_texture), finish_length = COALESCE(?, finish_length),
           balance = COALESCE(?, balance), complexity = COALESCE(?, complexity),
+          bead_size = COALESCE(?, bead_size), effervescence = COALESCE(?, effervescence),
+          nose_swirled_intensity = COALESCE(?, nose_swirled_intensity),
+          nose_swirled_text = COALESCE(?, nose_swirled_text),
           tasted_at = COALESCE(?, tasted_at), version = version + 1, updated_at = ?
         WHERE id = ? AND space_id = ? AND mode = 'deep' AND deleted_at IS NULL
           AND version = ? AND author_user_id = (
