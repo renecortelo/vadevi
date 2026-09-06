@@ -9,6 +9,6 @@ describe("localized catalog loading", () => {
     await changeLanguage("es");
 
     expect(i18n.language).toBe("es");
-    expect(i18n.t("sessions.title")).toBe("Sesiones de cata");
+    expect(i18n.t("sessions.title")).toBe("Eventos de cata");
   });
 });

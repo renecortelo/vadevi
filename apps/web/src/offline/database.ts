@@ -24,6 +24,8 @@ export type LocalMedia = {
 };
 
 export type QuickLogDraft = {
+  /** The event this wine belongs to, when the reader picked one. */
+  eventSessionId?: string;
   id: string;
   includeNote: boolean;
   noteId: string;
