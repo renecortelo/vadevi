@@ -57,7 +57,7 @@
     "tsx": "*",
     "typescript": "6.0.3",
     "typescript-eslint": "*",
-    "wrangler": "*",
+    "wrangler": "^4.123.0",
     "zod": "*",
     "zxing-wasm": "^3.1.3"
   }

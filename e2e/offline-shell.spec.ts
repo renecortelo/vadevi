@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures/server";
 
 /**
  * AC-050: the app is installable and loads its shell offline after one

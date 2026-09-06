@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures/server";
 import { writeBarcode } from "zxing-wasm/writer";
 
 import { completeOnboarding, signIn } from "./fixtures/sign-in";

@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures/server";
 
 /**
  * §14.1 requires responsive layouts from 320 CSS px upward. This project runs

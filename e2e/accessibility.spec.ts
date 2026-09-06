@@ -1,5 +1,5 @@
 import AxeBuilder from "@axe-core/playwright";
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures/server";
 
 /**
  * §18.3 accessibility QA. A serious or critical violation is a release blocker,

@@ -1,5 +1,5 @@
 import type { Page } from "@playwright/test";
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures/server";
 import { deflateSync } from "node:zlib";
 
 import { completeOnboarding, signIn } from "./fixtures/sign-in";
