@@ -144,24 +144,25 @@ binding resolves. It all takes effect on your next real deploy (step 1).
 
 ### Venue lookup is a new switch, and it is still off
 
-`PLACES_PROVIDER` is not set, so the place field on a tasting is still four text
-boxes you fill in by hand. Setting it to `openstreetmap` turns it into a search:
+`PLACES_PROVIDER` is now set to `openstreetmap` in `wrangler.preview.jsonc`, so
+it takes effect on your next deploy. It turns the place field on a tasting from
+four text boxes into a search:
 you type the bar, pick it from a list, and its name, city, area, country **and
 coordinates** arrive together — so two visits to the same place are the same
 place, and a tasting can be put on a map. There is a second button, **"Estoy
 aquí"**, for the places no map knows.
 
 It needs no key. It reuses the `EXTERNAL_API_USER_AGENT` you already have, which
-is what OpenStreetMap's usage policy requires, and `validate-env` refuses to
-start without it. Add `"PLACES_PROVIDER": "openstreetmap"` to the `vars` in
-`wrangler.preview.jsonc` and redeploy.
+is what OpenStreetMap's usage policy requires — checked, it is valid — and a
+`wrangler deploy --dry-run` confirms the variable resolves.
 
-**Decide this one before you turn it on:** a venue search sends what you typed,
-and **"Estoy aquí" sends your position** — read only on that press, after the
+**This one is still yours to confirm, and you can undo it in one line:** a venue
+search sends what you typed, and **"Estoy aquí" sends your position** — read only on that press, after the
 browser's own permission prompt, never watched, and never stored. Only the place
 you pick is saved, on that tasting. Read `docs/privacy-review-places.md`. If you
-would rather not send a position at all, leave `PLACES_PROVIDER` unset; the hand
--typed fields keep working exactly as they do today.
+would rather not send a position at all, delete the `PLACES_PROVIDER` line from
+`wrangler.preview.jsonc` before deploying; the hand-typed fields keep working
+exactly as they do today.
 
 Then test, after deploying: photograph a label and see it read fields (OCR), ask
 Vicenç something (text model), and open a wine → **Evidence** → **Research this wine**
@@ -169,11 +170,12 @@ Vicenç something (text model), and open a wine → **Evidence** → **Research 
 the usage counters on **Data and privacy**; every call is metered and capped per
 member and per deployment.
 
-## 3b. What is new since your last round, and worth ten minutes each
+## 3b. What is new since your last round
 
-None of this is in the 49-item acceptance script — it did not exist when that was
-written. It is all covered by automated tests; what those cannot tell you is
-whether it is any good to use.
+All of it is now **section H of `docs/manual-acceptance.md`**, steps 50-70, about
+twenty minutes. It is covered by automated tests; what those cannot tell you is
+whether it is any good to use. Steps 66-70 need **two accounts** in one shared
+Space, so line that up before you start.
 
 - **Vermouths**, red and white, in the type list, with their own tasting fields.
 - **Tasting fields that follow the wine**: tannin only where there is tannin, the
