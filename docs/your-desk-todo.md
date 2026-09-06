@@ -8,11 +8,19 @@ that is yours to make and not mine.
 
 ## 1. Deploy the latest `main` (5 min)
 
-The latest migration is now `0015` (`0015_note_embeddings.sql`, the table behind
-Vicenç's semantic note search). If you have not applied it since it landed, run
-the migration step below **before** the deploy — migrations are forward-only, so
-they go on before the Worker, never after. Everything else merged since is code,
-so once the database is current a build and a deploy are all this takes.
+The latest migration is now `0019`. Four are outstanding if your last apply was
+`0015`:
+
+| Migration                                  | What it adds                                       |
+| ------------------------------------------ | -------------------------------------------------- |
+| `0016_wine_type_free_text.sql`             | wine type as a free-text column (vermouths)        |
+| `0017_tasting_bubbles_and_nose_phases.sql` | bead and effervescence, nose read twice            |
+| `0018_tasting_venue.sql`                   | where a wine was tasted: name, city, area, country |
+| `0019_tasting_venue_coordinates.sql`       | that venue's point on the map                      |
+
+Run the migration step below **before** the deploy — migrations are forward-only,
+so they go on before the Worker, never after. Everything else merged since is
+code, so once the database is current a build and a deploy are all this takes.
 Rebuilding the web bundle is not optional: every UI change lives in it, and
 deploying only the Worker would ship none of them.
 
@@ -134,11 +142,54 @@ binding resolves. It all takes effect on your next real deploy (step 1).
    Read `docs/privacy-review-websearch.md`; store the key with
    `wrangler secret put WEBSEARCH_API_KEY`, set `WEBSEARCH_PROVIDER`, and redeploy.
 
+### Venue lookup is a new switch, and it is still off
+
+`PLACES_PROVIDER` is not set, so the place field on a tasting is still four text
+boxes you fill in by hand. Setting it to `openstreetmap` turns it into a search:
+you type the bar, pick it from a list, and its name, city, area, country **and
+coordinates** arrive together — so two visits to the same place are the same
+place, and a tasting can be put on a map. There is a second button, **"Estoy
+aquí"**, for the places no map knows.
+
+It needs no key. It reuses the `EXTERNAL_API_USER_AGENT` you already have, which
+is what OpenStreetMap's usage policy requires, and `validate-env` refuses to
+start without it. Add `"PLACES_PROVIDER": "openstreetmap"` to the `vars` in
+`wrangler.preview.jsonc` and redeploy.
+
+**Decide this one before you turn it on:** a venue search sends what you typed,
+and **"Estoy aquí" sends your position** — read only on that press, after the
+browser's own permission prompt, never watched, and never stored. Only the place
+you pick is saved, on that tasting. Read `docs/privacy-review-places.md`. If you
+would rather not send a position at all, leave `PLACES_PROVIDER` unset; the hand
+-typed fields keep working exactly as they do today.
+
 Then test, after deploying: photograph a label and see it read fields (OCR), ask
 Vicenç something (text model), and open a wine → **Evidence** → **Research this wine**
 — proposed facts appear with their sources, and you accept the ones you want. Watch
 the usage counters on **Data and privacy**; every call is metered and capped per
 member and per deployment.
+
+## 3b. What is new since your last round, and worth ten minutes each
+
+None of this is in the 49-item acceptance script — it did not exist when that was
+written. It is all covered by automated tests; what those cannot tell you is
+whether it is any good to use.
+
+- **Vermouths**, red and white, in the type list, with their own tasting fields.
+- **Tasting fields that follow the wine**: tannin only where there is tannin, the
+  hues that belong to that colour, bead and effervescence for a sparkling, and
+  the nose read twice — still, then swirled.
+- **Descriptors by wine type**, so a white is not offered a red's vocabulary.
+- **Bottle photos from the web** on the Evidence screen: search, pick one, and it
+  replaces the photo you took at the table. A saved photo can also be removed.
+- **Events**: a tasting session you can log a wine straight into.
+- **The group**: Vicenç now sees everyone's scores and structured tasting in a
+  shared Space and can average or compare them by person — while each member's
+  written notes stay with their author. Worth testing with two accounts.
+- **"Tu cata frente a las fuentes"** on the Evidence screen: a paragraph setting
+  what you tasted against what the producer and the web say. It needs the wine
+  both researched and tasted; press the button once and it is stored.
+- **Where a wine was tasted**, with the map lookup above if you enable it.
 
 ## 4. Watch the API while you are in there (0 min extra)
 
