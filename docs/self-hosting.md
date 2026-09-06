@@ -213,6 +213,7 @@ photograph, and Vicenç's language replies.
    | `SOMMELIERX_API_KEY` | a `sk_live_…` key (a secret, not a var)    | the same — pairing needs both     |
    | `WEBSEARCH_PROVIDER` | `brave` or `tavily`                        | open-web wine discovery           |
    | `WEBSEARCH_API_KEY`  | the provider's key (a secret, not a var)   | the same — web search needs both  |
+   | `PLACES_PROVIDER`    | `openstreetmap`                            | venue lookup for a tasting        |
 
    The OCR allowlist is fixed in code — `apps/api/src/adapters/label-ocr.ts` —
    so a model outside it is refused rather than silently used. Check
@@ -230,6 +231,13 @@ photograph, and Vicenç's language replies.
    never fetches the result pages itself, only the provider's snippets. When
    `AI_PROVIDER=cloudflare`, those snippets are translated into the reader's
    language with the same model as Vicenç.
+
+   Venue lookup resolves the place a tasting happened at to a real place with
+   coordinates, through OpenStreetMap's Nominatim. It needs no key — only a valid
+   `EXTERNAL_API_USER_AGENT`, which Nominatim's usage policy requires and
+   `validate-env` enforces. Read `docs/privacy-review-places.md` first: a venue
+   search sends what the reader typed, and the "I'm here" button sends their
+   position. With it off, the venue fields are plain text inputs as before.
 
    Setting `AI_PROVIDER=cloudflare` without a valid model, or without the
    binding, leaves the feature off rather than half-on. The adapters return

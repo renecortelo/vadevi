@@ -793,6 +793,19 @@
       "conclusion": "El veredicte personal és teu. Un esdeveniment compartit mai no el converteix en la nota d'una altra persona."
     },
     "notSet": "Sense indicar",
+    "venue": {
+      "searchAction": "Cerca el lloc",
+      "searching": "Cercant…",
+      "hereAction": "Soc aquí",
+      "locating": "Localitzant…",
+      "noMatches": "No s'ha trobat aquest lloc. Pots escriure'n el nom a mà.",
+      "error": "No s'ha pogut cercar el lloc. Torna-ho a provar.",
+      "noGeolocation": "Aquest navegador no ens pot donar la teva ubicació.",
+      "locationDenied": "No s'ha pogut obtenir la teva ubicació. Pots cercar el lloc pel nom.",
+      "here": "Aquí",
+      "hereDescription": "La teva posició actual, sense nom al mapa",
+      "attribution": "Llocs d'OpenStreetMap, © col·laboradors d'OpenStreetMap"
+    },
     "scale": {
       "1": "Molt baix",
       "2": "Baix",

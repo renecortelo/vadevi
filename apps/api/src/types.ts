@@ -20,6 +20,7 @@ export type WorkerBindings = {
   FIREBASE_PROJECT_ID?: string;
   FIREBASE_WEB_API_KEY?: string;
   PAIRING_PROVIDER?: "none" | "sommelierx";
+  PLACES_PROVIDER?: "none" | "openstreetmap";
   RESEARCH_PROVIDER?: "none" | "open_data";
   SOMMELIERX_API_KEY?: string;
   WEBSEARCH_PROVIDER?: "none" | "brave" | "tavily";

@@ -57,6 +57,7 @@ describe("runtime routes", () => {
           assistant: true,
           externalResearch: false,
           priceLookup: false,
+          venuePlaceSearch: false,
           voiceInput: false,
         },
         firebase: {

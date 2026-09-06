@@ -108,6 +108,9 @@
                   "priceLookup": {
                     "type": "boolean"
                   },
+                  "venuePlaceSearch": {
+                    "type": "boolean"
+                  },
                   "voiceInput": {
                     "type": "boolean"
                   }
@@ -116,6 +119,7 @@
                   "assistant",
                   "externalResearch",
                   "priceLookup",
+                  "venuePlaceSearch",
                   "voiceInput"
                 ],
                 "additionalProperties": false
@@ -155,6 +159,9 @@
                   "priceLookup": {
                     "type": "boolean"
                   },
+                  "venuePlaceSearch": {
+                    "type": "boolean"
+                  },
                   "voiceInput": {
                     "type": "boolean"
                   }
@@ -164,6 +171,7 @@
                   "bottlePhotoSearch",
                   "externalResearch",
                   "priceLookup",
+                  "venuePlaceSearch",
                   "voiceInput"
                 ],
                 "additionalProperties": false
@@ -5599,6 +5607,16 @@
                     "minLength": 1,
                     "maxLength": 160
                   },
+                  "venueLatitude": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90
+                  },
+                  "venueLongitude": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180
+                  },
                   "venueCity": {
                     "type": "string",
                     "minLength": 1,
@@ -6133,6 +6151,16 @@
                 "type": "string",
                 "minLength": 1,
                 "maxLength": 160
+              },
+              "venueLatitude": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              },
+              "venueLongitude": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
               },
               "venueCity": {
                 "type": "string",
@@ -8924,6 +8952,16 @@
                 "minLength": 1,
                 "maxLength": 160
               },
+              "venueLatitude": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              },
+              "venueLongitude": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
               "venueCity": {
                 "type": "string",
                 "minLength": 1,
@@ -8994,6 +9032,162 @@
         },
         "required": [
           "version"
+        ],
+        "additionalProperties": false
+      },
+      "PlaceCandidatesResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "places": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "area": {
+                      "type": "string",
+                      "nullable": true,
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "city": {
+                      "type": "string",
+                      "nullable": true,
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "countryCode": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[A-Z]{2}$"
+                    },
+                    "displayName": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "latitude": {
+                      "type": "number",
+                      "minimum": -90,
+                      "maximum": 90
+                    },
+                    "longitude": {
+                      "type": "number",
+                      "minimum": -180,
+                      "maximum": 180
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    }
+                  },
+                  "required": [
+                    "area",
+                    "city",
+                    "countryCode",
+                    "displayName",
+                    "latitude",
+                    "longitude",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "places"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "PlaceSearchRequest": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "es",
+              "fr",
+              "en",
+              "it",
+              "pt-PT",
+              "nl",
+              "de"
+            ]
+          },
+          "near": {
+            "type": "object",
+            "properties": {
+              "latitude": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              },
+              "longitude": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              }
+            },
+            "required": [
+              "latitude",
+              "longitude"
+            ],
+            "additionalProperties": false
+          },
+          "query": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "locale",
+          "query"
+        ],
+        "additionalProperties": false
+      },
+      "PlaceReverseRequest": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "es",
+              "fr",
+              "en",
+              "it",
+              "pt-PT",
+              "nl",
+              "de"
+            ]
+          },
+          "longitude": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          }
+        },
+        "required": [
+          "latitude",
+          "locale",
+          "longitude"
         ],
         "additionalProperties": false
       },
@@ -14934,6 +15128,140 @@
           },
           "409": {
             "description": "The note version changed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/places/search": {
+      "post": {
+        "operationId": "searchPlaces",
+        "tags": [
+          "Places"
+        ],
+        "summary": "Find the place a tasting happened at, with its coordinates",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlaceSearchRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Matching places, each with a point. Empty when nothing matched.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlaceCandidatesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Venue lookup is not enabled for this deployment.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/places/reverse": {
+      "post": {
+        "operationId": "reversePlace",
+        "tags": [
+          "Places"
+        ],
+        "summary": "Name the place at a point, for a reader who is there",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlaceReverseRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The place at that point, or nothing when it is unnamed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlaceCandidatesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Venue lookup is not enabled for this deployment.",
             "content": {
               "application/json": {
                 "schema": {

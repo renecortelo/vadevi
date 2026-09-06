@@ -793,6 +793,19 @@
       "conclusion": "Le verdict personnel reste le vôtre. Un événement partagé ne le transforme jamais en note de quelqu'un d'autre."
     },
     "notSet": "Non renseigné",
+    "venue": {
+      "searchAction": "Chercher le lieu",
+      "searching": "Recherche…",
+      "hereAction": "Je suis ici",
+      "locating": "Localisation…",
+      "noMatches": "Ce lieu n'a pas été trouvé. Vous pouvez saisir le nom à la main.",
+      "error": "Le lieu n'a pas pu être recherché. Réessayez.",
+      "noGeolocation": "Ce navigateur ne peut pas nous donner votre position.",
+      "locationDenied": "Votre position n'a pas pu être lue. Vous pouvez chercher le lieu par son nom.",
+      "here": "Ici",
+      "hereDescription": "Votre position actuelle, sans nom sur la carte",
+      "attribution": "Lieux d'OpenStreetMap, © contributeurs OpenStreetMap"
+    },
     "scale": {
       "1": "Très faible",
       "2": "Faible",

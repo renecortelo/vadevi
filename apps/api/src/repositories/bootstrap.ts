@@ -24,6 +24,7 @@ export type BootstrapOptions = {
   bottlePhotoSearch: boolean;
   externalResearch: boolean;
   principal: FirebasePrincipal;
+  placeSearch: boolean;
   requestId: string;
 };
 
@@ -202,6 +203,7 @@ export async function getBootstrapResponse(
         bottlePhotoSearch: options.bottlePhotoSearch,
         externalResearch: options.externalResearch,
         priceLookup: false,
+        venuePlaceSearch: options.placeSearch,
         voiceInput: false,
       },
       spaces: spaces.results.map((space) => ({

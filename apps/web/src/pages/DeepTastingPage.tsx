@@ -13,6 +13,7 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import type { z } from "zod";
 
 import { DecimalInput } from "../components/DecimalInput";
+import { VenuePicker } from "../components/VenuePicker";
 import { countryOptionsFor } from "../components/country-options";
 import { colorFamiliesFor, hasTannin, hueOptionsFor } from "./deep-tasting-fields";
 import { useAuth } from "../auth/AuthContext";
@@ -896,15 +897,36 @@ export function DeepTastingPage() {
         {/* Where the wine was tasted — the place, kept apart from the wine's own
             origin. Helps Vicenç recall where a bottle was drunk. */}
         <div className="form-grid">
-          <label>
-            <span>{t("tasting.field.venueName")}</span>
-            <input
-              maxLength={200}
-              onChange={(event) => updateContext("venueName", event.target.value || undefined)}
-              placeholder={t("tasting.venuePlaceholder")}
+          {bootstrap.data.features.venuePlaceSearch ? (
+            <VenuePicker
+              onChoose={(venue) => {
+                // One choice fills the whole block, so the reader picks a place
+                // rather than typing four fields — but a hand-typed name still
+                // works: it simply arrives with nothing else set, and the fields
+                // below stay editable either way.
+                updateContext("venueName", venue.name || undefined);
+                if (venue.city !== null) updateContext("venueCity", venue.city);
+                if (venue.area !== null) updateContext("venueArea", venue.area);
+                if (venue.countryCode !== null) {
+                  updateContext("venueCountryCode", venue.countryCode);
+                }
+                updateContext("venueLatitude", venue.latitude ?? undefined);
+                updateContext("venueLongitude", venue.longitude ?? undefined);
+              }}
+              spaceId={spaceId}
               value={draft.payload.context?.venueName ?? ""}
             />
-          </label>
+          ) : (
+            <label>
+              <span>{t("tasting.field.venueName")}</span>
+              <input
+                maxLength={200}
+                onChange={(event) => updateContext("venueName", event.target.value || undefined)}
+                placeholder={t("tasting.venuePlaceholder")}
+                value={draft.payload.context?.venueName ?? ""}
+              />
+            </label>
+          )}
           <label>
             <span>{t("tasting.field.venueCity")}</span>
             <input

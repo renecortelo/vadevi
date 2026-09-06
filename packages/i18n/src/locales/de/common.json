@@ -793,6 +793,19 @@
       "conclusion": "Das persönliche Urteil bleibt Ihres. Eine gemeinsame Veranstaltung macht daraus nie die Notiz einer anderen Person."
     },
     "notSet": "Nicht angegeben",
+    "venue": {
+      "searchAction": "Ort suchen",
+      "searching": "Wird gesucht…",
+      "hereAction": "Ich bin hier",
+      "locating": "Standort wird ermittelt…",
+      "noMatches": "Dieser Ort wurde nicht gefunden. Sie können den Namen von Hand eingeben.",
+      "error": "Der Ort konnte nicht gesucht werden. Bitte erneut versuchen.",
+      "noGeolocation": "Dieser Browser kann uns Ihren Standort nicht mitteilen.",
+      "locationDenied": "Ihr Standort konnte nicht gelesen werden. Sie können den Ort über seinen Namen suchen.",
+      "here": "Hier",
+      "hereDescription": "Ihre aktuelle Position, auf der Karte unbenannt",
+      "attribution": "Orte von OpenStreetMap, © OpenStreetMap-Mitwirkende"
+    },
     "scale": {
       "1": "Sehr niedrig",
       "2": "Niedrig",

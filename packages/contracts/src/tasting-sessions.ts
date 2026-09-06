@@ -51,6 +51,11 @@ export const TastingContextSchema = z
     roomTemperatureTenthsC: z.number().int().min(-100).max(600).optional(),
     servingTemperatureTenthsC: z.number().int().min(-100).max(500).optional(),
     venueArea: z.string().trim().min(1).max(160).optional(),
+    // Where the tasting happened, on the map — never the wine's own origin. Six
+    // decimals is what the geocoder returns; the pair is stored together or not
+    // at all, which the repository enforces.
+    venueLatitude: z.number().min(-90).max(90).optional(),
+    venueLongitude: z.number().min(-180).max(180).optional(),
     venueCity: z.string().trim().min(1).max(160).optional(),
     venueCountryCode: z
       .string()

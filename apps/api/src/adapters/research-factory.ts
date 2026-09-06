@@ -1,11 +1,17 @@
 import { BraveImageSearchAdapter } from "./image-search";
+import { NominatimPlaceSearchAdapter } from "./place-search";
 import { BraveWebSearchAdapter, TavilyWebSearchAdapter } from "./web-search";
 import { createNarrativePort } from "./narrative";
 import { createTranslationPort } from "./translation";
 import { D1ExternalCache, D1ExternalRateLimiter } from "./external-state";
 import { OpenFoodFactsAdapter } from "./open-food-facts";
 import { WikidataAdapter } from "./wikidata";
-import type { ImageSearchPort, ResearchPorts, WebSearchPort } from "@vadevi/domain";
+import type {
+  ImageSearchPort,
+  PlaceSearchPort,
+  ResearchPorts,
+  WebSearchPort,
+} from "@vadevi/domain";
 import type { WorkerBindings } from "../types";
 
 function validUserAgent(value: string | undefined): value is string {
@@ -64,6 +70,31 @@ export function createImageSearchPort(
     new D1ExternalRateLimiter(database),
     environment.EXTERNAL_API_USER_AGENT!,
     environment.WEBSEARCH_API_KEY!.trim(),
+  );
+}
+
+/**
+ * Whether venue lookup is enabled. Nominatim needs no key, only the contact user
+ * agent its usage policy requires — but what the reader typed, and optionally a
+ * coarse position, leaves the device, so it has its own switch and its own
+ * privacy review (docs/privacy-review-places.md). Default off.
+ */
+export function placeSearchEnabled(environment: WorkerBindings): boolean {
+  return (
+    environment.PLACES_PROVIDER === "openstreetmap" &&
+    validUserAgent(environment.EXTERNAL_API_USER_AGENT)
+  );
+}
+
+export function createPlaceSearchPort(
+  database: D1Database,
+  environment: WorkerBindings,
+): PlaceSearchPort | null {
+  if (!placeSearchEnabled(environment)) return null;
+  return new NominatimPlaceSearchAdapter(
+    new D1ExternalCache(database),
+    new D1ExternalRateLimiter(database),
+    environment.EXTERNAL_API_USER_AGENT!,
   );
 }
 

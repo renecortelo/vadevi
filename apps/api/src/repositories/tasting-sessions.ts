@@ -108,6 +108,8 @@ type ContextRow = {
   venue_area: string | null;
   venue_city: string | null;
   venue_country_code: string | null;
+  venue_latitude: number | null;
+  venue_longitude: number | null;
   venue_name: string | null;
   serving_temperature_tenths_c: number | null;
 };
@@ -690,6 +692,14 @@ async function getDeepNote(
             venueArea: context.venue_area ?? undefined,
             venueCity: context.venue_city ?? undefined,
             venueCountryCode: context.venue_country_code ?? undefined,
+            // A point is only ever meaningful as a pair, so a half-written row
+            // (which the write below cannot produce) reports neither half.
+            ...(context.venue_latitude === null || context.venue_longitude === null
+              ? {}
+              : {
+                  venueLatitude: context.venue_latitude,
+                  venueLongitude: context.venue_longitude,
+                }),
             venueName: context.venue_name ?? undefined,
             servingTemperatureTenthsC: context.serving_temperature_tenths_c ?? undefined,
           },
@@ -899,8 +909,9 @@ export async function createDeepTastingNote(
             minutes_open, decanted, aeration_minutes, preservation_method, bottle_condition,
             room_temperature_tenths_c, light_level, noise_level, ambient_smell_level,
             palate_cleanser, previous_session_wine_id,
-            venue_name, venue_city, venue_area, venue_country_code
-          ) SELECT id, space_id, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+            venue_name, venue_city, venue_area, venue_country_code,
+            venue_latitude, venue_longitude
+          ) SELECT id, space_id, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
           FROM tasting_notes WHERE id = ? AND space_id = ?
           ON CONFLICT(tasting_note_id) DO NOTHING`,
         )
@@ -927,6 +938,15 @@ export async function createDeepTastingNote(
           context.venueCity ?? null,
           context.venueArea ?? null,
           context.venueCountryCode ?? null,
+          // Latitude and longitude are written together or not at all: half a
+          // point is not a place, and a lone coordinate would put the tasting on
+          // the equator or the prime meridian.
+          context.venueLatitude === undefined || context.venueLongitude === undefined
+            ? null
+            : context.venueLatitude,
+          context.venueLatitude === undefined || context.venueLongitude === undefined
+            ? null
+            : context.venueLongitude,
           noteId,
           options.spaceId,
         ),
@@ -1076,8 +1096,9 @@ export async function updateDeepTastingNote(
             minutes_open, decanted, aeration_minutes, preservation_method, bottle_condition,
             room_temperature_tenths_c, light_level, noise_level, ambient_smell_level,
             palate_cleanser, previous_session_wine_id,
-            venue_name, venue_city, venue_area, venue_country_code
-          ) SELECT id, space_id, ?, ?, ?, created_at, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+            venue_name, venue_city, venue_area, venue_country_code,
+            venue_latitude, venue_longitude
+          ) SELECT id, space_id, ?, ?, ?, created_at, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
           FROM tasting_notes WHERE id = ? AND space_id = ? AND updated_at = ?
           ON CONFLICT(tasting_note_id) DO UPDATE SET
             food_text = COALESCE(excluded.food_text, tasting_contexts.food_text),
@@ -1100,7 +1121,9 @@ export async function updateDeepTastingNote(
             venue_name = COALESCE(excluded.venue_name, tasting_contexts.venue_name),
             venue_city = COALESCE(excluded.venue_city, tasting_contexts.venue_city),
             venue_area = COALESCE(excluded.venue_area, tasting_contexts.venue_area),
-            venue_country_code = COALESCE(excluded.venue_country_code, tasting_contexts.venue_country_code)`,
+            venue_country_code = COALESCE(excluded.venue_country_code, tasting_contexts.venue_country_code),
+            venue_latitude = COALESCE(excluded.venue_latitude, tasting_contexts.venue_latitude),
+            venue_longitude = COALESCE(excluded.venue_longitude, tasting_contexts.venue_longitude)`,
         )
         .bind(
           context.foodText ?? null,
@@ -1124,6 +1147,15 @@ export async function updateDeepTastingNote(
           context.venueCity ?? null,
           context.venueArea ?? null,
           context.venueCountryCode ?? null,
+          // Latitude and longitude are written together or not at all: half a
+          // point is not a place, and a lone coordinate would put the tasting on
+          // the equator or the prime meridian.
+          context.venueLatitude === undefined || context.venueLongitude === undefined
+            ? null
+            : context.venueLatitude,
+          context.venueLatitude === undefined || context.venueLongitude === undefined
+            ? null
+            : context.venueLongitude,
           options.noteId,
           options.spaceId,
           now,
