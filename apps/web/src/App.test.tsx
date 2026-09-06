@@ -176,7 +176,7 @@ describe("authenticated app shell", () => {
     expect(markup).toContain("Cards");
     expect(markup).toContain("Table");
     expect(markup).toContain("Timeline");
-    expect(markup).toContain("Sessions");
+    expect(markup).toContain("Events");
   });
 
   it("offers every supported locale in resumable onboarding", () => {
@@ -215,7 +215,7 @@ describe("authenticated app shell", () => {
     const indexMarkup = renderWithSession(<SessionsPage />, "/sessions");
     const newMarkup = renderWithSession(<NewSessionPage />, "/sessions/new");
 
-    expect(indexMarkup).toContain("Tasting sessions");
+    expect(indexMarkup).toContain("Tasting events");
     expect(indexMarkup).toContain('href="/sessions/new"');
     expect(newMarkup).toContain('id="session-name"');
     expect(newMarkup).toContain('type="datetime-local"');

@@ -437,6 +437,22 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
           userId: draft.userId,
         });
       }
+      // Logging a wine into an event: the wine's id is chosen on this device, so
+      // the link can be queued alongside the wine itself and replayed after it,
+      // offline included.
+      if (draft.eventSessionId !== undefined) {
+        mutations.push({
+          id: `${draft.wineMutationId}-event`,
+          occurredAt: new Date(Date.parse(now) + 2).toISOString(),
+          operation: "create",
+          payload: { entries: [{ wineId: draft.wineId }] },
+          resourceId: draft.eventSessionId,
+          resourceType: "session_wines",
+          spaceId: draft.spaceId,
+          state: "queued",
+          userId: draft.userId,
+        });
+      }
       await offlineDatabase.transaction(
         "rw",
         offlineDatabase.drafts,

@@ -1,5 +1,5 @@
 import { WineTypeSchema } from "@vadevi/contracts";
-import type { WineGrape, WineSummary, WineType } from "@vadevi/contracts";
+import type { TastingSessionResponse, WineGrape, WineSummary, WineType } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import {
   descriptorByCode,
@@ -21,7 +21,10 @@ import { offlineDatabase, partitionId, type QuickLogDraft } from "../offline/dat
 import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { createUlid } from "../security/ulid";
+import { listTastingSessions } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
+
+type SessionSummary = TastingSessionResponse["data"];
 
 function newDraft(userId: string, spaceId: string): QuickLogDraft {
   const now = new Date().toISOString();
@@ -235,6 +238,18 @@ export function QuickLogPage() {
     }
   }
 
+  // The events this Space has, so a wine can be logged into the weekend trip it
+  // belongs to. Optional — most wines belong to no event at all.
+  const [events, setEvents] = useState<SessionSummary[]>([]);
+  useEffect(() => {
+    if (user === null || !navigator.onLine) return;
+    const controller = new AbortController();
+    void listTastingSessions(user, spaceId, controller.signal)
+      .then((response) => setEvents(response.data))
+      .catch(() => undefined);
+    return () => controller.abort();
+  }, [spaceId, user]);
+
   const selectedDescriptors = draft.notePayload.descriptorCodes;
   // The words offered follow the wine being logged: choose "sparkling" and the
   // list becomes brioche and green apple, not oak and forest floor. Appearance
@@ -368,6 +383,34 @@ export function QuickLogPage() {
               />
               <span>{t("quickLog.nonVintage")}</span>
             </label>
+            {/* Logging into an event — a weekend trip, a dinner — is optional and
+                blank by default; most wines belong to none. */}
+            {events.length === 0 ? null : (
+              <>
+                <label htmlFor="quicklog-event">{t("quickLog.eventLabel")}</label>
+                <select
+                  id="quicklog-event"
+                  onChange={(event) =>
+                    setDraft((current) => {
+                      const chosen = event.target.value;
+                      const next = { ...current, updatedAt: new Date().toISOString() };
+                      // "No event" clears it rather than storing an empty id.
+                      if (chosen === "") delete next.eventSessionId;
+                      else next.eventSessionId = chosen;
+                      return next;
+                    })
+                  }
+                  value={draft.eventSessionId ?? ""}
+                >
+                  <option value="">{t("quickLog.eventNone")}</option>
+                  {events.map((entry) => (
+                    <option key={entry.id} value={entry.id}>
+                      {entry.name}
+                    </option>
+                  ))}
+                </select>
+              </>
+            )}
             <label htmlFor="region">{t("quickLog.region")}</label>
             <input
               id="region"
