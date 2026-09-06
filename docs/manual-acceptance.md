@@ -1,8 +1,10 @@
 # Manual acceptance run
 
 The ordered script for the preview acceptance in `docs/preview-environment.md`.
-It is written to be worked through in one sitting, roughly 45 minutes, in the
-order that fails fastest — anything that would invalidate the rest comes first.
+It is written to be worked through in one sitting — roughly 45 minutes for
+sections A to G, plus 20 for section H, which covers everything that has shipped
+since the last round — in the order that fails fastest: anything that would
+invalidate the rest comes first.
 
 Record the date, the browser, and the device. A run on one browser is a data
 point, not a pass.
@@ -159,6 +161,78 @@ records fine — which is itself worth one pass.
 
 ---
 
+## H. What shipped since the last round (20 min)
+
+None of this existed when the script above was written, so nothing here has ever
+been through a real run. The automated tests say it works; what they cannot say
+is whether it is any good to use.
+
+### The tasting form now follows the wine
+
+50. [ ] Start a tasting on a **red**. Tannin is there, and the hues offered are
+        red ones — ruby, garnet, brick and so on, not a generic list.
+51. [ ] Start one on a **white**. **Tannin is gone**, and the hues are white
+        ones. A white asking about tannin is a finding.
+52. [ ] Start one on a **sparkling**. There is a bubble section — bead size and
+        effervescence — that the still wines do not show.
+53. [ ] On any tasting, the **nose is read twice**: once still, once after
+        swirling. Both save and come back after a reload.
+54. [ ] The **descriptors** offered match the wine: a white must not be offered a
+        red's vocabulary.
+55. [ ] Add a wine of type **vermut tinto** and another **vermut blanco**. Both
+        save, and both read as proper names rather than as a raw key like
+        `wineType.vermouth`.
+
+### Where the wine was tasted
+
+56. [ ] On a tasting, type a real bar or restaurant in **the place field** and
+        press **Buscar el lugar**. A list appears; pick one. The name, city,
+        area **and country** fill in together.
+57. [ ] Press **Estoy aquí**. The browser asks permission — say yes — and it
+        offers where you are. Say no on a second try: it must tell you plainly
+        and leave the field usable by hand.
+58. [ ] Save the tasting, reload, and open it. The place is still there.
+59. [ ] With `PLACES_PROVIDER` unset the field is four plain text boxes and still
+        saves. Worth one pass if you ever intend to turn it off.
+
+### Bottle photos and the evidence screen
+
+60. [ ] Open a wine → **Evidence**. Search for a **bottle photo**, and check on
+        **the phone** that the results do not spill past the margins.
+61. [ ] Pick one. It becomes the wine's main photo, replacing the one you took at
+        the table.
+62. [ ] Ask for **more photos** — a second page of results, not the same six.
+63. [ ] **Remove** a saved photo. It goes, and stays gone after a reload.
+64. [ ] From a wine **card**, tap the name or the image: it opens that wine's
+        evidence.
+
+### Events
+
+65. [ ] Create an **Event**, then log a wine straight into it from Quick Log.
+        The wine appears under that event.
+
+### The group, and the comparison paragraph
+
+Steps 66–69 need **two accounts** in one shared Space. Invite a second person, or
+sign in as yourself on a second browser profile.
+
+66. [ ] Both accounts taste the same wine, each with a score and their own
+        written note.
+67. [ ] Ask Vicenç about that wine generally. It gives **the group's average and
+        range**, and names people when it attributes a score.
+68. [ ] Ask about the other person by name. It answers for them — **and never
+        quotes their written note**. A peer's prose appearing anywhere is a
+        finding, and a serious one.
+69. [ ] On the wine's **Evidence** screen, with the wine both researched and
+        tasted, press **Escribir la comparación**. A paragraph appears setting
+        what you tasted against what the producer and the web say. It must not
+        invent a flavour neither side mentioned, and must not repeat the other
+        person's written words.
+70. [ ] On a wine that is researched but **never tasted**, the same button says
+        plainly that one side is missing rather than writing something anyway.
+
+---
+
 ## Recording results
 
 For each failure note: what you did, what happened, what you expected, and
@@ -172,5 +246,6 @@ Things that are **findings**, not nitpicks:
 - Any wording in a non-English catalog that is wrong rather than merely awkward
 - Anything the privacy notice claims that the app does not actually do
 - Any duplicate created by the offline sync
+- Any of another member's **written** tasting text reaching you or Vicenç
 
 Send them over and I will work through them.
