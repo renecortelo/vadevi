@@ -4,6 +4,7 @@ import type {
   NarrativePort,
   NarrativeRequest,
   ResearchLocale,
+  TastingComparisonRequest,
 } from "@vadevi/domain";
 import { sanitizeExternalText } from "@vadevi/domain";
 
@@ -36,6 +37,69 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
     private readonly ai: WorkersAiRunner,
     private readonly model: string,
   ) {}
+
+  /**
+   * The taster's impression set beside what the sources say.
+   *
+   * Both lists are already-recorded material; the model's whole job is to relate
+   * them — what matches, what does not, what only one side mentions — and to say
+   * plainly when they simply do not overlap. It may not introduce a flavour, a
+   * rating or a fact that neither side stated, which is what keeps this a reading
+   * of the record rather than a new opinion about the wine.
+   */
+  async compare(input: TastingComparisonRequest): Promise<string | null> {
+    const tasting = input.tasting
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0)
+      .slice(0, 10)
+      .map((line) => line.slice(0, 400));
+    const sources = input.sources
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0)
+      .slice(0, 10)
+      .map((line) => line.slice(0, 400));
+    // A comparison needs both sides; with one of them empty there is nothing to
+    // compare and a paragraph would have to invent the other half.
+    if (tasting.length === 0 || sources.length === 0) return null;
+    const language = languageNames[input.locale];
+    try {
+      const output = await this.ai.run(this.model, {
+        max_tokens: 400,
+        messages: [
+          {
+            content:
+              `You are a sommelier writing in ${language}. You are given what a ` +
+              `taster (or a group) recorded about one wine, and what its sources — ` +
+              `the producer and published tastings — say about it. Write 2 to 4 ` +
+              `sentences setting the two side by side: where they agree, where they ` +
+              `differ, and what only one side mentions. Attribute each side plainly ` +
+              `("you found…", "the producer describes…"), and name a person when the ` +
+              `tasting line names one. Use ONLY these two lists — never add a ` +
+              `flavour, a score, a grape or any detail neither side states. If they ` +
+              `barely overlap, say so rather than inventing agreement. Reply with the ` +
+              `paragraph only, no preamble.`,
+            role: "system",
+          },
+          {
+            content: JSON.stringify({ sources, tasting, wine: input.wine.slice(0, 200) }),
+            role: "user",
+          },
+        ],
+        temperature: 0.2,
+      });
+      const raw = output.response;
+      if (typeof raw !== "string") return null;
+      const sanitized = sanitizeExternalText(raw, 900);
+      return sanitized.value.length === 0 || sanitized.flaggedPromptLike ? null : sanitized.value;
+    } catch (error) {
+      console.warn(
+        `comparison model call failed (model=${this.model}): ${
+          error instanceof Error ? error.name : "unknown"
+        }`,
+      );
+      return null;
+    }
+  }
 
   async compose(input: NarrativeRequest): Promise<string | null> {
     const statements = input.statements

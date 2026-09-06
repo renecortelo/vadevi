@@ -357,6 +357,16 @@
     "sourceDetails": "Font",
     "highlightsTitle": "El que hem trobat",
     "summaryTitle": "Sobre aquest vi",
+    "comparison": {
+      "title": "El teu tast davant les fonts",
+      "empty": "Encara no hi ha comparació. Quan el vi estigui investigat i algú l'hagi tastat, es pot escriure aquí un paràgraf que posi les dues versions una al costat de l'altra.",
+      "action": "Escriure la comparació",
+      "rewriteAction": "Refer la comparació",
+      "writing": "Escrivint…",
+      "inferred": "Una lectura del que ja hi ha registrat, no una font nova",
+      "noMaterial": "Falta una de les dues parts: investiga el vi o registra un tast i torna-ho a provar.",
+      "error": "No s'ha pogut escriure la comparació. Torna-ho a provar."
+    },
     "sourceType": {
       "producer": "Productor",
       "regulator": "Organisme regulador",
@@ -404,7 +414,8 @@
       "region_country": "País de la denominació",
       "region_classification": "Classificació de la denominació",
       "curiosity_highlight": "Detall",
-      "research_summary": "Resum de la recerca"
+      "research_summary": "Resum de la recerca",
+      "tasting_comparison": "Tast davant les fonts"
     },
     "research": {
       "eyebrow": "Recerca opcional",

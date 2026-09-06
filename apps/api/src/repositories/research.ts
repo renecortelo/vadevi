@@ -997,3 +997,254 @@ export async function regenerateNarrative(
   await database.batch(commands);
   return "ok";
 }
+
+/** One tasting note as the comparison reads it: the shared structured fields for
+ *  everyone, plus free text for the reader's own note only. */
+type ComparisonNoteRow = Readonly<{
+  acidity: number | null;
+  appearance_text: string | null;
+  author_name: string | null;
+  body: number | null;
+  comment: string | null;
+  conclusion_text: string | null;
+  finish_length: number | null;
+  id: string;
+  is_self: number;
+  nose_swirled_text: string | null;
+  nose_text: string | null;
+  palate_text: string | null;
+  palate_texture: string | null;
+  score_100: number | null;
+  sweetness: number | null;
+  tannin_level: number | null;
+  tannin_texture: string | null;
+}>;
+
+function clipLine(value: string, maximum: number): string {
+  const trimmed = value.trim();
+  return trimmed.length <= maximum ? trimmed : `${trimmed.slice(0, maximum - 1)}…`;
+}
+
+/**
+ * What the group recorded about this wine, phrased for the comparison.
+ *
+ * The same rule the assistant follows applies here, because the paragraph is read
+ * by every member: a co-member's SCORE and structured tasting are shared and are
+ * attributed by name, while their written sections stay with their author. Only
+ * the reader's own free text is included, so composing this can never surface one
+ * member's prose to another.
+ */
+async function comparisonTastingLines(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  spaceId: string,
+  wineId: string,
+): Promise<string[]> {
+  const rows = await database
+    .prepare(
+      `SELECT note.id, note.score_100, note.comment, note.sweetness, note.acidity,
+        note.tannin_level, note.tannin_texture, note.body, note.palate_texture,
+        note.finish_length, note.palate_text, note.appearance_text, note.nose_text,
+        note.nose_swirled_text, note.conclusion_text, author.display_name AS author_name,
+        CASE WHEN author.firebase_uid = ? THEN 1 ELSE 0 END AS is_self
+      FROM tasting_notes note
+      JOIN users author ON author.id = note.author_user_id AND author.deleted_at IS NULL
+      JOIN space_memberships author_member ON author_member.space_id = note.space_id
+        AND author_member.user_id = author.id AND author_member.status = 'active'
+      WHERE note.space_id = ? AND note.wine_id = ? AND note.state = 'submitted'
+        AND note.deleted_at IS NULL
+      ORDER BY (CASE WHEN author.firebase_uid = ? THEN 0 ELSE 1 END), note.tasted_at DESC
+      LIMIT 12`,
+    )
+    .bind(principal.firebaseUid, spaceId, wineId, principal.firebaseUid)
+    .all<ComparisonNoteRow>();
+
+  // The latest note per person, so one prolific taster does not crowd out the group.
+  const kept: ComparisonNoteRow[] = [];
+  const seen = new Set<string>();
+  for (const row of rows.results) {
+    const key = `${row.author_name ?? ""}:${row.is_self}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    kept.push(row);
+    if (kept.length >= 6) break;
+  }
+  if (kept.length === 0) return [];
+
+  const descriptorRows = await database
+    .prepare(
+      `SELECT tasting_note_id, phase, label_snapshot FROM tasting_descriptors
+        WHERE tasting_note_id IN (${kept.map(() => "?").join(", ")}) ORDER BY phase`,
+    )
+    .bind(...kept.map((row) => row.id))
+    .all<{ label_snapshot: string; phase: string; tasting_note_id: string }>();
+  const descriptorsByNote = new Map<string, { nose: string[]; palate: string[] }>();
+  for (const row of descriptorRows.results) {
+    const label = row.label_snapshot.trim();
+    if (label.length === 0) continue;
+    const entry = descriptorsByNote.get(row.tasting_note_id) ?? { nose: [], palate: [] };
+    if (row.phase === "nose" && entry.nose.length < 8) entry.nose.push(label);
+    else if (row.phase === "palate" && entry.palate.length < 8) entry.palate.push(label);
+    descriptorsByNote.set(row.tasting_note_id, entry);
+  }
+
+  const lines: string[] = [];
+  for (const row of kept) {
+    const self = row.is_self === 1;
+    const who = self ? "you" : (row.author_name ?? "a group member");
+    const descriptors = descriptorsByNote.get(row.id);
+    const parts = [
+      row.score_100 === null
+        ? null
+        : `${self ? "you rated it" : `${who} rated it`} ${row.score_100}`,
+      row.acidity === null ? null : `acidity ${row.acidity}/5`,
+      row.tannin_level === null
+        ? null
+        : `tannin ${row.tannin_level}/5${row.tannin_texture === null ? "" : ` (${row.tannin_texture})`}`,
+      row.body === null ? null : `body ${row.body}/5`,
+      row.sweetness === null ? null : `sweetness ${row.sweetness}/5`,
+      row.finish_length === null ? null : `finish ${row.finish_length}/5`,
+      row.palate_texture === null ? null : `palate ${row.palate_texture}`,
+      descriptors === undefined || descriptors.nose.length === 0
+        ? null
+        : `aromas ${who} noted: ${descriptors.nose.join(", ")}`,
+      descriptors === undefined || descriptors.palate.length === 0
+        ? null
+        : `flavours ${who} noted: ${descriptors.palate.join(", ")}`,
+      // Free text only from the reader's own note — never a co-member's prose.
+      !self || row.appearance_text === null
+        ? null
+        : `appearance: ${clipLine(row.appearance_text, 200)}`,
+      !self || row.nose_text === null ? null : `nose: ${clipLine(row.nose_text, 200)}`,
+      !self || row.nose_swirled_text === null
+        ? null
+        : `nose after swirling: ${clipLine(row.nose_swirled_text, 200)}`,
+      !self || row.palate_text === null ? null : `palate: ${clipLine(row.palate_text, 200)}`,
+      !self || row.conclusion_text === null
+        ? null
+        : `conclusion: ${clipLine(row.conclusion_text, 200)}`,
+      !self || row.comment === null ? null : `comment: ${clipLine(row.comment, 200)}`,
+    ].filter((part): part is string => part !== null && part.trim().length > 0);
+    if (parts.length > 0) lines.push(`${who}: ${parts.join("; ")}`);
+  }
+  return lines;
+}
+
+/**
+ * The paragraph that sets the tasting against the sources.
+ *
+ * Written once and STORED as a fact, not composed on every page view: it is the
+ * reading of a record that only changes when someone tastes the wine again or the
+ * research turns up something new, so paying for a model call per visit would buy
+ * nothing. It is cited to the same sources as the material it was written from,
+ * and the previous one is retired, so exactly one is ever live — the reader
+ * regenerates it when either side has moved.
+ */
+export async function regenerateTastingComparison(
+  database: D1Database,
+  options: {
+    locale: CreateResearchJobRequest["locale"];
+    narrative: ResearchPorts["narrative"];
+    principal: FirebasePrincipal;
+    requestId: string;
+    spaceId: string;
+    wineId: string;
+  },
+): Promise<"unavailable" | "no_material" | "ok"> {
+  const narrative = options.narrative ?? null;
+  if (narrative === null) return "unavailable";
+  const access = await researchAccess(database, options.principal, options.spaceId, options.wineId);
+  if (access === null) return "unavailable";
+
+  const rows = await database
+    .prepare(
+      `SELECT fact.id, fact.value_json, citation.source_id
+      FROM facts fact
+      LEFT JOIN fact_citations citation ON citation.fact_id = fact.id
+      WHERE fact.space_id = ? AND fact.subject_type = 'wine' AND fact.subject_id = ?
+        AND fact.status <> 'retired' AND fact.deleted_at IS NULL
+        AND fact.predicate IN ('curiosity.highlight', 'curiosity.note', 'pairing.note',
+          'producer.history', 'research.summary')
+      ORDER BY fact.created_at`,
+    )
+    .bind(options.spaceId, options.wineId)
+    .all<{ id: string; source_id: string | null; value_json: string }>();
+
+  const sources: string[] = [];
+  const sourceIds = new Set<string>();
+  for (const row of rows.results) {
+    try {
+      const value = JSON.parse(row.value_json) as unknown;
+      if (typeof value === "string" && value.trim().length > 0) sources.push(value);
+    } catch {
+      continue;
+    }
+    if (row.source_id !== null) sourceIds.add(row.source_id);
+  }
+  // Both halves are required: with the wine unresearched, or untasted, there is
+  // nothing to set side by side and the model would have to invent one side.
+  if (sources.length === 0 || sourceIds.size === 0) return "no_material";
+  const tasting = await comparisonTastingLines(
+    database,
+    options.principal,
+    options.spaceId,
+    options.wineId,
+  );
+  if (tasting.length === 0) return "no_material";
+
+  const paragraph = await narrative.compare({
+    locale: options.locale,
+    sources,
+    tasting,
+    wine: access.display_name,
+  });
+  if (paragraph === null) return "no_material";
+
+  const now = new Date().toISOString();
+  const factId = ulid();
+  await database.batch([
+    database
+      .prepare(
+        `UPDATE facts SET status = 'retired', version = version + 1, updated_at = ?
+        WHERE space_id = ? AND subject_type = 'wine' AND subject_id = ?
+          AND predicate = 'tasting.comparison' AND status <> 'retired' AND deleted_at IS NULL`,
+      )
+      .bind(now, options.spaceId, options.wineId),
+    database
+      .prepare(
+        `INSERT INTO facts (
+          id, space_id, subject_type, subject_id, predicate, value_json,
+          evidence_class, confidence_milli, status, observed_by_user_id,
+          verified_by_user_id, verified_at, research_method, version,
+          created_at, updated_at, deleted_at
+        ) VALUES (?, ?, 'wine', ?, 'tasting.comparison', ?, 'inferred', 600, 'proposed', NULL,
+          NULL, NULL, 'tasting.comparison.v1', 1, ?, ?, NULL)`,
+      )
+      .bind(factId, options.spaceId, options.wineId, JSON.stringify(paragraph), now, now),
+    ...[...sourceIds].slice(0, 8).map((sourceId) =>
+      database
+        .prepare(
+          `INSERT INTO fact_citations (
+            fact_id, source_id, locator, support_strength, created_at
+          ) VALUES (?, ?, NULL, 'supporting', ?)`,
+        )
+        .bind(factId, sourceId, now),
+    ),
+    database
+      .prepare(
+        `INSERT INTO change_events (
+          space_id, resource_type, resource_id, operation, resource_version, changed_at
+        ) VALUES (?, 'fact', ?, 'create', 1, ?)`,
+      )
+      .bind(options.spaceId, factId, now),
+    database
+      .prepare(
+        `INSERT INTO audit_events (
+          id, actor_user_id, space_id, action, target_type, target_id,
+          request_id, safe_metadata_json, created_at
+        ) VALUES (?, ?, ?, 'tasting.comparison.regenerated', 'fact', ?, ?, NULL, ?)`,
+      )
+      .bind(ulid(), access.actor_user_id, options.spaceId, factId, options.requestId, now),
+  ]);
+  return "ok";
+}

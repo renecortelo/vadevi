@@ -7,6 +7,8 @@ import {
   RegenerateNarrativeResponseSchema,
   RejectFactRequestSchema,
   ResearchJobResponseSchema,
+  TastingComparisonRequestSchema,
+  TastingComparisonResponseSchema,
   WineFactsResponseSchema,
   type AssistantTurnRequest,
   type AssistantTurnResponse,
@@ -16,6 +18,7 @@ import {
   type RejectFactRequest,
   type ResearchJobResponse,
   type SupportedLocale,
+  type TastingComparisonResponse,
   type WineFactsResponse,
 } from "@vadevi/contracts";
 
@@ -77,6 +80,27 @@ export async function regenerateNarrative(
   );
   if (!response.ok) throw await apiError(response);
   return RegenerateNarrativeResponseSchema.parse(await response.json());
+}
+
+/** The paragraph setting the group's tasting against what the sources say. It is
+ *  written once and stored as evidence; this asks for a fresh one. */
+export async function regenerateTastingComparison(
+  tokenSource: TokenSource,
+  spaceId: string,
+  wineId: string,
+  locale: SupportedLocale,
+): Promise<TastingComparisonResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/wines/${wineId}/tasting-comparison`,
+    {
+      body: JSON.stringify(TastingComparisonRequestSchema.parse({ locale })),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return TastingComparisonResponseSchema.parse(await response.json());
 }
 
 export async function createResearchJob(

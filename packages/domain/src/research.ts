@@ -162,8 +162,28 @@ export type NarrativeRequest = Readonly<{
   statements: string[];
 }>;
 
+/**
+ * What the taster found, set against what the wine's sources say.
+ *
+ * The reader records an impression; the producer and the reference works record
+ * theirs. This asks a model to put the two side by side — where they agree, where
+ * they part — from those two lists and nothing else. It is a reading of material
+ * already gathered, never a new claim about the bottle, so it must not introduce a
+ * flavour, a score or a fact that neither side stated.
+ */
+export type TastingComparisonRequest = Readonly<{
+  locale: ResearchLocale;
+  /** What the sources say: the gathered notes, highlights and summary. */
+  sources: string[];
+  /** What the taster or the group recorded, already attributed by person. */
+  tasting: string[];
+  wine: string;
+}>;
+
 export interface NarrativePort {
   compose(input: NarrativeRequest): Promise<string | null>;
+  /** Null when unavailable or when either side has nothing to say. */
+  compare(input: TastingComparisonRequest): Promise<string | null>;
 }
 
 /**

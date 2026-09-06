@@ -2940,7 +2940,8 @@
                             "curiosity.highlight",
                             "pairing.note",
                             "research.summary",
-                            "further_reading.summary"
+                            "further_reading.summary",
+                            "tasting.comparison"
                           ]
                         }
                       },
@@ -3111,7 +3112,8 @@
                             "curiosity.highlight",
                             "pairing.note",
                             "research.summary",
-                            "further_reading.summary"
+                            "further_reading.summary",
+                            "tasting.comparison"
                           ]
                         },
                         "researchMethod": {
@@ -9307,7 +9309,8 @@
                   "curiosity.highlight",
                   "pairing.note",
                   "research.summary",
-                  "further_reading.summary"
+                  "further_reading.summary",
+                  "tasting.comparison"
                 ]
               },
               "researchMethod": {
@@ -9477,7 +9480,8 @@
               "curiosity.highlight",
               "pairing.note",
               "research.summary",
-              "further_reading.summary"
+              "further_reading.summary",
+              "tasting.comparison"
             ]
           },
           "value": {
@@ -9553,7 +9557,8 @@
                         "curiosity.highlight",
                         "pairing.note",
                         "research.summary",
-                        "further_reading.summary"
+                        "further_reading.summary",
+                        "tasting.comparison"
                       ]
                     }
                   },
@@ -9723,7 +9728,8 @@
                         "curiosity.highlight",
                         "pairing.note",
                         "research.summary",
-                        "further_reading.summary"
+                        "further_reading.summary",
+                        "tasting.comparison"
                       ]
                     },
                     "researchMethod": {
@@ -10106,6 +10112,53 @@
         "additionalProperties": false
       },
       "RegenerateNarrativeRequest": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "es",
+              "fr",
+              "en",
+              "it",
+              "pt-PT",
+              "nl",
+              "de"
+            ]
+          }
+        },
+        "required": [
+          "locale"
+        ],
+        "additionalProperties": false
+      },
+      "TastingComparisonResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "regenerated",
+                  "no_material"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "TastingComparisonRequest": {
         "type": "object",
         "properties": {
           "locale": {
@@ -15642,6 +15695,82 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RegenerateNarrativeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The authorized wine is unavailable, or no model is configured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/wines/{wineId}/tasting-comparison": {
+      "post": {
+        "operationId": "regenerateTastingComparison",
+        "tags": [
+          "Research"
+        ],
+        "summary": "Write the paragraph setting the group's tasting against the wine's sources",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "wineId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TastingComparisonRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A fresh paragraph, or an explicit note that one side had nothing to say.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TastingComparisonResponse"
                 }
               }
             }

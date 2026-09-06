@@ -7,9 +7,14 @@ import {
 } from "@vadevi/contracts";
 import type { ResearchPorts } from "@vadevi/domain";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
+import { ulid } from "ulid";
 import { beforeAll, describe, expect, it } from "vitest";
 
-import { createResearchJob, regenerateNarrative } from "../src/repositories/research";
+import {
+  createResearchJob,
+  regenerateNarrative,
+  regenerateTastingComparison,
+} from "../src/repositories/research";
 import { randomOpaqueToken } from "../src/security/opaque-token";
 import type { FirebasePrincipal } from "../src/types";
 import { emulatorIdToken } from "./fixtures/firebase-token";
@@ -586,6 +591,7 @@ describe("bounded wine research jobs", () => {
     const outcome = await regenerateNarrative(env.DB, {
       locale: "es",
       narrative: {
+        compare: async () => null,
         compose: async ({ statements }) => {
           writtenFrom = statements;
           return "Un tinto de Tempranillo, de origen español.";
@@ -635,6 +641,7 @@ describe("bounded wine research jobs", () => {
     const ports: ResearchPorts = {
       knowledge: null,
       narrative: {
+        compare: async () => null,
         compose: async ({ statements }) => {
           composedFrom = statements;
           return "El Espino es un tinto de una bodega familiar.";
@@ -1100,6 +1107,7 @@ describe("bounded wine research jobs", () => {
         }),
       },
       narrative: {
+        compare: async () => null,
         compose: async ({ statements }) => {
           composedFrom = statements;
           return "Bodegas Áster, fundada en 1870, elabora en la Ribera del Duero.";
@@ -1138,5 +1146,153 @@ describe("bounded wine research jobs", () => {
     expect(summary?.value).toBe("Bodegas Áster, fundada en 1870, elabora en la Ribera del Duero.");
     // Still cited to Wikipedia — the narrative only rephrases cited material.
     expect(summary?.citations[0]?.source.publisher).toBe("Wikipedia");
+  });
+
+  it("sets the group's tasting against the sources, without leaking a peer's prose", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWineWithGrape(spaceId);
+    const source = {
+      canonicalUrl: "https://www.wikidata.org/wiki/Q1122",
+      licenseIdentifier: "CC0-1.0",
+      publisher: "Wikidata",
+      retrievedAt: "2026-08-23T10:00:00.000Z",
+      sourceType: "open_dataset" as const,
+      title: "Tempranillo",
+    };
+    const job = await createResearchJob(env.DB, {
+      idempotencyKey: randomOpaqueToken(),
+      ports: {
+        knowledge: {
+          research: async () => ({
+            cached: false,
+            data: [
+              {
+                confidenceMilli: 800,
+                predicate: "curiosity.highlight",
+                researchMethod: "wikidata.highlight.v1",
+                source,
+                value: "The producer describes it as ripe and full-bodied.",
+              },
+            ],
+            status: "success",
+          }),
+          searchEntities: async () => ({
+            cached: false,
+            data: [{ description: "a grape variety", id: "Q1122", label: "Tempranillo" }],
+            status: "success",
+          }),
+        },
+        product: null,
+        providerMode: "open_data",
+      },
+      principal,
+      request: { locale: "es" as const, maxSources: 4, topics: ["grapes"] as const },
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(job.kind).toBe("success");
+
+    // A co-member of the same Space, with a note of their own.
+    const now = new Date().toISOString();
+    const peerId = ulid();
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO users (
+          id, firebase_uid, email_normalized, display_name, avatar_url, preferred_locale,
+          active_space_id, created_at, updated_at, deleted_at
+        ) VALUES (?, ?, ?, 'Ana', NULL, 'es', NULL, ?, ?, NULL)`,
+      ).bind(
+        peerId,
+        `firebase-emulator-user-peer-${peerId}`,
+        `peer-${peerId}@example.test`,
+        now,
+        now,
+      ),
+      env.DB.prepare(
+        `INSERT INTO space_memberships (
+          space_id, user_id, role, status, joined_at, removed_at, version, created_at, updated_at
+        ) VALUES (?, ?, 'member', 'active', ?, NULL, 1, ?, ?)`,
+      ).bind(spaceId, peerId, now, now, now),
+      env.DB.prepare(
+        `INSERT INTO tasting_notes
+          (id, space_id, wine_id, author_user_id, mode, state, tasted_at, score_100, comment,
+           version, created_at, updated_at)
+          VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 91, ?, 1, ?, ?)`,
+      ).bind(ulid(), spaceId, wine.id, peerId, now, "ANA_PRIVATE_PROSE about plums", now, now),
+      env.DB.prepare(
+        `INSERT INTO tasting_notes
+          (id, space_id, wine_id, author_user_id, mode, state, tasted_at, score_100, comment,
+           version, created_at, updated_at)
+          VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 84, ?, 1, ?, ?)`,
+      ).bind(
+        ulid(),
+        spaceId,
+        wine.id,
+        owner.data.user.id,
+        now,
+        "Me pareció más ligero de lo que esperaba.",
+        now,
+        now,
+      ),
+    ]);
+
+    let sawSources: string[] = [];
+    let sawTasting: string[] = [];
+    const outcome = await regenerateTastingComparison(env.DB, {
+      locale: "es",
+      narrative: {
+        compare: async ({ sources, tasting }) => {
+          sawSources = sources;
+          sawTasting = tasting;
+          return "Tú lo encontraste más ligero; el productor lo describe maduro y con cuerpo.";
+        },
+        compose: async () => null,
+      },
+      principal,
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(outcome).toBe("ok");
+    expect(sawSources).toContain("The producer describes it as ripe and full-bodied.");
+    // The reader's own words travel; Ana's score does too, but never her prose.
+    const tastingText = sawTasting.join(" || ");
+    expect(tastingText).toContain("Me pareció más ligero");
+    expect(tastingText).toContain("Ana rated it 91");
+    expect(tastingText).not.toContain("ANA_PRIVATE_PROSE");
+
+    const factsResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const facts = WineFactsResponseSchema.parse(await factsResponse.json()).data.facts;
+    const comparisons = facts.filter(
+      (fact: Fact) => fact.predicate === "tasting.comparison" && fact.status !== "retired",
+    );
+    expect(comparisons).toHaveLength(1);
+    expect(comparisons[0]?.evidenceClass).toBe("inferred");
+    expect(comparisons[0]?.citations.length).toBeGreaterThan(0);
+  });
+
+  it("writes no comparison when the wine has been researched but never tasted", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWineWithGrape(spaceId);
+    const outcome = await regenerateTastingComparison(env.DB, {
+      locale: "es",
+      narrative: {
+        compare: async () => {
+          throw new Error("The model must not be called with one side missing.");
+        },
+        compose: async () => null,
+      },
+      principal,
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: wine.id,
+    });
+    expect(outcome).toBe("no_material");
   });
 });

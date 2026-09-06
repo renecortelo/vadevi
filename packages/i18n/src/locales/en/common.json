@@ -357,6 +357,16 @@
     "sourceDetails": "Source",
     "highlightsTitle": "What we found",
     "summaryTitle": "About this wine",
+    "comparison": {
+      "title": "Your tasting against the sources",
+      "empty": "No comparison yet. Once the wine is researched and someone has tasted it, a paragraph can be written here setting the two accounts side by side.",
+      "action": "Write the comparison",
+      "rewriteAction": "Rewrite the comparison",
+      "writing": "Writing…",
+      "inferred": "A reading of what is already recorded, not a new source",
+      "noMaterial": "One of the two sides is missing: research the wine or record a tasting, then try again.",
+      "error": "The comparison could not be written. Try again."
+    },
     "sourceType": {
       "producer": "Producer",
       "regulator": "Regulator",
@@ -404,7 +414,8 @@
       "region_country": "Country of the region",
       "region_classification": "Region classification",
       "curiosity_highlight": "Detail",
-      "research_summary": "Research summary"
+      "research_summary": "Research summary",
+      "tasting_comparison": "Tasting against the sources"
     },
     "research": {
       "eyebrow": "Optional research",

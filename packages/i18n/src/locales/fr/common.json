@@ -357,6 +357,16 @@
     "sourceDetails": "Source",
     "highlightsTitle": "Ce que nous avons trouvé",
     "summaryTitle": "À propos de ce vin",
+    "comparison": {
+      "title": "Votre dégustation face aux sources",
+      "empty": "Pas encore de comparaison. Une fois le vin recherché et dégusté, un paragraphe peut être écrit ici pour mettre les deux versions côte à côte.",
+      "action": "Écrire la comparaison",
+      "rewriteAction": "Réécrire la comparaison",
+      "writing": "Rédaction…",
+      "inferred": "Une lecture de ce qui est déjà enregistré, pas une nouvelle source",
+      "noMaterial": "Il manque l'un des deux côtés : recherchez le vin ou enregistrez une dégustation, puis réessayez.",
+      "error": "La comparaison n'a pas pu être écrite. Réessayez."
+    },
     "sourceType": {
       "producer": "Producteur",
       "regulator": "Organisme de contrôle",
@@ -404,7 +414,8 @@
       "region_country": "Pays de l'appellation",
       "region_classification": "Classification de l'appellation",
       "curiosity_highlight": "Détail",
-      "research_summary": "Synthèse de la recherche"
+      "research_summary": "Synthèse de la recherche",
+      "tasting_comparison": "Dégustation face aux sources"
     },
     "research": {
       "eyebrow": "Recherche facultative",

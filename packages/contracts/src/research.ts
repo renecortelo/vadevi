@@ -97,10 +97,25 @@ export const RegenerateNarrativeResponseSchema = z
   .strict()
   .openapi("RegenerateNarrativeResponse");
 
+// The tasting comparison is the same small command in a different direction: it
+// reads what the group tasted against what the sources say, and answers only
+// whether a fresh paragraph now exists.
+export const TastingComparisonRequestSchema = z
+  .object({ locale: SupportedLocaleSchema })
+  .strict()
+  .openapi("TastingComparisonRequest");
+
+export const TastingComparisonResponseSchema = z
+  .object({ data: z.object({ status: z.enum(["regenerated", "no_material"]) }).strict() })
+  .strict()
+  .openapi("TastingComparisonResponse");
+
 export type CreateResearchJobRequest = z.infer<typeof CreateResearchJobRequestSchema>;
 export type RegenerateNarrativeRequest = z.infer<typeof RegenerateNarrativeRequestSchema>;
 export type RegenerateNarrativeResponse = z.infer<typeof RegenerateNarrativeResponseSchema>;
 export type ResearchAttempt = z.infer<typeof ResearchAttemptSchema>;
+export type TastingComparisonRequest = z.infer<typeof TastingComparisonRequestSchema>;
+export type TastingComparisonResponse = z.infer<typeof TastingComparisonResponseSchema>;
 export type ResearchJob = z.infer<typeof ResearchJobSchema>;
 export type ResearchJobResponse = z.infer<typeof ResearchJobResponseSchema>;
 export type ResearchJobWarning = z.infer<typeof ResearchJobWarningSchema>;

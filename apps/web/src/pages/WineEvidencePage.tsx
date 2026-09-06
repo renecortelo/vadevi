@@ -19,6 +19,7 @@ import {
   createResearchJob,
   getWineFacts,
   regenerateNarrative,
+  regenerateTastingComparison,
   rejectFact,
 } from "../services/assistant";
 import { useSession } from "../session/SessionContext";
@@ -222,6 +223,8 @@ export function WineEvidencePage() {
   const [rejectingId, setRejectingId] = useState<string | null>(null);
   const [pendingDiscard, setPendingDiscard] = useState<Fact | null>(null);
   const [rewriting, setRewriting] = useState(false);
+  const [comparing, setComparing] = useState(false);
+  const [comparisonNotice, setComparisonNotice] = useState<string | null>(null);
   const [researching, setResearching] = useState(false);
   const [photoAdopted, setPhotoAdopted] = useState(false);
   const [researchJob, setResearchJob] = useState<ResearchJob | null>(null);
@@ -281,12 +284,27 @@ export function WineEvidencePage() {
     return summaries.length === 0 ? null : (summaries[summaries.length - 1] ?? null);
   }, [response]);
 
+  // The comparison paragraph has its own place on the page, under the narrative,
+  // so it too is pulled out of the per-predicate grouping.
+  const comparison = useMemo(() => {
+    const paragraphs = (response?.data.facts ?? []).filter(
+      (fact: Fact) => fact.predicate === "tasting.comparison" && fact.status !== "retired",
+    );
+    return paragraphs.length === 0 ? null : (paragraphs[paragraphs.length - 1] ?? null);
+  }, [response]);
+
   const factsByPredicate = useMemo(() => {
     const groups = new Map<Fact["predicate"], Fact[]>();
     for (const fact of response?.data.facts ?? []) {
       // A discarded claim is retired, not deleted — it stays in the record for the
       // audit trail, but the reader threw it out, so it must leave their screen.
-      if (fact.predicate === "research.summary" || fact.status === "retired") continue;
+      if (
+        fact.predicate === "research.summary" ||
+        fact.predicate === "tasting.comparison" ||
+        fact.status === "retired"
+      ) {
+        continue;
+      }
       const facts = groups.get(fact.predicate) ?? [];
       facts.push(fact);
       groups.set(fact.predicate, facts);
@@ -328,6 +346,33 @@ export function WineEvidencePage() {
       setError(t("evidence.rewriteError"));
     } finally {
       setRewriting(false);
+    }
+  }
+
+  // Set the tasting against the sources. The paragraph is written once and kept
+  // as evidence — it only changes when someone tastes the wine again or the
+  // research turns up something new — so this is a deliberate act, not something
+  // the page spends a model call on every time it opens.
+  async function writeComparison() {
+    if (user === null || wineId.length === 0 || !online) return;
+    setComparing(true);
+    setError(null);
+    setComparisonNotice(null);
+    try {
+      const result = await regenerateTastingComparison(
+        user,
+        spaceId,
+        wineId,
+        researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
+      );
+      if (result.data.status === "no_material") {
+        setComparisonNotice(t("evidence.comparison.noMaterial"));
+      }
+      await loadFacts();
+    } catch {
+      setError(t("evidence.comparison.error"));
+    } finally {
+      setComparing(false);
     }
   }
 
@@ -499,6 +544,38 @@ export function WineEvidencePage() {
               )}
             </div>
           </div>
+        </section>
+      )}
+      {loading ? null : (
+        <section aria-labelledby="tasting-comparison" className="research-narrative">
+          <h2 id="tasting-comparison">{t("evidence.comparison.title")}</h2>
+          {comparison === null ? (
+            <p className="research-narrative__text">{t("evidence.comparison.empty")}</p>
+          ) : (
+            <p className="research-narrative__text">{String(comparison.value)}</p>
+          )}
+          <div className="research-narrative__footer">
+            <span className="fact-card__evidence">{t("evidence.comparison.inferred")}</span>
+            <div className="research-narrative__actions">
+              <button
+                className="fact-card__discard"
+                disabled={comparing || !online}
+                onClick={() => void writeComparison()}
+                type="button"
+              >
+                {comparing
+                  ? t("evidence.comparison.writing")
+                  : comparison === null
+                    ? t("evidence.comparison.action")
+                    : t("evidence.comparison.rewriteAction")}
+              </button>
+            </div>
+          </div>
+          {comparisonNotice === null ? null : (
+            <p className="research-panel__notice" role="status">
+              {comparisonNotice}
+            </p>
+          )}
         </section>
       )}
       <div className="fact-groups">
