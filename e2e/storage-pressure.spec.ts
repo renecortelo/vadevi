@@ -1,4 +1,4 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Page } from "./fixtures/server";
 
 /**
  * §14.4 requires a warning before large offline photo accumulation, and states

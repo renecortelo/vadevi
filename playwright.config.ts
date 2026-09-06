@@ -52,11 +52,11 @@ export default defineConfig({
         The drills that deliberately break the network, kept apart.
 
         They cut requests off mid-flight — that is the thing they exist to test —
-        and Wrangler has three times not survived it, taking every later test
-        with it and turning one broken server into a dozen confusing failures.
-        Two attempts to pin the cause were each only half right, so this is
-        containment rather than a third guess: when it happens now, it happens
-        to these and to nothing else.
+        and Wrangler has repeatedly not survived it. Keeping them in their own
+        project contained the blast radius; the server itself is now supervised
+        (`scripts/serve-e2e.ts`) and every test waits for it (`fixtures/server`),
+        so a death costs the one test in flight rather than the rest of the run.
+        They stay separate anyway: they mutate service-worker and cache state.
       */
       name: "resilience",
       testMatch: resilience,
@@ -89,7 +89,11 @@ export default defineConfig({
       stderr: "pipe",
     },
     {
-      command: `pnpm exec wrangler dev --config wrangler.example.jsonc --local --port ${port}`,
+      // Supervised rather than run directly: wrangler dev has died mid-suite on
+      // CI, and Playwright never restarts a webServer, so one death failed every
+      // later test with ERR_CONNECTION_REFUSED. `scripts/serve-e2e.ts` brings it
+      // back; the resilience fixture waits for it before each test.
+      command: `pnpm exec tsx scripts/serve-e2e.ts ${port}`,
       url: `${baseURL}/health`,
       reuseExistingServer: process.env.CI !== "true",
       timeout: 120_000,

@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures/server";
 import type { Page } from "@playwright/test";
 
 import { completeOnboarding, signIn } from "./fixtures/sign-in";
