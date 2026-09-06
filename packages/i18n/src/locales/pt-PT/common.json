@@ -804,6 +804,19 @@
       "conclusion": "O veredito pessoal é seu. Um evento partilhado nunca o transforma na nota de outra pessoa."
     },
     "notSet": "Não indicado",
+    "venue": {
+      "searchAction": "Procurar o local",
+      "searching": "A procurar…",
+      "hereAction": "Estou aqui",
+      "locating": "A localizar…",
+      "noMatches": "Esse local não foi encontrado. Pode escrever o nome à mão.",
+      "error": "Não foi possível procurar o local. Tente novamente.",
+      "noGeolocation": "Este navegador não nos consegue dar a sua localização.",
+      "locationDenied": "Não foi possível obter a sua localização. Pode procurar o local pelo nome.",
+      "here": "Aqui",
+      "hereDescription": "A sua posição atual, sem nome no mapa",
+      "attribution": "Locais do OpenStreetMap, © colaboradores do OpenStreetMap"
+    },
     "scale": {
       "1": "Muito baixo",
       "2": "Baixo",

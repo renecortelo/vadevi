@@ -29,6 +29,7 @@ export const RuntimeConfigResponseSchema = z
             assistant: z.boolean(),
             externalResearch: z.boolean(),
             priceLookup: z.boolean(),
+            venuePlaceSearch: z.boolean(),
             voiceInput: z.boolean(),
           })
           .strict(),
@@ -66,6 +67,7 @@ export const BootstrapResponseSchema = z
             bottlePhotoSearch: z.boolean(),
             externalResearch: z.boolean(),
             priceLookup: z.boolean(),
+            venuePlaceSearch: z.boolean(),
             voiceInput: z.boolean(),
           })
           .strict(),

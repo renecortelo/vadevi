@@ -8,13 +8,18 @@ import {
 } from "@vadevi/contracts";
 
 import { authentication } from "./middleware/authentication";
-import { externalResearchEnabled, imageSearchEnabled } from "./adapters/research-factory";
+import {
+  externalResearchEnabled,
+  imageSearchEnabled,
+  placeSearchEnabled,
+} from "./adapters/research-factory";
 import { requestContext } from "./middleware/request-context";
 import { security } from "./middleware/security";
 import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
 import { registerActionDraftRoutes } from "./routes/action-drafts";
 import { registerAssistantRoutes } from "./routes/assistant";
 import { registerCellarRoutes } from "./routes/cellar";
+import { registerPlaceRoutes } from "./routes/places";
 import { registerProvenanceRoutes } from "./routes/provenance";
 import { registerReleaseRoutes } from "./routes/release";
 import { registerResearchRoutes } from "./routes/research";
@@ -227,6 +232,7 @@ function runtimeConfigPayload(environment: ApiEnvironment["Bindings"], requestHo
         assistant: true,
         externalResearch: externalResearchEnabled(environment),
         priceLookup: false,
+        venuePlaceSearch: placeSearchEnabled(environment),
         voiceInput: false,
       },
     },
@@ -310,6 +316,7 @@ export function createApi() {
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
+      placeSearch: placeSearchEnabled(context.env),
       principal: context.get("principal"),
       requestId: context.get("requestId"),
     });
@@ -326,6 +333,7 @@ export function createApi() {
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
+      placeSearch: placeSearchEnabled(context.env),
       principal: context.get("principal"),
       requestId: context.get("requestId"),
       update: context.req.valid("json"),
@@ -352,6 +360,7 @@ export function createApi() {
   registerCellarRoutes(app);
   registerWineMemoryRoutes(app);
   registerTastingSessionRoutes(app);
+  registerPlaceRoutes(app);
   registerProvenanceRoutes(app);
   registerResearchRoutes(app);
 

@@ -26,7 +26,11 @@ import {
   updateSpace,
 } from "../repositories/spaces";
 import type { ApiEnvironment } from "../types";
-import { externalResearchEnabled, imageSearchEnabled } from "../adapters/research-factory";
+import {
+  externalResearchEnabled,
+  imageSearchEnabled,
+  placeSearchEnabled,
+} from "../adapters/research-factory";
 
 const IdempotencyHeadersSchema = z.object({
   "Idempotency-Key": IdempotencyKeySchema.openapi({
@@ -423,6 +427,7 @@ export function registerSpaceRoutes(app: OpenAPIHono<ApiEnvironment>) {
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
+      placeSearch: placeSearchEnabled(context.env),
       principal: context.get("principal"),
       requestId: context.get("requestId"),
       token: context.req.valid("param").token,

@@ -38,6 +38,7 @@ const EnvironmentSchema = z
     FIREBASE_AUTH_PROXY: z.enum(["true", "false"]).default("false"),
     FIREBASE_PROJECT_ID: z.string().min(1).default("demo-vadevi"),
     FIREBASE_WEB_API_KEY: z.string().min(1).default("local-emulator-placeholder"),
+    PLACES_PROVIDER: z.enum(["none", "openstreetmap"]).default("none"),
     RESEARCH_PROVIDER: z.enum(["none", "open_data"]).default("none"),
     VITE_API_BASE_URL: z.string().startsWith("/").default("/api/v1"),
     VITE_FIREBASE_USE_EMULATOR: z.enum(["true", "false"]).default("true"),
@@ -48,6 +49,23 @@ const EnvironmentSchema = z
         code: "custom",
         message: "Cloudflare AI requires an explicit @cf/* model allowlist entry.",
         path: ["AI_MODEL"],
+      });
+    }
+
+    // Nominatim's usage policy requires an identifying agent with a contact, the
+    // same one open-data research needs — so venue lookup demands it too, even
+    // where research itself is off.
+    if (
+      environment.PLACES_PROVIDER === "openstreetmap" &&
+      (environment.EXTERNAL_API_USER_AGENT === undefined ||
+        !/VaDeVi\//.test(environment.EXTERNAL_API_USER_AGENT) ||
+        !/https:\/\//.test(environment.EXTERNAL_API_USER_AGENT))
+    ) {
+      context.addIssue({
+        code: "custom",
+        message:
+          "OpenStreetMap venue lookup requires an identifying VaDeVi/* user agent with HTTPS contact.",
+        path: ["EXTERNAL_API_USER_AGENT"],
       });
     }
 

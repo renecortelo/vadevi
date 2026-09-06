@@ -804,6 +804,19 @@
       "conclusion": "Het persoonlijke oordeel blijft van jou. Een gedeeld evenement maakt er nooit de notitie van iemand anders van."
     },
     "notSet": "Niet ingevuld",
+    "venue": {
+      "searchAction": "Zoek de plek",
+      "searching": "Bezig met zoeken…",
+      "hereAction": "Ik ben hier",
+      "locating": "Locatie bepalen…",
+      "noMatches": "Die plek is niet gevonden. Je kunt de naam met de hand invullen.",
+      "error": "De plek kon niet worden opgezocht. Probeer het opnieuw.",
+      "noGeolocation": "Deze browser kan ons je locatie niet geven.",
+      "locationDenied": "Je locatie kon niet worden gelezen. Je kunt de plek op naam zoeken.",
+      "here": "Hier",
+      "hereDescription": "Je huidige positie, naamloos op de kaart",
+      "attribution": "Plaatsen van OpenStreetMap, © OpenStreetMap-bijdragers"
+    },
     "scale": {
       "1": "Zeer laag",
       "2": "Laag",

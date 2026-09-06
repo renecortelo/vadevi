@@ -804,6 +804,19 @@
       "conclusion": "El veredicto personal es tuyo. Un evento compartido nunca lo convierte en la nota de otra persona."
     },
     "notSet": "Sin indicar",
+    "venue": {
+      "searchAction": "Buscar el lugar",
+      "searching": "Buscando…",
+      "hereAction": "Estoy aquí",
+      "locating": "Localizando…",
+      "noMatches": "No se encontró ese lugar. Puedes escribir el nombre a mano.",
+      "error": "No se pudo buscar el lugar. Inténtalo de nuevo.",
+      "noGeolocation": "Este navegador no puede darnos tu ubicación.",
+      "locationDenied": "No se pudo obtener tu ubicación. Puedes buscar el lugar por su nombre.",
+      "here": "Aquí",
+      "hereDescription": "Tu ubicación actual, sin nombre en el mapa",
+      "attribution": "Lugares de OpenStreetMap, © colaboradores de OpenStreetMap"
+    },
     "scale": {
       "1": "Muy bajo",
       "2": "Bajo",

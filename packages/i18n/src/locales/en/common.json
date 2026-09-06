@@ -804,6 +804,19 @@
       "conclusion": "Keep the personal verdict yours. A shared event never turns it into someone else's note."
     },
     "notSet": "Not set",
+    "venue": {
+      "searchAction": "Find the place",
+      "searching": "Searching…",
+      "hereAction": "I'm here",
+      "locating": "Locating…",
+      "noMatches": "That place was not found. You can type the name by hand.",
+      "error": "The place could not be looked up. Try again.",
+      "noGeolocation": "This browser cannot give us your location.",
+      "locationDenied": "Your location could not be read. You can search the place by name.",
+      "here": "Here",
+      "hereDescription": "Your current position, unnamed on the map",
+      "attribution": "Places from OpenStreetMap, © OpenStreetMap contributors"
+    },
     "scale": {
       "1": "Very low",
       "2": "Low",

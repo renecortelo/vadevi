@@ -170,6 +170,8 @@ async function createDeepNote(
         venueArea: "Catalunya",
         venueCity: "Barcelona",
         venueCountryCode: "ES",
+        venueLatitude: 41.385123,
+        venueLongitude: 2.1734,
         venueName: "Casa de Prueba",
       },
       descriptors: [
@@ -385,6 +387,9 @@ describe("Deep tasting and collaborative sessions", () => {
     expect(readBack.context?.venueName).toBe("Casa de Prueba");
     expect(readBack.context?.venueCity).toBe("Barcelona");
     expect(readBack.context?.venueCountryCode).toBe("ES");
+    // The point of the tasting round-trips as a pair — never half of one.
+    expect(readBack.context?.venueLatitude).toBe(41.385123);
+    expect(readBack.context?.venueLongitude).toBe(2.1734);
     const hiddenRead = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${ownerNote.id}`,
       { headers: { Authorization: `Bearer ${memberToken}` } },

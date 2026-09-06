@@ -130,6 +130,50 @@ export interface ImageSearchPort {
 }
 
 /**
+ * Optional place lookup for "where did we taste this".
+ *
+ * A tasting happens somewhere — a bar, a winery, a friend's table — and typing
+ * that place by hand loses it: two visits to the same restaurant become two
+ * different strings. A geocoder resolves a typed name to a place with a point, so
+ * the venue is recorded once and consistently.
+ *
+ * The same fixed-host discipline applies as to every other provider: one official
+ * API host, its own results, no arbitrary page ever fetched. What the reader
+ * typed leaves the device to reach it, so a deployment enables this only after
+ * its own privacy review, and it defaults off. A `near` point is optional and
+ * only ever the reader's own position, sent when they explicitly ask for "places
+ * around me".
+ */
+export type PlaceSearchRequest = Readonly<{
+  locale: ResearchLocale;
+  /** The reader's own position, only when they asked to search around it. */
+  near?: Readonly<{ latitude: number; longitude: number }>;
+  query: string;
+}>;
+
+export type PlaceCandidate = Readonly<{
+  /** Sub-city area: neighbourhood, district, county — whatever the source gives. */
+  area: string | null;
+  city: string | null;
+  countryCode: string | null;
+  /** The full one-line address, for telling two same-named places apart. */
+  displayName: string;
+  latitude: number;
+  longitude: number;
+  name: string;
+}>;
+
+export interface PlaceSearchPort {
+  search(input: PlaceSearchRequest): Promise<ExternalResult<PlaceCandidate[]>>;
+  /** The place at a point, for "I am here". Null-ish results come back empty. */
+  reverse(input: {
+    latitude: number;
+    locale: ResearchLocale;
+    longitude: number;
+  }): Promise<ExternalResult<PlaceCandidate[]>>;
+}
+
+/**
  * Optional faithful translation of gathered external text into the reader's
  * language — the web returns mostly English snippets even for a Spanish wine.
  * This is a meaning-preserving transform, never generation: an item is returned
