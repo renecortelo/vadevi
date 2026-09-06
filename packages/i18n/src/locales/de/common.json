@@ -357,6 +357,16 @@
     "sourceDetails": "Quelle",
     "highlightsTitle": "Das haben wir gefunden",
     "summaryTitle": "Über diesen Wein",
+    "comparison": {
+      "title": "Ihre Verkostung neben den Quellen",
+      "empty": "Noch kein Vergleich. Sobald der Wein recherchiert und verkostet wurde, kann hier ein Absatz entstehen, der beide Darstellungen nebeneinanderstellt.",
+      "action": "Vergleich schreiben",
+      "rewriteAction": "Vergleich neu schreiben",
+      "writing": "Wird geschrieben…",
+      "inferred": "Eine Lesart des bereits Erfassten, keine neue Quelle",
+      "noMaterial": "Eine der beiden Seiten fehlt: Recherchieren Sie den Wein oder erfassen Sie eine Verkostung und versuchen Sie es erneut.",
+      "error": "Der Vergleich konnte nicht geschrieben werden. Bitte erneut versuchen."
+    },
     "sourceType": {
       "producer": "Erzeuger",
       "regulator": "Aufsichtsbehörde",
@@ -404,7 +414,8 @@
       "region_country": "Land der Herkunft",
       "region_classification": "Klassifizierung der Herkunft",
       "curiosity_highlight": "Detail",
-      "research_summary": "Rechercheüberblick"
+      "research_summary": "Rechercheüberblick",
+      "tasting_comparison": "Verkostung neben den Quellen"
     },
     "research": {
       "eyebrow": "Optionale Recherche",

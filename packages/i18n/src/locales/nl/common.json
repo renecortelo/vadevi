@@ -357,6 +357,16 @@
     "sourceDetails": "Bron",
     "highlightsTitle": "Wat we vonden",
     "summaryTitle": "Over deze wijn",
+    "comparison": {
+      "title": "Jouw proeverij naast de bronnen",
+      "empty": "Nog geen vergelijking. Zodra de wijn is onderzocht en iemand hem heeft geproefd, kan hier een alinea komen die beide lezingen naast elkaar zet.",
+      "action": "Vergelijking schrijven",
+      "rewriteAction": "Vergelijking opnieuw schrijven",
+      "writing": "Bezig met schrijven…",
+      "inferred": "Een lezing van wat al is vastgelegd, geen nieuwe bron",
+      "noMaterial": "Een van beide kanten ontbreekt: onderzoek de wijn of leg een proeverij vast en probeer het opnieuw.",
+      "error": "De vergelijking kon niet worden geschreven. Probeer het opnieuw."
+    },
     "sourceType": {
       "producer": "Producent",
       "regulator": "Toezichthouder",
@@ -404,7 +414,8 @@
       "region_country": "Land van de streek",
       "region_classification": "Classificatie van de streek",
       "curiosity_highlight": "Detail",
-      "research_summary": "Onderzoekssamenvatting"
+      "research_summary": "Onderzoekssamenvatting",
+      "tasting_comparison": "Proeverij naast de bronnen"
     },
     "research": {
       "eyebrow": "Optioneel onderzoek",

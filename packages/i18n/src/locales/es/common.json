@@ -357,6 +357,16 @@
     "sourceDetails": "Fuente",
     "highlightsTitle": "Lo que encontramos",
     "summaryTitle": "Sobre este vino",
+    "comparison": {
+      "title": "Tu cata frente a las fuentes",
+      "empty": "Aún no hay comparación. Cuando el vino esté investigado y alguien lo haya catado, se puede escribir aquí un párrafo que ponga las dos versiones una al lado de la otra.",
+      "action": "Escribir la comparación",
+      "rewriteAction": "Rehacer la comparación",
+      "writing": "Escribiendo…",
+      "inferred": "Lectura de lo ya registrado, no una fuente nueva",
+      "noMaterial": "Falta una de las dos partes: investiga el vino o registra una cata y vuelve a intentarlo.",
+      "error": "No se pudo escribir la comparación. Inténtalo de nuevo."
+    },
     "sourceType": {
       "producer": "Productor",
       "regulator": "Organismo regulador",
@@ -404,7 +414,8 @@
       "region_country": "País de la denominación",
       "region_classification": "Clasificación de la denominación",
       "curiosity_highlight": "Dato",
-      "research_summary": "Resumen de la investigación"
+      "research_summary": "Resumen de la investigación",
+      "tasting_comparison": "Cata frente a las fuentes"
     },
     "research": {
       "eyebrow": "Investigación opcional",

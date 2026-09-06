@@ -27,6 +27,7 @@ export const FactPredicateSchema = z.enum([
   "pairing.note",
   "research.summary",
   "further_reading.summary",
+  "tasting.comparison",
 ]);
 
 /**
@@ -41,6 +42,7 @@ export const ADDITIVE_FACT_PREDICATES: ReadonlySet<z.infer<typeof FactPredicateS
   "pairing.note",
   "research.summary",
   "further_reading.summary",
+  "tasting.comparison",
 ]);
 export const SourceTypeSchema = z.enum([
   "producer",
@@ -74,6 +76,7 @@ function predicateValueIsValid(predicate: z.infer<typeof FactPredicateSchema>, v
     case "pairing.note":
     case "research.summary":
     case "further_reading.summary":
+    case "tasting.comparison":
       return typeof value === "string";
     case "identity.grape_codes":
       return Array.isArray(value);

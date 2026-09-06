@@ -357,6 +357,16 @@
     "sourceDetails": "Fonte",
     "highlightsTitle": "O que encontrámos",
     "summaryTitle": "Sobre este vinho",
+    "comparison": {
+      "title": "A sua prova face às fontes",
+      "empty": "Ainda não há comparação. Quando o vinho estiver investigado e alguém o tiver provado, pode escrever-se aqui um parágrafo que coloque as duas versões lado a lado.",
+      "action": "Escrever a comparação",
+      "rewriteAction": "Refazer a comparação",
+      "writing": "A escrever…",
+      "inferred": "Uma leitura do que já está registado, não uma fonte nova",
+      "noMaterial": "Falta uma das duas partes: investigue o vinho ou registe uma prova e tente novamente.",
+      "error": "Não foi possível escrever a comparação. Tente novamente."
+    },
     "sourceType": {
       "producer": "Produtor",
       "regulator": "Entidade reguladora",
@@ -404,7 +414,8 @@
       "region_country": "País da denominação",
       "region_classification": "Classificação da denominação",
       "curiosity_highlight": "Detalhe",
-      "research_summary": "Resumo da pesquisa"
+      "research_summary": "Resumo da pesquisa",
+      "tasting_comparison": "Prova face às fontes"
     },
     "research": {
       "eyebrow": "Pesquisa opcional",

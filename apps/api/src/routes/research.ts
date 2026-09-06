@@ -7,11 +7,18 @@ import {
   RegenerateNarrativeResponseSchema,
   ResearchJobPathSchema,
   ResearchJobResponseSchema,
+  TastingComparisonRequestSchema,
+  TastingComparisonResponseSchema,
   WineFactsPathSchema,
 } from "@vadevi/contracts";
 
 import { createResearchPorts } from "../adapters/research-factory";
-import { createResearchJob, getResearchJob, regenerateNarrative } from "../repositories/research";
+import {
+  createResearchJob,
+  getResearchJob,
+  regenerateNarrative,
+  regenerateTastingComparison,
+} from "../repositories/research";
 import { reserveProviderBudget } from "../services/usage";
 import type { ApiEnvironment } from "../types";
 
@@ -114,6 +121,36 @@ const regenerateNarrativeRoute = createRoute({
   },
 });
 
+const regenerateComparisonRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/wines/{wineId}/tasting-comparison",
+  operationId: "regenerateTastingComparison",
+  tags: ["Research"],
+  summary: "Write the paragraph setting the group's tasting against the wine's sources",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    params: WineFactsPathSchema,
+    body: {
+      content: { "application/json": { schema: TastingComparisonRequestSchema } },
+      required: true,
+    },
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: TastingComparisonResponseSchema } },
+      description: "A fresh paragraph, or an explicit note that one side had nothing to say.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication is required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The authorized wine is unavailable, or no model is configured.",
+    },
+  },
+});
+
 function errorEnvelope(
   requestId: string,
   code: "IDEMPOTENCY_CONFLICT" | "NOT_FOUND",
@@ -195,6 +232,41 @@ export function registerResearchRoutes(app: OpenAPIHono<ApiEnvironment>) {
     }
     return context.json(
       RegenerateNarrativeResponseSchema.parse({
+        data: { status: outcome === "ok" ? "regenerated" : "no_material" },
+      }),
+      200,
+    );
+  });
+
+  app.openapi(regenerateComparisonRoute, async (context) => {
+    const params = context.req.valid("param");
+    const ports = createResearchPorts(context.env.DB!, context.env);
+    // One model call, metered like the narrative's: reading the record the reader
+    // already has costs no provider lookup.
+    const withinBudget = await reserveProviderBudget(context.env.DB!, {
+      firebaseUid: context.get("principal").firebaseUid,
+      metric: "ai_language_calls",
+      nowIso: new Date().toISOString(),
+      spaceId: params.spaceId,
+    });
+    const outcome = withinBudget
+      ? await regenerateTastingComparison(context.env.DB!, {
+          locale: context.req.valid("json").locale,
+          narrative: ports.narrative ?? null,
+          principal: context.get("principal"),
+          requestId: context.get("requestId"),
+          spaceId: params.spaceId,
+          wineId: params.wineId,
+        })
+      : "no_material";
+    if (outcome === "unavailable") {
+      return context.json(
+        errorEnvelope(context.get("requestId"), "NOT_FOUND", "The resource was not found."),
+        404,
+      );
+    }
+    return context.json(
+      TastingComparisonResponseSchema.parse({
         data: { status: outcome === "ok" ? "regenerated" : "no_material" },
       }),
       200,
