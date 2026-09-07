@@ -809,7 +809,7 @@
       "searching": "Bezig met zoeken…",
       "hereAction": "Ik ben hier",
       "locating": "Locatie bepalen…",
-      "noMatches": "Die plek is niet gevonden. Je kunt de naam met de hand invullen.",
+      "noMatches": "OpenStreetMap kent die plek niet. Ben je er? Druk op “Ik ben hier”. Zo niet, zoek hem in Google Maps, kopieer de coördinaten en plak ze hier.",
       "error": "De plek kon niet worden opgezocht. Probeer het opnieuw.",
       "noGeolocation": "Deze browser kan ons je locatie niet geven.",
       "locationDenied": "Je locatie kon niet worden gelezen. Je kunt de plek op naam zoeken.",
@@ -819,7 +819,10 @@
       "unordered": "Zonder je locatie kunnen deze niet op afstand worden gesorteerd; verre plekken kunnen dezelfde naam hebben.",
       "mapAction": "Openen in Google Maps",
       "mapTitle": "Opent precies dit punt in Google Maps",
-      "mapTitleByName": "Zoekt deze naam in Google Maps; zonder coördinaten is het misschien niet dezelfde plek"
+      "mapTitleByName": "Zoekt deze naam in Google Maps; zonder coördinaten is het misschien niet dezelfde plek",
+      "pasteHint": "Staat hij er niet bij? Plak hier de Google Maps-coördinaten en geef hem zelf een naam.",
+      "pastedPoint": "Coördinaten opgeslagen. Geef de plek een naam naar keuze.",
+      "pastedName": "Naamloze plek"
     },
     "scale": {
       "1": "Zeer laag",

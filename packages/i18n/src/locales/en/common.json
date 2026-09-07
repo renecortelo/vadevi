@@ -809,7 +809,7 @@
       "searching": "Searching…",
       "hereAction": "I'm here",
       "locating": "Locating…",
-      "noMatches": "That place was not found. You can type the name by hand.",
+      "noMatches": "OpenStreetMap does not know that place. If you are there, press “I'm here”. Otherwise find it in Google Maps, copy its coordinates and paste them here.",
       "error": "The place could not be looked up. Try again.",
       "noGeolocation": "This browser cannot give us your location.",
       "locationDenied": "Your location could not be read. You can search the place by name.",
@@ -819,7 +819,10 @@
       "unordered": "Without your location these cannot be sorted by distance; far-away places may share the name.",
       "mapAction": "Open in Google Maps",
       "mapTitle": "Opens this exact point in Google Maps",
-      "mapTitleByName": "Searches Google Maps for this name; with no coordinates it may not be the same place"
+      "mapTitleByName": "Searches Google Maps for this name; with no coordinates it may not be the same place",
+      "pasteHint": "Not listed? Paste its Google Maps coordinates here and give it a name yourself.",
+      "pastedPoint": "Coordinates saved. Give the place whatever name you like.",
+      "pastedName": "Unnamed place"
     },
     "scale": {
       "1": "Very low",

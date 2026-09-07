@@ -34,8 +34,10 @@ looked up in the background.
   readily as the one down the road, and the reader is standing in exactly one of
   them. The browser prompts; a refusal is remembered and never asked again in
   that form, and the search still runs — unsorted, and the interface says so.
-- **What reaches the provider is a coarse box**, roughly ±55 km around them, to
-  bias its own ranking. The precise position never leaves the Worker: the
+- **What reaches the provider is a coarse box**, roughly ±55 km around them. The
+  search runs inside that box first — a small local place carries little global
+  weight and would otherwise lose to same-named matches in other countries — and
+  widens to the whole world only when the box came back empty. The precise position never leaves the Worker: the
   distance ordering is computed there, from the point the browser gave us, and
   is applied on the way out of the cache as well as into it so nobody inherits a
   neighbour's ordering.
@@ -60,6 +62,18 @@ full display name, and a point. Every string passes through `sanitizeExternalTex
 — control-character stripping, length caps, prompt-injection rejection — and a
 result whose coordinates cannot be parsed is dropped rather than stored as a name
 with no point.
+
+## A point the reader pastes in
+
+OpenStreetMap holds the places somebody mapped, so a small bar may genuinely not
+be in it. The venue field therefore accepts a pasted point: the reader finds the
+place in a map that does know it, copies the coordinates, and pastes them.
+
+This is string parsing and nothing else. No request is made, no map provider's
+API is called, and no provider's content is stored — two numbers are a
+geographic fact the reader supplied by hand, and the name is the reader's own. A
+shortened link is rejected rather than resolved, because resolving one would mean
+fetching it from the provider, which this deliberately never does.
 
 ## What is stored
 

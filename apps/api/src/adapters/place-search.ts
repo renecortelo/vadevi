@@ -293,6 +293,38 @@ export class NominatimPlaceSearchAdapter implements PlaceSearchPort {
     );
   }
 
+  /** One search URL. `bounded` restricts to the box instead of merely biasing. */
+  private searchUrl(
+    query: string,
+    locale: ResearchLocale,
+    near: { latitude: number; longitude: number } | null,
+    bounded = false,
+  ): URL {
+    const url = new URL(`https://${nominatimHost}/search`);
+    for (const [name, value] of Object.entries({
+      addressdetails: "1",
+      format: "jsonv2",
+      // With a position to order by, ask for a wider net and keep the six
+      // nearest: the closest match is often not in the provider's own top six.
+      limit: near === null ? "6" : "20",
+      q: query,
+    })) {
+      url.searchParams.set(name, value);
+    }
+    url.searchParams.set("accept-language", locale);
+    if (near !== null) {
+      const box = 0.5;
+      url.searchParams.set(
+        "viewbox",
+        [near.longitude - box, near.latitude - box, near.longitude + box, near.latitude + box]
+          .map((value) => value.toFixed(3))
+          .join(","),
+      );
+      if (bounded) url.searchParams.set("bounded", "1");
+    }
+    return url;
+  }
+
   async search(input: PlaceSearchRequest): Promise<ExternalResult<PlaceCandidate[]>> {
     const query = input.query.trim().slice(0, 200);
     if (query.length < 3) {
@@ -307,34 +339,38 @@ export class NominatimPlaceSearchAdapter implements PlaceSearchPort {
             return latitude === null || longitude === null ? null : { latitude, longitude };
           })();
 
-    const url = new URL(`https://${nominatimHost}/search`);
-    for (const [name, value] of Object.entries({
-      addressdetails: "1",
-      format: "jsonv2",
-      // With a position to order by, ask for a wider net and keep the six
-      // nearest: the closest match is often not in the provider's own top six.
-      limit: near === null ? "6" : "20",
-      q: query,
-    })) {
-      url.searchParams.set(name, value);
+    // Each pass caches under its own key: the near and wide answers to the same
+    // words are different lists, and serving one for the other is how a bumped
+    // cache shape has caught us out before.
+    const key = (scope: "near" | "wide" | "any") =>
+      `nominatim-search-v3:${scope}:${query.toLowerCase()}:${input.locale}` +
+      (near === null ? "" : `:${near.latitude.toFixed(1)},${near.longitude.toFixed(1)}`);
+
+    if (near === null) {
+      return this.lookup(this.searchUrl(query, input.locale, null), key("any"));
     }
-    url.searchParams.set("accept-language", input.locale);
-    let cacheKey = `nominatim-search-v2:${query.toLowerCase()}:${input.locale}`;
-    if (near !== null) {
-      // A viewbox biases the provider's own ranking towards the reader without
-      // excluding anything outside it — a bar one region over is still findable.
-      // The box is deliberately coarse, roughly ±55 km, so the position that
-      // reaches the provider is a region and not a doorstep. The ordering itself
-      // uses the precise position, which never leaves this Worker.
-      const box = 0.5;
-      url.searchParams.set(
-        "viewbox",
-        [near.longitude - box, near.latitude - box, near.longitude + box, near.latitude + box]
-          .map((value) => value.toFixed(3))
-          .join(","),
-      );
-      cacheKey += `:${near.latitude.toFixed(1)},${near.longitude.toFixed(1)}`;
-    }
-    return this.lookup(url, cacheKey, near ?? undefined);
+
+    // Restricted to the reader's own region first.
+    //
+    // A viewbox alone only *biases* the provider's ranking, and a small local
+    // place carries little global weight: a wine bar in Barcelona did not make
+    // the provider's top twenty for its own name, while matches in France and
+    // Mallorca did. Searching inside the box finds it, because it is no longer
+    // competing with the whole planet.
+    //
+    // The box stays coarse, roughly ±55 km, so what reaches the provider is a
+    // region rather than a doorstep; the ordering by distance uses the precise
+    // position, which never leaves this Worker.
+    const bounded = await this.lookup(
+      this.searchUrl(query, input.locale, near, true),
+      key("near"),
+      near,
+    );
+    if (bounded.status === "success" && bounded.data.length > 0) return bounded;
+
+    // Nothing nearby. The reader may be planning a trip, or the place may simply
+    // not be mapped near them, so the search widens rather than ending here —
+    // one extra request, and only when the first found nothing.
+    return this.lookup(this.searchUrl(query, input.locale, near, false), key("wide"), near);
   }
 }

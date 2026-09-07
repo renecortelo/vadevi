@@ -891,6 +891,77 @@ describe("Nominatim place search adapter", () => {
     expect(result.data.map((place) => place.name)).toEqual(["A", "B"]);
   });
 
+  it("searches the reader's own region first, then widens when it finds nothing", async () => {
+    const asked: URL[] = [];
+    const fetcher: ProviderFetcher = async (input) => {
+      const url = new URL(String(input));
+      asked.push(url);
+      // Nothing inside the box; a match once the search is unrestricted.
+      return url.searchParams.get("bounded") === "1"
+        ? Response.json([])
+        : Response.json([
+            {
+              address: { city: "Perpignan", country_code: "fr" },
+              display_name: "Can Pau, Claira, Perpignan, France",
+              lat: 42.7,
+              lon: 2.9,
+              name: "Can Pau",
+            },
+          ]);
+    };
+    const adapter = new NominatimPlaceSearchAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      { fetcher, now: () => new Date("2026-09-07T13:00:00.000Z") },
+    );
+
+    const result = await adapter.search({
+      locale: "ca",
+      near: { latitude: 41.3874, longitude: 2.1686 },
+      query: "Can Pau Claira",
+    });
+    expect(result.status).toBe("success");
+    if (result.status !== "success") throw new Error("Expected a successful search.");
+    expect(result.data).toHaveLength(1);
+    // The near pass ran first, and the wide one only because it found nothing.
+    expect(asked).toHaveLength(2);
+    expect(asked[0]?.searchParams.get("bounded")).toBe("1");
+    expect(asked[1]?.searchParams.get("bounded")).toBeNull();
+  });
+
+  it("does not widen when the reader's own region already answered", async () => {
+    const asked: URL[] = [];
+    const fetcher: ProviderFetcher = async (input) => {
+      asked.push(new URL(String(input)));
+      return Response.json([
+        {
+          address: { city: "Barcelona", country_code: "es" },
+          display_name: "PetNat, El Born, Barcelona, Espanya",
+          lat: 41.3851,
+          lon: 2.1834,
+          name: "PetNat",
+        },
+      ]);
+    };
+    const adapter = new NominatimPlaceSearchAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      { fetcher, now: () => new Date("2026-09-07T13:05:00.000Z") },
+    );
+
+    const result = await adapter.search({
+      locale: "ca",
+      near: { latitude: 41.3874, longitude: 2.1686 },
+      query: "PetNat Barcelona",
+    });
+    expect(result.status).toBe("success");
+    // One request, not two: the second pass is for when the first came back empty.
+    expect(asked).toHaveLength(1);
+    expect(asked[0]?.searchParams.get("bounded")).toBe("1");
+  });
+
   it("rejects a place name that reads like an instruction", async () => {
     const fetcher: ProviderFetcher = async () =>
       Response.json([
