@@ -815,7 +815,11 @@
       "locationDenied": "Your location could not be read. You can search the place by name.",
       "here": "Here",
       "hereFilled": "The place was filled in from where you are. You can rename it.",
-      "attribution": "Places from OpenStreetMap, © OpenStreetMap contributors"
+      "attribution": "Places from OpenStreetMap, © OpenStreetMap contributors",
+      "unordered": "Without your location these cannot be sorted by distance; far-away places may share the name.",
+      "mapAction": "Open in Google Maps",
+      "mapTitle": "Opens this exact point in Google Maps",
+      "mapTitleByName": "Searches Google Maps for this name; with no coordinates it may not be the same place"
     },
     "scale": {
       "1": "Very low",

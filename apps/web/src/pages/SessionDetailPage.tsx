@@ -21,6 +21,7 @@ import {
 import { getWineMemory } from "../services/api";
 import { getSessionComparison, getTastingSession } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
+import { MapLink } from "../components/MapLink";
 import { NewWineInline } from "../components/NewWineInline";
 
 type SessionWine = TastingSessionDetailResponse["data"]["wines"][number];
@@ -191,7 +192,15 @@ export function SessionDetailPage() {
           <h1>{detail.data.session.name}</h1>
           <p>
             {date}
-            {detail.data.session.venueText === null ? "" : ` · ${detail.data.session.venueText}`}
+            {detail.data.session.venueText === null
+              ? ""
+              : ` · ${detail.data.session.venueText}`}{" "}
+            <MapLink
+              className="text-link"
+              latitude={detail.data.session.venueLatitude}
+              longitude={detail.data.session.venueLongitude}
+              name={detail.data.session.venueText}
+            />
           </p>
         </div>
         <Link className="text-link" to="/sessions">

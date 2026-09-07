@@ -815,7 +815,11 @@
       "locationDenied": "No se pudo obtener tu ubicación. Puedes buscar el lugar por su nombre.",
       "here": "Aquí",
       "hereFilled": "Se rellenó el lugar con dónde estás. Puedes cambiarle el nombre.",
-      "attribution": "Lugares de OpenStreetMap, © colaboradores de OpenStreetMap"
+      "attribution": "Lugares de OpenStreetMap, © colaboradores de OpenStreetMap",
+      "unordered": "Sin tu ubicación no se pueden ordenar por cercanía; puede haber lugares lejanos con el mismo nombre.",
+      "mapAction": "Ver en Google Maps",
+      "mapTitle": "Abre este punto exacto en Google Maps",
+      "mapTitleByName": "Busca este nombre en Google Maps; sin coordenadas puede no ser el sitio exacto"
     },
     "scale": {
       "1": "Muy bajo",

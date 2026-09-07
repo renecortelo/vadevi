@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { MapLink } from "../components/MapLink";
 import { offlineDatabase } from "../offline/database";
 import { sessionsChangedEvent } from "../offline/events";
 import { cacheSessionList } from "../offline/phase3";
@@ -106,7 +107,17 @@ export function SessionsPage() {
                 </time>
               </div>
               <h2>{session.name}</h2>
-              {session.venueText === null ? null : <p>{session.venueText}</p>}
+              {session.venueText === null ? null : (
+                <p>
+                  {session.venueText}{" "}
+                  <MapLink
+                    className="text-link"
+                    latitude={session.venueLatitude}
+                    longitude={session.venueLongitude}
+                    name={session.venueText}
+                  />
+                </p>
+              )}
               <p className="session-card__counts">
                 {t("sessions.wineCount", { count: session.wineCount })} ·{" "}
                 {t("sessions.submissionCount", { count: session.submittedNoteCount })}

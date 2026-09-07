@@ -7997,6 +7997,14 @@
                 "type": "integer",
                 "minimum": 0
               },
+              "venueLatitude": {
+                "type": "number",
+                "nullable": true
+              },
+              "venueLongitude": {
+                "type": "number",
+                "nullable": true
+              },
               "venueText": {
                 "type": "string",
                 "nullable": true
@@ -8021,6 +8029,8 @@
               "startsAt",
               "status",
               "submittedNoteCount",
+              "venueLatitude",
+              "venueLongitude",
               "venueText",
               "version",
               "wineCount"
@@ -8065,6 +8075,16 @@
               "completed"
             ],
             "default": "draft"
+          },
+          "venueLatitude": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+          },
+          "venueLongitude": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
           },
           "venueText": {
             "type": "string",
@@ -8125,6 +8145,14 @@
                   "type": "integer",
                   "minimum": 0
                 },
+                "venueLatitude": {
+                  "type": "number",
+                  "nullable": true
+                },
+                "venueLongitude": {
+                  "type": "number",
+                  "nullable": true
+                },
                 "venueText": {
                   "type": "string",
                   "nullable": true
@@ -8149,6 +8177,8 @@
                 "startsAt",
                 "status",
                 "submittedNoteCount",
+                "venueLatitude",
+                "venueLongitude",
                 "venueText",
                 "version",
                 "wineCount"
@@ -8211,6 +8241,14 @@
                     "type": "integer",
                     "minimum": 0
                   },
+                  "venueLatitude": {
+                    "type": "number",
+                    "nullable": true
+                  },
+                  "venueLongitude": {
+                    "type": "number",
+                    "nullable": true
+                  },
                   "venueText": {
                     "type": "string",
                     "nullable": true
@@ -8235,6 +8273,8 @@
                   "startsAt",
                   "status",
                   "submittedNoteCount",
+                  "venueLatitude",
+                  "venueLongitude",
                   "venueText",
                   "version",
                   "wineCount"

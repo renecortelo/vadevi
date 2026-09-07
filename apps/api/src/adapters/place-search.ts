@@ -109,6 +109,37 @@ function toCandidate(entry: z.infer<typeof NominatimPlaceSchema>): PlaceCandidat
 }
 
 /**
+ * Great-circle distance in kilometres. Only ever used to ORDER results, so the
+ * spherical approximation is far more precision than the job needs.
+ */
+function distanceKm(
+  from: { latitude: number; longitude: number },
+  to: { latitude: number; longitude: number },
+): number {
+  const radians = Math.PI / 180;
+  const meanLatitude = ((from.latitude + to.latitude) / 2) * radians;
+  const northing = (to.latitude - from.latitude) * radians;
+  const easting = (to.longitude - from.longitude) * radians * Math.cos(meanLatitude);
+  return Math.sqrt(northing * northing + easting * easting) * 6_371;
+}
+
+/**
+ * The six results the reader sees: nearest first when we know where they are.
+ *
+ * Applied on the way out of the cache as well as on the way in, so a reader in
+ * one town never inherits the ordering of whoever warmed the cache from the next
+ * one — the cache key only distinguishes positions to a tenth of a degree.
+ */
+function order(
+  places: readonly PlaceCandidate[],
+  near: { latitude: number; longitude: number } | undefined,
+): PlaceCandidate[] {
+  const sorted = [...places];
+  if (near !== undefined) sorted.sort((a, b) => distanceKm(near, a) - distanceKm(near, b));
+  return sorted.slice(0, 6);
+}
+
+/**
  * Nominatim (OpenStreetMap) as a fixed-host place provider.
  *
  * It is the open-data geocoder that matches the rest of this application: no key
@@ -149,15 +180,26 @@ export class NominatimPlaceSearchAdapter implements PlaceSearchPort {
     this.now = options.now ?? (() => new Date());
   }
 
-  /** The shared call: rate limit, fetch, parse, cache. */
-  private async lookup(url: URL, cacheKey: string): Promise<ExternalResult<PlaceCandidate[]>> {
+  /**
+   * The shared call: rate limit, fetch, parse, order, cache.
+   *
+   * When the reader's position is known the results are ordered by distance from
+   * it. Nominatim's viewbox only *biases* its ranking, which in practice still
+   * put a same-named bar in another country above the one down the road — so the
+   * ordering is done here rather than hoped for.
+   */
+  private async lookup(
+    url: URL,
+    cacheKey: string,
+    near?: { latitude: number; longitude: number },
+  ): Promise<ExternalResult<PlaceCandidate[]>> {
     const now = this.now();
     const nowTimestamp = now.toISOString();
     // The version in this key is part of the contract: bump it whenever the SHAPE
     // of a stored candidate changes, or the old shape is served until the TTL
     // expires and a deployed fix looks like it never deployed.
     const cached = await this.cache.get<PlaceCandidate[]>("places", cacheKey, nowTimestamp);
-    if (cached !== null) return { cached: true, data: cached, status: "success" };
+    if (cached !== null) return { cached: true, data: order(cached, near), status: "success" };
 
     const rate = await this.rateLimiter.consume("places", this.limitPerMinute, 60, nowTimestamp);
     if (!rate.allowed) {
@@ -206,12 +248,12 @@ export class NominatimPlaceSearchAdapter implements PlaceSearchPort {
       return { reason: "provider_error", retryAfterSeconds: null, status: "unavailable" };
     }
 
-    const places: PlaceCandidate[] = [];
+    const found: PlaceCandidate[] = [];
     for (const entry of parsed.data) {
       const candidate = toCandidate(entry);
-      if (candidate !== null) places.push(candidate);
-      if (places.length >= 6) break;
+      if (candidate !== null) found.push(candidate);
     }
+    const places = order(found, near);
 
     await this.cache.put(
       "places",
@@ -256,35 +298,43 @@ export class NominatimPlaceSearchAdapter implements PlaceSearchPort {
     if (query.length < 3) {
       return { reason: "invalid_input", retryAfterSeconds: null, status: "unavailable" };
     }
+    const near =
+      input.near === undefined
+        ? null
+        : (() => {
+            const latitude = coordinate(input.near.latitude, 90);
+            const longitude = coordinate(input.near.longitude, 180);
+            return latitude === null || longitude === null ? null : { latitude, longitude };
+          })();
+
     const url = new URL(`https://${nominatimHost}/search`);
     for (const [name, value] of Object.entries({
       addressdetails: "1",
       format: "jsonv2",
-      limit: "6",
+      // With a position to order by, ask for a wider net and keep the six
+      // nearest: the closest match is often not in the provider's own top six.
+      limit: near === null ? "6" : "20",
       q: query,
     })) {
       url.searchParams.set(name, value);
     }
     url.searchParams.set("accept-language", input.locale);
-    let cacheKey = `nominatim-search-v1:${query.toLowerCase()}:${input.locale}`;
-    if (input.near !== undefined) {
-      const latitude = coordinate(input.near.latitude, 90);
-      const longitude = coordinate(input.near.longitude, 180);
-      if (latitude !== null && longitude !== null) {
-        // A viewbox biases results towards the reader without excluding anything
-        // outside it, so "Can Pau" finds the one down the road first. The box is
-        // deliberately coarse — roughly ±55 km — so the position that reaches the
-        // provider is a region, not a doorstep.
-        const box = 0.5;
-        url.searchParams.set(
-          "viewbox",
-          [longitude - box, latitude - box, longitude + box, latitude + box]
-            .map((value) => value.toFixed(3))
-            .join(","),
-        );
-        cacheKey += `:${latitude.toFixed(1)},${longitude.toFixed(1)}`;
-      }
+    let cacheKey = `nominatim-search-v2:${query.toLowerCase()}:${input.locale}`;
+    if (near !== null) {
+      // A viewbox biases the provider's own ranking towards the reader without
+      // excluding anything outside it — a bar one region over is still findable.
+      // The box is deliberately coarse, roughly ±55 km, so the position that
+      // reaches the provider is a region and not a doorstep. The ordering itself
+      // uses the precise position, which never leaves this Worker.
+      const box = 0.5;
+      url.searchParams.set(
+        "viewbox",
+        [near.longitude - box, near.latitude - box, near.longitude + box, near.latitude + box]
+          .map((value) => value.toFixed(3))
+          .join(","),
+      );
+      cacheKey += `:${near.latitude.toFixed(1)},${near.longitude.toFixed(1)}`;
     }
-    return this.lookup(url, cacheKey);
+    return this.lookup(url, cacheKey, near ?? undefined);
   }
 }

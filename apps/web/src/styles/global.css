@@ -3257,3 +3257,11 @@ p {
   font-size: 0.8rem;
   margin: 0;
 }
+
+/* The link out to a map. It sits inline beside a place name, so it must not
+   inherit a button's block layout when it is given an action-link class. */
+.map-link {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}

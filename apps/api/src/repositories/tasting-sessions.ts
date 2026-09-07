@@ -33,6 +33,8 @@ type SessionRow = {
   starts_at: string;
   status: "active" | "completed" | "draft";
   submitted_note_count: number;
+  venue_latitude: number | null;
+  venue_longitude: number | null;
   venue_text: string | null;
   version: number;
   wine_count: number;
@@ -169,6 +171,9 @@ function sessionResource(row: SessionRow): TastingSessionResponse["data"] {
     startsAt: row.starts_at,
     status: row.status,
     submittedNoteCount: row.submitted_note_count,
+    // A point is only ever meaningful as a pair.
+    venueLatitude: row.venue_longitude === null ? null : row.venue_latitude,
+    venueLongitude: row.venue_latitude === null ? null : row.venue_longitude,
     venueText: row.venue_text,
     version: row.version,
     wineCount: row.wine_count,
@@ -176,6 +181,7 @@ function sessionResource(row: SessionRow): TastingSessionResponse["data"] {
 }
 
 const sessionSelect = `SELECT session.id, session.name, session.description, session.venue_text,
+  session.venue_latitude, session.venue_longitude,
   session.starts_at, session.ends_at, session.status, session.created_by_user_id,
   session.version, session.created_at,
   (SELECT COUNT(*) FROM session_wines flight
@@ -252,10 +258,11 @@ export async function createTastingSession(
     database
       .prepare(
         `INSERT INTO tasting_sessions (
-          id, space_id, name, description, venue_text, starts_at, ends_at,
+          id, space_id, name, description, venue_text, venue_latitude, venue_longitude,
+          starts_at, ends_at,
           status, blind, created_by_user_id, version, created_at, updated_at, deleted_at
         )
-        SELECT ?, ?, ?, ?, ?, ?, ?, ?, 0, actor.id, 1, ?, ?, NULL
+        SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, actor.id, 1, ?, ?, NULL
         FROM users actor
         JOIN idempotency_keys command ON command.user_id = actor.id
         WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
@@ -269,6 +276,14 @@ export async function createTastingSession(
         options.request.name,
         options.request.description ?? null,
         options.request.venueText ?? null,
+        // Latitude and longitude go in together or not at all: half a point is
+        // not a place, and a lone coordinate would put the event on the equator.
+        options.request.venueLatitude === undefined || options.request.venueLongitude === undefined
+          ? null
+          : options.request.venueLatitude,
+        options.request.venueLatitude === undefined || options.request.venueLongitude === undefined
+          ? null
+          : options.request.venueLongitude,
         options.request.startsAt,
         options.request.endsAt ?? null,
         options.request.status,

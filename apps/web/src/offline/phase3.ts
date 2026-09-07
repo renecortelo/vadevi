@@ -137,6 +137,10 @@ export async function queueNewSession(options: {
         startsAt: options.request.startsAt,
         status: options.request.status,
         submittedNoteCount: 0,
+        // The optimistic snapshot must carry the point too, or an event created
+        // offline loses its map link until the queue drains.
+        venueLatitude: options.request.venueLatitude ?? null,
+        venueLongitude: options.request.venueLongitude ?? null,
         venueText: options.request.venueText ?? null,
         version: 1,
         wineCount: entries.length,

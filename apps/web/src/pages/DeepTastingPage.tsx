@@ -918,6 +918,8 @@ export function DeepTastingPage() {
         <div className="form-grid">
           {bootstrap.data.features.venuePlaceSearch ? (
             <VenuePicker
+              latitude={draft.payload.context?.venueLatitude}
+              longitude={draft.payload.context?.venueLongitude}
               onChoose={(venue) => {
                 // One choice fills the whole block — city, area, country and the
                 // point — in a single update, so nothing written here is undone

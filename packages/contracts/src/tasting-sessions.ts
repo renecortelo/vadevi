@@ -168,6 +168,10 @@ export const CreateTastingSessionRequestSchema = z
     name: z.string().trim().min(1).max(160),
     startsAt: ResourceTimestampSchema,
     status: SessionStatusSchema.default("draft"),
+    // Where the event happens, on the map. Written together or not at all; the
+    // repository drops a lone half rather than putting a meeting on the equator.
+    venueLatitude: z.number().min(-90).max(90).optional(),
+    venueLongitude: z.number().min(-180).max(180).optional(),
     venueText: z.string().trim().max(300).optional(),
   })
   .strict()
@@ -192,6 +196,8 @@ export const TastingSessionSchema = z
     startsAt: ResourceTimestampSchema,
     status: SessionStatusSchema,
     submittedNoteCount: z.number().int().nonnegative(),
+    venueLatitude: z.number().nullable(),
+    venueLongitude: z.number().nullable(),
     venueText: z.string().nullable(),
     version: z.number().int().positive(),
     wineCount: z.number().int().nonnegative(),
