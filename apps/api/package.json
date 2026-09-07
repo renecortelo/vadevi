@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@hono/zod-openapi": "*",
+    "@hono/zod-openapi": "^1.6.3",
     "@vadevi/contracts": "workspace:*",
     "@vadevi/domain": "workspace:*",
     "hono": "*",

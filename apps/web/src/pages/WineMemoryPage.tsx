@@ -453,9 +453,18 @@ export function WineMemoryPage() {
       const key = duplicateKey(wine);
       groups.set(key, [...(groups.get(key) ?? []), wine]);
     }
+    // Named rather than destructured at render: a group always has a first
+    // element, but nothing in `WineSummary[]` says so, and re-asserting it in
+    // four places at the point of use is how a real "possibly undefined" gets
+    // waved through. The invariant is established here, once.
     return [...groups.values()]
       .filter((group) => group.length > 1)
-      .map((group) => [...group].sort((left, right) => right.noteCount - left.noteCount));
+      .flatMap((group) => {
+        const [target, ...others] = [...group].sort(
+          (left, right) => right.noteCount - left.noteCount,
+        );
+        return target === undefined ? [] : [{ others, target }];
+      });
   }, [wines]);
 
   async function confirmMerge() {
@@ -737,7 +746,7 @@ export function WineMemoryPage() {
         <section aria-labelledby="duplicate-title" className="attention-panel">
           <h2 id="duplicate-title">{t("memory.duplicateTitle")}</h2>
           <p>{t("memory.duplicateBody")}</p>
-          {duplicateGroups.map(([target, ...others]) => (
+          {duplicateGroups.map(({ others, target }) => (
             <article className="conflict-card" key={target.id}>
               <div>
                 <h3>{t("memory.keepRecord")}</h3>

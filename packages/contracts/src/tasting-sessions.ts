@@ -175,14 +175,10 @@ export const CreateTastingSessionRequestSchema = z
     venueText: z.string().trim().max(300).optional(),
   })
   .strict()
-  .refine(
-    (value: { endsAt?: string; startsAt: string }) =>
-      value.endsAt === undefined || value.endsAt >= value.startsAt,
-    {
-      message: "The session end must not precede its start.",
-      path: ["endsAt"],
-    },
-  )
+  .refine((value) => value.endsAt === undefined || value.endsAt >= value.startsAt, {
+    message: "The session end must not precede its start.",
+    path: ["endsAt"],
+  })
   .openapi("CreateTastingSessionRequest");
 
 export const TastingSessionSchema = z

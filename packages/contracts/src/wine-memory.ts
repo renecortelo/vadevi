@@ -69,7 +69,10 @@ const CreateWineFieldsSchema = z
   .strict();
 
 function validateVintage(
-  value: { nonVintage: boolean; vintageYear?: number | null },
+  // Written to accept any object carrying these two, optional or not:
+  // `exactOptionalPropertyTypes` makes an absent property and an explicit
+  // `undefined` different types, and this check cares about neither.
+  value: { nonVintage?: boolean | undefined; vintageYear?: number | null | undefined },
   context: z.RefinementCtx,
 ) {
   if (value.nonVintage && value.vintageYear != null) {
@@ -77,11 +80,9 @@ function validateVintage(
   }
 }
 
-export const CreateWineRequestSchema = CreateWineFieldsSchema.superRefine(
-  (value: { nonVintage: boolean; vintageYear?: number | null }, context: z.RefinementCtx) => {
-    validateVintage(value, context);
-  },
-).openapi("CreateWineRequest");
+export const CreateWineRequestSchema = CreateWineFieldsSchema.superRefine((value, context) => {
+  validateVintage(value, context);
+}).openapi("CreateWineRequest");
 
 /**
  * Correcting a wine after it exists.
@@ -120,11 +121,9 @@ export const UpdateWineRequestSchema = z
     wineType: WineTypeSchema.nullable().optional(),
   })
   .strict()
-  .superRefine(
-    (value: { nonVintage?: boolean; vintageYear?: number | null }, context: z.RefinementCtx) => {
-      validateVintage({ nonVintage: value.nonVintage ?? false, ...value }, context);
-    },
-  )
+  .superRefine((value, context) => {
+    validateVintage({ nonVintage: value.nonVintage ?? false, ...value }, context);
+  })
   .openapi("UpdateWineRequest");
 
 export type UpdateWineRequest = z.infer<typeof UpdateWineRequestSchema>;
@@ -220,53 +219,41 @@ export const WineMemoryQuerySchema = z
     wineType: WineTypeSchema.optional(),
   })
   .strict()
-  .superRefine(
-    (
-      value: {
-        maxScore?: number;
-        minScore?: number;
-        tastedFrom?: string;
-        tastedTo?: string;
-        vintageFrom?: number;
-        vintageTo?: number;
-      },
-      context: z.RefinementCtx,
-    ) => {
-      if (
-        value.minScore !== undefined &&
-        value.maxScore !== undefined &&
-        value.minScore > value.maxScore
-      ) {
-        context.addIssue({
-          code: "custom",
-          message: "minScore cannot exceed maxScore.",
-          path: ["minScore"],
-        });
-      }
-      if (
-        value.vintageFrom !== undefined &&
-        value.vintageTo !== undefined &&
-        value.vintageFrom > value.vintageTo
-      ) {
-        context.addIssue({
-          code: "custom",
-          message: "vintageFrom cannot exceed vintageTo.",
-          path: ["vintageFrom"],
-        });
-      }
-      if (
-        value.tastedFrom !== undefined &&
-        value.tastedTo !== undefined &&
-        Date.parse(value.tastedFrom) > Date.parse(value.tastedTo)
-      ) {
-        context.addIssue({
-          code: "custom",
-          message: "tastedFrom cannot be later than tastedTo.",
-          path: ["tastedFrom"],
-        });
-      }
-    },
-  );
+  .superRefine((value, context) => {
+    if (
+      value.minScore !== undefined &&
+      value.maxScore !== undefined &&
+      value.minScore > value.maxScore
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "minScore cannot exceed maxScore.",
+        path: ["minScore"],
+      });
+    }
+    if (
+      value.vintageFrom !== undefined &&
+      value.vintageTo !== undefined &&
+      value.vintageFrom > value.vintageTo
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "vintageFrom cannot exceed vintageTo.",
+        path: ["vintageFrom"],
+      });
+    }
+    if (
+      value.tastedFrom !== undefined &&
+      value.tastedTo !== undefined &&
+      Date.parse(value.tastedFrom) > Date.parse(value.tastedTo)
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "tastedFrom cannot be later than tastedTo.",
+        path: ["tastedFrom"],
+      });
+    }
+  });
 
 export const MergeWinesRequestSchema = z
   .object({
@@ -411,7 +398,7 @@ export const IdentificationRequestSchema = z
   })
   .strict()
   .refine(
-    (value: { barcode?: string; manualHint?: string; mediaId?: string; scannedText?: string }) =>
+    (value) =>
       value.barcode !== undefined ||
       value.mediaId !== undefined ||
       value.manualHint !== undefined ||

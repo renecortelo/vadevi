@@ -1133,6 +1133,69 @@ describe("Vicenç deterministic read path", () => {
     expect(captured.some((statement) => statement.text.includes("Chateldon"))).toBe(false);
   }, 30_000);
 
+  it("feeds the reader's own tasting note into a food suggestion", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    const wine = await createWine(ownerToken, spaceId, "Quixote Blanc de Blancs", "white");
+    const now = new Date().toISOString();
+    await env.DB.prepare(
+      `INSERT INTO tasting_notes
+        (id, space_id, wine_id, author_user_id, mode, state, tasted_at, comment, version, created_at, updated_at)
+        VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, ?, 1, ?, ?)`,
+    )
+      .bind(
+        randomOpaqueToken(),
+        spaceId,
+        wine.id,
+        owner.data.user.id,
+        now,
+        "Me supo a manzana verde y muy salino.",
+        now,
+        now,
+      )
+      .run();
+
+    let asked: { attributes: string[]; notes: string[] } | null = null;
+    await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      foodIdeas: {
+        suggest: async (input) => {
+          asked = { attributes: [...input.attributes], notes: [...input.notes] };
+          return ["Ostras — la salinidad va con el mar"];
+        },
+      },
+      language: null,
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "es",
+        message: "Con que marido el Quixote Blanc de Blancs?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+
+    expect(asked).not.toBeNull();
+    const sent = asked as unknown as { attributes: string[]; notes: string[] };
+    // The wine leads — this is what the bottle IS.
+    expect(sent.attributes.some((line) => line.includes("white"))).toBe(true);
+    // And the reader's own impression travels with it. This used to read a
+    // property the object never had, so it was always empty and no tasting ever
+    // reached a suggestion; the compiler could not say so while the contract
+    // types were `any`.
+    expect(sent.notes.join(" ")).toContain("manzana verde");
+  }, 30_000);
+
   it("does not pad the matching wines with a note-similar but off-topic bottle", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;

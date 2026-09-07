@@ -34,8 +34,10 @@ const session: SessionContextValue = {
     data: {
       features: {
         assistant: true,
+        bottlePhotoSearch: false,
         externalResearch: false,
         priceLookup: false,
+        venuePlaceSearch: false,
         voiceInput: false,
       },
       spaces: [
@@ -277,6 +279,7 @@ describe("authenticated app shell", () => {
       data: {
         citations: [],
         comparisons: [],
+        focusWineId: null,
         evidence: [
           {
             evidenceClass: "observed",
@@ -296,10 +299,12 @@ describe("authenticated app shell", () => {
             spaceId: "01J00000000000000000000001",
             spaceName: "Personal space",
             wine: {
+              alcoholAbv: null,
               appellation: null,
               countryCode: "ES",
               createdAt: "2026-08-13T20:00:00.000Z",
               displayName: "Synthetic Coastal White",
+              grapes: [],
               id: "01J00000000000000000000004",
               identityStatus: "confirmed",
               lastTastedAt: null,

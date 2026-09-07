@@ -26,6 +26,7 @@ function localRuntimeConfig(): RuntimeConfigResponse {
         assistant: false,
         externalResearch: false,
         priceLookup: false,
+        venuePlaceSearch: false,
         voiceInput: false,
       },
       firebase: {

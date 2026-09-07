@@ -1553,7 +1553,21 @@ export async function runDeterministicAssistantTurn(
       wine.vintageYear === null ? null : `vintage: ${wine.vintageYear}`,
       ...researchedLines,
     ].filter((attribute): attribute is string => attribute !== null && attribute.length > 0);
-    const readerNotes = (namedWine.notes ?? []).slice(0, 2);
+    // The reader's own tasting lines for this bottle. They are deliberately
+    // secondary — the wine's attributes lead — but they are the difference
+    // between a generic suggestion and one that answers what THEY tasted.
+    //
+    // This used to read `namedWine.notes`, a property a search result has never
+    // had, so it was always empty and no tasting ever reached a suggestion. The
+    // compiler could not say so while the contract types were `any`.
+    //
+    // Only the reader's own notes: `loadReaderTastingNotes` already withholds a
+    // co-member's written text, and the `personal` class is what marks a note as
+    // the reader's own, so a peer's words cannot reach the model here either.
+    const readerNotes = (await loadReaderTastingNotes(database, options.principal, [namedWine], 1))
+      .filter((statement) => statement.evidenceClass === "personal")
+      .map((statement) => statement.text)
+      .slice(0, 2);
     if (attributes.length > 0 || readerNotes.length > 0) {
       try {
         const ideas = await foodIdeas.suggest({

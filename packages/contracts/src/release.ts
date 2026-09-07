@@ -24,7 +24,7 @@ export const ExportQuerySchema = z
     format: z.enum(["json", "csv"]).default("json"),
   })
   .strict()
-  .superRefine((value: { dataset?: string; format: string }, context: z.RefinementCtx) => {
+  .superRefine((value, context) => {
     if (value.format === "csv" && value.dataset === undefined) {
       context.addIssue({
         code: "custom",

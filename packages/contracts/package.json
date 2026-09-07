@@ -13,7 +13,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@hono/zod-openapi": "*",
+    "@hono/zod-openapi": "^1.6.3",
     "zod": "catalog:"
   },
   "devDependencies": {
