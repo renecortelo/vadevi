@@ -814,7 +814,7 @@
       "noGeolocation": "Dieser Browser kann uns Ihren Standort nicht mitteilen.",
       "locationDenied": "Ihr Standort konnte nicht gelesen werden. Sie können den Ort über seinen Namen suchen.",
       "here": "Hier",
-      "hereDescription": "Ihre aktuelle Position, auf der Karte unbenannt",
+      "hereFilled": "Der Ort wurde aus Ihrem Standort übernommen. Sie können ihn umbenennen.",
       "attribution": "Orte von OpenStreetMap, © OpenStreetMap-Mitwirkende"
     },
     "scale": {

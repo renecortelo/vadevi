@@ -37,19 +37,27 @@ export type ChosenVenue = Readonly<{
  *
  * The reader types a venue and picks one from the list, so the same bar twice is
  * the same bar — the name, city, area and country arrive filled in, and the point
- * comes with them. "Use my location" is for the places a geocoder does not know:
- * a friend's terrace has no entry to find, but it does have coordinates, so the
- * position is offered as the venue itself and the reader names it.
+ * comes with them. "I'm here" is for the places a geocoder does not know: a
+ * friend's terrace has no entry to find, but it does have coordinates, so it
+ * fills the fields from where the reader is standing.
+ *
+ * Typing only ever renames the place. A reader who took a point and then called
+ * it "la terraza de Marta" keeps the point, and a name they typed themselves is
+ * never overwritten by a map that thinks the place is a street.
  *
  * The position is read only when that button is pressed. Nothing is watched, and
  * the browser asks its own permission first.
  */
 export function VenuePicker({
   onChoose,
+  onRename,
   spaceId,
   value,
 }: {
+  /** A place was picked: name, address parts and point, all at once. */
   onChoose: (venue: ChosenVenue) => void;
+  /** The reader typed their own name for the place. Nothing else changes. */
+  onRename: (name: string) => void;
   spaceId: string;
   value: string;
 }) {
@@ -104,23 +112,24 @@ export function VenuePicker({
         position.current = { latitude, longitude };
         void reversePlace(user, spaceId, latitude, longitude, placeLocale(i18n.language))
           .then((found) => {
-            // Even when the geocoder names nothing here, the point itself is a
-            // usable venue: the reader keeps their own name for the place.
-            setPlaces(
-              found.length > 0
-                ? found
-                : [
-                    {
-                      area: null,
-                      city: null,
-                      countryCode: null,
-                      displayName: t("tasting.venue.hereDescription"),
-                      latitude,
-                      longitude,
-                      name: query.trim().length > 0 ? query.trim() : t("tasting.venue.here"),
-                    },
-                  ],
-            );
+            // "I'm here" answers a question with one answer, so it fills the
+            // fields rather than offering a list of one to click through.
+            const here = found[0];
+            // A name the reader already typed is theirs and wins: they know the
+            // friend's terrace is "la terraza de Marta", the map only knows the
+            // street. Failing that, the geocoder's name, then a plain "Here" —
+            // because even an unnamed point is a usable venue.
+            const typed = query.trim();
+            onChoose({
+              area: here?.area ?? null,
+              city: here?.city ?? null,
+              countryCode: here?.countryCode ?? null,
+              latitude,
+              longitude,
+              name: typed.length > 0 ? typed : (here?.name ?? t("tasting.venue.here")),
+            });
+            setPlaces(null);
+            setNotice(t("tasting.venue.hereFilled"));
           })
           .catch(() => setNotice(t("tasting.venue.error")))
           .finally(() => setLocating(false));
@@ -152,18 +161,7 @@ export function VenuePicker({
         <span>{t("tasting.field.venueName")}</span>
         <input
           maxLength={200}
-          onChange={(event) => {
-            // A hand-typed venue is still a venue; it simply has no point until
-            // the reader picks one from the list.
-            onChoose({
-              area: null,
-              city: null,
-              countryCode: null,
-              latitude: null,
-              longitude: null,
-              name: event.target.value,
-            });
-          }}
+          onChange={(event) => onRename(event.target.value)}
           onKeyDown={(event) => {
             if (event.key !== "Enter") return;
             event.preventDefault();

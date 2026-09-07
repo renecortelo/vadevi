@@ -814,7 +814,7 @@
       "noGeolocation": "Aquest navegador no ens pot donar la teva ubicació.",
       "locationDenied": "No s'ha pogut obtenir la teva ubicació. Pots cercar el lloc pel nom.",
       "here": "Aquí",
-      "hereDescription": "La teva posició actual, sense nom al mapa",
+      "hereFilled": "S'ha omplert el lloc amb on ets. Li pots canviar el nom.",
       "attribution": "Llocs d'OpenStreetMap, © col·laboradors d'OpenStreetMap"
     },
     "scale": {

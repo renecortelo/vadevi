@@ -325,10 +325,29 @@ export function DeepTastingPage() {
     key: Key,
     value: TastingContext[Key] | undefined,
   ) {
-    const context = { ...(draft.payload.context ?? {}) };
-    if (value === undefined) delete context[key];
-    else Object.assign(context, { [key]: value });
-    update("context", context);
+    updateContextFields({ [key]: value } as Partial<TastingContext>);
+  }
+
+  /**
+   * Several context fields in one go.
+   *
+   * Calling `updateContext` twice in one handler does NOT set two fields: each
+   * call builds the next context from the draft as it was when this render ran,
+   * so the second overwrites the first. Picking a venue sets six fields at once,
+   * which made the typed name vanish behind the coordinate written after it —
+   * the field looked read-only. Anything setting more than one field goes
+   * through here, where the merge happens inside the state updater.
+   */
+  function updateContextFields(fields: Partial<TastingContext>) {
+    setSaved(false);
+    setDraft((current) => {
+      const context = { ...(current.payload.context ?? {}) };
+      for (const [key, value] of Object.entries(fields)) {
+        if (value === undefined) delete context[key as keyof TastingContext];
+        else Object.assign(context, { [key]: value });
+      }
+      return { ...current, payload: { ...current.payload, context } };
+    });
   }
 
   function phaseDescriptors(phase: TastingPhase) {
@@ -900,19 +919,22 @@ export function DeepTastingPage() {
           {bootstrap.data.features.venuePlaceSearch ? (
             <VenuePicker
               onChoose={(venue) => {
-                // One choice fills the whole block, so the reader picks a place
-                // rather than typing four fields — but a hand-typed name still
-                // works: it simply arrives with nothing else set, and the fields
-                // below stay editable either way.
-                updateContext("venueName", venue.name || undefined);
-                if (venue.city !== null) updateContext("venueCity", venue.city);
-                if (venue.area !== null) updateContext("venueArea", venue.area);
-                if (venue.countryCode !== null) {
-                  updateContext("venueCountryCode", venue.countryCode);
-                }
-                updateContext("venueLatitude", venue.latitude ?? undefined);
-                updateContext("venueLongitude", venue.longitude ?? undefined);
+                // One choice fills the whole block — city, area, country and the
+                // point — in a single update, so nothing written here is undone
+                // by the field written after it.
+                updateContextFields({
+                  venueArea: venue.area ?? undefined,
+                  venueCity: venue.city ?? undefined,
+                  venueCountryCode: venue.countryCode ?? undefined,
+                  venueLatitude: venue.latitude ?? undefined,
+                  venueLongitude: venue.longitude ?? undefined,
+                  venueName: venue.name || undefined,
+                });
               }}
+              // Typing renames the place and nothing else: a reader who chose a
+              // point and then gave it their own name — "la terraza de Marta" —
+              // must keep the point.
+              onRename={(name) => updateContext("venueName", name || undefined)}
               spaceId={spaceId}
               value={draft.payload.context?.venueName ?? ""}
             />

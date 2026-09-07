@@ -814,7 +814,7 @@
       "noGeolocation": "Ce navigateur ne peut pas nous donner votre position.",
       "locationDenied": "Votre position n'a pas pu être lue. Vous pouvez chercher le lieu par son nom.",
       "here": "Ici",
-      "hereDescription": "Votre position actuelle, sans nom sur la carte",
+      "hereFilled": "Le lieu a été rempli à partir de votre position. Vous pouvez le renommer.",
       "attribution": "Lieux d'OpenStreetMap, © contributeurs OpenStreetMap"
     },
     "scale": {
