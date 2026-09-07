@@ -1,5 +1,6 @@
 import {
   BootstrapResponseSchema,
+  type CreateResearchJobRequest,
   CreateWineResponseSchema,
   type Fact,
   ResearchJobResponseSchema,
@@ -204,15 +205,16 @@ describe("bounded wine research jobs", () => {
       providerMode: "open_data",
     };
     const idempotencyKey = randomOpaqueToken();
+    const request: CreateResearchJobRequest = {
+      locale: "en",
+      maxSources: 4,
+      topics: ["identity", "grapes"],
+    };
     const options = {
       idempotencyKey,
       ports,
       principal,
-      request: {
-        locale: "en" as const,
-        maxSources: 4,
-        topics: ["identity", "grapes"] as const,
-      },
+      request,
       requestId: randomOpaqueToken(),
       spaceId,
       wineId: wine.id,
@@ -289,9 +291,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "en" as const,
+        locale: "en",
         maxSources: 4,
-        topics: ["producer", "region"] as const,
+        topics: ["producer", "region"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -337,9 +339,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "en" as const,
+        locale: "en",
         maxSources: 4,
-        topics: ["region"] as const,
+        topics: ["region"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -423,9 +425,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "en" as const,
+        locale: "en",
         maxSources: 4,
-        topics: ["grapes"] as const,
+        topics: ["grapes"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -480,10 +482,10 @@ describe("bounded wine research jobs", () => {
       product: null,
       providerMode: "open_data",
     };
-    const request = {
-      locale: "es" as const,
+    const request: CreateResearchJobRequest = {
+      locale: "es",
       maxSources: 4,
-      topics: ["grapes"] as const,
+      topics: ["grapes"],
     };
     const first = await createResearchJob(env.DB, {
       idempotencyKey: randomOpaqueToken(),
@@ -577,9 +579,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "es" as const,
+        locale: "es",
         maxSources: 4,
-        topics: ["grapes"] as const,
+        topics: ["grapes"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -674,9 +676,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "es" as const,
+        locale: "es",
         maxSources: 4,
-        topics: ["identity"] as const,
+        topics: ["identity"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -741,7 +743,7 @@ describe("bounded wine research jobs", () => {
       idempotencyKey: randomOpaqueToken(),
       ports,
       principal,
-      request: { locale: "en" as const, maxSources: 4, topics: ["identity", "grapes"] as const },
+      request: { locale: "en", maxSources: 4, topics: ["identity", "grapes"] },
       requestId: randomOpaqueToken(),
       spaceId,
       wineId: wine.id,
@@ -798,10 +800,10 @@ describe("bounded wine research jobs", () => {
       product: null,
       providerMode: "open_data",
     });
-    const request = {
-      locale: "es" as const,
+    const request: CreateResearchJobRequest = {
+      locale: "es",
       maxSources: 4,
-      topics: ["grapes"] as const,
+      topics: ["grapes"],
     };
 
     // The first run stores the old wording.
@@ -884,9 +886,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "es" as const,
+        locale: "es",
         maxSources: 4,
-        topics: ["grapes"] as const,
+        topics: ["grapes"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -949,9 +951,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "es" as const,
+        locale: "es",
         maxSources: 4,
-        topics: ["identity"] as const,
+        topics: ["identity"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -1034,9 +1036,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "es" as const,
+        locale: "es",
         maxSources: 4,
-        topics: ["identity"] as const,
+        topics: ["identity"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -1121,9 +1123,9 @@ describe("bounded wine research jobs", () => {
       ports,
       principal,
       request: {
-        locale: "es" as const,
+        locale: "es",
         maxSources: 4,
-        topics: ["grapes"] as const,
+        topics: ["grapes"],
       },
       requestId: randomOpaqueToken(),
       spaceId,
@@ -1187,7 +1189,7 @@ describe("bounded wine research jobs", () => {
         providerMode: "open_data",
       },
       principal,
-      request: { locale: "es" as const, maxSources: 4, topics: ["grapes"] as const },
+      request: { locale: "es", maxSources: 4, topics: ["grapes"] as const },
       requestId: randomOpaqueToken(),
       spaceId,
       wineId: wine.id,

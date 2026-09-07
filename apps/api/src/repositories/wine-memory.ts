@@ -448,26 +448,35 @@ const sortKeys = {
   tasted: { direction: "DESC", expression: "COALESCE(last_tasted_at, '')" },
 } as const;
 
+/**
+ * The list filters, as the route hands them over.
+ *
+ * Each optional property spells out `| undefined` because the query object comes
+ * from a schema that sets absent filters explicitly, and
+ * `exactOptionalPropertyTypes` treats "absent" and "present but undefined" as
+ * different types. Spreading the parsed query is the whole point of the route,
+ * so this side accepts both.
+ */
 export type ListWinesFilters = {
-  countryCode?: string;
-  cursor?: string;
-  grape?: string;
-  hasMedia?: "false" | "true";
-  identityStatus?: "confirmed" | "draft" | "needs_review";
+  countryCode?: string | undefined;
+  cursor?: string | undefined;
+  grape?: string | undefined;
+  hasMedia?: "false" | "true" | undefined;
+  identityStatus?: "confirmed" | "draft" | "needs_review" | undefined;
   limit: number;
-  maxScore?: number;
-  minScore?: number;
+  maxScore?: number | undefined;
+  minScore?: number | undefined;
   principal: FirebasePrincipal;
-  query?: string;
-  region?: string;
-  sentiment?: "dislike" | "like" | "neutral";
+  query?: string | undefined;
+  region?: string | undefined;
+  sentiment?: "dislike" | "like" | "neutral" | undefined;
   sort: "name" | "recent" | "score" | "tasted";
   spaceId: string;
-  tastedFrom?: string;
-  tastedTo?: string;
-  vintageFrom?: number;
-  vintageTo?: number;
-  wineType?: WineSummary["wineType"];
+  tastedFrom?: string | undefined;
+  tastedTo?: string | undefined;
+  vintageFrom?: number | undefined;
+  vintageTo?: number | undefined;
+  wineType?: WineSummary["wineType"] | undefined;
 };
 
 export async function listWines(

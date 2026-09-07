@@ -169,16 +169,14 @@ export const CreateWishlistItemRequestSchema = z
     wineId: ResourceIdSchema,
   })
   .strict()
-  .superRefine(
-    (value: { targetAmountMinor?: number; targetCurrency?: string }, context: z.RefinementCtx) => {
-      if ((value.targetAmountMinor === undefined) !== (value.targetCurrency === undefined)) {
-        context.addIssue({
-          code: "custom",
-          message: "Target amount and currency must be provided together.",
-        });
-      }
-    },
-  )
+  .superRefine((value, context) => {
+    if ((value.targetAmountMinor === undefined) !== (value.targetCurrency === undefined)) {
+      context.addIssue({
+        code: "custom",
+        message: "Target amount and currency must be provided together.",
+      });
+    }
+  })
   .openapi("CreateWishlistItemRequest");
 
 export const UpdateWishlistItemRequestSchema = TargetPriceFieldsSchema.extend({
@@ -189,16 +187,14 @@ export const UpdateWishlistItemRequestSchema = TargetPriceFieldsSchema.extend({
   version: z.number().int().positive(),
 })
   .strict()
-  .superRefine(
-    (value: { targetAmountMinor?: number; targetCurrency?: string }, context: z.RefinementCtx) => {
-      if ((value.targetAmountMinor === undefined) !== (value.targetCurrency === undefined)) {
-        context.addIssue({
-          code: "custom",
-          message: "Target amount and currency must be provided together.",
-        });
-      }
-    },
-  )
+  .superRefine((value, context) => {
+    if ((value.targetAmountMinor === undefined) !== (value.targetCurrency === undefined)) {
+      context.addIssue({
+        code: "custom",
+        message: "Target amount and currency must be provided together.",
+      });
+    }
+  })
   .openapi("UpdateWishlistItemRequest");
 
 export const WishlistItemSchema = z
@@ -247,24 +243,19 @@ export const CreatePriceObservationRequestSchema = z
     vintageMatch: VintageMatchSchema,
   })
   .strict()
-  .superRefine(
-    (
-      value: { merchantName?: string; merchantUrl?: string; sourceType: string },
-      context: z.RefinementCtx,
-    ) => {
-      if (
-        value.sourceType === "merchant" &&
-        value.merchantName === undefined &&
-        value.merchantUrl === undefined
-      ) {
-        context.addIssue({
-          code: "custom",
-          message: "Merchant observations require a merchant name or URL.",
-          path: ["merchantName"],
-        });
-      }
-    },
-  )
+  .superRefine((value, context) => {
+    if (
+      value.sourceType === "merchant" &&
+      value.merchantName === undefined &&
+      value.merchantUrl === undefined
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "Merchant observations require a merchant name or URL.",
+        path: ["merchantName"],
+      });
+    }
+  })
   .openapi("CreatePriceObservationRequest");
 
 export const PriceObservationSchema = z

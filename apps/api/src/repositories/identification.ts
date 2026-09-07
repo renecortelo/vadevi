@@ -5,6 +5,7 @@ import type {
   IdentificationResponse,
   IdentificationWarning,
 } from "@vadevi/contracts";
+import { IdentificationWarningSchema, WineTypeSchema } from "@vadevi/contracts";
 import type { OcrLine, OcrPort, ProductLookupPort } from "@vadevi/domain";
 import { ulid } from "ulid";
 
@@ -42,6 +43,14 @@ function field<T>(
     : { confidence, evidence, sourceIds, value };
 }
 
+/** The provider warnings this API declares; anything else is dropped. */
+function knownWarnings(values: readonly string[]) {
+  return values.flatMap((value) => {
+    const parsed = IdentificationWarningSchema.safeParse(value);
+    return parsed.success ? [parsed.data] : [];
+  });
+}
+
 /**
  * A wine already in this Space, matched by barcode or by name.
  *
@@ -65,7 +74,12 @@ function spaceCandidate(
   if (region !== undefined) fields.region = region;
   const country = field(row.country_code, "medium", "observed");
   if (country !== undefined) fields.countryCode = country;
-  const type = field(row.wine_type, "medium", "observed");
+  // The wine type is a free-text column since 0016, so a stored value need not
+  // be one the candidate schema accepts — a vermouth split, a hand-typed style.
+  // Offering one that is not would fail the response on the way out, so an
+  // unrecognized type is simply not proposed; the rest of the candidate stands.
+  const knownType = WineTypeSchema.safeParse(row.wine_type);
+  const type = knownType.success ? field(knownType.data, "medium", "observed") : undefined;
   if (type !== undefined) fields.wineType = type;
 
   return {
@@ -205,7 +219,10 @@ export async function createIdentification(
     if (read.status === "success") {
       const lines: readonly OcrLine[] = read.data.lines;
       ocrText = [ocrText, ...lines.map((line: OcrLine) => line.text)].filter(Boolean).join(" ");
-      warnings.push(...read.data.warnings);
+      // A provider's warning list is plain strings. Only the ones this API
+      // actually declares may travel, or an unrecognized string would fail the
+      // response schema and turn a successful identification into a 500.
+      warnings.push(...knownWarnings(read.data.warnings));
       const vintage = lines
         .flatMap((line: OcrLine) => line.text.match(/\b(19\d{2}|20\d{2})\b/g) ?? [])
         .map((value: string) => Number.parseInt(value, 10))
@@ -264,7 +281,7 @@ export async function createIdentification(
           possibleDuplicateWineIds: [],
         });
       }
-      warnings.push(...product.warnings);
+      warnings.push(...knownWarnings(product.warnings));
     } else {
       warnings.push("product_lookup_empty");
     }

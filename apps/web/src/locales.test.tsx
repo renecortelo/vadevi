@@ -27,7 +27,14 @@ const session: SessionContextValue = {
   acceptInvitation: async () => session.bootstrap,
   bootstrap: {
     data: {
-      features: { assistant: true, externalResearch: false, priceLookup: false, voiceInput: false },
+      features: {
+        assistant: true,
+        bottlePhotoSearch: false,
+        externalResearch: false,
+        priceLookup: false,
+        venuePlaceSearch: false,
+        voiceInput: false,
+      },
       spaces: [{ id: spaceId, name: "Personal space", role: "owner", type: "personal" }],
       user: {
         activeSpaceId: spaceId,
