@@ -24,21 +24,16 @@ code, so once the database is current a build and a deploy are all this takes.
 Rebuilding the web bundle is not optional: every UI change lives in it, and
 deploying only the Worker would ship none of them.
 
-```powershell
-pnpm install --frozen-lockfile
+```bash
+git checkout main && git pull && pnpm install --frozen-lockfile && pnpm deploy:preview
 ```
 
-```powershell
-npx wrangler d1 migrations apply vadevi-preview --remote --config wrangler.preview.jsonc
-```
-
-```powershell
-pnpm --filter @vadevi/web build
-```
-
-```powershell
-npx wrangler deploy --config wrangler.preview.jsonc
-```
+`pnpm deploy:preview` does the three steps in the only order that is safe:
+migrations, then the web bundle, then the Worker — and it stops at the first
+failure, so a migration that does not apply never reaches the deploy. Do not
+paste the individual commands instead: deploying the Worker ahead of its
+migrations is what broke every event on 2026-09-07, whether or not the event had
+a place recorded.
 
 Then, on the iPhone, close and reopen the app — or remove it from the home
 screen and install it again — so the service worker picks up the new bundle.

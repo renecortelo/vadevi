@@ -239,6 +239,11 @@ photograph, and Vicenç's language replies.
    search sends what the reader typed, and the "I'm here" button sends their
    position. With it off, the venue fields are plain text inputs as before.
 
+   `pnpm deploy:preview` runs the deployment in the only safe order — migrations,
+   web bundle, Worker — and stops at the first failure. Prefer it to running the
+   three commands by hand: a Worker deployed ahead of its migrations names columns
+   the database does not have, and every read that touches one fails.
+
    Setting `AI_PROVIDER=cloudflare` without a valid model, or without the
    binding, leaves the feature off rather than half-on. The adapters return
    nothing and the screens fall back to manual entry.
