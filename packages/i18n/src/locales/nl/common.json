@@ -815,7 +815,11 @@
       "locationDenied": "Je locatie kon niet worden gelezen. Je kunt de plek op naam zoeken.",
       "here": "Hier",
       "hereFilled": "De plek is ingevuld op basis van waar je bent. Je kunt hem hernoemen.",
-      "attribution": "Plaatsen van OpenStreetMap, © OpenStreetMap-bijdragers"
+      "attribution": "Plaatsen van OpenStreetMap, © OpenStreetMap-bijdragers",
+      "unordered": "Zonder je locatie kunnen deze niet op afstand worden gesorteerd; verre plekken kunnen dezelfde naam hebben.",
+      "mapAction": "Openen in Google Maps",
+      "mapTitle": "Opent precies dit punt in Google Maps",
+      "mapTitleByName": "Zoekt deze naam in Google Maps; zonder coördinaten is het misschien niet dezelfde plek"
     },
     "scale": {
       "1": "Zeer laag",

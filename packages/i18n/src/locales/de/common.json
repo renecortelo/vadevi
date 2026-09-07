@@ -815,7 +815,11 @@
       "locationDenied": "Ihr Standort konnte nicht gelesen werden. Sie können den Ort über seinen Namen suchen.",
       "here": "Hier",
       "hereFilled": "Der Ort wurde aus Ihrem Standort übernommen. Sie können ihn umbenennen.",
-      "attribution": "Orte von OpenStreetMap, © OpenStreetMap-Mitwirkende"
+      "attribution": "Orte von OpenStreetMap, © OpenStreetMap-Mitwirkende",
+      "unordered": "Ohne Ihren Standort lässt sich nicht nach Entfernung sortieren; weit entfernte Orte können denselben Namen tragen.",
+      "mapAction": "In Google Maps öffnen",
+      "mapTitle": "Öffnet genau diesen Punkt in Google Maps",
+      "mapTitleByName": "Sucht diesen Namen in Google Maps; ohne Koordinaten ist es womöglich nicht derselbe Ort"
     },
     "scale": {
       "1": "Sehr niedrig",

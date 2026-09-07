@@ -218,6 +218,60 @@ async function createDeepNote(
 }
 
 describe("Deep tasting and collaborative sessions", () => {
+  it("records an event's point and gives it back, or neither half of it", async () => {
+    const { spaceId } = await sharedSpace();
+
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/sessions`, {
+      body: JSON.stringify({
+        name: "Dijous al Born",
+        startsAt: new Date().toISOString(),
+        status: "draft",
+        venueLatitude: 41.385123,
+        venueLongitude: 2.1734,
+        venueText: "Can Pau",
+      }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    expect(created.status).toBe(201);
+    const body = (await created.json()) as {
+      data: { id: string; venueLatitude: number | null; venueLongitude: number | null };
+    };
+    expect(body.data.venueLatitude).toBe(41.385123);
+    expect(body.data.venueLongitude).toBe(2.1734);
+
+    // It survives a read, not only the response to the write.
+    const read = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/sessions/${body.data.id}`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const detail = (await read.json()) as {
+      data: { session: { venueLatitude: number | null; venueLongitude: number | null } };
+    };
+    expect(detail.data.session.venueLatitude).toBe(41.385123);
+    expect(detail.data.session.venueLongitude).toBe(2.1734);
+
+    // Half a point is not a place: a lone latitude is stored as neither, rather
+    // than putting the event on the prime meridian.
+    const halfway = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/sessions`, {
+      body: JSON.stringify({
+        name: "Sense coordenades",
+        startsAt: new Date().toISOString(),
+        status: "draft",
+        venueLatitude: 41.385123,
+        venueText: "Un lloc qualsevol",
+      }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    expect(halfway.status).toBe(201);
+    const partial = (await halfway.json()) as {
+      data: { venueLatitude: number | null; venueLongitude: number | null };
+    };
+    expect(partial.data.venueLatitude).toBeNull();
+    expect(partial.data.venueLongitude).toBeNull();
+  });
+
   it("shares group members' scores with Vicenç but keeps their written notes private", async () => {
     const { spaceId } = await sharedSpace();
     const wine = await createWine(spaceId, "Group Shared Red");

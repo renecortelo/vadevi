@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
+import { MapLink } from "./MapLink";
 import { type Place, reversePlace, searchPlaces } from "../services/places";
 
 const supportedLocales = new Set<SupportedLocale>([
@@ -49,11 +50,19 @@ export type ChosenVenue = Readonly<{
  * the browser asks its own permission first.
  */
 export function VenuePicker({
+  label,
+  latitude,
+  longitude,
   onChoose,
   onRename,
   spaceId,
   value,
 }: {
+  /** What this field is called here: a tasting's place, an event's venue. */
+  label?: string | undefined;
+  /** The point already recorded for this place, so it can be opened on a map. */
+  latitude?: number | null | undefined;
+  longitude?: number | null | undefined;
   /** A place was picked: name, address parts and point, all at once. */
   onChoose: (venue: ChosenVenue) => void;
   /** The reader typed their own name for the place. Nothing else changes. */
@@ -67,30 +76,66 @@ export function VenuePicker({
   const [searching, setSearching] = useState(false);
   const [locating, setLocating] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
-  // The reader's own position, held in memory for this form only: it biases a
-  // later search towards where they are. It is never stored and never sent
-  // unless they asked for a lookup.
+  // The reader's own position, held in memory for this form only: it orders the
+  // results by how near they are. It is never stored, and it only ever travels
+  // as a coarse box — the ordering itself happens on our own server.
   const position = useRef<{ latitude: number; longitude: number } | null>(null);
+  // Asked once. A reader who said no is not asked again on every search.
+  const positionRefused = useRef(false);
 
   // The typed name lives in the draft, not in this component: a restored draft or
   // a cleared form is then simply a different `value`, with no local copy to fall
   // out of step with it.
   const query = value;
 
+  /**
+   * The reader's position, if we can have it.
+   *
+   * A name search is useless without it — "Can Pau" matches a bar in another
+   * country as readily as the one down the road, and the reader is standing in
+   * exactly one of them. So the position is asked for at search time too, not
+   * only for "I'm here". It is asked ONCE: a refusal is remembered, the search
+   * runs unordered, and nothing nags.
+   */
+  async function currentPosition(): Promise<{ latitude: number; longitude: number } | null> {
+    if (position.current !== null) return position.current;
+    if (positionRefused.current || navigator.geolocation === undefined) return null;
+    return new Promise((resolve) => {
+      navigator.geolocation.getCurrentPosition(
+        (reading) => {
+          position.current = {
+            latitude: reading.coords.latitude,
+            longitude: reading.coords.longitude,
+          };
+          resolve(position.current);
+        },
+        () => {
+          positionRefused.current = true;
+          resolve(null);
+        },
+        { enableHighAccuracy: false, maximumAge: 300_000, timeout: 10_000 },
+      );
+    });
+  }
+
   async function runSearch() {
     if (user === null || query.trim().length < 3) return;
     setSearching(true);
     setNotice(null);
     try {
+      const near = await currentPosition();
       const found = await searchPlaces(
         user,
         spaceId,
         query.trim(),
         placeLocale(i18n.language),
-        position.current ?? undefined,
+        near ?? undefined,
       );
       setPlaces(found);
       if (found.length === 0) setNotice(t("tasting.venue.noMatches"));
+      // Said plainly, because an unordered list of same-named places in three
+      // countries is confusing unless you know why it is not sorted.
+      else if (near === null) setNotice(t("tasting.venue.unordered"));
     } catch {
       setNotice(t("tasting.venue.error"));
     } finally {
@@ -158,7 +203,7 @@ export function VenuePicker({
   return (
     <div className="venue-picker">
       <label>
-        <span>{t("tasting.field.venueName")}</span>
+        <span>{label ?? t("tasting.field.venueName")}</span>
         <input
           maxLength={200}
           onChange={(event) => onRename(event.target.value)}
@@ -172,6 +217,12 @@ export function VenuePicker({
         />
       </label>
       <div className="venue-picker__actions">
+        <MapLink
+          className="action-link action-link--secondary"
+          latitude={latitude}
+          longitude={longitude}
+          name={value}
+        />
         <button
           className="action-link action-link--secondary"
           disabled={searching || query.trim().length < 3}

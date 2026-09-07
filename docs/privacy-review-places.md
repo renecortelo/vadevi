@@ -29,13 +29,21 @@ looked up in the background.
 
 - **Searching a venue** sends what they typed (max 200 characters) and the
   interface locale.
-- **"I'm here"** sends their coordinates. This is the material change a
-  deployment must weigh: a position is more sensitive than a wine name, and it
-  is read only after the browser's own permission prompt, only on that press,
-  and never watched continuously.
-- **Biasing a later search** sends a coarse box around the position they already
-  shared in this form — roughly ±55 km, so what reaches the provider is a region,
-  not a doorstep.
+- **Searching also asks the browser for their position**, because a name search
+  is close to useless without it: "Can Pau" matches a bar in another country as
+  readily as the one down the road, and the reader is standing in exactly one of
+  them. The browser prompts; a refusal is remembered and never asked again in
+  that form, and the search still runs — unsorted, and the interface says so.
+- **What reaches the provider is a coarse box**, roughly ±55 km around them, to
+  bias its own ranking. The precise position never leaves the Worker: the
+  distance ordering is computed there, from the point the browser gave us, and
+  is applied on the way out of the cache as well as into it so nobody inherits a
+  neighbour's ordering.
+- **"I'm here"** sends their coordinates to be turned into a place. This and the
+  box above are the material change a deployment must weigh: a position is more
+  sensitive than a wine name. It is read only after the browser's own permission
+  prompt, only when they search or press that button, and never watched
+  continuously.
 
 No account identifier, no wine, no note, no cellar, and no other tasting is ever
 sent. The reader's IP address does not reach Nominatim either: the browser never
@@ -57,8 +65,16 @@ with no point.
 
 Only what the reader picked, on the tasting they were filling in: the venue name,
 city, area, country code (already there since `0018`) and now the pair of
-coordinates (`0019`, `venue_latitude` / `venue_longitude`). Both halves are
-written together or not at all.
+coordinates (`0019`, `venue_latitude` / `venue_longitude`). An event records the
+same point (`0020`, on `tasting_sessions`). Both halves are written together or
+not at all.
+
+A recorded place offers a link to Google Maps, for directions. It is a plain
+link the reader chooses to follow, not an embed: nothing is requested from
+Google unless they click it, so opening a tasting or an event tells nobody where
+it happened. The link carries `noreferrer`, so the map is not told which page
+sent them, and it prefers the coordinates over the name — a point is
+unambiguous, and it keeps the wine and the tasting out of the URL entirely.
 
 The point belongs to the **tasting**, not to the wine: it records where a bottle
 was drunk, never where it was grown, and it is never read as the wine's origin.

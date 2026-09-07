@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { VenuePicker } from "../components/VenuePicker";
 import { offlineDatabase } from "../offline/database";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { queueNewSession } from "../offline/phase3";
@@ -26,6 +27,10 @@ export function NewSessionPage() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [venue, setVenue] = useState("");
+  // The event's point, when the place was resolved rather than typed.
+  const [venuePoint, setVenuePoint] = useState<{ latitude: number; longitude: number } | null>(
+    null,
+  );
   const [startsAt, setStartsAt] = useState(() => localDateTime(new Date()));
   const [status, setStatus] = useState<"active" | "draft">("active");
   const [wines, setWines] = useState<WineSummary[]>([]);
@@ -64,6 +69,9 @@ export function NewSessionPage() {
           startsAt: new Date(startsAt).toISOString(),
           status,
           ...(venue.trim().length === 0 ? {} : { venueText: venue.trim() }),
+          ...(venuePoint === null
+            ? {}
+            : { venueLatitude: venuePoint.latitude, venueLongitude: venuePoint.longitude }),
         },
         selectedWines: selected,
         spaceId,
@@ -116,13 +124,36 @@ export function NewSessionPage() {
               </select>
             </label>
           </div>
-          <label htmlFor="session-venue">{t("sessions.venueLabel")}</label>
-          <input
-            id="session-venue"
-            maxLength={300}
-            onChange={(event) => setVenue(event.target.value)}
-            value={venue}
-          />
+          {bootstrap.data.features.venuePlaceSearch ? (
+            <VenuePicker
+              label={t("sessions.venueLabel")}
+              latitude={venuePoint?.latitude}
+              longitude={venuePoint?.longitude}
+              onChoose={(place) => {
+                setVenue(place.name);
+                setVenuePoint(
+                  place.latitude === null || place.longitude === null
+                    ? null
+                    : { latitude: place.latitude, longitude: place.longitude },
+                );
+              }}
+              // Renaming the event's place keeps the point it was given, the same
+              // way it does on a tasting.
+              onRename={setVenue}
+              spaceId={spaceId}
+              value={venue}
+            />
+          ) : (
+            <>
+              <label htmlFor="session-venue">{t("sessions.venueLabel")}</label>
+              <input
+                id="session-venue"
+                maxLength={300}
+                onChange={(event) => setVenue(event.target.value)}
+                value={venue}
+              />
+            </>
+          )}
           <label htmlFor="session-description">{t("sessions.descriptionLabel")}</label>
           <textarea
             id="session-description"

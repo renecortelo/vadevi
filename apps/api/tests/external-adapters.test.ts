@@ -823,6 +823,74 @@ describe("Nominatim place search adapter", () => {
     expect((asked as unknown as URL).toString()).not.toContain("41.387128");
   });
 
+  it("puts the nearest match first, whatever order the provider returned", async () => {
+    const fetcher: ProviderFetcher = async () =>
+      Response.json([
+        // The provider's own first result: same name, another country.
+        {
+          address: { city: "Ciudad de México", country_code: "mx" },
+          display_name: "Can Pau, Roma Norte, Ciudad de México, México",
+          lat: 19.4126,
+          lon: -99.1662,
+          name: "Can Pau",
+        },
+        {
+          address: { city: "Barcelona", country_code: "es" },
+          display_name: "Can Pau, El Born, Barcelona, Espanya",
+          lat: 41.3851,
+          lon: 2.1734,
+          name: "Can Pau",
+        },
+        {
+          address: { city: "Girona", country_code: "es" },
+          display_name: "Can Pau, Girona, Espanya",
+          lat: 41.9794,
+          lon: 2.8214,
+          name: "Can Pau",
+        },
+      ]);
+    const adapter = new NominatimPlaceSearchAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      { fetcher, now: () => new Date("2026-09-07T12:00:00.000Z") },
+    );
+
+    const result = await adapter.search({
+      locale: "ca",
+      // Standing in Barcelona.
+      near: { latitude: 41.3874, longitude: 2.1686 },
+      query: "Can Pau",
+    });
+    expect(result.status).toBe("success");
+    if (result.status !== "success") throw new Error("Expected a successful search.");
+    // Nearest first: Barcelona, then Girona, and the other continent last.
+    expect(result.data.map((place) => place.city)).toEqual([
+      "Barcelona",
+      "Girona",
+      "Ciudad de México",
+    ]);
+  });
+
+  it("leaves the provider's own order alone when it does not know where you are", async () => {
+    const fetcher: ProviderFetcher = async () =>
+      Response.json([
+        { display_name: "Second by distance, first by provider", lat: 19.4, lon: -99.1, name: "A" },
+        { display_name: "Nearer to nothing in particular", lat: 41.4, lon: 2.2, name: "B" },
+      ]);
+    const adapter = new NominatimPlaceSearchAdapter(
+      new D1ExternalCache(env.DB),
+      new D1ExternalRateLimiter(env.DB),
+      userAgent,
+      { fetcher, now: () => new Date("2026-09-07T12:05:00.000Z") },
+    );
+
+    const result = await adapter.search({ locale: "en", query: "somewhere unlocated" });
+    expect(result.status).toBe("success");
+    if (result.status !== "success") throw new Error("Expected a successful search.");
+    expect(result.data.map((place) => place.name)).toEqual(["A", "B"]);
+  });
+
   it("rejects a place name that reads like an instruction", async () => {
     const fetcher: ProviderFetcher = async () =>
       Response.json([
