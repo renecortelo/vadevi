@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "./MapLink";
 import { type Place, reversePlace, searchPlaces } from "../services/places";
+import { parsePastedPoint } from "./coordinates";
 
 const supportedLocales = new Set<SupportedLocale>([
   "ca",
@@ -132,6 +133,9 @@ export function VenuePicker({
         near ?? undefined,
       );
       setPlaces(found);
+      // Said in full, because "not found" invites the reader to conclude the
+      // search is broken. OpenStreetMap holds the places somebody mapped, so a
+      // small bar may genuinely not be in it, and there are two ways on.
       if (found.length === 0) setNotice(t("tasting.venue.noMatches"));
       // Said plainly, because an unordered list of same-named places in three
       // countries is confusing unless you know why it is not sorted.
@@ -206,7 +210,28 @@ export function VenuePicker({
         <span>{label ?? t("tasting.field.venueName")}</span>
         <input
           maxLength={200}
-          onChange={(event) => onRename(event.target.value)}
+          onChange={(event) => {
+            const typed = event.target.value;
+            // Pasting a point is how a reader records a place OpenStreetMap does
+            // not know: they find it in a map that does, copy the coordinates,
+            // and paste them here. The field then holds a place with a point and
+            // no name yet, which they type over.
+            const pasted = parsePastedPoint(typed);
+            if (pasted === null) {
+              onRename(typed);
+              return;
+            }
+            onChoose({
+              area: null,
+              city: null,
+              countryCode: null,
+              latitude: pasted.latitude,
+              longitude: pasted.longitude,
+              name: value.trim().length > 0 ? value.trim() : t("tasting.venue.pastedName"),
+            });
+            setPlaces(null);
+            setNotice(t("tasting.venue.pastedPoint"));
+          }}
           onKeyDown={(event) => {
             if (event.key !== "Enter") return;
             event.preventDefault();
@@ -257,6 +282,7 @@ export function VenuePicker({
           ))}
         </ul>
       )}
+      <p className="venue-picker__hint">{t("tasting.venue.pasteHint")}</p>
       <p className="venue-picker__attribution">{t("tasting.venue.attribution")}</p>
     </div>
   );

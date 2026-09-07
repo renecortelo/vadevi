@@ -809,7 +809,7 @@
       "searching": "Wird gesucht…",
       "hereAction": "Ich bin hier",
       "locating": "Standort wird ermittelt…",
-      "noMatches": "Dieser Ort wurde nicht gefunden. Sie können den Namen von Hand eingeben.",
+      "noMatches": "OpenStreetMap kennt diesen Ort nicht. Wenn Sie dort sind, tippen Sie auf „Ich bin hier“. Sonst suchen Sie ihn in Google Maps, kopieren die Koordinaten und fügen sie hier ein.",
       "error": "Der Ort konnte nicht gesucht werden. Bitte erneut versuchen.",
       "noGeolocation": "Dieser Browser kann uns Ihren Standort nicht mitteilen.",
       "locationDenied": "Ihr Standort konnte nicht gelesen werden. Sie können den Ort über seinen Namen suchen.",
@@ -819,7 +819,10 @@
       "unordered": "Ohne Ihren Standort lässt sich nicht nach Entfernung sortieren; weit entfernte Orte können denselben Namen tragen.",
       "mapAction": "In Google Maps öffnen",
       "mapTitle": "Öffnet genau diesen Punkt in Google Maps",
-      "mapTitleByName": "Sucht diesen Namen in Google Maps; ohne Koordinaten ist es womöglich nicht derselbe Ort"
+      "mapTitleByName": "Sucht diesen Namen in Google Maps; ohne Koordinaten ist es womöglich nicht derselbe Ort",
+      "pasteHint": "Nicht dabei? Fügen Sie die Google-Maps-Koordinaten hier ein und vergeben Sie selbst einen Namen.",
+      "pastedPoint": "Koordinaten gespeichert. Geben Sie dem Ort einen Namen.",
+      "pastedName": "Ort ohne Namen"
     },
     "scale": {
       "1": "Sehr niedrig",

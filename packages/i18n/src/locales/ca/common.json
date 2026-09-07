@@ -809,7 +809,7 @@
       "searching": "Cercant…",
       "hereAction": "Soc aquí",
       "locating": "Localitzant…",
-      "noMatches": "No s'ha trobat aquest lloc. Pots escriure'n el nom a mà.",
+      "noMatches": "OpenStreetMap no coneix aquest lloc. Si hi ets, prem «Soc aquí». Si no, cerca'l a Google Maps, copia'n les coordenades i enganxa-les aquí.",
       "error": "No s'ha pogut cercar el lloc. Torna-ho a provar.",
       "noGeolocation": "Aquest navegador no ens pot donar la teva ubicació.",
       "locationDenied": "No s'ha pogut obtenir la teva ubicació. Pots cercar el lloc pel nom.",
@@ -819,7 +819,10 @@
       "unordered": "Sense la teva ubicació no es poden ordenar per proximitat; hi pot haver llocs llunyans amb el mateix nom.",
       "mapAction": "Obre a Google Maps",
       "mapTitle": "Obre aquest punt exacte a Google Maps",
-      "mapTitleByName": "Cerca aquest nom a Google Maps; sense coordenades pot no ser el mateix lloc"
+      "mapTitleByName": "Cerca aquest nom a Google Maps; sense coordenades pot no ser el mateix lloc",
+      "pasteHint": "No hi surt? Enganxa aquí les seves coordenades de Google Maps i posa-li tu el nom.",
+      "pastedPoint": "Coordenades desades. Posa-li el nom que vulguis.",
+      "pastedName": "Lloc sense nom"
     },
     "scale": {
       "1": "Molt baix",

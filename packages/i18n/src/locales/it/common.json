@@ -809,7 +809,7 @@
       "searching": "Ricerca…",
       "hereAction": "Sono qui",
       "locating": "Localizzazione…",
-      "noMatches": "Questo luogo non è stato trovato. Puoi scrivere il nome a mano.",
+      "noMatches": "OpenStreetMap non conosce questo luogo. Se sei lì, premi «Sono qui». Altrimenti cercalo in Google Maps, copia le coordinate e incollale qui.",
       "error": "Non è stato possibile cercare il luogo. Riprova.",
       "noGeolocation": "Questo browser non può darci la tua posizione.",
       "locationDenied": "Non è stato possibile leggere la tua posizione. Puoi cercare il luogo per nome.",
@@ -819,7 +819,10 @@
       "unordered": "Senza la tua posizione non è possibile ordinarli per vicinanza; luoghi lontani possono avere lo stesso nome.",
       "mapAction": "Apri in Google Maps",
       "mapTitle": "Apre questo punto esatto in Google Maps",
-      "mapTitleByName": "Cerca questo nome in Google Maps; senza coordinate potrebbe non essere lo stesso luogo"
+      "mapTitleByName": "Cerca questo nome in Google Maps; senza coordinate potrebbe non essere lo stesso luogo",
+      "pasteHint": "Non compare? Incolla qui le sue coordinate di Google Maps e dagli tu un nome.",
+      "pastedPoint": "Coordinate salvate. Dai al luogo il nome che preferisci.",
+      "pastedName": "Luogo senza nome"
     },
     "scale": {
       "1": "Molto basso",
