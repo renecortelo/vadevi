@@ -814,7 +814,7 @@
       "noGeolocation": "Questo browser non può darci la tua posizione.",
       "locationDenied": "Non è stato possibile leggere la tua posizione. Puoi cercare il luogo per nome.",
       "here": "Qui",
-      "hereDescription": "La tua posizione attuale, senza nome sulla mappa",
+      "hereFilled": "Il luogo è stato compilato dalla tua posizione. Puoi rinominarlo.",
       "attribution": "Luoghi da OpenStreetMap, © contributori di OpenStreetMap"
     },
     "scale": {

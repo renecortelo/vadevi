@@ -814,7 +814,7 @@
       "noGeolocation": "Deze browser kan ons je locatie niet geven.",
       "locationDenied": "Je locatie kon niet worden gelezen. Je kunt de plek op naam zoeken.",
       "here": "Hier",
-      "hereDescription": "Je huidige positie, naamloos op de kaart",
+      "hereFilled": "De plek is ingevuld op basis van waar je bent. Je kunt hem hernoemen.",
       "attribution": "Plaatsen van OpenStreetMap, © OpenStreetMap-bijdragers"
     },
     "scale": {
