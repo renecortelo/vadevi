@@ -2,14 +2,20 @@ packages:
   - "apps/*"
   - "packages/*"
 
-# Development-only transitive advisories under firebase-tools. Both are patched
-# by a newer minor of the transitive package, so the override raises the floor
-# without changing any direct dependency. The Firebase Auth Emulator workflow is
-# retested after any change here.
+# Development-only transitive advisories. Each is patched by a newer version of
+# the transitive package, so the override raises the floor without changing any
+# direct dependency, and none of these ship in the deployed Worker — they sit
+# under wrangler/miniflare (dev server, tests) and firebase-tools (auth
+# emulator). The Firebase Auth Emulator workflow is retested after any change.
 overrides:
   uuid@9: ">=11.1.1"
   "@opentelemetry/core": ">=2.8.0"
   fast-uri: ">=3.1.6"
+  # GHSA-g89c-p67h-r497 (libheif via sharp), under wrangler>miniflare and the
+  # vitest worker pool. Dev/build tooling only; not in the Worker.
+  sharp: ">=0.35.4"
+  # GHSA-2883-xcg3-v3hh (js-yaml CPU), under firebase-tools. Emulator only.
+  js-yaml@4: ">=4.3.2"
 
 catalog:
   typescript: "6.0.3"
