@@ -8,21 +8,21 @@ that is yours to make and not mine.
 
 ## 1. Deploy the latest `main` (5 min)
 
-The latest migration is now `0019`. Four are outstanding if your last apply was
-`0015`:
+The database is current through `0020`; every migration up to it has been
+applied. So the outstanding work here is a plain redeploy — no migration is
+waiting, and `pnpm deploy:preview` will say "No migrations to apply" and move
+straight on.
 
-| Migration                                  | What it adds                                       |
-| ------------------------------------------ | -------------------------------------------------- |
-| `0016_wine_type_free_text.sql`             | wine type as a free-text column (vermouths)        |
-| `0017_tasting_bubbles_and_nose_phases.sql` | bead and effervescence, nose read twice            |
-| `0018_tasting_venue.sql`                   | where a wine was tasted: name, city, area, country |
-| `0019_tasting_venue_coordinates.sql`       | that venue's point on the map                      |
+What a redeploy brings that the running Worker does not yet have: the two
+defects that closing the contract-types hole surfaced (a food pairing that never
+actually read your tasting notes; identification that a free-text wine type could
+break), and the venue improvements — nearest-place-first search, paste a point
+from Google Maps, and the clearer "not found" message. None of them changed the
+schema, so the running app is safe; it is just behind.
 
-Run the migration step below **before** the deploy — migrations are forward-only,
-so they go on before the Worker, never after. Everything else merged since is
-code, so once the database is current a build and a deploy are all this takes.
 Rebuilding the web bundle is not optional: every UI change lives in it, and
-deploying only the Worker would ship none of them.
+`deploy:preview` does it for you — deploying only the Worker would ship none of
+it.
 
 ```bash
 git checkout main && git pull && pnpm install --frozen-lockfile && pnpm deploy:preview
@@ -229,15 +229,11 @@ repository nobody can open. The current default is
 `https://github.com/renecortelo/vadevi`; if the public repository is that same
 URL made public, nothing needs to change here.
 
-## 7. Optional: tidy the stale branches on GitHub
+## 7. Done: the stale branches are gone
 
-Thirteen old `codex/phase-*` branches from before pull requests were set to
-delete on merge are still on the remote. They are all merged into `main` and
-harmless, only clutter. Delete them from the branches page, or:
-
-```powershell
-git branch -r | Select-String 'origin/codex/' | ForEach-Object { git push origin --delete ($_ -replace '\s*origin/','') }
-```
+The twelve old `codex/phase-*` branches were all merged into `main` and have been
+deleted from the remote. Nothing to do here; kept as a note so it is not
+re-investigated.
 
 ---
 
