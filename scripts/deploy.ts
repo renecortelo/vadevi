@@ -56,6 +56,63 @@ function run(label: string, command: string, args: string[]): void {
   }
 }
 
+/** The migration files in the repository, by their `NNNN_name.sql` filenames. */
+function localMigrations(): string[] {
+  return readdirSync("migrations")
+    .filter((file) => file.endsWith(".sql"))
+    .sort();
+}
+
+/**
+ * The migrations D1 records as applied — read through `d1 execute`, not through
+ * `migrations apply`.
+ *
+ * `wrangler d1 migrations apply` has hit an intermittent Cloudflare 7403 on its
+ * own preflight query (2026-09-07, 2026-09-15), while `d1 execute` against the
+ * same `/query` endpoint, with the same token, kept working seconds apart. So
+ * the "is anything pending?" question is answered with the call that does not
+ * flake, and the flaky `apply` is only ever run when there is real work for it.
+ *
+ * Returns null when the answer cannot be trusted — the call failed, or a fresh
+ * database has no `d1_migrations` table yet — in which case the caller applies
+ * migrations the old way rather than assuming the database is current.
+ */
+function appliedMigrations(db: string): string[] | null {
+  const result = spawnSync(
+    "npx",
+    [
+      "wrangler",
+      "d1",
+      "execute",
+      db,
+      "--remote",
+      "--config",
+      config,
+      "--json",
+      "--command",
+      "SELECT name FROM d1_migrations",
+    ],
+    { encoding: "utf8" },
+  );
+  if (result.status !== 0 || typeof result.stdout !== "string") return null;
+  // `--json` prints a JSON array to stdout; take it from the first bracket so a
+  // stray warning line cannot break the parse.
+  const start = result.stdout.indexOf("[");
+  if (start === -1) return null;
+  try {
+    const parsed = JSON.parse(result.stdout.slice(start)) as Array<{
+      results?: Array<{ name?: unknown }>;
+    }>;
+    const names = parsed
+      .flatMap((block) => block.results ?? [])
+      .map((row) => row.name)
+      .filter((name): name is string => typeof name === "string");
+    return names;
+  } catch {
+    return null;
+  }
+}
+
 const database = databaseName();
 if (database === null) {
   console.error(`deploy: could not find a database_name in ${config}.`);
@@ -67,17 +124,37 @@ console.log(
   `Deploying with ${config} → D1 "${database}" (${migrationCount} migrations in the repository).`,
 );
 
-// 1. The database first, always.
-run("Applying migrations", "npx", [
-  "wrangler",
-  "d1",
-  "migrations",
-  "apply",
-  database,
-  "--remote",
-  "--config",
-  config,
-]);
+// 1. The database first, always — but skip the apply when there is provably
+//    nothing to apply, so a code-only deploy is not held hostage by the flaky
+//    migration preflight. The skip is taken ONLY when the reliable check
+//    confirms every local migration is already recorded; any doubt falls back
+//    to running the apply.
+const applied = appliedMigrations(database);
+const pending =
+  applied === null ? null : localMigrations().filter((file) => !applied.includes(file));
+
+if (pending !== null && pending.length === 0) {
+  console.log(
+    "\n▶ Applying migrations\n  skipped — the database already has all " +
+      `${localMigrations().length} migrations (checked with d1 execute).`,
+  );
+} else {
+  if (pending !== null) {
+    console.log(`\n  ${pending.length} migration(s) to apply: ${pending.join(", ")}`);
+  } else {
+    console.log("\n  Could not read applied migrations; applying to be safe.");
+  }
+  run("Applying migrations", "npx", [
+    "wrangler",
+    "d1",
+    "migrations",
+    "apply",
+    database,
+    "--remote",
+    "--config",
+    config,
+  ]);
+}
 
 // 2. The bundle. Every interface change lives here; deploying only the Worker
 //    ships none of them, which has been mistaken for "the fix did not deploy".
