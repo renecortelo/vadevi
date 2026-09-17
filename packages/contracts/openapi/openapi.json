@@ -15834,6 +15834,16 @@
               }
             }
           },
+          "429": {
+            "description": "This deployment is over its tile-fetch budget for the minute.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
           "503": {
             "description": "A map background is not enabled for this deployment.",
             "content": {

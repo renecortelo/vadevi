@@ -138,7 +138,10 @@ geography: it carries no wine, note, or account, and which tiles are fetched
 reveals only the map's viewport, not who is looking. Tiles are cached at the edge
 and marked immutable so OSM's donated servers are asked once per tile; the
 identifying user agent its policy requires is sent on every upstream fetch, which
-`validate-env` refuses to start without. Defaults off. A public launch with real
+`validate-env` refuses to start without. Upstream fetches are also capped for the
+whole deployment, counted only on a cache miss: this is the one route that
+answers without a session, and the cap is what keeps a stranger walking distinct
+coordinates from becoming traffic OSM attributes to this deployment. Defaults off. A public launch with real
 traffic should move to a tile provider intended for applications rather than
 OSM's donated infrastructure.
 

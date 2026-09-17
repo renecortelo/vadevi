@@ -1,11 +1,28 @@
 import { createRoute, type OpenAPIHono, z } from "@hono/zod-openapi";
 import { ErrorEnvelopeSchema } from "@vadevi/contracts";
 
+import { D1ExternalRateLimiter } from "../adapters/external-state";
 import { fetchFromProvider, type ProviderFetcher } from "../adapters/provider-fetch";
 import { mapTilesEnabled } from "../adapters/research-factory";
 import type { ApiEnvironment } from "../types";
 
 const tileHost = "tile.openstreetmap.org";
+
+/**
+ * Upstream tile fetches a deployment may make in a minute, in total.
+ *
+ * Every other provider boundary is metered; this one was not, and it is the
+ * only route that answers without a session. Anyone who knows the path could
+ * walk distinct coordinates — which miss the cache by construction — and OSM
+ * would see the traffic under this deployment's own identifying user agent.
+ * Their tile policy forbids exactly that, and the deployment, not the caller,
+ * is what gets blocked for it.
+ *
+ * Only fetches count. Serving from the cache is free, so panning back over
+ * ground already seen never touches this, and the ceiling is generous enough
+ * that a few readers opening fresh map views together stay well under it.
+ */
+export const tileFetchesPerMinute = 120;
 
 /** A tile coordinate, in range for its zoom. Anything else is not a tile. */
 export function validTile(z: number, x: number, y: number): boolean {
@@ -39,6 +56,10 @@ const mapTileRoute = createRoute({
     404: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "The tile could not be fetched.",
+    },
+    429: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "This deployment is over its tile-fetch budget for the minute.",
     },
     503: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
@@ -100,6 +121,28 @@ export function registerMapTileRoutes(
     if (cache !== undefined) {
       const hit = await cache.match(cacheKey);
       if (hit !== undefined) return hit;
+    }
+
+    // Past the cache, this request becomes load on donated infrastructure under
+    // our name, so it is metered like every other provider call before it goes.
+    const rate = await new D1ExternalRateLimiter(context.env.DB!).consume(
+      "map_tiles",
+      tileFetchesPerMinute,
+      60,
+      new Date().toISOString(),
+    );
+    if (!rate.allowed) {
+      return context.json(
+        ErrorEnvelopeSchema.parse({
+          error: {
+            code: "RATE_LIMITED",
+            message: "This deployment is over its tile-fetch budget for the minute.",
+            requestId: context.get("requestId"),
+          },
+        }),
+        429,
+        { "Retry-After": String(rate.retryAfterSeconds) },
+      );
     }
 
     let upstream: Response;
