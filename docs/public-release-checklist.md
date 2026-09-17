@@ -20,8 +20,11 @@ Status key: **automated** runs in `pnpm check`; **manual** needs you.
 - [x] **manual** — No copied third-party implementation code. The tasting
       ontology is original and §21 forbids reproducing another product's
       taxonomy or copy.
-- [ ] **manual** — `VITE_SOURCE_URL` points at the published repository, so the
-      AGPL §13 source offer resolves. Only possible once the mirror exists.
+- [x] **manual** — `VITE_SOURCE_URL` points at the published repository, so the
+      AGPL §13 source offer resolves. Nothing had to change: the default baked
+      into `apps/web/src/config/env.ts` is `https://github.com/renecortelo/vadevi`,
+      and the public mirror was published at that same URL on purpose, so the
+      offer already resolves to the source it offers.
 
 ## Repository hygiene
 
@@ -40,9 +43,21 @@ would actually be published. The scanner had passed; these are what it does not
 look for.
 
 - **`vadevi_implementation_spec.md` named two other private repositories.** It
-  is the private brief this was built from, and it is now excluded from the
-  mirror altogether. What a reader of the public repository needs — architecture,
+  is the private brief this was built from, and it is excluded from the mirror
+  altogether. What a reader of the public repository needs — architecture,
   privacy, threat model, data dictionary, the ADRs, self-hosting — is in `docs/`.
+
+  Excluding it from the mirror turned out not to be enough, and this is the
+  finding worth keeping. The development repository had itself been made public
+  — the one thing §15.9 says never to do — so the brief was readable from the
+  first commit onward, and the mirror's exclusion list protected an export that
+  had not been published yet. A gate only guards the door it is fitted to. The
+  brief was removed and purged from all 219 commits, the development repository
+  is now private as `renecortelo/vadevi-dev`, and `renecortelo/vadevi` is a
+  fresh single-commit mirror. Assume the names were read: the repository served
+  them publicly for its whole life, and roughly a dozen external clones landed
+  in the fortnight before the purge.
+
 - **`docs/your-desk-todo.md` is the operator's own task list**, with the state of
   their acceptance run. Excluded.
 - **`docs/acceptance-findings.md` carried a real name** in a run heading. The
@@ -59,8 +74,10 @@ depending on someone reading 274 files carefully.
       `RESEARCH_PROVIDER=none`.
 - [x] **automated** — Demonstration data is clearly fictional
       (`pnpm seed:demo`), local-only, and refuses to seed a deployed database.
-- [ ] **manual** — Clean mirror created without private history
-      (`pnpm mirror:build`), then reviewed by eye before pushing.
+- [x] **manual** — Clean mirror created without private history
+      (`pnpm mirror:build`), then reviewed by eye before pushing. Published as
+      `renecortelo/vadevi`: one root commit, 364 files, no ancestry. The
+      development repository is now `renecortelo/vadevi-dev`, private.
 
 ## Documentation
 
@@ -93,7 +110,8 @@ These are tracked in `docs/your-desk-todo.md`.
 - [ ] Run the preview acceptance checklist end to end.
 - [ ] Measure LCP, INP, and API p95.
 - [ ] Sign off accessibility, threat model, privacy, and restore/delete (§22.2).
-- [ ] Build, review, and push the public mirror.
+- [x] Build, review, and push the public mirror. Done: `renecortelo/vadevi`,
+      tagged `v0.1.0`.
 
 ---
 
