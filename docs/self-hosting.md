@@ -271,19 +271,52 @@ photograph, and Vicenç's language replies.
 5. **Redeploy**, then open **Data and privacy** and check the usage counters
    read what you expect.
 
-### The caps you get for free
+### The caps this application enforces
 
 Every provider call is metered and refused past a daily budget, per member and
 across the deployment:
 
-| Metric            | Per member | Whole deployment |
-| ----------------- | ---------- | ---------------- |
-| Label reads (OCR) | 40         | 300              |
-| Barcode lookups   | 60         | 500              |
-| Vicenç replies    | 60         | 400              |
+| Metric                              | Per member | Whole deployment |
+| ----------------------------------- | ---------- | ---------------- |
+| Label reads (OCR)                   | 40         | 300              |
+| Barcode lookups                     | 60         | 500              |
+| Vicenç and narrative (AI text)      | 200        | 1,000            |
+| Research lookups (incl. web search) | 40         | 300              |
+| Price lookups                       | 60         | 500              |
 
 These are hard caps, not warnings: past them the feature degrades to manual
 entry rather than continuing to spend. Warnings appear at 70% and 90%.
+
+### The caps your providers enforce, which are not the same thing
+
+**These budgets are not sized to any provider's free tier, and on the default
+models the AI one is far above it.** Checked 17 September 2026:
+
+- **Workers AI: 10,000 Neurons per day**, free, and it is a **single shared
+  pool** — OCR and assistant replies draw from the same allowance. Neurons are
+  priced per model. On `@cf/meta/llama-3.3-70b-instruct-fp8-fast` a reply of
+  roughly 1,500 input and 250 output tokens costs about 91 Neurons, so the free
+  day is about 110 replies; the `1,000` budget above is roughly nine times that.
+  `@cf/meta/llama-3.1-8b-instruct-fp8-fast` costs about 15 Neurons a reply, or
+  about 670 a day. Label OCR on the 11b vision model is about 22 Neurons a read,
+  so its own 300 fits — until the assistant has emptied the shared pool first.
+- **Brave Search: $5 of credit each month against $5 per 1,000 requests**, so
+  about 1,000 requests a month, near enough 33 a day. The research budget above
+  is 300 a day.
+- **Nominatim, OpenStreetMap tiles, Wikidata, Open Food Facts:** free, with
+  usage policies rather than quotas. The application stays under them with its
+  own rate limits and caches.
+
+What happens past the free allowance depends on your plan. On **Workers Free**,
+Workers AI requests simply fail, and the application degrades to manual entry —
+annoying, never billed. On **Workers Paid**, you are charged $0.011 per 1,000
+Neurons beyond the allowance. Nothing here escalates to a paid model on its own;
+§12.5 forbids it. But a budget above the free allowance is a bill waiting for a
+busy day, so set these to what you are willing to pay for, not to what the
+application ships with.
+
+Recheck this table on the day you enable anything: providers change pricing, and
+Brave changed to this credit model since the first review of it.
 
 ## Updating
 

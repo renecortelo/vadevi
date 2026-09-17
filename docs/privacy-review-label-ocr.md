@@ -121,8 +121,16 @@ content, so label text cannot reach a later model call as an instruction.
 - The `ocr_reads` daily cap (40 per user, 300 globally) is enforced **before**
   the call. At the cap, identification silently falls back to barcode and Space
   matching with an explicit warning.
-- Workers AI free allocation is 10,000 neurons/day (§16.1). The application cap
-  sits below it, and §12.5 forbids an automatic paid fallback.
+- Workers AI free allocation is 10,000 Neurons a day (§16.1), rechecked
+  2026-09-17. OCR's own cap sits below it — about 22 Neurons a read on the 11b
+  vision model, so 300 reads is roughly 6,600 — and §12.5 forbids an automatic
+  paid fallback.
+- **But the allocation is one shared pool, not a per-feature one.** Assistant
+  replies draw on the same 10,000, and on the default 70b text model their own
+  budget is several times the whole day's allowance, so OCR can be refused by
+  Cloudflare on a day when its application cap was never reached.
+  `docs/self-hosting.md` has the arithmetic per model. Size the budgets to the
+  plan you are on before enabling this.
 
 ## Honest assessment of value
 
