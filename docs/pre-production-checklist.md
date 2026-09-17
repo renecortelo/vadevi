@@ -70,12 +70,18 @@ it; both are noted where they sit.
 
 ## Yours, and genuinely yours
 
-- [ ] **manual** — Backup and export procedure tested. The application's own
-      export is covered by Workers-runtime tests, but that is the reader's data
-      leaving by the front door. This item is about _your_ ability to restore a
-      database you have lost, which cannot be verified from inside the
-      repository: take a D1 export, drop it somewhere that is not Cloudflare, and
-      confirm you can read it back.
+- [~] **manual** — Backup and export procedure tested. **D1 half done**,
+  17 September 2026: exported, restored into a scratch database, and the row
+  counts compared across six tables — identical on both sides. A backup that
+  has never been restored is a hypothesis, and this one is no longer one.
+
+      **R2 half outstanding, and the restore drill is what surfaced it.** The
+      export carries `media_assets` rows; the photograph bytes live in the media
+      bucket and nothing backs them up. Restoring D1 alone yields metadata
+      pointing at objects that are not there. The provider's own durability is
+      not a backup you hold. `wrangler` offers no bulk R2 export, so this needs a
+      tool that speaks S3 — `rclone` against an R2 remote is the usual answer —
+      and it should exist before any deployment holds photographs worth missing.
 
 - [ ] **manual** — All acceptance criteria listed in §20 pass or are explicitly
       not applicable. 41 criteria across seven areas; `docs/manual-acceptance.md`
