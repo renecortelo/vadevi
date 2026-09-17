@@ -109,7 +109,14 @@ These are tracked in `docs/your-desk-todo.md`.
 - [ ] Decide the two optional-provider privacy reviews.
 - [ ] Run the preview acceptance checklist end to end.
 - [ ] Measure LCP, INP, and API p95.
-- [ ] Sign off accessibility, threat model, privacy, and restore/delete (§22.2).
+- [x] Sign off accessibility, threat model, privacy, and restore/delete (§22.2).
+      Signed by the maintainer, 17 September 2026, against the gates and code
+      rather than against a reading of the documents — which is why two of them
+      were signed only after a change. Accessibility waited on a real defect:
+      the memory map's points were unnamed, unactivatable SVG circles, invisible
+      to a sweep that only ever sees `/memory` in its card view. The threat
+      model waited on the two outbound boundaries it had never recorded, venue
+      lookup and map tiles. The reasoning for each is kept with the sign-off.
 - [x] Build, review, and push the public mirror. Done: `renecortelo/vadevi`,
       tagged `v0.1.0`.
 
