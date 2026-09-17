@@ -109,7 +109,11 @@ depending on someone reading 274 files carefully.
 
 These are tracked in `docs/your-desk-todo.md`.
 
-- [ ] Decide the two optional-provider privacy reviews.
+- [x] Decide the two optional-provider privacy reviews. Both approved by the
+      maintainer, 17 September 2026, on terms rechecked against the providers'
+      live pages that day rather than on the month-old reading they carried.
+      Each review says in its own words to recheck on the day the provider is
+      enabled, and both providers had been enabled in the meantime.
 - [ ] Run the preview acceptance checklist end to end.
 - [ ] Measure LCP, INP, and API p95.
 - [x] Sign off accessibility, threat model, privacy, and restore/delete (§22.2).

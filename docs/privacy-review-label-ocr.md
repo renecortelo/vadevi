@@ -11,9 +11,15 @@ sends an actual photograph off the deployment rather than a barcode number.
 `AI_OCR_MODEL` to name an allowlisted vision model, so enabling AI for the
 assistant does _not_ silently enable label reading.
 
-- Decision: ☐ approved ☐ rejected
-- Decided by: ______________________
-- Date: ______________________
+- Decision: ☑ approved ☐ rejected
+- Decided by: the maintainer
+- Date: 17 September 2026
+
+This records the decision taken for the reference deployment, on the terms check
+dated the same day. It is not a decision taken on your behalf: the box is here
+because §12.5 asks each deployment to make this call, and yours is still yours to
+make. If you are reading this in a repository you cloned, the honest starting
+point is that `AI_PROVIDER` is `none` and a photograph goes nowhere.
 
 ## What the capability does
 
