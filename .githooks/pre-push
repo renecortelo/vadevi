@@ -1,0 +1,29 @@
+#!/bin/sh
+# Run CI's gate before the push, not after it.
+#
+# `pnpm check` is exactly what the `quality` job runs, so a push that passes
+# here cannot fail that job. That matters now that the development repository
+# is private and Actions minutes are metered: a failed CI run is a few minutes
+# of quota spent to learn something this would have said for free, and the
+# round trip through a red check costs another full run to clear.
+#
+# The browser suite is deliberately not here. It needs a built server, takes
+# minutes, and is the one thing CI is genuinely better placed to run.
+#
+# Two ways past it, for when you already know:
+#   git push --no-verify          skip the hook entirely
+#   VADEVI_SKIP_CHECK=1 git push  same, without forgetting the flag mid-rebase
+
+if [ "${VADEVI_SKIP_CHECK:-}" = "1" ]; then
+	echo "pre-push: check skipped (VADEVI_SKIP_CHECK=1)"
+	exit 0
+fi
+
+echo "pre-push: running pnpm check — 'git push --no-verify' skips it"
+
+if ! pnpm check; then
+	echo ""
+	echo "pre-push: pnpm check failed, so nothing was pushed."
+	echo "  Fix it, or push with --no-verify if you meant to."
+	exit 1
+fi
