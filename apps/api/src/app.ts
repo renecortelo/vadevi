@@ -1,0 +1,419 @@
+import { createRoute, OpenAPIHono } from "@hono/zod-openapi";
+import {
+  BootstrapResponseSchema,
+  ErrorEnvelopeSchema,
+  HealthResponseSchema,
+  RuntimeConfigResponseSchema,
+  UpdateProfileRequestSchema,
+} from "@vadevi/contracts";
+
+import { authentication } from "./middleware/authentication";
+import {
+  externalResearchEnabled,
+  imageSearchEnabled,
+  mapTilesEnabled,
+  placeSearchEnabled,
+} from "./adapters/research-factory";
+import { requestContext } from "./middleware/request-context";
+import { security } from "./middleware/security";
+import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
+import { registerActionDraftRoutes } from "./routes/action-drafts";
+import { registerAssistantRoutes } from "./routes/assistant";
+import { registerCellarRoutes } from "./routes/cellar";
+import { registerMapTileRoutes } from "./routes/map-tiles";
+import { registerPlaceRoutes } from "./routes/places";
+import { registerProvenanceRoutes } from "./routes/provenance";
+import { registerReleaseRoutes } from "./routes/release";
+import { registerResearchRoutes } from "./routes/research";
+import { registerSpaceRoutes } from "./routes/spaces";
+import { registerTastingSessionRoutes } from "./routes/tasting-sessions";
+import { registerWineMemoryRoutes } from "./routes/wine-memory";
+import type { ApiEnvironment } from "./types";
+
+const healthRoute = createRoute({
+  method: "get",
+  path: "/health",
+  operationId: "getHealth",
+  tags: ["Runtime"],
+  summary: "Check the API process without authentication",
+  responses: {
+    200: {
+      content: {
+        "application/json": {
+          schema: HealthResponseSchema,
+        },
+      },
+      description: "The API process is available.",
+      headers: {
+        "X-Request-Id": {
+          description: "Opaque request correlation identifier.",
+          schema: { type: "string" },
+        },
+      },
+    },
+  },
+});
+
+const bootstrapRoute = createRoute({
+  method: "get",
+  path: "/api/v1/me/bootstrap",
+  operationId: "getBootstrap",
+  tags: ["Session"],
+  summary: "Create or load the authenticated user's private bootstrap state",
+  security: [{ FirebaseBearer: [] }],
+  responses: {
+    200: {
+      content: {
+        "application/json": {
+          schema: BootstrapResponseSchema,
+        },
+      },
+      description: "The authenticated user, active memberships, and runtime feature state.",
+    },
+    401: {
+      content: {
+        "application/json": {
+          schema: ErrorEnvelopeSchema,
+        },
+      },
+      description: "A valid Firebase ID token is required.",
+    },
+  },
+});
+
+const runtimeConfigRoute = createRoute({
+  method: "get",
+  path: "/runtime-config",
+  operationId: "getRuntimeConfig",
+  tags: ["Runtime"],
+  summary: "Get non-secret browser and feature configuration",
+  responses: {
+    200: {
+      content: {
+        "application/json": {
+          schema: RuntimeConfigResponseSchema,
+        },
+      },
+      description: "Public environment, Firebase web, and feature configuration.",
+    },
+  },
+});
+
+const updateProfileRoute = createRoute({
+  method: "patch",
+  path: "/api/v1/me",
+  operationId: "updateProfile",
+  tags: ["Session"],
+  summary: "Update the authenticated profile or active Space",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    body: {
+      content: {
+        "application/json": {
+          schema: UpdateProfileRequestSchema,
+        },
+      },
+      required: true,
+    },
+  },
+  responses: {
+    200: {
+      content: {
+        "application/json": {
+          schema: BootstrapResponseSchema,
+        },
+      },
+      description: "The updated bootstrap state.",
+    },
+    400: {
+      content: {
+        "application/json": {
+          schema: ErrorEnvelopeSchema,
+        },
+      },
+      description: "The profile update is invalid.",
+    },
+    401: {
+      content: {
+        "application/json": {
+          schema: ErrorEnvelopeSchema,
+        },
+      },
+      description: "A valid Firebase ID token is required.",
+    },
+    404: {
+      content: {
+        "application/json": {
+          schema: ErrorEnvelopeSchema,
+        },
+      },
+      description: "The requested active Space is not available to this user.",
+    },
+  },
+});
+
+/**
+ * Firebase reserves `/__/auth/*` for its sign-in handler and iframe. When an app
+ * is hosted outside Firebase Hosting, the browser treats the Firebase auth
+ * domain as third-party storage and partitions it, which breaks both redirect
+ * and popup sign-in. Firebase's documented remedy is to serve the handler from
+ * the application's own origin, which is what this proxy does.
+ *
+ * The upstream host is fixed deployment configuration, never user input or
+ * anything read from a response, and it is constrained to the Firebase-issued
+ * auth domains. Only the reserved `/__/auth/` prefix is forwarded, so this
+ * cannot be used as a general proxy.
+ */
+const firebaseAuthPrefix = "/__/auth/";
+
+export function firebaseAuthUpstream(environment: ApiEnvironment["Bindings"]): string | null {
+  const host = environment.FIREBASE_AUTH_DOMAIN;
+  if (host === undefined || environment.FIREBASE_AUTH_PROXY !== "true") return null;
+  // A bare hostname only: no scheme, credentials, port, path, or query.
+  if (!/^[a-z0-9-]+(?:\.[a-z0-9-]+)+$/i.test(host)) return null;
+  const lower = host.toLowerCase();
+  if (!lower.endsWith(".firebaseapp.com") && !lower.endsWith(".web.app")) return null;
+  return lower;
+}
+
+async function proxyFirebaseAuth(request: Request, upstream: string): Promise<Response> {
+  const incoming = new URL(request.url);
+  const target = new URL(`https://${upstream}${incoming.pathname}${incoming.search}`);
+
+  const headers = new Headers(request.headers);
+  headers.delete("host");
+  headers.set("X-Forwarded-Host", incoming.host);
+
+  const response = await fetch(target, {
+    body: request.method === "GET" || request.method === "HEAD" ? null : request.body,
+    headers,
+    method: request.method,
+    redirect: "manual",
+  });
+
+  // Strip transport-hop headers so the streamed body stays valid.
+  const safeHeaders = new Headers(response.headers);
+  safeHeaders.delete("content-encoding");
+  safeHeaders.delete("content-length");
+  safeHeaders.delete("transfer-encoding");
+  return new Response(response.body, {
+    headers: safeHeaders,
+    status: response.status,
+    statusText: response.statusText,
+  });
+}
+
+function healthPayload(version: string | undefined) {
+  return {
+    data: {
+      status: "ok" as const,
+      service: "vadevi-api" as const,
+      version: version ?? "0.1.0",
+      timestamp: new Date().toISOString(),
+    },
+  };
+}
+
+function runtimeConfigPayload(environment: ApiEnvironment["Bindings"], requestHost: string) {
+  const appEnvironment = environment.APP_ENV ?? "local";
+  // With the proxy enabled the browser must treat this origin as the auth
+  // domain, otherwise the handler stays cross-origin and nothing is gained.
+  const proxied = firebaseAuthUpstream(environment) === null ? null : requestHost;
+  return {
+    data: {
+      appEnvironment,
+      firebase: {
+        apiKey: environment.FIREBASE_WEB_API_KEY ?? "local-emulator-placeholder",
+        authDomain: proxied ?? environment.FIREBASE_AUTH_DOMAIN ?? "localhost",
+        projectId: environment.FIREBASE_PROJECT_ID ?? "demo-vadevi",
+        ...(appEnvironment === "local" && environment.FIREBASE_AUTH_EMULATOR_HOST !== undefined
+          ? { emulatorHost: environment.FIREBASE_AUTH_EMULATOR_HOST }
+          : {}),
+      },
+      features: {
+        assistant: true,
+        externalResearch: externalResearchEnabled(environment),
+        priceLookup: false,
+        venuePlaceSearch: placeSearchEnabled(environment),
+        voiceInput: false,
+      },
+    },
+  };
+}
+
+export function createApi() {
+  const app = new OpenAPIHono<ApiEnvironment>({
+    defaultHook: (result, context) => {
+      if (!result.success) {
+        return context.json(
+          ErrorEnvelopeSchema.parse({
+            error: {
+              code: "VALIDATION_FAILED",
+              message: "The request is invalid.",
+              requestId: context.get("requestId"),
+            },
+          }),
+          400,
+        );
+      }
+    },
+  });
+
+  app.openAPIRegistry.registerComponent("securitySchemes", "FirebaseBearer", {
+    bearerFormat: "Firebase ID token",
+    scheme: "bearer",
+    type: "http",
+  });
+
+  app.use("*", requestContext);
+  app.use("*", security);
+
+  // Registered before authentication middleware: the sign-in handler is what
+  // establishes identity, so it cannot require one.
+  app.all(`${firebaseAuthPrefix}*`, async (context) => {
+    const upstream = firebaseAuthUpstream(context.env);
+    if (upstream === null) {
+      return context.json(
+        ErrorEnvelopeSchema.parse({
+          error: {
+            code: "FEATURE_UNAVAILABLE",
+            message: "The Firebase auth handler proxy is not configured.",
+            requestId: context.get("requestId"),
+          },
+        }),
+        404,
+      );
+    }
+    return proxyFirebaseAuth(context.req.raw, upstream);
+  });
+  app.use("/api/v1/me", authentication);
+  app.use("/api/v1/me/*", authentication);
+  app.use("/api/v1/spaces", authentication);
+  app.use("/api/v1/spaces/*", authentication);
+  app.use("/api/v1/invitations/:token/accept", authentication);
+
+  app.openapi(healthRoute, (context) => context.json(healthPayload(context.env?.APP_VERSION), 200));
+  app.openapi(runtimeConfigRoute, (context) =>
+    context.json(
+      RuntimeConfigResponseSchema.parse(
+        runtimeConfigPayload(context.env, new URL(context.req.url).host),
+      ),
+      200,
+    ),
+  );
+
+  // The versioned alias keeps ordinary clients under /api/v1 while /health remains a minimal
+  // provider-friendly liveness endpoint and the canonical OpenAPI operation.
+  app.get("/api/v1/health", (context) =>
+    context.json(healthPayload(context.env?.APP_VERSION), 200),
+  );
+
+  app.openapi(bootstrapRoute, async (context) => {
+    const database = context.env.DB;
+    if (database === undefined) {
+      throw new Error("The D1 binding is unavailable.");
+    }
+
+    const response = await bootstrapUser(database, {
+      aiProvider: context.env.AI_PROVIDER ?? "none",
+      bottlePhotoSearch: imageSearchEnabled(context.env),
+      externalResearch: externalResearchEnabled(context.env),
+      mapTiles: mapTilesEnabled(context.env),
+      placeSearch: placeSearchEnabled(context.env),
+      principal: context.get("principal"),
+      requestId: context.get("requestId"),
+    });
+    return context.json(BootstrapResponseSchema.parse(response), 200);
+  });
+
+  app.openapi(updateProfileRoute, async (context) => {
+    const database = context.env.DB;
+    if (database === undefined) {
+      throw new Error("The D1 binding is unavailable.");
+    }
+
+    const response = await updateUserProfile(database, {
+      aiProvider: context.env.AI_PROVIDER ?? "none",
+      bottlePhotoSearch: imageSearchEnabled(context.env),
+      externalResearch: externalResearchEnabled(context.env),
+      mapTiles: mapTilesEnabled(context.env),
+      placeSearch: placeSearchEnabled(context.env),
+      principal: context.get("principal"),
+      requestId: context.get("requestId"),
+      update: context.req.valid("json"),
+    });
+    if (response === null) {
+      return context.json(
+        ErrorEnvelopeSchema.parse({
+          error: {
+            code: "NOT_FOUND",
+            message: "The requested resource was not found.",
+            requestId: context.get("requestId"),
+          },
+        }),
+        404,
+      );
+    }
+    return context.json(BootstrapResponseSchema.parse(response), 200);
+  });
+
+  registerSpaceRoutes(app);
+  registerReleaseRoutes(app);
+  registerActionDraftRoutes(app);
+  registerAssistantRoutes(app);
+  registerCellarRoutes(app);
+  registerWineMemoryRoutes(app);
+  registerTastingSessionRoutes(app);
+  registerMapTileRoutes(app);
+  registerPlaceRoutes(app);
+  registerProvenanceRoutes(app);
+  registerResearchRoutes(app);
+
+  app.get("/openapi.json", (context) =>
+    context.json(
+      app.getOpenAPIDocument({
+        openapi: "3.1.0",
+        info: {
+          title: "Va de Vi API",
+          version: "0.1.0",
+        },
+      }),
+    ),
+  );
+
+  app.notFound((context) =>
+    context.json(
+      ErrorEnvelopeSchema.parse({
+        error: {
+          code: "NOT_FOUND",
+          message: "The requested resource was not found.",
+          requestId: context.get("requestId"),
+        },
+      }),
+      404,
+    ),
+  );
+
+  app.onError((error, context) => {
+    console.error(
+      JSON.stringify({
+        level: "error",
+        requestId: context.get("requestId"),
+        errorName: error.name,
+      }),
+    );
+
+    return context.json(
+      ErrorEnvelopeSchema.parse({
+        error: {
+          code: "INTERNAL_ERROR",
+          message: "Something went wrong while handling this request.",
+          requestId: context.get("requestId"),
+        },
+      }),
+      500,
+    );
+  });
+
+  return app;
+}

@@ -1,0 +1,244 @@
+import type { WineSummary } from "@vadevi/contracts";
+import { type FormEvent, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router";
+
+import { useAuth } from "../auth/AuthContext";
+import { VenuePicker } from "../components/VenuePicker";
+import { offlineDatabase } from "../offline/database";
+import { useOfflineSync } from "../offline/OfflineSyncContext";
+import { queueNewSession } from "../offline/phase3";
+import { useWineChoice } from "../components/use-wine-choice";
+import { useWineSearch } from "../components/use-wine-search";
+import { getWineMemory } from "../services/api";
+import { useSession } from "../session/SessionContext";
+
+function localDateTime(date: Date): string {
+  const local = new Date(date.getTime() - date.getTimezoneOffset() * 60_000);
+  return local.toISOString().slice(0, 16);
+}
+
+export function NewSessionPage() {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { bootstrap } = useSession();
+  const { flush, refreshStatus } = useOfflineSync();
+  const spaceId = bootstrap.data.user.activeSpaceId;
+  const userId = user?.uid ?? "";
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [venue, setVenue] = useState("");
+  // The event's point, when the place was resolved rather than typed.
+  const [venuePoint, setVenuePoint] = useState<{ latitude: number; longitude: number } | null>(
+    null,
+  );
+  const [startsAt, setStartsAt] = useState(() => localDateTime(new Date()));
+  const [status, setStatus] = useState<"active" | "draft">("active");
+  const [wines, setWines] = useState<WineSummary[]>([]);
+  const choice = useWineChoice<WineSummary>();
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const loadCached = async () => {
+      const snapshots = await offlineDatabase.snapshots
+        .where("[userId+spaceId]")
+        .equals([userId, spaceId])
+        .toArray();
+      setWines(snapshots.map((snapshot) => snapshot.wine));
+    };
+    if (user === null || !navigator.onLine) void loadCached();
+    else {
+      void getWineMemory(user, spaceId, { limit: 100 }, controller.signal)
+        .then((response) => setWines(response.data))
+        .catch(loadCached);
+    }
+    return () => controller.abort();
+  }, [spaceId, user, userId]);
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (user === null || name.trim().length === 0) return;
+    setError(false);
+    try {
+      // From the choice itself, not from the visible list: searching replaces
+      // what is visible, and a wine ticked before a search would be dropped.
+      const selected = choice.chosen;
+      const sessionId = await queueNewSession({
+        createdByUserId: bootstrap.data.user.id,
+        request: {
+          ...(description.trim().length === 0 ? {} : { description: description.trim() }),
+          name: name.trim(),
+          startsAt: new Date(startsAt).toISOString(),
+          status,
+          ...(venue.trim().length === 0 ? {} : { venueText: venue.trim() }),
+          ...(venuePoint === null
+            ? {}
+            : { venueLatitude: venuePoint.latitude, venueLongitude: venuePoint.longitude }),
+        },
+        selectedWines: selected,
+        spaceId,
+        userId: user.uid,
+      });
+      await refreshStatus();
+      if (navigator.onLine) void flush(spaceId);
+      void navigate(`/sessions/${sessionId}`);
+    } catch {
+      setError(true);
+    }
+  }
+
+  /** Refresh the pickable wines from the server as the reader types. */
+  async function searchWines(query: string) {
+    if (user === null || !navigator.onLine) return;
+    try {
+      const response = await getWineMemory(user, spaceId, {
+        limit: 100,
+        ...(query.length === 0 ? {} : { query }),
+      });
+      setWines(response.data);
+    } catch {
+      // Keep whatever is already offered.
+    }
+  }
+
+  const flightSearch = useWineSearch(wines, searchWines);
+  // A wine already ticked stays on screen even when the search no longer returns
+  // it, so it can still be unticked rather than becoming invisible and included.
+  const flightVisible = [
+    ...flightSearch.shown,
+    ...choice.chosen.filter((wine) => !flightSearch.shown.some((shown) => shown.id === wine.id)),
+  ] as WineSummary[];
+
+  return (
+    <section className="sessions-page">
+      <header className="page-heading">
+        <p className="eyebrow">{t("sessions.newEyebrow")}</p>
+        <h1>{t("sessions.newTitle")}</h1>
+        <p>{t("sessions.newBody")}</p>
+      </header>
+      <form className="quick-log-form" onSubmit={(event) => void submit(event)}>
+        <fieldset className="form-section">
+          <legend>{t("sessions.detailsTitle")}</legend>
+          <label htmlFor="session-name">{t("sessions.nameLabel")}</label>
+          <input
+            id="session-name"
+            maxLength={160}
+            onChange={(event) => setName(event.target.value)}
+            required
+            value={name}
+          />
+          <div className="form-grid">
+            <label>
+              <span>{t("sessions.startsAtLabel")}</span>
+              <input
+                onChange={(event) => setStartsAt(event.target.value)}
+                required
+                type="datetime-local"
+                value={startsAt}
+              />
+            </label>
+            <label>
+              <span>{t("sessions.statusLabel")}</span>
+              <select
+                onChange={(event) => setStatus(event.target.value as "active" | "draft")}
+                value={status}
+              >
+                <option value="draft">{t("sessions.status.draft")}</option>
+                <option value="active">{t("sessions.status.active")}</option>
+              </select>
+            </label>
+          </div>
+          {bootstrap.data.features.venuePlaceSearch ? (
+            <VenuePicker
+              label={t("sessions.venueLabel")}
+              latitude={venuePoint?.latitude}
+              longitude={venuePoint?.longitude}
+              onChoose={(place) => {
+                setVenue(place.name);
+                setVenuePoint(
+                  place.latitude === null || place.longitude === null
+                    ? null
+                    : { latitude: place.latitude, longitude: place.longitude },
+                );
+              }}
+              // Renaming the event's place keeps the point it was given, the same
+              // way it does on a tasting.
+              onRename={setVenue}
+              spaceId={spaceId}
+              value={venue}
+            />
+          ) : (
+            <>
+              <label htmlFor="session-venue">{t("sessions.venueLabel")}</label>
+              <input
+                id="session-venue"
+                maxLength={300}
+                onChange={(event) => setVenue(event.target.value)}
+                value={venue}
+              />
+            </>
+          )}
+          <label htmlFor="session-description">{t("sessions.descriptionLabel")}</label>
+          <textarea
+            id="session-description"
+            maxLength={2000}
+            onChange={(event) => setDescription(event.target.value)}
+            rows={4}
+            value={description}
+          />
+        </fieldset>
+        <fieldset className="form-section">
+          <legend>{t("sessions.flightTitle")}</legend>
+          <p className="section-help">{t("sessions.flightHelp")}</p>
+          {wines.length === 0 ? (
+            <p>{t("sessions.noWines")}</p>
+          ) : (
+            <>
+              <input
+                aria-label={t("winePicker.filterLabel")}
+                className="wine-picker-field__filter"
+                onChange={(event) => flightSearch.setFilter(event.target.value)}
+                placeholder={t("winePicker.filterPlaceholder")}
+                type="search"
+                value={flightSearch.filter}
+              />
+              <div className="wine-picker-grid">
+                {flightVisible.map((wine) => (
+                  <label className="wine-picker" key={wine.id}>
+                    <input
+                      checked={choice.isChosen(wine.id)}
+                      onChange={(event) => choice.toggle(wine, event.target.checked)}
+                      type="checkbox"
+                    />
+                    <span>
+                      <strong>{wine.displayName}</strong>
+                      <small>
+                        {wine.producerName} · {wine.nonVintage ? "NV" : (wine.vintageYear ?? "—")}
+                      </small>
+                    </span>
+                  </label>
+                ))}
+              </div>
+            </>
+          )}
+        </fieldset>
+        <p className="local-save-state">{t("sessions.offlineReady")}</p>
+        {error ? (
+          <p className="form-error" role="alert">
+            {t("sessions.saveError")}
+          </p>
+        ) : null}
+        <div className="hero__actions">
+          <button className="primary-button" type="submit">
+            {t("sessions.createAction")}
+          </button>
+          <Link className="action-link action-link--secondary" to="/sessions">
+            {t("spaces.cancelAction")}
+          </Link>
+        </div>
+      </form>
+    </section>
+  );
+}

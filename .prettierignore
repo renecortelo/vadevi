@@ -1,0 +1,12 @@
+dist
+coverage
+.wrangler
+.firebase
+pnpm-lock.yaml
+apps/web/public
+packages/contracts/openapi/openapi.json
+.claude
+playwright-report
+test-results
+sbom.json
+NOTICES.md
