@@ -11,10 +11,11 @@
     "pnpm": ">=11.0.0"
   },
   "scripts": {
+    "backup:r2": "tsx scripts/backup-r2.ts",
+    "brand:check": "tsx scripts/generate-brand.ts --check",
+    "brand:generate": "tsx scripts/generate-brand.ts",
     "build": "pnpm --filter @vadevi/web build && pnpm --filter @vadevi/api build",
     "bundle:check": "tsx scripts/check-bundle-budget.ts",
-    "brand:generate": "tsx scripts/generate-brand.ts",
-    "brand:check": "tsx scripts/generate-brand.ts --check",
     "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm openapi:check && pnpm i18n:check && pnpm migrations:check && pnpm brand:check && pnpm notices:check && pnpm build && pnpm bundle:check && pnpm scan:release",
     "deploy:preview": "tsx scripts/deploy.ts --config wrangler.preview.jsonc",
     "dev": "concurrently -k -n api,web -c magenta,cyan \"pnpm dev:api\" \"pnpm dev:web\"",
@@ -23,11 +24,12 @@
     "dev:web": "pnpm --filter @vadevi/web dev",
     "e2e": "playwright test --project=chromium-desktop --project=chromium-320",
     "e2e:install": "playwright install chromium",
+    "e2e:resilience": "playwright test --project=resilience",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "i18n:check": "tsx scripts/verify-i18n.ts",
-    "migrations:check": "tsx scripts/check-migrations.ts",
     "lint": "eslint \"apps/**/*.{ts,tsx}\" \"packages/**/*.{ts,tsx}\" \"scripts/**/*.ts\" \"e2e/**/*.ts\" --max-warnings 0",
+    "migrations:check": "tsx scripts/check-migrations.ts",
     "mirror:build": "tsx scripts/build-public-mirror.ts",
     "notices:check": "tsx scripts/generate-notices.ts --check",
     "notices:generate": "tsx scripts/generate-notices.ts",
@@ -40,8 +42,7 @@
     "test": "pnpm --workspace-concurrency=1 -r --if-present test",
     "test:auth-emulator": "firebase emulators:exec --only auth --project demo-vadevi \"tsx scripts/probe-auth-emulator.ts\"",
     "typecheck": "tsc --noEmit --project tsconfig.scripts.json && tsc --noEmit --project tsconfig.e2e.json && pnpm -r --if-present typecheck",
-    "validate:env": "tsx scripts/validate-env.ts",
-    "e2e:resilience": "playwright test --project=resilience"
+    "validate:env": "tsx scripts/validate-env.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

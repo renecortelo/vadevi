@@ -70,18 +70,13 @@ it; both are noted where they sit.
 
 ## Yours, and genuinely yours
 
-- [~] **manual** — Backup and export procedure tested. **D1 half done**,
-  17 September 2026: exported, restored into a scratch database, and the row
-  counts compared across six tables — identical on both sides. A backup that
-  has never been restored is a hypothesis, and this one is no longer one.
-
-      **R2 half outstanding, and the restore drill is what surfaced it.** The
-      export carries `media_assets` rows; the photograph bytes live in the media
-      bucket and nothing backs them up. Restoring D1 alone yields metadata
-      pointing at objects that are not there. The provider's own durability is
-      not a backup you hold. `wrangler` offers no bulk R2 export, so this needs a
-      tool that speaks S3 — `rclone` against an R2 remote is the usual answer —
-      and it should exist before any deployment holds photographs worth missing.
+- [x] **manual** — Backup and export procedure tested, both halves, 17 September 2026. D1 was exported, restored into a scratch database, and compared: row
+      counts identical across six tables. That drill is what found the other
+      half missing — the export indexes the photographs, the bucket holds them,
+      and nothing backed the bucket up. `pnpm backup:r2` now does, taking its
+      object list from D1 and verifying each download against the `sha256`
+      recorded there; its first run returned 37 of 37 verified. A backup that has
+      never been restored is a hypothesis, and neither of these is one now.
 
 - [ ] **manual** — All acceptance criteria listed in §20 pass or are explicitly
       not applicable. 41 criteria across seven areas; `docs/manual-acceptance.md`

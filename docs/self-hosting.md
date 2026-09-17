@@ -325,14 +325,50 @@ prompt; they are never force-reloaded mid-edit.
 
 ## Backups
 
-D1 is the source of truth. Export it regularly:
+**A backup is both halves or it is nothing.** D1 holds the wine, the tastings and
+the index of every photograph; R2 holds the photographs themselves. Restore the
+database on its own and you get a row for every bottle and a label for none of
+them — which looks like a working restore right up to the moment somebody opens a
+wine. This guide used to say D1 was the source of truth. A restore drill proved
+otherwise.
+
+The database:
 
 ```bash
 pnpm exec wrangler d1 export vadevi --remote --config wrangler.production.jsonc --output backup.sql
 ```
 
+The bucket, which takes its list of objects from the database and checks every
+one against the hash recorded there:
+
+```bash
+pnpm backup:r2 ./r2-backup --config wrangler.production.jsonc
+```
+
+It needs no credential beyond the `wrangler` login you already have, verifies
+each object rather than assuming the download worked, and exits non-zero if a
+single one fails — a backup you are told is good and is not is worse than none.
+It writes a `manifest.json` next to the objects so a restore does not depend on
+the script still existing. One process per object is fine for thousands and slow
+for hundreds of thousands; at that size use `rclone` against an R2 remote, which
+does need an R2 API token.
+
+Keep the two together and dated the same day. Neither half restores without the
+other.
+
+**A backup you have never restored is a hypothesis.** Test it: import the `.sql`
+into a scratch D1 and compare row counts against the live one. Note the table is
+`wine_records`, not `wines`.
+
+```bash
+pnpm exec wrangler d1 create vadevi-restore-test
+pnpm exec wrangler d1 execute vadevi-restore-test --remote --file backup.sql
+pnpm exec wrangler d1 execute vadevi-restore-test --remote --command "SELECT COUNT(*) FROM wine_records"
+```
+
 Members can also export their own data from **Data and privacy** in the app —
-versioned JSON, selected CSV, and explicitly chosen photos.
+versioned JSON, selected CSV, and explicitly chosen photos. That is portability
+for them, not a backup for you.
 
 ## What this is not
 
