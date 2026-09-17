@@ -2,7 +2,9 @@
 
 ## Protected assets
 
-Memberships, wine and tasting data, private media, location text, provider credentials, assistant context, export archives, and audit records.
+Memberships, wine and tasting data, private media, location text and recorded venue coordinates, provider credentials, assistant context, export archives, and audit records.
+
+A recorded coordinate is a stronger asset than the text it replaced: it says where a reader was on a given evening, precisely enough to matter. It is Space-scoped like the tasting it belongs to, and the reader's live position is never among these — it is held in an open form and discarded with it.
 
 ## Implemented controls
 
@@ -49,7 +51,9 @@ photographing a bottle is most likely.
 - Source inputs accept only credential-free public HTTPS URLs and reject literal loopback, private, link-local, and metadata-service addresses before any future adapter receives them.
 - Registered fact predicates validate value shapes, researched facts require citations, and optimistic acceptance preserves conflicting alternatives.
 - Current public-data adapters use fixed official HTTPS hosts, identifying user agents, short timeouts, manual same-host redirect validation, bounded field selection, TTL caches, and application limits below documented provider ceilings.
-- Provider responses must be JSON, are canceled above a fixed byte budget, and contribute only schema-selected normalized fields.
+- Provider responses must be JSON — map tiles, below, are the one deliberate exception — are canceled above a fixed byte budget, and contribute only schema-selected normalized fields.
+- Optional venue lookup calls one fixed official host (`nominatim.openstreetmap.org`). The reader's position is sent only on their own press, never as they type and never watched, and travels in POST bodies rather than query strings so it cannot land in an access log, a history entry, or a Referer. What reaches the provider is a coarse box rather than the point: the precise position stays in the Worker, where the distance ordering is computed, and is applied on the way out of the cache as well as into it so no reader inherits another's ordering. Only the place the reader picked is stored, on the tasting they were filling in.
+- Optional map tiles are the one boundary whose response is bytes rather than JSON. Each tile comes from one fixed official host (`tile.openstreetmap.org`), its z/x/y validated in range before any request is made, and is served from this origin so the browser never contacts a tile host and `default-src 'self'` stays exactly as it was — the same arrangement as bottle photos. The route is deliberately unauthenticated: a tile carries no wine, no note, and no account, only the public geography everyone shares, so it is gated by the deployment's own switch rather than by a reader's session. What bounds it is that coordinate check and the edge cache, which also keeps OSM's donated servers from being asked twice for the same tile.
 - Adapter caches contain normalized public candidates and attribution only; Open Food Facts images and complete provider/page payloads are not retained.
 - External strings are Unicode-normalized, stripped of control/bidirectional characters, bounded, and excluded before model input when they resemble prompt instructions, tool execution, secret extraction, or active markup.
 - Research jobs are membership-gated and idempotent; provider candidates can create only cited proposed facts and cannot mark them human-verified.
