@@ -3,6 +3,9 @@
 §22.3, with each item marked by what actually verifies it. An item backed by an
 automated gate is checked by running that gate; the rest need a person.
 
+This is about publishing the source. Putting a deployment in front of other
+people is a different list: `pre-production-checklist.md` (§22.2).
+
 Status key: **automated** runs in `pnpm check`; **manual** needs you.
 
 ---
