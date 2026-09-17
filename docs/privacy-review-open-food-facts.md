@@ -8,9 +8,15 @@ prepared so the deployer can approve or reject it on evidence.
 `.dev.vars.example` and `wrangler.example.jsonc`, and stays that way unless a
 deployer changes it deliberately.
 
-- Decision: ☐ approved ☐ rejected
-- Decided by: ______________________
-- Date: ______________________
+- Decision: ☑ approved ☐ rejected
+- Decided by: the maintainer
+- Date: 17 September 2026
+
+This records the decision taken for the reference deployment, on the terms check
+dated the same day. It is not a decision taken on your behalf: the box is here
+because §15.8 asks each deployment to make this call. Read the assessment of
+value below before copying it — this review approves a lookup it also describes
+as thin for wine, and declining it costs very little.
 
 ## What the capability does
 
