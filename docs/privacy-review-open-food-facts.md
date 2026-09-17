@@ -82,8 +82,16 @@ this application. **Recheck their current terms and privacy policy on the day
 you enable this**, and record the date below — the provider is free to change
 them.
 
-- Terms/policy checked on: **2026-08-16**
+- Terms/policy checked on: **2026-09-17** (first checked 2026-08-16; rechecked
+  because the provider had been enabled in the meantime)
 - Source: <https://world.openfoodfacts.org/terms-of-use>
+- **Unchanged since the first check.** Every finding below was re-read against
+  the live page rather than carried over.
+- **Editor finding:** Open Food Facts is published by a French non-profit
+  association, declared to the CNIL under number 1528436, with a dedicated
+  privacy contact. A provider inside EU data-protection jurisdiction with a named
+  route for a data question is a materially better position than a commercial API
+  with neither, and it counts toward approving this one.
 - **Licensing confirmed:** the database is Open Database License, individual
   entries Database Contents License 1.0, and product images CC BY-SA. Re-users
   must attribute Open Food Facts with a link. This application stores that
