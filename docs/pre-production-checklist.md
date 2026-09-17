@@ -84,10 +84,38 @@ it; both are noted where they sit.
       reaches the parts that matter most here — a real phone, a real radio, a
       real sign-in popup.
 
-- [ ] **manual** — Zero-cost quotas rechecked against official provider pages.
-      This one has a shelf life measured in weeks and has to be done on the day,
-      against the provider's current page rather than against what this
-      repository remembers.
+- [x] **manual** — Zero-cost quotas rechecked against official provider pages,
+      17 September 2026. Three things were wrong; see below.
+
+### What the quota recheck found
+
+The item that repaid the effort, so what it turned up is kept here rather than
+compressed into a tick.
+
+**The application's AI budget is far above the free allowance.** Workers AI gives
+10,000 Neurons a day as a _single shared pool_, and Neurons are priced per model.
+On the default `llama-3.3-70b-instruct-fp8-fast` a reply costs roughly 91, so the
+free day is about 110 replies against a shipped budget of 1,000 — about nine
+times over. OCR's own 300 reads fit inside the allowance, but only until the
+assistant has emptied the pool they share. "No automatic paid fallback" remained
+true throughout, and is a different claim from "cannot exceed the free tier".
+
+**Brave Search has changed pricing model.** It is now $5 per 1,000 requests
+against $5 of monthly credit — about 1,000 requests a month, roughly 33 a day,
+against a research budget of 300 a day.
+
+**The published caps table was wrong.** It listed Vicenç at 60/400 where the code
+has 200/1,000, and omitted research and price lookups entirely. A deployer sizing
+their costs from that table was working from numbers that were never true.
+Corrected, and `docs/self-hosting.md` now carries the provider allowances beside
+the application's own, with the per-model arithmetic.
+
+Nominatim, OSM tiles, Wikidata and Open Food Facts remain free under usage
+policies the application already respects.
+
+What none of this decides: whether to lower the budgets, move to a cheaper model,
+or accept the bill. That belongs to whoever pays it, and it is now a decision
+that can be made on numbers.
 
 ## Blocked until a production deployment exists
 
