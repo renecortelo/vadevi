@@ -128,11 +128,23 @@ export function PointsMap({ emptyLabel, points }: { emptyLabel: string; points: 
           const active = selected === entry;
           return (
             <g key={`${entry.latitude},${entry.longitude}`}>
+              {/* A circle is not a button: it announces nothing on its own, and
+                  focus reaches it without Enter or Space doing anything, so a
+                  keyboard could land on every point and open none of them. The
+                  name comes from the wines standing there, and the key handler
+                  is what a native button would have given us for free. */}
               <circle
+                aria-label={entry.points.map((point) => point.title).join(", ")}
                 className={active ? "points-map__dot points-map__dot--active" : "points-map__dot"}
                 cx={x}
                 cy={y}
                 onClick={() => setSelected(active ? null : entry)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setSelected(active ? null : entry);
+                  }
+                }}
                 r={entry.points.length > 1 ? 12 : 8}
                 role="button"
                 tabIndex={0}
