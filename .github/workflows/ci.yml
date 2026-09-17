@@ -33,12 +33,57 @@ jobs:
       - run: pnpm check
       - run: pnpm audit --audit-level high
 
-  e2e:
-    # Pull requests only. A merge to main re-ran the identical tree the pull
-    # request had just proved green, and the browser jobs are three quarters of
-    # the bill — on a private repository that is quota spent to learn nothing.
-    # `quality` still runs on main, so a bad merge is not silent.
+  # Did this pull request touch anything a browser could exercise?
+  #
+  # Prose-only changes are frequent here — a checklist ticked, a doc corrected —
+  # and the three browser jobs are three quarters of the bill. There is nothing
+  # for them to find in a Markdown diff, so they are skipped when nothing but
+  # Markdown moved. Every uncertain answer is "code": no base commit, an
+  # unreadable diff, an empty one, or this job failing outright all leave the
+  # expensive path running. Only a positive "every changed file ends in .md"
+  # skips anything.
+  changes:
     if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      code: ${{ steps.filter.outputs.code }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The diff needs the base commit, which a shallow checkout lacks.
+          fetch-depth: 0
+      - id: filter
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          code=true
+          if [ -n "$BASE" ] && git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            changed=$(git diff --name-only "$BASE...HEAD")
+            printf 'changed files:\n%s\n' "$changed"
+            # Counted, not matched: `grep -q` exits on its first hit, and what a
+            # shell reports for the pipeline it just broke varies between shells
+            # (zsh and bash disagree here). A count behaves the same everywhere,
+            # which means this is testable outside CI.
+            noncode=$(printf '%s\n' "$changed" | grep -cv '\.md$' || true)
+            if [ -n "$changed" ] && [ "${noncode:-1}" -eq 0 ]; then
+              code=false
+            fi
+          fi
+          echo "browser jobs needed: $code"
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+
+  e2e:
+    # Pull requests only, and only when code moved. A merge to main re-ran the
+    # identical tree the pull request had just proved green, and on a private
+    # repository that is quota spent to learn nothing. `quality` still runs on
+    # main, so a bad merge is not silent.
+    #
+    # `!cancelled()` rather than `success()`: if `changes` fails, its output is
+    # empty, which is not 'false', so these still run. A broken filter must
+    # never be able to silently skip the browser suite.
+    needs: changes
+    if: ${{ !cancelled() && github.event_name == 'pull_request' && needs.changes.outputs.code != 'false' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     # Split across two runners, each with its own server.
@@ -94,7 +139,8 @@ jobs:
   # requests off mid-flight — that is what they test — and Wrangler does not
   # always survive it. Here, when it does not, it takes only these with it.
   e2e-resilience:
-    if: github.event_name == 'pull_request'
+    needs: changes
+    if: ${{ !cancelled() && github.event_name == 'pull_request' && needs.changes.outputs.code != 'false' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
