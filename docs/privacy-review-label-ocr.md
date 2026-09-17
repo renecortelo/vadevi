@@ -59,18 +59,31 @@ enable this**, specifically whether inputs may be retained or used for model
 improvement, and record the date and finding below. This is the single most
 important line in this document and it must not be filled in from memory.
 
-- Cloudflare Workers AI terms checked on: **2026-08-16**
+- Cloudflare Workers AI terms checked on: **2026-09-17** (first checked
+  2026-08-16; rechecked because the provider had been enabled in the meantime)
 - Source: <https://developers.cloudflare.com/workers-ai/platform/data-usage/>
+- **Unchanged since the first check.** The page carries its own "last updated"
+  date of 21 April 2026, which predates both readings, so nothing moved between
+  them. Every finding below was re-read against the live page, not carried over.
 - **Retention finding:** inputs are not retained automatically. Cloudflare states
   that Customer Content "may be stored by Cloudflare if you specifically use a
   storage service (e.g., R2, KV, DO, Vectorize, etc.)" — this application uses
   none of those for OCR, so the image is passed through and not persisted.
 - **Training finding:** Cloudflare states it "does not use your Customer Content
   to (1) train any AI models made available on Workers AI or (2) improve any
-  Cloudflare or third-party services."
-- **Not established:** the page does not describe request logging. If logging of
-  inputs matters to you beyond retention and training, raise it with Cloudflare
-  support before enabling.
+  Cloudflare or third-party services." The current page continues that sentence
+  with "and would not do so unless we received your explicit consent" — so the
+  protection is a commitment not to do it silently, not a technical bar. Consent
+  is yours to withhold; do not grant it on an account running this.
+- **Isolation finding:** Cloudflare states it "does not make your Customer
+  Content available to any other Cloudflare customer."
+- **Model-licence finding:** Cloudflare "neither creates nor trains" these
+  models; they are third-party services under their own licence terms. The
+  allowlist in `apps/api/src/adapters/label-ocr.ts` is what keeps that surface
+  to models chosen deliberately.
+- **Not established:** the page still does not describe request logging. If
+  logging of inputs matters to you beyond retention and training, raise it with
+  Cloudflare support.
 
 Recheck this before enabling — a provider is free to change its terms, and this
 finding is only as current as the date above.
