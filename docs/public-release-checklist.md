@@ -115,7 +115,11 @@ These are tracked in `docs/your-desk-todo.md`.
       Each review says in its own words to recheck on the day the provider is
       enabled, and both providers had been enabled in the meantime.
 - [ ] Run the preview acceptance checklist end to end.
-- [ ] Measure LCP, INP, and API p95.
+- [x] Measure LCP, INP, and API p95. `docs/performance-evidence.md`, re-measured
+      18 September 2026 after the map work: every §18.4 budget met, nothing
+      regressed. INP is reported for what it is — it cannot be measured in a lab,
+      being a p75 over real sessions, so interaction latency stands in and is
+      labelled as a proxy rather than passed off as the metric.
 - [x] Sign off accessibility, threat model, privacy, and restore/delete (§22.2).
       Signed by the maintainer, 17 September 2026, against the gates and code
       rather than against a reading of the documents — which is why two of them
