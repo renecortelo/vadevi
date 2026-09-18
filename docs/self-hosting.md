@@ -301,10 +301,17 @@ never had. What the providers give:
   pool** — OCR and assistant replies draw from the same allowance, so the two
   budgets above are sized together rather than each against 10,000. Neurons are
   priced per model, which makes the model choice part of the cost. On
-  `@cf/meta/llama-3.1-8b-instruct-fp8` a reply of roughly 1,500 input and 250
-  output tokens costs about 27 Neurons; the 11b vision model is about 22 a label
-  read. At the budgets above that is roughly 5,000 Neurons on a day that hits
-  every cap, leaving room for the estimate to be wrong.
+  `@cf/meta/llama-3.3-70b-instruct-fp8-fast` a reply of roughly 1,500 input and
+  250 output tokens costs about 91 Neurons; the 11b vision model is about 22 a
+  label read. At the budgets above that is roughly 9,100 Neurons on a day that
+  hits every cap.
+
+  **The assistant needs a model that honours a JSON schema, which rules the cheap
+  ones out.** A smaller model was tried and reverted: the 8b answers `5025: This
+model doesn't support JSON Schema`, and asking it for JSON in the prompt
+  instead produced nothing parseable, so every turn silently fell back to the
+  deterministic answer. If the budget is too expensive, lower the budget — do not
+  reach for a smaller model.
 
   **Check the model id against `wrangler ai models`, not against this page.**
   The pricing table lists ids that are not all in every account's catalogue —
