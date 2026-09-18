@@ -11,14 +11,29 @@ shared runner would turn them into noise rather than evidence.
 
 ## What was measured
 
+Re-measured 18 September 2026, after the memory map, the tile proxy and the
+tasting history on cards. Nothing regressed.
+
 | Measure                              | Median | p95     | Budget  | Verdict |
 | ------------------------------------ | ------ | ------- | ------- | ------- |
-| LCP — sign-in, Slow 4G, 4× CPU       | 468 ms | 2172 ms | 2500 ms | within  |
-| API read `GET /me/bootstrap`         | 10 ms  | 15 ms   | 500 ms  | within  |
-| API read `GET /spaces/{id}/wines`    | 10 ms  | 18 ms   | 500 ms  | within  |
-| API read `GET /spaces/{id}/sessions` | 8 ms   | 10 ms   | 500 ms  | within  |
-| Interaction — Memory view switch     | 63 ms  | 73 ms   | 200 ms  | within  |
-| Quick-log save, online               | 25 ms  | 29 ms   | 800 ms  | within  |
+| LCP — sign-in, Slow 4G, 4× CPU       | 480 ms | 2176 ms | 2500 ms | within  |
+| API read `GET /me/bootstrap`         | 12 ms  | 16 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/wines`    | 10 ms  | 19 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/sessions` | 10 ms  | 105 ms  | 500 ms  | within  |
+| Interaction — Memory view switch     | 68 ms  | 77 ms   | 200 ms  | within  |
+| Quick-log save, online               | 25 ms  | 28 ms   | 800 ms  | within  |
+
+Every figure is within a few milliseconds of the previous run except one. The
+`sessions` p95 moved from 10 ms to 105 ms while its median did not move at all,
+which is the shape of a single slow sample rather than a slower endpoint — one
+request behind a cold connection on a laptop that is also running the server.
+It is recorded rather than smoothed away: if it is still there on the next run,
+with the median still flat, it is worth opening.
+
+The Memory view switch is the interaction the map view was added to, and it
+moved by five milliseconds against a 200 ms budget. The map itself is lazily
+loaded and Leaflet does not enter the initial route, which the bundle budget
+independently confirms.
 
 The API rows are read out of resource timing, from the requests the application
 itself makes. The first version of this file issued its own requests instead, at
