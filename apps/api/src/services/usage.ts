@@ -23,14 +23,16 @@ export type UsageMetric =
  * **Workers AI is one shared pool of 10,000 Neurons a day**, drawn on by both
  * `ai_language_calls` and `ocr_reads`, and Neurons are priced per model. These
  * two are therefore sized together, against the deployment's configured models,
- * with the per-call cost rounded up roughly twofold because a long conversation
- * costs more Neurons than a short one and this counts calls, not Neurons:
+ * because a long conversation costs more Neurons than a short one and this
+ * counts calls, not Neurons. Take the model id from `wrangler ai models` and not
+ * from the pricing page: they do not list the same set, and a model that does
+ * not exist in the account fails every call rather than failing to deploy.
  *
- * - `ai_language_calls` at 120/day: ~30 Neurons a reply on
- *   `@cf/meta/llama-3.1-8b-instruct-fp8-fast` → ~3,600.
+ * - `ai_language_calls` at 120/day: ~27 Neurons a reply on
+ *   `@cf/meta/llama-3.1-8b-instruct-fp8` → ~3,300.
  * - `ocr_reads` at 80/day: ~45 Neurons a read on the 11b vision model → ~3,600.
  *
- * That is ~7,200 of 10,000, leaving room for the estimate to be wrong. A
+ * That is ~5,000 of 10,000, leaving room for the estimate to be wrong. A
  * deployment on a larger text model must lower `ai_language_calls` to match: the
  * 70b model costs about six times as much per reply, and 120 of those would
  * overrun the day's allowance on their own.
