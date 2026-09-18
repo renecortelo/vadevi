@@ -28,14 +28,19 @@ export type UsageMetric =
  * from the pricing page: they do not list the same set, and a model that does
  * not exist in the account fails every call rather than failing to deploy.
  *
- * - `ai_language_calls` at 120/day: ~27 Neurons a reply on
- *   `@cf/meta/llama-3.1-8b-instruct-fp8` → ~3,300.
+ * - `ai_language_calls` at 60/day: ~91 Neurons a reply on
+ *   `@cf/meta/llama-3.3-70b-instruct-fp8-fast` → ~5,500.
  * - `ocr_reads` at 80/day: ~45 Neurons a read on the 11b vision model → ~3,600.
  *
- * That is ~5,000 of 10,000, leaving room for the estimate to be wrong. A
- * deployment on a larger text model must lower `ai_language_calls` to match: the
- * 70b model costs about six times as much per reply, and 120 of those would
- * overrun the day's allowance on their own.
+ * That is ~9,100 of 10,000. Tighter than it looks, because the per-call figures
+ * are already rounded up from measured token counts.
+ *
+ * **The model is not a free choice.** A cheaper one was tried and reverted: the
+ * 8b returns `5025: This model doesn't support JSON Schema`, and the adapter's
+ * prompt-only fallback did not produce parseable JSON from it either, so every
+ * turn fell back to the deterministic answer. The assistant needs a model that
+ * honours a JSON schema, and the cheap ones do not. Lower this budget rather
+ * than reaching for a smaller model.
  *
  * **`websearch_calls` is separate from `research_lookups` on purpose.** Brave is
  * the only provider in the research flow that bills — $5 of monthly credit
@@ -52,7 +57,7 @@ export type UsageMetric =
 type Budget = { global: number; user: number };
 
 export const dailyBudgets = {
-  ai_language_calls: { global: 120, user: 30 },
+  ai_language_calls: { global: 60, user: 20 },
   barcode_lookups: { global: 500, user: 60 },
   ocr_reads: { global: 80, user: 20 },
   price_lookups: { global: 500, user: 60 },
