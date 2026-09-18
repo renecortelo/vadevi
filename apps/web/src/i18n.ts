@@ -70,6 +70,15 @@ export async function changeLanguage(locale: SupportedLocale): Promise<void> {
   await i18n.changeLanguage(locale);
 }
 
-await changeLanguage(initialLocale);
+// A catalogue that cannot be loaded must not stop the application from
+// starting. This is a top-level await: if it rejects, the module fails, and
+// nothing after it ever renders — a blank screen, for the sake of a translation.
+// English is already in the bundle, so the fallback is to start in it and let
+// the session apply the reader's language once the catalogue can be fetched.
+try {
+  await changeLanguage(initialLocale);
+} catch {
+  await i18n.changeLanguage("en");
+}
 
 export { i18n };

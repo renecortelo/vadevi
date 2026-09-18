@@ -66,6 +66,14 @@ test.describe("offline shell", () => {
     });
     await page.unroute("**/index.html");
 
+    // A reader whose language is not English. This is the case that stayed
+    // blank after the redirect was fixed: the app boots by awaiting its locale
+    // catalogue, a chunk the worker serves stale-while-revalidate from a cache
+    // that only ever fills online. English is inline and never needs the chunk,
+    // which is why a test in English could not see it. The catalogue is in the
+    // precache — it has to be found there.
+    await page.evaluate(() => localStorage.setItem("vadevi.locale", "es"));
+
     // Close the app. What is left is exactly what an installed PWA has.
     await page.close();
 
@@ -76,6 +84,11 @@ test.describe("offline shell", () => {
     await relaunched.goto("/");
     await expect(relaunched.locator("#root")).not.toBeEmpty({ timeout: 15_000 });
     expect(await relaunched.title()).toContain("Va de Vi");
+    // And it booted in the reader's language, from the precached catalogue —
+    // not silently in English because the chunk could not be found. Offline
+    // and signed out, the first screen is the sign-in one; its Spanish copy is
+    // the proof the catalogue arrived.
+    await expect(relaunched.getByText("Tu memoria del vino")).toBeVisible({ timeout: 15_000 });
 
     await context.setOffline(false);
     await context.close();
