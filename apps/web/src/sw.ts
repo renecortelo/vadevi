@@ -125,7 +125,15 @@ async function networkFirstShell(request: Request): Promise<Response> {
 
 async function staleWhileRevalidate(request: Request): Promise<Response> {
   const cache = await caches.open(bundleCacheName);
-  const cached = await cache.match(request);
+  // The bundle cache holds only what has been fetched through here online. A
+  // cold launch has fetched nothing through here, so it is empty — while the
+  // precache put this same build's bundles in the shell cache, unlooked-at.
+  // That gap was a blank screen: the app boots by awaiting its locale catalogue,
+  // a `common-*.js` chunk this branch serves, and with the network down and the
+  // bundle cache empty the import rejected and took the whole module graph
+  // with it. Only for readers whose language is not English, which is inline,
+  // and only on a cold start — which is the one offline exists for.
+  const cached = (await cache.match(request)) ?? (await caches.match(request));
   const network = fetch(request)
     .then(async (response) => {
       if (response.ok) await cache.put(request, response.clone());
