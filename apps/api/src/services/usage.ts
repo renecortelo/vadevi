@@ -35,6 +35,13 @@ export type UsageMetric =
  * That is ~9,100 of 10,000. Tighter than it looks, because the per-call figures
  * are already rounded up from measured token counts.
  *
+ * `ai_language_calls` is drawn on by more than the assistant: rewriting the
+ * narrative, the tasting comparison, and — since the evidence page reads in the
+ * interface's language — translating a wine's evidence the first time anyone
+ * reads it in a language it was not written in. That last one is one call per
+ * sixteen strings, once per wine per language, and then kept; a reader who
+ * flips between languages costs a call per new language, not per flip.
+ *
  * **The model is not a free choice.** A cheaper one was tried and reverted: the
  * 8b returns `5025: This model doesn't support JSON Schema`, and the adapter's
  * prompt-only fallback did not produce parseable JSON from it either, so every

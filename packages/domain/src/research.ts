@@ -23,6 +23,10 @@ export type ProductCandidate = Readonly<{
 
 export type ProposedFact = Readonly<{
   confidenceMilli: number;
+  /** The language the value is written in, when the source knows it. Prose
+   *  gathered without it is treated as being in no known language, and a
+   *  reader in any language is served a translation. */
+  locale?: ResearchLocale;
   predicate:
     | "curiosity.highlight"
     | "curiosity.note"

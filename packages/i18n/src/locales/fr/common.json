@@ -97,7 +97,10 @@
     "renameAction": "Renommer l'Espace",
     "renameSaving": "Renommage…",
     "renameError": "L'Espace n'a pas pu être renommé. Réessayez.",
-    "renameConflict": "Quelqu'un d'autre a renommé cet Espace pendant votre saisie. Rechargez et réessayez."
+    "renameConflict": "Quelqu'un d'autre a renommé cet Espace pendant votre saisie. Rechargez et réessayez.",
+    "deleteAction": "Aller à Données et confidentialité",
+    "deleteBody": "{{name}} se supprime depuis Données et confidentialité, en saisissant son nom pour confirmer. Vous avez un mois pour annuler avant la suppression réelle.",
+    "deleteTitle": "Supprimer cet Espace"
   },
   "invitation": {
     "eyebrow": "Une invitation privée",
@@ -1063,7 +1066,7 @@
     "noticeRetention": "Les tours de l'assistant ne sont pas enregistrés en historique. Les audits d'outils sont expurgés et ne conservent aucun texte de message.",
     "noticeScope": "Vos vins, dégustations et photos vivent dans l'Espace que vous avez choisi. Seuls ses membres actifs les voient.",
     "noticeTitle": "Ce que cette application fait de vos données",
-    "personalSpaceNote": "Votre Space personnel est supprimé avec votre compte, ci-dessous. Les Spaces de groupe dont vous êtes propriétaire se suppriment d’ici, un par un.",
+    "personalSpaceNote": "Votre Space personnel est supprimé avec votre compte, ci-dessous. Pour supprimer un Space de groupe dont vous êtes propriétaire, activez-le dans le sélecteur en haut et revenez ici : le bouton apparaît pour ce Space.",
     "providerModes": "Fournisseur d'IA : {{ai}}. Fournisseur de recherche : {{research}}.",
     "retentionBody": "La suppression retire les données applicatives actives et les photos stockées. Les sauvegardes gérées par le fournisseur suivent leur propre calendrier et ne sont pas effacées instantanément.",
     "retentionTitle": "Ce que la suppression fait et ne fait pas",

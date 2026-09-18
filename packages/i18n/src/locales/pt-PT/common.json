@@ -97,7 +97,10 @@
     "renameAction": "Mudar o nome do Espaço",
     "renameSaving": "A mudar…",
     "renameError": "Não foi possível mudar o nome do Espaço. Tente outra vez.",
-    "renameConflict": "Outra pessoa mudou o nome deste Espaço enquanto escrevia. Recarregue e tente outra vez."
+    "renameConflict": "Outra pessoa mudou o nome deste Espaço enquanto escrevia. Recarregue e tente outra vez.",
+    "deleteAction": "Ir para Dados e privacidade",
+    "deleteBody": "{{name}} elimina-se em Dados e privacidade, escrevendo o nome para confirmar. Há um mês para anular antes de ser mesmo removido.",
+    "deleteTitle": "Eliminar este Espaço"
   },
   "invitation": {
     "eyebrow": "Um convite privado",
@@ -1063,7 +1066,7 @@
     "noticeRetention": "Os turnos do assistente não são guardados como histórico. As auditorias de ferramentas são redigidas e não guardam texto das mensagens.",
     "noticeScope": "Os seus vinhos, provas e fotografias vivem no Espaço que escolheu. Só os membros ativos desse Espaço os veem.",
     "noticeTitle": "O que esta aplicação faz com os seus dados",
-    "personalSpaceNote": "O teu Space pessoal é eliminado juntamente com a conta, mais abaixo. Os Spaces de grupo de que és proprietário eliminam-se daqui, um a um.",
+    "personalSpaceNote": "O teu Space pessoal é eliminado juntamente com a conta, mais abaixo. Para eliminar um Space de grupo de que és proprietário, ativa-o no seletor em cima e volta aqui: o botão aparece para esse Space.",
     "providerModes": "Fornecedor de IA: {{ai}}. Fornecedor de pesquisa: {{research}}.",
     "retentionBody": "A eliminação remove os dados ativos da aplicação e as fotografias guardadas. As cópias de segurança geridas pelo fornecedor seguem o seu próprio calendário e não são apagadas de imediato.",
     "retentionTitle": "O que a eliminação faz e não faz",

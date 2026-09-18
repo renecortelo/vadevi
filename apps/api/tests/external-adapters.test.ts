@@ -196,6 +196,9 @@ describe("external research adapters", () => {
     expect(first.data).toEqual([
       {
         confidenceMilli: 800,
+        // Labelled in the reader's language, and marked as such, so a reader in
+        // another language is served a translation rather than this.
+        locale: "de",
         predicate: "curiosity.highlight",
         researchMethod: "wikidata.highlight.v1",
         source: expect.objectContaining({
@@ -206,6 +209,7 @@ describe("external research adapters", () => {
       },
       {
         confidenceMilli: 800,
+        locale: "de",
         predicate: "curiosity.highlight",
         researchMethod: "wikidata.highlight.v1",
         source: expect.objectContaining({ canonicalUrl: "https://www.wikidata.org/wiki/Q123" }),
@@ -278,6 +282,8 @@ describe("external research adapters", () => {
     // The narrative comes first, cited to Wikipedia, then the data highlights.
     expect(result.data[0]).toEqual({
       confidenceMilli: 700,
+      // From the Spanish article, so in Spanish.
+      locale: "es",
       predicate: "research.summary",
       researchMethod: "wikipedia.summary.v1",
       source: expect.objectContaining({

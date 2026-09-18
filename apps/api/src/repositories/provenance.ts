@@ -8,10 +8,12 @@ import type {
   WineFactsResponse,
 } from "@vadevi/contracts";
 import { ADDITIVE_FACT_PREDICATES } from "@vadevi/contracts";
+import type { ResearchLocale, TranslationPort } from "@vadevi/domain";
 import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
+import { localizeFacts } from "./fact-translations";
 
 type CommandResult<T> =
   | { kind: "conflict" }
@@ -44,6 +46,8 @@ type FactRow = {
   created_at: string;
   evidence_class: Fact["evidenceClass"];
   id: string;
+  /** The language the value was written in; null when it was never recorded. */
+  locale: string | null;
   observed_by_user_id: string | null;
   predicate: Fact["predicate"];
   research_method: string | null;
@@ -332,7 +336,7 @@ async function factById(
       `SELECT fact.id, fact.subject_type, fact.subject_id, fact.predicate, fact.value_json,
         fact.evidence_class, fact.confidence_milli, fact.status, fact.observed_by_user_id,
         fact.verified_by_user_id, fact.verified_at, fact.research_method, fact.version,
-        fact.created_at, fact.updated_at
+        fact.created_at, fact.updated_at, fact.locale
       FROM facts fact
       JOIN space_memberships membership ON membership.space_id = fact.space_id
       JOIN users actor ON actor.id = membership.user_id
@@ -347,9 +351,25 @@ async function factById(
   return { data: factResource(row, citations.get(row.id) ?? []) };
 }
 
+/**
+ * The reader's language, when the facts should be read in it. Prose facts written
+ * in another language are then returned translated — made on first read and
+ * kept — while the record underneath stays as written. See `localizeFacts`.
+ */
+export type FactsLocalization = Readonly<{
+  locale: ResearchLocale;
+  reserveModelCall: () => Promise<boolean>;
+  translation: TranslationPort | null;
+}>;
+
 export async function listWineFacts(
   database: D1Database,
-  options: { principal: FirebasePrincipal; spaceId: string; wineId: string },
+  options: {
+    localization?: FactsLocalization;
+    principal: FirebasePrincipal;
+    spaceId: string;
+    wineId: string;
+  },
 ): Promise<WineFactsResponse | null> {
   if (!(await authorizedWineExists(database, options.principal, options.spaceId, options.wineId))) {
     return null;
@@ -358,7 +378,7 @@ export async function listWineFacts(
     .prepare(
       `SELECT id, subject_type, subject_id, predicate, value_json, evidence_class,
         confidence_milli, status, observed_by_user_id, verified_by_user_id, verified_at,
-        research_method, version, created_at, updated_at
+        research_method, version, created_at, updated_at, locale
       FROM facts
       WHERE space_id = ? AND subject_type = 'wine' AND subject_id = ? AND deleted_at IS NULL
       ORDER BY predicate,
@@ -372,9 +392,20 @@ export async function listWineFacts(
     options.spaceId,
     rows.results.map((row) => row.id),
   );
-  const facts = rows.results.map((row) => factResource(row, citations.get(row.id) ?? []));
+  const written = rows.results.map((row) => ({
+    fact: factResource(row, citations.get(row.id) ?? []),
+    locale: row.locale,
+  }));
+  const facts =
+    options.localization === undefined
+      ? written.map(({ fact }) => fact)
+      : await localizeFacts(database, { ...options.localization, facts: written });
+  // Conflicts are judged on the record as written, never on a translation: two
+  // wordings of one fact in another language are not two facts.
   const byPredicate = new Map<Fact["predicate"], Fact[]>();
-  for (const fact of facts.filter((candidate) => candidate.status !== "retired")) {
+  for (const fact of written
+    .map(({ fact }) => fact)
+    .filter((candidate) => candidate.status !== "retired")) {
     const items = byPredicate.get(fact.predicate) ?? [];
     items.push(fact);
     byPredicate.set(fact.predicate, items);

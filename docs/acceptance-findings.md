@@ -8,8 +8,8 @@ attached to the report that produced it.
 
 ## Round 2 — 18 September 2026, the maintainer, iPhone (Safari, installed PWA) and desktop
 
-Sections A to G of the script. Five findings, four of them defects; one of the
-four turned out to be five defects stacked behind a single symptom.
+Sections A to G of the script. Seven findings, six of them defects; one of the
+six turned out to be five defects stacked behind a single symptom.
 
 ### 1. The loading screen was in the wrong language
 
@@ -113,6 +113,44 @@ evidence the fix was wrong. It is evidence there is another cause behind it.
 
 **Fix:** each item now says where to look and what to run, including the R2
 half of the backup, which the section had not mentioned.
+
+### 6. The evidence did not change language with the interface
+
+**Reported:** "The evidence does not change language when I change it up top.
+If I regenerate the text the paragraph changes, but the curiosities and
+pairings do not. Everything must be consistent in language."
+
+**Cause:** research translated what it gathered into the language the reader
+had on that day, and stored that as the fact. The page then fetched the facts
+as written, whatever the interface was set to. Regenerating the paragraph wrote
+a fresh one in the new language, which is why that one moved; nothing else was
+ever written again. Two more things sat behind it: pairing notes were never
+translated at all, even at research time, and a wine with more than seven web
+notes was silently not translated either — the translator takes sixteen strings
+a call, the caller sent them all in one, and treated the shorter answer as a
+failure.
+
+**Fix:** a fact now records the language it was written in, and the evidence
+page asks for the facts in the interface's language. Prose in another language
+is translated on first read and kept, per language, so a wine is translated
+once for each language anyone reads it in and never on every visit; the record
+underneath is not rewritten. Each translation call is metered like the
+assistant's, and at the cap the page answers in the written language rather
+than failing. Pairing notes are translated at research time with the rest, and
+long batches are split. Migration `0023`.
+
+### 7. The Space settings page said nothing about deleting the Space
+
+**Reported (after the round):** "It is not clear to me how it is possible to
+schedule or delete a Space, if I do not see that option anywhere."
+
+**Cause:** the delete lives on Data and privacy, for the active Space, and the
+page where an owner goes to manage a Space said nothing about it. That read as
+"you cannot".
+
+**Fix:** Space settings now says where the delete is, for an owner of a group or
+couple Space, and links there; the Data and privacy note for a personal Space
+says to activate a group Space in the switcher and come back.
 
 ## Round 1 — 16 August 2026, the maintainer, Google Chrome, desktop
 

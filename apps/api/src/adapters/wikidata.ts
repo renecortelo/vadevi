@@ -285,7 +285,7 @@ export class WikidataAdapter implements KnowledgeResearchPort {
     // shape from cache until the TTL expires — which is exactly what made a
     // deployed fix look like it had not deployed at all. Bump on any change to
     // what is stored here.
-    const cacheKey = `wbgetentities-v2:${entityId}:${locale}:${input.subjectType}`;
+    const cacheKey = `wbgetentities-v3:${entityId}:${locale}:${input.subjectType}`;
     const cached = await this.cache.get<ProposedFact[]>("wikidata", cacheKey, nowTimestamp);
     if (cached !== null) return { cached: true, data: cached, status: "success" };
 
@@ -426,6 +426,9 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       }
       facts.push({
         confidenceMilli: 800,
+        // Labels are asked for in the reader's language with English as the
+        // fallback, so the whole is in that language save the odd unlabelled term.
+        locale: input.locale,
         predicate: "curiosity.highlight",
         researchMethod: "wikidata.highlight.v1",
         source,
@@ -452,7 +455,11 @@ export class WikidataAdapter implements KnowledgeResearchPort {
       const wikiLang = sitelinks.data[`${locale}wiki`] !== undefined ? locale : "en";
       if (title !== null) {
         const summary = await this.fetchWikipediaSummary(title, wikiLang, nowTimestamp);
-        if (summary !== null) facts.unshift(summary);
+        // Written in the language of the article it came from — the reader's
+        // when there is one, English otherwise — and that is what it is marked.
+        if (summary !== null) {
+          facts.unshift({ ...summary, locale: wikiLang === "en" ? "en" : input.locale });
+        }
       }
     }
 

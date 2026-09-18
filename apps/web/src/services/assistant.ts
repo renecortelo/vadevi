@@ -29,15 +29,22 @@ import { apiError, authenticatedFetch, type TokenSource } from "./api";
  * contract schemas stay out of the initial bundle.
  */
 
+/**
+ * The facts as written, or — with `locale` — as a reader in that language should
+ * see them: prose evidence comes back translated, so the page changes language
+ * with the interface rather than only its labels.
+ */
 export async function getWineFacts(
   tokenSource: TokenSource,
   spaceId: string,
   wineId: string,
   signal?: AbortSignal,
+  locale?: SupportedLocale,
 ): Promise<WineFactsResponse> {
+  const query = locale === undefined ? "" : `?${new URLSearchParams({ locale })}`;
   const response = await authenticatedFetch(
     tokenSource,
-    `/api/v1/spaces/${spaceId}/wines/${wineId}/facts`,
+    `/api/v1/spaces/${spaceId}/wines/${wineId}/facts${query}`,
     signal === undefined ? {} : { signal },
   );
   if (!response.ok) throw await apiError(response);

@@ -97,7 +97,10 @@
     "renameAction": "Renombrar Espacio",
     "renameSaving": "Renombrando…",
     "renameError": "No se pudo renombrar el Espacio. Inténtalo otra vez.",
-    "renameConflict": "Alguien más renombró este Espacio mientras escribías. Recarga e inténtalo de nuevo."
+    "renameConflict": "Alguien más renombró este Espacio mientras escribías. Recarga e inténtalo de nuevo.",
+    "deleteAction": "Ir a Datos y privacidad",
+    "deleteBody": "{{name}} se borra desde Datos y privacidad, escribiendo su nombre para confirmar. Hay un mes para deshacerlo antes de que se elimine de verdad.",
+    "deleteTitle": "Borrar este Espacio"
   },
   "invitation": {
     "eyebrow": "Una invitación privada",
@@ -1063,7 +1066,7 @@
     "noticeRetention": "Los turnos del asistente no se guardan como historial. Las auditorías de herramientas están redactadas y no conservan texto de los mensajes.",
     "noticeScope": "Tus vinos, catas y fotos viven en el Espacio que elegiste. Solo los ven los miembros activos de ese Espacio.",
     "noticeTitle": "Qué hace esta aplicación con tus datos",
-    "personalSpaceNote": "Tu Space personal se borra junto con tu cuenta, más abajo. Los Spaces de grupo de los que eres propietario se borran desde aquí, uno a uno.",
+    "personalSpaceNote": "Tu Space personal se borra junto con tu cuenta, más abajo. Para borrar un Space de grupo del que eres propietario, actívalo en el selector de arriba y vuelve aquí: el botón aparece para ese Space.",
     "providerModes": "Proveedor de IA: {{ai}}. Proveedor de investigación: {{research}}.",
     "retentionBody": "La eliminación borra los datos activos de la aplicación y las fotos guardadas. Las copias de seguridad gestionadas por el proveedor siguen su propio calendario y no se borran al instante.",
     "retentionTitle": "Qué hace y qué no hace la eliminación",
