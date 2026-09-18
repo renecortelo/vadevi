@@ -108,3 +108,59 @@ describe("the local pairing port", () => {
     expect(result.status).toBe("unavailable");
   });
 });
+
+describe("cooking from outside Europe", () => {
+  it("recognises a dish from each of the cuisines it claims to cover", () => {
+    for (const dish of [
+      "sushi de salmón",
+      "pollo teriyaki",
+      "pad thai de gambas",
+      "pollo tikka masala",
+      "hummus con falafel",
+      "tagine de cordero",
+      "tacos de carnitas",
+      "mole poblano",
+      "jollof con pollo",
+      "brisket ahumado",
+    ]) {
+      expect(profileDish(dish).terms.length, dish).toBeGreaterThan(0);
+    }
+  });
+
+  it("holds tannin back when the plate is full of umami", () => {
+    // Soy makes tannin taste harder than it is, so teriyaki must not be answered
+    // with the tannic red that its chicken alone would have justified.
+    expect(profileDish("pollo teriyaki").umami).toBe(true);
+    expect(names("pollo teriyaki")[0]).not.toBe("Full structured red");
+  });
+
+  it("meets smoke with ripe fruit", () => {
+    expect(names("brisket ahumado").slice(0, 2)).toContain("Ripe fruit-forward red");
+  });
+
+  it("does not let smoke put tannin on a fish", () => {
+    // Smoked salmon is still salmon. Smoke raises the weight, never the grip.
+    const top = names("salmón ahumado").slice(0, 3).join(" ");
+    expect(top).not.toContain("Full structured red");
+    expect(top).not.toContain("Ripe fruit-forward red");
+  });
+
+  it("reads a dish whose name is two words", () => {
+    // "padthai" as a single token could never match what anyone types.
+    expect(profileDish("pad thai de gambas").spicy).toBe(true);
+  });
+
+  it("knows carnitas are pork and barbacoa is not", () => {
+    expect(profileDish("tacos de carnitas").protein).toBe("white_meat");
+    expect(profileDish("tacos de barbacoa").protein).toBe("red_meat");
+  });
+
+  it("treats falafel as the chickpea it is", () => {
+    // Without a protein these were read as thin air and answered accordingly.
+    expect(profileDish("hummus con falafel").protein).toBe("legume");
+  });
+
+  it("answers a spicy Thai plate with sweetness rather than tannin", () => {
+    expect(names("pad thai de gambas")[0]).toBe("Off-dry aromatic white");
+  });
+});

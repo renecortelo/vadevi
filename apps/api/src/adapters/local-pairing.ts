@@ -142,6 +142,16 @@ const styles: readonly Style[] = [
     region: "Ribera del Duero",
   },
   {
+    // Smoke and char want ripe fruit to meet them. An austere, high-tannin red
+    // against barbecue tastes bitter twice over.
+    color: "red",
+    country: null,
+    grapes: ["Garnacha", "Zinfandel", "Primitivo", "Syrah"],
+    name: "Ripe fruit-forward red",
+    profile: { acidity: 3, body: 4, sweetness: 1, tannin: 3 },
+    region: null,
+  },
+  {
     color: "fortified",
     country: "ES",
     grapes: ["Palomino"],
@@ -168,7 +178,8 @@ const styles: readonly Style[] = [
 ];
 
 /** Why a style was chosen, before it is put into words. */
-type Reason = "acidity" | "bubbles" | "protein" | "sweeter" | "tannin_clash" | "weight";
+type Reason =
+  "acidity" | "bubbles" | "protein" | "smoke" | "sweeter" | "tannin_clash" | "umami" | "weight";
 
 /**
  * The wine this plate is asking for.
@@ -192,7 +203,6 @@ function target(dish: DishProfile): { profile: StyleProfile; reasons: Reason[] }
   }
 
   // Nothing should shout over the other. Weight follows the plate's own volume.
-  const body = Math.min(5, Math.max(1, dish.intensity));
   if (dish.intensity >= 4 || dish.intensity <= 2) reasons.push("weight");
 
   // Tannin needs protein and fat to soften against; on fish it turns metallic.
@@ -209,6 +219,28 @@ function target(dish: DishProfile): { profile: StyleProfile; reasons: Reason[] }
   ) {
     tannin = 1;
     reasons.push("tannin_clash");
+  }
+
+  // Umami makes tannin taste harder and drier than it is. Soy, miso, mushroom
+  // and aged cheese are why a Cabernet fights teriyaki and a juicy low-tannin
+  // red does not — the wine has not changed, the plate has moved the goalposts.
+  if (dish.umami && tannin > 2) {
+    tannin = 2;
+    reasons.push("umami");
+  }
+
+  // Char wants ripe fruit to meet it. An austere red against barbecue is bitter
+  // twice over, so weight goes up while tannin stays moderate.
+  let body = Math.min(5, Math.max(1, dish.intensity));
+  if (dish.smoky) {
+    body = Math.max(body, 4);
+    // Weight, not grip — and not on fish at all. Smoked salmon is still salmon,
+    // and tannin still turns metallic against it; letting smoke raise the
+    // tannin here would have answered smoked mackerel with a Cabernet.
+    const fish =
+      dish.protein === "lean_fish" || dish.protein === "oily_fish" || dish.protein === "shellfish";
+    if (!fish) tannin = Math.min(Math.max(tannin, 3), 4);
+    reasons.push("smoke");
   }
 
   // Heat is quenched by sugar and inflamed by tannin and alcohol.
@@ -252,64 +284,80 @@ const reasonCopy: Record<ResearchLocale, Record<Reason, string>> = {
     acidity: "acidesa alta que talla el greix del plat",
     bubbles: "la bombolla neteja el paladar entre mossegades",
     protein: "tanins que es dolceixen amb la proteïna de la carn",
+    smoke: "fruita madura que surt a trobar el fum de la brasa",
     sweeter: "un punt de dolçor que calma el picant o acompanya les postres",
     tannin_clash: "tanins baixos: amb el peix es tornen metàl·lics",
+    umami: "tanins continguts: l'umami de la soja o el bolet els endureix",
     weight: "cos a l'altura del plat, sense tapar-lo",
   },
   de: {
     acidity: "hohe Säure, die das Fett des Gerichts schneidet",
     bubbles: "Perlage, die den Gaumen zwischen den Bissen reinigt",
     protein: "Tannine, die am Eiweiß des Fleisches weich werden",
+    smoke: "reife Frucht, die dem Rauch entgegenkommt",
     sweeter: "etwas Süße gegen die Schärfe oder zum Dessert",
     tannin_clash: "wenig Tannin: zu Fisch wird es metallisch",
+    umami: "zurückhaltendes Tannin: Umami aus Soja oder Pilz lässt es härter wirken",
     weight: "Körper auf Augenhöhe mit dem Gericht, ohne es zu übertönen",
   },
   en: {
     acidity: "high acidity to cut the fat on the plate",
     bubbles: "bubbles to clear the palate between mouthfuls",
     protein: "tannin, which softens against the protein in red meat",
+    smoke: "ripe fruit to meet the smoke off the fire",
     sweeter: "a touch of sweetness to calm the heat, or to meet the pudding",
     tannin_clash: "low tannin: it turns metallic against fish",
+    umami: "restrained tannin: umami from soy or mushroom makes it taste harder",
     weight: "weight to match the dish without burying it",
   },
   es: {
     acidity: "acidez alta que corta la grasa del plato",
     bubbles: "burbuja que limpia el paladar entre bocados",
     protein: "taninos que se suavizan con la proteína de la carne",
+    smoke: "fruta madura que sale al encuentro del humo",
     sweeter: "un punto de dulzor que calma el picante o acompaña el postre",
     tannin_clash: "taninos bajos: con el pescado se vuelven metálicos",
+    umami: "taninos contenidos: el umami de la soja o la seta los endurece",
     weight: "cuerpo a la altura del plato, sin taparlo",
   },
   fr: {
     acidity: "acidité élevée pour trancher le gras du plat",
     bubbles: "des bulles qui nettoient le palais entre deux bouchées",
     protein: "des tanins qui s'assouplissent sur la protéine de la viande",
+    smoke: "un fruit mûr qui va à la rencontre du fumé",
     sweeter: "une pointe de sucre pour calmer le piquant ou accompagner le dessert",
     tannin_clash: "peu de tanin : sur le poisson il devient métallique",
+    umami: "des tanins retenus : l'umami du soja ou du champignon les durcit",
     weight: "un corps à la hauteur du plat, sans l'écraser",
   },
   it: {
     acidity: "acidità alta che taglia il grasso del piatto",
     bubbles: "bollicine che puliscono il palato tra un boccone e l'altro",
     protein: "tannini che si ammorbidiscono sulla proteina della carne",
+    smoke: "frutta matura che va incontro all'affumicato",
     sweeter: "un tocco di dolcezza per calmare il piccante o accompagnare il dolce",
     tannin_clash: "tannini bassi: sul pesce diventano metallici",
+    umami: "tannini contenuti: l'umami di soia o fungo li indurisce",
     weight: "corpo all'altezza del piatto, senza coprirlo",
   },
   nl: {
     acidity: "hoge zuren die het vet van het gerecht doorsnijden",
     bubbles: "bubbels die het gehemelte tussen happen schoonspoelen",
     protein: "tannine, die zacht wordt tegen het eiwit van rood vlees",
+    smoke: "rijp fruit dat de rook tegemoet komt",
     sweeter: "een vleug zoet tegen de pit, of bij het nagerecht",
     tannin_clash: "weinig tannine: bij vis wordt het metaalachtig",
+    umami: "ingetogen tannine: umami uit soja of paddenstoel maakt die harder",
     weight: "body op de hoogte van het gerecht, zonder het te overstemmen",
   },
   "pt-PT": {
     acidity: "acidez alta que corta a gordura do prato",
     bubbles: "bolha que limpa o palato entre garfadas",
     protein: "taninos que amaciam com a proteína da carne",
+    smoke: "fruta madura que vai ao encontro do fumo",
     sweeter: "um toque de doçura para acalmar o picante ou acompanhar a sobremesa",
     tannin_clash: "taninos baixos: com peixe tornam-se metálicos",
+    umami: "taninos contidos: o umami da soja ou do cogumelo endurece-os",
     weight: "corpo à altura do prato, sem o tapar",
   },
 };
@@ -330,6 +378,8 @@ const reasonOrder: readonly Reason[] = [
   "sweeter",
   "protein",
   "tannin_clash",
+  "umami",
+  "smoke",
   "acidity",
   "bubbles",
   "weight",
