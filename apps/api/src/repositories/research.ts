@@ -652,13 +652,23 @@ async function persistCompletedJob(
     sourceIds.add(sourceId);
     // Reuse any researched fact already carrying this exact predicate+value, so
     // researching the same wine twice — or reaching the same value by a different
-    // method or source — never stacks duplicate cards.
+    // method or source — never stacks duplicate cards. A web note is also the
+    // same note when it comes from the same page: research writes prose in the
+    // reader's language of the day, so the same snippet researched again in
+    // another language has a different value and is still one card, not two.
+    const isWebNote =
+      stored.proposal.predicate === "curiosity.note" ||
+      stored.proposal.predicate === "pairing.note";
     const existingFact = await database
       .prepare(
         `SELECT fact.id, fact.status FROM facts fact
         WHERE fact.space_id = ? AND fact.subject_type = 'wine' AND fact.subject_id = ?
-          AND fact.predicate = ? AND fact.value_json = ? AND fact.evidence_class = 'researched'
+          AND fact.predicate = ? AND fact.evidence_class = 'researched'
           AND fact.deleted_at IS NULL
+          AND (fact.value_json = ? OR (? AND fact.id IN (
+            SELECT citation.fact_id FROM fact_citations citation WHERE citation.source_id = ?
+          )))
+        ORDER BY CASE fact.status WHEN 'retired' THEN 1 ELSE 0 END, fact.created_at
         LIMIT 1`,
       )
       .bind(
@@ -666,6 +676,8 @@ async function persistCompletedJob(
         options.wineId,
         stored.proposal.predicate,
         JSON.stringify(stored.proposal.value),
+        isWebNote ? 1 : 0,
+        sourceId,
       )
       .first<{ id: string; status: string }>();
     const factId = existingFact?.id ?? stored.factId;

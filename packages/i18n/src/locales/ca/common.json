@@ -2,7 +2,6 @@
   "appName": "Va de Vi",
   "skipToContent": "Ves al contingut",
   "licenseSource": "Codi font (AGPL-3.0)",
-  "previewSpace": "Espai personal · previsualització local",
   "phaseEyebrow": "La teva memòria privada del vi",
   "welcomeTitle": "Un lloc per a cada ampolla que val la pena recordar.",
   "welcomeBody": "Registra un vi en un moment, mantén separada l'opinió de cadascú i fes que la teva història sigui útil amb el temps.",
@@ -15,7 +14,6 @@
   "healthUnavailable": "Sense connexió · les teves ampolles són segures en aquest dispositiu",
   "offline": "Fora de línia",
   "online": "En línia",
-  "updateReady": "Hi ha una versió nova preparada.",
   "reload": "Actualitza",
   "dismiss": "Ara no",
   "auth": {
@@ -46,7 +44,6 @@
   },
   "space": {
     "switchLabel": "Espai actiu",
-    "sectionLabel": "Espai",
     "switchError": "No s'ha pogut obrir aquest Espai."
   },
   "spaces": {
@@ -132,14 +129,6 @@
     "licenseBody": "Va de Vi és programari lliure sota l'AGPL-3.0. Qui l'usa per xarxa té dret al seu codi."
   },
   "pages": {
-    "logTitle": "Registre ràpid",
-    "logBody": "Registra una ampolla a mà, o escaneja'n el codi. Es desa sense senyal i sincronitza després.",
-    "sessionsTitle": "Esdeveniments de tast",
-    "sessionsBody": "Els tastos compartits conservaran la nota individual de cada participant.",
-    "memoryTitle": "Memòria del vi",
-    "memoryBody": "Aquí hi haurà les teves targetes privades, taula, cronologia, filtres i exportació.",
-    "assistantTitle": "Vicenç Vinyes",
-    "assistantBody": "El company atent a les evidències arribarà mitjançant eines autoritzades pel servidor; aquesta base no simula cap assistent.",
     "notFoundTitle": "Aquesta pàgina no és al celler.",
     "notFoundBody": "Torna a l'inici i tria un altre camí."
   },
@@ -319,10 +308,7 @@
     "editSave": "Desa els canvis",
     "editSaving": "Desant…",
     "editCancel": "Cancel·la",
-    "editError": "No s'han pogut desar els canvis. Torna-ho a provar.",
-    "editConflict": "Algú altre ha canviat aquest vi mentre editaves. Recarrega i torna-ho a provar — no s'ha enviat res del que has escrit.",
     "editPhotoAction": "Afegeix la foto de l'etiqueta",
-    "editPhotoError": "No s'ha pogut desar la foto, així que no ha canviat res. Les dades es desen si la treus.",
     "removeSavedPhoto": "Treu la foto desada",
     "photoWillBeRemoved": "La foto es traurà en desar.",
     "lastVenue": "Últim tast a {{venue}}",
@@ -351,12 +337,10 @@
     "loadingTitle": "Carregant l'evidència…",
     "loadingBody": "Comprovant les afirmacions autoritzades i les citacions d'aquest Espai.",
     "loadError": "No s'ha pogut carregar l'evidència. Torna-ho a provar quan hi hagi connexió.",
-    "acceptError": "No s'ha pogut canviar l'afirmació preferida. Recarrega i revisa la versió actual.",
     "conflictTitle": "Les afirmacions contradictòries es conserven",
     "conflictBody": "{{count}} atribut té valors diferents. Tria'n un com a preferit sense esborrar les alternatives.",
     "emptyTitle": "Encara no hi ha evidència.",
     "emptyBody": "La recerca i l'evidència manual apareixeran aquí amb la font i la data de consulta.",
-    "claimLabel": "Afirmació",
     "claimCount": "{{count}} afirmació",
     "claimCount_other": "{{count}} afirmacions",
     "class": {
@@ -402,8 +386,6 @@
     "license": "Llicència {{license}}",
     "confidence": "Confiança registrada: {{value}} %",
     "noCitations": "Sense citació externa: no es presenta com a evidència investigada.",
-    "acceptAction": "Tria com a preferida",
-    "accepting": "Triant…",
     "rejectAction": "Descartar",
     "rejecting": "Descartant…",
     "rejectError": "No s'ha pogut descartar l'afirmació. Torna a carregar i revisa la versió actual.",
@@ -440,10 +422,6 @@
       "title": "Amplia aquesta evidència",
       "body": "Fes consultes limitades a dades obertes. Les noves afirmacions queden com a propostes i conserven sempre la font.",
       "disabled": "La recerca externa està desactivada en aquest desplegament. L’evidència manual i Wine Memory continuen disponibles.",
-      "wineEntity": "ID de Wikidata del vi (opcional)",
-      "producerEntity": "ID de Wikidata del productor (opcional)",
-      "regionEntity": "ID de Wikidata de la regió (opcional)",
-      "entityHelp": "Fes servir un identificador Q de Wikidata només quan hagis confirmat l’entitat. La cerca per codi de barres s’executa automàticament si el vi en té.",
       "action": "Investiga aquest vi",
       "running": "Investigant…",
       "offline": "La recerca necessita connexió. L’evidència existent continua disponible sense connexió.",
@@ -494,23 +472,16 @@
   "assistant": {
     "eyebrow": "El teu acompanyant de vins amb accés limitat",
     "title": "Vicenç Vinyes",
-    "body": "Pregunta pels vins de l’Espai actiu. Cada resultat prové de dades estructurades autoritzades i mostra l’evidència.",
-    "privacyTitle": "Efímer per defecte",
-    "privacyBody": "Aquest torn no es desa com a historial de xat. Només es conserva una auditoria redactada de l’eina; el missatge no s’hi copia.",
     "messageLabel": "Què t’agradaria trobar?",
     "messagePlaceholder": "Comença a escriure…",
     "activeSpaceOnly": "Cercant només a l’Espai actiu",
     "sendAction": "Pregunta a Vicenç",
-    "sending": "Cercant…",
     "error": "Vicenç no pot cercar ara mateix. Wine Memory i els formularis normals continuen disponibles.",
     "emptyTitle": "Comença per la teva Wine Memory.",
     "emptyBody": "Pregunta pels vins del teu celler: què has tastat, quin t’ha agradat, quin obrir. En Vicenç respon només des dels teus vins.",
-    "ephemeralBadge": "No es desa a l’historial del xat",
-    "evidenceTitle": "Base d’evidència",
     "resultsTitle": "Vins coincidents",
     "openEvidence": "Revisa l’evidència",
     "summaryTitle": "Sobre aquest vi",
-    "availabilityTitle": "Disponibilitat d’eines",
     "profileTitle": "El teu perfil de gust",
     "profileInsufficient": "Hi ha {{count}} nota enviada; en calen almenys {{minimum}} abans de descriure una preferència.",
     "profileAverage": "Puntuació mitjana enviada",
@@ -540,50 +511,6 @@
       "would_buy_history": "Abans vas indicar que el compraries",
       "in_cellar": "Al teu celler, a punt per obrir",
       "not_in_cellar": "No la tens al celler — per buscar-la"
-    },
-    "mode": {
-      "deterministic": "Cerca estructurada",
-      "provider": "Resposta basada en evidència"
-    },
-    "availability": {
-      "ai": {
-        "available": "Proveïdor d’IA disponible",
-        "disabled": "Proveïdor d’IA desactivat",
-        "unavailable": "Proveïdor d’IA temporalment no disponible"
-      },
-      "searchMemory": {
-        "available": "Cerca autoritzada a Wine Memory disponible",
-        "disabled": "Cerca a Wine Memory desactivada",
-        "unavailable": "Cerca a Wine Memory no disponible"
-      },
-      "externalResearch": {
-        "available": "Recerca externa disponible",
-        "disabled": "Recerca externa desactivada",
-        "unavailable": "Recerca externa no disponible"
-      },
-      "getWineContext": {
-        "available": "Context autoritzat del vi disponible"
-      },
-      "getTasteProfile": {
-        "available": "Perfil de gust amb mostra limitada disponible"
-      },
-      "compareWines": {
-        "available": "Comparació determinista de vins disponible"
-      },
-      "findPriceObservations": {
-        "available": "Cerca de preus desats amb data disponible"
-      },
-      "buildRecommendation": {
-        "available": "Ordenació qualitativa de recomanacions disponible"
-      },
-      "createActionDraft": {
-        "available": "Esborranys d'acció amb confirmació disponibles"
-      },
-      "researchWine": {
-        "available": "Recerca limitada i citada disponible",
-        "disabled": "Recerca limitada de vins desactivada",
-        "unavailable": "Recerca limitada de vins no disponible"
-      }
     },
     "clearAction": "Neteja",
     "thinking": "Vicenç està pensant…",
@@ -624,7 +551,6 @@
     "purchaseBody": "Una compra pot crear ampolles físiques i sempre crea una observació del preu de compra amb data.",
     "onlineRequired": "Connecta't per registrar compres o canvis de cicle de vida. Les ampolles desades continuen visibles sense connexió.",
     "wine": "Vi",
-    "chooseWine": "Tria un vi",
     "merchant": "Comerç",
     "unitPrice": "Preu unitari",
     "currency": "Moneda",
@@ -658,7 +584,6 @@
     "error": "No s'ha pogut completar el canvi. Torna a carregar i prova-ho de nou.",
     "addTitle": "Afegeix un vi",
     "wine": "Vi",
-    "chooseWine": "Tria un vi",
     "reason": "Per què el vols?",
     "priority": "Prioritat",
     "targetPrice": "Preu objectiu en EUR (opcional)",
@@ -692,7 +617,6 @@
     "cached": "Es mostren les observacions de preu desades en aquest dispositiu.",
     "error": "No s'han pogut actualitzar els preus. Pot ser que es mostri una còpia desada.",
     "wine": "Vi",
-    "chooseWine": "Tria un vi",
     "recordTitle": "Registra una observació de preu",
     "coverageWarning": "La cobertura externa és opcional i incompleta. Les observacions manuals de prestatge, rebut, comerç i compra continuen sent útils.",
     "amount": "Preu observat",
@@ -1157,7 +1081,6 @@
     "addOption": "＋ Afegir un vi nou",
     "addAction": "Afegir vi",
     "adding": "Afegint…",
-    "cancel": "Cancel·la",
     "addHelp": "Amb el productor i el nom n'hi ha prou. Es desa com a esborrany, com qualsevol vi.",
     "addError": "No s'ha pogut afegir el vi. Torna-ho a provar.",
     "filterLabel": "Filtra vins",

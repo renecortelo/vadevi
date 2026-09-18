@@ -59,13 +59,13 @@ async function ownedSpaceWithWine() {
 }
 
 /** Research that finds one web curiosity and one pairing note, in English, and
- *  a translator that renders them in Spanish for the Spanish-speaking reader. */
-async function researchInSpanish(spaceId: string, wineId: string) {
+ *  a translator that renders them in the reader's language. */
+async function researchIn(locale: "de" | "es", spaceId: string, wineId: string) {
   const ports: ResearchPorts = {
     knowledge: null,
     product: null,
     providerMode: "open_data",
-    translation: { translate: async ({ texts }) => texts.map((text) => `es: ${text}`) },
+    translation: { translate: async ({ texts }) => texts.map((text) => `${locale}: ${text}`) },
     webSearch: {
       search: async ({ query }) => ({
         cached: false,
@@ -92,7 +92,7 @@ async function researchInSpanish(spaceId: string, wineId: string) {
     idempotencyKey: randomOpaqueToken(),
     ports,
     principal,
-    request: { locale: "es", maxSources: 4, topics: ["identity"] },
+    request: { locale, maxSources: 4, topics: ["identity"] },
     requestId: randomOpaqueToken(),
     spaceId,
     wineId,
@@ -114,7 +114,7 @@ function prose(facts: Fact[]) {
 describe("fact translations", () => {
   it("serves evidence in the reader's language, translating once and keeping the record", async () => {
     const { spaceId, wineId } = await ownedSpaceWithWine();
-    await researchInSpanish(spaceId, wineId);
+    await researchIn("es", spaceId, wineId);
 
     // Both notes were translated at research time, title and body, and marked
     // as Spanish — a pairing note used to be stored as it came, in English.
@@ -189,7 +189,7 @@ describe("fact translations", () => {
 
   it("answers in the written language when the budget refuses, without failing the read", async () => {
     const { spaceId, wineId } = await ownedSpaceWithWine();
-    await researchInSpanish(spaceId, wineId);
+    await researchIn("es", spaceId, wineId);
 
     let asked = 0;
     const inFrench = await listWineFacts(env.DB, {
@@ -211,6 +211,21 @@ describe("fact translations", () => {
     expect(prose(inFrench!.data.facts)["pairing.note"]?.value).toBe(
       "es: Pairs well with roast lamb.",
     );
+  });
+
+  it("keeps one card per page when the wine is researched again in another language", async () => {
+    const { spaceId, wineId } = await ownedSpaceWithWine();
+    await researchIn("es", spaceId, wineId);
+    // Researched again by a German-speaking member: the same two pages come
+    // back, now rendered in German. A different value, the same note.
+    await researchIn("de", spaceId, wineId);
+
+    const facts = (await listWineFacts(env.DB, { principal, spaceId, wineId }))!.data.facts;
+    const live = facts.filter((fact) => fact.status !== "retired");
+    expect(live.filter((fact) => fact.predicate === "curiosity.note")).toHaveLength(1);
+    expect(live.filter((fact) => fact.predicate === "pairing.note")).toHaveLength(1);
+    // The first writing stands; a German reader is served its translation.
+    expect(prose(live)["pairing.note"]?.value).toBe("es: Pairs well with roast lamb.");
   });
 
   it("batches texts within what one translation call will take", () => {

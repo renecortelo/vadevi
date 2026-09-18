@@ -47,8 +47,11 @@ describe("service worker cache boundaries", () => {
   });
 
   it("names caches so an update installs beside the previous version", () => {
-    const first = cacheNamesFor(["asset-a", "asset-b"]);
-    const second = cacheNamesFor(["asset-a", "asset-b", "asset-c-longer"]);
+    // Same number of assets, same-width revisions — what two real builds look
+    // like. A name derived from the joined length was identical for these, and
+    // every update installed over the live cache instead of beside it.
+    const first = cacheNamesFor(["BuDTrVCu", "5RVzcIdc"]);
+    const second = cacheNamesFor(["BuDTrVCv", "5RVzcIdc"]);
 
     expect(first.cacheName.startsWith(`${cachePrefix}-${cacheLayoutVersion}-`)).toBe(true);
     expect(first.bundleCacheName.startsWith(`${bundlePrefix}-${cacheLayoutVersion}-`)).toBe(true);
