@@ -2,7 +2,6 @@
   "appName": "Va de Vi",
   "skipToContent": "Zum Inhalt springen",
   "licenseSource": "Quellcode (AGPL-3.0)",
-  "previewSpace": "Persönlicher Bereich · lokale Vorschau",
   "phaseEyebrow": "Ihr privates Weingedächtnis",
   "welcomeTitle": "Ein Ort für jede Flasche, die in Erinnerung bleiben soll.",
   "welcomeBody": "Erfassen Sie einen Wein im Handumdrehen, halten Sie jede Meinung getrennt und machen Sie Ihre eigene Geschichte mit der Zeit wertvoll.",
@@ -15,7 +14,6 @@
   "healthUnavailable": "Keine Verbindung · deine Flaschen sind auf diesem Gerät sicher",
   "offline": "Offline",
   "online": "Online",
-  "updateReady": "Eine neue Version ist bereit.",
   "reload": "Neu laden",
   "dismiss": "Nicht jetzt",
   "auth": {
@@ -46,7 +44,6 @@
   },
   "space": {
     "switchLabel": "Aktiver Bereich",
-    "sectionLabel": "Space",
     "switchError": "Dieser Bereich konnte nicht geöffnet werden."
   },
   "spaces": {
@@ -132,14 +129,6 @@
     "licenseBody": "Va de Vi ist freie Software unter der AGPL-3.0. Wer es über ein Netzwerk nutzt, hat Anspruch auf den Quelltext."
   },
   "pages": {
-    "logTitle": "Schnellerfassung",
-    "logBody": "Erfasse eine Flasche von Hand oder scanne ihren Code. Es wird ohne Empfang gespeichert und später abgeglichen.",
-    "sessionsTitle": "Verkostungsveranstaltungen",
-    "sessionsBody": "Gemeinsame Verkostungen bewahren die individuelle Notiz jeder teilnehmenden Person.",
-    "memoryTitle": "Weingedächtnis",
-    "memoryBody": "Ihre privaten Karten, Tabelle, Zeitleiste, Filter und Exporte finden hier ihren Platz.",
-    "assistantTitle": "Vicenç Vinyes",
-    "assistantBody": "Der quellenbewusste Begleiter folgt hinter serverseitig autorisierten Werkzeugen; dieses Fundament simuliert keinen Assistenten.",
     "notFoundTitle": "Diese Seite liegt nicht im Weinkeller.",
     "notFoundBody": "Kehren Sie zur Startseite zurück und wählen Sie einen anderen Weg."
   },
@@ -319,10 +308,7 @@
     "editSave": "Änderungen speichern",
     "editSaving": "Wird gespeichert…",
     "editCancel": "Abbrechen",
-    "editError": "Die Änderungen konnten nicht gespeichert werden. Versuch es noch einmal.",
-    "editConflict": "Jemand anderes hat diesen Wein geändert, während du bearbeitet hast. Lade neu und versuch es noch einmal — nichts von dem, was du getippt hast, wurde gesendet.",
     "editPhotoAction": "Etikettenfoto hinzufügen",
-    "editPhotoError": "Das Foto konnte nicht gespeichert werden, nichts wurde geändert. Die Daten werden gespeichert, wenn du es entfernst.",
     "removeSavedPhoto": "Gespeichertes Foto entfernen",
     "photoWillBeRemoved": "Das Foto wird beim Speichern entfernt.",
     "lastVenue": "Zuletzt verkostet in {{venue}}",
@@ -351,12 +337,10 @@
     "loadingTitle": "Belege werden geladen…",
     "loadingBody": "Berechtigte Aussagen und Quellenangaben für diesen Raum werden geprüft.",
     "loadError": "Die Belege konnten nicht geladen werden. Versuche es erneut, sobald eine Verbindung besteht.",
-    "acceptError": "Die bevorzugte Aussage konnte nicht geändert werden. Lade neu und prüfe die aktuelle Version.",
     "conflictTitle": "Widersprüchliche Aussagen bleiben erhalten",
     "conflictBody": "{{count}} Merkmal hat unterschiedliche Werte. Wähle eine bevorzugte Aussage, ohne Alternativen zu löschen.",
     "emptyTitle": "Noch keine Belege vorhanden.",
     "emptyBody": "Recherche und manuelle Belege erscheinen hier mit Quelle und Abrufdatum.",
-    "claimLabel": "Aussage",
     "claimCount": "{{count}} Aussage",
     "claimCount_other": "{{count}} Aussagen",
     "class": {
@@ -402,8 +386,6 @@
     "license": "Lizenz {{license}}",
     "confidence": "Erfasste Sicherheit: {{value}} %",
     "noCitations": "Keine externe Quelle: Dies wird nicht als recherchierter Beleg dargestellt.",
-    "acceptAction": "Als bevorzugt wählen",
-    "accepting": "Auswahl…",
     "rejectAction": "Verwerfen",
     "rejecting": "Wird verworfen…",
     "rejectError": "Die Aussage konnte nicht verworfen werden. Neu laden und die aktuelle Version prüfen.",
@@ -440,10 +422,6 @@
       "title": "Diese Belege erweitern",
       "body": "Führe begrenzte Abfragen in offenen Daten durch. Neue Aussagen bleiben Vorschläge und behalten immer ihre Quelle.",
       "disabled": "Externe Recherche ist in dieser Bereitstellung deaktiviert. Manuelle Belege und Wine Memory bleiben verfügbar.",
-      "wineEntity": "Wikidata-ID des Weins (optional)",
-      "producerEntity": "Wikidata-ID des Erzeugers (optional)",
-      "regionEntity": "Wikidata-ID der Region (optional)",
-      "entityHelp": "Verwende eine Wikidata-Q-ID nur für eine bestätigte Entität. Die Barcode-Suche läuft automatisch, wenn der Wein einen Barcode hat.",
       "action": "Diesen Wein recherchieren",
       "running": "Recherche läuft…",
       "offline": "Die Recherche benötigt eine Verbindung. Vorhandene Belege bleiben offline verfügbar.",
@@ -494,23 +472,16 @@
   "assistant": {
     "eyebrow": "Dein Weinbegleiter mit begrenztem Zugriff",
     "title": "Vicenç Vinyes",
-    "body": "Frage nach Weinen im aktiven Space. Jedes Ergebnis stammt aus autorisierten strukturierten Daten und zeigt seine Beleggrundlage.",
-    "privacyTitle": "Standardmäßig flüchtig",
-    "privacyBody": "Diese Runde wird nicht als Chatverlauf gespeichert. Nur ein redigiertes Werkzeugprotokoll bleibt erhalten; deine Nachricht wird nicht hineinkopiert.",
     "messageLabel": "Was möchtest du finden?",
     "messagePlaceholder": "Schreib los…",
     "activeSpaceOnly": "Suche nur im aktiven Space",
     "sendAction": "Vicenç fragen",
-    "sending": "Suche…",
     "error": "Vicenç kann gerade nicht suchen. Wine Memory und die normalen Formulare bleiben verfügbar.",
     "emptyTitle": "Beginne mit deinem eigenen Wine Memory.",
     "emptyBody": "Frag nach den Weinen in deinem Keller: was du probiert und gemocht hast, was du öffnen solltest. Vicenç antwortet nur aus deinen eigenen Weinen.",
-    "ephemeralBadge": "Nicht im Chatverlauf gespeichert",
-    "evidenceTitle": "Beleggrundlage",
     "resultsTitle": "Passende Weine",
     "openEvidence": "Belege prüfen",
     "summaryTitle": "Über diesen Wein",
-    "availabilityTitle": "Werkzeugverfügbarkeit",
     "profileTitle": "Dein Geschmacksprofil",
     "profileInsufficient": "Bisher gibt es {{count}} eingereichte Notiz; mindestens {{minimum}} sind nötig, bevor eine Vorliebe beschrieben wird.",
     "profileAverage": "Durchschnittliche eingereichte Bewertung",
@@ -540,50 +511,6 @@
       "would_buy_history": "Du hattest zuvor angegeben, ihn kaufen zu wollen",
       "in_cellar": "In deinem Keller, bereit zum Öffnen",
       "not_in_cellar": "Nicht im Keller — eine zum Nachkaufen"
-    },
-    "mode": {
-      "deterministic": "Strukturierte Suche",
-      "provider": "Beleggestützte Antwort"
-    },
-    "availability": {
-      "ai": {
-        "available": "KI-Anbieter verfügbar",
-        "disabled": "KI-Anbieter deaktiviert",
-        "unavailable": "KI-Anbieter vorübergehend nicht verfügbar"
-      },
-      "searchMemory": {
-        "available": "Autorisierte Wine-Memory-Suche verfügbar",
-        "disabled": "Wine-Memory-Suche deaktiviert",
-        "unavailable": "Wine-Memory-Suche nicht verfügbar"
-      },
-      "externalResearch": {
-        "available": "Externe Recherche verfügbar",
-        "disabled": "Externe Recherche deaktiviert",
-        "unavailable": "Externe Recherche nicht verfügbar"
-      },
-      "getWineContext": {
-        "available": "Autorisierter Weinkontext verfügbar"
-      },
-      "getTasteProfile": {
-        "available": "Geschmacksprofil mit begrenzter Stichprobe verfügbar"
-      },
-      "compareWines": {
-        "available": "Deterministischer Weinvergleich verfügbar"
-      },
-      "findPriceObservations": {
-        "available": "Suche nach datierten gespeicherten Preisen verfügbar"
-      },
-      "buildRecommendation": {
-        "available": "Qualitative Empfehlungssortierung verfügbar"
-      },
-      "createActionDraft": {
-        "available": "Bestätigungspflichtige Aktionsentwürfe verfügbar"
-      },
-      "researchWine": {
-        "available": "Begrenzte, zitierte Weinrecherche verfügbar",
-        "disabled": "Begrenzte Weinrecherche deaktiviert",
-        "unavailable": "Begrenzte Weinrecherche nicht verfügbar"
-      }
     },
     "clearAction": "Leeren",
     "thinking": "Vicenç denkt nach…",
@@ -624,7 +551,6 @@
     "purchaseBody": "Ein Kauf kann echte Flaschen anlegen und erzeugt immer eine datierte Kaufpreisbeobachtung.",
     "onlineRequired": "Verbinde dich, um Käufe oder Zustandsänderungen zu erfassen. Gespeicherte Flaschen bleiben offline sichtbar.",
     "wine": "Wein",
-    "chooseWine": "Wein auswählen",
     "merchant": "Händler",
     "unitPrice": "Stückpreis",
     "currency": "Währung",
@@ -658,7 +584,6 @@
     "error": "Die Änderung konnte nicht abgeschlossen werden. Lade neu und versuche es erneut.",
     "addTitle": "Wein hinzufügen",
     "wine": "Wein",
-    "chooseWine": "Wein auswählen",
     "reason": "Warum möchtest du ihn?",
     "priority": "Priorität",
     "targetPrice": "Zielpreis in EUR (optional)",
@@ -692,7 +617,6 @@
     "cached": "Gespeicherte Preisbeobachtungen von diesem Gerät werden angezeigt.",
     "error": "Preise konnten nicht aktualisiert werden. Möglicherweise wird eine gespeicherte Kopie angezeigt.",
     "wine": "Wein",
-    "chooseWine": "Wein auswählen",
     "recordTitle": "Preisbeobachtung erfassen",
     "coverageWarning": "Externe Abdeckung ist optional und unvollständig. Manuelle Regal-, Beleg-, Händler- und Kaufbeobachtungen bleiben nützlich.",
     "amount": "Beobachteter Preis",
@@ -1157,7 +1081,6 @@
     "addOption": "＋ Einen Wein hinzufügen",
     "addAction": "Wein hinzufügen",
     "adding": "Wird hinzugefügt…",
-    "cancel": "Abbrechen",
     "addHelp": "Erzeuger und Name genügen. Er wird als Entwurf gespeichert, wie jeder Wein.",
     "addError": "Der Wein konnte nicht hinzugefügt werden. Versuch es noch einmal.",
     "filterLabel": "Weine filtern",

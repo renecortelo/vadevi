@@ -2,7 +2,6 @@
   "appName": "Va de Vi",
   "skipToContent": "Ga naar de inhoud",
   "licenseSource": "Broncode (AGPL-3.0)",
-  "previewSpace": "Persoonlijke ruimte · lokale preview",
   "phaseEyebrow": "Je persoonlijke wijngeheugen",
   "welcomeTitle": "Een plek voor elke fles die het onthouden waard is.",
   "welcomeBody": "Leg een wijn in een oogwenk vast, houd ieders mening apart en maak je eigen geschiedenis steeds waardevoller.",
@@ -15,7 +14,6 @@
   "healthUnavailable": "Geen verbinding · je flessen staan veilig op dit apparaat",
   "offline": "Offline",
   "online": "Online",
-  "updateReady": "Er staat een nieuwe versie klaar.",
   "reload": "Vernieuwen",
   "dismiss": "Niet nu",
   "auth": {
@@ -46,7 +44,6 @@
   },
   "space": {
     "switchLabel": "Actieve Ruimte",
-    "sectionLabel": "Ruimte",
     "switchError": "Deze Ruimte kon niet worden geopend."
   },
   "spaces": {
@@ -132,14 +129,6 @@
     "licenseBody": "Va de Vi is vrije software onder de AGPL-3.0. Wie het over een netwerk gebruikt, heeft recht op de broncode."
   },
   "pages": {
-    "logTitle": "Snel vastleggen",
-    "logBody": "Leg een fles handmatig vast, of scan de code. Het wordt zonder bereik bewaard en later gesynchroniseerd.",
-    "sessionsTitle": "Proefevenementen",
-    "sessionsBody": "Gedeelde proeverijen bewaren de afzonderlijke notitie van elke deelnemer.",
-    "memoryTitle": "Wijngeheugen",
-    "memoryBody": "Je persoonlijke kaarten, tabel, tijdlijn, filters en export komen hier.",
-    "assistantTitle": "Vicenç Vinyes",
-    "assistantBody": "De bronbewuste begeleider komt achter servergeautoriseerde hulpmiddelen; deze basis simuleert geen assistent.",
     "notFoundTitle": "Die pagina ligt niet in de kelder.",
     "notFoundBody": "Ga terug naar home en kies een ander pad."
   },
@@ -319,10 +308,7 @@
     "editSave": "Wijzigingen bewaren",
     "editSaving": "Bewaren…",
     "editCancel": "Annuleren",
-    "editError": "De wijzigingen konden niet worden bewaard. Probeer het opnieuw.",
-    "editConflict": "Iemand anders heeft deze wijn gewijzigd terwijl jij bezig was. Herlaad en probeer opnieuw — niets van wat je typte is verstuurd.",
     "editPhotoAction": "Voeg de foto van het etiket toe",
-    "editPhotoError": "De foto kon niet worden opgeslagen, er is niets gewijzigd. De gegevens bewaren wel als je hem verwijdert.",
     "removeSavedPhoto": "Opgeslagen foto verwijderen",
     "photoWillBeRemoved": "De foto wordt verwijderd bij opslaan.",
     "lastVenue": "Laatst geproefd bij {{venue}}",
@@ -351,12 +337,10 @@
     "loadingTitle": "Bewijs laden…",
     "loadingBody": "Bevoegde beweringen en brongegevens voor deze Ruimte controleren.",
     "loadError": "Het bewijs kon niet worden geladen. Probeer het opnieuw wanneer er verbinding is.",
-    "acceptError": "De voorkeursbewering kon niet worden gewijzigd. Laad opnieuw en bekijk de huidige versie.",
     "conflictTitle": "Tegenstrijdige beweringen blijven bewaard",
     "conflictBody": "{{count}} eigenschap heeft verschillende waarden. Kies een voorkeur zonder de alternatieven te verwijderen.",
     "emptyTitle": "Er is nog geen bewijs.",
     "emptyBody": "Onderzoek en handmatig bewijs verschijnen hier met bron en raadpleegdatum.",
-    "claimLabel": "Bewering",
     "claimCount": "{{count}} bewering",
     "claimCount_other": "{{count}} beweringen",
     "class": {
@@ -402,8 +386,6 @@
     "license": "Licentie {{license}}",
     "confidence": "Vastgelegd vertrouwen: {{value}}%",
     "noCitations": "Geen externe bron: dit wordt niet als onderzocht bewijs gepresenteerd.",
-    "acceptAction": "Als voorkeur kiezen",
-    "accepting": "Kiezen…",
     "rejectAction": "Verwerpen",
     "rejecting": "Verwerpen…",
     "rejectError": "De bewering kon niet worden verworpen. Herlaad en controleer de huidige versie.",
@@ -440,10 +422,6 @@
       "title": "Breid dit bewijs uit",
       "body": "Voer begrensde zoekopdrachten in open data uit. Nieuwe beweringen blijven voorstellen en behouden altijd hun bron.",
       "disabled": "Extern onderzoek is in deze implementatie uitgeschakeld. Handmatig bewijs en Wine Memory blijven beschikbaar.",
-      "wineEntity": "Wikidata-ID van wijn (optioneel)",
-      "producerEntity": "Wikidata-ID van producent (optioneel)",
-      "regionEntity": "Wikidata-ID van regio (optioneel)",
-      "entityHelp": "Gebruik alleen een Wikidata Q-ID wanneer de entiteit bevestigd is. Zoeken op barcode gebeurt automatisch als de wijn er een heeft.",
       "action": "Onderzoek deze wijn",
       "running": "Bezig met onderzoeken…",
       "offline": "Onderzoek vereist een verbinding. Bestaand bewijs blijft offline beschikbaar.",
@@ -494,23 +472,16 @@
   "assistant": {
     "eyebrow": "Je wijnmetgezel met begrensde toegang",
     "title": "Vicenç Vinyes",
-    "body": "Vraag naar wijnen in je actieve Space. Elk resultaat komt uit geautoriseerde gestructureerde gegevens en toont het bewijs.",
-    "privacyTitle": "Standaard tijdelijk",
-    "privacyBody": "Deze beurt wordt niet opgeslagen als chatgeschiedenis. Alleen een geredigeerde toolaudit blijft bewaard; je bericht wordt er niet in gekopieerd.",
     "messageLabel": "Wat wil je vinden?",
     "messagePlaceholder": "Begin te typen…",
     "activeSpaceOnly": "Alleen zoeken in de actieve Space",
     "sendAction": "Vraag Vicenç",
-    "sending": "Zoeken…",
     "error": "Vicenç kan nu niet zoeken. Wine Memory en de normale formulieren blijven beschikbaar.",
     "emptyTitle": "Begin met je eigen Wine Memory.",
     "emptyBody": "Vraag naar de wijnen in je kelder: wat je hebt geproefd, wat je lekker vond, wat je moet openen. Vicenç antwoordt alleen op basis van je eigen wijnen.",
-    "ephemeralBadge": "Niet opgeslagen in chatgeschiedenis",
-    "evidenceTitle": "Bewijsbasis",
     "resultsTitle": "Overeenkomende wijnen",
     "openEvidence": "Bekijk bewijs",
     "summaryTitle": "Over deze wijn",
-    "availabilityTitle": "Beschikbaarheid van tools",
     "profileTitle": "Je smaakprofiel",
     "profileInsufficient": "Tot nu toe is er {{count}} ingediende notitie; er zijn er minstens {{minimum}} nodig om een voorkeur te beschrijven.",
     "profileAverage": "Gemiddelde ingediende score",
@@ -540,50 +511,6 @@
       "would_buy_history": "Je gaf eerder aan dat je hem zou kopen",
       "in_cellar": "In je kelder, klaar om te openen",
       "not_in_cellar": "Niet in je kelder — om op te zoeken"
-    },
-    "mode": {
-      "deterministic": "Gestructureerd zoeken",
-      "provider": "Bewijsbewust antwoord"
-    },
-    "availability": {
-      "ai": {
-        "available": "AI-provider beschikbaar",
-        "disabled": "AI-provider uitgeschakeld",
-        "unavailable": "AI-provider tijdelijk niet beschikbaar"
-      },
-      "searchMemory": {
-        "available": "Geautoriseerd zoeken in Wine Memory beschikbaar",
-        "disabled": "Zoeken in Wine Memory uitgeschakeld",
-        "unavailable": "Zoeken in Wine Memory niet beschikbaar"
-      },
-      "externalResearch": {
-        "available": "Extern onderzoek beschikbaar",
-        "disabled": "Extern onderzoek uitgeschakeld",
-        "unavailable": "Extern onderzoek niet beschikbaar"
-      },
-      "getWineContext": {
-        "available": "Geautoriseerde wijncontext beschikbaar"
-      },
-      "getTasteProfile": {
-        "available": "Smaakprofiel met begrensde steekproef beschikbaar"
-      },
-      "compareWines": {
-        "available": "Deterministische wijnvergelijking beschikbaar"
-      },
-      "findPriceObservations": {
-        "available": "Zoeken in gedateerde opgeslagen prijzen beschikbaar"
-      },
-      "buildRecommendation": {
-        "available": "Kwalitatieve aanbevelingsrangschikking beschikbaar"
-      },
-      "createActionDraft": {
-        "available": "Actieconcepten met bevestiging beschikbaar"
-      },
-      "researchWine": {
-        "available": "Begrensd en geciteerd wijnonderzoek beschikbaar",
-        "disabled": "Begrensd wijnonderzoek uitgeschakeld",
-        "unavailable": "Begrensd wijnonderzoek niet beschikbaar"
-      }
     },
     "clearAction": "Wissen",
     "thinking": "Vicenç denkt na…",
@@ -624,7 +551,6 @@
     "purchaseBody": "Een aankoop kan fysieke flessen aanmaken en maakt altijd een gedateerde aankoopprijswaarneming.",
     "onlineRequired": "Maak verbinding om aankopen of levenscycluswijzigingen vast te leggen. Opgeslagen flessen blijven offline zichtbaar.",
     "wine": "Wijn",
-    "chooseWine": "Kies een wijn",
     "merchant": "Verkoper",
     "unitPrice": "Stukprijs",
     "currency": "Valuta",
@@ -658,7 +584,6 @@
     "error": "De wijziging kon niet worden voltooid. Laad opnieuw en probeer het nogmaals.",
     "addTitle": "Wijn toevoegen",
     "wine": "Wijn",
-    "chooseWine": "Kies een wijn",
     "reason": "Waarom wil je hem?",
     "priority": "Prioriteit",
     "targetPrice": "Richtprijs in EUR (optioneel)",
@@ -692,7 +617,6 @@
     "cached": "Opgeslagen prijswaarnemingen van dit apparaat worden getoond.",
     "error": "Prijzen konden niet worden vernieuwd. Mogelijk wordt een opgeslagen kopie getoond.",
     "wine": "Wijn",
-    "chooseWine": "Kies een wijn",
     "recordTitle": "Prijswaarneming vastleggen",
     "coverageWarning": "Externe dekking is optioneel en onvolledig. Handmatige waarnemingen van schap, bon, verkoper en aankoop blijven nuttig.",
     "amount": "Waargenomen prijs",
@@ -1157,7 +1081,6 @@
     "addOption": "＋ Een wijn toevoegen",
     "addAction": "Wijn toevoegen",
     "adding": "Toevoegen…",
-    "cancel": "Annuleren",
     "addHelp": "Producent en naam zijn genoeg. Het wordt als concept bewaard, zoals elke wijn.",
     "addError": "De wijn kon niet worden toegevoegd. Probeer het opnieuw.",
     "filterLabel": "Wijnen filteren",

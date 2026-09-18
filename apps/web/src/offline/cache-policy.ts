@@ -35,15 +35,36 @@ export function isVersionedBundleRequest(url: URL): boolean {
 }
 
 /**
+ * A short digest of the build's revisions. FNV-1a, 32 bits: nothing about it
+ * needs to be secure, it needs to change when any revision does, and it has to
+ * run in a worker's install step without the async crypto API.
+ */
+function buildDigest(revisions: readonly string[]): string {
+  let hash = 0x811c9dc5;
+  for (const character of revisions.join("|")) {
+    hash ^= character.codePointAt(0)!;
+    hash = Math.imul(hash, 0x01000193) >>> 0;
+  }
+  return hash.toString(36);
+}
+
+/**
  * Cache names for one build. Deriving them from the precache revisions keeps
  * two successive deployments apart, so an update installs into a fresh cache
  * and the previous one still answers until the new worker activates.
+ *
+ * Derived from a digest of the revisions, not their length. Vite's revisions
+ * are fixed-width hashes, so the joined length was the same for every build
+ * with the same number of assets — which is most builds — and each update
+ * installed into the cache the live worker was serving from: the shell was
+ * overwritten under it before the new worker had activated, and the previous
+ * build's assets, which activation clears by cache name, were never cleared.
  */
 export function cacheNamesFor(revisions: readonly string[]): {
   bundleCacheName: string;
   cacheName: string;
 } {
-  const buildRevision = revisions.join("|").length.toString(36);
+  const buildRevision = buildDigest(revisions);
   return {
     bundleCacheName: `${bundlePrefix}-${cacheLayoutVersion}-${buildRevision}`,
     cacheName: `${cachePrefix}-${cacheLayoutVersion}-${buildRevision}`,

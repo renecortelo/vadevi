@@ -2,7 +2,6 @@
   "appName": "Va de Vi",
   "skipToContent": "Skip to content",
   "licenseSource": "Source code (AGPL-3.0)",
-  "previewSpace": "Personal space · local preview",
   "phaseEyebrow": "Your private wine memory",
   "welcomeTitle": "A place for every bottle worth remembering.",
   "welcomeBody": "Log a wine in a moment, keep each person's opinion distinct, and let your own history become useful over time.",
@@ -15,7 +14,6 @@
   "healthUnavailable": "No connection · your bottles are safe on this device",
   "offline": "Offline",
   "online": "Online",
-  "updateReady": "A fresh version is ready.",
   "reload": "Reload",
   "dismiss": "Not now",
   "auth": {
@@ -46,7 +44,6 @@
   },
   "space": {
     "switchLabel": "Active Space",
-    "sectionLabel": "Space",
     "switchError": "That Space could not be opened."
   },
   "spaces": {
@@ -132,14 +129,6 @@
     "licenseBody": "Va de Vi is free software under the AGPL-3.0. Anyone using it over a network is entitled to its source."
   },
   "pages": {
-    "logTitle": "Quick log",
-    "logBody": "Log a bottle by hand, or scan its barcode. It saves with no signal and syncs later.",
-    "sessionsTitle": "Tasting events",
-    "sessionsBody": "Shared flights will preserve each participant's individual note.",
-    "memoryTitle": "Wine Memory",
-    "memoryBody": "Your private cards, table, timeline, filters, and export will live here.",
-    "assistantTitle": "Vicenç Vinyes",
-    "assistantBody": "The evidence-aware companion arrives behind server-authorized tools; no assistant is simulated in this foundation.",
     "notFoundTitle": "That page is not in the cellar.",
     "notFoundBody": "Return home and choose another path."
   },
@@ -319,10 +308,7 @@
     "editSave": "Save changes",
     "editSaving": "Saving…",
     "editCancel": "Cancel",
-    "editError": "The changes could not be saved. Try again.",
-    "editConflict": "Someone else changed this wine while you were editing. Reload and try again — nothing you typed was sent.",
     "editPhotoAction": "Add the label photograph",
-    "editPhotoError": "The photograph could not be stored, so nothing changed. The details will save if you remove it.",
     "removeSavedPhoto": "Remove the saved photo",
     "photoWillBeRemoved": "The photo will be removed when you save.",
     "lastVenue": "Last tasted at {{venue}}",
@@ -351,12 +337,10 @@
     "loadingTitle": "Loading the evidence…",
     "loadingBody": "Checking authorized claims and citation metadata for this Space.",
     "loadError": "The evidence could not be loaded. Try again when the connection is available.",
-    "acceptError": "The preferred claim could not be changed. Reload and review the current version.",
     "conflictTitle": "Conflicting claims are preserved",
     "conflictBody": "{{count}} attribute has different values. Choose a preferred claim without deleting the alternatives.",
     "emptyTitle": "No evidence has been added yet.",
     "emptyBody": "Research and manual evidence will appear here with its source and retrieval date.",
-    "claimLabel": "Claim",
     "claimCount": "{{count}} claim",
     "claimCount_other": "{{count}} claims",
     "class": {
@@ -402,8 +386,6 @@
     "license": "License {{license}}",
     "confidence": "Recorded confidence: {{value}}%",
     "noCitations": "No external citation — this is not presented as researched evidence.",
-    "acceptAction": "Choose as preferred",
-    "accepting": "Choosing…",
     "rejectAction": "Discard",
     "rejecting": "Discarding…",
     "rejectError": "The claim could not be discarded. Reload and review the current version.",
@@ -440,10 +422,6 @@
       "title": "Expand this evidence",
       "body": "Run bounded open-data lookups. New claims stay proposed and always retain their source.",
       "disabled": "External research is disabled in this deployment. Manual evidence and Wine Memory remain available.",
-      "wineEntity": "Wine Wikidata ID (optional)",
-      "producerEntity": "Producer Wikidata ID (optional)",
-      "regionEntity": "Region Wikidata ID (optional)",
-      "entityHelp": "Use a Wikidata Q identifier only when you have confirmed the entity. Barcode lookup runs automatically when the wine has one.",
       "action": "Research this wine",
       "running": "Researching…",
       "offline": "Research needs a connection. Existing evidence remains available offline.",
@@ -494,23 +472,16 @@
   "assistant": {
     "eyebrow": "Your scoped wine companion",
     "title": "Vicenç Vinyes",
-    "body": "Ask about wines already in your active Space. Every result comes from authorized structured data, with evidence made visible.",
-    "privacyTitle": "Ephemeral by default",
-    "privacyBody": "This turn is not saved as chat history. Only a redacted tool audit is retained; your message is not copied into it.",
     "messageLabel": "What would you like to find?",
     "messagePlaceholder": "Start typing…",
     "activeSpaceOnly": "Searching the active Space only",
     "sendAction": "Ask Vicenç",
-    "sending": "Searching…",
     "error": "Vicenç could not search right now. Wine Memory and normal forms are still available.",
     "emptyTitle": "Start with your own Wine Memory.",
     "emptyBody": "Ask about the wines in your cellar — what you've tried, what you liked, what to open. Vicenç answers only from your own wines.",
-    "ephemeralBadge": "Not saved to chat history",
-    "evidenceTitle": "Evidence basis",
     "resultsTitle": "Matching wines",
     "openEvidence": "Review evidence",
     "summaryTitle": "About this wine",
-    "availabilityTitle": "Tool availability",
     "profileTitle": "Your taste profile",
     "profileInsufficient": "{{count}} submitted note so far; at least {{minimum}} are required before describing a preference.",
     "profileAverage": "Average submitted score",
@@ -540,50 +511,6 @@
       "would_buy_history": "You previously marked that you would buy it",
       "in_cellar": "In your cellar, ready to open",
       "not_in_cellar": "Not in your cellar — one to seek out"
-    },
-    "mode": {
-      "deterministic": "Structured search",
-      "provider": "Evidence-aware answer"
-    },
-    "availability": {
-      "ai": {
-        "available": "AI provider available",
-        "disabled": "AI provider disabled",
-        "unavailable": "AI provider temporarily unavailable"
-      },
-      "searchMemory": {
-        "available": "Authorized Wine Memory search available",
-        "disabled": "Wine Memory search disabled",
-        "unavailable": "Wine Memory search unavailable"
-      },
-      "externalResearch": {
-        "available": "External research available",
-        "disabled": "External research disabled",
-        "unavailable": "External research unavailable"
-      },
-      "getWineContext": {
-        "available": "Authorized wine context available"
-      },
-      "getTasteProfile": {
-        "available": "Sample-bounded taste profile available"
-      },
-      "compareWines": {
-        "available": "Deterministic wine comparison available"
-      },
-      "findPriceObservations": {
-        "available": "Timestamped stored-price search available"
-      },
-      "buildRecommendation": {
-        "available": "Qualitative recommendation ranking available"
-      },
-      "createActionDraft": {
-        "available": "Confirmed action drafts available"
-      },
-      "researchWine": {
-        "available": "Bounded cited wine research available",
-        "disabled": "Bounded wine research disabled",
-        "unavailable": "Bounded wine research unavailable"
-      }
     },
     "clearAction": "Clear",
     "thinking": "Vicenç is thinking…",
@@ -624,7 +551,6 @@
     "purchaseBody": "A purchase can create physical bottles and always creates a timestamped purchase-price observation.",
     "onlineRequired": "Connect to record purchases or lifecycle changes. Cached bottles remain visible offline.",
     "wine": "Wine",
-    "chooseWine": "Choose a wine",
     "merchant": "Merchant",
     "unitPrice": "Unit price",
     "currency": "Currency",
@@ -658,7 +584,6 @@
     "error": "The wishlist change could not be completed. Reload and try again.",
     "addTitle": "Add a wine",
     "wine": "Wine",
-    "chooseWine": "Choose a wine",
     "reason": "Why do you want it?",
     "priority": "Priority",
     "targetPrice": "Target price in EUR (optional)",
@@ -692,7 +617,6 @@
     "cached": "Showing saved price observations from this device.",
     "error": "Prices could not be refreshed. A cached copy may still be shown.",
     "wine": "Wine",
-    "chooseWine": "Choose a wine",
     "recordTitle": "Record a price observation",
     "coverageWarning": "External coverage is optional and incomplete. Manual shelf, receipt, merchant, and purchase observations remain useful.",
     "amount": "Observed price",
@@ -1157,7 +1081,6 @@
     "addOption": "＋ Add a new wine",
     "addAction": "Add wine",
     "adding": "Adding…",
-    "cancel": "Cancel",
     "addHelp": "Producer and name are enough. It is saved as a draft, like any wine you log.",
     "addError": "The wine could not be added. Try again.",
     "filterLabel": "Filter wines",
