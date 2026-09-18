@@ -1039,9 +1039,10 @@
     "usageResets": "Die Zähler werden am {{date}} zurückgesetzt.",
     "metric": {
       "ai_language_calls": "Assistenzsprache",
-      "research_lookups": "Externe Recherche",
       "barcode_lookups": "Barcode-Abfrage",
-      "price_lookups": "Preisabfrage"
+      "price_lookups": "Preisabfrage",
+      "research_lookups": "Externe Recherche",
+      "websearch_calls": "Websuche"
     },
     "scope": {
       "global": "Gesamte Installation",

@@ -1039,9 +1039,10 @@
     "usageResets": "Counters reset at {{date}}.",
     "metric": {
       "ai_language_calls": "Assistant language",
-      "research_lookups": "External research",
       "barcode_lookups": "Barcode lookup",
-      "price_lookups": "Price lookup"
+      "price_lookups": "Price lookup",
+      "research_lookups": "External research",
+      "websearch_calls": "Open-web search"
     },
     "scope": {
       "global": "Whole deployment",

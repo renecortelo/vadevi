@@ -1039,9 +1039,10 @@
     "usageResets": "Os contadores reiniciam a {{date}}.",
     "metric": {
       "ai_language_calls": "Linguagem do assistente",
-      "research_lookups": "Pesquisa externa",
       "barcode_lookups": "Leitura de código de barras",
-      "price_lookups": "Consulta de preços"
+      "price_lookups": "Consulta de preços",
+      "research_lookups": "Pesquisa externa",
+      "websearch_calls": "Pesquisa na web aberta"
     },
     "scope": {
       "global": "Toda a instalação",

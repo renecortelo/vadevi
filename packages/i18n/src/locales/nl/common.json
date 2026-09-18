@@ -1039,9 +1039,10 @@
     "usageResets": "De tellers worden op {{date}} teruggezet.",
     "metric": {
       "ai_language_calls": "Assistenttaal",
-      "research_lookups": "Extern onderzoek",
       "barcode_lookups": "Streepjescode opzoeken",
-      "price_lookups": "Prijzen opzoeken"
+      "price_lookups": "Prijzen opzoeken",
+      "research_lookups": "Extern onderzoek",
+      "websearch_calls": "Zoeken op het open web"
     },
     "scope": {
       "global": "Hele installatie",
