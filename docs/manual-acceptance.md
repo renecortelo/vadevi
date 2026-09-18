@@ -2,9 +2,8 @@
 
 The ordered script for the preview acceptance in `docs/preview-environment.md`.
 It is written to be worked through in one sitting — roughly 45 minutes for
-sections A to G, plus 20 for section H, which covers everything that has shipped
-since the last round — in the order that fails fastest: anything that would
-invalidate the rest comes first.
+sections A to G, 20 for section H, and 20 more for I to K — in the order that
+fails fastest: anything that would invalidate the rest comes first.
 
 Record the date, the browser, and the device. A run on one browser is a data
 point, not a pass.
@@ -107,14 +106,31 @@ Use your phone against the same preview URL.
 
 ## E. Operational (5 min)
 
-32. [ ] Open the usage page. Counters are present and both providers read
-        `none`.
+32. [ ] Open the usage page. Counters are present, and what it reports for each
+        provider matches what this deployment actually configured — `none` on a
+        default template, whatever you switched on otherwise. A counter that
+        disagrees with the config is the finding, not the value itself.
 33. [ ] Recheck the §16.1 provider quotas against the official pages **today**
         and note any change from what the spec records.
 34. [ ] Run the D1 export and confirm the file is non-trivial:
         `wrangler d1 export vadevi-preview --remote --config wrangler.preview.jsonc --output backup.sql`
 35. [ ] Confirm the R2 bucket is **not** publicly readable — a direct object URL
         should fail.
+
+### The other half of the backup
+
+Step 34 takes the database. It is not a backup on its own: it carries the rows
+that index the photographs, and the photographs are bytes in R2. Restore it
+alone and every bottle has a record and no label.
+
+```bash
+pnpm backup:r2 ~/r2-backup
+```
+
+It prints a line per object and ends with a count verified against the hash D1
+recorded, and exits non-zero if a single one did not come back intact. Keep it
+beside the `.sql` from step 34, dated the same day: neither half restores without
+the other.
 
 ## F. Deletion actually deletes (do this last)
 
@@ -166,6 +182,11 @@ records fine — which is itself worth one pass.
 None of this existed when the script above was written, so nothing here has ever
 been through a real run. The automated tests say it works; what they cannot say
 is whether it is any good to use.
+
+Sections **I to K** are newer still — the tastings a wine gathers, the map, and
+pairing — and were added on 18 September 2026 when this script turned out to end
+before the work it was meant to check. A run that stops at section H passes
+without touching any of it.
 
 ### The tasting form now follows the wine
 
@@ -230,6 +251,57 @@ sign in as yourself on a second browser profile.
         person's written words.
 70. [ ] On a wine that is researched but **never tasted**, the same button says
         plainly that one side is missing rather than writing something anyway.
+
+## I. A wine's tastings, gathered
+
+A wine holds many tastings, and they used to have nowhere to live.
+
+71. [ ] Taste the same wine **twice**. On its **Memory card**, the two are behind
+        one count — not two buttons, and not a card that has grown a list.
+72. [ ] Tap the count. The tastings unfold; each opens to read, and from there to
+        correct.
+73. [ ] On a wine you have **never** tasted, the card offers only the way to
+        start. A count of zero is a finding.
+74. [ ] Open that wine's **Evidence**. The same list is there, beside the tasting
+        button, and the button says **register another** rather than inviting you
+        to taste a wine you clearly already have.
+
+## J. The map
+
+75. [ ] **Memory → Mapa.** Real streets, not a grid of lines. A schematic with a
+        notice means `MAP_TILES_PROVIDER` is off in the deployment, which is a
+        configuration finding rather than a bug.
+76. [ ] Switch between **tasting places** and **regions of origin**. Both draw,
+        and a wine with no coordinate simply is not on the map.
+77. [ ] Tap a point. It names the wines there and links to each one's evidence.
+78. [ ] Two tastings at the same bar share **one** point carrying a count, rather
+        than stacking two markers on top of each other.
+79. [ ] **On the phone**, pan and pinch the map. It must not trap the page scroll
+        or spill past the margins.
+80. [ ] **Keyboard, on a desktop.** Tab until a point takes focus: the ring is
+        visible, and **Enter opens it**. A point you can reach and cannot open is
+        a finding — it was one, until recently.
+
+## K. Pairing, and the venue split
+
+81. [ ] On a tasting, the place is now **two separate fields**: a name you type,
+        and a box to paste coordinates into. Paste a point copied from a map app;
+        the name you already typed survives, and the place reads as located.
+82. [ ] Paste something that is not a point — a shortened map link, or prose. It
+        is refused plainly rather than saved as a place at 0,0.
+83. [ ] Ask Vicenç **what goes with a dish** — a roast chicken, a steak, whatever
+        you are actually cooking. The answer must give **the general criteria
+        first**: what the dish is, and what a wine needs to match it, as advice
+        anyone could act on. Opening with a bottle from your own cellar is a
+        finding; that was the bug.
+84. [ ] Only **after** that should it turn to your own wines, say which fit and
+        why, and distinguish a wine you have **tasted** from one you have a
+        **bottle of** right now.
+85. [ ] Ask about a dish in **your own words** — a regional dish, a diminutive,
+        whatever you would really type. If it does not know the dish it must say
+        so and **ask you what is in it**, offering the choices. Answering with a
+        wine anyway is a finding.
+86. [ ] Answer that question in one word. The next turn understands it.
 
 ---
 
