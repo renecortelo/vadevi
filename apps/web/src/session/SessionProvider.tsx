@@ -9,7 +9,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { type ReactNode, useEffect, useMemo, useState } from "react";
 
 import type { FirebaseUser } from "../auth/firebase";
-import { changeLanguage } from "../i18n";
+import { changeLanguage, rememberLocale } from "../i18n";
 import { createIdempotencyKey } from "../security/idempotency";
 import {
   acceptInvitation,
@@ -122,6 +122,9 @@ export function SessionBoundary({
     };
     void offlineDatabase.sessions.put(snapshot);
     globalThis.localStorage?.setItem("vadevi.activeSpaceId", bootstrap.data.user.activeSpaceId);
+    // Remembered locally as well as applied, so the next launch reads it before
+    // the network answers and the loading screen is not in the wrong language.
+    rememberLocale(bootstrap.data.user.preferredLocale);
     void changeLanguage(bootstrap.data.user.preferredLocale);
   }, [bootstrapQuery.data, user.uid]);
 

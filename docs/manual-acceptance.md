@@ -30,51 +30,55 @@ System / Light / Dark control.
 
 ## A. Desktop — identity and Spaces (10 min)
 
-1. [ ] Sign in with Google. You reach the first-run profile screen.
-2. [ ] Set a display name and language, enter the app.
-3. [ ] **Theme:** switch to Dark. The whole interface inverts — check the left
+1. [x] Sign in with Google. You reach the first-run profile screen.
+2. [x] Set a display name and language, enter the app.
+3. [x] **Theme:** switch to Dark. The whole interface inverts — check the left
        navigation rail specifically, including the label of the page you are on.
-4. [ ] Reload the page. It stays Dark and **does not flash light first**.
-5. [ ] Switch to System. It follows your operating system setting.
+4. [x] Reload the page. It stays Dark and **does not flash light first**.
+5. [x] Switch to System. It follows your operating system setting.
 6. [ ] **Language:** change it from the top-bar menu. The whole interface
        follows immediately, and stays changed after a reload. This is the
        _reader's_ language: a Space's own default locale does not override it,
        so switching Space must not switch the interface language back.
-7. [ ] Create a group Space. Invite yourself at a second email if you have one,
+7. [x] Create a group Space. Invite yourself at a second email if you have one,
        or note this as untested.
-8. [ ] Switch active Space from the top bar. The Wine Memory contents change.
+8. [x] Switch active Space from the top bar. The Wine Memory contents change.
 
 **Stop if any of A fails.** Everything below assumes a working session.
 
 ## B. Desktop — the main flow (10 min)
 
-9. [ ] Quick Log a wine manually: producer and name only. It saves.
-10. [ ] Open **Identify** — from the card on the home screen, or from the link
+9. [x] Quick Log a wine manually: producer and name only. It saves.
+10. [x] Open **Identify** — from the card on the home screen, or from the link
         inside the wine identity block on the Quick Log screen. Do not navigate
         by URL: if you cannot reach it by clicking, that is the finding.
-11. [ ] Type part of the producer you just saved into "or type what you can
+11. [x] Type part of the producer you just saved into "or type what you can
         read" and search. It proposes your own wine as a candidate, marked as
         coming from your Space.
-12. [ ] Edit a field on the proposal, then confirm. Exactly **one** wine is
+12. [x] Edit a field on the proposal, then confirm. Exactly **one** wine is
         created, with your edit, not the proposal's value.
-13. [ ] In Wine Memory, open **More filters** and use region, vintage range and
+13. [x] In Wine Memory, open **More filters** and use region, vintage range and
         score. Try an unaccented spelling of an accented region and confirm it
         still matches. Collapse the panel again: the summary must still report
         how many filters are active, so a narrowed list is never silently
         narrowed.
-14. [ ] Add a photo to a wine. It uploads and displays.
-15. [ ] Record a purchase and check the cellar inventory changes.
+14. [x] Add a photo to a wine. It uploads and displays.
+15. [x] Record a purchase and check the cellar inventory changes.
 
 ## C. Desktop — data rights (10 min)
 
-16. [ ] **Data and privacy** → Export JSON. The file downloads and contains your
+16. [x] **Data and privacy** → Export JSON. The file downloads and contains your
         wines and your notes.
-17. [ ] Export a CSV. It opens in a spreadsheet **without any cell being treated
+17. [x] Export a CSV. It opens in a spreadsheet **without any cell being treated
         as a formula**.
-18. [ ] Select a photo and export the media ZIP. It contains exactly what you
+18. [x] Select a photo and export the media ZIP. It contains exactly what you
         selected.
-19. [ ] Read the privacy notice on that screen. Confirm it matches what the app
+19. [x] Read the privacy notice on that screen. Confirm it matches what the app
         actually does — if it overclaims, that is a finding.
+        Steps 20 and 21 need a **group Space you own** active — switch to the one you
+        created in step 7. A personal Space has no delete of its own; it goes with the
+        account in step 22, and the screen now says so rather than showing nothing.
+
 20. [ ] Type the wrong Space name into the delete field. The button stays
         disabled.
 21. [ ] Type the correct name, schedule deletion, then **cancel it**. The Space
@@ -86,36 +90,54 @@ System / Light / Dark control.
 
 Use your phone against the same preview URL.
 
-23. [ ] Sign in on mobile. The Google flow completes.
-24. [ ] **Install the PWA** to the home screen. Check the icon: it should be the
+23. [x] Sign in on mobile. The Google flow completes.
+24. [x] **Install the PWA** to the home screen. Check the icon: it should be the
         wine-red tile with the bottle row and the `vdv` monogram, not a
         generic screenshot.
-25. [ ] Open from the home screen. It launches standalone, with no browser
+25. [x] Open from the home screen. It launches standalone, with no browser
         chrome, and the status bar colour matches the theme.
-26. [ ] **The theme followed you.** If you set Dark on desktop, mobile opens
+26. [x] **The theme followed you.** If you set Dark on desktop, mobile opens
         Dark without you touching anything. This is the whole point of storing it
         on the account.
-27. [ ] Quick Log a wine one-handed. Judge whether the targets are comfortable,
+27. [x] Quick Log a wine one-handed. Judge whether the targets are comfortable,
         not just whether they work.
 28. [ ] **Turn on airplane mode.** Open the installed app. The shell loads.
 29. [ ] Quick Log a wine while offline. It saves locally and shows a pending
         state.
 30. [ ] Turn airplane mode off. The queued wine syncs, **exactly once** — check
         Wine Memory for duplicates.
-31. [ ] Rotate to landscape on a couple of screens. Nothing overflows.
+31. [x] Rotate to landscape on a couple of screens. Nothing overflows.
 
 ## E. Operational (5 min)
 
-32. [ ] Open the usage page. Counters are present, and what it reports for each
-        provider matches what this deployment actually configured — `none` on a
-        default template, whatever you switched on otherwise. A counter that
-        disagrees with the config is the finding, not the value itself.
-33. [ ] Recheck the §16.1 provider quotas against the official pages **today**
-        and note any change from what the spec records.
-34. [ ] Run the D1 export and confirm the file is non-trivial:
-        `wrangler d1 export vadevi-preview --remote --config wrangler.preview.jsonc --output backup.sql`
-35. [ ] Confirm the R2 bucket is **not** publicly readable — a direct object URL
-        should fail.
+This section is the operator's, not the reader's: three of its four steps run
+from your terminal, in the repository, with the same `wrangler` login you deploy
+with.
+
+32. [ ] **Data and privacy**, at the bottom: the usage counters. Each metric
+        shows today's count against its cap. What it reports must match what
+        this deployment actually configured — a provider you switched on shows
+        activity, one you left at `none` shows nothing. A counter that disagrees
+        with the config is the finding, not the value itself.
+33. [ ] Recheck the provider quotas against the official pages **today**.
+        `docs/self-hosting.md` under _The caps your providers enforce_ records
+        what they were and when; note any change. Done once on 17 September
+        2026 — the item is about doing it again on the day you rely on it.
+34. [ ] Export the database and confirm the file is real:
+
+    ```bash
+    npx wrangler d1 export vadevi-preview --remote --config wrangler.preview.jsonc --output backup.sql
+    grep -c "INSERT INTO" backup.sql
+    ```
+
+    A count in the thousands is a database; a count of zero is a finding.
+
+35. [ ] Confirm the R2 bucket is **not** publicly readable. There is no public
+        URL to try, and that is the point: a bucket with no public access
+        enabled has no address a browser can reach. Check it from the
+        dashboard — **R2 → vadevi-preview-media → Settings → Public access**
+        must show both the r2.dev subdomain and any custom domain as
+        **disabled**. Either one enabled is a serious finding.
 
 ### The other half of the backup
 

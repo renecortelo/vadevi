@@ -46,13 +46,35 @@ const precacheUrls = manifest.map((entry) => entry.url);
  * Precache each asset independently. One unreachable file then degrades a
  * single resource instead of failing the whole install and leaving the user on
  * a worker that can never update.
+ *
+ * Each response is re-wrapped before it is stored, and that is not cosmetic.
+ * Workers Assets answers `/index.html` with a 307 to `/`, so the shell arrived
+ * here carrying the `redirected` flag — and the Service Worker specification
+ * forbids satisfying a navigation with a redirected response. The browser
+ * refuses it with a network error, which the reader sees as a blank page.
+ * Precache succeeded, the shell was in the cache, and it could never be served.
+ *
+ * It only ever showed on a cold offline launch, because a successful online
+ * navigation stores `/` afresh (below) without the flag. So the app worked
+ * offline if it had been opened online first, and not otherwise — which is the
+ * one case offline is for. Copying the body into a new Response drops the flag
+ * and keeps the status and headers.
  */
 async function precache(): Promise<void> {
   const cache = await caches.open(cacheName);
   await Promise.all(
     precacheUrls.map(async (url) => {
       try {
-        await cache.add(new Request(url, { cache: "reload" }));
+        const response = await fetch(new Request(url, { cache: "reload" }));
+        if (!response.ok) return;
+        await cache.put(
+          url,
+          new Response(response.body, {
+            headers: response.headers,
+            status: response.status,
+            statusText: response.statusText,
+          }),
+        );
       } catch {
         // A single missing asset must not abort the install.
       }

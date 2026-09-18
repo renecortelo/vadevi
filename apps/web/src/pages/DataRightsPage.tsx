@@ -280,6 +280,16 @@ export function DataRightsPage() {
         </section>
       )}
 
+      {isPersonal ? (
+        // The personal Space has no delete of its own — it goes with the
+        // account — and saying so is the difference between a design and a
+        // button that seems to be missing. It was reported as missing.
+        <section aria-labelledby="delete-space-title" className="settings-card">
+          <h2 id="delete-space-title">{t("dataRights.deleteSpaceTitle")}</h2>
+          <p className="section-help">{t("dataRights.personalSpaceNote")}</p>
+        </section>
+      ) : null}
+
       {isOwner && !isPersonal ? (
         <section aria-labelledby="delete-space-title" className="settings-card">
           <h2 id="delete-space-title">{t("dataRights.deleteSpaceTitle")}</h2>

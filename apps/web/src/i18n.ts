@@ -22,6 +22,13 @@ const catalogLoaders: Record<Exclude<SupportedLocale, "en">, () => Promise<Catal
  * is no account — and the sign-in screen is exactly where a person who cannot
  * read the interface needs to change it. This remembers their choice until they
  * are in, and the account preference takes over from there.
+ *
+ * The account preference is written here too, every time the session applies
+ * it. Otherwise the next cold start has nothing to go on but the browser's own
+ * language until the bootstrap arrives, and the loading screen — the first thing
+ * a reader sees — comes up in English or Portuguese for someone who set
+ * Spanish. The theme solved the same flash the same way, in `theme-init.js`:
+ * what the account decided last time is the right guess this time.
  */
 export const signedOutLocaleKey = "vadevi.locale";
 
@@ -35,7 +42,7 @@ function storedLocale(): SupportedLocale | null {
   }
 }
 
-export function rememberSignedOutLocale(locale: SupportedLocale): void {
+export function rememberLocale(locale: SupportedLocale): void {
   try {
     globalThis.localStorage?.setItem(signedOutLocaleKey, locale);
   } catch {

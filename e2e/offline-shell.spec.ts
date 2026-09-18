@@ -39,6 +39,48 @@ test.describe("offline shell", () => {
     await context.setOffline(false);
   });
 
+  test("launches cold from the home screen with no network, on the precache alone", async ({
+    browser,
+  }) => {
+    // The case the test above cannot reach. Its online visit through the worker
+    // stores `/` afresh, so the shell it later serves offline is that copy, not
+    // the precached one. A reader who installs the app, closes it, and opens it
+    // on a plane never navigated through the worker at all: the precache is
+    // all there is. That is the launch that came up blank.
+    //
+    // The cause was environmental and invisible to a plain fetch: Workers
+    // Assets answers `/index.html` with a 307 to `/`, so the precached shell
+    // carried the `redirected` flag, and a redirected response may not satisfy a
+    // navigation. Reproduced here by making the shell redirect the same way.
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.route("**/index.html", (route) =>
+      route.fulfill({ headers: { location: "/" }, status: 307 }),
+    );
+
+    // First visit: installs the worker and runs its precache. This navigation
+    // is not yet controlled, so nothing here stores the shell the good way.
+    await page.goto("/");
+    await page.waitForFunction(() => navigator.serviceWorker.controller !== null, undefined, {
+      timeout: 30_000,
+    });
+    await page.unroute("**/index.html");
+
+    // Close the app. What is left is exactly what an installed PWA has.
+    await page.close();
+
+    // Open it again with no network at all. The shell must come from the
+    // precache, and a redirected copy would fail this with a blank page.
+    await context.setOffline(true);
+    const relaunched = await context.newPage();
+    await relaunched.goto("/");
+    await expect(relaunched.locator("#root")).not.toBeEmpty({ timeout: 15_000 });
+    expect(await relaunched.title()).toContain("Va de Vi");
+
+    await context.setOffline(false);
+    await context.close();
+  });
+
   test("serves a valid installable manifest with the required icon sizes", async ({ page }) => {
     await page.goto("/");
     const href = await page.getAttribute('link[rel="manifest"]', "href");

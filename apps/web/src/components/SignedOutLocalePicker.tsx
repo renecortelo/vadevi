@@ -1,7 +1,7 @@
 import { localeLabels, supportedLocales, type SupportedLocale } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 
-import { changeLanguage, rememberSignedOutLocale } from "../i18n";
+import { changeLanguage, rememberLocale } from "../i18n";
 
 /**
  * Interface language, before there is an account to hang it on.
@@ -17,7 +17,7 @@ export function SignedOutLocalePicker() {
   const current = supportedLocales.find((locale) => locale === i18n.language) ?? "en";
 
   function choose(next: SupportedLocale) {
-    rememberSignedOutLocale(next);
+    rememberLocale(next);
     void changeLanguage(next);
   }
 
