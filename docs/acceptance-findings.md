@@ -150,7 +150,10 @@ page where an owner goes to manage a Space said nothing about it. That read as
 
 **Fix:** Space settings now says where the delete is, for an owner of a group or
 couple Space, and links there; the Data and privacy note for a personal Space
-says to activate a group Space in the switcher and come back.
+says to activate a group Space in the switcher and come back. Section F of the
+script, which schedules a deletion for real, had the same gap — it did not say
+to make the throwaway Space active — and now does, with the two commands that
+shorten the grace period and check the purge.
 
 ## Round 1 — 16 August 2026, the maintainer, Google Chrome, desktop
 

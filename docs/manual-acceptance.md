@@ -158,11 +158,29 @@ the other.
 
 This is destructive to the Space you name, so do it on a throwaway Space.
 
-36. [ ] Create a throwaway Space, add one wine and one photo.
-37. [ ] Schedule its deletion and let the grace period pass, or shorten
-        `purge_after` directly in D1 for the test.
-38. [ ] Wait for the cron to fire, then confirm the Space rows and the R2 object
-        are gone, and that the owner gets a not-found on the next request.
+36. [ ] Create a throwaway Space (**Spaces → New Space**, type Group), make it
+        active in the top-bar switcher, add one wine and one photo.
+37. [ ] With it still active, **Data and privacy** → type its name → schedule
+        deletion. The grace period is a month; shorten it for the test with the
+        command under "Shortening the grace period" below.
+38. [ ] The cron runs every five minutes. After it fires, confirm the Space is
+        gone from the switcher, that the wine count for its id is 0 (second
+        command below), and that the photo's object is gone from the bucket
+        (`npx wrangler r2 object get vadevi-preview-media/<key>` fails).
+
+### Shortening the grace period
+
+Run from the repository, with the deployment's configuration. The first moves
+every scheduled job's purge time into the past; the second checks the rows are
+gone once the cron has run.
+
+```bash
+npx wrangler d1 execute vadevi-preview --remote --config wrangler.preview.jsonc --command "UPDATE deletion_jobs SET purge_after = '2000-01-01T00:00:00.000Z' WHERE state = 'scheduled'"
+```
+
+```bash
+npx wrangler d1 execute vadevi-preview --remote --config wrangler.preview.jsonc --command "SELECT COUNT(*) AS wines FROM wine_records WHERE space_id = '<id>'"
+```
 
 ## G. Research, Vicenç, and the entry shortcuts (15 min)
 
