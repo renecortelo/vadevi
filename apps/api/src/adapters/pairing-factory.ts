@@ -1,6 +1,7 @@
 import type { FoodPairingPort } from "@vadevi/domain";
 
 import { D1ExternalCache, D1ExternalRateLimiter } from "./external-state";
+import { LocalFoodPairingAdapter } from "./local-pairing";
 import { SommelierXAdapter } from "./sommelierx";
 import type { WorkerBindings } from "../types";
 
@@ -20,12 +21,17 @@ function validApiKey(value: string | undefined): value is string {
 }
 
 /**
- * Whether food-and-wine pairing is enabled for this deployment. Off unless the
- * operator has chosen the provider, supplied a well-formed key, and set a valid
- * contact user agent — and only after their own privacy review, since the dish
- * text leaves the device to reach the provider (see docs/privacy-review-sommelierx.md).
+ * Whether food-and-wine pairing is available at all.
+ *
+ * `local` needs nothing: no key, no contact address, no review, because the dish
+ * never leaves the Worker. `sommelierx` needs all three — a well-formed key, a
+ * valid contact user agent, and the deployment's own privacy review — because
+ * the dish text travels to a third party (see docs/privacy-review-sommelierx.md).
+ *
+ * An unset or unrecognised value means off, as everywhere else here.
  */
 export function foodPairingEnabled(environment: WorkerBindings): boolean {
+  if (environment.PAIRING_PROVIDER === "local") return true;
   return (
     environment.PAIRING_PROVIDER === "sommelierx" &&
     validApiKey(environment.SOMMELIERX_API_KEY) &&
@@ -37,6 +43,9 @@ export function createFoodPairingPort(
   database: D1Database,
   environment: WorkerBindings,
 ): FoodPairingPort | null {
+  // The local rule set carries no cache and no rate limiter on purpose: there is
+  // nothing to be kind to and nothing to wait for. It is arithmetic.
+  if (environment.PAIRING_PROVIDER === "local") return new LocalFoodPairingAdapter();
   if (!foodPairingEnabled(environment)) return null;
   return new SommelierXAdapter(
     new D1ExternalCache(database),

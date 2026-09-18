@@ -270,13 +270,23 @@ export type ResearchPorts = Readonly<{
 }>;
 
 /**
- * Optional food-and-wine pairing.
+ * Food-and-wine pairing.
  *
- * A pairing source answers "what wine styles suit this dish" — knowledge the app
- * does not hold and must not invent. It is only ever used to derive criteria for
- * ranking the reader's OWN wines, never to recommend a bottle they do not have.
- * The dish text leaves the device to reach the provider, so a deployment enables
- * this only after its own privacy review, and it defaults off.
+ * A pairing source answers "what wine styles suit this dish". It is only ever
+ * used to derive criteria for ranking the reader's OWN wines, never to recommend
+ * a bottle they do not have.
+ *
+ * Two kinds of source, and the difference matters. A **local** one reasons from
+ * a written-down rule set — acidity cuts fat, tannin wants protein — which costs
+ * nothing, works offline, sends the dish nowhere, and can be argued with. An
+ * **external** one is a provider: the dish text leaves the device to reach it, so
+ * a deployment enables that only after its own privacy review, and it is off by
+ * default.
+ *
+ * The earlier version of this comment said pairing was "knowledge the app does
+ * not hold and must not invent". Curated rules are neither holding nor
+ * inventing: they are stated, reviewable, and wrong in public if wrong at all,
+ * which is the standard the rest of this application is held to.
  */
 export type FoodPairingRequest = Readonly<{
   dish: string;
@@ -295,7 +305,7 @@ export type PairingWineStyle = Readonly<{
 }>;
 
 export type FoodPairingResult = Readonly<{
-  provider: "sommelierx";
+  provider: "local" | "sommelierx";
   styles: PairingWineStyle[];
 }>;
 

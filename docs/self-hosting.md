@@ -320,11 +320,20 @@ never had. What the providers give:
   usage policies rather than quotas. The application stays under them with its
   own rate limits and caches.
 
-- **Food-and-wine pairing has no free provider.** SommelierX, the one this
-  supports, gives 10 recommendations a month on its free plan, which any real
-  use passes in a day. `PAIRING_PROVIDER` therefore stays `none` unless you have
-  terms of your own. Dish ideas _for_ a wine still work without it: that path
-  runs on Workers AI from the wine's own recorded attributes.
+- **Food-and-wine pairing needs no provider at all.** Set
+  `PAIRING_PROVIDER=local` and it costs nothing, for ever: the answer comes from
+  a written-down rule set — acidity cuts fat, tannin wants protein, nothing
+  louder than the plate, a dessert wine sweeter than the dessert — applied to the
+  dish you typed. No key, no contact address, no privacy review, because the dish
+  never leaves the Worker. It works offline and it can tell you why.
+
+  The alternative, `sommelierx`, is a paid API whose free plan allows 10
+  recommendations a _month_, which any real use passes in an evening. It may
+  still know things a rule set does not, which is the trade: a rule set is a good
+  sommelier's floor, not their ceiling.
+
+  Dish ideas _for_ a wine are a separate path and unaffected by either: they run
+  on Workers AI from the wine's own recorded attributes.
 
 What happens past the free allowance depends on your plan. On **Workers Free**,
 Workers AI requests simply fail, and the application degrades to manual entry —
