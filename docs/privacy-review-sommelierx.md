@@ -1,8 +1,15 @@
 # Privacy review — SommelierX food-and-wine pairing (optional)
 
-Status: **built, disabled by default.** Enabling it is a deployment decision that
-this review must accompany. The public repository ships `PAIRING_PROVIDER` unset,
-so `foodPairingEnabled()` is false and no request is ever made.
+Status: **built, disabled by default, and no longer the only way to pair.** The
+public repository ships `PAIRING_PROVIDER=local`, which answers from a rule set
+inside the Worker and makes no request at all. This provider is reached only by
+changing that to `sommelierx` and supplying a key, which is a deployment decision
+this review must accompany.
+
+Weigh it against the free alternative rather than against nothing. `local` costs
+nothing, works offline, and sends the dish nowhere; its limit is that a rule set
+is a good sommelier's floor and not their ceiling. This provider may know things
+the rules do not — and charges, and sees every dish a reader types.
 
 ## What it is
 

@@ -141,4 +141,6 @@ Nothing below can be verified against a preview. They are listed so that
 
 Passing it does not make a deployment public, and §22.3 passing did not make one
 private. The source is published; the wine lives in whichever D1 and R2 a
-deployer owns, with every optional provider off until they turn it on.
+deployer owns, with every provider that would leave the deployment off until they
+turn it on. Pairing is the one exception and only because it is not one: it ships
+set to `local`, which is a rule set inside the Worker and reaches no host.

@@ -220,10 +220,12 @@ photograph, and Vicenç's language replies.
    so a model outside it is refused rather than silently used. Check
    Cloudflare's current model catalogue for the text model; names change.
 
-   Pairing is a third-party service under its own terms and sends the reader's
-   dish text off-device — enable it only after reading
-   `docs/privacy-review-sommelierx.md`. It defaults off; without both
-   `PAIRING_PROVIDER=sommelierx` and a valid key, the assistant answers without it.
+   Pairing already works without this: the template ships
+   `PAIRING_PROVIDER=local`, which answers from rules inside the Worker at no
+   cost and sends the dish nowhere. `sommelierx` is the third-party alternative,
+   under its own terms and charging for it, and it sends the reader's dish text
+   off-device — switch to it only after reading
+   `docs/privacy-review-sommelierx.md`, and only with a valid key.
 
    Web search rides on top of research (`RESEARCH_PROVIDER=open_data`): it finds
    wines the open-data sources do not hold by sending the wine's identity to Brave
@@ -320,8 +322,8 @@ never had. What the providers give:
   usage policies rather than quotas. The application stays under them with its
   own rate limits and caches.
 
-- **Food-and-wine pairing needs no provider at all.** Set
-  `PAIRING_PROVIDER=local` and it costs nothing, for ever: the answer comes from
+- **Food-and-wine pairing needs no provider at all**, and the template already
+  ships `PAIRING_PROVIDER=local`. It costs nothing, for ever: the answer comes from
   a written-down rule set — acidity cuts fat, tannin wants protein, nothing
   louder than the plate, a dessert wine sweeter than the dessert — applied to the
   dish you typed. No key, no contact address, no privacy review, because the dish
