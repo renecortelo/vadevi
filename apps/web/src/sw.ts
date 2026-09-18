@@ -67,9 +67,23 @@ async function precache(): Promise<void> {
       try {
         const response = await fetch(new Request(url, { cache: "reload" }));
         if (!response.ok) return;
+        if (!response.redirected) {
+          // The native response, untouched. Only the shell arrives redirected;
+          // every other asset is stored exactly as the browser handed it over,
+          // which is the form every engine's Cache API stores reliably.
+          await cache.put(url, response);
+          return;
+        }
+        // Re-wrapped to drop the flag — and from a buffered body, not the
+        // stream. WebKit's Cache API has failed to store stream-bodied
+        // Responses across several versions, silently, and this install
+        // swallows per-asset failures by design: a precache that looks complete
+        // and is missing the shell is exactly the blank launch this exists to
+        // prevent. A buffer is the one body every engine stores.
+        const body = await response.arrayBuffer();
         await cache.put(
           url,
-          new Response(response.body, {
+          new Response(body, {
             headers: response.headers,
             status: response.status,
             statusText: response.statusText,

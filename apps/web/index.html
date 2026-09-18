@@ -9,11 +9,23 @@
       content="Va de Vi is a private, collaborative wine memory and tasting companion."
     />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/boot.css" />
     <script src="/theme-init.js"></script>
     <title>Va de Vi</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Never blank. This is what shows between the HTML arriving and React
+        taking over, and it is what stays if React never does — with a plain
+        line saying so after a moment, so a failed start looks like one rather
+        than like nothing. React replaces it on its first render.
+      -->
+      <div class="boot" id="boot" role="status" aria-live="polite">
+        <img class="boot__mark boot__mark--light" src="/brand/lockup-light.svg" alt="Va de Vi" />
+        <img class="boot__mark boot__mark--dark" src="/brand/lockup-dark.svg" alt="" />
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
