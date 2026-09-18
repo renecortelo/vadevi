@@ -224,8 +224,12 @@ function target(dish: DishProfile): { profile: StyleProfile; reasons: Reason[] }
   // Umami makes tannin taste harder and drier than it is. Soy, miso, mushroom
   // and aged cheese are why a Cabernet fights teriyaki and a juicy low-tannin
   // red does not — the wine has not changed, the plate has moved the goalposts.
-  if (dish.umami && tannin > 2) {
-    tannin = 2;
+  // Reduced rather than capped. Umami does not forbid tannin, it makes you want
+  // less of it than the protein alone would justify: a meat lasagne still wants
+  // a Sangiovese, while soy-glazed chicken drops all the way to a light red. A
+  // flat ceiling sent both to the same place, and one of them was wrong.
+  if (dish.umami && tannin > 1) {
+    tannin = Math.max(1, tannin - 2);
     reasons.push("umami");
   }
 
