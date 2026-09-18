@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { profileDish } from "../src/adapters/dish-profile";
+import { profileDish, recognisedDish } from "../src/adapters/dish-profile";
 import { LocalFoodPairingAdapter, pairingStylesFor } from "../src/adapters/local-pairing";
 
 /**
@@ -211,5 +211,37 @@ describe("dishes named in the eight locales", () => {
   it("does not let carbonara pretend it has tomato in it", () => {
     expect(profileDish("carbonara").acidic).toBe(false);
     expect(profileDish("carbonara").umami).toBe(true);
+  });
+});
+
+describe("reading the words people actually type", () => {
+  it("knows the cuts named outside Spain", () => {
+    // The vocabulary was written from Iberian Spanish and had no word for the
+    // cuts half the Spanish-speaking world names instead of the animal, so
+    // "filete de res" produced no pairing at all.
+    expect(profileDish("filete de res").protein).toBe("red_meat");
+    expect(profileDish("arrachera").protein).toBe("red_meat");
+    expect(profileDish("pechuga a la plancha").protein).toBe("white_meat");
+    expect(profileDish("camarones al ajillo").protein).toBe("shellfish");
+  });
+
+  it("reads a diminutive as the word it is a diminutive of", () => {
+    // Exact tokens cannot see these, and they are how people write.
+    expect(profileDish("costillitas").protein).toBe("red_meat");
+    expect(profileDish("pechuguita").protein).toBe("white_meat");
+    expect(profileDish("camaroncitos").protein).toBe("shellfish");
+    expect(profileDish("filetito de res").protein).toBe("red_meat");
+  });
+
+  it("keeps the stem floor high enough that a short word cannot reach past itself", () => {
+    // `res` is exact-only: three letters must never stem into "restaurante".
+    expect(recognisedDish(profileDish("restaurante"))).toBe(false);
+    expect(recognisedDish(profileDish("tomarse algo"))).toBe(false);
+  });
+
+  it("does not claim an animal from a preparation", () => {
+    // A milanesa says how it was cooked, not what it is made of.
+    expect(profileDish("milanesa de pollo").protein).toBe("white_meat");
+    expect(profileDish("milanesa de res").protein).toBe("red_meat");
   });
 });

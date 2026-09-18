@@ -23,6 +23,7 @@ import type {
 } from "@vadevi/domain";
 import { ulid } from "ulid";
 
+import { describeDish, profileDish, recognisedDish } from "../adapters/dish-profile";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { appellationsForCountry, resolveAppellationCountries } from "./appellation-terms";
@@ -201,6 +202,33 @@ function colorToWineType(color: string | null): WineSummary["wineType"] | null {
     default:
       return null;
   }
+}
+
+/**
+ * How many unopened bottles the reader has of each of these wines.
+ *
+ * A pairing answer that cannot tell "you have tasted this" from "you have one
+ * standing in the cellar" recommends bottles that are not there. One query for
+ * the whole set rather than one per wine, because a pairing can match a dozen.
+ */
+async function ownedBottleCounts(
+  database: D1Database,
+  wines: ReadonlyArray<{ spaceId: string; wineId: string }>,
+): Promise<Map<string, number>> {
+  const counts = new Map<string, number>();
+  if (wines.length === 0) return counts;
+  const placeholders = wines.map(() => "(?, ?)").join(", ");
+  const rows = await database
+    .prepare(
+      `SELECT space_id, wine_id, COUNT(*) AS owned FROM bottles
+      WHERE state = 'owned' AND deleted_at IS NULL
+        AND (space_id, wine_id) IN (VALUES ${placeholders})
+      GROUP BY space_id, wine_id`,
+    )
+    .bind(...wines.flatMap((wine) => [wine.spaceId, wine.wineId]))
+    .all<{ owned: number; space_id: string; wine_id: string }>();
+  for (const row of rows.results ?? []) counts.set(`${row.space_id}:${row.wine_id}`, row.owned);
+  return counts;
 }
 
 /**
@@ -1390,7 +1418,14 @@ export async function runDeterministicAssistantTurn(
     // follow-up like this — a pairing question. A fresh subject question ("¿hay un
     // vino de Marlborough?") must not drag the previously focused wine in and
     // answer about it; that made a Marlborough search show a carried wine's facts.
-    (requestsPairing(options.request.message)
+    //
+    // And only when the question names no food. "What do I pair a roast chicken
+    // with?" is a dish looking for a wine, not the wine on screen looking for a
+    // dish — but with a bottle open on the evidence page it was read as the
+    // second, the dish pairing below was skipped entirely, and the answer came
+    // back about that bottle with nothing but its own narrative to stand on.
+    (requestsPairing(options.request.message) &&
+    !recognisedDish(profileDish(dishFromMessage(options.request.message)))
       ? (results.find((result) => result.wine.id === options.request.context.visibleWineId) ??
         (await visibleWineResult(
           database,
@@ -1456,27 +1491,76 @@ export async function runDeterministicAssistantTurn(
           }
           results = [...merged.values()].slice(0, 12);
         }
+        // How many of each matched wine the reader actually has standing in the
+        // cellar. "You have tasted this" and "you can open this tonight" are
+        // different answers to a pairing question, and running them together
+        // recommends a bottle that is not there.
+        const owned = await ownedBottleCounts(
+          database,
+          matches.map((match) => ({ spaceId: match.result.spaceId, wineId: match.result.wine.id })),
+        );
+
+        // The general answer first, the reader's own wines second. Three kinds
+        // of statement, in the order the answer should be given: what the plate
+        // is, what a wine therefore needs, and only then which of their bottles
+        // has it. Without the first two the model can only list wines, which is
+        // what it did while the criteria statement threw the reasoning away.
         pairingStatements = [
           {
             evidenceClass: "inferred",
-            id: "pairing-criteria",
+            id: "pairing-dish",
             sampleSize: null,
             sourceIds: [],
-            text: `SommelierX suggests these wine styles for "${dish}": ${pairing.data.styles
-              .map((style: PairingWineStyle) =>
-                [style.name, style.color, style.grapes.join("/"), style.region]
-                  .filter((value) => value !== null && value !== "")
-                  .join(" "),
-              )
-              .join("; ")}`,
+            text: `the dish "${dish}" is ${describeDish(dish)}`,
           },
-          ...matches.map((match) => ({
+          ...pairing.data.styles.map((style: PairingWineStyle, index: number) => ({
             evidenceClass: "inferred" as const,
-            id: `pairing-${match.result.wine.id}`,
+            id: `pairing-style-${index + 1}`,
             sampleSize: null,
             sourceIds: [],
-            text: `from your cellar, ${match.result.wine.displayName} suits "${dish}": it matches ${match.reasons.join(", ")}`,
+            // The description is the rule that chose this style — "high acidity
+            // to cut the fat". It is the whole point of the answer.
+            text:
+              `a wine style that suits "${dish}" in general, whether or not the reader owns one: ` +
+              `${style.name}${style.grapes.length > 0 ? ` (${style.grapes.join(", ")})` : ""}` +
+              `${style.region === null ? "" : `, for example from ${style.region}`}` +
+              `${style.description === null || style.description === "" ? "" : ` — it works because it brings ${style.description}`}`,
           })),
+          ...matches.map((match) => {
+            const bottles = owned.get(`${match.result.spaceId}:${match.result.wine.id}`) ?? 0;
+            return {
+              evidenceClass: "inferred" as const,
+              id: `pairing-${match.result.wine.id}`,
+              sampleSize: null,
+              sourceIds: [],
+              text:
+                `among the reader's own wines, ${match.result.wine.displayName} fits those criteria ` +
+                `because it matches ${match.reasons.join(", ")}; ` +
+                (bottles > 0
+                  ? `they have ${bottles} bottle${bottles === 1 ? "" : "s"} of it in the cellar and could open one tonight`
+                  : `they have tasted it but own no bottle of it right now, so it is one to seek out rather than to open`),
+            };
+          }),
+        ];
+      } else if (pairing.status === "unavailable" && pairing.reason === "not_found") {
+        // The dish was not understood. Saying nothing let the turn quietly become
+        // "here is a wine from your cellar", which answers a question the reader
+        // did not ask and hides that the food was never looked at.
+        pairingStatements = [
+          {
+            evidenceClass: "inferred",
+            id: "pairing-unknown-dish",
+            sampleSize: null,
+            sourceIds: [],
+            text:
+              `no wine-style criteria could be worked out for "${dish}", because that dish is ` +
+              `not in the pairing vocabulary. Say plainly that you do not know this one, then ` +
+              `ask a single closed question the reader can answer in one word, offering the ` +
+              `choices: is the main thing on the plate red meat, white meat, oily fish, lean ` +
+              `fish, shellfish, cheese, vegetables or pulses — and is it grilled, roasted, ` +
+              `fried, stewed, or raw? Their answer will be understood. Do not invent criteria ` +
+              `and do not answer with a wine instead.`,
+          },
         ];
       }
     } catch {

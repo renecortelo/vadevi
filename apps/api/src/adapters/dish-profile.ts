@@ -78,7 +78,10 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
     terms:
       "beef steak lamb veal buey ternera vaca cordero solomillo entrecot chuleta bistec cabrito " +
       "carn vedella xai rind kalb lamm boeuf agneau veau manzo agnello vitello rundvlees " +
-      "lamsvlees kalfsvlees vitela borrego",
+      "lamsvlees kalfsvlees vitela borrego " +
+      // Latin American Spanish and the cuts people name instead of the animal.
+      "res filete arrachera costilla costillas falda aguja diezmillo sirloin ribeye " +
+      "picana picanha matambre vacio bife",
   },
   {
     contribution: { intensity: 5, protein: "red_meat", richness: 4 },
@@ -89,7 +92,8 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
   {
     contribution: { intensity: 3, protein: "white_meat", richness: 3 },
     terms:
-      "chicken pork turkey rabbit pollo cerdo pavo conejo cochinillo lomo pollastre porc gall " +
+      "chicken pork turkey rabbit pollo cerdo pavo conejo cochinillo pollastre porc gall " +
+      "pechuga muslo pierna alitas puerco chancho cochino lechon lomo " +
       "dindi conill huhn haehnchen schwein pute kaninchen poulet porc dinde lapin maiale tacchino " +
       "coniglio kip varken kalkoen konijn frango porco peru coelho",
   },
@@ -110,7 +114,7 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
       "rape bacalla lluc llobarro orada llenguado morue colin bar daurade turbot sole kabeljau " +
       "seehecht wolfsbarsch dorade steinbutt seezunge merluzzo nasello branzino orata rombo " +
       "sogliola kabeljauw heek zeebaars zeebrasem tarbot tong bacalhau pescada robalo dourada " +
-      "pregado linguado",
+      "pregado linguado corvina huachinango mojarra tilapia",
   },
   // Shellfish: delicate, saline, and allergic to tannin.
   {
@@ -121,7 +125,8 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
       "gambes llagosta cranc musclo cloissa ostre petxina polbo crevette homard crabe moule " +
       "palourde huitre coquille poulpe garnele hummer krabbe miesmuschel auster jakobsmuschel " +
       "tintenfisch gambero astice granchio cozza vongole ostrica capasanta calamaro polpo seppia " +
-      "garnaal kreeft krab mossel oester inktvis camarao lavagante caranguejo mexilhao polvo lula",
+      "garnaal kreeft krab mossel oester inktvis camarao lavagante caranguejo mexilhao polvo lula " +
+      "camaron camarones langosta jaiba",
   },
   {
     contribution: { intensity: 3, protein: "cheese", richness: 4 },
@@ -375,7 +380,7 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
     contribution: { intensity: 4, richness: 5 },
     terms:
       "schnitzel croquetas croquete bitterballen kroket arancini francesinha pasty chips " +
-      "buñuelos bunuelos",
+      "bunuelos milanesa empanizado rebozado",
   },
 
   // Sausage and the sour cabbage that usually comes with it.
@@ -423,6 +428,56 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
   },
 ];
 
+/**
+ * The vocabulary split once, at load, instead of on every question.
+ *
+ * Terms under three characters are dropped here rather than guarded at each
+ * comparison. A two-letter word is a preposition in some language on this list,
+ * and writing a phrase into a token list once left `a` behind as a term, which
+ * matched "à la mode".
+ */
+const entries = lexicon.map((entry) => ({
+  contribution: entry.contribution,
+  terms: entry.terms.split(" ").filter((term) => term.length >= 3),
+}));
+
+/** The shortest shared opening that is evidence of the same word, not a coincidence. */
+const stemLength = 5;
+
+/**
+ * Does any word the reader typed mean this term?
+ *
+ * Exact first, then a shared stem — because Spanish, and especially the Spanish
+ * spoken outside Spain, arrives in diminutives and variants that an exact match
+ * cannot see: costillitas, pechuguita, camaroncitos, filetito. All of them share
+ * their first five letters with a word already in the vocabulary, so a stem
+ * catches a whole class of miss without adding a single entry.
+ *
+ * Five is the floor on both sides, which is what keeps it honest. `res` stays an
+ * exact match and cannot reach "restaurante"; `chips` cannot reach "chipotle",
+ * which shares only four. A shorter floor would turn this from a stemmer into a
+ * guess.
+ *
+ * It is still a heuristic and it does misfire: "cordelito" shares five letters
+ * with "cordero" and is read as lamb. Six would stop that and would also stop
+ * "filetito" reaching "filete", which is a word people actually type about food.
+ * The trade is taken deliberately — this only ever reads a question that is
+ * already about a dish, where a non-food word sharing five letters with a food
+ * one is rarer than a diminutive of the food itself.
+ */
+function matches(term: string, tokens: ReadonlySet<string>): boolean {
+  if (tokens.has(term)) return true;
+  if (term.length < stemLength) return false;
+  for (const token of tokens) {
+    if (token.length < stemLength) continue;
+    let shared = 0;
+    const limit = Math.min(token.length, term.length);
+    while (shared < limit && token[shared] === term[shared]) shared += 1;
+    if (shared >= stemLength) return true;
+  }
+  return false;
+}
+
 const neutral: DishProfile = {
   acidic: false,
   intensity: 3,
@@ -463,11 +518,8 @@ export function profileDish(dish: string): DishProfile {
   let profile = { ...neutral, terms: [] as string[] };
   let proteinDecided = false;
 
-  for (const entry of lexicon) {
-    // Short tokens are thrown away rather than trusted. A two-letter word is a
-    // preposition in some language on this list, and "à la mode" once matched
-    // the `a` left behind by writing a multi-word phrase into a token list.
-    const hit = entry.terms.split(" ").find((term) => term.length >= 3 && tokens.has(term));
+  for (const entry of entries) {
+    const hit = entry.terms.find((term) => matches(term, tokens));
     if (hit === undefined) continue;
     profile.terms.push(hit);
 
@@ -493,4 +545,45 @@ export function profileDish(dish: string): DishProfile {
 /** Whether anything at all was understood, so a caller can ask instead of guessing. */
 export function recognisedDish(profile: DishProfile): boolean {
   return profile.terms.length > 0;
+}
+
+const proteinWords: Record<DishProtein, string> = {
+  cheese: "a cheese dish",
+  lean_fish: "lean white fish",
+  legume: "a pulse dish",
+  none: "a dish with no single main protein",
+  oily_fish: "oily fish",
+  red_meat: "red meat",
+  shellfish: "shellfish",
+  vegetable: "vegetables",
+  white_meat: "white meat",
+};
+
+const scale = ["very light", "light", "moderate", "rich", "very rich"] as const;
+const loudness = ["very delicate", "delicate", "moderate", "pronounced", "powerful"] as const;
+
+/**
+ * The plate in words, so an answer can say *why* before it says what to drink.
+ *
+ * A reader asking what goes with roast chicken is owed the reasoning — that the
+ * dish is white meat, moderately rich, moderate in flavour — and not only a list
+ * of bottles. This is the half of the explanation that belongs to the food; the
+ * styles carry the half that belongs to the wine.
+ *
+ * English, like every other statement handed to the language model, which renders
+ * the answer in the reader's own language.
+ */
+export function describeDish(dish: string): string {
+  const profile = profileDish(dish);
+  const parts = [
+    proteinWords[profile.protein],
+    `${scale[Math.min(4, Math.max(0, profile.richness - 1))]} on the palate`,
+    `${loudness[Math.min(4, Math.max(0, profile.intensity - 1))]} in flavour`,
+  ];
+  if (profile.acidic) parts.push("sharp with acidity of its own");
+  if (profile.spicy) parts.push("hot with spice");
+  if (profile.smoky) parts.push("smoky from the fire");
+  if (profile.umami) parts.push("savoury with umami");
+  if (profile.sweet) parts.push("sweet");
+  return parts.join(", ");
 }

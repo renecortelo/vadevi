@@ -969,6 +969,73 @@ describe("Vicenç deterministic read path", () => {
     expect(response?.data.usage.toolCalls).toBeGreaterThanOrEqual(2);
   });
 
+  it("pairs the dish the reader named, not the wine left open on the screen", async () => {
+    // A bottle open on the evidence page used to hijack every pairing question:
+    // any such question took the visible wine as its antecedent, which skipped
+    // the dish lookup altogether. Asking what goes with roast chicken then came
+    // back about that bottle, argued from its own narrative. The antecedent is
+    // for "…and what can I pair IT with?", which names no food at all.
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    const onScreen = await createWine(ownerToken, spaceId, "Bottle On Screen");
+
+    let askedFor: string | null = null;
+    const pairing: FoodPairingPort = {
+      pair: async (input) => {
+        askedFor = input.dish;
+        return {
+          cached: false,
+          data: {
+            provider: "local",
+            styles: [
+              {
+                color: "white",
+                country: "ES",
+                description: "weight to match the dish without burying it",
+                grapes: ["Albariño"],
+                matchPercent: 88,
+                name: "Crisp Atlantic white",
+                rank: 1,
+                region: "Rías Baixas",
+              },
+            ],
+          },
+          status: "success",
+        };
+      },
+    };
+
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "none",
+      externalResearch: false,
+      language: null,
+      pairing,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        // The wine is on screen, exactly as it is after opening its evidence page.
+        context: { allowedCrossSpaceIds: [], visibleWineId: onScreen.id },
+        locale: "es",
+        message: "¿Con qué puedo maridar un pollo asado?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+
+    // The dish lookup ran at all, and ran for the food rather than the bottle.
+    expect(askedFor).not.toBeNull();
+    expect(String(askedFor)).toContain("pollo");
+    expect(String(askedFor)).not.toContain("screen");
+    expect(response).not.toBeNull();
+  });
+
   it("feeds the reader's own tasting-note detail so Vicenç can explain a score", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;
