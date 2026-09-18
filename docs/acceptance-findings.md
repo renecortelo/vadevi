@@ -6,6 +6,114 @@ attached to the report that produced it.
 
 ---
 
+## Round 2 — 18 September 2026, the maintainer, iPhone (Safari, installed PWA) and desktop
+
+Sections A to G of the script. Five findings, four of them defects; one of the
+four turned out to be five defects stacked behind a single symptom.
+
+### 1. The loading screen was in the wrong language
+
+**Reported:** "It says 'Opening your cellar' in English or Portuguese when I
+have it in Spanish or Catalan."
+
+**Cause:** the account's language was applied after bootstrap and never
+remembered locally, so a cold start had only the browser's own language until
+the network answered. The theme had solved the identical flash in
+`theme-init.js`; the language had not copied it.
+
+**Fix:** the session writes the account locale to storage whenever it applies
+it, and the next launch reads it before the network.
+
+### 2. Research failed on every wine
+
+**Reported:** "Investigate says: the research could not be completed, the
+existing evidence has not changed."
+
+**Cause:** a budget metric, `websearch_calls`, had been added to the code the
+day before without a migration. `usage_counters.metric` carries a CHECK naming
+the metrics it accepts; every research run reserved `research_lookups`, then
+tripped the constraint on the new metric and answered 500 — while the first
+reservation quietly counted a lookup that never ran. No test exercised the
+reservation.
+
+**Fix:** migration 0022 widens the CHECK, and a test now reserves every metric
+the code knows against the migrated schema, so the next one added without a
+migration fails there rather than on a reader's screen. Verified to fail with
+the migration removed.
+
+### 3. The Space delete button was missing
+
+**Reported:** "Looks like I can't delete a Space at all, I don't see the button."
+
+**Cause:** not a defect in the code, but one in the screen. A personal Space has
+no delete of its own — it goes with the account, by design — and the screen
+showed nothing where the button would be, so the design read as a bug. The
+script also did not say which Space to have active.
+
+**Fix:** the personal Space now says it is deleted with the account; the script
+says to switch to a group Space first.
+
+### 4. The app came up blank when launched offline
+
+**Reported:** "Blank page in airplane mode, unless the app had been open
+before; closed and reopened, it won't load."
+
+This one took five fixes, because five separate defects stood behind the same
+white screen and each was only visible once the one in front of it was gone.
+The order below is the order they were found.
+
+- **The precached shell could not be served.** Workers Assets answers
+  `/index.html` with a 307 to `/`, so the precached shell carried the
+  `redirected` flag, and a redirected response may not satisfy a navigation:
+  the browser refuses it with a network error. It worked after an online visit
+  because a successful navigation stored `/` afresh without the flag — so the
+  one case offline exists for was the one that failed. The precache now drops
+  the flag. Reproduced in Chromium by making the shell redirect the same way.
+- **The locale catalogue could not be found offline.** Catalogues are served
+  stale-while-revalidate from a bundle cache that fills only online; the
+  precache had put them in the shell cache, unlooked-at. The catalogue import
+  rejected, and it is awaited at the top of the i18n module, so the module
+  failed and nothing rendered. English is inline and never needs the chunk,
+  which is why every test in English passed — and why fixing the loading
+  screen's language, which made Spanish the reliable boot locale, made the
+  blank launch reliable too. The lookup now falls through to any cache, and a
+  catalogue that cannot load starts the app in English rather than not at all.
+- **The shell could be blank at all.** `#root` shipped empty, so a failed start
+  was indistinguishable from a shell that never arrived — which is exactly the
+  question that had to be answered. It now carries the wordmark until React
+  replaces it, and a plain line saying the app could not start if that never
+  happens.
+- **The runtime configuration could not be had offline.** It is network-only by
+  policy, and in production its failure was rethrown, so a cold launch died
+  before Firebase could restore the persisted session. The last configuration
+  served is now remembered locally — public browser configuration, validated on
+  the way back — and used when the network cannot answer.
+- **A missing redirect result undid the restored session.** `getRedirectResult`
+  rejects offline after `onAuthStateChanged` has already restored the user, and
+  that rejection reached the catch that sets the error screen. It is now
+  nothing: there is no redirect to complete offline.
+
+The last two were production-only and invisible to every drill, because the
+drills run against the emulator, whose fallback path never throws. They were
+found from the device: Web Inspector over USB gave the console, and a listing
+of the worker's cache proved the worker current and the precache complete —
+seventy-four of seventy-four — which ruled the worker out and pointed at the
+application's own start.
+
+Also found on the device: Firebase's auth iframe script in the shell cache.
+The policy says auth is never served from a cache; `/__/auth/` was not on the
+network-only list. It is now.
+
+**Worth keeping from this one:** a symptom that survives a correct fix is not
+evidence the fix was wrong. It is evidence there is another cause behind it.
+
+### 5. The operational section had no instructions
+
+**Reported:** "Not sure how to test the entire section."
+
+**Fix:** each item now says where to look and what to run, including the R2
+half of the backup, which the section had not mentioned.
+
 ## Round 1 — 16 August 2026, the maintainer, Google Chrome, desktop
 
 Mobile was not exercised. Items 1–8 of that run passed; the run stopped at the

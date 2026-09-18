@@ -101,10 +101,10 @@ Use your phone against the same preview URL.
         on the account.
 27. [x] Quick Log a wine one-handed. Judge whether the targets are comfortable,
         not just whether they work.
-28. [ ] **Turn on airplane mode.** Open the installed app. The shell loads.
-29. [ ] Quick Log a wine while offline. It saves locally and shows a pending
+28. [x] **Turn on airplane mode.** Open the installed app. The shell loads.
+29. [ x] Quick Log a wine while offline. It saves locally and shows a pending
         state.
-30. [ ] Turn airplane mode off. The queued wine syncs, **exactly once** — check
+30. [x] Turn airplane mode off. The queued wine syncs, **exactly once** — check
         Wine Memory for duplicates.
 31. [x] Rotate to landscape on a couple of screens. Nothing overflows.
 
