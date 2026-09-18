@@ -1,0 +1,98 @@
+/*
+ * What the reader sees before the application has started.
+ *
+ * `#root` used to ship empty, so any failure between the HTML arriving and
+ * React mounting — a bundle that could not be fetched, a module that threw —
+ * was a white screen with nothing on it. That is indistinguishable from the
+ * HTML never having arrived at all, which is exactly the distinction that
+ * matters when an offline launch is being diagnosed.
+ *
+ * A separate file rather than a <style> block because the deployed policy is
+ * `style-src 'self'` with no `unsafe-inline`. React replaces this content on
+ * its first render; nothing here survives a successful start.
+ */
+
+.boot {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  gap: 1.25rem;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.boot__mark {
+  animation: boot-breathe 1.8s ease-in-out infinite;
+  height: 2.75rem;
+  width: auto;
+}
+
+.boot__mark--dark {
+  display: none;
+}
+
+.boot__note {
+  color: #7a3a3f;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 24rem;
+}
+
+.boot__retry {
+  background: #8b1116;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.6rem 1.25rem;
+}
+
+@keyframes boot-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Dark, whether chosen or inherited. Kept in step with theme-init.js. */
+:root[data-theme="dark"] .boot__mark--light {
+  display: none;
+}
+:root[data-theme="dark"] .boot__mark--dark {
+  display: block;
+}
+:root[data-theme="dark"] .boot__note {
+  color: #e8c9c4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .boot__mark--light {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .boot__mark--dark {
+    display: block;
+  }
+  :root:not([data-theme="light"]) .boot__note {
+    color: #e8c9c4;
+  }
+}
+
+/* Once the application has said it cannot start, hold still. */
+.boot--stalled .boot__mark {
+  animation: none;
+  opacity: 0.55;
+}

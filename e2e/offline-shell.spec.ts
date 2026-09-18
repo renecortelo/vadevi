@@ -27,15 +27,18 @@ test.describe("offline shell", () => {
     await page.route("**/*", (route) => route.abort("internetdisconnected"));
     await page.reload();
 
-    // The shell renders from cache rather than a browser network error page.
-    await expect(page.locator("#root")).not.toBeEmpty();
+    // The shell renders from cache rather than a browser network error page —
+    // and the application started: the boot placeholder that ships inside
+    // #root is gone, replaced by React's first render. `#root` is never empty
+    // any more, so emptiness proves nothing; the placeholder's absence does.
+    await expect(page.locator("#boot")).toHaveCount(0);
     expect(await page.title()).toContain("Va de Vi");
     await page.unroute("**/*");
 
     // The same holds under the browser's own offline emulation.
     await context.setOffline(true);
     await page.goto("/");
-    await expect(page.locator("#root")).not.toBeEmpty();
+    await expect(page.locator("#boot")).toHaveCount(0);
     await context.setOffline(false);
   });
 
@@ -82,7 +85,7 @@ test.describe("offline shell", () => {
     await context.setOffline(true);
     const relaunched = await context.newPage();
     await relaunched.goto("/");
-    await expect(relaunched.locator("#root")).not.toBeEmpty({ timeout: 15_000 });
+    await expect(relaunched.locator("#boot")).toHaveCount(0, { timeout: 15_000 });
     expect(await relaunched.title()).toContain("Va de Vi");
     // And it booted in the reader's language, from the precached catalogue —
     // not silently in English because the chunk could not be found. Offline

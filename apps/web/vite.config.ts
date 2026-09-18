@@ -12,6 +12,7 @@ export default defineConfig({
       filename: "sw.ts",
       includeAssets: [
         "icon.svg",
+        "boot.css",
         "theme-init.js",
         "brand/icon-maskable.svg",
         "brand/icon-light.svg",
