@@ -14,6 +14,7 @@ import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 
 import { webEnvironment } from "../config/env";
 import { getRuntimeConfig } from "../services/api";
+import { rememberedRuntimeConfig, rememberRuntimeConfig } from "./runtime-config";
 import { AuthContext, type AuthContextValue, type AuthStatus } from "./AuthContext";
 import { createFirebaseAuth, type FirebaseUser } from "./firebase";
 import { clearOfflineDataForUser } from "../offline/database";
@@ -56,11 +57,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         let config: RuntimeConfigResponse;
         try {
           config = await getRuntimeConfig();
+          rememberRuntimeConfig(config);
         } catch (runtimeError) {
-          if (!webEnvironment.firebaseUseEmulator) {
+          // The route is network-only by policy, so with the network down it
+          // simply fails — and a cold launch offline used to die right here,
+          // before Firebase could restore the session it had persisted. The
+          // last configuration this deployment served is public browser
+          // configuration (feature flags and the Firebase web app identity, none
+          // of it secret), and it is exactly what an offline launch needs.
+          const remembered = rememberedRuntimeConfig();
+          if (remembered !== null) {
+            config = remembered;
+          } else if (webEnvironment.firebaseUseEmulator) {
+            config = localRuntimeConfig();
+          } else {
             throw runtimeError;
           }
-          config = localRuntimeConfig();
         }
 
         const auth = createFirebaseAuth(config.data.firebase);
@@ -89,7 +101,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           },
         );
 
-        await getRedirectResult(auth);
+        // Offline there is no redirect to complete and this rejects with a
+        // network error — after `onAuthStateChanged` has already restored the
+        // persisted user. Letting that reach the catch below overwrote a
+        // signed-in session with an error screen. There is nothing to
+        // recover here; a missing redirect result is not a failed start.
+        try {
+          await getRedirectResult(auth);
+        } catch {
+          // Nothing to complete.
+        }
       } catch {
         if (!active) return;
         setError("Authentication could not be initialized.");

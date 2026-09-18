@@ -16,6 +16,10 @@ export const cacheLayoutVersion = "v2";
 export function isNetworkOnlyRequest(url: URL): boolean {
   return (
     url.pathname.startsWith("/api/") ||
+    // Firebase's sign-in handler and iframe, proxied from this origin. Auth
+    // state must never be answerable from a cache; this path was, until the
+    // iframe script turned up in the shell cache on a device.
+    url.pathname.startsWith("/__/auth/") ||
     url.pathname === "/health" ||
     url.pathname === "/openapi.json" ||
     url.pathname === "/runtime-config"
