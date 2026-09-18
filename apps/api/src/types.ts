@@ -19,7 +19,7 @@ export type WorkerBindings = {
   FIREBASE_AUTH_PROXY?: string;
   FIREBASE_PROJECT_ID?: string;
   FIREBASE_WEB_API_KEY?: string;
-  PAIRING_PROVIDER?: "none" | "sommelierx";
+  PAIRING_PROVIDER?: "local" | "none" | "sommelierx";
   MAP_TILES_PROVIDER?: "none" | "openstreetmap";
   PLACES_PROVIDER?: "none" | "openstreetmap";
   RESEARCH_PROVIDER?: "none" | "open_data";
