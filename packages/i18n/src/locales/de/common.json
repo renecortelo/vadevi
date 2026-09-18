@@ -97,7 +97,10 @@
     "renameAction": "Space umbenennen",
     "renameSaving": "Wird umbenannt…",
     "renameError": "Der Space konnte nicht umbenannt werden. Versuch es noch einmal.",
-    "renameConflict": "Jemand anderes hat diesen Space umbenannt, während du getippt hast. Lade neu und versuch es noch einmal."
+    "renameConflict": "Jemand anderes hat diesen Space umbenannt, während du getippt hast. Lade neu und versuch es noch einmal.",
+    "deleteAction": "Zu Daten und Datenschutz",
+    "deleteBody": "{{name}} wird unter Daten und Datenschutz gelöscht, mit dem Namen zur Bestätigung. Es bleibt ein Monat, es rückgängig zu machen, bevor endgültig gelöscht wird.",
+    "deleteTitle": "Diesen Space löschen"
   },
   "invitation": {
     "eyebrow": "Eine private Einladung",
@@ -1063,7 +1066,7 @@
     "noticeRetention": "Assistenz-Turns werden nicht als Verlauf gespeichert. Werkzeug-Audits sind redigiert und enthalten keinen Nachrichtentext.",
     "noticeScope": "Ihre Weine, Verkostungen und Fotos liegen in dem Bereich, den Sie gewählt haben. Nur dessen aktive Mitglieder sehen sie.",
     "noticeTitle": "Was diese App mit Ihren Daten macht",
-    "personalSpaceNote": "Dein persönlicher Space wird zusammen mit deinem Konto gelöscht, weiter unten. Gruppen-Spaces, die dir gehören, löschst du hier einzeln.",
+    "personalSpaceNote": "Dein persönlicher Space wird mit deinem Konto gelöscht, weiter unten. Für einen Gruppen-Space, der dir gehört: oben im Umschalter auswählen und hierher zurückkommen — der Button erscheint dann.",
     "providerModes": "KI-Anbieter: {{ai}}. Recherche-Anbieter: {{research}}.",
     "retentionBody": "Das Löschen entfernt aktive Anwendungsdaten und gespeicherte Fotos. Vom Anbieter verwaltete Sicherungen folgen ihrem eigenen Zeitplan und werden nicht sofort gelöscht.",
     "retentionTitle": "Was Löschen leistet und was nicht",

@@ -1,5 +1,6 @@
 import { z } from "@hono/zod-openapi";
 
+import { SupportedLocaleSchema } from "./session";
 import { ResourceIdSchema, ResourceTimestampSchema } from "./wine-memory";
 
 export const EvidenceClassSchema = z.enum(["observed", "researched", "inferred", "personal"]);
@@ -258,6 +259,18 @@ export const WineFactsResponseSchema = z
   })
   .strict()
   .openapi("WineFactsResponse");
+
+/**
+ * The language to read the facts in. Prose evidence is returned translated into
+ * it — made on first read in that language and kept — so switching the
+ * interface changes the evidence with it, not only the labels around it. Left
+ * out, every fact reads as it was written.
+ */
+export const WineFactsQuerySchema = z
+  .object({
+    locale: SupportedLocaleSchema.optional().openapi({ param: { in: "query", name: "locale" } }),
+  })
+  .strict();
 
 export const AcceptFactRequestSchema = z
   .object({ version: z.number().int().positive() })

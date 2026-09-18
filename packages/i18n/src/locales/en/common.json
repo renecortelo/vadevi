@@ -97,7 +97,10 @@
     "renameAction": "Rename Space",
     "renameSaving": "Renaming…",
     "renameError": "The Space could not be renamed. Try again.",
-    "renameConflict": "Someone else renamed this Space while you were typing. Reload and try again."
+    "renameConflict": "Someone else renamed this Space while you were typing. Reload and try again.",
+    "deleteAction": "Go to Data and privacy",
+    "deleteBody": "{{name}} is deleted from Data and privacy, with its name typed to confirm. There is a month to undo it before anything is actually removed.",
+    "deleteTitle": "Delete this Space"
   },
   "invitation": {
     "eyebrow": "A private invitation",
@@ -1063,7 +1066,7 @@
     "noticeRetention": "Assistant turns are not saved as chat history. Tool audits are redacted and keep no message text.",
     "noticeScope": "Your wines, tastings, and photos live in the Space you chose. They are visible only to that Space's active members.",
     "noticeTitle": "What this app does with your data",
-    "personalSpaceNote": "Your personal Space is deleted together with your account, below. Group Spaces you own are deleted from here, one at a time.",
+    "personalSpaceNote": "Your personal Space is deleted together with your account, below. To delete a group Space you own, make it the active Space in the switcher at the top and come back here: the button appears for that Space.",
     "providerModes": "AI provider: {{ai}}. Research provider: {{research}}.",
     "retentionBody": "Deletion removes active application data and stored photos. Provider-managed backups follow their own retention schedule and are not erased instantly.",
     "retentionTitle": "What deletion does and does not do",

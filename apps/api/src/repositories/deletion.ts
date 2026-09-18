@@ -335,6 +335,7 @@ const spaceScopedTables = [
   "tasting_notes",
   "session_wines",
   "tasting_sessions",
+  "fact_translations_by_space",
   "fact_citations_by_space",
   "facts",
   "sources",
@@ -358,6 +359,13 @@ const spaceScopedTables = [
 ] as const;
 
 function purgeStatement(database: D1Database, table: string, spaceId: string) {
+  if (table === "fact_translations_by_space") {
+    return database
+      .prepare(
+        `DELETE FROM fact_translations WHERE fact_id IN (SELECT id FROM facts WHERE space_id = ?)`,
+      )
+      .bind(spaceId);
+  }
   if (table === "fact_citations_by_space") {
     return database
       .prepare(

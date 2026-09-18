@@ -97,7 +97,10 @@
     "renameAction": "Rinomina lo Spazio",
     "renameSaving": "Rinomina…",
     "renameError": "Non è stato possibile rinominare lo Spazio. Riprova.",
-    "renameConflict": "Qualcun altro ha rinominato questo Spazio mentre scrivevi. Ricarica e riprova."
+    "renameConflict": "Qualcun altro ha rinominato questo Spazio mentre scrivevi. Ricarica e riprova.",
+    "deleteAction": "Vai a Dati e privacy",
+    "deleteBody": "{{name}} si elimina da Dati e privacy, digitandone il nome per confermare. C’è un mese per annullare prima che venga davvero rimosso.",
+    "deleteTitle": "Elimina questo Spazio"
   },
   "invitation": {
     "eyebrow": "Un invito privato",
@@ -1063,7 +1066,7 @@
     "noticeRetention": "I turni dell'assistente non sono salvati come cronologia. Gli audit degli strumenti sono redatti e non conservano il testo dei messaggi.",
     "noticeScope": "I tuoi vini, le degustazioni e le foto vivono nello Spazio che hai scelto. Li vedono solo i membri attivi di quello Spazio.",
     "noticeTitle": "Cosa fa questa applicazione con i tuoi dati",
-    "personalSpaceNote": "Il tuo Space personale viene eliminato insieme all’account, qui sotto. Gli Space di gruppo di cui sei proprietario si eliminano da qui, uno alla volta.",
+    "personalSpaceNote": "Il tuo Space personale viene eliminato insieme all’account, qui sotto. Per eliminare uno Space di gruppo di cui sei proprietario, attivalo nel selettore in alto e torna qui: il pulsante appare per quello Space.",
     "providerModes": "Fornitore di IA: {{ai}}. Fornitore di ricerca: {{research}}.",
     "retentionBody": "L'eliminazione rimuove i dati applicativi attivi e le foto archiviate. I backup gestiti dal fornitore seguono la propria pianificazione e non vengono cancellati istantaneamente.",
     "retentionTitle": "Cosa fa e cosa non fa l'eliminazione",

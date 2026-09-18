@@ -243,13 +243,19 @@ export function WineEvidencePage() {
     };
   }, []);
 
+  // Read in the interface's language. The evidence used to be fetched as
+  // written, so changing the language up top changed every label on this page
+  // and none of the evidence — the paragraph could be regenerated, which wrote
+  // a new one in the new language, and the curiosities and pairings stayed as
+  // they were. The language is a dependency here, so switching it reloads.
+  const locale = researchLocale(i18n.language, bootstrap.data.user.preferredLocale);
   const loadFacts = useCallback(
     async (signal?: AbortSignal) => {
       if (user === null || wineId.length === 0) return;
-      const facts = await getWineFacts(user, spaceId, wineId, signal);
+      const facts = await getWineFacts(user, spaceId, wineId, signal, locale);
       setResponse(facts);
     },
-    [spaceId, user, wineId],
+    [locale, spaceId, user, wineId],
   );
 
   useEffect(() => {
@@ -338,12 +344,7 @@ export function WineEvidencePage() {
     setRewriting(true);
     setError(null);
     try {
-      await regenerateNarrative(
-        user,
-        spaceId,
-        wineId,
-        researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
-      );
+      await regenerateNarrative(user, spaceId, wineId, locale);
       await loadFacts();
     } catch {
       setError(t("evidence.rewriteError"));
@@ -362,12 +363,7 @@ export function WineEvidencePage() {
     setError(null);
     setComparisonNotice(null);
     try {
-      const result = await regenerateTastingComparison(
-        user,
-        spaceId,
-        wineId,
-        researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
-      );
+      const result = await regenerateTastingComparison(user, spaceId, wineId, locale);
       if (result.data.status === "no_material") {
         setComparisonNotice(t("evidence.comparison.noMaterial"));
       }
@@ -395,11 +391,7 @@ export function WineEvidencePage() {
         user,
         spaceId,
         wineId,
-        {
-          locale: researchLocale(i18n.language, bootstrap.data.user.preferredLocale),
-          maxSources: 6,
-          topics,
-        },
+        { locale, maxSources: 6, topics },
         createIdempotencyKey(),
       );
       setResearchJob(result.data);

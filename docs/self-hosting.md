@@ -306,6 +306,12 @@ never had. What the providers give:
   label read. At the budgets above that is roughly 9,100 Neurons on a day that
   hits every cap.
 
+  `ai_language_calls` also pays for translating a wine's evidence the first
+  time someone reads it in a language it was not written in — the evidence page
+  follows the interface's language. That is once per wine per language, kept
+  afterwards, at one call per sixteen strings; a reader switching between two
+  languages costs a call for each language, not for each switch.
+
   **The assistant needs a model that honours a JSON schema, which rules the cheap
   ones out.** A smaller model was tried and reverted: the 8b answers `5025: This
 model doesn't support JSON Schema`, and asking it for JSON in the prompt

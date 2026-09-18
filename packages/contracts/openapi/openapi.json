@@ -16297,6 +16297,24 @@
             "required": true,
             "in": "path",
             "name": "wineId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "es",
+                "fr",
+                "en",
+                "it",
+                "pt-PT",
+                "nl",
+                "de"
+              ]
+            },
+            "required": false,
+            "in": "query",
+            "name": "locale"
           }
         ],
         "responses": {

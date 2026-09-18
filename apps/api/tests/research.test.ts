@@ -1012,21 +1012,25 @@ describe("bounded wine research jobs", () => {
         },
       },
       webSearch: {
-        search: async () => ({
+        // The pairing search finds nothing here, so the one note is the whole
+        // batch — the pairing note's own translation is covered elsewhere.
+        search: async ({ query }) => ({
           cached: false,
-          data: [
-            {
-              snippet: "El Espino is a red from Bodegas Áster.",
-              source: {
-                canonicalUrl: "https://example-winery.test/el-espino",
-                publisher: "example-winery.test",
-                retrievedAt: "2026-08-23T10:00:00.000Z",
-                sourceType: "other_web",
-                title: "El Espino red wine",
-              },
-              title: "El Espino red wine",
-            },
-          ],
+          data: query.includes("pairing")
+            ? []
+            : [
+                {
+                  snippet: "El Espino is a red from Bodegas Áster.",
+                  source: {
+                    canonicalUrl: "https://example-winery.test/el-espino",
+                    publisher: "example-winery.test",
+                    retrievedAt: "2026-08-23T10:00:00.000Z",
+                    sourceType: "other_web",
+                    title: "El Espino red wine",
+                  },
+                  title: "El Espino red wine",
+                },
+              ],
           status: "success",
         }),
       },

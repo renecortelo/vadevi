@@ -16,9 +16,11 @@ import type {
 } from "@vadevi/domain";
 import { ulid } from "ulid";
 
+import { translationBatches } from "../adapters/translation";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { resolveAppellationFacts } from "./eambrosia";
+import { TRANSLATED_FACT_PREDICATES } from "./fact-translations";
 import { normalizeWineText } from "./wine-memory";
 
 /**
@@ -399,11 +401,11 @@ async function collectProposals(
     if (pairingHits.length > 0) attempts.push(successAttempt("web_search", false));
   }
 
-  // Translate the prose we gathered into the reader's language in one pass — web
-  // snippets (and their page titles) come back mostly in English, and a Wikipedia
-  // summary falls back to the English article when there is no local one. It is a
-  // faithful transform that keeps the original on any failure, and the highlights
-  // are already localized by their source so they are left alone.
+  // Translate the prose we gathered into the reader's language — web snippets
+  // and pairing notes (and their page titles) come back mostly in English, and a
+  // Wikipedia summary falls back to the English article when there is no local
+  // one. It is a faithful transform that keeps the original on any failure, and
+  // the highlights are already localized by their source so they are left alone.
   const translated = await translateProse(proposals, ports.translation ?? null, request.locale);
 
   // With translation done, an LLM can weave the summary and the discovered
@@ -459,7 +461,7 @@ async function composeNarrative(
   if (paragraph === null) return proposals;
   if (summaryIndex !== -1) {
     return proposals.map((proposal, index) =>
-      index === summaryIndex ? { ...proposal, value: paragraph } : proposal,
+      index === summaryIndex ? { ...proposal, locale, value: paragraph } : proposal,
     );
   }
   // No encyclopedic opener: the paragraph stands on the gathered material, cited
@@ -468,6 +470,7 @@ async function composeNarrative(
   return [
     {
       confidenceMilli: 600,
+      locale,
       predicate: "research.summary",
       researchMethod: "narrative.compose.v1",
       source: first.source,
@@ -491,7 +494,7 @@ async function translateProse(
     if (proposal.predicate === "research.summary") {
       slots.push({ index, kind: "value" });
       texts.push(String(proposal.value));
-    } else if (proposal.predicate === "curiosity.note") {
+    } else if (proposal.predicate === "curiosity.note" || proposal.predicate === "pairing.note") {
       slots.push({ index, kind: "title" });
       texts.push(proposal.source.title);
       slots.push({ index, kind: "value" });
@@ -499,17 +502,31 @@ async function translateProse(
     }
   });
   if (texts.length === 0) return proposals;
-  let result: (string | null)[] | null;
-  try {
-    result = await translation.translate({ locale, texts });
-  } catch {
-    return proposals;
+  // In runs the translator can take whole: it clips a call to its limits, and
+  // a longer list came back shorter, was rejected, and left every snippet in
+  // English — for exactly the wines with enough sources to be worth reading.
+  // What a run cannot cover stays as gathered; the reader's page translates it
+  // on first view.
+  const result: (string | null)[] = texts.map(() => null);
+  for (const batch of translationBatches(texts).slice(0, 3)) {
+    let translated: (string | null)[] | null;
+    try {
+      translated = await translation.translate({
+        locale,
+        texts: batch.map((index) => texts[index]!),
+      });
+    } catch {
+      break;
+    }
+    if (translated === null || translated.length !== batch.length) break;
+    batch.forEach((index, position) => {
+      result[index] = translated[position] ?? null;
+    });
   }
-  if (result === null || result.length !== texts.length) return proposals;
   const patches = new Map<number, { title?: string; value?: string }>();
   slots.forEach((slot, position) => {
     const value = result[position];
-    if (value === null || value === undefined) return;
+    if (value === null) return;
     patches.set(slot.index, { ...patches.get(slot.index), [slot.kind]: value });
   });
   return proposals.map((proposal, index) => {
@@ -517,7 +534,9 @@ async function translateProse(
     if (patch === undefined) return proposal;
     return {
       ...proposal,
-      ...(patch.value === undefined ? {} : { value: patch.value }),
+      // Only a translated value is known to be in the reader's language; one
+      // the translator did not return is left in whatever language it came in.
+      ...(patch.value === undefined ? {} : { locale, value: patch.value }),
       ...(patch.title === undefined ? {} : { source: { ...proposal.source, title: patch.title } }),
     };
   });
@@ -687,9 +706,9 @@ async function persistCompletedJob(
               id, space_id, subject_type, subject_id, predicate, value_json,
               evidence_class, confidence_milli, status, observed_by_user_id,
               verified_by_user_id, verified_at, research_method, version,
-              created_at, updated_at, deleted_at
+              created_at, updated_at, deleted_at, locale
             ) VALUES (?, ?, 'wine', ?, ?, ?, 'researched', ?, 'proposed', NULL,
-              NULL, NULL, ?, 1, ?, ?, NULL)`,
+              NULL, NULL, ?, 1, ?, ?, NULL, ?)`,
           )
           .bind(
             factId,
@@ -701,6 +720,13 @@ async function persistCompletedJob(
             stored.proposal.researchMethod,
             now,
             now,
+            // Prose remembers its language so a reader in another one is served
+            // a translation. Only what the source or the translator vouched for
+            // is marked; a snippet that came back untranslated is not marked as
+            // being in the reader's language just because they asked in it.
+            TRANSLATED_FACT_PREDICATES.has(stored.proposal.predicate)
+              ? (stored.proposal.locale ?? null)
+              : null,
           ),
         database
           .prepare(
@@ -964,11 +990,19 @@ export async function regenerateNarrative(
           id, space_id, subject_type, subject_id, predicate, value_json,
           evidence_class, confidence_milli, status, observed_by_user_id,
           verified_by_user_id, verified_at, research_method, version,
-          created_at, updated_at, deleted_at
+          created_at, updated_at, deleted_at, locale
         ) VALUES (?, ?, 'wine', ?, 'research.summary', ?, 'researched', 700, 'proposed', NULL,
-          NULL, NULL, 'narrative.regenerate.v1', 1, ?, ?, NULL)`,
+          NULL, NULL, 'narrative.regenerate.v1', 1, ?, ?, NULL, ?)`,
       )
-      .bind(factId, options.spaceId, options.wineId, JSON.stringify(paragraph), now, now),
+      .bind(
+        factId,
+        options.spaceId,
+        options.wineId,
+        JSON.stringify(paragraph),
+        now,
+        now,
+        options.locale,
+      ),
     ...[...sourceIds].slice(0, 8).map((sourceId) =>
       database
         .prepare(
@@ -1216,11 +1250,19 @@ export async function regenerateTastingComparison(
           id, space_id, subject_type, subject_id, predicate, value_json,
           evidence_class, confidence_milli, status, observed_by_user_id,
           verified_by_user_id, verified_at, research_method, version,
-          created_at, updated_at, deleted_at
+          created_at, updated_at, deleted_at, locale
         ) VALUES (?, ?, 'wine', ?, 'tasting.comparison', ?, 'inferred', 600, 'proposed', NULL,
-          NULL, NULL, 'tasting.comparison.v1', 1, ?, ?, NULL)`,
+          NULL, NULL, 'tasting.comparison.v1', 1, ?, ?, NULL, ?)`,
       )
-      .bind(factId, options.spaceId, options.wineId, JSON.stringify(paragraph), now, now),
+      .bind(
+        factId,
+        options.spaceId,
+        options.wineId,
+        JSON.stringify(paragraph),
+        now,
+        now,
+        options.locale,
+      ),
     ...[...sourceIds].slice(0, 8).map((sourceId) =>
       database
         .prepare(

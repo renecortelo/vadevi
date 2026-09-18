@@ -34,6 +34,50 @@ export function extractStringArray(output: Record<string, unknown>): string[] | 
 }
 
 /**
+ * What one model call will take. A composed paragraph runs to 900 characters,
+ * so the per-text cap sits above it; the per-call cap keeps the reply inside
+ * `max_tokens`, because a reply cut short is a shorter array, and a shorter
+ * array is rejected whole.
+ */
+export const translationLimits = {
+  charactersPerCall: 6_000,
+  charactersPerText: 1_000,
+  textsPerCall: 16,
+} as const;
+
+/**
+ * Split texts into runs that fit one call each, as index groups in order.
+ *
+ * The adapter clips a call to its limits, and a caller that hands it more than
+ * that gets back fewer strings than it sent — a length mismatch, which it
+ * rightly treats as failure and keeps every original. Seven web notes (a title
+ * and a body each) plus the summary already exceeded sixteen, so a wine with
+ * more than a handful of sources was silently never translated. Callers batch
+ * with this and send each run on its own.
+ */
+export function translationBatches(texts: readonly string[]): number[][] {
+  const batches: number[][] = [];
+  let current: number[] = [];
+  let characters = 0;
+  texts.forEach((text, index) => {
+    const length = Math.min(text.length, translationLimits.charactersPerText);
+    if (
+      current.length > 0 &&
+      (current.length >= translationLimits.textsPerCall ||
+        characters + length > translationLimits.charactersPerCall)
+    ) {
+      batches.push(current);
+      current = [];
+      characters = 0;
+    }
+    current.push(index);
+    characters += length;
+  });
+  if (current.length > 0) batches.push(current);
+  return batches;
+}
+
+/**
  * Faithful translation via Workers AI. The prompt constrains the model to a pure,
  * order-preserving transform — never generation — and the output is validated to
  * be a same-length array; anything off returns null so the caller keeps the
@@ -47,18 +91,22 @@ export class CloudflareTranslationAdapter implements TranslationPort {
   ) {}
 
   async translate(input: TranslationRequest): Promise<(string | null)[] | null> {
-    const texts = input.texts.slice(0, 16).map((text) => text.slice(0, 600));
+    const texts = input.texts
+      .slice(0, translationLimits.textsPerCall)
+      .map((text) => text.slice(0, translationLimits.charactersPerText));
     if (texts.length === 0) return [];
     const language = languageNames[input.locale];
     try {
       const output = await this.ai.run(this.model, {
-        max_tokens: 3_000,
+        max_tokens: 4_000,
         messages: [
           {
             content:
               `You are a precise translator. Translate each string in the given JSON ` +
               `array into ${language}. Preserve the meaning exactly; never add, omit, ` +
               `or comment. If a string is already in ${language}, return it unchanged. ` +
+              `Keep proper names, and keep any "Label · Property: value" structure ` +
+              `with its separators, translating only the words. ` +
               `Reply with ONLY a JSON array of the translated strings, in the same ` +
               `order and of the same length. No markdown.`,
             role: "system",
@@ -75,7 +123,7 @@ export class CloudflareTranslationAdapter implements TranslationPort {
         return null;
       }
       return translated.map((value) => {
-        const sanitized = sanitizeExternalText(value, 600);
+        const sanitized = sanitizeExternalText(value, translationLimits.charactersPerText);
         return sanitized.value.length === 0 || sanitized.flaggedPromptLike ? null : sanitized.value;
       });
     } catch (error) {

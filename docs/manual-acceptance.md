@@ -102,7 +102,7 @@ Use your phone against the same preview URL.
 27. [x] Quick Log a wine one-handed. Judge whether the targets are comfortable,
         not just whether they work.
 28. [x] **Turn on airplane mode.** Open the installed app. The shell loads.
-29. [ x] Quick Log a wine while offline. It saves locally and shows a pending
+29. [x] Quick Log a wine while offline. It saves locally and shows a pending
         state.
 30. [x] Turn airplane mode off. The queued wine syncs, **exactly once** — check
         Wine Memory for duplicates.
@@ -175,7 +175,11 @@ records fine — which is itself worth one pass.
         asking you to choose an entity from a list, and comes back with a
         paragraph at the top and small "key → value" cards under "What we found".
 40. [ ] Read the paragraph and the cards **in your own language**. English text
-        here is a finding: translation runs when Workers AI is on.
+        here is a finding: translation runs when Workers AI is on. Then **switch
+        the language** in the top bar: the paragraph, the curiosities, the
+        pairings and the card headings all follow it, not only the labels. The
+        first switch to a language takes a few seconds — the evidence is being
+        translated, once — and every later one is instant.
 41. [ ] Check a card's **Source**: it expands to the publisher, the class, and
         the licence. That detail belongs there, not on the face of the card.
 42. [ ] **Discard** one card. It asks for confirmation, then the card goes and

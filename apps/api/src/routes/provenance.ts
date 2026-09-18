@@ -12,9 +12,11 @@ import {
   SourceResponseSchema,
   SpaceIdPathSchema,
   WineFactsPathSchema,
+  WineFactsQuerySchema,
   WineFactsResponseSchema,
 } from "@vadevi/contracts";
 
+import { createTranslationPort } from "../adapters/translation";
 import {
   acceptFact,
   createSource,
@@ -23,6 +25,7 @@ import {
   listWineFacts,
   rejectFact,
 } from "../repositories/provenance";
+import { reserveProviderBudget } from "../services/usage";
 import type { ApiEnvironment } from "../types";
 
 const IdempotencyHeadersSchema = z.object({
@@ -126,7 +129,7 @@ const listFactsRoute = createRoute({
   tags: ["Provenance"],
   summary: "List authorized wine facts, citations, and visible conflicts",
   security: [{ FirebaseBearer: [] }],
-  request: { params: WineFactsPathSchema },
+  request: { params: WineFactsPathSchema, query: WineFactsQuerySchema },
   responses: {
     200: {
       content: { "application/json": { schema: WineFactsResponseSchema } },
@@ -281,7 +284,26 @@ export function registerProvenanceRoutes(app: OpenAPIHono<ApiEnvironment>) {
 
   app.openapi(listFactsRoute, async (context) => {
     const params = context.req.valid("param");
+    const locale = context.req.valid("query").locale;
+    // Reading in a language the evidence was not written in may translate it,
+    // once per language. Each model call that takes is metered like the
+    // assistant's; at the cap the page still answers, in the written language.
+    const localization =
+      locale === undefined
+        ? undefined
+        : {
+            locale,
+            reserveModelCall: () =>
+              reserveProviderBudget(context.env.DB!, {
+                firebaseUid: context.get("principal").firebaseUid,
+                metric: "ai_language_calls",
+                nowIso: new Date().toISOString(),
+                spaceId: params.spaceId,
+              }),
+            translation: createTranslationPort(context.env),
+          };
     const response = await listWineFacts(context.env.DB!, {
+      ...(localization === undefined ? {} : { localization }),
       principal: context.get("principal"),
       spaceId: params.spaceId,
       wineId: params.wineId,

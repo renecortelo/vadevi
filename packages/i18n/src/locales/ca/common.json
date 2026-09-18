@@ -97,7 +97,10 @@
     "renameAction": "Reanomena l'Espai",
     "renameSaving": "Reanomenant…",
     "renameError": "No s'ha pogut reanomenar l'Espai. Torna-ho a provar.",
-    "renameConflict": "Algú altre ha reanomenat aquest Espai mentre escrivies. Recarrega i torna-ho a provar."
+    "renameConflict": "Algú altre ha reanomenat aquest Espai mentre escrivies. Recarrega i torna-ho a provar.",
+    "deleteAction": "Anar a Dades i privacitat",
+    "deleteBody": "{{name}} s’esborra des de Dades i privacitat, escrivint-ne el nom per confirmar. Hi ha un mes per desfer-ho abans que s’esborri de debò.",
+    "deleteTitle": "Esborrar aquest Espai"
   },
   "invitation": {
     "eyebrow": "Una invitació privada",
@@ -1063,7 +1066,7 @@
     "noticeRetention": "Els torns de l'assistent no es desen com a historial. Les auditories d'eines estan redactades i no conserven text dels missatges.",
     "noticeScope": "Els teus vins, tasts i fotos viuen a l'Espai que has triat. Només els veuen els membres actius d'aquest Espai.",
     "noticeTitle": "Què fa aquesta aplicació amb les teves dades",
-    "personalSpaceNote": "El teu Space personal s’esborra juntament amb el compte, més avall. Els Spaces de grup dels quals ets propietari s’esborren des d’aquí, un per un.",
+    "personalSpaceNote": "El teu Space personal s’esborra juntament amb el compte, més avall. Per esborrar un Space de grup del qual ets propietari, fes-lo actiu al selector de dalt i torna aquí: el botó apareix per a aquell Space.",
     "providerModes": "Proveïdor d'IA: {{ai}}. Proveïdor de recerca: {{research}}.",
     "retentionBody": "L'esborrat elimina les dades actives de l'aplicació i les fotos desades. Les còpies de seguretat gestionades pel proveïdor segueixen el seu propi calendari i no s'esborren a l'instant.",
     "retentionTitle": "Què fa i què no fa l'esborrat",

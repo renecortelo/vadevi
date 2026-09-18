@@ -246,6 +246,19 @@ export function SpaceSettingsPage() {
         </section>
       ) : null}
 
+      {detail.data.space.role === "owner" && detail.data.space.type !== "personal" ? (
+        // Deletion itself lives on the data-rights screen, behind the typed
+        // confirmation. This is where an owner comes to manage a Space, and it
+        // used to say nothing about how to end one — which read as "you cannot".
+        <section aria-labelledby="delete-space-pointer-title" className="settings-card">
+          <h2 id="delete-space-pointer-title">{t("spaces.deleteTitle")}</h2>
+          <p>{t("spaces.deleteBody", { name: detail.data.space.name })}</p>
+          <Link className="action-link action-link--secondary" to="/settings/data">
+            {t("spaces.deleteAction")}
+          </Link>
+        </section>
+      ) : null}
+
       {status === "copied" ? <p role="status">{t("spaces.copied")}</p> : null}
       {status === "error" ? (
         <p className="form-error" role="alert">

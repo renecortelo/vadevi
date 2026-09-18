@@ -97,7 +97,10 @@
     "renameAction": "Space hernoemen",
     "renameSaving": "Hernoemen…",
     "renameError": "De Space kon niet worden hernoemd. Probeer het opnieuw.",
-    "renameConflict": "Iemand anders hernoemde deze Space terwijl je typte. Herlaad en probeer opnieuw."
+    "renameConflict": "Iemand anders hernoemde deze Space terwijl je typte. Herlaad en probeer opnieuw.",
+    "deleteAction": "Naar Gegevens en privacy",
+    "deleteBody": "{{name}} verwijder je via Gegevens en privacy, door de naam te typen ter bevestiging. Je hebt een maand om het ongedaan te maken voordat het echt wordt verwijderd.",
+    "deleteTitle": "Deze Space verwijderen"
   },
   "invitation": {
     "eyebrow": "Een privé-uitnodiging",
@@ -1063,7 +1066,7 @@
     "noticeRetention": "Assistentbeurten worden niet als gespreksgeschiedenis bewaard. Auditlogs van tools zijn geredigeerd en bevatten geen berichttekst.",
     "noticeScope": "Uw wijnen, proeverijen en foto's staan in de Ruimte die u koos. Alleen de actieve leden daarvan zien ze.",
     "noticeTitle": "Wat deze app met uw gegevens doet",
-    "personalSpaceNote": "Je persoonlijke Space wordt samen met je account verwijderd, hieronder. Groeps-Spaces waarvan je eigenaar bent verwijder je hier, één voor één.",
+    "personalSpaceNote": "Je persoonlijke Space wordt met je account verwijderd, hieronder. Voor een groeps-Space van jou: kies die bovenaan in de schakelaar en kom hier terug — dan verschijnt de knop.",
     "providerModes": "AI-aanbieder: {{ai}}. Onderzoeksaanbieder: {{research}}.",
     "retentionBody": "Verwijderen wist de actieve toepassingsgegevens en opgeslagen foto's. Back-ups van de aanbieder volgen hun eigen bewaartermijn en worden niet direct gewist.",
     "retentionTitle": "Wat verwijderen wel en niet doet",
