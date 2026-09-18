@@ -164,3 +164,52 @@ describe("cooking from outside Europe", () => {
     expect(names("pad thai de gambas")[0]).toBe("Off-dry aromatic white");
   });
 });
+
+describe("dishes named in the eight locales", () => {
+  it("knows a regional dish from each language it ships in", () => {
+    for (const dish of [
+      "fabada asturiana",
+      "escalivada",
+      "cassoulet",
+      "sauerbraten",
+      "lasagna",
+      "stamppot",
+      "bacalhau à brás",
+      "fish and chips",
+    ]) {
+      expect(profileDish(dish).terms.length, dish).toBeGreaterThan(0);
+    }
+  });
+
+  it("knows the generic words, not only the species", () => {
+    // Naming every fish and no word for "fish" left "fish and chips" with no
+    // protein at all, and it was answered as if it were thin air.
+    expect(profileDish("fish and chips").protein).toBe("lean_fish");
+    expect(profileDish("carne asada").protein).toBe("red_meat");
+  });
+
+  it("sends a meat lasagne to a medium red, not to a white", () => {
+    // Umami reduces the tannin you want; it does not forbid it. Capping it flat
+    // sent lasagne and soy-glazed chicken to the same wine, and lasagne wants a
+    // Sangiovese.
+    expect(names("lasagna")[0]).toBe("Medium-bodied red");
+    expect(names("pollo teriyaki")[0]).not.toContain("red");
+  });
+
+  it("puts a sour braise where its vinegar belongs", () => {
+    expect(profileDish("sauerbraten").acidic).toBe(true);
+    expect(profileDish("sauerbraten").protein).toBe("red_meat");
+  });
+
+  it("reads the coals in escalivada and calçots", () => {
+    // Both arrive off the fire, which is why the Catalan answer is a young red
+    // rather than the white the vegetables alone would have suggested.
+    expect(profileDish("calçots").smoky).toBe(true);
+    expect(names("escalivada")[0]).toContain("red");
+  });
+
+  it("does not let carbonara pretend it has tomato in it", () => {
+    expect(profileDish("carbonara").acidic).toBe(false);
+    expect(profileDish("carbonara").umami).toBe(true);
+  });
+});

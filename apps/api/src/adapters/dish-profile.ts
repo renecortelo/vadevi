@@ -136,6 +136,20 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
       "funghi asparago carciofo groente sla paddenstoel asperge artisjok salada cogumelo espargo " +
       "alcachofra",
   },
+  // The generic words. Naming every species and not the category left
+  // "fish and chips" with no protein at all.
+  {
+    contribution: { intensity: 2, protein: "lean_fish", richness: 2 },
+    terms: "fish pescado peix peixe poisson fisch pesce vis pescados mariscos seafood",
+  },
+  {
+    contribution: { intensity: 4, protein: "red_meat", richness: 4 },
+    terms: "meat carne viande fleisch vlees",
+  },
+  {
+    contribution: { intensity: 3, protein: "white_meat", richness: 3, umami: true },
+    terms: "carbonara",
+  },
   {
     contribution: { intensity: 3, protein: "legume", richness: 3 },
     terms:
@@ -271,6 +285,119 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
   {
     contribution: { intensity: 4, richness: 5 },
     terms: "burger hamburguesa cheeseburger hamburger gumbo jambalaya pastrami",
+  },
+
+  // ---------------------------------------------------------------------
+  // Named dishes from the eight locales this ships in.
+  //
+  // The words a reader actually types. Each is one distinctive token, never a
+  // phrase, because the matcher works on tokens — "coq au vin" is listed as
+  // `bourguignon`-style single words or not at all. Where a dish is famous for
+  // what was done to it rather than what is in it, the method axes carry it and
+  // the protein is left to the ingredients.
+  // ---------------------------------------------------------------------
+
+  // Long braises. Weight and softened collagen, which is where tannin belongs.
+  {
+    contribution: { intensity: 5, protein: "red_meat", richness: 5 },
+    terms: "bourguignon ossobuco osobuco rabo wellington shepherd goulash gulasch stroganoff",
+  },
+  // The sour braises: vinegar or wine in the pot changes what the wine must do.
+  {
+    contribution: { acidic: true, intensity: 4, protein: "red_meat", richness: 4 },
+    terms: "sauerbraten hachee",
+  },
+
+  // Cured pork and charcuterie: salt and age, which is umami by another name.
+  {
+    contribution: { intensity: 4, protein: "white_meat", richness: 4, umami: true },
+    terms:
+      "jamon prosciutto bresaola speck presunto pancetta guanciale porchetta leitao bifana " +
+      "botifarra alheira secallona fuet",
+  },
+  {
+    contribution: { intensity: 4, protein: "white_meat", richness: 4, smoky: true, spicy: true },
+    terms: "chorizo chourico sobrasada morcilla",
+  },
+
+  // Bean and pulse dishes heavy enough to want a red.
+  {
+    contribution: { intensity: 4, protein: "legume", richness: 5 },
+    terms: "fabada cassoulet cocido escudella erwtensoep potaje acorda",
+  },
+
+  // Cheese as the dish, not the garnish.
+  {
+    contribution: { intensity: 4, protein: "cheese", richness: 5 },
+    terms: "tartiflette raclette fondue fonduta parmigiana kasespatzle",
+  },
+  {
+    contribution: { acidic: true, intensity: 3, protein: "cheese", richness: 3, umami: true },
+    terms: "caprese margherita pizza",
+  },
+
+  // Fish stews and the cold salt-cod salads.
+  {
+    contribution: { intensity: 3, protein: "lean_fish", richness: 3 },
+    terms: "bouillabaisse suquet cataplana marmitako cacciucco caldeirada zarzuela",
+  },
+  {
+    contribution: { acidic: true, intensity: 2, protein: "lean_fish", richness: 2 },
+    terms: "esqueixada brandada",
+  },
+
+  // Vegetables, and the two Catalan ones that arrive off the coals.
+  {
+    contribution: { acidic: true, intensity: 2, protein: "vegetable", richness: 2 },
+    terms: "gazpacho salmorejo ratatouille pisto samfaina trinxat minestrone boerenkool",
+  },
+  {
+    contribution: { intensity: 3, protein: "vegetable", richness: 3, smoky: true },
+    terms: "escalivada calcots",
+  },
+
+  // Rice and pasta. A tomato ragù is sharp and savoury before it is meat.
+  {
+    contribution: { acidic: true, intensity: 4, protein: "red_meat", richness: 4, umami: true },
+    terms: "bolognese ragu lasagna lasagne canelons cannelloni",
+  },
+  {
+    contribution: { acidic: true, intensity: 4, protein: "white_meat", richness: 4, umami: true },
+    terms: "amatriciana puttanesca",
+  },
+  {
+    contribution: { intensity: 3, richness: 3 },
+    terms: "paella risotto fideua gnocchi polenta arroz",
+  },
+
+  // Fried until it is mostly fat, which is what the bubbles are for.
+  {
+    contribution: { intensity: 4, richness: 5 },
+    terms:
+      "schnitzel croquetas croquete bitterballen kroket arancini francesinha pasty chips " +
+      "buñuelos bunuelos",
+  },
+
+  // Sausage and the sour cabbage that usually comes with it.
+  {
+    contribution: { intensity: 4, protein: "white_meat", richness: 4 },
+    terms: "bratwurst bangers eisbein kassler stamppot hutspot rookworst frikandel",
+  },
+  {
+    contribution: { acidic: true, intensity: 4, protein: "white_meat", richness: 4 },
+    terms: "choucroute sauerkraut chucrut",
+  },
+  {
+    contribution: { intensity: 4, protein: "white_meat", richness: 4, spicy: true },
+    terms: "currywurst",
+  },
+
+  // Puddings that the dessert entry would otherwise miss by name.
+  {
+    contribution: { protein: "none", sweet: true },
+    terms:
+      "tiramisu strudel tatin trifle toffee stroopwafel speculaas catalana panacotta pavlova " +
+      "clafoutis profiterol churros",
   },
 
   // Flavours that override the protein.
