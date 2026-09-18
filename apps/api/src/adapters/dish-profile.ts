@@ -32,10 +32,20 @@ export type DishProfile = Readonly<{
   protein: DishProtein;
   /** Fat and unctuousness, 1–5. This is what acidity is for. */
   richness: number;
+  /** Grilled over wood, smoked, chipotle: wants ripe fruit, not austerity. */
+  smoky: boolean;
   spicy: boolean;
   sweet: boolean;
   /** Words that were recognised, so a caller can say what it understood. */
   terms: string[];
+  /**
+   * Soy, miso, fish sauce, mushrooms, aged cheese, tomato concentrate.
+   *
+   * The axis European home cooking barely needs and half the world cooks on.
+   * Umami makes tannin taste harder and drier than it is, which is why a
+   * Cabernet fights teriyaki and a fruity low-tannin red does not.
+   */
+  umami: boolean;
 }>;
 
 type Contribution = Readonly<{
@@ -43,8 +53,10 @@ type Contribution = Readonly<{
   intensity?: number;
   protein?: DishProtein;
   richness?: number;
+  smoky?: boolean;
   spicy?: boolean;
   sweet?: boolean;
+  umami?: boolean;
 }>;
 
 /**
@@ -160,6 +172,107 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
       "grelhado churrasco",
   },
 
+  // ---------------------------------------------------------------------
+  // The rest of the world.
+  //
+  // Dish names contribute flavour and method; the protein is still decided by
+  // the ingredient words, so "tacos de pollo" and "chicken tikka" land on white
+  // meat without either dish name claiming it. Much of this vocabulary is
+  // loanwords that are spelled the same in all eight locales, which is why world
+  // cooking is cheaper to cover here than European home cooking was.
+  // ---------------------------------------------------------------------
+
+  // Soy, miso, fish sauce, cured umami. The axis that decides whether tannin
+  // works at all, and the reason a Cabernet fights teriyaki.
+  {
+    contribution: { umami: true },
+    terms:
+      "soy soja soia sojasauce shoyu tamari teriyaki miso dashi umami ponzu hoisin oyster " +
+      "worcestershire anchoa anchovy parmesano parmesan parmigiano pecorino manchego curado " +
+      "cured seco trufa truffle tartufo trufel",
+  },
+  {
+    contribution: { intensity: 3, umami: true },
+    terms:
+      "mushroom seta setas champinon bolet funghi shiitake porcini boletus paddenstoel cogumelo pilz",
+  },
+
+  // Smoke and char want ripe fruit, not austerity.
+  {
+    contribution: { intensity: 4, smoky: true },
+    terms:
+      "smoked smoky barbecue chipotle brisket ribs ahumado ahumada fumado defumado fume fumee " +
+      "geraeuchert geraucht affumicato gerookt churrasco costillas asador",
+  },
+
+  // East and Southeast Asia.
+  {
+    contribution: { intensity: 2, protein: "lean_fish", richness: 2, umami: true },
+    terms: "sushi sashimi nigiri maki temaki poke",
+  },
+  {
+    contribution: { intensity: 3, richness: 3, umami: true },
+    terms: "ramen pho udon soba noodles fideos yakisoba wok bibimbap bulgogi gochujang kimchi",
+  },
+  {
+    contribution: { intensity: 3, richness: 4, umami: true },
+    terms:
+      "teriyaki yakitori katsu tonkatsu tempura karaage gyoza dumpling dumplings dimsum bao baozi wonton",
+  },
+  {
+    contribution: { intensity: 4, richness: 4, spicy: true },
+    terms: "thai satay rendang laksa massaman panang sambal nasi mie",
+  },
+
+  // South Asia.
+  {
+    contribution: { intensity: 4, richness: 4, spicy: true },
+    terms: "tandoori tikka masala vindaloo madras jalfrezi biryani rogan",
+  },
+  { contribution: { intensity: 3, richness: 4 }, terms: "korma paneer dal daal naan raita lassi" },
+
+  // Middle East and North Africa.
+  {
+    contribution: { intensity: 3, protein: "legume", richness: 3 },
+    terms: "hummus houmous falafel tabbouleh baba tahini",
+  },
+  {
+    contribution: { intensity: 4, richness: 4 },
+    terms: "tagine tajine couscous cuscus kuskus harira",
+  },
+
+  // Latin America.
+  {
+    contribution: { intensity: 4, richness: 3 },
+    terms: "taco tacos enchilada enchiladas chilaquiles tostada tostadas",
+  },
+  {
+    contribution: { intensity: 4, protein: "white_meat", richness: 4 },
+    terms: "carnitas cochinita pozole pibil",
+  },
+  {
+    contribution: { intensity: 4, protein: "red_meat", richness: 4 },
+    terms: "barbacoa birria asada",
+  },
+  { contribution: { intensity: 4, richness: 4, umami: true }, terms: "mole" },
+  {
+    contribution: { intensity: 3, richness: 3 },
+    terms:
+      "tamal tamales arepa arepas quesadilla empanada empanadas guacamole chimichurri feijoada",
+  },
+
+  // Sub-Saharan Africa.
+  {
+    contribution: { intensity: 4, richness: 3, spicy: true },
+    terms: "jollof berbere piri suya injera doro",
+  },
+
+  // North America.
+  {
+    contribution: { intensity: 4, richness: 5 },
+    terms: "burger hamburguesa cheeseburger hamburger gumbo jambalaya pastrami",
+  },
+
   // Flavours that override the protein.
   {
     contribution: { spicy: true },
@@ -188,9 +301,11 @@ const neutral: DishProfile = {
   intensity: 3,
   protein: "none",
   richness: 3,
+  smoky: false,
   spicy: false,
   sweet: false,
   terms: [],
+  umami: false,
 };
 
 /**
@@ -229,7 +344,7 @@ export function profileDish(dish: string): DishProfile {
     if (hit === undefined) continue;
     profile.terms.push(hit);
 
-    const { acidic, intensity, protein, richness, spicy, sweet } = entry.contribution;
+    const { acidic, intensity, protein, richness, smoky, spicy, sweet, umami } = entry.contribution;
     if (protein !== undefined && (!proteinDecided || protein === "none")) {
       profile = { ...profile, protein };
       proteinDecided = true;
@@ -239,8 +354,10 @@ export function profileDish(dish: string): DishProfile {
     if (richness !== undefined)
       profile = { ...profile, richness: Math.max(profile.richness, richness) };
     if (acidic === true) profile = { ...profile, acidic: true };
+    if (smoky === true) profile = { ...profile, smoky: true };
     if (spicy === true) profile = { ...profile, spicy: true };
     if (sweet === true) profile = { ...profile, sweet: true };
+    if (umami === true) profile = { ...profile, umami: true };
   }
 
   return profile;
