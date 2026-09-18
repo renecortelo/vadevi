@@ -255,6 +255,7 @@ export const UsageMetricSchema = z.enum([
   "barcode_lookups",
   "price_lookups",
   "ocr_reads",
+  "websearch_calls",
 ]);
 
 export const UsageReportResponseSchema = z

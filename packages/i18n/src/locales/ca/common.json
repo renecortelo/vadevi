@@ -1039,9 +1039,10 @@
     "usageResets": "Els comptadors es reinicien el {{date}}.",
     "metric": {
       "ai_language_calls": "Llenguatge de l'assistent",
-      "research_lookups": "Recerca externa",
       "barcode_lookups": "Consulta de codi de barres",
-      "price_lookups": "Consulta de preus"
+      "price_lookups": "Consulta de preus",
+      "research_lookups": "Recerca externa",
+      "websearch_calls": "Cerca a la web oberta"
     },
     "scope": {
       "global": "Tot el desplegament",

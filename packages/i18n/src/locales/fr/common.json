@@ -1039,9 +1039,10 @@
     "usageResets": "Les compteurs sont remis à zéro le {{date}}.",
     "metric": {
       "ai_language_calls": "Langage de l'assistant",
-      "research_lookups": "Recherche externe",
       "barcode_lookups": "Lecture de code-barres",
-      "price_lookups": "Recherche de prix"
+      "price_lookups": "Recherche de prix",
+      "research_lookups": "Recherche externe",
+      "websearch_calls": "Recherche sur le web ouvert"
     },
     "scope": {
       "global": "Tout le déploiement",

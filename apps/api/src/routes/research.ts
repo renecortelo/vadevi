@@ -173,9 +173,24 @@ export function registerResearchRoutes(app: OpenAPIHono<ApiEnvironment>) {
         nowIso: new Date().toISOString(),
         spaceId: params.spaceId,
       }));
+    // Brave is the only provider in this flow that bills, so it carries its own
+    // ceiling rather than sharing one with Wikidata, Open Food Facts and
+    // Nominatim, which are free. Past it the run continues without open-web
+    // discovery — the same degraded shape as a deployment that never enabled it.
+    const webSearchWithinBudget =
+      ports.webSearch === null ||
+      (await reserveProviderBudget(context.env.DB!, {
+        firebaseUid: context.get("principal").firebaseUid,
+        metric: "websearch_calls",
+        nowIso: new Date().toISOString(),
+        spaceId: params.spaceId,
+      }));
+
     const result = await createResearchJob(context.env.DB!, {
       idempotencyKey: context.req.valid("header")["Idempotency-Key"],
-      ports: withinBudget ? ports : { knowledge: null, product: null, providerMode: "none" },
+      ports: withinBudget
+        ? { ...ports, webSearch: webSearchWithinBudget ? (ports.webSearch ?? null) : null }
+        : { knowledge: null, product: null, providerMode: "none" },
       principal: context.get("principal"),
       request: context.req.valid("json"),
       requestId: context.get("requestId"),

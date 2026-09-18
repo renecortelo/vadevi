@@ -4,22 +4,58 @@ import type { WorkerBindings } from "../types";
 
 /** Mirrors `UsageMetricSchema`; declared locally so budget lookups stay exhaustive. */
 export type UsageMetric =
-  "ai_language_calls" | "barcode_lookups" | "ocr_reads" | "price_lookups" | "research_lookups";
+  | "ai_language_calls"
+  | "barcode_lookups"
+  | "ocr_reads"
+  | "price_lookups"
+  | "research_lookups"
+  | "websearch_calls";
 
 /**
- * Application budgets sit below the documented provider free allocations in
- * §16.1, so the application stops before a provider does. Reaching a cap
- * degrades the feature; it never upgrades a plan, retries indefinitely, or
- * switches to a paid model.
+ * Application budgets sized to the providers' free allowances, so the
+ * application stops before a bill starts. Reaching a cap degrades the feature;
+ * it never upgrades a plan, retries indefinitely, or switches to a paid model.
+ *
+ * This comment used to claim these sat below the free allowances. A recheck
+ * against the providers' live pricing on 2026-09-17 found they did not, which is
+ * why the numbers below are not the ones this file shipped with.
+ *
+ * **Workers AI is one shared pool of 10,000 Neurons a day**, drawn on by both
+ * `ai_language_calls` and `ocr_reads`, and Neurons are priced per model. These
+ * two are therefore sized together, against the deployment's configured models,
+ * with the per-call cost rounded up roughly twofold because a long conversation
+ * costs more Neurons than a short one and this counts calls, not Neurons:
+ *
+ * - `ai_language_calls` at 120/day: ~30 Neurons a reply on
+ *   `@cf/meta/llama-3.1-8b-instruct-fp8-fast` → ~3,600.
+ * - `ocr_reads` at 80/day: ~45 Neurons a read on the 11b vision model → ~3,600.
+ *
+ * That is ~7,200 of 10,000, leaving room for the estimate to be wrong. A
+ * deployment on a larger text model must lower `ai_language_calls` to match: the
+ * 70b model costs about six times as much per reply, and 120 of those would
+ * overrun the day's allowance on their own.
+ *
+ * **`websearch_calls` is separate from `research_lookups` on purpose.** Brave is
+ * the only provider in the research flow that bills — $5 of monthly credit
+ * against $5 per 1,000 requests, so about 1,000 a month — while Wikidata, Open
+ * Food Facts and Nominatim are free. A shared cap tight enough for Brave would
+ * throttle venue lookups, which are the most frequent thing a reader does. A
+ * daily cap bounds the month: 25 a day cannot exceed 775 in the longest one.
+ *
+ * `price_lookups` has no consumer. Price lookup is unbuilt — `priceLookup` is
+ * hardcoded false in the bootstrap — but the metric is part of the published
+ * usage contract and its label is translated in every catalogue, so it stays
+ * rather than churning contracts and eight locales for a dead number.
  */
 type Budget = { global: number; user: number };
 
 export const dailyBudgets = {
-  ai_language_calls: { global: 1_000, user: 200 },
+  ai_language_calls: { global: 120, user: 30 },
   barcode_lookups: { global: 500, user: 60 },
-  ocr_reads: { global: 300, user: 40 },
+  ocr_reads: { global: 80, user: 20 },
   price_lookups: { global: 500, user: 60 },
   research_lookups: { global: 300, user: 40 },
+  websearch_calls: { global: 25, user: 10 },
 } as const satisfies Record<UsageMetric, Budget>;
 
 export const warningThreshold = 0.7;

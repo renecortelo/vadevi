@@ -276,44 +276,64 @@ photograph, and Vicenç's language replies.
 Every provider call is metered and refused past a daily budget, per member and
 across the deployment:
 
-| Metric                              | Per member | Whole deployment |
-| ----------------------------------- | ---------- | ---------------- |
-| Label reads (OCR)                   | 40         | 300              |
-| Barcode lookups                     | 60         | 500              |
-| Vicenç and narrative (AI text)      | 200        | 1,000            |
-| Research lookups (incl. web search) | 40         | 300              |
-| Price lookups                       | 60         | 500              |
+| Metric                                   | Per member | Whole deployment |
+| ---------------------------------------- | ---------- | ---------------- |
+| Label reads (OCR)                        | 20         | 80               |
+| Vicenç and narrative (AI text)           | 30         | 120              |
+| Open-web search (Brave)                  | 10         | 25               |
+| Research lookups (Wikidata, OFF, venues) | 40         | 300              |
+| Barcode lookups                          | 60         | 500              |
+| Price lookups (metric only; not built)   | 60         | 500              |
 
 These are hard caps, not warnings: past them the feature degrades to manual
 entry rather than continuing to spend. Warnings appear at 70% and 90%.
 
 ### The caps your providers enforce, which are not the same thing
 
-**These budgets are not sized to any provider's free tier, and on the default
-models the AI one is far above it.** Checked 17 September 2026:
+**The budgets above are sized to these allowances, so a default deployment stays
+free.** They were not, until a recheck on 17 September 2026 found the AI budget
+about nine times the allowance and the published table listing numbers the code
+never had. What the providers give:
 
 - **Workers AI: 10,000 Neurons per day**, free, and it is a **single shared
-  pool** — OCR and assistant replies draw from the same allowance. Neurons are
-  priced per model. On `@cf/meta/llama-3.3-70b-instruct-fp8-fast` a reply of
-  roughly 1,500 input and 250 output tokens costs about 91 Neurons, so the free
-  day is about 110 replies; the `1,000` budget above is roughly nine times that.
-  `@cf/meta/llama-3.1-8b-instruct-fp8-fast` costs about 15 Neurons a reply, or
-  about 670 a day. Label OCR on the 11b vision model is about 22 Neurons a read,
-  so its own 300 fits — until the assistant has emptied the shared pool first.
+  pool** — OCR and assistant replies draw from the same allowance, so the two
+  budgets above are sized together rather than each against 10,000. Neurons are
+  priced per model, which makes the model choice part of the cost. On
+  `@cf/meta/llama-3.1-8b-instruct-fp8-fast` a reply of roughly 1,500 input and
+  250 output tokens costs about 15 Neurons; the 11b vision model is about 22 a
+  label read. At the budgets above that is roughly 7,200 Neurons on a day that
+  hits every cap, leaving room for the estimate to be wrong.
+
+  **Changing `AI_MODEL` changes the arithmetic.**
+  `@cf/meta/llama-3.3-70b-instruct-fp8-fast` costs about 91 Neurons a reply —
+  six times as much — so about 110 replies is the whole free day. Pick a larger
+  model and you must lower `ai_language_calls` to match, or start paying.
+
 - **Brave Search: $5 of credit each month against $5 per 1,000 requests**, so
-  about 1,000 requests a month, near enough 33 a day. The research budget above
-  is 300 a day.
+  about 1,000 requests a month, near enough 33 a day. This is why open-web
+  search has a budget of its own rather than sharing `research_lookups` with the
+  free providers: a cap tight enough for Brave would throttle venue lookups,
+  which readers do far more often. A daily cap bounds the month — 25 a day
+  cannot exceed 775 in the longest one.
+
 - **Nominatim, OpenStreetMap tiles, Wikidata, Open Food Facts:** free, with
   usage policies rather than quotas. The application stays under them with its
   own rate limits and caches.
+
+- **Food-and-wine pairing has no free provider.** SommelierX, the one this
+  supports, gives 10 recommendations a month on its free plan, which any real
+  use passes in a day. `PAIRING_PROVIDER` therefore stays `none` unless you have
+  terms of your own. Dish ideas _for_ a wine still work without it: that path
+  runs on Workers AI from the wine's own recorded attributes.
 
 What happens past the free allowance depends on your plan. On **Workers Free**,
 Workers AI requests simply fail, and the application degrades to manual entry —
 annoying, never billed. On **Workers Paid**, you are charged $0.011 per 1,000
 Neurons beyond the allowance. Nothing here escalates to a paid model on its own;
-§12.5 forbids it. But a budget above the free allowance is a bill waiting for a
-busy day, so set these to what you are willing to pay for, not to what the
-application ships with.
+§12.5 forbids it. The budgets above are set so that neither happens, but they
+count calls rather than Neurons, so treat them as a close bound and not a
+guarantee: a deployment that must never be billed belongs on Workers Free, where
+the platform enforces what the budget only estimates.
 
 Recheck this table on the day you enable anything: providers change pricing, and
 Brave changed to this credit model since the first review of it.
