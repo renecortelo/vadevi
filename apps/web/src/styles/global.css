@@ -3593,9 +3593,16 @@ p {
 }
 
 @media (max-width: 44rem) {
+  /* Stacked. The text block's flex-basis is a WIDTH on a wide screen; in a
+     column it became a height, and the heading grew a 24rem hole between
+     the sentence and the links. In a column the block sizes to its text. */
   .phase5-heading {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .phase5-heading > div {
+    flex: 0 0 auto;
   }
 }
 
