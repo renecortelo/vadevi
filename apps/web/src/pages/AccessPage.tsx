@@ -113,7 +113,7 @@ export function AccessPage() {
       </section>
 
       <form className="settings-card field-stack" onSubmit={(event) => void add(event)}>
-        <h2>{t("access.addAction")}</h2>
+        <h2>{t("access.addTitle")}</h2>
         <label htmlFor="access-email">{t("access.emailLabel")}</label>
         <input
           autoComplete="off"

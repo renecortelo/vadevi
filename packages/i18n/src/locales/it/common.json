@@ -1138,6 +1138,7 @@
     "addedOn": "Aggiunto il {{date}}",
     "loadError": "Impossibile caricare l’elenco.",
     "saveError": "Impossibile salvare la modifica. Riprova.",
-    "removeConfirm": "Rimuovere {{email}}? Non potrà entrare finché non lo aggiungi di nuovo."
+    "removeConfirm": "Rimuovere {{email}}? Non potrà entrare finché non lo aggiungi di nuovo.",
+    "addTitle": "Aggiungi un’e-mail"
   }
 }

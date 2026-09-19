@@ -1138,6 +1138,7 @@
     "addedOn": "Ajouté le {{date}}",
     "loadError": "La liste n’a pas pu être chargée.",
     "saveError": "La modification n’a pas pu être enregistrée. Réessayez.",
-    "removeConfirm": "Retirer {{email}} ? Cette personne ne pourra plus se connecter tant qu’elle n’est pas rajoutée."
+    "removeConfirm": "Retirer {{email}} ? Cette personne ne pourra plus se connecter tant qu’elle n’est pas rajoutée.",
+    "addTitle": "Ajouter un e-mail"
   }
 }

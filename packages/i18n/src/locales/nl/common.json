@@ -1138,6 +1138,7 @@
     "addedOn": "Toegevoegd op {{date}}",
     "loadError": "De lijst kon niet worden geladen.",
     "saveError": "De wijziging kon niet worden opgeslagen. Probeer het opnieuw.",
-    "removeConfirm": "{{email}} verwijderen? Inloggen kan pas weer na opnieuw toevoegen."
+    "removeConfirm": "{{email}} verwijderen? Inloggen kan pas weer na opnieuw toevoegen.",
+    "addTitle": "E-mail toevoegen"
   }
 }

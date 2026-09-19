@@ -1138,6 +1138,7 @@
     "addedOn": "Adicionado a {{date}}",
     "loadError": "Não foi possível carregar a lista.",
     "saveError": "Não foi possível guardar a alteração. Tente de novo.",
-    "removeConfirm": "Remover {{email}}? Não poderá entrar até voltar a ser adicionado."
+    "removeConfirm": "Remover {{email}}? Não poderá entrar até voltar a ser adicionado.",
+    "addTitle": "Adicionar um e-mail"
   }
 }

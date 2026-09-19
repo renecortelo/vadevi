@@ -1138,6 +1138,7 @@
     "addedOn": "Added {{date}}",
     "loadError": "The list could not be loaded.",
     "saveError": "The change could not be saved. Try again.",
-    "removeConfirm": "Remove {{email}}? They will not be able to sign in again until re-added."
+    "removeConfirm": "Remove {{email}}? They will not be able to sign in again until re-added.",
+    "addTitle": "Add an e-mail"
   }
 }
