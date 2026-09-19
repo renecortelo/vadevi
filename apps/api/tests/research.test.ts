@@ -1178,6 +1178,13 @@ describe("bounded wine research jobs", () => {
                 predicate: "curiosity.highlight",
                 researchMethod: "wikidata.highlight.v1",
                 source,
+                value: "Tempranillo · country of origin: Spain",
+              },
+              {
+                confidenceMilli: 400,
+                predicate: "curiosity.note",
+                researchMethod: "web_search.v1",
+                source,
                 value: "The producer describes it as ripe and full-bodied.",
               },
             ],
@@ -1263,6 +1270,9 @@ describe("bounded wine research jobs", () => {
     });
     expect(outcome).toBe("ok");
     expect(sawSources).toContain("The producer describes it as ripe and full-bodied.");
+    // A data point — a country, a founding year — is not something a tasting
+    // can be set against, and it used to reach the paragraph anyway.
+    expect(sawSources).not.toContain("Tempranillo · country of origin: Spain");
     // The reader's own words travel; Ana's score does too, but never her prose.
     const tastingText = sawTasting.join(" || ");
     expect(tastingText).toContain("Me pareció más ligero");

@@ -29,7 +29,11 @@ export type UsageMetric =
  * not exist in the account fails every call rather than failing to deploy.
  *
  * - `ai_language_calls` at 60/day: ~91 Neurons a reply on
- *   `@cf/meta/llama-3.3-70b-instruct-fp8-fast` → ~5,500.
+ *   `@cf/meta/llama-3.3-70b-instruct-fp8-fast` → ~5,500. The per-member share
+ *   is 40 of those: with evidence translation drawing on the same metric, a
+ *   member reading a few wines in two languages spent 20 before lunch and
+ *   found Vicenç answering "the AI could not reply" for the rest of the day.
+ *   The deployment cap is what bounds the cost; the member cap only shares it.
  * - `ocr_reads` at 80/day: ~45 Neurons a read on the 11b vision model → ~3,600.
  *
  * That is ~9,100 of 10,000. Tighter than it looks, because the per-call figures
@@ -64,7 +68,7 @@ export type UsageMetric =
 type Budget = { global: number; user: number };
 
 export const dailyBudgets = {
-  ai_language_calls: { global: 60, user: 20 },
+  ai_language_calls: { global: 60, user: 40 },
   barcode_lookups: { global: 500, user: 60 },
   ocr_reads: { global: 80, user: 20 },
   price_lookups: { global: 500, user: 60 },

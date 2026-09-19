@@ -31,12 +31,18 @@ type ChatTurn = {
   status: "done" | "error" | "pending";
 };
 
-function loadChat(): ChatTurn[] {
+/**
+ * The chat kept for this Space, or nothing. A conversation is about one Space's
+ * wines: an answer given in the couple's cellar has no place in the tasting
+ * group's, and the wine it was about is not even visible there. So the saved
+ * chat remembers which Space it belongs to and is dropped for any other.
+ */
+function loadChat(spaceId: string): ChatTurn[] {
   try {
     const raw = globalThis.localStorage?.getItem(chatStorageKey);
     if (raw === null || raw === undefined) return [];
-    const parsed = JSON.parse(raw) as { savedAt: number; turns: ChatTurn[] };
-    if (Date.now() - parsed.savedAt > chatTtlMs) {
+    const parsed = JSON.parse(raw) as { savedAt: number; spaceId?: string; turns: ChatTurn[] };
+    if (Date.now() - parsed.savedAt > chatTtlMs || parsed.spaceId !== spaceId) {
       globalThis.localStorage?.removeItem(chatStorageKey);
       return [];
     }
@@ -349,10 +355,21 @@ export function AssistantPage() {
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const [message, setMessage] = useState("");
-  const [turns, setTurns] = useState<ChatTurn[]>(() => loadChat());
+  const spaceId = bootstrap.data.user.activeSpaceId;
+  const [turns, setTurns] = useState<ChatTurn[]>(() => loadChat(spaceId));
+  // The switcher is in the top bar, so the Space can change under this screen
+  // without it unmounting. The conversation goes with the Space it was about.
   const [draft, setDraft] = useState<ActionDraft | null>(null);
   const [drafting, setDrafting] = useState(false);
   const [draftError, setDraftError] = useState(false);
+  const chatSpaceRef = useRef(spaceId);
+  useEffect(() => {
+    if (chatSpaceRef.current === spaceId) return;
+    chatSpaceRef.current = spaceId;
+    setTurns([]);
+    setMessage("");
+    setDraft(null);
+  }, [spaceId]);
   const threadRef = useRef<HTMLDivElement>(null);
   // One question in flight at a time, so a second Enter cannot leave the first
   // hanging — the earlier version reused a single response slot and a fast
@@ -368,9 +385,9 @@ export function AssistantPage() {
     // from the last message, not the first.
     globalThis.localStorage?.setItem(
       chatStorageKey,
-      JSON.stringify({ savedAt: Date.now(), turns: turns.slice(-12) }),
+      JSON.stringify({ savedAt: Date.now(), spaceId, turns: turns.slice(-12) }),
     );
-  }, [turns]);
+  }, [spaceId, turns]);
 
   useEffect(() => {
     threadRef.current?.scrollTo({ behavior: "smooth", top: threadRef.current.scrollHeight });

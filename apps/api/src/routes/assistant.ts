@@ -65,6 +65,7 @@ export function registerAssistantRoutes(app: OpenAPIHono<ApiEnvironment>) {
         spaceId,
       }));
     const response = await runDeterministicAssistantTurn(context.env.DB!, {
+      aiBudgetReached: !withinBudget,
       aiProvider: context.env.AI_PROVIDER ?? "none",
       externalResearch: externalResearchEnabled(context.env),
       foodIdeas: withinBudget ? createFoodIdeasPort(context.env) : null,
