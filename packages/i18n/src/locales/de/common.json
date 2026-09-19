@@ -40,7 +40,9 @@
     "authErrorTitle": "Die Anmeldung ist vorübergehend nicht verfügbar.",
     "authErrorBody": "Va de Vi konnte die sichere Anmeldeverbindung nicht initialisieren.",
     "sessionErrorTitle": "Ihr privater Bereich konnte nicht geöffnet werden.",
-    "sessionErrorBody": "Prüfen Sie die Verbindung und laden Sie Ihre Sitzung erneut."
+    "sessionErrorBody": "Prüfen Sie die Verbindung und laden Sie Ihre Sitzung erneut.",
+    "accessDeniedTitle": "Dieses Va de Vi ist privat.",
+    "accessDeniedBody": "Nur Personen, die die Administration freigegeben hat, können sich anmelden. Bitten Sie darum, {{email}} hinzuzufügen, und versuchen Sie es erneut."
   },
   "space": {
     "switchLabel": "Aktiver Bereich",
@@ -1114,5 +1116,28 @@
     "loadingTitle": "Verkostung wird geöffnet…",
     "missingTitle": "Diese Verkostung ist nicht verfügbar",
     "missingBody": "Sie können nur Ihre eigenen Verkostungen lesen. Die anderer bleiben bei ihnen."
+  },
+  "access": {
+    "eyebrow": "Wer sich anmelden darf",
+    "title": "Zugelassene Konten",
+    "body": "Diese Installation ist privat: Nur diese E-Mails und die Administration können sich anmelden. Entfernen schließt die Tür; es löscht nichts.",
+    "aboutBody": "Sehen und ändern, wer sich bei dieser Installation anmelden darf.",
+    "openNotice": "Diese Installation ist offen: Alle, die dieses Firebase-Projekt authentifiziert, können sich anmelden. Die Liste gilt, sobald ACCESS_MODE auf allowlist steht.",
+    "adminsTitle": "Administration",
+    "adminsBody": "In der Konfiguration der Installation festgelegt. Sie kann sich immer anmelden und wird hier nicht entfernt.",
+    "listTitle": "Zugelassene E-Mails",
+    "empty": "Noch keine E-Mail in der Liste.",
+    "emailLabel": "E-Mail",
+    "noteLabel": "Notiz (optional)",
+    "notePlaceholder": "z. B. Verkostungsgruppe",
+    "addAction": "Zulassen",
+    "adding": "Wird hinzugefügt…",
+    "removeAction": "Entfernen",
+    "signedIn": "Hat sich angemeldet",
+    "notSignedIn": "Noch nicht angemeldet",
+    "addedOn": "Hinzugefügt am {{date}}",
+    "loadError": "Die Liste konnte nicht geladen werden.",
+    "saveError": "Die Änderung konnte nicht gespeichert werden. Versuchen Sie es erneut.",
+    "removeConfirm": "{{email}} entfernen? Eine Anmeldung ist erst wieder möglich, wenn die Adresse erneut hinzugefügt wird."
   }
 }

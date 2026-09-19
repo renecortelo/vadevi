@@ -40,7 +40,9 @@
     "authErrorTitle": "O início de sessão está temporariamente indisponível.",
     "authErrorBody": "O Va de Vi não conseguiu iniciar a ligação segura.",
     "sessionErrorTitle": "Não foi possível abrir o seu Espaço privado.",
-    "sessionErrorBody": "Verifique a ligação e tente carregar a sessão novamente."
+    "sessionErrorBody": "Verifique a ligação e tente carregar a sessão novamente.",
+    "accessDeniedTitle": "Este Va de Vi é privado.",
+    "accessDeniedBody": "Só podem entrar as pessoas autorizadas por quem o administra. Peça que adicione {{email}} e tente de novo."
   },
   "space": {
     "switchLabel": "Espaço ativo",
@@ -1114,5 +1116,28 @@
     "loadingTitle": "A abrir a prova…",
     "missingTitle": "Esta prova não está disponível",
     "missingBody": "Só pode ler as suas próprias provas. As de outras pessoas ficam com elas."
+  },
+  "access": {
+    "eyebrow": "Quem pode entrar",
+    "title": "Contas permitidas",
+    "body": "Esta instalação é privada: só estes e-mails, e quem a administra, podem iniciar sessão. Remover um fecha a porta; não apaga nada.",
+    "aboutBody": "Ver e alterar quem pode entrar nesta instalação.",
+    "openNotice": "Esta instalação está aberta: qualquer pessoa que este projeto Firebase autentique pode entrar. A lista aplica-se quando ACCESS_MODE for allowlist.",
+    "adminsTitle": "Administração",
+    "adminsBody": "Definida na configuração da instalação. Pode sempre entrar e não se remove aqui.",
+    "listTitle": "E-mails permitidos",
+    "empty": "Ainda não há nenhum e-mail na lista.",
+    "emailLabel": "E-mail",
+    "noteLabel": "Nota (opcional)",
+    "notePlaceholder": "p. ex. grupo de prova",
+    "addAction": "Permitir",
+    "adding": "A adicionar…",
+    "removeAction": "Remover",
+    "signedIn": "Já entrou",
+    "notSignedIn": "Ainda não entrou",
+    "addedOn": "Adicionado a {{date}}",
+    "loadError": "Não foi possível carregar a lista.",
+    "saveError": "Não foi possível guardar a alteração. Tente de novo.",
+    "removeConfirm": "Remover {{email}}? Não poderá entrar até voltar a ser adicionado."
   }
 }

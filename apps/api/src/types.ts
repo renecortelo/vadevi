@@ -7,6 +7,13 @@ export type FirebasePrincipal = Readonly<{
 }>;
 
 export type WorkerBindings = {
+  /** Who may sign in. `open` (the default): anyone this Firebase project
+   *  authenticates. `allowlist`: only e-mails in `allowed_accounts` and the
+   *  administrators in ADMIN_EMAILS. */
+  ACCESS_MODE?: "allowlist" | "open";
+  /** Comma-separated e-mails of the people who keep the allowlist. They can
+   *  always sign in, so the list cannot lock its own keeper out. */
+  ADMIN_EMAILS?: string;
   AI?: Ai;
   AI_MODEL?: string;
   AI_OCR_MODEL?: string;

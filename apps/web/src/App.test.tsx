@@ -33,6 +33,7 @@ const session: SessionContextValue = {
   bootstrap: {
     data: {
       features: {
+        accessAdmin: false,
         assistant: true,
         bottlePhotoSearch: false,
         externalResearch: false,

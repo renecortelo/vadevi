@@ -244,6 +244,11 @@ function summariseFeatures(configText: string): void {
       detail: "RESEARCH_PROVIDER",
       on: value("RESEARCH_PROVIDER") !== "none",
     },
+    {
+      label: "Private access (allowlist)",
+      detail: "ACCESS_MODE",
+      on: value("ACCESS_MODE") === "allowlist",
+    },
     { label: "Food pairing", detail: "PAIRING_PROVIDER", on: value("PAIRING_PROVIDER") !== "none" },
     {
       label: "Open-web discovery",

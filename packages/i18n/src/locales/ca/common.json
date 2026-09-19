@@ -40,7 +40,9 @@
     "authErrorTitle": "L'inici de sessió no està disponible temporalment.",
     "authErrorBody": "Va de Vi no ha pogut iniciar la connexió segura d'accés.",
     "sessionErrorTitle": "No s'ha pogut obrir el teu Espai privat.",
-    "sessionErrorBody": "Comprova la connexió i torna a carregar la sessió."
+    "sessionErrorBody": "Comprova la connexió i torna a carregar la sessió.",
+    "accessDeniedTitle": "Aquest Va de Vi és privat.",
+    "accessDeniedBody": "Només hi poden entrar les persones que ha autoritzat qui l’administra. Demana-li que afegeixi {{email}} i torna-ho a provar."
   },
   "space": {
     "switchLabel": "Espai actiu",
@@ -1114,5 +1116,28 @@
     "loadingTitle": "Obrint el tast…",
     "missingTitle": "Aquest tast no està disponible",
     "missingBody": "Només pots llegir els teus propis tasts. Els d'altres persones es queden amb elles."
+  },
+  "access": {
+    "eyebrow": "Qui pot entrar",
+    "title": "Comptes permesos",
+    "body": "Aquest desplegament és privat: només aquests correus, i qui l’administra, poden iniciar sessió. Treure’n un tanca la porta; no esborra res.",
+    "aboutBody": "Veure i canviar qui pot entrar en aquest desplegament.",
+    "openNotice": "Aquest desplegament és obert: qualsevol que autentiqui aquest projecte de Firebase pot entrar. La llista s’aplica quan ACCESS_MODE sigui allowlist.",
+    "adminsTitle": "Administració",
+    "adminsBody": "Es fixa a la configuració del desplegament. Sempre poden entrar i no es treuen des d’aquí.",
+    "listTitle": "Correus permesos",
+    "empty": "Encara no hi ha cap correu a la llista.",
+    "emailLabel": "Correu",
+    "noteLabel": "Nota (opcional)",
+    "notePlaceholder": "p. ex. grup de tast",
+    "addAction": "Permetre",
+    "adding": "Afegint…",
+    "removeAction": "Treure",
+    "signedIn": "Ja ha entrat",
+    "notSignedIn": "Encara no ha entrat",
+    "addedOn": "Afegit el {{date}}",
+    "loadError": "No s’ha pogut carregar la llista.",
+    "saveError": "No s’ha pogut desar el canvi. Torna-ho a provar.",
+    "removeConfirm": "Treure {{email}}? No podrà entrar fins que el tornis a afegir."
   }
 }

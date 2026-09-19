@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { webEnvironment } from "../config/env";
+import { useSession } from "../session/SessionContext";
 
 /**
  * About: the screen the top bar used to be.
@@ -12,10 +13,15 @@ import { webEnvironment } from "../config/env";
  */
 export function AboutPage() {
   const { t } = useTranslation();
+  const { bootstrap } = useSession();
 
   const destinations = [
     { body: t("about.dataBody"), title: t("dataRights.navAction"), to: "/settings/data" },
     { body: t("about.spacesBody"), title: t("spaces.manageAction"), to: "/spaces" },
+    // The door's keeper sees the door; nobody else has a use for the page.
+    ...(bootstrap.data.features.accessAdmin
+      ? [{ body: t("access.aboutBody"), title: t("access.title"), to: "/settings/access" }]
+      : []),
   ];
 
   return (

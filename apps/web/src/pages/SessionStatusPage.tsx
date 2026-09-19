@@ -7,11 +7,14 @@ export function SessionStatusPage({
   action,
   actionKey,
   bodyKey,
+  bodyValues,
   titleKey,
 }: {
   action?: () => void;
   actionKey?: string;
   bodyKey: string;
+  /** Interpolated into the body — the e-mail a refused reader should pass on. */
+  bodyValues?: Record<string, string>;
   titleKey: string;
 }) {
   const { t } = useTranslation();
@@ -23,7 +26,7 @@ export function SessionStatusPage({
       <section aria-live="polite" className="access-card">
         <BrandLockup className="access-card__lockup" />
         <h1>{t(titleKey)}</h1>
-        <p>{t(bodyKey)}</p>
+        <p>{t(bodyKey, bodyValues ?? {})}</p>
         {action !== undefined && actionKey !== undefined ? (
           <button className="primary-button" onClick={action} type="button">
             {t(actionKey)}

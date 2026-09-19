@@ -65,8 +65,10 @@ export function SessionBoundary({
     enabled: offlineSessionLoaded,
     queryFn: ({ signal }) => getBootstrap(user, signal),
     queryKey,
+    // Neither a bad token nor a closed door gets better on retry.
     retry: (failureCount, error) =>
-      !(error instanceof ApiError && error.status === 401) && failureCount < 2,
+      !(error instanceof ApiError && (error.status === 401 || error.status === 403)) &&
+      failureCount < 2,
   });
   const updateMutation = useMutation({
     mutationFn: (update: UpdateProfileRequest) => updateProfile(user, update),
@@ -166,6 +168,25 @@ export function SessionBoundary({
 
   if (bootstrapQuery.isPending) {
     return <SessionStatusPage bodyKey="auth.loadingBody" titleKey="auth.loadingTitle" />;
+  }
+
+  // A private deployment that does not list this account. Said plainly, with
+  // the e-mail to pass on, and the way out — not "try again", which would only
+  // ask the same closed door.
+  if (
+    bootstrapQuery.error instanceof ApiError &&
+    bootstrapQuery.error.status === 403 &&
+    bootstrapQuery.error.code === "ACCESS_DENIED"
+  ) {
+    return (
+      <SessionStatusPage
+        action={() => void signOut()}
+        actionKey="auth.signOut"
+        bodyKey="auth.accessDeniedBody"
+        bodyValues={{ email: user.email ?? "" }}
+        titleKey="auth.accessDeniedTitle"
+      />
+    );
   }
 
   if (bootstrapQuery.isError || value === null) {

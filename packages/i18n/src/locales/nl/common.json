@@ -40,7 +40,9 @@
     "authErrorTitle": "Aanmelden is tijdelijk niet beschikbaar.",
     "authErrorBody": "Va de Vi kon de beveiligde aanmeldverbinding niet initialiseren.",
     "sessionErrorTitle": "Je privéruimte kon niet worden geopend.",
-    "sessionErrorBody": "Controleer de verbinding en laad je sessie opnieuw."
+    "sessionErrorBody": "Controleer de verbinding en laad je sessie opnieuw.",
+    "accessDeniedTitle": "Deze Va de Vi is privé.",
+    "accessDeniedBody": "Alleen mensen die de beheerder heeft toegelaten kunnen inloggen. Vraag om {{email}} toe te voegen en probeer het opnieuw."
   },
   "space": {
     "switchLabel": "Actieve Ruimte",
@@ -1114,5 +1116,28 @@
     "loadingTitle": "Proeverij wordt geopend…",
     "missingTitle": "Deze proeverij is niet beschikbaar",
     "missingBody": "Je kunt alleen je eigen proeverijen lezen. Die van anderen blijven bij hen."
+  },
+  "access": {
+    "eyebrow": "Wie mag inloggen",
+    "title": "Toegelaten accounts",
+    "body": "Deze installatie is privé: alleen deze e-mails, en de beheerders, kunnen inloggen. Eén verwijderen sluit de deur; er wordt niets gewist.",
+    "aboutBody": "Bekijk en wijzig wie op deze installatie mag inloggen.",
+    "openNotice": "Deze installatie is open: iedereen die dit Firebase-project authenticeert kan inloggen. De lijst geldt zodra ACCESS_MODE op allowlist staat.",
+    "adminsTitle": "Beheerders",
+    "adminsBody": "Vastgelegd in de configuratie van de installatie. Zij kunnen altijd inloggen en worden hier niet verwijderd.",
+    "listTitle": "Toegelaten e-mails",
+    "empty": "Er staat nog geen e-mail op de lijst.",
+    "emailLabel": "E-mail",
+    "noteLabel": "Notitie (optioneel)",
+    "notePlaceholder": "bv. proefgroep",
+    "addAction": "Toelaten",
+    "adding": "Toevoegen…",
+    "removeAction": "Verwijderen",
+    "signedIn": "Heeft ingelogd",
+    "notSignedIn": "Nog niet ingelogd",
+    "addedOn": "Toegevoegd op {{date}}",
+    "loadError": "De lijst kon niet worden geladen.",
+    "saveError": "De wijziging kon niet worden opgeslagen. Probeer het opnieuw.",
+    "removeConfirm": "{{email}} verwijderen? Inloggen kan pas weer na opnieuw toevoegen."
   }
 }

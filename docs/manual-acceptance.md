@@ -349,6 +349,21 @@ A wine holds many tastings, and they used to have nowhere to live.
 
 ---
 
+## L. The door (private deployment)
+
+Needs `ACCESS_MODE=allowlist` and your address in `ADMIN_EMAILS`, which the
+maintainer's deployment has.
+
+87. [ ] **About → Allowed accounts** lists the administrator, and each listed
+        e-mail says whether it has signed in.
+88. [ ] Sign in with a Google account that is **not** listed (a second account,
+        or a friend's). The screen says the deployment is private, shows the
+        address to pass on, and offers only _Sign out_ — no cellar, no Space is
+        created (check the list: the address does not appear as signed in).
+89. [ ] Add that address on the admin page, sign in with it again: it comes in.
+        Remove it: on its next request it is refused, and its data is still
+        there when it is re-added.
+
 ## Recording results
 
 For each failure note: what you did, what happened, what you expected, and

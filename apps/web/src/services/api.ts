@@ -1,4 +1,8 @@
 import {
+  AddAllowedAccountRequestSchema,
+  AllowedAccountsResponseSchema,
+  type AddAllowedAccountRequest,
+  type AllowedAccountsResponse,
   BootstrapResponseSchema,
   CreateInvitationRequestSchema,
   CreateInvitationResponseSchema,
@@ -415,4 +419,45 @@ export async function syncSpace(
   });
   if (!response.ok) throw await apiError(response);
   return SyncResponseSchema.parse(await response.json());
+}
+
+/**
+ * The administrator's list of who may sign in. Only an administrator may call
+ * these; everyone else is answered 403.
+ */
+export async function getAllowedAccounts(
+  tokenSource: TokenSource,
+  signal?: AbortSignal,
+): Promise<AllowedAccountsResponse> {
+  const response = await authenticatedFetch(tokenSource, "/api/v1/admin/allowed-accounts", {
+    ...(signal === undefined ? {} : { signal }),
+  });
+  if (!response.ok) throw await apiError(response);
+  return AllowedAccountsResponseSchema.parse(await response.json());
+}
+
+export async function addAllowedAccount(
+  tokenSource: TokenSource,
+  request: AddAllowedAccountRequest,
+): Promise<AllowedAccountsResponse> {
+  const response = await authenticatedFetch(tokenSource, "/api/v1/admin/allowed-accounts", {
+    body: JSON.stringify(AddAllowedAccountRequestSchema.parse(request)),
+    headers: { "Content-Type": "application/json" },
+    method: "POST",
+  });
+  if (!response.ok) throw await apiError(response);
+  return AllowedAccountsResponseSchema.parse(await response.json());
+}
+
+export async function removeAllowedAccount(
+  tokenSource: TokenSource,
+  email: string,
+): Promise<AllowedAccountsResponse> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/admin/allowed-accounts/${encodeURIComponent(email)}`,
+    { method: "DELETE" },
+  );
+  if (!response.ok) throw await apiError(response);
+  return AllowedAccountsResponseSchema.parse(await response.json());
 }

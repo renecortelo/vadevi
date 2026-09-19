@@ -40,7 +40,9 @@
     "authErrorTitle": "L'accesso è temporaneamente indisponibile.",
     "authErrorBody": "Va de Vi non ha potuto inizializzare la connessione sicura.",
     "sessionErrorTitle": "Non è stato possibile aprire il tuo Spazio privato.",
-    "sessionErrorBody": "Controlla la connessione e prova a ricaricare la sessione."
+    "sessionErrorBody": "Controlla la connessione e prova a ricaricare la sessione.",
+    "accessDeniedTitle": "Questo Va de Vi è privato.",
+    "accessDeniedBody": "Possono entrare solo le persone autorizzate da chi lo amministra. Chiedi di aggiungere {{email}} e riprova."
   },
   "space": {
     "switchLabel": "Spazio attivo",
@@ -1114,5 +1116,28 @@
     "loadingTitle": "Apertura della degustazione…",
     "missingTitle": "Questa degustazione non è disponibile",
     "missingBody": "Puoi leggere solo le tue degustazioni. Quelle degli altri restano con loro."
+  },
+  "access": {
+    "eyebrow": "Chi può entrare",
+    "title": "Account consentiti",
+    "body": "Questa installazione è privata: solo queste e-mail, e chi la amministra, possono accedere. Rimuoverne una chiude la porta; non cancella nulla.",
+    "aboutBody": "Vedi e cambia chi può accedere a questa installazione.",
+    "openNotice": "Questa installazione è aperta: chiunque venga autenticato da questo progetto Firebase può entrare. L’elenco si applica quando ACCESS_MODE è allowlist.",
+    "adminsTitle": "Amministrazione",
+    "adminsBody": "Impostata nella configurazione dell’installazione. Può sempre entrare e non si rimuove da qui.",
+    "listTitle": "E-mail consentite",
+    "empty": "Nessuna e-mail in elenco per ora.",
+    "emailLabel": "E-mail",
+    "noteLabel": "Nota (facoltativa)",
+    "notePlaceholder": "es. gruppo di degustazione",
+    "addAction": "Consenti",
+    "adding": "Aggiunta…",
+    "removeAction": "Rimuovi",
+    "signedIn": "È già entrato",
+    "notSignedIn": "Non è ancora entrato",
+    "addedOn": "Aggiunto il {{date}}",
+    "loadError": "Impossibile caricare l’elenco.",
+    "saveError": "Impossibile salvare la modifica. Riprova.",
+    "removeConfirm": "Rimuovere {{email}}? Non potrà entrare finché non lo aggiungi di nuovo."
   }
 }

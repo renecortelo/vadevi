@@ -43,6 +43,9 @@ const SessionsPage = lazy(() =>
 const WineMemoryPage = lazy(() =>
   import("./pages/WineMemoryPage").then((module) => ({ default: module.WineMemoryPage })),
 );
+const AccessPage = lazy(() =>
+  import("./pages/AccessPage").then((module) => ({ default: module.AccessPage })),
+);
 const TastingNotePage = lazy(() =>
   import("./pages/TastingNotePage").then((module) => ({ default: module.TastingNotePage })),
 );
@@ -192,6 +195,14 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="settings/data"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <AccessPage />
+              </DeferredPage>
+            }
+            path="settings/access"
           />
           <Route element={<NewSpacePage />} path="spaces/new" />
           <Route
