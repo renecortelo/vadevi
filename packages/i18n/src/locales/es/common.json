@@ -40,7 +40,9 @@
     "authErrorTitle": "El acceso no está disponible temporalmente.",
     "authErrorBody": "Va de Vi no pudo iniciar la conexión segura de acceso.",
     "sessionErrorTitle": "No se pudo abrir tu Espacio privado.",
-    "sessionErrorBody": "Comprueba la conexión e intenta cargar la sesión de nuevo."
+    "sessionErrorBody": "Comprueba la conexión e intenta cargar la sesión de nuevo.",
+    "accessDeniedTitle": "Este Va de Vi es privado.",
+    "accessDeniedBody": "Solo pueden entrar las personas que ha autorizado quien lo administra. Pídele que añada {{email}} y vuelve a intentarlo."
   },
   "space": {
     "switchLabel": "Espacio activo",
@@ -1114,5 +1116,28 @@
     "loadingTitle": "Abriendo la cata…",
     "missingTitle": "Esta cata no está disponible",
     "missingBody": "Solo puedes leer tus propias catas. Las de otras personas se quedan con ellas."
+  },
+  "access": {
+    "eyebrow": "Quién puede entrar",
+    "title": "Cuentas permitidas",
+    "body": "Este despliegue es privado: solo estos correos, y quienes lo administran, pueden iniciar sesión. Quitar uno cierra la puerta; no borra nada.",
+    "aboutBody": "Ver y cambiar quién puede entrar en este despliegue.",
+    "openNotice": "Este despliegue está abierto: cualquiera que autentique este proyecto de Firebase puede entrar. La lista se aplica cuando ACCESS_MODE sea allowlist.",
+    "adminsTitle": "Administración",
+    "adminsBody": "Se fija en la configuración del despliegue. Siempre pueden entrar y no se quitan desde aquí.",
+    "listTitle": "Correos permitidos",
+    "empty": "Todavía no hay ningún correo en la lista.",
+    "emailLabel": "Correo",
+    "noteLabel": "Nota (opcional)",
+    "notePlaceholder": "p. ej. grupo de cata",
+    "addAction": "Permitir",
+    "adding": "Añadiendo…",
+    "removeAction": "Quitar",
+    "signedIn": "Ya ha entrado",
+    "notSignedIn": "Aún no ha entrado",
+    "addedOn": "Añadido el {{date}}",
+    "loadError": "No se pudo cargar la lista.",
+    "saveError": "No se pudo guardar el cambio. Inténtalo otra vez.",
+    "removeConfirm": "¿Quitar {{email}}? No podrá entrar hasta que lo vuelvas a añadir."
   }
 }

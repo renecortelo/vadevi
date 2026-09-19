@@ -18,6 +18,19 @@ const fileEnvironment = {
 
 const EnvironmentSchema = z
   .object({
+    ACCESS_MODE: z.enum(["open", "allowlist"]).default("open"),
+    ADMIN_EMAILS: z
+      .string()
+      .default("")
+      .refine(
+        (value) =>
+          value
+            .split(",")
+            .map((entry) => entry.trim())
+            .filter((entry) => entry.length > 0)
+            .every((entry) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(entry)),
+        "ADMIN_EMAILS must be comma-separated e-mail addresses.",
+      ),
     APP_ENV: z.enum(["local", "preview", "production"]).default("local"),
     APP_VERSION: z
       .string()
@@ -45,6 +58,16 @@ const EnvironmentSchema = z
     VITE_FIREBASE_USE_EMULATOR: z.enum(["true", "false"]).default("true"),
   })
   .superRefine((environment, context) => {
+    // A private door with nobody to keep it is a door nobody can ever open:
+    // the list starts empty and only an administrator can add to it.
+    if (environment.ACCESS_MODE === "allowlist" && environment.ADMIN_EMAILS.trim().length === 0) {
+      context.addIssue({
+        code: "custom",
+        message: "ACCESS_MODE=allowlist needs at least one administrator in ADMIN_EMAILS.",
+        path: ["ADMIN_EMAILS"],
+      });
+    }
+
     if (environment.AI_PROVIDER === "cloudflare" && environment.AI_MODEL === undefined) {
       context.addIssue({
         code: "custom",

@@ -25,6 +25,7 @@ import {
   removeMember,
   updateSpace,
 } from "../repositories/spaces";
+import { isAdmin } from "../access/allowlist";
 import type { ApiEnvironment } from "../types";
 import {
   externalResearchEnabled,
@@ -425,6 +426,7 @@ export function registerSpaceRoutes(app: OpenAPIHono<ApiEnvironment>) {
 
   app.openapi(acceptInvitationRoute, async (context) => {
     const result = await acceptInvitation(context.env.DB!, {
+      accessAdmin: isAdmin(context.env, context.get("principal")),
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),

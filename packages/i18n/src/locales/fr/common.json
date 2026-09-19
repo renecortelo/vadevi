@@ -40,7 +40,9 @@
     "authErrorTitle": "La connexion est temporairement indisponible.",
     "authErrorBody": "Va de Vi n'a pas pu initialiser la connexion sécurisée.",
     "sessionErrorTitle": "Votre Espace privé n'a pas pu être ouvert.",
-    "sessionErrorBody": "Vérifiez la connexion et rechargez votre session."
+    "sessionErrorBody": "Vérifiez la connexion et rechargez votre session.",
+    "accessDeniedTitle": "Ce Va de Vi est privé.",
+    "accessDeniedBody": "Seules les personnes autorisées par son administrateur peuvent se connecter. Demandez-lui d’ajouter {{email}}, puis réessayez."
   },
   "space": {
     "switchLabel": "Espace actif",
@@ -1114,5 +1116,28 @@
     "loadingTitle": "Ouverture de la dégustation…",
     "missingTitle": "Cette dégustation n'est pas disponible",
     "missingBody": "Vous ne pouvez lire que vos propres dégustations. Celles des autres restent avec eux."
+  },
+  "access": {
+    "eyebrow": "Qui peut se connecter",
+    "title": "Comptes autorisés",
+    "body": "Ce déploiement est privé : seuls ces e-mails, et les administrateurs, peuvent se connecter. En retirer un ferme la porte ; rien n’est supprimé.",
+    "aboutBody": "Voir et modifier qui peut se connecter à ce déploiement.",
+    "openNotice": "Ce déploiement est ouvert : toute personne authentifiée par ce projet Firebase peut se connecter. La liste s’applique lorsque ACCESS_MODE vaut allowlist.",
+    "adminsTitle": "Administrateurs",
+    "adminsBody": "Définis dans la configuration du déploiement. Ils peuvent toujours se connecter et ne se retirent pas ici.",
+    "listTitle": "E-mails autorisés",
+    "empty": "Aucun e-mail n’est encore listé.",
+    "emailLabel": "E-mail",
+    "noteLabel": "Note (facultatif)",
+    "notePlaceholder": "p. ex. groupe de dégustation",
+    "addAction": "Autoriser",
+    "adding": "Ajout…",
+    "removeAction": "Retirer",
+    "signedIn": "S’est déjà connecté",
+    "notSignedIn": "Pas encore connecté",
+    "addedOn": "Ajouté le {{date}}",
+    "loadError": "La liste n’a pas pu être chargée.",
+    "saveError": "La modification n’a pas pu être enregistrée. Réessayez.",
+    "removeConfirm": "Retirer {{email}} ? Cette personne ne pourra plus se connecter tant qu’elle n’est pas rajoutée."
   }
 }

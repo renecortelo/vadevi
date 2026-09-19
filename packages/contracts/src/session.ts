@@ -63,6 +63,8 @@ export const BootstrapResponseSchema = z
       .object({
         features: z
           .object({
+            /** This reader keeps the deployment's list of who may sign in. */
+            accessAdmin: z.boolean(),
             assistant: z.boolean(),
             bottlePhotoSearch: z.boolean(),
             externalResearch: z.boolean(),

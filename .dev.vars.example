@@ -1,4 +1,6 @@
 # Worker secrets belong in an ignored .dev.vars file. Public defaults need none.
+ACCESS_MODE=open
+ADMIN_EMAILS=
 APP_ENV=local
 APP_VERSION=0.1.0
 AI_PROVIDER=none

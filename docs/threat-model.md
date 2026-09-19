@@ -38,6 +38,7 @@ photographing a bottle is most likely.
 - Parameterized D1 migration design and mandatory future Space-scoped repositories.
 - Dependency lockfile, lint/type/test/build gates, and generated-contract drift detection.
 - Firebase bearer-token verification, local-emulator isolation, and active-membership checks at repository boundaries.
+- An optional per-deployment allowlist (`ACCESS_MODE=allowlist`): after the token is verified, a principal whose e-mail is not on the deployment's list, and not one of its administrators, is refused with 403 on every authenticated route before any account is created. Authentication says who someone is; this is the separate question of whether they may come in. The list is kept by administrators named in the deployment's own configuration, never in the repository; the public source scan refuses an administrator address or a closed door in the example files.
 - Non-enumerating not-found responses for inaccessible Space resources and private media.
 - Idempotency request hashing and user-scoped mutation IDs for safe retries and exact-once sync application.
 - Client-side image re-encoding plus server-side magic-byte, MIME, hash, dimension, size, and EXIF validation.

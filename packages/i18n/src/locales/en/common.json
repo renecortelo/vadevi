@@ -40,7 +40,9 @@
     "authErrorTitle": "Sign-in is temporarily unavailable.",
     "authErrorBody": "Va de Vi could not initialize its secure sign-in connection.",
     "sessionErrorTitle": "Your private Space could not be opened.",
-    "sessionErrorBody": "Check the connection and try loading your session again."
+    "sessionErrorBody": "Check the connection and try loading your session again.",
+    "accessDeniedTitle": "This Va de Vi is private.",
+    "accessDeniedBody": "Only the people its administrator has listed can sign in. Ask them to add {{email}}, then try again."
   },
   "space": {
     "switchLabel": "Active Space",
@@ -1114,5 +1116,28 @@
     "loadingTitle": "Opening the tasting…",
     "missingTitle": "This tasting is not available",
     "missingBody": "You can only read your own tastings. Other people's stay with them."
+  },
+  "access": {
+    "eyebrow": "Who may sign in",
+    "title": "Allowed accounts",
+    "body": "This deployment is private: only these e-mails, and the administrators, can sign in. Removing one closes the door; it deletes nothing.",
+    "aboutBody": "See and change who may sign in to this deployment.",
+    "openNotice": "This deployment is open: anyone this Firebase project authenticates can sign in. The list below applies once ACCESS_MODE is set to allowlist.",
+    "adminsTitle": "Administrators",
+    "adminsBody": "Set in the deployment's configuration. They can always sign in and cannot be removed here.",
+    "listTitle": "Allowed e-mails",
+    "empty": "No e-mail is listed yet.",
+    "emailLabel": "E-mail",
+    "noteLabel": "Note (optional)",
+    "notePlaceholder": "e.g. tasting group",
+    "addAction": "Allow",
+    "adding": "Adding…",
+    "removeAction": "Remove",
+    "signedIn": "Has signed in",
+    "notSignedIn": "Not signed in yet",
+    "addedOn": "Added {{date}}",
+    "loadError": "The list could not be loaded.",
+    "saveError": "The change could not be saved. Try again.",
+    "removeConfirm": "Remove {{email}}? They will not be able to sign in again until re-added."
   }
 }

@@ -4,6 +4,7 @@ export const ErrorCodeSchema = z
   .enum([
     "AUTH_REQUIRED",
     "AUTH_INVALID",
+    "ACCESS_DENIED",
     "FORBIDDEN",
     "NOT_FOUND",
     "VALIDATION_FAILED",

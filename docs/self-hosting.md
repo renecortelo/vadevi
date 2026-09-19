@@ -139,6 +139,38 @@ Also set the source link the AGPL requires, before building:
 VITE_SOURCE_URL=https://your-host/your-fork
 ```
 
+## 6b. Decide who may sign in
+
+By default the door is open: **anyone with a Google account can sign in** to
+your deployment and gets a personal Space on their first visit. That is right
+for an instance you run for yourself and a few people you trust with the link,
+and wrong the moment the link travels — a stranger then has a cellar of their
+own and a share of your daily AI budget.
+
+To keep it to named people, set two variables in your configuration file
+(never in the example, which is public):
+
+```jsonc
+"ACCESS_MODE": "allowlist",
+"ADMIN_EMAILS": "you@example.com",
+```
+
+Then redeploy. From then on:
+
+- The administrators in `ADMIN_EMAILS` (comma-separated) can always sign in
+  and cannot be locked out by the list.
+- Everyone else is refused with "This Va de Vi is private" **before any
+  account is created**, on every authenticated route — not only the sign-in.
+- An administrator adds and removes e-mails under **About → Allowed
+  accounts**. The page shows whether each e-mail has signed in yet. Removing
+  one closes the door on their next request; it deletes nothing — the account
+  and its data stay until its owner deletes them, or you do.
+
+Accounts created while the door was open stay as they are; they simply cannot
+sign in again until listed. `pnpm validate:env` refuses `allowlist` with no
+administrator, because a private door with nobody to keep it can never be
+opened.
+
 ## 7. Verify
 
 ```bash

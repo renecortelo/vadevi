@@ -7,6 +7,8 @@ import {
   UpdateProfileRequestSchema,
 } from "@vadevi/contracts";
 
+import { isAdmin } from "./access/allowlist";
+import { accessControl } from "./middleware/access-control";
 import { authentication } from "./middleware/authentication";
 import {
   externalResearchEnabled,
@@ -17,6 +19,7 @@ import {
 import { requestContext } from "./middleware/request-context";
 import { security } from "./middleware/security";
 import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
+import { registerAccessRoutes } from "./routes/access";
 import { registerActionDraftRoutes } from "./routes/action-drafts";
 import { registerAssistantRoutes } from "./routes/assistant";
 import { registerCellarRoutes } from "./routes/cellar";
@@ -286,11 +289,21 @@ export function createApi() {
     }
     return proxyFirebaseAuth(context.req.raw, upstream);
   });
-  app.use("/api/v1/me", authentication);
-  app.use("/api/v1/me/*", authentication);
-  app.use("/api/v1/spaces", authentication);
-  app.use("/api/v1/spaces/*", authentication);
-  app.use("/api/v1/invitations/:token/accept", authentication);
+  // Identity first, then the door: on a private deployment a principal who is
+  // not on the list is refused before any handler — and before the bootstrap
+  // that would have created their account — can run.
+  for (const path of [
+    "/api/v1/me",
+    "/api/v1/me/*",
+    "/api/v1/spaces",
+    "/api/v1/spaces/*",
+    "/api/v1/invitations/:token/accept",
+    "/api/v1/admin/*",
+  ]) {
+    app.use(path, authentication);
+    app.use(path, accessControl);
+  }
+  registerAccessRoutes(app);
 
   app.openapi(healthRoute, (context) => context.json(healthPayload(context.env?.APP_VERSION), 200));
   app.openapi(runtimeConfigRoute, (context) =>
@@ -315,6 +328,7 @@ export function createApi() {
     }
 
     const response = await bootstrapUser(database, {
+      accessAdmin: isAdmin(context.env, context.get("principal")),
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
@@ -333,6 +347,7 @@ export function createApi() {
     }
 
     const response = await updateUserProfile(database, {
+      accessAdmin: isAdmin(context.env, context.get("principal")),
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),

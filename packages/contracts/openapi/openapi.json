@@ -14,6 +14,151 @@
       }
     },
     "schemas": {
+      "AllowedAccountsResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "accounts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "addedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "email": {
+                      "type": "string",
+                      "maxLength": 254,
+                      "format": "email"
+                    },
+                    "note": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 200
+                    },
+                    "userId": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                    }
+                  },
+                  "required": [
+                    "addedAt",
+                    "email",
+                    "note",
+                    "userId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "admins": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "email"
+                }
+              },
+              "mode": {
+                "type": "string",
+                "enum": [
+                  "allowlist",
+                  "open"
+                ]
+              }
+            },
+            "required": [
+              "accounts",
+              "admins",
+              "mode"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "ErrorEnvelope": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "$ref": "#/components/schemas/ErrorCode"
+              },
+              "message": {
+                "type": "string",
+                "minLength": 1
+              },
+              "requestId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "details": {
+                "type": "object",
+                "additionalProperties": {
+                  "nullable": true
+                }
+              }
+            },
+            "required": [
+              "code",
+              "message",
+              "requestId"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "ErrorCode": {
+        "type": "string",
+        "enum": [
+          "AUTH_REQUIRED",
+          "AUTH_INVALID",
+          "ACCESS_DENIED",
+          "FORBIDDEN",
+          "NOT_FOUND",
+          "VALIDATION_FAILED",
+          "VERSION_CONFLICT",
+          "IDEMPOTENCY_CONFLICT",
+          "RATE_LIMITED",
+          "QUOTA_EXHAUSTED",
+          "FEATURE_UNAVAILABLE",
+          "EXTERNAL_SOURCE_UNAVAILABLE",
+          "MEDIA_REJECTED",
+          "SYNC_CURSOR_EXPIRED",
+          "INVITE_INVALID",
+          "INVITE_EXPIRED",
+          "INTERNAL_ERROR"
+        ]
+      },
+      "AddAllowedAccountRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "maxLength": 254,
+            "format": "email"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "email"
+        ],
+        "additionalProperties": false
+      },
       "HealthResponse": {
         "type": "object",
         "properties": {
@@ -147,6 +292,9 @@
               "features": {
                 "type": "object",
                 "properties": {
+                  "accessAdmin": {
+                    "type": "boolean"
+                  },
                   "assistant": {
                     "type": "boolean"
                   },
@@ -170,6 +318,7 @@
                   }
                 },
                 "required": [
+                  "accessAdmin",
                   "assistant",
                   "bottlePhotoSearch",
                   "externalResearch",
@@ -308,64 +457,6 @@
           "data"
         ],
         "additionalProperties": false
-      },
-      "ErrorEnvelope": {
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "object",
-            "properties": {
-              "code": {
-                "$ref": "#/components/schemas/ErrorCode"
-              },
-              "message": {
-                "type": "string",
-                "minLength": 1
-              },
-              "requestId": {
-                "type": "string",
-                "minLength": 1
-              },
-              "details": {
-                "type": "object",
-                "additionalProperties": {
-                  "nullable": true
-                }
-              }
-            },
-            "required": [
-              "code",
-              "message",
-              "requestId"
-            ],
-            "additionalProperties": false
-          }
-        },
-        "required": [
-          "error"
-        ],
-        "additionalProperties": false
-      },
-      "ErrorCode": {
-        "type": "string",
-        "enum": [
-          "AUTH_REQUIRED",
-          "AUTH_INVALID",
-          "FORBIDDEN",
-          "NOT_FOUND",
-          "VALIDATION_FAILED",
-          "VERSION_CONFLICT",
-          "IDEMPOTENCY_CONFLICT",
-          "RATE_LIMITED",
-          "QUOTA_EXHAUSTED",
-          "FEATURE_UNAVAILABLE",
-          "EXTERNAL_SOURCE_UNAVAILABLE",
-          "MEDIA_REJECTED",
-          "SYNC_CURSOR_EXPIRED",
-          "INVITE_INVALID",
-          "INVITE_EXPIRED",
-          "INTERNAL_ERROR"
-        ]
       },
       "UpdateProfileRequest": {
         "type": "object",
@@ -10756,6 +10847,134 @@
     "parameters": {}
   },
   "paths": {
+    "/api/v1/admin/allowed-accounts": {
+      "get": {
+        "operationId": "listAllowedAccounts",
+        "tags": [
+          "Access"
+        ],
+        "summary": "The e-mails that may sign in, and whether each has",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The list, the administrators, and the deployment's access mode.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllowedAccountsResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Only an administrator may keep the list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "addAllowedAccount",
+        "tags": [
+          "Access"
+        ],
+        "summary": "Let an e-mail sign in",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAllowedAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The list with the e-mail on it; adding one already there changes nothing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllowedAccountsResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Only an administrator may keep the list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/allowed-accounts/{email}": {
+      "delete": {
+        "operationId": "removeAllowedAccount",
+        "tags": [
+          "Access"
+        ],
+        "summary": "Stop an e-mail from signing in",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "maxLength": 254,
+              "format": "email"
+            },
+            "required": true,
+            "in": "path",
+            "name": "email"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The list without the e-mail. An account that already exists keeps its data; its owner can no longer sign in.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllowedAccountsResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Only an administrator may keep the list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/health": {
       "get": {
         "operationId": "getHealth",
