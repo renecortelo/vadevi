@@ -1139,6 +1139,7 @@
     "loadError": "No se pudo cargar la lista.",
     "saveError": "No se pudo guardar el cambio. Inténtalo otra vez.",
     "removeConfirm": "¿Quitar {{email}}? No podrá entrar hasta que lo vuelvas a añadir.",
-    "addTitle": "Añadir un correo"
+    "addTitle": "Añadir un correo",
+    "secondFactorError": "Cloudflare Access no ha validado esta cuenta. Entra en Access con la misma cuenta de Google y vuelve."
   }
 }

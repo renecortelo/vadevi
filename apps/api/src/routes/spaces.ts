@@ -26,6 +26,7 @@ import {
   updateSpace,
 } from "../repositories/spaces";
 import { isAdmin } from "../access/allowlist";
+import { accessConfiguration } from "../access/cloudflare-access";
 import type { ApiEnvironment } from "../types";
 import {
   externalResearchEnabled,
@@ -427,6 +428,7 @@ export function registerSpaceRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(acceptInvitationRoute, async (context) => {
     const result = await acceptInvitation(context.env.DB!, {
       accessAdmin: isAdmin(context.env, context.get("principal")),
+      accessSecondFactor: accessConfiguration(context.env) !== null,
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),

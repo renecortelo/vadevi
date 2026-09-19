@@ -21,6 +21,7 @@ type BootstrapSpaceRow = {
 
 export type BootstrapOptions = {
   accessAdmin: boolean;
+  accessSecondFactor: boolean;
   aiProvider: "none" | "cloudflare";
   bottlePhotoSearch: boolean;
   externalResearch: boolean;
@@ -202,6 +203,7 @@ export async function getBootstrapResponse(
     data: {
       features: {
         accessAdmin: options.accessAdmin,
+        accessSecondFactor: options.accessSecondFactor,
         assistant: true,
         bottlePhotoSearch: options.bottlePhotoSearch,
         externalResearch: options.externalResearch,

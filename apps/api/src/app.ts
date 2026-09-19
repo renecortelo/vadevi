@@ -8,7 +8,9 @@ import {
 } from "@vadevi/contracts";
 
 import { isAdmin } from "./access/allowlist";
+import { accessConfiguration } from "./access/cloudflare-access";
 import { accessControl } from "./middleware/access-control";
+import { adminSecondFactor } from "./middleware/admin-second-factor";
 import { authentication } from "./middleware/authentication";
 import {
   externalResearchEnabled,
@@ -303,6 +305,8 @@ export function createApi() {
     app.use(path, authentication);
     app.use(path, accessControl);
   }
+  // And a second door on the administrator's routes, when one is configured.
+  app.use("/api/v1/admin/*", adminSecondFactor);
   registerAccessRoutes(app);
 
   app.openapi(healthRoute, (context) => context.json(healthPayload(context.env?.APP_VERSION), 200));
@@ -329,6 +333,7 @@ export function createApi() {
 
     const response = await bootstrapUser(database, {
       accessAdmin: isAdmin(context.env, context.get("principal")),
+      accessSecondFactor: accessConfiguration(context.env) !== null,
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
@@ -348,6 +353,7 @@ export function createApi() {
 
     const response = await updateUserProfile(database, {
       accessAdmin: isAdmin(context.env, context.get("principal")),
+      accessSecondFactor: accessConfiguration(context.env) !== null,
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),

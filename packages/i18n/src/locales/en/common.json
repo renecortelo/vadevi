@@ -1139,6 +1139,7 @@
     "loadError": "The list could not be loaded.",
     "saveError": "The change could not be saved. Try again.",
     "removeConfirm": "Remove {{email}}? They will not be able to sign in again until re-added.",
-    "addTitle": "Add an e-mail"
+    "addTitle": "Add an e-mail",
+    "secondFactorError": "Cloudflare Access did not vouch for this account. Sign in to Access with the same Google account and come back."
   }
 }

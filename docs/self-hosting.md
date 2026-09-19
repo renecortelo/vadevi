@@ -171,6 +171,43 @@ sign in again until listed. `pnpm validate:env` refuses `allowlist` with no
 administrator, because a private door with nobody to keep it can never be
 opened.
 
+### A second door for the administrator (optional)
+
+The list is only as safe as the administrator's Google account. If you want
+the admin screen to need something a stolen Google session does not have,
+put it behind **Cloudflare Access** — free for up to 50 users — and tell the
+Worker to check Access's word as well:
+
+1. Cloudflare dashboard → **Zero Trust** (create the team if asked; the free
+   plan is fine; note the team name, `<team>` in `<team>.cloudflareaccess.com`).
+2. **Access → Applications → Add an application → Self-hosted.** Name it
+   "Va de Vi admin". Under _Application domain_ pick your `workers.dev`
+   hostname and add two paths: `settings/access` and `api/v1/admin` (Access
+   matches the path and everything under it). Session duration: 24 hours or
+   less.
+3. **Policy**: Allow · Include · _Emails_ → the administrators' addresses.
+   Identity providers: the built-in **One-time PIN** is enough; Google as an
+   IdP is fine too, but then Access and the app share one account and you
+   have added a login, not a factor — prefer the PIN, or an IdP with 2FA.
+4. Save. Open the application's **Overview** and copy the **Application
+   Audience (AUD) Tag** (64 hex characters).
+5. In your configuration file:
+
+   ```jsonc
+   "ACCESS_TEAM_DOMAIN": "<team>",
+   "ACCESS_ADMIN_AUD": "<the 64-hex tag>",
+   ```
+
+   Redeploy. The deploy summary shows "Admin second factor" as `on`.
+
+From then on the admin screen and its API refuse anything that does not carry
+a valid Access JWT **for the same e-mail as the Firebase identity** — checked
+in the Worker against your team's published keys, not only at the edge, so
+the routes fail closed if the Access application is ever removed. Opening
+_About → Allowed accounts_ sends the browser through the Access login once
+and back. Nothing else in the application goes through Access, so the
+installed app and its offline mode are untouched.
+
 ## 7. Verify
 
 ```bash

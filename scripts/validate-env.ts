@@ -18,7 +18,18 @@ const fileEnvironment = {
 
 const EnvironmentSchema = z
   .object({
+    ACCESS_ADMIN_AUD: z
+      .string()
+      .regex(/^[a-f0-9]{64}$/, "ACCESS_ADMIN_AUD is the Access application's 64-hex audience tag.")
+      .optional(),
     ACCESS_MODE: z.enum(["open", "allowlist"]).default("open"),
+    ACCESS_TEAM_DOMAIN: z
+      .string()
+      .regex(
+        /^[a-z0-9][a-z0-9-]{0,62}$/,
+        "ACCESS_TEAM_DOMAIN is the <team> of <team>.cloudflareaccess.com.",
+      )
+      .optional(),
     ADMIN_EMAILS: z
       .string()
       .default("")
@@ -65,6 +76,19 @@ const EnvironmentSchema = z
         code: "custom",
         message: "ACCESS_MODE=allowlist needs at least one administrator in ADMIN_EMAILS.",
         path: ["ADMIN_EMAILS"],
+      });
+    }
+
+    // The second door needs both halves: the team that signs the JWT and the
+    // application it is for. One without the other silently guards nothing.
+    if (
+      (environment.ACCESS_TEAM_DOMAIN === undefined) !==
+      (environment.ACCESS_ADMIN_AUD === undefined)
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "ACCESS_TEAM_DOMAIN and ACCESS_ADMIN_AUD go together; set both or neither.",
+        path: ["ACCESS_TEAM_DOMAIN"],
       });
     }
 

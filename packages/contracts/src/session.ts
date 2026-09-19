@@ -65,6 +65,9 @@ export const BootstrapResponseSchema = z
           .object({
             /** This reader keeps the deployment's list of who may sign in. */
             accessAdmin: z.boolean(),
+            /** The admin routes sit behind Cloudflare Access as well; the page
+             *  must send the browser through that login when the API says so. */
+            accessSecondFactor: z.boolean(),
             assistant: z.boolean(),
             bottlePhotoSearch: z.boolean(),
             externalResearch: z.boolean(),

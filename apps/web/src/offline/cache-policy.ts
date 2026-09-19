@@ -27,6 +27,18 @@ export function isNetworkOnlyRequest(url: URL): boolean {
 }
 
 /**
+ * Requests the worker must not answer at all — not from a cache, and not by
+ * fetching on the browser's behalf either. Cloudflare Access protects the
+ * administrator's screen by redirecting a navigation to its login; a service
+ * worker that fetches that navigation follows the redirect and then may not
+ * hand a redirected response back, which the reader sees as a blank page.
+ * These are left to the browser, which handles the login round trip natively.
+ */
+export function isBrowserHandledRequest(url: URL): boolean {
+  return url.pathname.startsWith("/cdn-cgi/") || url.pathname === "/settings/access";
+}
+
+/**
  * Locale catalogs and the tasting ontology. These are versioned, so they are
  * served stale-while-revalidate and keep the current plus previous build.
  */

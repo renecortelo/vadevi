@@ -125,6 +125,7 @@
           "AUTH_REQUIRED",
           "AUTH_INVALID",
           "ACCESS_DENIED",
+          "SECOND_FACTOR_REQUIRED",
           "FORBIDDEN",
           "NOT_FOUND",
           "VALIDATION_FAILED",
@@ -295,6 +296,9 @@
                   "accessAdmin": {
                     "type": "boolean"
                   },
+                  "accessSecondFactor": {
+                    "type": "boolean"
+                  },
                   "assistant": {
                     "type": "boolean"
                   },
@@ -319,6 +323,7 @@
                 },
                 "required": [
                   "accessAdmin",
+                  "accessSecondFactor",
                   "assistant",
                   "bottlePhotoSearch",
                   "externalResearch",

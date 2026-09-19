@@ -5,6 +5,7 @@ import {
   cacheLayoutVersion,
   cacheNamesFor,
   cachePrefix,
+  isBrowserHandledRequest,
   isNetworkOnlyRequest,
   isOwnStaleCache,
   isVersionedBundleRequest,
@@ -44,6 +45,16 @@ describe("service worker cache boundaries", () => {
       isVersionedBundleRequest(new URL("https://vadevi.test/assets/ontology/2026.1.json")),
     ).toBe(true);
     expect(isVersionedBundleRequest(new URL("https://vadevi.test/assets/app-a1b2.js"))).toBe(false);
+  });
+
+  it("leaves the Access login round trip and the administrator's screen to the browser", () => {
+    // A navigation Cloudflare Access may redirect to its login must not go
+    // through the worker: it would follow the redirect and then be forbidden
+    // from answering a navigation with a redirected response — a blank page.
+    expect(isBrowserHandledRequest(new URL("https://app.test/settings/access"))).toBe(true);
+    expect(isBrowserHandledRequest(new URL("https://app.test/cdn-cgi/access/login"))).toBe(true);
+    expect(isBrowserHandledRequest(new URL("https://app.test/settings/data"))).toBe(false);
+    expect(isBrowserHandledRequest(new URL("https://app.test/"))).toBe(false);
   });
 
   it("names caches so an update installs beside the previous version", () => {

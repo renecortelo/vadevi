@@ -1139,6 +1139,7 @@
     "loadError": "Die Liste konnte nicht geladen werden.",
     "saveError": "Die Änderung konnte nicht gespeichert werden. Versuchen Sie es erneut.",
     "removeConfirm": "{{email}} entfernen? Eine Anmeldung ist erst wieder möglich, wenn die Adresse erneut hinzugefügt wird.",
-    "addTitle": "E-Mail hinzufügen"
+    "addTitle": "E-Mail hinzufügen",
+    "secondFactorError": "Cloudflare Access hat dieses Konto nicht bestätigt. Melden Sie sich bei Access mit demselben Google-Konto an und kommen Sie zurück."
   }
 }

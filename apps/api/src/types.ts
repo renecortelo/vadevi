@@ -14,6 +14,12 @@ export type WorkerBindings = {
   /** Comma-separated e-mails of the people who keep the allowlist. They can
    *  always sign in, so the list cannot lock its own keeper out. */
   ADMIN_EMAILS?: string;
+  /** Optional second factor for the admin routes, from Cloudflare Access: the
+   *  Zero Trust team name (the `<team>` of `<team>.cloudflareaccess.com`) and
+   *  the Access application's audience tag. Both set, the admin routes also
+   *  require Access's JWT for the same e-mail as the Firebase identity. */
+  ACCESS_ADMIN_AUD?: string;
+  ACCESS_TEAM_DOMAIN?: string;
   AI?: Ai;
   AI_MODEL?: string;
   AI_OCR_MODEL?: string;

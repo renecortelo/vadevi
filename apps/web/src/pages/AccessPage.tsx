@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Navigate } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { ApiError } from "../services/api";
 import { ModalDialog } from "../components/ModalDialog";
 import { addAllowedAccount, getAllowedAccounts, removeAllowedAccount } from "../services/api";
 import { useSession } from "../session/SessionContext";
@@ -17,6 +18,10 @@ import { useSession } from "../session/SessionContext";
  * door on the next request; the account and its data stay, which is what an
  * administrator expects of "remove" — deletion is the account's own act.
  */
+/** Set once a session has been sent through the Access login, so it is not
+ *  sent again in a loop if that login keeps failing. */
+const accessLoginAttemptKey = "vadevi.access.login-attempt";
+
 export function AccessPage() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
@@ -29,16 +34,38 @@ export function AccessPage() {
   const [pendingRemoval, setPendingRemoval] = useState<string | null>(null);
   const isAdmin = bootstrap.data.features.accessAdmin;
 
+  const secondFactor = bootstrap.data.features.accessSecondFactor;
+
   useEffect(() => {
     if (user === null || !isAdmin) return;
     const controller = new AbortController();
     getAllowedAccounts(user, controller.signal)
       .then((response) => setList(response.data))
-      .catch(() => {
-        if (!controller.signal.aborted) setError("access.loadError");
+      .catch((failure: unknown) => {
+        if (controller.signal.aborted) return;
+        // The API wants Cloudflare Access's word as well, and the browser has
+        // not been through that login yet. A full navigation to this screen —
+        // not a fetch, which cannot follow a login — is what Access intercepts
+        // and sends back here with its cookie set. Once per session, so a login
+        // that keeps failing does not spin.
+        if (
+          secondFactor &&
+          failure instanceof ApiError &&
+          failure.code === "SECOND_FACTOR_REQUIRED" &&
+          sessionStorage.getItem(accessLoginAttemptKey) === null
+        ) {
+          sessionStorage.setItem(accessLoginAttemptKey, String(Date.now()));
+          window.location.assign("/settings/access");
+          return;
+        }
+        setError(
+          failure instanceof ApiError && failure.code === "SECOND_FACTOR_REQUIRED"
+            ? "access.secondFactorError"
+            : "access.loadError",
+        );
       });
     return () => controller.abort();
-  }, [isAdmin, user]);
+  }, [isAdmin, secondFactor, user]);
 
   if (!isAdmin) return <Navigate replace to="/about" />;
 

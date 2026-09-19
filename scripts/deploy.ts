@@ -249,6 +249,14 @@ function summariseFeatures(configText: string): void {
       detail: "ACCESS_MODE",
       on: value("ACCESS_MODE") === "allowlist",
     },
+    {
+      label: "Admin second factor (Cloudflare Access)",
+      detail: "ACCESS_TEAM_DOMAIN",
+      // `value` answers "none" for an unset key, so both must be real values.
+      on:
+        !["", "none"].includes(value("ACCESS_TEAM_DOMAIN")) &&
+        /^[a-f0-9]{64}$/.test(value("ACCESS_ADMIN_AUD")),
+    },
     { label: "Food pairing", detail: "PAIRING_PROVIDER", on: value("PAIRING_PROVIDER") !== "none" },
     {
       label: "Open-web discovery",

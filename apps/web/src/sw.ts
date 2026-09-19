@@ -2,6 +2,7 @@
 
 import {
   cacheNamesFor,
+  isBrowserHandledRequest,
   isNetworkOnlyRequest,
   isOwnStaleCache,
   isVersionedBundleRequest,
@@ -177,6 +178,7 @@ serviceWorker.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
 
   if (request.method !== "GET" || url.origin !== serviceWorker.location.origin) return;
+  if (isBrowserHandledRequest(url)) return;
   if (isNetworkOnlyRequest(url)) {
     event.respondWith(fetch(request));
     return;

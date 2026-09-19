@@ -29,6 +29,7 @@ const session: SessionContextValue = {
     data: {
       features: {
         accessAdmin: false,
+        accessSecondFactor: false,
         assistant: true,
         bottlePhotoSearch: false,
         externalResearch: false,

@@ -1139,6 +1139,7 @@
     "loadError": "Impossibile caricare l’elenco.",
     "saveError": "Impossibile salvare la modifica. Riprova.",
     "removeConfirm": "Rimuovere {{email}}? Non potrà entrare finché non lo aggiungi di nuovo.",
-    "addTitle": "Aggiungi un’e-mail"
+    "addTitle": "Aggiungi un’e-mail",
+    "secondFactorError": "Cloudflare Access non ha convalidato questo account. Accedi ad Access con lo stesso account Google e torna."
   }
 }
