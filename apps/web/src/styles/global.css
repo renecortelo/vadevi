@@ -362,11 +362,24 @@ button[aria-busy="true"]:disabled {
   border-radius: var(--radius-pill);
   color: var(--color-accent);
   font-size: var(--text-xs);
-  font-weight: 750;
+  font-weight: 700;
   min-block-size: 2.3rem;
   /* Padding too, or one of them keeps the roomier padding every other field in
      the application has and stands a few pixels taller than its neighbours. */
   padding: var(--space-1) var(--space-3);
+}
+
+/* The way out is a small outlined pill like the menus beside it, not an
+   underlined word: it was a pill only by accident of a rule elsewhere. */
+.topbar > .text-button {
+  background: var(--color-field);
+  border: 1px solid var(--color-field-border);
+  text-decoration: none;
+}
+
+.topbar > .text-button:hover {
+  border-color: var(--color-field-border-hover);
+  color: var(--color-accent);
 }
 
 .space-switcher select {
@@ -570,8 +583,13 @@ button[aria-busy="true"]:disabled {
   text-align: center;
 }
 
+/* The one welcome line. Larger than an in-app title, since it is the only
+   thing on the screen, but not a poster: at 4.2rem it broke into three lines
+   under the lockup and pushed the button toward the fold. */
 .access-card h1 {
-  font-size: clamp(2.1rem, 8vw, 4.2rem);
+  font-size: clamp(1.9rem, 1.4rem + 2.2vw, 2.9rem);
+  line-height: 1.1;
+  margin-block-end: var(--space-3);
 }
 
 .access-card__lockup {
@@ -689,7 +707,6 @@ button[aria-busy="true"]:disabled {
 .settings-page {
   display: grid;
   gap: var(--space-5);
-  margin-inline: auto;
   max-inline-size: 52rem;
   padding-block: clamp(var(--space-4), 5vw, var(--space-7));
 }
@@ -738,8 +755,9 @@ button[aria-busy="true"]:disabled {
 }
 
 .choice-fieldset legend {
+  color: var(--color-text-muted);
   font-size: var(--text-sm);
-  font-weight: 750;
+  font-weight: 600;
   margin-block-end: var(--space-3);
 }
 
@@ -817,20 +835,30 @@ button[aria-busy="true"]:disabled {
   justify-content: flex-end;
 }
 
+/* A one-line form: its label on a line of its own, then the field taking
+   the room and the button beside it. It sits a step below whatever it
+   follows, and the label is a label, not a heading. */
 .inline-form {
   align-items: end;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-3);
+  gap: var(--space-2) var(--space-3);
+  margin-block-start: var(--space-4);
 }
 
 .inline-form label {
+  color: var(--color-text-muted);
   flex-basis: 100%;
   font-size: var(--text-sm);
-  font-weight: 750;
+  font-weight: 600;
 }
 
-.inline-form select,
+.inline-form input,
+.inline-form select {
+  flex: 1 1 14rem;
+  min-inline-size: 0;
+}
+
 .invitation-link {
   display: grid;
   gap: var(--space-3);
@@ -838,8 +866,9 @@ button[aria-busy="true"]:disabled {
 }
 
 .invitation-link label {
+  color: var(--color-text-muted);
   font-size: var(--text-sm);
-  font-weight: 750;
+  font-weight: 600;
 }
 
 .invitation-link input {
@@ -1312,19 +1341,46 @@ p {
   margin: 0;
 }
 
+/* A drop zone with one line of text. The file input is inside it but never
+   shown: the browser's own "Choose file · No file chosen" control is the one
+   thing on the screen that would not follow the palette, and the whole dashed
+   box is the target anyway. The input stays in the tree, so a keyboard and
+   the tests reach it. */
 .photo-picker {
   align-items: center;
-  background: var(--color-surface-raised);
+  background: var(--color-field);
   border: 1px dashed var(--color-accent);
   border-radius: var(--radius-md);
+  color: var(--color-accent);
   cursor: pointer;
+  display: grid;
+  font-weight: 700;
   min-block-size: 5rem;
   padding: var(--space-4);
   place-items: center;
+  text-align: center;
+  transition:
+    background-color var(--motion-fast),
+    border-color var(--motion-fast);
+}
+
+.photo-picker:hover {
+  background: var(--color-surface-muted);
+}
+
+.photo-picker:focus-within {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
 }
 
 .photo-picker input {
-  inline-size: min(100%, 24rem);
+  block-size: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
 }
 
 .photo-preview {
@@ -1360,8 +1416,10 @@ p {
 }
 
 .descriptor-fieldset > legend {
-  font-size: var(--text-sm);
-  font-weight: 750;
+  color: var(--color-text);
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-block-end: var(--space-1);
 }
 
 .descriptor-grid {
@@ -1759,9 +1817,11 @@ p {
   }
 }
 
-.evidence-heading .text-link {
+/* The way back, above the eyebrow, on any screen that has one. */
+.page-heading > div > .text-link:first-child,
+.page-heading > .text-link:first-child {
   display: inline-flex;
-  margin-block-end: var(--space-4);
+  margin-block-end: var(--space-3);
 }
 
 .research-panel {
@@ -1773,8 +1833,17 @@ p {
   padding: clamp(var(--space-4), 4vw, var(--space-6));
 }
 
-.research-panel h2,
-.research-panel .eyebrow,
+/* The panel's own heading cluster keeps the page's rhythm in miniature:
+   eyebrow a small step above the title, the title a small step above its
+   sentence. Zeroing all three had them touching. */
+.research-panel .eyebrow {
+  margin-block-end: var(--space-1);
+}
+
+.research-panel h2 {
+  margin-block-end: var(--space-2);
+}
+
 .research-panel p {
   margin-block-end: 0;
 }
@@ -1879,9 +1948,15 @@ p {
   padding: var(--space-4);
 }
 
+/* The title inside the box, like every other card's, not notched into the
+   border the way a bare fieldset draws it. */
 .grape-editor legend {
   color: var(--color-text-muted);
-  padding-inline: var(--space-2);
+  float: left;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  inline-size: 100%;
+  padding: 0;
 }
 
 .grape-editor__row {
@@ -2511,6 +2586,18 @@ p {
   margin: 0;
 }
 
+.assistant-result-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+}
+
+.assistant-result-card__actions .action-link {
+  font-size: var(--text-sm);
+  padding-inline: var(--space-3);
+}
+
 .assistant-availability {
   border-block-start: 1px solid var(--color-border);
   padding-block-start: var(--space-3);
@@ -2673,6 +2760,11 @@ p {
 .session-card {
   display: grid;
   gap: var(--space-3);
+}
+
+.session-card > .action-link {
+  justify-self: start;
+  margin-block-start: var(--space-1);
 }
 
 .session-card h2,
@@ -2950,11 +3042,23 @@ p {
   align-items: start;
 }
 
+/* Each cue is a small card: the chip, its one-line explanation under it, and
+   the intensity once it is chosen. Cards sit in an even grid rather than as a
+   ragged row of differently sized boxes. */
 .descriptor-choice {
   background: rgb(var(--color-surface-rgb) / 70%);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  max-inline-size: 15rem;
+  flex: 1 1 13rem;
+  max-inline-size: 18rem;
   padding: var(--space-2);
+}
+
+@media (max-width: 40rem) {
+  .descriptor-choice {
+    flex-basis: 100%;
+    max-inline-size: none;
+  }
 }
 
 .descriptor-choice small {
@@ -2981,6 +3085,28 @@ p {
 
 .tasting-actions__buttons {
   justify-content: flex-end;
+}
+
+/* On a phone the three controls share one row — previous, save, next — each
+   in its own column, so the bar is one line tall and never hides the field
+   being filled in under a second row of buttons. */
+@media (max-width: 40rem) {
+  .tasting-actions {
+    gap: var(--space-2);
+    padding-block: var(--space-3);
+  }
+
+  .tasting-actions__buttons {
+    display: grid;
+    gap: var(--space-2);
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .tasting-actions__buttons .action-link,
+  .tasting-actions__buttons .primary-button {
+    font-size: var(--text-sm);
+    padding-inline: var(--space-3);
+  }
 }
 
 .conflict-text-grid {
@@ -3260,8 +3386,20 @@ p {
 .phase5-heading {
   align-items: end;
   display: flex;
-  gap: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-6);
   justify-content: space-between;
+  max-inline-size: none;
+}
+
+.phase5-heading > div {
+  flex: 1 1 24rem;
+  max-inline-size: 48rem;
+}
+
+.phase5-heading > .phase5-links {
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
 }
 
 .phase5-links,
@@ -3272,17 +3410,33 @@ p {
   gap: var(--space-3);
 }
 
+/* The related-screen links and a card's own buttons are secondary buttons —
+   the same shape as everywhere else. This rule used to include .text-button,
+   and being later in the file it turned every underlined text button in the
+   app into a bordered pill. */
 .phase5-links a,
-.text-button,
 .phase5-card-actions button {
-  background: transparent;
-  border: 1px solid var(--color-border);
+  align-items: center;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-field-border);
   border-radius: var(--radius-pill);
   color: var(--color-text);
   cursor: pointer;
+  display: inline-flex;
   font: inherit;
-  padding: 0.55rem 0.85rem;
+  font-weight: 700;
+  min-block-size: 2.75rem;
+  padding: 0.6rem 1.25rem;
   text-decoration: none;
+  transition:
+    background-color var(--motion-fast),
+    border-color var(--motion-fast);
+}
+
+.phase5-links a:hover,
+.phase5-card-actions button:hover:not(:disabled) {
+  background: var(--color-surface-muted);
+  border-color: var(--color-field-border-hover);
 }
 
 .phase5-form-card,
@@ -3537,8 +3691,9 @@ p {
 }
 
 .field-stack > label {
+  color: var(--color-text-muted);
   font-size: var(--text-sm);
-  font-weight: 750;
+  font-weight: 600;
   margin-block-start: var(--space-2);
 }
 

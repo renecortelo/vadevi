@@ -270,7 +270,7 @@ export function DataRightsPage() {
           <h2 id="leave-title">{t("dataRights.leaveTitle")}</h2>
           <p>{t("dataRights.leaveBody")}</p>
           <button
-            className="text-button text-button--danger"
+            className="action-link action-link--danger"
             disabled={busy}
             onClick={() => void leave()}
             type="button"

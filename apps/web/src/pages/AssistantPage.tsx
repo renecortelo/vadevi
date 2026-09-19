@@ -143,19 +143,24 @@ export function AssistantResult({
                     <dd>{result.wine.noteCount}</dd>
                   </div>
                 </dl>
-                <Link className="text-link" to={`/wines/${result.wine.id}/evidence`}>
-                  {t("assistant.openEvidence")}
-                </Link>
-                {onDraftWishlist === undefined ? null : (
-                  <button
-                    className="text-button"
-                    disabled={drafting}
-                    onClick={() => onDraftWishlist(result.wine.id, result.wine.displayName)}
-                    type="button"
+                <div className="assistant-result-card__actions">
+                  <Link
+                    className="action-link action-link--secondary"
+                    to={`/wines/${result.wine.id}/evidence`}
                   >
-                    {t("actions.draftWishlist")}
-                  </button>
-                )}
+                    {t("assistant.openEvidence")}
+                  </Link>
+                  {onDraftWishlist === undefined ? null : (
+                    <button
+                      className="action-link action-link--quiet"
+                      disabled={drafting}
+                      onClick={() => onDraftWishlist(result.wine.id, result.wine.displayName)}
+                      type="button"
+                    >
+                      {t("actions.draftWishlist")}
+                    </button>
+                  )}
+                </div>
               </article>
             ))}
           </div>
@@ -510,7 +515,7 @@ export function AssistantPage() {
           <h1>{t("assistant.title")}</h1>
         </div>
         {turns.length === 0 ? null : (
-          <button className="text-button" onClick={clearChat} type="button">
+          <button className="action-link action-link--secondary" onClick={clearChat} type="button">
             {t("assistant.clearAction")}
           </button>
         )}
