@@ -155,6 +155,63 @@ script, which schedules a deletion for real, had the same gap — it did not say
 to make the throwaway Space active — and now does, with the two commands that
 shorten the grace period and check the purge.
 
+## Round 3 — 19 September 2026, Claude on the maintainer's behalf, Chrome (desktop) and the terminal
+
+Items 34–38 of the script, run as the operator: the two halves of the backup,
+the bucket's public access, and the deletion drill on a throwaway Space the
+maintainer had created (`Testaborrar`). All five pass; the drill found one
+defect on the way.
+
+### 1. The Space purge failed on its first run
+
+**Observed:** with the throwaway Space holding one wine and one photo and its
+purge time moved into the past, the 08:20 cron run threw
+`D1_ERROR: FOREIGN KEY constraint failed` inside `purgeSpace`; the 08:25 run
+completed it (11 rows, 1 object). Seen in `wrangler tail`; the app showed
+nothing either way.
+
+**Cause:** `identification_drafts` is Space-scoped and references `spaces`,
+`media_assets` and `wine_records`, and the purge list did not include it. An
+unconfirmed draft expires after thirty minutes and is swept by the same
+schedule — which is why the second run got through. A **confirmed** draft is
+kept as a tombstone with no expiry, so any Space in which a bottle was ever
+confirmed through identification would have failed its purge every five
+minutes, for ever, with nothing to say so: one job's exception also stopped
+every job behind it and the rest of the scheduled work.
+
+**Fix:** the table is purged first. A schema test now takes every table with a
+`space_id` column from `sqlite_master` and fails unless it is on the purge list
+or named as exempt with a reason, so the next Space-scoped table cannot be
+forgotten. Each job runs on its own: one that cannot complete is logged and
+retried next time, and the others still run. The reproduction — a confirmed
+draft in the purged Space — is in `deletion-executor.test.ts` and fails
+against the previous list.
+
+### 2. Evidence translation on read returned nothing on the deployment
+
+**Observed:** opening a researched wine's Evidence in Spanish reserved one
+model call and stored no translation; the log said
+`translation returned no usable array (wanted=16)`. The page still rendered,
+in the written language, as designed — but the language switch it exists for
+did not happen.
+
+**Cause:** sixteen translated paragraphs written as a bare JSON array is a
+long reply for the model to keep well-formed; the assistant learned the same
+lesson and asks for its claims against a strict JSON schema.
+
+**Fix:** the translator asks for a schema-bound object first and falls back to
+the plain prompt only if the model rejects the schema; the failure log now
+carries the reply's shape (never its text). Verified on the deployment after
+redeploying: the same wine read in Spanish came back with every curiosity and
+pairing in Spanish, switched to German in twenty-seven seconds with all of
+them in German, and back to Spanish in under two hundred milliseconds from
+the kept translations. The log for that switch also showed the page sending
+the read twice — the effect re-ran once for the catalogue and once for the
+language — so two full translations were paid for; the error text is now
+kept as a key so the effect depends on the language alone. And the batches,
+which ran one after another, now run together, so a first read in a new
+language waits for the longest batch rather than the sum.
+
 ## Round 1 — 16 August 2026, the maintainer, Google Chrome, desktop
 
 Mobile was not exercised. Items 1–8 of that run passed; the run stopped at the

@@ -16,22 +16,39 @@ const languageNames: Record<ResearchLocale, string> = {
   "pt-PT": "European Portuguese",
 };
 
-/** Pull a JSON array of strings out of a model reply, tolerating code fences. */
+/**
+ * Pull the array of strings out of a model reply. The structured path answers
+ * with an object (or its JSON string) whose `translations` is the array; the
+ * plain-prompt path answers with the bare array, possibly inside prose or a
+ * code fence, so it is recovered from the first bracket to the last.
+ */
 export function extractStringArray(output: Record<string, unknown>): string[] | null {
-  const raw = output.response;
-  if (typeof raw !== "string") return null;
-  const start = raw.indexOf("[");
-  const end = raw.lastIndexOf("]");
-  if (start === -1 || end <= start) return null;
-  let parsed: unknown;
-  try {
-    parsed = JSON.parse(raw.slice(start, end + 1));
-  } catch {
-    return null;
+  const raw = output.response ?? output;
+  let parsed: unknown = raw;
+  if (typeof raw === "string") {
+    const start = raw.search(/[[{]/);
+    const end = Math.max(raw.lastIndexOf("]"), raw.lastIndexOf("}"));
+    if (start === -1 || end <= start) return null;
+    try {
+      parsed = JSON.parse(raw.slice(start, end + 1));
+    } catch {
+      return null;
+    }
+  }
+  if (parsed !== null && typeof parsed === "object" && !Array.isArray(parsed)) {
+    parsed = (parsed as { translations?: unknown }).translations;
   }
   if (!Array.isArray(parsed) || parsed.some((item) => typeof item !== "string")) return null;
   return parsed as string[];
 }
+
+/** The reply shape the structured path asks for: one array, nothing else. */
+const translationsJsonSchema = {
+  additionalProperties: false,
+  properties: { translations: { items: { type: "string" }, type: "array" } },
+  required: ["translations"],
+  type: "object",
+} as const;
 
 /**
  * What one model call will take. A composed paragraph runs to 900 characters,
@@ -95,41 +112,73 @@ export class CloudflareTranslationAdapter implements TranslationPort {
       .slice(0, translationLimits.textsPerCall)
       .map((text) => text.slice(0, translationLimits.charactersPerText));
     if (texts.length === 0) return [];
-    const language = languageNames[input.locale];
+    // A strict JSON schema first — the same way the assistant asks for its
+    // claims, and for the same reason: sixteen translated paragraphs written
+    // as a bare array came back unparseable often enough (a fence, a stray
+    // quote, prose around it) that a whole page stayed untranslated. Not every
+    // model accepts a schema, so the plain prompt remains as the second try.
+    for (const structured of [true, false]) {
+      const translated = await this.callModel(texts, input.locale, structured);
+      if (translated !== null && translated.length === texts.length) {
+        return translated.map((value) => {
+          const sanitized = sanitizeExternalText(value, translationLimits.charactersPerText);
+          return sanitized.value.length === 0 || sanitized.flaggedPromptLike
+            ? null
+            : sanitized.value;
+        });
+      }
+    }
+    return null;
+  }
+
+  private async callModel(
+    texts: string[],
+    locale: ResearchLocale,
+    structured: boolean,
+  ): Promise<string[] | null> {
+    const language = languageNames[locale];
+    const instruction =
+      `You are a precise translator. Translate each string in the given JSON ` +
+      `array into ${language}. Preserve the meaning exactly; never add, omit, ` +
+      `or comment. If a string is already in ${language}, return it unchanged. ` +
+      `Keep proper names — producers, wines, shops, publications, page titles' ` +
+      `brand parts — exactly as written, and keep any "Label · Property: value" ` +
+      `structure with its separators, translating only the words. ` +
+      (structured
+        ? `Answer with a JSON object whose "translations" is the array of translated ` +
+          `strings, in the same order and of the same length as the input.`
+        : `Reply with ONLY a JSON array of the translated strings, in the same ` +
+          `order and of the same length. No markdown.`);
+    const payload: Record<string, unknown> = {
+      max_tokens: 4_000,
+      messages: [
+        { content: instruction, role: "system" },
+        { content: JSON.stringify(texts), role: "user" },
+      ],
+      temperature: 0,
+    };
+    if (structured) {
+      payload.response_format = { json_schema: translationsJsonSchema, type: "json_schema" };
+    }
     try {
-      const output = await this.ai.run(this.model, {
-        max_tokens: 4_000,
-        messages: [
-          {
-            content:
-              `You are a precise translator. Translate each string in the given JSON ` +
-              `array into ${language}. Preserve the meaning exactly; never add, omit, ` +
-              `or comment. If a string is already in ${language}, return it unchanged. ` +
-              `Keep proper names, and keep any "Label · Property: value" structure ` +
-              `with its separators, translating only the words. ` +
-              `Reply with ONLY a JSON array of the translated strings, in the same ` +
-              `order and of the same length. No markdown.`,
-            role: "system",
-          },
-          { content: JSON.stringify(texts), role: "user" },
-        ],
-        temperature: 0,
-      });
+      const output = await this.ai.run(this.model, payload);
       const translated = extractStringArray(output);
       if (translated === null || translated.length !== texts.length) {
+        // The shape only, never the text: it is gathered web prose, but it is
+        // about the reader's wine.
+        const raw = output.response;
         console.warn(
-          `translation returned no usable array (model=${this.model}, wanted=${texts.length})`,
+          `translation returned no usable array (structured=${structured}, model=${this.model}, ` +
+            `wanted=${texts.length}, got=${translated?.length ?? "none"}, ` +
+            `responseType=${typeof raw}, length=${typeof raw === "string" ? raw.length : "n/a"})`,
         );
         return null;
       }
-      return translated.map((value) => {
-        const sanitized = sanitizeExternalText(value, translationLimits.charactersPerText);
-        return sanitized.value.length === 0 || sanitized.flaggedPromptLike ? null : sanitized.value;
-      });
+      return translated;
     } catch (error) {
       console.warn(
-        `translation model call failed (model=${this.model}): ${
-          error instanceof Error ? error.name : "unknown"
+        `translation model call failed (structured=${structured}, model=${this.model}): ${
+          error instanceof Error ? error.message : "unknown"
         }`,
       );
       return null;

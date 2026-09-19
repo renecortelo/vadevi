@@ -572,12 +572,37 @@ describe("external research adapters", () => {
 
   it("translates snippets faithfully and falls back when the shape is wrong", async () => {
     const model = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+    // The structured path: the model honours the schema and answers with the
+    // object, as Workers AI returns it — already parsed.
+    const structuredCalls: unknown[] = [];
     const good = new CloudflareTranslationAdapter(
-      { run: async () => ({ response: '["Hola mundo", "Segundo dato"]' }) },
+      {
+        run: async (_model, input) => {
+          structuredCalls.push(input.response_format);
+          return { response: { translations: ["Hola mundo", "Segundo dato"] } };
+        },
+      },
       model,
     );
     await expect(
       good.translate({ locale: "es", texts: ["Hello world", "Second fact"] }),
+    ).resolves.toEqual(["Hola mundo", "Segundo dato"]);
+    expect(structuredCalls).toHaveLength(1);
+    expect(structuredCalls[0]).toMatchObject({ type: "json_schema" });
+
+    // A model that rejects the schema is asked again without it, and the bare
+    // array it then writes — fenced, wrapped in prose — is still recovered.
+    const plainOnly = new CloudflareTranslationAdapter(
+      {
+        run: async (_model, input) => {
+          if (input.response_format !== undefined) throw new Error("5025: no JSON Schema");
+          return { response: 'Here you go:\n```json\n["Hola mundo", "Segundo dato"]\n```' };
+        },
+      },
+      model,
+    );
+    await expect(
+      plainOnly.translate({ locale: "es", texts: ["Hello world", "Second fact"] }),
     ).resolves.toEqual(["Hola mundo", "Segundo dato"]);
 
     // A reply whose array length does not match the input is discarded entirely.

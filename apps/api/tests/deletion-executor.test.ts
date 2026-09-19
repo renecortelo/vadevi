@@ -2,6 +2,7 @@ import { BootstrapResponseSchema, DeletionJobResponseSchema } from "@vadevi/cont
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
+import { spaceScopedTables } from "../src/repositories/deletion";
 import { randomOpaqueToken } from "../src/security/opaque-token";
 import worker from "../src/worker";
 import { emulatorIdToken } from "./fixtures/firebase-token";
@@ -84,6 +85,35 @@ describe("the scheduled handler purges (AC-064)", () => {
       .bind(mediaId, spaceId, me.data.user.id, r2Key)
       .run();
 
+    // A bottle confirmed through identification leaves a draft behind as a
+    // tombstone, with no expiry, pointing at the Space, the photo and the wine.
+    // The purge used to skip that table, so every Space with one failed its
+    // purge on the FOREIGN KEY — every five minutes, for ever.
+    const wine = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Confirmed Through Identification",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Cron Producer",
+        vintageYear: 2020,
+        wineType: "red",
+      }),
+      headers: mutate(token),
+      method: "POST",
+    });
+    expect(wine.status).toBe(201);
+    const wineId = (await wine.json<{ data: { wine: { id: string } } }>()).data.wine.id;
+    await env.DB.prepare(
+      `INSERT INTO identification_drafts (
+        id, space_id, user_id, status, candidates_json, warnings_json, barcode, media_id,
+        confirmed_wine_id, confirmed_at, expires_at, created_at, updated_at
+      ) VALUES (?, ?, ?, 'needs_confirmation', '[]', '[]', NULL, ?, ?,
+        '2026-08-14T00:10:00.000Z', '2026-08-14T00:30:00.000Z',
+        '2026-08-14T00:00:00.000Z', '2026-08-14T00:10:00.000Z')`,
+    )
+      .bind("01JDRAFT000000000000000CRON", spaceId, me.data.user.id, mediaId, wineId)
+      .run();
+
     const scheduled = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/deletion`, {
       body: JSON.stringify({ confirm: true, confirmationText: "Cron Purge Space" }),
       headers: headers(token),
@@ -104,6 +134,42 @@ describe("the scheduled handler purges (AC-064)", () => {
       .bind(spaceId)
       .first<{ total: number }>();
     expect(remaining?.total).toBe(0);
+    const drafts = await env.DB.prepare(
+      `SELECT COUNT(*) AS total FROM identification_drafts WHERE space_id = ?`,
+    )
+      .bind(spaceId)
+      .first<{ total: number }>();
+    expect(drafts?.total).toBe(0);
+    const completed = await env.DB.prepare(`SELECT state FROM deletion_jobs WHERE id = ?`)
+      .bind(job.id)
+      .first<{ state: string }>();
+    expect(completed?.state).toBe("completed");
+  });
+
+  it("purges every table that carries a space_id", async () => {
+    // The purge list is written by hand, and a table added later with a
+    // space_id and a foreign key onto spaces is exactly what makes a purge
+    // throw for ever. So the schema is the oracle: every table with that
+    // column is either on the list, or named here with the reason it is not.
+    const exempt = new Set([
+      // Not Space-scoped rows: a user's pointer to their active Space.
+      "users",
+      // The Space row itself, deleted last.
+      "spaces",
+      // Kept: the record that the purge happened, and its counters.
+      "deletion_jobs",
+      "usage_counters",
+    ]);
+    const tables = await env.DB.prepare(
+      `SELECT name, sql FROM sqlite_master WHERE type = 'table' AND sql LIKE '%space_id%'`,
+    ).all<{ name: string; sql: string }>();
+    const purged = new Set<string>(
+      spaceScopedTables.map((table) => table.replace(/_by_space$/, "")),
+    );
+    const missing = tables.results
+      .map((table) => table.name)
+      .filter((name) => !exempt.has(name) && !purged.has(name) && !name.startsWith("sqlite_"));
+    expect(missing).toEqual([]);
   });
 });
 
