@@ -123,7 +123,7 @@ export function SessionsPage() {
                 {t("sessions.wineCount", { count: session.wineCount })} ·{" "}
                 {t("sessions.submissionCount", { count: session.submittedNoteCount })}
               </p>
-              <Link className="text-link" to={`/sessions/${session.id}`}>
+              <Link className="action-link action-link--secondary" to={`/sessions/${session.id}`}>
                 {t("sessions.openAction")}
               </Link>
             </article>

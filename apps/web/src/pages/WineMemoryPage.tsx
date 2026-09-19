@@ -561,11 +561,15 @@ export function WineMemoryPage() {
           </span>
         </div>
         <div className="hero__actions">
-          <button className="text-button" onClick={() => void flush(spaceId)} type="button">
+          <button
+            className="action-link action-link--secondary"
+            onClick={() => void flush(spaceId)}
+            type="button"
+          >
             {t("memory.retrySync")}
           </button>
           <button
-            className="text-button text-button--danger"
+            className="action-link action-link--danger"
             onClick={() => setConfirmClear(true)}
             type="button"
           >

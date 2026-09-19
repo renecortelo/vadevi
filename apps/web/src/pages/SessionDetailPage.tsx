@@ -214,6 +214,10 @@ export function SessionDetailPage() {
     <section className="sessions-page">
       <header className="page-heading session-detail-heading">
         <div>
+          {/* The way back sits above the title, where the evidence page has it. */}
+          <Link className="text-link" to="/sessions">
+            {t("sessions.backAction")}
+          </Link>
           <p className="eyebrow">{t(`sessions.status.${detail.data.session.status}`)}</p>
           <h1>{detail.data.session.name}</h1>
           <p>
@@ -233,9 +237,6 @@ export function SessionDetailPage() {
             )}
           </p>
         </div>
-        <Link className="text-link" to="/sessions">
-          {t("sessions.backAction")}
-        </Link>
       </header>
       {usingCache ? (
         <p className="cache-note" role="status">

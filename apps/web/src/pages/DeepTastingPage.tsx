@@ -1291,7 +1291,11 @@ export function DeepTastingPage() {
           >
             {t("tasting.previousAction")}
           </button>
-          <button className="text-button" onClick={() => void save(false)} type="button">
+          <button
+            className="action-link action-link--quiet"
+            onClick={() => void save(false)}
+            type="button"
+          >
             {t("tasting.saveDraftAction")}
           </button>
           {stepIndex === steps.length - 1 ? (

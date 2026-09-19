@@ -224,7 +224,7 @@ export function NewSessionPage() {
             </>
           )}
         </fieldset>
-        <p className="local-save-state">{t("sessions.offlineReady")}</p>
+        <p className="cache-note">{t("sessions.offlineReady")}</p>
         {error ? (
           <p className="form-error" role="alert">
             {t("sessions.saveError")}
