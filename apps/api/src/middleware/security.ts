@@ -11,6 +11,11 @@ const securityHeaders = {
   "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
   "Permissions-Policy": "camera=(self), microphone=(self), geolocation=(self)",
   "Referrer-Policy": "no-referrer",
+  // The origin is only ever served over TLS, and this tells a browser that has
+  // seen it once never to try plain HTTP again — even for a typed address —
+  // for a year. `preload` is deliberately left off: it is an irreversible
+  // submission to the browsers' built-in list, which is an operator's decision.
+  "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
   "X-Content-Type-Options": "nosniff",
 } as const;
 

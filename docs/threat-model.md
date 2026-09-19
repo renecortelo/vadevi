@@ -8,7 +8,7 @@ A recorded coordinate is a stronger asset than the text it replaced: it says whe
 
 ## Implemented controls
 
-- Single-origin deployment and restrictive browser headers.
+- Single-origin deployment and restrictive browser headers, including `Strict-Transport-Security` (one year, subdomains, no preload — that submission is the operator's) on the API's responses and the static shell alike.
 
 ### One deliberate widening of the script policy
 
@@ -38,6 +38,7 @@ photographing a bottle is most likely.
 - Parameterized D1 migration design and mandatory future Space-scoped repositories.
 - Dependency lockfile, lint/type/test/build gates, and generated-contract drift detection.
 - Firebase bearer-token verification, local-emulator isolation, and active-membership checks at repository boundaries.
+- `apps/api/tests/access-hardening.test.ts` is the adversarial half of the door: a valid identity with no entry on every authenticated route family with a before/after snapshot of the tables (no user, Space or audit row is created); the outsider trying to list themselves, remove the administrator, or read the list; look-alike addresses (containing domain, subdomain, prefix, plus-tag, extra TLD); a valid Space invitation held by an outsider (refused, and the link stays unused; the public preview names no address); a listed guest against the admin routes; removal taking effect mid-session; unsigned tokens against a non-emulator configuration; wrong `aud`/`iss`; expired and future-dated tokens; malformed, oversized and mis-schemed Authorization headers; custom claims that would "make" an administrator; the runtime configuration never naming the administrators or the mode; and one identical refusal whether or not an address is known. The same probes were run by hand against the deployment on 19 September 2026: every authenticated route answered 401 to no token, to an unsigned token carrying the administrator's address, and to an RS256 token with a bogus signature; configuration-file paths under the origin answer with the SPA shell, not a file.
 - An optional per-deployment allowlist (`ACCESS_MODE=allowlist`): after the token is verified, a principal whose e-mail is not on the deployment's list, and not one of its administrators, is refused with 403 on every authenticated route before any account is created. Authentication says who someone is; this is the separate question of whether they may come in. The list is kept by administrators named in the deployment's own configuration, never in the repository; the public source scan refuses an administrator address or a closed door in the example files.
 - Non-enumerating not-found responses for inaccessible Space resources and private media.
 - Idempotency request hashing and user-scoped mutation IDs for safe retries and exact-once sync application.
