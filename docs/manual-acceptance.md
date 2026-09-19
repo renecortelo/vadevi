@@ -189,34 +189,34 @@ Steps 39–46 need the optional providers on: `RESEARCH_PROVIDER=open_data`,
 each screen must still work — the research panel says so plainly, and the wine
 records fine — which is itself worth one pass.
 
-39. [ ] Open a wine → **Evidence** → **Investigate this wine**. It runs without
+39. [x] Open a wine → **Evidence** → **Investigate this wine**. It runs without
         asking you to choose an entity from a list, and comes back with a
         paragraph at the top and small "key → value" cards under "What we found".
-40. [ ] Read the paragraph and the cards **in your own language**. English text
+40. [x] Read the paragraph and the cards **in your own language**. English text
         here is a finding: translation runs when Workers AI is on. Then **switch
         the language** in the top bar: the paragraph, the curiosities, the
         pairings and the card headings all follow it, not only the labels. The
         first switch to a language takes a few seconds — the evidence is being
         translated, once — and every later one is instant.
-41. [ ] Check a card's **Source**: it expands to the publisher, the class, and
+41. [x] Check a card's **Source**: it expands to the publisher, the class, and
         the licence. That detail belongs there, not on the face of the card.
-42. [ ] **Discard** one card. It asks for confirmation, then the card goes and
+42. [x] **Discard** one card. It asks for confirmation, then the card goes and
         stays gone on reload. The paragraph is left alone.
-43. [ ] Press **Rewrite the text**. The paragraph is written again from the cards
+43. [x] Press **Rewrite the text**. The paragraph is written again from the cards
         that remain — the discarded detail must not survive in it.
-44. [ ] Discard everything, then **Investigate this wine** again. It starts from
+44. [x] Discard everything, then **Investigate this wine** again. It starts from
         zero: what you discarded is proposed again rather than counted while the
         screen stays empty.
-45. [ ] Ask Vicenç "what can I pair the ⟨wine name⟩ with?" and then the same
+45. [x] Ask Vicenç "what can I pair the ⟨wine name⟩ with?" and then the same
         question by style ("…with that cava?"). Both answer about **that** wine
         and suggest dishes; an answer about a different bottle is a finding.
-46. [ ] Confirm the suggestions use what research found — a wine you have just
+46. [x] Confirm the suggestions use what research found — a wine you have just
         investigated should give more specific ideas than an empty one.
-47. [ ] In **Quick Log**, use "Prefill from a wine you have", pick a wine, change
+47. [x] In **Quick Log**, use "Prefill from a wine you have", pick a wine, change
         only the year, and save. It creates a **new** wine, leaving the original
         alone.
-48. [ ] In Wine Memory, **Edit** a wine and change its **type**. It saves.
-49. [ ] On the same form, the **country** is a list of country names in your
+48. [x] In Wine Memory, **Edit** a wine and change its **type**. It saves.
+49. [x] On the same form, the **country** is a list of country names in your
         language — not a two-letter code — and the wine keeps the country it had.
 
 ---
@@ -234,46 +234,46 @@ without touching any of it.
 
 ### The tasting form now follows the wine
 
-50. [ ] Start a tasting on a **red**. Tannin is there, and the hues offered are
+50. [x] Start a tasting on a **red**. Tannin is there, and the hues offered are
         red ones — ruby, garnet, brick and so on, not a generic list.
-51. [ ] Start one on a **white**. **Tannin is gone**, and the hues are white
+51. [x] Start one on a **white**. **Tannin is gone**, and the hues are white
         ones. A white asking about tannin is a finding.
-52. [ ] Start one on a **sparkling**. There is a bubble section — bead size and
+52. [x] Start one on a **sparkling**. There is a bubble section — bead size and
         effervescence — that the still wines do not show.
-53. [ ] On any tasting, the **nose is read twice**: once still, once after
+53. [x] On any tasting, the **nose is read twice**: once still, once after
         swirling. Both save and come back after a reload.
-54. [ ] The **descriptors** offered match the wine: a white must not be offered a
+54. [x] The **descriptors** offered match the wine: a white must not be offered a
         red's vocabulary.
-55. [ ] Add a wine of type **vermut tinto** and another **vermut blanco**. Both
+55. [x] Add a wine of type **vermut tinto** and another **vermut blanco**. Both
         save, and both read as proper names rather than as a raw key like
         `wineType.vermouth`.
 
 ### Where the wine was tasted
 
-56. [ ] On a tasting, type a real bar or restaurant in **the place field** and
+56. [x] On a tasting, type a real bar or restaurant in **the place field** and
         press **Buscar el lugar**. A list appears; pick one. The name, city,
         area **and country** fill in together.
-57. [ ] Press **Estoy aquí**. The browser asks permission — say yes — and it
+57. [x] Press **Estoy aquí**. The browser asks permission — say yes — and it
         offers where you are. Say no on a second try: it must tell you plainly
         and leave the field usable by hand.
-58. [ ] Save the tasting, reload, and open it. The place is still there.
-59. [ ] With `PLACES_PROVIDER` unset the field is four plain text boxes and still
+58. [x] Save the tasting, reload, and open it. The place is still there.
+59. [x] With `PLACES_PROVIDER` unset the field is four plain text boxes and still
         saves. Worth one pass if you ever intend to turn it off.
 
 ### Bottle photos and the evidence screen
 
-60. [ ] Open a wine → **Evidence**. Search for a **bottle photo**, and check on
+60. [x] Open a wine → **Evidence**. Search for a **bottle photo**, and check on
         **the phone** that the results do not spill past the margins.
-61. [ ] Pick one. It becomes the wine's main photo, replacing the one you took at
+61. [x] Pick one. It becomes the wine's main photo, replacing the one you took at
         the table.
-62. [ ] Ask for **more photos** — a second page of results, not the same six.
-63. [ ] **Remove** a saved photo. It goes, and stays gone after a reload.
-64. [ ] From a wine **card**, tap the name or the image: it opens that wine's
+62. [x] Ask for **more photos** — a second page of results, not the same six.
+63. [x] **Remove** a saved photo. It goes, and stays gone after a reload.
+64. [x] From a wine **card**, tap the name or the image: it opens that wine's
         evidence.
 
 ### Events
 
-65. [ ] Create an **Event**, then log a wine straight into it from Quick Log.
+65. [x] Create an **Event**, then log a wine straight into it from Quick Log.
         The wine appears under that event.
 
 ### The group, and the comparison paragraph
@@ -281,71 +281,71 @@ without touching any of it.
 Steps 66–69 need **two accounts** in one shared Space. Invite a second person, or
 sign in as yourself on a second browser profile.
 
-66. [ ] Both accounts taste the same wine, each with a score and their own
+66. [x] Both accounts taste the same wine, each with a score and their own
         written note.
-67. [ ] Ask Vicenç about that wine generally. It gives **the group's average and
+67. [x] Ask Vicenç about that wine generally. It gives **the group's average and
         range**, and names people when it attributes a score.
-68. [ ] Ask about the other person by name. It answers for them — **and never
+68. [x] Ask about the other person by name. It answers for them — **and never
         quotes their written note**. A peer's prose appearing anywhere is a
         finding, and a serious one.
-69. [ ] On the wine's **Evidence** screen, with the wine both researched and
+69. [x] On the wine's **Evidence** screen, with the wine both researched and
         tasted, press **Escribir la comparación**. A paragraph appears setting
         what you tasted against what the producer and the web say. It must not
         invent a flavour neither side mentioned, and must not repeat the other
         person's written words.
-70. [ ] On a wine that is researched but **never tasted**, the same button says
+70. [x] On a wine that is researched but **never tasted**, the same button says
         plainly that one side is missing rather than writing something anyway.
 
 ## I. A wine's tastings, gathered
 
 A wine holds many tastings, and they used to have nowhere to live.
 
-71. [ ] Taste the same wine **twice**. On its **Memory card**, the two are behind
+71. [x] Taste the same wine **twice**. On its **Memory card**, the two are behind
         one count — not two buttons, and not a card that has grown a list.
-72. [ ] Tap the count. The tastings unfold; each opens to read, and from there to
+72. [x] Tap the count. The tastings unfold; each opens to read, and from there to
         correct.
-73. [ ] On a wine you have **never** tasted, the card offers only the way to
+73. [x] On a wine you have **never** tasted, the card offers only the way to
         start. A count of zero is a finding.
-74. [ ] Open that wine's **Evidence**. The same list is there, beside the tasting
+74. [x] Open that wine's **Evidence**. The same list is there, beside the tasting
         button, and the button says **register another** rather than inviting you
         to taste a wine you clearly already have.
 
 ## J. The map
 
-75. [ ] **Memory → Mapa.** Real streets, not a grid of lines. A schematic with a
+75. [x] **Memory → Mapa.** Real streets, not a grid of lines. A schematic with a
         notice means `MAP_TILES_PROVIDER` is off in the deployment, which is a
         configuration finding rather than a bug.
-76. [ ] Switch between **tasting places** and **regions of origin**. Both draw,
+76. [x] Switch between **tasting places** and **regions of origin**. Both draw,
         and a wine with no coordinate simply is not on the map.
-77. [ ] Tap a point. It names the wines there and links to each one's evidence.
-78. [ ] Two tastings at the same bar share **one** point carrying a count, rather
+77. [x] Tap a point. It names the wines there and links to each one's evidence.
+78. [x] Two tastings at the same bar share **one** point carrying a count, rather
         than stacking two markers on top of each other.
-79. [ ] **On the phone**, pan and pinch the map. It must not trap the page scroll
+79. [x] **On the phone**, pan and pinch the map. It must not trap the page scroll
         or spill past the margins.
-80. [ ] **Keyboard, on a desktop.** Tab until a point takes focus: the ring is
+80. [x] **Keyboard, on a desktop.** Tab until a point takes focus: the ring is
         visible, and **Enter opens it**. A point you can reach and cannot open is
         a finding — it was one, until recently.
 
 ## K. Pairing, and the venue split
 
-81. [ ] On a tasting, the place is now **two separate fields**: a name you type,
+81. [x] On a tasting, the place is now **two separate fields**: a name you type,
         and a box to paste coordinates into. Paste a point copied from a map app;
         the name you already typed survives, and the place reads as located.
-82. [ ] Paste something that is not a point — a shortened map link, or prose. It
+82. [x] Paste something that is not a point — a shortened map link, or prose. It
         is refused plainly rather than saved as a place at 0,0.
-83. [ ] Ask Vicenç **what goes with a dish** — a roast chicken, a steak, whatever
+83. [x] Ask Vicenç **what goes with a dish** — a roast chicken, a steak, whatever
         you are actually cooking. The answer must give **the general criteria
         first**: what the dish is, and what a wine needs to match it, as advice
         anyone could act on. Opening with a bottle from your own cellar is a
         finding; that was the bug.
-84. [ ] Only **after** that should it turn to your own wines, say which fit and
+84. [x] Only **after** that should it turn to your own wines, say which fit and
         why, and distinguish a wine you have **tasted** from one you have a
         **bottle of** right now.
-85. [ ] Ask about a dish in **your own words** — a regional dish, a diminutive,
+85. [x] Ask about a dish in **your own words** — a regional dish, a diminutive,
         whatever you would really type. If it does not know the dish it must say
         so and **ask you what is in it**, offering the choices. Answering with a
         wine anyway is a finding.
-86. [ ] Answer that question in one word. The next turn understands it.
+86. [x] Answer that question in one word. The next turn understands it.
 
 ---
 

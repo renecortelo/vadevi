@@ -155,6 +155,75 @@ script, which schedules a deletion for real, had the same gap — it did not say
 to make the throwaway Space active — and now does, with the two commands that
 shorten the grace period and check the purge.
 
+## Round 4 — 19 September 2026, the maintainer, iPhone and desktop, two accounts
+
+Every item of the script ticked. Five things found outside it.
+
+### 1. The tasting comparison set the tasting against the wrong material
+
+**Reported:** "It sometimes brings data that has nothing to do with it — winery
+facts, years, places. Only what is relevant to tasting can be compared against
+mine."
+
+**Cause:** the paragraph was written from every prose fact on the wine,
+including the Wikidata highlights (a founding year, a country, hectares) and
+the producer's history, and the prompt did not tell the model which part of a
+source to use.
+
+**Fix:** only the composed narrative, the web notes and the pairing notes go
+in, and the model is told to use from them only what describes how the wine
+looks, smells, tastes and feels — and to say plainly when the sources say
+nothing about that. The test that seeds a data-point highlight now asserts it
+never reaches the paragraph.
+
+### 2. The event form seemed to have one place field
+
+**Reported:** "Creating an event, the place is still a single field; the split
+into place and coordinates you did on the tasting has to be replicated."
+
+**Checked:** the event form uses the same component as the tasting and, on the
+current deployment, shows both — the place and the "paste Google Maps
+coordinates" box, with _Search_ and _I'm here_ (Chrome, 19 September). The
+box landed on 16 September (#158), after the event form was last looked at on
+the phone. Not reproduced; to be re-checked on the phone after an update. If
+it still shows one field there, that is a real finding with a different cause.
+
+### 3. A raw key on the tasting read screen
+
+**Reported:** `quicklog.sentimentValue.undefined`.
+
+**Cause:** a deep note's sentiment is optional — absent, not null — and the
+screen tested for null.
+
+**Fix:** tested for absence.
+
+### 4. Vicenç answered one account and not the other
+
+**Reported:** "In one of my accounts Vicenç returned 'the AI could not reply
+just now: this is a direct structured search'; in the other it answered."
+
+**Cause:** the first account had spent the day's twenty AI replies — the
+counters show 20 of 20 for it and 7 for the other. Evidence translation draws
+on the same metric, and the day's language switching on several wines had
+used most of it before Vicenç was asked. The cap is the application working
+as designed; the message said "could not reply", which reads as an outage.
+
+**Fix:** a turn refused by the budget now says the daily limit is reached and
+comes back tomorrow, in all eight languages; "could not reply" is kept for a
+model that was asked and produced nothing. The member share of the AI budget
+is 40 of the deployment's 60 (the deployment cap is what bounds the cost; the
+member cap only divides it). The caps table in `docs/self-hosting.md` had
+drifted again — it said 30/120 — and `pnpm docs:check` now fails the gate
+when it disagrees with the code.
+
+### 5. Vicenç kept the previous Space's conversation
+
+**Reported:** "Switching group and coming back to Vicenç shows the earlier
+chats; those must be cleared."
+
+**Fix:** the saved chat remembers the Space it belongs to and is dropped for
+any other, and a switch while the screen is open clears it at once.
+
 ## Round 3 — 19 September 2026, Claude on the maintainer's behalf, Chrome (desktop) and the terminal
 
 Items 34–38 of the script, run as the operator: the two halves of the backup,

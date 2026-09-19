@@ -1185,6 +1185,13 @@ async function comparisonTastingLines(
  * nothing. It is cited to the same sources as the material it was written from,
  * and the previous one is retired, so exactly one is ever live — the reader
  * regenerates it when either side has moved.
+ *
+ * Only the prose that can describe how the wine tastes goes in: the composed
+ * narrative, the web notes and the pairing notes. The Wikidata highlights — a
+ * founding year, a country, a hectare count — and the producer's history used
+ * to go in too, and the paragraph then set the taster's "ripe cherry" against
+ * "founded in 1870", which is not a comparison anyone asked for. The model is
+ * also told to use only the sensory part of what remains.
  */
 export async function regenerateTastingComparison(
   database: D1Database,
@@ -1209,9 +1216,8 @@ export async function regenerateTastingComparison(
       LEFT JOIN fact_citations citation ON citation.fact_id = fact.id
       WHERE fact.space_id = ? AND fact.subject_type = 'wine' AND fact.subject_id = ?
         AND fact.status <> 'retired' AND fact.deleted_at IS NULL
-        AND fact.predicate IN ('curiosity.highlight', 'curiosity.note', 'pairing.note',
-          'producer.history', 'research.summary')
-      ORDER BY fact.created_at`,
+        AND fact.predicate IN ('curiosity.note', 'pairing.note', 'research.summary')
+      ORDER BY CASE fact.predicate WHEN 'research.summary' THEN 0 ELSE 1 END, fact.created_at`,
     )
     .bind(options.spaceId, options.wineId)
     .all<{ id: string; source_id: string | null; value_json: string }>();

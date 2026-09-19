@@ -1,6 +1,7 @@
 import {
   type AssistantRecommendation,
   type AssistantSearchResult,
+  type AssistantTurnRequest,
   AssistantTurnResponseSchema,
   BootstrapResponseSchema,
   CreateWineResponseSchema,
@@ -571,6 +572,59 @@ describe("Vicenç deterministic read path", () => {
     expect(response?.data.focusWineId).not.toBe(carried.id);
     // And the carried wine's context is not dragged onto a question about another.
     expect(response?.data.wineContext).toBeNull();
+  }, 30_000);
+
+  it("says the daily cap is reached, not that the AI failed, when the budget refuses", async () => {
+    // Found on the deployment: one member had spent the day's twenty replies —
+    // evidence translation draws on the same metric — and every turn came back
+    // "the AI could not answer just now", which reads as an outage. The other
+    // member, under the cap, was answered. The cap is the app working as
+    // designed; the text has to say which it is.
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId!;
+    await createWine(ownerToken, spaceId, "Capped Rioja Red", "red");
+    const principal = {
+      authTime: Math.floor(Date.now() / 1_000),
+      displayName: "Assistant Owner",
+      email: "assistant-owner@example.test",
+      firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+    };
+    const request: AssistantTurnRequest = {
+      context: { allowedCrossSpaceIds: [], visibleWineId: null },
+      locale: "es",
+      message: "Rioja",
+      saveHistory: false,
+      threadId: null,
+    };
+    const capped = await runDeterministicAssistantTurn(env.DB, {
+      aiBudgetReached: true,
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: null,
+      pairing: null,
+      principal,
+      request,
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    expect(capped?.data.mode).toBe("deterministic");
+    expect(capped?.data.renderedText).toContain("límite diario de respuestas de la IA");
+    expect(capped?.data.renderedText).not.toContain("no pudo responder");
+
+    // A model that was asked and produced nothing is still reported as such.
+    const failed = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: { render: async () => null },
+      pairing: null,
+      principal,
+      request,
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    expect(failed?.data.renderedText).toContain("no pudo responder");
   }, 30_000);
 
   it("reports the wine a turn resolved by style as its focus, for the next turn to follow", async () => {

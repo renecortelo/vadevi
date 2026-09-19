@@ -74,10 +74,16 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
               `sentences setting the two side by side: where they agree, where they ` +
               `differ, and what only one side mentions. Attribute each side plainly ` +
               `("you found…", "the producer describes…"), and name a person when the ` +
-              `tasting line names one. Use ONLY these two lists — never add a ` +
-              `flavour, a score, a grape or any detail neither side states. If they ` +
-              `barely overlap, say so rather than inventing agreement. Reply with the ` +
-              `paragraph only, no preamble.`,
+              `tasting line names one. From the sources use ONLY what they say about ` +
+              `how the wine looks, smells, tastes and feels — colour, aromas, ` +
+              `flavours, sweetness, acidity, tannin, body, texture, finish, and the ` +
+              `dishes it is said to suit. Ignore, and never mention, history, ` +
+              `founding years, places, hectares, awards, prices, shops or production ` +
+              `facts: they cannot be set against a tasting. If the sources say ` +
+              `nothing about how the wine tastes, say exactly that. Use ONLY these ` +
+              `two lists — never add a flavour, a score, a grape or any detail ` +
+              `neither side states. If they barely overlap, say so rather than ` +
+              `inventing agreement. Reply with the paragraph only, no preamble.`,
             role: "system",
           },
           {

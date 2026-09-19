@@ -121,7 +121,9 @@ export function TastingNotePage() {
 
       <div className="tasting-read__score">
         <strong>{note.score100 === null ? t("memory.notRated") : `${note.score100}/100`}</strong>
-        {note.sentiment === null ? null : (
+        {/* Optional on a deep note — absent, not null — and a null check let
+            "quickLog.sentimentValue.undefined" through as the label. */}
+        {note.sentiment === undefined ? null : (
           <span>{t(`quickLog.sentimentValue.${note.sentiment}`)}</span>
         )}
       </div>

@@ -278,14 +278,19 @@ photograph, and Vicenç's language replies.
 Every provider call is metered and refused past a daily budget, per member and
 across the deployment:
 
-| Metric                                   | Per member | Whole deployment |
-| ---------------------------------------- | ---------- | ---------------- |
-| Label reads (OCR)                        | 20         | 80               |
-| Vicenç and narrative (AI text)           | 30         | 120              |
-| Open-web search (Brave)                  | 10         | 25               |
-| Research lookups (Wikidata, OFF, venues) | 40         | 300              |
-| Barcode lookups                          | 60         | 500              |
-| Price lookups (metric only; not built)   | 60         | 500              |
+| Metric                                               | Per member | Whole deployment |
+| ---------------------------------------------------- | ---------- | ---------------- |
+| Label reads (OCR)                                    | 20         | 80               |
+| Vicenç, narrative and evidence translation (AI text) | 40         | 60               |
+| Open-web search (Brave)                              | 10         | 25               |
+| Research lookups (Wikidata, OFF, venues)             | 40         | 300              |
+| Barcode lookups                                      | 60         | 500              |
+| Price lookups (metric only; not built)               | 60         | 500              |
+
+`pnpm docs:check` fails when this table and `dailyBudgets` in
+`apps/api/src/services/usage.ts` disagree; the numbers here are the code's.
+Reaching a cap is not an outage: Vicenç says so in its reply, and the counters
+on _Data and privacy_ show how much of each day is used.
 
 These are hard caps, not warnings: past them the feature degrades to manual
 entry rather than continuing to spend. Warnings appear at 70% and 90%.
