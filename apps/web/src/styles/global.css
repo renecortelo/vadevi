@@ -39,23 +39,52 @@ textarea {
 input:not([type="button"], [type="checkbox"], [type="file"], [type="radio"], [type="submit"]),
 select,
 textarea {
-  background: var(--color-surface-raised);
-  border: 1px solid var(--color-border);
+  background: var(--color-field);
+  border: 1px solid var(--color-field-border);
   border-radius: var(--radius-md);
   color: var(--color-text);
-  min-block-size: 3rem;
+  font-weight: 500;
+  min-block-size: 2.75rem;
   min-inline-size: 0;
-  padding: 0.7rem 0.85rem;
+  padding: 0.6rem 0.85rem;
+  transition:
+    border-color var(--motion-fast),
+    box-shadow var(--motion-fast);
+}
+
+/* A field answers the pointer before it is clicked, and says it has focus
+   with a ring rather than only the outline the page uses for everything. */
+input:not([type="button"], [type="checkbox"], [type="file"], [type="radio"], [type="submit"]):hover,
+select:hover,
+textarea:hover {
+  border-color: var(--color-field-border-hover);
+}
+
+input:not(
+    [type="button"],
+    [type="checkbox"],
+    [type="file"],
+    [type="radio"],
+    [type="submit"]
+  ):focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 3px rgb(var(--color-surface-rgb) / 100%);
+  outline: 2px solid var(--color-focus);
+  outline-offset: 0;
 }
 
 textarea {
-  min-block-size: 7rem;
+  line-height: var(--line-body);
+  min-block-size: 6.5rem;
   resize: vertical;
 }
 
+/* A hint reads as a hint, not as a value someone already entered. */
 ::placeholder {
   color: var(--color-text-muted);
-  opacity: 1;
+  opacity: 0.75;
 }
 
 /*
@@ -120,8 +149,13 @@ select {
 
 button:disabled,
 select:disabled {
-  cursor: wait;
-  opacity: 0.65;
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* A control that is busy, not refused: the form's own pending state. */
+button[aria-busy="true"]:disabled {
+  cursor: progress;
 }
 
 .sr-only {
@@ -221,6 +255,15 @@ select:disabled {
   inline-size: 100%;
 }
 
+/* On a phone the Space's name is the one of the three worth reading whole —
+   "Personal space" was cut to "Person" in a third of the width — so it takes a
+   row of its own and the two short menus share the next. */
+@media (max-width: 40rem) {
+  .controlbar > .space-switcher {
+    flex-basis: 100%;
+  }
+}
+
 .wordmark {
   /* The mark is drawn, not set: it comes from the brand artwork via
      apps/web/src/brand, so this, the sign-in lockup and the installed icon are
@@ -268,8 +311,6 @@ select:disabled {
 }
 
 .space-switcher select {
-  background: var(--color-surface-raised);
-  border: 1px solid var(--color-border);
   max-inline-size: 14rem;
   padding: 0.35rem 2rem 0.35rem 0.8rem;
 }
@@ -277,18 +318,31 @@ select:disabled {
 .text-button {
   background: transparent;
   border: 0;
+  border-radius: var(--radius-sm);
   color: var(--color-text-muted);
-  font-size: var(--text-xs);
-  padding: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  min-block-size: 2.25rem;
+  padding: var(--space-1) var(--space-2);
   text-decoration: underline;
   text-underline-offset: 0.2em;
+  transition: color var(--motion-fast);
+}
+
+.text-button:hover {
+  color: var(--color-text);
 }
 
 .text-link {
   color: var(--color-text-muted);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-weight: 700;
   text-underline-offset: 0.2em;
+  transition: color var(--motion-fast);
+}
+
+.text-link:hover {
+  color: var(--color-text);
 }
 
 .text-button--danger {
@@ -369,7 +423,7 @@ select:disabled {
   color: var(--color-text-muted);
   display: flex;
   flex-direction: column;
-  font-size: clamp(0.66rem, 2.5vw, var(--text-xs));
+  font-size: clamp(0.72rem, 2.5vw, var(--text-xs));
   gap: var(--space-1);
   min-block-size: 4.2rem;
   padding: var(--space-2) var(--space-1);
@@ -489,11 +543,22 @@ select:disabled {
   border-radius: var(--radius-pill);
   color: var(--color-on-accent);
   display: inline-flex;
-  font-weight: 800;
+  font-weight: 700;
   gap: var(--space-3);
   justify-content: center;
-  min-block-size: 3rem;
-  padding: 0.75rem 1.35rem;
+  min-block-size: 2.75rem;
+  padding: 0.65rem 1.35rem;
+  transition:
+    background-color var(--motion-fast),
+    transform var(--motion-fast);
+}
+
+.primary-button:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
+.primary-button:active:not(:disabled) {
+  transform: translateY(1px);
 }
 
 .access-card--signin .primary-button {
@@ -584,6 +649,18 @@ select:disabled {
   flex-wrap: wrap;
   gap: var(--space-4);
   justify-content: space-between;
+}
+
+.settings-card li {
+  line-height: var(--line-body);
+}
+
+.settings-card li + li {
+  margin-block-start: var(--space-1);
+}
+
+.settings-card h3 {
+  margin-block-start: var(--space-3);
 }
 
 .settings-card {
@@ -744,28 +821,39 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--font-display);
   font-weight: 500;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 h1 {
   color: var(--color-plum);
   font-size: var(--text-xl);
-  line-height: 1.03;
-  margin-block-end: var(--space-5);
-  text-wrap: balance;
+  line-height: 1.1;
+  margin-block-end: var(--space-4);
 }
 
 h2 {
   font-size: var(--text-lg);
+  line-height: 1.2;
   margin-block-end: var(--space-3);
+}
+
+/* The third level had no rule at all and rendered as the browser's bold sans,
+   so a subsection heading looked like a label. It is a small display heading. */
+h3 {
+  color: var(--color-text);
+  font-size: var(--text-md);
+  line-height: 1.25;
+  margin-block: 0 var(--space-2);
 }
 
 p {
   color: var(--color-text-muted);
-  line-height: 1.65;
+  line-height: var(--line-body);
 }
 
 .hero__lede {
@@ -780,15 +868,31 @@ p {
   gap: var(--space-3);
 }
 
+/* The one button. Three weights — primary, secondary, quiet — and every one
+   answers the pointer, presses down on click, and is at least 44px tall, so a
+   thumb finds it as surely as a cursor does. */
 .action-link {
   align-items: center;
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
+  cursor: pointer;
   display: inline-flex;
-  font-weight: 750;
-  min-block-size: 2.9rem;
-  padding: 0.7rem 1.25rem;
+  font-weight: 700;
+  gap: var(--space-2);
+  justify-content: center;
+  line-height: 1.2;
+  min-block-size: 2.75rem;
+  padding: 0.6rem 1.25rem;
   text-decoration: none;
+  transition:
+    background-color var(--motion-fast),
+    border-color var(--motion-fast),
+    color var(--motion-fast),
+    transform var(--motion-fast);
+}
+
+.action-link:active:not(:disabled) {
+  transform: translateY(1px);
 }
 
 .action-link--primary {
@@ -796,10 +900,19 @@ p {
   color: var(--color-on-accent);
 }
 
+.action-link--primary:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
 .action-link--secondary {
   background: var(--color-surface-raised);
-  border-color: var(--color-border);
+  border-color: var(--color-field-border);
   color: var(--color-text);
+}
+
+.action-link--secondary:hover:not(:disabled) {
+  background: var(--color-surface-muted);
+  border-color: var(--color-field-border-hover);
 }
 
 .action-link--quiet {
@@ -808,7 +921,36 @@ p {
   color: var(--color-text-muted);
 }
 
-.action-link--quiet:hover {
+/* A destructive action: outlined in the danger colour, never filled, so it
+   is unmistakable without being the loudest thing on the screen. */
+.action-link--danger {
+  background: transparent;
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.action-link--danger:hover:not(:disabled) {
+  background: var(--color-danger);
+  color: var(--color-surface-raised);
+}
+
+/* A typed confirmation: the label above its box, the box no wider than the
+   word it expects, and room before the button that acts on it. */
+.confirm-field {
+  display: grid;
+  gap: var(--space-1);
+  margin-block: var(--space-3);
+  max-inline-size: 22rem;
+}
+
+.confirm-field label {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.action-link--quiet:hover:not(:disabled) {
+  background: var(--color-surface-muted);
   color: var(--color-text);
 }
 
@@ -875,8 +1017,10 @@ p {
   padding-block-start: clamp(var(--space-4), 4vw, var(--space-7));
 }
 
+/* The line under a screen's title: a sentence, not a second headline. */
 .page-heading > p:last-child {
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
+  max-inline-size: 40rem;
 }
 
 .quick-log-form {
@@ -904,11 +1048,19 @@ p {
   padding: clamp(var(--space-4), 5vw, var(--space-6));
 }
 
+/* The legend sits inside the card as its title, like every other card's
+   heading, rather than notched into the border the way a bare fieldset draws
+   it. Floating it is what tells the browser to lay it out as an ordinary
+   child; the width keeps it on its own line. */
 .form-section > legend {
   color: var(--color-plum);
+  float: left;
   font-family: var(--font-display);
-  font-size: 1.55rem;
-  padding-inline: var(--space-2);
+  font-size: var(--text-lg);
+  inline-size: 100%;
+  line-height: 1.2;
+  margin-block-end: var(--space-1);
+  padding: 0;
 }
 
 /* A whole section that folds away. The summary stands in for the legend, so it
@@ -919,7 +1071,7 @@ p {
   cursor: pointer;
   display: flex;
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: var(--text-lg);
   gap: var(--space-2);
   list-style: none;
 }
@@ -935,7 +1087,6 @@ p {
    larger step down from the field before. Without this the uniform gap made the
    folded details read as one crowded ladder. */
 .form-subsection > label {
-  font-weight: 750;
   margin-block-start: var(--space-3);
 }
 
@@ -979,15 +1130,19 @@ p {
   transform: rotate(180deg);
 }
 
+/* A label names the field; the value is what the reader wrote. So the label
+   is the quieter of the two — muted, medium weight, small — and the value in
+   the box is full ink. They used to be the same colour and weight, and a form
+   read as a column of headings with nothing under them. */
 .form-section label,
 .note-fields > label,
 .form-grid label,
 .memory-filters label {
-  color: var(--color-text);
+  color: var(--color-text-muted);
   display: grid;
   font-size: var(--text-sm);
-  font-weight: 750;
-  gap: var(--space-2);
+  font-weight: 600;
+  gap: var(--space-1);
 }
 
 .form-section input:not([type="checkbox"], [type="file"]),
@@ -1010,8 +1165,33 @@ p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* A named run of fields inside a section — the bottle, the place, the room —
+   with a rule above it and its own small heading, so a long section reads as a
+   few short ones rather than one ladder of thirty fields. */
+.form-group {
+  border-block-start: 1px solid var(--color-border);
+  display: grid;
+  gap: var(--space-3);
+  padding-block-start: var(--space-4);
+}
+
+.form-group > h3 {
+  margin-block-end: 0;
+}
+
+.form-group > .section-help {
+  margin-block: calc(-1 * var(--space-2)) 0;
+}
+
 .form-grid--three {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Inside a grid of fields a checkbox row lines up with the boxes beside it,
+   not with their labels: same height, sitting at the bottom of the cell. */
+.form-grid > .check-row {
+  align-self: end;
+  min-block-size: 2.75rem;
 }
 
 .check-row {
@@ -1101,11 +1281,20 @@ p {
   border-color: var(--color-accent);
 }
 
-.local-save-state,
-.cache-note {
+/* Two different things wore the same green: "your draft is saved", which is a
+   status and earns the colour, and "you can do this offline", which is a hint
+   and does not. A hint in the success colour reads as something having
+   happened. */
+.local-save-state {
   color: var(--color-success);
   font-size: var(--text-sm);
   font-weight: 700;
+  margin: 0;
+}
+
+.cache-note {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
   margin: 0;
 }
 
@@ -1194,6 +1383,13 @@ p {
   color: var(--color-text-muted);
   min-block-size: 2.5rem;
   padding-inline: var(--space-4);
+  transition:
+    background-color var(--motion-fast),
+    color var(--motion-fast);
+}
+
+.segmented-control button:hover:not([aria-pressed="true"]) {
+  color: var(--color-text);
 }
 
 .segmented-control button[aria-pressed="true"] {
@@ -1301,8 +1497,10 @@ p {
 .wine-card__image {
   aspect-ratio: 4 / 3;
   background: var(--color-surface-muted);
+  color: inherit;
   display: block;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .wine-card__image img {
@@ -1361,8 +1559,14 @@ p {
 .table-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-3);
+  gap: var(--space-2);
   margin-block-start: var(--space-4);
+}
+
+/* Three actions on one line of a fifteen-rem card: tighter than the page's
+   buttons, still 44px tall. */
+.wine-card__actions .action-link {
+  padding-inline: var(--space-3);
 }
 
 .table-actions {
@@ -1621,8 +1825,8 @@ p {
 .fact-card__value {
   color: var(--color-text);
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  line-height: 1.3;
+  font-size: var(--text-md);
+  line-height: 1.35;
   margin: 0;
   min-inline-size: 0;
   overflow-wrap: anywhere;
@@ -1666,12 +1870,17 @@ p {
 .fact-card__discard {
   background: none;
   border: none;
+  border-radius: var(--radius-sm);
   color: var(--color-text-muted);
   cursor: pointer;
   flex: none;
-  font-size: var(--text-xs);
-  padding: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  min-block-size: 2.25rem;
+  padding: var(--space-1) var(--space-2);
   text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color var(--motion-fast);
 }
 
 .fact-card__discard:hover {
@@ -1761,6 +1970,12 @@ p {
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0;
+}
+
+/* The caption under a generated paragraph — what kind of thing it is. */
+.research-narrative__footer .fact-card__evidence {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
 }
 
 .research-narrative__footer {
@@ -2000,10 +2215,12 @@ p {
   margin: 0;
 }
 
+/* Vicenç's words at reading size. They were set in the display serif at up to
+   1.55rem, which on a phone made a three-sentence answer a screenful, and
+   which made an answer look like a heading rather than a reply. */
 .assistant-response__text {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 3vw, 1.55rem);
-  line-height: 1.45;
+  font-size: var(--text-base);
+  line-height: var(--line-body);
   margin: 0;
 }
 
@@ -2164,6 +2381,12 @@ p {
   border-collapse: collapse;
   inline-size: 100%;
   min-inline-size: 50rem;
+}
+
+/* A five-column table has no business being fifty rem wide; on a laptop that
+   put its last column behind a scroll nobody could see. */
+.table-scroll--compact table {
+  min-inline-size: 32rem;
 }
 
 .table-scroll th,
@@ -2411,12 +2634,23 @@ p {
 }
 
 .icon-button {
+  align-items: center;
   background: var(--color-surface-muted);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-field-border);
   border-radius: 50%;
-  block-size: 2.5rem;
+  block-size: 2.75rem;
   color: var(--color-plum);
-  inline-size: 2.5rem;
+  display: inline-flex;
+  inline-size: 2.75rem;
+  justify-content: center;
+  transition:
+    background-color var(--motion-fast),
+    border-color var(--motion-fast);
+}
+
+.icon-button:hover:not(:disabled) {
+  background: var(--color-surface-raised);
+  border-color: var(--color-field-border-hover);
 }
 
 .comparison-card {
@@ -2504,6 +2738,28 @@ p {
   font-weight: 750;
 }
 
+/* Five steps do not fit five columns on a phone: "Conclusion" was cut in half.
+   Below tablet width the row scrolls sideways and snaps step by step, with the
+   active one scrolled into view by the page. */
+@media (max-width: 40rem) {
+  .tasting-progress {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .tasting-progress::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tasting-progress button {
+    flex: 0 0 auto;
+    min-inline-size: 6.5rem;
+    scroll-snap-align: start;
+  }
+}
+
 .tasting-section {
   max-inline-size: none;
 }
@@ -2542,8 +2798,9 @@ p {
 }
 
 .tasting-actions {
-  background: rgb(var(--color-surface-rgb) / 94%);
+  background: rgb(var(--color-surface-rgb) / 97%);
   border-block-start: 1px solid var(--color-border);
+  box-shadow: 0 -8px 24px rgb(var(--color-ink-rgb) / 12%);
   bottom: 4.2rem;
   display: grid;
   gap: var(--space-3);
@@ -2648,10 +2905,12 @@ p {
     display: grid;
   }
 
+  /* As many per row as fit, so five views make a 3 + 2 rather than a
+     two-column list with one orphan. */
   .segmented-control {
     border-radius: var(--radius-md);
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     inline-size: 100%;
   }
 
@@ -2875,9 +3134,20 @@ p {
 
 .phase5-form label,
 .shop-wine-picker {
+  color: var(--color-text-muted);
   display: grid;
-  font-weight: 650;
-  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  gap: var(--space-1);
+}
+
+/* The submit is a row of its own under the fields, not one more cell in the
+   grid — as a cell it sat beside "Quantity", wrapped onto two lines, and
+   aligned with nothing. */
+.phase5-form > .primary-button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-block-start: var(--space-2);
 }
 
 .phase5-form input,
@@ -2894,6 +3164,14 @@ p {
   display: grid;
   gap: var(--space-4);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+
+/* Five counts fit one row on a laptop; at thirteen rem the fifth wrapped alone.
+   The four home tiles likewise sit two by two on a phone instead of in a
+   column a screen and a half tall. */
+.inventory-grid,
+.home-tools__grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
 }
 
 .inventory-card,
@@ -2935,9 +3213,32 @@ p {
   gap: var(--space-5);
 }
 
+/* A full-width primary button is right on a phone, where the thumb wants it,
+   and wrong on a laptop, where a 750px button is a banner. */
+@media (min-width: 60rem) {
+  .quick-log-form > .primary-button {
+    justify-self: end;
+    min-inline-size: 14rem;
+  }
+}
+
+/* The four tool tiles share one icon size, so their titles sit on one line. */
+.home-tools__grid a svg {
+  block-size: 2rem;
+  inline-size: 2rem;
+}
+
 .home-tools__grid a {
   color: inherit;
   text-decoration: none;
+  transition:
+    border-color var(--motion-fast),
+    transform var(--motion-fast);
+}
+
+.home-tools__grid a:hover {
+  border-color: var(--color-field-border-hover);
+  transform: translateY(-2px);
 }
 
 .home-tools__grid a span {

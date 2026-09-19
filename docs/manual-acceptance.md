@@ -36,7 +36,7 @@ System / Light / Dark control.
        navigation rail specifically, including the label of the page you are on.
 4. [x] Reload the page. It stays Dark and **does not flash light first**.
 5. [x] Switch to System. It follows your operating system setting.
-6. [ ] **Language:** change it from the top-bar menu. The whole interface
+6. [x] **Language:** change it from the top-bar menu. The whole interface
        follows immediately, and stays changed after a reload. This is the
        _reader's_ language: a Space's own default locale does not override it,
        so switching Space must not switch the interface language back.

@@ -920,7 +920,13 @@
       "still": "Acabado de servir",
       "swirled": "Depois de agitar"
     },
-    "venuePlaceholder": "p. ex. um restaurante ou casa de um amigo"
+    "venuePlaceholder": "p. ex. um restaurante ou casa de um amigo",
+    "contextGroup": {
+      "bottle": "A garrafa e como foi servida",
+      "place": "Onde a provou",
+      "room": "O ambiente",
+      "table": "À mesa"
+    }
   },
   "dataRights": {
     "accountScheduled": "A eliminação da conta está agendada daqui a {{days}} dias.",
@@ -981,7 +987,8 @@
       "barcode_lookups": "Leitura de código de barras",
       "price_lookups": "Consulta de preços",
       "research_lookups": "Pesquisa externa",
-      "websearch_calls": "Pesquisa na web aberta"
+      "websearch_calls": "Pesquisa na web aberta",
+      "ocr_reads": "Leituras de rótulo"
     },
     "navAction": "Dados e privacidade",
     "noticeMedia": "As fotos são redimensionadas e a localização removida no seu dispositivo antes de serem guardadas, e só os membros do Espaço as podem ver.",

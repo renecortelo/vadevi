@@ -51,7 +51,10 @@ const bodyTextPairs: [string, string, string][] = [
   ["muted text on canvas", "color-text-muted", "color-canvas"],
   ["muted text on raised surface", "color-text-muted", "color-surface-raised"],
   ["accent text on canvas", "color-accent", "color-canvas"],
+  ["body text in a field", "color-text", "color-field"],
+  ["muted text in a field", "color-text-muted", "color-field"],
   ["text on accent fill", "color-on-accent", "color-accent"],
+  ["text on hovered accent fill", "color-on-accent", "color-accent-hover"],
   ["text on strong accent fill", "color-on-accent", "color-accent-strong"],
   ["text on plum fill", "color-on-accent", "color-plum"],
   ["focus indicator on canvas", "color-focus", "color-canvas"],
@@ -59,7 +62,20 @@ const bodyTextPairs: [string, string, string][] = [
   ["warning text on canvas", "color-warning", "color-canvas"],
 ];
 
+/** Non-text boundaries the reader must be able to find: WCAG 1.4.11 asks 3:1. */
+const boundaryPairs: [string, string, string][] = [
+  ["field border on a card", "color-field-border", "color-surface-raised"],
+  ["field border on canvas", "color-field-border", "color-canvas"],
+];
+
 describe.each(["light", "dark"] as const)("%s palette contrast", (theme) => {
+  for (const [label, foreground, background] of boundaryPairs) {
+    it(`${label} meets WCAG AA for a non-text boundary`, () => {
+      const ratio = contrastRatio(token(foreground, theme), token(background, theme));
+      expect(ratio, `${label} is ${ratio.toFixed(2)}:1 in ${theme}`).toBeGreaterThanOrEqual(3);
+    });
+  }
+
   for (const [label, foreground, background] of bodyTextPairs) {
     it(`${label} meets WCAG AA for body text`, () => {
       const ratio = contrastRatio(token(foreground, theme), token(background, theme));

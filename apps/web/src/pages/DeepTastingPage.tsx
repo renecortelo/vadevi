@@ -758,285 +758,308 @@ export function DeepTastingPage() {
       <fieldset className="form-section tasting-section">
         <legend>{t("tasting.step.context")}</legend>
         <p className="section-help">{t("tasting.help.context")}</p>
-        <div className="form-grid">
-          <label>
-            <span>{t("tasting.field.servingTemperature")}</span>
-            <DecimalInput
-              onChange={(value) =>
-                updateContext(
-                  "servingTemperatureTenthsC",
-                  value === null ? undefined : Math.round(value * 10),
-                )
-              }
-              value={
-                draft.payload.context?.servingTemperatureTenthsC === undefined
-                  ? null
-                  : draft.payload.context.servingTemperatureTenthsC / 10
-              }
-            />
-          </label>
-          <label>
-            <span>{t("tasting.field.openedState")}</span>
-            <select
-              onChange={(event) =>
-                updateContext(
-                  "openedState",
-                  (event.target.value || undefined) as TastingContext["openedState"],
-                )
-              }
-              value={draft.payload.context?.openedState ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {(["just_opened", "open", "preserved", "unknown"] as const).map((value) => (
-                <option key={value} value={value}>
-                  {t(`tasting.value.${value}`)}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        <div className="form-grid form-grid--three">
-          <label>
-            <span>{t("tasting.field.minutesOpen")}</span>
-            <input
-              min={0}
-              onChange={(event) =>
-                updateContext(
-                  "minutesOpen",
-                  event.target.value === "" ? undefined : Number(event.target.value),
-                )
-              }
-              type="number"
-              value={draft.payload.context?.minutesOpen ?? ""}
-            />
-          </label>
-          <label className="check-row">
-            <input
-              checked={draft.payload.context?.decanted ?? false}
-              onChange={(event) => updateContext("decanted", event.target.checked)}
-              type="checkbox"
-            />
-            <span>{t("tasting.field.decanted")}</span>
-          </label>
-          <label>
-            <span>{t("tasting.field.aerationMinutes")}</span>
-            <input
-              min={0}
-              onChange={(event) =>
-                updateContext(
-                  "aerationMinutes",
-                  event.target.value === "" ? undefined : Number(event.target.value),
-                )
-              }
-              type="number"
-              value={draft.payload.context?.aerationMinutes ?? ""}
-            />
-          </label>
-        </div>
-        <div className="form-grid">
-          <label>
-            <span>{t("tasting.field.preservationMethod")}</span>
-            <input
-              maxLength={160}
-              onChange={(event) =>
-                updateContext("preservationMethod", event.target.value || undefined)
-              }
-              value={draft.payload.context?.preservationMethod ?? ""}
-            />
-          </label>
-          <label>
-            <span>{t("tasting.field.bottleCondition")}</span>
-            <input
-              maxLength={160}
-              onChange={(event) =>
-                updateContext("bottleCondition", event.target.value || undefined)
-              }
-              value={draft.payload.context?.bottleCondition ?? ""}
-            />
-          </label>
-        </div>
-        <div className="form-grid">
-          <label>
-            <span>{t("tasting.field.glass")}</span>
-            <select
-              onChange={(event) =>
-                updateContext("glass", (event.target.value || undefined) as TastingContext["glass"])
-              }
-              value={draft.payload.context?.glass ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {(
-                [
-                  "tulip",
-                  "bordeaux",
-                  "burgundy",
-                  "flute",
-                  "small_wine",
-                  "tumbler",
-                  "restaurant_generic",
-                  "other",
-                ] as const
-              ).map((value) => (
-                <option key={value} value={value}>
-                  {t(`tasting.value.${value}`)}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span>{t("tasting.field.environment")}</span>
-            <select
-              onChange={(event) =>
-                updateContext(
-                  "environment",
-                  (event.target.value || undefined) as TastingContext["environment"],
-                )
-              }
-              value={draft.payload.context?.environment ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {(
-                [
-                  "home",
-                  "restaurant",
-                  "bar",
-                  "winery",
-                  "class",
-                  "event",
-                  "outdoors",
-                  "other",
-                ] as const
-              ).map((value) => (
-                <option key={value} value={value}>
-                  {t(`tasting.value.${value}`)}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        {/* Where the wine was tasted — the place, kept apart from the wine's own
-            origin. Helps Vicenç recall where a bottle was drunk. */}
-        <div className="form-grid">
-          {bootstrap.data.features.venuePlaceSearch ? (
-            <VenuePicker
-              latitude={draft.payload.context?.venueLatitude}
-              longitude={draft.payload.context?.venueLongitude}
-              onChoose={(venue) => {
-                // One choice fills the whole block — city, area, country and the
-                // point — in a single update, so nothing written here is undone
-                // by the field written after it.
-                updateContextFields({
-                  venueArea: venue.area ?? undefined,
-                  venueCity: venue.city ?? undefined,
-                  venueCountryCode: venue.countryCode ?? undefined,
-                  venueLatitude: venue.latitude ?? undefined,
-                  venueLongitude: venue.longitude ?? undefined,
-                  venueName: venue.name || undefined,
-                });
-              }}
-              // Typing renames the place and nothing else: a reader who chose a
-              // point and then gave it their own name — "la terraza de Marta" —
-              // must keep the point.
-              onRename={(name) => updateContext("venueName", name || undefined)}
-              spaceId={spaceId}
-              value={draft.payload.context?.venueName ?? ""}
-            />
-          ) : (
+        {/* Four short runs rather than one ladder of thirty fields: the bottle
+            and how it was served, the place, the room, and what was on the
+            table. Each is what a reader has in mind at one moment. */}
+        <div className="form-group">
+          <h3>{t("tasting.contextGroup.bottle")}</h3>
+          <div className="form-grid">
             <label>
-              <span>{t("tasting.field.venueName")}</span>
-              <input
-                maxLength={200}
-                onChange={(event) => updateContext("venueName", event.target.value || undefined)}
-                placeholder={t("tasting.venuePlaceholder")}
-                value={draft.payload.context?.venueName ?? ""}
+              <span>{t("tasting.field.servingTemperature")}</span>
+              <DecimalInput
+                onChange={(value) =>
+                  updateContext(
+                    "servingTemperatureTenthsC",
+                    value === null ? undefined : Math.round(value * 10),
+                  )
+                }
+                value={
+                  draft.payload.context?.servingTemperatureTenthsC === undefined
+                    ? null
+                    : draft.payload.context.servingTemperatureTenthsC / 10
+                }
               />
             </label>
-          )}
-          <label>
-            <span>{t("tasting.field.venueCity")}</span>
-            <input
-              maxLength={160}
-              onChange={(event) => updateContext("venueCity", event.target.value || undefined)}
-              value={draft.payload.context?.venueCity ?? ""}
-            />
-          </label>
-          <label>
-            <span>{t("tasting.field.venueArea")}</span>
-            <input
-              maxLength={160}
-              onChange={(event) => updateContext("venueArea", event.target.value || undefined)}
-              value={draft.payload.context?.venueArea ?? ""}
-            />
-          </label>
-          <label>
-            <span>{t("tasting.field.venueCountry")}</span>
-            <select
-              onChange={(event) =>
-                updateContext("venueCountryCode", event.target.value || undefined)
-              }
-              value={draft.payload.context?.venueCountryCode ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {countryOptionsFor(i18n.language, draft.payload.context?.venueCountryCode ?? "").map(
-                (option) => (
+            <label>
+              <span>{t("tasting.field.openedState")}</span>
+              <select
+                onChange={(event) =>
+                  updateContext(
+                    "openedState",
+                    (event.target.value || undefined) as TastingContext["openedState"],
+                  )
+                }
+                value={draft.payload.context?.openedState ?? ""}
+              >
+                <option value="">{t("tasting.notSet")}</option>
+                {(["just_opened", "open", "preserved", "unknown"] as const).map((value) => (
+                  <option key={value} value={value}>
+                    {t(`tasting.value.${value}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <div className="form-grid form-grid--three">
+            <label>
+              <span>{t("tasting.field.minutesOpen")}</span>
+              <input
+                min={0}
+                onChange={(event) =>
+                  updateContext(
+                    "minutesOpen",
+                    event.target.value === "" ? undefined : Number(event.target.value),
+                  )
+                }
+                type="number"
+                value={draft.payload.context?.minutesOpen ?? ""}
+              />
+            </label>
+            <label className="check-row">
+              <input
+                checked={draft.payload.context?.decanted ?? false}
+                onChange={(event) => updateContext("decanted", event.target.checked)}
+                type="checkbox"
+              />
+              <span>{t("tasting.field.decanted")}</span>
+            </label>
+            <label>
+              <span>{t("tasting.field.aerationMinutes")}</span>
+              <input
+                min={0}
+                onChange={(event) =>
+                  updateContext(
+                    "aerationMinutes",
+                    event.target.value === "" ? undefined : Number(event.target.value),
+                  )
+                }
+                type="number"
+                value={draft.payload.context?.aerationMinutes ?? ""}
+              />
+            </label>
+          </div>
+          <div className="form-grid">
+            <label>
+              <span>{t("tasting.field.preservationMethod")}</span>
+              <input
+                maxLength={160}
+                onChange={(event) =>
+                  updateContext("preservationMethod", event.target.value || undefined)
+                }
+                value={draft.payload.context?.preservationMethod ?? ""}
+              />
+            </label>
+            <label>
+              <span>{t("tasting.field.bottleCondition")}</span>
+              <input
+                maxLength={160}
+                onChange={(event) =>
+                  updateContext("bottleCondition", event.target.value || undefined)
+                }
+                value={draft.payload.context?.bottleCondition ?? ""}
+              />
+            </label>
+          </div>
+          <div className="form-grid">
+            <label>
+              <span>{t("tasting.field.glass")}</span>
+              <select
+                onChange={(event) =>
+                  updateContext(
+                    "glass",
+                    (event.target.value || undefined) as TastingContext["glass"],
+                  )
+                }
+                value={draft.payload.context?.glass ?? ""}
+              >
+                <option value="">{t("tasting.notSet")}</option>
+                {(
+                  [
+                    "tulip",
+                    "bordeaux",
+                    "burgundy",
+                    "flute",
+                    "small_wine",
+                    "tumbler",
+                    "restaurant_generic",
+                    "other",
+                  ] as const
+                ).map((value) => (
+                  <option key={value} value={value}>
+                    {t(`tasting.value.${value}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        </div>
+        <div className="form-group">
+          <h3>{t("tasting.contextGroup.place")}</h3>
+          <div className="form-grid">
+            <label>
+              <span>{t("tasting.field.environment")}</span>
+              <select
+                onChange={(event) =>
+                  updateContext(
+                    "environment",
+                    (event.target.value || undefined) as TastingContext["environment"],
+                  )
+                }
+                value={draft.payload.context?.environment ?? ""}
+              >
+                <option value="">{t("tasting.notSet")}</option>
+                {(
+                  [
+                    "home",
+                    "restaurant",
+                    "bar",
+                    "winery",
+                    "class",
+                    "event",
+                    "outdoors",
+                    "other",
+                  ] as const
+                ).map((value) => (
+                  <option key={value} value={value}>
+                    {t(`tasting.value.${value}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          {/* Where the wine was tasted — the place, kept apart from the wine's own
+            origin. Helps Vicenç recall where a bottle was drunk. */}
+          <div className="form-grid">
+            {bootstrap.data.features.venuePlaceSearch ? (
+              <VenuePicker
+                latitude={draft.payload.context?.venueLatitude}
+                longitude={draft.payload.context?.venueLongitude}
+                onChoose={(venue) => {
+                  // One choice fills the whole block — city, area, country and the
+                  // point — in a single update, so nothing written here is undone
+                  // by the field written after it.
+                  updateContextFields({
+                    venueArea: venue.area ?? undefined,
+                    venueCity: venue.city ?? undefined,
+                    venueCountryCode: venue.countryCode ?? undefined,
+                    venueLatitude: venue.latitude ?? undefined,
+                    venueLongitude: venue.longitude ?? undefined,
+                    venueName: venue.name || undefined,
+                  });
+                }}
+                // Typing renames the place and nothing else: a reader who chose a
+                // point and then gave it their own name — "la terraza de Marta" —
+                // must keep the point.
+                onRename={(name) => updateContext("venueName", name || undefined)}
+                spaceId={spaceId}
+                value={draft.payload.context?.venueName ?? ""}
+              />
+            ) : (
+              <label>
+                <span>{t("tasting.field.venueName")}</span>
+                <input
+                  maxLength={200}
+                  onChange={(event) => updateContext("venueName", event.target.value || undefined)}
+                  placeholder={t("tasting.venuePlaceholder")}
+                  value={draft.payload.context?.venueName ?? ""}
+                />
+              </label>
+            )}
+            <label>
+              <span>{t("tasting.field.venueCity")}</span>
+              <input
+                maxLength={160}
+                onChange={(event) => updateContext("venueCity", event.target.value || undefined)}
+                value={draft.payload.context?.venueCity ?? ""}
+              />
+            </label>
+            <label>
+              <span>{t("tasting.field.venueArea")}</span>
+              <input
+                maxLength={160}
+                onChange={(event) => updateContext("venueArea", event.target.value || undefined)}
+                value={draft.payload.context?.venueArea ?? ""}
+              />
+            </label>
+            <label>
+              <span>{t("tasting.field.venueCountry")}</span>
+              <select
+                onChange={(event) =>
+                  updateContext("venueCountryCode", event.target.value || undefined)
+                }
+                value={draft.payload.context?.venueCountryCode ?? ""}
+              >
+                <option value="">{t("tasting.notSet")}</option>
+                {countryOptionsFor(
+                  i18n.language,
+                  draft.payload.context?.venueCountryCode ?? "",
+                ).map((option) => (
                   <option key={option.code} value={option.code}>
                     {option.name}
                   </option>
-                ),
-              )}
-            </select>
-          </label>
+                ))}
+              </select>
+            </label>
+          </div>
         </div>
-        <div className="form-grid form-grid--three">
-          <label>
-            <span>{t("tasting.field.roomTemperature")}</span>
-            <DecimalInput
-              onChange={(value) =>
-                updateContext(
-                  "roomTemperatureTenthsC",
-                  value === null ? undefined : Math.round(value * 10),
-                )
-              }
-              value={
-                draft.payload.context?.roomTemperatureTenthsC === undefined
-                  ? null
-                  : draft.payload.context.roomTemperatureTenthsC / 10
-              }
+        <div className="form-group">
+          <h3>{t("tasting.contextGroup.room")}</h3>
+          <div className="form-grid form-grid--three">
+            <label>
+              <span>{t("tasting.field.roomTemperature")}</span>
+              <DecimalInput
+                onChange={(value) =>
+                  updateContext(
+                    "roomTemperatureTenthsC",
+                    value === null ? undefined : Math.round(value * 10),
+                  )
+                }
+                value={
+                  draft.payload.context?.roomTemperatureTenthsC === undefined
+                    ? null
+                    : draft.payload.context.roomTemperatureTenthsC / 10
+                }
+              />
+            </label>
+            <ScaleField
+              label={t("tasting.field.light")}
+              onChange={(value) => updateContext("lightLevel", value)}
+              value={draft.payload.context?.lightLevel}
             />
-          </label>
-          <ScaleField
-            label={t("tasting.field.light")}
-            onChange={(value) => updateContext("lightLevel", value)}
-            value={draft.payload.context?.lightLevel}
-          />
-          <ScaleField
-            label={t("tasting.field.noise")}
-            onChange={(value) => updateContext("noiseLevel", value)}
-            value={draft.payload.context?.noiseLevel}
-          />
-          <ScaleField
-            label={t("tasting.field.ambientSmell")}
-            onChange={(value) => updateContext("ambientSmellLevel", value)}
-            value={draft.payload.context?.ambientSmellLevel}
-          />
+            <ScaleField
+              label={t("tasting.field.noise")}
+              onChange={(value) => updateContext("noiseLevel", value)}
+              value={draft.payload.context?.noiseLevel}
+            />
+            <ScaleField
+              label={t("tasting.field.ambientSmell")}
+              onChange={(value) => updateContext("ambientSmellLevel", value)}
+              value={draft.payload.context?.ambientSmellLevel}
+            />
+          </div>
         </div>
-        <div className="form-grid">
-          <label>
-            <span>{t("tasting.field.food")}</span>
-            <input
-              maxLength={500}
-              onChange={(event) => updateContext("foodText", event.target.value || undefined)}
-              value={draft.payload.context?.foodText ?? ""}
-            />
-          </label>
-          <label>
-            <span>{t("tasting.field.palateCleanser")}</span>
-            <input
-              maxLength={160}
-              onChange={(event) => updateContext("palateCleanser", event.target.value || undefined)}
-              value={draft.payload.context?.palateCleanser ?? ""}
-            />
-          </label>
+        <div className="form-group">
+          <h3>{t("tasting.contextGroup.table")}</h3>
+          <div className="form-grid">
+            <label>
+              <span>{t("tasting.field.food")}</span>
+              <input
+                maxLength={500}
+                onChange={(event) => updateContext("foodText", event.target.value || undefined)}
+                value={draft.payload.context?.foodText ?? ""}
+              />
+            </label>
+            <label>
+              <span>{t("tasting.field.palateCleanser")}</span>
+              <input
+                maxLength={160}
+                onChange={(event) =>
+                  updateContext("palateCleanser", event.target.value || undefined)
+                }
+                value={draft.payload.context?.palateCleanser ?? ""}
+              />
+            </label>
+          </div>
         </div>
       </fieldset>
     ),

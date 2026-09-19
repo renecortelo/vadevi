@@ -46,10 +46,11 @@ test.describe("field styling", () => {
           ...(await page.evaluate(
             ({ native, path }) => {
               const root = getComputedStyle(document.documentElement);
-              const surface = root.getPropertyValue("--color-surface-raised").trim();
-              // Resolve the token to the rgb() form getComputedStyle reports.
+              // A field has a ground of its own, one step apart from the cards,
+              // so a box reads as a box — the same one everywhere, the top
+              // bar's three menus included.
               const probe = document.createElement("span");
-              probe.style.color = surface;
+              probe.style.color = root.getPropertyValue("--color-field").trim();
               document.body.append(probe);
               const expected = getComputedStyle(probe).color;
               probe.remove();

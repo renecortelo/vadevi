@@ -90,7 +90,7 @@ export function SessionsPage() {
         <div className="empty-state">
           <h2>{t("sessions.emptyTitle")}</h2>
           <p>{t("sessions.emptyBody")}</p>
-          <Link className="action-link action-link--primary" to="/sessions/new">
+          <Link className="action-link action-link--secondary" to="/sessions/new">
             {t("sessions.newAction")}
           </Link>
         </div>

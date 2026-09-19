@@ -941,19 +941,43 @@ export function WineMemoryPage() {
                     />
                   </p>
                 )}
+                {/* One row of actions in one shape. A wine never tasted leads
+                    with the way to start; the rest are quiet. They used to be a
+                    pill, an underlined link and a bordered pill, side by side. */}
                 <div className="wine-card__actions">
+                  {wine.noteCount === 0 ? (
+                    <Link
+                      className="action-link action-link--primary"
+                      to={`/wines/${wine.id}/taste`}
+                    >
+                      {t("evidence.firstTasting")}
+                    </Link>
+                  ) : null}
                   {/* A wine logged in a hurry is a wine worth correcting. */}
-                  <button className="text-button" onClick={() => setEditing(wine)} type="button">
+                  <button
+                    className="action-link action-link--quiet"
+                    onClick={() => setEditing(wine)}
+                    type="button"
+                  >
                     {t("memory.editAction")}
                   </button>
-                  <Link className="text-link" to={`/wines/${wine.id}/evidence`}>
+                  <Link
+                    className="action-link action-link--quiet"
+                    to={`/wines/${wine.id}/evidence`}
+                  >
                     {t("evidence.openAction")}
                   </Link>
                 </div>
-                {/* The tastings, behind their count: a wine never tasted shows
-                    only the way to start, one already tasted shows how many and
-                    opens each to read or correct. */}
-                <TastingHistory compact count={wine.noteCount} spaceId={spaceId} wineId={wine.id} />
+                {/* The tastings, behind their count, for a wine already tasted:
+                    how many, and each one opened to read or correct. */}
+                {wine.noteCount === 0 ? null : (
+                  <TastingHistory
+                    compact
+                    count={wine.noteCount}
+                    spaceId={spaceId}
+                    wineId={wine.id}
+                  />
+                )}
               </div>
             </article>
           ))}
