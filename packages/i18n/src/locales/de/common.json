@@ -1138,6 +1138,7 @@
     "addedOn": "Hinzugefügt am {{date}}",
     "loadError": "Die Liste konnte nicht geladen werden.",
     "saveError": "Die Änderung konnte nicht gespeichert werden. Versuchen Sie es erneut.",
-    "removeConfirm": "{{email}} entfernen? Eine Anmeldung ist erst wieder möglich, wenn die Adresse erneut hinzugefügt wird."
+    "removeConfirm": "{{email}} entfernen? Eine Anmeldung ist erst wieder möglich, wenn die Adresse erneut hinzugefügt wird.",
+    "addTitle": "E-Mail hinzufügen"
   }
 }

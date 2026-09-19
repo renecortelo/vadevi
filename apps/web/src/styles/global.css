@@ -816,13 +816,29 @@ button[aria-busy="true"]:disabled {
   padding: 0;
 }
 
+/* A row: who, then the action at the right. The text column may shrink and
+   an address may break anywhere, so a long e-mail never pushes the button
+   out past the card's edge — which it did, on a phone, for every entry. When
+   there is no room for both, the action drops under the text. */
 .member-list li {
   align-items: center;
   border-block-start: 1px solid var(--color-border);
   display: flex;
-  gap: var(--space-3);
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
   justify-content: space-between;
   padding-block: var(--space-4);
+}
+
+.member-list li > span:first-child {
+  flex: 1 1 14rem;
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+
+.member-list li > .action-link,
+.member-list li > .member-list__actions {
+  flex: 0 0 auto;
 }
 
 .member-list li:first-child {
@@ -832,7 +848,14 @@ button[aria-busy="true"]:disabled {
 .member-list__actions {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--space-2);
   justify-content: flex-end;
+}
+
+/* Row actions are a size down from the page's buttons. */
+.member-list .action-link {
+  font-size: var(--text-sm);
+  padding-inline: var(--space-3);
 }
 
 /* A one-line form: its label on a line of its own, then the field taking

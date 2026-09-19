@@ -177,7 +177,7 @@ export function SpaceSettingsPage() {
                   pendingRemovalId === member.id ? (
                     <span className="member-list__actions">
                       <button
-                        className="text-button text-button--danger"
+                        className="action-link action-link--danger"
                         disabled={isUpdating}
                         onClick={() => void remove(member)}
                         type="button"
@@ -185,7 +185,7 @@ export function SpaceSettingsPage() {
                         {t("spaces.removeConfirm")}
                       </button>
                       <button
-                        className="text-button"
+                        className="action-link action-link--secondary"
                         disabled={isUpdating}
                         onClick={() => setPendingRemovalId(null)}
                         type="button"
@@ -195,7 +195,7 @@ export function SpaceSettingsPage() {
                     </span>
                   ) : (
                     <button
-                      className="text-button text-button--danger"
+                      className="action-link action-link--danger"
                       disabled={isUpdating}
                       onClick={() => setPendingRemovalId(member.id)}
                       type="button"

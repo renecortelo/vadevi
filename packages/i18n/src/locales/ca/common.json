@@ -1138,6 +1138,7 @@
     "addedOn": "Afegit el {{date}}",
     "loadError": "No s’ha pogut carregar la llista.",
     "saveError": "No s’ha pogut desar el canvi. Torna-ho a provar.",
-    "removeConfirm": "Treure {{email}}? No podrà entrar fins que el tornis a afegir."
+    "removeConfirm": "Treure {{email}}? No podrà entrar fins que el tornis a afegir.",
+    "addTitle": "Afegir un correu"
   }
 }
