@@ -920,7 +920,13 @@
       "still": "Net ingeschonken",
       "swirled": "Na walsen"
     },
-    "venuePlaceholder": "bijv. een restaurant of bij een vriend"
+    "venuePlaceholder": "bijv. een restaurant of bij een vriend",
+    "contextGroup": {
+      "bottle": "De fles en hoe die is geschonken",
+      "place": "Waar je hebt geproefd",
+      "room": "De omgeving",
+      "table": "Op tafel"
+    }
   },
   "dataRights": {
     "accountScheduled": "De accountverwijdering staat over {{days}} dagen ingepland.",
@@ -981,7 +987,8 @@
       "barcode_lookups": "Streepjescode opzoeken",
       "price_lookups": "Prijzen opzoeken",
       "research_lookups": "Extern onderzoek",
-      "websearch_calls": "Zoeken op het open web"
+      "websearch_calls": "Zoeken op het open web",
+      "ocr_reads": "Etiketlezingen"
     },
     "navAction": "Gegevens en privacy",
     "noticeMedia": "Foto's worden op je apparaat verkleind en van hun locatie ontdaan voordat ze worden bewaard, en alleen leden van de Space kunnen ze zien.",

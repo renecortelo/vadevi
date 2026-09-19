@@ -920,7 +920,13 @@
       "still": "As poured",
       "swirled": "After swirling"
     },
-    "venuePlaceholder": "e.g. a restaurant or a friend's home"
+    "venuePlaceholder": "e.g. a restaurant or a friend's home",
+    "contextGroup": {
+      "bottle": "The bottle and how it was served",
+      "place": "Where you tasted it",
+      "room": "The room",
+      "table": "On the table"
+    }
   },
   "dataRights": {
     "accountScheduled": "Account deletion is scheduled in {{days}} days.",
@@ -981,7 +987,8 @@
       "barcode_lookups": "Barcode lookup",
       "price_lookups": "Price lookup",
       "research_lookups": "External research",
-      "websearch_calls": "Open-web search"
+      "websearch_calls": "Open-web search",
+      "ocr_reads": "Label reads"
     },
     "navAction": "Data and privacy",
     "noticeMedia": "Photos are resized and their location removed on your device before they are saved, and only members of the Space can see them.",

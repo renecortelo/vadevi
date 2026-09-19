@@ -920,7 +920,13 @@
       "still": "Acabat de servir",
       "swirled": "Després de remoure"
     },
-    "venuePlaceholder": "p. ex. un restaurant o casa d'un amic"
+    "venuePlaceholder": "p. ex. un restaurant o casa d'un amic",
+    "contextGroup": {
+      "bottle": "L’ampolla i com es va servir",
+      "place": "On el vas tastar",
+      "room": "L’ambient",
+      "table": "A la taula"
+    }
   },
   "dataRights": {
     "accountScheduled": "L'esborrat del compte està programat d'aquí a {{days}} dies.",
@@ -981,7 +987,8 @@
       "barcode_lookups": "Consulta de codi de barres",
       "price_lookups": "Consulta de preus",
       "research_lookups": "Recerca externa",
-      "websearch_calls": "Cerca a la web oberta"
+      "websearch_calls": "Cerca a la web oberta",
+      "ocr_reads": "Lectures d’etiqueta"
     },
     "navAction": "Dades i privadesa",
     "noticeMedia": "Les fotos es redueixen i se'ls treu la ubicació al teu dispositiu abans de desar-les, i només els membres de l'Espai poden veure-les.",

@@ -233,7 +233,7 @@ export function DataRightsPage() {
             </p>
             <div
               aria-label={t("dataRights.usageTitle")}
-              className="table-scroll"
+              className="table-scroll table-scroll--compact"
               role="region"
               tabIndex={0}
             >
@@ -294,15 +294,17 @@ export function DataRightsPage() {
         <section aria-labelledby="delete-space-title" className="settings-card">
           <h2 id="delete-space-title">{t("dataRights.deleteSpaceTitle")}</h2>
           <p>{t("dataRights.deleteSpaceBody", { name: space?.name ?? "" })}</p>
-          <label htmlFor="space-confirmation">{t("dataRights.confirmationLabel")}</label>
-          <input
-            id="space-confirmation"
-            onChange={(event) => setConfirmationText(event.target.value)}
-            value={confirmationText}
-          />
+          <div className="confirm-field">
+            <label htmlFor="space-confirmation">{t("dataRights.confirmationLabel")}</label>
+            <input
+              id="space-confirmation"
+              onChange={(event) => setConfirmationText(event.target.value)}
+              value={confirmationText}
+            />
+          </div>
           <div className="hero__actions">
             <button
-              className="text-button text-button--danger"
+              className="action-link action-link--danger"
               disabled={busy || confirmationText !== space?.name}
               onClick={() => void scheduleDeletion()}
               type="button"
@@ -331,20 +333,24 @@ export function DataRightsPage() {
       <section aria-labelledby="delete-account-title" className="settings-card">
         <h2 id="delete-account-title">{t("dataRights.deleteAccountTitle")}</h2>
         <p>{t("dataRights.deleteAccountBody")}</p>
-        <label htmlFor="account-confirmation">{t("dataRights.deleteAccountLabel")}</label>
-        <input
-          id="account-confirmation"
-          onChange={(event) => setAccountConfirm(event.target.value)}
-          value={accountConfirm}
-        />
-        <button
-          className="text-button text-button--danger"
-          disabled={busy || accountConfirm !== "DELETE"}
-          onClick={() => void deleteAccount()}
-          type="button"
-        >
-          {t("dataRights.deleteAccountAction")}
-        </button>
+        <div className="confirm-field">
+          <label htmlFor="account-confirmation">{t("dataRights.deleteAccountLabel")}</label>
+          <input
+            id="account-confirmation"
+            onChange={(event) => setAccountConfirm(event.target.value)}
+            value={accountConfirm}
+          />
+        </div>
+        <div className="hero__actions">
+          <button
+            className="action-link action-link--danger"
+            disabled={busy || accountConfirm !== "DELETE"}
+            onClick={() => void deleteAccount()}
+            type="button"
+          >
+            {t("dataRights.deleteAccountAction")}
+          </button>
+        </div>
       </section>
 
       <section aria-labelledby="notice-title" className="settings-card">

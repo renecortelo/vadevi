@@ -920,7 +920,13 @@
       "still": "Au service",
       "swirled": "Après aération"
     },
-    "venuePlaceholder": "p. ex. un restaurant ou chez un ami"
+    "venuePlaceholder": "p. ex. un restaurant ou chez un ami",
+    "contextGroup": {
+      "bottle": "La bouteille et le service",
+      "place": "Où vous l’avez dégusté",
+      "room": "L’ambiance",
+      "table": "À table"
+    }
   },
   "dataRights": {
     "accountScheduled": "La suppression du compte est programmée dans {{days}} jours.",
@@ -981,7 +987,8 @@
       "barcode_lookups": "Lecture de code-barres",
       "price_lookups": "Recherche de prix",
       "research_lookups": "Recherche externe",
-      "websearch_calls": "Recherche sur le web ouvert"
+      "websearch_calls": "Recherche sur le web ouvert",
+      "ocr_reads": "Lectures d’étiquette"
     },
     "navAction": "Données et confidentialité",
     "noticeMedia": "Les photos sont redimensionnées et leur localisation retirée sur votre appareil avant l'enregistrement ; seuls les membres de l'Espace peuvent les voir.",

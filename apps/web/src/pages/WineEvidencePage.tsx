@@ -538,7 +538,7 @@ export function WineEvidencePage() {
             )}
             <div className="research-narrative__actions">
               <button
-                className="fact-card__discard"
+                className="action-link action-link--secondary"
                 disabled={rewriting || !online}
                 onClick={() => void rewriteNarrative()}
                 type="button"
@@ -573,7 +573,7 @@ export function WineEvidencePage() {
             <span className="fact-card__evidence">{t("evidence.comparison.inferred")}</span>
             <div className="research-narrative__actions">
               <button
-                className="fact-card__discard"
+                className="action-link action-link--secondary"
                 disabled={comparing || !online}
                 onClick={() => void writeComparison()}
                 type="button"

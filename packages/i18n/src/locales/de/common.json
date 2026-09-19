@@ -920,7 +920,13 @@
       "still": "Frisch eingeschenkt",
       "swirled": "Nach dem Schwenken"
     },
-    "venuePlaceholder": "z. B. ein Restaurant oder bei Freunden"
+    "venuePlaceholder": "z. B. ein Restaurant oder bei Freunden",
+    "contextGroup": {
+      "bottle": "Die Flasche und der Ausschank",
+      "place": "Wo Sie verkostet haben",
+      "room": "Die Umgebung",
+      "table": "Auf dem Tisch"
+    }
   },
   "dataRights": {
     "accountScheduled": "Die Kontolöschung ist in {{days}} Tagen geplant.",
@@ -981,7 +987,8 @@
       "barcode_lookups": "Barcode-Abfrage",
       "price_lookups": "Preisabfrage",
       "research_lookups": "Externe Recherche",
-      "websearch_calls": "Websuche"
+      "websearch_calls": "Websuche",
+      "ocr_reads": "Etikett-Lesungen"
     },
     "navAction": "Daten und Datenschutz",
     "noticeMedia": "Fotos werden auf deinem Gerät verkleinert und von ihrem Standort befreit, bevor sie gespeichert werden; nur Mitglieder des Space können sie sehen.",

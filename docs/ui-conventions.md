@@ -1,0 +1,70 @@
+# UI conventions
+
+What the interface holds itself to, so a new screen lands looking like the
+rest. The tokens live in `packages/ui/src/styles/tokens.css` and the rules in
+`apps/web/src/styles/global.css`; this page is the reasoning, not a second
+copy of the values.
+
+## Type
+
+Five sizes, one body line height. `--text-xs` (13px, captions and eyebrows —
+never smaller), `--text-sm` (labels, secondary lines), `--text-base` (body,
+including Vicenç's replies), `--text-md` (subsection headings, the line under
+a screen title, the value on a highlight card), `--text-lg` (card and section
+headings, `h2`, legends). The screen title, `--text-xl`, clamps between 1.75
+and 2.5rem: this is an application, and a title that pushes the first field
+below the fold on a laptop is a landing page's title.
+
+Display serif for `h1`–`h3` and legends; the body sans for everything that is
+read rather than glanced at. A reply, a note, a paragraph of evidence is body
+text at body size.
+
+## Colour
+
+Two palettes, each checked for contrast in `packages/ui/tests/contrast.test.ts`:
+4.5:1 for every text pair, 3:1 for every field border against the surface it
+sits on. Add a pair to the test when you add a pair to the interface.
+
+- Muted text is for what names or annotates: labels, captions, eyebrows, the
+  sentence under a title. What the reader wrote or asked for is full ink.
+- The success green is a status ("saved on this device"), never a hint. A hint
+  is muted text.
+- The danger red outlines a destructive button; it never fills one.
+
+## Fields
+
+A field must read as a field: `--color-field` is one step apart from the card
+it sits on, its border meets 3:1, it darkens under the pointer and shows a ring
+on focus. Labels are muted, medium weight, small, one step above the box; the
+value in the box is full ink at medium weight. A form is boxes with names, not
+a column of headings.
+
+Long forms are cut into named runs with `.form-group` and an `h3`: the
+tasting's context step is four of them — the bottle, the place, the room, the
+table — rather than thirty fields in one ladder.
+
+## Buttons
+
+One button, `.action-link`, in four weights: `--primary` (filled, one per
+view at most), `--secondary` (outlined), `--quiet` (ghost, for the rest of a
+row), `--danger` (outlined red). Every one is at least 44px tall, answers the
+pointer, presses on click, and reads as refused when disabled. A row of
+actions on a card uses one shape for all of them.
+
+Underlined `.text-button` and `.text-link` are for inline asides — "discard",
+"read" — and are 36px tall so a thumb still finds them.
+
+## Layout
+
+Phone first: 320px is the narrowest supported width, and the e2e suite fails
+on any horizontal overflow there. On a phone the Space switcher takes a row
+of its own, five step tabs scroll sideways, the view switcher wraps three to
+a row, and a primary submit is full width; on a laptop the same submit is a
+button, not a banner.
+
+## Reviewing
+
+`UX_SHOTS=1 pnpm exec playwright test e2e/ux-shots.spec.ts --project=chromium-desktop`
+renders every screen at 1280 and 390px in both palettes into `.ux-shots/`.
+That contact sheet is what a design review looks at; it is how the pass of
+19 September 2026 was done.
