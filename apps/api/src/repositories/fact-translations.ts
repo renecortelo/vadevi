@@ -143,20 +143,33 @@ async function translateMissing(
     texts.push(String(fact.value));
   }
 
-  const patches = new Map<string, { title?: string; value?: string }>();
-  const completed = new Set<string>();
+  // Reserve first, one call per batch, then run the batches together: a page
+  // of evidence is two or three of them, each a dozen seconds on the model, and
+  // the reader is waiting on the sum. Reservation stays sequential so the cap
+  // is honoured exactly; only the model calls overlap.
+  const reserved: number[][] = [];
   for (const batch of translationBatches(texts).slice(0, maxBatchesPerRead)) {
     if (!(await options.reserveModelCall())) break;
-    let result: (string | null)[] | null;
-    try {
-      result = await translation.translate({
-        locale: options.locale,
-        texts: batch.map((index) => texts[index]!),
-      });
-    } catch {
-      break;
-    }
-    if (result === null || result.length !== batch.length) break;
+    reserved.push(batch);
+  }
+  const results = await Promise.all(
+    reserved.map(async (batch) => {
+      try {
+        return await translation.translate({
+          locale: options.locale,
+          texts: batch.map((index) => texts[index]!),
+        });
+      } catch {
+        return null;
+      }
+    }),
+  );
+
+  const patches = new Map<string, { title?: string; value?: string }>();
+  const completed = new Set<string>();
+  reserved.forEach((batch, batchIndex) => {
+    const result = results[batchIndex];
+    if (result === null || result === undefined || result.length !== batch.length) return;
     batch.forEach((index, position) => {
       const slot = slots[index]!;
       // An item the translator would not return keeps its original: stored as
@@ -165,7 +178,7 @@ async function translateMissing(
       patches.set(slot.factId, { ...patches.get(slot.factId), [slot.kind]: value });
       completed.add(`${slot.factId}:${slot.kind}`);
     });
-  }
+  });
 
   const now = new Date().toISOString();
   const inserts: D1PreparedStatement[] = [];

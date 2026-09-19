@@ -328,7 +328,16 @@ export async function leaveSpace(
  * Space is removed; provider caches and rate windows are not Space scoped and
  * stay untouched.
  */
-const spaceScopedTables = [
+export const spaceScopedTables = [
+  // Space-scoped and referencing spaces, media_assets and wine_records, so it
+  // goes first. It was missing: a confirmed draft is kept as a tombstone with no
+  // expiry, and a Space with one — any Space where a bottle was ever confirmed
+  // through identification — failed its purge every five minutes, for ever,
+  // on the FOREIGN KEY. Found on 2026-09-19 running the acceptance script's
+  // deletion drill: the first cron run after the grace period threw, and the
+  // next one completed only because the unconfirmed draft had expired between
+  // them. The schema test now lists every table with a space_id.
+  "identification_drafts",
   "tasting_descriptors",
   "tasting_contexts",
   "session_wine_summaries",
@@ -435,68 +444,88 @@ export async function runDueDeletionJobs(
 
   let completed = 0;
   for (const job of due.results) {
-    let mediaObjectsRemoved = 0;
-    let rowsRemoved = 0;
+    try {
+      completed += await runDeletionJob(database, bucket, nowIso, job);
+    } catch (error) {
+      // One job that cannot complete must not stop the others behind it, nor
+      // the rest of the schedule. It stays scheduled and is tried again on the
+      // next run; the reason is logged so it is not a silent stall. No data.
+      console.error(
+        `deletion job ${job.id} (${job.target_type}) failed and will be retried: ${
+          error instanceof Error ? error.message : String(error)
+        }`,
+      );
+    }
+  }
+  return { completed };
+}
 
-    if (job.target_type === "space") {
-      const purged = await purgeSpace(database, bucket, job.target_id);
+/** Purge one due job; returns 1 when it was completed on this run. */
+async function runDeletionJob(
+  database: D1Database,
+  bucket: R2Bucket | undefined,
+  nowIso: string,
+  job: JobRow,
+): Promise<number> {
+  let mediaObjectsRemoved = 0;
+  let rowsRemoved = 0;
+
+  if (job.target_type === "space") {
+    const purged = await purgeSpace(database, bucket, job.target_id);
+    mediaObjectsRemoved += purged.mediaObjectsRemoved;
+    rowsRemoved += purged.rowsRemoved;
+  } else {
+    const personalSpaces = await database
+      .prepare(
+        `SELECT space.id FROM spaces space
+          WHERE space.type = 'personal' AND space.created_by_user_id = ?`,
+      )
+      .bind(job.target_id)
+      .all<{ id: string }>();
+    for (const space of personalSpaces.results) {
+      const purged = await purgeSpace(database, bucket, space.id);
       mediaObjectsRemoved += purged.mediaObjectsRemoved;
       rowsRemoved += purged.rowsRemoved;
-    } else {
-      const personalSpaces = await database
-        .prepare(
-          `SELECT space.id FROM spaces space
-          WHERE space.type = 'personal' AND space.created_by_user_id = ?`,
-        )
-        .bind(job.target_id)
-        .all<{ id: string }>();
-      for (const space of personalSpaces.results) {
-        const purged = await purgeSpace(database, bucket, space.id);
-        mediaObjectsRemoved += purged.mediaObjectsRemoved;
-        rowsRemoved += purged.rowsRemoved;
-      }
-      // Shared Spaces keep their records; the account simply stops being a member.
-      const detached = await database
-        .prepare(
-          `UPDATE space_memberships SET status = 'left', removed_at = ?, updated_at = ?
+    }
+    // Shared Spaces keep their records; the account simply stops being a member.
+    const detached = await database
+      .prepare(
+        `UPDATE space_memberships SET status = 'left', removed_at = ?, updated_at = ?
           WHERE user_id = ? AND status = 'active'`,
-        )
-        .bind(nowIso, nowIso, job.target_id)
-        .run();
-      rowsRemoved += detached.meta.changes;
-      const anonymized = await database
-        .prepare(
-          `UPDATE users SET display_name = 'Deleted account', email_normalized = NULL,
+      )
+      .bind(nowIso, nowIso, job.target_id)
+      .run();
+    rowsRemoved += detached.meta.changes;
+    const anonymized = await database
+      .prepare(
+        `UPDATE users SET display_name = 'Deleted account', email_normalized = NULL,
             avatar_url = NULL, active_space_id = NULL, deleted_at = ?, updated_at = ?
           WHERE id = ? AND deleted_at IS NULL`,
-        )
-        .bind(nowIso, nowIso, job.target_id)
-        .run();
-      rowsRemoved += anonymized.meta.changes;
-      const drafts = await database
-        .prepare(`DELETE FROM action_drafts WHERE user_id = ?`)
-        .bind(job.target_id)
-        .run();
-      rowsRemoved += drafts.meta.changes;
-      const keys = await database
-        .prepare(`DELETE FROM idempotency_keys WHERE user_id = ?`)
-        .bind(job.target_id)
-        .run();
-      rowsRemoved += keys.meta.changes;
-    }
-
-    await database
-      .prepare(
-        `UPDATE deletion_jobs SET state = 'completed', completed_at = ?, updated_at = ?,
-          media_objects_removed = media_objects_removed + ?, rows_removed = rows_removed + ?
-        WHERE id = ? AND state = 'scheduled'`,
       )
-      .bind(nowIso, nowIso, mediaObjectsRemoved, rowsRemoved, job.id)
+      .bind(nowIso, nowIso, job.target_id)
       .run();
-    completed += 1;
+    rowsRemoved += anonymized.meta.changes;
+    const drafts = await database
+      .prepare(`DELETE FROM action_drafts WHERE user_id = ?`)
+      .bind(job.target_id)
+      .run();
+    rowsRemoved += drafts.meta.changes;
+    const keys = await database
+      .prepare(`DELETE FROM idempotency_keys WHERE user_id = ?`)
+      .bind(job.target_id)
+      .run();
+    rowsRemoved += keys.meta.changes;
   }
 
-  return { completed };
+  await database
+    .prepare(
+      `UPDATE deletion_jobs SET state = 'completed', completed_at = ?, updated_at = ?,
+          media_objects_removed = media_objects_removed + ?, rows_removed = rows_removed + ?
+        WHERE id = ? AND state = 'scheduled'`,
+    )
+    .bind(nowIso, nowIso, mediaObjectsRemoved, rowsRemoved, job.id)
+    .run();
+  return 1;
 }
 
 export async function getDeletionJob(

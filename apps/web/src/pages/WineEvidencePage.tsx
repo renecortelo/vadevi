@@ -221,6 +221,7 @@ export function WineEvidencePage() {
   const [response, setResponse] = useState<WineFactsResponse | null>(null);
   const [wine, setWine] = useState<WineSummary | null>(null);
   const [loading, setLoading] = useState(true);
+  // A catalogue key, translated where it is shown.
   const [error, setError] = useState<string | null>(null);
   const [rejectingId, setRejectingId] = useState<string | null>(null);
   const [pendingDiscard, setPendingDiscard] = useState<Fact | null>(null);
@@ -264,13 +265,17 @@ export function WineEvidencePage() {
       try {
         await loadFacts(controller.signal);
       } catch {
-        if (!controller.signal.aborted) setError(t("evidence.loadError"));
+        if (!controller.signal.aborted) setError("evidence.loadError");
       } finally {
         if (!controller.signal.aborted) setLoading(false);
       }
     })();
     return () => controller.abort();
-  }, [loadFacts, t]);
+    // The error is kept as a key and translated at render, so `t` is not a
+    // dependency here. It was, and a language change re-ran this twice — once
+    // when the catalogue arrived and once when the language did — sending the
+    // same read, and the same translation, to the server two times over.
+  }, [loadFacts]);
 
   useEffect(() => {
     if (user === null || wineId.length === 0) return;
@@ -330,7 +335,7 @@ export function WineEvidencePage() {
       await rejectFact(user, spaceId, fact.id, { version: fact.version });
       await loadFacts();
     } catch {
-      setError(t("evidence.rejectError"));
+      setError("evidence.rejectError");
     } finally {
       setRejectingId(null);
     }
@@ -347,7 +352,7 @@ export function WineEvidencePage() {
       await regenerateNarrative(user, spaceId, wineId, locale);
       await loadFacts();
     } catch {
-      setError(t("evidence.rewriteError"));
+      setError("evidence.rewriteError");
     } finally {
       setRewriting(false);
     }
@@ -369,7 +374,7 @@ export function WineEvidencePage() {
       }
       await loadFacts();
     } catch {
-      setError(t("evidence.comparison.error"));
+      setError("evidence.comparison.error");
     } finally {
       setComparing(false);
     }
@@ -442,7 +447,7 @@ export function WineEvidencePage() {
 
       {error === null ? null : (
         <p className="form-error" role="alert">
-          {error}
+          {t(error)}
         </p>
       )}
       <section aria-labelledby="wine-research-title" className="research-panel">

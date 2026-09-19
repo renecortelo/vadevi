@@ -79,11 +79,11 @@ System / Light / Dark control.
         created in step 7. A personal Space has no delete of its own; it goes with the
         account in step 22, and the screen now says so rather than showing nothing.
 
-20. [ ] Type the wrong Space name into the delete field. The button stays
+20. [x] Type the wrong Space name into the delete field. The button stays
         disabled.
-21. [ ] Type the correct name, schedule deletion, then **cancel it**. The Space
+21. [x] Type the correct name, schedule deletion, then **cancel it**. The Space
         survives.
-22. [ ] Type DELETE in the account field and confirm the button enables. **Do
+22. [x] Type DELETE in the account field and confirm the button enables. **Do
         not proceed** unless you want the account gone.
 
 ## D. Mobile — the part desktop cannot tell you (10 min)
@@ -114,16 +114,16 @@ This section is the operator's, not the reader's: three of its four steps run
 from your terminal, in the repository, with the same `wrangler` login you deploy
 with.
 
-32. [ ] **Data and privacy**, at the bottom: the usage counters. Each metric
+32. [x] **Data and privacy**, at the bottom: the usage counters. Each metric
         shows today's count against its cap. What it reports must match what
         this deployment actually configured — a provider you switched on shows
         activity, one you left at `none` shows nothing. A counter that disagrees
         with the config is the finding, not the value itself.
-33. [ ] Recheck the provider quotas against the official pages **today**.
+33. [x] Recheck the provider quotas against the official pages **today**.
         `docs/self-hosting.md` under _The caps your providers enforce_ records
         what they were and when; note any change. Done once on 17 September
         2026 — the item is about doing it again on the day you rely on it.
-34. [ ] Export the database and confirm the file is real:
+34. [x] Export the database and confirm the file is real:
 
     ```bash
     npx wrangler d1 export vadevi-preview --remote --config wrangler.preview.jsonc --output backup.sql
@@ -132,7 +132,7 @@ with.
 
     A count in the thousands is a database; a count of zero is a finding.
 
-35. [ ] Confirm the R2 bucket is **not** publicly readable. There is no public
+35. [x] Confirm the R2 bucket is **not** publicly readable. There is no public
         URL to try, and that is the point: a bucket with no public access
         enabled has no address a browser can reach. Check it from the
         dashboard — **R2 → vadevi-preview-media → Settings → Public access**
@@ -158,12 +158,12 @@ the other.
 
 This is destructive to the Space you name, so do it on a throwaway Space.
 
-36. [ ] Create a throwaway Space (**Spaces → New Space**, type Group), make it
+36. [x] Create a throwaway Space (**Spaces → New Space**, type Group), make it
         active in the top-bar switcher, add one wine and one photo.
-37. [ ] With it still active, **Data and privacy** → type its name → schedule
+37. [x] With it still active, **Data and privacy** → type its name → schedule
         deletion. The grace period is a month; shorten it for the test with the
         command under "Shortening the grace period" below.
-38. [ ] The cron runs every five minutes. After it fires, confirm the Space is
+38. [x] The cron runs every five minutes. After it fires, confirm the Space is
         gone from the switcher, that the wine count for its id is 0 (second
         command below), and that the photo's object is gone from the bucket
         (`npx wrangler r2 object get vadevi-preview-media/<key>` fails).
