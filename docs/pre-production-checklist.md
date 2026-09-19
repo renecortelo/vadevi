@@ -78,11 +78,13 @@ it; both are noted where they sit.
       recorded there; its first run returned 37 of 37 verified. A backup that has
       never been restored is a hypothesis, and neither of these is one now.
 
-- [ ] **manual** — All acceptance criteria listed in §20 pass or are explicitly
-      not applicable. 41 criteria across seven areas; `docs/manual-acceptance.md`
-      is the script, and its last section needs two accounts. Nothing automated
-      reaches the parts that matter most here — a real phone, a real radio, a
-      real sign-in popup.
+- [x] **manual** — All acceptance criteria listed in §20 pass or are explicitly
+      not applicable. `docs/manual-acceptance.md` is the script: 86 items, run
+      by the maintainer on iPhone and desktop with two accounts across 18–19
+      September 2026 (items 34–38, the operator's, run from the terminal on the
+      maintainer's behalf). Every item passes on the deployment of 19 September;
+      the four rounds' findings and their fixes are in
+      `docs/acceptance-findings.md` — sixteen in all, every one closed.
 
 - [x] **manual** — Zero-cost quotas rechecked against official provider pages,
       17 September 2026. Three things were wrong; see below.
