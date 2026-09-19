@@ -104,13 +104,14 @@ export function TastingNotePage() {
           <h1>{new Date(note.tastedAt).toLocaleDateString(i18n.language)}</h1>
           {venue === null ? null : (
             <p className="tasting-read__venue">
-              {venue}{" "}
               <MapLink
-                className="text-link"
+                className="venue-link"
                 latitude={note.context?.venueLatitude}
                 longitude={note.context?.venueLongitude}
                 name={venue}
-              />
+              >
+                {venue}
+              </MapLink>
             </p>
           )}
         </div>

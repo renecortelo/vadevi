@@ -53,14 +53,9 @@ export function TastingHistory({
   const shown = tastings ?? [];
   const known = tastings === null ? count : shown.length;
 
-  // A wine never tasted needs no list and no toggle — only the way to begin.
-  if (compact && known === 0) {
-    return (
-      <Link className="action-link action-link--secondary" to={`/wines/${wineId}/taste`}>
-        {t("evidence.firstTasting")}
-      </Link>
-    );
-  }
+  // On a card a wine never tasted has nothing to list; the card itself carries
+  // the way to begin, in its row of actions.
+  if (compact && known === 0) return null;
 
   const list =
     shown.length === 0 ? null : (
@@ -75,13 +70,14 @@ export function TastingHistory({
               </span>
               {entry.venueName === null ? null : (
                 <span>
-                  {entry.venueName}{" "}
                   <MapLink
-                    className="text-link"
+                    className="venue-link"
                     latitude={entry.venueLatitude}
                     longitude={entry.venueLongitude}
                     name={entry.venueName}
-                  />
+                  >
+                    {entry.venueName}
+                  </MapLink>
                 </span>
               )}
             </div>
@@ -100,9 +96,10 @@ export function TastingHistory({
   return (
     <section className="tasting-history">
       {compact ? (
+        // The same shape as the card's other actions, with a chevron that turns.
         <button
           aria-expanded={open}
-          className="tasting-history__toggle text-button"
+          className="action-link action-link--secondary tasting-history__toggle"
           onClick={() => setOpen((current) => !current)}
           type="button"
         >
@@ -118,9 +115,13 @@ export function TastingHistory({
           ) : (
             list
           )}
-          <Link className="action-link action-link--secondary" to={`/wines/${wineId}/taste`}>
-            {known === 0 ? t("evidence.firstTasting") : t("evidence.anotherTasting")}
-          </Link>
+          {/* On the evidence page the way to add a tasting lives here; on a
+              card it is in the card's own row of actions. */}
+          {compact ? null : (
+            <Link className="action-link action-link--secondary" to={`/wines/${wineId}/taste`}>
+              {known === 0 ? t("evidence.firstTasting") : t("evidence.anotherTasting")}
+            </Link>
+          )}
         </>
       ) : null}
     </section>

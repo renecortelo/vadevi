@@ -122,6 +122,65 @@ input[type="time"] {
   padding-inline: var(--space-2);
 }
 
+/*
+  The list a <select> drops down. Chromium lets a page take it over — the
+  square system box that clashed with every rounded corner on the screen — and
+  then style it like a menu of ours; where the engine does not, the native
+  list stays, untouched. The select itself keeps the field's look, with the
+  chevron drawn by the engine.
+*/
+@supports selector(::picker(select)) {
+  select:not([multiple], [size]),
+  select:not([multiple], [size])::picker(select) {
+    appearance: base-select;
+  }
+
+  select:not([multiple], [size]) {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-2);
+  }
+
+  select:not([multiple], [size])::picker-icon {
+    color: var(--color-text-muted);
+    content: "▾";
+    font-family: system-ui, sans-serif;
+    margin-inline-start: auto;
+  }
+
+  select:not([multiple], [size])::picker(select) {
+    background: var(--color-field);
+    border: 1px solid var(--color-field-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    color: var(--color-text);
+    margin-block-start: var(--space-1);
+    max-block-size: 20rem;
+    padding: var(--space-1);
+  }
+
+  select:not([multiple], [size]) option {
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  select:not([multiple], [size]) option:hover,
+  select:not([multiple], [size]) option:focus-visible {
+    background: var(--color-surface-muted);
+    outline: none;
+  }
+
+  select:not([multiple], [size]) option:checked {
+    background: var(--color-plum-surface);
+    color: var(--color-plum);
+    font-weight: 600;
+  }
+
+  select:not([multiple], [size]) option::checkmark {
+    display: none;
+  }
+}
+
 /* The picker button inside a date field and the spinners inside a number field
    are drawn by the browser in its own colour. Inverting them is the only way to
    make them match a dark page. */
@@ -606,12 +665,14 @@ button[aria-busy="true"]:disabled {
 }
 
 .profile-form label {
-  color: var(--color-text);
+  color: var(--color-text-muted);
   font-size: var(--text-sm);
-  font-weight: 750;
+  font-weight: 600;
 }
 
-.profile-form input,
+/* Text fields fill the column. A radio must not: at 100% it shoved the
+   choice card's text out past the card's own border. */
+.profile-form input:not([type="checkbox"], [type="radio"]),
 .profile-form select {
   inline-size: 100%;
 }
@@ -633,14 +694,8 @@ button[aria-busy="true"]:disabled {
   padding-block: clamp(var(--space-4), 5vw, var(--space-7));
 }
 
-.settings-page > h1,
-.settings-heading h1 {
-  margin-block-end: var(--space-2);
-}
-
-.settings-page__lede {
-  font-size: var(--text-lg);
-  max-inline-size: 42rem;
+.settings-page > .page-heading {
+  padding-block-start: 0;
 }
 
 .settings-heading {
@@ -688,14 +743,29 @@ button[aria-busy="true"]:disabled {
   margin-block-end: var(--space-3);
 }
 
+/* A choice card is a label, and the form's own label rule would lay it out
+   as a stack; the selector is written to outrank it. Radio at the left,
+   title and description beside it, the whole card the target. */
+.profile-form .choice-card,
 .choice-card {
-  align-items: flex-start;
+  align-items: start;
   background: var(--color-surface-raised);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  display: flex;
+  color: var(--color-text);
+  cursor: pointer;
+  display: grid;
   gap: var(--space-3);
+  grid-template-columns: auto minmax(0, 1fr);
   padding: var(--space-4);
+  transition: border-color var(--motion-fast);
+}
+
+.choice-card:hover {
+  border-color: var(--color-field-border-hover);
+}
+
+.choice-card strong {
+  font-size: var(--text-base);
 }
 
 .choice-card:has(input:checked) {
@@ -802,7 +872,6 @@ button[aria-busy="true"]:disabled {
 
 .hero {
   max-inline-size: 52rem;
-  padding-block: clamp(var(--space-5), 7vw, 5.5rem);
 }
 
 .eyebrow {
@@ -856,16 +925,15 @@ p {
   line-height: var(--line-body);
 }
 
-.hero__lede {
-  font-size: var(--text-lg);
-  max-inline-size: 42rem;
-}
-
 .hero__actions,
 .update-prompt__actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
+}
+
+.page-heading > .hero__actions {
+  margin-block-start: var(--space-4);
 }
 
 /* The one button. Three weights — primary, secondary, quiet — and every one
@@ -1012,15 +1080,52 @@ p {
   max-inline-size: 66rem;
 }
 
-.page-heading {
+/*
+  Every screen opens the same way: an eyebrow, the title, one sentence under
+  it — at the same distances, from the same top edge. The eyebrow sits two
+  steps above the title, the title three above its sentence, and the whole
+  block one clear step above the content. The rule covers every container a
+  heading lives in (the home hero, the settings pages, the split headings
+  with an action at the right), so a screen cannot drift on its own.
+*/
+.page-heading,
+.settings-heading > div {
   max-inline-size: 48rem;
   padding-block-start: clamp(var(--space-4), 4vw, var(--space-7));
 }
 
+.settings-heading > div {
+  padding-block-start: 0;
+}
+
+.page-heading .eyebrow,
+.settings-heading .eyebrow {
+  margin-block: 0 var(--space-2);
+}
+
+.page-heading h1,
+.settings-heading h1 {
+  margin-block: 0 var(--space-3);
+}
+
 /* The line under a screen's title: a sentence, not a second headline. */
-.page-heading > p:last-child {
+.page-heading > p:not(.eyebrow),
+.page-heading > div > p:not(.eyebrow),
+.settings-heading p:not(.eyebrow) {
   font-size: var(--text-md);
+  margin-block: 0;
   max-inline-size: 40rem;
+}
+
+/* The heading and what follows it — unless the container already spaces its
+   children, in which case the gap is that step and nothing is added to it. */
+.page-heading + * {
+  margin-block-start: var(--space-5);
+}
+
+.settings-page > .page-heading + *,
+.about-page > .page-heading + * {
+  margin-block-start: 0;
 }
 
 .quick-log-form {
@@ -1483,27 +1588,34 @@ p {
 .wine-card-grid {
   display: grid;
   gap: var(--space-4);
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
 }
 
+/* A bottle is photographed standing, so the card is built around a portrait:
+   the photo is a tall column at the left, the text beside it, like a bottle on
+   a shelf with its card. It used to be a 4:3 landscape tile above the text,
+   which cropped every label to its middle third. */
 .wine-card {
   background: var(--color-surface-raised);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 9.5rem) minmax(0, 1fr);
   min-inline-size: 0;
   overflow: hidden;
 }
 
 .wine-card__image {
-  aspect-ratio: 4 / 3;
   background: var(--color-surface-muted);
   color: inherit;
   display: block;
+  min-block-size: 100%;
   overflow: hidden;
   text-decoration: none;
 }
 
 .wine-card__image img {
+  aspect-ratio: 3 / 4;
   block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
@@ -1528,7 +1640,15 @@ p {
 }
 
 .wine-card__body {
-  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+  padding: var(--space-4);
+}
+
+.wine-card__meta {
+  font-size: var(--text-sm);
+  margin-block-end: 0;
 }
 
 .wine-card__producer {
@@ -1563,10 +1683,22 @@ p {
   margin-block-start: var(--space-4);
 }
 
-/* Three actions on one line of a fifteen-rem card: tighter than the page's
-   buttons, still 44px tall. */
+/* The card's actions wrap as needed, all one shape and one size, a little
+   tighter than the page's buttons and still 44px tall. */
 .wine-card__actions .action-link {
+  font-size: var(--text-sm);
   padding-inline: var(--space-3);
+}
+
+/* On a phone the photo column is the narrower one and the body gets the room. */
+@media (max-width: 26rem) {
+  .wine-card {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+  }
+
+  .wine-card__body {
+    padding: var(--space-3);
+  }
 }
 
 .table-actions {
@@ -1580,13 +1712,51 @@ p {
   max-inline-size: 70rem;
 }
 
+/* The wine's heading: its photo, portrait, at the left; name and provenance
+   beside it; the tastings at the right on a wide screen, under it on a phone. */
 .evidence-heading {
   align-items: end;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
-  justify-content: space-between;
+  gap: var(--space-4) var(--space-5);
   max-inline-size: none;
+}
+
+.evidence-heading__photo {
+  aspect-ratio: 3 / 4;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  flex: 0 0 auto;
+  inline-size: 9rem;
+  overflow: hidden;
+}
+
+.evidence-heading__photo img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.evidence-heading__text {
+  flex: 1 1 20rem;
+  min-inline-size: 0;
+}
+
+.evidence-heading > .tasting-history {
+  flex: 0 1 auto;
+  margin-inline-start: auto;
+}
+
+@media (max-width: 40rem) {
+  .evidence-heading__photo {
+    inline-size: 6.5rem;
+  }
+
+  .evidence-heading > .tasting-history {
+    flex-basis: 100%;
+    margin-inline-start: 0;
+  }
 }
 
 .evidence-heading .text-link {
@@ -3308,7 +3478,7 @@ p {
 
 .about-page {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-5);
   max-inline-size: 44rem;
 }
 
@@ -3567,6 +3737,26 @@ p {
   white-space: nowrap;
 }
 
+/* A place's name that opens the map: inherits its line's size and colour,
+   underlined so it reads as a way out, with a pin so it reads as a place. */
+.venue-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-field-border);
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--motion-fast);
+}
+
+.venue-link:hover {
+  text-decoration-color: currentcolor;
+}
+
+.venue-link::before {
+  content: "📍";
+  font-size: 0.85em;
+  margin-inline-end: 0.2em;
+}
+
 /* The way out when the geocoder does not know a place. Quiet, under the field,
    where someone who is stuck actually looks. */
 .venue-picker__hint {
@@ -3620,7 +3810,7 @@ p {
   flex-wrap: wrap;
   gap: var(--space-2);
   justify-content: space-between;
-  padding: var(--space-2);
+  padding: var(--space-2) var(--space-3);
 }
 
 .tasting-history li div {
@@ -3682,35 +3872,33 @@ p {
 .tasting-history {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
-  margin-block-start: var(--space-2);
+  gap: var(--space-3);
+  margin-block-start: var(--space-3);
 }
 
 .tasting-history__toggle {
   align-self: flex-start;
 }
 
+.tasting-history__toggle::after {
+  content: "▾";
+  font-family: system-ui, sans-serif;
+  transition: transform 120ms ease;
+}
+
+.tasting-history__toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+/* Each tasting is its own bordered row. A second rule used to strip the
+   last row's bottom border, so it sat open-ended against the button below. */
 .tasting-history__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: var(--space-2);
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.tasting-history__list li {
-  align-items: center;
-  border-block-end: 1px solid var(--color-border);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  justify-content: space-between;
-  padding-block: var(--space-1);
-}
-
-.tasting-history__list li:last-child {
-  border-block-end: 0;
 }
 
 .tasting-history__list li div {
