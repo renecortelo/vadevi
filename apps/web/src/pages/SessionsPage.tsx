@@ -109,13 +109,14 @@ export function SessionsPage() {
               <h2>{session.name}</h2>
               {session.venueText === null ? null : (
                 <p>
-                  {session.venueText}{" "}
                   <MapLink
-                    className="text-link"
+                    className="venue-link"
                     latitude={session.venueLatitude}
                     longitude={session.venueLongitude}
                     name={session.venueText}
-                  />
+                  >
+                    {session.venueText}
+                  </MapLink>
                 </p>
               )}
               <p className="session-card__counts">

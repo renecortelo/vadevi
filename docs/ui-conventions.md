@@ -54,6 +54,20 @@ actions on a card uses one shape for all of them.
 Underlined `.text-button` and `.text-link` are for inline asides — "discard",
 "read" — and are 36px tall so a thumb still finds them.
 
+## Cards
+
+A wine card is built around a portrait: the photo is a tall column at the
+left, the text beside it, like a bottle on a shelf with its card. Its line
+under the name reads vintage · type · region. Its actions are one row of
+secondary buttons — taste, edit, evidence, and the tastings behind their
+count, which opens a list of bordered rows. A place's name is the link to the
+map (`.venue-link`, with a pin); there is no "open in Google Maps" text
+beside it, and the card itself carries no map link — each tasting does.
+
+Every screen opens the same way, `.page-heading`: eyebrow, title, one
+sentence, at the same distances from the same top edge, whatever the
+container.
+
 ## Layout
 
 Phone first: 320px is the narrowest supported width, and the e2e suite fails

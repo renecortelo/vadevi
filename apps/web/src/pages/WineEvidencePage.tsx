@@ -6,7 +6,7 @@ import type {
   WineFactsResponse,
   WineSummary,
 } from "@vadevi/contracts";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router";
 
@@ -14,6 +14,7 @@ import { MapLink } from "../components/MapLink";
 import { TastingHistory } from "../components/TastingHistory";
 import { BottlePhotoPicker } from "../components/BottlePhotoPicker";
 import { ModalDialog } from "../components/ModalDialog";
+import { PrivateWineImage } from "../components/PrivateWineImage";
 import { useAuth } from "../auth/AuthContext";
 import { createIdempotencyKey } from "../security/idempotency";
 import { getWine } from "../services/api";
@@ -411,7 +412,19 @@ export function WineEvidencePage() {
   return (
     <section className="evidence-page">
       <header className="page-heading evidence-heading">
-        <div>
+        {/* The bottle itself, beside its name. The card showed it and this
+            screen did not, so opening a wine lost the one thing that made it
+            recognisable at a glance. */}
+        {wine === null || wine.mediaId === null ? null : (
+          <div className="evidence-heading__photo">
+            <PrivateWineImage
+              mediaId={wine.mediaId}
+              name={`${wine.producerName} ${wine.displayName}`}
+              spaceId={spaceId}
+            />
+          </div>
+        )}
+        <div className="evidence-heading__text">
           <Link className="text-link" to="/memory">
             {t("evidence.backAction")}
           </Link>
@@ -427,16 +440,29 @@ export function WineEvidencePage() {
               history, so this is where it has to be reachable. */}
           {wine?.lastVenue === undefined ? null : (
             <p className="evidence-heading__venue">
+              {/* The sentence with the place's name as the link to the map. */}
               {t("evidence.lastVenue", {
                 date: new Date(wine.lastVenue.tastedAt).toLocaleDateString(i18n.language),
-                venue: wine.lastVenue.name,
-              })}{" "}
-              <MapLink
-                className="text-link"
-                latitude={wine.lastVenue.latitude}
-                longitude={wine.lastVenue.longitude}
-                name={wine.lastVenue.name}
-              />
+                venue: "\u0000",
+              })
+                .split("\u0000")
+                .map((part, index) =>
+                  index === 0 ? (
+                    <Fragment key="before">{part}</Fragment>
+                  ) : (
+                    <Fragment key="after">
+                      <MapLink
+                        className="venue-link"
+                        latitude={wine.lastVenue!.latitude}
+                        longitude={wine.lastVenue!.longitude}
+                        name={wine.lastVenue!.name}
+                      >
+                        {wine.lastVenue!.name}
+                      </MapLink>
+                      {part}
+                    </Fragment>
+                  ),
+                )}
             </p>
           )}
         </div>

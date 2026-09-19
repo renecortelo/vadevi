@@ -1207,13 +1207,14 @@ export function DeepTastingPage() {
               back for, and it should not need a scroll through the whole form. */}
           {(draft.payload.context?.venueName ?? "").length === 0 ? null : (
             <p className="tasting-heading__venue">
-              {draft.payload.context?.venueName}{" "}
               <MapLink
-                className="text-link"
+                className="venue-link"
                 latitude={draft.payload.context?.venueLatitude}
                 longitude={draft.payload.context?.venueLongitude}
                 name={draft.payload.context?.venueName}
-              />
+              >
+                {draft.payload.context?.venueName}
+              </MapLink>
             </p>
           )}
         </div>

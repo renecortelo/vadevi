@@ -30,9 +30,11 @@ export function NewSpacePage() {
 
   return (
     <section className="settings-page">
-      <p className="eyebrow">{t("spaces.newEyebrow")}</p>
-      <h1>{t("spaces.newTitle")}</h1>
-      <p className="settings-page__lede">{t("spaces.newBody")}</p>
+      <header className="page-heading">
+        <p className="eyebrow">{t("spaces.newEyebrow")}</p>
+        <h1>{t("spaces.newTitle")}</h1>
+        <p>{t("spaces.newBody")}</p>
+      </header>
 
       <form className="profile-form settings-card" onSubmit={(event) => void submit(event)}>
         <fieldset className="choice-fieldset">

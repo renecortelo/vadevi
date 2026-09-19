@@ -3,9 +3,9 @@ import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router";
 
-import { MapLink } from "../components/MapLink";
 import type { MapPoint } from "../components/PointsMap";
 import { PointsMap } from "../components/PointsMap";
+import { PrivateWineImage } from "../components/PrivateWineImage";
 import { TastingHistory } from "../components/TastingHistory";
 const TileMap = lazy(() =>
   import("../components/TileMap").then((module) => ({ default: module.TileMap })),
@@ -16,7 +16,7 @@ import { offlineDatabase, type SyncConflict } from "../offline/database";
 import { memoryChangedEvent, sessionsChangedEvent } from "../offline/events";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { createUlid } from "../security/ulid";
-import { getPrivateMedia, getRegionPoints, getWineMemory } from "../services/api";
+import { getRegionPoints, getWineMemory } from "../services/api";
 import { mergeWines } from "../services/data-rights";
 import { EditWineDialog } from "../components/EditWineDialog";
 import { useSession } from "../session/SessionContext";
@@ -67,39 +67,6 @@ function duplicateKey(wine: WineSummary): string {
     normalize(wine.displayName),
     wine.nonVintage ? "NV" : (wine.vintageYear ?? ""),
   ].join("|");
-}
-
-function PrivateWineImage({
-  mediaId,
-  name,
-  spaceId,
-}: {
-  mediaId: string;
-  name: string;
-  spaceId: string;
-}) {
-  const { user } = useAuth();
-  const [url, setUrl] = useState<string | null>(null);
-  useEffect(() => {
-    if (user === null || !navigator.onLine) return;
-    const controller = new AbortController();
-    let objectUrl: string | null = null;
-    void getPrivateMedia(user, spaceId, mediaId, controller.signal)
-      .then((blob) => {
-        objectUrl = URL.createObjectURL(blob);
-        setUrl(objectUrl);
-      })
-      .catch(() => undefined);
-    return () => {
-      controller.abort();
-      if (objectUrl !== null) URL.revokeObjectURL(objectUrl);
-    };
-  }, [mediaId, spaceId, user]);
-  return url === null ? (
-    <div className="wine-card__placeholder">{name}</div>
-  ) : (
-    <img alt={name} src={url} />
-  );
 }
 
 function ConflictPanel({
@@ -917,9 +884,15 @@ export function WineMemoryPage() {
                     {wine.displayName}
                   </Link>
                 </h2>
-                <p>
-                  {wine.nonVintage ? t("quickLog.nonVintageShort") : (wine.vintageYear ?? "—")}
-                  {wine.region === null ? "" : ` · ${wine.region}`}
+                {/* Vintage, type and region on one line — what a shelf label says. */}
+                <p className="wine-card__meta">
+                  {[
+                    wine.nonVintage ? t("quickLog.nonVintageShort") : wine.vintageYear,
+                    wine.wineType === null ? null : t(`quickLog.wineType.${wine.wineType}`),
+                    wine.region,
+                  ]
+                    .filter((part) => part !== null && part !== undefined && part !== "")
+                    .join(" · ") || "—"}
                 </p>
                 <div className="wine-card__facts">
                   <span>
@@ -927,49 +900,39 @@ export function WineMemoryPage() {
                   </span>
                   <span>{t("memory.noteCount", { count: wine.noteCount })}</span>
                 </div>
-                {/* Where you drank it last. A bottle is remembered by the evening
-                    as much as by the score, and the map link is only useful
-                    looking back — which is here, not in the tasting form. */}
+                {/* Where you drank it last, as plain text. The way out to a map
+                    is on each tasting, when the list is opened. */}
                 {wine.lastVenue === undefined ? null : (
                   <p className="wine-card__venue">
-                    {t("memory.lastVenue", { venue: wine.lastVenue.name })}{" "}
-                    <MapLink
-                      className="text-link"
-                      latitude={wine.lastVenue.latitude}
-                      longitude={wine.lastVenue.longitude}
-                      name={wine.lastVenue.name}
-                    />
+                    {t("memory.lastVenue", { venue: wine.lastVenue.name })}
                   </p>
                 )}
-                {/* One row of actions in one shape. A wine never tasted leads
-                    with the way to start; the rest are quiet. They used to be a
-                    pill, an underlined link and a bordered pill, side by side. */}
+                {/* One row of actions, all in one shape: taste, edit, evidence,
+                    and the tastings behind their count. */}
                 <div className="wine-card__actions">
-                  {wine.noteCount === 0 ? (
-                    <Link
-                      className="action-link action-link--primary"
-                      to={`/wines/${wine.id}/taste`}
-                    >
-                      {t("evidence.firstTasting")}
-                    </Link>
-                  ) : null}
+                  <Link
+                    className="action-link action-link--secondary"
+                    to={`/wines/${wine.id}/taste`}
+                  >
+                    {wine.noteCount === 0
+                      ? t("evidence.firstTasting")
+                      : t("evidence.anotherTasting")}
+                  </Link>
                   {/* A wine logged in a hurry is a wine worth correcting. */}
                   <button
-                    className="action-link action-link--quiet"
+                    className="action-link action-link--secondary"
                     onClick={() => setEditing(wine)}
                     type="button"
                   >
                     {t("memory.editAction")}
                   </button>
                   <Link
-                    className="action-link action-link--quiet"
+                    className="action-link action-link--secondary"
                     to={`/wines/${wine.id}/evidence`}
                   >
                     {t("evidence.openAction")}
                   </Link>
                 </div>
-                {/* The tastings, behind their count, for a wine already tasted:
-                    how many, and each one opened to read or correct. */}
                 {wine.noteCount === 0 ? null : (
                   <TastingHistory
                     compact

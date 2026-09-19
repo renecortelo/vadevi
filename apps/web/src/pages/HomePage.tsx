@@ -24,10 +24,10 @@ export function HomePage() {
 
   return (
     <div className="home-page">
-      <section className="hero">
+      <section className="hero page-heading">
         <p className="eyebrow">{t("phaseEyebrow")}</p>
         <h1>{t("welcomeTitle")}</h1>
-        <p className="hero__lede">{t("welcomeBody")}</p>
+        <p>{t("welcomeBody")}</p>
         <div className="hero__actions">
           <Link className="action-link action-link--primary" to="/log/new">
             {t("quickLogCta")}

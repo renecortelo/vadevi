@@ -20,9 +20,11 @@ export function AboutPage() {
 
   return (
     <section className="about-page">
-      <p className="eyebrow">{t("about.eyebrow")}</p>
-      <h1>{t("about.title")}</h1>
-      <p>{t("about.body")}</p>
+      <header className="page-heading">
+        <p className="eyebrow">{t("about.eyebrow")}</p>
+        <h1>{t("about.title")}</h1>
+        <p>{t("about.body")}</p>
+      </header>
 
       <ul className="about-list">
         {destinations.map((destination) => (
