@@ -48,12 +48,39 @@ const CertsSchema = z.object({
 
 export type AccessConfiguration = Readonly<{ aud: string; teamDomain: string }>;
 
-export function accessConfiguration(bindings: WorkerBindings): AccessConfiguration | null {
+/**
+ * The second door's settings, read three ways: `off` when neither is set —
+ * the public default, and a decision; `on` when both are set and well
+ * formed; `invalid` for anything in between — one of the two, or a value
+ * that cannot be a team or an audience. Invalid used to read as off, so a
+ * door the operator had configured with a typo guarded nothing and said so
+ * to nobody. It now closes the administrator's routes until it is fixed.
+ */
+export type AccessSetup =
+  | { kind: "invalid"; reason: string }
+  | { kind: "off" }
+  | { kind: "on"; configuration: AccessConfiguration };
+
+export function accessSetup(bindings: WorkerBindings): AccessSetup {
   const teamDomain = bindings.ACCESS_TEAM_DOMAIN?.trim() ?? "";
   const aud = bindings.ACCESS_ADMIN_AUD?.trim() ?? "";
-  if (teamDomain.length === 0 || aud.length === 0) return null;
-  if (!/^[a-z0-9][a-z0-9-]{0,62}$/.test(teamDomain) || !/^[a-f0-9]{64}$/.test(aud)) return null;
-  return { aud, teamDomain };
+  if (teamDomain.length === 0 && aud.length === 0) return { kind: "off" };
+  if (teamDomain.length === 0 || aud.length === 0) {
+    return { kind: "invalid", reason: "ACCESS_TEAM_DOMAIN and ACCESS_ADMIN_AUD go together" };
+  }
+  if (!/^[a-z0-9][a-z0-9-]{0,62}$/.test(teamDomain)) {
+    return { kind: "invalid", reason: "ACCESS_TEAM_DOMAIN is not a team name" };
+  }
+  if (!/^[a-f0-9]{64}$/.test(aud)) {
+    return { kind: "invalid", reason: "ACCESS_ADMIN_AUD is not a 64-hex audience tag" };
+  }
+  return { configuration: { aud, teamDomain }, kind: "on" };
+}
+
+/** The second door's configuration when it is on, else null. */
+export function accessConfiguration(bindings: WorkerBindings): AccessConfiguration | null {
+  const setup = accessSetup(bindings);
+  return setup.kind === "on" ? setup.configuration : null;
 }
 
 export class AccessVerificationError extends Error {

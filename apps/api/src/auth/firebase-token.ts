@@ -20,6 +20,7 @@ const FirebaseClaimsSchema = z
     aud: z.string().min(1),
     auth_time: z.number().int().nonnegative(),
     email: z.string().email().max(254).optional(),
+    email_verified: z.boolean().optional(),
     exp: z.number().int().positive(),
     iat: z.number().int().positive(),
     iss: z.string().min(1),
@@ -172,6 +173,7 @@ function validateClaims(
 function toPrincipal(claims: z.infer<typeof FirebaseClaimsSchema>): FirebasePrincipal {
   return {
     authTime: claims.auth_time,
+    emailVerified: claims.email_verified === true,
     firebaseUid: claims.sub,
     ...(claims.email === undefined ? {} : { email: claims.email.toLowerCase() }),
     ...(claims.name === undefined ? {} : { displayName: claims.name }),

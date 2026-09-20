@@ -4,15 +4,18 @@
  * A note logged in one language must be findable from a question asked in
  * another — "molt fresc i mineral" from "vinos minerales" — so notes are matched
  * by meaning, not by shared words. This is the retrieval half of the grounded
- * sommelier: it only ever surfaces the reader's own notes, and every space it
- * may look in is passed in explicitly, so isolation is the caller's to state and
- * the adapter's to enforce.
+ * sommelier: it only ever surfaces the reader's own notes — a co-member's note
+ * in a shared Space is theirs alone, however close in meaning — and every space
+ * it may look in is passed in explicitly, so isolation is the caller's to state
+ * and the adapter's to enforce.
  *
  * The port is deliberately free of any vector-store or embedding detail; the
  * adapter behind it embeds and talks to the index.
  */
 
 export type NoteEmbedding = Readonly<{
+  /** The note's author: the only reader a match may ever be returned to. */
+  authorUserId: string;
   noteId: string;
   spaceId: string;
   text: string;
@@ -20,6 +23,8 @@ export type NoteEmbedding = Readonly<{
 }>;
 
 export type SemanticNoteQuery = Readonly<{
+  /** The reader, as a user id; a match authored by anyone else is never returned. */
+  authorUserId: string;
   limit: number;
   query: string;
   /** The Spaces the reader may see; a match outside them is never returned. */
@@ -35,8 +40,12 @@ export type SemanticNoteMatch = Readonly<{
 }>;
 
 export interface SemanticNotePort {
-  /** Add or replace one note's embedding. Safe to call again on edit. */
-  index(input: NoteEmbedding): Promise<void>;
+  /**
+   * Add or replace one note's embedding. Safe to call again on edit. Resolves
+   * false when nothing was stored — the embedding could not be produced — so
+   * the caller does not record as indexed a note the index never received.
+   */
+  index(input: NoteEmbedding): Promise<boolean>;
   /** Remove notes by id — on deletion, or when a Space is purged. */
   remove(noteIds: readonly string[]): Promise<void>;
   /** The reader's most semantically similar notes, within their Spaces. */

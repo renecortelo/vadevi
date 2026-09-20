@@ -2,6 +2,9 @@ type TokenClaims = {
   aud: string;
   auth_time: number;
   email: string;
+  /** Google always vouches for the address; a test unsets this to play a
+   *  provider that does not. */
+  email_verified: boolean;
   exp: number;
   iat: number;
   iss: string;
@@ -21,6 +24,7 @@ export function emulatorIdToken(
     aud: "demo-vadevi",
     auth_time: nowSeconds - 5,
     email: "phase1@example.test",
+    email_verified: true,
     exp: nowSeconds + 3_600,
     iat: nowSeconds - 5,
     iss: "https://securetoken.google.com/demo-vadevi",

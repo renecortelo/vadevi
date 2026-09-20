@@ -26,7 +26,7 @@ pnpm audit --audit-level high
 | Command                          | Result                                                                                                                                                                         |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `pnpm install --frozen-lockfile` | Reinstalls from the committed lockfile with no production credentials.                                                                                                         |
-| `pnpm validate:env`              | `Environment is valid (local, AI provider: none).`                                                                                                                             |
+| `pnpm validate:env`              | `Settings in the environment and .dev.vars are valid (local, AI provider: none, access: open).`                                                                                |
 | `pnpm check`                     | Formatting, lint, strict typechecks, 109 tests, generated OpenAPI, eight-catalog and pseudo-locale validation, PWA production build, Worker dry-run, bundle budget — all pass. |
 | `pnpm audit --audit-level high`  | `No known vulnerabilities found` (see dependency review below).                                                                                                                |
 
@@ -169,7 +169,20 @@ pnpm test:auth-emulator
 → Script exited successfully (code 0)
 ```
 
-`pnpm audit` now reports **no known vulnerabilities** at any severity.
+`pnpm audit` reported **no known vulnerabilities** at any severity at that
+review.
+
+**2026-09-20 review.** Ten moderate advisories had accrued since. Two were
+real dependencies and are raised: `hono` (`^4.13.5`, resolved `4.13.8`;
+the three advisories concerned features the Worker does not use, and one
+excluded Cloudflare Workers explicitly, but the floor is raised regardless)
+and `vitest` (catalog `^4.1.11`). `qs` and `morgan`, both under
+`firebase-tools`, are patched in a minor and get overrides. Two remain, both
+moderate and development-only under `firebase-tools`: `stream-json`
+(`GHSA-528h-pc64-c93x`, fixed in 3.x) and `csv-parse` (`GHSA-8cw4-87c7-c6xx`,
+fixed in 7.x) are major bumps the emulator has not been tested against and
+wait for `firebase-tools` to move. The Auth Emulator workflow was retested
+after the change with the same result as above.
 
 ### Repository hygiene (AC-062)
 

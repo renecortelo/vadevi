@@ -44,6 +44,14 @@
     "accessDeniedTitle": "Deze Va de Vi is privé.",
     "accessDeniedBody": "Alleen mensen die de beheerder heeft toegelaten kunnen inloggen. Vraag om {{email}} toe te voegen en probeer het opnieuw."
   },
+  "errorBoundary": {
+    "title": "Er is iets misgegaan op dit scherm.",
+    "body": "De rest van Va de Vi werkt; dit scherm liep tegen een fout aan waarvan het niet kon herstellen. Niets van wat je hebt opgeslagen is verloren.",
+    "staleBody": "Dit scherm hoort bij een nieuwere versie van Va de Vi dan de versie die open staat. Herladen brengt de twee samen.",
+    "retry": "Opnieuw proberen",
+    "reload": "Va de Vi herladen",
+    "home": "Terug naar het begin"
+  },
   "space": {
     "switchLabel": "Actieve Ruimte",
     "switchError": "Deze Ruimte kon niet worden geopend."

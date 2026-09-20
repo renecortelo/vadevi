@@ -13,9 +13,16 @@ import type { FirebasePrincipal, WorkerBindings } from "../types";
  * deploys it for themselves is not locked out of their own instance before
  * they have made a list. `allowlist` is set per deployment, in the
  * deployment's own configuration, never in the repository.
+ *
+ * Unset means open; any other spelling — "allowlst", "private", "true" —
+ * means the operator meant to close the door and did not, and is `invalid`:
+ * the door then fails closed for everyone, with a code that says why, rather
+ * than reading a typo as permission for the world.
  */
-export function accessMode(bindings: WorkerBindings): "allowlist" | "open" {
-  return bindings.ACCESS_MODE === "allowlist" ? "allowlist" : "open";
+export function accessMode(bindings: WorkerBindings): "allowlist" | "invalid" | "open" {
+  const mode = bindings.ACCESS_MODE?.trim() ?? "";
+  if (mode === "" || mode === "open") return "open";
+  return mode === "allowlist" ? "allowlist" : "invalid";
 }
 
 export function normalizeEmail(email: string): string {
@@ -32,10 +39,23 @@ export function adminEmails(bindings: WorkerBindings): ReadonlySet<string> {
   );
 }
 
+/**
+ * The e-mail this principal may be authorized by: the one on the token, and
+ * only if the identity provider vouched for it. Google's tokens always do.
+ * A provider that lets someone sign up with an address they do not own —
+ * e-mail and password, say, before the confirmation link is clicked — hands
+ * out tokens with `email_verified: false`, and such a token must never match
+ * an administrator or an entry on the list. That the Firebase project has
+ * only Google enabled today is a setting; this holds whatever the setting.
+ */
+function authorizingEmail(principal: FirebasePrincipal): string | null {
+  if (principal.email === undefined || !principal.emailVerified) return null;
+  return normalizeEmail(principal.email);
+}
+
 export function isAdmin(bindings: WorkerBindings, principal: FirebasePrincipal): boolean {
-  return (
-    principal.email !== undefined && adminEmails(bindings).has(normalizeEmail(principal.email))
-  );
+  const email = authorizingEmail(principal);
+  return email !== null && adminEmails(bindings).has(email);
 }
 
 /**
@@ -43,19 +63,22 @@ export function isAdmin(bindings: WorkerBindings, principal: FirebasePrincipal):
  *
  * An administrator always may — the list must never be able to lock out the
  * person who keeps it. Anyone else needs an e-mail on the list; a token that
- * carries no e-mail at all cannot be matched and is refused.
+ * carries no e-mail, or an unverified one, cannot be matched and is refused.
  */
 export async function isAllowed(
   database: D1Database,
   bindings: WorkerBindings,
   principal: FirebasePrincipal,
 ): Promise<boolean> {
-  if (accessMode(bindings) === "open") return true;
-  if (principal.email === undefined) return false;
+  const mode = accessMode(bindings);
+  if (mode === "open") return true;
+  if (mode === "invalid") return false;
+  const email = authorizingEmail(principal);
+  if (email === null) return false;
   if (isAdmin(bindings, principal)) return true;
   const row = await database
     .prepare(`SELECT 1 AS allowed FROM allowed_accounts WHERE email_normalized = ?`)
-    .bind(normalizeEmail(principal.email))
+    .bind(email)
     .first<{ allowed: number }>();
   return row !== null;
 }

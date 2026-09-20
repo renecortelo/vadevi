@@ -161,14 +161,9 @@ describe("the administrator's routes behind Cloudflare Access", () => {
     ).toBe(true);
   });
 
-  it("does nothing until both settings are present", async () => {
-    for (const partial of [
-      {},
-      { ACCESS_TEAM_DOMAIN: teamDomain },
-      { ACCESS_ADMIN_AUD: aud },
-      { ACCESS_ADMIN_AUD: "short", ACCESS_TEAM_DOMAIN: teamDomain },
-    ]) {
-      const response = await createApi().request(
+  it("is off with neither setting, and closed — not off — with half of them or a bad one", async () => {
+    const ask = (partial: Record<string, string>) =>
+      createApi().request(
         "/api/v1/admin/allowed-accounts",
         {
           headers: {
@@ -177,7 +172,40 @@ describe("the administrator's routes behind Cloudflare Access", () => {
         },
         { ...env, ACCESS_MODE: "allowlist", ADMIN_EMAILS: admin.email, ...partial },
       );
-      expect(response.status, JSON.stringify(partial)).toBe(200);
+    // Neither: the public default, a decision. The routes rest on the allowlist.
+    expect((await ask({})).status).toBe(200);
+    // One of the two, or a value that cannot be a team or an audience: the
+    // operator meant to have a second door. Until it is whole, nobody passes —
+    // and the answer names the setting, so it is found rather than lived with.
+    for (const partial of [
+      { ACCESS_TEAM_DOMAIN: teamDomain },
+      { ACCESS_ADMIN_AUD: aud },
+      { ACCESS_ADMIN_AUD: "short", ACCESS_TEAM_DOMAIN: teamDomain },
+      { ACCESS_ADMIN_AUD: aud, ACCESS_TEAM_DOMAIN: "Not A Team" },
+    ]) {
+      const response = await ask(partial);
+      expect(response.status, JSON.stringify(partial)).toBe(503);
+      expect(ErrorEnvelopeSchema.parse(await response.json()).error.code).toBe("MISCONFIGURED");
     }
+    // The rest of the application is untouched either way.
+    const bootstrap = await createApi().request(
+      "/api/v1/me/bootstrap",
+      {
+        headers: {
+          Authorization: `Bearer ${emulatorIdToken({ email: admin.email, name: "Keeper", sub: admin.sub })}`,
+        },
+      },
+      {
+        ...env,
+        ACCESS_MODE: "allowlist",
+        ACCESS_TEAM_DOMAIN: teamDomain,
+        ADMIN_EMAILS: admin.email,
+      },
+    );
+    expect(bootstrap.status).toBe(200);
+    expect(
+      (await bootstrap.json<{ data: { features: { accessSecondFactor: boolean } } }>()).data
+        .features.accessSecondFactor,
+    ).toBe(false);
   });
 });

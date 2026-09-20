@@ -2,6 +2,7 @@ import type { Fact } from "@vadevi/contracts";
 import type { ResearchLocale, TranslationPort } from "@vadevi/domain";
 
 import { translationBatches } from "../adapters/translation";
+import { jsonList } from "../services/sql-list";
 
 /**
  * The predicates whose value is prose in some language, as opposed to a name, a
@@ -66,13 +67,13 @@ export async function localizeFacts(
   if (candidates.length === 0) return plain;
 
   const translated = new Map<string, { title: string | null; value: string }>();
-  const placeholders = candidates.map(() => "?").join(", ");
+  const wanted = jsonList(candidates.map(({ fact }) => fact.id));
   const stored = await database
     .prepare(
       `SELECT fact_id, value_json, source_title FROM fact_translations
-      WHERE locale = ? AND fact_id IN (${placeholders})`,
+      WHERE locale = ? AND fact_id IN ${wanted.sql}`,
     )
-    .bind(options.locale, ...candidates.map(({ fact }) => fact.id))
+    .bind(options.locale, wanted.bind)
     .all<TranslationRow>();
   for (const row of stored.results) {
     try {

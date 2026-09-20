@@ -22,6 +22,7 @@ import type { FirebasePrincipal } from "../types";
 import { resolveAppellationFacts } from "./eambrosia";
 import { TRANSLATED_FACT_PREDICATES } from "./fact-translations";
 import { normalizeWineText } from "./wine-memory";
+import { jsonList } from "../services/sql-list";
 
 /**
  * Whether a candidate entity's label is close enough to the wine's own text to
@@ -804,17 +805,16 @@ async function persistCompletedJob(
     ...new Set(options.proposals.map((stored) => stored.proposal.researchMethod)),
   ];
   for (const method of methodsThisRun) {
-    const keptIds = [...persistedFactIds];
-    const placeholders = keptIds.map(() => "?").join(", ");
+    const kept = jsonList([...persistedFactIds]);
     commands.push(
       database
         .prepare(
           `UPDATE facts SET status = 'retired', version = version + 1, updated_at = ?
           WHERE space_id = ? AND subject_type = 'wine' AND subject_id = ?
             AND research_method = ? AND status = 'proposed' AND deleted_at IS NULL
-            ${keptIds.length === 0 ? "" : `AND id NOT IN (${placeholders})`}`,
+            AND id NOT IN ${kept.sql}`,
         )
-        .bind(now, options.spaceId, options.wineId, method, ...keptIds),
+        .bind(now, options.spaceId, options.wineId, method, kept.bind),
     );
   }
   await database.batch(commands);
@@ -1117,12 +1117,13 @@ async function comparisonTastingLines(
   }
   if (kept.length === 0) return [];
 
+  const wanted = jsonList(kept.map((row) => row.id));
   const descriptorRows = await database
     .prepare(
       `SELECT tasting_note_id, phase, label_snapshot FROM tasting_descriptors
-        WHERE tasting_note_id IN (${kept.map(() => "?").join(", ")}) ORDER BY phase`,
+        WHERE tasting_note_id IN ${wanted.sql} ORDER BY phase`,
     )
-    .bind(...kept.map((row) => row.id))
+    .bind(wanted.bind)
     .all<{ label_snapshot: string; phase: string; tasting_note_id: string }>();
   const descriptorsByNote = new Map<string, { nose: string[]; palate: string[] }>();
   for (const row of descriptorRows.results) {

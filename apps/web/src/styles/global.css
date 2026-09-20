@@ -1499,6 +1499,16 @@ p {
   margin-block-end: 0;
 }
 
+/* The screen a caught error is replaced with: the explanation, then the
+   ways out, with room between them. */
+.error-fallback h1:focus-visible {
+  outline: none;
+}
+
+.error-fallback .hero__actions {
+  margin-block-start: var(--space-4);
+}
+
 .review-dialog {
   align-items: center;
   background: rgb(var(--color-ink-rgb) / 42%);

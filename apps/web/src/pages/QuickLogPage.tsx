@@ -24,6 +24,7 @@ import { createIdempotencyKey } from "../security/idempotency";
 import { createUlid } from "../security/ulid";
 import { listTastingSessions } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
+import { fromLocalDateTimeInput, toLocalDateTimeInput } from "../lib/local-date-time";
 
 type SessionSummary = TastingSessionResponse["data"];
 
@@ -56,12 +57,6 @@ function newDraft(userId: string, spaceId: string): QuickLogDraft {
       vintageYear: null,
     },
   };
-}
-
-function localDateTime(iso: string): string {
-  const date = new Date(iso);
-  const local = new Date(date.getTime() - date.getTimezoneOffset() * 60_000);
-  return local.toISOString().slice(0, 16);
 }
 
 export function QuickLogPage() {
@@ -579,11 +574,13 @@ export function QuickLogPage() {
                 <label>
                   <span>{t("quickLog.tastedAt")}</span>
                   <input
-                    onChange={(event) =>
-                      updateNote("tastedAt", new Date(event.target.value).toISOString())
-                    }
+                    onChange={(event) => {
+                      // A cleared or half-typed field keeps the date it had.
+                      const iso = fromLocalDateTimeInput(event.target.value);
+                      if (iso !== null) updateNote("tastedAt", iso);
+                    }}
                     type="datetime-local"
-                    value={localDateTime(draft.notePayload.tastedAt)}
+                    value={toLocalDateTimeInput(draft.notePayload.tastedAt)}
                   />
                 </label>
                 <label>

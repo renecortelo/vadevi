@@ -12,11 +12,7 @@ import { useWineChoice } from "../components/use-wine-choice";
 import { useWineSearch } from "../components/use-wine-search";
 import { getWineMemory } from "../services/api";
 import { useSession } from "../session/SessionContext";
-
-function localDateTime(date: Date): string {
-  const local = new Date(date.getTime() - date.getTimezoneOffset() * 60_000);
-  return local.toISOString().slice(0, 16);
-}
+import { fromLocalDateTimeInput, toLocalDateTimeInput } from "../lib/local-date-time";
 
 export function NewSessionPage() {
   const { t } = useTranslation();
@@ -33,7 +29,7 @@ export function NewSessionPage() {
   const [venuePoint, setVenuePoint] = useState<{ latitude: number; longitude: number } | null>(
     null,
   );
-  const [startsAt, setStartsAt] = useState(() => localDateTime(new Date()));
+  const [startsAt, setStartsAt] = useState(() => toLocalDateTimeInput(new Date().toISOString()));
   const [status, setStatus] = useState<"active" | "draft">("active");
   const [wines, setWines] = useState<WineSummary[]>([]);
   const choice = useWineChoice<WineSummary>();
@@ -60,6 +56,10 @@ export function NewSessionPage() {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (user === null || name.trim().length === 0) return;
+    // The field is required, but a half-typed date passes the browser and
+    // used to throw out of this handler; it is simply not a date yet.
+    const startsAtIso = fromLocalDateTimeInput(startsAt);
+    if (startsAtIso === null) return;
     setError(false);
     try {
       // From the choice itself, not from the visible list: searching replaces
@@ -70,7 +70,7 @@ export function NewSessionPage() {
         request: {
           ...(description.trim().length === 0 ? {} : { description: description.trim() }),
           name: name.trim(),
-          startsAt: new Date(startsAt).toISOString(),
+          startsAt: startsAtIso,
           status,
           ...(venue.trim().length === 0 ? {} : { venueText: venue.trim() }),
           ...(venuePoint === null

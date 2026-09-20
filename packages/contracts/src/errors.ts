@@ -6,6 +6,7 @@ export const ErrorCodeSchema = z
     "AUTH_INVALID",
     "ACCESS_DENIED",
     "SECOND_FACTOR_REQUIRED",
+    "MISCONFIGURED",
     "FORBIDDEN",
     "NOT_FOUND",
     "VALIDATION_FAILED",

@@ -25,18 +25,13 @@ import { deepDraftId, deepNoteToRequest, queueDeepTasting } from "../offline/pha
 import { createUlid } from "../security/ulid";
 import { getDeepTastingNote } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
+import { fromLocalDateTimeInput, toLocalDateTimeInput } from "../lib/local-date-time";
 
 type TastingContext = z.infer<typeof TastingContextSchema>;
 type Descriptor = z.infer<typeof TastingDescriptorInputSchema>;
 type Step = "appearance" | "nose" | "palate" | "context" | "conclusion";
 
 const steps: Step[] = ["appearance", "nose", "palate", "context", "conclusion"];
-
-function localDateTime(iso: string): string {
-  const date = new Date(iso);
-  const local = new Date(date.getTime() - date.getTimezoneOffset() * 60_000);
-  return local.toISOString().slice(0, 16);
-}
 
 function newDraft(options: {
   noteId: string;
@@ -1071,9 +1066,13 @@ export function DeepTastingPage() {
           <label>
             <span>{t("quickLog.tastedAt")}</span>
             <input
-              onChange={(event) => update("tastedAt", new Date(event.target.value).toISOString())}
+              onChange={(event) => {
+                // A cleared or half-typed field keeps the date it had.
+                const iso = fromLocalDateTimeInput(event.target.value);
+                if (iso !== null) update("tastedAt", iso);
+              }}
               type="datetime-local"
-              value={localDateTime(draft.payload.tastedAt)}
+              value={toLocalDateTimeInput(draft.payload.tastedAt)}
             />
           </label>
           <label>

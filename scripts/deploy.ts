@@ -1,6 +1,9 @@
 import { spawnSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 
+import { validateEnvironment, wranglerVars } from "./environment";
+import { parseJsonc } from "./jsonc";
+
 /**
  * Deploy in the one order that is safe.
  *
@@ -194,6 +197,23 @@ const migrationCount = readdirSync("migrations").filter((file) => file.endsWith(
 console.log(
   `Deploying with ${config} → D1 "${database}" (${migrationCount} migrations in the repository).`,
 );
+
+// 0. The settings the Worker will ship with, before anything remote is touched.
+//    A typo in ACCESS_MODE used to reach the Worker and mean "open"; half of the
+//    second door meant "no door". The same rules `pnpm validate:env` applies to
+//    a developer's .dev.vars now apply to the vars this file deploys.
+{
+  const settings = validateEnvironment(wranglerVars(parseJsonc(readFileSync(config, "utf8"))));
+  if (!settings.ok) {
+    console.error(
+      `\n✘ The vars in ${config} are not a valid deployment. Nothing was deployed.\n${settings.message}`,
+    );
+    process.exit(1);
+  }
+  console.log(
+    `  Settings valid: ${settings.value.APP_ENV}, access ${settings.value.ACCESS_MODE}, AI ${settings.value.AI_PROVIDER}.`,
+  );
+}
 
 // 1. The database first, always — but skip the apply when there is provably
 //    nothing to apply, so a code-only deploy is not held hostage by the flaky

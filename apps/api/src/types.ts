@@ -3,6 +3,10 @@ export type FirebasePrincipal = Readonly<{
   avatarUrl?: string;
   displayName?: string;
   email?: string;
+  /** Whether the identity provider vouched for the e-mail (`email_verified`).
+   *  Authorization by e-mail — the allowlist, the administrators — requires
+   *  it; an unverified address is nobody's to act on. */
+  emailVerified: boolean;
   firebaseUid: string;
 }>;
 

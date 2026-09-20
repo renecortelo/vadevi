@@ -549,6 +549,7 @@ describe("Vicenç deterministic read path", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -585,6 +586,7 @@ describe("Vicenç deterministic read path", () => {
     await createWine(ownerToken, spaceId, "Capped Rioja Red", "red");
     const principal = {
       authTime: Math.floor(Date.now() / 1_000),
+      emailVerified: true,
       displayName: "Assistant Owner",
       email: "assistant-owner@example.test",
       firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -922,6 +924,7 @@ describe("Vicenç deterministic read path", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -935,7 +938,7 @@ describe("Vicenç deterministic read path", () => {
       },
       requestId: randomOpaqueToken(),
       semanticNotes: {
-        index: async () => {},
+        index: async () => true,
         remove: async () => {},
         search: async () => [{ noteId, score: 0.92, spaceId, wineId: wine.id }],
       },
@@ -945,6 +948,76 @@ describe("Vicenç deterministic read path", () => {
       (result: AssistantSearchResult) => result.wine.id,
     );
     expect(ids).toContain(wine.id);
+  });
+
+  it("never reads a co-member's note to the reader, however the index answers", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    const wine = await createWine(ownerToken, spaceId, "Co-member Noted Zzz");
+    const now = new Date().toISOString();
+    const peerId = randomOpaqueToken();
+    const peerNoteId = randomOpaqueToken();
+    const sentinel = "PEER-PROSE-SENTINEL-4d2c";
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO users (
+          id, firebase_uid, email_normalized, display_name, avatar_url, preferred_locale,
+          active_space_id, created_at, updated_at, deleted_at
+        ) VALUES (?, ?, ?, 'Peer', NULL, 'es', NULL, ?, ?, NULL)`,
+      ).bind(peerId, `firebase-emulator-peer-${peerId}`, `peer-${peerId}@example.test`, now, now),
+      env.DB.prepare(
+        `INSERT INTO space_memberships (
+          space_id, user_id, role, status, joined_at, removed_at, version, created_at, updated_at
+        ) VALUES (?, ?, 'member', 'active', ?, NULL, 1, ?, ?)`,
+      ).bind(spaceId, peerId, now, now, now),
+      env.DB.prepare(
+        `INSERT INTO tasting_notes
+          (id, space_id, wine_id, author_user_id, mode, state, tasted_at, comment, version, created_at, updated_at)
+          VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, ?, 1, ?, ?)`,
+      ).bind(peerNoteId, spaceId, wine.id, peerId, now, sentinel, now, now),
+    ]);
+
+    // The port hands back the peer's note — as an index without author
+    // metadata would, or a compromised one. The database is the authority.
+    const queries: string[] = [];
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "none",
+      externalResearch: false,
+      language: null,
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "es",
+        message: "vinos minerales",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: {
+        index: async () => true,
+        remove: async () => {},
+        search: async (input) => {
+          queries.push(input.authorUserId);
+          return [{ noteId: peerNoteId, score: 0.97, spaceId, wineId: wine.id }];
+        },
+      },
+      spaceId,
+    });
+    // The port was asked for the reader's own notes, by the reader's id…
+    expect(queries).toEqual([owner.data.user.id]);
+    // …and whatever it answered, the peer's words and the wine it would have
+    // surfaced by them are absent from the whole turn.
+    expect(JSON.stringify(response)).not.toContain(sentinel);
+    expect(
+      (response?.data.results ?? []).map((result: AssistantSearchResult) => result.wine.id),
+    ).not.toContain(wine.id);
   });
 
   it("ranks the reader's own wines for a dish using the pairing provider", async () => {
@@ -1000,6 +1073,7 @@ describe("Vicenç deterministic read path", () => {
       pairing,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -1066,6 +1140,7 @@ describe("Vicenç deterministic read path", () => {
       pairing,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -1158,6 +1233,7 @@ describe("Vicenç deterministic read path", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -1228,6 +1304,7 @@ describe("Vicenç deterministic read path", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -1243,7 +1320,7 @@ describe("Vicenç deterministic read path", () => {
       requestId: randomOpaqueToken(),
       // The semantic search offers the OTHER wine's note.
       semanticNotes: {
-        index: async () => {},
+        index: async () => true,
         remove: async () => {},
         search: async () => [{ noteId: otherNoteId, score: 0.9, spaceId, wineId: other.id }],
       },
@@ -1290,6 +1367,7 @@ describe("Vicenç deterministic read path", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -1339,6 +1417,7 @@ describe("Vicenç deterministic read path", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -1354,7 +1433,7 @@ describe("Vicenç deterministic read path", () => {
       },
       requestId: randomOpaqueToken(),
       semanticNotes: {
-        index: async () => {},
+        index: async () => true,
         remove: async () => {},
         search: async () => [{ noteId: offNoteId, score: 0.9, spaceId, wineId: offTopic.id }],
       },
@@ -1428,6 +1507,7 @@ describe("Vicenç deterministic read path", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
@@ -1479,6 +1559,7 @@ describe("Vicenç deterministic read path", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Assistant Owner",
         email: "assistant-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",

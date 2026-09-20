@@ -44,6 +44,14 @@
     "accessDeniedTitle": "This Va de Vi is private.",
     "accessDeniedBody": "Only the people its administrator has listed can sign in. Ask them to add {{email}}, then try again."
   },
+  "errorBoundary": {
+    "title": "Something went wrong on this screen.",
+    "body": "The rest of Va de Vi is fine; this screen hit an error it could not recover from. Nothing you saved is lost.",
+    "staleBody": "This screen belongs to a newer version of Va de Vi than the one running. Reloading brings the two together.",
+    "retry": "Try again",
+    "reload": "Reload Va de Vi",
+    "home": "Back to start"
+  },
   "space": {
     "switchLabel": "Active Space",
     "switchError": "That Space could not be opened."

@@ -372,6 +372,43 @@ maintainer's deployment has.
         answers 302 to `cloudflareaccess.com`, while `/api/v1/me/bootstrap`
         still answers 401 — the door is on the admin routes only.
 
+## M. After the 2026-09-20 review
+
+The first wave of fixes from the external review. Each has a regression
+test; these are the parts worth a pair of eyes and a real deployment.
+
+91. [ ] **A co-member's prose stays theirs, in export.** In a shared Space, a
+        second member logs a quick note on one of your wines with a comment and
+        a "with" text. As the owner, **Data and privacy → Export → JSON**: their
+        note is there with its score, and `comment` and `foodText` are `null`.
+        The CSV of tastings likewise. Their own export has their words.
+92. [ ] **…and in Vicenç.** With Vectorize on (the maintainer's deployment),
+        ask Vicenç for something only the second member's comment says. It does
+        not surface their note as "your note", nor the wine by it. Your own
+        note, asked the same way, is found. (After the deploy, the maintainer
+        runs the one-off re-index in `docs/self-hosting.md`; until the next
+        scheduled runs have re-embedded, semantic matches are simply fewer.)
+93. [ ] **Merging two wines that both list grapes.** Two records of the same
+        wine, each with grapes — one grape in common, one not. Merge them: it
+        succeeds, the survivor lists the union in order without the duplicate,
+        an event that poured the loser now shows the survivor, and the loser
+        is gone from the list.
+94. [ ] **A page of 100.** With `?limit=100` on the wines request (or a cellar
+        that large), the list answers. Export → photographs with a long
+        selection answers too.
+95. [ ] **Sort by score, page through.** With unscored wines in the cellar,
+        page through the score sort to the end: every wine appears once, the
+        unscored ones last.
+96. [ ] **A screen that fails is not a white page.** On a tasting form, clear
+        the date field completely: the form keeps the previous date and
+        nothing breaks. (The boundary itself: open the app in a tab, deploy
+        a new bundle, then navigate to a screen not yet visited — the
+        explanation appears with _Reload Va de Vi_, not a blank page.)
+97. [ ] **A misspelled door fails closed.** Not to try on the live deployment:
+        `pnpm validate:env --config wrangler.preview.jsonc` passes as it is,
+        and with `ACCESS_MODE` misspelled in a copy of the file it refuses,
+        as does `pnpm deploy:preview --config <copy>` before touching anything.
+
 ## Recording results
 
 For each failure note: what you did, what happened, what you expected, and

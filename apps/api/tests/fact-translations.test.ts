@@ -28,6 +28,7 @@ const ownerToken = emulatorIdToken({
 });
 const principal: FirebasePrincipal = {
   authTime: Math.floor(Date.now() / 1_000),
+  emailVerified: true,
   displayName: "Translations Owner",
   email: "fact-translations@example.test",
   firebaseUid: ownerUid,

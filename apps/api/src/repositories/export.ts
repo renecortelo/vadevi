@@ -2,6 +2,7 @@ import { type ExportDocument, ExportSchemaVersion, type ExportScope } from "@vad
 
 import { createZipArchive } from "../services/zip";
 import type { FirebasePrincipal } from "../types";
+import { jsonList } from "../services/sql-list";
 
 type ActorRow = {
   role: "admin" | "member" | "owner";
@@ -42,6 +43,16 @@ export async function resolveExportActor(
 const tastingVisibility = `note.deleted_at IS NULL
   AND (note.author_user_id = ? OR (? = 'space' AND note.state = 'submitted'))`;
 
+/**
+ * A submitted note's structured fields — score, verdicts, descriptors — are the
+ * Space's, and a Space export carries them for every member. Its prose is the
+ * author's alone: the comment and the food text are what privacy.md promises
+ * never reach another member, and an owner exporting the Space is another
+ * member. So the prose is projected away in the query, by author, before any
+ * serializer — JSON or CSV — can see it. `?` is the exporting member's id.
+ */
+const authorOnly = (column: string) => `CASE WHEN note.author_user_id = ? THEN ${column} END`;
+
 export async function buildExportDocument(
   database: D1Database,
   options: { actor: ActorRow; scope: ExportScope; spaceId: string },
@@ -78,14 +89,16 @@ export async function buildExportDocument(
     .prepare(
       `SELECT note.id, note.wine_id, note.author_user_id, note.mode, note.state,
         note.tasted_at, note.score_100, note.sentiment, note.would_drink_again,
-        note.would_buy, note.comment, context.food_text
+        note.would_buy,
+        ${authorOnly("note.comment")} AS comment,
+        ${authorOnly("context.food_text")} AS food_text
       FROM tasting_notes note
       LEFT JOIN tasting_contexts context
         ON context.tasting_note_id = note.id AND context.space_id = note.space_id
       WHERE note.space_id = ? AND ${tastingVisibility}
       ORDER BY note.tasted_at, note.id`,
     )
-    .bind(spaceId, actor.user_id, scope)
+    .bind(actor.user_id, actor.user_id, spaceId, actor.user_id, scope)
     .all<{
       author_user_id: string;
       comment: string | null;
@@ -470,16 +483,16 @@ export async function buildMediaArchive(
   options: { actor: ActorRow; mediaIds: readonly string[]; scope: ExportScope; spaceId: string },
 ): Promise<{ archive: Uint8Array; included: string[] }> {
   const ownOnly = options.scope === "own" ? 1 : 0;
-  const placeholders = options.mediaIds.map(() => "?").join(", ");
+  const wanted = jsonList(options.mediaIds);
   const rows = await database
     .prepare(
       `SELECT id, r2_key, mime_type FROM media_assets
       WHERE space_id = ? AND processing_status = 'ready' AND deleted_at IS NULL
         AND (? = 0 OR owner_user_id = ?)
-        AND id IN (${placeholders})
+        AND id IN ${wanted.sql}
       ORDER BY id`,
     )
-    .bind(options.spaceId, ownOnly, options.actor.user_id, ...options.mediaIds)
+    .bind(options.spaceId, ownOnly, options.actor.user_id, wanted.bind)
     .all<{ id: string; mime_type: string; r2_key: string }>();
 
   const entries: { bytes: Uint8Array; name: string }[] = [];

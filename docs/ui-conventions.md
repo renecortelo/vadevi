@@ -76,6 +76,19 @@ of its own, five step tabs scroll sideways, the view switcher wraps three to
 a row, and a primary submit is full width; on a laptop the same submit is a
 button, not a banner.
 
+## Failure
+
+A screen that throws is replaced, not the app: every deferred screen sits in
+an `ErrorBoundary` inside the shell, and one more wraps the whole tree.
+`ErrorFallback` names what happened in the reader's language, moves focus
+to its heading, and offers "Try again", "Reload" and — inside the shell —
+"Back to start"; a chunk the deploy replaced under an open tab is recognised
+and offered only the reload that cures it. The error's text goes to the
+console and nowhere else. Form fields never throw on their way to the
+record: a `datetime-local` field goes through `lib/local-date-time.ts`, which
+answers null for a cleared or half-typed value, and the field keeps what it
+had.
+
 ## Reviewing
 
 `UX_SHOTS=1 pnpm exec playwright test e2e/ux-shots.spec.ts --project=chromium-desktop`

@@ -15,6 +15,7 @@ import { ulid } from "ulid";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { grapesFromJson } from "./wine-memory";
+import { jsonList } from "../services/sql-list";
 
 type CommandResult<T> =
   | { kind: "conflict"; current?: T }
@@ -516,13 +517,13 @@ export async function addSessionWines(
       ),
     ),
   ];
-  const winePlaceholders = requestedWineIds.map(() => "?").join(", ");
+  const requested = jsonList(requestedWineIds);
   const availableWines = await database
     .prepare(
       `SELECT COUNT(*) AS count FROM wine_records
-      WHERE space_id = ? AND deleted_at IS NULL AND id IN (${winePlaceholders})`,
+      WHERE space_id = ? AND deleted_at IS NULL AND id IN ${requested.sql}`,
     )
-    .bind(options.spaceId, ...requestedWineIds)
+    .bind(options.spaceId, requested.bind)
     .first<{ count: number }>();
   if (availableWines?.count !== requestedWineIds.length) return { kind: "unavailable" };
   const commands: D1PreparedStatement[] = [

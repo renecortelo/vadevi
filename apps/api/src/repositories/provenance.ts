@@ -14,6 +14,7 @@ import { ulid } from "ulid";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { localizeFacts } from "./fact-translations";
+import { jsonList } from "../services/sql-list";
 
 type CommandResult<T> =
   | { kind: "conflict" }
@@ -298,7 +299,7 @@ async function citationsByFactIds(
 ): Promise<Map<string, Fact["citations"]>> {
   const byFact = new Map<string, Fact["citations"]>();
   if (factIds.length === 0) return byFact;
-  const placeholders = factIds.map(() => "?").join(", ");
+  const facts = jsonList(factIds);
   const rows = await database
     .prepare(
       `SELECT citation.fact_id, citation.locator, citation.support_strength,
@@ -308,10 +309,10 @@ async function citationsByFactIds(
         source.created_at, source.updated_at
       FROM fact_citations citation
       JOIN sources source ON source.id = citation.source_id AND source.space_id = ?
-      WHERE citation.fact_id IN (${placeholders})
+      WHERE citation.fact_id IN ${facts.sql}
       ORDER BY citation.fact_id, source.publisher, source.title, source.id`,
     )
-    .bind(spaceId, ...factIds)
+    .bind(spaceId, facts.bind)
     .all<CitationRow>();
   for (const row of rows.results) {
     const items = byFact.get(row.fact_id) ?? [];
@@ -446,13 +447,13 @@ export async function createWineFact(
     (citation: CreateWineFactRequest["citations"][number]) => citation.sourceId,
   );
   if (sourceIds.length > 0) {
-    const placeholders = sourceIds.map(() => "?").join(", ");
+    const wanted = jsonList(sourceIds);
     const sources = await database
       .prepare(
         `SELECT COUNT(*) AS count FROM sources
-        WHERE space_id = ? AND id IN (${placeholders})`,
+        WHERE space_id = ? AND id IN ${wanted.sql}`,
       )
-      .bind(options.spaceId, ...sourceIds)
+      .bind(options.spaceId, wanted.bind)
       .first<{ count: number }>();
     if (sources?.count !== sourceIds.length) return { kind: "unavailable" };
   }

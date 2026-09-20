@@ -4,8 +4,8 @@ import type { MiddlewareHandler } from "hono";
 import { normalizeEmail } from "../access/allowlist";
 import {
   AccessVerificationError,
-  accessConfiguration,
   accessJwtHeader,
+  accessSetup,
   verifyAccessJwt,
 } from "../access/cloudflare-access";
 import type { ApiEnvironment } from "../types";
@@ -21,11 +21,26 @@ import type { ApiEnvironment } from "../types";
  * act on: it sends the browser through the Access login and back.
  */
 export const adminSecondFactor: MiddlewareHandler<ApiEnvironment> = async (context, next) => {
-  const configuration = accessConfiguration(context.env);
-  if (configuration === null) {
+  const setup = accessSetup(context.env);
+  if (setup.kind === "off") {
     await next();
     return;
   }
+  if (setup.kind === "invalid") {
+    // Half a door, or a malformed one: the operator meant to have a second
+    // factor here. Until the settings are whole, nobody passes.
+    return context.json(
+      ErrorEnvelopeSchema.parse({
+        error: {
+          code: "MISCONFIGURED",
+          message: `The administrator's second factor is misconfigured: ${setup.reason}.`,
+          requestId: context.get("requestId"),
+        },
+      }),
+      503,
+    );
+  }
+  const { configuration } = setup;
   const refuse = () =>
     context.json(
       ErrorEnvelopeSchema.parse({

@@ -2,7 +2,7 @@ import { BootstrapResponseSchema, DeletionJobResponseSchema } from "@vadevi/cont
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
-import { spaceScopedTables } from "../src/repositories/deletion";
+import { purgeSpace, spaceScopedTables } from "../src/repositories/deletion";
 import { randomOpaqueToken } from "../src/security/opaque-token";
 import worker from "../src/worker";
 import { emulatorIdToken } from "./fixtures/firebase-token";
@@ -144,6 +144,80 @@ describe("the scheduled handler purges (AC-064)", () => {
       .bind(job.id)
       .first<{ state: string }>();
     expect(completed?.state).toBe("completed");
+  });
+
+  it("tells the note index which vectors to forget before their rows go", async () => {
+    const token = emulatorIdToken({
+      email: "index-owner@example.test",
+      name: "Index Owner",
+      sub: "firebase-emulator-user-index-owner",
+    });
+    const me = await bootstrap(token);
+    const created = await SELF.fetch("https://vadevi.test/api/v1/spaces", {
+      body: JSON.stringify({ defaultLocale: "en", name: "Indexed Space", type: "group" }),
+      headers: mutate(token),
+      method: "POST",
+    });
+    const spaceId = (await created.json<{ data: { space: { id: string } } }>()).data.space.id;
+    const wine = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/wines`, {
+      body: JSON.stringify({
+        displayName: "Indexed Wine",
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Index Producer",
+        vintageYear: 2020,
+        wineType: "red",
+      }),
+      headers: mutate(token),
+      method: "POST",
+    });
+    const wineId = (await wine.json<{ data: { wine: { id: string } } }>()).data.wine.id;
+    const now = "2026-08-14T00:00:00.000Z";
+    // One note the index holds, one it never received.
+    const embeddedId = randomOpaqueToken();
+    const pendingId = randomOpaqueToken();
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO tasting_notes
+          (id, space_id, wine_id, author_user_id, mode, state, tasted_at, comment, embedded_at, version, created_at, updated_at)
+          VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 'indexed', ?, 1, ?, ?)`,
+      ).bind(embeddedId, spaceId, wineId, me.data.user.id, now, now, now, now),
+      env.DB.prepare(
+        `INSERT INTO tasting_notes
+          (id, space_id, wine_id, author_user_id, mode, state, tasted_at, comment, embedded_at, version, created_at, updated_at)
+          VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 'pending', NULL, 1, ?, ?)`,
+      ).bind(pendingId, spaceId, wineId, me.data.user.id, now, now, now),
+    ]);
+
+    const forgotten: string[] = [];
+    const port = {
+      index: async () => true,
+      remove: async (ids: readonly string[]) => {
+        forgotten.push(...ids);
+      },
+      search: async () => [],
+    };
+    // An index that cannot be told stops the purge: the rows stay, the job retries.
+    const refusing = {
+      ...port,
+      remove: async () => {
+        throw new Error("index unavailable");
+      },
+    };
+    await expect(purgeSpace(env.DB, env.MEDIA, spaceId, refusing)).rejects.toThrow(/unavailable/);
+    const stillThere = await env.DB.prepare(
+      `SELECT COUNT(*) AS total FROM tasting_notes WHERE space_id = ?`,
+    )
+      .bind(spaceId)
+      .first<{ total: number }>();
+    expect(stillThere?.total).toBe(2);
+
+    await purgeSpace(env.DB, env.MEDIA, spaceId, port);
+    expect(forgotten).toEqual([embeddedId]);
+    const gone = await env.DB.prepare(`SELECT COUNT(*) AS total FROM spaces WHERE id = ?`)
+      .bind(spaceId)
+      .first<{ total: number }>();
+    expect(gone?.total).toBe(0);
   });
 
   it("purges every table that carries a space_id", async () => {

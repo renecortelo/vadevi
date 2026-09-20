@@ -24,6 +24,7 @@ function fakePort() {
     port: {
       index: async (input: NoteEmbedding) => {
         indexed.push(input);
+        return true;
       },
       remove: async () => {},
       search: async (): Promise<SemanticNoteMatch[]> => [],
@@ -31,7 +32,9 @@ function fakePort() {
   };
 }
 
-async function seedNote(comment: string | null): Promise<{ id: string; spaceId: string }> {
+async function seedNote(
+  comment: string | null,
+): Promise<{ authorUserId: string; id: string; spaceId: string }> {
   const bootstrap = BootstrapResponseSchema.parse(
     await (
       await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
@@ -69,7 +72,7 @@ async function seedNote(comment: string | null): Promise<{ id: string; spaceId: 
   )
     .bind(noteId, spaceId, wine.id, bootstrap.data.user.id, now, comment, now, now)
     .run();
-  return { id: noteId, spaceId };
+  return { authorUserId: bootstrap.data.user.id, id: noteId, spaceId };
 }
 
 describe("lazy note embedding", () => {
@@ -81,6 +84,7 @@ describe("lazy note embedding", () => {
     expect(result.embedded).toBeGreaterThanOrEqual(1);
     const mine = indexed.find((entry) => entry.noteId === note.id);
     expect(mine).toMatchObject({
+      authorUserId: note.authorUserId,
       noteId: note.id,
       spaceId: note.spaceId,
       text: "molt fresc i mineral",
@@ -120,5 +124,28 @@ describe("lazy note embedding", () => {
       .bind(note.id)
       .first<{ embedded_at: string | null }>();
     expect(row?.embedded_at).toBeNull();
+  });
+
+  it("leaves a note pending when the port stored nothing, rather than calling it done", async () => {
+    // The adapter answers false when the embedding could not be produced —
+    // the model returned no vector — which used to be indistinguishable from
+    // success and marked the note embedded for ever.
+    const note = await seedNote("this embedding comes back empty");
+    const emptyPort = {
+      index: async () => false,
+      remove: async () => {},
+      search: async (): Promise<SemanticNoteMatch[]> => [],
+    };
+
+    await indexPendingNoteEmbeddings(env.DB, emptyPort, new Date().toISOString());
+    const row = await env.DB.prepare(`SELECT embedded_at FROM tasting_notes WHERE id = ?`)
+      .bind(note.id)
+      .first<{ embedded_at: string | null }>();
+    expect(row?.embedded_at).toBeNull();
+
+    // Next run, a working port gets it.
+    const { indexed, port } = fakePort();
+    await indexPendingNoteEmbeddings(env.DB, port, new Date().toISOString());
+    expect(indexed.some((entry) => entry.noteId === note.id)).toBe(true);
   });
 });

@@ -29,6 +29,7 @@ const ownerToken = emulatorIdToken({
 });
 const principal = {
   authTime: Math.floor(Date.now() / 1_000),
+  emailVerified: true,
   displayName: "Memory Owner",
   email: "memory-owner@example.test",
   firebaseUid: ownerUid,

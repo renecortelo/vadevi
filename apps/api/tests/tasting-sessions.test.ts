@@ -354,6 +354,7 @@ describe("Deep tasting and collaborative sessions", () => {
       pairing: null,
       principal: {
         authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
         displayName: "Session Owner",
         email: "session-owner@example.test",
         firebaseUid: "firebase-emulator-user-phase-3-owner",

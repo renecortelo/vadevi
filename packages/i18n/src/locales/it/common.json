@@ -44,6 +44,14 @@
     "accessDeniedTitle": "Questo Va de Vi è privato.",
     "accessDeniedBody": "Possono entrare solo le persone autorizzate da chi lo amministra. Chiedi di aggiungere {{email}} e riprova."
   },
+  "errorBoundary": {
+    "title": "Qualcosa è andato storto in questa schermata.",
+    "body": "Il resto di Va de Vi funziona; questa schermata ha incontrato un errore da cui non è riuscita a riprendersi. Nulla di ciò che hai salvato è andato perso.",
+    "staleBody": "Questa schermata appartiene a una versione di Va de Vi più recente di quella aperta. Ricaricando, le due coincidono.",
+    "retry": "Riprova",
+    "reload": "Ricarica Va de Vi",
+    "home": "Torna all'inizio"
+  },
   "space": {
     "switchLabel": "Spazio attivo",
     "switchError": "Non è stato possibile aprire questo Spazio."

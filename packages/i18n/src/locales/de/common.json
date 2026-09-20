@@ -44,6 +44,14 @@
     "accessDeniedTitle": "Dieses Va de Vi ist privat.",
     "accessDeniedBody": "Nur Personen, die die Administration freigegeben hat, können sich anmelden. Bitten Sie darum, {{email}} hinzuzufügen, und versuchen Sie es erneut."
   },
+  "errorBoundary": {
+    "title": "Auf diesem Bildschirm ist etwas schiefgelaufen.",
+    "body": "Der Rest von Va de Vi funktioniert; dieser Bildschirm ist auf einen Fehler gestoßen, von dem er sich nicht erholen konnte. Nichts von dem, was Sie gespeichert haben, ist verloren.",
+    "staleBody": "Dieser Bildschirm gehört zu einer neueren Version von Va de Vi als der laufenden. Ein Neuladen bringt beide zusammen.",
+    "retry": "Erneut versuchen",
+    "reload": "Va de Vi neu laden",
+    "home": "Zurück zum Anfang"
+  },
   "space": {
     "switchLabel": "Aktiver Bereich",
     "switchError": "Dieser Bereich konnte nicht geöffnet werden."

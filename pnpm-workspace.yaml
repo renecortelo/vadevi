@@ -16,10 +16,18 @@ overrides:
   sharp: ">=0.35.4"
   # GHSA-2883-xcg3-v3hh (js-yaml CPU), under firebase-tools. Emulator only.
   js-yaml@4: ">=4.3.2"
+  # GHSA-x5fp-wj9c-mxmx and GHSA-4mjr-xmp4-gh2g (qs), GHSA-jxfw-x594-9x9m
+  # (morgan): both under firebase-tools, both patched in a minor. Emulator only.
+  qs: ">=6.16.0"
+  morgan: ">=1.12.0"
+  # Not overridden: stream-json (GHSA-528h-pc64-c93x, fixed in 3.x) and
+  # csv-parse (GHSA-8cw4-87c7-c6xx, fixed in 7.x) under firebase-tools are
+  # major bumps the emulator has not been tested against; both are moderate,
+  # development-only, and wait for firebase-tools to move.
 
 catalog:
   typescript: "6.0.3"
-  vitest: "*"
+  vitest: "^4.1.11"
   zod: "*"
 
 allowBuilds:

@@ -36,9 +36,11 @@ type VectorStore = Readonly<{
  *
  * The note's text is embedded but never stored in the index — only the vector
  * and the ids needed to fetch the note from the database again, behind the same
- * membership check. Space isolation is enforced here, on the returned metadata,
- * rather than trusted to a filter expression: a match whose Space the reader may
- * not see is dropped before it is ever returned.
+ * membership check. Space and author isolation are enforced here, on the
+ * returned metadata, rather than trusted to a filter expression: a match whose
+ * Space the reader may not see, or whose note somebody else wrote, is dropped
+ * before it is ever returned — and the database repeats the author check on
+ * whatever comes back.
  */
 export class VectorizeSemanticNoteAdapter implements SemanticNotePort {
   constructor(
@@ -58,12 +60,21 @@ export class VectorizeSemanticNoteAdapter implements SemanticNotePort {
     }
   }
 
-  async index(input: NoteEmbedding): Promise<void> {
+  async index(input: NoteEmbedding): Promise<boolean> {
     const values = await this.embed(input.text);
-    if (values === null) return;
+    if (values === null) return false;
     await this.store.upsert([
-      { id: input.noteId, metadata: { spaceId: input.spaceId, wineId: input.wineId }, values },
+      {
+        id: input.noteId,
+        metadata: {
+          authorUserId: input.authorUserId,
+          spaceId: input.spaceId,
+          wineId: input.wineId,
+        },
+        values,
+      },
     ]);
+    return true;
   }
 
   async remove(noteIds: readonly string[]): Promise<void> {
@@ -86,7 +97,14 @@ export class VectorizeSemanticNoteAdapter implements SemanticNotePort {
     for (const match of response.matches) {
       const spaceId = match.metadata?.spaceId;
       const wineId = match.metadata?.wineId;
-      if (typeof spaceId !== "string" || typeof wineId !== "string" || !allowed.has(spaceId)) {
+      // A vector indexed before authorship was recorded carries no author and is
+      // treated as somebody else's: dropped here, re-indexed by the backfill.
+      if (
+        typeof spaceId !== "string" ||
+        typeof wineId !== "string" ||
+        !allowed.has(spaceId) ||
+        match.metadata?.authorUserId !== input.authorUserId
+      ) {
         continue;
       }
       matches.push({ noteId: match.id, score: match.score, spaceId, wineId });

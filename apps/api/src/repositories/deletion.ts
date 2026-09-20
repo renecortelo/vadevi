@@ -1,4 +1,5 @@
 import type { DeletionJob, DeletionJobResponse } from "@vadevi/contracts";
+import type { SemanticNotePort } from "@vadevi/domain";
 import { ulid } from "ulid";
 
 import type { FirebasePrincipal } from "../types";
@@ -400,7 +401,20 @@ export async function purgeSpace(
   database: D1Database,
   bucket: R2Bucket | undefined,
   spaceId: string,
+  semanticNotes: SemanticNotePort | null = null,
 ): Promise<{ mediaObjectsRemoved: number; rowsRemoved: number }> {
+  // The note index holds a vector per embedded note, keyed by note id. Those
+  // ids are about to be deleted with the rows, so the index is told first —
+  // and if it cannot be, the job throws and is retried, rather than leaving
+  // a purged Space's notes searchable by nobody but findable for ever.
+  if (semanticNotes !== null) {
+    const embedded = await database
+      .prepare(`SELECT id FROM tasting_notes WHERE space_id = ? AND embedded_at IS NOT NULL`)
+      .bind(spaceId)
+      .all<{ id: string }>();
+    await semanticNotes.remove(embedded.results.map((row) => row.id));
+  }
+
   let mediaObjectsRemoved = 0;
   if (bucket !== undefined) {
     const media = await database
@@ -433,6 +447,7 @@ export async function runDueDeletionJobs(
   database: D1Database,
   bucket: R2Bucket | undefined,
   nowIso: string,
+  semanticNotes: SemanticNotePort | null = null,
 ): Promise<{ completed: number }> {
   const due = await database
     .prepare(
@@ -445,7 +460,7 @@ export async function runDueDeletionJobs(
   let completed = 0;
   for (const job of due.results) {
     try {
-      completed += await runDeletionJob(database, bucket, nowIso, job);
+      completed += await runDeletionJob(database, bucket, nowIso, job, semanticNotes);
     } catch (error) {
       // One job that cannot complete must not stop the others behind it, nor
       // the rest of the schedule. It stays scheduled and is tried again on the
@@ -466,12 +481,13 @@ async function runDeletionJob(
   bucket: R2Bucket | undefined,
   nowIso: string,
   job: JobRow,
+  semanticNotes: SemanticNotePort | null,
 ): Promise<number> {
   let mediaObjectsRemoved = 0;
   let rowsRemoved = 0;
 
   if (job.target_type === "space") {
-    const purged = await purgeSpace(database, bucket, job.target_id);
+    const purged = await purgeSpace(database, bucket, job.target_id, semanticNotes);
     mediaObjectsRemoved += purged.mediaObjectsRemoved;
     rowsRemoved += purged.rowsRemoved;
   } else {
@@ -483,7 +499,7 @@ async function runDeletionJob(
       .bind(job.target_id)
       .all<{ id: string }>();
     for (const space of personalSpaces.results) {
-      const purged = await purgeSpace(database, bucket, space.id);
+      const purged = await purgeSpace(database, bucket, space.id, semanticNotes);
       mediaObjectsRemoved += purged.mediaObjectsRemoved;
       rowsRemoved += purged.rowsRemoved;
     }

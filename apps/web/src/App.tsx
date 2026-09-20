@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router";
 
 import { useAuth } from "./auth/AuthContext";
 import { AuthProvider } from "./auth/AuthProvider";
+import { ErrorBoundary, ErrorFallback } from "./components/ErrorBoundary";
 import {
   InstallPrompt,
   PwaUpdatePrompt,
@@ -63,10 +64,21 @@ function AuthGate() {
   );
 }
 
+/** The last boundary: whatever escapes the screens lands here, not on white. */
+function RootFallback({ error, reset }: { error: Error; reset: () => void }) {
+  return (
+    <main className="main-content" id="main-content">
+      <ErrorFallback error={error} reset={reset} />
+    </main>
+  );
+}
+
 export function App() {
   return (
     <AuthProvider>
-      <AuthGate />
+      <ErrorBoundary fallback={(error, reset) => <RootFallback error={error} reset={reset} />}>
+        <AuthGate />
+      </ErrorBoundary>
       {/*
         Registered outside the auth gate so the offline shell, update prompt,
         install guidance, and storage warning work for a signed-out visitor too.

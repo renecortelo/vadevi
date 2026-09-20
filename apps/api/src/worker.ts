@@ -16,12 +16,13 @@ export default {
     await purgeExpiredActionDraftContent(environment.DB, nowIso);
     // An abandoned identification proposal must not linger past its window.
     await purgeExpiredIdentifications(environment.DB, nowIso);
+    // Semantic note search is optional: the port exists only when the index
+    // and Workers AI are both configured. A purge tells it which notes go.
+    const notePort = createSemanticNotePort(environment);
     // Deletion runs on the schedule so a confirmed purge never waits for the
     // requester to come back.
-    await runDueDeletionJobs(environment.DB, environment.MEDIA, nowIso);
-    // Semantic note indexing is lazy: when the index and Workers AI are both
-    // configured, drain a batch of not-yet-embedded notes. Off otherwise.
-    const notePort = createSemanticNotePort(environment);
+    await runDueDeletionJobs(environment.DB, environment.MEDIA, nowIso, notePort);
+    // Indexing is lazy: drain a batch of not-yet-embedded notes. Off otherwise.
     if (notePort !== null) await indexPendingNoteEmbeddings(environment.DB, notePort, nowIso);
   },
 } satisfies ExportedHandler<WorkerBindings>;

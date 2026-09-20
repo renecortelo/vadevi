@@ -171,6 +171,13 @@ sign in again until listed. `pnpm validate:env` refuses `allowlist` with no
 administrator, because a private door with nobody to keep it can never be
 opened.
 
+The same rules are applied to the `vars` your configuration file will ship,
+by `pnpm validate:env --config wrangler.<name>.jsonc` and by the deploy
+script before it touches anything remote. Should a misspelling get past
+both, the Worker fails closed rather than open: an `ACCESS_MODE` that is
+neither `open` nor `allowlist` refuses everyone with `MISCONFIGURED` (503),
+the administrator included, until it is fixed.
+
 ### A second door for the administrator (optional)
 
 The list is only as safe as the administrator's Google account. If you want
@@ -338,6 +345,16 @@ photograph, and Vicenç's language replies.
    Indexing is lazy: the scheduled handler embeds a batch of not-yet-embedded
    notes each run, so new notes and the backfill of existing ones drain the same
    way. `1024` matches the `@cf/baai/bge-m3` embedding model.
+
+   Each vector records its note's author, and a search returns only the
+   reader's own. An index built before 2026-09-20 holds vectors without an
+   author; they match nobody until re-indexed, which one statement on the
+   database schedules for the next runs:
+
+   ```sh
+   wrangler d1 execute <database_name> --remote --config wrangler.<name>.jsonc \
+     --command "UPDATE tasting_notes SET embedded_at = NULL WHERE deleted_at IS NULL"
+   ```
 
 5. **Redeploy**, then open **Data and privacy** and check the usage counters
    read what you expect.

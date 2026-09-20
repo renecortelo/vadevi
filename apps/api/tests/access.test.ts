@@ -131,9 +131,73 @@ describe("a private deployment", () => {
     expect(ErrorEnvelopeSchema.parse(await response.json()).error.code).toBe("FORBIDDEN");
   });
 
+  it("does not take an unverified e-mail as anyone's — not the administrator's, not a guest's", async () => {
+    // A token whose provider did not vouch for the address. Google's always
+    // do; a provider enabled later — e-mail and password before the
+    // confirmation link — would not, and its token could name any address.
+    const unverified = (who: { email: string; sub: string }) =>
+      createApi().request(
+        "/api/v1/me/bootstrap",
+        {
+          headers: {
+            Authorization: `Bearer ${emulatorIdToken({
+              email: who.email,
+              email_verified: false,
+              name: who.email,
+              sub: `${who.sub}-unverified`,
+            })}`,
+          },
+        },
+        privateDeployment,
+      );
+    // The administrator's own address, unverified: refused, and no account.
+    const impostor = await unverified(admin);
+    expect(impostor.status).toBe(403);
+    expect(ErrorEnvelopeSchema.parse(await impostor.json()).error.code).toBe("ACCESS_DENIED");
+    // A listed guest's address, unverified: refused as well.
+    await request("/api/v1/admin/allowed-accounts", admin, privateDeployment, {
+      body: JSON.stringify({ email: guest.email }),
+      method: "POST",
+    });
+    expect((await unverified(guest)).status).toBe(403);
+    // An open deployment does not authorize by e-mail and is unchanged.
+    const open = await createApi().request(
+      "/api/v1/me/bootstrap",
+      {
+        headers: {
+          Authorization: `Bearer ${emulatorIdToken({
+            email: stranger.email,
+            email_verified: false,
+            name: stranger.email,
+            sub: `${stranger.sub}-unverified-open`,
+          })}`,
+        },
+      },
+      { ...env, ACCESS_MODE: "open" },
+    );
+    expect(open.status).toBe(200);
+  });
+
   it("closes the door on every authenticated route, not only the bootstrap", async () => {
     const response = await request("/api/v1/spaces/01ARZ3NDEKTSV4RRFFQ69G5FAV/wines", stranger);
     expect(response.status).toBe(403);
+  });
+});
+
+describe("a misspelled door", () => {
+  it("fails closed for everyone, the administrator included, and says why", async () => {
+    // "allowlst": the operator meant to close the door. Reading the typo as
+    // "open" would have let the world in with no sign that anything was wrong.
+    const newcomer = { email: "newcomer@example.test", sub: "firebase-emulator-access-newcomer" };
+    for (const who of [newcomer, admin]) {
+      const response = await request("/api/v1/me/bootstrap", who, {
+        ...privateDeployment,
+        ACCESS_MODE: "allowlst",
+      });
+      expect(response.status).toBe(503);
+      expect(ErrorEnvelopeSchema.parse(await response.json()).error.code).toBe("MISCONFIGURED");
+    }
+    expect(await userCount(newcomer.email)).toBe(0);
   });
 });
 

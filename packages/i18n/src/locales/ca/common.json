@@ -44,6 +44,14 @@
     "accessDeniedTitle": "Aquest Va de Vi és privat.",
     "accessDeniedBody": "Només hi poden entrar les persones que ha autoritzat qui l’administra. Demana-li que afegeixi {{email}} i torna-ho a provar."
   },
+  "errorBoundary": {
+    "title": "Alguna cosa ha fallat en aquesta pantalla.",
+    "body": "La resta de Va de Vi va bé; aquesta pantalla ha trobat un error del qual no s'ha pogut recuperar. No s'ha perdut res del que has desat.",
+    "staleBody": "Aquesta pantalla pertany a una versió de Va de Vi més nova que la que tens oberta. En recarregar, les dues coincideixen.",
+    "retry": "Torna-ho a provar",
+    "reload": "Recarrega Va de Vi",
+    "home": "Torna a l'inici"
+  },
   "space": {
     "switchLabel": "Espai actiu",
     "switchError": "No s'ha pogut obrir aquest Espai."

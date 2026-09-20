@@ -1,7 +1,7 @@
 import { ErrorEnvelopeSchema } from "@vadevi/contracts";
 import type { MiddlewareHandler } from "hono";
 
-import { isAllowed } from "../access/allowlist";
+import { accessMode, isAllowed } from "../access/allowlist";
 import type { ApiEnvironment } from "../types";
 
 /**
@@ -18,6 +18,20 @@ export const accessControl: MiddlewareHandler<ApiEnvironment> = async (context, 
   const database = context.env.DB;
   if (database === undefined) {
     throw new Error("The D1 binding is unavailable.");
+  }
+  if (accessMode(context.env) === "invalid") {
+    // A door the operator meant to close and misspelled. Nobody comes in — not
+    // even an administrator — and the answer names the setting, not privacy.
+    return context.json(
+      ErrorEnvelopeSchema.parse({
+        error: {
+          code: "MISCONFIGURED",
+          message: "ACCESS_MODE is not one of open or allowlist. Fix the deployment's settings.",
+          requestId: context.get("requestId"),
+        },
+      }),
+      503,
+    );
   }
   if (!(await isAllowed(database, context.env, context.get("principal")))) {
     return context.json(

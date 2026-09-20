@@ -16,6 +16,7 @@ import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
+import { jsonList } from "../services/sql-list";
 
 type IdempotentResult<T> =
   | { kind: "conflict" }
@@ -159,20 +160,20 @@ async function lastVenuesByWine(
 ): Promise<Map<string, WineSummary["lastVenue"]>> {
   const venues = new Map<string, WineSummary["lastVenue"]>();
   if (wineIds.length === 0) return venues;
-  const placeholders = wineIds.map(() => "?").join(", ");
+  const wanted = jsonList(wineIds);
   const rows = await database
     .prepare(
       `SELECT note.wine_id, note.tasted_at, ctx.venue_name, ctx.venue_latitude, ctx.venue_longitude
       FROM tasting_notes note
       JOIN tasting_contexts ctx ON ctx.tasting_note_id = note.id
       JOIN users author ON author.id = note.author_user_id AND author.deleted_at IS NULL
-      WHERE note.space_id = ? AND note.wine_id IN (${placeholders})
+      WHERE note.space_id = ? AND note.wine_id IN ${wanted.sql}
         AND note.state = 'submitted' AND note.deleted_at IS NULL
         AND author.firebase_uid = ?
         AND ctx.venue_name IS NOT NULL AND TRIM(ctx.venue_name) <> ''
       ORDER BY note.tasted_at DESC`,
     )
-    .bind(spaceId, ...wineIds, principal.firebaseUid)
+    .bind(spaceId, wanted.bind, principal.firebaseUid)
     .all<{
       tasted_at: string;
       venue_latitude: number | null;
@@ -522,7 +523,14 @@ const sortKeys = {
     expression: "(wine.normalized_producer_name || ' ' || wine.normalized_name)",
   },
   recent: { direction: "DESC", expression: "wine.updated_at" },
-  score: { direction: "DESC", expression: "COALESCE(printf('%03d', score_100), '-1')" },
+  // Spelled as a CASE, not COALESCE around printf: printf('%03d', NULL) is
+  // '000', not NULL, so the COALESCE never fired and an unscored wine sorted
+  // as a zero here while its cursor said -1 — and every unscored wine after
+  // the page break was skipped.
+  score: {
+    direction: "DESC",
+    expression: "CASE WHEN score_100 IS NULL THEN '-1' ELSE printf('%03d', score_100) END",
+  },
   tasted: { direction: "DESC", expression: "COALESCE(last_tasted_at, '')" },
 } as const;
 
@@ -864,6 +872,13 @@ export async function createTastingNote(
   };
 }
 
+/**
+ * A quick note, read back by its author — after creating it, or as the
+ * server's current version when an offline replay of it conflicts. The
+ * author check matters on the second path: the note id comes from the
+ * client, and a note's comment is the one thing about it that is nobody
+ * else's to read.
+ */
 async function getTastingNoteResponse(
   database: D1Database,
   principal: FirebasePrincipal,
@@ -880,7 +895,8 @@ async function getTastingNoteResponse(
       JOIN space_memberships membership ON membership.space_id = note.space_id
       JOIN users actor ON actor.id = membership.user_id
       WHERE note.id = ? AND note.space_id = ? AND note.deleted_at IS NULL
-        AND actor.firebase_uid = ? AND membership.status = 'active'`,
+        AND actor.firebase_uid = ? AND membership.status = 'active'
+        AND note.author_user_id = actor.id`,
     )
     .bind(noteId, spaceId, principal.firebaseUid)
     .first<TastingRow>();
@@ -1339,12 +1355,13 @@ export async function regionPoints(
 
   // What is already known, in one read.
   const keys = [...byRegion.keys()];
+  const wanted = jsonList(keys);
   const cached = await database
     .prepare(
       `SELECT normalized_region, latitude, longitude FROM region_points
-      WHERE normalized_region IN (${keys.map(() => "?").join(", ")})`,
+      WHERE normalized_region IN ${wanted.sql}`,
     )
-    .bind(...keys)
+    .bind(wanted.bind)
     .all<{ latitude: number | null; longitude: number | null; normalized_region: string }>();
   const known = new Map(cached.results.map((row) => [row.normalized_region, row]));
 

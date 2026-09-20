@@ -196,6 +196,66 @@ describe("Export (AC-063)", () => {
     ).toBe(false);
   });
 
+  it("keeps a co-member's prose out of a Space export, in JSON and in CSV", async () => {
+    const spaceId = await sharedSpace();
+    const wine = await createWine(spaceId, ownerToken, {
+      displayName: "Prose Boundary Wine",
+      producerName: "Synthetic Export Producer",
+      vintageYear: 2021,
+      wineType: "red",
+    });
+    const memberProse = "MEMBER-PROSE-SENTINEL-7f3a";
+    const memberFood = "MEMBER-FOOD-SENTINEL-9c1d";
+    const ownerProse = "OWNER-PROSE-SENTINEL-2b8e";
+    await createQuickNote(spaceId, memberToken, {
+      comment: memberProse,
+      foodText: memberFood,
+      score100: 91,
+      tastedAt: "2026-08-13T19:00:00.000Z",
+      wineId: wine.id,
+    });
+    await createQuickNote(spaceId, ownerToken, {
+      comment: ownerProse,
+      score100: 84,
+      tastedAt: "2026-08-14T19:00:00.000Z",
+      wineId: wine.id,
+    });
+
+    // The owner's Space export: the member's submitted note is there with its
+    // score, and without a word of its prose.
+    const ownerResponse = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/export`, {
+      headers: headers(ownerToken),
+    });
+    const ownerText = await ownerResponse.text();
+    expect(ownerText).not.toContain(memberProse);
+    expect(ownerText).not.toContain(memberFood);
+    expect(ownerText).toContain(ownerProse);
+    const ownerDocument = ExportDocumentSchema.parse(JSON.parse(ownerText));
+    const memberNote = ownerDocument.data.tastings.find(
+      (note: { score100: number | null }) => note.score100 === 91,
+    );
+    expect(memberNote).toMatchObject({ comment: null, foodText: null, state: "submitted" });
+
+    const csvResponse = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/export?format=csv&dataset=tastings`,
+      { headers: headers(ownerToken) },
+    );
+    expect(csvResponse.status).toBe(200);
+    const csv = await csvResponse.text();
+    expect(csv).not.toContain(memberProse);
+    expect(csv).not.toContain(memberFood);
+    expect(csv).toContain(ownerProse);
+
+    // The member's own export keeps their own prose.
+    const memberResponse = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/export`, {
+      headers: headers(memberToken),
+    });
+    const memberText = await memberResponse.text();
+    expect(memberText).toContain(memberProse);
+    expect(memberText).toContain(memberFood);
+    expect(memberText).not.toContain(ownerProse);
+  });
+
   it("renders a selected CSV dataset with formula-guarded cells", async () => {
     const spaceId = await sharedSpace();
     await createWine(spaceId, ownerToken, {

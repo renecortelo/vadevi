@@ -44,6 +44,14 @@
     "accessDeniedTitle": "Este Va de Vi é privado.",
     "accessDeniedBody": "Só podem entrar as pessoas autorizadas por quem o administra. Peça que adicione {{email}} e tente de novo."
   },
+  "errorBoundary": {
+    "title": "Algo correu mal neste ecrã.",
+    "body": "O resto do Va de Vi está bem; este ecrã encontrou um erro do qual não conseguiu recuperar. Nada do que guardou se perdeu.",
+    "staleBody": "Este ecrã pertence a uma versão do Va de Vi mais recente do que a que está aberta. Recarregar junta as duas.",
+    "retry": "Tentar novamente",
+    "reload": "Recarregar o Va de Vi",
+    "home": "Voltar ao início"
+  },
   "space": {
     "switchLabel": "Espaço ativo",
     "switchError": "Não foi possível abrir esse Espaço."

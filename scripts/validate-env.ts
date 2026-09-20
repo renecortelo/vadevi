@@ -2,8 +2,16 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { parse } from "dotenv";
-import { z } from "zod";
 
+import { validateEnvironment, wranglerVars } from "./environment";
+import { parseJsonc } from "./jsonc";
+
+/**
+ * `pnpm validate:env` checks a developer's `.env.local` and `.dev.vars` over
+ * the process environment. `pnpm validate:env --config <wrangler.jsonc>`
+ * checks the `vars` a deployment will ship instead — the same check the
+ * deploy script runs first.
+ */
 const root = process.cwd();
 
 function readOptionalEnv(fileName: string): Record<string, string> {
@@ -11,190 +19,30 @@ function readOptionalEnv(fileName: string): Record<string, string> {
   return existsSync(path) ? parse(readFileSync(path)) : {};
 }
 
-const fileEnvironment = {
-  ...readOptionalEnv(".env.local"),
-  ...readOptionalEnv(".dev.vars"),
-};
+const configFlag = process.argv.indexOf("--config");
+const configPath = configFlag === -1 ? null : (process.argv[configFlag + 1] ?? null);
 
-const EnvironmentSchema = z
-  .object({
-    ACCESS_ADMIN_AUD: z
-      .string()
-      .regex(/^[a-f0-9]{64}$/, "ACCESS_ADMIN_AUD is the Access application's 64-hex audience tag.")
-      .optional(),
-    ACCESS_MODE: z.enum(["open", "allowlist"]).default("open"),
-    ACCESS_TEAM_DOMAIN: z
-      .string()
-      .regex(
-        /^[a-z0-9][a-z0-9-]{0,62}$/,
-        "ACCESS_TEAM_DOMAIN is the <team> of <team>.cloudflareaccess.com.",
-      )
-      .optional(),
-    ADMIN_EMAILS: z
-      .string()
-      .default("")
-      .refine(
-        (value) =>
-          value
-            .split(",")
-            .map((entry) => entry.trim())
-            .filter((entry) => entry.length > 0)
-            .every((entry) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(entry)),
-        "ADMIN_EMAILS must be comma-separated e-mail addresses.",
-      ),
-    APP_ENV: z.enum(["local", "preview", "production"]).default("local"),
-    APP_VERSION: z
-      .string()
-      .regex(/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/i)
-      .default("0.1.0"),
-    AI_PROVIDER: z.enum(["none", "cloudflare"]).default("none"),
-    AI_MODEL: z
-      .string()
-      .regex(/^@cf\/[a-z0-9][a-z0-9._/-]{2,119}$/)
-      .optional(),
-    AI_OCR_MODEL: z
-      .string()
-      .regex(/^@cf\/[a-z0-9][a-z0-9._/-]{2,119}$/)
-      .optional(),
-    EXTERNAL_API_USER_AGENT: z.string().min(16).max(300).optional(),
-    FIREBASE_AUTH_EMULATOR_HOST: z.string().optional(),
-    FIREBASE_AUTH_DOMAIN: z.string().min(1).default("localhost"),
-    FIREBASE_AUTH_PROXY: z.enum(["true", "false"]).default("false"),
-    FIREBASE_PROJECT_ID: z.string().min(1).default("demo-vadevi"),
-    FIREBASE_WEB_API_KEY: z.string().min(1).default("local-emulator-placeholder"),
-    MAP_TILES_PROVIDER: z.enum(["none", "openstreetmap"]).default("none"),
-    PLACES_PROVIDER: z.enum(["none", "openstreetmap"]).default("none"),
-    RESEARCH_PROVIDER: z.enum(["none", "open_data"]).default("none"),
-    VITE_API_BASE_URL: z.string().startsWith("/").default("/api/v1"),
-    VITE_FIREBASE_USE_EMULATOR: z.enum(["true", "false"]).default("true"),
-  })
-  .superRefine((environment, context) => {
-    // A private door with nobody to keep it is a door nobody can ever open:
-    // the list starts empty and only an administrator can add to it.
-    if (environment.ACCESS_MODE === "allowlist" && environment.ADMIN_EMAILS.trim().length === 0) {
-      context.addIssue({
-        code: "custom",
-        message: "ACCESS_MODE=allowlist needs at least one administrator in ADMIN_EMAILS.",
-        path: ["ADMIN_EMAILS"],
-      });
-    }
+let values: Record<string, unknown>;
+let source: string;
+if (configPath === null) {
+  values = { ...process.env, ...readOptionalEnv(".env.local"), ...readOptionalEnv(".dev.vars") };
+  source = "the environment and .dev.vars";
+} else {
+  const path = resolve(root, configPath);
+  if (!existsSync(path)) {
+    console.error(`validate-env: ${configPath} does not exist.`);
+    process.exit(1);
+  }
+  values = wranglerVars(parseJsonc(readFileSync(path, "utf8")));
+  source = `the vars of ${configPath}`;
+}
 
-    // The second door needs both halves: the team that signs the JWT and the
-    // application it is for. One without the other silently guards nothing.
-    if (
-      (environment.ACCESS_TEAM_DOMAIN === undefined) !==
-      (environment.ACCESS_ADMIN_AUD === undefined)
-    ) {
-      context.addIssue({
-        code: "custom",
-        message: "ACCESS_TEAM_DOMAIN and ACCESS_ADMIN_AUD go together; set both or neither.",
-        path: ["ACCESS_TEAM_DOMAIN"],
-      });
-    }
-
-    if (environment.AI_PROVIDER === "cloudflare" && environment.AI_MODEL === undefined) {
-      context.addIssue({
-        code: "custom",
-        message: "Cloudflare AI requires an explicit @cf/* model allowlist entry.",
-        path: ["AI_MODEL"],
-      });
-    }
-
-    // Nominatim's usage policy requires an identifying agent with a contact, the
-    // same one open-data research needs — so venue lookup demands it too, even
-    // where research itself is off.
-    if (
-      environment.MAP_TILES_PROVIDER === "openstreetmap" &&
-      (environment.EXTERNAL_API_USER_AGENT === undefined ||
-        !/VaDeVi\//.test(environment.EXTERNAL_API_USER_AGENT) ||
-        !/https:\/\//.test(environment.EXTERNAL_API_USER_AGENT))
-    ) {
-      context.addIssue({
-        code: "custom",
-        message:
-          "OpenStreetMap map tiles require an identifying VaDeVi/* user agent with HTTPS contact.",
-        path: ["EXTERNAL_API_USER_AGENT"],
-      });
-    }
-
-    if (
-      environment.PLACES_PROVIDER === "openstreetmap" &&
-      (environment.EXTERNAL_API_USER_AGENT === undefined ||
-        !/VaDeVi\//.test(environment.EXTERNAL_API_USER_AGENT) ||
-        !/https:\/\//.test(environment.EXTERNAL_API_USER_AGENT))
-    ) {
-      context.addIssue({
-        code: "custom",
-        message:
-          "OpenStreetMap venue lookup requires an identifying VaDeVi/* user agent with HTTPS contact.",
-        path: ["EXTERNAL_API_USER_AGENT"],
-      });
-    }
-
-    if (
-      environment.RESEARCH_PROVIDER === "open_data" &&
-      (environment.EXTERNAL_API_USER_AGENT === undefined ||
-        !/VaDeVi\//.test(environment.EXTERNAL_API_USER_AGENT) ||
-        !/https:\/\//.test(environment.EXTERNAL_API_USER_AGENT) ||
-        environment.EXTERNAL_API_USER_AGENT.includes("\r") ||
-        environment.EXTERNAL_API_USER_AGENT.includes("\n"))
-    ) {
-      context.addIssue({
-        code: "custom",
-        message:
-          "Open-data research requires an identifying VaDeVi/* user agent with HTTPS contact.",
-        path: ["EXTERNAL_API_USER_AGENT"],
-      });
-    }
-
-    if (
-      environment.FIREBASE_AUTH_PROXY === "true" &&
-      !/\.(firebaseapp\.com|web\.app)$/i.test(environment.FIREBASE_AUTH_DOMAIN)
-    ) {
-      context.addIssue({
-        code: "custom",
-        message:
-          "The auth handler proxy only forwards to a Firebase-issued auth domain (*.firebaseapp.com or *.web.app).",
-        path: ["FIREBASE_AUTH_PROXY"],
-      });
-    }
-
-    if (environment.APP_ENV === "local" && !environment.FIREBASE_PROJECT_ID.startsWith("demo-")) {
-      context.addIssue({
-        code: "custom",
-        message: "Local Firebase project IDs must use the non-production demo-* namespace.",
-        path: ["FIREBASE_PROJECT_ID"],
-      });
-    }
-
-    if (
-      environment.APP_ENV !== "local" &&
-      environment.FIREBASE_AUTH_EMULATOR_HOST !== undefined &&
-      environment.FIREBASE_AUTH_EMULATOR_HOST.length > 0
-    ) {
-      context.addIssue({
-        code: "custom",
-        message: "Preview and production must not configure the Firebase Auth Emulator host.",
-        path: ["FIREBASE_AUTH_EMULATOR_HOST"],
-      });
-    }
-
-    if (environment.APP_ENV !== "local" && environment.VITE_FIREBASE_USE_EMULATOR === "true") {
-      context.addIssue({
-        code: "custom",
-        message: "Preview and production cannot use the Firebase emulator.",
-        path: ["VITE_FIREBASE_USE_EMULATOR"],
-      });
-    }
-  });
-
-const result = EnvironmentSchema.safeParse({ ...process.env, ...fileEnvironment });
-
-if (!result.success) {
-  console.error(z.prettifyError(result.error));
+const result = validateEnvironment(values);
+if (!result.ok) {
+  console.error(`Invalid settings in ${source}:\n${result.message}`);
   process.exitCode = 1;
 } else {
   console.info(
-    `Environment is valid (${result.data.APP_ENV}, AI provider: ${result.data.AI_PROVIDER}).`,
+    `Settings in ${source} are valid (${result.value.APP_ENV}, AI provider: ${result.value.AI_PROVIDER}, access: ${result.value.ACCESS_MODE}).`,
   );
 }

@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router";
 
 import type { FirebaseUser } from "./auth/firebase";
 import { AppShell } from "./components/AppShell";
+import { ErrorBoundary, ErrorFallback } from "./components/ErrorBoundary";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { InfoPage } from "./pages/InfoPage";
@@ -59,19 +60,27 @@ const WishlistPage = lazy(() =>
   import("./pages/WishlistPage").then((module) => ({ default: module.WishlistPage })),
 );
 
+/**
+ * A screen loaded on demand, and kept to itself: the boundary is inside the
+ * shell, so a screen that throws — or a chunk the deploy replaced under the
+ * open tab — is replaced by an explanation and a way out, with the navigation
+ * still there around it.
+ */
 function DeferredPage({ children }: { children: ReactNode }) {
   const { t } = useTranslation();
   return (
-    <Suspense
-      fallback={
-        <section aria-live="polite" className="empty-state">
-          <h1>{t("auth.loadingTitle")}</h1>
-          <p>{t("auth.loadingBody")}</p>
-        </section>
-      }
-    >
-      {children}
-    </Suspense>
+    <ErrorBoundary fallback={(error, reset) => <ErrorFallback error={error} home reset={reset} />}>
+      <Suspense
+        fallback={
+          <section aria-live="polite" className="empty-state">
+            <h1>{t("auth.loadingTitle")}</h1>
+            <p>{t("auth.loadingBody")}</p>
+          </section>
+        }
+      >
+        {children}
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 

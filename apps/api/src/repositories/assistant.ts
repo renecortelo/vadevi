@@ -32,6 +32,7 @@ import { resolveCountryCodes } from "./country-terms";
 import { resolveGrapeNamesFromMessage } from "./grape-terms";
 import { getSource, listWineFacts } from "./provenance";
 import { getWineSummary, listWines, normalizeWineText } from "./wine-memory";
+import { jsonList } from "../services/sql-list";
 
 type AllowedSpaceRow = {
   actor_user_id: string;
@@ -418,7 +419,7 @@ async function allowedSpaces(
   allowedCrossSpaceIds: string[],
 ): Promise<AllowedSpaceRow[] | null> {
   const requestedIds = [...new Set([activeSpaceId, ...allowedCrossSpaceIds])];
-  const placeholders = requestedIds.map(() => "?").join(", ");
+  const requested = jsonList(requestedIds);
   const result = await database
     .prepare(
       `SELECT actor.id AS actor_user_id, space.id, space.name
@@ -427,9 +428,9 @@ async function allowedSpaces(
       JOIN spaces space ON space.id = membership.space_id
       WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
         AND membership.status = 'active' AND space.deleted_at IS NULL
-        AND space.id IN (${placeholders})`,
+        AND space.id IN ${requested.sql}`,
     )
-    .bind(principal.firebaseUid, ...requestedIds)
+    .bind(principal.firebaseUid, requested.bind)
     .all<AllowedSpaceRow>();
   if (!result.results.some((space) => space.id === activeSpaceId)) return null;
   const order = new Map(requestedIds.map((id, index) => [id, index]));
@@ -471,8 +472,11 @@ async function loadCollectionOverview(
 /**
  * The reader's own notes that match the question by meaning, and the wines they
  * belong to. The vector index returns note ids; the text and the wine are read
- * back from the database behind the same membership check, so a note is only
- * ever surfaced as the reader's own personal evidence, cited to their note.
+ * back from the database behind the same membership check AND the author
+ * check, so a note is only ever surfaced as the reader's own personal evidence,
+ * cited to their note. The author check is the one that keeps a co-member's
+ * note in a shared Space — indexed like any other, and as close in meaning —
+ * from being read to the wrong person as "your note".
  */
 async function searchNotesSemantically(
   database: D1Database,
@@ -489,19 +493,21 @@ async function searchNotesSemantically(
   statementWineId: Map<string, string>;
 }> {
   const spaceIds = spaces.map((space) => space.id);
-  const matches = await port.search({ limit, query: message, spaceIds });
+  const readerId = spaces[0]?.actor_user_id;
+  if (readerId === undefined) return { results: [], statements: [], statementWineId: new Map() };
+  const matches = await port.search({ authorUserId: readerId, limit, query: message, spaceIds });
   if (matches.length === 0) return { results: [], statements: [], statementWineId: new Map() };
-  const noteIds = matches.map((match) => match.noteId);
-  const notePlaceholders = noteIds.map(() => "?").join(", ");
-  const spacePlaceholders = spaceIds.map(() => "?").join(", ");
+  const wantedNotes = jsonList(matches.map((match) => match.noteId));
+  const wantedSpaces = jsonList(spaceIds);
   const notes = await database
     .prepare(
       `SELECT note.id, note.comment, note.space_id, note.wine_id
         FROM tasting_notes note
-        WHERE note.id IN (${notePlaceholders}) AND note.space_id IN (${spacePlaceholders})
+        WHERE note.id IN ${wantedNotes.sql} AND note.space_id IN ${wantedSpaces.sql}
+          AND note.author_user_id = ? AND note.state = 'submitted'
           AND note.deleted_at IS NULL AND note.comment IS NOT NULL AND note.comment <> ''`,
     )
-    .bind(...noteIds, ...spaceIds)
+    .bind(wantedNotes.bind, wantedSpaces.bind, readerId)
     .all<{ comment: string; id: string; space_id: string; wine_id: string }>();
   const spaceById = new Map(spaces.map((space) => [space.id, space]));
   const results = new Map<string, AssistantSearchResult>();
@@ -568,13 +574,13 @@ async function loadNoteDescriptors(
 ): Promise<Map<string, { nose: string[]; palate: string[] }>> {
   const byNote = new Map<string, { nose: string[]; palate: string[] }>();
   if (noteIds.length === 0) return byNote;
-  const placeholders = noteIds.map(() => "?").join(", ");
+  const wanted = jsonList(noteIds);
   const rows = await database
     .prepare(
       `SELECT tasting_note_id, phase, label_snapshot FROM tasting_descriptors
-        WHERE tasting_note_id IN (${placeholders}) ORDER BY phase`,
+        WHERE tasting_note_id IN ${wanted.sql} ORDER BY phase`,
     )
-    .bind(...noteIds)
+    .bind(wanted.bind)
     .all<{ label_snapshot: string; phase: string; tasting_note_id: string }>();
   for (const row of rows.results) {
     const label = row.label_snapshot.trim();
@@ -607,7 +613,7 @@ async function loadReaderTastingNotes(
   if (top.length === 0) return [];
   const wineById = new Map(top.map((result) => [result.wine.id, result.wine]));
   const wineIds = [...wineById.keys()];
-  const placeholders = wineIds.map(() => "?").join(", ");
+  const wanted = jsonList(wineIds);
   const rows = await database
     .prepare(
       `SELECT note.id, note.wine_id, note.score_100, note.would_buy, note.would_drink_again,
@@ -626,11 +632,11 @@ async function loadReaderTastingNotes(
       JOIN users reader ON reader.id = reader_member.user_id
         AND reader.firebase_uid = ? AND reader.deleted_at IS NULL
       LEFT JOIN tasting_contexts ctx ON ctx.tasting_note_id = note.id
-      WHERE note.wine_id IN (${placeholders}) AND note.state = 'submitted' AND note.deleted_at IS NULL
+      WHERE note.wine_id IN ${wanted.sql} AND note.state = 'submitted' AND note.deleted_at IS NULL
       ORDER BY (CASE WHEN author.firebase_uid = ? THEN 0 ELSE 1 END), note.tasted_at DESC
       LIMIT 24`,
     )
-    .bind(principal.firebaseUid, principal.firebaseUid, ...wineIds, principal.firebaseUid)
+    .bind(principal.firebaseUid, principal.firebaseUid, wanted.bind, principal.firebaseUid)
     .all<TastingNoteDetailRow>();
   // The notes that will become statements, capped to two per wine.
   const kept: TastingNoteDetailRow[] = [];
