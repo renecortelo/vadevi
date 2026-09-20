@@ -20,7 +20,17 @@ export function AboutPage() {
     { body: t("about.spacesBody"), title: t("spaces.manageAction"), to: "/spaces" },
     // The door's keeper sees the door; nobody else has a use for the page.
     ...(bootstrap.data.features.accessAdmin
-      ? [{ body: t("access.aboutBody"), title: t("access.title"), to: "/settings/access" }]
+      ? [
+          {
+            body: t("access.aboutBody"),
+            // With Cloudflare Access on the admin screen, this must be a real
+            // page load: a client-side route change never reaches the edge,
+            // so Access never gets to ask for its login.
+            fullPage: bootstrap.data.features.accessSecondFactor,
+            title: t("access.title"),
+            to: "/settings/access",
+          },
+        ]
       : []),
   ];
 
@@ -35,10 +45,17 @@ export function AboutPage() {
       <ul className="about-list">
         {destinations.map((destination) => (
           <li key={destination.to}>
-            <Link to={destination.to}>
-              <h2>{destination.title}</h2>
-              <p>{destination.body}</p>
-            </Link>
+            {"fullPage" in destination && destination.fullPage ? (
+              <a href={destination.to}>
+                <h2>{destination.title}</h2>
+                <p>{destination.body}</p>
+              </a>
+            ) : (
+              <Link to={destination.to}>
+                <h2>{destination.title}</h2>
+                <p>{destination.body}</p>
+              </Link>
+            )}
           </li>
         ))}
       </ul>

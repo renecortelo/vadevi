@@ -40,26 +40,29 @@ export function AccessPage() {
     if (user === null || !isAdmin) return;
     const controller = new AbortController();
     getAllowedAccounts(user, controller.signal)
-      .then((response) => setList(response.data))
+      .then((response) => {
+        sessionStorage.removeItem(accessLoginAttemptKey);
+        setList(response.data);
+      })
       .catch((failure: unknown) => {
         if (controller.signal.aborted) return;
-        // The API wants Cloudflare Access's word as well, and the browser has
-        // not been through that login yet. A full navigation to this screen —
-        // not a fetch, which cannot follow a login — is what Access intercepts
-        // and sends back here with its cookie set. Once per session, so a login
-        // that keeps failing does not spin.
-        if (
-          secondFactor &&
-          failure instanceof ApiError &&
-          failure.code === "SECOND_FACTOR_REQUIRED" &&
-          sessionStorage.getItem(accessLoginAttemptKey) === null
-        ) {
+        // With the second door on, the first failure here is almost always
+        // Access itself: its edge answers the API call with a redirect to its
+        // login, which a fetch cannot follow across origins and reports as a
+        // plain network error — never as the API's own code. Either way the
+        // cure is the same: one full navigation to this screen, which Access
+        // intercepts, sends through its login, and returns here with its
+        // cookie set. Once per session, so a login that keeps failing does
+        // not spin; after that the page says what it can.
+        if (secondFactor && sessionStorage.getItem(accessLoginAttemptKey) === null) {
           sessionStorage.setItem(accessLoginAttemptKey, String(Date.now()));
           window.location.assign("/settings/access");
           return;
         }
         setError(
-          failure instanceof ApiError && failure.code === "SECOND_FACTOR_REQUIRED"
+          secondFactor &&
+            (!(failure instanceof ApiError) ||
+              (failure instanceof ApiError && failure.code === "SECOND_FACTOR_REQUIRED"))
             ? "access.secondFactorError"
             : "access.loadError",
         );
