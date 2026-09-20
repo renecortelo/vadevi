@@ -6,7 +6,8 @@
   "type": "module",
   "sideEffects": false,
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./session": "./src/session.ts"
   },
   "scripts": {
     "test": "vitest run",

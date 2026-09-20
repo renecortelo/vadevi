@@ -1,4 +1,4 @@
-import type { RuntimeConfigResponse } from "@vadevi/contracts";
+import type { RuntimeConfigResponse } from "@vadevi/contracts/session";
 import {
   browserLocalPersistence,
   getRedirectResult,
@@ -13,11 +13,23 @@ import {
 import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 
 import { webEnvironment } from "../config/env";
-import { getRuntimeConfig } from "../services/api";
-import { rememberedRuntimeConfig, rememberRuntimeConfig } from "./runtime-config";
+import {
+  fetchRuntimeConfig,
+  rememberedRuntimeConfig,
+  rememberRuntimeConfig,
+} from "./runtime-config";
 import { AuthContext, type AuthContextValue, type AuthStatus } from "./AuthContext";
 import { createFirebaseAuth, type FirebaseUser } from "./firebase";
-import { clearOfflineDataForUser } from "../offline/database";
+
+/**
+ * Dexie and the offline database are the signed-in app's; the sign-out
+ * cleanup is the one place the signed-out route touched them, and it was
+ * enough to put the whole module on the first load. Loaded when needed.
+ */
+async function clearOfflineDataForUser(userId: string): Promise<void> {
+  const { clearOfflineDataForUser: clear } = await import("../offline/database");
+  await clear(userId);
+}
 
 function localRuntimeConfig(): RuntimeConfigResponse {
   return {
@@ -56,7 +68,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       try {
         let config: RuntimeConfigResponse;
         try {
-          config = await getRuntimeConfig();
+          config = await fetchRuntimeConfig();
           rememberRuntimeConfig(config);
         } catch (runtimeError) {
           // The route is network-only by policy, so with the network down it

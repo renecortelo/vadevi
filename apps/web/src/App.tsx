@@ -10,18 +10,31 @@ import {
   PwaUpdatePrompt,
   StoragePressureNotice,
 } from "./components/PwaUpdatePrompt";
-import { InvitationSignInPage } from "./pages/InvitationPage";
 import { SessionStatusPage } from "./pages/SessionStatusPage";
 import { SignInPage } from "./pages/SignInPage";
 
 const AuthenticatedApp = lazy(() =>
   import("./AuthenticatedApp").then((module) => ({ default: module.AuthenticatedApp })),
 );
+// The invitation preview needs the API client, and with it every contract;
+// the sign-in screen does not, and it is what the first load is for.
+const InvitationSignInPage = lazy(() =>
+  import("./pages/InvitationPage").then((module) => ({ default: module.InvitationSignInPage })),
+);
 
 function SignedOutRoutes() {
   return (
     <Routes>
-      <Route element={<InvitationSignInPage />} path="invitations/:token" />
+      <Route
+        element={
+          <Suspense
+            fallback={<SessionStatusPage bodyKey="auth.loadingBody" titleKey="auth.loadingTitle" />}
+          >
+            <InvitationSignInPage />
+          </Suspense>
+        }
+        path="invitations/:token"
+      />
       <Route element={<SignInPage />} path="*" />
     </Routes>
   );

@@ -939,6 +939,14 @@
       "place": "Dónde lo cataste",
       "room": "El ambiente",
       "table": "En la mesa"
+    },
+    "group": {
+      "glass": "En la copa",
+      "structure": "Estructura",
+      "flavourFinish": "Sabor y final",
+      "verdict": "Tu veredicto",
+      "valueExpectation": "Valor y expectativa",
+      "yourConclusion": "Con tus palabras"
     }
   },
   "dataRights": {

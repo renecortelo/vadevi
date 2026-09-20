@@ -939,6 +939,14 @@
       "place": "Onde a provou",
       "room": "O ambiente",
       "table": "À mesa"
+    },
+    "group": {
+      "glass": "No copo",
+      "structure": "Estrutura",
+      "flavourFinish": "Sabor e final",
+      "verdict": "O seu veredicto",
+      "valueExpectation": "Valor e expectativa",
+      "yourConclusion": "Nas suas palavras"
     }
   },
   "dataRights": {

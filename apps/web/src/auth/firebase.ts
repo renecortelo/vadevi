@@ -1,7 +1,7 @@
 import { getApp, getApps, initializeApp } from "firebase/app";
 import { connectAuthEmulator, getAuth, type Auth, type User } from "firebase/auth";
 
-import type { RuntimeConfigResponse } from "@vadevi/contracts";
+import type { RuntimeConfigResponse } from "@vadevi/contracts/session";
 
 type FirebaseRuntimeConfig = RuntimeConfigResponse["data"]["firebase"];
 

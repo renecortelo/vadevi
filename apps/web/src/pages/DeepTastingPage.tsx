@@ -453,177 +453,195 @@ export function DeepTastingPage() {
       <fieldset className="form-section tasting-section">
         <legend>{t("tasting.step.appearance")}</legend>
         <p className="section-help">{t("tasting.help.appearance")}</p>
-        <div className="form-grid">
+        {/* Two runs, as every step has: what the eye reads in the glass, then
+            the cues worth keeping. */}
+        <div className="form-group">
+          <h3>{t("tasting.group.glass")}</h3>
+          <div className="form-grid">
+            <label>
+              <span>{t("tasting.field.clarity")}</span>
+              <select
+                onChange={(event) =>
+                  update(
+                    "appearanceClarity",
+                    (event.target.value || undefined) as
+                      DeepTastingRequest["appearanceClarity"] | undefined,
+                  )
+                }
+                value={draft.payload.appearanceClarity ?? ""}
+              >
+                <option value="">{t("tasting.notSet")}</option>
+                <option value="clear">{t("tasting.value.clear")}</option>
+                <option value="hazy">{t("tasting.value.hazy")}</option>
+              </select>
+            </label>
+            <label>
+              <span>{t("tasting.field.colorFamily")}</span>
+              <select
+                onChange={(event) =>
+                  update(
+                    "appearanceColorFamily",
+                    (event.target.value || undefined) as
+                      DeepTastingRequest["appearanceColorFamily"] | undefined,
+                  )
+                }
+                value={draft.payload.appearanceColorFamily ?? ""}
+              >
+                <option value="">{t("tasting.notSet")}</option>
+                {colorFamiliesFor(wineType).map((value) => (
+                  <option key={value} value={value}>
+                    {t(`tasting.value.${value}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
           <label>
-            <span>{t("tasting.field.clarity")}</span>
+            <span>{t("tasting.field.hue")}</span>
             <select
-              onChange={(event) =>
-                update(
-                  "appearanceClarity",
-                  (event.target.value || undefined) as
-                    DeepTastingRequest["appearanceClarity"] | undefined,
-                )
-              }
-              value={draft.payload.appearanceClarity ?? ""}
+              onChange={(event) => update("appearanceHue", event.target.value || undefined)}
+              value={draft.payload.appearanceHue ?? ""}
             >
               <option value="">{t("tasting.notSet")}</option>
-              <option value="clear">{t("tasting.value.clear")}</option>
-              <option value="hazy">{t("tasting.value.hazy")}</option>
-            </select>
-          </label>
-          <label>
-            <span>{t("tasting.field.colorFamily")}</span>
-            <select
-              onChange={(event) =>
-                update(
-                  "appearanceColorFamily",
-                  (event.target.value || undefined) as
-                    DeepTastingRequest["appearanceColorFamily"] | undefined,
-                )
-              }
-              value={draft.payload.appearanceColorFamily ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {colorFamiliesFor(wineType).map((value) => (
-                <option key={value} value={value}>
-                  {t(`tasting.value.${value}`)}
+              {hueOptionsFor(wineType).map((code) => (
+                <option key={code} value={t(`tasting.hueOption.${code}`)}>
+                  {t(`tasting.hueOption.${code}`)}
                 </option>
               ))}
-            </select>
-          </label>
-        </div>
-        <label>
-          <span>{t("tasting.field.hue")}</span>
-          <select
-            onChange={(event) => update("appearanceHue", event.target.value || undefined)}
-            value={draft.payload.appearanceHue ?? ""}
-          >
-            <option value="">{t("tasting.notSet")}</option>
-            {hueOptionsFor(wineType).map((code) => (
-              <option key={code} value={t(`tasting.hueOption.${code}`)}>
-                {t(`tasting.hueOption.${code}`)}
-              </option>
-            ))}
-            {/* A hue saved earlier that this type's list does not offer — a value
+              {/* A hue saved earlier that this type's list does not offer — a value
                 from another language, or before the wine's type was known — is
                 kept as its own option so choosing it again is possible and it is
                 never silently dropped. */}
-            {draft.payload.appearanceHue !== undefined &&
-            draft.payload.appearanceHue !== "" &&
-            !hueOptionsFor(wineType).some(
-              (code) => t(`tasting.hueOption.${code}`) === draft.payload.appearanceHue,
-            ) ? (
-              <option value={draft.payload.appearanceHue}>{draft.payload.appearanceHue}</option>
-            ) : null}
-          </select>
-        </label>
-        <div className="form-grid form-grid--three">
-          <ScaleField
-            label={t("tasting.field.intensity")}
-            onChange={(value) => update("appearanceIntensity", value)}
-            value={draft.payload.appearanceIntensity}
-          />
-          <ScaleField
-            label={t("tasting.field.rimEvolution")}
-            onChange={(value) => update("rimEvolution", value)}
-            value={draft.payload.rimEvolution}
-          />
-          <ScaleField
-            label={t("tasting.field.viscosity")}
-            onChange={(value) => update("viscosity", value)}
-            value={draft.payload.viscosity}
-          />
+              {draft.payload.appearanceHue !== undefined &&
+              draft.payload.appearanceHue !== "" &&
+              !hueOptionsFor(wineType).some(
+                (code) => t(`tasting.hueOption.${code}`) === draft.payload.appearanceHue,
+              ) ? (
+                <option value={draft.payload.appearanceHue}>{draft.payload.appearanceHue}</option>
+              ) : null}
+            </select>
+          </label>
+          <div className="form-grid form-grid--three">
+            <ScaleField
+              label={t("tasting.field.intensity")}
+              onChange={(value) => update("appearanceIntensity", value)}
+              value={draft.payload.appearanceIntensity}
+            />
+            <ScaleField
+              label={t("tasting.field.rimEvolution")}
+              onChange={(value) => update("rimEvolution", value)}
+              value={draft.payload.rimEvolution}
+            />
+            <ScaleField
+              label={t("tasting.field.viscosity")}
+              onChange={(value) => update("viscosity", value)}
+              value={draft.payload.viscosity}
+            />
+          </div>
         </div>
-        <DescriptorPicker
-          descriptors={phaseDescriptors("appearance")}
-          locale={locale}
-          onChange={(value) => updateDescriptors("appearance", value)}
-          phase="appearance"
-          wineType={wineType}
-        />
-        <label>
-          <span>{t("tasting.field.appearanceText")}</span>
-          <textarea
-            maxLength={2000}
-            onChange={(event) => update("appearanceText", event.target.value || undefined)}
-            value={draft.payload.appearanceText ?? ""}
+        {/* The picker carries its own title ("memory cues"), so the group has
+            only the rule above it. */}
+        <div className="form-group">
+          <DescriptorPicker
+            descriptors={phaseDescriptors("appearance")}
+            locale={locale}
+            onChange={(value) => updateDescriptors("appearance", value)}
+            phase="appearance"
+            wineType={wineType}
           />
-        </label>
+          <label>
+            <span>{t("tasting.field.appearanceText")}</span>
+            <textarea
+              maxLength={2000}
+              onChange={(event) => update("appearanceText", event.target.value || undefined)}
+              value={draft.payload.appearanceText ?? ""}
+            />
+          </label>
+        </div>
       </fieldset>
     ),
     nose: (
       <fieldset className="form-section tasting-section">
         <legend>{t("tasting.step.nose")}</legend>
         <p className="section-help">{t("tasting.help.nose")}</p>
-        <label>
-          <span>{t("tasting.field.noseCondition")}</span>
-          <select
-            onChange={(event) =>
-              update(
-                "noseCondition",
-                (event.target.value || undefined) as
-                  DeepTastingRequest["noseCondition"] | undefined,
-              )
-            }
-            value={draft.payload.noseCondition ?? ""}
-          >
-            <option value="">{t("tasting.notSet")}</option>
-            <option value="clean">{t("tasting.value.clean")}</option>
-            <option value="possible_fault">{t("tasting.value.possible_fault")}</option>
-          </select>
-        </label>
         {/* A nose changes between the pour and the swirl, so it is read twice —
-            first as poured, then after swirling. The descriptors are shared; what
-            changes is how it opens up, caught by each phase's intensity and note. */}
-        <h3 className="tasting-subhead">{t("tasting.nosePhase.still")}</h3>
-        <div className="form-grid form-grid--three">
-          <ScaleField
-            label={t("tasting.field.intensity")}
-            onChange={(value) => update("noseIntensity", value)}
-            value={draft.payload.noseIntensity}
-          />
-          <ScaleField
-            label={t("tasting.field.freshness")}
-            onChange={(value) => update("noseFreshness", value)}
-            value={draft.payload.noseFreshness}
-          />
-          <ScaleField
-            label={t("tasting.field.development")}
-            onChange={(value) => update("noseDevelopment", value)}
-            value={draft.payload.noseDevelopment}
+            first as poured, then after swirling — and the cues come last. The
+            descriptors are shared; what changes is how it opens up, caught by
+            each phase's intensity and note. */}
+        <div className="form-group">
+          <h3>{t("tasting.nosePhase.still")}</h3>
+          <label>
+            <span>{t("tasting.field.noseCondition")}</span>
+            <select
+              onChange={(event) =>
+                update(
+                  "noseCondition",
+                  (event.target.value || undefined) as
+                    DeepTastingRequest["noseCondition"] | undefined,
+                )
+              }
+              value={draft.payload.noseCondition ?? ""}
+            >
+              <option value="">{t("tasting.notSet")}</option>
+              <option value="clean">{t("tasting.value.clean")}</option>
+              <option value="possible_fault">{t("tasting.value.possible_fault")}</option>
+            </select>
+          </label>
+          <div className="form-grid form-grid--three">
+            <ScaleField
+              label={t("tasting.field.intensity")}
+              onChange={(value) => update("noseIntensity", value)}
+              value={draft.payload.noseIntensity}
+            />
+            <ScaleField
+              label={t("tasting.field.freshness")}
+              onChange={(value) => update("noseFreshness", value)}
+              value={draft.payload.noseFreshness}
+            />
+            <ScaleField
+              label={t("tasting.field.development")}
+              onChange={(value) => update("noseDevelopment", value)}
+              value={draft.payload.noseDevelopment}
+            />
+          </div>
+          <label>
+            <span>{t("tasting.field.noseText")}</span>
+            <textarea
+              maxLength={2000}
+              onChange={(event) => update("noseText", event.target.value || undefined)}
+              value={draft.payload.noseText ?? ""}
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <h3>{t("tasting.nosePhase.swirled")}</h3>
+          <div className="form-grid">
+            <ScaleField
+              label={t("tasting.field.intensity")}
+              onChange={(value) => update("noseSwirledIntensity", value)}
+              value={draft.payload.noseSwirledIntensity}
+            />
+          </div>
+          <label>
+            <span>{t("tasting.field.noseSwirledText")}</span>
+            <textarea
+              maxLength={2000}
+              onChange={(event) => update("noseSwirledText", event.target.value || undefined)}
+              value={draft.payload.noseSwirledText ?? ""}
+            />
+          </label>
+        </div>
+        {/* The picker carries its own title ("memory cues"), so the group has
+            only the rule above it. */}
+        <div className="form-group">
+          <DescriptorPicker
+            descriptors={phaseDescriptors("nose")}
+            locale={locale}
+            onChange={(value) => updateDescriptors("nose", value)}
+            phase="nose"
+            wineType={wineType}
           />
         </div>
-        <label>
-          <span>{t("tasting.field.noseText")}</span>
-          <textarea
-            maxLength={2000}
-            onChange={(event) => update("noseText", event.target.value || undefined)}
-            value={draft.payload.noseText ?? ""}
-          />
-        </label>
-        <h3 className="tasting-subhead">{t("tasting.nosePhase.swirled")}</h3>
-        <div className="form-grid">
-          <ScaleField
-            label={t("tasting.field.intensity")}
-            onChange={(value) => update("noseSwirledIntensity", value)}
-            value={draft.payload.noseSwirledIntensity}
-          />
-        </div>
-        <label>
-          <span>{t("tasting.field.noseSwirledText")}</span>
-          <textarea
-            maxLength={2000}
-            onChange={(event) => update("noseSwirledText", event.target.value || undefined)}
-            value={draft.payload.noseSwirledText ?? ""}
-          />
-        </label>
-        <DescriptorPicker
-          descriptors={phaseDescriptors("nose")}
-          locale={locale}
-          onChange={(value) => updateDescriptors("nose", value)}
-          phase="nose"
-          wineType={wineType}
-        />
       </fieldset>
     ),
     palate: (
@@ -633,8 +651,8 @@ export function DeepTastingPage() {
         {/* The bead is a sparkling wine's own dimension — how lively, how fine —
             so it is asked only there and never clutters a still wine. */}
         {wineType === "sparkling" ? (
-          <>
-            <h3 className="tasting-subhead">{t("tasting.field.effervescence")}</h3>
+          <div className="form-group">
+            <h3>{t("tasting.field.effervescence")}</h3>
             <div className="form-grid">
               <ScaleField
                 label={t("tasting.field.effervescence")}
@@ -662,24 +680,88 @@ export function DeepTastingPage() {
                 </select>
               </label>
             </div>
-          </>
+          </div>
         ) : null}
-        <div className="scale-grid">
-          {(
-            [
-              ["sweetness", "sweetness"],
-              ["acidity", "acidity"],
-              ["tanninLevel", "tannin"],
-              ["alcoholPerception", "alcohol"],
-              ["body", "body"],
-              ["flavorIntensity", "flavorIntensity"],
-              ["finishLength", "finish"],
-              ["balance", "balance"],
-              ["complexity", "complexity"],
-            ] as const
-          )
-            .filter(([field]) => field !== "tanninLevel" || hasTannin(wineType))
-            .map(([field, label]) => (
+        {/* Structure first — what the wine is made of on the palate — then how
+            it tastes and how it ends, then the cues. */}
+        <div className="form-group">
+          <h3>{t("tasting.group.structure")}</h3>
+          <div className="scale-grid">
+            {(
+              [
+                ["sweetness", "sweetness"],
+                ["acidity", "acidity"],
+                ["tanninLevel", "tannin"],
+                ["alcoholPerception", "alcohol"],
+                ["body", "body"],
+              ] as const
+            )
+              .filter(([field]) => field !== "tanninLevel" || hasTannin(wineType))
+              .map(([field, label]) => (
+                <ScaleField
+                  key={field}
+                  label={t(`tasting.field.${label}`)}
+                  onChange={(value) => update(field, value)}
+                  value={draft.payload[field]}
+                />
+              ))}
+          </div>
+          <div className="form-grid">
+            {hasTannin(wineType) ? (
+              <label>
+                <span>{t("tasting.field.tanninTexture")}</span>
+                <select
+                  onChange={(event) =>
+                    update(
+                      "tanninTexture",
+                      (event.target.value || undefined) as
+                        DeepTastingRequest["tanninTexture"] | undefined,
+                    )
+                  }
+                  value={draft.payload.tanninTexture ?? ""}
+                >
+                  <option value="">{t("tasting.notSet")}</option>
+                  {(["silky", "fine", "grippy", "coarse"] as const).map((value) => (
+                    <option key={value} value={value}>
+                      {t(`tasting.value.${value}`)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ) : null}
+            <label>
+              <span>{t("tasting.field.palateTexture")}</span>
+              <select
+                onChange={(event) =>
+                  update(
+                    "palateTexture",
+                    (event.target.value || undefined) as
+                      DeepTastingRequest["palateTexture"] | undefined,
+                  )
+                }
+                value={draft.payload.palateTexture ?? ""}
+              >
+                <option value="">{t("tasting.notSet")}</option>
+                {(["lean", "round", "creamy", "oily", "other"] as const).map((value) => (
+                  <option key={value} value={value}>
+                    {t(`tasting.value.${value}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        </div>
+        <div className="form-group">
+          <h3>{t("tasting.group.flavourFinish")}</h3>
+          <div className="scale-grid">
+            {(
+              [
+                ["flavorIntensity", "flavorIntensity"],
+                ["finishLength", "finish"],
+                ["balance", "balance"],
+                ["complexity", "complexity"],
+              ] as const
+            ).map(([field, label]) => (
               <ScaleField
                 key={field}
                 label={t(`tasting.field.${label}`)}
@@ -687,66 +769,27 @@ export function DeepTastingPage() {
                 value={draft.payload[field]}
               />
             ))}
+          </div>
         </div>
-        <div className="form-grid">
-          {hasTannin(wineType) ? (
-            <label>
-              <span>{t("tasting.field.tanninTexture")}</span>
-              <select
-                onChange={(event) =>
-                  update(
-                    "tanninTexture",
-                    (event.target.value || undefined) as
-                      DeepTastingRequest["tanninTexture"] | undefined,
-                  )
-                }
-                value={draft.payload.tanninTexture ?? ""}
-              >
-                <option value="">{t("tasting.notSet")}</option>
-                {(["silky", "fine", "grippy", "coarse"] as const).map((value) => (
-                  <option key={value} value={value}>
-                    {t(`tasting.value.${value}`)}
-                  </option>
-                ))}
-              </select>
-            </label>
-          ) : null}
+        {/* The picker carries its own title ("memory cues"), so the group has
+            only the rule above it. */}
+        <div className="form-group">
+          <DescriptorPicker
+            descriptors={phaseDescriptors("palate")}
+            locale={locale}
+            onChange={(value) => updateDescriptors("palate", value)}
+            phase="palate"
+            wineType={wineType}
+          />
           <label>
-            <span>{t("tasting.field.palateTexture")}</span>
-            <select
-              onChange={(event) =>
-                update(
-                  "palateTexture",
-                  (event.target.value || undefined) as
-                    DeepTastingRequest["palateTexture"] | undefined,
-                )
-              }
-              value={draft.payload.palateTexture ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {(["lean", "round", "creamy", "oily", "other"] as const).map((value) => (
-                <option key={value} value={value}>
-                  {t(`tasting.value.${value}`)}
-                </option>
-              ))}
-            </select>
+            <span>{t("tasting.field.palateText")}</span>
+            <textarea
+              maxLength={2000}
+              onChange={(event) => update("palateText", event.target.value || undefined)}
+              value={draft.payload.palateText ?? ""}
+            />
           </label>
         </div>
-        <DescriptorPicker
-          descriptors={phaseDescriptors("palate")}
-          locale={locale}
-          onChange={(value) => updateDescriptors("palate", value)}
-          phase="palate"
-          wineType={wineType}
-        />
-        <label>
-          <span>{t("tasting.field.palateText")}</span>
-          <textarea
-            maxLength={2000}
-            onChange={(event) => update("palateText", event.target.value || undefined)}
-            value={draft.payload.palateText ?? ""}
-          />
-        </label>
       </fieldset>
     ),
     context: (
@@ -1062,128 +1105,139 @@ export function DeepTastingPage() {
       <fieldset className="form-section tasting-section">
         <legend>{t("tasting.step.conclusion")}</legend>
         <p className="section-help">{t("tasting.help.conclusion")}</p>
-        <div className="form-grid">
-          <label>
-            <span>{t("quickLog.tastedAt")}</span>
-            <input
-              onChange={(event) => {
-                // A cleared or half-typed field keeps the date it had.
-                const iso = fromLocalDateTimeInput(event.target.value);
-                if (iso !== null) update("tastedAt", iso);
-              }}
-              type="datetime-local"
-              value={toLocalDateTimeInput(draft.payload.tastedAt)}
-            />
-          </label>
-          <label>
-            <span>{t("quickLog.score")}</span>
-            <input
-              max={100}
-              min={0}
-              onChange={(event) =>
-                update(
-                  "score100",
-                  event.target.value === "" ? undefined : Number(event.target.value),
-                )
-              }
-              type="number"
-              value={draft.payload.score100 ?? ""}
-            />
-          </label>
-        </div>
-        <div className="form-grid form-grid--three">
-          <label>
-            <span>{t("quickLog.sentiment")}</span>
-            <select
-              onChange={(event) =>
-                update(
-                  "sentiment",
-                  (event.target.value || undefined) as DeepTastingRequest["sentiment"],
-                )
-              }
-              value={draft.payload.sentiment ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {(["dislike", "neutral", "like"] as const).map((value) => (
-                <option key={value} value={value}>
-                  {t(`quickLog.sentimentValue.${value}`)}
-                </option>
-              ))}
-            </select>
-          </label>
-          {(["wouldDrinkAgain", "wouldBuy"] as const).map((field) => (
-            <label key={field}>
-              <span>{t(field === "wouldBuy" ? "quickLog.buyAgain" : "quickLog.drinkAgain")}</span>
+        {/* The verdict, then what it was worth against what was expected, then
+            the reader's own words. */}
+        <div className="form-group">
+          <h3>{t("tasting.group.verdict")}</h3>
+          <div className="form-grid">
+            <label>
+              <span>{t("quickLog.tastedAt")}</span>
+              <input
+                onChange={(event) => {
+                  // A cleared or half-typed field keeps the date it had.
+                  const iso = fromLocalDateTimeInput(event.target.value);
+                  if (iso !== null) update("tastedAt", iso);
+                }}
+                type="datetime-local"
+                value={toLocalDateTimeInput(draft.payload.tastedAt)}
+              />
+            </label>
+            <label>
+              <span>{t("quickLog.score")}</span>
+              <input
+                max={100}
+                min={0}
+                onChange={(event) =>
+                  update(
+                    "score100",
+                    event.target.value === "" ? undefined : Number(event.target.value),
+                  )
+                }
+                type="number"
+                value={draft.payload.score100 ?? ""}
+              />
+            </label>
+          </div>
+          <div className="form-grid form-grid--three">
+            <label>
+              <span>{t("quickLog.sentiment")}</span>
               <select
                 onChange={(event) =>
                   update(
-                    field,
-                    (event.target.value || undefined) as DeepTastingRequest[typeof field],
+                    "sentiment",
+                    (event.target.value || undefined) as DeepTastingRequest["sentiment"],
                   )
                 }
-                value={draft.payload[field] ?? ""}
+                value={draft.payload.sentiment ?? ""}
               >
                 <option value="">{t("tasting.notSet")}</option>
-                {(["yes", "no", "unsure"] as const).map((value) => (
+                {(["dislike", "neutral", "like"] as const).map((value) => (
                   <option key={value} value={value}>
-                    {t(`commonChoice.${value}`)}
+                    {t(`quickLog.sentimentValue.${value}`)}
                   </option>
                 ))}
               </select>
             </label>
-          ))}
-        </div>
-        <div className="scale-grid">
-          {(
-            [
-              ["perceivedValue", "perceivedValue"],
-              ["pairingSuccess", "pairingSuccess"],
-              ["tastingConfidence", "confidence"],
-            ] as const
-          ).map(([field, label]) => (
-            <ScaleField
-              key={field}
-              label={t(`tasting.field.${label}`)}
-              onChange={(value) => update(field, value)}
-              value={draft.payload[field]}
-            />
-          ))}
-        </div>
-        <label>
-          <span>{t("tasting.field.expectation")}</span>
-          <select
-            onChange={(event) =>
-              update(
-                "expectationResult",
-                (event.target.value || undefined) as DeepTastingRequest["expectationResult"],
-              )
-            }
-            value={draft.payload.expectationResult ?? ""}
-          >
-            <option value="">{t("tasting.notSet")}</option>
-            {(["below", "met", "above", "unknown"] as const).map((value) => (
-              <option key={value} value={value}>
-                {t(`tasting.value.${value}`)}
-              </option>
+            {(["wouldDrinkAgain", "wouldBuy"] as const).map((field) => (
+              <label key={field}>
+                <span>{t(field === "wouldBuy" ? "quickLog.buyAgain" : "quickLog.drinkAgain")}</span>
+                <select
+                  onChange={(event) =>
+                    update(
+                      field,
+                      (event.target.value || undefined) as DeepTastingRequest[typeof field],
+                    )
+                  }
+                  value={draft.payload[field] ?? ""}
+                >
+                  <option value="">{t("tasting.notSet")}</option>
+                  {(["yes", "no", "unsure"] as const).map((value) => (
+                    <option key={value} value={value}>
+                      {t(`commonChoice.${value}`)}
+                    </option>
+                  ))}
+                </select>
+              </label>
             ))}
-          </select>
-        </label>
-        <label className="check-row">
-          <input
-            checked={draft.payload.memorable ?? false}
-            onChange={(event) => update("memorable", event.target.checked)}
-            type="checkbox"
-          />
-          <span>{t("tasting.field.memorable")}</span>
-        </label>
-        <label>
-          <span>{t("tasting.field.conclusionText")}</span>
-          <textarea
-            maxLength={2000}
-            onChange={(event) => update("conclusionText", event.target.value || undefined)}
-            value={draft.payload.conclusionText ?? ""}
-          />
-        </label>
+          </div>
+        </div>
+        <div className="form-group">
+          <h3>{t("tasting.group.valueExpectation")}</h3>
+          <div className="scale-grid">
+            {(
+              [
+                ["perceivedValue", "perceivedValue"],
+                ["pairingSuccess", "pairingSuccess"],
+                ["tastingConfidence", "confidence"],
+              ] as const
+            ).map(([field, label]) => (
+              <ScaleField
+                key={field}
+                label={t(`tasting.field.${label}`)}
+                onChange={(value) => update(field, value)}
+                value={draft.payload[field]}
+              />
+            ))}
+          </div>
+          <label>
+            <span>{t("tasting.field.expectation")}</span>
+            <select
+              onChange={(event) =>
+                update(
+                  "expectationResult",
+                  (event.target.value || undefined) as DeepTastingRequest["expectationResult"],
+                )
+              }
+              value={draft.payload.expectationResult ?? ""}
+            >
+              <option value="">{t("tasting.notSet")}</option>
+              {(["below", "met", "above", "unknown"] as const).map((value) => (
+                <option key={value} value={value}>
+                  {t(`tasting.value.${value}`)}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="check-row">
+            <input
+              checked={draft.payload.memorable ?? false}
+              onChange={(event) => update("memorable", event.target.checked)}
+              type="checkbox"
+            />
+            <span>{t("tasting.field.memorable")}</span>
+          </label>
+        </div>
+        <div className="form-group">
+          <h3>{t("tasting.group.yourConclusion")}</h3>
+          <label>
+            <span>{t("tasting.field.conclusionText")}</span>
+            <textarea
+              maxLength={2000}
+              onChange={(event) => update("conclusionText", event.target.value || undefined)}
+              value={draft.payload.conclusionText ?? ""}
+            />
+          </label>
+        </div>
       </fieldset>
     ),
   };

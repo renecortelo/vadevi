@@ -939,6 +939,14 @@
       "place": "Wo Sie verkostet haben",
       "room": "Die Umgebung",
       "table": "Auf dem Tisch"
+    },
+    "group": {
+      "glass": "Im Glas",
+      "structure": "Struktur",
+      "flavourFinish": "Geschmack und Abgang",
+      "verdict": "Ihr Urteil",
+      "valueExpectation": "Wert und Erwartung",
+      "yourConclusion": "In Ihren Worten"
     }
   },
   "dataRights": {

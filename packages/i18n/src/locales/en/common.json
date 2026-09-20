@@ -939,6 +939,14 @@
       "place": "Where you tasted it",
       "room": "The room",
       "table": "On the table"
+    },
+    "group": {
+      "glass": "In the glass",
+      "structure": "Structure",
+      "flavourFinish": "Flavour and finish",
+      "verdict": "Your verdict",
+      "valueExpectation": "Value and expectation",
+      "yourConclusion": "In your own words"
     }
   },
   "dataRights": {

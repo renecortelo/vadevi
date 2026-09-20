@@ -11,7 +11,6 @@ import {
   HealthResponseSchema,
   InvitationPreviewResponseSchema,
   RemoveMemberRequestSchema,
-  RuntimeConfigResponseSchema,
   SpaceDetailResponseSchema,
   UpdateProfileRequestSchema,
   type BootstrapResponse,
@@ -21,7 +20,6 @@ import {
   type HealthResponse,
   type InvitationPreviewResponse,
   type RemoveMemberRequest,
-  type RuntimeConfigResponse,
   type SpaceDetailResponse,
   type UpdateProfileRequest,
   ConfirmIdentificationRequestSchema,
@@ -110,16 +108,6 @@ export async function getHealth(signal?: AbortSignal): Promise<HealthResponse> {
   }
 
   return HealthResponseSchema.parse(await response.json());
-}
-
-export async function getRuntimeConfig(signal?: AbortSignal): Promise<RuntimeConfigResponse> {
-  const response = await fetch("/runtime-config", {
-    headers: { Accept: "application/json" },
-    ...(signal === undefined ? {} : { signal }),
-  });
-
-  if (!response.ok) throw await apiError(response);
-  return RuntimeConfigResponseSchema.parse(await response.json());
 }
 
 export async function getBootstrap(

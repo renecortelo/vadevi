@@ -939,6 +939,14 @@
       "place": "Où vous l’avez dégusté",
       "room": "L’ambiance",
       "table": "À table"
+    },
+    "group": {
+      "glass": "Dans le verre",
+      "structure": "Structure",
+      "flavourFinish": "Saveur et finale",
+      "verdict": "Votre verdict",
+      "valueExpectation": "Valeur et attente",
+      "yourConclusion": "Avec vos mots"
     }
   },
   "dataRights": {

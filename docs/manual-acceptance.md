@@ -354,17 +354,17 @@ A wine holds many tastings, and they used to have nowhere to live.
 Needs `ACCESS_MODE=allowlist` and your address in `ADMIN_EMAILS`, which the
 maintainer's deployment has.
 
-87. [ ] **About → Allowed accounts** lists the administrator, and each listed
+87. [x] **About → Allowed accounts** lists the administrator, and each listed
         e-mail says whether it has signed in.
-88. [ ] Sign in with a Google account that is **not** listed (a second account,
+88. [x] Sign in with a Google account that is **not** listed (a second account,
         or a friend's). The screen says the deployment is private, shows the
         address to pass on, and offers only _Sign out_ — no cellar, no Space is
         created (check the list: the address does not appear as signed in).
-89. [ ] Add that address on the admin page, sign in with it again: it comes in.
+89. [x] Add that address on the admin page, sign in with it again: it comes in.
         Remove it: on its next request it is refused, and its data is still
         there when it is re-added.
 
-90. [ ] **The second door** (needs `ACCESS_TEAM_DOMAIN` and `ACCESS_ADMIN_AUD`,
+90. [x] **The second door** (needs `ACCESS_TEAM_DOMAIN` and `ACCESS_ADMIN_AUD`,
         which the maintainer's deployment has): open **About → Allowed
         accounts** in a fresh browser. Cloudflare Access asks for a one-time
         PIN sent to your e-mail before the page loads; after it, the list
@@ -377,12 +377,12 @@ maintainer's deployment has.
 The first wave of fixes from the external review. Each has a regression
 test; these are the parts worth a pair of eyes and a real deployment.
 
-91. [ ] **A co-member's prose stays theirs, in export.** In a shared Space, a
+91. [x] **A co-member's prose stays theirs, in export.** In a shared Space, a
         second member logs a quick note on one of your wines with a comment and
         a "with" text. As the owner, **Data and privacy → Export → JSON**: their
         note is there with its score, and `comment` and `foodText` are `null`.
         The CSV of tastings likewise. Their own export has their words.
-92. [ ] **…and in Vicenç.** With Vectorize on (the maintainer's deployment),
+92. [x] **…and in Vicenç.** With Vectorize on (the maintainer's deployment),
         ask Vicenç for something only the second member's comment says. It does
         not surface their note as "your note", nor the wine by it. Your own
         note, asked the same way, is found. (After the deploy, the maintainer
@@ -393,10 +393,10 @@ test; these are the parts worth a pair of eyes and a real deployment.
         succeeds, the survivor lists the union in order without the duplicate,
         an event that poured the loser now shows the survivor, and the loser
         is gone from the list.
-94. [ ] **A page of 100.** With `?limit=100` on the wines request (or a cellar
+94. [x] **A page of 100.** With `?limit=100` on the wines request (or a cellar
         that large), the list answers. Export → photographs with a long
         selection answers too.
-95. [ ] **Sort by score, page through.** With unscored wines in the cellar,
+95. [x] **Sort by score, page through.** With unscored wines in the cellar,
         page through the score sort to the end: every wine appears once, the
         unscored ones last.
 96. [ ] **A screen that fails is not a white page.** On a tasting form, clear
@@ -404,22 +404,22 @@ test; these are the parts worth a pair of eyes and a real deployment.
         nothing breaks. (The boundary itself: open the app in a tab, deploy
         a new bundle, then navigate to a screen not yet visited — the
         explanation appears with _Reload Va de Vi_, not a blank page.)
-97. [ ] **A misspelled door fails closed.** Not to try on the live deployment:
+97. [x] **A misspelled door fails closed.** Not to try on the live deployment:
         `pnpm validate:env --config wrangler.preview.jsonc` passes as it is,
         and with `ACCESS_MODE` misspelled in a copy of the file it refuses,
         as does `pnpm deploy:preview --config <copy>` before touching anything.
 
-98. [ ] **Keep my account.** Data and privacy → type DELETE → schedule. Reload
+98. [x] **Keep my account.** Data and privacy → type DELETE → schedule. Reload
         the page: the pending purge and its date are shown, with _Keep my
         account_. Press it: the job is canceled, and a reload shows nothing
         pending. (Then, if you are the only owner of a shared Space, the
         schedule itself is refused and names the Space — as is leaving it.)
-99. [ ] **Currencies are a list.** Cellar, Shop and Wishlist offer EUR, USD,
+99. [x] **Currencies are a list.** Cellar, Shop and Wishlist offer EUR, USD,
         GBP, CHF and MXN in a select; a price in USD shows as dollars.
-100.  [ ] **A cleared field stays cleared.** On a saved deep tasting, empty the
+100.  [x] **A cleared field stays cleared.** On a saved deep tasting, empty the
           score and one written section, save, reload: both are empty. Set the
           score to 0: it shows 0, not empty.
-101.  [ ] **Too many photographs at once.** Export → select photographs whose
+101.  [x] **Too many photographs at once.** Export → select photographs whose
           sizes add to more than 48 MB (or trust the test): the request is
           refused with the total in the message, and a smaller selection
           downloads.

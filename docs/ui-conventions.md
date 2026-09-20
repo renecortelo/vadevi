@@ -68,6 +68,16 @@ Every screen opens the same way, `.page-heading`: eyebrow, title, one
 sentence, at the same distances from the same top edge, whatever the
 container.
 
+## Forms
+
+A long form is short runs, each under a title: `form-group` with an `h3`,
+divided from the last by a rule. Every step of the deep tasting is built
+that way — in the glass / memory cues; as poured / after swirling / memory
+cues; the bead (sparkling only) / structure / flavour and finish / memory
+cues; the bottle / the place / the room / the table; your verdict / value and
+expectation / in your own words. The bar of actions that follows the form
+is a card like the sections above it, not a strip.
+
 ## Layout
 
 Phone first: 320px is the narrowest supported width, and the e2e suite fails

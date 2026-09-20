@@ -1,4 +1,4 @@
-import type { RuntimeConfigResponse } from "@vadevi/contracts";
+import type { RuntimeConfigResponse } from "@vadevi/contracts/session";
 import { createContext, useContext } from "react";
 
 import type { FirebaseUser } from "./firebase";

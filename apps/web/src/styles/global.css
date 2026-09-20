@@ -1775,10 +1775,24 @@ p {
 }
 
 /* The card's actions wrap as needed, all one shape and one size, a little
-   tighter than the page's buttons and still 44px tall. */
-.wine-card__actions .action-link {
+   tighter than the page's buttons and still 44px tall. The tastings toggle
+   sits below the row, in its own section, and is the same button: it used to
+   miss this rule and come out a size larger, with a wider gap above it. */
+.wine-card__actions .action-link,
+.wine-card .tasting-history__toggle {
   font-size: var(--text-sm);
   padding-inline: var(--space-3);
+}
+
+/* Below the row of actions by the row's own gap, not a section's margin; and
+   the rows it opens to read at the same scale as the buttons above them. */
+.wine-card .tasting-history {
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+}
+
+.wine-card .tasting-history__list {
+  font-size: var(--text-sm);
 }
 
 /* On a phone the photo column is the narrower one and the body gets the room. */
@@ -3033,25 +3047,27 @@ p {
   font-weight: 750;
 }
 
-/* Five steps do not fit five columns on a phone: "Conclusion" was cut in half.
-   Below tablet width the row scrolls sideways and snaps step by step, with the
-   active one scrolled into view by the page. */
+/* Five equal columns at every width, and never a scroll: on a phone the
+   number bubble goes, the padding goes, and the longest word may break
+   across two lines at the narrowest widths rather than push the row off the
+   edge. Equal columns read as one thing; a row that scrolled, or that gave
+   each word its own width, read as five. */
 @media (max-width: 40rem) {
   .tasting-progress {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .tasting-progress::-webkit-scrollbar {
-    display: none;
+    gap: var(--space-1);
   }
 
   .tasting-progress button {
-    flex: 0 0 auto;
-    min-inline-size: 6.5rem;
-    scroll-snap-align: start;
+    font-size: 0.7rem;
+    hyphens: auto;
+    letter-spacing: -0.01em;
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
+    padding-inline: 0;
+  }
+
+  .tasting-progress button span {
+    display: none;
   }
 }
 
@@ -3104,14 +3120,18 @@ p {
   min-block-size: 2.25rem;
 }
 
+/* The bar of actions that follows the form down the page. A card like the
+   sections above it — bordered on every side, rounded, padded inside — rather
+   than a square strip with its text against the left edge. */
 .tasting-actions {
   background: rgb(var(--color-surface-rgb) / 97%);
-  border-block-start: 1px solid var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
   box-shadow: 0 -8px 24px rgb(var(--color-ink-rgb) / 12%);
   bottom: 4.2rem;
   display: grid;
   gap: var(--space-3);
-  padding-block: var(--space-4);
+  padding: var(--space-4);
   position: sticky;
   z-index: 8;
 }
@@ -3126,7 +3146,7 @@ p {
 @media (max-width: 40rem) {
   .tasting-actions {
     gap: var(--space-2);
-    padding-block: var(--space-3);
+    padding: var(--space-3);
   }
 
   .tasting-actions__buttons {
@@ -3287,19 +3307,6 @@ p {
   .scale-grid,
   .conflict-text-grid {
     grid-template-columns: 1fr;
-  }
-
-  .tasting-progress {
-    display: flex;
-    overflow-x: auto;
-  }
-
-  .tasting-progress button {
-    flex: 0 0 auto;
-  }
-
-  .tasting-progress button span {
-    display: none;
   }
 }
 
@@ -3868,6 +3875,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+}
+
+/* Three buttons inside a form, at the form's scale — not the page's. */
+.venue-picker__actions .action-link {
+  font-size: var(--text-sm);
+  padding-inline: var(--space-3);
 }
 
 .venue-picker__notice {

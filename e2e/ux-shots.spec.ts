@@ -89,15 +89,20 @@ test.describe("UX contact sheet", () => {
           await page.screenshot({ fullPage: true, path: resolve(directory, `${name}.png`) });
         }
 
-        // The tasting's context step, the longest form in the app.
+        // The tasting's other steps: the nose and the palate, grouped into
+        // titled runs like the context, and the context itself, the longest
+        // form in the app.
         await page.goto(`/wines/${wineId}/taste`);
         await page.waitForLoadState("networkidle");
-        await page.getByRole("button", { name: /context/i }).click();
-        await page.waitForTimeout(300);
-        await page.screenshot({
-          fullPage: true,
-          path: resolve(directory, "taste-context.png"),
-        });
+        for (const [name, pattern] of [
+          ["taste-nose", /nose/i],
+          ["taste-palate", /palate/i],
+          ["taste-context", /context/i],
+        ] as const) {
+          await page.getByRole("button", { name: pattern }).click();
+          await page.waitForTimeout(300);
+          await page.screenshot({ fullPage: true, path: resolve(directory, `${name}.png`) });
+        }
 
         await context.close();
       }

@@ -939,6 +939,14 @@
       "place": "On el vas tastar",
       "room": "L’ambient",
       "table": "A la taula"
+    },
+    "group": {
+      "glass": "A la copa",
+      "structure": "Estructura",
+      "flavourFinish": "Sabor i final",
+      "verdict": "El teu veredicte",
+      "valueExpectation": "Valor i expectativa",
+      "yourConclusion": "Amb les teves paraules"
     }
   },
   "dataRights": {

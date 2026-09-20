@@ -939,6 +939,14 @@
       "place": "Waar je hebt geproefd",
       "room": "De omgeving",
       "table": "Op tafel"
+    },
+    "group": {
+      "glass": "In het glas",
+      "structure": "Structuur",
+      "flavourFinish": "Smaak en afdronk",
+      "verdict": "Jouw oordeel",
+      "valueExpectation": "Waarde en verwachting",
+      "yourConclusion": "In je eigen woorden"
     }
   },
   "dataRights": {
