@@ -439,9 +439,14 @@ async function allowedSpaces(
 
 /**
  * The reader's whole collection across the Spaces they may see, ranked by their
- * own score, with the total and how many are scored. Bounded to 100 per Space,
- * which is where the count is honest for all but the largest cellars.
+ * own score, with the total and how many are scored. The whole of it: the
+ * list is followed page by page to its end (bounded far above any household
+ * cellar), so "how many wines do I have" is a count, not a first page
+ * presented as one.
  */
+const overviewPageLimit = 100;
+const overviewMaxPages = 20;
+
 async function loadCollectionOverview(
   database: D1Database,
   principal: FirebasePrincipal,
@@ -449,14 +454,21 @@ async function loadCollectionOverview(
 ): Promise<{ scored: number; total: number; wines: AssistantSearchResult[] }> {
   const all = new Map<string, AssistantSearchResult>();
   for (const space of spaces) {
-    const response = await listWines(database, {
-      limit: 100,
-      principal,
-      sort: "recent",
-      spaceId: space.id,
-    });
-    for (const wine of response?.data ?? []) {
-      all.set(`${space.id}:${wine.id}`, { spaceId: space.id, spaceName: space.name, wine });
+    let cursor: string | undefined;
+    for (let page = 0; page < overviewMaxPages; page += 1) {
+      const response = await listWines(database, {
+        ...(cursor === undefined ? {} : { cursor }),
+        limit: overviewPageLimit,
+        principal,
+        sort: "recent",
+        spaceId: space.id,
+      });
+      for (const wine of response?.data ?? []) {
+        all.set(`${space.id}:${wine.id}`, { spaceId: space.id, spaceName: space.name, wine });
+      }
+      const next = response?.page.nextCursor;
+      if (!response?.page.hasMore || next === null || next === undefined) break;
+      cursor = next;
     }
   }
   const wines = [...all.values()].sort(

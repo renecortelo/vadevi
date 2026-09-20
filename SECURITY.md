@@ -2,8 +2,10 @@
 
 ## Reporting a vulnerability
 
-Report suspected security issues **privately** to the repository owner. Do not
-open a public issue containing credentials, personal data, or a working exploit.
+Report suspected security issues **privately**, through the repository's
+_Report a vulnerability_ form under its **Security** tab (GitHub's private
+vulnerability reporting), which reaches the maintainer alone. Do not open a
+public issue containing credentials, personal data, or a working exploit.
 
 Please include what you did, what happened, and what you expected — a minimal
 reproduction is worth more than a scanner report. If a proof of concept touches

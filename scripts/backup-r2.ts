@@ -39,8 +39,12 @@ const config = configFlag === -1 ? "wrangler.preview.jsonc" : (process.argv[conf
 const positional = process.argv
   .slice(2)
   .filter((argument, index, all) => !argument.startsWith("--") && all[index - 1] !== "--config");
+// By default the backup goes beside the repository, not inside it: it holds
+// every photograph in the Space, and a directory inside the working tree is
+// one careless `git add` from a public record. (The pattern is ignored too,
+// and the release scan refuses it; this is the first of three lines.)
 const outputDirectory = resolve(
-  positional[0] ?? `r2-backup-${new Date().toISOString().slice(0, 10)}`,
+  positional[0] ?? `../vadevi-backups/r2-backup-${new Date().toISOString().slice(0, 10)}`,
 );
 
 function fail(message: string): never {

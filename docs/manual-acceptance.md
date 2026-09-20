@@ -409,6 +409,21 @@ test; these are the parts worth a pair of eyes and a real deployment.
         and with `ACCESS_MODE` misspelled in a copy of the file it refuses,
         as does `pnpm deploy:preview --config <copy>` before touching anything.
 
+98. [ ] **Keep my account.** Data and privacy → type DELETE → schedule. Reload
+        the page: the pending purge and its date are shown, with _Keep my
+        account_. Press it: the job is canceled, and a reload shows nothing
+        pending. (Then, if you are the only owner of a shared Space, the
+        schedule itself is refused and names the Space — as is leaving it.)
+99. [ ] **Currencies are a list.** Cellar, Shop and Wishlist offer EUR, USD,
+        GBP, CHF and MXN in a select; a price in USD shows as dollars.
+100.  [ ] **A cleared field stays cleared.** On a saved deep tasting, empty the
+          score and one written section, save, reload: both are empty. Set the
+          score to 0: it shows 0, not empty.
+101.  [ ] **Too many photographs at once.** Export → select photographs whose
+          sizes add to more than 48 MB (or trust the test): the request is
+          refused with the total in the message, and a smaller selection
+          downloads.
+
 ## Recording results
 
 For each failure note: what you did, what happened, what you expected, and

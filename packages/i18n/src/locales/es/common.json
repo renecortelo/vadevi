@@ -52,6 +52,9 @@
     "reload": "Recargar Va de Vi",
     "home": "Volver al inicio"
   },
+  "lists": {
+    "firstOnly": "Se muestran los primeros {{count}}. La exportación de Datos y privacidad lo incluye todo."
+  },
   "space": {
     "switchLabel": "Espacio activo",
     "switchError": "No se pudo abrir ese Espacio."
@@ -940,7 +943,10 @@
   },
   "dataRights": {
     "accountScheduled": "La eliminación de la cuenta está programada dentro de {{days}} días.",
+    "accountPending": "Tu cuenta y tu Espacio personal se purgan después del {{purgeAfter}} salvo que lo canceles.",
+    "accountCanceled": "La eliminación de la cuenta se ha cancelado.",
     "actionError": "No funcionó. Revisa tu conexión e inténtalo de nuevo.",
+    "archiveTooLarge": "Esa selección ocupa {{requested}} MB; un archivo admite hasta {{max}} MB. Elige menos fotos y descarga por partes.",
     "body": "Exporta lo que es tuyo, revisa el uso y borra cuando quieras.",
     "budgetStatus": {
       "ok": "Dentro del presupuesto",
@@ -949,6 +955,7 @@
       "capped": "En el límite — se usa la vía sin conexión"
     },
     "cancelDeletionAction": "Cancelar la eliminación",
+    "cancelAccountAction": "Conservar mi cuenta",
     "confirmationLabel": "Nombre del Espacio",
     "csvAction": "Exportar CSV de {{dataset}}",
     "csvReady": "Se descargó el CSV de {{dataset}}.",
@@ -960,7 +967,7 @@
       "prices": "precios"
     },
     "deleteAccountAction": "Programar la eliminación de la cuenta",
-    "deleteAccountBody": "Esto elimina tu Espacio personal y los datos privados. Los registros compartidos se quedan en su Espacio. Se requiere un inicio de sesión reciente.",
+    "deleteAccountBody": "Elimina tu Espacio personal y los datos privados; lo compartido se queda en su Espacio. Requiere un acceso reciente. El mantenedor borra el registro de acceso Google al terminar la purga.",
     "deleteAccountLabel": "Escribe DELETE para confirmar",
     "deleteAccountTitle": "Eliminar tu cuenta",
     "deleteSpaceAction": "Programar la eliminación",
@@ -976,6 +983,7 @@
     "eyebrow": "Tus datos",
     "leaveAction": "Salir de este Espacio",
     "leaveBody": "Los registros compartidos se quedan en el Espacio. Pierdes el acceso en tu siguiente petición.",
+    "lastOwnerError": "Eres la única persona propietaria de {{names}}. Nombra antes a otra entre sus miembros, o elimina ese Espacio.",
     "leaveTitle": "Salir de este Espacio",
     "leftSpace": "Has salido del Espacio.",
     "mediaAction": "Descargar {{count}} foto seleccionada",

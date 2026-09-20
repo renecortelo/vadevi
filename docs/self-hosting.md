@@ -516,8 +516,14 @@ The bucket, which takes its list of objects from the database and checks every
 one against the hash recorded there:
 
 ```bash
-pnpm backup:r2 ./r2-backup --config wrangler.production.jsonc
+pnpm backup:r2 ../vadevi-backups/r2-backup --config wrangler.production.jsonc
 ```
+
+Keep it outside the working tree — the default, with no directory given, is
+`../vadevi-backups/`: a backup holds every photograph in the Space, and the
+patterns are ignored and refused by the release scan besides, but a directory
+that is not there cannot be committed by mistake. The database export above
+is a `backup*.sql` for the same reason.
 
 It needs no credential beyond the `wrangler` login you already have, verifies
 each object rather than assuming the download worked, and exits non-zero if a
@@ -543,6 +549,28 @@ pnpm exec wrangler d1 execute vadevi-restore-test --remote --command "SELECT COU
 Members can also export their own data from **Data and privacy** in the app —
 versioned JSON, selected CSV, and explicitly chosen photos. That is portability
 for them, not a backup for you.
+
+## When someone deletes their account
+
+The application does its half on the schedule: a month after the confirmation
+(cancelable until then, from the same screen), the personal Space and its
+photographs are purged, the account is detached from every shared Space, and
+the account row is anonymised — name, e-mail, avatar and the Firebase uid
+are all removed, so a later sign-in with the same Google account starts a new
+account rather than finding a row that says it is gone.
+
+The other half is yours. Firebase keeps its own record of the sign-in — the
+Google account's e-mail, display name and photo URL — and this application
+holds no credential that could remove it. Once the purge has completed (the
+job in **Data and privacy** says so, or `SELECT * FROM deletion_jobs WHERE
+target_type = 'account' AND state = 'completed'`), open **Firebase console →
+Authentication → Users**, find the address, and delete the user. The
+application promises this in its privacy notice on your behalf, so do it
+within the month.
+
+An account that is the only owner of a shared Space cannot be deleted, nor
+leave that Space, until another member is made an owner or the Space is
+deleted: a Space with no owner has nobody who can invite, remove, or delete.
 
 ## What this is not
 

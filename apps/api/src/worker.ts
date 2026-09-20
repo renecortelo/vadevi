@@ -2,6 +2,7 @@ import { createSemanticNotePort } from "./adapters/semantic-notes";
 import { createApi } from "./app";
 import { purgeExpiredActionDraftContent } from "./repositories/action-drafts";
 import { runDueDeletionJobs } from "./repositories/deletion";
+import { runHousekeeping } from "./repositories/housekeeping";
 import { purgeExpiredIdentifications } from "./repositories/identification";
 import { indexPendingNoteEmbeddings } from "./repositories/note-embeddings";
 import type { WorkerBindings } from "./types";
@@ -13,6 +14,9 @@ export default {
   scheduled: async (controller, environment) => {
     if (environment.DB === undefined) return;
     const nowIso = new Date(controller.scheduledTime).toISOString();
+    // Everything with an expiry that has passed: caches, rate windows,
+    // idempotency keys, old counters, photographs reserved but never sent.
+    await runHousekeeping(environment.DB, environment.MEDIA, nowIso);
     await purgeExpiredActionDraftContent(environment.DB, nowIso);
     // An abandoned identification proposal must not linger past its window.
     await purgeExpiredIdentifications(environment.DB, nowIso);

@@ -1,21 +1,23 @@
-import type {
-  Bottle,
-  BottleListResponse,
-  BottleResponse,
-  CreateBottleRequest,
-  CreatePriceObservationRequest,
-  CreatePurchaseRequest,
-  CreateWishlistItemRequest,
-  InventorySummary,
-  PriceObservation,
-  PriceObservationListResponse,
-  PriceObservationResponse,
-  PurchaseResponse,
-  UpdateBottleRequest,
-  UpdateWishlistItemRequest,
-  WishlistItem,
-  WishlistItemResponse,
-  WishlistListResponse,
+import {
+  type Bottle,
+  type BottleListResponse,
+  type BottleResponse,
+  type CreateBottleRequest,
+  type CreatePriceObservationRequest,
+  type CreatePurchaseRequest,
+  type CreateWishlistItemRequest,
+  type CurrencyCode,
+  type InventorySummary,
+  listBound,
+  type PriceObservation,
+  type PriceObservationListResponse,
+  type PriceObservationResponse,
+  type PurchaseResponse,
+  type UpdateBottleRequest,
+  type UpdateWishlistItemRequest,
+  type WishlistItem,
+  type WishlistItemResponse,
+  type WishlistListResponse,
 } from "@vadevi/contracts";
 import { ulid } from "ulid";
 
@@ -51,7 +53,7 @@ type BottleRow = {
 
 type PurchaseRow = {
   created_at: string;
-  currency: string;
+  currency: CurrencyCode;
   evidence_media_id: string | null;
   id: string;
   location_text: string | null;
@@ -77,7 +79,7 @@ type WishlistRow = {
   source_id: string | null;
   state: WishlistItem["state"];
   target_amount_minor: number | null;
-  target_currency: string | null;
+  target_currency: CurrencyCode | null;
   updated_at: string;
   version: number;
   wine_id: string;
@@ -87,7 +89,7 @@ type PriceRow = {
   amount_minor: number;
   channel: PriceObservation["channel"];
   created_at: string;
-  currency: string;
+  currency: CurrencyCode;
   evidence_media_id: string | null;
   id: string;
   location_text: string | null;
@@ -323,7 +325,7 @@ export async function listBottles(
         opened_at, finished_at, gifted_at, removed_at, notes, version, created_at, updated_at
       FROM bottles WHERE space_id = ? AND deleted_at IS NULL
         AND (? IS NULL OR state = ?) AND (? IS NULL OR wine_id = ?)
-      ORDER BY acquired_at DESC, id DESC LIMIT 250`,
+      ORDER BY acquired_at DESC, id DESC LIMIT ?`,
     )
     .bind(
       options.spaceId,
@@ -331,11 +333,14 @@ export async function listBottles(
       options.state ?? null,
       options.wineId ?? null,
       options.wineId ?? null,
+      listBound + 1,
     )
     .all<BottleRow>();
+  // One past the bound is read, so the answer can say whether there is more.
   return {
     data: {
-      bottles: result.results.map(bottleResource),
+      bottles: result.results.slice(0, listBound).map(bottleResource),
+      hasMore: result.results.length > listBound,
       inventory: await inventorySummary(database, options.spaceId),
     },
   };
@@ -813,11 +818,14 @@ export async function listWishlist(
       FROM wishlist_items WHERE space_id = ? AND deleted_at IS NULL
         AND (? IS NULL OR state = ?)
       ORDER BY CASE state WHEN 'active' THEN 0 ELSE 1 END, priority DESC, updated_at DESC, id DESC
-      LIMIT 250`,
+      LIMIT ?`,
     )
-    .bind(options.spaceId, options.state ?? null, options.state ?? null)
+    .bind(options.spaceId, options.state ?? null, options.state ?? null, listBound + 1)
     .all<WishlistRow>();
-  return { data: result.results.map(wishlistResource) };
+  return {
+    data: result.results.slice(0, listBound).map(wishlistResource),
+    hasMore: result.results.length > listBound,
+  };
 }
 
 export async function createWishlistItem(
@@ -1019,14 +1027,23 @@ export async function listPriceObservations(
         evidence_media_id, purchase_id, observed_at, retrieved_at, version, created_at, updated_at
       FROM price_observations WHERE space_id = ? AND wine_id = ? AND deleted_at IS NULL
         AND (? IS NULL OR currency = ?)
-      ORDER BY observed_at DESC, id DESC LIMIT 250`,
+      ORDER BY observed_at DESC, id DESC LIMIT ?`,
     )
-    .bind(options.spaceId, options.wineId, options.currency ?? null, options.currency ?? null)
+    .bind(
+      options.spaceId,
+      options.wineId,
+      options.currency ?? null,
+      options.currency ?? null,
+      listBound + 1,
+    )
     .all<PriceRow>();
   const staleBefore = Date.now() - options.freshnessDays * 24 * 60 * 60 * 1_000;
-  const observations = result.results.map((row) => priceResource(row, staleBefore));
+  const observations = result.results
+    .slice(0, listBound)
+    .map((row) => priceResource(row, staleBefore));
   return {
     data: {
+      hasMore: result.results.length > listBound,
       observations,
       warnings: [
         "external_lookup_disabled",

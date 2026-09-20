@@ -14,8 +14,10 @@ import {
 import { z } from "zod";
 
 import {
+  cancelAccountDeletion,
   cancelSpaceDeletion,
   deletionResponse,
+  getAccountDeletion,
   getDeletionJob,
   leaveSpace,
   scheduleAccountDeletion,
@@ -91,6 +93,11 @@ const exportMediaRoute = createRoute({
     404: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "Space unavailable.",
+    },
+    413: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description:
+        "The selection is larger than one archive may hold; details carry the total and the limit.",
     },
   },
 });
@@ -206,6 +213,10 @@ const leaveSpaceRoute = createRoute({
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "Space unavailable.",
     },
+    409: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The last owner cannot leave; name another owner or delete the Space.",
+    },
   },
 });
 
@@ -243,6 +254,57 @@ const deleteAccountRoute = createRoute({
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "User unavailable.",
     },
+    409: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description:
+        "The account is the only owner of a shared Space; name another owner or delete it first.",
+    },
+  },
+});
+
+const getAccountDeletionRoute = createRoute({
+  method: "get",
+  path: "/api/v1/me/deletion",
+  operationId: "getAccountDeletion",
+  tags: ["Data rights"],
+  summary: "Read the latest account deletion job",
+  security: [{ FirebaseBearer: [] }],
+  responses: {
+    200: {
+      content: { "application/json": { schema: DeletionJobResponseSchema } },
+      description: "The latest deletion job for this account, in whatever state.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "No deletion was ever scheduled for this account.",
+    },
+  },
+});
+
+const cancelAccountDeletionRoute = createRoute({
+  method: "post",
+  path: "/api/v1/me/deletion/cancel",
+  operationId: "cancelAccountDeletion",
+  tags: ["Data rights"],
+  summary: "Cancel a scheduled account deletion during its grace period",
+  security: [{ FirebaseBearer: [] }],
+  responses: {
+    200: {
+      content: { "application/json": { schema: DeletionJobResponseSchema } },
+      description: "The canceled deletion job.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "No cancelable job exists for this account.",
+    },
   },
 });
 
@@ -272,10 +334,23 @@ const usageRoute = createRoute({
 
 function errorEnvelope(
   requestId: string,
-  code: "FORBIDDEN" | "NOT_FOUND" | "VALIDATION_FAILED",
+  code: "ARCHIVE_TOO_LARGE" | "FORBIDDEN" | "LAST_OWNER" | "NOT_FOUND" | "VALIDATION_FAILED",
   message: string,
+  details?: Record<string, unknown>,
 ) {
-  return ErrorEnvelopeSchema.parse({ error: { code, message, requestId } });
+  return ErrorEnvelopeSchema.parse({
+    error: { code, message, requestId, ...(details === undefined ? {} : { details }) },
+  });
+}
+
+/** A Space with no owner has nobody who can invite, remove, or delete it. */
+function lastOwner(requestId: string, spaceNames: string[]) {
+  return errorEnvelope(
+    requestId,
+    "LAST_OWNER",
+    "You are the only owner of a shared Space. Name another owner, or delete the Space, first.",
+    { spaceNames },
+  );
 }
 
 function notFound(requestId: string) {
@@ -319,12 +394,24 @@ export function registerReleaseRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const resolved = await resolveExportActor(context.env.DB!, context.get("principal"), spaceId);
     if (resolved === null) return context.json(notFound(context.get("requestId")), 404);
 
-    const { archive, included } = await buildMediaArchive(context.env.DB!, context.env.MEDIA, {
+    const built = await buildMediaArchive(context.env.DB!, context.env.MEDIA, {
       actor: resolved.actor,
       mediaIds: context.req.valid("json").mediaIds,
       scope: resolved.scope,
       spaceId,
     });
+    if (built.kind === "too_large") {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "ARCHIVE_TOO_LARGE",
+          "The selected photographs are more than one archive may hold. Select fewer.",
+          { maxBytes: built.maxBytes, requestedBytes: built.requestedBytes },
+        ),
+        413,
+      );
+    }
+    const { archive, included } = built;
 
     return new Response(archive, {
       headers: {
@@ -359,6 +446,23 @@ export function registerReleaseRoutes(app: OpenAPIHono<ApiEnvironment>) {
     return context.json(DeletionJobResponseSchema.parse(deletionResponse(result.job)), 202);
   });
 
+  app.openapi(getAccountDeletionRoute, async (context) => {
+    const job = await getAccountDeletion(context.env.DB!, context.get("principal"));
+    return job === null
+      ? context.json(notFound(context.get("requestId")), 404)
+      : context.json(DeletionJobResponseSchema.parse(deletionResponse(job)), 200);
+  });
+
+  app.openapi(cancelAccountDeletionRoute, async (context) => {
+    const result = await cancelAccountDeletion(context.env.DB!, {
+      principal: context.get("principal"),
+      requestId: context.get("requestId"),
+    });
+    return result.kind === "success"
+      ? context.json(DeletionJobResponseSchema.parse(deletionResponse(result.job)), 200)
+      : context.json(notFound(context.get("requestId")), 404);
+  });
+
   app.openapi(getSpaceDeletionRoute, async (context) => {
     const job = await getDeletionJob(
       context.env.DB!,
@@ -382,12 +486,15 @@ export function registerReleaseRoutes(app: OpenAPIHono<ApiEnvironment>) {
   });
 
   app.openapi(leaveSpaceRoute, async (context) => {
+    context.req.valid("json");
     const result = await leaveSpace(context.env.DB!, {
       principal: context.get("principal"),
-      pseudonymizeAuthorship: context.req.valid("json").pseudonymizeAuthorship,
       requestId: context.get("requestId"),
       spaceId: context.req.valid("param").spaceId,
     });
+    if (result.kind === "last_owner") {
+      return context.json(lastOwner(context.get("requestId"), result.spaceNames), 409);
+    }
     if (result.kind === "personal_space") {
       return context.json(
         errorEnvelope(
@@ -417,6 +524,9 @@ export function registerReleaseRoutes(app: OpenAPIHono<ApiEnvironment>) {
         ),
         403,
       );
+    }
+    if (result.kind === "last_owner") {
+      return context.json(lastOwner(context.get("requestId"), result.spaceNames), 409);
     }
     if (result.kind !== "success") return context.json(notFound(context.get("requestId")), 404);
     return context.json(DeletionJobResponseSchema.parse(deletionResponse(result.job)), 202);

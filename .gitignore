@@ -32,6 +32,17 @@ Thumbs.db
 wrangler.preview.jsonc
 wrangler.production.jsonc
 
+# Backups and database dumps: a Space's photographs and rows, which the
+# scripts write locally and which must never be committed. The release scan
+# refuses them even if forced in.
+r2-backup*/
+backups/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.dump
+backup*.sql
+
 # Terms that must never reach a public mirror. Local, never committed —
 # committing them would publish exactly what they exist to hold back.
 .mirror-denylist

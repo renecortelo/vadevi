@@ -2,7 +2,36 @@ import { z } from "@hono/zod-openapi";
 
 import { ResourceIdSchema, ResourceTimestampSchema } from "./wine-memory";
 
-export const CurrencyCodeSchema = z.string().regex(/^[A-Z]{3}$/);
+/**
+ * The currencies a price may be recorded in — a closed list, chosen by the
+ * maintainer. Every amount is stored in minor units (cents), and every one
+ * of these has exactly two, so the conversion is the same for all; a
+ * currency with none (JPY) or three (KWD) is not on the list rather than
+ * silently stored a hundred times off. Adding one means adding its minor
+ * units below, and the tests hold the two lists together.
+ */
+export const supportedCurrencies = ["EUR", "USD", "GBP", "CHF", "MXN"] as const;
+export type CurrencyCode = (typeof supportedCurrencies)[number];
+export const CurrencyCodeSchema = z.enum(supportedCurrencies);
+
+/** Decimal places of each supported currency's minor unit. */
+const minorUnitDigits: Record<CurrencyCode, number> = {
+  CHF: 2,
+  EUR: 2,
+  GBP: 2,
+  MXN: 2,
+  USD: 2,
+};
+
+/** A typed amount ("12.50") to the integer minor units the record keeps. */
+export function toMinorUnits(amount: number, currency: CurrencyCode): number {
+  return Math.round(amount * 10 ** minorUnitDigits[currency]);
+}
+
+/** Integer minor units back to the amount a formatter expects. */
+export function fromMinorUnits(amountMinor: number, currency: CurrencyCode): number {
+  return amountMinor / 10 ** minorUnitDigits[currency];
+}
 export const MoneyAmountMinorSchema = z.number().int().min(0).max(2_147_483_647);
 export const BottleStateSchema = z.enum(["owned", "opened", "finished", "gifted", "removed"]);
 export const WishlistStateSchema = z.enum(["active", "purchased", "dismissed"]);
@@ -90,10 +119,22 @@ export const BottleListQuerySchema = z
   })
   .strict();
 
+/**
+ * The lists below stop at a bound and say so: `hasMore` is true when the
+ * Space holds more than the page, so a client can tell the reader they are
+ * looking at the first N rather than at everything. A cursor to walk past
+ * the bound is future work; until then the export carries the whole set.
+ */
+export const listBound = 250;
+
 export const BottleListResponseSchema = z
   .object({
     data: z
-      .object({ bottles: z.array(BottleSchema).max(250), inventory: InventorySummarySchema })
+      .object({
+        bottles: z.array(BottleSchema).max(listBound),
+        hasMore: z.boolean(),
+        inventory: InventorySummarySchema,
+      })
       .strict(),
   })
   .strict()
@@ -223,7 +264,7 @@ export const WishlistItemResponseSchema = z
 export const WishlistListQuerySchema = z.object({ state: WishlistStateSchema.optional() }).strict();
 
 export const WishlistListResponseSchema = z
-  .object({ data: z.array(WishlistItemSchema).max(250) })
+  .object({ data: z.array(WishlistItemSchema).max(listBound), hasMore: z.boolean() })
   .strict()
   .openapi("WishlistListResponse");
 
@@ -299,7 +340,8 @@ export const PriceObservationListResponseSchema = z
   .object({
     data: z
       .object({
-        observations: z.array(PriceObservationSchema).max(250),
+        hasMore: z.boolean(),
+        observations: z.array(PriceObservationSchema).max(listBound),
         warnings: z.array(z.enum(["external_lookup_disabled", "no_observations"])).max(2),
       })
       .strict(),

@@ -1,17 +1,22 @@
 import { createRoute, type OpenAPIHono } from "@hono/zod-openapi";
 import {
+  BottlePhotoCandidatesResponseSchema,
+  BottlePhotoSearchRequestSchema,
+  ConfirmIdentificationRequestSchema,
+  ConfirmIdentificationResponseSchema,
   CreateWineRequestSchema,
   CreateWineResponseSchema,
   DeepTastingRequestSchema,
   DeepTastingResponseSchema,
   ErrorEnvelopeSchema,
   IdempotencyKeySchema,
-  ConfirmIdentificationRequestSchema,
-  ConfirmIdentificationResponseSchema,
   IdentificationPathSchema,
   IdentificationRequestSchema,
   IdentificationResponseSchema,
+  ImportBottlePhotoRequestSchema,
+  ImportBottlePhotoResponseSchema,
   MediaIdPathSchema,
+  mediaMaxBytes,
   MediaReservationRequestSchema,
   MediaReservationResponseSchema,
   MediaUploadResponseSchema,
@@ -20,23 +25,19 @@ import {
   QuickTastingRequestSchema,
   RegionPointsResponseSchema,
   SpaceIdPathSchema,
-  UpdateWineRequestSchema,
-  WineIdPathSchema,
   SupportedLocaleSchema,
-  WineResponseSchema,
   SyncRequestSchema,
   SyncResponseSchema,
   TastingNoteResponseSchema,
+  UpdateWineRequestSchema,
+  WineIdPathSchema,
   WineMemoryQuerySchema,
   WineMemoryResponseSchema,
-  BottlePhotoSearchRequestSchema,
-  BottlePhotoCandidatesResponseSchema,
-  ImportBottlePhotoRequestSchema,
-  ImportBottlePhotoResponseSchema,
+  WineResponseSchema,
 } from "@vadevi/contracts";
 import { z } from "zod";
 
-import { readMedia, reserveMedia, uploadMedia } from "../repositories/media";
+import { readBounded, readMedia, reserveMedia, uploadMedia } from "../repositories/media";
 import { createDeepTastingNote } from "../repositories/tasting-sessions";
 import { createLabelOcrPort } from "../adapters/label-ocr";
 import {
@@ -371,6 +372,10 @@ const uploadMediaRoute = createRoute({
     404: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "Reservation unavailable.",
+    },
+    413: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The body is larger than any reservation allows; it was not read in full.",
     },
   },
 });
@@ -975,8 +980,22 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
   app.openapi(uploadMediaRoute, async (context) => {
     if (context.env.MEDIA === undefined) throw new Error("The R2 binding is unavailable.");
     const params = context.req.valid("param");
+    // The body is read up to the most a reservation may be, and no further:
+    // a body over the line is refused on the byte that crosses it, rather
+    // than buffered whole and refused afterwards.
+    const bytes = await readBounded(context.req.raw.body, mediaMaxBytes);
+    if (bytes === null) {
+      return context.json(
+        errorEnvelope(
+          context.get("requestId"),
+          "MEDIA_REJECTED",
+          "The upload is larger than any reservation allows.",
+        ),
+        413,
+      );
+    }
     const result = await uploadMedia(context.env.DB!, context.env.MEDIA, {
-      bytes: await context.req.arrayBuffer(),
+      bytes,
       contentType: context.req.header("Content-Type")?.split(";", 1)[0],
       mediaId: params.mediaId,
       principal: context.get("principal"),

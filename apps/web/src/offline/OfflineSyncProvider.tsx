@@ -85,9 +85,19 @@ function isPhaseTwoMutation(mutation: QueuedMutation): boolean {
   );
 }
 
+/**
+ * The form holds the whole note, so an update is the whole note: every
+ * clearable field the draft no longer has is sent as null, and the record
+ * clears it. Sent as omitted — as it used to be — the server kept the old
+ * value, and a score taken back or a paragraph deleted came back on reload.
+ */
 function deepUpdateRequest(request: DeepTastingRequest, version: number): UpdateDeepTastingRequest {
   const immutable = new Set(["clientId", "mode", "sessionWineId", "state", "wineId"]);
+  const whole = new Set(["context", "descriptors", "tastedAt", "version"]);
   const fields = Object.fromEntries(Object.entries(request).filter(([key]) => !immutable.has(key)));
+  for (const key of Object.keys(UpdateDeepTastingRequestSchema.shape)) {
+    if (!whole.has(key) && !(key in fields)) fields[key] = null;
+  }
   return UpdateDeepTastingRequestSchema.parse({ ...fields, version });
 }
 
@@ -233,6 +243,10 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
       }
       flushing.current.add(spaceId);
       setStatus("syncing");
+      // Whether a batch left more behind: the queue drains fifty at a time, and
+      // used to stop after the first fifty until the next reconnect or tab
+      // switch — a long evening offline was synced by halves.
+      let more = false;
       try {
         const mutations = await offlineDatabase.mutations
           .where("[userId+spaceId]")
@@ -381,6 +395,7 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
         });
         await Promise.all([refreshMemory(spaceId), refreshSessions(spaceId)]);
         globalThis.dispatchEvent(new CustomEvent(sessionsChangedEvent, { detail: { spaceId } }));
+        more = mutations.length > batch.length;
       } catch {
         const syncing = await offlineDatabase.mutations
           .where("[userId+spaceId]")
@@ -393,6 +408,8 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
       } finally {
         flushing.current.delete(spaceId);
         await refreshStatus();
+        // Every batch resolves its fifty one way or another, so this ends.
+        if (more && navigator.onLine) void flush(spaceId);
       }
     },
     [

@@ -4,10 +4,14 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
+import { ApiError } from "../services/api";
 import {
+  cancelAccountDeletion,
   cancelSpaceDeletion,
+  getAccountDeletion,
   getSelectedMediaArchive,
   getSpaceCsvExport,
+  getSpaceDeletion,
   getSpaceExport,
   getUsageReport,
   leaveSpace,
@@ -39,7 +43,7 @@ function download(blob: Blob, filename: string) {
  * is scheduled for removal.
  */
 export function DataRightsPage() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const { bootstrap, refresh } = useSession();
   const spaceId = bootstrap.data.user.activeSpaceId;
@@ -54,6 +58,7 @@ export function DataRightsPage() {
   const [selectedMedia, setSelectedMedia] = useState<string[]>([]);
   const [confirmationText, setConfirmationText] = useState("");
   const [deletionJob, setDeletionJob] = useState<DeletionJob | null>(null);
+  const [accountJob, setAccountJob] = useState<DeletionJob | null>(null);
   const [accountConfirm, setAccountConfirm] = useState("");
 
   const usageQuery = useQuery({
@@ -63,14 +68,52 @@ export function DataRightsPage() {
   });
   const usage: UsageReportResponse["data"] | null = usageQuery.data?.data ?? null;
 
+  // What is already scheduled, read on arrival: a deletion confirmed on
+  // another day — or before a reload — is still pending, and still cancelable,
+  // and the page used to show neither until the button was pressed again.
+  const spaceJobQuery = useQuery({
+    enabled: user !== null && isOwner && !isPersonal,
+    queryFn: ({ signal }) => getSpaceDeletion(user!, spaceId, signal),
+    queryKey: ["space-deletion", spaceId],
+  });
+  const accountJobQuery = useQuery({
+    enabled: user !== null,
+    queryFn: ({ signal }) => getAccountDeletion(user!, signal),
+    queryKey: ["account-deletion", user?.uid],
+  });
+  const pendingSpaceJob = deletionJob ?? spaceJobQuery.data?.data ?? null;
+  const pendingAccountJob = accountJob ?? accountJobQuery.data?.data ?? null;
+  const purgeDate = (iso: string) =>
+    new Date(iso).toLocaleDateString(i18n.language, { dateStyle: "long" });
+
   async function run(action: () => Promise<string>) {
     setBusy(true);
     setError(null);
     setStatus(null);
     try {
       setStatus(await action());
-    } catch {
-      setError(t("dataRights.actionError"));
+    } catch (failure) {
+      // The one refusal with something to say: which Space would be left
+      // with no owner. Anything else is the generic retry.
+      if (failure instanceof ApiError && failure.code === "ARCHIVE_TOO_LARGE") {
+        const megabytes = (value: unknown) =>
+          typeof value === "number" ? Math.ceil(value / (1024 * 1024)) : "?";
+        setError(
+          t("dataRights.archiveTooLarge", {
+            max: megabytes(failure.details?.maxBytes),
+            requested: megabytes(failure.details?.requestedBytes),
+          }),
+        );
+      } else if (failure instanceof ApiError && failure.code === "LAST_OWNER") {
+        const names = failure.details?.spaceNames;
+        setError(
+          t("dataRights.lastOwnerError", {
+            names: Array.isArray(names) ? names.join(", ") : (space?.name ?? ""),
+          }),
+        );
+      } else {
+        setError(t("dataRights.actionError"));
+      }
     } finally {
       setBusy(false);
     }
@@ -129,7 +172,7 @@ export function DataRightsPage() {
 
   async function leave() {
     await run(async () => {
-      await leaveSpace(user!, spaceId, false);
+      await leaveSpace(user!, spaceId);
       await refresh();
       return t("dataRights.leftSpace");
     });
@@ -138,8 +181,17 @@ export function DataRightsPage() {
   async function deleteAccount() {
     await run(async () => {
       const job = await scheduleAccountDeletion(user!);
+      setAccountJob(job.data);
       setAccountConfirm("");
       return t("dataRights.accountScheduled", { days: job.data.gracePeriodSeconds / 86_400 });
+    });
+  }
+
+  async function keepAccount() {
+    await run(async () => {
+      const job = await cancelAccountDeletion(user!);
+      setAccountJob(job.data);
+      return t("dataRights.accountCanceled");
     });
   }
 
@@ -311,7 +363,7 @@ export function DataRightsPage() {
             >
               {t("dataRights.deleteSpaceAction")}
             </button>
-            {deletionJob !== null && deletionJob.state === "scheduled" ? (
+            {pendingSpaceJob !== null && pendingSpaceJob.state === "scheduled" ? (
               <button
                 className="action-link action-link--secondary"
                 disabled={busy}
@@ -322,9 +374,11 @@ export function DataRightsPage() {
               </button>
             ) : null}
           </div>
-          {deletionJob !== null && deletionJob.state === "scheduled" ? (
+          {pendingSpaceJob !== null && pendingSpaceJob.state === "scheduled" ? (
             <p role="status">
-              {t("dataRights.deletionPending", { purgeAfter: deletionJob.purgeAfter })}
+              {t("dataRights.deletionPending", {
+                purgeAfter: purgeDate(pendingSpaceJob.purgeAfter),
+              })}
             </p>
           ) : null}
         </section>
@@ -350,7 +404,24 @@ export function DataRightsPage() {
           >
             {t("dataRights.deleteAccountAction")}
           </button>
+          {pendingAccountJob !== null && pendingAccountJob.state === "scheduled" ? (
+            <button
+              className="action-link action-link--secondary"
+              disabled={busy}
+              onClick={() => void keepAccount()}
+              type="button"
+            >
+              {t("dataRights.cancelAccountAction")}
+            </button>
+          ) : null}
         </div>
+        {pendingAccountJob !== null && pendingAccountJob.state === "scheduled" ? (
+          <p role="status">
+            {t("dataRights.accountPending", {
+              purgeAfter: purgeDate(pendingAccountJob.purgeAfter),
+            })}
+          </p>
+        ) : null}
       </section>
 
       <section aria-labelledby="notice-title" className="settings-card">

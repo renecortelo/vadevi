@@ -52,6 +52,9 @@
     "reload": "Recarrega Va de Vi",
     "home": "Torna a l'inici"
   },
+  "lists": {
+    "firstOnly": "Es mostren els primers {{count}}. L'exportació de Dades i privadesa ho inclou tot."
+  },
   "space": {
     "switchLabel": "Espai actiu",
     "switchError": "No s'ha pogut obrir aquest Espai."
@@ -940,7 +943,10 @@
   },
   "dataRights": {
     "accountScheduled": "L'esborrat del compte està programat d'aquí a {{days}} dies.",
+    "accountPending": "El teu compte i el teu Espai personal es purguen després del {{purgeAfter}} si no ho cancel·les.",
+    "accountCanceled": "L'eliminació del compte s'ha cancel·lat.",
     "actionError": "No ha funcionat. Comprova la connexió i torna-ho a provar.",
+    "archiveTooLarge": "Aquesta selecció ocupa {{requested}} MB; un arxiu admet fins a {{max}} MB. Tria menys fotos i descarrega per parts.",
     "body": "Exporta el que és teu, revisa l'ús i esborra quan vulguis.",
     "budgetStatus": {
       "ok": "Dins del pressupost",
@@ -949,6 +955,7 @@
       "capped": "Al límit — s'usa la via fora de línia"
     },
     "cancelDeletionAction": "Cancel·la l'esborrat",
+    "cancelAccountAction": "Conservar el meu compte",
     "confirmationLabel": "Nom de l'Espai",
     "csvAction": "Exporta CSV de {{dataset}}",
     "csvReady": "S'ha baixat el CSV de {{dataset}}.",
@@ -960,7 +967,7 @@
       "prices": "preus"
     },
     "deleteAccountAction": "Programa l'esborrat del compte",
-    "deleteAccountBody": "Això elimina el teu Espai personal i les dades privades. Els registres compartits es queden al seu Espai. Cal haver iniciat sessió fa poc.",
+    "deleteAccountBody": "Elimina el teu Espai personal i les dades privades; el que és compartit es queda al seu Espai. Cal un accés recent. El mantenidor esborra el registre d'accés Google en acabar la purga.",
     "deleteAccountLabel": "Escriu DELETE per confirmar",
     "deleteAccountTitle": "Esborra el teu compte",
     "deleteSpaceAction": "Programa l'esborrat",
@@ -976,6 +983,7 @@
     "eyebrow": "Les teves dades",
     "leaveAction": "Deixa aquest Espai",
     "leaveBody": "Els registres compartits es queden a l'Espai. Perds l'accés a la següent petició.",
+    "lastOwnerError": "Ets l'única persona propietària de {{names}}. Nomena'n abans una altra entre els membres, o elimina aquest Espai.",
     "leaveTitle": "Deixa aquest Espai",
     "leftSpace": "Has deixat l'Espai.",
     "mediaAction": "Baixa {{count}} foto seleccionada",

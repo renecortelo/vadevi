@@ -275,12 +275,15 @@ export class NominatimPlaceSearchAdapter implements PlaceSearchPort {
     if (latitude === null || longitude === null) {
       return { reason: "invalid_input", retryAfterSeconds: null, status: "unavailable" };
     }
+    // Four decimals — about eleven metres — is what the cache key keeps and
+    // is enough to find the building; the provider never sees the extra two
+    // decimals the device reported.
     const url = new URL(`https://${nominatimHost}/reverse`);
     for (const [name, value] of Object.entries({
       addressdetails: "1",
       format: "jsonv2",
-      lat: latitude.toFixed(6),
-      lon: longitude.toFixed(6),
+      lat: latitude.toFixed(4),
+      lon: longitude.toFixed(4),
       // Zoom 18 is building level: the bar, not the street or the city.
       zoom: "18",
     })) {

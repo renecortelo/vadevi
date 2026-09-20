@@ -1,15 +1,18 @@
 import { execFileSync } from "node:child_process";
 
 /**
- * Applies D1 migrations to the local development database before the suite.
+ * Applies D1 migrations to the suite's own local database before the suite.
  *
- * `wrangler dev --local` persists its D1 under `.wrangler/`, which a fresh
- * checkout or a CI runner does not have. Without this the Worker answers 500
- * for every authenticated read and the browser drills fail for a reason that
- * has nothing to do with the browser.
+ * `wrangler dev --local` persists its D1 under the directory it is given;
+ * the suite's is `.wrangler/e2e-state`, apart from the developer's, which a
+ * fresh checkout or a CI runner does not have either way. Without this the
+ * Worker answers 500 for every authenticated read and the browser drills
+ * fail for a reason that has nothing to do with the browser.
  */
+const e2eStateDirectory = ".wrangler/e2e-state";
+
 export default function globalSetup(): void {
-  console.info("Applying D1 migrations to the local end-to-end database...");
+  console.info(`Applying D1 migrations to the end-to-end database in ${e2eStateDirectory}...`);
   execFileSync(
     "pnpm",
     [
@@ -20,6 +23,8 @@ export default function globalSetup(): void {
       "apply",
       "vadevi-local",
       "--local",
+      "--persist-to",
+      e2eStateDirectory,
       "--config",
       "wrangler.example.jsonc",
     ],

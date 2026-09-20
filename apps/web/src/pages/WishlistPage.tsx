@@ -1,4 +1,13 @@
-import type { WineSummary, WishlistItem, WishlistListResponse } from "@vadevi/contracts";
+import {
+  type CurrencyCode,
+  fromMinorUnits,
+  listBound,
+  supportedCurrencies,
+  toMinorUnits,
+  type WineSummary,
+  type WishlistItem,
+  type WishlistListResponse,
+} from "@vadevi/contracts";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
@@ -11,6 +20,7 @@ import { getWineMemory } from "../services/api";
 import { createWishlistItem, getWishlist, updateWishlistItem } from "../services/cellar";
 import { WinePicker } from "../components/WinePicker";
 import { useSession } from "../session/SessionContext";
+import { useLatestLoad } from "../lib/latest-load";
 
 export function WishlistPage() {
   const { t } = useTranslation();
@@ -18,7 +28,7 @@ export function WishlistPage() {
   const { bootstrap } = useSession();
   const spaceId = bootstrap.data.user.activeSpaceId;
   const userId = user?.uid ?? "";
-  const [response, setResponse] = useState<WishlistListResponse>({ data: [] });
+  const [response, setResponse] = useState<WishlistListResponse>({ data: [], hasMore: false });
   const [wines, setWines] = useState<WineSummary[]>([]);
   const [usingCache, setUsingCache] = useState(false);
   const [error, setError] = useState(false);
@@ -27,7 +37,7 @@ export function WishlistPage() {
   const [reason, setReason] = useState("");
   const [priority, setPriority] = useState("2");
   const [targetPrice, setTargetPrice] = useState("");
-  const [targetCurrency, setTargetCurrency] = useState("EUR");
+  const [targetCurrency, setTargetCurrency] = useState<CurrencyCode>("EUR");
 
   const loadCache = useCallback(async () => {
     if (userId.length === 0) return;
@@ -40,7 +50,9 @@ export function WishlistPage() {
     setUsingCache(true);
   }, [spaceId, userId]);
 
+  const startLoad = useLatestLoad();
   const load = useCallback(async () => {
+    const isLatest = startLoad();
     setError(false);
     if (user === null || !navigator.onLine) return loadCache();
     try {
@@ -48,6 +60,8 @@ export function WishlistPage() {
         getWishlist(user, spaceId),
         getWineMemory(user, spaceId, { limit: 100 }),
       ]);
+      // A Space switched mid-load: this answer is the old Space's.
+      if (!isLatest()) return;
       setResponse(wishlist);
       setWines(memory.data);
       setUsingCache(false);
@@ -59,10 +73,11 @@ export function WishlistPage() {
         userId: user.uid,
       });
     } catch {
+      if (!isLatest()) return;
       setError(true);
       await loadCache();
     }
-  }, [loadCache, spaceId, user]);
+  }, [loadCache, spaceId, startLoad, user]);
 
   useEffect(() => {
     queueMicrotask(() => void load());
@@ -88,7 +103,7 @@ export function WishlistPage() {
           reason,
           ...(parsedTarget === null || !Number.isFinite(parsedTarget)
             ? {}
-            : { targetAmountMinor: Math.round(parsedTarget * 100), targetCurrency }),
+            : { targetAmountMinor: toMinorUnits(parsedTarget, targetCurrency), targetCurrency }),
           wineId,
         },
         createIdempotencyKey(),
@@ -146,6 +161,9 @@ export function WishlistPage() {
         </nav>
       </header>
       {usingCache ? <p className="offline-banner">{t("wishlist.cached")}</p> : null}
+      {response.hasMore ? (
+        <p className="offline-banner">{t("lists.firstOnly", { count: listBound })}</p>
+      ) : null}
       {error ? <p className="form-error">{t("wishlist.error")}</p> : null}
       <section className="phase5-form-card">
         <h2>{t("wishlist.addTitle")}</h2>
@@ -186,13 +204,16 @@ export function WishlistPage() {
           </label>
           <label>
             {t("cellar.currency")}
-            <input
-              maxLength={3}
-              onChange={(event) => setTargetCurrency(event.target.value.toUpperCase())}
-              pattern="[A-Z]{3}"
-              required={targetPrice.length > 0}
+            <select
+              onChange={(event) => setTargetCurrency(event.target.value as CurrencyCode)}
               value={targetCurrency}
-            />
+            >
+              {supportedCurrencies.map((code) => (
+                <option key={code} value={code}>
+                  {code}
+                </option>
+              ))}
+            </select>
           </label>
           <button
             className="primary-button"
@@ -226,7 +247,9 @@ export function WishlistPage() {
                       {new Intl.NumberFormat(undefined, {
                         style: "currency",
                         currency: item.targetCurrency ?? "EUR",
-                      }).format(item.targetAmountMinor / 100)}
+                      }).format(
+                        fromMinorUnits(item.targetAmountMinor, item.targetCurrency ?? "EUR"),
+                      )}
                     </strong>
                   )}
                   {item.state === "active" ? (

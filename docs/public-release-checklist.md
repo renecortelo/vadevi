@@ -45,24 +45,20 @@ Run against the tree `pnpm mirror:build` produces, which is the only thing that
 would actually be published. The scanner had passed; these are what it does not
 look for.
 
-- **`vadevi_implementation_spec.md` named two other private repositories.** It
-  is the private brief this was built from, and it is excluded from the mirror
-  altogether. What a reader of the public repository needs — architecture,
-  privacy, threat model, data dictionary, the ADRs, self-hosting — is in `docs/`.
+- **The private planning brief named other private repositories.** It is
+  excluded from the mirror altogether. What a reader of the public repository
+  needs — architecture, privacy, threat model, data dictionary, the ADRs,
+  self-hosting — is in `docs/`.
 
-  Excluding it from the mirror turned out not to be enough, and this is the
-  finding worth keeping. The development repository had itself been made public
-  — the one thing §15.9 says never to do — so the brief was readable from the
-  first commit onward, and the mirror's exclusion list protected an export that
-  had not been published yet. A gate only guards the door it is fitted to. The
-  brief was removed and purged from all 219 commits, the development repository
-  is now private as `renecortelo/vadevi-dev`, and `renecortelo/vadevi` is a
-  fresh single-commit mirror. Assume the names were read: the repository served
-  them publicly for its whole life, and roughly a dozen external clones landed
-  in the fortnight before the purge.
+  The rule worth keeping from it: a mirror's exclusion list guards only the
+  export, so the development repository must itself stay private — the one
+  thing §15.9 says never to do is make it public. A gate only guards the door
+  it is fitted to. The public mirror is a fresh repository with a single root
+  commit and no ancestry, built by `pnpm mirror:build`.
 
-- **`docs/your-desk-todo.md` is the operator's own task list**, with the state of
-  their acceptance run. Excluded.
+- **The operator's own task list** (`docs/your-desk-todo.md`), with the state
+  of their acceptance run and the operational history behind these gates, is
+  private and excluded.
 - **`docs/acceptance-findings.md` carried a real name** in a run heading. The
   findings themselves are worth publishing — they explain why several gates
   exist — so the attribution was generalised rather than the file dropped.
@@ -78,9 +74,12 @@ depending on someone reading 274 files carefully.
 - [x] **automated** — Demonstration data is clearly fictional
       (`pnpm seed:demo`), local-only, and refuses to seed a deployed database.
 - [x] **manual** — Clean mirror created without private history
-      (`pnpm mirror:build`), then reviewed by eye before pushing. Published as
-      `renecortelo/vadevi`: one root commit, 364 files, no ancestry. The
-      development repository is now `renecortelo/vadevi-dev`, private.
+      (`pnpm mirror:build`), then reviewed by eye before pushing: one root
+      commit, no ancestry. The development repository is private.
+- [x] **automated** — Every commit in the public mirror is made as
+      `Va de Vi <noreply@example.invalid>`: the export sets that identity on
+      the clone it creates, `PUBLIC_MIRROR.md` marks the mirror, and the
+      pre-push hook refuses a commit under any other address.
 
 ## Documentation
 
@@ -107,7 +106,7 @@ depending on someone reading 274 files carefully.
 
 ## Before publishing — outstanding
 
-These are tracked in `docs/your-desk-todo.md`.
+These are the operator's; their task list is private.
 
 - [x] Decide the two optional-provider privacy reviews. Both approved by the
       maintainer, 17 September 2026, on terms rechecked against the providers'
@@ -128,8 +127,7 @@ These are tracked in `docs/your-desk-todo.md`.
       to a sweep that only ever sees `/memory` in its card view. The threat
       model waited on the two outbound boundaries it had never recorded, venue
       lookup and map tiles. The reasoning for each is kept with the sign-off.
-- [x] Build, review, and push the public mirror. Done: `renecortelo/vadevi`,
-      tagged `v0.1.0`.
+- [x] Build, review, and push the public mirror. Done, tagged `v0.1.0`.
 
 ---
 

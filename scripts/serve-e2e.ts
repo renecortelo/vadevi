@@ -21,6 +21,16 @@ import { spawn, type ChildProcess } from "node:child_process";
  */
 
 const port = Number(process.argv[2] ?? 8788);
+
+/**
+ * The suite's own state, apart from `pnpm dev`'s. Both run `wrangler dev
+ * --local`, whose default persistence is `.wrangler/state` — so the suite
+ * used to write its synthetic accounts into the developer's local database,
+ * and once wrote them into a database it never started: Playwright reused a
+ * server that happened to be listening. This directory is the suite's, and
+ * `e2e/global-setup.ts` migrates the same one.
+ */
+export const e2eStateDirectory = ".wrangler/e2e-state";
 if (!Number.isInteger(port) || port < 1 || port > 65_535) {
   console.error(`serve-e2e: "${process.argv[2]}" is not a usable port.`);
   process.exit(1);
@@ -45,6 +55,8 @@ function start(): void {
       "--config",
       "wrangler.example.jsonc",
       "--local",
+      "--persist-to",
+      e2eStateDirectory,
       "--port",
       String(port),
     ],

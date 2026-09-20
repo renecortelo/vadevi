@@ -52,6 +52,9 @@
     "reload": "Ricarica Va de Vi",
     "home": "Torna all'inizio"
   },
+  "lists": {
+    "firstOnly": "Sono mostrati i primi {{count}}. L'esportazione in Dati e privacy contiene tutto."
+  },
   "space": {
     "switchLabel": "Spazio attivo",
     "switchError": "Non è stato possibile aprire questo Spazio."
@@ -940,7 +943,10 @@
   },
   "dataRights": {
     "accountScheduled": "L'eliminazione dell'account è pianificata tra {{days}} giorni.",
+    "accountPending": "Il tuo account e il tuo Spazio personale vengono eliminati definitivamente dopo il {{purgeAfter}} salvo annullamento.",
+    "accountCanceled": "L'eliminazione dell'account è stata annullata.",
     "actionError": "Non ha funzionato. Controlla la connessione e riprova.",
+    "archiveTooLarge": "Questa selezione occupa {{requested}} MB; un archivio contiene fino a {{max}} MB. Seleziona meno foto e scarica in più parti.",
     "body": "Esporta ciò che ti appartiene, controlla l'uso ed elimina alle tue condizioni.",
     "budgetStatus": {
       "ok": "Entro il budget",
@@ -949,6 +955,7 @@
       "capped": "Al tetto — si usa il percorso offline"
     },
     "cancelDeletionAction": "Annulla l'eliminazione",
+    "cancelAccountAction": "Mantieni il mio account",
     "confirmationLabel": "Nome dello Spazio",
     "csvAction": "Esporta CSV di {{dataset}}",
     "csvReady": "Il CSV di {{dataset}} è stato scaricato.",
@@ -960,7 +967,7 @@
       "prices": "prezzi"
     },
     "deleteAccountAction": "Pianifica l'eliminazione dell'account",
-    "deleteAccountBody": "Questo rimuove il tuo Spazio personale e i dati privati. I record condivisi restano nel loro Spazio. Serve un accesso recente.",
+    "deleteAccountBody": "Rimuove il tuo Spazio personale e i dati privati; il condiviso resta nel suo Spazio. Serve un accesso recente. Il manutentore rimuove il record di accesso Google al termine dell'eliminazione.",
     "deleteAccountLabel": "Digita DELETE per confermare",
     "deleteAccountTitle": "Elimina il tuo account",
     "deleteSpaceAction": "Pianifica l'eliminazione",
@@ -976,6 +983,7 @@
     "eyebrow": "I tuoi dati",
     "leaveAction": "Lascia questo Spazio",
     "leaveBody": "I record condivisi restano nello Spazio. Perdi l'accesso alla richiesta successiva.",
+    "lastOwnerError": "Sei l'unica persona proprietaria di {{names}}. Prima nomina un'altra persona tra i membri, oppure elimina quello Spazio.",
     "leaveTitle": "Lascia questo Spazio",
     "leftSpace": "Hai lasciato lo Spazio.",
     "mediaAction": "Scarica {{count}} foto selezionata",

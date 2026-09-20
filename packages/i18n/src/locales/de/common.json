@@ -52,6 +52,9 @@
     "reload": "Va de Vi neu laden",
     "home": "Zurück zum Anfang"
   },
+  "lists": {
+    "firstOnly": "Die ersten {{count}} werden angezeigt. Der Export unter Daten und Datenschutz enthält alles."
+  },
   "space": {
     "switchLabel": "Aktiver Bereich",
     "switchError": "Dieser Bereich konnte nicht geöffnet werden."
@@ -940,7 +943,10 @@
   },
   "dataRights": {
     "accountScheduled": "Die Kontolöschung ist in {{days}} Tagen geplant.",
+    "accountPending": "Ihr Konto und Ihr persönlicher Bereich werden nach dem {{purgeAfter}} endgültig gelöscht, sofern Sie nicht abbrechen.",
+    "accountCanceled": "Die Kontolöschung wurde abgebrochen.",
     "actionError": "Das hat nicht geklappt. Prüfen Sie die Verbindung und versuchen Sie es erneut.",
+    "archiveTooLarge": "Diese Auswahl umfasst {{requested}} MB; ein Archiv fasst bis zu {{max}} MB. Wählen Sie weniger Fotos und laden Sie in Teilen herunter.",
     "body": "Exportieren Sie, was Ihnen gehört, prüfen Sie die Nutzung und löschen Sie zu Ihren Bedingungen.",
     "budgetStatus": {
       "ok": "Im Budget",
@@ -949,6 +955,7 @@
       "capped": "Am Limit — der Offline-Weg wird genutzt"
     },
     "cancelDeletionAction": "Löschung abbrechen",
+    "cancelAccountAction": "Konto behalten",
     "confirmationLabel": "Bereichsname",
     "csvAction": "CSV für {{dataset}} exportieren",
     "csvReady": "Die CSV-Datei für {{dataset}} wurde heruntergeladen.",
@@ -960,7 +967,7 @@
       "prices": "Preise"
     },
     "deleteAccountAction": "Kontolöschung planen",
-    "deleteAccountBody": "Dies entfernt Ihren persönlichen Bereich und private Daten. Geteilte Einträge bleiben in ihrem Bereich. Eine kürzliche Anmeldung ist erforderlich.",
+    "deleteAccountBody": "Entfernt Ihren persönlichen Bereich und private Daten; Geteiltes bleibt in seinem Bereich. Braucht eine kürzliche Anmeldung. Der Betreiber löscht den Google-Anmeldedatensatz nach der Löschung.",
     "deleteAccountLabel": "Geben Sie DELETE ein, um zu bestätigen",
     "deleteAccountTitle": "Ihr Konto löschen",
     "deleteSpaceAction": "Löschung planen",
@@ -976,6 +983,7 @@
     "eyebrow": "Ihre Daten",
     "leaveAction": "Diesen Bereich verlassen",
     "leaveBody": "Geteilte Einträge bleiben im Bereich. Sie verlieren den Zugriff bei der nächsten Anfrage.",
+    "lastOwnerError": "Sie sind die einzige Eigentümerin oder der einzige Eigentümer von {{names}}. Ernennen Sie zuerst eine weitere Person unter den Mitgliedern, oder löschen Sie diesen Bereich.",
     "leaveTitle": "Diesen Bereich verlassen",
     "leftSpace": "Sie haben den Bereich verlassen.",
     "mediaAction": "{{count}} gewähltes Foto herunterladen",

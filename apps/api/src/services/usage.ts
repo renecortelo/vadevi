@@ -117,6 +117,14 @@ async function readUsed(
  * Returns `false` when either the per-user or the global daily cap is already
  * reached, which callers must translate into a deterministic degraded result
  * rather than an error or a paid fallback.
+ *
+ * The reservation is the increment: each counter is raised by one conditional
+ * statement that only succeeds while it is under its cap, and whether it did
+ * is read from the row count. Reading the counters and then incrementing
+ * them let two requests that arrived together both see one unit left and
+ * both take it; a cap is a promise about spend, and a race is the one way it
+ * was not kept. The user's unit is taken first, and given back when the
+ * global one cannot be, so the two never disagree.
  */
 export async function reserveBudget(
   database: D1Database,
@@ -124,32 +132,43 @@ export async function reserveBudget(
 ): Promise<{ allowed: boolean; globalUsed: number; userUsed: number }> {
   const date = usageDate(options.nowIso);
   const budget: Budget = dailyBudgets[options.metric];
-  const [userUsed, globalUsed] = await Promise.all([
-    readUsed(database, date, options.metric, { id: options.userId, scope: "user" }),
-    readUsed(database, date, options.metric, { id: "global", scope: "global" }),
-  ]);
 
-  if (userUsed >= budget.user || globalUsed >= budget.global) {
-    return { allowed: false, globalUsed, userUsed };
-  }
-
-  const increment = (scope: "global" | "space" | "user", scopeId: string) =>
+  const take = (scope: "global" | "space" | "user", scopeId: string, cap: number | null) =>
     database
       .prepare(
         `INSERT INTO usage_counters (usage_date, scope, scope_id, metric, used, created_at, updated_at)
         VALUES (?, ?, ?, ?, 1, ?, ?)
         ON CONFLICT(usage_date, scope, scope_id, metric) DO UPDATE SET
-          used = usage_counters.used + 1, updated_at = excluded.updated_at`,
+          used = usage_counters.used + 1, updated_at = excluded.updated_at
+        WHERE ? IS NULL OR usage_counters.used < ?`,
       )
-      .bind(date, scope, scopeId, options.metric, options.nowIso, options.nowIso);
+      .bind(date, scope, scopeId, options.metric, options.nowIso, options.nowIso, cap, cap);
+  const giveBack = (scope: "global" | "user", scopeId: string) =>
+    database
+      .prepare(
+        `UPDATE usage_counters SET used = used - 1, updated_at = ?
+        WHERE usage_date = ? AND scope = ? AND scope_id = ? AND metric = ? AND used > 0`,
+      )
+      .bind(options.nowIso, date, scope, scopeId, options.metric);
+  const counts = async () => {
+    const [userUsed, globalUsed] = await Promise.all([
+      readUsed(database, date, options.metric, { id: options.userId, scope: "user" }),
+      readUsed(database, date, options.metric, { id: "global", scope: "global" }),
+    ]);
+    return { globalUsed, userUsed };
+  };
 
-  await database.batch([
-    increment("user", options.userId),
-    increment("space", options.spaceId),
-    increment("global", "global"),
-  ]);
-
-  return { allowed: true, globalUsed: globalUsed + 1, userUsed: userUsed + 1 };
+  // A fresh row inserts (one change); an existing row under its cap updates
+  // (one change); an existing row at its cap does nothing (no change).
+  const user = await take("user", options.userId, budget.user).run();
+  if (user.meta.changes !== 1) return { allowed: false, ...(await counts()) };
+  const global = await take("global", "global", budget.global).run();
+  if (global.meta.changes !== 1) {
+    await giveBack("user", options.userId).run();
+    return { allowed: false, ...(await counts()) };
+  }
+  await take("space", options.spaceId, null).run();
+  return { allowed: true, ...(await counts()) };
 }
 
 /**

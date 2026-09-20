@@ -223,7 +223,7 @@ Implemented:
 - explicitly selected private media is packaged into a ZIP written inside the Worker, so photo bytes never reach a packaging service; unauthorized ids are skipped rather than reported
 - exported CSV cells that begin with a spreadsheet formula character are quoted, so exported user text is never evaluated
 - confirmed, recoverable, idempotent Space deletion behind a typed name confirmation, and account deletion behind a recent sign-in, both executed by the scheduled handler with R2 cleanup
-- leaving a shared Space removes access without deleting shared records and pseudonymizes authorship only on request
+- leaving a shared Space removes access without deleting shared records; the last owner cannot leave
 - the broader MVP filter surface — country, region, grape, vintage range, score range, sentiment, photo presence, tasted-date range, and four sort orders — with accent-insensitive matching and stable cursor pagination on every sort
 - a deliberate confirmed merge that requires both current versions, moves every reference, records one audit event, keeps the losing name searchable as a merge alias, and replays without moving rows twice
 - pseudo-localization with a documented 35% expansion floor, plus per-locale interpolation, ICU brace, source-key leakage, long-string, decimal, date-order, and currency checks in the i18n gate
@@ -304,4 +304,4 @@ Phase 7 exit criteria, assessed honestly:
   the owner's decision; the preview acceptance run, performance measurements,
   and §22.2 sign-offs remain outstanding.
 
-Outstanding owner actions are tracked in `docs/your-desk-todo.md`.
+Outstanding owner actions are tracked in the operator's private task list.

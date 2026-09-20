@@ -377,13 +377,12 @@ export const TastingNoteResponseSchema = z
   .strict()
   .openapi("TastingNoteResponse");
 
+/** The most one photograph may be, after the browser has resized it. */
+export const mediaMaxBytes = 5 * 1024 * 1024;
+
 export const MediaReservationRequestSchema = z
   .object({
-    byteSize: z
-      .number()
-      .int()
-      .min(1)
-      .max(5 * 1024 * 1024),
+    byteSize: z.number().int().min(1).max(mediaMaxBytes),
     height: z.number().int().min(1).max(2048),
     kind: z.enum(["label", "receipt", "shelf", "avatar", "other"]),
     mimeType: z.enum(["image/jpeg", "image/webp"]),

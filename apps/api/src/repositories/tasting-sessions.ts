@@ -1,14 +1,15 @@
-import type {
-  TastingHistoryEntry,
-  AddSessionWinesRequest,
-  CreateTastingSessionRequest,
-  DeepTastingNote,
-  DeepTastingRequest,
-  SessionComparisonResponse,
-  TastingSessionDetailResponse,
-  TastingSessionResponse,
-  UpdateDeepTastingRequest,
-  WineSummary,
+import {
+  type AddSessionWinesRequest,
+  type CreateTastingSessionRequest,
+  type DeepTastingNote,
+  type DeepTastingRequest,
+  type SessionComparisonResponse,
+  sessionListBound,
+  type TastingHistoryEntry,
+  type TastingSessionDetailResponse,
+  type TastingSessionResponse,
+  type UpdateDeepTastingRequest,
+  type WineSummary,
 } from "@vadevi/contracts";
 import { ulid } from "ulid";
 
@@ -335,17 +336,20 @@ export async function createTastingSession(
 export async function listTastingSessions(
   database: D1Database,
   options: { principal: FirebasePrincipal; spaceId: string },
-): Promise<{ data: TastingSessionResponse["data"][] } | null> {
+): Promise<{ data: TastingSessionResponse["data"][]; hasMore: boolean } | null> {
   if ((await activeUserId(database, options.principal, options.spaceId)) === null) return null;
   const result = await database
     .prepare(
       `${sessionSelect}
       WHERE session.space_id = ? AND session.deleted_at IS NULL
-      ORDER BY session.starts_at DESC, session.id DESC LIMIT 100`,
+      ORDER BY session.starts_at DESC, session.id DESC LIMIT ?`,
     )
-    .bind(options.spaceId)
+    .bind(options.spaceId, sessionListBound + 1)
     .all<SessionRow>();
-  return { data: result.results.map(sessionResource) };
+  return {
+    data: result.results.slice(0, sessionListBound).map(sessionResource),
+    hasMore: result.results.length > sessionListBound,
+  };
 }
 
 const wineSelect = `SELECT wine.id, wine.display_name, wine.producer_name, wine.vintage_year,
@@ -816,6 +820,62 @@ function deepValues(request: DeepTastingRequest | UpdateDeepTastingRequest) {
   ] as const;
 }
 
+/**
+ * The update's binds: for each field, whether the request named it, and the
+ * value it named. Omitted keeps the column; null clears it; a value replaces
+ * it — the three states the contract promises, spelled as `CASE WHEN ? THEN ?
+ * ELSE column END` in the statement, where COALESCE could only ever keep.
+ */
+function deepUpdateValues(request: UpdateDeepTastingRequest): (number | string | null)[] {
+  const keys = [
+    "score100",
+    "sentiment",
+    "wouldDrinkAgain",
+    "wouldBuy",
+    "perceivedValue",
+    "memorable",
+    "pairingSuccess",
+    "expectationResult",
+    "tastingConfidence",
+    "appearanceText",
+    "noseText",
+    "palateText",
+    "conclusionText",
+    "appearanceClarity",
+    "appearanceColorFamily",
+    "appearanceHue",
+    "appearanceIntensity",
+    "rimEvolution",
+    "viscosity",
+    "noseCondition",
+    "noseIntensity",
+    "noseFreshness",
+    "noseDevelopment",
+    "sweetness",
+    "acidity",
+    "tanninLevel",
+    "tanninTexture",
+    "alcoholPerception",
+    "body",
+    "flavorIntensity",
+    "palateTexture",
+    "finishLength",
+    "balance",
+    "complexity",
+    "beadSize",
+    "effervescence",
+    "noseSwirledIntensity",
+    "noseSwirledText",
+  ] as const;
+  return keys.flatMap((key) => {
+    if (!(key in request)) return [0, null];
+    const value = request[key];
+    if (value === undefined) return [0, null];
+    if (value === null) return [1, null];
+    return [1, typeof value === "boolean" ? (value ? 1 : 0) : value];
+  });
+}
+
 export async function createDeepTastingNote(
   database: D1Database,
   options: {
@@ -1054,31 +1114,49 @@ export async function updateDeepTastingNote(
     return { kind: "unavailable" };
   }
   const now = new Date().toISOString();
-  const values = deepValues(options.request);
+  const values = deepUpdateValues(options.request);
   const commands: D1PreparedStatement[] = [
     database
       .prepare(
         `UPDATE tasting_notes SET
-          score_100 = COALESCE(?, score_100), sentiment = COALESCE(?, sentiment),
-          would_drink_again = COALESCE(?, would_drink_again), would_buy = COALESCE(?, would_buy),
-          perceived_value = COALESCE(?, perceived_value), memorable = COALESCE(?, memorable),
-          pairing_success = COALESCE(?, pairing_success), expectation_result = COALESCE(?, expectation_result),
-          tasting_confidence = COALESCE(?, tasting_confidence), appearance_text = COALESCE(?, appearance_text),
-          nose_text = COALESCE(?, nose_text), palate_text = COALESCE(?, palate_text),
-          conclusion_text = COALESCE(?, conclusion_text), appearance_clarity = COALESCE(?, appearance_clarity),
-          appearance_color_family = COALESCE(?, appearance_color_family), appearance_hue = COALESCE(?, appearance_hue),
-          appearance_intensity = COALESCE(?, appearance_intensity), rim_evolution = COALESCE(?, rim_evolution),
-          viscosity = COALESCE(?, viscosity), nose_condition = COALESCE(?, nose_condition),
-          nose_intensity = COALESCE(?, nose_intensity), nose_freshness = COALESCE(?, nose_freshness),
-          nose_development = COALESCE(?, nose_development), sweetness = COALESCE(?, sweetness),
-          acidity = COALESCE(?, acidity), tannin_level = COALESCE(?, tannin_level),
-          tannin_texture = COALESCE(?, tannin_texture), alcohol_perception = COALESCE(?, alcohol_perception),
-          body = COALESCE(?, body), flavor_intensity = COALESCE(?, flavor_intensity),
-          palate_texture = COALESCE(?, palate_texture), finish_length = COALESCE(?, finish_length),
-          balance = COALESCE(?, balance), complexity = COALESCE(?, complexity),
-          bead_size = COALESCE(?, bead_size), effervescence = COALESCE(?, effervescence),
-          nose_swirled_intensity = COALESCE(?, nose_swirled_intensity),
-          nose_swirled_text = COALESCE(?, nose_swirled_text),
+          score_100 = CASE WHEN ? THEN ? ELSE score_100 END,
+          sentiment = CASE WHEN ? THEN ? ELSE sentiment END,
+          would_drink_again = CASE WHEN ? THEN ? ELSE would_drink_again END,
+          would_buy = CASE WHEN ? THEN ? ELSE would_buy END,
+          perceived_value = CASE WHEN ? THEN ? ELSE perceived_value END,
+          memorable = CASE WHEN ? THEN ? ELSE memorable END,
+          pairing_success = CASE WHEN ? THEN ? ELSE pairing_success END,
+          expectation_result = CASE WHEN ? THEN ? ELSE expectation_result END,
+          tasting_confidence = CASE WHEN ? THEN ? ELSE tasting_confidence END,
+          appearance_text = CASE WHEN ? THEN ? ELSE appearance_text END,
+          nose_text = CASE WHEN ? THEN ? ELSE nose_text END,
+          palate_text = CASE WHEN ? THEN ? ELSE palate_text END,
+          conclusion_text = CASE WHEN ? THEN ? ELSE conclusion_text END,
+          appearance_clarity = CASE WHEN ? THEN ? ELSE appearance_clarity END,
+          appearance_color_family = CASE WHEN ? THEN ? ELSE appearance_color_family END,
+          appearance_hue = CASE WHEN ? THEN ? ELSE appearance_hue END,
+          appearance_intensity = CASE WHEN ? THEN ? ELSE appearance_intensity END,
+          rim_evolution = CASE WHEN ? THEN ? ELSE rim_evolution END,
+          viscosity = CASE WHEN ? THEN ? ELSE viscosity END,
+          nose_condition = CASE WHEN ? THEN ? ELSE nose_condition END,
+          nose_intensity = CASE WHEN ? THEN ? ELSE nose_intensity END,
+          nose_freshness = CASE WHEN ? THEN ? ELSE nose_freshness END,
+          nose_development = CASE WHEN ? THEN ? ELSE nose_development END,
+          sweetness = CASE WHEN ? THEN ? ELSE sweetness END,
+          acidity = CASE WHEN ? THEN ? ELSE acidity END,
+          tannin_level = CASE WHEN ? THEN ? ELSE tannin_level END,
+          tannin_texture = CASE WHEN ? THEN ? ELSE tannin_texture END,
+          alcohol_perception = CASE WHEN ? THEN ? ELSE alcohol_perception END,
+          body = CASE WHEN ? THEN ? ELSE body END,
+          flavor_intensity = CASE WHEN ? THEN ? ELSE flavor_intensity END,
+          palate_texture = CASE WHEN ? THEN ? ELSE palate_texture END,
+          finish_length = CASE WHEN ? THEN ? ELSE finish_length END,
+          balance = CASE WHEN ? THEN ? ELSE balance END,
+          complexity = CASE WHEN ? THEN ? ELSE complexity END,
+          bead_size = CASE WHEN ? THEN ? ELSE bead_size END,
+          effervescence = CASE WHEN ? THEN ? ELSE effervescence END,
+          nose_swirled_intensity = CASE WHEN ? THEN ? ELSE nose_swirled_intensity END,
+          nose_swirled_text = CASE WHEN ? THEN ? ELSE nose_swirled_text END,
           tasted_at = COALESCE(?, tasted_at), version = version + 1, updated_at = ?
         WHERE id = ? AND space_id = ? AND mode = 'deep' AND deleted_at IS NULL
           AND version = ? AND author_user_id = (

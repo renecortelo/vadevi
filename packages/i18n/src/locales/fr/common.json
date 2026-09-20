@@ -52,6 +52,9 @@
     "reload": "Recharger Va de Vi",
     "home": "Retour à l'accueil"
   },
+  "lists": {
+    "firstOnly": "Affichage des {{count}} premiers. L'export dans Données et confidentialité contient tout."
+  },
   "space": {
     "switchLabel": "Espace actif",
     "switchError": "Cet Espace n'a pas pu être ouvert."
@@ -940,7 +943,10 @@
   },
   "dataRights": {
     "accountScheduled": "La suppression du compte est programmée dans {{days}} jours.",
+    "accountPending": "Votre compte et votre Espace personnel sont purgés après le {{purgeAfter}} sauf annulation.",
+    "accountCanceled": "La suppression du compte a été annulée.",
     "actionError": "Cela n'a pas fonctionné. Vérifiez votre connexion et réessayez.",
+    "archiveTooLarge": "Cette sélection pèse {{requested}} Mo ; une archive contient jusqu'à {{max}} Mo. Sélectionnez moins de photos et téléchargez en plusieurs fois.",
     "body": "Exportez ce qui vous appartient, consultez l'usage et supprimez à vos conditions.",
     "budgetStatus": {
       "ok": "Dans le budget",
@@ -949,6 +955,7 @@
       "capped": "Plafonné — la voie hors ligne est utilisée"
     },
     "cancelDeletionAction": "Annuler la suppression",
+    "cancelAccountAction": "Garder mon compte",
     "confirmationLabel": "Nom de l'Espace",
     "csvAction": "Exporter le CSV {{dataset}}",
     "csvReady": "Le CSV {{dataset}} a été téléchargé.",
@@ -960,7 +967,7 @@
       "prices": "prix"
     },
     "deleteAccountAction": "Programmer la suppression du compte",
-    "deleteAccountBody": "Ceci supprime votre Espace personnel et vos données privées. Les enregistrements partagés restent dans leur Espace. Une connexion récente est requise.",
+    "deleteAccountBody": "Supprime votre Espace personnel et vos données privées ; le partagé reste dans son Espace. Connexion récente requise. Le mainteneur retire l'enregistrement Google une fois la purge terminée.",
     "deleteAccountLabel": "Saisissez DELETE pour confirmer",
     "deleteAccountTitle": "Supprimer votre compte",
     "deleteSpaceAction": "Programmer la suppression",
@@ -976,6 +983,7 @@
     "eyebrow": "Vos données",
     "leaveAction": "Quitter cet Espace",
     "leaveBody": "Les enregistrements partagés restent dans l'Espace. Vous perdez l'accès dès la requête suivante.",
+    "lastOwnerError": "Vous êtes la seule personne propriétaire de {{names}}. Nommez d'abord une autre personne parmi ses membres, ou supprimez cet Espace.",
     "leaveTitle": "Quitter cet Espace",
     "leftSpace": "Vous avez quitté l'Espace.",
     "mediaAction": "Télécharger {{count}} photo sélectionnée",

@@ -131,12 +131,14 @@
           "NOT_FOUND",
           "VALIDATION_FAILED",
           "VERSION_CONFLICT",
+          "LAST_OWNER",
           "IDEMPOTENCY_CONFLICT",
           "RATE_LIMITED",
           "QUOTA_EXHAUSTED",
           "FEATURE_UNAVAILABLE",
           "EXTERNAL_SOURCE_UNAVAILABLE",
           "MEDIA_REJECTED",
+          "ARCHIVE_TOO_LARGE",
           "SYNC_CURSOR_EXPIRED",
           "INVITE_INVALID",
           "INVITE_EXPIRED",
@@ -1540,10 +1542,6 @@
             "enum": [
               true
             ]
-          },
-          "pseudonymizeAuthorship": {
-            "type": "boolean",
-            "default": false
           }
         },
         "required": [
@@ -1841,7 +1839,13 @@
           },
           "targetCurrency": {
             "type": "string",
-            "pattern": "^[A-Z]{3}$"
+            "enum": [
+              "EUR",
+              "USD",
+              "GBP",
+              "CHF",
+              "MXN"
+            ]
           },
           "wineId": {
             "type": "string",
@@ -1877,7 +1881,13 @@
           },
           "currency": {
             "type": "string",
-            "pattern": "^[A-Z]{3}$"
+            "enum": [
+              "EUR",
+              "USD",
+              "GBP",
+              "CHF",
+              "MXN"
+            ]
           },
           "evidenceMediaId": {
             "type": "string",
@@ -2268,7 +2278,13 @@
                     },
                     "currency": {
                       "type": "string",
-                      "pattern": "^[A-Z]{3}$"
+                      "enum": [
+                        "EUR",
+                        "USD",
+                        "GBP",
+                        "CHF",
+                        "MXN"
+                      ]
                     },
                     "evidenceMediaId": {
                       "type": "string",
@@ -2423,7 +2439,13 @@
                         },
                         "currency": {
                           "type": "string",
-                          "pattern": "^[A-Z]{3}$"
+                          "enum": [
+                            "EUR",
+                            "USD",
+                            "GBP",
+                            "CHF",
+                            "MXN"
+                          ]
                         },
                         "evidenceMediaId": {
                           "type": "string",
@@ -3556,6 +3578,9 @@
                 },
                 "maxItems": 250
               },
+              "hasMore": {
+                "type": "boolean"
+              },
               "inventory": {
                 "type": "object",
                 "properties": {
@@ -3597,6 +3622,7 @@
             },
             "required": [
               "bottles",
+              "hasMore",
               "inventory"
             ],
             "additionalProperties": false
@@ -3927,7 +3953,13 @@
                   },
                   "currency": {
                     "type": "string",
-                    "pattern": "^[A-Z]{3}$"
+                    "enum": [
+                      "EUR",
+                      "USD",
+                      "GBP",
+                      "CHF",
+                      "MXN"
+                    ]
                   },
                   "evidenceMediaId": {
                     "type": "string",
@@ -4036,7 +4068,13 @@
           },
           "currency": {
             "type": "string",
-            "pattern": "^[A-Z]{3}$"
+            "enum": [
+              "EUR",
+              "USD",
+              "GBP",
+              "CHF",
+              "MXN"
+            ]
           },
           "evidenceMediaId": {
             "type": "string",
@@ -4142,7 +4180,14 @@
                 "targetCurrency": {
                   "type": "string",
                   "nullable": true,
-                  "pattern": "^[A-Z]{3}$"
+                  "enum": [
+                    "EUR",
+                    "USD",
+                    "GBP",
+                    "CHF",
+                    "MXN",
+                    null
+                  ]
                 },
                 "updatedAt": {
                   "type": "string",
@@ -4176,10 +4221,14 @@
               "additionalProperties": false
             },
             "maxItems": 250
+          },
+          "hasMore": {
+            "type": "boolean"
           }
         },
         "required": [
-          "data"
+          "data",
+          "hasMore"
         ],
         "additionalProperties": false
       },
@@ -4235,7 +4284,14 @@
               "targetCurrency": {
                 "type": "string",
                 "nullable": true,
-                "pattern": "^[A-Z]{3}$"
+                "enum": [
+                  "EUR",
+                  "USD",
+                  "GBP",
+                  "CHF",
+                  "MXN",
+                  null
+                ]
               },
               "updatedAt": {
                 "type": "string",
@@ -4284,7 +4340,13 @@
           },
           "targetCurrency": {
             "type": "string",
-            "pattern": "^[A-Z]{3}$"
+            "enum": [
+              "EUR",
+              "USD",
+              "GBP",
+              "CHF",
+              "MXN"
+            ]
           },
           "notes": {
             "type": "string",
@@ -4327,6 +4389,9 @@
           "data": {
             "type": "object",
             "properties": {
+              "hasMore": {
+                "type": "boolean"
+              },
               "observations": {
                 "type": "array",
                 "items": {
@@ -4351,7 +4416,13 @@
                     },
                     "currency": {
                       "type": "string",
-                      "pattern": "^[A-Z]{3}$"
+                      "enum": [
+                        "EUR",
+                        "USD",
+                        "GBP",
+                        "CHF",
+                        "MXN"
+                      ]
                     },
                     "evidenceMediaId": {
                       "type": "string",
@@ -4472,6 +4543,7 @@
               }
             },
             "required": [
+              "hasMore",
               "observations",
               "warnings"
             ],
@@ -4508,7 +4580,13 @@
               },
               "currency": {
                 "type": "string",
-                "pattern": "^[A-Z]{3}$"
+                "enum": [
+                  "EUR",
+                  "USD",
+                  "GBP",
+                  "CHF",
+                  "MXN"
+                ]
               },
               "evidenceMediaId": {
                 "type": "string",
@@ -8519,11 +8597,16 @@
                 "wineCount"
               ],
               "additionalProperties": false
-            }
+            },
+            "maxItems": 100
+          },
+          "hasMore": {
+            "type": "boolean"
           }
         },
         "required": [
-          "data"
+          "data",
+          "hasMore"
         ],
         "additionalProperties": false
       },
@@ -9107,224 +9190,272 @@
         "properties": {
           "acidity": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "alcoholPerception": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "appearanceClarity": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "clear",
-              "hazy"
+              "hazy",
+              null
             ]
           },
           "appearanceColorFamily": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "white",
               "rose",
               "red",
               "orange",
-              "brown"
+              "brown",
+              null
             ]
           },
           "appearanceHue": {
             "type": "string",
+            "nullable": true,
             "minLength": 1,
             "maxLength": 80
           },
           "appearanceIntensity": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "appearanceText": {
             "type": "string",
+            "nullable": true,
             "maxLength": 2000
           },
           "balance": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "beadSize": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "fine",
               "medium",
-              "coarse"
+              "coarse",
+              null
             ]
           },
           "body": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "complexity": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "conclusionText": {
             "type": "string",
+            "nullable": true,
             "maxLength": 2000
           },
           "effervescence": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "expectationResult": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "below",
               "met",
               "above",
-              "unknown"
+              "unknown",
+              null
             ]
           },
           "finishLength": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "flavorIntensity": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "memorable": {
-            "type": "boolean"
+            "type": "boolean",
+            "nullable": true
           },
           "noseCondition": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "clean",
-              "possible_fault"
+              "possible_fault",
+              null
             ]
           },
           "noseDevelopment": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "noseFreshness": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "noseIntensity": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "noseText": {
             "type": "string",
+            "nullable": true,
             "maxLength": 2000
           },
           "noseSwirledIntensity": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "noseSwirledText": {
             "type": "string",
+            "nullable": true,
             "maxLength": 2000
           },
           "pairingSuccess": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "palateText": {
             "type": "string",
+            "nullable": true,
             "maxLength": 2000
           },
           "palateTexture": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "lean",
               "round",
               "creamy",
               "oily",
-              "other"
+              "other",
+              null
             ]
           },
           "perceivedValue": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "rimEvolution": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "score100": {
             "type": "integer",
+            "nullable": true,
             "minimum": 0,
             "maximum": 100
           },
           "sentiment": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "dislike",
               "neutral",
-              "like"
+              "like",
+              null
             ]
           },
           "sweetness": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "tanninLevel": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "tanninTexture": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "silky",
               "fine",
               "grippy",
-              "coarse"
+              "coarse",
+              null
             ]
-          },
-          "tastedAt": {
-            "type": "string",
-            "format": "date-time"
           },
           "tastingConfidence": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "viscosity": {
             "type": "integer",
+            "nullable": true,
             "minimum": 1,
             "maximum": 5
           },
           "wouldBuy": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "yes",
               "no",
-              "unsure"
+              "unsure",
+              null
             ]
           },
           "wouldDrinkAgain": {
             "type": "string",
+            "nullable": true,
             "enum": [
               "yes",
               "no",
-              "unsure"
+              "unsure",
+              null
             ]
+          },
+          "tastedAt": {
+            "type": "string",
+            "format": "date-time"
           },
           "context": {
             "type": "object",
@@ -11855,6 +11986,16 @@
                 }
               }
             }
+          },
+          "413": {
+            "description": "The selection is larger than one archive may hold; details carry the total and the limit.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
           }
         }
       }
@@ -11980,6 +12121,182 @@
           },
           "404": {
             "description": "No deletion job is available to this actor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/deletion": {
+      "get": {
+        "operationId": "getAccountDeletion",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Read the latest account deletion job",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The latest deletion job for this account, in whatever state.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletionJobResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No deletion was ever scheduled for this account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "scheduleAccountDeletion",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Schedule account deletion after a recent sign-in",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "The account deletion job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletionJobResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid confirmation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "A more recent sign-in is required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The account is the only owner of a shared Space; name another owner or delete it first.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/deletion/cancel": {
+      "post": {
+        "operationId": "cancelAccountDeletion",
+        "tags": [
+          "Data rights"
+        ],
+        "summary": "Cancel a scheduled account deletion during its grace period",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The canceled deletion job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletionJobResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No cancelable job exists for this account.",
             "content": {
               "application/json": {
                 "schema": {
@@ -12142,75 +12459,9 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/api/v1/me/deletion": {
-      "post": {
-        "operationId": "scheduleAccountDeletion",
-        "tags": [
-          "Data rights"
-        ],
-        "summary": "Schedule account deletion after a recent sign-in",
-        "security": [
-          {
-            "FirebaseBearer": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DeleteAccountRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "202": {
-            "description": "The account deletion job.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeletionJobResponse"
-                }
-              }
-            }
           },
-          "400": {
-            "description": "Invalid confirmation.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Authentication required.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "A more recent sign-in is required.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "User unavailable.",
+          "409": {
+            "description": "The last owner cannot leave; name another owner or delete the Space.",
             "content": {
               "application/json": {
                 "schema": {
@@ -13381,7 +13632,13 @@
           {
             "schema": {
               "type": "string",
-              "pattern": "^[A-Z]{3}$"
+              "enum": [
+                "EUR",
+                "USD",
+                "GBP",
+                "CHF",
+                "MXN"
+              ]
             },
             "required": false,
             "name": "currency",
@@ -14722,6 +14979,16 @@
           },
           "404": {
             "description": "Reservation unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "The body is larger than any reservation allows; it was not read in full.",
             "content": {
               "application/json": {
                 "schema": {

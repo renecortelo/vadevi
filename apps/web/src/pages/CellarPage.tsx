@@ -1,4 +1,12 @@
-import type { Bottle, BottleListResponse, WineSummary } from "@vadevi/contracts";
+import {
+  type Bottle,
+  type BottleListResponse,
+  type CurrencyCode,
+  listBound,
+  supportedCurrencies,
+  toMinorUnits,
+  type WineSummary,
+} from "@vadevi/contracts";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
@@ -11,6 +19,7 @@ import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
 import { createPurchase, getBottles, updateBottle } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
+import { useLatestLoad } from "../lib/latest-load";
 
 const emptyInventory: BottleListResponse["data"]["inventory"] = {
   finished: 0,
@@ -28,7 +37,7 @@ export function CellarPage() {
   const spaceId = bootstrap.data.user.activeSpaceId;
   const userId = user?.uid ?? "";
   const [response, setResponse] = useState<BottleListResponse>({
-    data: { bottles: [], inventory: emptyInventory },
+    data: { bottles: [], hasMore: false, inventory: emptyInventory },
   });
   const [wines, setWines] = useState<WineSummary[]>([]);
   const [usingCache, setUsingCache] = useState(false);
@@ -38,7 +47,7 @@ export function CellarPage() {
   const [wineId, setWineId] = useState("");
   const [merchantName, setMerchantName] = useState("");
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState("EUR");
+  const [currency, setCurrency] = useState<CurrencyCode>("EUR");
   const [quantity, setQuantity] = useState("1");
 
   const loadCache = useCallback(async () => {
@@ -52,7 +61,9 @@ export function CellarPage() {
     setUsingCache(true);
   }, [spaceId, userId]);
 
+  const startLoad = useLatestLoad();
   const load = useCallback(async () => {
+    const isLatest = startLoad();
     setLoading(true);
     setError(false);
     if (user === null || !navigator.onLine) {
@@ -65,6 +76,8 @@ export function CellarPage() {
         getBottles(user, spaceId),
         getWineMemory(user, spaceId, { limit: 100 }),
       ]);
+      // A Space switched mid-load: this answer is the old Space's.
+      if (!isLatest()) return;
       setResponse(cellar);
       setWines(memory.data);
       setUsingCache(false);
@@ -76,12 +89,13 @@ export function CellarPage() {
         userId: user.uid,
       });
     } catch {
+      if (!isLatest()) return;
       setError(true);
       await loadCache();
     } finally {
-      setLoading(false);
+      if (isLatest()) setLoading(false);
     }
-  }, [loadCache, spaceId, user]);
+  }, [loadCache, spaceId, startLoad, user]);
 
   useEffect(() => {
     queueMicrotask(() => void load());
@@ -110,7 +124,7 @@ export function CellarPage() {
           merchantName,
           purchasedAt: new Date().toISOString(),
           quantity: parsedQuantity,
-          unitAmountMinor: Math.round(parsedAmount * 100),
+          unitAmountMinor: toMinorUnits(parsedAmount, currency),
           wineId,
         },
         createIdempotencyKey(),
@@ -175,6 +189,9 @@ export function CellarPage() {
       </header>
 
       {usingCache ? <p className="offline-banner">{t("cellar.cached")}</p> : null}
+      {response.data.hasMore ? (
+        <p className="offline-banner">{t("lists.firstOnly", { count: listBound })}</p>
+      ) : null}
       {error ? <p className="form-error">{t("cellar.error")}</p> : null}
 
       <section aria-label={t("cellar.inventoryTitle")} className="inventory-grid">
@@ -223,13 +240,16 @@ export function CellarPage() {
           </label>
           <label>
             {t("cellar.currency")}
-            <input
-              maxLength={3}
-              onChange={(event) => setCurrency(event.target.value.toUpperCase())}
-              pattern="[A-Z]{3}"
-              required
+            <select
+              onChange={(event) => setCurrency(event.target.value as CurrencyCode)}
               value={currency}
-            />
+            >
+              {supportedCurrencies.map((code) => (
+                <option key={code} value={code}>
+                  {code}
+                </option>
+              ))}
+            </select>
           </label>
           <label>
             {t("cellar.quantity")}

@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 /**
@@ -135,8 +135,24 @@ if (denied.length === 0) {
 }
 
 // A single root commit: no ancestry to walk back into.
+// A marker the source tree does not carry, so the shared pre-push hook can
+// tell the mirror from the development repository and refuse a commit made
+// there under a personal identity: the initial export is committed as
+// "Va de Vi", and every commit after it must be too.
+writeFileSync(
+  resolve(outputDirectory, "PUBLIC_MIRROR.md"),
+  "# Public mirror\n\n" +
+    "This repository is the public mirror of a private development repository, " +
+    "built by `pnpm mirror:build` and carrying no prior history. Commits here are " +
+    "made under the project's neutral identity (`Va de Vi <noreply@example.invalid>`); " +
+    "the pre-push hook refuses any other, so a maintainer's address never reaches " +
+    "the public record.\n",
+);
+
 run("git", ["init", "--quiet", "--initial-branch=main"], outputDirectory);
 run("git", ["add", "--all"], outputDirectory);
+run("git", ["config", "user.name", "Va de Vi"], outputDirectory);
+run("git", ["config", "user.email", "noreply@example.invalid"], outputDirectory);
 run(
   "git",
   [

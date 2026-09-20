@@ -1,7 +1,12 @@
-import type {
-  PriceObservation,
-  PriceObservationListResponse,
-  WineSummary,
+import {
+  type CurrencyCode,
+  fromMinorUnits,
+  listBound,
+  type PriceObservation,
+  type PriceObservationListResponse,
+  supportedCurrencies,
+  toMinorUnits,
+  type WineSummary,
 } from "@vadevi/contracts";
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
@@ -15,6 +20,7 @@ import { getWineMemory } from "../services/api";
 import { createPriceObservation, getPriceObservations } from "../services/cellar";
 import { WinePicker } from "../components/WinePicker";
 import { useSession } from "../session/SessionContext";
+import { useLatestLoad } from "../lib/latest-load";
 
 function priceSnapshotId(userId: string, spaceId: string, wineId: string) {
   return `${userId}:${spaceId}:${wineId}`;
@@ -28,32 +34,36 @@ export function ShopPage() {
   const [wines, setWines] = useState<WineSummary[]>([]);
   const [wineId, setWineId] = useState("");
   const [prices, setPrices] = useState<PriceObservationListResponse>({
-    data: { observations: [], warnings: [] },
+    data: { hasMore: false, observations: [], warnings: [] },
   });
   const [usingCache, setUsingCache] = useState(false);
   const [error, setError] = useState(false);
   const [saving, setSaving] = useState(false);
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState("EUR");
+  const [currency, setCurrency] = useState<CurrencyCode>("EUR");
   const [merchantName, setMerchantName] = useState("");
   const [channel, setChannel] = useState<PriceObservation["channel"]>("physical");
   const [sourceType, setSourceType] = useState<"merchant" | "receipt" | "shelf">("shelf");
   const [vintageMatch, setVintageMatch] = useState<PriceObservation["vintageMatch"]>("unknown");
 
+  const startLoad = useLatestLoad();
   const loadPrices = useCallback(async () => {
-    if (wineId.length === 0 || user === null) {
-      setPrices({ data: { observations: [], warnings: [] } });
-      return;
-    }
+    const isLatest = startLoad();
+    // The previous wine's prices are cleared at once: an answer for the new
+    // one that has not arrived yet is an empty list, not the old one's.
+    setPrices({ data: { hasMore: false, observations: [], warnings: [] } });
+    if (wineId.length === 0 || user === null) return;
     const id = priceSnapshotId(user.uid, spaceId, wineId);
     if (!navigator.onLine) {
       const cached = await offlineDatabase.prices.get(id);
+      if (!isLatest()) return;
       if (cached !== undefined) setPrices(cached.response);
       setUsingCache(true);
       return;
     }
     try {
       const response = await getPriceObservations(user, spaceId, wineId, { freshnessDays: 90 });
+      if (!isLatest()) return;
       setPrices(response);
       setUsingCache(false);
       await offlineDatabase.prices.put({
@@ -65,12 +75,14 @@ export function ShopPage() {
         wineId,
       });
     } catch {
+      if (!isLatest()) return;
       setError(true);
       const cached = await offlineDatabase.prices.get(id);
+      if (!isLatest()) return;
       if (cached !== undefined) setPrices(cached.response);
       setUsingCache(true);
     }
-  }, [spaceId, user, wineId]);
+  }, [spaceId, startLoad, user, wineId]);
 
   // Named, so the picker can ask for the list again after adding a wine to it.
   const loadWines = useCallback(async () => {
@@ -113,7 +125,7 @@ export function ShopPage() {
         spaceId,
         wineId,
         {
-          amountMinor: Math.round(parsedAmount * 100),
+          amountMinor: toMinorUnits(parsedAmount, currency),
           channel,
           currency,
           merchantName: merchantName.length === 0 ? undefined : merchantName,
@@ -162,6 +174,9 @@ export function ShopPage() {
         </nav>
       </header>
       {usingCache ? <p className="offline-banner">{t("shop.cached")}</p> : null}
+      {prices.data.hasMore ? (
+        <p className="offline-banner">{t("lists.firstOnly", { count: listBound })}</p>
+      ) : null}
       {error ? <p className="form-error">{t("shop.error")}</p> : null}
       <WinePicker
         onSearch={searchWines}
@@ -186,13 +201,16 @@ export function ShopPage() {
           </label>
           <label>
             {t("shop.currency")}
-            <input
-              maxLength={3}
-              onChange={(event) => setCurrency(event.target.value.toUpperCase())}
-              pattern="[A-Z]{3}"
-              required
+            <select
+              onChange={(event) => setCurrency(event.target.value as CurrencyCode)}
               value={currency}
-            />
+            >
+              {supportedCurrencies.map((code) => (
+                <option key={code} value={code}>
+                  {code}
+                </option>
+              ))}
+            </select>
           </label>
           <label>
             {t("shop.merchant")}
@@ -262,7 +280,7 @@ export function ShopPage() {
                     {new Intl.NumberFormat(i18n.language, {
                       style: "currency",
                       currency: price.currency,
-                    }).format(price.amountMinor / 100)}
+                    }).format(fromMinorUnits(price.amountMinor, price.currency))}
                   </strong>
                   {price.isStale ? <span>{t("shop.stale")}</span> : <span>{t("shop.recent")}</span>}
                 </div>

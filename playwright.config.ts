@@ -83,7 +83,10 @@ export default defineConfig({
       // demo-vadevi project and never contacts a real Firebase account.
       command: "pnpm dev:auth",
       url: "http://127.0.0.1:9099/emulator/v1/projects/demo-vadevi/config",
-      reuseExistingServer: process.env.CI !== "true",
+      // Never a server the suite did not start, unless asked: a server that
+      // happens to be listening belongs to somebody, with somebody's state.
+      // E2E_REUSE=1 opts in, for iterating on one spec against a kept server.
+      reuseExistingServer: process.env.E2E_REUSE === "1",
       timeout: 120_000,
       stdout: "ignore",
       stderr: "pipe",
@@ -95,7 +98,7 @@ export default defineConfig({
       // back; the resilience fixture waits for it before each test.
       command: `pnpm exec tsx scripts/serve-e2e.ts ${port}`,
       url: `${baseURL}/health`,
-      reuseExistingServer: process.env.CI !== "true",
+      reuseExistingServer: process.env.E2E_REUSE === "1",
       timeout: 120_000,
       stdout: "ignore",
       stderr: "pipe",

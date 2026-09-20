@@ -137,17 +137,46 @@ export const DeepTastingResponseSchema = z
   .strict()
   .openapi("DeepTastingResponse");
 
-export const UpdateDeepTastingRequestSchema = DeepTastingFieldsSchema.omit({
+/** The fields of a deep note an update may change, one by one. */
+const deepUpdatableFields = DeepTastingFieldsSchema.omit({
   clientId: true,
   context: true,
   descriptors: true,
   mode: true,
   sessionWineId: true,
   state: true,
+  tastedAt: true,
   wineId: true,
-})
-  .partial()
+});
+
+/**
+ * An update is three-valued per field: omitted keeps what is there, null
+ * clears it, a value replaces it. A form that holds the whole note sends
+ * null for a field the reader emptied — a score they took back, a paragraph
+ * they deleted — and the record follows. Before this, an emptied field was
+ * simply omitted, and the record kept the old value for ever.
+ */
+type Clearable<Shape extends z.ZodRawShape> = {
+  [Key in keyof Shape]: Shape[Key] extends z.ZodOptional<infer Inner extends z.ZodTypeAny>
+    ? z.ZodOptional<z.ZodNullable<Inner>>
+    : z.ZodOptional<z.ZodNullable<Shape[Key]>>;
+};
+
+function clearable<Shape extends z.ZodRawShape>(shape: Shape): Clearable<Shape> {
+  return Object.fromEntries(
+    Object.entries(shape).map(([key, schema]) => [
+      key,
+      ((schema instanceof z.ZodOptional ? schema.unwrap() : schema) as z.ZodTypeAny)
+        .nullable()
+        .optional(),
+    ]),
+  ) as Clearable<Shape>;
+}
+
+export const UpdateDeepTastingRequestSchema = z
+  .object(clearable(deepUpdatableFields.shape))
   .extend({
+    tastedAt: ResourceTimestampSchema.optional(),
     context: TastingContextSchema.optional(),
     descriptors: z.array(TastingDescriptorInputSchema).max(60).optional(),
     version: z.number().int().positive(),
@@ -233,8 +262,10 @@ export const TastingSessionResponseSchema = z
   .strict()
   .openapi("TastingSessionResponse");
 
+export const sessionListBound = 100;
+
 export const TastingSessionListResponseSchema = z
-  .object({ data: z.array(TastingSessionSchema) })
+  .object({ data: z.array(TastingSessionSchema).max(sessionListBound), hasMore: z.boolean() })
   .strict()
   .openapi("TastingSessionListResponse");
 

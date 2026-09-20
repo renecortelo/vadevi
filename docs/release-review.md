@@ -199,6 +199,14 @@ Wrangler at one origin, because a service worker and an installable manifest do
 not behave the same under the Vite dev server. Run them with `pnpm e2e`; CI runs
 them as a separate `e2e` job.
 
+The suite owns its state. Its Worker persists to `.wrangler/e2e-state`, apart
+from the `.wrangler/state` that `pnpm dev` uses, and Playwright starts both
+servers itself: a server already listening on 8788 or 9099 fails the run
+rather than being reused, since a server that happens to be listening belongs
+to somebody, with somebody's state — which is how an earlier run wrote its
+synthetic accounts into a developer's local database. `E2E_REUSE=1` opts back
+in, for iterating on one spec against a server kept running on purpose.
+
 **20 tests pass**, covering:
 
 - a service worker registering on a first visit, caching the shell, and serving

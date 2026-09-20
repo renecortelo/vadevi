@@ -57,4 +57,27 @@ describe("usage budgets", () => {
     expect(over.allowed).toBe(false);
     expect(over.userUsed).toBe(cap);
   });
+
+  it("hands the last unit to exactly one of many requests that arrive together", async () => {
+    const metric: UsageMetric = "websearch_calls";
+    const cap = dailyBudgets[metric].user;
+    const userId = "usage-test-racing-user";
+    const reserve = () =>
+      reserveBudget(env.DB, {
+        metric,
+        nowIso: "2098-07-01T00:00:00.000Z",
+        spaceId: "usage-test-space",
+        userId,
+      });
+    // All but one unit taken, then ten requests at once for the last one.
+    for (let call = 0; call < cap - 1; call += 1) expect((await reserve()).allowed).toBe(true);
+    const outcomes = await Promise.all(Array.from({ length: 10 }, () => reserve()));
+    expect(outcomes.filter((outcome) => outcome.allowed)).toHaveLength(1);
+    const row = await env.DB.prepare(
+      `SELECT used FROM usage_counters WHERE usage_date = '2098-07-01' AND scope = 'user' AND scope_id = ? AND metric = ?`,
+    )
+      .bind(userId, metric)
+      .first<{ used: number }>();
+    expect(row?.used).toBe(cap);
+  });
 });

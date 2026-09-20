@@ -113,17 +113,50 @@ export async function cancelSpaceDeletion(
   return DeletionJobResponseSchema.parse(await response.json());
 }
 
-export async function leaveSpace(
-  tokenSource: TokenSource,
-  spaceId: string,
-  pseudonymizeAuthorship: boolean,
-): Promise<void> {
+export async function leaveSpace(tokenSource: TokenSource, spaceId: string): Promise<void> {
   const response = await authenticatedFetch(tokenSource, `/api/v1/spaces/${spaceId}/leave`, {
-    body: JSON.stringify(LeaveSpaceRequestSchema.parse({ confirm: true, pseudonymizeAuthorship })),
+    body: JSON.stringify(LeaveSpaceRequestSchema.parse({ confirm: true })),
     headers: { "Content-Type": "application/json" },
     method: "POST",
   });
   if (!response.ok) throw await apiError(response);
+}
+
+/** The latest account deletion job, or null when none was ever scheduled. */
+export async function getAccountDeletion(
+  tokenSource: TokenSource,
+  signal?: AbortSignal,
+): Promise<DeletionJobResponse | null> {
+  const response = await authenticatedFetch(tokenSource, "/api/v1/me/deletion", {
+    ...(signal === undefined ? {} : { signal }),
+  });
+  if (response.status === 404) return null;
+  if (!response.ok) throw await apiError(response);
+  return DeletionJobResponseSchema.parse(await response.json());
+}
+
+export async function cancelAccountDeletion(
+  tokenSource: TokenSource,
+): Promise<DeletionJobResponse> {
+  const response = await authenticatedFetch(tokenSource, "/api/v1/me/deletion/cancel", {
+    method: "POST",
+  });
+  if (!response.ok) throw await apiError(response);
+  return DeletionJobResponseSchema.parse(await response.json());
+}
+
+/** The latest Space deletion job an owner can see, or null when there is none. */
+export async function getSpaceDeletion(
+  tokenSource: TokenSource,
+  spaceId: string,
+  signal?: AbortSignal,
+): Promise<DeletionJobResponse | null> {
+  const response = await authenticatedFetch(tokenSource, `/api/v1/spaces/${spaceId}/deletion`, {
+    ...(signal === undefined ? {} : { signal }),
+  });
+  if (response.status === 404) return null;
+  if (!response.ok) throw await apiError(response);
+  return DeletionJobResponseSchema.parse(await response.json());
 }
 
 export async function scheduleAccountDeletion(

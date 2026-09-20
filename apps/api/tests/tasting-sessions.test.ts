@@ -382,6 +382,63 @@ describe("Deep tasting and collaborative sessions", () => {
     expect(peer?.evidenceClass).toBe("observed");
   }, 30_000);
 
+  it("lets an update keep, clear, or replace each field", async () => {
+    const { spaceId } = await sharedSpace();
+    const wine = await createWine(spaceId, "Three-valued Wine");
+    const created = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/sessions`, {
+      body: JSON.stringify({ name: "Clearing night", startsAt: "2026-08-13T18:00:00.000Z" }),
+      headers: headers(ownerToken, randomOpaqueToken()),
+      method: "POST",
+    });
+    const session = TastingSessionResponseSchema.parse(await created.json()).data;
+    const added = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/sessions/${session.id}/wines`,
+      {
+        body: JSON.stringify({ entries: [{ wineId: wine.id }] }),
+        headers: headers(ownerToken, randomOpaqueToken()),
+        method: "POST",
+      },
+    );
+    const flight = TastingSessionDetailResponseSchema.parse(await added.json()).data.wines[0]!;
+    const note = await createDeepNote(spaceId, ownerToken, wine.id, flight.id, 77);
+
+    const patch = (body: Record<string, unknown>) =>
+      SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${note.id}`, {
+        body: JSON.stringify(body),
+        headers: headers(ownerToken),
+        method: "PATCH",
+      });
+    // Omitted keeps; null clears; a value replaces — and 0 is a value.
+    const first = await patch({
+      acidity: null,
+      conclusionText: null,
+      noseText: "replaced nose",
+      score100: 0,
+      version: note.version,
+    });
+    expect(first.status).toBe(200);
+    const after = DeepTastingResponseSchema.parse(await first.json()).data;
+    expect(after.score100).toBe(0);
+    expect(after.acidity).toBeUndefined();
+    expect(after.conclusionText).toBeUndefined();
+    expect(after.noseText).toBe("replaced nose");
+    // Kept, because omitted.
+    expect(after.appearanceText).toBe("77 appearance");
+    expect(after.wouldBuy).toBe("yes");
+
+    // Read back from storage, not the response: the clear persisted, and so
+    // did the zero.
+    const read = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${note.id}`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const stored = DeepTastingResponseSchema.parse(await read.json()).data;
+    expect(stored.score100).toBe(0);
+    expect(stored.acidity).toBeUndefined();
+    expect(stored.conclusionText).toBeUndefined();
+    expect(stored.appearanceText).toBe("77 appearance");
+  });
+
   it("keeps notes separate, round-trips structured fields, and compares submitted notes", async () => {
     const { outsider, owner, spaceId } = await sharedSpace();
     const firstWine = await createWine(spaceId, "First Flight Wine");

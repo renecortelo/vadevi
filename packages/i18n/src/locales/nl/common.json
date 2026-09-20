@@ -52,6 +52,9 @@
     "reload": "Va de Vi herladen",
     "home": "Terug naar het begin"
   },
+  "lists": {
+    "firstOnly": "De eerste {{count}} worden getoond. De export onder Gegevens en privacy bevat alles."
+  },
   "space": {
     "switchLabel": "Actieve Ruimte",
     "switchError": "Deze Ruimte kon niet worden geopend."
@@ -940,7 +943,10 @@
   },
   "dataRights": {
     "accountScheduled": "De accountverwijdering staat over {{days}} dagen ingepland.",
+    "accountPending": "Uw account en uw persoonlijke Ruimte worden na {{purgeAfter}} definitief gewist, tenzij u annuleert.",
+    "accountCanceled": "Het verwijderen van het account is geannuleerd.",
     "actionError": "Dat is niet gelukt. Controleer uw verbinding en probeer het opnieuw.",
+    "archiveTooLarge": "Deze selectie is {{requested}} MB; één archief bevat maximaal {{max}} MB. Selecteer minder foto's en download in delen.",
     "body": "Exporteer wat van u is, bekijk het gebruik en verwijder op uw voorwaarden.",
     "budgetStatus": {
       "ok": "Binnen budget",
@@ -949,6 +955,7 @@
       "capped": "Op de limiet — de offlineroute wordt gebruikt"
     },
     "cancelDeletionAction": "Verwijdering annuleren",
+    "cancelAccountAction": "Mijn account behouden",
     "confirmationLabel": "Naam van de Ruimte",
     "csvAction": "CSV van {{dataset}} exporteren",
     "csvReady": "De CSV van {{dataset}} is gedownload.",
@@ -960,7 +967,7 @@
       "prices": "prijzen"
     },
     "deleteAccountAction": "Accountverwijdering inplannen",
-    "deleteAccountBody": "Dit verwijdert uw persoonlijke Ruimte en privégegevens. Gedeelde records blijven bij hun Ruimte. Een recente aanmelding is vereist.",
+    "deleteAccountBody": "Verwijdert uw persoonlijke Ruimte en privégegevens; gedeelde records blijven bij hun Ruimte. Vereist een recente aanmelding. De beheerder wist het Google-aanmeldrecord na het wissen.",
     "deleteAccountLabel": "Typ DELETE om te bevestigen",
     "deleteAccountTitle": "Uw account verwijderen",
     "deleteSpaceAction": "Verwijdering inplannen",
@@ -976,6 +983,7 @@
     "eyebrow": "Uw gegevens",
     "leaveAction": "Deze Ruimte verlaten",
     "leaveBody": "Gedeelde records blijven bij de Ruimte. U verliest toegang bij uw volgende verzoek.",
+    "lastOwnerError": "U bent de enige eigenaar van {{names}}. Benoem eerst een andere eigenaar onder de leden, of verwijder die Ruimte.",
     "leaveTitle": "Deze Ruimte verlaten",
     "leftSpace": "U hebt de Ruimte verlaten.",
     "mediaAction": "{{count}} gekozen foto downloaden",

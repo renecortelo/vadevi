@@ -195,6 +195,15 @@ export const ExportDocumentSchema = z
   .strict()
   .openapi("ExportDocument");
 
+/**
+ * The most an archive may hold, in bytes of stored photographs. The archive is
+ * assembled in the Worker's memory, which is 128 MiB for everything at once;
+ * two hundred photographs of the 5 MiB the upload allows would be a gigabyte.
+ * The selection is measured before a single object is read, and a request
+ * over the line is answered with the total so the reader can select fewer.
+ */
+export const mediaArchiveMaxBytes = 48 * 1024 * 1024;
+
 export const ExportMediaRequestSchema = z
   .object({
     confirm: z.literal(true),
@@ -223,7 +232,6 @@ export const DeleteAccountRequestSchema = z
 export const LeaveSpaceRequestSchema = z
   .object({
     confirm: z.literal(true),
-    pseudonymizeAuthorship: z.boolean().default(false),
   })
   .strict()
   .openapi("LeaveSpaceRequest");

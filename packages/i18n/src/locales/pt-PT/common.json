@@ -52,6 +52,9 @@
     "reload": "Recarregar o Va de Vi",
     "home": "Voltar ao início"
   },
+  "lists": {
+    "firstOnly": "Mostram-se os primeiros {{count}}. A exportação em Dados e privacidade contém tudo."
+  },
   "space": {
     "switchLabel": "Espaço ativo",
     "switchError": "Não foi possível abrir esse Espaço."
@@ -940,7 +943,10 @@
   },
   "dataRights": {
     "accountScheduled": "A eliminação da conta está agendada daqui a {{days}} dias.",
+    "accountPending": "A sua conta e o seu Espaço pessoal são eliminados definitivamente após {{purgeAfter}}, salvo cancelamento.",
+    "accountCanceled": "A eliminação da conta foi cancelada.",
     "actionError": "Não resultou. Verifique a ligação e tente novamente.",
+    "archiveTooLarge": "Essa seleção ocupa {{requested}} MB; um arquivo comporta até {{max}} MB. Selecione menos fotografias e transfira por partes.",
     "body": "Exporte o que lhe pertence, reveja a utilização e elimine nos seus termos.",
     "budgetStatus": {
       "ok": "Dentro do orçamento",
@@ -949,6 +955,7 @@
       "capped": "No limite — é usada a via offline"
     },
     "cancelDeletionAction": "Cancelar a eliminação",
+    "cancelAccountAction": "Manter a minha conta",
     "confirmationLabel": "Nome do Espaço",
     "csvAction": "Exportar CSV de {{dataset}}",
     "csvReady": "O CSV de {{dataset}} foi transferido.",
@@ -960,7 +967,7 @@
       "prices": "preços"
     },
     "deleteAccountAction": "Agendar a eliminação da conta",
-    "deleteAccountBody": "Isto remove o seu Espaço pessoal e os dados privados. Os registos partilhados ficam no seu Espaço. É necessário um início de sessão recente.",
+    "deleteAccountBody": "Remove o seu Espaço pessoal e os dados privados; o partilhado fica no seu Espaço. Requer um acesso recente. O responsável remove o registo de acesso Google quando a eliminação termina.",
     "deleteAccountLabel": "Escreva DELETE para confirmar",
     "deleteAccountTitle": "Eliminar a sua conta",
     "deleteSpaceAction": "Agendar a eliminação",
@@ -976,6 +983,7 @@
     "eyebrow": "Os seus dados",
     "leaveAction": "Sair deste Espaço",
     "leaveBody": "Os registos partilhados ficam no Espaço. Perde o acesso no pedido seguinte.",
+    "lastOwnerError": "É a única pessoa proprietária de {{names}}. Nomeie antes outra pessoa entre os membros, ou elimine esse Espaço.",
     "leaveTitle": "Sair deste Espaço",
     "leftSpace": "Saiu do Espaço.",
     "mediaAction": "Transferir {{count}} fotografia selecionada",

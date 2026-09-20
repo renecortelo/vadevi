@@ -342,6 +342,12 @@ describe("account deletion leaves other people's data alone (AC-064)", () => {
     expect(user?.email_normalized).toBeNull();
     expect(user?.deleted_at).not.toBeNull();
 
+    // The Firebase uid is unlinked with the rest: the same Google account
+    // signing in again is a new account, not a 500 on a row that says gone.
+    const back = await bootstrap(leaverToken);
+    expect(back.data.user.id).not.toBe(leaver.data.user.id);
+    expect(back.data.user.activeSpaceId).toBeTruthy();
+
     // The Space survives, and so does the bottle that was never theirs.
     const stillThere = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${sharedId}/wines`, {
       headers: headers(stayerToken),

@@ -1,4 +1,4 @@
-import type { TastingSessionResponse } from "@vadevi/contracts";
+import { sessionListBound, type TastingSessionResponse } from "@vadevi/contracts";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
@@ -20,6 +20,7 @@ export function SessionsPage() {
   const spaceId = bootstrap.data.user.activeSpaceId;
   const userId = user?.uid ?? "";
   const [sessions, setSessions] = useState<SessionSummary[]>([]);
+  const [hasMore, setHasMore] = useState(false);
   const [usingCache, setUsingCache] = useState(false);
 
   const loadCached = useCallback(
@@ -47,6 +48,7 @@ export function SessionsPage() {
       void listTastingSessions(user, spaceId, controller.signal)
         .then(async (response) => {
           setSessions(response.data);
+          setHasMore(response.hasMore);
           setUsingCache(false);
           await cacheSessionList(user.uid, spaceId, response.data);
         })
@@ -84,6 +86,11 @@ export function SessionsPage() {
       {usingCache ? (
         <p className="cache-note" role="status">
           {t("sessions.cached")}
+        </p>
+      ) : null}
+      {hasMore ? (
+        <p className="cache-note" role="status">
+          {t("lists.firstOnly", { count: sessionListBound })}
         </p>
       ) : null}
       {sessions.length === 0 ? (

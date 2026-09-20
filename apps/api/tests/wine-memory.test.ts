@@ -70,11 +70,22 @@ async function createWine(
   return { key, response };
 }
 
-function tinyJpeg(width = 1, height = 1, exif = false): Uint8Array<ArrayBuffer> {
+/**
+ * A minimal JPEG: a size segment and nothing else, unless `exif` asks for an
+ * APP1 before it — or `exifAfterSize` for one after it, where a check that
+ * stopped reading at the size never looked.
+ */
+function tinyJpeg(
+  width = 1,
+  height = 1,
+  exif = false,
+  exifAfterSize = false,
+): Uint8Array<ArrayBuffer> {
+  const app1 = [0xff, 0xe1, 0x00, 0x08, 0x45, 0x78, 0x69, 0x66, 0x00, 0x00];
   const bytes = [
     0xff,
     0xd8,
-    ...(exif ? [0xff, 0xe1, 0x00, 0x08, 0x45, 0x78, 0x69, 0x66, 0x00, 0x00] : []),
+    ...(exif ? app1 : []),
     0xff,
     0xc0,
     0x00,
@@ -94,6 +105,7 @@ function tinyJpeg(width = 1, height = 1, exif = false): Uint8Array<ArrayBuffer> 
     0x03,
     0x11,
     0x00,
+    ...(exifAfterSize ? app1 : []),
     0xff,
     0xd9,
   ];
@@ -596,6 +608,33 @@ describe("Wine Memory and Quick Log", () => {
       },
     );
     expect(exifResponse.status).toBe(400);
+
+    // Metadata placed after the size segment, where the check used to have
+    // stopped reading: rejected the same.
+    const lateExifBytes = tinyJpeg(1, 1, false, true);
+    const lateExif = await reserve(spaceId, lateExifBytes);
+    const lateExifResponse = await SELF.fetch(
+      `https://vadevi.test${lateExif.reservation.data.uploadPath}`,
+      {
+        body: lateExifBytes,
+        headers: { Authorization: `Bearer ${ownerToken}`, "Content-Type": "image/jpeg" },
+        method: "PUT",
+      },
+    );
+    expect(lateExifResponse.status).toBe(400);
+
+    // A body over the most any reservation may be is refused on the byte
+    // that crosses the line, not buffered whole first.
+    const huge = await reserve(spaceId, bytes);
+    const hugeResponse = await SELF.fetch(
+      `https://vadevi.test${huge.reservation.data.uploadPath}`,
+      {
+        body: new Uint8Array(5 * 1024 * 1024 + 1),
+        headers: { Authorization: `Bearer ${ownerToken}`, "Content-Type": "image/jpeg" },
+        method: "PUT",
+      },
+    );
+    expect(hugeResponse.status).toBe(413);
 
     const hashBytes = tinyJpeg(2, 1);
     const hashReservation = await reserve(spaceId, hashBytes, 2, 1);

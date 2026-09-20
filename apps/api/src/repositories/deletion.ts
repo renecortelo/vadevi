@@ -32,6 +32,7 @@ type JobRow = {
 type JobResult =
   | { job: DeletionJob; kind: "success"; replayed: boolean }
   | { kind: "conflict" }
+  | { kind: "last_owner"; spaceNames: string[] }
   | { kind: "stale_login" }
   | { kind: "unavailable" };
 
@@ -216,6 +217,15 @@ export async function scheduleAccountDeletion(
   const existing = await openJob(database, "account", actor.id);
   if (existing !== null) return { job: jobPayload(existing), kind: "success", replayed: true };
 
+  // The purge detaches the account from every shared Space. A Space whose
+  // only owner that is would be left with nobody able to invite, remove,
+  // or delete — so it is refused, by name, until another owner is named or
+  // the Space itself is deleted.
+  const orphaned = await soleOwnerships(database, actor.id);
+  if (orphaned.length > 0) {
+    return { kind: "last_owner", spaceNames: orphaned.map((space) => space.name) };
+  }
+
   const jobId = ulid();
   const purgeAfter = new Date(Date.parse(now) + accountGracePeriodSeconds * 1_000).toISOString();
   await database.batch([
@@ -253,23 +263,55 @@ export async function scheduleAccountDeletion(
 }
 
 /**
- * Leaving a non-personal Space keeps shared records intact. Authorship is
- * pseudonymized only when the member asks for it, and the audit trail keeps the
- * pseudonymous membership reference so history is not falsified.
+ * The shared Spaces this user is the only active owner of, by name. Leaving
+ * one, or deleting the account, would leave it with nobody who can invite,
+ * remove, or delete — so both are refused until another owner is named.
+ */
+async function soleOwnerships(
+  database: D1Database,
+  userId: string,
+): Promise<{ id: string; name: string }[]> {
+  const rows = await database
+    .prepare(
+      `SELECT space.id, space.name FROM space_memberships mine
+      JOIN spaces space ON space.id = mine.space_id AND space.deleted_at IS NULL
+      WHERE mine.user_id = ? AND mine.status = 'active' AND mine.role = 'owner'
+        AND space.type <> 'personal'
+        AND NOT EXISTS (
+          SELECT 1 FROM space_memberships other
+          WHERE other.space_id = mine.space_id AND other.user_id <> mine.user_id
+            AND other.status = 'active' AND other.role = 'owner'
+        )
+      ORDER BY space.name`,
+    )
+    .bind(userId)
+    .all<{ id: string; name: string }>();
+  return rows.results;
+}
+
+/**
+ * Leaving a non-personal Space keeps shared records intact: the notes,
+ * bottles and prices the member contributed stay, under their name, as the
+ * group's record of what happened. The last owner cannot leave — a Space
+ * with no owner has nobody who can invite, remove, or delete it.
  */
 export async function leaveSpace(
   database: D1Database,
   options: {
     principal: FirebasePrincipal;
-    pseudonymizeAuthorship: boolean;
     requestId: string;
     spaceId: string;
   },
-): Promise<{ kind: "personal_space" | "unavailable" } | { kind: "success"; replayed: boolean }> {
+): Promise<
+  | { kind: "last_owner"; spaceNames: string[] }
+  | { kind: "personal_space" | "unavailable" }
+  | { kind: "success"; replayed: boolean }
+> {
   const now = new Date().toISOString();
   const membership = await database
     .prepare(
-      `SELECT actor.id AS user_id, membership.status, membership.role, space.type AS space_type
+      `SELECT actor.id AS user_id, membership.status, membership.role, space.type AS space_type,
+        space.name AS space_name
       FROM users actor
       JOIN space_memberships membership ON membership.user_id = actor.id
       JOIN spaces space ON space.id = membership.space_id
@@ -277,10 +319,24 @@ export async function leaveSpace(
         AND membership.space_id = ? AND space.deleted_at IS NULL`,
     )
     .bind(options.principal.firebaseUid, options.spaceId)
-    .first<{ role: string; space_type: string; status: string; user_id: string }>();
+    .first<{
+      role: string;
+      space_name: string;
+      space_type: string;
+      status: string;
+      user_id: string;
+    }>();
   if (membership === null) return { kind: "unavailable" };
   if (membership.space_type === "personal") return { kind: "personal_space" };
   if (membership.status !== "active") return { kind: "success", replayed: true };
+  if (
+    membership.role === "owner" &&
+    (await soleOwnerships(database, membership.user_id)).some(
+      (space) => space.id === options.spaceId,
+    )
+  ) {
+    return { kind: "last_owner", spaceNames: [membership.space_name] };
+  }
 
   const results = await database.batch([
     database
@@ -316,12 +372,74 @@ export async function leaveSpace(
         options.spaceId,
         membership.user_id,
         options.requestId,
-        JSON.stringify({ pseudonymizeAuthorship: options.pseudonymizeAuthorship }),
+        JSON.stringify({}),
         now,
       ),
   ]);
 
   return { kind: "success", replayed: results[0]?.meta.changes !== 1 };
+}
+
+/** The latest deletion job for this account, whatever its state. */
+export async function getAccountDeletion(
+  database: D1Database,
+  principal: FirebasePrincipal,
+): Promise<DeletionJob | null> {
+  const row = await database
+    .prepare(
+      `SELECT job.* FROM deletion_jobs job
+      JOIN users actor ON actor.id = job.target_id
+      WHERE job.target_type = 'account' AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
+      ORDER BY job.created_at DESC LIMIT 1`,
+    )
+    .bind(principal.firebaseUid)
+    .first<JobRow>();
+  return row === null ? null : jobPayload(row);
+}
+
+/**
+ * The account's owner can undo the confirmation until the grace period
+ * elapses — the same recoverable month a Space gets, which used to exist for
+ * the account only as a wait with nothing to do during it.
+ */
+export async function cancelAccountDeletion(
+  database: D1Database,
+  options: { principal: FirebasePrincipal; requestId: string },
+): Promise<JobResult> {
+  const now = new Date().toISOString();
+  const actor = await database
+    .prepare(`SELECT id FROM users WHERE firebase_uid = ? AND deleted_at IS NULL`)
+    .bind(options.principal.firebaseUid)
+    .first<{ id: string }>();
+  if (actor === null) return { kind: "unavailable" };
+  const existing = await openJob(database, "account", actor.id);
+  if (existing === null) return { kind: "unavailable" };
+
+  await database.batch([
+    database
+      .prepare(
+        `UPDATE deletion_jobs SET state = 'canceled', canceled_at = ?, updated_at = ?
+        WHERE id = ? AND state = 'scheduled'`,
+      )
+      .bind(now, now, existing.id),
+    database
+      .prepare(
+        `INSERT INTO audit_events (
+          id, actor_user_id, space_id, action, target_type, target_id,
+          request_id, safe_metadata_json, created_at
+        ) SELECT ?, ?, NULL, 'account.deletion_canceled', 'user', ?, ?, ?, ?
+        WHERE changes() = 1`,
+      )
+      .bind(ulid(), actor.id, actor.id, options.requestId, JSON.stringify({}), now),
+  ]);
+
+  const row = await database
+    .prepare(`SELECT * FROM deletion_jobs WHERE id = ?`)
+    .bind(existing.id)
+    .first<JobRow>();
+  return row === null
+    ? { kind: "unavailable" }
+    : { job: jobPayload(row), kind: "success", replayed: false };
 }
 
 /**
@@ -415,16 +533,20 @@ export async function purgeSpace(
     await semanticNotes.remove(embedded.results.map((row) => row.id));
   }
 
+  // Without the bucket the photographs cannot be removed, and a purge that
+  // deleted the rows and reported success would leave them in storage with
+  // nothing left that names them. The job throws instead, and is retried.
+  const media = await database
+    .prepare(`SELECT r2_key FROM media_assets WHERE space_id = ?`)
+    .bind(spaceId)
+    .all<{ r2_key: string }>();
+  if (bucket === undefined && media.results.length > 0) {
+    throw new Error("The MEDIA binding is unavailable; the Space's photographs cannot be purged.");
+  }
   let mediaObjectsRemoved = 0;
-  if (bucket !== undefined) {
-    const media = await database
-      .prepare(`SELECT r2_key FROM media_assets WHERE space_id = ?`)
-      .bind(spaceId)
-      .all<{ r2_key: string }>();
-    for (const row of media.results) {
-      await bucket.delete(row.r2_key);
-      mediaObjectsRemoved += 1;
-    }
+  for (const row of media.results) {
+    await bucket!.delete(row.r2_key);
+    mediaObjectsRemoved += 1;
   }
 
   let rowsRemoved = 0;
@@ -512,10 +634,15 @@ async function runDeletionJob(
       .bind(nowIso, nowIso, job.target_id)
       .run();
     rowsRemoved += detached.meta.changes;
+    // The row stays, as the anonymous author of what it contributed to shared
+    // Spaces, but nothing on it identifies a person any more — the Firebase
+    // uid included. A later sign-in with the same Google account is a new
+    // account, not a 500 on a row that says it is gone.
     const anonymized = await database
       .prepare(
         `UPDATE users SET display_name = 'Deleted account', email_normalized = NULL,
-            avatar_url = NULL, active_space_id = NULL, deleted_at = ?, updated_at = ?
+            avatar_url = NULL, active_space_id = NULL, firebase_uid = 'deleted:' || id,
+            deleted_at = ?, updated_at = ?
           WHERE id = ? AND deleted_at IS NULL`,
       )
       .bind(nowIso, nowIso, job.target_id)

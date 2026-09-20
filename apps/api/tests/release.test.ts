@@ -7,6 +7,7 @@ import {
   MergeWinesResponseSchema,
   SpaceDetailResponseSchema,
   UsageReportResponseSchema,
+  mediaArchiveMaxBytes,
   WineMemoryResponseSchema,
 } from "@vadevi/contracts";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
@@ -14,6 +15,7 @@ import { beforeAll, describe, expect, it } from "vitest";
 
 import { runDueDeletionJobs } from "../src/repositories/deletion";
 import { randomOpaqueToken } from "../src/security/opaque-token";
+import { ulid as randomUlid } from "ulid";
 import { emulatorIdToken } from "./fixtures/firebase-token";
 
 beforeAll(async () => {
@@ -256,6 +258,44 @@ describe("Export (AC-063)", () => {
     expect(memberText).not.toContain(ownerProse);
   });
 
+  it("refuses an archive larger than the Worker can assemble, before reading a byte", async () => {
+    const spaceId = await sharedSpace();
+    const owner = await bootstrap(ownerToken);
+    // Ten "photographs" of 5 MiB by their recorded size — no object exists,
+    // and none is read: the selection is measured first.
+    const ids = Array.from({ length: 10 }, () => randomUlid());
+    await env.DB.batch(
+      ids.map((id) =>
+        env.DB.prepare(
+          `INSERT INTO media_assets (
+            id, space_id, owner_user_id, kind, r2_key, mime_type, byte_size, sha256,
+            width, height, processing_status, expires_at, created_at, updated_at, deleted_at
+          ) VALUES (?, ?, ?, 'label', ?, 'image/jpeg', ?, 'synthetic', 10, 10, 'ready',
+            '2030-01-01T00:00:00.000Z', '2026-08-14T00:00:00.000Z', '2026-08-14T00:00:00.000Z', NULL)`,
+        ).bind(id, spaceId, owner.data.user.id, `private/${id}`, 5 * 1024 * 1024),
+      ),
+    );
+    const response = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/export/media`, {
+      body: JSON.stringify({ confirm: true, mediaIds: ids }),
+      headers: headers(ownerToken),
+      method: "POST",
+    });
+    expect(response.status).toBe(413);
+    const error = ErrorEnvelopeSchema.parse(await response.json()).error;
+    expect(error.code).toBe("ARCHIVE_TOO_LARGE");
+    expect(error.details).toEqual({
+      maxBytes: mediaArchiveMaxBytes,
+      requestedBytes: 10 * 5 * 1024 * 1024,
+    });
+    // Within the line, the same request is answered (empty: no object exists).
+    const smaller = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/export/media`, {
+      body: JSON.stringify({ confirm: true, mediaIds: ids.slice(0, 9) }),
+      headers: headers(ownerToken),
+      method: "POST",
+    });
+    expect(smaller.status).toBe(200);
+  });
+
   it("renders a selected CSV dataset with formula-guarded cells", async () => {
     const spaceId = await sharedSpace();
     await createWine(spaceId, ownerToken, {
@@ -367,7 +407,7 @@ describe("Deletion (AC-064)", () => {
 
     const leave = () =>
       SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/leave`, {
-        body: JSON.stringify({ confirm: true, pseudonymizeAuthorship: false }),
+        body: JSON.stringify({ confirm: true }),
         headers: headers(memberToken),
         method: "POST",
       });
@@ -395,7 +435,7 @@ describe("Deletion (AC-064)", () => {
       (space: { type: string }) => space.type === "personal",
     )!;
     const response = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${personal.id}/leave`, {
-      body: JSON.stringify({ confirm: true, pseudonymizeAuthorship: false }),
+      body: JSON.stringify({ confirm: true }),
       headers: headers(ownerToken),
       method: "POST",
     });
@@ -436,6 +476,77 @@ describe("Deletion (AC-064)", () => {
     expect(job.targetType).toBe("account");
     const replay = await request();
     expect(DeletionJobResponseSchema.parse(await replay.json()).data.id).toBe(job.id);
+
+    // The job can be read back — what the page shows after a reload — and
+    // canceled during its grace period; a second cancel finds nothing open.
+    const read = await SELF.fetch("https://vadevi.test/api/v1/me/deletion", {
+      headers: headers(freshToken),
+    });
+    expect(read.status).toBe(200);
+    expect(DeletionJobResponseSchema.parse(await read.json()).data).toMatchObject({
+      id: job.id,
+      state: "scheduled",
+    });
+    const cancel = () =>
+      SELF.fetch("https://vadevi.test/api/v1/me/deletion/cancel", {
+        headers: headers(freshToken),
+        method: "POST",
+      });
+    const canceled = await cancel();
+    expect(canceled.status).toBe(200);
+    expect(DeletionJobResponseSchema.parse(await canceled.json()).data).toMatchObject({
+      id: job.id,
+      state: "canceled",
+    });
+    expect((await cancel()).status).toBe(404);
+    // Read after cancel: the latest job, canceled. A new confirmation opens a new one.
+    const readAgain = await SELF.fetch("https://vadevi.test/api/v1/me/deletion", {
+      headers: headers(freshToken),
+    });
+    expect(DeletionJobResponseSchema.parse(await readAgain.json()).data.state).toBe("canceled");
+    const again = await request();
+    expect(again.status).toBe(202);
+    expect(DeletionJobResponseSchema.parse(await again.json()).data.id).not.toBe(job.id);
+    // Nobody who never asked has a job to read.
+    const nobody = await SELF.fetch("https://vadevi.test/api/v1/me/deletion", {
+      headers: headers(outsiderToken),
+    });
+    expect(nobody.status).toBe(404);
+  });
+
+  it("refuses to let the last owner leave a shared Space, or delete the account that owns it", async () => {
+    const spaceId = await sharedSpace();
+    // The owner is the only owner: leaving is refused by name…
+    const leave = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/leave`, {
+      body: JSON.stringify({ confirm: true }),
+      headers: headers(ownerToken),
+      method: "POST",
+    });
+    expect(leave.status).toBe(409);
+    const refused = ErrorEnvelopeSchema.parse(await leave.json()).error;
+    expect(refused.code).toBe("LAST_OWNER");
+    expect(refused.details).toEqual({ spaceNames: ["Phase Six Group"] });
+    // …and so is deleting the account, which would detach it the same way.
+    const deletion = await SELF.fetch("https://vadevi.test/api/v1/me/deletion", {
+      body: JSON.stringify({ confirm: true, confirmationText: "DELETE" }),
+      headers: headers(ownerToken),
+      method: "POST",
+    });
+    expect(deletion.status).toBe(409);
+    expect(ErrorEnvelopeSchema.parse(await deletion.json()).error.code).toBe("LAST_OWNER");
+    // Once the member is made an owner too, the first owner may leave.
+    const memberId = (await bootstrap(memberToken)).data.user.id;
+    await env.DB.prepare(
+      `UPDATE space_memberships SET role = 'owner' WHERE space_id = ? AND user_id = ?`,
+    )
+      .bind(spaceId, memberId)
+      .run();
+    const leaveNow = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/leave`, {
+      body: JSON.stringify({ confirm: true }),
+      headers: headers(ownerToken),
+      method: "POST",
+    });
+    expect(leaveNow.status).toBe(200);
   });
 });
 

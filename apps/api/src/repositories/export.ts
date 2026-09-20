@@ -1,4 +1,9 @@
-import { type ExportDocument, ExportSchemaVersion, type ExportScope } from "@vadevi/contracts";
+import {
+  ExportSchemaVersion,
+  mediaArchiveMaxBytes,
+  type ExportDocument,
+  type ExportScope,
+} from "@vadevi/contracts";
 
 import { createZipArchive } from "../services/zip";
 import type { FirebasePrincipal } from "../types";
@@ -481,19 +486,31 @@ export async function buildMediaArchive(
   database: D1Database,
   bucket: R2Bucket,
   options: { actor: ActorRow; mediaIds: readonly string[]; scope: ExportScope; spaceId: string },
-): Promise<{ archive: Uint8Array; included: string[] }> {
+): Promise<
+  | { archive: Uint8Array; included: string[]; kind: "success" }
+  | { kind: "too_large"; maxBytes: number; requestedBytes: number }
+> {
   const ownOnly = options.scope === "own" ? 1 : 0;
   const wanted = jsonList(options.mediaIds);
   const rows = await database
     .prepare(
-      `SELECT id, r2_key, mime_type FROM media_assets
+      `SELECT id, r2_key, mime_type, byte_size FROM media_assets
       WHERE space_id = ? AND processing_status = 'ready' AND deleted_at IS NULL
         AND (? = 0 OR owner_user_id = ?)
         AND id IN ${wanted.sql}
       ORDER BY id`,
     )
     .bind(options.spaceId, ownOnly, options.actor.user_id, wanted.bind)
-    .all<{ id: string; mime_type: string; r2_key: string }>();
+    .all<{ byte_size: number; id: string; mime_type: string; r2_key: string }>();
+
+  // Measured from the sizes recorded at upload, before a single object is
+  // read: the archive is built in memory, and the Worker has 128 MiB for
+  // everything. Over the line, the answer is the total, so the reader can
+  // choose fewer — never a Worker that ran out of memory halfway.
+  const requestedBytes = rows.results.reduce((sum, row) => sum + row.byte_size, 0);
+  if (requestedBytes > mediaArchiveMaxBytes) {
+    return { kind: "too_large", maxBytes: mediaArchiveMaxBytes, requestedBytes };
+  }
 
   const entries: { bytes: Uint8Array; name: string }[] = [];
   const included: string[] = [];
@@ -508,5 +525,5 @@ export async function buildMediaArchive(
     included.push(row.id);
   }
 
-  return { archive: createZipArchive(entries), included };
+  return { archive: createZipArchive(entries), included, kind: "success" };
 }

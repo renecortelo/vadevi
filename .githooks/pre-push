@@ -14,6 +14,25 @@
 #   git push --no-verify          skip the hook entirely
 #   VADEVI_SKIP_CHECK=1 git push  same, without forgetting the flag mid-rebase
 
+# In the public mirror (marked by PUBLIC_MIRROR.md, which the source tree does
+# not carry), no commit may go out under a personal identity. The initial
+# export is committed as "Va de Vi <noreply@example.invalid>"; a commit made
+# afterwards in the clone picks up whatever identity git has configured, and
+# that is how a maintainer's address reached the public record once. This is
+# not skipped by VADEVI_SKIP_CHECK: it is not a check that can already be known.
+if [ -f PUBLIC_MIRROR.md ]; then
+	offending=$(git log --format='%ae%n%ce' origin/main..HEAD 2>/dev/null || git log --format='%ae%n%ce' HEAD)
+	offending=$(printf '%s\n' "$offending" | grep -v -e '@example.invalid$' -e '@users.noreply.github.com$' | sort -u)
+	if [ -n "$offending" ]; then
+		echo "pre-push: a commit in this public mirror carries a personal e-mail address."
+		echo "  Set the neutral identity for this clone and amend or rebase the commit:"
+		echo "    git config user.name 'Va de Vi'"
+		echo "    git config user.email 'noreply@example.invalid'"
+		echo "  Nothing was pushed."
+		exit 1
+	fi
+fi
+
 if [ "${VADEVI_SKIP_CHECK:-}" = "1" ]; then
 	echo "pre-push: check skipped (VADEVI_SKIP_CHECK=1)"
 	exit 0

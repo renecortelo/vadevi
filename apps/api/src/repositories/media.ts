@@ -1,3 +1,4 @@
+import { mediaMaxBytes } from "@vadevi/contracts";
 import type { MediaReservationRequest, MediaReservationResponse } from "@vadevi/contracts";
 import { ulid } from "ulid";
 
@@ -160,12 +161,22 @@ export async function reserveMedia(
   };
 }
 
+/**
+ * A JPEG's size, and whether it carries metadata. The whole header is read,
+ * segment by segment, up to the scan: the browser strips metadata before
+ * uploading, and this is the check that it did — so a file with an APP1
+ * (EXIF, XMP) or a comment placed after the size segment, where a scan that
+ * stopped at the size never looked, is caught the same as one before it.
+ * Any application segment counts as metadata; a stripped JPEG has none
+ * but the JFIF header it may start with.
+ */
 function jpegDimensions(
   bytes: Uint8Array,
 ): { hasExif: boolean; height: number; width: number } | null {
   if (bytes[0] !== 0xff || bytes[1] !== 0xd8) return null;
   let offset = 2;
   let hasExif = false;
+  let size: { height: number; width: number } | null = null;
   while (offset + 4 <= bytes.length) {
     if (bytes[offset] !== 0xff) return null;
     const marker = bytes[offset + 1]!;
@@ -174,7 +185,8 @@ function jpegDimensions(
     if (marker === 0x00 || marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) continue;
     const length = (bytes[offset]! << 8) | bytes[offset + 1]!;
     if (length < 2 || offset + length > bytes.length) return null;
-    if (marker === 0xe1) hasExif = true;
+    // APP1..APP15 (EXIF, XMP, ICC, Photoshop) and COM: metadata, wherever it sits.
+    if ((marker >= 0xe1 && marker <= 0xef) || marker === 0xfe) hasExif = true;
     if (
       (marker >= 0xc0 && marker <= 0xc3) ||
       (marker >= 0xc5 && marker <= 0xc7) ||
@@ -182,15 +194,14 @@ function jpegDimensions(
       (marker >= 0xcd && marker <= 0xcf)
     ) {
       if (length < 7) return null;
-      return {
-        hasExif,
+      size ??= {
         height: (bytes[offset + 3]! << 8) | bytes[offset + 4]!,
         width: (bytes[offset + 5]! << 8) | bytes[offset + 6]!,
       };
     }
     offset += length;
   }
-  return null;
+  return size === null ? null : { hasExif, ...size };
 }
 
 function webpDimensions(
@@ -227,6 +238,39 @@ function inspectImage(bytes: Uint8Array, mimeType: string) {
       : null;
 }
 
+/**
+ * A request body, read up to a ceiling and no further. Answers null the
+ * moment the ceiling is crossed, with the stream cancelled, so an oversized
+ * body costs the Worker at most the ceiling in memory rather than whatever
+ * the sender chose to send.
+ */
+export async function readBounded(
+  body: ReadableStream<Uint8Array> | null,
+  maxBytes: number,
+): Promise<ArrayBuffer | null> {
+  if (body === null) return new ArrayBuffer(0);
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  const reader = body.getReader();
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > maxBytes) {
+      await reader.cancel();
+      return null;
+    }
+    chunks.push(value);
+  }
+  const joined = new Uint8Array(total);
+  let offset = 0;
+  for (const chunk of chunks) {
+    joined.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return joined.buffer;
+}
+
 export async function uploadMedia(
   database: D1Database,
   bucket: R2Bucket,
@@ -247,11 +291,12 @@ export async function uploadMedia(
       JOIN space_memberships membership
         ON membership.user_id = actor.id AND membership.space_id = media.space_id
       WHERE media.id = ? AND media.space_id = ? AND media.deleted_at IS NULL
-        AND media.processing_status IN ('reserved', 'ready')
+        AND (media.processing_status = 'ready'
+          OR (media.processing_status = 'reserved' AND media.expires_at > ?))
         AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
         AND membership.status = 'active'`,
     )
-    .bind(options.mediaId, options.spaceId, options.principal.firebaseUid)
+    .bind(options.mediaId, options.spaceId, new Date().toISOString(), options.principal.firebaseUid)
     .first<MediaRow>();
   if (row === null) return { kind: "unavailable" };
   if (row.processing_status === "ready") return { kind: "success", media: mediaPayload(row) };
@@ -262,7 +307,7 @@ export async function uploadMedia(
   const valid =
     options.contentType === row.mime_type &&
     bytes.byteLength === row.byte_size &&
-    bytes.byteLength <= 5 * 1024 * 1024 &&
+    bytes.byteLength <= mediaMaxBytes &&
     actualHash === row.sha256 &&
     image !== null &&
     !image.hasExif &&

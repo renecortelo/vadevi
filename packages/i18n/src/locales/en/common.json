@@ -52,6 +52,9 @@
     "reload": "Reload Va de Vi",
     "home": "Back to start"
   },
+  "lists": {
+    "firstOnly": "Showing the first {{count}}. The export in Data and privacy carries everything."
+  },
   "space": {
     "switchLabel": "Active Space",
     "switchError": "That Space could not be opened."
@@ -940,7 +943,10 @@
   },
   "dataRights": {
     "accountScheduled": "Account deletion is scheduled in {{days}} days.",
+    "accountPending": "Your account and its personal Space are purged after {{purgeAfter}} unless you cancel.",
+    "accountCanceled": "Account deletion was canceled.",
     "actionError": "That did not work. Check your connection and try again.",
+    "archiveTooLarge": "That selection is {{requested}} MB; one archive holds up to {{max}} MB. Select fewer photographs and download in parts.",
     "body": "Export what belongs to you, review usage, and delete on your terms.",
     "budgetStatus": {
       "ok": "Within budget",
@@ -949,6 +955,7 @@
       "capped": "Capped — using the offline path"
     },
     "cancelDeletionAction": "Cancel deletion",
+    "cancelAccountAction": "Keep my account",
     "confirmationLabel": "Space name",
     "csvAction": "Export {{dataset}} CSV",
     "csvReady": "The {{dataset}} CSV was downloaded.",
@@ -960,7 +967,7 @@
       "prices": "prices"
     },
     "deleteAccountAction": "Schedule account deletion",
-    "deleteAccountBody": "This removes your personal Space and private data. Shared records stay with their Space. A recent sign-in is required.",
+    "deleteAccountBody": "Removes your personal Space and private data; shared records stay with their Space. Needs a recent sign-in. The maintainer removes the Google sign-in record once the purge completes.",
     "deleteAccountLabel": "Type DELETE to confirm",
     "deleteAccountTitle": "Delete your account",
     "deleteSpaceAction": "Schedule deletion",
@@ -976,6 +983,7 @@
     "eyebrow": "Your data",
     "leaveAction": "Leave this Space",
     "leaveBody": "Shared records stay with the Space. You lose access on your next request.",
+    "lastOwnerError": "You are the only owner of {{names}}. Name another owner among its members, or delete that Space, first.",
     "leaveTitle": "Leave this Space",
     "leftSpace": "You left the Space.",
     "mediaAction": "Download {{count}} selected photo",
