@@ -364,6 +364,14 @@ maintainer's deployment has.
         Remove it: on its next request it is refused, and its data is still
         there when it is re-added.
 
+90. [ ] **The second door** (needs `ACCESS_TEAM_DOMAIN` and `ACCESS_ADMIN_AUD`,
+        which the maintainer's deployment has): open **About → Allowed
+        accounts** in a fresh browser. Cloudflare Access asks for a one-time
+        PIN sent to your e-mail before the page loads; after it, the list
+        loads as before. From the terminal, `curl -I <origin>/api/v1/admin/allowed-accounts`
+        answers 302 to `cloudflareaccess.com`, while `/api/v1/me/bootstrap`
+        still answers 401 — the door is on the admin routes only.
+
 ## Recording results
 
 For each failure note: what you did, what happened, what you expected, and
