@@ -20,6 +20,24 @@ overrides:
   # (morgan): both under firebase-tools, both patched in a minor. Emulator only.
   qs: ">=6.16.0"
   morgan: ">=1.12.0"
+  # GHSA-rfgv-xxqx-mfg5 (undici WebSocket subprotocol DoS), under wrangler,
+  # miniflare, jsdom and firebase-tools: a patch release in each major. The
+  # Worker uses the runtime's fetch, not undici.
+  undici@6: ">=6.28.1 <7"
+  undici@7: ">=7.29.1 <8"
+  undici@8: ">=8.10.2 <9"
+  # GHSA-qhr7-859c-m2p7 and GHSA-6j4f-fj2g-mc7p (brace-expansion), under
+  # eslint and firebase-tools: a patch release in each major. Tooling only.
+  brace-expansion@1: ">=1.1.20 <2"
+  brace-expansion@2: ">=2.1.6 <3"
+  brace-expansion@5: ">=5.0.11 <6"
+  # GHSA-m9gg-hp2v-232j (@grpc/grpc-js), under firebase-tools and the Firebase
+  # SDK's Node build of Firestore, which the browser bundle does not include.
+  "@grpc/grpc-js": ">=1.14.5 <2"
+  # GHSA-c475-qrg2-pj4r (basic-ftp), under firebase-tools>proxy-agent, used
+  # only to fetch a PAC file over ftp:, which the emulator never does. The fix
+  # is a major; its API for that use is unchanged.
+  basic-ftp: ">=6.2.1"
   # Not overridden: stream-json (GHSA-528h-pc64-c93x, fixed in 3.x) and
   # csv-parse (GHSA-8cw4-87c7-c6xx, fixed in 7.x) under firebase-tools are
   # major bumps the emulator has not been tested against; both are moderate,

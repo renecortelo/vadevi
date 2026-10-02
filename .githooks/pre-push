@@ -1,9 +1,9 @@
 #!/bin/sh
 # Run CI's gate before the push, not after it.
 #
-# `pnpm check` is exactly what the `quality` job runs, so a push that passes
-# here cannot fail that job. That matters now that the development repository
-# is private and Actions minutes are metered: a failed CI run is a few minutes
+# `pnpm audit` and `pnpm check` are exactly what the `quality` job runs, so a
+# push that passes here cannot fail that job. That matters now that the
+# development repository is private and Actions minutes are metered: a failed CI run is a few minutes
 # of quota spent to learn something this would have said for free, and the
 # round trip through a red check costs another full run to clear.
 #
@@ -38,7 +38,17 @@ if [ "${VADEVI_SKIP_CHECK:-}" = "1" ]; then
 	exit 0
 fi
 
-echo "pre-push: running pnpm check — 'git push --no-verify' skips it"
+echo "pre-push: running pnpm audit and pnpm check — 'git push --no-verify' skips them"
+
+# The audit first: it takes seconds, and advisories are published against
+# dependencies nobody touched — the gate went red five pushes in a row once,
+# each after minutes of a check that had passed, because only CI audited.
+if ! pnpm audit --audit-level high; then
+	echo ""
+	echo "pre-push: a dependency has a high-severity advisory, so nothing was pushed."
+	echo "  Override it to a patched release in pnpm-workspace.yaml, or push with --no-verify."
+	exit 1
+fi
 
 if ! pnpm check; then
 	echo ""

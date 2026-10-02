@@ -30,8 +30,11 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm check
+      # Seconds, and the likeliest to fail on a commit that changed nothing:
+      # advisories arrive on their own schedule. Run first, so a red audit
+      # does not cost the minutes of the full check before it.
       - run: pnpm audit --audit-level high
+      - run: pnpm check
 
   # Did this pull request touch anything a browser could exercise?
   #
