@@ -137,6 +137,17 @@ export const AssistantTurnResponseSchema = z
         // next turn so "¿con qué lo marido?" refers to it, rather than guessing
         // from the top search hit, which need not be the wine the answer discussed.
         focusWineId: ResourceIdSchema.nullable(),
+        // Grapes the question named that the wine library has a card for: the
+        // answer drew on those cards, and the reader can open them.
+        libraryGrapes: z
+          .array(z.object({ id: z.string(), name: z.string() }).strict())
+          .max(3)
+          .default([]),
+        // Likewise the atlas entries for registered wine names it named.
+        libraryRegions: z
+          .array(z.object({ id: z.string(), name: z.string() }).strict())
+          .max(3)
+          .default([]),
         mode: z.enum(["deterministic", "provider"]),
         priceObservations: z.array(PriceObservationSchema).max(25),
         recommendations: z.array(AssistantRecommendationSchema).max(12),

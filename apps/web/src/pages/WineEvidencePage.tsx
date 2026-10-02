@@ -25,6 +25,7 @@ import {
   regenerateTastingComparison,
   rejectFact,
 } from "../services/assistant";
+import { searchLibraryRegions } from "../services/library";
 import { useSession } from "../session/SessionContext";
 
 type ResearchTopic = "grapes" | "identity" | "producer" | "region";
@@ -290,6 +291,27 @@ export function WineEvidencePage() {
     return () => controller.abort();
   }, [spaceId, user, wineId]);
 
+  // The wine's region, when the atlas has it as a registered name: a link is
+  // shown only for a name that resolves, never one that leads nowhere.
+  // Kept with the name it answers, so a stale answer is never shown for
+  // another wine's region.
+  const [atlasMatch, setAtlasMatch] = useState<{
+    key: string;
+    region: { id: string; name: string } | null;
+  } | null>(null);
+  const wineRegion = wine?.region ?? null;
+  const wineCountry = wine?.countryCode ?? null;
+  const atlasKey = `${wineCountry ?? ""}:${wineRegion ?? ""}`;
+  const atlasRegion = atlasMatch?.key === atlasKey ? atlasMatch.region : null;
+  useEffect(() => {
+    if (user === null || wineRegion === null) return;
+    const controller = new AbortController();
+    void searchLibraryRegions(user, wineRegion, wineCountry, controller.signal)
+      .then((found) => setAtlasMatch({ key: atlasKey, region: found[0] ?? null }))
+      .catch(() => undefined);
+    return () => controller.abort();
+  }, [atlasKey, user, wineCountry, wineRegion]);
+
   // The generated/gathered narrative is rendered on its own at the top, so it is
   // pulled out of the per-predicate grouping. The most recent live one wins.
   const narrative = useMemo(() => {
@@ -435,6 +457,29 @@ export function WineEvidencePage() {
               ? t("evidence.body")
               : t("evidence.wineBody", { producer: wine.producerName })}
           </p>
+          {/* Its grapes, each a way into the wine library's card for it. */}
+          {wine === null || wine.grapes.length === 0 ? null : (
+            <p className="evidence-heading__grapes">
+              <span>{t("library.grapesLink")}:</span>
+              {wine.grapes.map((grape) => (
+                <Link
+                  className="text-link"
+                  key={grape.name}
+                  to={`/library/grape?name=${encodeURIComponent(grape.name)}`}
+                >
+                  {grape.name}
+                </Link>
+              ))}
+            </p>
+          )}
+          {atlasRegion === null ? null : (
+            <p className="evidence-heading__grapes">
+              <span>{t("library.atlasEyebrow")}:</span>
+              <Link className="text-link" to={`/library/regions/${atlasRegion.id}`}>
+                {atlasRegion.name}
+              </Link>
+            </p>
+          )}
           {/* Where and when you last drank it, with directions. The venue lives
               on the tasting, but this is where you come looking for a wine's
               history, so this is where it has to be reachable. */}

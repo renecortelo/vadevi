@@ -113,7 +113,9 @@ These are the operator's; their task list is private.
       live pages that day rather than on the month-old reading they carried.
       Each review says in its own words to recheck on the day the provider is
       enabled, and both providers had been enabled in the meantime.
-- [ ] Run the preview acceptance checklist end to end.
+- [x] Run the preview acceptance checklist end to end. Done by the maintainer:
+      the whole script on 19 September 2026, and its sections L and M — the
+      private door and the fixes from the 20 September review — on 20 September.
 - [x] Measure LCP, INP, and API p95. `docs/performance-evidence.md`, re-measured
       18 September 2026 after the map work: every §18.4 budget met, nothing
       regressed. INP is reported for what it is — it cannot be measured in a lab,

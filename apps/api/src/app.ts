@@ -29,6 +29,7 @@ import { registerMapTileRoutes } from "./routes/map-tiles";
 import { registerPlaceRoutes } from "./routes/places";
 import { registerProvenanceRoutes } from "./routes/provenance";
 import { registerReleaseRoutes } from "./routes/release";
+import { registerLibraryRoutes } from "./routes/library";
 import { registerResearchRoutes } from "./routes/research";
 import { registerSpaceRoutes } from "./routes/spaces";
 import { registerTastingSessionRoutes } from "./routes/tasting-sessions";
@@ -301,6 +302,7 @@ export function createApi() {
     "/api/v1/spaces/*",
     "/api/v1/invitations/:token/accept",
     "/api/v1/admin/*",
+    "/api/v1/library/*",
   ]) {
     app.use(path, authentication);
     app.use(path, accessControl);
@@ -389,6 +391,7 @@ export function createApi() {
   registerPlaceRoutes(app);
   registerProvenanceRoutes(app);
   registerResearchRoutes(app);
+  registerLibraryRoutes(app);
 
   app.get("/openapi.json", (context) =>
     context.json(

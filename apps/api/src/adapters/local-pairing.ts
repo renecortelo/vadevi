@@ -30,14 +30,14 @@ import { type DishProfile, profileDish, recognisedDish } from "./dish-profile";
  */
 
 /** What a wine tastes like on the axes a pairing is argued from, 1–5. */
-type StyleProfile = Readonly<{
+export type StyleProfile = Readonly<{
   acidity: number;
   body: number;
   sweetness: number;
   tannin: number;
 }>;
 
-type Style = Readonly<{
+export type Style = Readonly<{
   color: string;
   country: string | null;
   grapes: string[];
@@ -52,7 +52,7 @@ type Style = Readonly<{
  * cellar — that function matches on type, grape or region, so a style with no
  * grapes named would be useless to it.
  */
-const styles: readonly Style[] = [
+export const pairingStyleCatalogue: readonly Style[] = [
   {
     color: "white",
     country: "ES",
@@ -267,7 +267,7 @@ function target(dish: DishProfile): { profile: StyleProfile; reasons: Reason[] }
 }
 
 /** How far a style sits from what the plate asked for. Lower is better. */
-function distance(style: StyleProfile, wanted: StyleProfile): number {
+export function styleDistance(style: StyleProfile, wanted: StyleProfile): number {
   // Not all axes matter equally, and weighting them evenly showed it: a rich
   // barrel-aged Chardonnay tied with a sharp Albariño against seared salmon,
   // because what it gained on body it lost on acidity. Against fat, acidity is
@@ -400,8 +400,8 @@ export function pairingStylesFor(dish: DishProfile, locale: ResearchLocale): Pai
     .map((reason) => copy[reason])
     .join("; ");
 
-  return styles
-    .map((style) => ({ gap: distance(style.profile, wanted.profile), style }))
+  return pairingStyleCatalogue
+    .map((style) => ({ gap: styleDistance(style.profile, wanted.profile), style }))
     .sort((left, right) => left.gap - right.gap)
     .slice(0, offered)
     .map(({ gap, style }, index) => ({

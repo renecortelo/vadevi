@@ -32,6 +32,12 @@ import { resolveCountryCodes } from "./country-terms";
 import { resolveGrapeNamesFromMessage } from "./grape-terms";
 import { getSource, listWineFacts } from "./provenance";
 import { getWineSummary, listWines, normalizeWineText } from "./wine-memory";
+import {
+  getLibraryGrape,
+  getLibraryRegion,
+  grapesMentionedIn,
+  regionsMentionedIn,
+} from "./library";
 import { jsonList } from "../services/sql-list";
 
 type AllowedSpaceRow = {
@@ -479,6 +485,199 @@ async function loadCollectionOverview(
     total: wines.length,
     wines,
   };
+}
+
+/**
+ * What the wine library says about grapes the question names — "¿a qué huele
+ * un Ull de Llebre?" — as statements Vicenç may use. A source's values are
+ * `researched`, and every one of them was quoted from its article when the
+ * library was built; what the pairing rules suggest is `inferred`, and says
+ * so, so the answer never presents a rule of thumb as somebody's finding.
+ */
+/**
+ * A stable resource id for a library card's source, so a claim built on it
+ * cites something the response can show — the same id for the same grape on
+ * every turn, in the format every other source id has.
+ */
+async function librarySourceId(grapeId: string): Promise<string> {
+  const crockford = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";
+  const digest = new Uint8Array(
+    await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`wine-library:${grapeId}`)),
+  );
+  // The first character of a ULID carries at most three bits.
+  let id = crockford[digest[0]! % 8]!;
+  for (let index = 1; index < 26; index += 1) id += crockford[digest[index]! % 32]!;
+  return id;
+}
+
+async function loadLibraryStatements(
+  database: D1Database,
+  message: string,
+  locale: string,
+): Promise<{
+  grapes: { id: string; name: string }[];
+  regions: { id: string; name: string }[];
+  sources: Source[];
+  statements: AssistantLanguageStatement[];
+}> {
+  const ids = (await grapesMentionedIn(database, message)).slice(0, 2);
+  const grapes: { id: string; name: string }[] = [];
+  const regions: { id: string; name: string }[] = [];
+  const sources: Source[] = [];
+  const statements: AssistantLanguageStatement[] = [];
+  const now = new Date().toISOString();
+  for (const id of ids) {
+    const card = await getLibraryGrape(database, id, locale);
+    if (card === null) continue;
+    grapes.push({ id: card.id, name: card.name });
+    const sourceUrl = card.evidence[0]?.sourceUrl ?? card.summary?.sourceUrl ?? null;
+    const sourceId = sourceUrl === null ? null : await librarySourceId(card.id);
+    if (sourceId !== null && sourceUrl !== null) {
+      sources.push({
+        canonicalUrl: sourceUrl,
+        createdAt: now,
+        createdByProvider: "wine-library",
+        createdByUserId: null,
+        id: sourceId,
+        licenseIdentifier: "CC-BY-SA-4.0",
+        publisher: "Wikipedia",
+        retrievedAt: now,
+        sourceType: "open_dataset",
+        title: `${card.name} — Wikipedia`,
+        updatedAt: now,
+      });
+    }
+    const about = `wine library, grape ${card.name}`;
+    const say = (
+      suffix: string,
+      text: string,
+      evidenceClass: "inferred" | "researched" = "researched",
+    ) =>
+      statements.push({
+        evidenceClass,
+        id: `library-${card.id}-${suffix}`,
+        sampleSize: null,
+        // A researched statement must carry its source; a rule's suggestion has none.
+        sourceIds: evidenceClass === "researched" && sourceId !== null ? [sourceId] : [],
+        text: `${about}: ${text}`,
+      });
+    if (card.summary !== null) say("summary", card.summary.text);
+    const structure = (["acidity", "tannin", "body"] as const)
+      .filter((axis) => card[axis] !== null)
+      .map((axis) => `${axis} ${card[axis]}`);
+    if (card.color !== null || card.originCountryCode !== null || structure.length > 0) {
+      say(
+        "profile",
+        [
+          card.color === null ? null : `${card.color === "red" ? "black" : card.color}-skinned`,
+          card.originCountryCode === null ? null : `originally from ${card.originCountryCode}`,
+          structure.length === 0 ? null : `its wine typically has ${structure.join(", ")}`,
+        ]
+          .filter(Boolean)
+          .join("; "),
+      );
+    }
+    if (card.aromas.length > 0) say("aromas", `typical aromas: ${card.aromas.join(", ")}`);
+    if (card.regions.length > 0) {
+      say(
+        "regions",
+        `notably grown in: ${card.regions.map((region) => `${region.name}${region.countryCode === null ? "" : ` (${region.countryCode})`}`).join(", ")}`,
+      );
+    }
+    if (card.synonyms.length > 0)
+      say("names", `also known as: ${card.synonyms.slice(0, 8).join(", ")}`);
+    if (card.pairings.length > 0)
+      say("pairings", `its source says it goes with: ${card.pairings.join(", ")}`);
+    if (card.suggestedPairings !== null) {
+      say(
+        "suggested",
+        `the app's pairing rules suggest, for ${card.suggestedPairings.styles.map((style) => style.replaceAll("_", " ")).join(" / ")} wines: ${card.suggestedPairings.families.map((family) => family.replaceAll("_", " ")).join(", ")}`,
+        "inferred",
+      );
+    }
+  }
+  // Registered wine names the question names: what the EU register says,
+  // cited to it, and the grapes their own articles place there.
+  for (const regionId of await regionsMentionedIn(database, message)) {
+    const region = await getLibraryRegion(database, regionId, locale);
+    if (region === null || region.legalUrl === null) continue;
+    const registerId = await librarySourceId(`region:${region.id}`);
+    sources.push({
+      canonicalUrl: region.legalUrl,
+      createdAt: now,
+      createdByProvider: "wine-library",
+      createdByUserId: null,
+      id: registerId,
+      licenseIdentifier: "EC-reuse-2011-833",
+      publisher: "European Commission (eAmbrosia)",
+      retrievedAt: now,
+      sourceType: "regulator",
+      title: `${region.name} — eAmbrosia`,
+      updatedAt: now,
+    });
+    const about = `wine library, registered wine name ${region.name}`;
+    const say = (suffix: string, text: string, sourceIds: string[]) =>
+      statements.push({
+        evidenceClass: "researched",
+        id: `library-region-${region.id}-${suffix}`,
+        sampleSize: null,
+        sourceIds,
+        text: `${about}: ${text}`,
+      });
+    say(
+      "register",
+      `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of ${region.countryCode}${region.registeredOn === null ? "" : `, registered on ${region.registeredOn}`}`,
+      [registerId],
+    );
+    if (region.summary !== null) {
+      const summaryId = await librarySourceId(`region-summary:${region.id}`);
+      sources.push({
+        canonicalUrl: region.summary.sourceUrl,
+        createdAt: now,
+        createdByProvider: "wine-library",
+        createdByUserId: null,
+        id: summaryId,
+        licenseIdentifier: "CC-BY-SA-4.0",
+        publisher: "Wikipedia",
+        retrievedAt: now,
+        sourceType: "open_dataset",
+        title: `${region.name} — Wikipedia`,
+        updatedAt: now,
+      });
+      say("summary", region.summary.text, [summaryId]);
+    }
+    if (region.grapes.length > 0) {
+      // Each grape cited to its own article, listed so the citation resolves.
+      const grapeSources = await Promise.all(
+        region.grapes.slice(0, 6).map(async (grape) => {
+          const id = await librarySourceId(grape.id);
+          if (!sources.some((source) => source.id === id)) {
+            sources.push({
+              canonicalUrl: grape.sourceUrl,
+              createdAt: now,
+              createdByProvider: "wine-library",
+              createdByUserId: null,
+              id,
+              licenseIdentifier: "CC-BY-SA-4.0",
+              publisher: "Wikipedia",
+              retrievedAt: now,
+              sourceType: "open_dataset",
+              title: `${grape.name} — Wikipedia`,
+              updatedAt: now,
+            });
+          }
+          return id;
+        }),
+      );
+      say(
+        "grapes",
+        `grapes whose own articles say they are grown there: ${region.grapes.map((grape) => grape.name).join(", ")}`,
+        grapeSources,
+      );
+    }
+    regions.push({ id: region.id, name: region.name });
+  }
+  return { grapes, regions, sources, statements };
 }
 
 /**
@@ -1908,6 +2107,12 @@ export async function runDeterministicAssistantTurn(
     options.language === null || overview
       ? []
       : await loadReaderTastingNotes(database, options.principal, results);
+  const library = await loadLibraryStatements(
+    database,
+    options.request.message,
+    options.request.locale,
+  );
+  for (const source of library.sources) citationMap.set(source.id, source);
   const languageResult =
     options.language === null
       ? null
@@ -1919,6 +2124,7 @@ export async function runDeterministicAssistantTurn(
             ...semanticStatements,
             ...pairingStatements,
             ...noteStatements,
+            ...library.statements,
             ...languageStatements(
               results,
               visibleContext.context,
@@ -1940,6 +2146,8 @@ export async function runDeterministicAssistantTurn(
       citations: [...citationMap.values()].slice(0, 8),
       comparisons,
       evidence,
+      libraryGrapes: library.grapes,
+      libraryRegions: library.regions,
       mode: languageResult === null ? "deterministic" : "provider",
       priceObservations,
       recommendations,

@@ -115,6 +115,24 @@ export function AssistantResult({
         </div>
       )}
 
+      {/* The library cards the answer drew on, to read in full and check. */}
+      {response.data.libraryGrapes.length === 0 &&
+      response.data.libraryRegions.length === 0 ? null : (
+        <p className="evidence-heading__grapes">
+          <span>{t("library.eyebrow")}:</span>
+          {response.data.libraryGrapes.map((grape) => (
+            <Link className="text-link" key={grape.id} to={`/library/grapes/${grape.id}`}>
+              {grape.name}
+            </Link>
+          ))}
+          {response.data.libraryRegions.map((region) => (
+            <Link className="text-link" key={region.id} to={`/library/regions/${region.id}`}>
+              {region.name}
+            </Link>
+          ))}
+        </p>
+      )}
+
       {response.data.results.length === 0 ? null : (
         <details className="assistant-matches">
           <summary>

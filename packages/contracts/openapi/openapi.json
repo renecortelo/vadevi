@@ -2247,6 +2247,48 @@
                 "nullable": true,
                 "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
               },
+              "libraryGrapes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 3,
+                "default": []
+              },
+              "libraryRegions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 3,
+                "default": []
+              },
               "mode": {
                 "type": "string",
                 "enum": [
@@ -10979,6 +11021,449 @@
           "locale"
         ],
         "additionalProperties": false
+      },
+      "LibraryRegionResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LibraryRegion"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "LibraryRegion": {
+        "type": "object",
+        "properties": {
+          "countryCode": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2
+          },
+          "eambrosiaId": {
+            "type": "string"
+          },
+          "giType": {
+            "type": "string",
+            "enum": [
+              "PDO",
+              "PGI"
+            ]
+          },
+          "grapes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "sourceUrl": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "quote",
+                "sourceUrl"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number",
+            "nullable": true
+          },
+          "legalUrl": {
+            "type": "string",
+            "nullable": true,
+            "format": "uri"
+          },
+          "longitude": {
+            "type": "number",
+            "nullable": true
+          },
+          "name": {
+            "type": "string"
+          },
+          "otherNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "registeredOn": {
+            "type": "string",
+            "nullable": true
+          },
+          "summary": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "license": {
+                "type": "string"
+              },
+              "locale": {
+                "type": "string"
+              },
+              "sourceUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "license",
+              "locale",
+              "sourceUrl",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "wikidataId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "countryCode",
+          "eambrosiaId",
+          "giType",
+          "grapes",
+          "id",
+          "latitude",
+          "legalUrl",
+          "longitude",
+          "name",
+          "otherNames",
+          "registeredOn",
+          "summary",
+          "wikidataId"
+        ],
+        "additionalProperties": false
+      },
+      "LibraryRegionSearchResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "countryCode": {
+                  "type": "string"
+                },
+                "giType": {
+                  "type": "string",
+                  "enum": [
+                    "PDO",
+                    "PGI"
+                  ]
+                },
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "countryCode",
+                "giType",
+                "id",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "LibraryGrapeResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LibraryGrape"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "LibraryGrape": {
+        "type": "object",
+        "properties": {
+          "acidity": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              null
+            ]
+          },
+          "aromas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "body": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              null
+            ]
+          },
+          "color": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "white",
+              "red",
+              "pink",
+              null
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "sourceUrl": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "field",
+                "quote",
+                "sourceUrl",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "originCountryCode": {
+            "type": "string",
+            "nullable": true,
+            "minLength": 2,
+            "maxLength": 2
+          },
+          "pairings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "regions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "countryCode": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "name": {
+                  "type": "string"
+                },
+                "regionId": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "required": [
+                "countryCode",
+                "name",
+                "regionId"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "styles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "summary": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "license": {
+                "type": "string"
+              },
+              "locale": {
+                "type": "string"
+              },
+              "sourceUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "text": {
+                "type": "string"
+              },
+              "translated": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "license",
+              "locale",
+              "sourceUrl",
+              "text",
+              "translated"
+            ],
+            "additionalProperties": false
+          },
+          "suggestedPairings": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "basis": {
+                "type": "string",
+                "enum": [
+                  "catalogue",
+                  "profile"
+                ]
+              },
+              "families": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "styles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "basis",
+              "families",
+              "styles"
+            ],
+            "additionalProperties": false
+          },
+          "synonyms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tannin": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              null
+            ]
+          },
+          "wikidataId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "acidity",
+          "aromas",
+          "body",
+          "color",
+          "evidence",
+          "id",
+          "name",
+          "originCountryCode",
+          "pairings",
+          "regions",
+          "styles",
+          "summary",
+          "suggestedPairings",
+          "synonyms",
+          "tannin",
+          "wikidataId"
+        ],
+        "additionalProperties": false
+      },
+      "LibrarySearchResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "string",
+                  "nullable": true,
+                  "enum": [
+                    "white",
+                    "red",
+                    "pink",
+                    null
+                  ]
+                },
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "color",
+                "id",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
       }
     },
     "parameters": {}
@@ -17357,6 +17842,282 @@
           },
           "404": {
             "description": "The research job is unavailable to the caller.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/regions/{regionId}": {
+      "get": {
+        "operationId": "getLibraryRegion",
+        "tags": [
+          "Library"
+        ],
+        "summary": "A registered wine name from the atlas, with the grapes its sources place there",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-z]{2}-[a-z0-9-]{1,120}$"
+            },
+            "required": true,
+            "name": "regionId",
+            "in": "path"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "es",
+                "fr",
+                "en",
+                "it",
+                "pt-PT",
+                "nl",
+                "de"
+              ],
+              "default": "en"
+            },
+            "required": false,
+            "name": "locale",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The atlas entry, in the reader's language where the library has it.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryRegionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The atlas has no such name.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/regions": {
+      "get": {
+        "operationId": "searchLibraryRegions",
+        "tags": [
+          "Library"
+        ],
+        "summary": "Registered wine names in the atlas by any of their names",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "required": false,
+            "name": "country",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 120
+            },
+            "required": true,
+            "name": "query",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching names, best known first.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryRegionSearchResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/grapes/{grapeId}": {
+      "get": {
+        "operationId": "getLibraryGrape",
+        "tags": [
+          "Library"
+        ],
+        "summary": "A grape's reference card, with the sentence behind each value",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-z0-9-]{1,80}$"
+            },
+            "required": true,
+            "name": "grapeId",
+            "in": "path"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "es",
+                "fr",
+                "en",
+                "it",
+                "pt-PT",
+                "nl",
+                "de"
+              ],
+              "default": "en"
+            },
+            "required": false,
+            "name": "locale",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The grape, in the reader's language where the library has it.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryGrapeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The library has no such grape.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/grapes": {
+      "get": {
+        "operationId": "searchLibraryGrapes",
+        "tags": [
+          "Library"
+        ],
+        "summary": "Grapes in the library by any of their names",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "es",
+                "fr",
+                "en",
+                "it",
+                "pt-PT",
+                "nl",
+                "de"
+              ],
+              "default": "en"
+            },
+            "required": false,
+            "name": "locale",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 120
+            },
+            "required": true,
+            "name": "query",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching grapes, best known first.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibrarySearchResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
             "content": {
               "application/json": {
                 "schema": {

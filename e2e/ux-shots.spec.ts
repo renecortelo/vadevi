@@ -89,6 +89,16 @@ test.describe("UX contact sheet", () => {
           await page.screenshot({ fullPage: true, path: resolve(directory, `${name}.png`) });
         }
 
+        // A grape's card from the wine library.
+        await page.goto("/library/grapes/tempranillo");
+        await page.waitForLoadState("networkidle");
+        await page.screenshot({ fullPage: true, path: resolve(directory, "library-grape.png") });
+        // …and a registered wine name from its atlas.
+        await page.goto("/library/region?name=Rioja&country=ES");
+        await page.waitForURL(/\/library\/regions\//);
+        await page.waitForLoadState("networkidle");
+        await page.screenshot({ fullPage: true, path: resolve(directory, "library-region.png") });
+
         // The tasting's other steps: the nose and the palate, grouped into
         // titled runs like the context, and the context itself, the longest
         // form in the app.

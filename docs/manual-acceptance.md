@@ -388,7 +388,7 @@ test; these are the parts worth a pair of eyes and a real deployment.
         note, asked the same way, is found. (After the deploy, the maintainer
         runs the one-off re-index in `docs/self-hosting.md`; until the next
         scheduled runs have re-embedded, semantic matches are simply fewer.)
-93. [ ] **Merging two wines that both list grapes.** Two records of the same
+93. [x] **Merging two wines that both list grapes.** Two records of the same
         wine, each with grapes — one grape in common, one not. Merge them: it
         succeeds, the survivor lists the union in order without the duplicate,
         an event that poured the loser now shows the survivor, and the loser
@@ -399,7 +399,7 @@ test; these are the parts worth a pair of eyes and a real deployment.
 95. [x] **Sort by score, page through.** With unscored wines in the cellar,
         page through the score sort to the end: every wine appears once, the
         unscored ones last.
-96. [ ] **A screen that fails is not a white page.** On a tasting form, clear
+96. [x] **A screen that fails is not a white page.** On a tasting form, clear
         the date field completely: the form keeps the previous date and
         nothing breaks. (The boundary itself: open the app in a tab, deploy
         a new bundle, then navigate to a screen not yet visited — the

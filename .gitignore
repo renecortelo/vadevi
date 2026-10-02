@@ -47,3 +47,7 @@ backup*.sql
 # committing them would publish exactly what they exist to hold back.
 .mirror-denylist
 .ux-shots/
+
+# The wine library build cache: raw Wikidata/Wikipedia material, kept
+# only to extract from. What ships is data/kb/.
+.kb-cache/

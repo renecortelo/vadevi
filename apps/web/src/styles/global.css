@@ -4228,3 +4228,85 @@ p {
   overflow: hidden;
   z-index: 0;
 }
+
+/* The wine library's grape card: sections like the settings cards, chips for
+   lists, and the wine's structure as three short term/value pairs. */
+.library-page {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.library-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.library-chips li {
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  padding: var(--space-1) var(--space-3);
+}
+
+/* A suggestion is dashed, a source's word is solid: the difference is the
+   point of the section, so it is visible before it is read. */
+.library-chips--suggested li {
+  border-style: dashed;
+}
+
+.library-chips + .section-help,
+.library-chips + p {
+  margin-block-start: var(--space-3);
+}
+
+.library-structure {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  margin: 0;
+}
+
+.library-structure div {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+}
+
+.library-structure dt {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.library-structure dd {
+  font-weight: 700;
+  margin: 0;
+}
+
+.library-evidence summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.library-evidence ul {
+  display: grid;
+  gap: var(--space-2);
+  margin-block: var(--space-3);
+  padding-inline-start: var(--space-4);
+}
+
+.library-evidence li {
+  font-size: var(--text-sm);
+}
+
+/* On a wine's page, its grapes as links to their library cards. */
+.evidence-heading__grapes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+}

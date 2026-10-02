@@ -53,6 +53,12 @@ const TastingNotePage = lazy(() =>
 const WineEvidencePage = lazy(() =>
   import("./pages/WineEvidencePage").then((module) => ({ default: module.WineEvidencePage })),
 );
+const LibraryGrapePage = lazy(() =>
+  import("./pages/LibraryGrapePage").then((module) => ({ default: module.LibraryGrapePage })),
+);
+const LibraryRegionPage = lazy(() =>
+  import("./pages/LibraryRegionPage").then((module) => ({ default: module.LibraryRegionPage })),
+);
 const ShopPage = lazy(() =>
   import("./pages/ShopPage").then((module) => ({ default: module.ShopPage })),
 );
@@ -194,6 +200,38 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="vicenc"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <LibraryGrapePage />
+              </DeferredPage>
+            }
+            path="library/grapes/:grapeId"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <LibraryGrapePage />
+              </DeferredPage>
+            }
+            path="library/grape"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <LibraryRegionPage />
+              </DeferredPage>
+            }
+            path="library/regions/:regionId"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <LibraryRegionPage />
+              </DeferredPage>
+            }
+            path="library/region"
           />
           <Route element={<AboutPage />} path="about" />
           <Route element={<SpaceSettingsPage />} path="spaces" />

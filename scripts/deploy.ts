@@ -304,6 +304,10 @@ function summariseFeatures(configText: string): void {
   }
 }
 
+// 1b. The wine library, after the migrations that create its tables. A no-op
+//     when the loaded build matches data/kb/, so it costs one query per deploy.
+run("Loading the wine library", "pnpm", ["exec", "tsx", "scripts/kb/load.ts", "--config", config]);
+
 // 2. The bundle. Every interface change lives here; deploying only the Worker
 //    ships none of them, which has been mistaken for "the fix did not deploy".
 run("Building the web bundle", "pnpm", ["--filter", "@vadevi/web", "build"]);

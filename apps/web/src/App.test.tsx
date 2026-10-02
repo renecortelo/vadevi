@@ -283,6 +283,8 @@ describe("authenticated app shell", () => {
         citations: [],
         comparisons: [],
         focusWineId: null,
+        libraryGrapes: [],
+        libraryRegions: [],
         evidence: [
           {
             evidenceClass: "observed",

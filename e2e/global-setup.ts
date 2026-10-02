@@ -30,4 +30,19 @@ export default function globalSetup(): void {
     ],
     { encoding: "utf8", stdio: "inherit" },
   );
+  // The wine library, so the screens that read it have something to show.
+  execFileSync(
+    "pnpm",
+    [
+      "exec",
+      "tsx",
+      "scripts/kb/load.ts",
+      "--config",
+      "wrangler.example.jsonc",
+      "--local",
+      "--persist-to",
+      e2eStateDirectory,
+    ],
+    { encoding: "utf8", stdio: "inherit" },
+  );
 }

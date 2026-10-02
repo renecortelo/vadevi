@@ -1,0 +1,43 @@
+# Grapes the library carries whatever their Wikipedia prominence: the ones
+# met in the cellars this app is used for, and every group in the synonym
+# table (apps/api/src/repositories/grape-terms.ts). One English or local
+# name per line; `pnpm kb:fetch-grapes` resolves each to its Wikidata item
+# and puts it ahead of the ranked list, so it is extracted first.
+Godello
+Parellada
+Malvasia
+Sumoll
+Piquepoul
+Grenache gris
+Touriga Nacional
+Sémillon
+Glera
+Monica nera
+Loureiro
+Treixadura
+Caíño tinto
+Vinhão
+Prieto Picudo
+Listán Negro
+Baga
+Castelão
+Trincadeira
+Alfrocheiro
+Touriga Franca
+Arinto
+Encruzado
+Fernão Pires
+Fiano
+Greco
+Cortese
+Mauzac
+Sagrantino
+Listán Prieto
+Hondarrabi Zuri
+Garnacha blanca
+Moscatel de Alejandría
+Prieto Picudo
+Garnacha tintorera
+Monastrell
+Bobal
+Mencía
