@@ -36,7 +36,7 @@ export async function findGrapesByName(
       FROM kb_names name
       JOIN kb_grapes grape ON grape.id = name.entity_id
       WHERE name.entity_type = 'grape'
-        AND (name.normalized_name = ? OR name.normalized_name LIKE ? || '%')
+        AND name.normalized_name >= ? AND name.normalized_name < ? || '~'
       ORDER BY (name.normalized_name = ?) DESC, grape.prominence DESC
       LIMIT ?`,
     )
@@ -46,26 +46,68 @@ export async function findGrapesByName(
 }
 
 /**
+ * The phrases of a sentence a name could be: every run of one to eight
+ * words, four characters or longer. Looked up by equality, they use the
+ * names index — a lookup per phrase rather than a scan of every name in the
+ * library for every message, which is what D1 bills as rows read.
+ */
+function phrasesOf(message: string): string[] {
+  const words = normalizeWineText(message).split(" ").filter(Boolean).slice(0, 400);
+  const phrases = new Set<string>();
+  for (let start = 0; start < words.length; start += 1) {
+    for (let end = start + 1; end <= Math.min(words.length, start + 8); end += 1) {
+      const phrase = words.slice(start, end).join(" ");
+      if (phrase.length >= 4) phrases.add(phrase);
+    }
+  }
+  return [...phrases];
+}
+
+/** Entities of one kind named in a sentence, the longest name first. */
+async function namedIn(
+  database: D1Database,
+  message: string,
+  entityType: "grape" | "region",
+  limit: number,
+): Promise<string[]> {
+  const phrases = phrasesOf(message);
+  if (phrases.length === 0) return [];
+  // D1 binds at most 100 parameters to a statement.
+  const chunks: string[][] = [];
+  for (let start = 0; start < phrases.length; start += 90) {
+    chunks.push(phrases.slice(start, start + 90));
+  }
+  const results = await database.batch(
+    chunks.map((chunk) =>
+      database
+        .prepare(
+          `SELECT entity_id AS id, max(length(normalized_name)) AS matched
+          FROM kb_names
+          WHERE normalized_name IN (${chunk.map(() => "?").join(", ")}) AND entity_type = ?
+          GROUP BY entity_id`,
+        )
+        .bind(...chunk, entityType),
+    ),
+  );
+  const best = new Map<string, number>();
+  for (const result of results) {
+    for (const row of result.results as { id: string; matched: number }[]) {
+      best.set(row.id, Math.max(best.get(row.id) ?? 0, row.matched));
+    }
+  }
+  return [...best.entries()]
+    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+    .slice(0, limit)
+    .map(([id]) => id);
+}
+
+/**
  * The grapes named anywhere in a sentence — "¿a qué huele un Ull de Llebre?"
  * finds Tempranillo — matched on whole words, the longest name first, so
  * "Pinot Noir" wins over a lone "Pinot".
  */
 export async function grapesMentionedIn(database: D1Database, message: string): Promise<string[]> {
-  const padded = ` ${normalizeWineText(message)} `;
-  if (padded.trim().length < 3) return [];
-  const rows = await database
-    .prepare(
-      `SELECT name.entity_id AS id, max(length(name.normalized_name)) AS matched
-      FROM kb_names name
-      WHERE name.entity_type = 'grape' AND length(name.normalized_name) >= 4
-        AND instr(?, ' ' || name.normalized_name || ' ') > 0
-      GROUP BY name.entity_id
-      ORDER BY matched DESC
-      LIMIT 3`,
-    )
-    .bind(padded)
-    .all<{ id: string }>();
-  return rows.results.map((row) => row.id);
+  return namedIn(database, message, "grape", 3);
 }
 
 /** One grape's card in the reader's language, English where theirs is missing. */
@@ -241,21 +283,7 @@ export async function searchLibraryGrapes(
 
 /** Registered wine names named anywhere in a sentence, longest first. */
 export async function regionsMentionedIn(database: D1Database, message: string): Promise<string[]> {
-  const padded = ` ${normalizeWineText(message)} `;
-  if (padded.trim().length < 3) return [];
-  const rows = await database
-    .prepare(
-      `SELECT name.entity_id AS id, max(length(name.normalized_name)) AS matched
-      FROM kb_names name
-      WHERE name.entity_type = 'region' AND length(name.normalized_name) >= 4
-        AND instr(?, ' ' || name.normalized_name || ' ') > 0
-      GROUP BY name.entity_id
-      ORDER BY matched DESC
-      LIMIT 2`,
-    )
-    .bind(padded)
-    .all<{ id: string }>();
-  return rows.results.map((row) => row.id);
+  return namedIn(database, message, "region", 2);
 }
 
 /** A registered wine name, best known first, by any of its names. */
@@ -272,7 +300,7 @@ export async function searchLibraryRegions(
       FROM kb_names name
       JOIN kb_regions region ON region.id = name.entity_id
       WHERE name.entity_type = 'region'
-        AND (name.normalized_name = ? OR name.normalized_name LIKE ? || '%')
+        AND name.normalized_name >= ? AND name.normalized_name < ? || '~'
         AND (? IS NULL OR region.country_code = ?)
       ORDER BY (name.normalized_name = ?) DESC, region.prominence DESC, region.name
       LIMIT 10`,

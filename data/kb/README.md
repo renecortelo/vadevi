@@ -3,7 +3,10 @@
 Reference knowledge about grapes and the EU's registered wine names, loaded
 into D1 (migrations `0025`–`0027`) by
 `pnpm kb:load` — and by every deploy, which reloads only when this directory
-changes. Vicenç and the app read it instead of searching the web for general
+changes, and then writes only the rows that changed. D1's free plan allows
+100,000 written rows a day for the whole database, the application's own
+saves included; a load that would write more than 25,000 stops before writing
+anything (`--max-writes` to raise it, after 00:00 UTC). Vicenç and the app read it instead of searching the web for general
 questions ("what does a Garnacha smell like?").
 
 ## Where it comes from
