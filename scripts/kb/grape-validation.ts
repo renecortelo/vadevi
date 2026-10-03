@@ -312,18 +312,22 @@ export function validateExtraction(
 }
 
 /** The first two sentences of a Wikipedia lead, kept short for a card. */
-export function summaryOf(lead: string): string | null {
+export function summaryOf(lead: string, limit = 420, paragraphs = 1): string | null {
+  // An explanation (a style, a method) may run to the lead's later
+  // paragraphs; a card's summary keeps to the first.
   const paragraph = clean(lead)
     .split("\n")
-    .find((line) => line.trim().length > 40)
-    ?.trim();
-  if (paragraph === undefined) return null;
+    .filter((line) => line.trim().length > 40)
+    .slice(0, paragraphs)
+    .map((line) => line.trim())
+    .join(" ");
+  if (paragraph.length === 0) return null;
   // A sentence ends at a full stop after a lowercase word or a figure — not
   // after an abbreviation like "D.O." or "Ca.", which would cut it short.
   const sentences = paragraph.split(/(?<=[a-zß-ÿ0-9)»"]{2}[.!?])\s+(?=[A-ZÀ-ÖØ-Þ¿¡"«(])/);
   let text = "";
   for (const sentence of sentences) {
-    if (text.length > 0 && text.length + sentence.length > 420) break;
+    if (text.length > 0 && text.length + sentence.length > limit) break;
     text += `${text.length === 0 ? "" : " "}${sentence}`;
   }
   return text.trim();

@@ -206,3 +206,23 @@ export function registerCountries(countryId: string): string[] {
     .filter((code) => /^[A-Z]{2}$/.test(code))
     .map((code) => (code === "EL" ? "GR" : code === "UK" ? "GB" : code));
 }
+
+/** A style or method in the library (`data/kb/topics.json`). */
+export type TopicEntry = {
+  aliases: { locale: string; name: string }[];
+  category: "concept" | "farming" | "kind" | "method";
+  id: string;
+  names: Record<string, string>;
+  prominence: number;
+  summaries: Record<string, { text: string; url: string }>;
+  wikidataId: string;
+};
+
+/** A picture in the library, with what its licence asks to be shown. */
+export type ImageEntry = {
+  author: string;
+  license: string;
+  licenseUrl: string | null;
+  path: string;
+  sourceUrl: string;
+};

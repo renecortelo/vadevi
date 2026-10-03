@@ -285,6 +285,7 @@ describe("authenticated app shell", () => {
         focusWineId: null,
         libraryGrapes: [],
         libraryRegions: [],
+        libraryTopics: [],
         evidence: [
           {
             evidenceClass: "observed",

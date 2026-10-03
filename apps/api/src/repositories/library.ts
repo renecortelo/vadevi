@@ -1,4 +1,4 @@
-import type { LibraryGrape, LibraryRegion } from "@vadevi/contracts";
+import type { LibraryGrape, LibraryRegion, LibraryTopic } from "@vadevi/contracts";
 
 import { suggestedPairingsFor } from "../adapters/grape-pairing";
 import { normalizeWineText } from "./wine-memory";
@@ -67,7 +67,7 @@ function phrasesOf(message: string): string[] {
 async function namedIn(
   database: D1Database,
   message: string,
-  entityType: "grape" | "region",
+  entityType: "grape" | "region" | "style",
   limit: number,
 ): Promise<string[]> {
   const phrases = phrasesOf(message);
@@ -125,51 +125,67 @@ export async function getLibraryGrape(
     .first<GrapeRow>();
   if (grape === null) return null;
 
-  const [names, summaries, attributes, evidence, labels, linkedRegions] = await database.batch([
-    database
-      .prepare(
-        `SELECT locale, name, kind FROM kb_names
+  const [names, summaries, attributes, evidence, labels, linkedRegions, images] =
+    await database.batch([
+      database
+        .prepare(
+          `SELECT locale, name, kind FROM kb_names
         WHERE entity_type = 'grape' AND entity_id = ? ORDER BY kind, name`,
-      )
-      .bind(grapeId),
-    database
-      .prepare(
-        `SELECT locale, text, source_url, license, translated FROM kb_summaries
+        )
+        .bind(grapeId),
+      database
+        .prepare(
+          `SELECT locale, text, source_url, license, translated FROM kb_summaries
         WHERE entity_type = 'grape' AND entity_id = ? AND locale IN (?, 'en')`,
-      )
-      .bind(grapeId, locale),
-    database
-      .prepare(
-        `SELECT kind, value, country_code FROM kb_grape_attributes WHERE grape_id = ? ORDER BY rowid`,
-      )
-      .bind(grapeId),
-    database
-      .prepare(
-        `SELECT field, value, quote, source_url FROM kb_evidence
+        )
+        .bind(grapeId, locale),
+      database
+        .prepare(
+          `SELECT kind, value, country_code FROM kb_grape_attributes WHERE grape_id = ? ORDER BY rowid`,
+        )
+        .bind(grapeId),
+      database
+        .prepare(
+          `SELECT field, value, quote, source_url FROM kb_evidence
         WHERE entity_type = 'grape' AND entity_id = ? ORDER BY field, value`,
-      )
-      .bind(grapeId),
-    // Aromas and foods are stored as the library's English terms; this is
-    // their label in the reader's language.
-    database
-      .prepare(
-        `SELECT term.kind, term.term, term.label FROM kb_terms term
+        )
+        .bind(grapeId),
+      // Aromas and foods are stored as the library's English terms; this is
+      // their label in the reader's language.
+      database
+        .prepare(
+          `SELECT term.kind, term.term, term.label FROM kb_terms term
         JOIN kb_grape_attributes attribute
           ON attribute.kind = term.kind AND attribute.value = term.term
         WHERE attribute.grape_id = ? AND term.locale = ?`,
-      )
-      .bind(grapeId, locale),
-    // The grape's regions that are registered names, to link to the atlas.
-    database
-      .prepare(
-        `SELECT region.id, region.country_code, name.normalized_name
+        )
+        .bind(grapeId, locale),
+      // The grape's regions that are registered names, to link to the atlas.
+      database
+        .prepare(
+          `SELECT region.id, region.country_code, name.normalized_name
         FROM kb_region_grapes link
         JOIN kb_regions region ON region.id = link.region_id
         JOIN kb_names name ON name.entity_type = 'region' AND name.entity_id = region.id
         WHERE link.grape_id = ?`,
-      )
-      .bind(grapeId),
-  ]);
+        )
+        .bind(grapeId),
+      database
+        .prepare(
+          `SELECT path, author, license, license_url, source_url FROM kb_images
+        WHERE entity_type = 'grape' AND entity_id = ?`,
+        )
+        .bind(grapeId),
+    ]);
+  const imageRow = (images?.results ?? [])[0] as
+    | {
+        author: string;
+        license: string;
+        license_url: string | null;
+        path: string;
+        source_url: string;
+      }
+    | undefined;
   const regionOf = new Map(
     (
       (linkedRegions?.results ?? []) as {
@@ -233,6 +249,16 @@ export async function getLibraryGrape(
       value: row.value,
     })),
     id: grape.id,
+    image:
+      imageRow === undefined
+        ? null
+        : {
+            author: imageRow.author,
+            license: imageRow.license,
+            licenseUrl: imageRow.license_url,
+            path: imageRow.path,
+            sourceUrl: imageRow.source_url,
+          },
     name: primary,
     originCountryCode: grape.origin_country_code,
     pairings: of("pairing"),
@@ -268,17 +294,60 @@ export async function getLibraryGrape(
   };
 }
 
-/** Grapes whose name starts with or equals the query, for a picker. */
+type GrapeListItem = {
+  color: LibraryGrape["color"];
+  id: string;
+  imagePath: string | null;
+  name: string;
+  originCountryCode: string | null;
+};
+
+/**
+ * Grapes whose name starts with or equals the query, for a picker — or,
+ * without one, every grape in the library, named in the reader's language.
+ */
 export async function searchLibraryGrapes(
   database: D1Database,
-  query: string,
+  query: string | undefined,
   locale: string,
-): Promise<{ color: LibraryGrape["color"]; id: string; name: string }[]> {
-  const ids = await findGrapesByName(database, query, 10);
-  const cards = await Promise.all(ids.map((id) => getLibraryGrape(database, id, locale)));
-  return cards.flatMap((card) =>
-    card === null ? [] : [{ color: card.color, id: card.id, name: card.name }],
-  );
+): Promise<GrapeListItem[]> {
+  const ids = query === undefined ? null : await findGrapesByName(database, query, 10);
+  if (ids !== null && ids.length === 0) return [];
+  const rows = await database
+    .prepare(
+      `SELECT grape.id, grape.color, grape.origin_country_code, grape.prominence, image.path,
+        coalesce(
+          (SELECT name FROM kb_names WHERE entity_type = 'grape' AND entity_id = grape.id
+            AND kind = 'primary' AND locale = ?),
+          (SELECT name FROM kb_names WHERE entity_type = 'grape' AND entity_id = grape.id
+            AND kind = 'primary' AND locale = 'en'),
+          grape.id
+        ) AS name
+      FROM kb_grapes grape
+      LEFT JOIN kb_images image ON image.entity_type = 'grape' AND image.entity_id = grape.id
+      ${ids === null ? "" : `WHERE grape.id IN (${ids.map(() => "?").join(", ")})`}`,
+    )
+    .bind(locale.split("-")[0], ...(ids ?? []))
+    .all<{
+      color: LibraryGrape["color"];
+      id: string;
+      name: string;
+      origin_country_code: string | null;
+      path: string | null;
+      prominence: number;
+    }>();
+  const items = rows.results.map((row) => ({
+    color: row.color,
+    id: row.id,
+    imagePath: row.path,
+    name: row.name,
+    originCountryCode: row.origin_country_code,
+  }));
+  // A search keeps its own order (exact name first, then the best known); the
+  // full list reads alphabetically.
+  return ids === null
+    ? items.sort((left, right) => left.name.localeCompare(right.name, locale))
+    : ids.flatMap((id) => items.filter((item) => item.id === id));
 }
 
 /** Registered wine names named anywhere in a sentence, longest first. */
@@ -289,9 +358,26 @@ export async function regionsMentionedIn(database: D1Database, message: string):
 /** A registered wine name, best known first, by any of its names. */
 export async function searchLibraryRegions(
   database: D1Database,
-  query: string,
+  query: string | undefined,
   country: string | null = null,
 ): Promise<{ countryCode: string; giType: "PDO" | "PGI"; id: string; name: string }[]> {
+  if (query === undefined) {
+    // A country's names, all of them, for the library's list.
+    if (country === null) return [];
+    const rows = await database
+      .prepare(
+        `SELECT id, name, country_code, gi_type FROM kb_regions
+        WHERE country_code = ? ORDER BY name LIMIT 1000`,
+      )
+      .bind(country)
+      .all<{ country_code: string; gi_type: "PDO" | "PGI"; id: string; name: string }>();
+    return rows.results.map((row) => ({
+      countryCode: row.country_code,
+      giType: row.gi_type,
+      id: row.id,
+      name: row.name,
+    }));
+  }
   const normalized = normalizeWineText(query);
   if (normalized.length === 0) return [];
   const rows = await database
@@ -419,4 +505,114 @@ export async function getLibraryRegion(
           },
     wikidataId: region.wikidata_id,
   };
+}
+
+/** Styles and methods named anywhere in a sentence, longest name first. */
+export async function topicsMentionedIn(database: D1Database, message: string): Promise<string[]> {
+  return namedIn(database, message, "style", 2);
+}
+
+type TopicRow = { category: LibraryTopic["category"]; id: string };
+
+async function topicsFor(
+  database: D1Database,
+  topics: TopicRow[],
+  locale: string,
+): Promise<LibraryTopic[]> {
+  if (topics.length === 0) return [];
+  const ids = topics.map((topic) => topic.id);
+  const placeholders = ids.map(() => "?").join(", ");
+  const shortLocale = locale.split("-")[0]!;
+  const [names, summaries] = await database.batch([
+    database
+      .prepare(
+        `SELECT entity_id, locale, name, kind FROM kb_names
+        WHERE entity_type = 'style' AND entity_id IN (${placeholders})`,
+      )
+      .bind(...ids),
+    database
+      .prepare(
+        `SELECT entity_id, locale, text, source_url, license FROM kb_summaries
+        WHERE entity_type = 'style' AND entity_id IN (${placeholders})`,
+      )
+      .bind(...ids),
+  ]);
+  const nameRows = (names?.results ?? []) as {
+    entity_id: string;
+    kind: "primary" | "synonym";
+    locale: string;
+    name: string;
+  }[];
+  const summaryRows = (summaries?.results ?? []) as {
+    entity_id: string;
+    license: string;
+    locale: string;
+    source_url: string;
+    text: string;
+  }[];
+  return topics.map((topic) => {
+    const own = nameRows.filter((row) => row.entity_id === topic.id);
+    const name =
+      own.find((row) => row.kind === "primary" && row.locale === shortLocale)?.name ??
+      own.find((row) => row.kind === "primary" && row.locale === "en")?.name ??
+      topic.id;
+    const mine = summaryRows.filter((row) => row.entity_id === topic.id);
+    // The reader's language, else English, else whichever language has it —
+    // pét-nat is explained only in German.
+    const summary =
+      mine.find((row) => row.locale === locale) ??
+      mine.find((row) => row.locale === "en") ??
+      mine[0] ??
+      null;
+    return {
+      category: topic.category,
+      id: topic.id,
+      name,
+      // The names a reader of this language might use, and the language-free
+      // ones ("pet nat"); not every language's label.
+      otherNames: [
+        ...new Set(
+          own
+            .filter(
+              (row) => row.name !== name && (row.locale === shortLocale || row.locale === "*"),
+            )
+            .map((row) => row.name),
+        ),
+      ].slice(0, 12),
+      summary:
+        summary === null
+          ? null
+          : {
+              license: summary.license,
+              locale: summary.locale,
+              sourceUrl: summary.source_url,
+              text: summary.text,
+            },
+    };
+  });
+}
+
+/** Every style and method, best known first within each category. */
+export async function listLibraryTopics(
+  database: D1Database,
+  locale: string,
+): Promise<LibraryTopic[]> {
+  const rows = await database
+    .prepare(`SELECT id, category FROM kb_topics ORDER BY category, prominence DESC, id`)
+    .all<TopicRow>();
+  return topicsFor(database, rows.results, locale);
+}
+
+/** One style or method, in the reader's language. */
+export async function getLibraryTopic(
+  database: D1Database,
+  topicId: string,
+  locale: string,
+): Promise<LibraryTopic | null> {
+  const row = await database
+    .prepare(`SELECT id, category FROM kb_topics WHERE id = ?`)
+    .bind(topicId)
+    .first<TopicRow>();
+  if (row === null) return null;
+  return (await topicsFor(database, [row], locale))[0] ?? null;
 }

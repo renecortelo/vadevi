@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { EuropeMap } from "../library/EuropeMap";
+import { flagOf } from "../library/flag";
 import { getLibraryGrape, searchLibraryGrapes } from "../services/library";
 
 /**
@@ -86,19 +88,44 @@ export function LibraryGrapePage() {
 
   return (
     <section className="library-page">
-      <header className="page-heading">
+      <p className="section-help">
+        <Link className="text-link" to="/library">
+          ← {t("library.home.title")}
+        </Link>
+      </p>
+      <header className="page-heading library-heading">
         <div>
           <p className="eyebrow">{t("library.eyebrow")}</p>
           <h1>{grape.name}</h1>
           <p>
             {[
               grape.color === null ? null : t(`library.color.${grape.color}`),
-              origin === null ? null : t("library.origin", { country: origin }),
+              origin === null
+                ? null
+                : `${flagOf(grape.originCountryCode)} ${t("library.origin", { country: origin })}`,
             ]
               .filter(Boolean)
               .join(" · ")}
           </p>
         </div>
+        {grape.image === null ? null : (
+          <figure className="library-photo">
+            <img alt={t("library.photoAlt", { name: grape.name })} src={`/${grape.image.path}`} />
+            <figcaption>
+              <a
+                className="text-link"
+                href={grape.image.sourceUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {t("library.photoCredit", {
+                  author: grape.image.author,
+                  license: grape.image.license,
+                })}
+              </a>
+            </figcaption>
+          </figure>
+        )}
       </header>
 
       {grape.summary === null ? null : (
@@ -215,6 +242,13 @@ export function LibraryGrapePage() {
               })}
             </p>
           )}
+        </section>
+      )}
+
+      {grape.originCountryCode === null || origin === null ? null : (
+        <section aria-labelledby="library-origin" className="settings-card">
+          <h2 id="library-origin">{t("library.originTitle")}</h2>
+          <EuropeMap countryCode={grape.originCountryCode} label={origin} />
         </section>
       )}
 

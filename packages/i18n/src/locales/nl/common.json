@@ -149,7 +149,44 @@
     "registeredOn": "Beschermd in de EU sinds {{date}}.",
     "registerLink": "Bekijken in het EU-register (eAmbrosia)",
     "grapesHere": "Druiven die hier groeien",
-    "grapesHereNote": "Druiven waarvan het eigen artikel zegt dat ze hier groeien. Geen volledige lijst: de toegestane rassen staan in het EU-register."
+    "grapesHereNote": "Druiven waarvan het eigen artikel zegt dat ze hier groeien. Geen volledige lijst: de toegestane rassen staan in het EU-register.",
+    "home": {
+      "title": "Wijnbibliotheek",
+      "intro": "Druiven, beschermde wijnbenamingen, stijlen en methoden uit open bronnen — om te raadplegen zonder Vicenç te vragen.",
+      "tab": {
+        "grapes": "Druiven",
+        "regions": "Benamingen",
+        "topics": "Stijlen en methoden"
+      },
+      "search": "Zoeken",
+      "searchPlaceholder": {
+        "grapes": "Garnacha, Riesling…",
+        "regions": "Rioja, Bordeaux…",
+        "topics": "natuurwijn, amfora…"
+      },
+      "colorFilter": "Kleur",
+      "countryFilter": "Land",
+      "typeFilter": "Bescherming",
+      "any": "Alle",
+      "count_one": "{{count}} item",
+      "count_other": "{{count}} items",
+      "none": "Geen resultaten."
+    },
+    "topicCategory": {
+      "kind": "Soorten wijn",
+      "farming": "In de wijngaard en de kelder",
+      "method": "Hoe wijn gemaakt wordt",
+      "concept": "Begrippen"
+    },
+    "topicMissing": "De bibliotheek heeft dit item niet.",
+    "pdoShort": "BOB",
+    "pgiShort": "BGA",
+    "photoAlt": "Tros {{name}}",
+    "photoCredit": "Foto: {{author}} · {{license}}",
+    "originTitle": "Waar ze vandaan komt",
+    "mapLabel": "Kaart met {{place}}",
+    "mapSource": "Kaart: Natural Earth",
+    "mapCountryOnly": "Het precieze gebied staat nog niet in de bibliotheek; de kaart toont het land."
   },
   "space": {
     "switchLabel": "Actieve Ruimte",
@@ -643,7 +680,9 @@
     "shopTitle": "Prijzen",
     "shopBody": "Bewaar gedateerde waarnemingen met zichtbare bronnen.",
     "identifyTitle": "Een fles identificeren",
-    "identifyBody": "Scan een code of lees een etiket en controleer elk veld voor het opslaan."
+    "identifyBody": "Scan een code of lees een etiket en controleer elk veld voor het opslaan.",
+    "libraryTitle": "Bibliotheek",
+    "libraryBody": "Druiven, benamingen, stijlen en methoden."
   },
   "cellar": {
     "eyebrow": "Je fysieke flessen",

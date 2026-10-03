@@ -117,7 +117,8 @@ export function AssistantResult({
 
       {/* The library cards the answer drew on, to read in full and check. */}
       {response.data.libraryGrapes.length === 0 &&
-      response.data.libraryRegions.length === 0 ? null : (
+      response.data.libraryRegions.length === 0 &&
+      response.data.libraryTopics.length === 0 ? null : (
         <p className="evidence-heading__grapes">
           <span>{t("library.eyebrow")}:</span>
           {response.data.libraryGrapes.map((grape) => (
@@ -128,6 +129,11 @@ export function AssistantResult({
           {response.data.libraryRegions.map((region) => (
             <Link className="text-link" key={region.id} to={`/library/regions/${region.id}`}>
               {region.name}
+            </Link>
+          ))}
+          {response.data.libraryTopics.map((topic) => (
+            <Link className="text-link" key={topic.id} to={`/library/topics/${topic.id}`}>
+              {topic.name}
             </Link>
           ))}
         </p>

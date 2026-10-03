@@ -10,11 +10,16 @@ import {
   LibraryRegionSearchResponseSchema,
   LibrarySearchQuerySchema,
   LibrarySearchResponseSchema,
+  LibraryTopicPathSchema,
+  LibraryTopicResponseSchema,
+  LibraryTopicsResponseSchema,
 } from "@vadevi/contracts";
 
 import {
   getLibraryGrape,
   getLibraryRegion,
+  getLibraryTopic,
+  listLibraryTopics,
   searchLibraryGrapes,
   searchLibraryRegions,
 } from "../repositories/library";
@@ -108,7 +113,77 @@ const regionSearchRoute = createRoute({
   },
 });
 
+const topicsRoute = createRoute({
+  method: "get",
+  path: "/api/v1/library/topics",
+  operationId: "listLibraryTopics",
+  tags: ["Library"],
+  summary: "Every style and method, explained in the reader's language",
+  security: [{ FirebaseBearer: [] }],
+  request: { query: LibraryGrapeQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: LibraryTopicsResponseSchema } },
+      description: "The library's styles and methods.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+  },
+});
+
+const topicRoute = createRoute({
+  method: "get",
+  path: "/api/v1/library/topics/{topicId}",
+  operationId: "getLibraryTopic",
+  tags: ["Library"],
+  summary: "One style or method, explained in the reader's language",
+  security: [{ FirebaseBearer: [] }],
+  request: { params: LibraryTopicPathSchema, query: LibraryGrapeQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: LibraryTopicResponseSchema } },
+      description: "The topic.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "The library has no such topic.",
+    },
+  },
+});
+
 export function registerLibraryRoutes(app: OpenAPIHono<ApiEnvironment>) {
+  app.openapi(topicsRoute, async (context) => {
+    const data = await listLibraryTopics(context.env.DB!, context.req.valid("query").locale);
+    return context.json(LibraryTopicsResponseSchema.parse({ data }), 200);
+  });
+
+  app.openapi(topicRoute, async (context) => {
+    const topic = await getLibraryTopic(
+      context.env.DB!,
+      context.req.valid("param").topicId,
+      context.req.valid("query").locale,
+    );
+    if (topic === null) {
+      return context.json(
+        ErrorEnvelopeSchema.parse({
+          error: {
+            code: "NOT_FOUND",
+            message: "The library has no such topic.",
+            requestId: context.get("requestId"),
+          },
+        }),
+        404,
+      );
+    }
+    return context.json(LibraryTopicResponseSchema.parse({ data: topic }), 200);
+  });
+
   app.openapi(regionRoute, async (context) => {
     const region = await getLibraryRegion(
       context.env.DB!,

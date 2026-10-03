@@ -149,7 +149,44 @@
     "registeredOn": "Protégée dans l'UE depuis le {{date}}.",
     "registerLink": "La voir au registre de l'UE (eAmbrosia)",
     "grapesHere": "Cépages cultivés ici",
-    "grapesHereNote": "Cépages dont l'article dit qu'ils sont cultivés ici. Liste non exhaustive : les cépages autorisés figurent au registre de l'UE."
+    "grapesHereNote": "Cépages dont l'article dit qu'ils sont cultivés ici. Liste non exhaustive : les cépages autorisés figurent au registre de l'UE.",
+    "home": {
+      "title": "Bibliothèque du vin",
+      "intro": "Cépages, appellations protégées, styles et méthodes, issus de sources ouvertes — à consulter sans demander à Vicenç.",
+      "tab": {
+        "grapes": "Cépages",
+        "regions": "Appellations",
+        "topics": "Styles et méthodes"
+      },
+      "search": "Rechercher",
+      "searchPlaceholder": {
+        "grapes": "Grenache, Riesling…",
+        "regions": "Chablis, Bordeaux…",
+        "topics": "nature, malolactique, amphore…"
+      },
+      "colorFilter": "Couleur",
+      "countryFilter": "Pays",
+      "typeFilter": "Protection",
+      "any": "Tous",
+      "count_one": "{{count}} entrée",
+      "count_other": "{{count}} entrées",
+      "none": "Aucun résultat."
+    },
+    "topicCategory": {
+      "kind": "Types de vin",
+      "farming": "À la vigne et au chai",
+      "method": "Comment on l'élabore",
+      "concept": "Notions"
+    },
+    "topicMissing": "La bibliothèque n'a pas cette entrée.",
+    "pdoShort": "AOP",
+    "pgiShort": "IGP",
+    "photoAlt": "Grappe de {{name}}",
+    "photoCredit": "Photo : {{author}} · {{license}}",
+    "originTitle": "D'où il vient",
+    "mapLabel": "Carte situant {{place}}",
+    "mapSource": "Carte : Natural Earth",
+    "mapCountryOnly": "La zone exacte n'est pas encore dans la bibliothèque ; la carte montre le pays."
   },
   "space": {
     "switchLabel": "Espace actif",
@@ -643,7 +680,9 @@
     "shopTitle": "Prix",
     "shopBody": "Conservez des observations datées avec des sources visibles.",
     "identifyTitle": "Identifier une bouteille",
-    "identifyBody": "Scannez un code ou lisez une étiquette, puis vérifiez chaque champ avant d'enregistrer."
+    "identifyBody": "Scannez un code ou lisez une étiquette, puis vérifiez chaque champ avant d'enregistrer.",
+    "libraryTitle": "Bibliothèque",
+    "libraryBody": "Cépages, appellations, styles et méthodes."
   },
   "cellar": {
     "eyebrow": "Vos bouteilles physiques",

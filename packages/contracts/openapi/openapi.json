@@ -2289,6 +2289,27 @@
                 "maxItems": 3,
                 "default": []
               },
+              "libraryTopics": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 3,
+                "default": []
+              },
               "mode": {
                 "type": "string",
                 "enum": [
@@ -11023,6 +11044,93 @@
         ],
         "additionalProperties": false
       },
+      "LibraryTopicsResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LibraryTopic"
+            }
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "LibraryTopic": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "kind",
+              "farming",
+              "method",
+              "concept"
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "otherNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "summary": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "license": {
+                "type": "string"
+              },
+              "locale": {
+                "type": "string"
+              },
+              "sourceUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "license",
+              "locale",
+              "sourceUrl",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "category",
+          "id",
+          "name",
+          "otherNames",
+          "summary"
+        ],
+        "additionalProperties": false
+      },
+      "LibraryTopicResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LibraryTopic"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
       "LibraryRegionResponse": {
         "type": "object",
         "properties": {
@@ -11280,6 +11388,39 @@
           "id": {
             "type": "string"
           },
+          "image": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "author": {
+                "type": "string"
+              },
+              "license": {
+                "type": "string"
+              },
+              "licenseUrl": {
+                "type": "string",
+                "nullable": true,
+                "format": "uri"
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^library\\/[a-z0-9/._-]+$"
+              },
+              "sourceUrl": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "author",
+              "license",
+              "licenseUrl",
+              "path",
+              "sourceUrl"
+            ],
+            "additionalProperties": false
+          },
           "name": {
             "type": "string"
           },
@@ -11414,6 +11555,7 @@
           "color",
           "evidence",
           "id",
+          "image",
           "name",
           "originCountryCode",
           "pairings",
@@ -11448,14 +11590,26 @@
                 "id": {
                   "type": "string"
                 },
+                "imagePath": {
+                  "type": "string",
+                  "nullable": true
+                },
                 "name": {
                   "type": "string"
+                },
+                "originCountryCode": {
+                  "type": "string",
+                  "nullable": true,
+                  "minLength": 2,
+                  "maxLength": 2
                 }
               },
               "required": [
                 "color",
                 "id",
-                "name"
+                "imagePath",
+                "name",
+                "originCountryCode"
               ],
               "additionalProperties": false
             }
@@ -17854,6 +18008,139 @@
         }
       }
     },
+    "/api/v1/library/topics": {
+      "get": {
+        "operationId": "listLibraryTopics",
+        "tags": [
+          "Library"
+        ],
+        "summary": "Every style and method, explained in the reader's language",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "es",
+                "fr",
+                "en",
+                "it",
+                "pt-PT",
+                "nl",
+                "de"
+              ],
+              "default": "en"
+            },
+            "required": false,
+            "name": "locale",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The library's styles and methods.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryTopicsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/topics/{topicId}": {
+      "get": {
+        "operationId": "getLibraryTopic",
+        "tags": [
+          "Library"
+        ],
+        "summary": "One style or method, explained in the reader's language",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-z0-9-]{1,60}$"
+            },
+            "required": true,
+            "name": "topicId",
+            "in": "path"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "es",
+                "fr",
+                "en",
+                "it",
+                "pt-PT",
+                "nl",
+                "de"
+              ],
+              "default": "en"
+            },
+            "required": false,
+            "name": "locale",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The topic.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryTopicResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The library has no such topic.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/library/regions/{regionId}": {
       "get": {
         "operationId": "getLibraryRegion",
@@ -17958,7 +18245,7 @@
               "minLength": 2,
               "maxLength": 120
             },
-            "required": true,
+            "required": false,
             "name": "query",
             "in": "query"
           }
@@ -18101,7 +18388,7 @@
               "minLength": 2,
               "maxLength": 120
             },
-            "required": true,
+            "required": false,
             "name": "query",
             "in": "query"
           }

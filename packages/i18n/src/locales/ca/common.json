@@ -149,7 +149,44 @@
     "registeredOn": "Protegida a la UE des del {{date}}.",
     "registerLink": "Veure-la al registre de la UE (eAmbrosia)",
     "grapesHere": "Raïms que s'hi conreen",
-    "grapesHereNote": "Raïms que el seu propi article diu que s'hi conreen. No és la llista completa: les varietats autoritzades són al registre de la UE."
+    "grapesHereNote": "Raïms que el seu propi article diu que s'hi conreen. No és la llista completa: les varietats autoritzades són al registre de la UE.",
+    "home": {
+      "title": "Biblioteca del vi",
+      "intro": "Raïms, denominacions protegides, estils i mètodes, de fonts obertes: per consultar sense preguntar a Vicenç.",
+      "tab": {
+        "grapes": "Raïms",
+        "regions": "Denominacions",
+        "topics": "Estils i mètodes"
+      },
+      "search": "Cerca",
+      "searchPlaceholder": {
+        "grapes": "Garnatxa, Riesling…",
+        "regions": "Priorat, Penedès…",
+        "topics": "natural, malolàctica, àmfora…"
+      },
+      "colorFilter": "Color",
+      "countryFilter": "País",
+      "typeFilter": "Protecció",
+      "any": "Tots",
+      "count_one": "{{count}} entrada",
+      "count_other": "{{count}} entrades",
+      "none": "No hi ha coincidències."
+    },
+    "topicCategory": {
+      "kind": "Tipus de vi",
+      "farming": "A la vinya i al celler",
+      "method": "Com s'elabora",
+      "concept": "Conceptes"
+    },
+    "topicMissing": "La biblioteca no té aquesta entrada.",
+    "pdoShort": "DOP",
+    "pgiShort": "IGP",
+    "photoAlt": "Raïm de {{name}}",
+    "photoCredit": "Foto: {{author}} · {{license}}",
+    "originTitle": "D'on ve",
+    "mapLabel": "Mapa amb {{place}}",
+    "mapSource": "Mapa: Natural Earth",
+    "mapCountryOnly": "La zona exacta encara no és a la biblioteca; el mapa mostra el país."
   },
   "space": {
     "switchLabel": "Espai actiu",
@@ -643,7 +680,9 @@
     "shopTitle": "Preus",
     "shopBody": "Desa observacions amb data i fonts visibles.",
     "identifyTitle": "Identifica una ampolla",
-    "identifyBody": "Escaneja un codi o llegeix una etiqueta, i revisa cada camp abans de desar."
+    "identifyBody": "Escaneja un codi o llegeix una etiqueta, i revisa cada camp abans de desar.",
+    "libraryTitle": "Biblioteca",
+    "libraryBody": "Raïms, denominacions, estils i mètodes."
   },
   "cellar": {
     "eyebrow": "Les teves ampolles físiques",

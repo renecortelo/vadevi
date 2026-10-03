@@ -149,7 +149,44 @@
     "registeredOn": "Protegida na UE desde {{date}}.",
     "registerLink": "Ver no registo da UE (eAmbrosia)",
     "grapesHere": "Castas cultivadas aqui",
-    "grapesHereNote": "Castas cujo próprio artigo diz que são cultivadas aqui. Não é a lista completa: as castas autorizadas estão no registo da UE."
+    "grapesHereNote": "Castas cujo próprio artigo diz que são cultivadas aqui. Não é a lista completa: as castas autorizadas estão no registo da UE.",
+    "home": {
+      "title": "Biblioteca do vinho",
+      "intro": "Castas, denominações protegidas, estilos e métodos, de fontes abertas — para consultar sem perguntar ao Vicenç.",
+      "tab": {
+        "grapes": "Castas",
+        "regions": "Denominações",
+        "topics": "Estilos e métodos"
+      },
+      "search": "Pesquisar",
+      "searchPlaceholder": {
+        "grapes": "Garnacha, Riesling…",
+        "regions": "Douro, Alentejo…",
+        "topics": "natural, malolática, ânfora…"
+      },
+      "colorFilter": "Cor",
+      "countryFilter": "País",
+      "typeFilter": "Proteção",
+      "any": "Todos",
+      "count_one": "{{count}} entrada",
+      "count_other": "{{count}} entradas",
+      "none": "Sem resultados."
+    },
+    "topicCategory": {
+      "kind": "Tipos de vinho",
+      "farming": "Na vinha e na adega",
+      "method": "Como se faz",
+      "concept": "Conceitos"
+    },
+    "topicMissing": "A biblioteca não tem esta entrada.",
+    "pdoShort": "DOP",
+    "pgiShort": "IGP",
+    "photoAlt": "Cacho de {{name}}",
+    "photoCredit": "Foto: {{author}} · {{license}}",
+    "originTitle": "De onde vem",
+    "mapLabel": "Mapa com {{place}}",
+    "mapSource": "Mapa: Natural Earth",
+    "mapCountryOnly": "A zona exata ainda não está na biblioteca; o mapa mostra o país."
   },
   "space": {
     "switchLabel": "Espaço ativo",
@@ -643,7 +680,9 @@
     "shopTitle": "Preços",
     "shopBody": "Guarde observações datadas com fontes visíveis.",
     "identifyTitle": "Identificar uma garrafa",
-    "identifyBody": "Digitalize um código ou leia um rótulo e verifique cada campo antes de guardar."
+    "identifyBody": "Digitalize um código ou leia um rótulo e verifique cada campo antes de guardar.",
+    "libraryTitle": "Biblioteca",
+    "libraryBody": "Castas, denominações, estilos e métodos."
   },
   "cellar": {
     "eyebrow": "As suas garrafas físicas",

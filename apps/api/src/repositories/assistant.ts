@@ -36,8 +36,10 @@ import { getWineSummary, listWines, normalizeWineText } from "./wine-memory";
 import {
   getLibraryGrape,
   getLibraryRegion,
+  getLibraryTopic,
   grapesMentionedIn,
   regionsMentionedIn,
+  topicsMentionedIn,
 } from "./library";
 import { jsonList } from "../services/sql-list";
 
@@ -535,12 +537,14 @@ async function loadLibraryStatements(
 ): Promise<{
   grapes: { id: string; name: string }[];
   regions: { id: string; name: string }[];
+  topics: { id: string; name: string }[];
   sources: Source[];
   statements: AssistantLanguageStatement[];
 }> {
   const ids = (await grapesMentionedIn(database, message)).slice(0, 2);
   const grapes: { id: string; name: string }[] = [];
   const regions: { id: string; name: string }[] = [];
+  const topics: { id: string; name: string }[] = [];
   const sources: Source[] = [];
   const statements: AssistantLanguageStatement[] = [];
   const now = new Date().toISOString();
@@ -695,7 +699,35 @@ async function loadLibraryStatements(
     }
     regions.push({ id: region.id, name: region.name });
   }
-  return { grapes, regions, sources, statements };
+  // Styles and methods — "¿qué es un vino natural?", "la maloláctica" — from
+  // their explanation, cited to its article.
+  for (const topicId of await topicsMentionedIn(database, message)) {
+    const topic = await getLibraryTopic(database, topicId, locale);
+    if (topic?.summary == null) continue;
+    const id = await librarySourceId(`topic:${topic.id}`);
+    sources.push({
+      canonicalUrl: topic.summary.sourceUrl,
+      createdAt: now,
+      createdByProvider: "wine-library",
+      createdByUserId: null,
+      id,
+      licenseIdentifier: "CC-BY-SA-4.0",
+      publisher: "Wikipedia",
+      retrievedAt: now,
+      sourceType: "open_dataset",
+      title: `${topic.name} — Wikipedia`,
+      updatedAt: now,
+    });
+    statements.push({
+      evidenceClass: "researched",
+      id: `library-topic-${topic.id}`,
+      sampleSize: null,
+      sourceIds: [id],
+      text: `wine library, ${topic.name}: ${topic.summary.text}`,
+    });
+    topics.push({ id: topic.id, name: topic.name });
+  }
+  return { grapes, regions, sources, statements, topics };
 }
 
 /**
@@ -1552,6 +1584,7 @@ function unclearTurn(
       focusWineId: options.request.context.visibleWineId ?? null,
       libraryGrapes: [],
       libraryRegions: [],
+      libraryTopics: [],
       mode: "deterministic",
       priceObservations: [],
       recommendations: [],
@@ -2226,6 +2259,7 @@ export async function runDeterministicAssistantTurn(
       evidence,
       libraryGrapes: library.grapes,
       libraryRegions: library.regions,
+      libraryTopics: library.topics,
       mode: languageResult === null ? "deterministic" : "provider",
       priceObservations,
       recommendations,

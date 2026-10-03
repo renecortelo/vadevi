@@ -4,7 +4,7 @@ import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-import type { RegionEntry } from "./appellation-names";
+import type { ImageEntry, RegionEntry, TopicEntry } from "./appellation-names";
 import type { GrapeEntry } from "./grape-validation";
 import { libraryDiffSql, libraryTables, type Vocabulary } from "./library-sql";
 
@@ -41,15 +41,21 @@ if (databaseName === undefined) {
 const source = readFileSync(resolve("data/kb/grapes.json"), "utf8");
 const vocabularySource = readFileSync(resolve("data/kb/terms.json"), "utf8");
 const regionsSource = readFileSync(resolve("data/kb/appellations.json"), "utf8");
+const topicsSource = readFileSync(resolve("data/kb/topics.json"), "utf8");
+const imagesSource = readFileSync(resolve("data/kb/grape-images.json"), "utf8");
 const version = createHash("sha256")
   .update(source)
   .update(vocabularySource)
   .update(regionsSource)
+  .update(topicsSource)
+  .update(imagesSource)
   .digest("hex")
   .slice(0, 16);
 const grapes = JSON.parse(source) as GrapeEntry[];
 const vocabulary = JSON.parse(vocabularySource) as Vocabulary;
 const regions = JSON.parse(regionsSource) as RegionEntry[];
+const topics = JSON.parse(topicsSource) as TopicEntry[];
+const images = JSON.parse(imagesSource) as Record<string, ImageEntry>;
 
 function wrangler(args: string[]): string {
   const result = spawnSync(
@@ -95,7 +101,7 @@ if (!force) {
   }
 }
 
-const tables = libraryTables(grapes, version, vocabulary, regions);
+const tables = libraryTables(grapes, version, vocabulary, regions, { images, topics });
 
 // What the database holds now, table by table. A table a migration has not
 // created yet reads as empty.
@@ -131,6 +137,6 @@ const file = join(mkdtempSync(join(tmpdir(), "vadevi-kb-")), "library.sql");
 writeFileSync(file, `${statements.join("\n")}\n`);
 wrangler(["--file", file]);
 console.info(
-  `  Loaded wine library ${version}: ${grapes.length} grapes, ${regions.length} registered names ` +
+  `  Loaded wine library ${version}: ${grapes.length} grapes, ${regions.length} registered names, ${topics.length} topics ` +
     `(${statements.length} statements, about ${writes.toLocaleString("en")} rows written).`,
 );

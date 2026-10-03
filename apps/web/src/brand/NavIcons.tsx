@@ -245,3 +245,22 @@ export function PriceIcon() {
     </Frame>
   );
 }
+
+/**
+ * Library: an open book, a small bunch on its right-hand page — reference
+ * reading about wine, the same family of strokes as the rest.
+ */
+export function LibraryIcon() {
+  return (
+    <Frame>
+      <path d="M12 6.6C10.2 5.3 7.4 4.9 3.6 5.3v12.6c3.8-.4 6.6 0 8.4 1.3" />
+      <path d="M12 6.6c1.8-1.3 4.6-1.7 8.4-1.3v12.6c-3.8-.4-6.6 0-8.4 1.3z" />
+      <path d="M5.8 8.6c1.6-.1 3 .1 4.2.6M5.8 11.4c1.6-.1 3 .1 4.2.6M5.8 14.2c1.6-.1 3 .1 4.2.6" />
+      <g fill="currentColor" stroke="none">
+        <circle cx="15.2" cy="10.4" r="1.05" />
+        <circle cx="17.4" cy="10.4" r="1.05" />
+        <circle cx="16.3" cy="12.3" r="1.05" />
+      </g>
+    </Frame>
+  );
+}

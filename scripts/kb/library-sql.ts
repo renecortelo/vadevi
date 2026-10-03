@@ -1,4 +1,4 @@
-import type { RegionEntry } from "./appellation-names";
+import type { ImageEntry, RegionEntry, TopicEntry } from "./appellation-names";
 import type { GrapeEntry } from "./grape-validation";
 
 /**
@@ -69,7 +69,10 @@ export function libraryTables(
     pairing: { terms: {}, variants: {} },
   },
   regions: readonly RegionEntry[] = [],
+  extras: { images?: Record<string, ImageEntry>; topics?: readonly TopicEntry[] } = {},
 ): LibraryTable[] {
+  const topics = extras.topics ?? [];
+  const images = extras.images ?? {};
   const table = (
     name: string,
     columns: string[],
@@ -171,6 +174,13 @@ export function libraryTables(
       ]),
     ),
     table(
+      "kb_topics",
+      ["id", "category", "wikidata_id", "prominence"],
+      ["id"],
+      1,
+      topics.map((topic) => [topic.id, topic.category, topic.wikidataId, topic.prominence]),
+    ),
+    table(
       "kb_names",
       nameColumns,
       ["entity_type", "entity_id", "locale", "normalized_name"],
@@ -207,6 +217,26 @@ export function libraryTables(
             entry.source,
           ]),
         ),
+        ...topics.flatMap((topic) => [
+          ...Object.entries(topic.names).map(([locale, name]) => [
+            "style",
+            topic.id,
+            locale,
+            name,
+            normalizeLibraryText(name),
+            "primary",
+            "wikidata",
+          ]),
+          ...topic.aliases.map((alias) => [
+            "style",
+            topic.id,
+            alias.locale,
+            alias.name,
+            normalizeLibraryText(alias.name),
+            "synonym",
+            "curated",
+          ]),
+        ]),
       ].filter((row) => (row[4] as string).length > 0),
     ),
     table("kb_summaries", summaryColumns, ["entity_type", "entity_id", "locale"], 1, [
@@ -220,6 +250,17 @@ export function libraryTables(
           summary.url,
           wikipediaLicense,
           summary.translated === true ? 1 : 0,
+        ]),
+      ),
+      ...topics.flatMap((topic) =>
+        Object.entries(topic.summaries).map(([locale, summary]) => [
+          "style",
+          topic.id,
+          locale === "pt" ? "pt-PT" : locale,
+          summary.text,
+          summary.url,
+          wikipediaLicense,
+          0,
         ]),
       ),
       ...regions.flatMap((region) =>
@@ -285,6 +326,23 @@ export function libraryTables(
           .filter((link) => grapes.some((grape) => grape.id === link.grapeId))
           .map((link) => [region.id, link.grapeId, link.quote, link.sourceUrl]),
       ),
+    ),
+    table(
+      "kb_images",
+      ["entity_type", "entity_id", "path", "author", "license", "license_url", "source_url"],
+      ["entity_type", "entity_id"],
+      1,
+      Object.entries(images)
+        .filter(([grapeId]) => grapes.some((grape) => grape.id === grapeId))
+        .map(([grapeId, image]) => [
+          "grape",
+          grapeId,
+          image.path,
+          image.author,
+          image.license,
+          image.licenseUrl,
+          image.sourceUrl,
+        ]),
     ),
     table("kb_meta", ["key", "value"], ["key"], 1, [["version", version]]),
   ];

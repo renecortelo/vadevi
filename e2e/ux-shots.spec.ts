@@ -98,6 +98,21 @@ test.describe("UX contact sheet", () => {
         await page.waitForURL(/\/library\/regions\//);
         await page.waitForLoadState("networkidle");
         await page.screenshot({ fullPage: true, path: resolve(directory, "library-region.png") });
+        // The library browsed: the grape gallery, a country's names, the
+        // styles and methods, and one of them.
+        for (const [name, path] of [
+          ["library-grapes", "/library"],
+          ["library-regions", "/library?tab=regions&country=ES"],
+          ["library-topics", "/library?tab=topics"],
+          ["library-topic", "/library/topics/malolactic-fermentation"],
+        ] as const) {
+          await page.goto(path);
+          await page.waitForLoadState("networkidle");
+          await page.waitForTimeout(400);
+          // The first screen: the lists run to a hundred entries and more,
+          // and a full-page shot of them is too long to look at.
+          await page.screenshot({ path: resolve(directory, `${name}.png`) });
+        }
 
         // The tasting's other steps: the nose and the palate, grouped into
         // titled runs like the context, and the context itself, the longest

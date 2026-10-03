@@ -148,6 +148,11 @@ export const AssistantTurnResponseSchema = z
           .array(z.object({ id: z.string(), name: z.string() }).strict())
           .max(3)
           .default([]),
+        // And the styles and methods it explained.
+        libraryTopics: z
+          .array(z.object({ id: z.string(), name: z.string() }).strict())
+          .max(3)
+          .default([]),
         mode: z.enum(["deterministic", "provider"]),
         priceObservations: z.array(PriceObservationSchema).max(25),
         recommendations: z.array(AssistantRecommendationSchema).max(12),

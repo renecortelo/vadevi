@@ -6,6 +6,8 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "../components/MapLink";
+import { EuropeMap } from "../library/EuropeMap";
+import { flagOf } from "../library/flag";
 import { getLibraryRegion, searchLibraryRegions } from "../services/library";
 
 /**
@@ -88,12 +90,18 @@ export function LibraryRegionPage() {
 
   return (
     <section className="library-page">
+      <p className="section-help">
+        <Link className="text-link" to={`/library?tab=regions&country=${region.countryCode}`}>
+          ← {t("library.home.title")}
+        </Link>
+      </p>
       <header className="page-heading">
         <div>
           <p className="eyebrow">{t("library.atlasEyebrow")}</p>
           <h1>{region.name}</h1>
           <p>
-            {t(region.giType === "PDO" ? "library.pdo" : "library.pgi")} · {countryName}
+            {t(region.giType === "PDO" ? "library.pdo" : "library.pgi")} ·{" "}
+            {flagOf(region.countryCode)} {countryName}
           </p>
           {/* A point where Wikidata has one; otherwise the map searches the
               name in its country — most registered names have no point. */}
@@ -125,6 +133,19 @@ export function LibraryRegionPage() {
           </p>
         </section>
       )}
+
+      <section aria-labelledby="region-map" className="settings-card">
+        <h2 id="region-map">{t("library.whereTitle")}</h2>
+        <EuropeMap
+          countryCode={region.countryCode}
+          label={region.name}
+          latitude={region.latitude}
+          longitude={region.longitude}
+        />
+        {region.latitude === null ? (
+          <p className="section-help">{t("library.mapCountryOnly")}</p>
+        ) : null}
+      </section>
 
       <section aria-labelledby="region-register" className="settings-card">
         <h2 id="region-register">{t("library.registerTitle")}</h2>

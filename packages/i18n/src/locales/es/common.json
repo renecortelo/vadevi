@@ -149,7 +149,44 @@
     "registeredOn": "Protegida en la UE desde el {{date}}.",
     "registerLink": "Verla en el registro de la UE (eAmbrosia)",
     "grapesHere": "Uvas que se cultivan aquí",
-    "grapesHereNote": "Uvas cuyo propio artículo dice que se cultivan aquí. No es la lista completa: las variedades autorizadas están en el registro de la UE."
+    "grapesHereNote": "Uvas cuyo propio artículo dice que se cultivan aquí. No es la lista completa: las variedades autorizadas están en el registro de la UE.",
+    "home": {
+      "title": "Biblioteca del vino",
+      "intro": "Uvas, denominaciones protegidas, estilos y métodos, de fuentes abiertas: para consultar sin preguntar a Vicenç.",
+      "tab": {
+        "grapes": "Uvas",
+        "regions": "Denominaciones",
+        "topics": "Estilos y métodos"
+      },
+      "search": "Buscar",
+      "searchPlaceholder": {
+        "grapes": "Garnacha, Riesling…",
+        "regions": "Rioja, Priorat…",
+        "topics": "natural, maloláctica, ánfora…"
+      },
+      "colorFilter": "Color",
+      "countryFilter": "País",
+      "typeFilter": "Protección",
+      "any": "Todos",
+      "count_one": "{{count}} entrada",
+      "count_other": "{{count}} entradas",
+      "none": "No hay coincidencias."
+    },
+    "topicCategory": {
+      "kind": "Tipos de vino",
+      "farming": "En la viña y en la bodega",
+      "method": "Cómo se elabora",
+      "concept": "Conceptos"
+    },
+    "topicMissing": "La biblioteca no tiene esta entrada.",
+    "pdoShort": "DOP",
+    "pgiShort": "IGP",
+    "photoAlt": "Racimo de {{name}}",
+    "photoCredit": "Foto: {{author}} · {{license}}",
+    "originTitle": "De dónde viene",
+    "mapLabel": "Mapa con {{place}}",
+    "mapSource": "Mapa: Natural Earth",
+    "mapCountryOnly": "La zona exacta aún no está en la biblioteca; el mapa muestra el país."
   },
   "space": {
     "switchLabel": "Espacio activo",
@@ -643,7 +680,9 @@
     "shopTitle": "Precios",
     "shopBody": "Guarda observaciones con fecha y fuentes visibles.",
     "identifyTitle": "Identificar una botella",
-    "identifyBody": "Escanea un código o lee una etiqueta, y revisa cada campo antes de guardar."
+    "identifyBody": "Escanea un código o lee una etiqueta, y revisa cada campo antes de guardar.",
+    "libraryTitle": "Biblioteca",
+    "libraryBody": "Uvas, denominaciones, estilos y métodos."
   },
   "cellar": {
     "eyebrow": "Tus botellas físicas",

@@ -56,6 +56,12 @@ const WineEvidencePage = lazy(() =>
 const LibraryGrapePage = lazy(() =>
   import("./pages/LibraryGrapePage").then((module) => ({ default: module.LibraryGrapePage })),
 );
+const LibraryPage = lazy(() =>
+  import("./pages/LibraryPage").then((module) => ({ default: module.LibraryPage })),
+);
+const LibraryTopicPage = lazy(() =>
+  import("./pages/LibraryTopicPage").then((module) => ({ default: module.LibraryTopicPage })),
+);
 const LibraryRegionPage = lazy(() =>
   import("./pages/LibraryRegionPage").then((module) => ({ default: module.LibraryRegionPage })),
 );
@@ -232,6 +238,22 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="library/region"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <LibraryPage />
+              </DeferredPage>
+            }
+            path="library"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <LibraryTopicPage />
+              </DeferredPage>
+            }
+            path="library/topics/:topicId"
           />
           <Route element={<AboutPage />} path="about" />
           <Route element={<SpaceSettingsPage />} path="spaces" />

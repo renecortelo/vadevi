@@ -17,6 +17,20 @@ export const LibraryEvidenceSchema = z
   })
   .strict();
 
+/**
+ * A picture, served by the app itself, with what its licence asks to be
+ * shown beside it.
+ */
+export const LibraryImageSchema = z
+  .object({
+    author: z.string(),
+    license: z.string(),
+    licenseUrl: z.string().url().nullable(),
+    path: z.string().regex(/^library\/[a-z0-9/._-]+$/),
+    sourceUrl: z.string().url(),
+  })
+  .strict();
+
 export const LibraryGrapeSchema = z
   .object({
     acidity: LibraryLevelSchema.nullable(),
@@ -25,6 +39,7 @@ export const LibraryGrapeSchema = z
     color: z.enum(["white", "red", "pink"]).nullable(),
     evidence: z.array(LibraryEvidenceSchema),
     id: z.string(),
+    image: LibraryImageSchema.nullable(),
     name: z.string(),
     originCountryCode: z.string().length(2).nullable(),
     pairings: z.array(z.string()),
@@ -79,10 +94,11 @@ export const LibraryGrapeQuerySchema = z
   .object({ locale: SupportedLocaleSchema.default("en") })
   .strict();
 
+/** By name; without one, every grape — the library's list. */
 export const LibrarySearchQuerySchema = z
   .object({
     locale: SupportedLocaleSchema.default("en"),
-    query: z.string().trim().min(2).max(120),
+    query: z.string().trim().min(2).max(120).optional(),
   })
   .strict();
 
@@ -93,7 +109,9 @@ export const LibrarySearchResponseSchema = z
         .object({
           color: z.enum(["white", "red", "pink"]).nullable(),
           id: z.string(),
+          imagePath: z.string().nullable(),
           name: z.string(),
+          originCountryCode: z.string().length(2).nullable(),
         })
         .strict(),
     ),
@@ -147,13 +165,14 @@ export const LibraryRegionResponseSchema = z
   .strict()
   .openapi("LibraryRegionResponse");
 
+/** By name, in a country, or both; a country alone lists all of its names. */
 export const LibraryRegionSearchQuerySchema = z
   .object({
     country: z
       .string()
       .regex(/^[A-Z]{2}$/)
       .optional(),
-    query: z.string().trim().min(2).max(120),
+    query: z.string().trim().min(2).max(120).optional(),
   })
   .strict();
 
@@ -177,6 +196,44 @@ export const LibraryRegionSearchResponseSchema = z
   .strict()
   .openapi("LibraryRegionSearchResponse");
 
+/**
+ * A style or a method: a kind of wine, a way of growing or making it, or a
+ * concept, explained from its Wikipedia article in the reader's language.
+ */
+export const LibraryTopicSchema = z
+  .object({
+    category: z.enum(["kind", "farming", "method", "concept"]),
+    id: z.string(),
+    name: z.string(),
+    otherNames: z.array(z.string()),
+    summary: z
+      .object({
+        license: z.string(),
+        locale: z.string(),
+        sourceUrl: z.string().url(),
+        text: z.string(),
+      })
+      .strict()
+      .nullable(),
+  })
+  .strict()
+  .openapi("LibraryTopic");
+
+export const LibraryTopicsResponseSchema = z
+  .object({ data: z.array(LibraryTopicSchema) })
+  .strict()
+  .openapi("LibraryTopicsResponse");
+
+export const LibraryTopicResponseSchema = z
+  .object({ data: LibraryTopicSchema })
+  .strict()
+  .openapi("LibraryTopicResponse");
+
+export const LibraryTopicPathSchema = z
+  .object({ topicId: z.string().regex(/^[a-z0-9-]{1,60}$/) })
+  .strict();
+
+export type LibraryTopic = z.infer<typeof LibraryTopicSchema>;
 export type LibraryRegion = z.infer<typeof LibraryRegionSchema>;
 export type LibraryGrape = z.infer<typeof LibraryGrapeSchema>;
 export type LibraryGrapeResponse = z.infer<typeof LibraryGrapeResponseSchema>;

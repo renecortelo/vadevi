@@ -149,7 +149,44 @@
     "registeredOn": "Protected in the EU since {{date}}.",
     "registerLink": "See it in the EU register (eAmbrosia)",
     "grapesHere": "Grapes grown here",
-    "grapesHereNote": "Grapes whose own article says they are grown here. Not a complete list: the registered rules are in the EU register."
+    "grapesHereNote": "Grapes whose own article says they are grown here. Not a complete list: the registered rules are in the EU register.",
+    "home": {
+      "title": "Wine library",
+      "intro": "Grapes, protected wine names, and styles and methods, from open sources — to browse without asking Vicenç.",
+      "tab": {
+        "grapes": "Grapes",
+        "regions": "Appellations",
+        "topics": "Styles and methods"
+      },
+      "search": "Search",
+      "searchPlaceholder": {
+        "grapes": "Garnacha, Riesling…",
+        "regions": "Rioja, Priorat…",
+        "topics": "natural, malolactic, amphora…"
+      },
+      "colorFilter": "Colour",
+      "countryFilter": "Country",
+      "typeFilter": "Protection",
+      "any": "All",
+      "count_one": "{{count}} entry",
+      "count_other": "{{count}} entries",
+      "none": "Nothing matches."
+    },
+    "topicCategory": {
+      "kind": "Kinds of wine",
+      "farming": "In the vineyard and the cellar",
+      "method": "How wine is made",
+      "concept": "Concepts"
+    },
+    "topicMissing": "The library has no such entry.",
+    "pdoShort": "PDO",
+    "pgiShort": "PGI",
+    "photoAlt": "A bunch of {{name}}",
+    "photoCredit": "Photo: {{author}} · {{license}}",
+    "originTitle": "Where it comes from",
+    "mapLabel": "Map showing {{place}}",
+    "mapSource": "Map: Natural Earth",
+    "mapCountryOnly": "The exact area is not in the library yet; the map shows the country."
   },
   "space": {
     "switchLabel": "Active Space",
@@ -643,7 +680,9 @@
     "shopTitle": "Prices",
     "shopBody": "Keep timestamped observations with visible sources.",
     "identifyTitle": "Identify a bottle",
-    "identifyBody": "Scan a barcode or read a label, then check every field before saving."
+    "identifyBody": "Scan a barcode or read a label, then check every field before saving.",
+    "libraryTitle": "Library",
+    "libraryBody": "Grapes, appellations, styles and methods."
   },
   "cellar": {
     "eyebrow": "Your physical bottles",

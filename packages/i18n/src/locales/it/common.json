@@ -149,7 +149,44 @@
     "registeredOn": "Protetta nell'UE dal {{date}}.",
     "registerLink": "Vederla nel registro dell'UE (eAmbrosia)",
     "grapesHere": "Vitigni coltivati qui",
-    "grapesHereNote": "Vitigni il cui articolo dice che sono coltivati qui. Non è l'elenco completo: le varietà ammesse sono nel registro dell'UE."
+    "grapesHereNote": "Vitigni il cui articolo dice che sono coltivati qui. Non è l'elenco completo: le varietà ammesse sono nel registro dell'UE.",
+    "home": {
+      "title": "Biblioteca del vino",
+      "intro": "Vitigni, denominazioni protette, stili e metodi, da fonti aperte: da consultare senza chiedere a Vicenç.",
+      "tab": {
+        "grapes": "Vitigni",
+        "regions": "Denominazioni",
+        "topics": "Stili e metodi"
+      },
+      "search": "Cerca",
+      "searchPlaceholder": {
+        "grapes": "Grenache, Riesling…",
+        "regions": "Barolo, Chianti…",
+        "topics": "naturale, malolattica, anfora…"
+      },
+      "colorFilter": "Colore",
+      "countryFilter": "Paese",
+      "typeFilter": "Protezione",
+      "any": "Tutti",
+      "count_one": "{{count}} voce",
+      "count_other": "{{count}} voci",
+      "none": "Nessun risultato."
+    },
+    "topicCategory": {
+      "kind": "Tipi di vino",
+      "farming": "In vigna e in cantina",
+      "method": "Come si fa",
+      "concept": "Concetti"
+    },
+    "topicMissing": "La biblioteca non ha questa voce.",
+    "pdoShort": "DOP",
+    "pgiShort": "IGP",
+    "photoAlt": "Grappolo di {{name}}",
+    "photoCredit": "Foto: {{author}} · {{license}}",
+    "originTitle": "Da dove viene",
+    "mapLabel": "Mappa con {{place}}",
+    "mapSource": "Mappa: Natural Earth",
+    "mapCountryOnly": "La zona esatta non è ancora nella biblioteca; la mappa mostra il paese."
   },
   "space": {
     "switchLabel": "Spazio attivo",
@@ -643,7 +680,9 @@
     "shopTitle": "Prezzi",
     "shopBody": "Conserva osservazioni datate con fonti visibili.",
     "identifyTitle": "Identifica una bottiglia",
-    "identifyBody": "Scansiona un codice o leggi un'etichetta, poi controlla ogni campo prima di salvare."
+    "identifyBody": "Scansiona un codice o leggi un'etichetta, poi controlla ogni campo prima di salvare.",
+    "libraryTitle": "Biblioteca",
+    "libraryBody": "Vitigni, denominazioni, stili e metodi."
   },
   "cellar": {
     "eyebrow": "Le tue bottiglie fisiche",

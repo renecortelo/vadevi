@@ -149,7 +149,44 @@
     "registeredOn": "In der EU geschützt seit dem {{date}}.",
     "registerLink": "Im EU-Register ansehen (eAmbrosia)",
     "grapesHere": "Hier angebaute Rebsorten",
-    "grapesHereNote": "Rebsorten, deren eigener Artikel sagt, dass sie hier angebaut werden. Keine vollständige Liste: die zugelassenen Sorten stehen im EU-Register."
+    "grapesHereNote": "Rebsorten, deren eigener Artikel sagt, dass sie hier angebaut werden. Keine vollständige Liste: die zugelassenen Sorten stehen im EU-Register.",
+    "home": {
+      "title": "Weinbibliothek",
+      "intro": "Rebsorten, geschützte Weinbezeichnungen, Stile und Methoden aus offenen Quellen – zum Nachschlagen, ohne Vicenç zu fragen.",
+      "tab": {
+        "grapes": "Rebsorten",
+        "regions": "Herkunftsbezeichnungen",
+        "topics": "Stile und Methoden"
+      },
+      "search": "Suchen",
+      "searchPlaceholder": {
+        "grapes": "Grenache, Riesling…",
+        "regions": "Mosel, Rheingau…",
+        "topics": "Naturwein, Amphore…"
+      },
+      "colorFilter": "Farbe",
+      "countryFilter": "Land",
+      "typeFilter": "Schutz",
+      "any": "Alle",
+      "count_one": "{{count}} Eintrag",
+      "count_other": "{{count}} Einträge",
+      "none": "Keine Treffer."
+    },
+    "topicCategory": {
+      "kind": "Weinarten",
+      "farming": "Im Weinberg und im Keller",
+      "method": "Wie Wein entsteht",
+      "concept": "Begriffe"
+    },
+    "topicMissing": "Diesen Eintrag gibt es in der Bibliothek nicht.",
+    "pdoShort": "g.U.",
+    "pgiShort": "g.g.A.",
+    "photoAlt": "Traube von {{name}}",
+    "photoCredit": "Foto: {{author}} · {{license}}",
+    "originTitle": "Woher sie stammt",
+    "mapLabel": "Karte mit {{place}}",
+    "mapSource": "Karte: Natural Earth",
+    "mapCountryOnly": "Das genaue Gebiet ist noch nicht in der Bibliothek; die Karte zeigt das Land."
   },
   "space": {
     "switchLabel": "Aktiver Bereich",
@@ -643,7 +680,9 @@
     "shopTitle": "Preise",
     "shopBody": "Speichere datierte Beobachtungen mit sichtbaren Quellen.",
     "identifyTitle": "Eine Flasche identifizieren",
-    "identifyBody": "Scannen Sie einen Code oder lesen Sie ein Etikett und prüfen Sie jedes Feld vor dem Speichern."
+    "identifyBody": "Scannen Sie einen Code oder lesen Sie ein Etikett und prüfen Sie jedes Feld vor dem Speichern.",
+    "libraryTitle": "Bibliothek",
+    "libraryBody": "Rebsorten, Herkunft, Stile und Methoden."
   },
   "cellar": {
     "eyebrow": "Deine echten Flaschen",
