@@ -458,12 +458,13 @@ const stemLength = 5;
  * which shares only four. A shorter floor would turn this from a stemmer into a
  * guess.
  *
- * It is still a heuristic and it does misfire: "cordelito" shares five letters
- * with "cordero" and is read as lamb. Six would stop that and would also stop
- * "filetito" reaching "filete", which is a word people actually type about food.
- * The trade is taken deliberately — this only ever reads a question that is
- * already about a dish, where a non-food word sharing five letters with a food
- * one is rarer than a diminutive of the food itself.
+ * Five letters alone were not enough. "garnacha" shares five with "garnaal"
+ * (Dutch for prawn) and a question about the grape became a shellfish dish;
+ * "Catalunya" shares five with "catalana"; "cordelito" was read as lamb. A
+ * diminutive differs from its word only after the word ends — "costill|itas",
+ * "pechug|uita", "filet|ito" — so the shared opening must also cover the
+ * shorter of the two but for, at most, its last letter. That keeps every
+ * diminutive and drops the coincidences, which part company sooner.
  */
 function matches(term: string, tokens: ReadonlySet<string>): boolean {
   if (tokens.has(term)) return true;
@@ -473,7 +474,7 @@ function matches(term: string, tokens: ReadonlySet<string>): boolean {
     let shared = 0;
     const limit = Math.min(token.length, term.length);
     while (shared < limit && token[shared] === term[shared]) shared += 1;
-    if (shared >= stemLength) return true;
+    if (shared >= stemLength && shared >= Math.min(token.length, term.length) - 1) return true;
   }
   return false;
 }

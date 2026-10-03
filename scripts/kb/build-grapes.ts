@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
+import { leadIsAboutWine } from "./appellation-names";
 import { type GrapeEntry, slug, summaryOf, validateExtraction } from "./grape-validation";
 
 /**
@@ -54,14 +55,30 @@ function terms(kind: "aroma" | "pairing", values: string[]): string[] {
 const entries: GrapeEntry[] = [];
 const rejected: { field: string; grape: string; reason: string; value: string }[] = [];
 let skipped = 0;
+let basic = 0;
 for (const qid of index) {
   const extractedPath = resolve(cache, `extracted/${qid}.json`);
-  if (!existsSync(extractedPath)) continue;
   const raw = JSON.parse(readFileSync(resolve(cache, `grapes/${qid}.json`), "utf8")) as Raw;
-  const proposal = (JSON.parse(readFileSync(extractedPath, "utf8")) as { extraction: unknown })
-    .extraction;
   if (raw.article === null) continue;
+  // A grape the model has not read yet still has a card: its names in every
+  // language, its synonyms and its Wikipedia summary need no model, and a
+  // wine of Picapoll should find Picapoll in the library today, not once the
+  // day's allowance reaches it. Structure, aromas and regions arrive when it
+  // is read. A grape grown for the table, not for wine, waits for the reading
+  // that can tell.
+  const extracted = existsSync(extractedPath);
+  if (!extracted) {
+    const lead = raw.leads.en ?? Object.values(raw.leads)[0] ?? "";
+    const opening = lead.slice(0, 240);
+    if (!leadIsAboutWine(lead) || /\b(table grape|raisin|uva de mesa)\b/i.test(opening)) continue;
+  }
+  const proposal = extracted
+    ? (JSON.parse(readFileSync(extractedPath, "utf8")) as { extraction: unknown }).extraction
+    : {};
   const result = validateExtraction(proposal, raw.article, raw.wikidataOrigin);
+  if (!extracted) {
+    basic += 1;
+  }
   rejected.push(...result.rejected.map((entry) => ({ ...entry, grape: raw.labels.en ?? qid })));
   if (!result.isWineGrape) {
     skipped += 1;
@@ -132,5 +149,5 @@ if (unmapped.size > 0) {
   );
 }
 console.info(
-  `${entries.length} grapes kept (${skipped} not wine grapes), ${evidenceCount} quoted facts, ${rejected.length} proposals rejected.`,
+  `${entries.length} grapes kept (${basic} not read by the model yet, ${skipped} not wine grapes), ${evidenceCount} quoted facts, ${rejected.length} proposals rejected.`,
 );

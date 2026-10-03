@@ -1108,7 +1108,13 @@
     "countryCode": "PT",
     "eambrosiaId": "EUGI00000005001",
     "giType": "PGI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "castelao",
+        "quote": "found primarily in the south coastal regions ... In the Algarve VR, it is often blended with Negra Mole...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)"
+      }
+    ],
     "id": "pt-algarve",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005001",
@@ -4964,7 +4970,13 @@
     "countryCode": "PT",
     "eambrosiaId": "EUGI00000004201",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "baga",
+        "quote": "planted primarily in the Bairrada DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Baga_(grape)"
+      }
+    ],
     "id": "pt-bairrada",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004201",
@@ -9535,14 +9547,14 @@
     "giType": "PGI",
     "grapes": [
       {
-        "grapeId": "sangiovese",
-        "quote": "primarily grown in the central regions of Italy, particularly in Tuscany... also cultivated in ... Umbria and Marche... also grown in ... Emilia‑Romagna, Lombardy, and even as far south as Calabria... In France... Corsica... Argentina... Mendoza... In California...",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
-      },
-      {
         "grapeId": "muscat-of-alexandria",
         "quote": "Muscat of Alexandria is cultivated very heavily on the island of Lemnos in the North Eastern Aegean region of Greece, ... In Italy wine is made from the grape on the island of Pantelleria, and it is grown in Calabria and Sicily ... In Spain, the grape is the sixth most planted white grape variety ... It is an important grape in the wine industries of Australia, Bolivia and South Africa.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Muscat_of_Alexandria"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "primarily grown in the central regions of Italy, particularly in Tuscany... also cultivated in ... Umbria and Marche... also grown in ... Emilia‑Romagna, Lombardy, and even as far south as Calabria... In France... Corsica... Argentina... Mendoza... In California...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
       }
     ],
     "id": "it-calabria",
@@ -22074,6 +22086,16 @@
     "giType": "PDO",
     "grapes": [
       {
+        "grapeId": "touriga-nacional",
+        "quote": "in the blends used for ports, and is increasingly being used for table wine in the Douro and Dão ... In the Douro it is grown",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Touriga_Nacional"
+      },
+      {
+        "grapeId": "souzao",
+        "quote": "While originating in the Minho region, it is used primarily in Australia, California and South Africa. Sezão is also an authorized grape in the Monterrei DO in Galicia. In Portugal, it is also an authorized planting in the Douro, and Dão‑Lafões area (Vinho do Dão).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sez%C3%A3o"
+      },
+      {
         "grapeId": "tempranillo",
         "quote": "The two major regions that grow Tempranillo are Rioja ... and Ribera del Duero ... Substantial quantities are also grown in the Penedès ... In Portugal ... Douro ... California ... Texas ... Oregon ... Australia ... Argentina, Chile, and Mexico ... Washington state ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Tempranillo"
@@ -22410,6 +22432,11 @@
     "giType": "PDO",
     "grapes": [
       {
+        "grapeId": "touriga-nacional",
+        "quote": "in the blends used for ports, and is increasingly being used for table wine in the Douro and Dão ... In the Douro it is grown",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Touriga_Nacional"
+      },
+      {
         "grapeId": "mencia",
         "quote": "It is primarily found in the Bierzo, Ribeira Sacra, Valdeorras, Monterrei and Dão wine regions.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
@@ -22592,7 +22619,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006861",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-el-hierro",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006861",
@@ -26529,7 +26562,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000002981",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-gran-canaria",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002981",
@@ -29033,7 +29072,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000003122",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-la-gomera",
     "latitude": 28.1174,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003122",
@@ -29243,7 +29288,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000003901",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-la-palma",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003901",
@@ -30440,6 +30491,11 @@
     "giType": "PDO",
     "grapes": [
       {
+        "grapeId": "piquepoul",
+        "quote": "grown primarily in the Rhone Valley and Languedoc regions of France as well as Catalonia, Spain ... in the Willcox AVA of southern Arizona ... Red Mountain AVA of eastern Washington State ... Piquepoul blanc is being grown in Sonoma, California ... Texas Hill Country AVA ... In Australia, Piquepoul blanc was first planted in 2013",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Piquepoul"
+      },
+      {
         "grapeId": "alicante-bouschet",
         "quote": "At the turn of the 21st century, Alicante Bouschet was the 12th most planted red wine grape in France with sizable plantings in the Languedoc, Provence and Cognac regions ... Widely planted across the Alentejo wine region today ... In Chile the grape is blended ... California ... Napa, Sonoma, Madera, and Calaveras counties. Other areas with notable ... Algeria, Palestine and parts of central and southern Italy. In Spain ... it is the fifth most planted red grape ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Alicante_Bouschet"
@@ -30490,7 +30546,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000003225",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-lanzarote",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003225",
@@ -34027,7 +34089,18 @@
     "countryCode": "PT",
     "eambrosiaId": "EUGI00000003622",
     "giType": "PGI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "loureira",
+        "quote": "includes Galicia,  Spain ... it is notably cultivated along the Lima River, a sub-region of Vinho Verde (wines produced in Minho)",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Loureiro_(grape)"
+      },
+      {
+        "grapeId": "souzao",
+        "quote": "While originating in the Minho region, it is used primarily in Australia, California and South Africa. Sezão is also an authorized grape in the Monterrei DO in Galicia. In Portugal, it is also an authorized planting in the Douro, and Dão‑Lafões area (Vinho do Dão).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sez%C3%A3o"
+      }
+    ],
     "id": "pt-minho",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003622",
@@ -35474,6 +35547,11 @@
     "eambrosiaId": "EUGI00000006622",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "treixadura",
+        "quote": "In Portugal, Treixadura is primarily found in the Minho wines of Vinho Verde ... In Spain, while Treixadura is most commonly found in the Rías Baixas and Ribeiro Denominación de Origen (DO)s, it is also found in other Galician wines such as the Monterrei DO ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Treixadura"
+      },
       {
         "grapeId": "mencia",
         "quote": "It is primarily found in the Bierzo, Ribeira Sacra, Valdeorras, Monterrei and Dão wine regions.",
@@ -43342,7 +43420,18 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006843",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "treixadura",
+        "quote": "In Portugal, Treixadura is primarily found in the Minho wines of Vinho Verde ... In Spain, while Treixadura is most commonly found in the Rías Baixas and Ribeiro Denominación de Origen (DO)s, it is also found in other Galician wines such as the Monterrei DO ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Treixadura"
+      },
+      {
+        "grapeId": "caino-tinto",
+        "quote": "Denominación de Origens (DOs) of Rías Baixas and Ribeiro ... Portugal's Vinho Verde wine region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cai%C3%B1o_tinto"
+      }
+    ],
     "id": "es-ribeiro",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006843",
@@ -45817,6 +45906,16 @@
     "eambrosiaId": "EUGI00000006702",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "treixadura",
+        "quote": "In Portugal, Treixadura is primarily found in the Minho wines of Vinho Verde ... In Spain, while Treixadura is most commonly found in the Rías Baixas and Ribeiro Denominación de Origen (DO)s, it is also found in other Galician wines such as the Monterrei DO ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Treixadura"
+      },
+      {
+        "grapeId": "caino-tinto",
+        "quote": "Denominación de Origens (DOs) of Rías Baixas and Ribeiro ... Portugal's Vinho Verde wine region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cai%C3%B1o_tinto"
+      },
       {
         "grapeId": "albarino",
         "quote": "Spain produces Albariño ... in the Rías Baixas DO, as well as in Barbanza e Iria. In Portugal Alvarinho is common in the Vinho Verde region, but it is only authorised to be grown in Monção and Melgaço. ... Albariño is now produced in several California regions including the Santa Ynez Valley, ... Napa, ... and in Washington state. Albariño is also grown in Uruguay ...",
@@ -50302,7 +50401,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000003384",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-tacoronte-acentejo",
     "latitude": 28.47972222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003384",
@@ -54176,6 +54281,11 @@
     "giType": "PDO",
     "grapes": [
       {
+        "grapeId": "godello",
+        "quote": "grown in northwestern Spain, in particular in Galicia ... yields the best results in Valdeorras",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Godello"
+      },
+      {
         "grapeId": "mencia",
         "quote": "It is primarily found in the Bierzo, Ribeira Sacra, Valdeorras, Monterrei and Dão wine regions.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
@@ -54417,14 +54527,14 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre"
       },
       {
-        "grapeId": "pedro-ximenez",
-        "quote": "the vast majority of these plantings are found in the Spanish wine region of Montilla-Moriles ... the grape can also be found in the denominación de origen (DO) of Montilla-Moriles, Jerez de la Frontera, Málaga and Sierras de Málaga and Valencia. ... most widely planted in the Portuguese wine region of Evora and Borba in the Alentejo region ... has thrived in Western Australia's Swan Valley ... limited plantings ... Margaret River region ... producers in the Elqui Province ...",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Pedro_Xim%C3%A9nez"
-      },
-      {
         "grapeId": "bobal",
         "quote": "It is grown predominantly in the Utiel-Requena DOP where it represents about 80% of the red grapes vines grown, and is also present in significant quantities in Valencia, Cuenca and Albacete. It can only be found in small quantities in other regions of Spain: La Manchuela (Castilla–La Mancha), selected vineyards in Ribera del Guadiana, Alicante, Murcia, Campo de Borja, Calatayud, Cariñena, Valdejalón.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Bobal"
+      },
+      {
+        "grapeId": "pedro-ximenez",
+        "quote": "the vast majority of these plantings are found in the Spanish wine region of Montilla-Moriles ... the grape can also be found in the denominación de origen (DO) of Montilla-Moriles, Jerez de la Frontera, Málaga and Sierras de Málaga and Valencia. ... most widely planted in the Portuguese wine region of Evora and Borba in the Alentejo region ... has thrived in Western Australia's Swan Valley ... limited plantings ... Margaret River region ... producers in the Elqui Province ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pedro_Xim%C3%A9nez"
       },
       {
         "grapeId": "marselan",
@@ -54757,7 +54867,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006868",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-valle-de-guimar",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006868",
@@ -54779,7 +54895,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006873",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-valle-de-la-orotava",
     "latitude": 28.387469444444,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006873",
@@ -55604,6 +55726,11 @@
     "eambrosiaId": "EUGI00000005449",
     "giType": "PGI",
     "grapes": [
+      {
+        "grapeId": "glera",
+        "quote": "It is grown mainly in the Veneto region of Italy, traditionally in an area near Conegliano and Valdobbiadene, in the hills north of Treviso.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Glera_(grape)"
+      },
       {
         "grapeId": "cabernet-franc",
         "quote": "In France, Cabernet Franc is found predominantly in the Loire Valley and ... Bordeaux... In Italy ... Friuli ... Veneto... Hungary ... Villány and Szekszárd... Canada ... Ontario's Niagara Peninsula... United States ... Napa and Sonoma counties... Washington State ... Columbia Valley... Argentina ... Mendoza... Plantings are found throughout Europe, in the New World, China and Kazakhstan.",
@@ -57212,6 +57339,16 @@
     "giType": "PDO",
     "grapes": [
       {
+        "grapeId": "treixadura",
+        "quote": "In Portugal, Treixadura is primarily found in the Minho wines of Vinho Verde ... In Spain, while Treixadura is most commonly found in the Rías Baixas and Ribeiro Denominación de Origen (DO)s, it is also found in other Galician wines such as the Monterrei DO ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Treixadura"
+      },
+      {
+        "grapeId": "caino-tinto",
+        "quote": "Denominación de Origens (DOs) of Rías Baixas and Ribeiro ... Portugal's Vinho Verde wine region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cai%C3%B1o_tinto"
+      },
+      {
         "grapeId": "albarino",
         "quote": "Spain produces Albariño ... in the Rías Baixas DO, as well as in Barbanza e Iria. In Portugal Alvarinho is common in the Vinho Verde region, but it is only authorised to be grown in Monção and Melgaço. ... Albariño is now produced in several California regions including the Santa Ynez Valley, ... Napa, ... and in Washington state. Albariño is also grown in Uruguay ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Albari%C3%B1o"
@@ -58130,7 +58267,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000003481",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "listan-negro",
+        "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      }
+    ],
     "id": "es-ycoden-daute-isora",
     "latitude": 28.374444444444446,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003481",

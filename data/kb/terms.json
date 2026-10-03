@@ -2,6 +2,7 @@
   "about": "Vocabulary of the wine library: each variant the sources use for an aroma or a food, mapped to one term, and that term in the eight locales. Curated by the project — translations of common words, not claims about any wine.",
   "aroma": {
     "variants": {
+      "acacia": "acacia",
       "almond": "almond",
       "almonds": "almond",
       "angelica": "angelica",
@@ -35,6 +36,8 @@
       "blueberry": "blueberry",
       "botanical": "herbs",
       "bramble": "blackberry",
+      "burnt toast": "toast",
+      "buttercup": "buttercup",
       "caramel": "caramel",
       "carob": "carob",
       "cassis": "blackcurrant",
@@ -86,10 +89,12 @@
       "grapey": "grape",
       "graphite": "graphite",
       "grass": "grass",
+      "green apple": "green apple",
       "green bell pepper": "bell pepper",
       "green pepper": "bell pepper",
       "greengage": "greengage",
       "guava": "guava",
+      "hawthorn blossom": "hawthorn blossom",
       "hazelnut": "hazelnut",
       "herb": "herbs",
       "herbaceous": "herbaceous",
@@ -98,6 +103,7 @@
       "herbs": "herbs",
       "honey": "honey",
       "hops": "hops",
+      "intense": null,
       "jammy": "jammy",
       "jerky nose": "gamey",
       "lead pencil": "graphite",
@@ -145,6 +151,7 @@
       "quince": "quince",
       "raisin": "raisin",
       "raisins": "raisin",
+      "raisiny": "raisin",
       "raspberries": "raspberry",
       "raspberry": "raspberry",
       "red berries": "red berry",
@@ -152,6 +159,7 @@
       "red berry fruits": "red berry",
       "red fruit": "red fruit",
       "roses": "rose",
+      "rustic": null,
       "sage": "sage",
       "savoury": "savoury",
       "smoke": "smoky",
@@ -167,6 +175,7 @@
       "stone fruit": "stone fruit",
       "stony minerality": "mineral",
       "strawberry": "strawberry",
+      "sweet": null,
       "sweet berries": "red berry",
       "sweet spicy": "spice",
       "tar": "tar",
@@ -188,6 +197,16 @@
       "winy": "grape"
     },
     "terms": {
+      "acacia": {
+        "en": "acacia",
+        "es": "acacia",
+        "ca": "acàcia",
+        "fr": "acacia",
+        "de": "Akazie",
+        "it": "acacia",
+        "nl": "acacia",
+        "pt-PT": "acácia"
+      },
       "almond": {
         "en": "almond",
         "es": "almendra",
@@ -387,6 +406,16 @@
         "it": "mirtillo",
         "nl": "bosbes",
         "pt-PT": "mirtilo"
+      },
+      "buttercup": {
+        "en": "buttercup",
+        "es": "ranúnculo",
+        "ca": "ranuncle",
+        "fr": "bouton-d'or",
+        "de": "Hahnenfuß",
+        "it": "ranuncolo",
+        "nl": "boterbloem",
+        "pt-PT": "ranúnculo"
       },
       "caramel": {
         "en": "caramel",
@@ -658,6 +687,16 @@
         "nl": "gras",
         "pt-PT": "erva"
       },
+      "green apple": {
+        "en": "green apple",
+        "es": "manzana verde",
+        "ca": "poma verda",
+        "fr": "pomme verte",
+        "de": "grüner Apfel",
+        "it": "mela verde",
+        "nl": "groene appel",
+        "pt-PT": "maçã verde"
+      },
       "greengage": {
         "en": "greengage",
         "es": "ciruela claudia",
@@ -677,6 +716,16 @@
         "it": "guava",
         "nl": "guave",
         "pt-PT": "goiaba"
+      },
+      "hawthorn blossom": {
+        "en": "hawthorn blossom",
+        "es": "flor de espino",
+        "ca": "flor d'arç blanc",
+        "fr": "fleur d'aubépine",
+        "de": "Weißdornblüte",
+        "it": "fiore di biancospino",
+        "nl": "meidoornbloesem",
+        "pt-PT": "flor de espinheiro"
       },
       "hazelnut": {
         "en": "hazelnut",
@@ -1233,6 +1282,7 @@
       "pršut": "prosciutto",
       "raclette": "raclette",
       "salmon": "salmon",
+      "seafood": "seafood",
       "spicy dishes": "spicy dishes",
       "squid": "squid",
       "sushi": "sushi",
@@ -1442,6 +1492,16 @@
         "it": "salmone",
         "nl": "zalm",
         "pt-PT": "salmão"
+      },
+      "seafood": {
+        "en": "seafood",
+        "es": "marisco",
+        "ca": "marisc",
+        "fr": "fruits de mer",
+        "de": "Meeresfrüchte",
+        "it": "frutti di mare",
+        "nl": "zeevruchten",
+        "pt-PT": "marisco"
       },
       "spicy dishes": {
         "en": "spicy dishes",

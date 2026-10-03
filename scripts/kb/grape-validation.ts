@@ -227,7 +227,13 @@ export function validateExtraction(
   const colorField = quoted("color");
   if (colorField !== null && typeof colorField.value === "string") {
     const wanted = colorField.value as "pink" | "red" | "white";
-    if (wanted in colorWords && colorWords[wanted].test(normalize(colorField.quote))) {
+    // A quote naming both skins ("dark-skinned (Piquepoul noir) and
+    // light-skinned (Piquepoul blanc) versions") describes a family, not a
+    // colour: Picapoll came out red, and a white Picapoll was set against it.
+    const quoteText = normalize(colorField.quote);
+    const both = colorWords.red.test(quoteText) && colorWords.white.test(quoteText);
+    if (both) reject("color", colorField.value, "quote names more than one skin colour");
+    else if (wanted in colorWords && colorWords[wanted].test(quoteText)) {
       color = wanted;
       evidence.push({ field: "color", quote: colorField.quote, value: wanted });
     } else reject("color", colorField.value, "quote does not describe that colour");

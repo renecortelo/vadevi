@@ -231,6 +231,14 @@ describe("reading the words people actually type", () => {
     expect(profileDish("pechuguita").protein).toBe("white_meat");
     expect(profileDish("camaroncitos").protein).toBe("shellfish");
     expect(profileDish("filetito de res").protein).toBe("red_meat");
+    // …but a word that merely opens like a food is not one: a grape, a
+    // region, a piece of string.
+    for (const notADish of ["garnacha", "Catalunya", "cordelito", "Tempranillo de Castilla"]) {
+      expect(recognisedDish(profileDish(notADish)), notADish).toBe(false);
+    }
+    expect(profileDish("quesos curados").protein).toBe("cheese");
+    expect(profileDish("carnes a la brasa").protein).toBe("red_meat");
+    expect(profileDish("ostras").protein).toBe("shellfish");
   });
 
   it("keeps the stem floor high enough that a short word cannot reach past itself", () => {

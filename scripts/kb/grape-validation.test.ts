@@ -176,3 +176,25 @@ describe("names across scripts", () => {
     expect(leadIsAboutWine("Recaș is a town in Timiș County, Romania.")).toBe(false);
   });
 });
+
+describe("a grape's colour", () => {
+  it("is left unknown when its quote names more than one skin", () => {
+    const article =
+      "Piquepoul is a variety of wine grape. It exists both in dark-skinned (Piquepoul noir) and light-skinned (Piquepoul blanc) versions.";
+    const result = validateExtraction(
+      {
+        color: {
+          quote:
+            "It exists both in dark-skinned (Piquepoul noir) and light-skinned (Piquepoul blanc) versions",
+          value: "red",
+        },
+      },
+      article,
+      [],
+    );
+    expect(result.color).toBeNull();
+    expect(result.rejected.map((entry) => entry.reason)).toContain(
+      "quote names more than one skin colour",
+    );
+  });
+});
