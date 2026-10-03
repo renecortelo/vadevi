@@ -249,7 +249,7 @@ describe("a tasting set against its grapes", () => {
       ).bind(
         spaceId,
         both.id,
-        JSON.stringify("Una finca familiar desde 1920; su tinto huele a cereza."),
+        JSON.stringify("Una finca familiar desde 1920. En nariz, cereza madura y regaliz. Perfecto para una copa de tarde."),
         now,
         now,
       ),
@@ -275,7 +275,8 @@ describe("a tasting set against its grapes", () => {
       wineId: both.id,
     });
     expect(outcome).toBe("ok");
-    expect(asked!.sources).toEqual(["Una finca familiar desde 1920; su tinto huele a cereza."]);
+    // Only the sentence about the glass; the estate and the afternoon go.
+    expect(asked!.sources).toEqual(["En nariz, cereza madura y regaliz."]);
     expect(asked!.grapes?.[0]).toContain("Tempranillo, as the variety typically is");
     const cited = await env.DB.prepare(
       `SELECT fact.research_method, source.canonical_url FROM facts fact

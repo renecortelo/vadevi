@@ -21,6 +21,7 @@ import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { resolveAppellationFacts } from "./eambrosia";
 import { grapeReferencesFor } from "./grape-reference";
+import { tastingSentences } from "./tasting-language";
 import { TRANSLATED_FACT_PREDICATES } from "./fact-translations";
 import { normalizeWineText } from "./wine-memory";
 import { jsonList } from "../services/sql-list";
@@ -1251,6 +1252,10 @@ export async function regenerateTastingComparison(
       grapeRows.results.map((row) => row.name_snapshot),
     )
   ).filter((reference) => reference.text !== null);
+  // Only the sentences about the glass: the estate, its brands and "perfect
+  // for an afternoon glass" are not something a tasting can be set against.
+  const aboutTheGlass = tastingSentences(sources);
+  sources.splice(0, sources.length, ...aboutTheGlass);
   const producerSourced = sources.length > 0 && sourceIds.size > 0;
   if (!producerSourced) {
     sources.length = 0;

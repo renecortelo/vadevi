@@ -34,6 +34,26 @@ const languageNames: Record<ResearchLocale, string> = {
  * result is sanitized like any external text and returns null on any failure, so
  * the caller keeps the paragraph it already had.
  */
+/**
+ * How to address the reader, as the rest of the app does: as a friend in the
+ * languages where the app uses the familiar form, formally where it does not.
+ * Left to itself the model chose "usted", and the paragraph read as a letter
+ * from a bank beside a chat that says "tú".
+ */
+function register(locale: TastingComparisonRequest["locale"]): string {
+  const forms: Record<string, string> = {
+    ca: "Address the reader as 'tu'.",
+    de: "Address the reader as 'Sie'.",
+    en: "Address the reader as 'you'.",
+    es: "Address the reader as 'tú', never 'usted'.",
+    fr: "Address the reader as 'vous'.",
+    it: "Address the reader as 'tu'.",
+    nl: "Address the reader as 'je'.",
+    "pt-PT": "Address the reader as 'tu'.",
+  };
+  return forms[locale] ?? forms.en!;
+}
+
 export class CloudflareNarrativeAdapter implements NarrativePort {
   constructor(
     private readonly ai: WorkersAiRunner,
@@ -86,7 +106,8 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
               `producer describes…", "Garnacha typically shows…" — never present a ` +
               `grape's typical profile as the producer's words or as this bottle's; ` +
               `a departure from the typical profile is worth noting, not a fault. ` +
-              `Name a person when the tasting line names one. Use ONLY these lists — ` +
+              `Name a person when the tasting line names one. ${register(input.locale)} ` +
+              `Use ONLY these lists — ` +
               `never add a flavour, a score, a grape or any detail none of them ` +
               `states. If they barely overlap, say so. Finish every sentence. Reply ` +
               `with the paragraph only, no preamble.`,
