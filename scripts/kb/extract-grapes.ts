@@ -101,25 +101,75 @@ const index = JSON.parse(
 ) as string[];
 
 /**
- * A daily ceiling on model calls, shared with the application.
+ * A ceiling on model calls, shared with the application.
  *
  * Workers AI's free allocation is 10,000 Neurons a day for the whole
  * account, and the deployed app draws on the same pool: Vicenç, translation
  * and the narratives. One unbounded run of this script used all of it on
- * 2026-10-02 and left the app without AI until midnight UTC. A grape costs
- * about 95 Neurons here, so 30 a day is under 3,000 and leaves the app the
- * rest. The ledger counts calls per UTC day across runs; `--daily N` moves
- * the ceiling for an account on a paid plan.
+ * 2026-10-02 — and the allowance did not come back at midnight UTC: on the
+ * morning of the 3rd, with nothing spent that day, Vicenç was still refused.
+ * The day is not a calendar day, so a count per UTC day is not a guard.
+ *
+ * Before any call, the account's own usage over the last 24 hours is asked of
+ * Cloudflare's analytics, and only what is left above a reserve for the app
+ * (6,000 Neurons, `--reserve N`) is spent, at about 100 Neurons a grape; the
+ * per-day ledger still caps a run at 30 (`--daily N`). If the usage cannot be
+ * read, nothing is spent.
  */
 const dailyFlag = process.argv.indexOf("--daily");
 const dailyCeiling = dailyFlag === -1 ? 30 : Number(process.argv[dailyFlag + 1]);
+const reserveFlag = process.argv.indexOf("--reserve");
+const reserve = reserveFlag === -1 ? 6_000 : Number(process.argv[reserveFlag + 1]);
 const ledgerPath = resolve(cacheDirectory, "ai-ledger.json");
 const today = new Date().toISOString().slice(0, 10);
 const ledger = (
   existsSync(ledgerPath) ? JSON.parse(readFileSync(ledgerPath, "utf8")) : {}
 ) as Record<string, number>;
 const spentToday = ledger[today] ?? 0;
-const allowance = Math.max(0, dailyCeiling - spentToday);
+
+/** Neurons the account used in the last 24 hours, or null if unknown. */
+async function neuronsLastDay(): Promise<number | null> {
+  const { account, token } = credentials();
+  const now = new Date();
+  try {
+    const response = await fetch("https://api.cloudflare.com/client/v4/graphql", {
+      body: JSON.stringify({
+        query: `query($a: String!, $s: Time!, $e: Time!) { viewer { accounts(filter: { accountTag: $a }) {
+          aiInferenceAdaptiveGroups(limit: 100, filter: { datetime_geq: $s, datetime_leq: $e }) {
+            sum { totalNeurons } } } } }`,
+        variables: {
+          a: account,
+          e: now.toISOString(),
+          s: new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString(),
+        },
+      }),
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      method: "POST",
+    });
+    const body = (await response.json()) as {
+      data?: {
+        viewer: {
+          accounts: { aiInferenceAdaptiveGroups: { sum: { totalNeurons: number } }[] }[];
+        };
+      };
+    };
+    const groups = body.data?.viewer.accounts[0]?.aiInferenceAdaptiveGroups;
+    if (groups === undefined) return null;
+    return groups.reduce((total, group) => total + group.sum.totalNeurons, 0);
+  } catch {
+    return null;
+  }
+}
+
+const used = await neuronsLastDay();
+const affordable = used === null ? 0 : Math.max(0, Math.floor((10_000 - reserve - used) / 100));
+const allowance = Math.max(0, Math.min(dailyCeiling - spentToday, affordable));
+console.info(
+  used === null
+    ? "Workers AI usage could not be read; nothing will be spent."
+    : `Workers AI: ${Math.round(used).toLocaleString("en")} Neurons used in the last 24 hours; ` +
+        `${reserve.toLocaleString("en")} kept for the app; up to ${allowance} grapes this run.`,
+);
 
 let done = 0;
 let quotaExhausted = false;
@@ -129,11 +179,7 @@ const queue = index
     return force || !existsSync(resolve(extractedDirectory, `${qid}.json`));
   })
   .slice(0, allowance);
-if (allowance === 0) {
-  console.info(
-    `Today's ceiling of ${dailyCeiling} model calls is spent; run again tomorrow (UTC).`,
-  );
-}
+if (allowance === 0) console.info("Nothing to spend now; run again later.");
 
 function record(): void {
   ledger[today] = (ledger[today] ?? 0) + 1;
