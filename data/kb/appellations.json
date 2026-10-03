@@ -5508,7 +5508,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000002961",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "garnacha-roja",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      }
+    ],
     "id": "fr-banyuls",
     "latitude": 42.48305555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002961",
@@ -17339,7 +17345,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001167",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "garnacha-roja",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      }
+    ],
     "id": "fr-collioure",
     "latitude": 42.525555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001167",
@@ -23771,6 +23783,11 @@
         "grapeId": "ancellotta",
         "quote": "mainly grown in the Emilia-Romagna region of Italy ... (province of Modena) ... (province of Reggio Emilia) ... the red Colli di Faenza DOC. In the Province of Rimini it is employed in the Colli di Rimini DOC wine ... in the canton Ticino ... in the Cahul region ... in the Taman Peninsula ... Campos de Cima da Serra",
         "sourceUrl": "https://en.wikipedia.org/wiki/Ancellotta"
+      },
+      {
+        "grapeId": "lambrusco-viadanese",
+        "quote": "Die Sorte ist in der Provinz Ferrara der Emilia-Romagna sowie den Provinzen Cremona und Mantua in der Lombardei zugelassen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
       }
     ],
     "id": "it-emilia-romagna",
@@ -23795,7 +23812,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000007268",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "garnacha-roja",
+        "quote": "La garnatxa roja, anomenada lledoner roig a l'Empordà, és una varietat vinífera",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
+      }
+    ],
     "id": "es-emporda",
     "latitude": 42.081944444444,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007268",
@@ -34955,7 +34978,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000000521",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "garnacha-roja",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      }
+    ],
     "id": "fr-maury",
     "latitude": 42.5,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000521",
@@ -44314,7 +44343,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000000321",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "garnacha-roja",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      }
+    ],
     "id": "fr-rasteau",
     "latitude": 44.225805,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000321",
@@ -45835,6 +45870,11 @@
     "eambrosiaId": "EUGI00000000082",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "garnacha-roja",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
       {
         "grapeId": "muscat-blanc-a-petits-grains",
         "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",

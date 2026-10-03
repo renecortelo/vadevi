@@ -412,6 +412,13 @@
     "path": "library/grapes/garganega.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Garganega_Recioto_di_Gambellara.png"
   },
+  "garnacha-roja": {
+    "author": "Jules Troncy",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "path": "library/grapes/garnacha-roja.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grenache_gris_-_Amp%C3%A9lographie.jpg"
+  },
   "gewurztraminer": {
     "author": "Dankwart Delor",
     "license": "CC BY-SA 3.0",

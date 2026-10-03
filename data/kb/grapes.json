@@ -486,7 +486,9 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "red fruit"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -565,6 +567,12 @@
         "quote": "El sumoll és una varietat rústica, autòctona del Penedès",
         "value": "ES: Penedès",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Sumoll"
+      },
+      {
+        "field": "aromas",
+        "quote": "Sie erbringt hellrote, nicht zu alkoholreiche, filigrane Rotweine mit erfrischender Säure und an rote Früchte erinnernde Aromen.",
+        "value": "red fruit",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Sumoll"
       }
     ],
     "id": "sumoll",
@@ -984,6 +992,197 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Piquepoul"
   },
   {
+    "acidity": "low",
+    "aromas": [
+      "fruity",
+      "raspberry",
+      "cherry"
+    ],
+    "body": null,
+    "color": "pink",
+    "evidence": [
+      {
+        "field": "color",
+        "quote": "L'epidermis és fina i de color roig en el cas dels clons de garnatxa roja empordanesa i de color gris en els cas de clons de garnatxa grisa francesa anomenada grenache gris.",
+        "value": "pink"
+      },
+      {
+        "field": "acidity",
+        "quote": "La garnatxa roja presenta el mateix grau d'acidesa baix que la garnatxa blanca i la garnatxa negra.",
+        "value": "low"
+      },
+      {
+        "field": "synonyms",
+        "quote": "La garnatxa roja, anomenada lledoner roig a l'Empordà, és una varietat vinífera",
+        "value": "Lledoner Roig"
+      },
+      {
+        "field": "regions",
+        "quote": "La garnatxa roja, anomenada lledoner roig a l'Empordà, és una varietat vinífera",
+        "value": "ES: Empordà"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Varietät von Grenache ist schon sehr alt und erbringt runde, üppige, fruchtbetonte Weine mit Himbeer- oder Kirscharoma.",
+        "value": "fruity",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Grenache_Gris"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Varietät von Grenache ist schon sehr alt und erbringt runde, üppige, fruchtbetonte Weine mit Himbeer- oder Kirscharoma.",
+        "value": "raspberry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Grenache_Gris"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Varietät von Grenache ist schon sehr alt und erbringt runde, üppige, fruchtbetonte Weine mit Himbeer- oder Kirscharoma.",
+        "value": "cherry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Grenache_Gris"
+      },
+      {
+        "field": "styles",
+        "quote": "On utilise le grenache gris pour l´élaboration de vins doux naturels, mais aussi de vins gris (sables du littoral méditerranéen).",
+        "value": "sweet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
+      {
+        "field": "styles",
+        "quote": "On utilise le grenache gris pour l´élaboration de vins doux naturels, mais aussi de vins gris (sables du littoral méditerranéen).",
+        "value": "still",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
+      {
+        "field": "regions",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "value": "FR: Banyuls",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
+      {
+        "field": "regions",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "value": "FR: Collioure",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
+      {
+        "field": "regions",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "value": "FR: Maury",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
+      {
+        "field": "regions",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "value": "FR: Rivesaltes",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
+      {
+        "field": "regions",
+        "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
+        "value": "FR: Rasteau",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      }
+    ],
+    "id": "garnacha-roja",
+    "names": {
+      "en": "Garnacha Roja",
+      "es": "Garnacha Roja",
+      "ca": "Garnatxa roja",
+      "fr": "Grenache gris",
+      "de": "Grenache Gris",
+      "it": "Garnacha Roja",
+      "pt": "Garnacha Roja"
+    },
+    "origin": null,
+    "pairings": [],
+    "prominence": 3,
+    "regions": [
+      {
+        "country": "ES",
+        "name": "Empordà"
+      },
+      {
+        "country": "FR",
+        "name": "Banyuls"
+      },
+      {
+        "country": "FR",
+        "name": "Collioure"
+      },
+      {
+        "country": "FR",
+        "name": "Maury"
+      },
+      {
+        "country": "FR",
+        "name": "Rivesaltes"
+      },
+      {
+        "country": "FR",
+        "name": "Rasteau"
+      }
+    ],
+    "styles": [
+      "sweet",
+      "still"
+    ],
+    "summaries": {
+      "ca": {
+        "text": "La garnatxa roja, anomenada lledoner roig a l'Empordà, és una varietat vinífera, que es reconeix dintre la família de les garnatxes pel color de les seves baies roges. Existeixen varietats de raïms blancs, negres, vermells i grisos. Les antocianines i altres pigments de la família dels polifenols són els responsables de la variació de les tonalitats porpres en les varietats de raïm.",
+        "url": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
+      },
+      "fr": {
+        "text": "Le grenache gris est un cépage de France de raisins gris ou rose.",
+        "url": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
+      "de": {
+        "text": "Die Weißweinsorte Grenache Gris stammt aus Spanien (sie heißt dort Garnacha Roja), ist aber auch in Australien, Bulgarien, Frankreich, Portugal und Südafrika zu Hause.",
+        "url": "https://de.wikipedia.org/wiki/Grenache_Gris"
+      },
+      "en": {
+        "text": "Garnacha Roja, called lledoner roig in the Empordà, is a wine grape variety recognised within the Garnacha family by the red colour of its berries.",
+        "translated": true,
+        "url": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
+      },
+      "es": {
+        "text": "La garnacha roja, llamada lledoner roig en el Ampurdán, es una variedad de uva de vinificación que se reconoce dentro de la familia de las garnachas por el color rojo de sus bayas.",
+        "translated": true,
+        "url": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
+      },
+      "it": {
+        "text": "La garnacha roja, chiamata lledoner roig nell'Empordà, è un vitigno da vino che si riconosce nella famiglia delle garnacha per il colore rosso dei suoi acini.",
+        "translated": true,
+        "url": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
+      },
+      "nl": {
+        "text": "Garnacha roja, in de Empordà lledoner roig genoemd, is een wijndruivenras dat binnen de garnachafamilie te herkennen is aan de rode kleur van zijn bessen.",
+        "translated": true,
+        "url": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
+      },
+      "pt-PT": {
+        "text": "A garnacha roja, chamada lledoner roig no Empordà, é uma casta de uva de vinho que se reconhece na família das garnachas pela cor vermelha dos seus bagos.",
+        "translated": true,
+        "url": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
+      }
+    },
+    "synonyms": [
+      {
+        "name": "Lledoner Roig",
+        "source": "article"
+      },
+      {
+        "name": "garnatxa roja",
+        "source": "wikidata"
+      },
+      {
+        "name": "Grenache gris",
+        "source": "wikidata"
+      }
+    ],
+    "tannin": null,
+    "wikidataId": "Q1545629",
+    "wikipediaUrl": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
+  },
+  {
     "acidity": null,
     "aromas": [
       "black fruit"
@@ -1390,7 +1589,9 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -1468,6 +1669,12 @@
         "field": "regions",
         "quote": "It is grown mainly in the Veneto region of Italy, traditionally in an area near Conegliano and Valdobbiadene, in the hills north of Treviso.",
         "value": "IT: Veneto"
+      },
+      {
+        "field": "aromas",
+        "quote": "La glera dona un vi fresc i afruitat, no gaire alcohòlic, apte a la producció del vi escumós prosecco.",
+        "value": "fruity",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Glera"
       },
       {
         "field": "regions",
@@ -3096,6 +3303,11 @@
       "pt": {
         "text": "Baga é uma casta de uva tinta da família das Vitis viniferas, a partir da qual são fabricados os vinhos tintos da região da Bairrada, em Portugal. É amplamente cultivada na região vinícola Beira Atlântico, representando mais de 90% dos encepamentos tintos da Bairrada, e ainda em Alenquer, Ribatejo e Dão (onde não é recomendada). É ainda considerada uma casta apta à produção de vinhos com DO Vinho Verde e IG Minho.",
         "url": "https://pt.wikipedia.org/wiki/Baga_(uva)"
+      },
+      "es": {
+        "text": "La baga es una variedad de uva tinta portuguesa plantada sobre todo en la DOC Bairrada. Como varietal, da vinos tánicos de acidez alta.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Baga_(grape)"
       }
     },
     "synonyms": [
@@ -3348,6 +3560,11 @@
       "pt": {
         "text": "Castelão é uma casta de uva tinta portuguesa conhecida na região de Setúbal por Periquita, também chamada João de Santarém ou Castelão Francês. Embora seja cultivada por todo o país, destaca-se sobretudo nas regiões costeiras a sul e por vezes entra na constituição do Vinho do Porto.",
         "url": "https://pt.wikipedia.org/wiki/Castel%C3%A3o_(uva)"
+      },
+      "es": {
+        "text": "La castelão, conocida también en Portugal como periquita y João de Santarém, es una uva tinta que se encuentra sobre todo en las regiones costeras del sur, aunque se cultiva en todo Portugal y a veces se usa en la elaboración del oporto.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)"
       }
     },
     "synonyms": [
@@ -3529,6 +3746,11 @@
       "pt": {
         "text": "Trincadeira é uma casta de uva tinta da família das Vitis vinifera, cultivada essencialmente no Alentejo, na região do Douro e no Ribatejo.",
         "url": "https://pt.wikipedia.org/wiki/Trincadeira"
+      },
+      "es": {
+        "text": "La tinta amarela o trincadeira es una uva tinta de uso habitual en la elaboración del oporto. Destaca por su color oscuro. Su uso en la región del Duero ha ido en aumento en los últimos años. La cepa es sensible a la podredumbre y se comporta mejor en climas secos y cálidos.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tinta_Amarela"
       }
     },
     "synonyms": [
@@ -3567,7 +3789,12 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "red fruit",
+      "cherry",
+      "strawberry",
+      "spice"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -3650,6 +3877,42 @@
         "field": "regions",
         "quote": "planted primarily in the Dão DOC and Alentejano VR ... growing mainly in the provinces of Zamora and Salamanca ... It is one of the authorized varieties of the La Gomera and El Hierro Denominación de Origen",
         "value": "ES: El Hierro"
+      },
+      {
+        "field": "aromas",
+        "quote": "Reinsortig ausgebaute Weine sind farbkräftige, fruchtigfrische Rotweine oder Roséweine mit einem Bukett von roten Früchten, etwa Kirschen und Erdbeeren. Am Gaumen präsentieren sie sich kraftvoll, dicht und mit feinen fruchtigen und würzigen Akzenten.",
+        "value": "red fruit",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
+      },
+      {
+        "field": "aromas",
+        "quote": "Reinsortig ausgebaute Weine sind farbkräftige, fruchtigfrische Rotweine oder Roséweine mit einem Bukett von roten Früchten, etwa Kirschen und Erdbeeren. Am Gaumen präsentieren sie sich kraftvoll, dicht und mit feinen fruchtigen und würzigen Akzenten.",
+        "value": "cherry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
+      },
+      {
+        "field": "aromas",
+        "quote": "Reinsortig ausgebaute Weine sind farbkräftige, fruchtigfrische Rotweine oder Roséweine mit einem Bukett von roten Früchten, etwa Kirschen und Erdbeeren. Am Gaumen präsentieren sie sich kraftvoll, dicht und mit feinen fruchtigen und würzigen Akzenten.",
+        "value": "strawberry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
+      },
+      {
+        "field": "aromas",
+        "quote": "Reinsortig ausgebaute Weine sind farbkräftige, fruchtigfrische Rotweine oder Roséweine mit einem Bukett von roten Früchten, etwa Kirschen und Erdbeeren. Am Gaumen präsentieren sie sich kraftvoll, dicht und mit feinen fruchtigen und würzigen Akzenten.",
+        "value": "spice",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
+      },
+      {
+        "field": "styles",
+        "quote": "Reinsortig ausgebaute Weine sind farbkräftige, fruchtigfrische Rotweine oder Roséweine",
+        "value": "rose",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
+      },
+      {
+        "field": "styles",
+        "quote": "Reinsortig ausgebaute Weine sind farbkräftige, fruchtigfrische Rotweine oder Roséweine",
+        "value": "still",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
       }
     ],
     "id": "alfrocheiro-preto",
@@ -3693,7 +3956,9 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "rose",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -3757,7 +4022,15 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "red fruit",
+      "blackberry",
+      "floral",
+      "violet",
+      "rose",
+      "herbs",
+      "spice"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -3810,6 +4083,54 @@
         "field": "regions",
         "quote": "experimental plantings of the grape in Tasmania ... the variety is increasingly being used for unfortified red wine in the Douro and in the Dão",
         "value": "AU: Tasmania"
+      },
+      {
+        "field": "tannin",
+        "quote": "Grâce à la finesse et la forte concentration de ses tanins, il contribue au bon vieillissement des assemblages auxquels il participe.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
+        "value": "red fruit",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
+        "value": "blackberry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
+        "value": "floral",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
+        "value": "violet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
+        "value": "rose",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
+        "value": "herbs",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
+        "value": "spice",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
       }
     ],
     "id": "touriga-francesa",
@@ -3885,7 +4206,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q431045",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Touriga_Francesa"
   },
@@ -4136,9 +4457,13 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Arinto"
   },
   {
-    "acidity": null,
-    "aromas": [],
-    "body": null,
+    "acidity": "high",
+    "aromas": [
+      "lemon",
+      "apple",
+      "grass"
+    ],
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -4160,6 +4485,36 @@
         "field": "regions",
         "quote": "grown primarily in the Dão DOC",
         "value": "PT: Dão"
+      },
+      {
+        "field": "acidity",
+        "quote": "Die Sorte erbringt einen duftigen, säurebetonten und körperreichen Wein bei mäßigem Ertrag.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Encruzado"
+      },
+      {
+        "field": "body",
+        "quote": "Die Sorte erbringt einen duftigen, säurebetonten und körperreichen Wein bei mäßigem Ertrag.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Encruzado"
+      },
+      {
+        "field": "aromas",
+        "quote": "beim Bouquet überwiegen Aromen von Zitrone, Apfel und frisch gemähtem Gras",
+        "value": "lemon",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Encruzado"
+      },
+      {
+        "field": "aromas",
+        "quote": "beim Bouquet überwiegen Aromen von Zitrone, Apfel und frisch gemähtem Gras",
+        "value": "apple",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Encruzado"
+      },
+      {
+        "field": "aromas",
+        "quote": "beim Bouquet überwiegen Aromen von Zitrone, Apfel und frisch gemähtem Gras",
+        "value": "grassy",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Encruzado"
       },
       {
         "field": "styles",
@@ -4204,6 +4559,11 @@
       "pt": {
         "text": "Encruzado é uma casta portuguesa de uva branca cultivada sobretudo no DOC Dão. Usada sobretudo em lotes com outras castas, actualmente tem sido utilizada também em vinhos varietais com sucesso.",
         "url": "https://pt.wikipedia.org/wiki/Encruzado"
+      },
+      "es": {
+        "text": "La encruzado es una uva blanca portuguesa cultivada sobre todo en la DOC Dão. Se usa principalmente en mezclas.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Encruzado"
       }
     },
     "synonyms": [
@@ -4919,6 +5279,11 @@
       "it": {
         "text": "Il Greco è un vitigno italiano a bacca bianca.",
         "url": "https://it.wikipedia.org/wiki/Greco_(vitigno)"
+      },
+      "es": {
+        "text": "La greco es una uva italiana que podría ser de origen griego. El nombre se refiere tanto a variedades blancas (greco bianco) como negras (greco nero). Aunque hay más superficie dedicada a la greco nero, la greco bianco es la que más se suele llamar «greco». En Campania se usa para elaborar el vino DOCG Greco di Tufo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Greco_(grape)"
       }
     },
     "synonyms": [
@@ -5599,6 +5964,11 @@
       "nl": {
         "text": "De sagrantino is een blauwe Italiaanse druivensoort, die sinds eeuwen wordt gecultiveerd op de heuvels rond Montefalco in Umbrië.",
         "url": "https://nl.wikipedia.org/wiki/Sagrantino"
+      },
+      "es": {
+        "text": "La sagrantino es una variedad de uva italiana autóctona de la región de Umbría, en el centro de Italia. Se cultiva sobre todo en el pueblo de Montefalco y sus alrededores, y su superficie ha crecido con rapidez: de 351 hectáreas en 2000 a 994 hectáreas en 2010, en manos de unos 50 productores.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Sagrantino"
       }
     },
     "synonyms": [
@@ -5765,6 +6135,11 @@
     "summaries": {
       "en": {
         "text": "Listán Prieto (not to be confused with Listán Negro) is a red grape variety that is believed to be originated from the Castilla-La Mancha region in Spain. Listán Prieto has disappeared from Spain mainland, but there are still 29 ha planted on the Canary Islands in 2008.",
+        "url": "https://en.wikipedia.org/wiki/Listan_Prieto"
+      },
+      "es": {
+        "text": "La listán prieto (que no debe confundirse con la listán negro) es una variedad de uva tinta que se cree originaria de Castilla-La Mancha, en España. Ha desaparecido de la España peninsular, pero en 2008 aún quedaban 29 hectáreas plantadas en las islas Canarias.",
+        "translated": true,
         "url": "https://en.wikipedia.org/wiki/Listan_Prieto"
       }
     },
@@ -6447,7 +6822,7 @@
   {
     "acidity": null,
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": null,
     "evidence": [
       {
@@ -6599,6 +6974,12 @@
         "field": "regions",
         "quote": "At the turn of the 21st century, Alicante Bouschet was the 12th most planted red wine grape in France with sizable plantings in the Languedoc, Provence and Cognac regions ... Widely planted across the Alentejo wine region today ... In Chile the grape is blended ... California ... Napa, Sonoma, Madera, and Calaveras counties. Other areas with notable ... Algeria, Palestine and parts of central and southern Italy. In Spain ... it is the fifth most planted red grape ...",
         "value": "PS: Palestine"
+      },
+      {
+        "field": "body",
+        "quote": "El vi té molt de cos i un color cirera fosc intens.",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Garnatxa_tintera"
       },
       {
         "field": "regions",
@@ -7929,6 +8310,11 @@
       "en": {
         "text": "Chinuri (Georgian: ჩინური) is a white wine grape variety of  high acidity. It is associated with Georgian wine, and is grown in Kartli, reaching full maturity by late October. Chinuri is commonly used for both still and sparkling wines by blending with Goruli Mtsvane and Aligote. It exhibits good resistance to fungal diseases and phylloxera.",
         "url": "https://en.wikipedia.org/wiki/Chinuri"
+      },
+      "es": {
+        "text": "La chinuri (en georgiano, ჩინური) es una variedad de uva blanca de vinificación de acidez alta. Se asocia al vino georgiano y se cultiva en Kartli, donde alcanza la plena madurez a finales de octubre. Se usa a menudo para vinos tranquilos y espumosos, en mezcla con goruli mtsvane y aligoté. Resiste bien las enfermedades fúngicas y la filoxera.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Chinuri"
       }
     },
     "synonyms": [],
@@ -7938,44 +8324,52 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "spice",
+      "fruity"
+    ],
     "body": null,
-    "color": "red",
+    "color": null,
     "evidence": [
       {
-        "field": "color",
-        "quote": "Оджалеши — красноягодный сорт винограда, распространённый в Лечхуми (Грузия).",
-        "value": "red"
+        "field": "aromas",
+        "quote": "Le vin rouge du même nom a une couleur intense et un arôme épicé bien prononcé. Il est assez fruité et il s'améliore avec un vieillissement.",
+        "value": "spice"
       },
       {
-        "field": "origin",
-        "quote": "Оджалеши — красноягодный сорт винограда, распространённый в Лечхуми (Грузия).",
-        "value": "GE"
-      },
-      {
-        "field": "styles",
-        "quote": "Из оджалеши производятся природно-полусладкие вина и сухие вина. При применении соответствующей технологии можно получить высококачественные десертные вина типа портвейн и кагор.",
-        "value": "sweet"
+        "field": "aromas",
+        "quote": "Le vin rouge du même nom a une couleur intense et un arôme épicé bien prononcé. Il est assez fruité et il s'améliore avec un vieillissement.",
+        "value": "fruity"
       },
       {
         "field": "styles",
         "quote": "Из оджалеши производятся природно-полусладкие вина и сухие вина. При применении соответствующей технологии можно получить высококачественные десертные вина типа портвейн и кагор.",
-        "value": "still"
+        "value": "sweet",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
       },
       {
         "field": "styles",
         "quote": "Из оджалеши производятся природно-полусладкие вина и сухие вина. При применении соответствующей технологии можно получить высококачественные десертные вина типа портвейн и кагор.",
-        "value": "fortified"
+        "value": "still",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
+      },
+      {
+        "field": "styles",
+        "quote": "Из оджалеши производятся природно-полусладкие вина и сухие вина. При применении соответствующей технологии можно получить высококачественные десертные вина типа портвейн и кагор.",
+        "value": "fortified",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
       },
       {
         "field": "regions",
         "quote": "распространённый в Лечхуми (Грузия) ... Вина высокого качества из этого сорта винограда вырабатываются в нагорной полосе Мегрелии",
-        "value": "GE: Lechkhumi"
+        "value": "GE: Lechkhumi",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
       },
       {
         "field": "regions",
         "quote": "распространённый в Лечхуми (Грузия) ... Вина высокого качества из этого сорта винограда вырабатываются в нагорной полосе Мегрелии",
-        "value": "GE: Samegrelo"
+        "value": "GE: Samegrelo",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
       }
     ],
     "id": "ojaleshi",
@@ -7988,7 +8382,7 @@
       "it": "Ojaleshi",
       "pt": "Ojaleshi"
     },
-    "origin": "GE",
+    "origin": null,
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -8055,7 +8449,7 @@
     ],
     "tannin": null,
     "wikidataId": "Q4331498",
-    "wikipediaUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Odjaleschi"
   },
   {
     "acidity": null,
@@ -8173,6 +8567,11 @@
     "summaries": {
       "en": {
         "text": "Mujuretuli (Georgian: მუჯურეთული) is a red wine grape grown in Georgia. It is also known as Mudzhuretuli, Mudshuretuli and Keduretuli.",
+        "url": "https://en.wikipedia.org/wiki/Mujuretuli"
+      },
+      "es": {
+        "text": "La mujuretuli (en georgiano, მუჯურეთული) es una uva tinta de vinificación cultivada en Georgia. También se conoce como mudzhuretuli, mudshuretuli y keduretuli.",
+        "translated": true,
         "url": "https://en.wikipedia.org/wiki/Mujuretuli"
       }
     },
@@ -8315,6 +8714,11 @@
       "en": {
         "text": "Khikhvi (/kʰɪˈxvi/;  Georgian ხიხვი ) is a grape variety that is grown in Eastern Georgia, specifically in the region of Kakheti.",
         "url": "https://en.wikipedia.org/wiki/Khikhvi"
+      },
+      "es": {
+        "text": "La khikhvi (en georgiano, ხიხვი) es una variedad de uva que se cultiva en el este de Georgia, concretamente en la región de Kajetia.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Khikhvi"
       }
     },
     "synonyms": [],
@@ -8450,6 +8854,11 @@
     "summaries": {
       "en": {
         "text": "Tavkveri (Georgian: თავკვერი) is a red grape varietal native to Georgia that used as a table grape and to make a variety of wines. Tavkveri is indigenous to the Kartli region, but it is also widely cultivated in Kakheti, as well as in Azerbaijan.",
+        "url": "https://en.wikipedia.org/wiki/Tavkveri"
+      },
+      "es": {
+        "text": "La tavkveri (en georgiano, თავკვერი) es una variedad de uva tinta originaria de Georgia que se usa como uva de mesa y para elaborar diversos vinos. Es autóctona de la región de Kartli, pero también se cultiva mucho en Kajetia y en Azerbaiyán.",
+        "translated": true,
         "url": "https://en.wikipedia.org/wiki/Tavkveri"
       }
     },
@@ -18522,7 +18931,10 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "fruity",
+      "mineral"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -18600,6 +19012,18 @@
         "field": "regions",
         "quote": "widely grown in Switzerland ... it is mostly grown in the Loire region ... almost exclusively grown in the wine region of Baden",
         "value": "DE: Baden"
+      },
+      {
+        "field": "aromas",
+        "quote": "El Chasselas és majoritàriament vinificat per a esdevenir un vi blanc ple, sec i afruitat.",
+        "value": "fruity",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Chasselas_(vi)"
+      },
+      {
+        "field": "aromas",
+        "quote": "Der Wein ist ein leichter, süffiger, frischer, fruchtbetonter und anregender Weißwein von blassgelber Farbe ... mit gelegentlich beeindruckender Mineralität und einer schönen Balance von Frucht und Struktur",
+        "value": "mineral",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Gutedel"
       },
       {
         "field": "pairings",
@@ -19864,6 +20288,11 @@
       "de": {
         "text": "Vranac (serbisch-kyrillisch Вранац oder Вранец in der Mazedonischen Sprache) ist eine autochthone Rotweinsorte aus Montenegro, Serbien, Nordmazedonien und im südlichen Teil Kroatiens. Aufgrund der großen Anzahl verschiedener Klone darf angenommen werden, dass die Sorte seit dem Mittelalter angebaut wird.",
         "url": "https://de.wikipedia.org/wiki/Vranac"
+      },
+      "es": {
+        "text": "La vranac (en cirílico serbio, Вранац; en macedonio, Вранец, vranec) es una variedad de uva tinta originaria de Montenegro. Es la más plantada en Montenegro y se cree que está muy emparentada con la kratosija. Se considera la variedad más importante de Montenegro y una de las más importantes de Macedonia del Norte.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vranac"
       }
     },
     "synonyms": [
@@ -20915,6 +21344,11 @@
       "nl": {
         "text": "Mavrud (Bulgaars: мавруд, van het Griekse μαύρος, mavros, 'zwart') is een rode Bulgaarse wijn van het gelijknamige druivenras die geproduceerd wordt in de regio Thracië.",
         "url": "https://nl.wikipedia.org/wiki/Mavrud"
+      },
+      "es": {
+        "text": "La mavrud (en búlgaro, мавруд, del griego μαυρό, mavró, «negro») es una uva tinta autóctona de la región de los Balcanes que se usa tanto en mezclas como para vinos varietales. Se cultiva en la región de Tracia, en Bulgaria, en algunas regiones de Albania y en algunas de Grecia y Rumanía.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mavrud"
       }
     },
     "synonyms": [
@@ -22592,6 +23026,11 @@
       "nl": {
         "text": "De Hárslevelű is een witte Hongaarse druivensoort, dat zowel droge als zoete wijn voortbrengt.",
         "url": "https://nl.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
+      },
+      "es": {
+        "text": "La hárslevelű (en húngaro), llamada también lipovina (en eslovaco), frunză de tei (en rumano), Lindenblättriger (en alemán) y feuille de tilleul (en francés), es una variedad de uva de la rama póntica balcánica de Vitis vinifera.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
       }
     },
     "synonyms": [
@@ -24195,9 +24634,11 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Torront%C3%A9s"
   },
   {
-    "acidity": null,
-    "aromas": [],
-    "body": null,
+    "acidity": "high",
+    "aromas": [
+      "vegetal"
+    ],
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -24299,6 +24740,24 @@
         "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
         "value": "ES: Tarragona",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "body",
+        "quote": "Die Weine zeigen viel Körper und eine gute Säurestruktur, aber auch rustikalen Charakter.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Rebsorte ist frühreifend und hat ein vorwiegend vegetales, dem Weißkohl ähnliches Aroma.",
+        "value": "vegetal",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "acidity",
+        "quote": "Le vin de xarello est coloré, jaune or, puissant, riche en alcool et en acidité.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     ],
     "id": "xarel-lo",
@@ -24745,8 +25204,10 @@
   },
   {
     "acidity": null,
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "fruity"
+    ],
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -24860,10 +25321,22 @@
         "value": "IT: Sardegna"
       },
       {
+        "field": "body",
+        "quote": "In der Regel bringt die spät reifende, ertragsarme Sorte ungemein farbintensive, körperreiche und samtige Rotweine mit einem leichten Bitterton.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Canaiolo_nero"
+      },
+      {
+        "field": "aromas",
+        "quote": "la receta del vino de Chianti de Bettino Ricasoli dio a la caniolo un papel de apoyo de la sangiovese, añadiendo frutalidad y suavizando los taninos sin menoscabar los aromas del vino.",
+        "value": "fruity",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Canaiolo"
+      },
+      {
         "field": "styles",
-        "quote": "il canaiolo viene utilizzato, quasi esclusivamente in assemblaggio",
+        "quote": "El enólogo Hugh Johnson descubrió que la relación entre la sangiovese y la canaiolo tiene cierto paralelismo con cómo la cabernet sauvignon es suavizada por la frutalidad de la merlot en la mezcla tradicional de Burdeos.",
         "value": "blending",
-        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
+        "sourceUrl": "https://es.wikipedia.org/wiki/Canaiolo"
       },
       {
         "field": "regions",
@@ -25305,8 +25778,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Feteasc%C4%83_regal%C4%83"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "high",
+    "aromas": [
+      "cherry"
+    ],
     "body": null,
     "color": null,
     "evidence": [
@@ -25339,6 +25814,18 @@
         "field": "regions",
         "quote": "Almost all of the total global growing area of 2,481 hectares (6,130 acres) is in the Veneto region of northern Italy, and the grapes are used in wines from the Valpolicella and Bardolino wine regions.",
         "value": "IT: Bardolino"
+      },
+      {
+        "field": "acidity",
+        "quote": "Sie erbringt farbkräftige und säurebetonte Rotweine mit Kirscharoma.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rondinella"
+      },
+      {
+        "field": "aromas",
+        "quote": "Sie erbringt farbkräftige und säurebetonte Rotweine mit Kirscharoma.",
+        "value": "cherry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rondinella"
       },
       {
         "field": "styles",
@@ -25719,8 +26206,15 @@
   },
   {
     "acidity": null,
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "nutty",
+      "vanilla",
+      "honey",
+      "smoky",
+      "citrus",
+      "tropical fruit"
+    ],
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -25837,6 +26331,48 @@
         "field": "regions",
         "quote": "Savagnin blanc is mostly grown in the Jura ... Durbach is home to some plantings of Red Traminer in Germany ... Visperterminen in the Valais is home to some of the highest vineyards in Europe ...",
         "value": "CH: Valais"
+      },
+      {
+        "field": "aromas",
+        "quote": "geschmacklich erinnert er an Nuss, Vanille und Honig und hat bisweilen auch leicht rauchige Anklänge.",
+        "value": "nutty",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Savagnin"
+      },
+      {
+        "field": "aromas",
+        "quote": "geschmacklich erinnert er an Nuss, Vanille und Honig und hat bisweilen auch leicht rauchige Anklänge.",
+        "value": "vanilla",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Savagnin"
+      },
+      {
+        "field": "aromas",
+        "quote": "geschmacklich erinnert er an Nuss, Vanille und Honig und hat bisweilen auch leicht rauchige Anklänge.",
+        "value": "honey",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Savagnin"
+      },
+      {
+        "field": "aromas",
+        "quote": "geschmacklich erinnert er an Nuss, Vanille und Honig und hat bisweilen auch leicht rauchige Anklänge.",
+        "value": "smoky",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Savagnin"
+      },
+      {
+        "field": "body",
+        "quote": "dà luogo a un vino con una grande struttura, note di agrumi e frutti esotici, dotato di un buon potenziale di invecchiamento.",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Savagnin_blanc"
+      },
+      {
+        "field": "aromas",
+        "quote": "dà luogo a un vino con una grande struttura, note di agrumi e frutti esotici, dotato di un buon potenziale di invecchiamento.",
+        "value": "citrus",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Savagnin_blanc"
+      },
+      {
+        "field": "aromas",
+        "quote": "dà luogo a un vino con una grande struttura, note di agrumi e frutti esotici, dotato di un buon potenziale di invecchiamento.",
+        "value": "tropical fruit",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Savagnin_blanc"
       }
     ],
     "id": "savagnin",
@@ -26391,6 +26927,11 @@
       "de": {
         "text": "Žilavka ist eine autochthone Weißweinsorte aus Bosnien-Herzegowina aus der Region Herzegowina, wo sie etwa die Hälfte der Gesamtanbaufläche von derzeit noch ca. 3.500 Hektar ausmacht.",
         "url": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      "es": {
+        "text": "La žilavka es una variedad de uva blanca plantada sobre todo en la región de Mostar, en Herzegovina, al sur de Bosnia y Herzegovina. Como vino varietal, la žilavka es conocida por su frescura viva y su acidez.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/%C5%BDilavka"
       }
     },
     "synonyms": [
@@ -27565,6 +28106,11 @@
       "nl": {
         "text": "Montepulciano is een Italiaanse rode druivensoort die vooral bekend staat als de belangrijkste druif achter de DOCG-wijnen Colline Teramane Montepulciano d'Abruzzo en Offida Rosso, en de DOC-wijnen Montepulciano d'Abruzzo, Rosso Conero en Rosso Piceno Superiore.",
         "url": "https://nl.wikipedia.org/wiki/Montepulciano_(druivenras)"
+      },
+      "es": {
+        "text": "La montepulciano es una variedad de uva tinta italiana. Es la uva principal de los vinos DOCG Colline Teramane Montepulciano d'Abruzzo, Conero y Offida Rosso, y de los DOC Montepulciano d'Abruzzo, Rosso Conero y Rosso Piceno Superiore.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Montepulciano_(grape)"
       }
     },
     "synonyms": [
@@ -28929,7 +29475,11 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "spice",
+      "rose",
+      "citrus"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -29084,6 +29634,12 @@
         "value": "ES: Castilla-La Mancha"
       },
       {
+        "field": "aromas",
+        "quote": "Aus dem Gelben Muskateller können Weißweine mit würzigen Aromen und dem typischen intensiven Muskatton vinifiziert werden.",
+        "value": "spice",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Gelber_Muskateller"
+      },
+      {
         "field": "regions",
         "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
         "value": "FR: Beaumes-de-Venise",
@@ -29118,6 +29674,18 @@
         "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
         "value": "FR: Alsace",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
+      },
+      {
+        "field": "aromas",
+        "quote": "мускат считался подходящим главным образом для выпуска марочных десертных вин высокой сладости с сильным приятным ароматом чайной розы и цитрона",
+        "value": "rose",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D1%81%D0%BA%D0%B0%D1%82_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9"
+      },
+      {
+        "field": "aromas",
+        "quote": "мускат считался подходящим главным образом для выпуска марочных десертных вин высокой сладости с сильным приятным ароматом чайной розы и цитрона",
+        "value": "citrus",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D1%81%D0%BA%D0%B0%D1%82_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9"
       }
     ],
     "id": "muscat-blanc-a-petits-grains",
@@ -30137,8 +30705,17 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mavrodafni"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "high",
+    "aromas": [
+      "spice",
+      "fruity",
+      "floral",
+      "apple",
+      "pear",
+      "sage",
+      "thyme",
+      "mint"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -30268,6 +30845,12 @@
         "value": "IT: Lazio"
       },
       {
+        "field": "aromas",
+        "quote": "las notas a especias son una característica del vino espumoso de esta variedad de uva",
+        "value": "spice",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Pecorino_(uva)"
+      },
+      {
         "field": "pairings",
         "quote": "Il pecorino, per le sue acidità e sapidità, può essere ben abbinato all’oliva all’ascolana o a una tempura di verdure ... Per sapidità e struttura, è ottimo con tutti i piatti di pesce",
         "value": "fish",
@@ -30296,6 +30879,54 @@
         "quote": "diffuso nelle Marche, in Abruzzo e, in misura minore, in Lazio e Umbria ... concorre alla formazione del vino DOCG Offida",
         "value": "IT: Offida",
         "sourceUrl": "https://it.wikipedia.org/wiki/Pecorino_(vitigno)"
+      },
+      {
+        "field": "acidity",
+        "quote": "Вина получаются освежающие, с высокой кислотностью и высоким алкоголем.",
+        "value": "high",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате фруктовые и цветочные тона, яблоки, груши, ноты шалфея, тимьяна, мяты.",
+        "value": "fruity",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате фруктовые и цветочные тона, яблоки, груши, ноты шалфея, тимьяна, мяты.",
+        "value": "floral",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате фруктовые и цветочные тона, яблоки, груши, ноты шалфея, тимьяна, мяты.",
+        "value": "apple",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате фруктовые и цветочные тона, яблоки, груши, ноты шалфея, тимьяна, мяты.",
+        "value": "pear",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате фруктовые и цветочные тона, яблоки, груши, ноты шалфея, тимьяна, мяты.",
+        "value": "sage",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате фруктовые и цветочные тона, яблоки, груши, ноты шалфея, тимьяна, мяты.",
+        "value": "thyme",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате фруктовые и цветочные тона, яблоки, груши, ноты шалфея, тимьяна, мяты.",
+        "value": "mint",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     ],
     "id": "pecorino",
@@ -30527,6 +31158,11 @@
       "de": {
         "text": "Blatina ist eine autochthone Rotweinsorte aus Bosnien-Herzegowina aus der Region der Herzegowina, wo sie etwa ein Drittel der gesamten Weinanbaufläche ausmacht.",
         "url": "https://de.wikipedia.org/wiki/Blatina"
+      },
+      "es": {
+        "text": "La blatina (en cirílico, Блатина) es una variedad de uva tinta cultivada sobre todo en la región de Herzegovina, en Bosnia y Herzegovina. Tiene flor funcionalmente femenina (autoestéril), por lo que siempre se cultiva junto a otras variedades, como la alicante bouschet (kambuša), la merlot y la trnjak, que a la vez polinizan la blatina.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Blatina"
       }
     },
     "synonyms": [
@@ -30540,8 +31176,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Blatina"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "high",
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -30574,6 +31212,18 @@
         "field": "regions",
         "quote": "especially on the island of Madeira.",
         "value": "PT: Madeira"
+      },
+      {
+        "field": "acidity",
+        "quote": "Die Weißweine sind strohgelb und trocken und besitzen eine markante Säure.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Sercial"
+      },
+      {
+        "field": "aromas",
+        "quote": "Durch die Lagerung bekommen sie ein fruchtiges Bukett.",
+        "value": "fruity",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Sercial"
       },
       {
         "field": "styles",
@@ -31211,6 +31861,11 @@
       "nl": {
         "text": "De Pošip druif is een van de oudste druivensoorten van Zuid-Europa. Het is een autochtoon witte druivenras en komt oorspronkelijk van het Kroatische eiland Korčula. In de loop der eeuwen is de druif verspreid naar andere nabijgelegen eilanden in Dalmatië zoals Vis en Hvar. Daarnaast wordt de Pošip langs de kust van Dalmatië verbouwd, onder andere op het  schiereiland Pelješac.",
         "url": "https://nl.wikipedia.org/wiki/Po%C5%A1ip"
+      },
+      "es": {
+        "text": "La pošip es una uva blanca autóctona que se cultiva sobre todo en la región croata de Dalmacia, en la isla de Korčula, aunque también hay pequeñas plantaciones en la península de Pelješac. Aunque se encuentra en muchas zonas de Korčula, las principales y más productivas están en los municipios de Čara y Smokvica y sus alrededores.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Po%C5%A1ip"
       }
     },
     "synonyms": [],
@@ -31392,6 +32047,11 @@
       "it": {
         "text": "Il Marselan è un vitigno a bacca nera francese, incrocio tra il Cabernet-sauvignon ed il Grenache. È stato coltivato per la prima volta nel 1961 da Paul Truel vicino alla città francese di Marseillan, da cui il nome.",
         "url": "https://it.wikipedia.org/wiki/Marselan"
+      },
+      "es": {
+        "text": "La marselan es una variedad de uva tinta francesa, cruce de cabernet sauvignon y garnacha. Fue obtenida en 1961 por Paul Truel cerca de la localidad francesa de Marseillan. Se cultiva sobre todo en el Languedoc, con algunas plantaciones en la costa norte de California, y se ha hecho también muy popular en China. Suele dar un vino tinto de cuerpo medio.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Marselan"
       }
     },
     "synonyms": [],
@@ -31401,7 +32061,13 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "fruity",
+      "cherry",
+      "spice",
+      "floral",
+      "raspberry"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -31462,6 +32128,36 @@
         "quote": "wie man sie in den Hanglagen des Douro findet ... Empfohlen wird sie neben dem Einsatz im Portwein auch für die Region Trás-os-Montes ... In Südafrika ist sie mit 491 Hektar bestockter Fläche ebenfalls verbreitet",
         "value": "ZA: Südafrika",
         "sourceUrl": "https://de.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il donne un vin fruité, d'une couleur rouge rubis, possédant des arômes de cerise, épices, fleurs, et framboise.",
+        "value": "fruity",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il donne un vin fruité, d'une couleur rouge rubis, possédant des arômes de cerise, épices, fleurs, et framboise.",
+        "value": "cherry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il donne un vin fruité, d'une couleur rouge rubis, possédant des arômes de cerise, épices, fleurs, et framboise.",
+        "value": "spice",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il donne un vin fruité, d'une couleur rouge rubis, possédant des arômes de cerise, épices, fleurs, et framboise.",
+        "value": "floral",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il donne un vin fruité, d'une couleur rouge rubis, possédant des arômes de cerise, épices, fleurs, et framboise.",
+        "value": "raspberry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_Barroca"
       }
     ],
     "id": "tinta-barroca",
@@ -31543,7 +32239,10 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "floral",
+      "citrus"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -31623,6 +32322,12 @@
         "value": "US: California"
       },
       {
+        "field": "tannin",
+        "quote": "Sie verfügen überdies über einen leichten Gerbstoffgehalt.",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Grillo_(Rebsorte)"
+      },
+      {
         "field": "regions",
         "quote": "presente soprattutto in Sicilia occidentale ed in particolare nella zona di Marsala. È utilizzato in purezza per la produzione di alcuni DOC della provincia di Trapani.",
         "value": "IT: Marsala",
@@ -31633,6 +32338,18 @@
         "quote": "presente soprattutto in Sicilia occidentale ed in particolare nella zona di Marsala. È utilizzato in purezza per la produzione di alcuni DOC della provincia di Trapani.",
         "value": "IT: Trapani",
         "sourceUrl": "https://it.wikipedia.org/wiki/Grillo_(vitigno)"
+      },
+      {
+        "field": "aromas",
+        "quote": "Вина Грилло отличаются тельностью, обладают привлекательным цветочно-цитрусовым ароматом.",
+        "value": "floral",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%BB%D0%BB%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "aromas",
+        "quote": "Вина Грилло отличаются тельностью, обладают привлекательным цветочно-цитрусовым ароматом.",
+        "value": "citrus",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%BB%D0%BB%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     ],
     "id": "grillo",
@@ -31716,6 +32433,11 @@
       "nl": {
         "text": "De Grillo is een witte druivensoort en komt voor in Sicilië. In 1897 was de druivensoort al aangeplant in de provincie Trapani. Deze druivensoort wordt veelal samen met de Catarratto Bianco gebruikt om er marsalawijn van te maken. Grillo is ook wel bekend onder de naam Riddu en kan tegen zeer hoge temperaturen. De schil is dik en voorkomt daardoor dat het vocht in de druif kan verdampen.",
         "url": "https://nl.wikipedia.org/wiki/Grillo"
+      },
+      "es": {
+        "text": "La grillo, conocida también como riddu y rossese bianco, es una variedad de uva blanca italiana que resiste las altas temperaturas y se usa mucho en la vinificación siciliana, en particular para el marsala. Su origen es incierto, pero pudo llegar a Sicilia desde Apulia.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Grillo"
       }
     },
     "synonyms": [
@@ -31732,7 +32454,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1546796",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Grillo"
   },
@@ -32113,6 +32835,11 @@
       "it": {
         "text": "Il Frappato è un vitigno a bacca nera presente in tutta la Sicilia ma essenzialmente nell’areale del Cerasuolo di Vittoria.",
         "url": "https://it.wikipedia.org/wiki/Frappato"
+      },
+      "es": {
+        "text": "La frappato di Vittoria o frappato es una variedad de uva tinta italiana plantada sobre todo en Sicilia. Como varietal, da vinos ligeros de cuerpo con un marcado aroma a uva. Se ve sobre todo como componente del único vino DOCG de Sicilia, el Cerasuolo di Vittoria, que lleva entre un 30 y un 50 % de frappato y entre un 50 y un 70 % de nero d'Avola.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Frappato"
       }
     },
     "synonyms": [
@@ -32244,6 +32971,11 @@
       "it": {
         "text": "Il Molinara è un vitigno a bacca nera autoctono del territorio di Verona impiegato in modo complementare ma, dal 2003, non obbligatorio nell'uvaggio dei vini prodotti nella zona della Valpolicella tra i quali il più famoso Amarone della Valpolicella.",
         "url": "https://it.wikipedia.org/wiki/Molinara_(vitigno)"
+      },
+      "es": {
+        "text": "La molinara es una uva tinta italiana que en 2010 ocupaba 595 hectáreas en Italia, casi todas en el Véneto. Aporta acidez a los vinos de Valpolicella y Bardolino, que se elaboran con mezclas de corvina, corvinone, molinara y rondinella.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Molinara_(grape)"
       }
     },
     "synonyms": [
@@ -32733,6 +33465,11 @@
       "it": {
         "text": "Il Marzemino è un vitigno autoctono italiano a bacca blu-nerastra con abbondante deposito di pruina.",
         "url": "https://it.wikipedia.org/wiki/Marzemino"
+      },
+      "es": {
+        "text": "La marzemino es una variedad de uva tinta italiana cultivada sobre todo en torno a Isera, al sur del Trentino. El vino es famoso sobre todo por su mención en la ópera Don Giovanni, con música de Wolfgang Amadeus Mozart («Versa il vino! Eccellente Marzimino!»). La cepa madura tarde y es sensible a muchas enfermedades de la vid, entre ellas el oídio.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Marzemino"
       }
     },
     "synonyms": [
@@ -33318,6 +34055,11 @@
       "pt": {
         "text": "A verdelho é uma variedade de uvas brancas, casta cultivada em todo o Portugal, vulgarmente associada à ilha da Madeira, mas que também dá o seu nome a um dos quatro principais tipos de vinho da Madeira. Ao final do século XX era uma das variedades mais cultivadas na Madeira e nos Açores.",
         "url": "https://pt.wikipedia.org/wiki/Verdelho"
+      },
+      "es": {
+        "text": "La verdelho es una uva blanca cultivada en todo Portugal, aunque se asocia sobre todo a la isla de Madeira, y da nombre a uno de los cuatro tipos principales de vino de Madeira. A principios del siglo XX era la uva blanca más plantada de Madeira.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Verdelho"
       }
     },
     "synonyms": [
@@ -33817,6 +34559,11 @@
       "pt": {
         "text": "Aramon ou Aramon noir é uma variedade de uva para vinho cultivada principalmente na região vinícola de Languedoc-Roussillon, no sul da França. Entre o final do século XIX e a década de 1960, foi a variedade mais plantada na França, mas desde meados do século XX suas plantações vêm diminuindo continuamente.",
         "url": "https://pt.wikipedia.org/wiki/Aramon_(uva)"
+      },
+      "es": {
+        "text": "La aramon o aramon noir es una variedad de uva tinta cultivada sobre todo en el Languedoc-Rosellón, en el sur de Francia. Entre finales del siglo XIX y la década de 1960 fue la variedad más cultivada de Francia, pero sus plantaciones no han dejado de disminuir desde mediados del siglo XX.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Aramon_(grape)"
       }
     },
     "synonyms": [
@@ -34026,6 +34773,12 @@
         "field": "regions",
         "quote": "In the United States, Black Muscat is grown in wine appellations in California, Virginia, Oregon, Texas, and Washington. In Canada, it is also found on Vancouver Island. In France, the grape is used chiefly as dessert grape including AOC varieties such as Muscat du Ventoux ... table wine component in China.",
         "value": "CN: China"
+      },
+      {
+        "field": "tannin",
+        "quote": "Il vino che ne viene tratto è ricco di tannini, senza retrogusto amaro, dal colore rosso rubino carico.",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Moscato_d'Amburgo"
       }
     ],
     "id": "black-muscat",
@@ -34216,7 +34969,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q737081",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Black_Muscat"
   },
@@ -34436,7 +35189,9 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -34504,6 +35259,12 @@
         "field": "regions",
         "quote": "planted primarily in the Emilia-Romagna region.",
         "value": "IT: Emilia-Romagna"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il produit des vins blancs très agréables et fruités.",
+        "value": "fruity",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Albana"
       }
     ],
     "id": "albana",
@@ -35133,6 +35894,11 @@
       "it": {
         "text": "L'Ansonica è un vitigno a bacca bianca italiano, conosciuto anche con i nomi di Inzolia (in siciliano), nzoglia (in calabro) o Insolia.",
         "url": "https://it.wikipedia.org/wiki/Ansonica"
+      },
+      "es": {
+        "text": "La ansonica o inzolia es una uva blanca italiana plantada sobre todo en el oeste de Sicilia, donde puede usarse para elaborar marsala. Destaca por su aroma a frutos secos. En la Toscana se la conoce como ansonica. Es el componente principal (y posiblemente único) de la DOC toscana Ansonica Costa dell'Argentario, situada en el extremo sur de la costa toscana y en la isla de Giglio.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ansonica"
       }
     },
     "synonyms": [
@@ -35305,6 +36071,11 @@
       "de": {
         "text": "Die Weißweinsorte Zolikouri (georgisch ცოლიკოური) stammt aus Georgien. Heute ist sie hauptsächlich in Georgien (dort vornehmlich in der Weinbauregion Imeretien) weit verbreitet und wird auch in der Ukraine und in Bulgarien angebaut.",
         "url": "https://de.wikipedia.org/wiki/Zolikouri"
+      },
+      "es": {
+        "text": "La tsolikouri (en georgiano, ცოლიკოური) es una variedad de uva blanca de piel amarillo claro cultivada sobre todo en el oeste de Imericia, en Georgia. Se cultiva en la llanura de la Cólquida, a 160 m sobre el nivel del mar.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tsolikouri"
       }
     },
     "synonyms": [
@@ -35626,6 +36397,11 @@
       "pt": {
         "text": "Grolleau ou Grolleau noir é uma casta de uva usada em vinho tinto francês cultivada principalmente no Vale do Loire, na França. O nome é derivado da palavra francesa grolle, que significa \"corvo\", e diz-se que reflete as bagas pretas profundas da videira Grolleau. A uva é mais comumente transformada em vinho rosé, principalmente na região de Anjou.",
         "url": "https://pt.wikipedia.org/wiki/Grolleau"
+      },
+      "es": {
+        "text": "La grolleau, o grolleau noir, es una variedad de uva tinta francesa cultivada sobre todo en el valle del Loira. El nombre procede de la palabra francesa grolle, «corneja», y se dice que alude a las bayas negras intensas de la cepa. Se elabora sobre todo en rosado, en particular en la región de Anjou.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Grolleau_(grape)"
       }
     },
     "synonyms": [
@@ -36022,6 +36798,11 @@
       "nl": {
         "text": "De Frühburgunder is een blauwe druif die voornamelijk verbouwd wordt in Duitse wijnstreken. Het is een mutatie van de Pinot Noir, in het Duits ook wel spätburgunder genoemd. De naam 'Frühburgunder' kan begrepen worden als 'vroege Spätburgunder', omdat de druif doorgaans 14 dagen vroeger rijp is dan de Spätburgunder.",
         "url": "https://nl.wikipedia.org/wiki/Fr%C3%BChburgunder"
+      },
+      "es": {
+        "text": "La pinot noir précoce, o Frühburgunder como se la llama en partes de Alemania, es una variedad de uva de vinificación de piel oscura, negro azulada, forma o mutación de la pinot noir que se distingue sobre todo por madurar antes de lo normal (de ahí el calificativo «précoce»). Aunque algunos ampelógrafos la tratan como variedad aparte, otros la consideran una simple forma temprana de la pinot noir, y algunos de sus vinos se etiquetan sin más como «Pinot noir».",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pinot_Noir_Pr%C3%A9coce"
       }
     },
     "synonyms": [
@@ -36187,6 +36968,11 @@
       "nl": {
         "text": "De Elbling (van het Latijnse albus = wit) is een witte druif. Het is de oudste wijndruif in Europa en al door de Romeinen gekweekt in het Moezelgebied. Tot in de middeleeuwen was zij de meest voorkomende druif in Duitsland. Vanaf de 17de eeuw werd zij steeds meer verdrongen door de Riesling en de Sylvaner.",
         "url": "https://nl.wikipedia.org/wiki/Elbling"
+      },
+      "es": {
+        "text": "La elbling es una variedad de uva blanca (Vitis vinifera) que hoy se cultiva sobre todo en el curso alto del Mosela, en Alemania, y en Luxemburgo, donde el río se llama Moselle.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Elbling"
       }
     },
     "synonyms": [
@@ -36424,6 +37210,11 @@
       "it": {
         "text": "Il Ribolla gialla è un vitigno a bacca bianca autoctono del Friuli-Venezia Giulia, della Slovenia e di Cefalonia, nelle isole Ionie.",
         "url": "https://it.wikipedia.org/wiki/Ribolla_gialla"
+      },
+      "es": {
+        "text": "La ribolla gialla (también llamada ribolla; en esloveno, rumena rebula; en croata, jarbola) es una uva blanca célebre sobre todo en la región de Friuli-Venecia Julia, en el nordeste de Italia, aunque la mayor parte se cultiva en Eslovenia, donde se conoce como rebula. En Friuli-Venecia Julia prospera en torno a Corno di Rosazzo y Gorizia.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
       }
     },
     "synonyms": [
@@ -36773,6 +37564,11 @@
       "nl": {
         "text": "Irsai Olivér is een wit Hongaars druivenras. De druif is een kruising van de witte druiven Pozsonyi Fehér en de Csaba Gyöngye. De oorspronkelijk als tafeldruif geteelde druif wordt ook veel voor het maken van een kruidig-geurige witte wijn en voor de bereiding van sterke drank, zoals pálinka gebruikt.",
         "url": "https://nl.wikipedia.org/wiki/Irsai_Oliv%C3%A9r"
+      },
+      "es": {
+        "text": "La irsai olivér es una variedad húngara de uva blanca, cruce de pozsonyi y perla de Csaba obtenido en 1930. Madura pronto y tiene un marcado carácter moscatel.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Irsai_Oliv%C3%A9r"
       }
     },
     "synonyms": [
@@ -37263,6 +38059,11 @@
       "it": {
         "text": "Il Tocai friulano è un vitigno a bacca bianca, largamente coltivato in Friuli-Venezia Giulia e in Slovenia nella Goriška Brda ZGP, Kras ZGP e Vipavska dolina ZGP. Fino al 2007 è stato denominato Tocai, nome con cui ancora è conosciuto in buona parte del Friuli-Venezia Giulia.",
         "url": "https://it.wikipedia.org/wiki/Tocai_friulano_(vitigno)"
+      },
+      "es": {
+        "text": "La sauvignonasse (conocida también como friulano, tocai friulano o sauvignon vert) es una uva blanca de la especie Vitis vinifera extendida en la región italiana de Friuli y en los territorios vecinos de Eslovenia. Está muy plantada en Chile, donde durante mucho tiempo se confundió con la sauvignon blanc.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Sauvignonasse"
       }
     },
     "synonyms": [
@@ -37498,6 +38299,11 @@
       "nl": {
         "text": "De Aleatico is een van oorsprong blauwe Italiaanse druivensoort die meestal gebruikt wordt om zoete rode wijn te maken.",
         "url": "https://nl.wikipedia.org/wiki/Aleatico"
+      },
+      "es": {
+        "text": "La aleatico es una variedad de uva tinta italiana. Destaca por ser la uva principal del vino de culto Aleatico di Portoferraio, de la isla de Elba. En Chile se conoce como moscatel rosada. También se ha cultivado en Mudgee (Nueva Gales del Sur) y en California.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Aleatico"
       }
     },
     "synonyms": [
@@ -37523,7 +38329,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aleatico"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "aromas": [],
     "body": null,
     "color": "white",
@@ -37572,6 +38378,12 @@
         "field": "regions",
         "quote": "Gouais blanc has continued to be commercially grown at several vineyards in Switzerland ... in the Van Duzer Corridor AVA of Oregon's Willamette Valley ... Gouais has also been grown for over 100 years by Chambers Rosewood Winery in Rutherglen, Australia.",
         "value": "AU: Rutherglen"
+      },
+      {
+        "field": "acidity",
+        "quote": "Der Wein ist dünn, extraktarm und säurereich.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Heunisch_(Rebsorte)"
       }
     ],
     "id": "gouais-blanc",
@@ -37991,6 +38803,11 @@
       "nl": {
         "text": "De Athiri is een oude witte Griekse druivensoort.",
         "url": "https://nl.wikipedia.org/wiki/Athiri"
+      },
+      "es": {
+        "text": "La athiri (en griego, Αθήρι), o athiri aspro, es una uva blanca griega que se usa para elaborar retsina en la isla de Rodas.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Athiri"
       }
     },
     "synonyms": [
@@ -38183,6 +39000,11 @@
       "de": {
         "text": "Die Weißweinsorte Mzwane (georgisch მწვანე, dt.: Grüne) ist eine autochthone Sorte aus Georgien. Heute wird sie in vielen der Nachfolgestaaten der UdSSR kultiviert, besonders in Georgien und der Ukraine, dort insbesondere auf der Halbinsel Krim sowie in der Region um Odessa. Mzwane heißt in der georgischen Sprache grün und spielt damit auf das satte Grün der Trauben an.",
         "url": "https://de.wikipedia.org/wiki/Mzwane"
+      },
+      "es": {
+        "text": "La mtsvane (en georgiano, მწვანე) es una variedad de uva con la que se elaboran vinos georgianos; se usa para vino blanco. Su nombre alude al color verde amarillento de las bayas maduras. A menudo se mezcla con rkatsiteli para dar un vino afrutado y aromático. En georgiano, mtsvane significa nuevo, joven y verde.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mtsvane"
       }
     },
     "synonyms": [
@@ -38531,6 +39353,11 @@
       "nl": {
         "text": "Öküzgözü is een inheemse rode druivensoort uit Turkije. De druif stamt evenals de boğazkere uit de provincie Elazığ in het oosten van centraal Anatolië. De druif wordt ook in de provincies Gaziantep en Malatya verbouwd. De wijngaarden bevinden zich op een hoogte van 850 tot 1100 meter, op het Anatolisch plateau in het noordelijk gedeelte van het Taurusgebergte.",
         "url": "https://nl.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC"
+      },
+      "es": {
+        "text": "La öküzgözü es una variedad de uva autóctona turca que se usa en la elaboración del vino turco. Es una de las dos principales uvas de vinificación autóctonas de la provincia de Elazığ, en Anatolia oriental; la otra es la boğazkere. Se la considera una de las variedades tintas más importantes de Turquía por su amplio cultivo, su versatilidad de estilos y su reconocimiento internacional.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC"
       }
     },
     "synonyms": [
@@ -38726,6 +39553,11 @@
       "nl": {
         "text": "De Bourboulenc is een oude Franse druivensoort uit het zuidoosten van Frankrijk.",
         "url": "https://nl.wikipedia.org/wiki/Bourboulenc"
+      },
+      "es": {
+        "text": "La bourboulenc es una variedad de uva blanca cultivada sobre todo en el sur de Francia, en las regiones del Ródano meridional, la Provenza y el Languedoc.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Bourboulenc"
       }
     },
     "synonyms": [],
@@ -38852,6 +39684,11 @@
       "it": {
         "text": "Con il nome Raboso (maschile) si identificano due vitigni autoctoni a bacca nera dell'area  del Piave (Raboso friulano e Raboso Veronese).",
         "url": "https://it.wikipedia.org/wiki/Raboso"
+      },
+      "es": {
+        "text": "La raboso es una uva tinta cultivada sobre todo en el este del Véneto. También se llama raboso Piave, por el río cercano a la zona donde se cultiva. Da un vino de color intenso, con un tanino notablemente alto, un grado alcohólico medio y una acidez alta. El nombre raboxo significa «enfadado» en véneto, porque esa es la sensación que deja en la boca este vino cuando se bebe joven.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Raboso_(grape)"
       }
     },
     "synonyms": [
@@ -39397,6 +40234,11 @@
       "it": {
         "text": "Il Neuburger è un vitigno a bacca bianca austriaco originario della Wachau. Il Neuburger offre per lo più vini robusti e pieni oppure leggeri e con un sapore neutro. Le qualità giovani sono speziate e floreali. Più tardi si sviluppano sapori di nocciola. L'uva è quindi molto indicata per vini di qualità (Qualitätswein) e vini di qualità superiore (Prädikat).",
         "url": "https://it.wikipedia.org/wiki/Neuburger"
+      },
+      "es": {
+        "text": "La neuburger es una uva blanca austriaca, cruce de roter veltliner y silvaner. Como varietal suele dar vinos con mucho cuerpo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Neuburger"
       }
     },
     "synonyms": [
@@ -39422,8 +40264,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Neuburger"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "low",
+    "aromas": [
+      "cherry"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -39481,6 +40325,18 @@
         "field": "regions",
         "quote": "It is a minor component of traditional blends such as Chianti, but interest has revived in recent years. In Umbria it is made into a light quaffing wine, while in Tuscany it is made into a bigger, more structured style.",
         "value": "IT: Chianti"
+      },
+      {
+        "field": "acidity",
+        "quote": "Die Weine aus Ciliegiolo sind meist kräftig, verfügen über einen hohen Alkohol-, aber geringen Säuregehalt.",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Ciliegiolo"
+      },
+      {
+        "field": "aromas",
+        "quote": "Deve il suo nome al colore della bacca e ad uno degli aromi primari del vino rosso che se ne ricava, che richiama la ciliegia.",
+        "value": "cherry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Ciliegiolo"
       }
     ],
     "id": "ciliegiolo",
@@ -39535,6 +40391,11 @@
       "nl": {
         "text": "De Ciliegiolo is een oude inheemse Italiaanse druivensoort, die een van de ouders van de beroemde Sangiovese druif is.",
         "url": "https://nl.wikipedia.org/wiki/Ciliegiolo"
+      },
+      "es": {
+        "text": "La ciliegiolo es una variedad de uva tinta de Italia, cuyo nombre viene de la palabra italiana para «cereza». Es un componente menor de mezclas tradicionales como el Chianti, pero el interés por ella ha revivido en los últimos años. En Umbría se elabora como vino ligero y fácil de beber, mientras que en la Toscana se hace un estilo más potente y estructurado.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ciliegiolo"
       }
     },
     "synonyms": [
@@ -39666,12 +40527,190 @@
       "de": {
         "text": "Pamid ist eine Rotweinsorte. Die alte Varietät kommt aus dem bulgarisch-griechischen Grenzgebiet. Aufgrund des Alters besteht eine große Anzahl von regionalen Klonen. Trotz ähnlich lautender Synonyme ist sie mit der weißen Rebsorte Dimiat nicht verwandt. Aufgrund der rötlichen Farbe der Beeren sind die gekelterten Weine nicht sehr tieffarbig. Ihnen fehlt ein gutes Säuregerüst.",
         "url": "https://de.wikipedia.org/wiki/Pamid"
+      },
+      "es": {
+        "text": "La pamid es una antigua variedad de uva para vino tinto. Se cultiva en Bulgaria desde los tiempos de los antiguos tracios. En el pasado fue la variedad búlgara más extendida, pero hoy sus plantaciones son muy limitadas. También se cultiva en Macedonia del Norte, Serbia, Albania, Turquía, Grecia, Hungría y Rumanía.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pamid"
       }
     },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q1099124",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pamid"
+  },
+  {
+    "acidity": null,
+    "aromas": [],
+    "body": null,
+    "color": "red",
+    "evidence": [
+      {
+        "field": "color",
+        "quote": "Die rundlichen Beeren sind mittelgroß und von bläulich-schwarzer Farbe.",
+        "value": "red"
+      },
+      {
+        "field": "origin",
+        "quote": "Sie wird für perlenden Rot- und Roséwein (Frizzante oder Perlwein) in der italienischen Region Emilia-Romagna verwendet.",
+        "value": "IT"
+      },
+      {
+        "field": "tannin",
+        "quote": "Die einfachen Weine verfügen über eine intensive Rubin-Rotfärbung, sind extraktreich, tanninreich und geben dem Wein im Verschnitt die notwendige Säure.",
+        "value": "high"
+      },
+      {
+        "field": "synonyms",
+        "quote": "Die Rebsorte ist auch unter folgenden Synonymen bekannt: Grappello Ruberti, Grappello Ruperti, Groppello Ruberti, Groppello Ruperti, Lambrusco di Viadana, Lambrusco di Viade, Lambrusco di Viadenese, Lambrusco Mantovano, Mantovano, Montecchio.",
+        "value": "Lambrusco Mantovano"
+      },
+      {
+        "field": "synonyms",
+        "quote": "Die Rebsorte ist auch unter folgenden Synonymen bekannt: Grappello Ruberti, Grappello Ruperti, Groppello Ruberti, Groppello Ruperti, Lambrusco di Viadana, Lambrusco di Viade, Lambrusco di Viadenese, Lambrusco Mantovano, Mantovano, Montecchio.",
+        "value": "Lambrusco di Viadana"
+      },
+      {
+        "field": "synonyms",
+        "quote": "Die Rebsorte ist auch unter folgenden Synonymen bekannt: Grappello Ruberti, Grappello Ruperti, Groppello Ruberti, Groppello Ruperti, Lambrusco di Viadana, Lambrusco di Viade, Lambrusco di Viadenese, Lambrusco Mantovano, Mantovano, Montecchio.",
+        "value": "Grappello Ruberti"
+      },
+      {
+        "field": "styles",
+        "quote": "Sie wird für perlenden Rot- und Roséwein (Frizzante oder Perlwein) in der italienischen Region Emilia-Romagna verwendet ... geben dem Wein im Verschnitt die notwendige Säure.",
+        "value": "sparkling"
+      },
+      {
+        "field": "styles",
+        "quote": "Sie wird für perlenden Rot- und Roséwein (Frizzante oder Perlwein) in der italienischen Region Emilia-Romagna verwendet ... geben dem Wein im Verschnitt die notwendige Säure.",
+        "value": "rose"
+      },
+      {
+        "field": "styles",
+        "quote": "Sie wird für perlenden Rot- und Roséwein (Frizzante oder Perlwein) in der italienischen Region Emilia-Romagna verwendet ... geben dem Wein im Verschnitt die notwendige Säure.",
+        "value": "blending"
+      },
+      {
+        "field": "styles",
+        "quote": "Sie wird für perlenden Rot- und Roséwein (Frizzante oder Perlwein) in der italienischen Region Emilia-Romagna verwendet ... geben dem Wein im Verschnitt die notwendige Säure.",
+        "value": "still"
+      },
+      {
+        "field": "regions",
+        "quote": "Die Sorte ist in der Provinz Ferrara der Emilia-Romagna sowie den Provinzen Cremona und Mantua in der Lombardei zugelassen.",
+        "value": "IT: Emilia-Romagna"
+      },
+      {
+        "field": "regions",
+        "quote": "Die Sorte ist in der Provinz Ferrara der Emilia-Romagna sowie den Provinzen Cremona und Mantua in der Lombardei zugelassen.",
+        "value": "IT: Lombardy"
+      },
+      {
+        "field": "regions",
+        "quote": "Die Sorte ist in der Provinz Ferrara der Emilia-Romagna sowie den Provinzen Cremona und Mantua in der Lombardei zugelassen.",
+        "value": "IT: Mantua"
+      },
+      {
+        "field": "regions",
+        "quote": "Die Sorte ist in der Provinz Ferrara der Emilia-Romagna sowie den Provinzen Cremona und Mantua in der Lombardei zugelassen.",
+        "value": "IT: Cremona"
+      }
+    ],
+    "id": "lambrusco-viadanese",
+    "names": {
+      "en": "Lambrusco Viadanese",
+      "es": "Lambrusco Viadanese",
+      "ca": "Lambrusco Viadanese",
+      "fr": "Lambrusco Viadanese",
+      "de": "Lambrusco Viadanese",
+      "it": "Lambrusco Viadanese",
+      "pt": "Lambrusco Viadanese"
+    },
+    "origin": "IT",
+    "pairings": [],
+    "prominence": 1,
+    "regions": [
+      {
+        "country": "IT",
+        "name": "Emilia-Romagna"
+      },
+      {
+        "country": "IT",
+        "name": "Lombardy"
+      },
+      {
+        "country": "IT",
+        "name": "Mantua"
+      },
+      {
+        "country": "IT",
+        "name": "Cremona"
+      }
+    ],
+    "styles": [
+      "sparkling",
+      "rose",
+      "blending",
+      "still"
+    ],
+    "summaries": {
+      "de": {
+        "text": "Die Rotweinsorte Lambrusco Viadanese ist eine von über 60 Varietäten aus der Familie der Lambrusco. Sie wird für perlenden Rot- und Roséwein (Frizzante oder Perlwein) in der italienischen Region Emilia-Romagna verwendet.",
+        "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
+      },
+      "en": {
+        "text": "Lambrusco Viadanese is a red wine grape, one of more than 60 varieties in the Lambrusco family. It is used for sparkling red and rosé wine (frizzante) in the Italian region of Emilia-Romagna.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
+      },
+      "es": {
+        "text": "La lambrusco viadanese es una variedad de uva tinta, una de las más de 60 variedades de la familia de los lambruscos. Se usa para vinos tintos y rosados de aguja (frizzante) en la región italiana de Emilia-Romaña.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
+      },
+      "ca": {
+        "text": "La lambrusco viadanese és una varietat de raïm negre, una de les més de 60 varietats de la família dels lambruscos. S'utilitza per a vins negres i rosats d'agulla (frizzante) a la regió italiana d'Emília-Romanya.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
+      },
+      "fr": {
+        "text": "Le lambrusco viadanese est un cépage noir, l'une des plus de 60 variétés de la famille des lambruscos. Il sert à élaborer des vins rouges et rosés perlants (frizzante) dans la région italienne d'Émilie-Romagne.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
+      },
+      "it": {
+        "text": "Il lambrusco viadanese è un vitigno a bacca nera, una delle oltre 60 varietà della famiglia dei lambruschi. Si usa per vini rossi e rosati frizzanti nella regione italiana dell'Emilia-Romagna.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
+      },
+      "nl": {
+        "text": "Lambrusco viadanese is een blauwe druivensoort, een van de meer dan zestig rassen uit de lambruscofamilie. Ze wordt gebruikt voor parelende rode en rosé wijn (frizzante) in de Italiaanse regio Emilia-Romagna.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
+      },
+      "pt-PT": {
+        "text": "A lambrusco viadanese é uma casta tinta, uma das mais de 60 variedades da família dos lambruscos. Usa-se para vinhos tintos e rosados frisantes (frizzante) na região italiana da Emília-Romanha.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
+      }
+    },
+    "synonyms": [
+      {
+        "name": "Lambrusco Mantovano",
+        "source": "article"
+      },
+      {
+        "name": "Lambrusco di Viadana",
+        "source": "article"
+      },
+      {
+        "name": "Grappello Ruberti",
+        "source": "article"
+      }
+    ],
+    "tannin": "high",
+    "wikidataId": "Q1801497",
+    "wikipediaUrl": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
   },
   {
     "acidity": "low",
@@ -40515,6 +41554,11 @@
       "nl": {
         "text": "Gamaret is een rode druif uit Zwitserland, waarvan wijn gemaakt wordt.",
         "url": "https://nl.wikipedia.org/wiki/Gamaret"
+      },
+      "es": {
+        "text": "La gamaret es una variedad de uva tinta. La obtuvo André Jaquinet en la Station Fédérale de Recherches en Production Végétale de Changins en 1970, cruzando gamay y reichensteiner. Se desarrolló para cultivarse en la Suiza francesa y es hermana completa de la garanoir, pensada para la parte germanófona del país.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Gamaret"
       }
     },
     "synonyms": [],

@@ -94,6 +94,7 @@
       "grapey": "grape",
       "graphite": "graphite",
       "grass": "grass",
+      "grassy": "grass",
       "green apple": "green apple",
       "green bell pepper": "bell pepper",
       "green foliage": null,
@@ -1298,6 +1299,16 @@
         "it": "tè",
         "nl": "thee",
         "pt-PT": "chá"
+      },
+      "thyme": {
+        "en": "thyme",
+        "es": "tomillo",
+        "ca": "farigola",
+        "fr": "thym",
+        "de": "Thymian",
+        "it": "timo",
+        "nl": "tijm",
+        "pt-PT": "tomilho"
       },
       "toast": {
         "en": "toast",

@@ -286,6 +286,31 @@ describe("a grape read in its own language", () => {
     expect(read.styles).toEqual(["sweet", "still", "fortified"]);
   });
 
+  it("reads 'viel Körper', 'riche en acidité', 'molt de cos' and 'geringen Säuregehalt'", () => {
+    const level = (field: "acidity" | "body", quote: string, value: string) =>
+      validateExtraction({ [field]: { quote, value } }, quote, [])[field];
+    expect(level("body", "Die Weine zeigen viel Körper und eine gute Säurestruktur.", "high")).toBe(
+      "high",
+    );
+    expect(
+      level(
+        "acidity",
+        "Le vin de xarello est coloré, puissant, riche en alcool et en acidité.",
+        "high",
+      ),
+    ).toBe("high");
+    expect(level("body", "El vi té molt de cos i un color cirera fosc intens.", "high")).toBe(
+      "high",
+    );
+    expect(
+      level(
+        "acidity",
+        "Die Weine verfügen über einen hohen Alkohol-, aber geringen Säuregehalt.",
+        "low",
+      ),
+    ).toBe("low");
+  });
+
   it("does not take the Russian word for grape as a word for wine", () => {
     const russian = "Тавквери — сорт винограда, распространённый в Картли и Кахетии.";
     const read = validateExtraction(

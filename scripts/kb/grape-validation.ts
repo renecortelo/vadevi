@@ -110,8 +110,8 @@ export function mentions(quote: string, value: string): boolean {
  * and German — accents set aside, as `normalize` leaves them.
  */
 const levelWords: Record<Level, RegExp> = {
-  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?)\b|высок|повышенн|значительн|полнотел|насыщенн/,
-  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix[ao]s?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrige?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao])\b|низк|невысок|мягк|легк/,
+  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|viel(e[nrs]?)?|riches?|molt[ae]?s?|markante?[nrs]?|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?)\b|высок|повышенн|значительн|полнотел|насыщенн/,
+  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix(a|os|es)?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrige?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao]|geringe[mnrs]?)\b|низк|невысок|мягк|легк/,
   medium:
     /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moderee?|moderad[ao]|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?)\b|средн|умеренн/,
 };
@@ -151,7 +151,7 @@ export function parseRegion(value: string): { country: string; name: string } | 
 
 const colorWords: Record<"pink" | "red" | "white", RegExp> = {
   pink: /\b(grey|gray|pink|gris|rose|rosy|copper)|розов|сер[оы]/,
-  red: /\b(black|red|dark|blue|purple|noir|nero|tinto|negra|rouge)|черн|красн|темно-син/,
+  red: /\b(black|red|dark|blue|purple|noir|nero|tinto|negra|rouge)|schwarz|черн|красн|темно-син/,
   white: /\b(white|green|yellow|golden|blanc|bianco|blanco)|бел[аоыи]|зелен|желт/,
 };
 

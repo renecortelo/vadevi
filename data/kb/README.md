@@ -80,7 +80,9 @@ in, the same way: a place is given by its English name with the article's own
 word for it ("Kakheti" for "Кахетии"). A grape no English Wikipedia covers at
 all (Kisi, Ojaleshi, Goruli Mtsvane) is read only from that article; its card
 links it, and its summary is a faithful translation of the article's lead
-(`grape-translations.json`), marked as a translation on the page.
+(`grape-translations.json`), marked as a translation on the page. The same
+file gives a Spanish summary to every grape Spanish Wikipedia has no article
+for, translated from the English lead the card shows.
 
 A few registered names with no article of their own (Greek, Bulgarian,
 Romanian, Slovenian) take their summary from one whole sentence of their

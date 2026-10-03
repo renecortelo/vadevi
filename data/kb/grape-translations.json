@@ -44,6 +44,376 @@
         "nl": "Goruli mtsvane (Georgisch: გორული მწვანე) is een autochtoon wijndruivenras dat al sinds de oudheid bekend is. Het behoort tot de ecogeografische groep druivenrassen van het Zwarte Zeebekken. In Georgië worden er witte wijnen en basiswijnen voor mousserende wijn van gemaakt. Het wordt verbouwd in Kartli en Imereti.",
         "pt-PT": "O goruli mtsvane (em georgiano, გორული მწვანე) é uma casta autóctone de uva de vinho conhecida desde a Antiguidade. Pertence ao grupo ecogeográfico de castas da bacia do mar Negro. Na Geórgia usa-se para fazer vinhos brancos e vinhos-base para espumantes. É cultivada em Kartli e Imereti."
       }
+    },
+    "Q1545629": {
+      "from": "ca",
+      "sourceUrl": "https://ca.wikipedia.org/wiki/Garnatxa_roja",
+      "passages": "Introduction, first sentence",
+      "texts": {
+        "en": "Garnacha Roja, called lledoner roig in the Empordà, is a wine grape variety recognised within the Garnacha family by the red colour of its berries.",
+        "es": "La garnacha roja, llamada lledoner roig en el Ampurdán, es una variedad de uva de vinificación que se reconoce dentro de la familia de las garnachas por el color rojo de sus bayas.",
+        "it": "La garnacha roja, chiamata lledoner roig nell'Empordà, è un vitigno da vino che si riconosce nella famiglia delle garnacha per il colore rosso dei suoi acini.",
+        "nl": "Garnacha roja, in de Empordà lledoner roig genoemd, is een wijndruivenras dat binnen de garnachafamilie te herkennen is aan de rode kleur van zijn bessen.",
+        "pt-PT": "A garnacha roja, chamada lledoner roig no Empordà, é uma casta de uva de vinho que se reconhece na família das garnachas pela cor vermelha dos seus bagos."
+      }
+    },
+    "Q1801497": {
+      "from": "de",
+      "sourceUrl": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese",
+      "passages": "Introduction, first paragraph",
+      "texts": {
+        "en": "Lambrusco Viadanese is a red wine grape, one of more than 60 varieties in the Lambrusco family. It is used for sparkling red and rosé wine (frizzante) in the Italian region of Emilia-Romagna.",
+        "es": "La lambrusco viadanese es una variedad de uva tinta, una de las más de 60 variedades de la familia de los lambruscos. Se usa para vinos tintos y rosados de aguja (frizzante) en la región italiana de Emilia-Romaña.",
+        "ca": "La lambrusco viadanese és una varietat de raïm negre, una de les més de 60 varietats de la família dels lambruscos. S'utilitza per a vins negres i rosats d'agulla (frizzante) a la regió italiana d'Emília-Romanya.",
+        "fr": "Le lambrusco viadanese est un cépage noir, l'une des plus de 60 variétés de la famille des lambruscos. Il sert à élaborer des vins rouges et rosés perlants (frizzante) dans la région italienne d'Émilie-Romagne.",
+        "it": "Il lambrusco viadanese è un vitigno a bacca nera, una delle oltre 60 varietà della famiglia dei lambruschi. Si usa per vini rossi e rosati frizzanti nella regione italiana dell'Emilia-Romagna.",
+        "nl": "Lambrusco viadanese is een blauwe druivensoort, een van de meer dan zestig rassen uit de lambruscofamilie. Ze wordt gebruikt voor parelende rode en rosé wijn (frizzante) in de Italiaanse regio Emilia-Romagna.",
+        "pt-PT": "A lambrusco viadanese é uma casta tinta, uma das mais de 60 variedades da família dos lambruscos. Usa-se para vinhos tintos e rosados frisantes (frizzante) na região italiana da Emília-Romanha."
+      }
+    },
+    "Q799814": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Baga_(grape)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La baga es una variedad de uva tinta portuguesa plantada sobre todo en la DOC Bairrada. Como varietal, da vinos tánicos de acidez alta."
+      }
+    },
+    "Q478166": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La castelão, conocida también en Portugal como periquita y João de Santarém, es una uva tinta que se encuentra sobre todo en las regiones costeras del sur, aunque se cultiva en todo Portugal y a veces se usa en la elaboración del oporto."
+      }
+    },
+    "Q477351": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_Amarela",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La tinta amarela o trincadeira es una uva tinta de uso habitual en la elaboración del oporto. Destaca por su color oscuro. Su uso en la región del Duero ha ido en aumento en los últimos años. La cepa es sensible a la podredumbre y se comporta mejor en climas secos y cálidos."
+      }
+    },
+    "Q1340115": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Encruzado",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La encruzado es una uva blanca portuguesa cultivada sobre todo en la DOC Dão. Se usa principalmente en mezclas."
+      }
+    },
+    "Q1544507": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Greco_(grape)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La greco es una uva italiana que podría ser de origen griego. El nombre se refiere tanto a variedades blancas (greco bianco) como negras (greco nero). Aunque hay más superficie dedicada a la greco nero, la greco bianco es la que más se suele llamar «greco». En Campania se usa para elaborar el vino DOCG Greco di Tufo."
+      }
+    },
+    "Q1421570": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Sagrantino",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La sagrantino es una variedad de uva italiana autóctona de la región de Umbría, en el centro de Italia. Se cultiva sobre todo en el pueblo de Montefalco y sus alrededores, y su superficie ha crecido con rapidez: de 351 hectáreas en 2000 a 994 hectáreas en 2010, en manos de unos 50 productores."
+      }
+    },
+    "Q60790190": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Listan_Prieto",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La listán prieto (que no debe confundirse con la listán negro) es una variedad de uva tinta que se cree originaria de Castilla-La Mancha, en España. Ha desaparecido de la España peninsular, pero en 2008 aún quedaban 29 hectáreas plantadas en las islas Canarias."
+      }
+    },
+    "Q31355050": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Chinuri",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La chinuri (en georgiano, ჩინური) es una variedad de uva blanca de vinificación de acidez alta. Se asocia al vino georgiano y se cultiva en Kartli, donde alcanza la plena madurez a finales de octubre. Se usa a menudo para vinos tranquilos y espumosos, en mezcla con goruli mtsvane y aligoté. Resiste bien las enfermedades fúngicas y la filoxera."
+      }
+    },
+    "Q6933361": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mujuretuli",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La mujuretuli (en georgiano, მუჯურეთული) es una uva tinta de vinificación cultivada en Georgia. También se conoce como mudzhuretuli, mudshuretuli y keduretuli."
+      }
+    },
+    "Q12871467": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Khikhvi",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La khikhvi (en georgiano, ხიხვი) es una variedad de uva que se cultiva en el este de Georgia, concretamente en la región de Kajetia."
+      }
+    },
+    "Q20574534": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Tavkveri",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La tavkveri (en georgiano, თავკვერი) es una variedad de uva tinta originaria de Georgia que se usa como uva de mesa y para elaborar diversos vinos. Es autóctona de la región de Kartli, pero también se cultiva mucho en Kajetia y en Azerbaiyán."
+      }
+    },
+    "Q678124": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Vranac",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La vranac (en cirílico serbio, Вранац; en macedonio, Вранец, vranec) es una variedad de uva tinta originaria de Montenegro. Es la más plantada en Montenegro y se cree que está muy emparentada con la kratosija. Se considera la variedad más importante de Montenegro y una de las más importantes de Macedonia del Norte."
+      }
+    },
+    "Q979351": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La hárslevelű (en húngaro), llamada también lipovina (en eslovaco), frunză de tei (en rumano), Lindenblättriger (en alemán) y feuille de tilleul (en francés), es una variedad de uva de la rama póntica balcánica de Vitis vinifera."
+      }
+    },
+    "Q3445835": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/%C5%BDilavka",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La žilavka es una variedad de uva blanca plantada sobre todo en la región de Mostar, en Herzegovina, al sur de Bosnia y Herzegovina. Como vino varietal, la žilavka es conocida por su frescura viva y su acidez."
+      }
+    },
+    "Q1937737": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Montepulciano_(grape)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La montepulciano es una variedad de uva tinta italiana. Es la uva principal de los vinos DOCG Colline Teramane Montepulciano d'Abruzzo, Conero y Offida Rosso, y de los DOC Montepulciano d'Abruzzo, Rosso Conero y Rosso Piceno Superiore."
+      }
+    },
+    "Q12628015": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Blatina",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La blatina (en cirílico, Блатина) es una variedad de uva tinta cultivada sobre todo en la región de Herzegovina, en Bosnia y Herzegovina. Tiene flor funcionalmente femenina (autoestéril), por lo que siempre se cultiva junto a otras variedades, como la alicante bouschet (kambuša), la merlot y la trnjak, que a la vez polinizan la blatina."
+      }
+    },
+    "Q832738": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Po%C5%A1ip",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La pošip es una uva blanca autóctona que se cultiva sobre todo en la región croata de Dalmacia, en la isla de Korčula, aunque también hay pequeñas plantaciones en la península de Pelješac. Aunque se encuentra en muchas zonas de Korčula, las principales y más productivas están en los municipios de Čara y Smokvica y sus alrededores."
+      }
+    },
+    "Q833144": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marselan",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La marselan es una variedad de uva tinta francesa, cruce de cabernet sauvignon y garnacha. Fue obtenida en 1961 por Paul Truel cerca de la localidad francesa de Marseillan. Se cultiva sobre todo en el Languedoc, con algunas plantaciones en la costa norte de California, y se ha hecho también muy popular en China. Suele dar un vino tinto de cuerpo medio."
+      }
+    },
+    "Q1546796": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Grillo",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La grillo, conocida también como riddu y rossese bianco, es una variedad de uva blanca italiana que resiste las altas temperaturas y se usa mucho en la vinificación siciliana, en particular para el marsala. Su origen es incierto, pero pudo llegar a Sicilia desde Apulia."
+      }
+    },
+    "Q512279": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Frappato",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La frappato di Vittoria o frappato es una variedad de uva tinta italiana plantada sobre todo en Sicilia. Como varietal, da vinos ligeros de cuerpo con un marcado aroma a uva. Se ve sobre todo como componente del único vino DOCG de Sicilia, el Cerasuolo di Vittoria, que lleva entre un 30 y un 50 % de frappato y entre un 50 y un 70 % de nero d'Avola."
+      }
+    },
+    "Q1753085": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Molinara_(grape)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La molinara es una uva tinta italiana que en 2010 ocupaba 595 hectáreas en Italia, casi todas en el Véneto. Aporta acidez a los vinos de Valpolicella y Bardolino, que se elaboran con mezclas de corvina, corvinone, molinara y rondinella."
+      }
+    },
+    "Q770908": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marzemino",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La marzemino es una variedad de uva tinta italiana cultivada sobre todo en torno a Isera, al sur del Trentino. El vino es famoso sobre todo por su mención en la ópera Don Giovanni, con música de Wolfgang Amadeus Mozart («Versa il vino! Eccellente Marzimino!»). La cepa madura tarde y es sensible a muchas enfermedades de la vid, entre ellas el oídio."
+      }
+    },
+    "Q1540261": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La verdelho es una uva blanca cultivada en todo Portugal, aunque se asocia sobre todo a la isla de Madeira, y da nombre a uno de los cuatro tipos principales de vino de Madeira. A principios del siglo XX era la uva blanca más plantada de Madeira."
+      }
+    },
+    "Q625777": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Aramon_(grape)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La aramon o aramon noir es una variedad de uva tinta cultivada sobre todo en el Languedoc-Rosellón, en el sur de Francia. Entre finales del siglo XIX y la década de 1960 fue la variedad más cultivada de Francia, pero sus plantaciones no han dejado de disminuir desde mediados del siglo XX."
+      }
+    },
+    "Q121381": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ansonica",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La ansonica o inzolia es una uva blanca italiana plantada sobre todo en el oeste de Sicilia, donde puede usarse para elaborar marsala. Destaca por su aroma a frutos secos. En la Toscana se la conoce como ansonica. Es el componente principal (y posiblemente único) de la DOC toscana Ansonica Costa dell'Argentario, situada en el extremo sur de la costa toscana y en la isla de Giglio."
+      }
+    },
+    "Q218515": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Tsolikouri",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La tsolikouri (en georgiano, ცოლიკოური) es una variedad de uva blanca de piel amarillo claro cultivada sobre todo en el oeste de Imericia, en Georgia. Se cultiva en la llanura de la Cólquida, a 160 m sobre el nivel del mar."
+      }
+    },
+    "Q268579": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Grolleau_(grape)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La grolleau, o grolleau noir, es una variedad de uva tinta francesa cultivada sobre todo en el valle del Loira. El nombre procede de la palabra francesa grolle, «corneja», y se dice que alude a las bayas negras intensas de la cepa. Se elabora sobre todo en rosado, en particular en la región de Anjou."
+      }
+    },
+    "Q1263977": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Noir_Pr%C3%A9coce",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La pinot noir précoce, o Frühburgunder como se la llama en partes de Alemania, es una variedad de uva de vinificación de piel oscura, negro azulada, forma o mutación de la pinot noir que se distingue sobre todo por madurar antes de lo normal (de ahí el calificativo «précoce»). Aunque algunos ampelógrafos la tratan como variedad aparte, otros la consideran una simple forma temprana de la pinot noir, y algunos de sus vinos se etiquetan sin más como «Pinot noir»."
+      }
+    },
+    "Q1325364": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Elbling",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La elbling es una variedad de uva blanca (Vitis vinifera) que hoy se cultiva sobre todo en el curso alto del Mosela, en Alemania, y en Luxemburgo, donde el río se llama Moselle."
+      }
+    },
+    "Q1398398": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ribolla_Gialla",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La ribolla gialla (también llamada ribolla; en esloveno, rumena rebula; en croata, jarbola) es una uva blanca célebre sobre todo en la región de Friuli-Venecia Julia, en el nordeste de Italia, aunque la mayor parte se cultiva en Eslovenia, donde se conoce como rebula. En Friuli-Venecia Julia prospera en torno a Corno di Rosazzo y Gorizia."
+      }
+    },
+    "Q897321": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Irsai_Oliv%C3%A9r",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La irsai olivér es una variedad húngara de uva blanca, cruce de pozsonyi y perla de Csaba obtenido en 1930. Madura pronto y tiene un marcado carácter moscatel."
+      }
+    },
+    "Q1468853": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignonasse",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La sauvignonasse (conocida también como friulano, tocai friulano o sauvignon vert) es una uva blanca de la especie Vitis vinifera extendida en la región italiana de Friuli y en los territorios vecinos de Eslovenia. Está muy plantada en Chile, donde durante mucho tiempo se confundió con la sauvignon blanc."
+      }
+    },
+    "Q1597593": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Aleatico",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La aleatico es una variedad de uva tinta italiana. Destaca por ser la uva principal del vino de culto Aleatico di Portoferraio, de la isla de Elba. En Chile se conoce como moscatel rosada. También se ha cultivado en Mudgee (Nueva Gales del Sur) y en California."
+      }
+    },
+    "Q755556": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Athiri",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La athiri (en griego, Αθήρι), o athiri aspro, es una uva blanca griega que se usa para elaborar retsina en la isla de Rodas."
+      }
+    },
+    "Q1957003": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mtsvane",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La mtsvane (en georgiano, მწვანე) es una variedad de uva con la que se elaboran vinos georgianos; se usa para vino blanco. Su nombre alude al color verde amarillento de las bayas maduras. A menudo se mezcla con rkatsiteli para dar un vino afrutado y aromático. En georgiano, mtsvane significa nuevo, joven y verde."
+      }
+    },
+    "Q296696": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La öküzgözü es una variedad de uva autóctona turca que se usa en la elaboración del vino turco. Es una de las dos principales uvas de vinificación autóctonas de la provincia de Elazığ, en Anatolia oriental; la otra es la boğazkere. Se la considera una de las variedades tintas más importantes de Turquía por su amplio cultivo, su versatilidad de estilos y su reconocimiento internacional."
+      }
+    },
+    "Q358780": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La bourboulenc es una variedad de uva blanca cultivada sobre todo en el sur de Francia, en las regiones del Ródano meridional, la Provenza y el Languedoc."
+      }
+    },
+    "Q362311": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Raboso_(grape)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La raboso es una uva tinta cultivada sobre todo en el este del Véneto. También se llama raboso Piave, por el río cercano a la zona donde se cultiva. Da un vino de color intenso, con un tanino notablemente alto, un grado alcohólico medio y una acidez alta. El nombre raboxo significa «enfadado» en véneto, porque esa es la sensación que deja en la boca este vino cuando se bebe joven."
+      }
+    },
+    "Q1414057": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Neuburger",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La neuburger es una uva blanca austriaca, cruce de roter veltliner y silvaner. Como varietal suele dar vinos con mucho cuerpo."
+      }
+    },
+    "Q1091950": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ciliegiolo",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La ciliegiolo es una variedad de uva tinta de Italia, cuyo nombre viene de la palabra italiana para «cereza». Es un componente menor de mezclas tradicionales como el Chianti, pero el interés por ella ha revivido en los últimos años. En Umbría se elabora como vino ligero y fácil de beber, mientras que en la Toscana se hace un estilo más potente y estructurado."
+      }
+    },
+    "Q1099124": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Pamid",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La pamid es una antigua variedad de uva para vino tinto. Se cultiva en Bulgaria desde los tiempos de los antiguos tracios. En el pasado fue la variedad búlgara más extendida, pero hoy sus plantaciones son muy limitadas. También se cultiva en Macedonia del Norte, Serbia, Albania, Turquía, Grecia, Hungría y Rumanía."
+      }
+    },
+    "Q605464": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Gamaret",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La gamaret es una variedad de uva tinta. La obtuvo André Jaquinet en la Station Fédérale de Recherches en Production Végétale de Changins en 1970, cruzando gamay y reichensteiner. Se desarrolló para cultivarse en la Suiza francesa y es hermana completa de la garanoir, pensada para la parte germanófona del país."
+      }
+    },
+    "Q731972": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mavrud",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "es": "La mavrud (en búlgaro, мавруд, del griego μαυρό, mavró, «negro») es una uva tinta autóctona de la región de los Balcanes que se usa tanto en mezclas como para vinos varietales. Se cultiva en la región de Tracia, en Bulgaria, en algunas regiones de Albania y en algunas de Grecia y Rumanía."
+      }
     }
   }
 }
