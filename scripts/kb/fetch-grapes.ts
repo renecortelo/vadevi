@@ -211,8 +211,15 @@ for (const { qid, sitelinks } of ranked) {
   if (written % 10 === 0) console.info(`  ${written} of ${ranked.length}`);
 }
 
-const index = ranked
-  .map((entry) => entry.qid)
-  .filter((qid) => existsSync(resolve(cacheDirectory, `${qid}.json`)));
-writeFileSync(resolve(cacheDirectory, "index.json"), JSON.stringify(index, null, 2));
+// A grape once in the library stays in it: the ranking moves as Wikipedias
+// add articles, and a variety slipping from 160th to 161st is no reason to
+// take its card away.
+const indexPath = resolve(cacheDirectory, "index.json");
+const previous = existsSync(indexPath)
+  ? (JSON.parse(readFileSync(indexPath, "utf8")) as string[])
+  : [];
+const index = [...new Set([...ranked.map((entry) => entry.qid), ...previous])].filter((qid) =>
+  existsSync(resolve(cacheDirectory, `${qid}.json`)),
+);
+writeFileSync(indexPath, JSON.stringify(index, null, 2));
 console.info(`Cached ${index.length} grapes in ${cacheDirectory}.`);

@@ -927,7 +927,7 @@
       {
         "grapeId": "xarel-lo",
         "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     ],
     "id": "es-alella",
@@ -1199,7 +1199,7 @@
       {
         "grapeId": "monica",
         "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Monica_(grape)"
+        "sourceUrl": "https://de.wikipedia.org/wiki/Monica_Nera"
       }
     ],
     "id": "it-alghero",
@@ -3698,7 +3698,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000000021",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "poulsard",
+        "quote": "It is a permitted grape in several Jura AOCs including the Arbois and Côtes du Jura AOC where it is blended with Trousseau noir and Pinot noir to produce red and rosé; the L'Etoile AOC ... Outside Jura, it is grown in the Bugey wine region located near the Beaujolais wine region.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Poulsard"
+      }
+    ],
     "id": "fr-arbois",
     "latitude": 46.902777777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000021",
@@ -6868,7 +6874,7 @@
       {
         "grapeId": "falanghina",
         "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Falanghina"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Falanghina"
       }
     ],
     "id": "it-benevento",
@@ -7636,7 +7642,7 @@
       {
         "grapeId": "xarel-lo",
         "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     ],
     "id": "es-binissalem",
@@ -8004,7 +8010,7 @@
       {
         "grapeId": "vermentino",
         "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Vermentino"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
       }
     ],
     "id": "it-bolgheri",
@@ -9268,7 +9274,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000002162",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "poulsard",
+        "quote": "It is a permitted grape in several Jura AOCs including the Arbois and Côtes du Jura AOC where it is blended with Trousseau noir and Pinot noir to produce red and rosé; the L'Etoile AOC ... Outside Jura, it is grown in the Bugey wine region located near the Beaujolais wine region.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Poulsard"
+      }
+    ],
     "id": "fr-bugey",
     "latitude": 45.91666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002162",
@@ -9823,7 +9835,7 @@
       {
         "grapeId": "monica",
         "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Monica_(grape)"
+        "sourceUrl": "https://de.wikipedia.org/wiki/Monica_Nera"
       }
     ],
     "id": "it-cagliari",
@@ -10209,7 +10221,7 @@
       {
         "grapeId": "falanghina",
         "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Falanghina"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Falanghina"
       }
     ],
     "id": "it-campi-flegrei",
@@ -10449,6 +10461,11 @@
         "grapeId": "freisa",
         "quote": "grown in the Piedmont region of north-west Italy, primarily in Monferrato and in the Langhe ... Freisa di Chieri ... In the Canavese there is also a rosé ... there are a few hundred acres of the vine planted in Argentina ... It is most commonly found in the Asti, Langhe, Monferrato and Pinerolese regions.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Freisa"
+      },
+      {
+        "grapeId": "erbaluce",
+        "quote": "Erbaluce or Erbaluce bianca is a white Italian wine grape grown primarily in the Piedmont region around Caluso, in Canavese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Erbaluce"
       }
     ],
     "id": "it-canavese",
@@ -11200,7 +11217,7 @@
       {
         "grapeId": "canaiolo",
         "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Canaiolo"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
       }
     ],
     "id": "it-carmignano",
@@ -13269,7 +13286,12 @@
       {
         "grapeId": "canaiolo",
         "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Canaiolo"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
+      },
+      {
+        "grapeId": "ciliegiolo",
+        "quote": "It is a minor component of traditional blends such as Chianti, but interest has revived in recent years. In Umbria it is made into a light quaffing wine, while in Tuscany it is made into a bigger, more structured style.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ciliegiolo"
       }
     ],
     "id": "it-chianti",
@@ -13697,6 +13719,11 @@
     "eambrosiaId": "EUGI00000000162",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "bourboulenc",
+        "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc"
+      },
       {
         "grapeId": "clairette-blanche",
         "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
@@ -16302,7 +16329,7 @@
       {
         "grapeId": "vermentino",
         "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Vermentino"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
       }
     ],
     "id": "it-colli-di-luni",
@@ -17405,7 +17432,7 @@
       {
         "grapeId": "parellada",
         "quote": "té els principals cultius al Penedès, Conca de Barberà i Camp de Tarragona.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Parellada"
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
       },
       {
         "grapeId": "trepat",
@@ -18631,7 +18658,7 @@
       {
         "grapeId": "xarel-lo",
         "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
       },
       {
         "grapeId": "trepat",
@@ -21219,7 +21246,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001121",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "poulsard",
+        "quote": "It is a permitted grape in several Jura AOCs including the Arbois and Côtes du Jura AOC where it is blended with Trousseau noir and Pinot noir to produce red and rosé; the L'Etoile AOC ... Outside Jura, it is grown in the Bugey wine region located near the Beaujolais wine region.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Poulsard"
+      }
+    ],
     "id": "fr-cotes-du-jura",
     "latitude": 46.67527777777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001121",
@@ -23964,7 +23997,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004828",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "erbaluce",
+        "quote": "Erbaluce or Erbaluce bianca is a white Italian wine grape grown primarily in the Piedmont region around Caluso, in Canavese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Erbaluce"
+      }
+    ],
     "id": "it-erbaluce-di-caluso",
     "latitude": 45.0667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004828",
@@ -26654,7 +26693,7 @@
       {
         "grapeId": "falanghina",
         "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Falanghina"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Falanghina"
       }
     ],
     "id": "it-galluccio",
@@ -26789,7 +26828,7 @@
       {
         "grapeId": "rondinella",
         "quote": "a ridosso del lago di Garda e della Valpolicella ... che nel Valpolicella e nel Bardolino.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Rondinella"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rondinella_(vitigno)"
       }
     ],
     "id": "it-garda",
@@ -30130,7 +30169,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001502",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "poulsard",
+        "quote": "It is a permitted grape in several Jura AOCs including the Arbois and Côtes du Jura AOC where it is blended with Trousseau noir and Pinot noir to produce red and rosé; the L'Etoile AOC ... Outside Jura, it is grown in the Bugey wine region located near the Beaujolais wine region.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Poulsard"
+      }
+    ],
     "id": "fr-l-etoile",
     "latitude": 50.020555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001502",
@@ -30153,7 +30198,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000014387",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "bourboulenc",
+        "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc"
+      }
+    ],
     "id": "fr-la-clape",
     "latitude": 43.083333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000014387",
@@ -31683,6 +31734,11 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Marselan"
       },
       {
+        "grapeId": "bourboulenc",
+        "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc"
+      },
+      {
         "grapeId": "clairette-blanche",
         "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
@@ -32198,7 +32254,7 @@
       {
         "grapeId": "prieto-picudo",
         "quote": "La prieto picudo es una de las principales uvas tintas de los vinos de la Denominación de Origen (DO) española León y de la D.O.P. Valles de Benavente en la provincia de Zamora.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Prieto_Picudo"
+        "sourceUrl": "https://es.wikipedia.org/wiki/Prieto_picudo"
       }
     ],
     "id": "es-leon",
@@ -32749,7 +32805,7 @@
       {
         "grapeId": "mencia",
         "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
       }
     ],
     "id": "es-liebana",
@@ -34071,7 +34127,7 @@
       {
         "grapeId": "monica",
         "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Monica_(grape)"
+        "sourceUrl": "https://de.wikipedia.org/wiki/Monica_Nera"
       }
     ],
     "id": "it-mandrolisai",
@@ -34571,7 +34627,7 @@
       {
         "grapeId": "grillo",
         "quote": "presente soprattutto in Sicilia occidentale ed in particolare nella zona di Marsala. È utilizzato in purezza per la produzione di alcuni DOC della provincia di Trapani.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Grillo"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Grillo_(vitigno)"
       },
       {
         "grapeId": "ansonica",
@@ -35765,7 +35821,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001042",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "muscadelle",
+        "quote": "In France, it is a minor constituent in the dry and sweet wines of Bordeaux, such as Sauternes ... Some sweet wines from Monbazillac, on the other hand, can have a higher proportion of Muscadelle ... Those made in the Rutherglen region generally receive considerable aging in hot cellars ... A few other Australian wine regions, including the Barossa Valley, make similar wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Muscadelle"
+      }
+    ],
     "id": "fr-monbazillac",
     "latitude": 44.794166666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001042",
@@ -36540,7 +36602,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005322",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sagrantino",
+        "quote": "indigenous to the region of Umbria in Central Italy. It is grown primarily in the village of Montefalco and the surrounding area",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sagrantino"
+      }
+    ],
     "id": "it-montefalco",
     "latitude": 42.8918739,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005322",
@@ -37276,7 +37344,7 @@
       {
         "grapeId": "canaiolo",
         "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Canaiolo"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
       }
     ],
     "id": "it-morellino-di-scansano",
@@ -38091,7 +38159,7 @@
       {
         "grapeId": "melon-de-bourgogne",
         "quote": "elle est toutefois très répandue en Loire-Atlantique sous le nom de muscadet",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Melon_de_Bourgogne"
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Melon_(c%C3%A9page)"
       }
     ],
     "id": "fr-muscadet",
@@ -39857,7 +39925,7 @@
       {
         "grapeId": "pecorino",
         "quote": "diffuso nelle Marche, in Abruzzo e, in misura minore, in Lazio e Umbria ... concorre alla formazione del vino DOCG Offida",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Pecorino_(grape)"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Pecorino_(vitigno)"
       }
     ],
     "id": "it-offida",
@@ -41569,12 +41637,12 @@
       {
         "grapeId": "parellada",
         "quote": "té els principals cultius al Penedès, Conca de Barberà i Camp de Tarragona.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Parellada"
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
       },
       {
         "grapeId": "sumoll",
         "quote": "El sumoll és una varietat rústica, autòctona del Penedès",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Sumoll"
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Sumoll"
       },
       {
         "grapeId": "tempranillo",
@@ -43686,7 +43754,7 @@
       {
         "grapeId": "glera",
         "quote": "coltivato inizialmente nella località Prosecco di Trieste ... lo collega alla Valdobbiadene ... Conegliano Valdobbiadene - Prosecco DOCG",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Glera_(grape)"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Glera"
       }
     ],
     "id": "it-prosecco",
@@ -45770,7 +45838,7 @@
       {
         "grapeId": "muscat-blanc-a-petits-grains",
         "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains"
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
       }
     ],
     "id": "fr-rivesaltes",
@@ -45994,7 +46062,7 @@
       {
         "grapeId": "vermentino",
         "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Vermentino"
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
       },
       {
         "grapeId": "croatina",
@@ -48558,6 +48626,11 @@
         "grapeId": "colombard",
         "quote": "In France, it was traditionally grown in the Charentes and Gascony ... today it is still among the permitted white grape varieties in Bordeaux ... This grape is mainly grown in California ... it is widely grown in South Africa ... and to a lesser extent in Australia and Israel.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Colombard"
+      },
+      {
+        "grapeId": "muscadelle",
+        "quote": "In France, it is a minor constituent in the dry and sweet wines of Bordeaux, such as Sauternes ... Some sweet wines from Monbazillac, on the other hand, can have a higher proportion of Muscadelle ... Those made in the Rutherglen region generally receive considerable aging in hot cellars ... A few other Australian wine regions, including the Barossa Valley, make similar wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Muscadelle"
       }
     ],
     "id": "fr-sainte-fou-bordeaux",
@@ -49151,7 +49224,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006254",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "vernaccia",
+        "quote": "is most commonly associated with the Tuscan wine Vernaccia di San Gimignano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Vernaccia"
+      }
+    ],
     "id": "it-san-gimignano",
     "latitude": 43.333333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006254",
@@ -49932,7 +50011,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001583",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "muscadelle",
+        "quote": "In France, it is a minor constituent in the dry and sweet wines of Bordeaux, such as Sauternes ... Some sweet wines from Monbazillac, on the other hand, can have a higher proportion of Muscadelle ... Those made in the Rutherglen region generally receive considerable aging in hot cellars ... A few other Australian wine regions, including the Barossa Valley, make similar wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Muscadelle"
+      }
+    ],
     "id": "fr-sauternes",
     "latitude": 44.833333333333336,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001583",
@@ -50627,7 +50712,7 @@
       {
         "grapeId": "castelao",
         "quote": "A região da Península de Setúbal produz os mais conhecidos vinhos desta casta. Nos Vinhos Regionais do Algarve a Castelão é frequentemente combinada",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)"
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Castel%C3%A3o_(uva)"
       }
     ],
     "id": "pt-setubal",
@@ -51927,7 +52012,7 @@
       {
         "grapeId": "italian-riesling",
         "quote": "im südlichen Burgenland ... Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Welschriesling"
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
       }
     ],
     "id": "at-steiermark",
@@ -52142,7 +52227,7 @@
       {
         "grapeId": "kadarka",
         "quote": "Die besten reinsortigen Weine aus dieser Rebe werden im südungarischen Villány, besonders aber in der Region Szekszárd gekeltert.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Kadarka"
+        "sourceUrl": "https://de.wikipedia.org/wiki/Kadarka"
       }
     ],
     "id": "hu-szekszard",
@@ -52421,7 +52506,7 @@
       {
         "grapeId": "xarel-lo",
         "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     ],
     "id": "es-tarragona",
@@ -53938,7 +54023,13 @@
     "countryCode": "AT",
     "eambrosiaId": "EUGI00000005529",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "zierfandler",
+        "quote": "used to make white wine in the Thermenregion of Austria ... These wines, known as Spätrot-Rotgipfler, are a particular speciality of Gumpoldskirchen, south of Vienna. It is grown in Hungary under the name Cirfandli and in Slovenia as Zerjavina.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Zierfandler"
+      }
+    ],
     "id": "at-thermenregion",
     "latitude": 48.027123655668255,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005529",
@@ -54750,14 +54841,14 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Welschriesling"
       },
       {
-        "grapeId": "trollinger",
-        "quote": "was likely originally cultivated in the wine regions of South Tyrol and Trentino, but today is almost exclusively cultivated on steep, sunny locations in the Württemberg wine region ... throughout the Neckar valley ... including the Santa Maddalena DOC ... Caldaro DOC",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Trollinger"
-      },
-      {
         "grapeId": "marzemino",
         "quote": "primarily grown around Isera, south of Trentino ... most notably in the Lombardia, Trentino, Veneto and Friuli-Venezia Giulia wine region. In Lombardy it is often used as a blending grape",
         "sourceUrl": "https://en.wikipedia.org/wiki/Marzemino"
+      },
+      {
+        "grapeId": "trollinger",
+        "quote": "was likely originally cultivated in the wine regions of South Tyrol and Trentino, but today is almost exclusively cultivated on steep, sunny locations in the Württemberg wine region ... throughout the Neckar valley ... including the Santa Maddalena DOC ... Caldaro DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Trollinger"
       }
     ],
     "id": "it-trentino",
@@ -54943,7 +55034,7 @@
       {
         "grapeId": "tinta-barroca",
         "quote": "wie man sie in den Hanglagen des Douro findet ... Empfohlen wird sie neben dem Einsatz im Portwein auch für die Region Trás-os-Montes ... In Südafrika ist sie mit 491 Hektar bestockter Fläche ebenfalls verbreitet",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_Barroca"
+        "sourceUrl": "https://de.wikipedia.org/wiki/Tinta_Barroca"
       }
     ],
     "id": "pt-tras-os-montes",
@@ -55224,6 +55315,11 @@
     "giType": "PGI",
     "grapes": [
       {
+        "grapeId": "sagrantino",
+        "quote": "indigenous to the region of Umbria in Central Italy. It is grown primarily in the village of Montefalco and the surrounding area",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sagrantino"
+      },
+      {
         "grapeId": "sangiovese",
         "quote": "primarily grown in the central regions of Italy, particularly in Tuscany... also cultivated in ... Umbria and Marche... also grown in ... Emilia‑Romagna, Lombardy, and even as far south as Calabria... In France... Corsica... Argentina... Mendoza... In California...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
@@ -55247,6 +55343,11 @@
         "grapeId": "aleatico",
         "quote": "the cult wine Aleatico di Portoferraio made in Elba. In Chile is known as Red Moscatel. The grape has also been cultivated at Mudgee in New South Wales and California ... Aleatico is most commonly found in Italy, Tuscany (primarily in Elba), Lazio, Umbria, Piedmont, Apulia ... Aleatico is found around Lake Bolsena",
         "sourceUrl": "https://en.wikipedia.org/wiki/Aleatico"
+      },
+      {
+        "grapeId": "ciliegiolo",
+        "quote": "It is a minor component of traditional blends such as Chianti, but interest has revived in recent years. In Umbria it is made into a light quaffing wine, while in Tuscany it is made into a bigger, more structured style.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ciliegiolo"
       }
     ],
     "id": "it-umbria",
@@ -57128,7 +57229,7 @@
       {
         "grapeId": "prieto-picudo",
         "quote": "La prieto picudo es una de las principales uvas tintas de los vinos de la Denominación de Origen (DO) española León y de la D.O.P. Valles de Benavente en la provincia de Zamora.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Prieto_Picudo"
+        "sourceUrl": "https://es.wikipedia.org/wiki/Prieto_picudo"
       }
     ],
     "id": "es-valles-de-benavente",
@@ -57821,6 +57922,11 @@
         "grapeId": "croatina",
         "quote": "grown primarily in the Oltrepò Pavese region of Lombardy and in the Province of Piacenza within Emilia Romagna, but also in parts of Piedmont and the Veneto ... and in Roero",
         "sourceUrl": "https://en.wikipedia.org/wiki/Croatina"
+      },
+      {
+        "grapeId": "raboso",
+        "quote": "Raboso is a red wine grape grown primarily in the eastern part of Veneto.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Raboso_(grape)"
       }
     ],
     "id": "it-veneto",
@@ -59156,7 +59262,7 @@
       {
         "grapeId": "kadarka",
         "quote": "Die besten reinsortigen Weine aus dieser Rebe werden im südungarischen Villány, besonders aber in der Region Szekszárd gekeltert.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Kadarka"
+        "sourceUrl": "https://de.wikipedia.org/wiki/Kadarka"
       }
     ],
     "id": "hu-villany",
@@ -60327,6 +60433,11 @@
         "grapeId": "trollinger",
         "quote": "was likely originally cultivated in the wine regions of South Tyrol and Trentino, but today is almost exclusively cultivated on steep, sunny locations in the Württemberg wine region ... throughout the Neckar valley ... including the Santa Maddalena DOC ... Caldaro DOC",
         "sourceUrl": "https://en.wikipedia.org/wiki/Trollinger"
+      },
+      {
+        "grapeId": "acolon",
+        "quote": "It was created in 1971 at the Staatliche Lehr- und Versuchsanstalt für Wein- und Obstbau in Weinsberg (nr. Württemberg), Germany.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Acolon"
       }
     ],
     "id": "de-wurttemberg",

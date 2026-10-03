@@ -110,16 +110,23 @@ export function mentions(quote: string, value: string): boolean {
  * and German — accents set aside, as `normalize` leaves them.
  */
 const levelWords: Record<Level, RegExp> = {
-  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?)\b/,
-  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix[ao]s?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrige?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao])\b/,
+  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?)\b|высок|повышенн|значительн|полнотел|насыщенн/,
+  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix[ao]s?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrige?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao])\b|низк|невысок|мягк|легк/,
   medium:
-    /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moderee?|moderad[ao]|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?)\b/,
+    /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moderee?|moderad[ao]|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?)\b|средн|умеренн/,
 };
 
 const fieldWords: Record<"acidity" | "body" | "tannin", RegExp> = {
-  acidity: /acid|saure/,
-  body: /bod(y|ied)|weight|structure|cuerpo|corps|corpo|\bcos\b|korper|struttur|estructur|estrutur|struktur/,
-  tannin: /tann?in|tannic|tanic|tannique|gerbstoff/,
+  acidity: /acid|saure|кислот/,
+  body: /bod(y|ied)|weight|structure|cuerpo|corps|corpo|\bcos\b|korper|struttur|estructur|estrutur|struktur|тел[оа]|телесн|полнотел|структур/,
+  tannin: /tann?in|tannic|tanic|tannique|gerbstoff|танин/,
+};
+
+/** A country's name as English articles still write it, where it has changed. */
+const formerNames: Record<string, string[]> = {
+  CZ: ["Czech Republic"],
+  MK: ["Macedonia"],
+  TR: ["Turkey"],
 };
 
 function toLevel(value: unknown): Level | null {
@@ -143,24 +150,25 @@ export function parseRegion(value: string): { country: string; name: string } | 
 }
 
 const colorWords: Record<"pink" | "red" | "white", RegExp> = {
-  pink: /\b(grey|gray|pink|gris|rose|rosy|copper)/,
-  red: /\b(black|red|dark|blue|purple|noir|nero|tinto|negra|rouge)/,
-  white: /\b(white|green|yellow|golden|blanc|bianco|blanco)/,
+  pink: /\b(grey|gray|pink|gris|rose|rosy|copper)|розов|сер[оы]/,
+  red: /\b(black|red|dark|blue|purple|noir|nero|tinto|negra|rouge)|черн|красн|темно-син/,
+  white: /\b(white|green|yellow|golden|blanc|bianco|blanco)|бел[аоыи]|зелен|желт/,
 };
 
 const styleWords: Record<string, RegExp> = {
   blending:
-    /blend|mezcla|coupage|assembla|uvaggio|taglio|\blote|cupatge|ensambla|mistura|verschnitt|cuvee/,
+    /blend|mezcla|coupage|assembla|uvaggio|taglio|\blote|cupatge|ensambla|mistura|verschnitt|cuvee|купаж|ассамбляж|смес/,
   fortified:
-    /fortif|port\b|sherry|madeira|marsala|vins? doux|generos|liquoros|porto\b|jerez|portwein/,
-  rose: /\bros(e|es|ado|ados|ato|ati|at|ats)\b|blush|rosewein/,
+    /fortif|port\b|sherry|madeira|marsala|vins? doux|generos|liquoros|porto\b|jerez|portwein|крепл|портвеин/,
+  rose: /\bros(e|es|ado|ados|ato|ati|at|ats)\b|blush|rosewein|розов/,
   sparkling:
-    /sparkl|champagne|cava|prosecco|cremant|sekt|spumant|petillant|frizzant|mousseu|espumos|espumant|escumos|schaumwein/,
+    /sparkl|champagne|cava|prosecco|cremant|sekt|spumant|petillant|frizzant|mousseu|espumos|espumant|escumos|schaumwein|игрист|шампанск/,
   // Still wine is what a wine grape makes unless it is only ever sparkling or
   // fortified, so any sentence about the wines made from it supports it.
-  still: /\b(still|table wine|varietal|wines?|vinos?|vins?|vini|vinhos?|vi|weine?)\b/,
+  still:
+    /\b(still|table wine|varietal|wines?|vinos?|vins?|vini|vinhos?|vi|weine?)\b|вин(?:[оаы]|ам|ами|ах|ом)?(?![а-я])|столов/,
   sweet:
-    /sweet|dessert|botryti|noble rot|late.harvest|ice ?wine|passito|vin santo|tokaj|dulce|dolce|\bdoce|\bdoux|\bdolc|moelleux|liquoreux|vendimia tardia|vendanges tardives|suss|suß|recioto|appassiment/,
+    /sweet|dessert|botryti|noble rot|late.harvest|ice ?wine|passito|vin santo|tokaj|dulce|dolce|\bdoce|\bdoux|\bdolc|moelleux|liquoreux|vendimia tardia|vendanges tardives|suss|suß|recioto|appassiment|сладк|десертн/,
 };
 
 type Field = { quote?: unknown; value?: unknown };
@@ -262,9 +270,11 @@ export function validateExtraction(
       ? new Intl.DisplayNames(["en"], { type: "region" }).of(code)
       : undefined;
     // The quote names the country, or Wikidata independently agrees.
+    // English articles still write some countries by an older name.
+    const names = country === undefined ? [] : [country, ...(formerNames[code] ?? [])];
     if (
       country !== undefined &&
-      (mentions(originField.quote, country) || wikidataOrigin.includes(code))
+      (names.some((name) => mentions(originField.quote, name)) || wikidataOrigin.includes(code))
     ) {
       origin = code;
       evidence.push({ field: "origin", quote: originField.quote, value: code });
@@ -309,6 +319,8 @@ export function validateExtraction(
   };
   const aromaWords = wordsOf("aromas");
   const pairingWords = wordsOf("pairings");
+  // A place, too, is named in the article's script: "Kakheti" is "Кахетии".
+  const regionWords = wordsOf("regions");
   const aromas = items("aromas", (item, quote) => mentions(quote, aromaWords[item] ?? item));
   const synonyms = items("synonyms", (item, quote) => mentions(quote, item));
   const pairings = items("pairings", (item, quote) => mentions(quote, pairingWords[item] ?? item));
@@ -318,7 +330,7 @@ export function validateExtraction(
   }).map((style) => normalize(style));
   const regions = items("regions", (item, quote) => {
     const region = parseRegion(item);
-    return region !== null && mentions(quote, region.name);
+    return region !== null && mentions(quote, regionWords[item] ?? region.name);
   }).flatMap((item) => {
     const region = parseRegion(item);
     return region === null ? [] : [region];

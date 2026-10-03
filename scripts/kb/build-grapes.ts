@@ -92,6 +92,17 @@ function extraReadings(
     });
 }
 
+/**
+ * Summaries translated from a grape's own-language article where no app
+ * language has one (`data/kb/grape-translations.json`): each a faithful
+ * translation of the passage named, adding nothing.
+ */
+const translations = (
+  JSON.parse(readFileSync(resolve("data/kb/grape-translations.json"), "utf8")) as {
+    grapes: Record<string, { from: string; sourceUrl: string; texts: Record<string, string> }>;
+  }
+).grapes;
+
 const entries: GrapeEntry[] = [];
 const rejected: { field: string; grape: string; reason: string; value: string }[] = [];
 let skipped = 0;
@@ -99,24 +110,40 @@ let basic = 0;
 for (const qid of index) {
   const extractedPath = resolve(cache, `extracted/${qid}.json`);
   const raw = JSON.parse(readFileSync(resolve(cache, `grapes/${qid}.json`), "utf8")) as Raw;
-  if (raw.article === null) continue;
+  // A grape no English Wikipedia covers — Kisi, Ojaleshi — is read from the
+  // article in its own country's language instead, if one has been read; its
+  // facts then cite that article, and its card links it.
+  const extras = extraReadings(qid);
+  const own = raw.article === null ? extras.shift() : undefined;
+  const article = raw.article ?? own?.article;
+  if (article === undefined) continue;
   // A grape the model has not read yet still has a card: its names in every
   // language, its synonyms and its Wikipedia summary need no model, and a
   // wine of Picapoll should find Picapoll in the library today, not once the
   // day's allowance reaches it. Structure, aromas and regions arrive when it
   // is read. A grape grown for the table, not for wine, waits for the reading
   // that can tell.
-  const extracted = existsSync(extractedPath);
+  const extracted = own !== undefined || existsSync(extractedPath);
   if (!extracted) {
     const lead = raw.leads.en ?? Object.values(raw.leads)[0] ?? "";
     const opening = lead.slice(0, 240);
-    if (!leadIsAboutWine(lead) || /\b(table grapes?|raisins?|uvas? de mesa)\b/i.test(opening))
-      continue;
+    // The lead, or failing that the article's opening: "a Georgian red grape
+    // variety" never says wine, and the next paragraph does.
+    const aboutWine = leadIsAboutWine(lead) || leadIsAboutWine(article.slice(0, 2_000));
+    // Grown for the table — unless the same opening says it makes wine too
+    // ("used as a table grape and to make a variety of wines"). Raisins as
+    // an aroma ("an aroma of grape juice and raisins") is not a use.
+    const forTable =
+      /\b(table grapes?|uvas? de mesa|raisin grapes?|(for|into) raisins)\b/i.test(opening) &&
+      !/\b(wine grape|to make (a variety of )?(\w+ )?wines?)\b/i.test(opening);
+    if (!aboutWine || forTable) continue;
   }
-  const proposal = extracted
-    ? (JSON.parse(readFileSync(extractedPath, "utf8")) as { extraction: unknown }).extraction
-    : {};
-  const result = validateExtraction(proposal, raw.article, raw.wikidataOrigin);
+  const proposal =
+    own?.extraction ??
+    (extracted
+      ? (JSON.parse(readFileSync(extractedPath, "utf8")) as { extraction: unknown }).extraction
+      : {});
+  const result = validateExtraction(proposal, article, raw.wikidataOrigin);
   if (!extracted) {
     basic += 1;
   }
@@ -129,7 +156,7 @@ for (const qid of index) {
   // read where the English one is silent: it fills only what is still
   // missing, every value checked against that article's own words, and each
   // fact keeps the article it came from.
-  for (const extra of extraReadings(qid)) {
+  for (const extra of extras) {
     const found = validateExtraction(extra.extraction, extra.article, raw.wikidataOrigin);
     rejected.push(
       ...found.rejected.map((entry) => ({
@@ -179,6 +206,14 @@ for (const qid of index) {
       url: `https://${locale}.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(" ", "_"))}`,
     };
   }
+  // Where no Wikipedia in the app's languages has the grape, its own
+  // language's lead, translated by hand and marked as a translation.
+  const translation = translations[qid];
+  if (translation !== undefined) {
+    for (const [locale, text] of Object.entries(translation.texts)) {
+      summaries[locale] ??= { text, translated: true, url: translation.sourceUrl };
+    }
+  }
   // Synonyms: the article's (each quoted), Wikidata's aliases, and the
   // variety's own name in other languages — every one a name somebody uses.
   const seen = new Set<string>();
@@ -213,7 +248,9 @@ for (const qid of index) {
     synonyms,
     tannin: result.tannin,
     wikidataId: qid,
-    wikipediaUrl: `https://en.wikipedia.org/wiki/${encodeURIComponent((raw.titles.en ?? "").replaceAll(" ", "_"))}`,
+    wikipediaUrl:
+      own?.url ??
+      `https://en.wikipedia.org/wiki/${encodeURIComponent((raw.titles.en ?? "").replaceAll(" ", "_"))}`,
   });
 }
 

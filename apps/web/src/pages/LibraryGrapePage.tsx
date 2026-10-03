@@ -142,9 +142,12 @@ export function LibraryGrapePage() {
             >
               {t("library.summarySource")}
             </a>
-            {grape.summary.locale === i18n.language.split("-")[0] || grape.summary.locale === locale
-              ? null
-              : ` · ${t("library.summaryOtherLanguage")}`}
+            {grape.summary.translated
+              ? ` · ${t("library.summaryTranslated")}`
+              : grape.summary.locale === i18n.language.split("-")[0] ||
+                  grape.summary.locale === locale
+                ? null
+                : ` · ${t("library.summaryOtherLanguage")}`}
           </p>
         </section>
       )}

@@ -151,7 +151,13 @@ for (const grape of grapes) {
       (item) => item.field === "regions" && normalize(item.value).includes(normalize(region.name)),
     );
     if (evidence === undefined) continue;
-    entry.grapes.push({ grapeId: grape.id, quote: evidence.quote, sourceUrl: grape.wikipediaUrl });
+    entry.grapes.push({
+      grapeId: grape.id,
+      quote: evidence.quote,
+      // The article the quote is in: a grape read in its own language too
+      // names its regions in that article's words.
+      sourceUrl: evidence.sourceUrl ?? grape.wikipediaUrl,
+    });
     links += 1;
   }
 }

@@ -6,6 +6,13 @@
     "path": "library/grapes/abouriou.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abouriou_-_Amp%C3%A9lographie.jpg"
   },
+  "acolon": {
+    "author": "BerndH",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/grapes/acolon.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Acolon_090912.jpg"
+  },
   "agiorgitiko": {
     "author": "Elisavetch at Greek Wikipedia",
     "license": "Public domain",
@@ -174,6 +181,13 @@
     "path": "library/grapes/bobal.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Racimo_bobal_PERFECTO.jpg"
   },
+  "bourboulenc": {
+    "author": "Jules Troncy",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "path": "library/grapes/bourboulenc.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bourboulenc.jpg"
+  },
   "cabernet-franc": {
     "author": "Rosenzweig",
     "license": "CC BY-SA 3.0",
@@ -243,6 +257,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "path": "library/grapes/chenin-blanc.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chenin_blanc_grapes.jpg"
+  },
+  "ciliegiolo": {
+    "author": "Fabio Ingrosso",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/grapes/ciliegiolo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sassotondo,_grappolo_di_ciliegiolo.jpg"
   },
   "cinsaut": {
     "author": "JPS68 via photoshop",
@@ -321,6 +342,13 @@
     "path": "library/grapes/encruzado.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Encruzado.jpg"
   },
+  "erbaluce": {
+    "author": "Please note: This photo can be reproduced. Please quote the source as indicated below: Ursula Brühl, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/erbaluce.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC3925_ERBALUCE_BIANCA_Cluster_in_the_laboratory_10533.jpg"
+  },
   "fernao-pires": {
     "author": "Wines of Portugal, i.V. Marie-Luise Bächle",
     "license": "CC BY 3.0",
@@ -397,6 +425,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "path": "library/grapes/glera.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC9741_GLERA_Cluster_in_the_field_17055.jpg"
+  },
+  "gouais-blanc": {
+    "author": "Dr. Joachim Schmid, FG RZ, FA Geisenheim",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "path": "library/grapes/gouais-blanc.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heunisch-wei%C3%9F08.jpg"
   },
   "graciano": {
     "author": "Jules Troncy",
@@ -615,6 +650,13 @@
     "path": "library/grapes/muller-thurgau.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rebe2.jpg"
   },
+  "muscadelle": {
+    "author": "Jules Troncy",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "path": "library/grapes/muscadelle.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Muscadelle_-_Amp%C3%A9lographie.jpg"
+  },
   "muscat-blanc-a-petits-grains": {
     "author": "Rosenzweig",
     "license": "CC BY-SA 3.0",
@@ -663,6 +705,20 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "path": "library/grapes/nero-d-avola.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grappolo_di_Nero_d%27Avola.jpg"
+  },
+  "neuburger": {
+    "author": "Bauer Karl",
+    "license": "CC BY 3.0 at",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/at/deed.en",
+    "path": "library/grapes/neuburger.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neubrger_Kr_7.JPG"
+  },
+  "ojaleshi": {
+    "author": "Uka2000",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/ojaleshi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8.jpg"
   },
   "palomino": {
     "author": "Pamela Heywood",
@@ -755,6 +811,20 @@
     "path": "library/grapes/plavac-mali.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plavac_mali_N.jpg"
   },
+  "poulsard": {
+    "author": "Arnaud 25",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/poulsard.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Poulsard.JPG"
+  },
+  "raboso": {
+    "author": "Dario Rettore",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "path": "library/grapes/raboso.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:RABOSO_invaiatura.JPG"
+  },
   "ribolla-gialla": {
     "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
     "license": "CC BY-SA 4.0",
@@ -782,6 +852,13 @@
     "licenseUrl": null,
     "path": "library/grapes/roussanne.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Roussanne.jpg"
+  },
+  "sagrantino": {
+    "author": "Zyance",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "path": "library/grapes/sagrantino.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Montefalco_z09.jpg"
   },
   "sangiovese": {
     "author": "Francesco Sgroi",
@@ -1020,6 +1097,13 @@
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "path": "library/grapes/xynisteri.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xynisteri.jpg"
+  },
+  "zierfandler": {
+    "author": "Karl Bauer",
+    "license": "CC BY 3.0 at",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/at/deed.en",
+    "path": "library/grapes/zierfandler.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zierfandler_DSC_4659.JPG"
   },
   "zinfandel": {
     "author": "Anachronist",

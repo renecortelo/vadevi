@@ -71,8 +71,19 @@ const notTheGrape = new Set([
   "glera",
   "grillo",
   "ribolla-gialla",
+  "goruli-mtsvane",
+  "kisi",
+  "muscadelle",
 ]);
 for (const grapeId of notTheGrape) fileOf.delete(grapeId);
+
+// Pictures found on Commons by hand and looked at, for grapes whose item
+// names none, or names one that is not the fruit.
+const reviewedFiles: Record<string, string> = {
+  // Jules Troncy's plate in Viala and Vermorel's Ampélographie (CC0).
+  muscadelle: "Muscadelle - Ampélographie.jpg",
+};
+for (const [grapeId, file] of Object.entries(reviewedFiles)) fileOf.set(grapeId, file);
 
 // 1b. Where Wikidata names none, the picture its Wikipedia article leads
 //     with — asked only for a free one — in the first language that has one,

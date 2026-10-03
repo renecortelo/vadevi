@@ -257,4 +257,60 @@ describe("a grape read in its own language", () => {
     );
     expect(read.aromas).toEqual([]);
   });
+
+  it("reads a Russian article: its colour, its styles and its places in Cyrillic", () => {
+    const russian =
+      "Оджалеши — красноягодный сорт винограда, распространённый в Лечхуми (Грузия). Из оджалеши производятся природно-полусладкие вина и сухие вина. При применении соответствующей технологии можно получить высококачественные десертные вина типа портвейн и кагор.";
+    const read = validateExtraction(
+      {
+        color: {
+          quote: "Оджалеши — красноягодный сорт винограда, распространённый в Лечхуми",
+          value: "red",
+        },
+        regions: {
+          quote: "Оджалеши — красноягодный сорт винограда, распространённый в Лечхуми (Грузия).",
+          value: ["GE: Lechkhumi"],
+          words: { "GE: Lechkhumi": "Лечхуми" },
+        },
+        styles: {
+          quote:
+            "Из оджалеши производятся природно-полусладкие вина и сухие вина. При применении соответствующей технологии можно получить высококачественные десертные вина типа портвейн и кагор.",
+          value: ["sweet", "still", "fortified"],
+        },
+      },
+      russian,
+      ["GE"],
+    );
+    expect(read.color).toBe("red");
+    expect(read.regions).toEqual([{ country: "GE", name: "Lechkhumi" }]);
+    expect(read.styles).toEqual(["sweet", "still", "fortified"]);
+  });
+
+  it("does not take the Russian word for grape as a word for wine", () => {
+    const russian = "Тавквери — сорт винограда, распространённый в Картли и Кахетии.";
+    const read = validateExtraction(
+      {
+        styles: { quote: "Тавквери — сорт винограда, распространённый в Картли", value: ["still"] },
+      },
+      russian,
+      [],
+    );
+    expect(read.styles).toEqual([]);
+  });
+
+  it("knows a country by the older English name an article may still use", () => {
+    const article =
+      "Öküzgözü is an indigenous Turkish grape variety. It is one of the most important red wine varieties of Turkey.";
+    const read = validateExtraction(
+      {
+        origin: {
+          quote: "It is one of the most important red wine varieties of Turkey.",
+          value: "TR",
+        },
+      },
+      article,
+      [],
+    );
+    expect(read.origin).toBe("TR");
+  });
 });

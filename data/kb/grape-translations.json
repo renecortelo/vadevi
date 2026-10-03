@@ -1,0 +1,49 @@
+{
+  "$comment": "Summaries for grapes no Wikipedia in the app's languages describes, translated from the grape's article in its own country's language. Each is a faithful translation of the passage named in `passages`, adding nothing; the app marks it as a translation and links the original. A language that has its own Wikipedia lead keeps that lead. Wikipedia text is CC BY-SA 4.0, and so is its translation.",
+  "grapes": {
+    "Q12870330": {
+      "from": "ru",
+      "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%81%D0%B8_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)",
+      "passages": "Introduction, first paragraph",
+      "texts": {
+        "en": "Kisi (Magranuli) is a wine grape variety used to make amber (orange) and white wines in Georgia. It comes from Kakheti, where it is mainly grown.",
+        "es": "La kisi (magranuli) es una variedad de uva de vinificación que se usa para elaborar vinos ámbar (naranjas) y blancos en Georgia. Procede de Kajetia, donde se cultiva principalmente.",
+        "ca": "El kisi (magranuli) és una varietat de raïm de vinificació que s'utilitza per elaborar vins ambre (taronja) i blancs a Geòrgia. Prové de Kakhètia, on es conrea principalment.",
+        "fr": "Le kisi (magranouli) est un cépage de cuve utilisé pour élaborer des vins ambrés (orange) et blancs en Géorgie. Il est originaire de Kakhétie, où il est principalement cultivé.",
+        "de": "Kisi (Magranuli) ist eine Keltertraubensorte, aus der in Georgien Bernstein- (Orange-) und Weißweine bereitet werden. Sie stammt aus Kachetien, wo sie hauptsächlich angebaut wird.",
+        "it": "Il kisi (magranuli) è un vitigno da vino usato per produrre vini ambrati (orange) e bianchi in Georgia. Proviene dalla Cachezia, dove è coltivato soprattutto.",
+        "nl": "Kisi (Magranuli) is een wijndruivenras waarvan in Georgië amberkleurige (oranje) en witte wijnen worden gemaakt. Het komt uit Kachetië, waar het vooral wordt verbouwd.",
+        "pt-PT": "O kisi (magranuli) é uma casta de uva de vinho usada para fazer vinhos âmbar (laranja) e brancos na Geórgia. É originária de Kakheti, onde é cultivada sobretudo."
+      }
+    },
+    "Q4331498": {
+      "from": "ru",
+      "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8",
+      "passages": "Introduction, without the sentence on the Black Sea group",
+      "texts": {
+        "en": "Ojaleshi is a red-berried grape variety grown in Lechkhumi (Georgia). It has been known since ancient times. In Mingrelia it is called Svanuri and Shonuri. Naturally semi-sweet wines and dry wines are made from Ojaleshi; with the appropriate technique, high-quality dessert wines of the port and kagor type can be made.",
+        "es": "La ojaleshi es una variedad de uva tinta difundida en Lechjumi (Georgia). Se conoce desde la Antigüedad. En Megrelia recibe los nombres de svanuri y shonuri. Con ojaleshi se elaboran vinos naturalmente semidulces y vinos secos; con la técnica adecuada se pueden obtener vinos de postre de gran calidad del tipo oporto y kagor.",
+        "ca": "L'ojaleshi és una varietat de raïm negre estesa a Letxkhumi (Geòrgia). Es coneix des de l'antiguitat. A Megrèlia rep els noms de svanuri i shonuri. Amb ojaleshi s'elaboren vins naturalment semidolços i vins secs; amb la tècnica adequada se'n poden obtenir vins de postres d'alta qualitat del tipus porto i kagor.",
+        "de": "Ojaleshi ist eine rotbeerige Rebsorte, die in Letschchumi (Georgien) verbreitet ist. Sie ist seit ältester Zeit bekannt. In Mingrelien heißt sie Swanuri und Schonuri. Aus Ojaleshi werden natürlich halbsüße und trockene Weine bereitet; mit entsprechender Technik lassen sich hochwertige Dessertweine nach Art von Portwein und Kagor gewinnen.",
+        "it": "L'ojaleshi è un vitigno a bacca rossa diffuso nel Lechkhumi (Georgia). È noto fin dall'antichità. In Mingrelia è chiamato svanuri e shonuri. Dall'ojaleshi si producono vini naturalmente semidolci e vini secchi; con la tecnica appropriata se ne possono ottenere vini da dessert di alta qualità del tipo porto e kagor.",
+        "nl": "Ojaleshi is een blauwe druivensoort die verbreid is in Letsjchoemi (Georgië). Het ras is al sinds de oudheid bekend. In Mingrelië heet het svanuri en shonuri. Van ojaleshi worden van nature halfzoete en droge wijnen gemaakt; met de juiste techniek kunnen er hoogwaardige dessertwijnen van het type port en kagor van worden gemaakt.",
+        "pt-PT": "O ojaleshi é uma casta tinta difundida em Lechkhumi (Geórgia). É conhecida desde a Antiguidade. Na Megrélia chamam-lhe svanuri e shonuri. Do ojaleshi fazem-se vinhos naturalmente meio-doces e vinhos secos; com a técnica adequada podem obter-se vinhos de sobremesa de alta qualidade do tipo porto e kagor."
+      }
+    },
+    "Q20572365": {
+      "from": "ru",
+      "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%83%D0%BB%D0%B8_%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5",
+      "passages": "Introduction, without the gloss of the name",
+      "texts": {
+        "en": "Goruli Mtsvane (Georgian: გორული მწვანე) is an indigenous wine grape variety known since ancient times. It belongs to the eco-geographical group of grape varieties of the Black Sea basin. In Georgia it is used to make white wines and base wines for sparkling wine. It is grown in Kartli and Imereti.",
+        "es": "La goruli mtsvane (en georgiano, გორული მწვანე) es una variedad autóctona de uva de vinificación conocida desde la Antigüedad. Pertenece al grupo ecogeográfico de variedades de la cuenca del mar Negro. En Georgia se usa para elaborar vinos blancos y vinos base para espumosos. Se cultiva en Kartli e Imereti.",
+        "ca": "El goruli mtsvane (en georgià, გორული მწვანე) és una varietat autòctona de raïm de vinificació coneguda des de l'antiguitat. Pertany al grup ecogeogràfic de varietats de la conca de la mar Negra. A Geòrgia s'utilitza per elaborar vins blancs i vins base per a escumosos. Es conrea a Kartli i Imereti.",
+        "fr": "Le goruli mtsvane (en géorgien : გორული მწვანე) est un cépage de cuve autochtone connu depuis l'Antiquité. Il appartient au groupe écogéographique des cépages du bassin de la mer Noire. En Géorgie, il sert à élaborer des vins blancs et des vins de base pour les mousseux. Il est cultivé en Karthlie et en Iméréthie.",
+        "de": "Goruli Mtsvane (georgisch გორული მწვანე) ist eine seit alters bekannte autochthone Keltertraubensorte. Sie gehört zur ökogeografischen Sortengruppe des Schwarzmeerbeckens. In Georgien werden aus ihr Weißweine und Grundweine für Schaumwein bereitet. Angebaut wird sie in Kartlien und Imeretien.",
+        "it": "Il goruli mtsvane (in georgiano გორული მწვანე) è un vitigno da vino autoctono noto fin dall'antichità. Appartiene al gruppo ecogeografico dei vitigni del bacino del Mar Nero. In Georgia è usato per produrre vini bianchi e vini base per spumanti. È coltivato in Kartli e Imereti.",
+        "nl": "Goruli mtsvane (Georgisch: გორული მწვანე) is een autochtoon wijndruivenras dat al sinds de oudheid bekend is. Het behoort tot de ecogeografische groep druivenrassen van het Zwarte Zeebekken. In Georgië worden er witte wijnen en basiswijnen voor mousserende wijn van gemaakt. Het wordt verbouwd in Kartli en Imereti.",
+        "pt-PT": "O goruli mtsvane (em georgiano, გორული მწვანე) é uma casta autóctone de uva de vinho conhecida desde a Antiguidade. Pertence ao grupo ecogeográfico de castas da bacia do mar Negro. Na Geórgia usa-se para fazer vinhos brancos e vinhos-base para espumantes. É cultivada em Kartli e Imereti."
+      }
+    }
+  }
+}

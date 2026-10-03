@@ -63,6 +63,7 @@
       "dried berry": "dried fruit",
       "dried figs": "fig",
       "dried fruit": "dried fruit",
+      "dried herbs": "herbs",
       "dry chocolate": "chocolate",
       "earthy": "earthy",
       "earthy leather": "leather",
@@ -130,6 +131,8 @@
       "minerally": "mineral",
       "mint": "mint",
       "molasses": "molasses",
+      "morello cherries": "sour cherry",
+      "morello cherry": "sour cherry",
       "mossy minerality": "mineral",
       "mulberry": "mulberry",
       "muscat": "grape",
@@ -416,6 +419,16 @@
         "nl": "bosbes",
         "pt-PT": "mirtilo"
       },
+      "boxwood": {
+        "en": "boxwood",
+        "es": "boj",
+        "ca": "boix",
+        "fr": "buis",
+        "de": "Buchsbaum",
+        "it": "bosso",
+        "nl": "buxus",
+        "pt-PT": "buxo"
+      },
       "buttercup": {
         "en": "buttercup",
         "es": "ranúnculo",
@@ -545,6 +558,26 @@
         "it": "aneto",
         "nl": "dille",
         "pt-PT": "endro"
+      },
+      "dried apple": {
+        "en": "dried apple",
+        "es": "manzana deshidratada",
+        "ca": "poma seca",
+        "fr": "pomme séchée",
+        "de": "getrockneter Apfel",
+        "it": "mela secca",
+        "nl": "gedroogde appel",
+        "pt-PT": "maçã seca"
+      },
+      "dried apricot": {
+        "en": "dried apricot",
+        "es": "orejón",
+        "ca": "orellana",
+        "fr": "abricot sec",
+        "de": "getrocknete Aprikose",
+        "it": "albicocca secca",
+        "nl": "gedroogde abrikoos",
+        "pt-PT": "alperce seco"
       },
       "dried fruit": {
         "en": "dried fruit",
@@ -1056,6 +1089,16 @@
         "nl": "ananas",
         "pt-PT": "ananás"
       },
+      "pistachio": {
+        "en": "pistachio",
+        "es": "pistacho",
+        "ca": "pistatxo",
+        "fr": "pistache",
+        "de": "Pistazie",
+        "it": "pistacchio",
+        "nl": "pistache",
+        "pt-PT": "pistácio"
+      },
       "plum": {
         "en": "plum",
         "es": "ciruela",
@@ -1075,6 +1118,16 @@
         "it": "polline",
         "nl": "stuifmeel",
         "pt-PT": "pólen"
+      },
+      "pomegranate": {
+        "en": "pomegranate",
+        "es": "granada",
+        "ca": "magrana",
+        "fr": "grenade",
+        "de": "Granatapfel",
+        "it": "melograno",
+        "nl": "granaatappel",
+        "pt-PT": "romã"
       },
       "prune": {
         "en": "prune",
@@ -1316,6 +1369,16 @@
         "nl": "viooltje",
         "pt-PT": "violeta"
       },
+      "walnut": {
+        "en": "walnut",
+        "es": "nuez",
+        "ca": "nou",
+        "fr": "noix",
+        "de": "Walnuss",
+        "it": "noce",
+        "nl": "walnoot",
+        "pt-PT": "noz"
+      },
       "white pepper": {
         "en": "white pepper",
         "es": "pimienta blanca",
@@ -1344,6 +1407,7 @@
       "fish dishes": "fish",
       "foie gras": "foie gras",
       "fondue": "fondue",
+      "grilled meat": "grilled meats",
       "grilled meats": "grilled meats",
       "hungarian dishes": null,
       "lamb": "lamb",
@@ -1354,6 +1418,7 @@
       "pork": "pork",
       "pršut": "prosciutto",
       "raclette": "raclette",
+      "red meats": "red meat",
       "salmon": "salmon",
       "seafood": "seafood",
       "shellfish": "shellfish",
@@ -1498,6 +1563,16 @@
         "nl": "verse kaas",
         "pt-PT": "queijo fresco"
       },
+      "game": {
+        "en": "game",
+        "es": "caza",
+        "ca": "caça",
+        "fr": "gibier",
+        "de": "Wild",
+        "it": "selvaggina",
+        "nl": "wild",
+        "pt-PT": "caça"
+      },
       "goat cheese": {
         "en": "goat cheese",
         "es": "queso de cabra",
@@ -1587,6 +1662,16 @@
         "it": "raclette",
         "nl": "raclette",
         "pt-PT": "raclette"
+      },
+      "red meat": {
+        "en": "red meat",
+        "es": "carne roja",
+        "ca": "carn vermella",
+        "fr": "viande rouge",
+        "de": "rotes Fleisch",
+        "it": "carne rossa",
+        "nl": "rood vlees",
+        "pt-PT": "carne vermelha"
       },
       "salmon": {
         "en": "salmon",
