@@ -507,13 +507,14 @@
     "summaryTitle": "Sobre este vino",
     "comparison": {
       "title": "Tu cata frente a las fuentes",
-      "empty": "Aún no hay comparación. Cuando el vino esté investigado y alguien lo haya catado, se puede escribir aquí un párrafo que ponga las dos versiones una al lado de la otra.",
+      "empty": "Aún no hay comparación. Cuando el vino esté investigado —o sus uvas estén en la biblioteca— y alguien lo haya catado, se puede escribir aquí un párrafo que ponga las dos versiones una al lado de la otra.",
       "action": "Escribir la comparación",
       "rewriteAction": "Rehacer la comparación",
       "writing": "Escribiendo…",
       "inferred": "Lectura de lo ya registrado, no una fuente nueva",
-      "noMaterial": "Falta una de las dos partes: investiga el vino o registra una cata y vuelve a intentarlo.",
-      "error": "No se pudo escribir la comparación. Inténtalo de nuevo."
+      "noMaterial": "Falta una de las dos partes: investiga el vino, registra sus uvas o registra una cata y vuelve a intentarlo.",
+      "error": "No se pudo escribir la comparación. Inténtalo de nuevo.",
+      "basisGrapes": "Comparada con lo típico de sus uvas (biblioteca del vino), porque el productor no ha dicho nada sobre cómo sabe."
     },
     "sourceType": {
       "producer": "Productor",

@@ -638,7 +638,12 @@ export function WineEvidencePage() {
           {comparison === null ? (
             <p className="research-narrative__text">{t("evidence.comparison.empty")}</p>
           ) : (
-            <p className="research-narrative__text">{String(comparison.value)}</p>
+            <>
+              <p className="research-narrative__text">{String(comparison.value)}</p>
+              {comparison.researchMethod === "tasting.comparison.grapes.v1" ? (
+                <p className="section-help">{t("evidence.comparison.basisGrapes")}</p>
+              ) : null}
+            </>
           )}
           <div className="research-narrative__footer">
             <span className="fact-card__evidence">{t("evidence.comparison.inferred")}</span>

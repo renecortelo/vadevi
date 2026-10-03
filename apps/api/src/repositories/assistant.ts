@@ -28,6 +28,7 @@ import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { appellationsForCountry, resolveAppellationCountries } from "./appellation-terms";
 import { questionIsUnclear } from "./assistant-question";
+import { grapeReferencesFor } from "./grape-reference";
 import { listPriceObservations } from "./cellar";
 import { resolveCountryCodes } from "./country-terms";
 import { resolveGrapeNamesFromMessage } from "./grape-terms";
@@ -60,6 +61,17 @@ const ignoredTerms = new Set(
       "o a os as um uma e ou de do da em com para meu minha nosso nossa que qual vinho vinhos garrafa garrafas encontra mostra",
       "de het een en of van in met voor mijn ons onze wat welke wijn wijnen fles flessen vind toon",
       "der die das ein eine und oder von im in mit für mein meine unser unsere was welcher wein weine flasche flaschen finde zeige",
+      // The words a question is phrased in, which no wine is named after:
+      // asking, comparing, tasting, knowing. Left in, "¿cómo se compara mi
+      // cata contra lo que sabes…?" searched for "compara" and "sabes".
+      "como cómo se lo le les su sus tu tus te me has he ha hay es son está esta este esto eso ese esa sobre contra frente entre compara comparar comparación comparo cata catas catado probado sabes sabe saber dime dame cuéntame cuenta qué cuál cuáles cuánto cuántos uva uvas variedad variedades ficha",
+      "com es els seus teu teus has he ha hi són aquest aquesta això sobre contra entre compara comparar comparació tast tasts tastat saps sap digues raïm raïms varietat",
+      "how do does did you your yours about against versus compare comparison tasting tasted taste know knows tell grape grapes variety varieties sheet",
+      "comment est sont ce cet cette sur contre entre compare comparer comparaison dégustation goûté sais dis cépage cépages",
+      "come è sono questo questa su contro tra confronta confronto degustazione assaggiato sai dimmi uva uve vitigno vitigni",
+      "como é são este esta isto sobre contra entre compara comparar comparação prova provado sabes diz casta castas",
+      "hoe is zijn dit deze over tegen tussen vergelijk vergelijken proeverij geproefd weet druif druiven",
+      "wie ist sind dies diese über gegen zwischen vergleich vergleichen verkostung verkostet weißt sag rebsorte rebsorten",
     ].join(" "),
   ).split(" "),
 );
@@ -69,9 +81,11 @@ function searchTerms(message: string): string[] {
     ...new Set(
       normalizeWineText(message)
         .split(" ")
-        .filter((term) => term.length >= 2 && !/^\d+$/.test(term) && !ignoredTerms.has(term)),
+        // Three letters at least: a two-letter term ("se") matched inside
+        // any name that contains it ("Rosé"), and decided the answer.
+        .filter((term) => term.length >= 3 && !/^\d+$/.test(term) && !ignoredTerms.has(term)),
     ),
-  ].slice(0, 6);
+  ].slice(0, 8);
 }
 
 function requestsTasteProfile(message: string): boolean {
@@ -86,6 +100,26 @@ function requestsComparison(message: string): boolean {
   return /\b(compare|comparison|versus|vs|comparar|comparacion|comparació|compara|comparer|confronta|confronto|vergelijken|vergelijk|vergleichen|vergleich)\b/i.test(
     normalized,
   );
+}
+
+/**
+ * A tasting set against a reference rather than against other wines: "how
+ * does my tasting compare with what you know of its grapes", "…with what the
+ * producer says". Asked about one wine, it is about that wine — not the
+ * near matches a comparison between wines would bring along.
+ */
+function requestsReferenceComparison(message: string): boolean {
+  const normalized = normalizeWineText(message);
+  const comparing =
+    requestsComparison(message) ||
+    /\b(contra|frente|coincide|coinciden|encaja|parece|against|matches|match|agree|correspond|correspon|entspricht|corrisponde|klopt)\b/i.test(
+      normalized,
+    );
+  const reference =
+    /\b(uva|uvas|raim|raims|grape|grapes|variedad|variedades|varietat|varietats|variety|varieties|cepage|cepages|vitigno|vitigni|rebsorte|rebsorten|druif|druiven|casta|castas|productor|producer|bodega|celler|producteur|produttore|erzeuger|producent|produtor|ficha|oficial|official|tipico|tipica|typical|typique|typisch|tipic|biblioteca|library|sabes|saps|know|teoria|theory)\b/i.test(
+      normalized,
+    );
+  return comparing && reference;
 }
 
 function requestsPrice(message: string): boolean {
@@ -1147,12 +1181,28 @@ async function searchMemory(
       }
     }
   }
+  // The best match first: a wine whose whole name the question spells out,
+  // then the wine matching more of its terms. Results used to keep the order
+  // the passes found them in, so a wine matching one stray word could lead.
+  const spelled = ` ${normalizeWineText(message)} `;
+  const relevance = (result: AssistantSearchResult) => {
+    const name = normalizeWineText(result.wine.displayName);
+    const text = normalizeWineText(
+      [result.wine.displayName, result.wine.producerName ?? "", result.wine.region ?? ""].join(" "),
+    );
+    return (
+      (name.length >= 3 && spelled.includes(` ${name} `) ? 100 : 0) +
+      terms.filter((term) => text.includes(term)).length
+    );
+  };
   const ordered = [...results.values()].sort((left, right) => {
     // Bring the carried wine to the front only when it IS the subject — the
     // follow-up case where the question found nothing of its own. On a fresh
     // subject the genuine top match must lead, not the wine held from before.
-    if (visibleWineId === null || foundOwnMatches) return 0;
-    return Number(right.wine.id === visibleWineId) - Number(left.wine.id === visibleWineId);
+    if (visibleWineId !== null && !foundOwnMatches) {
+      return Number(right.wine.id === visibleWineId) - Number(left.wine.id === visibleWineId);
+    }
+    return relevance(right) - relevance(left);
   });
   return { results: ordered.slice(0, 10), terms };
 }
@@ -1812,9 +1862,10 @@ export async function runDeterministicAssistantTurn(
   // other question naming one bottle — "how did I rate the Kiwi Trail?" — was
   // listing every near match as a "matching wine", which reads as though the
   // answer covers them too.
+  const comparesWithReference = requestsReferenceComparison(options.request.message);
   const aboutSeveralWines =
     overview ||
-    requestsComparison(options.request.message) ||
+    (requestsComparison(options.request.message) && !comparesWithReference) ||
     requestsRecommendation(options.request.message);
   const focusOne = (wine: AssistantSearchResult) => {
     results = [wine];
@@ -2220,6 +2271,57 @@ export async function runDeterministicAssistantTurn(
     options.request.message,
     options.request.locale,
   );
+  // The grapes of the wine in question, from the library: what each variety
+  // is typically like, so a question setting the reader's tasting against
+  // "what you know of its grapes" has that side to stand on. Only for the wine
+  // in hand — the one named, the only match, or the one a reference
+  // comparison is about — so a list of wines is not crowded out by grapes.
+  const winesInHand = overview
+    ? []
+    : comparesWithReference
+      ? results.slice(0, 1)
+      : namedWine !== null
+        ? [namedWine]
+        : results.length === 1
+          ? results
+          : [];
+  const now = new Date().toISOString();
+  for (const result of winesInHand) {
+    const references = await grapeReferencesFor(
+      database,
+      result.wine.grapes.map((grape) => grape.name),
+    );
+    for (const reference of references) {
+      if (reference.text === null) continue;
+      const sourceId = await librarySourceId(reference.card.id);
+      if (!library.sources.some((source) => source.id === sourceId)) {
+        library.sources.push({
+          canonicalUrl: reference.sourceUrl,
+          createdAt: now,
+          createdByProvider: "wine-library",
+          createdByUserId: null,
+          id: sourceId,
+          licenseIdentifier: "CC-BY-SA-4.0",
+          publisher: "Wikipedia",
+          retrievedAt: now,
+          sourceType: "open_dataset",
+          title: `${reference.card.name} — Wikipedia`,
+          updatedAt: now,
+        });
+      }
+      library.statements.push({
+        evidenceClass: "researched",
+        id: `library-wine-${result.wine.id}-${reference.card.id}`,
+        sampleSize: null,
+        sourceIds: [sourceId],
+        text: `wine library, grape of ${result.wine.displayName}: ${reference.text}`,
+      });
+      if (!library.grapes.some((grape) => grape.id === reference.card.id)) {
+        library.grapes.push({ id: reference.card.id, name: reference.card.name });
+      }
+    }
+  }
+  library.grapes.splice(3);
   for (const source of library.sources) citationMap.set(source.id, source);
   const languageResult =
     options.language === null

@@ -220,6 +220,12 @@ export type NarrativeRequest = Readonly<{
  * flavour, a score or a fact that neither side stated.
  */
 export type TastingComparisonRequest = Readonly<{
+  /**
+   * What `sources` is: the producer and published tastings of this wine, or
+   * the wine library's profile of its grapes — general to each variety, and
+   * to be attributed as such.
+   */
+  basis?: "grapes" | "producer";
   locale: ResearchLocale;
   /** What the sources say: the gathered notes, highlights and summary. */
   sources: string[];

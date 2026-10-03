@@ -507,13 +507,14 @@
     "summaryTitle": "Über diesen Wein",
     "comparison": {
       "title": "Ihre Verkostung neben den Quellen",
-      "empty": "Noch kein Vergleich. Sobald der Wein recherchiert und verkostet wurde, kann hier ein Absatz entstehen, der beide Darstellungen nebeneinanderstellt.",
+      "empty": "Noch kein Vergleich. Sobald der Wein recherchiert ist – oder seine Rebsorten in der Bibliothek stehen – und jemand ihn verkostet hat, kann hier ein Absatz beide Seiten gegenüberstellen.",
       "action": "Vergleich schreiben",
       "rewriteAction": "Vergleich neu schreiben",
       "writing": "Wird geschrieben…",
       "inferred": "Eine Lesart des bereits Erfassten, keine neue Quelle",
-      "noMaterial": "Eine der beiden Seiten fehlt: Recherchieren Sie den Wein oder erfassen Sie eine Verkostung und versuchen Sie es erneut.",
-      "error": "Der Vergleich konnte nicht geschrieben werden. Bitte erneut versuchen."
+      "noMaterial": "Eine Seite fehlt: Recherchieren Sie den Wein, erfassen Sie seine Rebsorten oder eine Verkostung und versuchen Sie es erneut.",
+      "error": "Der Vergleich konnte nicht geschrieben werden. Bitte erneut versuchen.",
+      "basisGrapes": "Verglichen mit dem, was für seine Rebsorten typisch ist (Weinbibliothek), da der Erzeuger nichts zum Geschmack sagt."
     },
     "sourceType": {
       "producer": "Erzeuger",

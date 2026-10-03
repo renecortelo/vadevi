@@ -507,13 +507,14 @@
     "summaryTitle": "À propos de ce vin",
     "comparison": {
       "title": "Votre dégustation face aux sources",
-      "empty": "Pas encore de comparaison. Une fois le vin recherché et dégusté, un paragraphe peut être écrit ici pour mettre les deux versions côte à côte.",
+      "empty": "Pas encore de comparaison. Une fois le vin documenté — ou ses cépages présents dans la bibliothèque — et dégusté, un paragraphe mettant les deux côte à côte pourra être rédigé ici.",
       "action": "Écrire la comparaison",
       "rewriteAction": "Réécrire la comparaison",
       "writing": "Rédaction…",
       "inferred": "Une lecture de ce qui est déjà enregistré, pas une nouvelle source",
-      "noMaterial": "Il manque l'un des deux côtés : recherchez le vin ou enregistrez une dégustation, puis réessayez.",
-      "error": "La comparaison n'a pas pu être écrite. Réessayez."
+      "noMaterial": "Il manque une des deux parties : documentez le vin, indiquez ses cépages ou enregistrez une dégustation, puis réessayez.",
+      "error": "La comparaison n'a pas pu être écrite. Réessayez.",
+      "basisGrapes": "Comparée à ce qui est typique de ses cépages (bibliothèque du vin), le producteur n'ayant rien dit de son goût."
     },
     "sourceType": {
       "producer": "Producteur",

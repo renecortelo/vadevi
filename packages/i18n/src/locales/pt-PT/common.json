@@ -507,13 +507,14 @@
     "summaryTitle": "Sobre este vinho",
     "comparison": {
       "title": "A sua prova face às fontes",
-      "empty": "Ainda não há comparação. Quando o vinho estiver investigado e alguém o tiver provado, pode escrever-se aqui um parágrafo que coloque as duas versões lado a lado.",
+      "empty": "Ainda não há comparação. Quando o vinho estiver pesquisado — ou as suas castas estiverem na biblioteca — e alguém o tiver provado, pode escrever-se aqui um parágrafo que ponha as duas versões lado a lado.",
       "action": "Escrever a comparação",
       "rewriteAction": "Refazer a comparação",
       "writing": "A escrever…",
       "inferred": "Uma leitura do que já está registado, não uma fonte nova",
-      "noMaterial": "Falta uma das duas partes: investigue o vinho ou registe uma prova e tente novamente.",
-      "error": "Não foi possível escrever a comparação. Tente novamente."
+      "noMaterial": "Falta uma das partes: pesquise o vinho, registe as castas ou uma prova e tente novamente.",
+      "error": "Não foi possível escrever a comparação. Tente novamente.",
+      "basisGrapes": "Comparada com o que é típico das suas castas (biblioteca do vinho), porque o produtor nada diz sobre o sabor."
     },
     "sourceType": {
       "producer": "Produtor",

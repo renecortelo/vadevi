@@ -507,13 +507,14 @@
     "summaryTitle": "Sobre aquest vi",
     "comparison": {
       "title": "El teu tast davant les fonts",
-      "empty": "Encara no hi ha comparació. Quan el vi estigui investigat i algú l'hagi tastat, es pot escriure aquí un paràgraf que posi les dues versions una al costat de l'altra.",
+      "empty": "Encara no hi ha comparació. Quan el vi estigui investigat —o els seus raïms siguin a la biblioteca— i algú l'hagi tastat, s'hi pot escriure un paràgraf que posi les dues versions una al costat de l'altra.",
       "action": "Escriure la comparació",
       "rewriteAction": "Refer la comparació",
       "writing": "Escrivint…",
       "inferred": "Una lectura del que ja hi ha registrat, no una font nova",
-      "noMaterial": "Falta una de les dues parts: investiga el vi o registra un tast i torna-ho a provar.",
-      "error": "No s'ha pogut escriure la comparació. Torna-ho a provar."
+      "noMaterial": "Falta una de les dues parts: investiga el vi, registra'n els raïms o registra un tast i torna-ho a provar.",
+      "error": "No s'ha pogut escriure la comparació. Torna-ho a provar.",
+      "basisGrapes": "Comparada amb el que és típic dels seus raïms (biblioteca del vi), perquè el productor no n'ha dit res sobre com sap."
     },
     "sourceType": {
       "producer": "Productor",

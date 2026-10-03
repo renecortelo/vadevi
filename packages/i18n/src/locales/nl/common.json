@@ -507,13 +507,14 @@
     "summaryTitle": "Over deze wijn",
     "comparison": {
       "title": "Jouw proeverij naast de bronnen",
-      "empty": "Nog geen vergelijking. Zodra de wijn is onderzocht en iemand hem heeft geproefd, kan hier een alinea komen die beide lezingen naast elkaar zet.",
+      "empty": "Nog geen vergelijking. Zodra de wijn is onderzocht — of de druiven in de bibliotheek staan — en iemand hem heeft geproefd, kan hier een alinea beide naast elkaar zetten.",
       "action": "Vergelijking schrijven",
       "rewriteAction": "Vergelijking opnieuw schrijven",
       "writing": "Bezig met schrijven…",
       "inferred": "Een lezing van wat al is vastgelegd, geen nieuwe bron",
-      "noMaterial": "Een van beide kanten ontbreekt: onderzoek de wijn of leg een proeverij vast en probeer het opnieuw.",
-      "error": "De vergelijking kon niet worden geschreven. Probeer het opnieuw."
+      "noMaterial": "Er ontbreekt een kant: onderzoek de wijn, leg de druiven of een proefnotitie vast en probeer het opnieuw.",
+      "error": "De vergelijking kon niet worden geschreven. Probeer het opnieuw.",
+      "basisGrapes": "Vergeleken met wat typisch is voor zijn druiven (wijnbibliotheek), omdat de producent niets over de smaak zegt."
     },
     "sourceType": {
       "producer": "Producent",

@@ -32,6 +32,30 @@ const languageNames: Record<ResearchLocale, string> = {
  * result is sanitized like any external text and returns null on any failure, so
  * the caller keeps the paragraph it already had.
  */
+/**
+ * The comparison when the producer has said nothing: the tasting set against
+ * what the wine's grapes are typically like. The reference is general to each
+ * variety, so it is attributed to the grape ("Garnacha typically…") and never
+ * to the producer or to this bottle.
+ */
+function grapesPrompt(language: string): string {
+  return (
+    `You are a sommelier writing in ${language}. You are given what a taster ` +
+    `(or a group) recorded about one wine, and what a wine library says is ` +
+    `typical of the grape varieties it is made from — general to each variety, ` +
+    `not a description of this wine. Write 2 to 4 sentences setting the tasting ` +
+    `beside that: where it matches what the grapes typically give (aromas, ` +
+    `flavours, acidity, tannin, body, the dishes they suit), where it departs ` +
+    `from it, and what only one side mentions. Attribute each side plainly ` +
+    `("you found…", "Garnacha typically shows…"), and name a person when the ` +
+    `tasting line names one. Never say the producer or the wine itself is ` +
+    `described this way; a difference from the typical profile is worth ` +
+    `noting, not a fault. Use ONLY these two lists — never add a flavour, a ` +
+    `score, a grape or any detail neither side states. If they barely overlap, ` +
+    `say so. Reply with the paragraph only, no preamble.`
+  );
+}
+
 export class CloudflareNarrativeAdapter implements NarrativePort {
   constructor(
     private readonly ai: WorkersAiRunner,
@@ -68,22 +92,24 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
         messages: [
           {
             content:
-              `You are a sommelier writing in ${language}. You are given what a ` +
-              `taster (or a group) recorded about one wine, and what its sources — ` +
-              `the producer and published tastings — say about it. Write 2 to 4 ` +
-              `sentences setting the two side by side: where they agree, where they ` +
-              `differ, and what only one side mentions. Attribute each side plainly ` +
-              `("you found…", "the producer describes…"), and name a person when the ` +
-              `tasting line names one. From the sources use ONLY what they say about ` +
-              `how the wine looks, smells, tastes and feels — colour, aromas, ` +
-              `flavours, sweetness, acidity, tannin, body, texture, finish, and the ` +
-              `dishes it is said to suit. Ignore, and never mention, history, ` +
-              `founding years, places, hectares, awards, prices, shops or production ` +
-              `facts: they cannot be set against a tasting. If the sources say ` +
-              `nothing about how the wine tastes, say exactly that. Use ONLY these ` +
-              `two lists — never add a flavour, a score, a grape or any detail ` +
-              `neither side states. If they barely overlap, say so rather than ` +
-              `inventing agreement. Reply with the paragraph only, no preamble.`,
+              input.basis === "grapes"
+                ? grapesPrompt(language)
+                : `You are a sommelier writing in ${language}. You are given what a ` +
+                  `taster (or a group) recorded about one wine, and what its sources — ` +
+                  `the producer and published tastings — say about it. Write 2 to 4 ` +
+                  `sentences setting the two side by side: where they agree, where they ` +
+                  `differ, and what only one side mentions. Attribute each side plainly ` +
+                  `("you found…", "the producer describes…"), and name a person when the ` +
+                  `tasting line names one. From the sources use ONLY what they say about ` +
+                  `how the wine looks, smells, tastes and feels — colour, aromas, ` +
+                  `flavours, sweetness, acidity, tannin, body, texture, finish, and the ` +
+                  `dishes it is said to suit. Ignore, and never mention, history, ` +
+                  `founding years, places, hectares, awards, prices, shops or production ` +
+                  `facts: they cannot be set against a tasting. If the sources say ` +
+                  `nothing about how the wine tastes, say exactly that. Use ONLY these ` +
+                  `two lists — never add a flavour, a score, a grape or any detail ` +
+                  `neither side states. If they barely overlap, say so rather than ` +
+                  `inventing agreement. Reply with the paragraph only, no preamble.`,
             role: "system",
           },
           {

@@ -507,13 +507,14 @@
     "summaryTitle": "Su questo vino",
     "comparison": {
       "title": "La tua degustazione a confronto con le fonti",
-      "empty": "Ancora nessun confronto. Quando il vino sarà documentato e qualcuno lo avrà degustato, qui si potrà scrivere un paragrafo che metta le due versioni una accanto all'altra.",
+      "empty": "Ancora nessun confronto. Quando il vino sarà documentato — o i suoi vitigni saranno nella biblioteca — e qualcuno l'avrà degustato, qui si potrà scrivere un paragrafo che metta a confronto le due versioni.",
       "action": "Scrivi il confronto",
       "rewriteAction": "Riscrivi il confronto",
       "writing": "Scrittura…",
       "inferred": "Una lettura di ciò che è già registrato, non una nuova fonte",
-      "noMaterial": "Manca una delle due parti: documenta il vino o registra una degustazione, poi riprova.",
-      "error": "Non è stato possibile scrivere il confronto. Riprova."
+      "noMaterial": "Manca una delle due parti: documenta il vino, registra i suoi vitigni o una degustazione e riprova.",
+      "error": "Non è stato possibile scrivere il confronto. Riprova.",
+      "basisGrapes": "Confrontato con ciò che è tipico dei suoi vitigni (biblioteca del vino), perché il produttore non dice nulla sul gusto."
     },
     "sourceType": {
       "producer": "Produttore",
