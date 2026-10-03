@@ -65,7 +65,6 @@ const strongStems = [
   "retrogust",
   "persisten",
   "finish",
-  "textur",
   "astring",
   "perlage",
   "burbuj",
@@ -75,8 +74,8 @@ const strongStems = [
 const strongWords = new Set(["nez", "mond", "cata", "catas", "body", "corps", "final", "finale"]);
 /**
  * Descriptors — fruit, sweetness, oak, colour as described — which a sentence
- * about the estate may also use ("blanco, rosado, tinto y dulce" names types),
- * so two are needed. Plain colour words that name a type are not among them.
+ * about the estate may also use ("blanco, rosado, tinto y dulce" names types;
+ * "textura arenosa" is the soil's), so two are needed. Plain colour words that name a type are not among them.
  */
 const descriptorStems = [
   "color",
@@ -128,6 +127,7 @@ const descriptorStems = [
   "amarg",
   "bitter",
   "intens",
+  "textur",
   "ripe",
   "madur",
   "maturo",

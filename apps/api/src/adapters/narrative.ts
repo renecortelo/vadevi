@@ -42,14 +42,14 @@ const languageNames: Record<ResearchLocale, string> = {
  */
 function register(locale: TastingComparisonRequest["locale"]): string {
   const forms: Record<string, string> = {
-    ca: "Address the reader as 'tu'.",
-    de: "Address the reader as 'Sie'.",
-    en: "Address the reader as 'you'.",
-    es: "Address the reader as 'tú', never 'usted'.",
-    fr: "Address the reader as 'vous'.",
-    it: "Address the reader as 'tu'.",
-    nl: "Address the reader as 'je'.",
-    "pt-PT": "Address the reader as 'tu'.",
+    ca: "When addressing the reader, use 'tu'.",
+    de: "When addressing the reader, use 'Sie'.",
+    en: "When addressing the reader, use 'you'.",
+    es: "When addressing the reader, use 'tú', never 'usted'.",
+    fr: "When addressing the reader, use 'vous'.",
+    it: "When addressing the reader, use 'tu'.",
+    nl: "When addressing the reader, use 'je'.",
+    "pt-PT": "When addressing the reader, use 'tu'.",
   };
   return forms[locale] ?? forms.en!;
 }
@@ -106,7 +106,11 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
               `producer describes…", "Garnacha typically shows…" — never present a ` +
               `grape's typical profile as the producer's words or as this bottle's; ` +
               `a departure from the typical profile is worth noting, not a fault. ` +
-              `Name a person when the tasting line names one. ${register(input.locale)} ` +
+              `Each tasting line says whose tasting it is. Speak to the reader as ` +
+              `"you" only about a line marked as the reader's own; describe anyone ` +
+              `else's tasting in the third person, by name ("Maria found…"). If no ` +
+              `line is the reader's own, never write that the reader found, noted or ` +
+              `tasted anything. ${register(input.locale)} ` +
               `Use ONLY these lists — ` +
               `never add a flavour, a score, a grape or any detail none of them ` +
               `states. If they barely overlap, say so. Finish every sentence. Reply ` +

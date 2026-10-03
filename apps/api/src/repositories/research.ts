@@ -1174,7 +1174,16 @@ async function comparisonTastingLines(
         : `conclusion: ${clipLine(row.conclusion_text, 200)}`,
       !self || row.comment === null ? null : `comment: ${clipLine(row.comment, 200)}`,
     ].filter((part): part is string => part !== null && part.trim().length > 0);
-    if (parts.length > 0) lines.push(`${who}: ${parts.join("; ")}`);
+    // Whose tasting it is, said outright: a line headed only with a name read
+    // to the model as the reader's own, and Maria's tasting came back as "you
+    // found…, according to Maria".
+    if (parts.length > 0) {
+      lines.push(
+        self
+          ? `The reader's own tasting (address the reader as "you"): ${parts.join("; ")}`
+          : `Tasting by ${who}, another member of the group, not the reader (refer to ${who} by name, never as "you"): ${parts.join("; ")}`,
+      );
+    }
   }
   return lines;
 }

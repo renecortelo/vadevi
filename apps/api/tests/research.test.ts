@@ -1279,6 +1279,13 @@ describe("bounded wine research jobs", () => {
     expect(tastingText).toContain("Me pareció más ligero");
     expect(tastingText).toContain("Ana rated it 91");
     expect(tastingText).not.toContain("ANA_PRIVATE_PROSE");
+    // And whose tasting each is, said outright, so Ana's is never "you found".
+    expect(sawTasting.find((line) => line.includes("Me pareció más ligero"))).toMatch(
+      /^The reader's own tasting/,
+    );
+    expect(sawTasting.find((line) => line.includes("Ana rated it 91"))).toMatch(
+      /^Tasting by Ana, another member of the group, not the reader/,
+    );
 
     const factsResponse = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,

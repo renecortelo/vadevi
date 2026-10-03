@@ -16,6 +16,8 @@ describe("the sentences of research that are about the glass", () => {
         "A red wine produced by Celler Marià Pagés. A blend of Tempranillo and Garnacha from Empordà, Spain.",
         "La gamma mitjana que produïm són: els blancs Vinya de l’Hort i el Mar de Lluna, el rosat Rosa-T i el Mar de Lluna negre, que són perfectes per acompanyar una copa de tarda.",
         "Medalla de oro en el Concours Mondial de Bruxelles. Vino de la Tierra de Castilla, elaborado en Catalunya.",
+        "La región de la DO Empordà se caracteriza por una gran variedad de terrenos, mayoritariamente de textura arenosa y pobres en materia orgánica, lo que la hace ideal para la producción de vinos de alta calidad.",
+        "Ruixim de Mar es un Vino espumoso. Hecho con Macabeo. Ve las reseñas y los precios de este vino.",
       ]),
     ).toEqual([]);
   });
