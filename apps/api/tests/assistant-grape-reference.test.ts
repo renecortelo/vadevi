@@ -249,7 +249,9 @@ describe("a tasting set against its grapes", () => {
       ).bind(
         spaceId,
         both.id,
-        JSON.stringify("Una finca familiar desde 1920. En nariz, cereza madura y regaliz. Perfecto para una copa de tarde."),
+        JSON.stringify(
+          "Una finca familiar desde 1920. En nariz, cereza madura y regaliz. Perfecto para una copa de tarde.",
+        ),
         now,
         now,
       ),
