@@ -185,11 +185,11 @@
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "De onde vem",
     "mapLabel": "Mapa com {{place}}",
-    "mapSource": "Mapa: Natural Earth",
+    "mapSource": "Mapa: Natural Earth · Pontos: Wikidata, © colaboradores do OpenStreetMap",
     "mapCountryOnly": "A zona exata ainda não está na biblioteca; o mapa mostra o país.",
     "mapApproximate": {
       "area": "Ponto aproximado: o centro da zona onde fica a denominação.",
-      "place": "Ponto aproximado: a localidade que dá nome à denominação."
+      "place": "Ponto aproximado: o lugar que dá nome à denominação."
     }
   },
   "space": {

@@ -11,6 +11,7 @@
       "apples": "apple",
       "apricot": "apricot",
       "apricots": "apricot",
+      "aromatic": null,
       "arugula": "arugula",
       "asparagus": "asparagus",
       "banana": "banana",
@@ -70,6 +71,8 @@
       "elderflower": "elderflower",
       "elderflowers": "elderflower",
       "eucalyptus": "eucalyptus",
+      "exotic fruit": "exotic fruit",
+      "exotic fruits": "exotic fruit",
       "farmyard-y": "gamey",
       "fig": "fig",
       "figs": "fig",
@@ -91,6 +94,7 @@
       "grass": "grass",
       "green apple": "green apple",
       "green bell pepper": "bell pepper",
+      "green foliage": null,
       "green pepper": "bell pepper",
       "greengage": "greengage",
       "guava": "guava",
@@ -102,6 +106,7 @@
       "herbal tea": "tea",
       "herbs": "herbs",
       "honey": "honey",
+      "honeysuckle": "honeysuckle",
       "hops": "hops",
       "intense": null,
       "jammy": "jammy",
@@ -115,6 +120,7 @@
       "lilac": "lilac",
       "lime": "lime",
       "liquorice": "liquorice",
+      "lychee": "lychee",
       "mango": "mango",
       "marzipan": "marzipan",
       "melon": "melon",
@@ -158,6 +164,7 @@
       "red berry": "red berry",
       "red berry fruits": "red berry",
       "red fruit": "red fruit",
+      "ripe fruit": "ripe fruit",
       "roses": "rose",
       "rustic": null,
       "sage": "sage",
@@ -577,6 +584,16 @@
         "nl": "eucalyptus",
         "pt-PT": "eucalipto"
       },
+      "exotic fruit": {
+        "en": "exotic fruit",
+        "es": "fruta exótica",
+        "ca": "fruita exòtica",
+        "fr": "fruits exotiques",
+        "de": "exotische Früchte",
+        "it": "frutta esotica",
+        "nl": "exotisch fruit",
+        "pt-PT": "fruta exótica"
+      },
       "fig": {
         "en": "fig",
         "es": "higo",
@@ -767,6 +784,16 @@
         "nl": "honing",
         "pt-PT": "mel"
       },
+      "honeysuckle": {
+        "en": "honeysuckle",
+        "es": "madreselva",
+        "ca": "lligabosc",
+        "fr": "chèvrefeuille",
+        "de": "Geißblatt",
+        "it": "caprifoglio",
+        "nl": "kamperfoelie",
+        "pt-PT": "madressilva"
+      },
       "hops": {
         "en": "hops",
         "es": "lúpulo",
@@ -836,6 +863,16 @@
         "it": "liquirizia",
         "nl": "drop",
         "pt-PT": "alcaçuz"
+      },
+      "lychee": {
+        "en": "lychee",
+        "es": "lichi",
+        "ca": "litxi",
+        "fr": "litchi",
+        "de": "Litschi",
+        "it": "litchi",
+        "nl": "lychee",
+        "pt-PT": "lichia"
       },
       "mango": {
         "en": "mango",
@@ -1077,6 +1114,16 @@
         "nl": "rood fruit",
         "pt-PT": "fruta vermelha"
       },
+      "ripe fruit": {
+        "en": "ripe fruit",
+        "es": "fruta madura",
+        "ca": "fruita madura",
+        "fr": "fruits mûrs",
+        "de": "reife Früchte",
+        "it": "frutta matura",
+        "nl": "rijp fruit",
+        "pt-PT": "fruta madura"
+      },
       "rose": {
         "en": "rose",
         "es": "rosa",
@@ -1273,6 +1320,7 @@
       "fish dishes": "fish",
       "fondue": "fondue",
       "grilled meats": "grilled meats",
+      "hungarian dishes": null,
       "lamb": "lamb",
       "lamb dishes": "lamb",
       "lobster": "lobster",
@@ -1283,6 +1331,7 @@
       "raclette": "raclette",
       "salmon": "salmon",
       "seafood": "seafood",
+      "shellfish": "shellfish",
       "spicy dishes": "spicy dishes",
       "squid": "squid",
       "sushi": "sushi",
@@ -1501,6 +1550,16 @@
         "de": "Meeresfrüchte",
         "it": "frutti di mare",
         "nl": "zeevruchten",
+        "pt-PT": "marisco"
+      },
+      "shellfish": {
+        "en": "shellfish",
+        "es": "marisco",
+        "ca": "marisc",
+        "fr": "crustacés et coquillages",
+        "de": "Schalentiere",
+        "it": "crostacei e molluschi",
+        "nl": "schaaldieren",
         "pt-PT": "marisco"
       },
       "spicy dishes": {

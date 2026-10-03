@@ -146,10 +146,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "nl-achterhoek-winterswijk",
-    "latitude": null,
+    "latitude": 51.9680214,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015305",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 6.7378723,
+    "pointSource": "place",
     "name": "Achterhoek - Winterswijk",
     "names": [
       {
@@ -398,7 +398,13 @@
     "countryCode": "DE",
     "eambrosiaId": "EUGI00000003386",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir-precoce",
+        "quote": "most of the current plantations are found in Germany. Up until the early 20th century, it was one of the most grown varieties in the Ahr region ... between 54°N in North Yorkshire, England to 58.5°N on Muhu island, Estonia.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Noir_Pr%C3%A9coce"
+      }
+    ],
     "id": "de-ahr",
     "latitude": 50.54,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003386",
@@ -695,12 +701,23 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005491",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "grillo",
+        "quote": "It was already widely planted in the Province of Trapani by 1897; today it may be grown throughout Sicily and also in the Aeolian Islands ... in the province of La Spezia in Liguria ... Monreale (province of Palermo) ... Alcamo (provinces of Palermo and Trapani) ... Contea di Sclafani (provinces of Agrigento and Palermo) ... Delia Nivolelli (province of Trapani) ... This the first planting of Grillo in California.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grillo"
+      },
+      {
+        "grapeId": "ansonica",
+        "quote": "planted primarily in western Sicily ... In Tuscany, the grape is known as Ansonica ... on the island of Giglio ... Calabria: Bivongi DOC; ... Sicily: Alcamo DOC ... Marsala DOC, Menfi DOC ... Tuscany: Ansonica Costa dell'Argentario DOC, Elba DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ansonica"
+      }
+    ],
     "id": "it-alcamo",
-    "latitude": null,
+    "latitude": 37.9766497,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005491",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.9626735,
+    "pointSource": "place",
     "name": "Alcamo",
     "names": [
       {
@@ -1004,7 +1021,13 @@
     "countryCode": "PT",
     "eambrosiaId": "EUGI00000004834",
     "giType": "PGI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "alfrocheiro-preto",
+        "quote": "planted primarily in the Dão DOC and Alentejano VR ... growing mainly in the provinces of Zamora and Salamanca ... It is one of the authorized varieties of the La Gomera and El Hierro Denominación de Origen",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alfrocheiro_Preto"
+      }
+    ],
     "id": "pt-alentejano",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004834",
@@ -1028,6 +1051,11 @@
     "eambrosiaId": "EUGI00000003742",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "tinta-amarela",
+        "quote": "Its use in the Douro region has been increasing in recent years ... It is the oldest and most widely planted grape variety in the Alentejo region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_Amarela"
+      },
       {
         "grapeId": "alicante-bouschet",
         "quote": "At the turn of the 21st century, Alicante Bouschet was the 12th most planted red wine grape in France with sizable plantings in the Languedoc, Provence and Cognac regions ... Widely planted across the Alentejo wine region today ... In Chile the grape is blended ... California ... Napa, Sonoma, Madera, and Calaveras counties. Other areas with notable ... Algeria, Palestine and parts of central and southern Italy. In Spain ... it is the fifth most planted red grape ...",
@@ -1541,6 +1569,11 @@
         "grapeId": "muscat-blanc-a-petits-grains",
         "quote": "In Greece, the grape is most important on the island of Samos ... Near Patras ... Spina in Crete ... In Italy ... Piedmont ... In France ... Frontignan area ... Rhône ... Alsace ... Hérault region ... In Spain ... Castilla-La Mancha ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains"
+      },
+      {
+        "grapeId": "auxerrois-blanc",
+        "quote": "prevalent in the French region of Alsace, and is also grown in neighbouring Germany and Luxembourg ... with some in the Côtes de Toul of Lorraine ... The main growing areas were Baden (wine region)(71 hectares (175 acres)) and Palatinate ... known to grow Auxerrois blanc in Oregon ... on the Leelanau peninsula in Michigan ... grown on Vancouver Island ... in the Okanagan wine country ... A few vineyards in the United Kingdom grow Auxerrois",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auxerrois_blanc"
       }
     ],
     "id": "fr-alsace",
@@ -3399,7 +3432,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001082",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "grolleau",
+        "quote": "grown primarily in the Loire Valley of France ... particularly in the Anjou region ... permitted grape variety for the rosé Appellation d'origine contrôlée (AOC)s of Anjou, Touraine and Saumur AOC.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grolleau_(grape)"
+      }
+    ],
     "id": "fr-anjou",
     "latitude": 45.346944444444,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001082",
@@ -3590,7 +3629,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006424",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "hondarrabi-zuri",
+        "quote": "native to the Basque Country, Spain ... DO Txakoli de Álava\nDO Getariako Txakolina\nDO Bizkaiko Txakolina",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri"
+      }
+    ],
     "id": "es-arabako-txakolina",
     "latitude": 43.05277777777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006424",
@@ -4245,10 +4290,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-assisi",
-    "latitude": null,
+    "latitude": 43.0711952,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005107",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.6146669,
+    "pointSource": "place",
     "name": "Assisi",
     "names": [
       {
@@ -4301,7 +4346,18 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006878",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cortese",
+        "quote": "predominantly grown in the southeastern regions of Piedmont in the provinces of Alessandria and Asti ... Colli Tortonesi ... Cortese di Gavi. Significant plantings of Cortese can also be found in the Lombardy region of Oltrepò Pavese and the DOC white blends of the Veneto wine region of Bianco di Custoza ... Garda Cortese DOC is produced in the hills near Lake Garda",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cortese"
+      },
+      {
+        "grapeId": "freisa",
+        "quote": "grown in the Piedmont region of north-west Italy, primarily in Monferrato and in the Langhe ... Freisa di Chieri ... In the Canavese there is also a rosé ... there are a few hundred acres of the vine planted in Argentina ... It is most commonly found in the Asti, Langhe, Monferrato and Pinerolese regions.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Freisa"
+      }
+    ],
     "id": "it-asti",
     "latitude": 44.898888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006878",
@@ -4399,10 +4455,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-atina",
-    "latitude": null,
+    "latitude": 41.620199,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006163",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.7999785,
+    "pointSource": "place",
     "name": "Atina",
     "names": [
       {
@@ -4551,10 +4607,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-aversa",
-    "latitude": null,
+    "latitude": 40.973212,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004784",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.204928,
+    "pointSource": "place",
     "name": "Aversa",
     "names": [
       {
@@ -4828,6 +4884,11 @@
         "grapeId": "chasselas",
         "quote": "widely grown in Switzerland ... it is mostly grown in the Loire region ... almost exclusively grown in the wine region of Baden",
         "sourceUrl": "https://en.wikipedia.org/wiki/Chasselas"
+      },
+      {
+        "grapeId": "auxerrois-blanc",
+        "quote": "prevalent in the French region of Alsace, and is also grown in neighbouring Germany and Luxembourg ... with some in the Côtes de Toul of Lorraine ... The main growing areas were Baden (wine region)(71 hectares (175 acres)) and Palatinate ... known to grow Auxerrois blanc in Oregon ... on the Leelanau peninsula in Michigan ... grown on Vancouver Island ... in the Okanagan wine country ... A few vineyards in the United Kingdom grow Auxerrois",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auxerrois_blanc"
       }
     ],
     "id": "de-baden",
@@ -5107,6 +5168,11 @@
         "grapeId": "baga",
         "quote": "planted primarily in the Bairrada DOC",
         "sourceUrl": "https://en.wikipedia.org/wiki/Baga_(grape)"
+      },
+      {
+        "grapeId": "fernao-pires",
+        "quote": "especially in the Tejo and Bairrada ... Outside of Portugal there are some significant plantings in South Africa.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fern%C3%A3o_Pires"
       }
     ],
     "id": "pt-bairrada",
@@ -5184,10 +5250,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-balaton-felvidek",
-    "latitude": null,
+    "latitude": 46.9453473,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005794",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.7225802,
+    "pointSource": "place",
     "name": "Balaton-felvidék",
     "names": [
       {
@@ -6059,6 +6125,11 @@
         "grapeId": "rondinella",
         "quote": "Almost all of the total global growing area of 2,481 hectares (6,130 acres) is in the Veneto region of northern Italy, and the grapes are used in wines from the Valpolicella and Bardolino wine regions.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Rondinella"
+      },
+      {
+        "grapeId": "molinara",
+        "quote": "almost exclusively in the Veneto region. It adds acidity to the wines of the Valpolicella and Bardolino regions",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Molinara_(grape)"
       }
     ],
     "id": "it-bardolino",
@@ -6893,10 +6964,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "at-bergland",
-    "latitude": null,
+    "latitude": 48.151798,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004241",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.1892956,
+    "pointSource": "place",
     "name": "Bergland",
     "names": [
       {
@@ -7699,12 +7770,18 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006542",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "hondarrabi-zuri",
+        "quote": "native to the Basque Country, Spain ... DO Txakoli de Álava\nDO Getariako Txakolina\nDO Bizkaiko Txakolina",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri"
+      }
+    ],
     "id": "es-bizkaiko-txakolina",
-    "latitude": null,
+    "latitude": 43.238482,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006542",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -2.8516316,
+    "pointSource": "place",
     "name": "Bizkaiko Txakolina",
     "names": [
       {
@@ -7902,10 +7979,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-bolgheri",
-    "latitude": null,
+    "latitude": 43.2340065,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005702",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.6179334,
+    "pointSource": "place",
     "name": "Bolgheri",
     "names": [
       {
@@ -8182,10 +8259,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-bordeaux",
-    "latitude": null,
+    "latitude": 44.841225,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001602",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.5800364,
+    "pointSource": "place",
     "name": "Bordeaux",
     "names": [
       {
@@ -8885,10 +8962,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-breganze",
-    "latitude": null,
+    "latitude": 45.7037411,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003961",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.5767245,
+    "pointSource": "place",
     "name": "Breganze",
     "names": [
       {
@@ -8943,10 +9020,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-brindisi",
-    "latitude": null,
+    "latitude": 40.6358599,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005203",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.6884975,
+    "pointSource": "place",
     "name": "Brindisi",
     "names": [
       {
@@ -9133,7 +9210,13 @@
     "countryCode": "PT",
     "eambrosiaId": "EUGI00000005565",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "arinto",
+        "quote": "planted primarily in the Bucelas, Tejo and Vinho Verde regions",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arinto"
+      }
+    ],
     "id": "pt-bucelas",
     "latitude": 38.9,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005565",
@@ -9395,10 +9478,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-bearn",
-    "latitude": null,
+    "latitude": 43.1802145,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001941",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.4159821,
+    "pointSource": "place",
     "name": "Béarn",
     "names": [
       {
@@ -9558,10 +9641,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cabernet-de-saumur",
-    "latitude": null,
+    "latitude": 47.2596224,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001166",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.0785177,
+    "pointSource": "place",
     "name": "Cabernet de Saumur",
     "names": [
       {
@@ -9784,6 +9867,11 @@
     "giType": "PGI",
     "grapes": [
       {
+        "grapeId": "greco",
+        "quote": "In the Campania region it is used to produce the denominazione di origine controllata e garantita (DOCG) wine Greco di Tufo. In Calabria, it is used to make ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina ... In Apulia, it is a permitted blend component in the Gravina DOC ... It is also permitted in Lacryma Christi produced on the slopes of Mount Vesuvius ... Molise DOC ... Sannio DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Greco_(grape)"
+      },
+      {
         "grapeId": "muscat-of-alexandria",
         "quote": "Muscat of Alexandria is cultivated very heavily on the island of Lemnos in the North Eastern Aegean region of Greece, ... In Italy wine is made from the grape on the island of Pantelleria, and it is grown in Calabria and Sicily ... In Spain, the grape is the sixth most planted white grape variety ... It is an important grape in the wine industries of Australia, Bolivia and South Africa.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Muscat_of_Alexandria"
@@ -9792,6 +9880,11 @@
         "grapeId": "sangiovese",
         "quote": "primarily grown in the central regions of Italy, particularly in Tuscany... also cultivated in ... Umbria and Marche... also grown in ... Emilia‑Romagna, Lombardy, and even as far south as Calabria... In France... Corsica... Argentina... Mendoza... In California...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
+      },
+      {
+        "grapeId": "ansonica",
+        "quote": "planted primarily in western Sicily ... In Tuscany, the grape is known as Ansonica ... on the island of Giglio ... Calabria: Bivongi DOC; ... Sicily: Alcamo DOC ... Marsala DOC, Menfi DOC ... Tuscany: Ansonica Costa dell'Argentario DOC, Elba DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ansonica"
       }
     ],
     "id": "it-calabria",
@@ -10035,9 +10128,24 @@
     "giType": "PGI",
     "grapes": [
       {
+        "grapeId": "fiano",
+        "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
+      },
+      {
+        "grapeId": "greco",
+        "quote": "In the Campania region it is used to produce the denominazione di origine controllata e garantita (DOCG) wine Greco di Tufo. In Calabria, it is used to make ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina ... In Apulia, it is a permitted blend component in the Gravina DOC ... It is also permitted in Lacryma Christi produced on the slopes of Mount Vesuvius ... Molise DOC ... Sannio DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Greco_(grape)"
+      },
+      {
         "grapeId": "aglianico",
         "quote": "In Basilicata, Aglianico is the basis of the Aglianico del Vulture DOC ... In Campania, the area ... The grape has also recently been planted in Australia, California, and Texas ... Producers in Sierra Foothills, McLaren Vale, Margaret River, Mudgee and Riverland ... trialled in Arizona and in Ontario, Canada",
         "sourceUrl": "https://en.wikipedia.org/wiki/Aglianico"
+      },
+      {
+        "grapeId": "falanghina",
+        "quote": "It is cultivated on the coast of Campania north of Naples",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Falanghina"
       }
     ],
     "id": "it-campania",
@@ -10064,10 +10172,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-campi-flegrei",
-    "latitude": null,
+    "latitude": 40.8274575,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004801",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.1402297,
+    "pointSource": "place",
     "name": "Campi Flegrei",
     "names": [
       {
@@ -10274,10 +10382,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-campo-de-la-guardia",
-    "latitude": null,
+    "latitude": 39.7870986,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007654",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -3.4757592,
+    "pointSource": "place",
     "name": "Campo de La Guardia",
     "names": [
       {
@@ -10295,7 +10403,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005924",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "freisa",
+        "quote": "grown in the Piedmont region of north-west Italy, primarily in Monferrato and in the Langhe ... Freisa di Chieri ... In the Canavese there is also a rosé ... there are a few hundred acres of the vine planted in Argentina ... It is most commonly found in the Asti, Langhe, Monferrato and Pinerolese regions.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Freisa"
+      }
+    ],
     "id": "it-canavese",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005924",
@@ -10427,10 +10541,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-canelli",
-    "latitude": null,
+    "latitude": 44.7192779,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000018285",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 8.2871375,
+    "pointSource": "place",
     "name": "Canelli",
     "names": [
       {
@@ -10508,10 +10622,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-cannara",
-    "latitude": null,
+    "latitude": 42.994742,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005923",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.579363,
+    "pointSource": "place",
     "name": "Cannara",
     "names": [
       {
@@ -10638,10 +10752,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-cannonau-di-sardegna",
-    "latitude": null,
+    "latitude": 40.0912813,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004809",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.0305773,
+    "pointSource": "place",
     "name": "Cannonau di Sardegna",
     "names": [
       {
@@ -10705,12 +10819,18 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004761",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "greco",
+        "quote": "In the Campania region it is used to produce the denominazione di origine controllata e garantita (DOCG) wine Greco di Tufo. In Calabria, it is used to make ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina ... In Apulia, it is a permitted blend component in the Gravina DOC ... It is also permitted in Lacryma Christi produced on the slopes of Mount Vesuvius ... Molise DOC ... Sannio DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Greco_(grape)"
+      }
+    ],
     "id": "it-capri",
-    "latitude": null,
+    "latitude": 40.5488429,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004761",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.2283708,
+    "pointSource": "place",
     "name": "Capri",
     "names": [
       {
@@ -10788,10 +10908,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-carcavelos",
-    "latitude": null,
+    "latitude": 38.6921092,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005567",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -9.3354702,
+    "pointSource": "place",
     "name": "Carcavelos",
     "names": [
       {
@@ -11409,10 +11529,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-castel-del-monte",
-    "latitude": null,
+    "latitude": 42.3915219,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005463",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.7120537,
+    "pointSource": "place",
     "name": "Castel del Monte",
     "names": [
       {
@@ -13523,7 +13643,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000000162",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "clairette-blanche",
+        "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
+      }
+    ],
     "id": "fr-chateauneuf-du-pape",
     "latitude": 44.056388888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000162",
@@ -13685,7 +13811,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004824",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "fiano",
+        "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
+      }
+    ],
     "id": "it-cilento",
     "latitude": 40.683333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004824",
@@ -14159,10 +14291,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-clairette-de-die",
-    "latitude": null,
+    "latitude": 44.7533712,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000222",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.3689136,
+    "pointSource": "place",
     "name": "Clairette de Die",
     "names": [
       {
@@ -14362,10 +14494,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-colares",
-    "latitude": null,
+    "latitude": 38.8020657,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005568",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -9.4593241,
+    "pointSource": "place",
     "name": "Colares",
     "names": [
       {
@@ -14554,10 +14686,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-colli-berici",
-    "latitude": null,
+    "latitude": 45.423549,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003565",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.5024808,
+    "pointSource": "place",
     "name": "Colli Berici",
     "names": [
       {
@@ -15462,7 +15594,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006688",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cortese",
+        "quote": "predominantly grown in the southeastern regions of Piedmont in the provinces of Alessandria and Asti ... Colli Tortonesi ... Cortese di Gavi. Significant plantings of Cortese can also be found in the Lombardy region of Oltrepò Pavese and the DOC white blends of the Veneto wine region of Bianco di Custoza ... Garda Cortese DOC is produced in the hills near Lake Garda",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cortese"
+      }
+    ],
     "id": "it-colli-tortonesi",
     "latitude": 44.913333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006688",
@@ -16030,7 +16168,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004284",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ancellotta",
+        "quote": "mainly grown in the Emilia-Romagna region of Italy ... (province of Modena) ... (province of Reggio Emilia) ... the red Colli di Faenza DOC. In the Province of Rimini it is employed in the Colli di Rimini DOC wine ... in the canton Ticino ... in the Cahul region ... in the Taman Peninsula ... Campos de Cima da Serra",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancellotta"
+      }
+    ],
     "id": "it-colli-di-faenza",
     "latitude": 44.417777777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004284",
@@ -17018,6 +17162,16 @@
         "grapeId": "italian-riesling",
         "quote": "In Austria, the main regions where it is grown are south and south eastern Styria, in Burgenland, and in the Weinviertel region of Lower Austria... In Croatia, Graševina is the most planted white grape variety. It is grown in all the inland wine regions, particularly in Kutjevo municipality and around Ilok... In the Czech Republic, Ryzlink vlašský is grown in the South Moravian Region, particularly in the Mikulovská and Velkopavlovická wine subregions... In Hungary, Olaszrizling is the most widespread grape variety of the country, e.g. in the Csopak wine region... In Italy, it is known as Riesling Italico when grown in the northern regions such as Trentino, Collio and Friuli... In Slovenia, Welschriesling ... is grown in the Lower Styria region of eastern Slovenia, produces dry to medium-dry wines in the Vipava Valley...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "grapeId": "ribolla-gialla",
+        "quote": "grown most famously in the Friuli Venezia Giulia region of northeast Italy ... the grape thrives in the region around Corno di Rosazzo and Gorizia. In Slovenia, the grape is grown prominently in the Brda and Vipava Valley regions ... the white DOC wines of Colli Orientali del Friuli and Collio Goriziano.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
+      },
+      {
+        "grapeId": "sauvignon-vert",
+        "quote": "It is widely planted in Chile ... especially in the Vipava Valley and Goriška Brda ... The grape's most noted homes are in the Friuli-Venezia Giulia and Goriška Brda ... Colli Orientali del Friuli, Collio Goriziano, Friuli Grave and Friuli Isonzo ... Argentina, with its close ties to Italian viticulture, also has a small amount of Friulano vines planted.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignonasse"
       }
     ],
     "id": "it-collio-goriziano",
@@ -17188,7 +17342,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000007120",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "trepat",
+        "quote": "grown primarily in the Conca de Barberà and Costers del Segre Denominación de Origen (DO)s of Catalonia.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Trepat"
+      }
+    ],
     "id": "es-conca-de-barbera",
     "latitude": 41.366666666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007120",
@@ -17401,7 +17561,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005493",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "grillo",
+        "quote": "It was already widely planted in the Province of Trapani by 1897; today it may be grown throughout Sicily and also in the Aeolian Islands ... in the province of La Spezia in Liguria ... Monreale (province of Palermo) ... Alcamo (provinces of Palermo and Trapani) ... Contea di Sclafani (provinces of Agrigento and Palermo) ... Delia Nivolelli (province of Trapani) ... This the first planting of Grillo in California.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grillo"
+      }
+    ],
     "id": "it-contea-di-sclafani",
     "latitude": 38.115555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005493",
@@ -17556,10 +17722,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-controguerra",
-    "latitude": null,
+    "latitude": 42.8556887,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002935",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.8194862,
+    "pointSource": "place",
     "name": "Controguerra",
     "names": [
       {
@@ -18300,10 +18466,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-costa-de-cantabria",
-    "latitude": null,
+    "latitude": 43.1595664,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005022",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -4.0878382,
+    "pointSource": "place",
     "name": "Costa de Cantabria",
     "names": [
       {
@@ -18397,7 +18563,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000007121",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "trepat",
+        "quote": "grown primarily in the Conca de Barberà and Costers del Segre Denominación de Origen (DO)s of Catalonia.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Trepat"
+      }
+    ],
     "id": "es-costers-del-segre",
     "latitude": 41.60222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007121",
@@ -18422,10 +18594,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-costieres-de-nimes",
-    "latitude": null,
+    "latitude": 43.8374249,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000164",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.3600687,
+    "pointSource": "place",
     "name": "Costières de Nîmes",
     "names": [
       {
@@ -18514,10 +18686,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-coteaux-d-aix-en-provence",
-    "latitude": null,
+    "latitude": 43.5298424,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000141",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.4474738,
+    "pointSource": "place",
     "name": "Coteaux d'Aix-en-Provence",
     "names": [
       {
@@ -18537,10 +18709,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-coteaux-d-ancenis",
-    "latitude": null,
+    "latitude": 47.3648141,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002484",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.1816088,
+    "pointSource": "place",
     "name": "Coteaux d'Ancenis",
     "names": [
       {
@@ -18669,10 +18841,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-coteaux-de-die",
-    "latitude": null,
+    "latitude": 44.7533712,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000223",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.3689136,
+    "pointSource": "place",
     "name": "Coteaux de Die",
     "names": [
       {
@@ -18758,10 +18930,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-coteaux-de-saumur",
-    "latitude": null,
+    "latitude": 47.2596224,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000062",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.0785177,
+    "pointSource": "place",
     "name": "Coteaux de Saumur",
     "names": [
       {
@@ -19180,10 +19352,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-coteaux-du-quercy",
-    "latitude": null,
+    "latitude": 44.4872388,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002142",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 1.4642806,
+    "pointSource": "place",
     "name": "Coteaux du Quercy",
     "names": [
       {
@@ -19446,10 +19618,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cremant-de-bordeaux",
-    "latitude": null,
+    "latitude": 44.841225,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001616",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.5800364,
+    "pointSource": "place",
     "name": "Crémant de Bordeaux",
     "names": [
       {
@@ -19521,10 +19693,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cremant-de-die",
-    "latitude": null,
+    "latitude": 44.7533712,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000405",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.3689136,
+    "pointSource": "place",
     "name": "Crémant de Die",
     "names": [
       {
@@ -19544,10 +19716,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cremant-de-limoux",
-    "latitude": null,
+    "latitude": 43.0538068,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000881",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 2.2176533,
+    "pointSource": "place",
     "name": "Crémant de Limoux",
     "names": [
       {
@@ -19590,10 +19762,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "be-cremant-de-wallonie",
-    "latitude": null,
+    "latitude": 50.3154983,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005347",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.0097962,
+    "pointSource": "place",
     "name": "Crémant de Wallonie",
     "names": [
       {
@@ -19613,10 +19785,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cremant-du-jura",
-    "latitude": null,
+    "latitude": 46.7833625,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001501",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.7832857,
+    "pointSource": "place",
     "name": "Crémant du Jura",
     "names": [
       {
@@ -19815,10 +19987,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-custoza",
-    "latitude": null,
+    "latitude": 45.3764733,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004552",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.7959337,
+    "pointSource": "place",
     "name": "Custoza",
     "names": [
       {
@@ -20412,10 +20584,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cotes-de-bergerac",
-    "latitude": null,
+    "latitude": 44.8534568,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001004",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 0.487531,
+    "pointSource": "place",
     "name": "Côtes de Bergerac",
     "names": [
       {
@@ -20435,10 +20607,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cotes-de-blaye",
-    "latitude": null,
+    "latitude": 45.1271231,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001985",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.6635964,
+    "pointSource": "place",
     "name": "Côtes de Blaye",
     "names": [
       {
@@ -20458,10 +20630,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cotes-de-bordeaux",
-    "latitude": null,
+    "latitude": 44.841225,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003542",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.5800364,
+    "pointSource": "place",
     "name": "Côtes de Bordeaux",
     "names": [
       {
@@ -20481,10 +20653,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cotes-de-bordeaux-saint-macaire",
-    "latitude": null,
+    "latitude": 44.841225,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001612",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.5800364,
+    "pointSource": "place",
     "name": "Côtes de Bordeaux-Saint-Macaire",
     "names": [
       {
@@ -20519,10 +20691,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cotes-de-duras",
-    "latitude": null,
+    "latitude": 44.6762124,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001204",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 0.1806066,
+    "pointSource": "place",
     "name": "Côtes de Duras",
     "names": [
       {
@@ -20864,12 +21036,18 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000002601",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "auxerrois-blanc",
+        "quote": "prevalent in the French region of Alsace, and is also grown in neighbouring Germany and Luxembourg ... with some in the Côtes de Toul of Lorraine ... The main growing areas were Baden (wine region)(71 hectares (175 acres)) and Palatinate ... known to grow Auxerrois blanc in Oregon ... on the Leelanau peninsula in Michigan ... grown on Vancouver Island ... in the Okanagan wine country ... A few vineyards in the United Kingdom grow Auxerrois",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auxerrois_blanc"
+      }
+    ],
     "id": "fr-cotes-de-toul",
-    "latitude": null,
+    "latitude": 48.6762624,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002601",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.8941759,
+    "pointSource": "place",
     "name": "Côtes de Toul",
     "names": [
       {
@@ -21016,10 +21194,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "fr-cotes-du-lot",
-    "latitude": null,
+    "latitude": 44.6249918,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002462",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 1.6657742,
+    "pointSource": "place",
     "name": "Côtes du Lot",
     "names": [
       {
@@ -21047,7 +21225,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001206",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "abouriou",
+        "quote": "grown primarily in Southwest France and, in small quantities, California ... the Appellation d'origine contrôlée (AOC) wine of Côtes du Marmandais ... The vast majority were found in the Lot-et-Garonne department (200 hectares/494 acres)  of South West France and the Loire-Atlantique department ... particularly in the Russian River AVA",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Abouriou"
+      }
+    ],
     "id": "fr-cotes-du-marmandais",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001206",
@@ -21075,6 +21259,11 @@
         "grapeId": "muscat-blanc-a-petits-grains",
         "quote": "In Greece, the grape is most important on the island of Samos ... Near Patras ... Spina in Crete ... In Italy ... Piedmont ... In France ... Frontignan area ... Rhône ... Alsace ... Hérault region ... In Spain ... Castilla-La Mancha ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains"
+      },
+      {
+        "grapeId": "clairette-blanche",
+        "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
       }
     ],
     "id": "fr-cotes-du-rhone",
@@ -21922,7 +22111,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005516",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "grillo",
+        "quote": "It was already widely planted in the Province of Trapani by 1897; today it may be grown throughout Sicily and also in the Aeolian Islands ... in the province of La Spezia in Liguria ... Monreale (province of Palermo) ... Alcamo (provinces of Palermo and Trapani) ... Contea di Sclafani (provinces of Agrigento and Palermo) ... Delia Nivolelli (province of Trapani) ... This the first planting of Grillo in California.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grillo"
+      }
+    ],
     "id": "it-delia-nivolelli",
     "latitude": 38.017222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005516",
@@ -22627,6 +22822,16 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Sez%C3%A3o"
       },
       {
+        "grapeId": "tinta-amarela",
+        "quote": "Its use in the Douro region has been increasing in recent years ... It is the oldest and most widely planted grape variety in the Alentejo region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_Amarela"
+      },
+      {
+        "grapeId": "touriga-francesa",
+        "quote": "experimental plantings of the grape in Tasmania ... the variety is increasingly being used for unfortified red wine in the Douro and in the Dão",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Touriga_Francesa"
+      },
+      {
         "grapeId": "tempranillo",
         "quote": "The two major regions that grow Tempranillo are Rioja ... and Ribera del Duero ... Substantial quantities are also grown in the Penedès ... In Portugal ... Douro ... California ... Texas ... Oregon ... Australia ... Argentina, Chile, and Mexico ... Washington state ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Tempranillo"
@@ -22640,6 +22845,21 @@
         "grapeId": "tinta-barroca",
         "quote": "grown primarily in the Douro region with some plantings in South Africa and the Riverland wine region of Australia",
         "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "grapeId": "verdelho",
+        "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho"
+      },
+      {
+        "grapeId": "boal",
+        "quote": "in the production of medium-rich fortified wines from Madeira Island ... the Malvasia Fina grown in the Douro valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Boal_(grape)"
+      },
+      {
+        "grapeId": "tinta-cao",
+        "quote": "has been grown primarily in the Douro region since the sixteenth century.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_C%C3%A3o"
       }
     ],
     "id": "pt-douro",
@@ -22978,9 +23198,29 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Touriga_Nacional"
       },
       {
+        "grapeId": "alfrocheiro-preto",
+        "quote": "planted primarily in the Dão DOC and Alentejano VR ... growing mainly in the provinces of Zamora and Salamanca ... It is one of the authorized varieties of the La Gomera and El Hierro Denominación de Origen",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alfrocheiro_Preto"
+      },
+      {
+        "grapeId": "touriga-francesa",
+        "quote": "experimental plantings of the grape in Tasmania ... the variety is increasingly being used for unfortified red wine in the Douro and in the Dão",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Touriga_Francesa"
+      },
+      {
+        "grapeId": "encruzado",
+        "quote": "grown primarily in the Dão DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Encruzado"
+      },
+      {
         "grapeId": "mencia",
         "quote": "It is primarily found in the Bierzo, Ribeira Sacra, Valdeorras, Monterrei and Dão wine regions.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
+      },
+      {
+        "grapeId": "verdelho",
+        "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho"
       }
     ],
     "id": "pt-dao",
@@ -23169,6 +23409,11 @@
         "grapeId": "listan-negro",
         "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
         "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      },
+      {
+        "grapeId": "alfrocheiro-preto",
+        "quote": "planted primarily in the Dão DOC and Alentejano VR ... growing mainly in the provinces of Zamora and Salamanca ... It is one of the authorized varieties of the La Gomera and El Hierro Denominación de Origen",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alfrocheiro_Preto"
       }
     ],
     "id": "es-el-hierro",
@@ -23239,7 +23484,18 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000003822",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ansonica",
+        "quote": "planted primarily in western Sicily ... In Tuscany, the grape is known as Ansonica ... on the island of Giglio ... Calabria: Bivongi DOC; ... Sicily: Alcamo DOC ... Marsala DOC, Menfi DOC ... Tuscany: Ansonica Costa dell'Argentario DOC, Elba DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ansonica"
+      },
+      {
+        "grapeId": "aleatico",
+        "quote": "the cult wine Aleatico di Portoferraio made in Elba. In Chile is known as Red Moscatel. The grape has also been cultivated at Mudgee in New South Wales and California ... Aleatico is most commonly found in Italy, Tuscany (primarily in Elba), Lazio, Umbria, Piedmont, Apulia ... Aleatico is found around Lake Bolsena",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aleatico"
+      }
+    ],
     "id": "it-elba",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003822",
@@ -23398,6 +23654,16 @@
         "grapeId": "sangiovese",
         "quote": "primarily grown in the central regions of Italy, particularly in Tuscany... also cultivated in ... Umbria and Marche... also grown in ... Emilia‑Romagna, Lombardy, and even as far south as Calabria... In France... Corsica... Argentina... Mendoza... In California...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
+      },
+      {
+        "grapeId": "albana",
+        "quote": "planted primarily in the Emilia-Romagna region.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Albana_(grape)"
+      },
+      {
+        "grapeId": "ancellotta",
+        "quote": "mainly grown in the Emilia-Romagna region of Italy ... (province of Modena) ... (province of Reggio Emilia) ... the red Colli di Faenza DOC. In the Province of Rimini it is employed in the Colli di Rimini DOC wine ... in the canton Ticino ... in the Cahul region ... in the Taman Peninsula ... Campos de Cima da Serra",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancellotta"
       }
     ],
     "id": "it-emilia-romagna",
@@ -23470,10 +23736,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-entraygues-le-fel",
-    "latitude": null,
+    "latitude": 44.6524617,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002321",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 2.5035663,
+    "pointSource": "place",
     "name": "Entraygues - Le Fel",
     "names": [
       {
@@ -24580,7 +24846,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000002009",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "negrette",
+        "quote": "grown primarily in South West France ... Côtes du Frontonnais (red and rosé) ... In California the vine was known as Pinot St-George ... In the Fiefs Vendeens of the Loire Valley",
+        "sourceUrl": "https://en.wikipedia.org/wiki/N%C3%A9grette"
+      }
+    ],
     "id": "fr-fiefs-vendeens",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002009",
@@ -24794,10 +25066,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-floc-de-gascogne",
-    "latitude": null,
+    "latitude": 43.6666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001841",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 0.3333333,
+    "pointSource": "place",
     "name": "Floc de Gascogne",
     "names": [
       {
@@ -25088,7 +25360,13 @@
     "countryCode": "DE",
     "eambrosiaId": "EUGI00000004645",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "bacchus-weiss",
+        "quote": "Within Germany, Franconia is considered as the source of some of the more successful varietal Bacchus wines. Bacchus is also increasingly grown in several vineyards in England ... more than half were in Rheinhessen",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bacchus_(grape)"
+      }
+    ],
     "id": "de-franken",
     "latitude": 49.07861111111111,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004645",
@@ -25498,6 +25776,11 @@
         "grapeId": "italian-riesling",
         "quote": "In Austria, the main regions where it is grown are south and south eastern Styria, in Burgenland, and in the Weinviertel region of Lower Austria... In Croatia, Graševina is the most planted white grape variety. It is grown in all the inland wine regions, particularly in Kutjevo municipality and around Ilok... In the Czech Republic, Ryzlink vlašský is grown in the South Moravian Region, particularly in the Mikulovská and Velkopavlovická wine subregions... In Hungary, Olaszrizling is the most widespread grape variety of the country, e.g. in the Csopak wine region... In Italy, it is known as Riesling Italico when grown in the northern regions such as Trentino, Collio and Friuli... In Slovenia, Welschriesling ... is grown in the Lower Styria region of eastern Slovenia, produces dry to medium-dry wines in the Vipava Valley...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "grapeId": "ribolla-gialla",
+        "quote": "grown most famously in the Friuli Venezia Giulia region of northeast Italy ... the grape thrives in the region around Corno di Rosazzo and Gorizia. In Slovenia, the grape is grown prominently in the Brda and Vipava Valley regions ... the white DOC wines of Colli Orientali del Friuli and Collio Goriziano.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
       }
     ],
     "id": "it-friuli",
@@ -25675,7 +25958,18 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006461",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ribolla-gialla",
+        "quote": "grown most famously in the Friuli Venezia Giulia region of northeast Italy ... the grape thrives in the region around Corno di Rosazzo and Gorizia. In Slovenia, the grape is grown prominently in the Brda and Vipava Valley regions ... the white DOC wines of Colli Orientali del Friuli and Collio Goriziano.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
+      },
+      {
+        "grapeId": "sauvignon-vert",
+        "quote": "It is widely planted in Chile ... especially in the Vipava Valley and Goriška Brda ... The grape's most noted homes are in the Friuli-Venezia Giulia and Goriška Brda ... Colli Orientali del Friuli, Collio Goriziano, Friuli Grave and Friuli Isonzo ... Argentina, with its close ties to Italian viticulture, also has a small amount of Friulano vines planted.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignonasse"
+      }
+    ],
     "id": "it-friuli-colli-orientali",
     "latitude": 46.066666666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006461",
@@ -25755,7 +26049,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006426",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sauvignon-vert",
+        "quote": "It is widely planted in Chile ... especially in the Vipava Valley and Goriška Brda ... The grape's most noted homes are in the Friuli-Venezia Giulia and Goriška Brda ... Colli Orientali del Friuli, Collio Goriziano, Friuli Grave and Friuli Isonzo ... Argentina, with its close ties to Italian viticulture, also has a small amount of Friulano vines planted.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignonasse"
+      }
+    ],
     "id": "it-friuli-grave",
     "latitude": 45.95,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006426",
@@ -25826,7 +26126,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006448",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sauvignon-vert",
+        "quote": "It is widely planted in Chile ... especially in the Vipava Valley and Goriška Brda ... The grape's most noted homes are in the Friuli-Venezia Giulia and Goriška Brda ... Colli Orientali del Friuli, Collio Goriziano, Friuli Grave and Friuli Isonzo ... Argentina, with its close ties to Italian viticulture, also has a small amount of Friulano vines planted.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignonasse"
+      }
+    ],
     "id": "it-friuli-isonzo",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006448",
@@ -25979,7 +26285,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001885",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "negrette",
+        "quote": "grown primarily in South West France ... Côtes du Frontonnais (red and rosé) ... In California the vine was known as Pinot St-George ... In the Fiefs Vendeens of the Loire Valley",
+        "sourceUrl": "https://en.wikipedia.org/wiki/N%C3%A9grette"
+      }
+    ],
     "id": "fr-fronton",
     "latitude": 43.416666666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001885",
@@ -26189,7 +26501,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000002802",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "mauzac",
+        "quote": "It is mainly grown in the Gaillac and Limoux regions in southwest France ... The grape is also one of the seven permitted white varieties in Bordeaux wine.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mauzac_(grape)"
+      }
+    ],
     "id": "fr-gaillac",
     "latitude": 43.900555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002802",
@@ -26565,7 +26883,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004805",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cortese",
+        "quote": "predominantly grown in the southeastern regions of Piedmont in the provinces of Alessandria and Asti ... Colli Tortonesi ... Cortese di Gavi. Significant plantings of Cortese can also be found in the Lombardy region of Oltrepò Pavese and the DOC white blends of the Veneto wine region of Bianco di Custoza ... Garda Cortese DOC is produced in the hills near Lake Garda",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cortese"
+      }
+    ],
     "id": "it-gavi",
     "latitude": 44.68333333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004805",
@@ -26729,7 +27053,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006487",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "hondarrabi-zuri",
+        "quote": "native to the Basque Country, Spain ... DO Txakoli de Álava\nDO Getariako Txakolina\nDO Bizkaiko Txakolina",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri"
+      }
+    ],
     "id": "es-getariako-txakolina",
     "latitude": 43.30138888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006487",
@@ -27063,7 +27393,13 @@
     "countryCode": "SI",
     "eambrosiaId": "EUGI00000005684",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sauvignon-vert",
+        "quote": "It is widely planted in Chile ... especially in the Vipava Valley and Goriška Brda ... The grape's most noted homes are in the Friuli-Venezia Giulia and Goriška Brda ... Colli Orientali del Friuli, Collio Goriziano, Friuli Grave and Friuli Isonzo ... Argentina, with its close ties to Italian viticulture, also has a small amount of Friulano vines planted.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignonasse"
+      }
+    ],
     "id": "si-goriska-brda",
     "latitude": 45.986466666666665,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005684",
@@ -27599,10 +27935,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-greco-di-tufo",
-    "latitude": null,
+    "latitude": 41.0102985,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005018",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.8233166,
+    "pointSource": "place",
     "name": "Greco di Tufo",
     "names": [
       {
@@ -27622,10 +27958,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-grignan-les-adhemar",
-    "latitude": null,
+    "latitude": 44.4205,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000481",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.90993,
+    "pointSource": "place",
     "name": "Grignan-les-Adhémar",
     "names": [
       {
@@ -27881,10 +28217,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-grottino-di-roccanova",
-    "latitude": null,
+    "latitude": 40.212011,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002482",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.203181,
+    "pointSource": "place",
     "name": "Grottino di Roccanova",
     "names": [
       {
@@ -28394,10 +28730,10 @@
       }
     ],
     "id": "fr-hermitage",
-    "latitude": null,
+    "latitude": 48.1243,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000286",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.8183,
+    "pointSource": "place",
     "name": "Hermitage",
     "names": [
       {
@@ -28750,10 +29086,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-illes-balears",
-    "latitude": null,
+    "latitude": 39.613432,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006823",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 2.8829185,
+    "pointSource": "place",
     "name": "Illes Balears",
     "names": [
       {
@@ -28796,10 +29132,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-irouleguy",
-    "latitude": null,
+    "latitude": 43.1796887,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001642",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.2995998,
+    "pointSource": "place",
     "name": "Irouléguy",
     "names": [
       {
@@ -28950,10 +29286,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-isla-de-menorca",
-    "latitude": null,
+    "latitude": 39.9492572,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006692",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.0499642,
+    "pointSource": "place",
     "name": "Isla de Menorca",
     "names": [
       {
@@ -29557,10 +29893,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-kras",
-    "latitude": null,
+    "latitude": 45.7550942,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006521",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.7932829,
+    "pointSource": "place",
     "name": "Kras",
     "names": [
       {
@@ -29778,6 +30114,11 @@
         "grapeId": "listan-negro",
         "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
         "sourceUrl": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
+      },
+      {
+        "grapeId": "alfrocheiro-preto",
+        "quote": "planted primarily in the Dão DOC and Alentejano VR ... growing mainly in the provinces of Zamora and Salamanca ... It is one of the authorized varieties of the La Gomera and El Hierro Denominación de Origen",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alfrocheiro_Preto"
       }
     ],
     "id": "es-la-gomera",
@@ -30002,10 +30343,10 @@
       }
     ],
     "id": "es-la-palma",
-    "latitude": null,
+    "latitude": 28.6551163,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003901",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -17.8572686,
+    "pointSource": "place",
     "name": "La Palma",
     "names": [
       {
@@ -30318,7 +30659,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004221",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "trollinger",
+        "quote": "was likely originally cultivated in the wine regions of South Tyrol and Trentino, but today is almost exclusively cultivated on steep, sunny locations in the Württemberg wine region ... throughout the Neckar valley ... including the Santa Maddalena DOC ... Caldaro DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Trollinger"
+      }
+    ],
     "id": "it-lago-di-caldaro",
     "latitude": 46.0664228,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004221",
@@ -31143,7 +31490,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006397",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "freisa",
+        "quote": "grown in the Piedmont region of north-west Italy, primarily in Monferrato and in the Langhe ... Freisa di Chieri ... In the Canavese there is also a rosé ... there are a few hundred acres of the vine planted in Argentina ... It is most commonly found in the Asti, Langhe, Monferrato and Pinerolese regions.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Freisa"
+      }
+    ],
     "id": "it-langhe",
     "latitude": 44.6086,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006397",
@@ -31237,6 +31590,11 @@
         "grapeId": "marselan",
         "quote": "mostly in the Languedoc wine region ... in the Northern Coast of California ... planted in Spain ... in the Catalonia region ... in the Penedès, Terra Alta and Valencia regions ... blended ... in the Vaud canton ... North Coast region ... Benton City, Washington ... Willcox, Arizona ... Mendoza wine region ... China ... Hebei province ... Shandong vineyard",
         "sourceUrl": "https://en.wikipedia.org/wiki/Marselan"
+      },
+      {
+        "grapeId": "clairette-blanche",
+        "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
       }
     ],
     "id": "fr-languedoc",
@@ -31460,6 +31818,11 @@
         "grapeId": "pecorino",
         "quote": "Pecorino ... grows in the Marche, Abruzzo, Tuscany, Umbria and Lazio regions of Italy.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Pecorino_(grape)"
+      },
+      {
+        "grapeId": "aleatico",
+        "quote": "the cult wine Aleatico di Portoferraio made in Elba. In Chile is known as Red Moscatel. The grape has also been cultivated at Mudgee in New South Wales and California ... Aleatico is most commonly found in Italy, Tuscany (primarily in Elba), Lazio, Umbria, Piedmont, Apulia ... Aleatico is found around Lake Bolsena",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aleatico"
       }
     ],
     "id": "it-lazio",
@@ -31891,7 +32254,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000000761",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "mauzac",
+        "quote": "It is mainly grown in the Gaillac and Limoux regions in southwest France ... The grape is also one of the seven permitted white varieties in Bordeaux wine.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mauzac_(grape)"
+      }
+    ],
     "id": "fr-limoux",
     "latitude": 43.056944444444,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000761",
@@ -32376,10 +32745,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-locorotondo",
-    "latitude": null,
+    "latitude": 40.75523,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005547",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.3265,
+    "pointSource": "place",
     "name": "Locorotondo",
     "names": [
       {
@@ -32790,10 +33159,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-macvin-du-jura",
-    "latitude": null,
+    "latitude": 46.7833625,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001521",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.7832857,
+    "pointSource": "place",
     "name": "Macvin du Jura",
     "names": [
       {
@@ -32816,6 +33185,16 @@
         "grapeId": "sercial",
         "quote": "especially on the island of Madeira.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Sercial"
+      },
+      {
+        "grapeId": "verdelho",
+        "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho"
+      },
+      {
+        "grapeId": "boal",
+        "quote": "in the production of medium-rich fortified wines from Madeira Island ... the Malvasia Fina grown in the Douro valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Boal_(grape)"
       }
     ],
     "id": "pt-madeira",
@@ -33214,10 +33593,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-malvasia-di-bosa",
-    "latitude": null,
+    "latitude": 40.2970061,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004816",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 8.4986123,
+    "pointSource": "place",
     "name": "Malvasia di Bosa",
     "names": [
       {
@@ -33965,10 +34344,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-marino",
-    "latitude": null,
+    "latitude": 41.7697883,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006271",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.6586082,
+    "pointSource": "place",
     "name": "Marino",
     "names": [
       {
@@ -34079,7 +34458,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005782",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ansonica",
+        "quote": "planted primarily in western Sicily ... In Tuscany, the grape is known as Ansonica ... on the island of Giglio ... Calabria: Bivongi DOC; ... Sicily: Alcamo DOC ... Marsala DOC, Menfi DOC ... Tuscany: Ansonica Costa dell'Argentario DOC, Elba DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ansonica"
+      }
+    ],
     "id": "it-marsala",
     "latitude": 38.017222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005782",
@@ -34273,10 +34658,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-matera",
-    "latitude": null,
+    "latitude": 40.4476419,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002483",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.4735738,
+    "pointSource": "place",
     "name": "Matera",
     "names": [
       {
@@ -34563,10 +34948,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-melissa",
-    "latitude": null,
+    "latitude": 39.3091619,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004721",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.0280258,
+    "pointSource": "place",
     "name": "Melissa",
     "names": [
       {
@@ -34642,7 +35027,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005932",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ansonica",
+        "quote": "planted primarily in western Sicily ... In Tuscany, the grape is known as Ansonica ... on the island of Giglio ... Calabria: Bivongi DOC; ... Sicily: Alcamo DOC ... Marsala DOC, Menfi DOC ... Tuscany: Ansonica Costa dell'Argentario DOC, Elba DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ansonica"
+      }
+    ],
     "id": "it-menfi",
     "latitude": 37.316666666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005932",
@@ -34956,10 +35347,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-minis",
-    "latitude": null,
+    "latitude": 46.135019,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004987",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.6045211,
+    "pointSource": "place",
     "name": "Miniş",
     "names": [
       {
@@ -35152,12 +35543,18 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004551",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ancellotta",
+        "quote": "mainly grown in the Emilia-Romagna region of Italy ... (province of Modena) ... (province of Reggio Emilia) ... the red Colli di Faenza DOC. In the Province of Rimini it is employed in the Colli di Rimini DOC wine ... in the canton Ticino ... in the Cahul region ... in the Taman Peninsula ... Campos de Cima da Serra",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancellotta"
+      }
+    ],
     "id": "it-modena",
-    "latitude": null,
+    "latitude": 44.5384728,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004551",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.9359609,
+    "pointSource": "place",
     "name": "Modena",
     "names": [
       {
@@ -35216,6 +35613,11 @@
     "eambrosiaId": "EUGI00000004892",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "greco",
+        "quote": "In the Campania region it is used to produce the denominazione di origine controllata e garantita (DOCG) wine Greco di Tufo. In Calabria, it is used to make ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina ... In Apulia, it is a permitted blend component in the Gravina DOC ... It is also permitted in Lacryma Christi produced on the slopes of Mount Vesuvius ... Molise DOC ... Sannio DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Greco_(grape)"
+      },
       {
         "grapeId": "montepulciano",
         "quote": "The grape is widely planted throughout central and southern Italy, most notably in Abruzzo, Lazio, Marche, Molise, Umbria and Apulia",
@@ -35332,7 +35734,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006488",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "freisa",
+        "quote": "grown in the Piedmont region of north-west Italy, primarily in Monferrato and in the Langhe ... Freisa di Chieri ... In the Canavese there is also a rosé ... there are a few hundred acres of the vine planted in Argentina ... It is most commonly found in the Asti, Langhe, Monferrato and Pinerolese regions.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Freisa"
+      }
+    ],
     "id": "it-monferrato",
     "latitude": 44.608611111111,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006488",
@@ -35490,10 +35898,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-monor",
-    "latitude": null,
+    "latitude": 47.3527433,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007861",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 19.4468404,
+    "pointSource": "place",
     "name": "Monor",
     "names": [
       {
@@ -35516,7 +35924,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006021",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "grillo",
+        "quote": "It was already widely planted in the Province of Trapani by 1897; today it may be grown throughout Sicily and also in the Aeolian Islands ... in the province of La Spezia in Liguria ... Monreale (province of Palermo) ... Alcamo (provinces of Palermo and Trapani) ... Contea di Sclafani (provinces of Agrigento and Palermo) ... Delia Nivolelli (province of Trapani) ... This the first planting of Grillo in California.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grillo"
+      }
+    ],
     "id": "it-monreale",
     "latitude": 38.115555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006021",
@@ -35680,10 +36094,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-montecarlo",
-    "latitude": null,
+    "latitude": 43.8511862,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006003",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.6676214,
+    "pointSource": "place",
     "name": "Montecarlo",
     "names": [
       {
@@ -36014,10 +36428,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-montefalco",
-    "latitude": null,
+    "latitude": 42.8918739,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005322",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.6500673,
+    "pointSource": "place",
     "name": "Montefalco",
     "names": [
       {
@@ -36536,10 +36950,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-monti-lessini",
-    "latitude": null,
+    "latitude": 45.6551857,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005008",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.0061325,
+    "pointSource": "place",
     "name": "Monti Lessini",
     "names": [
       {
@@ -37192,6 +37606,11 @@
         "grapeId": "kerner",
         "quote": "Kerner is most commonly planted in the German regions of Palatinate, Rheinhessen, Mosel, and Württemberg, but it is also grown in Austria (Styria), Switzerland, the island of Hokkaido in Japan, Old Mission Peninsula in Michigan, and the Italian province of South Tyrol.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Kerner_(grape)"
+      },
+      {
+        "grapeId": "elbling",
+        "quote": "primarily grown in the upstream parts of the Mosel region in Germany and in Luxembourg",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Elbling"
       }
     ],
     "id": "de-mosel",
@@ -37642,10 +38061,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-muscat-de-beaumes-de-venise",
-    "latitude": null,
+    "latitude": 44.1218644,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000721",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.0301694,
+    "pointSource": "place",
     "name": "Muscat de Beaumes-de-Venise",
     "names": [
       {
@@ -37704,10 +38123,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-muscat-de-lunel",
-    "latitude": null,
+    "latitude": 43.6745265,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000461",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.1348062,
+    "pointSource": "place",
     "name": "Muscat de Lunel",
     "names": [
       {
@@ -37727,10 +38146,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-muscat-de-mireval",
-    "latitude": null,
+    "latitude": 43.5082254,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000401",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 3.8018991,
+    "pointSource": "place",
     "name": "Muscat de Mireval",
     "names": [
       {
@@ -37829,10 +38248,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-muscat-du-cap-corse",
-    "latitude": null,
+    "latitude": 42.8489738,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000122",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.4032404,
+    "pointSource": "place",
     "name": "Muscat du Cap Corse",
     "names": [
       {
@@ -38131,10 +38550,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-mor",
-    "latitude": null,
+    "latitude": 47.3720267,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005935",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.2090388,
+    "pointSource": "place",
     "name": "Mór",
     "names": [
       {
@@ -39382,10 +39801,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-ogliastra",
-    "latitude": null,
+    "latitude": 39.8871506,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005096",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.4790076,
+    "pointSource": "place",
     "name": "Ogliastra",
     "names": [
       {
@@ -39601,7 +40020,18 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000003624",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cortese",
+        "quote": "predominantly grown in the southeastern regions of Piedmont in the provinces of Alessandria and Asti ... Colli Tortonesi ... Cortese di Gavi. Significant plantings of Cortese can also be found in the Lombardy region of Oltrepò Pavese and the DOC white blends of the Veneto wine region of Bianco di Custoza ... Garda Cortese DOC is produced in the hills near Lake Garda",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cortese"
+      },
+      {
+        "grapeId": "croatina",
+        "quote": "grown primarily in the Oltrepò Pavese region of Lombardy and in the Province of Piacenza within Emilia Romagna, but also in parts of Piedmont and the Veneto ... and in Roero",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Croatina"
+      }
+    ],
     "id": "it-oltrepo-pavese-metodo-classico",
     "latitude": 45.183333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003624",
@@ -39866,10 +40296,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-ortona",
-    "latitude": null,
+    "latitude": 42.349643,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003026",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.403913,
+    "pointSource": "place",
     "name": "Ortona",
     "names": [
       {
@@ -41322,6 +41752,11 @@
         "grapeId": "scheurebe",
         "quote": "Plantings are most common in Palatinate, Rheinhessen and Nahe ... primarily in Burgenland and Styria ... Some Scheurebe is grown in California, Oregon, Western Australia, and Nova Scotia, Canada. ... recently been introduced in Switzerland ... Geneva.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Scheurebe"
+      },
+      {
+        "grapeId": "auxerrois-blanc",
+        "quote": "prevalent in the French region of Alsace, and is also grown in neighbouring Germany and Luxembourg ... with some in the Côtes de Toul of Lorraine ... The main growing areas were Baden (wine region)(71 hectares (175 acres)) and Palatinate ... known to grow Auxerrois blanc in Oregon ... on the Leelanau peninsula in Michigan ... grown on Vancouver Island ... in the Okanagan wine country ... A few vineyards in the United Kingdom grow Auxerrois",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auxerrois_blanc"
       }
     ],
     "id": "de-pfalz",
@@ -41535,10 +41970,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-pico",
-    "latitude": null,
+    "latitude": 41.696884,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005045",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -8.4170736,
+    "pointSource": "place",
     "name": "Pico",
     "names": [
       {
@@ -41595,10 +42030,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-picpoul-de-pinet",
-    "latitude": null,
+    "latitude": 43.4068,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000008602",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 3.5072,
+    "pointSource": "place",
     "name": "Picpoul de Pinet",
     "names": [
       {
@@ -41736,7 +42171,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006527",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "freisa",
+        "quote": "grown in the Piedmont region of north-west Italy, primarily in Monferrato and in the Langhe ... Freisa di Chieri ... In the Canavese there is also a rosé ... there are a few hundred acres of the vine planted in Argentina ... It is most commonly found in the Asti, Langhe, Monferrato and Pinerolese regions.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Freisa"
+      }
+    ],
     "id": "it-pinerolese",
     "latitude": 45.0667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006527",
@@ -42158,10 +42599,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-pomino",
-    "latitude": null,
+    "latitude": 43.8151012,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006550",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.5506357,
+    "pointSource": "place",
     "name": "Pomino",
     "names": [
       {
@@ -42320,10 +42761,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-pornassio",
-    "latitude": null,
+    "latitude": 44.0698777,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005141",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.8712894,
+    "pointSource": "place",
     "name": "Pornassio",
     "names": [
       {
@@ -42406,10 +42847,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-porto",
-    "latitude": null,
+    "latitude": 41.1502195,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006172",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -8.6103497,
+    "pointSource": "place",
     "name": "Porto",
     "names": [
       {
@@ -42780,10 +43221,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-premieres-cotes-de-bordeaux",
-    "latitude": null,
+    "latitude": 44.841225,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001607",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.5800364,
+    "pointSource": "place",
     "name": "Premières Côtes de Bordeaux",
     "names": [
       {
@@ -43331,10 +43772,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "fr-puy-de-dome",
-    "latitude": null,
+    "latitude": 45.7715343,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003181",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 3.0839934,
+    "pointSource": "place",
     "name": "Puy-de-Dôme",
     "names": [
       {
@@ -44095,10 +44536,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-reno",
-    "latitude": null,
+    "latitude": 44.534855,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004504",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.185676,
+    "pointSource": "place",
     "name": "Reno",
     "names": [
       {
@@ -44334,6 +44775,11 @@
         "grapeId": "scheurebe",
         "quote": "Plantings are most common in Palatinate, Rheinhessen and Nahe ... primarily in Burgenland and Styria ... Some Scheurebe is grown in California, Oregon, Western Australia, and Nova Scotia, Canada. ... recently been introduced in Switzerland ... Geneva.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Scheurebe"
+      },
+      {
+        "grapeId": "bacchus-weiss",
+        "quote": "Within Germany, Franconia is considered as the source of some of the more successful varietal Bacchus wines. Bacchus is also increasingly grown in several vineyards in England ... more than half were in Rheinhessen",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bacchus_(grape)"
       }
     ],
     "id": "de-rheinhessen",
@@ -44458,10 +44904,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-ribeiras-do-morrazo",
-    "latitude": null,
+    "latitude": 42.3225643,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015164",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -8.7556203,
+    "pointSource": "place",
     "name": "Ribeiras do Morrazo",
     "names": [
       {
@@ -44718,10 +45164,10 @@
       }
     ],
     "id": "es-ribera-del-guadiana",
-    "latitude": null,
+    "latitude": 38.9285287,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005462",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -6.6906385,
+    "pointSource": "place",
     "name": "Ribera del Guadiana",
     "names": [
       {
@@ -44741,10 +45187,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-ribera-del-gallego-cinco-villas",
-    "latitude": null,
+    "latitude": 42.2255953,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005342",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.1250764,
+    "pointSource": "place",
     "name": "Ribera del Gállego - Cinco Villas",
     "names": [
       {
@@ -44788,10 +45234,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-ribera-del-jiloca",
-    "latitude": null,
+    "latitude": 40.7896541,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005348",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.3529881,
+    "pointSource": "place",
     "name": "Ribera del Jiloca",
     "names": [
       {
@@ -45390,7 +45836,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004813",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "croatina",
+        "quote": "grown primarily in the Oltrepò Pavese region of Lombardy and in the Province of Piacenza within Emilia Romagna, but also in parts of Piedmont and the Veneto ... and in Roero",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Croatina"
+      }
+    ],
     "id": "it-roero",
     "latitude": 44.7,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004813",
@@ -46641,10 +47093,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-roussette-de-savoie",
-    "latitude": null,
+    "latitude": 45.4948952,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002281",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 6.3846604,
+    "pointSource": "place",
     "name": "Roussette de Savoie",
     "names": [
       {
@@ -46664,10 +47116,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-roussette-du-bugey",
-    "latitude": null,
+    "latitude": 45.9779838,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002302",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.5447649,
+    "pointSource": "place",
     "name": "Roussette du Bugey",
     "names": [
       {
@@ -47929,6 +48381,11 @@
     "giType": "PDO",
     "grapes": [
       {
+        "grapeId": "mauzac",
+        "quote": "It is mainly grown in the Gaillac and Limoux regions in southwest France ... The grape is also one of the seven permitted white varieties in Bordeaux wine.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mauzac_(grape)"
+      },
+      {
         "grapeId": "sauvignon-blanc",
         "quote": "Sauvignon blanc is widely cultivated in many of the world's wine regions, including France, Argentina (also in Patagonia) Chile, Romania, Canada, Australia, New Zealand, South Africa, Bulgaria, and the states of Oregon, Washington, and California in the US ... In France, ... Loire Valley ... Bordeaux ... In the early 1990s ... Valparaíso ... In Australia, particularly the Margaret River region ... In the Marlborough wine region ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignon_blanc"
@@ -47945,10 +48402,10 @@
       }
     ],
     "id": "fr-sainte-fou-bordeaux",
-    "latitude": null,
+    "latitude": 44.841225,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002011",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.5800364,
+    "pointSource": "place",
     "name": "Sainte-Foy-Bordeaux",
     "names": [
       {
@@ -48924,7 +49381,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004961",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "greco",
+        "quote": "In the Campania region it is used to produce the denominazione di origine controllata e garantita (DOCG) wine Greco di Tufo. In Calabria, it is used to make ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina ... In Apulia, it is a permitted blend component in the Gravina DOC ... It is also permitted in Lacryma Christi produced on the slopes of Mount Vesuvius ... Molise DOC ... Sannio DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Greco_(grape)"
+      }
+    ],
     "id": "it-sannio",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004961",
@@ -49235,7 +49698,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001165",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "grolleau",
+        "quote": "grown primarily in the Loire Valley of France ... particularly in the Anjou region ... permitted grape variety for the rosé Appellation d'origine contrôlée (AOC)s of Anjou, Touraine and Saumur AOC.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grolleau_(grape)"
+      }
+    ],
     "id": "fr-saumur",
     "latitude": 47.259166666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001165",
@@ -49939,10 +50408,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-serrapetrona",
-    "latitude": null,
+    "latitude": 43.1758989,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004843",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.1886151,
+    "pointSource": "place",
     "name": "Serrapetrona",
     "names": [
       {
@@ -50390,10 +50859,10 @@
       }
     ],
     "id": "it-siracusa",
-    "latitude": null,
+    "latitude": 37.0315752,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006002",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.2124277,
+    "pointSource": "place",
     "name": "Siracusa",
     "names": [
       {
@@ -50593,10 +51062,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-slavonija",
-    "latitude": null,
+    "latitude": 45.4039405,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010735",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.8755701,
+    "pointSource": "place",
     "name": "Slavonija",
     "names": [
       {
@@ -51115,10 +51584,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-spoleto",
-    "latitude": null,
+    "latitude": 42.7342971,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005489",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.7382035,
+    "pointSource": "place",
     "name": "Spoleto",
     "names": [
       {
@@ -51442,10 +51911,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-suvereto",
-    "latitude": null,
+    "latitude": 43.079015,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006867",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.6786806,
+    "pointSource": "place",
     "name": "Suvereto",
     "names": [
       {
@@ -51500,10 +51969,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-szekszard",
-    "latitude": null,
+    "latitude": 46.3484884,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006422",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.701663,
+    "pointSource": "place",
     "name": "Szekszárd",
     "names": [
       {
@@ -51715,10 +52184,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-tarquinia",
-    "latitude": null,
+    "latitude": 42.2532394,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006392",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.7591747,
+    "pointSource": "place",
     "name": "Tarquinia",
     "names": [
       {
@@ -51970,7 +52439,18 @@
     "countryCode": "PT",
     "eambrosiaId": "EUGI00000005421",
     "giType": "PGI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "arinto",
+        "quote": "planted primarily in the Bucelas, Tejo and Vinho Verde regions",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arinto"
+      },
+      {
+        "grapeId": "fernao-pires",
+        "quote": "especially in the Tejo and Bairrada ... Outside of Portugal there are some significant plantings in South Africa.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fern%C3%A3o_Pires"
+      }
+    ],
     "id": "pt-tejo",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005421",
@@ -52321,10 +52801,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-terras-do-navia",
-    "latitude": null,
+    "latitude": 43.5275049,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000018111",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -6.6755155,
+    "pointSource": "place",
     "name": "Terras do Navia",
     "names": [
       {
@@ -52543,10 +53023,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-terre-aquilane",
-    "latitude": null,
+    "latitude": 42.1368853,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003261",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.610341,
+    "pointSource": "place",
     "name": "Terre Aquilane",
     "names": [
       {
@@ -52952,10 +53432,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-terre-di-cosenza",
-    "latitude": null,
+    "latitude": 39.5966853,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004783",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.3330556,
+    "pointSource": "place",
     "name": "Terre di Cosenza",
     "names": [
       {
@@ -53422,10 +53902,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-tintilia-del-molise",
-    "latitude": null,
+    "latitude": 41.684672,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004904",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.595614,
+    "pointSource": "place",
     "name": "Tintilia del Molise",
     "names": [
       {
@@ -53666,10 +54146,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-torgiano",
-    "latitude": null,
+    "latitude": 43.028542,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005555",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.44136,
+    "pointSource": "place",
     "name": "Torgiano",
     "names": [
       {
@@ -53887,6 +54367,11 @@
         "grapeId": "pinot-meunier",
         "quote": "It is most prevalent in the cooler, north facing vineyards of the Vallee de la Marne and in the Aisne department. ... It is also widely grown in the Aube region ... found ... in the Loire Valley regions of Touraine and Orleans ... most German plantings ... are found in Württemberg ... most of the state's plantings are located in the Carneros AVA ... in the Grampians region of Victoria ... New Zealand wine industry ... German‑speaking parts of Switzerland ... small quantities in Austria.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Meunier"
+      },
+      {
+        "grapeId": "grolleau",
+        "quote": "grown primarily in the Loire Valley of France ... particularly in the Anjou region ... permitted grape variety for the rosé Appellation d'origine contrôlée (AOC)s of Anjou, Touraine and Saumur AOC.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grolleau_(grape)"
       }
     ],
     "id": "fr-touraine",
@@ -54075,6 +54560,16 @@
         "grapeId": "italian-riesling",
         "quote": "In Austria, the main regions where it is grown are south and south eastern Styria, in Burgenland, and in the Weinviertel region of Lower Austria... In Croatia, Graševina is the most planted white grape variety. It is grown in all the inland wine regions, particularly in Kutjevo municipality and around Ilok... In the Czech Republic, Ryzlink vlašský is grown in the South Moravian Region, particularly in the Mikulovská and Velkopavlovická wine subregions... In Hungary, Olaszrizling is the most widespread grape variety of the country, e.g. in the Csopak wine region... In Italy, it is known as Riesling Italico when grown in the northern regions such as Trentino, Collio and Friuli... In Slovenia, Welschriesling ... is grown in the Lower Styria region of eastern Slovenia, produces dry to medium-dry wines in the Vipava Valley...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "grapeId": "trollinger",
+        "quote": "was likely originally cultivated in the wine regions of South Tyrol and Trentino, but today is almost exclusively cultivated on steep, sunny locations in the Württemberg wine region ... throughout the Neckar valley ... including the Santa Maddalena DOC ... Caldaro DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Trollinger"
+      },
+      {
+        "grapeId": "marzemino",
+        "quote": "primarily grown around Isera, south of Trentino ... most notably in the Lombardia, Trentino, Veneto and Friuli-Venezia Giulia wine region. In Lombardy it is often used as a blending grape",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Marzemino"
       }
     ],
     "id": "it-trentino",
@@ -54553,6 +55048,11 @@
         "grapeId": "pecorino",
         "quote": "Pecorino ... grows in the Marche, Abruzzo, Tuscany, Umbria and Lazio regions of Italy.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Pecorino_(grape)"
+      },
+      {
+        "grapeId": "aleatico",
+        "quote": "the cult wine Aleatico di Portoferraio made in Elba. In Chile is known as Red Moscatel. The grape has also been cultivated at Mudgee in New South Wales and California ... Aleatico is most commonly found in Italy, Tuscany (primarily in Elba), Lazio, Umbria, Piedmont, Apulia ... Aleatico is found around Lake Bolsena",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aleatico"
       }
     ],
     "id": "it-umbria",
@@ -55558,10 +56058,10 @@
       }
     ],
     "id": "es-valdejalon",
-    "latitude": null,
+    "latitude": 41.5381393,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005350",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.3088316,
+    "pointSource": "place",
     "name": "Valdejalón",
     "names": [
       {
@@ -56432,10 +56932,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-valles-de-benavente",
-    "latitude": null,
+    "latitude": 42.0032862,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006153",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -5.6738595,
+    "pointSource": "place",
     "name": "Valles de Benavente",
     "names": [
       {
@@ -56623,6 +57123,11 @@
         "grapeId": "rondinella",
         "quote": "Almost all of the total global growing area of 2,481 hectares (6,130 acres) is in the Veneto region of northern Italy, and the grapes are used in wines from the Valpolicella and Bardolino wine regions.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Rondinella"
+      },
+      {
+        "grapeId": "molinara",
+        "quote": "almost exclusively in the Veneto region. It adds acidity to the wines of the Valpolicella and Bardolino regions",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Molinara_(grape)"
       }
     ],
     "id": "it-valpolicella",
@@ -57020,10 +57525,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-velletri",
-    "latitude": null,
+    "latitude": 41.6867015,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006401",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.7770433,
+    "pointSource": "place",
     "name": "Velletri",
     "names": [
       {
@@ -57101,6 +57606,21 @@
         "grapeId": "rondinella",
         "quote": "Almost all of the total global growing area of 2,481 hectares (6,130 acres) is in the Veneto region of northern Italy, and the grapes are used in wines from the Valpolicella and Bardolino wine regions.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Rondinella"
+      },
+      {
+        "grapeId": "molinara",
+        "quote": "almost exclusively in the Veneto region. It adds acidity to the wines of the Valpolicella and Bardolino regions",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Molinara_(grape)"
+      },
+      {
+        "grapeId": "marzemino",
+        "quote": "primarily grown around Isera, south of Trentino ... most notably in the Lombardia, Trentino, Veneto and Friuli-Venezia Giulia wine region. In Lombardy it is often used as a blending grape",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Marzemino"
+      },
+      {
+        "grapeId": "croatina",
+        "quote": "grown primarily in the Oltrepò Pavese region of Lombardy and in the Province of Piacenza within Emilia Romagna, but also in parts of Piedmont and the Veneto ... and in Roero",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Croatina"
       }
     ],
     "id": "it-veneto",
@@ -57930,10 +58450,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-vernaccia-di-serrapetrona",
-    "latitude": null,
+    "latitude": 43.1758989,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004835",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.1886151,
+    "pointSource": "place",
     "name": "Vernaccia di Serrapetrona",
     "names": [
       {
@@ -57986,10 +58506,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-vesuvio",
-    "latitude": null,
+    "latitude": 40.8213963,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005061",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.4261967,
+    "pointSource": "place",
     "name": "Vesuvio",
     "names": [
       {
@@ -58090,10 +58610,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-vignanello",
-    "latitude": null,
+    "latitude": 42.3834288,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006403",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.2760524,
+    "pointSource": "place",
     "name": "Vignanello",
     "names": [
       {
@@ -58435,10 +58955,10 @@
       }
     ],
     "id": "hu-villany",
-    "latitude": null,
+    "latitude": 45.8697644,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006801",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.4555208,
+    "pointSource": "place",
     "name": "Villány",
     "names": [
       {
@@ -58647,10 +59167,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "be-vin-de-pays-des-jardins-de-wallonie",
-    "latitude": null,
+    "latitude": 50.3154983,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005344",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.0097962,
+    "pointSource": "place",
     "name": "Vin de pays des jardins de Wallonie",
     "names": [
       {
@@ -58734,6 +59254,11 @@
         "grapeId": "caino-tinto",
         "quote": "Denominación de Origens (DOs) of Rías Baixas and Ribeiro ... Portugal's Vinho Verde wine region",
         "sourceUrl": "https://en.wikipedia.org/wiki/Cai%C3%B1o_tinto"
+      },
+      {
+        "grapeId": "arinto",
+        "quote": "planted primarily in the Bucelas, Tejo and Vinho Verde regions",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arinto"
       },
       {
         "grapeId": "albarino",
@@ -59084,10 +59609,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-vipavska-dolina",
-    "latitude": null,
+    "latitude": 45.8864813,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005861",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.857156,
+    "pointSource": "place",
     "name": "Vipavska dolina",
     "names": [
       {
@@ -59592,6 +60117,11 @@
         "grapeId": "kerner",
         "quote": "Kerner is most commonly planted in the German regions of Palatinate, Rheinhessen, Mosel, and Württemberg, but it is also grown in Austria (Styria), Switzerland, the island of Hokkaido in Japan, Old Mission Peninsula in Michigan, and the Italian province of South Tyrol.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Kerner_(grape)"
+      },
+      {
+        "grapeId": "trollinger",
+        "quote": "was likely originally cultivated in the wine regions of South Tyrol and Trentino, but today is almost exclusively cultivated on steep, sunny locations in the Württemberg wine region ... throughout the Neckar valley ... including the Santa Maddalena DOC ... Caldaro DOC",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Trollinger"
       }
     ],
     "id": "de-wurttemberg",
@@ -61031,10 +61561,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-drama",
-    "latitude": null,
+    "latitude": 41.149912,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006821",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 24.1468836,
+    "pointSource": "place",
     "name": "Δράμα",
     "names": [
       {
@@ -61143,10 +61673,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-eyvoia",
-    "latitude": null,
+    "latitude": 38.4941724,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006081",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.9110844,
+    "pointSource": "place",
     "name": "Εύβοια",
     "names": [
       {
@@ -61827,10 +62357,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-kriti",
-    "latitude": null,
+    "latitude": 35.3084952,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007541",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 24.4633423,
+    "pointSource": "place",
     "name": "Κρήτη",
     "names": [
       {
@@ -62023,10 +62553,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-kos",
-    "latitude": null,
+    "latitude": 36.7936933,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005509",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.0848266,
+    "pointSource": "place",
     "name": "Κως",
     "names": [
       {
@@ -62303,10 +62833,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-leykada",
-    "latitude": null,
+    "latitude": 38.7065734,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006402",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.6416779,
+    "pointSource": "place",
     "name": "Λευκάδα",
     "names": [
       {
@@ -62331,10 +62861,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "cy-leykosia",
-    "latitude": null,
+    "latitude": 35.1746503,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005962",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 33.3638783,
+    "pointSource": "place",
     "name": "Λευκωσία",
     "names": [
       {
@@ -63151,10 +63681,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-pella",
-    "latitude": null,
+    "latitude": 40.7604079,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005583",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.5271118,
+    "pointSource": "place",
     "name": "Πέλλα",
     "names": [
       {
@@ -63291,10 +63821,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-peloponnisos",
-    "latitude": null,
+    "latitude": 37.363372,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007603",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.2394984,
+    "pointSource": "place",
     "name": "Πελοπόννησος",
     "names": [
       {
@@ -64477,10 +65007,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-spata",
-    "latitude": null,
+    "latitude": 37.9613997,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006423",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.915915,
+    "pointSource": "place",
     "name": "Σπάτα",
     "names": [
       {
@@ -65093,10 +65623,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "bg-dunavska-ravnina",
-    "latitude": null,
+    "latitude": 43.5861165,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006264",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.704489,
+    "pointSource": "place",
     "name": "Дунавска равнина",
     "names": [
       {
@@ -65121,10 +65651,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-evksinograd",
-    "latitude": null,
+    "latitude": 43.2188009,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006256",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.9882953,
+    "pointSource": "place",
     "name": "Евксиноград",
     "names": [
       {
@@ -65289,10 +65819,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-lom",
-    "latitude": null,
+    "latitude": 43.8201697,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006272",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.2386638,
+    "pointSource": "place",
     "name": "Лом",
     "names": [
       {
@@ -65401,10 +65931,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-montana",
-    "latitude": null,
+    "latitude": 43.4088984,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006278",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.2203193,
+    "pointSource": "place",
     "name": "Монтана",
     "names": [
       {

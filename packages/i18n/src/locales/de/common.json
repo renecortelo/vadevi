@@ -185,7 +185,7 @@
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "Woher sie stammt",
     "mapLabel": "Karte mit {{place}}",
-    "mapSource": "Karte: Natural Earth",
+    "mapSource": "Karte: Natural Earth · Punkte: Wikidata, © OpenStreetMap-Mitwirkende",
     "mapCountryOnly": "Das genaue Gebiet ist noch nicht in der Bibliothek; die Karte zeigt das Land.",
     "mapApproximate": {
       "area": "Ungefährer Punkt: die Mitte des Gebiets, in dem die Bezeichnung liegt.",

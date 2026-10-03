@@ -185,7 +185,7 @@
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "Waar ze vandaan komt",
     "mapLabel": "Kaart met {{place}}",
-    "mapSource": "Kaart: Natural Earth",
+    "mapSource": "Kaart: Natural Earth · Punten: Wikidata, © OpenStreetMap-bijdragers",
     "mapCountryOnly": "Het precieze gebied staat nog niet in de bibliotheek; de kaart toont het land.",
     "mapApproximate": {
       "area": "Benaderd punt: het midden van het gebied waarin de benaming ligt.",

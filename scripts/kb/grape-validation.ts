@@ -100,15 +100,15 @@ export function mentions(quote: string, value: string): boolean {
 }
 
 const levelWords: Record<Level, RegExp> = {
-  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked)\b/,
-  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin)\b/,
+  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable)\b/,
+  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle)\b/,
   medium: /\b(medium|moderate|moderately|medium-bodied|average)\b/,
 };
 
 const fieldWords: Record<"acidity" | "body" | "tannin", RegExp> = {
   acidity: /acid/,
   body: /bod(y|ied)|weight|structure/,
-  tannin: /tannin/,
+  tannin: /tannin|tannic/,
 };
 
 function toLevel(value: unknown): Level | null {

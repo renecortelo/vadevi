@@ -20,6 +20,13 @@
     "path": "library/grapes/aglianico.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aglianico_prior_to_Veraison.JPG"
   },
+  "airen": {
+    "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/airen.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC157_AIREN_Cluster_in_the_field_8859.jpg"
+  },
   "albana": {
     "author": "Gianluca Giunchi",
     "license": "CC BY 2.0",
@@ -195,6 +202,13 @@
     "path": "library/grapes/canaiolo.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uva_Canaiola_-_Giorgio_Gallesio.jpg"
   },
+  "carignan": {
+    "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/carignan.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC2098_CARIGNAN_NOIR_Cluster_in_the_field_8921.jpg"
+  },
   "carmenere": {
     "author": "Lebowskyclone",
     "license": "CC BY-SA 3.0",
@@ -250,6 +264,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "path": "library/grapes/colombard.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colombard_raisin.jpg"
+  },
+  "cortese": {
+    "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/cortese.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC2856_CORTESE_Cluster_in_the_laboratory_7638.jpg"
   },
   "corvina": {
     "author": "Jonathanischoice at English Wikipedia",
@@ -321,12 +342,26 @@
     "path": "library/grapes/feteasca-neagra.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feteasca_Neagra.jpg"
   },
+  "feteasca-regala": {
+    "author": "SenatorulX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/feteasca-regala.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feteasc%C4%83_regal%C4%83.jpg"
+  },
   "fiano": {
     "author": "Viala et Vermorel",
     "license": "Public domain",
     "licenseUrl": null,
     "path": "library/grapes/fiano.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiano.jpg"
+  },
+  "folle-blanche": {
+    "author": "Pancrat",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/grapes/folle-blanche.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Folle_blanche_raisin.jpg"
   },
   "furmint": {
     "author": "Vermorel et Viala",
@@ -355,6 +390,13 @@
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "path": "library/grapes/gewurztraminer.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gew%C3%BCrztraminer.jpg"
+  },
+  "glera": {
+    "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/glera.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC9741_GLERA_Cluster_in_the_field_17055.jpg"
   },
   "graciano": {
     "author": "Jules Troncy",
@@ -713,6 +755,13 @@
     "path": "library/grapes/plavac-mali.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plavac_mali_N.jpg"
   },
+  "ribolla-gialla": {
+    "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/ribolla-gialla.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC10054_RIBOLLA_GIALLA_Cluster_in_the_field_3757.jpg"
+  },
   "riesling": {
     "author": "No machine-readable author provided. T.o.m.~commonswiki assumed (based on copyright claims).",
     "license": "CC BY-SA 3.0",
@@ -894,6 +943,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "path": "library/grapes/treixadura.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Racimos_de_Treixadura.jpg"
+  },
+  "trepat": {
+    "author": "Angela Llop",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "path": "library/grapes/trepat.jpg",
+    "sourceUrl": "https://www.flickr.com/photos/37963111@N03/14823649640"
   },
   "trollinger": {
     "author": "Rosenzweig",

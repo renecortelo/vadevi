@@ -38,6 +38,12 @@ const wikidata = JSON.parse(readFileSync(resolve(cache, "wikidata.json"), "utf8"
   }
 >;
 const grapes = JSON.parse(readFileSync(resolve("data/kb/grapes.json"), "utf8")) as GrapeEntry[];
+// Points OpenStreetMap's geocoder found for names Wikidata could not place
+// (`pnpm kb:geocode-appellations`, run after a first build). Approximate.
+const geocodedPath = resolve(cache, "geocoded.json");
+const geocoded = (
+  existsSync(geocodedPath) ? JSON.parse(readFileSync(geocodedPath, "utf8")) : {}
+) as Record<string, { latitude: number; longitude: number }>;
 
 function isoDate(value: string | null): string | null {
   const match = value === null ? null : /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
@@ -83,10 +89,15 @@ for (const row of register) {
     giType,
     grapes: [],
     id,
-    latitude: linked?.latitude ?? null,
+    latitude: linked?.latitude ?? geocoded[row.appUniqueId]?.latitude ?? null,
     legalUrl: `https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/${row.appUniqueId}`,
-    longitude: linked?.longitude ?? null,
-    pointSource: linked?.latitude == null ? null : (linked.pointSource ?? "item"),
+    longitude: linked?.longitude ?? geocoded[row.appUniqueId]?.longitude ?? null,
+    pointSource:
+      linked?.latitude != null
+        ? (linked.pointSource ?? "item")
+        : geocoded[row.appUniqueId] !== undefined
+          ? "place"
+          : null,
     name: names[0] ?? row.protectedName,
     names: [
       ...names.map((name) => ({ locale: "*", name, source: "register" as const })),

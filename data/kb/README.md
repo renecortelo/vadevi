@@ -54,9 +54,20 @@ product specification, linked from the register.
   domain, CC0, CC BY or CC BY-SA), recorded with its author and source in
   `grape-images.json` and credited under the photograph in the app. The
   release scan refuses any picture in that folder without its record.
+- **OpenStreetMap** (via its Nominatim geocoder, `pnpm kb:geocode-appellations`):
+  approximate points for registered names Wikidata could not place, taken
+  only on an exact name match in the same country. © OpenStreetMap
+  contributors, ODbL; credited under the map.
+- **VIVC photographs on Commons** (some grapes): © Doris Schneider, Ursula
+  Brühl, Julius Kühn-Institut (JKI), www.vivc.de, CC BY-SA 4.0.
 - **Natural Earth** country outlines (the library's map,
   `apps/web/src/library/europe-map.json`, built by `pnpm kb:build-map`):
   public domain.
+
+Since October 2026 the grapes' structure, aromas, regions and pairings were
+also read in a working session with Claude, under the same rules and the same
+check: every value with its verbatim quote, kept only if `grape-validation.ts`
+finds the quote in the article and the quote says it.
 
 The styles and methods (`topics.json`) are articles chosen by hand in
 `topics-include.json`; their explanations are each article's lead, in every

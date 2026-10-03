@@ -185,11 +185,11 @@
     "photoCredit": "Photo: {{author}} · {{license}}",
     "originTitle": "Where it comes from",
     "mapLabel": "Map showing {{place}}",
-    "mapSource": "Map: Natural Earth",
+    "mapSource": "Map: Natural Earth · Points: Wikidata, © OpenStreetMap contributors",
     "mapCountryOnly": "The exact area is not in the library yet; the map shows the country.",
     "mapApproximate": {
       "area": "Approximate point: the centre of the area the appellation lies in.",
-      "place": "Approximate point: the town the appellation is named after."
+      "place": "Approximate point: the place the appellation is named after."
     }
   },
   "space": {

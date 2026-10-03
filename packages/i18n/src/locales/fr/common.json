@@ -185,11 +185,11 @@
     "photoCredit": "Photo : {{author}} · {{license}}",
     "originTitle": "D'où il vient",
     "mapLabel": "Carte situant {{place}}",
-    "mapSource": "Carte : Natural Earth",
+    "mapSource": "Carte : Natural Earth · Points : Wikidata, © contributeurs d'OpenStreetMap",
     "mapCountryOnly": "La zone exacte n'est pas encore dans la bibliothèque ; la carte montre le pays.",
     "mapApproximate": {
       "area": "Point approximatif : le centre de la zone où se trouve l'appellation.",
-      "place": "Point approximatif : la localité qui donne son nom à l'appellation."
+      "place": "Point approximatif : le lieu qui donne son nom à l'appellation."
     }
   },
   "space": {
