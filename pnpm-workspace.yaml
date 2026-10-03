@@ -59,3 +59,11 @@ minimumReleaseAgeExclude:
   - "@cloudflare/vitest-pool-workers@0.21.1"
   - miniflare@5.20260804.1-alpha || 5.20260916.0-alpha
   - wrangler@4.121.0 || 4.133.0
+
+auditConfig:
+  ignoreGhsas:
+    # braces, ReDoS-style stack exhaustion, under firebase-tools>chokidar (the
+    # emulator's file watcher) and test tooling. No patched release exists yet
+    # (3.0.3 is the latest); override to ">=3.0.4 <4" and drop this entry once
+    # one is published. Never reaches the Worker or the browser bundle.
+    - GHSA-vfj7-8cjw-p6xm
