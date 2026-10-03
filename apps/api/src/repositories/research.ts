@@ -1235,54 +1235,61 @@ export async function regenerateTastingComparison(
     }
     if (row.source_id !== null) sourceIds.add(row.source_id);
   }
-  // What the tasting is set against: the producer and published tastings
-  // where research found them; otherwise what the wine library says is typical
-  // of the wine's grapes — labelled as the variety's, never as this bottle's.
-  let basis: "grapes" | "producer" = "producer";
-  if (sources.length === 0 || sourceIds.size === 0) {
-    const grapeRows = await database
-      .prepare(
-        `SELECT name_snapshot FROM wine_grapes WHERE space_id = ? AND wine_id = ? ORDER BY position`,
-      )
-      .bind(options.spaceId, options.wineId)
-      .all<{ name_snapshot: string }>();
-    const references = (
-      await grapeReferencesFor(
-        database,
-        grapeRows.results.map((row) => row.name_snapshot),
-      )
-    ).filter((reference) => reference.text !== null);
-    if (references.length === 0) return "no_material";
+  // What the tasting is set against: whatever the wine's own sources say about
+  // how it tastes — research often brings the estate's story rather than a
+  // tasting — together with what the wine library says is typical of its
+  // grapes, stated as the variety's. Either side may be missing; not both.
+  const grapeRows = await database
+    .prepare(
+      `SELECT name_snapshot FROM wine_grapes WHERE space_id = ? AND wine_id = ? ORDER BY position`,
+    )
+    .bind(options.spaceId, options.wineId)
+    .all<{ name_snapshot: string }>();
+  const references = (
+    await grapeReferencesFor(
+      database,
+      grapeRows.results.map((row) => row.name_snapshot),
+    )
+  ).filter((reference) => reference.text !== null);
+  const producerSourced = sources.length > 0 && sourceIds.size > 0;
+  if (!producerSourced) {
     sources.length = 0;
     sourceIds.clear();
-    const now = new Date().toISOString();
-    for (const reference of references) {
-      sources.push(reference.text!);
-      const source = await database
-        .prepare(
-          `INSERT INTO sources (
-            id, space_id, canonical_url, title, publisher, source_type,
-            license_identifier, retrieved_at, last_checked_at, content_hash,
-            created_by_user_id, created_by_provider, created_at, updated_at
-          ) VALUES (?, ?, ?, ?, 'Wikipedia', 'open_dataset', 'CC-BY-SA-4.0', ?, NULL, NULL,
-            NULL, 'wine-library', ?, ?)
-          ON CONFLICT(space_id, canonical_url) DO UPDATE SET canonical_url = excluded.canonical_url
-          RETURNING id`,
-        )
-        .bind(
-          ulid(),
-          options.spaceId,
-          reference.sourceUrl,
-          `${reference.card.name} — Wikipedia`,
-          now,
-          now,
-          now,
-        )
-        .first<{ id: string }>();
-      if (source !== null) sourceIds.add(source.id);
-    }
-    basis = "grapes";
   }
+  if (!producerSourced && references.length === 0) return "no_material";
+  const grapes: string[] = [];
+  const sourcedAt = new Date().toISOString();
+  for (const reference of references) {
+    grapes.push(reference.text!);
+    const source = await database
+      .prepare(
+        `INSERT INTO sources (
+          id, space_id, canonical_url, title, publisher, source_type,
+          license_identifier, retrieved_at, last_checked_at, content_hash,
+          created_by_user_id, created_by_provider, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, 'Wikipedia', 'open_dataset', 'CC-BY-SA-4.0', ?, NULL, NULL,
+          NULL, 'wine-library', ?, ?)
+        ON CONFLICT(space_id, canonical_url) DO UPDATE SET canonical_url = excluded.canonical_url
+        RETURNING id`,
+      )
+      .bind(
+        ulid(),
+        options.spaceId,
+        reference.sourceUrl,
+        `${reference.card.name} — Wikipedia`,
+        sourcedAt,
+        sourcedAt,
+        sourcedAt,
+      )
+      .first<{ id: string }>();
+    if (source !== null) sourceIds.add(source.id);
+  }
+  const method =
+    producerSourced && grapes.length > 0
+      ? "tasting.comparison.mixed.v1"
+      : producerSourced
+        ? "tasting.comparison.v1"
+        : "tasting.comparison.grapes.v1";
   const tasting = await comparisonTastingLines(
     database,
     options.principal,
@@ -1292,7 +1299,7 @@ export async function regenerateTastingComparison(
   if (tasting.length === 0) return "no_material";
 
   const paragraph = await narrative.compare({
-    basis,
+    grapes,
     locale: options.locale,
     sources,
     tasting,
@@ -1325,8 +1332,8 @@ export async function regenerateTastingComparison(
         options.spaceId,
         options.wineId,
         JSON.stringify(paragraph),
-        // Which side the tasting was set against, for the page to say so.
-        basis === "grapes" ? "tasting.comparison.grapes.v1" : "tasting.comparison.v1",
+        // Which sides the tasting was set against, for the page to say so.
+        method,
         now,
         now,
         options.locale,

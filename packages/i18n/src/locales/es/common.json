@@ -514,7 +514,8 @@
       "inferred": "Lectura de lo ya registrado, no una fuente nueva",
       "noMaterial": "Falta una de las dos partes: investiga el vino, registra sus uvas o registra una cata y vuelve a intentarlo.",
       "error": "No se pudo escribir la comparación. Inténtalo de nuevo.",
-      "basisGrapes": "Comparada con lo típico de sus uvas (biblioteca del vino), porque el productor no ha dicho nada sobre cómo sabe."
+      "basisGrapes": "Comparada con lo típico de sus uvas (biblioteca del vino), porque el productor no ha dicho nada sobre cómo sabe.",
+      "basisMixed": "Comparada con lo que dicen las fuentes del vino sobre su cata y con lo típico de sus uvas (biblioteca del vino)."
     },
     "sourceType": {
       "producer": "Productor",

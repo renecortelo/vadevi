@@ -642,6 +642,8 @@ export function WineEvidencePage() {
               <p className="research-narrative__text">{String(comparison.value)}</p>
               {comparison.researchMethod === "tasting.comparison.grapes.v1" ? (
                 <p className="section-help">{t("evidence.comparison.basisGrapes")}</p>
+              ) : comparison.researchMethod === "tasting.comparison.mixed.v1" ? (
+                <p className="section-help">{t("evidence.comparison.basisMixed")}</p>
               ) : null}
             </>
           )}

@@ -514,7 +514,8 @@
       "inferred": "Una lectura del que ja hi ha registrat, no una font nova",
       "noMaterial": "Falta una de les dues parts: investiga el vi, registra'n els raïms o registra un tast i torna-ho a provar.",
       "error": "No s'ha pogut escriure la comparació. Torna-ho a provar.",
-      "basisGrapes": "Comparada amb el que és típic dels seus raïms (biblioteca del vi), perquè el productor no n'ha dit res sobre com sap."
+      "basisGrapes": "Comparada amb el que és típic dels seus raïms (biblioteca del vi), perquè el productor no n'ha dit res sobre com sap.",
+      "basisMixed": "Comparada amb el que diuen les fonts del vi sobre el seu tast i amb el que és típic dels seus raïms (biblioteca del vi)."
     },
     "sourceType": {
       "producer": "Productor",

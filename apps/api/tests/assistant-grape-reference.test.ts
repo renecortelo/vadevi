@@ -188,8 +188,8 @@ describe("a tasting set against its grapes", () => {
       wineId: solo.id,
     });
     expect(outcome).toBe("ok");
-    expect(asked).toMatchObject({ basis: "grapes" });
-    expect(asked!.sources[0]).toContain("Grenache (recorded as Garnatxa)");
+    expect(asked!.sources).toEqual([]);
+    expect(asked!.grapes?.[0]).toContain("Grenache (recorded as Garnatxa)");
     const fact = await env.DB.prepare(
       `SELECT research_method FROM facts WHERE subject_id = ? AND predicate = 'tasting.comparison'
         AND status <> 'retired'`,
@@ -208,5 +208,89 @@ describe("a tasting set against its grapes", () => {
     expect(citations.results.map((row) => row.canonical_url)).toEqual([
       "https://en.wikipedia.org/wiki/grenache",
     ]);
+  });
+
+  it("sets the tasting against both the producer's words and the grapes", async () => {
+    const me = BootstrapResponseSchema.parse(
+      await (await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers })).json(),
+    );
+    const spaceId = me.data.user.activeSpaceId;
+    const both = await wine(spaceId, "Tempranillo de Finca", ["Tempranillo"]);
+    const note = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes`, {
+      body: JSON.stringify({
+        descriptorCodes: ["fruit.citrus.lemon"],
+        mode: "quick",
+        score100: 88,
+        state: "submitted",
+        tastedAt: "2026-09-03T12:00:00.000Z",
+        wineId: both.id,
+      }),
+      headers: { ...headers, "Idempotency-Key": randomOpaqueToken() },
+      method: "POST",
+    });
+    expect(note.status).toBe(201);
+    // Research found the producer's page: it speaks of the estate, and of the
+    // glass only in passing.
+    const now = new Date().toISOString();
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO sources (id, space_id, canonical_url, title, publisher, source_type,
+          license_identifier, retrieved_at, last_checked_at, content_hash, created_by_user_id,
+          created_by_provider, created_at, updated_at)
+        VALUES ('01J00000000000000000000SRC', ?, 'https://finca.example/vino', 'Finca', 'Finca',
+          'producer', NULL, ?, NULL, NULL, NULL, 'test', ?, ?)`,
+      ).bind(spaceId, now, now, now),
+      env.DB.prepare(
+        `INSERT INTO facts (id, space_id, subject_type, subject_id, predicate, value_json,
+          evidence_class, confidence_milli, status, observed_by_user_id, verified_by_user_id,
+          verified_at, research_method, version, created_at, updated_at, deleted_at, locale)
+        VALUES ('01J00000000000000000000FCT', ?, 'wine', ?, 'research.summary', ?, 'researched',
+          700, 'proposed', NULL, NULL, NULL, 'test', 1, ?, ?, NULL, 'es')`,
+      ).bind(
+        spaceId,
+        both.id,
+        JSON.stringify("Una finca familiar desde 1920; su tinto huele a cereza."),
+        now,
+        now,
+      ),
+      env.DB.prepare(
+        `INSERT INTO fact_citations (fact_id, source_id, locator, support_strength, created_at)
+        VALUES ('01J00000000000000000000FCT', '01J00000000000000000000SRC', NULL, 'supporting', ?)`,
+      ).bind(now),
+    ]);
+
+    let asked: TastingComparisonRequest | null = null;
+    const outcome = await regenerateTastingComparison(env.DB, {
+      locale: "es",
+      narrative: {
+        compare: async (input) => {
+          asked = input;
+          return "Encontraste lo que el productor y el tempranillo típico describen.";
+        },
+        compose: async () => null,
+      },
+      principal,
+      requestId: randomOpaqueToken(),
+      spaceId,
+      wineId: both.id,
+    });
+    expect(outcome).toBe("ok");
+    expect(asked!.sources).toEqual(["Una finca familiar desde 1920; su tinto huele a cereza."]);
+    expect(asked!.grapes?.[0]).toContain("Tempranillo, as the variety typically is");
+    const cited = await env.DB.prepare(
+      `SELECT fact.research_method, source.canonical_url FROM facts fact
+        JOIN fact_citations citation ON citation.fact_id = fact.id
+        JOIN sources source ON source.id = citation.source_id
+        WHERE fact.subject_id = ? AND fact.predicate = 'tasting.comparison'
+          AND fact.status <> 'retired'
+        ORDER BY source.canonical_url`,
+    )
+      .bind(both.id)
+      .all<{ canonical_url: string; research_method: string }>();
+    expect(cited.results.map((row) => row.canonical_url)).toEqual([
+      "https://en.wikipedia.org/wiki/tempranillo",
+      "https://finca.example/vino",
+    ]);
+    expect(cited.results[0]?.research_method).toBe("tasting.comparison.mixed.v1");
   });
 });

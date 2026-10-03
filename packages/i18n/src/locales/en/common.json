@@ -514,7 +514,8 @@
       "inferred": "A reading of what is already recorded, not a new source",
       "noMaterial": "One side is missing: research the wine, record its grapes, or log a tasting, then try again.",
       "error": "The comparison could not be written. Try again.",
-      "basisGrapes": "Set against what its grapes are typically like (wine library), as the producer has said nothing about how it tastes."
+      "basisGrapes": "Set against what its grapes are typically like (wine library), as the producer has said nothing about how it tastes.",
+      "basisMixed": "Set against what the wine's sources say about how it tastes and what its grapes are typically like (wine library)."
     },
     "sourceType": {
       "producer": "Producer",

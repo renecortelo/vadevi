@@ -221,13 +221,16 @@ export type NarrativeRequest = Readonly<{
  */
 export type TastingComparisonRequest = Readonly<{
   /**
-   * What `sources` is: the producer and published tastings of this wine, or
-   * the wine library's profile of its grapes — general to each variety, and
-   * to be attributed as such.
+   * What the wine library says is typical of the wine's grapes: general to
+   * each variety, to be attributed to the grape, never to this bottle.
    */
-  basis?: "grapes" | "producer";
+  grapes?: string[];
   locale: ResearchLocale;
-  /** What the sources say: the gathered notes, highlights and summary. */
+  /**
+   * What the wine's own sources say — the producer and published tastings.
+   * Often more about the estate than the glass; only what concerns how the
+   * wine looks, smells, tastes and feels may be used.
+   */
   sources: string[];
   /** What the taster or the group recorded, already attributed by person. */
   tasting: string[];

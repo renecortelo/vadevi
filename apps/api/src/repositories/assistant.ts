@@ -2390,7 +2390,7 @@ export async function runDeterministicAssistantTurn(
           : renderedClaims
               .map((claim) => claim.text)
               .join(" ")
-              .slice(0, 2_000),
+              .slice(0, 4_000),
       results,
       tasteProfile,
       threadId: null,

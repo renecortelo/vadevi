@@ -514,7 +514,8 @@
       "inferred": "Una lettura di ciò che è già registrato, non una nuova fonte",
       "noMaterial": "Manca una delle due parti: documenta il vino, registra i suoi vitigni o una degustazione e riprova.",
       "error": "Non è stato possibile scrivere il confronto. Riprova.",
-      "basisGrapes": "Confrontato con ciò che è tipico dei suoi vitigni (biblioteca del vino), perché il produttore non dice nulla sul gusto."
+      "basisGrapes": "Confrontato con ciò che è tipico dei suoi vitigni (biblioteca del vino), perché il produttore non dice nulla sul gusto.",
+      "basisMixed": "Confrontato con ciò che dicono le fonti del vino sulla degustazione e con ciò che è tipico dei suoi vitigni (biblioteca del vino)."
     },
     "sourceType": {
       "producer": "Produttore",

@@ -2705,7 +2705,7 @@
                     "text": {
                       "type": "string",
                       "minLength": 1,
-                      "maxLength": 500
+                      "maxLength": 1000
                     }
                   },
                   "required": [
@@ -2721,7 +2721,7 @@
               "renderedText": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 2000
+                "maxLength": 4000
               },
               "results": {
                 "type": "array",

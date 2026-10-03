@@ -8,6 +8,8 @@ import type {
 } from "@vadevi/domain";
 import { sanitizeExternalText } from "@vadevi/domain";
 
+import { wholeSentences } from "./assistant-language";
+
 import { extractStringArray } from "./translation";
 
 type WorkersAiRunner = Readonly<{
@@ -32,30 +34,6 @@ const languageNames: Record<ResearchLocale, string> = {
  * result is sanitized like any external text and returns null on any failure, so
  * the caller keeps the paragraph it already had.
  */
-/**
- * The comparison when the producer has said nothing: the tasting set against
- * what the wine's grapes are typically like. The reference is general to each
- * variety, so it is attributed to the grape ("Garnacha typically…") and never
- * to the producer or to this bottle.
- */
-function grapesPrompt(language: string): string {
-  return (
-    `You are a sommelier writing in ${language}. You are given what a taster ` +
-    `(or a group) recorded about one wine, and what a wine library says is ` +
-    `typical of the grape varieties it is made from — general to each variety, ` +
-    `not a description of this wine. Write 2 to 4 sentences setting the tasting ` +
-    `beside that: where it matches what the grapes typically give (aromas, ` +
-    `flavours, acidity, tannin, body, the dishes they suit), where it departs ` +
-    `from it, and what only one side mentions. Attribute each side plainly ` +
-    `("you found…", "Garnacha typically shows…"), and name a person when the ` +
-    `tasting line names one. Never say the producer or the wine itself is ` +
-    `described this way; a difference from the typical profile is worth ` +
-    `noting, not a fault. Use ONLY these two lists — never add a flavour, a ` +
-    `score, a grape or any detail neither side states. If they barely overlap, ` +
-    `say so. Reply with the paragraph only, no preamble.`
-  );
-}
-
 export class CloudflareNarrativeAdapter implements NarrativePort {
   constructor(
     private readonly ai: WorkersAiRunner,
@@ -72,48 +50,50 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
    * of the record rather than a new opinion about the wine.
    */
   async compare(input: TastingComparisonRequest): Promise<string | null> {
-    const tasting = input.tasting
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0)
-      .slice(0, 10)
-      .map((line) => line.slice(0, 400));
-    const sources = input.sources
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0)
-      .slice(0, 10)
-      .map((line) => line.slice(0, 400));
-    // A comparison needs both sides; with one of them empty there is nothing to
-    // compare and a paragraph would have to invent the other half.
-    if (tasting.length === 0 || sources.length === 0) return null;
+    const clean = (lines: readonly string[] | undefined) =>
+      (lines ?? [])
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0)
+        .slice(0, 10)
+        .map((line) => line.slice(0, 600));
+    const tasting = clean(input.tasting);
+    const sources = clean(input.sources);
+    const grapes = clean(input.grapes);
+    // A comparison needs a tasting and something to set it against; with
+    // either missing a paragraph would have to invent one side.
+    if (tasting.length === 0 || (sources.length === 0 && grapes.length === 0)) return null;
     const language = languageNames[input.locale];
     try {
       const output = await this.ai.run(this.model, {
-        max_tokens: 400,
+        max_tokens: 500,
         messages: [
           {
             content:
-              input.basis === "grapes"
-                ? grapesPrompt(language)
-                : `You are a sommelier writing in ${language}. You are given what a ` +
-                  `taster (or a group) recorded about one wine, and what its sources — ` +
-                  `the producer and published tastings — say about it. Write 2 to 4 ` +
-                  `sentences setting the two side by side: where they agree, where they ` +
-                  `differ, and what only one side mentions. Attribute each side plainly ` +
-                  `("you found…", "the producer describes…"), and name a person when the ` +
-                  `tasting line names one. From the sources use ONLY what they say about ` +
-                  `how the wine looks, smells, tastes and feels — colour, aromas, ` +
-                  `flavours, sweetness, acidity, tannin, body, texture, finish, and the ` +
-                  `dishes it is said to suit. Ignore, and never mention, history, ` +
-                  `founding years, places, hectares, awards, prices, shops or production ` +
-                  `facts: they cannot be set against a tasting. If the sources say ` +
-                  `nothing about how the wine tastes, say exactly that. Use ONLY these ` +
-                  `two lists — never add a flavour, a score, a grape or any detail ` +
-                  `neither side states. If they barely overlap, say so rather than ` +
-                  `inventing agreement. Reply with the paragraph only, no preamble.`,
+              `You are a sommelier writing in ${language}. You are given what a ` +
+              `taster (or a group) recorded about one wine ("tasting"), what the ` +
+              `wine's own sources — the producer and published tastings — say about ` +
+              `it ("sources"), and what a wine library says is typical of the grape ` +
+              `varieties it is made from ("grapes"; general to each variety, not a ` +
+              `description of this wine). Write 3 to 5 sentences setting the tasting ` +
+              `beside the other two: where it agrees, where it differs, and what only ` +
+              `one side mentions. From "sources" use ONLY what they say about how ` +
+              `the wine looks, smells, tastes and feels — colour, aromas, flavours, ` +
+              `sweetness, acidity, tannin, body, texture, finish — and the dishes it ` +
+              `is said to suit; ignore, and never mention, history, founding years, ` +
+              `places, hectares, awards, prices, shops or production facts. If the ` +
+              `sources say nothing about how it tastes, leave them out rather than ` +
+              `remarking on it. Attribute every point plainly: "you found…", "the ` +
+              `producer describes…", "Garnacha typically shows…" — never present a ` +
+              `grape's typical profile as the producer's words or as this bottle's; ` +
+              `a departure from the typical profile is worth noting, not a fault. ` +
+              `Name a person when the tasting line names one. Use ONLY these lists — ` +
+              `never add a flavour, a score, a grape or any detail none of them ` +
+              `states. If they barely overlap, say so. Finish every sentence. Reply ` +
+              `with the paragraph only, no preamble.`,
             role: "system",
           },
           {
-            content: JSON.stringify({ sources, tasting, wine: input.wine.slice(0, 200) }),
+            content: JSON.stringify({ grapes, sources, tasting, wine: input.wine.slice(0, 200) }),
             role: "user",
           },
         ],
@@ -121,8 +101,11 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
       });
       const raw = output.response;
       if (typeof raw !== "string") return null;
-      const sanitized = sanitizeExternalText(raw, 900);
-      return sanitized.value.length === 0 || sanitized.flaggedPromptLike ? null : sanitized.value;
+      const sanitized = sanitizeExternalText(raw, 1_400);
+      if (sanitized.flaggedPromptLike) return null;
+      // Ended at its last whole sentence if it ran long, never mid-word.
+      const text = sanitized.truncated ? wholeSentences(sanitized.value) : sanitized.value;
+      return text.length === 0 ? null : text;
     } catch (error) {
       console.warn(
         `comparison model call failed (model=${this.model}): ${

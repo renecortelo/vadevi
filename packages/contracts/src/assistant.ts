@@ -40,7 +40,7 @@ export const AssistantRenderedClaimSchema = z
     evidenceClass: EvidenceClassSchema,
     sampleSize: z.number().int().nonnegative().nullable(),
     sourceIds: z.array(ResourceIdSchema).max(8),
-    text: z.string().min(1).max(500),
+    text: z.string().min(1).max(1_000),
   })
   .strict();
 
@@ -157,7 +157,7 @@ export const AssistantTurnResponseSchema = z
         priceObservations: z.array(PriceObservationSchema).max(25),
         recommendations: z.array(AssistantRecommendationSchema).max(12),
         renderedClaims: z.array(AssistantRenderedClaimSchema).max(8),
-        renderedText: z.string().min(1).max(2_000),
+        renderedText: z.string().min(1).max(4_000),
         results: z.array(AssistantSearchResultSchema).max(25),
         tasteProfile: AssistantTasteProfileSchema.nullable(),
         threadId: ResourceIdSchema.nullable(),

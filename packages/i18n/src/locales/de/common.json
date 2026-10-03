@@ -514,7 +514,8 @@
       "inferred": "Eine Lesart des bereits Erfassten, keine neue Quelle",
       "noMaterial": "Eine Seite fehlt: Recherchieren Sie den Wein, erfassen Sie seine Rebsorten oder eine Verkostung und versuchen Sie es erneut.",
       "error": "Der Vergleich konnte nicht geschrieben werden. Bitte erneut versuchen.",
-      "basisGrapes": "Verglichen mit dem, was für seine Rebsorten typisch ist (Weinbibliothek), da der Erzeuger nichts zum Geschmack sagt."
+      "basisGrapes": "Verglichen mit dem, was für seine Rebsorten typisch ist (Weinbibliothek), da der Erzeuger nichts zum Geschmack sagt.",
+      "basisMixed": "Verglichen mit dem, was die Quellen des Weins über seinen Geschmack sagen, und mit dem, was für seine Rebsorten typisch ist (Weinbibliothek)."
     },
     "sourceType": {
       "producer": "Erzeuger",

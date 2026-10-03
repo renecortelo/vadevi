@@ -91,7 +91,7 @@ describe("provider-backed assistant language enforcement", () => {
   });
 
   it("keeps a claim whose text runs long by truncating, not discarding the answer", async () => {
-    const longText = `You have a lovely Rioja. ${"x".repeat(700)}`;
+    const longText = `You have a lovely Rioja. ${"x".repeat(1_200)}`;
     const adapter = new CloudflareAssistantLanguageAdapter(
       {
         run: async () => ({
@@ -116,7 +116,8 @@ describe("provider-backed assistant language enforcement", () => {
     });
     expect(result).not.toBeNull();
     expect(result?.claims).toHaveLength(1);
-    expect(result?.claims[0]?.text.length).toBe(500);
+    // Cut at its last whole sentence, not mid-word at a fixed length.
+    expect(result?.claims[0]?.text).toBe("You have a lovely Rioja.");
   });
 
   it("derives claim evidence and source IDs only from referenced structured statements", async () => {

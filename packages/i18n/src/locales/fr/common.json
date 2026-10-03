@@ -514,7 +514,8 @@
       "inferred": "Une lecture de ce qui est déjà enregistré, pas une nouvelle source",
       "noMaterial": "Il manque une des deux parties : documentez le vin, indiquez ses cépages ou enregistrez une dégustation, puis réessayez.",
       "error": "La comparaison n'a pas pu être écrite. Réessayez.",
-      "basisGrapes": "Comparée à ce qui est typique de ses cépages (bibliothèque du vin), le producteur n'ayant rien dit de son goût."
+      "basisGrapes": "Comparée à ce qui est typique de ses cépages (bibliothèque du vin), le producteur n'ayant rien dit de son goût.",
+      "basisMixed": "Comparée à ce que disent les sources du vin sur sa dégustation et à ce qui est typique de ses cépages (bibliothèque du vin)."
     },
     "sourceType": {
       "producer": "Producteur",

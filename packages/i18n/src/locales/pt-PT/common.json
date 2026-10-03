@@ -514,7 +514,8 @@
       "inferred": "Uma leitura do que já está registado, não uma fonte nova",
       "noMaterial": "Falta uma das partes: pesquise o vinho, registe as castas ou uma prova e tente novamente.",
       "error": "Não foi possível escrever a comparação. Tente novamente.",
-      "basisGrapes": "Comparada com o que é típico das suas castas (biblioteca do vinho), porque o produtor nada diz sobre o sabor."
+      "basisGrapes": "Comparada com o que é típico das suas castas (biblioteca do vinho), porque o produtor nada diz sobre o sabor.",
+      "basisMixed": "Comparada com o que as fontes do vinho dizem sobre a prova e com o que é típico das suas castas (biblioteca do vinho)."
     },
     "sourceType": {
       "producer": "Produtor",

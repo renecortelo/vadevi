@@ -514,7 +514,8 @@
       "inferred": "Een lezing van wat al is vastgelegd, geen nieuwe bron",
       "noMaterial": "Er ontbreekt een kant: onderzoek de wijn, leg de druiven of een proefnotitie vast en probeer het opnieuw.",
       "error": "De vergelijking kon niet worden geschreven. Probeer het opnieuw.",
-      "basisGrapes": "Vergeleken met wat typisch is voor zijn druiven (wijnbibliotheek), omdat de producent niets over de smaak zegt."
+      "basisGrapes": "Vergeleken met wat typisch is voor zijn druiven (wijnbibliotheek), omdat de producent niets over de smaak zegt.",
+      "basisMixed": "Vergeleken met wat de bronnen van de wijn over de smaak zeggen en met wat typisch is voor zijn druiven (wijnbibliotheek)."
     },
     "sourceType": {
       "producer": "Producent",
