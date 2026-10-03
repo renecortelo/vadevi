@@ -13,6 +13,7 @@ import { createSemanticNotePort } from "../adapters/semantic-notes";
 import { reserveProviderBudget } from "../services/usage";
 import { externalResearchEnabled } from "../adapters/research-factory";
 import { runDeterministicAssistantTurn } from "../repositories/assistant";
+import { questionIsUnclear } from "../repositories/assistant-question";
 import type { ApiEnvironment } from "../types";
 
 const assistantTurnRoute = createRoute({
@@ -56,8 +57,11 @@ export function registerAssistantRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const language = createAssistantLanguagePort(context.env);
     // Reaching the application's daily language budget degrades this turn to the
     // deterministic path instead of erroring or spending beyond the cap.
+    // A message that asks nothing is answered without the model, so it spends
+    // none of the day's budget either.
     const withinBudget =
       language === null ||
+      questionIsUnclear(context.req.valid("json").message) ||
       (await reserveProviderBudget(context.env.DB!, {
         firebaseUid: context.get("principal").firebaseUid,
         metric: "ai_language_calls",

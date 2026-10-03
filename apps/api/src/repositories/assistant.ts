@@ -27,6 +27,7 @@ import { describeDish, profileDish, recognisedDish } from "../adapters/dish-prof
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { appellationsForCountry, resolveAppellationCountries } from "./appellation-terms";
+import { questionIsUnclear } from "./assistant-question";
 import { listPriceObservations } from "./cellar";
 import { resolveCountryCodes } from "./country-terms";
 import { resolveGrapeNamesFromMessage } from "./grape-terms";
@@ -314,7 +315,8 @@ function localizedCopy(
     | "found_failed"
     | "not_found"
     | "not_found_capped"
-    | "not_found_failed",
+    | "not_found_failed"
+    | "unclear",
   count: number,
 ): string {
   const copy: Record<SupportedLocale, Record<typeof kind, string>> = {
@@ -329,6 +331,8 @@ function localizedCopy(
         "No he trobat cap coincidència estructurada a la Wine Memory autoritzada. Avui ja s’ha arribat al límit diari de respostes de la IA; demà torna. El registre i la cerca normals continuen disponibles.",
       not_found_failed:
         "No he trobat cap coincidència estructurada a la Wine Memory autoritzada. La IA no ha pogut respondre ara mateix; el registre i la cerca normals continuen disponibles.",
+      unclear:
+        "No t’he entès bé. Pots tornar a formular la pregunta? Per exemple: «Què saps de la garnatxa?» o «Quin vi obro amb una paella?»",
     },
     de: {
       evidence: `${count} passende Wine-Memory-Einträge`,
@@ -341,6 +345,8 @@ function localizedCopy(
         "Ich habe im autorisierten Wine Memory keine strukturierte Übereinstimmung gefunden. Das Tageslimit für KI-Antworten ist für heute erreicht; morgen geht es weiter. Protokollierung und normale Suche bleiben verfügbar.",
       not_found_failed:
         "Ich habe im autorisierten Wine Memory keine strukturierte Übereinstimmung gefunden. Die KI konnte gerade nicht antworten; Protokollierung und normale Suche bleiben verfügbar.",
+      unclear:
+        "Das habe ich nicht ganz verstanden. Können Sie Ihre Frage anders formulieren? Zum Beispiel: „Was weißt du über Grenache?“ oder „Welchen Wein öffne ich zu Paella?“",
     },
     en: {
       evidence: `${count} matching Wine Memory ${count === 1 ? "record" : "records"}`,
@@ -353,6 +359,8 @@ function localizedCopy(
         "I did not find a structured match in your authorized Wine Memory. Today's limit on AI replies has been reached; it is back tomorrow. Logging and ordinary search remain available.",
       not_found_failed:
         "I did not find a structured match in your authorized Wine Memory. The AI could not answer just now; logging and ordinary search remain available.",
+      unclear:
+        "I didn’t quite understand that. Could you rephrase your question? For example: “What do you know about Garnacha?” or “Which wine should I open with paella?”",
     },
     es: {
       evidence: `${count} ${count === 1 ? "registro coincidente" : "registros coincidentes"} de Wine Memory`,
@@ -365,6 +373,8 @@ function localizedCopy(
         "No he encontrado ninguna coincidencia estructurada en la Wine Memory autorizada. Hoy ya se ha llegado al límite diario de respuestas de la IA; mañana vuelve. El registro y la búsqueda normales siguen disponibles.",
       not_found_failed:
         "No he encontrado ninguna coincidencia estructurada en la Wine Memory autorizada. La IA no pudo responder ahora mismo; el registro y la búsqueda normales siguen disponibles.",
+      unclear:
+        "No te he entendido bien. ¿Puedes reformular la pregunta? Por ejemplo: «¿Qué sabes de la garnacha?» o «¿Qué vino abro con una paella?»",
     },
     fr: {
       evidence: `${count} ${count === 1 ? "entrée correspondante" : "entrées correspondantes"} dans Wine Memory`,
@@ -377,6 +387,8 @@ function localizedCopy(
         "Je n’ai trouvé aucune correspondance structurée dans la Wine Memory autorisée. La limite quotidienne de réponses de l’IA est atteinte pour aujourd’hui ; elle revient demain. La saisie et la recherche ordinaires restent disponibles.",
       not_found_failed:
         "Je n’ai trouvé aucune correspondance structurée dans la Wine Memory autorisée. L’IA n’a pas pu répondre à l’instant ; la saisie et la recherche ordinaires restent disponibles.",
+      unclear:
+        "Je n’ai pas bien compris. Pouvez-vous reformuler votre question ? Par exemple : « Que sais-tu du grenache ? » ou « Quel vin ouvrir avec une paella ? »",
     },
     it: {
       evidence: `${count} ${count === 1 ? "record corrispondente" : "record corrispondenti"} di Wine Memory`,
@@ -389,6 +401,8 @@ function localizedCopy(
         "Non ho trovato corrispondenze strutturate nella Wine Memory autorizzata. Il limite giornaliero di risposte dell’IA è stato raggiunto per oggi; torna domani. La registrazione e la ricerca normali restano disponibili.",
       not_found_failed:
         "Non ho trovato corrispondenze strutturate nella Wine Memory autorizzata. L’IA non ha potuto rispondere ora; la registrazione e la ricerca normali restano disponibili.",
+      unclear:
+        "Non ho capito bene. Puoi riformulare la domanda? Per esempio: «Cosa sai del grenache?» o «Che vino apro con una paella?»",
     },
     nl: {
       evidence: `${count} overeenkomende Wine Memory-${count === 1 ? "vermelding" : "vermeldingen"}`,
@@ -401,6 +415,8 @@ function localizedCopy(
         "Ik vond geen gestructureerde overeenkomst in het geautoriseerde Wine Memory. De daglimiet voor AI-antwoorden is voor vandaag bereikt; morgen is die er weer. Vastleggen en normaal zoeken blijven beschikbaar.",
       not_found_failed:
         "Ik vond geen gestructureerde overeenkomst in het geautoriseerde Wine Memory. De AI kon nu geen antwoord geven; vastleggen en normaal zoeken blijven beschikbaar.",
+      unclear:
+        "Dat begreep ik niet helemaal. Kun je je vraag anders stellen? Bijvoorbeeld: ‘Wat weet je over garnacha?’ of ‘Welke wijn open ik bij paella?’",
     },
     "pt-PT": {
       evidence: `${count} ${count === 1 ? "registo correspondente" : "registos correspondentes"} da Wine Memory`,
@@ -413,6 +429,8 @@ function localizedCopy(
         "Não encontrei correspondências estruturadas na Wine Memory autorizada. O limite diário de respostas da IA foi atingido por hoje; volta amanhã. O registo e a pesquisa normais continuam disponíveis.",
       not_found_failed:
         "Não encontrei correspondências estruturadas na Wine Memory autorizada. A IA não conseguiu responder agora; o registo e a pesquisa normais continuam disponíveis.",
+      unclear:
+        "Não percebi bem. Pode reformular a pergunta? Por exemplo: «O que sabes sobre a garnacha?» ou «Que vinho abro com uma paella?»",
     },
   };
   return copy[locale]![kind];
@@ -1520,6 +1538,58 @@ function languageStatements(
   return statements.slice(0, 30);
 }
 
+/** The reply to a question that could not be understood: ask again. */
+function unclearTurn(
+  options: Parameters<typeof runDeterministicAssistantTurn>[1],
+  turnId: string,
+): AssistantTurnResponse {
+  return {
+    data: {
+      citations: [],
+      comparisons: [],
+      evidence: [],
+      // The wine in hand stays in hand, so the rephrased question still follows it.
+      focusWineId: options.request.context.visibleWineId ?? null,
+      libraryGrapes: [],
+      libraryRegions: [],
+      mode: "deterministic",
+      priceObservations: [],
+      recommendations: [],
+      renderedClaims: [],
+      renderedText: localizedCopy(options.request.locale, "unclear", 0),
+      results: [],
+      tasteProfile: null,
+      threadId: null,
+      toolAvailability: {
+        ai:
+          options.aiProvider === "none"
+            ? "disabled"
+            : options.language === null
+              ? "unavailable"
+              : "available",
+        buildRecommendation: "available",
+        compareWines: "available",
+        createActionDraft: "available",
+        externalResearch: options.externalResearch ? "available" : "disabled",
+        findPriceObservations: "available",
+        getTasteProfile: "available",
+        getWineContext: "available",
+        researchWine: options.externalResearch ? "available" : "disabled",
+        searchMemory: "available",
+      },
+      turnId,
+      usage: {
+        externalResearchCalls: 0,
+        maxExternalResearchCalls: 2,
+        maxToolCalls: 6,
+        toolCalls: 0,
+      },
+      warnings: ["unclear_question"],
+      wineContext: null,
+    },
+  };
+}
+
 export async function runDeterministicAssistantTurn(
   database: D1Database,
   options: {
@@ -1547,6 +1617,11 @@ export async function runDeterministicAssistantTurn(
   );
   if (spaces === null) return null;
   const turnId = ulid();
+  // A message that asks nothing — "¿qué" sent before the rest was typed — is
+  // answered with a request to rephrase: no search, no model, nothing made up.
+  if (questionIsUnclear(options.request.message)) {
+    return unclearTurn(options, turnId);
+  }
   let toolCalls = 0;
   const searchStartedAt = Date.now();
   const overview = requestsCollectionOverview(options.request.message);
@@ -2140,6 +2215,9 @@ export async function runDeterministicAssistantTurn(
       .bind(languageResult.modelVersion, turnId)
       .run();
   }
+  // The model could not tell what was asked: say so, rather than answer
+  // something else from whatever the search happened to find.
+  if (languageResult?.unclear === true) return unclearTurn(options, turnId);
   const renderedClaims = languageResult?.claims ?? [];
   return {
     data: {

@@ -101,4 +101,84 @@ describe("Vicenç with the wine library", () => {
     );
     expect(response?.data.citations[0]?.id).toBe(researched[0]?.sourceIds[0]);
   });
+
+  it("asks to rephrase a message that asks nothing, without searching or the model", async () => {
+    const me = BootstrapResponseSchema.parse(
+      await (
+        await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+      ).json(),
+    );
+    let called = false;
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: {
+        render: async () => {
+          called = true;
+          return { claims: [], modelVersion: "@cf/example/model" };
+        },
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Reader",
+        email: "library-assistant@example.test",
+        emailVerified: true,
+        firebaseUid: sub,
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "es",
+        message: "¿Qué",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId: me.data.user.activeSpaceId,
+    });
+    expect(called).toBe(false);
+    expect(response?.data.renderedText).toContain("reformular");
+    expect(response?.data.warnings).toEqual(["unclear_question"]);
+    expect(response?.data.results).toEqual([]);
+  });
+
+  it("asks to rephrase when the model says it could not tell what was asked", async () => {
+    const me = BootstrapResponseSchema.parse(
+      await (
+        await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+      ).json(),
+    );
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: {
+        render: async () => ({ claims: [], modelVersion: "@cf/example/model", unclear: true }),
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Reader",
+        email: "library-assistant@example.test",
+        emailVerified: true,
+        firebaseUid: sub,
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "en",
+        message: "¿Qué sabes del Ull de Llebre azul marino?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId: me.data.user.activeSpaceId,
+    });
+    expect(response?.data.renderedText).toContain("rephrase");
+    expect(response?.data.warnings).toEqual(["unclear_question"]);
+  });
 });

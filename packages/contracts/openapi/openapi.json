@@ -3099,7 +3099,8 @@
                     "no_matches",
                     "price_coverage_limited",
                     "provider_unavailable",
-                    "recommendation_insufficient"
+                    "recommendation_insufficient",
+                    "unclear_question"
                   ]
                 },
                 "maxItems": 4

@@ -390,4 +390,40 @@ describe("provider-backed assistant language enforcement", () => {
     ).resolves.toBeNull();
     expect(called).toBe(false);
   });
+
+  it("passes on the model's word that it could not tell what was asked", async () => {
+    const statements = [
+      {
+        evidenceClass: "personal" as const,
+        id: "wine-1",
+        sampleSize: null,
+        sourceIds: [],
+        text: "Rioja 2019, scored 87",
+      },
+    ];
+    const answering = (response: unknown) =>
+      new CloudflareAssistantLanguageAdapter(
+        { run: async () => ({ response }) },
+        "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      );
+
+    const unclear = await answering({ claims: [], unclear: true }).render({
+      locale: "es",
+      message: "¿qué sabes?",
+      statements,
+    });
+    expect(unclear).toEqual({
+      claims: [],
+      modelVersion: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      unclear: true,
+    });
+
+    // Claims win over the flag: a reply that answers is an answer.
+    const answered = await answering({
+      claims: [{ statementIds: ["wine-1"], text: "Tienes un Rioja." }],
+      unclear: true,
+    }).render({ locale: "es", message: "¿qué tengo?", statements });
+    expect(answered?.unclear).toBeUndefined();
+    expect(answered?.claims).toHaveLength(1);
+  });
 });

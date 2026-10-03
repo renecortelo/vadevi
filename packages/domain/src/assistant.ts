@@ -24,6 +24,8 @@ export type AssistantLanguageInput = Readonly<{
 export type AssistantLanguageResult = Readonly<{
   claims: AssistantLanguageClaim[];
   modelVersion: string;
+  /** The model could not tell what was asked; the turn asks the reader to rephrase. */
+  unclear?: boolean;
 }>;
 
 export interface AssistantLanguagePort {

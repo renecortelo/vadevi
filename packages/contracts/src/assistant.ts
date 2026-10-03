@@ -188,6 +188,9 @@ export const AssistantTurnResponseSchema = z
               "price_coverage_limited",
               "provider_unavailable",
               "recommendation_insufficient",
+              // The message asked nothing that could be understood; the reply
+              // asks the reader to rephrase.
+              "unclear_question",
             ]),
           )
           .max(4),
