@@ -586,15 +586,22 @@ async function loadLibraryStatements(
     const card = await getLibraryGrape(database, id, locale);
     if (card === null) continue;
     grapes.push({ id: card.id, name: card.name });
-    const sourceUrl = card.evidence[0]?.sourceUrl ?? card.summary?.sourceUrl ?? null;
-    const sourceId = sourceUrl === null ? null : await librarySourceId(card.id);
-    if (sourceId !== null && sourceUrl !== null) {
+    // Each statement cites the article its facts were read from: a card's
+    // facts may come from its English article and from the grape's article in
+    // its own language (Mencía's aromas are the Spanish one's).
+    const mainUrl = card.evidence[0]?.sourceUrl ?? card.summary?.sourceUrl ?? null;
+    const sourceIdByUrl = new Map<string, string>();
+    const sourceFor = async (url: string): Promise<string> => {
+      const known = sourceIdByUrl.get(url);
+      if (known !== undefined) return known;
+      const id = await librarySourceId(url === mainUrl ? card.id : `${card.id}:${url}`);
+      sourceIdByUrl.set(url, id);
       sources.push({
-        canonicalUrl: sourceUrl,
+        canonicalUrl: url,
         createdAt: now,
         createdByProvider: "wine-library",
         createdByUserId: null,
-        id: sourceId,
+        id,
         licenseIdentifier: "CC-BY-SA-4.0",
         publisher: "Wikipedia",
         retrievedAt: now,
@@ -602,27 +609,44 @@ async function loadLibraryStatements(
         title: `${card.name} — Wikipedia`,
         updatedAt: now,
       });
-    }
+      return id;
+    };
+    const citing = async (fields: string[]): Promise<string[]> => {
+      const urls = [
+        ...new Set(
+          card.evidence
+            .filter((entry) => fields.includes(entry.field))
+            .map((entry) => entry.sourceUrl),
+        ),
+      ];
+      const chosen = urls.length > 0 ? urls : mainUrl === null ? [] : [mainUrl];
+      return Promise.all(chosen.slice(0, 3).map(sourceFor));
+    };
     const about = `wine library, grape ${card.name}`;
-    const say = (
+    const say = async (
       suffix: string,
       text: string,
       evidenceClass: "inferred" | "researched" = "researched",
+      cited: string[] = [],
     ) =>
       statements.push({
         evidenceClass,
         id: `library-${card.id}-${suffix}`,
         sampleSize: null,
         // A researched statement must carry its source; a rule's suggestion has none.
-        sourceIds: evidenceClass === "researched" && sourceId !== null ? [sourceId] : [],
+        sourceIds: evidenceClass === "researched" ? cited : [],
         text: `${about}: ${text}`,
       });
-    if (card.summary !== null) say("summary", card.summary.text);
+    if (card.summary !== null) {
+      await say("summary", card.summary.text, "researched", [
+        await sourceFor(card.summary.sourceUrl),
+      ]);
+    }
     const structure = (["acidity", "tannin", "body"] as const)
       .filter((axis) => card[axis] !== null)
       .map((axis) => `${axis} ${card[axis]}`);
     if (card.color !== null || card.originCountryCode !== null || structure.length > 0) {
-      say(
+      await say(
         "profile",
         [
           card.color === null ? null : `${card.color === "red" ? "black" : card.color}-skinned`,
@@ -631,21 +655,44 @@ async function loadLibraryStatements(
         ]
           .filter(Boolean)
           .join("; "),
+        "researched",
+        await citing(["color", "origin", "acidity", "tannin", "body"]),
       );
     }
-    if (card.aromas.length > 0) say("aromas", `typical aromas: ${card.aromas.join(", ")}`);
+    if (card.aromas.length > 0) {
+      await say(
+        "aromas",
+        `typical aromas: ${card.aromas.join(", ")}`,
+        "researched",
+        await citing(["aromas"]),
+      );
+    }
     if (card.regions.length > 0) {
-      say(
+      await say(
         "regions",
         `notably grown in: ${card.regions.map((region) => `${region.name}${region.countryCode === null ? "" : ` (${region.countryCode})`}`).join(", ")}`,
+        "researched",
+        await citing(["regions"]),
       );
     }
-    if (card.synonyms.length > 0)
-      say("names", `also known as: ${card.synonyms.slice(0, 8).join(", ")}`);
-    if (card.pairings.length > 0)
-      say("pairings", `its source says it goes with: ${card.pairings.join(", ")}`);
+    if (card.synonyms.length > 0) {
+      await say(
+        "names",
+        `also known as: ${card.synonyms.slice(0, 8).join(", ")}`,
+        "researched",
+        await citing(["synonyms"]),
+      );
+    }
+    if (card.pairings.length > 0) {
+      await say(
+        "pairings",
+        `its source says it goes with: ${card.pairings.join(", ")}`,
+        "researched",
+        await citing(["pairings"]),
+      );
+    }
     if (card.suggestedPairings !== null) {
-      say(
+      await say(
         "suggested",
         `the app's pairing rules suggest, for ${card.suggestedPairings.styles.map((style) => style.replaceAll("_", " ")).join(" / ")} wines: ${card.suggestedPairings.families.map((family) => family.replaceAll("_", " ")).join(", ")}`,
         "inferred",
@@ -2293,27 +2340,35 @@ export async function runDeterministicAssistantTurn(
     );
     for (const reference of references) {
       if (reference.text === null) continue;
-      const sourceId = await librarySourceId(reference.card.id);
-      if (!library.sources.some((source) => source.id === sourceId)) {
-        library.sources.push({
-          canonicalUrl: reference.sourceUrl,
-          createdAt: now,
-          createdByProvider: "wine-library",
-          createdByUserId: null,
-          id: sourceId,
-          licenseIdentifier: "CC-BY-SA-4.0",
-          publisher: "Wikipedia",
-          retrievedAt: now,
-          sourceType: "open_dataset",
-          title: `${reference.card.name} — Wikipedia`,
-          updatedAt: now,
-        });
+      const cited: string[] = [];
+      for (const sourceUrl of reference.sourceUrls) {
+        const sourceId = await librarySourceId(
+          sourceUrl === reference.card.evidence[0]?.sourceUrl
+            ? reference.card.id
+            : `${reference.card.id}:${sourceUrl}`,
+        );
+        cited.push(sourceId);
+        if (!library.sources.some((source) => source.id === sourceId)) {
+          library.sources.push({
+            canonicalUrl: sourceUrl,
+            createdAt: now,
+            createdByProvider: "wine-library",
+            createdByUserId: null,
+            id: sourceId,
+            licenseIdentifier: "CC-BY-SA-4.0",
+            publisher: "Wikipedia",
+            retrievedAt: now,
+            sourceType: "open_dataset",
+            title: `${reference.card.name} — Wikipedia`,
+            updatedAt: now,
+          });
+        }
       }
       library.statements.push({
         evidenceClass: "researched",
         id: `library-wine-${result.wine.id}-${reference.card.id}`,
         sampleSize: null,
-        sourceIds: [sourceId],
+        sourceIds: cited,
         text: `wine library, grape of ${result.wine.displayName}: ${reference.text}`,
       });
       if (!library.grapes.some((grape) => grape.id === reference.card.id)) {

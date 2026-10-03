@@ -1465,19 +1465,23 @@
     "prominence": 32,
     "summaries": {
       "en": {
-        "text": "Sulfites or sulphites are compounds that contain the sulfite ion (systematic name: sulfate(IV) ion), SO32−. The sulfite ion is the conjugate base of bisulfite. Although its acid (sulfurous acid) is elusive, its salts are widely used. Sulfites are substances that naturally occur in some foods and the human body. They are also used as regulated food additives. When in food or drink, sulfites are often lumped together with sulfur dioxide.",
-        "url": "https://en.wikipedia.org/wiki/Sulfite"
+        "text": "Sulfur dioxide (also called sulfurous anhydride, SO2, sulfite or bisulfite) is a food additive widely used in winemaking, mainly for two properties. As an antiseptic, it checks the growth of microorganisms — bacteria, yeasts that could make sweet wines referment, Brettanomyces. As an antioxidant, it protects wines from excessive oxidation and, at the extreme, from maderisation. It is used at the different stages of making and keeping wine. The final concentration is higher in a sweet wine than in a dry white, than in a sparkling wine, than in a red; each addition ranges from 10 to 150 mg/L depending on the stage and the type of wine.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Dioxyde_de_soufre_en_%C5%93nologie"
       },
       "es": {
-        "text": "Los sulfitos son las sales o ésteres del ácido sulfuroso H2SO3. Las sales de sulfito contienen el anión SO32-, siendo los más importantes el sulfito de sodio y el sulfito de magnesio. Se forman al poner en contacto el óxido de azufre (IV) (SO2) con disoluciones alcalinas. Se trata de sustancias reductoras pasando el azufre del estado de oxidación +IV a + VI.",
-        "url": "https://es.wikipedia.org/wiki/Sulfito"
+        "text": "El dióxido de azufre (también llamado anhídrido sulfuroso, SO2, sulfito o bisulfito) es un aditivo alimentario muy utilizado en enología, sobre todo por dos propiedades. Como antiséptico, frena el desarrollo de microorganismos: bacterias, levaduras que podrían hacer refermentar los vinos dulces, Brettanomyces. Como antioxidante, protege el vino de una oxidación excesiva y, en el extremo, de la maderización. Se emplea en las distintas fases de la elaboración y la conservación del vino. La concentración final es mayor en un vino dulce que en un blanco seco, que en un espumoso y que en un tinto; cada adición va de 10 a 150 mg/L según la etapa y el tipo de vino.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Dioxyde_de_soufre_en_%C5%93nologie"
       },
       "ca": {
-        "text": "Els sulfits són oxoanions, les sals o èsters de l'hipotètic àcid sulfurós H₂SO₃. Les sals de sulfit contenen l'anió SO₃2-, i són les més importants el sulfit de sodi i el sulfit de magnesi. Es formen en posar en contacte el diòxid de sofre (SO₂) amb dissolucions alcalines. Es tracta de substàncies reductores passant el sofre de l'estat d'oxidació +IV al + VI. En dissolucions àcides es descomponen alliberant un nou òxid de sofre(IV). Els sulfits orgànics (R-S(O)-R'; R, R' = restes orgàniques) s'obtenen a partir de clorur de tienil (SOCl₂) i alcohols. L'ió del sulfit té forma gairebé tetraèdrica amb l'àtom de sofre en el centre i els tres àtoms d'oxigen i un parell d'electrons apuntant a les cantonades.",
-        "url": "https://ca.wikipedia.org/wiki/Sulfit"
+        "text": "El diòxid de sofre (també anomenat anhídrid sulfurós, SO2, sulfit o bisulfit) és un additiu alimentari molt utilitzat en enologia, sobretot per dues propietats. Com a antisèptic, frena el desenvolupament de microorganismes: bacteris, llevats que podrien fer refermentar els vins dolços, Brettanomyces. Com a antioxidant, protegeix el vi d'una oxidació excessiva i, en l'extrem, de la maderització. S'utilitza en les diferents fases de l'elaboració i la conservació del vi. La concentració final és més alta en un vi dolç que en un blanc sec, que en un escumós i que en un negre; cada addició va de 10 a 150 mg/L segons l'etapa i el tipus de vi.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Dioxyde_de_soufre_en_%C5%93nologie"
       },
       "fr": {
-        "text": "Le dioxyde de soufre (synonymes: anhydride sulfureux, SO2, sulfite, bisulfite, oxyde sulfureux) est un gaz de formule chimique SO2, c'est-à-dire qu'il comporte un atome de soufre et deux atomes d'oxygène. C'est un additif alimentaire qui, du fait de ses propriétés, est largement utilisé en œnologie tout comme dans l'industrie agroalimentaire en général (fruits secs, charcuteries, moutarde, préparations culinaires pré-emballées, crustacés, céréales) et dans l'industrie chimique.",
+        "text": "Le dioxyde de soufre (synonymes : anhydride sulfureux, SO2, sulfite, bisulfite) est un additif alimentaire largement utilisé en œnologie, principalement du fait de deux propriétés. Antiseptique, il a une action contre le développement des microorganismes — bactéries, levures pouvant provoquer la refermentation des vins doux, Brettanomyces. Antioxydant, il préserve les vins d'une oxydation trop intense et permet d'éviter, à l'extrême, la madérisation du vin. Il est utilisé lors des différentes phases de la vinification et de la conservation du vin. La concentration finale est plus élevée dans un vin doux que dans un vin blanc sec, que dans un vin effervescent, que dans un vin rouge ; les doses utilisées par ajout varient de 10 à 150 mg/L selon l'étape et le type de produit.",
+        "translated": false,
         "url": "https://fr.wikipedia.org/wiki/Dioxyde_de_soufre_en_%C5%93nologie"
       },
       "de": {
@@ -1485,16 +1489,19 @@
         "url": "https://de.wikipedia.org/wiki/Schwefelung"
       },
       "it": {
-        "text": "Lo ione solfito o ione triossosolfato(IV) (nome IUPAC triossosolfato(2-)) è un dianione di formula SO2−3 e formula di struttura O=S(−O−)2, in cui figura lo zolfo tetravalente (zolfo(IV)  e l'ossigeno. È il prodotto della doppia deprotonazione dell'acido solforoso H2SO3, per cui si trova nei suoi sali, ed è anche la base coniugata dell'anione idrogenosolfito, conosciuto anche come ione bisolfito; questo, a sua volta, è la base coniugata dell'acido solforoso. In diversi organismi e anche nell'uomo esiste l'enzima solfito ossidoreduttasi, contenente molibdeno, che catalizza l'ossidazione del solfito a solfato. Sono detti solfiti anche gli esteri dialchilici o diarilici dell'acido solforoso, aventi formula generale RO−S(=O)−OR o ArO−S(=O)−OAr, rispettivamente.",
-        "url": "https://it.wikipedia.org/wiki/Solfito"
+        "text": "L'anidride solforosa (detta anche biossido di zolfo, SO2, solfito o bisolfito) è un additivo alimentare molto usato in enologia, soprattutto per due proprietà. Come antisettico, frena lo sviluppo dei microrganismi: batteri, lieviti che potrebbero far rifermentare i vini dolci, Brettanomyces. Come antiossidante, protegge il vino da un'ossidazione eccessiva e, al limite, dalla maderizzazione. Si usa nelle diverse fasi della vinificazione e della conservazione del vino. La concentrazione finale è più alta in un vino dolce che in un bianco secco, che in uno spumante e che in un rosso; ogni aggiunta va da 10 a 150 mg/L secondo la fase e il tipo di vino.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Dioxyde_de_soufre_en_%C5%93nologie"
       },
       "nl": {
-        "text": "Sulfieten zijn zouten die het sulfiet-ion, SO32− bevatten. Sulfiet komt van nature voor in planten uit de lookfamilie. Sulfieten worden gebruikt als kleurstof en conserveringsmiddel in voedsel (E-nummers E150b, E150d en E221 t/m E228). Het wordt gebruikt in wijn, maar ook om te voorkomen dat vlees bruin verkleurt.",
-        "url": "https://nl.wikipedia.org/wiki/Sulfiet"
+        "text": "Zwaveldioxide (ook zwaveligzuuranhydride, SO2, sulfiet of bisulfiet genoemd) is een levensmiddelenadditief dat in de wijnbereiding veel wordt gebruikt, vooral om twee eigenschappen. Als antiseptisch middel remt het de groei van micro-organismen: bacteriën, gisten die zoete wijnen opnieuw kunnen laten gisten, Brettanomyces. Als antioxidant beschermt het de wijn tegen te sterke oxidatie en, in het uiterste geval, tegen maderisatie. Het wordt gebruikt in de verschillende fasen van het maken en bewaren van wijn. De uiteindelijke concentratie is hoger in een zoete wijn dan in een droge witte, dan in een mousserende en dan in een rode; elke toevoeging ligt tussen 10 en 150 mg/l, afhankelijk van de fase en het soort wijn.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Dioxyde_de_soufre_en_%C5%93nologie"
       },
       "pt": {
-        "text": "Os sulfitos são os sais do ácido sulfuroso H2SO3. Os sais de sulfito contêm o ânion SO32-, sendo os mais importantes o sulfito de sódio e o sulfito de magnésio. Formam-se ao por em contacto o dióxido de enxofre (SO2) com soluções alcalinas. Hidrogenossulfitos ou bissulfitos são obtidos ao dissolver SO2 em soluções de sulfitos.",
-        "url": "https://pt.wikipedia.org/wiki/Sulfito"
+        "text": "O dióxido de enxofre (também chamado anidrido sulfuroso, SO2, sulfito ou bissulfito) é um aditivo alimentar muito usado em enologia, sobretudo por duas propriedades. Como antisséptico, trava o desenvolvimento de microrganismos: bactérias, leveduras que poderiam fazer refermentar os vinhos doces, Brettanomyces. Como antioxidante, protege o vinho de uma oxidação excessiva e, no limite, da maderização. É usado nas diferentes fases da vinificação e da conservação do vinho. A concentração final é mais alta num vinho doce do que num branco seco, num espumante e num tinto; cada adição vai de 10 a 150 mg/L consoante a fase e o tipo de vinho.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Dioxyde_de_soufre_en_%C5%93nologie"
       }
     },
     "wikidataId": "Q76014098"

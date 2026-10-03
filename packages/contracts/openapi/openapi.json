@@ -11099,13 +11099,17 @@
               },
               "text": {
                 "type": "string"
+              },
+              "translated": {
+                "type": "boolean"
               }
             },
             "required": [
               "license",
               "locale",
               "sourceUrl",
-              "text"
+              "text",
+              "translated"
             ],
             "additionalProperties": false
           }

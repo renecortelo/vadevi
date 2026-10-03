@@ -85,7 +85,11 @@ export function LibraryTopicPage() {
             >
               {t("library.summarySource")}
             </a>
-            {otherLanguage ? ` · ${t("library.summaryOtherLanguage")}` : null}
+            {entry.summary.translated
+              ? ` · ${t("library.summaryTranslated")}`
+              : otherLanguage
+                ? ` · ${t("library.summaryOtherLanguage")}`
+                : null}
           </p>
         </section>
       )}

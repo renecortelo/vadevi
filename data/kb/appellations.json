@@ -923,6 +923,11 @@
         "grapeId": "grenache-blanc",
         "quote": "Grenache blanc is an important variety in the French wine region of the Rhône Valley ... In Spain it is mostly found ... particularly in Navarra and the Terra Alta region ... also widely planted in the Priorat, Alella and Aragon",
         "sourceUrl": "https://en.wikipedia.org/wiki/Grenache_blanc"
+      },
+      {
+        "grapeId": "xarel-lo",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     ],
     "id": "es-alella",
@@ -1190,7 +1195,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000003981",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "monica",
+        "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monica_(grape)"
+      }
+    ],
     "id": "it-alghero",
     "latitude": 40.56,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003981",
@@ -1725,10 +1736,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-altenberg-de-bergheim",
-    "latitude": null,
+    "latitude": 48.209722222222226,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002013",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.356388888888889,
+    "pointSource": "item",
     "name": "Alsace grand cru Altenberg de Bergheim",
     "names": [
       {
@@ -1799,10 +1810,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-brand",
-    "latitude": null,
+    "latitude": 48.093611111111116,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002014",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.273611111111111,
+    "pointSource": "item",
     "name": "Alsace grand cru Brand",
     "names": [
       {
@@ -1822,10 +1833,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-bruderthal",
-    "latitude": null,
+    "latitude": 48.5475,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002054",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.484444444444445,
+    "pointSource": "item",
     "name": "Alsace grand cru Bruderthal",
     "names": [
       {
@@ -1845,10 +1856,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-eichberg",
-    "latitude": null,
+    "latitude": 48.03138888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002015",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.289444444444444,
+    "pointSource": "item",
     "name": "Alsace grand cru Eichberg",
     "names": [
       {
@@ -1868,10 +1879,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-engelberg",
-    "latitude": null,
+    "latitude": 48.5825,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002055",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.495555555555556,
+    "pointSource": "item",
     "name": "Alsace grand cru Engelberg",
     "names": [
       {
@@ -1891,10 +1902,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-florimont",
-    "latitude": null,
+    "latitude": 48.10305555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002016",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.296944444444445,
+    "pointSource": "item",
     "name": "Alsace grand cru Florimont",
     "names": [
       {
@@ -1914,10 +1925,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-frankstein",
-    "latitude": null,
+    "latitude": 48.31861111111112,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002057",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.420277777777778,
+    "pointSource": "item",
     "name": "Alsace grand cru Frankstein",
     "names": [
       {
@@ -1937,10 +1948,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-froehn",
-    "latitude": null,
+    "latitude": 48.16638888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002017",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.320833333333333,
+    "pointSource": "item",
     "name": "Alsace grand cru Froehn",
     "names": [
       {
@@ -1960,10 +1971,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-furstentum",
-    "latitude": null,
+    "latitude": 48.14416666666666,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002018",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.294444444444444,
+    "pointSource": "item",
     "name": "Alsace grand cru Furstentum",
     "names": [
       {
@@ -2016,10 +2027,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-gloeckelberg",
-    "latitude": null,
+    "latitude": 48.22833333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002020",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.350833333333333,
+    "pointSource": "item",
     "name": "Alsace grand cru Gloeckelberg",
     "names": [
       {
@@ -2039,10 +2050,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-goldert",
-    "latitude": null,
+    "latitude": 48.00861111111111,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002021",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.2780555555555555,
+    "pointSource": "item",
     "name": "Alsace grand cru Goldert",
     "names": [
       {
@@ -2062,10 +2073,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-hatschbourg",
-    "latitude": null,
+    "latitude": 48.01416666666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002023",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.286944444444444,
+    "pointSource": "item",
     "name": "Alsace grand cru Hatschbourg",
     "names": [
       {
@@ -2085,10 +2096,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-hengst",
-    "latitude": null,
+    "latitude": 48.065,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002025",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.291388888888889,
+    "pointSource": "item",
     "name": "Alsace grand cru Hengst",
     "names": [
       {
@@ -2108,10 +2119,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-kaefferkopf",
-    "latitude": null,
+    "latitude": 48.12277777777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002026",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.278888888888889,
+    "pointSource": "item",
     "name": "Alsace grand cru Kaefferkopf",
     "names": [
       {
@@ -2131,10 +2142,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-kanzlerberg",
-    "latitude": null,
+    "latitude": 48.209722222222226,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002027",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.347777777777777,
+    "pointSource": "item",
     "name": "Alsace grand cru Kanzlerberg",
     "names": [
       {
@@ -2154,10 +2165,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-kastelberg",
-    "latitude": null,
+    "latitude": 48.38861111111111,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002058",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.418333333333334,
+    "pointSource": "item",
     "name": "Alsace grand cru Kastelberg",
     "names": [
       {
@@ -2177,10 +2188,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-kessler",
-    "latitude": null,
+    "latitude": 47.913333333333334,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002028",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.23,
+    "pointSource": "item",
     "name": "Alsace grand cru Kessler",
     "names": [
       {
@@ -2200,10 +2211,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-kirchberg-de-barr",
-    "latitude": null,
+    "latitude": 48.410555555555554,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002059",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.448055555555555,
+    "pointSource": "item",
     "name": "Alsace grand cru Kirchberg de Barr",
     "names": [
       {
@@ -2223,10 +2234,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-kirchberg-de-ribeauville",
-    "latitude": null,
+    "latitude": 48.1975,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002029",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.320277777777777,
+    "pointSource": "item",
     "name": "Alsace grand cru Kirchberg de Ribeauvillé",
     "names": [
       {
@@ -2246,10 +2257,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-kitterle",
-    "latitude": null,
+    "latitude": 47.905833333333334,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002030",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.2225,
+    "pointSource": "item",
     "name": "Alsace grand cru Kitterlé",
     "names": [
       {
@@ -2269,10 +2280,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-mambourg",
-    "latitude": null,
+    "latitude": 48.13666666666666,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002031",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.307777777777778,
+    "pointSource": "item",
     "name": "Alsace grand cru Mambourg",
     "names": [
       {
@@ -2292,10 +2303,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-mandelberg",
-    "latitude": null,
+    "latitude": 48.15277777777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002032",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.326111111111111,
+    "pointSource": "item",
     "name": "Alsace grand cru Mandelberg",
     "names": [
       {
@@ -2315,10 +2326,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-marckrain",
-    "latitude": null,
+    "latitude": 48.14,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002033",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.315277777777777,
+    "pointSource": "item",
     "name": "Alsace grand cru Marckrain",
     "names": [
       {
@@ -2338,10 +2349,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-moenchberg",
-    "latitude": null,
+    "latitude": 48.38333333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002060",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.4350000000000005,
+    "pointSource": "item",
     "name": "Alsace grand cru Moenchberg",
     "names": [
       {
@@ -2361,10 +2372,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-muenchberg",
-    "latitude": null,
+    "latitude": 48.35944444444445,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002061",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.4125000000000005,
+    "pointSource": "item",
     "name": "Alsace grand cru Muenchberg",
     "names": [
       {
@@ -2384,10 +2395,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-ollwiller",
-    "latitude": null,
+    "latitude": 47.86972222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002034",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.211944444444445,
+    "pointSource": "item",
     "name": "Alsace grand cru Ollwiller",
     "names": [
       {
@@ -2407,10 +2418,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-osterberg",
-    "latitude": null,
+    "latitude": 48.196666666666665,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002035",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.328055555555555,
+    "pointSource": "item",
     "name": "Alsace grand cru Osterberg",
     "names": [
       {
@@ -2430,10 +2441,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-pfersigberg",
-    "latitude": null,
+    "latitude": 48.04611111111111,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002036",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.290277777777778,
+    "pointSource": "item",
     "name": "Alsace grand cru Pfersigberg",
     "names": [
       {
@@ -2453,10 +2464,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-pfingstberg",
-    "latitude": null,
+    "latitude": 47.94472222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002037",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.2347222222222225,
+    "pointSource": "item",
     "name": "Alsace grand cru Pfingstberg",
     "names": [
       {
@@ -2476,10 +2487,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-praelatenberg",
-    "latitude": null,
+    "latitude": 48.24527777777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002062",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.38,
+    "pointSource": "item",
     "name": "Alsace grand cru Praelatenberg",
     "names": [
       {
@@ -2499,10 +2510,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-rangen",
-    "latitude": null,
+    "latitude": 47.81111111111111,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002038",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.111944444444444,
+    "pointSource": "item",
     "name": "Alsace grand cru Rangen",
     "names": [
       {
@@ -2522,10 +2533,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-rosacker",
-    "latitude": null,
+    "latitude": 48.18388888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002039",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.309444444444444,
+    "pointSource": "item",
     "name": "Alsace grand cru Rosacker",
     "names": [
       {
@@ -2545,10 +2556,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-saering",
-    "latitude": null,
+    "latitude": 47.909166666666664,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002040",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.228611111111111,
+    "pointSource": "item",
     "name": "Alsace grand cru Saering",
     "names": [
       {
@@ -2568,10 +2579,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-schlossberg",
-    "latitude": null,
+    "latitude": 48.13972222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002041",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.275555555555555,
+    "pointSource": "item",
     "name": "Alsace grand cru Schlossberg",
     "names": [
       {
@@ -2591,10 +2602,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-schoenenbourg",
-    "latitude": null,
+    "latitude": 48.16916666666666,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002042",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.305555555555555,
+    "pointSource": "item",
     "name": "Alsace grand cru Schoenenbourg",
     "names": [
       {
@@ -2614,10 +2625,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-sommerberg",
-    "latitude": null,
+    "latitude": 48.10194444444445,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002043",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.277777777777778,
+    "pointSource": "item",
     "name": "Alsace grand cru Sommerberg",
     "names": [
       {
@@ -2637,10 +2648,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-sonnenglanz",
-    "latitude": null,
+    "latitude": 48.163333333333334,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002044",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.323333333333333,
+    "pointSource": "item",
     "name": "Alsace grand cru Sonnenglanz",
     "names": [
       {
@@ -2660,10 +2671,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-spiegel",
-    "latitude": null,
+    "latitude": 47.91555555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002045",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.2325,
+    "pointSource": "item",
     "name": "Alsace grand cru Spiegel",
     "names": [
       {
@@ -2683,10 +2694,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-sporen",
-    "latitude": null,
+    "latitude": 48.15833333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002046",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.307777777777778,
+    "pointSource": "item",
     "name": "Alsace grand cru Sporen",
     "names": [
       {
@@ -2706,10 +2717,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-steinert",
-    "latitude": null,
+    "latitude": 47.97694444444445,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002047",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.276666666666666,
+    "pointSource": "item",
     "name": "Alsace grand cru Steinert",
     "names": [
       {
@@ -2729,10 +2740,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-steingrubler",
-    "latitude": null,
+    "latitude": 48.055,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002048",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.290555555555556,
+    "pointSource": "item",
     "name": "Alsace grand cru Steingrubler",
     "names": [
       {
@@ -2752,10 +2763,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-steinklotz",
-    "latitude": null,
+    "latitude": 48.624722222222225,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002063",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.482222222222222,
+    "pointSource": "item",
     "name": "Alsace grand cru Steinklotz",
     "names": [
       {
@@ -2775,10 +2786,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-vorbourg",
-    "latitude": null,
+    "latitude": 47.96,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002049",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.283888888888889,
+    "pointSource": "item",
     "name": "Alsace grand cru Vorbourg",
     "names": [
       {
@@ -2798,10 +2809,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-wiebelsberg",
-    "latitude": null,
+    "latitude": 48.38972222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002064",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.423055555555556,
+    "pointSource": "item",
     "name": "Alsace grand cru Wiebelsberg",
     "names": [
       {
@@ -2821,10 +2832,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-wineck-schlossberg",
-    "latitude": null,
+    "latitude": 48.10916666666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002050",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.2780555555555555,
+    "pointSource": "item",
     "name": "Alsace grand cru Wineck-Schlossberg",
     "names": [
       {
@@ -2844,10 +2855,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-winzenberg",
-    "latitude": null,
+    "latitude": 48.343611111111116,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002065",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.416666666666667,
+    "pointSource": "item",
     "name": "Alsace grand cru Winzenberg",
     "names": [
       {
@@ -2867,10 +2878,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-zinnkoepfle",
-    "latitude": null,
+    "latitude": 47.95888888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002051",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.249722222222222,
+    "pointSource": "item",
     "name": "Alsace grand cru Zinnkoepflé",
     "names": [
       {
@@ -2890,10 +2901,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-alsace-grand-cru-zotzenberg",
-    "latitude": null,
+    "latitude": 48.39861111111111,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002066",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.440833333333334,
+    "pointSource": "item",
     "name": "Alsace grand cru Zotzenberg",
     "names": [
       {
@@ -6853,7 +6864,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005064",
     "giType": "PGI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "falanghina",
+        "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Falanghina"
+      }
+    ],
     "id": "it-benevento",
     "latitude": 41.133333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005064",
@@ -7615,7 +7632,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006968",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "xarel-lo",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
+      }
+    ],
     "id": "es-binissalem",
     "latitude": 39.68744,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006968",
@@ -7977,7 +8000,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005702",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "vermentino",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Vermentino"
+      }
+    ],
     "id": "it-bolgheri",
     "latitude": 43.2340065,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005702",
@@ -9790,7 +9819,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004762",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "monica",
+        "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monica_(grape)"
+      }
+    ],
     "id": "it-cagliari",
     "latitude": 39.216666666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004762",
@@ -10170,7 +10205,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004801",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "falanghina",
+        "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Falanghina"
+      }
+    ],
     "id": "it-campi-flegrei",
     "latitude": 40.8274575,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004801",
@@ -11155,7 +11196,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005926",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "canaiolo",
+        "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Canaiolo"
+      }
+    ],
     "id": "it-carmignano",
     "latitude": 43.880813888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005926",
@@ -13218,7 +13265,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000003581",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "canaiolo",
+        "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Canaiolo"
+      }
+    ],
     "id": "it-chianti",
     "latitude": 43.6,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003581",
@@ -16245,7 +16298,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005063",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "vermentino",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Vermentino"
+      }
+    ],
     "id": "it-colli-di-luni",
     "latitude": 44.411155555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005063",
@@ -17343,6 +17402,11 @@
     "eambrosiaId": "EUGI00000007120",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "parellada",
+        "quote": "té els principals cultius al Penedès, Conca de Barberà i Camp de Tarragona.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Parellada"
+      },
       {
         "grapeId": "trepat",
         "quote": "grown primarily in the Conca de Barberà and Costers del Segre Denominación de Origen (DO)s of Catalonia.",
@@ -18564,6 +18628,11 @@
     "eambrosiaId": "EUGI00000007121",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "xarel-lo",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
       {
         "grapeId": "trepat",
         "quote": "grown primarily in the Conca de Barberà and Costers del Segre Denominación de Origen (DO)s of Catalonia.",
@@ -20059,7 +20128,12 @@
     ],
     "prominence": 0,
     "registeredOn": "2006-02-17",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "The Lower Carniola district is known for its production of Cviček made from a blend of white and red wine grapes, most commonly Kraljevina and Žametovka.",
+        "url": "https://en.wikipedia.org/wiki/Slovenian_wine"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -26576,7 +26650,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004852",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "falanghina",
+        "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Falanghina"
+      }
+    ],
     "id": "it-galluccio",
     "latitude": 41.35,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004852",
@@ -26705,7 +26785,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004141",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "rondinella",
+        "quote": "a ridosso del lago di Garda e della Valpolicella ... che nel Valpolicella e nel Bardolino.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Rondinella"
+      }
+    ],
     "id": "it-garda",
     "latitude": 45.538888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004141",
@@ -29049,7 +29135,12 @@
     ],
     "prominence": 0,
     "registeredOn": "2007-05-10",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "The most known Romanian wine grape variety for red wines is Fetească neagră, originating in the Uricani, Iași wine region.",
+        "url": "https://en.wikipedia.org/wiki/Romanian_wine"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -32103,7 +32194,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000005961",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "prieto-picudo",
+        "quote": "La prieto picudo es una de las principales uvas tintas de los vinos de la Denominación de Origen (DO) española León y de la D.O.P. Valles de Benavente en la provincia de Zamora.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Prieto_Picudo"
+      }
+    ],
     "id": "es-leon",
     "latitude": 42.296245,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005961",
@@ -32648,7 +32745,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000005105",
     "giType": "PGI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "mencia",
+        "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
+      }
+    ],
     "id": "es-liebana",
     "latitude": 43.1506,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005105",
@@ -33964,7 +34067,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000004818",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "monica",
+        "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monica_(grape)"
+      }
+    ],
     "id": "it-mandrolisai",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004818",
@@ -34459,6 +34568,11 @@
     "eambrosiaId": "EUGI00000005782",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "grillo",
+        "quote": "presente soprattutto in Sicilia occidentale ed in particolare nella zona di Marsala. È utilizzato in purezza per la produzione di alcuni DOC della provincia di Trapani.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grillo"
+      },
       {
         "grapeId": "ansonica",
         "quote": "planted primarily in western Sicily ... In Tuscany, the grape is known as Ansonica ... on the island of Giglio ... Calabria: Bivongi DOC; ... Sicily: Alcamo DOC ... Marsala DOC, Menfi DOC ... Tuscany: Ansonica Costa dell'Argentario DOC, Elba DOC",
@@ -37158,7 +37272,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000006302",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "canaiolo",
+        "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Canaiolo"
+      }
+    ],
     "id": "it-morellino-di-scansano",
     "latitude": 42.75,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006302",
@@ -37967,7 +38087,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000002506",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "melon-de-bourgogne",
+        "quote": "elle est toutefois très répandue en Loire-Atlantique sous le nom de muscadet",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Melon_de_Bourgogne"
+      }
+    ],
     "id": "fr-muscadet",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002506",
@@ -39727,7 +39853,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000003229",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pecorino",
+        "quote": "diffuso nelle Marche, in Abruzzo e, in misura minore, in Lazio e Umbria ... concorre alla formazione del vino DOCG Offida",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pecorino_(grape)"
+      }
+    ],
     "id": "it-offida",
     "latitude": 42.854722222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003229",
@@ -41434,6 +41566,16 @@
     "eambrosiaId": "EUGI00000007127",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "parellada",
+        "quote": "té els principals cultius al Penedès, Conca de Barberà i Camp de Tarragona.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "grapeId": "sumoll",
+        "quote": "El sumoll és una varietat rústica, autòctona del Penedès",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sumoll"
+      },
       {
         "grapeId": "tempranillo",
         "quote": "The two major regions that grow Tempranillo are Rioja ... and Ribera del Duero ... Substantial quantities are also grown in the Penedès ... In Portugal ... Douro ... California ... Texas ... Oregon ... Australia ... Argentina, Chile, and Mexico ... Washington state ...",
@@ -43540,7 +43682,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000002936",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "glera",
+        "quote": "coltivato inizialmente nella località Prosecco di Trieste ... lo collega alla Valdobbiadene ... Conegliano Valdobbiadene - Prosecco DOCG",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Glera_(grape)"
+      }
+    ],
     "id": "it-prosecco",
     "latitude": 45.4397,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002936",
@@ -45618,7 +45766,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000000082",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "muscat-blanc-a-petits-grains",
+        "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains"
+      }
+    ],
     "id": "fr-rivesaltes",
     "latitude": 42.768888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000082",
@@ -45837,6 +45991,11 @@
     "eambrosiaId": "EUGI00000004813",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "vermentino",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Vermentino"
+      },
       {
         "grapeId": "croatina",
         "quote": "grown primarily in the Oltrepò Pavese region of Lombardy and in the Province of Piacenza within Emilia Romagna, but also in parts of Piedmont and the Veneto ... and in Roero",
@@ -50464,7 +50623,13 @@
     "countryCode": "PT",
     "eambrosiaId": "EUGI00000005241",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "castelao",
+        "quote": "A região da Península de Setúbal produz os mais conhecidos vinhos desta casta. Nos Vinhos Regionais do Algarve a Castelão é frequentemente combinada",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)"
+      }
+    ],
     "id": "pt-setubal",
     "latitude": 38.52430555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005241",
@@ -51758,7 +51923,13 @@
     "countryCode": "AT",
     "eambrosiaId": "EUGI00000005521",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "italian-riesling",
+        "quote": "im südlichen Burgenland ... Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Welschriesling"
+      }
+    ],
     "id": "at-steiermark",
     "latitude": 47.25,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005521",
@@ -51967,7 +52138,13 @@
     "countryCode": "HU",
     "eambrosiaId": "EUGI00000006422",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "kadarka",
+        "quote": "Die besten reinsortigen Weine aus dieser Rebe werden im südungarischen Villány, besonders aber in der Region Szekszárd gekeltert.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kadarka"
+      }
+    ],
     "id": "hu-szekszard",
     "latitude": 46.3484884,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006422",
@@ -52240,7 +52417,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000007302",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "xarel-lo",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
+      }
+    ],
     "id": "es-tarragona",
     "latitude": 41.13333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007302",
@@ -52489,7 +52672,12 @@
     ],
     "prominence": 0,
     "registeredOn": "2006-02-17",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "The Karst plateau district, located near the Italian city of Trieste, is known for the wine style Teran which is a very dark, highly acidic red wine made from Refosco planted in the region's red iron-rich soil.",
+        "url": "https://en.wikipedia.org/wiki/Slovenian_wine"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -54751,7 +54939,13 @@
     "countryCode": "PT",
     "eambrosiaId": "EUGI00000006341",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "tinta-barroca",
+        "quote": "wie man sie in den Hanglagen des Douro findet ... Empfohlen wird sie neben dem Einsatz im Portwein auch für die Region Trás-os-Montes ... In Südafrika ist sie mit 491 Hektar bestockter Fläche ebenfalls verbreitet",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_Barroca"
+      }
+    ],
     "id": "pt-tras-os-montes",
     "latitude": null,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006341",
@@ -56930,7 +57124,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006153",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "prieto-picudo",
+        "quote": "La prieto picudo es una de las principales uvas tintas de los vinos de la Denominación de Origen (DO) española León y de la D.O.P. Valles de Benavente en la provincia de Zamora.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Prieto_Picudo"
+      }
+    ],
     "id": "es-valles-de-benavente",
     "latitude": 42.0032862,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006153",
@@ -58952,6 +59152,11 @@
         "grapeId": "cabernet-franc",
         "quote": "In France, Cabernet Franc is found predominantly in the Loire Valley and ... Bordeaux... In Italy ... Friuli ... Veneto... Hungary ... Villány and Szekszárd... Canada ... Ontario's Niagara Peninsula... United States ... Napa and Sonoma counties... Washington State ... Columbia Valley... Argentina ... Mendoza... Plantings are found throughout Europe, in the New World, China and Kazakhstan.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Cabernet_Franc"
+      },
+      {
+        "grapeId": "kadarka",
+        "quote": "Die besten reinsortigen Weine aus dieser Rebe werden im südungarischen Villány, besonders aber in der Region Szekszárd gekeltert.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kadarka"
       }
     ],
     "id": "hu-villany",
@@ -61748,7 +61953,12 @@
     ],
     "prominence": 0,
     "registeredOn": "1981-06-11",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "Debina is a white Greek wine grape primarily in the Zitsa region of Epirus.",
+        "url": "https://en.wikipedia.org/wiki/Greek_wine"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -63048,7 +63258,12 @@
     ],
     "prominence": 0,
     "registeredOn": "1981-06-11",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "Moschofilero is a Blanc de gris variety from the AOC region of Mantineia, in Arcadia in the Peloponnese.",
+        "url": "https://en.wikipedia.org/wiki/Greek_wine"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -64908,7 +65123,12 @@
     ],
     "prominence": 0,
     "registeredOn": "1981-06-11",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "Mavrotragano is one of the oldest red Greek varieties originating from the Cyclades and more specifically from the volcanic terroir of Santorini.",
+        "url": "https://en.wikipedia.org/wiki/Greek_wine"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -65334,7 +65554,12 @@
     ],
     "prominence": 0,
     "registeredOn": "2011-12-20",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "Romeiko is a red grape generally found on Crete, most prominently in the region of Chania.",
+        "url": "https://en.wikipedia.org/wiki/Greek_wine"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -66510,7 +66735,12 @@
     ],
     "prominence": 0,
     "registeredOn": "2007-05-10",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "The region includes the Sungurlare Valley, famous for its wine from the Red Misket grape variety.",
+        "url": "https://en.wikipedia.org/wiki/Bulgarian_wine"
+      }
+    },
     "wikidataId": null
   },
   {

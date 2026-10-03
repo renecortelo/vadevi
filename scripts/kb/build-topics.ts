@@ -21,6 +21,12 @@ const { topics } = JSON.parse(readFileSync(resolve("data/kb/topics-include.json"
   topics: Include[];
 };
 
+// Where a language has no wine-specific article, a faithful translation of
+// one that does, marked as such (`data/kb/topic-translations.json`).
+const translations = JSON.parse(
+  readFileSync(resolve("data/kb/topic-translations.json"), "utf8"),
+) as Record<string, { from: string; sourceUrl: string; texts: Record<string, string> } | string>;
+
 const entries: TopicEntry[] = [];
 for (const topic of topics) {
   const path = resolve(".kb-cache/topics", `${topic.id}.json`);
@@ -43,6 +49,18 @@ for (const topic of topics) {
       text,
       url: `https://${locale}.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(" ", "_"))}`,
     };
+  }
+  const translation = translations[topic.id];
+  if (translation !== undefined && typeof translation !== "string") {
+    for (const [locale, text] of Object.entries(translation.texts)) {
+      // Stored under Wikipedia's language codes, as the leads are.
+      const key = locale === "pt-PT" ? "pt" : locale;
+      summaries[key] = {
+        text,
+        translated: locale !== translation.from,
+        url: translation.sourceUrl,
+      };
+    }
   }
   if (Object.keys(summaries).length === 0) {
     console.warn(`  ${topic.id}: no explanation in any language; skipped.`);

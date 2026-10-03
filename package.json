@@ -35,6 +35,8 @@
     "kb:fetch-appellations": "tsx scripts/kb/fetch-appellations.ts",
     "kb:build-appellations": "tsx scripts/kb/build-appellations.ts",
     "kb:geocode-appellations": "tsx scripts/kb/geocode-appellations.ts",
+    "kb:fetch-grand-crus": "tsx scripts/kb/fetch-grand-crus.ts",
+    "kb:fetch-country-wine": "tsx scripts/kb/fetch-country-wine.ts",
     "kb:fetch-topics": "tsx scripts/kb/fetch-topics.ts",
     "kb:build-topics": "tsx scripts/kb/build-topics.ts",
     "kb:fetch-grape-images": "tsx scripts/kb/fetch-grape-images.ts",

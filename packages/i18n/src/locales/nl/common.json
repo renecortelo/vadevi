@@ -190,7 +190,8 @@
     "mapApproximate": {
       "area": "Benaderd punt: het midden van het gebied waarin de benaming ligt.",
       "place": "Benaderd punt: de plaats waarnaar de benaming is genoemd."
-    }
+    },
+    "summaryTranslated": "vertaald uit het oorspronkelijke artikel"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

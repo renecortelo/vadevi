@@ -71,7 +71,8 @@ const topics: TopicEntry[] = [
       },
       es: {
         text: "La fermentación maloláctica transforma el ácido málico.",
-        url: "https://es.wikipedia.org/wiki/Fermentaci%C3%B3n_malol%C3%A1ctica",
+        translated: true,
+        url: "https://fr.wikipedia.org/wiki/Fermentation_malolactique",
       },
     },
     wikidataId: "Q654005",
@@ -163,6 +164,11 @@ describe("browsing the wine library", () => {
     const malolactic = list.find((topic) => topic.id === "malolactic-fermentation");
     expect(malolactic).toMatchObject({ category: "method", name: "Fermentación maloláctica" });
     expect(malolactic?.summary?.locale).toBe("es");
+    // A translation says so, and links the article it was made from.
+    expect(malolactic?.summary).toMatchObject({
+      sourceUrl: "https://fr.wikipedia.org/wiki/Fermentation_malolactique",
+      translated: true,
+    });
     expect(malolactic?.otherNames).toEqual(expect.arrayContaining(["maloláctica", "MLF"]));
     const petNat = LibraryTopicResponseSchema.parse(
       await (await get("topics/pet-nat?locale=es")).json(),

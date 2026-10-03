@@ -69,6 +69,22 @@ also read in a working session with Claude, under the same rules and the same
 check: every value with its verbatim quote, kept only if `grape-validation.ts`
 finds the quote in the article and the quote says it.
 
+Where a grape's English article says nothing of its wine, its article in its
+own language (Spanish, Catalan, French, Italian, Portuguese or German) was
+read the same way: the check knows how levels are stated in those languages,
+an aroma is given as the library's term with the article's own word for it,
+and each fact keeps the article it came from, which the card links.
+
+A few registered names with no article of their own (Greek, Bulgarian,
+Romanian, Slovenian) take their summary from one whole sentence of their
+country's wine article on English Wikipedia — only a sentence that names them,
+describes the wine, and carries no figures or lists. Alsace's grand crus take
+the coordinates of their vineyards from French Wikipedia's article on them.
+
+Where a style or method has a wine-specific article in one language only
+(sulphites: French and German), the other languages carry a faithful
+translation of it (`topic-translations.json`), marked as such on the page.
+
 The styles and methods (`topics.json`) are articles chosen by hand in
 `topics-include.json`; their explanations are each article's lead, in every
 language Wikipedia has it, and no model is involved.

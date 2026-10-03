@@ -1,8 +1,14 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { leadIsAboutWine } from "./appellation-names";
-import { type GrapeEntry, slug, summaryOf, validateExtraction } from "./grape-validation";
+import {
+  type GrapeEntry,
+  normalize,
+  slug,
+  summaryOf,
+  validateExtraction,
+} from "./grape-validation";
 
 /**
  * Step three of the wine library: keep only what the sources say.
@@ -52,6 +58,40 @@ function terms(kind: "aroma" | "pairing", values: string[]): string[] {
   return [...new Set(values.flatMap((value) => term(kind, value) ?? []))];
 }
 
+/**
+ * A grape's articles in other languages, each with the reading proposed from
+ * it (`.kb-cache/grapes-extra/<qid>.<lang>.json` for the article,
+ * `.kb-cache/extracted-extra/<qid>.<lang>.json` for the reading).
+ */
+function extraReadings(
+  qid: string,
+): { article: string; extraction: unknown; lang: string; url: string }[] {
+  const directory = resolve(cache, "extracted-extra");
+  if (!existsSync(directory)) return [];
+  return readdirSync(directory)
+    .filter((file) => file.startsWith(`${qid}.`) && file.endsWith(".json"))
+    .flatMap((file) => {
+      const lang = file.slice(qid.length + 1, -".json".length);
+      const articlePath = resolve(cache, "grapes-extra", `${qid}.${lang}.json`);
+      if (!existsSync(articlePath)) return [];
+      const article = JSON.parse(readFileSync(articlePath, "utf8")) as {
+        text: string;
+        title: string;
+      };
+      const reading = JSON.parse(readFileSync(resolve(directory, file), "utf8")) as {
+        extraction: unknown;
+      };
+      return [
+        {
+          article: article.text,
+          extraction: reading.extraction,
+          lang,
+          url: `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(article.title.replaceAll(" ", "_"))}`,
+        },
+      ];
+    });
+}
+
 const entries: GrapeEntry[] = [];
 const rejected: { field: string; grape: string; reason: string; value: string }[] = [];
 let skipped = 0;
@@ -84,6 +124,43 @@ for (const qid of index) {
   if (!result.isWineGrape) {
     skipped += 1;
     continue;
+  }
+  // The grape's article in another language — its home language, usually —
+  // read where the English one is silent: it fills only what is still
+  // missing, every value checked against that article's own words, and each
+  // fact keeps the article it came from.
+  for (const extra of extraReadings(qid)) {
+    const found = validateExtraction(extra.extraction, extra.article, raw.wikidataOrigin);
+    rejected.push(
+      ...found.rejected.map((entry) => ({
+        ...entry,
+        grape: `${raw.labels.en ?? qid} (${extra.lang})`,
+      })),
+    );
+    const cite = (field: string) =>
+      found.evidence
+        .filter((entry) => entry.field === field)
+        .map((entry) => ({ ...entry, sourceUrl: extra.url }));
+    for (const axis of ["acidity", "tannin", "body"] as const) {
+      if (result[axis] === null && found[axis] !== null) {
+        result[axis] = found[axis];
+        result.evidence.push(...cite(axis));
+      }
+    }
+    for (const listField of ["aromas", "pairings", "styles"] as const) {
+      const fresh = found[listField].filter((item) => !result[listField].includes(item));
+      if (fresh.length === 0) continue;
+      result[listField].push(...fresh);
+      result.evidence.push(...cite(listField).filter((entry) => fresh.includes(entry.value)));
+    }
+    const knownRegions = new Set(result.regions.map((region) => normalize(region.name)));
+    const freshRegions = found.regions.filter(
+      (region) => !knownRegions.has(normalize(region.name)),
+    );
+    if (freshRegions.length > 0) {
+      result.regions.push(...freshRegions);
+      result.evidence.push(...cite("regions"));
+    }
   }
   const names: Record<string, string> = {};
   // Some languages write a variety in lower case in running text ("la

@@ -537,7 +537,7 @@ async function topicsFor(
       .bind(...ids),
     database
       .prepare(
-        `SELECT entity_id, locale, text, source_url, license FROM kb_summaries
+        `SELECT entity_id, locale, text, source_url, license, translated FROM kb_summaries
         WHERE entity_type = 'style' AND entity_id IN (${placeholders})`,
       )
       .bind(...ids),
@@ -554,6 +554,7 @@ async function topicsFor(
     locale: string;
     source_url: string;
     text: string;
+    translated: number;
   }[];
   return topics.map((topic) => {
     const own = nameRows.filter((row) => row.entity_id === topic.id);
@@ -597,6 +598,7 @@ async function topicsFor(
               locale: summary.locale,
               sourceUrl: summary.source_url,
               text: summary.text,
+              translated: summary.translated === 1,
             },
     };
   });

@@ -76,6 +76,7 @@
       "farmyard-y": "gamey",
       "fig": "fig",
       "figs": "fig",
+      "flint": "flint",
       "flinty": "mineral",
       "floral": "floral",
       "flowers": "floral",
@@ -137,6 +138,7 @@
       "nutty": "nutty",
       "oak": "oak",
       "olive": "olive",
+      "orange peel": "orange peel",
       "passion fruit": "passion fruit",
       "peach": "peach",
       "peaches": "peach",
@@ -604,6 +606,16 @@
         "nl": "vijg",
         "pt-PT": "figo"
       },
+      "flint": {
+        "en": "flint",
+        "es": "pedernal",
+        "ca": "pedra foguera",
+        "fr": "pierre à fusil",
+        "de": "Feuerstein",
+        "it": "pietra focaia",
+        "nl": "vuursteen",
+        "pt-PT": "sílex"
+      },
       "floral": {
         "en": "floral",
         "es": "floral",
@@ -984,6 +996,16 @@
         "nl": "olijf",
         "pt-PT": "azeitona"
       },
+      "orange peel": {
+        "en": "orange peel",
+        "es": "piel de naranja",
+        "ca": "pell de taronja",
+        "fr": "écorce d'orange",
+        "de": "Orangenschale",
+        "it": "scorza d'arancia",
+        "nl": "sinaasappelschil",
+        "pt-PT": "casca de laranja"
+      },
       "passion fruit": {
         "en": "passion fruit",
         "es": "maracuyá",
@@ -1308,8 +1330,10 @@
   },
   "pairing": {
     "variants": {
+      "asparagus": "asparagus",
       "buffalo mozzarella": "buffalo mozzarella",
       "cassis": "blackcurrant",
+      "cheese": "cheese",
       "chevre": "goat cheese",
       "chicken": "chicken",
       "chinese cuisine": "chinese cuisine",
@@ -1318,6 +1342,7 @@
       "feta": "feta",
       "fish": "fish",
       "fish dishes": "fish",
+      "foie gras": "foie gras",
       "fondue": "fondue",
       "grilled meats": "grilled meats",
       "hungarian dishes": null,
@@ -1337,11 +1362,22 @@
       "sushi": "sushi",
       "thai cuisine": "thai cuisine",
       "turkey": "turkey",
+      "vegetables": "vegetables",
       "white fish": "white fish",
       "white fresh cheeses": "fresh cheese",
       "zucchini": "zucchini"
     },
     "terms": {
+      "asparagus": {
+        "en": "asparagus",
+        "es": "espárragos",
+        "ca": "espàrrecs",
+        "fr": "asperges",
+        "de": "Spargel",
+        "it": "asparagi",
+        "nl": "asperges",
+        "pt-PT": "espargos"
+      },
       "bittersweet dishes": {
         "en": "bittersweet dishes",
         "es": "platos agridulces",
@@ -1371,6 +1407,16 @@
         "it": "mozzarella di bufala",
         "nl": "buffelmozzarella",
         "pt-PT": "mozzarella de búfala"
+      },
+      "cheese": {
+        "en": "cheese",
+        "es": "queso",
+        "ca": "formatge",
+        "fr": "fromage",
+        "de": "Käse",
+        "it": "formaggio",
+        "nl": "kaas",
+        "pt-PT": "queijo"
       },
       "chicken": {
         "en": "chicken",
@@ -1421,6 +1467,16 @@
         "it": "pesce",
         "nl": "vis",
         "pt-PT": "peixe"
+      },
+      "foie gras": {
+        "en": "foie gras",
+        "es": "foie gras",
+        "ca": "foie gras",
+        "fr": "foie gras",
+        "de": "Foie gras",
+        "it": "foie gras",
+        "nl": "foie gras",
+        "pt-PT": "foie gras"
       },
       "fondue": {
         "en": "fondue",
@@ -1611,6 +1667,16 @@
         "it": "tacchino",
         "nl": "kalkoen",
         "pt-PT": "peru"
+      },
+      "vegetables": {
+        "en": "vegetables",
+        "es": "verduras",
+        "ca": "verdures",
+        "fr": "légumes",
+        "de": "Gemüse",
+        "it": "verdure",
+        "nl": "groenten",
+        "pt-PT": "legumes"
       },
       "white fish": {
         "en": "white fish",

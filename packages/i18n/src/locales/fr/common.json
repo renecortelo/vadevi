@@ -190,7 +190,8 @@
     "mapApproximate": {
       "area": "Point approximatif : le centre de la zone où se trouve l'appellation.",
       "place": "Point approximatif : le lieu qui donne son nom à l'appellation."
-    }
+    },
+    "summaryTranslated": "traduit de l'article original"
   },
   "space": {
     "switchLabel": "Espace actif",

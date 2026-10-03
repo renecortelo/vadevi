@@ -1275,9 +1275,10 @@ export async function regenerateTastingComparison(
   const sourcedAt = new Date().toISOString();
   for (const reference of references) {
     grapes.push(reference.text!);
-    const source = await database
-      .prepare(
-        `INSERT INTO sources (
+    for (const sourceUrl of reference.sourceUrls) {
+      const source = await database
+        .prepare(
+          `INSERT INTO sources (
           id, space_id, canonical_url, title, publisher, source_type,
           license_identifier, retrieved_at, last_checked_at, content_hash,
           created_by_user_id, created_by_provider, created_at, updated_at
@@ -1285,18 +1286,19 @@ export async function regenerateTastingComparison(
           NULL, 'wine-library', ?, ?)
         ON CONFLICT(space_id, canonical_url) DO UPDATE SET canonical_url = excluded.canonical_url
         RETURNING id`,
-      )
-      .bind(
-        ulid(),
-        options.spaceId,
-        reference.sourceUrl,
-        `${reference.card.name} — Wikipedia`,
-        sourcedAt,
-        sourcedAt,
-        sourcedAt,
-      )
-      .first<{ id: string }>();
-    if (source !== null) sourceIds.add(source.id);
+        )
+        .bind(
+          ulid(),
+          options.spaceId,
+          sourceUrl,
+          `${reference.card.name} — Wikipedia`,
+          sourcedAt,
+          sourcedAt,
+          sourcedAt,
+        )
+        .first<{ id: string }>();
+      if (source !== null) sourceIds.add(source.id);
+    }
   }
   const method =
     producerSourced && grapes.length > 0

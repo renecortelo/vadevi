@@ -9,7 +9,12 @@
  */
 
 export type Level = "high" | "low" | "medium";
-export type Evidence = { field: string; quote: string; value: string };
+export type Evidence = {
+  field: string;
+  quote: string;
+  value: string; /** The article the quote is from, when not the grape's English one. */
+  sourceUrl?: string;
+};
 
 export type GrapeEntry = {
   acidity: Level | null;
@@ -99,16 +104,22 @@ export function mentions(quote: string, value: string): boolean {
   return stem.length >= 4 && body.includes(stem);
 }
 
+/**
+ * The words a level is stated in, in English and in the languages a grape's
+ * own article may be read in — Spanish, Catalan, French, Italian, Portuguese
+ * and German — accents set aside, as `normalize` leaves them.
+ */
 const levelWords: Record<Level, RegExp> = {
-  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable)\b/,
-  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle)\b/,
-  medium: /\b(medium|moderate|moderately|medium-bodied|average)\b/,
+  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?)\b/,
+  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix[ao]s?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrige?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao])\b/,
+  medium:
+    /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moderee?|moderad[ao]|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?)\b/,
 };
 
 const fieldWords: Record<"acidity" | "body" | "tannin", RegExp> = {
-  acidity: /acid/,
-  body: /bod(y|ied)|weight|structure/,
-  tannin: /tannin|tannic/,
+  acidity: /acid|saure/,
+  body: /bod(y|ied)|weight|structure|cuerpo|corps|corpo|\bcos\b|korper|struttur|estructur|estrutur|struktur/,
+  tannin: /tann?in|tannic|tanic|tannique|gerbstoff/,
 };
 
 function toLevel(value: unknown): Level | null {
@@ -138,14 +149,18 @@ const colorWords: Record<"pink" | "red" | "white", RegExp> = {
 };
 
 const styleWords: Record<string, RegExp> = {
-  blending: /blend/,
-  fortified: /fortif|port\b|sherry|madeira|marsala|vin doux/,
-  rose: /\bros(e|ado|ato)\b|blush/,
-  sparkling: /sparkl|champagne|cava|prosecco|cremant|sekt|spumante|petillant|frizzante|mousseux/,
+  blending:
+    /blend|mezcla|coupage|assembla|uvaggio|taglio|\blote|cupatge|ensambla|mistura|verschnitt|cuvee/,
+  fortified:
+    /fortif|port\b|sherry|madeira|marsala|vins? doux|generos|liquoros|porto\b|jerez|portwein/,
+  rose: /\bros(e|es|ado|ados|ato|ati|at|ats)\b|blush|rosewein/,
+  sparkling:
+    /sparkl|champagne|cava|prosecco|cremant|sekt|spumant|petillant|frizzant|mousseu|espumos|espumant|escumos|schaumwein/,
   // Still wine is what a wine grape makes unless it is only ever sparkling or
   // fortified, so any sentence about the wines made from it supports it.
-  still: /\b(still|table wine|varietal|wines?)\b/,
-  sweet: /sweet|dessert|botryti|noble rot|late.harvest|ice ?wine|passito|vin santo|tokaj/,
+  still: /\b(still|table wine|varietal|wines?|vinos?|vins?|vini|vinhos?|vi|weine?)\b/,
+  sweet:
+    /sweet|dessert|botryti|noble rot|late.harvest|ice ?wine|passito|vin santo|tokaj|dulce|dolce|\bdoce|\bdoux|\bdolc|moelleux|liquoreux|vendimia tardia|vendanges tardives|suss|suß|recioto|appassiment/,
 };
 
 type Field = { quote?: unknown; value?: unknown };
@@ -285,9 +300,18 @@ export function validateExtraction(
     return kept;
   };
 
-  const aromas = items("aromas", (item, quote) => mentions(quote, item));
+  // An article in another language names an aroma in its own words; the
+  // proposal gives the library's English term with the word the article uses
+  // (`words`: {"plum": "ciruela"}), and it is that word the quote must hold.
+  const wordsOf = (name: string): Record<string, string> => {
+    const words = (field(proposal, name) as { words?: unknown }).words;
+    return typeof words === "object" && words !== null ? (words as Record<string, string>) : {};
+  };
+  const aromaWords = wordsOf("aromas");
+  const pairingWords = wordsOf("pairings");
+  const aromas = items("aromas", (item, quote) => mentions(quote, aromaWords[item] ?? item));
   const synonyms = items("synonyms", (item, quote) => mentions(quote, item));
-  const pairings = items("pairings", (item, quote) => mentions(quote, item));
+  const pairings = items("pairings", (item, quote) => mentions(quote, pairingWords[item] ?? item));
   const styles = items("styles", (item, quote) => {
     const pattern = styleWords[normalize(item)];
     return pattern !== undefined && pattern.test(normalize(quote));

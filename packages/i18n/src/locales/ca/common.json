@@ -190,7 +190,8 @@
     "mapApproximate": {
       "area": "Punt aproximat: el centre de la zona on és la denominació.",
       "place": "Punt aproximat: el lloc que dona nom a la denominació."
-    }
+    },
+    "summaryTranslated": "traduït de l'article original"
   },
   "space": {
     "switchLabel": "Espai actiu",

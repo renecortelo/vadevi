@@ -1,7 +1,11 @@
 [
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "medium",
+    "aromas": [
+      "honey",
+      "floral",
+      "almond"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -94,6 +98,36 @@
         "field": "regions",
         "quote": "grown in northwestern Spain, in particular in Galicia ... yields the best results in Valdeorras",
         "value": "ES: Valdeorras"
+      },
+      {
+        "field": "acidity",
+        "quote": "Produce vinos monovarietales con una acidez y un nivel de alcohol medio-elevado.",
+        "value": "medium",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Godello"
+      },
+      {
+        "field": "aromas",
+        "quote": "Tiene un gusto suavemente amielado y un amargor elegante ... pudiendo desarrollar aromas más complejos, a frutas y florales, y notas de sabor a almendras.",
+        "value": "honey",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Godello"
+      },
+      {
+        "field": "aromas",
+        "quote": "Tiene un gusto suavemente amielado y un amargor elegante ... pudiendo desarrollar aromas más complejos, a frutas y florales, y notas de sabor a almendras.",
+        "value": "floral",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Godello"
+      },
+      {
+        "field": "aromas",
+        "quote": "Tiene un gusto suavemente amielado y un amargor elegante ... pudiendo desarrollar aromas más complejos, a frutas y florales, y notas de sabor a almendras.",
+        "value": "almond",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Godello"
+      },
+      {
+        "field": "styles",
+        "quote": "Produce vinos monovarietales con una acidez y un nivel de alcohol medio-elevado.",
+        "value": "still",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Godello"
       }
     ],
     "id": "godello",
@@ -120,7 +154,9 @@
         "name": "Valdeorras"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Godello is a white variety of wine grape grown in northwestern Spain, in particular in Galicia. The Gouveio found in northern Portugal is thought to be the same grape variety.",
@@ -203,8 +239,11 @@
   },
   {
     "acidity": null,
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "floral",
+      "citrus"
+    ],
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -286,6 +325,42 @@
         "field": "regions",
         "quote": "specially grown in Catalonia, Spain",
         "value": "ES: Catalonia"
+      },
+      {
+        "field": "body",
+        "quote": "Dona un vi fresc, discret i amb poc cos",
+        "value": "low",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "field": "aromas",
+        "quote": "aporta al cava aromes delicades i florals ... Té poc color i aromes cítriques i de fruita blanca.",
+        "value": "floral",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "field": "aromas",
+        "quote": "aporta al cava aromes delicades i florals ... Té poc color i aromes cítriques i de fruita blanca.",
+        "value": "citrus",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "field": "regions",
+        "quote": "té els principals cultius al Penedès, Conca de Barberà i Camp de Tarragona.",
+        "value": "ES: Penedès",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "field": "regions",
+        "quote": "té els principals cultius al Penedès, Conca de Barberà i Camp de Tarragona.",
+        "value": "ES: Conca de Barberà",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "field": "regions",
+        "quote": "té els principals cultius al Penedès, Conca de Barberà i Camp de Tarragona.",
+        "value": "ES: Camp de Tarragona",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
       }
     ],
     "id": "parellada",
@@ -306,6 +381,18 @@
       {
         "country": "ES",
         "name": "Catalonia"
+      },
+      {
+        "country": "ES",
+        "name": "Penedès"
+      },
+      {
+        "country": "ES",
+        "name": "Conca de Barberà"
+      },
+      {
+        "country": "ES",
+        "name": "Camp de Tarragona"
       }
     ],
     "styles": [
@@ -472,6 +559,12 @@
         "field": "styles",
         "quote": "It is used to produce red, white, rosé wines and Cava.",
         "value": "rose"
+      },
+      {
+        "field": "regions",
+        "quote": "El sumoll és una varietat rústica, autòctona del Penedès",
+        "value": "ES: Penedès",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Sumoll"
       }
     ],
     "id": "sumoll",
@@ -487,7 +580,12 @@
     "origin": null,
     "pairings": [],
     "prominence": 8,
-    "regions": [],
+    "regions": [
+      {
+        "country": "ES",
+        "name": "Penedès"
+      }
+    ],
     "styles": [
       "still",
       "sparkling",
@@ -1370,6 +1468,24 @@
         "field": "regions",
         "quote": "It is grown mainly in the Veneto region of Italy, traditionally in an area near Conegliano and Valdobbiadene, in the hills north of Treviso.",
         "value": "IT: Veneto"
+      },
+      {
+        "field": "regions",
+        "quote": "coltivato inizialmente nella località Prosecco di Trieste ... lo collega alla Valdobbiadene ... Conegliano Valdobbiadene - Prosecco DOCG",
+        "value": "IT: Prosecco",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Glera"
+      },
+      {
+        "field": "regions",
+        "quote": "coltivato inizialmente nella località Prosecco di Trieste ... lo collega alla Valdobbiadene ... Conegliano Valdobbiadene - Prosecco DOCG",
+        "value": "IT: Valdobbiadene",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Glera"
+      },
+      {
+        "field": "regions",
+        "quote": "coltivato inizialmente nella località Prosecco di Trieste ... lo collega alla Valdobbiadene ... Conegliano Valdobbiadene - Prosecco DOCG",
+        "value": "IT: Conegliano",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Glera"
       }
     ],
     "id": "glera",
@@ -1390,6 +1506,18 @@
       {
         "country": "IT",
         "name": "Veneto"
+      },
+      {
+        "country": "IT",
+        "name": "Prosecco"
+      },
+      {
+        "country": "IT",
+        "name": "Valdobbiadene"
+      },
+      {
+        "country": "IT",
+        "name": "Conegliano"
       }
     ],
     "styles": [
@@ -1498,6 +1626,30 @@
         "field": "regions",
         "quote": "Monica is a red wine grape that is grown primarily in Sardinia ...",
         "value": "IT: Sardinia"
+      },
+      {
+        "field": "styles",
+        "quote": "Der dunkelfarbige Wein ist von ordentlicher Qualität und sorgt in Verschnitten für einen runden und vollen Geschmack.",
+        "value": "blending",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Monica_Nera"
+      },
+      {
+        "field": "regions",
+        "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
+        "value": "IT: Alghero",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Monica_Nera"
+      },
+      {
+        "field": "regions",
+        "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
+        "value": "IT: Mandrolisai",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Monica_Nera"
+      },
+      {
+        "field": "regions",
+        "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
+        "value": "IT: Cagliari",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Monica_Nera"
       }
     ],
     "id": "monica",
@@ -1518,11 +1670,24 @@
       {
         "country": "IT",
         "name": "Sardinia"
+      },
+      {
+        "country": "IT",
+        "name": "Alghero"
+      },
+      {
+        "country": "IT",
+        "name": "Mandrolisai"
+      },
+      {
+        "country": "IT",
+        "name": "Cagliari"
       }
     ],
     "styles": [
       "sweet",
-      "still"
+      "still",
+      "blending"
     ],
     "summaries": {
       "en": {
@@ -1553,8 +1718,12 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Monica_(grape)"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "high",
+    "aromas": [
+      "floral",
+      "mineral",
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -1637,6 +1806,54 @@
         "field": "regions",
         "quote": "includes Galicia,  Spain ... it is notably cultivated along the Lima River, a sub-region of Vinho Verde (wines produced in Minho)",
         "value": "PT: Minho"
+      },
+      {
+        "field": "acidity",
+        "quote": "A casta Loureiro produz vinhos de elevada acidez e com aromas florais, minerais e frutados muito acentuados.",
+        "value": "high",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
+      },
+      {
+        "field": "aromas",
+        "quote": "A casta Loureiro produz vinhos de elevada acidez e com aromas florais, minerais e frutados muito acentuados.",
+        "value": "floral",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
+      },
+      {
+        "field": "aromas",
+        "quote": "A casta Loureiro produz vinhos de elevada acidez e com aromas florais, minerais e frutados muito acentuados.",
+        "value": "mineral",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
+      },
+      {
+        "field": "aromas",
+        "quote": "A casta Loureiro produz vinhos de elevada acidez e com aromas florais, minerais e frutados muito acentuados.",
+        "value": "fruity",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
+      },
+      {
+        "field": "styles",
+        "quote": "A casta Loureiro produz vinhos de elevada acidez",
+        "value": "still",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
+      },
+      {
+        "field": "regions",
+        "quote": "originária no vale do rio Lima e cultivada em quase toda a região dos Vinhos Verdes e na Galiza.",
+        "value": "PT: Vinhos Verdes",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
+      },
+      {
+        "field": "regions",
+        "quote": "originária no vale do rio Lima e cultivada em quase toda a região dos Vinhos Verdes e na Galiza.",
+        "value": "PT: Lima",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
+      },
+      {
+        "field": "regions",
+        "quote": "originária no vale do rio Lima e cultivada em quase toda a região dos Vinhos Verdes e na Galiza.",
+        "value": "ES: Galiza",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
       }
     ],
     "id": "loureira",
@@ -1660,9 +1877,23 @@
       {
         "country": "PT",
         "name": "Minho"
+      },
+      {
+        "country": "PT",
+        "name": "Vinhos Verdes"
+      },
+      {
+        "country": "PT",
+        "name": "Lima"
+      },
+      {
+        "country": "ES",
+        "name": "Galiza"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Loureiro is a white wine grape cultivated in the northwest of the Iberian Peninsula. This includes Galicia,  Spain and Minho,  Portugal. In the latter, it is notably cultivated along the Lima River, a sub-region of Vinho Verde (wines produced in Minho).",
@@ -2420,6 +2651,18 @@
         "field": "regions",
         "quote": "It is native to the area of Valdevimbre, Los Oteros and the banks of the river Cea, in León, ... licensed in Andalusia",
         "value": "ES: Andalusia"
+      },
+      {
+        "field": "regions",
+        "quote": "La prieto picudo es una de las principales uvas tintas de los vinos de la Denominación de Origen (DO) española León y de la D.O.P. Valles de Benavente en la provincia de Zamora.",
+        "value": "ES: León",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Prieto_picudo"
+      },
+      {
+        "field": "regions",
+        "quote": "La prieto picudo es una de las principales uvas tintas de los vinos de la Denominación de Origen (DO) española León y de la D.O.P. Valles de Benavente en la provincia de Zamora.",
+        "value": "ES: Valles de Benavente",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Prieto_picudo"
       }
     ],
     "id": "prieto-picudo",
@@ -2448,6 +2691,14 @@
       {
         "country": "ES",
         "name": "Andalusia"
+      },
+      {
+        "country": "ES",
+        "name": "León"
+      },
+      {
+        "country": "ES",
+        "name": "Valles de Benavente"
       }
     ],
     "styles": [
@@ -3028,6 +3279,24 @@
         "field": "regions",
         "quote": "found primarily in the south coastal regions ... In the Algarve VR, it is often blended with Negra Mole...",
         "value": "PT: Algarve"
+      },
+      {
+        "field": "tannin",
+        "quote": "Os vinhos da casta Castelão são concentrados, aromáticos, com taninos bem marcados",
+        "value": "high",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Castel%C3%A3o_(uva)"
+      },
+      {
+        "field": "regions",
+        "quote": "A região da Península de Setúbal produz os mais conhecidos vinhos desta casta. Nos Vinhos Regionais do Algarve a Castelão é frequentemente combinada",
+        "value": "PT: Setúbal",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Castel%C3%A3o_(uva)"
+      },
+      {
+        "field": "regions",
+        "quote": "A região da Península de Setúbal produz os mais conhecidos vinhos desta casta. Nos Vinhos Regionais do Algarve a Castelão é frequentemente combinada",
+        "value": "PT: Algarve",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Castel%C3%A3o_(uva)"
       }
     ],
     "id": "castelao",
@@ -3052,6 +3321,10 @@
       {
         "country": "PT",
         "name": "Algarve"
+      },
+      {
+        "country": "PT",
+        "name": "Setúbal"
       }
     ],
     "styles": [
@@ -3143,7 +3416,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q478166",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)"
   },
@@ -3887,6 +4160,12 @@
         "field": "regions",
         "quote": "grown primarily in the Dão DOC",
         "value": "PT: Dão"
+      },
+      {
+        "field": "styles",
+        "quote": "Usada sobretudo em lotes com outras castas, actualmente tem sido utilizada também em vinhos varietais com sucesso.",
+        "value": "still",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Encruzado"
       }
     ],
     "id": "encruzado",
@@ -3910,7 +4189,8 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -5695,6 +5975,11 @@
       {
         "field": "styles",
         "quote": "It is a major component in the white wines ... In the Rivesaltes AOC, the grape is used as a blending component in some of the region's vin doux naturel wines ... sometimes blended with Muscat and made in a varietal style",
+        "value": "sweet"
+      },
+      {
+        "field": "styles",
+        "quote": "It is a major component in the white wines ... In the Rivesaltes AOC, the grape is used as a blending component in some of the region's vin doux naturel wines ... sometimes blended with Muscat and made in a varietal style",
         "value": "blending"
       },
       {
@@ -5770,6 +6055,7 @@
     ],
     "styles": [
       "still",
+      "sweet",
       "blending"
     ],
     "summaries": {
@@ -6176,6 +6462,30 @@
         "field": "regions",
         "quote": "At the turn of the 21st century, Alicante Bouschet was the 12th most planted red wine grape in France with sizable plantings in the Languedoc, Provence and Cognac regions ... Widely planted across the Alentejo wine region today ... In Chile the grape is blended ... California ... Napa, Sonoma, Madera, and Calaveras counties. Other areas with notable ... Algeria, Palestine and parts of central and southern Italy. In Spain ... it is the fifth most planted red grape ...",
         "value": "PS: Palestine"
+      },
+      {
+        "field": "regions",
+        "quote": "Il est répandu dans le vignoble du Languedoc-Roussillon, en Algérie, au Portugal, en Espagne ... Au Sud de l'Alentejo, au Portugal",
+        "value": "FR: Languedoc-Roussillon",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Alicante_Bouschet"
+      },
+      {
+        "field": "regions",
+        "quote": "Il est répandu dans le vignoble du Languedoc-Roussillon, en Algérie, au Portugal, en Espagne ... Au Sud de l'Alentejo, au Portugal",
+        "value": "PT: Alentejo",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Alicante_Bouschet"
+      },
+      {
+        "field": "regions",
+        "quote": "Il est répandu dans le vignoble du Languedoc-Roussillon, en Algérie, au Portugal, en Espagne ... Au Sud de l'Alentejo, au Portugal",
+        "value": "ES: Espagne",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Alicante_Bouschet"
+      },
+      {
+        "field": "regions",
+        "quote": "Il est répandu dans le vignoble du Languedoc-Roussillon, en Algérie, au Portugal, en Espagne ... Au Sud de l'Alentejo, au Portugal",
+        "value": "DZ: Algérie",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Alicante_Bouschet"
       }
     ],
     "id": "alicante-bouschet",
@@ -6240,6 +6550,18 @@
       {
         "country": "PS",
         "name": "Palestine"
+      },
+      {
+        "country": "FR",
+        "name": "Languedoc-Roussillon"
+      },
+      {
+        "country": "ES",
+        "name": "Espagne"
+      },
+      {
+        "country": "DZ",
+        "name": "Algérie"
       }
     ],
     "styles": [
@@ -6670,6 +6992,11 @@
         "value": "valenciana tinta"
       },
       {
+        "field": "styles",
+        "quote": "The must is normally high in colorants and tannins and is suitable both for aging and for coupage with other varieties.",
+        "value": "blending"
+      },
+      {
         "field": "regions",
         "quote": "It is grown predominantly in the Utiel-Requena DOP where it represents about 80% of the red grapes vines grown, and is also present in significant quantities in Valencia, Cuenca and Albacete. It can only be found in small quantities in other regions of Spain: La Manchuela (Castilla–La Mancha), selected vineyards in Ribera del Guadiana, Alicante, Murcia, Campo de Borja, Calatayud, Cariñena, Valdejalón.",
         "value": "ES: Utiel-Requena DOP"
@@ -6794,7 +7121,9 @@
         "name": "Valdejalón"
       }
     ],
-    "styles": [],
+    "styles": [
+      "blending"
+    ],
     "summaries": {
       "en": {
         "text": "Bobal is a variety of Vitis vinifera, a red grape used in winemaking. It is native to the Utiel-Requena region in Valencia, Spain. The presence of Bobal in Utiel-Requena was documented in the 15th century in \"Espill o llibre de les dones\" by Jaume Roig. The name derives from the Latin bovale, in reference to the shape of a bull's head.",
@@ -6904,8 +7233,14 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bobal"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "low",
+    "aromas": [
+      "earthy",
+      "vegetal",
+      "red berry",
+      "mineral",
+      "fruity"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -6998,6 +7333,84 @@
         "field": "regions",
         "quote": "It is primarily found in the Bierzo, Ribeira Sacra, Valdeorras, Monterrei and Dão wine regions.",
         "value": "PT: Dão"
+      },
+      {
+        "field": "acidity",
+        "quote": "Tiene mucho color, un fruto que fácilmente deriva en notas cocidas, y una baja acidez",
+        "value": "low",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "aromas",
+        "quote": "se emplea para la elaboración de vinos aromáticos y afrutados ... Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales con matices de bayas y mineralidad pétrea.",
+        "value": "earthy",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "aromas",
+        "quote": "se emplea para la elaboración de vinos aromáticos y afrutados ... Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales con matices de bayas y mineralidad pétrea.",
+        "value": "vegetal",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "aromas",
+        "quote": "se emplea para la elaboración de vinos aromáticos y afrutados ... Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales con matices de bayas y mineralidad pétrea.",
+        "value": "berry",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "aromas",
+        "quote": "se emplea para la elaboración de vinos aromáticos y afrutados ... Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales con matices de bayas y mineralidad pétrea.",
+        "value": "mineral",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "aromas",
+        "quote": "se emplea para la elaboración de vinos aromáticos y afrutados ... Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales con matices de bayas y mineralidad pétrea.",
+        "value": "fruity",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "styles",
+        "quote": "Los tintos elaborados con uva mencía, destacan por su capacidad de envejecimiento ... Los rosados son aromáticos y afrutados, vivos, ligeros y suaves.",
+        "value": "rose",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "regions",
+        "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
+        "value": "ES: Bierzo",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "regions",
+        "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
+        "value": "ES: Ribeira Sacra",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "regions",
+        "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
+        "value": "ES: Valdeorras",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "regions",
+        "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
+        "value": "ES: Monterrey",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "regions",
+        "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
+        "value": "ES: Cangas del Narcea",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "regions",
+        "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
+        "value": "ES: Liébana",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
       }
     ],
     "id": "mencia",
@@ -7034,10 +7447,23 @@
       {
         "country": "PT",
         "name": "Dão"
+      },
+      {
+        "country": "ES",
+        "name": "Monterrey"
+      },
+      {
+        "country": "ES",
+        "name": "Cangas del Narcea"
+      },
+      {
+        "country": "ES",
+        "name": "Liébana"
       }
     ],
     "styles": [
-      "still"
+      "still",
+      "rose"
     ],
     "summaries": {
       "en": {
@@ -8978,8 +9404,11 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Syrah"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "low",
+    "aromas": [
+      "rose",
+      "lychee"
+    ],
     "body": null,
     "color": "pink",
     "evidence": [
@@ -9032,6 +9461,48 @@
         "field": "regions",
         "quote": "In Europe, the grape is grown in Austria, ... France, ... Germany, ... Italy, ... In the New World, the grape is grown in California ... New Zealand ... Mendoza ... Chile. In the Middle East, the grape is grown in the Golan Heights.",
         "value": "RU: Golan Heights"
+      },
+      {
+        "field": "acidity",
+        "quote": "Le gewurztraminer est un cépage qui donne un moût riche en sucre, parfois manquant un peu d'acidité.",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il donne un vin très aromatique avec des senteurs très caractéristiques de rose et de litchi.",
+        "value": "rose",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il donne un vin très aromatique avec des senteurs très caractéristiques de rose et de litchi.",
+        "value": "lychee",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il s'accorde avec des fromages alsaciens aux goûts prononcés (munster), poissons grillés (parillade)",
+        "value": "cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il s'accorde avec des fromages alsaciens aux goûts prononcés (munster), poissons grillés (parillade)",
+        "value": "fish",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
+      },
+      {
+        "field": "styles",
+        "quote": "Il peut être vinifié en vin blanc sec ou moelleux, parfois très sucré en vendange tardive ou en sélection de grains nobles.",
+        "value": "sweet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
+      },
+      {
+        "field": "styles",
+        "quote": "Il peut être vinifié en vin blanc sec ou moelleux, parfois très sucré en vendange tardive ou en sélection de grains nobles.",
+        "value": "still",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
       }
     ],
     "id": "gewurztraminer",
@@ -9049,7 +9520,9 @@
     "pairings": [
       "spicy dishes",
       "fresh cheese",
-      "bittersweet dishes"
+      "bittersweet dishes",
+      "cheese",
+      "fish"
     ],
     "prominence": 36,
     "regions": [
@@ -9078,7 +9551,10 @@
         "name": "Golan Heights"
       }
     ],
-    "styles": [],
+    "styles": [
+      "sweet",
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Gewürztraminer (German: [ɡəˈvʏʁtstʁaˌmiːnɐ] ) is an aromatic wine grape variety, used in white wines, and which performs best in cooler climates. In English, it is sometimes referred to colloquially as Gewürz ( gə-VOORTS, gə-VURTS; although this is never the case in German, because Gewürz means 'herb' or 'spice'). In English and French it is usually written Gewurztraminer (without the umlaut).",
@@ -14741,6 +15217,11 @@
         "value": "Cerna Giza"
       },
       {
+        "field": "styles",
+        "quote": "Kadarka is often used for cuvees including some of the Egri Bikavérs",
+        "value": "blending"
+      },
+      {
         "field": "regions",
         "quote": "popular in Romania and Bulgaria ... used to be an important constituent of the Hungarian red cuvée",
         "value": "RO: Romania"
@@ -14754,6 +15235,30 @@
         "field": "regions",
         "quote": "popular in Romania and Bulgaria ... used to be an important constituent of the Hungarian red cuvée",
         "value": "HU: Hungary"
+      },
+      {
+        "field": "tannin",
+        "quote": "die tannin- und extraktreichen dunklen Weine altern gut und eignen sich auch sehr gut zum Verschnitt mit anderen Rebsorten.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "styles",
+        "quote": "die tannin- und extraktreichen dunklen Weine altern gut und eignen sich auch sehr gut zum Verschnitt mit anderen Rebsorten.",
+        "value": "still",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "regions",
+        "quote": "Die besten reinsortigen Weine aus dieser Rebe werden im südungarischen Villány, besonders aber in der Region Szekszárd gekeltert.",
+        "value": "HU: Villány",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "regions",
+        "quote": "Die besten reinsortigen Weine aus dieser Rebe werden im südungarischen Villány, besonders aber in der Region Szekszárd gekeltert.",
+        "value": "HU: Szekszárd",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Kadarka"
       }
     ],
     "id": "kadarka",
@@ -14782,9 +15287,20 @@
       {
         "country": "HU",
         "name": "Hungary"
+      },
+      {
+        "country": "HU",
+        "name": "Villány"
+      },
+      {
+        "country": "HU",
+        "name": "Szekszárd"
       }
     ],
-    "styles": [],
+    "styles": [
+      "blending",
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Cadarca or Kadarka or Gamza is a dark-skinned variety of grape used for red wine. It has a long history and is popular in Romania and Bulgaria, where it is known as Гъмза Gamza. It used to be an important constituent of the Hungarian red cuvée Bull's Blood of Eger or Szekszárd, but has long been in decline in Hungarian plantations, to be replaced by Kékfrankos and Portugieser.",
@@ -14873,14 +15389,18 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q576867",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kadarka"
   },
   {
     "acidity": null,
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "floral",
+      "fruity",
+      "green apple"
+    ],
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -15032,6 +15552,54 @@
         "field": "regions",
         "quote": "In Austria, the main regions where it is grown are south and south eastern Styria, in Burgenland, and in the Weinviertel region of Lower Austria... In Croatia, Graševina is the most planted white grape variety. It is grown in all the inland wine regions, particularly in Kutjevo municipality and around Ilok... In the Czech Republic, Ryzlink vlašský is grown in the South Moravian Region, particularly in the Mikulovská and Velkopavlovická wine subregions... In Hungary, Olaszrizling is the most widespread grape variety of the country, e.g. in the Csopak wine region... In Italy, it is known as Riesling Italico when grown in the northern regions such as Trentino, Collio and Friuli... In Slovenia, Welschriesling ... is grown in the Lower Styria region of eastern Slovenia, produces dry to medium-dry wines in the Vipava Valley...",
         "value": "SI: Vipava Valley"
+      },
+      {
+        "field": "body",
+        "quote": "Im trockenen Ausbau werden aus den Trauben hauptsächlich einfache Weine mit leichter Struktur",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "aromas",
+        "quote": "einem blumig-fruchtigen Aroma, in dem grüner Apfel vorherrscht",
+        "value": "floral",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "aromas",
+        "quote": "einem blumig-fruchtigen Aroma, in dem grüner Apfel vorherrscht",
+        "value": "fruity",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "aromas",
+        "quote": "einem blumig-fruchtigen Aroma, in dem grüner Apfel vorherrscht",
+        "value": "green apple",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "regions",
+        "quote": "im südlichen Burgenland ... Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel",
+        "value": "AT: Neusiedler See",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "regions",
+        "quote": "im südlichen Burgenland ... Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel",
+        "value": "AT: Steiermark",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "regions",
+        "quote": "im südlichen Burgenland ... Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel",
+        "value": "AT: Weinviertel",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "regions",
+        "quote": "im südlichen Burgenland ... Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel",
+        "value": "AT: Burgenland",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
       }
     ],
     "id": "italian-riesling",
@@ -15096,6 +15664,14 @@
       {
         "country": "SI",
         "name": "Vipava Valley"
+      },
+      {
+        "country": "AT",
+        "name": "Neusiedler See"
+      },
+      {
+        "country": "AT",
+        "name": "Steiermark"
       }
     ],
     "styles": [
@@ -15229,6 +15805,11 @@
         "value": "still"
       },
       {
+        "field": "styles",
+        "quote": "used with several other grapes to create the light red regional wines Bardolino and Valpolicella ... production of Amarone and Recioto",
+        "value": "sweet"
+      },
+      {
         "field": "regions",
         "quote": "all of which is grown in the Veneto region of northeast Italy, except for 19 hectares ... planted in Argentina",
         "value": "IT: Veneto"
@@ -15264,7 +15845,8 @@
       }
     ],
     "styles": [
-      "still"
+      "still",
+      "sweet"
     ],
     "summaries": {
       "en": {
@@ -15884,6 +16466,18 @@
         "field": "regions",
         "quote": "widely grown in Switzerland ... it is mostly grown in the Loire region ... almost exclusively grown in the wine region of Baden",
         "value": "DE: Baden"
+      },
+      {
+        "field": "pairings",
+        "quote": "Le chasselas accompagne les poissons maigres, notamment, perche, féra et truite ... Il est apprécié à l'apéritif ou pour accompagner les mets au fromage typiquement suisses, tels que la fondue ou la raclette.",
+        "value": "fish",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chasselas_(c%C3%A9page)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Le chasselas accompagne les poissons maigres, notamment, perche, féra et truite ... Il est apprécié à l'apéritif ou pour accompagner les mets au fromage typiquement suisses, tels que la fondue ou la raclette.",
+        "value": "cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chasselas_(c%C3%A9page)"
       }
     ],
     "id": "chasselas",
@@ -15900,7 +16494,9 @@
     "origin": "CH",
     "pairings": [
       "raclette",
-      "fondue"
+      "fondue",
+      "fish",
+      "cheese"
     ],
     "prominence": 19,
     "regions": [
@@ -17666,7 +18262,11 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "vanilla",
+      "cherry",
+      "fruity"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -17739,6 +18339,36 @@
         "field": "regions",
         "quote": "Widely planted in Austria, Zweigelt vines have made inroads in the Canadian wine regions of Ontario's Niagara Peninsula and of British Columbia, with limited plantings in Hungary, Australia and New Zealand. In the Czech Republic it is known as Zweigeltrebe ... It grows in most of the wine regions in Slovakia. As of 2010, newly established Belgian and Polish vineyards have also started to plant Zweigelt. As of 2014, Washington state has several small plantings ...",
         "value": "US: Washington state"
+      },
+      {
+        "field": "tannin",
+        "quote": "Das Bukett ist oft mit Vanille-Aromen und weichen Tanninen im Abgang",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Weine zeigen sich substanzreich, fruchtig und mit violett-rötlicher Farbe. Das Bukett ist oft mit Vanille-Aromen und weichen Tanninen im Abgang, jung mit einem charakteristischen Weichselkirsch-Aroma versehen.",
+        "value": "vanilla",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Weine zeigen sich substanzreich, fruchtig und mit violett-rötlicher Farbe. Das Bukett ist oft mit Vanille-Aromen und weichen Tanninen im Abgang, jung mit einem charakteristischen Weichselkirsch-Aroma versehen.",
+        "value": "cherry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Weine zeigen sich substanzreich, fruchtig und mit violett-rötlicher Farbe. Das Bukett ist oft mit Vanille-Aromen und weichen Tanninen im Abgang, jung mit einem charakteristischen Weichselkirsch-Aroma versehen.",
+        "value": "fruity",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "field": "styles",
+        "quote": "Diese Traube wird sowohl sortenrein vinifiziert als auch gerne als Verschnittpartner in Cuvées verwendet.",
+        "value": "blending",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt"
       }
     ],
     "id": "zweigelt",
@@ -17793,7 +18423,9 @@
         "name": "Washington state"
       }
     ],
-    "styles": [],
+    "styles": [
+      "blending"
+    ],
     "summaries": {
       "en": {
         "text": "The Zweigelt (German: [ˈt͡svaɪ̯ɡl̩t] ), also known as Rotburger, is an Austrian variety created in 1922 by Friedrich Zweigelt (1888–1964), who later became Director of the Federal Institute and Experimental Station of Viticulture, Fruit Production and Horticulture (1938–1945). Zweigelt is a crossing between the St. Laurent and Blaufränkisch grape varieties.",
@@ -17834,7 +18466,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q232825",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Zweigelt"
   },
@@ -18563,6 +19195,12 @@
         "field": "styles",
         "quote": "Mavrud ... is a red wine grape that is used as both a blending grape and for varietal wines",
         "value": "blending"
+      },
+      {
+        "field": "tannin",
+        "quote": "Dort erbringt die Rebe intensiv vollen, trockenen und tanninherben Wein",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mavrud"
       }
     ],
     "id": "mavrud",
@@ -18612,7 +19250,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q731972",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mavrud"
   },
@@ -19038,8 +19676,12 @@
   },
   {
     "acidity": null,
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "floral",
+      "herbaceous",
+      "peach"
+    ],
+    "body": "high",
     "color": null,
     "evidence": [
       {
@@ -19171,6 +19813,84 @@
         "field": "regions",
         "quote": "It is widely planted in Sardinia, Liguria and Tuscany, to some extent in Corsica, in Piedmont ... in increasing amounts in Languedoc-Roussillon. ... In California, Vermentino is grown and produced in the Adelaida District AVA ... in the Santa Ynez Valley AVA ... In Southern Oregon, it is being grown in the Applegate Valley AVA ... In Southern Idaho, it is being grown in the Snake River Valley AVA",
         "value": "US: Idaho (Snake River Valley AVA)"
+      },
+      {
+        "field": "body",
+        "quote": "caratterizzati da una notevole struttura e alcolicità.",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "aromas",
+        "quote": "con profumi intensi di fiori di campo ed erbacei e una nota di pesca gialla.",
+        "value": "floral",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "aromas",
+        "quote": "con profumi intensi di fiori di campo ed erbacei e una nota di pesca gialla.",
+        "value": "herbaceous",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "aromas",
+        "quote": "con profumi intensi di fiori di campo ed erbacei e una nota di pesca gialla.",
+        "value": "peach",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "pairings",
+        "quote": "Possono essere abbinati con antipasti di mare, piatti di pesce (come il classico abbinamento tra aragosta e vermentino sardo)",
+        "value": "fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "pairings",
+        "quote": "Possono essere abbinati con antipasti di mare, piatti di pesce (come il classico abbinamento tra aragosta e vermentino sardo)",
+        "value": "lobster",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "regions",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "value": "IT: Gallura",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "regions",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "value": "IT: Sardegna",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "regions",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "value": "IT: Liguria",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "regions",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "value": "IT: Roero",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "regions",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "value": "FR: Corsica",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "regions",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "value": "IT: Bolgheri",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "regions",
+        "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
+        "value": "IT: Colli di Luni",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
       }
     ],
     "id": "vermentino",
@@ -19185,7 +19905,10 @@
       "pt": "Vermentino"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "lobster"
+    ],
     "prominence": 16,
     "regions": [
       {
@@ -19227,6 +19950,26 @@
       {
         "country": "US",
         "name": "Idaho"
+      },
+      {
+        "country": "IT",
+        "name": "Gallura"
+      },
+      {
+        "country": "IT",
+        "name": "Sardegna"
+      },
+      {
+        "country": "IT",
+        "name": "Roero"
+      },
+      {
+        "country": "IT",
+        "name": "Bolgheri"
+      },
+      {
+        "country": "IT",
+        "name": "Colli di Luni"
       }
     ],
     "styles": [
@@ -22046,8 +22789,11 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Torront%C3%A9s"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "low",
+    "aromas": [
+      "peach",
+      "apricot"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -22165,6 +22911,36 @@
         "field": "regions",
         "quote": "Fetească Albă ... is a Romanian white grape variety, mainly cultivated in the regions of Moldova and Transylvania in Romania and Republic of Moldova, as well as in the Hungarian wine region of Eger.",
         "value": "HU: Eger"
+      },
+      {
+        "field": "acidity",
+        "quote": "Trocken ausgebaut fehlt es dem Weißwein häufig an Säure.",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Feteasc%C4%83_Alb%C4%83"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die früh reifende Sorte erbringt alkoholreich sehr duftige Weine, die im Aroma an Pfirsich und Aprikose erinnern.",
+        "value": "peach",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Feteasc%C4%83_Alb%C4%83"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die früh reifende Sorte erbringt alkoholreich sehr duftige Weine, die im Aroma an Pfirsich und Aprikose erinnern.",
+        "value": "apricot",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Feteasc%C4%83_Alb%C4%83"
+      },
+      {
+        "field": "styles",
+        "quote": "Die Sorte wird aber im Verschnitt zum Beispiel für den berühmten Dessertwein Cotnari verwendet",
+        "value": "sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Feteasc%C4%83_Alb%C4%83"
+      },
+      {
+        "field": "styles",
+        "quote": "Die Sorte wird aber im Verschnitt zum Beispiel für den berühmten Dessertwein Cotnari verwendet",
+        "value": "blending",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Feteasc%C4%83_Alb%C4%83"
       }
     ],
     "id": "feteasca-alba",
@@ -22200,7 +22976,9 @@
     ],
     "styles": [
       "sparkling",
-      "still"
+      "still",
+      "sweet",
+      "blending"
     ],
     "summaries": {
       "en": {
@@ -22581,6 +23359,11 @@
         "value": "still"
       },
       {
+        "field": "styles",
+        "quote": "the production of Valpolicella straw wine styles such as Recioto and Amarone.",
+        "value": "sweet"
+      },
+      {
         "field": "regions",
         "quote": "Almost all of the total global growing area of 2,481 hectares (6,130 acres) is in the Veneto region of northern Italy, and the grapes are used in wines from the Valpolicella and Bardolino wine regions.",
         "value": "IT: Veneto"
@@ -22594,6 +23377,30 @@
         "field": "regions",
         "quote": "Almost all of the total global growing area of 2,481 hectares (6,130 acres) is in the Veneto region of northern Italy, and the grapes are used in wines from the Valpolicella and Bardolino wine regions.",
         "value": "IT: Bardolino"
+      },
+      {
+        "field": "styles",
+        "quote": "Viene impiegato in modo complementare nell'uvaggio dei vini ... Viene considerato ideale per la produzione del Recioto della Valpolicella, grazie alla sua capacità zuccherina.",
+        "value": "blending",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rondinella_(vitigno)"
+      },
+      {
+        "field": "regions",
+        "quote": "a ridosso del lago di Garda e della Valpolicella ... che nel Valpolicella e nel Bardolino.",
+        "value": "IT: Valpolicella",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rondinella_(vitigno)"
+      },
+      {
+        "field": "regions",
+        "quote": "a ridosso del lago di Garda e della Valpolicella ... che nel Valpolicella e nel Bardolino.",
+        "value": "IT: Bardolino",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rondinella_(vitigno)"
+      },
+      {
+        "field": "regions",
+        "quote": "a ridosso del lago di Garda e della Valpolicella ... che nel Valpolicella e nel Bardolino.",
+        "value": "IT: Garda",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rondinella_(vitigno)"
       }
     ],
     "id": "rondinella",
@@ -22622,10 +23429,16 @@
       {
         "country": "IT",
         "name": "Bardolino"
+      },
+      {
+        "country": "IT",
+        "name": "Garda"
       }
     ],
     "styles": [
-      "still"
+      "still",
+      "sweet",
+      "blending"
     ],
     "summaries": {
       "en": {
@@ -22733,6 +23546,36 @@
         "field": "regions",
         "quote": "specially grown in Catalonia... historically the grape was only produced as part of regional blend in Penedès and Cava",
         "value": "ES: Cava"
+      },
+      {
+        "field": "regions",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "value": "ES: Penedès",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "regions",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "value": "ES: Alella",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "regions",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "value": "ES: Binissalem",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "regions",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "value": "ES: Costers del Segre",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "regions",
+        "quote": "És una de les varietats principals per a la DO Alella, DO Binissalem, DO Costers del Segre, DO Penedès i DO Tarragona",
+        "value": "ES: Tarragona",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     ],
     "id": "xarel-lo",
@@ -22761,6 +23604,22 @@
       {
         "country": "ES",
         "name": "Cava"
+      },
+      {
+        "country": "ES",
+        "name": "Alella"
+      },
+      {
+        "country": "ES",
+        "name": "Binissalem"
+      },
+      {
+        "country": "ES",
+        "name": "Costers del Segre"
+      },
+      {
+        "country": "ES",
+        "name": "Tarragona"
       }
     ],
     "styles": [
@@ -23276,6 +24135,36 @@
         "field": "regions",
         "quote": "grown through Central Italy but is most noted in Tuscany. Other regions with plantings of Canaiolo include Lazio, Marche and Sardegna.",
         "value": "IT: Sardegna"
+      },
+      {
+        "field": "styles",
+        "quote": "il canaiolo viene utilizzato, quasi esclusivamente in assemblaggio",
+        "value": "blending",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
+      },
+      {
+        "field": "regions",
+        "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
+        "value": "IT: Chianti",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
+      },
+      {
+        "field": "regions",
+        "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
+        "value": "IT: Carmignano",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
+      },
+      {
+        "field": "regions",
+        "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
+        "value": "IT: Montepulciano",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
+      },
+      {
+        "field": "regions",
+        "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
+        "value": "IT: Morellino di Scansano",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
       }
     ],
     "id": "canaiolo",
@@ -23308,10 +24197,27 @@
       {
         "country": "IT",
         "name": "Sardegna"
+      },
+      {
+        "country": "IT",
+        "name": "Chianti"
+      },
+      {
+        "country": "IT",
+        "name": "Carmignano"
+      },
+      {
+        "country": "IT",
+        "name": "Montepulciano"
+      },
+      {
+        "country": "IT",
+        "name": "Morellino di Scansano"
       }
     ],
     "styles": [
-      "still"
+      "still",
+      "blending"
     ],
     "summaries": {
       "en": {
@@ -23891,8 +24797,11 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Plavac_Mali"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "high",
+    "aromas": [
+      "nutty",
+      "apricot"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -23970,6 +24879,54 @@
         "field": "regions",
         "quote": "Production is generally focused in the area south of Mostar around the villages of Čitluk, Međugorje, Ljubuški, and Čapljina",
         "value": "BA: Čapljina"
+      },
+      {
+        "field": "acidity",
+        "quote": "säurebetonte (5 bis 6 g/l Gesamtsäure) Weißweine",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
+        "field": "aromas",
+        "quote": "Weißweine mit einem Extrakt von 20 bis 27 g/l und Aromen nach Nüssen und Aprikosen.",
+        "value": "nutty",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
+        "field": "aromas",
+        "quote": "Weißweine mit einem Extrakt von 20 bis 27 g/l und Aromen nach Nüssen und Aprikosen.",
+        "value": "apricot",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
+        "field": "pairings",
+        "quote": "Žilavka-Weine werden mit 10 bis 12 °C zu gekochtem oder gegrilltem Lamm, zu Aal und anderem Süßwasser- oder Meeresfisch sowie zu Käse und Rohschinken empfohlen.",
+        "value": "lamb",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
+        "field": "pairings",
+        "quote": "Žilavka-Weine werden mit 10 bis 12 °C zu gekochtem oder gegrilltem Lamm, zu Aal und anderem Süßwasser- oder Meeresfisch sowie zu Käse und Rohschinken empfohlen.",
+        "value": "fish",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
+        "field": "pairings",
+        "quote": "Žilavka-Weine werden mit 10 bis 12 °C zu gekochtem oder gegrilltem Lamm, zu Aal und anderem Süßwasser- oder Meeresfisch sowie zu Käse und Rohschinken empfohlen.",
+        "value": "cheese",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
+        "field": "pairings",
+        "quote": "Žilavka-Weine werden mit 10 bis 12 °C zu gekochtem oder gegrilltem Lamm, zu Aal und anderem Süßwasser- oder Meeresfisch sowie zu Käse und Rohschinken empfohlen.",
+        "value": "prosciutto",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
+        "field": "styles",
+        "quote": "In Jugoslawien wurde Žilavka angeblich häufig nur als Verschnittwein genutzt ... Viele Žilavka-Weine werden fruchtbetont und unkompliziert ausgebaut",
+        "value": "blending",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
       }
     ],
     "id": "zilavka",
@@ -23983,7 +24940,12 @@
       "pt": "Žilavka"
     },
     "origin": "BA",
-    "pairings": [],
+    "pairings": [
+      "lamb",
+      "fish",
+      "cheese",
+      "prosciutto"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -24008,7 +24970,8 @@
       }
     ],
     "styles": [
-      "still"
+      "still",
+      "blending"
     ],
     "summaries": {
       "en": {
@@ -24228,7 +25191,9 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "floral"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -24316,6 +25281,30 @@
         "field": "regions",
         "quote": "dessert wines from Austria, Bulgaria, Romania, Moldova, Croatia and Serbia as well as dry wines from Alsace and Hungary",
         "value": "HU: Hungary"
+      },
+      {
+        "field": "aromas",
+        "quote": "Ce vin dégage des arômes, florales, de bonbon anglais",
+        "value": "floral",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_ottonel"
+      },
+      {
+        "field": "pairings",
+        "quote": "qui s'accorde avec les asperges, l'artichaut, légumes qui dénaturent le goût du vin, également avec du foie gras, certains fromages",
+        "value": "asparagus",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_ottonel"
+      },
+      {
+        "field": "pairings",
+        "quote": "qui s'accorde avec les asperges, l'artichaut, légumes qui dénaturent le goût du vin, également avec du foie gras, certains fromages",
+        "value": "foie gras",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_ottonel"
+      },
+      {
+        "field": "pairings",
+        "quote": "qui s'accorde avec les asperges, l'artichaut, légumes qui dénaturent le goût du vin, également avec du foie gras, certains fromages",
+        "value": "cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_ottonel"
       }
     ],
     "id": "muscat-ottonel",
@@ -24329,7 +25318,11 @@
       "pt": "Muscat Ottonel"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "asparagus",
+      "foie gras",
+      "cheese"
+    ],
     "prominence": 13,
     "regions": [
       {
@@ -24684,8 +25677,11 @@
   },
   {
     "acidity": null,
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "red berry",
+      "black cherry"
+    ],
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -24792,6 +25788,24 @@
         "field": "regions",
         "quote": "primarily grown in Lower Austria and Burgenland ... grown in all wine subregions in both Moravia and Bohemia",
         "value": "CZ: Bohemia"
+      },
+      {
+        "field": "body",
+        "quote": "Der Wein ist von mittlerem Körper und weist einen intensiven Duft nach Waldbeeren und Schwarzkirschen auf.",
+        "value": "medium",
+        "sourceUrl": "https://de.wikipedia.org/wiki/St._Laurent"
+      },
+      {
+        "field": "aromas",
+        "quote": "Der Wein ist von mittlerem Körper und weist einen intensiven Duft nach Waldbeeren und Schwarzkirschen auf.",
+        "value": "berry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/St._Laurent"
+      },
+      {
+        "field": "aromas",
+        "quote": "Der Wein ist von mittlerem Körper und weist einen intensiven Duft nach Waldbeeren und Schwarzkirschen auf.",
+        "value": "black cherry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/St._Laurent"
       }
     ],
     "id": "st-laurent",
@@ -25768,7 +26782,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trousseau_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -25907,6 +26921,24 @@
         "field": "regions",
         "quote": "In Australia, Graciano is used either in blends with Tempranillo or as varietal wines. In France, the grape is grown in Languedoc-Roussillon as Morrastel or Courouillade and in Corsica as Minustello or Minustellu. In Spain, the grape produces low yields, but it is a key component of Gran Reservas in Rioja and Navarra, contributing structure and aging potential. In the Rioja DO, 395 ha (0.7%) are planted with this variety. While primarily used as a blending partner, some Rioja bodegas produce varietal Graciano wines. In California, Graciano is sometimes known as Xeres. The grape is also grown in Argentina. In the United States, Graciano is also grown in Arizona, Texas, Oregon, and Washington.",
         "value": "US: Washington"
+      },
+      {
+        "field": "acidity",
+        "quote": "El vino que esta uva produce se caracteriza por su intenso color rojo, una importante acidez",
+        "value": "high",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Graciano_(uva)"
+      },
+      {
+        "field": "styles",
+        "quote": "Sus aromas, peculiares y agradables, aportan finura a los vinos de mezcla que contienen esta variedad.",
+        "value": "blending",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Graciano_(uva)"
+      },
+      {
+        "field": "styles",
+        "quote": "Sus aromas, peculiares y agradables, aportan finura a los vinos de mezcla que contienen esta variedad.",
+        "value": "still",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Graciano_(uva)"
       }
     ],
     "id": "graciano",
@@ -25969,7 +27001,10 @@
         "name": "Washington"
       }
     ],
-    "styles": [],
+    "styles": [
+      "blending",
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Graciano is a Spanish red wine grape that is grown primarily in Rioja. The vine produces a low yield that are normally harvested in late October. The wine produced is characterized by its deep red color, strong aroma and ability to age well. Graciano thrives in warm, arid climates.",
@@ -26148,8 +27183,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Verdejo"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "medium",
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -26222,6 +27259,48 @@
         "field": "regions",
         "quote": "Nearly 3,000 hectares ... were found in Germany's two largest wine regions, the Palatinate and Rheinhessen. ... mostly in the cantons of Schwyz and Zürich. ... first introduced to England ... used for rosés and sparkling wine production. ... Lodi and Sta. Rita Hills AVA of California, the Finger Lakes AVA of New York ... British Columbia wine region of Vancouver Island. ... Rio Grande do Sul region of Brazil ... Hokkaido",
         "value": "JP: Hokkaido"
+      },
+      {
+        "field": "acidity",
+        "quote": "Die Säureausprägung (→ Säure (Wein)) ist eher moderat",
+        "value": "medium",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "tannin",
+        "quote": "Mit dem hohen Farbstoffgehalt geht auch ein hoher Gerbstoffanteil einher.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "aromas",
+        "quote": "Der Wein aus Dornfelder hat eine schwarzrote Farbausprägung und einen fruchtigen Geschmack.",
+        "value": "fruity",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "styles",
+        "quote": "Sie sollte als Verschnittpartner anderer roter Rebsorten dem daraus gekelterten Wein mehr Farbe verleihen ... Zunehmend wird Dornfelder auch weiß gekeltert und als Stillwein zu Schaumwein weiterverarbeitet. Bei kurzer Maischegärung entstehen (häufig liebliche) Roséweine.",
+        "value": "rose",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "styles",
+        "quote": "Sie sollte als Verschnittpartner anderer roter Rebsorten dem daraus gekelterten Wein mehr Farbe verleihen ... Zunehmend wird Dornfelder auch weiß gekeltert und als Stillwein zu Schaumwein weiterverarbeitet. Bei kurzer Maischegärung entstehen (häufig liebliche) Roséweine.",
+        "value": "sparkling",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "styles",
+        "quote": "Sie sollte als Verschnittpartner anderer roter Rebsorten dem daraus gekelterten Wein mehr Farbe verleihen ... Zunehmend wird Dornfelder auch weiß gekeltert und als Stillwein zu Schaumwein weiterverarbeitet. Bei kurzer Maischegärung entstehen (häufig liebliche) Roséweine.",
+        "value": "blending",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "styles",
+        "quote": "Sie sollte als Verschnittpartner anderer roter Rebsorten dem daraus gekelterten Wein mehr Farbe verleihen ... Zunehmend wird Dornfelder auch weiß gekeltert und als Stillwein zu Schaumwein weiterverarbeitet. Bei kurzer Maischegärung entstehen (häufig liebliche) Roséweine.",
+        "value": "still",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Dornfelder"
       }
     ],
     "id": "dornfelder",
@@ -26280,7 +27359,12 @@
         "name": "Hokkaido"
       }
     ],
-    "styles": [],
+    "styles": [
+      "rose",
+      "sparkling",
+      "blending",
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Dornfelder (German: [ˈdɔʁnˌfɛldɐ] ) is a dark-skinned variety of grape of German origin used for red wine. It was created by August Herold (1902–1973) at the grape breeding institute in Weinsberg in the Württemberg region in 1955. Herold crossed the grape varieties Helfensteiner and Heroldrebe, the latter which bears his name, to create Dornfelder.",
@@ -26304,7 +27388,7 @@
       }
     },
     "synonyms": [],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q1245736",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dornfelder"
   },
@@ -26783,6 +27867,42 @@
         "field": "regions",
         "quote": "In Greece, the grape is most important on the island of Samos ... Near Patras ... Spina in Crete ... In Italy ... Piedmont ... In France ... Frontignan area ... Rhône ... Alsace ... Hérault region ... In Spain ... Castilla-La Mancha ...",
         "value": "ES: Castilla-La Mancha"
+      },
+      {
+        "field": "regions",
+        "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
+        "value": "FR: Beaumes-de-Venise",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
+      },
+      {
+        "field": "regions",
+        "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
+        "value": "FR: Frontignan",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
+      },
+      {
+        "field": "regions",
+        "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
+        "value": "FR: Lunel",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
+      },
+      {
+        "field": "regions",
+        "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
+        "value": "FR: Rivesaltes",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
+      },
+      {
+        "field": "regions",
+        "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
+        "value": "FR: Cap-Corse",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
+      },
+      {
+        "field": "regions",
+        "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
+        "value": "FR: Alsace",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
       }
     ],
     "id": "muscat-blanc-a-petits-grains",
@@ -26830,6 +27950,22 @@
       {
         "country": "ES",
         "name": "Castilla-La Mancha"
+      },
+      {
+        "country": "FR",
+        "name": "Beaumes-de-Venise"
+      },
+      {
+        "country": "FR",
+        "name": "Lunel"
+      },
+      {
+        "country": "FR",
+        "name": "Rivesaltes"
+      },
+      {
+        "country": "FR",
+        "name": "Cap-Corse"
       }
     ],
     "styles": [
@@ -27724,6 +28860,36 @@
         "field": "regions",
         "quote": "Pecorino ... grows in the Marche, Abruzzo, Tuscany, Umbria and Lazio regions of Italy.",
         "value": "IT: Lazio"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il pecorino, per le sue acidità e sapidità, può essere ben abbinato all’oliva all’ascolana o a una tempura di verdure ... Per sapidità e struttura, è ottimo con tutti i piatti di pesce",
+        "value": "fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Pecorino_(vitigno)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il pecorino, per le sue acidità e sapidità, può essere ben abbinato all’oliva all’ascolana o a una tempura di verdure ... Per sapidità e struttura, è ottimo con tutti i piatti di pesce",
+        "value": "vegetables",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Pecorino_(vitigno)"
+      },
+      {
+        "field": "regions",
+        "quote": "diffuso nelle Marche, in Abruzzo e, in misura minore, in Lazio e Umbria ... concorre alla formazione del vino DOCG Offida",
+        "value": "IT: Marche",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Pecorino_(vitigno)"
+      },
+      {
+        "field": "regions",
+        "quote": "diffuso nelle Marche, in Abruzzo e, in misura minore, in Lazio e Umbria ... concorre alla formazione del vino DOCG Offida",
+        "value": "IT: Abruzzo",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Pecorino_(vitigno)"
+      },
+      {
+        "field": "regions",
+        "quote": "diffuso nelle Marche, in Abruzzo e, in misura minore, in Lazio e Umbria ... concorre alla formazione del vino DOCG Offida",
+        "value": "IT: Offida",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Pecorino_(vitigno)"
       }
     ],
     "id": "pecorino",
@@ -27738,7 +28904,10 @@
       "pt": "Pecorino"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "vegetables"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -27760,6 +28929,10 @@
       {
         "country": "IT",
         "name": "Lazio"
+      },
+      {
+        "country": "IT",
+        "name": "Offida"
       }
     ],
     "styles": [
@@ -28458,6 +29631,24 @@
         "field": "regions",
         "quote": "grown primarily in the Douro region with some plantings in South Africa and the Riverland wine region of Australia",
         "value": "AU: Riverland"
+      },
+      {
+        "field": "regions",
+        "quote": "wie man sie in den Hanglagen des Douro findet ... Empfohlen wird sie neben dem Einsatz im Portwein auch für die Region Trás-os-Montes ... In Südafrika ist sie mit 491 Hektar bestockter Fläche ebenfalls verbreitet",
+        "value": "PT: Douro",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "field": "regions",
+        "quote": "wie man sie in den Hanglagen des Douro findet ... Empfohlen wird sie neben dem Einsatz im Portwein auch für die Region Trás-os-Montes ... In Südafrika ist sie mit 491 Hektar bestockter Fläche ebenfalls verbreitet",
+        "value": "PT: Trás-os-Montes",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "field": "regions",
+        "quote": "wie man sie in den Hanglagen des Douro findet ... Empfohlen wird sie neben dem Einsatz im Portwein auch für die Region Trás-os-Montes ... In Südafrika ist sie mit 491 Hektar bestockter Fläche ebenfalls verbreitet",
+        "value": "ZA: Südafrika",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Tinta_Barroca"
       }
     ],
     "id": "tinta-barroca",
@@ -28486,6 +29677,14 @@
       {
         "country": "AU",
         "name": "Riverland"
+      },
+      {
+        "country": "PT",
+        "name": "Trás-os-Montes"
+      },
+      {
+        "country": "ZA",
+        "name": "Südafrika"
       }
     ],
     "styles": [
@@ -28564,6 +29763,12 @@
         "field": "regions",
         "quote": "especially on the island of Madeira.",
         "value": "PT: Madeira"
+      },
+      {
+        "field": "styles",
+        "quote": "Dá nome à mais seca das quatro qualidades tradicionais de vinho Madeira ... dando origem a vinhos de cor alambreada, secos e de excelente qualidade.",
+        "value": "still",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Sercial"
       }
     ],
     "id": "sercial",
@@ -28587,7 +29792,8 @@
       }
     ],
     "styles": [
-      "fortified"
+      "fortified",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -28964,8 +30170,10 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Durif"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "low",
+    "aromas": [
+      "flint"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -28993,6 +30201,30 @@
         "field": "regions",
         "quote": "grown primarily in the Loire Valley region of France ... As of 2007, the grape is grown in Oregon ... introduced into Washington",
         "value": "US: Washington"
+      },
+      {
+        "field": "acidity",
+        "quote": "Il donne un vin blanc agréable et peu acide.",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Melon_(c%C3%A9page)"
+      },
+      {
+        "field": "aromas",
+        "quote": "révélant alors des arômes de pierre à fusil (poudre, odeur de briquet).",
+        "value": "flint",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Melon_(c%C3%A9page)"
+      },
+      {
+        "field": "regions",
+        "quote": "elle est toutefois très répandue en Loire-Atlantique sous le nom de muscadet",
+        "value": "FR: Muscadet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Melon_(c%C3%A9page)"
+      },
+      {
+        "field": "regions",
+        "quote": "elle est toutefois très répandue en Loire-Atlantique sous le nom de muscadet",
+        "value": "FR: Loire-Atlantique",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Melon_(c%C3%A9page)"
       }
     ],
     "id": "melon-de-bourgogne",
@@ -29021,6 +30253,14 @@
       {
         "country": "US",
         "name": "Washington"
+      },
+      {
+        "country": "FR",
+        "name": "Muscadet"
+      },
+      {
+        "country": "FR",
+        "name": "Loire-Atlantique"
       }
     ],
     "styles": [
@@ -29142,6 +30382,18 @@
         "field": "regions",
         "quote": "It was already widely planted in the Province of Trapani by 1897; today it may be grown throughout Sicily and also in the Aeolian Islands ... in the province of La Spezia in Liguria ... Monreale (province of Palermo) ... Alcamo (provinces of Palermo and Trapani) ... Contea di Sclafani (provinces of Agrigento and Palermo) ... Delia Nivolelli (province of Trapani) ... This the first planting of Grillo in California.",
         "value": "US: California"
+      },
+      {
+        "field": "regions",
+        "quote": "presente soprattutto in Sicilia occidentale ed in particolare nella zona di Marsala. È utilizzato in purezza per la produzione di alcuni DOC della provincia di Trapani.",
+        "value": "IT: Marsala",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Grillo_(vitigno)"
+      },
+      {
+        "field": "regions",
+        "quote": "presente soprattutto in Sicilia occidentale ed in particolare nella zona di Marsala. È utilizzato in purezza per la produzione di alcuni DOC della provincia di Trapani.",
+        "value": "IT: Trapani",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Grillo_(vitigno)"
       }
     ],
     "id": "grillo",
@@ -29194,6 +30446,10 @@
       {
         "country": "US",
         "name": "California"
+      },
+      {
+        "country": "IT",
+        "name": "Marsala"
       }
     ],
     "styles": [
@@ -29497,7 +30753,9 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "mineral"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -29525,6 +30783,12 @@
         "field": "regions",
         "quote": "almost exclusively in the Veneto region. It adds acidity to the wines of the Valpolicella and Bardolino regions",
         "value": "IT: Bardolino"
+      },
+      {
+        "field": "aromas",
+        "quote": "Apprezzata per le note minerali che apporta nei vini.",
+        "value": "mineral",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Molinara_(vitigno)"
       }
     ],
     "id": "molinara",
@@ -30751,8 +32015,11 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Marzemino"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "low",
+    "aromas": [
+      "spice",
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -30840,6 +32107,24 @@
         "field": "regions",
         "quote": "prevalent in the French region of Alsace, and is also grown in neighbouring Germany and Luxembourg ... with some in the Côtes de Toul of Lorraine ... The main growing areas were Baden (wine region)(71 hectares (175 acres)) and Palatinate ... known to grow Auxerrois blanc in Oregon ... on the Leelanau peninsula in Michigan ... grown on Vancouver Island ... in the Okanagan wine country ... A few vineyards in the United Kingdom grow Auxerrois",
         "value": "GB: United Kingdom"
+      },
+      {
+        "field": "acidity",
+        "quote": "On reconnaît un vin issu 100 % de l’auxerrois à son caractère épicé et doux ainsi qu’à sa faible acidité",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Auxerrois_(c%C3%A9page_blanc)"
+      },
+      {
+        "field": "aromas",
+        "quote": "donnent ensemble des vins d’une qualité constante, bien équilibrés, discrètement fruités ... On reconnaît un vin issu 100 % de l’auxerrois à son caractère épicé",
+        "value": "spicy",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Auxerrois_(c%C3%A9page_blanc)"
+      },
+      {
+        "field": "aromas",
+        "quote": "donnent ensemble des vins d’une qualité constante, bien équilibrés, discrètement fruités ... On reconnaît un vin issu 100 % de l’auxerrois à son caractère épicé",
+        "value": "fruity",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Auxerrois_(c%C3%A9page_blanc)"
       }
     ],
     "id": "auxerrois-blanc",
@@ -31145,6 +32430,30 @@
         "field": "regions",
         "quote": "It is cultivated on the coast of Campania north of Naples",
         "value": "IT: Campania"
+      },
+      {
+        "field": "regions",
+        "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
+        "value": "IT: Taburno",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Falanghina"
+      },
+      {
+        "field": "regions",
+        "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
+        "value": "IT: Campi Flegrei",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Falanghina"
+      },
+      {
+        "field": "regions",
+        "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
+        "value": "IT: Benevento",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Falanghina"
+      },
+      {
+        "field": "regions",
+        "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
+        "value": "IT: Galluccio",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Falanghina"
       }
     ],
     "id": "falanghina",
@@ -31167,6 +32476,22 @@
       {
         "country": "IT",
         "name": "Campania"
+      },
+      {
+        "country": "IT",
+        "name": "Taburno"
+      },
+      {
+        "country": "IT",
+        "name": "Campi Flegrei"
+      },
+      {
+        "country": "IT",
+        "name": "Benevento"
+      },
+      {
+        "country": "IT",
+        "name": "Galluccio"
       }
     ],
     "styles": [
@@ -31977,7 +33302,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Folle_blanche"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -32076,6 +33401,12 @@
         "field": "regions",
         "quote": "mainly grown in the Emilia-Romagna region of Italy ... (province of Modena) ... (province of Reggio Emilia) ... the red Colli di Faenza DOC. In the Province of Rimini it is employed in the Colli di Rimini DOC wine ... in the canton Ticino ... in the Cahul region ... in the Taman Peninsula ... Campos de Cima da Serra",
         "value": "BR: Campos de Cima da Serra"
+      },
+      {
+        "field": "acidity",
+        "quote": "Il vino prodotto presenta una media alcolicità, una bassa acidità e un'abbondante quantità di pigmenti e di zuccheri.",
+        "value": "low",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Ancellotta"
       }
     ],
     "id": "ancellotta",
@@ -35293,8 +36624,13 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
   },
   {
-    "acidity": null,
-    "aromas": [],
+    "acidity": "low",
+    "aromas": [
+      "violet",
+      "strawberry",
+      "black fruit",
+      "liquorice"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -35387,6 +36723,36 @@
         "field": "regions",
         "quote": "grown primarily in South West France ... Côtes du Frontonnais (red and rosé) ... In California the vine was known as Pinot St-George ... In the Fiefs Vendeens of the Loire Valley",
         "value": "US: California"
+      },
+      {
+        "field": "acidity",
+        "quote": "Elle donne un vin très coloré et peu acide qui possède une palette aromatique très complète",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/N%C3%A9grette"
+      },
+      {
+        "field": "aromas",
+        "quote": "Elle donne un vin très coloré et peu acide qui possède une palette aromatique très complète : violette, fraise, fruits noirs, réglisse, zan.",
+        "value": "violet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/N%C3%A9grette"
+      },
+      {
+        "field": "aromas",
+        "quote": "Elle donne un vin très coloré et peu acide qui possède une palette aromatique très complète : violette, fraise, fruits noirs, réglisse, zan.",
+        "value": "strawberry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/N%C3%A9grette"
+      },
+      {
+        "field": "aromas",
+        "quote": "Elle donne un vin très coloré et peu acide qui possède une palette aromatique très complète : violette, fraise, fruits noirs, réglisse, zan.",
+        "value": "black fruit",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/N%C3%A9grette"
+      },
+      {
+        "field": "aromas",
+        "quote": "Elle donne un vin très coloré et peu acide qui possède une palette aromatique très complète : violette, fraise, fruits noirs, réglisse, zan.",
+        "value": "licorice",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/N%C3%A9grette"
       }
     ],
     "id": "negrette",
@@ -35496,7 +36862,14 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "lemon",
+      "caramel",
+      "coffee",
+      "orange peel",
+      "apricot",
+      "dried fruit"
+    ],
     "body": null,
     "color": null,
     "evidence": [
@@ -35529,6 +36902,48 @@
         "field": "regions",
         "quote": "in the production of medium-rich fortified wines from Madeira Island ... the Malvasia Fina grown in the Douro valley.",
         "value": "PT: Douro"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Aromen im Wein werden mit zunehmendem Alter immer vielfältiger: Limone, Karamell, Kaffee, Orangenschale, Aprikose, Trockenfrüchte",
+        "value": "lemon",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Aromen im Wein werden mit zunehmendem Alter immer vielfältiger: Limone, Karamell, Kaffee, Orangenschale, Aprikose, Trockenfrüchte",
+        "value": "caramel",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Aromen im Wein werden mit zunehmendem Alter immer vielfältiger: Limone, Karamell, Kaffee, Orangenschale, Aprikose, Trockenfrüchte",
+        "value": "coffee",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Aromen im Wein werden mit zunehmendem Alter immer vielfältiger: Limone, Karamell, Kaffee, Orangenschale, Aprikose, Trockenfrüchte",
+        "value": "orange peel",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Aromen im Wein werden mit zunehmendem Alter immer vielfältiger: Limone, Karamell, Kaffee, Orangenschale, Aprikose, Trockenfrüchte",
+        "value": "apricot",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Aromen im Wein werden mit zunehmendem Alter immer vielfältiger: Limone, Karamell, Kaffee, Orangenschale, Aprikose, Trockenfrüchte",
+        "value": "dried fruit",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
+      },
+      {
+        "field": "styles",
+        "quote": "Die mittelfrüh bis spät reifende Sorte wird insbesondere im Verschnitt mit den Sorten Sercial, Malvasia Bianca und Verdelho in den verschiedenen Varianten des Madeiraweins eingesetzt. Boal Branco erzeugt einen halbsüßen Wein",
+        "value": "blending",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
       }
     ],
     "id": "boal",
@@ -35557,7 +36972,8 @@
     ],
     "styles": [
       "fortified",
-      "sweet"
+      "sweet",
+      "blending"
     ],
     "summaries": {
       "en": {
@@ -35606,7 +37022,7 @@
   {
     "acidity": null,
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -35628,6 +37044,24 @@
         "field": "regions",
         "quote": "has been grown primarily in the Douro region since the sixteenth century.",
         "value": "PT: Douro"
+      },
+      {
+        "field": "body",
+        "quote": "Die spätreifende Sorte erbringt einen Wein mit dunkelroter Farbe, welcher sehr körperreich und alkoholbetont ist.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Tinto_C%C3%A3o"
+      },
+      {
+        "field": "styles",
+        "quote": "Die spätreifende Sorte erbringt einen Wein mit dunkelroter Farbe ... Sie ist eine der Produktion des Portweins zugelassenen Sorten.",
+        "value": "fortified",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Tinto_C%C3%A3o"
+      },
+      {
+        "field": "styles",
+        "quote": "Die spätreifende Sorte erbringt einen Wein mit dunkelroter Farbe ... Sie ist eine der Produktion des Portweins zugelassenen Sorten.",
+        "value": "still",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Tinto_C%C3%A3o"
       }
     ],
     "id": "tinta-cao",
@@ -35651,7 +37085,9 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "fortified",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -35795,7 +37231,9 @@
   },
   {
     "acidity": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -35858,6 +37296,18 @@
         "field": "regions",
         "quote": "grown primarily in the Conca de Barberà and Costers del Segre Denominación de Origen (DO)s of Catalonia.",
         "value": "ES: Catalonia"
+      },
+      {
+        "field": "aromas",
+        "quote": "El vi de raïm trepat és fresc, lleuger i afruitat",
+        "value": "fruity",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Trepat"
+      },
+      {
+        "field": "styles",
+        "quote": "S'utilitza majoritàriament per a l'elaboració de vi rosat. És una de les dues varietats autoritzades per a l'elaboració del cava rosat.",
+        "value": "sparkling",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Trepat"
       }
     ],
     "id": "trepat",
@@ -35889,7 +37339,8 @@
     ],
     "styles": [
       "rose",
-      "blending"
+      "blending",
+      "sparkling"
     ],
     "summaries": {
       "en": {

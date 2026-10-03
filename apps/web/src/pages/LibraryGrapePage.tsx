@@ -266,6 +266,21 @@ export function LibraryGrapePage() {
             {grape.evidence.map((entry) => (
               <li key={`${entry.field}-${entry.value}`}>
                 <strong>{entry.value}</strong> — “{entry.quote}”
+                {/* A fact read from another article — the grape's own
+                    language's — links that article, not the English one. */}
+                {entry.sourceUrl === grape.evidence[0]!.sourceUrl ? null : (
+                  <>
+                    {" "}
+                    <a
+                      className="text-link"
+                      href={entry.sourceUrl}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      ({new URL(entry.sourceUrl).hostname})
+                    </a>
+                  </>
+                )}
               </li>
             ))}
           </ul>

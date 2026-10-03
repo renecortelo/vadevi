@@ -198,3 +198,63 @@ describe("a grape's colour", () => {
     );
   });
 });
+
+describe("a grape read in its own language", () => {
+  it("accepts levels and aromas stated in Spanish, German and Catalan, in the article's own words", () => {
+    const spanish =
+      "Los zumos son rojo granate. Tiene mucho color, un fruto que fácilmente deriva en notas cocidas, y una baja acidez. Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales con matices de bayas.";
+    const read = validateExtraction(
+      {
+        acidity: {
+          quote:
+            "Tiene mucho color, un fruto que fácilmente deriva en notas cocidas, y una baja acidez",
+          value: "low",
+        },
+        aromas: {
+          quote:
+            "Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales con matices de bayas.",
+          value: ["earthy", "berry"],
+          words: { berry: "bayas", earthy: "terrosos" },
+        },
+      },
+      spanish,
+      [],
+    );
+    expect(read.acidity).toBe("low");
+    expect(read.aromas).toEqual(["earthy", "berry"]);
+
+    const german =
+      "Der Wein ist von mittlerem Körper und weist einen intensiven Duft nach Waldbeeren auf.";
+    expect(
+      validateExtraction(
+        { body: { quote: "Der Wein ist von mittlerem Körper", value: "medium" } },
+        german,
+        [],
+      ).body,
+    ).toBe("medium");
+
+    const catalan = "Dona un vi fresc, discret i amb poc cos, però força elegant.";
+    expect(
+      validateExtraction(
+        { body: { quote: "Dona un vi fresc, discret i amb poc cos", value: "low" } },
+        catalan,
+        [],
+      ).body,
+    ).toBe("low");
+  });
+
+  it("still refuses an aroma whose own word is not in the quote", () => {
+    const read = validateExtraction(
+      {
+        aromas: {
+          quote: "Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales.",
+          value: ["plum"],
+          words: { plum: "ciruela" },
+        },
+      },
+      "Los vinos de Mencía tienden a mostrar caracteres terrosos y vegetales.",
+      [],
+    );
+    expect(read.aromas).toEqual([]);
+  });
+});

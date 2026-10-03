@@ -190,7 +190,8 @@
     "mapApproximate": {
       "area": "Punto aproximado: el centro de la zona en la que está la denominación.",
       "place": "Punto aproximado: el lugar que da nombre a la denominación."
-    }
+    },
+    "summaryTranslated": "traducido del artículo original"
   },
   "space": {
     "switchLabel": "Espacio activo",

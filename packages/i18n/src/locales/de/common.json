@@ -190,7 +190,8 @@
     "mapApproximate": {
       "area": "Ungefährer Punkt: die Mitte des Gebiets, in dem die Bezeichnung liegt.",
       "place": "Ungefährer Punkt: der Ort, nach dem die Bezeichnung benannt ist."
-    }
+    },
+    "summaryTranslated": "aus dem Originalartikel übersetzt"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

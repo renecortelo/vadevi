@@ -262,7 +262,7 @@ export function libraryTables(
           summary.text,
           summary.url,
           wikipediaLicense,
-          0,
+          summary.translated === true ? 1 : 0,
         ]),
       ),
       ...regions.flatMap((region) =>
@@ -303,7 +303,7 @@ export function libraryTables(
             ? entry.value.toLowerCase()
             : entry.value,
           entry.quote,
-          grape.wikipediaUrl,
+          entry.sourceUrl ?? grape.wikipediaUrl,
         ]),
       ),
     ),

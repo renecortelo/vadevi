@@ -216,7 +216,8 @@ export type TopicEntry = {
   id: string;
   names: Record<string, string>;
   prominence: number;
-  summaries: Record<string, { text: string; url: string }>;
+  /** `translated`: a faithful translation of the article at `url`. */
+  summaries: Record<string, { text: string; translated?: boolean; url: string }>;
   wikidataId: string;
 };
 

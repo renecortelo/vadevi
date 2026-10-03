@@ -14,8 +14,8 @@ import { findGrapesByName, getLibraryGrape } from "./library";
  */
 export type GrapeReference = {
   card: LibraryGrape;
-  /** The article the values come from, for the citation. */
-  sourceUrl: string;
+  /** The articles the values come from — English, and the grape's own language's. */
+  sourceUrls: string[];
   /** The profile as one English sentence, or null when the card has none. */
   text: string | null;
 };
@@ -31,9 +31,19 @@ export async function grapeReferencesFor(
     if (id === undefined || seen.has(id)) continue;
     seen.add(id);
     const card = await getLibraryGrape(database, id, "en");
-    const sourceUrl = card?.evidence[0]?.sourceUrl ?? card?.summary?.sourceUrl;
-    if (card === null || sourceUrl === undefined) continue;
-    references.push({ card, sourceUrl, text: profileLine(card, name) });
+    if (card === null) continue;
+    const profileFields = ["acidity", "tannin", "body", "aromas", "pairings", "color"];
+    const sourceUrls = [
+      ...new Set(
+        card.evidence
+          .filter((entry) => profileFields.includes(entry.field))
+          .map((entry) => entry.sourceUrl),
+      ),
+    ];
+    const fallback = card.evidence[0]?.sourceUrl ?? card.summary?.sourceUrl;
+    if (sourceUrls.length === 0 && fallback !== undefined) sourceUrls.push(fallback);
+    if (sourceUrls.length === 0) continue;
+    references.push({ card, sourceUrls, text: profileLine(card, name) });
   }
   return references;
 }

@@ -190,7 +190,8 @@
     "mapApproximate": {
       "area": "Approximate point: the centre of the area the appellation lies in.",
       "place": "Approximate point: the place the appellation is named after."
-    }
+    },
+    "summaryTranslated": "translated from the original article"
   },
   "space": {
     "switchLabel": "Active Space",

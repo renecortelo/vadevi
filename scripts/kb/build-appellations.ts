@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 
 import {
   leadIsAboutWine,
+  matchKey,
   type RegionEntry,
   registerCountries,
   registerNames,
@@ -40,6 +41,12 @@ const wikidata = JSON.parse(readFileSync(resolve(cache, "wikidata.json"), "utf8"
 const grapes = JSON.parse(readFileSync(resolve("data/kb/grapes.json"), "utf8")) as GrapeEntry[];
 // Points OpenStreetMap's geocoder found for names Wikidata could not place
 // (`pnpm kb:geocode-appellations`, run after a first build). Approximate.
+// Alsace's grand crus, placed by their vineyards' coordinates as French
+// Wikipedia lists them (`pnpm kb:fetch-grand-crus`).
+const grandCrusPath = resolve(cache, "grand-crus.json");
+const grandCrus = (
+  existsSync(grandCrusPath) ? JSON.parse(readFileSync(grandCrusPath, "utf8")) : {}
+) as Record<string, { latitude: number; longitude: number }>;
 const geocodedPath = resolve(cache, "geocoded.json");
 const geocoded = (
   existsSync(geocodedPath) ? JSON.parse(readFileSync(geocodedPath, "utf8")) : {}
@@ -89,15 +96,25 @@ for (const row of register) {
     giType,
     grapes: [],
     id,
-    latitude: linked?.latitude ?? geocoded[row.appUniqueId]?.latitude ?? null,
+    latitude:
+      linked?.latitude ??
+      grandCrus[matchKey(row.protectedName)]?.latitude ??
+      geocoded[row.appUniqueId]?.latitude ??
+      null,
     legalUrl: `https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/${row.appUniqueId}`,
-    longitude: linked?.longitude ?? geocoded[row.appUniqueId]?.longitude ?? null,
+    longitude:
+      linked?.longitude ??
+      grandCrus[matchKey(row.protectedName)]?.longitude ??
+      geocoded[row.appUniqueId]?.longitude ??
+      null,
     pointSource:
       linked?.latitude != null
         ? (linked.pointSource ?? "item")
-        : geocoded[row.appUniqueId] !== undefined
-          ? "place"
-          : null,
+        : grandCrus[matchKey(row.protectedName)] !== undefined
+          ? "item"
+          : geocoded[row.appUniqueId] !== undefined
+            ? "place"
+            : null,
     name: names[0] ?? row.protectedName,
     names: [
       ...names.map((name) => ({ locale: "*", name, source: "register" as const })),
@@ -138,6 +155,73 @@ for (const grape of grapes) {
     links += 1;
   }
 }
+
+// Names no article of their own describes may be described in their
+// country's wine article (`pnpm kb:fetch-country-wine`): the sentences that
+// name one, about wine, and not a list of names, become its summary.
+const countryPath = resolve(cache, "country-wine.json");
+const countryArticles = (
+  existsSync(countryPath) ? JSON.parse(readFileSync(countryPath, "utf8")) : {}
+) as Record<string, { text: string; title: string; url: string }[]>;
+/** A name as it is spelled in prose, doubled letters collapsed ("Naousa" = "Naoussa"). */
+const spelling = (text: string) => matchKey(text).replace(/(.)\1/g, "$1");
+let described = 0;
+for (const entry of entries) {
+  if (Object.keys(entry.summaries).length > 0) continue;
+  // Only where the name's own articles leave almost nothing: elsewhere the
+  // country article's sentences add more noise than description.
+  if (!["BG", "CY", "GR", "HR", "RO", "SI", "SK"].includes(entry.countryCode)) continue;
+  const articles = countryArticles[entry.countryCode] ?? [];
+  if (articles.length === 0) continue;
+  const keys = [
+    ...new Set(
+      entry.names
+        .flatMap((name) => [name.name, transliterate(name.name)])
+        .map(spelling)
+        .filter((key) => key.length >= 4 && /^[a-z0-9 ]+$/.test(key)),
+    ),
+  ];
+  if (keys.length === 0) continue;
+  for (const article of articles) {
+    const sentences = article.text
+      // Section headings ("== Wine regions ==") are not prose.
+      .split("\n")
+      .filter((line) => !/^=+.*=+$/.test(line.trim()))
+      .join(" ")
+      .split(/(?<=[a-z0-9)][.!?])\s+(?=[A-Z])/)
+      .filter((sentence) => {
+        const padded = ` ${spelling(sentence)} `;
+        return (
+          keys.some((key) => padded.includes(` ${key} `)) &&
+          sentence.length >= 60 &&
+          sentence.length <= 420 &&
+          (sentence.match(/,/g) ?? []).length <= 3 &&
+          // Not history, statistics or a table: no figures — urns from 700 BC,
+          // hectares, alcohol by volume — and no columns of names.
+          !/\d/.test(sentence) &&
+          !/\s{3,}/.test(sentence) &&
+          !/\b(BC|AD|centur(y|ies))\b/.test(sentence) &&
+          // A whole sentence that stands on its own: not a fragment, and not
+          // one whose subject ("The grape", "It") is in the sentence before.
+          /^[A-Z]/.test(sentence) &&
+          !/\.\s+[a-z]/.test(sentence) &&
+          !/^(The grape|The variety|It|This|These|They)\b/.test(sentence) &&
+          // And it says something of the wine itself.
+          /\b(grapes?|variet(y|ies|al)|red|white|ros[ée]|sweet|dessert|dry|acid\w*|aroma\w*|bodied|soils?|volcanic|terroir|blend\w*|fruit\w*|spic\w*|tannin\w*)\b/i.test(
+            sentence,
+          )
+        );
+      })
+      // One sentence: two from different paragraphs read as one account and
+      // mixed up Santorini's grapes.
+      .slice(0, 1);
+    if (sentences.length === 0) continue;
+    entry.summaries.en = { text: sentences.join(" "), url: article.url };
+    described += 1;
+    break;
+  }
+}
+console.info(`  ${described} names described by a sentence of their country's wine article.`);
 
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;
