@@ -186,7 +186,11 @@
     "originTitle": "D'on ve",
     "mapLabel": "Mapa amb {{place}}",
     "mapSource": "Mapa: Natural Earth",
-    "mapCountryOnly": "La zona exacta encara no és a la biblioteca; el mapa mostra el país."
+    "mapCountryOnly": "La zona exacta encara no és a la biblioteca; el mapa mostra el país.",
+    "mapApproximate": {
+      "area": "Punt aproximat: el centre de la zona on és la denominació.",
+      "place": "Punt aproximat: la població que dona nom a la denominació."
+    }
   },
   "space": {
     "switchLabel": "Espai actiu",

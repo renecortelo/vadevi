@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import type { ImageEntry } from "./appellation-names";
@@ -24,6 +24,13 @@ const record = (
   existsSync(recordPath) ? JSON.parse(readFileSync(recordPath, "utf8")) : {}
 ) as Record<string, ImageEntry>;
 
+// 0. A grape that has left the library takes its photograph with it.
+for (const [grapeId, image] of Object.entries(record)) {
+  if (grapes.some((grape) => grape.id === grapeId)) continue;
+  rmSync(resolve("apps/web/public", image.path), { force: true });
+  delete record[grapeId];
+}
+
 // 1. The image each grape's item names.
 const fileOf = new Map<string, string>();
 for (let start = 0; start < grapes.length; start += 50) {
@@ -40,6 +47,62 @@ for (let start = 0; start < grapes.length; start += 50) {
   for (const grape of batch) {
     const file = body.entities[grape.wikidataId]?.claims?.P18?.[0]?.mainsnak.datavalue?.value;
     if (file !== undefined) fileOf.set(grape.id, file);
+  }
+}
+
+// Pictures looked at and found not to show the grape — a bottle, a glass, a
+// vineyard from afar, a sign in a field. A grape's item names what its
+// editors chose, which is not always the fruit; these stay out.
+const notTheGrape = new Set([
+  "arneis",
+  "athiri",
+  "falanghina",
+  "feteasca-regala",
+  "frappato",
+  "godello",
+  "marzemino",
+  "posip",
+  "prieto-picudo",
+  "verdejo",
+  "airen",
+  "carignan",
+  "folle-blanche",
+  "gamaret",
+  "glera",
+  "grillo",
+  "ribolla-gialla",
+]);
+for (const grapeId of notTheGrape) fileOf.delete(grapeId);
+
+// 1b. Where Wikidata names none, the picture its Wikipedia article leads
+//     with — asked only for a free one — in the first language that has one,
+//     for the grapes whose article picture has been checked by eye.
+// An article's lead picture is as often a bottle, a label or a landscape as
+// the grape: Blatina's was a bottle, Mavrodafni's a hundred-year-old poster.
+// So it is taken only for a grape whose picture has been looked at and found
+// to be the grape.
+const reviewedArticleImages = new Set(["castelao", "molinara"]);
+for (const grape of grapes) {
+  if (fileOf.has(grape.id) || record[grape.id] !== undefined) continue;
+  if (!reviewedArticleImages.has(grape.id)) continue;
+  const articles = [
+    grape.wikipediaUrl,
+    ...Object.values(grape.summaries).map((entry) => entry.url),
+  ];
+  for (const url of new Set(articles)) {
+    const match = /^https:\/\/([a-z]+)\.wikipedia\.org\/wiki\/(.+)$/.exec(url);
+    if (match === null) continue;
+    const body = await wikimedia<{
+      query?: { pages?: Record<string, { pageimage?: string }> };
+    }>(
+      `https://${match[1]}.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages` +
+        `&piprop=name&pilicense=free&redirects=1&titles=${match[2]}`,
+    );
+    const image = Object.values(body.query?.pages ?? {})[0]?.pageimage;
+    if (image !== undefined) {
+      fileOf.set(grape.id, image);
+      break;
+    }
   }
 }
 
@@ -113,6 +176,6 @@ writeFileSync(
   `${JSON.stringify(Object.fromEntries(Object.entries(record).sort()), null, 2)}\n`,
 );
 console.info(
-  `${fileOf.size} of ${grapes.length} grapes have an image on Wikidata; ` +
+  `${fileOf.size} of ${grapes.length} grapes have an image (on Wikidata, or leading their article); ` +
     `${Object.keys(record).length} kept under a free licence (${kept} new).`,
 );

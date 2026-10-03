@@ -186,7 +186,11 @@
     "originTitle": "De dónde viene",
     "mapLabel": "Mapa con {{place}}",
     "mapSource": "Mapa: Natural Earth",
-    "mapCountryOnly": "La zona exacta aún no está en la biblioteca; el mapa muestra el país."
+    "mapCountryOnly": "La zona exacta aún no está en la biblioteca; el mapa muestra el país.",
+    "mapApproximate": {
+      "area": "Punto aproximado: el centro de la zona en la que está la denominación.",
+      "place": "Punto aproximado: la localidad que da nombre a la denominación."
+    }
   },
   "space": {
     "switchLabel": "Espacio activo",

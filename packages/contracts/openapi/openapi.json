@@ -11214,6 +11214,16 @@
               "type": "string"
             }
           },
+          "pointSource": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "item",
+              "area",
+              "place",
+              null
+            ]
+          },
           "registeredOn": {
             "type": "string",
             "nullable": true
@@ -11260,6 +11270,7 @@
           "longitude",
           "name",
           "otherNames",
+          "pointSource",
           "registeredOn",
           "summary",
           "wikidataId"

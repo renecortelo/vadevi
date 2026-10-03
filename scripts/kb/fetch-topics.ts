@@ -16,6 +16,8 @@ mkdirSync(cache, { recursive: true });
 
 type Include = {
   aliases?: Record<string, string[]>;
+  /** By language, an article to read instead of the one Wikidata links. */
+  articles?: Record<string, string>;
   category: string;
   id: string;
   source: string;
@@ -59,7 +61,7 @@ for (const topic of topics) {
   ).entities[qid];
   const leads: Record<string, { lead: string; title: string }> = {};
   for (const locale of locales) {
-    const title = entity?.sitelinks?.[`${locale}wiki`]?.title;
+    const title = topic.articles?.[locale] ?? entity?.sitelinks?.[`${locale}wiki`]?.title;
     if (title === undefined) continue;
     const body = await wikimedia<{ query?: { pages?: { extract?: string }[] } }>(
       `https://${locale}.wikipedia.org/w/api.php?action=query&format=json&formatversion=2` +

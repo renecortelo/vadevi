@@ -20,13 +20,6 @@
     "path": "library/grapes/aglianico.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aglianico_prior_to_Veraison.JPG"
   },
-  "airen": {
-    "author": "BodegasAmbite",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/airen.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AirenGrapeVine.jpg"
-  },
   "albana": {
     "author": "Gianluca Giunchi",
     "license": "CC BY 2.0",
@@ -90,26 +83,12 @@
     "path": "library/grapes/arinto.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arintho_-_Amp%C3%A9lographie.png"
   },
-  "arneis": {
-    "author": "Tomas er",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/arneis.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pescaja_Langhe_Arneis_2006.jpg"
-  },
   "assyrtiko": {
     "author": "ÎµÎ³Ï Original uploader was Elisavetch at el.wikipedia",
     "license": "Copyrighted free use",
     "licenseUrl": null,
     "path": "library/grapes/assyrtiko.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:ASSYRTIKO.jpg"
-  },
-  "athiri": {
-    "author": "Agne27",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/athiri.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asirtiko_Athiri_from_Santorini.JPG"
   },
   "auxerrois-blanc": {
     "author": "Rosenzweig",
@@ -216,19 +195,19 @@
     "path": "library/grapes/canaiolo.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uva_Canaiola_-_Giorgio_Gallesio.jpg"
   },
-  "carignan": {
-    "author": "Pancrat",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/carignan.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carignan.jpg"
-  },
   "carmenere": {
     "author": "Lebowskyclone",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "path": "library/grapes/carmenere.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:CarmenereW.jpg"
+  },
+  "castelao": {
+    "author": "Wines of Portugal, i.V. Marie‐Luise Bächle",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "path": "library/grapes/castelao.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Castelao.jpg"
   },
   "chardonnay": {
     "author": "Berndt Fernow",
@@ -321,13 +300,6 @@
     "path": "library/grapes/encruzado.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Encruzado.jpg"
   },
-  "falanghina": {
-    "author": "Agne27",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/falanghina.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Falanghina_di_Bonea.JPG"
-  },
   "fernao-pires": {
     "author": "Wines of Portugal, i.V. Marie-Luise Bächle",
     "license": "CC BY 3.0",
@@ -349,13 +321,6 @@
     "path": "library/grapes/feteasca-neagra.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feteasca_Neagra.jpg"
   },
-  "feteasca-regala": {
-    "author": "Agne27",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/feteasca-regala.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feteasca_regala_wine.jpg"
-  },
   "fiano": {
     "author": "Viala et Vermorel",
     "license": "Public domain",
@@ -363,33 +328,12 @@
     "path": "library/grapes/fiano.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiano.jpg"
   },
-  "folle-blanche": {
-    "author": "Pancrat",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/folle-blanche.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Folle_blanche_raisin.jpg"
-  },
-  "frappato": {
-    "author": "Yozh",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "path": "library/grapes/frappato.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frappato_tareni.jpg"
-  },
   "furmint": {
     "author": "Vermorel et Viala",
     "license": "Public domain",
     "licenseUrl": null,
     "path": "library/grapes/furmint.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Furmint.jpg"
-  },
-  "gamaret": {
-    "author": "Chandres",
-    "license": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-    "path": "library/grapes/gamaret.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:C%C3%A9pages_du_Vully_Gamaret.jpg"
   },
   "gamay": {
     "author": "Viking59",
@@ -411,20 +355,6 @@
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "path": "library/grapes/gewurztraminer.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gew%C3%BCrztraminer.jpg"
-  },
-  "glera": {
-    "author": "paul Barker Hemings from seregno, 85",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "path": "library/grapes/glera.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prosecco_vitigni.jpg"
-  },
-  "godello": {
-    "author": "Agne27",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/godello.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bierzo_Godello.JPG"
   },
   "graciano": {
     "author": "Jules Troncy",
@@ -453,13 +383,6 @@
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "path": "library/grapes/grenache-blanc.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plant_de_grenache_blanc.jpg"
-  },
-  "grillo": {
-    "author": "Pax:Vobiscum",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/grillo.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grillo.jpg"
   },
   "grolleau": {
     "author": "Viala et Vermorel",
@@ -573,13 +496,6 @@
     "path": "library/grapes/marselan.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marselan.jpg"
   },
-  "marzemino": {
-    "author": "Fabio Ingrosso",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "path": "library/grapes/marzemino.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vino_Marzemino_della_Cantina_D%27Isera.jpg"
-  },
   "mauzac": {
     "author": "Jules Troncy",
     "license": "Public domain",
@@ -622,6 +538,13 @@
     "path": "library/grapes/merlot.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Merlot_Grape.jpg"
   },
+  "molinara": {
+    "author": "Ilares Riolfi",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/grapes/molinara.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grapes_growing_in_Valpolicella.jpg"
+  },
   "montepulciano": {
     "author": "Ra Boe",
     "license": "CC BY-SA 3.0",
@@ -649,13 +572,6 @@
     "licenseUrl": null,
     "path": "library/grapes/muller-thurgau.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rebe2.jpg"
-  },
-  "muscadelle": {
-    "author": "Marianne Casamance",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "path": "library/grapes/muscadelle.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Muscadelle_-_inflorescence.jpg"
   },
   "muscat-blanc-a-petits-grains": {
     "author": "Rosenzweig",
@@ -796,27 +712,6 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "path": "library/grapes/plavac-mali.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plavac_mali_N.jpg"
-  },
-  "posip": {
-    "author": "Cro-Cop",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "path": "library/grapes/posip.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Posip-blato-1902.jpg"
-  },
-  "prieto-picudo": {
-    "author": "Agne27",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/prieto-picudo.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prieto_Picudo_VDT.JPG"
-  },
-  "ribolla-gialla": {
-    "author": "discosour",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "path": "library/grapes/ribolla-gialla.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Friuli_029_Cantine_Aperte_-_Rocca_Bernarda.jpg"
   },
   "riesling": {
     "author": "No machine-readable author provided. T.o.m.~commonswiki assumed (based on copyright claims).",
@@ -1013,13 +908,6 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "path": "library/grapes/tsolikouri.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsolikouri.jpg"
-  },
-  "verdejo": {
-    "author": "Agne27",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "path": "library/grapes/verdejo.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rueda_Verdejo.JPG"
   },
   "verdelho": {
     "author": "José Luís Ávila Silveira/Pedro Noronha e Costa",

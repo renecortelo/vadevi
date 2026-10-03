@@ -70,7 +70,8 @@ for (const qid of index) {
   if (!extracted) {
     const lead = raw.leads.en ?? Object.values(raw.leads)[0] ?? "";
     const opening = lead.slice(0, 240);
-    if (!leadIsAboutWine(lead) || /\b(table grape|raisin|uva de mesa)\b/i.test(opening)) continue;
+    if (!leadIsAboutWine(lead) || /\b(table grapes?|raisins?|uvas? de mesa)\b/i.test(opening))
+      continue;
   }
   const proposal = extracted
     ? (JSON.parse(readFileSync(extractedPath, "utf8")) as { extraction: unknown }).extraction

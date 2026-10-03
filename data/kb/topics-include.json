@@ -1,139 +1,370 @@
 {
-  "$comment": "The library's styles and methods. Each topic is an article chosen by hand, named by its Wikipedia title (\"lang:Title\") or its Wikidata id; the text comes from that article's lead in each language. `aliases` are extra names readers use, by language, so Vicenç finds the topic in a question.",
+  "$comment": "The library's styles and methods. Each topic is an article chosen by hand, named by its Wikipedia title (\"lang:Title\") or its Wikidata id; the text comes from that article's lead in each language. `aliases` are extra names readers use, by language, so Vicenç finds the topic in a question. `articles` names, by language, an article to read instead of (or besides) the one Wikidata links — a wine-specific article where the linked one is general, or one Wikidata has not linked.",
   "topics": [
-    { "id": "red-wine", "category": "kind", "source": "en:Red wine" },
-    { "id": "white-wine", "category": "kind", "source": "en:White wine" },
-    { "id": "rose", "category": "kind", "source": "en:Rosé" },
+    {
+      "id": "red-wine",
+      "category": "kind",
+      "source": "en:Red wine"
+    },
+    {
+      "id": "white-wine",
+      "category": "kind",
+      "source": "en:White wine"
+    },
+    {
+      "id": "rose",
+      "category": "kind",
+      "source": "en:Rosé"
+    },
     {
       "id": "orange-wine",
       "category": "kind",
       "source": "en:Orange wine",
-      "aliases": { "es": ["vino naranja", "vino brisado"], "ca": ["vi brisat", "vi taronja"] }
+      "aliases": {
+        "es": [
+          "vino naranja",
+          "vino brisado"
+        ],
+        "ca": [
+          "vi brisat",
+          "vi taronja"
+        ]
+      }
     },
-    { "id": "sparkling-wine", "category": "kind", "source": "en:Sparkling wine" },
+    {
+      "id": "sparkling-wine",
+      "category": "kind",
+      "source": "en:Sparkling wine"
+    },
     {
       "id": "pet-nat",
       "category": "kind",
       "source": "Q112178239",
       "aliases": {
-        "*": ["pet nat", "petnat", "petillant naturel"],
-        "es": ["método ancestral", "metodo ancestral"],
-        "ca": ["mètode ancestral"],
-        "fr": ["méthode ancestrale"],
-        "it": ["metodo ancestrale"]
+        "*": [
+          "pet nat",
+          "petnat",
+          "petillant naturel"
+        ],
+        "es": [
+          "método ancestral",
+          "metodo ancestral"
+        ],
+        "ca": [
+          "mètode ancestral"
+        ],
+        "fr": [
+          "méthode ancestrale"
+        ],
+        "it": [
+          "metodo ancestrale"
+        ]
+      },
+      "articles": {
+        "ca": "Mètode ancestral d'elaboració d'escumosos"
       }
     },
-    { "id": "fortified-wine", "category": "kind", "source": "en:Fortified wine" },
-    { "id": "fino", "category": "kind", "source": "Q5450908" },
-    { "id": "dessert-wine", "category": "kind", "source": "en:Dessert wine" },
-    { "id": "sweetness", "category": "kind", "source": "en:Sweetness of wine" },
-    { "id": "late-harvest", "category": "kind", "source": "en:Late harvest" },
+    {
+      "id": "fortified-wine",
+      "category": "kind",
+      "source": "en:Fortified wine"
+    },
+    {
+      "id": "fino",
+      "category": "kind",
+      "source": "Q5450908"
+    },
+    {
+      "id": "dessert-wine",
+      "category": "kind",
+      "source": "en:Dessert wine"
+    },
+    {
+      "id": "sweetness",
+      "category": "kind",
+      "source": "en:Sweetness of wine"
+    },
+    {
+      "id": "late-harvest",
+      "category": "kind",
+      "source": "en:Late harvest"
+    },
     {
       "id": "straw-wine",
       "category": "kind",
       "source": "en:Straw wine",
-      "aliases": { "*": ["passito", "appassimento", "recioto"] }
+      "aliases": {
+        "*": [
+          "passito",
+          "appassimento",
+          "recioto"
+        ]
+      }
     },
-    { "id": "ice-wine", "category": "kind", "source": "en:Ice wine" },
-    { "id": "vin-jaune", "category": "kind", "source": "en:Vin jaune" },
-    { "id": "vin-santo", "category": "kind", "source": "en:Vin Santo" },
-    { "id": "kosher-wine", "category": "kind", "source": "en:Kosher wine" },
-
+    {
+      "id": "ice-wine",
+      "category": "kind",
+      "source": "en:Ice wine"
+    },
+    {
+      "id": "vin-jaune",
+      "category": "kind",
+      "source": "en:Vin jaune"
+    },
+    {
+      "id": "vin-santo",
+      "category": "kind",
+      "source": "en:Vin Santo"
+    },
+    {
+      "id": "kosher-wine",
+      "category": "kind",
+      "source": "en:Kosher wine"
+    },
     {
       "id": "natural-wine",
       "category": "farming",
       "source": "en:Natural wine",
-      "aliases": { "es": ["vino natural", "vinos naturales"] }
+      "aliases": {
+        "es": [
+          "vino natural",
+          "vinos naturales"
+        ]
+      }
     },
     {
       "id": "organic-wine",
       "category": "farming",
       "source": "en:Organic wine",
       "aliases": {
-        "es": ["vino ecológico", "vino ecologico", "vino orgánico"],
-        "ca": ["vi ecològic"]
+        "es": [
+          "vino ecológico",
+          "vino ecologico",
+          "vino orgánico"
+        ],
+        "ca": [
+          "vi ecològic"
+        ]
       }
     },
-    { "id": "biodynamic-wine", "category": "farming", "source": "en:Biodynamic wine" },
+    {
+      "id": "biodynamic-wine",
+      "category": "farming",
+      "source": "en:Biodynamic wine"
+    },
     {
       "id": "sulfites",
       "category": "farming",
       "source": "en:Sulfite",
       "aliases": {
-        "*": ["so2"],
-        "es": ["sulfitos", "sin sulfitos", "sulfuroso"],
-        "ca": ["sulfits", "sense sulfits"],
-        "en": ["sulphites", "no added sulfites"],
-        "fr": ["sans sulfites"],
-        "it": ["solfiti", "senza solfiti"]
+        "*": [
+          "so2"
+        ],
+        "es": [
+          "sulfitos",
+          "sin sulfitos",
+          "sulfuroso"
+        ],
+        "ca": [
+          "sulfits",
+          "sense sulfits"
+        ],
+        "en": [
+          "sulphites",
+          "no added sulfites"
+        ],
+        "fr": [
+          "sans sulfites"
+        ],
+        "it": [
+          "solfiti",
+          "senza solfiti"
+        ]
+      },
+      "articles": {
+        "de": "Schwefelung",
+        "fr": "Dioxyde de soufre en œnologie"
       }
     },
     {
       "id": "vegan-wine",
       "category": "farming",
       "source": "en:Vegetarianism and wine",
-      "aliases": { "es": ["vino vegano"], "en": ["vegan wine"], "ca": ["vi vegà"] }
+      "aliases": {
+        "es": [
+          "vino vegano"
+        ],
+        "en": [
+          "vegan wine"
+        ],
+        "ca": [
+          "vi vegà"
+        ]
+      }
     },
-
-    { "id": "fermentation", "category": "method", "source": "en:Fermentation in winemaking" },
+    {
+      "id": "fermentation",
+      "category": "method",
+      "source": "en:Fermentation in winemaking"
+    },
     {
       "id": "malolactic-fermentation",
       "category": "method",
       "source": "en:Malolactic fermentation",
       "aliases": {
-        "es": ["maloláctica", "malolactica"],
-        "ca": ["malolàctica"],
-        "en": ["malolactic", "mlf"]
+        "es": [
+          "maloláctica",
+          "malolactica"
+        ],
+        "ca": [
+          "malolàctica"
+        ],
+        "en": [
+          "malolactic",
+          "mlf"
+        ]
       }
     },
-    { "id": "maceration", "category": "method", "source": "en:Maceration (wine)" },
-    { "id": "carbonic-maceration", "category": "method", "source": "en:Carbonic maceration" },
+    {
+      "id": "maceration",
+      "category": "method",
+      "source": "en:Maceration (wine)"
+    },
+    {
+      "id": "carbonic-maceration",
+      "category": "method",
+      "source": "en:Carbonic maceration"
+    },
     {
       "id": "qvevri",
       "category": "method",
       "source": "en:Kvevri",
       "aliases": {
-        "*": ["qvevri", "kvevri"],
-        "es": ["ánfora", "anfora", "ánforas", "tinaja", "tinajas"],
-        "ca": ["àmfora", "àmfores", "tenalla"],
-        "en": ["amphora", "amphorae"],
-        "it": ["anfora", "anfore"]
+        "*": [
+          "qvevri",
+          "kvevri"
+        ],
+        "es": [
+          "ánfora",
+          "anfora",
+          "ánforas",
+          "tinaja",
+          "tinajas"
+        ],
+        "ca": [
+          "àmfora",
+          "àmfores",
+          "tenalla"
+        ],
+        "en": [
+          "amphora",
+          "amphorae"
+        ],
+        "it": [
+          "anfora",
+          "anfore"
+        ]
       }
     },
-    { "id": "georgian-wine", "category": "method", "source": "en:Georgian wine" },
+    {
+      "id": "georgian-wine",
+      "category": "method",
+      "source": "en:Georgian wine"
+    },
     {
       "id": "lees",
       "category": "method",
       "source": "en:Lees (fermentation)",
-      "aliases": { "*": ["sur lie", "batonnage", "bâtonnage"], "es": ["lías", "lias"] }
+      "aliases": {
+        "*": [
+          "sur lie",
+          "batonnage",
+          "bâtonnage"
+        ],
+        "es": [
+          "lías",
+          "lias"
+        ]
+      }
     },
-    { "id": "solera", "category": "method", "source": "en:Solera" },
-    { "id": "oak", "category": "method", "source": "en:Oak (wine)" },
-    { "id": "aging", "category": "method", "source": "en:Aging of wine" },
+    {
+      "id": "solera",
+      "category": "method",
+      "source": "en:Solera"
+    },
+    {
+      "id": "oak",
+      "category": "method",
+      "source": "en:Oak (wine)"
+    },
+    {
+      "id": "aging",
+      "category": "method",
+      "source": "en:Aging of wine"
+    },
     {
       "id": "clarification",
       "category": "method",
       "source": "en:Clarification and stabilization of wine"
     },
-    { "id": "chaptalization", "category": "method", "source": "en:Chaptalization" },
+    {
+      "id": "chaptalization",
+      "category": "method",
+      "source": "en:Chaptalization"
+    },
     {
       "id": "traditional-method",
       "category": "method",
       "source": "en:Traditional method",
-      "aliases": { "*": ["méthode champenoise", "methode champenoise"] }
+      "aliases": {
+        "*": [
+          "méthode champenoise",
+          "methode champenoise"
+        ]
+      }
     },
     {
       "id": "sparkling-production",
       "category": "method",
       "source": "en:Sparkling wine production",
-      "aliases": { "*": ["charmat", "método charmat", "granvás", "granvas"] }
+      "aliases": {
+        "*": [
+          "charmat",
+          "método charmat",
+          "granvás",
+          "granvas"
+        ]
+      }
     },
-    { "id": "dosage", "category": "method", "source": "en:Dosage (wine)" },
-    { "id": "noble-rot", "category": "method", "source": "en:Noble rot" },
-
-    { "id": "terroir", "category": "concept", "source": "en:Terroir" },
-    { "id": "vintage", "category": "concept", "source": "en:Vintage" },
-    { "id": "wine-fault", "category": "concept", "source": "en:Wine fault" },
-    { "id": "cork-taint", "category": "concept", "source": "en:Cork taint" }
+    {
+      "id": "dosage",
+      "category": "method",
+      "source": "en:Dosage (wine)"
+    },
+    {
+      "id": "noble-rot",
+      "category": "method",
+      "source": "en:Noble rot"
+    },
+    {
+      "id": "terroir",
+      "category": "concept",
+      "source": "en:Terroir"
+    },
+    {
+      "id": "vintage",
+      "category": "concept",
+      "source": "en:Vintage"
+    },
+    {
+      "id": "wine-fault",
+      "category": "concept",
+      "source": "en:Wine fault"
+    },
+    {
+      "id": "cork-taint",
+      "category": "concept",
+      "source": "en:Cork taint"
+    }
   ]
 }

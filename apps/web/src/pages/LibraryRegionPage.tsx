@@ -144,6 +144,8 @@ export function LibraryRegionPage() {
         />
         {region.latitude === null ? (
           <p className="section-help">{t("library.mapCountryOnly")}</p>
+        ) : region.pointSource === "area" || region.pointSource === "place" ? (
+          <p className="section-help">{t(`library.mapApproximate.${region.pointSource}`)}</p>
         ) : null}
       </section>
 

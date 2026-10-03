@@ -186,7 +186,11 @@
     "originTitle": "Waar ze vandaan komt",
     "mapLabel": "Kaart met {{place}}",
     "mapSource": "Kaart: Natural Earth",
-    "mapCountryOnly": "Het precieze gebied staat nog niet in de bibliotheek; de kaart toont het land."
+    "mapCountryOnly": "Het precieze gebied staat nog niet in de bibliotheek; de kaart toont het land.",
+    "mapApproximate": {
+      "area": "Benaderd punt: het midden van het gebied waarin de benaming ligt.",
+      "place": "Benaderd punt: de plaats waarnaar de benaming is genoemd."
+    }
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

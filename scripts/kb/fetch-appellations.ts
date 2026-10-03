@@ -1,7 +1,8 @@
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-import { matchKey, registerCountries, registerNames } from "./appellation-names";
+import { matchKey, registerCountries, registerNames, transliterate } from "./appellation-names";
+import { wikimedia } from "./wikimedia";
 
 /**
  * The atlas, step one: every protected wine name in the EU, from the register
@@ -208,9 +209,18 @@ for (const [id, item] of wineItems) {
 // One item per register entry: the one linked directly, or else the
 // best-known of those going by its name. Coordinates may come from another
 // item of the same name — a wine and its region are often two items.
+type PointSource = "area" | "item" | "place";
 const linked: Record<
   string,
-  { labels: Record<string, string>; latitude: number | null; longitude: number | null; qid: string }
+  {
+    labels: Record<string, string>;
+    latitude: number | null;
+    longitude: number | null;
+    /** Where the point comes from: the wine's own item, the area it lies in,
+     * or the place it is named after. */
+    pointSource: PointSource | null;
+    qid: string | null;
+  }
 > = {};
 let byNameOnly = 0;
 for (const row of register.results) {
@@ -218,11 +228,17 @@ for (const row of register.results) {
   const countries = registerCountries(String(row.countryId));
   const candidates = [
     ...new Set(
-      registerNames(String(row.protectedName)).flatMap((name) =>
-        matchKey(name).length < 2
-          ? []
-          : countries.flatMap((country) => [...(byName.get(`${country}:${matchKey(name)}`) ?? [])]),
-      ),
+      // A Greek or Bulgarian name is also tried in Latin letters, which is
+      // how most of Wikidata's wine items are labelled ("Nemea", "Melnik").
+      registerNames(String(row.protectedName))
+        .flatMap((name) => [name, transliterate(name)])
+        .flatMap((name) =>
+          matchKey(name).length < 2
+            ? []
+            : countries.flatMap((country) => [
+                ...(byName.get(`${country}:${matchKey(name)}`) ?? []),
+              ]),
+        ),
     ),
   ].sort((left, right) => sitelinkCount(right) - sitelinkCount(left));
   const chosen = direct.get(ambrosia) ?? candidates[0];
@@ -240,12 +256,124 @@ for (const row of register.results) {
     ),
     latitude: place?.latitude ?? null,
     longitude: place?.longitude ?? null,
+    pointSource: place === null ? null : "item",
     qid: chosen,
   };
 }
 
+type Claims = Record<
+  string,
+  { mainsnak: { datavalue?: { value: { id?: string; latitude?: number; longitude?: number } } } }[]
+>;
+async function claimsOf(
+  ids: string[],
+): Promise<Record<string, { claims?: Claims; labels?: Record<string, { value: string }> }>> {
+  const result: Record<string, { claims?: Claims; labels?: Record<string, { value: string }> }> =
+    {};
+  for (let start = 0; start < ids.length; start += 50) {
+    const body = await wikimedia<{
+      entities: Record<string, { claims?: Claims; labels?: Record<string, { value: string }> }>;
+    }>(
+      "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims|labels" +
+        `&languages=${labelLanguages.join("|")}&ids=${ids.slice(start, start + 50).join("|")}`,
+    );
+    Object.assign(result, body.entities);
+  }
+  return result;
+}
+const pointOf = (claims: Claims | undefined) => {
+  const value = claims?.P625?.[0]?.mainsnak.datavalue?.value;
+  return value?.latitude === undefined || value.longitude === undefined
+    ? null
+    : { latitude: value.latitude, longitude: value.longitude };
+};
+
+// 2b. A wine item with no point of its own lies somewhere: the area Wikidata
+//     places it in (P131, a municipality or a province) gives an approximate
+//     one, marked as such.
+const areaOf = new Map<string, string>();
+for (const entry of Object.values(linked)) {
+  if (entry.latitude !== null || entry.qid === null) continue;
+  const area = (entities[entry.qid] as { claims?: Claims } | undefined)?.claims?.P131?.[0]?.mainsnak
+    .datavalue?.value.id;
+  if (area !== undefined) areaOf.set(entry.qid, area);
+}
+const areas = await claimsOf([...new Set(areaOf.values())]);
+for (const entry of Object.values(linked)) {
+  const area = entry.qid === null ? undefined : areaOf.get(entry.qid);
+  const point = area === undefined ? null : pointOf(areas[area]?.claims);
+  if (point === null) continue;
+  entry.latitude = point.latitude;
+  entry.longitude = point.longitude;
+  entry.pointSource = "area";
+}
+
+// 2c. A registered name with no wine item at all is often the name of its
+//     town ("Toro", "Rueda", "Málaga"): a place in the same country whose
+//     label is exactly that name gives the point — and only the point; its
+//     article is about the town, not the wine. Searches are cached.
+const placesPath = resolve(cache, "places.json");
+const placeSearches = (
+  existsSync(placesPath) ? JSON.parse(readFileSync(placesPath, "utf8")) : {}
+) as Record<string, string[]>;
+const pending: { ambrosia: string; country: string; names: string[] }[] = [];
+for (const row of register.results) {
+  const ambrosia = String(row.appUniqueId);
+  if (linked[ambrosia] !== undefined) continue;
+  const country = registerCountries(String(row.countryId))[0];
+  if (country === undefined || memberStates[country] === undefined) continue;
+  const names = [
+    ...new Set(
+      registerNames(String(row.protectedName)).flatMap((name) => [name, transliterate(name)]),
+    ),
+  ];
+  pending.push({ ambrosia, country, names });
+  for (const name of names.slice(0, 2)) {
+    if (placeSearches[name] !== undefined) continue;
+    const body = await wikimedia<{ search?: { id: string }[] }>(
+      "https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&type=item&limit=7" +
+        `&language=en&uselang=en&strictlanguage=false&search=${encodeURIComponent(name)}`,
+    );
+    placeSearches[name] = (body.search ?? []).map((hit) => hit.id);
+    writeFileSync(placesPath, JSON.stringify(placeSearches));
+  }
+}
+const candidates = await claimsOf([
+  ...new Set(pending.flatMap((entry) => entry.names.flatMap((name) => placeSearches[name] ?? []))),
+]);
+let placed = 0;
+for (const entry of pending) {
+  const keys = new Set(entry.names.map((name) => matchKey(name)));
+  for (const name of entry.names) {
+    const found = (placeSearches[name] ?? []).find((id) => {
+      const candidate = candidates[id];
+      const inCountry = candidate?.claims?.P17?.some(
+        (claim) => claim.mainsnak.datavalue?.value.id === memberStates[entry.country],
+      );
+      const named = Object.values(candidate?.labels ?? {}).some((label) =>
+        keys.has(matchKey(label.value)),
+      );
+      return inCountry === true && named && pointOf(candidate?.claims) !== null;
+    });
+    if (found === undefined) continue;
+    const point = pointOf(candidates[found]?.claims)!;
+    linked[entry.ambrosia] = {
+      labels: {},
+      latitude: point.latitude,
+      longitude: point.longitude,
+      pointSource: "place",
+      qid: null,
+    };
+    placed += 1;
+    break;
+  }
+}
+console.info(`  ${placed} registered names placed by the town they are named after.`);
+
 // 3. Wikipedia leads, cached one file per item so a rerun resumes.
-const qids = [...new Set(Object.values(linked).map((entry) => entry.qid))];
+const qids = [
+  ...new Set(Object.values(linked).flatMap((entry) => (entry.qid === null ? [] : [entry.qid]))),
+];
 let fetched = 0;
 for (const item of qids) {
   const path = resolve(cache, "leads", `${item}.json`);

@@ -14,6 +14,8 @@ export type RegionEntry = {
   longitude: number | null;
   name: string;
   names: { locale: string; name: string; source: "register" | "wikidata" }[];
+  /** Where the point comes from; "area" and "place" are approximate. */
+  pointSource?: "area" | "item" | "place" | null;
   prominence: number;
   registeredOn: string | null;
   summaries: Record<string, { text: string; url: string }>;

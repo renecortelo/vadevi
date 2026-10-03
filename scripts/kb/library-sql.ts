@@ -156,6 +156,7 @@ export function libraryTables(
         "longitude",
         "wikidata_id",
         "prominence",
+        "point_source",
       ],
       ["id"],
       3,
@@ -171,6 +172,7 @@ export function libraryTables(
         region.longitude,
         region.wikidataId,
         region.prominence,
+        region.pointSource ?? null,
       ]),
     ),
     table(

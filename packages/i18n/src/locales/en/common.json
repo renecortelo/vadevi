@@ -186,7 +186,11 @@
     "originTitle": "Where it comes from",
     "mapLabel": "Map showing {{place}}",
     "mapSource": "Map: Natural Earth",
-    "mapCountryOnly": "The exact area is not in the library yet; the map shows the country."
+    "mapCountryOnly": "The exact area is not in the library yet; the map shows the country.",
+    "mapApproximate": {
+      "area": "Approximate point: the centre of the area the appellation lies in.",
+      "place": "Approximate point: the town the appellation is named after."
+    }
   },
   "space": {
     "switchLabel": "Active Space",

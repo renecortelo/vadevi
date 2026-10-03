@@ -410,7 +410,7 @@ export async function getLibraryRegion(
   const region = await database
     .prepare(
       `SELECT id, eambrosia_id, name, country_code, gi_type, registered_on, legal_url,
-        latitude, longitude, wikidata_id
+        latitude, longitude, wikidata_id, point_source
       FROM kb_regions WHERE id = ?`,
     )
     .bind(regionId)
@@ -423,6 +423,7 @@ export async function getLibraryRegion(
       legal_url: string | null;
       longitude: number | null;
       name: string;
+      point_source: "area" | "item" | "place" | null;
       registered_on: string | null;
       wikidata_id: string | null;
     }>();
@@ -493,6 +494,7 @@ export async function getLibraryRegion(
     longitude: region.longitude,
     name: primary,
     otherNames: [...new Set(nameRows.map((row) => row.name).filter((name) => name !== primary))],
+    pointSource: region.point_source,
     registeredOn: region.registered_on,
     summary:
       summary === null
@@ -513,6 +515,9 @@ export async function topicsMentionedIn(database: D1Database, message: string): 
 }
 
 type TopicRow = { category: LibraryTopic["category"]; id: string };
+
+/** The order other languages are tried in when the reader's has nothing. */
+const nearbyLocales = ["es", "ca", "pt-PT", "it", "fr", "nl", "de"];
 
 async function topicsFor(
   database: D1Database,
@@ -562,6 +567,11 @@ async function topicsFor(
     const summary =
       mine.find((row) => row.locale === locale) ??
       mine.find((row) => row.locale === "en") ??
+      // A neighbouring language before a distant one: a Spanish reader is
+      // better served by Catalan than by German.
+      nearbyLocales
+        .map((nearby) => mine.find((row) => row.locale === nearby))
+        .find((row) => row !== undefined) ??
       mine[0] ??
       null;
     return {

@@ -29,7 +29,13 @@ const register = JSON.parse(readFileSync(resolve(cache, "eambrosia.json"), "utf8
 }[];
 const wikidata = JSON.parse(readFileSync(resolve(cache, "wikidata.json"), "utf8")) as Record<
   string,
-  { labels: Record<string, string>; latitude: number | null; longitude: number | null; qid: string }
+  {
+    labels: Record<string, string>;
+    latitude: number | null;
+    longitude: number | null;
+    pointSource?: "area" | "item" | "place" | null;
+    qid: string | null;
+  }
 >;
 const grapes = JSON.parse(readFileSync(resolve("data/kb/grapes.json"), "utf8")) as GrapeEntry[];
 
@@ -53,7 +59,8 @@ for (const row of register) {
   for (let suffix = 2; seen.has(id); suffix += 1) id = `${base}-${suffix}`;
   seen.add(id);
   const linked = wikidata[row.appUniqueId] ?? null;
-  const leadsPath = linked === null ? null : resolve(cache, "leads", `${linked.qid}.json`);
+  const leadsPath =
+    linked === null || linked.qid === null ? null : resolve(cache, "leads", `${linked.qid}.json`);
   const leads =
     leadsPath !== null && existsSync(leadsPath)
       ? (JSON.parse(readFileSync(leadsPath, "utf8")) as Record<
@@ -79,6 +86,7 @@ for (const row of register) {
     latitude: linked?.latitude ?? null,
     legalUrl: `https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/${row.appUniqueId}`,
     longitude: linked?.longitude ?? null,
+    pointSource: linked?.latitude == null ? null : (linked.pointSource ?? "item"),
     name: names[0] ?? row.protectedName,
     names: [
       ...names.map((name) => ({ locale: "*", name, source: "register" as const })),

@@ -145,6 +145,11 @@ export const LibraryRegionSchema = z
     longitude: z.number().nullable(),
     name: z.string(),
     otherNames: z.array(z.string()),
+    /**
+     * Where the point comes from: the wine's own item, or — approximately —
+     * the area it lies in or the town it is named after. Null without one.
+     */
+    pointSource: z.enum(["item", "area", "place"]).nullable(),
     registeredOn: z.string().nullable(),
     summary: z
       .object({

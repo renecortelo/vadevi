@@ -51,6 +51,8 @@ const rioja = {
   ],
   id: "es-rioja",
   latitude: 42.4,
+  // The point is the area's, not the wine's own: approximate, and said so.
+  pointSource: "area" as const,
   legalUrl: "https://ec.europa.eu/geographical-indications-register/eambrosia-public/details/1",
   longitude: -2.6,
   name: "Rioja",
@@ -114,6 +116,7 @@ describe("the wine atlas", () => {
       giType: "PDO",
       latitude: 42.4,
       name: "Rioja",
+      pointSource: "area",
       registeredOn: "1973-07-29",
     });
     expect(region.summary).toMatchObject({ locale: "es", license: "CC-BY-SA-4.0" });
