@@ -130,6 +130,11 @@ export function LibraryRegionPage() {
             >
               {t("library.summarySource")}
             </a>
+            {region.summary.translated
+              ? ` · ${t("library.summaryTranslated")}`
+              : region.summary.locale.split("-")[0] !== locale.split("-")[0]
+                ? ` · ${t("library.summaryOtherLanguage")}`
+                : null}
           </p>
         </section>
       )}

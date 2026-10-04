@@ -339,3 +339,45 @@ describe("a grape read in its own language", () => {
     expect(read.origin).toBe("TR");
   });
 });
+
+describe("a summary taken from a lead", () => {
+  it("ends at a whole sentence, not at a cut, a list's colon or a reference", () => {
+    expect(
+      summaryOf(
+        "Côtes Catalanes is an IGP wine region in Languedoc-Roussillon. Syrah, Carignan and Grenache are common grapes in the",
+      ),
+    ).toBe("Côtes Catalanes is an IGP wine region in Languedoc-Roussillon.");
+    expect(
+      summaryOf(
+        "Côtes de Blaye es un vino con denominación de origen de Burdeos. La comarca está delimitada en los cantones siguientes:",
+      ),
+    ).toBe("Côtes de Blaye es un vino con denominación de origen de Burdeos.");
+    expect(
+      summaryOf(
+        "A casta Colombard é originária da França, onde se usa em aguardentes. Também é cultivada na Califórnia.«Colombard». Vitis International Variety Catalogue.",
+      ),
+    ).toBe(
+      "A casta Colombard é originária da França, onde se usa em aguardentes. Também é cultivada na Califórnia.",
+    );
+    expect(
+      summaryOf(
+        'Pauillac is an appellation within Haut-Médoc in Bordeaux. Hugh Johnson has said, "If one had to single out one commune of Bordeaux to head the list, there would be no argument.',
+      ),
+    ).toBe("Pauillac is an appellation within Haut-Médoc in Bordeaux.");
+    expect(
+      summaryOf(
+        "Alezio ist ein Rotwein aus der Provinz Lecce. Der Wein hat seit 1983 eine „kontrollierte Herkunftsbezeichnung“ (DOC).",
+      ),
+    ).toBe(
+      "Alezio ist ein Rotwein aus der Provinz Lecce. Der Wein hat seit 1983 eine „kontrollierte Herkunftsbezeichnung“ (DOC).",
+    );
+  });
+
+  it("keeps a sentence that only lacks its full stop", () => {
+    expect(
+      summaryOf(
+        "La verdejo es una uva blanca de España. Los estudios genéticos descartan esa teoría",
+      ),
+    ).toBe("La verdejo es una uva blanca de España. Los estudios genéticos descartan esa teoría");
+  });
+});

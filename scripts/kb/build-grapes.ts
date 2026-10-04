@@ -106,6 +106,13 @@ const translations = (
   }
 ).grapes;
 
+/** Names given by hand where Wikidata has none (`data/kb/grape-names.json`). */
+const givenNames = (
+  JSON.parse(readFileSync(resolve("data/kb/grape-names.json"), "utf8")) as {
+    grapes: Record<string, Record<string, string>>;
+  }
+).grapes;
+
 const entries: GrapeEntry[] = [];
 const rejected: { field: string; grape: string; reason: string; value: string }[] = [];
 let skipped = 0;
@@ -199,6 +206,10 @@ for (const qid of index) {
     names[locale] =
       label === label.toLowerCase() ? label.charAt(0).toUpperCase() + label.slice(1) : label;
   }
+  // Where Wikidata has no label in a language, a name given by hand.
+  for (const [locale, name] of Object.entries(givenNames[qid] ?? {})) {
+    names[locale === "pt-PT" ? "pt" : locale] ??= name;
+  }
   const summaries: GrapeEntry["summaries"] = {};
   for (const [locale, lead] of Object.entries(raw.leads)) {
     const text = summaryOf(lead);
@@ -217,8 +228,10 @@ for (const qid of index) {
   if (translation !== undefined) {
     for (const [locale, text] of Object.entries(translation.texts)) {
       const summary = { text, translated: true, url: translation.sourceUrl };
-      if (translation.replaces?.includes(locale) === true) summaries[locale] = summary;
-      else summaries[locale] ??= summary;
+      // Stored under Wikipedia's language codes, as the leads are.
+      const key = locale === "pt-PT" ? "pt" : locale;
+      if (translation.replaces?.includes(locale) === true) summaries[key] = summary;
+      else summaries[key] ??= summary;
     }
   }
   // Synonyms: the article's (each quoted), Wikidata's aliases, and the

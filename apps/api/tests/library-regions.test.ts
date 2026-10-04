@@ -26,7 +26,8 @@ const grape = {
   color: "red" as const,
   evidence: [{ field: "regions", quote: "It is the main grape of Rioja wine", value: "Rioja" }],
   id: "tempranillo",
-  names: { en: "Tempranillo", es: "Tempranillo" },
+  // Wikidata's code for Portuguese is "pt"; the app asks for "pt-PT".
+  names: { en: "Tempranillo", es: "Tempranillo", pt: "Aragonez" },
   origin: "ES",
   pairings: [],
   prominence: 31,
@@ -91,9 +92,30 @@ const jerez = {
   wikidataId: null,
 };
 
+// Explained by Catalan Wikipedia only, and translated by hand into Italian.
+const priorat = {
+  ...rioja,
+  eambrosiaId: "PDO-ES-A0234",
+  grapes: [],
+  id: "es-priorat",
+  name: "Priorat",
+  names: [{ locale: "*", name: "Priorat", source: "register" as const }],
+  summaries: {
+    ca: {
+      text: "El Priorat és una denominació d'origen qualificada.",
+      url: "https://ca.wikipedia.org/wiki/DOQ_Priorat",
+    },
+    it: {
+      text: "Il Priorat è una denominazione di origine qualificata.",
+      translated: true,
+      url: "https://ca.wikipedia.org/wiki/DOQ_Priorat",
+    },
+  },
+};
+
 beforeAll(async () => {
   await applyD1Migrations(env.DB, env.TEST_MIGRATIONS);
-  for (const statement of librarySql([grape], "test", undefined, [rioja, jerez])) {
+  for (const statement of librarySql([grape], "test", undefined, [rioja, jerez, priorat])) {
     await env.DB.prepare(statement).run();
   }
 });
@@ -210,5 +232,33 @@ describe("the wine atlas", () => {
     expect(response?.data.citations.map((source) => source.canonicalUrl)).toEqual(
       expect.arrayContaining([rioja.legalUrl, "https://es.wikipedia.org/wiki/Rioja_(vino)"]),
     );
+  });
+});
+
+describe("the library in every language", () => {
+  const region = async (locale: string) =>
+    LibraryRegionResponseSchema.parse(
+      await (
+        await SELF.fetch(`https://vadevi.test/api/v1/library/regions/es-priorat?locale=${locale}`, {
+          headers,
+        })
+      ).json(),
+    ).data;
+
+  it("serves a Spanish reader the Catalan summary when there is no Spanish one", async () => {
+    await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers });
+    expect((await region("es")).summary).toMatchObject({ locale: "ca", translated: false });
+  });
+
+  it("says when a summary is a translation", async () => {
+    expect((await region("it")).summary).toMatchObject({ locale: "it", translated: true });
+  });
+
+  it("names a grape in Portuguese for a pt-PT reader", async () => {
+    const response = await SELF.fetch(
+      "https://vadevi.test/api/v1/library/grapes/tempranillo?locale=pt-PT",
+      { headers },
+    );
+    expect(LibraryGrapeResponseSchema.parse(await response.json()).data.name).toBe("Aragonez");
   });
 });

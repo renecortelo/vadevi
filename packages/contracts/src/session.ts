@@ -2,7 +2,7 @@ import { z } from "@hono/zod-openapi";
 
 const UlidSchema = z.string().regex(/^[0-9A-HJKMNP-TV-Z]{26}$/);
 
-export const SupportedLocaleSchema = z.enum(["ca", "es", "fr", "en", "it", "pt-PT", "nl", "de"]);
+export const SupportedLocaleSchema = z.enum(["es", "ca", "fr", "en", "nl", "pt-PT", "it", "de"]);
 
 /**
  * `system` defers to the operating system. Storing the choice on the account

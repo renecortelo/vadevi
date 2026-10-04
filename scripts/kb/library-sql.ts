@@ -273,7 +273,7 @@ export function libraryTables(
           summary.text,
           summary.url,
           wikipediaLicense,
-          0,
+          summary.translated === true ? 1 : 0,
         ]),
       ),
     ]),

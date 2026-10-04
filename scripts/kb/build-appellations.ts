@@ -58,6 +58,17 @@ function isoDate(value: string | null): string | null {
 }
 
 const entries: RegionEntry[] = [];
+/**
+ * A lead whose first sentence presents another product: Wikidata links La
+ * Mancha's wine to Manchego, whose article mentions the region's wine.
+ */
+function aboutAnotherProduct(lead: string): boolean {
+  const first = lead.split(/(?<=[.!?])\s/)[0] ?? lead;
+  return /\b(cheese|queso|formatge|fromage|formaggio|käse|kaas|queijo|olive oil|aceite de oliva|huile d'olive|olio d'oliva)\b/i.test(
+    first,
+  );
+}
+
 const seen = new Set<string>();
 for (const row of register) {
   if (row.thirdCountry) continue; // Third-country names are protected, not EU places.
@@ -84,7 +95,7 @@ for (const row of register) {
   const summaries: RegionEntry["summaries"] = {};
   for (const [locale, { lead, title }] of Object.entries(leads)) {
     const text = summaryOf(lead);
-    if (text === null || !leadIsAboutWine(lead)) continue;
+    if (text === null || !leadIsAboutWine(lead) || aboutAnotherProduct(lead)) continue;
     summaries[locale] = {
       text,
       url: `https://${locale}.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(" ", "_"))}`,
@@ -228,6 +239,77 @@ for (const entry of entries) {
   }
 }
 console.info(`  ${described} names described by a sentence of their country's wine article.`);
+
+// Texts read and found to be about something else, by hand: Friuli
+// Isonzo's English article redirects to Friuli wine in general, La Clape's
+// articles are those of the former Coteaux du Languedoc AOC, and the English
+// leads for Terre Tollesi and Abruzzo call the DOCs grapes.
+const notTheirSummary: Record<string, string[] | "all"> = {
+  EUGI00000002983: ["en"],
+  EUGI00000002941: ["en"],
+  EUGI00000006448: ["en"],
+  EUGI00000014387: "all",
+};
+for (const entry of entries) {
+  const dropped = notTheirSummary[entry.eambrosiaId];
+  if (dropped === "all") entry.summaries = {};
+  else for (const locale of dropped ?? []) delete entry.summaries[locale];
+}
+
+// A text several registered names lead to belongs to the one it is about:
+// Beaune's is not Chorey-lès-Beaune's, nor Bordeaux's Sainte-Foy-Bordeaux's.
+// Titles cannot tell — Wikipedia follows redirects, and "Lessona (wine)"
+// answers with the article on Piedmont wine — so the text itself must name
+// the registered name in full. A shared text that names none of them stays
+// with none; each keeps its point on the map, and its other languages.
+const sharing = new Map<string, RegionEntry[]>();
+for (const entry of entries) {
+  for (const summary of Object.values(entry.summaries)) {
+    sharing.set(summary.text, [...new Set([...(sharing.get(summary.text) ?? []), entry])]);
+  }
+}
+let unshared = 0;
+for (const [text, holders] of sharing) {
+  if (holders.length < 2) continue;
+  const body = ` ${matchKey(transliterate(text))} `;
+  for (const entry of holders) {
+    // Any of its registered names ("Alto Adige", "Südtirol"), but not the
+    // pieces the register's hyphenated names are split into: "Beaune" is in
+    // "Chorey-lès-Beaune" and says nothing of it.
+    const pieces = new Set(entry.name.split("-").map((piece) => matchKey(piece)));
+    const own = entry.names
+      .filter((name) => name.source === "register")
+      .map((name) => matchKey(transliterate(name.name)))
+      .filter((key) => key.length > 2 && (key === matchKey(entry.name) || !pieces.has(key)));
+    if (own.some((key) => body.includes(` ${key} `))) continue;
+    for (const [locale, summary] of Object.entries(entry.summaries)) {
+      if (summary.text === text) delete entry.summaries[locale];
+    }
+    unshared += 1;
+  }
+}
+console.info(`  ${unshared} summaries dropped: the text belongs to another registered name.`);
+
+// Where Wikipedia explains a registered name in some of the app's languages
+// and not others, a faithful translation of its lead fills the others,
+// marked as such (`data/kb/appellation-translations.json`, by register id).
+const translations = (
+  JSON.parse(readFileSync(resolve("data/kb/appellation-translations.json"), "utf8")) as {
+    regions: Record<string, { from: string; sourceUrl: string; texts: Record<string, string> }>;
+  }
+).regions;
+let translated = 0;
+for (const entry of entries) {
+  const translation = translations[entry.eambrosiaId];
+  if (translation === undefined) continue;
+  for (const [locale, text] of Object.entries(translation.texts)) {
+    const key = locale === "pt-PT" ? "pt" : locale;
+    if (entry.summaries[key] !== undefined) continue;
+    entry.summaries[key] = { text, translated: true, url: translation.sourceUrl };
+    translated += 1;
+  }
+}
+console.info(`  ${translated} summaries translated from another language's article.`);
 
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;

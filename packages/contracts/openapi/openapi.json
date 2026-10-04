@@ -399,13 +399,13 @@
                   "preferredLocale": {
                     "type": "string",
                     "enum": [
-                      "ca",
                       "es",
+                      "ca",
                       "fr",
                       "en",
-                      "it",
-                      "pt-PT",
                       "nl",
+                      "pt-PT",
+                      "it",
                       "de"
                     ]
                   },
@@ -487,13 +487,13 @@
           "preferredLocale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -562,13 +562,13 @@
                   "defaultLocale": {
                     "type": "string",
                     "enum": [
-                      "ca",
                       "es",
+                      "ca",
                       "fr",
                       "en",
-                      "it",
-                      "pt-PT",
                       "nl",
+                      "pt-PT",
+                      "it",
                       "de"
                     ]
                   },
@@ -632,13 +632,13 @@
           "defaultLocale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -668,13 +668,13 @@
           "defaultLocale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -3508,13 +3508,13 @@
           "locale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -6899,13 +6899,13 @@
           "locale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -7554,13 +7554,13 @@
           "locale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -9787,13 +9787,13 @@
           "locale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -9840,13 +9840,13 @@
           "locale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -10812,13 +10812,13 @@
               "locale": {
                 "type": "string",
                 "enum": [
-                  "ca",
                   "es",
+                  "ca",
                   "fr",
                   "en",
-                  "it",
-                  "pt-PT",
                   "nl",
+                  "pt-PT",
+                  "it",
                   "de"
                 ]
               },
@@ -10910,13 +10910,13 @@
           "locale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           },
@@ -10981,13 +10981,13 @@
           "locale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           }
@@ -11028,13 +11028,13 @@
           "locale": {
             "type": "string",
             "enum": [
-              "ca",
               "es",
+              "ca",
               "fr",
               "en",
-              "it",
-              "pt-PT",
               "nl",
+              "pt-PT",
+              "it",
               "de"
             ]
           }
@@ -11248,13 +11248,17 @@
               },
               "text": {
                 "type": "string"
+              },
+              "translated": {
+                "type": "boolean"
               }
             },
             "required": [
               "license",
               "locale",
               "sourceUrl",
-              "text"
+              "text",
+              "translated"
             ],
             "additionalProperties": false
           },
@@ -14847,13 +14851,13 @@
             "schema": {
               "type": "string",
               "enum": [
-                "ca",
                 "es",
+                "ca",
                 "fr",
                 "en",
-                "it",
-                "pt-PT",
                 "nl",
+                "pt-PT",
+                "it",
                 "de"
               ]
             },
@@ -17449,13 +17453,13 @@
             "schema": {
               "type": "string",
               "enum": [
-                "ca",
                 "es",
+                "ca",
                 "fr",
                 "en",
-                "it",
-                "pt-PT",
                 "nl",
+                "pt-PT",
+                "it",
                 "de"
               ]
             },
@@ -18040,13 +18044,13 @@
             "schema": {
               "type": "string",
               "enum": [
-                "ca",
                 "es",
+                "ca",
                 "fr",
                 "en",
-                "it",
-                "pt-PT",
                 "nl",
+                "pt-PT",
+                "it",
                 "de"
               ],
               "default": "en"
@@ -18106,13 +18110,13 @@
             "schema": {
               "type": "string",
               "enum": [
-                "ca",
                 "es",
+                "ca",
                 "fr",
                 "en",
-                "it",
-                "pt-PT",
                 "nl",
+                "pt-PT",
+                "it",
                 "de"
               ],
               "default": "en"
@@ -18182,13 +18186,13 @@
             "schema": {
               "type": "string",
               "enum": [
-                "ca",
                 "es",
+                "ca",
                 "fr",
                 "en",
-                "it",
-                "pt-PT",
                 "nl",
+                "pt-PT",
+                "it",
                 "de"
               ],
               "default": "en"
@@ -18315,13 +18319,13 @@
             "schema": {
               "type": "string",
               "enum": [
-                "ca",
                 "es",
+                "ca",
                 "fr",
                 "en",
-                "it",
-                "pt-PT",
                 "nl",
+                "pt-PT",
+                "it",
                 "de"
               ],
               "default": "en"
@@ -18382,13 +18386,13 @@
             "schema": {
               "type": "string",
               "enum": [
-                "ca",
                 "es",
+                "ca",
                 "fr",
                 "en",
-                "it",
-                "pt-PT",
                 "nl",
+                "pt-PT",
+                "it",
                 "de"
               ],
               "default": "en"

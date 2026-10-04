@@ -366,11 +366,86 @@ export function summaryOf(lead: string, limit = 420, paragraphs = 1): string | n
   if (paragraph.length === 0) return null;
   // A sentence ends at a full stop after a lowercase word or a figure — not
   // after an abbreviation like "D.O." or "Ca.", which would cut it short.
-  const sentences = paragraph.split(/(?<=[a-zß-ÿ0-9)»"]{2}[.!?])\s+(?=[A-ZÀ-ÖØ-Þ¿¡"«(])/);
-  let text = "";
+  // A reference left glued to the text ("Colombard.«Colombard». Vitis
+  // International Variety Catalogue.") is split off as a sentence of its own.
+  const sentences = paragraph.split(
+    /(?<=[a-zß-ÿ0-9)»"]{2}[.!?])\s+(?=[A-ZÀ-ÖØ-Þ¿¡"«(])|(?<=[a-zß-ÿ]{2}\.)(?=«)/,
+  );
+  const kept: string[] = [];
   for (const sentence of sentences) {
-    if (text.length > 0 && text.length + sentence.length > limit) break;
-    text += `${text.length === 0 ? "" : " "}${sentence}`;
+    const length = kept.join(" ").length;
+    if (kept.length > 0 && length + sentence.length > limit) break;
+    kept.push(sentence.trim());
   }
-  return text.trim();
+  // A lead that ends mid-sentence ("common grapes in the"), on a sentence
+  // introducing a list it no longer has ("the following cantons:"), or on a
+  // citation ("Consultado em 21 de maio"), ends at the sentence before. A
+  // sentence that merely lacks its full stop is kept.
+  while (kept.length > 1 && unfinished(kept[kept.length - 1]!)) kept.pop();
+  return kept.join(" ").trim();
+}
+
+const trailingWords = new Set([
+  "a",
+  "al",
+  "an",
+  "and",
+  "da",
+  "das",
+  "de",
+  "dei",
+  "del",
+  "della",
+  "der",
+  "des",
+  "di",
+  "die",
+  "do",
+  "du",
+  "e",
+  "el",
+  "en",
+  "et",
+  "het",
+  "i",
+  "in",
+  "la",
+  "le",
+  "les",
+  "lo",
+  "o",
+  "of",
+  "on",
+  "the",
+  "to",
+  "un",
+  "una",
+  "und",
+  "van",
+  "y",
+]);
+
+function unfinished(sentence: string): boolean {
+  const trimmed = sentence.trim();
+  // A colon announcing a list, or a bare quoted title left from a reference.
+  if (trimmed.endsWith(":") || /^«[^»]+»\.?$/.test(trimmed)) return true;
+  if (
+    /\b(Consultado (em|el)|Retrieved|Abgerufen am|Consulté le|Consultato il|Variety Catalogue)\b/.test(
+      trimmed,
+    )
+  ) {
+    return true;
+  }
+  // A quotation opened and never closed: the lead was cut in the middle of it.
+  // German opens with „ and closes with “, which opens an English quotation.
+  const count = (pattern: RegExp) => trimmed.match(pattern)?.length ?? 0;
+  if (
+    count(/"/g) % 2 === 1 ||
+    count(/“/g) > count(/”/g) + count(/„/g) ||
+    count(/«/g) > count(/»/g)
+  ) {
+    return true;
+  }
+  const last = trimmed.split(/\s+/).pop()?.toLowerCase() ?? "";
+  return trailingWords.has(last);
 }

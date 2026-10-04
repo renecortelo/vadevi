@@ -157,6 +157,8 @@ export const LibraryRegionSchema = z
         locale: z.string(),
         sourceUrl: z.string().url(),
         text: z.string(),
+        /** A faithful translation of the article at `sourceUrl`. */
+        translated: z.boolean(),
       })
       .strict()
       .nullable(),

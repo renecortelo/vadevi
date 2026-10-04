@@ -18,7 +18,8 @@ export type RegionEntry = {
   pointSource?: "area" | "item" | "place" | null;
   prominence: number;
   registeredOn: string | null;
-  summaries: Record<string, { text: string; url: string }>;
+  /** `translated`: a faithful translation of the article at `url`. */
+  summaries: Record<string, { text: string; translated?: boolean; url: string }>;
   wikidataId: string | null;
 };
 

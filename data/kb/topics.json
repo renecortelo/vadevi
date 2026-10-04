@@ -267,6 +267,11 @@
       "pt": {
         "text": "O vinho rosé ou rosado é um tipo de vinho que apresenta coloração rosada, intermediária entre os tintos e os brancos. Esta cor pode variar de um laranja pálido a um púrpura vívido, dependendo das uvas utilizadas e técnicas de fermentação. O rosé é resultante da fermentação do suco ou mosto extraído de uvas pretas ou tintas na qual há um curto contato das cascas com o mosto, com a finalidade de se atribuir um leve toque rosado de cor e sabor levemente tânico à bebida.",
         "url": "https://pt.wikipedia.org/wiki/Vinho_ros%C3%A9"
+      },
+      "it": {
+        "text": "Il rosato è un tipo di vino che prende un po' del colore delle bucce dell'uva, ma non abbastanza da essere considerato un vino rosso. Potrebbe essere il tipo di vino più antico conosciuto, perché è il più semplice da produrre con il metodo del contatto con le bucce. Il colore rosa può andare da un pallido arancio «buccia di cipolla» a un vivace quasi viola, secondo i vitigni e le tecniche di vinificazione. Di solito il vino è etichettato rosé nei paesi di lingua francese, portoghese e inglese, rosado in spagnolo, rosat in catalano e rosato in italiano. Ci sono tre modi principali di produrre il rosato: il contatto con le bucce, il salasso (saignée) e il taglio. I rosati possono essere fermi, frizzanti o spumanti, con una vasta gamma di dolcezza, dai provenzali molto secchi ai dolci White Zinfandel e blush. Si producono con una grande varietà di uve e si trovano in tutto il mondo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ros%C3%A9"
       }
     },
     "wikidataId": "Q12979"
@@ -375,6 +380,16 @@
       "nl": {
         "text": "Met oranje wijn wordt wijn van witte druiven bedoeld die geen witte wijn oplevert – maar door langdurig contact met de druivenschillen – amberkleurig kan zijn. De druivenschillen van de witte druiven blijven – net als bij rode wijn – in contact met de most. Deze manier van wijn maken is anders dan de conventionele wittewijnproductie, waarbij de druiven geperst worden en vervolgens de druivenschillen en druivenpitten verwijderd worden voordat de fermentatie begint. De druivenschillen bevatten – naast natuurlijke gistcellen – natuurlijke kleurstoffen, fenolen en tannines die normaal als niet gewenst beschouwd worden in witte wijnen. Voor rode wijnen is het contact met de druivenschillen en maceratie juist het proces dat de wijn zijn kleur, smaak en textuur geeft.",
         "url": "https://nl.wikipedia.org/wiki/Oranje_wijn"
+      },
+      "pt": {
+        "text": "O vinho laranja, também conhecido como vinho branco com contacto com as películas, vinho branco fermentado com as películas ou vinho âmbar, é um tipo de vinho feito com uvas brancas em que as películas não se retiram, mas ficam em contacto com o mosto durante dias ou até meses, como é mais típico nos tintos. Isto contrasta com a vinificação habitual dos brancos, em que se esmagam as uvas e se separa depressa o mosto das películas para a cuba de fermentação. As películas contêm pigmentos, fenóis e taninos que normalmente se consideram indesejáveis nos brancos, enquanto nos tintos o contacto com as películas e a maceração são uma parte essencial da vinificação, que dá ao vinho tinto a sua cor, o seu sabor e a sua textura. Os vinhos laranja tendem a ser vinhos naturais (ou de intervenção mínima).",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Orange_wine"
+      },
+      "it": {
+        "text": "Il vino arancione, noto anche come vino bianco macerato sulle bucce, vino bianco fermentato con le bucce o vino ambrato, è un tipo di vino fatto con uve a bacca bianca in cui le bucce non vengono tolte, ma restano a contatto con il mosto per giorni o anche mesi, come è più tipico dei rossi. Ciò contrasta con la vinificazione abituale dei bianchi, in cui l'uva viene pigiata e il mosto viene separato in fretta dalle bucce per passare nel recipiente di fermentazione. Le bucce contengono pigmenti, fenoli e tannini che di norma si considerano indesiderati nei bianchi, mentre nei rossi il contatto con le bucce e la macerazione sono una parte fondamentale della vinificazione, che dà al vino rosso colore, sapore e consistenza. I vini arancioni tendono a essere vini naturali (o a intervento minimo).",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Orange_wine"
       }
     },
     "wikidataId": "Q30587928"
@@ -547,7 +562,12 @@
     "names": {
       "de": "Pét Nat",
       "en": "Pét Nat",
-      "fr": "Pét Nat"
+      "fr": "Pét Nat",
+      "es": "Pét nat",
+      "ca": "Pét nat",
+      "nl": "Pét nat",
+      "pt": "Pét nat",
+      "it": "Pét nat"
     },
     "prominence": 2,
     "summaries": {
@@ -561,6 +581,31 @@
       },
       "es": {
         "text": "Se llama pét nat o pétillant naturel a un vino de aguja al que, a diferencia del procedimiento habitual, no se le añade gas carbónico desde fuera, sino que burbujea con el dióxido de carbono que él mismo produce. La denominación francesa pétillant naturel significa «burbujeante natural».",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/P%C3%A9t_Nat"
+      },
+      "fr": {
+        "text": "On appelle pét nat ou pétillant naturel un vin perlant auquel, contrairement au procédé habituel, on n'ajoute pas de gaz carbonique de l'extérieur : il mousse grâce au dioxyde de carbone qu'il produit lui-même. Le nom français pétillant naturel signifie « qui pétille naturellement ».",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/P%C3%A9t_Nat"
+      },
+      "en": {
+        "text": "Pét nat or pétillant naturel is the name for a semi-sparkling wine to which, unlike in the usual process, no carbon dioxide is added from outside: it sparkles with the carbon dioxide it produces itself. The French name pétillant naturel means 'naturally sparkling'.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/P%C3%A9t_Nat"
+      },
+      "nl": {
+        "text": "Pét nat of pétillant naturel heet een parelwijn waaraan, anders dan bij de gebruikelijke werkwijze, geen koolzuur van buitenaf wordt toegevoegd: hij bruist door het koolzuurgas dat hij zelf produceert. De Franse naam pétillant naturel betekent 'natuurlijk parelend'.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/P%C3%A9t_Nat"
+      },
+      "pt": {
+        "text": "Chama-se pét nat ou pétillant naturel a um vinho frisante ao qual, ao contrário do processo habitual, não se acrescenta gás carbónico de fora: faz espuma com o dióxido de carbono que ele próprio produz. O nome francês pétillant naturel significa 'naturalmente efervescente'.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/P%C3%A9t_Nat"
+      },
+      "it": {
+        "text": "Si chiama pét nat o pétillant naturel un vino frizzante al quale, a differenza del procedimento abituale, non si aggiunge anidride carbonica dall'esterno: spuma grazie all'anidride carbonica che produce da sé. Il nome francese pétillant naturel significa 'frizzante naturale'.",
         "translated": true,
         "url": "https://de.wikipedia.org/wiki/P%C3%A9t_Nat"
       }
@@ -699,7 +744,8 @@
       "it": "Fino (vino)",
       "de": "Fino",
       "fr": "Fino",
-      "pt": "Fino"
+      "pt": "Fino",
+      "ca": "Fino"
     },
     "prominence": 5,
     "summaries": {
@@ -717,6 +763,26 @@
       },
       "ca": {
         "text": "El fino és un vi generós propi del Marc de Jerez i de Montilla-Moriles, a Andalusia (Espanya). És de color or pàl·lid, de gust sec i molt aromàtic. La seva graduació alcohòlica és d'uns 15 graus (el 2025 la UE va autoritzar a abaixar-la). S'ha de beure molt fred. Els raïms que s'utilitzen per elaborar-lo són el palomino i el pedro ximénez. És ideal com a aperitiu i per acompanyar pernil, marisc i altres tapes.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Fino"
+      },
+      "fr": {
+        "text": "Le fino est un vin de liqueur (vino generoso) propre au Marco de Jerez et à Montilla-Moriles, en Andalousie (Espagne). Sa couleur est or pâle, son goût sec et il est très aromatique. Son degré d'alcool est d'environ 15 degrés (en 2025, l'UE autorise à l'abaisser). Il se boit très frais. Les cépages utilisés pour l'élaborer sont le palomino et le pedro ximénez. Il est idéal à l'apéritif et pour accompagner le jambon, les fruits de mer et d'autres tapas.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Fino"
+      },
+      "nl": {
+        "text": "Fino is een versterkte wijn (vino generoso) uit het Marco de Jerez en Montilla-Moriles in Andalusië (Spanje). Hij is bleek goudkleurig, droog van smaak en zeer aromatisch. Het alcoholgehalte ligt rond 15 graden (in 2025 stond de EU toe het te verlagen). Hij wordt zeer koud gedronken. De druiven waarvan hij wordt gemaakt zijn palomino en pedro ximénez. Hij is ideaal als aperitief en bij ham, schaal- en schelpdieren en andere tapas.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Fino"
+      },
+      "pt": {
+        "text": "O fino é um vinho generoso próprio do Marco de Jerez e de Montilla-Moriles, na Andaluzia (Espanha). A sua cor é ouro pálido, o sabor seco e é muito aromático. O teor alcoólico ronda os 15 graus (em 2025 a UE autorizou a baixá-lo). Deve beber-se muito frio. As castas usadas para o fazer são a palomino e a pedro ximénez. É ideal como aperitivo e para acompanhar presunto, marisco e outras tapas.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Fino"
+      },
+      "de": {
+        "text": "Der Fino ist ein Likörwein (vino generoso) aus dem Marco de Jerez und aus Montilla-Moriles in Andalusien (Spanien). Er ist blassgolden, trocken im Geschmack und sehr aromatisch. Sein Alkoholgehalt liegt bei etwa 15 Grad (2025 erlaubte die EU, ihn zu senken). Er wird sehr kalt getrunken. Die Rebsorten, aus denen er bereitet wird, sind Palomino und Pedro Ximénez. Er eignet sich ideal als Aperitif und zu Schinken, Meeresfrüchten und anderen Tapas.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Fino"
       }
@@ -827,6 +893,11 @@
       "pt": {
         "text": "Vinhos de sobremesa são aqueles vinhos servidos tipicamente com sobremesas, embora possam ser saboreados sozinhos, isto é sem o acompanhamento de comida. São frequentemente vinhos doces tais como os Muscat e Sauternes, Tokaji Aszú, Eiswein, Gewürztraminer, Spätlese, Auslese, Beerenauslese, Bermet, Trockenbeerenauslese e Commandaria ou vinhos fortificados tais como o xerez, Porto e o vin doux naturel. Com frequência, tais vinhos são muito doces e as pessoas não costumam consumi-los em grandes quantidades. Por esta razão, vinhos de sobremesa são populares em garrafas pequenas, de 375 ml. Não existe uma definição simples de um vinho de sobremesa. No Reino Unido, um vinho de sobremesa é considerado qualquer vinho doce bebido com uma refeição, em oposição ao vinho branco fortificado. Legalmente, nos Estados Unidos, vinho de sobremesa é um vinho com teor alcoólico de 14° ou superior.",
         "url": "https://pt.wikipedia.org/wiki/Vinho_de_sobremesa"
+      },
+      "it": {
+        "text": "I vini da dessert, nel Regno Unito talvolta chiamati pudding wines, sono vini dolci serviti di solito con il dessert. Non esiste una definizione semplice di vino da dessert. Nel Regno Unito si considera vino da dessert qualsiasi vino dolce bevuto durante il pasto, a differenza dei vini fortificati bianchi (sherry fino e amontillado) bevuti prima del pasto e dei fortificati rossi (porto e madera) bevuti dopo. Così la maggior parte dei vini fortificati si considera distinta dai vini da dessert, ma alcuni bianchi fortificati meno alcolici, come lo sherry Pedro Ximénez e il Muscat de Beaumes-de-Venise, sono considerati vini da dessert onorari. Negli Stati Uniti, invece, il vino da dessert è definito per legge come qualsiasi vino con più del 14% di alcol in volume, il che include tutti i vini fortificati, che di conseguenza sono tassati di più.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Dessert_wine"
       }
     },
     "wikidataId": "Q1200945"
@@ -850,7 +921,9 @@
       "nl": "Restsuiker",
       "de": "Geschmacksangabe (Wein)",
       "it": "Dolcezza del vino",
-      "es": "Dulzor del vino"
+      "es": "Dulzor del vino",
+      "ca": "Dolçor del vi",
+      "pt": "Doçura do vinho"
     },
     "prominence": 10,
     "summaries": {
@@ -878,6 +951,16 @@
         "text": "La dolçor d'un vi es determina subjectivament per la interacció de diversos factors, entre els quals la quantitat de sucre, però també els nivells relatius d'alcohol, àcids i tanins. Els sucres i l'alcohol potencien la dolçor del vi, mentre que els components àcids hi aporten acidesa i els tanins, amargor. Aquests principis els va descriure per primera vegada Émile Peynaud el 1987 a El gust del vi.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Dulzor_del_vino"
+      },
+      "nl": {
+        "text": "Hoe zoet een wijn is, wordt subjectief bepaald door het samenspel van verschillende factoren: de hoeveelheid suiker, maar ook de verhouding van alcohol, zuren en tannines. Suikers en alcohol versterken de zoetheid van wijn, terwijl de zure bestanddelen zuurheid geven en de bittere tannines bitterheid. Deze principes werden voor het eerst beschreven in het werk van Émile Peynaud uit 1987, De smaak van wijn.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Dulzor_del_vino"
+      },
+      "pt": {
+        "text": "A doçura de um vinho determina-se subjetivamente pela interação de vários fatores, incluindo a quantidade de açúcar, mas também os níveis relativos de álcool, ácidos e taninos. Os açúcares e o álcool realçam a doçura do vinho, enquanto os componentes ácidos causam acidez e os taninos amargos, amargor. Estes princípios foram descritos pela primeira vez na obra de Émile Peynaud de 1987, O gosto do vinho.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Dulzor_del_vino"
       }
     },
     "wikidataId": "Q1517946"
@@ -896,7 +979,10 @@
       "en": "Late harvest wine",
       "es": "Vendimia tardía",
       "fr": "Vin de raisins surmûris",
-      "ca": "Vi dolç de raïm sobremadurat"
+      "ca": "Vi dolç de raïm sobremadurat",
+      "nl": "Late oogst",
+      "it": "Vendemmia tardiva",
+      "de": "Späte Lese"
     },
     "prominence": 10,
     "summaries": {
@@ -919,6 +1005,21 @@
       "pt": {
         "text": "Os vinhos de colheita tardia (late harvest, em inglês e cosecha tardia, em espanhol) são vinhos geralmente doces, ditos de sobremesa, produzidos a partir de uvas que são deixadas na videira várias semanas após a data ideal de colheita. Este processo resulta na desidratação e no consequente aumento da concentração de açúcar. Existem diversos métodos para produzir vinhos de colheita tardia. Entre eles, o mais tradicional tira partido da chamada \"podridão nobre\", o fungo Botrytis cinerea, que se desenvolve em climas úmidos, resultando na desidratação das uvas. Alguns dos mais famosos vinhos doces naturais são produzidas dessa forma, destacando-se, entre estes, os franceses Sauternes e os húngaros Tokaji. Actualmente, produzem-se vinhos de colheita tardia um pouco por todo o mundo, na Europa e no Novo mundo.",
         "url": "https://pt.wikipedia.org/wiki/Colheita_tardia"
+      },
+      "nl": {
+        "text": "Late oogst is wijn van druiven die langer dan gewoonlijk aan de stok zijn gelaten. Een late oogst wijst meestal op een zoete dessertwijn, zoals een riesling van late oogst. Druiven van late oogst lijken vaak meer op rozijnen, maar zijn aan de stok op natuurlijke wijze ingedroogd. Botrytis cinerea, of edele rotting, is een schimmel waardoor druiven bijna al hun water verliezen. Wijnen van door botrytis aangetaste druiven zijn over het algemeen zeer zoet.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Late_harvest"
+      },
+      "it": {
+        "text": "La vendemmia tardiva è il vino fatto con uve lasciate sulla vite più a lungo del solito. Di solito indica un vino dolce da dessert, come un riesling vendemmia tardiva. Le uve di vendemmia tardiva somigliano spesso all'uva passa, ma si sono disidratate naturalmente sulla vite. La Botrytis cinerea, o muffa nobile, è una muffa che fa perdere all'uva quasi tutta la sua acqua. I vini fatti con uve colpite dalla botrite sono in genere molto dolci.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Late_harvest"
+      },
+      "de": {
+        "text": "Als späte Lese bezeichnet man Wein aus Trauben, die länger als üblich am Stock gelassen wurden. Eine späte Lese weist meist auf einen süßen Dessertwein hin, etwa einen Riesling aus später Lese. Spät gelesene Trauben ähneln oft Rosinen, sind aber am Stock auf natürliche Weise eingetrocknet. Botrytis cinerea, die Edelfäule, ist ein Schimmelpilz, durch den die Trauben fast ihr ganzes Wasser verlieren. Weine aus von Botrytis befallenen Trauben sind im Allgemeinen sehr süß.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Late_harvest"
       }
     },
     "wikidataId": "Q3655986"
@@ -1014,6 +1115,11 @@
       },
       "ca": {
         "text": "El vi de pansa o vi de palla és un vi fet amb raïm que s'ha assecat prèviament per concentrar-ne el suc. El resultat s'assembla al vi de gel, però es pot elaborar en climes més càlids. El mètode clàssic consisteix a assecar els raïms sobre estores de palla al sol, però en alguns llocs s'assequen sota teulada, de vegades penjats, i la palla es pot substituir per prestatges moderns. La tècnica és anterior a l'època romana, i la major part d'aquest tipus de vi es fa al nord d'Itàlia i als Alps francesos. Els vins de pansa solen ser blancs de dolços a molt dolços, semblants en densitat i dolçor al Sauternes i de llarga vida. El baix rendiment i la feina que demana el mètode fan que siguin força cars.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vino_de_pasas"
+      },
+      "pt": {
+        "text": "O vinho de passas ou vinho de palha é um vinho feito com uvas previamente secas para concentrar o seu sumo. O resultado é parecido com o vinho de gelo, mas pode fazer-se em climas mais quentes. O método clássico consiste em secar os cachos sobre esteiras de palha ao sol, mas nalguns lugares secam-se sob teto, às vezes pendurados, e a palha pode ser substituída por prateleiras modernas. A técnica é anterior à época romana, e a maior parte da produção deste tipo de vinho dá-se no norte de Itália e nos Alpes franceses. Os vinhos de passas costumam ser brancos de doces a muito doces, parecidos em densidade e doçura com o Sauternes e de longa vida. O baixo rendimento e o muito trabalho do método fazem com que sejam bastante caros.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Vino_de_pasas"
       }
@@ -1126,7 +1232,10 @@
       "fr": "Vin jaune",
       "en": "Vin jaune",
       "es": "Vin jaune",
-      "nl": "Vin jaune"
+      "nl": "Vin jaune",
+      "ca": "Vin jaune",
+      "pt": "Vin jaune",
+      "it": "Vin jaune"
     },
     "prominence": 14,
     "summaries": {
@@ -1152,6 +1261,16 @@
       },
       "ca": {
         "text": "El vin jaune o vi groc és un vi blanc de la varietat savagnin. Madura sis anys i tres mesos en bota i té un color groc que li dona el nom. És típic de la regió francesa del Jura (Franc Comtat). Després de la fermentació del most, el vi es guarda en una bota de roure usada de 228 litres, que no s'omple del tot, de manera que hi quedi una mica d'aire. El 2011 es va vendre una ampolla d'aquest vi de l'any 1774 per 57.000 euros.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vin_jaune"
+      },
+      "pt": {
+        "text": "O vin jaune ou vinho amarelo é um vinho branco da casta savagnin. Amadurece seis anos e três meses em barrica e tem uma cor amarela que lhe dá o nome. É típico da região francesa do Jura (Franco-Condado). Depois da fermentação do mosto, o vinho guarda-se numa barrica de carvalho usada de 228 litros, que não se enche por completo, de modo que fique ainda um pouco de ar. Em 2011 vendeu-se uma garrafa deste vinho do ano de 1774 por 57 000 euros.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vin_jaune"
+      },
+      "it": {
+        "text": "Il vin jaune o vino giallo è un vino bianco del vitigno savagnin. Matura per sei anni e tre mesi in botte e ha un colore giallo che gli dà il nome. È tipico della regione francese del Giura (Franca Contea). Dopo la fermentazione del mosto, il vino si conserva in una botte di rovere usata da 228 litri, che non viene riempita del tutto, in modo che resti ancora un po' d'aria. Nel 2011 una bottiglia di questo vino dell'anno 1774 è stata venduta per 57 000 euro.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Vin_jaune"
       }
@@ -1247,6 +1366,11 @@
         "text": "El vin santo o vino santo és un tipus de vi de postres italià. Tradicionals a la Toscana, aquests vins s'elaboren sovint amb varietats blanques com el trebbiano i la malvasia, tot i que també es pot fer servir sangiovese per a una variant rosada anomenada occhio di pernice ('ull de perdiu'). Es poden considerar vins de palla (passito), perquè la majoria de vegades s'elaboren assecant els raïms acabats de veremar sobre estores de palla en un lloc temperat i ben ventilat. Tot i que tècnicament és un vi de postres, el nivell de dolçor va des de completament sec (com un fino de Jerez) fins a extremadament dolç. Tot i que es creu que es va originar a la Toscana, se'n troben exemples per tota Itàlia, i és un estil autoritzat en diverses DOC i IGT.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Vin_santo"
+      },
+      "pt": {
+        "text": "O vin santo ou vino santo é um tipo de vinho de sobremesa italiano. Tradicionais da Toscana, estes vinhos fazem-se muitas vezes com castas brancas como o trebbiano e a malvasia, embora também se possa usar sangiovese para uma variante rosada chamada occhio di pernice ('olho de perdiz'). Podem considerar-se vinhos de palha (passito), porque na maioria das vezes se fazem secando as uvas acabadas de vindimar sobre esteiras de palha num lugar temperado e bem ventilado. Embora tecnicamente seja um vinho de sobremesa, o nível de doçura vai de completamente seco (como um fino de Jerez) a extremamente doce. Embora se julgue que este tipo de vinho nasceu na Toscana, encontram-se exemplos em toda a Itália, e é um estilo autorizado em várias DOC e IGT.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vin_santo"
       }
     },
     "wikidataId": "Q1547114"
@@ -1259,7 +1383,11 @@
       "fr": "Vin casher",
       "en": "Kosher wine",
       "nl": "Koosjere wijn",
-      "pt": "Vinho kosher"
+      "pt": "Vinho kosher",
+      "es": "Vino kosher",
+      "ca": "Vi caixer",
+      "it": "Vino kosher",
+      "de": "Koscherer Wein"
     },
     "prominence": 12,
     "summaries": {
@@ -1286,6 +1414,16 @@
       },
       "ca": {
         "text": "El vi caixer (en hebreu, יין כשר, yáyin kashér) és el vi elaborat d'acord amb la halakhà, i més concretament amb el caixrut, de manera que els jueus el puguin beneir i beure. El vi té una gran importància en el judaisme, ja que s'utilitza en diverses cerimònies jueves, sobretot en el kidduix. Per considerar-se caixer, jueus que observen el dissabte han de supervisar tot el procés d'elaboració i encarregar-se'n en persona de bona part, des que el raïm es carrega a la trituradora fins que el vi acabat s'embotella i se segella. A més, tots els ingredients utilitzats, inclosos els clarificants, han de ser caixer. El vi «caixer per a Péssah» s'ha d'haver mantingut sense contacte amb productes de cereal fermentats o llevats, categoria que inclou molts additius i agents industrials.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kosher_wine"
+      },
+      "it": {
+        "text": "Il vino kosher (in ebraico יין כשר, yáyin kashér) è il vino prodotto secondo la halakhah, e più precisamente secondo la kasherut, in modo che gli ebrei possano benedirlo e berlo. Il vino ha grande importanza nell'ebraismo, perché si usa in diverse cerimonie ebraiche, soprattutto nel kiddush. Per essere considerato kosher, ebrei osservanti del sabato devono sorvegliare l'intero processo di vinificazione e occuparsi di persona di gran parte di esso, da quando l'uva viene caricata nella pigiatrice fino a quando il vino finito viene imbottigliato e sigillato. Inoltre, tutti gli ingredienti usati, compresi i chiarificanti, devono essere kosher. Il vino «kosher per Pesach» deve essere stato tenuto lontano da prodotti di cereali lievitati o fermentati, una categoria che comprende molti additivi e agenti industriali.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kosher_wine"
+      },
+      "de": {
+        "text": "Koscherer Wein (hebräisch יין כשר, jajin kascher) ist Wein, der nach der Halacha und genauer nach der Kaschrut hergestellt wird, sodass Juden ihn segnen und trinken dürfen. Wein hat im Judentum große Bedeutung, da er bei mehreren jüdischen Zeremonien verwendet wird, vor allem beim Kiddusch. Damit ein Wein als koscher gilt, müssen den Sabbat haltende Juden die gesamte Weinbereitung überwachen und einen großen Teil davon selbst ausführen, vom Einfüllen der Trauben in die Traubenmühle bis zum Abfüllen und Verschließen des fertigen Weins. Außerdem müssen alle verwendeten Zutaten, auch die Schönungsmittel, koscher sein. Wein, der als „koscher für Pessach“ bezeichnet wird, darf nicht mit gesäuerten oder gegorenen Getreideerzeugnissen in Berührung gekommen sein, einer Kategorie, zu der viele industrielle Zusatz- und Hilfsstoffe gehören.",
         "translated": true,
         "url": "https://en.wikipedia.org/wiki/Kosher_wine"
       }
@@ -1316,7 +1454,8 @@
       "de": "Naturwein",
       "ca": "Vi natural",
       "it": "Vino naturale",
-      "nl": "Natuurwijn"
+      "nl": "Natuurwijn",
+      "pt": "Vinho natural"
     },
     "prominence": 14,
     "summaries": {
@@ -1346,6 +1485,11 @@
       },
       "ca": {
         "text": "El vi natural és el vi obtingut amb la mínima intervenció possible, tant en el conreu de la vinya i l'obtenció del raïm com en l'elaboració al celler i la seva transformació en vi. El terme s'utilitza sobretot per distingir aquest tipus de vi del vi ecològic, que s'elabora amb raïm d'agricultura ecològica però que pot fer servir tota mena de tècniques i additius dins dels límits legals. La definició de vi natural genera força controvèrsia i ha rebut moltes crítiques. Fora de França no hi ha cap definició legal ni organismes que el certifiquin, ni sembla que sigui la voluntat dels viticultors. Tampoc no hi ha unanimitat sobre la definició ni entre els crítics ni entre els mateixos elaboradors, sobretot pel que fa a què es considera un nivell acceptable d'intervenció.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vino_natural"
+      },
+      "pt": {
+        "text": "O vinho natural é o vinho obtido com a mínima intervenção possível, tanto no cultivo da vinha e na obtenção das uvas como na elaboração na adega e na sua transformação em vinho. O termo usa-se sobretudo para distinguir este tipo de vinho do vinho biológico, que se faz com uvas de agricultura biológica, mas pode ser elaborado com todo o tipo de técnicas e aditivos dentro dos limites legais. A definição de vinho natural gera bastante controvérsia e tem recebido muitas críticas. Fora de França não há uma definição legal nem organismos que o certifiquem, nem parece ser essa a vontade dos viticultores. Também não há unanimidade quanto à definição, nem entre os críticos nem entre os próprios produtores, sobretudo quanto ao que se considera um nível aceitável de intervenção.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Vino_natural"
       }
@@ -1386,7 +1530,10 @@
       "en": "Organic wine",
       "fr": "Vin biologique",
       "nl": "Biologische wijn",
-      "es": "Vino orgánico"
+      "es": "Vino orgánico",
+      "ca": "Vi ecològic",
+      "pt": "Vinho biológico",
+      "it": "Vino biologico"
     },
     "prominence": 7,
     "summaries": {
@@ -1410,6 +1557,21 @@
         "text": "El vi orgànic, també anomenat vi ecològic, és el vi elaborat amb raïm conreat segons els principis de l'agricultura orgànica, que exclouen l'ús de fertilitzants químics artificials, pesticides, fungicides i herbicides. La definició legal de vi orgànic varia d'un país a l'altre, i la Unió Europea estableix normes harmonitzades per a tots els seus estats membres. Segons dades del sector, hi ha aproximadament entre 1.500 i 2.000 productors de vi ecològic al món, incloses les marques de viticultors, amb més de 885 cellers ecològics només a França. El 2022 el mercat mundial dels vins orgànics es va valorar en més de 10.600 milions de dòlars nord-americans, i per al 2031 se'n preveu un creixement del 172%.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Vino_org%C3%A1nico"
+      },
+      "nl": {
+        "text": "Biologische wijn, ook ecologische wijn genoemd, is wijn gemaakt van druiven die zijn geteeld volgens de principes van de biologische landbouw, die het gebruik van kunstmatige chemische meststoffen, pesticiden, fungiciden en herbiciden uitsluiten. De wettelijke definitie van biologische wijn verschilt van land tot land, en de Europese Unie stelt geharmoniseerde regels vast voor al haar lidstaten. Volgens gegevens uit de sector zijn er wereldwijd ongeveer 1500 tot 2000 producenten van biologische wijn, merken van wijnmakers inbegrepen, met alleen al in Frankrijk meer dan 885 biologische wijnhuizen. In 2022 werd de wereldmarkt voor biologische wijnen gewaardeerd op meer dan 10.600 miljoen Amerikaanse dollar, en voor 2031 wordt een groei van 172% verwacht.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vino_org%C3%A1nico"
+      },
+      "pt": {
+        "text": "O vinho biológico, também chamado vinho ecológico, é o vinho feito com uvas cultivadas segundo os princípios da agricultura biológica, que excluem o uso de fertilizantes químicos artificiais, pesticidas, fungicidas e herbicidas. A definição legal de vinho biológico varia de país para país, e a União Europeia estabelece normas harmonizadas para todos os seus Estados-Membros. Segundo dados do setor, há aproximadamente entre 1500 e 2000 produtores de vinho biológico no mundo, incluindo as marcas de viticultores, com mais de 885 adegas biológicas só em França. Em 2022, o mercado mundial dos vinhos biológicos foi avaliado em mais de 10.600 milhões de dólares norte-americanos, e para 2031 prevê-se um crescimento de 172%.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vino_org%C3%A1nico"
+      },
+      "it": {
+        "text": "Il vino biologico, detto anche vino ecologico, è il vino fatto con uve coltivate secondo i principi dell'agricoltura biologica, che escludono l'uso di fertilizzanti chimici artificiali, pesticidi, fungicidi ed erbicidi. La definizione legale di vino biologico varia da paese a paese, e l'Unione europea stabilisce norme armonizzate per tutti i suoi Stati membri. Secondo dati del settore, nel mondo ci sono all'incirca tra 1500 e 2000 produttori di vino biologico, compresi i marchi dei vignaioli, con più di 885 cantine biologiche nella sola Francia. Nel 2022 il mercato mondiale dei vini biologici è stato valutato oltre 10.600 milioni di dollari statunitensi, e per il 2031 si prevede una crescita del 172%.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vino_org%C3%A1nico"
       }
     },
     "wikidataId": "Q176393"
@@ -1426,7 +1588,12 @@
     "names": {
       "fr": "Vin biodynamique",
       "en": "Biodynamic wine",
-      "it": "Vino biodinamico"
+      "it": "Vino biodinamico",
+      "es": "Vino biodinámico",
+      "ca": "Vi biodinàmic",
+      "nl": "Biodynamische wijn",
+      "pt": "Vinho biodinâmico",
+      "de": "Biodynamischer Wein"
     },
     "prominence": 7,
     "summaries": {
@@ -1449,6 +1616,21 @@
       },
       "ca": {
         "text": "Els vins biodinàmics són vins elaborats amb els mètodes pseudocientífics de l'anomenada agricultura biodinàmica, tant en el conreu del raïm com en el processament posterior a la verema. La producció de vi biodinàmic fa servir mètodes d'agricultura ecològica (per exemple, compost com a fertilitzant i evitar la majoria de pesticides) i, a més, preparats per al sòl segons les fórmules de Rudolf Steiner, un calendari de plantació que depèn de configuracions astrològiques i un tracte de la terra com «un organisme viu i receptiu».",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Biodynamic_wine"
+      },
+      "nl": {
+        "text": "Biodynamische wijnen zijn wijnen gemaakt met de pseudowetenschappelijke methoden van de zogeheten biodynamische landbouw, zowel bij het telen van de druiven als bij de verwerking na de oogst. Bij de productie van biodynamische wijn worden methoden uit de biologische landbouw gebruikt (bijvoorbeeld compost als meststof en het vermijden van de meeste pesticiden), maar ook bodempreparaten volgens de recepten van Rudolf Steiner, een plantkalender die afhangt van astrologische standen, en een behandeling van de aarde als 'een levend en ontvankelijk organisme'.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Biodynamic_wine"
+      },
+      "pt": {
+        "text": "Os vinhos biodinâmicos são vinhos feitos com os métodos pseudocientíficos da chamada agricultura biodinâmica, tanto no cultivo da uva como no processamento depois da vindima. A produção de vinho biodinâmico usa métodos de agricultura biológica (por exemplo, composto como fertilizante e evitar a maioria dos pesticidas) e, além disso, preparados para o solo segundo as fórmulas de Rudolf Steiner, um calendário de plantação que depende de configurações astrológicas e um tratamento da terra como «um organismo vivo e recetivo».",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Biodynamic_wine"
+      },
+      "de": {
+        "text": "Biodynamische Weine sind Weine, die mit den pseudowissenschaftlichen Methoden der sogenannten biologisch-dynamischen Landwirtschaft hergestellt werden, sowohl beim Anbau der Trauben als auch bei der Verarbeitung nach der Lese. Die biodynamische Weinerzeugung nutzt Methoden des ökologischen Landbaus (etwa Kompost als Dünger und den Verzicht auf die meisten Pestizide), dazu Bodenpräparate nach den Rezepturen Rudolf Steiners, einen Pflanzkalender, der von astrologischen Konstellationen abhängt, und den Umgang mit der Erde als „lebendem und empfänglichem Organismus“.",
         "translated": true,
         "url": "https://en.wikipedia.org/wiki/Biodynamic_wine"
       }
@@ -1584,7 +1766,14 @@
     "category": "farming",
     "id": "vegan-wine",
     "names": {
-      "en": "Vegetarianism and wine"
+      "en": "Vegetarianism and wine",
+      "es": "Vino vegano",
+      "ca": "Vi vegà",
+      "fr": "Vin végan",
+      "nl": "Veganistische wijn",
+      "pt": "Vinho vegano",
+      "it": "Vino vegano",
+      "de": "Veganer Wein"
     },
     "prominence": 1,
     "summaries": {
@@ -1599,6 +1788,31 @@
       },
       "ca": {
         "text": "Els vins vegetarians o vegans són vins elaborats sense clarificants d'origen animal. L'elaboració del vi sol incloure una clarificació, en què s'afegeixen al vi clarificants que retiren proteïnes, llevats i altres partícules orgàniques en suspensió, i que després es filtren. Els clarificants poden ser d'origen animal, de carbó o d'argila. Entre els animals hi ha la gelatina, la cola de peix, la clara d'ou (albúmina) i la caseïna. L'ús de qualsevol agent animal impedeix que un vi sigui vegà, mentre que els vegetarians poden fer servir productes animals que no requereixen sacrifici, com l'ou i la llet. Com que el clarificant es filtra després, a la majoria de llocs no és obligatori ni està regulat declarar-lo a l'etiqueta. Tot i així, l'ús d'additius d'origen animal en l'elaboració del vi és una qüestió ètica per al vegetarianisme i el veganisme.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vegetarianism_and_wine"
+      },
+      "fr": {
+        "text": "Les vins végétariens ou végans sont des vins élaborés sans agents de collage d'origine animale. L'élaboration du vin comporte souvent un collage (ou « clarification »), au cours duquel on ajoute au vin des agents qui retirent les protéines, les levures et d'autres particules organiques en suspension, et que l'on filtre ensuite. Les agents de collage peuvent être d'origine animale, à base de charbon ou d'argile. Parmi les agents animaux figurent la gélatine, la colle de poisson, le blanc d'œuf (albumine) et la caséine. L'utilisation de tout agent animal empêche un vin d'être végan, tandis que les vins végétariens peuvent encore utiliser des produits animaux qui n'exigent pas d'abattage, comme les œufs et le lait. Comme l'agent de collage est ensuite filtré, l'étiquetage de ces additifs n'est ni obligatoire ni réglementé dans la plupart des pays. L'emploi d'additifs d'origine animale dans l'élaboration du vin est néanmoins une question éthique pour le végétarisme et le véganisme.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vegetarianism_and_wine"
+      },
+      "nl": {
+        "text": "Vegetarische of veganistische wijnen zijn wijnen die zonder klaringsmiddelen van dierlijke oorsprong worden gemaakt. Bij het maken van wijn hoort vaak een klaring, waarbij aan de wijn middelen worden toegevoegd die eiwitten, gist en andere zwevende organische deeltjes verwijderen en die daarna worden weggefilterd. Klaringsmiddelen kunnen dierlijk zijn of op basis van koolstof of klei. Dierlijke klaringsmiddelen zijn onder meer gelatine, vislijm, eiwit (albumine) en caseïne. Het gebruik van een dierlijk middel maakt een wijn niet-veganistisch, terwijl vegetarische wijnen nog dierlijke producten mogen gebruiken waarvoor niet geslacht hoeft te worden, zoals eieren en melk. Omdat het klaringsmiddel er weer uit wordt gefilterd, is het vermelden van deze toevoegingen op het etiket op de meeste plaatsen niet verplicht of geregeld. Het gebruik van dierlijke toevoegingen bij het maken van wijn is wel een ethische kwestie voor vegetariërs en veganisten.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vegetarianism_and_wine"
+      },
+      "pt": {
+        "text": "Os vinhos vegetarianos ou veganos são vinhos feitos sem clarificantes de origem animal. A vinificação inclui muitas vezes uma clarificação (ou colagem), em que se acrescentam ao vinho agentes que retiram proteínas, leveduras e outras partículas orgânicas em suspensão, e que depois se filtram. Os clarificantes podem ser de origem animal, de carvão ou de argila. Entre os animais estão a gelatina, a cola de peixe, a clara de ovo (albumina) e a caseína. O uso de qualquer agente animal impede que um vinho seja vegano, enquanto os vegetarianos podem usar produtos animais que não exigem abate, como os ovos e o leite. Como o clarificante é depois filtrado, a menção destes aditivos no rótulo não é obrigatória nem regulada na maioria dos lugares. Ainda assim, o uso de aditivos de origem animal na vinificação é uma questão ética para o vegetarianismo e o veganismo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vegetarianism_and_wine"
+      },
+      "it": {
+        "text": "I vini vegetariani o vegani sono vini prodotti senza chiarificanti di origine animale. La vinificazione comprende spesso una chiarifica, in cui si aggiungono al vino agenti che rimuovono proteine, lieviti e altre particelle organiche in sospensione e che poi vengono filtrati. I chiarificanti possono essere di origine animale, a base di carbone o di argilla. Tra quelli animali ci sono la gelatina, la colla di pesce, l'albume d'uovo e la caseina. L'uso di qualsiasi agente animale impedisce a un vino di essere vegano, mentre i vini vegetariani possono ancora usare prodotti animali che non richiedono macellazione, come uova e latte. Poiché il chiarificante viene poi filtrato, l'indicazione di questi additivi in etichetta non è obbligatoria né regolata nella maggior parte dei paesi. Tuttavia, l'uso di additivi di origine animale nella vinificazione è una questione etica per il vegetarianismo e il veganismo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vegetarianism_and_wine"
+      },
+      "de": {
+        "text": "Vegetarische oder vegane Weine sind Weine, die ohne Schönungsmittel tierischen Ursprungs hergestellt werden. Zur Weinbereitung gehört oft eine Schönung (Klärung), bei der dem Wein Mittel zugesetzt werden, die Eiweiße, Hefe und andere schwebende organische Teilchen entfernen und danach wieder herausgefiltert werden. Schönungsmittel können tierischen Ursprungs sein oder auf Kohle oder Ton beruhen. Zu den tierischen gehören Gelatine, Hausenblase, Eiklar (Albumin) und Kasein. Jedes tierische Mittel schließt aus, dass ein Wein vegan ist, während vegetarische Weine noch tierische Produkte verwenden dürfen, für die kein Tier geschlachtet werden muss, etwa Eier und Milch. Da das Schönungsmittel wieder herausgefiltert wird, ist die Kennzeichnung dieser Zusätze in den meisten Ländern weder vorgeschrieben noch geregelt. Dennoch ist die Verwendung tierischer Zusätze bei der Weinbereitung eine ethische Frage für Vegetarismus und Veganismus.",
         "translated": true,
         "url": "https://en.wikipedia.org/wiki/Vegetarianism_and_wine"
       }
@@ -1618,7 +1832,11 @@
       "fr": "Cuvaison",
       "en": "Fermentation in winemaking",
       "es": "Fermentación del vino",
-      "pt": "Fermentação na vinificação"
+      "pt": "Fermentação na vinificação",
+      "ca": "Fermentació del vi",
+      "nl": "Gisting van wijn",
+      "it": "Fermentazione del vino",
+      "de": "Gärung des Weins"
     },
     "prominence": 9,
     "summaries": {
@@ -1640,6 +1858,21 @@
       },
       "ca": {
         "text": "La fermentació del vi és un procés biològic fonamental en l'elaboració del vi, en què el most, el suc del raïm acabat de premsar, es transforma en vi. Aquest procés el porten a terme els llevats, uns microorganismes que es troben de manera natural a la pell del raïm i a l'ambient del celler. Durant la fermentació, el llevat actua sobre els sucres del most per crear etanol (l'alcohol etílic) i diòxid de carboni (CO2, com a subproducte). En l'elaboració del vi, la temperatura i la velocitat de la fermentació són factors importants, així com els nivells d'oxigen presents al most a l'inici de la fermentació.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Fermentaci%C3%B3n_del_vino"
+      },
+      "nl": {
+        "text": "De gisting van wijn is een fundamenteel biologisch proces bij het maken van wijn, waarbij de most, het sap van pas geperste druiven, in wijn verandert. Dit proces wordt uitgevoerd door gisten, micro-organismen die van nature op de schil van de druiven en in de omgeving van de kelder voorkomen. Tijdens de gisting zetten de gisten de suikers in de most om in ethanol (gewone alcohol) en koolstofdioxide (CO2, als bijproduct). Bij het maken van wijn zijn de temperatuur en de snelheid van de gisting belangrijke factoren, net als de hoeveelheid zuurstof in de most aan het begin van de gisting.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Fermentaci%C3%B3n_del_vino"
+      },
+      "it": {
+        "text": "La fermentazione del vino è un processo biologico fondamentale della vinificazione, in cui il mosto, il succo dell'uva appena pressata, si trasforma in vino. Il processo è opera dei lieviti, microrganismi che si trovano naturalmente sulla buccia dell'uva e nell'ambiente della cantina. Durante la fermentazione, i lieviti agiscono sugli zuccheri del mosto producendo etanolo (l'alcol etilico) e anidride carbonica (CO2, come sottoprodotto). Nella vinificazione la temperatura e la velocità della fermentazione sono fattori importanti, così come i livelli di ossigeno presenti nel mosto all'inizio della fermentazione.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Fermentaci%C3%B3n_del_vino"
+      },
+      "de": {
+        "text": "Die Gärung des Weins ist ein grundlegender biologischer Vorgang der Weinbereitung, bei dem der Most, der Saft frisch gepresster Trauben, zu Wein wird. Getragen wird er von Hefen, Mikroorganismen, die natürlich auf der Schale der Trauben und in der Umgebung des Kellers vorkommen. Während der Gärung setzen die Hefen den Zucker des Mostes in Ethanol (Trinkalkohol) und Kohlendioxid (CO2, als Nebenprodukt) um. Bei der Weinbereitung sind Temperatur und Geschwindigkeit der Gärung wichtige Faktoren, ebenso der Sauerstoffgehalt des Mostes zu Beginn der Gärung.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Fermentaci%C3%B3n_del_vino"
       }
@@ -1744,7 +1977,13 @@
     "id": "maceration",
     "names": {
       "en": "Maceration",
-      "pt": "Maceração (vinho)"
+      "pt": "Maceração (vinho)",
+      "es": "Maceración",
+      "ca": "Maceració",
+      "fr": "Macération",
+      "nl": "Maceratie",
+      "it": "Macerazione",
+      "de": "Mazeration"
     },
     "prominence": 8,
     "summaries": {
@@ -1763,6 +2002,26 @@
       },
       "ca": {
         "text": "La maceració és el procés d'elaboració en què els compostos fenòlics del raïm (tanins, colorants —antocians— i compostos aromàtics) passen de les pells, els pinyols i les rapes al most. Macerar és estovar en remull, i la maceració és el procés pel qual el vi negre rep el seu color, ja que el suc de raïm tal qual (llevat del dels tintorers) és d'un color gris clar. En els blancs, la maceració s'evita o només es permet de manera molt limitada, amb un breu contacte de les pells amb el suc abans del premsat, cosa més habitual en varietats de menys gust i estructura natural, com el sauvignon blanc i el sémillon. En els rosats, el raïm negre macera una mica amb el most, però no tant com en els negres.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Maceration_(wine)"
+      },
+      "fr": {
+        "text": "La macération est l'étape de la vinification au cours de laquelle les composés phénoliques du raisin (tanins, matières colorantes — les anthocyanes — et composés aromatiques) passent des pellicules, des pépins et des rafles dans le moût. Macérer, c'est ramollir en faisant tremper, et la macération est le processus par lequel le vin rouge prend sa couleur rouge, puisque le jus de raisin brut (à l'exception de celui des teinturiers) est d'une couleur gris clair. Dans l'élaboration des blancs, la macération est évitée ou n'est permise que de façon très limitée, sous la forme d'un bref contact des pellicules avec le jus avant le pressurage, ce qui est plus courant pour des cépages au goût et à la structure naturels moins marqués comme le sauvignon blanc et le sémillon. Pour le rosé, on laisse les raisins noirs macérer un peu avec le moût, mais pas autant que pour le rouge.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Maceration_(wine)"
+      },
+      "nl": {
+        "text": "Maceratie is de stap in het maken van wijn waarbij de fenolische stoffen van de druif (tannines, kleurstoffen — anthocyanen — en smaakstoffen) uit de schillen, pitten en steeltjes in de most terechtkomen. Macereren is week maken door te laten weken, en maceratie is het proces waardoor rode wijn zijn rode kleur krijgt, want onbewerkt druivensap (behalve dat van verfdruiven) is lichtgrijs. Bij witte wijn wordt maceratie vermeden of slechts zeer beperkt toegestaan, als kort schilcontact met het sap vóór het persen, wat vaker gebeurt bij rassen met van nature minder smaak en structuur, zoals sauvignon blanc en sémillon. Voor rosé mogen blauwe druiven een beetje met de most macereren, maar niet zo lang als bij rode wijn.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Maceration_(wine)"
+      },
+      "it": {
+        "text": "La macerazione è la fase della vinificazione in cui i composti fenolici dell'uva (tannini, sostanze coloranti — gli antociani — e composti aromatici) passano dalle bucce, dai vinaccioli e dai raspi nel mosto. Macerare significa ammorbidire per immersione, e la macerazione è il processo con cui il vino rosso prende il suo colore rosso, poiché il succo d'uva grezzo (tranne quello delle uve tintorie) è di un colore grigio chiaro. Nella produzione dei bianchi la macerazione si evita o si permette solo in modo molto limitato, come un breve contatto delle bucce con il succo prima della pressatura, cosa più comune per vitigni dal sapore e dalla struttura naturali meno marcati, come il sauvignon blanc e il sémillon. Per il rosato, le uve a bacca nera macerano un po' con il mosto, ma non quanto per il rosso.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Maceration_(wine)"
+      },
+      "de": {
+        "text": "Die Mazeration ist der Schritt der Weinbereitung, bei dem die phenolischen Stoffe der Traube (Tannine, Farbstoffe — die Anthocyane — und Aromastoffe) aus Schalen, Kernen und Stielen in den Most übergehen. Mazerieren heißt durch Einweichen erweichen, und die Mazeration ist der Vorgang, durch den Rotwein seine rote Farbe erhält, denn roher Traubensaft ist (außer bei Färbertrauben) hellgrau. Bei Weißwein wird die Mazeration vermieden oder nur sehr begrenzt zugelassen, als kurzer Schalenkontakt mit dem Saft vor dem Pressen, was bei Sorten mit von Natur aus weniger Geschmack und Struktur wie Sauvignon blanc und Sémillon häufiger ist. Für Rosé dürfen rote Trauben ein wenig mit dem Most mazerieren, aber nicht so lange wie bei Rotwein.",
         "translated": true,
         "url": "https://en.wikipedia.org/wiki/Maceration_(wine)"
       }
@@ -1962,6 +2221,16 @@
         "text": "Els qvevri (en georgià, ქვევრი; també coneguts com a churi, ჭური, a l'oest de Geòrgia) són grans àmfores de fang que s'utilitzen per a la fermentació, l'emmagatzematge i la criança del vi georgià tradicional. S'assemblen a grans àmfores en forma d'ou sense nanses, que s'enterren sota terra o es col·loquen al terra de grans cellers. Avui la fabricació de qvevri es limita a tres regions georgianes: Kakhètia, Imerètia i Guria. En general, la capacitat dels qvevri georgians va de 2 litres a 6.000-8.000 litres, tot i que antigament els artesans en feien de més grans encara, de 10.000 a 15.000 litres. La UNESCO va incloure aquest mètode antic i tradicional d'emmagatzematge del vi de Geòrgia en el seu patrimoni cultural immaterial.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Tinaja_Kvevri"
+      },
+      "nl": {
+        "text": "Kvevri's (Georgisch: ქვევრი; in West-Georgië ook churi, ჭური, genoemd) zijn grote aardewerken kruiken die worden gebruikt voor het gisten, bewaren en rijpen van traditionele Georgische wijn. Ze lijken op grote eivormige amforen zonder oren en worden in de grond ingegraven of op de vloer van grote kelders gezet. Tegenwoordig worden kvevri's nog maar in drie Georgische regio's gemaakt: Kachetië, Imereti en Goeria. De inhoud van Georgische kvevri's varieert meestal van 2 liter tot 6000-8000 liter, al maakten ambachtslieden in de oudheid nog grotere kruiken die 10.000 tot 15.000 liter konden bevatten. UNESCO nam deze oude, traditionele methode om wijn te bewaren in Georgië op in haar immaterieel cultureel erfgoed.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Tinaja_Kvevri"
+      },
+      "pt": {
+        "text": "Os qvevri (em georgiano, ქვევრი; também conhecidos como churi, ჭური, no oeste da Geórgia) são grandes talhas de barro usadas para a fermentação, o armazenamento e o envelhecimento do vinho georgiano tradicional. Parecem grandes ânforas em forma de ovo sem asas, enterradas no chão ou colocadas no chão de grandes adegas. Hoje o fabrico de qvevri limita-se a três regiões georgianas: Kakheti, Imereti e Guria. Em geral, a capacidade dos qvevri georgianos vai de 2 litros a 6000-8000 litros, embora na Antiguidade os artesãos fizessem talhas ainda maiores, que podiam conter 10.000 a 15.000 litros. A UNESCO incluiu este método antigo e tradicional de guardar o vinho da Geórgia no seu património cultural imaterial.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Tinaja_Kvevri"
       }
     },
     "wikidataId": "Q3649330"
@@ -1994,7 +2263,8 @@
       "es": "Vino de Georgia",
       "nl": "Wijnbouw in Georgië",
       "it": "Viticoltura in Georgia",
-      "ca": "Vi de Geòrgia"
+      "ca": "Vi de Geòrgia",
+      "pt": "Vinho da Geórgia"
     },
     "prominence": 29,
     "summaries": {
@@ -2024,6 +2294,11 @@
       },
       "ca": {
         "text": "El vi de Geòrgia és el vi que produeix la viticultura de Geòrgia, una de les més antigues del món i probablement el bressol del vi. Els primers rastres de viticultura i vinificació, de fa 8.000 anys, es troben en aquest país, amb la producció de vins en qvevri (gerres de fang per al vi). Les vinyes del país ocupen 48.000 ha, amb prop de 500 varietats autòctones i 18 DOP. Els vins georgians són un fenomen cultural ancestral lligat al folklore, la història, la literatura i la música georgianes.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vino_de_Georgia"
+      },
+      "pt": {
+        "text": "O vinho da Geórgia é o vinho produzido pela viticultura da Geórgia, uma das mais antigas do mundo e provavelmente o berço do vinho. Os primeiros vestígios de viticultura e vinificação, com 8000 anos, encontram-se neste país, com a produção de vinhos em qvevri (talhas de barro para vinho). As vinhas do país cobrem 48.000 ha, com cerca de 500 castas autóctones e 18 DOP. Os vinhos georgianos são um fenómeno cultural ancestral ligado ao folclore, à história, à literatura e à música georgianas.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Vino_de_Georgia"
       }
@@ -2082,7 +2357,8 @@
       "it": "Feccia",
       "de": "Geläger",
       "fr": "Lie",
-      "ca": "Solatge de vi"
+      "ca": "Solatge de vi",
+      "pt": "Borras"
     },
     "prominence": 12,
     "summaries": {
@@ -2109,6 +2385,16 @@
       "nl": {
         "text": "Droesem - ook wel depot, moer of bezinksel - is de drab van vaste stoffen die in wijn achterblijft na de fermentatie of na een bepaalde tijd van rijping. De droesem kan bestaan uit wijnkristal, wijnsteenzuur, kleurstoffen en tannine. Het kan een bittere  zanderige smaak geven. De stoffen slaan neer op het laagste punt van het fust of de wijnfles. Wijnflessen die liggend worden bewaard, kunnen over de lengte van de fles een spoor hiervan vertonen. Wanneer de fles rechtop gezet wordt, zal eventuele droesem door de wijn gaan zweven. Daarom dient men de fles met wijn een dag tevoren rechtop te zetten waardoor het droesem zich rond de ziel van de fles zal verzamelen. Hierna kan de wijn eenvoudiger gedecanteerd worden.",
         "url": "https://nl.wikipedia.org/wiki/Droesem"
+      },
+      "pt": {
+        "text": "As borras são depósitos de leveduras mortas ou residuais e de outras partículas que se depositam, ou são arrastadas pela «colagem», no fundo de uma cuba de vinho depois da fermentação e do envelhecimento. Na cerveja, este sedimento chama-se trub e não borras. No entanto, quando se forma durante a fermentação secundária, o sedimento de leveduras chama-se borras tanto no vinho como na cerveja, ou dregs só na cerveja. Este material é a fonte da maior parte do ácido tartárico comercial, usado na cozinha e na química orgânica. O termo inglês lees vem do inglês médio lie, do anglo-francês, do latim medieval lia. O Webster's Third International Dictionary indica para lia «provavelmente de origem celta, aparentado com o irlandês antigo lige (cama), o gaulês legasit (deitou) e o galês llaid (lama)». Normalmente o vinho passa para outro recipiente (trasfega), deixando este sedimento para trás.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Lees_(fermentation)"
+      },
+      "it": {
+        "text": "Le fecce sono depositi di lieviti morti o residui e di altre particelle che precipitano, o vengono trascinate dalla «chiarifica», sul fondo di una vasca di vino dopo la fermentazione e l'invecchiamento. Nella birra questo sedimento si chiama trub, non fecce. Tuttavia, quando si forma durante la fermentazione secondaria, il sedimento di lieviti si chiama fecce sia nel vino sia nella birra, oppure dregs nella sola birra. Questo materiale è la fonte della maggior parte dell'acido tartarico commerciale, usato in cucina e in chimica organica. Il termine inglese lees deriva dall'inglese medio lie, dall'anglo-francese, dal latino medievale lia. Il Webster's Third International Dictionary indica per lia «probabilmente di origine celtica, affine all'antico irlandese lige (letto), al gallico legasit (depose) e al gallese llaid (fango)». Di norma il vino si trasferisce in un altro recipiente (travaso), lasciando dietro di sé questo sedimento.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Lees_(fermentation)"
       }
     },
     "wikidataId": "Q162441"
@@ -2209,7 +2495,8 @@
       "de": "Barrique",
       "es": "Barrica",
       "pt": "Barril de Carvalho",
-      "ca": "Barrica"
+      "ca": "Barrica",
+      "nl": "Barrique"
     },
     "prominence": 28,
     "summaries": {
@@ -2240,6 +2527,11 @@
       "pt": {
         "text": "Pipa é uma vasilha grande de madeira usada para armazenamento de líquidos. É usada para envelhecer os destilados, tornando-os mais ricos em compostos fenólicos. É uma unidade de medida de capacidade para líquidos, de origem europeia, geralmente equivalente a meio tonel ou 21 a 25 almudes. Na Região Demarcada do Douro, a mais antiga região demarcada do mundo, a sua capacidade é de 550 litros.",
         "url": "https://pt.wikipedia.org/wiki/Pipa_(medida)"
+      },
+      "nl": {
+        "text": "Eikenhout wordt bij het maken van wijn gebruikt om de kleur, de smaak, het tanninepatroon en de textuur van wijn te veranderen. Het kan worden ingebracht als vat tijdens de gisting of de rijping, of als losse chips of duigen die worden toegevoegd aan wijn die in een vat van bijvoorbeeld roestvrij staal gist. Eikenhouten vaten kunnen de wijn ook andere eigenschappen geven, door verdamping en een geringe blootstelling aan zuurstof.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Oak_(wine)"
       }
     },
     "wikidataId": "Q808963"
@@ -2260,7 +2552,8 @@
       "nl": "Lageren",
       "fr": "Vieillissement du vin",
       "pt": "Envelhecimento do vinho",
-      "es": "Envejecimiento del vino"
+      "es": "Envejecimiento del vino",
+      "it": "Invecchiamento del vino"
     },
     "prominence": 14,
     "summaries": {
@@ -2291,6 +2584,11 @@
       "pt": {
         "text": "O envelhecimento do vinho é capaz de melhorar a qualidade do vinho. Isso distingue o vinho da maioria dos outros bens de consumo. Embora o vinho seja perecível e possa se deteriorar, reações químicas complexas envolvendo açúcares, ácidos e compostos fenólicos (como taninos) podem alterar o aroma, a cor, a sensação na boca e o sabor do vinho de uma forma que pode ser mais agradável para o degustador. A capacidade de envelhecimento de um vinho é influenciada por muitos fatores, incluindo variedade de uva, vintage, práticas de viticultura, região vinícola e estilo de vinificação. A condição em que o vinho é mantido após o engarrafamento também pode influenciar a capacidade de envelhecimento de um vinho e pode exigir tempo e investimento financeiro significativos.",
         "url": "https://pt.wikipedia.org/wiki/Envelhecimento_do_vinho"
+      },
+      "it": {
+        "text": "L'invecchiamento migliora la qualità di alcuni vini, e questo distingue il vino dalla maggior parte degli altri beni di consumo. Anche se il vino è deperibile e può deteriorarsi, complesse reazioni chimiche che coinvolgono zuccheri, acidi e composti fenolici (come i tannini) possono modificarne l'aroma, il colore, la sensazione in bocca e il sapore in un modo che può risultare più gradevole a chi lo assaggia. La capacità di un vino di invecchiare dipende da molti fattori, tra cui il vitigno, l'annata, le pratiche viticole, la regione e lo stile di vinificazione. Anche le condizioni in cui il vino viene conservato dopo l'imbottigliamento possono influire su come invecchia, e possono richiedere molto tempo e un notevole investimento economico. La qualità di un vino invecchiato varia molto da bottiglia a bottiglia, secondo le condizioni di conservazione e lo stato della bottiglia e del tappo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Aging_of_wine"
       }
     },
     "wikidataId": "Q439086"
@@ -2302,7 +2600,12 @@
     "names": {
       "en": "Clarification and stabilization of wine",
       "fr": "Clarification et stabilisation du vin",
-      "pt": "Clarificação e estabilização do vinho"
+      "pt": "Clarificação e estabilização do vinho",
+      "es": "Clarificación y estabilización del vino",
+      "ca": "Clarificació i estabilització del vi",
+      "nl": "Klaren en stabiliseren van wijn",
+      "it": "Chiarificazione e stabilizzazione del vino",
+      "de": "Klärung und Stabilisierung des Weins"
     },
     "prominence": 6,
     "summaries": {
@@ -2325,6 +2628,21 @@
       },
       "ca": {
         "text": "En l'elaboració del vi, la clarificació i l'estabilització són els processos amb què es retira la matèria insoluble en suspensió abans de l'embotellat. Aquesta matèria pot incloure llevats morts (mares), bacteris, tartrats, proteïnes, pectines, diversos tanins i altres compostos fenòlics, així com restes de pell, polpa, rapa i gomes. La clarificació i l'estabilització poden incloure encolat, filtració, centrifugació, flotació, refrigeració, pasteurització o criança en bóta i trasbalsos.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Clarification_and_stabilization_of_wine"
+      },
+      "nl": {
+        "text": "Bij het maken van wijn zijn klaren en stabiliseren de processen waarmee onoplosbare zwevende deeltjes vóór het bottelen uit de wijn worden verwijderd. Het kan gaan om dode gistcellen (droesem), bacteriën, tartraten, eiwitten, pectines, verschillende tannines en andere fenolische stoffen, en om stukjes schil, vruchtvlees, steeltjes en gommen. Klaren en stabiliseren kan bestaan uit schoonmaken met klaringsmiddelen, filteren, centrifugeren, flotatie, koelen, pasteuriseren en/of rijping op vat en overhevelen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Clarification_and_stabilization_of_wine"
+      },
+      "it": {
+        "text": "Nella vinificazione, la chiarificazione e la stabilizzazione sono i processi con cui si toglie dal vino la materia insolubile in sospensione prima dell'imbottigliamento. Questa materia può comprendere lieviti morti (fecce), batteri, tartrati, proteine, pectine, diversi tannini e altri composti fenolici, oltre a frammenti di buccia, polpa, raspi e gomme. La chiarificazione e la stabilizzazione possono comprendere collaggio, filtrazione, centrifugazione, flottazione, refrigerazione, pastorizzazione e/o maturazione in botte e travasi.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Clarification_and_stabilization_of_wine"
+      },
+      "de": {
+        "text": "In der Weinbereitung sind Klärung und Stabilisierung die Verfahren, mit denen unlösliche Schwebstoffe vor der Abfüllung aus dem Wein entfernt werden. Dazu können abgestorbene Hefezellen (Trub), Bakterien, Tartrate, Eiweiße, Pektine, verschiedene Tannine und andere phenolische Verbindungen sowie Reste von Schalen, Fruchtfleisch, Stielen und Gummistoffen gehören. Klärung und Stabilisierung können Schönung, Filtration, Zentrifugation, Flotation, Kühlung, Pasteurisierung und/oder Fassreife und Abstich umfassen.",
         "translated": true,
         "url": "https://en.wikipedia.org/wiki/Clarification_and_stabilization_of_wine"
       }
@@ -2351,7 +2669,8 @@
       "de": "Chaptalisation",
       "it": "Zuccheraggio",
       "es": "Chaptalización",
-      "pt": "Chaptalização"
+      "pt": "Chaptalização",
+      "ca": "Xaptalització"
     },
     "prominence": 15,
     "summaries": {
@@ -2447,7 +2766,8 @@
       "de": "Klassische Flaschengärung",
       "es": "Método champenoise",
       "nl": "Méthode traditionnelle",
-      "ca": "Mètode champenoise"
+      "ca": "Mètode champenoise",
+      "pt": "Método tradicional"
     },
     "prominence": 8,
     "summaries": {
@@ -2474,6 +2794,16 @@
       "nl": {
         "text": "De méthode traditionnelle wordt gebruikt om champagne of andere mousserende wijnen te maken. Ze heeft tot doel een gisting van wijn in de fles te laten plaatsvinden, waardoor deze mousserend wordt. Daartoe worden verschillende wijnen tot een proto-champagne geassembleerd (de coupage). Vervolgens wordt deze proto-mousserende wijn op fles getrokken en wordt aan de proto-mousserende wijn een mengsel van in wijn opgeloste rietsuiker, eventueel citroenzuur en wat extra gist, toegevoegd de zogenaamde liqueur de tirage. De voornoemde handelingen resulteren in een tweede gisting op de fles. Tijdens de tweede gisting, de prise de mousse, kan de druk in de fles oplopen tot 5 à 6 bar. Dit proces vindt plaats in zeer koele kelders gedurende de wettelijk voorgeschreven 60 dagen. Aansluitend worden de flessen enige tijd met de hals naar beneden opgelegd.",
         "url": "https://nl.wikipedia.org/wiki/M%C3%A9thode_traditionnelle"
+      },
+      "pt": {
+        "text": "O método tradicional de produção de espumante é o processo usado na região francesa de Champagne para fazer champanhe. É também o método usado em várias regiões francesas para fazer espumantes (que não se chamam «champanhe»), em Espanha para fazer cava, em Portugal para fazer espumante e em Itália para fazer franciacorta. Os produtores de Champagne conseguiram que a União Europeia restringisse o uso do termo méthode champenoise, dentro da UE, aos vinhos produzidos em Champagne. Assim, os vinhos de outras zonas usam o termo «método tradicional» (méthode traditionnelle) ou o equivalente na língua local (método tradicional em Espanha e Portugal, metodo classico ou metodo tradizionale em Itália, e klassische Flaschengärung na Alemanha). Os vinhos sul-africanos do Cabo Ocidental levam no rótulo o termo Methode Cap Classique.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Traditional_method"
+      },
+      "de": {
+        "text": "Die traditionelle Methode der Schaumweinherstellung ist das Verfahren, mit dem in der französischen Champagne Champagner erzeugt wird. Sie wird auch in verschiedenen französischen Regionen für Schaumweine (die nicht „Champagner“ heißen) verwendet, in Spanien für Cava, in Portugal für Espumante und in Italien für Franciacorta. Die Champagnerhersteller haben bei der Europäischen Union erfolgreich erreicht, dass der Begriff méthode champenoise in der EU nur für Weine aus der Champagne verwendet werden darf. Weine von anderswo tragen daher die Bezeichnung „traditionelle Methode“ (méthode traditionnelle) oder die Entsprechung in der Landessprache (método tradicional in Spanien und Portugal, metodo classico oder metodo tradizionale in Italien und in Deutschland klassische Flaschengärung). Südafrikanische Weine vom Westkap tragen die Bezeichnung Methode Cap Classique.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Traditional_method"
       }
     },
     "wikidataId": "Q25326506"
@@ -2548,7 +2878,10 @@
       "en": "Sparkling wine production",
       "es": "Método champenoise",
       "it": "Produzione dello spumante",
-      "nl": "Méthode traditionnelle"
+      "nl": "Méthode traditionnelle",
+      "ca": "Elaboració d'escumosos",
+      "fr": "Élaboration des vins effervescents",
+      "pt": "Produção de espumante"
     },
     "prominence": 6,
     "summaries": {
@@ -2569,6 +2902,26 @@
         "text": "L'elaboració de vi escumós és el mètode de vinificació amb què es produeix el vi escumós. La producció d'escumós més antiga que es coneix data del 1531, amb el mètode ancestral.",
         "translated": true,
         "url": "https://en.wikipedia.org/wiki/Sparkling_wine_production"
+      },
+      "fr": {
+        "text": "L'élaboration des vins effervescents est la méthode de vinification qui sert à produire des vins effervescents. La plus ancienne production connue de vin effervescent date de 1531, avec la méthode ancestrale.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Sparkling_wine_production"
+      },
+      "nl": {
+        "text": "Het maken van mousserende wijn is de vinificatiemethode waarmee mousserende wijn wordt geproduceerd. De oudst bekende productie van mousserende wijn vond plaats in 1531, met de méthode ancestrale.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Sparkling_wine_production"
+      },
+      "pt": {
+        "text": "A produção de espumante é o método de vinificação usado para produzir vinho espumante. A produção de espumante mais antiga que se conhece data de 1531, com o método ancestral.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Sparkling_wine_production"
+      },
+      "it": {
+        "text": "La produzione dello spumante è il metodo di vinificazione usato per produrre vino spumante. La più antica produzione di spumante conosciuta risale al 1531, con il metodo ancestrale.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Sparkling_wine_production"
       }
     },
     "wikidataId": "Q2141675"
@@ -2586,7 +2939,11 @@
       "fr": "Dosage",
       "nl": "Dosage",
       "en": "Dosage",
-      "es": "Licor de expedición"
+      "es": "Licor de expedición",
+      "ca": "Licor d'expedició",
+      "pt": "Licor de expedição",
+      "it": "Dosaggio",
+      "de": "Dosage"
     },
     "prominence": 4,
     "summaries": {
@@ -2603,11 +2960,26 @@
         "url": "https://fr.wikipedia.org/wiki/Dosage_(vin)"
       },
       "nl": {
-        "text": "De dosage is de hoeveelheid suiker of rietsuiker die met de liqueur d'expédition aan het einde van de traditionele bewerking van champagne, na de dégorgement, wordt toegevoegd aan de fles. In de 19e eeuw was de dosage hoog, de champagnes waren erg zoet. In de loop der jaren zijn brut champagnes steeds meer in de mode geraakt. Champagnes van de hoogste kwaliteit hebben weinig suiker nodig, in minder geslaagde cuvées en assemblages moet suiker de tekortschietende smaak maskeren. De champagnehuizen die erg trots zijn op hun product publiceren hoe groot de dosage, steeds uitgedrukt in grammen per liter champagne, is. Er zijn champagnefabrikanten die bij sommige flessen helemaal van toegevoegde suiker afzien. Een dergelijke champagne wordt als \"Brut Nature\" in de handel gebracht. De Franse wet schrijft voor hoe de verhoudingen tussen de smaaktypen en de dosages moeten zijn:",
+        "text": "De dosage is de hoeveelheid suiker of rietsuiker die met de liqueur d'expédition aan het einde van de traditionele bewerking van champagne, na de dégorgement, wordt toegevoegd aan de fles. In de 19e eeuw was de dosage hoog, de champagnes waren erg zoet. In de loop der jaren zijn brut champagnes steeds meer in de mode geraakt. Champagnes van de hoogste kwaliteit hebben weinig suiker nodig, in minder geslaagde cuvées en assemblages moet suiker de tekortschietende smaak maskeren. De champagnehuizen die erg trots zijn op hun product publiceren hoe groot de dosage, steeds uitgedrukt in grammen per liter champagne, is. Er zijn champagnefabrikanten die bij sommige flessen helemaal van toegevoegde suiker afzien. Een dergelijke champagne wordt als \"Brut Nature\" in de handel gebracht.",
         "url": "https://nl.wikipedia.org/wiki/Dosage"
       },
       "ca": {
         "text": "El licor d'expedició és una barreja de vi i sucre que s'utilitza en l'elaboració de determinats vins escumosos. Després del degollat de l'ampolla i abans de posar-hi el tap, s'omple el nivell de líquid de l'ampolla amb licor d'expedició, una pràctica coneguda com a «dosatge». Després es col·loca el tap i una càpsula subjectada amb un morrió de filferro. La quantitat de sucre del licor d'expedició determina la dolçor del vi, ja que el sucre que hi havia originalment al raïm es consumeix en la segona fermentació. L'escumós final es classifica en brut nature, extra brut, brut, extra sec, sec, semisec i dolç segons el sucre afegit amb el licor. També s'utilitza per equilibrar l'alta acidesa del vi. No s'ha de confondre amb el licor de tiratge.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Licor_de_expedici%C3%B3n"
+      },
+      "pt": {
+        "text": "O licor de expedição é uma mistura de vinho e açúcar usada na elaboração de certos vinhos espumantes. Depois do dégorgement da garrafa e antes de pôr a rolha, completa-se o nível de líquido da garrafa com licor de expedição, numa prática conhecida como «dosagem». Depois coloca-se a rolha e uma cápsula presa por um açaime de arame. A quantidade de açúcar no licor de expedição determina a doçura do vinho, já que o açúcar que havia originalmente na uva se consome na segunda fermentação. O espumante final classifica-se em bruto natural, extra bruto, bruto, extra seco, seco, meio seco e doce, segundo o açúcar acrescentado com o licor. Também se usa para equilibrar a acidez alta do vinho. Não se deve confundir com o licor de tiragem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Licor_de_expedici%C3%B3n"
+      },
+      "it": {
+        "text": "La liqueur d'expédition è una miscela di vino e zucchero usata nella produzione di alcuni vini spumanti. Dopo la sboccatura della bottiglia e prima di mettere il tappo, si rabbocca il livello del liquido con la liqueur d'expédition, una pratica nota come «dosaggio». Poi si mette il tappo e una capsula fissata da una gabbietta di filo metallico. La quantità di zucchero della liqueur d'expédition determina la dolcezza del vino, poiché lo zucchero contenuto all'origine nell'uva si consuma nella seconda fermentazione. Lo spumante finale si classifica in pas dosé, extra brut, brut, extra dry, dry, demi-sec e dolce secondo lo zucchero aggiunto con la liqueur. Si usa anche per equilibrare l'alta acidità del vino. Non va confusa con la liqueur de tirage.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Licor_de_expedici%C3%B3n"
+      },
+      "de": {
+        "text": "Der Dosagelikör (liqueur d'expédition) ist eine Mischung aus Wein und Zucker, die bei der Herstellung bestimmter Schaumweine verwendet wird. Nach dem Degorgieren der Flasche und vor dem Verkorken wird der Flüssigkeitsstand der Flasche mit Dosagelikör aufgefüllt, was als „Dosage“ bezeichnet wird. Danach werden der Korken und eine mit einer Drahtagraffe gesicherte Kapsel aufgesetzt. Die Zuckermenge im Dosagelikör bestimmt die Süße des Weins, da der ursprünglich in der Traube enthaltene Zucker bei der zweiten Gärung verbraucht wird. Der fertige Schaumwein wird je nach zugesetztem Zucker als brut nature, extra brut, brut, extra trocken, trocken, halbtrocken und mild eingestuft. Die Dosage dient auch dazu, die hohe Säure des Weins auszugleichen. Sie ist nicht mit dem Fülllikör (liqueur de tirage) zu verwechseln.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Licor_de_expedici%C3%B3n"
       }
@@ -2662,6 +3034,11 @@
       "pt": {
         "text": "Podridão nobre é a consequência positiva do aparecimento nas vinhas de um fungo chamado Botrytis cinerea. Em francês é chamada La Pourriture Noble, em alemão Edelfäule em italiano muffa nobile. O Botrytis cinerea precisa de umidade para se desenvolver. Caso essa umidade se mantenha, manifesta-se na sua forma destrutiva chamada podridão cinzenta que pode arruinar colheitas completas. Todavia, caso haja uma exposição das uvas a condições de tempo seco, gera-se um efeito desejado chamado podridão nobre. Colhidas na altura adequada, as uvas com Botrytis cinerea permitem a obtenção de um vinho com características especiais de doçura e sabor. Alguns dos melhores vinhos \"botrytizados\" são elaborados a partir de uvas colhidas literalmente bago a bago em sucessivas rondas.",
         "url": "https://pt.wikipedia.org/wiki/Podrid%C3%A3o_nobre"
+      },
+      "it": {
+        "text": "La muffa nobile (in francese pourriture noble, in tedesco Edelfäule, in ungherese aszúsodás) è la forma benefica di un fungo grigio, la Botrytis cinerea, che colpisce l'uva da vino. L'infestazione da botrite richiede condizioni calde e umide, di solito intorno ai 20 °C (68 °F) e oltre l'80% di umidità. Se il tempo resta umido, la forma indesiderata, il «marciume del grappolo» o «muffa grigia», danneggia la vinificazione alterando la fermentazione e cambiando il sapore, l'aroma e l'aspetto del vino finito. L'uva di solito si infetta con la cinerea quando è matura. Se poi è esposta a condizioni più secche e appassisce in parte, questa forma di infezione si chiama muffa nobile. L'uva raccolta in un certo momento dell'infestazione può dare vini dolci particolarmente fini e concentrati.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Noble_rot"
       }
     },
     "wikidataId": "Q749342"
@@ -2796,7 +3173,7 @@
         "url": "https://es.wikipedia.org/wiki/A%C3%B1ada"
       },
       "ca": {
-        "text": "L'anyada és la indicació d'un vi que s'ha elaborat a partir de la collita de raïms d'un any. La qualitat d'una collita depèn de les condicions climàtiques com la temperatura i la pluja. Els vins d'un mateix tipus, varietat o origen poden ser diferents segons les anyades. Cada any els Consells Reguladors de les Denominacions d'Origen encarreguen la qualificació de l'anyada a un grup de catadors. Les qualificacions són: La informació de les últimes qualificacions d'anyades són les següents:",
+        "text": "L'anyada és la indicació d'un vi que s'ha elaborat a partir de la collita de raïms d'un any. La qualitat d'una collita depèn de les condicions climàtiques com la temperatura i la pluja. Els vins d'un mateix tipus, varietat o origen poden ser diferents segons les anyades. Cada any els Consells Reguladors de les Denominacions d'Origen encarreguen la qualificació de l'anyada a un grup de catadors.",
         "url": "https://ca.wikipedia.org/wiki/Anyada"
       },
       "fr": {
@@ -2865,7 +3242,9 @@
       "es": "Fallos del vino",
       "en": "Wine fault",
       "it": "Sentori di difetti",
-      "fr": "Altération du vin"
+      "fr": "Altération du vin",
+      "ca": "Defectes del vi",
+      "nl": "Wijnfouten"
     },
     "prominence": 12,
     "summaries": {
@@ -2895,6 +3274,11 @@
       },
       "ca": {
         "text": "Els defectes del vi existeixen, com en qualsevol altre aliment, i es poden definir com una alteració de les propietats organolèptiques que els elaboradors volen per al vi. El vi pot ser atacat per diferents substàncies químiques i per diversos microorganismes. Però, a diferència d'altres aliments, el vi només es veu afectat en el gust i l'aroma, i en la majoria dels casos els seus defectes no perjudiquen la salut. Els defectes del vi solen traduir-se en pèrdues econòmiques; per això la indústria els investiga i els classifica, i en la majoria dels casos són coneguts i fàcils d'evitar. En alguns casos són imperceptibles per a un consumidor mitjà, però detectables en un tast professional.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Fallos_del_vino"
+      },
+      "nl": {
+        "text": "Wijnfouten bestaan, net als bij elk ander levensmiddel, en kunnen worden omschreven als een verandering van de organoleptische eigenschappen die de makers voor de wijn wensen. Wijn kan worden aangetast door verschillende chemische stoffen en door diverse micro-organismen. Maar anders dan bij andere levensmiddelen wordt wijn alleen in smaak en geur aangetast, en zijn fouten in de meeste gevallen niet schadelijk voor de gezondheid. Wijnfouten leiden meestal tot economische verliezen; daarom onderzoekt en categoriseert de sector ze, en in de meeste gevallen zijn ze bekend en gemakkelijk te voorkomen. Soms zijn ze voor een gewone consument onmerkbaar, maar bij een professionele proeverij wel te herkennen.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Fallos_del_vino"
       }
@@ -2931,7 +3315,10 @@
       "fr": "Goût de bouchon",
       "en": "Cork taint",
       "nl": "Kurk",
-      "es": "Olor a corcho"
+      "es": "Olor a corcho",
+      "ca": "Gust de suro",
+      "pt": "Gosto a rolha",
+      "it": "Odore di tappo"
     },
     "prominence": 10,
     "summaries": {
@@ -2957,6 +3344,16 @@
       },
       "ca": {
         "text": "El gust de suro és un dels defectes del vi, caracteritzat per un conjunt d'olors i gustos indesitjables trobats en una ampolla de vi. Tot i que els estudis moderns han mostrat que altres factors també en poden ser responsables (com les bótes de fusta, les condicions d'emmagatzematge i el transport dels taps i del vi), normalment se'n considera responsable el tap de suro. Aquest defecte pot afectar els vins independentment del preu i del nivell de qualitat. La causa principal del gust de suro és la presència al vi dels compostos químics 2,4,6-tricloroanisol (TCA) o 2,4,6-tribromoanisol (TBA), que en molts casos s'hi haurà transferit des del suro, tot i que també poden haver passat a través d'aquest. El TCA no és un compost que es formi de manera natural.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Olor_a_corcho"
+      },
+      "pt": {
+        "text": "O gosto a rolha é um dos defeitos do vinho, caracterizado por um conjunto de odores e sabores indesejáveis encontrados numa garrafa de vinho. Embora estudos modernos tenham mostrado que outros fatores também podem ser responsáveis por este odor (como as barricas de madeira, as condições de armazenamento e o transporte das rolhas e do vinho), normalmente considera-se responsável a rolha de cortiça. Este defeito pode afetar os vinhos independentemente do preço e do nível de qualidade. A principal causa do gosto a rolha é a presença no vinho dos compostos químicos 2,4,6-tricloroanisol (TCA) ou 2,4,6-tribromoanisol (TBA), que em muitos casos terá sido transferido da rolha, embora também possa ter passado através dela. O TCA não é um composto que se forme naturalmente.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Olor_a_corcho"
+      },
+      "it": {
+        "text": "L'odore di tappo è uno dei difetti del vino, caratterizzato da un insieme di odori e sapori sgradevoli presenti in una bottiglia di vino. Anche se studi moderni hanno mostrato che anche altri fattori possono esserne responsabili (come le botti di legno, le condizioni di conservazione e il trasporto dei tappi e del vino), di solito se ne ritiene responsabile il tappo di sughero. Questo difetto può colpire i vini indipendentemente dal prezzo e dal livello di qualità. La causa principale dell'odore di tappo è la presenza nel vino dei composti chimici 2,4,6-tricloroanisolo (TCA) o 2,4,6-tribromoanisolo (TBA), che in molti casi sarà stato trasferito dal tappo, anche se può anche essere passato attraverso di esso. Il TCA non è un composto che si forma naturalmente.",
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Olor_a_corcho"
       }

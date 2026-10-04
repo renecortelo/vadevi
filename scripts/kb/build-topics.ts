@@ -25,7 +25,17 @@ const { topics } = JSON.parse(readFileSync(resolve("data/kb/topics-include.json"
 // one that does, marked as such (`data/kb/topic-translations.json`).
 const translations = JSON.parse(
   readFileSync(resolve("data/kb/topic-translations.json"), "utf8"),
-) as Record<string, { from: string; sourceUrl: string; texts: Record<string, string> } | string>;
+) as Record<
+  string,
+  | {
+      from: string;
+      /** Names in languages Wikidata has no label for. */
+      names?: Record<string, string>;
+      sourceUrl: string;
+      texts: Record<string, string>;
+    }
+  | string
+>;
 
 const entries: TopicEntry[] = [];
 for (const topic of topics) {
@@ -70,6 +80,12 @@ for (const topic of topics) {
   for (const [locale, label] of Object.entries(cached.labels)) {
     // Wikidata labels are often lowercase ("natural wine"); a title is not.
     names[locale] = label.value.charAt(0).toLocaleUpperCase(locale) + label.value.slice(1);
+  }
+  // A name Wikidata has no label for in a language, given by hand.
+  if (translation !== undefined && typeof translation !== "string") {
+    for (const [locale, name] of Object.entries(translation.names ?? {})) {
+      names[locale === "pt-PT" ? "pt" : locale] ??= name;
+    }
   }
   entries.push({
     aliases: [

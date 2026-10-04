@@ -1,0 +1,108 @@
+{
+  "$comment": "Names for grapes in the app's languages where Wikidata has no label in that language, given by hand. Dutch writes varieties by their international name. A name here never replaces a Wikidata label.",
+  "grapes": {
+    "Q3064821": {
+      "nl": "Sumoll"
+    },
+    "Q1545629": {
+      "nl": "Garnacha roja"
+    },
+    "Q1474000": {
+      "nl": "Loureiro"
+    },
+    "Q604569": {
+      "nl": "Treixadura"
+    },
+    "Q894137": {
+      "nl": "Caíño tinto"
+    },
+    "Q1864960": {
+      "nl": "Listán negro"
+    },
+    "Q799814": {
+      "nl": "Baga"
+    },
+    "Q1410399": {
+      "nl": "Fiano"
+    },
+    "Q1544507": {
+      "nl": "Greco"
+    },
+    "Q60790190": {
+      "nl": "Listán prieto"
+    },
+    "Q1354215": {
+      "nl": "Hondarrabi zuri"
+    },
+    "Q12870330": {
+      "nl": "Kisi"
+    },
+    "Q31355050": {
+      "nl": "Chinuri"
+    },
+    "Q4331498": {
+      "nl": "Ojaleshi"
+    },
+    "Q6933361": {
+      "nl": "Mujuretuli"
+    },
+    "Q12871467": {
+      "nl": "Khikhvi"
+    },
+    "Q20574534": {
+      "nl": "Tavkveri"
+    },
+    "Q20572365": {
+      "nl": "Goruli mtsvane"
+    },
+    "Q4721075": {
+      "nl": "Alexandrouli"
+    },
+    "Q678124": {
+      "nl": "Vranac"
+    },
+    "Q1974545": {
+      "nl": "Xinomavro"
+    },
+    "Q600463": {
+      "nl": "Fetească albă"
+    },
+    "Q3445835": {
+      "nl": "Žilavka"
+    },
+    "Q269102": {
+      "nl": "Muscat ottonel"
+    },
+    "Q1435356": {
+      "nl": "St. Laurent"
+    },
+    "Q1499340": {
+      "nl": "Muscat blanc à petits grains"
+    },
+    "Q12628015": {
+      "nl": "Blatina"
+    },
+    "Q939032": {
+      "nl": "Mavro"
+    },
+    "Q218515": {
+      "nl": "Tsolikouri"
+    },
+    "Q1468853": {
+      "nl": "Sauvignonasse"
+    },
+    "Q1957003": {
+      "nl": "Mtsvane"
+    },
+    "Q1801497": {
+      "nl": "Lambrusco viadanese"
+    },
+    "Q660955": {
+      "nl": "Trepat"
+    },
+    "Q1651827": {
+      "ca": "Moscatell d'Alexandria",
+      "pt-PT": "Moscatel de Alexandria"
+    }
+  }
+}

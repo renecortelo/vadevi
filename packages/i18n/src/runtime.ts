@@ -1,6 +1,7 @@
 export * from "./ontology";
 
-export const supportedLocales = ["ca", "es", "fr", "en", "it", "pt-PT", "nl", "de"] as const;
+/** In the order the language pickers list them. */
+export const supportedLocales = ["es", "ca", "fr", "en", "nl", "pt-PT", "it", "de"] as const;
 export type SupportedLocale = (typeof supportedLocales)[number];
 
 /**

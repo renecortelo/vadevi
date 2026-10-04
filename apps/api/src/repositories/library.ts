@@ -136,9 +136,9 @@ export async function getLibraryGrape(
       database
         .prepare(
           `SELECT locale, text, source_url, license, translated FROM kb_summaries
-        WHERE entity_type = 'grape' AND entity_id = ? AND locale IN (?, 'en')`,
+        WHERE entity_type = 'grape' AND entity_id = ?`,
         )
-        .bind(grapeId, locale),
+        .bind(grapeId),
       database
         .prepare(
           `SELECT kind, value, country_code FROM kb_grape_attributes WHERE grape_id = ? ORDER BY rowid`,
@@ -198,7 +198,8 @@ export async function getLibraryGrape(
 
   const nameRows = (names?.results ?? []) as { kind: string; locale: string; name: string }[];
   const primary =
-    nameRows.find((row) => row.kind === "primary" && row.locale === locale)?.name ??
+    // Names are stored under Wikidata's language codes ("pt", not "pt-PT").
+    nameRows.find((row) => row.kind === "primary" && row.locale === locale.split("-")[0])?.name ??
     nameRows.find((row) => row.kind === "primary" && row.locale === "en")?.name ??
     grapeId;
   const summaryRows = (summaries?.results ?? []) as {
@@ -208,10 +209,7 @@ export async function getLibraryGrape(
     text: string;
     translated: number;
   }[];
-  const summary =
-    summaryRows.find((row) => row.locale === locale) ??
-    summaryRows.find((row) => row.locale === "en") ??
-    null;
+  const summary = inReadersLanguage(summaryRows, locale);
   const attributeRows = (attributes?.results ?? []) as {
     country_code: string | null;
     kind: string;
@@ -434,10 +432,10 @@ export async function getLibraryRegion(
       .bind(regionId),
     database
       .prepare(
-        `SELECT locale, text, source_url, license FROM kb_summaries
-        WHERE entity_type = 'region' AND entity_id = ? AND locale IN (?, 'en')`,
+        `SELECT locale, text, source_url, license, translated FROM kb_summaries
+        WHERE entity_type = 'region' AND entity_id = ?`,
       )
-      .bind(regionId, locale),
+      .bind(regionId),
     database
       .prepare(
         `SELECT link.grape_id, link.quote, link.source_url,
@@ -466,11 +464,9 @@ export async function getLibraryRegion(
     locale: string;
     source_url: string;
     text: string;
+    translated: number;
   }[];
-  const summary =
-    summaryRows.find((row) => row.locale === locale) ??
-    summaryRows.find((row) => row.locale === "en") ??
-    null;
+  const summary = inReadersLanguage(summaryRows, locale);
   return {
     countryCode: region.country_code,
     eambrosiaId: region.eambrosia_id,
@@ -504,6 +500,7 @@ export async function getLibraryRegion(
             locale: summary.locale,
             sourceUrl: summary.source_url,
             text: summary.text,
+            translated: summary.translated === 1,
           },
     wikidataId: region.wikidata_id,
   };
@@ -516,8 +513,25 @@ export async function topicsMentionedIn(database: D1Database, message: string): 
 
 type TopicRow = { category: LibraryTopic["category"]; id: string };
 
-/** The order other languages are tried in when the reader's has nothing. */
-const nearbyLocales = ["es", "ca", "pt-PT", "it", "fr", "nl", "de"];
+/**
+ * The text to show a reader: in their language; else in its sibling (a
+ * Catalan reader reads Spanish, and the other way round); else in English;
+ * else in the first of the app's languages, in the order the library is
+ * translated into them.
+ */
+const fallbackOrder = ["es", "ca", "fr", "en", "nl", "pt-PT", "it", "de"];
+const siblings: Record<string, string> = { ca: "es", es: "ca" };
+export function inReadersLanguage<Row extends { locale: string }>(
+  rows: readonly Row[],
+  locale: string,
+): Row | null {
+  const order = [locale, siblings[locale], "en", ...fallbackOrder];
+  for (const wanted of order) {
+    const row = rows.find((candidate) => candidate.locale === wanted);
+    if (row !== undefined) return row;
+  }
+  return rows[0] ?? null;
+}
 
 async function topicsFor(
   database: D1Database,
@@ -563,18 +577,7 @@ async function topicsFor(
       own.find((row) => row.kind === "primary" && row.locale === "en")?.name ??
       topic.id;
     const mine = summaryRows.filter((row) => row.entity_id === topic.id);
-    // The reader's language, else English, else whichever language has it —
-    // pét-nat is explained only in German.
-    const summary =
-      mine.find((row) => row.locale === locale) ??
-      mine.find((row) => row.locale === "en") ??
-      // A neighbouring language before a distant one: a Spanish reader is
-      // better served by Catalan than by German.
-      nearbyLocales
-        .map((nearby) => mine.find((row) => row.locale === nearby))
-        .find((row) => row !== undefined) ??
-      mine[0] ??
-      null;
+    const summary = inReadersLanguage(mine, locale);
     return {
       category: topic.category,
       id: topic.id,
