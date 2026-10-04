@@ -130,7 +130,8 @@ function keep(bindings: Binding[], country?: string) {
     wineItems.set(id, { country: iso, point: previous?.point ?? point(binding.coord?.value) });
   }
 }
-for (const wineClass of ["Q2140699", "Q1565828", "Q451752", "Q3104453", "Q13439060"]) {
+// Q3558198: the Beaujolais crus, filed as "Beaujolais vineyard".
+for (const wineClass of ["Q2140699", "Q1565828", "Q451752", "Q3104453", "Q13439060", "Q3558198"]) {
   keep(
     await sparql(`SELECT DISTINCT ?item ?iso ?coord WHERE {
       ?item wdt:P31/wdt:P279* wd:${wineClass} ; wdt:P17/wdt:P297 ?iso .
@@ -140,7 +141,7 @@ for (const wineClass of ["Q2140699", "Q1565828", "Q451752", "Q3104453", "Q134390
 for (const [iso, country] of Object.entries(memberStates)) {
   keep(
     await sparql(`SELECT DISTINCT ?item ?coord WHERE {
-      ?item wdt:P31 wd:Q282 ; wdt:P17 wd:${country} . OPTIONAL { ?item wdt:P625 ?coord } }`),
+      ?item wdt:P31/wdt:P279* wd:Q282 ; wdt:P17 wd:${country} . OPTIONAL { ?item wdt:P625 ?coord } }`),
     iso,
   );
 }
@@ -192,6 +193,20 @@ function coordinates(id: string) {
     : { latitude: claimed.latitude, longitude: claimed.longitude };
 }
 
+/**
+ * A label's name without the designation Wikidata often writes after it
+ * ("Côte-Rôtie AOC", "Vinho Verde (DOC)", "Manchuela DO"), or null when it
+ * carries none.
+ */
+function withoutDesignation(name: string): string | null {
+  const key = matchKey(name);
+  const stripped = key.replace(
+    / (aoc|aop|ac|doc|docg|do|dop|doq|dac|igt|igp|pdo|pgi|ipr|vqprd|vdp|dpo|zgp|zop)$/,
+    "",
+  );
+  return stripped === key || stripped.length < 2 ? null : stripped;
+}
+
 const byName = new Map<string, Set<string>>();
 for (const [id, item] of wineItems) {
   const entity = entities[id];
@@ -200,11 +215,23 @@ for (const [id, item] of wineItems) {
     ...Object.values(entity?.aliases ?? {}).flatMap((list) => list.map((alias) => alias.value)),
   ];
   for (const name of names) {
-    if (matchKey(name).length < 2) continue;
-    const key = `${item.country}:${matchKey(name)}`;
-    byName.set(key, new Set([...(byName.get(key) ?? []), id]));
+    for (const form of [matchKey(name), withoutDesignation(name)]) {
+      if (form === null || form.length < 2) continue;
+      const key = `${item.country}:${form}`;
+      byName.set(key, new Set([...(byName.get(key) ?? []), id]));
+    }
   }
 }
+
+// Items Wikidata files under another wine's name by a stray alias, checked
+// by hand: Arrábida carries "Bairrada (DOC)", Provence's whole wine region
+// answers to Bellet, and the Côtes de Bordeaux to its Saint-Macaire.
+const notThisItem: Record<string, string[]> = {
+  bairrada: ["Q2879982"],
+  bellet: ["Q815934"],
+  "cotes de bordeaux saint macaire": ["Q3010713"],
+};
+const allowed = (name: string, id: string) => !(notThisItem[matchKey(name)] ?? []).includes(id);
 
 // One item per register entry: the one linked directly, or else the
 // best-known of those going by its name. Coordinates may come from another
@@ -235,9 +262,11 @@ for (const row of register.results) {
         .flatMap((name) =>
           matchKey(name).length < 2
             ? []
-            : countries.flatMap((country) => [
-                ...(byName.get(`${country}:${matchKey(name)}`) ?? []),
-              ]),
+            : countries.flatMap((country) =>
+                [...(byName.get(`${country}:${matchKey(name)}`) ?? [])].filter((id) =>
+                  registerNames(String(row.protectedName)).every((own) => allowed(own, id)),
+                ),
+              ),
         ),
     ),
   ].sort((left, right) => sitelinkCount(right) - sitelinkCount(left));
@@ -290,28 +319,65 @@ const pointOf = (claims: Claims | undefined) => {
 
 // 2b. A wine item with no point of its own lies somewhere: the area Wikidata
 //     places it in (P131, a municipality or a province) gives an approximate
-//     one, marked as such.
-const areaOf = new Map<string, string>();
-for (const entry of Object.values(linked)) {
-  if (entry.latitude !== null || entry.qid === null) continue;
-  const area = (entities[entry.qid] as { claims?: Claims } | undefined)?.claims?.P131?.[0]?.mainsnak
-    .datavalue?.value.id;
-  if (area !== undefined) areaOf.set(entry.qid, area);
-}
-const areas = await claimsOf([...new Set(areaOf.values())]);
-for (const entry of Object.values(linked)) {
-  const area = entry.qid === null ? undefined : areaOf.get(entry.qid);
-  const point = area === undefined ? null : pointOf(areas[area]?.claims);
+//     one, marked as such — never the country itself, whose middle says
+//     nothing of where the wine is ("Piemonte DOC" in Italy).
+//     An item may name several areas (the provinces a DOC spans), and one
+//     of them may be wrong — Molise DOC lists Pesaro, Cinque Terre a village
+//     in Burgundy — so the point is the median of them all, which no single
+//     stray one can move.
+const countryItems = new Set(Object.values(memberStates));
+const areaIdsOf = (id: string | null): string[] =>
+  id === null
+    ? []
+    : ((entities[id] as { claims?: Claims } | undefined)?.claims?.P131 ?? []).flatMap((claim) => {
+        const area = claim.mainsnak.datavalue?.value.id;
+        return area === undefined || countryItems.has(area) ? [] : [area];
+      });
+type Point = { latitude: number; longitude: number };
+const median = (values: number[]) => {
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 === 1 ? sorted[middle]! : (sorted[middle - 1]! + sorted[middle]!) / 2;
+};
+/** The areas' own points, and their median as the wine's. */
+const areaPointsOf = new Map<string, Point[]>();
+const middleOf = (points: Point[]): Point | null =>
+  points.length === 0
+    ? null
+    : {
+        latitude: median(points.map((point) => point.latitude)),
+        longitude: median(points.map((point) => point.longitude)),
+      };
+const kilometres = (a: Point, b: Point) =>
+  111 *
+  Math.hypot(
+    a.latitude - b.latitude,
+    (a.longitude - b.longitude) * Math.cos((a.latitude * Math.PI) / 180),
+  );
+const areas = await claimsOf([
+  ...new Set(
+    Object.values(linked).flatMap((entry) => (entry.latitude === null ? areaIdsOf(entry.qid) : [])),
+  ),
+]);
+for (const [ambrosia, entry] of Object.entries(linked)) {
+  if (entry.latitude !== null) continue;
+  const points = areaIdsOf(entry.qid).flatMap((area) => pointOf(areas[area]?.claims) ?? []);
+  const point = middleOf(points);
   if (point === null) continue;
+  areaPointsOf.set(ambrosia, points);
   entry.latitude = point.latitude;
   entry.longitude = point.longitude;
   entry.pointSource = "area";
 }
 
-// 2c. A registered name with no wine item at all is often the name of its
-//     town ("Toro", "Rueda", "Málaga"): a place in the same country whose
-//     label is exactly that name gives the point — and only the point; its
-//     article is about the town, not the wine. Searches are cached.
+// 2c. A registered name is often the name of its town ("Toro", "Rueda",
+//     "Málaga"): a place in the same country whose label is exactly that
+//     name gives a point — and only the point; its article is about the
+//     town, not the wine. Where the wine already has an area point, the town
+//     is taken only if it lies in that area — within 100 km of one of its
+//     areas' points, since a department's point is its capital and can be
+//     that far from its edge. "Blagny" is a Burgundy hamlet and a village in
+//     the Ardennes, and the area says which. Searches are cached.
 const placesPath = resolve(cache, "places.json");
 const placeSearches = (
   existsSync(placesPath) ? JSON.parse(readFileSync(placesPath, "utf8")) : {}
@@ -319,7 +385,8 @@ const placeSearches = (
 const pending: { ambrosia: string; country: string; names: string[] }[] = [];
 for (const row of register.results) {
   const ambrosia = String(row.appUniqueId);
-  if (linked[ambrosia] !== undefined) continue;
+  const known = linked[ambrosia];
+  if (known !== undefined && known.pointSource !== null && known.pointSource !== "area") continue;
   const country = registerCountries(String(row.countryId))[0];
   if (country === undefined || memberStates[country] === undefined) continue;
   const names = [
@@ -341,34 +408,97 @@ for (const row of register.results) {
 const candidates = await claimsOf([
   ...new Set(pending.flatMap((entry) => entry.names.flatMap((name) => placeSearches[name] ?? []))),
 ]);
-let placed = 0;
+const townOf = new Map<string, Point>();
+const wineByLabel = new Map<string, string>();
 for (const entry of pending) {
   const keys = new Set(entry.names.map((name) => matchKey(name)));
+  const inCountry = (id: string) =>
+    candidates[id]?.claims?.P17?.some(
+      (claim) => claim.mainsnak.datavalue?.value.id === memberStates[entry.country],
+    ) === true;
+  // An item labelled with the name and its designation ("Côte-Rôtie AOC",
+  // "Manchuela DO") is the wine's own, even where Wikidata files it under no
+  // class: it gives the summary, and the point if it has one.
+  if (linked[entry.ambrosia] === undefined) {
+    const wine = entry.names
+      .flatMap((name) => placeSearches[name] ?? [])
+      .find(
+        (id) =>
+          inCountry(id) &&
+          entry.names.every((name) => allowed(name, id)) &&
+          Object.values(candidates[id]?.labels ?? {}).some((label) => {
+            const name = withoutDesignation(label.value);
+            return name !== null && keys.has(name);
+          }),
+      );
+    if (wine !== undefined) wineByLabel.set(entry.ambrosia, wine);
+  }
   for (const name of entry.names) {
-    const found = (placeSearches[name] ?? []).find((id) => {
-      const candidate = candidates[id];
-      const inCountry = candidate?.claims?.P17?.some(
-        (claim) => claim.mainsnak.datavalue?.value.id === memberStates[entry.country],
-      );
-      const named = Object.values(candidate?.labels ?? {}).some((label) =>
-        keys.has(matchKey(label.value)),
-      );
-      return inCountry === true && named && pointOf(candidate?.claims) !== null;
-    });
+    const found = (placeSearches[name] ?? []).find(
+      (id) =>
+        inCountry(id) &&
+        Object.values(candidates[id]?.labels ?? {}).some((label) =>
+          keys.has(matchKey(label.value)),
+        ) &&
+        pointOf(candidates[id]?.claims) !== null,
+    );
     if (found === undefined) continue;
-    const point = pointOf(candidates[found]?.claims)!;
-    linked[entry.ambrosia] = {
-      labels: {},
-      latitude: point.latitude,
-      longitude: point.longitude,
-      pointSource: "place",
-      qid: null,
-    };
-    placed += 1;
+    townOf.set(entry.ambrosia, pointOf(candidates[found]?.claims)!);
     break;
   }
 }
+
+// 2d. The wines found by their labelled name: their own point, or else the
+//     area they lie in, as in 2b.
+const labelledIds = [...new Set(wineByLabel.values())];
+for (let start = 0; start < labelledIds.length; start += 50) {
+  const body = await wikimedia<{ entities: Record<string, Entity> }>(
+    "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json" +
+      `&props=labels|aliases|sitelinks|claims&languages=${labelLanguages.join("|")}` +
+      `&ids=${labelledIds.slice(start, start + 50).join("|")}`,
+  );
+  Object.assign(entities, body.entities);
+}
+const labelledAreas = await claimsOf([...new Set(labelledIds.flatMap((id) => areaIdsOf(id)))]);
+for (const [ambrosia, id] of wineByLabel) {
+  const own = pointOf((entities[id] as { claims?: Claims } | undefined)?.claims);
+  const points = areaIdsOf(id).flatMap((area) => pointOf(labelledAreas[area]?.claims) ?? []);
+  if (own === null && points.length > 0) areaPointsOf.set(ambrosia, points);
+  const point = own ?? middleOf(points);
+  linked[ambrosia] = {
+    labels: Object.fromEntries(
+      Object.entries(entities[id]?.labels ?? {})
+        .filter(([locale]) => (locales as readonly string[]).includes(locale))
+        .map(([locale, label]) => [locale, label.value]),
+    ),
+    latitude: point?.latitude ?? null,
+    longitude: point?.longitude ?? null,
+    pointSource: point === null ? null : own !== null ? "item" : "area",
+    qid: id,
+  };
+}
+
+// 2e. The town, where it is the better point: for a name with no point at
+//     all, or one lying within 100 km of one of its areas.
+let placed = 0;
+for (const [ambrosia, town] of townOf) {
+  const entry = linked[ambrosia];
+  if (entry !== undefined && entry.pointSource === "item") continue;
+  if (entry?.pointSource === "area") {
+    const areaPoints = areaPointsOf.get(ambrosia) ?? [];
+    if (!areaPoints.some((area) => kilometres(area, town) <= 100)) continue;
+  }
+  linked[ambrosia] = {
+    labels: entry?.labels ?? {},
+    latitude: town.latitude,
+    longitude: town.longitude,
+    pointSource: "place",
+    qid: entry?.qid ?? null,
+  };
+  placed += 1;
+}
 console.info(`  ${placed} registered names placed by the town they are named after.`);
+console.info(`  ${wineByLabel.size} registered names found by their labelled wine item.`);
 
 // 3. Wikipedia leads, cached one file per item so a rerun resumes.
 const qids = [

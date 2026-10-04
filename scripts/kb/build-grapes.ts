@@ -99,7 +99,10 @@ function extraReadings(
  */
 const translations = (
   JSON.parse(readFileSync(resolve("data/kb/grape-translations.json"), "utf8")) as {
-    grapes: Record<string, { from: string; sourceUrl: string; texts: Record<string, string> }>;
+    grapes: Record<
+      string,
+      { from: string; replaces?: string[]; sourceUrl: string; texts: Record<string, string> }
+    >;
   }
 ).grapes;
 
@@ -208,10 +211,14 @@ for (const qid of index) {
   }
   // Where no Wikipedia in the app's languages has the grape, its own
   // language's lead, translated by hand and marked as a translation.
+  // A lead found wrong by hand (vandalised, or about another grape) is
+  // replaced by the translation where the entry says so (`replaces`).
   const translation = translations[qid];
   if (translation !== undefined) {
     for (const [locale, text] of Object.entries(translation.texts)) {
-      summaries[locale] ??= { text, translated: true, url: translation.sourceUrl };
+      const summary = { text, translated: true, url: translation.sourceUrl };
+      if (translation.replaces?.includes(locale) === true) summaries[locale] = summary;
+      else summaries[locale] ??= summary;
     }
   }
   // Synonyms: the article's (each quoted), Wikidata's aliases, and the

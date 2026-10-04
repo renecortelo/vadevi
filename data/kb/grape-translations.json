@@ -1,5 +1,5 @@
 {
-  "$comment": "Summaries for grapes no Wikipedia in the app's languages describes, translated from the grape's article in its own country's language. Each is a faithful translation of the passage named in `passages`, adding nothing; the app marks it as a translation and links the original. A language that has its own Wikipedia lead keeps that lead. Wikipedia text is CC BY-SA 4.0, and so is its translation.",
+  "$comment": "Summaries for grapes no Wikipedia in the app's languages describes, translated from the grape's article in its own country's language. Each is a faithful translation of the passage named in `passages`, adding nothing; the app marks it as a translation and links the original. A language that has its own Wikipedia lead keeps that lead. Wikipedia text is CC BY-SA 4.0, and so is its translation. `replaces` names the languages whose own Wikipedia lead was found wrong by hand (`why`), and which the translation therefore replaces.",
   "grapes": {
     "Q12870330": {
       "from": "ru",
@@ -76,7 +76,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Baga_(grape)",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La baga es una variedad de uva tinta portuguesa plantada sobre todo en la DOC Bairrada. Como varietal, da vinos tánicos de acidez alta."
+        "es": "La baga es una variedad de uva tinta portuguesa plantada sobre todo en la DOC Bairrada. Como varietal, da vinos tánicos de acidez alta.",
+        "ca": "La baga és una varietat portuguesa de raïm negre plantada sobretot a la DOC Bairrada. Com a monovarietal, dona vins tànics d'acidesa alta."
       }
     },
     "Q478166": {
@@ -84,7 +85,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La castelão, conocida también en Portugal como periquita y João de Santarém, es una uva tinta que se encuentra sobre todo en las regiones costeras del sur, aunque se cultiva en todo Portugal y a veces se usa en la elaboración del oporto."
+        "es": "La castelão, conocida también en Portugal como periquita y João de Santarém, es una uva tinta que se encuentra sobre todo en las regiones costeras del sur, aunque se cultiva en todo Portugal y a veces se usa en la elaboración del oporto.",
+        "ca": "La castelão, coneguda també a Portugal com a periquita i João de Santarém, és un raïm negre que es troba sobretot a les regions costaneres del sud, tot i que es conrea arreu de Portugal i de vegades s'utilitza en l'elaboració del vi de Porto."
       }
     },
     "Q477351": {
@@ -92,7 +94,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_Amarela",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La tinta amarela o trincadeira es una uva tinta de uso habitual en la elaboración del oporto. Destaca por su color oscuro. Su uso en la región del Duero ha ido en aumento en los últimos años. La cepa es sensible a la podredumbre y se comporta mejor en climas secos y cálidos."
+        "es": "La tinta amarela o trincadeira es una uva tinta de uso habitual en la elaboración del oporto. Destaca por su color oscuro. Su uso en la región del Duero ha ido en aumento en los últimos años. La cepa es sensible a la podredumbre y se comporta mejor en climas secos y cálidos.",
+        "ca": "La tinta amarela o trincadeira és un raïm negre d'ús habitual en l'elaboració del vi de Porto. Destaca pel seu color fosc. El seu ús a la regió del Douro ha anat augmentant els darrers anys. El cep és sensible a la podridura i es comporta millor en climes secs i càlids."
       }
     },
     "Q1340115": {
@@ -100,7 +103,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Encruzado",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La encruzado es una uva blanca portuguesa cultivada sobre todo en la DOC Dão. Se usa principalmente en mezclas."
+        "es": "La encruzado es una uva blanca portuguesa cultivada sobre todo en la DOC Dão. Se usa principalmente en mezclas.",
+        "ca": "L'encruzado és un raïm blanc portuguès conreat sobretot a la DOC Dão. S'utilitza principalment en cupatges."
       }
     },
     "Q1544507": {
@@ -108,7 +112,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Greco_(grape)",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La greco es una uva italiana que podría ser de origen griego. El nombre se refiere tanto a variedades blancas (greco bianco) como negras (greco nero). Aunque hay más superficie dedicada a la greco nero, la greco bianco es la que más se suele llamar «greco». En Campania se usa para elaborar el vino DOCG Greco di Tufo."
+        "es": "La greco es una uva italiana que podría ser de origen griego. El nombre se refiere tanto a variedades blancas (greco bianco) como negras (greco nero). Aunque hay más superficie dedicada a la greco nero, la greco bianco es la que más se suele llamar «greco». En Campania se usa para elaborar el vino DOCG Greco di Tufo.",
+        "ca": "El greco és un raïm italià que podria ser d'origen grec. El nom es refereix tant a varietats blanques (greco bianco) com negres (greco nero). Tot i que hi ha més superfície dedicada al greco nero, el greco bianco és el que més sovint s'anomena «greco». A Campània s'utilitza per elaborar el vi DOCG Greco di Tufo."
       }
     },
     "Q1421570": {
@@ -116,7 +121,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Sagrantino",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La sagrantino es una variedad de uva italiana autóctona de la región de Umbría, en el centro de Italia. Se cultiva sobre todo en el pueblo de Montefalco y sus alrededores, y su superficie ha crecido con rapidez: de 351 hectáreas en 2000 a 994 hectáreas en 2010, en manos de unos 50 productores."
+        "es": "La sagrantino es una variedad de uva italiana autóctona de la región de Umbría, en el centro de Italia. Se cultiva sobre todo en el pueblo de Montefalco y sus alrededores, y su superficie ha crecido con rapidez: de 351 hectáreas en 2000 a 994 hectáreas en 2010, en manos de unos 50 productores.",
+        "ca": "El sagrantino és una varietat de raïm italiana autòctona de la regió d'Úmbria, al centre d'Itàlia. Es conrea sobretot al poble de Montefalco i els voltants, i la seva superfície ha crescut ràpidament: de 351 hectàrees l'any 2000 a 994 el 2010, en mans d'uns 50 productors."
       }
     },
     "Q60790190": {
@@ -124,7 +130,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Listan_Prieto",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La listán prieto (que no debe confundirse con la listán negro) es una variedad de uva tinta que se cree originaria de Castilla-La Mancha, en España. Ha desaparecido de la España peninsular, pero en 2008 aún quedaban 29 hectáreas plantadas en las islas Canarias."
+        "es": "La listán prieto (que no debe confundirse con la listán negro) es una variedad de uva tinta que se cree originaria de Castilla-La Mancha, en España. Ha desaparecido de la España peninsular, pero en 2008 aún quedaban 29 hectáreas plantadas en las islas Canarias.",
+        "ca": "El listán prieto (que no s'ha de confondre amb el listán negro) és una varietat de raïm negre que es creu originària de Castella-la Manxa, a Espanya. Ha desaparegut de l'Espanya peninsular, però el 2008 encara en quedaven 29 hectàrees plantades a les illes Canàries."
       }
     },
     "Q31355050": {
@@ -132,7 +139,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Chinuri",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La chinuri (en georgiano, ჩინური) es una variedad de uva blanca de vinificación de acidez alta. Se asocia al vino georgiano y se cultiva en Kartli, donde alcanza la plena madurez a finales de octubre. Se usa a menudo para vinos tranquilos y espumosos, en mezcla con goruli mtsvane y aligoté. Resiste bien las enfermedades fúngicas y la filoxera."
+        "es": "La chinuri (en georgiano, ჩინური) es una variedad de uva blanca de vinificación de acidez alta. Se asocia al vino georgiano y se cultiva en Kartli, donde alcanza la plena madurez a finales de octubre. Se usa a menudo para vinos tranquilos y espumosos, en mezcla con goruli mtsvane y aligoté. Resiste bien las enfermedades fúngicas y la filoxera.",
+        "ca": "El chinuri (en georgià, ჩინური) és una varietat de raïm blanc de vinificació d'acidesa alta. S'associa al vi georgià i es conrea a Kartli, on arriba a la plena maduresa a finals d'octubre. S'utilitza sovint per a vins tranquils i escumosos, en cupatge amb goruli mtsvane i aligoté. Resisteix bé les malalties fúngiques i la fil·loxera."
       }
     },
     "Q6933361": {
@@ -140,7 +148,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Mujuretuli",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La mujuretuli (en georgiano, მუჯურეთული) es una uva tinta de vinificación cultivada en Georgia. También se conoce como mudzhuretuli, mudshuretuli y keduretuli."
+        "es": "La mujuretuli (en georgiano, მუჯურეთული) es una uva tinta de vinificación cultivada en Georgia. También se conoce como mudzhuretuli, mudshuretuli y keduretuli.",
+        "ca": "El mujuretuli (en georgià, მუჯურეთული) és un raïm negre de vinificació conreat a Geòrgia. També es coneix com a mudzhuretuli, mudshuretuli i keduretuli."
       }
     },
     "Q12871467": {
@@ -148,7 +157,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Khikhvi",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La khikhvi (en georgiano, ხიხვი) es una variedad de uva que se cultiva en el este de Georgia, concretamente en la región de Kajetia."
+        "es": "La khikhvi (en georgiano, ხიხვი) es una variedad de uva que se cultiva en el este de Georgia, concretamente en la región de Kajetia.",
+        "ca": "El khikhvi (en georgià, ხიხვი) és una varietat de raïm que es conrea a l'est de Geòrgia, concretament a la regió de Kakhètia."
       }
     },
     "Q20574534": {
@@ -156,7 +166,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Tavkveri",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La tavkveri (en georgiano, თავკვერი) es una variedad de uva tinta originaria de Georgia que se usa como uva de mesa y para elaborar diversos vinos. Es autóctona de la región de Kartli, pero también se cultiva mucho en Kajetia y en Azerbaiyán."
+        "es": "La tavkveri (en georgiano, თავკვერი) es una variedad de uva tinta originaria de Georgia que se usa como uva de mesa y para elaborar diversos vinos. Es autóctona de la región de Kartli, pero también se cultiva mucho en Kajetia y en Azerbaiyán.",
+        "ca": "El tavkveri (en georgià, თავკვერი) és una varietat de raïm negre originària de Geòrgia que s'utilitza com a raïm de taula i per elaborar diversos vins. És autòcton de la regió de Kartli, però també es conrea molt a Kakhètia i a l'Azerbaidjan."
       }
     },
     "Q678124": {
@@ -164,7 +175,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Vranac",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La vranac (en cirílico serbio, Вранац; en macedonio, Вранец, vranec) es una variedad de uva tinta originaria de Montenegro. Es la más plantada en Montenegro y se cree que está muy emparentada con la kratosija. Se considera la variedad más importante de Montenegro y una de las más importantes de Macedonia del Norte."
+        "es": "La vranac (en cirílico serbio, Вранац; en macedonio, Вранец, vranec) es una variedad de uva tinta originaria de Montenegro. Es la más plantada en Montenegro y se cree que está muy emparentada con la kratosija. Se considera la variedad más importante de Montenegro y una de las más importantes de Macedonia del Norte.",
+        "ca": "El vranac (en ciríl·lic serbi, Вранац; en macedoni, Вранец, vranec) és una varietat de raïm negre originària de Montenegro. És la més plantada a Montenegro i es creu que està molt emparentada amb la kratosija. Es considera la varietat més important de Montenegro i una de les més importants de Macedònia del Nord."
       }
     },
     "Q979351": {
@@ -172,7 +184,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La hárslevelű (en húngaro), llamada también lipovina (en eslovaco), frunză de tei (en rumano), Lindenblättriger (en alemán) y feuille de tilleul (en francés), es una variedad de uva de la rama póntica balcánica de Vitis vinifera."
+        "es": "La hárslevelű (en húngaro), llamada también lipovina (en eslovaco), frunză de tei (en rumano), Lindenblättriger (en alemán) y feuille de tilleul (en francés), es una variedad de uva de la rama póntica balcánica de Vitis vinifera.",
+        "ca": "L'hárslevelű (en hongarès), anomenat també lipovina (en eslovac), frunză de tei (en romanès), Lindenblättriger (en alemany) i feuille de tilleul (en francès), és una varietat de raïm de la branca póntica balcànica de Vitis vinifera."
       }
     },
     "Q3445835": {
@@ -180,7 +193,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/%C5%BDilavka",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La žilavka es una variedad de uva blanca plantada sobre todo en la región de Mostar, en Herzegovina, al sur de Bosnia y Herzegovina. Como vino varietal, la žilavka es conocida por su frescura viva y su acidez."
+        "es": "La žilavka es una variedad de uva blanca plantada sobre todo en la región de Mostar, en Herzegovina, al sur de Bosnia y Herzegovina. Como vino varietal, la žilavka es conocida por su frescura viva y su acidez.",
+        "ca": "La žilavka és una varietat de raïm blanc plantada sobretot a la regió de Mostar, a l'Hercegovina, al sud de Bòsnia i Hercegovina. Com a vi monovarietal, és coneguda per la seva frescor viva i la seva acidesa."
       }
     },
     "Q1937737": {
@@ -188,7 +202,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Montepulciano_(grape)",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La montepulciano es una variedad de uva tinta italiana. Es la uva principal de los vinos DOCG Colline Teramane Montepulciano d'Abruzzo, Conero y Offida Rosso, y de los DOC Montepulciano d'Abruzzo, Rosso Conero y Rosso Piceno Superiore."
+        "es": "La montepulciano es una variedad de uva tinta italiana. Es la uva principal de los vinos DOCG Colline Teramane Montepulciano d'Abruzzo, Conero y Offida Rosso, y de los DOC Montepulciano d'Abruzzo, Rosso Conero y Rosso Piceno Superiore.",
+        "ca": "El montepulciano és una varietat italiana de raïm negre. És el raïm principal dels vins DOCG Colline Teramane Montepulciano d'Abruzzo, Conero i Offida Rosso, i dels DOC Montepulciano d'Abruzzo, Rosso Conero i Rosso Piceno Superiore."
       }
     },
     "Q12628015": {
@@ -196,7 +211,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Blatina",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La blatina (en cirílico, Блатина) es una variedad de uva tinta cultivada sobre todo en la región de Herzegovina, en Bosnia y Herzegovina. Tiene flor funcionalmente femenina (autoestéril), por lo que siempre se cultiva junto a otras variedades, como la alicante bouschet (kambuša), la merlot y la trnjak, que a la vez polinizan la blatina."
+        "es": "La blatina (en cirílico, Блатина) es una variedad de uva tinta cultivada sobre todo en la región de Herzegovina, en Bosnia y Herzegovina. Tiene flor funcionalmente femenina (autoestéril), por lo que siempre se cultiva junto a otras variedades, como la alicante bouschet (kambuša), la merlot y la trnjak, que a la vez polinizan la blatina.",
+        "ca": "La blatina (en ciríl·lic, Блатина) és una varietat de raïm negre conreada sobretot a la regió de l'Hercegovina, a Bòsnia i Hercegovina. Té la flor funcionalment femenina (autoestèril), i per això sempre es conrea amb altres varietats, com l'alicante bouschet (kambuša), el merlot i el trnjak, que alhora la pol·linitzen."
       }
     },
     "Q832738": {
@@ -204,7 +220,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Po%C5%A1ip",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La pošip es una uva blanca autóctona que se cultiva sobre todo en la región croata de Dalmacia, en la isla de Korčula, aunque también hay pequeñas plantaciones en la península de Pelješac. Aunque se encuentra en muchas zonas de Korčula, las principales y más productivas están en los municipios de Čara y Smokvica y sus alrededores."
+        "es": "La pošip es una uva blanca autóctona que se cultiva sobre todo en la región croata de Dalmacia, en la isla de Korčula, aunque también hay pequeñas plantaciones en la península de Pelješac. Aunque se encuentra en muchas zonas de Korčula, las principales y más productivas están en los municipios de Čara y Smokvica y sus alrededores.",
+        "ca": "El pošip és un raïm blanc autòcton conreat sobretot a la regió croata de Dalmàcia, a l'illa de Korčula, tot i que també n'hi ha petites plantacions a la península de Pelješac. Tot i que es troba en moltes zones de Korčula, les principals i més productives són als municipis de Čara i Smokvica i els seus voltants."
       }
     },
     "Q833144": {
@@ -220,7 +237,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Grillo",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La grillo, conocida también como riddu y rossese bianco, es una variedad de uva blanca italiana que resiste las altas temperaturas y se usa mucho en la vinificación siciliana, en particular para el marsala. Su origen es incierto, pero pudo llegar a Sicilia desde Apulia."
+        "es": "La grillo, conocida también como riddu y rossese bianco, es una variedad de uva blanca italiana que resiste las altas temperaturas y se usa mucho en la vinificación siciliana, en particular para el marsala. Su origen es incierto, pero pudo llegar a Sicilia desde Apulia.",
+        "ca": "El grillo, conegut també com a riddu i rossese bianco, és una varietat italiana de raïm blanc que resisteix les altes temperatures i que s'utilitza molt en la vinificació siciliana, especialment per elaborar marsala. El seu origen és incert, però podria haver arribat a Sicília des de la Pulla."
       }
     },
     "Q512279": {
@@ -228,7 +246,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Frappato",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La frappato di Vittoria o frappato es una variedad de uva tinta italiana plantada sobre todo en Sicilia. Como varietal, da vinos ligeros de cuerpo con un marcado aroma a uva. Se ve sobre todo como componente del único vino DOCG de Sicilia, el Cerasuolo di Vittoria, que lleva entre un 30 y un 50 % de frappato y entre un 50 y un 70 % de nero d'Avola."
+        "es": "La frappato di Vittoria o frappato es una variedad de uva tinta italiana plantada sobre todo en Sicilia. Como varietal, da vinos ligeros de cuerpo con un marcado aroma a uva. Se ve sobre todo como componente del único vino DOCG de Sicilia, el Cerasuolo di Vittoria, que lleva entre un 30 y un 50 % de frappato y entre un 50 y un 70 % de nero d'Avola.",
+        "ca": "El frappato di Vittoria o frappato és una varietat italiana de raïm negre plantada sobretot a Sicília. Com a monovarietal, dona vins lleugers de cos amb una aroma de raïm marcada. Sobretot es troba com a component de l'única DOCG de Sicília, el Cerasuolo di Vittoria, que porta entre un 30 i un 50% de frappato i entre un 50 i un 70% de nero d'Avola."
       }
     },
     "Q1753085": {
@@ -236,7 +255,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Molinara_(grape)",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La molinara es una uva tinta italiana que en 2010 ocupaba 595 hectáreas en Italia, casi todas en el Véneto. Aporta acidez a los vinos de Valpolicella y Bardolino, que se elaboran con mezclas de corvina, corvinone, molinara y rondinella."
+        "es": "La molinara es una uva tinta italiana que en 2010 ocupaba 595 hectáreas en Italia, casi todas en el Véneto. Aporta acidez a los vinos de Valpolicella y Bardolino, que se elaboran con mezclas de corvina, corvinone, molinara y rondinella.",
+        "ca": "La molinara és un raïm negre italià que el 2010 ocupava 595 hectàrees a Itàlia, gairebé totes al Vèneto. Aporta acidesa als vins de Valpolicella i Bardolino, que s'elaboren amb cupatges de corvina, corvinone, molinara i rondinella."
       }
     },
     "Q770908": {
@@ -244,7 +264,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Marzemino",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La marzemino es una variedad de uva tinta italiana cultivada sobre todo en torno a Isera, al sur del Trentino. El vino es famoso sobre todo por su mención en la ópera Don Giovanni, con música de Wolfgang Amadeus Mozart («Versa il vino! Eccellente Marzimino!»). La cepa madura tarde y es sensible a muchas enfermedades de la vid, entre ellas el oídio."
+        "es": "La marzemino es una variedad de uva tinta italiana cultivada sobre todo en torno a Isera, al sur del Trentino. El vino es famoso sobre todo por su mención en la ópera Don Giovanni, con música de Wolfgang Amadeus Mozart («Versa il vino! Eccellente Marzimino!»). La cepa madura tarde y es sensible a muchas enfermedades de la vid, entre ellas el oídio.",
+        "ca": "El marzemino és una varietat italiana de raïm negre conreada sobretot als voltants d'Isera, al sud del Trentino. El vi és famós sobretot per la seva menció a l'òpera Don Giovanni, amb música de Wolfgang Amadeus Mozart («Versa il vino! Eccellente Marzimino!»). El cep madura tard i és sensible a moltes malalties de la vinya, entre elles l'oïdi."
       }
     },
     "Q1540261": {
@@ -260,7 +281,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Aramon_(grape)",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La aramon o aramon noir es una variedad de uva tinta cultivada sobre todo en el Languedoc-Rosellón, en el sur de Francia. Entre finales del siglo XIX y la década de 1960 fue la variedad más cultivada de Francia, pero sus plantaciones no han dejado de disminuir desde mediados del siglo XX."
+        "es": "La aramon o aramon noir es una variedad de uva tinta cultivada sobre todo en el Languedoc-Rosellón, en el sur de Francia. Entre finales del siglo XIX y la década de 1960 fue la variedad más cultivada de Francia, pero sus plantaciones no han dejado de disminuir desde mediados del siglo XX.",
+        "ca": "L'aramon o aramon noir és una varietat de raïm negre conreada sobretot al Llenguadoc-Rosselló, al sud de França. Entre finals del segle XIX i els anys seixanta va ser la varietat més conreada de França, però les seves plantacions no han parat de disminuir des de mitjan segle XX."
       }
     },
     "Q121381": {
@@ -268,7 +290,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Ansonica",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La ansonica o inzolia es una uva blanca italiana plantada sobre todo en el oeste de Sicilia, donde puede usarse para elaborar marsala. Destaca por su aroma a frutos secos. En la Toscana se la conoce como ansonica. Es el componente principal (y posiblemente único) de la DOC toscana Ansonica Costa dell'Argentario, situada en el extremo sur de la costa toscana y en la isla de Giglio."
+        "es": "La ansonica o inzolia es una uva blanca italiana plantada sobre todo en el oeste de Sicilia, donde puede usarse para elaborar marsala. Destaca por su aroma a frutos secos. En la Toscana se la conoce como ansonica. Es el componente principal (y posiblemente único) de la DOC toscana Ansonica Costa dell'Argentario, situada en el extremo sur de la costa toscana y en la isla de Giglio.",
+        "ca": "L'ansonica o inzolia és un raïm blanc italià plantat sobretot a l'oest de Sicília, on es pot fer servir per elaborar marsala. Destaca per la seva aroma de fruita seca. A la Toscana se'l coneix com a ansonica. És el component principal (i potser únic) de la DOC toscana Ansonica Costa dell'Argentario, a l'extrem sud de la costa toscana i a l'illa de Giglio."
       }
     },
     "Q218515": {
@@ -276,7 +299,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Tsolikouri",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La tsolikouri (en georgiano, ცოლიკოური) es una variedad de uva blanca de piel amarillo claro cultivada sobre todo en el oeste de Imericia, en Georgia. Se cultiva en la llanura de la Cólquida, a 160 m sobre el nivel del mar."
+        "es": "La tsolikouri (en georgiano, ცოლიკოური) es una variedad de uva blanca de piel amarillo claro cultivada sobre todo en el oeste de Imericia, en Georgia. Se cultiva en la llanura de la Cólquida, a 160 m sobre el nivel del mar.",
+        "ca": "El tsolikouri (en georgià, ცოლიკოური) és una varietat de raïm blanc de pell groc clar conreada sobretot a l'oest d'Imerètia, a Geòrgia. Es conrea a la plana de la Còlquida, a 160 m sobre el nivell del mar."
       }
     },
     "Q268579": {
@@ -284,7 +308,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Grolleau_(grape)",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La grolleau, o grolleau noir, es una variedad de uva tinta francesa cultivada sobre todo en el valle del Loira. El nombre procede de la palabra francesa grolle, «corneja», y se dice que alude a las bayas negras intensas de la cepa. Se elabora sobre todo en rosado, en particular en la región de Anjou."
+        "es": "La grolleau, o grolleau noir, es una variedad de uva tinta francesa cultivada sobre todo en el valle del Loira. El nombre procede de la palabra francesa grolle, «corneja», y se dice que alude a las bayas negras intensas de la cepa. Se elabora sobre todo en rosado, en particular en la región de Anjou.",
+        "ca": "El grolleau, o grolleau noir, és una varietat francesa de raïm negre conreada sobretot a la vall del Loira. El nom ve de la paraula francesa grolle, 'gralla', i es diu que fa referència als grans negres intensos del cep. Sobretot s'elabora en rosat, especialment a la regió d'Anjou."
       }
     },
     "Q1263977": {
@@ -292,7 +317,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Noir_Pr%C3%A9coce",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La pinot noir précoce, o Frühburgunder como se la llama en partes de Alemania, es una variedad de uva de vinificación de piel oscura, negro azulada, forma o mutación de la pinot noir que se distingue sobre todo por madurar antes de lo normal (de ahí el calificativo «précoce»). Aunque algunos ampelógrafos la tratan como variedad aparte, otros la consideran una simple forma temprana de la pinot noir, y algunos de sus vinos se etiquetan sin más como «Pinot noir»."
+        "es": "La pinot noir précoce, o Frühburgunder como se la llama en partes de Alemania, es una variedad de uva de vinificación de piel oscura, negro azulada, forma o mutación de la pinot noir que se distingue sobre todo por madurar antes de lo normal (de ahí el calificativo «précoce»). Aunque algunos ampelógrafos la tratan como variedad aparte, otros la consideran una simple forma temprana de la pinot noir, y algunos de sus vinos se etiquetan sin más como «Pinot noir».",
+        "ca": "El pinot noir précoce, o Frühburgunder com se l'anomena en algunes parts d'Alemanya, és una varietat de raïm de vinificació de pell fosca, negra blavosa, forma o mutació del pinot noir que es distingeix sobretot per madurar abans del normal (d'aquí el qualificatiu «précoce»). Tot i que alguns ampelògrafs la tracten com una varietat a part, d'altres la consideren simplement una forma primerenca del pinot noir, i alguns dels seus vins s'etiqueten directament com a «Pinot noir»."
       }
     },
     "Q1325364": {
@@ -300,7 +326,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Elbling",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La elbling es una variedad de uva blanca (Vitis vinifera) que hoy se cultiva sobre todo en el curso alto del Mosela, en Alemania, y en Luxemburgo, donde el río se llama Moselle."
+        "es": "La elbling es una variedad de uva blanca (Vitis vinifera) que hoy se cultiva sobre todo en el curso alto del Mosela, en Alemania, y en Luxemburgo, donde el río se llama Moselle.",
+        "ca": "L'elbling és una varietat de raïm blanc (Vitis vinifera) que avui es conrea sobretot al curs alt del Mosel·la, a Alemanya, i a Luxemburg, on el riu s'anomena Moselle."
       }
     },
     "Q1398398": {
@@ -308,7 +335,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Ribolla_Gialla",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La ribolla gialla (también llamada ribolla; en esloveno, rumena rebula; en croata, jarbola) es una uva blanca célebre sobre todo en la región de Friuli-Venecia Julia, en el nordeste de Italia, aunque la mayor parte se cultiva en Eslovenia, donde se conoce como rebula. En Friuli-Venecia Julia prospera en torno a Corno di Rosazzo y Gorizia."
+        "es": "La ribolla gialla (también llamada ribolla; en esloveno, rumena rebula; en croata, jarbola) es una uva blanca célebre sobre todo en la región de Friuli-Venecia Julia, en el nordeste de Italia, aunque la mayor parte se cultiva en Eslovenia, donde se conoce como rebula. En Friuli-Venecia Julia prospera en torno a Corno di Rosazzo y Gorizia.",
+        "ca": "La ribolla gialla (anomenada també ribolla; en eslovè, rumena rebula; en croat, jarbola) és un raïm blanc famós sobretot a la regió de Friül-Venècia Júlia, al nord-est d'Itàlia, tot i que la major part es conrea a Eslovènia, on es coneix com a rebula. A Friül-Venècia Júlia prospera als voltants de Corno di Rosazzo i Gorízia."
       }
     },
     "Q897321": {
@@ -316,7 +344,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Irsai_Oliv%C3%A9r",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La irsai olivér es una variedad húngara de uva blanca, cruce de pozsonyi y perla de Csaba obtenido en 1930. Madura pronto y tiene un marcado carácter moscatel."
+        "es": "La irsai olivér es una variedad húngara de uva blanca, cruce de pozsonyi y perla de Csaba obtenido en 1930. Madura pronto y tiene un marcado carácter moscatel.",
+        "ca": "L'irsai olivér és una varietat hongaresa de raïm blanc, encreuament de pozsonyi i perla de Csaba obtingut el 1930. Madura d'hora i té un marcat caràcter moscatell."
       }
     },
     "Q1468853": {
@@ -324,7 +353,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignonasse",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La sauvignonasse (conocida también como friulano, tocai friulano o sauvignon vert) es una uva blanca de la especie Vitis vinifera extendida en la región italiana de Friuli y en los territorios vecinos de Eslovenia. Está muy plantada en Chile, donde durante mucho tiempo se confundió con la sauvignon blanc."
+        "es": "La sauvignonasse (conocida también como friulano, tocai friulano o sauvignon vert) es una uva blanca de la especie Vitis vinifera extendida en la región italiana de Friuli y en los territorios vecinos de Eslovenia. Está muy plantada en Chile, donde durante mucho tiempo se confundió con la sauvignon blanc.",
+        "ca": "El sauvignonasse (conegut també com a friulano, tocai friulano o sauvignon vert) és un raïm blanc de l'espècie Vitis vinifera estès a la regió italiana del Friül i als territoris veïns d'Eslovènia. Està molt plantat a Xile, on durant molt de temps es va confondre amb el sauvignon blanc."
       }
     },
     "Q1597593": {
@@ -332,7 +362,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Aleatico",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La aleatico es una variedad de uva tinta italiana. Destaca por ser la uva principal del vino de culto Aleatico di Portoferraio, de la isla de Elba. En Chile se conoce como moscatel rosada. También se ha cultivado en Mudgee (Nueva Gales del Sur) y en California."
+        "es": "La aleatico es una variedad de uva tinta italiana. Destaca por ser la uva principal del vino de culto Aleatico di Portoferraio, de la isla de Elba. En Chile se conoce como moscatel rosada. También se ha cultivado en Mudgee (Nueva Gales del Sur) y en California.",
+        "ca": "L'aleatico és una varietat italiana de raïm negre. Destaca per ser el raïm principal del vi de culte Aleatico di Portoferraio, de l'illa d'Elba. A Xile es coneix com a moscatell rosat. També s'ha conreat a Mudgee (Nova Gal·les del Sud) i a Califòrnia."
       }
     },
     "Q755556": {
@@ -340,7 +371,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Athiri",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La athiri (en griego, Αθήρι), o athiri aspro, es una uva blanca griega que se usa para elaborar retsina en la isla de Rodas."
+        "es": "La athiri (en griego, Αθήρι), o athiri aspro, es una uva blanca griega que se usa para elaborar retsina en la isla de Rodas.",
+        "ca": "L'athiri (en grec, Αθήρι), o athiri aspro, és un raïm blanc grec que s'utilitza per elaborar retsina a l'illa de Rodes."
       }
     },
     "Q1957003": {
@@ -348,7 +380,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Mtsvane",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La mtsvane (en georgiano, მწვანე) es una variedad de uva con la que se elaboran vinos georgianos; se usa para vino blanco. Su nombre alude al color verde amarillento de las bayas maduras. A menudo se mezcla con rkatsiteli para dar un vino afrutado y aromático. En georgiano, mtsvane significa nuevo, joven y verde."
+        "es": "La mtsvane (en georgiano, მწვანე) es una variedad de uva con la que se elaboran vinos georgianos; se usa para vino blanco. Su nombre alude al color verde amarillento de las bayas maduras. A menudo se mezcla con rkatsiteli para dar un vino afrutado y aromático. En georgiano, mtsvane significa nuevo, joven y verde.",
+        "ca": "El mtsvane (en georgià, მწვანე) és una varietat de raïm amb què s'elaboren vins georgians; s'utilitza per a vi blanc. El nom fa referència al color verd groguenc dels grans madurs. Sovint es barreja amb el rkatsiteli per obtenir un vi afruitat i aromàtic. En georgià, mtsvane vol dir nou, jove i verd."
       }
     },
     "Q296696": {
@@ -356,7 +389,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La öküzgözü es una variedad de uva autóctona turca que se usa en la elaboración del vino turco. Es una de las dos principales uvas de vinificación autóctonas de la provincia de Elazığ, en Anatolia oriental; la otra es la boğazkere. Se la considera una de las variedades tintas más importantes de Turquía por su amplio cultivo, su versatilidad de estilos y su reconocimiento internacional."
+        "es": "La öküzgözü es una variedad de uva autóctona turca que se usa en la elaboración del vino turco. Es una de las dos principales uvas de vinificación autóctonas de la provincia de Elazığ, en Anatolia oriental; la otra es la boğazkere. Se la considera una de las variedades tintas más importantes de Turquía por su amplio cultivo, su versatilidad de estilos y su reconocimiento internacional.",
+        "ca": "L'öküzgözü és una varietat de raïm autòctona turca que s'utilitza en l'elaboració del vi turc. És un dels dos principals raïms de vinificació autòctons de la província d'Elazığ, a l'Anatòlia oriental; l'altre és el boğazkere. Es considera una de les varietats negres més importants de Turquia pel seu ampli conreu, la seva versatilitat d'estils i el seu reconeixement internacional."
       }
     },
     "Q358780": {
@@ -364,7 +398,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La bourboulenc es una variedad de uva blanca cultivada sobre todo en el sur de Francia, en las regiones del Ródano meridional, la Provenza y el Languedoc."
+        "es": "La bourboulenc es una variedad de uva blanca cultivada sobre todo en el sur de Francia, en las regiones del Ródano meridional, la Provenza y el Languedoc.",
+        "ca": "El bourboulenc és una varietat de raïm blanc conreada sobretot al sud de França, a les regions del Roine meridional, la Provença i el Llenguadoc."
       }
     },
     "Q362311": {
@@ -380,7 +415,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Neuburger",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La neuburger es una uva blanca austriaca, cruce de roter veltliner y silvaner. Como varietal suele dar vinos con mucho cuerpo."
+        "es": "La neuburger es una uva blanca austriaca, cruce de roter veltliner y silvaner. Como varietal suele dar vinos con mucho cuerpo.",
+        "ca": "El neuburger és un raïm blanc austríac, encreuament de roter veltliner i silvaner. Com a monovarietal, sol donar vins amb molt de cos."
       }
     },
     "Q1091950": {
@@ -388,7 +424,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Ciliegiolo",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La ciliegiolo es una variedad de uva tinta de Italia, cuyo nombre viene de la palabra italiana para «cereza». Es un componente menor de mezclas tradicionales como el Chianti, pero el interés por ella ha revivido en los últimos años. En Umbría se elabora como vino ligero y fácil de beber, mientras que en la Toscana se hace un estilo más potente y estructurado."
+        "es": "La ciliegiolo es una variedad de uva tinta de Italia, cuyo nombre viene de la palabra italiana para «cereza». Es un componente menor de mezclas tradicionales como el Chianti, pero el interés por ella ha revivido en los últimos años. En Umbría se elabora como vino ligero y fácil de beber, mientras que en la Toscana se hace un estilo más potente y estructurado.",
+        "ca": "El ciliegiolo és una varietat de raïm negre d'Itàlia, que pren el nom de la paraula italiana per a 'cirera'. És un component menor de cupatges tradicionals com el Chianti, però l'interès per aquest raïm ha reviscolat els darrers anys. A l'Úmbria se n'elabora un vi lleuger i fàcil de beure, mentre que a la Toscana se'n fa un estil més potent i estructurat."
       }
     },
     "Q1099124": {
@@ -396,7 +433,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Pamid",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La pamid es una antigua variedad de uva para vino tinto. Se cultiva en Bulgaria desde los tiempos de los antiguos tracios. En el pasado fue la variedad búlgara más extendida, pero hoy sus plantaciones son muy limitadas. También se cultiva en Macedonia del Norte, Serbia, Albania, Turquía, Grecia, Hungría y Rumanía."
+        "es": "La pamid es una antigua variedad de uva para vino tinto. Se cultiva en Bulgaria desde los tiempos de los antiguos tracios. En el pasado fue la variedad búlgara más extendida, pero hoy sus plantaciones son muy limitadas. También se cultiva en Macedonia del Norte, Serbia, Albania, Turquía, Grecia, Hungría y Rumanía.",
+        "ca": "El pamid és una antiga varietat de raïm per a vi negre. Es conrea a Bulgària des dels temps dels antics tracis. En el passat va ser la varietat búlgara més estesa, però avui les seves plantacions són molt limitades. També es conrea a Macedònia del Nord, Sèrbia, Albània, Turquia, Grècia, Hongria i Romania."
       }
     },
     "Q605464": {
@@ -404,7 +442,8 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Gamaret",
       "passages": "Introduction, as the card shows it",
       "texts": {
-        "es": "La gamaret es una variedad de uva tinta. La obtuvo André Jaquinet en la Station Fédérale de Recherches en Production Végétale de Changins en 1970, cruzando gamay y reichensteiner. Se desarrolló para cultivarse en la Suiza francesa y es hermana completa de la garanoir, pensada para la parte germanófona del país."
+        "es": "La gamaret es una variedad de uva tinta. La obtuvo André Jaquinet en la Station Fédérale de Recherches en Production Végétale de Changins en 1970, cruzando gamay y reichensteiner. Se desarrolló para cultivarse en la Suiza francesa y es hermana completa de la garanoir, pensada para la parte germanófona del país.",
+        "ca": "El gamaret és una varietat de raïm negre. El va obtenir André Jaquinet a la Station Fédérale de Recherches en Production Végétale de Changins el 1970, creuant gamay i reichensteiner. Es va desenvolupar per conrear-lo a la Suïssa francòfona, i és germà complet del garanoir, pensat per a la part germanòfona del país."
       }
     },
     "Q731972": {
@@ -413,6 +452,736 @@
       "passages": "Introduction, as the card shows it",
       "texts": {
         "es": "La mavrud (en búlgaro, мавруд, del griego μαυρό, mavró, «negro») es una uva tinta autóctona de la región de los Balcanes que se usa tanto en mezclas como para vinos varietales. Se cultiva en la región de Tracia, en Bulgaria, en algunas regiones de Albania y en algunas de Grecia y Rumanía."
+      }
+    },
+    "Q266752": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Bacchus_(grape)",
+      "passages": "Introduction",
+      "replaces": [
+        "es"
+      ],
+      "why": "The Spanish Wikipedia lead had been vandalised: it credits the grape to 'Vini Jr' at a 'Real Madrid' institute.",
+      "texts": {
+        "es": "La bacchus es una uva blanca de vinificación obtenida por el viticultor Peter Morio en el Instituto de Mejora de la Vid de Geilweilerhof, en el Palatinado, en 1933. Cruzó un cruce de silvaner y riesling con la müller-thurgau.",
+        "ca": "La bacchus és un raïm blanc de vinificació obtingut pel viticultor Peter Morio a l'Institut de Millora de la Vinya de Geilweilerhof, al Palatinat, el 1933. Va creuar un encreuament de silvaner i riesling amb la müller-thurgau."
+      }
+    },
+    "Q1354215": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri",
+      "passages": "Introduction",
+      "replaces": [
+        "es"
+      ],
+      "why": "The Spanish Wikipedia lead linked to this grape describes Courbu, a different variety.",
+      "texts": {
+        "es": "La hondarrabi zuri es una variedad blanca de Vitis vinifera originaria del País Vasco, en España.",
+        "ca": "L'hondarrabi zuri és una varietat blanca de Vitis vinifera originària del País Basc, a Espanya."
+      }
+    },
+    "Q1503069": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Touriga_nacional",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La touriga nacional és una varietat de raïm negre que molts consideren la millor de Portugal. Malgrat el baix rendiment del cep, per la petitesa dels grans, té un paper destacat en els cupatges dels vins de Porto. Cada cop s'utilitza més com a raïm de taula a la DOC Douro i al Dão."
+      }
+    },
+    "Q1764651": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/M%C3%B3nica_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La mònica és un raïm negre que creix sobretot a Sardenya. És un dels pocs raïms permesos per les disposicions legals d'aquella denominació. El cep es va originar a Espanya, però avui no és habitual en aquell país. El vi que se n'elabora tendeix a ser senzill i fet per beure's jove."
+      }
+    },
+    "Q894137": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Ca%C3%AD%C3%B1o_tinto",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El caíño tinto és una varietat de raïm negre (Vitis vinifera) autòctona de Galícia, a Espanya, també coneguda com a borraçal al nord de Portugal, on també es conrea. És un raïm de maduració tardana i de rendiment baix. Té raïms de mida mitjana i no gaire compactes, i grans de color blau fosc."
+      }
+    },
+    "Q1421949": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Sous%C3%B3n",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El sousón és una varietat de raïm negre de vinificació (Vitis vinifera) espanyola (Galícia) i portuguesa. També se'l coneix amb els sinònims portuguesos souzão i vinhão. És conegut perquè dona vins de color intens, amb gustos rústics i de pansa."
+      }
+    },
+    "Q588556": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Alfrocheiro_preto",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'alfrocheiro preto és una varietat portuguesa de raïm negre plantada sobretot a la DOC Dão i a l'Alentejo. És coneguda pel color fosc i profund que pot aportar als vins de cupatge."
+      }
+    },
+    "Q431045": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Touriga_franca",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La touriga franca (o touriga francesa) és una de les principals varietats de raïm del vi de Porto. És més lleugera i més aromàtica que la touriga nacional, i aporta finor al vi. Jancis Robinson ha dit que la touriga franca és a la touriga nacional el que la cabernet franc és a la cabernet sauvignon."
+      }
+    },
+    "Q358657": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Arinto",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'arinto o arinto de Bucelas és un raïm blanc de vinificació de Portugal. S'utilitza sobretot a la Denominação de Origem Controlada Bucelas, al Vinho Regional Tejo i al Vinho Verde. Dona vins molt àcids amb notes de llimona."
+      }
+    },
+    "Q489573": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Fern%C3%A3o_pires",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La fernão pires és un raïm blanc portuguès. Es troba sobretot al VR Tejo (al nord-est de Lisboa) i a la DOC Bairrada (a uns 80 km al sud de Porto), on també es coneix com a maria gomes. Aquesta varietat és coneguda perquè dona vins amb aromes d'espècies i, sovint, delicades notes afruitades. Generalment no és un vi apte per a l'envelliment."
+      }
+    },
+    "Q1410399": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Fiano_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El fiano és un raïm blanc italià que creix sobretot a la regió de Campània i a l'illa de Sicília. A Campània, aquest raïm de molt sabor destaca sobretot als voltants d'Avellino, on s'elabora el vi DOCG Fiano di Avellino."
+      }
+    },
+    "Q1135583": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Cortese",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La cortese és un raïm blanc italià que creix sobretot al sud-est del Piemont, a les províncies d'Alessandria i Asti. És el raïm principal de les DOC Cortese dell'Alto Monferrato i Colli Tortonesi i de la DOCG Cortese di Gavi. Hi ha plantacions significatives de cortese a la regió llombarda de l'Oltrepò Pavese i en els blancs de cupatge de la DOC vèneta Bianco di Custoza."
+      }
+    },
+    "Q440964": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Mauzac_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El mauzac o mauzac blanc és un raïm blanc de vinificació. Creix sobretot a les AOC Gaillac i Limoux, al sud-oest de França. L'any 2000 n'hi havia 3.200 ha a França."
+      }
+    },
+    "Q1651827": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Moscatel_de_Alejandr%C3%ADa",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El moscatell d'Alexandria, conegut també com a moscatell de gra gros o moscatell de Chipiona, és un raïm blanc (Vitis vinifera) de la família dels moscatells."
+      }
+    },
+    "Q4721075": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Alexandrouli",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'alexandrouli és una varietat georgiana de raïm per a vi negre."
+      }
+    },
+    "Q778601": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Pinot_gris",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El pinot gris, o grauburgunder, és un raïm blanc de vinificació (Vitis vinifera). Es creu que és una mutació o un clon del pinot noir. Normalment té un color blau grisenc, tot i que de vegades és marró rosat o fins i tot blanquinós. La paraula pinot ve del francès pin (pi), i pot deure's al fet que els raïms tenen forma de pinya."
+      }
+    },
+    "Q204433": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Zinfandel",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El zinfandel és una varietat de raïm negre. Ocupa l'11,34% de les vinyes de Califòrnia."
+      }
+    },
+    "Q1070101": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Chenin_blanc",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El chenin blanc (conegut també com a pineau de la Loire, entre altres noms) és un raïm blanc de vinificació de la vall del Loira, a França. La seva acidesa alta el fa útil per elaborar escumosos i vins de postres equilibrats, tot i que pot donar vins molt tous i neutres si no es controla el vigor del cep."
+      }
+    },
+    "Q1133517": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Silvaner_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El silvaner o sylvaner és una varietat de raïm blanc que creix sobretot a la regió francesa d'Alsàcia i a Alemanya. A Alemanya se sol utilitzar com a component del liebfraumilch, i la producció va créixer als anys setanta en detriment de la qualitat."
+      }
+    },
+    "Q180175": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Gr%C3%BCner_veltliner",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El grüner veltliner (veltliner verd) és una varietat de raïm blanc que creix sobretot a Àustria, Eslovàquia i la República Txeca. Les fulles del cep tenen cinc lòbuls, i els raïms són llargs però compactes, amb grans verds que maduren a mitjan o finals d'octubre a l'hemisferi nord."
+      }
+    },
+    "Q681670": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/M%C3%BCller-thurgau",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El müller-thurgau és una varietat de raïm blanc creada per Hermann Müller al cantó suís de Turgòvia (en alemany, Thurgau) el 1882. És un encreuament de riesling amb madeleine royale. S'utilitza per fer vi blanc a Alemanya, Àustria, el nord d'Itàlia, Hongria, Anglaterra, Austràlia, la República Txeca, Eslovàquia, Eslovènia, Nova Zelanda, els Estats Units i el Japó."
+      }
+    },
+    "Q1446649": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Saperavi",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El saperavi (en georgià, საფერავი, literalment 'acolorit') és un raïm tintorer àcid originari de Geòrgia, on s'utilitza per fer vins propis de la regió, juntament amb les varietats alexandrouli i rkatsiteli. Les fulles del cep són grans, arrodonides i de tres lòbuls. Els grans són mitjans o grans, el·líptics, de color blau fosc i pell fina."
+      }
+    },
+    "Q950514": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Pinot_blanc",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El pinot blanc és una varietat de raïm (Vitis vinifera). És producte d'una mutació genètica del pinot gris, que al seu torn és una mutació del pinot noir."
+      }
+    },
+    "Q576472": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Rkatsiteli",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El rkatsiteli (en georgià, რქაწითელი, que vol dir 'tija vermella') és una varietat de raïm blanc de vinificació."
+      }
+    },
+    "Q947208": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Pinot_meunier",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El pinot meunier, conegut també com a meunier o com a schwarzriesling, és una varietat de raïm negre. És conegut per ser una de les tres varietats principals que s'utilitzen en l'elaboració del xampany (les altres dues són el pinot noir i el chardonnay)."
+      }
+    },
+    "Q26145": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Corvina_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La corvina és un raïm de vinificació (Vitis vinifera) italià. De vegades s'anomena corvina veronese o cruina, i a Europa també és molt coneguda com a cassabria. Creix sobretot al Vèneto, al nord-est d'Itàlia. Es fa servir amb altres varietats per elaborar els vins negres regionals de Bardolino i Valpolicella, que tenen un sabor suau i afruitat amb notes d'ametlla."
+      }
+    },
+    "Q1514198": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Aligot%C3%A9",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'aligoté és una varietat de raïm blanc de vinificació (Vitis vinifera)."
+      }
+    },
+    "Q576867": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Kadarka",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La kadarka és un raïm de pell fosca que s'utilitza per elaborar vi negre. Té una llarga història i és popular a Hongria, Romania i Bulgària, on també se la coneix com a gamza (гъмза)."
+      }
+    },
+    "Q644796": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Welschriesling",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El welschriesling és un raïm blanc conreat a l'Europa central. No està emparentat amb el riesling del Rin."
+      }
+    },
+    "Q1713890": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Nero_d'Avola",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El nero d'Avola és «el raïm per a vi negre més important de Sicília» i una de les varietats italianes més importants. El nom ve d'Avola, al sud de Sicília, i els seus vins es comparen amb els de syrah del Nou Món, amb tanins suaus i gustos especiats o de pruna. També forma part dels vins de cupatge de Marsala."
+      }
+    },
+    "Q940015": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Furmint",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El furmint és un raïm blanc hongarès. És el tercer raïm més plantat a la regió vinícola de Tokaj-Hegyalja. S'utilitza per elaborar un vi monovarietal sec i és també el principal component del vi de postres conegut com a tokaji. També creix a la petita regió vinícola hongaresa de Somló, i té un paper semblant a la regió vinícola eslovaca de Tokaj."
+      }
+    },
+    "Q1504214": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Pinotage",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El pinotage és una varietat de raïm negre de vinificació, coneguda sobretot com el raïm emblemàtic dels vins de Sud-àfrica. Es va crear el 1925 com un encreuament de pinot noir i cinsault. (A Sud-àfrica el cinsault es coneixia aleshores com a «hermitage», d'on ve el nom «pino-tage».)"
+      }
+    },
+    "Q232825": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Zweigelt",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El zweigelt és un raïm negre obtingut el 1922 per Fritz Zweigelt a l'Institut Federal de Viticultura i Pomologia de Klosterneuburg, a Àustria, creuant sankt laurent amb blaufränkisch. Avui és el raïm negre més plantat d'Àustria, i també té una certa presència al Canadà. El 2008 les plantacions austríaques d'aquest cep eren de 6.512 ha."
+      }
+    },
+    "Q882859": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Blaufr%C3%A4nkisch",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El blaufränkisch és una varietat de raïm de pell fosca que s'utilitza per fer vi negre. És de maduració tardana i dona vins negres normalment rics en tanins, que poden mostrar un caràcter especiat pronunciat."
+      }
+    },
+    "Q646799": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Blauer_portugieser",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El blauer portugieser és un raïm negre austríac i alemany. Es troba sobretot a les regions de Renània, el Palatinat i la Baixa Àustria. També és un dels raïms permesos en el vi hongarès egri bikavér (sang de bou). A Alemanya es conreava en 4.551 hectàrees, el 4,5% de les vinyes, el 2007."
+      }
+    },
+    "Q657693": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Palomino_(vid)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El palomino, conegut també com a listán, és una varietat de cep (Vitis vinifera) blanca, la quarta en superfície conreada a Espanya. Molt estesa internacionalment, té moltes altres denominacions."
+      }
+    },
+    "Q387147": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Vermentino",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El vermentino és una varietat de raïm de pell clara originària d'Itàlia. També és present a França, Espanya, els Estats Units i Austràlia."
+      }
+    },
+    "Q1235396": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Dolcetto",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El dolcetto és un raïm negre italià molt plantat al Piemont, al nord d'Itàlia. La paraula italiana dolcetto significa 'petit dolç', però no és segur que es refereixi als nivells alts de sucre del raïm: és possible que vingui del nom dels turons on es conrea."
+      }
+    },
+    "Q1422786": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Garganega",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La garganega és una varietat de raïm blanc molt plantada al Vèneto, al nord-est d'Itàlia, sobretot a les províncies de Verona i Vicenza. És el sisè raïm blanc més plantat d'Itàlia. És la base del vi de Soave i també la major part del cupatge del vi de Gambellara."
+      }
+    },
+    "Q393911": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Agiorg%C3%ADtiko",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'agiorgitiko (en grec, αγιωργίτικο; conegut també com a aghiorghitiko, mavro nemeas i saint george) és la varietat de raïm negre més plantada de Grècia. Tradicionalment s'ha conreat a la regió de Nemea, al Peloponès, però es pot trobar a tot el país, incloses l'Àtica i Macedònia."
+      }
+    },
+    "Q1400383": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Kerner_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El kerner és un raïm blanc aromàtic. El va obtenir el 1929 August Herold creuant el trollinger (una varietat negra coneguda també com a schiava grossa o vernatsch) amb el riesling. Herold treballava en una estació de millora de plançons a Lauffen, a la regió de Württemberg, a Alemanya, que depenia d'un institut públic amb seu a Weinsberg."
+      }
+    },
+    "Q1110390": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Colombard",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El colombard és un raïm blanc francès, fruit d'un encreuament entre el gouais blanc i el chenin blanc. Als Estats Units i al Canadà es coneix com a french colombard. Això el fa cosí del meslier-saint-françois (utilitzat per a l'armanyac) i del gairebé extingit balzac blanc (utilitzat per al conyac)."
+      }
+    },
+    "Q928151": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Tannat_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El tannat és un raïm negre que històricament s'ha conreat al sud-oest de França. Avui és un dels raïms més importants de l'Uruguai, on es considera el «raïm nacional». També creix a l'Argentina, el Perú, Bolívia, el Brasil i Austràlia, i es pot trobar a la regió italiana de la Pulla, on s'utilitza en cupatges."
+      }
+    },
+    "Q693158": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Arneis",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'arneis és un raïm blanc de vinificació originari del Piemont, a Itàlia. És habitual als turons del Roero, al nord-oest d'Alba, on forma part de la DOCG Roero. També s'utilitza per elaborar vins de la DOC Langhe."
+      }
+    },
+    "Q1974545": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Xin%C3%B3mavro",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El xinómavro (en grec, ξινόμαυρο, 'negre àcid') és la principal varietat de raïm negre de Grècia, just per davant de l'agiorgitiko. Es conrea a les terres altes de Naoussa, Amýntaio i Imathia, al nord de Grècia. És una varietat vigorosa i productiva."
+      }
+    },
+    "Q2304132": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Torront%C3%A9s",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "Torrontés és el nom que reben algunes varietats de raïm blanc d'Espanya, Portugal i l'Argentina."
+      }
+    },
+    "Q991096": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Canaiolo",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El canaiolo (també anomenat canaiolo nero o uva canina) és un raïm negre italià que creix a la Itàlia central, però que destaca sobretot a la Toscana. Altres regions amb plantacions són el Laci, les Marques i Sardenya. A l'Úmbria hi ha una mutació coneguda com a canaiolo bianco."
+      }
+    },
+    "Q860892": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Rondinella",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La rondinella és un raïm negre italià que creix sobretot al Vèneto i que s'utilitza en els vins de Valpolicella i Bardolino. Se sol barrejar amb la corvina, que segons l'ADN n'és un dels progenitors, i amb la molinara. El raïm té gustos més aviat neutres, però els viticultors el conreen pels seus rendiments prolífics."
+      }
+    },
+    "Q1760900": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Savagnin",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El savagnin o savagnin blanc és una varietat de raïm blanc de pell verda. Es conrea principalment a la regió vinícola del Jura, a França, on es converteix en vin jaune i vin de paille. Té un gust de nous ben definit."
+      }
+    },
+    "Q1887336": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Plavac_mali",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El plavac mali és un encreuament entre el crljenak kaštelanski (l'ancestral zinfandel) i el dobričić. És el principal raïm negre de vinificació de la costa dàlmata de Croàcia. El nom fa referència als grans petits i blavosos dels ceps: en croat, plavo vol dir 'blau' i mali, 'petit'."
+      }
+    },
+    "Q269102": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Muscat_ottonel",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El moscatell ottonel és un raïm blanc de vinificació de la família dels moscatells."
+      }
+    },
+    "Q1414052": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Roussanne",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La roussanne és un raïm blanc de vinificació originari del Roine, a França, on sovint es barreja amb la marsanne. És una de les dues varietats blanques, juntament amb la marsanne, permeses a les AOC del nord del Roine Crozes-Hermitage, Hermitage i Saint-Joseph."
+      }
+    },
+    "Q1435356": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/St._Laurent_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El St. Laurent (de vegades escrit en francès saint laurent o en alemany sankt laurent) és una varietat de raïm que dona un vi molt aromàtic. És el raïm negre més plantat de la República Txeca, on es troba a les regions de Moràvia i Bohèmia. El 2011 ocupava 1.730 ha, el 9% de les vinyes del país."
+      }
+    },
+    "Q63319": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Bastardo_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El bastardo, conegut també com a trousseau o trousseau noir, és una varietat antiga de cep que s'utilitza per elaborar vi negre. És originari de l'est de França. És una planta resistent a les malalties, amb raïms petits i compactes i grans petits, rodons i de color negre blavós. Dona vins àcids i aromàtics."
+      }
+    },
+    "Q119794": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Graciano_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El graciano és una varietat espanyola de raïm negre (Vitis vinifera). El seu ús és habitual en els vins gran reserva de la Rioja i Navarra. A Andalusia se'l coneix com a tintilla de Rota. El vi anomenat Tintilla de Rota ha estat molt popular a la província de Cadis, i fins a l'any 2000 no es va saber amb certesa que aquell raïm era idèntic al graciano."
+      }
+    },
+    "Q456276": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Verdejo",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El verdejo blanc, o simplement verdejo, és un raïm blanc d'Espanya. Es creia fruit d'un encreuament entre el traminer (conegut també com a savagnin) i la castellana blanca, però els estudis genètics ampelogràfics descarten aquesta teoria."
+      }
+    },
+    "Q1245736": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Dornfelder",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El dornfelder és una varietat de raïm de pell fosca d'origen alemany que s'utilitza per fer vi negre. El va crear August Herold (1902-1973) a l'institut de millora de la vinya de Weinsberg, a la regió de Württemberg, el 1955, creuant les varietats helfensteiner i heroldrebe."
+      }
+    },
+    "Q1440662": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Lagrein",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El lagrein és un raïm negre de vinificació originari de les valls del Tirol del Sud, al nord d'Itàlia. És descendent del teroldego, igual que el marzemino, i està emparentat amb el syrah, el pinot noir i el dureza."
+      }
+    },
+    "Q1499340": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Moscatel_de_grano_menudo",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El moscatell de gra menut és un raïm blanc de vinificació de la família dels moscatells (Vitis vinifera). El nom ve de la mida petita dels grans i dels raïms atapeïts. També es coneix com a moscatell morisc i pel nom francès muscat blanc à petits grains."
+      }
+    },
+    "Q1600638": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Marsanne_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La marsanne és un raïm blanc de vinificació. Es troba sobretot al nord del Roine i sovint es barreja amb la roussanne. A la Savoia es coneix com a grosse roussette. Fora de França també creix a Suïssa (on es coneix com a ermitage blanc o ermitage), Espanya (on es coneix com a marsana), Nova Zelanda, Austràlia, el Canadà, els Estats Units, l'Uruguai, l'Argentina i Xile."
+      }
+    },
+    "Q1682773": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Scheurebe",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El scheurebe o sämling 88 és una varietat de raïm blanc. Creix sobretot a Alemanya i Àustria, on sovint s'anomena sämling 88, i en algunes zones del Nou Món. Els ceps de scheurebe són molt aromàtics i la varietat se sol fer servir per a vins dolços, tot i que els secs s'han fet més habituals a Alemanya."
+      }
+    },
+    "Q475684": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Mavrodaphne",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La mavrodaphne, mavrodaphni o mavrodafne (en grec, Μαυροδάφνη, literalment 'llorer negre') és una varietat de raïm negre autòctona de la regió d'Acaia, al nord del Peloponès, a Grècia, i també el vi dolç i fortificat que Gustav Clauss en va elaborar per primera vegada cap al 1850."
+      }
+    },
+    "Q2066098": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Pecorino_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El pecorino és un raïm blanc de vinificació italià que creix a les Marques, els Abruços, la Ligúria, la Toscana, l'Úmbria i el Laci. Els ampelògrafs creuen que és originari d'Arquata del Tronto, a la província d'Ascoli Piceno, a les Marques, on encara s'utilitza avui."
+      }
+    },
+    "Q164081": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Sercial",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El sercial és un raïm blanc conreat a Portugal, sobretot a l'illa de Madeira. Va rebre el nom per ser la més seca de les quatre varietats clàssiques de Madeira que s'utilitzen per fer vi fortificat."
+      }
+    },
+    "Q1267369": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Durif",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El durif és una varietat de raïm negre que creix sobretot a Austràlia, Califòrnia, França i Israel. Des de finals del segle XX també s'utilitza a l'estat de Washington, la vall del riu Yakima, Maryland, Arizona, Virgínia de l'Oest, Xile, la península mexicana de Baixa Califòrnia i la península de Niàgara, a Ontàrio. Als Estats Units i Israel es coneix com a petite sirah."
+      }
+    },
+    "Q1417652": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Mel%C3%B3n_de_Borgo%C3%B1a",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El melon de Borgonya o melon, en francès melon de Bourgogne, és una varietat de raïm blanc d'origen francès. És originari de la Borgonya, tot i que hi té poca presència."
+      }
+    },
+    "Q861834": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Tinta_barroca",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La tinta barroca és un raïm negre portuguès que creix sobretot a la regió del Douro. També n'hi ha algunes plantacions a Sud-àfrica. A Portugal és un raïm habitual en els vins de Porto de cupatge, mentre que a Sud-àfrica se sol utilitzar per fer monovarietals."
+      }
+    },
+    "Q1671221": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Abouriou",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'abouriou és una varietat francesa de raïm negre que creix principalment al sud-oest de França i, en menor mesura, a Califòrnia. És un raïm de cupatge que, amb el malbec, el cabernet sauvignon, el syrah, el fer, el cabernet franc i el merlot, s'utilitza per elaborar el vi de la denominació d'origen francesa Côtes du Marmandais."
+      }
+    },
+    "Q1393887": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Falanghina",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La falanghina, anomenada també falanghina greco, és una varietat de raïm blanc de vinificació (Vitis vinifera). És una varietat antiga que podria haver estat la base del clàssic vi falern. Es conrea a la costa de Campània, al nord de Nàpols, i al sud d'Itàlia se sol beure acompanyant el peix."
+      }
+    },
+    "Q789677": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Auxerrois_blanc",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'auxerrois blanc o auxerrois blanc de Laquenexy és una varietat de raïm blanc destacada a Alsàcia, que també es conrea a Alemanya i Luxemburg. És germana del chardonnay i sovint es barreja amb el pinot blanc, de característiques semblants."
+      }
+    },
+    "Q939032": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Mavro",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El mavro (μαύρο, que vol dir 'negre') és un raïm negre conreat a l'illa de Xipre."
+      }
+    },
+    "Q560783": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Trollinger",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El trollinger és un raïm negre germanoitalià. Probablement va ser el primer raïm conreat a les regions vinícoles del Tirol del Sud i el Trentino, tot i que avui es conrea gairebé només en llocs escarpats i assolellats de la regió vinícola de Baden-Württemberg. Es coneix com a trollinger a Alemanya, vernatsch al Tirol del Sud i schiava en altres regions italianes."
+      }
+    },
+    "Q737081": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Moscatel_negro",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El moscatell negre o moscatell d'Hamburg és un raïm negre de vinificació fruit d'un encreuament entre la schiava grossa i el moscatell d'Alexandria. Dona vins de postres molt aromàtics i amb molt de color."
+      }
+    },
+    "Q1934770": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Muscadelle",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La muscadelle és una varietat de raïm blanc de la regió francesa de Bordeus. Té una aroma semblant a la del moscatell i dona panses semblants, però no hi està emparentada. Les anàlisis d'ADN recents indiquen que és un encreuament entre el gouais blanc i un raïm no identificat."
+      }
+    },
+    "Q2434324": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Albana_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'albana és un raïm blanc italià que creix sobretot a la regió d'Emília-Romanya."
+      }
+    },
+    "Q2598571": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Xynisteri",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El xynisteri és un raïm blanc originari de Xipre. Segons algunes estimacions, el 13% de les vinyes xipriotes en són. N'hi ha unes 500 ha als vessants orientats al sud de la serralada del Troodos. És el principal raïm blanc de Xipre."
+      }
+    },
+    "Q13636775": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Folle_blanche",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La folle blanche ha estat la varietat tradicional de les regions franceses de Cognac i Armanyac. També es coneix com a picpoule; tot i que també se'n pot dir piquepoul, no està emparentada amb el picpoul del Llenguadoc. És descendent del gouais blanc, tot i que els seus altres progenitors no s'han identificat."
+      }
+    },
+    "Q384968": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Mandilaria",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La mandilaria és un raïm negre de Grècia que creix a les illes gregues. Sovint s'utilitza com a component de cupatge i dona vins foscos de cos lleuger."
+      }
+    },
+    "Q1140698": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Croatina",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La croatina és un raïm negre italià que creix sobretot a la regió llombarda de l'Oltrepò Pavese i a la província de Piacenza, a Emília-Romanya, i també en algunes parts del Piemont i el Vèneto. A l'Oltrepò Pavese, als turons de Piacenza, a Cisterna d'Asti i San Damiano d'Asti (província d'Asti) i al Roero, la varietat s'anomena bonarda."
+      }
+    },
+    "Q1454646": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Freisa",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La freisa és un raïm negre italià que creix a la regió del Piemont, al nord-oest d'Itàlia, sobretot al Monferrato i les Langhe, però també més al nord, a les províncies de Torí i Biella."
+      }
+    },
+    "Q473133": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Gouais_blanc",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El gouais blanc és un raïm blanc poc conreat avui. Tot i així, és rellevant com a avantpassat de molts raïms tradicionals francesos i alemanys. El nom «gouais» ve del francès antic «gou», un terme despectiu dels pagesos. En alemany es coneix com a weißer heunisch, ja que és un dels pocs raïms «huns»."
+      }
+    },
+    "Q488942": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Ancellotta",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'ancellotta és una varietat de raïm de vinificació que creix sobretot a la regió italiana d'Emília-Romanya, però que també es pot trobar en altres parts del nord d'Itàlia i al sud de Suïssa. També és molt conreada a l'Argentina (fruit de la immigració italiana), però gairebé no es comercialitza com a varietat, ja que s'utilitza en proporcions mínimes en cupatges de negres."
+      }
+    },
+    "Q199095": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Zierfandler",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El zierfandler és una varietat de raïm que s'utilitza per fer vi blanc a la Thermenregion, a Àustria. També es coneix com a spätrot ('vermell tardà') perquè es torna vermell just abans de la verema."
+      }
+    },
+    "Q342037": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Acolon",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'acolon és una varietat alemanya de raïm negre, encreuament entre el blauer limberger (conegut també com a blaufränkisch i lemberger) i el dornfelder."
+      }
+    },
+    "Q454835": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Erbaluce",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "L'erbaluce o erbaluce bianca és una varietat de raïm blanc de vinificació conreada sobretot a la zona de Caluso, al Piemont, a Itàlia."
+      }
+    },
+    "Q1409433": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Poulsard",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "El poulsard és un raïm negre de vinificació de la regió del Jura. El nom ploussard s'utilitza sobretot als voltants de Pupillin, però pot aparèixer a les etiquetes de tot el Jura, ja que és un sinònim autoritzat. Tot i ser un raïm de pell fosca, la pell del poulsard és molt fina i aporta poc color i pocs compostos fenòlics."
+      }
+    },
+    "Q456763": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Clairette_blanche",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La clairette blanche és un raïm blanc de vinificació molt plantat a les regions franceses de la Provença, el Roine i el Llenguadoc. A finals dels anys noranta n'hi havia 3.000 ha a França, tot i que la superfície va disminuint."
+      }
+    },
+    "Q464575": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/N%C3%A9grette",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La négrette és un raïm negre de vinificació que creix sobretot al sud-oest de França, a la regió entre Albi i Tolosa. És descendent directa d'un esqueix del mavro, una varietat molt estesa a l'illa de Xipre."
+      }
+    },
+    "Q501200": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Boal_(uva)",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "Boal és el nom que reben algunes varietats de raïm conreades a Portugal, sovint utilitzades en l'elaboració de vins fortificats semidolços o dolços de l'illa de Madeira."
+      }
+    },
+    "Q501534": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Tinta_c%C3%A3o",
+      "passages": "Introduction, as the card shows it",
+      "texts": {
+        "ca": "La tinta cão és un raïm negre portuguès que creix sobretot a la regió del Douro des del segle XVI. El cep dona rendiments molt baixos, cosa que l'ha portat a prop de l'extinció malgrat l'alta qualitat del vi que produeix. S'han desenvolupat millores en el seu conreu, amb conducció en cordó i estudis de la Universitat de Califòrnia a Davis, per mantenir la varietat."
       }
     }
   }

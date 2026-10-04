@@ -28,11 +28,14 @@ never the source.
 The atlas (`appellations.json`) involves no model at all. Every registered
 wine PDO and PGI comes from the EU register itself; Wikidata adds names in
 other languages and a point on the map, matched by the register's id or by
-name in the same country (Greek and Bulgarian names in Latin letters too).
-Where the wine's own item has no point, the area it lies in gives an
-approximate one, and a name with no wine item at all may take the point of
-the town it is named after (same name, same country); the page says when a
-point is approximate; a Wikipedia lead becomes the summary only when it is
+name in the same country (Greek and Bulgarian names in Latin letters too),
+or by an item labelled with the name and its designation ("Côte-Rôtie AOC").
+A few items carrying another wine's name by a stray alias are excluded by
+hand. Where the wine's own item has no point, the areas it lies in give an
+approximate one (the median of their points, never the country's), and the
+town the name is named after (same name, same country) gives the point
+instead when it lies within those areas or there is no other; the page says
+when a point is approximate; a Wikipedia lead becomes the summary only when it is
 about the wine rather than the town it is named for. A grape is listed under a
 registered name only where the grape's own article says it is grown there,
 with that sentence — the full list of authorised varieties is in each name's
