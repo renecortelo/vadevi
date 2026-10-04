@@ -357,7 +357,10 @@ export function validateExtraction(
 export function summaryOf(lead: string, limit = 420, paragraphs = 1): string | null {
   // An explanation (a style, a method) may run to the lead's later
   // paragraphs; a card's summary keeps to the first.
+  // A web-archive note the extract keeps from a citation ("Bodega Mustiguillo
+  // Archived 2015-07-03 at the Wayback Machine.") is not the article's text.
   const paragraph = clean(lead)
+    .replace(/\s*Archived \d{4}-\d{2}-\d{2} at the Wayback Machine/g, "")
     .split("\n")
     .filter((line) => line.trim().length > 40)
     .slice(0, paragraphs)
@@ -427,8 +430,9 @@ const trailingWords = new Set([
 
 function unfinished(sentence: string): boolean {
   const trimmed = sentence.trim();
-  // A colon announcing a list, or a bare quoted title left from a reference.
-  if (trimmed.endsWith(":") || /^«[^»]+»\.?$/.test(trimmed)) return true;
+  // A colon announcing a list, a comma or semicolon the lead was cut at, or
+  // a bare quoted title left from a reference.
+  if (/[:,;]$/.test(trimmed) || /^«[^»]+»\.?$/.test(trimmed)) return true;
   if (
     /\b(Consultado (em|el)|Retrieved|Abgerufen am|Consulté le|Consultato il|Variety Catalogue)\b/.test(
       trimmed,

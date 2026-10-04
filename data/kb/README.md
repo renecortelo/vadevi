@@ -29,14 +29,25 @@ The atlas (`appellations.json`) involves no model at all. Every registered
 wine PDO and PGI comes from the EU register itself; Wikidata adds names in
 other languages and a point on the map, matched by the register's id or by
 name in the same country (Greek and Bulgarian names in Latin letters too),
-or by an item labelled with the name and its designation ("Côte-Rôtie AOC").
-A few items carrying another wine's name by a stray alias are excluded by
-hand. Where the wine's own item has no point, the areas it lies in give an
-approximate one (the median of their points, never the country's), and the
-town the name is named after (same name, same country) gives the point
-instead when it lies within those areas or there is no other; the page says
-when a point is approximate; a Wikipedia lead becomes the summary only when it is
-about the wine rather than the town it is named for. A grape is listed under a
+or by an item labelled with the name and its designation ("Côte-Rôtie AOC"),
+or labelled with the name alone and described as a wine ("Marsannay",
+"région viticole" — many wine items are filed under no class). Names are
+searched in the country's own language too (`pnpm kb:search-appellation-names`,
+then fetch again). A few items carrying another wine's name by a stray alias
+are excluded by hand. Where the wine's own item has no point, the areas it
+lies in give an approximate one (the median of their points, never the
+country's). The place the name is named after (same name, same country; not
+a building, a station or a river) gives the point instead when Wikidata puts
+it inside those areas, or puts them inside it, or it is the one place of
+that name and lies within 100 km of them. Where nothing says where the wine
+is, the best-known place of the name is taken if it is well known (40
+Wikipedia articles or more), or else the searches' first — unless another of
+the name, about as well known, lies more than 60 km away and neither lies in
+the other: then there is no point rather than a guess. The page says when a
+point is approximate; a Wikipedia lead becomes the summary only when it is
+about the wine rather than the town it is named for. Where a wine's only
+article is in its country's language (Greek, Hungarian, Romanian…), that
+lead is the original a faithful translation is made from. A grape is listed under a
 registered name only where the grape's own article says it is grown there,
 with that sentence — the full list of authorised varieties is in each name's
 product specification, linked from the register.

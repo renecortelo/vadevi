@@ -11,7 +11,25 @@
  * - it is not the original copied.
  */
 
-export type Language = "ca" | "de" | "en" | "es" | "fr" | "it" | "nl" | "pt" | "ru";
+export type Language =
+  | "bg"
+  | "ca"
+  | "cs"
+  | "da"
+  | "de"
+  | "el"
+  | "en"
+  | "es"
+  | "fr"
+  | "hr"
+  | "hu"
+  | "it"
+  | "nl"
+  | "pt"
+  | "ro"
+  | "ru"
+  | "sk"
+  | "sl";
 
 /** Short, frequent words that tell one language from another. */
 const commonWords: Record<Language, string[]> = {
@@ -197,6 +215,50 @@ const commonWords: Record<Language, string[]> = {
     "mais",
   ],
   ru: ["и", "в", "на", "с", "по", "из", "для", "что", "это", "как", "его", "от", "не"],
+  // The originals' languages, where a wine's only article is in its country's.
+  bg: ["и", "в", "на", "с", "по", "от", "за", "е", "се", "да", "са", "това", "които", "който"],
+  cs: ["a", "je", "v", "ve", "na", "se", "z", "do", "pro", "jako", "který", "která", "jsou", "od"],
+  da: ["og", "er", "i", "på", "af", "til", "med", "en", "et", "den", "det", "der", "som", "fra"],
+  el: [
+    "και",
+    "το",
+    "η",
+    "ο",
+    "του",
+    "της",
+    "των",
+    "στην",
+    "στο",
+    "σε",
+    "με",
+    "για",
+    "από",
+    "είναι",
+    "που",
+    "τα",
+    "οι",
+  ],
+  hr: ["i", "je", "u", "na", "se", "za", "od", "s", "sa", "su", "koji", "koja", "što", "ili", "do"],
+  hu: ["a", "az", "és", "egy", "is", "van", "hogy", "ez", "meg", "mint", "vagy", "pedig", "között"],
+  ro: [
+    "și",
+    "de",
+    "la",
+    "în",
+    "cu",
+    "pe",
+    "din",
+    "este",
+    "al",
+    "ale",
+    "care",
+    "un",
+    "o",
+    "pentru",
+    "sunt",
+  ],
+  sk: ["a", "je", "v", "vo", "na", "sa", "z", "do", "pre", "ako", "ktorý", "ktorá", "sú", "od"],
+  sl: ["in", "je", "v", "na", "se", "za", "od", "z", "so", "ki", "da", "pa", "ali", "do"],
 };
 
 function words(text: string): string[] {

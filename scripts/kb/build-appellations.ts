@@ -57,6 +57,8 @@ function isoDate(value: string | null): string | null {
   return match === null || match === undefined ? null : `${match[3]}-${match[2]}-${match[1]}`;
 }
 
+/** The library's languages, by their Wikipedia codes. */
+const libraryLanguages = new Set(["ca", "de", "en", "es", "fr", "it", "nl", "pt"]);
 const entries: RegionEntry[] = [];
 /**
  * A lead whose first sentence presents another product: Wikidata links La
@@ -94,6 +96,9 @@ for (const row of register) {
       : {};
   const summaries: RegionEntry["summaries"] = {};
   for (const [locale, { lead, title }] of Object.entries(leads)) {
+    // A lead in the country's own language is an original to translate from,
+    // not a summary the library shows.
+    if (!libraryLanguages.has(locale)) continue;
     const text = summaryOf(lead);
     if (text === null || !leadIsAboutWine(lead) || aboutAnotherProduct(lead)) continue;
     summaries[locale] = {
@@ -249,6 +254,11 @@ const notTheirSummary: Record<string, string[] | "all"> = {
   EUGI00000002941: ["en"],
   EUGI00000006448: ["en"],
   EUGI00000014387: "all",
+  // Bairrada's Portuguese article describes the natural sub-region — its
+  // municipalities and province — and not its wine.
+  EUGI00000004201: ["pt"],
+  // Blaye's French article is that of Blaye Côtes de Bordeaux, another name.
+  EUGI00000001983: ["fr"],
 };
 for (const entry of entries) {
   const dropped = notTheirSummary[entry.eambrosiaId];

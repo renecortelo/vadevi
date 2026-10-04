@@ -15,10 +15,11 @@ import { userAgent } from "./wikimedia";
  * Nominatim's usage policy: at most one request a second, an identifying
  * User-Agent, results cached. Data © OpenStreetMap contributors, ODbL.
  *
- * It looks up every name the Wikidata step could not place, so it starts from
- * a build made without its own previous answers (the script sets that file
- * aside first); answers are cached, so a rerun costs nothing. It writes
- * `.kb-cache/appellations/geocoded.json`; build again afterwards.
+ * It looks up every name the Wikidata step and the grand crus' list could not
+ * place — read from their own files, not from the last build, which carries
+ * this script's previous answers; answers are cached, so a rerun costs
+ * nothing. It writes `.kb-cache/appellations/geocoded.json`; build again
+ * afterwards.
  *
  * Usage: pnpm kb:geocode-appellations
  */
@@ -112,11 +113,32 @@ async function search(query: string, country: string) {
 const geocodedPath = resolve(cache, "geocoded.json");
 const geocoded: Record<string, { latitude: number; longitude: number; query: string }> = {};
 let tried = 0;
-/** Registered names that are wines, not places: no point to look for. */
-const notPlaces = new Set(["cava"]);
+/**
+ * Registered names that are wines, not places, or not named after the place
+ * that shares their name (Graves for its gravel; a vino de pago for its
+ * estate), or named after one of several villages of the name and the map's
+ * is another (Plešivica's vineyards are by Jastrebarsko, OpenStreetMap's
+ * Plešivica is in Međimurje; Bulgaria has more than one Lozitsa): no point
+ * to look for.
+ */
+const notPlaces = new Set(["cava", "graves", "los cerrillos", "plesivica", "лозица"]);
+
+const wikidata = JSON.parse(readFileSync(resolve(cache, "wikidata.json"), "utf8")) as Record<
+  string,
+  { latitude: number | null }
+>;
+const grandCrusPath = resolve(cache, "grand-crus.json");
+const grandCrus = (
+  existsSync(grandCrusPath) ? JSON.parse(readFileSync(grandCrusPath, "utf8")) : {}
+) as Record<string, unknown>;
+const placedElsewhere = (region: RegionEntry) =>
+  wikidata[region.eambrosiaId]?.latitude != null ||
+  region.names.some(
+    (entry) => entry.source === "register" && grandCrus[matchKey(entry.name)] !== undefined,
+  );
 
 for (const region of regions) {
-  if (region.latitude !== null) continue;
+  if (placedElsewhere(region)) continue;
   if (notPlaces.has(matchKey(region.name))) continue;
   tried += 1;
   const names = [

@@ -366,6 +366,18 @@ describe("a summary taken from a lead", () => {
     ).toBe("Pauillac is an appellation within Haut-Médoc in Bordeaux.");
     expect(
       summaryOf(
+        "Un coteaux-de-die est un vin blanc tranquille. L'aire est identique à celle de la clairette de Die, qui sont des vins effervescents,",
+      ),
+    ).toBe("Un coteaux-de-die est un vin blanc tranquille.");
+    expect(
+      summaryOf(
+        "DOP El Terrerazo is a Spanish geographical indication for Vino de Pago wines. The sole proprietor of this estate is Bodega Mustiguillo Archived 2015-07-03 at the Wayback Machine.",
+      ),
+    ).toBe(
+      "DOP El Terrerazo is a Spanish geographical indication for Vino de Pago wines. The sole proprietor of this estate is Bodega Mustiguillo.",
+    );
+    expect(
+      summaryOf(
         "Alezio ist ein Rotwein aus der Provinz Lecce. Der Wein hat seit 1983 eine „kontrollierte Herkunftsbezeichnung“ (DOC).",
       ),
     ).toBe(
