@@ -1267,7 +1267,10 @@
     "system": "System",
     "light": "Light",
     "dark": "Dark",
-    "saveError": "Theme not saved"
+    "saveError": "Theme not saved",
+    "toLight": "Switch to the light theme",
+    "toDark": "Switch to the dark theme",
+    "systemHelp": "“System” follows your device's light or dark mode."
   },
   "winePicker": {
     "choose": "Choose a wine",

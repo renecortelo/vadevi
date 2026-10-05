@@ -10,7 +10,7 @@ import {
 import { BrandLockup } from "../brand/Wordmark";
 import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeButton } from "./ThemeToggle";
 import { SyncStatus } from "./SyncStatus";
 import { useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router";
@@ -81,13 +81,19 @@ export function AppShell() {
           <ConnectionStatus />
           <SyncStatus />
         </div>
-        <button className="text-button" onClick={() => void signOut()} type="button">
-          {t("auth.signOut")}
-        </button>
+        {/* The reader's own settings, small, beside the way out: a language
+            code and a sun or a moon. */}
+        <div className="topbar__preferences">
+          <LocaleToggle />
+          <ThemeButton />
+          <button className="text-button" onClick={() => void signOut()} type="button">
+            {t("auth.signOut")}
+          </button>
+        </div>
       </header>
 
-      {/* Below it: three menus, and nothing else. Everything that used to sit
-          here as a link now lives on the About screen. */}
+      {/* Below it: the Space, the one menu worth its full width. Everything
+          that used to sit here as a link now lives on the About screen. */}
       <div className="controlbar">
         <div className="space-switcher">
           <label className="sr-only" htmlFor="active-space">
@@ -118,9 +124,6 @@ export function AppShell() {
             </span>
           ) : null}
         </div>
-
-        <LocaleToggle />
-        <ThemeToggle />
       </div>
 
       <nav aria-label="Primary" className="primary-nav">

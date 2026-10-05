@@ -20,6 +20,11 @@ import { useSession } from "../session/SessionContext";
  * between devices. The interface switches immediately either way, so a failed
  * save never leaves the control looking broken.
  */
+/** "ES", "CA", "PT": the language's own two letters. */
+function localeCode(locale: SupportedLocale): string {
+  return locale.slice(0, 2).toUpperCase();
+}
+
 export function LocaleToggle() {
   const { t } = useTranslation();
   const { bootstrap, isUpdating, updateProfile } = useSession();
@@ -47,6 +52,12 @@ export function LocaleToggle() {
       <label className="sr-only" htmlFor="interface-locale">
         {t("locale.label")}
       </label>
+      {/* Two letters in the bar, the full names in the menu: the native menu
+          opens over the code, which is all a glance needs. Codes, not flags —
+          a language is not a country, and English or Catalan has no one flag. */}
+      <span aria-hidden="true" className="locale-toggle__code">
+        {localeCode(locale)}
+      </span>
       <select
         aria-busy={isUpdating}
         id="interface-locale"

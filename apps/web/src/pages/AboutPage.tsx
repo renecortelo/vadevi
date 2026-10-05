@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
+import { ThemeMenu } from "../components/ThemeToggle";
 import { webEnvironment } from "../config/env";
 import { useSession } from "../session/SessionContext";
 
@@ -59,6 +60,13 @@ export function AboutPage() {
           </li>
         ))}
       </ul>
+
+      {/* The bar's sun and moon choose for the reader; following the device
+          instead is chosen here. */}
+      <div className="about-appearance">
+        <ThemeMenu />
+        <p className="section-help">{t("theme.systemHelp")}</p>
+      </div>
 
       <div className="about-license">
         <h2>{t("about.licenseTitle")}</h2>

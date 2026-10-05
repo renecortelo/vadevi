@@ -1267,7 +1267,10 @@
     "system": "Sistema",
     "light": "Chiaro",
     "dark": "Scuro",
-    "saveError": "Tema non salvato"
+    "saveError": "Tema non salvato",
+    "toLight": "Passa al tema chiaro",
+    "toDark": "Passa al tema scuro",
+    "systemHelp": "«Sistema» segue la modalità chiara o scura del tuo dispositivo."
   },
   "winePicker": {
     "choose": "Scegli un vino",

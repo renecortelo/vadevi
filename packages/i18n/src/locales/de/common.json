@@ -172,7 +172,7 @@
       "intro": "Rebsorten, geschützte Weinbezeichnungen, Stile und Methoden aus offenen Quellen – zum Nachschlagen, ohne Vicenç zu fragen.",
       "tab": {
         "grapes": "Rebsorten",
-        "regions": "Herkunfts\u00adbezeichnungen",
+        "regions": "Herkunfts­bezeichnungen",
         "topics": "Stile und Methoden"
       },
       "search": "Suchen",
@@ -1267,7 +1267,10 @@
     "system": "System",
     "light": "Hell",
     "dark": "Dunkel",
-    "saveError": "Thema nicht gespeichert"
+    "saveError": "Thema nicht gespeichert",
+    "toLight": "Zum hellen Design wechseln",
+    "toDark": "Zum dunklen Design wechseln",
+    "systemHelp": "„System“ folgt dem hellen oder dunklen Modus deines Geräts."
   },
   "winePicker": {
     "choose": "Wein wählen",

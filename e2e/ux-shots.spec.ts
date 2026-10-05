@@ -41,6 +41,7 @@ test.describe("UX contact sheet", () => {
         await signIn(page);
         await page.goto("/");
         await completeOnboarding(page);
+        await page.goto("/about");
         await page.getByLabel(/^theme$/i).selectOption(theme);
 
         // One wine with a tasting, so the screens that need one have one.

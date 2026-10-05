@@ -1267,7 +1267,10 @@
     "system": "Système",
     "light": "Clair",
     "dark": "Sombre",
-    "saveError": "Thème non enregistré"
+    "saveError": "Thème non enregistré",
+    "toLight": "Passer au thème clair",
+    "toDark": "Passer au thème sombre",
+    "systemHelp": "« Système » suit le mode clair ou sombre de votre appareil."
   },
   "winePicker": {
     "choose": "Choisir un vin",

@@ -1267,7 +1267,10 @@
     "system": "Sistema",
     "light": "Clar",
     "dark": "Fosc",
-    "saveError": "Tema no desat"
+    "saveError": "Tema no desat",
+    "toLight": "Canviar al tema clar",
+    "toDark": "Canviar al tema fosc",
+    "systemHelp": "«Sistema» segueix el mode clar o fosc del teu dispositiu."
   },
   "winePicker": {
     "choose": "Tria un vi",

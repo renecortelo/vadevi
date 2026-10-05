@@ -234,6 +234,8 @@ test.describe("theme preference", () => {
     await signIn(page);
     await completeOnboarding(page);
 
+    // The three-way theme menu lives on About; the bar has a sun-or-moon button.
+    await page.goto("/about");
     const control = page.getByLabel(/^theme$/i);
     await expect(control).toBeVisible();
 
@@ -253,9 +255,23 @@ test.describe("theme preference", () => {
     await expect(page.locator("html")).not.toHaveAttribute("data-theme", /.+/);
   });
 
+  test("flips between light and dark from the bar's sun-or-moon button", async ({ page }) => {
+    await signIn(page);
+    await completeOnboarding(page);
+    await page.goto("/about");
+    await page.getByLabel(/^theme$/i).selectOption("light");
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+
+    await page.getByRole("button", { name: /dark theme/i }).click();
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+    await page.getByRole("button", { name: /light theme/i }).click();
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  });
+
   test("has no serious or critical axe violation in dark mode", async ({ page }) => {
     await signIn(page);
     await completeOnboarding(page);
+    await page.goto("/about");
     await page.getByLabel(/^theme$/i).selectOption("dark");
     await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 

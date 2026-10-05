@@ -1267,7 +1267,10 @@
     "system": "Systeem",
     "light": "Licht",
     "dark": "Donker",
-    "saveError": "Thema niet opgeslagen"
+    "saveError": "Thema niet opgeslagen",
+    "toLight": "Overschakelen naar het lichte thema",
+    "toDark": "Overschakelen naar het donkere thema",
+    "systemHelp": "‘Systeem’ volgt de lichte of donkere modus van je apparaat."
   },
   "winePicker": {
     "choose": "Kies een wijn",
