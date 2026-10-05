@@ -167,7 +167,9 @@ describe("authenticated app shell", () => {
 
     expect(markup).toContain('<nav aria-label="Primary"');
     expect(markup).toContain('<label class="sr-only" for="active-space">Active Space</label>');
-    expect(markup).toContain("Personal space");
+    // The default personal name is shown in the reader's language; a name
+    // someone chose is shown as they wrote it.
+    expect(markup).toContain("Personal Space");
     expect(markup).toContain("Friday table");
     expect(markup).toContain("A place for every bottle worth remembering.");
   });

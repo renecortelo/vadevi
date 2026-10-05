@@ -69,7 +69,7 @@ export function AboutPage() {
           the same offer; this is where someone looking for it would look.
         */}
         <a
-          className="action-link"
+          className="action-link action-link--secondary"
           href={webEnvironment.sourceUrl}
           rel="noreferrer noopener"
           target="_blank"

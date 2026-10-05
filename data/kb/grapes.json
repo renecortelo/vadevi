@@ -1459,7 +1459,7 @@
       "herbs"
     ],
     "body": null,
-    "color": null,
+    "color": "white",
     "evidence": [
       {
         "field": "origin",
@@ -1550,6 +1550,12 @@
         "field": "styles",
         "quote": "Four styles of Sémillon-based wines are made there: a commercial style, often blended ... a sweet style ... a complex, minerally, early picked style ... an equally high quality dry style",
         "value": "blending"
+      },
+      {
+        "field": "color",
+        "quote": "Sémillon (French pronunciation: [semijɔ̃] ) is a golden-skinned grape used to make dry and sweet white wines, mostly in France and Australia.",
+        "value": "white",
+        "sourceUrl": "https://en.wikipedia.org/wiki/S%C3%A9millon"
       }
     ],
     "id": "semillon",
@@ -2600,6 +2606,12 @@
         "field": "regions",
         "quote": "Denominación de Origens (DOs) of Rías Baixas and Ribeiro ... Portugal's Vinho Verde wine region",
         "value": "PT: Vinho Verde"
+      },
+      {
+        "field": "styles",
+        "quote": "In Spain, it is a permitted variety in the Denominación de Origens (DOs) of Rías Baixas and Ribeiro where it produces highly perfumed wines with noticeable tartness and high acidity.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cai%C3%B1o_tinto"
       }
     ],
     "id": "caino-tinto",
@@ -2630,7 +2642,9 @@
         "name": "Vinho Verde"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Caíño tinto (also known as Borraçal in Portuguese) is a red Galician wine grape variety that is also grown in Portugal's Vinho Verde wine region where it is known as Borraçal. In Spain, it is a permitted variety in the Denominación de Origens (DOs) of Rías Baixas and Ribeiro where it produces highly perfumed wines with noticeable tartness and high acidity.",
@@ -3437,6 +3451,12 @@
         "field": "regions",
         "quote": "planted primarily in the Bairrada DOC",
         "value": "PT: Bairrada"
+      },
+      {
+        "field": "styles",
+        "quote": "As a varietal, Baga produces tannic wines with high acidity.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Baga_(grape)"
       }
     ],
     "id": "baga",
@@ -3459,7 +3479,9 @@
         "name": "Bairrada"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Baga is a red Portuguese wine grape variety planted primarily in the Bairrada DOC. As a varietal, Baga produces tannic wines with high acidity.",
@@ -7262,7 +7284,7 @@
     "acidity": null,
     "aromas": [],
     "body": "high",
-    "color": null,
+    "color": "red",
     "evidence": [
       {
         "field": "origin",
@@ -7419,6 +7441,12 @@
         "quote": "El vi té molt de cos i un color cirera fosc intens.",
         "value": "high",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Garnatxa_tintera"
+      },
+      {
+        "field": "color",
+        "quote": "Alicante is a teinturier, a grape with red flesh.",
+        "value": "red",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alicante_Bouschet"
       },
       {
         "field": "regions",
@@ -7741,6 +7769,12 @@
         "field": "regions",
         "quote": "Mourvèdre ... is found in the Rhône and Provence regions of France, the Valencia, Alicante and Jumilla, Bullas and Yecla ... Spain ... California and Washington ... Australian regions of South Australia and New South Wales ... South Africa.",
         "value": "ZA: South Africa"
+      },
+      {
+        "field": "styles",
+        "quote": "Mourvèdre (French pronunciation: [muʁvɛdʁ] ; also known as Mataro or Monastrell) is a red wine grape variety grown in many regions around the world.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre"
       }
     ],
     "id": "mourvedre",
@@ -7783,7 +7817,9 @@
         "name": "South Africa"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Mourvèdre (French pronunciation: [muʁvɛdʁ] ; also known as Mataro or Monastrell) is a red wine grape variety grown in many regions around the world.",
@@ -8022,6 +8058,12 @@
         "field": "regions",
         "quote": "It is grown predominantly in the Utiel-Requena DOP where it represents about 80% of the red grapes vines grown, and is also present in significant quantities in Valencia, Cuenca and Albacete. It can only be found in small quantities in other regions of Spain: La Manchuela (Castilla–La Mancha), selected vineyards in Ribera del Guadiana, Alicante, Murcia, Campo de Borja, Calatayud, Cariñena, Valdejalón.",
         "value": "ES: Valdejalón"
+      },
+      {
+        "field": "styles",
+        "quote": "The wines produced tend to be fruity, low in alcohol content (around 11°) and high in acidity (5.5 to 6.5 tartaric acid).",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bobal"
       }
     ],
     "id": "bobal",
@@ -8089,7 +8131,8 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -8825,8 +8868,13 @@
       "fruity"
     ],
     "body": null,
-    "color": null,
+    "color": "red",
     "evidence": [
+      {
+        "field": "color",
+        "quote": "L'  odjaleschi  est un cépage de Géorgie de raisins noirs.",
+        "value": "red"
+      },
       {
         "field": "aromas",
         "quote": "Le vin rouge du même nom a une couleur intense et un arôme épicé bien prononcé. Il est assez fruité et il s'améliore avec un vieillissement.",
@@ -10015,7 +10063,7 @@
     "acidity": null,
     "aromas": [],
     "body": "medium",
-    "color": null,
+    "color": "red",
     "evidence": [
       {
         "field": "origin",
@@ -10031,6 +10079,24 @@
         "field": "body",
         "quote": "thin skins and low levels of phenolic compounds lend pinot to producing mostly lightly colored, medium-bodied ...",
         "value": "medium"
+      },
+      {
+        "field": "color",
+        "quote": "Pinot noir (English: , French: [pino nwaʁ] ), also known as Pinot nero, and Spätburgunder is a red-wine grape variety of the species Vitis vinifera.",
+        "value": "red",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_noir"
+      },
+      {
+        "field": "styles",
+        "quote": "Pinot noir is now used to make red wines around the world, as well as Champagne, and sparkling white wines such as the Italian Franciacorta, along with English sparkling wines.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_noir"
+      },
+      {
+        "field": "styles",
+        "quote": "Pinot noir is now used to make red wines around the world, as well as Champagne, and sparkling white wines such as the Italian Franciacorta, along with English sparkling wines.",
+        "value": "sparkling",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_noir"
       }
     ],
     "id": "pinot-noir",
@@ -10048,7 +10114,10 @@
     "pairings": [],
     "prominence": 50,
     "regions": [],
-    "styles": [],
+    "styles": [
+      "still",
+      "sparkling"
+    ],
     "summaries": {
       "en": {
         "text": "Pinot noir (English: , French: [pino nwaʁ] ), also known as Pinot nero, and Spätburgunder is a red-wine grape variety of the species Vitis vinifera. The name also refers to wines created predominantly from Pinot noir grapes. The name is derived from the French words for pine and black. The word pine alludes to the grape variety having tightly clustered, pinecone-shaped bunches of fruit.",
@@ -11004,6 +11073,12 @@
         "field": "aromas",
         "quote": "hints of plum and blackberry ... fresh, red fruit flavors (raspberries, strawberries) and potentially leafy, vegetal notes ... plum, tea leaf, and black cherry notes",
         "value": "black cherry"
+      },
+      {
+        "field": "styles",
+        "quote": "Merlot ( MUR-loh) is a dark-blue-colored wine grape variety that is used as both a blending grape and for varietal wines.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Merlot"
       }
     ],
     "id": "merlot",
@@ -11021,7 +11096,9 @@
     "pairings": [],
     "prominence": 45,
     "regions": [],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Merlot ( MUR-loh) is a dark-blue-colored wine grape variety that is used as both a blending grape and for varietal wines. The name Merlot is thought to be a diminutive of merle, the French name for the blackbird, probably a reference to the color of the grape.",
@@ -12574,6 +12651,12 @@
         "field": "aromas",
         "quote": "Characteristic flavor profiles on Grenache include red fruit flavors (raspberry and strawberry) with a subtle, white pepper spice note... As Grenache ages the wines tend to take on more leather and tar flavors.",
         "value": "tar"
+      },
+      {
+        "field": "styles",
+        "quote": "Grenache (, pronounced [ɡʁənaʃ] ) or Garnacha (pronounced [ɡaɾˈnatʃa]) is one of the most widely planted red wine grape varieties in the world.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grenache"
       }
     ],
     "id": "grenache",
@@ -12591,7 +12674,9 @@
     "pairings": [],
     "prominence": 31,
     "regions": [],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Grenache (, pronounced [ɡʁənaʃ] ) or Garnacha (pronounced [ɡaɾˈnatʃa]) is one of the most widely planted red wine grape varieties in the world. It ripens late, so it needs hot, dry conditions such as those found in Spain, where the grape is believed to have originated.",
@@ -12777,6 +12862,12 @@
         "field": "synonyms",
         "quote": "known also as Pineau de la Loire among other names ... historically also known as Steen (locally  STEERN) ... a white grape known as Plant d'Anjou",
         "value": "Plant d'Anjou"
+      },
+      {
+        "field": "styles",
+        "quote": "'White Chenin'; known also as Pineau de la Loire among other names) is a white wine grape variety from the Loire Valley of France.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Chenin_blanc"
       }
     ],
     "id": "chenin-blanc",
@@ -12794,7 +12885,9 @@
     "pairings": [],
     "prominence": 31,
     "regions": [],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Chenin blanc (French pronunciation: [ʃənɛ̃ blɑ̃], lit. 'White Chenin'; known also as Pineau de la Loire among other names) is a white wine grape variety from the Loire Valley of France. Its high acidity means it can be used to make varieties from sparkling wines to well-balanced dessert wines, although it can produce very bland, neutral wines if the vine's natural vigor is not controlled.",
@@ -13423,6 +13516,12 @@
         "field": "regions",
         "quote": "Nebbiolo is grown on 5,993 hectares ... found in the northwest Italian region of Piedmont ... Outside Piedmont, it is found in the neighbouring regions of the Val d'Aosta region of Donnaz and Valtellina and Franciacorta in Lombardy ... In the Veneto, there is a small amount ... Outside Italy, producers in the United States ... Northern Region of Baja California, Mexico ... Argentina ... Australian ...",
         "value": "MX: Baja California"
+      },
+      {
+        "field": "styles",
+        "quote": "Nebbiolo produces lightly-colored red wines which can be highly tannic in youth with scents of tar and roses.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nebbiolo"
       }
     ],
     "id": "nebbiolo",
@@ -13461,7 +13560,9 @@
         "name": "Baja California"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Nebbiolo (, Italian: [nebˈbjɔːlo]; Piedmontese: nebieul [neˈbjøl]) is an Italian red wine grape variety predominantly associated with its native Piedmont region, where it makes the Denominazione di Origine Controllata e Garantita (DOCG) wines of Barolo, Barbaresco, Gattinara, Ghemme, and Roero, together with numerous DOC wines.",
@@ -14385,6 +14486,12 @@
         "field": "synonyms",
         "quote": "Its full name is Gamay Noir à Jus Blanc ... Château des Charmes ... discovered, Gamay Noir Droit ... Gamay Beaujolais is considered to be an early ripening Californian clone of Pinot noir.",
         "value": "Gamay Beaujolais"
+      },
+      {
+        "field": "styles",
+        "quote": "Gamay (French pronunciation: [ɡamɛ] ) is a purple-colored grape variety used to make red wines, most notably grown in Beaujolais and in the Loire Valley around Tours.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Gamay"
       }
     ],
     "id": "gamay",
@@ -14402,7 +14509,9 @@
     "pairings": [],
     "prominence": 27,
     "regions": [],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Gamay (French pronunciation: [ɡamɛ] ) is a purple-colored grape variety used to make red wines, most notably grown in Beaujolais and in the Loire Valley around Tours. Its full name is Gamay Noir à Jus Blanc. It is a very old cultivar, mentioned as long ago as the 15th century.",
@@ -14584,6 +14693,12 @@
         "field": "regions",
         "quote": "Malbec is the dominant red variety in Cahors ... In France, plantations of Malbec are now found primarily in Cahors ... Introduced to Argentina ... Mendoza ... Chile ... Colchagua Valley ... In California the grape is used to make Meritage ... Washington state it is grown predominately in the Columbia Valley",
         "value": "US: Washington"
+      },
+      {
+        "field": "styles",
+        "quote": "Malbec (French pronunciation: [malbɛk] ) is a purple grape variety used in making red wine.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Malbec"
       }
     ],
     "id": "malbec",
@@ -14622,7 +14737,9 @@
         "name": "Washington"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Malbec (French pronunciation: [malbɛk] ) is a purple grape variety used in making red wine. The grapes tend to have an inky dark color and robust tannins, and are known as one of the six grapes allowed in the blend of red Bordeaux wine. In France, plantations of Malbec are now found primarily in Cahors in South West France, though the grape is grown worldwide. It is also available as an Argentine varietal.",
@@ -14793,6 +14910,12 @@
         "field": "regions",
         "quote": "primarily grown in the central regions of Italy, particularly in Tuscany... also cultivated in ... Umbria and Marche... also grown in ... Emilia‑Romagna, Lombardy, and even as far south as Calabria... In France... Corsica... Argentina... Mendoza... In California...",
         "value": "US: California"
+      },
+      {
+        "field": "styles",
+        "quote": "Sangiovese Grosso, used for traditionally powerful and slow maturing red wines, is primarily grown in the central regions of Italy, particularly in Tuscany, where it is the dominant grape variety.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
       }
     ],
     "id": "sangiovese",
@@ -14847,7 +14970,9 @@
         "name": "California"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Sangiovese is a red Italian wine grape variety that derives its name from the Latin sanguis Jovis, \"blood of Jupiter\".",
@@ -14937,6 +15062,12 @@
         "field": "tannin",
         "quote": "Carignan can be a difficult variety for winemakers to work due to its naturally high ... tannins ...",
         "value": "high"
+      },
+      {
+        "field": "styles",
+        "quote": "The variety was historically a component of Rioja's red wine blend.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Carignan"
       }
     ],
     "id": "carignan",
@@ -14954,7 +15085,9 @@
     "pairings": [],
     "prominence": 25,
     "regions": [],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Carignan  (French pronunciation: [kaʁiɲɑ̃] ka-ri-NYAN; also known as Mazuelo, Bovale Grande, Cariñena, Carinyena, Samsó, Carignane, and Carignano) is a red grape variety of Spanish origin that is more commonly found in French wine but is widely planted throughout the western Mediterranean and around the globe.",
@@ -16212,7 +16345,7 @@
       "spice"
     ],
     "body": null,
-    "color": null,
+    "color": "red",
     "evidence": [
       {
         "field": "origin",
@@ -16358,6 +16491,18 @@
         "field": "styles",
         "quote": "The Barbera del Monferrato DOC – which tends to be somewhat sparkling (frizzante)...",
         "value": "sparkling"
+      },
+      {
+        "field": "color",
+        "quote": "Barbera is a red Italian wine grape variety that, as of 2000, was the third most-planted red grape variety in Italy (after Sangiovese and Montepulciano).",
+        "value": "red",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Barbera"
+      },
+      {
+        "field": "styles",
+        "quote": "Century-old vines still exist in many regional vineyards and allow for the production of long-aging, robust red wines with intense fruit and enhanced tannic content.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Barbera"
       }
     ],
     "id": "barbera",
@@ -16376,7 +16521,8 @@
     "prominence": 24,
     "regions": [],
     "styles": [
-      "sparkling"
+      "sparkling",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -17394,6 +17540,12 @@
         "field": "regions",
         "quote": "Viognier can be found in regions of North and South America as well as Australia, New Zealand, the Cape Winelands in South Africa, the south Moravia region in Czechia, Israel and in Austria ... It is the only permitted grape for the French wine Condrieu in the Rhône Valley.",
         "value": "AT: Austria"
+      },
+      {
+        "field": "styles",
+        "quote": "Viognier (French pronunciation: [vjɔɲje]) is a white wine grape variety.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Viognier"
       }
     ],
     "id": "viognier",
@@ -17434,7 +17586,9 @@
         "name": "Austria"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Viognier (French pronunciation: [vjɔɲje]) is a white wine grape variety. It is the only permitted grape for the French wine Condrieu in the Rhône Valley.",
@@ -17661,7 +17815,7 @@
     "acidity": "high",
     "aromas": [],
     "body": "medium",
-    "color": null,
+    "color": "red",
     "evidence": [
       {
         "field": "origin",
@@ -17712,6 +17866,12 @@
         "field": "regions",
         "quote": "all of which is grown in the Veneto region of northeast Italy, except for 19 hectares ... planted in Argentina",
         "value": "AR: Argentina"
+      },
+      {
+        "field": "color",
+        "quote": "Corvina is used with several other grapes to create the light red regional wines Bardolino and Valpolicella that have a mild fruity flavor with hints of almond.",
+        "value": "red",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Corvina"
       }
     ],
     "id": "corvina",
@@ -18869,6 +19029,12 @@
         "field": "regions",
         "quote": "The districts around Noto ... and Pachino in the south of the province of Siracusa ...; ... cultivated in Australia ... Riverland and Sunraysia ... also found in Malta, Turkey and recently in South Africa too.",
         "value": "ZA: South Africa"
+      },
+      {
+        "field": "styles",
+        "quote": "'Black of Avola') is \"the most important red wine grape in Sicily\" and is one of Italy's most important indigenous varieties.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nero_d'Avola"
       }
     ],
     "id": "nero-d-avola",
@@ -18913,7 +19079,8 @@
     ],
     "styles": [
       "fortified",
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -22257,7 +22424,7 @@
       "peach"
     ],
     "body": "high",
-    "color": null,
+    "color": "white",
     "evidence": [
       {
         "field": "origin",
@@ -22388,6 +22555,12 @@
         "field": "regions",
         "quote": "It is widely planted in Sardinia, Liguria and Tuscany, to some extent in Corsica, in Piedmont ... in increasing amounts in Languedoc-Roussillon. ... In California, Vermentino is grown and produced in the Adelaida District AVA ... in the Santa Ynez Valley AVA ... In Southern Oregon, it is being grown in the Applegate Valley AVA ... In Southern Idaho, it is being grown in the Snake River Valley AVA",
         "value": "US: Idaho (Snake River Valley AVA)"
+      },
+      {
+        "field": "color",
+        "quote": "The grapes are amber-yellow and hang in pyramidal bunches.",
+        "value": "white",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Vermentino"
       },
       {
         "field": "body",
@@ -22766,6 +22939,12 @@
         "field": "pairings",
         "quote": "Overall, Dolcetto is considered a light easy drinking red wine that pairs well with pastas and pizza dishes.",
         "value": "pizza"
+      },
+      {
+        "field": "styles",
+        "quote": "In any case the wines produced are nearly always dry.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Dolcetto"
       }
     ],
     "id": "dolcetto",
@@ -22786,7 +22965,9 @@
     ],
     "prominence": 16,
     "regions": [],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Dolcetto (UK:  dol-CHET-oh, US:  dohl-, Italian: [dolˈtʃetto]) is a black Italian wine grape variety widely grown in the Piedmont region of northwest Italy. The Italian word dolcetto means \"little sweet one\", but it is not certain that the name originally carried any reference to the grape’s sugar levels: it is possible that it derives from the name of the hills where the vine is cultivated.",
@@ -23430,6 +23611,12 @@
         "field": "regions",
         "quote": "traditionally been grown in the Nemea region of the Peloponnese ... throughout the country including Attikí (Attica) and Makedonía (Macedonia)",
         "value": "GR: Macedonia"
+      },
+      {
+        "field": "styles",
+        "quote": "The grape is typically made as a varietal, though it is notably blended with Cabernet Sauvignon in the area around Metsovo to make the table wine traditionally called katoi.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Agiorgitiko"
       }
     ],
     "id": "agiorgitiko",
@@ -23464,7 +23651,9 @@
         "name": "Macedonia"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Agiorgitiko (Greek: Αγιωργίτικο; also known as Aghiorghitiko) is a red Greek wine grape variety that, as of 2012, was the most widely planted red grape variety in Greece, ahead of Xynomavro. The grape has traditionally been grown in the Nemea region of the Peloponnese but can be found throughout the country including Attikí (Attica) and Makedonía (Macedonia).",
@@ -24439,6 +24628,12 @@
         "field": "regions",
         "quote": "historically grown in South West France in the Madiran AOC, ... now one of the most prominent grapes in Uruguay ... also grown in Argentina, Australia, Brazil, Bolivia, Peru, South Africa, and in the Italian region of Apulia ... in the US states of Maryland, Virginia, and North Carolina ... plantings in California ... Washington State ... Arizona, Oregon and Texas",
         "value": "US: Texas"
+      },
+      {
+        "field": "styles",
+        "quote": "Tannat is a red wine grape, historically grown in South West France in the Madiran AOC, and is now one of the most prominent grapes in Uruguay, where it is considered the \"national grape\".",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tannat"
       }
     ],
     "id": "tannat",
@@ -24497,7 +24692,9 @@
         "name": "Texas"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Tannat is a red wine grape, historically grown in South West France in the Madiran AOC, and is now one of the most prominent grapes in Uruguay, where it is considered the \"national grape\".",
@@ -26822,7 +27019,7 @@
       "cherry"
     ],
     "body": null,
-    "color": null,
+    "color": "red",
     "evidence": [
       {
         "field": "origin",
@@ -26865,6 +27062,12 @@
         "quote": "Sie erbringt farbkräftige und säurebetonte Rotweine mit Kirscharoma.",
         "value": "cherry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Rondinella"
+      },
+      {
+        "field": "color",
+        "quote": "Il Rondinella è un vitigno a bacca nera autoctono del territorio di Verona e Mantova, in particolare nei comuni che si adagiano sulle colline moreniche del Garda come Monzambano.",
+        "value": "red",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rondinella_(vitigno)"
       },
       {
         "field": "styles",
@@ -33368,6 +33571,12 @@
         "field": "regions",
         "quote": "mostly in the Languedoc wine region ... in the Northern Coast of California ... planted in Spain ... in the Catalonia region ... in the Penedès, Terra Alta and Valencia regions ... blended ... in the Vaud canton ... North Coast region ... Benton City, Washington ... Willcox, Arizona ... Mendoza wine region ... China ... Hebei province ... Shandong vineyard",
         "value": "CN: Shandong"
+      },
+      {
+        "field": "styles",
+        "quote": "The grape usually produces a medium body red wine.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Marselan"
       }
     ],
     "id": "marselan",
@@ -33435,7 +33644,8 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -39313,6 +39523,12 @@
         "field": "regions",
         "quote": "Irsai is mostly planted in Hungary, although it appears in Moldova, Slovakia and Russia.",
         "value": "MD: Moldova"
+      },
+      {
+        "field": "styles",
+        "quote": "Irsai Olivér is a Hungarian white wine variety, cross-bred between Pozsonyi and Pearl of Csaba in 1930.",
+        "value": "still",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Irsai_Oliv%C3%A9r"
       }
     ],
     "id": "irsai-oliver",
@@ -39344,7 +39560,8 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -43335,7 +43552,7 @@
       "dried fruit"
     ],
     "body": null,
-    "color": null,
+    "color": "white",
     "evidence": [
       {
         "field": "synonyms",
@@ -43366,6 +43583,12 @@
         "field": "regions",
         "quote": "in the production of medium-rich fortified wines from Madeira Island ... the Malvasia Fina grown in the Douro valley.",
         "value": "PT: Douro"
+      },
+      {
+        "field": "color",
+        "quote": "Boal Branco ist eine Weißweinsorte.",
+        "value": "white",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
       },
       {
         "field": "aromas",

@@ -182,14 +182,14 @@ export function LibraryGrapePage() {
         <section aria-labelledby="library-pairing" className="settings-card">
           <h2 id="library-pairing">{t("library.suggestedTitle")}</h2>
           {fromSource.length === 0 ? null : (
-            <>
+            <div className="library-pairing-group">
               <h3>{t("library.fromSource")}</h3>
               <ul className="library-chips">
                 {fromSource.map((food) => (
                   <li key={food}>{food}</li>
                 ))}
               </ul>
-            </>
+            </div>
           )}
           {suggested === null ? null : (
             <>

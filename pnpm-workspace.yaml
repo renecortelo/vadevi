@@ -10,7 +10,13 @@ packages:
 overrides:
   uuid@9: ">=11.1.1"
   "@opentelemetry/core": ">=2.8.0"
-  fast-uri: ">=3.1.6"
+  # Kept within 3: an open ">=3.1.6" resolved to 4.1.4, which has advisories
+  # of its own (fixed in 4.1.5) and is not the major ajv 8 asks for.
+  fast-uri@3: ">=3.1.6 <4"
+  fast-uri@4: ">=4.1.5"
+  # Advisories on ip-address <=10.7.0, under firebase-tools >
+  # @modelcontextprotocol/sdk > express-rate-limit. Emulator only.
+  ip-address: ">=10.7.1"
   # GHSA-g89c-p67h-r497 (libheif via sharp), under wrangler>miniflare and the
   # vitest worker pool. Dev/build tooling only; not in the Worker.
   sharp: ">=0.35.4"

@@ -178,6 +178,11 @@ for (const qid of index) {
       found.evidence
         .filter((entry) => entry.field === field)
         .map((entry) => ({ ...entry, sourceUrl: extra.url }));
+    // The berry's colour, where the first reading did not find it.
+    if (result.color === null && found.color !== null) {
+      result.color = found.color;
+      result.evidence.push(...cite("color"));
+    }
     for (const axis of ["acidity", "tannin", "body"] as const) {
       if (result[axis] === null && found[axis] !== null) {
         result[axis] = found[axis];

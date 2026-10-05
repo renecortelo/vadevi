@@ -294,3 +294,49 @@ describe("the classics the sources name", () => {
     expect(names("risotto de setas")[0]).toBe("Light red, low tannin");
   });
 });
+
+describe("more of the world's kitchens, and fewer false alarms", () => {
+  it("knows dishes from each locale's kitchen and beyond", () => {
+    for (const [dish, family] of [
+      ["coq au vin", "stews"],
+      ["blanquette de veau", "cream_sauces"],
+      ["callos a la madrileña", "stews"],
+      ["lechazo asado", "lamb"],
+      ["pimientos de padrón", "vegetables"],
+      ["pastel de nata", "pastries"],
+      ["Rouladen", "stews"],
+      ["Schweinshaxe", "pork"],
+      ["vitello tonnato", "red_meat"],
+      ["carne de porco à alentejana", "pork"],
+      ["sukiyaki", "asian"],
+      ["ceviche", "white_fish"],
+      ["tom yum", "spicy"],
+    ] as const) {
+      expect(profileDish(dish).families, dish).toContain(family);
+    }
+  });
+
+  it("lets a dish's name decide its protein", () => {
+    // "veau" alone is veal; a blanquette is white meat in cream.
+    expect(profileDish("blanquette de veau").protein).toBe("white_meat");
+  });
+
+  it("does not read a wine's name as a dish", () => {
+    // A longer word that merely begins with a food is not that food: only a
+    // real diminutive (-ito, -illa…) is.
+    for (const wine of [
+      "Crémant de Loire",
+      "Sauternes",
+      "Dolcetto d'Alba",
+      "Saint-Emilion Grand Cru",
+      "Cabernet Franc",
+      "Touriga Franca",
+      "Beaumes de Venise",
+      "Entre-deux-Mers",
+      "La Mancha",
+    ]) {
+      expect(recognisedDish(profileDish(wine)), wine).toBe(false);
+    }
+    expect(profileDish("cocina catalana").sweet).toBe(false);
+  });
+});

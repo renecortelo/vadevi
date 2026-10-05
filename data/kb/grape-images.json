@@ -98,7 +98,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arintho_-_Amp%C3%A9lographie.png"
   },
   "assyrtiko": {
-    "author": "ÎµÎ³Ï Original uploader was Elisavetch at el.wikipedia",
+    "author": "Elisavetch (el.wikipedia)",
     "license": "Copyrighted free use",
     "licenseUrl": null,
     "path": "library/grapes/assyrtiko.jpg",
@@ -175,7 +175,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boal.jpg"
   },
   "bobal": {
-    "author": "No machine-readable author provided. Chateau bobal~commonswiki assumed (based on copyright claims).",
+    "author": "Chateau bobal",
     "license": "CC BY-SA 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
     "path": "library/grapes/bobal.jpg",
@@ -315,7 +315,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dolcetto_grapes.JPG"
   },
   "dornfelder": {
-    "author": "Original uploader was Wdelaet at nl.wikipedia",
+    "author": "Wdelaet (nl.wikipedia)",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "path": "library/grapes/dornfelder.jpg",
@@ -343,7 +343,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Encruzado.jpg"
   },
   "erbaluce": {
-    "author": "Please note: This photo can be reproduced. Please quote the source as indicated below: Ursula Brühl, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
+    "author": "Ursula Brühl, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "path": "library/grapes/erbaluce.jpg",
@@ -644,7 +644,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Balzac_noir-mourvedre.jpg"
   },
   "mtsvane": {
-    "author": "Vermorel, Victor (1848-1927). Éditeur scientifique Viala, Pierre (1859-1936). Directeur de publication",
+    "author": "Victor Vermorel, Pierre Viala",
     "license": "Public domain",
     "licenseUrl": null,
     "path": "library/grapes/mtsvane.jpg",
@@ -700,7 +700,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:N%C3%A9grette_-_leaves.jpg"
   },
   "negroamaro": {
-    "author": "Please note: This photo can be reproduced. Please quote the source as indicated below: Doris Schneider, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
+    "author": "Doris Schneider, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "path": "library/grapes/negroamaro.jpg",
@@ -798,7 +798,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:PNP-gr.jpg"
   },
   "pinotage": {
-    "author": "Please note: This photo can be reproduced. Please quote the source as indicated below: Doris Schneider, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
+    "author": "Doris Schneider, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "path": "library/grapes/pinotage.jpg",
@@ -840,14 +840,14 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC10054_RIBOLLA_GIALLA_Cluster_in_the_field_3757.jpg"
   },
   "riesling": {
-    "author": "No machine-readable author provided. T.o.m.~commonswiki assumed (based on copyright claims).",
+    "author": "T.o.m.",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
     "path": "library/grapes/riesling.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Riesling_grapes_leaves.jpg"
   },
   "rkatsiteli": {
-    "author": "Vermorel, Victor (1848-1927). Éditeur scientifique Viala, Pierre (1859-1936). Directeur de publication",
+    "author": "Victor Vermorel, Pierre Viala",
     "license": "Public domain",
     "licenseUrl": null,
     "path": "library/grapes/rkatsiteli.jpg",
@@ -889,7 +889,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sauvignon_blanc_vlasotince_vineyards.jpg"
   },
   "sauvignon-vert": {
-    "author": "Please note: This photo can be reproduced. Please quote the source as indicated below: Ursula Brühl, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
+    "author": "Ursula Brühl, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "path": "library/grapes/sauvignon-vert.jpg",

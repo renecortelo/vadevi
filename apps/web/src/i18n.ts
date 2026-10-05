@@ -62,6 +62,13 @@ await i18n.use(initReactI18next).init({
   },
 });
 
+// The page says which language it is in, so a screen reader reads Spanish with
+// a Spanish voice and the browser hyphenates long words ("Herkunfts-
+// bezeichnungen") by that language's rules. It said "en" whatever was shown.
+i18n.on("languageChanged", (language) => {
+  if (typeof document !== "undefined") document.documentElement.lang = language;
+});
+
 export async function changeLanguage(locale: SupportedLocale): Promise<void> {
   if (!i18n.hasResourceBundle(locale, "common")) {
     const catalog = locale === "en" ? en : (await catalogLoaders[locale]()).default;

@@ -551,32 +551,59 @@ export function WineMemoryPage() {
         </div>
       </header>
 
-      <section aria-label={t("memory.syncLabel")} className="memory-sync-bar" data-state={status}>
-        <div>
-          <strong>{t(`sync.${status}`)}</strong>
-          <span>
-            {pendingCount > 0
-              ? t("memory.pending", { count: pendingCount })
-              : t("memory.noPending")}
-          </span>
-        </div>
-        <div className="hero__actions">
-          <button
-            className="action-link action-link--secondary"
-            onClick={() => void flush(spaceId)}
-            type="button"
+      {/* Synced with nothing waiting is the usual state, and then the
+          status is one quiet line: the retry and the destructive "clear"
+          sit behind it rather than above every search. Anything pending or
+          wrong shows them at once. */}
+      {(() => {
+        const summary = (
+          <div>
+            <strong>{t(`sync.${status}`)}</strong>
+            <span>
+              {pendingCount > 0
+                ? t("memory.pending", { count: pendingCount })
+                : t("memory.noPending")}
+            </span>
+          </div>
+        );
+        const actions = (
+          <div className="hero__actions">
+            <button
+              className="action-link action-link--secondary"
+              onClick={() => void flush(spaceId)}
+              type="button"
+            >
+              {t("memory.retrySync")}
+            </button>
+            <button
+              className="action-link action-link--danger"
+              onClick={() => setConfirmClear(true)}
+              type="button"
+            >
+              {t("memory.clearOffline")}
+            </button>
+          </div>
+        );
+        return status === "synced" && pendingCount === 0 && !confirmClear ? (
+          <details
+            aria-label={t("memory.syncLabel")}
+            className="memory-sync-bar memory-sync-bar--quiet"
+            data-state={status}
           >
-            {t("memory.retrySync")}
-          </button>
-          <button
-            className="action-link action-link--danger"
-            onClick={() => setConfirmClear(true)}
-            type="button"
+            <summary>{summary}</summary>
+            {actions}
+          </details>
+        ) : (
+          <section
+            aria-label={t("memory.syncLabel")}
+            className="memory-sync-bar"
+            data-state={status}
           >
-            {t("memory.clearOffline")}
-          </button>
-        </div>
-      </section>
+            {summary}
+            {actions}
+          </section>
+        );
+      })()}
       {confirmClear ? (
         <div className="clear-confirm" role="alert">
           <p>{t("memory.clearConfirm")}</p>

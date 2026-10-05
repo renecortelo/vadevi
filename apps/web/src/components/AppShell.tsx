@@ -38,6 +38,9 @@ const navigation = [
  */
 const manageSpacesValue = "__manage__";
 
+/** The name the server gives every personal Space when it is created. */
+const defaultPersonalName = "Personal space";
+
 export function AppShell() {
   const { bootstrap, isUpdating, signOut, updateProfile } = useSession();
   const { t } = useTranslation();
@@ -99,7 +102,12 @@ export function AppShell() {
           >
             {bootstrap.data.spaces.map((space: SpaceOption) => (
               <option key={space.id} value={space.id}>
-                {space.name}
+                {/* The personal Space is created with an English name before
+                    the reader has chosen a language; until they rename it,
+                    it is called what their language calls it. */}
+                {space.type === "personal" && space.name === defaultPersonalName
+                  ? t("spaces.type.personal")
+                  : space.name}
               </option>
             ))}
             <option value={manageSpacesValue}>{t("spaces.manageAction")}</option>

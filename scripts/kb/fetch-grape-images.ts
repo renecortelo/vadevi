@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 
 import type { ImageEntry } from "./appellation-names";
 import type { GrapeEntry } from "./grape-validation";
+import { creditName } from "./image-credit";
 import { wikimedia, wikimediaFile } from "./wikimedia";
 
 /**
@@ -173,7 +174,7 @@ for (const [grapeId, file] of fileOf) {
     );
   }
   record[grapeId] = {
-    author: strip(info.extmetadata?.Artist?.value ?? "") || "Wikimedia Commons",
+    author: creditName(strip(info.extmetadata?.Artist?.value ?? "")) || "Wikimedia Commons",
     license,
     licenseUrl: info.extmetadata?.LicenseUrl?.value ?? null,
     path,

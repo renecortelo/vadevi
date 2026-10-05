@@ -93,7 +93,8 @@ product specification, linked from the register.
   `apps/web/src/library/europe-map.json`, built by `pnpm kb:build-map`):
   public domain.
 
-Since October 2026 the grapes' structure, aromas, regions and pairings were
+Since October 2026 the grapes' structure, aromas, regions, pairings, berry
+colour and the kinds of wine they make were
 also read in a working session with Claude, under the same rules and the same
 check: every value with its verbatim quote, kept only if `grape-validation.ts`
 finds the quote in the article and the quote says it.

@@ -161,6 +161,162 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
     terms: "foie foie_gras ganzenlever gansestopfleber",
   },
 
+  // Dishes whose name says what they are made of, read before the generic
+  // words so the dish decides: a blanquette de veau is white meat in cream,
+  // whatever "veau" says alone. More of the eight locales' kitchens, and the
+  // world's most asked-for dishes.
+  {
+    contribution: {
+      families: ["stews", "poultry"],
+      intensity: 4,
+      protein: "white_meat",
+      richness: 4,
+    },
+    terms: "coq_vin pollo_pepitoria pollastre_samfaina",
+  },
+  {
+    contribution: { families: ["cream_sauces"], intensity: 3, protein: "white_meat", richness: 5 },
+    terms: "blanquette fricassee",
+  },
+  {
+    contribution: { families: ["stews"], intensity: 5, protein: "red_meat", richness: 5 },
+    terms:
+      "pot_feu callos fricando rouladen draadjesvlees stoofvlees daube carbonnade " +
+      "carbonade estofat_bou",
+  },
+  {
+    contribution: { families: ["red_meat"], intensity: 4, protein: "red_meat", richness: 4 },
+    terms:
+      "chuleton tartare carpaccio bistecca fiorentina tagliata saltimbocca vitello_tonnato " +
+      "roast_beef rosbif yakiniku anticuchos lomo_saltado",
+  },
+  {
+    contribution: { families: ["lamb"], intensity: 4, protein: "red_meat", richness: 4 },
+    terms: "lechazo arrosticini moussaka mousaka",
+  },
+  {
+    contribution: { families: ["poultry"], intensity: 4, protein: "white_meat", richness: 5 },
+    terms: "magret gans gansebraten oca",
+  },
+  {
+    contribution: { families: ["pork"], intensity: 4, protein: "white_meat", richness: 4 },
+    terms:
+      "schweinshaxe haxe lacon migas pulled_pork porco_alentejana " +
+      "butifarra flammkuchen tarte_flambee",
+  },
+  // Sweet with the savoury, from the east and the south.
+  {
+    contribution: {
+      families: ["asian"],
+      intensity: 4,
+      protein: "red_meat",
+      richness: 4,
+      sweetSavory: true,
+      umami: true,
+    },
+    terms: "sukiyaki bulgogi galbi",
+  },
+  {
+    contribution: {
+      families: ["asian"],
+      intensity: 4,
+      protein: "white_meat",
+      richness: 4,
+      sweetSavory: true,
+      umami: true,
+    },
+    terms: "pato_pekin peking_duck canard_laque char_siu",
+  },
+  {
+    contribution: {
+      families: ["asian"],
+      intensity: 3,
+      protein: "oily_fish",
+      richness: 4,
+      sweetSavory: true,
+      umami: true,
+    },
+    terms: "unagi kabayaki",
+  },
+  {
+    contribution: { families: ["vegetables"], intensity: 3, richness: 2, sweetSavory: true },
+    terms: "caponata",
+  },
+  {
+    contribution: { families: ["spicy"], intensity: 4, richness: 3, spicy: true },
+    terms: "kung_pao mapo tom_yum aji_gallina",
+  },
+  {
+    contribution: { families: ["asian"], intensity: 3, richness: 4, umami: true },
+    terms: "okonomiyaki takoyaki chow_mein arroz_frito fried_rice",
+  },
+  // Fish, raw and fried.
+  {
+    contribution: {
+      acidic: true,
+      families: ["white_fish"],
+      intensity: 3,
+      protein: "lean_fish",
+      richness: 1,
+    },
+    terms: "ceviche tiradito",
+  },
+  {
+    contribution: { families: ["white_fish"], intensity: 2, protein: "lean_fish", richness: 2 },
+    terms: "trout trucha truita truite forelle trota forel truta zander lucioperca baccala",
+  },
+  {
+    contribution: {
+      families: ["fried_tapas", "white_fish"],
+      intensity: 3,
+      protein: "lean_fish",
+      richness: 5,
+      salty: true,
+    },
+    terms: "kibbeling fritto_misto pescaito_frito",
+  },
+  {
+    contribution: { families: ["shellfish"], intensity: 2, protein: "shellfish", richness: 2 },
+    terms: "ameijoa ameijoas berberecho berberechos navaja navajas zamburina",
+  },
+  // Cheese, eggs and vegetables.
+  {
+    contribution: {
+      families: ["aged_cheese"],
+      intensity: 4,
+      protein: "cheese",
+      richness: 4,
+      salty: true,
+    },
+    terms: "cacio_pepe croque_monsieur",
+  },
+  {
+    contribution: {
+      acidic: true,
+      families: ["fresh_cheese"],
+      intensity: 3,
+      protein: "cheese",
+      richness: 3,
+    },
+    terms: "spanakopita tzatziki",
+  },
+  {
+    contribution: { families: ["vegetables"], intensity: 2, protein: "vegetable", richness: 2 },
+    terms: "pimientos_padron padron caldo_verde dolmades edamame menestra",
+  },
+  {
+    contribution: { acidic: true, families: ["vegetables"], intensity: 2, richness: 2 },
+    terms: "bruschetta pa_tomaquet pan_tomate",
+  },
+  {
+    contribution: { intensity: 3, richness: 4 },
+    terms: "focaccia quesadillas maultaschen spatzle aioli alioli allioli romesco pesto",
+  },
+  // Grilled meat whose meat varies: the char is certain, the animal is not.
+  {
+    contribution: { intensity: 4, richness: 4, smoky: true },
+    terms: "kebab kebap doner gyros kofta souvlaki shawarma",
+  },
   // Red meat and game: tannin has something to bind to here, and nowhere else.
   {
     contribution: { families: ["lamb"], intensity: 4, protein: "red_meat", richness: 4 },
@@ -325,7 +481,7 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
   {
     contribution: { intensity: 2, richness: 1 },
     terms:
-      "steamed poached boiled raw vapor hervido escalfado crudo cocido vapeur poche bouilli cru " +
+      "steamed poached boiled raw vapor hervido escalfado crudo cocido vapeur poche bouilli " +
       "gedampft pochiert gekocht roh vapore bollito crudo gestoomd gekookt rauw cozido vapor",
   },
   {
@@ -694,7 +850,9 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
       richness: 4,
       sweet: true,
     },
-    terms: "chocolate xocolata schokolade cioccolato chocola brownie cacao cocoa",
+    terms:
+      "chocolate xocolata schokolade cioccolato chocola brownie cacao cocoa sachertorte " +
+      "schwarzwalder",
   },
   {
     contribution: {
@@ -707,7 +865,8 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
     },
     terms:
       "fruit fruta fruita frutas fruites frutta obst fruits tatin clafoutis sorbet sorbete " +
-      "pavlova crumble macedonia apple_pie tarta_manzana tarte_pommes",
+      "pavlova crumble macedonia apple_pie tarta_manzana tarte_pommes appeltaart apfelkuchen " +
+      "apfelstrudel",
   },
   {
     contribution: {
@@ -720,12 +879,13 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
     terms:
       "cake pastry pastel bizcocho hojaldre biscotti cantucci cantuccini galleta galletas " +
       "cookie cookies kuchen gebak koekjes bolo pastelaria croissant strudel stroopwafel " +
-      "speculaas profiterol churros",
+      "speculaas profiterol churros crepe crepes macaron macarons cannoli poffertjes " +
+      "oliebollen kasekuchen cheesecake pastel_nata pasteis_nata",
   },
   {
     contribution: { protein: "none", sweet: true },
     terms:
-      "tiramisu trifle toffee catalana brulee panacotta flan natillas " +
+      "tiramisu trifle toffee crema_catalana brulee panacotta panna_cotta flan natillas " +
       "dessert ice_cream tart postre tarta helado xocolata gelat dolc gateau glace patisserie " +
       "eis nachtisch torta gelato dolce taart ijs toetje sobremesa gelado doce",
   },
@@ -834,6 +994,9 @@ const stemLength = 5;
  * shorter of the two but for, at most, its last letter. That keeps every
  * diminutive and drops the coincidences, which part company sooner.
  */
+/** What a Spanish, Portuguese or Italian diminutive adds after the stem. */
+const diminutive = /^[aeiou]?c?(?:it|ill|uit|in)[oa]s?$/;
+
 function matches(term: string, tokens: ReadonlySet<string>): boolean {
   if (tokens.has(term)) return true;
   if (term.length < stemLength) return false;
@@ -843,12 +1006,18 @@ function matches(term: string, tokens: ReadonlySet<string>): boolean {
     const limit = Math.min(token.length, term.length);
     while (shared < limit && token[shared] === term[shared]) shared += 1;
     if (shared < stemLength) continue;
-    if (shared === limit) return true;
-    // One letter short of the shorter word: a diminutive swaps a final vowel
-    // ("costill|a" → "costill|itas"), never a consonant — "salmo|n" is not
-    // "salmo|rejo".
-    const shorter = token.length <= term.length ? token : term;
-    if (shared === limit - 1 && "aeiou".includes(shorter[limit - 1]!)) return true;
+    // All of the term but, at most, a final vowel: "costill(a)", "asad(o)".
+    // "salmo|n" is not "salmo|rejo"; a word that only opens the term is not
+    // it either — "franc" is not "francesinha", "entre" not "entrecot".
+    const stem =
+      shared >= term.length || (shared === term.length - 1 && "aeiou".includes(term[shared]!));
+    if (!stem) continue;
+    const rest = token.slice(shared);
+    // The same word with its final vowel changed (asado/asada), or the word
+    // with a diminutive after it (costillitas, pechuguita, camaroncitos) —
+    // never any longer word that happens to begin with it: a Crémant is
+    // not a cream sauce, Sauternes is not a sauté, Dolcetto is not a pudding.
+    if (rest.length <= 1 ? "aeiou".includes(rest || "a") : diminutive.test(rest)) return true;
   }
   return false;
 }
