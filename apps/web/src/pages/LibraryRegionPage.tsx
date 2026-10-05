@@ -8,6 +8,8 @@ import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "../components/MapLink";
 import { EuropeMap } from "../library/EuropeMap";
 import { flagOf } from "../library/flag";
+import { TrailBackLink } from "../library/TrailBackLink";
+import { useLibraryTrail } from "../library/trail";
 import { getLibraryRegion, searchLibraryRegions } from "../services/library";
 
 /**
@@ -23,6 +25,7 @@ export function LibraryRegionPage() {
   const locale = resolveSupportedLocale(i18n.language);
   const { user } = useAuth();
   const navigate = useNavigate();
+  const trail = useLibraryTrail();
   const { regionId } = useParams();
   const [search] = useSearchParams();
   const name = search.get("name");
@@ -43,7 +46,7 @@ export function LibraryRegionPage() {
             setState("missing");
             return;
           }
-          void navigate(`/library/regions/${found[0].id}`, { replace: true });
+          void navigate(`/library/regions/${found[0].id}`, { replace: true, state: trail });
           return;
         }
         const entry = await getLibraryRegion(user, regionId, locale, controller.signal);
@@ -55,7 +58,7 @@ export function LibraryRegionPage() {
     };
     void load();
     return () => controller.abort();
-  }, [country, locale, name, navigate, regionId, user]);
+  }, [country, locale, name, navigate, regionId, trail, user]);
 
   if (state !== "ready" || region === null) {
     return (
@@ -90,8 +93,13 @@ export function LibraryRegionPage() {
 
   return (
     <section className="library-page">
-      <p className="section-help">
-        <Link className="text-link" to={`/library?tab=regions&country=${region.countryCode}`}>
+      <p className="section-help library-back">
+        <TrailBackLink />
+        <Link
+          className="text-link"
+          state={trail}
+          to={`/library?tab=regions&country=${region.countryCode}`}
+        >
           ← {t("library.home.title")}
         </Link>
       </p>
@@ -176,7 +184,7 @@ export function LibraryRegionPage() {
           <ul className="library-chips">
             {region.grapes.map((grape) => (
               <li key={grape.id}>
-                <Link className="text-link" to={`/library/grapes/${grape.id}`}>
+                <Link className="text-link" state={trail} to={`/library/grapes/${grape.id}`}>
                   {grape.name}
                 </Link>
               </li>

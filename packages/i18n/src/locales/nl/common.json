@@ -209,7 +209,8 @@
       "area": "Benaderd punt: het midden van het gebied waarin de benaming ligt.",
       "place": "Benaderd punt: de plaats waarnaar de benaming is genoemd."
     },
-    "summaryTranslated": "vertaald uit het oorspronkelijke artikel"
+    "summaryTranslated": "vertaald uit het oorspronkelijke artikel",
+    "backTo": "Terug naar {{name}}"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",
@@ -282,11 +283,11 @@
   },
   "nav": {
     "home": "Home",
-    "log": "Vastleggen",
-    "sessions": "Evenementen",
+    "log": "Noteren",
+    "sessions": "Events",
     "memory": "Geheugen",
     "assistant": "Vicenç",
-    "about": "Over"
+    "about": "Meer"
   },
   "about": {
     "eyebrow": "De kleine lettertjes",

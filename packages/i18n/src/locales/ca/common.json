@@ -209,7 +209,8 @@
       "area": "Punt aproximat: el centre de la zona on és la denominació.",
       "place": "Punt aproximat: el lloc que dona nom a la denominació."
     },
-    "summaryTranslated": "traduït de l'article original"
+    "summaryTranslated": "traduït de l'article original",
+    "backTo": "Tornar a {{name}}"
   },
   "space": {
     "switchLabel": "Espai actiu",
@@ -283,10 +284,10 @@
   "nav": {
     "home": "Inici",
     "log": "Registra",
-    "sessions": "Esdeveniments",
+    "sessions": "Tastos",
     "memory": "Memòria",
     "assistant": "Vicenç",
-    "about": "Quant a"
+    "about": "Més"
   },
   "about": {
     "eyebrow": "La lletra petita",

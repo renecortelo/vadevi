@@ -106,6 +106,17 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
       "pescado_azul pescados_azules peix_blau poisson_gras pesce_azzurro oily_fish vette_vis " +
       "peixe_gordo",
   },
+  // Smoked fish named in French: "fumé" alone is also Pouilly-Fumé.
+  {
+    contribution: {
+      families: ["oily_fish"],
+      intensity: 4,
+      protein: "oily_fish",
+      richness: 4,
+      smoky: true,
+    },
+    terms: "saumon_fume truite_fumee hareng_fume",
+  },
   {
     contribution: {
       families: ["blue_cheese"],
@@ -149,7 +160,7 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
     terms:
       "queso_curado quesos_curados formatge_curat fromage_affine aged_cheese hard_cheese " +
       "formaggio_stagionato oude_kaas belegen_kaas queijo_curado manchego parmesano parmesan " +
-      "parmigiano grana pecorino cheddar comte gruyere idiazabal emmental",
+      "parmigiano grana pecorino_romano pecorino_sardo pecorino_toscano queso_pecorino formaggio_pecorino cheddar comte gruyere idiazabal emmental",
   },
   {
     contribution: {
@@ -176,7 +187,8 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
   },
   {
     contribution: { families: ["cream_sauces"], intensity: 3, protein: "white_meat", richness: 5 },
-    terms: "blanquette fricassee",
+    // Never "blanquette" alone: Blanquette de Limoux is a sparkling wine.
+    terms: "blanquette_veau blanquette_ternera blanquette_poulet blanquette_volaille fricassee",
   },
   {
     contribution: { families: ["stews"], intensity: 5, protein: "red_meat", richness: 5 },
@@ -187,7 +199,7 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
   {
     contribution: { families: ["red_meat"], intensity: 4, protein: "red_meat", richness: 4 },
     terms:
-      "chuleton tartare carpaccio bistecca fiorentina tagliata saltimbocca vitello_tonnato " +
+      "chuleton tartare carpaccio bistecca bistecca_fiorentina tagliata saltimbocca vitello_tonnato " +
       "roast_beef rosbif yakiniku anticuchos lomo_saltado",
   },
   {
@@ -546,7 +558,7 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
   {
     contribution: { intensity: 4, smoky: true },
     terms:
-      "smoked smoky ahumado ahumada fumado defumado fume fumee geraeuchert gerauchert geraucht " +
+      "smoked smoky ahumado ahumada fumado defumado fumee fumes fumees geraeuchert gerauchert geraucht " +
       "affumicato gerookt chipotle",
   },
 
@@ -708,7 +720,7 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
       salty: true,
       umami: true,
     },
-    terms: "margherita pizza",
+    terms: "pizza pizza_margherita",
   },
   {
     contribution: {
@@ -886,8 +898,9 @@ const lexicon: ReadonlyArray<{ contribution: Contribution; terms: string }> = [
     contribution: { protein: "none", sweet: true },
     terms:
       "tiramisu trifle toffee crema_catalana brulee panacotta panna_cotta flan natillas " +
-      "dessert ice_cream tart postre tarta helado xocolata gelat dolc gateau glace patisserie " +
-      "eis nachtisch torta gelato dolce taart ijs toetje sobremesa gelado doce",
+      // Not "dolce", "doce" or "dolç": they are how a sweet *wine* is described.
+      "dessert ice_cream tart postre tarta helado xocolata gelat gateau glace patisserie " +
+      "eis nachtisch torta gelato taart ijs toetje sobremesa gelado",
   },
 
   // Flavours that override the protein.
@@ -1017,7 +1030,14 @@ function matches(term: string, tokens: ReadonlySet<string>): boolean {
     // with a diminutive after it (costillitas, pechuguita, camaroncitos) —
     // never any longer word that happens to begin with it: a Crémant is
     // not a cream sauce, Sauternes is not a sauté, Dolcetto is not a pudding.
-    if (rest.length <= 1 ? "aeiou".includes(rest || "a") : diminutive.test(rest)) return true;
+    if (rest.length === 0) return true;
+    // One letter: only the gender swap Spanish and Italian make, o for a
+    // (asado/asada) — not Grillo for "grillé", nor Bolognesi for "bolognese".
+    if (rest.length === 1) {
+      if ("ao".includes(rest) && "ao".includes(term[shared] ?? "a")) return true;
+      continue;
+    }
+    if (diminutive.test(rest)) return true;
   }
   return false;
 }

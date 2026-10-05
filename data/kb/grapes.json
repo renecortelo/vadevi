@@ -2759,7 +2759,7 @@
       "raisin"
     ],
     "body": null,
-    "color": null,
+    "color": "red",
     "evidence": [
       {
         "field": "origin",
@@ -2850,6 +2850,12 @@
         "field": "regions",
         "quote": "While originating in the Minho region, it is used primarily in Australia, California and South Africa. Sezão is also an authorized grape in the Monterrei DO in Galicia. In Portugal, it is also an authorized planting in the Douro, and Dão‑Lafões area (Vinho do Dão).",
         "value": "PT: Dão-Lafões"
+      },
+      {
+        "field": "color",
+        "quote": "Le sousão ou vinhão est un cépage noir du Nord-Ouest du Portugal, région du Vinho verde, qui est autorisé pour l'élaboration d'un vin rouge de qualité.",
+        "value": "red",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Sous%C3%A3o"
       }
     ],
     "id": "souzao",
@@ -5392,7 +5398,7 @@
       "citrus"
     ],
     "body": null,
-    "color": null,
+    "color": "white",
     "evidence": [
       {
         "field": "aromas",
@@ -5533,6 +5539,12 @@
         "field": "regions",
         "quote": "In the Campania region it is used to produce the denominazione di origine controllata e garantita (DOCG) wine Greco di Tufo. In Calabria, it is used to make ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina ... In Apulia, it is a permitted blend component in the Gravina DOC ... It is also permitted in Lacryma Christi produced on the slopes of Mount Vesuvius ... Molise DOC ... Sannio DOC",
         "value": "IT: Sannio"
+      },
+      {
+        "field": "color",
+        "quote": "Le Greco est un cépage blanc italien cultivé dans le sud de l'Italie.",
+        "value": "white",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Greco_(c%C3%A9page)"
       }
     ],
     "id": "greco",
@@ -17299,6 +17311,18 @@
         "field": "regions",
         "quote": "It is most prevalent in the cooler, north facing vineyards of the Vallee de la Marne and in the Aisne department. ... It is also widely grown in the Aube region ... found ... in the Loire Valley regions of Touraine and Orleans ... most German plantings ... are found in Württemberg ... most of the state's plantings are located in the Carneros AVA ... in the Grampians region of Victoria ... New Zealand wine industry ... German‑speaking parts of Switzerland ... small quantities in Austria.",
         "value": "CH: German‑speaking parts"
+      },
+      {
+        "field": "styles",
+        "quote": "De druif wordt gebruikt voor het maken van rode wijn en champagne.",
+        "value": "still",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Pinot_meunier"
+      },
+      {
+        "field": "styles",
+        "quote": "De druif wordt gebruikt voor het maken van rode wijn en champagne.",
+        "value": "sparkling",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Pinot_meunier"
       }
     ],
     "id": "pinot-meunier",
@@ -17349,7 +17373,10 @@
         "name": "German‑speaking parts"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still",
+      "sparkling"
+    ],
     "summaries": {
       "en": {
         "text": "Pinot Meunier (English: , French: [pino mønje] ), also known as Meunier or Schwarzriesling (German: [ˈʃvaʁt͡sˌʁiːslɪŋ] ), is a variety of red wine grape most noted for being one of the three main varieties used in the production of Champagne (the other two are the red variety Pinot noir and the white Chardonnay).",
@@ -20844,6 +20871,12 @@
         "quote": "Diese Traube wird sowohl sortenrein vinifiziert als auch gerne als Verschnittpartner in Cuvées verwendet.",
         "value": "blending",
         "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "field": "styles",
+        "quote": "Il vino tende ad essere di colore più scuro rispetto al Pinot nero coltivato nella stessa zona e produce un raccolto più ampio del Pinot nero.",
+        "value": "still",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Zweigelt"
       }
     ],
     "id": "zweigelt",
@@ -20899,7 +20932,8 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -21253,6 +21287,12 @@
         "field": "synonyms",
         "quote": "Vranac ...; Macedonian: Вранец, romanized: Vranec",
         "value": "Vranec"
+      },
+      {
+        "field": "styles",
+        "quote": "Il produit un vin rouge-pourpre, sec, équilibré.",
+        "value": "still",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Vranac"
       }
     ],
     "id": "vranec",
@@ -21270,7 +21310,9 @@
     "pairings": [],
     "prominence": 18,
     "regions": [],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "Vranac (pronounced [ʋrǎːnats]), Serbian Cyrillic: Вранац; Macedonian: Вранец, romanized: Vranec) is a red grape variety that originates from Montenegro. It is the most planted grape variety in Montenegro. It is believed to be closely related to Kratosija. Vranac is considered the most important grape variety in Montenegro and one of the most important in North Macedonia.",
@@ -23874,6 +23916,12 @@
         "field": "regions",
         "quote": "Kerner is most commonly planted in the German regions of Palatinate, Rheinhessen, Mosel, and Württemberg, but it is also grown in Austria (Styria), Switzerland, the island of Hokkaido in Japan, Old Mission Peninsula in Michigan, and the Italian province of South Tyrol.",
         "value": "IT: South Tyrol"
+      },
+      {
+        "field": "styles",
+        "quote": "Les vins issus de ce cépage ressemblent au riesling, ont de hautes teneurs en sucre, sont assez acides avec parfois un léger arôme de muscade.",
+        "value": "still",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Kerner_(c%C3%A9page)"
       }
     ],
     "id": "kerner",
@@ -23928,7 +23976,9 @@
         "name": "South Tyrol"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still"
+    ],
     "summaries": {
       "en": {
         "text": "The Kerner grape is an aromatic white grape variety. It was bred in 1929 by August Herold by crossing Trollinger (a red variety also known as Schiava grossa or Vernatsch) and Riesling. Herold was working at a plant breeding station in Lauffen in the Württemberg region of Germany. This station belonged to a state breeding institute headquartered in Weinsberg.",
@@ -24102,6 +24152,18 @@
         "field": "regions",
         "quote": "planted in several Hungarian wine regions, but most prominently in the tiny wine region of Somló, and especially in Tokaj-Hegyalja ... also planted in the Slovak wine region of Tokaj ... also planted in South Africa",
         "value": "ZA: South Africa"
+      },
+      {
+        "field": "styles",
+        "quote": "De Hárslevelű is een witte Hongaarse druivensoort, dat zowel droge als zoete wijn voortbrengt.",
+        "value": "still",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
+      },
+      {
+        "field": "styles",
+        "quote": "De Hárslevelű is een witte Hongaarse druivensoort, dat zowel droge als zoete wijn voortbrengt.",
+        "value": "sweet",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
       }
     ],
     "id": "harslevelu",
@@ -24136,7 +24198,10 @@
         "name": "South Africa"
       }
     ],
-    "styles": [],
+    "styles": [
+      "still",
+      "sweet"
+    ],
     "summaries": {
       "en": {
         "text": "Hárslevelű (in Hungarian), also called Lipovina (in Slovak), Frunza de tei (in Romanian), Lindenblättriger (in German) and Feuille de Tilleul (in French) is a grape variety from the Pontian Balcanica branch of Vitis vinifera.",
@@ -34603,6 +34668,12 @@
         "value": "IT: Bardolino"
       },
       {
+        "field": "styles",
+        "quote": "Dort ist sie Bestandteil der bekannten Valpolicella-Weine: Bardolino, Amarone della Valpolicella, Ripasso und Recioto della Valpolicella sowie des weniger bekannten Garda Colli Mantovani.",
+        "value": "still",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Molinara"
+      },
+      {
         "field": "aromas",
         "quote": "Apprezzata per le note minerali che apporta nei vini.",
         "value": "mineral",
@@ -34638,7 +34709,8 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -38249,6 +38321,12 @@
         "field": "regions",
         "quote": "grown primarily in the Loire Valley of France ... particularly in the Anjou region ... permitted grape variety for the rosé Appellation d'origine contrôlée (AOC)s of Anjou, Touraine and Saumur AOC.",
         "value": "FR: Saumur"
+      },
+      {
+        "field": "styles",
+        "quote": "Os vinhos Grolleau tendem a ter baixo teor alcoólico e acidez relativamente alta.",
+        "value": "still",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Grolleau"
       }
     ],
     "id": "grolleau",
@@ -38287,7 +38365,8 @@
       "rose",
       "sweet",
       "sparkling",
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -38473,6 +38552,18 @@
         "field": "regions",
         "quote": "grown throughout the Greek Isles.",
         "value": "GR: Greek Isles"
+      },
+      {
+        "field": "styles",
+        "quote": "Die spätreifende Sorte mit ihren dickschaligen, harten und dunklen Beeren erbringt alkoholarme Weine mit wenig Körper und Struktur, die trocken bis süß ausgebaut werden können.",
+        "value": "still",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mandilaria"
+      },
+      {
+        "field": "styles",
+        "quote": "Die spätreifende Sorte mit ihren dickschaligen, harten und dunklen Beeren erbringt alkoholarme Weine mit wenig Körper und Struktur, die trocken bis süß ausgebaut werden können.",
+        "value": "sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mandilaria"
       }
     ],
     "id": "mandilaria",
@@ -38496,7 +38587,9 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "still",
+      "sweet"
     ],
     "summaries": {
       "en": {
@@ -40278,6 +40371,12 @@
         "field": "regions",
         "quote": "the cult wine Aleatico di Portoferraio made in Elba. In Chile is known as Red Moscatel. The grape has also been cultivated at Mudgee in New South Wales and California ... Aleatico is most commonly found in Italy, Tuscany (primarily in Elba), Lazio, Umbria, Piedmont, Apulia ... Aleatico is found around Lake Bolsena",
         "value": "CL: Chile"
+      },
+      {
+        "field": "styles",
+        "quote": "L'Aleatico N est un cépage noir italien donnant des vins doux, très aromatisés et de couleur prononcée.",
+        "value": "still",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Aleatico"
       }
     ],
     "id": "aleatico",
@@ -40338,7 +40437,8 @@
     ],
     "styles": [
       "sweet",
-      "fortified"
+      "fortified",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -40666,6 +40766,12 @@
         "value": "BR: Campos de Cima da Serra"
       },
       {
+        "field": "styles",
+        "quote": "En el suroeste de la región, en las provincias de Forlì-Cesena y Rávena, es una de las variedades que podía mezclarse con la uva sangiovese para producir el vino tinto de la DOC Colli di Faneza.",
+        "value": "still",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Ancellotta"
+      },
+      {
         "field": "acidity",
         "quote": "Il vino prodotto presenta una media alcolicità, una bassa acidità e un'abbondante quantità di pigmenti e di zuccheri.",
         "value": "low",
@@ -40726,7 +40832,8 @@
     ],
     "styles": [
       "blending",
-      "sweet"
+      "sweet",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -40867,6 +40974,12 @@
         "field": "regions",
         "quote": "used to make Retsina on the island of Rhodes.",
         "value": "GR: Rhodes"
+      },
+      {
+        "field": "styles",
+        "quote": "De wijnen zijn fris en fruitig met een aroma van limoen en toch is de zuurgraad niet extreem hoog.",
+        "value": "still",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Athiri"
       }
     ],
     "id": "athiri",
@@ -40890,7 +41003,8 @@
       }
     ],
     "styles": [
-      "blending"
+      "blending",
+      "still"
     ],
     "summaries": {
       "en": {
@@ -41557,7 +41671,7 @@
     "acidity": null,
     "aromas": [],
     "body": null,
-    "color": null,
+    "color": "red",
     "evidence": [
       {
         "field": "origin",
@@ -41578,6 +41692,12 @@
         "field": "regions",
         "quote": "It was created in 1971 at the Staatliche Lehr- und Versuchsanstalt für Wein- und Obstbau in Weinsberg (nr. Württemberg), Germany.",
         "value": "DE: Württemberg"
+      },
+      {
+        "field": "color",
+        "quote": "La acolon es una variedad de uva tinta alemana.",
+        "value": "red",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Acolon"
       }
     ],
     "id": "acolon",
@@ -44040,6 +44160,12 @@
         "quote": "S'utilitza majoritàriament per a l'elaboració de vi rosat. És una de les dues varietats autoritzades per a l'elaboració del cava rosat.",
         "value": "sparkling",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Trepat"
+      },
+      {
+        "field": "styles",
+        "quote": "Les vins rouges sont frais, légers et fruités.",
+        "value": "still",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Trepat"
       }
     ],
     "id": "trepat",
@@ -44073,7 +44199,8 @@
     "styles": [
       "rose",
       "blending",
-      "sparkling"
+      "sparkling",
+      "still"
     ],
     "summaries": {
       "en": {

@@ -7,6 +7,8 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { EuropeMap } from "../library/EuropeMap";
 import { flagOf } from "../library/flag";
+import { TrailBackLink } from "../library/TrailBackLink";
+import { useLibraryTrail } from "../library/trail";
 import { getLibraryGrape, searchLibraryGrapes } from "../services/library";
 
 /**
@@ -23,6 +25,7 @@ export function LibraryGrapePage() {
   const locale = resolveSupportedLocale(i18n.language);
   const { user } = useAuth();
   const navigate = useNavigate();
+  const trail = useLibraryTrail();
   const { grapeId } = useParams();
   const [search] = useSearchParams();
   const name = search.get("name");
@@ -42,7 +45,7 @@ export function LibraryGrapePage() {
             setState("missing");
             return;
           }
-          void navigate(`/library/grapes/${found[0].id}`, { replace: true });
+          void navigate(`/library/grapes/${found[0].id}`, { replace: true, state: trail });
           return;
         }
         const card = await getLibraryGrape(user, grapeId, locale, controller.signal);
@@ -54,7 +57,7 @@ export function LibraryGrapePage() {
     };
     void load();
     return () => controller.abort();
-  }, [grapeId, locale, name, navigate, user]);
+  }, [grapeId, locale, name, navigate, trail, user]);
 
   const country = (code: string | null) =>
     code === null
@@ -88,8 +91,9 @@ export function LibraryGrapePage() {
 
   return (
     <section className="library-page">
-      <p className="section-help">
-        <Link className="text-link" to="/library">
+      <p className="section-help library-back">
+        <TrailBackLink />
+        <Link className="text-link" state={trail} to="/library">
           ← {t("library.home.title")}
         </Link>
       </p>
@@ -232,7 +236,11 @@ export function LibraryGrapePage() {
                   {region.regionId === null ? (
                     region.name
                   ) : (
-                    <Link className="text-link" to={`/library/regions/${region.regionId}`}>
+                    <Link
+                      className="text-link"
+                      state={trail}
+                      to={`/library/regions/${region.regionId}`}
+                    >
                       {region.name}
                     </Link>
                   )}

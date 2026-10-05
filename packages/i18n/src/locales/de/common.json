@@ -209,7 +209,8 @@
       "area": "Ungefährer Punkt: die Mitte des Gebiets, in dem die Bezeichnung liegt.",
       "place": "Ungefährer Punkt: der Ort, nach dem die Bezeichnung benannt ist."
     },
-    "summaryTranslated": "aus dem Originalartikel übersetzt"
+    "summaryTranslated": "aus dem Originalartikel übersetzt",
+    "backTo": "Zurück zu {{name}}"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",
@@ -283,10 +284,10 @@
   "nav": {
     "home": "Start",
     "log": "Erfassen",
-    "sessions": "Veranstaltungen",
-    "memory": "Erinnerungen",
+    "sessions": "Events",
+    "memory": "Gedächtnis",
     "assistant": "Vicenç",
-    "about": "Über"
+    "about": "Mehr"
   },
   "about": {
     "eyebrow": "Das Kleingedruckte",
@@ -498,7 +499,7 @@
   },
   "evidence": {
     "openAction": "Belege",
-    "backAction": "Zurück zum Weinarchiv",
+    "backAction": "Zurück zum Weingedächtnis",
     "eyebrow": "Herkunft",
     "title": "Belege zum Wein",
     "body": "Erkenne, was beobachtet, recherchiert, abgeleitet oder persönlich ist, und woher jede recherchierte Aussage stammt.",

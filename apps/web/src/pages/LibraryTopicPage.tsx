@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { TrailBackLink } from "../library/TrailBackLink";
+import { useLibraryTrail } from "../library/trail";
 import { getLibraryTopic } from "../services/library";
 
 /**
@@ -17,6 +19,7 @@ export function LibraryTopicPage() {
   const locale = resolveSupportedLocale(i18n.language);
   const { user } = useAuth();
   const { topicId = "" } = useParams();
+  const trail = useLibraryTrail();
   const [topic, setTopic] = useState<{ key: string; value: LibraryTopic | null } | null>(null);
   const [failed, setFailed] = useState<string | null>(null);
   const key = `${topicId}:${locale}`;
@@ -59,8 +62,9 @@ export function LibraryTopicPage() {
     entry.summary.locale !== i18n.language.split("-")[0];
   return (
     <section className="library-page">
-      <p className="section-help">
-        <Link className="text-link" to="/library?tab=topics">
+      <p className="section-help library-back">
+        <TrailBackLink />
+        <Link className="text-link" state={trail} to="/library?tab=topics">
           ← {t("library.home.title")}
         </Link>
       </p>

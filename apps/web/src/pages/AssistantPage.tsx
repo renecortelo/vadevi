@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { trailFrom } from "../library/trail";
 import { createIdempotencyKey } from "../security/idempotency";
 import { createUlid } from "../security/ulid";
 import { createAssistantTurn } from "../services/assistant";
@@ -37,6 +38,9 @@ type ChatTurn = {
  * group's, and the wine it was about is not even visible there. So the saved
  * chat remembers which Space it belongs to and is dropped for any other.
  */
+/** Library cards opened from an answer lead back to the conversation. */
+const backToVicenc = trailFrom("Vicenç", "/vicenc");
+
 function loadChat(spaceId: string): ChatTurn[] {
   try {
     const raw = globalThis.localStorage?.getItem(chatStorageKey);
@@ -122,17 +126,32 @@ export function AssistantResult({
         <p className="evidence-heading__grapes">
           <span>{t("library.eyebrow")}:</span>
           {response.data.libraryGrapes.map((grape) => (
-            <Link className="text-link" key={grape.id} to={`/library/grapes/${grape.id}`}>
+            <Link
+              className="text-link"
+              key={grape.id}
+              state={backToVicenc}
+              to={`/library/grapes/${grape.id}`}
+            >
               {grape.name}
             </Link>
           ))}
           {response.data.libraryRegions.map((region) => (
-            <Link className="text-link" key={region.id} to={`/library/regions/${region.id}`}>
+            <Link
+              className="text-link"
+              key={region.id}
+              state={backToVicenc}
+              to={`/library/regions/${region.id}`}
+            >
               {region.name}
             </Link>
           ))}
           {response.data.libraryTopics.map((topic) => (
-            <Link className="text-link" key={topic.id} to={`/library/topics/${topic.id}`}>
+            <Link
+              className="text-link"
+              key={topic.id}
+              state={backToVicenc}
+              to={`/library/topics/${topic.id}`}
+            >
               {topic.name}
             </Link>
           ))}

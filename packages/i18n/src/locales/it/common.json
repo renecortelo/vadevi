@@ -209,7 +209,8 @@
       "area": "Punto approssimativo: il centro della zona in cui si trova la denominazione.",
       "place": "Punto approssimativo: il luogo che dà il nome alla denominazione."
     },
-    "summaryTranslated": "tradotto dall'articolo originale"
+    "summaryTranslated": "tradotto dall'articolo originale",
+    "backTo": "Torna a {{name}}"
   },
   "space": {
     "switchLabel": "Spazio attivo",
@@ -286,7 +287,7 @@
     "sessions": "Eventi",
     "memory": "Memoria",
     "assistant": "Vicenç",
-    "about": "Informazioni"
+    "about": "Altro"
   },
   "about": {
     "eyebrow": "Le clausole in piccolo",

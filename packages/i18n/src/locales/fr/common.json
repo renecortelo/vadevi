@@ -209,7 +209,8 @@
       "area": "Point approximatif : le centre de la zone où se trouve l'appellation.",
       "place": "Point approximatif : le lieu qui donne son nom à l'appellation."
     },
-    "summaryTranslated": "traduit de l'article original"
+    "summaryTranslated": "traduit de l'article original",
+    "backTo": "Retour à {{name}}"
   },
   "space": {
     "switchLabel": "Espace actif",
@@ -286,7 +287,7 @@
     "sessions": "Événements",
     "memory": "Mémoire",
     "assistant": "Vicenç",
-    "about": "À propos"
+    "about": "Plus"
   },
   "about": {
     "eyebrow": "Les petits caractères",

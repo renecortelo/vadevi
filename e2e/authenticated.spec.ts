@@ -137,10 +137,11 @@ test.describe("authenticated screens", () => {
     // §13 obliges an operator to offer the Corresponding Source to anyone using
     // the application over a network. It used to sit in the shell's footer on
     // every screen; it now lives on About, which is reachable from the primary
-    // navigation on every screen. This walks that path rather than assuming it.
+    // navigation on every screen ("More"). This walks that path rather than
+    // assuming it.
     await page
       .getByRole("navigation", { name: "Primary" })
-      .getByRole("link", { name: /about/i })
+      .getByRole("link", { name: /^more$/i })
       .click();
     await expect(page).toHaveURL(/\/about$/);
 

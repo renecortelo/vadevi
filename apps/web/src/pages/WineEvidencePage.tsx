@@ -8,9 +8,10 @@ import type {
 } from "@vadevi/contracts";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useParams } from "react-router";
+import { Link, useLocation, useParams } from "react-router";
 
 import { MapLink } from "../components/MapLink";
+import { trailFrom } from "../library/trail";
 import { TastingHistory } from "../components/TastingHistory";
 import { BottlePhotoPicker } from "../components/BottlePhotoPicker";
 import { ModalDialog } from "../components/ModalDialog";
@@ -219,6 +220,7 @@ export function WineEvidencePage() {
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const { wineId = "" } = useParams();
+  const location = useLocation();
   const spaceId = bootstrap.data.user.activeSpaceId;
   const [response, setResponse] = useState<WineFactsResponse | null>(null);
   const [wine, setWine] = useState<WineSummary | null>(null);
@@ -431,6 +433,12 @@ export function WineEvidencePage() {
     }
   }
 
+  // The library pages this one links to show a way back here.
+  const backHere = trailFrom(
+    wine?.displayName ?? t("evidence.title"),
+    `${location.pathname}${location.search}`,
+  );
+
   return (
     <section className="evidence-page">
       <header className="page-heading evidence-heading">
@@ -448,7 +456,7 @@ export function WineEvidencePage() {
         )}
         <div className="evidence-heading__text">
           <Link className="text-link" to="/memory">
-            {t("evidence.backAction")}
+            ← {t("evidence.backAction")}
           </Link>
           <p className="eyebrow">{t("evidence.eyebrow")}</p>
           <h1>{wine?.displayName ?? t("evidence.title")}</h1>
@@ -465,6 +473,7 @@ export function WineEvidencePage() {
                 <Link
                   className="text-link"
                   key={grape.name}
+                  state={backHere}
                   to={`/library/grape?name=${encodeURIComponent(grape.name)}`}
                 >
                   {grape.name}
@@ -475,7 +484,11 @@ export function WineEvidencePage() {
           {atlasRegion === null ? null : (
             <p className="evidence-heading__grapes">
               <span>{t("library.atlasEyebrow")}:</span>
-              <Link className="text-link" to={`/library/regions/${atlasRegion.id}`}>
+              <Link
+                className="text-link"
+                state={backHere}
+                to={`/library/regions/${atlasRegion.id}`}
+              >
                 {atlasRegion.name}
               </Link>
             </p>

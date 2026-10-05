@@ -4330,6 +4330,13 @@ p {
   gap: var(--space-4);
 }
 
+/* The way back to where the reader came from, then to the library's index. */
+.library-back {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
 .library-chips {
   display: flex;
   flex-wrap: wrap;

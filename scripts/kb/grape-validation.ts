@@ -166,9 +166,9 @@ const styleWords: Record<string, RegExp> = {
   // Still wine is what a wine grape makes unless it is only ever sparkling or
   // fortified, so any sentence about the wines made from it supports it.
   still:
-    /\b(still|table wine|varietal|wines?|vinos?|vins?|vini|vinhos?|vi|weine?)\b|вин(?:[оаы]|ам|ами|ах|ом)?(?![а-я])|столов/,
+    /\b(still|table wine|varietal|wines?|vinos?|vins?|vini|vinhos?|vi|weine?|wijn|wijnen)\b|вин(?:[оаы]|ам|ами|ах|ом)?(?![а-я])|столов/,
   sweet:
-    /sweet|dessert|botryti|noble rot|late.harvest|ice ?wine|passito|vin santo|tokaj|dulce|dolce|\bdoce|\bdoux|\bdolc|moelleux|liquoreux|vendimia tardia|vendanges tardives|suss|suß|recioto|appassiment|сладк|десертн/,
+    /sweet|dessert|botryti|noble rot|late.harvest|ice ?wine|passito|vin santo|tokaj|dulce|dolce|\bdoce|\bdoux|\bdolc|moelleux|liquoreux|vendimia tardia|vendanges tardives|suss|suß|recioto|appassiment|\bzoet|сладк|десертн/,
 };
 
 type Field = { quote?: unknown; value?: unknown };

@@ -334,9 +334,20 @@ describe("more of the world's kitchens, and fewer false alarms", () => {
       "Beaumes de Venise",
       "Entre-deux-Mers",
       "La Mancha",
+      "Blanquette de Limoux",
+      "Pouilly-Fumé",
+      "Pecorino",
+      "Grillo",
+      "Colli Bolognesi",
+      "un vino dolce",
+      "um vinho doce",
     ]) {
       expect(recognisedDish(profileDish(wine)), wine).toBe(false);
     }
     expect(profileDish("cocina catalana").sweet).toBe(false);
+    // …while the dishes those words also name are still dishes.
+    expect(profileDish("blanquette de veau").families).toContain("cream_sauces");
+    expect(profileDish("saumon fumé").smoky).toBe(true);
+    expect(profileDish("pecorino romano").protein).toBe("cheese");
   });
 });
