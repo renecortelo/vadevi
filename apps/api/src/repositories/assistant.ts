@@ -692,9 +692,17 @@ async function loadLibraryStatements(
       );
     }
     if (card.suggestedPairings !== null) {
+      // Per style: a sweet Riesling's dishes are not a dry one's.
       await say(
         "suggested",
-        `the app's pairing rules suggest, for ${card.suggestedPairings.styles.map((style) => style.replaceAll("_", " ")).join(" / ")} wines: ${card.suggestedPairings.families.map((family) => family.replaceAll("_", " ")).join(", ")}`,
+        `the app's pairing rules, which cite open sources, suggest: ${card.suggestedPairings.groups
+          .map(
+            (group) =>
+              `for ${group.style.replaceAll("_", " ")} wines, ${group.families
+                .map((family) => family.replaceAll("_", " "))
+                .join(", ")}`,
+          )
+          .join("; ")}`,
         "inferred",
       );
     }

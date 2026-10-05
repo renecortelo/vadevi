@@ -4253,6 +4253,24 @@ p {
   padding: var(--space-1) var(--space-3);
 }
 
+/* The card's list rule spaces every item after the first, which in a row of
+   chips pushed all but the first one down. The flex gap does the spacing. */
+.settings-card .library-chips li + li {
+  margin-block-start: 0;
+}
+
+.library-chips + .library-chips {
+  margin-block-start: var(--space-2);
+}
+
+/* A style's name over its dishes: a label, not a heading to read. */
+.library-pairing-group h3 {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-block: var(--space-3) var(--space-2);
+}
+
 /* A suggestion is dashed, a source's word is solid: the difference is the
    point of the section, so it is visible before it is read. */
 .library-chips--suggested li {
@@ -4507,6 +4525,15 @@ p {
   block-size: auto;
   border-radius: var(--radius-md);
   inline-size: min(100%, 18rem);
+}
+
+/* The credit is owed, not read: small, quiet, and no wider than the map. */
+.library-map figcaption {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  line-height: 1.3;
+  margin: 0;
+  max-inline-size: 18rem;
 }
 
 .library-map__sea {

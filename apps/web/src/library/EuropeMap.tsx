@@ -87,7 +87,10 @@ export function EuropeMap({
           />
         )}
       </svg>
-      <figcaption className="section-help">{t("library.mapSource")}</figcaption>
+      {/* The points' sources are credited only where a point is drawn. */}
+      <figcaption className="section-help">
+        {t(point === null ? "library.mapSourceOutline" : "library.mapSource")}
+      </figcaption>
     </figure>
   );
 }

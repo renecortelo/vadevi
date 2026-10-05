@@ -193,19 +193,28 @@ export function LibraryGrapePage() {
           )}
           {suggested === null ? null : (
             <>
-              <ul className="library-chips library-chips--suggested">
-                {suggested.families.map((family) => (
-                  <li key={family}>{t(`library.dish.${family}`)}</li>
-                ))}
-              </ul>
+              {/* Each style its own dishes: a dry Riesling and a sweet one do
+                  not go with the same things. */}
+              {suggested.groups.map((group) => (
+                <div className="library-pairing-group" key={group.style}>
+                  <h3>
+                    {t(`library.style.${group.style}`)}
+                    {group.basis === "profile" && suggested.basis === "catalogue"
+                      ? ` ${t("library.suggestedByProfile")}`
+                      : null}
+                  </h3>
+                  <ul className="library-chips library-chips--suggested">
+                    {group.families.map((family) => (
+                      <li key={family}>{t(`library.dish.${family}`)}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
               <p className="section-help">
                 {t(
                   suggested.basis === "catalogue"
                     ? "library.suggestedBasisCatalogue"
                     : "library.suggestedBasisProfile",
-                  {
-                    styles: suggested.styles.map((style) => t(`library.style.${style}`)).join(", "),
-                  },
                 )}
               </p>
             </>

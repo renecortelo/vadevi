@@ -127,15 +127,18 @@ describe("cooking from outside Europe", () => {
     }
   });
 
-  it("holds tannin back when the plate is full of umami", () => {
-    // Soy makes tannin taste harder than it is, so teriyaki must not be answered
-    // with the tannic red that its chicken alone would have justified.
-    expect(profileDish("pollo teriyaki").umami).toBe(true);
+  it("holds tannin back from a sweet glaze", () => {
+    // No open source says what umami does to tannin, so the rules do not act
+    // on it; teriyaki is held back by its sweetness, which the sources say
+    // makes tannin taste harsh.
+    expect(profileDish("pollo teriyaki").sweetSavory).toBe(true);
     expect(names("pollo teriyaki")[0]).not.toBe("Full structured red");
   });
 
-  it("meets smoke with ripe fruit", () => {
-    expect(names("brisket ahumado").slice(0, 2)).toContain("Ripe fruit-forward red");
+  it("meets the char of barbecue with a structured red, as the sources do", () => {
+    // "syrah : idéal pour les viandes épicées ou les plats à base de sauce
+    // barbecue", and grilling "allows it to play well with a tannic wine".
+    expect(names("brisket ahumado")[0]).toBe("Full structured red");
   });
 
   it("does not let smoke put tannin on a fish", () => {
@@ -188,11 +191,11 @@ describe("dishes named in the eight locales", () => {
     expect(profileDish("carne asada").protein).toBe("red_meat");
   });
 
-  it("sends a meat lasagne to a medium red, not to a white", () => {
-    // Umami reduces the tannin you want; it does not forbid it. Capping it flat
-    // sent lasagne and soy-glazed chicken to the same wine, and lasagne wants a
-    // Sangiovese.
-    expect(names("lasagna")[0]).toBe("Medium-bodied red");
+  it("sends a meat lasagne to a red, and teriyaki chicken away from one", () => {
+    // Pasta goes to a young red in the sources ("los vinos tintos ligeros
+    // (jóvenes) acompañan muy bien ... las pastas"); a sweet glaze, like spice,
+    // makes tannin harsh, so the teriyaki goes where the sweetness is.
+    expect(names("lasagna")[0]).toContain("red");
     expect(names("pollo teriyaki")[0]).not.toContain("red");
   });
 
@@ -251,5 +254,43 @@ describe("reading the words people actually type", () => {
     // A milanesa says how it was cooked, not what it is made of.
     expect(profileDish("milanesa de pollo").protein).toBe("white_meat");
     expect(profileDish("milanesa de res").protein).toBe("red_meat");
+  });
+});
+
+describe("the classics the sources name", () => {
+  it("reads a pair of words as one dish", () => {
+    // "Azul" alone is not a cheese, and "pescado" alone is lean fish.
+    expect(profileDish("pescado azul a la plancha").protein).toBe("oily_fish");
+    expect(profileDish("queso azul").families).toContain("blue_cheese");
+    expect(profileDish("queso de cabra").families).toContain("fresh_cheese");
+    // …and spends its words: seafood is not a fruit dessert.
+    expect(profileDish("fruits de mer").sweet).toBe(false);
+    expect(profileDish("fruits de mer").protein).toBe("shellfish");
+  });
+
+  it("opens oysters with Champagne or a sharp dry white", () => {
+    expect(["Traditional-method sparkling", "Sharp herbaceous white"]).toContain(
+      names("ostras")[0],
+    );
+  });
+
+  it("sets a sweet wine against blue cheese and foie gras", () => {
+    for (const dish of ["queso azul", "roquefort", "foie gras"]) {
+      expect(names(dish)[0], dish).toMatch(/^Sweet/);
+    }
+  });
+
+  it("gives chocolate a sweet wine and nothing dry", () => {
+    const styles = pairingStylesFor(profileDish("tarta de chocolate"), "en");
+    expect(styles[0]!.name).toMatch(/^Sweet/);
+    expect(styles[0]!.description).toContain("classic");
+  });
+
+  it("knows the aperitif is the generosos' place", () => {
+    expect(names("aceitunas y almendras").slice(0, 2).join(" ")).toContain("fortified");
+  });
+
+  it("meets mushrooms with an earthy light red", () => {
+    expect(names("risotto de setas")[0]).toBe("Light red, low tannin");
   });
 });

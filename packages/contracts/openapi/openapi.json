@@ -11533,6 +11533,36 @@
                   "type": "string"
                 }
               },
+              "groups": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "basis": {
+                      "type": "string",
+                      "enum": [
+                        "catalogue",
+                        "profile"
+                      ]
+                    },
+                    "families": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "style": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "basis",
+                    "families",
+                    "style"
+                  ],
+                  "additionalProperties": false
+                }
+              },
               "styles": {
                 "type": "array",
                 "items": {
@@ -11543,6 +11573,7 @@
             "required": [
               "basis",
               "families",
+              "groups",
               "styles"
             ],
             "additionalProperties": false

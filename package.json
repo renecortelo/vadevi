@@ -43,6 +43,7 @@
     "kb:build-topics": "tsx scripts/kb/build-topics.ts",
     "kb:fetch-grape-images": "tsx scripts/kb/fetch-grape-images.ts",
     "kb:build-map": "tsx scripts/kb/build-map.ts",
+    "kb:check-pairing-sources": "tsx scripts/kb/check-pairing-sources.ts",
     "kb:load": "tsx scripts/kb/load.ts",
     "lint": "eslint \"apps/**/*.{ts,tsx}\" \"packages/**/*.{ts,tsx}\" \"scripts/**/*.ts\" \"e2e/**/*.ts\" --max-warnings 0",
     "migrations:check": "tsx scripts/check-migrations.ts",

@@ -127,4 +127,9 @@ The styles and methods (`topics.json`) are articles chosen by hand in
 `topics-include.json`; their explanations are each article's lead, in every
 language Wikipedia has it, and no model is involved.
 
+What a grape goes with, beyond what its own article says, comes from the
+application's pairing rules, not from this directory: each rule, each grape
+placed in a wine style and each classic pairing quotes an open source
+(`docs/pairing-rules.md`, checked by `pnpm kb:check-pairing-sources`).
+
 Nothing here is copied from commercial wine references.

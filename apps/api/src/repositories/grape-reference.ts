@@ -62,8 +62,10 @@ function profileLine(card: LibraryGrape, recordedAs: string): string | null {
     card.pairings.length === 0 ? null : `said to suit: ${card.pairings.slice(0, 6).join(", ")}`,
     card.suggestedPairings === null
       ? null
-      : `the pairing rules suggest: ${card.suggestedPairings.families
-          .slice(0, 6)
+      : `the pairing rules suggest, for its ${card.suggestedPairings.groups[0]!.style.replaceAll("_", " ")} wines: ${card.suggestedPairings.groups[0]!.families.slice(
+          0,
+          6,
+        )
           .map((family) => family.replaceAll("_", " "))
           .join(", ")}`,
   ].filter((part): part is string => part !== null);

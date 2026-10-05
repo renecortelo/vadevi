@@ -436,7 +436,7 @@ model doesn't support JSON Schema`, and asking it for JSON in the prompt
   ships `PAIRING_PROVIDER=local`. It costs nothing, for ever: the answer comes from
   a written-down rule set — acidity cuts fat, tannin wants protein, nothing
   louder than the plate, a dessert wine sweeter than the dessert — applied to the
-  dish you typed. No key, no contact address, no privacy review, because the dish
+  dish you typed. Each rule cites its source (`docs/pairing-rules.md`). No key, no contact address, no privacy review, because the dish
   never leaves the Worker. It works offline and it can tell you why.
 
   The alternative, `sommelierx`, is a paid API whose free plan allows 10

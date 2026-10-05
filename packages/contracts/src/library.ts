@@ -66,14 +66,26 @@ export const LibraryGrapeSchema = z
       .nullable(),
     /**
      * What the wine goes with by the application's pairing rules — not by the
-     * source. `basis` says how its style was chosen: listed in the rules'
-     * catalogue under this grape, or placed by the grape's colour and
-     * structure. Null when neither is known well enough to say.
+     * source. `basis` says how its styles were chosen: named for this grape by
+     * the sources the rules cite, or placed by the grape's colour and
+     * structure. `groups` keeps each style's dishes apart (a dry and a sweet
+     * Riesling do not go with the same things); `families` is all of them,
+     * less any the grape's own source already names. Null when neither is
+     * known well enough to say.
      */
     suggestedPairings: z
       .object({
         basis: z.enum(["catalogue", "profile"]),
         families: z.array(z.string()),
+        groups: z.array(
+          z
+            .object({
+              basis: z.enum(["catalogue", "profile"]),
+              families: z.array(z.string()),
+              style: z.string(),
+            })
+            .strict(),
+        ),
         styles: z.array(z.string()),
       })
       .strict()
