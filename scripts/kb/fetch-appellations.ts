@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { matchKey, registerCountries, registerNames, transliterate } from "./appellation-names";
+import { insideRegion, nutsRegion, type NutsRegion } from "./nuts";
 import { countryLanguages, readSearches, searchKey } from "./search-appellation-names";
 import { wikimedia } from "./wikimedia";
 
@@ -598,9 +599,17 @@ function inside(id: string, areas: Set<string>): boolean {
 }
 const nested = (a: string, b: string) => inside(a, new Set([b])) || inside(b, new Set([a]));
 let placed = 0;
+// The NUTS regions the register's technical files name (2f): where a name
+// has no point of its own and the register says where it is made, a town of
+// its name is taken only inside those regions, in 2f.
+const nutsPath = resolve(cache, "nuts.json");
+const registerNuts = (
+  existsSync(nutsPath) ? JSON.parse(readFileSync(nutsPath, "utf8")) : {}
+) as Record<string, { document: string; regions: { code: string; name: string }[] }>;
 for (const [ambrosia, towns] of townOf) {
   const entry = linked[ambrosia];
   if (entry !== undefined && entry.pointSource === "item") continue;
+  if (entry?.pointSource !== "area" && (registerNuts[ambrosia]?.regions.length ?? 0) > 0) continue;
   let town: (typeof towns)[number] | undefined;
   if (entry?.pointSource === "area") {
     const areaIds = areaIdsOf(entry.qid);
@@ -645,6 +654,54 @@ for (const [ambrosia, towns] of townOf) {
 }
 console.info(`  ${placed} registered names placed by the town they are named after.`);
 console.info(`  ${wineByLabel.size} registered names found by their labelled wine item.`);
+
+// 2f. Where the register says the wine is made: the NUTS regions its
+//     technical file names (`pnpm kb:fetch-appellation-areas`). A place of
+//     the wine's name inside one of them is the wine's: the Naoussa in
+//     Imathia, not the one on Paros, however well known each is. A name with
+//     no such place keeps the regions' own approximate point for the build,
+//     after OpenStreetMap's (`register-areas.json`).
+const registerAreas: Record<string, { codes: string[]; latitude: number; longitude: number }> = {};
+let placedInRegion = 0;
+for (const row of register.results) {
+  const ambrosia = String(row.appUniqueId);
+  const entry = linked[ambrosia];
+  if (entry?.latitude != null) continue;
+  const regions = (
+    await Promise.all(
+      (registerNuts[ambrosia]?.regions ?? []).map((listed) => nutsRegion(listed.code, listed.name)),
+    )
+  ).filter((region): region is NutsRegion => region !== null);
+  if (regions.length === 0) continue;
+  // Two places of the name inside the regions, far apart (a Lechința in each
+  // of the two counties the file names), are a guess: the regions' point.
+  const inside = (townOf.get(ambrosia) ?? []).filter((candidate) =>
+    regions.some((region) => insideRegion(candidate, region)),
+  );
+  const town = inside.some((other) => kilometres(other, inside[0]!) > 30) ? undefined : inside[0];
+  if (town !== undefined) {
+    linked[ambrosia] = {
+      labels: entry?.labels ?? {},
+      latitude: town.latitude,
+      longitude: town.longitude,
+      pointSource: "place",
+      qid: entry?.qid ?? null,
+    };
+    placedInRegion += 1;
+    continue;
+  }
+  const middle = middleOf(regions.map((region) => region.label))!;
+  registerAreas[ambrosia] = {
+    codes: regions.map((region) => region.code),
+    latitude: middle.latitude,
+    longitude: middle.longitude,
+  };
+}
+writeFileSync(resolve(cache, "register-areas.json"), JSON.stringify(registerAreas, null, 1));
+console.info(
+  `  ${placedInRegion} registered names placed by the town of their name inside the register's regions; ` +
+    `${Object.keys(registerAreas).length} more by the regions themselves.`,
+);
 
 // 3. Wikipedia leads, cached one file per item so a rerun resumes.
 const qids = [

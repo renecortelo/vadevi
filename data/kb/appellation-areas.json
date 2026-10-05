@@ -1,0 +1,3266 @@
+{
+  "about": "Places the register's own texts name for a registered wine name nothing more precise places: the demarcated area of its technical file in eAmbrosia, or of its single document in the Official Journal. Each place is the Wikidata item of the municipality, village or region named, with its coordinates; the build takes their median, approximate. Read by hand.",
+  "areas": {
+    "EUGI00000003027": {
+      "places": [
+        {
+          "latitude": 45.65754,
+          "longitude": 21.58081,
+          "name": "Buziaș",
+          "wikidata": "Q59606308"
+        },
+        {
+          "latitude": 45.80139,
+          "longitude": 21.51333,
+          "name": "Recaș",
+          "wikidata": "Q325555"
+        },
+        {
+          "latitude": 45.68611,
+          "longitude": 21.90056,
+          "name": "Lugoj",
+          "wikidata": "Q258981"
+        },
+        {
+          "latitude": 45.8303,
+          "longitude": 21.3111,
+          "name": "Giarmata",
+          "wikidata": "Q60695431"
+        },
+        {
+          "latitude": 45.95488,
+          "longitude": 20.54395,
+          "name": "Teremia Mare",
+          "wikidata": "Q5059807"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2021.090.01.0042.01.ENG&toc=OJ%3AC%3A2021%3A090%3ATOC"
+    },
+    "EUGI00000005983": {
+      "places": [
+        {
+          "latitude": 34.815,
+          "longitude": 32.89861,
+          "name": "Άγιος Γεώργιος",
+          "wikidata": "Q4831311"
+        },
+        {
+          "latitude": 34.86722,
+          "longitude": 33.06611,
+          "name": "Άγιος Κωνσταντίνος",
+          "wikidata": "Q4831295"
+        },
+        {
+          "latitude": 34.85639,
+          "longitude": 32.96778,
+          "name": "Άγιος Μάμας",
+          "wikidata": "Q22985670"
+        },
+        {
+          "latitude": 34.86387,
+          "longitude": 33.04642,
+          "name": "Άγιος Παύλος",
+          "wikidata": "Q4831300"
+        },
+        {
+          "latitude": 34.7975,
+          "longitude": 33.01694,
+          "name": "Αψιού",
+          "wikidata": "Q4782190"
+        },
+        {
+          "latitude": 34.8025,
+          "longitude": 32.99806,
+          "name": "Γεράσα",
+          "wikidata": "Q11724234"
+        },
+        {
+          "latitude": 34.81583,
+          "longitude": 32.91167,
+          "name": "Δωρός",
+          "wikidata": "Q5298207"
+        },
+        {
+          "latitude": 34.86306,
+          "longitude": 33.015,
+          "name": "Ζωοπηγή",
+          "wikidata": "Q370519"
+        },
+        {
+          "latitude": 34.85023,
+          "longitude": 33.03209,
+          "name": "Καλό Χωριό",
+          "wikidata": "Q11733885"
+        },
+        {
+          "latitude": 34.8325,
+          "longitude": 32.95833,
+          "name": "Καπηλειό",
+          "wikidata": "Q6366663"
+        },
+        {
+          "latitude": 34.82444,
+          "longitude": 32.92083,
+          "name": "Λάνια",
+          "wikidata": "Q6485486"
+        },
+        {
+          "latitude": 34.83688,
+          "longitude": 33.04097,
+          "name": "Λουβαράς",
+          "wikidata": "Q6689879"
+        },
+        {
+          "latitude": 34.80917,
+          "longitude": 32.91056,
+          "name": "Μονάγρι",
+          "wikidata": "Q6897914"
+        },
+        {
+          "latitude": 34.83222,
+          "longitude": 32.88889,
+          "name": "Συλίκου",
+          "wikidata": "Q7515072"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11435"
+    },
+    "EUGI00000006563": {
+      "places": [
+        {
+          "latitude": 34.82333,
+          "longitude": 32.83361,
+          "name": "Βουνί",
+          "wikidata": "Q9378878"
+        },
+        {
+          "latitude": 34.84472,
+          "longitude": 32.86028,
+          "name": "Κοιλάνι",
+          "wikidata": "Q6426287"
+        },
+        {
+          "latitude": 34.84823,
+          "longitude": 32.80842,
+          "name": "Όμοδος",
+          "wikidata": "Q2699026"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11786"
+    },
+    "EUGI00000006741": {
+      "places": [
+        {
+          "latitude": 34.84056,
+          "longitude": 32.76917,
+          "name": "Άρσος",
+          "wikidata": "Q4796609"
+        },
+        {
+          "latitude": 34.84823,
+          "longitude": 32.80842,
+          "name": "Όμοδος",
+          "wikidata": "Q2699026"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11264"
+    },
+    "EUGI00000006761": {
+      "places": [
+        {
+          "latitude": 34.87737,
+          "longitude": 32.63171,
+          "name": "Γαλαταριά",
+          "wikidata": "Q5555258"
+        },
+        {
+          "latitude": 34.88846,
+          "longitude": 32.61593,
+          "name": "Στατός-Άγιος Φώτιος",
+          "wikidata": "Q7604465"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11795"
+    },
+    "EUGI00000006781": {
+      "places": [
+        {
+          "latitude": 34.93528,
+          "longitude": 32.38472,
+          "name": "Ίνεια",
+          "wikidata": "Q22987273"
+        },
+        {
+          "latitude": 34.93613,
+          "longitude": 32.40716,
+          "name": "Πάνω Αρόδες",
+          "wikidata": "Q22988498"
+        },
+        {
+          "latitude": 34.94067,
+          "longitude": 32.40229,
+          "name": "Κάτω Αρόδες",
+          "wikidata": "Q4795469"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11796"
+    },
+    "EUGI00000006782": {
+      "places": [
+        {
+          "latitude": 35.29778,
+          "longitude": 33.00528,
+          "name": "Αγία Ειρήνη",
+          "wikidata": "Q22986737"
+        },
+        {
+          "latitude": 34.89556,
+          "longitude": 33.02056,
+          "name": "Άγιος Ιωάννης",
+          "wikidata": "Q4831288"
+        },
+        {
+          "latitude": 34.89389,
+          "longitude": 33.0325,
+          "name": "Άγιος Θεόδωρος",
+          "wikidata": "Q4831305"
+        },
+        {
+          "latitude": 34.92861,
+          "longitude": 32.99444,
+          "name": "Αγρίδια",
+          "wikidata": "Q4694107"
+        },
+        {
+          "latitude": 34.91667,
+          "longitude": 33.01667,
+          "name": "Αγρός",
+          "wikidata": "Q353854"
+        },
+        {
+          "latitude": 34.94724,
+          "longitude": 33.02955,
+          "name": "Αληθινού",
+          "wikidata": "Q4727371"
+        },
+        {
+          "latitude": 34.93467,
+          "longitude": 33.03994,
+          "name": "Άλωνα",
+          "wikidata": "Q4734356"
+        },
+        {
+          "latitude": 34.93074,
+          "longitude": 33.11754,
+          "name": "Απλίκι",
+          "wikidata": "Q591348"
+        },
+        {
+          "latitude": 34.92974,
+          "longitude": 33.0783,
+          "name": "Ασκάς",
+          "wikidata": "Q4807149"
+        },
+        {
+          "latitude": 34.95694,
+          "longitude": 33.1475,
+          "name": "Γούρρη",
+          "wikidata": "Q22991894"
+        },
+        {
+          "latitude": 34.91667,
+          "longitude": 32.98333,
+          "name": "Δύμες",
+          "wikidata": "Q5318845"
+        },
+        {
+          "latitude": 34.93222,
+          "longitude": 33.12083,
+          "name": "Καμπί",
+          "wikidata": "Q22985733"
+        },
+        {
+          "latitude": 34.98307,
+          "longitude": 32.97717,
+          "name": "Καννάβια",
+          "wikidata": "Q687725"
+        },
+        {
+          "latitude": 34.895,
+          "longitude": 33.00556,
+          "name": "Κάτω Μύλος",
+          "wikidata": "Q6377749"
+        },
+        {
+          "latitude": 34.97459,
+          "longitude": 32.9508,
+          "name": "Κούρδαλι",
+          "wikidata": "Q47319806"
+        },
+        {
+          "latitude": 34.94139,
+          "longitude": 32.96917,
+          "name": "Κυπερούντα",
+          "wikidata": "Q3499503"
+        },
+        {
+          "latitude": 34.96217,
+          "longitude": 33.01043,
+          "name": "Λαγουδερά",
+          "wikidata": "Q6472646"
+        },
+        {
+          "latitude": 34.94868,
+          "longitude": 33.17436,
+          "name": "Λαζανιάς",
+          "wikidata": "Q6505770"
+        },
+        {
+          "latitude": 34.88535,
+          "longitude": 33.1507,
+          "name": "Οδού",
+          "wikidata": "Q7078332"
+        },
+        {
+          "latitude": 34.92278,
+          "longitude": 33.095,
+          "name": "Παλαιχώρι",
+          "wikidata": "Q2066053"
+        },
+        {
+          "latitude": 34.89593,
+          "longitude": 32.96509,
+          "name": "Πελένδρι",
+          "wikidata": "Q3561641"
+        },
+        {
+          "latitude": 34.9461,
+          "longitude": 33.04731,
+          "name": "Πλατανιστάσα",
+          "wikidata": "Q7202162"
+        },
+        {
+          "latitude": 34.9075,
+          "longitude": 32.98944,
+          "name": "Ποταμίτισσα",
+          "wikidata": "Q7234621"
+        },
+        {
+          "latitude": 34.93988,
+          "longitude": 33.01856,
+          "name": "Πολύστυπος",
+          "wikidata": "Q7227003"
+        },
+        {
+          "latitude": 34.96911,
+          "longitude": 32.99962,
+          "name": "Σαράντι",
+          "wikidata": "Q935668"
+        },
+        {
+          "latitude": 34.97216,
+          "longitude": 32.95461,
+          "name": "Σπήλια",
+          "wikidata": "Q7577250"
+        },
+        {
+          "latitude": 34.87833,
+          "longitude": 33.11222,
+          "name": "Συκόπετρα",
+          "wikidata": "Q7660529"
+        },
+        {
+          "latitude": 34.91285,
+          "longitude": 33.13659,
+          "name": "Φαρμακάς",
+          "wikidata": "Q9258062"
+        },
+        {
+          "latitude": 34.95919,
+          "longitude": 33.17135,
+          "name": "Φικάρδου",
+          "wikidata": "Q5448228"
+        },
+        {
+          "latitude": 34.94321,
+          "longitude": 33.06914,
+          "name": "Φτερικούδι",
+          "wikidata": "Q5506814"
+        },
+        {
+          "latitude": 34.94278,
+          "longitude": 32.99444,
+          "name": "Χανδριά",
+          "wikidata": "Q5071493"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10596"
+    },
+    "EUGI00000007564": {
+      "places": [
+        {
+          "latitude": 34.78111,
+          "longitude": 32.82611,
+          "name": "Άγιος Αμβρόσιος",
+          "wikidata": "Q611494"
+        },
+        {
+          "latitude": 34.79833,
+          "longitude": 32.83972,
+          "name": "Άγιος Θεράπων",
+          "wikidata": "Q4831306"
+        },
+        {
+          "latitude": 34.84056,
+          "longitude": 32.76917,
+          "name": "Άρσος",
+          "wikidata": "Q4796609"
+        },
+        {
+          "latitude": 34.82333,
+          "longitude": 32.83361,
+          "name": "Βουνί",
+          "wikidata": "Q9378878"
+        },
+        {
+          "latitude": 34.87944,
+          "longitude": 32.84139,
+          "name": "Κάτω Πλάτρες",
+          "wikidata": "Q3557616"
+        },
+        {
+          "latitude": 34.81085,
+          "longitude": 32.79492,
+          "name": "Κισσούσα",
+          "wikidata": "Q6417288"
+        },
+        {
+          "latitude": 34.84472,
+          "longitude": 32.86028,
+          "name": "Κοιλάνι",
+          "wikidata": "Q6426287"
+        },
+        {
+          "latitude": 34.85056,
+          "longitude": 32.88694,
+          "name": "Κουκά",
+          "wikidata": "Q6434528"
+        },
+        {
+          "latitude": 34.81583,
+          "longitude": 32.87528,
+          "name": "Λόφου",
+          "wikidata": "Q3557686"
+        },
+        {
+          "latitude": 34.81639,
+          "longitude": 32.78278,
+          "name": "Μαλλιά",
+          "wikidata": "Q3843917"
+        },
+        {
+          "latitude": 34.84823,
+          "longitude": 32.80842,
+          "name": "Όμοδος",
+          "wikidata": "Q2699026"
+        },
+        {
+          "latitude": 34.75639,
+          "longitude": 32.85778,
+          "name": "Πάνω Κυβίδες",
+          "wikidata": "Q6418797"
+        },
+        {
+          "latitude": 34.77843,
+          "longitude": 32.79317,
+          "name": "Πάχνα",
+          "wikidata": "Q3557407"
+        },
+        {
+          "latitude": 34.85944,
+          "longitude": 32.87611,
+          "name": "Πέρα Πεδί",
+          "wikidata": "Q7166856"
+        },
+        {
+          "latitude": 34.82389,
+          "longitude": 32.80667,
+          "name": "Ποταμιού",
+          "wikidata": "Q7234620"
+        },
+        {
+          "latitude": 34.84694,
+          "longitude": 32.91167,
+          "name": "Τριμίκλινη",
+          "wikidata": "Q7842231"
+        },
+        {
+          "latitude": 34.89265,
+          "longitude": 32.83718,
+          "name": "Φοινί",
+          "wikidata": "Q353925"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11875"
+    },
+    "EUGI00000007821": {
+      "places": [
+        {
+          "latitude": 39.48854,
+          "longitude": -1.10231,
+          "name": "Requena",
+          "wikidata": "Q302099"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2020.035.01.0011.01.ENG&toc=OJ:C:2020:035:TOC"
+    },
+    "EUGI00000010582": {
+      "places": [
+        {
+          "latitude": 49.71476,
+          "longitude": 9.26916,
+          "name": "Bürgstadt",
+          "wikidata": "Q33427886"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016D1018(01)"
+    },
+    "EUGI00000010723": {
+      "places": [
+        {
+          "latitude": 44.2286,
+          "longitude": 15.57767,
+          "name": "Jasenice",
+          "wikidata": "Q1027073"
+        },
+        {
+          "latitude": 44.19917,
+          "longitude": 15.68167,
+          "name": "Obrovac",
+          "wikidata": "Q988388"
+        },
+        {
+          "latitude": 44.1086,
+          "longitude": 15.9415,
+          "name": "Ervenik",
+          "wikidata": "Q97372729"
+        },
+        {
+          "latitude": 43.9875,
+          "longitude": 15.96083,
+          "name": "Kistanje",
+          "wikidata": "Q1269951"
+        },
+        {
+          "latitude": 43.91667,
+          "longitude": 15.7,
+          "name": "Stankovci",
+          "wikidata": "Q1014068"
+        },
+        {
+          "latitude": 43.9953,
+          "longitude": 16.2941,
+          "name": "Polača",
+          "wikidata": "Q3445162"
+        },
+        {
+          "latitude": 44.03444,
+          "longitude": 15.61278,
+          "name": "Benkovac",
+          "wikidata": "Q397443"
+        },
+        {
+          "latitude": 43.96667,
+          "longitude": 15.76667,
+          "name": "Lišane Ostrovičke",
+          "wikidata": "Q660107"
+        },
+        {
+          "latitude": 44.09163,
+          "longitude": 15.45161,
+          "name": "Škabrnja",
+          "wikidata": "Q391782"
+        },
+        {
+          "latitude": 43.81667,
+          "longitude": 15.92222,
+          "name": "Skradin",
+          "wikidata": "Q400036"
+        },
+        {
+          "latitude": 44.03404,
+          "longitude": 16.19349,
+          "name": "Knin",
+          "wikidata": "Q3514386"
+        },
+        {
+          "latitude": 43.97889,
+          "longitude": 16.35111,
+          "name": "Kijevo",
+          "wikidata": "Q1013142"
+        },
+        {
+          "latitude": 43.95,
+          "longitude": 16.4,
+          "name": "Civljane",
+          "wikidata": "Q1277287"
+        },
+        {
+          "latitude": 44.00918,
+          "longitude": 16.22719,
+          "name": "Biskupija",
+          "wikidata": "Q3443435"
+        },
+        {
+          "latitude": 43.92436,
+          "longitude": 16.16998,
+          "name": "Promina",
+          "wikidata": "Q3511054"
+        },
+        {
+          "latitude": 43.86375,
+          "longitude": 16.18185,
+          "name": "Drniš",
+          "wikidata": "Q116008782"
+        },
+        {
+          "latitude": 43.81667,
+          "longitude": 16.25,
+          "name": "Ružić",
+          "wikidata": "Q1112694"
+        },
+        {
+          "latitude": 43.74,
+          "longitude": 16.18889,
+          "name": "Unešić",
+          "wikidata": "Q1277205"
+        },
+        {
+          "latitude": 43.70167,
+          "longitude": 16.63694,
+          "name": "Sinj",
+          "wikidata": "Q216978"
+        },
+        {
+          "latitude": 43.76,
+          "longitude": 16.62,
+          "name": "Hrvace",
+          "wikidata": "Q1277192"
+        },
+        {
+          "latitude": 43.91667,
+          "longitude": 16.4,
+          "name": "Vrlika",
+          "wikidata": "Q396545"
+        },
+        {
+          "latitude": 43.69,
+          "longitude": 16.74,
+          "name": "Otok",
+          "wikidata": "Q786883"
+        },
+        {
+          "latitude": 43.61667,
+          "longitude": 16.71667,
+          "name": "Trilj",
+          "wikidata": "Q396526"
+        },
+        {
+          "latitude": 43.63536,
+          "longitude": 16.59545,
+          "name": "Dicmo",
+          "wikidata": "Q1210282"
+        },
+        {
+          "latitude": 43.68,
+          "longitude": 16.53,
+          "name": "Muć",
+          "wikidata": "Q1284402"
+        },
+        {
+          "latitude": 43.58028,
+          "longitude": 16.59694,
+          "name": "Dugopolje",
+          "wikidata": "Q1021802"
+        },
+        {
+          "latitude": 43.6308,
+          "longitude": 16.1761,
+          "name": "Primorski Dolac",
+          "wikidata": "Q597683"
+        },
+        {
+          "latitude": 43.616,
+          "longitude": 16.23,
+          "name": "Prgomet",
+          "wikidata": "Q1277264"
+        },
+        {
+          "latitude": 43.64889,
+          "longitude": 16.34889,
+          "name": "Lećevica",
+          "wikidata": "Q1284456"
+        },
+        {
+          "latitude": 43.5733,
+          "longitude": 16.5356,
+          "name": "Klis",
+          "wikidata": "Q15646646"
+        },
+        {
+          "latitude": 43.44972,
+          "longitude": 17.21389,
+          "name": "Imotski",
+          "wikidata": "Q97231295"
+        },
+        {
+          "latitude": 43.4169,
+          "longitude": 17.1761,
+          "name": "Podbablje",
+          "wikidata": "Q37616"
+        },
+        {
+          "latitude": 43.469,
+          "longitude": 17.152,
+          "name": "Proložac",
+          "wikidata": "Q1277230"
+        },
+        {
+          "latitude": 43.5,
+          "longitude": 17,
+          "name": "Lovreć",
+          "wikidata": "Q1284350"
+        },
+        {
+          "latitude": 43.397,
+          "longitude": 17.056,
+          "name": "Zagvozd",
+          "wikidata": "Q140431"
+        },
+        {
+          "latitude": 43.41083,
+          "longitude": 17.20556,
+          "name": "Zmijavci",
+          "wikidata": "Q217932"
+        },
+        {
+          "latitude": 43.38333,
+          "longitude": 17.21667,
+          "name": "Runovići",
+          "wikidata": "Q1269904"
+        },
+        {
+          "latitude": 43.50375,
+          "longitude": 16.94927,
+          "name": "Cista Provo",
+          "wikidata": "Q19704441"
+        },
+        {
+          "latitude": 43.45,
+          "longitude": 16.91,
+          "name": "Šestanovac",
+          "wikidata": "Q391481"
+        },
+        {
+          "latitude": 43.4314,
+          "longitude": 16.8897,
+          "name": "Zadvarje",
+          "wikidata": "Q1277236"
+        },
+        {
+          "latitude": 43.5,
+          "longitude": 17.06,
+          "name": "Lokvičići",
+          "wikidata": "Q1277297"
+        },
+        {
+          "latitude": 43.20583,
+          "longitude": 17.37111,
+          "name": "Vrgorac",
+          "wikidata": "Q33512585"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36294"
+    },
+    "EUGI00000010725": {
+      "places": [
+        {
+          "latitude": 45.04584,
+          "longitude": 13.78716,
+          "name": "Bale",
+          "wikidata": "Q519226"
+        },
+        {
+          "latitude": 45.38333,
+          "longitude": 13.63333,
+          "name": "Brtonigla",
+          "wikidata": "Q991426"
+        },
+        {
+          "latitude": 45.4,
+          "longitude": 13.65,
+          "name": "Buje",
+          "wikidata": "Q397724"
+        },
+        {
+          "latitude": 44.92806,
+          "longitude": 13.80417,
+          "name": "Fažana",
+          "wikidata": "Q1024726"
+        },
+        {
+          "latitude": 45.37865,
+          "longitude": 13.72245,
+          "name": "Grožnjan",
+          "wikidata": "Q97372848"
+        },
+        {
+          "latitude": 45.30389,
+          "longitude": 13.68944,
+          "name": "Kaštelir-Labinci",
+          "wikidata": "Q543690"
+        },
+        {
+          "latitude": 44.82861,
+          "longitude": 13.95639,
+          "name": "Ližnjan",
+          "wikidata": "Q1077824"
+        },
+        {
+          "latitude": 44.95667,
+          "longitude": 13.955,
+          "name": "Marčana",
+          "wikidata": "Q941197"
+        },
+        {
+          "latitude": 44.81972,
+          "longitude": 13.935,
+          "name": "Medulin",
+          "wikidata": "Q1007517"
+        },
+        {
+          "latitude": 45.32,
+          "longitude": 13.56,
+          "name": "Novigrad",
+          "wikidata": "Q5395"
+        },
+        {
+          "latitude": 45.22717,
+          "longitude": 13.59522,
+          "name": "Poreč",
+          "wikidata": "Q5323"
+        },
+        {
+          "latitude": 44.87028,
+          "longitude": 13.84556,
+          "name": "Pula",
+          "wikidata": "Q4656"
+        },
+        {
+          "latitude": 45.08333,
+          "longitude": 13.63333,
+          "name": "Rovinj",
+          "wikidata": "Q5316"
+        },
+        {
+          "latitude": 45.17611,
+          "longitude": 13.74417,
+          "name": "Sveti Lovreč",
+          "wikidata": "Q1269878"
+        },
+        {
+          "latitude": 45.43361,
+          "longitude": 13.51722,
+          "name": "Umag",
+          "wikidata": "Q221184"
+        },
+        {
+          "latitude": 45.27611,
+          "longitude": 13.72,
+          "name": "Višnjan",
+          "wikidata": "Q1642046"
+        },
+        {
+          "latitude": 45.33333,
+          "longitude": 13.76667,
+          "name": "Vižinada",
+          "wikidata": "Q1018664"
+        },
+        {
+          "latitude": 44.96667,
+          "longitude": 13.85,
+          "name": "Vodnjan",
+          "wikidata": "Q396683"
+        },
+        {
+          "latitude": 45.15,
+          "longitude": 13.61,
+          "name": "Vrsar",
+          "wikidata": "Q838612"
+        },
+        {
+          "latitude": 45.17309,
+          "longitude": 13.60609,
+          "name": "Funtana",
+          "wikidata": "Q1027250"
+        },
+        {
+          "latitude": 45.30111,
+          "longitude": 13.62583,
+          "name": "Tar-Vabriga",
+          "wikidata": "Q1277256"
+        },
+        {
+          "latitude": 45.40722,
+          "longitude": 13.96472,
+          "name": "Buzet",
+          "wikidata": "Q695767"
+        },
+        {
+          "latitude": 45.1,
+          "longitude": 14.01667,
+          "name": "Barban",
+          "wikidata": "Q807316"
+        },
+        {
+          "latitude": 45.27833,
+          "longitude": 14.01222,
+          "name": "Cerovlje",
+          "wikidata": "Q1055648"
+        },
+        {
+          "latitude": 45.21944,
+          "longitude": 14.01028,
+          "name": "Gračišće",
+          "wikidata": "Q1269859"
+        },
+        {
+          "latitude": 45.1233,
+          "longitude": 13.84,
+          "name": "Kanfanar",
+          "wikidata": "Q174235"
+        },
+        {
+          "latitude": 45.3,
+          "longitude": 13.81667,
+          "name": "Karojba",
+          "wikidata": "Q1269908"
+        },
+        {
+          "latitude": 45.209,
+          "longitude": 14.126,
+          "name": "Lanišće",
+          "wikidata": "Q1828161"
+        },
+        {
+          "latitude": 45.35278,
+          "longitude": 14.1075,
+          "name": "Lupoglav",
+          "wikidata": "Q1269916"
+        },
+        {
+          "latitude": 45.33583,
+          "longitude": 13.82778,
+          "name": "Motovun",
+          "wikidata": "Q998826"
+        },
+        {
+          "latitude": 45.38194,
+          "longitude": 13.82417,
+          "name": "Oprtalj",
+          "wikidata": "Q1013171"
+        },
+        {
+          "latitude": 45.24028,
+          "longitude": 13.93056,
+          "name": "Pazin",
+          "wikidata": "Q19818469"
+        },
+        {
+          "latitude": 45.18333,
+          "longitude": 13.86139,
+          "name": "Sveti Petar u Šumi",
+          "wikidata": "Q737437"
+        },
+        {
+          "latitude": 45.08806,
+          "longitude": 13.88167,
+          "name": "Svetvinčenat",
+          "wikidata": "Q568984"
+        },
+        {
+          "latitude": 45.21722,
+          "longitude": 13.83889,
+          "name": "Tinjan",
+          "wikidata": "Q1269932"
+        },
+        {
+          "latitude": 45.1463,
+          "longitude": 13.8555,
+          "name": "Žminj",
+          "wikidata": "Q116009124"
+        },
+        {
+          "latitude": 45.16667,
+          "longitude": 14.13333,
+          "name": "Kršan",
+          "wikidata": "Q598400"
+        },
+        {
+          "latitude": 45.08333,
+          "longitude": 14.11667,
+          "name": "Labin",
+          "wikidata": "Q375582"
+        },
+        {
+          "latitude": 45.20389,
+          "longitude": 14.04056,
+          "name": "Pićan",
+          "wikidata": "Q1247238"
+        },
+        {
+          "latitude": 45.06279,
+          "longitude": 14.04242,
+          "name": "Raša",
+          "wikidata": "Q135397544"
+        },
+        {
+          "latitude": 45.14222,
+          "longitude": 14.11139,
+          "name": "Sveta Nedelja",
+          "wikidata": "Q1277429"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/40081"
+    },
+    "EUGI00000010726": {
+      "places": [
+        {
+          "latitude": 45.2225,
+          "longitude": 19.37278,
+          "name": "Ilok",
+          "wikidata": "Q5882"
+        },
+        {
+          "latitude": 45.36236,
+          "longitude": 18.987,
+          "name": "Vukovar",
+          "wikidata": "Q132685852"
+        },
+        {
+          "latitude": 45.23333,
+          "longitude": 19.16667,
+          "name": "Lovas",
+          "wikidata": "Q512717"
+        },
+        {
+          "latitude": 45.16667,
+          "longitude": 19.15,
+          "name": "Tovarnik",
+          "wikidata": "Q1277958"
+        },
+        {
+          "latitude": 45.23333,
+          "longitude": 19.1,
+          "name": "Tompojevci",
+          "wikidata": "Q1293917"
+        },
+        {
+          "latitude": 45.33333,
+          "longitude": 18.93333,
+          "name": "Bogdanovci",
+          "wikidata": "Q287586"
+        },
+        {
+          "latitude": 45.33333,
+          "longitude": 18.83333,
+          "name": "Nuštar",
+          "wikidata": "Q568433"
+        },
+        {
+          "latitude": 45.13333,
+          "longitude": 19.03333,
+          "name": "Nijemci",
+          "wikidata": "Q1027916"
+        },
+        {
+          "latitude": 45.26667,
+          "longitude": 18.91667,
+          "name": "Stari Jankovci",
+          "wikidata": "Q1293848"
+        },
+        {
+          "latitude": 45.3,
+          "longitude": 18.80194,
+          "name": "Vinkovci",
+          "wikidata": "Q17485357"
+        },
+        {
+          "latitude": 45.28333,
+          "longitude": 18.68333,
+          "name": "Ivankovo",
+          "wikidata": "Q1271809"
+        },
+        {
+          "latitude": 45.27556,
+          "longitude": 18.60972,
+          "name": "Vođinci",
+          "wikidata": "Q1293864"
+        },
+        {
+          "latitude": 45.28333,
+          "longitude": 18.55,
+          "name": "Stari Mikanovci",
+          "wikidata": "Q1284329"
+        },
+        {
+          "latitude": 45.31667,
+          "longitude": 18.73333,
+          "name": "Jarmina",
+          "wikidata": "Q1277225"
+        },
+        {
+          "latitude": 45.05,
+          "longitude": 18.76,
+          "name": "Bošnjaci",
+          "wikidata": "Q896330"
+        },
+        {
+          "latitude": 45.15,
+          "longitude": 18.71,
+          "name": "Gradište",
+          "wikidata": "Q427898"
+        },
+        {
+          "latitude": 45.41667,
+          "longitude": 18.9,
+          "name": "Trpinja",
+          "wikidata": "Q208178"
+        },
+        {
+          "latitude": 45.36667,
+          "longitude": 18.8,
+          "name": "Tordinci",
+          "wikidata": "Q2575796"
+        },
+        {
+          "latitude": 45.37377,
+          "longitude": 18.70621,
+          "name": "Markušica",
+          "wikidata": "Q1281139"
+        },
+        {
+          "latitude": 45.38333,
+          "longitude": 18.96667,
+          "name": "Borovo",
+          "wikidata": "Q894114"
+        },
+        {
+          "latitude": 44.92,
+          "longitude": 18.85,
+          "name": "Drenovci",
+          "wikidata": "Q304742"
+        },
+        {
+          "latitude": 45.14667,
+          "longitude": 18.88389,
+          "name": "Otok",
+          "wikidata": "Q994223"
+        },
+        {
+          "latitude": 45.19434,
+          "longitude": 18.83775,
+          "name": "Privlaka",
+          "wikidata": "Q178965"
+        },
+        {
+          "latitude": 45.23002,
+          "longitude": 18.73054,
+          "name": "Andrijaševci",
+          "wikidata": "Q116008709"
+        },
+        {
+          "latitude": 45.08172,
+          "longitude": 18.69637,
+          "name": "Županja",
+          "wikidata": "Q116009127"
+        },
+        {
+          "latitude": 44.89667,
+          "longitude": 18.85,
+          "name": "Gunja",
+          "wikidata": "Q1277200"
+        },
+        {
+          "latitude": 44.98301,
+          "longitude": 18.8854,
+          "name": "Vrbanja",
+          "wikidata": "Q116009102"
+        },
+        {
+          "latitude": 45.27819,
+          "longitude": 18.99722,
+          "name": "Negoslavci",
+          "wikidata": "Q967133"
+        },
+        {
+          "latitude": 45.19028,
+          "longitude": 18.68889,
+          "name": "Cerna",
+          "wikidata": "Q523570"
+        },
+        {
+          "latitude": 45.1,
+          "longitude": 18.64,
+          "name": "Štitar",
+          "wikidata": "Q1833298"
+        },
+        {
+          "latitude": 45.11667,
+          "longitude": 18.53333,
+          "name": "Babina Greda",
+          "wikidata": "Q797704"
+        },
+        {
+          "latitude": 45.5074,
+          "longitude": 19.04911,
+          "name": "Erdut",
+          "wikidata": "Q116008796"
+        },
+        {
+          "latitude": 45.56028,
+          "longitude": 18.67028,
+          "name": "Osijek",
+          "wikidata": "Q1640"
+        },
+        {
+          "latitude": 45.44511,
+          "longitude": 18.66761,
+          "name": "Ernestinovo",
+          "wikidata": "Q116008797"
+        },
+        {
+          "latitude": 45.36667,
+          "longitude": 18.55,
+          "name": "Semeljci",
+          "wikidata": "Q155230"
+        },
+        {
+          "latitude": 45.39975,
+          "longitude": 18.62094,
+          "name": "Šodolovci",
+          "wikidata": "Q924490"
+        },
+        {
+          "latitude": 45.43,
+          "longitude": 18.51,
+          "name": "Vuka",
+          "wikidata": "Q1284798"
+        },
+        {
+          "latitude": 45.58716,
+          "longitude": 18.45301,
+          "name": "Bizovac",
+          "wikidata": "Q116008717"
+        },
+        {
+          "latitude": 45.52218,
+          "longitude": 18.57786,
+          "name": "Čepin",
+          "wikidata": "Q116008748"
+        },
+        {
+          "latitude": 45.55,
+          "longitude": 18.28333,
+          "name": "Koška",
+          "wikidata": "Q1284843"
+        },
+        {
+          "latitude": 45.65,
+          "longitude": 18.41667,
+          "name": "Valpovo",
+          "wikidata": "Q830300"
+        },
+        {
+          "latitude": 45.6128,
+          "longitude": 18.5353,
+          "name": "Petrijevci",
+          "wikidata": "Q1280634"
+        },
+        {
+          "latitude": 45.66083,
+          "longitude": 18.18778,
+          "name": "Magadenovac",
+          "wikidata": "Q1293896"
+        },
+        {
+          "latitude": 45.75,
+          "longitude": 18.15,
+          "name": "Donji Miholjac",
+          "wikidata": "Q399261"
+        },
+        {
+          "latitude": 45.78528,
+          "longitude": 17.98194,
+          "name": "Podravska Moslavina",
+          "wikidata": "Q285593"
+        },
+        {
+          "latitude": 45.75,
+          "longitude": 18.06667,
+          "name": "Viljevo",
+          "wikidata": "Q428904"
+        },
+        {
+          "latitude": 45.66667,
+          "longitude": 18.3,
+          "name": "Marijanci",
+          "wikidata": "Q1293857"
+        },
+        {
+          "latitude": 45.6825,
+          "longitude": 18.40694,
+          "name": "Belišće",
+          "wikidata": "Q399038"
+        },
+        {
+          "latitude": 45.46667,
+          "longitude": 18.56667,
+          "name": "Vladislavci",
+          "wikidata": "Q1284718"
+        },
+        {
+          "latitude": 45.48333,
+          "longitude": 18.68333,
+          "name": "Antunovac",
+          "wikidata": "Q88177880"
+        },
+        {
+          "latitude": 45.76667,
+          "longitude": 18.6,
+          "name": "Beli Manastir",
+          "wikidata": "Q397645"
+        },
+        {
+          "latitude": 45.75,
+          "longitude": 18.73,
+          "name": "Kneževi Vinogradi",
+          "wikidata": "Q733966"
+        },
+        {
+          "latitude": 45.8092,
+          "longitude": 18.6583,
+          "name": "Popovac",
+          "wikidata": "Q790218"
+        },
+        {
+          "latitude": 45.84,
+          "longitude": 18.788,
+          "name": "Draž",
+          "wikidata": "Q124361059"
+        },
+        {
+          "latitude": 45.68567,
+          "longitude": 18.65558,
+          "name": "Čeminac",
+          "wikidata": "Q116008747"
+        },
+        {
+          "latitude": 45.7,
+          "longitude": 18.58,
+          "name": "Jagodnjak",
+          "wikidata": "Q379488"
+        },
+        {
+          "latitude": 45.60694,
+          "longitude": 18.74389,
+          "name": "Bilje",
+          "wikidata": "Q792496"
+        },
+        {
+          "latitude": 45.7583,
+          "longitude": 18.5281,
+          "name": "Petlovac",
+          "wikidata": "Q1284335"
+        },
+        {
+          "latitude": 45.62608,
+          "longitude": 18.69251,
+          "name": "Darda",
+          "wikidata": "Q912592"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36304"
+    },
+    "EUGI00000010728": {
+      "parts": [
+        "EUGI00000010726",
+        "EUGI00000010735"
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36324"
+    },
+    "EUGI00000010730": {
+      "places": [
+        {
+          "latitude": 45.80109,
+          "longitude": 15.71105,
+          "name": "Samobor",
+          "wikidata": "Q390587"
+        },
+        {
+          "latitude": 45.8,
+          "longitude": 15.78333,
+          "name": "Sveta Nedelja",
+          "wikidata": "Q856385"
+        },
+        {
+          "latitude": 45.7,
+          "longitude": 15.46,
+          "name": "Žumberak",
+          "wikidata": "Q1086683"
+        },
+        {
+          "latitude": 45.7667,
+          "longitude": 15.85,
+          "name": "Stupnik",
+          "wikidata": "Q1068213"
+        },
+        {
+          "latitude": 45.68625,
+          "longitude": 15.7437,
+          "name": "Klinča Sela",
+          "wikidata": "Q128554216"
+        },
+        {
+          "latitude": 45.6572,
+          "longitude": 15.64775,
+          "name": "Jastrebarsko",
+          "wikidata": "Q116008850"
+        },
+        {
+          "latitude": 45.65,
+          "longitude": 15.51667,
+          "name": "Krašić",
+          "wikidata": "Q589882"
+        },
+        {
+          "latitude": 45.61278,
+          "longitude": 15.47694,
+          "name": "Ozalj",
+          "wikidata": "Q396518"
+        },
+        {
+          "latitude": 45.64526,
+          "longitude": 15.40806,
+          "name": "Kamanje",
+          "wikidata": "Q116008858"
+        },
+        {
+          "latitude": 45.6,
+          "longitude": 15.34,
+          "name": "Žakanje",
+          "wikidata": "Q393337"
+        },
+        {
+          "latitude": 45.57556,
+          "longitude": 15.35278,
+          "name": "Ribnik",
+          "wikidata": "Q943551"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36344"
+    },
+    "EUGI00000010731": {
+      "places": [
+        {
+          "latitude": 45.49306,
+          "longitude": 15.55583,
+          "name": "Karlovac",
+          "wikidata": "Q3617"
+        },
+        {
+          "latitude": 45.50889,
+          "longitude": 15.41306,
+          "name": "Netretić",
+          "wikidata": "Q969794"
+        },
+        {
+          "latitude": 45.33333,
+          "longitude": 15.45,
+          "name": "Bosiljevo",
+          "wikidata": "Q25300456"
+        },
+        {
+          "latitude": 45.44902,
+          "longitude": 15.49861,
+          "name": "Duga Resa",
+          "wikidata": "Q110372351"
+        },
+        {
+          "latitude": 45.34778,
+          "longitude": 15.38306,
+          "name": "Generalski Stol",
+          "wikidata": "Q97372816"
+        },
+        {
+          "latitude": 45.37861,
+          "longitude": 15.54667,
+          "name": "Barilović",
+          "wikidata": "Q338035"
+        },
+        {
+          "latitude": 45.6,
+          "longitude": 15.6,
+          "name": "Draganić",
+          "wikidata": "Q83000"
+        },
+        {
+          "latitude": 45.52861,
+          "longitude": 15.85278,
+          "name": "Lasinja",
+          "wikidata": "Q1128157"
+        },
+        {
+          "latitude": 45.3371,
+          "longitude": 15.6087,
+          "name": "Krnjak",
+          "wikidata": "Q97372813"
+        },
+        {
+          "latitude": 45.32,
+          "longitude": 15.69,
+          "name": "Vojnić",
+          "wikidata": "Q615197"
+        },
+        {
+          "latitude": 45.15972,
+          "longitude": 15.74052,
+          "name": "Cetingrad",
+          "wikidata": "Q20526626"
+        },
+        {
+          "latitude": 45.25283,
+          "longitude": 15.32602,
+          "name": "Tounj",
+          "wikidata": "Q1284376"
+        },
+        {
+          "latitude": 45.11556,
+          "longitude": 15.58472,
+          "name": "Slunj",
+          "wikidata": "Q397733"
+        },
+        {
+          "latitude": 45.26586,
+          "longitude": 15.22552,
+          "name": "Ogulin",
+          "wikidata": "Q25291701"
+        },
+        {
+          "latitude": 45.19732,
+          "longitude": 15.28908,
+          "name": "Josipdol",
+          "wikidata": "Q116008852"
+        },
+        {
+          "latitude": 45.37,
+          "longitude": 15.08,
+          "name": "Vrbovsko",
+          "wikidata": "Q396637"
+        },
+        {
+          "latitude": 45.58722,
+          "longitude": 15.85833,
+          "name": "Pisarovina",
+          "wikidata": "Q909274"
+        },
+        {
+          "latitude": 45.4872,
+          "longitude": 15.9933,
+          "name": "Pokupsko",
+          "wikidata": "Q922705"
+        },
+        {
+          "latitude": 45.58,
+          "longitude": 16.04,
+          "name": "Kravarsko",
+          "wikidata": "Q535270"
+        },
+        {
+          "latitude": 45.7,
+          "longitude": 16.06667,
+          "name": "Velika Gorica",
+          "wikidata": "Q331141"
+        },
+        {
+          "latitude": 45.68,
+          "longitude": 16.23,
+          "name": "Orle",
+          "wikidata": "Q530052"
+        },
+        {
+          "latitude": 45.4375,
+          "longitude": 16.29,
+          "name": "Petrinja",
+          "wikidata": "Q396512"
+        },
+        {
+          "latitude": 45.49205,
+          "longitude": 16.37332,
+          "name": "Sisak",
+          "wikidata": "Q116155606"
+        },
+        {
+          "latitude": 45.58333,
+          "longitude": 16.21667,
+          "name": "Lekenik",
+          "wikidata": "Q1269884"
+        },
+        {
+          "latitude": 45.2,
+          "longitude": 16.28056,
+          "name": "Sunja",
+          "wikidata": "Q2985688"
+        },
+        {
+          "latitude": 45.43472,
+          "longitude": 16.12222,
+          "name": "Glina",
+          "wikidata": "Q1257312"
+        },
+        {
+          "latitude": 45.58,
+          "longitude": 16.37,
+          "name": "Martinska Ves",
+          "wikidata": "Q1112991"
+        },
+        {
+          "latitude": 45.2931,
+          "longitude": 15.9722,
+          "name": "Topusko",
+          "wikidata": "Q2457438"
+        },
+        {
+          "latitude": 45.34901,
+          "longitude": 15.86538,
+          "name": "Gvozd",
+          "wikidata": "Q4550"
+        },
+        {
+          "latitude": 45.23535,
+          "longitude": 16.52749,
+          "name": "Hrvatska Kostajnica",
+          "wikidata": "Q116008842"
+        },
+        {
+          "latitude": 45.25737,
+          "longitude": 16.52801,
+          "name": "Majur",
+          "wikidata": "Q116008909"
+        },
+        {
+          "latitude": 45.06889,
+          "longitude": 16.37639,
+          "name": "Dvor",
+          "wikidata": "Q1018619"
+        },
+        {
+          "latitude": 45.27605,
+          "longitude": 16.91054,
+          "name": "Jasenovac",
+          "wikidata": "Q116008849"
+        },
+        {
+          "latitude": 45.22167,
+          "longitude": 16.80621,
+          "name": "Hrvatska Dubica",
+          "wikidata": "Q116008841"
+        },
+        {
+          "latitude": 45.2646,
+          "longitude": 16.48384,
+          "name": "Donji Kukuruzari",
+          "wikidata": "Q1293924"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36492"
+    },
+    "EUGI00000010732": {
+      "places": [
+        {
+          "latitude": 45.8014,
+          "longitude": 16.2347,
+          "name": "Dugo Selo",
+          "wikidata": "Q16116634"
+        },
+        {
+          "latitude": 45.83,
+          "longitude": 16.3,
+          "name": "Brckovljani",
+          "wikidata": "Q849234"
+        },
+        {
+          "latitude": 45.9667,
+          "longitude": 16.3833,
+          "name": "Preseka",
+          "wikidata": "Q371984"
+        },
+        {
+          "latitude": 45.88333,
+          "longitude": 16.43333,
+          "name": "Vrbovec",
+          "wikidata": "Q754781"
+        },
+        {
+          "latitude": 45.83759,
+          "longitude": 16.53683,
+          "name": "Dubrava",
+          "wikidata": "Q910605"
+        },
+        {
+          "latitude": 45.8803,
+          "longitude": 16.6352,
+          "name": "Farkaševac",
+          "wikidata": "Q97372704"
+        },
+        {
+          "latitude": 45.91028,
+          "longitude": 16.48361,
+          "name": "Gradec",
+          "wikidata": "Q10993628"
+        },
+        {
+          "latitude": 45.7361,
+          "longitude": 16.2331,
+          "name": "Rugvica",
+          "wikidata": "Q943731"
+        },
+        {
+          "latitude": 46.11667,
+          "longitude": 16.46667,
+          "name": "Kalnik",
+          "wikidata": "Q1096087"
+        },
+        {
+          "latitude": 46.00636,
+          "longitude": 16.54336,
+          "name": "Križevci",
+          "wikidata": "Q116008875"
+        },
+        {
+          "latitude": 46.07556,
+          "longitude": 16.45167,
+          "name": "Sveti Petar Orehovec",
+          "wikidata": "Q221415"
+        },
+        {
+          "latitude": 45.94512,
+          "longitude": 16.6209,
+          "name": "Sveti Ivan Žabno",
+          "wikidata": "Q116009049"
+        },
+        {
+          "latitude": 46.11,
+          "longitude": 16.39,
+          "name": "Gornja Rijeka",
+          "wikidata": "Q1012291"
+        },
+        {
+          "latitude": 46.15,
+          "longitude": 16.81667,
+          "name": "Koprivnica",
+          "wikidata": "Q5640"
+        },
+        {
+          "latitude": 46.10101,
+          "longitude": 16.7119,
+          "name": "Sokolovac",
+          "wikidata": "Q116009029"
+        },
+        {
+          "latitude": 46.18389,
+          "longitude": 16.70667,
+          "name": "Rasinja",
+          "wikidata": "Q264607"
+        },
+        {
+          "latitude": 46.2,
+          "longitude": 16.81611,
+          "name": "Koprivnički Ivanec",
+          "wikidata": "Q775578"
+        },
+        {
+          "latitude": 46.1342,
+          "longitude": 16.9001,
+          "name": "Koprivnički Bregi",
+          "wikidata": "Q97372800"
+        },
+        {
+          "latitude": 46.07806,
+          "longitude": 16.95389,
+          "name": "Novigrad Podravski",
+          "wikidata": "Q927041"
+        },
+        {
+          "latitude": 46.02722,
+          "longitude": 17.06722,
+          "name": "Đurđevac",
+          "wikidata": "Q342186"
+        },
+        {
+          "latitude": 46.06722,
+          "longitude": 16.99,
+          "name": "Virje",
+          "wikidata": "Q947792"
+        },
+        {
+          "latitude": 45.98333,
+          "longitude": 17.16167,
+          "name": "Kloštar Podravski",
+          "wikidata": "Q1012094"
+        },
+        {
+          "latitude": 46,
+          "longitude": 17.21167,
+          "name": "Podravske Sesvete",
+          "wikidata": "Q957371"
+        },
+        {
+          "latitude": 46.01283,
+          "longitude": 17.0959,
+          "name": "Kalinovac",
+          "wikidata": "Q116008856"
+        },
+        {
+          "latitude": 46.06111,
+          "longitude": 17.19139,
+          "name": "Ferdinandovac",
+          "wikidata": "Q912736"
+        },
+        {
+          "latitude": 46.10917,
+          "longitude": 17.03167,
+          "name": "Molve",
+          "wikidata": "Q954214"
+        },
+        {
+          "latitude": 46.09833,
+          "longitude": 17.155,
+          "name": "Novo Virje",
+          "wikidata": "Q1088590"
+        },
+        {
+          "latitude": 46.2,
+          "longitude": 17.05,
+          "name": "Gola",
+          "wikidata": "Q376316"
+        },
+        {
+          "latitude": 46.15389,
+          "longitude": 16.96611,
+          "name": "Hlebine",
+          "wikidata": "Q257842"
+        },
+        {
+          "latitude": 46.19222,
+          "longitude": 16.89167,
+          "name": "Peteranec",
+          "wikidata": "Q601788"
+        },
+        {
+          "latitude": 46.205,
+          "longitude": 16.90806,
+          "name": "Drnje",
+          "wikidata": "Q987249"
+        },
+        {
+          "latitude": 46.3,
+          "longitude": 16.86667,
+          "name": "Legrad",
+          "wikidata": "Q1014822"
+        },
+        {
+          "latitude": 46.25,
+          "longitude": 16.87,
+          "name": "Đelekovec",
+          "wikidata": "Q764340"
+        },
+        {
+          "latitude": 45.89889,
+          "longitude": 16.84222,
+          "name": "Bjelovar",
+          "wikidata": "Q5707"
+        },
+        {
+          "latitude": 45.70222,
+          "longitude": 17.1725,
+          "name": "Grubišno Polje",
+          "wikidata": "Q679801"
+        },
+        {
+          "latitude": 45.75,
+          "longitude": 17.05,
+          "name": "Veliki Grđevac",
+          "wikidata": "Q744840"
+        },
+        {
+          "latitude": 45.98806,
+          "longitude": 16.85167,
+          "name": "Kapela",
+          "wikidata": "Q1286015"
+        },
+        {
+          "latitude": 45.95,
+          "longitude": 16.73333,
+          "name": "Rovišće",
+          "wikidata": "Q1287435"
+        },
+        {
+          "latitude": 45.93333,
+          "longitude": 16.93333,
+          "name": "Veliko Trojstvo",
+          "wikidata": "Q283356"
+        },
+        {
+          "latitude": 45.79944,
+          "longitude": 16.95361,
+          "name": "Nova Rača",
+          "wikidata": "Q1293763"
+        },
+        {
+          "latitude": 45.8,
+          "longitude": 17.08333,
+          "name": "Velika Pisanica",
+          "wikidata": "Q1293874"
+        },
+        {
+          "latitude": 45.8369,
+          "longitude": 16.9592,
+          "name": "Severin",
+          "wikidata": "Q1284836"
+        },
+        {
+          "latitude": 45.9,
+          "longitude": 17.01667,
+          "name": "Šandrovac",
+          "wikidata": "Q1284823"
+        },
+        {
+          "latitude": 46.02,
+          "longitude": 16.76,
+          "name": "Zrinski Topolovac",
+          "wikidata": "Q1071650"
+        },
+        {
+          "latitude": 45.95,
+          "longitude": 16.23333,
+          "name": "Sveti Ivan Zelina",
+          "wikidata": "Q253435"
+        },
+        {
+          "latitude": 46.173,
+          "longitude": 16.396,
+          "name": "Rakovec",
+          "wikidata": "Q752923"
+        },
+        {
+          "latitude": 46.02235,
+          "longitude": 16.2639,
+          "name": "Bedenica",
+          "wikidata": "Q791830"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36354"
+    },
+    "EUGI00000010733": {
+      "parts": [
+        "EUGI00000010725",
+        "EUGI00000010727",
+        "EUGI00000010734",
+        "EUGI00000010723",
+        "EUGI00000010736"
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/41037"
+    },
+    "EUGI00000010734": {
+      "places": [
+        {
+          "latitude": 44.11417,
+          "longitude": 15.2275,
+          "name": "Zadar",
+          "wikidata": "Q3370"
+        },
+        {
+          "latitude": 44.23972,
+          "longitude": 15.18111,
+          "name": "Nin",
+          "wikidata": "Q396372"
+        },
+        {
+          "latitude": 44.29528,
+          "longitude": 15.44056,
+          "name": "Starigrad",
+          "wikidata": "Q86659848"
+        },
+        {
+          "latitude": 44.18181,
+          "longitude": 15.54838,
+          "name": "Novigrad",
+          "wikidata": "Q943811"
+        },
+        {
+          "latitude": 44.21667,
+          "longitude": 15.48333,
+          "name": "Posedarje",
+          "wikidata": "Q1269841"
+        },
+        {
+          "latitude": 44.10667,
+          "longitude": 15.38056,
+          "name": "Zemunik Donji",
+          "wikidata": "Q189412"
+        },
+        {
+          "latitude": 44.0714,
+          "longitude": 15.3933,
+          "name": "Galovac",
+          "wikidata": "Q1277243"
+        },
+        {
+          "latitude": 44.049,
+          "longitude": 15.312,
+          "name": "Sukošan",
+          "wikidata": "Q337870"
+        },
+        {
+          "latitude": 44.07167,
+          "longitude": 15.28778,
+          "name": "Bibinje",
+          "wikidata": "Q856311"
+        },
+        {
+          "latitude": 43.96144,
+          "longitude": 15.4248,
+          "name": "Sveti Filip i Jakov",
+          "wikidata": "Q1014083"
+        },
+        {
+          "latitude": 43.90944,
+          "longitude": 15.50806,
+          "name": "Pakoštane",
+          "wikidata": "Q1021806"
+        },
+        {
+          "latitude": 44.28333,
+          "longitude": 15.35,
+          "name": "Ražanac",
+          "wikidata": "Q1014078"
+        },
+        {
+          "latitude": 44.2625,
+          "longitude": 15.23333,
+          "name": "Vrsi",
+          "wikidata": "Q1285708"
+        },
+        {
+          "latitude": 44.259,
+          "longitude": 15.129,
+          "name": "Privlaka",
+          "wikidata": "Q1018714"
+        },
+        {
+          "latitude": 44.18333,
+          "longitude": 15.38333,
+          "name": "Poličnik",
+          "wikidata": "Q664872"
+        },
+        {
+          "latitude": 43.93333,
+          "longitude": 15.43333,
+          "name": "Biograd na Moru",
+          "wikidata": "Q399139"
+        },
+        {
+          "latitude": 43.81862,
+          "longitude": 15.66833,
+          "name": "Pirovac",
+          "wikidata": "Q600410"
+        },
+        {
+          "latitude": 43.8042,
+          "longitude": 15.6433,
+          "name": "Tisno",
+          "wikidata": "Q930516"
+        },
+        {
+          "latitude": 43.75056,
+          "longitude": 15.77889,
+          "name": "Vodice",
+          "wikidata": "Q750427"
+        },
+        {
+          "latitude": 43.75617,
+          "longitude": 15.74612,
+          "name": "Tribunj",
+          "wikidata": "Q607058"
+        },
+        {
+          "latitude": 43.77,
+          "longitude": 15.91694,
+          "name": "Bilice",
+          "wikidata": "Q2175713"
+        },
+        {
+          "latitude": 43.73389,
+          "longitude": 15.89556,
+          "name": "Šibenik",
+          "wikidata": "Q3549"
+        },
+        {
+          "latitude": 43.58333,
+          "longitude": 15.91667,
+          "name": "Primošten",
+          "wikidata": "Q837474"
+        },
+        {
+          "latitude": 43.52634,
+          "longitude": 15.96949,
+          "name": "Rogoznica",
+          "wikidata": "Q1013147"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36364"
+    },
+    "EUGI00000010736": {
+      "places": [
+        {
+          "latitude": 43.54833,
+          "longitude": 16.33833,
+          "name": "Kaštela",
+          "wikidata": "Q396579"
+        },
+        {
+          "latitude": 43.5125,
+          "longitude": 16.25167,
+          "name": "Trogir",
+          "wikidata": "Q33507578"
+        },
+        {
+          "latitude": 43.5167,
+          "longitude": 16.2333,
+          "name": "Seget",
+          "wikidata": "Q1296625"
+        },
+        {
+          "latitude": 43.51408,
+          "longitude": 16.10817,
+          "name": "Marina",
+          "wikidata": "Q1027927"
+        },
+        {
+          "latitude": 43.53167,
+          "longitude": 16.49472,
+          "name": "Solin",
+          "wikidata": "Q642828"
+        },
+        {
+          "latitude": 43.49694,
+          "longitude": 16.22,
+          "name": "Okrug",
+          "wikidata": "Q1284434"
+        },
+        {
+          "latitude": 43.51,
+          "longitude": 16.44,
+          "name": "Split",
+          "wikidata": "Q1663"
+        },
+        {
+          "latitude": 43.48,
+          "longitude": 16.58,
+          "name": "Podstrana",
+          "wikidata": "Q941734"
+        },
+        {
+          "latitude": 43.44583,
+          "longitude": 16.68833,
+          "name": "Omiš",
+          "wikidata": "Q397600"
+        },
+        {
+          "latitude": 43.29306,
+          "longitude": 17.02,
+          "name": "Makarska",
+          "wikidata": "Q272009"
+        },
+        {
+          "latitude": 42.91667,
+          "longitude": 16.93333,
+          "name": "Dugi Rat",
+          "wikidata": "Q25297110"
+        },
+        {
+          "latitude": 43.36861,
+          "longitude": 16.93333,
+          "name": "Brela",
+          "wikidata": "Q12628333"
+        },
+        {
+          "latitude": 43.35739,
+          "longitude": 16.94907,
+          "name": "Baška Voda",
+          "wikidata": "Q812769"
+        },
+        {
+          "latitude": 43.23694,
+          "longitude": 17.0775,
+          "name": "Podgora",
+          "wikidata": "Q837148"
+        },
+        {
+          "latitude": 43.10611,
+          "longitude": 17.34111,
+          "name": "Gradac",
+          "wikidata": "Q981300"
+        },
+        {
+          "latitude": 43.265,
+          "longitude": 17.05694,
+          "name": "Tučepi",
+          "wikidata": "Q530331"
+        },
+        {
+          "latitude": 43.05,
+          "longitude": 17.65,
+          "name": "Metković",
+          "wikidata": "Q390588"
+        },
+        {
+          "latitude": 43.0525,
+          "longitude": 17.43667,
+          "name": "Ploče",
+          "wikidata": "Q115117"
+        },
+        {
+          "latitude": 43.0175,
+          "longitude": 17.56278,
+          "name": "Opuzen",
+          "wikidata": "Q396465"
+        },
+        {
+          "latitude": 43.02861,
+          "longitude": 17.60472,
+          "name": "Kula Norinska",
+          "wikidata": "Q665635"
+        },
+        {
+          "latitude": 43.15861,
+          "longitude": 17.45083,
+          "name": "Pojezerje",
+          "wikidata": "Q568993"
+        },
+        {
+          "latitude": 42.9925,
+          "longitude": 17.61556,
+          "name": "Zažablje",
+          "wikidata": "Q167955"
+        },
+        {
+          "latitude": 43.33858,
+          "longitude": 17.23112,
+          "name": "Slivno",
+          "wikidata": "Q8316299"
+        },
+        {
+          "latitude": 42.51861,
+          "longitude": 18.36806,
+          "name": "Konavle",
+          "wikidata": "Q1781214"
+        },
+        {
+          "latitude": 42.61667,
+          "longitude": 18.21667,
+          "name": "Župa dubrovačka",
+          "wikidata": "Q394299"
+        },
+        {
+          "latitude": 42.64028,
+          "longitude": 18.10833,
+          "name": "Dubrovnik",
+          "wikidata": "Q1722"
+        },
+        {
+          "latitude": 42.78611,
+          "longitude": 17.89194,
+          "name": "Dubrovačko primorje",
+          "wikidata": "Q1018647"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36384"
+    },
+    "EUGI00000010737": {
+      "places": [
+        {
+          "latitude": 46.466,
+          "longitude": 16.414,
+          "name": "Međimurska županija",
+          "wikidata": "Q58330"
+        },
+        {
+          "latitude": 46.321,
+          "longitude": 16.231,
+          "name": "Varaždin",
+          "wikidata": "Q57967"
+        },
+        {
+          "latitude": 46.25,
+          "longitude": 16.60167,
+          "name": "Ludbreg",
+          "wikidata": "Q396474"
+        },
+        {
+          "latitude": 46.15889,
+          "longitude": 15.87444,
+          "name": "Krapina",
+          "wikidata": "Q221189"
+        },
+        {
+          "latitude": 46.15,
+          "longitude": 16.11667,
+          "name": "Zlatar",
+          "wikidata": "Q396550"
+        },
+        {
+          "latitude": 46.05,
+          "longitude": 15.96667,
+          "name": "Zabok",
+          "wikidata": "Q139018"
+        },
+        {
+          "latitude": 46.05111,
+          "longitude": 15.74306,
+          "name": "Klanjec",
+          "wikidata": "Q769880"
+        },
+        {
+          "latitude": 46.16417,
+          "longitude": 15.75083,
+          "name": "Pregrada",
+          "wikidata": "Q844312"
+        },
+        {
+          "latitude": 45.86667,
+          "longitude": 15.8,
+          "name": "Zaprešić",
+          "wikidata": "Q25287127"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36394"
+    },
+    "EUGI00000010738": {
+      "parts": [
+        "EUGI00000010729",
+        "EUGI00000010732",
+        "EUGI00000010737",
+        "EUGI00000010730",
+        "EUGI00000010731"
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36404"
+    },
+    "EUGI00000012282": {
+      "places": [
+        {
+          "latitude": 41.9745,
+          "longitude": -1.64053,
+          "name": "Ablitas",
+          "wikidata": "Q24012526"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2021.504.01.0048.01.ENG&toc=OJ%3AC%3A2021%3A504%3ATOC"
+    },
+    "EUGI00000012784": {
+      "places": [
+        {
+          "latitude": 51.145,
+          "longitude": 5.7403,
+          "name": "Kinrooi",
+          "wikidata": "Q819133"
+        },
+        {
+          "latitude": 51.10194,
+          "longitude": 5.78556,
+          "name": "Maaseik",
+          "wikidata": "Q66311969"
+        },
+        {
+          "latitude": 51.0314,
+          "longitude": 5.7178,
+          "name": "Dilsen-Stokkem",
+          "wikidata": "Q581246"
+        },
+        {
+          "latitude": 50.9967,
+          "longitude": 5.7025,
+          "name": "Maasmechelen",
+          "wikidata": "Q329633"
+        },
+        {
+          "latitude": 50.89426,
+          "longitude": 5.65006,
+          "name": "Lanaken",
+          "wikidata": "Q31824076"
+        },
+        {
+          "latitude": 50.96833,
+          "longitude": 5.76583,
+          "name": "Stein",
+          "wikidata": "Q14389950"
+        },
+        {
+          "latitude": 51,
+          "longitude": 5.85,
+          "name": "Sittard-Geleen",
+          "wikidata": "Q9781"
+        },
+        {
+          "latitude": 51.0833,
+          "longitude": 5.8667,
+          "name": "Echt-Susteren",
+          "wikidata": "Q9802"
+        },
+        {
+          "latitude": 51.15,
+          "longitude": 5.8833,
+          "name": "Maasgouw",
+          "wikidata": "Q9792"
+        },
+        {
+          "latitude": 51.19333,
+          "longitude": 5.98722,
+          "name": "Roermond",
+          "wikidata": "Q9783"
+        },
+        {
+          "latitude": 51.23333,
+          "longitude": 5.86667,
+          "name": "Leudal",
+          "wikidata": "Q9793"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017D0822%2801%29"
+    },
+    "EUGI00000012884": {
+      "places": [
+        {
+          "latitude": 48.84361,
+          "longitude": 17.22639,
+          "name": "Skalica",
+          "wikidata": "Q649076"
+        },
+        {
+          "latitude": 48.8118,
+          "longitude": 17.2454,
+          "name": "Mokrý Háj",
+          "wikidata": "Q278145"
+        },
+        {
+          "latitude": 48.785,
+          "longitude": 17.2194,
+          "name": "Popudinské Močidľany",
+          "wikidata": "Q225228"
+        },
+        {
+          "latitude": 48.805,
+          "longitude": 17.19611,
+          "name": "Prietržka",
+          "wikidata": "Q1044189"
+        },
+        {
+          "latitude": 48.77333,
+          "longitude": 17.27667,
+          "name": "Radošovce",
+          "wikidata": "Q374635"
+        },
+        {
+          "latitude": 48.825,
+          "longitude": 17.19167,
+          "name": "Vrádište",
+          "wikidata": "Q749450"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017D0713%2801%29"
+    },
+    "EUGI00000014262": {
+      "places": [
+        {
+          "latitude": 51.82306,
+          "longitude": 11.45028,
+          "name": "Winningen",
+          "wikidata": "Q33517553"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018D0807(03)"
+    },
+    "EUGI00000014263": {
+      "places": [
+        {
+          "latitude": 50.30063,
+          "longitude": 7.46072,
+          "name": "Kobern-Gondorf",
+          "wikidata": "Q116017438"
+        },
+        {
+          "latitude": 50.31278,
+          "longitude": 7.52139,
+          "name": "Winningen",
+          "wikidata": "Q822358"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOC_2018_277_R_0004"
+    },
+    "EUGI00000014449": {
+      "places": [
+        {
+          "latitude": 45.439,
+          "longitude": 13.709,
+          "name": "Momjan",
+          "wikidata": "Q2576934"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2021.036.01.0022.01.ENG&toc=OJ%3AC%3A2021%3A036%3ATOC"
+    },
+    "EUGI00000014933": {
+      "places": [
+        {
+          "latitude": 46.58083,
+          "longitude": 19.39361,
+          "name": "Soltvadkert",
+          "wikidata": "Q854987"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2020.170.01.0051.01.ENG&toc=OJ:C:2020:170:TOC"
+    },
+    "EUGI00000015085": {
+      "places": [
+        {
+          "latitude": 39.12917,
+          "longitude": -3.08889,
+          "name": "Argamasilla de Alba",
+          "wikidata": "Q1632537"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2019.057.01.0016.01.ENG&toc=OJ:C:2019:057:FULL"
+    },
+    "EUGI00000015112": {
+      "places": [
+        {
+          "latitude": 49.79917,
+          "longitude": 7.59083,
+          "name": "Monzingen",
+          "wikidata": "Q609223"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1546870871339&uri=CELEX:32018D0828(01)"
+    },
+    "EUGI00000015118": {
+      "places": [
+        {
+          "latitude": 40.64111,
+          "longitude": -8.65389,
+          "name": "distrito de Aveiro",
+          "wikidata": "Q210527"
+        },
+        {
+          "latitude": 40.21111,
+          "longitude": -8.42889,
+          "name": "distrito de Coimbra",
+          "wikidata": "Q244517"
+        },
+        {
+          "latitude": 39.83333,
+          "longitude": -8.38333,
+          "name": "Alvaiázere",
+          "wikidata": "Q448229"
+        },
+        {
+          "latitude": 39.91667,
+          "longitude": -8.43333,
+          "name": "Ansião",
+          "wikidata": "Q569929"
+        },
+        {
+          "latitude": 40.00538,
+          "longitude": -8.21218,
+          "name": "Castanheira de Pera",
+          "wikidata": "Q134577422"
+        },
+        {
+          "latitude": 39.90223,
+          "longitude": -8.27537,
+          "name": "Figueiró dos Vinhos",
+          "wikidata": "Q134545932"
+        },
+        {
+          "latitude": 39.91667,
+          "longitude": -8.15,
+          "name": "Pedrógão Grande",
+          "wikidata": "Q1013094"
+        },
+        {
+          "latitude": 39.91667,
+          "longitude": -8.62861,
+          "name": "Pombal",
+          "wikidata": "Q49288119"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2023.344.01.0242.01.ENG&toc=OJ%3AC%3A2023%3A344%3ATOC"
+    },
+    "EUGI00000015119": {
+      "places": [
+        {
+          "latitude": 40.21944,
+          "longitude": -8.05389,
+          "name": "Arganil",
+          "wikidata": "Q1915481"
+        },
+        {
+          "latitude": 40.36667,
+          "longitude": -7.86667,
+          "name": "Oliveira do Hospital",
+          "wikidata": "Q990381"
+        },
+        {
+          "latitude": 40.36667,
+          "longitude": -8.03333,
+          "name": "Tábua",
+          "wikidata": "Q988846"
+        },
+        {
+          "latitude": 40.81722,
+          "longitude": -7.54333,
+          "name": "Aguiar da Beira",
+          "wikidata": "Q2452470"
+        },
+        {
+          "latitude": 40.6225,
+          "longitude": -7.53861,
+          "name": "Fornos de Algodres",
+          "wikidata": "Q1997892"
+        },
+        {
+          "latitude": 40.5,
+          "longitude": -7.6,
+          "name": "Gouveia",
+          "wikidata": "Q599317"
+        },
+        {
+          "latitude": 40.42203,
+          "longitude": -7.70245,
+          "name": "Seia",
+          "wikidata": "Q76017"
+        },
+        {
+          "latitude": 40.43333,
+          "longitude": -8,
+          "name": "Carregal do Sal",
+          "wikidata": "Q796938"
+        },
+        {
+          "latitude": 40.89667,
+          "longitude": -7.93556,
+          "name": "Castro Daire",
+          "wikidata": "Q1997747"
+        },
+        {
+          "latitude": 40.6,
+          "longitude": -7.76667,
+          "name": "Mangualde",
+          "wikidata": "Q597789"
+        },
+        {
+          "latitude": 40.39743,
+          "longitude": -8.22932,
+          "name": "Mortágua",
+          "wikidata": "Q134160642"
+        },
+        {
+          "latitude": 40.53539,
+          "longitude": -7.85032,
+          "name": "Nelas",
+          "wikidata": "Q134086586"
+        },
+        {
+          "latitude": 40.73333,
+          "longitude": -8.16667,
+          "name": "Oliveira de Frades",
+          "wikidata": "Q861584"
+        },
+        {
+          "latitude": 40.67445,
+          "longitude": -7.70023,
+          "name": "Penalva do Castelo",
+          "wikidata": "Q133867400"
+        },
+        {
+          "latitude": 40.4,
+          "longitude": -8.13333,
+          "name": "Santa Comba Dão",
+          "wikidata": "Q861208"
+        },
+        {
+          "latitude": 40.75,
+          "longitude": -8.06667,
+          "name": "São Pedro do Sul",
+          "wikidata": "Q1484005"
+        },
+        {
+          "latitude": 40.63333,
+          "longitude": -7.825,
+          "name": "Sátão",
+          "wikidata": "Q10362583"
+        },
+        {
+          "latitude": 40.52534,
+          "longitude": -8.06776,
+          "name": "Tondela",
+          "wikidata": "Q19707391"
+        },
+        {
+          "latitude": 40.85,
+          "longitude": -7.73333,
+          "name": "Vila Nova de Paiva",
+          "wikidata": "Q1003146"
+        },
+        {
+          "latitude": 40.65694,
+          "longitude": -7.91389,
+          "name": "Viseu",
+          "wikidata": "Q273525"
+        },
+        {
+          "latitude": 40.7,
+          "longitude": -8.11667,
+          "name": "Vouzela",
+          "wikidata": "Q1012714"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2023.109.01.0073.01.ENG&toc=OJ%3AC%3A2023%3A109%3ATOC"
+    },
+    "EUGI00000015120": {
+      "places": [
+        {
+          "latitude": 39.824,
+          "longitude": -7.492,
+          "name": "distrito de Castelo Branco",
+          "wikidata": "Q273529"
+        },
+        {
+          "latitude": 40.7247,
+          "longitude": -6.90651,
+          "name": "Almeida",
+          "wikidata": "Q97342772"
+        },
+        {
+          "latitude": 40.63231,
+          "longitude": -7.39415,
+          "name": "Celorico da Beira",
+          "wikidata": "Q134570181"
+        },
+        {
+          "latitude": 40.89383,
+          "longitude": -6.96285,
+          "name": "Figueira de Castelo Rodrigo",
+          "wikidata": "Q134547109"
+        },
+        {
+          "latitude": 40.53639,
+          "longitude": -7.26833,
+          "name": "Guarda",
+          "wikidata": "Q750594"
+        },
+        {
+          "latitude": 40.36611,
+          "longitude": -7.54611,
+          "name": "Manteigas",
+          "wikidata": "Q45895"
+        },
+        {
+          "latitude": 40.96667,
+          "longitude": -7.26667,
+          "name": "Mêda",
+          "wikidata": "Q990335"
+        },
+        {
+          "latitude": 40.71106,
+          "longitude": -7.24968,
+          "name": "Pinhel",
+          "wikidata": "Q8841470"
+        },
+        {
+          "latitude": 40.35069,
+          "longitude": -7.09032,
+          "name": "Sabugal",
+          "wikidata": "Q134882135"
+        },
+        {
+          "latitude": 40.77792,
+          "longitude": -7.35062,
+          "name": "Trancoso",
+          "wikidata": "Q134825252"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2023.116.01.0034.01.ENG&toc=OJ%3AC%3A2023%3A116%3ATOC"
+    },
+    "EUGI00000015124": {
+      "places": [
+        {
+          "latitude": 41.11667,
+          "longitude": -7.68333,
+          "name": "Armamar",
+          "wikidata": "Q558610"
+        },
+        {
+          "latitude": 41.0975,
+          "longitude": -7.81,
+          "name": "Lamego",
+          "wikidata": "Q49285330"
+        },
+        {
+          "latitude": 40.985,
+          "longitude": -7.61778,
+          "name": "Moimenta da Beira",
+          "wikidata": "Q1998378"
+        },
+        {
+          "latitude": 40.993,
+          "longitude": -7.39401,
+          "name": "Penedono",
+          "wikidata": "Q33706114"
+        },
+        {
+          "latitude": 41.13333,
+          "longitude": -7.4,
+          "name": "São João da Pesqueira",
+          "wikidata": "Q1010466"
+        },
+        {
+          "latitude": 40.90028,
+          "longitude": -7.49417,
+          "name": "Sernancelhe",
+          "wikidata": "Q2450364"
+        },
+        {
+          "latitude": 41.11667,
+          "longitude": -7.56667,
+          "name": "Tabuaço",
+          "wikidata": "Q1010659"
+        },
+        {
+          "latitude": 41.01611,
+          "longitude": -7.77556,
+          "name": "Tarouca",
+          "wikidata": "Q2265253"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2023.137.01.0012.01.ENG&toc=OJ%3AC%3A2023%3A137%3ATOC"
+    },
+    "EUGI00000016239": {
+      "places": [
+        {
+          "latitude": 43.08333,
+          "longitude": 2.41667,
+          "name": "Aude",
+          "wikidata": "Q3207"
+        },
+        {
+          "latitude": 43.61092,
+          "longitude": 3.87723,
+          "name": "Hérault",
+          "wikidata": "Q12545"
+        },
+        {
+          "latitude": 44.12806,
+          "longitude": 4.08167,
+          "name": "Gard",
+          "wikidata": "Q12515"
+        },
+        {
+          "latitude": 42.5,
+          "longitude": 2.75,
+          "name": "Pyrénées-Orientales",
+          "wikidata": "Q12709"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2023.202.01.0076.01.ENG&toc=OJ%3AC%3A2023%3A202%3ATOC"
+    },
+    "EUGI00000016755": {
+      "places": [
+        {
+          "latitude": 41.33733,
+          "longitude": -1.22444,
+          "name": "Cariñena",
+          "wikidata": "Q24002479"
+        }
+      ],
+      "source": "http://data.europa.eu/eli/C/2024/1738/oj"
+    },
+    "EUGI00000016795": {
+      "places": [
+        {
+          "latitude": 46.44595,
+          "longitude": 16.78713,
+          "name": "Becsehely",
+          "wikidata": "Q791775"
+        },
+        {
+          "latitude": 46.5,
+          "longitude": 16.63333,
+          "name": "Csörnyeföld",
+          "wikidata": "Q876369"
+        },
+        {
+          "latitude": 46.51624,
+          "longitude": 16.58099,
+          "name": "Dobri",
+          "wikidata": "Q907303"
+        },
+        {
+          "latitude": 46.43361,
+          "longitude": 16.72222,
+          "name": "Letenye",
+          "wikidata": "Q854969"
+        },
+        {
+          "latitude": 46.45656,
+          "longitude": 16.67451,
+          "name": "Murarátka",
+          "wikidata": "Q1179932"
+        },
+        {
+          "latitude": 46.4812,
+          "longitude": 16.65315,
+          "name": "Muraszemenye",
+          "wikidata": "Q1184512"
+        },
+        {
+          "latitude": 46.53333,
+          "longitude": 16.6,
+          "name": "Tormafölde",
+          "wikidata": "Q1186713"
+        },
+        {
+          "latitude": 46.48277,
+          "longitude": 16.72031,
+          "name": "Zajk",
+          "wikidata": "Q1184503"
+        }
+      ],
+      "source": "http://data.europa.eu/eli/C/2026/1833/oj"
+    },
+    "EUGI00000016881": {
+      "places": [
+        {
+          "latitude": 41.63056,
+          "longitude": -4.52056,
+          "name": "Villabáñez",
+          "wikidata": "Q1922897"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2021.398.01.0028.01.ENG&toc=OJ%3AC%3A2021%3A398%3ATOC"
+    },
+    "EUGI00000017144": {
+      "places": [
+        {
+          "latitude": 47.746,
+          "longitude": 16.417,
+          "name": "Bezirk Mattersburg",
+          "wikidata": "Q748570"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.305.01.0018.01.ENG&toc=OJ%3AC%3A2022%3A305%3ATOC"
+    },
+    "EUGI00000017207": {
+      "places": [
+        {
+          "latitude": 47.80083,
+          "longitude": 16.67583,
+          "name": "Rust",
+          "wikidata": "Q259214"
+        }
+      ],
+      "source": "http://data.europa.eu/eli/C/2024/673/oj"
+    },
+    "EUGI00000017964": {
+      "places": [
+        {
+          "latitude": 51.87333,
+          "longitude": 6.37639,
+          "name": "Gendringen",
+          "wikidata": "Q171268"
+        },
+        {
+          "latitude": 51.8879,
+          "longitude": 6.1006,
+          "name": "Molenhoek",
+          "wikidata": "Q19348018"
+        },
+        {
+          "latitude": 51.93358,
+          "longitude": 5.63375,
+          "name": "Heusden",
+          "wikidata": "Q118432083"
+        },
+        {
+          "latitude": 51.8133,
+          "longitude": 5.0006,
+          "name": "Woudrichem",
+          "wikidata": "Q9882"
+        },
+        {
+          "latitude": 51.83056,
+          "longitude": 4.97417,
+          "name": "Gorinchem",
+          "wikidata": "Q244327"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.315.01.0007.01.ENG&toc=OJ%3AC%3A2022%3A315%3ATOC"
+    },
+    "EUGI00000018015": {
+      "places": [
+        {
+          "latitude": 47.4472,
+          "longitude": 18.7496,
+          "name": "Etyek",
+          "wikidata": "Q204834"
+        }
+      ],
+      "source": "http://data.europa.eu/eli/C/2025/3670/oj"
+    },
+    "EUGI00000018045": {
+      "places": [
+        {
+          "latitude": 50.8825,
+          "longitude": 5.92722,
+          "name": "Voerendaal",
+          "wikidata": "Q14515958"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.444.01.0024.01.ENG&toc=OJ%3AC%3A2022%3A444%3ATOC"
+    },
+    "EUGI00000018334": {
+      "places": [
+        {
+          "latitude": 46.92775,
+          "longitude": 17.66897,
+          "name": "Balatoncsicsó",
+          "wikidata": "Q789260"
+        },
+        {
+          "latitude": 46.90308,
+          "longitude": 17.64029,
+          "name": "Monoszló",
+          "wikidata": "Q777896"
+        },
+        {
+          "latitude": 46.93784,
+          "longitude": 17.69022,
+          "name": "Óbudavár",
+          "wikidata": "Q1089984"
+        },
+        {
+          "latitude": 46.91294,
+          "longitude": 17.67406,
+          "name": "Szentantalfa",
+          "wikidata": "Q1089644"
+        },
+        {
+          "latitude": 46.93376,
+          "longitude": 17.67627,
+          "name": "Szentjakabfa",
+          "wikidata": "Q598909"
+        },
+        {
+          "latitude": 46.90371,
+          "longitude": 17.67892,
+          "name": "Tagyon",
+          "wikidata": "Q1089847"
+        },
+        {
+          "latitude": 46.87505,
+          "longitude": 17.67841,
+          "name": "Zánka",
+          "wikidata": "Q683947"
+        }
+      ],
+      "source": "http://data.europa.eu/eli/C/2026/2812/oj"
+    },
+    "EUGI00000018565": {
+      "places": [
+        {
+          "latitude": 48.46077,
+          "longitude": 21.64458,
+          "name": "Čerhov",
+          "wikidata": "Q111702945"
+        },
+        {
+          "latitude": 48.4677,
+          "longitude": 21.6786,
+          "name": "Veľká Tŕňa",
+          "wikidata": "Q613976"
+        },
+        {
+          "latitude": 48.45,
+          "longitude": 21.68333,
+          "name": "Malá Tŕňa",
+          "wikidata": "Q525058"
+        },
+        {
+          "latitude": 48.40305,
+          "longitude": 21.66737,
+          "name": "Slovenské Nové Mesto",
+          "wikidata": "Q54991746"
+        },
+        {
+          "latitude": 48.42028,
+          "longitude": 21.72694,
+          "name": "Bara",
+          "wikidata": "Q853407"
+        },
+        {
+          "latitude": 48.4394,
+          "longitude": 21.7334,
+          "name": "Černochov",
+          "wikidata": "Q870761"
+        },
+        {
+          "latitude": 48.4,
+          "longitude": 21.75,
+          "name": "Viničky",
+          "wikidata": "Q1073521"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:C_202300385"
+    },
+    "EUGI00000018906": {
+      "places": [
+        {
+          "latitude": 42.21667,
+          "longitude": 13.83333,
+          "name": "Abruzzo",
+          "wikidata": "Q1284"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2023.317.01.0025.01.ENG&toc=OJ%3AC%3A2023%3A317%3ATOC"
+    },
+    "EUGI00000019602": {
+      "places": [
+        {
+          "latitude": 39.48854,
+          "longitude": -1.10231,
+          "name": "Requena",
+          "wikidata": "Q302099"
+        }
+      ],
+      "source": "http://data.europa.eu/eli/C/2025/3093/oj"
+    },
+    "EUGI00000019772": {
+      "places": [
+        {
+          "latitude": 40.94833,
+          "longitude": -3.0875,
+          "name": "Cogolludo",
+          "wikidata": "Q986532"
+        },
+        {
+          "latitude": 40.94807,
+          "longitude": -2.97969,
+          "name": "Membrillera",
+          "wikidata": "Q24011156"
+        }
+      ],
+      "source": "http://data.europa.eu/eli/C/2024/7000/oj"
+    },
+    "EUGI00000019804": {
+      "places": [
+        {
+          "latitude": 46.93026,
+          "longitude": 17.83168,
+          "name": "Aszófő",
+          "wikidata": "Q282402"
+        },
+        {
+          "latitude": 46.88366,
+          "longitude": 17.751,
+          "name": "Balatonakali",
+          "wikidata": "Q789248"
+        },
+        {
+          "latitude": 46.93952,
+          "longitude": 17.79411,
+          "name": "Balatonfüred",
+          "wikidata": "Q3030968"
+        },
+        {
+          "latitude": 46.96765,
+          "longitude": 17.82708,
+          "name": "Balatonszőlős",
+          "wikidata": "Q513392"
+        },
+        {
+          "latitude": 46.90079,
+          "longitude": 17.79904,
+          "name": "Balatonudvari",
+          "wikidata": "Q789323"
+        },
+        {
+          "latitude": 46.9184,
+          "longitude": 17.72293,
+          "name": "Dörgicse",
+          "wikidata": "Q987245"
+        },
+        {
+          "latitude": 46.94651,
+          "longitude": 17.70007,
+          "name": "Mencshely",
+          "wikidata": "Q1175885"
+        },
+        {
+          "latitude": 46.91455,
+          "longitude": 17.81997,
+          "name": "Örvényes",
+          "wikidata": "Q1089835"
+        },
+        {
+          "latitude": 46.95593,
+          "longitude": 17.78549,
+          "name": "Pécsely",
+          "wikidata": "Q1089863"
+        },
+        {
+          "latitude": 46.94172,
+          "longitude": 17.75905,
+          "name": "Vászoly",
+          "wikidata": "Q1090001"
+        }
+      ],
+      "source": "http://data.europa.eu/eli/C/2025/4194/oj"
+    },
+    "EUGI00000020218": {
+      "places": [
+        {
+          "latitude": 39.38333,
+          "longitude": 17.06667,
+          "name": "Cirò",
+          "wikidata": "Q54501"
+        },
+        {
+          "latitude": 39.36667,
+          "longitude": 17.11667,
+          "name": "Cirò Marina",
+          "wikidata": "Q54502"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:C_202501933"
+    }
+  }
+}

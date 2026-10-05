@@ -2,6 +2,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { matchKey, type RegionEntry, transliterate } from "./appellation-names";
+import { insideRegion, nutsRegion, type NutsRegion } from "./nuts";
 import { userAgent } from "./wikimedia";
 
 /**
@@ -137,10 +138,25 @@ const placedElsewhere = (region: RegionEntry) =>
     (entry) => entry.source === "register" && grandCrus[matchKey(entry.name)] !== undefined,
   );
 
+// The NUTS regions the register's technical file names for a wine
+// (`pnpm kb:fetch-appellation-areas`): where they are known, a place found
+// outside them is a namesake, not the wine's.
+const nutsPath = resolve(cache, "nuts.json");
+const registerNuts = (
+  existsSync(nutsPath) ? JSON.parse(readFileSync(nutsPath, "utf8")) : {}
+) as Record<string, { regions: { code: string; name: string }[] }>;
+
 for (const region of regions) {
   if (placedElsewhere(region)) continue;
   if (notPlaces.has(matchKey(region.name))) continue;
   tried += 1;
+  const declared = (
+    await Promise.all(
+      (registerNuts[region.eambrosiaId]?.regions ?? []).map((listed) =>
+        nutsRegion(listed.code, listed.name),
+      ),
+    )
+  ).filter((known): known is NutsRegion => known !== null);
   const names = [
     ...new Set(
       region.names.filter((entry) => entry.source === "register").map((entry) => entry.name),
@@ -176,7 +192,11 @@ for (const region of regions) {
           // the small places: "Salina" a village in Emilia rather than the
           // Aeolian island, "Valdadige" a quarter in Apulia rather than the
           // Adige valley. Below this, no point rather than a wrong one.
-          (result.importance ?? 0) >= 0.3,
+          (result.importance ?? 0) >= 0.3 &&
+          (declared.length === 0 ||
+            declared.some((known) =>
+              insideRegion({ latitude: Number(result.lat), longitude: Number(result.lon) }, known),
+            )),
       );
       // Every place of that name must be one place: a valley and the
       // municipality inside it agree; "Corton" the hill in Burgundy and a

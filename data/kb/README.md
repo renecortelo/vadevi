@@ -68,6 +68,21 @@ product specification, linked from the register.
   domain, CC0, CC BY or CC BY-SA), recorded with its author and source in
   `grape-images.json` and credited under the photograph in the app. The
   release scan refuses any picture in that folder without its record.
+- **eAmbrosia technical files** (`pnpm kb:fetch-appellation-areas`): the
+  single document each registered name was filed with names the NUTS regions
+  of its demarcated area. A place of the wine's name is taken only inside
+  them (Naoussa in Imathia, not on Paros), OpenStreetMap's points are checked
+  against them, and where nothing else places a name, their own point gives
+  an approximate one. Same reuse notice as the register.
+- **The register's own places** (`appellation-areas.json`, read by hand):
+  for names whose technical file gives no NUTS region, or that were
+  registered later, the municipalities and villages their demarcated area
+  names (in the technical file, or the single document in the Official
+  Journal), each with its Wikidata item; the point is their median. A name
+  made of others ("Zapadna kontinentalna Hrvatska") takes the median of theirs.
+- **Eurostat GISCO NUTS regions** (outlines and label points, every edition
+  since 2003, read in the edition whose name matches the technical file's):
+  © EuroGeographics for the administrative boundaries.
 - **OpenStreetMap** (via its Nominatim geocoder, `pnpm kb:geocode-appellations`):
   approximate points for registered names Wikidata could not place, taken
   only on an exact name match in the same country. © OpenStreetMap

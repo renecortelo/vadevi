@@ -185,7 +185,7 @@
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "De dónde viene",
     "mapLabel": "Mapa con {{place}}",
-    "mapSource": "Mapa: Natural Earth · Puntos: Wikidata, © colaboradores de OpenStreetMap",
+    "mapSource": "Mapa: Natural Earth · Puntos: Wikidata, NUTS © EuroGeographics, © colaboradores de OpenStreetMap",
     "mapCountryOnly": "La zona exacta aún no está en la biblioteca; el mapa muestra el país.",
     "mapApproximate": {
       "area": "Punto aproximado: el centro de la zona en la que está la denominación.",

@@ -762,10 +762,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-ahrtaler-landwein",
-    "latitude": null,
+    "latitude": 49.95446637400005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004681",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.310413,
+    "pointSource": "area",
     "name": "Ahrtaler Landwein",
     "names": [
       {
@@ -1552,10 +1552,10 @@
       }
     ],
     "id": "pt-alentejano",
-    "latitude": null,
+    "latitude": 38.27594274900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004834",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.791046949999952,
+    "pointSource": "area",
     "name": "Alentejano",
     "names": [
       {
@@ -2349,10 +2349,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-alpi-retiche",
-    "latitude": null,
+    "latitude": 46.323337749000075,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005085",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.939547050000044,
+    "pointSource": "area",
     "name": "Alpi Retiche",
     "names": [
       {
@@ -4925,10 +4925,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-anjou-brissac",
-    "latitude": null,
+    "latitude": 47.38933949900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000961",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.559810949999928,
+    "pointSource": "area",
     "name": "Anjou Brissac",
     "names": [
       {
@@ -5998,10 +5998,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-arruda",
-    "latitude": null,
+    "latitude": 39.33142749900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005556",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -9.14376894999998,
+    "pointSource": "area",
     "name": "Arruda",
     "names": [
       {
@@ -6084,10 +6084,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-asolo-montello",
-    "latitude": null,
+    "latitude": 45.80664674900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004733",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.21384930000005,
+    "pointSource": "area",
     "name": "Asolo Montello",
     "names": [
       {
@@ -7258,10 +7258,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-badischer-landwein",
-    "latitude": null,
+    "latitude": 48.661922624000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004682",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.003718750000075,
+    "pointSource": "area",
     "name": "Badischer Landwein",
     "names": [
       {
@@ -7934,10 +7934,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "hu-balatonmelleki",
-    "latitude": null,
+    "latitude": 46.893418499000035,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005796",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.605745675000065,
+    "pointSource": "area",
     "name": "Balatonmelléki",
     "names": [
       {
@@ -8063,10 +8063,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-banu-maracine",
-    "latitude": null,
+    "latitude": 44.213527999000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007341",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.555553300000042,
+    "pointSource": "area",
     "name": "Banu Mărăcine",
     "names": [
       {
@@ -8180,10 +8180,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-banyuls-grand-cru",
-    "latitude": null,
+    "latitude": 42.62564249900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002985",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 2.449573050000026,
+    "pointSource": "area",
     "name": "Banyuls grand cru",
     "names": [
       {
@@ -9503,10 +9503,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-bayerischer-bodensee-landwein",
-    "latitude": null,
+    "latitude": 48.91745512400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004683",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.407821,
+    "pointSource": "area",
     "name": "Bayerischer Bodensee-Landwein",
     "names": [
       {
@@ -9770,10 +9770,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "pt-beira-atlantico",
-    "latitude": null,
+    "latitude": 39.91667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015118",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -8.406110000000002,
+    "pointSource": "area",
     "name": "Beira Atlântico",
     "names": [
       {
@@ -9793,10 +9793,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-beira-interior",
-    "latitude": null,
+    "latitude": 40.570056374000046,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005482",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.415761824999947,
+    "pointSource": "area",
     "name": "Beira Interior",
     "names": [
       {
@@ -9978,10 +9978,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-belokranjec",
-    "latitude": null,
+    "latitude": 45.722109749000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007401",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.972053300000027,
+    "pointSource": "area",
     "name": "Belokranjec",
     "names": [
       {
@@ -10254,10 +10254,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "at-bergland",
-    "latitude": 48.155555555556,
+    "latitude": 47.25328649900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004241",
-    "longitude": 15.182222222222,
-    "pointSource": "place",
+    "longitude": 13.292685625000047,
+    "pointSource": "area",
     "name": "Bergland",
     "names": [
       {
@@ -11264,9 +11264,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-biscoitos",
-    "latitude": 38.8,
+    "latitude": 38.7663,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005044",
-    "longitude": -27.255555555556,
+    "longitude": -27.24931,
     "pointSource": "place",
     "name": "Biscoitos",
     "names": [
@@ -11439,10 +11439,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-bizeljsko-sremic",
-    "latitude": null,
+    "latitude": 46.03440174900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005481",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.205236800000051,
+    "pointSource": "area",
     "name": "Bizeljsko Sremič",
     "names": [
       {
@@ -11462,10 +11462,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-bizeljcan",
-    "latitude": null,
+    "latitude": 45.83112399900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005099",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.191078425000029,
+    "pointSource": "area",
     "name": "Bizeljčan",
     "names": [
       {
@@ -11856,10 +11856,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-bolandin",
-    "latitude": null,
+    "latitude": 41.9745,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000012282",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.64053,
+    "pointSource": "place",
     "name": "Bolandin",
     "names": [
       {
@@ -13538,10 +13538,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-brandenburger-landwein",
-    "latitude": null,
+    "latitude": 52.45896599900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004685",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.01572,
+    "pointSource": "area",
     "name": "Brandenburger Landwein",
     "names": [
       {
@@ -14317,10 +14317,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-buzet",
-    "latitude": null,
+    "latitude": 44.36895899900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001164",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 0.468682050000041,
+    "pointSource": "area",
     "name": "Buzet",
     "names": [
       {
@@ -14592,10 +14592,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "de-burgstadter-berg",
-    "latitude": null,
+    "latitude": 49.71476,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010582",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.26916,
+    "pointSource": "place",
     "name": "Bürgstadter Berg",
     "names": [
       {
@@ -14695,10 +14695,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cabernet-d-anjou",
-    "latitude": null,
+    "latitude": 46.612022499000034,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001101",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.341563949999966,
+    "pointSource": "area",
     "name": "Cabernet d'Anjou",
     "names": [
       {
@@ -15580,10 +15580,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-calzadilla",
-    "latitude": 40.06014,
+    "latitude": 39.942695499000024,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007655",
-    "longitude": -6.53328,
-    "pointSource": "place",
+    "longitude": -2.156300949999945,
+    "pointSource": "area",
     "name": "Calzadilla",
     "names": [
       {
@@ -18829,10 +18829,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-castello",
-    "latitude": null,
+    "latitude": 40.16666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006693",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.16666667,
+    "pointSource": "place",
     "name": "Castelló",
     "names": [
       {
@@ -19155,10 +19155,10 @@
       }
     ],
     "id": "es-cava",
-    "latitude": null,
+    "latitude": 41.95395349900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006393",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.8353753249999725,
+    "pointSource": "area",
     "name": "Cava",
     "names": [
       {
@@ -20679,10 +20679,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-charlemagne",
-    "latitude": null,
+    "latitude": 47.46578799900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002141",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.791866550000066,
+    "pointSource": "area",
     "name": "Charlemagne",
     "names": [
       {
@@ -21106,10 +21106,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-chianti-classico",
-    "latitude": null,
+    "latitude": 43.506452499000034,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003623",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.338658675000062,
+    "pointSource": "area",
     "name": "Chianti Classico",
     "names": [
       {
@@ -21361,10 +21361,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-chozas-carrascal",
-    "latitude": null,
+    "latitude": 39.48854,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007821",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.10231,
+    "pointSource": "place",
     "name": "Chozas Carrascal",
     "names": [
       {
@@ -22376,10 +22376,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-ciro-classico",
-    "latitude": null,
+    "latitude": 39.375,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000020218",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.09167,
+    "pointSource": "area",
     "name": "Cirò Classico",
     "names": [
       {
@@ -23298,10 +23298,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-colinele-dobrogei",
-    "latitude": null,
+    "latitude": 44.65372849900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005981",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 28.496146800000048,
+    "pointSource": "area",
     "name": "Colinele Dobrogei",
     "names": [
       {
@@ -24354,10 +24354,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-colli-martani",
-    "latitude": null,
+    "latitude": 43.106816999000046,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005223",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.588262050000026,
+    "pointSource": "area",
     "name": "Colli Martani",
     "names": [
       {
@@ -24610,10 +24610,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-colli-pesaresi",
-    "latitude": null,
+    "latitude": 43.692874999000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004846",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.634790550000048,
+    "pointSource": "area",
     "name": "Colli Pesaresi",
     "names": [
       {
@@ -25167,10 +25167,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-colli-del-trasimeno",
-    "latitude": null,
+    "latitude": 43.106816999000046,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005222",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.588262050000026,
+    "pointSource": "area",
     "name": "Colli del Trasimeno",
     "names": [
       {
@@ -25230,10 +25230,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-colli-dell-etruria-centrale",
-    "latitude": null,
+    "latitude": 43.681465874000054,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006877",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.160246050000069,
+    "pointSource": "area",
     "name": "Colli dell'Etruria Centrale",
     "names": [
       {
@@ -25391,10 +25391,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-colli-della-toscana-centrale",
-    "latitude": null,
+    "latitude": 43.84577724900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007022",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.232019550000075,
+    "pointSource": "area",
     "name": "Colli della Toscana centrale",
     "names": [
       {
@@ -26164,10 +26164,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-colline-joniche-tarantine",
-    "latitude": null,
+    "latitude": 40.54892724900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005483",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.24831880000005,
+    "pointSource": "area",
     "name": "Colline Joniche Tarantine",
     "names": [
       {
@@ -27228,10 +27228,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "fr-comtes-rhodaniens",
-    "latitude": null,
+    "latitude": 45.75390074900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003041",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.238558050000051,
+    "pointSource": "area",
     "name": "Comtés Rhodaniens",
     "names": [
       {
@@ -28592,10 +28592,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-corti-benedettine-del-padovano",
-    "latitude": null,
+    "latitude": 45.42318249900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003401",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.024072429500052,
+    "pointSource": "area",
     "name": "Corti Benedettine del Padovano",
     "names": [
       {
@@ -29697,10 +29697,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-coteaux-champenois",
-    "latitude": null,
+    "latitude": 48.61904924900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002666",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.123830550000037,
+    "pointSource": "area",
     "name": "Coteaux champenois",
     "names": [
       {
@@ -31291,10 +31291,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-cotesti",
-    "latitude": null,
+    "latitude": 45.65,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007208",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.05,
+    "pointSource": "place",
     "name": "Coteşti",
     "names": [
       {
@@ -31337,10 +31337,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-coulee-de-serrant",
-    "latitude": null,
+    "latitude": 47.38933949900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002523",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.559810949999928,
+    "pointSource": "area",
     "name": "Coulée de Serrant",
     "names": [
       {
@@ -31647,10 +31647,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-cremant-d-alsace",
-    "latitude": null,
+    "latitude": 48.23264499900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001981",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.40905305000004,
+    "pointSource": "area",
     "name": "Crémant d'Alsace",
     "names": [
       {
@@ -32287,10 +32287,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-cumbres-del-guadalfeo",
-    "latitude": null,
+    "latitude": 37.388683499000024,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006869",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -3.267635949999942,
+    "pointSource": "area",
     "name": "Cumbres del Guadalfeo",
     "names": [
       {
@@ -32572,10 +32572,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-cvicek",
-    "latitude": null,
+    "latitude": 45.83112399900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007266",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.191078425000029,
+    "pointSource": "area",
     "name": "Cviček",
     "names": [
       {
@@ -35637,10 +35637,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-dalmatinska-zagora",
-    "latitude": null,
+    "latitude": 43.695835,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010723",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.4,
+    "pointSource": "area",
     "name": "Dalmatinska zagora",
     "names": [
       {
@@ -35718,10 +35718,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "nl-de-voerendaalse-bergen",
-    "latitude": null,
+    "latitude": 50.8825,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000018045",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.92722,
+    "pointSource": "place",
     "name": "De Voerendaalse Bergen",
     "names": [
       {
@@ -35741,10 +35741,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-dealu-bujorului",
-    "latitude": null,
+    "latitude": 45.77692024900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003221",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.728244050000058,
+    "pointSource": "area",
     "name": "Dealu Bujorului",
     "names": [
       {
@@ -35764,10 +35764,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-dealu-mare",
-    "latitude": null,
+    "latitude": 45.188137374000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006721",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 26.395364425000054,
+    "pointSource": "area",
     "name": "Dealu Mare",
     "names": [
       {
@@ -35787,10 +35787,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-dealu-mare-pdo",
-    "latitude": null,
+    "latitude": 45.188137374000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007142",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 26.395364425000054,
+    "pointSource": "area",
     "name": "Dealu Mare",
     "names": [
       {
@@ -35810,10 +35810,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-dealu-mare-2",
-    "latitude": null,
+    "latitude": 45.188137374000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006687",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 26.395364425000054,
+    "pointSource": "area",
     "name": "Dealu Mare",
     "names": [
       {
@@ -35833,10 +35833,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-dealu-mare-3",
-    "latitude": null,
+    "latitude": 45.188137374000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006663",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 26.395364425000054,
+    "pointSource": "area",
     "name": "Dealu Mare",
     "names": [
       {
@@ -35856,10 +35856,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-crisanei",
-    "latitude": null,
+    "latitude": 47.15649799900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003022",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.911227300000064,
+    "pointSource": "area",
     "name": "Dealurile Crişanei",
     "names": [
       {
@@ -35879,10 +35879,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-moldovei",
-    "latitude": null,
+    "latitude": 46.744502124000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007565",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.028454175000036,
+    "pointSource": "area",
     "name": "Dealurile Moldovei",
     "names": [
       {
@@ -35902,10 +35902,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-munteniei",
-    "latitude": null,
+    "latitude": 44.994316499000035,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006827",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.55981605000005,
+    "pointSource": "area",
     "name": "Dealurile Munteniei",
     "names": [
       {
@@ -35925,10 +35925,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-munteniei-pgi",
-    "latitude": null,
+    "latitude": 44.994316499000035,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007141",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.55981605000005,
+    "pointSource": "area",
     "name": "Dealurile Munteniei",
     "names": [
       {
@@ -35948,10 +35948,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-olteniei",
-    "latitude": null,
+    "latitude": 44.603097999000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006826",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.555553300000042,
+    "pointSource": "area",
     "name": "Dealurile Olteniei",
     "names": [
       {
@@ -35971,10 +35971,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-satmarului",
-    "latitude": null,
+    "latitude": 47.69876099900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003024",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.46087467500007,
+    "pointSource": "area",
     "name": "Dealurile Sătmarului",
     "names": [
       {
@@ -35994,10 +35994,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-transilvaniei",
-    "latitude": null,
+    "latitude": 46.30964462400004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004929",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.871150050000068,
+    "pointSource": "area",
     "name": "Dealurile Transilvaniei",
     "names": [
       {
@@ -36017,10 +36017,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-vrancei",
-    "latitude": null,
+    "latitude": 45.52873449900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007521",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 26.86239817500004,
+    "pointSource": "area",
     "name": "Dealurile Vrancei",
     "names": [
       {
@@ -36040,10 +36040,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-dealurile-zarandului",
-    "latitude": null,
+    "latitude": 46.29174799900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005487",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.727779300000066,
+    "pointSource": "area",
     "name": "Dealurile Zarandului",
     "names": [
       {
@@ -36063,10 +36063,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-debroi-harslevelu",
-    "latitude": null,
+    "latitude": 47.78708399900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005786",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.17125180000005,
+    "pointSource": "area",
     "name": "Debrői Hárslevelű",
     "names": [
       {
@@ -36086,10 +36086,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-dehesa-penalba",
-    "latitude": null,
+    "latitude": 41.63056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000016881",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -4.52056,
+    "pointSource": "place",
     "name": "Dehesa Peñalba",
     "names": [
       {
@@ -36442,10 +36442,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-dotejo",
-    "latitude": null,
+    "latitude": 39.32159012400004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004262",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -8.458126074999967,
+    "pointSource": "area",
     "name": "DoTejo",
     "names": [
       {
@@ -37206,10 +37206,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-dominio-de-valdepusa",
-    "latitude": null,
+    "latitude": 39.788410499000065,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007651",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -4.157230949999928,
+    "pointSource": "area",
     "name": "Dominio de Valdepusa",
     "names": [
       {
@@ -37628,10 +37628,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-duna",
-    "latitude": null,
+    "latitude": 46.86896774900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006122",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 19.826604175000057,
+    "pointSource": "area",
     "name": "Duna",
     "names": [
       {
@@ -37656,10 +37656,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "hu-duna-tisza-kozi",
-    "latitude": null,
+    "latitude": 46.86896774900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006082",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 19.826604175000057,
+    "pointSource": "area",
     "name": "Duna-Tisza-közi",
     "names": [
       {
@@ -37694,10 +37694,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "hu-dunantuli",
-    "latitude": null,
+    "latitude": 47.08736524900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006446",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.66747205000007,
+    "pointSource": "area",
     "name": "Dunántúli",
     "names": [
       {
@@ -37722,10 +37722,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "pt-duriense",
-    "latitude": null,
+    "latitude": 41.116989499000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004926",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.304835699999956,
+    "pointSource": "area",
     "name": "Duriense",
     "names": [
       {
@@ -38033,10 +38033,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-eisenberg",
-    "latitude": null,
+    "latitude": 47.14333074900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004421",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.263099800000077,
+    "pointSource": "area",
     "name": "Eisenberg",
     "names": [
       {
@@ -38149,10 +38149,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-el-terrerazo",
-    "latitude": null,
+    "latitude": 39.33419824900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006249",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.776777699999968,
+    "pointSource": "area",
     "name": "El Terrerazo",
     "names": [
       {
@@ -38715,10 +38715,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-encostas-d-aire",
-    "latitude": null,
+    "latitude": 39.33142749900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005558",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -9.14376894999998,
+    "pointSource": "area",
     "name": "Encostas d'Aire",
     "names": [
       {
@@ -39537,10 +39537,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-etyeki-pezsgo",
-    "latitude": null,
+    "latitude": 47.4472,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000018015",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.7496,
+    "pointSource": "place",
     "name": "Etyeki Pezsgő",
     "names": [
       {
@@ -40224,10 +40224,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "hu-felso-magyarorszag",
-    "latitude": null,
+    "latitude": 47.969009999000036,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005783",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.17125180000005,
+    "pointSource": "area",
     "name": "Felső-Magyarország",
     "names": [
       {
@@ -40434,10 +40434,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-finca-elez",
-    "latitude": null,
+    "latitude": 38.72272324900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007652",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.899313199999938,
+    "pointSource": "area",
     "name": "Finca Élez",
     "names": [
       {
@@ -42712,10 +42712,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-fured",
-    "latitude": null,
+    "latitude": 46.934889999999996,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000019804",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.7898,
+    "pointSource": "area",
     "name": "Füred",
     "names": [
       {
@@ -43927,9 +43927,9 @@
       }
     ],
     "id": "es-getariako-txakolina",
-    "latitude": 43.30138888888889,
+    "latitude": 43.3044559,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006487",
-    "longitude": 2.205,
+    "longitude": -2.2037374,
     "pointSource": "place",
     "name": "Getariako Txakolina",
     "names": [
@@ -44608,10 +44608,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-graciosa",
-    "latitude": 39.0529,
+    "latitude": 38.33513237400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005124",
-    "longitude": -28.0101,
-    "pointSource": "place",
+    "longitude": -28.14790894999993,
+    "pointSource": "area",
     "name": "Graciosa",
     "names": [
       {
@@ -44946,10 +44946,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-grand-roussillon",
-    "latitude": null,
+    "latitude": 42.84007837400006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000581",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 2.457029050000045,
+    "pointSource": "area",
     "name": "Grand Roussillon",
     "names": [
       {
@@ -45045,10 +45045,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-graves",
-    "latitude": null,
+    "latitude": 44.88376399900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001613",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.473614949999956,
+    "pointSource": "area",
     "name": "Graves",
     "names": [
       {
@@ -46070,10 +46070,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-guijoso",
-    "latitude": null,
+    "latitude": 38.72272324900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007657",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.899313199999938,
+    "pointSource": "area",
     "name": "Guijoso",
     "names": [
       {
@@ -46252,10 +46252,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "be-hagelandse-wijn",
-    "latitude": null,
+    "latitude": 50.898978249000066,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003741",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.0647798000000535,
+    "pointSource": "area",
     "name": "Hagelandse wijn",
     "names": [
       {
@@ -46352,10 +46352,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "be-haspengouwse-wijn",
-    "latitude": null,
+    "latitude": 50.89254274900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003723",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.406274925000076,
+    "pointSource": "area",
     "name": "Haspengouwse wijn",
     "names": [
       {
@@ -47128,10 +47128,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "be-heuvellandse-wijn",
-    "latitude": null,
+    "latitude": 50.83283999900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003743",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 2.852825050000035,
+    "pointSource": "area",
     "name": "Heuvellandse wijn",
     "names": [
       {
@@ -47151,10 +47151,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-hrvatska-istra",
-    "latitude": null,
+    "latitude": 45.20389,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010725",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.84,
+    "pointSource": "area",
     "name": "Hrvatska Istra",
     "names": [
       {
@@ -47174,10 +47174,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-hrvatsko-podunavlje",
-    "latitude": null,
+    "latitude": 45.37377,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010726",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.69251,
+    "pointSource": "area",
     "name": "Hrvatsko Podunavlje",
     "names": [
       {
@@ -47431,9 +47431,9 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-ibiza",
-    "latitude": 38.98,
+    "latitude": 38.908888888889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002931",
-    "longitude": 1.43,
+    "longitude": 1.4327777777778,
     "pointSource": "place",
     "name": "Ibiza",
     "names": [
@@ -48152,10 +48152,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-istocna-kontinentalna-hrvatska",
-    "latitude": null,
+    "latitude": 45.411885,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010728",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.3045883333335,
+    "pointSource": "area",
     "name": "Istočna kontinentalna Hrvatska",
     "names": [
       {
@@ -48243,10 +48243,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-izsaki-arany-sarfeher",
-    "latitude": null,
+    "latitude": 46.519442249000065,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005941",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 19.446312550000073,
+    "pointSource": "area",
     "name": "Izsáki Arany Sárfehér",
     "names": [
       {
@@ -48733,10 +48733,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-juznoslovenska",
-    "latitude": null,
+    "latitude": 48.33061299900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006683",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.61439917900003,
+    "pointSource": "area",
     "name": "Južnoslovenská",
     "names": [
       {
@@ -48789,10 +48789,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-kamptal",
-    "latitude": null,
+    "latitude": 48.221426749000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004222",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.761518300000034,
+    "pointSource": "area",
     "name": "Kamptal",
     "names": [
       {
@@ -48812,10 +48812,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-karpatska-perla",
-    "latitude": null,
+    "latitude": 48.52560899900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007210",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.003653050000025,
+    "pointSource": "area",
     "name": "Karpatská perla",
     "names": [
       {
@@ -48858,10 +48858,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-kremstal",
-    "latitude": null,
+    "latitude": 48.221426749000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004143",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.761518300000034,
+    "pointSource": "area",
     "name": "Kremstal",
     "names": [
       {
@@ -48881,10 +48881,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-kunsag",
-    "latitude": null,
+    "latitude": 47.21849324900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005942",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 19.446312550000073,
+    "pointSource": "area",
     "name": "Kunság",
     "names": [
       {
@@ -48909,10 +48909,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-kali",
-    "latitude": null,
+    "latitude": 47.116820999000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005797",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.66747205000007,
+    "pointSource": "area",
     "name": "Káli",
     "names": [
       {
@@ -48989,10 +48989,10 @@
       }
     ],
     "id": "fr-l-etoile",
-    "latitude": null,
+    "latitude": 46.714166666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001502",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.5355555555556,
+    "pointSource": "place",
     "name": "L'Etoile",
     "names": [
       {
@@ -49694,10 +49694,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-laderas-del-genil",
-    "latitude": null,
+    "latitude": 37.388683499000024,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007005",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -3.267635949999942,
+    "pointSource": "area",
     "name": "Laderas del Genil",
     "names": [
       {
@@ -50154,10 +50154,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-lagoa",
-    "latitude": null,
+    "latitude": 37.133333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005184",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -8.45,
+    "pointSource": "place",
     "name": "Lagoa",
     "names": [
       {
@@ -50820,10 +50820,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-landwein-main",
-    "latitude": null,
+    "latitude": 48.91745512400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004686",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.407821,
+    "pointSource": "area",
     "name": "Landwein Main",
     "names": [
       {
@@ -50843,10 +50843,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-landwein-neckar",
-    "latitude": null,
+    "latitude": 48.661922624000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004688",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.003718750000075,
+    "pointSource": "area",
     "name": "Landwein Neckar",
     "names": [
       {
@@ -50866,10 +50866,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-landwein-oberrhein",
-    "latitude": null,
+    "latitude": 48.661922624000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004689",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.003718750000075,
+    "pointSource": "area",
     "name": "Landwein Oberrhein",
     "names": [
       {
@@ -50889,10 +50889,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-landwein-rhein",
-    "latitude": null,
+    "latitude": 50.526196749000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004690",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.663871,
+    "pointSource": "area",
     "name": "Landwein Rhein",
     "names": [
       {
@@ -50912,10 +50912,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-landwein-rhein-neckar",
-    "latitude": null,
+    "latitude": 48.661922624000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004691",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.003718750000075,
+    "pointSource": "area",
     "name": "Landwein Rhein-Neckar",
     "names": [
       {
@@ -50935,10 +50935,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-landwein-der-mosel",
-    "latitude": null,
+    "latitude": 49.66491974900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004687",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.095122999999999,
+    "pointSource": "area",
     "name": "Landwein der Mosel",
     "names": [
       {
@@ -50958,10 +50958,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-landwein-der-ruwer",
-    "latitude": null,
+    "latitude": 49.95446637400005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004692",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.310413,
+    "pointSource": "area",
     "name": "Landwein der Ruwer",
     "names": [
       {
@@ -50981,10 +50981,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-landwein-der-saar",
-    "latitude": null,
+    "latitude": 49.95446637400005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004693",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.310413,
+    "pointSource": "area",
     "name": "Landwein der Saar",
     "names": [
       {
@@ -51675,9 +51675,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-lebrija",
-    "latitude": 36.919444444444,
+    "latitude": 36.92077,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007202",
-    "longitude": -6.0780555555556,
+    "longitude": -6.07529,
     "pointSource": "place",
     "name": "Lebrija",
     "names": [
@@ -51698,10 +51698,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-lechinta",
-    "latitude": null,
+    "latitude": 46.89218824900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006150",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 24.574025550000044,
+    "pointSource": "area",
     "name": "Lechinţa",
     "names": [
       {
@@ -51721,10 +51721,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-leithaberg",
-    "latitude": null,
+    "latitude": 47.47497599900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004644",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.578900300000043,
+    "pointSource": "area",
     "name": "Leithaberg",
     "names": [
       {
@@ -52760,10 +52760,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cz-litomericka",
-    "latitude": null,
+    "latitude": 50.61025124900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004964",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.179787300000044,
+    "pointSource": "area",
     "name": "Litoměřická",
     "names": [
       {
@@ -53243,10 +53243,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-los-balagueses",
-    "latitude": null,
+    "latitude": 39.33419824900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006285",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.776777699999968,
+    "pointSource": "area",
     "name": "Los Balagueses",
     "names": [
       {
@@ -53266,10 +53266,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-los-cerrillos",
-    "latitude": null,
+    "latitude": 39.12917,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015085",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -3.08889,
+    "pointSource": "place",
     "name": "Los Cerrillos",
     "names": [
       {
@@ -53289,10 +53289,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-los-palacios",
-    "latitude": null,
+    "latitude": 37.519843999000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007102",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -5.595983449999949,
+    "pointSource": "area",
     "name": "Los Palacios",
     "names": [
       {
@@ -53365,10 +53365,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-loupiac",
-    "latitude": null,
+    "latitude": 44.627777777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001609",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.29805555555556,
+    "pointSource": "place",
     "name": "Loupiac",
     "names": [
       {
@@ -53712,10 +53712,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "be-maasvallei-limburg",
-    "latitude": null,
+    "latitude": 51.0833,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000012784",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.78556,
+    "pointSource": "area",
     "name": "Maasvallei Limburg",
     "names": [
       {
@@ -54017,10 +54017,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-madeirense",
-    "latitude": null,
+    "latitude": 32.75176999900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007660",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -16.972538449999945,
+    "pointSource": "area",
     "name": "Madeirense",
     "names": [
       {
@@ -54226,10 +54226,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-malokarpatska",
-    "latitude": null,
+    "latitude": 48.341126325500056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006690",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.398102489500047,
+    "pointSource": "area",
     "name": "Malokarpatská",
     "names": [
       {
@@ -54681,10 +54681,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-malvasia-paros",
-    "latitude": null,
+    "latitude": 37.04333224900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007426",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.02570167500005,
+    "pointSource": "area",
     "name": "Malvasia Πάρος",
     "names": [
       {
@@ -54709,10 +54709,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-malvasia-siteias",
-    "latitude": null,
+    "latitude": 35.169620499000075,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007561",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 26.08456041100004,
+    "pointSource": "area",
     "name": "Malvasia Σητείας",
     "names": [
       {
@@ -54737,10 +54737,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-malvasia-chandakas-candia",
-    "latitude": null,
+    "latitude": 35.17707449900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007481",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.13654255000006,
+    "pointSource": "area",
     "name": "Malvasia Χάνδακας-Candia",
     "names": [
       {
@@ -56574,10 +56574,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-mecklenburger-landwein",
-    "latitude": null,
+    "latitude": 53.79813824900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004694",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 12.502915,
+    "pointSource": "area",
     "name": "Mecklenburger Landwein",
     "names": [
       {
@@ -56597,9 +56597,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-mehedinti",
-    "latitude": 44.63,
+    "latitude": 44.6034908,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006681",
-    "longitude": 22.88,
+    "longitude": 23.0580419,
     "pointSource": "place",
     "name": "Mehedinţi",
     "names": [
@@ -57110,10 +57110,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-metliska-crnina",
-    "latitude": null,
+    "latitude": 45.722109749000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007442",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.972053300000027,
+    "pointSource": "area",
     "name": "Metliška črnina",
     "names": [
       {
@@ -57434,10 +57434,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-mitteldeutscher-landwein",
-    "latitude": null,
+    "latitude": 51.45817924900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004696",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.570118700000052,
+    "pointSource": "area",
     "name": "Mitteldeutscher Landwein",
     "names": [
       {
@@ -58467,10 +58467,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-montagny",
-    "latitude": null,
+    "latitude": 46.65575049900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002465",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.543882050000036,
+    "pointSource": "area",
     "name": "Montagny",
     "names": [
       {
@@ -59330,10 +59330,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-montepulciano-d-abruzzo",
-    "latitude": null,
+    "latitude": 42.222751499000054,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002803",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.87815180000004,
+    "pointSource": "area",
     "name": "Montepulciano d'Abruzzo",
     "names": [
       {
@@ -60302,10 +60302,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "de-monzinger-niederberg",
-    "latitude": null,
+    "latitude": 49.79917,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015112",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.59083,
+    "pointSource": "place",
     "name": "Monzinger Niederberg",
     "names": [
       {
@@ -60325,9 +60325,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cz-morava",
-    "latitude": 49.5,
+    "latitude": 49.190665,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005161",
-    "longitude": 17,
+    "longitude": 16.606746,
     "pointSource": "place",
     "name": "Morava",
     "names": [
@@ -61412,10 +61412,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-mura",
-    "latitude": null,
+    "latitude": 46.481985,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000016795",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.66383,
+    "pointSource": "area",
     "name": "Mura",
     "names": [
       {
@@ -61446,9 +61446,9 @@
       }
     ],
     "id": "es-murcia",
-    "latitude": 38,
+    "latitude": 37.9347521,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006242",
-    "longitude": -1.8333333333333,
+    "longitude": -1.1131029,
     "pointSource": "place",
     "name": "Murcia",
     "names": [
@@ -61667,10 +61667,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-muscadet-coteaux-de-la-loire",
-    "latitude": null,
+    "latitude": 47.368635124000065,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002504",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.1504991999999274,
+    "pointSource": "area",
     "name": "Muscadet Coteaux de la Loire",
     "names": [
       {
@@ -62482,10 +62482,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-muskat-momjanski",
-    "latitude": null,
+    "latitude": 45.439,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000014449",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.709,
+    "pointSource": "place",
     "name": "Muškat momjanski",
     "names": [
       {
@@ -62659,10 +62659,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "fr-mediterranee",
-    "latitude": 43.55,
+    "latitude": 44.16412524900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003039",
-    "longitude": 10.31666667,
-    "pointSource": "place",
+    "longitude": 5.550321050000036,
+    "pointSource": "area",
     "name": "Méditerranée",
     "names": [
       {
@@ -62927,10 +62927,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cz-melnicka",
-    "latitude": null,
+    "latitude": 50.060109999000076,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005010",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.830857707000064,
+    "pointSource": "area",
     "name": "Mělnická",
     "names": [
       {
@@ -62950,10 +62950,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-nagy-somlo",
-    "latitude": null,
+    "latitude": 47.10209312400005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005798",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.18563592500007,
+    "pointSource": "area",
     "name": "Nagy-Somló",
     "names": [
       {
@@ -63069,10 +63069,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-nahegauer-landwein",
-    "latitude": null,
+    "latitude": 49.95446637400005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004697",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.310413,
+    "pointSource": "area",
     "name": "Nahegauer Landwein",
     "names": [
       {
@@ -63694,10 +63694,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-nicoresti",
-    "latitude": null,
+    "latitude": 45.929166666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003285",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.311666666667,
+    "pointSource": "place",
     "name": "Nicoreşti",
     "names": [
       {
@@ -63740,10 +63740,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-nitrianska",
-    "latitude": null,
+    "latitude": 48.36174437400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006685",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.931496425000063,
+    "pointSource": "area",
     "name": "Nitrianska",
     "names": [
       {
@@ -63773,10 +63773,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-nivegy-volgy",
-    "latitude": null,
+    "latitude": 46.91294,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000018334",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.67627,
+    "pointSource": "area",
     "name": "Nivegy-völgy",
     "names": [
       {
@@ -64126,10 +64126,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cz-novosedelske-slamove-vino",
-    "latitude": null,
+    "latitude": 49.12516324900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006722",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.59461655000007,
+    "pointSource": "area",
     "name": "Novosedelské Slámové víno",
     "names": [
       {
@@ -64417,10 +64417,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-odobesti",
-    "latitude": null,
+    "latitude": 45.7497328,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007181",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.1155094,
+    "pointSource": "place",
     "name": "Odobeşti",
     "names": [
       {
@@ -64548,9 +64548,9 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-ogliastra",
-    "latitude": 39.866638888889,
+    "latitude": 39.8871506,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005096",
-    "longitude": 9.55,
+    "longitude": 9.4790076,
     "pointSource": "place",
     "name": "Ogliastra",
     "names": [
@@ -65457,10 +65457,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-osco",
-    "latitude": null,
+    "latitude": 41.71722224900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005065",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.769681050000031,
+    "pointSource": "area",
     "name": "Osco",
     "names": [
       {
@@ -65788,10 +65788,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-pago-florentino",
-    "latitude": null,
+    "latitude": 38.95980274900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007656",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -3.842439949999971,
+    "pointSource": "area",
     "name": "Pago Florentino",
     "names": [
       {
@@ -66009,10 +66009,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-palette",
-    "latitude": null,
+    "latitude": 43.54202274900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000322",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.376724213000045,
+    "pointSource": "area",
     "name": "Palette",
     "names": [
       {
@@ -66227,10 +66227,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-pannon",
-    "latitude": null,
+    "latitude": 46.879827499000044,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006691",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.559119550000048,
+    "pointSource": "area",
     "name": "Pannon",
     "names": [
       {
@@ -66785,10 +66785,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "fr-pays-de-brive",
-    "latitude": null,
+    "latitude": 45.342651499000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003621",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 1.877880550000043,
+    "pointSource": "area",
     "name": "Pays de Brive",
     "names": [
       {
@@ -67729,10 +67729,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-pfalzer-landwein",
-    "latitude": null,
+    "latitude": 49.95446637400005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004698",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.310413,
+    "pointSource": "area",
     "name": "Pfälzer Landwein",
     "names": [
       {
@@ -68025,10 +68025,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-pico",
-    "latitude": 41.695,
+    "latitude": 38.33513237400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005045",
-    "longitude": -8.4197222222222,
-    "pointSource": "place",
+    "longitude": -28.14790894999993,
+    "pointSource": "area",
     "name": "Pico",
     "names": [
       {
@@ -68359,10 +68359,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-pietroasa",
-    "latitude": null,
+    "latitude": 45.26867199900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003082",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 26.758498300000042,
+    "pointSource": "area",
     "name": "Pietroasa",
     "names": [
       {
@@ -68382,10 +68382,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-pineau-des-charentes",
-    "latitude": null,
+    "latitude": 45.698243124000044,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000801",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.049830324999959485,
+    "pointSource": "area",
     "name": "Pineau des Charentes",
     "names": [
       {
@@ -68854,10 +68854,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-plesivica",
-    "latitude": null,
+    "latitude": 45.6572,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010730",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.51667,
+    "pointSource": "area",
     "name": "Plešivica",
     "names": [
       {
@@ -68877,10 +68877,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "si-podravje",
-    "latitude": null,
+    "latitude": 46.48090049900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006705",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.809518800000035,
+    "pointSource": "area",
     "name": "Podravje",
     "names": [
       {
@@ -68900,10 +68900,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-pokuplje",
-    "latitude": null,
+    "latitude": 45.34901,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010731",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.86538,
+    "pointSource": "area",
     "name": "Pokuplje",
     "names": [
       {
@@ -69336,10 +69336,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-porto",
-    "latitude": 41.15,
+    "latitude": 41.116989499000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006172",
-    "longitude": -8.610833333333334,
-    "pointSource": "place",
+    "longitude": -7.304835699999956,
+    "pointSource": "area",
     "name": "Porto",
     "names": [
       {
@@ -69535,10 +69535,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "si-posavje",
-    "latitude": null,
+    "latitude": 45.95,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006847",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.48333333,
+    "pointSource": "place",
     "name": "Posavje",
     "names": [
       {
@@ -70136,10 +70136,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-prigorje-bilogora",
-    "latitude": null,
+    "latitude": 46.01283,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010732",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.85167,
+    "pointSource": "area",
     "name": "Prigorje-Bilogora",
     "names": [
       {
@@ -70387,10 +70387,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-primorska-hrvatska",
-    "latitude": null,
+    "latitude": 44.060199999999995,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010733",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.436945,
+    "pointSource": "area",
     "name": "Primorska Hrvatska",
     "names": [
       {
@@ -72072,10 +72072,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-regensburger-landwein",
-    "latitude": null,
+    "latitude": 48.91745512400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004700",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.407821,
+    "pointSource": "area",
     "name": "Regensburger Landwein",
     "names": [
       {
@@ -72371,10 +72371,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-rheinburgen-landwein",
-    "latitude": null,
+    "latitude": 50.69088206150005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004701",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.487142,
+    "pointSource": "area",
     "name": "Rheinburgen-Landwein",
     "names": [
       {
@@ -72480,10 +72480,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-rheingauer-landwein",
-    "latitude": null,
+    "latitude": 50.526196749000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004702",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.003138700000022,
+    "pointSource": "area",
     "name": "Rheingauer Landwein",
     "names": [
       {
@@ -72618,10 +72618,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-rheinischer-landwein",
-    "latitude": null,
+    "latitude": 49.95446637400005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004703",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.310413,
+    "pointSource": "area",
     "name": "Rheinischer Landwein",
     "names": [
       {
@@ -73376,10 +73376,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-ribera-del-queiles",
-    "latitude": null,
+    "latitude": 42.22622174900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001361",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.2530188249999694,
+    "pointSource": "area",
     "name": "Ribera del Queiles",
     "names": [
       {
@@ -74209,10 +74209,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "nl-rivierenland",
-    "latitude": null,
+    "latitude": 51.87333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000017964",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 5.63375,
+    "pointSource": "area",
     "name": "Rivierenland",
     "names": [
       {
@@ -75025,10 +75025,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-rosalia",
-    "latitude": null,
+    "latitude": 47.746,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000017144",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.417,
+    "pointSource": "place",
     "name": "Rosalia",
     "names": [
       {
@@ -75950,10 +75950,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-rose-d-anjou",
-    "latitude": null,
+    "latitude": 46.612022499000034,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001141",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.341563949999966,
+    "pointSource": "area",
     "name": "Rosé d'Anjou",
     "names": [
       {
@@ -76175,10 +76175,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-rotae",
-    "latitude": null,
+    "latitude": 41.64860574900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005066",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.231633800000054,
+    "pointSource": "area",
     "name": "Rotae",
     "names": [
       {
@@ -76819,10 +76819,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-ruster-ausbruch",
-    "latitude": null,
+    "latitude": 47.80083,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000017207",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.67583,
+    "pointSource": "place",
     "name": "Ruster Ausbruch",
     "names": [
       {
@@ -76842,10 +76842,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-regnie",
-    "latitude": null,
+    "latitude": 45.88021849900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002826",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.703022550000071,
+    "pointSource": "area",
     "name": "Régnié",
     "names": [
       {
@@ -76974,10 +76974,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-rio-negro",
-    "latitude": null,
+    "latitude": 40.9482,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000019772",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -3.033595,
+    "pointSource": "area",
     "name": "Río Negro",
     "names": [
       {
@@ -77181,10 +77181,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-saarlandischer-landwein",
-    "latitude": null,
+    "latitude": 49.37537312400008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004704",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 6.879833,
+    "pointSource": "area",
     "name": "Saarländischer Landwein",
     "names": [
       {
@@ -77491,10 +77491,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-saint-aubin",
-    "latitude": null,
+    "latitude": 46.950277777778,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001601",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.7094444444444,
+    "pointSource": "place",
     "name": "Saint-Aubin",
     "names": [
       {
@@ -78518,10 +78518,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-saint-romain",
-    "latitude": null,
+    "latitude": 46.999722222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001441",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.7105555555556,
+    "pointSource": "place",
     "name": "Saint-Romain",
     "names": [
       {
@@ -79244,10 +79244,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-salina",
-    "latitude": null,
+    "latitude": 38.04855899900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005781",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.918021800000076,
+    "pointSource": "area",
     "name": "Salina",
     "names": [
       {
@@ -79302,10 +79302,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-salzburg",
-    "latitude": 47.8,
+    "latitude": 47.492474499000025,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005518",
-    "longitude": 13.045,
-    "pointSource": "place",
+    "longitude": 13.292685625000047,
+    "pointSource": "area",
     "name": "Salzburg",
     "names": [
       {
@@ -80678,10 +80678,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-sarica-niculitel",
-    "latitude": null,
+    "latitude": 45.038482749000025,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007364",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 28.85655330000003,
+    "pointSource": "area",
     "name": "Sarica Niculiţel",
     "names": [
       {
@@ -81087,10 +81087,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-savennieres-roche-aux-moines",
-    "latitude": null,
+    "latitude": 47.38933949900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002521",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.559810949999928,
+    "pointSource": "area",
     "name": "Savennières Roche aux Moines",
     "names": [
       {
@@ -81578,10 +81578,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-schleswig-holsteinischer-landwein",
-    "latitude": null,
+    "latitude": 54.20867774900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004706",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.70404945000007,
+    "pointSource": "area",
     "name": "Schleswig-Holsteinischer Landwein",
     "names": [
       {
@@ -81624,10 +81624,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-schwabischer-landwein",
-    "latitude": null,
+    "latitude": 48.661922624000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004707",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.003718750000075,
+    "pointSource": "area",
     "name": "Schwäbischer Landwein",
     "names": [
       {
@@ -81853,10 +81853,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-sebes-apold",
-    "latitude": null,
+    "latitude": 45.95080362400006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006154",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.871150050000068,
+    "pointSource": "area",
     "name": "Sebeş-Apold",
     "names": [
       {
@@ -81957,10 +81957,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-serra-de-tramuntana-costa-nord",
-    "latitude": null,
+    "latitude": 39.61333249900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001964",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 2.911379550000049,
+    "pointSource": "area",
     "name": "Serra de Tramuntana-Costa Nord",
     "names": [
       {
@@ -83104,10 +83104,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-sjeverna-dalmacija",
-    "latitude": null,
+    "latitude": 44.060199999999995,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010734",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.436945,
+    "pointSource": "area",
     "name": "Sjeverna Dalmacija",
     "names": [
       {
@@ -83150,10 +83150,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-skalicky-rubin",
-    "latitude": null,
+    "latitude": 48.8084,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000012884",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.222895,
+    "pointSource": "area",
     "name": "Skalický rubín",
     "names": [
       {
@@ -83219,10 +83219,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "sk-slovenska",
-    "latitude": null,
+    "latitude": 48.67264374900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006706",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 19.700032300000032,
+    "pointSource": "area",
     "name": "Slovenská",
     "names": [
       {
@@ -83252,10 +83252,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cz-slovacka",
-    "latitude": null,
+    "latitude": 49.16110124900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004862",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.178652800000066,
+    "pointSource": "area",
     "name": "Slovácká",
     "names": [
       {
@@ -83476,10 +83476,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-soltvadkerti",
-    "latitude": null,
+    "latitude": 46.58083,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000014933",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 19.39361,
+    "pointSource": "place",
     "name": "Soltvadkerti",
     "names": [
       {
@@ -84020,10 +84020,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-srednja-i-juzna-dalmacija",
-    "latitude": null,
+    "latitude": 43.265,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010736",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.05694,
+    "pointSource": "area",
     "name": "Srednja i Južna Dalmacija",
     "names": [
       {
@@ -84043,10 +84043,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-starkenburger-landwein",
-    "latitude": null,
+    "latitude": 50.526196749000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004708",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.003138700000022,
+    "pointSource": "area",
     "name": "Starkenburger Landwein",
     "names": [
       {
@@ -84095,10 +84095,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "at-steirerland",
-    "latitude": null,
+    "latitude": 47.22011099900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004282",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.867556800000045,
+    "pointSource": "area",
     "name": "Steirerland",
     "names": [
       {
@@ -84118,10 +84118,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-stredoslovenska",
-    "latitude": null,
+    "latitude": 48.36174437400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006395",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 18.931496425000063,
+    "pointSource": "area",
     "name": "Stredoslovenská",
     "names": [
       {
@@ -84414,10 +84414,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-sachsischer-landwein",
-    "latitude": null,
+    "latitude": 51.989453499000035,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004705",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.01572,
+    "pointSource": "area",
     "name": "Sächsischer Landwein",
     "names": [
       {
@@ -84460,10 +84460,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-tokajske-vino-zo-slovenskej-oblasti",
-    "latitude": null,
+    "latitude": 48.4394,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000018565",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.68333,
+    "pointSource": "area",
     "name": "TOKAJSKÉ VÍNO zo slovenskej oblasti",
     "names": [
       {
@@ -84791,10 +84791,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "de-taubertaler-landwein",
-    "latitude": null,
+    "latitude": 48.78968887400006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004709",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.205769875000037,
+    "pointSource": "area",
     "name": "Taubertäler Landwein",
     "names": [
       {
@@ -85128,10 +85128,10 @@
       }
     ],
     "id": "pt-tejo",
-    "latitude": null,
+    "latitude": 39.32159012400004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005421",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -8.458126074999967,
+    "pointSource": "area",
     "name": "Tejo",
     "names": [
       {
@@ -85151,10 +85151,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-teran",
-    "latitude": null,
+    "latitude": 45.66294499900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007443",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 14.150730487000061,
+    "pointSource": "area",
     "name": "Teran",
     "names": [
       {
@@ -85214,10 +85214,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-terasele-dunarii",
-    "latitude": null,
+    "latitude": 44.26897424900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006704",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.206972050000047,
+    "pointSource": "area",
     "name": "Terasele Dunării",
     "names": [
       {
@@ -85429,10 +85429,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-terra-d-otranto",
-    "latitude": null,
+    "latitude": 40.54892724900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005569",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 17.69629580000003,
+    "pointSource": "area",
     "name": "Terra d'Otranto",
     "names": [
       {
@@ -85630,10 +85630,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "pt-terras-madeirenses",
-    "latitude": null,
+    "latitude": 32.75176999900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007662",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -16.972538449999945,
+    "pointSource": "area",
     "name": "Terras Madeirenses",
     "names": [
       {
@@ -85653,10 +85653,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "pt-terras-da-beira",
-    "latitude": null,
+    "latitude": 40.671685,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015120",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.2675,
+    "pointSource": "area",
     "name": "Terras da Beira",
     "names": [
       {
@@ -85676,10 +85676,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "pt-terras-de-cister",
-    "latitude": null,
+    "latitude": 41.056805,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015124",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.592225,
+    "pointSource": "area",
     "name": "Terras de Cister",
     "names": [
       {
@@ -85699,10 +85699,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "pt-terras-do-dao",
-    "latitude": null,
+    "latitude": 40.6,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015119",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.91389,
+    "pointSource": "area",
     "name": "Terras do Dão",
     "names": [
       {
@@ -85972,10 +85972,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-terre-abruzzesi",
-    "latitude": null,
+    "latitude": 42.21667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000018906",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.83333,
+    "pointSource": "place",
     "name": "Terre Abruzzesi",
     "names": [
       {
@@ -86537,10 +86537,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-terre-dell-alta-val-d-agri",
-    "latitude": null,
+    "latitude": 40.51736099900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002488",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.867263800000046,
+    "pointSource": "area",
     "name": "Terre dell'Alta Val d'Agri",
     "names": [
       {
@@ -86595,10 +86595,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-terre-di-casole",
-    "latitude": null,
+    "latitude": 43.16712774900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006545",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.445297800000048,
+    "pointSource": "area",
     "name": "Terre di Casole",
     "names": [
       {
@@ -86847,10 +86847,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-terre-di-pisa",
-    "latitude": null,
+    "latitude": 43.47171749900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006908",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.635900050000032,
+    "pointSource": "area",
     "name": "Terre di Pisa",
     "names": [
       {
@@ -86963,10 +86963,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "fr-terres-du-midi",
-    "latitude": null,
+    "latitude": 43.347125,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000016239",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 3.313615,
+    "pointSource": "area",
     "name": "Terres du Midi",
     "names": [
       {
@@ -87089,10 +87089,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-tharsys",
-    "latitude": null,
+    "latitude": 39.48854,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000019602",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.10231,
+    "pointSource": "place",
     "name": "Tharsys",
     "names": [
       {
@@ -87460,9 +87460,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-tirol",
-    "latitude": 47.266666666667,
+    "latitude": 47.223193,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005530",
-    "longitude": 11.4,
+    "longitude": 11.5261028,
     "pointSource": "place",
     "name": "Tirol",
     "names": [
@@ -87653,9 +87653,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hu-tolna",
-    "latitude": 46.5,
+    "latitude": 46.425,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006462",
-    "longitude": 18.583333333333,
+    "longitude": 18.775,
     "pointSource": "place",
     "name": "Tolna",
     "names": [
@@ -87925,9 +87925,9 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-torreperogil",
-    "latitude": 38.034339,
+    "latitude": 38.0354,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007132",
-    "longitude": -3.291725,
+    "longitude": -3.28998,
     "pointSource": "place",
     "name": "Torreperogil",
     "names": [
@@ -88287,10 +88287,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-traisental",
-    "latitude": null,
+    "latitude": 48.221426749000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004223",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.761518300000034,
+    "pointSource": "area",
     "name": "Traisental",
     "names": [
       {
@@ -88310,10 +88310,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "pt-transmontano",
-    "latitude": null,
+    "latitude": 41.59298324900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006342",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.154405449999956,
+    "pointSource": "area",
     "name": "Transmontano",
     "names": [
       {
@@ -88726,10 +88726,10 @@
       }
     ],
     "id": "pt-tras-os-montes",
-    "latitude": null,
+    "latitude": 41.59298324900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006341",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.154405449999956,
+    "pointSource": "area",
     "name": "Trás-os-Montes",
     "names": [
       {
@@ -88910,10 +88910,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "pt-tavora-varosa",
-    "latitude": null,
+    "latitude": 41.116989499000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006445",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.304835699999956,
+    "pointSource": "area",
     "name": "Távora-Varosa",
     "names": [
       {
@@ -88933,10 +88933,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-tarnave",
-    "latitude": null,
+    "latitude": 46.01257674900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004883",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 24.27866380000006,
+    "pointSource": "area",
     "name": "Târnave",
     "names": [
       {
@@ -88956,10 +88956,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-tarnave-pdo",
-    "latitude": null,
+    "latitude": 46.01257674900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006561",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 24.27866380000006,
+    "pointSource": "area",
     "name": "Târnave",
     "names": [
       {
@@ -89092,10 +89092,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "de-uhlen-laubach",
-    "latitude": null,
+    "latitude": 51.82306,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000014262",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.45028,
+    "pointSource": "place",
     "name": "Uhlen Laubach",
     "names": [
       {
@@ -89115,10 +89115,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "de-uhlen-roth-lay",
-    "latitude": null,
+    "latitude": 50.306704999999994,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000014263",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 7.491055,
+    "pointSource": "area",
     "name": "Uhlen Roth Lay",
     "names": [
       {
@@ -89232,10 +89232,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "es-urbezo",
-    "latitude": null,
+    "latitude": 41.33733,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000016755",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -1.22444,
+    "pointSource": "place",
     "name": "Urbezo",
     "names": [
       {
@@ -89954,10 +89954,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-val-di-cornia",
-    "latitude": null,
+    "latitude": 43.37442774900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006962",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.590013800000037,
+    "pointSource": "area",
     "name": "Val di Cornia",
     "names": [
       {
@@ -90230,10 +90230,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-valcalepio",
-    "latitude": null,
+    "latitude": 45.75677649900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005069",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 9.854016800000068,
+    "pointSource": "area",
     "name": "Valcalepio",
     "names": [
       {
@@ -90308,10 +90308,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-valcamonica",
-    "latitude": null,
+    "latitude": 45.77929874900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005087",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 10.33809905000004,
+    "pointSource": "area",
     "name": "Valcamonica",
     "names": [
       {
@@ -91124,10 +91124,10 @@
       }
     ],
     "id": "es-valencia",
-    "latitude": 39.47,
+    "latitude": 38.72272324900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006603",
-    "longitude": -0.3763888888888889,
-    "pointSource": "place",
+    "longitude": -0.776777699999968,
+    "pointSource": "area",
     "name": "Valencia",
     "names": [
       {
@@ -91339,10 +91339,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-valle-belice",
-    "latitude": null,
+    "latitude": 37.65019612400005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005821",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.537256175000039,
+    "pointSource": "area",
     "name": "Valle Belice",
     "names": [
       {
@@ -91663,10 +91663,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-valle-del-cinca",
-    "latitude": null,
+    "latitude": 42.136127249000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004893",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -0.081396949999942,
+    "pointSource": "area",
     "name": "Valle del Cinca",
     "names": [
       {
@@ -91740,10 +91740,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-valle-del-mino-ourense",
-    "latitude": null,
+    "latitude": 42.19303699900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007130",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -7.550119699999925,
+    "pointSource": "area",
     "name": "Valle del Miño-Ourense",
     "names": [
       {
@@ -91927,10 +91927,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-valles-de-sadacia",
-    "latitude": null,
+    "latitude": 42.28162574900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005142",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -2.406504949999942,
+    "pointSource": "area",
     "name": "Valles de Sadacia",
     "names": [
       {
@@ -92914,10 +92914,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cz-velkopavlovicka",
-    "latitude": null,
+    "latitude": 49.12516324900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005016",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.59461655000007,
+    "pointSource": "area",
     "name": "Velkopavlovická",
     "names": [
       {
@@ -94582,10 +94582,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "fr-vicomte-d-aumelas",
-    "latitude": null,
+    "latitude": 43.59275424900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003043",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 3.367053050000038,
+    "pointSource": "area",
     "name": "Vicomté d'Aumelas",
     "names": [
       {
@@ -94663,10 +94663,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "it-vigneti-della-serenissima",
-    "latitude": null,
+    "latitude": 45.63464724900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004833",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.79851855000004,
+    "pointSource": "area",
     "name": "Vigneti della Serenissima",
     "names": [
       {
@@ -94726,10 +94726,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "it-vigneti-delle-dolomiti",
-    "latitude": null,
+    "latitude": 46.28087799900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004684",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 11.430563050000046,
+    "pointSource": "area",
     "name": "Vigneti delle Dolomiti",
     "names": [
       {
@@ -94789,10 +94789,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-viile-carasului",
-    "latitude": null,
+    "latitude": 45.40968112400006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005488",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.721357925000035,
+    "pointSource": "area",
     "name": "Viile Caraşului",
     "names": [
       {
@@ -94812,10 +94812,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "ro-viile-timisului",
-    "latitude": null,
+    "latitude": 45.80139,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003027",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.51333,
+    "pointSource": "area",
     "name": "Viile Timişului",
     "names": [
       {
@@ -94956,9 +94956,9 @@
     "giType": "PGI",
     "grapes": [],
     "id": "es-villaviciosa-de-cordoba",
-    "latitude": 38.0757887,
+    "latitude": 38.083333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007138",
-    "longitude": -5.0144052,
+    "longitude": -5.0166666666667,
     "pointSource": "place",
     "name": "Villaviciosa de Córdoba",
     "names": [
@@ -95699,10 +95699,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "be-vin-mousseux-de-qualite-de-wallonie",
-    "latitude": null,
+    "latitude": 50.154551999000034,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005345",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.793760300000031,
+    "pointSource": "area",
     "name": "Vin mousseux de qualité de Wallonie",
     "names": [
       {
@@ -95743,10 +95743,10 @@
       }
     ],
     "id": "pt-vinho-verde",
-    "latitude": null,
+    "latitude": 41.61758524900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003864",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": -8.428148199999953,
+    "pointSource": "area",
     "name": "Vinho Verde",
     "names": [
       {
@@ -95938,10 +95938,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-vinohradnicka-oblast-tokaj",
-    "latitude": null,
+    "latitude": 48.67682674900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003562",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.284464800000023,
+    "pointSource": "area",
     "name": "Vinohradnícka oblasť Tokaj",
     "names": [
       {
@@ -96327,10 +96327,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "be-vlaamse-landwijn",
-    "latitude": null,
+    "latitude": 51.09640324900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003749",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.200525800000037,
+    "pointSource": "area",
     "name": "Vlaamse landwijn",
     "names": [
       {
@@ -96350,10 +96350,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "be-vlaamse-mousserende-kwaliteitswijn",
-    "latitude": null,
+    "latitude": 51.09640324900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003781",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 4.200525800000037,
+    "pointSource": "area",
     "name": "Vlaamse mousserende kwaliteitswijn",
     "names": [
       {
@@ -96684,10 +96684,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-vulkanland-steiermark",
-    "latitude": null,
+    "latitude": 47.11618424900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005525",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.795469050000065,
+    "pointSource": "area",
     "name": "Vulkanland Steiermark",
     "names": [
       {
@@ -96785,10 +96785,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "sk-vychodoslovenska",
-    "latitude": null,
+    "latitude": 48.67682674900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006368",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.284464800000023,
+    "pointSource": "area",
     "name": "Východoslovenská",
     "names": [
       {
@@ -96864,10 +96864,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "at-weinland",
-    "latitude": null,
+    "latitude": 48.22035224900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004281",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.379677550000054,
+    "pointSource": "area",
     "name": "Weinland",
     "names": [
       {
@@ -96893,10 +96893,10 @@
       }
     ],
     "id": "at-weinviertel",
-    "latitude": 48.4779,
+    "latitude": 48.65808274900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003861",
-    "longitude": 16.5139,
-    "pointSource": "place",
+    "longitude": 16.34435355000005,
+    "pointSource": "area",
     "name": "Weinviertel",
     "names": [
       {
@@ -96916,10 +96916,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "at-weststeiermark",
-    "latitude": null,
+    "latitude": 46.91292249900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005622",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.266147550000028,
+    "pointSource": "area",
     "name": "Weststeiermark",
     "names": [
       {
@@ -97443,10 +97443,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-zagorje-me-imurje",
-    "latitude": null,
+    "latitude": 46.15889,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010737",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.96667,
+    "pointSource": "area",
     "name": "Zagorje – Međimurje",
     "names": [
       {
@@ -97494,10 +97494,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "hr-zapadna-kontinentalna-hrvatska",
-    "latitude": null,
+    "latitude": 45.6572,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000010738",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.96667,
+    "pointSource": "area",
     "name": "Zapadna kontinentalna Hrvatska",
     "names": [
       {
@@ -97540,10 +97540,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "hu-zemplen",
-    "latitude": null,
+    "latitude": 48.113912749000065,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005788",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.089829300000076,
+    "pointSource": "area",
     "name": "Zemplén",
     "names": [
       {
@@ -97568,10 +97568,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cz-znojemska",
-    "latitude": null,
+    "latitude": 49.26251212400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004882",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.12406205000005,
+    "pointSource": "area",
     "name": "Znojemská",
     "names": [
       {
@@ -97803,10 +97803,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "cz-moravske",
-    "latitude": null,
+    "latitude": 49.197039249000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005221",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 16.59461655000007,
+    "pointSource": "area",
     "name": "moravské",
     "names": [
       {
@@ -97986,10 +97986,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "cz-ceske",
-    "latitude": null,
+    "latitude": 50.060109999000076,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005201",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 13.830857707000064,
+    "pointSource": "area",
     "name": "české",
     "names": [
       {
@@ -98009,10 +98009,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ro-stefanesti",
-    "latitude": null,
+    "latitude": 44.8716933,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007124",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 24.9526897,
+    "pointSource": "place",
     "name": "Ştefăneşti",
     "names": [
       {
@@ -98060,10 +98060,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "si-stajerska-slovenija",
-    "latitude": null,
+    "latitude": 46.23813499900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001921",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 15.183341300000052,
+    "pointSource": "area",
     "name": "Štajerska Slovenija",
     "names": [
       {
@@ -98111,10 +98111,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-agio-oros",
-    "latitude": null,
+    "latitude": 40.28942674900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006621",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.513843550000047,
+    "pointSource": "area",
     "name": "Άγιο Όρος",
     "names": [
       {
@@ -98279,10 +98279,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-agchialos",
-    "latitude": null,
+    "latitude": 39.286354249000055,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006825",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.742236656000046,
+    "pointSource": "area",
     "name": "Αγχίαλος",
     "names": [
       {
@@ -98307,10 +98307,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-aigaio-pelagos",
-    "latitude": 38.5,
+    "latitude": 37.83686139900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007522",
-    "longitude": 25.3,
-    "pointSource": "place",
+    "longitude": 26.606943945500035,
+    "pointSource": "area",
     "name": "Αιγαίο Πέλαγος",
     "names": [
       {
@@ -98537,10 +98537,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-velvento",
-    "latitude": null,
+    "latitude": 40.33102224900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007262",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.629854050000063,
+    "pointSource": "area",
     "name": "Βελβεντό",
     "names": [
       {
@@ -98565,10 +98565,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-verntea-zakynthou",
-    "latitude": null,
+    "latitude": 37.789007499000036,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006247",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.806054050000057,
+    "pointSource": "area",
     "name": "Βερντέα Ζακύνθου",
     "names": [
       {
@@ -98593,10 +98593,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cy-vouni-panagias-ampelitis",
-    "latitude": null,
+    "latitude": 34.882915,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006761",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 32.623819999999995,
+    "pointSource": "area",
     "name": "Βουνί Παναγιάς – Αμπελίτης",
     "names": [
       {
@@ -98621,10 +98621,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-geraneia",
-    "latitude": 38,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005901",
-    "longitude": 23.08333,
-    "pointSource": "place",
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Γεράνεια",
     "names": [
       {
@@ -98711,9 +98711,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-dafnes",
-    "latitude": 35.2159587,
+    "latitude": 35.21611111,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007162",
-    "longitude": 25.050845,
+    "longitude": 25.05027778,
     "pointSource": "place",
     "name": "Δαφνές",
     "names": [
@@ -98767,10 +98767,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-dodekanisos",
-    "latitude": 36.45,
+    "latitude": 36.168075249000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007444",
-    "longitude": 27.3,
-    "pointSource": "place",
+    "longitude": 27.965325300000075,
+    "pointSource": "area",
     "name": "Δωδεκάνησος",
     "names": [
       {
@@ -98975,10 +98975,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-ileia",
-    "latitude": null,
+    "latitude": 37.740382999000076,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005187",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.55208005000003,
+    "pointSource": "area",
     "name": "Ηλεία",
     "names": [
       {
@@ -99115,10 +99115,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-thapsana",
-    "latitude": null,
+    "latitude": 37.04333224900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005790",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.02570167500005,
+    "pointSource": "area",
     "name": "Θαψανά",
     "names": [
       {
@@ -99199,10 +99199,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-thraki",
-    "latitude": null,
+    "latitude": 41.1,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007606",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.41666667,
+    "pointSource": "place",
     "name": "Θράκη",
     "names": [
       {
@@ -99463,10 +99463,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-klimenti",
-    "latitude": null,
+    "latitude": 37.92229824900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005352",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.699010800000053,
+    "pointSource": "area",
     "name": "Κλημέντι",
     "names": [
       {
@@ -99519,10 +99519,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-koilada-atalantis",
-    "latitude": null,
+    "latitude": 38.886869499000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007221",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.224052018000066,
+    "pointSource": "area",
     "name": "Κοιλάδα Αταλάντης",
     "names": [
       {
@@ -99547,10 +99547,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cy-koumandaria",
-    "latitude": null,
+    "latitude": 34.83236,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005983",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 32.98292,
+    "pointSource": "area",
     "name": "Κουμανδαρία",
     "names": [
       {
@@ -99603,10 +99603,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-krania",
-    "latitude": null,
+    "latitude": 39.66349999900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005511",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.389909800000055,
+    "pointSource": "area",
     "name": "Κρανιά",
     "names": [
       {
@@ -99631,10 +99631,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-krannona",
-    "latitude": null,
+    "latitude": 39.66349999900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005341",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.389909800000055,
+    "pointSource": "area",
     "name": "Κραννώνα",
     "names": [
       {
@@ -99659,10 +99659,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cy-krasochoria-lemesou",
-    "latitude": null,
+    "latitude": 34.82389,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007564",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 32.83718,
+    "pointSource": "area",
     "name": "Κρασοχώρια Λεμεσού",
     "names": [
       {
@@ -99687,10 +99687,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cy-krasochoria-lemesou-afamis",
-    "latitude": null,
+    "latitude": 34.84472,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006563",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 32.83361,
+    "pointSource": "area",
     "name": "Κρασοχώρια Λεμεσού - Αφάμης",
     "names": [
       {
@@ -99715,10 +99715,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cy-krasochoria-lemesou-laona",
-    "latitude": null,
+    "latitude": 34.844395000000006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006741",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 32.788795,
+    "pointSource": "area",
     "name": "Κρασοχώρια Λεμεσού - Λαόνα",
     "names": [
       {
@@ -99939,10 +99939,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-lasithi",
-    "latitude": 35.083333333333,
+    "latitude": 35.169620499000075,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006287",
-    "longitude": 25.833333333333,
-    "pointSource": "place",
+    "longitude": 26.08456041100004,
+    "pointSource": "area",
     "name": "Λασίθι",
     "names": [
       {
@@ -99967,10 +99967,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cy-laona-akama",
-    "latitude": null,
+    "latitude": 34.93613,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006781",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 32.40229,
+    "pointSource": "area",
     "name": "Λαόνα Ακάμα",
     "names": [
       {
@@ -100315,10 +100315,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-markopoulo",
-    "latitude": null,
+    "latitude": 38.028688577000025,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006501",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.75243701000005,
+    "pointSource": "area",
     "name": "Μαρκόπουλο",
     "names": [
       {
@@ -100343,10 +100343,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-martino",
-    "latitude": null,
+    "latitude": 38.886869499000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006396",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.224052018000066,
+    "pointSource": "area",
     "name": "Μαρτίνο",
     "names": [
       {
@@ -100371,10 +100371,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-mayrodafni-kefallinias",
-    "latitude": null,
+    "latitude": 38.266406999000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006876",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.57622630000003,
+    "pointSource": "area",
     "name": "Μαυροδάφνη Κεφαλληνίας",
     "names": [
       {
@@ -100399,10 +100399,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-mayrodafni-patron",
-    "latitude": null,
+    "latitude": 38.06085924900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006551",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.864389550000055,
+    "pointSource": "area",
     "name": "Μαυροδάφνη Πατρών",
     "names": [
       {
@@ -100427,10 +100427,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-mesenikola",
-    "latitude": null,
+    "latitude": 39.29058649900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007118",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.806861800000036,
+    "pointSource": "area",
     "name": "Μεσενικόλα",
     "names": [
       {
@@ -100511,10 +100511,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-metaxaton",
-    "latitude": null,
+    "latitude": 38.266406999000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006842",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.57622630000003,
+    "pointSource": "area",
     "name": "Μεταξάτων",
     "names": [
       {
@@ -100539,10 +100539,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-monemvasia-malvasia",
-    "latitude": null,
+    "latitude": 36.860599249000074,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007243",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.711135050000053,
+    "pointSource": "area",
     "name": "Μονεμβασία- Malvasia",
     "names": [
       {
@@ -100567,10 +100567,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-moschato-patron",
-    "latitude": null,
+    "latitude": 38.06085924900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006963",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.864389550000055,
+    "pointSource": "area",
     "name": "Μοσχάτο Πατρών",
     "names": [
       {
@@ -100595,10 +100595,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-moschatos-kefallinias",
-    "latitude": null,
+    "latitude": 38.266406999000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007325",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.57622630000003,
+    "pointSource": "area",
     "name": "Μοσχάτος Κεφαλληνίας",
     "names": [
       {
@@ -100623,10 +100623,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-moschatos-limnou",
-    "latitude": null,
+    "latitude": 39.17571599900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007136",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.999164953000047,
+    "pointSource": "area",
     "name": "Μοσχάτος Λήμνου",
     "names": [
       {
@@ -100651,10 +100651,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-moschatos-riou-patras",
-    "latitude": null,
+    "latitude": 38.06085924900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007006",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.864389550000055,
+    "pointSource": "area",
     "name": "Μοσχάτος Ρίου Πάτρας",
     "names": [
       {
@@ -100679,10 +100679,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-moschatos-rodou",
-    "latitude": null,
+    "latitude": 36.168075249000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007326",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.965325300000075,
+    "pointSource": "area",
     "name": "Μοσχάτος Ρόδου",
     "names": [
       {
@@ -100713,10 +100713,10 @@
       }
     ],
     "id": "gr-naousa",
-    "latitude": null,
+    "latitude": 40.630555555556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007267",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.064166666667,
+    "pointSource": "place",
     "name": "Νάουσα",
     "names": [
       {
@@ -100857,10 +100857,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-opountia-lokridas",
-    "latitude": null,
+    "latitude": 38.886869499000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007324",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.224052018000066,
+    "pointSource": "area",
     "name": "Οπούντια Λοκρίδας",
     "names": [
       {
@@ -100969,9 +100969,9 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-pella",
-    "latitude": 40.76,
+    "latitude": 40.7604079,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005583",
-    "longitude": 22.519167,
+    "longitude": 22.5271118,
     "pointSource": "place",
     "name": "Πέλλα",
     "names": [
@@ -100997,10 +100997,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-paggaio",
-    "latitude": null,
+    "latitude": 40.961971249000044,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006361",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 24.336718550000057,
+    "pointSource": "area",
     "name": "Παγγαίο",
     "names": [
       {
@@ -101165,10 +101165,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-pisatis",
-    "latitude": null,
+    "latitude": 37.740382999000076,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005582",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.55208005000003,
+    "pointSource": "area",
     "name": "Πισάτις",
     "names": [
       {
@@ -101193,10 +101193,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "cy-pitsilia",
-    "latitude": null,
+    "latitude": 34.93467,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006782",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 33.02056,
+    "pointSource": "area",
     "name": "Πιτσιλιά",
     "names": [
       {
@@ -101221,10 +101221,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-ainou",
-    "latitude": null,
+    "latitude": 38.266406999000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007441",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.57622630000003,
+    "pointSource": "area",
     "name": "Πλαγιές Αίνου",
     "names": [
       {
@@ -101249,10 +101249,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-aigialeias",
-    "latitude": null,
+    "latitude": 38.06085924900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007323",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 21.864389550000055,
+    "pointSource": "area",
     "name": "Πλαγιές Αιγιαλείας",
     "names": [
       {
@@ -101277,10 +101277,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-ampelou",
-    "latitude": null,
+    "latitude": 37.72461724900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005585",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 26.81835280000007,
+    "pointSource": "area",
     "name": "Πλαγιές Αμπέλου",
     "names": [
       {
@@ -101305,10 +101305,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-vertiskou",
-    "latitude": null,
+    "latitude": 40.67819774900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005584",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.127686550000078,
+    "pointSource": "area",
     "name": "Πλαγιές Βερτίσκου",
     "names": [
       {
@@ -101333,10 +101333,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-kithairona",
-    "latitude": null,
+    "latitude": 38.70414574900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007327",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.532766800000047,
+    "pointSource": "area",
     "name": "Πλαγιές Κιθαιρώνα",
     "names": [
       {
@@ -101361,10 +101361,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-knimidas",
-    "latitude": null,
+    "latitude": 38.886869499000056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007283",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.224052018000066,
+    "pointSource": "area",
     "name": "Πλαγιές Κνημίδας",
     "names": [
       {
@@ -101389,10 +101389,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-plagies-melitona",
-    "latitude": null,
+    "latitude": 40.28942674900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007001",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.513843550000047,
+    "pointSource": "area",
     "name": "Πλαγιές Μελίτωνα",
     "names": [
       {
@@ -101417,10 +101417,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-paikou",
-    "latitude": null,
+    "latitude": 41.067247499000075,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007004",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.751735550000035,
+    "pointSource": "area",
     "name": "Πλαγιές Πάικου",
     "names": [
       {
@@ -101445,10 +101445,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-parnithas",
-    "latitude": null,
+    "latitude": 38.25555726150006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006985",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.41888609150007,
+    "pointSource": "area",
     "name": "Πλαγιές Πάρνηθας",
     "names": [
       {
@@ -101473,10 +101473,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-plagies-pentelikou",
-    "latitude": null,
+    "latitude": 38.028688577000025,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006524",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.75243701000005,
+    "pointSource": "area",
     "name": "Πλαγιές Πεντελικού",
     "names": [
       {
@@ -101529,9 +101529,9 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-rethymno",
-    "latitude": 35.36888888888889,
+    "latitude": 35.25,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006686",
-    "longitude": 24.47388888888889,
+    "longitude": 24.58333333,
     "pointSource": "place",
     "name": "Ρέθυμνο",
     "names": [
@@ -101591,10 +101591,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-attikis",
-    "latitude": null,
+    "latitude": 38.08110619300004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007205",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.730836527000065,
+    "pointSource": "area",
     "name": "Ρετσίνα Αττικής",
     "names": [
       {
@@ -101619,10 +101619,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-voiotias",
-    "latitude": null,
+    "latitude": 38.36544074900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007281",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.089176300000076,
+    "pointSource": "area",
     "name": "Ρετσίνα Βοιωτίας",
     "names": [
       {
@@ -101647,10 +101647,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-gialtron",
-    "latitude": null,
+    "latitude": 38.49391724900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006845",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.711035800000047,
+    "pointSource": "area",
     "name": "Ρετσίνα Γιάλτρων",
     "names": [
       {
@@ -101675,10 +101675,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-eyvoias",
-    "latitude": null,
+    "latitude": 38.49391724900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007204",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.711035800000047,
+    "pointSource": "area",
     "name": "Ρετσίνα Εύβοιας",
     "names": [
       {
@@ -101703,10 +101703,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-thivon-voiotias",
-    "latitude": null,
+    "latitude": 38.36544074900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006846",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.089176300000076,
+    "pointSource": "area",
     "name": "Ρετσίνα Θηβών (Βοιωτίας)",
     "names": [
       {
@@ -101731,10 +101731,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-karystou",
-    "latitude": null,
+    "latitude": 38.49391724900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006863",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.711035800000047,
+    "pointSource": "area",
     "name": "Ρετσίνα Καρύστου",
     "names": [
       {
@@ -101759,10 +101759,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-koropiou",
-    "latitude": null,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007562",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Ρετσίνα Κορωπίου",
     "names": [
       {
@@ -101797,10 +101797,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-markopoulou-attikis",
-    "latitude": null,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007103",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Ρετσίνα Μαρκόπουλου (Αττικής)",
     "names": [
       {
@@ -101825,10 +101825,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-megaron",
-    "latitude": null,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007563",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Ρετσίνα Μεγάρων",
     "names": [
       {
@@ -101853,10 +101853,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-mesogeion-attikis",
-    "latitude": null,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007003",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Ρετσίνα Μεσογείων (Αττικής)",
     "names": [
       {
@@ -101881,10 +101881,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-paianias",
-    "latitude": null,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007566",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Ρετσίνα Παιανίας",
     "names": [
       {
@@ -101919,10 +101919,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-pallinis",
-    "latitude": null,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007581",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Ρετσίνα Παλλήνης",
     "names": [
       {
@@ -101947,10 +101947,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-pikermiou",
-    "latitude": null,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007583",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Ρετσίνα Πικερμίου",
     "names": [
       {
@@ -101975,10 +101975,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-spaton",
-    "latitude": null,
+    "latitude": 38.145673774000045,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007462",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.748595883000064,
+    "pointSource": "area",
     "name": "Ρετσίνα Σπάτων",
     "names": [
       {
@@ -102003,10 +102003,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-retsina-chalkidas-eyvoias",
-    "latitude": null,
+    "latitude": 38.49391724900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007111",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.711035800000047,
+    "pointSource": "area",
     "name": "Ρετσίνα Χαλκίδας (Ευβοίας)",
     "names": [
       {
@@ -102031,10 +102031,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-ritsona",
-    "latitude": null,
+    "latitude": 38.49391724900005,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007261",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.711035800000047,
+    "pointSource": "area",
     "name": "Ριτσώνα",
     "names": [
       {
@@ -102059,10 +102059,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-rompola-kefallinias",
-    "latitude": null,
+    "latitude": 38.266406999000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007021",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 20.57622630000003,
+    "pointSource": "area",
     "name": "Ρομπόλα Κεφαλληνίας",
     "names": [
       {
@@ -102087,10 +102087,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-rodos",
-    "latitude": 36.17,
+    "latitude": 36.168075249000026,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007423",
-    "longitude": 27.92,
-    "pointSource": "place",
+    "longitude": 27.965325300000075,
+    "pointSource": "area",
     "name": "Ρόδος",
     "names": [
       {
@@ -102531,10 +102531,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gr-chandakas-candia",
-    "latitude": null,
+    "latitude": 35.17707449900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007463",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.13654255000006,
+    "pointSource": "area",
     "name": "Χάνδακας - Candia",
     "names": [
       {
@@ -102587,10 +102587,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-chalikouna",
-    "latitude": null,
+    "latitude": 39.59135574900006,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006399",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 19.875834550000036,
+    "pointSource": "area",
     "name": "Χαλικούνα",
     "names": [
       {
@@ -102615,7 +102615,7 @@
     "giType": "PGI",
     "grapes": [],
     "id": "gr-chalkidiki",
-    "latitude": 40.583333,
+    "latitude": 40.3333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007183",
     "longitude": 23.5,
     "pointSource": "place",
@@ -102851,9 +102851,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-vidin",
-    "latitude": 43.8,
+    "latitude": 43.98869,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006260",
-    "longitude": 22.683333333333,
+    "longitude": 22.874058,
     "pointSource": "place",
     "name": "Видин",
     "names": [
@@ -102879,9 +102879,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-vratsa",
-    "latitude": 43.516666666667,
+    "latitude": 43.400307,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006261",
-    "longitude": 23.6,
+    "longitude": 23.716675,
     "pointSource": "place",
     "name": "Враца",
     "names": [
@@ -102907,10 +102907,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-varbitsa",
-    "latitude": null,
+    "latitude": 43.469912,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006144",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 24.696805,
+    "pointSource": "place",
     "name": "Върбица",
     "names": [
       {
@@ -102935,10 +102935,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-dolinata-na-struma",
-    "latitude": null,
+    "latitude": 42.33463074900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006262",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.94483930000007,
+    "pointSource": "area",
     "name": "Долината на Струма",
     "names": [
       {
@@ -103131,9 +103131,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-lovech",
-    "latitude": 43,
+    "latitude": 43.134777,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006270",
-    "longitude": 24.5,
+    "longitude": 24.711535,
     "pointSource": "place",
     "name": "Ловеч",
     "names": [
@@ -103159,10 +103159,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-lozitsa",
-    "latitude": null,
+    "latitude": 43.604585,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006101",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.001814,
+    "pointSource": "place",
     "name": "Лозица",
     "names": [
       {
@@ -103243,10 +103243,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-lyaskovets",
-    "latitude": null,
+    "latitude": 43.108074,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006276",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.713213,
+    "pointSource": "place",
     "name": "Лясковец",
     "names": [
       {
@@ -103299,9 +103299,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-montana",
-    "latitude": 43.6,
+    "latitude": 43.405487,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006278",
-    "longitude": 23.183333333333,
+    "longitude": 23.224242,
     "pointSource": "place",
     "name": "Монтана",
     "names": [
@@ -103355,10 +103355,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-novi-pazar",
-    "latitude": null,
+    "latitude": 43.347556,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006280",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.198082,
+    "pointSource": "place",
     "name": "Нови Пазар",
     "names": [
       {
@@ -103383,10 +103383,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-novo-selo",
-    "latitude": null,
+    "latitude": 44.13333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006166",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 22.78333333,
+    "pointSource": "place",
     "name": "Ново село",
     "names": [
       {
@@ -103467,9 +103467,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-pazardzhik",
-    "latitude": 42.083333333333,
+    "latitude": 42.193477,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006364",
-    "longitude": 24.25,
+    "longitude": 24.332755,
     "pointSource": "place",
     "name": "Пазарджик",
     "names": [
@@ -103607,9 +103607,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-ruse",
-    "latitude": 43.844532,
+    "latitude": 43.75,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006369",
-    "longitude": 25.953907,
+    "longitude": 26,
     "pointSource": "place",
     "name": "Русе",
     "names": [
@@ -103803,10 +103803,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-stambolovo",
-    "latitude": null,
+    "latitude": 41.76666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006375",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.65,
+    "pointSource": "place",
     "name": "Стамболово",
     "names": [
       {
@@ -103859,10 +103859,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-sungurlare",
-    "latitude": 42.766944444444,
+    "latitude": 42.64178374900007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006378",
-    "longitude": 26.783055555556,
-    "pointSource": "place",
+    "longitude": 26.261479550000047,
+    "pointSource": "area",
     "name": "Сунгурларе",
     "names": [
       {
@@ -103955,10 +103955,10 @@
     "giType": "PGI",
     "grapes": [],
     "id": "bg-trakiiska-nizina",
-    "latitude": null,
+    "latitude": 42.238361499000064,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006380",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 25.477866800000072,
+    "pointSource": "area",
     "name": "Тракийска низина",
     "names": [
       {
@@ -103983,9 +103983,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-targovishte",
-    "latitude": 43.25,
+    "latitude": 43.241447,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006381",
-    "longitude": 26.5,
+    "longitude": 26.571855,
     "pointSource": "place",
     "name": "Търговище",
     "names": [
@@ -104039,10 +104039,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-haskovo",
-    "latitude": 41.833333333333,
+    "latitude": 41.76309949900008,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006383",
-    "longitude": 25.916666666667,
-    "pointSource": "place",
+    "longitude": 25.899181300000066,
+    "pointSource": "area",
     "name": "Хасково",
     "names": [
       {
@@ -104095,10 +104095,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-harsovo",
-    "latitude": null,
+    "latitude": 41.460053,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006386",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 23.383175,
+    "pointSource": "place",
     "name": "Хърсово",
     "names": [
       {
@@ -104123,10 +104123,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-chernomorski-raion",
-    "latitude": null,
+    "latitude": 43.474128249000074,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006387",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.00981980000006,
+    "pointSource": "area",
     "name": "Черноморски район",
     "names": [
       {
@@ -104207,10 +104207,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-yuzhno-chernomorie",
-    "latitude": null,
+    "latitude": 42.44456099900003,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006390",
-    "longitude": null,
-    "pointSource": null,
+    "longitude": 27.30702780000007,
+    "pointSource": "area",
     "name": "Южно Черноморие",
     "names": [
       {
@@ -104235,9 +104235,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "bg-yambol",
-    "latitude": 42.416666666667,
+    "latitude": 42.482419,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006391",
-    "longitude": 26.516666666667,
+    "longitude": 26.503753,
     "pointSource": "place",
     "name": "Ямбол",
     "names": [

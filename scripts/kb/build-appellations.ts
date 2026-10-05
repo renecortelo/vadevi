@@ -52,6 +52,43 @@ const geocoded = (
   existsSync(geocodedPath) ? JSON.parse(readFileSync(geocodedPath, "utf8")) : {}
 ) as Record<string, { latitude: number; longitude: number }>;
 
+// Where nothing else places a name, the NUTS regions the register's
+// technical file names for it (`pnpm kb:fetch-appellations`, step 2f): their
+// own points, approximate. Regions © EuroGeographics.
+const registerAreasPath = resolve(cache, "register-areas.json");
+const registerAreas = (
+  existsSync(registerAreasPath) ? JSON.parse(readFileSync(registerAreasPath, "utf8")) : {}
+) as Record<string, { latitude: number; longitude: number }>;
+
+// Where the register's own text names the places a wine comes from and
+// nothing more precise places it, those places, read by hand
+// (`appellation-areas.json`, each with its source): the median of their
+// points, or the median of the registered names it is made of.
+type CuratedArea = {
+  parts?: string[];
+  places?: { latitude: number; longitude: number; name: string; wikidata: string }[];
+  source: string;
+};
+const curatedAreas = (
+  JSON.parse(readFileSync(resolve("data/kb/appellation-areas.json"), "utf8")) as {
+    areas: Record<string, CuratedArea>;
+  }
+).areas;
+const medianOf = (values: number[]) => {
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 === 1 ? sorted[middle]! : (sorted[middle - 1]! + sorted[middle]!) / 2;
+};
+function curatedPoint(id: string) {
+  const places = curatedAreas[id]?.places ?? [];
+  if (places.length === 0) return null;
+  return {
+    latitude: medianOf(places.map((place) => place.latitude)),
+    longitude: medianOf(places.map((place) => place.longitude)),
+    pointSource: places.length === 1 ? ("place" as const) : ("area" as const),
+  };
+}
+
 function isoDate(value: string | null): string | null {
   const match = value === null ? null : /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
   return match === null || match === undefined ? null : `${match[3]}-${match[2]}-${match[1]}`;
@@ -106,6 +143,11 @@ for (const row of register) {
       url: `https://${locale}.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(" ", "_"))}`,
     };
   }
+  // The wine's own item's point first; then the register's own places.
+  const curated =
+    linked?.latitude != null && (linked.pointSource ?? "item") === "item"
+      ? null
+      : curatedPoint(row.appUniqueId);
   entries.push({
     countryCode: country,
     eambrosiaId: row.appUniqueId,
@@ -113,24 +155,32 @@ for (const row of register) {
     grapes: [],
     id,
     latitude:
+      curated?.latitude ??
       linked?.latitude ??
       grandCrus[matchKey(row.protectedName)]?.latitude ??
       geocoded[row.appUniqueId]?.latitude ??
+      registerAreas[row.appUniqueId]?.latitude ??
       null,
     legalUrl: `https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/${row.appUniqueId}`,
     longitude:
+      curated?.longitude ??
       linked?.longitude ??
       grandCrus[matchKey(row.protectedName)]?.longitude ??
       geocoded[row.appUniqueId]?.longitude ??
+      registerAreas[row.appUniqueId]?.longitude ??
       null,
     pointSource:
-      linked?.latitude != null
-        ? (linked.pointSource ?? "item")
-        : grandCrus[matchKey(row.protectedName)] !== undefined
-          ? "item"
-          : geocoded[row.appUniqueId] !== undefined
-            ? "place"
-            : null,
+      curated !== null
+        ? curated.pointSource
+        : linked?.latitude != null
+          ? (linked.pointSource ?? "item")
+          : grandCrus[matchKey(row.protectedName)] !== undefined
+            ? "item"
+            : geocoded[row.appUniqueId] !== undefined
+              ? "place"
+              : registerAreas[row.appUniqueId] !== undefined
+                ? "area"
+                : null,
     name: names[0] ?? row.protectedName,
     names: [
       ...names.map((name) => ({ locale: "*", name, source: "register" as const })),
@@ -244,6 +294,21 @@ for (const entry of entries) {
   }
 }
 console.info(`  ${described} names described by a sentence of their country's wine article.`);
+
+// A registered name the register describes as several others ("Istočna
+// kontinentalna Hrvatska consists of two subregions: Hrvatsko Podunavlje and
+// Slavonija"): the median of their points, approximate.
+for (const entry of entries) {
+  const parts = curatedAreas[entry.eambrosiaId]?.parts;
+  if (parts === undefined || entry.pointSource === "item") continue;
+  const points = entries.filter(
+    (other) => parts.includes(other.eambrosiaId) && other.latitude !== null,
+  );
+  if (points.length === 0) continue;
+  entry.latitude = medianOf(points.map((other) => other.latitude!));
+  entry.longitude = medianOf(points.map((other) => other.longitude!));
+  entry.pointSource = "area";
+}
 
 // Texts read and found to be about something else, by hand: Friuli
 // Isonzo's English article redirects to Friuli wine in general, La Clape's
