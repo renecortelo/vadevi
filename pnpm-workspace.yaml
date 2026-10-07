@@ -17,9 +17,22 @@ overrides:
   # Advisories on ip-address <=10.7.0, under firebase-tools >
   # @modelcontextprotocol/sdk > express-rate-limit. Emulator only.
   ip-address: ">=10.7.1"
-  # GHSA-g89c-p67h-r497 (libheif via sharp), under wrangler>miniflare and the
-  # vitest worker pool. Dev/build tooling only; not in the Worker.
-  sharp: ">=0.35.4"
+  # GHSA-g89c-p67h-r497 (libheif) and GHSA-wq5f-xc86-pv6w (librsvg) via sharp,
+  # under wrangler>miniflare and the vitest worker pool. Dev/build tooling
+  # only; not in the Worker.
+  sharp: ">=0.35.5"
+  # GHSA-68fv-2mgg-jv7q (source-map-js), under vite>postcss and jsdom's CSS
+  # parser. Build and test tooling only.
+  source-map-js: ">=1.2.2 <2"
+  # GHSA-jqcg-44mw-7w3h (proxy-addr), GHSA-vc2v-76pw-4v95 (compression) and
+  # GHSA-6qxp-vccf-f47h (@modelcontextprotocol/sdk), all under firebase-tools.
+  # Emulator only; each patched within its major.
+  proxy-addr: ">=2.0.8 <3"
+  compression: ">=1.8.2 <2"
+  "@modelcontextprotocol/sdk": ">=1.31.0 <2"
+  # GHSA-pqg4-j6r4-53mv (shell-quote), under concurrently, which runs the two
+  # dev servers with fixed commands. Local development only.
+  shell-quote: ">=1.11.0 <2"
   # GHSA-2883-xcg3-v3hh (js-yaml CPU), under firebase-tools. Emulator only.
   js-yaml@4: ">=4.3.2"
   # GHSA-x5fp-wj9c-mxmx and GHSA-4mjr-xmp4-gh2g (qs), GHSA-jxfw-x594-9x9m
