@@ -165,6 +165,22 @@
     "registerTitle": "Nel registro dell'UE",
     "registeredOn": "Protetta nell'UE dal {{date}}.",
     "registerLink": "Vederla nel registro dell'UE (eAmbrosia)",
+    "registerCategories": "Categorie di prodotti",
+    "wineCategory": {
+      "1": "Vino",
+      "3": "Vino liquoroso",
+      "4": "Vino spumante",
+      "5": "Vino spumante di qualità",
+      "6": "Vino spumante di qualità del tipo aromatico",
+      "7": "Vino spumante gassificato",
+      "8": "Vino frizzante",
+      "9": "Vino frizzante gassificato",
+      "15": "Vino ottenuto da uve appassite",
+      "16": "Vino di uve stramature"
+    },
+    "registerGrapes": "Vitigni principali",
+    "registerGrapesNote": "Come li scrive il documento unico del registro; con un link, quelli di cui la biblioteca sa con certezza quale vitigno siano.",
+    "registerDocument": "Documento unico del registro",
     "grapesHere": "Vitigni coltivati qui",
     "grapesHereNote": "Vitigni il cui articolo dice che sono coltivati qui. Non è l'elenco completo: le varietà ammesse sono nel registro dell'UE.",
     "home": {

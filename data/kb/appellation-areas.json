@@ -36,6 +36,52 @@
       ],
       "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2021.090.01.0042.01.ENG&toc=OJ%3AC%3A2021%3A090%3ATOC"
     },
+    "EUGI00000003101": {
+      "places": [
+        {
+          "latitude": 49.5,
+          "longitude": 6.3,
+          "name": "Canton de Remich",
+          "wikidata": "Q691781"
+        },
+        {
+          "latitude": 49.68333,
+          "longitude": 6.34306,
+          "name": "Canton de Grevenmacher",
+          "wikidata": "Q836002"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/21271"
+    },
+    "EUGI00000005124": {
+      "places": [
+        {
+          "latitude": 39.085,
+          "longitude": -28.00472,
+          "name": "Santa Cruz da Graciosa",
+          "wikidata": "Q616092"
+        },
+        {
+          "latitude": 39.06056,
+          "longitude": -28.02194,
+          "name": "Guadalupe",
+          "wikidata": "Q2359531"
+        },
+        {
+          "latitude": 39.05139,
+          "longitude": -27.97139,
+          "name": "Praia (São Mateus)",
+          "wikidata": "Q2454596"
+        },
+        {
+          "latitude": 39.02389,
+          "longitude": -27.98944,
+          "name": "Luz",
+          "wikidata": "Q975407"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/16876"
+    },
     "EUGI00000005983": {
       "places": [
         {
@@ -2490,6 +2536,17 @@
       ],
       "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017D0713%2801%29"
     },
+    "EUGI00000014254": {
+      "places": [
+        {
+          "latitude": 50.31278,
+          "longitude": 7.52139,
+          "name": "Winningen",
+          "wikidata": "Q822358"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2020.349.01.0022.01.ENG"
+    },
     "EUGI00000014262": {
       "places": [
         {
@@ -2517,6 +2574,29 @@
         }
       ],
       "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOC_2018_277_R_0004"
+    },
+    "EUGI00000014423": {
+      "places": [
+        {
+          "latitude": 42.84806,
+          "longitude": 17.625,
+          "name": "Boljenovići",
+          "wikidata": "Q2641114"
+        },
+        {
+          "latitude": 42.854,
+          "longitude": 17.611,
+          "name": "Sparagovići",
+          "wikidata": "Q2170670"
+        },
+        {
+          "latitude": 42.81889,
+          "longitude": 17.67611,
+          "name": "Prapratno",
+          "wikidata": "Q1427040"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2020.323.01.0012.01.ENG&toc=OJ:C:2020:323:TOC"
     },
     "EUGI00000014449": {
       "places": [
@@ -2864,6 +2944,17 @@
       ],
       "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2023.137.01.0012.01.ENG&toc=OJ%3AC%3A2023%3A137%3ATOC"
     },
+    "EUGI00000015827": {
+      "places": [
+        {
+          "latitude": 49.79444,
+          "longitude": 9.92944,
+          "name": "Würzburg",
+          "wikidata": "Q2999"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2020.124.01.0026.01.ENG"
+    },
     "EUGI00000016239": {
       "places": [
         {
@@ -2978,6 +3069,17 @@
         }
       ],
       "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.305.01.0018.01.ENG&toc=OJ%3AC%3A2022%3A305%3ATOC"
+    },
+    "EUGI00000017145": {
+      "places": [
+        {
+          "latitude": 48.20833,
+          "longitude": 16.3725,
+          "name": "Wien",
+          "wikidata": "Q1741"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:C_202301187"
     },
     "EUGI00000017207": {
       "places": [

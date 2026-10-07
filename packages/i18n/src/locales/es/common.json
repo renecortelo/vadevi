@@ -165,6 +165,22 @@
     "registerTitle": "En el registro de la UE",
     "registeredOn": "Protegida en la UE desde el {{date}}.",
     "registerLink": "Verla en el registro de la UE (eAmbrosia)",
+    "registerCategories": "Categorías de producto",
+    "wineCategory": {
+      "1": "Vino",
+      "3": "Vino de licor",
+      "4": "Vino espumoso",
+      "5": "Vino espumoso de calidad",
+      "6": "Vino espumoso aromático de calidad",
+      "7": "Vino espumoso gasificado",
+      "8": "Vino de aguja",
+      "9": "Vino de aguja gasificado",
+      "15": "Vino de uvas pasificadas",
+      "16": "Vino de uvas sobremaduradas"
+    },
+    "registerGrapes": "Variedades principales",
+    "registerGrapesNote": "Como las escribe el documento único del registro; con enlace, las que la biblioteca sabe con certeza qué uva son.",
+    "registerDocument": "Documento único del registro",
     "grapesHere": "Uvas que se cultivan aquí",
     "grapesHereNote": "Uvas cuyo propio artículo dice que se cultivan aquí. No es la lista completa: las variedades autorizadas están en el registro de la UE.",
     "home": {

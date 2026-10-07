@@ -165,6 +165,22 @@
     "registerTitle": "In het EU-register",
     "registeredOn": "Beschermd in de EU sinds {{date}}.",
     "registerLink": "Bekijken in het EU-register (eAmbrosia)",
+    "registerCategories": "Productcategorieën",
+    "wineCategory": {
+      "1": "Wijn",
+      "3": "Likeurwijn",
+      "4": "Mousserende wijn",
+      "5": "Mousserende kwaliteitswijn",
+      "6": "Mousserende kwaliteitswijn van het aromatische type",
+      "7": "Mousserende wijn waaraan koolzuur is toegevoegd",
+      "8": "Parelwijn",
+      "9": "Parelwijn waaraan koolzuur is toegevoegd",
+      "15": "Wijn van ingedroogde druiven",
+      "16": "Wijn van overrijpe druiven"
+    },
+    "registerGrapes": "Belangrijkste druivenrassen",
+    "registerGrapesNote": "Zoals het enig document van het register ze schrijft; met een link waar de bibliotheek zeker weet welke druif het is.",
+    "registerDocument": "Enig document van het register",
     "grapesHere": "Druiven die hier groeien",
     "grapesHereNote": "Druiven waarvan het eigen artikel zegt dat ze hier groeien. Geen volledige lijst: de toegestane rassen staan in het EU-register.",
     "home": {

@@ -157,6 +157,9 @@ export function libraryTables(
         "wikidata_id",
         "prominence",
         "point_source",
+        "register_categories",
+        "register_grapes",
+        "register_source_url",
       ],
       ["id"],
       3,
@@ -173,6 +176,19 @@ export function libraryTables(
         region.wikidataId,
         region.prominence,
         region.pointSource ?? null,
+        region.register === undefined ? null : JSON.stringify(region.register.categories),
+        region.register === undefined
+          ? null
+          : JSON.stringify(
+              region.register.grapes.map((variety) => ({
+                // A link to a grape the build does not carry would lead nowhere.
+                grapeId: grapes.some((grape) => grape.id === variety.grapeId)
+                  ? variety.grapeId
+                  : null,
+                name: variety.name,
+              })),
+            ),
+        region.register?.sourceUrl ?? null,
       ]),
     ),
     table(

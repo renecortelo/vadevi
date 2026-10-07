@@ -41322,7 +41322,7 @@
       "almond"
     ],
     "body": null,
-    "color": null,
+    "color": "pink",
     "evidence": [
       {
         "field": "aromas",
@@ -41388,6 +41388,12 @@
         "field": "regions",
         "quote": "used to make white wine in the Thermenregion of Austria ... These wines, known as Spätrot-Rotgipfler, are a particular speciality of Gumpoldskirchen, south of Vienna. It is grown in Hungary under the name Cirfandli and in Slovenia as Zerjavina.",
         "value": "SI: Slovenia"
+      },
+      {
+        "field": "color",
+        "quote": "Die Traube ist groß, walzenförmig, dichtbeerig mit mittelgroßen, fleischfarbenen Beeren mit hohem Zuckergehalt (Trockenbeerenbildung).",
+        "value": "pink",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Zierfandler"
       }
     ],
     "id": "zierfandler",

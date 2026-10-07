@@ -163,6 +163,22 @@ export const LibraryRegionSchema = z
      */
     pointSource: z.enum(["item", "area", "place"]).nullable(),
     registeredOn: z.string().nullable(),
+    /**
+     * What the name's single document in the EU register says of its wines:
+     * the categories of grapevine product it covers (their number in Annex
+     * VII, Part II of Regulation (EU) No 1308/2013) and its main grape
+     * varieties as the document writes them, with a grape card where the
+     * variety is certainly that grape. Null where the document could not be
+     * read.
+     */
+    register: z
+      .object({
+        categories: z.array(z.number().int()),
+        grapes: z.array(z.object({ grapeId: z.string().nullable(), name: z.string() }).strict()),
+        sourceUrl: z.string().url(),
+      })
+      .strict()
+      .nullable(),
     summary: z
       .object({
         license: z.string(),

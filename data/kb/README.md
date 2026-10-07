@@ -1,7 +1,7 @@
 # The wine library
 
 Reference knowledge about grapes and the EU's registered wine names, loaded
-into D1 (migrations `0025`–`0028`) by
+into D1 (migrations `0025`–`0030`) by
 `pnpm kb:load` — and by every deploy, which reloads only when this directory
 changes, and then writes only the rows that changed. D1's free plan allows
 100,000 written rows a day for the whole database, the application's own
@@ -51,6 +51,27 @@ lead is the original a faithful translation is made from. A grape is listed unde
 registered name only where the grape's own article says it is grown there,
 with that sentence — the full list of authorised varieties is in each name's
 product specification, linked from the register.
+
+What each name's own single document says of its wines is read from it, with
+no model either (`pnpm kb:fetch-register-documents`, then
+`scripts/kb/register-facts.ts`): the categories of grapevine product it covers,
+by their number in Annex VII, Part II of Regulation (EU) No 1308/2013 (the
+number reads the same in every language), and its main grape varieties as the
+document writes them, cleaned only of the register's own marks (colour codes,
+"(OIV)", asterisks, the Journal's synonyms after a dash). The document is the
+technical file the register holds or, where it holds none, the single document
+published in the Official Journal, read from the Publications Office's Cellar
+in English. A file that cannot be read gives nothing rather than a guess.
+
+A variety is linked to a grape card only where that is certain: by the grape's
+own name in one of the library's languages, or by a synonym its sources give —
+and then not when the synonym is a family name that opens three or more of the
+register's variety names ("Malvasia", "Schiava"), not when a colour in the name
+contradicts the grape's ("Sauvignon Gris" is not Sauvignon blanc, "Greco Nero"
+not Greco), not when the grape is listed in the same document under its own
+name, and not for the synonyms `build-appellations.ts` lists as naming a
+variety of their own ("Aglianicone", "Trebbiano Giallo", "Moreto"…). An
+unlinked variety is shown as the register writes it.
 
 ## Licences
 

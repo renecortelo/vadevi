@@ -409,7 +409,8 @@ export async function getLibraryRegion(
   const region = await database
     .prepare(
       `SELECT id, eambrosia_id, name, country_code, gi_type, registered_on, legal_url,
-        latitude, longitude, wikidata_id, point_source
+        latitude, longitude, wikidata_id, point_source,
+        register_categories, register_grapes, register_source_url
       FROM kb_regions WHERE id = ?`,
     )
     .bind(regionId)
@@ -423,6 +424,9 @@ export async function getLibraryRegion(
       longitude: number | null;
       name: string;
       point_source: "area" | "item" | "place" | null;
+      register_categories: string | null;
+      register_grapes: string | null;
+      register_source_url: string | null;
       registered_on: string | null;
       wikidata_id: string | null;
     }>();
@@ -492,6 +496,17 @@ export async function getLibraryRegion(
     name: primary,
     otherNames: [...new Set(nameRows.map((row) => row.name).filter((name) => name !== primary))],
     pointSource: region.point_source,
+    register:
+      region.register_source_url === null
+        ? null
+        : {
+            categories: JSON.parse(region.register_categories ?? "[]") as number[],
+            grapes: JSON.parse(region.register_grapes ?? "[]") as {
+              grapeId: string | null;
+              name: string;
+            }[],
+            sourceUrl: region.register_source_url,
+          },
     registeredOn: region.registered_on,
     summary:
       summary === null

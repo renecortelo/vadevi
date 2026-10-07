@@ -165,6 +165,22 @@
     "registerTitle": "Au registre de l'UE",
     "registeredOn": "Protégée dans l'UE depuis le {{date}}.",
     "registerLink": "La voir au registre de l'UE (eAmbrosia)",
+    "registerCategories": "Catégories de produits",
+    "wineCategory": {
+      "1": "Vin",
+      "3": "Vin de liqueur",
+      "4": "Vin mousseux",
+      "5": "Vin mousseux de qualité",
+      "6": "Vin mousseux de qualité de type aromatique",
+      "7": "Vin mousseux gazéifié",
+      "8": "Vin pétillant",
+      "9": "Vin pétillant gazéifié",
+      "15": "Vin de raisins passerillés",
+      "16": "Vin de raisins surmûris"
+    },
+    "registerGrapes": "Principaux cépages",
+    "registerGrapesNote": "Tels que les écrit le document unique du registre ; avec un lien, ceux dont la bibliothèque sait avec certitude de quel cépage il s'agit.",
+    "registerDocument": "Document unique du registre",
     "grapesHere": "Cépages cultivés ici",
     "grapesHereNote": "Cépages dont l'article dit qu'ils sont cultivés ici. Liste non exhaustive : les cépages autorisés figurent au registre de l'UE.",
     "home": {

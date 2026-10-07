@@ -165,6 +165,22 @@
     "registerTitle": "In the EU register",
     "registeredOn": "Protected in the EU since {{date}}.",
     "registerLink": "See it in the EU register (eAmbrosia)",
+    "registerCategories": "Categories of product",
+    "wineCategory": {
+      "1": "Wine",
+      "3": "Liqueur wine",
+      "4": "Sparkling wine",
+      "5": "Quality sparkling wine",
+      "6": "Quality aromatic sparkling wine",
+      "7": "Aerated sparkling wine",
+      "8": "Semi-sparkling wine",
+      "9": "Aerated semi-sparkling wine",
+      "15": "Wine from raisined grapes",
+      "16": "Wine of overripe grapes"
+    },
+    "registerGrapes": "Main grape varieties",
+    "registerGrapesNote": "As the register's single document writes them; linked where the library knows for certain which grape it is.",
+    "registerDocument": "The register's single document",
     "grapesHere": "Grapes grown here",
     "grapesHereNote": "Grapes whose own article says they are grown here. Not a complete list: the registered rules are in the EU register.",
     "home": {

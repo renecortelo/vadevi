@@ -62,6 +62,15 @@ const rioja = {
     { locale: "eu", name: "Errioxa", source: "wikidata" as const },
   ],
   prominence: 40,
+  register: {
+    categories: [1],
+    grapes: [
+      { grapeId: "tempranillo", name: "Tempranillo" },
+      { grapeId: null, name: "Maturana Tinta" },
+    ],
+    sourceUrl:
+      "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/1",
+  },
   registeredOn: "1973-07-29",
   summaries: {
     en: {
@@ -151,6 +160,16 @@ describe("the wine atlas", () => {
       },
     ]);
     expect(region.otherNames).toContain("Errioxa");
+    // What the register's own document says, apart from the encyclopaedia.
+    expect(region.register).toEqual({
+      categories: [1],
+      grapes: [
+        { grapeId: "tempranillo", name: "Tempranillo" },
+        { grapeId: null, name: "Maturana Tinta" },
+      ],
+      sourceUrl:
+        "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/1",
+    });
   });
 
   it("finds a name by any of the names it goes by, and only in the country asked", async () => {

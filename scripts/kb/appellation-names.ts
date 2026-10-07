@@ -18,6 +18,16 @@ export type RegionEntry = {
   pointSource?: "area" | "item" | "place" | null;
   prominence: number;
   registeredOn: string | null;
+  /**
+   * What the register's single document says of the wines: the categories of
+   * grapevine product (Annex VII numbers) and the main grape varieties as it
+   * writes them, each linked to a library grape where one bears that name.
+   */
+  register?: {
+    categories: number[];
+    grapes: { grapeId: string | null; name: string }[];
+    sourceUrl: string;
+  };
   /** `translated`: a faithful translation of the article at `url`. */
   summaries: Record<string, { text: string; translated?: boolean; url: string }>;
   wikidataId: string | null;

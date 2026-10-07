@@ -10,6 +10,7 @@ import {
   transliterate,
 } from "./appellation-names";
 import { type GrapeEntry, normalize, slug, summaryOf } from "./grape-validation";
+import { registerCategories, registerGrapes } from "./register-facts";
 
 /**
  * The atlas, step two: one entry per registered wine name, with its names in
@@ -385,6 +386,151 @@ for (const entry of entries) {
   }
 }
 console.info(`  ${translated} summaries translated from another language's article.`);
+
+// What the register's single document says of each name's wines: the
+// categories of product it covers and its main grape varieties, read from
+// the technical file or, where the register holds none, from the Official
+// Journal (`pnpm kb:fetch-register-documents`).
+//
+// A variety is linked to a library grape only where that is safe: by the
+// grape's own name in one of the library's languages, or by a synonym its
+// article or Wikidata lists — and then not when the synonym is a family name
+// ("Malvasia", "Schiava": a lone one names no single variety), not when the
+// colour in the name contradicts the grape's ("Sauvignon Gris" is not
+// Sauvignon blanc, "Greco Nero" not Greco), not when the grape itself is
+// listed in the same document under its own name (then the synonym is a
+// different variety there), and not for the few synonyms below that the
+// register uses for a variety of their own. An unlinked variety is shown as
+// the register writes it; nothing is lost but the link.
+const registerFolder = resolve(cache, "register");
+const notTheSameVariety = new Set(
+  [
+    // Varieties of their own that share a synonym with a library grape.
+    "Aglianicone",
+    "Biancame",
+    "Bonarda",
+    "Camarate",
+    "Lacrima",
+    "Listán",
+    "Listrão",
+    "Mollar Cano",
+    "Moreto",
+    "Rossese",
+    "Rossese Bianco",
+    "Saint-Macaire",
+    "Schiava Gentile",
+    "Trebbiano Giallo",
+    // Colour mutations the register lists apart from the grape.
+    "Piquepoul Noir",
+    // Synonyms the sources give that the variety's own literature disputes.
+    "Castellana Negra",
+    "Espadeiro",
+    "Guarnaccia",
+    "Mavroudi",
+    "Padeiro",
+    "Perrum",
+    "Précoce Noir",
+  ].map((name) => matchKey(name)),
+);
+const grapeById = new Map(grapes.map((grape) => [grape.id, grape]));
+const primaryName = new Map<string, string | null>();
+const synonymName = new Map<string, string | null>();
+for (const grape of grapes) {
+  const add = (target: Map<string, string | null>, name: string) => {
+    const key = matchKey(name);
+    if (key.length < 3) return;
+    const known = target.get(key);
+    target.set(key, known === undefined || known === grape.id ? grape.id : null);
+  };
+  for (const name of Object.values(grape.names)) add(primaryName, name);
+  for (const synonym of grape.synonyms) add(synonymName, synonym.name);
+}
+const allVarieties = new Set<string>();
+const colourWords = {
+  grey: /\b(gris|grigio|grigia|grauer|grau|sivi|rose|rosa|roz)\b/,
+  red: /\b(noir|nero|nera|negro|negra|tinto|tinta|rouge|rosso|rossa|rot|roter|blauer|crni|negru|mavro|preto|cerna|modry)\b/,
+  white:
+    /\b(blanc|blanche|bianco|bianca|blanco|blanca|branco|weisser|weiss|bijeli|alb|beli|bila|giallo|gialla)\b/,
+};
+function colourAgrees(name: string, grapeId: string): boolean {
+  const colour = grapeById.get(grapeId)?.color ?? null;
+  const key = matchKey(name);
+  if (colour === null) return true;
+  if (colourWords.red.test(key) && colour === "white") return false;
+  if (colourWords.white.test(key) && colour !== "white") return false;
+  // "Grauer Burgunder" is Pinot gris, which the sources call white; "Sauvignon
+  // Gris" is not Sauvignon blanc. A grey name needs a grey grape or one whose
+  // own names say grey.
+  const greyNamed = Object.values(grapeById.get(grapeId)?.names ?? {}).some((own) =>
+    colourWords.grey.test(matchKey(own)),
+  );
+  if (colourWords.grey.test(key) && colour !== "pink" && !greyNamed) return false;
+  return true;
+}
+function linkVariety(name: string, listed: Set<string>, families: Set<string>): string | null {
+  const key = matchKey(name);
+  const primary = primaryName.get(key);
+  if (primary) return primary;
+  const synonym = synonymName.get(key);
+  if (!synonym) return null;
+  if (families.has(key) || notTheSameVariety.has(key)) return null;
+  if (!colourAgrees(name, synonym) || listed.has(synonym)) return null;
+  return synonym;
+}
+const documents = new Map<string, { text: string; url: string }>();
+for (const entry of entries) {
+  const recordPath = resolve(registerFolder, `${entry.eambrosiaId}.json`);
+  if (!existsSync(recordPath)) continue;
+  const record = JSON.parse(readFileSync(recordPath, "utf8")) as {
+    singleDocTechFile?: { uri: string }[] | null;
+  };
+  const document = record.singleDocTechFile?.[0]?.uri;
+  const technicalFile = document === undefined ? null : resolve(registerFolder, `${document}.txt`);
+  const journal = resolve(registerFolder, `oj-${entry.eambrosiaId}.txt`);
+  if (technicalFile !== null && existsSync(technicalFile)) {
+    documents.set(entry.eambrosiaId, {
+      text: readFileSync(technicalFile, "utf8"),
+      url: `https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/${document}`,
+    });
+  } else if (existsSync(journal)) {
+    documents.set(entry.eambrosiaId, {
+      text: readFileSync(journal, "utf8"),
+      url: readFileSync(resolve(registerFolder, `oj-${entry.eambrosiaId}.url`), "utf8").trim(),
+    });
+  }
+}
+const varietiesOf = new Map<string, string[]>();
+for (const [id, document] of documents) {
+  const names = registerGrapes(document.text);
+  varietiesOf.set(id, names);
+  for (const name of names) allVarieties.add(matchKey(name));
+}
+// A word that opens three or more of the register's variety names is a family.
+const openings = new Map<string, number>();
+for (const key of allVarieties) {
+  const words = key.split(" ");
+  if (words.length > 1) openings.set(words[0]!, (openings.get(words[0]!) ?? 0) + 1);
+}
+const families = new Set([...openings].filter(([, count]) => count >= 3).map(([word]) => word));
+let documented = 0;
+let linkedVarieties = 0;
+for (const entry of entries) {
+  const document = documents.get(entry.eambrosiaId);
+  if (document === undefined) continue;
+  const categories = registerCategories(document.text);
+  const names = varietiesOf.get(entry.eambrosiaId) ?? [];
+  if (categories.length === 0 && names.length === 0) continue;
+  const listed = new Set(
+    names.map((name) => primaryName.get(matchKey(name))).filter((id): id is string => Boolean(id)),
+  );
+  const varieties = names.map((name) => ({ grapeId: linkVariety(name, listed, families), name }));
+  entry.register = { categories, grapes: varieties, sourceUrl: document.url };
+  documented += 1;
+  linkedVarieties += varieties.filter((variety) => variety.grapeId !== null).length;
+}
+console.info(
+  `  ${documented} names described from the register's single document; ${linkedVarieties} varieties linked to a grape card.`,
+);
 
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;

@@ -165,6 +165,22 @@
     "registerTitle": "Al registre de la UE",
     "registeredOn": "Protegida a la UE des del {{date}}.",
     "registerLink": "Veure-la al registre de la UE (eAmbrosia)",
+    "registerCategories": "Categories de producte",
+    "wineCategory": {
+      "1": "Vi",
+      "3": "Vi de licor",
+      "4": "Vi escumós",
+      "5": "Vi escumós de qualitat",
+      "6": "Vi escumós aromàtic de qualitat",
+      "7": "Vi escumós gasificat",
+      "8": "Vi d'agulla",
+      "9": "Vi d'agulla gasificat",
+      "15": "Vi de raïm passificat",
+      "16": "Vi de raïm sobremadurat"
+    },
+    "registerGrapes": "Varietats principals",
+    "registerGrapesNote": "Tal com les escriu el document únic del registre; amb enllaç, les que la biblioteca sap amb certesa quin raïm són.",
+    "registerDocument": "Document únic del registre",
     "grapesHere": "Raïms que s'hi conreen",
     "grapesHereNote": "Raïms que el seu propi article diu que s'hi conreen. No és la llista completa: les varietats autoritzades són al registre de la UE.",
     "home": {

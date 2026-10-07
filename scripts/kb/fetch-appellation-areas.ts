@@ -40,7 +40,10 @@ async function get(url: string): Promise<Response> {
   throw new Error(`Failed after retries: ${url}`);
 }
 
-type RegisterRecord = { singleDocTechFile?: { text: string; uri: string }[] | null };
+type RegisterRecord = {
+  publications?: { date?: string; text: string; uri: string }[] | null;
+  singleDocTechFile?: { text: string; uri: string }[] | null;
+};
 
 /**
  * The NUTS regions a technical file lists for its demarcated area, each code
@@ -81,6 +84,126 @@ export function nutsRegions(text: string, country: string): { code: string; name
     .map((code) => ({ code, name: found.get(code)! }));
 }
 
+/**
+ * A registered name's technical file as text, fetched once and cached: its
+ * record, the PDF of its single document, and Ghostscript's reading of it.
+ * Null where the register holds no document for the name.
+ */
+export async function readTechnicalFile(
+  eambrosiaId: string,
+): Promise<{ document: string; text: string } | null> {
+  const recordPath = resolve(folder, `${eambrosiaId}.json`);
+  if (!existsSync(recordPath)) {
+    const response = await get(`${api}gi-applications/id/${eambrosiaId}`);
+    writeFileSync(recordPath, await response.text());
+  }
+  const record = JSON.parse(readFileSync(recordPath, "utf8")) as RegisterRecord;
+  const document = record.singleDocTechFile?.[0]?.uri;
+  if (document === undefined) return null;
+  const pdf = resolve(folder, `${document}.pdf`);
+  const text = resolve(folder, `${document}.txt`);
+  if (!existsSync(pdf)) {
+    const response = await get(`${api}v1/attachments/${document}`);
+    writeFileSync(pdf, new Uint8Array(await response.arrayBuffer()));
+  }
+  if (!existsSync(text)) {
+    execFileSync("gs", [
+      "-q",
+      "-dNOPAUSE",
+      "-dBATCH",
+      "-sDEVICE=txtwrite",
+      `-sOutputFile=${text}`,
+      pdf,
+    ]);
+  }
+  return { document, text: readFileSync(text, "utf8") };
+}
+
+/**
+ * A registered name's single document as published in the Official Journal,
+ * in English, for names the register holds no technical file for (those
+ * registered or amended since 2019). Read through the Publications Office's
+ * Cellar service, the machine-readable home of the same text EUR-Lex shows.
+ * Cached as `oj-<id>.txt`, with the document's paragraphs as lines.
+ */
+export async function readOfficialJournal(
+  eambrosiaId: string,
+): Promise<{ text: string; url: string } | null> {
+  const recordPath = resolve(folder, `${eambrosiaId}.json`);
+  if (!existsSync(recordPath)) return null;
+  const path = resolve(folder, `oj-${eambrosiaId}.txt`);
+  const urlPath = resolve(folder, `oj-${eambrosiaId}.url`);
+  if (existsSync(path)) {
+    return {
+      text: readFileSync(path, "utf8"),
+      url: existsSync(urlPath) ? readFileSync(urlPath, "utf8").trim() : "",
+    };
+  }
+  const record = JSON.parse(readFileSync(recordPath, "utf8")) as RegisterRecord;
+  // Newest first: the single document as it now stands, or, where the latest
+  // communication carries only an amendment, the one before it.
+  const publications = (record.publications ?? [])
+    .filter((entry) => /^Of+icial Journal C/.test(entry.text))
+    .sort((left, right) => (right.date ?? "").localeCompare(left.date ?? ""));
+  for (const publication of publications) {
+    const cellar = cellarAddress(publication.uri);
+    if (cellar === null) continue;
+    await new Promise((settle) => setTimeout(settle, Math.max(0, last + 1_100 - Date.now())));
+    last = Date.now();
+    const response = await fetch(cellar, {
+      headers: {
+        Accept: "application/xhtml+xml",
+        "Accept-Language": "eng",
+        "User-Agent": userAgent,
+      },
+    });
+    if (!response.ok) continue;
+    const text = (await response.text())
+      .replace(/<\/(p|div|tr|li|h\d)>|<br\s*\/?>/gi, "\n")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&#(\d+);/g, (_, code: string) => String.fromCodePoint(Number(code)))
+      .replace(/[ \t]+/g, " ")
+      .replace(/\n\s*\n+/g, "\n");
+    if (!/Categories of grapevine products/i.test(text)) continue;
+    writeFileSync(path, text);
+    writeFileSync(urlPath, publication.uri);
+    return { text, url: publication.uri };
+  }
+  return null;
+}
+
+/**
+ * Where the Publications Office's Cellar serves an Official Journal text the
+ * register links on EUR-Lex: by its "uriserv" identifier, its act number
+ * (C/2023/1187), its ELI or its CELEX number.
+ */
+export function cellarAddress(uri: string): string | null {
+  const decoded = decodeURIComponent(uri);
+  const uriserv = /uri=uriserv:([^&]+)/.exec(decoded)?.[1];
+  if (uriserv !== undefined) {
+    // Some links end in "EN" rather than the "ENG" Cellar knows.
+    return `http://publications.europa.eu/resource/uriserv/${uriserv.replace(/\.EN$/, ".ENG")}`;
+  }
+  const journal = /uri=OJ:(JOC_[\dA-Z_]+)/.exec(decoded)?.[1];
+  if (journal !== undefined) return `http://publications.europa.eu/resource/oj/${journal}`;
+  const act = /uri=OJ:(C_\d+)/.exec(decoded)?.[1];
+  if (act !== undefined) return `http://publications.europa.eu/resource/oj/${act}`;
+  const eli = /eli\/C\/(\d{4})\/(\d+)\/oj/.exec(decoded);
+  if (eli !== null) {
+    return `http://publications.europa.eu/resource/oj/C_${eli[1]}${eli[2]!.padStart(5, "0")}`;
+  }
+  const celex = /uri=CELEX:([^&]+)/.exec(decoded)?.[1];
+  if (celex !== undefined) {
+    const encoded = encodeURIComponent(celex).replace(/\(/g, "%28").replace(/\)/g, "%29");
+    return `http://publications.europa.eu/resource/celex/${encoded}`;
+  }
+  return null;
+}
+
 async function main() {
   const regions = JSON.parse(
     readFileSync(resolve("data/kb/appellations.json"), "utf8"),
@@ -102,33 +225,12 @@ async function main() {
     const known = wikidata[region.eambrosiaId];
     if (known?.latitude != null && known.pointSource !== "place") continue;
     if (matchKey(region.name).startsWith("alsace grand cru ")) continue;
-    const recordPath = resolve(folder, `${region.eambrosiaId}.json`);
-    if (!existsSync(recordPath)) {
-      const response = await get(`${api}gi-applications/id/${region.eambrosiaId}`);
-      writeFileSync(recordPath, await response.text());
-    }
-    const record = JSON.parse(readFileSync(recordPath, "utf8")) as RegisterRecord;
-    const document = record.singleDocTechFile?.[0]?.uri;
-    if (document === undefined) continue;
-    const pdf = resolve(folder, `${document}.pdf`);
-    const text = resolve(folder, `${document}.txt`);
-    if (!existsSync(pdf)) {
-      const response = await get(`${api}v1/attachments/${document}`);
-      writeFileSync(pdf, new Uint8Array(await response.arrayBuffer()));
-    }
-    if (!existsSync(text)) {
-      execFileSync("gs", [
-        "-q",
-        "-dNOPAUSE",
-        "-dBATCH",
-        "-sDEVICE=txtwrite",
-        `-sOutputFile=${text}`,
-        pdf,
-      ]);
-    }
+    const file = await readTechnicalFile(region.eambrosiaId);
+    if (file === null) continue;
+    const { document, text } = file;
     nuts[region.eambrosiaId] = {
       document,
-      regions: nutsRegions(readFileSync(text, "utf8"), region.countryCode),
+      regions: nutsRegions(text, region.countryCode),
     };
     read += 1;
     if (read % 20 === 0) {

@@ -165,6 +165,22 @@
     "registerTitle": "No registo da UE",
     "registeredOn": "Protegida na UE desde {{date}}.",
     "registerLink": "Ver no registo da UE (eAmbrosia)",
+    "registerCategories": "Categorias de produtos",
+    "wineCategory": {
+      "1": "Vinho",
+      "3": "Vinho licoroso",
+      "4": "Vinho espumante",
+      "5": "Vinho espumante de qualidade",
+      "6": "Vinho espumante de qualidade aromático",
+      "7": "Vinho espumante gaseificado",
+      "8": "Vinho frisante",
+      "9": "Vinho frisante gaseificado",
+      "15": "Vinho de uvas passas",
+      "16": "Vinho de uvas sobreamadurecidas"
+    },
+    "registerGrapes": "Principais castas",
+    "registerGrapesNote": "Tal como o documento único do registo as escreve; com ligação, as que a biblioteca sabe com certeza que casta são.",
+    "registerDocument": "Documento único do registo",
     "grapesHere": "Castas cultivadas aqui",
     "grapesHereNote": "Castas cujo próprio artigo diz que são cultivadas aqui. Não é a lista completa: as castas autorizadas estão no registo da UE.",
     "home": {

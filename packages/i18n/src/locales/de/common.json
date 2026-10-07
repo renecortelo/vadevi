@@ -165,6 +165,22 @@
     "registerTitle": "Im EU-Register",
     "registeredOn": "In der EU geschützt seit dem {{date}}.",
     "registerLink": "Im EU-Register ansehen (eAmbrosia)",
+    "registerCategories": "Erzeugniskategorien",
+    "wineCategory": {
+      "1": "Wein",
+      "3": "Likörwein",
+      "4": "Schaumwein",
+      "5": "Qualitätsschaumwein",
+      "6": "Aromatischer Qualitätsschaumwein",
+      "7": "Schaumwein mit zugesetzter Kohlensäure",
+      "8": "Perlwein",
+      "9": "Perlwein mit zugesetzter Kohlensäure",
+      "15": "Wein aus getrockneten Trauben",
+      "16": "Wein aus überreifen Trauben"
+    },
+    "registerGrapes": "Wichtigste Keltertraubensorten",
+    "registerGrapesNote": "So wie das Einzige Dokument des Registers sie schreibt; verlinkt, wo die Bibliothek sicher weiß, welche Rebsorte es ist.",
+    "registerDocument": "Einziges Dokument des Registers",
     "grapesHere": "Hier angebaute Rebsorten",
     "grapesHereNote": "Rebsorten, deren eigener Artikel sagt, dass sie hier angebaut werden. Keine vollständige Liste: die zugelassenen Sorten stehen im EU-Register.",
     "home": {

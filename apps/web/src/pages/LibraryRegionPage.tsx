@@ -176,6 +176,55 @@ export function LibraryRegionPage() {
             </a>
           </p>
         )}
+        {/* What the name's own document in the register says: its categories
+            and main varieties, as written there, with the document itself. */}
+        {region.register === null ? null : (
+          <>
+            {region.register.categories.length === 0 ? null : (
+              <div className="library-pairing-group">
+                <h3>{t("library.registerCategories")}</h3>
+                <ul className="library-chips">
+                  {region.register.categories.map((category) => (
+                    <li key={category}>{t(`library.wineCategory.${category}`)}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {region.register.grapes.length === 0 ? null : (
+              <div className="library-pairing-group">
+                <h3>{t("library.registerGrapes")}</h3>
+                <ul className="library-chips">
+                  {region.register.grapes.map((variety) => (
+                    <li key={variety.name}>
+                      {variety.grapeId === null ? (
+                        variety.name
+                      ) : (
+                        <Link
+                          className="text-link"
+                          state={trail}
+                          to={`/library/grapes/${variety.grapeId}`}
+                        >
+                          {variety.name}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+                <p className="section-help">{t("library.registerGrapesNote")}</p>
+              </div>
+            )}
+            <p className="section-help">
+              <a
+                className="text-link"
+                href={region.register.sourceUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {t("library.registerDocument")}
+              </a>
+            </p>
+          </>
+        )}
       </section>
 
       {region.grapes.length === 0 ? null : (

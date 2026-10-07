@@ -578,6 +578,20 @@ async function loadCollectionOverview(
  * cites something the response can show — the same id for the same grape on
  * every turn, in the format every other source id has.
  */
+/** Annex VII, Part II of Regulation (EU) No 1308/2013, in its English text. */
+const annexSevenCategories: Record<number, string> = {
+  1: "wine",
+  3: "liqueur wine",
+  4: "sparkling wine",
+  5: "quality sparkling wine",
+  6: "quality aromatic sparkling wine",
+  7: "aerated sparkling wine",
+  8: "semi-sparkling wine",
+  9: "aerated semi-sparkling wine",
+  15: "wine from raisined grapes",
+  16: "wine of overripe grapes",
+};
+
 async function librarySourceId(grapeId: string): Promise<string> {
   const crockford = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";
   const digest = new Uint8Array(
@@ -765,6 +779,44 @@ async function loadLibraryStatements(
       `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of ${region.countryCode}${region.registeredOn === null ? "" : `, registered on ${region.registeredOn}`}`,
       [registerId],
     );
+    if (region.register !== null) {
+      // The name's own document in the register: what its wines may be, and
+      // the main varieties as it writes them.
+      const documentId = await librarySourceId(`region-document:${region.id}`);
+      sources.push({
+        canonicalUrl: region.register.sourceUrl,
+        createdAt: now,
+        createdByProvider: "wine-library",
+        createdByUserId: null,
+        id: documentId,
+        licenseIdentifier: "EC-reuse-2011-833",
+        publisher: "European Commission (eAmbrosia)",
+        retrievedAt: now,
+        sourceType: "regulator",
+        title: `${region.name} — single document`,
+        updatedAt: now,
+      });
+      const categories = region.register.categories
+        .map((category) => annexSevenCategories[category])
+        .filter(Boolean);
+      if (categories.length > 0) {
+        say(
+          "categories",
+          `its single document in the register covers these categories of grapevine product: ${categories.join(", ")}`,
+          [documentId],
+        );
+      }
+      if (region.register.grapes.length > 0) {
+        say(
+          "varieties",
+          `its single document in the register lists these main grape varieties: ${region.register.grapes
+            .slice(0, 25)
+            .map((variety) => variety.name)
+            .join(", ")}`,
+          [documentId],
+        );
+      }
+    }
     if (region.summary !== null) {
       const summaryId = await librarySourceId(`region-summary:${region.id}`);
       sources.push({

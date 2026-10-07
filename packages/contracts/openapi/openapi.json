@@ -11232,6 +11232,48 @@
             "type": "string",
             "nullable": true
           },
+          "register": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "categories": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "grapes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "grapeId": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "grapeId",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "sourceUrl": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "categories",
+              "grapes",
+              "sourceUrl"
+            ],
+            "additionalProperties": false
+          },
           "summary": {
             "type": "object",
             "nullable": true,
@@ -11280,6 +11322,7 @@
           "otherNames",
           "pointSource",
           "registeredOn",
+          "register",
           "summary",
           "wikidataId"
         ],

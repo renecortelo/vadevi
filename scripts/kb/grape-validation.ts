@@ -150,7 +150,7 @@ export function parseRegion(value: string): { country: string; name: string } | 
 }
 
 const colorWords: Record<"pink" | "red" | "white", RegExp> = {
-  pink: /\b(grey|gray|pink|gris|rose|rosy|copper)|розов|сер[оы]/,
+  pink: /\b(grey|gray|pink|gris|rose|rosy|copper|fleischfarben)|розов|сер[оы]/,
   red: /\b(black|red|dark|blue|purple|noir|nero|nera|nere|tinto|tinta|negra|rouge)|schwarz|черн|красн|темно-син/,
   white: /\b(white|green|yellow|golden|blanc|bianco|blanco|weiss|weiß)|бел[аоыи]|зелен|желт/,
 };
