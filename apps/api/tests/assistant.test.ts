@@ -357,6 +357,16 @@ describe("Vicenç deterministic read path", () => {
     const ids = body.data.results.map((result: AssistantSearchResult) => result.wine.id);
     expect(ids).toContain(alpha.id);
     expect(ids).toContain(beta.id);
+
+    // Asked by owning rather than counting, in any of the languages.
+    for (const question of ["¿Qué vinos tengo?", "What wines do I have?", "Quins vins tinc?"]) {
+      const asked = AssistantTurnResponseSchema.parse(
+        await (await assistantTurn(collectionToken, spaceId, question)).json(),
+      );
+      const found = asked.data.results.map((result: AssistantSearchResult) => result.wine.id);
+      expect(found, question).toContain(alpha.id);
+      expect(found, question).toContain(beta.id);
+    }
   });
 
   it("returns the same non-enumerating denial to a caller outside the active Space", async () => {
@@ -627,6 +637,22 @@ describe("Vicenç deterministic read path", () => {
       spaceId,
     });
     expect(failed?.data.renderedText).toContain("no pudo responder");
+
+    // Nothing in the Space answers the question: that is what the reader is
+    // told, not that the AI failed — the model was never asked.
+    const empty = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: { render: async () => null },
+      pairing: null,
+      principal,
+      request: { ...request, message: "zzyzx qwerty" },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    expect(empty?.data.renderedText).toContain("No he encontrado en este Espacio vinos");
+    expect(empty?.data.renderedText).not.toContain("no pudo responder");
   }, 30_000);
 
   it("reports the wine a turn resolved by style as its focus, for the next turn to follow", async () => {

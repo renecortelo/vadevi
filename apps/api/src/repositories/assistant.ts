@@ -145,6 +145,14 @@ function requestsRecommendation(message: string): boolean {
  */
 function requestsCollectionOverview(message: string): boolean {
   const normalized = normalizeWineText(message);
+  // "What wines do I have?", "my wines", "list my wines": the collection as a
+  // whole, asked for by owning or listing rather than by counting.
+  if (
+    /\b(que vinos tengo|que vinos hay|mis vinos|lista de vinos|listado de vinos|quins vins tinc|els meus vins|llista de vins|what wines do i have|which wines do i have|my wines|list my wines|list of wines|quels vins ai je|mes vins|liste de mes vins|che vini ho|i miei vini|elenco dei vini|welke wijnen heb ik|mijn wijnen|lijst van wijnen|welche weine habe ich|meine weine|liste meiner weine|que vinhos tenho|os meus vinhos|lista de vinhos)\b/.test(
+      normalized,
+    )
+  )
+    return true;
   return /\b(how many|count|total|totals|highest|best|top|ranking|ranked|most|cuantos|cuantas|total|totales|mejor|mejores|puntuad|top|clasificaci|bodega|cava|celler|probado|probados|catado|catados|combien|meilleur|meilleurs|classement|quanti|quante|migliore|migliori|classifica|hoeveel|beste|meeste|wie viele|beste|meisten|rangliste|quantos|melhor|melhores|classificac)\b/i.test(
     normalized,
   );
@@ -351,36 +359,41 @@ function localizedCopy(
     | "found_failed"
     | "not_found"
     | "not_found_capped"
+    | "not_found_empty"
     | "not_found_failed"
     | "unclear",
   count: number,
 ): string {
   const copy: Record<SupportedLocale, Record<typeof kind, string>> = {
     ca: {
-      evidence: `${count} registres coincidents de Wine Memory`,
-      found: `He trobat ${count} ${count === 1 ? "vi coincident" : "vins coincidents"} a la Wine Memory autoritzada. La IA està desactivada: és una cerca estructurada directa, no una resposta generada.`,
-      found_failed: `He trobat ${count} ${count === 1 ? "vi coincident" : "vins coincidents"} a la Wine Memory autoritzada. La IA no ha pogut respondre ara mateix: és una cerca estructurada directa.`,
-      found_capped: `He trobat ${count} ${count === 1 ? "vi coincident" : "vins coincidents"} a la Wine Memory autoritzada. Avui ja s’ha arribat al límit diari de respostes de la IA; demà torna. Mentrestant, això és una cerca estructurada directa.`,
+      evidence: `${count} registres coincidents de la Memòria del vi`,
+      found: `He trobat ${count} ${count === 1 ? "vi coincident" : "vins coincidents"} a la Memòria del vi autoritzada. La IA està desactivada: és una cerca estructurada directa, no una resposta generada.`,
+      found_failed: `He trobat ${count} ${count === 1 ? "vi coincident" : "vins coincidents"} a la Memòria del vi autoritzada. La IA no ha pogut respondre ara mateix: és una cerca estructurada directa.`,
+      found_capped: `He trobat ${count} ${count === 1 ? "vi coincident" : "vins coincidents"} a la Memòria del vi autoritzada. Avui ja s’ha arribat al límit diari de respostes de la IA; demà torna. Mentrestant, això és una cerca estructurada directa.`,
       not_found:
-        "No he trobat cap coincidència estructurada a la Wine Memory autoritzada. La IA està desactivada, però el registre i la cerca normals continuen disponibles.",
+        "No he trobat cap coincidència estructurada a la Memòria del vi autoritzada. La IA està desactivada, però el registre i la cerca normals continuen disponibles.",
       not_found_capped:
-        "No he trobat cap coincidència estructurada a la Wine Memory autoritzada. Avui ja s’ha arribat al límit diari de respostes de la IA; demà torna. El registre i la cerca normals continuen disponibles.",
+        "No he trobat cap coincidència estructurada a la Memòria del vi autoritzada. Avui ja s’ha arribat al límit diari de respostes de la IA; demà torna. El registre i la cerca normals continuen disponibles.",
+      not_found_empty:
+        "No he trobat en aquest Espai vins que responguin a aquesta pregunta. Prova amb el nom d’un vi, un celler, un raïm o una regió, o pregunta «quins vins tinc?».",
       not_found_failed:
-        "No he trobat cap coincidència estructurada a la Wine Memory autoritzada. La IA no ha pogut respondre ara mateix; el registre i la cerca normals continuen disponibles.",
+        "No he trobat cap coincidència estructurada a la Memòria del vi autoritzada. La IA no ha pogut respondre ara mateix; el registre i la cerca normals continuen disponibles.",
       unclear:
         "No t’he entès bé. Pots tornar a formular la pregunta? Per exemple: «Què saps de la garnatxa?» o «Quin vi obro amb una paella?»",
     },
     de: {
-      evidence: `${count} passende Wine-Memory-Einträge`,
-      found: `Ich habe ${count} passende ${count === 1 ? "Wein" : "Weine"} im autorisierten Wine Memory gefunden. KI ist deaktiviert: Das ist eine direkte strukturierte Suche, keine generierte Antwort.`,
-      found_failed: `Ich habe ${count} passende ${count === 1 ? "Wein" : "Weine"} im autorisierten Wine Memory gefunden. Die KI konnte gerade nicht antworten: Das ist eine direkte strukturierte Suche.`,
-      found_capped: `Ich habe ${count} passende ${count === 1 ? "Wein" : "Weine"} im autorisierten Wine Memory gefunden. Das Tageslimit für KI-Antworten ist für heute erreicht; morgen geht es weiter. Bis dahin ist das eine direkte strukturierte Suche.`,
+      evidence: `${count} passende Einträge im Weingedächtnis`,
+      found: `Ich habe ${count} passende ${count === 1 ? "Wein" : "Weine"} im autorisierten Weingedächtnis gefunden. KI ist deaktiviert: Das ist eine direkte strukturierte Suche, keine generierte Antwort.`,
+      found_failed: `Ich habe ${count} passende ${count === 1 ? "Wein" : "Weine"} im autorisierten Weingedächtnis gefunden. Die KI konnte gerade nicht antworten: Das ist eine direkte strukturierte Suche.`,
+      found_capped: `Ich habe ${count} passende ${count === 1 ? "Wein" : "Weine"} im autorisierten Weingedächtnis gefunden. Das Tageslimit für KI-Antworten ist für heute erreicht; morgen geht es weiter. Bis dahin ist das eine direkte strukturierte Suche.`,
       not_found:
-        "Ich habe im autorisierten Wine Memory keine strukturierte Übereinstimmung gefunden. KI ist deaktiviert, aber Protokollierung und normale Suche bleiben verfügbar.",
+        "Ich habe im autorisierten Weingedächtnis keine strukturierte Übereinstimmung gefunden. KI ist deaktiviert, aber Protokollierung und normale Suche bleiben verfügbar.",
       not_found_capped:
-        "Ich habe im autorisierten Wine Memory keine strukturierte Übereinstimmung gefunden. Das Tageslimit für KI-Antworten ist für heute erreicht; morgen geht es weiter. Protokollierung und normale Suche bleiben verfügbar.",
+        "Ich habe im autorisierten Weingedächtnis keine strukturierte Übereinstimmung gefunden. Das Tageslimit für KI-Antworten ist für heute erreicht; morgen geht es weiter. Protokollierung und normale Suche bleiben verfügbar.",
+      not_found_empty:
+        "Ich habe in diesem Bereich keine Weine gefunden, die diese Frage beantworten. Versuchen Sie es mit dem Namen eines Weins, Erzeugers, einer Rebsorte oder Region, oder fragen Sie „Welche Weine habe ich?“.",
       not_found_failed:
-        "Ich habe im autorisierten Wine Memory keine strukturierte Übereinstimmung gefunden. Die KI konnte gerade nicht antworten; Protokollierung und normale Suche bleiben verfügbar.",
+        "Ich habe im autorisierten Weingedächtnis keine strukturierte Übereinstimmung gefunden. Die KI konnte gerade nicht antworten; Protokollierung und normale Suche bleiben verfügbar.",
       unclear:
         "Das habe ich nicht ganz verstanden. Können Sie Ihre Frage anders formulieren? Zum Beispiel: „Was weißt du über Grenache?“ oder „Welchen Wein öffne ich zu Paella?“",
     },
@@ -393,78 +406,90 @@ function localizedCopy(
         "I did not find a structured match in your authorized Wine Memory. AI is off, but logging and ordinary search remain available.",
       not_found_capped:
         "I did not find a structured match in your authorized Wine Memory. Today's limit on AI replies has been reached; it is back tomorrow. Logging and ordinary search remain available.",
+      not_found_empty:
+        "I found no wines in this Space that answer that question. Try a wine, producer, grape or region by name, or ask “what wines do I have?”.",
       not_found_failed:
         "I did not find a structured match in your authorized Wine Memory. The AI could not answer just now; logging and ordinary search remain available.",
       unclear:
         "I didn’t quite understand that. Could you rephrase your question? For example: “What do you know about Garnacha?” or “Which wine should I open with paella?”",
     },
     es: {
-      evidence: `${count} ${count === 1 ? "registro coincidente" : "registros coincidentes"} de Wine Memory`,
-      found: `He encontrado ${count} ${count === 1 ? "vino coincidente" : "vinos coincidentes"} en la Wine Memory autorizada. La IA está desactivada: es una búsqueda estructurada directa, no una respuesta generada.`,
-      found_failed: `He encontrado ${count} ${count === 1 ? "vino coincidente" : "vinos coincidentes"} en la Wine Memory autorizada. La IA no pudo responder ahora mismo: es una búsqueda estructurada directa.`,
-      found_capped: `He encontrado ${count} ${count === 1 ? "vino coincidente" : "vinos coincidentes"} en la Wine Memory autorizada. Hoy ya se ha llegado al límite diario de respuestas de la IA; mañana vuelve. Mientras tanto, esto es una búsqueda estructurada directa.`,
+      evidence: `${count} ${count === 1 ? "registro coincidente" : "registros coincidentes"} de la Memoria del vino`,
+      found: `He encontrado ${count} ${count === 1 ? "vino coincidente" : "vinos coincidentes"} en la Memoria del vino autorizada. La IA está desactivada: es una búsqueda estructurada directa, no una respuesta generada.`,
+      found_failed: `He encontrado ${count} ${count === 1 ? "vino coincidente" : "vinos coincidentes"} en la Memoria del vino autorizada. La IA no pudo responder ahora mismo: es una búsqueda estructurada directa.`,
+      found_capped: `He encontrado ${count} ${count === 1 ? "vino coincidente" : "vinos coincidentes"} en la Memoria del vino autorizada. Hoy ya se ha llegado al límite diario de respuestas de la IA; mañana vuelve. Mientras tanto, esto es una búsqueda estructurada directa.`,
       not_found:
-        "No he encontrado ninguna coincidencia estructurada en la Wine Memory autorizada. La IA está desactivada, pero el registro y la búsqueda normales siguen disponibles.",
+        "No he encontrado ninguna coincidencia estructurada en la Memoria del vino autorizada. La IA está desactivada, pero el registro y la búsqueda normales siguen disponibles.",
       not_found_capped:
-        "No he encontrado ninguna coincidencia estructurada en la Wine Memory autorizada. Hoy ya se ha llegado al límite diario de respuestas de la IA; mañana vuelve. El registro y la búsqueda normales siguen disponibles.",
+        "No he encontrado ninguna coincidencia estructurada en la Memoria del vino autorizada. Hoy ya se ha llegado al límite diario de respuestas de la IA; mañana vuelve. El registro y la búsqueda normales siguen disponibles.",
+      not_found_empty:
+        "No he encontrado en este Espacio vinos que respondan a esa pregunta. Prueba con el nombre de un vino, una bodega, una uva o una región, o pregunta «¿qué vinos tengo?».",
       not_found_failed:
-        "No he encontrado ninguna coincidencia estructurada en la Wine Memory autorizada. La IA no pudo responder ahora mismo; el registro y la búsqueda normales siguen disponibles.",
+        "No he encontrado ninguna coincidencia estructurada en la Memoria del vino autorizada. La IA no pudo responder ahora mismo; el registro y la búsqueda normales siguen disponibles.",
       unclear:
         "No te he entendido bien. ¿Puedes reformular la pregunta? Por ejemplo: «¿Qué sabes de la garnacha?» o «¿Qué vino abro con una paella?»",
     },
     fr: {
-      evidence: `${count} ${count === 1 ? "entrée correspondante" : "entrées correspondantes"} dans Wine Memory`,
-      found: `J’ai trouvé ${count} ${count === 1 ? "vin correspondant" : "vins correspondants"} dans la Wine Memory autorisée. L’IA est désactivée : il s’agit d’une recherche structurée directe, pas d’une réponse générée.`,
-      found_failed: `J’ai trouvé ${count} ${count === 1 ? "vin correspondant" : "vins correspondants"} dans la Wine Memory autorisée. L’IA n’a pas pu répondre à l’instant : il s’agit d’une recherche structurée directe.`,
-      found_capped: `J’ai trouvé ${count} ${count === 1 ? "vin correspondant" : "vins correspondants"} dans la Wine Memory autorisée. La limite quotidienne de réponses de l’IA est atteinte pour aujourd’hui ; elle revient demain. D’ici là, il s’agit d’une recherche structurée directe.`,
+      evidence: `${count} ${count === 1 ? "entrée correspondante" : "entrées correspondantes"} dans la Mémoire du vin`,
+      found: `J’ai trouvé ${count} ${count === 1 ? "vin correspondant" : "vins correspondants"} dans la Mémoire du vin autorisée. L’IA est désactivée : il s’agit d’une recherche structurée directe, pas d’une réponse générée.`,
+      found_failed: `J’ai trouvé ${count} ${count === 1 ? "vin correspondant" : "vins correspondants"} dans la Mémoire du vin autorisée. L’IA n’a pas pu répondre à l’instant : il s’agit d’une recherche structurée directe.`,
+      found_capped: `J’ai trouvé ${count} ${count === 1 ? "vin correspondant" : "vins correspondants"} dans la Mémoire du vin autorisée. La limite quotidienne de réponses de l’IA est atteinte pour aujourd’hui ; elle revient demain. D’ici là, il s’agit d’une recherche structurée directe.`,
       not_found:
-        "Je n’ai trouvé aucune correspondance structurée dans la Wine Memory autorisée. L’IA est désactivée, mais la saisie et la recherche ordinaires restent disponibles.",
+        "Je n’ai trouvé aucune correspondance structurée dans la Mémoire du vin autorisée. L’IA est désactivée, mais la saisie et la recherche ordinaires restent disponibles.",
       not_found_capped:
-        "Je n’ai trouvé aucune correspondance structurée dans la Wine Memory autorisée. La limite quotidienne de réponses de l’IA est atteinte pour aujourd’hui ; elle revient demain. La saisie et la recherche ordinaires restent disponibles.",
+        "Je n’ai trouvé aucune correspondance structurée dans la Mémoire du vin autorisée. La limite quotidienne de réponses de l’IA est atteinte pour aujourd’hui ; elle revient demain. La saisie et la recherche ordinaires restent disponibles.",
+      not_found_empty:
+        "Je n’ai trouvé dans cet Espace aucun vin qui réponde à cette question. Essayez le nom d’un vin, d’un domaine, d’un cépage ou d’une région, ou demandez « quels vins ai-je ? ».",
       not_found_failed:
-        "Je n’ai trouvé aucune correspondance structurée dans la Wine Memory autorisée. L’IA n’a pas pu répondre à l’instant ; la saisie et la recherche ordinaires restent disponibles.",
+        "Je n’ai trouvé aucune correspondance structurée dans la Mémoire du vin autorisée. L’IA n’a pas pu répondre à l’instant ; la saisie et la recherche ordinaires restent disponibles.",
       unclear:
         "Je n’ai pas bien compris. Pouvez-vous reformuler votre question ? Par exemple : « Que sais-tu du grenache ? » ou « Quel vin ouvrir avec une paella ? »",
     },
     it: {
-      evidence: `${count} ${count === 1 ? "record corrispondente" : "record corrispondenti"} di Wine Memory`,
-      found: `Ho trovato ${count} ${count === 1 ? "vino corrispondente" : "vini corrispondenti"} nella Wine Memory autorizzata. L’IA è disattivata: questa è una ricerca strutturata diretta, non una risposta generata.`,
-      found_failed: `Ho trovato ${count} ${count === 1 ? "vino corrispondente" : "vini corrispondenti"} nella Wine Memory autorizzata. L’IA non ha potuto rispondere ora: questa è una ricerca strutturata diretta.`,
-      found_capped: `Ho trovato ${count} ${count === 1 ? "vino corrispondente" : "vini corrispondenti"} nella Wine Memory autorizzata. Il limite giornaliero di risposte dell’IA è stato raggiunto per oggi; torna domani. Nel frattempo questa è una ricerca strutturata diretta.`,
+      evidence: `${count} ${count === 1 ? "record corrispondente" : "record corrispondenti"} della Memoria del vino`,
+      found: `Ho trovato ${count} ${count === 1 ? "vino corrispondente" : "vini corrispondenti"} nella Memoria del vino autorizzata. L’IA è disattivata: questa è una ricerca strutturata diretta, non una risposta generata.`,
+      found_failed: `Ho trovato ${count} ${count === 1 ? "vino corrispondente" : "vini corrispondenti"} nella Memoria del vino autorizzata. L’IA non ha potuto rispondere ora: questa è una ricerca strutturata diretta.`,
+      found_capped: `Ho trovato ${count} ${count === 1 ? "vino corrispondente" : "vini corrispondenti"} nella Memoria del vino autorizzata. Il limite giornaliero di risposte dell’IA è stato raggiunto per oggi; torna domani. Nel frattempo questa è una ricerca strutturata diretta.`,
       not_found:
-        "Non ho trovato corrispondenze strutturate nella Wine Memory autorizzata. L’IA è disattivata, ma la registrazione e la ricerca normali restano disponibili.",
+        "Non ho trovato corrispondenze strutturate nella Memoria del vino autorizzata. L’IA è disattivata, ma la registrazione e la ricerca normali restano disponibili.",
       not_found_capped:
-        "Non ho trovato corrispondenze strutturate nella Wine Memory autorizzata. Il limite giornaliero di risposte dell’IA è stato raggiunto per oggi; torna domani. La registrazione e la ricerca normali restano disponibili.",
+        "Non ho trovato corrispondenze strutturate nella Memoria del vino autorizzata. Il limite giornaliero di risposte dell’IA è stato raggiunto per oggi; torna domani. La registrazione e la ricerca normali restano disponibili.",
+      not_found_empty:
+        "Non ho trovato in questo Spazio vini che rispondano a questa domanda. Prova con il nome di un vino, un produttore, un vitigno o una regione, oppure chiedi «che vini ho?».",
       not_found_failed:
-        "Non ho trovato corrispondenze strutturate nella Wine Memory autorizzata. L’IA non ha potuto rispondere ora; la registrazione e la ricerca normali restano disponibili.",
+        "Non ho trovato corrispondenze strutturate nella Memoria del vino autorizzata. L’IA non ha potuto rispondere ora; la registrazione e la ricerca normali restano disponibili.",
       unclear:
         "Non ho capito bene. Puoi riformulare la domanda? Per esempio: «Cosa sai del grenache?» o «Che vino apro con una paella?»",
     },
     nl: {
-      evidence: `${count} overeenkomende Wine Memory-${count === 1 ? "vermelding" : "vermeldingen"}`,
-      found: `Ik vond ${count} overeenkomende ${count === 1 ? "wijn" : "wijnen"} in het geautoriseerde Wine Memory. AI staat uit: dit is een directe gestructureerde zoekopdracht, geen gegenereerd antwoord.`,
-      found_failed: `Ik vond ${count} overeenkomende ${count === 1 ? "wijn" : "wijnen"} in het geautoriseerde Wine Memory. De AI kon nu geen antwoord geven: dit is een directe gestructureerde zoekopdracht.`,
-      found_capped: `Ik vond ${count} overeenkomende ${count === 1 ? "wijn" : "wijnen"} in het geautoriseerde Wine Memory. De daglimiet voor AI-antwoorden is voor vandaag bereikt; morgen is die er weer. Tot dan is dit een directe gestructureerde zoekopdracht.`,
+      evidence: `${count} overeenkomende ${count === 1 ? "vermelding" : "vermeldingen"} in het Wijngeheugen`,
+      found: `Ik vond ${count} overeenkomende ${count === 1 ? "wijn" : "wijnen"} in het geautoriseerde Wijngeheugen. AI staat uit: dit is een directe gestructureerde zoekopdracht, geen gegenereerd antwoord.`,
+      found_failed: `Ik vond ${count} overeenkomende ${count === 1 ? "wijn" : "wijnen"} in het geautoriseerde Wijngeheugen. De AI kon nu geen antwoord geven: dit is een directe gestructureerde zoekopdracht.`,
+      found_capped: `Ik vond ${count} overeenkomende ${count === 1 ? "wijn" : "wijnen"} in het geautoriseerde Wijngeheugen. De daglimiet voor AI-antwoorden is voor vandaag bereikt; morgen is die er weer. Tot dan is dit een directe gestructureerde zoekopdracht.`,
       not_found:
-        "Ik vond geen gestructureerde overeenkomst in het geautoriseerde Wine Memory. AI staat uit, maar vastleggen en normaal zoeken blijven beschikbaar.",
+        "Ik vond geen gestructureerde overeenkomst in het geautoriseerde Wijngeheugen. AI staat uit, maar vastleggen en normaal zoeken blijven beschikbaar.",
       not_found_capped:
-        "Ik vond geen gestructureerde overeenkomst in het geautoriseerde Wine Memory. De daglimiet voor AI-antwoorden is voor vandaag bereikt; morgen is die er weer. Vastleggen en normaal zoeken blijven beschikbaar.",
+        "Ik vond geen gestructureerde overeenkomst in het geautoriseerde Wijngeheugen. De daglimiet voor AI-antwoorden is voor vandaag bereikt; morgen is die er weer. Vastleggen en normaal zoeken blijven beschikbaar.",
+      not_found_empty:
+        "Ik vond in deze Ruimte geen wijnen die op die vraag antwoorden. Probeer de naam van een wijn, producent, druif of streek, of vraag ‘welke wijnen heb ik?’.",
       not_found_failed:
-        "Ik vond geen gestructureerde overeenkomst in het geautoriseerde Wine Memory. De AI kon nu geen antwoord geven; vastleggen en normaal zoeken blijven beschikbaar.",
+        "Ik vond geen gestructureerde overeenkomst in het geautoriseerde Wijngeheugen. De AI kon nu geen antwoord geven; vastleggen en normaal zoeken blijven beschikbaar.",
       unclear:
         "Dat begreep ik niet helemaal. Kun je je vraag anders stellen? Bijvoorbeeld: ‘Wat weet je over garnacha?’ of ‘Welke wijn open ik bij paella?’",
     },
     "pt-PT": {
-      evidence: `${count} ${count === 1 ? "registo correspondente" : "registos correspondentes"} da Wine Memory`,
-      found: `Encontrei ${count} ${count === 1 ? "vinho correspondente" : "vinhos correspondentes"} na Wine Memory autorizada. A IA está desativada: esta é uma pesquisa estruturada direta, não uma resposta gerada.`,
-      found_failed: `Encontrei ${count} ${count === 1 ? "vinho correspondente" : "vinhos correspondentes"} na Wine Memory autorizada. A IA não conseguiu responder agora: esta é uma pesquisa estruturada direta.`,
-      found_capped: `Encontrei ${count} ${count === 1 ? "vinho correspondente" : "vinhos correspondentes"} na Wine Memory autorizada. O limite diário de respostas da IA foi atingido por hoje; volta amanhã. Até lá, esta é uma pesquisa estruturada direta.`,
+      evidence: `${count} ${count === 1 ? "registo correspondente" : "registos correspondentes"} da Memória do vinho`,
+      found: `Encontrei ${count} ${count === 1 ? "vinho correspondente" : "vinhos correspondentes"} na Memória do vinho autorizada. A IA está desativada: esta é uma pesquisa estruturada direta, não uma resposta gerada.`,
+      found_failed: `Encontrei ${count} ${count === 1 ? "vinho correspondente" : "vinhos correspondentes"} na Memória do vinho autorizada. A IA não conseguiu responder agora: esta é uma pesquisa estruturada direta.`,
+      found_capped: `Encontrei ${count} ${count === 1 ? "vinho correspondente" : "vinhos correspondentes"} na Memória do vinho autorizada. O limite diário de respostas da IA foi atingido por hoje; volta amanhã. Até lá, esta é uma pesquisa estruturada direta.`,
       not_found:
-        "Não encontrei correspondências estruturadas na Wine Memory autorizada. A IA está desativada, mas o registo e a pesquisa normais continuam disponíveis.",
+        "Não encontrei correspondências estruturadas na Memória do vinho autorizada. A IA está desativada, mas o registo e a pesquisa normais continuam disponíveis.",
       not_found_capped:
-        "Não encontrei correspondências estruturadas na Wine Memory autorizada. O limite diário de respostas da IA foi atingido por hoje; volta amanhã. O registo e a pesquisa normais continuam disponíveis.",
+        "Não encontrei correspondências estruturadas na Memória do vinho autorizada. O limite diário de respostas da IA foi atingido por hoje; volta amanhã. O registo e a pesquisa normais continuam disponíveis.",
+      not_found_empty:
+        "Não encontrei neste Espaço vinhos que respondam a essa pergunta. Experimente o nome de um vinho, produtor, casta ou região, ou pergunte «que vinhos tenho?».",
       not_found_failed:
-        "Não encontrei correspondências estruturadas na Wine Memory autorizada. A IA não conseguiu responder agora; o registo e a pesquisa normais continuam disponíveis.",
+        "Não encontrei correspondências estruturadas na Memória do vinho autorizada. A IA não conseguiu responder agora; o registo e a pesquisa normais continuam disponíveis.",
       unclear:
         "Não percebi bem. Pode reformular a pergunta? Por exemplo: «O que sabes sobre a garnacha?» ou «Que vinho abro com uma paella?»",
     },
@@ -2386,26 +2411,30 @@ export async function runDeterministicAssistantTurn(
   }
   library.grapes.splice(3);
   for (const source of library.sources) citationMap.set(source.id, source);
+  const groundStatements = [
+    ...(collectionStatement === null ? [] : [collectionStatement]),
+    ...semanticStatements,
+    ...pairingStatements,
+    ...noteStatements,
+    ...library.statements,
+    ...languageStatements(
+      results,
+      visibleContext.context,
+      tasteProfile,
+      priceObservations,
+      recommendations,
+    ),
+  ];
+  // Nothing found to answer from: the model is not asked, and the reader is
+  // told that — not that the AI failed, which it did not.
+  const nothingToGroundOn = noMatches && groundStatements.length === 0;
   const languageResult =
     options.language === null
       ? null
       : await options.language.render({
           locale: options.request.locale,
           message: options.request.message,
-          statements: [
-            ...(collectionStatement === null ? [] : [collectionStatement]),
-            ...semanticStatements,
-            ...pairingStatements,
-            ...noteStatements,
-            ...library.statements,
-            ...languageStatements(
-              results,
-              visibleContext.context,
-              tasteProfile,
-              priceObservations,
-              recommendations,
-            ),
-          ],
+          statements: groundStatements,
         });
   if (languageResult !== null) {
     await database
@@ -2445,9 +2474,11 @@ export async function runDeterministicAssistantTurn(
                   ? noMatches
                     ? "not_found_capped"
                     : "found_capped"
-                  : noMatches
-                    ? "not_found_failed"
-                    : "found_failed",
+                  : nothingToGroundOn
+                    ? "not_found_empty"
+                    : noMatches
+                      ? "not_found_failed"
+                      : "found_failed",
               results.length,
             )
           : renderedClaims
