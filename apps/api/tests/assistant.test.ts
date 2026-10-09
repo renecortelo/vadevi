@@ -536,7 +536,8 @@ describe("Vicenç deterministic read path", () => {
         displayName: "Southern Kiwi",
         identityStatus: "confirmed",
         nonVintage: false,
-        producerName: "Synthetic Cellar",
+        // A producer of its own: a shared one would now pass its country on.
+        producerName: "Kiwi Cellar",
         region: "Marlborough",
         vintageYear: 2024,
         wineType: "white",
