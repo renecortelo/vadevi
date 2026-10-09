@@ -355,12 +355,15 @@ async function computeStats(
       [...region.binds, ...wines.binds, ...region.binds],
     ),
     statement(
+      // Grouped by the expression, not "key": json_each has a column of that
+      // name — the name as recorded — and SQLite reads GROUP BY key as it.
       `SELECT coalesce(grape_name.value, trim(grape.name_snapshot)) AS key,
         COUNT(DISTINCT grape.wine_id) AS count
       FROM wine_grapes grape JOIN wine_records wine ON wine.id = grape.wine_id
       LEFT JOIN json_each(?) grape_name ON grape_name.key = trim(grape.name_snapshot)
       WHERE ${wines.sql} AND trim(grape.name_snapshot) <> ''
-      GROUP BY key ORDER BY count DESC, key LIMIT 10`,
+      GROUP BY coalesce(grape_name.value, trim(grape.name_snapshot))
+      ORDER BY count DESC, coalesce(grape_name.value, trim(grape.name_snapshot)) LIMIT 10`,
       [scope.canonicalGrapes, ...wines.binds],
     ),
     statement(
@@ -436,7 +439,7 @@ async function computeStats(
       FROM wine_grapes grape JOIN wine_records wine ON wine.id = grape.wine_id
       LEFT JOIN json_each(?) grape_name ON grape_name.key = trim(grape.name_snapshot)
       WHERE ${everyWine.sql} AND trim(grape.name_snapshot) <> ''
-      ORDER BY value LIMIT 300`,
+      ORDER BY 1 LIMIT 300`,
       [scope.canonicalGrapes, ...everyWine.binds],
     ),
   ]);

@@ -127,6 +127,11 @@ describe("a reader's numbers", () => {
         `INSERT INTO wine_grapes (id, space_id, wine_id, name_snapshot, position, created_at, updated_at)
           VALUES (?, ?, ?, 'Tempranillo', 0, ?, ?)`,
       ).bind(ulid(), personal, rioja, now, now),
+      // The same grape, written another way on another wine.
+      env.DB.prepare(
+        `INSERT INTO wine_grapes (id, space_id, wine_id, name_snapshot, position, created_at, updated_at)
+          VALUES (?, ?, ?, 'tempranillo', 0, ?, ?)`,
+      ).bind(ulid(), couple, third, now, now),
     ]);
 
     // Mine, wherever they are: two notes, my purchases, my bottle.
@@ -140,6 +145,8 @@ describe("a reader's numbers", () => {
       { count: 1, key: "white" },
     ]);
     expect(me.wines.byRegion[0]).toEqual({ count: 2, key: "Rioja" });
+    // One grape however written: one row, both wines.
+    expect(me.wines.byGrape).toEqual([{ count: 2, key: "Tempranillo" }]);
     expect(me.tastings).toMatchObject({ atOrAbove90: 1, averageScore: 88, scored: 2, total: 2 });
     expect(me.tastings.wouldBuy.yes).toBe(1);
     expect(me.tastings.topWines[0]).toMatchObject({ score: 92, wineId: rioja });
@@ -231,9 +238,9 @@ describe("a reader's numbers", () => {
     const tempranillo = WineStatsResponseSchema.parse(
       (await stats(ownerToken, "/api/v1/me/stats?grape=tempranillo")).body,
     ).data;
-    expect(tempranillo.wines.total).toBe(1);
+    expect(tempranillo.wines.total).toBe(2);
     expect(tempranillo.tastings).toMatchObject({ averageScore: 92, total: 1 });
-    expect(tempranillo.spending.map((row) => row.currency)).toEqual(["EUR"]);
+    expect(tempranillo.spending.map((row) => row.currency)).toEqual(["EUR", "USD"]);
     expect(tempranillo.filters.grape).toBe("tempranillo");
     expect(tempranillo.facets).toEqual({
       countries: ["ES"],

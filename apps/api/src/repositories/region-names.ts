@@ -23,6 +23,11 @@ const designationPrefix =
   /^(denominacion de origen calificada|denominacion de origen|denominacio d origen qualificada|denominacio d origen|vino de la tierra de|vino de la tierra|vi de la terra de|tierra de|d o ca|d o q|d o c|d o|doca|doq|docg|doc|dop|do|aoc|aop|igp|igt|pdo|pgi)\s+/;
 
 /** How many letters carry an accent: "Empordà" has one, "Emporda" none. */
+/** 1 for a name written with a capital first, as a label writes it. */
+function capitalised(name: string): number {
+  return /^\p{Lu}/u.test(name) ? 1 : 0;
+}
+
 function accents(name: string): number {
   return [...name.normalize("NFD")].filter((letter) => /\p{M}/u.test(letter)).length;
 }
@@ -93,7 +98,10 @@ export async function readPlaces(
     [...(spellings.get(key) ?? new Map<string, number>())].sort(
       // Then the fuller spelling: "Empordà" over "Emporda".
       ([leftName, left], [rightName, right]) =>
-        right - left || accents(rightName) - accents(leftName) || leftName.localeCompare(rightName),
+        right - left ||
+        accents(rightName) - accents(leftName) ||
+        capitalised(rightName) - capitalised(leftName) ||
+        leftName.localeCompare(rightName),
     )[0]?.[0] ?? null;
 
   const readings = new Map<string, PlaceReading>();

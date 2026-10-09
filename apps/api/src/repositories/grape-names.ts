@@ -64,6 +64,7 @@ export async function readGrapes(
     counts.set(name, (counts.get(name) ?? 0) + 1);
     spellings.set(key, counts);
   }
+  const capitalised = (name: string) => (/^\p{Lu}/u.test(name) ? 1 : 0);
   const accents = (name: string) =>
     [...name.normalize("NFD")].filter((letter) => /\p{M}/u.test(letter)).length;
   const readings = new Map<string, string>();
@@ -71,7 +72,10 @@ export async function readGrapes(
     const key = normalizeWineText(name);
     const spelled = [...(spellings.get(key) ?? new Map<string, number>())].sort(
       ([leftName, left], [rightName, right]) =>
-        right - left || accents(rightName) - accents(leftName) || leftName.localeCompare(rightName),
+        right - left ||
+        accents(rightName) - accents(leftName) ||
+        capitalised(rightName) - capitalised(leftName) ||
+        leftName.localeCompare(rightName),
     )[0]?.[0];
     readings.set(name, known.get(key) ?? spelled ?? name);
   }
