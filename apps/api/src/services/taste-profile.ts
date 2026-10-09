@@ -416,3 +416,66 @@ export function buildTasteProfile(
     tensions,
   };
 }
+
+/**
+ * The profile as plain facts for a writer, with every number they hold: the
+ * text written from them may use those numbers and no other.
+ */
+export function tasteFacts(
+  profile: TasteProfile,
+  locale: string,
+): { facts: string[]; numbers: number[] } {
+  const numbers: number[] = [];
+  const keep = (value: number) => {
+    numbers.push(value, Math.abs(value));
+    return value;
+  };
+  let countries: Intl.DisplayNames | null = null;
+  try {
+    countries = new Intl.DisplayNames([locale], { type: "region" });
+  } catch {
+    countries = null;
+  }
+  const nameOf = (trait: { key: string; kind: string; label: string }) => {
+    if (trait.kind === "country") return countries?.of(trait.key) ?? trait.key;
+    if (trait.kind === "type") return `${trait.key.replaceAll("_", " ")} wines`;
+    if (["acidity", "tannin", "body", "sweetness", "finish"].includes(trait.kind)) {
+      return `${trait.key} ${trait.kind}`;
+    }
+    if (trait.kind === "price") {
+      const [currency, band] = trait.key.split(":");
+      return `bottles at ${band!.replace("_plus", " or more").replace("under_", "under ").replace("_", " to ")} ${currency}`;
+    }
+    return trait.label;
+  };
+  const facts: string[] = [];
+  if (profile.averageScore !== null) {
+    facts.push(
+      `their average score is ${keep(profile.averageScore)}, over ${keep(profile.sampleSize)} tastings`,
+    );
+  }
+  for (const trait of profile.likes.slice(0, 4)) {
+    facts.push(
+      `they score ${nameOf(trait)} ${keep(trait.pointsVersusAverage)} points above their own average, over ${keep(trait.notes)} tastings`,
+    );
+  }
+  for (const trait of profile.dislikes.slice(0, 3)) {
+    facts.push(
+      `they score ${nameOf(trait)} ${keep(Math.abs(trait.pointsVersusAverage))} points below their own average, over ${keep(trait.notes)} tastings`,
+    );
+  }
+  for (const entry of profile.habits.mostTasted
+    .filter((item) => item.kind !== "region")
+    .slice(0, 3)) {
+    facts.push(`${nameOf(entry)}: ${keep(Math.round(entry.share * 100))}% of their tastings`);
+  }
+  for (const trait of profile.tensions.slice(0, 2)) {
+    facts.push(`they drink a lot of ${nameOf(trait)} but score it below their average`);
+  }
+  const price = profile.habits.prices[0];
+  if (price !== undefined) {
+    const whole = Math.round(price.medianUnitMinor / 100);
+    facts.push(`a bottle usually costs them about ${keep(whole)} ${price.currency}`);
+  }
+  return { facts, numbers };
+}

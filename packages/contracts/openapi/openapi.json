@@ -13029,6 +13029,174 @@
           "version"
         ],
         "additionalProperties": false
+      },
+      "RegionProposalsResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RegionProposal"
+            }
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "RegionProposal": {
+        "type": "object",
+        "properties": {
+          "countryCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "region": {
+                  "type": "string"
+                },
+                "wines": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "exclusiveMinimum": true
+                }
+              },
+              "required": [
+                "region",
+                "wines"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "variants",
+              "typo"
+            ]
+          },
+          "to": {
+            "type": "string"
+          },
+          "unchanged": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "countryCode",
+          "from",
+          "reason",
+          "to",
+          "unchanged"
+        ],
+        "additionalProperties": false
+      },
+      "RenameRegionsResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "renamed": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "renamed"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "RenameRegionsRequest": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            "minItems": 1,
+            "maxItems": 20
+          },
+          "to": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          }
+        },
+        "required": [
+          "from",
+          "to"
+        ],
+        "additionalProperties": false
+      },
+      "TasteBioResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "written",
+                  "insufficient",
+                  "unavailable",
+                  "not_kept"
+                ]
+              },
+              "text": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "required": [
+              "status",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "TasteBioRequest": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string",
+            "enum": [
+              "ca",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pt-PT"
+            ]
+          }
+        },
+        "required": [
+          "locale"
+        ],
+        "additionalProperties": false
       }
     },
     "parameters": {}
@@ -19896,6 +20064,24 @@
             "required": false,
             "in": "query",
             "name": "grape"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "it",
+                "nl",
+                "pt-PT"
+              ]
+            },
+            "required": false,
+            "in": "query",
+            "name": "locale"
           }
         ],
         "responses": {
@@ -20010,6 +20196,24 @@
             "required": false,
             "in": "query",
             "name": "grape"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "it",
+                "nl",
+                "pt-PT"
+              ]
+            },
+            "required": false,
+            "in": "query",
+            "name": "locale"
           }
         ],
         "responses": {
@@ -20056,6 +20260,26 @@
         "security": [
           {
             "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ca",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "it",
+                "nl",
+                "pt-PT"
+              ]
+            },
+            "required": false,
+            "in": "query",
+            "name": "locale"
           }
         ],
         "responses": {
@@ -20191,6 +20415,184 @@
           },
           "409": {
             "description": "Saved meanwhile from elsewhere; the current version is in the details.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/regions/tidy": {
+      "get": {
+        "operationId": "proposeRegionTidying",
+        "tags": [
+          "Stats"
+        ],
+        "summary": "Regions written several ways, or one letter from a registered name",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Proposals, each to confirm; nothing changes until then.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegionProposalsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No such Space, or the reader is not a member of it.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "renameRegions",
+        "tags": [
+          "Stats"
+        ],
+        "summary": "Rename every wine written one of these ways, as confirmed",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameRegionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "How many wines were renamed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RenameRegionsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No such Space, or the reader is not a member of it.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/taste-bio": {
+      "post": {
+        "operationId": "writeTasteBio",
+        "tags": [
+          "Stats"
+        ],
+        "summary": "The reader's taste told in a few sentences, from their own facts only",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TasteBioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The text, or why there is none.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TasteBioResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The reader has no account yet.",
             "content": {
               "application/json": {
                 "schema": {

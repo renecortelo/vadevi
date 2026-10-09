@@ -4,6 +4,7 @@ import type {
   NarrativePort,
   NarrativeRequest,
   ResearchLocale,
+  TasteBioRequest,
   TastingComparisonRequest,
 } from "@vadevi/domain";
 import { sanitizeExternalText } from "@vadevi/domain";
@@ -75,6 +76,20 @@ const secondPerson: Record<ResearchLocale, RegExp> = {
 /** Whether a paragraph for a group speaks to someone in it. */
 export function addressesTheReader(text: string, locale: ResearchLocale): boolean {
   return secondPerson[locale].test(text);
+}
+
+/**
+ * Whether every number in a text is one of the given ones. "4,3", "4.3",
+ * "75 %" and "23 €" are read as 4.3, 75 and 23; a number that is none of the
+ * facts' is one the writer added.
+ */
+export function numbersAreTheFacts(text: string, numbers: readonly number[]): boolean {
+  const allowed = new Set(numbers.map((value) => Math.round(value * 10) / 10));
+  const found = text.match(/\d+(?:[.,]\d+)?/g) ?? [];
+  return found.every((written) => {
+    const value = Number.parseFloat(written.replace(",", "."));
+    return allowed.has(Math.round(value * 10) / 10);
+  });
 }
 
 export class CloudflareNarrativeAdapter implements NarrativePort {
@@ -182,6 +197,58 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
     } catch (error) {
       console.warn(
         `comparison model call failed (model=${this.model}): ${
+          error instanceof Error ? error.name : "unknown"
+        }`,
+      );
+      return null;
+    }
+  }
+
+  /**
+   * The reader's taste in a few sentences, from the facts and nothing else.
+   * Every number written must be one of the facts' own — a model that
+   * rounds 4.3 points into "about five" or invents a share has added a fact,
+   * and the text is not kept.
+   */
+  async describeTaste(input: TasteBioRequest): Promise<string | null> {
+    const facts = input.facts
+      .map((fact) => fact.trim())
+      .filter(Boolean)
+      .slice(0, 20);
+    if (facts.length === 0) return null;
+    const language = languageNames[input.locale];
+    try {
+      const output = await this.ai.run(this.model, {
+        max_tokens: 400,
+        messages: [
+          {
+            content:
+              `You are a sommelier writing in ${language} to a reader about their own ` +
+              `taste in wine. You are given facts read from their own tastings and ` +
+              `purchases. Write 3 or 4 sentences that tell them their taste: what ` +
+              `they score above and below their own average, what they drink most, ` +
+              `what they usually pay. Use ONLY these facts: never add a wine, a ` +
+              `grape, a region, a flavour or a number they do not state, and copy ` +
+              `every number exactly as given — never round it or turn it into words. ` +
+              `Speak of tendencies in their tastings, not truths about wine. ` +
+              `${register(input.locale)} Finish every sentence. Reply with the ` +
+              `paragraph only, no preamble.`,
+            role: "system",
+          },
+          { content: JSON.stringify({ facts }), role: "user" },
+        ],
+        temperature: 0.2,
+      });
+      const raw = output.response;
+      if (typeof raw !== "string") return null;
+      const sanitized = sanitizeExternalText(raw, 1_200);
+      if (sanitized.flaggedPromptLike) return null;
+      const text = sanitized.truncated ? wholeSentences(sanitized.value) : sanitized.value;
+      if (text.length === 0) return null;
+      return numbersAreTheFacts(text, input.numbers) ? text : null;
+    } catch (error) {
+      console.warn(
+        `taste description model call failed (model=${this.model}): ${
           error instanceof Error ? error.name : "unknown"
         }`,
       );

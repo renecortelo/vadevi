@@ -1535,6 +1535,37 @@
       "from": "De"
     },
     "tensions_one": "À noter : {{list}} fait partie de ce que vous buvez le plus, mais vous le notez sous votre moyenne.",
-    "tensions_other": "À noter : {{list}} font partie de ce que vous buvez le plus, mais vous les notez sous votre moyenne."
+    "tensions_other": "À noter : {{list}} font partie de ce que vous buvez le plus, mais vous les notez sous votre moyenne.",
+    "written": {
+      "action": "Laisser Vicenç le raconter",
+      "writing": "Vicenç écrit…",
+      "note": "Raconté par Vicenç à partir de ces mêmes données ; chaque chiffre a été vérifié comme étant le vôtre.",
+      "insufficient": "Pas encore assez de dégustations pour le raconter.",
+      "unavailable": "Vicenç ne peut pas écrire maintenant (pas d'IA sur ce déploiement, ou l'allocation du jour est épuisée). Le résumé ci-dessus reste exact.",
+      "not_kept": "Ce qu'il a écrit ne correspondait pas à vos données ; ce n'est donc pas affiché. Le résumé ci-dessus reste exact.",
+      "error": "La demande a échoué. Réessayez."
+    }
+  },
+  "regionTidy": {
+    "link": "Ranger les régions",
+    "eyebrow": "Votre Espace",
+    "title": "Ranger les régions",
+    "intro": "La même région écrite de plusieurs façons, ou un nom à une lettre d'un nom enregistré. Vérifiez chaque proposition : seuls les vins de celles que vous confirmez sont renommés.",
+    "empty": "Rien à ranger : chaque région est écrite d'une seule façon.",
+    "reason": {
+      "variants": "Une même région, écrite de plusieurs façons",
+      "typo": "Une faute dans un nom enregistré ?"
+    },
+    "to": "Renommer en",
+    "wines_one": "{{count}} vin",
+    "wines_other": "{{count}} vins",
+    "unchanged_one": "{{count}} vin est déjà écrit ainsi.",
+    "unchanged_other": "{{count}} vins sont déjà écrits ainsi.",
+    "apply": "Renommer",
+    "applying": "Renommage…",
+    "skip": "Pas maintenant",
+    "done_one": "{{count}} vin indique désormais « {{name}} ».",
+    "done_other": "{{count}} vins indiquent désormais « {{name}} ».",
+    "error": "Le renommage a échoué. Réessayez."
   }
 }

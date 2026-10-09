@@ -16,7 +16,12 @@ import { Link } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { WineLink } from "../components/WineLink";
 import { trailFrom } from "../library/trail";
-import { getTasteDeclaration, getTasteProfile, saveTasteDeclaration } from "../services/taste";
+import {
+  getTasteDeclaration,
+  getTasteProfile,
+  saveTasteDeclaration,
+  writeTasteBio,
+} from "../services/taste";
 
 type Named = Pick<TasteTrait, "key" | "kind" | "label">;
 
@@ -32,8 +37,8 @@ export function ProfilePage() {
   const { user } = useAuth();
   const profileQuery = useQuery({
     enabled: user !== null,
-    queryFn: ({ signal }) => getTasteProfile(user!, signal),
-    queryKey: ["taste-profile"],
+    queryFn: ({ signal }) => getTasteProfile(user!, locale, signal),
+    queryKey: ["taste-profile", locale],
   });
   const profile: TasteProfile | null = profileQuery.data ?? null;
   const backHere = trailFrom(t("taste.title"), "/profile");
@@ -182,6 +187,7 @@ export function ProfilePage() {
           <section aria-labelledby="taste-summary" className="settings-card taste-summary">
             <h2 id="taste-summary">{t("taste.summaryTitle")}</h2>
             <p>{bio(profile).join(" ")}</p>
+            <WrittenBio />
             <p className="section-help">
               {t("taste.basis", {
                 average:
@@ -328,6 +334,63 @@ export function ProfilePage() {
         </Link>
       </p>
     </section>
+  );
+}
+
+/**
+ * The same facts told by Vicenç, on request: one call from the day's
+ * allowance, kept only if every number in it is one of the reader's own.
+ */
+function WrittenBio() {
+  const { i18n, t } = useTranslation();
+  const locale = resolveSupportedLocale(i18n.language);
+  const { user } = useAuth();
+  const [state, setState] = useState<
+    | { kind: "idle" | "writing" | "error" }
+    | {
+        kind: "done";
+        status: "insufficient" | "not_kept" | "unavailable" | "written";
+        text: string | null;
+      }
+  >({ kind: "idle" });
+
+  async function write() {
+    if (user === null) return;
+    setState({ kind: "writing" });
+    try {
+      const result = await writeTasteBio(user, locale);
+      setState({ kind: "done", status: result.status, text: result.text });
+    } catch {
+      setState({ kind: "error" });
+    }
+  }
+
+  if (state.kind === "done" && state.status === "written" && state.text !== null) {
+    return (
+      <blockquote className="taste-written">
+        <p>{state.text}</p>
+        <footer className="section-help">{t("taste.written.note")}</footer>
+      </blockquote>
+    );
+  }
+  return (
+    <div className="taste-form__actions">
+      <button
+        className="action-link action-link--secondary"
+        disabled={state.kind === "writing"}
+        onClick={() => void write()}
+        type="button"
+      >
+        {state.kind === "writing" ? t("taste.written.writing") : t("taste.written.action")}
+      </button>
+      {state.kind === "error" ? (
+        <p role="alert">{t("taste.written.error")}</p>
+      ) : state.kind === "done" ? (
+        <p role="status">
+          {t(`taste.written.${state.status === "written" ? "not_kept" : state.status}`)}
+        </p>
+      ) : null}
+    </div>
   );
 }
 

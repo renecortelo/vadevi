@@ -31,6 +31,11 @@ export const WineStatsQuerySchema = z
     region: FacetSchema.optional().openapi({ param: { in: "query", name: "region" } }),
     /** Only wines made with this grape, as recorded. */
     grape: FacetSchema.optional().openapi({ param: { in: "query", name: "grape" } }),
+    /** The language grapes are named in, as the wine library names them. */
+    locale: z
+      .enum(["ca", "de", "en", "es", "fr", "it", "nl", "pt-PT"])
+      .optional()
+      .openapi({ param: { in: "query", name: "locale" } }),
   })
   .strict();
 

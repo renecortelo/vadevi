@@ -1,6 +1,7 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { type CurrencyCode, fromMinorUnits, type WineStats } from "@vadevi/contracts";
 import type { ReactNode } from "react";
+import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 import { Link, useSearchParams } from "react-router";
 
@@ -143,6 +144,7 @@ function GroupTitle({ children, icon }: { children: ReactNode; icon: ReactNode }
  */
 export function StatsPage() {
   const { i18n, t } = useTranslation();
+  const locale = resolveSupportedLocale(i18n.language);
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const [search, setSearch] = useSearchParams();
@@ -173,8 +175,8 @@ export function StatsPage() {
     // The last numbers stay on screen while the next ones are counted.
     placeholderData: keepPreviousData,
     queryFn: ({ signal }) =>
-      getStats(user!, spaceId, { ...periodRange(period), ...narrowed }, signal),
-    queryKey: ["stats", spaceId, period, narrowed],
+      getStats(user!, spaceId, { ...periodRange(period), ...narrowed, locale }, signal),
+    queryKey: ["stats", spaceId, period, narrowed, locale],
   });
   const stats: WineStats | null = query.data ?? null;
 
@@ -398,7 +400,12 @@ export function StatsPage() {
 
           <section aria-labelledby="stats-wines" className="settings-card">
             <h2 id="stats-wines">{t("stats.winesTitle")}</h2>
-            <p className="section-help">{t("stats.narrowHint")}</p>
+            <p className="section-help">
+              {t("stats.narrowHint")}{" "}
+              <Link className="text-link" to="/regions/tidy">
+                {t("regionTidy.link")}
+              </Link>
+            </p>
             <div className="stats-columns">
               <div className="stats-group">
                 <GroupTitle icon={<WineTypeIcon />}>{t("stats.byType")}</GroupTitle>

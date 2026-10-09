@@ -1535,6 +1535,37 @@
       "from": "Von"
     },
     "tensions_one": "Hinweis: {{list}} gehört zu dem, was Sie am meisten trinken, doch Sie bewerten es unter Ihrem Durchschnitt.",
-    "tensions_other": "Hinweis: {{list}} gehören zu dem, was Sie am meisten trinken, doch Sie bewerten sie unter Ihrem Durchschnitt."
+    "tensions_other": "Hinweis: {{list}} gehören zu dem, was Sie am meisten trinken, doch Sie bewerten sie unter Ihrem Durchschnitt.",
+    "written": {
+      "action": "Von Vicenç erzählen lassen",
+      "writing": "Vicenç schreibt…",
+      "note": "Von Vicenç aus genau diesen Daten erzählt; jede Zahl wurde als Ihre geprüft.",
+      "insufficient": "Noch nicht genug Verkostungen, um es zu erzählen.",
+      "unavailable": "Vicenç kann gerade nicht schreiben (keine KI in dieser Installation, oder das heutige Kontingent ist aufgebraucht). Die Zusammenfassung oben bleibt genau.",
+      "not_kept": "Was er schrieb, passte nicht zu Ihren Daten, daher wird es nicht gezeigt. Die Zusammenfassung oben bleibt genau.",
+      "error": "Die Anfrage ist fehlgeschlagen. Bitte erneut versuchen."
+    }
+  },
+  "regionTidy": {
+    "link": "Regionen aufräumen",
+    "eyebrow": "Ihr Bereich",
+    "title": "Regionen aufräumen",
+    "intro": "Dieselbe Region auf mehrere Arten geschrieben, oder ein Name einen Buchstaben von einem eingetragenen entfernt. Prüfen Sie jeden Vorschlag: Nur die Weine der bestätigten werden umbenannt.",
+    "empty": "Nichts aufzuräumen: Jede Region ist nur auf eine Art geschrieben.",
+    "reason": {
+      "variants": "Eine Region, auf mehrere Arten geschrieben",
+      "typo": "Ein Tippfehler in einem eingetragenen Namen?"
+    },
+    "to": "Umbenennen in",
+    "wines_one": "{{count}} Wein",
+    "wines_other": "{{count}} Weine",
+    "unchanged_one": "{{count}} Wein ist bereits so geschrieben.",
+    "unchanged_other": "{{count}} Weine sind bereits so geschrieben.",
+    "apply": "Umbenennen",
+    "applying": "Wird umbenannt…",
+    "skip": "Nicht jetzt",
+    "done_one": "{{count}} Wein heißt jetzt „{{name}}“.",
+    "done_other": "{{count}} Weine heißen jetzt „{{name}}“.",
+    "error": "Umbenennen fehlgeschlagen. Bitte erneut versuchen."
   }
 }

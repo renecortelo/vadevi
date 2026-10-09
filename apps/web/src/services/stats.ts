@@ -6,6 +6,7 @@ export type StatsPeriod = Readonly<{
   country?: string;
   from?: string;
   grape?: string;
+  locale?: string;
   region?: string;
   to?: string;
   type?: string;

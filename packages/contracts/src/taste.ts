@@ -135,6 +135,16 @@ export const TasteProfileSchema = z
   .strict()
   .openapi("TasteProfile");
 
+export const TasteProfileQuerySchema = z
+  .object({
+    /** The language grapes are named in, as the wine library names them. */
+    locale: z
+      .enum(["ca", "de", "en", "es", "fr", "it", "nl", "pt-PT"])
+      .optional()
+      .openapi({ param: { in: "query", name: "locale" } }),
+  })
+  .strict();
+
 export const TasteProfileResponseSchema = z
   .object({ data: TasteProfileSchema })
   .strict()
@@ -204,3 +214,29 @@ export const TasteDeclarationResponseSchema = z
 
 export type TasteDeclaration = z.infer<typeof TasteDeclarationSchema>;
 export type UpdateTasteDeclarationRequest = z.infer<typeof UpdateTasteDeclarationRequestSchema>;
+
+export const TasteBioRequestSchema = z
+  .object({ locale: z.enum(["ca", "de", "en", "es", "fr", "it", "nl", "pt-PT"]) })
+  .strict()
+  .openapi("TasteBioRequest");
+
+export const TasteBioResponseSchema = z
+  .object({
+    data: z
+      .object({
+        /**
+         * written: a text from the reader's own facts, every number among
+         * them. insufficient: too few tastings to describe. unavailable: no
+         * language model here, or today's allowance is spent. not_kept: the
+         * text strayed from the facts and was not kept.
+         */
+        status: z.enum(["written", "insufficient", "unavailable", "not_kept"]),
+        text: z.string().nullable(),
+      })
+      .strict(),
+  })
+  .strict()
+  .openapi("TasteBioResponse");
+
+export type TasteBioRequest = z.infer<typeof TasteBioRequestSchema>;
+export type TasteBioResponse = z.infer<typeof TasteBioResponseSchema>;

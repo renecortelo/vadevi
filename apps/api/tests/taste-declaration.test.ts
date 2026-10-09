@@ -2,6 +2,7 @@ import {
   BootstrapResponseSchema,
   ErrorEnvelopeSchema,
   ExportDocumentSchema,
+  TasteBioResponseSchema,
   TasteDeclarationResponseSchema,
 } from "@vadevi/contracts";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
@@ -82,6 +83,19 @@ describe("what the reader says of their taste", () => {
     expect(exported.data.tasteDeclaration).toMatchObject({
       dislikes: "Mucha madera",
       likes: "Tintos frescos de altura",
+    });
+  });
+
+  it("tells no taste, and spends no model call, before there are tastings to tell", async () => {
+    const response = await SELF.fetch("https://vadevi.test/api/v1/me/taste-bio", {
+      body: JSON.stringify({ locale: "es" }),
+      headers,
+      method: "POST",
+    });
+    expect(response.status).toBe(200);
+    expect(TasteBioResponseSchema.parse(await response.json()).data).toEqual({
+      status: "insufficient",
+      text: null,
     });
   });
 });

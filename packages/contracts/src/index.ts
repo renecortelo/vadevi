@@ -7,6 +7,7 @@ export * from "./health";
 export * from "./library";
 export * from "./places";
 export * from "./provenance";
+export * from "./regions";
 export * from "./release";
 export * from "./research";
 export * from "./session";

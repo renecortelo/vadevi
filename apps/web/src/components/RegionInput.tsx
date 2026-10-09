@@ -23,12 +23,15 @@ export function RegionInput({
   id,
   maxLength,
   onChange,
+  onCountry,
   value,
 }: {
   country: string | null;
   id: string;
   maxLength?: number;
   onChange: (value: string) => void;
+  /** A name from the register was chosen: the country it lies in. */
+  onCountry?: (code: string) => void;
   value: string;
 }) {
   const { user } = useAuth();
@@ -74,7 +77,16 @@ export function RegionInput({
         id={id}
         list={listId}
         {...(maxLength === undefined ? {} : { maxLength })}
-        onChange={(event) => onChange(event.target.value)}
+        onChange={(event) => {
+          const chosen = event.target.value;
+          onChange(chosen);
+          // Picked from the register: its country comes with it, unless one
+          // is already chosen.
+          const registered = (register.data ?? []).find(
+            (region) => plain(region.name) === plain(chosen),
+          );
+          if (registered !== undefined && country === null) onCountry?.(registered.countryCode);
+        }}
         onFocus={() => setFocused(true)}
         value={value}
       />

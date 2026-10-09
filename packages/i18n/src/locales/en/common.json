@@ -1535,6 +1535,37 @@
       "from": "From"
     },
     "tensions_one": "Note: {{list}} is among what you drink most, but you score it below your average.",
-    "tensions_other": "Note: {{list}} are among what you drink most, but you score them below your average."
+    "tensions_other": "Note: {{list}} are among what you drink most, but you score them below your average.",
+    "written": {
+      "action": "Have Vicenç tell it",
+      "writing": "Vicenç is writing…",
+      "note": "Told by Vicenç from these same facts; every figure was checked to be yours.",
+      "insufficient": "Not enough tastings to tell yet.",
+      "unavailable": "Vicenç cannot write right now (no AI on this deployment, or today's allowance is spent). The summary above stays exact.",
+      "not_kept": "What it wrote did not match your facts, so it is not shown. The summary above stays exact.",
+      "error": "The request failed. Try again."
+    }
+  },
+  "regionTidy": {
+    "link": "Tidy regions",
+    "eyebrow": "Your Space",
+    "title": "Tidy regions",
+    "intro": "The same region written several ways, or a name a letter away from a registered one. Check each proposal: only the wines of those you confirm are renamed.",
+    "empty": "Nothing to tidy: every region is written one way.",
+    "reason": {
+      "variants": "One region, written several ways",
+      "typo": "A misspelling of a registered name?"
+    },
+    "to": "Rename as",
+    "wines_one": "{{count}} wine",
+    "wines_other": "{{count}} wines",
+    "unchanged_one": "{{count}} wine is already written this way.",
+    "unchanged_other": "{{count}} wines are already written this way.",
+    "apply": "Rename",
+    "applying": "Renaming…",
+    "skip": "Not now",
+    "done_one": "{{count}} wine now reads “{{name}}”.",
+    "done_other": "{{count}} wines now read “{{name}}”.",
+    "error": "It could not be renamed. Try again."
   }
 }

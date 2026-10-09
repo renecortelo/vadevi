@@ -1535,6 +1535,37 @@
       "from": "Desde"
     },
     "tensions_one": "Ojo: {{list}} está entre lo que más bebes, pero lo puntúas por debajo de tu media.",
-    "tensions_other": "Ojo: {{list}} están entre lo que más bebes, pero los puntúas por debajo de tu media."
+    "tensions_other": "Ojo: {{list}} están entre lo que más bebes, pero los puntúas por debajo de tu media.",
+    "written": {
+      "action": "Que Vicenç lo cuente",
+      "writing": "Vicenç está escribiendo…",
+      "note": "Contado por Vicenç a partir de estos mismos datos; se comprobó que cada cifra es tuya.",
+      "insufficient": "Aún no hay catas suficientes para contarlo.",
+      "unavailable": "Vicenç no puede escribir ahora (sin IA en este despliegue o con la cuota de hoy agotada). El resumen de arriba sigue siendo exacto.",
+      "not_kept": "Lo que escribió no cuadraba con tus datos, así que no se muestra. El resumen de arriba sigue siendo exacto.",
+      "error": "No se pudo pedir. Inténtalo de nuevo."
+    }
+  },
+  "regionTidy": {
+    "link": "Ordenar regiones",
+    "eyebrow": "Tu espacio",
+    "title": "Ordenar regiones",
+    "intro": "La misma región escrita de varias formas, o un nombre a una letra de uno registrado. Revisa cada propuesta: solo se renombran los vinos de las que confirmes.",
+    "empty": "Nada que ordenar: cada región está escrita de una sola forma.",
+    "reason": {
+      "variants": "La misma región, escrita de varias formas",
+      "typo": "¿Una errata de un nombre registrado?"
+    },
+    "to": "Renombrar como",
+    "wines_one": "{{count}} vino",
+    "wines_other": "{{count}} vinos",
+    "unchanged_one": "{{count}} vino ya está escrito así.",
+    "unchanged_other": "{{count}} vinos ya están escritos así.",
+    "apply": "Renombrar",
+    "applying": "Renombrando…",
+    "skip": "Ahora no",
+    "done_one": "{{count}} vino ahora dice «{{name}}».",
+    "done_other": "{{count}} vinos ahora dicen «{{name}}».",
+    "error": "No se pudo renombrar. Inténtalo de nuevo."
   }
 }

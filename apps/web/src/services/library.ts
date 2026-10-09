@@ -70,7 +70,7 @@ export async function searchLibraryRegions(
   query: string,
   country: string | null,
   signal?: AbortSignal,
-): Promise<{ id: string; name: string }[]> {
+): Promise<{ countryCode: string; id: string; name: string }[]> {
   const response = await authenticatedFetch(
     tokenSource,
     `/api/v1/library/regions?query=${encodeURIComponent(query)}${

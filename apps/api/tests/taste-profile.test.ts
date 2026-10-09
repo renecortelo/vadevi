@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 
-import { buildTasteProfile, priceBand, type TasteNote } from "../src/services/taste-profile";
+import {
+  buildTasteProfile,
+  priceBand,
+  type TasteNote,
+  tasteFacts,
+} from "../src/services/taste-profile";
 
 const now = new Date("2026-10-09T12:00:00Z");
 
@@ -181,5 +186,15 @@ describe("a reader's taste", () => {
     expect(evolution.shifts).toContainEqual(
       expect.objectContaining({ earlierShare: 0, key: "red", recentShare: 0.8 }),
     );
+  });
+
+  it("hands a writer plain facts and every number they hold", () => {
+    const { facts, numbers } = tasteFacts(buildTasteProfile(notes, [], [], now), "es");
+    expect(facts).toContainEqual(
+      "they score Garnacha 4.3 points above their own average, over 4 tastings",
+    );
+    // A country by its name in the reader's language, never its code.
+    expect(facts.some((fact) => fact.startsWith("España: 100% of their tastings"))).toBe(true);
+    expect(numbers).toEqual(expect.arrayContaining([86.6, 4.3, 4, 100]));
   });
 });

@@ -62,6 +62,9 @@ const LibraryPage = lazy(() =>
 const ProfilePage = lazy(() =>
   import("./pages/ProfilePage").then((module) => ({ default: module.ProfilePage })),
 );
+const RegionTidyPage = lazy(() =>
+  import("./pages/RegionTidyPage").then((module) => ({ default: module.RegionTidyPage })),
+);
 const StatsPage = lazy(() =>
   import("./pages/StatsPage").then((module) => ({ default: module.StatsPage })),
 );
@@ -268,6 +271,14 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="profile"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <RegionTidyPage />
+              </DeferredPage>
+            }
+            path="regions/tidy"
           />
           <Route
             element={

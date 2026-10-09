@@ -5054,3 +5054,14 @@ button.stats-bars__label:hover {
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
 }
+
+.taste-written {
+  border-inline-start: 3px solid var(--color-accent);
+  margin: var(--space-3) 0 0;
+  padding-inline-start: var(--space-3);
+}
+
+.taste-written p {
+  font-style: italic;
+  margin: 0 0 var(--space-1);
+}

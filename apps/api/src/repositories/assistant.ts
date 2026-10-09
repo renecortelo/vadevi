@@ -2436,7 +2436,7 @@ export async function runDeterministicAssistantTurn(
   if (requestsTasteProfile(options.request.message)) {
     const profileStartedAt = Date.now();
     tasteProfile = await getCurrentUserTasteProfile(database, options.principal);
-    const full = await getTasteProfile(database, options.principal);
+    const full = await getTasteProfile(database, options.principal, options.request.locale);
     if (full !== null && full.confidence !== "insufficient") {
       tasteStatements.push(tasteStatement(full));
     }

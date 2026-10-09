@@ -244,10 +244,23 @@ export type TastingComparisonRequest = Readonly<{
   wine: string;
 }>;
 
+/**
+ * A reader's taste, to be told back to them in a few sentences: each fact is
+ * a line from their own records, and every number the text may use is among
+ * `numbers`. A text that uses any other is not kept.
+ */
+export type TasteBioRequest = Readonly<{
+  facts: readonly string[];
+  locale: ResearchLocale;
+  numbers: readonly number[];
+}>;
+
 export interface NarrativePort {
   compose(input: NarrativeRequest): Promise<string | null>;
   /** Null when unavailable or when either side has nothing to say. */
   compare(input: TastingComparisonRequest): Promise<string | null>;
+  /** Null when unavailable, or when the text strays from the facts. */
+  describeTaste?(input: TasteBioRequest): Promise<string | null>;
 }
 
 /**

@@ -1535,6 +1535,37 @@
       "from": "Da"
     },
     "tensions_one": "Attenzione: {{list}} è tra ciò che bevi di più, ma lo valuti sotto la tua media.",
-    "tensions_other": "Attenzione: {{list}} sono tra ciò che bevi di più, ma li valuti sotto la tua media."
+    "tensions_other": "Attenzione: {{list}} sono tra ciò che bevi di più, ma li valuti sotto la tua media.",
+    "written": {
+      "action": "Fallo raccontare a Vicenç",
+      "writing": "Vicenç sta scrivendo…",
+      "note": "Raccontato da Vicenç a partire da questi stessi dati; ogni cifra è stata verificata come tua.",
+      "insufficient": "Non ci sono ancora abbastanza degustazioni per raccontarlo.",
+      "unavailable": "Vicenç non può scrivere ora (niente IA in questo deployment, o la quota di oggi è esaurita). Il riepilogo sopra resta esatto.",
+      "not_kept": "Ciò che ha scritto non corrispondeva ai tuoi dati, quindi non viene mostrato. Il riepilogo sopra resta esatto.",
+      "error": "Richiesta non riuscita. Riprova."
+    }
+  },
+  "regionTidy": {
+    "link": "Riordina le regioni",
+    "eyebrow": "Il tuo Spazio",
+    "title": "Riordina le regioni",
+    "intro": "La stessa regione scritta in più modi, o un nome a una lettera da uno registrato. Controlla ogni proposta: si rinominano solo i vini di quelle che confermi.",
+    "empty": "Niente da riordinare: ogni regione è scritta in un solo modo.",
+    "reason": {
+      "variants": "La stessa regione, scritta in più modi",
+      "typo": "Un refuso di un nome registrato?"
+    },
+    "to": "Rinomina come",
+    "wines_one": "{{count}} vino",
+    "wines_other": "{{count}} vini",
+    "unchanged_one": "{{count}} vino è già scritto così.",
+    "unchanged_other": "{{count}} vini sono già scritti così.",
+    "apply": "Rinomina",
+    "applying": "Rinomina in corso…",
+    "skip": "Non ora",
+    "done_one": "{{count}} vino ora riporta «{{name}}».",
+    "done_other": "{{count}} vini ora riportano «{{name}}».",
+    "error": "Impossibile rinominare. Riprova."
   }
 }

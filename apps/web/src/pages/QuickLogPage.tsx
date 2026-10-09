@@ -439,6 +439,7 @@ export function QuickLogPage() {
               id="region"
               maxLength={160}
               onChange={(region) => updateWine("region", region || undefined)}
+              onCountry={(countryCode) => updateWine("countryCode", countryCode)}
               value={draft.winePayload.region ?? ""}
             />
             <label htmlFor="quicklog-alcohol">{t("wineDetails.alcohol")}</label>

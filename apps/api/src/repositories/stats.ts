@@ -2,6 +2,7 @@ import type { CurrencyCode, ScoreBand, WineStats, WineStatsQuery } from "@vadevi
 import { supportedCurrencies } from "@vadevi/contracts";
 
 import type { FirebasePrincipal } from "../types";
+import { readGrapes } from "./grape-names";
 import { readPlaces } from "./region-names";
 
 /**
@@ -25,6 +26,8 @@ type Scope = Readonly<{
   inferredCountries: string;
   /** Each wine's region as one name, as a JSON object of wine id → name. */
   canonicalRegions: string;
+  /** Each grape name recorded, as one name (see `readGrapes`): JSON, recorded → name. */
+  canonicalGrapes: string;
   /** The rows counted are the reader's own (personal), or everyone's (space). */
   ownerId: string | null;
   spaceIds: readonly string[];
@@ -54,7 +57,8 @@ function regionOf(alias: string, scope: Scope): Filter {
 async function placesIn(
   database: D1Database,
   spaceIds: readonly string[],
-): Promise<Pick<Scope, "canonicalRegions" | "inferredCountries">> {
+  locale: string,
+): Promise<Pick<Scope, "canonicalGrapes" | "canonicalRegions" | "inferredCountries">> {
   const wines = await database
     .prepare(
       `SELECT id, region, country_code FROM wine_records
@@ -78,7 +82,21 @@ async function placesIn(
     if (wine.country_code === null && reading?.country) countries[wine.id] = reading.country;
     if (reading?.region) regions[wine.id] = reading.region;
   }
+  const grapeRows = await database
+    .prepare(
+      `SELECT DISTINCT trim(grape.name_snapshot) AS name FROM wine_grapes grape
+      JOIN wine_records wine ON wine.id = grape.wine_id AND wine.deleted_at IS NULL
+      WHERE wine.space_id IN (SELECT value FROM json_each(?)) AND trim(grape.name_snapshot) <> ''`,
+    )
+    .bind(JSON.stringify(spaceIds))
+    .all<{ name: string }>();
+  const grapes = await readGrapes(
+    database,
+    grapeRows.results.map((row) => row.name),
+    locale,
+  );
   return {
+    canonicalGrapes: JSON.stringify(Object.fromEntries(grapes)),
     canonicalRegions: JSON.stringify(regions),
     inferredCountries: JSON.stringify(countries),
   };
@@ -131,10 +149,13 @@ function wineMatch(column: string, query: WineStatsQuery, scope: Scope): Filter 
   }
   if (query.grape !== undefined) {
     conditions.push({
-      binds: [query.grape],
+      // The grape as one name; or as recorded, for an address saved before.
+      binds: [scope.canonicalGrapes, query.grape, query.grape],
       sql: `EXISTS (SELECT 1 FROM wine_grapes narrowed_grape
+        LEFT JOIN json_each(?) grape_name ON grape_name.key = trim(narrowed_grape.name_snapshot)
         WHERE narrowed_grape.wine_id = narrowed.id
-          AND lower(trim(narrowed_grape.name_snapshot)) = lower(trim(?)))`,
+          AND (coalesce(grape_name.value, trim(narrowed_grape.name_snapshot)) = ?
+            OR lower(trim(narrowed_grape.name_snapshot)) = lower(trim(?))))`,
     });
   }
   if (conditions.length === 0) return { binds: [], sql: "1 = 1" };
@@ -334,11 +355,13 @@ async function computeStats(
       [...region.binds, ...wines.binds, ...region.binds],
     ),
     statement(
-      `SELECT min(grape.name_snapshot) AS key, COUNT(DISTINCT grape.wine_id) AS count
+      `SELECT coalesce(grape_name.value, trim(grape.name_snapshot)) AS key,
+        COUNT(DISTINCT grape.wine_id) AS count
       FROM wine_grapes grape JOIN wine_records wine ON wine.id = grape.wine_id
-      WHERE ${wines.sql} GROUP BY lower(trim(grape.name_snapshot))
-      ORDER BY count DESC, key LIMIT 10`,
-      wines.binds,
+      LEFT JOIN json_each(?) grape_name ON grape_name.key = trim(grape.name_snapshot)
+      WHERE ${wines.sql} AND trim(grape.name_snapshot) <> ''
+      GROUP BY key ORDER BY count DESC, key LIMIT 10`,
+      [scope.canonicalGrapes, ...wines.binds],
     ),
     statement(
       `SELECT purchase.currency, COUNT(*) AS purchases, SUM(purchase.quantity) AS bottles,
@@ -409,11 +432,12 @@ async function computeStats(
       [...region.binds, ...everyWine.binds, ...region.binds],
     ),
     statement(
-      `SELECT min(trim(grape.name_snapshot)) AS value
+      `SELECT DISTINCT coalesce(grape_name.value, trim(grape.name_snapshot)) AS value
       FROM wine_grapes grape JOIN wine_records wine ON wine.id = grape.wine_id
+      LEFT JOIN json_each(?) grape_name ON grape_name.key = trim(grape.name_snapshot)
       WHERE ${everyWine.sql} AND trim(grape.name_snapshot) <> ''
-      GROUP BY lower(trim(grape.name_snapshot)) ORDER BY value LIMIT 300`,
-      everyWine.binds,
+      ORDER BY value LIMIT 300`,
+      [scope.canonicalGrapes, ...everyWine.binds],
     ),
   ]);
 
@@ -605,7 +629,7 @@ export async function getPersonalStats(
   return computeStats(
     database,
     {
-      ...(await placesIn(database, spaceIds)),
+      ...(await placesIn(database, spaceIds, query.locale ?? "en")),
       ownerId: first.user_id,
       spaceIds,
     },
@@ -633,7 +657,7 @@ export async function getSpaceStats(
     .first<{ ok: number }>();
   if (member === null) return null;
   const scope = {
-    ...(await placesIn(database, [spaceId])),
+    ...(await placesIn(database, [spaceId], query.locale ?? "en")),
     ownerId: null,
     spaceIds: [spaceId],
   };

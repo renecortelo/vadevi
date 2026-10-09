@@ -1535,6 +1535,37 @@
       "from": "Des de"
     },
     "tensions_one": "Compte: {{list}} és entre el que més beus, però ho puntues per sota de la teva mitjana.",
-    "tensions_other": "Compte: {{list}} són entre el que més beus, però els puntues per sota de la teva mitjana."
+    "tensions_other": "Compte: {{list}} són entre el que més beus, però els puntues per sota de la teva mitjana.",
+    "written": {
+      "action": "Que en Vicenç ho expliqui",
+      "writing": "En Vicenç està escrivint…",
+      "note": "Explicat per en Vicenç a partir d'aquestes mateixes dades; s'ha comprovat que cada xifra és teva.",
+      "insufficient": "Encara no hi ha prou tasts per explicar-ho.",
+      "unavailable": "En Vicenç no pot escriure ara (sense IA en aquest desplegament o amb la quota d'avui exhaurida). El resum de dalt continua sent exacte.",
+      "not_kept": "El que va escriure no quadrava amb les teves dades, així que no es mostra. El resum de dalt continua sent exacte.",
+      "error": "No s'ha pogut demanar. Torna-ho a provar."
+    }
+  },
+  "regionTidy": {
+    "link": "Endreçar regions",
+    "eyebrow": "El teu espai",
+    "title": "Endreçar regions",
+    "intro": "La mateixa regió escrita de diverses maneres, o un nom a una lletra d'un de registrat. Revisa cada proposta: només es reanomenen els vins de les que confirmis.",
+    "empty": "Res a endreçar: cada regió està escrita d'una sola manera.",
+    "reason": {
+      "variants": "La mateixa regió, escrita de diverses maneres",
+      "typo": "Una errada d'un nom registrat?"
+    },
+    "to": "Reanomena com",
+    "wines_one": "{{count}} vi",
+    "wines_other": "{{count}} vins",
+    "unchanged_one": "{{count}} vi ja està escrit així.",
+    "unchanged_other": "{{count}} vins ja estan escrits així.",
+    "apply": "Reanomena",
+    "applying": "Reanomenant…",
+    "skip": "Ara no",
+    "done_one": "{{count}} vi ara diu «{{name}}».",
+    "done_other": "{{count}} vins ara diuen «{{name}}».",
+    "error": "No s'ha pogut reanomenar. Torna-ho a provar."
   }
 }

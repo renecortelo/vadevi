@@ -8,6 +8,7 @@ import {
   type TastePurchase,
 } from "../services/taste-profile";
 import type { FirebasePrincipal } from "../types";
+import { readGrapes } from "./grape-names";
 import { readPlaces } from "./region-names";
 
 function isCurrency(value: string): value is CurrencyCode {
@@ -23,6 +24,7 @@ function isCurrency(value: string): value is CurrencyCode {
 export async function getTasteProfile(
   database: D1Database,
   principal: FirebasePrincipal,
+  locale = "en",
   now = new Date(),
 ): Promise<TasteProfile | null> {
   const memberships = await database
@@ -141,9 +143,16 @@ export async function getTasteProfile(
           )
           .bind(JSON.stringify(wineIds))
           .all<{ name_snapshot: string; wine_id: string }>();
+  // Each grape as one name: "Tinto Fino" and "Tempranillo" are one taste.
+  const grapeNames = await readGrapes(
+    database,
+    grapeRows.results.map((row) => row.name_snapshot),
+    locale,
+  );
   const grapesOf = new Map<string, string[]>();
   for (const row of grapeRows.results) {
-    grapesOf.set(row.wine_id, [...(grapesOf.get(row.wine_id) ?? []), row.name_snapshot]);
+    const name = grapeNames.get(row.name_snapshot.trim()) ?? row.name_snapshot;
+    grapesOf.set(row.wine_id, [...(grapesOf.get(row.wine_id) ?? []), name]);
   }
   const places = await readPlaces(
     database,

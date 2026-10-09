@@ -267,6 +267,29 @@ describe("Wine Memory and Quick Log", () => {
     expect(JSON.stringify(body)).not.toContain("ANA_PRIVATE_BAR");
   });
 
+  it("takes the country a recorded region names, and only one it names for certain", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    const record = async (region: string, countryCode?: string) => {
+      const created = await createWine(spaceId, {
+        displayName: `Vi de ${region}`,
+        identityStatus: "confirmed",
+        nonVintage: true,
+        producerName: "Celler",
+        region,
+        ...(countryCode === undefined ? {} : { countryCode }),
+      });
+      expect(created.response.status).toBe(201);
+      return CreateWineResponseSchema.parse(await created.response.json()).data.wine;
+    };
+    // Named by an appellation Vicenç already places.
+    expect((await record("DO Empordà")).countryCode).toBe("ES");
+    // A country the reader chose stands, whatever the region says.
+    expect((await record("Rioja", "MX")).countryCode).toBe("MX");
+    // A misspelt region names nothing for certain, so nothing is added.
+    expect((await record("La Mancga")).countryCode).toBeNull();
+  });
+
   it("stores a wine type the old column CHECK would have rejected", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;

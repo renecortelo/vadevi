@@ -17,7 +17,7 @@ import { ulid } from "ulid";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { jsonList } from "../services/sql-list";
-import { readPlaces } from "./region-names";
+import { countryOfRegion, readPlaces } from "./region-names";
 
 type IdempotentResult<T> =
   | { kind: "conflict" }
@@ -284,6 +284,14 @@ export async function createWine(
   const requestHash = await sha256Base64Url(JSON.stringify(options.request));
   const normalizedProducer = normalizeWineText(options.request.producerName);
   const normalizedName = normalizeWineText(options.request.displayName);
+  // A wine recorded with its region and no country takes the country the
+  // region names, where it names only one — "Rioja" is in Spain — so the
+  // record is whole however it arrived: typed, synced from offline, drafted.
+  const countryCode =
+    options.request.countryCode ??
+    (options.request.region === undefined
+      ? undefined
+      : ((await countryOfRegion(database, options.request.region)) ?? undefined));
   const expiresAt = plusHours(now, 24);
   const auditId = ulid();
 
@@ -353,8 +361,8 @@ export async function createWine(
         options.request.vintageYear ?? null,
         options.request.nonVintage ? 1 : 0,
         options.request.wineType ?? null,
-        options.request.countryCode ?? null,
-        options.request.countryCode?.toUpperCase() ?? null,
+        countryCode ?? null,
+        countryCode?.toUpperCase() ?? null,
         options.request.region ?? null,
         options.request.region === undefined ? null : normalizeWineText(options.request.region),
         options.request.appellation ?? null,
@@ -1069,7 +1077,7 @@ export async function syncSpace(
 }
 
 /** The acting member, or null when they are not in this Space. */
-async function activeWineMemberId(
+export async function activeWineMemberId(
   database: D1Database,
   principal: FirebasePrincipal,
   spaceId: string,
@@ -1120,11 +1128,11 @@ export async function updateWine(
 
   const row = await database
     .prepare(
-      `SELECT version, merged_into_wine_id FROM wine_records
+      `SELECT version, merged_into_wine_id, country_code FROM wine_records
       WHERE id = ? AND space_id = ? AND deleted_at IS NULL`,
     )
     .bind(options.wineId, options.spaceId)
-    .first<{ merged_into_wine_id: string | null; version: number }>();
+    .first<{ country_code: string | null; merged_into_wine_id: string | null; version: number }>();
   if (row === null) return { kind: "unavailable" };
   // A merged wine is a tombstone pointing at its survivor. Editing it would
   // write to a record nothing reads.
@@ -1142,7 +1150,16 @@ export async function updateWine(
   }
 
   const now = new Date().toISOString();
-  const next = options.request;
+  // A region given to a wine with no country brings the country it names.
+  let next = options.request;
+  if (
+    next.countryCode === undefined &&
+    typeof next.region === "string" &&
+    row.country_code === null
+  ) {
+    const inferred = await countryOfRegion(database, next.region);
+    if (inferred !== null) next = { ...next, countryCode: inferred };
+  }
   const set = (given: unknown) => (given === undefined ? 0 : 1);
   const auditId = ulid();
 

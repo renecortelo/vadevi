@@ -1,4 +1,7 @@
 import {
+  type TasteBioRequest,
+  type TasteBioResponse,
+  TasteBioResponseSchema,
   type TasteDeclaration,
   TasteDeclarationResponseSchema,
   type TasteProfile,
@@ -11,11 +14,12 @@ import { apiError, authenticatedFetch, type TokenSource } from "./api";
 /** The reader's taste, read from their own tastings and purchases. */
 export async function getTasteProfile(
   tokenSource: TokenSource,
+  locale: string,
   signal?: AbortSignal,
 ): Promise<TasteProfile> {
   const response = await authenticatedFetch(
     tokenSource,
-    "/api/v1/me/taste-profile",
+    `/api/v1/me/taste-profile?locale=${encodeURIComponent(locale)}`,
     signal === undefined ? {} : { signal },
   );
   if (!response.ok) throw await apiError(response);
@@ -52,4 +56,18 @@ export async function saveTasteDeclaration(
     declaration: TasteDeclarationResponseSchema.parse(await response.json()).data,
     kind: "saved",
   };
+}
+
+/** The reader's taste told by Vicenç, from their own facts only. */
+export async function writeTasteBio(
+  tokenSource: TokenSource,
+  locale: TasteBioRequest["locale"],
+): Promise<TasteBioResponse["data"]> {
+  const response = await authenticatedFetch(tokenSource, "/api/v1/me/taste-bio", {
+    body: JSON.stringify({ locale }),
+    headers: { "Content-Type": "application/json" },
+    method: "POST",
+  });
+  if (!response.ok) throw await apiError(response);
+  return TasteBioResponseSchema.parse(await response.json()).data;
 }

@@ -117,3 +117,12 @@ export async function readPlaces(
   }
   return readings;
 }
+
+/** The one country a region names, or null when it names none or several. */
+export async function countryOfRegion(
+  database: D1Database,
+  region: string,
+): Promise<string | null> {
+  const reading = await readPlaces(database, [{ countryCode: null, id: "region", region }]);
+  return reading.get("region")?.country ?? null;
+}

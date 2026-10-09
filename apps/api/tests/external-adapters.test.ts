@@ -5,7 +5,11 @@ import { D1ExternalCache, D1ExternalRateLimiter } from "../src/adapters/external
 import { OpenFoodFactsAdapter } from "../src/adapters/open-food-facts";
 import type { ProviderFetcher, ProviderFetchError } from "../src/adapters/provider-fetch";
 import { fetchFromProvider, readBoundedJson } from "../src/adapters/provider-fetch";
-import { CloudflareFoodIdeasAdapter, CloudflareNarrativeAdapter } from "../src/adapters/narrative";
+import {
+  CloudflareFoodIdeasAdapter,
+  CloudflareNarrativeAdapter,
+  numbersAreTheFacts,
+} from "../src/adapters/narrative";
 import { CloudflareTranslationAdapter } from "../src/adapters/translation";
 import { BraveImageSearchAdapter } from "../src/adapters/image-search";
 import { NominatimPlaceSearchAdapter } from "../src/adapters/place-search";
@@ -709,6 +713,30 @@ describe("external research adapters", () => {
     replies.length = 0;
     replies.push("Le diste 84.");
     await expect(adapter.compare({ ...request, audience: "reader" })).resolves.toBe("Le diste 84.");
+  });
+
+  it("tells a reader's taste from their facts, and drops a text with a number of its own", async () => {
+    const model = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+    const replies = [
+      "Tus catas apuntan a la Garnacha, 4,3 puntos sobre tu media en 3 catas.",
+      "Tus catas apuntan a la Garnacha, unos 5 puntos sobre tu media.",
+    ];
+    const adapter = new CloudflareNarrativeAdapter(
+      { run: async () => ({ response: replies.shift() ?? "" }) },
+      model,
+    );
+    const request = {
+      facts: ["they score Garnacha 4.3 points above their own average, over 3 tastings"],
+      locale: "es" as const,
+      numbers: [4.3, 3],
+    };
+    await expect(adapter.describeTaste(request)).resolves.toBe(
+      "Tus catas apuntan a la Garnacha, 4,3 puntos sobre tu media en 3 catas.",
+    );
+    // "About five" is a number the facts never gave.
+    await expect(adapter.describeTaste(request)).resolves.toBeNull();
+    expect(numbersAreTheFacts("Pagas unos 23 € y el 75 % son tintos.", [23, 75])).toBe(true);
+    expect(numbersAreTheFacts("Pagas unos 25 €.", [23])).toBe(false);
   });
 
   it("suggests dishes for a wine and drops prompt-like or empty ideas", async () => {

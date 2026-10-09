@@ -1535,6 +1535,37 @@
       "from": "Van"
     },
     "tensions_one": "Let op: {{list}} hoort bij wat je het meest drinkt, maar je scoort het onder je gemiddelde.",
-    "tensions_other": "Let op: {{list}} horen bij wat je het meest drinkt, maar je scoort ze onder je gemiddelde."
+    "tensions_other": "Let op: {{list}} horen bij wat je het meest drinkt, maar je scoort ze onder je gemiddelde.",
+    "written": {
+      "action": "Laat Vicenç het vertellen",
+      "writing": "Vicenç schrijft…",
+      "note": "Verteld door Vicenç op basis van dezelfde gegevens; elk getal is gecontroleerd als het jouwe.",
+      "insufficient": "Nog niet genoeg proeverijen om het te vertellen.",
+      "unavailable": "Vicenç kan nu niet schrijven (geen AI in deze installatie, of het tegoed van vandaag is op). De samenvatting hierboven blijft exact.",
+      "not_kept": "Wat hij schreef klopte niet met je gegevens, dus het wordt niet getoond. De samenvatting hierboven blijft exact.",
+      "error": "Het verzoek is mislukt. Probeer het opnieuw."
+    }
+  },
+  "regionTidy": {
+    "link": "Regio's opruimen",
+    "eyebrow": "Je Ruimte",
+    "title": "Regio's opruimen",
+    "intro": "Dezelfde regio op meerdere manieren geschreven, of een naam een letter verwijderd van een geregistreerde. Bekijk elk voorstel: alleen de wijnen van wat je bevestigt worden hernoemd.",
+    "empty": "Niets op te ruimen: elke regio is op één manier geschreven.",
+    "reason": {
+      "variants": "Eén regio, op meerdere manieren geschreven",
+      "typo": "Een tikfout in een geregistreerde naam?"
+    },
+    "to": "Hernoemen naar",
+    "wines_one": "{{count}} wijn",
+    "wines_other": "{{count}} wijnen",
+    "unchanged_one": "{{count}} wijn staat al zo geschreven.",
+    "unchanged_other": "{{count}} wijnen staan al zo geschreven.",
+    "apply": "Hernoemen",
+    "applying": "Bezig met hernoemen…",
+    "skip": "Niet nu",
+    "done_one": "{{count}} wijn heet nu ‘{{name}}’.",
+    "done_other": "{{count}} wijnen heten nu ‘{{name}}’.",
+    "error": "Hernoemen is mislukt. Probeer het opnieuw."
   }
 }

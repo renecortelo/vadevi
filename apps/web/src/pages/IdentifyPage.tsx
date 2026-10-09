@@ -375,7 +375,8 @@ export function IdentifyPage() {
           <RegionInput
             country={wine.countryCode.length === 0 ? null : wine.countryCode}
             id="wine-region"
-            onChange={(region) => setWine({ ...wine, region })}
+            onChange={(region) => setWine((current) => ({ ...current, region }))}
+            onCountry={(countryCode) => setWine((current) => ({ ...current, countryCode }))}
             value={wine.region}
           />
           {selected === null ? null : <FieldProvenance candidate={selected} name="region" />}
