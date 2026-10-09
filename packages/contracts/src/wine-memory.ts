@@ -36,6 +36,11 @@ export const WineGrapeSchema = z
 
 export const WineGrapeSummarySchema = z
   .object({
+    /**
+     * The wine library's grape this is, for certain, so it can be named in
+     * the reader's language; `name` stays as it was written.
+     */
+    libraryId: z.string().nullable().optional(),
     name: z.string(),
     percentage: z.number().nullable(),
   })
@@ -187,6 +192,8 @@ export const WineSummarySchema = z
     nonVintage: z.boolean(),
     producerName: z.string(),
     region: z.string().nullable(),
+    /** The registered name the region is, for certain: the library's id. */
+    regionRef: z.string().nullable().optional(),
     score100: z.number().int().min(0).max(100).nullable(),
     vintageYear: z.number().int().nullable(),
     version: z.number().int().positive(),

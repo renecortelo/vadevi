@@ -17,7 +17,8 @@ import { ulid } from "ulid";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { jsonList } from "../services/sql-list";
-import { countryOfProducer, countryOfRegion, readPlaces } from "./region-names";
+import { libraryGrapeIds } from "./grape-names";
+import { countryOfProducer, countryOfRegion, readPlaces, regionRefOf } from "./region-names";
 
 type IdempotentResult<T> =
   | { kind: "conflict" }
@@ -39,6 +40,7 @@ type WineRow = {
   note_count: number;
   producer_name: string;
   region: string | null;
+  region_ref?: string | null;
   score_100: number | null;
   version: number;
   vintage_year: number | null;
@@ -85,8 +87,15 @@ export function grapesFromJson(value: string | null): WineSummary["grapes"] {
       if (typeof entry !== "object" || entry === null) return [];
       const name = (entry as { name?: unknown }).name;
       const milli = (entry as { percentage_milli?: unknown }).percentage_milli;
+      const libraryId = (entry as { library_id?: unknown }).library_id;
       if (typeof name !== "string" || name.length === 0) return [];
-      return [{ name, percentage: typeof milli === "number" ? milli / 1_000 : null }];
+      return [
+        {
+          libraryId: typeof libraryId === "string" ? libraryId : null,
+          name,
+          percentage: typeof milli === "number" ? milli / 1_000 : null,
+        },
+      ];
     });
   } catch {
     return [];
@@ -109,6 +118,7 @@ function wineSummary(row: WineRow): WineSummary {
     noteCount: row.note_count,
     producerName: row.producer_name,
     region: row.region,
+    regionRef: row.region_ref ?? null,
     score100: row.score_100,
     version: row.version,
     vintageYear: row.vintage_year,
@@ -117,11 +127,12 @@ function wineSummary(row: WineRow): WineSummary {
 }
 
 const wineSelect = `SELECT wine.id, wine.display_name, wine.producer_name, wine.vintage_year,
-  wine.non_vintage, COALESCE(wine.wine_type_free, wine.wine_type) AS wine_type, wine.country_code, wine.region, wine.appellation,
+  wine.non_vintage, COALESCE(wine.wine_type_free, wine.wine_type) AS wine_type, wine.country_code, wine.region, wine.region_ref, wine.appellation,
   wine.alcohol_abv_milli, wine.identity_status, wine.version, wine.created_at, wine.updated_at,
   wine.normalized_name, wine.normalized_producer_name,
-  (SELECT json_group_array(json_object('name', g.name_snapshot, 'percentage_milli', g.percentage_milli))
-    FROM (SELECT name_snapshot, percentage_milli FROM wine_grapes g0
+  (SELECT json_group_array(json_object('name', g.name_snapshot,
+      'percentage_milli', g.percentage_milli, 'library_id', g.grape_code))
+    FROM (SELECT name_snapshot, percentage_milli, grape_code FROM wine_grapes g0
       WHERE g0.wine_id = wine.id AND g0.space_id = wine.space_id ORDER BY g0.position) AS g
   ) AS grapes_json,
   (SELECT MAX(note.tasted_at) FROM tasting_notes note
@@ -437,6 +448,24 @@ export async function createWine(
   // itself was just created (`created_at = now`). On a replay that guard is
   // false and the rows already exist, so nothing is duplicated.
   const grapes = options.request.grapes ?? [];
+  // Each grape linked to the library's, where the name is one grape for
+  // certain — so it is shown in the reader's language, whatever was typed.
+  const grapeIds = await libraryGrapeIds(
+    database,
+    grapes.map((grape: WineGrape) => grape.name),
+  );
+  if (options.request.region !== undefined) {
+    const regionRef = await regionRefOf(database, options.request.region);
+    if (regionRef !== null) {
+      await database
+        .prepare(
+          `UPDATE wine_records SET region_ref = ?
+          WHERE id = ? AND space_id = ? AND created_at = ? AND region_ref IS NULL`,
+        )
+        .bind(regionRef, candidateId, options.spaceId, now)
+        .run();
+    }
+  }
   if (grapes.length > 0) {
     await database.batch(
       grapes.map((grape: WineGrape, index: number) =>
@@ -446,13 +475,14 @@ export async function createWine(
               id, space_id, wine_id, grape_code, name_snapshot, normalized_name,
               percentage_milli, position, created_at, updated_at
             )
-            SELECT ?, wine.space_id, wine.id, NULL, ?, ?, ?, ?, ?, ?
+            SELECT ?, wine.space_id, wine.id, ?, ?, ?, ?, ?, ?, ?
             FROM wine_records wine
             WHERE wine.id = ? AND wine.space_id = ? AND wine.created_at = ?
             ON CONFLICT(wine_id, position) DO NOTHING`,
           )
           .bind(
             ulid(),
+            grapeIds.get(grape.name.trim()) ?? null,
             grape.name,
             normalizeWineText(grape.name),
             grape.percentage == null ? null : Math.round(grape.percentage * 1_000),
@@ -1180,6 +1210,12 @@ export async function updateWine(
   }
   const set = (given: unknown) => (given === undefined ? 0 : 1);
   const auditId = ulid();
+  const updatedGrapeIds = await libraryGrapeIds(
+    database,
+    (next.grapes ?? []).map((grape: WineGrape) => grape.name),
+  );
+  const regionRef =
+    typeof next.region === "string" ? await regionRefOf(database, next.region) : null;
 
   await database.batch([
     database
@@ -1195,6 +1231,7 @@ export async function updateWine(
           country_code = CASE WHEN ? = 1 THEN ? ELSE country_code END,
           normalized_country_code = CASE WHEN ? = 1 THEN ? ELSE normalized_country_code END,
           region = CASE WHEN ? = 1 THEN ? ELSE region END,
+          region_ref = CASE WHEN ? = 1 THEN ? ELSE region_ref END,
           normalized_region = CASE WHEN ? = 1 THEN ? ELSE normalized_region END,
           appellation = CASE WHEN ? = 1 THEN ? ELSE appellation END,
           alcohol_abv_milli = CASE WHEN ? = 1 THEN ? ELSE alcohol_abv_milli END,
@@ -1225,6 +1262,8 @@ export async function updateWine(
         next.countryCode?.toUpperCase() ?? null,
         set(next.region),
         next.region ?? null,
+        set(next.region),
+        regionRef,
         set(next.region),
         next.region === undefined || next.region === null ? null : normalizeWineText(next.region),
         set(next.appellation),
@@ -1301,13 +1340,14 @@ export async function updateWine(
               id, space_id, wine_id, grape_code, name_snapshot, normalized_name,
               percentage_milli, position, created_at, updated_at
             )
-            SELECT ?, wine.space_id, wine.id, NULL, ?, ?, ?, ?, ?, ?
+            SELECT ?, wine.space_id, wine.id, ?, ?, ?, ?, ?, ?, ?
             FROM wine_records wine
             WHERE wine.id = ? AND wine.space_id = ?
             ON CONFLICT(wine_id, position) DO NOTHING`,
           )
           .bind(
             ulid(),
+            updatedGrapeIds.get(grape.name.trim()) ?? null,
             grape.name,
             normalizeWineText(grape.name),
             grape.percentage == null ? null : Math.round(grape.percentage * 1_000),

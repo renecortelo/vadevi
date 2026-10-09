@@ -1575,6 +1575,7 @@
     "producersTitle": "Producers",
     "producersEmpty": "Nothing to tidy: every producer is written one way.",
     "grapesTitle": "Grapes",
-    "grapesEmpty": "Nothing to tidy: every grape is written one way."
+    "grapesEmpty": "Nothing to tidy: every grape is written one way.",
+    "linkedNote": "What the library recognises already reads as one, with nothing renamed: grapes in your language, appellations by their official name. Only what it does not recognise appears here."
   }
 }

@@ -1575,6 +1575,7 @@
     "producersTitle": "Produtores",
     "producersEmpty": "Nada para arrumar: cada produtor está escrito de uma só forma.",
     "grapesTitle": "Castas",
-    "grapesEmpty": "Nada para arrumar: cada casta está escrita de uma só forma."
+    "grapesEmpty": "Nada para arrumar: cada casta está escrita de uma só forma.",
+    "linkedNote": "O que a biblioteca reconhece já aparece unificado sem renomear nada: as castas na tua língua, as denominações com o nome oficial. Aqui só aparece o resto."
   }
 }

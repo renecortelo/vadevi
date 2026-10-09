@@ -12,6 +12,7 @@ import { Link, useLocation, useParams } from "react-router";
 
 import { MapLink } from "../components/MapLink";
 import { EditWineDialog } from "../components/EditWineDialog";
+import { useLibraryNames } from "../library/names";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
 import { trailFrom } from "../library/trail";
@@ -229,6 +230,7 @@ export function WineEvidencePage() {
     bootstrap.data.spaces.find((space) => space.id === spaceId)?.type !== "personal";
   const [response, setResponse] = useState<WineFactsResponse | null>(null);
   const [wine, setWine] = useState<WineSummary | null>(null);
+  const names = useLibraryNames([wine?.regionRef]);
   // Corrected here, as from the list: the dialog, and a reload when saved.
   const [editingWine, setEditingWine] = useState(false);
   const [wineReload, setWineReload] = useState(0);
@@ -488,7 +490,7 @@ export function WineEvidencePage() {
             <p className="evidence-heading__place">
               {[
                 wine.vintageYear === null ? null : String(wine.vintageYear),
-                wine.region,
+                names.region(wine),
                 wine.countryCode === null
                   ? t("evidence.noCountry")
                   : `${flagOf(wine.countryCode)} ${
@@ -512,14 +514,19 @@ export function WineEvidencePage() {
           {wine === null || wine.grapes.length === 0 ? null : (
             <p className="evidence-heading__grapes">
               <span>{t("library.grapesLink")}:</span>
+              {/* A linked grape opens its own card, named in the app's language. */}
               {wine.grapes.map((grape) => (
                 <Link
                   className="text-link"
                   key={grape.name}
                   state={backHere}
-                  to={`/library/grape?name=${encodeURIComponent(grape.name)}`}
+                  to={
+                    grape.libraryId == null
+                      ? `/library/grape?name=${encodeURIComponent(grape.name)}`
+                      : `/library/grapes/${grape.libraryId}`
+                  }
                 >
-                  {grape.name}
+                  {names.grape(grape)}
                 </Link>
               ))}
             </p>

@@ -1575,6 +1575,7 @@
     "producersTitle": "Produttori",
     "producersEmpty": "Niente da riordinare: ogni produttore è scritto in un solo modo.",
     "grapesTitle": "Vitigni",
-    "grapesEmpty": "Niente da riordinare: ogni vitigno è scritto in un solo modo."
+    "grapesEmpty": "Niente da riordinare: ogni vitigno è scritto in un solo modo.",
+    "linkedNote": "Ciò che la biblioteca riconosce si vede già unificato senza rinominare nulla: i vitigni nella tua lingua, le denominazioni col nome ufficiale. Qui compare solo il resto."
   }
 }

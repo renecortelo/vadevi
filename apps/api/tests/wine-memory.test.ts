@@ -303,6 +303,44 @@ describe("Wine Memory and Quick Log", () => {
     expect((await record(undefined, undefined, "bodega doble")).countryCode).toBeNull();
   });
 
+  it("links a wine's grapes and region to the library, keeping what was typed", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_grapes (id, wikidata_id, prominence) VALUES ('link-tempranillo', 'Q-link-1', 9)`,
+      ),
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_names (entity_type, entity_id, locale, name, normalized_name, kind, source)
+          VALUES ('grape', 'link-tempranillo', '*', 'Tinto Fino', 'tinto fino', 'synonym', 'wikidata')`,
+      ),
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_regions (id, eambrosia_id, name, country_code, gi_type)
+          VALUES ('link-rioja', 'PDO-LINK-1', 'Rioja', 'ES', 'PDO')`,
+      ),
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_names (entity_type, entity_id, locale, name, normalized_name, kind, source)
+          VALUES ('region', 'link-rioja', '*', 'Rioja', 'rioja', 'primary', 'register')`,
+      ),
+    ]);
+    const created = await createWine(spaceId, {
+      displayName: "Enlazado",
+      grapes: [{ name: "Tinto Fino" }, { name: "Uva Rara" }],
+      identityStatus: "confirmed",
+      nonVintage: true,
+      producerName: "Bodega Enlace",
+      region: "DO Rioja",
+    });
+    const wine = CreateWineResponseSchema.parse(await created.response.json()).data.wine;
+    // Written as typed; linked where the library knows it for certain.
+    expect(wine.region).toBe("DO Rioja");
+    expect(wine.regionRef).toBe("link-rioja");
+    expect(wine.grapes).toEqual([
+      { libraryId: "link-tempranillo", name: "Tinto Fino", percentage: null },
+      { libraryId: null, name: "Uva Rara", percentage: null },
+    ]);
+  });
+
   it("stores a wine type the old column CHECK would have rejected", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;
@@ -407,8 +445,9 @@ describe("Wine Memory and Quick Log", () => {
     const wine = CreateWineResponseSchema.parse(await created.response.json()).data.wine;
     expect(wine.alcoholAbv).toBe(13.5);
     expect(wine.grapes).toEqual([
-      { name: "Tempranillo", percentage: 85 },
-      { name: "Garnacha", percentage: null },
+      // Unlinked here: this test loads no wine library.
+      { libraryId: null, name: "Tempranillo", percentage: 85 },
+      { libraryId: null, name: "Garnacha", percentage: null },
     ]);
 
     const update = await SELF.fetch(
@@ -427,7 +466,7 @@ describe("Wine Memory and Quick Log", () => {
     const updated = WineResponseSchema.parse(await update.json()).data.wine;
     expect(updated.alcoholAbv).toBe(14);
     // The list replaces wholesale: Tempranillo and Garnacha are gone.
-    expect(updated.grapes).toEqual([{ name: "Monastrell", percentage: 100 }]);
+    expect(updated.grapes).toEqual([{ libraryId: null, name: "Monastrell", percentage: 100 }]);
 
     // Clearing the list removes every varietal without touching other fields.
     const cleared = await SELF.fetch(

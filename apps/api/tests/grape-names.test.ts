@@ -38,4 +38,12 @@ describe("one grape however it was written", () => {
     // The spelling used most.
     expect(readings.get("sumoll")).toBe("Sumoll");
   });
+
+  it("never reads a family's name as one grape", async () => {
+    await env.DB.prepare(
+      `INSERT OR IGNORE INTO kb_names (entity_type, entity_id, locale, name, normalized_name, kind, source)
+        VALUES ('grape', 'names-tempranillo', '*', 'Muscat', 'muscat', 'synonym', 'wikidata')`,
+    ).run();
+    expect((await readGrapes(env.DB, ["Muscat"], "es")).get("Muscat")).toBe("Muscat");
+  });
 });

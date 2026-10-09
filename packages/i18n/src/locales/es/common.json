@@ -1575,6 +1575,7 @@
     "producersTitle": "Productores",
     "producersEmpty": "Nada que ordenar: cada productor está escrito de una sola forma.",
     "grapesTitle": "Uvas",
-    "grapesEmpty": "Nada que ordenar: cada uva está escrita de una sola forma."
+    "grapesEmpty": "Nada que ordenar: cada uva está escrita de una sola forma.",
+    "linkedNote": "Lo que la biblioteca reconoce ya se ve unificado sin renombrar nada: las uvas en tu idioma, las denominaciones con su nombre oficial. Aquí solo aparece lo que no reconoce."
   }
 }

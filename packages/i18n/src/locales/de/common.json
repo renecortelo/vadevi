@@ -1575,6 +1575,7 @@
     "producersTitle": "Erzeuger",
     "producersEmpty": "Nichts aufzuräumen: Jeder Erzeuger ist nur auf eine Art geschrieben.",
     "grapesTitle": "Rebsorten",
-    "grapesEmpty": "Nichts aufzuräumen: Jede Rebsorte ist nur auf eine Art geschrieben."
+    "grapesEmpty": "Nichts aufzuräumen: Jede Rebsorte ist nur auf eine Art geschrieben.",
+    "linkedNote": "Was die Bibliothek erkennt, erscheint schon einheitlich: Rebsorten in Ihrer Sprache, Herkunftsbezeichnungen mit amtlichem Namen. Hier steht nur der Rest."
   }
 }

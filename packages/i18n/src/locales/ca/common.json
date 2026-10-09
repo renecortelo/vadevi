@@ -1575,6 +1575,7 @@
     "producersTitle": "Productors",
     "producersEmpty": "Res a endreçar: cada productor està escrit d'una sola manera.",
     "grapesTitle": "Raïms",
-    "grapesEmpty": "Res a endreçar: cada raïm està escrit d'una sola manera."
+    "grapesEmpty": "Res a endreçar: cada raïm està escrit d'una sola manera.",
+    "linkedNote": "El que la biblioteca reconeix ja es veu unificat sense reanomenar res: els raïms en el teu idioma, les denominacions amb el nom oficial. Aquí només surt el que no reconeix."
   }
 }

@@ -13,6 +13,58 @@ import { normalizeWineText } from "./wine-memory";
  *
  * Nothing is written: the wine keeps the name it was recorded with.
  */
+/**
+ * Names of families of grapes, not of one: a lone "Malvasia" or "Muscat" names
+ * no single variety — the library lists "Malvasia" as a synonym of Torrontés,
+ * one of many — so it is never read as one grape, and stays as written.
+ */
+const families = new Set([
+  "malvasia",
+  "malvazia",
+  "malvazija",
+  "muscat",
+  "moscatel",
+  "moscato",
+  "moscatell",
+  "muskat",
+  "trebbiano",
+  "lambrusco",
+  "pinot",
+  "schiava",
+  "vernaccia",
+  "greco",
+]);
+
+/**
+ * The library grape each recorded name is, for certain — by any of its names
+ * or synonyms, and for one grape only — or null. Keyed by the name, trimmed.
+ */
+export async function libraryGrapeIds(
+  database: D1Database,
+  names: readonly string[],
+): Promise<Map<string, string | null>> {
+  const recorded = [...new Set(names.map((name) => name.trim()).filter((name) => name.length > 0))];
+  const normalized = [...new Set(recorded.map(normalizeWineText))].filter(
+    (name) => name.length > 0,
+  );
+  const ids = new Map<string, string>();
+  if (normalized.length > 0) {
+    const rows = await database
+      .prepare(
+        `SELECT normalized_name AS name, COUNT(DISTINCT entity_id) AS grapes, MIN(entity_id) AS id
+        FROM kb_names
+        WHERE entity_type = 'grape' AND normalized_name IN (SELECT value FROM json_each(?))
+        GROUP BY normalized_name`,
+      )
+      .bind(JSON.stringify(normalized))
+      .all<{ grapes: number; id: string; name: string }>();
+    for (const row of rows.results) {
+      if (row.grapes === 1 && !families.has(row.name)) ids.set(row.name, row.id);
+    }
+  }
+  return new Map(recorded.map((name) => [name, ids.get(normalizeWineText(name)) ?? null]));
+}
+
 export async function readGrapes(
   database: D1Database,
   names: readonly string[],
@@ -33,8 +85,9 @@ export async function readGrapes(
       )
       .bind(JSON.stringify(normalized))
       .all<{ grapes: number; id: string; name: string }>();
-    // A synonym two grapes share names neither for certain.
-    const certain = rows.results.filter((row) => row.grapes === 1);
+    // A synonym two grapes share names neither for certain, and a family's
+    // name names none.
+    const certain = rows.results.filter((row) => row.grapes === 1 && !families.has(row.name));
     const short = locale.split("-")[0]!;
     const labels =
       certain.length === 0

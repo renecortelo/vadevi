@@ -16,6 +16,11 @@ import { normalizeWineText } from "./wine-memory";
  *
  * Nothing is written: the record keeps what was typed. This is how a region
  * is counted, filtered and placed on a map.
+ *
+ * A registered name is shown as the register writes it, in every language:
+ * it is the legal name a label carries — Bourgogne, Rioja, Empordà — where the
+ * library's names for it in other languages name the vineyard area around it
+ * ("Viñedo de Borgoña", "Burgundy wine region").
  */
 
 /** "DO Empordà", "Vino de la Tierra de Castilla": the name without its label. */
@@ -47,6 +52,8 @@ export type PlaceReading = Readonly<{
   country: string | null;
   /** The region as one name, or null for a wine recorded without one. */
   region: string | null;
+  /** The registered name it is, for certain: the library's id, or null. */
+  regionRef: string | null;
 }>;
 
 /** Each wine's region as one name, and its country, recorded or as its region says. */
@@ -60,13 +67,16 @@ export async function readPlaces(
   });
 
   // The register's names, as the library holds them in every language.
-  const registered = new Map<string, { code: string | null; label: string | null }>();
+  const registered = new Map<
+    string,
+    { code: string | null; id: string | null; label: string | null }
+  >();
   const asked = [...new Set(regioned.flatMap((wine) => wine.forms))];
   if (asked.length > 0) {
     const rows = await database
       .prepare(
         `SELECT name.normalized_name AS name,
-          COUNT(DISTINCT region.id) AS entries, MIN(region.name) AS label,
+          COUNT(DISTINCT region.id) AS entries, MIN(region.name) AS label, MIN(region.id) AS id,
           COUNT(DISTINCT region.country_code) AS countries, MIN(region.country_code) AS code
         FROM kb_names name JOIN kb_regions region ON region.id = name.entity_id
         WHERE name.entity_type = 'region'
@@ -74,16 +84,23 @@ export async function readPlaces(
         GROUP BY name.normalized_name`,
       )
       .bind(JSON.stringify(asked))
-      .all<{ code: string; countries: number; entries: number; label: string; name: string }>();
+      .all<{
+        code: string;
+        countries: number;
+        entries: number;
+        id: string;
+        label: string;
+        name: string;
+      }>();
     for (const row of rows.results) {
       // A name two entries share names neither of them for certain.
       registered.set(row.name, {
         code: row.countries === 1 ? row.code : null,
+        id: row.entries === 1 ? row.id : null,
         label: row.entries === 1 ? row.label : null,
       });
     }
   }
-
   // A name the register does not hold: the spelling most of its wines use,
   // preferring one typed without a label.
   const spellings = new Map<string, Map<string, number>>();
@@ -105,7 +122,9 @@ export async function readPlaces(
     )[0]?.[0] ?? null;
 
   const readings = new Map<string, PlaceReading>();
-  for (const wine of wines) readings.set(wine.id, { country: wine.countryCode, region: null });
+  for (const wine of wines) {
+    readings.set(wine.id, { country: wine.countryCode, region: null, regionRef: null });
+  }
   for (const wine of regioned) {
     const known = wine.forms.map((form) => registered.get(form)).find((entry) => entry?.label);
     const region = known?.label ?? spellingOf(wine.forms.at(-1)!);
@@ -122,9 +141,15 @@ export async function readPlaces(
             ? (wine.forms.map((form) => registered.get(form)?.code).find(Boolean) ?? null)
             : null;
     }
-    readings.set(wine.id, { country, region });
+    readings.set(wine.id, { country, region, regionRef: known?.id ?? null });
   }
   return readings;
+}
+
+/** The registered name a typed region is, for certain: the library's id, or null. */
+export async function regionRefOf(database: D1Database, region: string): Promise<string | null> {
+  const reading = await readPlaces(database, [{ countryCode: null, id: "region", region }]);
+  return reading.get("region")?.regionRef ?? null;
 }
 
 /** The one country a region names, or null when it names none or several. */

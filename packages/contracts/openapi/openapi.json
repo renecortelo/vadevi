@@ -2841,6 +2841,10 @@
                           "items": {
                             "type": "object",
                             "properties": {
+                              "libraryId": {
+                                "type": "string",
+                                "nullable": true
+                              },
                               "name": {
                                 "type": "string"
                               },
@@ -2918,6 +2922,10 @@
                           "type": "string"
                         },
                         "region": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "regionRef": {
                           "type": "string",
                           "nullable": true
                         },
@@ -4874,6 +4882,10 @@
                       "items": {
                         "type": "object",
                         "properties": {
+                          "libraryId": {
+                            "type": "string",
+                            "nullable": true
+                          },
                           "name": {
                             "type": "string"
                           },
@@ -4951,6 +4963,10 @@
                       "type": "string"
                     },
                     "region": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "regionRef": {
                       "type": "string",
                       "nullable": true
                     },
@@ -5036,6 +5052,10 @@
                     "items": {
                       "type": "object",
                       "properties": {
+                        "libraryId": {
+                          "type": "string",
+                          "nullable": true
+                        },
                         "name": {
                           "type": "string"
                         },
@@ -5113,6 +5133,10 @@
                     "type": "string"
                   },
                   "region": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "regionRef": {
                     "type": "string",
                     "nullable": true
                   },
@@ -5394,6 +5418,10 @@
                     "items": {
                       "type": "object",
                       "properties": {
+                        "libraryId": {
+                          "type": "string",
+                          "nullable": true
+                        },
                         "name": {
                           "type": "string"
                         },
@@ -5471,6 +5499,10 @@
                     "type": "string"
                   },
                   "region": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "regionRef": {
                     "type": "string",
                     "nullable": true
                   },
@@ -5687,6 +5719,10 @@
                   "items": {
                     "type": "object",
                     "properties": {
+                      "libraryId": {
+                        "type": "string",
+                        "nullable": true
+                      },
                       "name": {
                         "type": "string"
                       },
@@ -5764,6 +5800,10 @@
                   "type": "string"
                 },
                 "region": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "regionRef": {
                   "type": "string",
                   "nullable": true
                 },
@@ -7905,6 +7945,10 @@
                     "items": {
                       "type": "object",
                       "properties": {
+                        "libraryId": {
+                          "type": "string",
+                          "nullable": true
+                        },
                         "name": {
                           "type": "string"
                         },
@@ -7982,6 +8026,10 @@
                     "type": "string"
                   },
                   "region": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "regionRef": {
                     "type": "string",
                     "nullable": true
                   },
@@ -8978,6 +9026,10 @@
                           "items": {
                             "type": "object",
                             "properties": {
+                              "libraryId": {
+                                "type": "string",
+                                "nullable": true
+                              },
                               "name": {
                                 "type": "string"
                               },
@@ -9055,6 +9107,10 @@
                           "type": "string"
                         },
                         "region": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "regionRef": {
                           "type": "string",
                           "nullable": true
                         },
@@ -11118,6 +11174,34 @@
         },
         "required": [
           "locale"
+        ],
+        "additionalProperties": false
+      },
+      "LibraryRegionNamesResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "data"
         ],
         "additionalProperties": false
       },
@@ -19692,6 +19776,53 @@
           },
           "404": {
             "description": "The research job is unavailable to the caller.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/region-names": {
+      "get": {
+        "operationId": "getLibraryRegionNames",
+        "tags": [
+          "Library"
+        ],
+        "summary": "Registered names by id, in the reader's language",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "maxLength": 8000
+            },
+            "required": true,
+            "in": "query",
+            "name": "ids"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Each id known to the library, with its name.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryRegionNamesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
             "content": {
               "application/json": {
                 "schema": {

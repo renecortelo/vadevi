@@ -2,6 +2,7 @@ import {
   type LibraryGrape,
   LibraryGrapeResponseSchema,
   type LibraryRegion,
+  LibraryRegionNamesResponseSchema,
   LibraryRegionResponseSchema,
   LibraryRegionSearchResponseSchema,
   type LibrarySearchResponse,
@@ -142,4 +143,19 @@ export async function getLibraryTopic(
   if (response.status === 404) return null;
   if (!response.ok) throw await apiError(response);
   return LibraryTopicResponseSchema.parse(await response.json()).data;
+}
+
+/** Registered names by id, as the register writes them. */
+export async function getLibraryRegionNames(
+  tokenSource: TokenSource,
+  ids: readonly string[],
+  signal?: AbortSignal,
+): Promise<{ id: string; name: string }[]> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/library/region-names?ids=${encodeURIComponent(ids.join(","))}`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return LibraryRegionNamesResponseSchema.parse(await response.json()).data;
 }

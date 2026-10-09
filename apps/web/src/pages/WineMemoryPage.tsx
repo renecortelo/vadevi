@@ -19,6 +19,7 @@ import { createUlid } from "../security/ulid";
 import { getRegionPoints, getWineMemory } from "../services/api";
 import { mergeWines } from "../services/data-rights";
 import { EditWineDialog } from "../components/EditWineDialog";
+import { useLibraryNames } from "../library/names";
 import { useSession } from "../session/SessionContext";
 
 function normalize(value: string): string {
@@ -247,6 +248,8 @@ export function WineMemoryPage() {
   const spaceId = bootstrap.data.user.activeSpaceId;
   const userId = user?.uid ?? "";
   const [wines, setWines] = useState<WineSummary[]>([]);
+  // A linked region reads in the app's language; anything else as typed.
+  const names = useLibraryNames(wines.map((wine) => wine.regionRef));
   const [query, setQuery] = useState("");
   // The page the server says comes next. The list used to ask for a hundred and
   // ignore the cursor entirely, so a cellar past a hundred bottles simply lost
@@ -924,7 +927,7 @@ export function WineMemoryPage() {
                   {[
                     wine.nonVintage ? t("quickLog.nonVintageShort") : wine.vintageYear,
                     wine.wineType === null ? null : t(`quickLog.wineType.${wine.wineType}`),
-                    wine.region,
+                    names.region(wine),
                   ]
                     .filter((part) => part !== null && part !== undefined && part !== "")
                     .join(" · ") || "—"}
@@ -1036,7 +1039,7 @@ export function WineMemoryPage() {
                     {wine.nonVintage ? t("quickLog.nonVintageShort") : (wine.vintageYear ?? "—")}
                   </td>
                   <td>{wine.wineType === null ? "—" : t(`quickLog.wineType.${wine.wineType}`)}</td>
-                  <td>{wine.region ?? "—"}</td>
+                  <td>{names.region(wine) ?? "—"}</td>
                   <td>{wine.score100 ?? "—"}</td>
                   <td>{wine.noteCount}</td>
                   <td>

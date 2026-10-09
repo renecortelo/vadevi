@@ -29,7 +29,7 @@ const headers = (bearer: string) => ({
 });
 
 describe("tidying a Space's regions", () => {
-  it("offers each group to confirm, renames only what is confirmed, and only for members", async () => {
+  it("offers what cannot be linked, renames only what is confirmed, and only for members", async () => {
     const me = BootstrapResponseSchema.parse(
       await (
         await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers: headers(owner) })
@@ -73,6 +73,9 @@ describe("tidying a Space's regions", () => {
       wine("Empordà", "ES"),
       wine("Empordà", "ES"),
       wine("La Mancga", "ES"),
+      wine("Penedes", "ES"),
+      wine("Penedès", "ES"),
+      wine("Penedès", "ES"),
     ]);
     const url = `https://vadevi.test/api/v1/spaces/${spaceId}/regions/tidy`;
     const proposals = async () =>
@@ -81,14 +84,14 @@ describe("tidying a Space's regions", () => {
       ).data;
 
     const first = await proposals();
+    // A registered name reads as one already, linked: nothing to offer.
+    expect(first.some((proposal) => proposal.to === "Empordà")).toBe(false);
+    // One the register lacks, written two ways, is offered under the spelling used most.
     expect(first).toContainEqual({
       countryCode: "ES",
-      from: [
-        { region: "DO Empordà", wines: 1 },
-        { region: "Emporda", wines: 1 },
-      ],
+      from: [{ region: "Penedes", wines: 1 }],
       reason: "variants",
-      to: "Empordà",
+      to: "Penedès",
       unchanged: 2,
     });
     expect(first).toContainEqual(
@@ -99,24 +102,23 @@ describe("tidying a Space's regions", () => {
       }),
     );
 
-    // Confirmed: those wines are renamed, and the one without a country gets it.
+    // Confirmed: the misspelt wine is renamed, and linked to the registered name.
     const renamed = await SELF.fetch(url, {
-      body: JSON.stringify({ from: ["DO Empordà", "Emporda"], to: "Empordà" }),
+      body: JSON.stringify({ from: ["La Mancga"], to: "La Mancha" }),
       headers: headers(owner),
       method: "POST",
     });
-    expect(RenameRegionsResponseSchema.parse(await renamed.json()).data.renamed).toBe(2);
-    const rows = await env.DB.prepare(
-      `SELECT region, country_code FROM wine_records WHERE space_id = ? AND region = 'Empordà'`,
+    expect(RenameRegionsResponseSchema.parse(await renamed.json()).data.renamed).toBe(1);
+    const row = await env.DB.prepare(
+      `SELECT region, region_ref, country_code FROM wine_records WHERE space_id = ? AND region = 'La Mancha'`,
     )
       .bind(spaceId)
-      .all<{ country_code: string | null; region: string }>();
-    expect(rows.results).toHaveLength(4);
-    expect(rows.results.every((row) => row.country_code === "ES")).toBe(true);
-    // Nothing left to tidy there; the misspelling waits for its own yes.
+      .first<{ country_code: string | null; region: string; region_ref: string | null }>();
+    expect(row).toEqual({ country_code: "ES", region: "La Mancha", region_ref: "tidy-la-mancha" });
+    // The Penedès spellings wait for their own yes.
     const second = await proposals();
-    expect(second.some((proposal) => proposal.to === "Empordà")).toBe(false);
-    expect(second.some((proposal) => proposal.to === "La Mancha")).toBe(true);
+    expect(second.some((proposal) => proposal.to === "La Mancha")).toBe(false);
+    expect(second.some((proposal) => proposal.to === "Penedès")).toBe(true);
 
     // Someone outside the Space learns nothing of it.
     expect((await SELF.fetch(url, { headers: headers(outsider) })).status).toBe(404);
@@ -170,7 +172,7 @@ describe("tidying a Space's regions", () => {
     expect(RenameRegionsResponseSchema.parse(await renamed.json()).data.renamed).toBe(1);
   });
 
-  it("offers a grape written several ways under the library's name, and renames it on confirming", async () => {
+  it("offers only grapes the library cannot link, and renames them on confirming", async () => {
     const me = BootstrapResponseSchema.parse(
       await (
         await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers: headers(owner) })
@@ -195,7 +197,7 @@ describe("tidying a Space's regions", () => {
       ),
     ];
     const wineIds: string[] = [];
-    for (const grape of ["Carignan", "Samsó", "Cariñena"]) {
+    for (const grape of ["Carignan", "Samsó", "Sumoll", "Sumoll", "sumoll"]) {
       const id = ulid();
       wineIds.push(id);
       statements.push(
@@ -216,32 +218,33 @@ describe("tidying a Space's regions", () => {
     const proposals = GrapeProposalsResponseSchema.parse(
       await (await SELF.fetch(`${url}?locale=es`, { headers: headers(owner) })).json(),
     ).data;
+    // Carignan and Samsó are one library grape: linked, they read as Cariñena
+    // already, in every language, so they are not offered.
+    expect(proposals.some((proposal) => proposal.to === "Cariñena")).toBe(false);
+    // A grape the library does not know, written two ways, is.
     expect(proposals).toContainEqual({
-      from: expect.arrayContaining([
-        { grape: "Carignan", wines: 1 },
-        { grape: "Samsó", wines: 1 },
-      ]),
-      to: "Cariñena",
-      unchanged: 1,
+      from: [{ grape: "sumoll", wines: 1 }],
+      to: "Sumoll",
+      unchanged: 2,
     });
     const renamed = await SELF.fetch(url, {
-      body: JSON.stringify({ from: ["Carignan", "Samsó"], to: "Cariñena" }),
+      body: JSON.stringify({ from: ["sumoll"], to: "Sumoll" }),
       headers: headers(owner),
       method: "POST",
     });
-    expect(RenameRegionsResponseSchema.parse(await renamed.json()).data.renamed).toBe(2);
+    expect(RenameRegionsResponseSchema.parse(await renamed.json()).data.renamed).toBe(1);
     const grapes = await env.DB.prepare(
-      `SELECT DISTINCT name_snapshot FROM wine_grapes WHERE wine_id IN (?, ?, ?)`,
+      `SELECT DISTINCT name_snapshot FROM wine_grapes WHERE wine_id IN (?, ?, ?, ?, ?) ORDER BY 1`,
     )
       .bind(...wineIds)
       .all<{ name_snapshot: string }>();
-    expect(grapes.results).toEqual([{ name_snapshot: "Cariñena" }]);
-    // Each wine renamed is a new version, for the devices that sync it.
+    expect(grapes.results.map((row) => row.name_snapshot)).toEqual(["Carignan", "Samsó", "Sumoll"]);
+    // The renamed wine is a new version, for the devices that sync it.
     const versions = await env.DB.prepare(
-      `SELECT version FROM wine_records WHERE id IN (?, ?) ORDER BY version`,
+      `SELECT MAX(version) AS top FROM wine_records WHERE id IN (?, ?, ?, ?, ?)`,
     )
-      .bind(wineIds[0], wineIds[1])
-      .all<{ version: number }>();
-    expect(versions.results.map((row) => row.version)).toEqual([2, 2]);
+      .bind(...wineIds)
+      .first<{ top: number }>();
+    expect(versions?.top).toBe(2);
   });
 });

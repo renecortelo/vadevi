@@ -1575,6 +1575,7 @@
     "producersTitle": "Producteurs",
     "producersEmpty": "Rien à ranger : chaque producteur est écrit d'une seule façon.",
     "grapesTitle": "Cépages",
-    "grapesEmpty": "Rien à ranger : chaque cépage est écrit d'une seule façon."
+    "grapesEmpty": "Rien à ranger : chaque cépage est écrit d'une seule façon.",
+    "linkedNote": "Ce que la bibliothèque reconnaît s'affiche déjà unifié, sans rien renommer : les cépages dans votre langue, les appellations sous leur nom officiel. Ici n'apparaît que le reste."
   }
 }

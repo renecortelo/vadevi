@@ -275,3 +275,21 @@ export type LibraryRegion = z.infer<typeof LibraryRegionSchema>;
 export type LibraryGrape = z.infer<typeof LibraryGrapeSchema>;
 export type LibraryGrapeResponse = z.infer<typeof LibraryGrapeResponseSchema>;
 export type LibrarySearchResponse = z.infer<typeof LibrarySearchResponseSchema>;
+
+/** Registered names by id, as the register writes them. */
+export const LibraryRegionNamesQuerySchema = z
+  .object({
+    /** Up to a hundred ids, comma-separated. */
+    ids: z
+      .string()
+      .max(8_000)
+      .openapi({ param: { in: "query", name: "ids" } }),
+  })
+  .strict();
+
+export const LibraryRegionNamesResponseSchema = z
+  .object({
+    data: z.array(z.object({ id: z.string(), name: z.string() }).strict()),
+  })
+  .strict()
+  .openapi("LibraryRegionNamesResponse");

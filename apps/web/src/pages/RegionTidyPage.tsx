@@ -176,6 +176,7 @@ export function RegionTidyPage() {
           <p className="eyebrow">{space?.name ?? t("regionTidy.eyebrow")}</p>
           <h1>{t("regionTidy.title")}</h1>
           <p>{t("regionTidy.intro")}</p>
+          <p className="section-help">{t("regionTidy.linkedNote")}</p>
         </div>
       </header>
       {notice === null ? null : (

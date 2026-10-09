@@ -647,3 +647,21 @@ export async function getLibraryTopic(
   if (row === null) return null;
   return (await topicsFor(database, [row], locale))[0] ?? null;
 }
+
+/**
+ * Registered names by id, as the register writes them — the legal name a
+ * label carries in every language (Bourgogne, Rioja, Empordà) — what a wine
+ * linked to one shows instead of however it was typed.
+ */
+export async function libraryRegionNames(
+  database: D1Database,
+  ids: readonly string[],
+): Promise<{ id: string; name: string }[]> {
+  const wanted = [...new Set(ids)].slice(0, 100);
+  if (wanted.length === 0) return [];
+  const rows = await database
+    .prepare(`SELECT id, name FROM kb_regions WHERE id IN (SELECT value FROM json_each(?))`)
+    .bind(JSON.stringify(wanted))
+    .all<{ id: string; name: string }>();
+  return rows.results;
+}

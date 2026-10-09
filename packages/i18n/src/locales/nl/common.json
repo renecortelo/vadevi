@@ -1575,6 +1575,7 @@
     "producersTitle": "Producenten",
     "producersEmpty": "Niets op te ruimen: elke producent is op één manier geschreven.",
     "grapesTitle": "Druiven",
-    "grapesEmpty": "Niets op te ruimen: elke druif is op één manier geschreven."
+    "grapesEmpty": "Niets op te ruimen: elke druif is op één manier geschreven.",
+    "linkedNote": "Wat de bibliotheek herkent, staat al samengevoegd zonder hernoemen: druiven in je taal, herkomstbenamingen met hun officiële naam. Hier staat alleen de rest."
   }
 }

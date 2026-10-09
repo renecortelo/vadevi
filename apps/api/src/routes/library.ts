@@ -4,6 +4,8 @@ import {
   LibraryGrapePathSchema,
   LibraryGrapeQuerySchema,
   LibraryGrapeResponseSchema,
+  LibraryRegionNamesQuerySchema,
+  LibraryRegionNamesResponseSchema,
   LibraryRegionPathSchema,
   LibraryRegionResponseSchema,
   LibraryRegionSearchQuerySchema,
@@ -18,12 +20,33 @@ import {
 import {
   getLibraryGrape,
   getLibraryRegion,
+  libraryRegionNames,
   getLibraryTopic,
   listLibraryTopics,
   searchLibraryGrapes,
   searchLibraryRegions,
 } from "../repositories/library";
 import type { ApiEnvironment } from "../types";
+
+const regionNamesRoute = createRoute({
+  method: "get",
+  path: "/api/v1/library/region-names",
+  operationId: "getLibraryRegionNames",
+  tags: ["Library"],
+  summary: "Registered names by id, in the reader's language",
+  security: [{ FirebaseBearer: [] }],
+  request: { query: LibraryRegionNamesQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: LibraryRegionNamesResponseSchema } },
+      description: "Each id known to the library, with its name.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+  },
+});
 
 const grapeRoute = createRoute({
   method: "get",
@@ -158,6 +181,18 @@ const topicRoute = createRoute({
 });
 
 export function registerLibraryRoutes(app: OpenAPIHono<ApiEnvironment>) {
+  app.openapi(regionNamesRoute, async (context) => {
+    const query = context.req.valid("query");
+    const names = await libraryRegionNames(
+      context.env.DB!,
+      query.ids
+        .split(",")
+        .map((id) => id.trim())
+        .filter(Boolean),
+    );
+    return context.json(LibraryRegionNamesResponseSchema.parse({ data: names }), 200);
+  });
+
   app.openapi(topicsRoute, async (context) => {
     const data = await listLibraryTopics(context.env.DB!, context.req.valid("query").locale);
     return context.json(LibraryTopicsResponseSchema.parse({ data }), 200);

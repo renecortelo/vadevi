@@ -7,9 +7,9 @@ import type {
 import { ulid } from "ulid";
 
 import type { FirebasePrincipal } from "../types";
-import { readGrapes } from "./grape-names";
+import { libraryGrapeIds, readGrapes } from "./grape-names";
 import { producerKey } from "./producer-names";
-import { countryOfRegion, readPlaces } from "./region-names";
+import { countryOfRegion, readPlaces, regionRefOf } from "./region-names";
 import { activeWineMemberId, normalizeWineText } from "./wine-memory";
 
 /** Letters to change to turn one name into the other. */
@@ -62,12 +62,21 @@ export async function proposeRegionTidying(
   );
 
   // Wines by the name they read as, and how each is written.
-  const groups = new Map<string, { country: string | null; spellings: Map<string, number> }>();
+  const groups = new Map<
+    string,
+    { country: string | null; linked: boolean; spellings: Map<string, number> }
+  >();
   for (const wine of wines.results) {
     const reading = readings.get(wine.id);
     const name = reading?.region ?? wine.region;
-    const group = groups.get(name) ?? { country: null, spellings: new Map<string, number>() };
+    const group = groups.get(name) ?? {
+      country: null,
+      linked: false,
+      spellings: new Map<string, number>(),
+    };
     group.country ??= reading?.country ?? null;
+    // A registered name is linked: it already reads as one, in every language.
+    group.linked ||= reading?.regionRef != null;
     group.spellings.set(wine.region, (group.spellings.get(wine.region) ?? 0) + 1);
     groups.set(name, group);
   }
@@ -79,6 +88,7 @@ export async function proposeRegionTidying(
 
   const proposals: RegionProposal[] = [];
   for (const [name, group] of groups) {
+    if (group.linked) continue;
     const others = [...group.spellings].filter(([spelling]) => spelling !== name);
     if (others.length > 0) {
       proposals.push({
@@ -129,11 +139,13 @@ export async function renameRegions(
   if (actorId === null) return null;
   const now = new Date().toISOString();
   const country = await countryOfRegion(database, request.to);
+  // Renamed to a registered name, the wine is linked to it.
+  const regionRef = await regionRefOf(database, request.to);
   const from = JSON.stringify(request.from);
   const results = await database.batch([
     database
       .prepare(
-        `UPDATE wine_records SET region = ?, normalized_region = ?,
+        `UPDATE wine_records SET region = ?, normalized_region = ?, region_ref = ?,
           country_code = coalesce(country_code, ?),
           normalized_country_code = coalesce(normalized_country_code, ?),
           version = version + 1, updated_at = ?
@@ -143,6 +155,7 @@ export async function renameRegions(
       .bind(
         request.to,
         normalizeWineText(request.to),
+        regionRef,
         country,
         country,
         now,
@@ -313,13 +326,20 @@ export async function proposeGrapeTidying(
     )
     .bind(spaceId)
     .all<{ name: string; wines: number }>();
-  const readings = await readGrapes(
+  // A grape the library knows already reads as one, in the reader's
+  // language; only names it does not know are offered here.
+  const ids = await libraryGrapeIds(
     database,
     rows.results.map((row) => row.name),
+  );
+  const unknown = rows.results.filter((row) => ids.get(row.name) == null);
+  const readings = await readGrapes(
+    database,
+    unknown.map((row) => row.name),
     locale,
   );
   const grapes = new Map<string, { grape: string; wines: number }[]>();
-  for (const row of rows.results) {
+  for (const row of unknown) {
     const label = readings.get(row.name) ?? row.name;
     grapes.set(label, [...(grapes.get(label) ?? []), { grape: row.name, wines: row.wines }]);
   }
@@ -354,6 +374,8 @@ export async function renameGrapes(
   if (actorId === null) return null;
   const now = new Date().toISOString();
   const from = JSON.stringify(request.from);
+  // Renamed to a name the library knows, the grape is linked to it.
+  const grapeId = (await libraryGrapeIds(database, [request.to])).get(request.to.trim()) ?? null;
   const results = await database.batch([
     // The wines first, each a new version for the devices that sync it.
     database
@@ -367,11 +389,12 @@ export async function renameGrapes(
       .bind(now, spaceId, spaceId, from, request.to),
     database
       .prepare(
-        `UPDATE wine_grapes SET name_snapshot = ?, normalized_name = ?, updated_at = ?
+        `UPDATE wine_grapes SET name_snapshot = ?, normalized_name = ?, grape_code = ?,
+          updated_at = ?
         WHERE space_id = ? AND trim(name_snapshot) IN (SELECT value FROM json_each(?))
           AND trim(name_snapshot) <> ?`,
       )
-      .bind(request.to, normalizeWineText(request.to), now, spaceId, from, request.to),
+      .bind(request.to, normalizeWineText(request.to), grapeId, now, spaceId, from, request.to),
     database
       .prepare(
         `INSERT INTO change_events (
