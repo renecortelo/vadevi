@@ -97205,52 +97205,12 @@
         "locale": "*",
         "name": "La Mancha",
         "source": "register"
-      },
-      {
-        "locale": "fr",
-        "name": "manchego",
-        "source": "wikidata"
-      },
-      {
-        "locale": "en",
-        "name": "Manchego cheese PDO",
-        "source": "wikidata"
-      },
-      {
-        "locale": "es",
-        "name": "Queso Manchego",
-        "source": "wikidata"
-      },
-      {
-        "locale": "ca",
-        "name": "Manxego",
-        "source": "wikidata"
-      },
-      {
-        "locale": "it",
-        "name": "manchego",
-        "source": "wikidata"
-      },
-      {
-        "locale": "de",
-        "name": "Manchego Käse",
-        "source": "wikidata"
-      },
-      {
-        "locale": "nl",
-        "name": "Manchego",
-        "source": "wikidata"
-      },
-      {
-        "locale": "pt",
-        "name": "Queijo manchego",
-        "source": "wikidata"
       }
     ],
-    "prominence": 8,
+    "prominence": 0,
     "registeredOn": "1986-06-13",
     "summaries": {},
-    "wikidataId": "Q72305",
+    "wikidataId": null,
     "register": {
       "categories": [
         1,

@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { matchKey, registerCountries, registerNames, transliterate } from "./appellation-names";
+import { allowedItem } from "./appellation-exclusions";
 import { insideRegion, nutsRegion, type NutsRegion } from "./nuts";
 import { countryLanguages, readSearches, searchKey } from "./search-appellation-names";
 import { wikimedia } from "./wikimedia";
@@ -225,22 +226,7 @@ for (const [id, item] of wineItems) {
   }
 }
 
-// Items Wikidata files under another wine's name by a stray alias, checked
-// by hand: Arrábida carries "Bairrada (DOC)", Provence's whole wine region
-// answers to Bellet, the Côtes de Bordeaux to its Saint-Macaire, the
-// Domaine de la Romanée-Conti to the grand cru it owns, and Rosso Piceno
-// superiore to the DOC it belongs to.
-const notThisItem: Record<string, string[]> = {
-  bairrada: ["Q2879982"],
-  bellet: ["Q815934"],
-  "cotes de bordeaux saint macaire": ["Q3010713"],
-  // The Domaine de la Romanée-Conti, the estate, not its grand cru.
-  "romanee conti": ["Q2142623"],
-  // Rosso Piceno superiore, one of the DOC's wines, answers to "Piceno".
-  piceno: ["Q3941677"],
-  "rosso piceno": ["Q3941677"],
-};
-const allowed = (name: string, id: string) => !(notThisItem[matchKey(name)] ?? []).includes(id);
+const allowed = allowedItem;
 
 // One item per register entry: the one linked directly, or else the
 // best-known of those going by its name. Coordinates may come from another

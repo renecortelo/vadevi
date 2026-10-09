@@ -10,6 +10,7 @@ import {
   transliterate,
 } from "./appellation-names";
 import { type GrapeEntry, normalize, slug, summaryOf } from "./grape-validation";
+import { allowedItem } from "./appellation-exclusions";
 import { registerCategories, registerGrapes } from "./register-facts";
 
 /**
@@ -122,7 +123,22 @@ for (const row of register) {
   let id = seen.has(base) ? `${base}-${giType.toLowerCase()}` : base;
   for (let suffix = 2; seen.has(id); suffix += 1) id = `${base}-${suffix}`;
   seen.add(id);
-  const linked = wikidata[row.appUniqueId] ?? null;
+  // An item excluded by hand since it was fetched stands for nothing here:
+  // its names are another thing's, and so is any point it gave.
+  const fetched = wikidata[row.appUniqueId] ?? null;
+  const linked =
+    fetched === null ||
+    fetched.qid === null ||
+    names.every((name) => allowedItem(name, fetched.qid!))
+      ? fetched
+      : {
+          ...fetched,
+          labels: {},
+          qid: null,
+          ...(fetched.pointSource === "item"
+            ? { latitude: null, longitude: null, pointSource: null }
+            : {}),
+        };
   const leadsPath =
     linked === null || linked.qid === null ? null : resolve(cache, "leads", `${linked.qid}.json`);
   const leads =

@@ -176,12 +176,14 @@ describe("a reader's numbers", () => {
 
     // A wine recorded without a country is placed by its region where the
     // region says which; a misspelt one stays unknown rather than guessed.
-    const [emporda, typo, castilla] = [ulid(), ulid(), ulid()];
+    const [doEmporda, typo, castilla] = [ulid(), ulid(), ulid()];
     await env.DB.batch(
       [
-        [emporda, "DO Empordà"],
+        [doEmporda, "DO Empordà"],
         [typo, "La Mancga"],
         [castilla, "D. O. Tierra de Castilla"],
+        [ulid(), "Emporda"],
+        [ulid(), "Empordà"],
       ].map(([id, region]) =>
         env.DB.prepare(
           `INSERT INTO wine_records (
@@ -207,14 +209,23 @@ describe("a reader's numbers", () => {
       (await stats(ownerToken, "/api/v1/me/stats")).body,
     ).data;
     expect(placed.wines.byCountry).toEqual([
-      { count: 5, key: "ES" },
+      { count: 7, key: "ES" },
       { count: 1, key: "unknown" },
     ]);
-    expect(placed.wines.countriesInferred).toBe(2);
+    expect(placed.wines.countriesInferred).toBe(4);
+    // One region, however it was typed: "DO Empordà", "Emporda" and "Empordà"
+    // are counted together, under the fuller spelling; a registered name
+    // under the register's own ("D. O. Tierra de Castilla" is Castilla).
+    expect(placed.wines.byRegion).toContainEqual({ count: 3, key: "Empordà" });
+    expect(placed.wines.byRegion).toContainEqual({ count: 1, key: "Castilla" });
+    const emporda = WineStatsResponseSchema.parse(
+      (await stats(ownerToken, `/api/v1/me/stats?region=${encodeURIComponent("Empordà")}`)).body,
+    ).data;
+    expect(emporda.wines.total).toBe(3);
     const spain = WineStatsResponseSchema.parse(
       (await stats(ownerToken, "/api/v1/me/stats?country=ES")).body,
     ).data;
-    expect(spain.wines.total).toBe(5);
+    expect(spain.wines.total).toBe(7);
 
     // what it can be narrowed to stays whole.
     const tempranillo = WineStatsResponseSchema.parse(
@@ -227,7 +238,7 @@ describe("a reader's numbers", () => {
     expect(tempranillo.facets).toEqual({
       countries: ["ES"],
       grapes: ["Tempranillo"],
-      regions: ["D. O. Tierra de Castilla", "DO Empordà", "La Mancga", "Rioja", "Rías Baixas"],
+      regions: ["Castilla", "Empordà", "La Mancga", "Rioja", "Rías Baixas"],
       types: ["red", "white"],
     });
     const whites = WineStatsResponseSchema.parse(

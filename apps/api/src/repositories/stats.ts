@@ -2,9 +2,7 @@ import type { CurrencyCode, ScoreBand, WineStats, WineStatsQuery } from "@vadevi
 import { supportedCurrencies } from "@vadevi/contracts";
 
 import type { FirebasePrincipal } from "../types";
-import { resolveAppellationCountries } from "./appellation-terms";
-import { resolveCountryCodes } from "./country-terms";
-import { normalizeWineText } from "./wine-memory";
+import { readPlaces } from "./region-names";
 
 /**
  * A reader's numbers, counted from their records.
@@ -22,9 +20,11 @@ type Filter = { binds: Bind[]; sql: string };
 type Scope = Readonly<{
   /**
    * The country of each wine recorded without one whose region says it, as a
-   * JSON object of wine id → ISO code (see `inferCountries`).
+   * JSON object of wine id → ISO code (see `placesIn`).
    */
   inferredCountries: string;
+  /** Each wine's region as one name, as a JSON object of wine id → name. */
+  canonicalRegions: string;
   /** The rows counted are the reader's own (personal), or everyone's (space). */
   ownerId: string | null;
   spaceIds: readonly string[];
@@ -38,67 +38,50 @@ function countryOf(alias: string, scope: Scope): Filter {
   };
 }
 
-/** "DO Empordà", "Vino de la Tierra de Castilla": the name without its label. */
-const designationPrefix =
-  /^(denominacion de origen calificada|denominacion de origen|denominacio d origen qualificada|denominacio d origen|vino de la tierra de|vino de la tierra|vi de la terra de|tierra de|d o ca|d o q|d o c|d o|doca|doq|docg|doc|dop|do|aoc|aop|igp|igt|pdo|pgi)\s+/;
+/** A wine's region as one name, however it was typed (see `readPlaces`). */
+function regionOf(alias: string, scope: Scope): Filter {
+  return {
+    binds: [scope.canonicalRegions],
+    sql: `json_extract(?, '$."' || ${alias}.id || '"')`,
+  };
+}
 
 /**
- * The country of every wine in these Spaces recorded without one, where its
- * region says which: a country named in it ("Rivergaro Italia"), one of the
- * appellations Vicenç already places ("Penedès", "Parras"), or a name in the
- * EU register the library holds ("Conca de Barberà"). Only a region that
- * points to one country counts; "La Mancga" points nowhere and stays unknown.
- * Nothing is written: the record keeps what was recorded.
+ * Every wine in these Spaces read as a place: its region as one name, and the
+ * country its region points to where none was recorded — as JSON objects of
+ * wine id → value, for the counts to read.
  */
-async function inferCountries(database: D1Database, spaceIds: readonly string[]): Promise<string> {
+async function placesIn(
+  database: D1Database,
+  spaceIds: readonly string[],
+): Promise<Pick<Scope, "canonicalRegions" | "inferredCountries">> {
   const wines = await database
     .prepare(
-      `SELECT id, region FROM wine_records
+      `SELECT id, region, country_code FROM wine_records
       WHERE space_id IN (SELECT value FROM json_each(?)) AND deleted_at IS NULL
-        AND country_code IS NULL AND region IS NOT NULL AND trim(region) <> ''`,
+        AND (country_code IS NULL OR (region IS NOT NULL AND trim(region) <> ''))`,
     )
     .bind(JSON.stringify(spaceIds))
-    .all<{ id: string; region: string }>();
-  const inferred: Record<string, string> = {};
-  const unresolved: { id: string; names: string[] }[] = [];
+    .all<{ country_code: string | null; id: string; region: string | null }>();
+  const readings = await readPlaces(
+    database,
+    wines.results.map((wine) => ({
+      countryCode: wine.country_code,
+      id: wine.id,
+      region: wine.region,
+    })),
+  );
+  const countries: Record<string, string> = {};
+  const regions: Record<string, string> = {};
   for (const wine of wines.results) {
-    const codes = new Set([
-      ...resolveCountryCodes(wine.region),
-      ...resolveAppellationCountries(wine.region),
-    ]);
-    if (codes.size === 1) {
-      inferred[wine.id] = [...codes][0]!;
-    } else if (codes.size === 0) {
-      // Each label off in turn: "D. O. Tierra de Castilla" is Castilla.
-      const names = [normalizeWineText(wine.region)];
-      for (let bare = names[0]!.replace(designationPrefix, ""); bare !== names.at(-1);) {
-        names.push(bare);
-        bare = bare.replace(designationPrefix, "");
-      }
-      unresolved.push({ id: wine.id, names });
-    }
+    const reading = readings.get(wine.id);
+    if (wine.country_code === null && reading?.country) countries[wine.id] = reading.country;
+    if (reading?.region) regions[wine.id] = reading.region;
   }
-  if (unresolved.length > 0) {
-    const registered = await database
-      .prepare(
-        `SELECT name.normalized_name AS name, COUNT(DISTINCT region.country_code) AS countries,
-          MIN(region.country_code) AS code
-        FROM kb_names name JOIN kb_regions region ON region.id = name.entity_id
-        WHERE name.entity_type = 'region'
-          AND name.normalized_name IN (SELECT value FROM json_each(?))
-        GROUP BY name.normalized_name`,
-      )
-      .bind(JSON.stringify([...new Set(unresolved.flatMap((wine) => wine.names))]))
-      .all<{ code: string; countries: number; name: string }>();
-    const countryByName = new Map(
-      registered.results.filter((row) => row.countries === 1).map((row) => [row.name, row.code]),
-    );
-    for (const wine of unresolved) {
-      const code = wine.names.map((name) => countryByName.get(name)).find(Boolean);
-      if (code !== undefined) inferred[wine.id] = code;
-    }
-  }
-  return JSON.stringify(inferred);
+  return {
+    canonicalRegions: JSON.stringify(regions),
+    inferredCountries: JSON.stringify(countries),
+  };
 }
 
 function spaceFilter(alias: string, scope: Scope): Filter {
@@ -139,9 +122,11 @@ function wineMatch(column: string, query: WineStatsQuery, scope: Scope): Filter 
     conditions.push({ binds: [...country.binds, query.country], sql: `${country.sql} = ?` });
   }
   if (query.region !== undefined) {
+    // The region as one name; or as typed, for an address saved before.
+    const region = regionOf("narrowed", scope);
     conditions.push({
-      binds: [query.region],
-      sql: "lower(trim(narrowed.region)) = lower(trim(?))",
+      binds: [...region.binds, query.region, query.region],
+      sql: `(${region.sql} = ? OR lower(trim(narrowed.region)) = lower(trim(?)))`,
     });
   }
   if (query.grape !== undefined) {
@@ -262,6 +247,7 @@ async function computeStats(
   const wines = winesIn(scope, query);
   const everyWine = winesIn(scope, unnarrowed(query));
   const country = countryOf("wine", scope);
+  const region = regionOf("wine", scope);
   const wishlistMatch = wineMatch("item.wine_id", query, scope);
   const statement = (sql: string, binds: Bind[]) => database.prepare(sql).bind(...binds);
 
@@ -342,10 +328,10 @@ async function computeStats(
       [...country.binds, ...wines.binds],
     ),
     statement(
-      `SELECT min(wine.region) AS key, COUNT(*) AS count FROM wine_records wine
-      WHERE ${wines.sql} AND wine.region IS NOT NULL AND trim(wine.region) <> ''
-      GROUP BY lower(trim(wine.region)) ORDER BY count DESC, key LIMIT 10`,
-      wines.binds,
+      `SELECT ${region.sql} AS key, COUNT(*) AS count FROM wine_records wine
+      WHERE ${wines.sql} AND ${region.sql} IS NOT NULL
+      GROUP BY key ORDER BY count DESC, key LIMIT 10`,
+      [...region.binds, ...wines.binds, ...region.binds],
     ),
     statement(
       `SELECT min(grape.name_snapshot) AS key, COUNT(DISTINCT grape.wine_id) AS count
@@ -418,10 +404,9 @@ async function computeStats(
       [...country.binds, ...everyWine.binds, ...country.binds],
     ),
     statement(
-      `SELECT min(trim(wine.region)) AS value FROM wine_records wine
-      WHERE ${everyWine.sql} AND wine.region IS NOT NULL AND trim(wine.region) <> ''
-      GROUP BY lower(trim(wine.region)) ORDER BY value LIMIT 300`,
-      everyWine.binds,
+      `SELECT DISTINCT ${region.sql} AS value FROM wine_records wine
+      WHERE ${everyWine.sql} AND ${region.sql} IS NOT NULL ORDER BY value LIMIT 300`,
+      [...region.binds, ...everyWine.binds, ...region.binds],
     ),
     statement(
       `SELECT min(trim(grape.name_snapshot)) AS value
@@ -620,7 +605,7 @@ export async function getPersonalStats(
   return computeStats(
     database,
     {
-      inferredCountries: await inferCountries(database, spaceIds),
+      ...(await placesIn(database, spaceIds)),
       ownerId: first.user_id,
       spaceIds,
     },
@@ -648,7 +633,7 @@ export async function getSpaceStats(
     .first<{ ok: number }>();
   if (member === null) return null;
   const scope = {
-    inferredCountries: await inferCountries(database, [spaceId]),
+    ...(await placesIn(database, [spaceId])),
     ownerId: null,
     spaceIds: [spaceId],
   };

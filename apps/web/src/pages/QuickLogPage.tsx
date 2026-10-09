@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 
 import { DecimalInput } from "../components/DecimalInput";
 import { ModalDialog } from "../components/ModalDialog";
+import { RegionInput } from "../components/RegionInput";
 import { wineOptionLabel } from "../components/wine-label";
 import { Link } from "react-router";
 
@@ -433,10 +434,11 @@ export function QuickLogPage() {
               </>
             )}
             <label htmlFor="region">{t("quickLog.region")}</label>
-            <input
+            <RegionInput
+              country={draft.winePayload.countryCode ?? null}
               id="region"
               maxLength={160}
-              onChange={(event) => updateWine("region", event.target.value || undefined)}
+              onChange={(region) => updateWine("region", region || undefined)}
               value={draft.winePayload.region ?? ""}
             />
             <label htmlFor="quicklog-alcohol">{t("wineDetails.alcohol")}</label>

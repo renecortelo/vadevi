@@ -11,6 +11,7 @@ import {
   scanImageFile,
   stopStream,
 } from "../media/barcode";
+import { RegionInput } from "../components/RegionInput";
 import { countryOptionsFor } from "../components/country-options";
 import { confirmIdentification, identifyWine } from "../services/api";
 import { useSession } from "../session/SessionContext";
@@ -371,9 +372,10 @@ export function IdentifyPage() {
           {selected === null ? null : <FieldProvenance candidate={selected} name="vintageYear" />}
 
           <label htmlFor="wine-region">{t("quickLog.region")}</label>
-          <input
+          <RegionInput
+            country={wine.countryCode.length === 0 ? null : wine.countryCode}
             id="wine-region"
-            onChange={(event) => setWine({ ...wine, region: event.target.value })}
+            onChange={(region) => setWine({ ...wine, region })}
             value={wine.region}
           />
           {selected === null ? null : <FieldProvenance candidate={selected} name="region" />}

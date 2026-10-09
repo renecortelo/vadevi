@@ -17,6 +17,7 @@ import { ulid } from "ulid";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { jsonList } from "../services/sql-list";
+import { readPlaces } from "./region-names";
 
 type IdempotentResult<T> =
   | { kind: "conflict" }
@@ -1344,12 +1345,19 @@ export async function regionPoints(
     .first<{ 1: number }>();
   if (memberCheck === null) return null;
 
-  // Group the caller's wines by their normalized region.
+  // Group the caller's wines by region, read as one name however it was
+  // typed: "DO Empordà" and "Emporda" are one point on the map, not two.
+  const places = await readPlaces(
+    database,
+    rows.results.map((row) => ({ countryCode: null, id: row.id, region: row.region })),
+  );
   const byRegion = new Map<string, { display: string; wines: { id: string; name: string }[] }>();
   for (const row of rows.results) {
-    const entry = byRegion.get(row.normalized_region) ?? { display: row.region, wines: [] };
+    const display = places.get(row.id)?.region ?? row.region;
+    const key = normalizeWineText(display);
+    const entry = byRegion.get(key) ?? { display, wines: [] };
     entry.wines.push({ id: row.id, name: `${row.producer_name} · ${row.display_name}` });
-    byRegion.set(row.normalized_region, entry);
+    byRegion.set(key, entry);
   }
   if (byRegion.size === 0) return [];
 
