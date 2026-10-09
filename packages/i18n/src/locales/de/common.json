@@ -656,7 +656,8 @@
     "historyToggle_other": "{{count}} Verkostungen",
     "historyLoading": "Verkostungen werden geladen…",
     "firstTasting": "Diesen Wein verkosten",
-    "anotherTasting": "Weitere Verkostung erfassen"
+    "anotherTasting": "Weitere Verkostung erfassen",
+    "noCountry": "Kein Land angegeben"
   },
   "assistant": {
     "eyebrow": "Dein Weinbegleiter mit begrenztem Zugriff",
@@ -1318,7 +1319,8 @@
     "grapeName": "Rebsorte",
     "grapePercentage": "Anteil",
     "grapeRemove": "Rebsorte entfernen",
-    "grapeAdd": "Rebsorte hinzufügen"
+    "grapeAdd": "Rebsorte hinzufügen",
+    "countryNone": "Nicht angegeben (aus der Region)"
   },
   "tastingRead": {
     "eyebrow": "Gespeicherte Verkostung",

@@ -656,7 +656,8 @@
     "historyToggle_other": "{{count}} dégustations",
     "historyLoading": "Chargement des dégustations…",
     "firstTasting": "Déguster ce vin",
-    "anotherTasting": "Enregistrer une autre dégustation"
+    "anotherTasting": "Enregistrer une autre dégustation",
+    "noCountry": "Pays non indiqué"
   },
   "assistant": {
     "eyebrow": "Votre compagnon vin au périmètre maîtrisé",
@@ -1318,7 +1319,8 @@
     "grapeName": "Cépage",
     "grapePercentage": "Pourcentage",
     "grapeRemove": "Retirer le cépage",
-    "grapeAdd": "Ajouter un cépage"
+    "grapeAdd": "Ajouter un cépage",
+    "countryNone": "Non indiqué (déduit de la région)"
   },
   "tastingRead": {
     "eyebrow": "Dégustation enregistrée",

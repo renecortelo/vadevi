@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 import { Link, useLocation, useParams } from "react-router";
 
 import { MapLink } from "../components/MapLink";
+import { EditWineDialog } from "../components/EditWineDialog";
+import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
 import { trailFrom } from "../library/trail";
 import { TastingHistory } from "../components/TastingHistory";
@@ -227,6 +229,9 @@ export function WineEvidencePage() {
     bootstrap.data.spaces.find((space) => space.id === spaceId)?.type !== "personal";
   const [response, setResponse] = useState<WineFactsResponse | null>(null);
   const [wine, setWine] = useState<WineSummary | null>(null);
+  // Corrected here, as from the list: the dialog, and a reload when saved.
+  const [editingWine, setEditingWine] = useState(false);
+  const [wineReload, setWineReload] = useState(0);
   const [loading, setLoading] = useState(true);
   // A catalogue key, translated where it is shown.
   const [error, setError] = useState<string | null>(null);
@@ -294,7 +299,7 @@ export function WineEvidencePage() {
       .then(setWine)
       .catch(() => setWine(null));
     return () => controller.abort();
-  }, [spaceId, user, wineId]);
+  }, [spaceId, user, wineId, wineReload]);
 
   // The wine's region, when the atlas has it as a registered name: a link is
   // shown only for a name that resolves, never one that leads nowhere.
@@ -444,6 +449,13 @@ export function WineEvidencePage() {
 
   return (
     <section className="evidence-page">
+      {wine === null || !editingWine ? null : (
+        <EditWineDialog
+          onClose={() => setEditingWine(false)}
+          onSaved={() => setWineReload((current) => current + 1)}
+          wine={wine}
+        />
+      )}
       <header className="page-heading evidence-heading">
         {/* The bottle itself, beside its name. The card showed it and this
             screen did not, so opening a wine lost the one thing that made it
@@ -472,6 +484,30 @@ export function WineEvidencePage() {
               ? t("evidence.body")
               : t("evidence.wineBody", { producer: wine.producerName })}
           </p>
+          {wine === null ? null : (
+            <p className="evidence-heading__place">
+              {[
+                wine.vintageYear === null ? null : String(wine.vintageYear),
+                wine.region,
+                wine.countryCode === null
+                  ? t("evidence.noCountry")
+                  : `${flagOf(wine.countryCode)} ${
+                      new Intl.DisplayNames([i18n.language], { type: "region" }).of(
+                        wine.countryCode,
+                      ) ?? wine.countryCode
+                    }`,
+              ]
+                .filter(Boolean)
+                .join(" · ")}{" "}
+              <button
+                className="action-link action-link--secondary"
+                onClick={() => setEditingWine(true)}
+                type="button"
+              >
+                {t("memory.editAction")}
+              </button>
+            </p>
+          )}
           {/* Its grapes, each a way into the wine library's card for it. */}
           {wine === null || wine.grapes.length === 0 ? null : (
             <p className="evidence-heading__grapes">

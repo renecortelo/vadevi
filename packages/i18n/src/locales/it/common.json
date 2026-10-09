@@ -656,7 +656,8 @@
     "historyToggle_other": "{{count}} degustazioni",
     "historyLoading": "Caricamento degustazioni…",
     "firstTasting": "Degusta questo vino",
-    "anotherTasting": "Registra un'altra degustazione"
+    "anotherTasting": "Registra un'altra degustazione",
+    "noCountry": "Paese non indicato"
   },
   "assistant": {
     "eyebrow": "Il tuo compagno del vino con accesso limitato",
@@ -1318,7 +1319,8 @@
     "grapeName": "Vitigno",
     "grapePercentage": "Percentuale",
     "grapeRemove": "Rimuovi vitigno",
-    "grapeAdd": "Aggiungi un vitigno"
+    "grapeAdd": "Aggiungi un vitigno",
+    "countryNone": "Non indicato (si deduce dalla regione)"
   },
   "tastingRead": {
     "eyebrow": "Degustazione salvata",

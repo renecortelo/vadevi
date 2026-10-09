@@ -656,7 +656,8 @@
     "historyToggle_other": "{{count}} provas",
     "historyLoading": "A carregar provas…",
     "firstTasting": "Provar este vinho",
-    "anotherTasting": "Registar outra prova"
+    "anotherTasting": "Registar outra prova",
+    "noCountry": "País não indicado"
   },
   "assistant": {
     "eyebrow": "O seu companheiro de vinhos com acesso limitado",
@@ -1318,7 +1319,8 @@
     "grapeName": "Casta",
     "grapePercentage": "Percentagem",
     "grapeRemove": "Remover casta",
-    "grapeAdd": "Adicionar casta"
+    "grapeAdd": "Adicionar casta",
+    "countryNone": "Não indicado (deduz-se da região)"
   },
   "tastingRead": {
     "eyebrow": "Prova guardada",

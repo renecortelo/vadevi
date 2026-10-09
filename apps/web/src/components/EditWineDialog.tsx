@@ -10,7 +10,9 @@ import { createIdempotencyKey } from "../security/idempotency";
 import { reserveMedia, uploadMedia } from "../services/api";
 import { updateWine } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
+import { countryOptionsFor } from "./country-options";
 import { ModalDialog } from "./ModalDialog";
+import { RegionInput } from "./RegionInput";
 
 /**
  * Correct a wine after it exists.
@@ -31,7 +33,7 @@ export function EditWineDialog({
   onSaved: () => Promise<void> | void;
   wine: WineSummary;
 }) {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const [producerName, setProducerName] = useState(wine.producerName);
@@ -40,6 +42,7 @@ export function EditWineDialog({
     wine.vintageYear === null ? "" : String(wine.vintageYear),
   );
   const [region, setRegion] = useState(wine.region ?? "");
+  const [countryCode, setCountryCode] = useState(wine.countryCode ?? "");
   const [wineType, setWineType] = useState<WineType | "">(wine.wineType ?? "");
   const [alcoholAbv, setAlcoholAbv] = useState(
     wine.alcoholAbv === null ? "" : String(wine.alcoholAbv),
@@ -156,6 +159,13 @@ export function EditWineDialog({
       grapes: grapePayload,
       producerName: producerName.trim(),
       region: region.trim().length === 0 ? null : region.trim(),
+      // Left empty, the region's country is taken where it names one; a
+      // country that was there and is cleared is cleared.
+      ...(countryCode !== ""
+        ? { countryCode }
+        : wine.countryCode === null
+          ? {}
+          : { countryCode: null }),
       version: wine.version,
       vintageYear: vintageYear.trim().length === 0 ? null : Number(vintageYear),
       wineType: wineType === "" ? null : wineType,
@@ -196,12 +206,27 @@ export function EditWineDialog({
           value={vintageYear}
         />
         <label htmlFor="edit-region">{t("quickLog.region")}</label>
-        <input
+        <RegionInput
+          country={countryCode === "" ? null : countryCode}
           id="edit-region"
           maxLength={160}
-          onChange={(event) => setRegion(event.target.value)}
+          onChange={setRegion}
+          onCountry={setCountryCode}
           value={region}
         />
+        <label htmlFor="edit-country">{t("memory.countryFilter")}</label>
+        <select
+          id="edit-country"
+          onChange={(event) => setCountryCode(event.target.value)}
+          value={countryCode}
+        >
+          <option value="">{t("wineDetails.countryNone")}</option>
+          {countryOptionsFor(i18n.language, countryCode).map((option) => (
+            <option key={option.code} value={option.code}>
+              {option.name}
+            </option>
+          ))}
+        </select>
         <label htmlFor="edit-type">{t("quickLog.type")}</label>
         <select
           id="edit-type"

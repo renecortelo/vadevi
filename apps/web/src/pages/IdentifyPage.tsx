@@ -387,7 +387,7 @@ export function IdentifyPage() {
             onChange={(event) => setWine({ ...wine, countryCode: event.target.value })}
             value={wine.countryCode}
           >
-            <option value="">{t("memory.countryAny")}</option>
+            <option value="">{t("wineDetails.countryNone")}</option>
             {countryOptionsFor(i18n.language, wine.countryCode).map((option) => (
               <option key={option.code} value={option.code}>
                 {option.name}

@@ -656,7 +656,8 @@
     "historyToggle_other": "{{count}} tasts",
     "historyLoading": "Carregant tasts…",
     "firstTasting": "Tastar aquest vi",
-    "anotherTasting": "Registrar un altre tast"
+    "anotherTasting": "Registrar un altre tast",
+    "noCountry": "País sense indicar"
   },
   "assistant": {
     "eyebrow": "El teu acompanyant de vins amb accés limitat",
@@ -1318,7 +1319,8 @@
     "grapeName": "Varietat",
     "grapePercentage": "Percentatge",
     "grapeRemove": "Treu la varietat",
-    "grapeAdd": "Afegeix una varietat"
+    "grapeAdd": "Afegeix una varietat",
+    "countryNone": "Sense indicar (es dedueix de la regió)"
   },
   "tastingRead": {
     "eyebrow": "Tast desat",

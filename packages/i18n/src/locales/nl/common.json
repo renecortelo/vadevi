@@ -656,7 +656,8 @@
     "historyToggle_other": "{{count}} proeverijen",
     "historyLoading": "Proeverijen laden…",
     "firstTasting": "Deze wijn proeven",
-    "anotherTasting": "Nog een proeverij vastleggen"
+    "anotherTasting": "Nog een proeverij vastleggen",
+    "noCountry": "Geen land opgegeven"
   },
   "assistant": {
     "eyebrow": "Je wijnmetgezel met begrensde toegang",
@@ -1318,7 +1319,8 @@
     "grapeName": "Ras",
     "grapePercentage": "Percentage",
     "grapeRemove": "Ras verwijderen",
-    "grapeAdd": "Ras toevoegen"
+    "grapeAdd": "Ras toevoegen",
+    "countryNone": "Niet opgegeven (volgt uit de regio)"
   },
   "tastingRead": {
     "eyebrow": "Bewaarde proeverij",

@@ -656,7 +656,8 @@
     "historyToggle_other": "{{count}} tastings",
     "historyLoading": "Loading tastings…",
     "firstTasting": "Taste this wine",
-    "anotherTasting": "Record another tasting"
+    "anotherTasting": "Record another tasting",
+    "noCountry": "No country given"
   },
   "assistant": {
     "eyebrow": "Your scoped wine companion",
@@ -1318,7 +1319,8 @@
     "grapeName": "Variety",
     "grapePercentage": "Percentage",
     "grapeRemove": "Remove variety",
-    "grapeAdd": "Add a variety"
+    "grapeAdd": "Add a variety",
+    "countryNone": "Not given (taken from the region)"
   },
   "tastingRead": {
     "eyebrow": "Saved tasting",

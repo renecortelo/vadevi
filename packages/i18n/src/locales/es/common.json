@@ -656,7 +656,8 @@
     "historyToggle_other": "{{count}} catas",
     "historyLoading": "Cargando catas…",
     "firstTasting": "Catar este vino",
-    "anotherTasting": "Registrar otra cata"
+    "anotherTasting": "Registrar otra cata",
+    "noCountry": "País sin indicar"
   },
   "assistant": {
     "eyebrow": "Tu acompañante de vinos con acceso limitado",
@@ -1318,7 +1319,8 @@
     "grapeName": "Variedad",
     "grapePercentage": "Porcentaje",
     "grapeRemove": "Quitar variedad",
-    "grapeAdd": "Añadir variedad"
+    "grapeAdd": "Añadir variedad",
+    "countryNone": "Sin indicar (se deduce de la región)"
   },
   "tastingRead": {
     "eyebrow": "Cata guardada",
