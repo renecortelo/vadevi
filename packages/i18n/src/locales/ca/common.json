@@ -555,7 +555,8 @@
       "noMaterial": "Falta una de les dues parts: investiga el vi, registra'n els raïms o registra un tast i torna-ho a provar.",
       "error": "No s'ha pogut escriure la comparació. Torna-ho a provar.",
       "basisGrapes": "Comparada amb el que és típic dels seus raïms (biblioteca del vi), perquè el productor no n'ha dit res sobre com sap.",
-      "basisMixed": "Comparada amb el que diuen les fonts del vi sobre el seu tast i amb el que és típic dels seus raïms (biblioteca del vi)."
+      "basisMixed": "Comparada amb el que diuen les fonts del vi sobre el seu tast i amb el que és típic dels seus raïms (biblioteca del vi).",
+      "olderVoice": "Escrita abans que les comparacions anomenessin cada persona: el seu «tu» és qui la va demanar. Refés-la perquè anomeni cadascú."
     },
     "sourceType": {
       "producer": "Productor",
@@ -724,7 +725,9 @@
     "identifyTitle": "Identifica una ampolla",
     "identifyBody": "Escaneja un codi o llegeix una etiqueta, i revisa cada camp abans de desar.",
     "libraryTitle": "Biblioteca",
-    "libraryBody": "Raïms, denominacions, estils i mètodes."
+    "libraryBody": "Raïms, denominacions, estils i mètodes.",
+    "statsTitle": "Els meus números",
+    "statsBody": "El que tastes, compres i guardes, comptat."
   },
   "cellar": {
     "eyebrow": "Les teves ampolles físiques",
@@ -1345,5 +1348,65 @@
     "removeConfirm": "Treure {{email}}? No podrà entrar fins que el tornis a afegir.",
     "addTitle": "Afegir un correu",
     "secondFactorError": "Cloudflare Access no ha validat aquest compte. Entra a Access amb el mateix compte de Google i torna."
+  },
+  "stats": {
+    "eyebrow": "Comptat dels teus registres",
+    "title": "Els meus números",
+    "intro": "El que has tastat, comprat i guardat, comptat a partir del que vas registrar; res estimat.",
+    "scopeLabel": "De qui",
+    "scopePersonal": "Només el meu, a tots els Espais",
+    "scopeSpace": "{{name}} — de tothom",
+    "periodLabel": "Període",
+    "period": {
+      "all": "Sempre",
+      "year": "Aquest any",
+      "twelveMonths": "Últims 12 mesos"
+    },
+    "loading": "Comptant…",
+    "error": "No s'han pogut carregar els números. Torna-ho a provar.",
+    "empty": "Encara no hi ha res a comptar: registra un vi, un tast o una compra i apareixerà aquí.",
+    "unknown": "Sense registrar",
+    "tile": {
+      "wines": "Vins",
+      "tastings": "Tasts",
+      "averageScore": "Puntuació mitjana",
+      "atOrAbove90": "Amb 90 o més",
+      "inCellar": "Ampolles al celler",
+      "wishlist": "A la llista de desitjos"
+    },
+    "scoresTitle": "Puntuacions",
+    "band": {
+      "under_80": "Menys de 80",
+      "80_84": "80–84",
+      "85_89": "85–89",
+      "90_94": "90–94",
+      "95_100": "95–100"
+    },
+    "answers": "El compraria: {{buy}} · el tornaria a beure: {{again}} · memorables: {{memorable}}",
+    "pairing": "maridatges valorats amb {{value}} de 5 de mitjana",
+    "topWines": "Millor puntuats",
+    "winesTitle": "Què beus",
+    "byType": "Per tipus",
+    "byCountry": "Per país",
+    "byRegion": "Per regió",
+    "byGrape": "Per raïm",
+    "spendingTitle": "Despesa",
+    "spendingLine": "{{purchases}} compres · {{bottles}} ampolles · {{average}} per ampolla de mitjana",
+    "merchants": "On",
+    "purchases_one": "{{count}} compra",
+    "purchases_other": "{{count}} compres",
+    "bestValue": "Més punts pels teus diners",
+    "bestValueNote": "Entre els vins comprats i puntuats a la mitjana d'aquí o per sobre: el que va costar cada punt.",
+    "cellarTitle": "Celler",
+    "cellar": {
+      "owned": "Esperant",
+      "opened": "Obertes",
+      "finished": "Acabades",
+      "gifted": "Regalades"
+    },
+    "daysToOpen_one": "Una ampolla espera {{count}} dia de mitjana abans d'obrir-se.",
+    "daysToOpen_other": "Una ampolla espera {{count}} dies de mitjana abans d'obrir-se.",
+    "monthsTitle": "Tasts per mes",
+    "askVicenc": "Pregunta-li a Vicenç pels teus números"
   }
 }

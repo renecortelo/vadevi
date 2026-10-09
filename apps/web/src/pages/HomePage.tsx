@@ -4,7 +4,14 @@ import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 
 import { getHealth } from "../services/api";
-import { CellarIcon, LibraryIcon, PriceIcon, ReadLabelIcon, WishlistIcon } from "../brand/NavIcons";
+import {
+  CellarIcon,
+  LibraryIcon,
+  PriceIcon,
+  ReadLabelIcon,
+  StatsIcon,
+  WishlistIcon,
+} from "../brand/NavIcons";
 import { Monogram } from "../brand/Wordmark";
 
 export function HomePage() {
@@ -52,6 +59,7 @@ export function HomePage() {
             { Icon: WishlistIcon, key: "wishlist", to: "/wishlist" },
             { Icon: PriceIcon, key: "shop", to: "/shop" },
             { Icon: LibraryIcon, key: "library", to: "/library" },
+            { Icon: StatsIcon, key: "stats", to: "/stats" },
           ].map((tool) => (
             <Link key={tool.key} to={tool.to}>
               <tool.Icon />

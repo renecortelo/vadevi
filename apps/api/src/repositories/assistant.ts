@@ -11,6 +11,7 @@ import type {
   Source,
   SupportedLocale,
   WineGrapeSummary,
+  WineStats,
   WineSummary,
 } from "@vadevi/contracts";
 import type {
@@ -42,6 +43,7 @@ import {
   regionsMentionedIn,
   topicsMentionedIn,
 } from "./library";
+import { getPersonalStats, getSpaceStats } from "./stats";
 import { jsonList } from "../services/sql-list";
 
 type AllowedSpaceRow = {
@@ -156,6 +158,62 @@ function requestsCollectionOverview(message: string): boolean {
   return /\b(how many|count|total|totals|highest|best|top|ranking|ranked|most|cuantos|cuantas|total|totales|mejor|mejores|puntuad|top|clasificaci|bodega|cava|celler|probado|probados|catado|catados|combien|meilleur|meilleurs|classement|quanti|quante|migliore|migliori|classifica|hoeveel|beste|meeste|wie viele|beste|meisten|rangliste|quantos|melhor|melhores|classificac)\b/i.test(
     normalized,
   );
+}
+
+/**
+ * A question about the reader's numbers — money, statistics, shares, averages
+ * — rather than about a wine: answered from the counts on the numbers page.
+ */
+function requestsStats(message: string): boolean {
+  const normalized = normalizeWineText(message);
+  return /\b(spent|spend|spending|money|stats|statistics|numbers|average|percentage|gastado|gaste|gasto|gastos|dinero|estadisticas|numeros|media|promedio|porcentaje|gastat|despesa|diners|estadistiques|numeros|mitjana|depense|depenses|argent|statistiques|chiffres|moyenne|speso|spesa|soldi|statistiche|numeri|uitgegeven|uitgaven|geld|statistieken|cijfers|gemiddeld|ausgegeben|ausgaben|statistik|statistiken|zahlen|durchschnitt|gastei|gastos|dinheiro|estatisticas|numeros)\b/i.test(
+    normalized,
+  );
+}
+
+/** "This year" in the question, in any of the eight languages. */
+function asksAboutThisYear(message: string): boolean {
+  return /\b(this year|este ano|este año|aquest any|cette annee|quest anno|dit jaar|dieses jahr)\b/i.test(
+    normalizeWineText(message),
+  );
+}
+
+/** The numbers page as one statement the model can count and quote from. */
+function statsStatement(stats: WineStats, whose: string): AssistantLanguageStatement {
+  const money = (minor: number, currency: string) => `${(minor / 100).toFixed(2)} ${currency}`;
+  const list = (rows: { count: number; key: string }[]) =>
+    rows.map((row) => `${row.key} ${row.count}`).join(", ") || "none recorded";
+  const tastings = stats.tastings;
+  const parts = [
+    `${whose}${stats.period.from === null ? "" : ` since ${stats.period.from}`}`,
+    `${stats.wines.total} wines recorded, tasted, bought or kept`,
+    `${tastings.total} tastings, ${tastings.scored} scored, average score ${tastings.averageScore ?? "none"}`,
+    `${tastings.atOrAbove90} scored 90 or more`,
+    `scores: ${tastings.scoreBands.map((band) => `${band.band.replace("_", "–").replace("under–", "under ")} ${band.count}`).join(", ")}`,
+    `would buy again: yes ${tastings.wouldBuy.yes}, no ${tastings.wouldBuy.no}; would drink again: yes ${tastings.wouldDrinkAgain.yes}, no ${tastings.wouldDrinkAgain.no}; memorable ${tastings.memorable}`,
+    `best scored: ${tastings.topWines.map((wine) => `${wine.wineName} (${wine.score})`).join("; ") || "none"}`,
+    `by type: ${list(stats.wines.byType)}`,
+    `by country: ${list(stats.wines.byCountry)}`,
+    `by region: ${list(stats.wines.byRegion)}`,
+    `by grape: ${list(stats.wines.byGrape)}`,
+    ...(stats.spending.length === 0
+      ? ["no purchases recorded"]
+      : stats.spending.map(
+          (row) =>
+            `spent ${money(row.totalMinor, row.currency)} in ${row.purchases} purchases (${row.bottles} bottles${row.averageBottleMinor === null ? "" : `, ${money(row.averageBottleMinor, row.currency)} a bottle on average`}); by year ${row.byYear.map((year) => `${year.year} ${money(year.totalMinor, row.currency)}`).join(", ")}; most at ${row.topMerchants.map((merchant) => `${merchant.name} ${money(merchant.totalMinor, row.currency)}`).join(", ")}`,
+        )),
+    `best value (price for each point, among wines at or above the average score): ${stats.bestValue.map((wine) => `${wine.wineName} ${wine.score} points for ${money(wine.unitAmountMinor, wine.currency)}`).join("; ") || "none"}`,
+    `cellar: ${stats.cellar.owned} bottles waiting, ${stats.cellar.opened} open, ${stats.cellar.finished} finished, ${stats.cellar.gifted} given away${stats.cellar.averageDaysToOpen === null ? "" : `; a bottle waits ${stats.cellar.averageDaysToOpen} days on average before it is opened`}`,
+    `wishlist ${stats.wishlist.active}`,
+    "amounts in different currencies are never added together",
+  ];
+  return {
+    evidenceClass: "observed",
+    id: `stats-${stats.scope}`,
+    sampleSize: tastings.total,
+    sourceIds: [],
+    text: parts.join("; "),
+  };
 }
 
 // Verbs that ask for a pairing, across the eight locales, normalized so accents
@@ -1875,6 +1933,33 @@ export async function runDeterministicAssistantTurn(
       };
     }
   }
+  // A question about the reader's numbers is answered from the same counts
+  // the numbers page shows: their own everywhere, and — in a shared Space —
+  // everyone's there too, each said to be whose it is.
+  const statsStatements: AssistantLanguageStatement[] = [];
+  if (requestsStats(options.request.message)) {
+    const period = asksAboutThisYear(options.request.message)
+      ? { from: `${new Date().getUTCFullYear()}-01-01` }
+      : {};
+    const personal = await getPersonalStats(database, options.principal, period);
+    if (personal !== null) {
+      statsStatements.push(
+        statsStatement(personal, "the reader's own numbers, in all their Spaces"),
+      );
+    }
+    const space = await database
+      .prepare(`SELECT type FROM spaces WHERE id = ? AND deleted_at IS NULL`)
+      .bind(options.spaceId)
+      .first<{ type: string }>();
+    if (space !== null && space.type !== "personal") {
+      const shared = await getSpaceStats(database, options.principal, options.spaceId, period);
+      if (shared !== null) {
+        statsStatements.push(
+          statsStatement(shared, "everyone's numbers in the shared Space the reader is in"),
+        );
+      }
+    }
+  }
   // A note matches by meaning, so "mineral wines" finds a note that says fresh
   // and mineral in any language. It is a fallback for when the term search would
   // MISS a wine — so it runs only when that search found nothing. Letting it ride
@@ -2464,6 +2549,7 @@ export async function runDeterministicAssistantTurn(
   library.grapes.splice(3);
   for (const source of library.sources) citationMap.set(source.id, source);
   const groundStatements = [
+    ...statsStatements,
     ...(collectionStatement === null ? [] : [collectionStatement]),
     ...semanticStatements,
     ...pairingStatements,

@@ -59,6 +59,9 @@ const LibraryGrapePage = lazy(() =>
 const LibraryPage = lazy(() =>
   import("./pages/LibraryPage").then((module) => ({ default: module.LibraryPage })),
 );
+const StatsPage = lazy(() =>
+  import("./pages/StatsPage").then((module) => ({ default: module.StatsPage })),
+);
 const LibraryTopicPage = lazy(() =>
   import("./pages/LibraryTopicPage").then((module) => ({ default: module.LibraryTopicPage })),
 );
@@ -246,6 +249,14 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="library"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <StatsPage />
+              </DeferredPage>
+            }
+            path="stats"
           />
           <Route
             element={

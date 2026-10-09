@@ -54,6 +54,29 @@ function register(locale: TastingComparisonRequest["locale"]): string {
   return forms[locale] ?? forms.en!;
 }
 
+/**
+ * Words that address the reader, by language: a paragraph a whole group reads
+ * may contain none of them. Only words that cannot be read otherwise there —
+ * German "Sie" is also "she" and "they", Italian "Lei" is also "she", so
+ * neither is listed.
+ */
+const secondPerson: Record<ResearchLocale, RegExp> = {
+  ca: /(?<!\p{L})(tu|teu|teva|teus|teves|et|vosaltres|vostre|vostra|vostres)(?!\p{L})/iu,
+  de: /(?<!\p{L})(du|dich|dir|dein|deine|deinen|deinem|deiner|deines|euch|euer|eure)(?!\p{L})|(?<!\p{L})Ihnen(?!\p{L})/u,
+  en: /(?<!\p{L})(you|your|yours|yourself)(?!\p{L})/iu,
+  es: /(?<!\p{L})(tú|tu|tus|te|ti|contigo|usted|ustedes|vosotros|vosotras|vuestro|vuestra|vuestros|vuestras)(?!\p{L})/iu,
+  fr: /(?<!\p{L})(tu|toi|ton|ta|tes|vous|votre|vos)(?!\p{L})/iu,
+  it: /(?<!\p{L})(tu|te|ti|tuo|tua|tuoi|tue|voi|vostro|vostra|vostri|vostre)(?!\p{L})/iu,
+  nl: /(?<!\p{L})(je|jij|jou|jouw|u|uw|jullie)(?!\p{L})/iu,
+  "pt-PT":
+    /(?<!\p{L})(tu|te|ti|teu|tua|teus|tuas|contigo|você|vocês|vós|vosso|vossa|vossos|vossas)(?!\p{L})/iu,
+};
+
+/** Whether a paragraph for a group speaks to someone in it. */
+export function addressesTheReader(text: string, locale: ResearchLocale): boolean {
+  return secondPerson[locale].test(text);
+}
+
 export class CloudflareNarrativeAdapter implements NarrativePort {
   constructor(
     private readonly ai: WorkersAiRunner,
@@ -83,6 +106,35 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
     // either missing a paragraph would have to invent one side.
     if (tasting.length === 0 || (sources.length === 0 && grapes.length === 0)) return null;
     const language = languageNames[input.locale];
+    // Read by the whole group, the paragraph names everyone and speaks to no
+    // one; read by its author alone, it speaks to them.
+    const perspective =
+      input.audience === "group"
+        ? `This paragraph is read by every member of the group, so write it ` +
+          `entirely in the third person: name each taster every time ("Maria ` +
+          `found…", "René rated it…"), and never address the reader or use ` +
+          `"you", "your", "I", "we" or their equivalents in ${language}.`
+        : `Speak to the reader as "you" only about a line marked as the ` +
+          `reader's own; describe anyone else's tasting in the third person, by ` +
+          `name ("Maria found…"). If no line is the reader's own, never write ` +
+          `that the reader found, noted or tasted anything. ${register(input.locale)}`;
+    // A group's paragraph that slipped into "you" is asked for once more, and
+    // not kept if it does again.
+    for (let attempt = 0; attempt < (input.audience === "group" ? 2 : 1); attempt += 1) {
+      const text = await this.writeComparison(input, perspective, { grapes, sources, tasting });
+      if (text === null) return null;
+      if (input.audience !== "group" || !addressesTheReader(text, input.locale)) return text;
+    }
+    return null;
+  }
+
+  private async writeComparison(
+    input: TastingComparisonRequest,
+    perspective: string,
+    lists: { grapes: string[]; sources: string[]; tasting: string[] },
+  ): Promise<string | null> {
+    const { grapes, sources, tasting } = lists;
+    const language = languageNames[input.locale];
     try {
       const output = await this.ai.run(this.model, {
         max_tokens: 500,
@@ -106,11 +158,7 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
               `producer describes…", "Garnacha typically shows…" — never present a ` +
               `grape's typical profile as the producer's words or as this bottle's; ` +
               `a departure from the typical profile is worth noting, not a fault. ` +
-              `Each tasting line says whose tasting it is. Speak to the reader as ` +
-              `"you" only about a line marked as the reader's own; describe anyone ` +
-              `else's tasting in the third person, by name ("Maria found…"). If no ` +
-              `line is the reader's own, never write that the reader found, noted or ` +
-              `tasted anything. ${register(input.locale)} ` +
+              `Each tasting line says whose tasting it is. ${perspective} ` +
               `Use ONLY these lists — ` +
               `never add a flavour, a score, a grape or any detail none of them ` +
               `states. If they barely overlap, say so. Finish every sentence. Reply ` +

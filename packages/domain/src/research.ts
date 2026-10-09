@@ -221,6 +221,13 @@ export type NarrativeRequest = Readonly<{
  */
 export type TastingComparisonRequest = Readonly<{
   /**
+   * Who will read the paragraph. It is stored, so in a Space with more than
+   * one member it is read by people other than the one who asked for it: a
+   * "you" written for one of them reads to everyone else as themselves. For
+   * "group" the paragraph names every taster and addresses no one.
+   */
+  audience: "group" | "reader";
+  /**
    * What the wine library says is typical of the wine's grapes: general to
    * each variety, to be attributed to the grape, never to this bottle.
    */

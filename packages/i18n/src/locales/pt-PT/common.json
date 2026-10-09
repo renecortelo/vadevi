@@ -555,7 +555,8 @@
       "noMaterial": "Falta uma das partes: pesquise o vinho, registe as castas ou uma prova e tente novamente.",
       "error": "Não foi possível escrever a comparação. Tente novamente.",
       "basisGrapes": "Comparada com o que é típico das suas castas (biblioteca do vinho), porque o produtor nada diz sobre o sabor.",
-      "basisMixed": "Comparada com o que as fontes do vinho dizem sobre a prova e com o que é típico das suas castas (biblioteca do vinho)."
+      "basisMixed": "Comparada com o que as fontes do vinho dizem sobre a prova e com o que é típico das suas castas (biblioteca do vinho).",
+      "olderVoice": "Escrita antes de as comparações nomearem cada pessoa: o seu «tu» é quem a pediu. Refá-la para nomear cada um."
     },
     "sourceType": {
       "producer": "Produtor",
@@ -724,7 +725,9 @@
     "identifyTitle": "Identificar uma garrafa",
     "identifyBody": "Digitalize um código ou leia um rótulo e verifique cada campo antes de guardar.",
     "libraryTitle": "Biblioteca",
-    "libraryBody": "Castas, denominações, estilos e métodos."
+    "libraryBody": "Castas, denominações, estilos e métodos.",
+    "statsTitle": "Os meus números",
+    "statsBody": "O que provas, compras e guardas, contado."
   },
   "cellar": {
     "eyebrow": "As suas garrafas físicas",
@@ -1345,5 +1348,65 @@
     "removeConfirm": "Remover {{email}}? Não poderá entrar até voltar a ser adicionado.",
     "addTitle": "Adicionar um e-mail",
     "secondFactorError": "O Cloudflare Access não validou esta conta. Entre no Access com a mesma conta Google e volte."
+  },
+  "stats": {
+    "eyebrow": "Contado a partir dos teus registos",
+    "title": "Os meus números",
+    "intro": "O que provaste, compraste e guardaste, contado a partir do que registaste; nada estimado.",
+    "scopeLabel": "De quem",
+    "scopePersonal": "Só os meus, em todos os Espaços",
+    "scopeSpace": "{{name}} — de todos",
+    "periodLabel": "Período",
+    "period": {
+      "all": "Sempre",
+      "year": "Este ano",
+      "twelveMonths": "Últimos 12 meses"
+    },
+    "loading": "A contar…",
+    "error": "Não foi possível carregar os números. Tenta de novo.",
+    "empty": "Ainda não há nada para contar: regista um vinho, uma prova ou uma compra e aparecerá aqui.",
+    "unknown": "Não registado",
+    "tile": {
+      "wines": "Vinhos",
+      "tastings": "Provas",
+      "averageScore": "Pontuação média",
+      "atOrAbove90": "Com 90 ou mais",
+      "inCellar": "Garrafas na garrafeira",
+      "wishlist": "Na lista de desejos"
+    },
+    "scoresTitle": "Pontuações",
+    "band": {
+      "under_80": "Menos de 80",
+      "80_84": "80–84",
+      "85_89": "85–89",
+      "90_94": "90–94",
+      "95_100": "95–100"
+    },
+    "answers": "Comprava: {{buy}} · voltava a beber: {{again}} · memoráveis: {{memorable}}",
+    "pairing": "harmonizações avaliadas com {{value}} em 5 em média",
+    "topWines": "Mais bem pontuados",
+    "winesTitle": "O que bebes",
+    "byType": "Por tipo",
+    "byCountry": "Por país",
+    "byRegion": "Por região",
+    "byGrape": "Por casta",
+    "spendingTitle": "Gastos",
+    "spendingLine": "{{purchases}} compras · {{bottles}} garrafas · {{average}} por garrafa em média",
+    "merchants": "Onde",
+    "purchases_one": "{{count}} compra",
+    "purchases_other": "{{count}} compras",
+    "bestValue": "Mais pontos pelo teu dinheiro",
+    "bestValueNote": "Entre os vinhos comprados e pontuados na média daqui ou acima: quanto custou cada ponto.",
+    "cellarTitle": "Garrafeira",
+    "cellar": {
+      "owned": "À espera",
+      "opened": "Abertas",
+      "finished": "Terminadas",
+      "gifted": "Oferecidas"
+    },
+    "daysToOpen_one": "Uma garrafa espera em média {{count}} dia antes de ser aberta.",
+    "daysToOpen_other": "Uma garrafa espera em média {{count}} dias antes de ser aberta.",
+    "monthsTitle": "Provas por mês",
+    "askVicenc": "Pergunta ao Vicenç pelos teus números"
   }
 }

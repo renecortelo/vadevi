@@ -18,6 +18,7 @@ import { HomePage } from "./pages/HomePage";
 import { IdentifyPage } from "./pages/IdentifyPage";
 import { QuickLogPage } from "./pages/QuickLogPage";
 import { SessionsPage } from "./pages/SessionsPage";
+import { StatsPage } from "./pages/StatsPage";
 import { WineMemoryPage } from "./pages/WineMemoryPage";
 import { SessionContext, type SessionContextValue } from "./session/SessionContext";
 
@@ -120,6 +121,7 @@ const mainFlow = [
   { node: <WineMemoryPage />, path: "memory", route: "/memory", titleKey: "memory.title" },
   { node: <SessionsPage />, path: "sessions", route: "/sessions", titleKey: "sessions.title" },
   { node: <CellarPage />, path: "cellar", route: "/cellar", titleKey: "cellar.title" },
+  { node: <StatsPage />, path: "stats", route: "/stats", titleKey: "stats.title" },
   {
     node: <DataRightsPage />,
     path: "settings/data",

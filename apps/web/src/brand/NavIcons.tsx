@@ -264,3 +264,19 @@ export function LibraryIcon() {
     </Frame>
   );
 }
+
+/**
+ * Numbers: three bars of a chart, a grape sitting on the tallest — what has
+ * been tasted, bought and kept, counted.
+ */
+export function StatsIcon() {
+  return (
+    <Frame>
+      <path d="M4.5 19.5h15" />
+      <path d="M7 19.5v-5.2" />
+      <path d="M11.5 19.5v-8" />
+      <path d="M16 19.5V9.8" />
+      <circle cx="16" cy="6.6" fill="currentColor" r="1.5" stroke="none" />
+    </Frame>
+  );
+}

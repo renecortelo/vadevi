@@ -1087,6 +1087,7 @@ async function comparisonTastingLines(
   principal: FirebasePrincipal,
   spaceId: string,
   wineId: string,
+  shared: boolean,
 ): Promise<string[]> {
   const rows = await database
     .prepare(
@@ -1137,10 +1138,30 @@ async function comparisonTastingLines(
     descriptorsByNote.set(row.tasting_note_id, entry);
   }
 
+  // Two members of one name are told apart, so neither reads the other's
+  // tasting as their own.
+  const nameCounts = new Map<string, number>();
+  for (const row of kept) {
+    const name = row.author_name?.trim() || "a group member";
+    nameCounts.set(name, (nameCounts.get(name) ?? 0) + 1);
+  }
+  const nameSeen = new Map<string, number>();
+  const nameOf = (row: ComparisonNoteRow) => {
+    const name = row.author_name?.trim() || "a group member";
+    if ((nameCounts.get(name) ?? 0) < 2) return name;
+    const index = (nameSeen.get(name) ?? 0) + 1;
+    nameSeen.set(name, index);
+    return `${name} (${index})`;
+  };
+
   const lines: string[] = [];
   for (const row of kept) {
-    const self = row.is_self === 1;
-    const who = self ? "you" : (row.author_name ?? "a group member");
+    // In a shared Space the paragraph is read by everyone, so the one who
+    // asked for it is a taster like the rest, named, and their written
+    // sections stay with them as everyone else's do.
+    const self = row.is_self === 1 && !shared;
+    const named = nameOf(row);
+    const who = self ? "you" : named;
     const descriptors = descriptorsByNote.get(row.id);
     const parts = [
       row.score_100 === null
@@ -1181,7 +1202,9 @@ async function comparisonTastingLines(
       lines.push(
         self
           ? `The reader's own tasting (address the reader as "you"): ${parts.join("; ")}`
-          : `Tasting by ${who}, another member of the group, not the reader (refer to ${who} by name, never as "you"): ${parts.join("; ")}`,
+          : shared
+            ? `Tasting by ${who} (refer to ${who} by name, never as "you"): ${parts.join("; ")}`
+            : `Tasting by ${who}, another member of the group, not the reader (refer to ${who} by name, never as "you"): ${parts.join("; ")}`,
       );
     }
   }
@@ -1300,21 +1323,34 @@ export async function regenerateTastingComparison(
       if (source !== null) sourceIds.add(source.id);
     }
   }
+  // v2: written for whoever reads it — in a shared Space, in the third person.
   const method =
     producerSourced && grapes.length > 0
-      ? "tasting.comparison.mixed.v1"
+      ? "tasting.comparison.mixed.v2"
       : producerSourced
-        ? "tasting.comparison.v1"
-        : "tasting.comparison.grapes.v1";
+        ? "tasting.comparison.v2"
+        : "tasting.comparison.grapes.v2";
+  const space = await database
+    .prepare(
+      `SELECT space.type,
+        (SELECT COUNT(*) FROM space_memberships member
+          WHERE member.space_id = space.id AND member.status = 'active') AS members
+      FROM spaces space WHERE space.id = ?`,
+    )
+    .bind(options.spaceId)
+    .first<{ members: number; type: "couple" | "group" | "personal" }>();
+  const shared = space === null || space.type !== "personal" || space.members > 1;
   const tasting = await comparisonTastingLines(
     database,
     options.principal,
     options.spaceId,
     options.wineId,
+    shared,
   );
   if (tasting.length === 0) return "no_material";
 
   const paragraph = await narrative.compare({
+    audience: shared ? "group" : "reader",
     grapes,
     locale: options.locale,
     sources,

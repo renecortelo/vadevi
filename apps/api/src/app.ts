@@ -30,6 +30,7 @@ import { registerPlaceRoutes } from "./routes/places";
 import { registerProvenanceRoutes } from "./routes/provenance";
 import { registerReleaseRoutes } from "./routes/release";
 import { registerLibraryRoutes } from "./routes/library";
+import { registerStatsRoutes } from "./routes/stats";
 import { registerResearchRoutes } from "./routes/research";
 import { registerSpaceRoutes } from "./routes/spaces";
 import { registerTastingSessionRoutes } from "./routes/tasting-sessions";
@@ -392,6 +393,7 @@ export function createApi() {
   registerProvenanceRoutes(app);
   registerResearchRoutes(app);
   registerLibraryRoutes(app);
+  registerStatsRoutes(app);
 
   app.get("/openapi.json", (context) =>
     context.json(

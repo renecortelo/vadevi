@@ -555,7 +555,8 @@
       "noMaterial": "Er ontbreekt een kant: onderzoek de wijn, leg de druiven of een proefnotitie vast en probeer het opnieuw.",
       "error": "De vergelijking kon niet worden geschreven. Probeer het opnieuw.",
       "basisGrapes": "Vergeleken met wat typisch is voor zijn druiven (wijnbibliotheek), omdat de producent niets over de smaak zegt.",
-      "basisMixed": "Vergeleken met wat de bronnen van de wijn over de smaak zeggen en met wat typisch is voor zijn druiven (wijnbibliotheek)."
+      "basisMixed": "Vergeleken met wat de bronnen van de wijn over de smaak zeggen en met wat typisch is voor zijn druiven (wijnbibliotheek).",
+      "olderVoice": "Geschreven voordat vergelijkingen iedereen bij naam noemden: de „je” is wie erom vroeg. Schrijf hem opnieuw zodat iedereen bij naam staat."
     },
     "sourceType": {
       "producer": "Producent",
@@ -724,7 +725,9 @@
     "identifyTitle": "Een fles identificeren",
     "identifyBody": "Scan een code of lees een etiket en controleer elk veld voor het opslaan.",
     "libraryTitle": "Bibliotheek",
-    "libraryBody": "Druiven, benamingen, stijlen en methoden."
+    "libraryBody": "Druiven, benamingen, stijlen en methoden.",
+    "statsTitle": "Mijn cijfers",
+    "statsBody": "Wat je proeft, koopt en bewaart, geteld."
   },
   "cellar": {
     "eyebrow": "Je fysieke flessen",
@@ -1345,5 +1348,65 @@
     "removeConfirm": "{{email}} verwijderen? Inloggen kan pas weer na opnieuw toevoegen.",
     "addTitle": "E-mail toevoegen",
     "secondFactorError": "Cloudflare Access heeft dit account niet bevestigd. Log in bij Access met hetzelfde Google-account en kom terug."
+  },
+  "stats": {
+    "eyebrow": "Geteld uit je registraties",
+    "title": "Mijn cijfers",
+    "intro": "Wat je hebt geproefd, gekocht en bewaard, geteld uit wat je hebt vastgelegd; niets geschat.",
+    "scopeLabel": "Van wie",
+    "scopePersonal": "Alleen de mijne, in alle Ruimtes",
+    "scopeSpace": "{{name}} — van iedereen",
+    "periodLabel": "Periode",
+    "period": {
+      "all": "Altijd",
+      "year": "Dit jaar",
+      "twelveMonths": "Laatste 12 maanden"
+    },
+    "loading": "Bezig met tellen…",
+    "error": "De cijfers konden niet worden geladen. Probeer het opnieuw.",
+    "empty": "Nog niets om te tellen: leg een wijn, een proeverij of een aankoop vast en die verschijnt hier.",
+    "unknown": "Niet vastgelegd",
+    "tile": {
+      "wines": "Wijnen",
+      "tastings": "Proeverijen",
+      "averageScore": "Gemiddelde score",
+      "atOrAbove90": "Met 90 of meer",
+      "inCellar": "Flessen in de kelder",
+      "wishlist": "Op het verlanglijstje"
+    },
+    "scoresTitle": "Scores",
+    "band": {
+      "under_80": "Onder 80",
+      "80_84": "80–84",
+      "85_89": "85–89",
+      "90_94": "90–94",
+      "95_100": "95–100"
+    },
+    "answers": "Zou kopen: {{buy}} · zou weer drinken: {{again}} · gedenkwaardig: {{memorable}}",
+    "pairing": "combinaties gemiddeld {{value}} van 5",
+    "topWines": "Best gescoord",
+    "winesTitle": "Wat je drinkt",
+    "byType": "Per soort",
+    "byCountry": "Per land",
+    "byRegion": "Per regio",
+    "byGrape": "Per druif",
+    "spendingTitle": "Uitgaven",
+    "spendingLine": "{{purchases}} aankopen · {{bottles}} flessen · gemiddeld {{average}} per fles",
+    "merchants": "Waar",
+    "purchases_one": "{{count}} aankoop",
+    "purchases_other": "{{count}} aankopen",
+    "bestValue": "De meeste punten voor je geld",
+    "bestValueNote": "Van de gekochte wijnen met een score op of boven het gemiddelde hier: wat elk punt kostte.",
+    "cellarTitle": "Kelder",
+    "cellar": {
+      "owned": "Wachtend",
+      "opened": "Open",
+      "finished": "Op",
+      "gifted": "Weggegeven"
+    },
+    "daysToOpen_one": "Een fles wacht gemiddeld {{count}} dag voordat hij opengaat.",
+    "daysToOpen_other": "Een fles wacht gemiddeld {{count}} dagen voordat hij opengaat.",
+    "monthsTitle": "Proeverijen per maand",
+    "askVicenc": "Vraag Vicenç naar je cijfers"
   }
 }

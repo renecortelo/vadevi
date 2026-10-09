@@ -11712,6 +11712,527 @@
           "data"
         ],
         "additionalProperties": false
+      },
+      "WineStatsResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/WineStats"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "WineStats": {
+        "type": "object",
+        "properties": {
+          "bestValue": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "currency": {
+                  "type": "string",
+                  "enum": [
+                    "EUR",
+                    "USD",
+                    "GBP",
+                    "CHF",
+                    "MXN"
+                  ]
+                },
+                "perPointMinor": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "producerName": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "spaceId": {
+                  "type": "string"
+                },
+                "unitAmountMinor": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "wineId": {
+                  "type": "string"
+                },
+                "wineName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "currency",
+                "perPointMinor",
+                "producerName",
+                "score",
+                "spaceId",
+                "unitAmountMinor",
+                "wineId",
+                "wineName"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "cellar": {
+            "type": "object",
+            "properties": {
+              "averageDaysToOpen": {
+                "type": "number",
+                "nullable": true,
+                "minimum": 0
+              },
+              "finished": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "gifted": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "opened": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "owned": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "averageDaysToOpen",
+              "finished",
+              "gifted",
+              "opened",
+              "owned"
+            ],
+            "additionalProperties": false
+          },
+          "period": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "to": {
+                "type": "string",
+                "nullable": true,
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              }
+            },
+            "required": [
+              "from",
+              "to"
+            ],
+            "additionalProperties": false
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "personal",
+              "space"
+            ]
+          },
+          "spaceId": {
+            "type": "string",
+            "nullable": true
+          },
+          "spending": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "averageBottleMinor": {
+                  "type": "integer",
+                  "nullable": true,
+                  "minimum": 0
+                },
+                "bottles": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "byYear": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "totalMinor": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "year": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "totalMinor",
+                      "year"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "currency": {
+                  "type": "string",
+                  "enum": [
+                    "EUR",
+                    "USD",
+                    "GBP",
+                    "CHF",
+                    "MXN"
+                  ]
+                },
+                "purchases": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "topMerchants": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "purchases": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "totalMinor": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "purchases",
+                      "totalMinor"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "totalMinor": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "averageBottleMinor",
+                "bottles",
+                "byYear",
+                "currency",
+                "purchases",
+                "topMerchants",
+                "totalMinor"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "tastings": {
+            "type": "object",
+            "properties": {
+              "atOrAbove90": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "averageScore": {
+                "type": "number",
+                "nullable": true,
+                "minimum": 0,
+                "maximum": 100
+              },
+              "byMonth": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "month": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "month"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "memorable": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "pairingSuccessAverage": {
+                "type": "number",
+                "nullable": true,
+                "minimum": 1,
+                "maximum": 5
+              },
+              "scoreBands": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "band": {
+                      "type": "string",
+                      "enum": [
+                        "under_80",
+                        "80_84",
+                        "85_89",
+                        "90_94",
+                        "95_100"
+                      ]
+                    },
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "band",
+                    "count"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "scored": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "topWines": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "producerName": {
+                      "type": "string"
+                    },
+                    "score": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 100
+                    },
+                    "spaceId": {
+                      "type": "string"
+                    },
+                    "wineId": {
+                      "type": "string"
+                    },
+                    "wineName": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "producerName",
+                    "score",
+                    "spaceId",
+                    "wineId",
+                    "wineName"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "total": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "wouldBuy": {
+                "type": "object",
+                "properties": {
+                  "no": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "unsure": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "yes": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "no",
+                  "unsure",
+                  "yes"
+                ],
+                "additionalProperties": false
+              },
+              "wouldDrinkAgain": {
+                "type": "object",
+                "properties": {
+                  "no": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "unsure": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "yes": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "no",
+                  "unsure",
+                  "yes"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "atOrAbove90",
+              "averageScore",
+              "byMonth",
+              "memorable",
+              "pairingSuccessAverage",
+              "scoreBands",
+              "scored",
+              "topWines",
+              "total",
+              "wouldBuy",
+              "wouldDrinkAgain"
+            ],
+            "additionalProperties": false
+          },
+          "wines": {
+            "type": "object",
+            "properties": {
+              "byCountry": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "key": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "key"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "byGrape": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "key": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "key"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "byRegion": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "key": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "key"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "byType": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "key": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "key"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "total": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "byCountry",
+              "byGrape",
+              "byRegion",
+              "byType",
+              "total"
+            ],
+            "additionalProperties": false
+          },
+          "wishlist": {
+            "type": "object",
+            "properties": {
+              "active": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "active"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "bestValue",
+          "cellar",
+          "period",
+          "scope",
+          "spaceId",
+          "spending",
+          "tastings",
+          "wines",
+          "wishlist"
+        ],
+        "additionalProperties": false
       }
     },
     "parameters": {}
@@ -18499,6 +19020,147 @@
           },
           "401": {
             "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/stats": {
+      "get": {
+        "operationId": "getPersonalStats",
+        "tags": [
+          "Stats"
+        ],
+        "summary": "The reader's own numbers across every Space they belong to",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "required": false,
+            "in": "query",
+            "name": "from"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "required": false,
+            "in": "query",
+            "name": "to"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Counts of the reader's own notes, purchases and bottles.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WineStatsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The reader has no account yet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/stats": {
+      "get": {
+        "operationId": "getSpaceStats",
+        "tags": [
+          "Stats"
+        ],
+        "summary": "Everyone's numbers in one Space",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "required": false,
+            "in": "query",
+            "name": "from"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "required": false,
+            "in": "query",
+            "name": "to"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Counts of the Space's notes, purchases and bottles.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WineStatsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No such Space, or the reader is not a member of it.",
             "content": {
               "application/json": {
                 "schema": {

@@ -1290,6 +1290,58 @@ describe("Vicenç deterministic read path", () => {
     expect(detail?.text).toContain("nose note: Wet stone and citrus zest");
   });
 
+  it("answers a question about money from the reader's own numbers", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    const wine = await createWine(ownerToken, spaceId, "Ledger Rioja");
+    const now = new Date().toISOString();
+    await env.DB.prepare(
+      `INSERT INTO purchases (
+        id, space_id, wine_id, purchaser_user_id, merchant_name, purchased_at,
+        unit_amount_minor, currency, quantity, version, created_at, updated_at
+      ) VALUES (?, ?, ?, ?, 'Vinoteca Norte', ?, 1250, 'EUR', 3, 1, ?, ?)`,
+    )
+      .bind(randomOpaqueToken(), spaceId, wine.id, owner.data.user.id, now, now, now)
+      .run();
+
+    let captured: { id: string; text: string }[] = [];
+    await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: {
+        render: async (input) => {
+          captured = input.statements;
+          return null;
+        },
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "es",
+        message: "¿Cuánto dinero he gastado en vino?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    const stats = captured.find((statement) => statement.id === "stats-personal");
+    expect(stats).toBeDefined();
+    // Counted, with the currency it was paid in — never a guess.
+    expect(stats?.text).toMatch(/spent \d+\.\d{2} EUR in \d+ purchases/);
+    expect(stats?.text).toContain("Vinoteca Norte");
+    // A personal Space has no "everyone's" numbers to add.
+    expect(captured.some((statement) => statement.id === "stats-space")).toBe(false);
+  });
+
   it("drops another wine's semantic note when a pairing narrows to one bottle", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;

@@ -555,7 +555,8 @@
       "noMaterial": "Manca una delle due parti: documenta il vino, registra i suoi vitigni o una degustazione e riprova.",
       "error": "Non è stato possibile scrivere il confronto. Riprova.",
       "basisGrapes": "Confrontato con ciò che è tipico dei suoi vitigni (biblioteca del vino), perché il produttore non dice nulla sul gusto.",
-      "basisMixed": "Confrontato con ciò che dicono le fonti del vino sulla degustazione e con ciò che è tipico dei suoi vitigni (biblioteca del vino)."
+      "basisMixed": "Confrontato con ciò che dicono le fonti del vino sulla degustazione e con ciò che è tipico dei suoi vitigni (biblioteca del vino).",
+      "olderVoice": "Scritta prima che i confronti nominassero ogni persona: il suo «tu» è chi l'ha chiesta. Rifalla perché nomini ciascuno."
     },
     "sourceType": {
       "producer": "Produttore",
@@ -724,7 +725,9 @@
     "identifyTitle": "Identifica una bottiglia",
     "identifyBody": "Scansiona un codice o leggi un'etichetta, poi controlla ogni campo prima di salvare.",
     "libraryTitle": "Biblioteca",
-    "libraryBody": "Vitigni, denominazioni, stili e metodi."
+    "libraryBody": "Vitigni, denominazioni, stili e metodi.",
+    "statsTitle": "I miei numeri",
+    "statsBody": "Ciò che degusti, compri e conservi, contato."
   },
   "cellar": {
     "eyebrow": "Le tue bottiglie fisiche",
@@ -1345,5 +1348,65 @@
     "removeConfirm": "Rimuovere {{email}}? Non potrà entrare finché non lo aggiungi di nuovo.",
     "addTitle": "Aggiungi un’e-mail",
     "secondFactorError": "Cloudflare Access non ha convalidato questo account. Accedi ad Access con lo stesso account Google e torna."
+  },
+  "stats": {
+    "eyebrow": "Contato dai tuoi registri",
+    "title": "I miei numeri",
+    "intro": "Ciò che hai degustato, comprato e conservato, contato da ciò che hai registrato; nulla di stimato.",
+    "scopeLabel": "Di chi",
+    "scopePersonal": "Solo i miei, in tutti gli Spazi",
+    "scopeSpace": "{{name}} — di tutti",
+    "periodLabel": "Periodo",
+    "period": {
+      "all": "Sempre",
+      "year": "Quest'anno",
+      "twelveMonths": "Ultimi 12 mesi"
+    },
+    "loading": "Sto contando…",
+    "error": "Non è stato possibile caricare i numeri. Riprova.",
+    "empty": "Ancora niente da contare: registra un vino, una degustazione o un acquisto e comparirà qui.",
+    "unknown": "Non registrato",
+    "tile": {
+      "wines": "Vini",
+      "tastings": "Degustazioni",
+      "averageScore": "Punteggio medio",
+      "atOrAbove90": "Con 90 o più",
+      "inCellar": "Bottiglie in cantina",
+      "wishlist": "Nella lista dei desideri"
+    },
+    "scoresTitle": "Punteggi",
+    "band": {
+      "under_80": "Meno di 80",
+      "80_84": "80–84",
+      "85_89": "85–89",
+      "90_94": "90–94",
+      "95_100": "95–100"
+    },
+    "answers": "Lo ricomprerei: {{buy}} · lo riberrei: {{again}} · memorabili: {{memorable}}",
+    "pairing": "abbinamenti valutati {{value}} su 5 in media",
+    "topWines": "I più votati",
+    "winesTitle": "Cosa bevi",
+    "byType": "Per tipo",
+    "byCountry": "Per paese",
+    "byRegion": "Per regione",
+    "byGrape": "Per vitigno",
+    "spendingTitle": "Spesa",
+    "spendingLine": "{{purchases}} acquisti · {{bottles}} bottiglie · {{average}} a bottiglia in media",
+    "merchants": "Dove",
+    "purchases_one": "{{count}} acquisto",
+    "purchases_other": "{{count}} acquisti",
+    "bestValue": "Più punti per i tuoi soldi",
+    "bestValueNote": "Tra i vini comprati e valutati nella media di qui o sopra: quanto è costato ogni punto.",
+    "cellarTitle": "Cantina",
+    "cellar": {
+      "owned": "In attesa",
+      "opened": "Aperte",
+      "finished": "Finite",
+      "gifted": "Regalate"
+    },
+    "daysToOpen_one": "Una bottiglia aspetta in media {{count}} giorno prima di essere aperta.",
+    "daysToOpen_other": "Una bottiglia aspetta in media {{count}} giorni prima di essere aperta.",
+    "monthsTitle": "Degustazioni per mese",
+    "askVicenc": "Chiedi a Vicenç dei tuoi numeri"
   }
 }

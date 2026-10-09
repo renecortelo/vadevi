@@ -664,6 +664,53 @@ describe("external research adapters", () => {
     ).resolves.toBeNull();
   });
 
+  it("writes a group's comparison in the third person, and drops one that says 'you'", async () => {
+    const model = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+    const replies: string[] = [];
+    const prompts: string[] = [];
+    const adapter = new CloudflareNarrativeAdapter(
+      {
+        run: async (_model, input) => {
+          const messages = input.messages as { content: string }[];
+          prompts.push(messages[0]!.content);
+          return { response: replies.shift() ?? "" };
+        },
+      },
+      model,
+    );
+    const request = {
+      grapes: ["Tempranillo typically shows red fruit."],
+      locale: "es" as const,
+      sources: [],
+      tasting: ['Tasting by Ana (refer to Ana by name, never as "you"): Ana rated it 91'],
+      wine: "El Espino",
+    };
+
+    // Named, as asked: kept at the first try.
+    replies.push("Ana le dio 91 y encontró la fruta roja típica del Tempranillo.");
+    await expect(adapter.compare({ ...request, audience: "group" })).resolves.toBe(
+      "Ana le dio 91 y encontró la fruta roja típica del Tempranillo.",
+    );
+    expect(prompts[0]).toContain("entirely in the third person");
+
+    // "Tú" in a paragraph everyone reads: asked again, and the named one kept.
+    prompts.length = 0;
+    replies.push("Tú le diste 91.", "Ana le dio 91.");
+    await expect(adapter.compare({ ...request, audience: "group" })).resolves.toBe(
+      "Ana le dio 91.",
+    );
+    expect(prompts).toHaveLength(2);
+
+    // Twice: nothing rather than a paragraph that speaks to the wrong person.
+    replies.push("Te gustó.", "A ti te pareció ligero.");
+    await expect(adapter.compare({ ...request, audience: "group" })).resolves.toBeNull();
+
+    // Read by its author alone, "you" is right.
+    replies.length = 0;
+    replies.push("Le diste 84.");
+    await expect(adapter.compare({ ...request, audience: "reader" })).resolves.toBe("Le diste 84.");
+  });
+
   it("suggests dishes for a wine and drops prompt-like or empty ideas", async () => {
     const model = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
     const adapter = new CloudflareFoodIdeasAdapter(

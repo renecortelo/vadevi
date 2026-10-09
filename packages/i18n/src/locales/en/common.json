@@ -555,7 +555,8 @@
       "noMaterial": "One side is missing: research the wine, record its grapes, or log a tasting, then try again.",
       "error": "The comparison could not be written. Try again.",
       "basisGrapes": "Set against what its grapes are typically like (wine library), as the producer has said nothing about how it tastes.",
-      "basisMixed": "Set against what the wine's sources say about how it tastes and what its grapes are typically like (wine library)."
+      "basisMixed": "Set against what the wine's sources say about how it tastes and what its grapes are typically like (wine library).",
+      "olderVoice": "Written before comparisons named every taster: its “you” is whoever asked for it. Rewrite it to name each of you."
     },
     "sourceType": {
       "producer": "Producer",
@@ -724,7 +725,9 @@
     "identifyTitle": "Identify a bottle",
     "identifyBody": "Scan a barcode or read a label, then check every field before saving.",
     "libraryTitle": "Library",
-    "libraryBody": "Grapes, appellations, styles and methods."
+    "libraryBody": "Grapes, appellations, styles and methods.",
+    "statsTitle": "My numbers",
+    "statsBody": "What you taste, buy and keep, counted."
   },
   "cellar": {
     "eyebrow": "Your physical bottles",
@@ -1345,5 +1348,65 @@
     "removeConfirm": "Remove {{email}}? They will not be able to sign in again until re-added.",
     "addTitle": "Add an e-mail",
     "secondFactorError": "Cloudflare Access did not vouch for this account. Sign in to Access with the same Google account and come back."
+  },
+  "stats": {
+    "eyebrow": "Counted from your records",
+    "title": "My numbers",
+    "intro": "What you have tasted, bought and kept — counted from what you recorded, nothing estimated.",
+    "scopeLabel": "Whose",
+    "scopePersonal": "Only mine, in every Space",
+    "scopeSpace": "{{name}} — everyone's",
+    "periodLabel": "Period",
+    "period": {
+      "all": "All time",
+      "year": "This year",
+      "twelveMonths": "Last 12 months"
+    },
+    "loading": "Counting…",
+    "error": "The numbers could not be loaded. Try again.",
+    "empty": "Nothing to count yet: log a wine, a tasting or a purchase and it will show here.",
+    "unknown": "Not recorded",
+    "tile": {
+      "wines": "Wines",
+      "tastings": "Tastings",
+      "averageScore": "Average score",
+      "atOrAbove90": "Scored 90 or more",
+      "inCellar": "Bottles in the cellar",
+      "wishlist": "On the wishlist"
+    },
+    "scoresTitle": "Scores",
+    "band": {
+      "under_80": "Under 80",
+      "80_84": "80–84",
+      "85_89": "85–89",
+      "90_94": "90–94",
+      "95_100": "95–100"
+    },
+    "answers": "Would buy: {{buy}} · would drink again: {{again}} · memorable: {{memorable}}",
+    "pairing": "pairings rated {{value}} of 5 on average",
+    "topWines": "Best scored",
+    "winesTitle": "What you drink",
+    "byType": "By type",
+    "byCountry": "By country",
+    "byRegion": "By region",
+    "byGrape": "By grape",
+    "spendingTitle": "Spending",
+    "spendingLine": "{{purchases}} purchases · {{bottles}} bottles · {{average}} a bottle on average",
+    "merchants": "Where",
+    "purchases_one": "{{count}} purchase",
+    "purchases_other": "{{count}} purchases",
+    "bestValue": "Most points for the money",
+    "bestValueNote": "Among wines bought and scored at or above the average here: what each point cost.",
+    "cellarTitle": "Cellar",
+    "cellar": {
+      "owned": "Waiting",
+      "opened": "Open",
+      "finished": "Finished",
+      "gifted": "Given away"
+    },
+    "daysToOpen_one": "A bottle waits {{count}} day on average before it is opened.",
+    "daysToOpen_other": "A bottle waits {{count}} days on average before it is opened.",
+    "monthsTitle": "Tastings by month",
+    "askVicenc": "Ask Vicenç about your numbers"
   }
 }

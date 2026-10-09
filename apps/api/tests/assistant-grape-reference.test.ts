@@ -196,7 +196,7 @@ describe("a tasting set against its grapes", () => {
     )
       .bind(solo.id)
       .first<{ research_method: string }>();
-    expect(fact?.research_method).toBe("tasting.comparison.grapes.v1");
+    expect(fact?.research_method).toBe("tasting.comparison.grapes.v2");
     const citations = await env.DB.prepare(
       `SELECT source.canonical_url FROM fact_citations citation
         JOIN sources source ON source.id = citation.source_id
@@ -294,6 +294,6 @@ describe("a tasting set against its grapes", () => {
       "https://en.wikipedia.org/wiki/tempranillo",
       "https://finca.example/vino",
     ]);
-    expect(cited.results[0]?.research_method).toBe("tasting.comparison.mixed.v1");
+    expect(cited.results[0]?.research_method).toBe("tasting.comparison.mixed.v2");
   });
 });

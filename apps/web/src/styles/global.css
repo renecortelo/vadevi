@@ -4675,3 +4675,120 @@ p {
   fill: var(--color-surface-raised);
   stroke: var(--color-text);
 }
+
+/* My numbers: tiles of counts, bars against the largest, never a chart
+   library — a few dozen numbers do not need one. */
+.stats-page {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.stats-controls {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.stats-controls label {
+  display: grid;
+  gap: var(--space-1);
+  min-inline-size: 0;
+}
+
+.stats-controls label > span {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.stats-controls select {
+  max-inline-size: 100%;
+}
+
+.stats-tiles {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  margin: 0;
+}
+
+.stats-tiles > div {
+  background: rgb(var(--color-surface-rgb) / 82%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.stats-tiles dt {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.stats-tiles dd {
+  color: var(--color-plum);
+  font-size: 1.6rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 750;
+  margin: 0;
+}
+
+.stats-tiles--small dd {
+  font-size: 1.25rem;
+}
+
+.stats-columns {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.settings-card .stats-bars {
+  display: grid;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.settings-card .stats-bars li + li {
+  margin-block-start: 0;
+}
+
+.stats-bars li {
+  align-items: center;
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: minmax(0, 8rem) minmax(0, 1fr) auto;
+}
+
+.stats-bars__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stats-bars__track {
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-pill);
+  block-size: 0.6rem;
+  overflow: hidden;
+}
+
+.stats-bars__track > span {
+  background: var(--color-accent);
+  border-radius: inherit;
+  block-size: 100%;
+  display: block;
+  min-inline-size: 2px;
+}
+
+.stats-bars__count {
+  font-variant-numeric: tabular-nums;
+  min-inline-size: 2ch;
+  text-align: end;
+}
+
+.stats-list {
+  margin: 0;
+  padding-inline-start: var(--space-5);
+}

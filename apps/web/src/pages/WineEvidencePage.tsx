@@ -222,6 +222,8 @@ export function WineEvidencePage() {
   const { wineId = "" } = useParams();
   const location = useLocation();
   const spaceId = bootstrap.data.user.activeSpaceId;
+  const sharedSpace =
+    bootstrap.data.spaces.find((space) => space.id === spaceId)?.type !== "personal";
   const [response, setResponse] = useState<WineFactsResponse | null>(null);
   const [wine, setWine] = useState<WineSummary | null>(null);
   const [loading, setLoading] = useState(true);
@@ -653,10 +655,15 @@ export function WineEvidencePage() {
           ) : (
             <>
               <p className="research-narrative__text">{String(comparison.value)}</p>
-              {comparison.researchMethod === "tasting.comparison.grapes.v1" ? (
+              {comparison.researchMethod?.startsWith("tasting.comparison.grapes.") ? (
                 <p className="section-help">{t("evidence.comparison.basisGrapes")}</p>
-              ) : comparison.researchMethod === "tasting.comparison.mixed.v1" ? (
+              ) : comparison.researchMethod?.startsWith("tasting.comparison.mixed.") ? (
                 <p className="section-help">{t("evidence.comparison.basisMixed")}</p>
+              ) : null}
+              {/* Written before comparisons named everyone: its "you" is
+                  whoever asked for it, not whoever reads it now. */}
+              {sharedSpace && comparison.researchMethod?.endsWith(".v1") ? (
+                <p className="section-help">{t("evidence.comparison.olderVoice")}</p>
               ) : null}
             </>
           )}

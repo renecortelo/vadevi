@@ -555,7 +555,8 @@
       "noMaterial": "Il manque une des deux parties : documentez le vin, indiquez ses cépages ou enregistrez une dégustation, puis réessayez.",
       "error": "La comparaison n'a pas pu être écrite. Réessayez.",
       "basisGrapes": "Comparée à ce qui est typique de ses cépages (bibliothèque du vin), le producteur n'ayant rien dit de son goût.",
-      "basisMixed": "Comparée à ce que disent les sources du vin sur sa dégustation et à ce qui est typique de ses cépages (bibliothèque du vin)."
+      "basisMixed": "Comparée à ce que disent les sources du vin sur sa dégustation et à ce qui est typique de ses cépages (bibliothèque du vin).",
+      "olderVoice": "Écrite avant que les comparaisons nomment chaque personne : son « vous » désigne celle qui l'a demandée. Refaites-la pour qu'elle nomme chacun."
     },
     "sourceType": {
       "producer": "Producteur",
@@ -724,7 +725,9 @@
     "identifyTitle": "Identifier une bouteille",
     "identifyBody": "Scannez un code ou lisez une étiquette, puis vérifiez chaque champ avant d'enregistrer.",
     "libraryTitle": "Bibliothèque",
-    "libraryBody": "Cépages, appellations, styles et méthodes."
+    "libraryBody": "Cépages, appellations, styles et méthodes.",
+    "statsTitle": "Mes chiffres",
+    "statsBody": "Ce que vous dégustez, achetez et gardez, compté."
   },
   "cellar": {
     "eyebrow": "Vos bouteilles physiques",
@@ -1345,5 +1348,65 @@
     "removeConfirm": "Retirer {{email}} ? Cette personne ne pourra plus se connecter tant qu’elle n’est pas rajoutée.",
     "addTitle": "Ajouter un e-mail",
     "secondFactorError": "Cloudflare Access n’a pas validé ce compte. Connectez-vous à Access avec le même compte Google et revenez."
+  },
+  "stats": {
+    "eyebrow": "Compté à partir de vos notes",
+    "title": "Mes chiffres",
+    "intro": "Ce que vous avez dégusté, acheté et gardé, compté à partir de ce que vous avez noté ; rien d'estimé.",
+    "scopeLabel": "De qui",
+    "scopePersonal": "Seulement les miens, dans tous les Espaces",
+    "scopeSpace": "{{name}} — de tous",
+    "periodLabel": "Période",
+    "period": {
+      "all": "Depuis toujours",
+      "year": "Cette année",
+      "twelveMonths": "12 derniers mois"
+    },
+    "loading": "Calcul…",
+    "error": "Les chiffres n'ont pas pu être chargés. Réessayez.",
+    "empty": "Rien à compter pour l'instant : notez un vin, une dégustation ou un achat et il apparaîtra ici.",
+    "unknown": "Non renseigné",
+    "tile": {
+      "wines": "Vins",
+      "tastings": "Dégustations",
+      "averageScore": "Note moyenne",
+      "atOrAbove90": "Notés 90 ou plus",
+      "inCellar": "Bouteilles en cave",
+      "wishlist": "Sur la liste d'envies"
+    },
+    "scoresTitle": "Notes",
+    "band": {
+      "under_80": "Moins de 80",
+      "80_84": "80–84",
+      "85_89": "85–89",
+      "90_94": "90–94",
+      "95_100": "95–100"
+    },
+    "answers": "À racheter : {{buy}} · à reboire : {{again}} · mémorables : {{memorable}}",
+    "pairing": "accords notés {{value}} sur 5 en moyenne",
+    "topWines": "Les mieux notés",
+    "winesTitle": "Ce que vous buvez",
+    "byType": "Par type",
+    "byCountry": "Par pays",
+    "byRegion": "Par région",
+    "byGrape": "Par cépage",
+    "spendingTitle": "Dépenses",
+    "spendingLine": "{{purchases}} achats · {{bottles}} bouteilles · {{average}} la bouteille en moyenne",
+    "merchants": "Où",
+    "purchases_one": "{{count}} achat",
+    "purchases_other": "{{count}} achats",
+    "bestValue": "Le plus de points pour votre argent",
+    "bestValueNote": "Parmi les vins achetés et notés dans la moyenne d'ici ou au-dessus : ce qu'a coûté chaque point.",
+    "cellarTitle": "Cave",
+    "cellar": {
+      "owned": "En attente",
+      "opened": "Ouvertes",
+      "finished": "Terminées",
+      "gifted": "Offertes"
+    },
+    "daysToOpen_one": "Une bouteille attend {{count}} jour en moyenne avant d'être ouverte.",
+    "daysToOpen_other": "Une bouteille attend {{count}} jours en moyenne avant d'être ouverte.",
+    "monthsTitle": "Dégustations par mois",
+    "askVicenc": "Demandez à Vicenç ce que disent vos chiffres"
   }
 }

@@ -1155,7 +1155,7 @@ describe("bounded wine research jobs", () => {
     expect(summary?.citations[0]?.source.publisher).toBe("Wikipedia");
   });
 
-  it("sets the group's tasting against the sources, without leaking a peer's prose", async () => {
+  it("sets the tasting against the sources, for its author alone or named for the group", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;
     const wine = await createWineWithGrape(spaceId);
@@ -1208,8 +1208,58 @@ describe("bounded wine research jobs", () => {
     });
     expect(job.kind).toBe("success");
 
-    // A co-member of the same Space, with a note of their own.
+    // The reader's own note, alone in their Space: the paragraph is theirs.
     const now = new Date().toISOString();
+    await env.DB.prepare(
+      `INSERT INTO tasting_notes
+        (id, space_id, wine_id, author_user_id, mode, state, tasted_at, score_100, comment,
+         version, created_at, updated_at)
+        VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 84, ?, 1, ?, ?)`,
+    )
+      .bind(
+        ulid(),
+        spaceId,
+        wine.id,
+        owner.data.user.id,
+        now,
+        "Me pareció más ligero de lo que esperaba.",
+        now,
+        now,
+      )
+      .run();
+
+    let sawAudience: string | null = null;
+    let sawSources: string[] = [];
+    let sawTasting: string[] = [];
+    const compareFor = () =>
+      regenerateTastingComparison(env.DB, {
+        locale: "es",
+        narrative: {
+          compare: async ({ audience, sources, tasting }) => {
+            sawAudience = audience;
+            sawSources = sources;
+            sawTasting = tasting;
+            return "Lo encontraron más ligero; el productor lo describe maduro y con cuerpo.";
+          },
+          compose: async () => null,
+        },
+        principal,
+        requestId: randomOpaqueToken(),
+        spaceId,
+        wineId: wine.id,
+      });
+    expect(await compareFor()).toBe("ok");
+    expect(sawAudience).toBe("reader");
+    expect(sawSources).toContain("The producer describes it as ripe and full-bodied.");
+    // A data point — a country, a founding year — is not something a tasting
+    // can be set against, and it used to reach the paragraph anyway.
+    expect(sawSources).not.toContain("Tempranillo · country of origin: Spain");
+    expect(sawTasting).toHaveLength(1);
+    expect(sawTasting[0]).toMatch(/^The reader's own tasting/);
+    expect(sawTasting[0]).toContain("Me pareció más ligero");
+
+    // A co-member joins, with a note of their own: now everyone reads the
+    // paragraph, so it is written for the group.
     const peerId = ulid();
     await env.DB.batch([
       env.DB.prepare(
@@ -1235,57 +1285,19 @@ describe("bounded wine research jobs", () => {
            version, created_at, updated_at)
           VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 91, ?, 1, ?, ?)`,
       ).bind(ulid(), spaceId, wine.id, peerId, now, "ANA_PRIVATE_PROSE about plums", now, now),
-      env.DB.prepare(
-        `INSERT INTO tasting_notes
-          (id, space_id, wine_id, author_user_id, mode, state, tasted_at, score_100, comment,
-           version, created_at, updated_at)
-          VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, 84, ?, 1, ?, ?)`,
-      ).bind(
-        ulid(),
-        spaceId,
-        wine.id,
-        owner.data.user.id,
-        now,
-        "Me pareció más ligero de lo que esperaba.",
-        now,
-        now,
-      ),
     ]);
-
-    let sawSources: string[] = [];
-    let sawTasting: string[] = [];
-    const outcome = await regenerateTastingComparison(env.DB, {
-      locale: "es",
-      narrative: {
-        compare: async ({ sources, tasting }) => {
-          sawSources = sources;
-          sawTasting = tasting;
-          return "Tú lo encontraste más ligero; el productor lo describe maduro y con cuerpo.";
-        },
-        compose: async () => null,
-      },
-      principal,
-      requestId: randomOpaqueToken(),
-      spaceId,
-      wineId: wine.id,
-    });
-    expect(outcome).toBe("ok");
-    expect(sawSources).toContain("The producer describes it as ripe and full-bodied.");
-    // A data point — a country, a founding year — is not something a tasting
-    // can be set against, and it used to reach the paragraph anyway.
-    expect(sawSources).not.toContain("Tempranillo · country of origin: Spain");
-    // The reader's own words travel; Ana's score does too, but never her prose.
+    expect(await compareFor()).toBe("ok");
+    expect(sawAudience).toBe("group");
     const tastingText = sawTasting.join(" || ");
-    expect(tastingText).toContain("Me pareció más ligero");
+    // Scores travel, by name; nobody's prose does — not even the asker's,
+    // since everyone reads the paragraph.
     expect(tastingText).toContain("Ana rated it 91");
+    expect(tastingText).toContain("rated it 84");
     expect(tastingText).not.toContain("ANA_PRIVATE_PROSE");
-    // And whose tasting each is, said outright, so Ana's is never "you found".
-    expect(sawTasting.find((line) => line.includes("Me pareció más ligero"))).toMatch(
-      /^The reader's own tasting/,
-    );
-    expect(sawTasting.find((line) => line.includes("Ana rated it 91"))).toMatch(
-      /^Tasting by Ana, another member of the group, not the reader/,
-    );
+    expect(tastingText).not.toContain("Me pareció más ligero");
+    // Nobody is "the reader": each tasting is someone's, by name.
+    expect(sawTasting.every((line) => line.startsWith("Tasting by "))).toBe(true);
+    expect(tastingText).not.toContain("you rated");
 
     const factsResponse = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/facts`,
