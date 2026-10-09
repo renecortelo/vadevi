@@ -1342,6 +1342,75 @@ describe("Vicenç deterministic read path", () => {
     expect(captured.some((statement) => statement.id === "stats-space")).toBe(false);
   });
 
+  it("answers 'what is my style?' from the reader's own taste, measured against their average", async () => {
+    const owner = await bootstrap(ownerToken);
+    const spaceId = owner.data.user.activeSpaceId;
+    const now = new Date().toISOString();
+    for (const [index, grape, score] of [
+      [1, "Garnacha", 95],
+      [2, "Garnacha", 94],
+      [3, "Garnacha", 96],
+      [4, "Merlot", 78],
+      [5, "Merlot", 80],
+      [6, "Merlot", 79],
+    ] as const) {
+      const wine = await createWine(ownerToken, spaceId, `Style ${grape} ${index}`);
+      await env.DB.batch([
+        env.DB.prepare(
+          `INSERT INTO wine_grapes (id, space_id, wine_id, name_snapshot, position, created_at, updated_at)
+            VALUES (?, ?, ?, ?, 0, ?, ?)`,
+        ).bind(randomOpaqueToken(), spaceId, wine.id, grape, now, now),
+        env.DB.prepare(
+          `INSERT INTO tasting_notes
+            (id, space_id, wine_id, author_user_id, mode, state, tasted_at, score_100, version,
+             created_at, updated_at)
+            VALUES (?, ?, ?, ?, 'quick', 'submitted', ?, ?, 1, ?, ?)`,
+        ).bind(randomOpaqueToken(), spaceId, wine.id, owner.data.user.id, now, score, now, now),
+      ]);
+    }
+
+    let captured: { evidenceClass: string; id: string; text: string }[] = [];
+    await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: {
+        render: async (input) => {
+          captured = input.statements;
+          return null;
+        },
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        emailVerified: true,
+        displayName: "Assistant Owner",
+        email: "assistant-owner@example.test",
+        firebaseUid: "firebase-emulator-user-phase-4-assistant-owner",
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "es",
+        message: "¿Cuál sería mi estilo de vino?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId,
+    });
+    const taste = captured.find((statement) => statement.id === "taste-profile-full");
+    expect(taste).toBeDefined();
+    expect(taste?.evidenceClass).toBe("personal");
+    // Each tendency with the tastings it rests on, against their own average.
+    expect(taste?.text).toMatch(
+      /scored above their own average: [^;]*grape Garnacha \+[\d.]+ points over 3 tastings/,
+    );
+    expect(taste?.text).toMatch(
+      /scored below their own average: [^;]*grape Merlot -[\d.]+ points over 3 tastings/,
+    );
+    expect(taste?.text).toContain("never as facts about wine");
+  });
+
   it("drops another wine's semantic note when a pairing narrows to one bottle", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId!;

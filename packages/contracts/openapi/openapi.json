@@ -12308,6 +12308,568 @@
           "wishlist"
         ],
         "additionalProperties": false
+      },
+      "TasteProfileResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/TasteProfile"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "TasteProfile": {
+        "type": "object",
+        "properties": {
+          "averageScore": {
+            "type": "number",
+            "nullable": true,
+            "minimum": 0,
+            "maximum": 100
+          },
+          "scoreSpread": {
+            "type": "number",
+            "nullable": true,
+            "minimum": 0
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "insufficient",
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "likes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "type",
+                    "country",
+                    "region",
+                    "grape",
+                    "descriptor",
+                    "acidity",
+                    "tannin",
+                    "body",
+                    "sweetness",
+                    "finish",
+                    "price"
+                  ]
+                },
+                "label": {
+                  "type": "string"
+                },
+                "notes": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "pointsVersusAverage": {
+                  "type": "number"
+                },
+                "wines": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "spaceId": {
+                        "type": "string"
+                      },
+                      "wineId": {
+                        "type": "string"
+                      },
+                      "wineName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "spaceId",
+                      "wineId",
+                      "wineName"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "key",
+                "kind",
+                "label",
+                "notes",
+                "pointsVersusAverage",
+                "wines"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "dislikes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "type",
+                    "country",
+                    "region",
+                    "grape",
+                    "descriptor",
+                    "acidity",
+                    "tannin",
+                    "body",
+                    "sweetness",
+                    "finish",
+                    "price"
+                  ]
+                },
+                "label": {
+                  "type": "string"
+                },
+                "notes": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "pointsVersusAverage": {
+                  "type": "number"
+                },
+                "wines": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "spaceId": {
+                        "type": "string"
+                      },
+                      "wineId": {
+                        "type": "string"
+                      },
+                      "wineName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "spaceId",
+                      "wineId",
+                      "wineName"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "key",
+                "kind",
+                "label",
+                "notes",
+                "pointsVersusAverage",
+                "wines"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "tensions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "type",
+                    "country",
+                    "region",
+                    "grape",
+                    "descriptor",
+                    "acidity",
+                    "tannin",
+                    "body",
+                    "sweetness",
+                    "finish",
+                    "price"
+                  ]
+                },
+                "label": {
+                  "type": "string"
+                },
+                "notes": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "pointsVersusAverage": {
+                  "type": "number"
+                },
+                "wines": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "spaceId": {
+                        "type": "string"
+                      },
+                      "wineId": {
+                        "type": "string"
+                      },
+                      "wineName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "spaceId",
+                      "wineId",
+                      "wineName"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "key",
+                "kind",
+                "label",
+                "notes",
+                "pointsVersusAverage",
+                "wines"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "habits": {
+            "type": "object",
+            "properties": {
+              "mostTasted": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "type",
+                        "country",
+                        "region",
+                        "grape",
+                        "descriptor",
+                        "acidity",
+                        "tannin",
+                        "body",
+                        "sweetness",
+                        "finish",
+                        "price"
+                      ]
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "notes": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "share": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "kind",
+                    "label",
+                    "notes",
+                    "share"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "prices": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "EUR",
+                        "USD",
+                        "GBP",
+                        "CHF",
+                        "MXN"
+                      ]
+                    },
+                    "medianUnitMinor": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "purchases": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "medianUnitMinor",
+                    "purchases"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "rebought": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "spaceId": {
+                      "type": "string"
+                    },
+                    "wineId": {
+                      "type": "string"
+                    },
+                    "wineName": {
+                      "type": "string"
+                    },
+                    "purchases": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "spaceId",
+                    "wineId",
+                    "wineName",
+                    "purchases"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "boughtNotLiked": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "spaceId": {
+                      "type": "string"
+                    },
+                    "wineId": {
+                      "type": "string"
+                    },
+                    "wineName": {
+                      "type": "string"
+                    },
+                    "score": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 100
+                    }
+                  },
+                  "required": [
+                    "spaceId",
+                    "wineId",
+                    "wineName",
+                    "score"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "mostTasted",
+              "prices",
+              "rebought",
+              "boughtNotLiked"
+            ],
+            "additionalProperties": false
+          },
+          "evolution": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "earlierAverage": {
+                "type": "number",
+                "nullable": true
+              },
+              "earlierNotes": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "recentAverage": {
+                "type": "number",
+                "nullable": true
+              },
+              "recentNotes": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "shifts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "earlierShare": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "key": {
+                      "type": "string"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "type",
+                        "country",
+                        "region",
+                        "grape",
+                        "descriptor",
+                        "acidity",
+                        "tannin",
+                        "body",
+                        "sweetness",
+                        "finish",
+                        "price"
+                      ]
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "recentShare": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "earlierShare",
+                    "key",
+                    "kind",
+                    "label",
+                    "recentShare"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "earlierAverage",
+              "earlierNotes",
+              "recentAverage",
+              "recentNotes",
+              "shifts"
+            ],
+            "additionalProperties": false
+          },
+          "inCellar": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "spaceId": {
+                  "type": "string"
+                },
+                "wineId": {
+                  "type": "string"
+                },
+                "wineName": {
+                  "type": "string"
+                },
+                "matches": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "key": {
+                        "type": "string"
+                      },
+                      "kind": {
+                        "type": "string",
+                        "enum": [
+                          "type",
+                          "country",
+                          "region",
+                          "grape",
+                          "descriptor",
+                          "acidity",
+                          "tannin",
+                          "body",
+                          "sweetness",
+                          "finish",
+                          "price"
+                        ]
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "key",
+                      "kind",
+                      "label"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "spaceId",
+                "wineId",
+                "wineName",
+                "matches"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "minimumNotes": {
+            "type": "number",
+            "enum": [
+              3
+            ]
+          },
+          "sampleSize": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "scored": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "averageScore",
+          "scoreSpread",
+          "confidence",
+          "likes",
+          "dislikes",
+          "tensions",
+          "habits",
+          "evolution",
+          "inCellar",
+          "minimumNotes",
+          "sampleSize",
+          "scored"
+        ],
+        "additionalProperties": false
       }
     },
     "parameters": {}
@@ -19314,6 +19876,52 @@
           },
           "404": {
             "description": "No such Space, or the reader is not a member of it.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/taste-profile": {
+      "get": {
+        "operationId": "getTasteProfile",
+        "tags": [
+          "Stats"
+        ],
+        "summary": "The reader's taste, read from their own tastings and purchases",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Traits measured against the reader's own average, with the wines behind them.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TasteProfileResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The reader has no account yet.",
             "content": {
               "application/json": {
                 "schema": {

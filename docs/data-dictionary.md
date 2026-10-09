@@ -75,6 +75,8 @@ Registered predicates validate their JSON value shape before persistence. Resear
 
 Assistant tool audits now allow `search_memory`, `get_wine_context`, `get_taste_profile`, `compare_wines`, and `research_wine`. Personal profile values remain null below three submitted notes; audit rows retain the sample count and outcome but never the underlying notes or question.
 
+The taste profile (`GET /api/v1/me/taste-profile`, and `get_taste_profile` for Vicenç) is read on demand from the reader's own submitted tastings in every Space they are an active member of, their own purchases, and the unopened bottles in those Spaces; nothing is stored. Each trait — a wine type, country, region, grape, descriptor, level of acidity, tannin, body, sweetness or finish, or price band — is measured in points against the reader's own average score, needs three tastings, and is drawn towards zero as if two more tastings had sat on the average. A tasting without a score counts through its sentiment or "would drink again", at a fraction of the reader's usual spread. Regions are read as one name and countries deduced from them as in the cellar book. The rules live in `apps/api/src/services/taste-profile.ts`.
+
 ## Cellar, wishlist, shopping, and confirmed actions
 
 `0011_cellar_shopping.sql` introduces the Phase 5 operational model:

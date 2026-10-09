@@ -11,6 +11,8 @@ import type {
   Source,
   SupportedLocale,
   WineGrapeSummary,
+  TasteProfile,
+  TasteTrait,
   WineStats,
   WineSummary,
 } from "@vadevi/contracts";
@@ -44,6 +46,7 @@ import {
   topicsMentionedIn,
 } from "./library";
 import { getPersonalStats, getSpaceStats } from "./stats";
+import { getTasteProfile } from "./taste-profile";
 import { jsonList } from "../services/sql-list";
 
 type AllowedSpaceRow = {
@@ -92,9 +95,61 @@ function searchTerms(message: string): string[] {
 
 function requestsTasteProfile(message: string): boolean {
   const normalized = normalizeWineText(message);
-  return /\b(profile|preference|preferences|prefer|favorite|favourite|taste|gust|gusto|gustos|preferencia|preferencias|perfil|gout|gouts|preferenze|smaak|voorkeur|geschmack|praferenz)\b/i.test(
+  // "What is my style?", "what kind of drinker am I?", "mi paladar": the
+  // reader's taste, asked for by what it is called in each language.
+  return /\b(profile|preference|preferences|prefer|favorite|favourite|taste|style|palate|drinker|gust|gusto|gustos|preferencia|preferencias|perfil|estilo|estil|paladar|bebedor|bevedor|me gusta|m agrada|gout|gouts|palais|buveur|preferenze|stile|palato|bevitore|smaak|voorkeur|stijl|gehemelte|drinker|geschmack|praferenz|stil|gaumen|trinker|gosto|gostos|bebedor)\b/i.test(
     normalized,
   );
+}
+
+/** The full profile as one statement the model can say and qualify. */
+function tasteStatement(profile: TasteProfile): AssistantLanguageStatement {
+  const trait = (entry: TasteTrait) =>
+    `${entry.kind} ${entry.label} ${entry.pointsVersusAverage > 0 ? "+" : ""}${entry.pointsVersusAverage} points over ${entry.notes} tastings (${entry.wines.map((wine) => wine.wineName).join(", ")})`;
+  const money = (minor: number, currency: string) => `${(minor / 100).toFixed(2)} ${currency}`;
+  const parts = [
+    `the reader's taste, read from ${profile.sampleSize} of their own submitted tastings in all their Spaces; confidence ${profile.confidence}; average score ${profile.averageScore ?? "none"}${profile.scoreSpread === null ? "" : `, usually within ${profile.scoreSpread} points of it`}`,
+    `scored above their own average: ${profile.likes.map(trait).join("; ") || "nothing clear yet"}`,
+    `scored below their own average: ${profile.dislikes.map(trait).join("; ") || "nothing clear yet"}`,
+    `what they taste most: ${profile.habits.mostTasted.map((entry) => `${entry.kind} ${entry.label} ${Math.round(entry.share * 100)}% of tastings`).join(", ") || "too few to say"}`,
+    ...(profile.tensions.length === 0
+      ? []
+      : [
+          `among what they taste most, scored below their average: ${profile.tensions.map((entry) => `${entry.kind} ${entry.label}`).join(", ")}`,
+        ]),
+    ...profile.habits.prices.map(
+      (price) =>
+        `a bottle usually costs them ${money(price.medianUnitMinor, price.currency)} (median of ${price.purchases} purchases)`,
+    ),
+    ...(profile.habits.rebought.length === 0
+      ? []
+      : [
+          `bought more than once: ${profile.habits.rebought.map((wine) => `${wine.wineName} (${wine.purchases})`).join(", ")}`,
+        ]),
+    ...(profile.habits.boughtNotLiked.length === 0
+      ? []
+      : [
+          `bought, then scored well below their average: ${profile.habits.boughtNotLiked.map((wine) => `${wine.wineName} (${wine.score})`).join(", ")}`,
+        ]),
+    ...(profile.evolution === null
+      ? []
+      : [
+          `last twelve months (${profile.evolution.recentNotes} tastings, average ${profile.evolution.recentAverage ?? "none"}) against before (${profile.evolution.earlierNotes}, average ${profile.evolution.earlierAverage ?? "none"}): ${profile.evolution.shifts.map((shift) => `${shift.kind} ${shift.label} from ${Math.round(shift.earlierShare * 100)}% to ${Math.round(shift.recentShare * 100)}%`).join(", ") || "no clear shift"}`,
+        ]),
+    ...(profile.inCellar.length === 0
+      ? []
+      : [
+          `unopened in their cellars and sharing what they like: ${profile.inCellar.map((wine) => `${wine.wineName} (${wine.matches.map((match) => `${match.kind} ${match.label}`).join(", ")})`).join("; ")}`,
+        ]),
+    "speak of these as tendencies in the reader's own tastings, never as facts about wine; say how many tastings a tendency rests on, and that few tastings make it tentative",
+  ];
+  return {
+    evidenceClass: "personal",
+    id: "taste-profile-full",
+    sampleSize: profile.sampleSize,
+    sourceIds: [],
+    text: parts.join("; "),
+  };
 }
 
 function requestsComparison(message: string): boolean {
@@ -1483,10 +1538,14 @@ async function getVisibleWineContext(
   };
 }
 
+/**
+ * The summary card beside Vicenç's answer: the reader's own submitted
+ * tastings in every Space they are a member of — their taste is theirs, not
+ * one Space's — the same tastings the full profile reads.
+ */
 async function getCurrentUserTasteProfile(
   database: D1Database,
   principal: FirebasePrincipal,
-  spaceId: string,
 ): Promise<AssistantTasteProfile> {
   const aggregate = await database
     .prepare(
@@ -1499,9 +1558,9 @@ async function getCurrentUserTasteProfile(
       JOIN spaces space ON space.id = note.space_id
       WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
         AND membership.status = 'active' AND space.deleted_at IS NULL
-        AND note.space_id = ? AND note.state = 'submitted' AND note.deleted_at IS NULL`,
+        AND note.state = 'submitted' AND note.deleted_at IS NULL`,
     )
-    .bind(principal.firebaseUid, spaceId)
+    .bind(principal.firebaseUid)
     .first<{
       average_score: number | null;
       sample_size: number;
@@ -1518,12 +1577,15 @@ async function getCurrentUserTasteProfile(
             AND note.space_id = descriptor.space_id
           JOIN users actor ON actor.id = note.author_user_id
           WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
-            AND note.space_id = ? AND note.state = 'submitted' AND note.deleted_at IS NULL
+            AND EXISTS (SELECT 1 FROM space_memberships membership
+              WHERE membership.space_id = note.space_id AND membership.user_id = actor.id
+                AND membership.status = 'active')
+            AND note.state = 'submitted' AND note.deleted_at IS NULL
           GROUP BY descriptor.descriptor_code
           ORDER BY uses DESC, descriptor.descriptor_code
           LIMIT 10`,
         )
-        .bind(principal.firebaseUid, spaceId)
+        .bind(principal.firebaseUid)
         .all<{ descriptor_code: string; uses: number }>()
     : { results: [] };
   return {
@@ -2338,9 +2400,14 @@ export async function runDeterministicAssistantTurn(
   }
 
   let tasteProfile: AssistantTasteProfile | null = null;
+  const tasteStatements: AssistantLanguageStatement[] = [];
   if (requestsTasteProfile(options.request.message)) {
     const profileStartedAt = Date.now();
-    tasteProfile = await getCurrentUserTasteProfile(database, options.principal, options.spaceId);
+    tasteProfile = await getCurrentUserTasteProfile(database, options.principal);
+    const full = await getTasteProfile(database, options.principal);
+    if (full !== null && full.confidence !== "insufficient") {
+      tasteStatements.push(tasteStatement(full));
+    }
     await auditToolRun(database, {
       actorId: spaces[0]!.actor_user_id,
       arguments: {
@@ -2549,6 +2616,7 @@ export async function runDeterministicAssistantTurn(
   library.grapes.splice(3);
   for (const source of library.sources) citationMap.set(source.id, source);
   const groundStatements = [
+    ...tasteStatements,
     ...statsStatements,
     ...(collectionStatement === null ? [] : [collectionStatement]),
     ...semanticStatements,

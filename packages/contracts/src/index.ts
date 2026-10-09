@@ -12,5 +12,6 @@ export * from "./research";
 export * from "./session";
 export * from "./spaces";
 export * from "./stats";
+export * from "./taste";
 export * from "./tasting-sessions";
 export * from "./wine-memory";
