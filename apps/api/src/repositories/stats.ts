@@ -43,6 +43,51 @@ function period(column: string, query: WineStatsQuery): Filter {
   };
 }
 
+/**
+ * The narrowing to one type, country, region or grape, as a condition on a
+ * wine id: every count — notes, purchases, bottles, wines — follows the wine.
+ */
+function wineMatch(column: string, query: WineStatsQuery): Filter {
+  const conditions: Filter[] = [];
+  if (query.type !== undefined) {
+    conditions.push({
+      binds: [query.type],
+      sql: "coalesce(narrowed.wine_type_free, narrowed.wine_type) = ?",
+    });
+  }
+  if (query.country !== undefined) {
+    conditions.push({ binds: [query.country], sql: "narrowed.country_code = ?" });
+  }
+  if (query.region !== undefined) {
+    conditions.push({
+      binds: [query.region],
+      sql: "lower(trim(narrowed.region)) = lower(trim(?))",
+    });
+  }
+  if (query.grape !== undefined) {
+    conditions.push({
+      binds: [query.grape],
+      sql: `EXISTS (SELECT 1 FROM wine_grapes narrowed_grape
+        WHERE narrowed_grape.wine_id = narrowed.id
+          AND lower(trim(narrowed_grape.name_snapshot)) = lower(trim(?)))`,
+    });
+  }
+  if (conditions.length === 0) return { binds: [], sql: "1 = 1" };
+  const all = join(...conditions);
+  return {
+    binds: all.binds,
+    sql: `${column} IN (SELECT narrowed.id FROM wine_records narrowed WHERE ${all.sql})`,
+  };
+}
+
+/** The same scope and period, without narrowing to a wine's attributes. */
+function unnarrowed(query: WineStatsQuery): WineStatsQuery {
+  return {
+    ...(query.from === undefined ? {} : { from: query.from }),
+    ...(query.to === undefined ? {} : { to: query.to }),
+  };
+}
+
 /** Submitted notes in scope; in a Space, only those of current members. */
 function notesIn(scope: Scope, query: WineStatsQuery): Filter {
   return join(
@@ -57,6 +102,7 @@ function notesIn(scope: Scope, query: WineStatsQuery): Filter {
         }
       : { binds: [scope.ownerId], sql: "note.author_user_id = ?" },
     period("note.tasted_at", query),
+    wineMatch("note.wine_id", query),
   );
 }
 
@@ -68,6 +114,7 @@ function purchasesIn(scope: Scope, query: WineStatsQuery): Filter {
       ? { binds: [], sql: "1 = 1" }
       : { binds: [scope.ownerId], sql: "purchase.purchaser_user_id = ?" },
     period("purchase.purchased_at", query),
+    wineMatch("purchase.wine_id", query),
   );
 }
 
@@ -79,6 +126,7 @@ function bottlesIn(scope: Scope, query: WineStatsQuery): Filter {
       ? { binds: [], sql: "1 = 1" }
       : { binds: [scope.ownerId], sql: "bottle.created_by_user_id = ?" },
     period("bottle.acquired_at", query),
+    wineMatch("bottle.wine_id", query),
   );
 }
 
@@ -97,6 +145,7 @@ function winesIn(scope: Scope, query: WineStatsQuery): Filter {
       ? { binds: [], sql: "1 = 1" }
       : { binds: [scope.ownerId], sql: "recorded.created_by_user_id = ?" },
     period("recorded.created_at", query),
+    wineMatch("recorded.id", query),
   );
   return {
     binds: [...recorded.binds, ...notes.binds, ...purchases.binds, ...bottles.binds],
@@ -131,6 +180,8 @@ async function computeStats(
   const purchases = purchasesIn(scope, query);
   const bottles = bottlesIn(scope, query);
   const wines = winesIn(scope, query);
+  const everyWine = winesIn(scope, unnarrowed(query));
+  const wishlistMatch = wineMatch("item.wine_id", query);
   const statement = (sql: string, binds: Bind[]) => database.prepare(sql).bind(...binds);
 
   const [
@@ -150,6 +201,10 @@ async function computeStats(
     cellarStates,
     cellarDays,
     wishlist,
+    facetTypes,
+    facetCountries,
+    facetRegions,
+    facetGrapes,
   ] = await database.batch([
     statement(
       `SELECT COUNT(*) AS total, COUNT(note.score_100) AS scored,
@@ -254,8 +309,38 @@ async function computeStats(
     statement(
       `SELECT COUNT(*) AS active FROM wishlist_items item
       WHERE ${spaceFilter("item", scope).sql} AND item.state = 'active' AND item.deleted_at IS NULL
-        ${scope.ownerId === null ? "" : "AND item.created_by_user_id = ?"}`,
-      [JSON.stringify(scope.spaceIds), ...(scope.ownerId === null ? [] : [scope.ownerId])],
+        ${scope.ownerId === null ? "" : "AND item.created_by_user_id = ?"}
+        AND ${wishlistMatch.sql}`,
+      [
+        JSON.stringify(scope.spaceIds),
+        ...(scope.ownerId === null ? [] : [scope.ownerId]),
+        ...wishlistMatch.binds,
+      ],
+    ),
+    // What the counts can be narrowed to: everything in scope and period.
+    statement(
+      `SELECT DISTINCT coalesce(wine.wine_type_free, wine.wine_type) AS value
+      FROM wine_records wine WHERE ${everyWine.sql}
+        AND coalesce(wine.wine_type_free, wine.wine_type) IS NOT NULL ORDER BY value`,
+      everyWine.binds,
+    ),
+    statement(
+      `SELECT DISTINCT wine.country_code AS value FROM wine_records wine
+      WHERE ${everyWine.sql} AND wine.country_code IS NOT NULL ORDER BY value`,
+      everyWine.binds,
+    ),
+    statement(
+      `SELECT min(trim(wine.region)) AS value FROM wine_records wine
+      WHERE ${everyWine.sql} AND wine.region IS NOT NULL AND trim(wine.region) <> ''
+      GROUP BY lower(trim(wine.region)) ORDER BY value LIMIT 300`,
+      everyWine.binds,
+    ),
+    statement(
+      `SELECT min(trim(grape.name_snapshot)) AS value
+      FROM wine_grapes grape JOIN wine_records wine ON wine.id = grape.wine_id
+      WHERE ${everyWine.sql} AND trim(grape.name_snapshot) <> ''
+      GROUP BY lower(trim(grape.name_snapshot)) ORDER BY value LIMIT 300`,
+      everyWine.binds,
     ),
   ]);
 
@@ -354,8 +439,23 @@ async function computeStats(
       key: row.key,
     }));
 
+  const values = (result: D1Result | undefined) =>
+    rows<{ value: string }>(result).map((row) => row.value);
+
   return {
     bestValue,
+    facets: {
+      countries: values(facetCountries),
+      grapes: values(facetGrapes),
+      regions: values(facetRegions),
+      types: values(facetTypes),
+    },
+    filters: {
+      country: query.country ?? null,
+      grape: query.grape ?? null,
+      region: query.region ?? null,
+      type: query.type ?? null,
+    },
     cellar: {
       averageDaysToOpen: days === null ? null : Math.round(days),
       finished: states.get("finished") ?? 0,

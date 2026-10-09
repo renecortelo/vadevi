@@ -726,7 +726,7 @@
     "identifyBody": "Escaneja un codi o llegeix una etiqueta, i revisa cada camp abans de desar.",
     "libraryTitle": "Biblioteca",
     "libraryBody": "Raïms, denominacions, estils i mètodes.",
-    "statsTitle": "Els meus números",
+    "statsTitle": "Llibre de celler",
     "statsBody": "El que tastes, compres i guardes, comptat."
   },
   "cellar": {
@@ -1351,10 +1351,10 @@
   },
   "stats": {
     "eyebrow": "Comptat dels teus registres",
-    "title": "Els meus números",
+    "title": "Llibre de celler",
     "intro": "El que has tastat, comprat i guardat, comptat a partir del que vas registrar; res estimat.",
-    "scopeLabel": "De qui",
-    "scopePersonal": "Només el meu, a tots els Espais",
+    "scopeLabel": "Espai",
+    "scopePersonal": "Tots els meus Espais — només el meu",
     "scopeSpace": "{{name}} — de tothom",
     "periodLabel": "Període",
     "period": {
@@ -1382,8 +1382,7 @@
       "90_94": "90–94",
       "95_100": "95–100"
     },
-    "answers": "El compraria: {{buy}} · el tornaria a beure: {{again}} · memorables: {{memorable}}",
-    "pairing": "maridatges valorats amb {{value}} de 5 de mitjana",
+    "pairing": "Maridatges",
     "topWines": "Millor puntuats",
     "winesTitle": "Què beus",
     "byType": "Per tipus",
@@ -1407,6 +1406,27 @@
     "daysToOpen_one": "Una ampolla espera {{count}} dia de mitjana abans d'obrir-se.",
     "daysToOpen_other": "Una ampolla espera {{count}} dies de mitjana abans d'obrir-se.",
     "monthsTitle": "Tasts per mes",
-    "askVicenc": "Pregunta-li a Vicenç pels teus números"
+    "askVicenc": "Pregunta-li a Vicenç pels teus números",
+    "wouldBuy": "El compraria",
+    "wouldDrinkAgain": "El tornaria a beure",
+    "memorable": "Memorables",
+    "answer": {
+      "yes": "Sí",
+      "unsure": "No ho sé",
+      "no": "No"
+    },
+    "ofTastings_one": "{{value}} de {{count}} tast",
+    "ofTastings_other": "{{value}} de {{count}} tasts",
+    "ofFive": "{{value}} de 5 de mitjana",
+    "filter": {
+      "type": "Tipus",
+      "country": "País",
+      "region": "Regió",
+      "grape": "Raïm",
+      "any": "Tots",
+      "clear": "Treu els filtres"
+    },
+    "emptyNarrowed": "Res no coincideix amb aquests filtres en aquest període.",
+    "narrowHint": "Toca un nom per veure tot el llibre només d'això."
   }
 }

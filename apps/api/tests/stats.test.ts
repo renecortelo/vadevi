@@ -123,6 +123,10 @@ describe("a reader's numbers", () => {
       purchase(couple, third, ownerId, 1_000, "USD", 1),
       bottle(couple, white, peerId, "owned", null),
       bottle(couple, third, ownerId, "opened", "2026-05-11T12:00:00.000Z"),
+      env.DB.prepare(
+        `INSERT INTO wine_grapes (id, space_id, wine_id, name_snapshot, position, created_at, updated_at)
+          VALUES (?, ?, ?, 'Tempranillo', 0, ?, ?)`,
+      ).bind(ulid(), personal, rioja, now, now),
     ]);
 
     // Mine, wherever they are: two notes, my purchases, my bottle.
@@ -167,6 +171,28 @@ describe("a reader's numbers", () => {
       ["USD", 1_000],
     ]);
     expect(space.cellar).toMatchObject({ opened: 1, owned: 1 });
+
+    // Narrowed to one grape, or one type: every count follows the wine, and
+    // what it can be narrowed to stays whole.
+    const tempranillo = WineStatsResponseSchema.parse(
+      (await stats(ownerToken, "/api/v1/me/stats?grape=tempranillo")).body,
+    ).data;
+    expect(tempranillo.wines.total).toBe(1);
+    expect(tempranillo.tastings).toMatchObject({ averageScore: 92, total: 1 });
+    expect(tempranillo.spending.map((row) => row.currency)).toEqual(["EUR"]);
+    expect(tempranillo.filters.grape).toBe("tempranillo");
+    expect(tempranillo.facets).toEqual({
+      countries: ["ES"],
+      grapes: ["Tempranillo"],
+      regions: ["Rioja", "Rías Baixas"],
+      types: ["red", "white"],
+    });
+    const whites = WineStatsResponseSchema.parse(
+      (await stats(ownerToken, `/api/v1/spaces/${couple}/stats?type=white&country=ES`)).body,
+    ).data;
+    expect(whites.wines.total).toBe(1);
+    expect(whites.tastings.total).toBe(2);
+    expect(whites.cellar).toMatchObject({ opened: 0, owned: 1 });
 
     // A period with nothing in it counts nothing.
     const later = WineStatsResponseSchema.parse(

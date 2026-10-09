@@ -726,7 +726,7 @@
     "identifyBody": "Scansiona un codice o leggi un'etichetta, poi controlla ogni campo prima di salvare.",
     "libraryTitle": "Biblioteca",
     "libraryBody": "Vitigni, denominazioni, stili e metodi.",
-    "statsTitle": "I miei numeri",
+    "statsTitle": "Libro di cantina",
     "statsBody": "Ciò che degusti, compri e conservi, contato."
   },
   "cellar": {
@@ -1351,10 +1351,10 @@
   },
   "stats": {
     "eyebrow": "Contato dai tuoi registri",
-    "title": "I miei numeri",
+    "title": "Libro di cantina",
     "intro": "Ciò che hai degustato, comprato e conservato, contato da ciò che hai registrato; nulla di stimato.",
-    "scopeLabel": "Di chi",
-    "scopePersonal": "Solo i miei, in tutti gli Spazi",
+    "scopeLabel": "Spazio",
+    "scopePersonal": "Tutti i miei Spazi — solo i miei",
     "scopeSpace": "{{name}} — di tutti",
     "periodLabel": "Periodo",
     "period": {
@@ -1382,8 +1382,7 @@
       "90_94": "90–94",
       "95_100": "95–100"
     },
-    "answers": "Lo ricomprerei: {{buy}} · lo riberrei: {{again}} · memorabili: {{memorable}}",
-    "pairing": "abbinamenti valutati {{value}} su 5 in media",
+    "pairing": "Abbinamenti",
     "topWines": "I più votati",
     "winesTitle": "Cosa bevi",
     "byType": "Per tipo",
@@ -1407,6 +1406,27 @@
     "daysToOpen_one": "Una bottiglia aspetta in media {{count}} giorno prima di essere aperta.",
     "daysToOpen_other": "Una bottiglia aspetta in media {{count}} giorni prima di essere aperta.",
     "monthsTitle": "Degustazioni per mese",
-    "askVicenc": "Chiedi a Vicenç dei tuoi numeri"
+    "askVicenc": "Chiedi a Vicenç dei tuoi numeri",
+    "wouldBuy": "Lo ricomprerei",
+    "wouldDrinkAgain": "Lo riberrei",
+    "memorable": "Memorabili",
+    "answer": {
+      "yes": "Sì",
+      "unsure": "Non so",
+      "no": "No"
+    },
+    "ofTastings_one": "{{value}} su {{count}} degustazione",
+    "ofTastings_other": "{{value}} su {{count}} degustazioni",
+    "ofFive": "{{value}} su 5 in media",
+    "filter": {
+      "type": "Tipo",
+      "country": "Paese",
+      "region": "Regione",
+      "grape": "Vitigno",
+      "any": "Tutti",
+      "clear": "Togli i filtri"
+    },
+    "emptyNarrowed": "Niente corrisponde a questi filtri in questo periodo.",
+    "narrowHint": "Tocca un nome per vedere tutto il libro solo per quello."
   }
 }

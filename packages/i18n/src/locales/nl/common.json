@@ -726,7 +726,7 @@
     "identifyBody": "Scan een code of lees een etiket en controleer elk veld voor het opslaan.",
     "libraryTitle": "Bibliotheek",
     "libraryBody": "Druiven, benamingen, stijlen en methoden.",
-    "statsTitle": "Mijn cijfers",
+    "statsTitle": "Kelderboek",
     "statsBody": "Wat je proeft, koopt en bewaart, geteld."
   },
   "cellar": {
@@ -1351,10 +1351,10 @@
   },
   "stats": {
     "eyebrow": "Geteld uit je registraties",
-    "title": "Mijn cijfers",
+    "title": "Kelderboek",
     "intro": "Wat je hebt geproefd, gekocht en bewaard, geteld uit wat je hebt vastgelegd; niets geschat.",
-    "scopeLabel": "Van wie",
-    "scopePersonal": "Alleen de mijne, in alle Ruimtes",
+    "scopeLabel": "Ruimte",
+    "scopePersonal": "Al mijn Ruimtes — alleen de mijne",
     "scopeSpace": "{{name}} — van iedereen",
     "periodLabel": "Periode",
     "period": {
@@ -1382,8 +1382,7 @@
       "90_94": "90–94",
       "95_100": "95–100"
     },
-    "answers": "Zou kopen: {{buy}} · zou weer drinken: {{again}} · gedenkwaardig: {{memorable}}",
-    "pairing": "combinaties gemiddeld {{value}} van 5",
+    "pairing": "Combinaties",
     "topWines": "Best gescoord",
     "winesTitle": "Wat je drinkt",
     "byType": "Per soort",
@@ -1407,6 +1406,27 @@
     "daysToOpen_one": "Een fles wacht gemiddeld {{count}} dag voordat hij opengaat.",
     "daysToOpen_other": "Een fles wacht gemiddeld {{count}} dagen voordat hij opengaat.",
     "monthsTitle": "Proeverijen per maand",
-    "askVicenc": "Vraag Vicenç naar je cijfers"
+    "askVicenc": "Vraag Vicenç naar je cijfers",
+    "wouldBuy": "Zou kopen",
+    "wouldDrinkAgain": "Zou weer drinken",
+    "memorable": "Gedenkwaardig",
+    "answer": {
+      "yes": "Ja",
+      "unsure": "Weet niet",
+      "no": "Nee"
+    },
+    "ofTastings_one": "{{value}} van {{count}} proeverij",
+    "ofTastings_other": "{{value}} van {{count}} proeverijen",
+    "ofFive": "gemiddeld {{value}} van 5",
+    "filter": {
+      "type": "Soort",
+      "country": "Land",
+      "region": "Regio",
+      "grape": "Druif",
+      "any": "Alle",
+      "clear": "Filters wissen"
+    },
+    "emptyNarrowed": "Niets past bij deze filters in deze periode.",
+    "narrowHint": "Tik op een naam om het hele boek alleen daarvoor te zien."
   }
 }

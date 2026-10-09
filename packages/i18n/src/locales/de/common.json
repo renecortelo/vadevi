@@ -726,7 +726,7 @@
     "identifyBody": "Scannen Sie einen Code oder lesen Sie ein Etikett und prüfen Sie jedes Feld vor dem Speichern.",
     "libraryTitle": "Bibliothek",
     "libraryBody": "Rebsorten, Herkunft, Stile und Methoden.",
-    "statsTitle": "Meine Zahlen",
+    "statsTitle": "Kellerbuch",
     "statsBody": "Was Sie verkosten, kaufen und lagern, gezählt."
   },
   "cellar": {
@@ -1351,10 +1351,10 @@
   },
   "stats": {
     "eyebrow": "Aus Ihren Einträgen gezählt",
-    "title": "Meine Zahlen",
+    "title": "Kellerbuch",
     "intro": "Was Sie verkostet, gekauft und gelagert haben, gezählt aus Ihren Einträgen; nichts geschätzt.",
-    "scopeLabel": "Wessen",
-    "scopePersonal": "Nur meine, in allen Bereichen",
+    "scopeLabel": "Bereich",
+    "scopePersonal": "Alle meine Bereiche — nur meine",
     "scopeSpace": "{{name}} — von allen",
     "periodLabel": "Zeitraum",
     "period": {
@@ -1382,8 +1382,7 @@
       "90_94": "90–94",
       "95_100": "95–100"
     },
-    "answers": "Würde kaufen: {{buy}} · würde wieder trinken: {{again}} · denkwürdig: {{memorable}}",
-    "pairing": "Kombinationen im Schnitt mit {{value}} von 5 bewertet",
+    "pairing": "Kombinationen",
     "topWines": "Am besten bewertet",
     "winesTitle": "Was Sie trinken",
     "byType": "Nach Art",
@@ -1407,6 +1406,27 @@
     "daysToOpen_one": "Eine Flasche wartet im Schnitt {{count}} Tag, bevor sie geöffnet wird.",
     "daysToOpen_other": "Eine Flasche wartet im Schnitt {{count}} Tage, bevor sie geöffnet wird.",
     "monthsTitle": "Verkostungen pro Monat",
-    "askVicenc": "Fragen Sie Vicenç nach Ihren Zahlen"
+    "askVicenc": "Fragen Sie Vicenç nach Ihren Zahlen",
+    "wouldBuy": "Würde kaufen",
+    "wouldDrinkAgain": "Würde wieder trinken",
+    "memorable": "Denkwürdig",
+    "answer": {
+      "yes": "Ja",
+      "unsure": "Weiß nicht",
+      "no": "Nein"
+    },
+    "ofTastings_one": "{{value}} von {{count}} Verkostung",
+    "ofTastings_other": "{{value}} von {{count}} Verkostungen",
+    "ofFive": "im Schnitt {{value}} von 5",
+    "filter": {
+      "type": "Art",
+      "country": "Land",
+      "region": "Region",
+      "grape": "Rebsorte",
+      "any": "Alle",
+      "clear": "Filter entfernen"
+    },
+    "emptyNarrowed": "Nichts passt in diesem Zeitraum zu diesen Filtern.",
+    "narrowHint": "Tippen Sie auf einen Namen, um das ganze Buch nur dafür zu sehen."
   }
 }

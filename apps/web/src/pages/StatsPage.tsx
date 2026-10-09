@@ -1,10 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { type CurrencyCode, fromMinorUnits, type WineStats } from "@vadevi/contracts";
-import { useState } from "react";
+import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
+import { Link, useNavigate, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { CountryIcon, GrapeVarietyIcon, RegionIcon, WineTypeIcon } from "../brand/NavIcons";
+import { trailFrom } from "../library/trail";
 import { useSession } from "../session/SessionContext";
 import { getStats, type StatsPeriod } from "../services/stats";
 
@@ -13,6 +15,10 @@ const defaultPersonalName = "Personal space";
 
 const periods = ["all", "year", "twelveMonths"] as const;
 type Period = (typeof periods)[number];
+
+/** What the counts can be narrowed to, each a query parameter of its own. */
+const facets = ["type", "country", "region", "grape"] as const;
+type Facet = (typeof facets)[number];
 
 function periodRange(period: Period, today = new Date()): StatsPeriod {
   if (period === "year") return { from: `${today.getFullYear()}-01-01` };
@@ -24,14 +30,24 @@ function periodRange(period: Period, today = new Date()): StatsPeriod {
   return {};
 }
 
-/** A list of counts as bars, each against the largest. */
-function Bars({ items }: { items: { count: number; label: string }[] }) {
+/** A list of counts as bars, each against the largest; a label may narrow to it. */
+function Bars({
+  items,
+}: {
+  items: { count: number; label: string; onSelect?: (() => void) | undefined }[];
+}) {
   const largest = Math.max(1, ...items.map((item) => item.count));
   return (
     <ul className="stats-bars">
       {items.map((item) => (
         <li key={item.label}>
-          <span className="stats-bars__label">{item.label}</span>
+          {item.onSelect === undefined ? (
+            <span className="stats-bars__label">{item.label}</span>
+          ) : (
+            <button className="stats-bars__label" onClick={item.onSelect} type="button">
+              {item.label}
+            </button>
+          )}
           <span aria-hidden="true" className="stats-bars__track">
             <span style={{ inlineSize: `${(item.count / largest) * 100}%` }} />
           </span>
@@ -42,23 +58,123 @@ function Bars({ items }: { items: { count: number; label: string }[] }) {
   );
 }
 
+/** Yes, unsure and no as one bar split three ways, with its own key. */
+function SplitBar({
+  label,
+  parts,
+}: {
+  label: string;
+  parts: { count: number; key: "no" | "unsure" | "yes"; label: string }[];
+}) {
+  const total = parts.reduce((sum, part) => sum + part.count, 0);
+  return (
+    <figure className="stats-split">
+      <figcaption>{label}</figcaption>
+      {total === 0 ? (
+        <p className="section-help">—</p>
+      ) : (
+        <>
+          <div aria-hidden="true" className="stats-split__bar">
+            {parts.map((part) =>
+              part.count === 0 ? null : (
+                <span
+                  data-answer={part.key}
+                  key={part.key}
+                  style={{ inlineSize: `${(part.count / total) * 100}%` }}
+                />
+              ),
+            )}
+          </div>
+          <ul className="stats-split__key">
+            {parts.map((part) => (
+              <li data-answer={part.key} key={part.key}>
+                {part.label} <strong>{part.count}</strong>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </figure>
+  );
+}
+
+/** One value against its scale: "12 of 40", "3.8 of 5". */
+function Meter({
+  label,
+  max,
+  shown,
+  value,
+}: {
+  label: string;
+  max: number;
+  shown: string;
+  value: number;
+}) {
+  return (
+    <figure className="stats-split">
+      <figcaption>{label}</figcaption>
+      <div aria-hidden="true" className="stats-split__bar">
+        <span
+          data-answer="yes"
+          style={{ inlineSize: `${max === 0 ? 0 : Math.min(100, (value / max) * 100)}%` }}
+        />
+      </div>
+      <p className="stats-split__value">{shown}</p>
+    </figure>
+  );
+}
+
+/** A breakdown's heading: its icon and name on a band of their own. */
+function GroupTitle({ children, icon }: { children: ReactNode; icon: ReactNode }) {
+  return (
+    <h3 className="stats-group__title">
+      {icon}
+      <span>{children}</span>
+    </h3>
+  );
+}
+
 /**
- * The reader's numbers: what they have tasted, bought and kept — their own
- * across every Space, or everyone's in one Space — counted from the records
- * and nothing else.
+ * The reader's cellar book: what they have tasted, bought and kept — their
+ * own across every Space, or everyone's in one Space, narrowed to a type, a
+ * country, a region or a grape — counted from the records and nothing else.
+ * The view lives in the address, so a wine opened from here comes back to it.
  */
 export function StatsPage() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
-  const { bootstrap } = useSession();
-  const [scope, setScope] = useState<string>("personal");
-  const [period, setPeriod] = useState<Period>("all");
+  const { bootstrap, updateProfile } = useSession();
+  const navigate = useNavigate();
+  const [search, setSearch] = useSearchParams();
+  const scope = search.get("space") ?? "personal";
+  const periodParameter = search.get("period");
+  const period: Period = periods.includes(periodParameter as Period)
+    ? (periodParameter as Period)
+    : "all";
+  const narrowed = Object.fromEntries(
+    facets.flatMap((facet) => {
+      const value = search.get(facet);
+      return value === null || value === "" ? [] : [[facet, value]];
+    }),
+  ) as Partial<Record<Facet, string>>;
   const spaceId = scope === "personal" ? null : scope;
+
+  const update = (changes: Record<string, string | null>) => {
+    const next = new URLSearchParams(search);
+    for (const [key, value] of Object.entries(changes)) {
+      if (value === null || value === "") next.delete(key);
+      else next.set(key, value);
+    }
+    setSearch(next, { replace: true });
+  };
 
   const query = useQuery({
     enabled: user !== null,
-    queryFn: ({ signal }) => getStats(user!, spaceId, periodRange(period), signal),
-    queryKey: ["stats", spaceId, period],
+    // The last numbers stay on screen while the next ones are counted.
+    placeholderData: keepPreviousData,
+    queryFn: ({ signal }) =>
+      getStats(user!, spaceId, { ...periodRange(period), ...narrowed }, signal),
+    queryKey: ["stats", spaceId, period, narrowed],
   });
   const stats: WineStats | null = query.data ?? null;
 
@@ -73,16 +189,45 @@ export function StatsPage() {
       : (new Intl.DisplayNames([i18n.language], { type: "region" }).of(code) ?? code);
   const typeName = (type: string) =>
     i18n.exists(`quickLog.wineType.${type}`) ? t(`quickLog.wineType.${type}`) : t("stats.unknown");
+  const facetLabel = (facet: Facet, value: string) =>
+    facet === "type" ? typeName(value) : facet === "country" ? countryName(value) : value;
+
+  // A wine opens in its own Space: one in another is reached by moving there
+  // first, and the page it opens shows the way back here.
   const activeSpaceId = bootstrap.data.user.activeSpaceId;
-  const wineLink = (wine: { spaceId: string; wineId: string; wineName: string }) =>
-    // A wine opens where it lives: only the active Space's wines are reachable.
-    wine.spaceId === activeSpaceId ? (
-      <Link className="text-link" to={`/wines/${wine.wineId}/evidence`}>
-        {wine.wineName}
-      </Link>
-    ) : (
-      wine.wineName
-    );
+  const backHere = trailFrom(t("stats.title"), `/stats${search.size === 0 ? "" : `?${search}`}`);
+  const openWine = async (wine: { spaceId: string; wineId: string }) => {
+    if (wine.spaceId !== activeSpaceId) await updateProfile({ activeSpaceId: wine.spaceId });
+    void navigate(`/wines/${wine.wineId}/evidence`, { state: backHere });
+  };
+  const wineLink = (wine: { spaceId: string; wineId: string; wineName: string }) => (
+    <Link
+      className="text-link"
+      onClick={(event) => {
+        if (wine.spaceId === activeSpaceId) return;
+        event.preventDefault();
+        void openWine(wine);
+      }}
+      state={backHere}
+      to={`/wines/${wine.wineId}/evidence`}
+    >
+      {wine.wineName}
+    </Link>
+  );
+  const spaceName = (space: (typeof bootstrap.data.spaces)[number]) =>
+    space.type === "personal" && space.name === defaultPersonalName
+      ? t("spaces.type.personal")
+      : space.name;
+  const answers = (counts: { no: number; unsure: number; yes: number }) =>
+    (["yes", "unsure", "no"] as const).map((key) => ({
+      count: counts[key],
+      key,
+      label: t(`stats.answer.${key}`),
+    }));
+  const anyNarrowing = Object.keys(narrowed).length > 0;
+  // A bar narrows the counts to itself, unless they already are.
+  const narrowTo = (facet: Facet, value: string) =>
+    narrowed[facet] === value || value === "unknown" ? undefined : () => update({ [facet]: value });
 
   return (
     <section className="library-page stats-page">
@@ -97,16 +242,11 @@ export function StatsPage() {
       <div className="stats-controls">
         <label>
           <span>{t("stats.scopeLabel")}</span>
-          <select onChange={(event) => setScope(event.target.value)} value={scope}>
+          <select onChange={(event) => update({ space: event.target.value })} value={scope}>
             <option value="personal">{t("stats.scopePersonal")}</option>
             {bootstrap.data.spaces.map((space) => (
               <option key={space.id} value={space.id}>
-                {t("stats.scopeSpace", {
-                  name:
-                    space.type === "personal" && space.name === defaultPersonalName
-                      ? t("spaces.type.personal")
-                      : space.name,
-                })}
+                {t("stats.scopeSpace", { name: spaceName(space) })}
               </option>
             ))}
           </select>
@@ -116,7 +256,7 @@ export function StatsPage() {
             <button
               aria-pressed={period === option}
               key={option}
-              onClick={() => setPeriod(option)}
+              onClick={() => update({ period: option === "all" ? null : option })}
               type="button"
             >
               {t(`stats.period.${option}`)}
@@ -125,12 +265,60 @@ export function StatsPage() {
         </div>
       </div>
 
+      {stats === null ? null : (
+        <div className="stats-controls stats-filters">
+          {facets.map((facet) => {
+            const options =
+              facet === "type"
+                ? stats.facets.types
+                : facet === "country"
+                  ? stats.facets.countries
+                  : facet === "region"
+                    ? stats.facets.regions
+                    : stats.facets.grapes;
+            const current = narrowed[facet] ?? "";
+            return (
+              <label key={facet}>
+                <span>{t(`stats.filter.${facet}`)}</span>
+                <select
+                  disabled={options.length === 0 && current === ""}
+                  onChange={(event) => update({ [facet]: event.target.value })}
+                  value={current}
+                >
+                  <option value="">{t("stats.filter.any")}</option>
+                  {/* A narrowing typed into the address still shows as chosen. */}
+                  {[...options, ...(current === "" || options.includes(current) ? [] : [current])]
+                    .map((value) => ({ label: facetLabel(facet, value), value }))
+                    .sort((left, right) => left.label.localeCompare(right.label, i18n.language))
+                    .map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                </select>
+              </label>
+            );
+          })}
+          {anyNarrowing ? (
+            <button
+              className="action-link action-link--secondary"
+              onClick={() => update({ country: null, grape: null, region: null, type: null })}
+              type="button"
+            >
+              {t("stats.filter.clear")}
+            </button>
+          ) : null}
+        </div>
+      )}
+
       {stats === null ? (
         <p role={query.isError ? "alert" : "status"}>
           {query.isError ? t("stats.error") : t("stats.loading")}
         </p>
       ) : stats.wines.total === 0 && stats.tastings.total === 0 ? (
-        <p className="settings-card">{t("stats.empty")}</p>
+        <p className="settings-card">
+          {anyNarrowing ? t("stats.emptyNarrowed") : t("stats.empty")}
+        </p>
       ) : (
         <>
           <dl className="stats-tiles">
@@ -152,25 +340,43 @@ export function StatsPage() {
             ))}
           </dl>
 
-          {stats.tastings.scored === 0 ? null : (
+          {stats.tastings.total === 0 ? null : (
             <section aria-labelledby="stats-scores" className="settings-card">
               <h2 id="stats-scores">{t("stats.scoresTitle")}</h2>
-              <Bars
-                items={stats.tastings.scoreBands.map((band) => ({
-                  count: band.count,
-                  label: t(`stats.band.${band.band}`),
-                }))}
-              />
-              <p className="section-help">
-                {t("stats.answers", {
-                  again: stats.tastings.wouldDrinkAgain.yes,
-                  buy: stats.tastings.wouldBuy.yes,
-                  memorable: stats.tastings.memorable,
-                })}
-                {stats.tastings.pairingSuccessAverage === null
-                  ? null
-                  : ` · ${t("stats.pairing", { value: number(stats.tastings.pairingSuccessAverage) })}`}
-              </p>
+              {stats.tastings.scored === 0 ? null : (
+                <Bars
+                  items={stats.tastings.scoreBands.map((band) => ({
+                    count: band.count,
+                    label: t(`stats.band.${band.band}`),
+                  }))}
+                />
+              )}
+              <div className="stats-answers">
+                <SplitBar label={t("stats.wouldBuy")} parts={answers(stats.tastings.wouldBuy)} />
+                <SplitBar
+                  label={t("stats.wouldDrinkAgain")}
+                  parts={answers(stats.tastings.wouldDrinkAgain)}
+                />
+                <Meter
+                  label={t("stats.memorable")}
+                  max={stats.tastings.total}
+                  shown={t("stats.ofTastings", {
+                    count: stats.tastings.total,
+                    value: stats.tastings.memorable,
+                  })}
+                  value={stats.tastings.memorable}
+                />
+                {stats.tastings.pairingSuccessAverage === null ? null : (
+                  <Meter
+                    label={t("stats.pairing")}
+                    max={5}
+                    shown={t("stats.ofFive", {
+                      value: number(stats.tastings.pairingSuccessAverage),
+                    })}
+                    value={stats.tastings.pairingSuccessAverage}
+                  />
+                )}
+              </div>
               {stats.tastings.topWines.length === 0 ? null : (
                 <>
                   <h3>{t("stats.topWines")}</h3>
@@ -189,41 +395,49 @@ export function StatsPage() {
 
           <section aria-labelledby="stats-wines" className="settings-card">
             <h2 id="stats-wines">{t("stats.winesTitle")}</h2>
+            <p className="section-help">{t("stats.narrowHint")}</p>
             <div className="stats-columns">
-              <div>
-                <h3>{t("stats.byType")}</h3>
+              <div className="stats-group">
+                <GroupTitle icon={<WineTypeIcon />}>{t("stats.byType")}</GroupTitle>
                 <Bars
                   items={stats.wines.byType.map((row) => ({
                     count: row.count,
                     label: typeName(row.key),
+                    onSelect: narrowTo("type", row.key),
                   }))}
                 />
               </div>
-              <div>
-                <h3>{t("stats.byCountry")}</h3>
+              <div className="stats-group">
+                <GroupTitle icon={<CountryIcon />}>{t("stats.byCountry")}</GroupTitle>
                 <Bars
                   items={stats.wines.byCountry.map((row) => ({
                     count: row.count,
                     label: countryName(row.key),
+                    onSelect: narrowTo("country", row.key),
                   }))}
                 />
               </div>
               {stats.wines.byRegion.length === 0 ? null : (
-                <div>
-                  <h3>{t("stats.byRegion")}</h3>
+                <div className="stats-group">
+                  <GroupTitle icon={<RegionIcon />}>{t("stats.byRegion")}</GroupTitle>
                   <Bars
                     items={stats.wines.byRegion.map((row) => ({
                       count: row.count,
                       label: row.key,
+                      onSelect: narrowTo("region", row.key),
                     }))}
                   />
                 </div>
               )}
               {stats.wines.byGrape.length === 0 ? null : (
-                <div>
-                  <h3>{t("stats.byGrape")}</h3>
+                <div className="stats-group">
+                  <GroupTitle icon={<GrapeVarietyIcon />}>{t("stats.byGrape")}</GroupTitle>
                   <Bars
-                    items={stats.wines.byGrape.map((row) => ({ count: row.count, label: row.key }))}
+                    items={stats.wines.byGrape.map((row) => ({
+                      count: row.count,
+                      label: row.key,
+                      onSelect: narrowTo("grape", row.key),
+                    }))}
                   />
                 </div>
               )}

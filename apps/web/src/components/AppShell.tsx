@@ -12,8 +12,8 @@ import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
 import { ThemeButton } from "./ThemeToggle";
 import { SyncStatus } from "./SyncStatus";
-import { useState } from "react";
-import { NavLink, Outlet, useNavigate } from "react-router";
+import { useEffect, useState } from "react";
+import { NavLink, Outlet, useLocation, useNavigate, useNavigationType } from "react-router";
 import { useTranslation } from "react-i18next";
 
 import { useSession } from "../session/SessionContext";
@@ -45,6 +45,15 @@ export function AppShell() {
   const { bootstrap, isUpdating, signOut, updateProfile } = useSession();
   const { t } = useTranslation();
   const navigate = useNavigate();
+  // A new page opens at its top. It used to keep the last page's scroll, so a
+  // wine opened from far down a list opened halfway down, its way back out of
+  // sight. Going back keeps the browser's own place; a change of filter on the
+  // same page is not a new page.
+  const { pathname } = useLocation();
+  const navigationType = useNavigationType();
+  useEffect(() => {
+    if (navigationType !== "POP") globalThis.scrollTo?.(0, 0);
+  }, [navigationType, pathname]);
   const [switchError, setSwitchError] = useState(false);
   const activeSpaceId = bootstrap.data.user.activeSpaceId;
 

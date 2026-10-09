@@ -11,6 +11,7 @@ import { CurrencyCodeSchema } from "./cellar";
  * Money is never added across currencies: each currency is its own total.
  */
 const IsoDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
+const FacetSchema = z.string().trim().min(1).max(120);
 
 export const WineStatsQuerySchema = z
   .object({
@@ -18,6 +19,18 @@ export const WineStatsQuerySchema = z
     from: IsoDateSchema.optional().openapi({ param: { in: "query", name: "from" } }),
     /** The last day counted (inclusive); everything since when absent. */
     to: IsoDateSchema.optional().openapi({ param: { in: "query", name: "to" } }),
+    /** Only wines of this type ("red", "sparkling"…). */
+    type: FacetSchema.optional().openapi({ param: { in: "query", name: "type" } }),
+    /** Only wines of this country (ISO 3166-1 alpha-2). */
+    country: z
+      .string()
+      .regex(/^[A-Z]{2}$/)
+      .optional()
+      .openapi({ param: { in: "query", name: "country" } }),
+    /** Only wines of this region, as recorded. */
+    region: FacetSchema.optional().openapi({ param: { in: "query", name: "region" } }),
+    /** Only wines made with this grape, as recorded. */
+    grape: FacetSchema.optional().openapi({ param: { in: "query", name: "grape" } }),
   })
   .strict();
 
@@ -44,6 +57,27 @@ export const WineStatsSchema = z
         })
         .strict(),
     ),
+    /**
+     * Every type, country, region and grape in scope and period — what the
+     * counts can be narrowed to — whatever narrowing is applied now.
+     */
+    facets: z
+      .object({
+        countries: z.array(z.string()),
+        grapes: z.array(z.string()),
+        regions: z.array(z.string()),
+        types: z.array(z.string()),
+      })
+      .strict(),
+    /** The narrowing applied, as asked. */
+    filters: z
+      .object({
+        country: z.string().nullable(),
+        grape: z.string().nullable(),
+        region: z.string().nullable(),
+        type: z.string().nullable(),
+      })
+      .strict(),
     cellar: z
       .object({
         /** Days from acquiring a bottle to opening it, on average. */

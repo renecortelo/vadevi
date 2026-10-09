@@ -280,3 +280,56 @@ export function StatsIcon() {
     </Frame>
   );
 }
+
+/** By type: one glass — what kind of wine is in it. */
+export function WineTypeIcon() {
+  return (
+    <Frame>
+      <Glass transform="translate(12 5.2)" />
+    </Frame>
+  );
+}
+
+/** By country: a globe, its meridian and parallels. */
+export function CountryIcon() {
+  return (
+    <Frame>
+      <circle cx="12" cy="12" r="7.5" />
+      <path d="M4.5 12h15" />
+      <path d="M12 4.5c2.2 2.1 3.2 4.6 3.2 7.5s-1 5.4-3.2 7.5c-2.2-2.1-3.2-4.6-3.2-7.5s1-5.4 3.2-7.5Z" />
+    </Frame>
+  );
+}
+
+/** By region: a pin on the map, a grape for its head. */
+export function RegionIcon() {
+  return (
+    <Frame>
+      <path d="M12 20.2s-5.6-5.4-5.6-9.9a5.6 5.6 0 0 1 11.2 0c0 4.5-5.6 9.9-5.6 9.9Z" />
+      <circle cx="12" cy="10.3" fill="currentColor" r="1.9" stroke="none" />
+    </Frame>
+  );
+}
+
+/** By grape: a small bunch. */
+export function GrapeVarietyIcon() {
+  return (
+    <Frame>
+      <path d="M12 3.6v2.6" />
+      <g fill="currentColor" stroke="none">
+        {[
+          [10, 9],
+          [14, 9],
+          [8, 12.6],
+          [12, 12.6],
+          [16, 12.6],
+          [10, 16.2],
+          [14, 16.2],
+          [12, 19.6],
+        ].map(([cx, cy]) => (
+          <circle cx={cx} cy={cy} key={`${cx}-${cy}`} r="1.75" />
+        ))}
+      </g>
+    </Frame>
+  );
+}

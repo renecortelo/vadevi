@@ -726,7 +726,7 @@
     "identifyBody": "Scannez un code ou lisez une étiquette, puis vérifiez chaque champ avant d'enregistrer.",
     "libraryTitle": "Bibliothèque",
     "libraryBody": "Cépages, appellations, styles et méthodes.",
-    "statsTitle": "Mes chiffres",
+    "statsTitle": "Livre de cave",
     "statsBody": "Ce que vous dégustez, achetez et gardez, compté."
   },
   "cellar": {
@@ -1351,10 +1351,10 @@
   },
   "stats": {
     "eyebrow": "Compté à partir de vos notes",
-    "title": "Mes chiffres",
+    "title": "Livre de cave",
     "intro": "Ce que vous avez dégusté, acheté et gardé, compté à partir de ce que vous avez noté ; rien d'estimé.",
-    "scopeLabel": "De qui",
-    "scopePersonal": "Seulement les miens, dans tous les Espaces",
+    "scopeLabel": "Espace",
+    "scopePersonal": "Tous mes Espaces — seulement les miens",
     "scopeSpace": "{{name}} — de tous",
     "periodLabel": "Période",
     "period": {
@@ -1382,8 +1382,7 @@
       "90_94": "90–94",
       "95_100": "95–100"
     },
-    "answers": "À racheter : {{buy}} · à reboire : {{again}} · mémorables : {{memorable}}",
-    "pairing": "accords notés {{value}} sur 5 en moyenne",
+    "pairing": "Accords",
     "topWines": "Les mieux notés",
     "winesTitle": "Ce que vous buvez",
     "byType": "Par type",
@@ -1407,6 +1406,27 @@
     "daysToOpen_one": "Une bouteille attend {{count}} jour en moyenne avant d'être ouverte.",
     "daysToOpen_other": "Une bouteille attend {{count}} jours en moyenne avant d'être ouverte.",
     "monthsTitle": "Dégustations par mois",
-    "askVicenc": "Demandez à Vicenç ce que disent vos chiffres"
+    "askVicenc": "Demandez à Vicenç ce que disent vos chiffres",
+    "wouldBuy": "À racheter",
+    "wouldDrinkAgain": "À reboire",
+    "memorable": "Mémorables",
+    "answer": {
+      "yes": "Oui",
+      "unsure": "Je ne sais pas",
+      "no": "Non"
+    },
+    "ofTastings_one": "{{value}} sur {{count}} dégustation",
+    "ofTastings_other": "{{value}} sur {{count}} dégustations",
+    "ofFive": "{{value}} sur 5 en moyenne",
+    "filter": {
+      "type": "Type",
+      "country": "Pays",
+      "region": "Région",
+      "grape": "Cépage",
+      "any": "Tous",
+      "clear": "Effacer les filtres"
+    },
+    "emptyNarrowed": "Rien ne correspond à ces filtres sur cette période.",
+    "narrowHint": "Touchez un nom pour voir tout le livre pour lui seul."
   }
 }

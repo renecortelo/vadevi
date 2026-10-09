@@ -4792,3 +4792,137 @@ p {
   margin: 0;
   padding-inline-start: var(--space-5);
 }
+
+.evidence-heading__back {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+}
+
+.stats-filters label {
+  flex: 1 1 10rem;
+}
+
+.stats-filters select {
+  inline-size: 100%;
+}
+
+/* Each breakdown under a band of its own, its icon beside its name, so four
+   lists side by side read as four. */
+.stats-group {
+  align-content: start;
+  display: grid;
+  gap: var(--space-3);
+  min-inline-size: 0;
+}
+
+.settings-card .stats-group__title {
+  align-items: center;
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-md);
+  color: var(--color-plum);
+  display: flex;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+}
+
+.stats-group__title .nav-icon {
+  block-size: 1.4rem;
+  flex: none;
+  inline-size: 1.4rem;
+}
+
+button.stats-bars__label {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: start;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+}
+
+button.stats-bars__label:hover {
+  color: var(--color-plum);
+}
+
+/* Would buy, would drink again, memorable, pairings: small bars of their own. */
+.stats-answers {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  margin-block: var(--space-4);
+}
+
+.stats-split {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.stats-split figcaption {
+  font-weight: 650;
+}
+
+.stats-split__bar {
+  background: var(--color-surface-muted);
+  block-size: 0.75rem;
+  border-radius: var(--radius-pill);
+  display: flex;
+  overflow: hidden;
+}
+
+.stats-split__bar > span {
+  block-size: 100%;
+  min-inline-size: 3px;
+}
+
+[data-answer="yes"] {
+  --answer: var(--color-accent);
+}
+
+[data-answer="unsure"] {
+  --answer: color-mix(in srgb, var(--color-accent) 45%, var(--color-surface-muted));
+}
+
+[data-answer="no"] {
+  --answer: var(--color-text-muted);
+}
+
+.stats-split__bar > span[data-answer] {
+  background: var(--answer);
+}
+
+.settings-card .stats-split__key {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  gap: var(--space-1) var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.settings-card .stats-split__key li + li {
+  margin-block-start: 0;
+}
+
+.stats-split__key li::before {
+  background: var(--answer);
+  border-radius: 50%;
+  block-size: 0.6rem;
+  content: "";
+  display: inline-block;
+  inline-size: 0.6rem;
+  margin-inline-end: var(--space-1);
+}
+
+.stats-split__value {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}

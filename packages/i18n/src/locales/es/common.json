@@ -726,7 +726,7 @@
     "identifyBody": "Escanea un código o lee una etiqueta, y revisa cada campo antes de guardar.",
     "libraryTitle": "Biblioteca",
     "libraryBody": "Uvas, denominaciones, estilos y métodos.",
-    "statsTitle": "Mis números",
+    "statsTitle": "Libro de bodega",
     "statsBody": "Lo que catas, compras y guardas, contado."
   },
   "cellar": {
@@ -1351,10 +1351,10 @@
   },
   "stats": {
     "eyebrow": "Contado de tus registros",
-    "title": "Mis números",
+    "title": "Libro de bodega",
     "intro": "Lo que has catado, comprado y guardado, contado a partir de lo que registraste; nada estimado.",
-    "scopeLabel": "De quién",
-    "scopePersonal": "Solo lo mío, en todos los Espacios",
+    "scopeLabel": "Espacio",
+    "scopePersonal": "Todos mis Espacios — solo lo mío",
     "scopeSpace": "{{name}} — de todos",
     "periodLabel": "Periodo",
     "period": {
@@ -1382,8 +1382,7 @@
       "90_94": "90–94",
       "95_100": "95–100"
     },
-    "answers": "Lo compraría: {{buy}} · lo volvería a beber: {{again}} · memorables: {{memorable}}",
-    "pairing": "maridajes valorados con {{value}} de 5 de media",
+    "pairing": "Maridajes",
     "topWines": "Mejor puntuados",
     "winesTitle": "Qué bebes",
     "byType": "Por tipo",
@@ -1407,6 +1406,27 @@
     "daysToOpen_one": "Una botella espera {{count}} día de media antes de abrirse.",
     "daysToOpen_other": "Una botella espera {{count}} días de media antes de abrirse.",
     "monthsTitle": "Catas por mes",
-    "askVicenc": "Pregúntale a Vicenç por tus números"
+    "askVicenc": "Pregúntale a Vicenç por tus números",
+    "wouldBuy": "Lo compraría",
+    "wouldDrinkAgain": "Lo volvería a beber",
+    "memorable": "Memorables",
+    "answer": {
+      "yes": "Sí",
+      "unsure": "No sé",
+      "no": "No"
+    },
+    "ofTastings_one": "{{value}} de {{count}} cata",
+    "ofTastings_other": "{{value}} de {{count}} catas",
+    "ofFive": "{{value}} de 5 de media",
+    "filter": {
+      "type": "Tipo",
+      "country": "País",
+      "region": "Región",
+      "grape": "Uva",
+      "any": "Todos",
+      "clear": "Quitar filtros"
+    },
+    "emptyNarrowed": "Nada coincide con estos filtros en este periodo.",
+    "narrowHint": "Toca un nombre para ver todo el libro solo de eso."
   }
 }

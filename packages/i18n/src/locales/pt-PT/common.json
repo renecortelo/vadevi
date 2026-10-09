@@ -726,7 +726,7 @@
     "identifyBody": "Digitalize um código ou leia um rótulo e verifique cada campo antes de guardar.",
     "libraryTitle": "Biblioteca",
     "libraryBody": "Castas, denominações, estilos e métodos.",
-    "statsTitle": "Os meus números",
+    "statsTitle": "Livro de adega",
     "statsBody": "O que provas, compras e guardas, contado."
   },
   "cellar": {
@@ -1351,10 +1351,10 @@
   },
   "stats": {
     "eyebrow": "Contado a partir dos teus registos",
-    "title": "Os meus números",
+    "title": "Livro de adega",
     "intro": "O que provaste, compraste e guardaste, contado a partir do que registaste; nada estimado.",
-    "scopeLabel": "De quem",
-    "scopePersonal": "Só os meus, em todos os Espaços",
+    "scopeLabel": "Espaço",
+    "scopePersonal": "Todos os meus Espaços — só os meus",
     "scopeSpace": "{{name}} — de todos",
     "periodLabel": "Período",
     "period": {
@@ -1382,8 +1382,7 @@
       "90_94": "90–94",
       "95_100": "95–100"
     },
-    "answers": "Comprava: {{buy}} · voltava a beber: {{again}} · memoráveis: {{memorable}}",
-    "pairing": "harmonizações avaliadas com {{value}} em 5 em média",
+    "pairing": "Harmonizações",
     "topWines": "Mais bem pontuados",
     "winesTitle": "O que bebes",
     "byType": "Por tipo",
@@ -1407,6 +1406,27 @@
     "daysToOpen_one": "Uma garrafa espera em média {{count}} dia antes de ser aberta.",
     "daysToOpen_other": "Uma garrafa espera em média {{count}} dias antes de ser aberta.",
     "monthsTitle": "Provas por mês",
-    "askVicenc": "Pergunta ao Vicenç pelos teus números"
+    "askVicenc": "Pergunta ao Vicenç pelos teus números",
+    "wouldBuy": "Comprava",
+    "wouldDrinkAgain": "Voltava a beber",
+    "memorable": "Memoráveis",
+    "answer": {
+      "yes": "Sim",
+      "unsure": "Não sei",
+      "no": "Não"
+    },
+    "ofTastings_one": "{{value}} de {{count}} prova",
+    "ofTastings_other": "{{value}} de {{count}} provas",
+    "ofFive": "{{value}} em 5 em média",
+    "filter": {
+      "type": "Tipo",
+      "country": "País",
+      "region": "Região",
+      "grape": "Casta",
+      "any": "Todos",
+      "clear": "Limpar filtros"
+    },
+    "emptyNarrowed": "Nada corresponde a estes filtros neste período.",
+    "narrowHint": "Toca num nome para ver o livro todo só disso."
   }
 }

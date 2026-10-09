@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useLocation, useParams } from "react-router";
 
 import { MapLink } from "../components/MapLink";
+import { TrailBackLink } from "../library/TrailBackLink";
 import { trailFrom } from "../library/trail";
 import { TastingHistory } from "../components/TastingHistory";
 import { BottlePhotoPicker } from "../components/BottlePhotoPicker";
@@ -457,9 +458,13 @@ export function WineEvidencePage() {
           </div>
         )}
         <div className="evidence-heading__text">
-          <Link className="text-link" to="/memory">
-            ← {t("evidence.backAction")}
-          </Link>
+          {/* Reached from the cellar book, the way back to it first. */}
+          <p className="evidence-heading__back">
+            <TrailBackLink />
+            <Link className="text-link" to="/memory">
+              ← {t("evidence.backAction")}
+            </Link>
+          </p>
           <p className="eyebrow">{t("evidence.eyebrow")}</p>
           <h1>{wine?.displayName ?? t("evidence.title")}</h1>
           <p>

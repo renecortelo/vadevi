@@ -11782,6 +11782,70 @@
               "additionalProperties": false
             }
           },
+          "facets": {
+            "type": "object",
+            "properties": {
+              "countries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "grapes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "regions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "types": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "countries",
+              "grapes",
+              "regions",
+              "types"
+            ],
+            "additionalProperties": false
+          },
+          "filters": {
+            "type": "object",
+            "properties": {
+              "country": {
+                "type": "string",
+                "nullable": true
+              },
+              "grape": {
+                "type": "string",
+                "nullable": true
+              },
+              "region": {
+                "type": "string",
+                "nullable": true
+              },
+              "type": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "required": [
+              "country",
+              "grape",
+              "region",
+              "type"
+            ],
+            "additionalProperties": false
+          },
           "cellar": {
             "type": "object",
             "properties": {
@@ -12223,6 +12287,8 @@
         },
         "required": [
           "bestValue",
+          "facets",
+          "filters",
           "cellar",
           "period",
           "scope",
@@ -19061,6 +19127,45 @@
             "required": false,
             "in": "query",
             "name": "to"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "required": false,
+            "in": "query",
+            "name": "type"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "required": false,
+            "in": "query",
+            "name": "country"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "required": false,
+            "in": "query",
+            "name": "region"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "required": false,
+            "in": "query",
+            "name": "grape"
           }
         ],
         "responses": {
@@ -19136,6 +19241,45 @@
             "required": false,
             "in": "query",
             "name": "to"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "required": false,
+            "in": "query",
+            "name": "type"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "required": false,
+            "in": "query",
+            "name": "country"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "required": false,
+            "in": "query",
+            "name": "region"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "required": false,
+            "in": "query",
+            "name": "grape"
           }
         ],
         "responses": {
