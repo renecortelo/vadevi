@@ -1320,7 +1320,7 @@
     "grapePercentage": "Percentage",
     "grapeRemove": "Remove variety",
     "grapeAdd": "Add a variety",
-    "countryNone": "Not given (taken from the region)"
+    "countryNone": "Not given (taken from the region or producer)"
   },
   "tastingRead": {
     "eyebrow": "Saved tasting",

@@ -1320,7 +1320,7 @@
     "grapePercentage": "Anteil",
     "grapeRemove": "Rebsorte entfernen",
     "grapeAdd": "Rebsorte hinzufügen",
-    "countryNone": "Nicht angegeben (aus der Region)"
+    "countryNone": "Nicht angegeben (aus Region oder Erzeuger)"
   },
   "tastingRead": {
     "eyebrow": "Gespeicherte Verkostung",

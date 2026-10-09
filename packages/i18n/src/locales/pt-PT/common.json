@@ -1320,7 +1320,7 @@
     "grapePercentage": "Percentagem",
     "grapeRemove": "Remover casta",
     "grapeAdd": "Adicionar casta",
-    "countryNone": "Não indicado (deduz-se da região)"
+    "countryNone": "Não indicado (deduz-se da região ou do produtor)"
   },
   "tastingRead": {
     "eyebrow": "Prova guardada",

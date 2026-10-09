@@ -1320,7 +1320,7 @@
     "grapePercentage": "Percentuale",
     "grapeRemove": "Rimuovi vitigno",
     "grapeAdd": "Aggiungi un vitigno",
-    "countryNone": "Non indicato (si deduce dalla regione)"
+    "countryNone": "Non indicato (si deduce dalla regione o dal produttore)"
   },
   "tastingRead": {
     "eyebrow": "Degustazione salvata",

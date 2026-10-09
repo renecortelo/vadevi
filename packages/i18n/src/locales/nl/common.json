@@ -1320,7 +1320,7 @@
     "grapePercentage": "Percentage",
     "grapeRemove": "Ras verwijderen",
     "grapeAdd": "Ras toevoegen",
-    "countryNone": "Niet opgegeven (volgt uit de regio)"
+    "countryNone": "Niet opgegeven (volgt uit regio of producent)"
   },
   "tastingRead": {
     "eyebrow": "Bewaarde proeverij",

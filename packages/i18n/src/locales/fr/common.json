@@ -1320,7 +1320,7 @@
     "grapePercentage": "Pourcentage",
     "grapeRemove": "Retirer le cépage",
     "grapeAdd": "Ajouter un cépage",
-    "countryNone": "Non indiqué (déduit de la région)"
+    "countryNone": "Non indiqué (déduit de la région ou du producteur)"
   },
   "tastingRead": {
     "eyebrow": "Dégustation enregistrée",

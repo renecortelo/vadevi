@@ -126,3 +126,29 @@ export async function countryOfRegion(
   const reading = await readPlaces(database, [{ countryCode: null, id: "region", region }]);
   return reading.get("region")?.country ?? null;
 }
+
+/**
+ * The one country a producer's other wines are recorded in, among the wines
+ * the reader can see in every Space they belong to — a producer is, nearly
+ * always, in one country. Null when none is recorded, or several are.
+ */
+export async function countryOfProducer(
+  database: D1Database,
+  firebaseUid: string,
+  producerName: string,
+): Promise<string | null> {
+  const row = await database
+    .prepare(
+      `SELECT COUNT(DISTINCT wine.country_code) AS countries, MIN(wine.country_code) AS code
+      FROM wine_records wine
+      JOIN space_memberships membership ON membership.space_id = wine.space_id
+        AND membership.status = 'active'
+      JOIN users reader ON reader.id = membership.user_id
+      WHERE reader.firebase_uid = ? AND reader.deleted_at IS NULL
+        AND wine.deleted_at IS NULL AND wine.country_code IS NOT NULL
+        AND wine.normalized_producer_name = ?`,
+    )
+    .bind(firebaseUid, normalizeWineText(producerName))
+    .first<{ code: string | null; countries: number }>();
+  return row !== null && row.countries === 1 ? row.code : null;
+}

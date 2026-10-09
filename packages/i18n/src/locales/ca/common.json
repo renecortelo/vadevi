@@ -1320,7 +1320,7 @@
     "grapePercentage": "Percentatge",
     "grapeRemove": "Treu la varietat",
     "grapeAdd": "Afegeix una varietat",
-    "countryNone": "Sense indicar (es dedueix de la regió)"
+    "countryNone": "Sense indicar (es dedueix de la regió o del productor)"
   },
   "tastingRead": {
     "eyebrow": "Tast desat",

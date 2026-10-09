@@ -270,13 +270,17 @@ describe("Wine Memory and Quick Log", () => {
   it("takes the country a recorded region names, and only one it names for certain", async () => {
     const owner = await bootstrap(ownerToken);
     const spaceId = owner.data.user.activeSpaceId;
-    const record = async (region: string, countryCode?: string) => {
+    const record = async (
+      region: string | undefined,
+      countryCode?: string,
+      producerName = "Celler",
+    ) => {
       const created = await createWine(spaceId, {
-        displayName: `Vi de ${region}`,
+        displayName: `Vi de ${region ?? producerName}`,
         identityStatus: "confirmed",
         nonVintage: true,
-        producerName: "Celler",
-        region,
+        producerName,
+        ...(region === undefined ? {} : { region }),
         ...(countryCode === undefined ? {} : { countryCode }),
       });
       expect(created.response.status).toBe(201);
@@ -285,9 +289,15 @@ describe("Wine Memory and Quick Log", () => {
     // Named by an appellation Vicenç already places.
     expect((await record("DO Empordà")).countryCode).toBe("ES");
     // A country the reader chose stands, whatever the region says.
-    expect((await record("Rioja", "MX")).countryCode).toBe("MX");
-    // A misspelt region names nothing for certain, so nothing is added.
-    expect((await record("La Mancga")).countryCode).toBeNull();
+    expect((await record("Rioja", "MX", "Bodega Mexicana")).countryCode).toBe("MX");
+    // A misspelt region names nothing for certain, so nothing is added…
+    expect((await record("La Mancga", undefined, "Celler Nou")).countryCode).toBeNull();
+    // …but a producer whose other wines are all in one country brings it.
+    expect((await record(undefined, undefined, "Celler")).countryCode).toBe("ES");
+    // A producer recorded in two countries brings none.
+    await record(undefined, "MX", "Bodega Doble");
+    await record(undefined, "ES", "Bodega Doble");
+    expect((await record(undefined, undefined, "bodega doble")).countryCode).toBeNull();
   });
 
   it("stores a wine type the old column CHECK would have rejected", async () => {
