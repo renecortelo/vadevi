@@ -1,7 +1,13 @@
-import type { ProducerProposal, RegionProposal, RenameRegionsRequest } from "@vadevi/contracts";
+import type {
+  GrapeProposal,
+  ProducerProposal,
+  RegionProposal,
+  RenameRegionsRequest,
+} from "@vadevi/contracts";
 import { ulid } from "ulid";
 
 import type { FirebasePrincipal } from "../types";
+import { readGrapes } from "./grape-names";
 import { producerKey } from "./producer-names";
 import { countryOfRegion, readPlaces } from "./region-names";
 import { activeWineMemberId, normalizeWineText } from "./wine-memory";
@@ -281,4 +287,116 @@ export async function renameProducers(
       ),
   ]);
   return results[0]?.meta.changes ?? 0;
+}
+
+/**
+ * A Space's grapes written several ways — "Carignan", "Samsó", "Samso" and
+ * "Cariñena" — offered under the name the wine library gives the grape in the
+ * reader's language, or the spelling used most where the library does not
+ * know it. Null for a reader who is not a member.
+ */
+export async function proposeGrapeTidying(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  spaceId: string,
+  locale: string,
+): Promise<GrapeProposal[] | null> {
+  if ((await activeWineMemberId(database, principal, spaceId)) === null) return null;
+  const rows = await database
+    .prepare(
+      `SELECT trim(grape.name_snapshot) AS name, COUNT(DISTINCT grape.wine_id) AS wines
+      FROM wine_grapes grape
+      JOIN wine_records wine ON wine.id = grape.wine_id AND wine.deleted_at IS NULL
+        AND wine.merged_into_wine_id IS NULL
+      WHERE grape.space_id = ? AND trim(grape.name_snapshot) <> ''
+      GROUP BY trim(grape.name_snapshot)`,
+    )
+    .bind(spaceId)
+    .all<{ name: string; wines: number }>();
+  const readings = await readGrapes(
+    database,
+    rows.results.map((row) => row.name),
+    locale,
+  );
+  const grapes = new Map<string, { grape: string; wines: number }[]>();
+  for (const row of rows.results) {
+    const label = readings.get(row.name) ?? row.name;
+    grapes.set(label, [...(grapes.get(label) ?? []), { grape: row.name, wines: row.wines }]);
+  }
+  const proposals: GrapeProposal[] = [];
+  for (const [label, spellings] of grapes) {
+    const others = spellings.filter((entry) => entry.grape !== label);
+    if (others.length === 0) continue;
+    proposals.push({
+      from: others,
+      to: label,
+      unchanged: spellings.find((entry) => entry.grape === label)?.wines ?? 0,
+    });
+  }
+  return proposals
+    .sort(
+      (left, right) =>
+        right.from.reduce((sum, entry) => sum + entry.wines, 0) -
+        left.from.reduce((sum, entry) => sum + entry.wines, 0),
+    )
+    .slice(0, 50);
+}
+
+/** Rename a grape on every wine in the Space that lists it one of these ways. */
+export async function renameGrapes(
+  database: D1Database,
+  principal: FirebasePrincipal,
+  spaceId: string,
+  request: RenameRegionsRequest,
+  requestId: string,
+): Promise<number | null> {
+  const actorId = await activeWineMemberId(database, principal, spaceId);
+  if (actorId === null) return null;
+  const now = new Date().toISOString();
+  const from = JSON.stringify(request.from);
+  const results = await database.batch([
+    // The wines first, each a new version for the devices that sync it.
+    database
+      .prepare(
+        `UPDATE wine_records SET version = version + 1, updated_at = ?
+        WHERE space_id = ? AND deleted_at IS NULL AND id IN (
+          SELECT wine_id FROM wine_grapes WHERE space_id = ?
+            AND trim(name_snapshot) IN (SELECT value FROM json_each(?))
+            AND trim(name_snapshot) <> ?)`,
+      )
+      .bind(now, spaceId, spaceId, from, request.to),
+    database
+      .prepare(
+        `UPDATE wine_grapes SET name_snapshot = ?, normalized_name = ?, updated_at = ?
+        WHERE space_id = ? AND trim(name_snapshot) IN (SELECT value FROM json_each(?))
+          AND trim(name_snapshot) <> ?`,
+      )
+      .bind(request.to, normalizeWineText(request.to), now, spaceId, from, request.to),
+    database
+      .prepare(
+        `INSERT INTO change_events (
+          space_id, resource_type, resource_id, operation, resource_version, changed_at
+        )
+        SELECT space_id, 'wine_record', id, 'update', version, ?
+        FROM wine_records WHERE space_id = ? AND updated_at = ?`,
+      )
+      .bind(now, spaceId, now),
+    database
+      .prepare(
+        `INSERT INTO audit_events (
+          id, actor_user_id, space_id, action, target_type, target_id,
+          request_id, safe_metadata_json, created_at
+        ) VALUES (?, ?, ?, 'wine.grapes_renamed', 'space', ?, ?, ?, ?)`,
+      )
+      .bind(
+        ulid(),
+        actorId,
+        spaceId,
+        spaceId,
+        requestId,
+        JSON.stringify({ spellings: request.from.length }),
+        now,
+      ),
+  ]);
+  return results[1]?.meta.changes ?? 0;
 }

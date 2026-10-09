@@ -1549,15 +1549,16 @@
     }
   },
   "regionTidy": {
-    "link": "Ranger régions et producteurs",
+    "link": "Ranger les noms",
     "eyebrow": "Votre Espace",
-    "title": "Ranger régions et producteurs",
-    "intro": "La même région ou le même producteur écrit de plusieurs façons, ou une région à une lettre d'un nom enregistré. Vérifiez chaque proposition : seuls les vins de celles que vous confirmez sont renommés.",
+    "title": "Ranger les noms",
+    "intro": "Régions, producteurs et cépages écrits de plusieurs façons, ou une région à une lettre d'un nom enregistré. Vérifiez chaque proposition : seuls les vins de celles que vous confirmez sont renommés.",
     "empty": "Rien à ranger : chaque région est écrite d'une seule façon.",
     "reason": {
       "variants": "Une même région, écrite de plusieurs façons",
       "typo": "Une faute dans un nom enregistré ?",
-      "producers": "Un même producteur, écrit de plusieurs façons"
+      "producers": "Un même producteur, écrit de plusieurs façons",
+      "grapes": "Un même cépage, écrit de plusieurs façons"
     },
     "to": "Renommer en",
     "wines_one": "{{count}} vin",
@@ -1572,6 +1573,8 @@
     "error": "Le renommage a échoué. Réessayez.",
     "regionsTitle": "Régions",
     "producersTitle": "Producteurs",
-    "producersEmpty": "Rien à ranger : chaque producteur est écrit d'une seule façon."
+    "producersEmpty": "Rien à ranger : chaque producteur est écrit d'une seule façon.",
+    "grapesTitle": "Cépages",
+    "grapesEmpty": "Rien à ranger : chaque cépage est écrit d'une seule façon."
   }
 }

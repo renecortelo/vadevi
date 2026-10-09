@@ -1,6 +1,8 @@
 import { createRoute, type OpenAPIHono } from "@hono/zod-openapi";
 import {
   ErrorEnvelopeSchema,
+  GrapeProposalsQuerySchema,
+  GrapeProposalsResponseSchema,
   ProducerProposalsResponseSchema,
   RegionProposalsResponseSchema,
   RenameRegionsRequestSchema,
@@ -17,8 +19,10 @@ import {
 } from "@vadevi/contracts";
 
 import {
+  proposeGrapeTidying,
   proposeProducerTidying,
   proposeRegionTidying,
+  renameGrapes,
   renameProducers,
   renameRegions,
 } from "../repositories/region-cleanup";
@@ -267,6 +271,54 @@ const renameProducersRoute = createRoute({
   },
 });
 
+const grapeProposalsRoute = createRoute({
+  method: "get",
+  path: "/api/v1/spaces/{spaceId}/grapes/tidy",
+  operationId: "proposeGrapeTidying",
+  tags: ["Stats"],
+  summary: "Grapes written several ways, under the library's name for them",
+  security: [{ FirebaseBearer: [] }],
+  request: { params: SpaceIdPathSchema, query: GrapeProposalsQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: GrapeProposalsResponseSchema } },
+      description: "Proposals, each to confirm; nothing changes until then.",
+    },
+    401: unauthorized,
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "No such Space, or the reader is not a member of it.",
+    },
+  },
+});
+
+const renameGrapesRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/grapes/tidy",
+  operationId: "renameGrapes",
+  tags: ["Stats"],
+  summary: "Rename a grape on every wine listing it one of these ways, as confirmed",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    body: {
+      content: { "application/json": { schema: RenameRegionsRequestSchema } },
+      required: true,
+    },
+    params: SpaceIdPathSchema,
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: RenameRegionsResponseSchema } },
+      description: "How many grapes were renamed.",
+    },
+    401: unauthorized,
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "No such Space, or the reader is not a member of it.",
+    },
+  },
+});
+
 function notFound(requestId: string) {
   return ErrorEnvelopeSchema.parse({
     error: { code: "NOT_FOUND", message: "The resource was not found.", requestId },
@@ -409,6 +461,31 @@ export function registerStatsRoutes(app: OpenAPIHono<ApiEnvironment>) {
 
   app.openapi(renameProducersRoute, async (context) => {
     const renamed = await renameProducers(
+      context.env.DB!,
+      context.get("principal"),
+      context.req.valid("param").spaceId,
+      context.req.valid("json"),
+      context.get("requestId"),
+    );
+    return renamed === null
+      ? context.json(notFound(context.get("requestId")), 404)
+      : context.json(RenameRegionsResponseSchema.parse({ data: { renamed } }), 200);
+  });
+
+  app.openapi(grapeProposalsRoute, async (context) => {
+    const proposals = await proposeGrapeTidying(
+      context.env.DB!,
+      context.get("principal"),
+      context.req.valid("param").spaceId,
+      context.req.valid("query").locale ?? "en",
+    );
+    return proposals === null
+      ? context.json(notFound(context.get("requestId")), 404)
+      : context.json(GrapeProposalsResponseSchema.parse({ data: proposals }), 200);
+  });
+
+  app.openapi(renameGrapesRoute, async (context) => {
+    const renamed = await renameGrapes(
       context.env.DB!,
       context.get("principal"),
       context.req.valid("param").spaceId,

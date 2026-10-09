@@ -4,9 +4,13 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
+
 import {
+  getGrapeProposals,
   getProducerProposals,
   getRegionProposals,
+  renameGrapes,
   renameProducers,
   renameRegions,
 } from "../services/regions";
@@ -15,7 +19,7 @@ import { useSession } from "../session/SessionContext";
 /** A group of spellings to rename as one, whatever it names. */
 type Proposal = Readonly<{
   from: { name: string; wines: number }[];
-  reason: "producers" | "typo" | "variants";
+  reason: "grapes" | "producers" | "typo" | "variants";
   to: string;
   unchanged: number;
 }>;
@@ -27,7 +31,8 @@ type Proposal = Readonly<{
  * otherwise.
  */
 export function RegionTidyPage() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const locale = resolveSupportedLocale(i18n.language);
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const queryClient = useQueryClient();
@@ -42,6 +47,11 @@ export function RegionTidyPage() {
     enabled: user !== null,
     queryFn: ({ signal }) => getProducerProposals(user!, spaceId, signal),
     queryKey: ["producer-proposals", spaceId],
+  });
+  const grapes = useQuery({
+    enabled: user !== null,
+    queryFn: ({ signal }) => getGrapeProposals(user!, spaceId, locale, signal),
+    queryKey: ["grape-proposals", spaceId, locale],
   });
   const [skipped, setSkipped] = useState<string[]>([]);
   const [targets, setTargets] = useState<Record<string, string>>({});
@@ -63,6 +73,13 @@ export function RegionTidyPage() {
     unchanged: proposal.unchanged,
   }));
 
+  const grapeProposals: Proposal[] = (grapes.data ?? []).map((proposal) => ({
+    from: proposal.from.map((entry) => ({ name: entry.grape, wines: entry.wines })),
+    reason: "grapes",
+    to: proposal.to,
+    unchanged: proposal.unchanged,
+  }));
+
   async function apply(proposal: Proposal) {
     if (user === null) return;
     const key = keyOf(proposal);
@@ -75,12 +92,15 @@ export function RegionTidyPage() {
       const renamed =
         proposal.reason === "producers"
           ? await renameProducers(user, spaceId, from, to)
-          : await renameRegions(user, spaceId, from, to);
+          : proposal.reason === "grapes"
+            ? await renameGrapes(user, spaceId, from, to)
+            : await renameRegions(user, spaceId, from, to);
       setNotice(t("regionTidy.done", { count: renamed, name: to }));
       // The counts and the profile read these names too.
       await Promise.all([
         regions.refetch(),
         producers.refetch(),
+        grapes.refetch(),
         queryClient.invalidateQueries({ queryKey: ["stats"] }),
         queryClient.invalidateQueries({ queryKey: ["taste-profile"] }),
       ]);
@@ -176,6 +196,13 @@ export function RegionTidyPage() {
         producers.data === undefined && !producers.isError,
         producers.isError,
         t("regionTidy.producersEmpty"),
+      )}
+      <h2>{t("regionTidy.grapesTitle")}</h2>
+      {list(
+        grapeProposals,
+        grapes.data === undefined && !grapes.isError,
+        grapes.isError,
+        t("regionTidy.grapesEmpty"),
       )}
       <p className="section-help taste-links">
         <Link className="text-link" to="/stats">

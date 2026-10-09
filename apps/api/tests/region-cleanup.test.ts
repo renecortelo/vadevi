@@ -1,5 +1,6 @@
 import {
   BootstrapResponseSchema,
+  GrapeProposalsResponseSchema,
   ProducerProposalsResponseSchema,
   RegionProposalsResponseSchema,
   RenameRegionsResponseSchema,
@@ -167,5 +168,80 @@ describe("tidying a Space's regions", () => {
       method: "POST",
     });
     expect(RenameRegionsResponseSchema.parse(await renamed.json()).data.renamed).toBe(1);
+  });
+
+  it("offers a grape written several ways under the library's name, and renames it on confirming", async () => {
+    const me = BootstrapResponseSchema.parse(
+      await (
+        await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers: headers(owner) })
+      ).json(),
+    );
+    const spaceId = me.data.user.activeSpaceId;
+    const now = new Date().toISOString();
+    const statements = [
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_grapes (id, wikidata_id, prominence) VALUES ('tidy-carignan', 'Q-tidy-1', 5)`,
+      ),
+      ...[
+        ["es", "Cariñena", "cariñena", "primary"],
+        ["en", "Carignan", "carignan", "primary"],
+        ["*", "Samsó", "samso", "synonym"],
+      ].map(([locale, name, normalized, kind]) =>
+        env.DB.prepare(
+          `INSERT OR IGNORE INTO kb_names
+            (entity_type, entity_id, locale, name, normalized_name, kind, source)
+            VALUES ('grape', 'tidy-carignan', ?, ?, ?, ?, 'wikidata')`,
+        ).bind(locale, name, normalized!.normalize("NFKD").replace(/[\u0300-\u036f]/g, ""), kind),
+      ),
+    ];
+    const wineIds: string[] = [];
+    for (const grape of ["Carignan", "Samsó", "Cariñena"]) {
+      const id = ulid();
+      wineIds.push(id);
+      statements.push(
+        env.DB.prepare(
+          `INSERT INTO wine_records (
+            id, space_id, display_name, normalized_name, producer_name, normalized_producer_name,
+            non_vintage, identity_status, version, created_by_user_id, created_at, updated_at
+          ) VALUES (?, ?, 'Negre', ?, 'Celler', 'celler', 0, 'confirmed', 1, ?, ?, ?)`,
+        ).bind(id, spaceId, `negre ${id}`, me.data.user.id, now, now),
+        env.DB.prepare(
+          `INSERT INTO wine_grapes (id, space_id, wine_id, name_snapshot, position, created_at, updated_at)
+            VALUES (?, ?, ?, ?, 0, ?, ?)`,
+        ).bind(ulid(), spaceId, id, grape, now, now),
+      );
+    }
+    await env.DB.batch(statements);
+    const url = `https://vadevi.test/api/v1/spaces/${spaceId}/grapes/tidy`;
+    const proposals = GrapeProposalsResponseSchema.parse(
+      await (await SELF.fetch(`${url}?locale=es`, { headers: headers(owner) })).json(),
+    ).data;
+    expect(proposals).toContainEqual({
+      from: expect.arrayContaining([
+        { grape: "Carignan", wines: 1 },
+        { grape: "Samsó", wines: 1 },
+      ]),
+      to: "Cariñena",
+      unchanged: 1,
+    });
+    const renamed = await SELF.fetch(url, {
+      body: JSON.stringify({ from: ["Carignan", "Samsó"], to: "Cariñena" }),
+      headers: headers(owner),
+      method: "POST",
+    });
+    expect(RenameRegionsResponseSchema.parse(await renamed.json()).data.renamed).toBe(2);
+    const grapes = await env.DB.prepare(
+      `SELECT DISTINCT name_snapshot FROM wine_grapes WHERE wine_id IN (?, ?, ?)`,
+    )
+      .bind(...wineIds)
+      .all<{ name_snapshot: string }>();
+    expect(grapes.results).toEqual([{ name_snapshot: "Cariñena" }]);
+    // Each wine renamed is a new version, for the devices that sync it.
+    const versions = await env.DB.prepare(
+      `SELECT version FROM wine_records WHERE id IN (?, ?) ORDER BY version`,
+    )
+      .bind(wineIds[0], wineIds[1])
+      .all<{ version: number }>();
+    expect(versions.results.map((row) => row.version)).toEqual([2, 2]);
   });
 });

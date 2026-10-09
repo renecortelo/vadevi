@@ -58,3 +58,30 @@ export const ProducerProposalsResponseSchema = z
   .openapi("ProducerProposalsResponse");
 
 export type ProducerProposal = z.infer<typeof ProducerProposalSchema>;
+
+/** One grape written several ways, offered to confirm under the library's name for it. */
+export const GrapeProposalSchema = z
+  .object({
+    from: z.array(z.object({ grape: z.string(), wines: z.number().int().positive() }).strict()),
+    to: z.string(),
+    unchanged: z.number().int().nonnegative(),
+  })
+  .strict()
+  .openapi("GrapeProposal");
+
+export const GrapeProposalsResponseSchema = z
+  .object({ data: z.array(GrapeProposalSchema) })
+  .strict()
+  .openapi("GrapeProposalsResponse");
+
+export const GrapeProposalsQuerySchema = z
+  .object({
+    /** The language the library's grape names are given in. */
+    locale: z
+      .enum(["ca", "de", "en", "es", "fr", "it", "nl", "pt-PT"])
+      .optional()
+      .openapi({ param: { in: "query", name: "locale" } }),
+  })
+  .strict();
+
+export type GrapeProposal = z.infer<typeof GrapeProposalSchema>;

@@ -1549,15 +1549,16 @@
     }
   },
   "regionTidy": {
-    "link": "Ordenar regiones y productores",
+    "link": "Ordenar nombres",
     "eyebrow": "Tu espacio",
-    "title": "Ordenar regiones y productores",
-    "intro": "La misma región o el mismo productor escrito de varias formas, o una región a una letra de un nombre registrado. Revisa cada propuesta: solo se renombran los vinos de las que confirmes.",
+    "title": "Ordenar nombres",
+    "intro": "Regiones, productores y uvas escritos de varias formas, o una región a una letra de un nombre registrado. Revisa cada propuesta: solo se renombran los vinos de las que confirmes.",
     "empty": "Nada que ordenar: cada región está escrita de una sola forma.",
     "reason": {
       "variants": "La misma región, escrita de varias formas",
       "typo": "¿Una errata de un nombre registrado?",
-      "producers": "El mismo productor, escrito de varias formas"
+      "producers": "El mismo productor, escrito de varias formas",
+      "grapes": "La misma uva, escrita de varias formas"
     },
     "to": "Renombrar como",
     "wines_one": "{{count}} vino",
@@ -1572,6 +1573,8 @@
     "error": "No se pudo renombrar. Inténtalo de nuevo.",
     "regionsTitle": "Regiones",
     "producersTitle": "Productores",
-    "producersEmpty": "Nada que ordenar: cada productor está escrito de una sola forma."
+    "producersEmpty": "Nada que ordenar: cada productor está escrito de una sola forma.",
+    "grapesTitle": "Uvas",
+    "grapesEmpty": "Nada que ordenar: cada uva está escrita de una sola forma."
   }
 }

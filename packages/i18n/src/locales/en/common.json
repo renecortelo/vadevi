@@ -1549,15 +1549,16 @@
     }
   },
   "regionTidy": {
-    "link": "Tidy regions and producers",
+    "link": "Tidy names",
     "eyebrow": "Your Space",
-    "title": "Tidy regions and producers",
-    "intro": "The same region or producer written several ways, or a region a letter away from a registered name. Check each proposal: only the wines of those you confirm are renamed.",
+    "title": "Tidy names",
+    "intro": "Regions, producers and grapes written several ways, or a region a letter away from a registered name. Check each proposal: only the wines of those you confirm are renamed.",
     "empty": "Nothing to tidy: every region is written one way.",
     "reason": {
       "variants": "One region, written several ways",
       "typo": "A misspelling of a registered name?",
-      "producers": "One producer, written several ways"
+      "producers": "One producer, written several ways",
+      "grapes": "One grape, written several ways"
     },
     "to": "Rename as",
     "wines_one": "{{count}} wine",
@@ -1572,6 +1573,8 @@
     "error": "It could not be renamed. Try again.",
     "regionsTitle": "Regions",
     "producersTitle": "Producers",
-    "producersEmpty": "Nothing to tidy: every producer is written one way."
+    "producersEmpty": "Nothing to tidy: every producer is written one way.",
+    "grapesTitle": "Grapes",
+    "grapesEmpty": "Nothing to tidy: every grape is written one way."
   }
 }

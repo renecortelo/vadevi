@@ -1549,15 +1549,16 @@
     }
   },
   "regionTidy": {
-    "link": "Riordina regioni e produttori",
+    "link": "Riordina i nomi",
     "eyebrow": "Il tuo Spazio",
-    "title": "Riordina regioni e produttori",
-    "intro": "La stessa regione o lo stesso produttore scritto in più modi, o una regione a una lettera da un nome registrato. Controlla ogni proposta: si rinominano solo i vini di quelle che confermi.",
+    "title": "Riordina i nomi",
+    "intro": "Regioni, produttori e vitigni scritti in più modi, o una regione a una lettera da un nome registrato. Controlla ogni proposta: si rinominano solo i vini di quelle che confermi.",
     "empty": "Niente da riordinare: ogni regione è scritta in un solo modo.",
     "reason": {
       "variants": "La stessa regione, scritta in più modi",
       "typo": "Un refuso di un nome registrato?",
-      "producers": "Lo stesso produttore, scritto in più modi"
+      "producers": "Lo stesso produttore, scritto in più modi",
+      "grapes": "Lo stesso vitigno, scritto in più modi"
     },
     "to": "Rinomina come",
     "wines_one": "{{count}} vino",
@@ -1572,6 +1573,8 @@
     "error": "Impossibile rinominare. Riprova.",
     "regionsTitle": "Regioni",
     "producersTitle": "Produttori",
-    "producersEmpty": "Niente da riordinare: ogni produttore è scritto in un solo modo."
+    "producersEmpty": "Niente da riordinare: ogni produttore è scritto in un solo modo.",
+    "grapesTitle": "Vitigni",
+    "grapesEmpty": "Niente da riordinare: ogni vitigno è scritto in un solo modo."
   }
 }
