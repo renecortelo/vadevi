@@ -1095,7 +1095,7 @@
               "schemaVersion": {
                 "type": "string",
                 "enum": [
-                  "2026.1"
+                  "2026.2"
                 ]
               },
               "scope": {
@@ -1176,6 +1176,9 @@
                   "type"
                 ],
                 "additionalProperties": false
+              },
+              "tasteDeclaration": {
+                "$ref": "#/components/schemas/TasteDeclaration"
               },
               "tastings": {
                 "type": "array",
@@ -1395,6 +1398,7 @@
               "scope",
               "sources",
               "space",
+              "tasteDeclaration",
               "tastings",
               "wines",
               "wishlist"
@@ -1404,6 +1408,79 @@
         },
         "required": [
           "data"
+        ],
+        "additionalProperties": false
+      },
+      "TasteDeclaration": {
+        "type": "object",
+        "nullable": true,
+        "properties": {
+          "budget": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "currency": {
+                "type": "string",
+                "enum": [
+                  "EUR",
+                  "USD",
+                  "GBP",
+                  "CHF",
+                  "MXN"
+                ]
+              },
+              "highMinor": {
+                "type": "integer",
+                "nullable": true,
+                "minimum": 0
+              },
+              "lowMinor": {
+                "type": "integer",
+                "nullable": true,
+                "minimum": 0
+              }
+            },
+            "required": [
+              "currency",
+              "highMinor",
+              "lowMinor"
+            ],
+            "additionalProperties": false
+          },
+          "dislikes": {
+            "type": "string",
+            "nullable": true
+          },
+          "exploring": {
+            "type": "string",
+            "nullable": true
+          },
+          "likes": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "budget",
+          "dislikes",
+          "exploring",
+          "likes",
+          "note",
+          "updatedAt",
+          "version"
         ],
         "additionalProperties": false
       },
@@ -12870,6 +12947,88 @@
           "scored"
         ],
         "additionalProperties": false
+      },
+      "TasteDeclarationResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/TasteDeclaration"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "UpdateTasteDeclarationRequest": {
+        "type": "object",
+        "properties": {
+          "budget": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "currency": {
+                "type": "string",
+                "enum": [
+                  "EUR",
+                  "USD",
+                  "GBP",
+                  "CHF",
+                  "MXN"
+                ]
+              },
+              "highMinor": {
+                "type": "integer",
+                "nullable": true,
+                "minimum": 0
+              },
+              "lowMinor": {
+                "type": "integer",
+                "nullable": true,
+                "minimum": 0
+              }
+            },
+            "required": [
+              "currency",
+              "highMinor",
+              "lowMinor"
+            ],
+            "additionalProperties": false
+          },
+          "dislikes": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 500
+          },
+          "exploring": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 500
+          },
+          "likes": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 500
+          },
+          "note": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1000
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "budget",
+          "dislikes",
+          "exploring",
+          "likes",
+          "note",
+          "version"
+        ],
+        "additionalProperties": false
       }
     },
     "parameters": {}
@@ -19922,6 +20081,116 @@
           },
           "404": {
             "description": "The reader has no account yet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/me/taste-declaration": {
+      "get": {
+        "operationId": "getTasteDeclaration",
+        "tags": [
+          "Stats"
+        ],
+        "summary": "What the reader says of their own taste",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The reader's own words; empty, at version 0, until saved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TasteDeclarationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The reader has no account yet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "operationId": "saveTasteDeclaration",
+        "tags": [
+          "Stats"
+        ],
+        "summary": "Say what the reader likes, dislikes, explores and spends",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTasteDeclarationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Saved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TasteDeclarationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The reader has no account yet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Saved meanwhile from elsewhere; the current version is in the details.",
             "content": {
               "application/json": {
                 "schema": {

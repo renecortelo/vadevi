@@ -648,6 +648,12 @@ async function runDeletionJob(
       .bind(nowIso, nowIso, job.target_id)
       .run();
     rowsRemoved += anonymized.meta.changes;
+    // What they said of their own taste is theirs alone.
+    const declared = await database
+      .prepare(`DELETE FROM taste_declarations WHERE user_id = ?`)
+      .bind(job.target_id)
+      .run();
+    rowsRemoved += declared.meta.changes;
     const drafts = await database
       .prepare(`DELETE FROM action_drafts WHERE user_id = ?`)
       .bind(job.target_id)

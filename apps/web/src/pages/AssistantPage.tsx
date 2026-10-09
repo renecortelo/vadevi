@@ -10,6 +10,7 @@ import type {
   SupportedLocale,
 } from "@vadevi/contracts";
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { descriptorText, resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
@@ -262,11 +263,23 @@ export function AssistantResult({
                 <dd>{response.data.tasteProfile.wouldBuyYesCount ?? "—"}</dd>
               </div>
               <div>
-                <dt>{t("quickLog.descriptors")}</dt>
-                <dd>{response.data.tasteProfile.descriptorCodes.join(", ") || "—"}</dd>
+                <dt>{t("assistant.profileDescriptors")}</dt>
+                {/* Named in the reader's language, never by their codes. */}
+                <dd>
+                  {response.data.tasteProfile.descriptorCodes
+                    .slice(0, 5)
+                    .map(
+                      (code: string) =>
+                        descriptorText(code, resolveSupportedLocale(i18n.language))?.label ?? code,
+                    )
+                    .join(", ") || "—"}
+                </dd>
               </div>
             </dl>
           )}
+          <Link className="text-link" to="/profile">
+            {t("assistant.profileOpen")}
+          </Link>
         </div>
       )}
 

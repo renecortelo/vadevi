@@ -1,12 +1,13 @@
 import { z } from "@hono/zod-openapi";
 
+import { TasteDeclarationSchema } from "./taste";
 import { ResourceIdSchema, ResourceTimestampSchema } from "./wine-memory";
 
 /**
  * The export payload carries its own schema version so an archive stays
  * interpretable after the application contract moves on.
  */
-export const ExportSchemaVersion = "2026.1";
+export const ExportSchemaVersion = "2026.2";
 
 export const ExportScopeSchema = z.enum(["space", "own"]);
 
@@ -186,6 +187,11 @@ export const ExportDocumentSchema = z
             type: z.enum(["personal", "couple", "group"]),
           })
           .strict(),
+        /**
+         * What the reader said of their own taste — exported with their
+         * personal Space, the one that is theirs alone; null elsewhere.
+         */
+        tasteDeclaration: TasteDeclarationSchema.nullable(),
         tastings: z.array(ExportTastingSchema),
         wines: z.array(ExportWineSchema),
         wishlist: z.array(ExportWishlistSchema),

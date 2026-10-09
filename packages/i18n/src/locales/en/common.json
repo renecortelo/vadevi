@@ -711,7 +711,9 @@
       "high": "High"
     },
     "profileBasis": "{{count}} submitted note",
-    "profileBasis_other": "{{count}} submitted notes"
+    "profileBasis_other": "{{count}} submitted notes",
+    "profileDescriptors": "Descriptors you use most",
+    "profileOpen": "See your full taste profile"
   },
   "homeTools": {
     "eyebrow": "Your collection",
@@ -727,7 +729,9 @@
     "libraryTitle": "Library",
     "libraryBody": "Grapes, appellations, styles and methods.",
     "statsTitle": "Cellar book",
-    "statsBody": "What you taste, buy and keep, counted."
+    "statsBody": "What you taste, buy and keep, counted.",
+    "tasteTitle": "Your taste",
+    "tasteBody": "What your tastings say about your taste, and what you say."
   },
   "cellar": {
     "eyebrow": "Your physical bottles",
@@ -1430,6 +1434,107 @@
     "narrowHint": "Tap a name to see the whole book for it alone.",
     "memorableMark": "Memorable",
     "countriesInferred_one": "{{count}} wine has no country recorded; its region says which.",
-    "countriesInferred_other": "{{count}} wines have no country recorded; their region says which."
+    "countriesInferred_other": "{{count}} wines have no country recorded; their region says which.",
+    "tasteLink": "See your taste profile"
+  },
+  "taste": {
+    "eyebrow": "Your taste",
+    "title": "Your taste profile",
+    "intro": "What your own tastings show, measured against your own average, with the wines behind each trait. And apart, what you say.",
+    "insufficient": "Not enough tastings to say anything yet: {{count}} of {{minimum}}.",
+    "summaryTitle": "In a few words",
+    "basis": "Based on {{count}} of your tastings · Confidence: {{confidence}} · Your average: {{average}}",
+    "likesTitle": "What you score above your average",
+    "dislikesTitle": "What you score below it",
+    "points_one": "{{points}} points · {{count}} tasting",
+    "points_other": "{{points}} points · {{count}} tastings",
+    "pointsNote": "Points are against your own average; with few tastings they are drawn in, as if two more sat on your average.",
+    "mostTastedTitle": "What you drink most",
+    "cellarTitle": "Waiting in your cellar",
+    "cellarHint": "Unopened bottles that share what you like most.",
+    "buyingTitle": "What you buy",
+    "typicalPrice_one": "A bottle costs you about {{price}} (from {{count}} purchase).",
+    "typicalPrice_other": "A bottle costs you about {{price}} (median of {{count}} purchases).",
+    "rebought": "Bought again",
+    "boughtNotLiked": "Bought, then scored below your average",
+    "evolutionTitle": "How it has changed",
+    "evolutionLine": "Last 12 months: {{recent}} tastings, average {{recentAverage}}. Before: {{earlier}} tastings, average {{earlierAverage}}.",
+    "shift": "{{label}}: from {{from}} to {{to}} of your tastings",
+    "askVicenc": "Ask Vicenç about your style",
+    "bio": {
+      "likes": "Your tastings point to {{list}}: that is what you score above your average.",
+      "dislikes": "You are less taken with {{list}}.",
+      "mostly": "You drink mostly {{type}} ({{share}} of your tastings), and from {{country}} ({{countryShare}}).",
+      "mostlyType": "You drink mostly {{type}} ({{share}} of your tastings).",
+      "price": "You usually pay about {{price}} a bottle.",
+      "tension": "Curiously, {{label}} is among what you drink most, yet you score it below your average."
+    },
+    "level": {
+      "acidity": {
+        "low": "low acidity",
+        "medium": "medium acidity",
+        "high": "high acidity"
+      },
+      "tannin": {
+        "low": "soft tannins",
+        "medium": "medium tannins",
+        "high": "firm tannins"
+      },
+      "body": {
+        "low": "light body",
+        "medium": "medium body",
+        "high": "full body"
+      },
+      "sweetness": {
+        "low": "dry",
+        "medium": "off-dry",
+        "high": "sweet"
+      },
+      "finish": {
+        "low": "short finish",
+        "medium": "medium finish",
+        "high": "long finish"
+      }
+    },
+    "price": {
+      "under_10": "bottles under {{high}}",
+      "10_20": "bottles from {{low}} to {{high}}",
+      "20_40": "bottles from {{low}} to {{high}}",
+      "40_plus": "bottles over {{low}}"
+    },
+    "typePlural": {
+      "red": "reds",
+      "white": "whites",
+      "rose": "rosés",
+      "sparkling": "sparkling wines",
+      "fortified": "fortified wines",
+      "orange": "orange wines",
+      "other": "other wines",
+      "vermouth_red": "red vermouths",
+      "vermouth_white": "white vermouths"
+    },
+    "declared": {
+      "title": "What you say",
+      "intro": "In your own words. Vicenç reads it as said by you, apart from what your tastings show, and tells you when the two disagree.",
+      "likes": "I like",
+      "dislikes": "I don't like",
+      "exploring": "I'm exploring",
+      "likesPlaceholder": "E.g. fresh reds, high-altitude Garnacha",
+      "dislikesPlaceholder": "E.g. a lot of oak",
+      "exploringPlaceholder": "E.g. wines from Portugal",
+      "budget": "Usual budget a bottle",
+      "currency": "Currency",
+      "to": "To",
+      "note": "Note",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Saved.",
+      "conflict": "It was saved from another device; here is the latest. Check it and save again.",
+      "error": "It could not be saved. Try again.",
+      "updated": "Last saved: {{date}}.",
+      "from": "From"
+    },
+    "tensions_one": "Note: {{list}} is among what you drink most, but you score it below your average.",
+    "tensions_other": "Note: {{list}} are among what you drink most, but you score them below your average."
   }
 }

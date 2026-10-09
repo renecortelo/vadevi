@@ -1369,6 +1369,14 @@ describe("Vicenç deterministic read path", () => {
       ]);
     }
 
+    // And what they say of it themselves.
+    await env.DB.prepare(
+      `INSERT OR REPLACE INTO taste_declarations
+        (user_id, dislikes_text, version, created_at, updated_at) VALUES (?, 'Garnacha', 1, ?, ?)`,
+    )
+      .bind(owner.data.user.id, now, now)
+      .run();
+
     let captured: { evidenceClass: string; id: string; text: string }[] = [];
     await runDeterministicAssistantTurn(env.DB, {
       aiProvider: "cloudflare",
@@ -1409,6 +1417,10 @@ describe("Vicenç deterministic read path", () => {
       /scored below their own average: [^;]*grape Merlot -[\d.]+ points over 3 tastings/,
     );
     expect(taste?.text).toContain("never as facts about wine");
+    // Declared apart from deduced — here they disagree, and that is said.
+    const declared = captured.find((statement) => statement.id === "taste-declared");
+    expect(declared?.text).toContain("not deduced from their tastings: dislikes: Garnacha");
+    expect(declared?.text).toContain("say both, and that they differ");
   });
 
   it("drops another wine's semantic note when a pairing narrows to one bottle", async () => {

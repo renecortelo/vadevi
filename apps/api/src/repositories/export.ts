@@ -1,4 +1,5 @@
 import {
+  type CurrencyCode,
   ExportSchemaVersion,
   mediaArchiveMaxBytes,
   type ExportDocument,
@@ -279,8 +280,46 @@ export async function buildExportDocument(
     .bind(spaceId, ownOnly, actor.user_id)
     .all<{ byte_size: number; id: string; kind: string; mime_type: string }>();
 
+  // The reader's own words about their taste go with their personal Space.
+  const declared =
+    actor.space_type === "personal"
+      ? await database
+          .prepare(`SELECT * FROM taste_declarations WHERE user_id = ?`)
+          .bind(actor.user_id)
+          .first<{
+            budget_currency: string | null;
+            budget_high_minor: number | null;
+            budget_low_minor: number | null;
+            dislikes_text: string | null;
+            exploring_text: string | null;
+            likes_text: string | null;
+            note_text: string | null;
+            updated_at: string;
+            version: number;
+          }>()
+      : null;
+
   return {
     data: {
+      tasteDeclaration:
+        declared === null
+          ? null
+          : {
+              budget:
+                declared.budget_currency === null
+                  ? null
+                  : {
+                      currency: declared.budget_currency as CurrencyCode,
+                      highMinor: declared.budget_high_minor,
+                      lowMinor: declared.budget_low_minor,
+                    },
+              dislikes: declared.dislikes_text,
+              exploring: declared.exploring_text,
+              likes: declared.likes_text,
+              note: declared.note_text,
+              updatedAt: declared.updated_at,
+              version: declared.version,
+            },
       audit: audit.results.map((row) => ({
         action: row.action,
         createdAt: row.created_at,

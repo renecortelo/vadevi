@@ -2,12 +2,13 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { type CurrencyCode, fromMinorUnits, type WineStats } from "@vadevi/contracts";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate, useSearchParams } from "react-router";
+import { Link, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { CountryIcon, GrapeVarietyIcon, RegionIcon, WineTypeIcon } from "../brand/NavIcons";
 import { trailFrom } from "../library/trail";
 import { useSession } from "../session/SessionContext";
+import { WineLink } from "../components/WineLink";
 import { getStats, type StatsPeriod } from "../services/stats";
 
 /** The name the server gives every personal Space when it is created. */
@@ -143,8 +144,7 @@ function GroupTitle({ children, icon }: { children: ReactNode; icon: ReactNode }
 export function StatsPage() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
-  const { bootstrap, updateProfile } = useSession();
-  const navigate = useNavigate();
+  const { bootstrap } = useSession();
   const [search, setSearch] = useSearchParams();
   const scope = search.get("space") ?? "personal";
   const periodParameter = search.get("period");
@@ -192,27 +192,10 @@ export function StatsPage() {
   const facetLabel = (facet: Facet, value: string) =>
     facet === "type" ? typeName(value) : facet === "country" ? countryName(value) : value;
 
-  // A wine opens in its own Space: one in another is reached by moving there
-  // first, and the page it opens shows the way back here.
-  const activeSpaceId = bootstrap.data.user.activeSpaceId;
+  // A wine opens in its own Space, and its page shows the way back here.
   const backHere = trailFrom(t("stats.title"), `/stats${search.size === 0 ? "" : `?${search}`}`);
-  const openWine = async (wine: { spaceId: string; wineId: string }) => {
-    if (wine.spaceId !== activeSpaceId) await updateProfile({ activeSpaceId: wine.spaceId });
-    void navigate(`/wines/${wine.wineId}/evidence`, { state: backHere });
-  };
   const wineLink = (wine: { spaceId: string; wineId: string; wineName: string }) => (
-    <Link
-      className="text-link"
-      onClick={(event) => {
-        if (wine.spaceId === activeSpaceId) return;
-        event.preventDefault();
-        void openWine(wine);
-      }}
-      state={backHere}
-      to={`/wines/${wine.wineId}/evidence`}
-    >
-      {wine.wineName}
-    </Link>
+    <WineLink state={backHere} wine={wine} />
   );
   const spaceName = (space: (typeof bootstrap.data.spaces)[number]) =>
     space.type === "personal" && space.name === defaultPersonalName
@@ -568,7 +551,10 @@ export function StatsPage() {
         </>
       )}
 
-      <p className="section-help">
+      <p className="section-help taste-links">
+        <Link className="text-link" to="/profile">
+          {t("stats.tasteLink")}
+        </Link>
         <Link className="text-link" to="/vicenc">
           {t("stats.askVicenc")}
         </Link>

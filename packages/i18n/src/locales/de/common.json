@@ -711,7 +711,9 @@
       "high": "Hoch"
     },
     "profileBasis": "{{count}} eingereichte Notiz",
-    "profileBasis_other": "{{count}} eingereichte Notizen"
+    "profileBasis_other": "{{count}} eingereichte Notizen",
+    "profileDescriptors": "Ihre häufigsten Deskriptoren",
+    "profileOpen": "Ihr vollständiges Profil ansehen"
   },
   "homeTools": {
     "eyebrow": "Deine Sammlung",
@@ -727,7 +729,9 @@
     "libraryTitle": "Bibliothek",
     "libraryBody": "Rebsorten, Herkunft, Stile und Methoden.",
     "statsTitle": "Kellerbuch",
-    "statsBody": "Was Sie verkosten, kaufen und lagern, gezählt."
+    "statsBody": "Was Sie verkosten, kaufen und lagern, gezählt.",
+    "tasteTitle": "Ihr Profil",
+    "tasteBody": "Was Ihre Verkostungen über Ihren Geschmack sagen, und was Sie sagen."
   },
   "cellar": {
     "eyebrow": "Deine echten Flaschen",
@@ -1430,6 +1434,107 @@
     "narrowHint": "Tippen Sie auf einen Namen, um das ganze Buch nur dafür zu sehen.",
     "memorableMark": "Denkwürdig",
     "countriesInferred_one": "{{count}} Wein hat kein erfasstes Land; es ergibt sich aus der Region.",
-    "countriesInferred_other": "{{count}} Weine haben kein erfasstes Land; es ergibt sich aus der Region."
+    "countriesInferred_other": "{{count}} Weine haben kein erfasstes Land; es ergibt sich aus der Region.",
+    "tasteLink": "Ihr Geschmacksprofil ansehen"
+  },
+  "taste": {
+    "eyebrow": "Ihr Geschmack",
+    "title": "Ihr Geschmacksprofil",
+    "intro": "Was Ihre eigenen Verkostungen zeigen, gemessen an Ihrem eigenen Durchschnitt, mit den Weinen hinter jedem Merkmal. Und davon getrennt, was Sie selbst sagen.",
+    "insufficient": "Noch nicht genug Verkostungen, um etwas zu sagen: {{count}} von {{minimum}}.",
+    "summaryTitle": "In wenigen Worten",
+    "basis": "Aus {{count}} Ihrer Verkostungen · Verlässlichkeit: {{confidence}} · Ihr Durchschnitt: {{average}}",
+    "likesTitle": "Was Sie über Ihrem Durchschnitt bewerten",
+    "dislikesTitle": "Was Sie darunter bewerten",
+    "points_one": "{{points}} Punkte · {{count}} Verkostung",
+    "points_other": "{{points}} Punkte · {{count}} Verkostungen",
+    "pointsNote": "Die Punkte beziehen sich auf Ihren eigenen Durchschnitt; bei wenigen Verkostungen werden sie gedämpft, als lägen zwei weitere genau im Durchschnitt.",
+    "mostTastedTitle": "Was Sie am meisten trinken",
+    "cellarTitle": "Wartet in Ihrem Keller",
+    "cellarHint": "Ungeöffnete Flaschen, die teilen, was Ihnen am meisten gefällt.",
+    "buyingTitle": "Was Sie kaufen",
+    "typicalPrice_one": "Eine Flasche kostet Sie etwa {{price}} (aus {{count}} Kauf).",
+    "typicalPrice_other": "Eine Flasche kostet Sie etwa {{price}} (Median aus {{count}} Käufen).",
+    "rebought": "Nachgekauft",
+    "boughtNotLiked": "Gekauft, dann unter Ihrem Durchschnitt bewertet",
+    "evolutionTitle": "Wie er sich verändert hat",
+    "evolutionLine": "Letzte 12 Monate: {{recent}} Verkostungen, Durchschnitt {{recentAverage}}. Davor: {{earlier}} Verkostungen, Durchschnitt {{earlierAverage}}.",
+    "shift": "{{label}}: von {{from}} auf {{to}} Ihrer Verkostungen",
+    "askVicenc": "Fragen Sie Vicenç nach Ihrem Stil",
+    "bio": {
+      "likes": "Ihre Verkostungen zeigen zu {{list}}: Das bewerten Sie über Ihrem Durchschnitt.",
+      "dislikes": "Weniger überzeugen Sie {{list}}.",
+      "mostly": "Sie trinken vor allem {{type}} ({{share}} Ihrer Verkostungen), und aus {{country}} ({{countryShare}}).",
+      "mostlyType": "Sie trinken vor allem {{type}} ({{share}} Ihrer Verkostungen).",
+      "price": "Sie zahlen meist etwa {{price}} pro Flasche.",
+      "tension": "Bemerkenswert: {{label}} gehört zu dem, was Sie am meisten trinken, doch Sie bewerten es unter Ihrem Durchschnitt."
+    },
+    "level": {
+      "acidity": {
+        "low": "niedrige Säure",
+        "medium": "mittlere Säure",
+        "high": "hohe Säure"
+      },
+      "tannin": {
+        "low": "weiche Tannine",
+        "medium": "mittlere Tannine",
+        "high": "kräftige Tannine"
+      },
+      "body": {
+        "low": "leichter Körper",
+        "medium": "mittlerer Körper",
+        "high": "voller Körper"
+      },
+      "sweetness": {
+        "low": "trocken",
+        "medium": "halbtrocken",
+        "high": "süß"
+      },
+      "finish": {
+        "low": "kurzer Abgang",
+        "medium": "mittlerer Abgang",
+        "high": "langer Abgang"
+      }
+    },
+    "price": {
+      "under_10": "Flaschen unter {{high}}",
+      "10_20": "Flaschen von {{low}} bis {{high}}",
+      "20_40": "Flaschen von {{low}} bis {{high}}",
+      "40_plus": "Flaschen über {{low}}"
+    },
+    "typePlural": {
+      "red": "Rotweine",
+      "white": "Weißweine",
+      "rose": "Roséweine",
+      "sparkling": "Schaumweine",
+      "fortified": "Likörweine",
+      "orange": "Orange-Weine",
+      "other": "andere Weine",
+      "vermouth_red": "roten Wermut",
+      "vermouth_white": "weißen Wermut"
+    },
+    "declared": {
+      "title": "Was Sie sagen",
+      "intro": "In Ihren eigenen Worten. Vicenç liest es als von Ihnen gesagt, getrennt von dem, was Ihre Verkostungen zeigen, und sagt Ihnen, wenn beides nicht übereinstimmt.",
+      "likes": "Ich mag",
+      "dislikes": "Ich mag nicht",
+      "exploring": "Ich erkunde gerade",
+      "likesPlaceholder": "Z. B. frische Rotweine, Garnacha aus Höhenlagen",
+      "dislikesPlaceholder": "Z. B. viel Holz",
+      "exploringPlaceholder": "Z. B. Weine aus Portugal",
+      "budget": "Übliches Budget pro Flasche",
+      "currency": "Währung",
+      "to": "Bis",
+      "note": "Notiz",
+      "save": "Speichern",
+      "saving": "Wird gespeichert…",
+      "saved": "Gespeichert.",
+      "conflict": "Es wurde auf einem anderen Gerät gespeichert; hier ist der neueste Stand. Prüfen Sie ihn und speichern Sie erneut.",
+      "error": "Speichern fehlgeschlagen. Bitte erneut versuchen.",
+      "updated": "Zuletzt gespeichert: {{date}}.",
+      "from": "Von"
+    },
+    "tensions_one": "Hinweis: {{list}} gehört zu dem, was Sie am meisten trinken, doch Sie bewerten es unter Ihrem Durchschnitt.",
+    "tensions_other": "Hinweis: {{list}} gehören zu dem, was Sie am meisten trinken, doch Sie bewerten sie unter Ihrem Durchschnitt."
   }
 }

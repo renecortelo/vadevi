@@ -711,7 +711,9 @@
       "high": "Élevée"
     },
     "profileBasis": "{{count}} note envoyée",
-    "profileBasis_other": "{{count}} notes envoyées"
+    "profileBasis_other": "{{count}} notes envoyées",
+    "profileDescriptors": "Les descripteurs que vous utilisez le plus",
+    "profileOpen": "Voir votre profil complet"
   },
   "homeTools": {
     "eyebrow": "Votre collection",
@@ -727,7 +729,9 @@
     "libraryTitle": "Bibliothèque",
     "libraryBody": "Cépages, appellations, styles et méthodes.",
     "statsTitle": "Livre de cave",
-    "statsBody": "Ce que vous dégustez, achetez et gardez, compté."
+    "statsBody": "Ce que vous dégustez, achetez et gardez, compté.",
+    "tasteTitle": "Votre profil",
+    "tasteBody": "Ce que vos dégustations disent de votre goût, et ce que vous en dites."
   },
   "cellar": {
     "eyebrow": "Vos bouteilles physiques",
@@ -1430,6 +1434,107 @@
     "narrowHint": "Touchez un nom pour voir tout le livre pour lui seul.",
     "memorableMark": "Mémorable",
     "countriesInferred_one": "{{count}} vin n'a pas de pays enregistré ; il est déduit de sa région.",
-    "countriesInferred_other": "{{count}} vins n'ont pas de pays enregistré ; il est déduit de leur région."
+    "countriesInferred_other": "{{count}} vins n'ont pas de pays enregistré ; il est déduit de leur région.",
+    "tasteLink": "Voir votre profil de goût"
+  },
+  "taste": {
+    "eyebrow": "Votre goût",
+    "title": "Votre profil de goût",
+    "intro": "Ce que montrent vos propres dégustations, mesuré par rapport à votre moyenne, avec les vins derrière chaque trait. Et à part, ce que vous en dites.",
+    "insufficient": "Pas encore assez de dégustations pour dire quoi que ce soit : {{count}} sur {{minimum}}.",
+    "summaryTitle": "En quelques mots",
+    "basis": "D'après {{count}} de vos dégustations · Confiance : {{confidence}} · Votre moyenne : {{average}}",
+    "likesTitle": "Ce que vous notez au-dessus de votre moyenne",
+    "dislikesTitle": "Ce que vous notez en dessous",
+    "points_one": "{{points}} points · {{count}} dégustation",
+    "points_other": "{{points}} points · {{count}} dégustations",
+    "pointsNote": "Les points se comptent par rapport à votre propre moyenne ; avec peu de dégustations ils sont atténués, comme si deux de plus étaient à votre moyenne.",
+    "mostTastedTitle": "Ce que vous buvez le plus",
+    "cellarTitle": "Vous attend en cave",
+    "cellarHint": "Des bouteilles non ouvertes qui partagent ce que vous aimez le plus.",
+    "buyingTitle": "Ce que vous achetez",
+    "typicalPrice_one": "Une bouteille vous coûte environ {{price}} (sur {{count}} achat).",
+    "typicalPrice_other": "Une bouteille vous coûte environ {{price}} (médiane de {{count}} achats).",
+    "rebought": "Rachetés",
+    "boughtNotLiked": "Achetés, puis notés sous votre moyenne",
+    "evolutionTitle": "Comment il a changé",
+    "evolutionLine": "12 derniers mois : {{recent}} dégustations, moyenne {{recentAverage}}. Avant : {{earlier}} dégustations, moyenne {{earlierAverage}}.",
+    "shift": "{{label}} : de {{from}} à {{to}} de vos dégustations",
+    "askVicenc": "Demandez à Vicenç quel est votre style",
+    "bio": {
+      "likes": "Vos dégustations penchent vers {{list}} : c'est ce que vous notez au-dessus de votre moyenne.",
+      "dislikes": "Vous êtes moins convaincu par {{list}}.",
+      "mostly": "Vous buvez surtout des {{type}} ({{share}} de vos dégustations), et de {{country}} ({{countryShare}}).",
+      "mostlyType": "Vous buvez surtout des {{type}} ({{share}} de vos dégustations).",
+      "price": "Vous payez d'habitude environ {{price}} la bouteille.",
+      "tension": "Curieusement, {{label}} fait partie de ce que vous buvez le plus, mais vous le notez sous votre moyenne."
+    },
+    "level": {
+      "acidity": {
+        "low": "acidité faible",
+        "medium": "acidité moyenne",
+        "high": "acidité vive"
+      },
+      "tannin": {
+        "low": "tanins souples",
+        "medium": "tanins moyens",
+        "high": "tanins fermes"
+      },
+      "body": {
+        "low": "corps léger",
+        "medium": "corps moyen",
+        "high": "corps ample"
+      },
+      "sweetness": {
+        "low": "secs",
+        "medium": "demi-secs",
+        "high": "doux"
+      },
+      "finish": {
+        "low": "finale courte",
+        "medium": "finale moyenne",
+        "high": "finale longue"
+      }
+    },
+    "price": {
+      "under_10": "bouteilles à moins de {{high}}",
+      "10_20": "bouteilles de {{low}} à {{high}}",
+      "20_40": "bouteilles de {{low}} à {{high}}",
+      "40_plus": "bouteilles à plus de {{low}}"
+    },
+    "typePlural": {
+      "red": "rouges",
+      "white": "blancs",
+      "rose": "rosés",
+      "sparkling": "effervescents",
+      "fortified": "vins mutés",
+      "orange": "vins orange",
+      "other": "autres vins",
+      "vermouth_red": "vermouths rouges",
+      "vermouth_white": "vermouths blancs"
+    },
+    "declared": {
+      "title": "Ce que vous en dites",
+      "intro": "Avec vos mots. Vicenç le lit comme dit par vous, à part de ce que montrent vos dégustations, et vous prévient quand les deux divergent.",
+      "likes": "J'aime",
+      "dislikes": "Je n'aime pas",
+      "exploring": "J'explore",
+      "likesPlaceholder": "Ex. : rouges frais, Grenache d'altitude",
+      "dislikesPlaceholder": "Ex. : beaucoup de bois",
+      "exploringPlaceholder": "Ex. : vins du Portugal",
+      "budget": "Budget habituel par bouteille",
+      "currency": "Devise",
+      "to": "À",
+      "note": "Note",
+      "save": "Enregistrer",
+      "saving": "Enregistrement…",
+      "saved": "Enregistré.",
+      "conflict": "Enregistré depuis un autre appareil ; voici la dernière version. Vérifiez-la et enregistrez à nouveau.",
+      "error": "L'enregistrement a échoué. Réessayez.",
+      "updated": "Dernier enregistrement : {{date}}.",
+      "from": "De"
+    },
+    "tensions_one": "À noter : {{list}} fait partie de ce que vous buvez le plus, mais vous le notez sous votre moyenne.",
+    "tensions_other": "À noter : {{list}} font partie de ce que vous buvez le plus, mais vous les notez sous votre moyenne."
   }
 }

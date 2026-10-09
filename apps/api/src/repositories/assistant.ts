@@ -11,6 +11,7 @@ import type {
   Source,
   SupportedLocale,
   WineGrapeSummary,
+  TasteDeclaration,
   TasteProfile,
   TasteTrait,
   WineStats,
@@ -46,6 +47,7 @@ import {
   topicsMentionedIn,
 } from "./library";
 import { getPersonalStats, getSpaceStats } from "./stats";
+import { getTasteDeclaration } from "./taste-declaration";
 import { getTasteProfile } from "./taste-profile";
 import { jsonList } from "../services/sql-list";
 
@@ -100,6 +102,36 @@ function requestsTasteProfile(message: string): boolean {
   return /\b(profile|preference|preferences|prefer|favorite|favourite|taste|style|palate|drinker|gust|gusto|gustos|preferencia|preferencias|perfil|estilo|estil|paladar|bebedor|bevedor|me gusta|m agrada|gout|gouts|palais|buveur|preferenze|stile|palato|bevitore|smaak|voorkeur|stijl|gehemelte|drinker|geschmack|praferenz|stil|gaumen|trinker|gosto|gostos|bebedor)\b/i.test(
     normalized,
   );
+}
+
+/** What the reader says of their own taste, as theirs and apart from what is deduced. */
+function declaredStatement(declaration: TasteDeclaration): AssistantLanguageStatement | null {
+  const money = (minor: number | null, currency: string) =>
+    minor === null ? null : `${(minor / 100).toFixed(2)} ${currency}`;
+  const budget =
+    declaration.budget === null
+      ? null
+      : [
+          money(declaration.budget.lowMinor, declaration.budget.currency),
+          money(declaration.budget.highMinor, declaration.budget.currency),
+        ]
+          .map((value) => value ?? "…")
+          .join(" to ");
+  const parts = [
+    declaration.likes === null ? null : `likes: ${declaration.likes}`,
+    declaration.dislikes === null ? null : `dislikes: ${declaration.dislikes}`,
+    declaration.exploring === null ? null : `exploring: ${declaration.exploring}`,
+    budget === null ? null : `usual budget a bottle: ${budget}`,
+    declaration.note === null ? null : `note: ${declaration.note}`,
+  ].filter((part): part is string => part !== null);
+  if (parts.length === 0) return null;
+  return {
+    evidenceClass: "personal",
+    id: "taste-declared",
+    sampleSize: null,
+    sourceIds: [],
+    text: `what the reader says of their own taste, in their own words — declared by them, not deduced from their tastings: ${parts.join("; ")}. Where it and their tastings disagree, say both, and that they differ`,
+  };
 }
 
 /** The full profile as one statement the model can say and qualify. */
@@ -2426,6 +2458,16 @@ export async function runDeterministicAssistantTurn(
       turnId,
     });
     toolCalls += 1;
+  }
+  // What they said of their taste counts for a question about it, and for a
+  // recommendation — a budget, a dislike — beside what is deduced.
+  if (
+    requestsTasteProfile(options.request.message) ||
+    requestsRecommendation(options.request.message)
+  ) {
+    const declaration = await getTasteDeclaration(database, options.principal);
+    const declared = declaration === null ? null : declaredStatement(declaration);
+    if (declared !== null) tasteStatements.push(declared);
   }
 
   let comparisons: AssistantWineComparison[] = [];

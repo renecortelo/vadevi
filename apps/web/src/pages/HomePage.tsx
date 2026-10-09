@@ -10,6 +10,7 @@ import {
   PriceIcon,
   ReadLabelIcon,
   StatsIcon,
+  WineTypeIcon,
   WishlistIcon,
 } from "../brand/NavIcons";
 import { Monogram } from "../brand/Wordmark";
@@ -60,6 +61,7 @@ export function HomePage() {
             { Icon: PriceIcon, key: "shop", to: "/shop" },
             { Icon: LibraryIcon, key: "library", to: "/library" },
             { Icon: StatsIcon, key: "stats", to: "/stats" },
+            { Icon: WineTypeIcon, key: "taste", to: "/profile" },
           ].map((tool) => (
             <Link key={tool.key} to={tool.to}>
               <tool.Icon />

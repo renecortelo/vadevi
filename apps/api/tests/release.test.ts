@@ -141,7 +141,7 @@ describe("Export (AC-063)", () => {
     expect(response.status).toBe(200);
     expect(response.headers.get("Cache-Control")).toBe("private, no-store");
     const document = ExportDocumentSchema.parse(await response.json());
-    expect(document.data.schemaVersion).toBe("2026.1");
+    expect(document.data.schemaVersion).toBe("2026.2");
     expect(document.data.scope).toBe("space");
     expect(document.data.space.id).toBe(spaceId);
     expect(document.data.wines.map((entry: { id: string }) => entry.id)).toContain(wine.id);

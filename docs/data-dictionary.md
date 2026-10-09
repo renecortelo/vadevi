@@ -77,6 +77,8 @@ Assistant tool audits now allow `search_memory`, `get_wine_context`, `get_taste_
 
 The taste profile (`GET /api/v1/me/taste-profile`, and `get_taste_profile` for Vicenç) is read on demand from the reader's own submitted tastings in every Space they are an active member of, their own purchases, and the unopened bottles in those Spaces; nothing is stored. Each trait — a wine type, country, region, grape, descriptor, level of acidity, tannin, body, sweetness or finish, or price band — is measured in points against the reader's own average score, needs three tastings, and is drawn towards zero as if two more tastings had sat on the average. A tasting without a score counts through its sentiment or "would drink again", at a fraction of the reader's usual spread. Regions are read as one name and countries deduced from them as in the cellar book. The rules live in `apps/api/src/services/taste-profile.ts`.
 
+`0031_taste_declarations.sql` adds `taste_declarations`: what a reader says of their own taste, in their own words — likes, dislikes, what they are exploring, a usual budget a bottle and a note — one row per reader, saved over the version they were shown (`GET`/`PUT /api/v1/me/taste-declaration`). Vicenç reads it as declared, never as deduced, and says so when it and the tastings disagree. It is exported with the reader's personal Space (export schema `2026.2`) and deleted with the account.
+
 ## Cellar, wishlist, shopping, and confirmed actions
 
 `0011_cellar_shopping.sql` introduces the Phase 5 operational model:

@@ -711,7 +711,9 @@
       "high": "Alta"
     },
     "profileBasis": "{{count}} nota enviada",
-    "profileBasis_other": "{{count}} notas enviadas"
+    "profileBasis_other": "{{count}} notas enviadas",
+    "profileDescriptors": "Descriptores que más usas",
+    "profileOpen": "Ver tu perfil completo"
   },
   "homeTools": {
     "eyebrow": "Tu colección",
@@ -727,7 +729,9 @@
     "libraryTitle": "Biblioteca",
     "libraryBody": "Uvas, denominaciones, estilos y métodos.",
     "statsTitle": "Libro de bodega",
-    "statsBody": "Lo que catas, compras y guardas, contado."
+    "statsBody": "Lo que catas, compras y guardas, contado.",
+    "tasteTitle": "Tu perfil",
+    "tasteBody": "Lo que tus catas dicen de tu gusto, y lo que dices tú."
   },
   "cellar": {
     "eyebrow": "Tus botellas físicas",
@@ -1430,6 +1434,107 @@
     "narrowHint": "Toca un nombre para ver todo el libro solo de eso.",
     "memorableMark": "Memorable",
     "countriesInferred_one": "{{count}} vino no tiene país registrado; se deduce de su región.",
-    "countriesInferred_other": "{{count}} vinos no tienen país registrado; se deduce de su región."
+    "countriesInferred_other": "{{count}} vinos no tienen país registrado; se deduce de su región.",
+    "tasteLink": "Ver tu perfil de gusto"
+  },
+  "taste": {
+    "eyebrow": "Tu gusto",
+    "title": "Tu perfil de gusto",
+    "intro": "Lo que muestran tus propias catas, medido contra tu media, con los vinos detrás de cada rasgo. Y aparte, lo que dices tú.",
+    "insufficient": "Aún no hay catas suficientes para decir nada: {{count}} de {{minimum}}.",
+    "summaryTitle": "En pocas palabras",
+    "basis": "Basado en {{count}} catas tuyas · Confianza: {{confidence}} · Tu media: {{average}}",
+    "likesTitle": "Lo que puntúas por encima de tu media",
+    "dislikesTitle": "Lo que puntúas por debajo",
+    "points_one": "{{points}} puntos · {{count}} cata",
+    "points_other": "{{points}} puntos · {{count}} catas",
+    "pointsNote": "Los puntos son sobre tu propia media; con pocas catas se atenúan, como si hubiera dos más en tu media.",
+    "mostTastedTitle": "Lo que más bebes",
+    "cellarTitle": "Te espera en la bodega",
+    "cellarHint": "Botellas sin abrir que comparten lo que más te gusta.",
+    "buyingTitle": "Lo que compras",
+    "typicalPrice_one": "Una botella te cuesta unos {{price}} (de {{count}} compra).",
+    "typicalPrice_other": "Una botella te cuesta unos {{price}} (mediana de {{count}} compras).",
+    "rebought": "Has vuelto a comprar",
+    "boughtNotLiked": "Compraste y luego puntuaste por debajo de tu media",
+    "evolutionTitle": "Cómo ha cambiado",
+    "evolutionLine": "Últimos 12 meses: {{recent}} catas, media {{recentAverage}}. Antes: {{earlier}} catas, media {{earlierAverage}}.",
+    "shift": "{{label}}: del {{from}} al {{to}} de tus catas",
+    "askVicenc": "Pregúntale a Vicenç por tu estilo",
+    "bio": {
+      "likes": "Tus catas apuntan a {{list}}: es lo que puntúas por encima de tu media.",
+      "dislikes": "Te convencen menos {{list}}.",
+      "mostly": "Bebes sobre todo {{type}} ({{share}} de tus catas), y de {{country}} ({{countryShare}}).",
+      "mostlyType": "Bebes sobre todo {{type}} ({{share}} de tus catas).",
+      "price": "Sueles pagar unos {{price}} por botella.",
+      "tension": "Curiosamente, {{label}} está entre lo que más bebes, pero lo puntúas por debajo de tu media."
+    },
+    "level": {
+      "acidity": {
+        "low": "acidez baja",
+        "medium": "acidez media",
+        "high": "acidez alta"
+      },
+      "tannin": {
+        "low": "taninos suaves",
+        "medium": "taninos medios",
+        "high": "taninos marcados"
+      },
+      "body": {
+        "low": "cuerpo ligero",
+        "medium": "cuerpo medio",
+        "high": "mucho cuerpo"
+      },
+      "sweetness": {
+        "low": "secos",
+        "medium": "semisecos",
+        "high": "dulces"
+      },
+      "finish": {
+        "low": "final corto",
+        "medium": "final medio",
+        "high": "final largo"
+      }
+    },
+    "price": {
+      "under_10": "botellas de menos de {{high}}",
+      "10_20": "botellas de {{low}} a {{high}}",
+      "20_40": "botellas de {{low}} a {{high}}",
+      "40_plus": "botellas de más de {{low}}"
+    },
+    "typePlural": {
+      "red": "tintos",
+      "white": "blancos",
+      "rose": "rosados",
+      "sparkling": "espumosos",
+      "fortified": "generosos",
+      "orange": "vinos naranja",
+      "other": "otros vinos",
+      "vermouth_red": "vermuts rojos",
+      "vermouth_white": "vermuts blancos"
+    },
+    "declared": {
+      "title": "Lo que tú dices",
+      "intro": "Con tus palabras. Vicenç lo lee como dicho por ti, aparte de lo que muestran tus catas, y te avisa cuando no coinciden.",
+      "likes": "Me gusta",
+      "dislikes": "No me gusta",
+      "exploring": "Estoy explorando",
+      "likesPlaceholder": "Ej.: tintos frescos, Garnacha de altura",
+      "dislikesPlaceholder": "Ej.: mucha madera",
+      "exploringPlaceholder": "Ej.: vinos de Portugal",
+      "budget": "Presupuesto habitual por botella",
+      "currency": "Moneda",
+      "to": "Hasta",
+      "note": "Nota",
+      "save": "Guardar",
+      "saving": "Guardando…",
+      "saved": "Guardado.",
+      "conflict": "Se guardó desde otro dispositivo; te mostramos lo último. Revísalo y guarda de nuevo.",
+      "error": "No se pudo guardar. Inténtalo de nuevo.",
+      "updated": "Última vez guardado: {{date}}.",
+      "from": "Desde"
+    },
+    "tensions_one": "Ojo: {{list}} está entre lo que más bebes, pero lo puntúas por debajo de tu media.",
+    "tensions_other": "Ojo: {{list}} están entre lo que más bebes, pero los puntúas por debajo de tu media."
   }
 }

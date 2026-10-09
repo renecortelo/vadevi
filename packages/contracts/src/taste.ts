@@ -143,3 +143,64 @@ export const TasteProfileResponseSchema = z
 export type TasteProfile = z.infer<typeof TasteProfileSchema>;
 export type TasteTrait = z.infer<typeof TasteTraitSchema>;
 export type TasteTraitKind = (typeof tasteTraitKinds)[number];
+
+const DeclaredTextSchema = z.string().trim().max(500).nullable();
+
+/**
+ * What the reader says of their own taste, in their own words — kept apart
+ * from what their tastings show, and read by Vicenç as declared.
+ */
+export const TasteDeclarationSchema = z
+  .object({
+    budget: z
+      .object({
+        currency: CurrencyCodeSchema,
+        highMinor: CountSchema.nullable(),
+        lowMinor: CountSchema.nullable(),
+      })
+      .strict()
+      .nullable(),
+    dislikes: z.string().nullable(),
+    exploring: z.string().nullable(),
+    likes: z.string().nullable(),
+    note: z.string().nullable(),
+    updatedAt: z.string().datetime({ offset: true }).nullable(),
+    /** 0 until first saved; send it back to save over it. */
+    version: CountSchema,
+  })
+  .strict()
+  .openapi("TasteDeclaration");
+
+export const UpdateTasteDeclarationRequestSchema = z
+  .object({
+    budget: z
+      .object({
+        currency: CurrencyCodeSchema,
+        highMinor: CountSchema.nullable(),
+        lowMinor: CountSchema.nullable(),
+      })
+      .strict()
+      .refine(
+        (budget) =>
+          budget.lowMinor === null ||
+          budget.highMinor === null ||
+          budget.lowMinor <= budget.highMinor,
+        { message: "The low end of a budget cannot be above its high end." },
+      )
+      .nullable(),
+    dislikes: DeclaredTextSchema,
+    exploring: DeclaredTextSchema,
+    likes: DeclaredTextSchema,
+    note: z.string().trim().max(1_000).nullable(),
+    version: CountSchema,
+  })
+  .strict()
+  .openapi("UpdateTasteDeclarationRequest");
+
+export const TasteDeclarationResponseSchema = z
+  .object({ data: TasteDeclarationSchema })
+  .strict()
+  .openapi("TasteDeclarationResponse");
+
+export type TasteDeclaration = z.infer<typeof TasteDeclarationSchema>;
+export type UpdateTasteDeclarationRequest = z.infer<typeof UpdateTasteDeclarationRequestSchema>;

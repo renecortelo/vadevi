@@ -711,7 +711,9 @@
       "high": "Alta"
     },
     "profileBasis": "{{count}} nota enviada",
-    "profileBasis_other": "{{count}} notes enviades"
+    "profileBasis_other": "{{count}} notes enviades",
+    "profileDescriptors": "Descriptors que més fas servir",
+    "profileOpen": "Veure el teu perfil complet"
   },
   "homeTools": {
     "eyebrow": "La teva col·lecció",
@@ -727,7 +729,9 @@
     "libraryTitle": "Biblioteca",
     "libraryBody": "Raïms, denominacions, estils i mètodes.",
     "statsTitle": "Llibre de celler",
-    "statsBody": "El que tastes, compres i guardes, comptat."
+    "statsBody": "El que tastes, compres i guardes, comptat.",
+    "tasteTitle": "El teu perfil",
+    "tasteBody": "El que els teus tasts diuen del teu gust, i el que dius tu."
   },
   "cellar": {
     "eyebrow": "Les teves ampolles físiques",
@@ -1430,6 +1434,107 @@
     "narrowHint": "Toca un nom per veure tot el llibre només d'això.",
     "memorableMark": "Memorable",
     "countriesInferred_one": "{{count}} vi no té país registrat; es dedueix de la seva regió.",
-    "countriesInferred_other": "{{count}} vins no tenen país registrat; es dedueix de la seva regió."
+    "countriesInferred_other": "{{count}} vins no tenen país registrat; es dedueix de la seva regió.",
+    "tasteLink": "Veure el teu perfil de gust"
+  },
+  "taste": {
+    "eyebrow": "El teu gust",
+    "title": "El teu perfil de gust",
+    "intro": "El que mostren els teus tasts, mesurat contra la teva mitjana, amb els vins darrere de cada tret. I a part, el que dius tu.",
+    "insufficient": "Encara no hi ha prou tasts per dir res: {{count}} de {{minimum}}.",
+    "summaryTitle": "En poques paraules",
+    "basis": "Basat en {{count}} tasts teus · Confiança: {{confidence}} · La teva mitjana: {{average}}",
+    "likesTitle": "El que puntues per sobre de la teva mitjana",
+    "dislikesTitle": "El que puntues per sota",
+    "points_one": "{{points}} punts · {{count}} tast",
+    "points_other": "{{points}} punts · {{count}} tasts",
+    "pointsNote": "Els punts són sobre la teva pròpia mitjana; amb pocs tasts s'atenuen, com si n'hi hagués dos més a la mitjana.",
+    "mostTastedTitle": "El que més beus",
+    "cellarTitle": "T'espera al celler",
+    "cellarHint": "Ampolles sense obrir que comparteixen el que més t'agrada.",
+    "buyingTitle": "El que compres",
+    "typicalPrice_one": "Una ampolla et costa uns {{price}} (d'{{count}} compra).",
+    "typicalPrice_other": "Una ampolla et costa uns {{price}} (mediana de {{count}} compres).",
+    "rebought": "Has tornat a comprar",
+    "boughtNotLiked": "Vas comprar i després vas puntuar per sota de la teva mitjana",
+    "evolutionTitle": "Com ha canviat",
+    "evolutionLine": "Últims 12 mesos: {{recent}} tasts, mitjana {{recentAverage}}. Abans: {{earlier}} tasts, mitjana {{earlierAverage}}.",
+    "shift": "{{label}}: del {{from}} al {{to}} dels teus tasts",
+    "askVicenc": "Pregunta-li a Vicenç pel teu estil",
+    "bio": {
+      "likes": "Els teus tasts apunten a {{list}}: és el que puntues per sobre de la teva mitjana.",
+      "dislikes": "Et convencen menys {{list}}.",
+      "mostly": "Beus sobretot {{type}} ({{share}} dels teus tasts), i de {{country}} ({{countryShare}}).",
+      "mostlyType": "Beus sobretot {{type}} ({{share}} dels teus tasts).",
+      "price": "Acostumes a pagar uns {{price}} per ampolla.",
+      "tension": "Curiosament, {{label}} és entre el que més beus, però ho puntues per sota de la teva mitjana."
+    },
+    "level": {
+      "acidity": {
+        "low": "acidesa baixa",
+        "medium": "acidesa mitjana",
+        "high": "acidesa alta"
+      },
+      "tannin": {
+        "low": "tanins suaus",
+        "medium": "tanins mitjans",
+        "high": "tanins marcats"
+      },
+      "body": {
+        "low": "cos lleuger",
+        "medium": "cos mitjà",
+        "high": "molt de cos"
+      },
+      "sweetness": {
+        "low": "secs",
+        "medium": "semisecs",
+        "high": "dolços"
+      },
+      "finish": {
+        "low": "final curt",
+        "medium": "final mitjà",
+        "high": "final llarg"
+      }
+    },
+    "price": {
+      "under_10": "ampolles de menys de {{high}}",
+      "10_20": "ampolles de {{low}} a {{high}}",
+      "20_40": "ampolles de {{low}} a {{high}}",
+      "40_plus": "ampolles de més de {{low}}"
+    },
+    "typePlural": {
+      "red": "negres",
+      "white": "blancs",
+      "rose": "rosats",
+      "sparkling": "escumosos",
+      "fortified": "generosos",
+      "orange": "vins taronja",
+      "other": "altres vins",
+      "vermouth_red": "vermuts negres",
+      "vermouth_white": "vermuts blancs"
+    },
+    "declared": {
+      "title": "El que dius tu",
+      "intro": "Amb les teves paraules. Vicenç ho llegeix com a dit per tu, a part del que mostren els teus tasts, i t'avisa quan no coincideixen.",
+      "likes": "M'agrada",
+      "dislikes": "No m'agrada",
+      "exploring": "Estic explorant",
+      "likesPlaceholder": "Ex.: negres frescos, Garnatxa d'altura",
+      "dislikesPlaceholder": "Ex.: molta fusta",
+      "exploringPlaceholder": "Ex.: vins de Portugal",
+      "budget": "Pressupost habitual per ampolla",
+      "currency": "Moneda",
+      "to": "Fins a",
+      "note": "Nota",
+      "save": "Desa",
+      "saving": "Desant…",
+      "saved": "Desat.",
+      "conflict": "S'ha desat des d'un altre dispositiu; et mostrem l'últim. Revisa-ho i torna a desar.",
+      "error": "No s'ha pogut desar. Torna-ho a provar.",
+      "updated": "Desat per última vegada: {{date}}.",
+      "from": "Des de"
+    },
+    "tensions_one": "Compte: {{list}} és entre el que més beus, però ho puntues per sota de la teva mitjana.",
+    "tensions_other": "Compte: {{list}} són entre el que més beus, però els puntues per sota de la teva mitjana."
   }
 }

@@ -711,7 +711,9 @@
       "high": "Hoog"
     },
     "profileBasis": "{{count}} ingediende notitie",
-    "profileBasis_other": "{{count}} ingediende notities"
+    "profileBasis_other": "{{count}} ingediende notities",
+    "profileDescriptors": "Descriptoren die je het meest gebruikt",
+    "profileOpen": "Bekijk je volledige profiel"
   },
   "homeTools": {
     "eyebrow": "Je collectie",
@@ -727,7 +729,9 @@
     "libraryTitle": "Bibliotheek",
     "libraryBody": "Druiven, benamingen, stijlen en methoden.",
     "statsTitle": "Kelderboek",
-    "statsBody": "Wat je proeft, koopt en bewaart, geteld."
+    "statsBody": "Wat je proeft, koopt en bewaart, geteld.",
+    "tasteTitle": "Je profiel",
+    "tasteBody": "Wat je proeverijen over je smaak zeggen, en wat jij zegt."
   },
   "cellar": {
     "eyebrow": "Je fysieke flessen",
@@ -1430,6 +1434,107 @@
     "narrowHint": "Tik op een naam om het hele boek alleen daarvoor te zien.",
     "memorableMark": "Gedenkwaardig",
     "countriesInferred_one": "{{count}} wijn heeft geen vastgelegd land; het volgt uit de regio.",
-    "countriesInferred_other": "{{count}} wijnen hebben geen vastgelegd land; het volgt uit de regio."
+    "countriesInferred_other": "{{count}} wijnen hebben geen vastgelegd land; het volgt uit de regio.",
+    "tasteLink": "Bekijk je smaakprofiel"
+  },
+  "taste": {
+    "eyebrow": "Je smaak",
+    "title": "Je smaakprofiel",
+    "intro": "Wat je eigen proeverijen laten zien, gemeten tegen je eigen gemiddelde, met de wijnen achter elk kenmerk. En apart, wat je zelf zegt.",
+    "insufficient": "Nog niet genoeg proeverijen om iets te zeggen: {{count}} van {{minimum}}.",
+    "summaryTitle": "In een paar woorden",
+    "basis": "Op basis van {{count}} van je proeverijen · Betrouwbaarheid: {{confidence}} · Je gemiddelde: {{average}}",
+    "likesTitle": "Wat je boven je gemiddelde scoort",
+    "dislikesTitle": "Wat je eronder scoort",
+    "points_one": "{{points}} punten · {{count}} proeverij",
+    "points_other": "{{points}} punten · {{count}} proeverijen",
+    "pointsNote": "Punten zijn ten opzichte van je eigen gemiddelde; bij weinig proeverijen worden ze afgezwakt, alsof er twee meer op je gemiddelde lagen.",
+    "mostTastedTitle": "Wat je het meest drinkt",
+    "cellarTitle": "Wacht in je kelder",
+    "cellarHint": "Ongeopende flessen die delen wat je het lekkerst vindt.",
+    "buyingTitle": "Wat je koopt",
+    "typicalPrice_one": "Een fles kost je ongeveer {{price}} (uit {{count}} aankoop).",
+    "typicalPrice_other": "Een fles kost je ongeveer {{price}} (mediaan van {{count}} aankopen).",
+    "rebought": "Opnieuw gekocht",
+    "boughtNotLiked": "Gekocht en daarna onder je gemiddelde gescoord",
+    "evolutionTitle": "Hoe het veranderd is",
+    "evolutionLine": "Laatste 12 maanden: {{recent}} proeverijen, gemiddelde {{recentAverage}}. Daarvoor: {{earlier}} proeverijen, gemiddelde {{earlierAverage}}.",
+    "shift": "{{label}}: van {{from}} naar {{to}} van je proeverijen",
+    "askVicenc": "Vraag Vicenç naar je stijl",
+    "bio": {
+      "likes": "Je proeverijen wijzen naar {{list}}: dat scoor je boven je gemiddelde.",
+      "dislikes": "Minder overtuigd ben je van {{list}}.",
+      "mostly": "Je drinkt vooral {{type}} ({{share}} van je proeverijen), en uit {{country}} ({{countryShare}}).",
+      "mostlyType": "Je drinkt vooral {{type}} ({{share}} van je proeverijen).",
+      "price": "Je betaalt meestal ongeveer {{price}} per fles.",
+      "tension": "Opvallend: {{label}} hoort bij wat je het meest drinkt, maar je scoort het onder je gemiddelde."
+    },
+    "level": {
+      "acidity": {
+        "low": "lage zuurgraad",
+        "medium": "gemiddelde zuurgraad",
+        "high": "hoge zuurgraad"
+      },
+      "tannin": {
+        "low": "zachte tannines",
+        "medium": "gemiddelde tannines",
+        "high": "stevige tannines"
+      },
+      "body": {
+        "low": "lichte body",
+        "medium": "gemiddelde body",
+        "high": "volle body"
+      },
+      "sweetness": {
+        "low": "droog",
+        "medium": "halfdroog",
+        "high": "zoet"
+      },
+      "finish": {
+        "low": "korte afdronk",
+        "medium": "gemiddelde afdronk",
+        "high": "lange afdronk"
+      }
+    },
+    "price": {
+      "under_10": "flessen onder {{high}}",
+      "10_20": "flessen van {{low}} tot {{high}}",
+      "20_40": "flessen van {{low}} tot {{high}}",
+      "40_plus": "flessen boven {{low}}"
+    },
+    "typePlural": {
+      "red": "rode wijnen",
+      "white": "witte wijnen",
+      "rose": "rosés",
+      "sparkling": "mousserende wijnen",
+      "fortified": "versterkte wijnen",
+      "orange": "oranje wijnen",
+      "other": "andere wijnen",
+      "vermouth_red": "rode vermout",
+      "vermouth_white": "witte vermout"
+    },
+    "declared": {
+      "title": "Wat jij zegt",
+      "intro": "In je eigen woorden. Vicenç leest het als door jou gezegd, los van wat je proeverijen laten zien, en zegt het als die twee verschillen.",
+      "likes": "Ik houd van",
+      "dislikes": "Ik houd niet van",
+      "exploring": "Ik ontdek",
+      "likesPlaceholder": "Bijv. frisse rode wijnen, Garnacha van grote hoogte",
+      "dislikesPlaceholder": "Bijv. veel hout",
+      "exploringPlaceholder": "Bijv. wijnen uit Portugal",
+      "budget": "Gebruikelijk budget per fles",
+      "currency": "Valuta",
+      "to": "Tot",
+      "note": "Notitie",
+      "save": "Opslaan",
+      "saving": "Bezig met opslaan…",
+      "saved": "Opgeslagen.",
+      "conflict": "Het is op een ander apparaat opgeslagen; hier is de nieuwste versie. Controleer het en sla opnieuw op.",
+      "error": "Opslaan is mislukt. Probeer het opnieuw.",
+      "updated": "Laatst opgeslagen: {{date}}.",
+      "from": "Van"
+    },
+    "tensions_one": "Let op: {{list}} hoort bij wat je het meest drinkt, maar je scoort het onder je gemiddelde.",
+    "tensions_other": "Let op: {{list}} horen bij wat je het meest drinkt, maar je scoort ze onder je gemiddelde."
   }
 }
