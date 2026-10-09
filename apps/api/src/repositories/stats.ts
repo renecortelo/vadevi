@@ -2,6 +2,9 @@ import type { CurrencyCode, ScoreBand, WineStats, WineStatsQuery } from "@vadevi
 import { supportedCurrencies } from "@vadevi/contracts";
 
 import type { FirebasePrincipal } from "../types";
+import { resolveAppellationCountries } from "./appellation-terms";
+import { resolveCountryCodes } from "./country-terms";
+import { normalizeWineText } from "./wine-memory";
 
 /**
  * A reader's numbers, counted from their records.
@@ -17,10 +20,82 @@ type Bind = string | number | null;
 type Filter = { binds: Bind[]; sql: string };
 
 type Scope = Readonly<{
+  /**
+   * The country of each wine recorded without one whose region says it, as a
+   * JSON object of wine id → ISO code (see `inferCountries`).
+   */
+  inferredCountries: string;
   /** The rows counted are the reader's own (personal), or everyone's (space). */
   ownerId: string | null;
   spaceIds: readonly string[];
 }>;
+
+/** A wine's country: as recorded, or as its region says. */
+function countryOf(alias: string, scope: Scope): Filter {
+  return {
+    binds: [scope.inferredCountries],
+    sql: `coalesce(${alias}.country_code, json_extract(?, '$."' || ${alias}.id || '"'))`,
+  };
+}
+
+/** "DO Empordà", "Vino de la Tierra de Castilla": the name without its label. */
+const designationPrefix =
+  /^(denominacion de origen calificada|denominacion de origen|denominacio d origen qualificada|denominacio d origen|vino de la tierra de|vino de la tierra|vi de la terra de|tierra de|d o ca|d o q|d o c|d o|doca|doq|docg|doc|dop|do|aoc|aop|igp|igt|pdo|pgi)\s+/;
+
+/**
+ * The country of every wine in these Spaces recorded without one, where its
+ * region says which: a country named in it ("Rivergaro Italia"), one of the
+ * appellations Vicenç already places ("Penedès", "Parras"), or a name in the
+ * EU register the library holds ("Conca de Barberà"). Only a region that
+ * points to one country counts; "La Mancga" points nowhere and stays unknown.
+ * Nothing is written: the record keeps what was recorded.
+ */
+async function inferCountries(database: D1Database, spaceIds: readonly string[]): Promise<string> {
+  const wines = await database
+    .prepare(
+      `SELECT id, region FROM wine_records
+      WHERE space_id IN (SELECT value FROM json_each(?)) AND deleted_at IS NULL
+        AND country_code IS NULL AND region IS NOT NULL AND trim(region) <> ''`,
+    )
+    .bind(JSON.stringify(spaceIds))
+    .all<{ id: string; region: string }>();
+  const inferred: Record<string, string> = {};
+  const unresolved: { id: string; names: string[] }[] = [];
+  for (const wine of wines.results) {
+    const codes = new Set([
+      ...resolveCountryCodes(wine.region),
+      ...resolveAppellationCountries(wine.region),
+    ]);
+    if (codes.size === 1) {
+      inferred[wine.id] = [...codes][0]!;
+    } else if (codes.size === 0) {
+      const name = normalizeWineText(wine.region);
+      const bare = name.replace(designationPrefix, "");
+      unresolved.push({ id: wine.id, names: [...new Set([name, bare])] });
+    }
+  }
+  if (unresolved.length > 0) {
+    const registered = await database
+      .prepare(
+        `SELECT name.normalized_name AS name, COUNT(DISTINCT region.country_code) AS countries,
+          MIN(region.country_code) AS code
+        FROM kb_names name JOIN kb_regions region ON region.id = name.entity_id
+        WHERE name.entity_type = 'region'
+          AND name.normalized_name IN (SELECT value FROM json_each(?))
+        GROUP BY name.normalized_name`,
+      )
+      .bind(JSON.stringify([...new Set(unresolved.flatMap((wine) => wine.names))]))
+      .all<{ code: string; countries: number; name: string }>();
+    const countryByName = new Map(
+      registered.results.filter((row) => row.countries === 1).map((row) => [row.name, row.code]),
+    );
+    for (const wine of unresolved) {
+      const code = wine.names.map((name) => countryByName.get(name)).find(Boolean);
+      if (code !== undefined) inferred[wine.id] = code;
+    }
+  }
+  return JSON.stringify(inferred);
+}
 
 function spaceFilter(alias: string, scope: Scope): Filter {
   return {
@@ -47,7 +122,7 @@ function period(column: string, query: WineStatsQuery): Filter {
  * The narrowing to one type, country, region or grape, as a condition on a
  * wine id: every count — notes, purchases, bottles, wines — follows the wine.
  */
-function wineMatch(column: string, query: WineStatsQuery): Filter {
+function wineMatch(column: string, query: WineStatsQuery, scope: Scope): Filter {
   const conditions: Filter[] = [];
   if (query.type !== undefined) {
     conditions.push({
@@ -56,7 +131,8 @@ function wineMatch(column: string, query: WineStatsQuery): Filter {
     });
   }
   if (query.country !== undefined) {
-    conditions.push({ binds: [query.country], sql: "narrowed.country_code = ?" });
+    const country = countryOf("narrowed", scope);
+    conditions.push({ binds: [...country.binds, query.country], sql: `${country.sql} = ?` });
   }
   if (query.region !== undefined) {
     conditions.push({
@@ -102,7 +178,7 @@ function notesIn(scope: Scope, query: WineStatsQuery): Filter {
         }
       : { binds: [scope.ownerId], sql: "note.author_user_id = ?" },
     period("note.tasted_at", query),
-    wineMatch("note.wine_id", query),
+    wineMatch("note.wine_id", query, scope),
   );
 }
 
@@ -114,7 +190,7 @@ function purchasesIn(scope: Scope, query: WineStatsQuery): Filter {
       ? { binds: [], sql: "1 = 1" }
       : { binds: [scope.ownerId], sql: "purchase.purchaser_user_id = ?" },
     period("purchase.purchased_at", query),
-    wineMatch("purchase.wine_id", query),
+    wineMatch("purchase.wine_id", query, scope),
   );
 }
 
@@ -126,7 +202,7 @@ function bottlesIn(scope: Scope, query: WineStatsQuery): Filter {
       ? { binds: [], sql: "1 = 1" }
       : { binds: [scope.ownerId], sql: "bottle.created_by_user_id = ?" },
     period("bottle.acquired_at", query),
-    wineMatch("bottle.wine_id", query),
+    wineMatch("bottle.wine_id", query, scope),
   );
 }
 
@@ -145,7 +221,7 @@ function winesIn(scope: Scope, query: WineStatsQuery): Filter {
       ? { binds: [], sql: "1 = 1" }
       : { binds: [scope.ownerId], sql: "recorded.created_by_user_id = ?" },
     period("recorded.created_at", query),
-    wineMatch("recorded.id", query),
+    wineMatch("recorded.id", query, scope),
   );
   return {
     binds: [...recorded.binds, ...notes.binds, ...purchases.binds, ...bottles.binds],
@@ -181,7 +257,8 @@ async function computeStats(
   const bottles = bottlesIn(scope, query);
   const wines = winesIn(scope, query);
   const everyWine = winesIn(scope, unnarrowed(query));
-  const wishlistMatch = wineMatch("item.wine_id", query);
+  const country = countryOf("wine", scope);
+  const wishlistMatch = wineMatch("item.wine_id", query, scope);
   const statement = (sql: string, binds: Bind[]) => database.prepare(sql).bind(...binds);
 
   const [
@@ -243,16 +320,22 @@ async function computeStats(
       GROUP BY note.wine_id ORDER BY score DESC, wine.display_name LIMIT 2000`,
       notes.binds,
     ),
-    statement(`SELECT COUNT(*) AS total FROM wine_records wine WHERE ${wines.sql}`, wines.binds),
+    statement(
+      `SELECT COUNT(*) AS total,
+        SUM(CASE WHEN wine.country_code IS NULL AND ${country.sql} IS NOT NULL THEN 1 ELSE 0 END)
+          AS inferred
+      FROM wine_records wine WHERE ${wines.sql}`,
+      [...country.binds, ...wines.binds],
+    ),
     statement(
       `SELECT coalesce(wine.wine_type_free, wine.wine_type, 'unknown') AS key, COUNT(*) AS count
       FROM wine_records wine WHERE ${wines.sql} GROUP BY key ORDER BY count DESC, key`,
       wines.binds,
     ),
     statement(
-      `SELECT coalesce(wine.country_code, 'unknown') AS key, COUNT(*) AS count
+      `SELECT coalesce(${country.sql}, 'unknown') AS key, COUNT(*) AS count
       FROM wine_records wine WHERE ${wines.sql} GROUP BY key ORDER BY count DESC, key LIMIT 15`,
-      wines.binds,
+      [...country.binds, ...wines.binds],
     ),
     statement(
       `SELECT min(wine.region) AS key, COUNT(*) AS count FROM wine_records wine
@@ -326,9 +409,9 @@ async function computeStats(
       everyWine.binds,
     ),
     statement(
-      `SELECT DISTINCT wine.country_code AS value FROM wine_records wine
-      WHERE ${everyWine.sql} AND wine.country_code IS NOT NULL ORDER BY value`,
-      everyWine.binds,
+      `SELECT DISTINCT ${country.sql} AS value FROM wine_records wine
+      WHERE ${everyWine.sql} AND ${country.sql} IS NOT NULL ORDER BY value`,
+      [...country.binds, ...everyWine.binds, ...country.binds],
     ),
     statement(
       `SELECT min(trim(wine.region)) AS value FROM wine_records wine
@@ -503,6 +586,7 @@ async function computeStats(
       byGrape: buckets(wineGrapes),
       byRegion: buckets(wineRegions),
       byType: buckets(wineTypes),
+      countriesInferred: rows<{ inferred: number | null }>(wineTotal)[0]?.inferred ?? 0,
       total: rows<{ total: number }>(wineTotal)[0]?.total ?? 0,
     },
     wishlist: { active: rows<{ active: number }>(wishlist)[0]?.active ?? 0 },
@@ -528,9 +612,14 @@ export async function getPersonalStats(
     .all<{ space_id: string; user_id: string }>();
   const first = memberships.results[0];
   if (first === undefined) return null;
+  const spaceIds = memberships.results.map((row) => row.space_id);
   return computeStats(
     database,
-    { ownerId: first.user_id, spaceIds: memberships.results.map((row) => row.space_id) },
+    {
+      inferredCountries: await inferCountries(database, spaceIds),
+      ownerId: first.user_id,
+      spaceIds,
+    },
     query,
     { scope: "personal", spaceId: null },
   );
@@ -554,7 +643,12 @@ export async function getSpaceStats(
     .bind(spaceId, principal.firebaseUid)
     .first<{ ok: number }>();
   if (member === null) return null;
-  return computeStats(database, { ownerId: null, spaceIds: [spaceId] }, query, {
+  const scope = {
+    inferredCountries: await inferCountries(database, [spaceId]),
+    ownerId: null,
+    spaceIds: [spaceId],
+  };
+  return computeStats(database, scope, query, {
     scope: "space",
     spaceId,
   });

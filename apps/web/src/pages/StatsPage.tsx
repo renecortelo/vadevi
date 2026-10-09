@@ -436,6 +436,12 @@ export function StatsPage() {
                     onSelect: narrowTo("country", row.key),
                   }))}
                 />
+                {/* Said, so a deduced country is never read as a recorded one. */}
+                {stats.wines.countriesInferred === 0 ? null : (
+                  <p className="section-help">
+                    {t("stats.countriesInferred", { count: stats.wines.countriesInferred })}
+                  </p>
+                )}
               </div>
               {stats.wines.byRegion.length === 0 ? null : (
                 <div className="stats-group">

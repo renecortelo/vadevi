@@ -1428,6 +1428,8 @@
     },
     "emptyNarrowed": "Niente corrisponde a questi filtri in questo periodo.",
     "narrowHint": "Tocca un nome per vedere tutto il libro solo per quello.",
-    "memorableMark": "Memorabile"
+    "memorableMark": "Memorabile",
+    "countriesInferred_one": "{{count}} vino non ha un paese registrato; lo si deduce dalla regione.",
+    "countriesInferred_other": "{{count}} vini non hanno un paese registrato; lo si deduce dalla regione."
   }
 }

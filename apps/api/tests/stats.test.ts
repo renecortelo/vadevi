@@ -174,7 +174,35 @@ describe("a reader's numbers", () => {
     ]);
     expect(space.cellar).toMatchObject({ opened: 1, owned: 1 });
 
-    // Narrowed to one grape, or one type: every count follows the wine, and
+    // A wine recorded without a country is placed by its region where the
+    // region says which; a misspelt one stays unknown rather than guessed.
+    const [emporda, typo] = [ulid(), ulid()];
+    await env.DB.batch(
+      [
+        [emporda, "DO Empordà"],
+        [typo, "La Mancga"],
+      ].map(([id, region]) =>
+        env.DB.prepare(
+          `INSERT INTO wine_records (
+            id, space_id, display_name, normalized_name, producer_name, normalized_producer_name,
+            non_vintage, region, identity_status, version, created_by_user_id, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, 'Celler', 'celler', 0, ?, 'confirmed', 1, ?, ?, ?)`,
+        ).bind(id, personal, `Wine ${region}`, `wine ${id}`, region, ownerId, now, now),
+      ),
+    );
+    const placed = WineStatsResponseSchema.parse(
+      (await stats(ownerToken, "/api/v1/me/stats")).body,
+    ).data;
+    expect(placed.wines.byCountry).toEqual([
+      { count: 4, key: "ES" },
+      { count: 1, key: "unknown" },
+    ]);
+    expect(placed.wines.countriesInferred).toBe(1);
+    const spain = WineStatsResponseSchema.parse(
+      (await stats(ownerToken, "/api/v1/me/stats?country=ES")).body,
+    ).data;
+    expect(spain.wines.total).toBe(4);
+
     // what it can be narrowed to stays whole.
     const tempranillo = WineStatsResponseSchema.parse(
       (await stats(ownerToken, "/api/v1/me/stats?grape=tempranillo")).body,
@@ -186,7 +214,7 @@ describe("a reader's numbers", () => {
     expect(tempranillo.facets).toEqual({
       countries: ["ES"],
       grapes: ["Tempranillo"],
-      regions: ["Rioja", "Rías Baixas"],
+      regions: ["DO Empordà", "La Mancga", "Rioja", "Rías Baixas"],
       types: ["red", "white"],
     });
     const whites = WineStatsResponseSchema.parse(

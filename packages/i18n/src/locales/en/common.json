@@ -1428,6 +1428,8 @@
     },
     "emptyNarrowed": "Nothing matches these filters in this period.",
     "narrowHint": "Tap a name to see the whole book for it alone.",
-    "memorableMark": "Memorable"
+    "memorableMark": "Memorable",
+    "countriesInferred_one": "{{count}} wine has no country recorded; its region says which.",
+    "countriesInferred_other": "{{count}} wines have no country recorded; their region says which."
   }
 }

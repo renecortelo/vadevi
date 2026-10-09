@@ -143,6 +143,8 @@ export const WineStatsSchema = z
         byGrape: z.array(BucketSchema),
         byRegion: z.array(BucketSchema),
         byType: z.array(BucketSchema),
+        /** Wines recorded without a country, placed by what their region says. */
+        countriesInferred: CountSchema,
         total: CountSchema,
       })
       .strict(),

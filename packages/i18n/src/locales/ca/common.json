@@ -1428,6 +1428,8 @@
     },
     "emptyNarrowed": "Res no coincideix amb aquests filtres en aquest període.",
     "narrowHint": "Toca un nom per veure tot el llibre només d'això.",
-    "memorableMark": "Memorable"
+    "memorableMark": "Memorable",
+    "countriesInferred_one": "{{count}} vi no té país registrat; es dedueix de la seva regió.",
+    "countriesInferred_other": "{{count}} vins no tenen país registrat; es dedueix de la seva regió."
   }
 }

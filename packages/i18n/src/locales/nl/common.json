@@ -1428,6 +1428,8 @@
     },
     "emptyNarrowed": "Niets past bij deze filters in deze periode.",
     "narrowHint": "Tik op een naam om het hele boek alleen daarvoor te zien.",
-    "memorableMark": "Gedenkwaardig"
+    "memorableMark": "Gedenkwaardig",
+    "countriesInferred_one": "{{count}} wijn heeft geen vastgelegd land; het volgt uit de regio.",
+    "countriesInferred_other": "{{count}} wijnen hebben geen vastgelegd land; het volgt uit de regio."
   }
 }

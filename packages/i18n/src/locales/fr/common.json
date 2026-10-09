@@ -1428,6 +1428,8 @@
     },
     "emptyNarrowed": "Rien ne correspond à ces filtres sur cette période.",
     "narrowHint": "Touchez un nom pour voir tout le livre pour lui seul.",
-    "memorableMark": "Mémorable"
+    "memorableMark": "Mémorable",
+    "countriesInferred_one": "{{count}} vin n'a pas de pays enregistré ; il est déduit de sa région.",
+    "countriesInferred_other": "{{count}} vins n'ont pas de pays enregistré ; il est déduit de leur région."
   }
 }

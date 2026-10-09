@@ -193,7 +193,7 @@ function statsStatement(stats: WineStats, whose: string): AssistantLanguageState
     `would buy again: yes ${tastings.wouldBuy.yes}, no ${tastings.wouldBuy.no}; would drink again: yes ${tastings.wouldDrinkAgain.yes}, no ${tastings.wouldDrinkAgain.no}; memorable ${tastings.memorable}`,
     `best scored: ${tastings.topWines.map((wine) => `${wine.wineName} (${wine.score})`).join("; ") || "none"}`,
     `by type: ${list(stats.wines.byType)}`,
-    `by country: ${list(stats.wines.byCountry)}`,
+    `by country: ${list(stats.wines.byCountry)}${stats.wines.countriesInferred === 0 ? "" : ` (${stats.wines.countriesInferred} of them have no country recorded and are placed by their region)`}`,
     `by region: ${list(stats.wines.byRegion)}`,
     `by grape: ${list(stats.wines.byGrape)}`,
     ...(stats.spending.length === 0

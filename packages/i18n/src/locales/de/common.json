@@ -1428,6 +1428,8 @@
     },
     "emptyNarrowed": "Nichts passt in diesem Zeitraum zu diesen Filtern.",
     "narrowHint": "Tippen Sie auf einen Namen, um das ganze Buch nur dafür zu sehen.",
-    "memorableMark": "Denkwürdig"
+    "memorableMark": "Denkwürdig",
+    "countriesInferred_one": "{{count}} Wein hat kein erfasstes Land; es ergibt sich aus der Region.",
+    "countriesInferred_other": "{{count}} Weine haben kein erfasstes Land; es ergibt sich aus der Region."
   }
 }
