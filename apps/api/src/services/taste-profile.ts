@@ -424,11 +424,19 @@ export function buildTasteProfile(
 export function tasteFacts(
   profile: TasteProfile,
   locale: string,
+  labels: Readonly<Record<string, string>> = {},
 ): { facts: string[]; numbers: number[] } {
   const numbers: number[] = [];
+  let format: Intl.NumberFormat;
+  try {
+    format = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 });
+  } catch {
+    format = new Intl.NumberFormat("en", { maximumFractionDigits: 1 });
+  }
+  // Every number as the reader's language writes it ("6,1"), and kept.
   const keep = (value: number) => {
     numbers.push(value, Math.abs(value));
-    return value;
+    return format.format(value);
   };
   let countries: Intl.DisplayNames | null = null;
   try {
@@ -436,17 +444,12 @@ export function tasteFacts(
   } catch {
     countries = null;
   }
-  const nameOf = (trait: { key: string; kind: string; label: string }) => {
-    if (trait.kind === "country") return countries?.of(trait.key) ?? trait.key;
-    if (trait.kind === "type") return `${trait.key.replaceAll("_", " ")} wines`;
-    if (["acidity", "tannin", "body", "sweetness", "finish"].includes(trait.kind)) {
-      return `${trait.key} ${trait.kind}`;
-    }
-    if (trait.kind === "price") {
-      const [currency, band] = trait.key.split(":");
-      return `bottles at ${band!.replace("_plus", " or more").replace("under_", "under ").replace("_", " to ")} ${currency}`;
-    }
-    return trait.label;
+  // A trait as the reader's language names it, or nothing: a code
+  // ("appearance.soft") or an English level ("low sweetness") handed to the
+  // writer came back word for word.
+  const nameOf = (trait: { key: string; kind: string }): string | null => {
+    if (trait.kind === "country") return countries?.of(trait.key) ?? null;
+    return labels[`${trait.kind}:${trait.key}`] ?? null;
   };
   const facts: string[] = [];
   if (profile.averageScore !== null) {
@@ -455,22 +458,29 @@ export function tasteFacts(
     );
   }
   for (const trait of profile.likes.slice(0, 4)) {
+    const name = nameOf(trait);
+    if (name === null) continue;
     facts.push(
-      `they score ${nameOf(trait)} ${keep(trait.pointsVersusAverage)} points above their own average, over ${keep(trait.notes)} tastings`,
+      `they score ${name} ${keep(trait.pointsVersusAverage)} points above their own average, over ${keep(trait.notes)} tastings`,
     );
   }
   for (const trait of profile.dislikes.slice(0, 3)) {
+    const name = nameOf(trait);
+    if (name === null) continue;
     facts.push(
-      `they score ${nameOf(trait)} ${keep(Math.abs(trait.pointsVersusAverage))} points below their own average, over ${keep(trait.notes)} tastings`,
+      `they score ${name} ${keep(Math.abs(trait.pointsVersusAverage))} points below their own average, over ${keep(trait.notes)} tastings`,
     );
   }
   for (const entry of profile.habits.mostTasted
     .filter((item) => item.kind !== "region")
     .slice(0, 3)) {
-    facts.push(`${nameOf(entry)}: ${keep(Math.round(entry.share * 100))}% of their tastings`);
+    const name = nameOf(entry);
+    if (name === null) continue;
+    facts.push(`${name}: ${keep(Math.round(entry.share * 100))}% of their tastings`);
   }
   for (const trait of profile.tensions.slice(0, 2)) {
-    facts.push(`they drink a lot of ${nameOf(trait)} but score it below their average`);
+    const name = nameOf(trait);
+    if (name !== null) facts.push(`they drink a lot of ${name} but score it below their average`);
   }
   const price = profile.habits.prices[0];
   if (price !== undefined) {

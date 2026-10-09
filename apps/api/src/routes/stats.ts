@@ -365,7 +365,7 @@ export function registerStatsRoutes(app: OpenAPIHono<ApiEnvironment>) {
   // Written on request, never stored: one model call from the day's allowance,
   // and a text kept only if every number in it is one of the reader's own.
   app.openapi(tasteBioRoute, async (context) => {
-    const { locale } = context.req.valid("json");
+    const { labels, locale } = context.req.valid("json");
     const principal = context.get("principal");
     const profile = await getTasteProfile(context.env.DB!, principal, locale);
     if (profile === null) return context.json(notFound(context.get("requestId")), 404);
@@ -391,7 +391,7 @@ export function registerStatsRoutes(app: OpenAPIHono<ApiEnvironment>) {
         spaceId: reader.active_space_id,
       }));
     if (!withinBudget) return answer("unavailable");
-    const { facts, numbers } = tasteFacts(profile, locale);
+    const { facts, numbers } = tasteFacts(profile, locale, labels);
     const text = await narrative.describeTaste({ facts, locale, numbers });
     return text === null ? answer("not_kept") : answer("written", text);
   });

@@ -13179,6 +13179,15 @@
       "TasteBioRequest": {
         "type": "object",
         "properties": {
+          "labels": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "default": {}
+          },
           "locale": {
             "type": "string",
             "enum": [

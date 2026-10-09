@@ -187,7 +187,16 @@ export function ProfilePage() {
           <section aria-labelledby="taste-summary" className="settings-card taste-summary">
             <h2 id="taste-summary">{t("taste.summaryTitle")}</h2>
             <p>{bio(profile).join(" ")}</p>
-            <WrittenBio />
+            <WrittenBio
+              labels={Object.fromEntries(
+                [
+                  ...profile.likes,
+                  ...profile.dislikes,
+                  ...profile.tensions,
+                  ...profile.habits.mostTasted,
+                ].map((trait) => [`${trait.kind}:${trait.key}`, inSentence(trait)]),
+              )}
+            />
             <p className="section-help">
               {t("taste.basis", {
                 average:
@@ -341,7 +350,7 @@ export function ProfilePage() {
  * The same facts told by Vicenç, on request: one call from the day's
  * allowance, kept only if every number in it is one of the reader's own.
  */
-function WrittenBio() {
+function WrittenBio({ labels }: { labels: Record<string, string> }) {
   const { i18n, t } = useTranslation();
   const locale = resolveSupportedLocale(i18n.language);
   const { user } = useAuth();
@@ -358,7 +367,7 @@ function WrittenBio() {
     if (user === null) return;
     setState({ kind: "writing" });
     try {
-      const result = await writeTasteBio(user, locale);
+      const result = await writeTasteBio(user, locale, labels);
       setState({ kind: "done", status: result.status, text: result.text });
     } catch {
       setState({ kind: "error" });

@@ -62,9 +62,10 @@ export async function saveTasteDeclaration(
 export async function writeTasteBio(
   tokenSource: TokenSource,
   locale: TasteBioRequest["locale"],
+  labels: Record<string, string>,
 ): Promise<TasteBioResponse["data"]> {
   const response = await authenticatedFetch(tokenSource, "/api/v1/me/taste-bio", {
-    body: JSON.stringify({ locale }),
+    body: JSON.stringify({ labels, locale }),
     headers: { "Content-Type": "application/json" },
     method: "POST",
   });

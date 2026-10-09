@@ -229,7 +229,8 @@ export class CloudflareNarrativeAdapter implements NarrativePort {
               `they score above and below their own average, what they drink most, ` +
               `what they usually pay. Use ONLY these facts: never add a wine, a ` +
               `grape, a region, a flavour or a number they do not state, and copy ` +
-              `every number exactly as given — never round it or turn it into words. ` +
+              `every number and every name exactly as given — never round a number, ` +
+              `turn it into words, or translate or rename a name. ` +
               `Speak of tendencies in their tastings, not truths about wine. ` +
               `${register(input.locale)} Finish every sentence. Reply with the ` +
               `paragraph only, no preamble.`,

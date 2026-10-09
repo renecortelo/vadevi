@@ -189,10 +189,15 @@ describe("a reader's taste", () => {
   });
 
   it("hands a writer plain facts and every number they hold", () => {
-    const { facts, numbers } = tasteFacts(buildTasteProfile(notes, [], [], now), "es");
+    const { facts, numbers } = tasteFacts(buildTasteProfile(notes, [], [], now), "es", {
+      "grape:garnacha": "Garnacha",
+    });
+    // Named as the page names it, numbers as Spanish writes them.
     expect(facts).toContainEqual(
-      "they score Garnacha 4.3 points above their own average, over 4 tastings",
+      "they score Garnacha 4,3 points above their own average, over 4 tastings",
     );
+    // A trait the page did not name is left out, never sent as a code.
+    expect(facts.some((fact) => fact.includes("acidity") || fact.includes("high"))).toBe(false);
     // A country by its name in the reader's language, never its code.
     expect(facts.some((fact) => fact.startsWith("España: 100% of their tastings"))).toBe(true);
     expect(numbers).toEqual(expect.arrayContaining([86.6, 4.3, 4, 100]));

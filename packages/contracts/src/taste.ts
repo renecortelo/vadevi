@@ -216,7 +216,15 @@ export type TasteDeclaration = z.infer<typeof TasteDeclarationSchema>;
 export type UpdateTasteDeclarationRequest = z.infer<typeof UpdateTasteDeclarationRequestSchema>;
 
 export const TasteBioRequestSchema = z
-  .object({ locale: z.enum(["ca", "de", "en", "es", "fr", "it", "nl", "pt-PT"]) })
+  .object({
+    /**
+     * Each trait as the page names it in the reader's language, keyed
+     * "kind:key" ("grape:garnacha", "acidity:high"). A trait without one is
+     * left out rather than handed to the writer as a code.
+     */
+    labels: z.record(z.string().max(160), z.string().trim().min(1).max(120)).default({}),
+    locale: z.enum(["ca", "de", "en", "es", "fr", "it", "nl", "pt-PT"]),
+  })
   .strict()
   .openapi("TasteBioRequest");
 
