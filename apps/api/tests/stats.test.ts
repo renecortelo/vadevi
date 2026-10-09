@@ -166,6 +166,8 @@ describe("a reader's numbers", () => {
     expect(space.wines.total).toBe(2);
     expect(space.tastings).toMatchObject({ memorable: 1, scored: 2, total: 2 });
     expect(space.tastings.averageScore).toBe(89.5);
+    // The best scored, with the ones someone marked memorable said to be.
+    expect(space.tastings.topWines[0]).toMatchObject({ memorable: true, score: 95, wineId: white });
     expect(space.spending.map((row) => [row.currency, row.totalMinor])).toEqual([
       ["EUR", 3_000],
       ["USD", 1_000],

@@ -240,15 +240,24 @@ export function StatsPage() {
       </header>
 
       <div className="stats-controls">
-        <label>
+        <label className="stats-scope">
           <span>{t("stats.scopeLabel")}</span>
           <select onChange={(event) => update({ space: event.target.value })} value={scope}>
             <option value="personal">{t("stats.scopePersonal")}</option>
-            {bootstrap.data.spaces.map((space) => (
-              <option key={space.id} value={space.id}>
-                {t("stats.scopeSpace", { name: spaceName(space) })}
-              </option>
-            ))}
+            {/* The personal Space first, and as itself: it is only ever the
+                reader's, so "everyone's" would say something untrue. */}
+            {[...bootstrap.data.spaces]
+              .sort(
+                (left, right) =>
+                  Number(right.type === "personal") - Number(left.type === "personal"),
+              )
+              .map((space) => (
+                <option key={space.id} value={space.id}>
+                  {space.type === "personal"
+                    ? spaceName(space)
+                    : t("stats.scopeSpace", { name: spaceName(space) })}
+                </option>
+              ))}
           </select>
         </label>
         <div aria-label={t("stats.periodLabel")} className="segmented-control" role="group">
@@ -383,7 +392,18 @@ export function StatsPage() {
                   <ol className="stats-list">
                     {stats.tastings.topWines.map((wine) => (
                       <li key={wine.wineId}>
-                        <strong>{wine.score}</strong> {wineLink(wine)}
+                        <strong>{wine.score}</strong>{" "}
+                        {wine.memorable ? (
+                          <span
+                            aria-label={t("stats.memorableMark")}
+                            className="stats-star"
+                            role="img"
+                            title={t("stats.memorableMark")}
+                          >
+                            ★
+                          </span>
+                        ) : null}{" "}
+                        {wineLink(wine)}
                         <span className="section-help"> · {wine.producerName}</span>
                       </li>
                     ))}

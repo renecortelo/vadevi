@@ -1427,6 +1427,7 @@
       "clear": "Effacer les filtres"
     },
     "emptyNarrowed": "Rien ne correspond à ces filtres sur cette période.",
-    "narrowHint": "Touchez un nom pour voir tout le livre pour lui seul."
+    "narrowHint": "Touchez un nom pour voir tout le livre pour lui seul.",
+    "memorableMark": "Mémorable"
   }
 }

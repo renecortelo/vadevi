@@ -235,6 +235,7 @@ async function computeStats(
     // Each wine's best score in scope: the top wines, and what value is set against.
     statement(
       `SELECT note.wine_id, note.space_id, MAX(note.score_100) AS score,
+        MAX(CASE WHEN note.memorable = 1 THEN 1 ELSE 0 END) AS memorable,
         wine.display_name, wine.producer_name
       FROM tasting_notes note
       JOIN wine_records wine ON wine.id = note.wine_id AND wine.deleted_at IS NULL
@@ -365,6 +366,7 @@ async function computeStats(
   );
   const scores = rows<{
     display_name: string;
+    memorable: number;
     producer_name: string;
     score: number;
     space_id: string;
@@ -477,6 +479,7 @@ async function computeStats(
       scoreBands: bands.map((band) => ({ band, count: bandCounts.get(band) ?? 0 })),
       scored: totals?.scored ?? 0,
       topWines: scores.slice(0, 5).map((row) => ({
+        memorable: row.memorable === 1,
         producerName: row.producer_name,
         score: row.score,
         spaceId: row.space_id,

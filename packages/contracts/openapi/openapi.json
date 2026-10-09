@@ -12080,6 +12080,9 @@
                 "items": {
                   "type": "object",
                   "properties": {
+                    "memorable": {
+                      "type": "boolean"
+                    },
                     "producerName": {
                       "type": "string"
                     },
@@ -12099,6 +12102,7 @@
                     }
                   },
                   "required": [
+                    "memorable",
                     "producerName",
                     "score",
                     "spaceId",

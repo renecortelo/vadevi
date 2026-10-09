@@ -1427,6 +1427,7 @@
       "clear": "Treu els filtres"
     },
     "emptyNarrowed": "Res no coincideix amb aquests filtres en aquest període.",
-    "narrowHint": "Toca un nom per veure tot el llibre només d'això."
+    "narrowHint": "Toca un nom per veure tot el llibre només d'això.",
+    "memorableMark": "Memorable"
   }
 }

@@ -4926,3 +4926,16 @@ button.stats-bars__label:hover {
   font-size: 0.85rem;
   margin: 0;
 }
+
+/* The Space chooser takes the room the period buttons leave. */
+.stats-scope {
+  flex: 1 1 16rem;
+}
+
+.stats-scope select {
+  inline-size: 100%;
+}
+
+.stats-star {
+  color: var(--color-accent);
+}

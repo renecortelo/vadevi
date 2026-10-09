@@ -1427,6 +1427,7 @@
       "clear": "Clear filters"
     },
     "emptyNarrowed": "Nothing matches these filters in this period.",
-    "narrowHint": "Tap a name to see the whole book for it alone."
+    "narrowHint": "Tap a name to see the whole book for it alone.",
+    "memorableMark": "Memorable"
   }
 }

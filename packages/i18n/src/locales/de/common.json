@@ -1427,6 +1427,7 @@
       "clear": "Filter entfernen"
     },
     "emptyNarrowed": "Nichts passt in diesem Zeitraum zu diesen Filtern.",
-    "narrowHint": "Tippen Sie auf einen Namen, um das ganze Buch nur dafür zu sehen."
+    "narrowHint": "Tippen Sie auf einen Namen, um das ganze Buch nur dafür zu sehen.",
+    "memorableMark": "Denkwürdig"
   }
 }

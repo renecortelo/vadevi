@@ -121,6 +121,8 @@ export const WineStatsSchema = z
         topWines: z.array(
           z
             .object({
+              /** Marked memorable in at least one of the tastings counted. */
+              memorable: z.boolean(),
               producerName: z.string(),
               score: z.number().int().min(0).max(100),
               spaceId: z.string(),

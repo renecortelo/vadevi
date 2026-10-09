@@ -1427,6 +1427,7 @@
       "clear": "Filters wissen"
     },
     "emptyNarrowed": "Niets past bij deze filters in deze periode.",
-    "narrowHint": "Tik op een naam om het hele boek alleen daarvoor te zien."
+    "narrowHint": "Tik op een naam om het hele boek alleen daarvoor te zien.",
+    "memorableMark": "Gedenkwaardig"
   }
 }
