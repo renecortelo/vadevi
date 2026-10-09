@@ -69,9 +69,13 @@ async function inferCountries(database: D1Database, spaceIds: readonly string[])
     if (codes.size === 1) {
       inferred[wine.id] = [...codes][0]!;
     } else if (codes.size === 0) {
-      const name = normalizeWineText(wine.region);
-      const bare = name.replace(designationPrefix, "");
-      unresolved.push({ id: wine.id, names: [...new Set([name, bare])] });
+      // Each label off in turn: "D. O. Tierra de Castilla" is Castilla.
+      const names = [normalizeWineText(wine.region)];
+      for (let bare = names[0]!.replace(designationPrefix, ""); bare !== names.at(-1);) {
+        names.push(bare);
+        bare = bare.replace(designationPrefix, "");
+      }
+      unresolved.push({ id: wine.id, names });
     }
   }
   if (unresolved.length > 0) {
