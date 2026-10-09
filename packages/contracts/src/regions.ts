@@ -41,3 +41,20 @@ export const RenameRegionsResponseSchema = z
 
 export type RegionProposal = z.infer<typeof RegionProposalSchema>;
 export type RenameRegionsRequest = z.infer<typeof RenameRegionsRequestSchema>;
+
+/** One producer written several ways, offered to confirm like a region. */
+export const ProducerProposalSchema = z
+  .object({
+    from: z.array(z.object({ producer: z.string(), wines: z.number().int().positive() }).strict()),
+    to: z.string(),
+    unchanged: z.number().int().nonnegative(),
+  })
+  .strict()
+  .openapi("ProducerProposal");
+
+export const ProducerProposalsResponseSchema = z
+  .object({ data: z.array(ProducerProposalSchema) })
+  .strict()
+  .openapi("ProducerProposalsResponse");
+
+export type ProducerProposal = z.infer<typeof ProducerProposalSchema>;

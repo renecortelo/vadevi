@@ -1549,14 +1549,15 @@
     }
   },
   "regionTidy": {
-    "link": "Regio's opruimen",
+    "link": "Regio's en producenten opruimen",
     "eyebrow": "Je Ruimte",
-    "title": "Regio's opruimen",
-    "intro": "Dezelfde regio op meerdere manieren geschreven, of een naam een letter verwijderd van een geregistreerde. Bekijk elk voorstel: alleen de wijnen van wat je bevestigt worden hernoemd.",
+    "title": "Regio's en producenten opruimen",
+    "intro": "Dezelfde regio of producent op meerdere manieren geschreven, of een regio een letter verwijderd van een geregistreerde naam. Bekijk elk voorstel: alleen de wijnen van wat je bevestigt worden hernoemd.",
     "empty": "Niets op te ruimen: elke regio is op één manier geschreven.",
     "reason": {
       "variants": "Eén regio, op meerdere manieren geschreven",
-      "typo": "Een tikfout in een geregistreerde naam?"
+      "typo": "Een tikfout in een geregistreerde naam?",
+      "producers": "Eén producent, op meerdere manieren geschreven"
     },
     "to": "Hernoemen naar",
     "wines_one": "{{count}} wijn",
@@ -1568,6 +1569,9 @@
     "skip": "Niet nu",
     "done_one": "{{count}} wijn heet nu ‘{{name}}’.",
     "done_other": "{{count}} wijnen heten nu ‘{{name}}’.",
-    "error": "Hernoemen is mislukt. Probeer het opnieuw."
+    "error": "Hernoemen is mislukt. Probeer het opnieuw.",
+    "regionsTitle": "Regio's",
+    "producersTitle": "Producenten",
+    "producersEmpty": "Niets op te ruimen: elke producent is op één manier geschreven."
   }
 }

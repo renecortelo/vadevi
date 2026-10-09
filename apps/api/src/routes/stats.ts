@@ -1,6 +1,7 @@
 import { createRoute, type OpenAPIHono } from "@hono/zod-openapi";
 import {
   ErrorEnvelopeSchema,
+  ProducerProposalsResponseSchema,
   RegionProposalsResponseSchema,
   RenameRegionsRequestSchema,
   RenameRegionsResponseSchema,
@@ -15,7 +16,12 @@ import {
   WineStatsResponseSchema,
 } from "@vadevi/contracts";
 
-import { proposeRegionTidying, renameRegions } from "../repositories/region-cleanup";
+import {
+  proposeProducerTidying,
+  proposeRegionTidying,
+  renameProducers,
+  renameRegions,
+} from "../repositories/region-cleanup";
 import { getPersonalStats, getSpaceStats } from "../repositories/stats";
 import { getTasteDeclaration, saveTasteDeclaration } from "../repositories/taste-declaration";
 import { getTasteProfile } from "../repositories/taste-profile";
@@ -213,6 +219,54 @@ const tasteBioRoute = createRoute({
   },
 });
 
+const producerProposalsRoute = createRoute({
+  method: "get",
+  path: "/api/v1/spaces/{spaceId}/producers/tidy",
+  operationId: "proposeProducerTidying",
+  tags: ["Stats"],
+  summary: "Producers written several ways",
+  security: [{ FirebaseBearer: [] }],
+  request: { params: SpaceIdPathSchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: ProducerProposalsResponseSchema } },
+      description: "Proposals, each to confirm; nothing changes until then.",
+    },
+    401: unauthorized,
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "No such Space, or the reader is not a member of it.",
+    },
+  },
+});
+
+const renameProducersRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/producers/tidy",
+  operationId: "renameProducers",
+  tags: ["Stats"],
+  summary: "Rename every wine by one of these producer spellings, as confirmed",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    body: {
+      content: { "application/json": { schema: RenameRegionsRequestSchema } },
+      required: true,
+    },
+    params: SpaceIdPathSchema,
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: RenameRegionsResponseSchema } },
+      description: "How many wines were renamed.",
+    },
+    401: unauthorized,
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "No such Space, or the reader is not a member of it.",
+    },
+  },
+});
+
 function notFound(requestId: string) {
   return ErrorEnvelopeSchema.parse({
     error: { code: "NOT_FOUND", message: "The resource was not found.", requestId },
@@ -340,5 +394,29 @@ export function registerStatsRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const { facts, numbers } = tasteFacts(profile, locale);
     const text = await narrative.describeTaste({ facts, locale, numbers });
     return text === null ? answer("not_kept") : answer("written", text);
+  });
+
+  app.openapi(producerProposalsRoute, async (context) => {
+    const proposals = await proposeProducerTidying(
+      context.env.DB!,
+      context.get("principal"),
+      context.req.valid("param").spaceId,
+    );
+    return proposals === null
+      ? context.json(notFound(context.get("requestId")), 404)
+      : context.json(ProducerProposalsResponseSchema.parse({ data: proposals }), 200);
+  });
+
+  app.openapi(renameProducersRoute, async (context) => {
+    const renamed = await renameProducers(
+      context.env.DB!,
+      context.get("principal"),
+      context.req.valid("param").spaceId,
+      context.req.valid("json"),
+      context.get("requestId"),
+    );
+    return renamed === null
+      ? context.json(notFound(context.get("requestId")), 404)
+      : context.json(RenameRegionsResponseSchema.parse({ data: { renamed } }), 200);
   });
 }

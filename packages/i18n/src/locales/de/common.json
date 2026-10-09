@@ -1549,14 +1549,15 @@
     }
   },
   "regionTidy": {
-    "link": "Regionen aufräumen",
+    "link": "Regionen und Erzeuger aufräumen",
     "eyebrow": "Ihr Bereich",
-    "title": "Regionen aufräumen",
-    "intro": "Dieselbe Region auf mehrere Arten geschrieben, oder ein Name einen Buchstaben von einem eingetragenen entfernt. Prüfen Sie jeden Vorschlag: Nur die Weine der bestätigten werden umbenannt.",
+    "title": "Regionen und Erzeuger aufräumen",
+    "intro": "Dieselbe Region oder derselbe Erzeuger, mehrfach anders geschrieben, oder eine Region mit Tippfehler. Prüfen Sie jeden Vorschlag: Umbenannt wird nur, was Sie bestätigen.",
     "empty": "Nichts aufzuräumen: Jede Region ist nur auf eine Art geschrieben.",
     "reason": {
       "variants": "Eine Region, auf mehrere Arten geschrieben",
-      "typo": "Ein Tippfehler in einem eingetragenen Namen?"
+      "typo": "Ein Tippfehler in einem eingetragenen Namen?",
+      "producers": "Ein Erzeuger, auf mehrere Arten geschrieben"
     },
     "to": "Umbenennen in",
     "wines_one": "{{count}} Wein",
@@ -1568,6 +1569,9 @@
     "skip": "Nicht jetzt",
     "done_one": "{{count}} Wein heißt jetzt „{{name}}“.",
     "done_other": "{{count}} Weine heißen jetzt „{{name}}“.",
-    "error": "Umbenennen fehlgeschlagen. Bitte erneut versuchen."
+    "error": "Umbenennen fehlgeschlagen. Bitte erneut versuchen.",
+    "regionsTitle": "Regionen",
+    "producersTitle": "Erzeuger",
+    "producersEmpty": "Nichts aufzuräumen: Jeder Erzeuger ist nur auf eine Art geschrieben."
   }
 }

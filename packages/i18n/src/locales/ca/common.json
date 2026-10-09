@@ -1549,14 +1549,15 @@
     }
   },
   "regionTidy": {
-    "link": "Endreçar regions",
+    "link": "Endreçar regions i productors",
     "eyebrow": "El teu espai",
-    "title": "Endreçar regions",
-    "intro": "La mateixa regió escrita de diverses maneres, o un nom a una lletra d'un de registrat. Revisa cada proposta: només es reanomenen els vins de les que confirmis.",
+    "title": "Endreçar regions i productors",
+    "intro": "La mateixa regió o el mateix productor escrit de diverses maneres, o una regió a una lletra d'un nom registrat. Revisa cada proposta: només es reanomenen els vins de les que confirmis.",
     "empty": "Res a endreçar: cada regió està escrita d'una sola manera.",
     "reason": {
       "variants": "La mateixa regió, escrita de diverses maneres",
-      "typo": "Una errada d'un nom registrat?"
+      "typo": "Una errada d'un nom registrat?",
+      "producers": "El mateix productor, escrit de diverses maneres"
     },
     "to": "Reanomena com",
     "wines_one": "{{count}} vi",
@@ -1568,6 +1569,9 @@
     "skip": "Ara no",
     "done_one": "{{count}} vi ara diu «{{name}}».",
     "done_other": "{{count}} vins ara diuen «{{name}}».",
-    "error": "No s'ha pogut reanomenar. Torna-ho a provar."
+    "error": "No s'ha pogut reanomenar. Torna-ho a provar.",
+    "regionsTitle": "Regions",
+    "producersTitle": "Productors",
+    "producersEmpty": "Res a endreçar: cada productor està escrit d'una sola manera."
   }
 }

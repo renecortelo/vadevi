@@ -1,17 +1,30 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import type { RegionProposal } from "@vadevi/contracts";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { getRegionProposals, renameRegions } from "../services/regions";
+import {
+  getProducerProposals,
+  getRegionProposals,
+  renameProducers,
+  renameRegions,
+} from "../services/regions";
 import { useSession } from "../session/SessionContext";
 
+/** A group of spellings to rename as one, whatever it names. */
+type Proposal = Readonly<{
+  from: { name: string; wines: number }[];
+  reason: "producers" | "typo" | "variants";
+  to: string;
+  unchanged: number;
+}>;
+
 /**
- * Tidying the active Space's regions: the same place written several ways,
- * or a name one letter from a registered one, each offered to confirm. Only
- * a confirmed group is rewritten; every wine keeps its region otherwise.
+ * Tidying the active Space's names: a region or a producer written several
+ * ways, or a region one letter from a registered name, each offered to
+ * confirm. Only a confirmed group is rewritten; every wine keeps its name
+ * otherwise.
  */
 export function RegionTidyPage() {
   const { t } = useTranslation();
@@ -20,21 +33,37 @@ export function RegionTidyPage() {
   const queryClient = useQueryClient();
   const spaceId = bootstrap.data.user.activeSpaceId;
   const space = bootstrap.data.spaces.find((entry) => entry.id === spaceId);
-  const query = useQuery({
+  const regions = useQuery({
     enabled: user !== null,
     queryFn: ({ signal }) => getRegionProposals(user!, spaceId, signal),
     queryKey: ["region-proposals", spaceId],
+  });
+  const producers = useQuery({
+    enabled: user !== null,
+    queryFn: ({ signal }) => getProducerProposals(user!, spaceId, signal),
+    queryKey: ["producer-proposals", spaceId],
   });
   const [skipped, setSkipped] = useState<string[]>([]);
   const [targets, setTargets] = useState<Record<string, string>>({});
   const [working, setWorking] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
 
-  const keyOf = (proposal: RegionProposal) =>
-    `${proposal.to}|${proposal.from.map((entry) => entry.region).join("|")}`;
-  const shown = (query.data ?? []).filter((proposal) => !skipped.includes(keyOf(proposal)));
+  const keyOf = (proposal: Proposal) =>
+    `${proposal.reason}|${proposal.to}|${proposal.from.map((entry) => entry.name).join("|")}`;
+  const regionProposals: Proposal[] = (regions.data ?? []).map((proposal) => ({
+    from: proposal.from.map((entry) => ({ name: entry.region, wines: entry.wines })),
+    reason: proposal.reason,
+    to: proposal.to,
+    unchanged: proposal.unchanged,
+  }));
+  const producerProposals: Proposal[] = (producers.data ?? []).map((proposal) => ({
+    from: proposal.from.map((entry) => ({ name: entry.producer, wines: entry.wines })),
+    reason: "producers",
+    to: proposal.to,
+    unchanged: proposal.unchanged,
+  }));
 
-  async function apply(proposal: RegionProposal) {
+  async function apply(proposal: Proposal) {
     if (user === null) return;
     const key = keyOf(proposal);
     const to = (targets[key] ?? proposal.to).trim();
@@ -42,16 +71,16 @@ export function RegionTidyPage() {
     setWorking(key);
     setNotice(null);
     try {
-      const renamed = await renameRegions(
-        user,
-        spaceId,
-        proposal.from.map((entry) => entry.region),
-        to,
-      );
+      const from = proposal.from.map((entry) => entry.name);
+      const renamed =
+        proposal.reason === "producers"
+          ? await renameProducers(user, spaceId, from, to)
+          : await renameRegions(user, spaceId, from, to);
       setNotice(t("regionTidy.done", { count: renamed, name: to }));
-      // The counts and the profile read regions too.
+      // The counts and the profile read these names too.
       await Promise.all([
-        query.refetch(),
+        regions.refetch(),
+        producers.refetch(),
         queryClient.invalidateQueries({ queryKey: ["stats"] }),
         queryClient.invalidateQueries({ queryKey: ["taste-profile"] }),
       ]);
@@ -61,6 +90,64 @@ export function RegionTidyPage() {
       setWorking(null);
     }
   }
+
+  const list = (proposals: Proposal[], loading: boolean, failed: boolean, empty: string) => {
+    const shown = proposals.filter((proposal) => !skipped.includes(keyOf(proposal)));
+    if (loading || failed) {
+      return (
+        <p role={failed ? "alert" : "status"}>{failed ? t("stats.error") : t("stats.loading")}</p>
+      );
+    }
+    if (shown.length === 0) return <p className="settings-card">{empty}</p>;
+    return shown.map((proposal) => {
+      const key = keyOf(proposal);
+      return (
+        <section className="settings-card region-proposal" key={key}>
+          <p className="eyebrow">{t(`regionTidy.reason.${proposal.reason}`)}</p>
+          <ul className="stats-list">
+            {proposal.from.map((entry) => (
+              <li key={entry.name}>
+                <strong>{entry.name}</strong>{" "}
+                <span className="section-help">
+                  · {t("regionTidy.wines", { count: entry.wines })}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <label className="taste-form__field">
+            <span>{t("regionTidy.to")}</span>
+            <input
+              maxLength={160}
+              onChange={(event) => setTargets({ ...targets, [key]: event.target.value })}
+              value={targets[key] ?? proposal.to}
+            />
+          </label>
+          {proposal.unchanged === 0 ? null : (
+            <p className="section-help">
+              {t("regionTidy.unchanged", { count: proposal.unchanged })}
+            </p>
+          )}
+          <div className="taste-form__actions">
+            <button
+              className="action-link action-link--primary"
+              disabled={working !== null}
+              onClick={() => void apply(proposal)}
+              type="button"
+            >
+              {working === key ? t("regionTidy.applying") : t("regionTidy.apply")}
+            </button>
+            <button
+              className="action-link action-link--secondary"
+              onClick={() => setSkipped([...skipped, key])}
+              type="button"
+            >
+              {t("regionTidy.skip")}
+            </button>
+          </div>
+        </section>
+      );
+    });
+  };
 
   return (
     <section className="library-page taste-page">
@@ -76,61 +163,19 @@ export function RegionTidyPage() {
           {notice}
         </p>
       )}
-      {query.data === undefined ? (
-        <p role={query.isError ? "alert" : "status"}>
-          {query.isError ? t("stats.error") : t("stats.loading")}
-        </p>
-      ) : shown.length === 0 ? (
-        <p className="settings-card">{t("regionTidy.empty")}</p>
-      ) : (
-        shown.map((proposal) => {
-          const key = keyOf(proposal);
-          return (
-            <section className="settings-card region-proposal" key={key}>
-              <p className="eyebrow">{t(`regionTidy.reason.${proposal.reason}`)}</p>
-              <ul className="stats-list">
-                {proposal.from.map((entry) => (
-                  <li key={entry.region}>
-                    <strong>{entry.region}</strong>{" "}
-                    <span className="section-help">
-                      · {t("regionTidy.wines", { count: entry.wines })}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <label className="taste-form__field">
-                <span>{t("regionTidy.to")}</span>
-                <input
-                  maxLength={160}
-                  onChange={(event) => setTargets({ ...targets, [key]: event.target.value })}
-                  value={targets[key] ?? proposal.to}
-                />
-              </label>
-              {proposal.unchanged === 0 ? null : (
-                <p className="section-help">
-                  {t("regionTidy.unchanged", { count: proposal.unchanged })}
-                </p>
-              )}
-              <div className="taste-form__actions">
-                <button
-                  className="action-link action-link--primary"
-                  disabled={working !== null}
-                  onClick={() => void apply(proposal)}
-                  type="button"
-                >
-                  {working === key ? t("regionTidy.applying") : t("regionTidy.apply")}
-                </button>
-                <button
-                  className="action-link action-link--secondary"
-                  onClick={() => setSkipped([...skipped, key])}
-                  type="button"
-                >
-                  {t("regionTidy.skip")}
-                </button>
-              </div>
-            </section>
-          );
-        })
+      <h2>{t("regionTidy.regionsTitle")}</h2>
+      {list(
+        regionProposals,
+        regions.data === undefined && !regions.isError,
+        regions.isError,
+        t("regionTidy.empty"),
+      )}
+      <h2>{t("regionTidy.producersTitle")}</h2>
+      {list(
+        producerProposals,
+        producers.data === undefined && !producers.isError,
+        producers.isError,
+        t("regionTidy.producersEmpty"),
       )}
       <p className="section-help taste-links">
         <Link className="text-link" to="/stats">

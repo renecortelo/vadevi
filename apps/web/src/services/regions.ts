@@ -1,4 +1,6 @@
 import {
+  type ProducerProposal,
+  ProducerProposalsResponseSchema,
   type RegionProposal,
   RegionProposalsResponseSchema,
   RenameRegionsResponseSchema,
@@ -31,6 +33,41 @@ export async function renameRegions(
   const response = await authenticatedFetch(
     tokenSource,
     `/api/v1/spaces/${encodeURIComponent(spaceId)}/regions/tidy`,
+    {
+      body: JSON.stringify({ from, to }),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return RenameRegionsResponseSchema.parse(await response.json()).data.renamed;
+}
+
+/** What could be tidied among a Space's producers. */
+export async function getProducerProposals(
+  tokenSource: TokenSource,
+  spaceId: string,
+  signal?: AbortSignal,
+): Promise<ProducerProposal[]> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${encodeURIComponent(spaceId)}/producers/tidy`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return ProducerProposalsResponseSchema.parse(await response.json()).data;
+}
+
+/** Rename every wine in the Space by one of these producer spellings. */
+export async function renameProducers(
+  tokenSource: TokenSource,
+  spaceId: string,
+  from: string[],
+  to: string,
+): Promise<number> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${encodeURIComponent(spaceId)}/producers/tidy`,
     {
       body: JSON.stringify({ from, to }),
       headers: { "Content-Type": "application/json" },

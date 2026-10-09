@@ -1,5 +1,6 @@
 import {
   BootstrapResponseSchema,
+  ProducerProposalsResponseSchema,
   RegionProposalsResponseSchema,
   RenameRegionsResponseSchema,
 } from "@vadevi/contracts";
@@ -118,5 +119,53 @@ describe("tidying a Space's regions", () => {
 
     // Someone outside the Space learns nothing of it.
     expect((await SELF.fetch(url, { headers: headers(outsider) })).status).toBe(404);
+  });
+
+  it("offers producers written several ways, and renames only what is confirmed", async () => {
+    const me = BootstrapResponseSchema.parse(
+      await (
+        await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers: headers(owner) })
+      ).json(),
+    );
+    const spaceId = me.data.user.activeSpaceId;
+    const now = new Date().toISOString();
+    const wine = (producer: string) =>
+      env.DB.prepare(
+        `INSERT INTO wine_records (
+          id, space_id, display_name, normalized_name, producer_name, normalized_producer_name,
+          non_vintage, identity_status, version, created_by_user_id, created_at, updated_at
+        ) VALUES (?, ?, 'Brut', ?, ?, ?, 0, 'confirmed', 1, ?, ?, ?)`,
+      ).bind(
+        ulid(),
+        spaceId,
+        `brut ${ulid()}`,
+        producer,
+        producer.toLowerCase(),
+        me.data.user.id,
+        now,
+        now,
+      );
+    await env.DB.batch([
+      wine("Bodegas Sumarroca"),
+      wine("Bodegas Sumarroca"),
+      wine("Sumarroca"),
+      wine("Muga"),
+    ]);
+    const url = `https://vadevi.test/api/v1/spaces/${spaceId}/producers/tidy`;
+    const proposals = ProducerProposalsResponseSchema.parse(
+      await (await SELF.fetch(url, { headers: headers(owner) })).json(),
+    ).data;
+    expect(proposals).toContainEqual({
+      from: [{ producer: "Sumarroca", wines: 1 }],
+      to: "Bodegas Sumarroca",
+      unchanged: 2,
+    });
+    expect(proposals.some((proposal) => proposal.to === "Muga")).toBe(false);
+    const renamed = await SELF.fetch(url, {
+      body: JSON.stringify({ from: ["Sumarroca"], to: "Bodegas Sumarroca" }),
+      headers: headers(owner),
+      method: "POST",
+    });
+    expect(RenameRegionsResponseSchema.parse(await renamed.json()).data.renamed).toBe(1);
   });
 });

@@ -1,4 +1,5 @@
 import { resolveAppellationCountries } from "./appellation-terms";
+import { producerKey } from "./producer-names";
 import { resolveCountryCodes } from "./country-terms";
 import { normalizeWineText } from "./wine-memory";
 
@@ -130,25 +131,32 @@ export async function countryOfRegion(
 /**
  * The one country a producer's other wines are recorded in, among the wines
  * the reader can see in every Space they belong to — a producer is, nearly
- * always, in one country. Null when none is recorded, or several are.
+ * always, in one country. The producer is read as one house however written
+ * ("Bodegas Sumarroca" is "Sumarroca"). Null when none is recorded, or
+ * several are.
  */
 export async function countryOfProducer(
   database: D1Database,
   firebaseUid: string,
   producerName: string,
 ): Promise<string | null> {
-  const row = await database
+  const rows = await database
     .prepare(
-      `SELECT COUNT(DISTINCT wine.country_code) AS countries, MIN(wine.country_code) AS code
+      `SELECT DISTINCT wine.producer_name, wine.country_code
       FROM wine_records wine
       JOIN space_memberships membership ON membership.space_id = wine.space_id
         AND membership.status = 'active'
       JOIN users reader ON reader.id = membership.user_id
       WHERE reader.firebase_uid = ? AND reader.deleted_at IS NULL
-        AND wine.deleted_at IS NULL AND wine.country_code IS NOT NULL
-        AND wine.normalized_producer_name = ?`,
+        AND wine.deleted_at IS NULL AND wine.country_code IS NOT NULL`,
     )
-    .bind(firebaseUid, normalizeWineText(producerName))
-    .first<{ code: string | null; countries: number }>();
-  return row !== null && row.countries === 1 ? row.code : null;
+    .bind(firebaseUid)
+    .all<{ country_code: string; producer_name: string }>();
+  const wanted = producerKey(producerName);
+  const countries = new Set(
+    rows.results
+      .filter((row) => producerKey(row.producer_name) === wanted)
+      .map((row) => row.country_code),
+  );
+  return countries.size === 1 ? [...countries][0]! : null;
 }

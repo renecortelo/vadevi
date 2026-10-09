@@ -294,6 +294,9 @@ describe("Wine Memory and Quick Log", () => {
     expect((await record("La Mancga", undefined, "Celler Nou")).countryCode).toBeNull();
     // …but a producer whose other wines are all in one country brings it.
     expect((await record(undefined, undefined, "Celler")).countryCode).toBe("ES");
+    // The producer is one house however written: "Celler Proves" is "Proves".
+    await record("Rioja", undefined, "Bodegas Proves");
+    expect((await record(undefined, undefined, "Proves")).countryCode).toBe("ES");
     // A producer recorded in two countries brings none.
     await record(undefined, "MX", "Bodega Doble");
     await record(undefined, "ES", "Bodega Doble");

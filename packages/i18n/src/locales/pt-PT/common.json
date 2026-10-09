@@ -1549,14 +1549,15 @@
     }
   },
   "regionTidy": {
-    "link": "Arrumar regiões",
+    "link": "Arrumar regiões e produtores",
     "eyebrow": "O teu Espaço",
-    "title": "Arrumar regiões",
-    "intro": "A mesma região escrita de várias formas, ou um nome a uma letra de um registado. Revê cada proposta: só se renomeiam os vinhos das que confirmares.",
+    "title": "Arrumar regiões e produtores",
+    "intro": "A mesma região ou o mesmo produtor escrito de várias formas, ou uma região a uma letra de um nome registado. Revê cada proposta: só se renomeiam os vinhos das que confirmares.",
     "empty": "Nada para arrumar: cada região está escrita de uma só forma.",
     "reason": {
       "variants": "A mesma região, escrita de várias formas",
-      "typo": "Uma gralha num nome registado?"
+      "typo": "Uma gralha num nome registado?",
+      "producers": "O mesmo produtor, escrito de várias formas"
     },
     "to": "Renomear como",
     "wines_one": "{{count}} vinho",
@@ -1568,6 +1569,9 @@
     "skip": "Agora não",
     "done_one": "{{count}} vinho diz agora «{{name}}».",
     "done_other": "{{count}} vinhos dizem agora «{{name}}».",
-    "error": "Não foi possível renomear. Tenta de novo."
+    "error": "Não foi possível renomear. Tenta de novo.",
+    "regionsTitle": "Regiões",
+    "producersTitle": "Produtores",
+    "producersEmpty": "Nada para arrumar: cada produtor está escrito de uma só forma."
   }
 }

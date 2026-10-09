@@ -790,6 +790,10 @@ export function WineMemoryPage() {
             >
               {t("memory.clearFilters")}
             </button>
+            {/* Where a region or producer written two ways is made one. */}
+            <Link className="text-link" to="/regions/tidy">
+              {t("regionTidy.link")}
+            </Link>
           </div>
         </details>
       </div>
