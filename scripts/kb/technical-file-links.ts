@@ -262,6 +262,7 @@ export function technicalFileLink(lines: readonly FileLine[]): string | null {
   }
   close();
   // A last sentence left without its full stop is left out; the rest stands.
+  const prose = blocks.filter((block) => !block.heading && block.text.length >= 120);
   return openingOf(
     blocks.map((block) => {
       if (block.heading) return block;
@@ -280,7 +281,13 @@ export function technicalFileLink(lines: readonly FileLine[]): string | null {
       if (/^\p{Ll}/u.test(block.text)) return { ...block, heading: true };
       if (/[.!?»"”)]$/.test(block.text)) return block;
       const whole = upToSentenceEnd(block.text);
-      return whole.length === 0 ? block : { ...block, text: whole };
+      if (whole.length > 0) return { ...block, text: whole };
+      // The section's only text, one sentence (or sentences run together,
+      // "marnosa.Tessitura…") that never ends with a full stop: it stands as
+      // written, nothing added, where it is short enough to show whole.
+      return prose.length === 1 && block.text.length >= 120 && block.text.length <= 900
+        ? { ...block, whole: true }
+        : block;
     }),
   );
 }

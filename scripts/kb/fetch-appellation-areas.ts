@@ -185,8 +185,9 @@ export function cellarAddress(uri: string): string | null {
   const decoded = decodeURIComponent(uri);
   const uriserv = /uri=uriserv:([^&]+)/.exec(decoded)?.[1];
   if (uriserv !== undefined) {
-    // Some links end in "EN" rather than the "ENG" Cellar knows.
-    return `http://publications.europa.eu/resource/uriserv/${uriserv.replace(/\.EN$/, ".ENG")}`;
+    // Some links end in "EN" rather than the "ENG" Cellar knows, and some
+    // name another language's edition ("….FRA"): the English one is asked for.
+    return `http://publications.europa.eu/resource/uriserv/${uriserv.replace(/\.(EN|[A-Z]{3})$/, ".ENG")}`;
   }
   const journal = /uri=OJ:(JOC_[\dA-Z_]+)/.exec(decoded)?.[1];
   if (journal !== undefined) return `http://publications.europa.eu/resource/oj/${journal}`;

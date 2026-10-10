@@ -163,6 +163,24 @@ describe("a technical file's link with the geographical area", () => {
     expect(technicalFileLink(fileLines(xml))).toBe(`${first} ${second}`);
   });
 
+  it("takes a lone block that never ends with a full stop as it stands", () => {
+    const xml = page([
+      form("7. LINK", 100),
+      {
+        text: "The wines of the province have a distinct character tied to their origin, which",
+        x1: right,
+        y: 130,
+      },
+      {
+        text: "the natural and human conditions found and sustain, together with the old tradition",
+        x1: right,
+        y: 142,
+      },
+      { text: "of growing vines in the area and the innovation of its producers", x1: 400, y: 154 },
+    ]);
+    expect(technicalFileLink(fileLines(xml))).toMatch(/^The wines of the province.*its producers$/);
+  });
+
   it("gives nothing where the section is missing", () => {
     expect(technicalFileLink(fileLines(page([form("6. GRAPES", 100)])))).toBeNull();
   });

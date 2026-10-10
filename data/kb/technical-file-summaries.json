@@ -209,12 +209,6 @@
     "text": "A Kelet-Bükk lábánál található domboldalakon és fennsíkokon viszonylag kiegyenlített klímán évről-évre magas mustfokokkal és élénk savakkal rendelkező szőlőből íz és zamatgazdag borok készülnek. A hideg Észak-keleti szelek hatására szép savgerincű borokat kóstolhatunk. Szüret idején rendszerint keleti anticiklon alakítja az időjárást, emiatt gyakran töpped és túlérik a termés. A magas mustfokok is elsősorban ennek köszönhetőek.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/26293"
   },
-  "EUGI00000001101": {
-    "document": "11133",
-    "language": "fr",
-    "text": "La zone géographique s’étend sur deux grands ensembles géologiques où le vignoble occupe principalement les versants des rivières et quelques plateaux. A l'ouest, le socle précambrien et paléozoïque est rattaché au Massif Armoricain. A l'est, le substratum mésozoïque et cénozoïque du Bassin Parisien vient recouvrir le socle ancien.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11133"
-  },
   "EUGI00000004806": {
     "document": "31014",
     "language": "it",
@@ -365,12 +359,6 @@
     "text": "L’areale “Colline Joniche Tarantine”presenta caratteristiche dal un punto di vista storico e naturalistico. della Murgia cosiddetta “Tarantina”. Dal punto di vista cartografico la zona è orientata a sud-est. Il suolo presenta le classiche terre rosse derivate dalla dissoluzione delle rocce calcaree, composti da ossidi e idrossidi di ferro e di alluminio. L’intensa attività delle popolazioni rurali ha interagito in maniera determinante sulla formazione delle caratteristiche vitivinicole della zona. Al tempo della Magna Grecia i vini pugliesi godevano di una fama commerciale ben al di sopra di quanta ne avesse fino a qualche decennio addietro.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/24058"
   },
-  "EUGI00000002561": {
-    "document": "25664",
-    "language": "it",
-    "text": "Il territorio interessato, che abbraccia l’intera collina litoranea ed interna della provincia di Teramo, è caratterizzato da ampie colline degradanti verso l'Adriatico e dalla presenza del Gran Sasso e dei Monti della Laga. Questa particolare orografia favorisce l’instaurarsi di una buona ventilazione che associata all’ottima esposizione, alla buona natura dei terreni e all’assenza di ristagni idrici, garantiscono al vitigno Montepulciano condizioni ottimali per produrre uve con elevate caratteristiche di qualità e tipicità. L’interazione di questi fattori naturali con quelli storici-culturali e tecnici,consentono di ottenere vini strutturati, complessi, dai forti elementi differenzianti.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25664"
-  },
   "EUGI00000005445": {
     "document": "23784",
     "language": "it",
@@ -418,6 +406,12 @@
     "language": "hu",
     "text": "A termőhely környezeti jellemzőit alapvetően a sík, alföldi jelleg, és a térséget átszelő folyók, illetve ezek mellékfolyói határozzák meg. A termőhelyen főként az öntés talajon található lepelhomoktalajok a jellemzők. Az ökológiai környezet a könnyű, mérsékelt savtartalmú, lágyabb, alkoholban mérsékelten gazdag borok készítését teszi lehetővé, amelyek zamatban gazdagok, illatuk intenzív. A termelők a fajtaszerkezetet tudatosan az ökológiai környezethez igazították. A borvidéken a hagyományos borkészítés technológiája mellett szerepet kap a piaci igényekhez igazodó, azt kiszolgáló reduktív technológia alkalmazása, amely a zamatosabb, illatban gazdagabb borok készítését teszi lehetővé.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/15120"
+  },
+  "EUGI00000006865": {
+    "document": "27845",
+    "language": "es",
+    "text": "Los Vinos de la Tierra de Córdoba poseen una personalidad diferenciada vinculada a su origen geográfico, que gracias a las condiciones naturales y humanas, originan y fundamentan la notoriedad del producto debida a su origen, como resultado de la interacción de la tradición histórica del cultivo del viñedo en la zona, y la inquietud innovadora del sector en la provincia de Córdoba",
+    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/27845"
   },
   "EUGI00000010723": {
     "document": "36294",
@@ -623,12 +617,6 @@
     "text": "U geografskom smislu ovaj prostor se nalazi između rijeke Drave na sjeveru (granica s Mađarskom), Save na jugu (granica s Bosnom i Hercegovinom), Dunava na istoku (granica sa Srbijom) i rijeke Ilove na zapadu. U smislu vinogradarske proizvodnje ovo područje svrstano je u zonu C2. Veći dio tala ovog područja su duboka, bogata, lagana i ocjedita tla, te uz klimatološke čimbenike snažno utječu na organoleptičke karakteristike vina. Dodatno, utjecaj pojedine mikrolokacije, zajedno s drugim ekološkim čimbenicima i odabirom sorti, imaju odlučujući utjecaj na kvalitetu i organoleptičku specifičnosti (buket) vina.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36324"
   },
-  "EUGI00000005941": {
-    "document": "23092",
-    "language": "hu",
-    "text": "A termőhely környezeti jellemzőit alapvetően az alföldi jelleg és a kontinentális éghajlat határozza meg, talaja mésztartalmú homoktalaj. A terület vízellátása jó, a talajvíz szintje a felszínhez közeli, amit kiegyenlít a talaj vízkészletét alapvetően befolyásoló Kolon-tó. Az ökológiai környezet - a felszín közeli talajvízszint és a homoktalajok viszonya - különleges savösszetételű és markáns savtartalmú, mérsékelt alkoholtartalmú borokat eredményez. Az Arany sárfehér a termőhely legfontosabb fajtája. Az izsáki borászati üzemekben lezajlott folyamatos technológiai fejlesztések lehetővé teszik a reduktív technológia alkalmazását, amely a fajta karakterét még jobban képes kiemelni.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/23092"
-  },
   "EUGI00000006683": {
     "document": "11252",
     "language": "sk",
@@ -815,12 +803,6 @@
     "text": "La zona geografica delimitata comprende l’intero territorio amministrativo della regione storica della Marmilla e lembi contigui della piana del Campidano. Questa si è formata sul bordo della fossa del campidano, a partire dall’oligomiocene in un bacino di accumulo di sedimenti detritici derivati dallo smantellamento dei rilievi preesistenti, di depositi marini spesso ricchi in fossili (marne, calcari e arenarie in varie combinazioni tra loro) e di vulcaniti di vario tipo (dai tufi ai basalti). È una zona caratterizzata dalla presenza di colline arrotondate o tabulari alla sommità, intervallate da ampie vallate, conche mal drenate e piane alluvionali Il paesaggio collinare comprende elementi del paesaggio tipici coma la Giara di Gesturi, la Giara di Siddi, la Giara di Serri, l'altopiano di Genoni ed il bacino del Rio Mannu d'Isili.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10914"
   },
-  "EUGI00000004694": {
-    "document": "11169",
-    "language": "de",
-    "text": "Die Landschaft von Mecklenburg Vorpommern ist durch die eiszeitlichen Einflüsse gekennzeichnet, die sich in Grund- und Endmoränen als Ergebnis der letzen Eiszeit manifestieren. Die Besonderheit der Weinbaugebiete in Mecklenburg wird geprägt durch das hüglige Bodenrelief am Rand der Brohmer Berge und im Lindetal, den sandigen Lehmboden und das typische Klima im östlichen Landesteil. Der mecklenburger Weinbau war historisch an einzelne Güter in kirchlichem oder weltlichem Besitz gebunden. Die verstreut liegenden Flächen sind oft durch mündliche Überlieferung oder Flurnamen bezeichnet. Bei der Wiederbelebung der Weinbautradition wurde vorrangig auf traditionelle Standorte zurückgegriffen. Heute stehen die Rebanlagen überwiegend auf den sonnenzugewandten flachen und mittleren Hanglagen.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11169"
-  },
   "EUGI00000006681": {
     "document": "11259",
     "language": "ro",
@@ -868,12 +850,6 @@
     "language": "it",
     "text": "I terreni, generalmente argillosi e privi di calcare godono di un’ottima esposizione e risultano particolarmente adatti alla coltivazione della vite. Tutte le tipologie del Montenetto di Brescia Igp presentano caratteristiche molto evidenti e peculiari, che ne permettono una chiara individuazione e tipicizzazione legata all’ambiente geografico. In particolare tutti i vini presentano caratteristiche chimico-fisiche equilibrate e tipicamente legate alle peculiarità del microclima e del territorio, mentre al sapore e all’odore si riscontrano aromi prevalenti tipici dei vitigni di base.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/27261"
-  },
-  "EUGI00000002803": {
-    "document": "23162",
-    "language": "it",
-    "text": "La particolare conformazione orografica del territorio interessato, caratterizzata da colline assolate e ventilate, il clima temperato, le notevoli escursioni termiche tra giorno e notte, favorite dalla presenza del mare Adriatico e dalla vicinanza dei massicci del Gran Sasso e della Maiella, la presenza di suoli ben drenati, unitamente ai fattori umani - connessi da un lato alla lunga tradizione storica e dall’altra alle moderne tecniche di coltivazione e vinificazione - determinano le condizioni ottimali per la produzione di uve Montepulciano di straordinaria qualità, dalle quali si ottengono vini di grande struttura e corpo, eleganti, morbidi, dai profumi intensi e caratterizzati.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/23162"
   },
   "EUGI00000005161": {
     "document": "17075",
@@ -934,12 +910,6 @@
     "language": "it",
     "text": "L’ areale di produzione è ubicato nella parte sud-occidentale della regione Umbria; la natura geologica è rappresentata prevalentemente da argille marine plioceniche con terreni di media profondità. L’ orografia è caratterizzata da pendenze da lievi ad accentuate. L’ultimo decennio ha fatto registrare un aumento medio delle precipitazioni invernali.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/23531"
-  },
-  "EUGI00000005936": {
-    "document": "23032",
-    "language": "hu",
-    "text": "A termőhely éghajlata és időjárási viszonyai kiegyenlítettek. Talaja a síkvidéki ászári körzetben főként márga alapon barna erdőtalaj, a hegyvidéki neszmélyi körzetben lösz, mészkő, dolomit és homokkő. A Duna mikroklímát hozott létre az északi irányú, enyhe lejtőkön. A dombvidéki jelleg, a mérsékelten nedves-hűvös mikroklíma kedvez az illatokban és zamatanyagban gazdag borok előállításának. A természeti környezet, a történelmi hagyományok, valamint az utóbbi 15-évben történt fajtaváltás következtében fajtajelleges, illatban, aromákban gazdag, finom savtartalmú borok készülnek.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/23032"
   },
   "EUGI00000006292": {
     "document": "25493",
@@ -1090,6 +1060,12 @@
     "language": "it",
     "text": "Durante l’eruzione storica del Vesuvio già Marziale scriveva “ Bacco amò queste colline più native colline di Nasa”. Anche Curzio Malaparte ne “La Pelle”invita a degustare i vini napoletani dal colore misterioso del fuoco infernale, il sapore della lava, della cenere che seppellirono Pompei ed Ercolano e i suoi lapilli invasarono i terreni sorrentino fino a nord di Napoli.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/26578"
+  },
+  "EUGI00000005141": {
+    "document": "26985",
+    "language": "it",
+    "text": "Aspetti pedologici:substrati torbiditi in parte a composizione arenacea, in parte calcareo marnosa.Tessitura franco grossolana con reazione acida subacida nel caso di substrati arenacei, tessitura fine con reazione da neutra a subalcalina nel caso di substrati calcareo marnosi.Aspetti topografici:altitudine dei terreni a vite tra l100 e 2200 m s.l.m.con quota tra 400 e 500 mAspetti climatici:temperatura media dell’area interessata pari a circa 12°C.Massima piovosità dicembre circa 130 mm,minima piovosità luglio con 25 mm medi.Fattori umani rilevanti per il legame presenza nella Valle Tanaro e lungo le pendici sud-occidentali dei monti piemontesi attestata già durante il periodo romano",
+    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/26985"
   },
   "EUGI00000005188": {
     "document": "11458",
@@ -1529,12 +1505,6 @@
     "text": "Dove la Calabria pone al minore distanza tra la costa ionica e quella tirrenica, il territorio dei comuni di Curinga, Feroleto, Gizzeria, Lamezia Terme, Maida, Pianopoli e San Pietro a Maida, nella provincia di Catanzaro, costituisce la zona di produzione dei vini a Indicazione Geografica Tipica “Valdamato”. I paesi sono localizzati sul versante destro e sinistro del fiume Lamato, conosciuto anche come Amato, che insieme ad altri corsi d’acqua, va a tuffarsi nel mar Tirreno in corrispondenza del golfo di Sant’Eufemia. Il territorio occupa la montagna, la collina e la pianura sia alla destra che alla sinistra del fiume: se escludiamo il comune di Gizzeria, situato a un’altitudine di oltre 600 metri, tutti gli altri sono posizionati più in basso, tra i 200 e i 300 metri.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10959"
   },
-  "EUGI00000004621": {
-    "document": "11388",
-    "language": "it",
-    "text": "La zona delimitata comprende il territorio che si snoda, a cavallo delle province di Trento e Verona, lungo il tortuoso corso del fiume Adige, geograficamente e storicamente noto come “Vallagarina” e chiaramente delimitato all’art. 3. Dal punto di vista climatico la Vallagarina rappresenta un’area di passaggio fra il clima alpino e quello più temperato delle prealpi venete.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11388"
-  },
   "EUGI00000004933": {
     "document": "24881",
     "language": "it",
@@ -1679,12 +1649,6 @@
     "text": "Najveći dio površina pod vinogradima nalazi se na brežuljkastim obroncima alpskog sustava, dok se manji dio vinograda smjestio u ravničarskom dijelu. Ovo područje je tijekom neogena i kvartara bilo obala Panonskog mora. Snažnom erozijom peleozojskih kristalnih stijena, mezozoijskih glinovitih vapnenaca i različitih klastita, taložene su raznovrsne gline i sitnozrni pijesci, što je pogodovalo razvoju obradivih tala na tzv. „goricama“. Upravo iz tog razloga, vinogradarstvo ovoga kraja razvijeno je na osojnim padinama zagorskih brežuljaka koji su pokriveni diluvijalnim glinovito-pjeskovitim nanosima. Isto tako, izražena glinovitost tala (vododržnost) pogoduje uzgoju vinove loze, uz dovoljnu godišnju količinu oborina (oko 890 mm) od čega preko 55% oborina padne tijekom vegetacije.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/36394"
   },
-  "EUGI00000005801": {
-    "document": "26313",
-    "language": "hu",
-    "text": "Az Alpok felől érkező óceáni és az Adria felől érkező mediterrán légáramlatok a nyári időszakban is megfelelő mennyiségű csapadékot biztosítanak, és a tipikus barna erdőtalajok vízmegtartó képessége is jó. E két természeti tényező együttesen garantálja a szőlő folyamatos fejlődését és a jó savösszetételű, üde, gyümölcsös frissességű borokat.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/26313"
-  },
   "EUGI00000010738": {
     "document": "36404",
     "language": "hr",
@@ -1750,12 +1714,6 @@
     "language": "el",
     "text": "Τα Άβδηρα, η πατρίδα του Δημόκριτου και του Πρωταγόρα, ένας τόπος πλούσιος σε ιστορία και με μεγάλη αμπελοοινική παράδοση. Στις λοφώδεις εκτάσεις της περιοχής, γινόταν από την αρχαιότητα η αμπελοκαλλιέργεια, γεγονός που αναφέρεται και σε παιάνα του Πινδάρου. Τα Άβδηρα Κτισμένα μεταξύ Πόρτο Λάγους και Εκβολών του Νέστου Ποταμού (παραλία Ξάνθης), η σπουδαιότερη πόλη της Αρχαίας Θράκης. Πήρε το όνομα της από τον Άβδηρο, φίλο του Ηρακλή. Πιθανόν να είναι και Αποικία των Φοινίκων .Ιστορικά φέρεται ιδρυτής της ο εκ Κλαζομενών της Μ. Ασίας Τιμήσιος το 656 π.χ. Είναι η πατρίδα των ιδρυτών της ατομικής θεωρίας του Δημόκριτου και του Λεύκιππου, του σοφιστή Πρωταγόρα, των φιλοσόφων Ανάξαρχου και του Εκαταίου, του ποιητή Νικαινέτου και άλλων.",
     "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11437"
-  },
-  "EUGI00000006621": {
-    "document": "11538",
-    "language": "el",
-    "text": "Η αμπελοκαλλιέργεια στην περιοχή του Αγίου Όρους ήταν ανεπτυγμένη όπως αποδεικνύεται από διάφορες γραπτές μαρτυρίες των Μοναχών. Εκτενής αναφορά της αμπελοκαλλιέργειας γίνεται στο βιβλίο του Ιερομόναχου Ευλόγιου Κουρίλα του Λαυρεώτου. Υπάρχουν σήμερα μαρτυρίες που αποδεικνύουν την μεγάλη αμπελοκαλλιέργεια στο Άγιο Όρος από τα οινοποιεία τα οποία έχουν ακόμη και σήμερα, όλα τα μοναστήρια του Αγίου Όρους. Επιγραμματικά αναφέρουμε πως κάθε μοναστήρι παρήγαγε γύρω στους 80 με 100 τόνους κρασί, κάθε χρόνο. Πέρα όμως από τα είκοσι μοναστήρια του Αγίου Όρους, υπάρχουν και τα εξαρτήματα, Ιερές Σκήτες και τα Ιερά Κελιά τα οποία καλλιεργούν αμπέλια και καταναλώνουν κρασιά. Οι ποικιλίες που υπήρχαν από παλαιά είναι οι εξής: Λημνιό, Φωκιανό, Μαυρούδι, Ροδίτης, Μοσχάτο Αλεξανδρείας. Μετά το 1990 άρχισαν να καλλιεργούνται και ξενικές ποικιλίες Merlot, Cabernet Sauvignon και Syrah.",
-    "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/11538"
   },
   "EUGI00000006701": {
     "document": "11263",

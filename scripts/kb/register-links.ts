@@ -83,8 +83,13 @@ export function linkSummary(text: string, locale: JournalLocale): string | null 
   const start = lines.findLastIndex((line) => headings[locale].test(line));
   if (start === -1) return null;
   const rest = lines.slice(start + 1);
-  // The next numbered section ends the link.
-  const end = rest.findIndex((line) => /^\d{1,2}\.\s+\S/.test(line));
+  // The next numbered section ends the link — a later one: some documents
+  // number the link's own parts ("1. Description of the demarcated area").
+  const number = Number(/^\d{1,2}/.exec(lines[start]!)?.[0] ?? 0);
+  const end = rest.findIndex((line) => {
+    const next = /^(\d{1,2})\.\s+\S/.exec(line);
+    return next !== null && Number(next[1]) > number;
+  });
   return openingOf(
     rest.slice(0, end === -1 ? undefined : end).map((line) => ({ heading: false, text: line })),
   );
@@ -95,10 +100,13 @@ export function linkSummary(text: string, locale: JournalLocale): string | null 
  * from the section's lines in order. A heading, or a short line, before them
  * is passed over; one after them starts another part, and ends the opening.
  */
-export function openingOf(lines: readonly { heading: boolean; text: string }[]): string | null {
+export function openingOf(
+  lines: readonly { heading: boolean; text: string; whole?: boolean }[],
+): string | null {
   const paragraphs: string[] = [];
-  for (const { heading, text } of lines) {
-    if (heading || !isProse(text)) {
+  for (const { heading, text, whole } of lines) {
+    // A block known to be whole prose though it ends without a full stop.
+    if (heading || !(whole === true || isProse(text))) {
       if (paragraphs.length > 0 && text.length > 0) break;
       continue;
     }

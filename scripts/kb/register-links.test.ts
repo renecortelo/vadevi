@@ -86,4 +86,11 @@ describe("the link with the geographical area", () => {
       ),
     ).toBe("Η περιοχή είναι αμπελόεσσα.");
   });
+
+  it("reads past the link's own numbered parts to the next section", () => {
+    const land =
+      "The mountains and their foothills form the first slopes of the Alps, where grapes have been grown for centuries, and the soil and climate owe much to them.";
+    const text = `8. Description of the link(s)\nWine\n1. Description of the demarcated area\n(a) Natural factors\n${land}\n9. Essential further conditions\n`;
+    expect(linkSummary(text, "en")).toBe(land);
+  });
 });
