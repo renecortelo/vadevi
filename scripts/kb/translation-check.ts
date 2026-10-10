@@ -288,7 +288,12 @@ export function numbersIn(text: string): string[] {
   const centuries = [
     ...text.matchAll(/\b(?:siglos?|segles?|siècles?|secoli|secolo|séculos?)\s+([IVXL]+)\b/gi),
     ...text.matchAll(/\b([IVXL]+)(?:e|ᵉ)?\s+(?:secolo|secoli|siècles?)\b/g),
-  ].map((match) => String(roman(match[1]!.toUpperCase())));
+    // Abbreviated: "Plinio il Vecchio (I sec. d.C.)", "X sec A.C.".
+    ...text.matchAll(/\b([IVXL]+)\s+sec\b/g),
+  ]
+    // The numeral in capitals: "secoli il paesaggio" names no century.
+    .filter((match) => /^[IVXL]+$/.test(match[1]!))
+    .map((match) => String(roman(match[1]!)));
   // An English article spells it out ("the late eighteenth century").
   const ordinals = [
     ...text.matchAll(
