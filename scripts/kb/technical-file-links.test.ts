@@ -99,6 +99,26 @@ describe("a technical file's link with the geographical area", () => {
     expect(technicalFileLink(fileLines(xml))).toContain("slopes of 20o to 30o, with many ravines");
   });
 
+  it("reads a raised zero after a number as a degree sign", () => {
+    const host =
+      "Slopes are steeper to the west (5 -15 ) than to the east, where the vines grow on the";
+    const at = (index: number) => Math.round(78 + (index * (right - 78)) / host.length);
+    const after5 = host.indexOf("5 ") + 1;
+    const after15 = host.indexOf("15 ") + 2;
+    const xml = page([
+      form("7. LINK", 100),
+      { text: host, x1: right, y: 140 },
+      // One raised piece holds both zeros, a space apart.
+      { text: "0 0", x: at(after5), x1: at(after15) + 5, y: 134 },
+      {
+        text: "grey forest soils and chernozems of the low hills, and on anthropic soils near the village.",
+        x1: right - 40,
+        y: 152,
+      },
+    ]);
+    expect(technicalFileLink(fileLines(xml))).toContain("(5° -15° )");
+  });
+
   it("joins the pieces one printed line comes out in", () => {
     const xml = page([
       form("7. LINK", 100),

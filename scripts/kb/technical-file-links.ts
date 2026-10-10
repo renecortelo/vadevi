@@ -115,22 +115,35 @@ export function fileLines(xml: string): FileLine[] {
           small.x <= line.x1 + 1,
       );
       if (host === undefined) continue;
-      // It follows the letter or digit it is raised from ("20ο έως"), even
-      // where the text layer sets it a little further on ("30 ,ο με", or past
-      // the next word's first letter: "10 έοως"). A number just before it is
-      // the one it is raised from.
-      const before = (char: Char) => char.x <= small.x + 1;
-      const number = host.chars.findLastIndex(
-        (char) => /\p{N}/u.test(char.c) && before(char) && small.x - char.x <= host.size * 2,
-      );
-      const at =
-        number !== -1
-          ? number
-          : host.chars.findLastIndex((char) => /[\p{L}\p{N}]/u.test(char.c) && before(char));
-      let rest = host.chars.slice(at + 1);
-      const next = rest.findIndex((char) => char.c !== " ");
-      if (next > 0 && /[,.;:]/.test(rest[next]!.c)) rest = rest.slice(next);
-      host.chars = [...host.chars.slice(0, at + 1), ...small.chars, ...rest];
+      // Each run of raised letters follows the letter or digit it is raised
+      // from ("20ο έως"), even where the text layer sets it a little further
+      // on ("30 ,ο με", or past the next word's first letter: "10 έοως"). A
+      // number just before it is the one it is raised from, and a raised "0"
+      // after a number is a degree sign: "5⁰-15⁰" is 5°-15°, not 50-150.
+      const runs = small.chars
+        .reduce<Char[][]>(
+          (all, char) =>
+            char.c === " " ? [...all, []] : [...all.slice(0, -1), [...(all.at(-1) ?? []), char]],
+          [[]],
+        )
+        .filter((run) => run.length > 0);
+      for (const run of runs) {
+        const x = run[0]!.x;
+        const before = (char: Char) => char.x <= x + 1;
+        const number = host.chars.findLastIndex(
+          (char) => /\p{N}/u.test(char.c) && before(char) && x - char.x <= host.size * 2,
+        );
+        const at =
+          number !== -1
+            ? number
+            : host.chars.findLastIndex((char) => /[\p{L}\p{N}]/u.test(char.c) && before(char));
+        let rest = host.chars.slice(at + 1);
+        const next = rest.findIndex((char) => char.c !== " ");
+        if (next > 0 && /[,.;:]/.test(rest[next]!.c)) rest = rest.slice(next);
+        const raised =
+          number !== -1 && run.length === 1 && run[0]!.c === "0" ? [{ c: "°", x }] : run;
+        host.chars = [...host.chars.slice(0, at + 1), ...raised, ...rest];
+      }
       host.x1 = Math.max(host.x1, small.x1);
       lines.splice(lines.indexOf(small), 1);
     }
@@ -144,6 +157,22 @@ export function fileLines(xml: string): FileLine[] {
 /** The form's own words: its labels, set in Times New Roman at 13 points or more. */
 const isForm = (line: FileLine) => line.font.startsWith("TimesNewRoman") && line.size >= 13;
 const sectionHeading = /^\s*\d{1,2}\.\s+\S/;
+
+/**
+ * Whether a line could be a title of its own: it does not break off mid-phrase
+ * — after a comma, inside quotes or brackets, or on a short word that leads
+ * on ("de", "di", "και") — as a line cut short by a long word after it does.
+ */
+function standsAlone(line: string): boolean {
+  const count = (pattern: RegExp) => (line.match(pattern) ?? []).length;
+  return (
+    !/[,;:(«“‘\-–]$/.test(line) &&
+    !/(^|\s)\p{Ll}{1,3}$/u.test(line) &&
+    count(/«/g) === count(/»/g) &&
+    count(/\(/g) === count(/\)/g) &&
+    count(/“/g) === count(/”/g)
+  );
+}
 
 /**
  * The link's opening, from the lines of a technical file, or null where the
@@ -212,8 +241,12 @@ export function technicalFileLink(lines: readonly FileLine[]): string | null {
         ? previous.x1 < right - Math.max(30, width / 6)
         : /^[\p{Lu}\p{N}\-–•(«"“]/u.test(text) &&
           (previous.x1 < line.x + width * 0.6 ||
-            // A one-line title with a list's mark: "a) - Description des facteurs…".
-            (paragraph === previousText && /^([\p{L}\p{N}]{1,2}[.)]|[-–•])\s/u.test(paragraph)));
+            // A one-line title: with a list's mark ("a) - Description des
+            // facteurs…"), or a line of its own clearly short of the margin
+            // ("Descrierea factorilor naturali care contribuie la legătură").
+            (paragraph === previousText &&
+              (/^([\p{L}\p{N}]{1,2}[.)]|[-–•])\s/u.test(paragraph) ||
+                (previous.x1 < line.x + width * 0.85 && standsAlone(paragraph)))));
       const apart = line.page === previous.page && line.y - previous.y > spacing;
       if (ended || apart) close();
     }
@@ -238,7 +271,10 @@ export function technicalFileLink(lines: readonly FileLine[]): string | null {
         ...block,
         text: block.text
           .replace(/^([\p{L}\p{N}]{1,2}[.)]|[-–•])\s+[^.!?]{1,90}[.!?]\s+(?=\p{Lu})/u, "")
-          .replace(/(?<=[.!?])\s+\p{Lu}[.)]\s+[^.!?()]{1,90}[.!?]?$/u, ""),
+          .replace(
+            /(?<=[.!?])\s+(?:[IVX]+\.\s*)?(?:\p{Lu}|\d{1,2})[.)]\s+[^.!?()]{1,90}[.!?]?$/u,
+            "",
+          ),
       };
       // A paragraph that begins mid-sentence is not an opening.
       if (/^\p{Ll}/u.test(block.text)) return { ...block, heading: true };
