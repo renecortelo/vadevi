@@ -313,11 +313,15 @@ export function numbersIn(text: string): string[] {
     /(?<![\p{L}\d.,]|\d[\s\u00a0\u202f])(\d{1,3})(\s+(?:et|à|a|y|i|e|to|and|bis|tot|en|ou|or|o)\s+\d{1,3}[\s\u00a0\u202f]000)(?!\d)/gu,
     "$1 000$2",
   );
-  // A digit written into a unit or formula ("km2", "CO2") is not a figure.
-  // A number runs on through "." or "," followed by a digit, and through a
+  // A digit written into a unit or formula ("km2", "CO2") is not a figure;
+  // a year a typing slip has glued to the word before it ("το1599") is. A
+  // number runs on through "." or "," followed by a digit, and through a
   // space only before exactly three digits ("1 800"): "In 2002, 21,048,500"
   // is two numbers.
-  const digits = ranged.match(/(?<!\p{L})\d+(?:[.,]\d+|[\s\u00a0\u202f]\d{3}(?!\d))*/gu) ?? [];
+  const digits =
+    ranged.match(
+      /(?:(?<![\p{L}\d])\d+|(?<=\p{L})\d{3,})(?:[.,]\d+|[\s\u00a0\u202f]\d{3}(?!\d))*/gu,
+    ) ?? [];
   return [
     ...centuries,
     ...ordinals,

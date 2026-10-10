@@ -87,17 +87,17 @@ async function main() {
     readFileSync(resolve("data/kb/appellations.json"), "utf8"),
   ) as RegionEntry[];
   const output = resolve("data/kb/register-summaries.json");
-  const found: Summaries = existsSync(output)
-    ? (JSON.parse(readFileSync(output, "utf8")) as Summaries)
-    : {};
+  const found: Summaries = {};
+  // Every name no article describes, in any language: the register's own
+  // texts carry its licence. Each is read again from the cache, so a rerun
+  // gives the same file and asks the Publications Office only for what is new.
   const wanted = entries.filter(
-    (entry) => Object.keys(entry.summaries).length === 0 || found[entry.eambrosiaId] !== undefined,
+    (entry) => !Object.values(entry.summaries).some((summary) => summary.license === undefined),
   );
   let done = 0;
   for (const entry of wanted) {
     done += 1;
     if (done % 25 === 0) console.info(`  ${done} of ${wanted.length}`);
-    if (found[entry.eambrosiaId] !== undefined) continue;
     const recordPath = resolve(register, `${entry.eambrosiaId}.json`);
     if (!existsSync(recordPath)) continue;
     const record = JSON.parse(readFileSync(recordPath, "utf8")) as { publications?: Publication[] };

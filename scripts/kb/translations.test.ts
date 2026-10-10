@@ -57,6 +57,7 @@ describe("translation checks", () => {
     expect(numbersIn("el 4,5% de los viñedos")).toEqual(["4.5"]);
     expect(numbersIn("4.5% of the vineyards")).toEqual(["4.5"]);
     expect(numbersIn("In 2002, 21,048,500 litres")).toEqual(["2002", "21048500"]);
+    expect(numbersIn("γράφει το1599 για τα km2 και το CO2")).toEqual(["1599"]);
     expect(numbersIn("unos 1 800 ha y 57 000 euros")).toEqual(["1800", "57000"]);
     expect(numbersIn("con decreto dell'01/09/97 del 12/09/1997 n 213")).toEqual(
       numbersIn("por decreto del 1 de septiembre de 1997 del 12 de septiembre de 1997, n.º 213"),

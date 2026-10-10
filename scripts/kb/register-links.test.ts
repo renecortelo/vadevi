@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { linkSummary } from "./register-links";
+import { linkSummary, upToSentenceEnd } from "./register-links";
 
 // Excerpts of the Official Journal's single document for "Alpi Retiche"
 // (OJ C 63, 26.2.2020), as the Publications Office serves them.
@@ -76,5 +76,14 @@ describe("the link with the geographical area", () => {
     const land =
       "The area lies on a low plateau open to the sea breezes, whose poor, sandy soils and dry summers keep yields low and give the grapes a long and even ripening.";
     expect(linkSummary(`8. Description of the link(s)\n${scope}\n${land}\n`, "en")).toBe(land);
+  });
+
+  it("ends at a sentence's end, not an abbreviation's or inside brackets", () => {
+    expect(upToSentenceEnd("Das Klima ist kontinental, d. h. die Winter sind kalt")).toBe("");
+    expect(
+      upToSentenceEnd(
+        "Η περιοχή είναι αμπελόεσσα. Υπάρχουν πολλά ευρήματα (π.χ. αμφορείς) και αναφορές (π.χ.",
+      ),
+    ).toBe("Η περιοχή είναι αμπελόεσσα.");
   });
 });

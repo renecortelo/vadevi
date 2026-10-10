@@ -42,12 +42,37 @@ function isProse(line: string): boolean {
   return line.length >= 120 && /[.!?»"”)]$/.test(line);
 }
 
+/**
+ * Where a sentence ends: a full stop (or "!", "?") followed by the start of
+ * another — a capital, a figure, a quote — not an abbreviation's ("π.χ.
+ * ανασκαφικά", "εκδ. του"), and never inside brackets left open.
+ */
+function sentenceEnds(text: string): number[] {
+  const ends: number[] = [];
+  let open = 0;
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index]!;
+    if (char === "(") open += 1;
+    else if (char === ")") open = Math.max(0, open - 1);
+    else if (".!?".includes(char) && open === 0) {
+      const next = text.slice(index + 1);
+      if (next.length === 0 || /^[\s\u00a0]+[\p{Lu}\p{N}«"“‘'(]/u.test(next)) ends.push(index);
+    }
+  }
+  return ends;
+}
+
+/** The text up to the last end of a sentence before `limit` characters, or "". */
+export function upToSentenceEnd(text: string, limit: number = text.length): string {
+  const end = sentenceEnds(text)
+    .filter((index) => index < limit)
+    .at(-1);
+  return end === undefined ? "" : text.slice(0, end + 1);
+}
+
 /** Up to `limit` characters, ending at the end of a sentence. */
 function wholeSentences(text: string, limit: number): string {
-  if (text.length <= limit) return text;
-  const cut = text.slice(0, limit);
-  const end = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(".\u00a0"));
-  return end > 0 ? cut.slice(0, end + 1) : "";
+  return text.length <= limit ? text : upToSentenceEnd(text, limit);
 }
 
 export function linkSummary(text: string, locale: JournalLocale): string | null {

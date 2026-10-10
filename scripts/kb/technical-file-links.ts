@@ -1,4 +1,4 @@
-import { openingOf } from "./register-links";
+import { openingOf, upToSentenceEnd } from "./register-links";
 
 /**
  * The opening of a registered wine name's "link with the geographical area",
@@ -116,10 +116,17 @@ export function fileLines(xml: string): FileLine[] {
       );
       if (host === undefined) continue;
       // It follows the letter or digit it is raised from ("20ο έως"), even
-      // where the text layer sets it a little further on ("30 ,ο με").
-      const at = host.chars.findLastIndex(
-        (char) => /[\p{L}\p{N}]/u.test(char.c) && char.x <= small.x + 1,
+      // where the text layer sets it a little further on ("30 ,ο με", or past
+      // the next word's first letter: "10 έοως"). A number just before it is
+      // the one it is raised from.
+      const before = (char: Char) => char.x <= small.x + 1;
+      const number = host.chars.findLastIndex(
+        (char) => /\p{N}/u.test(char.c) && before(char) && small.x - char.x <= host.size * 2,
       );
+      const at =
+        number !== -1
+          ? number
+          : host.chars.findLastIndex((char) => /[\p{L}\p{N}]/u.test(char.c) && before(char));
       let rest = host.chars.slice(at + 1);
       const next = rest.findIndex((char) => char.c !== " ");
       if (next > 0 && /[,.;:]/.test(rest[next]!.c)) rest = rest.slice(next);
@@ -225,19 +232,19 @@ export function technicalFileLink(lines: readonly FileLine[]): string | null {
   return openingOf(
     blocks.map((block) => {
       if (block.heading) return block;
-      // A title with a list's mark, run in: "Α. Ιστορικός δεσμός. Η αμπελοκαλλιέργεια…".
+      // A title with a list's mark, run in at the start ("Α. Ιστορικός δεσμός.
+      // Η αμπελοκαλλιέργεια…") or left at the end ("… Β. Πολιτιστικός δεσμός.").
       block = {
         ...block,
-        text: block.text.replace(
-          /^([\p{L}\p{N}]{1,2}[.)]|[-–•])\s+[^.!?]{1,90}[.!?]\s+(?=\p{Lu})/u,
-          "",
-        ),
+        text: block.text
+          .replace(/^([\p{L}\p{N}]{1,2}[.)]|[-–•])\s+[^.!?]{1,90}[.!?]\s+(?=\p{Lu})/u, "")
+          .replace(/(?<=[.!?])\s+\p{Lu}[.)]\s+[^.!?()]{1,90}[.!?]?$/u, ""),
       };
       // A paragraph that begins mid-sentence is not an opening.
       if (/^\p{Ll}/u.test(block.text)) return { ...block, heading: true };
       if (/[.!?»"”)]$/.test(block.text)) return block;
-      const end = Math.max(block.text.lastIndexOf(". "), block.text.lastIndexOf("! "));
-      return end === -1 ? block : { ...block, text: block.text.slice(0, end + 1) };
+      const whole = upToSentenceEnd(block.text);
+      return whole.length === 0 ? block : { ...block, text: whole };
     }),
   );
 }
