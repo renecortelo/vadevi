@@ -288,7 +288,7 @@ export function libraryTables(
           locale === "pt" ? "pt-PT" : locale,
           summary.text,
           summary.url,
-          wikipediaLicense,
+          summary.license ?? wikipediaLicense,
           summary.translated === true ? 1 : 0,
         ]),
       ),

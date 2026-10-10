@@ -403,6 +403,29 @@ for (const entry of entries) {
 }
 console.info(`  ${translated} summaries translated from another language's article.`);
 
+// A name no article describes takes the opening of its link with the
+// geographical area, from its single document as the Official Journal
+// publishes it — in each language the Union translated it into
+// (`pnpm kb:fetch-register-links`). Never over an article's summary.
+const journalSummariesPath = resolve("data/kb/register-summaries.json");
+const journalSummaries = existsSync(journalSummariesPath)
+  ? (JSON.parse(readFileSync(journalSummariesPath, "utf8")) as Record<
+      string,
+      { summaries: Record<string, { text: string; url: string }> }
+    >)
+  : {};
+let fromJournal = 0;
+for (const entry of entries) {
+  const journal = journalSummaries[entry.eambrosiaId];
+  if (journal === undefined || Object.keys(entry.summaries).length > 0) continue;
+  for (const [locale, summary] of Object.entries(journal.summaries)) {
+    const key = locale === "pt-PT" ? "pt" : locale;
+    entry.summaries[key] = { ...summary, license: "EC-reuse-2011-833" };
+  }
+  fromJournal += 1;
+}
+console.info(`  ${fromJournal} names described from the Official Journal's single document.`);
+
 // What the register's single document says of each name's wines: the
 // categories of product it covers and its main grape varieties, read from
 // the technical file or, where the register holds none, from the Official

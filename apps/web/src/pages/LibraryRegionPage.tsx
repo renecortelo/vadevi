@@ -136,7 +136,10 @@ export function LibraryRegionPage() {
               rel="noreferrer"
               target="_blank"
             >
-              {t("library.summarySource")}
+              {/* The Journal's text is the Union's, in its own translation. */}
+              {region.summary.license === "EC-reuse-2011-833"
+                ? t("library.summarySourceJournal")
+                : t("library.summarySource")}
             </a>
             {region.summary.translated
               ? ` · ${t("library.summaryTranslated")}`

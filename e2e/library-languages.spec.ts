@@ -61,3 +61,24 @@ test("the library follows the interface language", async ({ page }) => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(grape.names[stored(locale)]!);
   }
 });
+
+// A name Wikipedia has no article for reads the link with its area from its
+// single document in the Official Journal, in the Union's own translation,
+// and says so — with the Journal's page in the reader's language.
+test("a summary from the Official Journal names its source", async ({ page }) => {
+  const journal = read<{ id: string; summaries: Record<string, { text: string; url: string }> }[]>(
+    "data/kb/appellations.json",
+  ).find((entry) => entry.id === "it-alpi-retiche")!;
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto(`/library/regions/${journal.id}`);
+  await page.locator("#interface-locale").selectOption("es");
+  await expect(page.locator(".library-summary p").first()).toHaveText(journal.summaries.es!.text, {
+    timeout: 15_000,
+  });
+  const source = page.locator(".library-summary a");
+  await expect(source).toHaveText(
+    "Del documento único de la denominación · Diario Oficial de la UE",
+  );
+  await expect(source).toHaveAttribute("href", journal.summaries.es!.url);
+});

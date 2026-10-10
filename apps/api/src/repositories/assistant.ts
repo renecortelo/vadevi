@@ -964,17 +964,20 @@ async function loadLibraryStatements(
     }
     if (region.summary !== null) {
       const summaryId = await librarySourceId(`region-summary:${region.id}`);
+      // A name no article describes is summarised from its own single
+      // document in the Official Journal: the regulator's text, not Wikipedia's.
+      const fromJournal = region.summary.license === "EC-reuse-2011-833";
       sources.push({
         canonicalUrl: region.summary.sourceUrl,
         createdAt: now,
         createdByProvider: "wine-library",
         createdByUserId: null,
         id: summaryId,
-        licenseIdentifier: "CC-BY-SA-4.0",
-        publisher: "Wikipedia",
+        licenseIdentifier: region.summary.license,
+        publisher: fromJournal ? "Official Journal of the European Union" : "Wikipedia",
         retrievedAt: now,
-        sourceType: "open_dataset",
-        title: `${region.name} — Wikipedia`,
+        sourceType: fromJournal ? "regulator" : "open_dataset",
+        title: `${region.name} — ${fromJournal ? "single document" : "Wikipedia"}`,
         updatedAt: now,
       });
       say("summary", region.summary.text, [summaryId]);

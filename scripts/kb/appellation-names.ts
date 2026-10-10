@@ -29,7 +29,16 @@ export type RegionEntry = {
     sourceUrl: string;
   };
   /** `translated`: a faithful translation of the article at `url`. */
-  summaries: Record<string, { text: string; translated?: boolean; url: string }>;
+  summaries: Record<
+    string,
+    {
+      /** Wikipedia's (CC BY-SA 4.0) unless said: the Official Journal's is the EU's. */
+      license?: string;
+      text: string;
+      translated?: boolean;
+      url: string;
+    }
+  >;
   wikidataId: string | null;
 };
 
@@ -228,7 +237,16 @@ export type TopicEntry = {
   names: Record<string, string>;
   prominence: number;
   /** `translated`: a faithful translation of the article at `url`. */
-  summaries: Record<string, { text: string; translated?: boolean; url: string }>;
+  summaries: Record<
+    string,
+    {
+      /** Wikipedia's (CC BY-SA 4.0) unless said: the Official Journal's is the EU's. */
+      license?: string;
+      text: string;
+      translated?: boolean;
+      url: string;
+    }
+  >;
   wikidataId: string;
 };
 

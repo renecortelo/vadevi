@@ -63,6 +63,20 @@ technical file the register holds or, where it holds none, the single document
 published in the Official Journal, read from the Publications Office's Cellar
 in English. A file that cannot be read gives nothing rather than a guess.
 
+A name no Wikipedia article describes takes, as its summary, the opening of
+the "link with the geographical area" of its single document, as the Official
+Journal publishes it (`pnpm kb:fetch-register-links`, then
+`scripts/kb/register-links.ts`): the land, the climate and the people that make
+the wine what it is, in the Union's own words. The Journal publishes it in
+every official language, translated by the Union itself, so the summary is
+taken in English, Spanish, French, Italian, German, Dutch and Portuguese as
+published — whole paragraphs, whole sentences, nothing reworded — and Catalan
+readers are shown another language's. It is never put over an article's
+summary, and the page says where it comes from. These texts are © European
+Union, reused under the Commission's reuse notice (Decision 2011/833/EU), and
+`data/kb/register-summaries.json` keeps each with the publication it was read
+from.
+
 A variety is linked to a grape card only where that is certain: by the grape's
 own name in one of the library's languages, or by a synonym its sources give —
 and then not when the synonym is a family name that opens three or more of the

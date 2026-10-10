@@ -34,6 +34,7 @@
     "kb:build-grapes": "tsx scripts/kb/build-grapes.ts",
     "kb:fetch-appellation-areas": "tsx scripts/kb/fetch-appellation-areas.ts",
     "kb:fetch-register-documents": "tsx scripts/kb/fetch-register-documents.ts",
+    "kb:fetch-register-links": "tsx scripts/kb/fetch-register-links.ts",
     "kb:fetch-appellations": "tsx scripts/kb/fetch-appellations.ts",
     "kb:build-appellations": "tsx scripts/kb/build-appellations.ts",
     "kb:geocode-appellations": "tsx scripts/kb/geocode-appellations.ts",
