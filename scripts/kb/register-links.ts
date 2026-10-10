@@ -57,19 +57,30 @@ export function linkSummary(text: string, locale: JournalLocale): string | null 
   // with the link as it now reads, comes after it.
   const start = lines.findLastIndex((line) => headings[locale].test(line));
   if (start === -1) return null;
+  const rest = lines.slice(start + 1);
+  // The next numbered section ends the link.
+  const end = rest.findIndex((line) => /^\d{1,2}\.\s+\S/.test(line));
+  return openingOf(
+    rest.slice(0, end === -1 ? undefined : end).map((line) => ({ heading: false, text: line })),
+  );
+}
+
+/**
+ * The link's opening: its first paragraphs of prose, whole sentences only,
+ * from the section's lines in order. A heading, or a short line, before them
+ * is passed over; one after them starts another part, and ends the opening.
+ */
+export function openingOf(lines: readonly { heading: boolean; text: string }[]): string | null {
   const paragraphs: string[] = [];
-  for (const line of lines.slice(start + 1)) {
-    // The next numbered section ends the link.
-    if (/^\d{1,2}\.\s+\S/.test(line)) break;
-    if (!isProse(line)) {
-      // A subheading after the first paragraphs starts another part.
-      if (paragraphs.length > 0 && line.length > 0) break;
+  for (const { heading, text } of lines) {
+    if (heading || !isProse(text)) {
+      if (paragraphs.length > 0 && text.length > 0) break;
       continue;
     }
     // "The link … applies to the 'wine' and 'wine of overripe grapes'
     // categories" says what the link covers, not what the land is like.
-    if (line.length < 320 && /categor|kategor/i.test(line)) continue;
-    paragraphs.push(line);
+    if (text.length < 320 && /categor|kategor|κατηγορ|категор/i.test(text)) continue;
+    paragraphs.push(text);
     if (paragraphs.join(" ").length >= 320 || paragraphs.length === 3) break;
   }
   const summary = wholeSentences(paragraphs.join(" "), 900);

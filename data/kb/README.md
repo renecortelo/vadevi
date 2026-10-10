@@ -77,6 +77,19 @@ Union, reused under the Commission's reuse notice (Decision 2011/833/EU), and
 `data/kb/register-summaries.json` keeps each with the publication it was read
 from.
 
+A name protected before 2011 has no single document in the Journal: the
+Union never published or translated it. Its technical file in the register is
+the Member State's single document, in the language it was filed in, and the
+opening of its link with the geographical area summarises it
+(`pnpm kb:extract-technical-file-links`, reading the files
+`kb:fetch-register-documents` cached; `data/kb/technical-file-summaries.json`).
+The section is found by the form's layout, not its words: the form's labels
+are set in Times New Roman, the applicant's text in Arial, and the link is the
+seventh section (the eighth in the 2019 form). The text is quoted as the file
+has it, typing errors included. Translations into the app's languages are made
+from it by hand, checked like every other (`appellation-translations.json`,
+with the file as `sourceUrl`), and marked as translations on the page.
+
 A variety is linked to a grape card only where that is certain: by the grape's
 own name in one of the library's languages, or by a synonym its sources give —
 and then not when the synonym is a family name that opens three or more of the

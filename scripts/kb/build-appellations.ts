@@ -11,6 +11,7 @@ import {
 } from "./appellation-names";
 import { type GrapeEntry, normalize, slug, summaryOf } from "./grape-validation";
 import { allowedItem } from "./appellation-exclusions";
+import type { TechnicalFileSummaries } from "./extract-technical-file-links";
 import { registerCategories, registerGrapes } from "./register-facts";
 
 /**
@@ -382,6 +383,9 @@ for (const [text, holders] of sharing) {
 }
 console.info(`  ${unshared} summaries dropped: the text belongs to another registered name.`);
 
+const registerAttachments =
+  "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/";
+
 // Where Wikipedia explains a registered name in some of the app's languages
 // and not others, a faithful translation of its lead fills the others,
 // marked as such (`data/kb/appellation-translations.json`, by register id).
@@ -397,11 +401,19 @@ for (const entry of entries) {
   for (const [locale, text] of Object.entries(translation.texts)) {
     const key = locale === "pt-PT" ? "pt" : locale;
     if (entry.summaries[key] !== undefined) continue;
-    entry.summaries[key] = { text, translated: true, url: translation.sourceUrl };
+    entry.summaries[key] = {
+      text,
+      translated: true,
+      url: translation.sourceUrl,
+      // A translation of the register's own text is reused as the Union's is.
+      ...(translation.sourceUrl.startsWith(registerAttachments)
+        ? { license: "EC-reuse-2011-833" }
+        : {}),
+    };
     translated += 1;
   }
 }
-console.info(`  ${translated} summaries translated from another language's article.`);
+console.info(`  ${translated} summaries translated from another language's article or document.`);
 
 // A name no article describes takes the opening of its link with the
 // geographical area, from its single document as the Official Journal
@@ -425,6 +437,27 @@ for (const entry of entries) {
   fromJournal += 1;
 }
 console.info(`  ${fromJournal} names described from the Official Journal's single document.`);
+
+// A name neither an article nor the Journal describes takes the opening of
+// its link from its technical file in the register, in the language it was
+// filed in (`pnpm kb:extract-technical-file-links`). Its translations into
+// the app's languages, made from that text, are among the translations above.
+const technicalFiles = JSON.parse(
+  readFileSync(resolve("data/kb/technical-file-summaries.json"), "utf8"),
+) as TechnicalFileSummaries;
+let fromTechnicalFile = 0;
+for (const entry of entries) {
+  const file = technicalFiles[entry.eambrosiaId];
+  if (file === undefined) continue;
+  if (Object.values(entry.summaries).some((summary) => summary.license === undefined)) continue;
+  entry.summaries[file.language] ??= {
+    license: "EC-reuse-2011-833",
+    text: file.text,
+    url: file.url,
+  };
+  fromTechnicalFile += 1;
+}
+console.info(`  ${fromTechnicalFile} names described from their technical file in the register.`);
 
 // What the register's single document says of each name's wines: the
 // categories of product it covers and its main grape varieties, read from

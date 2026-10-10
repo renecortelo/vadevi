@@ -64,6 +64,7 @@
     "origin": "Origen: {{country}}",
     "summarySource": "De la Viquipèdia · CC BY-SA 4.0",
     "summarySourceJournal": "Del document únic de la denominació · Diari Oficial de la UE",
+    "summarySourceRegister": "Del plec tècnic de la denominació · Registre d'indicacions geogràfiques de la UE (eAmbrosia)",
     "summaryOtherLanguage": "encara no disponible en el teu idioma",
     "profileTitle": "El vi que dona",
     "aromas": "Aromes típics",
@@ -227,6 +228,7 @@
       "place": "Punt aproximat: el lloc que dona nom a la denominació."
     },
     "summaryTranslated": "traduït de l'article original",
+    "summaryTranslatedDocument": "traduït de la llengua del document",
     "backTo": "Tornar a {{name}}"
   },
   "space": {

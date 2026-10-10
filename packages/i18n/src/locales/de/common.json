@@ -64,6 +64,7 @@
     "origin": "Herkunft: {{country}}",
     "summarySource": "Aus Wikipedia · CC BY-SA 4.0",
     "summarySourceJournal": "Aus dem Einzigen Dokument · Amtsblatt der EU",
+    "summarySourceRegister": "Aus der technischen Unterlage der Bezeichnung · EU-Register der geografischen Angaben (eAmbrosia)",
     "summaryOtherLanguage": "noch nicht in Ihrer Sprache verfügbar",
     "profileTitle": "Der Wein daraus",
     "aromas": "Typische Aromen",
@@ -227,6 +228,7 @@
       "place": "Ungefährer Punkt: der Ort, nach dem die Bezeichnung benannt ist."
     },
     "summaryTranslated": "aus dem Originalartikel übersetzt",
+    "summaryTranslatedDocument": "aus der Sprache des Dokuments übersetzt",
     "backTo": "Zurück zu {{name}}"
   },
   "space": {

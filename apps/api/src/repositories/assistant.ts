@@ -965,8 +965,10 @@ async function loadLibraryStatements(
     if (region.summary !== null) {
       const summaryId = await librarySourceId(`region-summary:${region.id}`);
       // A name no article describes is summarised from its own single
-      // document in the Official Journal: the regulator's text, not Wikipedia's.
-      const fromJournal = region.summary.license === "EC-reuse-2011-833";
+      // document — in the Official Journal, or else its technical file in the
+      // register: the regulator's text, not Wikipedia's.
+      const official = region.summary.license === "EC-reuse-2011-833";
+      const fromRegister = official && region.summary.sourceUrl.includes("/eambrosia-public-api/");
       sources.push({
         canonicalUrl: region.summary.sourceUrl,
         createdAt: now,
@@ -974,10 +976,14 @@ async function loadLibraryStatements(
         createdByUserId: null,
         id: summaryId,
         licenseIdentifier: region.summary.license,
-        publisher: fromJournal ? "Official Journal of the European Union" : "Wikipedia",
+        publisher: fromRegister
+          ? "European Commission (eAmbrosia)"
+          : official
+            ? "Official Journal of the European Union"
+            : "Wikipedia",
         retrievedAt: now,
-        sourceType: fromJournal ? "regulator" : "open_dataset",
-        title: `${region.name} — ${fromJournal ? "single document" : "Wikipedia"}`,
+        sourceType: official ? "regulator" : "open_dataset",
+        title: `${region.name} — ${fromRegister ? "technical file" : official ? "single document" : "Wikipedia"}`,
         updatedAt: now,
       });
       say("summary", region.summary.text, [summaryId]);

@@ -83,6 +83,9 @@ export function LibraryRegionPage() {
   const countryName =
     new Intl.DisplayNames([i18n.language], { type: "region" }).of(region.countryCode) ??
     region.countryCode;
+  const fromRegister =
+    region.summary?.license === "EC-reuse-2011-833" &&
+    region.summary.sourceUrl.includes("/eambrosia-public-api/");
   const registered =
     region.registeredOn === null
       ? null
@@ -136,13 +139,16 @@ export function LibraryRegionPage() {
               rel="noreferrer"
               target="_blank"
             >
-              {/* The Journal's text is the Union's, in its own translation. */}
-              {region.summary.license === "EC-reuse-2011-833"
-                ? t("library.summarySourceJournal")
-                : t("library.summarySource")}
+              {/* The Journal's text is the Union's, in its own translation; the
+                  register's technical file is the Member State's, as filed. */}
+              {fromRegister
+                ? t("library.summarySourceRegister")
+                : region.summary.license === "EC-reuse-2011-833"
+                  ? t("library.summarySourceJournal")
+                  : t("library.summarySource")}
             </a>
             {region.summary.translated
-              ? ` · ${t("library.summaryTranslated")}`
+              ? ` · ${t(fromRegister ? "library.summaryTranslatedDocument" : "library.summaryTranslated")}`
               : region.summary.locale.split("-")[0] !== locale.split("-")[0]
                 ? ` · ${t("library.summaryOtherLanguage")}`
                 : null}

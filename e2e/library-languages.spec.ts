@@ -82,3 +82,30 @@ test("a summary from the Official Journal names its source", async ({ page }) =>
   );
   await expect(source).toHaveAttribute("href", journal.summaries.es!.url);
 });
+
+// A name protected before 2011, with neither an article nor a Journal
+// publication, reads its link from its technical file in the register: in the
+// language it was filed in, or in a translation marked as one.
+test("a summary from the register's technical file names its source", async ({ page }) => {
+  const entry = read<
+    { id: string; summaries: Record<string, { text: string; translated?: boolean; url: string }> }[]
+  >("data/kb/appellations.json").find((candidate) => candidate.id === "gr-malvasia-paros")!;
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto(`/library/regions/${entry.id}`);
+  await page.locator("#interface-locale").selectOption("es");
+  const shown = entry.summaries.es ?? entry.summaries.el!;
+  await expect(page.locator(".library-summary p").first()).toHaveText(shown.text, {
+    timeout: 15_000,
+  });
+  const source = page.locator(".library-summary a");
+  await expect(source).toHaveText(
+    "Del pliego técnico de la denominación · Registro de indicaciones geográficas de la UE (eAmbrosia)",
+  );
+  await expect(source).toHaveAttribute("href", shown.url);
+  await expect(page.locator(".library-summary .section-help")).toContainText(
+    entry.summaries.es === undefined
+      ? "aún no disponible en tu idioma"
+      : "traducido del idioma del documento",
+  );
+});

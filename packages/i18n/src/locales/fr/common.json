@@ -64,6 +64,7 @@
     "origin": "Origine : {{country}}",
     "summarySource": "Extrait de Wikipédia · CC BY-SA 4.0",
     "summarySourceJournal": "Du document unique de l'appellation · Journal officiel de l'UE",
+    "summarySourceRegister": "Du dossier technique de la dénomination · Registre des indications géographiques de l’UE (eAmbrosia)",
     "summaryOtherLanguage": "pas encore disponible dans votre langue",
     "profileTitle": "Le vin qu'il donne",
     "aromas": "Arômes typiques",
@@ -227,6 +228,7 @@
       "place": "Point approximatif : le lieu qui donne son nom à l'appellation."
     },
     "summaryTranslated": "traduit de l'article original",
+    "summaryTranslatedDocument": "traduit de la langue du document",
     "backTo": "Retour à {{name}}"
   },
   "space": {

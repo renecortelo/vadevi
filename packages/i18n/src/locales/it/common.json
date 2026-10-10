@@ -64,6 +64,7 @@
     "origin": "Origine: {{country}}",
     "summarySource": "Da Wikipedia · CC BY-SA 4.0",
     "summarySourceJournal": "Dal documento unico della denominazione · Gazzetta ufficiale dell'UE",
+    "summarySourceRegister": "Dal fascicolo tecnico della denominazione · Registro UE delle indicazioni geografiche (eAmbrosia)",
     "summaryOtherLanguage": "non ancora disponibile nella tua lingua",
     "profileTitle": "Il vino che dà",
     "aromas": "Aromi tipici",
@@ -227,6 +228,7 @@
       "place": "Punto approssimativo: il luogo che dà il nome alla denominazione."
     },
     "summaryTranslated": "tradotto dall'articolo originale",
+    "summaryTranslatedDocument": "tradotto dalla lingua del documento",
     "backTo": "Torna a {{name}}"
   },
   "space": {

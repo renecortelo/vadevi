@@ -64,6 +64,7 @@
     "origin": "From {{country}}",
     "summarySource": "From Wikipedia · CC BY-SA 4.0",
     "summarySourceJournal": "From the name's single document · Official Journal of the EU",
+    "summarySourceRegister": "From the name's technical file · EU register of geographical indications (eAmbrosia)",
     "summaryOtherLanguage": "not yet available in your language",
     "profileTitle": "The wine it makes",
     "aromas": "Typical aromas",
@@ -227,6 +228,7 @@
       "place": "Approximate point: the place the appellation is named after."
     },
     "summaryTranslated": "translated from the original article",
+    "summaryTranslatedDocument": "translated from the document's language",
     "backTo": "Back to {{name}}"
   },
   "space": {

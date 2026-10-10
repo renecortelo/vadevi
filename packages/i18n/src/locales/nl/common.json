@@ -64,6 +64,7 @@
     "origin": "Herkomst: {{country}}",
     "summarySource": "Uit Wikipedia · CC BY-SA 4.0",
     "summarySourceJournal": "Uit het enig document van de benaming · Publicatieblad van de EU",
+    "summarySourceRegister": "Uit het technisch dossier van de benaming · EU-register van geografische aanduidingen (eAmbrosia)",
     "summaryOtherLanguage": "nog niet beschikbaar in jouw taal",
     "profileTitle": "De wijn die ze geeft",
     "aromas": "Typische aroma's",
@@ -227,6 +228,7 @@
       "place": "Benaderd punt: de plaats waarnaar de benaming is genoemd."
     },
     "summaryTranslated": "vertaald uit het oorspronkelijke artikel",
+    "summaryTranslatedDocument": "vertaald uit de taal van het document",
     "backTo": "Terug naar {{name}}"
   },
   "space": {

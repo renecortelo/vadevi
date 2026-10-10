@@ -423,3 +423,18 @@ export function checkTranslation(
   }
   return problems;
 }
+
+/**
+ * Which of the given languages a text is written in: the one whose common
+ * words it uses most, or null when it uses none of them.
+ */
+export function languageOf(text: string, among: readonly Language[]): Language | null {
+  const textWords = words(text);
+  const ranked = among
+    .map((language) => {
+      const set = new Set(commonWords[language]);
+      return { count: textWords.filter((word) => set.has(word)).length, language };
+    })
+    .sort((left, right) => right.count - left.count);
+  return ranked[0] !== undefined && ranked[0].count > 0 ? ranked[0].language : null;
+}
