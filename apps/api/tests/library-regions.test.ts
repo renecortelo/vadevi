@@ -239,6 +239,10 @@ describe("the wine atlas", () => {
     expect(await search("query=sherry")).toEqual(["es-jerez-xeres-sherry"]);
     expect(await search("query=Rioja&country=ES")).toEqual(["es-rioja"]);
     expect(await search("query=Rioja&country=FR")).toEqual([]);
+    // As a wine's region may be written: with its country.
+    expect(await search("query=New%20Zealand%20Marlborough&country=NZ")).toEqual([
+      "nz-marlborough",
+    ]);
     const missing = await SELF.fetch("https://vadevi.test/api/v1/library/regions/es-nowhere", {
       headers,
     });

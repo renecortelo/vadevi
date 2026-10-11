@@ -7,6 +7,7 @@ import type {
 } from "@vadevi/contracts";
 
 import { suggestedPairingsFor } from "../adapters/grape-pairing";
+import { withoutCountryName } from "./country-terms";
 import { normalizeWineText } from "./wine-memory";
 
 /**
@@ -383,21 +384,26 @@ export async function searchLibraryRegions(
       name: row.name,
     }));
   }
-  const normalized = normalizeWineText(query);
-  if (normalized.length === 0) return [];
-  const rows = await database
-    .prepare(
-      `SELECT DISTINCT region.id, region.name, region.country_code, region.gi_type, region.prominence
-      FROM kb_names name
-      JOIN kb_regions region ON region.id = name.entity_id
-      WHERE name.entity_type = 'region'
-        AND name.normalized_name >= ? AND name.normalized_name < ? || '~'
-        AND (? IS NULL OR region.country_code = ?)
-      ORDER BY (name.normalized_name = ?) DESC, region.prominence DESC, region.name
-      LIMIT 10`,
-    )
-    .bind(normalized, normalized, country, country, normalized)
-    .all<{ country_code: string; gi_type: RegionDesignation; id: string; name: string }>();
+  const typed = normalizeWineText(query);
+  if (typed.length === 0) return [];
+  const find = (normalized: string) =>
+    database
+      .prepare(
+        `SELECT DISTINCT region.id, region.name, region.country_code, region.gi_type, region.prominence
+        FROM kb_names name
+        JOIN kb_regions region ON region.id = name.entity_id
+        WHERE name.entity_type = 'region'
+          AND name.normalized_name >= ? AND name.normalized_name < ? || '~'
+          AND (? IS NULL OR region.country_code = ?)
+        ORDER BY (name.normalized_name = ?) DESC, region.prominence DESC, region.name
+        LIMIT 10`,
+      )
+      .bind(normalized, normalized, country, country, normalized)
+      .all<{ country_code: string; gi_type: RegionDesignation; id: string; name: string }>();
+  let rows = await find(typed);
+  // A wine's region written with its country: "New Zealand Marlborough".
+  const local = withoutCountryName(typed);
+  if (rows.results.length === 0 && local !== typed) rows = await find(local);
   return rows.results.map((row) => ({
     countryCode: row.country_code,
     giType: row.gi_type,
