@@ -273690,5 +273690,3975 @@
     "registeredOn": null,
     "summaries": {},
     "wikidataId": null
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "piquepoul",
+        "quote": "grown primarily in the Rhone Valley and Languedoc regions of France as well as Catalonia, Spain ... in the Willcox AVA of southern Arizona ... Red Mountain AVA of eastern Washington State ... Piquepoul blanc is being grown in Sonoma, California ... Texas Hill Country AVA ... In Australia, Piquepoul blanc was first planted in 2013",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Piquepoul"
+      },
+      {
+        "grapeId": "souzao",
+        "quote": "While originating in the Minho region, it is used primarily in Australia, California and South Africa. Sezão is also an authorized grape in the Monterrei DO in Galicia. In Portugal, it is also an authorized planting in the Douro, and Dão‑Lafões area (Vinho do Dão).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sez%C3%A3o"
+      },
+      {
+        "grapeId": "muscat-of-alexandria",
+        "quote": "Muscat of Alexandria is cultivated very heavily on the island of Lemnos in the North Eastern Aegean region of Greece, ... In Italy wine is made from the grape on the island of Pantelleria, and it is grown in Calabria and Sicily ... In Spain, the grape is the sixth most planted white grape variety ... It is an important grape in the wine industries of Australia, Bolivia and South Africa.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Muscat_of_Alexandria"
+      },
+      {
+        "grapeId": "muller-thurgau",
+        "quote": "Rheinhessen, ... Baden, ... Palatinate, ... Austria, ... Hungary, ... Belgium, ... United Kingdom, ... Australia – Mudgee wine region, ... New Zealand – Now a marginal grape., ... United States of America, ... Japan, ... China",
+        "sourceUrl": "https://en.wikipedia.org/wiki/M%C3%BCller-Thurgau"
+      },
+      {
+        "grapeId": "zweigelt",
+        "quote": "Widely planted in Austria, Zweigelt vines have made inroads in the Canadian wine regions of Ontario's Niagara Peninsula and of British Columbia, with limited plantings in Hungary, Australia and New Zealand. In the Czech Republic it is known as Zweigeltrebe ... It grows in most of the wine regions in Slovakia. As of 2010, newly established Belgian and Polish vineyards have also started to plant Zweigelt. As of 2014, Washington state has several small plantings ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "grapeId": "colombard",
+        "quote": "In France, it was traditionally grown in the Charentes and Gascony ... today it is still among the permitted white grape varieties in Bordeaux ... This grape is mainly grown in California ... it is widely grown in South Africa ... and to a lesser extent in Australia and Israel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Colombard"
+      },
+      {
+        "grapeId": "tannat",
+        "quote": "historically grown in South West France in the Madiran AOC, ... now one of the most prominent grapes in Uruguay ... also grown in Argentina, Australia, Brazil, Bolivia, Peru, South Africa, and in the Italian region of Apulia ... in the US states of Maryland, Virginia, and North Carolina ... plantings in California ... Washington State ... Arizona, Oregon and Texas",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tannat"
+      },
+      {
+        "grapeId": "graciano",
+        "quote": "In Australia, Graciano is used either in blends with Tempranillo or as varietal wines. In France, the grape is grown in Languedoc-Roussillon as Morrastel or Courouillade and in Corsica as Minustello or Minustellu. In Spain, the grape produces low yields, but it is a key component of Gran Reservas in Rioja and Navarra, contributing structure and aging potential. In the Rioja DO, 395 ha (0.7%) are planted with this variety. While primarily used as a blending partner, some Rioja bodegas produce varietal Graciano wines. In California, Graciano is sometimes known as Xeres. The grape is also grown in Argentina. In the United States, Graciano is also grown in Arizona, Texas, Oregon, and Washington.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Graciano"
+      },
+      {
+        "grapeId": "clairette-blanche",
+        "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
+      }
+    ],
+    "id": "au-australia",
+    "latitude": -24.7761086,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-australia",
+    "longitude": 134.755,
+    "name": "Australia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Australia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 6,
+    "registerLevel": "country",
+    "registeredOn": "1994-01-26",
+    "summaries": {
+      "en": {
+        "text": "The Australian wine industry is one of the world's largest exporters of wine, with approximately 800 million out of the 1.2 to 1.3 billion litres produced annually exported to overseas markets.",
+        "url": "https://en.wikipedia.org/wiki/Australian_wine"
+      },
+      "es": {
+        "text": "La industria del vino australiano es una de las más notables a nivel mundial, siendo la cuarta mayor exportadora de vino con aproximadamente 750 millones de litros al año para el mercado de exportación internacional con sólo un 40% de la producción para consumo nacional.",
+        "url": "https://es.wikipedia.org/wiki/Vino_de_Australia"
+      },
+      "fr": {
+        "text": "Introduite en 1788, en Nouvelle-Galles du Sud, la vigne se répandit au XIXe siècle dans beaucoup de régions du pays, mais le vignoble demeure concentré dans le sud-est et l'extrême sud, des régions ensoleillées mais, relativement fraîches.",
+        "url": "https://fr.wikipedia.org/wiki/Viticulture_en_Australie"
+      },
+      "de": {
+        "text": "Der Weinbau in Australien beschränkt sich hauptsächlich auf die südlichen Regionen Australiens, konzentriert sich also auf die Bundesstaaten Victoria, New South Wales, South Australia (z. B. Barossa Valley und Coonawarra), Tasmanien und einige wenige Orte in Western Australia (z. B. Swan Valley), an denen das Klima gemäßigt ist.",
+        "url": "https://de.wikipedia.org/wiki/Weinbau_in_Australien"
+      },
+      "it": {
+        "text": "La viticoltura in Australia si afferma a partire dalla fine del XVIII secolo. Al giorno d'oggi ci sono oltre 2000 produttori ed il vino australiano è esportato in molti paesi europei, compresa la Francia, l'Italia e la Germania.",
+        "url": "https://it.wikipedia.org/wiki/Viticoltura_in_Australia"
+      },
+      "nl": {
+        "text": "Wijnbouw in Australië vindt hoofdzakelijk plaats in de deelstaten New South Wales, Victoria, het aansluitende zuidelijke deel van Zuid-Australië en helemaal in het westen de zuidwesthoek van West-Australië.",
+        "url": "https://nl.wikipedia.org/wiki/Wijnbouw_in_Australi%C3%AB"
+      }
+    },
+    "wikidataId": "Q2129654"
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-south-eastern-australia",
+    "latitude": -35.4883502,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-south-eastern-australia",
+    "longitude": 147.0320469,
+    "name": "South Eastern Australia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "South Eastern Australia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "multiStateZone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-south-australia",
+    "latitude": -30.5343665,
+    "legalUrl": "https://www.wineaustralia.com/labelling/register-of-protected-gis-and-other-terms/geographical-indications/south-australia",
+    "longitude": 135.6301212,
+    "name": "South Australia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "South Australia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerLevel": "state",
+    "registeredOn": "1994-01-26",
+    "summaries": {
+      "en": {
+        "text": "The South Australian wine industry is responsible for more than half the production of all Australian wine. South Australia has a vast diversity in geography and climate which allows the state to be able to produce a range of grape varieties–from the cool climate Riesling variety in the Clare Valley wine region to the big, full bodied Shiraz wines of the Barossa Valley.",
+        "url": "https://en.wikipedia.org/wiki/South_Australian_wine"
+      }
+    },
+    "wikidataId": "Q7566214",
+    "within": [
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-adelaide",
+    "latitude": -34.547119984381006,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-adelaide",
+    "longitude": 138.77585689439326,
+    "name": "Adelaide",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Adelaide",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "superZone",
+    "registeredOn": "1996-12-27",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "xynisteri",
+        "quote": "on the south slopes of the Troodos mountain range are planted with this grape variety ... in the hotter wine regions in Australia like the Barossa and the Riverland",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Xynisteri"
+      }
+    ],
+    "id": "au-barossa",
+    "latitude": -34.547119984381006,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-barossa",
+    "longitude": 139.02702306228755,
+    "name": "Barossa",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Barossa",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "25",
+    "registerLevel": "zone",
+    "registeredOn": "1996-12-27",
+    "summaries": {
+      "en": {
+        "text": "Barossa zone is a wine zone located in central South Australia west of the Murray River and which occupies the Barossa Valley,  the Eden Valley and some adjoining land.",
+        "url": "https://en.wikipedia.org/wiki/Barossa_zone_(wine)"
+      }
+    },
+    "wikidataId": "Q19460378",
+    "within": [
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "muscadelle",
+        "quote": "In France, it is a minor constituent in the dry and sweet wines of Bordeaux, such as Sauternes ... Some sweet wines from Monbazillac, on the other hand, can have a higher proportion of Muscadelle ... Those made in the Rutherglen region generally receive considerable aging in hot cellars ... A few other Australian wine regions, including the Barossa Valley, make similar wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Muscadelle"
+      }
+    ],
+    "id": "au-barossa-valley",
+    "latitude": -34.51185850447504,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-barossa-valley",
+    "longitude": 138.94324672189654,
+    "name": "Barossa Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Barossa Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 3,
+    "registerRef": "47",
+    "registerLevel": "region",
+    "registeredOn": "1997-08-15",
+    "summaries": {
+      "en": {
+        "text": "The Barossa Valley wine region is one of Australia's oldest and most prestigious wine regions. Located in South Australia, the Barossa Valley is about 56 km (35 miles) northeast of the city of Adelaide.",
+        "url": "https://en.wikipedia.org/wiki/Barossa_Valley_wine_region"
+      },
+      "fr": {
+        "text": "Le vignoble de la Barossa Valley est une des plus anciennes régions viticoles d'Australie. Il est situé en Australie Méridionale, dans la vallée de la Barossa à 56 km au Nord-Est d'Adélaïde.",
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_de_la_Barossa_Valley"
+      },
+      "nl": {
+        "text": "Barossa Valley is een van de oudste wijnstreken in Australië. Het gebied ligt in de deelstaat Zuid-Australië op ongeveer 55 kilometer ten noordoosten van Adelaide. Er worden rode en witte wijnen geproduceerd en het aandeel in de nationale wijnproductie is iets minder dan 10%.",
+        "url": "https://nl.wikipedia.org/wiki/Barossa_Valley_(wijnstreek)"
+      }
+    },
+    "wikidataId": "Q4863063",
+    "within": [
+      "au-barossa",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-eden-valley",
+    "latitude": -34.61082422372424,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-eden-valley",
+    "longitude": 139.0918489039623,
+    "name": "Eden Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Eden Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "48",
+    "registerLevel": "region",
+    "registeredOn": "1997-08-15",
+    "summaries": {
+      "en": {
+        "text": "Eden Valley wine region is a wine region located in South Australia immediately north of the capital city of Adelaide which covers an area in the Mount Lofty Ranges extending from Truro in the north to just south of Springton in the south. The region received appellation as an Australian Geographical Indication in 1997 and as of 2014, it is represented by at least 36 wineries.",
+        "url": "https://en.wikipedia.org/wiki/Eden_Valley_wine_region"
+      }
+    },
+    "wikidataId": "Q19461524",
+    "within": [
+      "au-barossa",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-high-eden",
+    "latitude": -34.635288846071106,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-high-eden",
+    "longitude": 139.01760533128072,
+    "name": "High Eden",
+    "names": [
+      {
+        "locale": "*",
+        "name": "High Eden",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "75",
+    "registerLevel": "subregion",
+    "registeredOn": "2001-08-28",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-eden-valley",
+      "au-barossa",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-far-north",
+    "latitude": -29.36503729623562,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-far-north",
+    "longitude": 135.35028261363212,
+    "name": "Far North",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Far North",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "24",
+    "registerLevel": "zone",
+    "registeredOn": "1996-12-27",
+    "summaries": {
+      "en": {
+        "text": "Far North zone is a wine zone located in the state of South Australia which covers the entire state north of a line of latitude approximately in line with Crystal Brook (i.e. 33 degrees 21 minutes south). The zone is bounded by the following wine zones to its south: The Peninsulas, the Mount Lofty Ranges and the Lower Murray (from west to east).",
+        "url": "https://en.wikipedia.org/wiki/Far_North_zone_(wine)"
+      }
+    },
+    "wikidataId": "Q19461693",
+    "within": [
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-southern-flinders-ranges",
+    "latitude": -33.005057110620456,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-southern-flinders-ranges",
+    "longitude": 138.32303612175636,
+    "name": "Southern Flinders Ranges",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Southern Flinders Ranges",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "100",
+    "registerLevel": "region",
+    "registeredOn": "2003-08-19",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-far-north",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-fleurieu",
+    "latitude": -35.827685935726436,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-fleurieu",
+    "longitude": 137.2408599259525,
+    "name": "Fleurieu",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Fleurieu",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "20",
+    "registerLevel": "zone",
+    "registeredOn": "1996-12-27",
+    "summaries": {
+      "en": {
+        "text": "Fleurieu zone is a wine zone located south of Adelaide in South Australia. It extends from Kangaroo Island in the west  as far north as Flagstaff Hill on the west side of the Mount Lofty Ranges and  to as far north as Langhorne Creek  on the east side of the Mount Lofty Ranges.",
+        "url": "https://en.wikipedia.org/wiki/Fleurieu_zone"
+      }
+    },
+    "wikidataId": "Q19873439",
+    "within": [
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-currency-creek",
+    "latitude": -35.461415334820934,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-currency-creek",
+    "longitude": 138.83973952704815,
+    "name": "Currency Creek",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Currency Creek",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "85",
+    "registerLevel": "region",
+    "registeredOn": "2001-04-09",
+    "summaries": {
+      "en": {
+        "text": "Currency Creek wine region is a wine region in South Australia that is located on the west side of Lake Alexandrina between Milang, the Murray Mouth, Port Elliot and just south of Ashbourne. The region received appellation as an Australian Geographical Indication (AGI) in 2001 and as of 2014, has a total planted area of 960 ha (2,400 acres) and is represented by at least four wineries.",
+        "url": "https://en.wikipedia.org/wiki/Currency_Creek_wine_region"
+      }
+    },
+    "wikidataId": "Q19872676",
+    "within": [
+      "au-fleurieu",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-kangaroo-island",
+    "latitude": -35.82783727999031,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-kangaroo-island",
+    "longitude": 137.2400516018852,
+    "name": "Kangaroo Island",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kangaroo Island",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "83",
+    "registerLevel": "region",
+    "registeredOn": "2000-12-08",
+    "summaries": {
+      "en": {
+        "text": "Kangaroo Island wine region is a wine region which covers the full extent of Kangaroo Island in South Australia. The wine region is one of five wine regions comprising the Fleurieu zone. The term ‘Kangaroo Island’ was registered as an Australian Geographical Indication under the Wine Australia Corporation Act 1980 on 8 December 2000. As of 2014, the region is reported as containing at least 30 growers and 12 wineries.",
+        "url": "https://en.wikipedia.org/wiki/Kangaroo_Island_wine_region"
+      }
+    },
+    "wikidataId": "Q19572384",
+    "within": [
+      "au-fleurieu",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "verdelho",
+        "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho"
+      }
+    ],
+    "id": "au-langhorne-creek",
+    "latitude": -35.32788802907091,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-langhorne-creek",
+    "longitude": 139.04212847002816,
+    "name": "Langhorne Creek",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Langhorne Creek",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "58",
+    "registerLevel": "region",
+    "registeredOn": "1998-10-16",
+    "summaries": {
+      "en": {
+        "text": "Langhorne Creek wine region is a wine region in South Australia that is located on the plains southeast of the town of Strathalbyn along the lower reaches of the Bremer River and Angas River to Lake Alexandrina. The region received appellation as an Australian Geographical Indication (AGI) in 1998 and as of 2014, has a total planted area of 5,883 ha (14,540 acres) and is represented by at least 24 wineries.",
+        "url": "https://en.wikipedia.org/wiki/Langhorne_Creek_wine_region"
+      }
+    },
+    "wikidataId": "Q19597670",
+    "within": [
+      "au-fleurieu",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "fiano",
+        "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
+      },
+      {
+        "grapeId": "aglianico",
+        "quote": "In Basilicata, Aglianico is the basis of the Aglianico del Vulture DOC ... In Campania, the area ... The grape has also recently been planted in Australia, California, and Texas ... Producers in Sierra Foothills, McLaren Vale, Margaret River, Mudgee and Riverland ... trialled in Arizona and in Ontario, Canada",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aglianico"
+      }
+    ],
+    "id": "au-mclaren-vale",
+    "latitude": -35.18436789306496,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-mclaren-vale",
+    "longitude": 138.552835873755,
+    "name": "McLaren Vale",
+    "names": [
+      {
+        "locale": "*",
+        "name": "McLaren Vale",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "51",
+    "registerLevel": "region",
+    "registeredOn": "1997-09-02",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-fleurieu",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-southern-fleurieu",
+    "latitude": -35.49048500430693,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-southern-fleurieu",
+    "longitude": 138.45096591082054,
+    "name": "Southern Fleurieu",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Southern Fleurieu",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "86",
+    "registerLevel": "region",
+    "registeredOn": "2001-06-06",
+    "summaries": {
+      "en": {
+        "text": "Southern Fleurieu wine region is a wine region in South Australia that is located on the Fleurieu Peninsula and the portion of the Mount Lofty Ranges, extending north east from the peninsula to near Willunga in the west and to near Ashbourne in the east.",
+        "url": "https://en.wikipedia.org/wiki/Southern_Fleurieu_wine_region"
+      }
+    },
+    "wikidataId": "Q19879273",
+    "within": [
+      "au-fleurieu",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-limestone-coast",
+    "latitude": -36.77382952974125,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-limestone-coast",
+    "longitude": 140.3804892544683,
+    "name": "Limestone Coast",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Limestone Coast",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "21",
+    "registerLevel": "zone",
+    "registeredOn": "1996-12-27",
+    "summaries": {
+      "en": {
+        "text": "Limestone Coast zone is a wine zone located in the south east of South Australia. It extends south of a line of latitude approximately in line with Cape Willoughby at the east end of Kangaroo Island and it is bounded by the continental coastline and the border with Victoria.",
+        "url": "https://en.wikipedia.org/wiki/Limestone_Coast_zone_(wine)"
+      }
+    },
+    "wikidataId": "Q19875198",
+    "within": [
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-coonawarra",
+    "latitude": -37.312512629610296,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-coonawarra",
+    "longitude": 140.86551712736374,
+    "name": "Coonawarra",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coonawarra",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 2,
+    "registerRef": "99",
+    "registerLevel": "region",
+    "registeredOn": "2003-01-06",
+    "summaries": {
+      "en": {
+        "text": "The Coonawarra wine region is a wine region centred on the town of Coonawarra in the Limestone Coast zone of South Australia. It is known for the Cabernet Sauvignon wines produced on its \"terra rossa\" soil. The name has been said to have originated in Bindjali, an Aboriginal language, meaning \"wild honeysuckle\". It is about 380 kilometres (240 mi) south-east of Adelaide, close to the border with Victoria.",
+        "url": "https://en.wikipedia.org/wiki/Coonawarra_wine_region"
+      }
+    },
+    "wikidataId": "Q1129760",
+    "within": [
+      "au-limestone-coast",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-mount-benson",
+    "latitude": -37.01591940229991,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-mount-benson",
+    "longitude": 139.81376220952603,
+    "name": "Mount Benson",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mount Benson",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "43",
+    "registerLevel": "region",
+    "registeredOn": "1997-03-18",
+    "summaries": {
+      "en": {
+        "text": "The Mount Benson wine region  is a wine region in the south east of the Australian state of South Australia located on the continental coastline about 300 kilometres (190 miles) from the state capital of Adelaide and halfway between the towns of Kingston SE and Robe. Mount Benson is one of six wine growing regions that are located in the Limestone Coast wine zone.",
+        "url": "https://en.wikipedia.org/wiki/Mount_Benson_wine_region"
+      }
+    },
+    "wikidataId": "Q11786209",
+    "within": [
+      "au-limestone-coast",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-mount-gambier",
+    "latitude": -37.76499116652671,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-mount-gambier",
+    "longitude": 140.73323866504506,
+    "name": "Mount Gambier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mount Gambier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "112",
+    "registerLevel": "region",
+    "registeredOn": "2010-12-21",
+    "summaries": {
+      "en": {
+        "text": "Mount Gambier wine region is a wine region located in the south east of South Australia around the regional city of Mount Gambier. The first planting of vines occurred in 1982. The region received appellation as an Australian Geographical Indication in 2010 and as of 2014, is represented by 20 vineyards and eight wineries.",
+        "url": "https://en.wikipedia.org/wiki/Mount_Gambier_wine_region"
+      }
+    },
+    "wikidataId": "Q19875806",
+    "within": [
+      "au-limestone-coast",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-padthaway",
+    "latitude": -36.682669813311115,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-padthaway",
+    "longitude": 140.54720102840355,
+    "name": "Padthaway",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Padthaway",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "73",
+    "registerLevel": "region",
+    "registeredOn": "1999-11-29",
+    "summaries": {
+      "en": {
+        "text": "Padthaway wine region is a wine zone region located in the south east of South Australia immediately adjoining a section of the Riddoch Highway including the town of Padthaway. The region received appellation as an Australian Geographical Indication (AGI) in 1999.",
+        "url": "https://en.wikipedia.org/wiki/Padthaway_wine_region"
+      }
+    },
+    "wikidataId": "Q19573545",
+    "within": [
+      "au-limestone-coast",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-robe",
+    "latitude": -37.26067799056897,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-robe",
+    "longitude": 139.94903808825714,
+    "name": "Robe",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Robe",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "106",
+    "registerLevel": "region",
+    "registeredOn": "2006-08-15",
+    "summaries": {
+      "en": {
+        "text": "Robe is a wine region located in the south east of South Australia immediately adjoining the town of Robe. The region received appellation as an Australian Geographical Indication (AGI) in 2006. It is part of the Limestone Coast wine zone.",
+        "url": "https://en.wikipedia.org/wiki/Robe_wine_region"
+      }
+    },
+    "wikidataId": "Q19877927",
+    "within": [
+      "au-limestone-coast",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-wrattonbully",
+    "latitude": -37.011926807217314,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-wrattonbully",
+    "longitude": 140.87249887663296,
+    "name": "Wrattonbully",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Wrattonbully",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "103",
+    "registerLevel": "region",
+    "registeredOn": "2005-07-05",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-limestone-coast",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-lower-murray",
+    "latitude": -34.60443026248916,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-lower-murray",
+    "longitude": 140.10585148827496,
+    "name": "Lower Murray",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lower Murray",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "23",
+    "registerLevel": "zone",
+    "registeredOn": "1996-12-07",
+    "summaries": {
+      "en": {
+        "text": "Lower Murray zone is a wine zone located in the state of South Australia which covers the portion of the state south of a line of latitude approximately in line with Crystal Brook, east of a line of longitude approximately in line with Truro and north of a line of latitude approximately in line with Cape Willoughby at the east end of Kangaroo Island.",
+        "url": "https://en.wikipedia.org/wiki/Lower_Murray_zone_(wine)"
+      }
+    },
+    "wikidataId": "Q19572704",
+    "within": [
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "nero-d-avola",
+        "quote": "The districts around Noto ... and Pachino in the south of the province of Siracusa ...; ... cultivated in Australia ... Riverland and Sunraysia ... also found in Malta, Turkey and recently in South Africa too.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nero_d'Avola"
+      },
+      {
+        "grapeId": "aglianico",
+        "quote": "In Basilicata, Aglianico is the basis of the Aglianico del Vulture DOC ... In Campania, the area ... The grape has also recently been planted in Australia, California, and Texas ... Producers in Sierra Foothills, McLaren Vale, Margaret River, Mudgee and Riverland ... trialled in Arizona and in Ontario, Canada",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aglianico"
+      },
+      {
+        "grapeId": "tinta-barroca",
+        "quote": "grown primarily in the Douro region with some plantings in South Africa and the Riverland wine region of Australia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "grapeId": "xynisteri",
+        "quote": "on the south slopes of the Troodos mountain range are planted with this grape variety ... in the hotter wine regions in Australia like the Barossa and the Riverland",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Xynisteri"
+      }
+    ],
+    "id": "au-riverland",
+    "latitude": -34.22910246231295,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-riverland",
+    "longitude": 140.33439373118114,
+    "name": "Riverland",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Riverland",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "61",
+    "registerLevel": "region",
+    "registeredOn": "1998-12-10",
+    "summaries": {
+      "en": {
+        "text": "The Riverland wine region is an Australian geographical indication roughly corresponding to the Riverland tourism region in South Australia. It is the only region currently identified in the Lower Murray zone and does not have any defined subregions.",
+        "url": "https://en.wikipedia.org/wiki/Riverland_wine_region"
+      }
+    },
+    "wikidataId": "Q19877914",
+    "within": [
+      "au-lower-murray",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-mount-lofty-ranges",
+    "latitude": -34.112335842131934,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-mount-lofty-ranges",
+    "longitude": 138.77585689439326,
+    "name": "Mount Lofty Ranges",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mount Lofty Ranges",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "19",
+    "registerLevel": "zone",
+    "registeredOn": "1996-12-27",
+    "summaries": {
+      "en": {
+        "text": "Mount Lofty Ranges zone is a wine zone located in South Australia west of the Murray River that occupies the Adelaide metropolitan area north of Glenelg, extending as far north as Crystal Brook, and as far south as Mount Compass in the Mount Lofty Ranges.",
+        "url": "https://en.wikipedia.org/wiki/Mount_Lofty_Ranges_zone_(wine)"
+      }
+    },
+    "wikidataId": "Q19573087",
+    "within": [
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "blaufrankisch",
+        "quote": "It is possible that Blaufränkisch ... is the second most important red grape variety after Zweigelt, with ... Burgenland ... In Hungary, the grape is known as Kékfrankos ... In Germany, there are ... Württemberg ... In the New World Blaufränkisch is found in the Australian wine region of the Adelaide Hills ... The grape can be found across the United States ... Washington State ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Blaufr%C3%A4nkisch"
+      }
+    ],
+    "id": "au-adelaide-hills",
+    "latitude": -34.976919411544635,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/adelaide-hills",
+    "longitude": 138.82436869906738,
+    "name": "Adelaide Hills",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Adelaide Hills",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "53",
+    "registerLevel": "region",
+    "registeredOn": "1998-02-09",
+    "summaries": {
+      "en": {
+        "text": "Adelaide Hills is an Australian geographical indication for wine made from grapes grown in a specific area of the Adelaide Hills east of Adelaide in South Australia.",
+        "url": "https://en.wikipedia.org/wiki/Adelaide_Hills_wine_region"
+      }
+    },
+    "wikidataId": "Q19460105",
+    "within": [
+      "au-mount-lofty-ranges",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-lenswood",
+    "latitude": -34.9245064284341,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-lenswood",
+    "longitude": 138.8251127357389,
+    "name": "Lenswood",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lenswood",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "56",
+    "registerLevel": "subregion",
+    "registeredOn": "1998-10-16",
+    "summaries": {
+      "en": {
+        "text": "Lenswood wine sub-region is a wine sub-region located around the town of Lenswood in South Australia within the Mount Lofty Ranges to the east of the Adelaide city centre. The sub-region received appellation as an Australian Geographical Indication (AGI) on 16 October 1998. The sub-region is part of the Adelaide Hills wine region and the Mount Lofty Ranges zone.",
+        "url": "https://en.wikipedia.org/wiki/Lenswood_wine_sub-region"
+      }
+    },
+    "wikidataId": "Q19572619",
+    "within": [
+      "au-adelaide-hills",
+      "au-mount-lofty-ranges",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-piccadilly-valley",
+    "latitude": -34.97280148776482,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-piccadilly-valley",
+    "longitude": 138.74289033934744,
+    "name": "Piccadilly Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Piccadilly Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "76",
+    "registerLevel": "subregion",
+    "registeredOn": "2000-04-14",
+    "summaries": {
+      "en": {
+        "text": "Piccadilly Valley wine sub-region is a wine sub-region in South Australia located between the towns of Ashton and Basket Range in the north and the towns of Stirling, Aldgate and Bridgewater to its south in the Mount Lofty Ranges to the east of the Adelaide city centre. The sub-region received appellation as an Australian Geographical Indication (AGI) on 14 April 2000.",
+        "url": "https://en.wikipedia.org/wiki/Piccadilly_Valley_wine_sub-region"
+      }
+    },
+    "wikidataId": "Q19573687",
+    "within": [
+      "au-adelaide-hills",
+      "au-mount-lofty-ranges",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-adelaide-plains",
+    "latitude": -34.633598056117776,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-adelaide-plains",
+    "longitude": 138.58320135290026,
+    "name": "Adelaide Plains",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Adelaide Plains",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "93",
+    "registerLevel": "region",
+    "registeredOn": "2002-03-25",
+    "summaries": {
+      "en": {
+        "text": "Adelaide Plains wine region is a wine region located in South Australia immediately north of the capital city of Adelaide. The region received appellation as an Australian Geographical Indication in 2002 and as of 2014, it is represented by 11 wineries. It is part of the Mount Lofty Ranges zone.",
+        "url": "https://en.wikipedia.org/wiki/Adelaide_Plains_wine_region"
+      }
+    },
+    "wikidataId": "Q19460106",
+    "within": [
+      "au-mount-lofty-ranges",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "fiano",
+        "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
+      }
+    ],
+    "id": "au-clare-valley",
+    "latitude": -33.88426616355761,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-clare-valley",
+    "longitude": 138.64257018451195,
+    "name": "Clare Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Clare Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 3,
+    "registerRef": "65",
+    "registerLevel": "region",
+    "registeredOn": "1999-03-25",
+    "summaries": {
+      "en": {
+        "text": "The Clare Valley wine region is one of Australia's oldest wine regions, best known for Riesling wines. It lies in the Mid North of South Australia, approximately 142 km north of Adelaide. The valley runs north-south, with Horrocks Highway as the main thoroughfare.",
+        "url": "https://en.wikipedia.org/wiki/Clare_Valley_wine_region"
+      },
+      "fr": {
+        "text": "La région viticole de Clare Valley est l'une des plus anciennes régions viticoles d'Australie, surtout réputée pour ses vins de riesling. Elle se situe dans le Mid North de l'Australie-Méridionale, à environ 142 km au nord d'Adélaïde. La vallée s'étend du nord au sud, avec la Horrocks Highway (en) comme principale voie de communication.",
+        "url": "https://fr.wikipedia.org/wiki/R%C3%A9gion_viticole_de_la_vall%C3%A9e_de_Clare"
+      }
+    },
+    "wikidataId": "Q1612687",
+    "within": [
+      "au-mount-lofty-ranges",
+      "au-adelaide",
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-the-peninsulas",
+    "latitude": -33.84068282431811,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-the-peninsulas",
+    "longitude": 135.9032826486769,
+    "name": "The Peninsulas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "The Peninsulas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "22",
+    "registerLevel": "zone",
+    "registeredOn": "1996-12-27",
+    "summaries": {
+      "en": {
+        "text": "The Peninsulas zone is a wine zone located in South Australia that covers the entire Yorke Peninsula, an adjoining portion of the Mid North of South Australia, the portion of Eyre Peninsula south of a line of latitude approximately in line with Crystal Brook and the islands located off the adjoining coastline. The zone is bounded by the Far North zone to its north by the Mount Lofty Ranges zone to its east.",
+        "url": "https://en.wikipedia.org/wiki/The_Peninsulas_zone_(wine)"
+      }
+    },
+    "wikidataId": "Q19879932",
+    "within": [
+      "au-south-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-new-south-wales",
+    "latitude": -32.1629594,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-new-south-wales",
+    "longitude": 147.0320469,
+    "name": "New South Wales",
+    "names": [
+      {
+        "locale": "*",
+        "name": "New South Wales",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerLevel": "state",
+    "registeredOn": "1994-01-26",
+    "summaries": {
+      "en": {
+        "text": "New South Wales wine is Australian wine produced in New South Wales, Australia. New South Wales is Australia's most populous state and its wine consumption far outpaces the region's wine production.",
+        "url": "https://en.wikipedia.org/wiki/New_South_Wales_wine"
+      }
+    },
+    "wikidataId": "Q17058771",
+    "within": [
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-big-rivers",
+    "latitude": -33.96806946336339,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-big-rivers",
+    "longitude": 144.5472583457286,
+    "name": "Big Rivers",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Big Rivers",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "2",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {
+      "en": {
+        "text": "Big Rivers is a grape growing zone in Australia. It covers the southwestern corner of the state of New South Wales. The zone currently includes four wine regions, which cover the main areas of grape growing in the zone, but not all of them.",
+        "url": "https://en.wikipedia.org/wiki/Big_Rivers_(wine)"
+      }
+    },
+    "wikidataId": "Q24521743",
+    "within": [
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-murray-darling",
+    "latitude": -34.25477327275739,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-murray-darling",
+    "longitude": 142.38926713631216,
+    "name": "Murray Darling",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Murray Darling",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "45",
+    "registerLevel": "region",
+    "registeredOn": "1997-06-16",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-big-rivers",
+      "au-north-west-victoria",
+      "au-new-south-wales",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-perricoota",
+    "latitude": -36.00373994092895,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-perricoota",
+    "longitude": 144.743948571417,
+    "name": "Perricoota",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Perricoota",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "69",
+    "registerLevel": "region",
+    "registeredOn": "1999-03-25",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-big-rivers",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-riverina",
+    "latitude": -34.32687484242891,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-riverina",
+    "longitude": 145.9296507118464,
+    "name": "Riverina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Riverina",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "59",
+    "registerLevel": "region",
+    "registeredOn": "1998-11-12",
+    "summaries": {
+      "en": {
+        "text": "Riverina is an Australian Geographical Indication (AGI) registered in the Register of Protected GIs as a wine region. The Riverina AGI is centred on Griffith and is roughly circular with towns on the boundary including Mossgiel, Condobolin, Temora, Junee, Culcairn, Berrigan, Barooga, Finley, Deniliquin and Moulamein. It does not extend as far south as the Murray River.",
+        "url": "https://en.wikipedia.org/wiki/Riverina_wine_region"
+      }
+    },
+    "wikidataId": "Q24521747",
+    "within": [
+      "au-big-rivers",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-swan-hill",
+    "latitude": -35.29605538519532,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-swan-hill",
+    "longitude": 143.49677730791396,
+    "name": "Swan Hill",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Swan Hill",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "36",
+    "registerLevel": "region",
+    "registeredOn": "1996-06-11",
+    "summaries": {
+      "en": {
+        "text": "Swan Hill is a wine region name protected by an Australian Geographical Indication (AGI). It is named for the town of Swan Hill on the south side of the Murray River in the Australian state of Victoria. The wine region spans the Murray and the north eastern part of the region is in the state of New South Wales. The north-eastern part of the region is in the New South Wales zone of Big Rivers.",
+        "url": "https://en.wikipedia.org/wiki/Swan_Hill_wine_region"
+      }
+    },
+    "wikidataId": "Q24521756",
+    "within": [
+      "au-big-rivers",
+      "au-north-west-victoria",
+      "au-new-south-wales",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-central-ranges",
+    "latitude": -33.21921683203238,
+    "legalUrl": "https://www.wineaustralia.com/labelling/register-of-protected-gis-and-other-terms/geographical-indications/central-ranges",
+    "longitude": 149.2638514388975,
+    "name": "Central Ranges",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Central Ranges",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "3",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {
+      "en": {
+        "text": "Central Ranges is a wine zone and Australian geographical indication in the Central West of New South Wales. It lies on the western slopes of the Great Dividing Range, west of the Blue Mountains.",
+        "url": "https://en.wikipedia.org/wiki/Central_Ranges_wine_region"
+      }
+    },
+    "wikidataId": "Q25184387",
+    "within": [
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-cowra",
+    "latitude": -33.745106520190454,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-cowra",
+    "longitude": 148.62949280747074,
+    "name": "Cowra",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cowra",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "57",
+    "registerLevel": "region",
+    "registeredOn": "1998-10-16",
+    "summaries": {
+      "en": {
+        "text": "Cowra is a wine region and Australian Geographical Indication in the Central Ranges zone in the Australian state of New South Wales. It is named for the town of Cowra.",
+        "url": "https://en.wikipedia.org/wiki/Cowra_wine_region"
+      }
+    },
+    "wikidataId": "Q24521767",
+    "within": [
+      "au-central-ranges",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "aglianico",
+        "quote": "In Basilicata, Aglianico is the basis of the Aglianico del Vulture DOC ... In Campania, the area ... The grape has also recently been planted in Australia, California, and Texas ... Producers in Sierra Foothills, McLaren Vale, Margaret River, Mudgee and Riverland ... trialled in Arizona and in Ontario, Canada",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aglianico"
+      },
+      {
+        "grapeId": "aleatico",
+        "quote": "the cult wine Aleatico di Portoferraio made in Elba. In Chile is known as Red Moscatel. The grape has also been cultivated at Mudgee in New South Wales and California ... Aleatico is most commonly found in Italy, Tuscany (primarily in Elba), Lazio, Umbria, Piedmont, Apulia ... Aleatico is found around Lake Bolsena",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aleatico"
+      }
+    ],
+    "id": "au-mudgee",
+    "latitude": -32.53882009825665,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-mudgee",
+    "longitude": 149.6674718112382,
+    "name": "Mudgee",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mudgee",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "80",
+    "registerLevel": "region",
+    "registeredOn": "2000-08-24",
+    "summaries": {
+      "en": {
+        "text": "Mudgee is a wine region and Australian Geographical Indication in the Central Ranges zone in the Australian state of New South Wales. It is named for the town of Mudgee.",
+        "url": "https://en.wikipedia.org/wiki/Mudgee_wine_region"
+      }
+    },
+    "wikidataId": "Q24521768",
+    "within": [
+      "au-central-ranges",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-orange",
+    "latitude": -33.39008354470291,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-orange",
+    "longitude": 149.1159156133732,
+    "name": "Orange",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Orange",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "52",
+    "registerLevel": "region",
+    "registeredOn": "1997-10-31",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-central-ranges",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "fiano",
+        "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
+      },
+      {
+        "grapeId": "verdelho",
+        "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho"
+      }
+    ],
+    "id": "au-hunter-valley",
+    "latitude": -32.32835019458492,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-hunter-valley",
+    "longitude": 150.93579400946697,
+    "name": "Hunter Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hunter Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "4",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {
+      "en": {
+        "text": "The Hunter Valley is one of Australia's wine regions. Located in the state of New South Wales and first cultivated in the early 19th century, it was one of the first Australian wine regions. As well as Hunter Valley Sémillon, the region produces wine from a variety of grapes including Shiraz, Chardonnay, Cabernet Sauvignon and Verdelho.",
+        "url": "https://en.wikipedia.org/wiki/Hunter_Valley_wine_region"
+      }
+    },
+    "wikidataId": "Q5944605",
+    "within": [
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-hunter",
+    "latitude": -32.333029808941575,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-hunter",
+    "longitude": 150.88325310397096,
+    "name": "Hunter",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hunter",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "41",
+    "registerLevel": "region",
+    "registeredOn": "1997-03-18",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-hunter-valley",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-broke-fordwich",
+    "latitude": -32.74513183064962,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-broke-fordwich",
+    "longitude": 151.06035472179389,
+    "name": "Broke Fordwich",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Broke Fordwich",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "50",
+    "registerLevel": "subregion",
+    "registeredOn": "1997-09-02",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-hunter",
+      "au-hunter-valley",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-pokolbin",
+    "latitude": -32.76146715384106,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-pokolbin",
+    "longitude": 151.29821849381537,
+    "name": "Pokolbin",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pokolbin",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "110",
+    "registerLevel": "subregion",
+    "registeredOn": "2010-07-29",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-hunter",
+      "au-hunter-valley",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-upper-hunter-valley",
+    "latitude": -32.13238269166145,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-upper-hunter-valley",
+    "longitude": 150.83047218114487,
+    "name": "Upper Hunter Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Upper Hunter Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "111",
+    "registerLevel": "subregion",
+    "registeredOn": "2010-07-29",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-hunter",
+      "au-hunter-valley",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-northern-rivers",
+    "latitude": -30.405300925689094,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-northern-rivers",
+    "longitude": 152.62146125236035,
+    "name": "Northern Rivers",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Northern Rivers",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "5",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-hastings-river",
+    "latitude": -31.486797120531126,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-hastings-river",
+    "longitude": 152.72130687937232,
+    "name": "Hastings River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hastings River",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "68",
+    "registerLevel": "region",
+    "registeredOn": "1999-03-25",
+    "summaries": {
+      "en": {
+        "text": "Hastings River is an Australian Geographical Indication for a wine region in the Northern Rivers area of New South Wales around the Hastings River near Wauchope and Port Macquarie.The region is within 25 kilometres (16 mi) of the east coast of Australia, between the Pacific Ocean and the Great Dividing Range.",
+        "url": "https://en.wikipedia.org/wiki/Hastings_River_wine_region"
+      }
+    },
+    "wikidataId": "Q24521741",
+    "within": [
+      "au-northern-rivers",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-northern-slopes",
+    "latitude": -30.376319264458918,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-northern-slopes",
+    "longitude": 150.86243505936073,
+    "name": "Northern Slopes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Northern Slopes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "6",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-new-england-australia",
+    "latitude": -30.050339830559693,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-new-england-australia",
+    "longitude": 151.61083729184256,
+    "name": "New England Australia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "New England Australia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "109",
+    "registerLevel": "region",
+    "registeredOn": "2008-01-23",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-northern-slopes",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-south-coast",
+    "latitude": -34.76216517656913,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-south-coast",
+    "longitude": 150.41807539592958,
+    "name": "South Coast",
+    "names": [
+      {
+        "locale": "*",
+        "name": "South Coast",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "7",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-shoalhaven-coast",
+    "latitude": -35.07878627190929,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-shoalhaven-coast",
+    "longitude": 150.54571748508022,
+    "name": "Shoalhaven Coast",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Shoalhaven Coast",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "94",
+    "registerLevel": "region",
+    "registeredOn": "2002-08-06",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-south-coast",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-southern-highlands",
+    "latitude": -34.47699366796599,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-southern-highlands",
+    "longitude": 150.35626379524476,
+    "name": "Southern Highlands",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Southern Highlands",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "90",
+    "registerLevel": "region",
+    "registeredOn": "2002-03-25",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-south-coast",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-southern-new-south-wales",
+    "latitude": -35.39861303499429,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-southern-new-south-wales",
+    "longitude": 148.92328772506607,
+    "name": "Southern New South Wales",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Southern New South Wales",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "8",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-canberra-district",
+    "latitude": -35.02834473666034,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-canberra-district",
+    "longitude": 149.09940911130428,
+    "name": "Canberra District",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Canberra District",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "55",
+    "registerLevel": "region",
+    "registeredOn": "1998-02-09",
+    "summaries": {
+      "en": {
+        "text": "The Canberra District wine region is located around Canberra in the Capital city of Australia. It covers the northern part of the Australian Capital Territory and an area of New South Wales to the east and north of that, including towns of Bungendore, Murrumbateman and Yass, New South Wales.",
+        "url": "https://en.wikipedia.org/wiki/Canberra_District_wine_region"
+      }
+    },
+    "wikidataId": "Q5031253",
+    "within": [
+      "au-southern-new-south-wales",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-gundagai",
+    "latitude": -35.01388748908807,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-gundagai",
+    "longitude": 147.93233258376864,
+    "name": "Gundagai",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Gundagai",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "92",
+    "registerLevel": "region",
+    "registeredOn": "2002-03-25",
+    "summaries": {
+      "en": {
+        "text": "Gundagai is an Australian Geographical Indication for a wine region centred on the town of Gundagai in the Australian state of New South Wales. It is part of the Southern New South Wales zone. The region includes Tumut on the northwestern slopes of the Snowy Mountains, Cootamundra in its north and extends west to Junee and almost to Wagga Wagga.",
+        "url": "https://en.wikipedia.org/wiki/Gundagai_wine_region"
+      }
+    },
+    "wikidataId": "Q24521763",
+    "within": [
+      "au-southern-new-south-wales",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-hilltops",
+    "latitude": -34.39493065553382,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-hilltops",
+    "longitude": 148.39226114373847,
+    "name": "Hilltops",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hilltops",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "54",
+    "registerLevel": "region",
+    "registeredOn": "1998-02-09",
+    "summaries": {
+      "en": {
+        "text": "Hilltops is an Australian Geographical Indication for a wine region in the Southern New South Wales zone of the state of New South Wales in Australia. It includes the main towns of Boorowa, Harden and Young.",
+        "url": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      }
+    },
+    "wikidataId": "Q24521733",
+    "within": [
+      "au-southern-new-south-wales",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-tumbarumba",
+    "latitude": -35.812734884201255,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-tumbarumba",
+    "longitude": 147.92033831201414,
+    "name": "Tumbarumba",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tumbarumba",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "63",
+    "registerLevel": "region",
+    "registeredOn": "1998-12-10",
+    "summaries": {
+      "en": {
+        "text": "Tumbarumba is a wine region in New South Wales, Australia. It is part of the Southern New South Wales zone and was entered in the Register of Protected Names on 10 December 1998. It surrounds the town of Tumbarumba and is on the western foothills of the Snowy Mountains. The elevation in the region ranges from 300 metres (980 ft) in the west to 800 metres (2,600 ft) in the east.",
+        "url": "https://en.wikipedia.org/wiki/Tumbarumba_wine_region"
+      }
+    },
+    "wikidataId": "Q9362650",
+    "within": [
+      "au-southern-new-south-wales",
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-western-plains",
+    "latitude": -30.75560555811008,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-western-plains",
+    "longitude": 145.5723649257852,
+    "name": "Western Plains",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Western Plains",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "9",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": "Q73334818",
+    "within": [
+      "au-new-south-wales",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "scheurebe",
+        "quote": "Plantings are most common in Palatinate, Rheinhessen and Nahe ... primarily in Burgenland and Styria ... Some Scheurebe is grown in California, Oregon, Western Australia, and Nova Scotia, Canada. ... recently been introduced in Switzerland ... Geneva.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Scheurebe"
+      }
+    ],
+    "id": "au-western-australia",
+    "latitude": -25.2303005,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-western-australia",
+    "longitude": 121.0187246,
+    "name": "Western Australia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Western Australia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerLevel": "state",
+    "registeredOn": "1994-01-26",
+    "summaries": {
+      "en": {
+        "text": "Western Australian wine refers to wine produced in Australia's largest state, Western Australia. Although the state extends across the western third of the continent, its wine regions are almost entirely situated in the cooler climate of its south-western tip.",
+        "url": "https://en.wikipedia.org/wiki/Western_Australian_wine"
+      }
+    },
+    "wikidataId": "Q7984365",
+    "within": [
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-central-western-australia",
+    "latitude": -32.57795468837348,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-central-western-australia",
+    "longitude": 116.84039615092,
+    "name": "Central Western Australia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Central Western Australia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "30",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-eastern-plains-inland-and-north-of-western-australia",
+    "latitude": -24.89340159208332,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-east-plains-inland-and-north-wa",
+    "longitude": 122.45992843010929,
+    "name": "Eastern Plains - Inland and North of Western Australia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Eastern Plains - Inland and North of Western Australia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "27",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-greater-perth",
+    "latitude": -31.42274504277402,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-greater-perth",
+    "longitude": 115.77723873522847,
+    "name": "Greater Perth",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Greater Perth",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "31",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-peel",
+    "latitude": -32.75004057458717,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-peel",
+    "longitude": 116.27537414871645,
+    "name": "Peel",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Peel",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "88",
+    "registerLevel": "region",
+    "registeredOn": "2001-09-04",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-greater-perth",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-perth-hills",
+    "latitude": -31.897078693504653,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-perth-hills",
+    "longitude": 116.16944905417562,
+    "name": "Perth Hills",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Perth Hills",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "67",
+    "registerLevel": "region",
+    "registeredOn": "1999-03-25",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-greater-perth",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-swan-district",
+    "latitude": -31.489923439551823,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-swan-district",
+    "longitude": 115.83230581501901,
+    "name": "Swan District",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Swan District",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "62",
+    "registerLevel": "region",
+    "registeredOn": "1998-12-10",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-greater-perth",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "pedro-ximenez",
+        "quote": "the vast majority of these plantings are found in the Spanish wine region of Montilla-Moriles ... the grape can also be found in the denominación de origen (DO) of Montilla-Moriles, Jerez de la Frontera, Málaga and Sierras de Málaga and Valencia. ... most widely planted in the Portuguese wine region of Evora and Borba in the Alentejo region ... has thrived in Western Australia's Swan Valley ... limited plantings ... Margaret River region ... producers in the Elqui Province ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pedro_Xim%C3%A9nez"
+      },
+      {
+        "grapeId": "verdelho",
+        "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho"
+      }
+    ],
+    "id": "au-swan-valley",
+    "latitude": -31.823619713613276,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-swan-valley",
+    "longitude": 116.01937140049094,
+    "name": "Swan Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Swan Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "98",
+    "registerLevel": "subregion",
+    "registeredOn": "2003-01-06",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-swan-district",
+      "au-greater-perth",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-south-west-australia",
+    "latitude": -34.25010886491193,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-south-west-australia",
+    "longitude": 116.60378168394917,
+    "name": "South West Australia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "South West Australia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "29",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-blackwood-valley",
+    "latitude": -33.92069230796167,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-blackwood-valley",
+    "longitude": 116.26302155041408,
+    "name": "Blackwood Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Blackwood Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "64",
+    "registerLevel": "region",
+    "registeredOn": "1998-12-10",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-geographe",
+    "latitude": -33.454720140728426,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-geographe",
+    "longitude": 115.80372134095754,
+    "name": "Geographe",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Geographe",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "66",
+    "registerLevel": "region",
+    "registeredOn": "1999-03-25",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-great-southern",
+    "latitude": -34.584206625761176,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-great-southern",
+    "longitude": 117.6224954245354,
+    "name": "Great Southern",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Great Southern",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "40",
+    "registerLevel": "region",
+    "registeredOn": "1996-10-30",
+    "summaries": {
+      "en": {
+        "text": "The Great Southern wine region is in Western Australia's Great Southern region. It comprises an area 200 kilometres (120 mi) from east to west and over 100 kilometres (62 mi) from north to south, and is Australia's largest wine region.",
+        "url": "https://en.wikipedia.org/wiki/Great_Southern_(wine_region)"
+      }
+    },
+    "wikidataId": "Q14935800",
+    "within": [
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-albany",
+    "latitude": -34.9317654559043,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-albany",
+    "longitude": 117.77941966500696,
+    "name": "Albany",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Albany",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "70",
+    "registerLevel": "subregion",
+    "registeredOn": "1999-07-28",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-great-southern",
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-denmark",
+    "latitude": -34.95032809218623,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-denmark",
+    "longitude": 117.14531483665044,
+    "name": "Denmark",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Denmark",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "97",
+    "registerLevel": "subregion",
+    "registeredOn": "2003-01-06",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-great-southern",
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-frankland-river",
+    "latitude": -34.35532042728711,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-frankland-river",
+    "longitude": 116.99615115758336,
+    "name": "Frankland River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Frankland River",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "79",
+    "registerLevel": "subregion",
+    "registeredOn": "2000-08-24",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-great-southern",
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-mount-barker",
+    "latitude": -34.63497710865833,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-mount-barker",
+    "longitude": 117.55005445827423,
+    "name": "Mount Barker",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mount Barker",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "46",
+    "registerLevel": "subregion",
+    "registeredOn": "1997-08-15",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-great-southern",
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-porongurup",
+    "latitude": -34.66416426873608,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-porongurup",
+    "longitude": 117.93016626802631,
+    "name": "Porongurup",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Porongurup",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "71",
+    "registerLevel": "subregion",
+    "registeredOn": "1999-07-28",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-great-southern",
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-manjimup",
+    "latitude": -34.340487458133964,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-manjimup",
+    "longitude": 116.40444492789861,
+    "name": "Manjimup",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Manjimup",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "104",
+    "registerLevel": "region",
+    "registeredOn": "2006-02-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Sauvignon blanc is widely cultivated in many of the world's wine regions, including France, Argentina (also in Patagonia) Chile, Romania, Canada, Australia, New Zealand, South Africa, Bulgaria, and the states of Oregon, Washington, and California in the US ... In France, ... Loire Valley ... Bordeaux ... In the early 1990s ... Valparaíso ... In Australia, particularly the Margaret River region ... In the Marlborough wine region ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignon_blanc"
+      },
+      {
+        "grapeId": "aglianico",
+        "quote": "In Basilicata, Aglianico is the basis of the Aglianico del Vulture DOC ... In Campania, the area ... The grape has also recently been planted in Australia, California, and Texas ... Producers in Sierra Foothills, McLaren Vale, Margaret River, Mudgee and Riverland ... trialled in Arizona and in Ontario, Canada",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aglianico"
+      },
+      {
+        "grapeId": "pedro-ximenez",
+        "quote": "the vast majority of these plantings are found in the Spanish wine region of Montilla-Moriles ... the grape can also be found in the denominación de origen (DO) of Montilla-Moriles, Jerez de la Frontera, Málaga and Sierras de Málaga and Valencia. ... most widely planted in the Portuguese wine region of Evora and Borba in the Alentejo region ... has thrived in Western Australia's Swan Valley ... limited plantings ... Margaret River region ... producers in the Elqui Province ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pedro_Xim%C3%A9nez"
+      }
+    ],
+    "id": "au-margaret-river",
+    "latitude": -33.95783619829787,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-margaret-river",
+    "longitude": 115.14802742393611,
+    "name": "Margaret River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Margaret River",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "39",
+    "registerLevel": "region",
+    "registeredOn": "1996-10-30",
+    "summaries": {
+      "en": {
+        "text": "Margaret River is the major geographical indication wine region in southwest Western Australia, with 5,840 hectares under vine and 215 wineries as at 2012. Margaret River wine region is made up predominantly of boutique size wine producers; although winery operations range from the smallest crushing 3.5 tonne per year to the largest around 2,500 tonne.",
+        "url": "https://en.wikipedia.org/wiki/Margaret_River_(wine_region)"
+      }
+    },
+    "wikidataId": "Q6759841",
+    "within": [
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-pemberton",
+    "latitude": -34.478634739443144,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-pemberton",
+    "longitude": 116.06386335193872,
+    "name": "Pemberton",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pemberton",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "105",
+    "registerLevel": "region",
+    "registeredOn": "2006-02-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-south-west-australia",
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-west-australian-south-east-coastal",
+    "latitude": -33.41910969330472,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-west-australia-south-east-coastal",
+    "longitude": 121.33497124336932,
+    "name": "West Australian South East Coastal",
+    "names": [
+      {
+        "locale": "*",
+        "name": "West Australian South East Coastal",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "28",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-western-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-queensland",
+    "latitude": -22.576095218136857,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-queensland",
+    "longitude": 144.53294098781168,
+    "name": "Queensland",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Queensland",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "34",
+    "registerLevel": "state",
+    "registeredOn": "1994-01-26",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-granite-belt",
+    "latitude": -28.71634732764179,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-granite-belt",
+    "longitude": 151.8920329499233,
+    "name": "Granite Belt",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Granite Belt",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "89",
+    "registerLevel": "region",
+    "registeredOn": "2002-03-25",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-queensland",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "verdelho",
+        "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho"
+      }
+    ],
+    "id": "au-south-burnett",
+    "latitude": -26.44449452707998,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-south-burnett",
+    "longitude": 151.75209397056727,
+    "name": "South Burnett",
+    "names": [
+      {
+        "locale": "*",
+        "name": "South Burnett",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "82",
+    "registerLevel": "region",
+    "registeredOn": "2000-12-08",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-queensland",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "saperavi",
+        "quote": "Saperavi grapes are used predominantly in Georgia and Russia, but have spread to other regions of Eastern Europe more recently (e.g., Purcari in Moldova).  Saperavi cultivars are also being grown in New World wine regions, notably in Finger Lakes and Niagara area vineyards.  It has shown promising results for a few growers in Australia, where it was pioneered in the King Valley Region of northeast Victoria.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Saperavi"
+      },
+      {
+        "grapeId": "arneis",
+        "quote": "Arneis is found primarily in the Italian wine region of Piedmont ... Outside of Piedmont, limited plantings of the grape can be found in Liguria and on the Italian island of Sardinia. In the United States, Arneis is mostly found in California ... Sonoma County and the Oregon ... Willamette Valley. Other American Viticultural Areas ... Mendocino, Russian River Valley, Paicines and Santa Ynez Valley AVAs. It is also being grown in Willcox, Arizona. ... Australian wine regions of Tasmania, Victoria and New South Wales ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arneis"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "Most commonly found in the Northern Rhône region... It is a principal component of the white wines from the Hermitage, Crozes-Hermitage and Saint-Joseph AOCs... In the Saint-Péray AOC... In Australia, the grape was first planted in Victoria... In Switzerland, Marsanne is grown in Valais... In British Columbia and Washington State... In California...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Marsanne"
+      }
+    ],
+    "id": "au-victoria",
+    "latitude": -36.5986096,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-victoria",
+    "longitude": 144.6780052,
+    "name": "Victoria",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Victoria",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerLevel": "state",
+    "registeredOn": "1994-01-26",
+    "summaries": {
+      "en": {
+        "text": "Victorian wine is wine made in the Australian state of Victoria. With over 6 hundred wineries, Victoria has more wine producers than any other Australian wine-producing state but ranks third in overall wine production due to the lack of a mass bulk wine-producing area like South Australia's Riverland and New South Wales's Riverina.",
+        "url": "https://en.wikipedia.org/wiki/Victorian_wine"
+      }
+    },
+    "wikidataId": "Q17030740",
+    "within": [
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-central-victoria",
+    "latitude": -36.6882707784092,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-central-victoria",
+    "longitude": 144.94251751751935,
+    "name": "Central Victoria",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Central Victoria",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "11",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-bendigo",
+    "latitude": -36.809885962536356,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-bendigo",
+    "longitude": 144.0157120101832,
+    "name": "Bendigo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bendigo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "87",
+    "registerLevel": "region",
+    "registeredOn": "2001-06-27",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-central-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-goulburn-valley",
+    "latitude": -36.352473191973935,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-goulburn-valley",
+    "longitude": 145.30117609023873,
+    "name": "Goulburn Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Goulburn Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "72",
+    "registerLevel": "region",
+    "registeredOn": "1999-11-29",
+    "summaries": {
+      "en": {
+        "text": "Goulburn Valley wine region is a wine region in the state of Victoria in Australia. It is part of the Central Victoria zone and roughly corresponds to the Goulburn Valley tourist and government region.",
+        "url": "https://en.wikipedia.org/wiki/Goulburn_Valley_wine_region"
+      }
+    },
+    "wikidataId": "Q48781108",
+    "within": [
+      "au-central-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-nagambie-lakes",
+    "latitude": -36.79227566363122,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-nagambie-lakes",
+    "longitude": 145.12515981822807,
+    "name": "Nagambie Lakes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Nagambie Lakes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "84",
+    "registerLevel": "subregion",
+    "registeredOn": "2001-04-09",
+    "summaries": {
+      "en": {
+        "text": "Nagambie Lakes is a subregion of the Goulburn Valley wine region in the Australian state of Victoria. Lake Nagambie on the Goulburn River is the largest waterbody in the region, and Nagambie is the main town.",
+        "url": "https://en.wikipedia.org/wiki/Nagambie_Lakes_wine_region"
+      }
+    },
+    "wikidataId": "Q99317948",
+    "within": [
+      "au-goulburn-valley",
+      "au-central-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-heathcote",
+    "latitude": -36.799571457546634,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-heathcote",
+    "longitude": 144.688800432698,
+    "name": "Heathcote",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Heathcote",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "95",
+    "registerLevel": "region",
+    "registeredOn": "2002-08-21",
+    "summaries": {
+      "en": {
+        "text": "The Heathcote Wine Region of Victoria, Australia, is nestled between the Goulburn Valley and Bendigo regions. The region is famous for its Shiraz production.",
+        "url": "https://en.wikipedia.org/wiki/Heathcote_wine_region"
+      }
+    },
+    "wikidataId": "Q5693656",
+    "within": [
+      "au-central-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-strathbogie-ranges",
+    "latitude": -36.87063729206105,
+    "legalUrl": "https://www.wineaustralia.com/labelling/register-of-protected-gis-and-other-terms/geographical-indications/strathbogie-ranges",
+    "longitude": 145.60889688103535,
+    "name": "Strathbogie Ranges",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Strathbogie Ranges",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "91",
+    "registerLevel": "region",
+    "registeredOn": "2002-03-25",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-central-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-upper-goulburn",
+    "latitude": -37.16059615086944,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-upper-goulburn",
+    "longitude": 145.81674121132914,
+    "name": "Upper Goulburn",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Upper Goulburn",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "102",
+    "registerLevel": "region",
+    "registeredOn": "2003-10-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-central-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-gippsland",
+    "latitude": -37.72096008764195,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-gippsland",
+    "longitude": 147.43378431463762,
+    "name": "Gippsland",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Gippsland",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "12",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-north-east-victoria",
+    "latitude": -36.5164451666037,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-north-east-victoria",
+    "longitude": 146.92269950189086,
+    "name": "North East Victoria",
+    "names": [
+      {
+        "locale": "*",
+        "name": "North East Victoria",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "13",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-alpine-valleys",
+    "latitude": -36.628408949902806,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-alpine-valleys",
+    "longitude": 146.89389697081285,
+    "name": "Alpine Valleys",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Alpine Valleys",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "74",
+    "registerLevel": "region",
+    "registeredOn": "1999-11-29",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-north-east-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-beechworth",
+    "latitude": -36.351177922997564,
+    "legalUrl": "https://www.wineaustralia.com/labelling/register-of-protected-gis-and-other-terms/geographical-indications/beechworth",
+    "longitude": 146.69184920218305,
+    "name": "Beechworth",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Beechworth",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "81",
+    "registerLevel": "region",
+    "registeredOn": "2000-12-08",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-north-east-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-glenrowan",
+    "latitude": -36.369512315305364,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-glenrowan",
+    "longitude": 146.08610421126863,
+    "name": "Glenrowan",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Glenrowan",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "101",
+    "registerLevel": "region",
+    "registeredOn": "2003-10-14",
+    "summaries": {
+      "en": {
+        "text": "The Glenrowan wine region is a wine growing region in the Australian state of Victoria, including the town of Glenrowan.",
+        "url": "https://en.wikipedia.org/wiki/Glenrowan_wine_region"
+      }
+    },
+    "wikidataId": "Q48771144",
+    "within": [
+      "au-north-east-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-king-valley",
+    "latitude": -36.70124592072368,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-king-valley",
+    "longitude": 146.4171482014891,
+    "name": "King Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "King Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "108",
+    "registerLevel": "region",
+    "registeredOn": "2007-10-12",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-north-east-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "muscadelle",
+        "quote": "In France, it is a minor constituent in the dry and sweet wines of Bordeaux, such as Sauternes ... Some sweet wines from Monbazillac, on the other hand, can have a higher proportion of Muscadelle ... Those made in the Rutherglen region generally receive considerable aging in hot cellars ... A few other Australian wine regions, including the Barossa Valley, make similar wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Muscadelle"
+      },
+      {
+        "grapeId": "gouais-blanc",
+        "quote": "Gouais blanc has continued to be commercially grown at several vineyards in Switzerland ... in the Van Duzer Corridor AVA of Oregon's Willamette Valley ... Gouais has also been grown for over 100 years by Chambers Rosewood Winery in Rutherglen, Australia.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Gouais_blanc"
+      }
+    ],
+    "id": "au-rutherglen",
+    "latitude": -36.105048720833885,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-rutherglen",
+    "longitude": 146.54675341079914,
+    "name": "Rutherglen",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rutherglen",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "49",
+    "registerLevel": "region",
+    "registeredOn": "1997-09-02",
+    "summaries": {
+      "en": {
+        "text": "Rutherglen is a wine-producing area around the town of Rutherglen in North East Victoria zone of the state of Victoria in Australia. The area is particularly noted for its sweet fortified wines.",
+        "url": "https://en.wikipedia.org/wiki/Rutherglen_wine_region"
+      }
+    },
+    "wikidataId": "Q7383371",
+    "within": [
+      "au-north-east-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-north-west-victoria",
+    "latitude": -35.523672687427116,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-north-west-victoria",
+    "longitude": 142.20802186755265,
+    "name": "North West Victoria",
+    "names": [
+      {
+        "locale": "*",
+        "name": "North West Victoria",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "14",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-port-phillip",
+    "latitude": -37.83165479045135,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-port-phillip",
+    "longitude": 144.76667662288415,
+    "name": "Port Phillip",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Port Phillip",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "15",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-geelong",
+    "latitude": -38.09338224226866,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-geelong",
+    "longitude": 144.25650659388165,
+    "name": "Geelong",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Geelong",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "37",
+    "registerLevel": "region",
+    "registeredOn": "1996-06-11",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-port-phillip",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-macedon-ranges",
+    "latitude": -37.299088231894714,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-macedon-ranges",
+    "longitude": 144.49476549760223,
+    "name": "Macedon Ranges",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Macedon Ranges",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "96",
+    "registerLevel": "region",
+    "registeredOn": "2002-08-21",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-port-phillip",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-mornington-peninsula",
+    "latitude": -38.341815703701634,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-mornington-peninsula",
+    "longitude": 145.03517273171587,
+    "name": "Mornington Peninsula",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mornington Peninsula",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "42",
+    "registerLevel": "region",
+    "registeredOn": "1997-03-18",
+    "summaries": {
+      "en": {
+        "text": "The Mornington Peninsula is an Australian wine region located south of Melbourne, Victoria. The region has a cool climate making wine growing ideal and focuses on Pinot noir production but has had success with other varietals including Chardonnay, Pinot gris and Tempranillo. The region is known for its medium bodied, dry wines and sparkling wines that show structure and complexity.",
+        "url": "https://en.wikipedia.org/wiki/Mornington_Peninsula_wine_region"
+      }
+    },
+    "wikidataId": "Q6913026",
+    "within": [
+      "au-port-phillip",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-sunbury",
+    "latitude": -37.64213111995486,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-sunbury",
+    "longitude": 144.73909664455152,
+    "name": "Sunbury",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sunbury",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "60",
+    "registerLevel": "region",
+    "registeredOn": "1998-12-10",
+    "summaries": {
+      "en": {
+        "text": "The Sunbury wine region is an Australian Geographical Indication for wine made from grapes grown in a region surrounding the town of Sunbury northwest of Melbourne in the Australian state of Victoria. It is one of five regions in the Port Philip zone surrounding Melbourne.",
+        "url": "https://en.wikipedia.org/wiki/Sunbury_wine_region"
+      }
+    },
+    "wikidataId": "Q73208858",
+    "within": [
+      "au-port-phillip",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-yarra-valley",
+    "latitude": -37.721460588893564,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/yarra-valley",
+    "longitude": 145.5415889447786,
+    "name": "Yarra Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Yarra Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "38",
+    "registerLevel": "region",
+    "registeredOn": "1996-10-30",
+    "summaries": {
+      "en": {
+        "text": "The Yarra Valley is an Australian wine region located east of Melbourne, Victoria. It is a cool climate region that is best known for producing Chardonnay, sparkling wine and Pinot Noir. Its proximity to the urban centre and high profile wineries have made it an important destination for enotourism, receiving over 3.1 million visitors in 2011.",
+        "url": "https://en.wikipedia.org/wiki/Yarra_Valley_wine_region"
+      }
+    },
+    "wikidataId": "Q8049508",
+    "within": [
+      "au-port-phillip",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-western-victoria",
+    "latitude": -37.58081730760903,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-western-victoria",
+    "longitude": 142.51632533093374,
+    "name": "Western Victoria",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Western Victoria",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "16",
+    "registerLevel": "zone",
+    "registeredOn": "1996-05-01",
+    "summaries": {
+      "en": {
+        "text": "Western Victoria is a wine grape growing zone in the southwestern part of the state of Victoria in Australia. It extends approximately from the South Australia border to Ballarat and from Horsham to the coast. It includes the defined wine regions of Henty, Grampians and Pyrenees as well as areas not in any smaller wine region.",
+        "url": "https://en.wikipedia.org/wiki/Western_Victoria_(wine_region)"
+      }
+    },
+    "wikidataId": "Q24090012",
+    "within": [
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "pinot-meunier",
+        "quote": "It is most prevalent in the cooler, north facing vineyards of the Vallee de la Marne and in the Aisne department. ... It is also widely grown in the Aube region ... found ... in the Loire Valley regions of Touraine and Orleans ... most German plantings ... are found in Württemberg ... most of the state's plantings are located in the Carneros AVA ... in the Grampians region of Victoria ... New Zealand wine industry ... German‑speaking parts of Switzerland ... small quantities in Austria.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Meunier"
+      }
+    ],
+    "id": "au-grampians",
+    "latitude": -37.29504434848596,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-grampians",
+    "longitude": 142.68700443201533,
+    "name": "Grampians",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Grampians",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "44",
+    "registerLevel": "region",
+    "registeredOn": "1997-06-16",
+    "summaries": {
+      "en": {
+        "text": "The Grampians is an Australian wine region located in the state of Victoria, west of Melbourne. It is located near the Grampians National Park and the Pyrenees hills. The area is dominated by red wine production, particularly Shiraz and Cabernet Sauvignon.",
+        "url": "https://en.wikipedia.org/wiki/Grampians_wine_region"
+      }
+    },
+    "wikidataId": "Q5593940",
+    "within": [
+      "au-western-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-great-western",
+    "latitude": -37.222169309226956,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-great-western",
+    "longitude": 142.82454427663166,
+    "name": "Great Western",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Great Western",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "107",
+    "registerLevel": "subregion",
+    "registeredOn": "2007-04-05",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-grampians",
+      "au-western-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-henty",
+    "latitude": -37.83100871492024,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-henty",
+    "longitude": 141.76322291437762,
+    "name": "Henty",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Henty",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "78",
+    "registerLevel": "region",
+    "registeredOn": "2000-08-24",
+    "summaries": {
+      "en": {
+        "text": "The Henty wine region is an Australian wine region. It has one of the cooler climates of any Australian wine region and is known for its white wine production of Chardonnay, Riesling, Semillon and Sauvignon blanc as well as a small red wine production of Pinot noir. Prior to the registration of the AGI as \"Henty\", the region was known as Drumborg or Far South-west Victoria.",
+        "url": "https://en.wikipedia.org/wiki/Henty_wine_region"
+      }
+    },
+    "wikidataId": "Q25182901",
+    "within": [
+      "au-western-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-pyrenees",
+    "latitude": -36.972672561533194,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-pyrenees",
+    "longitude": 143.33765671109853,
+    "name": "Pyrenees",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pyrenees",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 0,
+    "registerRef": "77",
+    "registerLevel": "region",
+    "registeredOn": "2000-06-29",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-western-victoria",
+      "au-victoria",
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "touriga-francesa",
+        "quote": "experimental plantings of the grape in Tasmania ... the variety is increasingly being used for unfortified red wine in the Douro and in the Dão",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Touriga_Francesa"
+      },
+      {
+        "grapeId": "arneis",
+        "quote": "Arneis is found primarily in the Italian wine region of Piedmont ... Outside of Piedmont, limited plantings of the grape can be found in Liguria and on the Italian island of Sardinia. In the United States, Arneis is mostly found in California ... Sonoma County and the Oregon ... Willamette Valley. Other American Viticultural Areas ... Mendocino, Russian River Valley, Paicines and Santa Ynez Valley AVAs. It is also being grown in Willcox, Arizona. ... Australian wine regions of Tasmania, Victoria and New South Wales ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arneis"
+      }
+    ],
+    "id": "au-tasmania",
+    "latitude": -42.02592989718884,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-tasmania",
+    "longitude": 146.5929388923914,
+    "name": "Tasmania",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tasmania",
+        "source": "register"
+      }
+    ],
+    "pointSource": "boundary",
+    "prominence": 1,
+    "registerRef": "33",
+    "registerLevel": "state",
+    "registeredOn": "1994-01-26",
+    "summaries": {
+      "en": {
+        "text": "Tasmanian wine is wine produced in the Australian state of Tasmania. Located at a more southerly latitude than the rest of Australia's wine regions, Tasmania has a cooler climate and the potential to make distinctly different wines than in the rest of the country. The area grows primarily Pinot noir, Chardonnay and Sauvignon blanc,  with some smaller plantings of Riesling, Pinot gris and Cabernet Sauvignon.",
+        "url": "https://en.wikipedia.org/wiki/Tasmanian_wine"
+      }
+    },
+    "wikidataId": "Q7687543",
+    "within": [
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-northern-territory",
+    "latitude": -19.8516101,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-northern-territory",
+    "longitude": 133.2303375,
+    "name": "Northern Territory",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Northern Territory",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "state",
+    "registeredOn": "1994-01-26",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-australia"
+    ]
+  },
+  {
+    "countryCode": "AU",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "au-australian-capital-territory",
+    "latitude": -35.4883502,
+    "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-australian-capital-territory",
+    "longitude": 149.0026942,
+    "name": "Australian Capital Territory",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Australian Capital Territory",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "state",
+    "registeredOn": "1994-01-26",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "au-south-eastern-australia",
+      "au-australia"
+    ]
   }
 ]

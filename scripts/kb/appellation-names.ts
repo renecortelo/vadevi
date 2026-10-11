@@ -56,8 +56,17 @@ export type RegionEntry = {
   wikidataId: string | null;
 };
 
-/** South Africa's Wine of Origin scheme's kinds of production area, largest first. */
+/**
+ * The kinds of area a register names, largest first: Australia's (country,
+ * multi-state zone, state, super zone, zone, region, subregion) and South
+ * Africa's Wine of Origin scheme's (geographical unit … ward).
+ */
 export const registerLevels = [
+  "country",
+  "multiStateZone",
+  "state",
+  "superZone",
+  "zone",
   "overarchingUnit",
   "unit",
   "overarchingRegion",

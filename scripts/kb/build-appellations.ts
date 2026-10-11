@@ -437,6 +437,56 @@ for (const entry of zaEntries) {
   entry.pointSource = "area";
 }
 entries.push(...zaEntries);
+
+// Australia: the Register of Protected Names' geographical indications, each
+// placed inside its official boundary (Wine Australia's open data) where it
+// has one of its own, and nested as the register lists them.
+const auPath = resolve(".kb-cache/world/au.json");
+const auList = (existsSync(auPath) ? JSON.parse(readFileSync(auPath, "utf8")) : []) as {
+  giNumber: string | null;
+  latitude: number | null;
+  level: RegisterLevel;
+  longitude: number | null;
+  name: string;
+  pointSource: "area" | "boundary" | "place" | null;
+  qid: string | null;
+  registeredOn: string | null;
+  url: string;
+  within: string[];
+}[];
+const auIds = new Map<string, string>();
+const auEntries: RegionEntry[] = auList.map((gi) => {
+  const id = worldId("au", gi.name);
+  auIds.set(gi.name, id);
+  const { leads, summaries } = wikipediaSummaries(gi.qid);
+  return {
+    countryCode: "AU",
+    eambrosiaId: null,
+    giType: "GI" as const,
+    grapes: [],
+    id,
+    latitude: gi.latitude,
+    legalUrl: gi.url,
+    longitude: gi.longitude,
+    name: gi.name,
+    names: [{ locale: "*", name: gi.name, source: "register" as const }],
+    pointSource: gi.pointSource,
+    prominence: leads,
+    ...(gi.giNumber === null ? {} : { registerRef: gi.giNumber }),
+    registerLevel: gi.level,
+    registeredOn: gi.registeredOn,
+    summaries,
+    wikidataId: gi.qid,
+  };
+});
+auList.forEach((gi, index) => {
+  const within = gi.within.map((name) => auIds.get(name)).filter((id) => id !== undefined);
+  if (within.length > 0) auEntries[index]!.within = within;
+});
+entries.push(...auEntries);
+console.info(
+  `  ${auEntries.length} Australian geographical indications from Wine Australia's register.`,
+);
 console.info(
   `  ${zaEntries.length} Wine of Origin production areas, ` +
     `${zaEntries.filter((entry) => entry.latitude !== null).length} placed.`,

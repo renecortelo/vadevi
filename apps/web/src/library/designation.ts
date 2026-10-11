@@ -12,10 +12,21 @@ export function designationKey(type: RegionDesignation, short = false): string {
 
 /**
  * The suffix of the catalog keys that speak of a name's register: none for
- * the EU's, "Us", "Nz" or "Za" for a country's own.
+ * the EU's, the country's for its own ("Us", "Au", "Nz", "Za") — New Zealand
+ * and Australia both call theirs a geographical indication.
  */
-export function registerSuffix(type: RegionDesignation): "" | "Nz" | "Us" | "Za" {
-  return type === "AVA" ? "Us" : type === "GI" ? "Nz" : type === "WO" ? "Za" : "";
+export function registerSuffix(
+  type: RegionDesignation,
+  countryCode: string,
+): "" | "Au" | "Nz" | "Us" | "Za" {
+  if (inEuRegister(type)) return "";
+  const suffixes: Record<string, "Au" | "Nz" | "Us" | "Za"> = {
+    AU: "Au",
+    NZ: "Nz",
+    US: "Us",
+    ZA: "Za",
+  };
+  return suffixes[countryCode] ?? "";
 }
 
 /** Whether the name is held by the EU register, or by another country's own. */

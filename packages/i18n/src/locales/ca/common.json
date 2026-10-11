@@ -168,13 +168,16 @@
     "registerTitleUs": "Al registre d'àrees vitícoles dels EUA",
     "registerTitleNz": "Al registre d'indicacions geogràfiques de Nova Zelanda",
     "registerTitleZa": "Al sistema Wine of Origin de Sud-àfrica",
+    "registerTitleAu": "Al registre d'IG protegides d'Austràlia",
     "registeredOn": "Protegida a la UE des del {{date}}.",
     "registeredOnUs": "Àrea vitícola nord-americana des del {{date}}.",
     "registeredOnNz": "Indicació geogràfica registrada des del {{date}}.",
+    "registeredOnAu": "Al registre des del {{date}}.",
     "registerLink": "Veure-la al registre de la UE (eAmbrosia)",
     "registerLinkUs": "Veure'n la secció al Codi de Reglaments Federals dels EUA ({{ref}}, eCFR)",
     "registerLinkNz": "Veure-la al registre de Nova Zelanda (número IP {{ref}}, IPONZ)",
     "registerLinkZa": "Veure la llista de zones de producció del sistema (SAWIS)",
+    "registerLinkAu": "Veure'n l'entrada al registre de Wine Australia",
     "registerCategories": "Categories de producte",
     "wineCategory": {
       "1": "Vi",
@@ -244,7 +247,21 @@
       "district": "Un districte del sistema Wine of Origin.",
       "ward": "Un ward del sistema Wine of Origin."
     },
-    "woLevelName": {
+    "auLevel": {
+      "country": "La indicació geogràfica d'Austràlia per a tot el país.",
+      "multiStateZone": "Una indicació geogràfica australiana que abasta diversos estats.",
+      "state": "Una indicació geogràfica australiana d'un estat o territori.",
+      "superZone": "Una superzona australiana: una indicació geogràfica que abasta diverses zones.",
+      "zone": "Una indicació geogràfica australiana: una zona.",
+      "region": "Una indicació geogràfica australiana: una regió.",
+      "subregion": "Una indicació geogràfica australiana: una subregió."
+    },
+    "levelName": {
+      "country": "país",
+      "multiStateZone": "zona multiestatal",
+      "state": "estat",
+      "superZone": "superzona",
+      "zone": "zona",
       "overarchingUnit": "unitat geogràfica superior",
       "unit": "unitat geogràfica",
       "overarchingRegion": "regió superior",
@@ -260,6 +277,7 @@
     "mapSource": "Mapa: Natural Earth · Punts: Wikidata, NUTS © EuroGeographics, © col·laboradors d'OpenStreetMap",
     "mapSourceUs": "Mapa: Natural Earth · Punts: projecte AVA de UC Davis, Wikidata",
     "mapSourceOsm": "Mapa: Natural Earth · Punts: © col·laboradors d'OpenStreetMap",
+    "mapSourceAu": "Mapa: Natural Earth · Punts: Wine Australia (CC BY 4.0), © col·laboradors d'OpenStreetMap",
     "mapSourceOutline": "Mapa: Natural Earth",
     "mapCountryOnly": "La zona exacta encara no és a la biblioteca; el mapa mostra el país.",
     "mapApproximate": {
@@ -267,6 +285,7 @@
       "place": "Punt aproximat: el lloc que dona nom a la denominació."
     },
     "mapBoundary": "Dins del seu límit oficial, tal com el traça el projecte AVA de UC Davis.",
+    "mapBoundaryAu": "Dins del seu límit oficial, tal com el traça Wine Australia.",
     "summaryTranslated": "traduït de l'article original",
     "summaryTranslatedDocument": "traduït de la llengua del document",
     "backTo": "Tornar a {{name}}"

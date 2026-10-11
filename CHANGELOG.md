@@ -23,11 +23,15 @@ has the reasons.
 - **South Africa**: the 150 production areas of the Wine of Origin scheme —
   geographical units, regions, districts and wards — each showing the areas
   it lies in and the ones inside it, on a new map of southern Africa.
+- **Australia**: all 114 geographical indications of Wine Australia's
+  register — the country, its states, zones, regions and subregions — each
+  with its date of entry, inside its official boundary, and within the zone
+  and state the register lists it under.
 - **Within and inside**: a name's page lists the names whose area holds it
   and those it holds — a ward's district and region, an AVA's larger AVAs.
 - **Deploying your own**: migration `0033` rebuilds the atlas table so it can
-  hold names outside the EU register, and `0034` adds where each lies; the
-  deploy's library load fills both.
+  hold names outside the EU register, `0034` adds where each lies, and `0035`
+  admits Australia's kinds of area; the deploy's library load fills them.
 
 ## 0.2.0 — 10 October 2026
 

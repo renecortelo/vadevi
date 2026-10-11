@@ -16,6 +16,7 @@ const tabs: Tab[] = ["grapes", "regions", "topics"];
 /** The countries the atlas has registered names for. */
 const atlasCountries = [
   "AT",
+  "AU",
   "BE",
   "BG",
   "CY",
@@ -44,7 +45,7 @@ const atlasCountries = [
 const designationsOf = (country: string): RegionDesignation[] =>
   country === "US"
     ? ["AVA"]
-    : country === "NZ"
+    : country === "NZ" || country === "AU"
       ? ["GI"]
       : country === "ZA"
         ? ["WO"]

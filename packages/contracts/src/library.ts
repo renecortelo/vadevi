@@ -144,10 +144,16 @@ export const RegionDesignationSchema = z.enum(["PDO", "PGI", "AVA", "GI", "WO"])
 export type RegionDesignation = z.infer<typeof RegionDesignationSchema>;
 
 /**
- * The kinds of production area South Africa's Wine of Origin scheme defines,
- * largest first.
+ * The kinds of area a register names, largest first: Australia's (country,
+ * multi-state zone, state, super zone, zone, region, subregion) and South
+ * Africa's Wine of Origin scheme's (geographical unit … ward).
  */
 export const RegionLevelSchema = z.enum([
+  "country",
+  "multiStateZone",
+  "state",
+  "superZone",
+  "zone",
   "overarchingUnit",
   "unit",
   "overarchingRegion",

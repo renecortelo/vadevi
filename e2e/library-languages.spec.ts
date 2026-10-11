@@ -186,3 +186,35 @@ test("a Wine of Origin district shows where it lies in the scheme", async ({ pag
   await expect(page.getByText("A ward of the Wine of Origin scheme.")).toBeVisible();
   await expect(nesting.getByRole("link", { name: "Stellenbosch", exact: true })).toBeVisible();
 });
+
+test("an Australian region shows its register entry and its zone", async ({ page }) => {
+  const entry = read<{ id: string; legalUrl: string; summaries: Summaries }[]>(
+    "data/kb/appellations.json",
+  ).find((candidate) => candidate.id === "au-barossa-valley")!;
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library?tab=regions&country=AU");
+  const row = page
+    .locator(".library-rows a")
+    .filter({ has: page.getByText("Barossa Valley", { exact: true }) });
+  await expect(row).toContainText("GI", { timeout: 15_000 });
+  await row.click();
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Barossa Valley", { timeout: 15_000 });
+  await expect(page.locator(".library-summary p").first()).toHaveText(entry.summaries.en!.text);
+  await expect(page.locator("#region-register")).toHaveText(
+    "In Australia's Register of Protected GIs",
+  );
+  await expect(page.getByText("An Australian geographical indication: a region.")).toBeVisible();
+  await expect(page.getByText("In the register since August 15, 1997.")).toBeVisible();
+  await expect(page.locator('a[href*="wineaustralia.com"]')).toHaveAttribute(
+    "href",
+    entry.legalUrl,
+  );
+  await expect(
+    page.getByText("Inside its official boundary, as Wine Australia draws it."),
+  ).toBeVisible();
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting).toContainText("Barossa · zone");
+  await expect(nesting).toContainText("South Australia · state");
+});

@@ -168,13 +168,16 @@
     "registerTitleUs": "Im US-Register der Weinbaugebiete",
     "registerTitleNz": "Im neuseeländischen Register der geografischen Angaben",
     "registerTitleZa": "Im südafrikanischen Wine-of-Origin-System",
+    "registerTitleAu": "Im australischen Register geschützter geografischer Angaben",
     "registeredOn": "In der EU geschützt seit dem {{date}}.",
     "registeredOnUs": "American Viticultural Area seit dem {{date}}.",
     "registeredOnNz": "Eingetragene geografische Angabe seit dem {{date}}.",
+    "registeredOnAu": "Im Register seit dem {{date}}.",
     "registerLink": "Im EU-Register ansehen (eAmbrosia)",
     "registerLinkUs": "Ihren Abschnitt im US Code of Federal Regulations ansehen ({{ref}}, eCFR)",
     "registerLinkNz": "Im neuseeländischen Register ansehen (IP-Nummer {{ref}}, IPONZ)",
     "registerLinkZa": "Die Liste der Anbaugebiete des Systems ansehen (SAWIS)",
+    "registerLinkAu": "Den Eintrag im Register von Wine Australia ansehen",
     "registerCategories": "Erzeugniskategorien",
     "wineCategory": {
       "1": "Wein",
@@ -244,7 +247,21 @@
       "district": "Ein Distrikt des Wine-of-Origin-Systems.",
       "ward": "Ein Ward des Wine-of-Origin-Systems."
     },
-    "woLevelName": {
+    "auLevel": {
+      "country": "Australiens geografische Angabe für das ganze Land.",
+      "multiStateZone": "Eine australische geografische Angabe über mehrere Bundesstaaten.",
+      "state": "Eine australische geografische Angabe für einen Bundesstaat oder ein Territorium.",
+      "superZone": "Eine australische Superzone: eine geografische Angabe über mehrere Zonen.",
+      "zone": "Eine australische geografische Angabe: eine Zone.",
+      "region": "Eine australische geografische Angabe: eine Region.",
+      "subregion": "Eine australische geografische Angabe: eine Subregion."
+    },
+    "levelName": {
+      "country": "Land",
+      "multiStateZone": "Mehrstaatenzone",
+      "state": "Bundesstaat",
+      "superZone": "Superzone",
+      "zone": "Zone",
       "overarchingUnit": "übergeordnete geografische Einheit",
       "unit": "geografische Einheit",
       "overarchingRegion": "übergeordnete Region",
@@ -260,6 +277,7 @@
     "mapSource": "Karte: Natural Earth · Punkte: Wikidata, NUTS © EuroGeographics, © OpenStreetMap-Mitwirkende",
     "mapSourceUs": "Karte: Natural Earth · Punkte: AVA-Projekt der UC Davis, Wikidata",
     "mapSourceOsm": "Karte: Natural Earth · Punkte: © OpenStreetMap-Mitwirkende",
+    "mapSourceAu": "Karte: Natural Earth · Punkte: Wine Australia (CC BY 4.0), © OpenStreetMap-Mitwirkende",
     "mapSourceOutline": "Karte: Natural Earth",
     "mapCountryOnly": "Das genaue Gebiet ist noch nicht in der Bibliothek; die Karte zeigt das Land.",
     "mapApproximate": {
@@ -267,6 +285,7 @@
       "place": "Ungefährer Punkt: der Ort, nach dem die Bezeichnung benannt ist."
     },
     "mapBoundary": "Innerhalb ihrer amtlichen Grenze, wie das AVA-Projekt der UC Davis sie zeichnet.",
+    "mapBoundaryAu": "Innerhalb seiner amtlichen Grenze, wie Wine Australia sie zieht.",
     "summaryTranslated": "aus dem Originalartikel übersetzt",
     "summaryTranslatedDocument": "aus der Sprache des Dokuments übersetzt",
     "backTo": "Zurück zu {{name}}"

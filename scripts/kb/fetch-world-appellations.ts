@@ -599,3 +599,316 @@ console.info(
   `  Wine of Origin: ${zaRecords.length} production areas, ${zaItems.size} with an article on their wine, ` +
     `${zaPoints.size} placed.`,
 );
+
+// 8. Australia: the Register of Protected Names' geographical indications,
+//    as Wine Australia lists them, each with the date its page gives for its
+//    entry in the register; the boundaries of its zones, regions and
+//    subregions from Wine Australia's open data (CC BY 4.0, © Wine Australia),
+//    which also give each one's GI number and its kind. A name lies within
+//    the one the register lists it under — Murray Darling under both zones it
+//    straddles.
+const waSite = "https://www.wineaustralia.com";
+const waFolder = resolve(cache, "wine-australia");
+mkdirSync(waFolder, { recursive: true });
+async function waPage(path: string): Promise<string> {
+  const file = resolve(waFolder, `${path.replace(/^\/+/, "").replace(/[^a-z0-9]+/gi, "-")}.html`);
+  if (existsSync(file)) return readFileSync(file, "utf8");
+  const body = await text(`${waSite}${path}`);
+  writeFileSync(file, body);
+  return body;
+}
+const pageText = (page: string) =>
+  entity(page.replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/g, " ").replace(/<[^>]+>/g, " "))
+    .replace(/&rsquo;|&#x2019;/g, "’")
+    .replace(/\s+/g, " ");
+const register = await waPage(
+  "/labelling/register-of-protected-gis-and-other-terms/geographical-indications",
+);
+// The register's list: each name links to its own page. "Adelaide (Super
+// Zone, includes Mount Lofty Ranges, Fleurieu and Barossa)" names what the
+// super zone holds; a name listed under two zones is one name.
+type AuListed = { includes: string[]; name: string; path: string };
+const listed = new Map<string, AuListed>();
+const order: AuListed[] = [];
+const listStart = register.indexOf("labelling-gi-australia");
+for (const [, path, label] of register
+  .slice(listStart - 200)
+  .matchAll(/<a[^>]+href="([^"]*geographical-indica[^"]*)"[^>]*>([\s\S]*?)<\/a>/g)) {
+  // Markup inside a name ("<span>S</span>outh Coast") is not a space.
+  const title = entity(label!.replace(/<[^>]+>/g, ""))
+    .replace(/&nbsp;|\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (title.length === 0 || /Committee|Australian Geographical Indications/.test(title)) continue;
+  const superZone = /^(.+?) \(Super Zone, includes (.+)\)$/.exec(title);
+  const name = superZone?.[1] ?? title;
+  const includes =
+    superZone === undefined || superZone === null
+      ? []
+      : superZone[2]!.split(/,\s*|\s+and\s+/).map((part) => part.trim());
+  const key = fold(name);
+  if (!listed.has(key)) listed.set(key, { includes, name, path: path!.replace(/^\/au\//, "/") });
+  order.push(listed.get(key)!);
+}
+const auStates = [
+  "South Australia",
+  "New South Wales",
+  "Western Australia",
+  "Queensland",
+  "Victoria",
+  "Tasmania",
+  "Northern Territory",
+  "Australian Capital Territory",
+];
+const stateNames: Record<string, string> = {
+  ACT: "Australian Capital Territory",
+  NSW: "New South Wales",
+  NT: "Northern Territory",
+  QLD: "Queensland",
+  SA: "South Australia",
+  TAS: "Tasmania",
+  VIC: "Victoria",
+  WA: "Western Australia",
+};
+
+// Each name's date of entry in the register, from its own page.
+const longMonths = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const auDates = new Map<string, string>();
+for (const entry of listed.values()) {
+  // The register's older name or its newer one ("…of Protected
+  // Geographical Indications and Other Terms"); a month read by its first
+  // three letters, as one page spells October "Octoer".
+  const said =
+    /entered in the Register of Protected [A-Za-z ]+? on (\d{1,2}) ([A-Z][a-z]+) (\d{4})/.exec(
+      pageText(await waPage(entry.path)),
+    );
+  const month =
+    said === null ? -1 : longMonths.findIndex((name) => name.slice(0, 3) === said[2]!.slice(0, 3));
+  if (said !== null && month >= 0) {
+    auDates.set(
+      fold(entry.name),
+      `${said[3]}-${String(month + 1).padStart(2, "0")}-${said[1]!.padStart(2, "0")}`,
+    );
+  }
+}
+
+// The boundaries: one layer each for subregions, regions and zones.
+type AuFeature = {
+  geometry: { coordinates: unknown; type: "MultiPolygon" | "Polygon" } | null;
+  properties: Record<string, string | number | null>;
+};
+const waLayers =
+  "https://services6.arcgis.com/s8j6JbJJCqmhNgh7/arcgis/rest/services/Wine_Geographical_Indications_Australia/FeatureServer";
+const drawn = new Map<string, { feature: AuFeature; layer: "region" | "subregion" | "zone" }>();
+for (const [layer, kind] of [
+  [2, "zone"],
+  [1, "region"],
+  [0, "subregion"],
+] as const) {
+  const collection = JSON.parse(
+    await cached(
+      `wine-australia-gi-${kind}.geojson`,
+      `${waLayers}/${layer}/query?where=1%3D1&outFields=*&outSR=4326&maxAllowableOffset=0.002&f=geojson`,
+    ),
+  ) as { features: AuFeature[] };
+  for (const feature of collection.features) {
+    drawn.set(fold(String(feature.properties.GI_NAME ?? "")), { feature, layer: kind });
+  }
+}
+const ringsOf = (feature: AuFeature): Ring[] =>
+  feature.geometry === null
+    ? []
+    : feature.geometry.type === "Polygon"
+      ? [(feature.geometry.coordinates as Ring[])[0]!]
+      : (feature.geometry.coordinates as Ring[][]).map((polygon) => polygon[0]!);
+const levelOf = (name: string): string => {
+  if (name === "Australia") return "country";
+  if (name === "South Eastern Australia") return "multiStateZone";
+  if (auStates.includes(name)) return "state";
+  if ((listed.get(fold(name))?.includes.length ?? 0) > 0) return "superZone";
+  return drawn.get(fold(name))?.layer ?? "region";
+};
+// What each name lies in directly.
+const parents = new Map<string, string[]>();
+for (const entry of listed.values()) parents.set(entry.name, []);
+const add = (child: string, parent: string) => {
+  const list = parents.get(child);
+  if (list !== undefined && !list.includes(parent) && child !== parent) list.push(parent);
+};
+for (const entry of listed.values()) {
+  const level = levelOf(entry.name);
+  if (level === "state" || level === "multiStateZone") {
+    // South Eastern Australia "includes all of the State of New South Wales,
+    // all of the State of Victoria, all of the State of Tasmania, all of the
+    // Australian Capital Territory" (its entry in the register), and parts of
+    // Queensland and South Australia.
+    if (
+      ["New South Wales", "Victoria", "Tasmania", "Australian Capital Territory"].includes(
+        entry.name,
+      )
+    ) {
+      add(entry.name, "South Eastern Australia");
+    }
+    add(entry.name, "Australia");
+  } else if (level === "superZone") {
+    add(
+      entry.name,
+      String(drawn.get(fold(entry.includes[0] ?? ""))?.feature.properties.STATE ?? ""),
+    );
+    for (const zone of entry.includes) add(zone, entry.name);
+  }
+}
+// The register lists each zone under its state, each region under its zone
+// (or its state, where the state has no zones: Queensland), each subregion
+// under its region.
+let currentState: string | null = null;
+let currentZone: string | null = null;
+let currentRegion: string | null = null;
+for (const entry of order) {
+  const level = levelOf(entry.name);
+  if (level === "state") [currentState, currentZone, currentRegion] = [entry.name, null, null];
+  else if (level === "zone") {
+    [currentZone, currentRegion] = [entry.name, null];
+    if (currentState !== null) add(entry.name, currentState);
+  } else if (level === "region") {
+    currentRegion = entry.name;
+    const holder = currentZone ?? currentState;
+    if (holder !== null) add(entry.name, holder);
+  } else if (level === "subregion" && currentRegion !== null) add(entry.name, currentRegion);
+}
+// The super zone's state, by its zones' ("SA").
+for (const entry of listed.values()) {
+  const list = parents.get(entry.name)!;
+  parents.set(
+    entry.name,
+    list.map((parent) => stateNames[parent] ?? parent).filter((parent) => listed.has(fold(parent))),
+  );
+}
+const auWithin = (name: string): string[] => {
+  const order: string[] = [];
+  let level = parents.get(name) ?? [];
+  while (level.length > 0) {
+    const next: string[] = [];
+    for (const parent of level) {
+      if (order.includes(parent)) continue;
+      order.push(parent);
+      next.push(...(parents.get(parent) ?? []));
+    }
+    level = next;
+  }
+  return order;
+};
+
+// Articles: an English one titled for the name's wine — "Barossa Valley wine
+// region", "Fleurieu zone", "Margaret River (wine region)" — never a town's;
+// the states' and the country's, by hand.
+const auArticleTitles = new Map<string, string[]>();
+for (const entry of listed.values()) {
+  auArticleTitles.set(entry.name, [entry.name]);
+}
+const auItems = await wineArticleItems(auArticleTitles, {
+  Australia: "Australian wine",
+  "New South Wales": "New South Wales wine",
+  Queensland: "Queensland wine",
+  "South Australia": "South Australian wine",
+  Tasmania: "Tasmanian wine",
+  Victoria: "Victorian wine",
+  "Western Australia": "Western Australian wine",
+});
+// The other titles Wikipedia gives a wine area.
+const suffixed = new Map<string, string>();
+for (const entry of listed.values()) {
+  if (auItems.has(entry.name)) continue;
+  for (const title of [
+    `${entry.name} zone (wine)`,
+    `${entry.name} zone`,
+    `${entry.name} wine zone`,
+    `${entry.name} (wine region)`,
+    `${entry.name} (wine)`,
+    `${entry.name} wine sub-region`,
+  ]) {
+    suffixed.set(title, entry.name);
+  }
+}
+const suffixedTitles = [...suffixed.keys()];
+for (let start = 0; start < suffixedTitles.length; start += 40) {
+  const batch = suffixedTitles.slice(start, start + 40);
+  const body = await wikimedia<{
+    query?: {
+      pages?: { missing?: boolean; pageprops?: { wikibase_item?: string }; title: string }[];
+    };
+  }>(
+    `https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&redirects=1` +
+      `&prop=pageprops&ppprop=wikibase_item&titles=${encodeURIComponent(batch.join("|"))}`,
+  );
+  for (const page of body.query?.pages ?? []) {
+    const name = suffixed.get(page.title);
+    const item = page.pageprops?.wikibase_item;
+    if (page.missing === true || name === undefined || item === undefined) continue;
+    if (!auItems.has(name)) auItems.set(name, item);
+  }
+}
+await leadLanguages([...new Set(auItems.values())]);
+
+const auPoints = new Map<string, { latitude: number; longitude: number; source: string }>();
+for (const entry of listed.values()) {
+  const own = drawn.get(fold(entry.name));
+  const inside = own === undefined ? null : interiorPoint(ringsOf(own.feature));
+  if (inside !== null) {
+    auPoints.set(entry.name, { ...inside, source: "boundary" });
+  } else if (levelOf(entry.name) === "state" || entry.name === "Australia") {
+    const point = await placeOf([entry.name], "au", [], null);
+    if (point !== null) auPoints.set(entry.name, { ...point, source: "place" });
+  }
+}
+// A name drawn by no layer of its own and holding others: the middle of
+// theirs (Adelaide's zones; South Eastern Australia's states).
+for (const name of ["Adelaide", "South Eastern Australia"]) {
+  const held = [...listed.values()]
+    .filter((entry) => (parents.get(entry.name) ?? []).includes(name))
+    .map((entry) => auPoints.get(entry.name))
+    .filter((point) => point !== undefined);
+  if (held.length === 0) continue;
+  const middle = (values: number[]) => values.sort((a, b) => a - b)[Math.floor(values.length / 2)]!;
+  auPoints.set(name, {
+    latitude: middle(held.map((point) => point.latitude)),
+    longitude: middle(held.map((point) => point.longitude)),
+    source: "area",
+  });
+}
+const auRecords = [...listed.values()].map((entry) => {
+  const own = drawn.get(fold(entry.name));
+  const point = auPoints.get(entry.name);
+  return {
+    giNumber:
+      own?.feature.properties.GI_NUMBER == null ? null : String(own.feature.properties.GI_NUMBER),
+    latitude: point?.latitude ?? null,
+    level: levelOf(entry.name),
+    longitude: point?.longitude ?? null,
+    name: entry.name,
+    pointSource: point?.source ?? null,
+    qid: auItems.get(entry.name) ?? null,
+    registeredOn: auDates.get(fold(entry.name)) ?? null,
+    url: `${waSite}${entry.path}`,
+    within: auWithin(entry.name),
+  };
+});
+writeFileSync(resolve(cache, "au.json"), JSON.stringify(auRecords, null, 1));
+console.info(
+  `  Wine Australia: ${auRecords.length} geographical indications, ${auDates.size} dated, ` +
+    `${auItems.size} with an article on their wine, ` +
+    `${auRecords.filter((record) => record.pointSource === "boundary").length} placed inside their boundary.`,
+);

@@ -89,7 +89,7 @@ export function LibraryRegionPage() {
     region.summary.sourceUrl.includes("/eambrosia-public-api/");
   const euRegister = inEuRegister(region.giType);
   // The catalog keys of the name's own register: the EU's, or its country's.
-  const suffix = registerSuffix(region.giType);
+  const suffix = registerSuffix(region.giType, region.countryCode);
   const registered =
     region.registeredOn === null
       ? null
@@ -163,7 +163,13 @@ export function LibraryRegionPage() {
         <h2 id="region-map">{t("library.whereTitle")}</h2>
         <AtlasMap
           caption={
-            euRegister ? null : t(suffix === "Us" ? "library.mapSourceUs" : "library.mapSourceOsm")
+            euRegister
+              ? null
+              : t(
+                  suffix === "Us" || suffix === "Au"
+                    ? `library.mapSource${suffix}`
+                    : "library.mapSourceOsm",
+                )
           }
           countryCode={region.countryCode}
           label={region.name}
@@ -175,19 +181,25 @@ export function LibraryRegionPage() {
         ) : region.pointSource === "area" || region.pointSource === "place" ? (
           <p className="section-help">{t(`library.mapApproximate.${region.pointSource}`)}</p>
         ) : region.pointSource === "boundary" ? (
-          <p className="section-help">{t("library.mapBoundary")}</p>
+          <p className="section-help">
+            {t(suffix === "Au" ? "library.mapBoundaryAu" : "library.mapBoundary")}
+          </p>
         ) : null}
       </section>
 
       <section aria-labelledby="region-register" className="settings-card">
         <h2 id="region-register">{t(`library.registerTitle${suffix}`)}</h2>
-        <p>
-          {region.registerLevel !== null
-            ? t(`library.woLevel.${region.registerLevel}`)
-            : registered === null
-              ? t(designationKey(region.giType))
-              : t(`library.registeredOn${suffix}`, { date: registered })}
-        </p>
+        {/* The kind of area, where the register has several, then its date. */}
+        {region.registerLevel === null ? null : (
+          <p>{t(`library.${suffix === "Au" ? "auLevel" : "woLevel"}.${region.registerLevel}`)}</p>
+        )}
+        {registered === null ? (
+          region.registerLevel === null ? (
+            <p>{t(designationKey(region.giType))}</p>
+          ) : null
+        ) : (
+          <p>{t(`library.registeredOn${suffix}`, { date: registered })}</p>
+        )}
         {region.legalUrl === null ? null : (
           <p className="section-help">
             <a className="text-link" href={region.legalUrl} rel="noreferrer" target="_blank">
@@ -258,9 +270,7 @@ export function LibraryRegionPage() {
                     <Link className="text-link" state={trail} to={`/library/regions/${holder.id}`}>
                       {holder.name}
                     </Link>
-                    {holder.level === null
-                      ? null
-                      : ` · ${t(`library.woLevelName.${holder.level}`)}`}
+                    {holder.level === null ? null : ` · ${t(`library.levelName.${holder.level}`)}`}
                   </li>
                 ))}
               </ul>
@@ -275,7 +285,7 @@ export function LibraryRegionPage() {
                     <Link className="text-link" state={trail} to={`/library/regions/${held.id}`}>
                       {held.name}
                     </Link>
-                    {held.level === null ? null : ` · ${t(`library.woLevelName.${held.level}`)}`}
+                    {held.level === null ? null : ` · ${t(`library.levelName.${held.level}`)}`}
                   </li>
                 ))}
               </ul>

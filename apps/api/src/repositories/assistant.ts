@@ -58,9 +58,14 @@ type AllowedSpaceRow = {
   name: string;
 };
 
-/** The Wine of Origin scheme's kinds of production area, in its own words. */
+/** The kinds of area a register names, in its own words. */
 const levelWords: Record<RegionLevel, string> = {
+  country: "country",
   district: "district",
+  multiStateZone: "multi-state zone",
+  state: "state",
+  superZone: "super zone",
+  zone: "zone",
   overarchingRegion: "overarching region",
   overarchingUnit: "overarching geographical unit",
   region: "region",
@@ -911,28 +916,34 @@ async function loadLibraryStatements(
     if (region === null || region.legalUrl === null) continue;
     const registerId = await librarySourceId(`region:${region.id}`);
     // Each name's own register: the EU's, or its country's.
-    const register = {
-      // The Code of Federal Regulations is a work of the US government.
-      AVA: {
-        license: "public-domain",
-        publisher: "US Code of Federal Regulations (eCFR)",
-        title: `${region.name} — ${region.registerRef ?? "27 CFR 9"}`,
+    const own: Record<string, { license: string; publisher: string; title: string }> = {
+      // Wine Australia's register; its boundaries are CC BY 4.0.
+      AU: {
+        license: "CC-BY-4.0",
+        publisher: "Wine Australia, Register of Protected GIs and Other Terms",
+        title: `${region.name} — Australian geographical indication`,
       },
       // IPONZ's register is Crown copyright: only its facts are used.
-      GI: {
+      NZ: {
         license: "NZ-Crown-copyright",
         publisher: "Intellectual Property Office of New Zealand (IPONZ)",
         title: `${region.name} — IP ${region.registerRef ?? ""}`.trim(),
       },
-      PDO: null,
-      PGI: null,
+      // The Code of Federal Regulations is a work of the US government.
+      US: {
+        license: "public-domain",
+        publisher: "US Code of Federal Regulations (eCFR)",
+        title: `${region.name} — ${region.registerRef ?? "27 CFR 9"}`,
+      },
       // Official texts of a legislative nature have no copyright in South Africa.
-      WO: {
+      ZA: {
         license: "public-domain",
         publisher: "SA Wine Industry Information & Systems (SAWIS), Wine of Origin scheme",
         title: `${region.name} — Wine of Origin production areas`,
       },
-    }[region.giType] ?? {
+    };
+    const european = region.giType === "PDO" || region.giType === "PGI";
+    const register = (european ? undefined : own[region.countryCode]) ?? {
       license: "EC-reuse-2011-833",
       publisher: "European Commission (eAmbrosia)",
       title: `${region.name} — eAmbrosia`,
@@ -961,15 +972,18 @@ async function loadLibraryStatements(
       });
     const since = (verb: string) =>
       region.registeredOn === null ? "" : `, ${verb} on ${region.registeredOn}`;
+    const kind = region.registerLevel === null ? "" : ` (${levelWords[region.registerLevel]})`;
     say(
       "register",
-      region.giType === "AVA"
-        ? `an American Viticultural Area (AVA) of the United States${since("established")}`
-        : region.giType === "GI"
-          ? `a geographical indication of New Zealand, in IPONZ's register${since("registered")}`
-          : region.giType === "WO"
-            ? `a production area of South Africa's Wine of Origin scheme${region.registerLevel === null ? "" : ` (${levelWords[region.registerLevel]})`}`
-            : `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of ${region.countryCode}${since("registered")}`,
+      european
+        ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of ${region.countryCode}${since("registered")}`
+        : region.countryCode === "US"
+          ? `an American Viticultural Area (AVA) of the United States${since("established")}`
+          : region.countryCode === "NZ"
+            ? `a geographical indication of New Zealand, in IPONZ's register${since("registered")}`
+            : region.countryCode === "AU"
+              ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
+              : `a production area of South Africa's Wine of Origin scheme${kind}`,
       [registerId],
     );
     if (region.within.length > 0) {

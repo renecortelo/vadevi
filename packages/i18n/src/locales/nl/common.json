@@ -168,13 +168,16 @@
     "registerTitleUs": "In het Amerikaanse register van wijnbouwgebieden",
     "registerTitleNz": "In het Nieuw-Zeelandse register van geografische aanduidingen",
     "registerTitleZa": "In het Zuid-Afrikaanse Wine of Origin-stelsel",
+    "registerTitleAu": "In het Australische register van beschermde geografische aanduidingen",
     "registeredOn": "Beschermd in de EU sinds {{date}}.",
     "registeredOnUs": "American Viticultural Area sinds {{date}}.",
     "registeredOnNz": "Geregistreerde geografische aanduiding sinds {{date}}.",
+    "registeredOnAu": "Sinds {{date}} in het register.",
     "registerLink": "Bekijken in het EU-register (eAmbrosia)",
     "registerLinkUs": "De sectie in de Amerikaanse Code of Federal Regulations bekijken ({{ref}}, eCFR)",
     "registerLinkNz": "In het Nieuw-Zeelandse register bekijken (IP-nummer {{ref}}, IPONZ)",
     "registerLinkZa": "De lijst van productiegebieden van het stelsel bekijken (SAWIS)",
+    "registerLinkAu": "De vermelding in het register van Wine Australia bekijken",
     "registerCategories": "Productcategorieën",
     "wineCategory": {
       "1": "Wijn",
@@ -244,7 +247,21 @@
       "district": "Een district van het Wine of Origin-stelsel.",
       "ward": "Een ward van het Wine of Origin-stelsel."
     },
-    "woLevelName": {
+    "auLevel": {
+      "country": "De geografische aanduiding van Australië voor het hele land.",
+      "multiStateZone": "Een Australische geografische aanduiding die meerdere staten omvat.",
+      "state": "Een Australische geografische aanduiding voor een staat of territorium.",
+      "superZone": "Een Australische superzone: één geografische aanduiding die meerdere zones omvat.",
+      "zone": "Een Australische geografische aanduiding: een zone.",
+      "region": "Een Australische geografische aanduiding: een regio.",
+      "subregion": "Een Australische geografische aanduiding: een subregio."
+    },
+    "levelName": {
+      "country": "land",
+      "multiStateZone": "meerstatenzone",
+      "state": "staat",
+      "superZone": "superzone",
+      "zone": "zone",
       "overarchingUnit": "overkoepelende geografische eenheid",
       "unit": "geografische eenheid",
       "overarchingRegion": "overkoepelende regio",
@@ -260,6 +277,7 @@
     "mapSource": "Kaart: Natural Earth · Punten: Wikidata, NUTS © EuroGeographics, © OpenStreetMap-bijdragers",
     "mapSourceUs": "Kaart: Natural Earth · Punten: AVA-project van UC Davis, Wikidata",
     "mapSourceOsm": "Kaart: Natural Earth · Punten: © OpenStreetMap-bijdragers",
+    "mapSourceAu": "Kaart: Natural Earth · Punten: Wine Australia (CC BY 4.0), © OpenStreetMap-bijdragers",
     "mapSourceOutline": "Kaart: Natural Earth",
     "mapCountryOnly": "Het precieze gebied staat nog niet in de bibliotheek; de kaart toont het land.",
     "mapApproximate": {
@@ -267,6 +285,7 @@
       "place": "Benaderd punt: de plaats waarnaar de benaming is genoemd."
     },
     "mapBoundary": "Binnen de officiële grens, zoals het AVA-project van UC Davis die tekent.",
+    "mapBoundaryAu": "Binnen de officiële grens, zoals Wine Australia die trekt.",
     "summaryTranslated": "vertaald uit het oorspronkelijke artikel",
     "summaryTranslatedDocument": "vertaald uit de taal van het document",
     "backTo": "Terug naar {{name}}"
