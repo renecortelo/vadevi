@@ -165,8 +165,11 @@
     "pdo": "Protected designation of origin (PDO)",
     "pgi": "Protected geographical indication (PGI)",
     "registerTitle": "In the EU register",
+    "registerTitleUs": "In the US register of viticultural areas",
     "registeredOn": "Protected in the EU since {{date}}.",
+    "registeredOnUs": "An American Viticultural Area since {{date}}.",
     "registerLink": "See it in the EU register (eAmbrosia)",
+    "registerLinkUs": "See its section of the US Code of Federal Regulations ({{ref}}, eCFR)",
     "registerCategories": "Categories of product",
     "wineCategory": {
       "1": "Wine",
@@ -185,6 +188,7 @@
     "registerDocument": "The register's single document",
     "grapesHere": "Grapes grown here",
     "grapesHereNote": "Grapes whose own article says they are grown here. Not a complete list: the registered rules are in the EU register.",
+    "grapesHereNoteUs": "Grapes whose own article says they are grown here. Not a complete list: an AVA's rule draws its area and names no grapes.",
     "home": {
       "title": "Wine library",
       "intro": "Grapes, protected wine names, and styles and methods, from open sources — to browse without asking Vicenç.",
@@ -216,17 +220,21 @@
     "topicMissing": "The library has no such entry.",
     "pdoShort": "PDO",
     "pgiShort": "PGI",
+    "ava": "American Viticultural Area (AVA)",
+    "avaShort": "AVA",
     "photoAlt": "A bunch of {{name}}",
     "photoCredit": "Photo: {{author}} · {{license}}",
     "originTitle": "Where it comes from",
     "mapLabel": "Map showing {{place}}",
     "mapSource": "Map: Natural Earth · Points: Wikidata, NUTS © EuroGeographics, © OpenStreetMap contributors",
+    "mapSourceUs": "Map: Natural Earth · Points: UC Davis AVA project, Wikidata",
     "mapSourceOutline": "Map: Natural Earth",
     "mapCountryOnly": "The exact area is not in the library yet; the map shows the country.",
     "mapApproximate": {
       "area": "Approximate point: the centre of the area the appellation lies in.",
       "place": "Approximate point: the place the appellation is named after."
     },
+    "mapBoundary": "Inside its official boundary, as the UC Davis AVA project draws it.",
     "summaryTranslated": "translated from the original article",
     "summaryTranslatedDocument": "translated from the document's language",
     "backTo": "Back to {{name}}"

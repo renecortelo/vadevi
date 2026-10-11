@@ -11317,13 +11317,15 @@
             "maxLength": 2
           },
           "eambrosiaId": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "giType": {
             "type": "string",
             "enum": [
               "PDO",
-              "PGI"
+              "PGI",
+              "AVA"
             ]
           },
           "grapes": {
@@ -11383,6 +11385,7 @@
             "type": "string",
             "nullable": true,
             "enum": [
+              "boundary",
               "item",
               "area",
               "place",
@@ -11390,6 +11393,10 @@
             ]
           },
           "registeredOn": {
+            "type": "string",
+            "nullable": true
+          },
+          "registerRef": {
             "type": "string",
             "nullable": true
           },
@@ -11483,6 +11490,7 @@
           "otherNames",
           "pointSource",
           "registeredOn",
+          "registerRef",
           "register",
           "summary",
           "wikidataId"
@@ -11504,7 +11512,8 @@
                   "type": "string",
                   "enum": [
                     "PDO",
-                    "PGI"
+                    "PGI",
+                    "AVA"
                   ]
                 },
                 "id": {

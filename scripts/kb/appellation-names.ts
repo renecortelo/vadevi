@@ -5,8 +5,10 @@
 
 export type RegionEntry = {
   countryCode: string;
-  eambrosiaId: string;
-  giType: "PDO" | "PGI";
+  /** The EU register's id; null for a name another country's register holds. */
+  eambrosiaId: string | null;
+  /** The EU's PDO or PGI, or the designation of the country's own register. */
+  giType: "PDO" | "PGI" | "AVA";
   grapes: { grapeId: string; quote: string; sourceUrl: string }[];
   id: string;
   latitude: number | null;
@@ -14,10 +16,15 @@ export type RegionEntry = {
   longitude: number | null;
   name: string;
   names: { locale: string; name: string; source: "register" | "wikidata" }[];
-  /** Where the point comes from; "area" and "place" are approximate. */
-  pointSource?: "area" | "item" | "place" | null;
+  /**
+   * Where the point comes from; "area" and "place" are approximate,
+   * "boundary" lies inside the name's official boundary.
+   */
+  pointSource?: "area" | "boundary" | "item" | "place" | null;
   prominence: number;
   registeredOn: string | null;
+  /** Its place in a register other than the EU's: "27 CFR 9.23". */
+  registerRef?: string;
   /**
    * What the register's single document says of the wines: the categories of
    * grapevine product (Annex VII numbers) and the main grape varieties as it
@@ -41,6 +48,11 @@ export type RegionEntry = {
   >;
   wikidataId: string | null;
 };
+
+/** An atlas entry the EU register holds: the ones its own documents describe. */
+export type EuRegionEntry = RegionEntry & { eambrosiaId: string };
+export const inEuRegister = (entry: RegionEntry): entry is EuRegionEntry =>
+  entry.eambrosiaId !== null;
 
 /**
  * The names a register entry goes by. Alternatives are written with " / " or

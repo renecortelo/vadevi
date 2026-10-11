@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-import type { RegionEntry } from "./appellation-names";
+import { inEuRegister, type RegionEntry } from "./appellation-names";
 import { readOfficialJournal, readTechnicalFile } from "./fetch-appellation-areas";
 
 /**
@@ -14,9 +14,9 @@ import { readOfficialJournal, readTechnicalFile } from "./fetch-appellation-area
  *
  * Usage: pnpm kb:fetch-register-documents
  */
-const regions = JSON.parse(
-  readFileSync(resolve("data/kb/appellations.json"), "utf8"),
-) as RegionEntry[];
+const regions = (
+  JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as RegionEntry[]
+).filter(inEuRegister);
 
 let read = 0;
 let missing = 0;

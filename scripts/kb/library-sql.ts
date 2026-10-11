@@ -160,6 +160,7 @@ export function libraryTables(
         "register_categories",
         "register_grapes",
         "register_source_url",
+        "register_ref",
       ],
       ["id"],
       3,
@@ -189,6 +190,7 @@ export function libraryTables(
               })),
             ),
         region.register?.sourceUrl ?? null,
+        region.registerRef ?? null,
       ]),
     ),
     table(

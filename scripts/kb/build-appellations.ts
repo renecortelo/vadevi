@@ -2,6 +2,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import {
+  inEuRegister,
   leadIsAboutWine,
   matchKey,
   type RegionEntry,
@@ -220,6 +221,71 @@ for (const row of register) {
   });
 }
 
+// Beyond the EU, each country's own register (`pnpm kb:fetch-world-appellations`).
+// United States: the American Viticultural Areas of 27 CFR part 9, each
+// placed inside its official boundary as UC Davis's AVA project draws it.
+const worldPath = resolve(".kb-cache/world/us.json");
+const avas = (existsSync(worldPath) ? JSON.parse(readFileSync(worldPath, "utf8")) : []) as {
+  labels: Record<string, string>;
+  latitude: number | null;
+  longitude: number | null;
+  name: string;
+  pointSource: "boundary" | "item" | null;
+  qid: string | null;
+  registeredOn: string | null;
+  section: string;
+}[];
+for (const ava of avas) {
+  const base = `us-${slug(ava.name)}`;
+  let id = base;
+  for (let suffix = 2; seen.has(id); suffix += 1) id = `${base}-${suffix}`;
+  seen.add(id);
+  const leadsPath = ava.qid === null ? null : resolve(cache, "leads", `${ava.qid}.json`);
+  const leads =
+    leadsPath !== null && existsSync(leadsPath)
+      ? (JSON.parse(readFileSync(leadsPath, "utf8")) as Record<
+          string,
+          { lead: string; title: string }
+        >)
+      : {};
+  const summaries: RegionEntry["summaries"] = {};
+  for (const [locale, { lead, title }] of Object.entries(leads)) {
+    if (!libraryLanguages.has(locale)) continue;
+    const text = summaryOf(lead);
+    if (text === null || !leadIsAboutWine(lead)) continue;
+    summaries[locale] = {
+      text,
+      url: `https://${locale}.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(" ", "_"))}`,
+    };
+  }
+  entries.push({
+    countryCode: "US",
+    eambrosiaId: null,
+    giType: "AVA",
+    grapes: [],
+    id,
+    latitude: ava.latitude,
+    legalUrl: `https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-${ava.section}`,
+    longitude: ava.longitude,
+    name: ava.name,
+    names: [
+      { locale: "*", name: ava.name, source: "register" as const },
+      ...Object.entries(ava.labels).map(([locale, name]) => ({
+        locale,
+        name,
+        source: "wikidata" as const,
+      })),
+    ],
+    pointSource: ava.pointSource,
+    prominence: Object.keys(leads).length,
+    registerRef: `27 CFR ${ava.section}`,
+    registeredOn: ava.registeredOn,
+    summaries,
+    wikidataId: ava.qid,
+  });
+}
+console.info(`  ${avas.length} American Viticultural Areas from 27 CFR part 9.`);
+
 // Grapes, by their own articles: a grape's region that is a registered name
 // in the same country links the two, with the grape's quoted sentence.
 const byName = new Map<string, RegionEntry>();
@@ -317,10 +383,11 @@ console.info(`  ${described} names described by a sentence of their country's wi
 // kontinentalna Hrvatska consists of two subregions: Hrvatsko Podunavlje and
 // Slavonija"): the median of their points, approximate.
 for (const entry of entries) {
-  const parts = curatedAreas[entry.eambrosiaId]?.parts;
+  const parts = curatedAreas[entry.eambrosiaId ?? entry.id]?.parts;
   if (parts === undefined || entry.pointSource === "item") continue;
   const points = entries.filter(
-    (other) => parts.includes(other.eambrosiaId) && other.latitude !== null,
+    (other) =>
+      other.eambrosiaId !== null && parts.includes(other.eambrosiaId) && other.latitude !== null,
   );
   if (points.length === 0) continue;
   entry.latitude = medianOf(points.map((other) => other.latitude!));
@@ -344,7 +411,7 @@ const notTheirSummary: Record<string, string[] | "all"> = {
   EUGI00000001983: ["fr"],
 };
 for (const entry of entries) {
-  const dropped = notTheirSummary[entry.eambrosiaId];
+  const dropped = notTheirSummary[entry.eambrosiaId ?? entry.id];
   if (dropped === "all") entry.summaries = {};
   else for (const locale of dropped ?? []) delete entry.summaries[locale];
 }
@@ -396,7 +463,7 @@ const translations = (
 ).regions;
 let translated = 0;
 for (const entry of entries) {
-  const translation = translations[entry.eambrosiaId];
+  const translation = translations[entry.eambrosiaId ?? entry.id];
   if (translation === undefined) continue;
   for (const [locale, text] of Object.entries(translation.texts)) {
     const key = locale === "pt-PT" ? "pt" : locale;
@@ -428,7 +495,7 @@ const journalSummaries = existsSync(journalSummariesPath)
   : {};
 let fromJournal = 0;
 for (const entry of entries) {
-  const journal = journalSummaries[entry.eambrosiaId];
+  const journal = journalSummaries[entry.eambrosiaId ?? entry.id];
   if (journal === undefined || Object.keys(entry.summaries).length > 0) continue;
   for (const [locale, summary] of Object.entries(journal.summaries)) {
     const key = locale === "pt-PT" ? "pt" : locale;
@@ -447,7 +514,7 @@ const technicalFiles = JSON.parse(
 ) as TechnicalFileSummaries;
 let fromTechnicalFile = 0;
 for (const entry of entries) {
-  const file = technicalFiles[entry.eambrosiaId];
+  const file = technicalFiles[entry.eambrosiaId ?? entry.id];
   if (file === undefined) continue;
   if (Object.values(entry.summaries).some((summary) => summary.license === undefined)) continue;
   entry.summaries[file.language] ??= {
@@ -550,7 +617,7 @@ function linkVariety(name: string, listed: Set<string>, families: Set<string>): 
   return synonym;
 }
 const documents = new Map<string, { text: string; url: string }>();
-for (const entry of entries) {
+for (const entry of entries.filter(inEuRegister)) {
   const recordPath = resolve(registerFolder, `${entry.eambrosiaId}.json`);
   if (!existsSync(recordPath)) continue;
   const record = JSON.parse(readFileSync(recordPath, "utf8")) as {
@@ -587,10 +654,10 @@ const families = new Set([...openings].filter(([, count]) => count >= 3).map(([w
 let documented = 0;
 let linkedVarieties = 0;
 for (const entry of entries) {
-  const document = documents.get(entry.eambrosiaId);
+  const document = documents.get(entry.eambrosiaId ?? entry.id);
   if (document === undefined) continue;
   const categories = registerCategories(document.text);
-  const names = varietiesOf.get(entry.eambrosiaId) ?? [];
+  const names = varietiesOf.get(entry.eambrosiaId ?? entry.id) ?? [];
   if (categories.length === 0 && names.length === 0) continue;
   const listed = new Set(
     names.map((name) => primaryName.get(matchKey(name))).filter((id): id is string => Boolean(id)),

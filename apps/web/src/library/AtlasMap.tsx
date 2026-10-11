@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-import map from "./europe-map.json";
+import america from "./america-map.json";
+import europe from "./europe-map.json";
 
 type MapData = {
   boxes: Record<string, [number, number, number, number]>;
@@ -11,22 +12,27 @@ type MapData = {
   squeeze: number;
   width: number;
 };
-const data = map as unknown as MapData;
+/** Europe's sheet first: a country drawn on both is shown among its neighbours there. */
+const sheets = [europe, america] as unknown as MapData[];
 
 /**
  * A small map: the country, its neighbours for bearings, and a point where
  * there is one. Drawn from outlines shipped with the app (Natural Earth,
- * public domain), so showing it asks no map service for anything.
+ * public domain), so showing it asks no map service for anything — on the
+ * sheet that holds the country: Europe's, or the Americas'.
  *
  * It frames the country's mainland, and the point if it lies beyond — the
  * Canaries' wines widen Spain's frame, Rioja's does not.
  */
-export function EuropeMap({
+export function AtlasMap({
+  caption = null,
   countryCode,
   label,
   latitude = null,
   longitude = null,
 }: {
+  /** Who drew the points, where it is not the European atlas's sources. */
+  caption?: string | null;
   countryCode: string | null;
   label: string;
   latitude?: number | null;
@@ -34,8 +40,9 @@ export function EuropeMap({
 }) {
   const { t } = useTranslation();
   const code = countryCode?.toUpperCase() ?? null;
-  const box = code === null ? undefined : data.boxes[code];
-  if (box === undefined) return null;
+  const data = code === null ? undefined : sheets.find((sheet) => sheet.boxes[code] !== undefined);
+  const box = code === null ? undefined : data?.boxes[code];
+  if (data === undefined || box === undefined) return null;
   const point =
     latitude === null || longitude === null
       ? null
@@ -89,7 +96,7 @@ export function EuropeMap({
       </svg>
       {/* The points' sources are credited only where a point is drawn. */}
       <figcaption className="section-help">
-        {t(point === null ? "library.mapSourceOutline" : "library.mapSource")}
+        {point === null ? t("library.mapSourceOutline") : (caption ?? t("library.mapSource"))}
       </figcaption>
     </figure>
   );

@@ -1,7 +1,13 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-import { matchKey, type RegionEntry, transliterate } from "./appellation-names";
+import {
+  type EuRegionEntry,
+  inEuRegister,
+  matchKey,
+  type RegionEntry,
+  transliterate,
+} from "./appellation-names";
 import { insideRegion, nutsRegion, type NutsRegion } from "./nuts";
 import { userAgent } from "./wikimedia";
 
@@ -40,9 +46,9 @@ const answers = (
     type?: string;
   }[]
 >;
-const regions = JSON.parse(
-  readFileSync(resolve("data/kb/appellations.json"), "utf8"),
-) as RegionEntry[];
+const regions = (
+  JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as RegionEntry[]
+).filter(inEuRegister);
 
 /** Openings that say what kind of wine name it is, not where. */
 const categoryWords = [
@@ -132,7 +138,7 @@ const grandCrusPath = resolve(cache, "grand-crus.json");
 const grandCrus = (
   existsSync(grandCrusPath) ? JSON.parse(readFileSync(grandCrusPath, "utf8")) : {}
 ) as Record<string, unknown>;
-const placedElsewhere = (region: RegionEntry) =>
+const placedElsewhere = (region: EuRegionEntry) =>
   wikidata[region.eambrosiaId]?.latitude != null ||
   region.names.some(
     (entry) => entry.source === "register" && grandCrus[matchKey(entry.name)] !== undefined,

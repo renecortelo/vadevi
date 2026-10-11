@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { EuropeMap } from "../library/EuropeMap";
+import { AtlasMap } from "../library/AtlasMap";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
 import { useLibraryTrail } from "../library/trail";
@@ -268,7 +268,7 @@ export function LibraryGrapePage() {
       {grape.originCountryCode === null || origin === null ? null : (
         <section aria-labelledby="library-origin" className="settings-card">
           <h2 id="library-origin">{t("library.originTitle")}</h2>
-          <EuropeMap countryCode={grape.originCountryCode} label={origin} />
+          <AtlasMap countryCode={grape.originCountryCode} label={origin} />
         </section>
       )}
 

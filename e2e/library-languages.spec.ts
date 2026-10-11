@@ -109,3 +109,34 @@ test("a summary from the register's technical file names its source", async ({ p
       : "traducido del idioma del documento",
   );
 });
+
+// A name beyond the EU, from its country's own register: an American
+// Viticultural Area, cited to its section of 27 CFR part 9, drawn on the
+// Americas' sheet at a point inside its official boundary.
+test("an American Viticultural Area cites the US register", async ({ page }) => {
+  const entry = read<{ id: string; legalUrl: string; registerRef: string; summaries: Summaries }[]>(
+    "data/kb/appellations.json",
+  ).find((candidate) => candidate.id === "us-napa-valley")!;
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library?tab=regions&country=US");
+  // The name itself, not "Crystal Springs of Napa Valley".
+  const row = page
+    .locator(".library-rows a")
+    .filter({ has: page.getByText("Napa Valley", { exact: true }) });
+  await expect(row).toContainText("AVA", { timeout: 15_000 });
+  await row.click();
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Napa Valley", { timeout: 15_000 });
+  await expect(page.locator(".page-heading")).toContainText("American Viticultural Area (AVA)");
+  await expect(page.locator(".library-summary p").first()).toHaveText(entry.summaries.en!.text);
+  await expect(page.locator("#region-register")).toHaveText(
+    "In the US register of viticultural areas",
+  );
+  const link = page.locator('a[href*="ecfr.gov"]');
+  await expect(link).toHaveAttribute("href", entry.legalUrl);
+  await expect(link).toContainText(entry.registerRef);
+  await expect(page.locator(".library-map svg")).toBeVisible();
+  await expect(page.locator(".library-map__point")).toBeVisible();
+  await expect(page.getByText("Inside its official boundary")).toBeVisible();
+});

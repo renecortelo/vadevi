@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-import type { RegionEntry } from "./appellation-names";
+import { inEuRegister, type RegionEntry } from "./appellation-names";
 import { cellarAddress } from "./fetch-appellation-areas";
 import { journalLanguages, type JournalLocale, linkSummary } from "./register-links";
 
@@ -83,9 +83,9 @@ async function read(uri: string, locale: JournalLocale): Promise<string | null> 
 }
 
 async function main() {
-  const entries = JSON.parse(
-    readFileSync(resolve("data/kb/appellations.json"), "utf8"),
-  ) as RegionEntry[];
+  const entries = (
+    JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as RegionEntry[]
+  ).filter(inEuRegister);
   const output = resolve("data/kb/register-summaries.json");
   const found: Summaries = {};
   // Every name no article describes, in any language: the register's own

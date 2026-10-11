@@ -165,8 +165,11 @@
     "pdo": "Denominació d'origen protegida (DOP)",
     "pgi": "Indicació geogràfica protegida (IGP)",
     "registerTitle": "Al registre de la UE",
+    "registerTitleUs": "Al registre d'àrees vitícoles dels EUA",
     "registeredOn": "Protegida a la UE des del {{date}}.",
+    "registeredOnUs": "Àrea vitícola nord-americana des del {{date}}.",
     "registerLink": "Veure-la al registre de la UE (eAmbrosia)",
+    "registerLinkUs": "Veure'n la secció al Codi de Reglaments Federals dels EUA ({{ref}}, eCFR)",
     "registerCategories": "Categories de producte",
     "wineCategory": {
       "1": "Vi",
@@ -185,6 +188,7 @@
     "registerDocument": "Document únic del registre",
     "grapesHere": "Raïms que s'hi conreen",
     "grapesHereNote": "Raïms que el seu propi article diu que s'hi conreen. No és la llista completa: les varietats autoritzades són al registre de la UE.",
+    "grapesHereNoteUs": "Raïms que el seu propi article diu que s'hi conreen. No és la llista completa: la norma d'una AVA traça la seva zona i no anomena raïms.",
     "home": {
       "title": "Biblioteca del vi",
       "intro": "Raïms, denominacions protegides, estils i mètodes, de fonts obertes: per consultar sense preguntar a Vicenç.",
@@ -216,17 +220,21 @@
     "topicMissing": "La biblioteca no té aquesta entrada.",
     "pdoShort": "DOP",
     "pgiShort": "IGP",
+    "ava": "Àrea vitícola nord-americana (AVA)",
+    "avaShort": "AVA",
     "photoAlt": "Raïm de {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "D'on ve",
     "mapLabel": "Mapa amb {{place}}",
     "mapSource": "Mapa: Natural Earth · Punts: Wikidata, NUTS © EuroGeographics, © col·laboradors d'OpenStreetMap",
+    "mapSourceUs": "Mapa: Natural Earth · Punts: projecte AVA de UC Davis, Wikidata",
     "mapSourceOutline": "Mapa: Natural Earth",
     "mapCountryOnly": "La zona exacta encara no és a la biblioteca; el mapa mostra el país.",
     "mapApproximate": {
       "area": "Punt aproximat: el centre de la zona on és la denominació.",
       "place": "Punt aproximat: el lloc que dona nom a la denominació."
     },
+    "mapBoundary": "Dins del seu límit oficial, tal com el traça el projecte AVA de UC Davis.",
     "summaryTranslated": "traduït de l'article original",
     "summaryTranslatedDocument": "traduït de la llengua del document",
     "backTo": "Tornar a {{name}}"

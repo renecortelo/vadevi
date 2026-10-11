@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-import type { RegionEntry } from "./appellation-names";
+import { inEuRegister, type RegionEntry } from "./appellation-names";
 import { fileLines, technicalFileLink } from "./technical-file-links";
 import { languageOf, type Language } from "./translation-check";
 
@@ -50,9 +50,9 @@ export type TechnicalFileSummaries = Record<
 >;
 
 function main() {
-  const entries = JSON.parse(
-    readFileSync(resolve("data/kb/appellations.json"), "utf8"),
-  ) as RegionEntry[];
+  const entries = (
+    JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as RegionEntry[]
+  ).filter(inEuRegister);
   const journal = JSON.parse(
     readFileSync(resolve("data/kb/register-summaries.json"), "utf8"),
   ) as Record<string, unknown>;

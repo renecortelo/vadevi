@@ -891,23 +891,30 @@ async function loadLibraryStatements(
       );
     }
   }
-  // Registered wine names the question names: what the EU register says,
-  // cited to it, and the grapes their own articles place there.
+  // Registered wine names the question names: what their register says —
+  // the EU's, or the country's own — cited to it, and the grapes their own
+  // articles place there.
   for (const regionId of await regionsMentionedIn(database, message)) {
     const region = await getLibraryRegion(database, regionId, locale);
     if (region === null || region.legalUrl === null) continue;
     const registerId = await librarySourceId(`region:${region.id}`);
+    const american = region.giType === "AVA";
     sources.push({
       canonicalUrl: region.legalUrl,
       createdAt: now,
       createdByProvider: "wine-library",
       createdByUserId: null,
       id: registerId,
-      licenseIdentifier: "EC-reuse-2011-833",
-      publisher: "European Commission (eAmbrosia)",
+      // The Code of Federal Regulations is a work of the US government.
+      licenseIdentifier: american ? "public-domain" : "EC-reuse-2011-833",
+      publisher: american
+        ? "US Code of Federal Regulations (eCFR)"
+        : "European Commission (eAmbrosia)",
       retrievedAt: now,
       sourceType: "regulator",
-      title: `${region.name} — eAmbrosia`,
+      title: american
+        ? `${region.name} — ${region.registerRef ?? "27 CFR 9"}`
+        : `${region.name} — eAmbrosia`,
       updatedAt: now,
     });
     const about = `wine library, registered wine name ${region.name}`;
@@ -921,7 +928,9 @@ async function loadLibraryStatements(
       });
     say(
       "register",
-      `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of ${region.countryCode}${region.registeredOn === null ? "" : `, registered on ${region.registeredOn}`}`,
+      american
+        ? `an American Viticultural Area (AVA) of the United States${region.registeredOn === null ? "" : `, established on ${region.registeredOn}`}`
+        : `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of ${region.countryCode}${region.registeredOn === null ? "" : `, registered on ${region.registeredOn}`}`,
       [registerId],
     );
     if (region.register !== null) {

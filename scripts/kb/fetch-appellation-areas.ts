@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-import { matchKey, type RegionEntry } from "./appellation-names";
+import { inEuRegister, matchKey, type RegionEntry } from "./appellation-names";
 import { userAgent } from "./wikimedia";
 
 /**
@@ -206,9 +206,9 @@ export function cellarAddress(uri: string): string | null {
 }
 
 async function main() {
-  const regions = JSON.parse(
-    readFileSync(resolve("data/kb/appellations.json"), "utf8"),
-  ) as RegionEntry[];
+  const regions = (
+    JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as RegionEntry[]
+  ).filter(inEuRegister);
   const wikidata = JSON.parse(readFileSync(resolve(cache, "wikidata.json"), "utf8")) as Record<
     string,
     { latitude: number | null; pointSource?: string | null }

@@ -165,8 +165,11 @@
     "pdo": "Geschützte Ursprungsbezeichnung (g.U.)",
     "pgi": "Geschützte geografische Angabe (g.g.A.)",
     "registerTitle": "Im EU-Register",
+    "registerTitleUs": "Im US-Register der Weinbaugebiete",
     "registeredOn": "In der EU geschützt seit dem {{date}}.",
+    "registeredOnUs": "American Viticultural Area seit dem {{date}}.",
     "registerLink": "Im EU-Register ansehen (eAmbrosia)",
+    "registerLinkUs": "Ihren Abschnitt im US Code of Federal Regulations ansehen ({{ref}}, eCFR)",
     "registerCategories": "Erzeugniskategorien",
     "wineCategory": {
       "1": "Wein",
@@ -185,6 +188,7 @@
     "registerDocument": "Einziges Dokument des Registers",
     "grapesHere": "Hier angebaute Rebsorten",
     "grapesHereNote": "Rebsorten, deren eigener Artikel sagt, dass sie hier angebaut werden. Keine vollständige Liste: die zugelassenen Sorten stehen im EU-Register.",
+    "grapesHereNoteUs": "Rebsorten, deren eigener Artikel sagt, dass sie hier angebaut werden. Keine vollständige Liste: Die Vorschrift einer AVA zieht ihre Grenzen und nennt keine Rebsorten.",
     "home": {
       "title": "Weinbibliothek",
       "intro": "Rebsorten, geschützte Weinbezeichnungen, Stile und Methoden aus offenen Quellen – zum Nachschlagen, ohne Vicenç zu fragen.",
@@ -216,17 +220,21 @@
     "topicMissing": "Diesen Eintrag gibt es in der Bibliothek nicht.",
     "pdoShort": "g.U.",
     "pgiShort": "g.g.A.",
+    "ava": "American Viticultural Area (AVA)",
+    "avaShort": "AVA",
     "photoAlt": "Traube von {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "Woher sie stammt",
     "mapLabel": "Karte mit {{place}}",
     "mapSource": "Karte: Natural Earth · Punkte: Wikidata, NUTS © EuroGeographics, © OpenStreetMap-Mitwirkende",
+    "mapSourceUs": "Karte: Natural Earth · Punkte: AVA-Projekt der UC Davis, Wikidata",
     "mapSourceOutline": "Karte: Natural Earth",
     "mapCountryOnly": "Das genaue Gebiet ist noch nicht in der Bibliothek; die Karte zeigt das Land.",
     "mapApproximate": {
       "area": "Ungefährer Punkt: die Mitte des Gebiets, in dem die Bezeichnung liegt.",
       "place": "Ungefährer Punkt: der Ort, nach dem die Bezeichnung benannt ist."
     },
+    "mapBoundary": "Innerhalb ihrer amtlichen Grenze, wie das AVA-Projekt der UC Davis sie zeichnet.",
     "summaryTranslated": "aus dem Originalartikel übersetzt",
     "summaryTranslatedDocument": "aus der Sprache des Dokuments übersetzt",
     "backTo": "Zurück zu {{name}}"

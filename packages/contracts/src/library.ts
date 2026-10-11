@@ -135,12 +135,20 @@ export const LibraryGrapePathSchema = z
   .object({ grapeId: z.string().regex(/^[a-z0-9-]{1,80}$/) })
   .strict();
 
-/** A protected wine name from the EU register, with what the library adds. */
+/**
+ * How a register designates a protected wine name: the EU's PDO and PGI, and
+ * other countries' own — the American Viticultural Area of 27 CFR part 9.
+ */
+export const RegionDesignationSchema = z.enum(["PDO", "PGI", "AVA"]);
+export type RegionDesignation = z.infer<typeof RegionDesignationSchema>;
+
+/** A protected wine name from its register, with what the library adds. */
 export const LibraryRegionSchema = z
   .object({
     countryCode: z.string().length(2),
-    eambrosiaId: z.string(),
-    giType: z.enum(["PDO", "PGI"]),
+    /** The EU register's id; null for a name another country's register holds. */
+    eambrosiaId: z.string().nullable(),
+    giType: RegionDesignationSchema,
     grapes: z.array(
       z
         .object({
@@ -158,11 +166,14 @@ export const LibraryRegionSchema = z
     name: z.string(),
     otherNames: z.array(z.string()),
     /**
-     * Where the point comes from: the wine's own item, or — approximately —
-     * the area it lies in or the town it is named after. Null without one.
+     * Where the point comes from: inside the name's official boundary, the
+     * wine's own item, or — approximately — the area it lies in or the town
+     * it is named after. Null without one.
      */
-    pointSource: z.enum(["item", "area", "place"]).nullable(),
+    pointSource: z.enum(["boundary", "item", "area", "place"]).nullable(),
     registeredOn: z.string().nullable(),
+    /** Its place in a register other than the EU's: "27 CFR 9.23". */
+    registerRef: z.string().nullable(),
     /**
      * What the name's single document in the EU register says of its wines:
      * the categories of grapevine product it covers (their number in Annex
@@ -221,7 +232,7 @@ export const LibraryRegionSearchResponseSchema = z
       z
         .object({
           countryCode: z.string(),
-          giType: z.enum(["PDO", "PGI"]),
+          giType: RegionDesignationSchema,
           id: z.string(),
           name: z.string(),
         })

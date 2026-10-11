@@ -165,8 +165,11 @@
     "pdo": "Denominação de origem protegida (DOP)",
     "pgi": "Indicação geográfica protegida (IGP)",
     "registerTitle": "No registo da UE",
+    "registerTitleUs": "No registo de áreas vitícolas dos EUA",
     "registeredOn": "Protegida na UE desde {{date}}.",
+    "registeredOnUs": "Área vitícola americana desde {{date}}.",
     "registerLink": "Ver no registo da UE (eAmbrosia)",
+    "registerLinkUs": "Ver a sua secção do Código de Regulamentos Federais dos EUA ({{ref}}, eCFR)",
     "registerCategories": "Categorias de produtos",
     "wineCategory": {
       "1": "Vinho",
@@ -185,6 +188,7 @@
     "registerDocument": "Documento único do registo",
     "grapesHere": "Castas cultivadas aqui",
     "grapesHereNote": "Castas cujo próprio artigo diz que são cultivadas aqui. Não é a lista completa: as castas autorizadas estão no registo da UE.",
+    "grapesHereNoteUs": "Castas cujo próprio artigo diz que são cultivadas aqui. Não é a lista completa: a norma de uma AVA traça a sua área e não nomeia castas.",
     "home": {
       "title": "Biblioteca do vinho",
       "intro": "Castas, denominações protegidas, estilos e métodos, de fontes abertas — para consultar sem perguntar ao Vicenç.",
@@ -216,17 +220,21 @@
     "topicMissing": "A biblioteca não tem esta entrada.",
     "pdoShort": "DOP",
     "pgiShort": "IGP",
+    "ava": "Área vitícola americana (AVA)",
+    "avaShort": "AVA",
     "photoAlt": "Cacho de {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "De onde vem",
     "mapLabel": "Mapa com {{place}}",
     "mapSource": "Mapa: Natural Earth · Pontos: Wikidata, NUTS © EuroGeographics, © colaboradores do OpenStreetMap",
+    "mapSourceUs": "Mapa: Natural Earth · Pontos: projeto AVA da UC Davis, Wikidata",
     "mapSourceOutline": "Mapa: Natural Earth",
     "mapCountryOnly": "A zona exata ainda não está na biblioteca; o mapa mostra o país.",
     "mapApproximate": {
       "area": "Ponto aproximado: o centro da zona onde fica a denominação.",
       "place": "Ponto aproximado: o lugar que dá nome à denominação."
     },
+    "mapBoundary": "Dentro do seu limite oficial, tal como o traça o projeto AVA da UC Davis.",
     "summaryTranslated": "traduzido do artigo original",
     "summaryTranslatedDocument": "traduzido da língua do documento",
     "backTo": "Voltar a {{name}}"

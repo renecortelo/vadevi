@@ -4,6 +4,22 @@ What changed between releases, for readers and for anyone running their own
 deployment. Each release lists what you will notice first; the commit history
 has the reasons.
 
+## Unreleased
+
+### The atlas beyond the EU
+
+- **Every EU name described**: 1,636 of the 1,637 registered names now have a
+  summary — from Wikipedia, from the name's single document in the Official
+  Journal (in the EU's own translations), or from its technical file in the
+  EU register, translated faithfully and marked as such. Catalan readers are
+  shown the Spanish text where the Journal publishes no Catalan one.
+- **American Viticultural Areas**: all 280, from the Code of Federal
+  Regulations (27 CFR part 9), each placed inside its official boundary (UC
+  Davis AVA project) on a new map of the Americas and linked to its section
+  on eCFR. A wine recorded as "Napa Valley" links to its page.
+- **Deploying your own**: migration `0033` rebuilds the atlas table so it can
+  hold names outside the EU register; the deploy's library load fills it.
+
 ## 0.2.0 — 10 October 2026
 
 ### A wine library, from open sources

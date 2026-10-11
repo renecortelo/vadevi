@@ -165,8 +165,11 @@
     "pdo": "Beschermde oorsprongsbenaming (BOB)",
     "pgi": "Beschermde geografische aanduiding (BGA)",
     "registerTitle": "In het EU-register",
+    "registerTitleUs": "In het Amerikaanse register van wijnbouwgebieden",
     "registeredOn": "Beschermd in de EU sinds {{date}}.",
+    "registeredOnUs": "American Viticultural Area sinds {{date}}.",
     "registerLink": "Bekijken in het EU-register (eAmbrosia)",
+    "registerLinkUs": "De sectie in de Amerikaanse Code of Federal Regulations bekijken ({{ref}}, eCFR)",
     "registerCategories": "Productcategorieën",
     "wineCategory": {
       "1": "Wijn",
@@ -185,6 +188,7 @@
     "registerDocument": "Enig document van het register",
     "grapesHere": "Druiven die hier groeien",
     "grapesHereNote": "Druiven waarvan het eigen artikel zegt dat ze hier groeien. Geen volledige lijst: de toegestane rassen staan in het EU-register.",
+    "grapesHereNoteUs": "Druiven waarvan het eigen artikel zegt dat ze hier groeien. Geen volledige lijst: de regel van een AVA trekt de grenzen en noemt geen druiven.",
     "home": {
       "title": "Wijnbibliotheek",
       "intro": "Druiven, beschermde wijnbenamingen, stijlen en methoden uit open bronnen — om te raadplegen zonder Vicenç te vragen.",
@@ -216,17 +220,21 @@
     "topicMissing": "De bibliotheek heeft dit item niet.",
     "pdoShort": "BOB",
     "pgiShort": "BGA",
+    "ava": "American Viticultural Area (AVA)",
+    "avaShort": "AVA",
     "photoAlt": "Tros {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "Waar ze vandaan komt",
     "mapLabel": "Kaart met {{place}}",
     "mapSource": "Kaart: Natural Earth · Punten: Wikidata, NUTS © EuroGeographics, © OpenStreetMap-bijdragers",
+    "mapSourceUs": "Kaart: Natural Earth · Punten: AVA-project van UC Davis, Wikidata",
     "mapSourceOutline": "Kaart: Natural Earth",
     "mapCountryOnly": "Het precieze gebied staat nog niet in de bibliotheek; de kaart toont het land.",
     "mapApproximate": {
       "area": "Benaderd punt: het midden van het gebied waarin de benaming ligt.",
       "place": "Benaderd punt: de plaats waarnaar de benaming is genoemd."
     },
+    "mapBoundary": "Binnen de officiële grens, zoals het AVA-project van UC Davis die tekent.",
     "summaryTranslated": "vertaald uit het oorspronkelijke artikel",
     "summaryTranslatedDocument": "vertaald uit de taal van het document",
     "backTo": "Terug naar {{name}}"

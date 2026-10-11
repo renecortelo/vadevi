@@ -1,7 +1,8 @@
 # The wine library
 
-Reference knowledge about grapes and the EU's registered wine names, loaded
-into D1 (migrations `0025`–`0030`) by
+Reference knowledge about grapes and the world's registered wine names — the
+EU's, and the American Viticultural Areas so far — loaded into D1 (migrations
+`0025`–`0030` and `0033`) by
 `pnpm kb:load` — and by every deploy, which reloads only when this directory
 changes, and then writes only the rows that changed. D1's free plan allows
 100,000 written rows a day for the whole database, the application's own
@@ -11,13 +12,13 @@ questions ("what does a Garnacha smell like?").
 
 ## Where it comes from
 
-| File                | Built by                                                                    | Sources                                                               |
-| ------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `grapes.json`       | `pnpm kb:fetch-grapes`, `pnpm kb:extract-grapes`, `pnpm kb:build-grapes`    | Wikidata (names, aliases), Wikipedia (prose)                          |
-| `terms.json`        | by hand                                                                     | The vocabulary aromas and foods are shown in, in eight languages      |
-| `appellations.json` | `pnpm kb:fetch-appellations`, `pnpm kb:build-appellations`                  | eAmbrosia (the EU register), Wikidata, Wikipedia                      |
-| `topics.json`       | `pnpm kb:fetch-topics`, `pnpm kb:build-topics` (from `topics-include.json`) | Wikidata (names), Wikipedia (explanations)                            |
-| `grape-images.json` | `pnpm kb:fetch-grape-images`                                                | Wikimedia Commons (photographs, in `apps/web/public/library/grapes/`) |
+| File                | Built by                                                                                       | Sources                                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `grapes.json`       | `pnpm kb:fetch-grapes`, `pnpm kb:extract-grapes`, `pnpm kb:build-grapes`                       | Wikidata (names, aliases), Wikipedia (prose)                                                     |
+| `terms.json`        | by hand                                                                                        | The vocabulary aromas and foods are shown in, in eight languages                                 |
+| `appellations.json` | `pnpm kb:fetch-appellations`, `pnpm kb:fetch-world-appellations`, `pnpm kb:build-appellations` | eAmbrosia (the EU register), 27 CFR part 9 (eCFR), the UC Davis AVA project, Wikidata, Wikipedia |
+| `topics.json`       | `pnpm kb:fetch-topics`, `pnpm kb:build-topics` (from `topics-include.json`)                    | Wikidata (names), Wikipedia (explanations)                                                       |
+| `grape-images.json` | `pnpm kb:fetch-grape-images`                                                                   | Wikimedia Commons (photographs, in `apps/web/public/library/grapes/`)                            |
 
 Every structured value carries `evidence`: the sentence of the English
 Wikipedia article it was read from. A language model reads the article and
@@ -100,6 +101,30 @@ name, and not for the synonyms `build-appellations.ts` lists as naming a
 variety of their own ("Aglianicone", "Trebbiano Giallo", "Moreto"…). An
 unlinked variety is shown as the register writes it.
 
+## Beyond the EU
+
+The EU register holds only the few names other countries have protected
+there, so each country's names come from its own official register
+(`pnpm kb:fetch-world-appellations`, then the build), with no model either.
+
+**United States.** Every American Viticultural Area is a section of the Code
+of Federal Regulations, 27 CFR part 9, subpart C, read from eCFR as of its
+latest issue: the name is the one its paragraph (a) gives, with the words it
+must be qualified by ("Solano County Green Valley"). The UC Davis AVA project
+has drawn each official boundary; it gives the states the area lies in, the
+date it was established, and a point inside its boundary — exact, unlike the
+EU names' approximate points (`pointSource: "boundary"`). The few areas not
+yet drawn take their Wikidata item's point. Wikidata items are matched by
+name among those filed as AVAs, or by the English article titled
+"<name> AVA"; a name two items share links neither. The summary is the
+article's lead, as for EU names; an AVA's rule draws its area and names no
+grapes, so its grapes are only those their own articles place there. An AVA
+has no eAmbrosia id: its id in the library is `us-` and its name, and
+`registerRef` is its section ("27 CFR 9.23"), linked on eCFR.
+
+The small map draws a country on its sheet: Europe's, or the Americas'
+(`pnpm kb:build-map`, both from Natural Earth).
+
 ## Licences
 
 - **Wikidata** names and aliases: CC0 1.0.
@@ -107,6 +132,10 @@ unlinked variety is shown as the register writes it.
   and each grape records the article it came from (`url`, `wikipediaUrl`);
   the app shows that link next to the text. Text derived from these articles
   is shared under the same licence.
+
+- **27 CFR part 9** (eCFR): a work of the US government, public domain.
+- **UC Davis AVA project** boundaries
+  (https://github.com/UCDavisLibrary/ava): CC0 1.0; credited under the map.
 
 - **eAmbrosia** register data: © European Union, reused under the
   Commission's reuse notice (Decision 2011/833/EU). Each entry links back to

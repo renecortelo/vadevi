@@ -1,4 +1,4 @@
-import type { LibrarySearchResponse, LibraryTopic } from "@vadevi/contracts";
+import type { LibrarySearchResponse, LibraryTopic, RegionDesignation } from "@vadevi/contracts";
 import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -6,6 +6,7 @@ import { Link, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { GrapesIcon } from "../brand/NavIcons";
+import { designationKey } from "../library/designation";
 import { flagOf } from "../library/flag";
 import { listLibraryGrapes, listLibraryRegions, listLibraryTopics } from "../services/library";
 
@@ -34,7 +35,12 @@ const atlasCountries = [
   "RO",
   "SI",
   "SK",
+  "US",
 ];
+
+/** The designations a country's register gives: the EU's two, or its own. */
+const designationsOf = (country: string): RegionDesignation[] =>
+  country === "US" ? ["AVA"] : ["PDO", "PGI"];
 
 /** Where a reader of each language most likely starts looking. */
 const homeCountry: Record<string, string> = {
@@ -196,8 +202,11 @@ function RegionFilters({ locale, search, update }: FilterProps) {
           value={search.get("type") ?? ""}
         >
           <option value="">{t("library.home.any")}</option>
-          <option value="PDO">{t("library.pdo")}</option>
-          <option value="PGI">{t("library.pgi")}</option>
+          {designationsOf(search.get("country") ?? homeCountry[locale] ?? "ES").map((type) => (
+            <option key={type} value={type}>
+              {t(designationKey(type))}
+            </option>
+          ))}
         </select>
       </label>
     </>
@@ -328,9 +337,7 @@ function RegionList({
             <Link to={`/library/regions/${region.id}`}>
               <span aria-hidden="true">{flagOf(region.countryCode)}</span>
               <strong>{region.name}</strong>
-              <span className="library-rows__type">
-                {region.giType === "PDO" ? t("library.pdoShort") : t("library.pgiShort")}
-              </span>
+              <span className="library-rows__type">{t(designationKey(region.giType, true))}</span>
             </Link>
           </li>
         ))}

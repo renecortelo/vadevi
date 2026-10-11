@@ -1,4 +1,9 @@
-import type { LibraryGrape, LibraryRegion, LibraryTopic } from "@vadevi/contracts";
+import type {
+  LibraryGrape,
+  LibraryRegion,
+  LibraryTopic,
+  RegionDesignation,
+} from "@vadevi/contracts";
 
 import { suggestedPairingsFor } from "../adapters/grape-pairing";
 import { normalizeWineText } from "./wine-memory";
@@ -359,7 +364,7 @@ export async function searchLibraryRegions(
   database: D1Database,
   query: string | undefined,
   country: string | null = null,
-): Promise<{ countryCode: string; giType: "PDO" | "PGI"; id: string; name: string }[]> {
+): Promise<{ countryCode: string; giType: RegionDesignation; id: string; name: string }[]> {
   if (query === undefined) {
     // A country's names, all of them, for the library's list.
     if (country === null) return [];
@@ -369,7 +374,7 @@ export async function searchLibraryRegions(
         WHERE country_code = ? ORDER BY name LIMIT 1000`,
       )
       .bind(country)
-      .all<{ country_code: string; gi_type: "PDO" | "PGI"; id: string; name: string }>();
+      .all<{ country_code: string; gi_type: RegionDesignation; id: string; name: string }>();
     return rows.results.map((row) => ({
       countryCode: row.country_code,
       giType: row.gi_type,
@@ -391,7 +396,7 @@ export async function searchLibraryRegions(
       LIMIT 10`,
     )
     .bind(normalized, normalized, country, country, normalized)
-    .all<{ country_code: string; gi_type: "PDO" | "PGI"; id: string; name: string }>();
+    .all<{ country_code: string; gi_type: RegionDesignation; id: string; name: string }>();
   return rows.results.map((row) => ({
     countryCode: row.country_code,
     giType: row.gi_type,
@@ -410,22 +415,23 @@ export async function getLibraryRegion(
     .prepare(
       `SELECT id, eambrosia_id, name, country_code, gi_type, registered_on, legal_url,
         latitude, longitude, wikidata_id, point_source,
-        register_categories, register_grapes, register_source_url
+        register_categories, register_grapes, register_source_url, register_ref
       FROM kb_regions WHERE id = ?`,
     )
     .bind(regionId)
     .first<{
       country_code: string;
-      eambrosia_id: string;
-      gi_type: "PDO" | "PGI";
+      eambrosia_id: string | null;
+      gi_type: RegionDesignation;
       id: string;
       latitude: number | null;
       legal_url: string | null;
       longitude: number | null;
       name: string;
-      point_source: "area" | "item" | "place" | null;
+      point_source: "area" | "boundary" | "item" | "place" | null;
       register_categories: string | null;
       register_grapes: string | null;
+      register_ref: string | null;
       register_source_url: string | null;
       registered_on: string | null;
       wikidata_id: string | null;
@@ -508,6 +514,7 @@ export async function getLibraryRegion(
             sourceUrl: region.register_source_url,
           },
     registeredOn: region.registered_on,
+    registerRef: region.register_ref,
     summary:
       summary === null
         ? null

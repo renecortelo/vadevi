@@ -6,7 +6,8 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "../components/MapLink";
-import { EuropeMap } from "../library/EuropeMap";
+import { AtlasMap } from "../library/AtlasMap";
+import { designationKey, inEuRegister } from "../library/designation";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
 import { useLibraryTrail } from "../library/trail";
@@ -86,6 +87,7 @@ export function LibraryRegionPage() {
   const fromRegister =
     region.summary?.license === "EC-reuse-2011-833" &&
     region.summary.sourceUrl.includes("/eambrosia-public-api/");
+  const euRegister = inEuRegister(region.giType);
   const registered =
     region.registeredOn === null
       ? null
@@ -111,8 +113,7 @@ export function LibraryRegionPage() {
           <p className="eyebrow">{t("library.atlasEyebrow")}</p>
           <h1>{region.name}</h1>
           <p>
-            {t(region.giType === "PDO" ? "library.pdo" : "library.pgi")} ·{" "}
-            {flagOf(region.countryCode)} {countryName}
+            {t(designationKey(region.giType))} · {flagOf(region.countryCode)} {countryName}
           </p>
           {/* A point where Wikidata has one; otherwise the map searches the
               name in its country — most registered names have no point. */}
@@ -158,7 +159,8 @@ export function LibraryRegionPage() {
 
       <section aria-labelledby="region-map" className="settings-card">
         <h2 id="region-map">{t("library.whereTitle")}</h2>
-        <EuropeMap
+        <AtlasMap
+          caption={euRegister ? null : t("library.mapSourceUs")}
           countryCode={region.countryCode}
           label={region.name}
           latitude={region.latitude}
@@ -168,20 +170,28 @@ export function LibraryRegionPage() {
           <p className="section-help">{t("library.mapCountryOnly")}</p>
         ) : region.pointSource === "area" || region.pointSource === "place" ? (
           <p className="section-help">{t(`library.mapApproximate.${region.pointSource}`)}</p>
+        ) : region.pointSource === "boundary" ? (
+          <p className="section-help">{t("library.mapBoundary")}</p>
         ) : null}
       </section>
 
       <section aria-labelledby="region-register" className="settings-card">
-        <h2 id="region-register">{t("library.registerTitle")}</h2>
+        <h2 id="region-register">
+          {t(euRegister ? "library.registerTitle" : "library.registerTitleUs")}
+        </h2>
         <p>
           {registered === null
-            ? t(region.giType === "PDO" ? "library.pdo" : "library.pgi")
-            : t("library.registeredOn", { date: registered })}
+            ? t(designationKey(region.giType))
+            : t(euRegister ? "library.registeredOn" : "library.registeredOnUs", {
+                date: registered,
+              })}
         </p>
         {region.legalUrl === null ? null : (
           <p className="section-help">
             <a className="text-link" href={region.legalUrl} rel="noreferrer" target="_blank">
-              {t("library.registerLink")}
+              {euRegister
+                ? t("library.registerLink")
+                : t("library.registerLinkUs", { ref: region.registerRef ?? "27 CFR 9" })}
             </a>
           </p>
         )}
@@ -248,7 +258,9 @@ export function LibraryRegionPage() {
               </li>
             ))}
           </ul>
-          <p className="section-help">{t("library.grapesHereNote")}</p>
+          <p className="section-help">
+            {t(euRegister ? "library.grapesHereNote" : "library.grapesHereNoteUs")}
+          </p>
           <details className="library-evidence">
             <summary>{t("library.evidenceTitle", { count: region.grapes.length })}</summary>
             <ul>
