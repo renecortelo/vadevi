@@ -59,6 +59,7 @@ describe("translation checks", () => {
     expect(numbersIn("In 2002, 21,048,500 litres")).toEqual(["2002", "21048500"]);
     expect(numbersIn("γράφει το1599 για τα km2 και το CO2")).toEqual(["1599"]);
     expect(numbersIn("Plinio il Vecchio (I sec. d.C.)")).toEqual(numbersIn("(siglo I d. C.)"));
+    expect(numbersIn("Pline l’Ancien (Ier siècle apr. J.-C.)")).toEqual(["1"]);
     expect(numbersIn("da molti secoli il paesaggio")).toEqual([]);
     expect(numbersIn("unos 1 800 ha y 57 000 euros")).toEqual(["1800", "57000"]);
     expect(numbersIn("con decreto dell'01/09/97 del 12/09/1997 n 213")).toEqual(

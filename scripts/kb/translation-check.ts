@@ -284,10 +284,11 @@ function score(text: string, language: Language, against: Language): number {
 export function numbersIn(text: string): string[] {
   // A century in Roman numerals ("siglo XX", "segle XIX") is the 20th, the
   // 19th: the same number an English or German text writes in digits.
-  // Italian and French put the numeral first ("XX secolo", "XIXe siècle").
+  // Italian and French put the numeral first ("XX secolo", "XIXe siècle",
+  // "Ier siècle").
   const centuries = [
     ...text.matchAll(/\b(?:siglos?|segles?|siècles?|secoli|secolo|séculos?)\s+([IVXL]+)\b/gi),
-    ...text.matchAll(/\b([IVXL]+)(?:e|ᵉ)?\s+(?:secolo|secoli|siècles?)\b/g),
+    ...text.matchAll(/\b([IVXL]+)(?:er|e|ᵉʳ|ᵉ)?\s+(?:secolo|secoli|siècles?)\b/g),
     // Abbreviated: "Plinio il Vecchio (I sec. d.C.)", "X sec A.C.".
     ...text.matchAll(/\b([IVXL]+)\s+sec\b/g),
   ]
