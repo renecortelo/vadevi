@@ -5,8 +5,9 @@ import { dirname, resolve } from "node:path";
  * The library's maps: simplified outlines small enough to ship with the app,
  * so a region or a grape's origin is shown on a map without asking a tile
  * server for anything — one sheet for Europe and its neighbours
- * (`apps/web/src/library/europe-map.json`), one for the Americas
- * (`america-map.json`), each in its own frame. Natural Earth's 1:50m
+ * (`apps/web/src/library/europe-map.json`), one each for the Americas
+ * (`america-map.json`), Oceania (`oceania-map.json`) and southern Africa
+ * (`africa-map.json`), each in its own frame. Natural Earth's 1:50m
  * countries, public domain; download `ne_50m_admin_0_countries.geojson` into
  * `.kb-cache/map/` first.
  *
@@ -62,7 +63,7 @@ function buildSheet(
   // Each country's mainland, as a box: the frame a small map zooms to, so
   // Spain is not drawn at the scale of the Canaries' distance from it.
   const boxes: Record<string, [number, number, number, number]> = {};
-  const areas: Record<string, number> = {};
+  const rings: { area: number; box: [number, number, number, number]; code: string }[] = [];
   for (const feature of source.features) {
     const code = feature.properties.ISO_A2_EH ?? feature.properties.ISO_A2;
     if (code === undefined || !/^[A-Z]{2}$/.test(code)) continue;
@@ -120,18 +121,34 @@ function buildSheet(
           0,
         ) / 2,
       );
-      if (area > (areas[code] ?? 0)) {
-        areas[code] = area;
-        boxes[code] = [
-          Math.round(Math.min(...xs)),
-          Math.round(Math.min(...ys)),
-          Math.round(Math.max(...xs)),
-          Math.round(Math.max(...ys)),
-        ];
-      }
+      // A ring pinned wholly beyond the frame has no area to frame.
+      if (area > 0)
+        rings.push({
+          area,
+          box: [
+            Math.round(Math.min(...xs)),
+            Math.round(Math.min(...ys)),
+            Math.round(Math.max(...xs)),
+            Math.round(Math.max(...ys)),
+          ],
+          code,
+        });
       paths.push(`M${simple.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join("L")}Z`);
     }
     if (paths.length > 0) countries[code] = (countries[code] ?? "") + paths.join("");
+  }
+  // The mainland is the largest piece, and any at least half its size: New
+  // Zealand's two islands; not the Canaries, Sicily or Alaska.
+  for (const code of new Set(rings.map((ring) => ring.code))) {
+    const own = rings.filter((ring) => ring.code === code);
+    const largest = Math.max(...own.map((ring) => ring.area));
+    const main = own.filter((ring) => ring.area >= largest / 2).map((ring) => ring.box);
+    boxes[code] = [
+      Math.min(...main.map((box) => box[0])),
+      Math.min(...main.map((box) => box[1])),
+      Math.max(...main.map((box) => box[2])),
+      Math.max(...main.map((box) => box[3])),
+    ];
   }
 
   const output = resolve("apps/web/src/library", file);
@@ -152,3 +169,7 @@ buildSheet("europe-map.json", { latMax: 72, latMin: 26.5, lonMax: 45, lonMin: -3
 // The Americas' wine countries so far: the United States from Hawaii to
 // Maine, with Canada and Mexico around it for bearings.
 buildSheet("america-map.json", { latMax: 62, latMin: 15, lonMax: -52, lonMin: -162 }, 38);
+// Oceania: New Zealand, with Australia beside it.
+buildSheet("oceania-map.json", { latMax: -9, latMin: -48, lonMax: 179.5, lonMin: 112 }, -36);
+// Southern Africa: South Africa and its neighbours.
+buildSheet("africa-map.json", { latMax: -15, latMin: -35.5, lonMax: 37, lonMin: 10 }, -27);

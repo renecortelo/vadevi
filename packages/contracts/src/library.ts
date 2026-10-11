@@ -137,14 +137,36 @@ export const LibraryGrapePathSchema = z
 
 /**
  * How a register designates a protected wine name: the EU's PDO and PGI, and
- * other countries' own — the American Viticultural Area of 27 CFR part 9.
+ * other countries' own — the American Viticultural Area of 27 CFR part 9, New
+ * Zealand's registered geographical indication, South Africa's Wine of Origin.
  */
-export const RegionDesignationSchema = z.enum(["PDO", "PGI", "AVA"]);
+export const RegionDesignationSchema = z.enum(["PDO", "PGI", "AVA", "GI", "WO"]);
 export type RegionDesignation = z.infer<typeof RegionDesignationSchema>;
+
+/**
+ * The kinds of production area South Africa's Wine of Origin scheme defines,
+ * largest first.
+ */
+export const RegionLevelSchema = z.enum([
+  "overarchingUnit",
+  "unit",
+  "overarchingRegion",
+  "region",
+  "subregion",
+  "district",
+  "ward",
+]);
+export type RegionLevel = z.infer<typeof RegionLevelSchema>;
+
+const RegionLinkSchema = z
+  .object({ id: z.string(), level: RegionLevelSchema.nullable(), name: z.string() })
+  .strict();
 
 /** A protected wine name from its register, with what the library adds. */
 export const LibraryRegionSchema = z
   .object({
+    /** The names whose area lies within this one's, directly: a district's wards. */
+    contains: z.array(RegionLinkSchema),
     countryCode: z.string().length(2),
     /** The EU register's id; null for a name another country's register holds. */
     eambrosiaId: z.string().nullable(),
@@ -172,8 +194,10 @@ export const LibraryRegionSchema = z
      */
     pointSource: z.enum(["boundary", "item", "area", "place"]).nullable(),
     registeredOn: z.string().nullable(),
-    /** Its place in a register other than the EU's: "27 CFR 9.23". */
+    /** Its place in a register other than the EU's: "27 CFR 9.23", an IP number. */
     registerRef: z.string().nullable(),
+    /** The kind of area, where its register has several: a Wine of Origin ward. */
+    registerLevel: RegionLevelSchema.nullable(),
     /**
      * What the name's single document in the EU register says of its wines:
      * the categories of grapevine product it covers (their number in Annex
@@ -202,6 +226,8 @@ export const LibraryRegionSchema = z
       .strict()
       .nullable(),
     wikidataId: z.string().nullable(),
+    /** The names whose area holds this one's, the nearest first. */
+    within: z.array(RegionLinkSchema),
   })
   .strict()
   .openapi("LibraryRegion");

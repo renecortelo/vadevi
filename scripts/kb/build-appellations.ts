@@ -6,6 +6,8 @@ import {
   leadIsAboutWine,
   matchKey,
   type RegionEntry,
+  type RegisterLevel,
+  registerLevels,
   registerCountries,
   registerNames,
   transliterate,
@@ -234,13 +236,22 @@ const avas = (existsSync(worldPath) ? JSON.parse(readFileSync(worldPath, "utf8")
   qid: string | null;
   registeredOn: string | null;
   section: string;
+  within: string[];
 }[];
-for (const ava of avas) {
-  const base = `us-${slug(ava.name)}`;
+/** A new id for a name beyond the EU: its country and its name. */
+function worldId(country: string, name: string): string {
+  const base = `${country}-${slug(name)}`;
   let id = base;
   for (let suffix = 2; seen.has(id); suffix += 1) id = `${base}-${suffix}`;
   seen.add(id);
-  const leadsPath = ava.qid === null ? null : resolve(cache, "leads", `${ava.qid}.json`);
+  return id;
+}
+/** The Wikipedia leads of a name's item that are about its wine, as summaries. */
+function wikipediaSummaries(qid: string | null): {
+  leads: number;
+  summaries: RegionEntry["summaries"];
+} {
+  const leadsPath = qid === null ? null : resolve(cache, "leads", `${qid}.json`);
   const leads =
     leadsPath !== null && existsSync(leadsPath)
       ? (JSON.parse(readFileSync(leadsPath, "utf8")) as Record<
@@ -258,6 +269,14 @@ for (const ava of avas) {
       url: `https://${locale}.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(" ", "_"))}`,
     };
   }
+  return { leads: Object.keys(leads).length, summaries };
+}
+
+const avaIds = new Map<string, string>();
+for (const ava of avas) {
+  const id = worldId("us", ava.name);
+  avaIds.set(matchKey(ava.name), id);
+  const { leads, summaries } = wikipediaSummaries(ava.qid);
   entries.push({
     countryCode: "US",
     eambrosiaId: null,
@@ -277,14 +296,151 @@ for (const ava of avas) {
       })),
     ],
     pointSource: ava.pointSource,
-    prominence: Object.keys(leads).length,
+    prominence: leads,
     registerRef: `27 CFR ${ava.section}`,
     registeredOn: ava.registeredOn,
     summaries,
     wikidataId: ava.qid,
   });
 }
+// The AVAs each lies within, as UC Davis records them, the nearest first: the
+// one that itself lies within the most others.
+const avaEntries = new Map(
+  entries.filter((entry) => entry.giType === "AVA").map((entry) => [entry.id, entry]),
+);
+avas.forEach((ava) => {
+  const entry = avaEntries.get(avaIds.get(matchKey(ava.name))!)!;
+  const holders = ava.within
+    .map((name) => avaIds.get(matchKey(name)))
+    .filter((id): id is string => id !== undefined && id !== entry.id);
+  if (holders.length > 0) entry.within = [...new Set(holders)];
+});
+const depth = (id: string) =>
+  avas.find((ava) => avaIds.get(matchKey(ava.name)) === id)?.within.length ?? 0;
+for (const entry of avaEntries.values()) {
+  entry.within?.sort((left, right) => depth(right) - depth(left));
+}
 console.info(`  ${avas.length} American Viticultural Areas from 27 CFR part 9.`);
+
+// New Zealand: the geographical indications registered for wine, from
+// IPONZ's register (facts only), with their articles where Wikipedia has one
+// on their wine; points are approximate, the place each name is.
+const nzPath = resolve(".kb-cache/world/nz.json");
+const nzNames = (existsSync(nzPath) ? JSON.parse(readFileSync(nzPath, "utf8")) : []) as {
+  ipNumber: string;
+  latitude: number | null;
+  longitude: number | null;
+  names: string[];
+  qid: string | null;
+  registeredOn: string | null;
+  url: string;
+}[];
+for (const gi of nzNames) {
+  const { leads, summaries } = wikipediaSummaries(gi.qid);
+  entries.push({
+    countryCode: "NZ",
+    eambrosiaId: null,
+    giType: "GI",
+    grapes: [],
+    id: worldId("nz", gi.names[0]!),
+    latitude: gi.latitude,
+    legalUrl: gi.url,
+    longitude: gi.longitude,
+    name: gi.names[0]!,
+    names: gi.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+    pointSource: gi.latitude === null ? null : "place",
+    prominence: leads,
+    registerRef: gi.ipNumber,
+    registeredOn: gi.registeredOn,
+    summaries,
+    wikidataId: gi.qid,
+  });
+}
+console.info(`  ${nzNames.length} New Zealand geographical indications from IPONZ's register.`);
+
+// South Africa: the production areas of the Wine of Origin scheme, each with
+// the areas it lies in. One without a point of its own is placed at the
+// middle of the areas inside it, or else at the area it lies in —
+// approximately, as the page says; never at a whole province's.
+const zaPath = resolve(".kb-cache/world/za.json");
+const zaList = (
+  existsSync(zaPath) ? JSON.parse(readFileSync(zaPath, "utf8")) : { records: [], sourceUrl: "" }
+) as {
+  records: {
+    latitude: number | null;
+    level: RegisterLevel;
+    longitude: number | null;
+    names: string[];
+    qid: string | null;
+    within: string[];
+  }[];
+  sourceUrl: string;
+};
+const zaIds = new Map<string, string>();
+const zaEntries: RegionEntry[] = [];
+for (const area of zaList.records) {
+  const id = worldId("za", area.names[0]!);
+  zaIds.set(area.names[0]!, id);
+  const { leads, summaries } = wikipediaSummaries(area.qid);
+  zaEntries.push({
+    countryCode: "ZA",
+    eambrosiaId: null,
+    giType: "WO",
+    grapes: [],
+    id,
+    latitude: area.latitude,
+    legalUrl: zaList.sourceUrl,
+    longitude: area.longitude,
+    name: area.names[0]!,
+    names: area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+    pointSource: area.latitude === null ? null : "place",
+    prominence: leads,
+    registerLevel: area.level,
+    registeredOn: null,
+    summaries,
+    wikidataId: area.qid,
+  });
+}
+zaList.records.forEach((area, index) => {
+  const within = area.within.map((name) => zaIds.get(name)!).filter(Boolean);
+  if (within.length > 0) zaEntries[index]!.within = within;
+});
+// The largest last: a region's middle is that of its districts' and wards'.
+for (const entry of [...zaEntries].sort(
+  (left, right) =>
+    registerLevels.indexOf(right.registerLevel!) - registerLevels.indexOf(left.registerLevel!),
+)) {
+  if (entry.latitude !== null || ["unit", "overarchingUnit"].includes(entry.registerLevel!))
+    continue;
+  const inside = zaEntries.filter(
+    (other) =>
+      other.within?.includes(entry.id) === true &&
+      other.latitude !== null &&
+      other.pointSource === "place",
+  );
+  if (inside.length === 0) continue;
+  entry.latitude = medianOf(inside.map((other) => other.latitude!));
+  entry.longitude = medianOf(inside.map((other) => other.longitude!));
+  entry.pointSource = "area";
+}
+for (const entry of zaEntries) {
+  if (entry.latitude !== null) continue;
+  const holder = (entry.within ?? [])
+    .map((id) => zaEntries.find((other) => other.id === id)!)
+    .find(
+      (other) =>
+        other.latitude !== null && !["unit", "overarchingUnit"].includes(other.registerLevel!),
+    );
+  if (holder === undefined) continue;
+  entry.latitude = holder.latitude;
+  entry.longitude = holder.longitude;
+  entry.pointSource = "area";
+}
+entries.push(...zaEntries);
+console.info(
+  `  ${zaEntries.length} Wine of Origin production areas, ` +
+    `${zaEntries.filter((entry) => entry.latitude !== null).length} placed.`,
+);
 
 // Grapes, by their own articles: a grape's region that is a registered name
 // in the same country links the two, with the grape's quoted sentence.

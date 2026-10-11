@@ -161,6 +161,8 @@ export function libraryTables(
         "register_grapes",
         "register_source_url",
         "register_ref",
+        "register_level",
+        "within",
       ],
       ["id"],
       3,
@@ -191,6 +193,10 @@ export function libraryTables(
             ),
         region.register?.sourceUrl ?? null,
         region.registerRef ?? null,
+        region.registerLevel ?? null,
+        region.within === undefined || region.within.length === 0
+          ? null
+          : JSON.stringify(region.within),
       ]),
     ),
     table(

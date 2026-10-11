@@ -12,13 +12,14 @@ questions ("what does a Garnacha smell like?").
 
 ## Where it comes from
 
-| File                | Built by                                                                                       | Sources                                                                                          |
-| ------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `grapes.json`       | `pnpm kb:fetch-grapes`, `pnpm kb:extract-grapes`, `pnpm kb:build-grapes`                       | Wikidata (names, aliases), Wikipedia (prose)                                                     |
-| `terms.json`        | by hand                                                                                        | The vocabulary aromas and foods are shown in, in eight languages                                 |
-| `appellations.json` | `pnpm kb:fetch-appellations`, `pnpm kb:fetch-world-appellations`, `pnpm kb:build-appellations` | eAmbrosia (the EU register), 27 CFR part 9 (eCFR), the UC Davis AVA project, Wikidata, Wikipedia |
-| `topics.json`       | `pnpm kb:fetch-topics`, `pnpm kb:build-topics` (from `topics-include.json`)                    | Wikidata (names), Wikipedia (explanations)                                                       |
-| `grape-images.json` | `pnpm kb:fetch-grape-images`                                                                   | Wikimedia Commons (photographs, in `apps/web/public/library/grapes/`)                            |
+| File                     | Built by                                                                                       | Sources                                                                                                                                                                                                             |
+| ------------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `grapes.json`            | `pnpm kb:fetch-grapes`, `pnpm kb:extract-grapes`, `pnpm kb:build-grapes`                       | Wikidata (names, aliases), Wikipedia (prose)                                                                                                                                                                        |
+| `terms.json`             | by hand                                                                                        | The vocabulary aromas and foods are shown in, in eight languages                                                                                                                                                    |
+| `appellations.json`      | `pnpm kb:fetch-appellations`, `pnpm kb:fetch-world-appellations`, `pnpm kb:build-appellations` | eAmbrosia (the EU register), 27 CFR part 9 (eCFR), the UC Davis AVA project, IPONZ's register of geographical indications, the Wine of Origin scheme's production areas (SAWIS), OpenStreetMap, Wikidata, Wikipedia |
+| `za-wine-of-origin.json` | transcribed by hand                                                                            | The Wine of Origin scheme's list of production areas (SAWIS, February 2026)                                                                                                                                         |
+| `topics.json`            | `pnpm kb:fetch-topics`, `pnpm kb:build-topics` (from `topics-include.json`)                    | Wikidata (names), Wikipedia (explanations)                                                                                                                                                                          |
+| `grape-images.json`      | `pnpm kb:fetch-grape-images`                                                                   | Wikimedia Commons (photographs, in `apps/web/public/library/grapes/`)                                                                                                                                               |
 
 Every structured value carries `evidence`: the sentence of the English
 Wikipedia article it was read from. A language model reads the article and
@@ -122,8 +123,38 @@ grapes, so its grapes are only those their own articles place there. An AVA
 has no eAmbrosia id: its id in the library is `us-` and its name, and
 `registerRef` is its section ("27 CFR 9.23"), linked on eCFR.
 
-The small map draws a country on its sheet: Europe's, or the Americas'
-(`pnpm kb:build-map`, both from Natural Earth).
+The AVAs an AVA lies within, as UC Davis records them, become its `within`
+(the nearest first).
+
+**New Zealand.** The geographical indications registered for wine in the
+register IPONZ keeps under the Geographical Indications (Wine and Spirits)
+Registration Act 2006, read from the register's own export: the three the
+Act registered itself (New Zealand, North Island, South Island) and those
+registered since. Only facts are taken — each name, its IP number
+(`registerRef`), its date of registration and its page in the register,
+which each name links to — since the register's Crown copyright licence
+does not extend to the registers. A name's summary is the lead of the
+English article titled for its wine ("Marlborough wine region"), never the
+town's or the region's; its point is OpenStreetMap's for the place or area
+of that name, in the region the register gives — approximate
+(`pointSource: "place"`).
+
+**South Africa.** The production areas of the Wine of Origin scheme, as the
+list SAWIS publishes for the Wine and Spirit Board names them (February
+2026), transcribed by hand into `za-wine-of-origin.json`: each area's names
+as the list writes them (English, then Afrikaans), its kind
+(`registerLevel`: geographical unit, region, district, ward…) and the areas
+the list places it in, from which each gets its `within`. The list gives no
+dates. Points are OpenStreetMap's for the place of each name, in its
+province, and a ward's near its district's; an area with no point of its own
+takes the middle of the areas inside it, or else the point of the area it
+lies in (`pointSource: "area"`), never a whole province's. Summaries only
+where an English article is titled for the area's wine ("Western Cape
+wine"), or is the district's own (Breedekloof's, read by hand).
+
+The small map draws a country on its sheet: Europe's, the Americas',
+Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural
+Earth).
 
 ## Licences
 
@@ -136,6 +167,14 @@ The small map draws a country on its sheet: Europe's, or the Americas'
 - **27 CFR part 9** (eCFR): a work of the US government, public domain.
 - **UC Davis AVA project** boundaries
   (https://github.com/UCDavisLibrary/ava): CC0 1.0; credited under the map.
+- **IPONZ's register of geographical indications**: Crown copyright; only
+  facts are taken from it (names, IP numbers, dates), and each name links to
+  its page there.
+- **The Wine of Origin scheme's production areas** (SAWIS, for the Wine and
+  Spirit Board): official texts of a legislative nature have no copyright in
+  South Africa (Copyright Act 98 of 1978, s 12(8)(a)).
+- **OpenStreetMap** points (Nominatim): © OpenStreetMap contributors, ODbL
+  1.0; credited under the map.
 
 - **eAmbrosia** register data: © European Union, reused under the
   Commission's reuse notice (Decision 2011/833/EU). Each entry links back to

@@ -121,6 +121,19 @@ for (const [code, names] of Object.entries(countryNamesByCode)) {
 }
 
 /**
+ * A normalized region without the country name a label writes before or after
+ * it: "new zealand marlborough" and "marlborough new zealand" are
+ * "marlborough". The region as it was when it names no country, or is one.
+ */
+export function withoutCountryName(normalized: string): string {
+  for (const phrase of phraseToCode.keys()) {
+    if (normalized.startsWith(`${phrase} `)) return normalized.slice(phrase.length + 1);
+    if (normalized.endsWith(` ${phrase}`)) return normalized.slice(0, -phrase.length - 1);
+  }
+  return normalized;
+}
+
+/**
  * The ISO alpha-2 codes named in a question, most a reader would ever mean at
  * once being few. Matching is whole-phrase against the normalized message, so
  * "estados unidos" resolves even though neither word alone is a country, and a

@@ -1,6 +1,6 @@
 import { resolveAppellationCountries } from "./appellation-terms";
 import { producerKey } from "./producer-names";
-import { resolveCountryCodes } from "./country-terms";
+import { resolveCountryCodes, withoutCountryName } from "./country-terms";
 import { normalizeWineText } from "./wine-memory";
 
 /**
@@ -37,13 +37,19 @@ function accents(name: string): number {
   return [...name.normalize("NFD")].filter((letter) => /\p{M}/u.test(letter)).length;
 }
 
-/** A region's normalized name, then the same without each label in turn. */
+/**
+ * A region's normalized name, then the same without each label in turn, then
+ * without the country it names ("New Zealand Marlborough", "Marlborough, New
+ * Zealand").
+ */
 function nameForms(region: string): string[] {
   const forms = [normalizeWineText(region)];
   for (let bare = forms[0]!.replace(designationPrefix, ""); bare !== forms.at(-1);) {
     forms.push(bare);
     bare = bare.replace(designationPrefix, "");
   }
+  const local = withoutCountryName(forms.at(-1)!);
+  if (local !== forms.at(-1)) forms.push(local);
   return forms.filter((form) => form.length > 0);
 }
 

@@ -7,7 +7,7 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "../components/MapLink";
 import { AtlasMap } from "../library/AtlasMap";
-import { designationKey, inEuRegister } from "../library/designation";
+import { designationKey, inEuRegister, registerSuffix } from "../library/designation";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
 import { useLibraryTrail } from "../library/trail";
@@ -88,6 +88,8 @@ export function LibraryRegionPage() {
     region.summary?.license === "EC-reuse-2011-833" &&
     region.summary.sourceUrl.includes("/eambrosia-public-api/");
   const euRegister = inEuRegister(region.giType);
+  // The catalog keys of the name's own register: the EU's, or its country's.
+  const suffix = registerSuffix(region.giType);
   const registered =
     region.registeredOn === null
       ? null
@@ -160,7 +162,9 @@ export function LibraryRegionPage() {
       <section aria-labelledby="region-map" className="settings-card">
         <h2 id="region-map">{t("library.whereTitle")}</h2>
         <AtlasMap
-          caption={euRegister ? null : t("library.mapSourceUs")}
+          caption={
+            euRegister ? null : t(suffix === "Us" ? "library.mapSourceUs" : "library.mapSourceOsm")
+          }
           countryCode={region.countryCode}
           label={region.name}
           latitude={region.latitude}
@@ -176,22 +180,18 @@ export function LibraryRegionPage() {
       </section>
 
       <section aria-labelledby="region-register" className="settings-card">
-        <h2 id="region-register">
-          {t(euRegister ? "library.registerTitle" : "library.registerTitleUs")}
-        </h2>
+        <h2 id="region-register">{t(`library.registerTitle${suffix}`)}</h2>
         <p>
-          {registered === null
-            ? t(designationKey(region.giType))
-            : t(euRegister ? "library.registeredOn" : "library.registeredOnUs", {
-                date: registered,
-              })}
+          {region.registerLevel !== null
+            ? t(`library.woLevel.${region.registerLevel}`)
+            : registered === null
+              ? t(designationKey(region.giType))
+              : t(`library.registeredOn${suffix}`, { date: registered })}
         </p>
         {region.legalUrl === null ? null : (
           <p className="section-help">
             <a className="text-link" href={region.legalUrl} rel="noreferrer" target="_blank">
-              {euRegister
-                ? t("library.registerLink")
-                : t("library.registerLinkUs", { ref: region.registerRef ?? "27 CFR 9" })}
+              {t(`library.registerLink${suffix}`, { ref: region.registerRef ?? "" })}
             </a>
           </p>
         )}
@@ -246,6 +246,44 @@ export function LibraryRegionPage() {
         )}
       </section>
 
+      {region.within.length === 0 && region.contains.length === 0 ? null : (
+        <section aria-labelledby="region-nesting" className="settings-card">
+          <h2 id="region-nesting">{t("library.nestingTitle")}</h2>
+          {region.within.length === 0 ? null : (
+            <div className="library-pairing-group">
+              <h3>{t("library.withinTitle")}</h3>
+              <ul className="library-chips">
+                {region.within.map((holder) => (
+                  <li key={holder.id}>
+                    <Link className="text-link" state={trail} to={`/library/regions/${holder.id}`}>
+                      {holder.name}
+                    </Link>
+                    {holder.level === null
+                      ? null
+                      : ` · ${t(`library.woLevelName.${holder.level}`)}`}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {region.contains.length === 0 ? null : (
+            <div className="library-pairing-group">
+              <h3>{t("library.containsTitle")}</h3>
+              <ul className="library-chips">
+                {region.contains.map((held) => (
+                  <li key={held.id}>
+                    <Link className="text-link" state={trail} to={`/library/regions/${held.id}`}>
+                      {held.name}
+                    </Link>
+                    {held.level === null ? null : ` · ${t(`library.woLevelName.${held.level}`)}`}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      )}
+
       {region.grapes.length === 0 ? null : (
         <section aria-labelledby="region-grapes" className="settings-card">
           <h2 id="region-grapes">{t("library.grapesHere")}</h2>
@@ -259,7 +297,13 @@ export function LibraryRegionPage() {
             ))}
           </ul>
           <p className="section-help">
-            {t(euRegister ? "library.grapesHereNote" : "library.grapesHereNoteUs")}
+            {t(
+              euRegister
+                ? "library.grapesHereNote"
+                : suffix === "Us"
+                  ? "library.grapesHereNoteUs"
+                  : "library.grapesHereNoteOther",
+            )}
           </p>
           <details className="library-evidence">
             <summary>{t("library.evidenceTitle", { count: region.grapes.length })}</summary>

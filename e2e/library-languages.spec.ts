@@ -140,3 +140,49 @@ test("an American Viticultural Area cites the US register", async ({ page }) => 
   await expect(page.locator(".library-map__point")).toBeVisible();
   await expect(page.getByText("Inside its official boundary")).toBeVisible();
 });
+
+test("a New Zealand geographical indication links to IPONZ's register", async ({ page }) => {
+  const entry = read<{ id: string; legalUrl: string; registerRef: string; summaries: Summaries }[]>(
+    "data/kb/appellations.json",
+  ).find((candidate) => candidate.id === "nz-marlborough")!;
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library?tab=regions&country=NZ");
+  const row = page
+    .locator(".library-rows a")
+    .filter({ has: page.getByText("Marlborough", { exact: true }) });
+  await expect(row).toContainText("GI", { timeout: 15_000 });
+  await row.click();
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Marlborough", { timeout: 15_000 });
+  await expect(page.locator(".page-heading")).toContainText("Geographical indication (GI)");
+  await expect(page.locator(".library-summary p").first()).toHaveText(entry.summaries.en!.text);
+  await expect(page.locator("#region-register")).toHaveText(
+    "In New Zealand's register of geographical indications",
+  );
+  const link = page.locator('a[href*="iponz.govt.nz"]');
+  await expect(link).toHaveAttribute("href", entry.legalUrl);
+  await expect(link).toContainText(`IP number ${entry.registerRef}`);
+  await expect(page.locator(".library-map__point")).toBeVisible();
+  await expect(page.getByText("Points: © OpenStreetMap contributors")).toBeVisible();
+});
+
+test("a Wine of Origin district shows where it lies in the scheme", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/za-stellenbosch");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Stellenbosch", { timeout: 15_000 });
+  await expect(page.locator(".page-heading")).toContainText("Wine of Origin (WO)");
+  await expect(page.getByText("A district of the Wine of Origin scheme.")).toBeVisible();
+  await expect(page.locator('a[href*="sawis.co.za"]')).toBeVisible();
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting.getByRole("link", { name: "Coastal Region" })).toBeVisible();
+  await expect(nesting).toContainText("Coastal Region · region");
+  await expect(nesting).toContainText("Western Cape · geographical unit");
+  // Its wards, one of them followed to its own page.
+  await nesting.getByRole("link", { name: "Banghoek" }).click();
+  await expect(page.locator("h1")).toHaveText("Banghoek", { timeout: 15_000 });
+  await expect(page.getByText("A ward of the Wine of Origin scheme.")).toBeVisible();
+  await expect(nesting.getByRole("link", { name: "Stellenbosch", exact: true })).toBeVisible();
+});

@@ -31,16 +31,24 @@ const atlasCountries = [
   "LU",
   "MT",
   "NL",
+  "NZ",
   "PT",
   "RO",
   "SI",
   "SK",
   "US",
+  "ZA",
 ];
 
 /** The designations a country's register gives: the EU's two, or its own. */
 const designationsOf = (country: string): RegionDesignation[] =>
-  country === "US" ? ["AVA"] : ["PDO", "PGI"];
+  country === "US"
+    ? ["AVA"]
+    : country === "NZ"
+      ? ["GI"]
+      : country === "ZA"
+        ? ["WO"]
+        : ["PDO", "PGI"];
 
 /** Where a reader of each language most likely starts looking. */
 const homeCountry: Record<string, string> = {

@@ -3,6 +3,7 @@ import type {
   LibraryRegion,
   LibraryTopic,
   RegionDesignation,
+  RegionLevel,
 } from "@vadevi/contracts";
 
 import { suggestedPairingsFor } from "../adapters/grape-pairing";
@@ -415,7 +416,8 @@ export async function getLibraryRegion(
     .prepare(
       `SELECT id, eambrosia_id, name, country_code, gi_type, registered_on, legal_url,
         latitude, longitude, wikidata_id, point_source,
-        register_categories, register_grapes, register_source_url, register_ref
+        register_categories, register_grapes, register_source_url, register_ref,
+        register_level, within
       FROM kb_regions WHERE id = ?`,
     )
     .bind(regionId)
@@ -431,13 +433,16 @@ export async function getLibraryRegion(
       point_source: "area" | "boundary" | "item" | "place" | null;
       register_categories: string | null;
       register_grapes: string | null;
+      register_level: RegionLevel | null;
       register_ref: string | null;
       register_source_url: string | null;
       registered_on: string | null;
       wikidata_id: string | null;
+      within: string | null;
     }>();
   if (region === null) return null;
-  const [names, summaries, grapes] = await database.batch([
+  const withinIds = JSON.parse(region.within ?? "[]") as string[];
+  const [names, summaries, grapes, holders, held] = await database.batch([
     database
       .prepare(`SELECT locale, name FROM kb_names WHERE entity_type = 'region' AND entity_id = ?`)
       .bind(regionId),
@@ -463,7 +468,26 @@ export async function getLibraryRegion(
         ORDER BY grape.prominence DESC`,
       )
       .bind(locale.split("-")[0], regionId),
+    database
+      .prepare(
+        `SELECT id, name, register_level FROM kb_regions
+        WHERE id IN (SELECT value FROM json_each(?))`,
+      )
+      .bind(JSON.stringify(withinIds)),
+    // Every name inside this one, to keep those directly inside it.
+    database
+      .prepare(
+        `SELECT id, name, register_level, within FROM kb_regions
+        WHERE within IS NOT NULL AND EXISTS (SELECT 1 FROM json_each(within) WHERE value = ?)
+        ORDER BY name`,
+      )
+      .bind(regionId),
   ]);
+  type Linked = { id: string; name: string; register_level: RegionLevel | null };
+  const link = (row: Linked) => ({ id: row.id, level: row.register_level, name: row.name });
+  const holderRows = (holders?.results ?? []) as Linked[];
+  const heldRows = (held?.results ?? []) as (Linked & { within: string })[];
+  const inside = new Set(heldRows.map((row) => row.id));
   const nameRows = (names?.results ?? []) as { locale: string; name: string }[];
   const shortLocale = locale.split("-")[0];
   const primary =
@@ -479,6 +503,10 @@ export async function getLibraryRegion(
   }[];
   const summary = inReadersLanguage(summaryRows, locale);
   return {
+    // Directly: not also inside another name that is inside this one.
+    contains: heldRows
+      .filter((row) => (JSON.parse(row.within) as string[]).every((holder) => !inside.has(holder)))
+      .map(link),
     countryCode: region.country_code,
     eambrosiaId: region.eambrosia_id,
     giType: region.gi_type,
@@ -514,6 +542,7 @@ export async function getLibraryRegion(
             sourceUrl: region.register_source_url,
           },
     registeredOn: region.registered_on,
+    registerLevel: region.register_level,
     registerRef: region.register_ref,
     summary:
       summary === null
@@ -526,6 +555,10 @@ export async function getLibraryRegion(
             translated: summary.translated === 1,
           },
     wikidataId: region.wikidata_id,
+    within: withinIds.flatMap((id) => {
+      const row = holderRows.find((holder) => holder.id === id);
+      return row === undefined ? [] : [link(row)];
+    }),
   };
 }
 

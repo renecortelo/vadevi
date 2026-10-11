@@ -7,8 +7,11 @@ export type RegionEntry = {
   countryCode: string;
   /** The EU register's id; null for a name another country's register holds. */
   eambrosiaId: string | null;
-  /** The EU's PDO or PGI, or the designation of the country's own register. */
-  giType: "PDO" | "PGI" | "AVA";
+  /**
+   * The EU's PDO or PGI, or the designation of the country's own register:
+   * the United States' AVA, New Zealand's GI, South Africa's Wine of Origin.
+   */
+  giType: "PDO" | "PGI" | "AVA" | "GI" | "WO";
   grapes: { grapeId: string; quote: string; sourceUrl: string }[];
   id: string;
   latitude: number | null;
@@ -23,8 +26,12 @@ export type RegionEntry = {
   pointSource?: "area" | "boundary" | "item" | "place" | null;
   prominence: number;
   registeredOn: string | null;
-  /** Its place in a register other than the EU's: "27 CFR 9.23". */
+  /** Its place in a register other than the EU's: "27 CFR 9.23", an IP number. */
   registerRef?: string;
+  /** The kind of area, where its register has several: a Wine of Origin ward. */
+  registerLevel?: RegisterLevel;
+  /** The ids of the names whose area holds this one's, the nearest first. */
+  within?: string[];
   /**
    * What the register's single document says of the wines: the categories of
    * grapevine product (Annex VII numbers) and the main grape varieties as it
@@ -48,6 +55,18 @@ export type RegionEntry = {
   >;
   wikidataId: string | null;
 };
+
+/** South Africa's Wine of Origin scheme's kinds of production area, largest first. */
+export const registerLevels = [
+  "overarchingUnit",
+  "unit",
+  "overarchingRegion",
+  "region",
+  "subregion",
+  "district",
+  "ward",
+] as const;
+export type RegisterLevel = (typeof registerLevels)[number];
 
 /** An atlas entry the EU register holds: the ones its own documents describe. */
 export type EuRegionEntry = RegionEntry & { eambrosiaId: string };

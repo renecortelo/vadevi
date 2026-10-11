@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { resolveCountryCodes } from "../src/repositories/country-terms";
+import { resolveCountryCodes, withoutCountryName } from "../src/repositories/country-terms";
 
 describe("country name resolution", () => {
   it("resolves accented and localized country names to ISO codes", () => {
@@ -23,5 +23,19 @@ describe("country name resolution", () => {
   it("returns nothing for an empty or place-free question", () => {
     expect(resolveCountryCodes("")).toEqual([]);
     expect(resolveCountryCodes("which did I score highest?")).toEqual([]);
+  });
+});
+
+describe("a region without its country", () => {
+  it("drops the country a label writes before or after the region", () => {
+    expect(withoutCountryName("new zealand marlborough")).toBe("marlborough");
+    expect(withoutCountryName("marlborough new zealand")).toBe("marlborough");
+    expect(withoutCountryName("stellenbosch south africa")).toBe("stellenbosch");
+  });
+
+  it("keeps a region that names no country, or only one", () => {
+    expect(withoutCountryName("western cape")).toBe("western cape");
+    expect(withoutCountryName("new zealand")).toBe("new zealand");
+    expect(withoutCountryName("chilena")).toBe("chilena");
   });
 });

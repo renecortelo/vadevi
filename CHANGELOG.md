@@ -17,8 +17,17 @@ has the reasons.
   Regulations (27 CFR part 9), each placed inside its official boundary (UC
   Davis AVA project) on a new map of the Americas and linked to its section
   on eCFR. A wine recorded as "Napa Valley" links to its page.
+- **New Zealand**: its 22 wine geographical indications, from IPONZ's
+  register, each linked to its page there, on a new map of Oceania. A wine
+  recorded as "New Zealand Marlborough" links to Marlborough.
+- **South Africa**: the 150 production areas of the Wine of Origin scheme —
+  geographical units, regions, districts and wards — each showing the areas
+  it lies in and the ones inside it, on a new map of southern Africa.
+- **Within and inside**: a name's page lists the names whose area holds it
+  and those it holds — a ward's district and region, an AVA's larger AVAs.
 - **Deploying your own**: migration `0033` rebuilds the atlas table so it can
-  hold names outside the EU register; the deploy's library load fills it.
+  hold names outside the EU register, and `0034` adds where each lies; the
+  deploy's library load fills both.
 
 ## 0.2.0 — 10 October 2026
 

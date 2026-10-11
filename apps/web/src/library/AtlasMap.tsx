@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 
+import africa from "./africa-map.json";
 import america from "./america-map.json";
 import europe from "./europe-map.json";
+import oceania from "./oceania-map.json";
 
 type MapData = {
   boxes: Record<string, [number, number, number, number]>;
@@ -13,13 +15,14 @@ type MapData = {
   width: number;
 };
 /** Europe's sheet first: a country drawn on both is shown among its neighbours there. */
-const sheets = [europe, america] as unknown as MapData[];
+const sheets = [europe, america, oceania, africa] as unknown as MapData[];
 
 /**
  * A small map: the country, its neighbours for bearings, and a point where
  * there is one. Drawn from outlines shipped with the app (Natural Earth,
  * public domain), so showing it asks no map service for anything — on the
- * sheet that holds the country: Europe's, or the Americas'.
+ * sheet that holds the country: Europe's, the Americas', Oceania's or southern
+ * Africa's.
  *
  * It frames the country's mainland, and the point if it lies beyond — the
  * Canaries' wines widen Spain's frame, Rioja's does not.

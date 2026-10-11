@@ -11311,6 +11311,40 @@
       "LibraryRegion": {
         "type": "object",
         "properties": {
+          "contains": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "string",
+                  "nullable": true,
+                  "enum": [
+                    "overarchingUnit",
+                    "unit",
+                    "overarchingRegion",
+                    "region",
+                    "subregion",
+                    "district",
+                    "ward",
+                    null
+                  ]
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "level",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
           "countryCode": {
             "type": "string",
             "minLength": 2,
@@ -11325,7 +11359,9 @@
             "enum": [
               "PDO",
               "PGI",
-              "AVA"
+              "AVA",
+              "GI",
+              "WO"
             ]
           },
           "grapes": {
@@ -11399,6 +11435,20 @@
           "registerRef": {
             "type": "string",
             "nullable": true
+          },
+          "registerLevel": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "overarchingUnit",
+              "unit",
+              "overarchingRegion",
+              "region",
+              "subregion",
+              "district",
+              "ward",
+              null
+            ]
           },
           "register": {
             "type": "object",
@@ -11475,9 +11525,44 @@
           "wikidataId": {
             "type": "string",
             "nullable": true
+          },
+          "within": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "string",
+                  "nullable": true,
+                  "enum": [
+                    "overarchingUnit",
+                    "unit",
+                    "overarchingRegion",
+                    "region",
+                    "subregion",
+                    "district",
+                    "ward",
+                    null
+                  ]
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "level",
+                "name"
+              ],
+              "additionalProperties": false
+            }
           }
         },
         "required": [
+          "contains",
           "countryCode",
           "eambrosiaId",
           "giType",
@@ -11491,9 +11576,11 @@
           "pointSource",
           "registeredOn",
           "registerRef",
+          "registerLevel",
           "register",
           "summary",
-          "wikidataId"
+          "wikidataId",
+          "within"
         ],
         "additionalProperties": false
       },
@@ -11513,7 +11600,9 @@
                   "enum": [
                     "PDO",
                     "PGI",
-                    "AVA"
+                    "AVA",
+                    "GI",
+                    "WO"
                   ]
                 },
                 "id": {

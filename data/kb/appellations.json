@@ -255724,7 +255724,10 @@
         "url": "https://nl.wikipedia.org/wiki/Napa_Valley_AVA"
       }
     },
-    "wikidataId": "Q1151105"
+    "wikidataId": "Q1151105",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -255772,7 +255775,11 @@
         "url": "https://de.wikipedia.org/wiki/Chalone_AVA"
       }
     },
-    "wikidataId": "Q1060179"
+    "wikidataId": "Q1060179",
+    "within": [
+      "us-central-coast",
+      "us-gabilan-mountains"
+    ]
   },
   {
     "countryCode": "US",
@@ -255820,7 +255827,10 @@
         "url": "https://de.wikipedia.org/wiki/San_Pasqual_Valley_AVA"
       }
     },
-    "wikidataId": "Q2219868"
+    "wikidataId": "Q2219868",
+    "within": [
+      "us-south-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -255854,7 +255864,10 @@
         "url": "https://en.wikipedia.org/wiki/Guenoc_Valley_AVA"
       }
     },
-    "wikidataId": "Q5614823"
+    "wikidataId": "Q5614823",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -255902,7 +255915,12 @@
         "url": "https://de.wikipedia.org/wiki/Lime_Kiln_Valley_AVA"
       }
     },
-    "wikidataId": "Q1825414"
+    "wikidataId": "Q1825414",
+    "within": [
+      "us-cienega-valley",
+      "us-san-benito",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -255950,7 +255968,10 @@
         "url": "https://de.wikipedia.org/wiki/Santa_Maria_Valley_AVA"
       }
     },
-    "wikidataId": "Q1669646"
+    "wikidataId": "Q1669646",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256011,7 +256032,11 @@
         "url": "https://de.wikipedia.org/wiki/Sonoma_Valley_AVA"
       }
     },
-    "wikidataId": "Q826340"
+    "wikidataId": "Q826340",
+    "within": [
+      "us-sonoma-coast",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256179,7 +256204,13 @@
         "url": "https://de.wikipedia.org/wiki/Los_Carneros_AVA"
       }
     },
-    "wikidataId": "Q1870486"
+    "wikidataId": "Q1870486",
+    "within": [
+      "us-sonoma-valley",
+      "us-napa-valley",
+      "us-sonoma-coast",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256227,7 +256258,10 @@
         "url": "https://de.wikipedia.org/wiki/Fennville_AVA"
       }
     },
-    "wikidataId": "Q1404805"
+    "wikidataId": "Q1404805",
+    "within": [
+      "us-lake-michigan-shore"
+    ]
   },
   {
     "countryCode": "US",
@@ -256315,7 +256349,10 @@
         "url": "https://de.wikipedia.org/wiki/Edna_Valley_AVA"
       }
     },
-    "wikidataId": "Q1287253"
+    "wikidataId": "Q1287253",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256363,7 +256400,11 @@
         "url": "https://de.wikipedia.org/wiki/McDowell_Valley_AVA"
       }
     },
-    "wikidataId": "Q1915122"
+    "wikidataId": "Q1915122",
+    "within": [
+      "us-mendocino",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256416,7 +256457,10 @@
         "url": "https://de.wikipedia.org/wiki/California_Shenandoah_Valley_AVA"
       }
     },
-    "wikidataId": "Q771542"
+    "wikidataId": "Q771542",
+    "within": [
+      "us-sierra-foothills"
+    ]
   },
   {
     "countryCode": "US",
@@ -256464,7 +256508,11 @@
         "url": "https://de.wikipedia.org/wiki/Cienega_Valley_AVA"
       }
     },
-    "wikidataId": "Q1091786"
+    "wikidataId": "Q1091786",
+    "within": [
+      "us-san-benito",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256518,7 +256566,11 @@
         "url": "https://de.wikipedia.org/wiki/Paicines_AVA"
       }
     },
-    "wikidataId": "Q2046371"
+    "wikidataId": "Q2046371",
+    "within": [
+      "us-san-benito",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256671,7 +256723,11 @@
         "url": "https://de.wikipedia.org/wiki/Cole_Ranch_AVA"
       }
     },
-    "wikidataId": "Q828795"
+    "wikidataId": "Q828795",
+    "within": [
+      "us-mendocino",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256763,7 +256819,10 @@
         "url": "https://de.wikipedia.org/wiki/Solano_County_Green_Valley_AVA"
       }
     },
-    "wikidataId": "Q2298239"
+    "wikidataId": "Q2298239",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256806,7 +256865,10 @@
         "url": "https://de.wikipedia.org/wiki/Suisun_Valley_AVA"
       }
     },
-    "wikidataId": "Q1707546"
+    "wikidataId": "Q1707546",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -256849,7 +256911,11 @@
         "url": "https://de.wikipedia.org/wiki/Livermore_Valley_AVA"
       }
     },
-    "wikidataId": "Q1866441"
+    "wikidataId": "Q1866441",
+    "within": [
+      "us-san-francisco-bay",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257059,7 +257125,10 @@
         "url": "https://de.wikipedia.org/wiki/Temecula_Valley_AVA"
       }
     },
-    "wikidataId": "Q2402542"
+    "wikidataId": "Q2402542",
+    "within": [
+      "us-south-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257107,7 +257176,10 @@
         "url": "https://de.wikipedia.org/wiki/Isle_St._George_AVA"
       }
     },
-    "wikidataId": "Q1454225"
+    "wikidataId": "Q1454225",
+    "within": [
+      "us-lake-erie"
+    ]
   },
   {
     "countryCode": "US",
@@ -257160,7 +257232,13 @@
         "url": "https://de.wikipedia.org/wiki/Chalk_Hill_AVA"
       }
     },
-    "wikidataId": "Q1059721"
+    "wikidataId": "Q1059721",
+    "within": [
+      "us-russian-river-valley",
+      "us-northern-sonoma",
+      "us-sonoma-coast",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257213,7 +257291,11 @@
         "url": "https://de.wikipedia.org/wiki/Alexander_Valley_AVA"
       }
     },
-    "wikidataId": "Q1669449"
+    "wikidataId": "Q1669449",
+    "within": [
+      "us-northern-sonoma",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257272,7 +257354,10 @@
         "url": "https://de.wikipedia.org/wiki/Santa_Ynez_Valley_AVA"
       }
     },
-    "wikidataId": "Q2223286"
+    "wikidataId": "Q2223286",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257320,7 +257405,10 @@
         "url": "https://de.wikipedia.org/wiki/Bell_Mountain_AVA"
       }
     },
-    "wikidataId": "Q815710"
+    "wikidataId": "Q815710",
+    "within": [
+      "us-texas-hill-country"
+    ]
   },
   {
     "countryCode": "US",
@@ -257368,7 +257456,11 @@
         "url": "https://de.wikipedia.org/wiki/San_Lucas_AVA"
       }
     },
-    "wikidataId": "Q1678633"
+    "wikidataId": "Q1678633",
+    "within": [
+      "us-monterey",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257421,7 +257513,12 @@
         "url": "https://de.wikipedia.org/wiki/Green_Valley_of_Russian_River_Valley_AVA"
       }
     },
-    "wikidataId": "Q1544659"
+    "wikidataId": "Q1544659",
+    "within": [
+      "us-russian-river-valley",
+      "us-sonoma-coast",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257469,7 +257566,10 @@
         "url": "https://de.wikipedia.org/wiki/Carmel_Valley_AVA"
       }
     },
-    "wikidataId": "Q1043531"
+    "wikidataId": "Q1043531",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257517,7 +257617,11 @@
         "url": "https://de.wikipedia.org/wiki/Arroyo_Seco_AVA"
       }
     },
-    "wikidataId": "Q263615"
+    "wikidataId": "Q263615",
+    "within": [
+      "us-monterey",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257614,7 +257718,10 @@
         "url": "https://de.wikipedia.org/wiki/El_Dorado_AVA"
       }
     },
-    "wikidataId": "Q1324076"
+    "wikidataId": "Q1324076",
+    "within": [
+      "us-sierra-foothills"
+    ]
   },
   {
     "countryCode": "US",
@@ -257761,7 +257868,11 @@
         "url": "https://de.wikipedia.org/wiki/Dry_Creek_Valley_AVA"
       }
     },
-    "wikidataId": "Q1261546"
+    "wikidataId": "Q1261546",
+    "within": [
+      "us-northern-sonoma",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257883,7 +257994,12 @@
         "url": "https://de.wikipedia.org/wiki/Russian_River_Valley_AVA"
       }
     },
-    "wikidataId": "Q2177011"
+    "wikidataId": "Q2177011",
+    "within": [
+      "us-northern-sonoma",
+      "us-sonoma-coast",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -257984,7 +258100,10 @@
         "url": "https://de.wikipedia.org/wiki/Merritt_Island_AVA"
       }
     },
-    "wikidataId": "Q1922041"
+    "wikidataId": "Q1922041",
+    "within": [
+      "us-clarksburg"
+    ]
   },
   {
     "countryCode": "US",
@@ -258037,7 +258156,10 @@
         "url": "https://de.wikipedia.org/wiki/Yakima_Valley_AVA"
       }
     },
-    "wikidataId": "Q1570385"
+    "wikidataId": "Q1570385",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -258090,7 +258212,10 @@
         "url": "https://de.wikipedia.org/wiki/Northern_Sonoma_AVA"
       }
     },
-    "wikidataId": "Q1454419"
+    "wikidataId": "Q1454419",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -258143,7 +258268,10 @@
         "url": "https://de.wikipedia.org/wiki/Hermann_AVA"
       }
     },
-    "wikidataId": "Q1610495"
+    "wikidataId": "Q1610495",
+    "within": [
+      "us-ozark-mountain"
+    ]
   },
   {
     "countryCode": "US",
@@ -258229,7 +258357,10 @@
         "url": "https://de.wikipedia.org/wiki/Martha%E2%80%99s_Vineyard_AVA"
       }
     },
-    "wikidataId": "Q1903116"
+    "wikidataId": "Q1903116",
+    "within": [
+      "us-southeastern-new-england"
+    ]
   },
   {
     "countryCode": "US",
@@ -258389,7 +258520,11 @@
         "url": "https://de.wikipedia.org/wiki/Knights_Valley_AVA"
       }
     },
-    "wikidataId": "Q1493028"
+    "wikidataId": "Q1493028",
+    "within": [
+      "us-northern-sonoma",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -258437,7 +258572,11 @@
         "url": "https://de.wikipedia.org/wiki/Altus_AVA"
       }
     },
-    "wikidataId": "Q446275"
+    "wikidataId": "Q446275",
+    "within": [
+      "us-arkansas-mountain",
+      "us-ozark-mountain"
+    ]
   },
   {
     "countryCode": "US",
@@ -258590,7 +258729,10 @@
         "url": "https://de.wikipedia.org/wiki/York_Mountain_AVA"
       }
     },
-    "wikidataId": "Q2600822"
+    "wikidataId": "Q2600822",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -258638,7 +258780,10 @@
         "url": "https://de.wikipedia.org/wiki/Fiddletown_AVA"
       }
     },
-    "wikidataId": "Q1411155"
+    "wikidataId": "Q1411155",
+    "within": [
+      "us-sierra-foothills"
+    ]
   },
   {
     "countryCode": "US",
@@ -258681,7 +258826,11 @@
         "url": "https://de.wikipedia.org/wiki/Potter_Valley_AVA"
       }
     },
-    "wikidataId": "Q2106600"
+    "wikidataId": "Q2106600",
+    "within": [
+      "us-mendocino",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -258782,7 +258931,10 @@
         "url": "https://de.wikipedia.org/wiki/Paso_Robles_AVA"
       }
     },
-    "wikidataId": "Q2055633"
+    "wikidataId": "Q2055633",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -258878,7 +259030,11 @@
         "url": "https://de.wikipedia.org/wiki/Anderson_Valley_AVA"
       }
     },
-    "wikidataId": "Q491692"
+    "wikidataId": "Q491692",
+    "within": [
+      "us-mendocino",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -258926,7 +259082,10 @@
         "url": "https://de.wikipedia.org/wiki/Grand_River_Valley_AVA"
       }
     },
-    "wikidataId": "Q1542850"
+    "wikidataId": "Q1542850",
+    "within": [
+      "us-lake-erie"
+    ]
   },
   {
     "countryCode": "US",
@@ -258974,7 +259133,12 @@
         "url": "https://de.wikipedia.org/wiki/Pacheco_Pass_AVA"
       }
     },
-    "wikidataId": "Q2045379"
+    "wikidataId": "Q2045379",
+    "within": [
+      "us-santa-clara-valley",
+      "us-san-francisco-bay",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -259014,7 +259178,10 @@
         "url": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
       }
     },
-    "wikidataId": "Q7881781"
+    "wikidataId": "Q7881781",
+    "within": [
+      "us-southern-oregon"
+    ]
   },
   {
     "countryCode": "US",
@@ -259117,7 +259284,10 @@
         "url": "https://en.wikipedia.org/wiki/Walla_Walla_Valley_AVA"
       }
     },
-    "wikidataId": "Q7962694"
+    "wikidataId": "Q7962694",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -259234,7 +259404,10 @@
         "url": "https://de.wikipedia.org/wiki/Mendocino_AVA"
       }
     },
-    "wikidataId": "Q1278962"
+    "wikidataId": "Q1278962",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -259287,7 +259460,11 @@
         "url": "https://de.wikipedia.org/wiki/Howell_Mountain_AVA"
       }
     },
-    "wikidataId": "Q1631986"
+    "wikidataId": "Q1631986",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -259460,7 +259637,10 @@
         "url": "https://de.wikipedia.org/wiki/Monterey_AVA"
       }
     },
-    "wikidataId": "Q1946108"
+    "wikidataId": "Q1946108",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -259508,7 +259688,10 @@
         "url": "https://de.wikipedia.org/wiki/Clear_Lake_AVA"
       }
     },
-    "wikidataId": "Q224762"
+    "wikidataId": "Q224762",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -259585,7 +259768,10 @@
         "url": "https://de.wikipedia.org/wiki/The_Hamptons%2C_Long_Island_AVA"
       }
     },
-    "wikidataId": "Q788845"
+    "wikidataId": "Q788845",
+    "within": [
+      "us-long-island"
+    ]
   },
   {
     "countryCode": "US",
@@ -259628,7 +259814,11 @@
         "url": "https://de.wikipedia.org/wiki/Sonoma_Mountain_AVA"
       }
     },
-    "wikidataId": "Q2302339"
+    "wikidataId": "Q2302339",
+    "within": [
+      "us-sonoma-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -259801,7 +259991,10 @@
         "url": "https://de.wikipedia.org/wiki/North_Yuba_AVA"
       }
     },
-    "wikidataId": "Q371146"
+    "wikidataId": "Q371146",
+    "within": [
+      "us-sierra-foothills"
+    ]
   },
   {
     "countryCode": "US",
@@ -259997,7 +260190,10 @@
         "url": "https://de.wikipedia.org/wiki/San_Benito_AVA"
       }
     },
-    "wikidataId": "Q222950"
+    "wikidataId": "Q222950",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -260031,7 +260227,10 @@
         "url": "https://en.wikipedia.org/wiki/Kanawha_River_Valley_AVA"
       }
     },
-    "wikidataId": "Q6360817"
+    "wikidataId": "Q6360817",
+    "within": [
+      "us-ohio-river-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -260079,7 +260278,10 @@
         "url": "https://de.wikipedia.org/wiki/Arkansas_Mountain_AVA"
       }
     },
-    "wikidataId": "Q672893"
+    "wikidataId": "Q672893",
+    "within": [
+      "us-ozark-mountain"
+    ]
   },
   {
     "countryCode": "US",
@@ -260132,7 +260334,10 @@
         "url": "https://de.wikipedia.org/wiki/North_Fork_of_Long_Island_AVA"
       }
     },
-    "wikidataId": "Q2000670"
+    "wikidataId": "Q2000670",
+    "within": [
+      "us-long-island"
+    ]
   },
   {
     "countryCode": "US",
@@ -260214,7 +260419,10 @@
         "url": "https://de.wikipedia.org/wiki/Ozark_Highlands_AVA"
       }
     },
-    "wikidataId": "Q2043033"
+    "wikidataId": "Q2043033",
+    "within": [
+      "us-ozark-mountain"
+    ]
   },
   {
     "countryCode": "US",
@@ -260257,7 +260465,10 @@
         "url": "https://de.wikipedia.org/wiki/Sonoma_Coast_AVA"
       }
     },
-    "wikidataId": "Q1764996"
+    "wikidataId": "Q1764996",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -260300,7 +260511,11 @@
         "url": "https://de.wikipedia.org/wiki/Stags_Leap_District_AVA"
       }
     },
-    "wikidataId": "Q2328901"
+    "wikidataId": "Q2328901",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -260348,7 +260563,10 @@
         "url": "https://de.wikipedia.org/wiki/Ben_Lomond_Mountain_AVA"
       }
     },
-    "wikidataId": "Q816548"
+    "wikidataId": "Q816548",
+    "within": [
+      "us-santa-cruz-mountains"
+    ]
   },
   {
     "countryCode": "US",
@@ -260569,7 +260787,11 @@
         "url": "https://de.wikipedia.org/wiki/Mount_Veeder_AVA"
       }
     },
-    "wikidataId": "Q183511"
+    "wikidataId": "Q183511",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -260617,7 +260839,11 @@
         "url": "https://de.wikipedia.org/wiki/Wild_Horse_Valley_AVA"
       }
     },
-    "wikidataId": "Q2570330"
+    "wikidataId": "Q2570330",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -260670,7 +260896,10 @@
         "url": "https://de.wikipedia.org/wiki/Fredericksburg_in_the_Texas_Hill_Country_AVA"
       }
     },
-    "wikidataId": "Q113309"
+    "wikidataId": "Q113309",
+    "within": [
+      "us-texas-hill-country"
+    ]
   },
   {
     "countryCode": "US",
@@ -260727,7 +260956,11 @@
         "url": "https://de.wikipedia.org/wiki/Santa_Clara_Valley_AVA"
       }
     },
-    "wikidataId": "Q2222839"
+    "wikidataId": "Q2222839",
+    "within": [
+      "us-san-francisco-bay",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -260775,7 +261008,10 @@
         "url": "https://de.wikipedia.org/wiki/Cayuga_Lake_AVA"
       }
     },
-    "wikidataId": "Q1052050"
+    "wikidataId": "Q1052050",
+    "within": [
+      "us-finger-lakes"
+    ]
   },
   {
     "countryCode": "US",
@@ -260823,7 +261059,10 @@
         "url": "https://de.wikipedia.org/wiki/Seneca_Lake_AVA"
       }
     },
-    "wikidataId": "Q1408902"
+    "wikidataId": "Q1408902",
+    "within": [
+      "us-finger-lakes"
+    ]
   },
   {
     "countryCode": "US",
@@ -260871,7 +261110,10 @@
         "url": "https://de.wikipedia.org/wiki/Arroyo_Grande_Valley_AVA"
       }
     },
-    "wikidataId": "Q703208"
+    "wikidataId": "Q703208",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -260919,7 +261161,12 @@
         "url": "https://de.wikipedia.org/wiki/San_Ysidro_District_AVA"
       }
     },
-    "wikidataId": "Q2220146"
+    "wikidataId": "Q2220146",
+    "within": [
+      "us-santa-clara-valley",
+      "us-san-francisco-bay",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -260967,7 +261214,11 @@
         "url": "https://de.wikipedia.org/wiki/Mount_Harlan_AVA"
       }
     },
-    "wikidataId": "Q250964"
+    "wikidataId": "Q250964",
+    "within": [
+      "us-central-coast",
+      "us-gabilan-mountains"
+    ]
   },
   {
     "countryCode": "US",
@@ -260991,7 +261242,10 @@
     "registerRef": "27 CFR 9.132",
     "registeredOn": "1991-02-22",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "within": [
+      "us-southern-oregon"
+    ]
   },
   {
     "countryCode": "US",
@@ -261057,7 +261311,11 @@
         "url": "https://de.wikipedia.org/wiki/Rutherford_AVA"
       }
     },
-    "wikidataId": "Q1512490"
+    "wikidataId": "Q1512490",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261105,7 +261363,11 @@
         "url": "https://de.wikipedia.org/wiki/Oakville_AVA"
       }
     },
-    "wikidataId": "Q1748339"
+    "wikidataId": "Q1748339",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261303,7 +261565,10 @@
         "url": "https://de.wikipedia.org/wiki/Benmore_Valley_AVA"
       }
     },
-    "wikidataId": "Q817804"
+    "wikidataId": "Q817804",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261351,7 +261616,11 @@
         "url": "https://de.wikipedia.org/wiki/Santa_Lucia_Highlands_AVA"
       }
     },
-    "wikidataId": "Q2222992"
+    "wikidataId": "Q2222992",
+    "within": [
+      "us-monterey",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261413,7 +261682,11 @@
         "url": "https://de.wikipedia.org/wiki/Atlas_Peak_AVA"
       }
     },
-    "wikidataId": "Q757192"
+    "wikidataId": "Q757192",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261509,7 +261782,13 @@
         "url": "https://de.wikipedia.org/wiki/Bennett_Valley_AVA"
       }
     },
-    "wikidataId": "Q817854"
+    "wikidataId": "Q817854",
+    "within": [
+      "us-sonoma-mountain",
+      "us-sonoma-valley",
+      "us-sonoma-coast",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261552,7 +261831,11 @@
         "url": "https://de.wikipedia.org/wiki/Spring_Mountain_District_AVA"
       }
     },
-    "wikidataId": "Q2313841"
+    "wikidataId": "Q2313841",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261739,7 +262022,11 @@
         "url": "https://de.wikipedia.org/wiki/Hames_Valley_AVA"
       }
     },
-    "wikidataId": "Q1573357"
+    "wikidataId": "Q1573357",
+    "within": [
+      "us-monterey",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261830,7 +262117,11 @@
         "url": "https://de.wikipedia.org/wiki/St._Helena_AVA"
       }
     },
-    "wikidataId": "Q1765190"
+    "wikidataId": "Q1765190",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -261969,7 +262260,10 @@
         "url": "https://de.wikipedia.org/wiki/Malibu-Newton_Canyon_AVA"
       }
     },
-    "wikidataId": "Q1887322"
+    "wikidataId": "Q1887322",
+    "within": [
+      "us-malibu-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262017,7 +262311,11 @@
         "url": "https://de.wikipedia.org/wiki/Redwood_Valley_AVA"
       }
     },
-    "wikidataId": "Q1624781"
+    "wikidataId": "Q1624781",
+    "within": [
+      "us-mendocino",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262065,7 +262363,11 @@
         "url": "https://de.wikipedia.org/wiki/Chiles_Valley_AVA"
       }
     },
-    "wikidataId": "Q1072890"
+    "wikidataId": "Q1072890",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262199,7 +262501,10 @@
         "url": "https://de.wikipedia.org/wiki/San_Francisco_Bay_AVA"
       }
     },
-    "wikidataId": "Q2219535"
+    "wikidataId": "Q2219535",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262252,7 +262557,11 @@
         "url": "https://de.wikipedia.org/wiki/Mendocino_Ridge_AVA"
       }
     },
-    "wikidataId": "Q1920369"
+    "wikidataId": "Q1920369",
+    "within": [
+      "us-mendocino",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262300,7 +262609,11 @@
         "url": "https://de.wikipedia.org/wiki/Yorkville_Highlands_AVA"
       }
     },
-    "wikidataId": "Q2600872"
+    "wikidataId": "Q2600872",
+    "within": [
+      "us-mendocino",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262348,7 +262661,11 @@
         "url": "https://de.wikipedia.org/wiki/Yountville_AVA"
       }
     },
-    "wikidataId": "Q2601337"
+    "wikidataId": "Q2601337",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262396,7 +262713,11 @@
         "url": "https://de.wikipedia.org/wiki/Oak_Knoll_District_of_Napa_Valley_AVA"
       }
     },
-    "wikidataId": "Q1319214"
+    "wikidataId": "Q1319214",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262439,7 +262760,11 @@
         "url": "https://de.wikipedia.org/wiki/Sta._Rita_Hills_AVA"
       }
     },
-    "wikidataId": "Q7595677"
+    "wikidataId": "Q7595677",
+    "within": [
+      "us-santa-ynez-valley",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262583,7 +262908,10 @@
         "url": "https://de.wikipedia.org/wiki/Applegate_Valley_AVA"
       }
     },
-    "wikidataId": "Q621543"
+    "wikidataId": "Q621543",
+    "within": [
+      "us-southern-oregon"
+    ]
   },
   {
     "countryCode": "US",
@@ -262626,7 +262954,11 @@
         "url": "https://de.wikipedia.org/wiki/Diamond_Mountain_District_AVA"
       }
     },
-    "wikidataId": "Q1110765"
+    "wikidataId": "Q1110765",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262685,7 +263017,11 @@
         "url": "https://de.wikipedia.org/wiki/Red_Mountain_AVA"
       }
     },
-    "wikidataId": "Q1572683"
+    "wikidataId": "Q1572683",
+    "within": [
+      "us-yakima-valley",
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -262733,7 +263069,11 @@
         "url": "https://de.wikipedia.org/wiki/Fair_Play_AVA"
       }
     },
-    "wikidataId": "Q1393017"
+    "wikidataId": "Q1393017",
+    "within": [
+      "us-el-dorado",
+      "us-sierra-foothills"
+    ]
   },
   {
     "countryCode": "US",
@@ -262790,7 +263130,11 @@
         "url": "https://de.wikipedia.org/wiki/Red_Hills_Lake_County_AVA"
       }
     },
-    "wikidataId": "Q2135997"
+    "wikidataId": "Q2135997",
+    "within": [
+      "us-clear-lake",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262881,7 +263225,11 @@
         "url": "https://de.wikipedia.org/wiki/San_Bernabe_AVA"
       }
     },
-    "wikidataId": "Q2219290"
+    "wikidataId": "Q2219290",
+    "within": [
+      "us-monterey",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -262982,7 +263330,11 @@
         "url": "https://de.wikipedia.org/wiki/Rockpile_AVA"
       }
     },
-    "wikidataId": "Q2160744"
+    "wikidataId": "Q2160744",
+    "within": [
+      "us-northern-sonoma",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -263289,7 +263641,10 @@
         "url": "https://de.wikipedia.org/wiki/Dundee_Hills_AVA"
       }
     },
-    "wikidataId": "Q251411"
+    "wikidataId": "Q251411",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -263342,7 +263697,10 @@
         "url": "https://de.wikipedia.org/wiki/McMinnville_AVA"
       }
     },
-    "wikidataId": "Q925840"
+    "wikidataId": "Q925840",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -263395,7 +263753,11 @@
         "url": "https://de.wikipedia.org/wiki/Ribbon_Ridge_AVA"
       }
     },
-    "wikidataId": "Q178467"
+    "wikidataId": "Q178467",
+    "within": [
+      "us-chehalem-mountains",
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -263448,7 +263810,10 @@
         "url": "https://de.wikipedia.org/wiki/Yamhill-Carlton_District_AVA"
       }
     },
-    "wikidataId": "Q1566783"
+    "wikidataId": "Q1566783",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -263674,7 +264039,10 @@
         "url": "https://de.wikipedia.org/wiki/Horse_Heaven_Hills_AVA"
       }
     },
-    "wikidataId": "Q1628973"
+    "wikidataId": "Q1628973",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -263722,7 +264090,11 @@
         "url": "https://de.wikipedia.org/wiki/High_Valley_AVA"
       }
     },
-    "wikidataId": "Q1455026"
+    "wikidataId": "Q1455026",
+    "within": [
+      "us-clear-lake",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -263756,7 +264128,11 @@
         "url": "https://en.wikipedia.org/wiki/Red_Hill_Douglas_County_AVA"
       }
     },
-    "wikidataId": "Q7304271"
+    "wikidataId": "Q7304271",
+    "within": [
+      "us-umpqua-valley",
+      "us-southern-oregon"
+    ]
   },
   {
     "countryCode": "US",
@@ -263813,7 +264189,10 @@
         "url": "https://de.wikipedia.org/wiki/Ramona_Valley_AVA"
       }
     },
-    "wikidataId": "Q1302923"
+    "wikidataId": "Q1302923",
+    "within": [
+      "us-south-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -263847,7 +264226,10 @@
         "url": "https://en.wikipedia.org/wiki/Wahluke_Slope_AVA"
       }
     },
-    "wikidataId": "Q7959818"
+    "wikidataId": "Q7959818",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -263900,7 +264282,11 @@
         "url": "https://de.wikipedia.org/wiki/Rattlesnake_Hills_AVA"
       }
     },
-    "wikidataId": "Q1569501"
+    "wikidataId": "Q1569501",
+    "within": [
+      "us-yakima-valley",
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -263948,7 +264334,10 @@
         "url": "https://de.wikipedia.org/wiki/San_Antonio_Valley_AVA"
       }
     },
-    "wikidataId": "Q2219237"
+    "wikidataId": "Q2219237",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -263996,7 +264385,10 @@
         "url": "https://de.wikipedia.org/wiki/Alta_Mesa_AVA"
       }
     },
-    "wikidataId": "Q433582"
+    "wikidataId": "Q433582",
+    "within": [
+      "us-lodi"
+    ]
   },
   {
     "countryCode": "US",
@@ -264039,7 +264431,10 @@
         "url": "https://de.wikipedia.org/wiki/Borden_Ranch_AVA"
       }
     },
-    "wikidataId": "Q893402"
+    "wikidataId": "Q893402",
+    "within": [
+      "us-lodi"
+    ]
   },
   {
     "countryCode": "US",
@@ -264087,7 +264482,10 @@
         "url": "https://de.wikipedia.org/wiki/Clements_Hills_AVA"
       }
     },
-    "wikidataId": "Q1100382"
+    "wikidataId": "Q1100382",
+    "within": [
+      "us-lodi"
+    ]
   },
   {
     "countryCode": "US",
@@ -264135,7 +264533,10 @@
         "url": "https://de.wikipedia.org/wiki/Cosumnes_River_AVA"
       }
     },
-    "wikidataId": "Q1136553"
+    "wikidataId": "Q1136553",
+    "within": [
+      "us-lodi"
+    ]
   },
   {
     "countryCode": "US",
@@ -264183,7 +264584,10 @@
         "url": "https://de.wikipedia.org/wiki/Jahant_AVA"
       }
     },
-    "wikidataId": "Q1233697"
+    "wikidataId": "Q1233697",
+    "within": [
+      "us-lodi"
+    ]
   },
   {
     "countryCode": "US",
@@ -264231,7 +264635,10 @@
         "url": "https://de.wikipedia.org/wiki/Mokelumne_River_AVA"
       }
     },
-    "wikidataId": "Q768554"
+    "wikidataId": "Q768554",
+    "within": [
+      "us-lodi"
+    ]
   },
   {
     "countryCode": "US",
@@ -264274,7 +264681,10 @@
         "url": "https://de.wikipedia.org/wiki/Sloughhouse_AVA"
       }
     },
-    "wikidataId": "Q2294439"
+    "wikidataId": "Q2294439",
+    "within": [
+      "us-lodi"
+    ]
   },
   {
     "countryCode": "US",
@@ -264317,7 +264727,10 @@
         "url": "https://de.wikipedia.org/wiki/Eola-Amity_Hills_AVA"
       }
     },
-    "wikidataId": "Q1346283"
+    "wikidataId": "Q1346283",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -264370,7 +264783,10 @@
         "url": "https://de.wikipedia.org/wiki/Saddle_Rock-Malibu_AVA"
       }
     },
-    "wikidataId": "Q1513613"
+    "wikidataId": "Q1513613",
+    "within": [
+      "us-malibu-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -264466,7 +264882,10 @@
         "url": "https://de.wikipedia.org/wiki/Chehalem_Mountains_AVA"
       }
     },
-    "wikidataId": "Q1068966"
+    "wikidataId": "Q1068966",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -264625,7 +265044,11 @@
         "url": "https://en.wikipedia.org/wiki/Calistoga_AVA"
       }
     },
-    "wikidataId": "Q5021434"
+    "wikidataId": "Q5021434",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -264697,7 +265120,10 @@
     "registerRef": "27 CFR 9.211",
     "registeredOn": "2008-05-27",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "within": [
+      "us-yadkin-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -264765,7 +265191,11 @@
         "url": "https://en.wikipedia.org/wiki/Snipes_Mountain_AVA"
       }
     },
-    "wikidataId": "Q7547826"
+    "wikidataId": "Q7547826",
+    "within": [
+      "us-yakima-valley",
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -264833,7 +265263,10 @@
         "url": "https://en.wikipedia.org/wiki/Lake_Chelan_AVA"
       }
     },
-    "wikidataId": "Q6475300"
+    "wikidataId": "Q6475300",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -264901,7 +265334,11 @@
         "url": "https://en.wikipedia.org/wiki/Happy_Canyon_of_Santa_Barbara_AVA"
       }
     },
-    "wikidataId": "Q5652573"
+    "wikidataId": "Q5652573",
+    "within": [
+      "us-santa-ynez-valley",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265003,7 +265440,11 @@
         "url": "https://en.wikipedia.org/wiki/Pine_Mountain-Cloverdale_Peak_AVA"
       }
     },
-    "wikidataId": "Q17085576"
+    "wikidataId": "Q17085576",
+    "within": [
+      "us-northern-sonoma",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265037,7 +265478,11 @@
         "url": "https://en.wikipedia.org/wiki/Fort_Ross-Seaview_AVA"
       }
     },
-    "wikidataId": "Q133816353"
+    "wikidataId": "Q133816353",
+    "within": [
+      "us-sonoma-coast",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265071,7 +265516,10 @@
         "url": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
       }
     },
-    "wikidataId": "Q6957146"
+    "wikidataId": "Q6957146",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -265105,7 +265553,11 @@
         "url": "https://en.wikipedia.org/wiki/Coombsville_AVA"
       }
     },
-    "wikidataId": "Q5167628"
+    "wikidataId": "Q5167628",
+    "within": [
+      "us-napa-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265231,7 +265683,10 @@
     "registerRef": "27 CFR 9.227",
     "registeredOn": "2012-11-19",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -265299,7 +265754,11 @@
         "url": "https://en.wikipedia.org/wiki/Elkton_Oregon_AVA"
       }
     },
-    "wikidataId": "Q28232791"
+    "wikidataId": "Q28232791",
+    "within": [
+      "us-umpqua-valley",
+      "us-southern-oregon"
+    ]
   },
   {
     "countryCode": "US",
@@ -265333,7 +265792,11 @@
         "url": "https://en.wikipedia.org/wiki/Ballard_Canyon_AVA"
       }
     },
-    "wikidataId": "Q107261141"
+    "wikidataId": "Q107261141",
+    "within": [
+      "us-santa-ynez-valley",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265367,7 +265830,11 @@
         "url": "https://en.wikipedia.org/wiki/Moon_Mountain_District_Sonoma_County"
       }
     },
-    "wikidataId": "Q107299166"
+    "wikidataId": "Q107299166",
+    "within": [
+      "us-sonoma-valley",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265401,7 +265868,11 @@
         "url": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
       }
     },
-    "wikidataId": "Q96373547"
+    "wikidataId": "Q96373547",
+    "within": [
+      "us-clear-lake",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265435,7 +265906,11 @@
         "url": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
       }
     },
-    "wikidataId": "Q96385612"
+    "wikidataId": "Q96385612",
+    "within": [
+      "us-clear-lake",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265571,7 +266046,10 @@
         "url": "https://en.wikipedia.org/wiki/Eagle_Peak_Mendocino_County_AVA"
       }
     },
-    "wikidataId": "Q19461467"
+    "wikidataId": "Q19461467",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265605,7 +266083,11 @@
         "url": "https://en.wikipedia.org/wiki/Adelaida_District_AVA"
       }
     },
-    "wikidataId": "Q18350205"
+    "wikidataId": "Q18350205",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265639,7 +266121,11 @@
         "url": "https://en.wikipedia.org/wiki/Creston_District_AVA"
       }
     },
-    "wikidataId": "Q19867019"
+    "wikidataId": "Q19867019",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265673,7 +266159,11 @@
         "url": "https://en.wikipedia.org/wiki/El_Pomar_District_AVA"
       }
     },
-    "wikidataId": "Q132398237"
+    "wikidataId": "Q132398237",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265707,7 +266197,11 @@
         "url": "https://en.wikipedia.org/wiki/Paso_Robles_Estrella_District_AVA"
       }
     },
-    "wikidataId": "Q132175239"
+    "wikidataId": "Q132175239",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265741,7 +266235,11 @@
         "url": "https://en.wikipedia.org/wiki/Paso_Robles_Geneseo_District_AVA"
       }
     },
-    "wikidataId": "Q132200537"
+    "wikidataId": "Q132200537",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265775,7 +266273,11 @@
         "url": "https://en.wikipedia.org/wiki/Paso_Robles_Highlands_District_AVA"
       }
     },
-    "wikidataId": "Q131995697"
+    "wikidataId": "Q131995697",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265809,7 +266311,11 @@
         "url": "https://en.wikipedia.org/wiki/Paso_Robles_Willow_Creek_District_AVA"
       }
     },
-    "wikidataId": "Q133093969"
+    "wikidataId": "Q133093969",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265843,7 +266349,11 @@
         "url": "https://en.wikipedia.org/wiki/San_Juan_Creek_AVA"
       }
     },
-    "wikidataId": "Q131933420"
+    "wikidataId": "Q131933420",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265877,7 +266387,11 @@
         "url": "https://en.wikipedia.org/wiki/San_Miguel_District_AVA"
       }
     },
-    "wikidataId": "Q132797959"
+    "wikidataId": "Q132797959",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265911,7 +266425,11 @@
         "url": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
       }
     },
-    "wikidataId": "Q133091074"
+    "wikidataId": "Q133091074",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265945,7 +266463,11 @@
         "url": "https://en.wikipedia.org/wiki/Templeton_Gap_District_AVA"
       }
     },
-    "wikidataId": "Q132572901"
+    "wikidataId": "Q132572901",
+    "within": [
+      "us-paso-robles",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -265979,7 +266501,11 @@
         "url": "https://en.wikipedia.org/wiki/The_Rocks_District_of_Milton-Freewater_AVA"
       }
     },
-    "wikidataId": "Q18168395"
+    "wikidataId": "Q18168395",
+    "within": [
+      "us-walla-walla-valley",
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266013,7 +266539,10 @@
         "url": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
       }
     },
-    "wikidataId": "Q133828726"
+    "wikidataId": "Q133828726",
+    "within": [
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -266081,7 +266610,10 @@
         "url": "https://en.wikipedia.org/wiki/Eagle_Foothills_AVA"
       }
     },
-    "wikidataId": "Q107451820"
+    "wikidataId": "Q107451820",
+    "within": [
+      "us-snake-river-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266115,7 +266647,11 @@
         "url": "https://en.wikipedia.org/wiki/Los_Olivos_District_AVA"
       }
     },
-    "wikidataId": "Q107261149"
+    "wikidataId": "Q107261149",
+    "within": [
+      "us-santa-ynez-valley",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -266149,7 +266685,11 @@
         "url": "https://en.wikipedia.org/wiki/Lamorinda_AVA"
       }
     },
-    "wikidataId": "Q107133177"
+    "wikidataId": "Q107133177",
+    "within": [
+      "us-san-francisco-bay",
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -266393,7 +266933,11 @@
         "url": "https://en.wikipedia.org/wiki/Petaluma_Gap_AVA"
       }
     },
-    "wikidataId": "Q107223280"
+    "wikidataId": "Q107223280",
+    "within": [
+      "us-sonoma-coast",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -266427,7 +266971,10 @@
         "url": "https://en.wikipedia.org/wiki/Cape_May_Peninsula_AVA"
       }
     },
-    "wikidataId": "Q65084213"
+    "wikidataId": "Q65084213",
+    "within": [
+      "us-outer-coastal-plain"
+    ]
   },
   {
     "countryCode": "US",
@@ -266529,7 +267076,10 @@
         "url": "https://en.wikipedia.org/wiki/Van_Duzer_Corridor_AVA"
       }
     },
-    "wikidataId": "Q60774354"
+    "wikidataId": "Q60774354",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266631,7 +267181,10 @@
         "url": "https://en.wikipedia.org/wiki/Tualatin_Hills_AVA"
       }
     },
-    "wikidataId": "Q107104695"
+    "wikidataId": "Q107104695",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266665,7 +267218,11 @@
         "url": "https://en.wikipedia.org/wiki/Laurelwood_District_AVA"
       }
     },
-    "wikidataId": "Q107071961"
+    "wikidataId": "Q107071961",
+    "within": [
+      "us-chehalem-mountains",
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266699,7 +267256,10 @@
         "url": "https://en.wikipedia.org/wiki/Alisos_Canyon_AVA"
       }
     },
-    "wikidataId": "Q107313688"
+    "wikidataId": "Q107313688",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -266733,7 +267293,10 @@
         "url": "https://en.wikipedia.org/wiki/Royal_Slope_AVA"
       }
     },
-    "wikidataId": "Q125881361"
+    "wikidataId": "Q125881361",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266767,7 +267330,11 @@
         "url": "https://en.wikipedia.org/wiki/Candy_Mountain_AVA"
       }
     },
-    "wikidataId": "Q125470292"
+    "wikidataId": "Q125470292",
+    "within": [
+      "us-yakima-valley",
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266869,7 +267436,10 @@
         "url": "https://en.wikipedia.org/wiki/White_Bluffs_AVA"
       }
     },
-    "wikidataId": "Q131123744"
+    "wikidataId": "Q131123744",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266903,7 +267473,10 @@
         "url": "https://en.wikipedia.org/wiki/The_Burn_of_Columbia_Valley_AVA"
       }
     },
-    "wikidataId": "Q125510530"
+    "wikidataId": "Q125510530",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -266937,7 +267510,11 @@
         "url": "https://en.wikipedia.org/wiki/Goose_Gap_AVA"
       }
     },
-    "wikidataId": "Q125447748"
+    "wikidataId": "Q125447748",
+    "within": [
+      "us-yakima-valley",
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -267073,7 +267650,10 @@
         "url": "https://en.wikipedia.org/wiki/Lower_Long_Tom_AVA"
       }
     },
-    "wikidataId": "Q116030282"
+    "wikidataId": "Q116030282",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -267107,7 +267687,10 @@
         "url": "https://en.wikipedia.org/wiki/San_Luis_Obispo_Coast_AVA"
       }
     },
-    "wikidataId": "Q123998127"
+    "wikidataId": "Q123998127",
+    "within": [
+      "us-central-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -267175,7 +267758,10 @@
         "url": "https://en.wikipedia.org/wiki/Mount_Pisgah%2C_Polk_County%2C_Oregon_AVA"
       }
     },
-    "wikidataId": "Q131824397"
+    "wikidataId": "Q131824397",
+    "within": [
+      "us-willamette-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -267243,7 +267829,11 @@
         "url": "https://en.wikipedia.org/wiki/Upper_Lake_Valley_AVA"
       }
     },
-    "wikidataId": "Q125986261"
+    "wikidataId": "Q125986261",
+    "within": [
+      "us-clear-lake",
+      "us-north-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -267277,7 +267867,10 @@
         "url": "https://en.wikipedia.org/wiki/Rocky_Reach_AVA"
       }
     },
-    "wikidataId": "Q131378492"
+    "wikidataId": "Q131378492",
+    "within": [
+      "us-columbia-valley"
+    ]
   },
   {
     "countryCode": "US",
@@ -267549,7 +268142,10 @@
         "url": "https://en.wikipedia.org/wiki/San_Luis_Rey_AVA"
       }
     },
-    "wikidataId": "Q131860871"
+    "wikidataId": "Q131860871",
+    "within": [
+      "us-south-coast"
+    ]
   },
   {
     "countryCode": "US",
@@ -267754,5 +268350,5345 @@
       }
     },
     "wikidataId": "Q141310200"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "muller-thurgau",
+        "quote": "Rheinhessen, ... Baden, ... Palatinate, ... Austria, ... Hungary, ... Belgium, ... United Kingdom, ... Australia – Mudgee wine region, ... New Zealand – Now a marginal grape., ... United States of America, ... Japan, ... China",
+        "sourceUrl": "https://en.wikipedia.org/wiki/M%C3%BCller-Thurgau"
+      },
+      {
+        "grapeId": "pinotage",
+        "quote": "In addition to South Africa, Pinotage is also grown in Brazil, Canada, Germany, Israel, New Zealand, Switzerland, the United States and Zimbabwe",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinotage"
+      },
+      {
+        "grapeId": "zweigelt",
+        "quote": "Widely planted in Austria, Zweigelt vines have made inroads in the Canadian wine regions of Ontario's Niagara Peninsula and of British Columbia, with limited plantings in Hungary, Australia and New Zealand. In the Czech Republic it is known as Zweigeltrebe ... It grows in most of the wine regions in Slovakia. As of 2010, newly established Belgian and Polish vineyards have also started to plant Zweigelt. As of 2014, Washington state has several small plantings ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Zweigelt"
+      }
+    ],
+    "id": "nz-new-zealand",
+    "latitude": -41.5000831,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/?IPNumber=1001",
+    "longitude": 172.8344077,
+    "name": "New Zealand",
+    "names": [
+      {
+        "locale": "*",
+        "name": "New Zealand",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 5,
+    "registerRef": "1001",
+    "registeredOn": "2017-07-27",
+    "summaries": {
+      "en": {
+        "text": "New Zealand wine is produced in several of its distinct winegrowing regions. As an island country in the South Pacific Ocean, New Zealand has a largely maritime climate, although its elongated geography produces considerable regional variation from north to south.",
+        "url": "https://en.wikipedia.org/wiki/New_Zealand_wine"
+      },
+      "fr": {
+        "text": "La viticulture en Nouvelle-Zélande est implantée sur dix grandes régions viticoles situées entre le 36e et le 45e parallèle sud. Elle s'étend sur 1 600 kilomètres de long.",
+        "url": "https://fr.wikipedia.org/wiki/Viticulture_en_Nouvelle-Z%C3%A9lande"
+      },
+      "de": {
+        "text": "Der Weinbau in Neuseeland hat eine noch junge Geschichte, doch mit den Weinsorten Sauvignon Blanc, Pinot Noir und Chardonnay hat er sich den Platz als achtwichtigste Exportbranche des Landes gesichert.",
+        "url": "https://de.wikipedia.org/wiki/Weinbau_in_Neuseeland"
+      },
+      "it": {
+        "text": "La viticoltura in Nuova Zelanda è un settore in forte crescita e noto per la produzione di vini di alta qualità, in particolare il Sauvignon Blanc. Il paese, grazie al suo clima fresco e alla diversità dei suoli è diventato uno dei protagonisti del panorama vinicolo internazionale.",
+        "url": "https://it.wikipedia.org/wiki/Viticoltura_in_Nuova_Zelanda"
+      },
+      "nl": {
+        "text": "De wijnbouw in Nieuw-Zeeland vindt plaats in verschillende wijnregio's op beide eilanden. Pas in 1986 werd het land internationaal als wijnland ontdekt, hoewel er toen al ruim honderd jaar wijn werd gemaakt. De oorsprong van de wijnbouw in Nieuw-Zeeland ligt bij immigranten uit Europa.",
+        "url": "https://nl.wikipedia.org/wiki/Wijnbouw_in_Nieuw-Zeeland"
+      }
+    },
+    "wikidataId": "Q918446"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-north-island",
+    "latitude": -38.0035304,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/?IPNumber=1002",
+    "longitude": 175.957821,
+    "name": "North Island",
+    "names": [
+      {
+        "locale": "*",
+        "name": "North Island",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1002",
+    "registeredOn": "2017-07-27",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-northland",
+    "latitude": -35.3755091,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/northland/",
+    "longitude": 173.9470106,
+    "name": "Northland",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Northland",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1022",
+    "registeredOn": "2018-02-26",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-auckland",
+    "latitude": -36.5412811,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/auckland/",
+    "longitude": 174.5506105,
+    "name": "Auckland",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Auckland",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "1018",
+    "registeredOn": "2018-10-29",
+    "summaries": {
+      "en": {
+        "text": "The Auckland wine region is a New Zealand wine-growing area and geographical indication centred around New Zealand's largest city, Auckland. The GI covers the area delineated by the greater Auckland Region, and has a total vineyard area in 2024 of 269 hectares (660 acres).",
+        "url": "https://en.wikipedia.org/wiki/Auckland_wine_region"
+      }
+    },
+    "wikidataId": "Q117085188"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-matakana",
+    "latitude": -36.3523938,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/matakana/",
+    "longitude": 174.7177929,
+    "name": "Matakana",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Matakana",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1021",
+    "registeredOn": "2018-02-26",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-kumeu",
+    "latitude": -36.7753095,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/kumeu/",
+    "longitude": 174.5546604,
+    "name": "Kumeu",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kumeu",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1013",
+    "registeredOn": "2018-10-29",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-waiheke-island",
+    "latitude": -36.7931083,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waiheke-island/",
+    "longitude": 175.0883863,
+    "name": "Waiheke Island",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Waiheke Island",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "1015",
+    "registeredOn": "2018-02-26",
+    "summaries": {
+      "en": {
+        "text": "The Waiheke Island wine region is a geographical indication and wine-growing region of New Zealand.",
+        "url": "https://en.wikipedia.org/wiki/Waiheke_Island_wine_region"
+      }
+    },
+    "wikidataId": "Q117074428"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-gisborne",
+    "latitude": -38.1532287,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/gisborne/",
+    "longitude": 178.1367524,
+    "name": "Gisborne",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Gisborne",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1008",
+    "registeredOn": "2018-02-26",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-hawke-s-bay",
+    "latitude": -39.5256511,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/hawkes-bay/",
+    "longitude": 176.7611457,
+    "name": "Hawke’s Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hawke’s Bay",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Hawkes Bay",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "1005",
+    "registeredOn": "2018-02-26",
+    "summaries": {
+      "en": {
+        "text": "The Hawke's Bay wine region is New Zealand's oldest and second-largest wine-production region, on the east coast of the North Island. Production reached 41,000 tonnes in 2018 from 4,681 hectares (11,570 acres) of planted vines, representing 10.2% of total national production.",
+        "url": "https://en.wikipedia.org/wiki/Hawke's_Bay_wine_region"
+      }
+    },
+    "wikidataId": "Q85765961"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-central-hawke-s-bay",
+    "latitude": -40.0557276,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/central-hawkes-bay/",
+    "longitude": 176.5722185,
+    "name": "Central Hawke's Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Central Hawke's Bay",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Central Hawkes Bay",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1020",
+    "registeredOn": "2019-01-28",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-wairarapa",
+    "latitude": -40.8812775,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/wairarapa/",
+    "longitude": 175.7098432,
+    "name": "Wairarapa",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Wairarapa",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1012",
+    "registeredOn": "2018-02-26",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-gladstone",
+    "latitude": -41.0773358,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/gladstone/",
+    "longitude": 175.658192,
+    "name": "Gladstone",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Gladstone",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1014",
+    "registeredOn": "2019-01-03",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-martinborough",
+    "latitude": -41.2183252,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/martinborough/",
+    "longitude": 175.4594856,
+    "name": "Martinborough",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Martinborough",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1011",
+    "registeredOn": "2018-02-26",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-south-island",
+    "latitude": -43.586562,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/?IPNumber=1003",
+    "longitude": 171.2123294,
+    "name": "South Island",
+    "names": [
+      {
+        "locale": "*",
+        "name": "South Island",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1003",
+    "registeredOn": "2017-07-27",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-nelson",
+    "latitude": -41.0994068,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/nelson/",
+    "longitude": 173.4288755,
+    "name": "Nelson",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Nelson",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1006",
+    "registeredOn": "2018-06-26",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Sauvignon blanc is widely cultivated in many of the world's wine regions, including France, Argentina (also in Patagonia) Chile, Romania, Canada, Australia, New Zealand, South Africa, Bulgaria, and the states of Oregon, Washington, and California in the US ... In France, ... Loire Valley ... Bordeaux ... In the early 1990s ... Valparaíso ... In Australia, particularly the Margaret River region ... In the Marlborough wine region ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignon_blanc"
+      }
+    ],
+    "id": "nz-marlborough",
+    "latitude": -41.4744747,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/marlborough/",
+    "longitude": 173.8330263,
+    "name": "Marlborough",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Marlborough",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 2,
+    "registerRef": "1004",
+    "registeredOn": "2018-02-26",
+    "summaries": {
+      "en": {
+        "text": "The Marlborough wine region is by far New Zealand's largest, accounting in 2020 for three quarters of the country's wine production, 70% of its vineyard area and 85% of its wine exports. It covers the entire Marlborough District and the Kaikōura District of the Canterbury Region in the north-east of the South Island, but in practice the vineyards are concentrated around the Blenheim and Seddon townships.",
+        "url": "https://en.wikipedia.org/wiki/Marlborough_wine_region"
+      },
+      "fr": {
+        "text": "Le vignoble de Marlborough est situé au Nord de l'île du Sud de la Nouvelle-Zélande, dans la région de Marlborough, proche de la ville de Blenheim.",
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_de_Marlborough"
+      }
+    },
+    "wikidataId": "Q85783963"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-canterbury",
+    "latitude": -43.4941761,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/canterbury/",
+    "longitude": 171.8098448,
+    "name": "Canterbury",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Canterbury",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "1017",
+    "registeredOn": "2018-02-26",
+    "summaries": {
+      "en": {
+        "text": "The Canterbury wine region is a New Zealand wine region and geographical indication that covers wine made anywhere within the Canterbury Region excluding the Kaikōura District, an area of some 44,500 square kilometres (17,200 sq mi) in the South Island.",
+        "url": "https://en.wikipedia.org/wiki/Canterbury_wine_region"
+      }
+    },
+    "wikidataId": "Q117074142"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-north-canterbury",
+    "latitude": null,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/north-canterbury/",
+    "longitude": null,
+    "name": "North Canterbury",
+    "names": [
+      {
+        "locale": "*",
+        "name": "North Canterbury",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "1016",
+    "registeredOn": "2020-06-29",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-waipara-valley",
+    "latitude": null,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waipara-valley/",
+    "longitude": null,
+    "name": "Waipara Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Waipara Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Waipara",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "1010",
+    "registeredOn": "2018-12-03",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-waitaki-valley-north-otago",
+    "latitude": null,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waitaki-valley-north-otago/",
+    "longitude": null,
+    "name": "Waitaki Valley North Otago",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Waitaki Valley North Otago",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Waitaki Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 1,
+    "registerRef": "1019",
+    "registeredOn": "2018-12-03",
+    "summaries": {
+      "en": {
+        "text": "Waitaki Valley North Otago, commonly shortened to Waitaki Valley, is a small New Zealand wine region and registered geographical indication in northern Otago, in the South Island of New Zealand. It is New Zealand's youngest wine region.",
+        "url": "https://en.wikipedia.org/wiki/Waitaki_Valley_wine_region"
+      }
+    },
+    "wikidataId": "Q131767653"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-central-otago",
+    "latitude": -45.350509,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/central-otago/",
+    "longitude": 169.696148,
+    "name": "Central Otago",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Central Otago",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 2,
+    "registerRef": "1007",
+    "registeredOn": "2018-10-29",
+    "summaries": {
+      "en": {
+        "text": "The Central Otago wine region is a geographical indication in New Zealand's South Island, and the world's southernmost commercial wine growing region. While Central Otago is best known for Pinot Noir, many white wine varieties are also popular.",
+        "url": "https://en.wikipedia.org/wiki/Central_Otago_wine_region"
+      },
+      "fr": {
+        "text": "Le vignoble du Central Otago est une région viticole de l'île du sud de la Nouvelle-Zélande. Elle est réputée pour ses vins de Pinot noir.",
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Central_Otago"
+      }
+    },
+    "wikidataId": "Q5061573"
+  },
+  {
+    "countryCode": "NZ",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "nz-bannockburn",
+    "latitude": -45.088368,
+    "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/bannockburn/",
+    "longitude": 169.1600101,
+    "name": "Bannockburn",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bannockburn",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "1028",
+    "registeredOn": "2022-02-01",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-greater-cape",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Greater Cape",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Greater Cape",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Groter Kaap",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "overarchingUnit",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [
+      {
+        "grapeId": "carmenere",
+        "quote": "the world's largest area planted with this variety is in Chile ... Carménère is also grown in Italy's Eastern Veneto and Friuli-Venezia Giulia regions, in Argentina, and in smaller quantities in California and Walla Walla (Washington and Oregon) ... established in Eastern Washington's Walla Walla Valley and in California ... in Australia ... in New Zealand ... champion ... in the Robertson region of the Western Cape ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re"
+      }
+    ],
+    "id": "za-western-cape",
+    "latitude": -33.546977,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.72753,
+    "name": "Western Cape",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Western Cape",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Wes-Kaap",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerLevel": "unit",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "Western Cape is a Geographical Unit within the Wine of Origin classification system of South African wine. Corresponding to the province of Western Cape it includes most of the vineyards in South Africa.",
+        "url": "https://en.wikipedia.org/wiki/Western_Cape_wine"
+      }
+    },
+    "wikidataId": "Q2909287",
+    "within": [
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-northern-cape",
+    "latitude": -29.573402,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 21.2051361,
+    "name": "Northern Cape",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Northern Cape",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Noord-Kaap",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "unit",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-eastern-cape",
+    "latitude": -32.2171831,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 26.6386401,
+    "name": "Eastern Cape",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Eastern Cape",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Oos-Kaap",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "unit",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-kwazulu-natal",
+    "latitude": -28.503833,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 30.8875009,
+    "name": "KwaZulu-Natal",
+    "names": [
+      {
+        "locale": "*",
+        "name": "KwaZulu-Natal",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerLevel": "unit",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "KwaZulu-Natal is designated as a geographical unit under the Wine of Origin classification of South African wine. It corresponds to the province of KwaZulu-Natal in the east of South Africa, which has an embryonic wine industry.",
+        "url": "https://en.wikipedia.org/wiki/KwaZulu-Natal_wine"
+      }
+    },
+    "wikidataId": "Q6449901"
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-free-state",
+    "latitude": -28.7853618,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 26.4978933,
+    "name": "Free State",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Free State",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Vrystaat",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "unit",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-limpopo",
+    "latitude": -23.4735288,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 29.3959199,
+    "name": "Limpopo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Limpopo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "unit",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-north-west",
+    "latitude": -26.1347819,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 25.6546729,
+    "name": "North West",
+    "names": [
+      {
+        "locale": "*",
+        "name": "North West",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "unit",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-cape-coast",
+    "latitude": -34.015278,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.0604887,
+    "name": "Cape Coast",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cape Coast",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kaap Kus",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "overarchingRegion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-cape-south-coast",
+    "latitude": -34.226759,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.898056,
+    "name": "Cape South Coast",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cape South Coast",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kaap Suidkus",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-coastal-region",
+    "latitude": -33.6988316,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.6865277,
+    "name": "Coastal Region",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coastal Region",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kusstreek",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-breede-river-valley",
+    "latitude": -33.75141865,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.715011500000003,
+    "name": "Breede River Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Breede River Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Breërivier Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-klein-karoo",
+    "latitude": -33.65983275,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.90284595,
+    "name": "Klein Karoo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Klein Karoo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-olifants-river",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Olifants River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Olifants River",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Olifantsrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-karoo-hoogland",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Karoo-Hoogland",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Karoo-Hoogland",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-cape-west-coast",
+    "latitude": -32.7613889,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.2304858,
+    "name": "Cape West Coast",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cape West Coast",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kaap Weskus",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-cape-agulhas",
+    "latitude": -34.8332895,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.9999379,
+    "name": "Cape Agulhas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cape Agulhas",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kaap Agulhas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-elgin",
+    "latitude": -34.1486111,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.0427778,
+    "name": "Elgin",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Elgin",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-lower-duivenhoks-river",
+    "latitude": -34.226759,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.898056,
+    "name": "Lower Duivenhoks River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lower Duivenhoks River",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Benede Duivenhoksrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-overberg",
+    "latitude": -34.180591899999996,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.47423685,
+    "name": "Overberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Overberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-plettenberg-bay",
+    "latitude": -34.052778,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 23.369444,
+    "name": "Plettenberg Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Plettenberg Bay",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Plettenbergbaai",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-swellendam",
+    "latitude": -34.021111,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.441944,
+    "name": "Swellendam",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Swellendam",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-walker-bay",
+    "latitude": -34.51833,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2880393,
+    "name": "Walker Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Walker Bay",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-still-bay",
+    "latitude": -34.226759,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.898056,
+    "name": "Still Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Still Bay",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Stilbaai",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-cape-town",
+    "latitude": -33.9288301,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.4172197,
+    "name": "Cape Town",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cape Town",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kaapstad",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-darling",
+    "latitude": -33.376426,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.379189,
+    "name": "Darling",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Darling",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-west-coast",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-franschhoek",
+    "latitude": -33.909167,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.119444,
+    "name": "Franschhoek",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Franschhoek",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Franschhoek Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Franschhoek Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-lutzville-valley",
+    "latitude": -32.7613889,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.2304858,
+    "name": "Lutzville Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lutzville Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Lutzville Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-west-coast",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-paarl",
+    "latitude": -33.7310282,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.9642117,
+    "name": "Paarl",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Paarl",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-stellenbosch",
+    "latitude": -33.934444,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.869167,
+    "name": "Stellenbosch",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Stellenbosch",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [
+      {
+        "grapeId": "furmint",
+        "quote": "most noted widely grown in the Tokaj-Hegyalja wine region... also grown in the tiny Hungarian wine region of Somló... Furmint plays a similar role in the Slovak wine region of Tokaj... It is also grown in Austria... Smaller plantings are found in Slovenia... The grape is also planted in Croatia and Serbia... It is also found in Romania... small plantings of the grape have been done in the Swartland region of South Africa... In the United States, there are some isolated plantings of Furmint in the California wine region of the Russian River AVA",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Furmint"
+      }
+    ],
+    "id": "za-swartland",
+    "latitude": -33.11083345,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.410416599999998,
+    "name": "Swartland",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Swartland",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-tulbagh",
+    "latitude": -33.285059,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.140667,
+    "name": "Tulbagh",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tulbagh",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-wellington",
+    "latitude": -33.643055,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.010556,
+    "name": "Wellington",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Wellington",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-breedekloof",
+    "latitude": -33.6666667,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2583333,
+    "name": "Breedekloof",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Breedekloof",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 2,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "The Breedekloof wine district is one of three districts in the Breede River Valley wine region. It boasts a total of 28 wine cellars (11 producer cellars and 17 private cellars). The Breedekloof represents 14.24% (13 029 hectares) of wine grape vineyard plantings in South Africa. Most traditional cultivars can be found in the Breedekloof, with Chenin Blanc being the most planted.",
+        "url": "https://en.wikipedia.org/wiki/Breedekloof"
+      },
+      "nl": {
+        "text": "Breedekloof is een wijndistrict in Zuid-Afrika van ongeveer 12.400 hectare. Het behoort tot de wijnregio Breede River Valley aan de West-Kaap.",
+        "url": "https://nl.wikipedia.org/wiki/Breedekloof"
+      }
+    },
+    "wikidataId": "Q15873513",
+    "within": [
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-robertson",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Robertson",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Robertson",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-worcester",
+    "latitude": -33.646238,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.445927,
+    "name": "Worcester",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Worcester",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-calitzdorp",
+    "latitude": -33.5326711,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 21.6878637,
+    "name": "Calitzdorp",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Calitzdorp",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-langeberg-garcia",
+    "latitude": -33.65983275,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.90284595,
+    "name": "Langeberg-Garcia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Langeberg-Garcia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-citrusdal-mountain",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Citrusdal Mountain",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Citrusdal Mountain",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Citrusdalberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-olifants-river",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-citrusdal-valley",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Citrusdal Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Citrusdal Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Citrusdal Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-olifants-river",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-ceres-plateau",
+    "latitude": -33.368333,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.309167,
+    "name": "Ceres Plateau",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ceres Plateau",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Ceres Plato",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-nuveld-karoo",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Nuveld-Karoo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Nuveld-Karoo",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-prince-albert",
+    "latitude": -33.222626,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 22.030331,
+    "name": "Prince Albert",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Prince Albert",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-sutherland-karoo",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Sutherland-Karoo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sutherland-Karoo",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-karoo-hoogland",
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-central-orange-river",
+    "latitude": -28.708951,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 21.241867,
+    "name": "Central Orange River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Central Orange River",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Sentraal-Oranjerivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-douglas",
+    "latitude": -29.054997,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 23.776591,
+    "name": "Douglas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Douglas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-central-drakensberg",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Central Drakensberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Central Drakensberg",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Sentraal-Drakensberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-kwazulu-natal"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-lions-river",
+    "latitude": -29.4666028,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 30.155789,
+    "name": "Lions River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lions River",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "district",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-kwazulu-natal"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-elim",
+    "latitude": -34.5922238,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.7594346,
+    "name": "Elim",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Elim",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-agulhas",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-elandskloof",
+    "latitude": -34.180591899999996,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.47423685,
+    "name": "Elandskloof",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Elandskloof",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kaaimansgat",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-overberg",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-greyton",
+    "latitude": -34.050751,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.608166,
+    "name": "Greyton",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Greyton",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-overberg",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-klein-river",
+    "latitude": -34.180591899999996,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.47423685,
+    "name": "Klein River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Klein River",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kleinrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-overberg",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-shaw-s-mountain",
+    "latitude": -34.3104328,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.3403077,
+    "name": "Shaw’s Mountain",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Shaw’s Mountain",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-overberg",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-theewater",
+    "latitude": -34.180591899999996,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.47423685,
+    "name": "Theewater",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Theewater",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-overberg",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-buffeljags",
+    "latitude": -34.021111,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.441944,
+    "name": "Buffeljags",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Buffeljags",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swellendam",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-malgas",
+    "latitude": -34.2998041,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.5770283,
+    "name": "Malgas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Malgas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swellendam",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-stormsvlei",
+    "latitude": -34.0834515,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.09661,
+    "name": "Stormsvlei",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Stormsvlei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swellendam",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-bot-river",
+    "latitude": -34.226759,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.202317,
+    "name": "Bot River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bot River",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Botrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-walker-bay",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-hemel-en-aarde-ridge",
+    "latitude": -34.51833,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2880393,
+    "name": "Hemel-en-Aarde Ridge",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hemel-en-Aarde Ridge",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-walker-bay",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-hemel-en-aarde-valley",
+    "latitude": -34.51833,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2880393,
+    "name": "Hemel-en-Aarde Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hemel-en-Aarde Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Hemel-en-Aarde Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-walker-bay",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-sunday-s-glen",
+    "latitude": -34.51833,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2880393,
+    "name": "Sunday’s Glen",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sunday’s Glen",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Sondagkloof",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-walker-bay",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-springfontein-rim",
+    "latitude": -34.51833,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2880393,
+    "name": "Springfontein Rim",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Springfontein Rim",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-walker-bay",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-stanford-foothills",
+    "latitude": -34.51833,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2880393,
+    "name": "Stanford Foothills",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Stanford Foothills",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Stanford Voetheuwels",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-walker-bay",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-upper-hemel-en-aarde-valley",
+    "latitude": -34.51833,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2880393,
+    "name": "Upper Hemel-en-Aarde Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Upper Hemel-en-Aarde Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Bo Hemel-en-Aarde Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-walker-bay",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-goukou-river-valley",
+    "latitude": -34.226759,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.898056,
+    "name": "Goukou River Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Goukou River Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-still-bay",
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-herbertsdale",
+    "latitude": -34.015278,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 21.761667,
+    "name": "Herbertsdale",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Herbertsdale",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-napier",
+    "latitude": -34.474722,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.898056,
+    "name": "Napier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Napier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-south-coast",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-constantia",
+    "latitude": -34.0283333,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.4155556,
+    "name": "Constantia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Constantia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-town",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-durbanville",
+    "latitude": -33.8402778,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.6494444,
+    "name": "Durbanville",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Durbanville",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-town",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-hout-bay",
+    "latitude": -34.043093,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.355645,
+    "name": "Hout Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hout Bay",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Houtbaai",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-town",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-philadelphia",
+    "latitude": -33.666635,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.580989,
+    "name": "Philadelphia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Philadelphia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-town",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-groenekloof",
+    "latitude": -33.376426,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.379189,
+    "name": "Groenekloof",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Groenekloof",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-darling",
+      "za-cape-west-coast",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-koekenaap",
+    "latitude": -32.7613889,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.2304858,
+    "name": "Koekenaap",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Koekenaap",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-lutzville-valley",
+      "za-cape-west-coast",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-agter-paarl",
+    "latitude": -33.7310282,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.9642117,
+    "name": "Agter-Paarl",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Agter-Paarl",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-paarl",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-simonsberg-paarl",
+    "latitude": -33.7310282,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.9642117,
+    "name": "Simonsberg-Paarl",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Simonsberg-Paarl",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-paarl",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-voor-paardeberg",
+    "latitude": -33.7310282,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.9642117,
+    "name": "Voor-Paardeberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Voor-Paardeberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-paarl",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-banghoek",
+    "latitude": -33.934444,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.869167,
+    "name": "Banghoek",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Banghoek",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-stellenbosch",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-bottelary",
+    "latitude": -33.934444,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.869167,
+    "name": "Bottelary",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bottelary",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-stellenbosch",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-devon-valley",
+    "latitude": -33.934444,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.869167,
+    "name": "Devon Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Devon Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Devon Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-stellenbosch",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-jonkershoek-valley",
+    "latitude": -33.934444,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.869167,
+    "name": "Jonkershoek Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Jonkershoek Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Jonkershoek Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-stellenbosch",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-papegaaiberg",
+    "latitude": -33.9333861,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.8442826,
+    "name": "Papegaaiberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Papegaaiberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-stellenbosch",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-polkadraai-hills",
+    "latitude": -33.934444,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.869167,
+    "name": "Polkadraai Hills",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Polkadraai Hills",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Polkadraai Heuwels",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-stellenbosch",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-simonsberg-stellenbosh",
+    "latitude": -33.934444,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.869167,
+    "name": "Simonsberg-Stellenbosh",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Simonsberg-Stellenbosh",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-stellenbosch",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-vlottenburg",
+    "latitude": -33.934444,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.869167,
+    "name": "Vlottenburg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vlottenburg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-stellenbosch",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-malmesbury",
+    "latitude": -33.460278,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.723611,
+    "name": "Malmesbury",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Malmesbury",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swartland",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-paardeberg",
+    "latitude": -33.11083345,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.410416599999998,
+    "name": "Paardeberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Paardeberg",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Perdeberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swartland",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-paardeberg-south",
+    "latitude": -33.11083345,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.410416599999998,
+    "name": "Paardeberg South",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Paardeberg South",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Perdeberg-Suid",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swartland",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-piket-bo-berg",
+    "latitude": -33.11083345,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.410416599999998,
+    "name": "Piket-Bo-Berg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Piket-Bo-Berg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swartland",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-porseleinberg",
+    "latitude": -33.11083345,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.410416599999998,
+    "name": "Porseleinberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Porseleinberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swartland",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-riebeekberg",
+    "latitude": -33.11083345,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.410416599999998,
+    "name": "Riebeekberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Riebeekberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swartland",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-riebeeksrivier",
+    "latitude": -33.11083345,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.410416599999998,
+    "name": "Riebeeksrivier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Riebeeksrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swartland",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-st-helena-bay",
+    "latitude": -32.7613889,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.0972222,
+    "name": "St Helena Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "St Helena Bay",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "St Helenabaai",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-swartland",
+      "za-cape-west-coast",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-blouvlei",
+    "latitude": -33.643055,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.010556,
+    "name": "Blouvlei",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Blouvlei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-wellington",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-bovlei",
+    "latitude": -33.643055,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.010556,
+    "name": "Bovlei",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bovlei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-wellington",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-groenberg",
+    "latitude": -33.597199,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.0604887,
+    "name": "Groenberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Groenberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-wellington",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-limietberg",
+    "latitude": -33.643055,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.010556,
+    "name": "Limietberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Limietberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-wellington",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-mid-berg-river",
+    "latitude": -33.643055,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.010556,
+    "name": "Mid-Berg River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mid-Berg River",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Mid-Bergrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-wellington",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-bamboes-bay",
+    "latitude": -31.7959209,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.2304858,
+    "name": "Bamboes Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bamboes Bay",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Bamboesbaai",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-west-coast",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-lamberts-bay",
+    "latitude": -32.7613889,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 18.2304858,
+    "name": "Lamberts Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lamberts Bay",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Lambertsbaai",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-cape-west-coast",
+      "za-coastal-region",
+      "za-cape-coast",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-goudini",
+    "latitude": -33.6666667,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2583333,
+    "name": "Goudini",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Goudini",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-breedekloof",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-slanghoek",
+    "latitude": -33.6666667,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2583333,
+    "name": "Slanghoek",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Slanghoek",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-breedekloof",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-agterkliphoogte",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Agterkliphoogte",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Agterkliphoogte",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-ashton",
+    "latitude": -33.8339436,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.0553369,
+    "name": "Ashton",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ashton",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-boesmansrivier",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Boesmansrivier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Boesmansrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-bonnievale",
+    "latitude": -33.932218,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.09973,
+    "name": "Bonnievale",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bonnievale",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-eilandia",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Eilandia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Eilandia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-goedemoed",
+    "latitude": -33.6992524,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.0046444,
+    "name": "Goedemoed",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Goedemoed",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-goree",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Goree",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Goree",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-goudmyn",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Goudmyn",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Goudmyn",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-hoopsrivier",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Hoopsrivier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hoopsrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-klaasvoogds",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Klaasvoogds",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Klaasvoogds",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-le-chasseur",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Le Chasseur",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Le Chasseur",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-mcgregor",
+    "latitude": -33.948787,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.827473,
+    "name": "McGregor",
+    "names": [
+      {
+        "locale": "*",
+        "name": "McGregor",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-vinkrivier",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Vinkrivier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vinkrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-zandrivier",
+    "latitude": -33.8035849,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.8816221,
+    "name": "Zandrivier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Zandrivier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-robertson",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-hex-river-valley",
+    "latitude": -33.646238,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.445927,
+    "name": "Hex River Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hex River Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Hexrivier Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-worcester",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-keeromsberg",
+    "latitude": -33.56188,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.60255,
+    "name": "Keeromsberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Keeromsberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-worcester",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-moordkuil",
+    "latitude": -33.646238,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.445927,
+    "name": "Moordkuil",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Moordkuil",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-worcester",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-nuy",
+    "latitude": -33.646238,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.445927,
+    "name": "Nuy",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Nuy",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-worcester",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-rooikrans",
+    "latitude": -33.5878212,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.5776188,
+    "name": "Rooikrans",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rooikrans",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-worcester",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-scherpenheuvel",
+    "latitude": -33.646238,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.445927,
+    "name": "Scherpenheuvel",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Scherpenheuvel",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-worcester",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-stettyn",
+    "latitude": -33.8704935,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.3666568,
+    "name": "Stettyn",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Stettyn",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-worcester",
+      "za-breede-river-valley",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-groenfontein",
+    "latitude": -33.5326711,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 21.6878637,
+    "name": "Groenfontein",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Groenfontein",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-calitzdorp",
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-cango-valley",
+    "latitude": -33.65983275,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.90284595,
+    "name": "Cango Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cango Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Kango Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-koo-plateau",
+    "latitude": -33.65983275,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.90284595,
+    "name": "Koo Plateau",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Koo Plateau",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-montagu",
+    "latitude": -33.7869944,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.1178282,
+    "name": "Montagu",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Montagu",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-outeniqua",
+    "latitude": -33.65983275,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.90284595,
+    "name": "Outeniqua",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Outeniqua",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-tradouw",
+    "latitude": -33.65983275,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.90284595,
+    "name": "Tradouw",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tradouw",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-tradouw-highlands",
+    "latitude": -33.65983275,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.90284595,
+    "name": "Tradouw Highlands",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tradouw Highlands",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Tradouw Hoogland",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-upper-langkloof",
+    "latitude": -33.65983275,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.90284595,
+    "name": "Upper Langkloof",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Upper Langkloof",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Bo Langkloof",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-klein-karoo",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-piekenierskloof",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Piekenierskloof",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Piekenierskloof",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-citrusdal-mountain",
+      "za-olifants-river",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-spruitdrift",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Spruitdrift",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Spruitdrift",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-olifants-river",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-vredendal",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Vredendal",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vredendal",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-olifants-river",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-ceres",
+    "latitude": -33.368333,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.309167,
+    "name": "Ceres",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ceres",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-ceres-plateau",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-kweekvallei",
+    "latitude": -33.222626,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 22.030331,
+    "name": "Kweekvallei",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kweekvallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-prince-albert",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-prince-albert-valley",
+    "latitude": -33.222626,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 22.030331,
+    "name": "Prince Albert Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Prince Albert Valley",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Prince Albert Vallei",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-prince-albert",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-swartberg",
+    "latitude": -33.222626,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 22.030331,
+    "name": "Swartberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Swartberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-prince-albert",
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-nieuwoudtville",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Nieuwoudtville",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Nieuwoudtville",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-cederberg",
+    "latitude": -32.5005556,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 19.2569444,
+    "name": "Cederberg",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cederberg",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-leipoldtville-sandveld",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Leipoldtville-Sandveld",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Leipoldtville-Sandveld",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-western-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-groblershoop",
+    "latitude": -28.8958333,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 21.9833333,
+    "name": "Groblershoop",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Groblershoop",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-central-orange-river",
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-grootdrink",
+    "latitude": -28.563611,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 21.748611,
+    "name": "Grootdrink",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Grootdrink",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-central-orange-river",
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-kakamas",
+    "latitude": -28.773056,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.615,
+    "name": "Kakamas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kakamas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-central-orange-river",
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-keimoes",
+    "latitude": -28.708951,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 20.974871,
+    "name": "Keimoes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Keimoes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-central-orange-river",
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-upington",
+    "latitude": -28.456325,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 21.241867,
+    "name": "Upington",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Upington",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-central-orange-river",
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-hartswater",
+    "latitude": -27.7516667,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 24.81,
+    "name": "Hartswater",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hartswater",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-prieska",
+    "latitude": -29.666286,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 22.74439,
+    "name": "Prieska",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Prieska",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-northern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-st-francis-bay",
+    "latitude": -34.171676,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": 24.832916,
+    "name": "St Francis Bay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "St Francis Bay",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-eastern-cape",
+      "za-greater-cape"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-rietrivier-fs",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Rietrivier FS",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rietrivier FS",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Rietrivier VS",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "za-free-state"
+    ]
+  },
+  {
+    "countryCode": "ZA",
+    "eambrosiaId": null,
+    "giType": "WO",
+    "grapes": [],
+    "id": "za-lanseria",
+    "latitude": null,
+    "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
+    "longitude": null,
+    "name": "Lanseria",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lanseria",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "ward",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
   }
 ]

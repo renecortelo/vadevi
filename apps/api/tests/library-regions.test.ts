@@ -11,6 +11,7 @@ import { beforeAll, describe, expect, it } from "vitest";
 import { librarySql } from "../../../scripts/kb/library-sql";
 import { runDeterministicAssistantTurn } from "../src/repositories/assistant";
 import { regionsMentionedIn } from "../src/repositories/library";
+import { regionRefOf } from "../src/repositories/region-names";
 import { randomOpaqueToken } from "../src/security/opaque-token";
 import { emulatorIdToken } from "./fixtures/firebase-token";
 
@@ -122,9 +123,65 @@ const priorat = {
   },
 };
 
+// Beyond the EU: a South African province, a district in it and a ward in
+// the district, each in its own register's terms; a New Zealand name.
+const beyond = {
+  eambrosiaId: null,
+  grapes: [],
+  latitude: null,
+  legalUrl: null,
+  longitude: null,
+  prominence: 0,
+  registeredOn: null,
+  summaries: {},
+  wikidataId: null,
+};
+const westernCape = {
+  ...beyond,
+  countryCode: "ZA",
+  giType: "WO" as const,
+  id: "za-western-cape",
+  name: "Western Cape",
+  names: [{ locale: "*", name: "Western Cape", source: "register" as const }],
+  registerLevel: "unit" as const,
+};
+const stellenbosch = {
+  ...westernCape,
+  id: "za-stellenbosch",
+  name: "Stellenbosch",
+  names: [{ locale: "*", name: "Stellenbosch", source: "register" as const }],
+  registerLevel: "district" as const,
+  within: ["za-western-cape"],
+};
+const banghoek = {
+  ...westernCape,
+  id: "za-banghoek",
+  name: "Banghoek",
+  names: [{ locale: "*", name: "Banghoek", source: "register" as const }],
+  registerLevel: "ward" as const,
+  within: ["za-stellenbosch", "za-western-cape"],
+};
+const marlborough = {
+  ...beyond,
+  countryCode: "NZ",
+  giType: "GI" as const,
+  id: "nz-marlborough",
+  name: "Marlborough",
+  names: [{ locale: "*", name: "Marlborough", source: "register" as const }],
+  registerRef: "1004",
+};
+
 beforeAll(async () => {
   await applyD1Migrations(env.DB, env.TEST_MIGRATIONS);
-  for (const statement of librarySql([grape], "test", undefined, [rioja, jerez, priorat])) {
+  for (const statement of librarySql([grape], "test", undefined, [
+    rioja,
+    jerez,
+    priorat,
+    westernCape,
+    stellenbosch,
+    banghoek,
+    marlborough,
+  ])) {
     await env.DB.prepare(statement).run();
   }
 });
@@ -186,6 +243,39 @@ describe("the wine atlas", () => {
       headers,
     });
     expect(missing.status).toBe(404);
+  });
+
+  it("shows where a name lies in its register's areas, and what lies directly in it", async () => {
+    const entry = async (id: string) =>
+      LibraryRegionResponseSchema.parse(
+        await (
+          await SELF.fetch(`https://vadevi.test/api/v1/library/regions/${id}?locale=en`, {
+            headers,
+          })
+        ).json(),
+      ).data;
+    const district = await entry("za-stellenbosch");
+    expect(district).toMatchObject({ giType: "WO", registerLevel: "district" });
+    expect(district.within).toEqual([
+      { id: "za-western-cape", level: "unit", name: "Western Cape" },
+    ]);
+    expect(district.contains).toEqual([{ id: "za-banghoek", level: "ward", name: "Banghoek" }]);
+    // The ward is in the province too, but through its district.
+    expect((await entry("za-western-cape")).contains.map((held) => held.id)).toEqual([
+      "za-stellenbosch",
+    ]);
+    expect(await entry("nz-marlborough")).toMatchObject({
+      contains: [],
+      registerLevel: null,
+      registerRef: "1004",
+      within: [],
+    });
+  });
+
+  it("links a wine's region written with its country to the name", async () => {
+    expect(await regionRefOf(env.DB, "New Zealand Marlborough")).toBe("nz-marlborough");
+    expect(await regionRefOf(env.DB, "Stellenbosch, South Africa")).toBe("za-stellenbosch");
+    expect(await regionRefOf(env.DB, "Western Cape")).toBe("za-western-cape");
   });
 
   it("links a grape card's region to its atlas entry", async () => {
