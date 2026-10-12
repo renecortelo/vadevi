@@ -25,6 +25,16 @@ export const notThisItem: Record<string, string[]> = {
   "savigny les beaune": ["Q2893254"],
   trentino: ["Q140131057"],
   "oltrepo pavese metodo classico": ["Q3351573"],
+  // A larger or neighbouring wine that lists the name among its aliases, where
+  // the name has an item of its own (P14, 12 October 2026): the whole Rhône
+  // valley, the Côtes du Rhône for its Villages, the Coteaux du Languedoc for
+  // La Clape, and Montefalco rosso, one of the DOC's wines, for the DOC.
+  "cotes du rhone": ["Q1891041"],
+  "cotes du rhone villages": ["Q1151005"],
+  "la clape": ["Q1136603"],
+  montefalco: ["Q3322614"],
+  // Friuli Isonzo DOC, one of the region's DOCs, answers to "Friulian wine".
+  friuli: ["Q443118"],
 };
 
 /** Whether an item may stand for the registered name it was matched by. */

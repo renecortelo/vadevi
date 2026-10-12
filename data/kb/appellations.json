@@ -2937,12 +2937,12 @@
       },
       {
         "locale": "en",
-        "name": "Alella",
+        "name": "Alella (DO)",
         "source": "wikidata"
       },
       {
         "locale": "es",
-        "name": "Alella",
+        "name": "Alella (DO)",
         "source": "wikidata"
       },
       {
@@ -12512,55 +12512,12 @@
         "source": "wikidata"
       }
     ],
-    "prominence": 0,
+    "prominence": 1,
     "registeredOn": "1999-02-19",
     "summaries": {
-      "en": {
-        "text": "The geographical area lies in the central part of Tuscany, in the hill country close to the Apennines, in the province of Florence: the climate is “humid” or “subhumid”, with a water deficit in summer and average annual rainfall of 867 mm.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/28277",
-        "license": "EC-reuse-2011-833"
-      },
-      "es": {
-        "text": "La zona geográfica se encuentra en la parte central de la región de Toscana, en las tierras de colinas próximas a la cadena de los Apeninos, en la provincia de Florencia: el clima es «húmedo» o «subhúmedo», con déficit hídrico en verano y una precipitación media anual de 867 mm.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/28277",
-        "license": "EC-reuse-2011-833"
-      },
-      "ca": {
-        "text": "La zona geogràfica es troba a la part central de la regió de la Toscana, als territoris de turons, a tocar de la serralada dels Apenins, de la província de Florència: el clima és «humit» o «subhumit», amb dèficit hídric a l’estiu i una pluviometria mitjana anual de 867 mm.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/28277",
-        "license": "EC-reuse-2011-833"
-      },
-      "fr": {
-        "text": "La zone géographique se situe dans la partie centrale de la Toscane, dans les territoires de collines proches de la chaîne des Apennins, dans la province de Florence : le climat est « humide » ou « subhumide », avec un déficit hydrique en été et une pluviométrie moyenne annuelle de 867 mm.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/28277",
-        "license": "EC-reuse-2011-833"
-      },
-      "de": {
-        "text": "Das geografische Gebiet liegt im mittleren Teil der Toskana, im Hügelland nahe dem Apenninkamm in der Provinz Florenz: Das Klima ist „feucht“ oder „subhumid“, mit Wasserdefizit im Sommer und einer mittleren jährlichen Niederschlagsmenge von 867 mm.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/28277",
-        "license": "EC-reuse-2011-833"
-      },
-      "nl": {
-        "text": "Het geografische gebied ligt in het centrale deel van Toscane, in het heuvelland tegen de Apennijnen aan, in de provincie Florence: het klimaat is „vochtig” of „subhumide”, met een watertekort in de zomer en een gemiddelde jaarlijkse neerslag van 867 mm.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/28277",
-        "license": "EC-reuse-2011-833"
-      },
-      "pt": {
-        "text": "A zona geográfica situa-se na parte central da Toscana, nos territórios de colinas junto à cordilheira dos Apeninos, na província de Florença: o clima é «húmido» ou «sub-húmido», com défice hídrico no verão e uma precipitação média anual de 867 mm.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/28277",
-        "license": "EC-reuse-2011-833"
-      },
       "it": {
-        "license": "EC-reuse-2011-833",
-        "text": "La zona geografica ricade nella parte centrale della regione Toscana nei territori collinari, a ridosso della catena degli Appennini, della provincia di Firenze:il clima è “umido” o “subumido”, con deficienza idrica in estate, piovosità media annua di 867 mm.",
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/28277"
+        "text": "Alta Valle della Greve è una IGT riservata ad alcuni vini la cui produzione è consentita nella città metropolitana di Firenze.",
+        "url": "https://it.wikipedia.org/wiki/Alta_Valle_della_Greve"
       }
     },
     "wikidataId": "Q139899864",
@@ -43560,12 +43517,12 @@
       },
       {
         "locale": "en",
-        "name": "Denominación de Origen Catalunya",
+        "name": "Catalunya (DO)",
         "source": "wikidata"
       },
       {
         "locale": "es",
-        "name": "Cataluña",
+        "name": "DO Cataluña",
         "source": "wikidata"
       },
       {
@@ -43674,7 +43631,7 @@
       },
       {
         "locale": "en",
-        "name": "Cava",
+        "name": "Cava (DO)",
         "source": "wikidata"
       },
       {
@@ -46538,60 +46495,31 @@
         "locale": "*",
         "name": "Chorey-lès-Beaune",
         "source": "register"
+      },
+      {
+        "locale": "fr",
+        "name": "Chorey-lès-beaune",
+        "source": "wikidata"
+      },
+      {
+        "locale": "en",
+        "name": "Chorey-les-Beaune wine",
+        "source": "wikidata"
       }
     ],
-    "prominence": 0,
+    "prominence": 2,
     "registeredOn": "1973-09-18",
     "summaries": {
       "en": {
-        "text": "The geographical area lies within the “Côte de Beaune” vineyard, a straight relief running for about 25 kilometres north-east/south-west. This relief of tectonic origin separates the limestone plateaus of the “Hautes Côtes” to the west, at an altitude of between 400 metres and 500 metres, from the Bresse plain to the east, a Tertiary rift valley whose altitude, below the côte, is about 250 metres.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463",
-        "license": "EC-reuse-2011-833"
-      },
-      "es": {
-        "text": "La zona geográfica se encuentra en el viñedo de la «Côte de Beaune», relieve rectilíneo que se extiende a lo largo de unos 25 kilómetros en dirección general noreste/suroeste. Este relieve de origen tectónico separa las mesetas calizas de las «Hautes Côtes», al oeste, con una altitud de entre 400 metros y 500 metros, de la llanura de Bresse, al este, una fosa tectónica terciaria cuya altitud, a la altura de la côte, ronda los 250 metros.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463",
-        "license": "EC-reuse-2011-833"
-      },
-      "ca": {
-        "text": "La zona geogràfica es troba dins la vinya de la «Côte de Beaune», un relleu rectilini que s’allarga uns 25 quilòmetres en direcció general nord-est/sud-oest. Aquest relleu d’origen tectònic separa els altiplans calcaris de les «Hautes Côtes», a l’oest, d’una altitud d’entre 400 metres i 500 metres, i la plana de Bresse, a l’est, fossa tectònica terciària l’altitud de la qual, a l’altura de la costa, ronda els 250 metres.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463",
-        "license": "EC-reuse-2011-833"
-      },
-      "it": {
-        "text": "La zona geografica si trova nel vigneto della «Côte de Beaune», rilievo rettilineo che si allunga per circa 25 chilometri in direzione generale nord-est/sud-ovest. Questo rilievo di origine tettonica separa gli altipiani calcarei delle «Hautes Côtes», a ovest, a un’altitudine compresa tra 400 metri e 500 metri, dalla pianura della Bresse, a est, fossa tettonica terziaria la cui altitudine, all’altezza della costa, è di circa 250 metri.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463",
-        "license": "EC-reuse-2011-833"
-      },
-      "de": {
-        "text": "Das geografische Gebiet liegt im Weinbaugebiet der „Côte de Beaune“, einem geradlinigen Höhenzug, der sich über etwa 25 Kilometer in allgemeiner Richtung Nordost/Südwest erstreckt. Dieser Höhenzug tektonischen Ursprungs trennt die Kalkhochflächen der „Hautes Côtes“ im Westen, in einer Höhe zwischen 400 Metern und 500 Metern, von der Bresse-Ebene im Osten, einem tertiären Grabenbruch, dessen Höhe auf Höhe der Côte bei etwa 250 Metern liegt.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463",
-        "license": "EC-reuse-2011-833"
-      },
-      "nl": {
-        "text": "Het geografische gebied ligt in de wijngaard van de „Côte de Beaune”, een rechtlijnige verhoging die zich over ongeveer 25 kilometer in algemene richting noordoost/zuidwest uitstrekt. Deze verhoging van tektonische oorsprong scheidt de kalkplateaus van de „Hautes Côtes” in het westen, op een hoogte tussen 400 meter en 500 meter, van de vlakte van de Bresse in het oosten, een tertiaire slenk waarvan de hoogte ter hoogte van de côte ongeveer 250 meter is.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463",
-        "license": "EC-reuse-2011-833"
-      },
-      "pt": {
-        "text": "A zona geográfica situa-se na vinha da «Côte de Beaune», relevo retilíneo que se alonga por cerca de 25 quilómetros numa direção geral nordeste/sudoeste. Este relevo de origem tectónica separa os planaltos calcários das «Hautes Côtes», a oeste, com uma altitude entre 400 metros e 500 metros, da planície de Bresse, a leste, fossa tectónica terciária cuja altitude, à altura da côte, ronda os 250 metros.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463",
-        "license": "EC-reuse-2011-833"
+        "text": "Chorey-les-Beaune wine is produced in the commune of Chorey-les-Beaune in Côte de Beaune of Burgundy. The Appellation d'origine contrôlée (AOC) Chorey-les-Beaune, which may also be written Chorey, may be used for red and white wine with respectively Pinot noir and Chardonnay as the main grape variety. More than 90 per cent of the production consists of red wine.",
+        "url": "https://en.wikipedia.org/wiki/Chorey-les-Beaune_wine"
       },
       "fr": {
-        "license": "EC-reuse-2011-833",
-        "text": "La zone géographique se situe dans le vignoble de la « Côte de Beaune », relief rectiligne s'allongeant sur environ 25 kilomètres selon une direction générale nord-est/sud-ouest. Ce relief d'origine tectonique sépare les plateaux calcaires des « Hautes Côtes », à l'ouest, d’une altitude comprise entre 400 mètres et 500 mètres, et la plaine de Bresse, à l'est, fossé d'effondrement tertiaire dont l'altitude, au droit de la côte, avoisine 250 mètres.",
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463"
+        "text": "Un chorey-lès-beaune est un vin français d'appellation d'origine contrôlée, produit sur une partie de la commune de Chorey-les-Beaune, en Côte-d'Or.",
+        "url": "https://fr.wikipedia.org/wiki/Chorey-l%C3%A8s-beaune_(AOC)"
       }
     },
-    "wikidataId": null,
+    "wikidataId": "Q2964509",
     "register": {
       "categories": [
         1
@@ -57957,7 +57885,7 @@
       },
       {
         "locale": "en",
-        "name": "Conca de Barberà",
+        "name": "Conca de Barberà (DO)",
         "source": "wikidata"
       },
       {
@@ -61720,7 +61648,7 @@
       },
       {
         "locale": "en",
-        "name": "Costers del Segre",
+        "name": "Costers del Segre (DO)",
         "source": "wikidata"
       },
       {
@@ -74461,22 +74389,11 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000000181",
     "giType": "PDO",
-    "grapes": [
-      {
-        "grapeId": "muscat-blanc-a-petits-grains",
-        "quote": "In Greece, the grape is most important on the island of Samos ... Near Patras ... Spina in Crete ... In Italy ... Piedmont ... In France ... Frontignan area ... Rhône ... Alsace ... Hérault region ... In Spain ... Castilla-La Mancha ...",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains"
-      },
-      {
-        "grapeId": "clairette-blanche",
-        "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
-      }
-    ],
+    "grapes": [],
     "id": "fr-cotes-du-rhone",
-    "latitude": 45,
+    "latitude": 44.375,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000000181",
-    "longitude": 4.83,
+    "longitude": 5.1666666666667,
     "pointSource": "area",
     "name": "Côtes du Rhône",
     "names": [
@@ -74486,84 +74403,52 @@
         "source": "register"
       },
       {
-        "locale": "de",
-        "name": "Rhône",
-        "source": "wikidata"
-      },
-      {
         "locale": "fr",
-        "name": "Vignoble de la vallée du Rhône",
-        "source": "wikidata"
-      },
-      {
-        "locale": "es",
-        "name": "Viñedo del valle del Ródano",
+        "name": "Côtes-du-Rhône",
         "source": "wikidata"
       },
       {
         "locale": "en",
-        "name": "Rhône wine",
+        "name": "Côtes du Rhône AOC",
+        "source": "wikidata"
+      },
+      {
+        "locale": "de",
+        "name": "Côtes du Rhône",
+        "source": "wikidata"
+      },
+      {
+        "locale": "es",
+        "name": "Côtes du Rhône",
         "source": "wikidata"
       },
       {
         "locale": "nl",
-        "name": "Rhônevallei",
-        "source": "wikidata"
-      },
-      {
-        "locale": "pt",
-        "name": "Vinhedo do vale do Rhône",
-        "source": "wikidata"
-      },
-      {
-        "locale": "it",
-        "name": "Vigneto della Valle del Rodano",
-        "source": "wikidata"
-      },
-      {
-        "locale": "ca",
-        "name": "vinyar de la vall del Roine",
+        "name": "Côtes du Rhône AOC",
         "source": "wikidata"
       }
     ],
-    "prominence": 7,
+    "prominence": 4,
     "registeredOn": "1973-09-18",
     "summaries": {
       "en": {
-        "text": "The Rhône wine region (Occitan: Region vinicona del Ròse) in Southern France is situated in the Rhône valley and produces numerous wines under various Appellation d'origine contrôlée (AOC) designations. The region's major appellation in production volume is Côtes du Rhône AOC.",
-        "url": "https://en.wikipedia.org/wiki/Rh%C3%B4ne_wine"
+        "text": "Côtes du Rhône (French: [kot dy ʁon]) is a wine-growing Appellation d'Origine Contrôlée (AOC) for the Rhône wine region of France, which may be used throughout the region, also in those areas which are covered by other AOCs. In a limited part of the region, the Côtes-du-Rhône Villages AOC may be used, in some cases together with the name of the commune.",
+        "url": "https://en.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne_AOC"
       },
       "es": {
-        "text": "El viñedo del valle del Ródano (en francés, vignoble de la vallée du Rhône) es una región vinícola francesa que se extiende desde Vienne al Norte hasta Arlés en el Sur.",
-        "url": "https://es.wikipedia.org/wiki/Vi%C3%B1edo_del_valle_del_R%C3%B3dano"
+        "text": "Côtes-du-Rhône (en idioma español Colinas del Ródano) es una AOC (Appellation d'origine contrôlée) francesa que se aplica a vinos producidos en ambas márgenes del río Ródano, siendo la principal de las que integran la Región Vinícola del valle del Ródano y uno de los buques insignia de la viticultura gala (junto con Burdeos, Borgoña y Champaña).",
+        "url": "https://es.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne"
       },
       "fr": {
-        "text": "Le vignoble de la vallée du Rhône est une expression désignant la région viticole française s'étendant de part et d'autre du Rhône, de Vienne au nord jusqu'à Avignon au sud, sur un total de 1 317 communes. En sont habituellement exclus les vignobles bordant le fleuve plus en amont, que ce soit en France (Bugey et Savoie) comme en Suisse (Genève, Vaud et Valais).",
-        "url": "https://fr.wikipedia.org/wiki/Vignoble_de_la_vall%C3%A9e_du_Rh%C3%B4ne"
+        "text": "Un côtes-du-rhône est un vin d'appellation d'origine contrôlée produit sur les rives droite et gauche du Rhône entre Vienne et Avignon.",
+        "url": "https://fr.wikipedia.org/wiki/C%C3%B4tes-du-rh%C3%B4ne_(AOC)"
       },
       "de": {
-        "text": "Aus dem 200 km langen Teilstück der Rhône zwischen Vienne und Avignon, Frankreich, kommen eine ganze Reihe hochwertiger Weine. Das Weinbaugebiet Rhône gilt als die älteste Weinregion Frankreichs. Die gesamte Rebfläche beträgt rund 61.172 Hektar, die Weinproduktion beläuft sich auf etwa 2,51 Millionen hl/Jahr (Stand 2008,).",
-        "url": "https://de.wikipedia.org/wiki/Rh%C3%B4ne_(Weinbaugebiet)"
-      },
-      "it": {
-        "text": "Il vigneto della Valle del Rodano nel sud della Francia è una vasta regione situata nei pressi del fiume Rodano, nota per la sua elevata produzione vinicola e i cui vini recano l'etichetta Appellation d'origine contrôlée (AOC). Tra questi, il più apprezzato ed esportato è il Côtes du Rhône AOC.",
-        "url": "https://it.wikipedia.org/wiki/Vigneto_della_Valle_del_Rodano"
-      },
-      "nl": {
-        "text": "De Côtes du Rhône of Rhônevallei is een wijnstreek in het zuidoosten van Frankrijk.",
-        "url": "https://nl.wikipedia.org/wiki/Rh%C3%B4nevallei_(wijnstreek)"
-      },
-      "pt": {
-        "text": "A região vinícola de Rhône no sul da França está situada no vale do Rhône e produz vários tipos de vinho em diversas designações Appellation d'origine contrôlée (AOC). A maior designação por volume de produção é Côtes du Rhône AOC.",
-        "url": "https://pt.wikipedia.org/wiki/Vinhedo_do_vale_do_Rh%C3%B4ne"
-      },
-      "ca": {
-        "text": "La regió vinícola del Roine (en occità, Region vinicona del Ròse), al sud de França, se situa a la vall del Roine i produeix nombrosos vins amb diverses Appellations d'origine contrôlée (AOC). La principal denominació de la regió per volum de producció és la Côtes du Rhône AOC.",
-        "translated": true,
-        "url": "https://en.wikipedia.org/wiki/Rh%C3%B4ne_wine"
+        "text": "Die Côtes du Rhône (französisch „Hänge der Rhône“) ist die Bezeichnung für ein überregionales bedeutendes Weinbaugebiet im südlichen Rhonetal. Das Gebiet ist Teil des Weinbaugebietes Rhône (die der Landschaft Côtes du Rhône entspricht, den östlichen Alpenvorbergen und Abhängen der Cevennen des mittleren Rhonetals), genauer, der südlichen Côtes du Rhône Meridionales, und erstreckt sich rund um Orange und Avignon.",
+        "url": "https://de.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne"
       }
     },
-    "wikidataId": "Q1891041",
+    "wikidataId": "Q1151005",
     "register": {
       "categories": [
         1
@@ -74675,72 +74560,38 @@
         "source": "register"
       },
       {
-        "locale": "fr",
-        "name": "Côtes-du-Rhône",
+        "locale": "de",
+        "name": "Côtes du Rhône Villages",
         "source": "wikidata"
       },
       {
         "locale": "en",
-        "name": "Côtes du Rhône AOC",
+        "name": "Côtes-du-Rhône Villages AOC",
         "source": "wikidata"
       },
       {
-        "locale": "de",
-        "name": "Côtes du Rhône",
-        "source": "wikidata"
-      },
-      {
-        "locale": "es",
-        "name": "Côtes du Rhône",
-        "source": "wikidata"
-      },
-      {
-        "locale": "nl",
-        "name": "Côtes du Rhône AOC",
+        "locale": "fr",
+        "name": "côtes-du-rhône villages",
         "source": "wikidata"
       }
     ],
-    "prominence": 4,
+    "prominence": 3,
     "registeredOn": "2011-12-14",
     "summaries": {
       "en": {
-        "text": "Côtes du Rhône (French: [kot dy ʁon]) is a wine-growing Appellation d'Origine Contrôlée (AOC) for the Rhône wine region of France, which may be used throughout the region, also in those areas which are covered by other AOCs. In a limited part of the region, the Côtes-du-Rhône Villages AOC may be used, in some cases together with the name of the commune.",
-        "url": "https://en.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne_AOC"
-      },
-      "es": {
-        "text": "Côtes-du-Rhône (en idioma español Colinas del Ródano) es una AOC (Appellation d'origine contrôlée) francesa que se aplica a vinos producidos en ambas márgenes del río Ródano, siendo la principal de las que integran la Región Vinícola del valle del Ródano y uno de los buques insignia de la viticultura gala (junto con Burdeos, Borgoña y Champaña).",
-        "url": "https://es.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne"
+        "text": "Côtes-du-Rhône Villages (French pronunciation: [kot dy ʁon vilaʒ]) is a French wine Appellation d'Origine Contrôlée (AOC) produced in 95 settlements in the departments of the Ardèche, the Drôme, the Gard, and the Vaucluse in the southern Rhône wine region of France.",
+        "url": "https://en.wikipedia.org/wiki/C%C3%B4tes-du-Rh%C3%B4ne_Villages_AOC"
       },
       "fr": {
-        "text": "Un côtes-du-rhône est un vin d'appellation d'origine contrôlée produit sur les rives droite et gauche du Rhône entre Vienne et Avignon.",
-        "url": "https://fr.wikipedia.org/wiki/C%C3%B4tes-du-rh%C3%B4ne_(AOC)"
+        "text": "Un côtes-du-rhône-villages est un vin d'appellation d'origine contrôlée produit sur une large partie du vignoble de la vallée du Rhône méridionale, sur quatre départements : l'Ardèche, la Drôme, le Gard et le Vaucluse.",
+        "url": "https://fr.wikipedia.org/wiki/C%C3%B4tes-du-rh%C3%B4ne-villages"
       },
       "de": {
-        "text": "Die Côtes du Rhône (französisch „Hänge der Rhône“) ist die Bezeichnung für ein überregionales bedeutendes Weinbaugebiet im südlichen Rhonetal. Das Gebiet ist Teil des Weinbaugebietes Rhône (die der Landschaft Côtes du Rhône entspricht, den östlichen Alpenvorbergen und Abhängen der Cevennen des mittleren Rhonetals), genauer, der südlichen Côtes du Rhône Meridionales, und erstreckt sich rund um Orange und Avignon.",
-        "url": "https://de.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne"
-      },
-      "ca": {
-        "text": "Côtes du Rhône és una Appellation d'Origine Contrôlée (AOC) vitícola de la regió vinícola del Roine, a França, que es pot utilitzar a tota la regió, fins i tot a les zones cobertes per altres AOC. En una part limitada de la regió es pot utilitzar l'AOC Côtes-du-Rhône Villages, en alguns casos juntament amb el nom del municipi.",
-        "translated": true,
-        "url": "https://en.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne_AOC"
-      },
-      "nl": {
-        "text": "Côtes du Rhône is een Appellation d'Origine Contrôlée (AOC) voor de wijnstreek Rhône in Frankrijk, die in de hele streek mag worden gebruikt, ook in gebieden die onder andere AOC's vallen. In een beperkt deel van de streek mag de AOC Côtes-du-Rhône Villages worden gebruikt, in sommige gevallen samen met de naam van de gemeente.",
-        "translated": true,
-        "url": "https://en.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne_AOC"
-      },
-      "pt": {
-        "text": "Côtes du Rhône é uma Appellation d'Origine Contrôlée (AOC) vitícola da região vinícola do Ródano, em França, que se pode usar em toda a região, mesmo nas zonas abrangidas por outras AOC. Numa parte limitada da região pode usar-se a AOC Côtes-du-Rhône Villages, nalguns casos com o nome da comuna.",
-        "translated": true,
-        "url": "https://en.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne_AOC"
-      },
-      "it": {
-        "text": "Côtes du Rhône è un'Appellation d'Origine Contrôlée (AOC) vitivinicola della regione vinicola del Rodano, in Francia, che si può usare in tutta la regione, anche nelle zone coperte da altre AOC. In una parte limitata della regione si può usare l'AOC Côtes-du-Rhône Villages, in alcuni casi insieme al nome del comune.",
-        "translated": true,
-        "url": "https://en.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne_AOC"
+        "text": "Côtes du Rhône Villages ist eine geschützte Ursprungsbezeichnung AOP (veraltet AOC) für bestimmte Weine des französischen Weinbaugebietes Rhône. Unter der Bezeichnung werden überwiegend Rot-, aber auch Rosé- und Weißweine vermarktet. Die Anbauflächen sind Teil der Anbauflächen der geschützten Ursprungsbezeichnung Côtes du Rhône, sie liegen in deren südlichem Teil.",
+        "url": "https://de.wikipedia.org/wiki/C%C3%B4tes_du_Rh%C3%B4ne_Villages"
       }
     },
-    "wikidataId": "Q1151005",
+    "wikidataId": "Q1422135",
     "register": {
       "categories": [
         1
@@ -84796,7 +84647,7 @@
       },
       {
         "locale": "en",
-        "name": "Empordà",
+        "name": "Empordà (DO)",
         "source": "wikidata"
       },
       {
@@ -107245,9 +107096,9 @@
       }
     ],
     "id": "fr-la-clape",
-    "latitude": 43.3471263888885,
+    "latitude": 43.083333333333,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000014387",
-    "longitude": 3.14694861111115,
+    "longitude": 2.4166666666667,
     "pointSource": "area",
     "name": "La Clape",
     "names": [
@@ -107258,21 +107109,21 @@
       },
       {
         "locale": "fr",
-        "name": "Coteaux-du-languedoc",
-        "source": "wikidata"
-      },
-      {
-        "locale": "de",
-        "name": "Coteaux du Languedoc",
+        "name": "La-clape",
         "source": "wikidata"
       },
       {
         "locale": "en",
-        "name": "Coteaux du Languedoc",
+        "name": "La-clape",
+        "source": "wikidata"
+      },
+      {
+        "locale": "nl",
+        "name": "La Clape",
         "source": "wikidata"
       }
     ],
-    "prominence": 2,
+    "prominence": 1,
     "registeredOn": "2017-12-15",
     "summaries": {
       "en": {
@@ -107317,7 +107168,7 @@
         "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32017D0809%2801%29"
       }
     },
-    "wikidataId": "Q1136603",
+    "wikidataId": "Q3206239",
     "register": {
       "categories": [
         1
@@ -107848,54 +107699,72 @@
         "locale": "*",
         "name": "La Mancha",
         "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "La Mancha",
+        "source": "wikidata"
+      },
+      {
+        "locale": "es",
+        "name": "La Mancha (vino)",
+        "source": "wikidata"
+      },
+      {
+        "locale": "it",
+        "name": "La Mancia",
+        "source": "wikidata"
+      },
+      {
+        "locale": "nl",
+        "name": "La Mancha",
+        "source": "wikidata"
+      },
+      {
+        "locale": "ca",
+        "name": "La Mancha",
+        "source": "wikidata"
+      },
+      {
+        "locale": "de",
+        "name": "La Mancha",
+        "source": "wikidata"
+      },
+      {
+        "locale": "fr",
+        "name": "La Mancha",
+        "source": "wikidata"
       }
     ],
-    "prominence": 0,
+    "prominence": 6,
     "registeredOn": "1986-06-13",
     "summaries": {
       "en": {
-        "text": "The soil composition of the Manchegan plain is a product of the Miocene sedimentation of limestone, marl and sand, giving earth of a brown or reddish-brown colour. Indeed, the abundance of limestone soils in La Mancha makes the area ideal for producing full-bodied red wines, suitable for maturing, while the sandy limestone confers a pleasing strength on the wine. The lack of rainfall (300 to 350 mm annually) and the high exposure to sunlight (3 000 hours of sun) produce intensely coloured wines in which aromatic intensity is given a clear boost. The average vineyard yield is low, which also helps to give the wines an excellent balance.",
-        "url": "https://eur-lex.europa.eu/eli/C/2026/1048/oj/eng",
-        "license": "EC-reuse-2011-833"
-      },
-      "de": {
-        "text": "Aufgrund der Zusammensetzung der Böden der Ebene von La Mancha, die auf die Sedimentation von Kalk, Mergel und Sand im Miozän zurückgehen, ist das Erdreich braun oder braun-rötlich. Die in La Mancha vorherrschenden kalkhaltigen Böden eignen sich für die Erzeugung von körperreichen Rotweinen, die für die Reifung geeignet sind, während die kalkhaltigen Sandböden dem Wein einen guten Alkoholgrad verleihen. Die Trockenheit (Niederschlagsmengen von 300 bis 350 mm jährlich) und die hohe Sonneneinstrahlung (3 000 Sonnenstunden) geben den Weinen eine farbliche Intensität und verstärken eindeutig die Intensität des Aromas. Die Durchschnittserträge der Rebflächen sind niedrig, was die hohe Ausgewogenheit der Weine begünstigt.",
-        "url": "https://eur-lex.europa.eu/eli/C/2026/1048/oj/deu",
-        "license": "EC-reuse-2011-833"
+        "text": "La Mancha is a Spanish Denominación de Origen Protegida (DOP) for wines, with over 190,000 ha planted to vines, and is the largest continuous vine-growing area in the world. It is located in the autonomous community of Castile-La Mancha in central Spain and includes 182 municipalities: 12 in the province of Albacete, 58 in Ciudad Real, 66 in Cuenca and 46 in Toledo.",
+        "url": "https://en.wikipedia.org/wiki/La_Mancha_(DO)"
       },
       "es": {
-        "text": "En la llanura manchega la composición de los suelos, producto de la sedimentación miocénica de calizas, margas y arenas, da lugar a una tierra de color pardo o pardo-rojiza. De hecho, la abundancia de suelos calizos en La Mancha, la hace propicia para hacer vinos tintos con gran cuerpo,buenos para crianza, mientras que las calizas arenosas conceden al vino una buena graduación. La sequedad (300 a 350 mm anuales)y la alta insolación (3 000 horas de sol)dan lugar a vinos con intensidad colorante, en los que se potencia claramente la intensidad aromática. Las producciones medias el viñedo son bajas lo que también favorece un gran equilibrio en los vinos.",
-        "url": "https://eur-lex.europa.eu/eli/C/2026/1048/oj/spa",
-        "license": "EC-reuse-2011-833"
-      },
-      "fr": {
-        "text": "Dans les plaines de La Manche, la composition des sols, produit de la sédimentation miocène de calcaires, de marnes et de sables, offre une terre brune ou brun rougeâtre. L’abondance de sols calcaires dans la région de La Manche rend la terre propice à l’obtention de vins rouges au corps puissant, aptes au vieillissement, alors que les calcaires sableux confèrent au vin le juste titre alcoolique. Les faibles précipitations (300 à 350 mm par an) et un niveau d’ensoleillement élevé (3 000 heures de soleil) donnent des vins à forte intensité colorante, ce qui permet de produire des vins dont l’intensité aromatique est nettement renforcée. Les productions moyennes du vignoble sont faibles, ce qui favorise également un grand équilibre dans les vins.",
-        "url": "https://eur-lex.europa.eu/eli/C/2026/1048/oj/fra",
-        "license": "EC-reuse-2011-833"
-      },
-      "it": {
-        "text": "Nella pianura di La Mancha, la composizione dei suoli, frutto della sedimentazione miocenica di calcari, marne e sabbie, determina terreni di colore marrone o marrone-rossiccio. In particolare, grazie all'abbondanza di terreni calcarei, la regione di La Mancha si presta alla produzione di vini rossi molto corposi e adatti all'affinamento, mentre i calcari sabbiosi conferiscono al vino una buona gradazione. La siccità (con precipitazioni annue comprese tra 300 e 350 mm) e l'elevato soleggiamento (3 000 ore di sole) si traducono in vini con una colorazione intensa, in cui risulta chiaramente rafforzata l'intensità aromatica. Il grande equilibrio dei vini è favorito anche dalla modesta produzione media dei vigneti.",
-        "url": "https://eur-lex.europa.eu/eli/C/2026/1048/oj/ita",
-        "license": "EC-reuse-2011-833"
-      },
-      "nl": {
-        "text": "De bodem in de vlakte van La Mancha is ontstaan uit de miocene afzetting van kalksteen, mergel en zand, die heeft geresulteerd in bruine of roodbruine grond. Dankzij de alomaanwezige kalkhoudende bodems in La Mancha leent het gebied zich voor de productie van rode wijnen met veel body en een uitstekende houdbaarheid, terwijl de zanderige kalkbodems leiden tot het juiste alcoholgehalte. De droogte (300 tot 350 mm neerslag per jaar) en het hoge aantal uren zonneschijn (3 000 zonuren) resulteren in wijnen met een intense kleur en intense aroma’s. De gemiddelde opbrengst van de wijngaarden is laag, wat er ook toe bijdraagt dat de wijnen zeer goed in balans zijn.",
-        "url": "https://eur-lex.europa.eu/eli/C/2026/1048/oj/nld",
-        "license": "EC-reuse-2011-833"
-      },
-      "pt": {
-        "text": "Na planície da Mancha, a composição do solo, produto da sedimentação miocénica de calcários, margas e areias, origina uma terra parda ou pardo-avermelhada. Com efeito, a abundância de solos calcários na Mancha faz desta zona o local ideal para a produção de vinhos tintos encorpados, com aptidão para o envelhecimento. O calcário arenoso, por sua vez, confere ao vinho um bom título alcoométrico. A escassez de chuva (300 a 350 mm por ano) e a elevada insolação (3 000 horas de sol) dão vinhos com intensidade de cor e grande expressividade aromática. O rendimento médio das vinhas é baixo, o que também favorece o excelente equilíbrio dos vinhos.",
-        "url": "https://eur-lex.europa.eu/eli/C/2026/1048/oj/por",
-        "license": "EC-reuse-2011-833"
+        "text": "La Mancha es una denominación de origen de vinos procedentes de una gran zona vinícola que ocupa gran parte de las provincias de Toledo, Albacete, Cuenca y Ciudad Real, en la comunidad autónoma española de Castilla-La Mancha.",
+        "url": "https://es.wikipedia.org/wiki/La_Mancha_(vino)"
       },
       "ca": {
-        "license": "EC-reuse-2011-833",
-        "text": "A la plana manxega, la composició dels sòls, producte de la sedimentació miocènica de calcàries, margues i sorres, dona lloc a una terra de color bru o bru vermellós. De fet, l'abundància de sòls calcaris a La Mancha la fa propícia per fer vins negres amb gran cos, bons per a criança, mentre que les calcàries sorrenques donen al vi una bona graduació. La sequedat (300 a 350 mm anuals) i l'alta insolació (3 000 hores de sol) donen lloc a vins amb intensitat colorant, en què es potencia clarament la intensitat aromàtica. Les produccions mitjanes de la vinya són baixes, cosa que també afavoreix un gran equilibri en els vins.",
-        "translated": true,
-        "url": "https://eur-lex.europa.eu/eli/C/2026/1048/oj/spa"
+        "text": "La Mancha (literalment la Manxa en català), és una denominació d'origen de vins d'un gran àrea vinícola regada pels rius Guadiana, Tajo i Xúquer, la qual inclou bona part de la regió de la Manxa i constitueix el vinyar més gran del món amb més de 436.000 hectàrees, de les quals 170.000 n'han estat acollides a aquesta denominació.",
+        "url": "https://ca.wikipedia.org/wiki/La_Mancha_(Vi)"
+      },
+      "fr": {
+        "text": "La Mancha est une dénomination d'origine (équivalent espagnol de l'appellation d'origine contrôlée, AOC) pour les vins originaires d'une vaste zone viticole qui s'étend sur une grande partie des provinces de Tolède, d'Albacete, de Cuenca et de Ciudad Real, dans la communauté autonome espagnole de Castille-La Manche.",
+        "url": "https://fr.wikipedia.org/wiki/La_Mancha_(DO)"
+      },
+      "it": {
+        "text": "La Mancia (in spagnolo La Mancha) è una denominazione di origine di vino proveniente da una zona vinicola che occupa la gran parte delle province di Toledo, Albacete, Cuenca e Ciudad Real nella Comunità autonoma di Castiglia-La Mancia.",
+        "url": "https://it.wikipedia.org/wiki/La_Mancia_(vino)"
+      },
+      "nl": {
+        "text": "La Mancha is een Spaans wijnbouwgebied en een beschermde oorsprongsbenaming (DO, Denominación de Origen) voor wijn afkomstig uit dit gebied. De beschermde oorsprongsbenaming werd in 1976 officieel toegekend.",
+        "url": "https://nl.wikipedia.org/wiki/La_Mancha_(wijn)"
       }
     },
-    "wikidataId": null,
+    "wikidataId": "Q6463671",
     "register": {
       "categories": [
         1,
@@ -129797,10 +129666,10 @@
     "giType": "PDO",
     "grapes": [],
     "id": "fr-montagne-saint-emilion",
-    "latitude": 44.930277777778,
+    "latitude": 44.833333333333336,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001883",
-    "longitude": -0.12944444444444,
-    "pointSource": "place",
+    "longitude": -0.6666666666666666,
+    "pointSource": "area",
     "name": "Montagne-Saint-Emilion",
     "names": [
       {
@@ -130752,54 +130621,50 @@
       },
       {
         "locale": "fr",
-        "name": "Montefalco rosso DOC",
+        "name": "Montefalco DOC",
         "source": "wikidata"
       },
       {
         "locale": "en",
-        "name": "Montefalco rosso DOC",
+        "name": "Montefalco DOC",
         "source": "wikidata"
       },
       {
         "locale": "it",
-        "name": "Montefalco rosso DOC",
+        "name": "Montefalco DOC",
         "source": "wikidata"
       },
       {
         "locale": "de",
-        "name": "Montefalco rosso DOC",
+        "name": "Montefalco DOC",
         "source": "wikidata"
       },
       {
         "locale": "es",
-        "name": "Montefalco rosso DOC",
+        "name": "Montefalco DOC",
         "source": "wikidata"
       },
       {
         "locale": "ca",
-        "name": "Montefalco rosso DOC",
+        "name": "Montefalco DOC",
         "source": "wikidata"
       },
       {
         "locale": "pt",
-        "name": "Montefalco rosso DOC",
+        "name": "Montefalco DOC",
         "source": "wikidata"
       }
     ],
-    "prominence": 3,
+    "prominence": 2,
     "registeredOn": "1981-06-11",
     "summaries": {
-      "en": {
-        "text": "Montefalco wine (Montefalco Rosso, red wine; Montefalco Bianco, white wine) is a style of Italian wine made in Umbria, and awarded Denominazione di origine controllata (DOC) status in 1979.",
-        "url": "https://en.wikipedia.org/wiki/Montefalco_DOC"
-      },
       "fr": {
-        "text": "Le Montefalco rosso   est un vin rouge DOCG d'Italie produit dans la région  de Montefalco, ville de  la province de Pérouse en Ombrie.",
-        "url": "https://fr.wikipedia.org/wiki/Montefalco_rosso"
+        "text": "Les Montefalco  sont des vins italiens classés Vini DOC et DOCG produits à partir de raisins issus du cépage  Sagrantino dans la commune de Montefalco, province de Pérouse (Italie).",
+        "url": "https://fr.wikipedia.org/wiki/Montefalco_(vin)"
       },
       "it": {
-        "text": "Il Montefalco rosso è un vino DOC la cui produzione è consentita nell'intero territorio comunale di Montefalco, e in parte dei comuni di Bevagna, Giano dell'Umbria, Gualdo Cattaneo e Castel Ritaldi, nella provincia di Perugia.",
-        "url": "https://it.wikipedia.org/wiki/Montefalco_rosso"
+        "text": "Il Montefalco è una DOC la cui produzione è consentita nella provincia di Perugia.",
+        "url": "https://it.wikipedia.org/wiki/Montefalco_(vino)"
       },
       "es": {
         "text": "El vino de Montefalco (Montefalco Rosso, tinto; Montefalco Bianco, blanco) es un estilo de vino italiano elaborado en Umbría, que obtuvo la Denominazione di origine controllata (DOC) en 1979.",
@@ -130827,7 +130692,7 @@
         "url": "https://en.wikipedia.org/wiki/Montefalco_DOC"
       }
     },
-    "wikidataId": "Q3322614",
+    "wikidataId": "Q3322609",
     "register": {
       "categories": [
         1
@@ -132459,7 +132324,7 @@
       },
       {
         "locale": "en",
-        "name": "Montsant DO",
+        "name": "Montsant (DO)",
         "source": "wikidata"
       },
       {
@@ -144062,60 +143927,52 @@
         "locale": "*",
         "name": "Oltrepò Pavese metodo classico",
         "source": "register"
+      },
+      {
+        "locale": "it",
+        "name": "Oltrepò Pavese metodo classico DOCG",
+        "source": "wikidata"
+      },
+      {
+        "locale": "fr",
+        "name": "Oltrepò Pavese metodo classico DOCG",
+        "source": "wikidata"
+      },
+      {
+        "locale": "en",
+        "name": "Oltrepò Pavese metodo classico DOCG",
+        "source": "wikidata"
+      },
+      {
+        "locale": "de",
+        "name": "Oltrepò Pavese metodo classico DOCG",
+        "source": "wikidata"
+      },
+      {
+        "locale": "es",
+        "name": "Oltrepò Pavese metodo classico DOCG",
+        "source": "wikidata"
+      },
+      {
+        "locale": "ca",
+        "name": "Oltrepò Pavese metodo classico DOCG",
+        "source": "wikidata"
+      },
+      {
+        "locale": "pt",
+        "name": "Oltrepò Pavese metodo classico DOCG",
+        "source": "wikidata"
       }
     ],
-    "prominence": 0,
+    "prominence": 1,
     "registeredOn": "2011-12-19",
     "summaries": {
-      "en": {
-        "text": "The Oltrepò is a pre-Apennine territory. Its hills mostly do not exceed 400 metres, with a dry climate in winter and breezy in summer and wide temperature ranges. These features make it an area well suited to growing grapes. The training systems, planting distances and pruning systems are the traditional ones and aim at the best exposure of the leaves. The yields give the wines particular complexity. Analytically and organoleptically, the wine has characteristics that show its link with the environment.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25931",
-        "license": "EC-reuse-2011-833"
-      },
-      "es": {
-        "text": "El Oltrepò es un territorio preapenínico. Sus colinas en general no superan los 400 metros, con un clima seco en invierno y ventilado en verano y grandes oscilaciones térmicas. Estas características la convierten en una zona apta para la producción de uva. Las formas de conducción, los marcos de plantación y los sistemas de poda son los tradicionales y buscan la mejor exposición foliar. Los rendimientos dan a los vinos una complejidad particular. Desde el punto de vista analítico y organoléptico, el vino tiene características que permiten reconocer su vínculo con el entorno.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25931",
-        "license": "EC-reuse-2011-833"
-      },
-      "ca": {
-        "text": "L’Oltrepò és un territori preapení. Els turons de mitjana no superen els 400 metres, amb un clima sec a l’hivern i ventilat a l’estiu i grans amplituds tèrmiques. Aquestes característiques en fan una zona apta per a la producció de raïm. Les formes de conducció, els marcs de plantació i els sistemes de poda són els tradicionals i busquen la millor exposició del fullatge. Els rendiments donen als vins una complexitat particular. Des del punt de vista analític i organolèptic, el vi té característiques que permeten identificar-ne el vincle amb el medi.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25931",
-        "license": "EC-reuse-2011-833"
-      },
-      "fr": {
-        "text": "L’Oltrepò est un territoire préapennin. Les collines ne dépassent pas en moyenne 400 mètres, avec un climat sec en hiver et ventilé en été et de grandes amplitudes thermiques. Ces caractéristiques en font une zone propice à la production de raisin. Les modes de conduite, les densités de plantation et les systèmes de taille sont les traditionnels et visent la meilleure exposition du feuillage. Les rendements confèrent aux vins une complexité particulière. Sur le plan analytique et organoleptique, le vin a des caractéristiques qui permettent d’identifier son lien avec le milieu.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25931",
-        "license": "EC-reuse-2011-833"
-      },
-      "de": {
-        "text": "Das Oltrepò ist ein Gebiet am Fuß des Apennins. Die Hügel überschreiten im Mittel 400 Meter nicht; das Klima ist im Winter trocken und im Sommer windig, mit großen Temperaturschwankungen. Diese Merkmale machen es zu einem für die Traubenerzeugung geeigneten Gebiet. Erziehungsformen, Pflanzabstände und Schnittsysteme sind die traditionellen und zielen auf die beste Belichtung des Laubs. Die Erträge verleihen den Weinen eine besondere Komplexität. Analytisch und organoleptisch hat der Wein Eigenschaften, die die Verbindung mit der Umwelt erkennen lassen.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25931",
-        "license": "EC-reuse-2011-833"
-      },
-      "nl": {
-        "text": "De Oltrepò is een gebied aan de voet van de Apennijnen. De heuvels zijn gemiddeld niet hoger dan 400 meter, met een in de winter droog en in de zomer winderig klimaat en grote temperatuurverschillen. Deze kenmerken maken het tot een geschikt gebied voor de druivenproductie. De opvoeringsvormen, plantafstanden en snoeisystemen zijn de traditionele en zijn gericht op de beste blootstelling van het blad. De opbrengsten geven de wijnen een bijzondere complexiteit. Analytisch en organoleptisch heeft de wijn kenmerken die de band met het milieu herkenbaar maken.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25931",
-        "license": "EC-reuse-2011-833"
-      },
-      "pt": {
-        "text": "O Oltrepò é um território pré-apenino. As colinas não ultrapassam em média os 400 metros, com clima seco no inverno e ventilado no verão e grandes amplitudes térmicas. Estas características tornam-no uma zona vocacionada para a produção de uva. As formas de condução, os compassos de plantação e os sistemas de poda são os tradicionais e visam a melhor exposição foliar. Os rendimentos conferem aos vinhos uma complexidade particular. Do ponto de vista analítico e organolético, o vinho tem características que permitem identificar a sua ligação ao meio.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25931",
-        "license": "EC-reuse-2011-833"
-      },
       "it": {
-        "license": "EC-reuse-2011-833",
-        "text": "L’Oltrepò è un territorio preappenninico. I colli di media non superano i 400 metri, con clima asciutto d’inverno e ventilato in estate e con grandi escursioni termiche. Queste caratteristiche lo rendono una zona vocata alla produzione di uva. Le forme di allevamento, i sesti d’impianto e i sistemi di potatura sono quelli tradizionali e mirano alla migliore esposizione fogliare. Le rese produttive conferiscono ai vini particolare complessità. Dal punto di vista analitico e organolettico il vino ha caratteristiche che permettono l’individuazione del legame con l’ambiente.",
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/25931"
+        "text": "Oltrepò pavese metodo classico è una DOCG riservata a vini spumanti bianchi e rosati ottenuti con il Metodo classico la cui produzione è consentita nella provincia di Pavia.",
+        "url": "https://it.wikipedia.org/wiki/Oltrep%C3%B2_Pavese_metodo_classico"
       }
     },
-    "wikidataId": null,
+    "wikidataId": "Q16583919",
     "register": {
       "categories": [
         4,
@@ -145094,55 +144951,12 @@
         "source": "wikidata"
       }
     ],
-    "prominence": 0,
+    "prominence": 1,
     "registeredOn": "1999-02-19",
     "summaries": {
-      "en": {
-        "text": "The territory concerned, which covers about two thirds of the whole regional land, has fairly uniform relief and soils and slightly differing climatic conditions, with an average annual temperature of 13.5-14.8°C and average annual rainfall of 696.8-1067 mm, which, combined with the varied soils and exposure, make for an environment that suits all the vine’s vegetative and productive functions. From the interplay of these factors and the experience gained by growers and winemakers over decades of work in the area have come wines of great quality and typicity, tied to the territory and to the vine they come from.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/29775",
-        "license": "EC-reuse-2011-833"
-      },
-      "es": {
-        "text": "El territorio en cuestión, que abarca unas dos terceras partes de todo el suelo regional, presenta una orografía y una edafología bastante homogéneas y unas condiciones climáticas ligeramente distintas, con una temperatura media anual de 13,5-14,8°C y una precipitación media anual de 696,8-1067 mm, que, unidas a la diversa naturaleza de los terrenos y a la exposición, determinan un entorno favorable para el desarrollo de todas las funciones vegetativas y productivas de la vid. De la influencia mutua de estos factores y de la experiencia acumulada por viticultores y vinificadores en décadas de trabajo en el territorio han nacido vinos de gran calidad y tipicidad ligados al territorio y a la variedad de procedencia.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/29775",
-        "license": "EC-reuse-2011-833"
-      },
-      "ca": {
-        "text": "El territori en qüestió, que cobreix uns dos terços de tot el sòl regional, presenta una orografia i una edafologia força homogènies i es caracteritza per condicions climàtiques lleugerament diferents, una temperatura mitjana anual de 13,5-14,8°C i una pluviometria mitjana anual de 696,8-1067 mm, que, associades a la diferent naturalesa dels terrenys i a l’exposició, determinen un ambient prou favorable a l’acompliment de totes les funcions vegetatives i productives de la vinya. De la influència recíproca d’aquests factors i de l’experiència adquirida pels viticultors i els elaboradors en dècades de treball al territori han nascut vins de gran qualitat i tipicitat lligats al territori i al cep de procedència.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/29775",
-        "license": "EC-reuse-2011-833"
-      },
-      "fr": {
-        "text": "Le territoire en question, qui couvre environ les deux tiers de l’ensemble du sol régional, présente une orographie et une pédologie assez homogènes et se caractérise par des conditions climatiques légèrement différentes, une température moyenne annuelle de 13,5-14,8°C et des précipitations moyennes annuelles de 696,8-1067 mm, qui, associées à la nature différente des terrains et à l’exposition, créent un milieu suffisamment favorable à l’accomplissement de toutes les fonctions végétatives et productives de la vigne. De l’influence réciproque de ces facteurs et de l’expérience acquise par les viticulteurs et les vinificateurs en des décennies de travail sur le territoire sont nés des vins de grande qualité et typicité liés au territoire et au cépage d’origine.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/29775",
-        "license": "EC-reuse-2011-833"
-      },
-      "de": {
-        "text": "Das betreffende Gebiet, das etwa zwei Drittel der gesamten Regionsfläche einnimmt, weist eine recht einheitliche Orografie und Bodenkunde auf und ist durch leicht unterschiedliche Klimabedingungen gekennzeichnet, eine mittlere Jahrestemperatur von 13,5-14,8°C und mittlere Jahresniederschläge von 696,8-1067 mm, die zusammen mit der unterschiedlichen Beschaffenheit der Böden und der Exposition eine Umgebung schaffen, die die Erfüllung aller vegetativ-produktiven Funktionen der Rebe ausreichend begünstigt. Aus dem Zusammenwirken dieser Faktoren und der Erfahrung, die Winzer und Kellermeister in Jahrzehnten der Arbeit im Gebiet gesammelt haben, sind Weine von großer Qualität und Typizität entstanden, die an das Gebiet und die Herkunftsrebsorte gebunden sind.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/29775",
-        "license": "EC-reuse-2011-833"
-      },
-      "nl": {
-        "text": "Het betreffende gebied, dat ongeveer twee derde van de hele regionale grond beslaat, heeft een vrij homogene orografie en bodemgesteldheid en wordt gekenmerkt door licht verschillende klimaatomstandigheden, een gemiddelde jaartemperatuur van 13,5-14,8°C en een gemiddelde jaarlijkse neerslag van 696,8-1067 mm, die samen met de verschillende aard van de gronden en de ligging een milieu scheppen dat voldoende gunstig is voor alle vegetatief-productieve functies van de wijnstok. Uit de wederzijdse invloed van deze factoren en de ervaring die wijnboeren en wijnmakers in decennia werk in het gebied hebben opgedaan, zijn wijnen van grote kwaliteit en typiciteit ontstaan die verbonden zijn met het gebied en het ras van herkomst.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/29775",
-        "license": "EC-reuse-2011-833"
-      },
-      "pt": {
-        "text": "O território em causa, que cobre cerca de dois terços de todo o solo regional, apresenta uma orografia e uma pedologia bastante homogéneas e caracteriza-se por condições climáticas ligeiramente diferentes, uma temperatura média anual de 13,5-14,8°C e uma precipitação média anual de 696,8-1067 mm, que, associadas à diferente natureza dos terrenos e à exposição, determinam um ambiente adequadamente favorável ao desempenho de todas as funções vegetativas e produtivas da vinha. Da influência recíproca destes fatores e da experiência adquirida pelos viticultores e vinificadores em décadas de trabalho no território nasceram vinhos de grande qualidade e tipicidade ligados ao território e à casta de proveniência.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/29775",
-        "license": "EC-reuse-2011-833"
-      },
       "it": {
-        "license": "EC-reuse-2011-833",
-        "text": "Il territorio in esame, che copre circa due terzi dell’intero suoloregionale, presenta un’orografia ed una pedologia piuttosto omogenea, è caratterizzato da condizioni climatiche leggermente diverse, temperatura media annua di 13,5-14,8°C, e precipitazioni medie annue di 696,8-1067 mm, che associate alla diversa natura dei terreni ed all’esposizione determina un ambiente adeguatamente favorevole all’espletamento di tutte le funzioni vegeto produttive della vite.Dall’influenza reciproca di questi fattori e dall’esperienza maturata daiviticoltori e vinificatori in decenni di lavoro sul territorio sono nati vini di grande qualità e tipicita legati al territorio e al vitigno di provenienza.",
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/29775"
+        "text": "Osco o anche Terre degli Osci è una IGT riservata ad alcuni vini la cui produzione è consentita nella provincia di Campobasso.",
+        "url": "https://it.wikipedia.org/wiki/Osco_(vino)"
       }
     },
     "wikidataId": "Q118819734",
@@ -149976,7 +149790,7 @@
       },
       {
         "locale": "en",
-        "name": "Penedès",
+        "name": "Penedès (DO)",
         "source": "wikidata"
       },
       {
@@ -158765,7 +158579,7 @@
       },
       {
         "locale": "en",
-        "name": "Priorat",
+        "name": "Priorat (DO)",
         "source": "wikidata"
       },
       {
@@ -182130,60 +181944,31 @@
         "locale": "*",
         "name": "Savigny-lès-Beaune",
         "source": "register"
+      },
+      {
+        "locale": "fr",
+        "name": "Savigny-lès-beaune",
+        "source": "wikidata"
+      },
+      {
+        "locale": "en",
+        "name": "Savigny-lès-Beaune wine",
+        "source": "wikidata"
       }
     ],
-    "prominence": 0,
+    "prominence": 2,
     "registeredOn": "1973-09-18",
     "summaries": {
       "en": {
-        "text": "The geographical area lies within the “Côte de Beaune” vineyard, a straight relief running for about 25 kilometres north-east/south-west. This relief of tectonic origin separates the limestone plateaus of the “Hautes Côtes” to the west, at an altitude of between 400 metres and 500 metres, from the Bresse plain to the east, a Tertiary rift valley whose altitude, below the “Côte”, is close to 250 metres.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845",
-        "license": "EC-reuse-2011-833"
-      },
-      "es": {
-        "text": "La zona geográfica se encuentra en el viñedo de la «Côte de Beaune», relieve rectilíneo que se extiende a lo largo de unos 25 kilómetros en dirección general noreste/suroeste. Este relieve de origen tectónico separa las mesetas calizas de las «Hautes Côtes», al oeste, con una altitud de entre 400 metros y 500 metros, de la llanura de Bresse, al este, una fosa tectónica terciaria cuya altitud, a la altura de la «Côte», se acerca a los 250 metros.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845",
-        "license": "EC-reuse-2011-833"
-      },
-      "ca": {
-        "text": "La zona geogràfica es troba dins la vinya de la «Côte de Beaune», un relleu rectilini que s’allarga uns 25 quilòmetres en direcció general nord-est/sud-oest. Aquest relleu d’origen tectònic separa els altiplans calcaris de les «Hautes Côtes», a l’oest, d’una altitud d’entre 400 metres i 500 metres, i la plana de Bresse, a l’est, fossa tectònica terciària l’altitud de la qual, a l’altura de la «Côte», és propera als 250 metres.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845",
-        "license": "EC-reuse-2011-833"
-      },
-      "it": {
-        "text": "La zona geografica si trova nel vigneto della «Côte de Beaune», rilievo rettilineo che si allunga per circa 25 chilometri in direzione generale nord-est/sud-ovest. Questo rilievo di origine tettonica separa gli altipiani calcarei delle «Hautes Côtes», a ovest, a un’altitudine compresa tra 400 metri e 500 metri, dalla pianura della Bresse, a est, fossa tettonica terziaria la cui altitudine, all’altezza della «Côte», è vicina ai 250 metri.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845",
-        "license": "EC-reuse-2011-833"
-      },
-      "de": {
-        "text": "Das geografische Gebiet liegt im Weinbaugebiet der „Côte de Beaune“, einem geradlinigen Höhenzug, der sich über etwa 25 Kilometer in allgemeiner Richtung Nordost/Südwest erstreckt. Dieser Höhenzug tektonischen Ursprungs trennt die Kalkhochflächen der „Hautes Côtes“ im Westen, in einer Höhe zwischen 400 Metern und 500 Metern, von der Bresse-Ebene im Osten, einem tertiären Grabenbruch, dessen Höhe auf Höhe der „Côte“ nahe 250 Metern liegt.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845",
-        "license": "EC-reuse-2011-833"
-      },
-      "nl": {
-        "text": "Het geografische gebied ligt in de wijngaard van de „Côte de Beaune”, een rechtlijnige verhoging die zich over ongeveer 25 kilometer in algemene richting noordoost/zuidwest uitstrekt. Deze verhoging van tektonische oorsprong scheidt de kalkplateaus van de „Hautes Côtes” in het westen, op een hoogte tussen 400 meter en 500 meter, van de vlakte van de Bresse in het oosten, een tertiaire slenk waarvan de hoogte ter hoogte van de „Côte” bijna 250 meter is.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845",
-        "license": "EC-reuse-2011-833"
-      },
-      "pt": {
-        "text": "A zona geográfica situa-se na vinha da «Côte de Beaune», relevo retilíneo que se alonga por cerca de 25 quilómetros numa direção geral nordeste/sudoeste. Este relevo de origem tectónica separa os planaltos calcários das «Hautes Côtes», a oeste, com uma altitude entre 400 metros e 500 metros, da planície de Bresse, a leste, fossa tectónica terciária cuja altitude, à altura da «Côte», é próxima dos 250 metros.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845",
-        "license": "EC-reuse-2011-833"
+        "text": "Savigny-lès-Beaune wine is produced in the commune of Savigny-lès-Beaune in Côte de Beaune of Burgundy. The Appellation d'origine contrôlée (AOC) Savigny-lès-Beaune may be used for red and white wine with respectively Pinot noir and Chardonnay as the main grape variety. The name of the appellation is sometimes written simply as Savigny, without the -lès-Beaune suffix.",
+        "url": "https://en.wikipedia.org/wiki/Savigny-l%C3%A8s-Beaune_wine"
       },
       "fr": {
-        "license": "EC-reuse-2011-833",
-        "text": "La zone géographique se situe dans le vignoble de la « Côte de Beaune », relief rectiligne s'allongeant sur environ 25 kilomètres selon une direction générale nord-est/sud-ouest. Ce relief d'origine tectonique sépare les plateaux calcaires des « Hautes Côtes », à l'ouest, d’une altitude comprise entre 400 mètres et 500 mètres, et la plaine de Bresse, à l'est, fossé d'effondrement tertiaire dont l'altitude, au droit de la « Côte », est proche de 250 mètres.",
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845"
+        "text": "Un savigny-lès-beaune est un vin français d'appellation d'origine contrôlée, produit sur une partie de la commune de Savigny-lès-Beaune, en Côte-d'Or.",
+        "url": "https://fr.wikipedia.org/wiki/Savigny-l%C3%A8s-beaune_(AOC)"
       }
     },
-    "wikidataId": null,
+    "wikidataId": "Q3474550",
     "register": {
       "categories": [
         1
@@ -193865,12 +193650,12 @@
       },
       {
         "locale": "es",
-        "name": "Terra Alta",
+        "name": "Terra Alta (DO)",
         "source": "wikidata"
       },
       {
         "locale": "en",
-        "name": "Terra Alta",
+        "name": "Terra Alta (DO)",
         "source": "wikidata"
       },
       {
@@ -193880,7 +193665,17 @@
       },
       {
         "locale": "fr",
-        "name": "Terra Alta",
+        "name": "Terra Alta (DO)",
+        "source": "wikidata"
+      },
+      {
+        "locale": "it",
+        "name": "Terra Alta (DO)",
+        "source": "wikidata"
+      },
+      {
+        "locale": "pt",
+        "name": "Terra Alta (DO)",
         "source": "wikidata"
       }
     ],
@@ -202529,60 +202324,61 @@
         "locale": "*",
         "name": "Trentino",
         "source": "register"
+      },
+      {
+        "locale": "it",
+        "name": "Trentino DOC",
+        "source": "wikidata"
+      },
+      {
+        "locale": "fr",
+        "name": "Trentino DOC",
+        "source": "wikidata"
+      },
+      {
+        "locale": "nl",
+        "name": "Sorni bianco",
+        "source": "wikidata"
+      },
+      {
+        "locale": "de",
+        "name": "Trentino DOC",
+        "source": "wikidata"
+      },
+      {
+        "locale": "es",
+        "name": "Trentino DOC",
+        "source": "wikidata"
+      },
+      {
+        "locale": "ca",
+        "name": "Trentino DOC",
+        "source": "wikidata"
+      },
+      {
+        "locale": "pt",
+        "name": "Trentino DOC",
+        "source": "wikidata"
+      },
+      {
+        "locale": "en",
+        "name": "Trentino DOC",
+        "source": "wikidata"
       }
     ],
-    "prominence": 0,
+    "prominence": 2,
     "registeredOn": "1973-09-18",
     "summaries": {
-      "en": {
-        "text": "The thousand-year history of vine growing, documented by many archaeological finds, has made it possible to define the areas within Trentino best suited to vines. The area, mainly mountainous and hilly, has particular climatic characteristics depending on the altitude and exposure of the vineyards. It ranges from a sub-Mediterranean climate near Lake Garda to a continental-Alpine climate in the innermost parts of the region. The wines have particular, easily recognisable organoleptic characteristics thanks to the marked temperature range between day and night before the harvest.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/22715",
-        "license": "EC-reuse-2011-833"
-      },
-      "es": {
-        "text": "El milenario cultivo de la vid, documentado por numerosos hallazgos arqueológicos, ha permitido definir las zonas del Trentino más aptas para la viticultura. La zona, sobre todo de montaña y de colinas, presenta características climáticas particulares en relación con la altitud y la exposición de los viñedos. Se pasa, en efecto, de un clima submediterráneo en las zonas próximas al lago de Garda a un clima de tipo continental-alpino en las zonas más interiores de la región. Los vinos presentan características organolépticas particulares y bien reconocibles gracias a la marcada oscilación térmica entre el día y la noche que precede a la vendimia.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/22715",
-        "license": "EC-reuse-2011-833"
-      },
-      "ca": {
-        "text": "El conreu mil·lenari de la vinya, documentat per nombroses troballes arqueològiques, ha permès definir les zones del Trentino més aptes per a la viticultura. La zona, principalment de muntanya i de turons, presenta característiques climàtiques peculiars en relació amb l’altitud i l’exposició de les vinyes. De fet, es passa d’un clima submediterrani a les zones properes al llac de Garda a un clima de tipus continental-alpí a les zones més interiors de la regió. Els vins presenten característiques organolèptiques particulars i ben reconeixibles gràcies a la marcada amplitud tèrmica entre el dia i la nit que precedeix el moment de la verema.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/22715",
-        "license": "EC-reuse-2011-833"
-      },
-      "fr": {
-        "text": "La culture millénaire de la vigne, documentée par de nombreuses découvertes archéologiques, a permis de définir les zones du Trentin les plus propices à la viticulture. La zone, surtout montagneuse et vallonnée, présente des caractéristiques climatiques particulières selon l’altitude et l’exposition des vignes. On passe en effet d’un climat subméditerranéen dans les zones proches du lac de Garde à un climat de type continental-alpin dans les zones les plus intérieures de la région. Les vins présentent des caractéristiques organoleptiques particulières et bien reconnaissables grâce à la forte amplitude thermique entre le jour et la nuit qui précède le moment des vendanges.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/22715",
-        "license": "EC-reuse-2011-833"
-      },
       "de": {
-        "text": "Der jahrtausendealte, durch zahlreiche archäologische Funde belegte Weinbau hat es ermöglicht, die für den Weinbau am besten geeigneten Gebiete im Trentino festzulegen. Das überwiegend bergige und hügelige Gebiet weist je nach Höhe und Ausrichtung der Weinberge besondere klimatische Merkmale auf. Es reicht nämlich von einem submediterranen Klima in der Nähe des Gardasees bis zu einem kontinental-alpinen Klima in den innersten Teilen der Region. Die Weine weisen besondere und gut erkennbare organoleptische Merkmale auf, dank der ausgeprägten Temperaturschwankung zwischen Tag und Nacht vor der Lese.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/22715",
-        "license": "EC-reuse-2011-833"
-      },
-      "nl": {
-        "text": "De duizendjarige wijnbouw, gedocumenteerd door talrijke archeologische vondsten, heeft het mogelijk gemaakt de gebieden in Trentino af te bakenen die het meest geschikt zijn voor de wijnbouw. Het gebied, overwegend berg- en heuvelachtig, heeft bijzondere klimaatkenmerken afhankelijk van de hoogte en de ligging van de wijngaarden. Het gaat namelijk van een submediterraan klimaat in de gebieden bij het Gardameer tot een continentaal-alpien klimaat in de meer binnenlandse delen van de regio. De wijnen hebben bijzondere en goed herkenbare organoleptische kenmerken dankzij het uitgesproken temperatuurverschil tussen dag en nacht vóór de oogst.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/22715",
-        "license": "EC-reuse-2011-833"
-      },
-      "pt": {
-        "text": "O cultivo milenar da vinha, documentado por numerosos achados arqueológicos, permitiu definir as áreas do Trentino mais vocacionadas para a viticultura. A zona, sobretudo montanhosa e de colinas, apresenta características climáticas peculiares em relação à altitude e à exposição das vinhas. Passa-se de facto de um clima submediterrânico nas zonas próximas do lago de Garda a um clima de tipo continental-alpino nas zonas mais interiores da região. Os vinhos apresentam características organoléticas particulares e bem reconhecíveis graças à acentuada amplitude térmica entre o dia e a noite que precede a vindima.",
-        "translated": true,
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/22715",
-        "license": "EC-reuse-2011-833"
+        "text": "Weine, die mit der Bezeichnung Trentino verkauft werden, besitzen seit 1971 eine „kontrollierte Herkunftsbezeichnung“ (Denominazione di origine controllata – DOC), die zuletzt am 7. März 2014 aktualisiert wurde.",
+        "url": "https://de.wikipedia.org/wiki/Trentino_(Wein)"
       },
       "it": {
-        "license": "EC-reuse-2011-833",
-        "text": "La millenaria coltivazione della vite, documentata da numerosi ritrovamenti archeologici, ha permesso di definire le aree all’interno del Trentino più vocate alla viticoltura. La zona, prevalentemente montuosa e collinare,presenta caratteristiche climatiche peculiari in relazione alla quota ed all’esposizione dei vigneti. Si va infatti da un clima sub-mediterraneo nelle zone in prossimità del Lago di Garda, ad un clima di tipo continentale-alpino nelle zone più interne della regione. I vini presentano caratteristiche organolettiche particolari e ben riconoscibili grazie alla marcata escursione termica fra il giorno e la notte che precede il momento della raccolta delle uve.",
-        "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/22715"
+        "text": "Trentino è una DOC riservata ad alcuni vini la cui produzione è consentita nella provincia autonoma di Trento.",
+        "url": "https://it.wikipedia.org/wiki/Trentino_(vino)"
       }
     },
-    "wikidataId": null,
+    "wikidataId": "Q3965106",
     "register": {
       "categories": [
         1,

@@ -198,13 +198,13 @@ function coordinates(id: string) {
 
 /**
  * A label's name without the designation Wikidata often writes after it
- * ("Côte-Rôtie AOC", "Vinho Verde (DOC)", "Manchuela DO"), or null when it
- * carries none.
+ * ("Côte-Rôtie AOC", "Vinho Verde (DOC)", "Manchuela DO", "Chorey-les-Beaune
+ * wine"), or null when it carries none.
  */
 function withoutDesignation(name: string): string | null {
   const key = matchKey(name);
   const stripped = key.replace(
-    / (aoc|aop|ac|doc|docg|do|dop|doq|dac|igt|igp|pdo|pgi|ipr|vqprd|vdp|dpo|zgp|zop)$/,
+    / (aoc|aop|ac|doc|docg|do|dop|doq|dac|igt|igp|pdo|pgi|ipr|vqprd|vdp|dpo|zgp|zop|wine)$/,
     "",
   );
   return stripped === key || stripped.length < 2 ? null : stripped;

@@ -60,6 +60,12 @@ has the reasons.
   Savigny-lès-Beaune, Trentino and Oltrepò Pavese metodo classico no longer
   carry another wine's Wikidata item, and the first three are placed at the
   commune their register text names.
+- **Each name its own Wikidata item**: every EU link was checked against
+  Wikidata. Côtes du Rhône was the whole Rhône valley, Côtes du Rhône
+  Villages the Côtes du Rhône, La Clape the Coteaux du Languedoc, Montefalco
+  one of its own wines, La Mancha the Manchego cheese; each now has its own
+  item, and so do Chorey-lès-Beaune, Savigny-lès-Beaune, Trentino and
+  Oltrepò Pavese metodo classico.
 - **Within and inside**: a name's page lists the names whose area holds it
   and those it holds — a ward's district and region, an AVA's larger AVAs.
 - **Deploying your own**: migration `0033` rebuilds the atlas table so it can
