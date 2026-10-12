@@ -26,6 +26,10 @@ import { type Cell, readSheet, sheetDate } from "./xlsx";
  * placed by OpenStreetMap's geocoder (© OpenStreetMap contributors, ODbL),
  * approximately: the place each name is.
  *
+ * Australia: Wine Australia's register and its open data (CC BY 4.0). Chile:
+ * the zoning of Decree 464 of 1994, transcribed in
+ * `data/kb/cl-zonificacion-viticola.json`.
+ *
  * No model is involved: nothing here costs AI quota.
  *
  * Usage: pnpm kb:fetch-world-appellations
@@ -911,4 +915,97 @@ console.info(
   `  Wine Australia: ${auRecords.length} geographical indications, ${auDates.size} dated, ` +
     `${auItems.size} with an article on their wine, ` +
     `${auRecords.filter((record) => record.pointSource === "boundary").length} placed inside their boundary.`,
+);
+
+// 9. Chile: the viticultural zoning of Decree 464 of 1994 — regions,
+//    subregions, zones and areas — as Ley Chile consolidates it
+//    (`data/kb/cl-zonificacion-viticola.json`, transcribed from its article
+//    1). Each is placed at the middle of the communes or provinces the decree
+//    defines its boundary by, as OpenStreetMap places them, within the
+//    administrative regions the decree names; approximate.
+type ClArea = {
+  adminRegions?: string[];
+  definedBy?: { communes?: string[]; locality?: string; provinces?: string[] };
+  in: string[];
+  level: string;
+  names: string[];
+};
+const cl = JSON.parse(readFileSync(resolve("data/kb/cl-zonificacion-viticola.json"), "utf8")) as {
+  areas: ClArea[];
+  source: { url: string };
+};
+const clByName = new Map(cl.areas.map((area) => [area.names[0]!, area]));
+const clWithin = (area: ClArea): string[] => {
+  const found: string[] = [];
+  let level = area.in;
+  while (level.length > 0) {
+    const next: string[] = [];
+    for (const name of level) {
+      if (found.includes(name)) continue;
+      found.push(name);
+      next.push(...(clByName.get(name)?.in ?? []));
+    }
+    level = next;
+  }
+  return found;
+};
+// The English articles about these areas' wine, read by hand: the others
+// titled for a valley lead to its province or its river.
+const clItems = await wineArticleItems(new Map(cl.areas.map((area) => [area.names[0]!, []])), {
+  "Región de Aconcagua": "Aconcagua (wine region)",
+  "Región Austral": "Austral (wine region)",
+  "Región del Sur": "Southern Chile (wine region)",
+  "Región del Valle Central": "Central Valley (Chilean wine region)",
+  "Valle del Elqui": "Elqui Valley (wine region)",
+  "Valle del Maule": "Maule Valley",
+});
+await leadLanguages([...new Set(clItems.values())]);
+const middleOf = (points: { latitude: number; longitude: number }[]) => {
+  const middle = (values: number[]) =>
+    [...values].sort((a, b) => a - b)[Math.floor(values.length / 2)]!;
+  return {
+    latitude: middle(points.map((point) => point.latitude)),
+    longitude: middle(points.map((point) => point.longitude)),
+  };
+};
+const clPoints = new Map<string, { latitude: number; longitude: number }>();
+for (const area of cl.areas) {
+  if (area.definedBy === undefined) continue;
+  const states =
+    [area.names[0]!, ...clWithin(area)]
+      .map((name) => clByName.get(name)?.adminRegions)
+      .find((regions) => regions !== undefined) ?? [];
+  const found: { latitude: number; longitude: number }[] = [];
+  for (const commune of area.definedBy.communes ?? []) {
+    const point = await placeOf([commune], "cl", states, null);
+    if (point !== null) found.push(point);
+  }
+  for (const province of area.definedBy.provinces ?? []) {
+    const point = await placeOf([`Provincia de ${province}`], "cl", states, null);
+    if (point !== null) found.push(point);
+  }
+  if (area.definedBy.locality !== undefined) {
+    // "Lo Abarca, Cartagena": the rural locality, near its commune.
+    const [place, commune] = area.definedBy.locality.split(/,\s*/);
+    const near = await placeOf([commune!], "cl", states, null);
+    const point = near === null ? null : await placeOf([place!], "cl", states, near);
+    if (point !== null) found.push(point);
+  }
+  if (found.length > 0) clPoints.set(area.names[0]!, middleOf(found));
+}
+const clRecords = cl.areas.map((area) => ({
+  latitude: clPoints.get(area.names[0]!)?.latitude ?? null,
+  level: area.level,
+  longitude: clPoints.get(area.names[0]!)?.longitude ?? null,
+  names: area.names,
+  qid: clItems.get(area.names[0]!) ?? null,
+  within: clWithin(area),
+}));
+writeFileSync(
+  resolve(cache, "cl.json"),
+  JSON.stringify({ records: clRecords, sourceUrl: cl.source.url }, null, 1),
+);
+console.info(
+  `  Decree 464: ${clRecords.length} Chilean denominations of origin, ${clItems.size} with an article on their wine, ` +
+    `${clPoints.size} placed by the communes or provinces that define them.`,
 );

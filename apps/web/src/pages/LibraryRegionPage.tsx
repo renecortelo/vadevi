@@ -191,7 +191,11 @@ export function LibraryRegionPage() {
         <h2 id="region-register">{t(`library.registerTitle${suffix}`)}</h2>
         {/* The kind of area, where the register has several, then its date. */}
         {region.registerLevel === null ? null : (
-          <p>{t(`library.${suffix === "Au" ? "auLevel" : "woLevel"}.${region.registerLevel}`)}</p>
+          <p>
+            {t(
+              `library.${suffix === "Au" ? "auLevel" : suffix === "Cl" ? "clLevel" : "woLevel"}.${region.registerLevel}`,
+            )}
+          </p>
         )}
         {registered === null ? (
           region.registerLevel === null ? (

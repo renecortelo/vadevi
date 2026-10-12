@@ -27,11 +27,14 @@ has the reasons.
   register — the country, its states, zones, regions and subregions — each
   with its date of entry, inside its official boundary, and within the zone
   and state the register lists it under.
+- **Chile**: the 118 denominations of origin of its viticultural zoning
+  (Decree 464 of 1994) — regions, subregions, zones and areas, Rapa Nui
+  included — on a new map of South America.
 - **Within and inside**: a name's page lists the names whose area holds it
   and those it holds — a ward's district and region, an AVA's larger AVAs.
 - **Deploying your own**: migration `0033` rebuilds the atlas table so it can
   hold names outside the EU register, `0034` adds where each lies, and `0035`
-  admits Australia's kinds of area; the deploy's library load fills them.
+  and `0036` admit Australia's and Chile's kinds of area; the deploy's library load fills them.
 
 ## 0.2.0 — 10 October 2026
 

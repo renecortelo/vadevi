@@ -169,6 +169,7 @@
     "registerTitleNz": "In het Nieuw-Zeelandse register van geografische aanduidingen",
     "registerTitleZa": "In het Zuid-Afrikaanse Wine of Origin-stelsel",
     "registerTitleAu": "In het Australische register van beschermde geografische aanduidingen",
+    "registerTitleCl": "In de Chileense wijnbouwzonering",
     "registeredOn": "Beschermd in de EU sinds {{date}}.",
     "registeredOnUs": "American Viticultural Area sinds {{date}}.",
     "registeredOnNz": "Geregistreerde geografische aanduiding sinds {{date}}.",
@@ -178,6 +179,7 @@
     "registerLinkNz": "In het Nieuw-Zeelandse register bekijken (IP-nummer {{ref}}, IPONZ)",
     "registerLinkZa": "De lijst van productiegebieden van het stelsel bekijken (SAWIS)",
     "registerLinkAu": "De vermelding in het register van Wine Australia bekijken",
+    "registerLinkCl": "Decreet 464 van 1994 op Ley Chile bekijken",
     "registerCategories": "Productcategorieën",
     "wineCategory": {
       "1": "Wijn",
@@ -238,6 +240,8 @@
     "giShort": "GI",
     "wo": "Wine of Origin (WO)",
     "woShort": "WO",
+    "do": "Oorsprongsbenaming (DO)",
+    "doShort": "DO",
     "woLevel": {
       "overarchingUnit": "Een overkoepelende geografische eenheid van het Wine of Origin-stelsel.",
       "unit": "Een geografische eenheid van het Wine of Origin-stelsel.",
@@ -256,6 +260,12 @@
       "region": "Een Australische geografische aanduiding: een regio.",
       "subregion": "Een Australische geografische aanduiding: een subregio."
     },
+    "clLevel": {
+      "region": "Een wijnbouwregio van de Chileense zonering (decreet 464).",
+      "subregion": "Een subregio van de Chileense wijnbouwzonering (decreet 464).",
+      "zone": "Een zone van de Chileense wijnbouwzonering (decreet 464).",
+      "area": "Een gebied van de Chileense wijnbouwzonering (decreet 464)."
+    },
     "levelName": {
       "country": "land",
       "multiStateZone": "meerstatenzone",
@@ -268,7 +278,8 @@
       "region": "regio",
       "subregion": "subregio",
       "district": "district",
-      "ward": "ward"
+      "ward": "ward",
+      "area": "gebied"
     },
     "photoAlt": "Tros {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",

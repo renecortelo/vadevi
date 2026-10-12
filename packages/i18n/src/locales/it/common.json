@@ -169,6 +169,7 @@
     "registerTitleNz": "Nel registro delle indicazioni geografiche della Nuova Zelanda",
     "registerTitleZa": "Nel sistema Wine of Origin del Sudafrica",
     "registerTitleAu": "Nel registro delle IG protette dell'Australia",
+    "registerTitleCl": "Nella zonazione viticola del Cile",
     "registeredOn": "Protetta nell'UE dal {{date}}.",
     "registeredOnUs": "Area viticola americana dal {{date}}.",
     "registeredOnNz": "Indicazione geografica registrata dal {{date}}.",
@@ -178,6 +179,7 @@
     "registerLinkNz": "Vederla nel registro neozelandese (numero IP {{ref}}, IPONZ)",
     "registerLinkZa": "Vedere l'elenco delle zone di produzione del sistema (SAWIS)",
     "registerLinkAu": "Vederne la voce nel registro di Wine Australia",
+    "registerLinkCl": "Vedere il decreto 464 del 1994 su Ley Chile",
     "registerCategories": "Categorie di prodotti",
     "wineCategory": {
       "1": "Vino",
@@ -238,6 +240,8 @@
     "giShort": "GI",
     "wo": "Wine of Origin (WO)",
     "woShort": "WO",
+    "do": "Denominazione di origine (DO)",
+    "doShort": "DO",
     "woLevel": {
       "overarchingUnit": "Un'unità geografica superiore del sistema Wine of Origin.",
       "unit": "Un'unità geografica del sistema Wine of Origin.",
@@ -256,6 +260,12 @@
       "region": "Un'indicazione geografica australiana: una regione.",
       "subregion": "Un'indicazione geografica australiana: una sottoregione."
     },
+    "clLevel": {
+      "region": "Una regione viticola della zonazione cilena (decreto 464).",
+      "subregion": "Una sottoregione della zonazione viticola cilena (decreto 464).",
+      "zone": "Una zona della zonazione viticola cilena (decreto 464).",
+      "area": "Un'area della zonazione viticola cilena (decreto 464)."
+    },
     "levelName": {
       "country": "paese",
       "multiStateZone": "zona multistatale",
@@ -268,7 +278,8 @@
       "region": "regione",
       "subregion": "sottoregione",
       "district": "distretto",
-      "ward": "ward"
+      "ward": "ward",
+      "area": "area"
     },
     "photoAlt": "Grappolo di {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",

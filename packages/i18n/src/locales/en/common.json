@@ -169,6 +169,7 @@
     "registerTitleNz": "In New Zealand's register of geographical indications",
     "registerTitleZa": "In South Africa's Wine of Origin scheme",
     "registerTitleAu": "In Australia's Register of Protected GIs",
+    "registerTitleCl": "In Chile's viticultural zoning",
     "registeredOn": "Protected in the EU since {{date}}.",
     "registeredOnUs": "An American Viticultural Area since {{date}}.",
     "registeredOnNz": "A registered geographical indication since {{date}}.",
@@ -178,6 +179,7 @@
     "registerLinkNz": "See it in New Zealand's register (IP number {{ref}}, IPONZ)",
     "registerLinkZa": "See the scheme's list of production areas (SAWIS)",
     "registerLinkAu": "See its entry in Wine Australia's register",
+    "registerLinkCl": "See Decree 464 of 1994 on Ley Chile",
     "registerCategories": "Categories of product",
     "wineCategory": {
       "1": "Wine",
@@ -238,6 +240,8 @@
     "giShort": "GI",
     "wo": "Wine of Origin (WO)",
     "woShort": "WO",
+    "do": "Denomination of origin (DO)",
+    "doShort": "DO",
     "woLevel": {
       "overarchingUnit": "An overarching geographical unit of the Wine of Origin scheme.",
       "unit": "A geographical unit of the Wine of Origin scheme.",
@@ -256,6 +260,12 @@
       "region": "An Australian geographical indication: a region.",
       "subregion": "An Australian geographical indication: a subregion."
     },
+    "clLevel": {
+      "region": "A viticultural region of Chile's zoning (Decree 464).",
+      "subregion": "A subregion of Chile's viticultural zoning (Decree 464).",
+      "zone": "A zone of Chile's viticultural zoning (Decree 464).",
+      "area": "An area of Chile's viticultural zoning (Decree 464)."
+    },
     "levelName": {
       "country": "country",
       "multiStateZone": "multi-state zone",
@@ -268,7 +278,8 @@
       "region": "region",
       "subregion": "subregion",
       "district": "district",
-      "ward": "ward"
+      "ward": "ward",
+      "area": "area"
     },
     "photoAlt": "A bunch of {{name}}",
     "photoCredit": "Photo: {{author}} · {{license}}",

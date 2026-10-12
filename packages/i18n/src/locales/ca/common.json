@@ -169,6 +169,7 @@
     "registerTitleNz": "Al registre d'indicacions geogràfiques de Nova Zelanda",
     "registerTitleZa": "Al sistema Wine of Origin de Sud-àfrica",
     "registerTitleAu": "Al registre d'IG protegides d'Austràlia",
+    "registerTitleCl": "A la zonificació vitícola de Xile",
     "registeredOn": "Protegida a la UE des del {{date}}.",
     "registeredOnUs": "Àrea vitícola nord-americana des del {{date}}.",
     "registeredOnNz": "Indicació geogràfica registrada des del {{date}}.",
@@ -178,6 +179,7 @@
     "registerLinkNz": "Veure-la al registre de Nova Zelanda (número IP {{ref}}, IPONZ)",
     "registerLinkZa": "Veure la llista de zones de producció del sistema (SAWIS)",
     "registerLinkAu": "Veure'n l'entrada al registre de Wine Australia",
+    "registerLinkCl": "Veure el Decret 464 de 1994 a Ley Chile",
     "registerCategories": "Categories de producte",
     "wineCategory": {
       "1": "Vi",
@@ -238,6 +240,8 @@
     "giShort": "GI",
     "wo": "Wine of Origin (WO)",
     "woShort": "WO",
+    "do": "Denominació d'origen (DO)",
+    "doShort": "DO",
     "woLevel": {
       "overarchingUnit": "Una unitat geogràfica superior del sistema Wine of Origin.",
       "unit": "Una unitat geogràfica del sistema Wine of Origin.",
@@ -256,6 +260,12 @@
       "region": "Una indicació geogràfica australiana: una regió.",
       "subregion": "Una indicació geogràfica australiana: una subregió."
     },
+    "clLevel": {
+      "region": "Una regió vitícola de la zonificació de Xile (Decret 464).",
+      "subregion": "Una subregió de la zonificació vitícola de Xile (Decret 464).",
+      "zone": "Una zona de la zonificació vitícola de Xile (Decret 464).",
+      "area": "Una àrea de la zonificació vitícola de Xile (Decret 464)."
+    },
     "levelName": {
       "country": "país",
       "multiStateZone": "zona multiestatal",
@@ -268,7 +278,8 @@
       "region": "regió",
       "subregion": "subregió",
       "district": "districte",
-      "ward": "ward"
+      "ward": "ward",
+      "area": "àrea"
     },
     "photoAlt": "Raïm de {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",

@@ -60,6 +60,7 @@ type AllowedSpaceRow = {
 
 /** The kinds of area a register names, in its own words. */
 const levelWords: Record<RegionLevel, string> = {
+  area: "area",
   country: "country",
   district: "district",
   multiStateZone: "multi-state zone",
@@ -923,6 +924,12 @@ async function loadLibraryStatements(
         publisher: "Wine Australia, Register of Protected GIs and Other Terms",
         title: `${region.name} — Australian geographical indication`,
       },
+      // Chile's zoning is a decree; only its facts are used, linked to Ley Chile.
+      CL: {
+        license: "CL-official-text",
+        publisher: "Decreto 464 de 1994, Ministerio de Agricultura de Chile (Ley Chile)",
+        title: `${region.name} — Decreto 464 de 1994`,
+      },
       // IPONZ's register is Crown copyright: only its facts are used.
       NZ: {
         license: "NZ-Crown-copyright",
@@ -981,9 +988,11 @@ async function loadLibraryStatements(
           ? `an American Viticultural Area (AVA) of the United States${since("established")}`
           : region.countryCode === "NZ"
             ? `a geographical indication of New Zealand, in IPONZ's register${since("registered")}`
-            : region.countryCode === "AU"
-              ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
-              : `a production area of South Africa's Wine of Origin scheme${kind}`,
+            : region.countryCode === "CL"
+              ? `a denomination of origin of Chile's viticultural zoning (Decree 464 of 1994)${kind}`
+              : region.countryCode === "AU"
+                ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
+                : `a production area of South Africa's Wine of Origin scheme${kind}`,
       [registerId],
     );
     if (region.within.length > 0) {

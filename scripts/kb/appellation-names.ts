@@ -11,7 +11,7 @@ export type RegionEntry = {
    * The EU's PDO or PGI, or the designation of the country's own register:
    * the United States' AVA, New Zealand's GI, South Africa's Wine of Origin.
    */
-  giType: "PDO" | "PGI" | "AVA" | "GI" | "WO";
+  giType: "PDO" | "PGI" | "AVA" | "GI" | "WO" | "DO";
   grapes: { grapeId: string; quote: string; sourceUrl: string }[];
   id: string;
   latitude: number | null;
@@ -57,9 +57,10 @@ export type RegionEntry = {
 };
 
 /**
- * The kinds of area a register names, largest first: Australia's (country,
- * multi-state zone, state, super zone, zone, region, subregion) and South
- * Africa's Wine of Origin scheme's (geographical unit … ward).
+ * The kinds of area a register names: Australia's (country, multi-state
+ * zone, state, super zone, zone, region, subregion), South Africa's Wine of
+ * Origin scheme's (geographical unit … ward) and Chile's (region, subregion,
+ * zone, area). Each register's are largest first.
  */
 export const registerLevels = [
   "country",
@@ -74,6 +75,7 @@ export const registerLevels = [
   "subregion",
   "district",
   "ward",
+  "area",
 ] as const;
 export type RegisterLevel = (typeof registerLevels)[number];
 

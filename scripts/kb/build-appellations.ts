@@ -438,6 +438,80 @@ for (const entry of zaEntries) {
 }
 entries.push(...zaEntries);
 
+// Chile: the viticultural zoning of Decree 464 of 1994, each placed at the
+// middle of the communes or provinces that define it; a region the decree
+// draws only through its subregions, at the middle of theirs.
+const clPath = resolve(".kb-cache/world/cl.json");
+const clList = (
+  existsSync(clPath) ? JSON.parse(readFileSync(clPath, "utf8")) : { records: [], sourceUrl: "" }
+) as {
+  records: {
+    latitude: number | null;
+    level: RegisterLevel;
+    longitude: number | null;
+    names: string[];
+    qid: string | null;
+    within: string[];
+  }[];
+  sourceUrl: string;
+};
+const clIds = new Map<string, string>();
+const clEntries: RegionEntry[] = clList.records.map((area) => {
+  const id = worldId("cl", area.names[0]!);
+  clIds.set(area.names[0]!, id);
+  const { leads, summaries } = wikipediaSummaries(area.qid);
+  return {
+    countryCode: "CL",
+    eambrosiaId: null,
+    giType: "DO" as const,
+    grapes: [],
+    id,
+    latitude: area.latitude,
+    legalUrl: clList.sourceUrl,
+    longitude: area.longitude,
+    name: area.names[0]!,
+    names: area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+    pointSource: area.latitude === null ? null : ("area" as const),
+    prominence: leads,
+    registerLevel: area.level,
+    registeredOn: null,
+    summaries,
+    wikidataId: area.qid,
+  };
+});
+clList.records.forEach((area, index) => {
+  const within = area.within.map((name) => clIds.get(name)).filter((id) => id !== undefined);
+  if (within.length > 0) clEntries[index]!.within = within;
+});
+const ownPoint = new Set(
+  clEntries.filter((entry) => entry.latitude !== null).map((entry) => entry.id),
+);
+for (const entry of clEntries) {
+  if (entry.latitude !== null) continue;
+  const inside = clEntries.filter(
+    (other) => other.within?.includes(entry.id) === true && ownPoint.has(other.id),
+  );
+  if (inside.length === 0) continue;
+  entry.latitude = medianOf(inside.map((other) => other.latitude!));
+  entry.longitude = medianOf(inside.map((other) => other.longitude!));
+  entry.pointSource = "area";
+}
+for (const entry of clEntries) {
+  if (entry.latitude !== null) continue;
+  const holder = (entry.within ?? [])
+    .map((id) => clEntries.find((other) => other.id === id)!)
+    .find((other) => other.latitude !== null);
+  if (holder === undefined) continue;
+  entry.latitude = holder.latitude;
+  entry.longitude = holder.longitude;
+  entry.pointSource = "area";
+}
+entries.push(...clEntries);
+console.info(
+  `  ${clEntries.length} Chilean denominations of origin from Decree 464, ` +
+    `${clEntries.filter((entry) => entry.latitude !== null).length} placed.`,
+);
+
 // Australia: the Register of Protected Names' geographical indications, each
 // placed inside its official boundary (Wine Australia's open data) where it
 // has one of its own, and nested as the register lists them.

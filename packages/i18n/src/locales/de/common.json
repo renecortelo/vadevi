@@ -169,6 +169,7 @@
     "registerTitleNz": "Im neuseeländischen Register der geografischen Angaben",
     "registerTitleZa": "Im südafrikanischen Wine-of-Origin-System",
     "registerTitleAu": "Im australischen Register geschützter geografischer Angaben",
+    "registerTitleCl": "In Chiles Weinbauzonierung",
     "registeredOn": "In der EU geschützt seit dem {{date}}.",
     "registeredOnUs": "American Viticultural Area seit dem {{date}}.",
     "registeredOnNz": "Eingetragene geografische Angabe seit dem {{date}}.",
@@ -178,6 +179,7 @@
     "registerLinkNz": "Im neuseeländischen Register ansehen (IP-Nummer {{ref}}, IPONZ)",
     "registerLinkZa": "Die Liste der Anbaugebiete des Systems ansehen (SAWIS)",
     "registerLinkAu": "Den Eintrag im Register von Wine Australia ansehen",
+    "registerLinkCl": "Das Dekret 464 von 1994 auf Ley Chile ansehen",
     "registerCategories": "Erzeugniskategorien",
     "wineCategory": {
       "1": "Wein",
@@ -238,6 +240,8 @@
     "giShort": "GI",
     "wo": "Wine of Origin (WO)",
     "woShort": "WO",
+    "do": "Ursprungsbezeichnung (DO)",
+    "doShort": "DO",
     "woLevel": {
       "overarchingUnit": "Eine übergeordnete geografische Einheit des Wine-of-Origin-Systems.",
       "unit": "Eine geografische Einheit des Wine-of-Origin-Systems.",
@@ -256,6 +260,12 @@
       "region": "Eine australische geografische Angabe: eine Region.",
       "subregion": "Eine australische geografische Angabe: eine Subregion."
     },
+    "clLevel": {
+      "region": "Eine Weinbauregion der chilenischen Zonierung (Dekret 464).",
+      "subregion": "Eine Subregion der chilenischen Weinbauzonierung (Dekret 464).",
+      "zone": "Eine Zone der chilenischen Weinbauzonierung (Dekret 464).",
+      "area": "Ein Gebiet der chilenischen Weinbauzonierung (Dekret 464)."
+    },
     "levelName": {
       "country": "Land",
       "multiStateZone": "Mehrstaatenzone",
@@ -268,7 +278,8 @@
       "region": "Region",
       "subregion": "Subregion",
       "district": "Distrikt",
-      "ward": "Ward"
+      "ward": "Ward",
+      "area": "Gebiet"
     },
     "photoAlt": "Traube von {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",

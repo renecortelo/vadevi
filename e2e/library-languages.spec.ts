@@ -218,3 +218,22 @@ test("an Australian region shows its register entry and its zone", async ({ page
   await expect(nesting).toContainText("Barossa · zone");
   await expect(nesting).toContainText("South Australia · state");
 });
+
+test("a Chilean area shows its place in the decree's zoning", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/cl-apalta");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Apalta", { timeout: 15_000 });
+  await expect(page.locator(".page-heading")).toContainText("Denomination of origin (DO)");
+  await expect(page.locator("#region-register")).toHaveText("In Chile's viticultural zoning");
+  await expect(
+    page.getByText("An area of Chile's viticultural zoning (Decree 464)."),
+  ).toBeVisible();
+  await expect(page.locator('a[href*="leychile"]')).toContainText("Decree 464 of 1994");
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting).toContainText("Valle de Colchagua · zone");
+  await expect(nesting).toContainText("Valle del Rapel · subregion");
+  await expect(nesting).toContainText("Región del Valle Central · region");
+  await expect(page.locator(".library-map__point")).toBeVisible();
+});

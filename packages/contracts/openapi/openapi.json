@@ -11335,6 +11335,7 @@
                     "subregion",
                     "district",
                     "ward",
+                    "area",
                     null
                   ]
                 },
@@ -11366,7 +11367,8 @@
               "PGI",
               "AVA",
               "GI",
-              "WO"
+              "WO",
+              "DO"
             ]
           },
           "grapes": {
@@ -11457,6 +11459,7 @@
               "subregion",
               "district",
               "ward",
+              "area",
               null
             ]
           },
@@ -11560,6 +11563,7 @@
                     "subregion",
                     "district",
                     "ward",
+                    "area",
                     null
                   ]
                 },
@@ -11617,7 +11621,8 @@
                     "PGI",
                     "AVA",
                     "GI",
-                    "WO"
+                    "WO",
+                    "DO"
                   ]
                 },
                 "id": {

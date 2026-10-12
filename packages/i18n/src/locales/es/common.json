@@ -169,6 +169,7 @@
     "registerTitleNz": "En el registro de indicaciones geográficas de Nueva Zelanda",
     "registerTitleZa": "En el sistema Wine of Origin de Sudáfrica",
     "registerTitleAu": "En el registro de IG protegidas de Australia",
+    "registerTitleCl": "En la zonificación vitícola de Chile",
     "registeredOn": "Protegida en la UE desde el {{date}}.",
     "registeredOnUs": "Área vitícola estadounidense desde el {{date}}.",
     "registeredOnNz": "Indicación geográfica registrada desde el {{date}}.",
@@ -178,6 +179,7 @@
     "registerLinkNz": "Verla en el registro de Nueva Zelanda (número IP {{ref}}, IPONZ)",
     "registerLinkZa": "Ver la lista de zonas de producción del sistema (SAWIS)",
     "registerLinkAu": "Ver su entrada en el registro de Wine Australia",
+    "registerLinkCl": "Ver el Decreto 464 de 1994 en Ley Chile",
     "registerCategories": "Categorías de producto",
     "wineCategory": {
       "1": "Vino",
@@ -238,6 +240,8 @@
     "giShort": "GI",
     "wo": "Wine of Origin (WO)",
     "woShort": "WO",
+    "do": "Denominación de origen (DO)",
+    "doShort": "DO",
     "woLevel": {
       "overarchingUnit": "Una unidad geográfica superior del sistema Wine of Origin.",
       "unit": "Una unidad geográfica del sistema Wine of Origin.",
@@ -256,6 +260,12 @@
       "region": "Una indicación geográfica australiana: una región.",
       "subregion": "Una indicación geográfica australiana: una subregión."
     },
+    "clLevel": {
+      "region": "Una región vitícola de la zonificación de Chile (Decreto 464).",
+      "subregion": "Una subregión de la zonificación vitícola de Chile (Decreto 464).",
+      "zone": "Una zona de la zonificación vitícola de Chile (Decreto 464).",
+      "area": "Un área de la zonificación vitícola de Chile (Decreto 464)."
+    },
     "levelName": {
       "country": "país",
       "multiStateZone": "zona multiestatal",
@@ -268,7 +278,8 @@
       "region": "región",
       "subregion": "subregión",
       "district": "distrito",
-      "ward": "ward"
+      "ward": "ward",
+      "area": "área"
     },
     "photoAlt": "Racimo de {{name}}",
     "photoCredit": "Foto: {{author}} · {{license}}",

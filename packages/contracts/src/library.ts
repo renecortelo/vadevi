@@ -138,15 +138,17 @@ export const LibraryGrapePathSchema = z
 /**
  * How a register designates a protected wine name: the EU's PDO and PGI, and
  * other countries' own — the American Viticultural Area of 27 CFR part 9, New
- * Zealand's registered geographical indication, South Africa's Wine of Origin.
+ * Zealand's and Australia's geographical indications, South Africa's Wine of
+ * Origin, Chile's denominations of origin.
  */
-export const RegionDesignationSchema = z.enum(["PDO", "PGI", "AVA", "GI", "WO"]);
+export const RegionDesignationSchema = z.enum(["PDO", "PGI", "AVA", "GI", "WO", "DO"]);
 export type RegionDesignation = z.infer<typeof RegionDesignationSchema>;
 
 /**
- * The kinds of area a register names, largest first: Australia's (country,
- * multi-state zone, state, super zone, zone, region, subregion) and South
- * Africa's Wine of Origin scheme's (geographical unit … ward).
+ * The kinds of area a register names: Australia's (country, multi-state
+ * zone, state, super zone, zone, region, subregion), South Africa's Wine of
+ * Origin scheme's (geographical unit … ward) and Chile's (region, subregion,
+ * zone, area). Each register's are largest first.
  */
 export const RegionLevelSchema = z.enum([
   "country",
@@ -161,6 +163,7 @@ export const RegionLevelSchema = z.enum([
   "subregion",
   "district",
   "ward",
+  "area",
 ]);
 export type RegionLevel = z.infer<typeof RegionLevelSchema>;
 

@@ -273692,6 +273692,3390 @@
     "wikidataId": null
   },
   {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-region-de-atacama",
+    "latitude": -28.19600055,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.26590705000001,
+    "name": "Región de Atacama",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Región de Atacama",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Atacama",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-de-copiapo",
+    "latitude": -27.6428468,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -69.9960523,
+    "name": "Valle de Copiapó",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Copiapó",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-atacama"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-huasco",
+    "latitude": -28.7491543,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.5357618,
+    "name": "Valle del Huasco",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Huasco",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Valle de Huasco",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-atacama"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-region-de-coquimbo",
+    "latitude": -30.6944769,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.9871076,
+    "name": "Región de Coquimbo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Región de Coquimbo",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Coquimbo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-elqui",
+    "latitude": -29.7731758,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.615843,
+    "name": "Valle del Elqui",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Elqui",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 1,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "The Elqui Valley is a wine region situated alongside the Elqui River in northern Chile. The region lies 400 km (250 mi) north of Santiago, at the southern end of the Atacama Desert in the Coquimbo region. It is known for cultivating table grapes, various fruits, and Chile’s popular pisco brandy, the country's favored liquor. It is considered the most commercially successful wine-producing region in northern Chile.",
+        "url": "https://en.wikipedia.org/wiki/Elqui_Valley_(wine_region)"
+      }
+    },
+    "wikidataId": "Q17010472",
+    "within": [
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-la-serena",
+    "latitude": -29.902705,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2519575,
+    "name": "La Serena",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Serena",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-elqui",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-vicuna",
+    "latitude": -30.0340482,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.7126702,
+    "name": "Vicuña",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vicuña",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-elqui",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-paiguano",
+    "latitude": -29.7731758,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.615843,
+    "name": "Paiguano",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Paiguano",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-elqui",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-limari",
+    "latitude": -30.8214372,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.9871076,
+    "name": "Valle del Limarí",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Limarí",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-ovalle",
+    "latitude": -30.6030819,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2029894,
+    "name": "Ovalle",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ovalle",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-limari",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-monte-patria",
+    "latitude": -30.6944769,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.9579593,
+    "name": "Monte Patria",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Monte Patria",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-limari",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-punitaqui",
+    "latitude": -30.8337532,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2573637,
+    "name": "Punitaqui",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Punitaqui",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-limari",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-rio-hurtado",
+    "latitude": -30.452222,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.6801885,
+    "name": "Río Hurtado",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Río Hurtado",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-limari",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-choapa",
+    "latitude": -31.7117651,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.0040525,
+    "name": "Valle del Choapa",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Choapa",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-salamanca",
+    "latitude": -31.7804674,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.9649896,
+    "name": "Salamanca",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Salamanca",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-choapa",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-illapel",
+    "latitude": -31.6326932,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.1683039,
+    "name": "Illapel",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Illapel",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-choapa",
+      "cl-region-de-coquimbo"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-region-de-aconcagua",
+    "latitude": -32.879997,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4100762,
+    "name": "Región de Aconcagua",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Región de Aconcagua",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Aconcagua",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 2,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "Aconcagua is one of the five principal wine regions of Chile. It takes its name from the Aconcagua River and encompasses all winegrowing areas in Valparaíso Region. The Aconcagua wine region is composed of four minor wine districts: Casablanca Valley, Aconcagua Costa, Aconcagua Valley, and Leyda Valley.",
+        "url": "https://en.wikipedia.org/wiki/Aconcagua_(wine_region)"
+      },
+      "es": {
+        "text": "Aconcagua es una de las seis regiones vitícolas de Chile oficialmente identificadas como tales según lo dispuesto por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      }
+    },
+    "wikidataId": "Q4674490"
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-aconcagua",
+    "latitude": -32.7907063,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.6667782,
+    "name": "Valle del Aconcagua",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Aconcagua",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-panquehue",
+    "latitude": -32.7705769,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.8361303,
+    "name": "Panquehue",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Panquehue",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-quillota",
+    "latitude": -32.879997,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2473555,
+    "name": "Quillota",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Quillota",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-hijuelas",
+    "latitude": -32.8000578,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.145221,
+    "name": "Hijuelas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hijuelas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-catemu",
+    "latitude": -32.7784214,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.9633428,
+    "name": "Catemu",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Catemu",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-llaillay",
+    "latitude": -32.7907063,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.6667782,
+    "name": "Llaillay",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Llaillay",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-san-felipe",
+    "latitude": -32.750687,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.7252688,
+    "name": "San Felipe",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Felipe",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-santa-maria",
+    "latitude": -32.7478749,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.6567375,
+    "name": "Santa María",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Santa María",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-calle-larga",
+    "latitude": -32.8552685,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.6260407,
+    "name": "Calle Larga",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Calle Larga",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-san-esteban",
+    "latitude": -32.7990544,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.5795811,
+    "name": "San Esteban",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Esteban",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-aconcagua",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-de-casablanca",
+    "latitude": -33.3205864,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4100762,
+    "name": "Valle de Casablanca",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Casablanca",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-de-san-antonio",
+    "latitude": -33.6038191,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4806055,
+    "name": "Valle de San Antonio",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de San Antonio",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-de-leyda",
+    "latitude": -33.5808615,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6132377,
+    "name": "Valle de Leyda",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Leyda",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "zone",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-san-antonio",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-san-juan",
+    "latitude": -33.5808615,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6132377,
+    "name": "San Juan",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Juan",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-leyda",
+      "cl-valle-de-san-antonio",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-santo-domingo",
+    "latitude": -33.7863748,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6756251,
+    "name": "Santo Domingo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Santo Domingo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-leyda",
+      "cl-valle-de-san-antonio",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-lo-abarca",
+    "latitude": -33.5213305,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.5441422,
+    "name": "Lo Abarca",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lo Abarca",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-san-antonio",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-cartagena",
+    "latitude": -33.5468491,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6031708,
+    "name": "Cartagena",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cartagena",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-san-antonio",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-algarrobo",
+    "latitude": -33.369172,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6680533,
+    "name": "Algarrobo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Algarrobo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-san-antonio",
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-marga-marga",
+    "latitude": -33.0498135,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4415282,
+    "name": "Valle del Marga-Marga",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Marga-Marga",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-zapallar",
+    "latitude": -32.5528294,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4588181,
+    "name": "Zapallar",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Zapallar",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-de-aconcagua"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-region-del-valle-central",
+    "latitude": -34.6394585,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2997017,
+    "name": "Región del Valle Central",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Región del Valle Central",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Valle Central",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 2,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "In terms of viticulture the Central Valley of Chile (Spanish: Valle Central) spans the O'Higgins Region (VI) and Maule Region (VII) Administrative Regions and the Administrative Metropolitan Region, and is the main growing zone for Chilean wine and coincides with the historical core of the Chilean Central Valley.",
+        "url": "https://en.wikipedia.org/wiki/Central_Valley_(Chilean_wine_region)"
+      },
+      "es": {
+        "text": "El Valle Central es una de las seis regiones vitícolas de Chile oficialmente identificadas como tales según lo dispuesto por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Valle_Central"
+      }
+    },
+    "wikidataId": "Q5061975"
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-maipo",
+    "latitude": -33.6565544,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.71398,
+    "name": "Valle del Maipo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Maipo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-santiago",
+    "latitude": -33.4765918,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.5418308,
+    "name": "Santiago",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Santiago",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-pirque",
+    "latitude": -33.6348808,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.5729961,
+    "name": "Pirque",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pirque",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-puente-alto",
+    "latitude": -33.5833594,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.5754736,
+    "name": "Puente Alto",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Puente Alto",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-buin",
+    "latitude": -33.7319741,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.7390236,
+    "name": "Buin",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Buin",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-isla-de-maipo",
+    "latitude": -33.7537387,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.9039325,
+    "name": "Isla de Maipo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Isla de Maipo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-talagante",
+    "latitude": -33.6058638,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.8785306,
+    "name": "Talagante",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Talagante",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-melipilla",
+    "latitude": -33.6855134,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2145796,
+    "name": "Melipilla",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Melipilla",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-alhue",
+    "latitude": -34.0369953,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.0841192,
+    "name": "Alhué",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Alhué",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-maria-pinto",
+    "latitude": -33.5159823,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.1200324,
+    "name": "María Pinto",
+    "names": [
+      {
+        "locale": "*",
+        "name": "María Pinto",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-colina",
+    "latitude": -33.202472,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.6749147,
+    "name": "Colina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Colina",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-calera-de-tango",
+    "latitude": -33.6309419,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.7593202,
+    "name": "Calera de Tango",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Calera de Tango",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-til-til",
+    "latitude": -33.6565544,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.71398,
+    "name": "Til Til",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Til Til",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-lampa",
+    "latitude": -33.2895953,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.8705255,
+    "name": "Lampa",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lampa",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maipo",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-rapel",
+    "latitude": -34.3723784,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.0544074,
+    "name": "Valle del Rapel",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Rapel",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-cachapoal",
+    "latitude": -34.277113,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.759582,
+    "name": "Valle del Cachapoal",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Cachapoal",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "zone",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-rancagua",
+    "latitude": -34.0644743,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.7262983,
+    "name": "Rancagua",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rancagua",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-cachapoal",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-requinoa",
+    "latitude": -34.2848586,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.8175128,
+    "name": "Requínoa",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Requínoa",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-cachapoal",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-rengo",
+    "latitude": -34.4088744,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.9440652,
+    "name": "Rengo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rengo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-cachapoal",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-peumo",
+    "latitude": -34.3584097,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.282715,
+    "name": "Peumo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Peumo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-cachapoal",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-machali",
+    "latitude": -34.182453,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.6511584,
+    "name": "Machalí",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Machalí",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-cachapoal",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-coltauco",
+    "latitude": -34.2862794,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.0825729,
+    "name": "Coltauco",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coltauco",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-cachapoal",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-de-colchagua",
+    "latitude": -34.3723784,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.0544074,
+    "name": "Valle de Colchagua",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Colchagua",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "zone",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-san-fernando",
+    "latitude": -34.583791,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.989122,
+    "name": "San Fernando",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Fernando",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-chimbarongo",
+    "latitude": -34.708953,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.0403642,
+    "name": "Chimbarongo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Chimbarongo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-nancagua",
+    "latitude": -34.6385927,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.1173651,
+    "name": "Nancagua",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Nancagua",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-santa-cruz",
+    "latitude": -34.6403243,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2738582,
+    "name": "Santa Cruz",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Santa Cruz",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-palmilla",
+    "latitude": -34.5960542,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.3624782,
+    "name": "Palmilla",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Palmilla",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-peralillo",
+    "latitude": -34.4780273,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4793203,
+    "name": "Peralillo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Peralillo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-lolol",
+    "latitude": -34.727836,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6440839,
+    "name": "Lolol",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lolol",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-marchigue",
+    "latitude": -34.3668668,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6421489,
+    "name": "Marchigüe",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Marchigüe",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-litueche",
+    "latitude": -34.1154229,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.7296864,
+    "name": "Litueche",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Litueche",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-la-estrella",
+    "latitude": -34.2052857,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6546039,
+    "name": "La Estrella",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Estrella",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-paredones",
+    "latitude": -34.6476395,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.9008463,
+    "name": "Paredones",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Paredones",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-pumanque",
+    "latitude": -34.6048141,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.654681,
+    "name": "Pumanque",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pumanque",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-los-lingues",
+    "latitude": -34.3723784,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.0544074,
+    "name": "Los Lingues",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Los Lingues",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-apalta",
+    "latitude": -34.3392193,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.868125,
+    "name": "Apalta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Apalta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-colchagua",
+      "cl-valle-del-rapel",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-de-curico",
+    "latitude": -35.1569948,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -70.8259241,
+    "name": "Valle de Curicó",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Curicó",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-teno",
+    "latitude": -34.9246071,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.3166884,
+    "name": "Valle del Teno",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Teno",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "zone",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-curico",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-rauco",
+    "latitude": -34.9246071,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.3166884,
+    "name": "Rauco",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rauco",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-teno",
+      "cl-valle-de-curico",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-romeral",
+    "latitude": -34.8667952,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.1253134,
+    "name": "Romeral",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Romeral",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-teno",
+      "cl-valle-de-curico",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-vichuquen",
+    "latitude": -34.8840168,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.9923708,
+    "name": "Vichuquén",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vichuquén",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-teno",
+      "cl-valle-de-curico",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-licanten",
+    "latitude": -34.9856892,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.9845873,
+    "name": "Licantén",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Licantén",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-teno",
+      "cl-valle-de-curico",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-lontue",
+    "latitude": -34.9990365,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2584579,
+    "name": "Valle del Lontué",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Lontué",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "zone",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-de-curico",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-molina",
+    "latitude": -35.1139703,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.2584579,
+    "name": "Molina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Molina",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-lontue",
+      "cl-valle-de-curico",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-sagrada-familia",
+    "latitude": -34.9990365,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.3817116,
+    "name": "Sagrada Familia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sagrada Familia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-lontue",
+      "cl-valle-de-curico",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-maule",
+    "latitude": -35.9671286,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4671073,
+    "name": "Valle del Maule",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Maule",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 1,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "Maule Valley is a wine-producing region in Chile's Central Valley and is a Denomination of Origin (DO) as defined by the Chilean Appellation system, the legally defined and protected geographical indication used to identify where the grapes for a wine were grown. The area is located 250 km (155 mi) south of Santiago, Chile’s capital city, and forms part of the Central Valley region.",
+        "url": "https://en.wikipedia.org/wiki/Maule_Valley"
+      }
+    },
+    "wikidataId": "Q17078441",
+    "within": [
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-claro",
+    "latitude": -35.3961663,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6660322,
+    "name": "Valle del Claro",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Claro",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "zone",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-talca",
+    "latitude": -35.4265343,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6660322,
+    "name": "Talca",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Talca",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-claro",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-pencahue",
+    "latitude": -35.3961663,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.7993745,
+    "name": "Pencahue",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pencahue",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-claro",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-san-clemente",
+    "latitude": -35.5375459,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4858841,
+    "name": "San Clemente",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Clemente",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-claro",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-san-rafael",
+    "latitude": -35.3050966,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.5156699,
+    "name": "San Rafael",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Rafael",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-claro",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-empedrado",
+    "latitude": -35.5907772,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.2776205,
+    "name": "Empedrado",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Empedrado",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-claro",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-curepto",
+    "latitude": -35.0937166,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.0180794,
+    "name": "Curepto",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Curepto",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-claro",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-loncomilla",
+    "latitude": -35.7464128,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6846723,
+    "name": "Valle del Loncomilla",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Loncomilla",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "zone",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-san-javier",
+    "latitude": -35.5923933,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.735308,
+    "name": "San Javier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Javier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-loncomilla",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-villa-alegre",
+    "latitude": -35.6752031,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.7446702,
+    "name": "Villa Alegre",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Villa Alegre",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-loncomilla",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-parral",
+    "latitude": -36.1414293,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.8222221,
+    "name": "Parral",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Parral",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-loncomilla",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-linares",
+    "latitude": -35.7464128,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.5820799,
+    "name": "Linares",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Linares",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-loncomilla",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-colbun",
+    "latitude": -35.6960057,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.4060907,
+    "name": "Colbún",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Colbún",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-loncomilla",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-longavi",
+    "latitude": -35.9659749,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.6846723,
+    "name": "Longaví",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Longaví",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-loncomilla",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-retiro",
+    "latitude": -36.0554429,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -71.7650623,
+    "name": "Retiro",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Retiro",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-loncomilla",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-tutuven",
+    "latitude": -35.9671286,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.315427,
+    "name": "Valle del Tutuvén",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Tutuvén",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "zone",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-cauquenes",
+    "latitude": -35.9671286,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.315427,
+    "name": "Cauquenes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cauquenes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-tutuven",
+      "cl-valle-del-maule",
+      "cl-region-del-valle-central"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-region-del-sur",
+    "latitude": -36.9531402,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.5622801,
+    "name": "Región del Sur",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Región del Sur",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 2,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "The Southern Chilean Wine Region or The South is one of the five principal wine regions of Chile. It encompasses all wine-growing areas in of Bío Bío Region and Araucanía Region. The South wine region is composed of three minor wine districts; Itata Valley, Bío Bío Valley and Malleco Valley.",
+        "url": "https://en.wikipedia.org/wiki/Southern_Chile_(wine_region)"
+      },
+      "es": {
+        "text": "El Sur es una de las seis regiones vitícolas de Chile oficialmente identificadas como tales según lo dispuesto por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen. Los vinos chilenos con esta denominación de origen deben ser elaborados al menos con un 75% de uvas procedentes de la región.",
+        "url": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      }
+    },
+    "wikidataId": "Q6104318"
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-itata",
+    "latitude": -36.4876004,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.4285292,
+    "name": "Valle del Itata",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Itata",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-chillan",
+    "latitude": -36.6066616,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.1033194,
+    "name": "Chillán",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Chillán",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-itata",
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-quillon",
+    "latitude": -36.8084128,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.6037277,
+    "name": "Quillón",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Quillón",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-itata",
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-portezuelo",
+    "latitude": -36.3935896,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.3976432,
+    "name": "Portezuelo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Portezuelo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-itata",
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-coelemu",
+    "latitude": -36.4323455,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.6152748,
+    "name": "Coelemu",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coelemu",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-itata",
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-biobio",
+    "latitude": -37.5018293,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.5622801,
+    "name": "Valle del Biobío",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Biobío",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Valle del Bío Bío",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-yumbel",
+    "latitude": -37.0978676,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.5622801,
+    "name": "Yumbel",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Yumbel",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-biobio",
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-mulchen",
+    "latitude": -37.5856678,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.5292643,
+    "name": "Mulchén",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mulchén",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-biobio",
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-malleco",
+    "latitude": -38.0332836,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.6668798,
+    "name": "Valle del Malleco",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Malleco",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-traiguen",
+    "latitude": -38.250816,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.6668798,
+    "name": "Traiguén",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Traiguén",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-valle-del-malleco",
+      "cl-region-del-sur"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-region-austral",
+    "latitude": -40.4127606,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -73.1358091,
+    "name": "Región Austral",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Región Austral",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 2,
+    "registerLevel": "region",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "The Austral wine region is one of the six official wine regions of Chile. The region is recognised by Decreto de Agricultura nº 464 of 14 December 1994, which established the regions and rules of origin. Chilean wine using the label Austral must have at least 3/4 of its content made in the Austral Region.",
+        "url": "https://en.wikipedia.org/wiki/Austral_(wine_region)"
+      },
+      "es": {
+        "text": "El Austral es una de las seis regiones vitícolas de Chile oficialmente identificadas como tales según lo dispuesto por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_Austral"
+      }
+    },
+    "wikidataId": "Q25405982"
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-del-cautin",
+    "latitude": -38.4111234,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -72.3778344,
+    "name": "Valle del Cautín",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Cautín",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-austral"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-valle-de-osorno",
+    "latitude": -40.4127606,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -73.1358091,
+    "name": "Valle de Osorno",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Osorno",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-austral"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-chiloe",
+    "latitude": -42.7675348,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -73.7515101,
+    "name": "Chiloé",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Chiloé",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "subregion",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "cl-region-austral"
+    ]
+  },
+  {
+    "countryCode": "CL",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "cl-rapa-nui-isla-de-pascua",
+    "latitude": -27.1259317,
+    "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+    "longitude": -109.3495887,
+    "name": "Rapa Nui - Isla de Pascua",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rapa Nui - Isla de Pascua",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Rapa Nui",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Isla de Pascua",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "area",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",

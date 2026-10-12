@@ -12,14 +12,14 @@ questions ("what does a Garnacha smell like?").
 
 ## Where it comes from
 
-| File                     | Built by                                                                                       | Sources                                                                                                                                                                                                                                                      |
-| ------------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `grapes.json`            | `pnpm kb:fetch-grapes`, `pnpm kb:extract-grapes`, `pnpm kb:build-grapes`                       | Wikidata (names, aliases), Wikipedia (prose)                                                                                                                                                                                                                 |
-| `terms.json`             | by hand                                                                                        | The vocabulary aromas and foods are shown in, in eight languages                                                                                                                                                                                             |
-| `appellations.json`      | `pnpm kb:fetch-appellations`, `pnpm kb:fetch-world-appellations`, `pnpm kb:build-appellations` | eAmbrosia (the EU register), 27 CFR part 9 (eCFR), the UC Davis AVA project, IPONZ's register of geographical indications, the Wine of Origin scheme's production areas (SAWIS), Wine Australia's register and open data, OpenStreetMap, Wikidata, Wikipedia |
-| `za-wine-of-origin.json` | transcribed by hand                                                                            | The Wine of Origin scheme's list of production areas (SAWIS, February 2026)                                                                                                                                                                                  |
-| `topics.json`            | `pnpm kb:fetch-topics`, `pnpm kb:build-topics` (from `topics-include.json`)                    | Wikidata (names), Wikipedia (explanations)                                                                                                                                                                                                                   |
-| `grape-images.json`      | `pnpm kb:fetch-grape-images`                                                                   | Wikimedia Commons (photographs, in `apps/web/public/library/grapes/`)                                                                                                                                                                                        |
+| File                     | Built by                                                                                       | Sources                                                                                                                                                                                                                                                                                      |
+| ------------------------ | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `grapes.json`            | `pnpm kb:fetch-grapes`, `pnpm kb:extract-grapes`, `pnpm kb:build-grapes`                       | Wikidata (names, aliases), Wikipedia (prose)                                                                                                                                                                                                                                                 |
+| `terms.json`             | by hand                                                                                        | The vocabulary aromas and foods are shown in, in eight languages                                                                                                                                                                                                                             |
+| `appellations.json`      | `pnpm kb:fetch-appellations`, `pnpm kb:fetch-world-appellations`, `pnpm kb:build-appellations` | eAmbrosia (the EU register), 27 CFR part 9 (eCFR), the UC Davis AVA project, IPONZ's register of geographical indications, the Wine of Origin scheme's production areas (SAWIS), Wine Australia's register and open data, Chile's Decree 464 (Ley Chile), OpenStreetMap, Wikidata, Wikipedia |
+| `za-wine-of-origin.json` | transcribed by hand                                                                            | The Wine of Origin scheme's list of production areas (SAWIS, February 2026)                                                                                                                                                                                                                  |
+| `topics.json`            | `pnpm kb:fetch-topics`, `pnpm kb:build-topics` (from `topics-include.json`)                    | Wikidata (names), Wikipedia (explanations)                                                                                                                                                                                                                                                   |
+| `grape-images.json`      | `pnpm kb:fetch-grape-images`                                                                   | Wikimedia Commons (photographs, in `apps/web/public/library/grapes/`)                                                                                                                                                                                                                        |
 
 Every structured value carries `evidence`: the sentence of the English
 Wikipedia article it was read from. A language model reads the article and
@@ -171,8 +171,24 @@ articles titled for the name's wine ("Barossa Valley wine region", "Fleurieu
 zone", "Margaret River (wine region)"), and of the states' wine articles
 ("South Australian wine"), never a town's.
 
-The small map draws a country on its sheet: Europe's, the Americas',
-Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural
+**Chile.** The viticultural zoning of Decree 464 of 1994 (Ministry of
+Agriculture), as Ley Chile consolidates it (version of 14 July 2026),
+transcribed by hand from its article 1 into `cl-zonificacion-viticola.json`:
+the six viticultural regions, their subregions, zones and areas, and Rapa
+Nui – Isla de Pascua; each with the units it is in (`within`), its kind
+(`registerLevel`: region, subregion, zone, area) and the communes, provinces
+or rural locality the decree defines its boundary by. The names a label may
+carry, as the decree's own table writes them ("Región de Atacama", "Valle
+de Huasco", "Valle del Bio Bio"), are kept as other names. Each is placed at
+the middle of the communes or provinces that define it, as OpenStreetMap
+places them inside the administrative regions the decree names — a region
+at the middle of its subregions — approximately (`pointSource: "area"`).
+Summaries only from the English articles about the area's wine, read by
+hand ("Central Valley (Chilean wine region)", "Maule Valley"); the articles
+titled for the other valleys lead to their province or river.
+
+The small map draws a country on its sheet: Europe's, North or South
+America's, Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural
 Earth).
 
 ## Licences
@@ -189,6 +205,9 @@ Earth).
 - **Wine Australia's** GI boundaries, kinds and numbers: CC BY 4.0, ©
   Wine Australia; credited under the map. The register's pages give only
   facts here: names and dates.
+- **Chile's Decree 464 of 1994**, read on Ley Chile (Biblioteca del Congreso
+  Nacional): only its facts are taken — names, kinds, nesting and the units
+  that define each — and each name links to the decree.
 - **IPONZ's register of geographical indications**: Crown copyright; only
   facts are taken from it (names, IP numbers, dates), and each name links to
   its page there.

@@ -1,0 +1,1754 @@
+{
+ "source": {
+  "title": "Decreto 464 de 1994 del Ministerio de Agricultura, que establece zonificación vitícola y fija normas para su utilización (texto refundido)",
+  "publisher": "Biblioteca del Congreso Nacional de Chile (Ley Chile)",
+  "url": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
+  "version": "2026-07-14",
+  "note": "Transcribed by hand from article 1 of the decree as Ley Chile consolidates it (version of 14 July 2026): each viticultural region, subregion, zone and area, the units it is in, and the communes, provinces or rural locality its boundary is defined by. The decree's own table of the names a label may carry writes some names differently (\"Región de Atacama\", \"Valle de Huasco\", \"Valle del Bio Bio\"); those are kept as other names. The decree's Valle del Maipo comprises every province of the Metropolitan Region, listed here by name. Each viticultural region carries the administrative regions the decree says it comprises (adminRegions)."
+ },
+ "areas": [
+  {
+   "names": [
+    "Región de Atacama",
+    "Atacama"
+   ],
+   "level": "region",
+   "in": [],
+   "adminRegions": [
+    "Atacama"
+   ]
+  },
+  {
+   "names": [
+    "Valle de Copiapó"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región de Atacama"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Copiapó"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Huasco",
+    "Valle de Huasco"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región de Atacama"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Huasco"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Región de Coquimbo",
+    "Coquimbo"
+   ],
+   "level": "region",
+   "in": [],
+   "adminRegions": [
+    "Coquimbo"
+   ]
+  },
+  {
+   "names": [
+    "Valle del Elqui"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región de Coquimbo"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Elqui"
+    ]
+   }
+  },
+  {
+   "names": [
+    "La Serena"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Elqui"
+   ],
+   "definedBy": {
+    "communes": [
+     "La Serena"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Vicuña"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Elqui"
+   ],
+   "definedBy": {
+    "communes": [
+     "Vicuña"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Paiguano"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Elqui"
+   ],
+   "definedBy": {
+    "communes": [
+     "Paiguano"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Limarí"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región de Coquimbo"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Limarí"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Ovalle"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Limarí"
+   ],
+   "definedBy": {
+    "communes": [
+     "Ovalle"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Monte Patria"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Limarí"
+   ],
+   "definedBy": {
+    "communes": [
+     "Monte Patria"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Punitaqui"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Limarí"
+   ],
+   "definedBy": {
+    "communes": [
+     "Punitaqui"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Río Hurtado"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Limarí"
+   ],
+   "definedBy": {
+    "communes": [
+     "Río Hurtado"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Choapa"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región de Coquimbo"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Choapa"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Salamanca"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Choapa"
+   ],
+   "definedBy": {
+    "communes": [
+     "Salamanca"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Illapel"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Choapa"
+   ],
+   "definedBy": {
+    "communes": [
+     "Illapel"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Región de Aconcagua",
+    "Aconcagua"
+   ],
+   "level": "region",
+   "in": [],
+   "adminRegions": [
+    "Valparaíso"
+   ]
+  },
+  {
+   "names": [
+    "Valle del Aconcagua"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región de Aconcagua"
+   ],
+   "definedBy": {
+    "provinces": [
+     "San Felipe de Aconcagua",
+     "Los Andes",
+     "Quillota"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Panquehue"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Panquehue"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Quillota"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Quillota"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Hijuelas"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Hijuelas"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Catemu"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Catemu"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Llaillay"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Llaillay"
+    ]
+   }
+  },
+  {
+   "names": [
+    "San Felipe"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Felipe"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Santa María"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Santa María"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Calle Larga"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Calle Larga"
+    ]
+   }
+  },
+  {
+   "names": [
+    "San Esteban"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Esteban"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle de Casablanca"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región de Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Casablanca"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle de San Antonio"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región de Aconcagua"
+   ],
+   "definedBy": {
+    "provinces": [
+     "San Antonio"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle de Leyda"
+   ],
+   "level": "zone",
+   "in": [
+    "Valle de San Antonio"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Antonio",
+     "Santo Domingo"
+    ]
+   }
+  },
+  {
+   "names": [
+    "San Juan"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Leyda"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Antonio"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Santo Domingo"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Leyda"
+   ],
+   "definedBy": {
+    "communes": [
+     "Santo Domingo"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Lo Abarca"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de San Antonio"
+   ],
+   "definedBy": {
+    "locality": "Lo Abarca, Cartagena"
+   }
+  },
+  {
+   "names": [
+    "Cartagena"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de San Antonio"
+   ],
+   "definedBy": {
+    "communes": [
+     "Cartagena"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Algarrobo"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de San Antonio"
+   ],
+   "definedBy": {
+    "communes": [
+     "Algarrobo"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Marga-Marga"
+   ],
+   "level": "area",
+   "in": [
+    "Región de Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Quilpué"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Zapallar"
+   ],
+   "level": "area",
+   "in": [
+    "Región de Aconcagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Zapallar"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Región del Valle Central",
+    "Valle Central"
+   ],
+   "level": "region",
+   "in": [],
+   "adminRegions": [
+    "Metropolitana",
+    "O'Higgins",
+    "Maule"
+   ]
+  },
+  {
+   "names": [
+    "Valle del Maipo"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región del Valle Central"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Santiago",
+     "Cordillera",
+     "Chacabuco",
+     "Maipo",
+     "Talagante",
+     "Melipilla"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Santiago"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Peñalolén",
+     "La Florida"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Pirque"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Pirque"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Puente Alto"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Puente Alto",
+     "La Pintana"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Buin"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Buin",
+     "Paine",
+     "San Bernardo"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Isla de Maipo"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Isla de Maipo"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Talagante"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Talagante",
+     "Peñaflor",
+     "El Monte",
+     "Padre Hurtado"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Melipilla"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Melipilla",
+     "San Pedro"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Alhué"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Alhué"
+    ]
+   }
+  },
+  {
+   "names": [
+    "María Pinto"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "María Pinto"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Colina"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Colina"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Calera de Tango"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Calera de Tango"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Til Til"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Til Til"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Lampa"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Maipo"
+   ],
+   "definedBy": {
+    "communes": [
+     "Lampa"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Rapel"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región del Valle Central"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Cachapoal",
+     "Colchagua",
+     "Cardenal Caro"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Cachapoal"
+   ],
+   "level": "zone",
+   "in": [
+    "Valle del Rapel"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Cachapoal"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Rancagua"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Cachapoal"
+   ],
+   "definedBy": {
+    "communes": [
+     "Rancagua",
+     "Graneros",
+     "Mostazal",
+     "Codegua",
+     "Olivar"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Requínoa"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Cachapoal"
+   ],
+   "definedBy": {
+    "communes": [
+     "Requínoa"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Rengo"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Cachapoal"
+   ],
+   "definedBy": {
+    "communes": [
+     "Rengo",
+     "Malloa",
+     "Quinta de Tilcoco"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Peumo"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Cachapoal"
+   ],
+   "definedBy": {
+    "communes": [
+     "Peumo",
+     "Pichidegua",
+     "Las Cabras",
+     "San Vicente"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Machalí"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Cachapoal"
+   ],
+   "definedBy": {
+    "communes": [
+     "Machalí"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Coltauco"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Cachapoal"
+   ],
+   "definedBy": {
+    "communes": [
+     "Coltauco"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle de Colchagua"
+   ],
+   "level": "zone",
+   "in": [
+    "Valle del Rapel"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Colchagua",
+     "Cardenal Caro"
+    ]
+   }
+  },
+  {
+   "names": [
+    "San Fernando"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Fernando"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Chimbarongo"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Chimbarongo"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Nancagua"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Nancagua",
+     "Placilla"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Santa Cruz"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Santa Cruz",
+     "Chépica"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Palmilla"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Palmilla"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Peralillo"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Peralillo"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Lolol"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Lolol"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Marchigüe"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Marchigüe"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Litueche"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Litueche"
+    ]
+   }
+  },
+  {
+   "names": [
+    "La Estrella"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "La Estrella"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Paredones"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Paredones"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Pumanque"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "communes": [
+     "Pumanque"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Los Lingues"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "locality": "Los Lingues, San Fernando"
+   }
+  },
+  {
+   "names": [
+    "Apalta"
+   ],
+   "level": "area",
+   "in": [
+    "Valle de Colchagua"
+   ],
+   "definedBy": {
+    "locality": "Apalta, Santa Cruz"
+   }
+  },
+  {
+   "names": [
+    "Valle de Curicó"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región del Valle Central"
+   ],
+   "definedBy": {
+    "communes": [
+     "Río Claro"
+    ],
+    "provinces": [
+     "Curicó"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Teno"
+   ],
+   "level": "zone",
+   "in": [
+    "Valle de Curicó"
+   ],
+   "definedBy": {
+    "communes": [
+     "Teno",
+     "Romeral",
+     "Rauco",
+     "Hualañé",
+     "Vichuquén"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Rauco"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Teno"
+   ],
+   "definedBy": {
+    "communes": [
+     "Rauco",
+     "Hualañé"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Romeral"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Teno"
+   ],
+   "definedBy": {
+    "communes": [
+     "Romeral",
+     "Teno"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Vichuquén"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Teno"
+   ],
+   "definedBy": {
+    "communes": [
+     "Vichuquén"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Licantén"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Teno"
+   ],
+   "definedBy": {
+    "communes": [
+     "Licantén"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Lontué"
+   ],
+   "level": "zone",
+   "in": [
+    "Valle de Curicó"
+   ],
+   "definedBy": {
+    "communes": [
+     "Curicó",
+     "Molina",
+     "Sagrada Familia",
+     "Río Claro"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Molina"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Lontué"
+   ],
+   "definedBy": {
+    "communes": [
+     "Molina",
+     "Río Claro",
+     "Curicó"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Sagrada Familia"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Lontué"
+   ],
+   "definedBy": {
+    "communes": [
+     "Sagrada Familia"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Maule"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región del Valle Central"
+   ],
+   "definedBy": {
+    "communes": [
+     "Cauquenes"
+    ],
+    "provinces": [
+     "Talca",
+     "Linares"
+    ],
+    "except": [
+     "Río Claro"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Claro"
+   ],
+   "level": "zone",
+   "in": [
+    "Valle del Maule"
+   ],
+   "definedBy": {
+    "communes": [
+     "Talca",
+     "San Clemente",
+     "Pencahue",
+     "Maule",
+     "Pelarco",
+     "San Rafael",
+     "Empedrado",
+     "Curepto"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Talca"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Claro"
+   ],
+   "definedBy": {
+    "communes": [
+     "Talca",
+     "Maule",
+     "Pelarco"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Pencahue"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Claro"
+   ],
+   "definedBy": {
+    "communes": [
+     "Pencahue"
+    ]
+   }
+  },
+  {
+   "names": [
+    "San Clemente"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Claro"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Clemente"
+    ]
+   }
+  },
+  {
+   "names": [
+    "San Rafael"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Claro"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Rafael"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Empedrado"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Claro"
+   ],
+   "definedBy": {
+    "communes": [
+     "Empedrado"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Curepto"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Claro"
+   ],
+   "definedBy": {
+    "communes": [
+     "Curepto"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Loncomilla"
+   ],
+   "level": "zone",
+   "in": [
+    "Valle del Maule"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Javier",
+     "Villa Alegre",
+     "Retiro",
+     "Parral",
+     "Linares",
+     "Yerbas Buenas",
+     "Colbún",
+     "Longaví"
+    ]
+   }
+  },
+  {
+   "names": [
+    "San Javier"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Loncomilla"
+   ],
+   "definedBy": {
+    "communes": [
+     "San Javier"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Villa Alegre"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Loncomilla"
+   ],
+   "definedBy": {
+    "communes": [
+     "Villa Alegre"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Parral"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Loncomilla"
+   ],
+   "definedBy": {
+    "communes": [
+     "Parral"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Linares"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Loncomilla"
+   ],
+   "definedBy": {
+    "communes": [
+     "Linares",
+     "Yerbas Buenas"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Colbún"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Loncomilla"
+   ],
+   "definedBy": {
+    "communes": [
+     "Colbún"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Longaví"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Loncomilla"
+   ],
+   "definedBy": {
+    "communes": [
+     "Longaví"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Retiro"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Loncomilla"
+   ],
+   "definedBy": {
+    "communes": [
+     "Retiro"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Tutuvén"
+   ],
+   "level": "zone",
+   "in": [
+    "Valle del Maule"
+   ],
+   "definedBy": {
+    "communes": [
+     "Cauquenes"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Cauquenes"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Tutuvén"
+   ],
+   "definedBy": {
+    "communes": [
+     "Cauquenes"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Región del Sur"
+   ],
+   "level": "region",
+   "in": [],
+   "adminRegions": [
+    "Ñuble",
+    "Biobío",
+    "Araucanía"
+   ]
+  },
+  {
+   "names": [
+    "Valle del Itata"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región del Sur"
+   ],
+   "definedBy": {
+    "communes": [
+     "Chillán",
+     "Coelemu",
+     "Ránquil",
+     "Quillón",
+     "Portezuelo",
+     "Ninhue",
+     "Treguaco",
+     "Quirihue",
+     "San Nicolás",
+     "Bulnes",
+     "San Carlos",
+     "Florida"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Chillán"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Itata"
+   ],
+   "definedBy": {
+    "communes": [
+     "Chillán",
+     "Bulnes",
+     "San Carlos",
+     "Chillán Viejo",
+     "Ñiquén"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Quillón"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Itata"
+   ],
+   "definedBy": {
+    "communes": [
+     "Quillón",
+     "Ránquil",
+     "Florida"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Portezuelo"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Itata"
+   ],
+   "definedBy": {
+    "communes": [
+     "Portezuelo",
+     "Ninhue",
+     "Quirihue",
+     "San Nicolás"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Coelemu"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Itata"
+   ],
+   "definedBy": {
+    "communes": [
+     "Coelemu",
+     "Treguaco"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Biobío",
+    "Valle del Bío Bío"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región del Sur"
+   ],
+   "definedBy": {
+    "communes": [
+     "Yumbel",
+     "Nacimiento",
+     "Mulchén",
+     "Negrete",
+     "Laja"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Yumbel"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Biobío"
+   ],
+   "definedBy": {
+    "communes": [
+     "Yumbel",
+     "Laja"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Mulchén"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Biobío"
+   ],
+   "definedBy": {
+    "communes": [
+     "Mulchén",
+     "Nacimiento",
+     "Negrete"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle del Malleco"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región del Sur"
+   ],
+   "definedBy": {
+    "communes": [
+     "Angol",
+     "Collipulli",
+     "Ercilla",
+     "Los Sauces",
+     "Lumaco",
+     "Purén",
+     "Renaico",
+     "Traiguén",
+     "Victoria"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Traiguén"
+   ],
+   "level": "area",
+   "in": [
+    "Valle del Malleco"
+   ],
+   "definedBy": {
+    "communes": [
+     "Traiguén"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Región Austral"
+   ],
+   "level": "region",
+   "in": [],
+   "adminRegions": [
+    "Araucanía",
+    "Los Lagos",
+    "Los Ríos"
+   ]
+  },
+  {
+   "names": [
+    "Valle del Cautín"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región Austral"
+   ],
+   "definedBy": {
+    "communes": [
+     "Perquenco",
+     "Galvarino"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Valle de Osorno"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región Austral"
+   ],
+   "definedBy": {
+    "communes": [
+     "Osorno",
+     "San Pablo",
+     "Purranque",
+     "La Unión",
+     "Futrono"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Chiloé"
+   ],
+   "level": "subregion",
+   "in": [
+    "Región Austral"
+   ],
+   "definedBy": {
+    "provinces": [
+     "Chiloé"
+    ]
+   }
+  },
+  {
+   "names": [
+    "Rapa Nui - Isla de Pascua",
+    "Rapa Nui",
+    "Isla de Pascua"
+   ],
+   "level": "area",
+   "in": [],
+   "definedBy": {
+    "communes": [
+     "Isla de Pascua"
+    ]
+   }
+  }
+ ]
+}

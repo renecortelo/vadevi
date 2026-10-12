@@ -5,8 +5,8 @@ import { dirname, resolve } from "node:path";
  * The library's maps: simplified outlines small enough to ship with the app,
  * so a region or a grape's origin is shown on a map without asking a tile
  * server for anything — one sheet for Europe and its neighbours
- * (`apps/web/src/library/europe-map.json`), one each for the Americas
- * (`america-map.json`), Oceania (`oceania-map.json`) and southern Africa
+ * (`apps/web/src/library/europe-map.json`), one each for North America
+ * (`america-map.json`), South America (`south-america-map.json`), Oceania (`oceania-map.json`) and southern Africa
  * (`africa-map.json`), each in its own frame. Natural Earth's 1:50m
  * countries, public domain; download `ne_50m_admin_0_countries.geojson` into
  * `.kb-cache/map/` first.
@@ -169,6 +169,8 @@ buildSheet("europe-map.json", { latMax: 72, latMin: 26.5, lonMax: 45, lonMin: -3
 // The Americas' wine countries so far: the United States from Hawaii to
 // Maine, with Canada and Mexico around it for bearings.
 buildSheet("america-map.json", { latMax: 62, latMin: 15, lonMax: -52, lonMin: -162 }, 38);
+// South America: Chile and Argentina, with their neighbours.
+buildSheet("south-america-map.json", { latMax: -15, latMin: -56, lonMax: -34, lonMin: -82 }, -35);
 // Oceania: New Zealand, with Australia beside it.
 buildSheet("oceania-map.json", { latMax: -9, latMin: -48, lonMax: 179.5, lonMin: 112 }, -36);
 // Southern Africa: South Africa and its neighbours.

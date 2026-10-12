@@ -169,6 +169,7 @@
     "registerTitleNz": "Au registre des indications géographiques de la Nouvelle-Zélande",
     "registerTitleZa": "Dans le système Wine of Origin d'Afrique du Sud",
     "registerTitleAu": "Au registre des IG protégées d'Australie",
+    "registerTitleCl": "Dans le zonage viticole du Chili",
     "registeredOn": "Protégée dans l'UE depuis le {{date}}.",
     "registeredOnUs": "Aire viticole américaine depuis le {{date}}.",
     "registeredOnNz": "Indication géographique enregistrée depuis le {{date}}.",
@@ -178,6 +179,7 @@
     "registerLinkNz": "La voir au registre néo-zélandais (numéro IP {{ref}}, IPONZ)",
     "registerLinkZa": "Voir la liste des aires de production du système (SAWIS)",
     "registerLinkAu": "Voir son entrée au registre de Wine Australia",
+    "registerLinkCl": "Voir le décret 464 de 1994 sur Ley Chile",
     "registerCategories": "Catégories de produits",
     "wineCategory": {
       "1": "Vin",
@@ -238,6 +240,8 @@
     "giShort": "GI",
     "wo": "Wine of Origin (WO)",
     "woShort": "WO",
+    "do": "Appellation d'origine (DO)",
+    "doShort": "DO",
     "woLevel": {
       "overarchingUnit": "Une unité géographique supérieure du système Wine of Origin.",
       "unit": "Une unité géographique du système Wine of Origin.",
@@ -256,6 +260,12 @@
       "region": "Une indication géographique australienne : une région.",
       "subregion": "Une indication géographique australienne : une sous-région."
     },
+    "clLevel": {
+      "region": "Une région viticole du zonage chilien (décret 464).",
+      "subregion": "Une sous-région du zonage viticole chilien (décret 464).",
+      "zone": "Une zone du zonage viticole chilien (décret 464).",
+      "area": "Une aire du zonage viticole chilien (décret 464)."
+    },
     "levelName": {
       "country": "pays",
       "multiStateZone": "zone multi-États",
@@ -268,7 +278,8 @@
       "region": "région",
       "subregion": "sous-région",
       "district": "district",
-      "ward": "ward"
+      "ward": "ward",
+      "area": "aire"
     },
     "photoAlt": "Grappe de {{name}}",
     "photoCredit": "Photo : {{author}} · {{license}}",
