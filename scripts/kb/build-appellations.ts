@@ -13,6 +13,8 @@ import {
   transliterate,
 } from "./appellation-names";
 import { type GrapeEntry, normalize, slug, summaryOf } from "./grape-validation";
+import { regionReadings } from "../../packages/domain/src/region-readings";
+
 import { allowedItem } from "./appellation-exclusions";
 import type { TechnicalFileSummaries } from "./extract-technical-file-links";
 import { registerCategories, registerGrapes } from "./register-facts";
@@ -446,6 +448,7 @@ const clList = (
   existsSync(clPath) ? JSON.parse(readFileSync(clPath, "utf8")) : { records: [], sourceUrl: "" }
 ) as {
   records: {
+    labels: Record<string, string>;
     latitude: number | null;
     level: RegisterLevel;
     longitude: number | null;
@@ -470,7 +473,13 @@ const clEntries: RegionEntry[] = clList.records.map((area) => {
     legalUrl: clList.sourceUrl,
     longitude: area.longitude,
     name: area.names[0]!,
-    names: area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+    names: [
+      ...area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+      // Wikidata's, where they are not the decree's: "Colchagua Valley".
+      ...Object.entries(area.labels)
+        .filter(([, name]) => !area.names.some((own) => matchKey(own) === matchKey(name)))
+        .map(([locale, name]) => ({ locale, name, source: "wikidata" as const })),
+    ],
     pointSource: area.latitude === null ? null : ("area" as const),
     prominence: leads,
     registerLevel: area.level,
@@ -575,7 +584,10 @@ for (const entry of entries) {
 let links = 0;
 for (const grape of grapes) {
   for (const region of grape.regions) {
-    const entry = byName.get(`${region.country}:${normalize(region.name)}`);
+    // "Maipo Valley" as Chile's decree writes it, "Valle del Maipo".
+    const entry = [normalize(region.name), ...regionReadings(normalize(region.name))]
+      .map((form) => byName.get(`${region.country}:${form}`))
+      .find((found) => found !== undefined);
     if (entry === undefined || entry.grapes.some((link) => link.grapeId === grape.id)) continue;
     const evidence = grape.evidence.find(
       (item) => item.field === "regions" && normalize(item.value).includes(normalize(region.name)),

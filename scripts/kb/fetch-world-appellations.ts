@@ -959,7 +959,29 @@ const clItems = await wineArticleItems(new Map(cl.areas.map((area) => [area.name
   "Valle del Elqui": "Elqui Valley (wine region)",
   "Valle del Maule": "Maule Valley",
 });
-await leadLanguages([...new Set(clItems.values())]);
+// And Wikidata's items for Chile's wine regions and designations of origin
+// (Q2140699, Q13439060), matched by their Spanish label to the decree's
+// names: "Valle del Cachapoal (vino)", "Región vitícola de Aconcagua".
+const clQuery = `SELECT ?item ?label WHERE {
+  VALUES ?class { wd:Q2140699 wd:Q13439060 }
+  ?item wdt:P31 ?class; wdt:P17 wd:Q298; rdfs:label ?label . FILTER(LANG(?label) = "es")
+}`;
+const clFound = await wikimedia<{ results: { bindings: Binding[] } }>(
+  `https://query.wikidata.org/sparql?format=json&query=${encodeURIComponent(clQuery)}`,
+);
+const clKeys = new Map<string, string>();
+for (const area of cl.areas) for (const name of area.names) clKeys.set(fold(name), area.names[0]!);
+for (const binding of clFound.results.bindings) {
+  const label = binding
+    .label!.value.replace(/\s*\(vino\)$/, "")
+    .replace(/^Región vitícola (de|del) /, "Región $1 ");
+  const area = clKeys.get(fold(label));
+  if (area !== undefined && !clItems.has(area)) {
+    clItems.set(area, binding.item!.value.split("/").at(-1)!);
+  }
+}
+const clEntities = await fetchEntities([...new Set(clItems.values())]);
+await fetchLeads([...new Set(clItems.values())], clEntities);
 const middleOf = (points: { latitude: number; longitude: number }[]) => {
   const middle = (values: number[]) =>
     [...values].sort((a, b) => a - b)[Math.floor(values.length / 2)]!;
@@ -998,6 +1020,13 @@ const clRecords = cl.areas.map((area) => ({
   level: area.level,
   longitude: clPoints.get(area.names[0]!)?.longitude ?? null,
   names: area.names,
+  // Wikidata's names for it in the library's languages: "Colchagua Valley".
+  labels: Object.fromEntries(
+    Object.entries(clEntities[clItems.get(area.names[0]!) ?? ""]?.labels ?? {}).map(
+      // "Valle del Cachapoal (vino)", "Austral (wine region)": the name alone.
+      ([locale, label]) => [locale, label.value.replace(/\s*\([^)]*\)$/, "")],
+    ),
+  ),
   qid: clItems.get(area.names[0]!) ?? null,
   within: clWithin(area),
 }));

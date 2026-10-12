@@ -7,7 +7,7 @@ import type {
 } from "@vadevi/contracts";
 
 import { suggestedPairingsFor } from "../adapters/grape-pairing";
-import { withoutCountryName } from "./country-terms";
+import { nameForms } from "./region-names";
 import { normalizeWineText } from "./wine-memory";
 
 /**
@@ -401,9 +401,13 @@ export async function searchLibraryRegions(
       .bind(normalized, normalized, country, country, normalized)
       .all<{ country_code: string; gi_type: RegionDesignation; id: string; name: string }>();
   let rows = await find(typed);
-  // A wine's region written with its country: "New Zealand Marlborough".
-  const local = withoutCountryName(typed);
-  if (rows.results.length === 0 && local !== typed) rows = await find(local);
+  // As a wine's region may be written: with its label ("Rioja DOCa"), its
+  // country ("New Zealand Marlborough"), where it is ("Margaret River,
+  // Western Australia"), or in English for a Spanish name ("Maipo Valley").
+  for (const form of nameForms(query).forms) {
+    if (rows.results.length > 0) break;
+    if (form !== typed) rows = await find(form);
+  }
   return rows.results.map((row) => ({
     countryCode: row.country_code,
     giType: row.gi_type,

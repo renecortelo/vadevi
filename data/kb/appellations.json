@@ -273711,14 +273711,24 @@
         "locale": "*",
         "name": "Atacama",
         "source": "register"
+      },
+      {
+        "locale": "es",
+        "name": "Región vitícola de Atacama",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "region",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null
+    "summaries": {
+      "es": {
+        "text": "Atacama es una de las seis regiones vitícolas de Chile oficialmente identificadas como tales según lo dispuesto por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen. Los vinos chilenos con esta denominación de origen deben ser elaborados al menos con un 75% de uvas procedentes de la región.",
+        "url": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      }
+    },
+    "wikidataId": "Q2878060"
   },
   {
     "countryCode": "CL",
@@ -273823,6 +273833,11 @@
         "locale": "*",
         "name": "Valle del Elqui",
         "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Elqui Valley",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",
@@ -274166,6 +274181,11 @@
         "locale": "*",
         "name": "Aconcagua",
         "source": "register"
+      },
+      {
+        "locale": "es",
+        "name": "Región vitícola de Aconcagua",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",
@@ -274761,6 +274781,11 @@
         "locale": "*",
         "name": "Valle Central",
         "source": "register"
+      },
+      {
+        "locale": "es",
+        "name": "Región vitícola del Valle Central",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",
@@ -274797,11 +274822,16 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Maipo es una denominación de origen chilena para vinos procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Maipo_(vino)"
+      }
+    },
+    "wikidataId": "Q6159235",
     "within": [
       "cl-region-del-valle-central"
     ]
@@ -275188,11 +275218,16 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Rapel es una denominación de origen chilena para vinos procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Rapel"
+      }
+    },
+    "wikidataId": "Q5573789",
     "within": [
       "cl-region-del-valle-central"
     ]
@@ -275212,14 +275247,24 @@
         "locale": "*",
         "name": "Valle del Cachapoal",
         "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Cachapoal Valley",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "zone",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Cachapoal es una denominación de origen chilena para vinos procedentes de la zona vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Cachapoal_(vino)"
+      }
+    },
+    "wikidataId": "Q6159201",
     "within": [
       "cl-valle-del-rapel",
       "cl-region-del-valle-central"
@@ -275414,14 +275459,19 @@
         "locale": "*",
         "name": "Valle de Colchagua",
         "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Colchagua Valley",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "zone",
     "registeredOn": null,
     "summaries": {},
-    "wikidataId": null,
+    "wikidataId": "Q6159082",
     "within": [
       "cl-valle-del-rapel",
       "cl-region-del-valle-central"
@@ -276022,11 +276072,16 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "zone",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Lontué es una denominación de origen chilena para vinos procedentes de la zona vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Lontu%C3%A9"
+      }
+    },
+    "wikidataId": "Q6159234",
     "within": [
       "cl-valle-de-curico",
       "cl-region-del-valle-central"
@@ -276105,6 +276160,11 @@
         "locale": "*",
         "name": "Valle del Maule",
         "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Maule Valley",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",
@@ -276627,6 +276687,21 @@
         "locale": "*",
         "name": "Región del Sur",
         "source": "register"
+      },
+      {
+        "locale": "es",
+        "name": "Región vitícola del Sur",
+        "source": "wikidata"
+      },
+      {
+        "locale": "en",
+        "name": "Southern Chile",
+        "source": "wikidata"
+      },
+      {
+        "locale": "nl",
+        "name": "Zuid-Chili",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",
@@ -276663,11 +276738,16 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Itata es una denominación de origen para vinos chilenos procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura nº 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Itata"
+      }
+    },
+    "wikidataId": "Q6159230",
     "within": [
       "cl-region-del-sur"
     ]
@@ -276942,6 +277022,16 @@
         "locale": "*",
         "name": "Región Austral",
         "source": "register"
+      },
+      {
+        "locale": "es",
+        "name": "Región vitícola Austral",
+        "source": "wikidata"
+      },
+      {
+        "locale": "en",
+        "name": "Austral",
+        "source": "wikidata"
       }
     ],
     "pointSource": "area",

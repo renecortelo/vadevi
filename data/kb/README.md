@@ -183,9 +183,15 @@ de Huasco", "Valle del Bio Bio"), are kept as other names. Each is placed at
 the middle of the communes or provinces that define it, as OpenStreetMap
 places them inside the administrative regions the decree names — a region
 at the middle of its subregions — approximately (`pointSource: "area"`).
-Summaries only from the English articles about the area's wine, read by
-hand ("Central Valley (Chilean wine region)", "Maule Valley"); the articles
-titled for the other valleys lead to their province or river.
+Summaries from the English articles about the area's wine, read by hand
+("Central Valley (Chilean wine region)", "Maule Valley") — the articles
+titled for the other valleys lead to their province or river — and from the
+articles of Wikidata's items for Chile's wine regions and designations of
+origin, matched by their Spanish label ("Valle del Cachapoal (vino)"), whose
+labels in other languages ("Colchagua Valley") are kept as other names. The
+decree allows no translation of a name; "Maipo Valley", as export labels
+write it, is read as "Valle del Maipo" when a wine's region or a grape's
+article is linked — a reading, not a name the register gives.
 
 The small map draws a country on its sheet: Europe's, North or South
 America's, Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural

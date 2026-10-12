@@ -1,3 +1,5 @@
+import { regionReadings } from "@vadevi/domain";
+
 import { resolveAppellationCountries } from "./appellation-terms";
 import { producerKey } from "./producer-names";
 import { resolveCountryCodes, withoutCountryName } from "./country-terms";
@@ -25,7 +27,14 @@ import { normalizeWineText } from "./wine-memory";
 
 /** "DO Empordà", "Vino de la Tierra de Castilla": the name without its label. */
 const designationPrefix =
-  /^(denominacion de origen calificada|denominacion de origen|denominacio d origen qualificada|denominacio d origen|vino de la tierra de|vino de la tierra|vi de la terra de|tierra de|d o ca|d o q|d o c|d o|doca|doq|docg|doc|dop|do|aoc|aop|igp|igt|pdo|pgi)\s+/;
+  /^(denominacion de origen calificada|denominacion de origen|denominacio d origen qualificada|denominacio d origen|denominazione di origine controllata e garantita|denominazione di origine controllata|denominacao de origem controlada|denominacao de origem|indicazione geografica tipica|indicacao geografica|vino de la tierra de|vino de la tierra|vi de la terra de|vinho regional|tierra de|wine of origin|appellation d origine controlee|appellation d origine protegee|appellation|d o ca|d o q|d o c|d o|doca|doq|docg|doc|dop|do|aoc|aop|igp|igt|pdo|pgi|ava|wo)\s+/;
+
+/**
+ * "Rioja DOCa", "Chianti Classico DOCG", "Napa Valley AVA", "Appellation
+ * Margaux Contrôlée": the label written after the name.
+ */
+const designationSuffix =
+  /\s+(d o ca|d o c g|d o c|d o|doca|docg|doc|doq|do|dop|igp|igt|aoc|aop|pdo|pgi|ava|gi|wo|controlee|protegee)$/;
 
 /** How many letters carry an accent: "Empordà" has one, "Emporda" none. */
 /** 1 for a name written with a capital first, as a label writes it. */
@@ -38,19 +47,37 @@ function accents(name: string): number {
 }
 
 /**
- * A region's normalized name, then the same without each label in turn, then
- * without the country it names ("New Zealand Marlborough", "Marlborough, New
- * Zealand").
+ * A region's normalized name, then the same without each label in turn —
+ * before it ("DO Empordà") or after it ("Rioja DOCa") — then without the
+ * country it names ("New Zealand Marlborough", "Marlborough, New Zealand"),
+ * then as a register may write it ("Maipo Valley" for "Valle del Maipo").
+ * Written "Margaret River, Western Australia", the place before the comma is
+ * read the same way after all of these: what follows says where it is.
  */
-function nameForms(region: string): string[] {
-  const forms = [normalizeWineText(region)];
-  for (let bare = forms[0]!.replace(designationPrefix, ""); bare !== forms.at(-1);) {
-    forms.push(bare);
-    bare = bare.replace(designationPrefix, "");
-  }
-  const local = withoutCountryName(forms.at(-1)!);
-  if (local !== forms.at(-1)) forms.push(local);
-  return forms.filter((form) => form.length > 0);
+export function nameForms(region: string): { bare: string; forms: string[] } {
+  const forms: string[] = [];
+  const add = (next: string) => {
+    if (next.length > 0 && !forms.includes(next)) forms.push(next);
+  };
+  /** The name read off its labels, before and after it. */
+  const unlabelled = (text: string) => {
+    let form = normalizeWineText(text);
+    add(form);
+    for (const label of [designationPrefix, designationSuffix]) {
+      for (let next = form.replace(label, ""); next !== form; next = form.replace(label, "")) {
+        form = next;
+        add(form);
+      }
+    }
+    const local = withoutCountryName(form);
+    add(local);
+    for (const reading of regionReadings(local)) add(reading);
+    return form;
+  };
+  const bare = unlabelled(region);
+  const [head] = region.split(",");
+  if (head !== undefined && head !== region) unlabelled(head);
+  return { bare, forms };
 }
 
 export type PlaceReading = Readonly<{
@@ -69,7 +96,10 @@ export async function readPlaces(
 ): Promise<Map<string, PlaceReading>> {
   const regioned = wines.flatMap((wine) => {
     const region = wine.region?.trim() ?? "";
-    return region.length === 0 ? [] : [{ ...wine, forms: nameForms(region), region }];
+    if (region.length === 0) return [];
+    const { bare, forms } = nameForms(region);
+    // Labelled when a designation was read off it: "DO Empordà", "Rioja DOCa".
+    return [{ ...wine, bare, forms, labelled: bare !== normalizeWineText(region), region }];
   });
 
   // The register's names, as the library holds them in every language.
@@ -111,9 +141,9 @@ export async function readPlaces(
   // preferring one typed without a label.
   const spellings = new Map<string, Map<string, number>>();
   for (const wine of regioned) {
-    const key = wine.forms.at(-1)!;
+    const key = wine.bare;
     const counts = spellings.get(key) ?? new Map<string, number>();
-    const weight = wine.forms.length === 1 ? 1_000 : 1;
+    const weight = wine.labelled ? 1 : 1_000;
     counts.set(wine.region, (counts.get(wine.region) ?? 0) + weight);
     spellings.set(key, counts);
   }
@@ -133,7 +163,7 @@ export async function readPlaces(
   }
   for (const wine of regioned) {
     const known = wine.forms.map((form) => registered.get(form)).find((entry) => entry?.label);
-    const region = known?.label ?? spellingOf(wine.forms.at(-1)!);
+    const region = known?.label ?? spellingOf(wine.bare);
     let country = wine.countryCode;
     if (country === null) {
       const named = new Set([

@@ -171,6 +171,17 @@ const marlborough = {
   registerRef: "1004",
 };
 
+// Chile's decree writes its valleys in Spanish only.
+const maipo = {
+  ...beyond,
+  countryCode: "CL",
+  giType: "DO" as const,
+  id: "cl-valle-del-maipo",
+  name: "Valle del Maipo",
+  names: [{ locale: "*", name: "Valle del Maipo", source: "register" as const }],
+  registerLevel: "subregion" as const,
+};
+
 beforeAll(async () => {
   await applyD1Migrations(env.DB, env.TEST_MIGRATIONS);
   for (const statement of librarySql([grape], "test", undefined, [
@@ -181,6 +192,7 @@ beforeAll(async () => {
     stellenbosch,
     banghoek,
     marlborough,
+    maipo,
   ])) {
     await env.DB.prepare(statement).run();
   }
@@ -243,6 +255,8 @@ describe("the wine atlas", () => {
     expect(await search("query=New%20Zealand%20Marlborough&country=NZ")).toEqual([
       "nz-marlborough",
     ]);
+    expect(await search("query=Maipo%20Valley&country=CL")).toEqual(["cl-valle-del-maipo"]);
+    expect(await search("query=Rioja%20DOCa&country=ES")).toEqual(["es-rioja"]);
     const missing = await SELF.fetch("https://vadevi.test/api/v1/library/regions/es-nowhere", {
       headers,
     });
@@ -280,6 +294,20 @@ describe("the wine atlas", () => {
     expect(await regionRefOf(env.DB, "New Zealand Marlborough")).toBe("nz-marlborough");
     expect(await regionRefOf(env.DB, "Stellenbosch, South Africa")).toBe("za-stellenbosch");
     expect(await regionRefOf(env.DB, "Western Cape")).toBe("za-western-cape");
+  });
+
+  it("reads a region with its label before or after it, or where it lies after a comma", async () => {
+    expect(await regionRefOf(env.DB, "Rioja DOCa")).toBe("es-rioja");
+    expect(await regionRefOf(env.DB, "D.O.Ca. Rioja")).toBe("es-rioja");
+    expect(await regionRefOf(env.DB, "Wine of Origin Stellenbosch")).toBe("za-stellenbosch");
+    expect(await regionRefOf(env.DB, "Stellenbosch WO")).toBe("za-stellenbosch");
+    expect(await regionRefOf(env.DB, "Stellenbosch, Western Cape")).toBe("za-stellenbosch");
+    expect(await regionRefOf(env.DB, "Marlborough GI")).toBe("nz-marlborough");
+    // As export labels write Chile's valleys.
+    expect(await regionRefOf(env.DB, "Maipo Valley")).toBe("cl-valle-del-maipo");
+    expect(await regionRefOf(env.DB, "D.O. Maipo Valley, Chile")).toBe("cl-valle-del-maipo");
+    // A name the register does not hold stays unlinked.
+    expect(await regionRefOf(env.DB, "Napa Valley")).toBeNull();
   });
 
   it("links a grape card's region to its atlas entry", async () => {

@@ -30,6 +30,11 @@ has the reasons.
 - **Chile**: the 118 denominations of origin of its viticultural zoning
   (Decree 464 of 1994) — regions, subregions, zones and areas, Rapa Nui
   included — on a new map of South America.
+- **Your wines find their names however the label writes them**: with the
+  designation before or after the name ("DO Empordà", "Rioja DOCa", "Napa
+  Valley AVA", "Wine of Origin Stellenbosch"), with the country or where it
+  lies after a comma ("Margaret River, Western Australia"), or in English for
+  a Chilean valley ("Maipo Valley" is Valle del Maipo).
 - **Within and inside**: a name's page lists the names whose area holds it
   and those it holds — a ward's district and region, an AVA's larger AVAs.
 - **Deploying your own**: migration `0033` rebuilds the atlas table so it can
