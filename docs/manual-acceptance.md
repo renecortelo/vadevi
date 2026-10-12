@@ -163,7 +163,7 @@ This is destructive to the Space you name, so do it on a throwaway Space.
 37. [x] With it still active, **Data and privacy** → type its name → schedule
         deletion. The grace period is a month; shorten it for the test with the
         command under "Shortening the grace period" below.
-38. [x] The cron runs every five minutes. After it fires, confirm the Space is
+38. [x] The cron runs every hour, on the hour. After it fires, confirm the Space is
         gone from the switcher, that the wine count for its id is 0 (second
         command below), and that the photo's object is gone from the bucket
         (`npx wrangler r2 object get vadevi-preview-media/<key>` fails).

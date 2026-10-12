@@ -115,7 +115,7 @@ and holds your real identifiers:
     },
   ],
   "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "vadevi-preview-media" }],
-  "triggers": { "crons": ["*/5 * * * *"] },
+  "triggers": { "crons": ["0 * * * *"] },
   "vars": {
     "APP_ENV": "preview",
     "APP_VERSION": "0.1.0",
