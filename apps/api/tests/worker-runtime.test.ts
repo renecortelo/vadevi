@@ -44,7 +44,7 @@ describe("Workers runtime", () => {
       data: {
         service: "vadevi-api",
         status: "ok",
-        version: "0.2.0",
+        version: "0.3.0",
       },
     });
   });
