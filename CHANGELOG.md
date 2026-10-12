@@ -11,8 +11,10 @@ has the reasons.
 - **Every EU name described**: 1,636 of the 1,637 registered names now have a
   summary — from Wikipedia, from the name's single document in the Official
   Journal (in the EU's own translations), or from its technical file in the
-  EU register, translated faithfully and marked as such. Catalan readers are
-  shown the Spanish text where the Journal publishes no Catalan one.
+  EU register, translated faithfully and marked as such. Where the Journal
+  publishes no Catalan, or leaves out another of the app's languages, a
+  faithful translation of its own text fills it, so every described name
+  reads in all eight languages.
 - **American Viticultural Areas**: all 280, from the Code of Federal
   Regulations (27 CFR part 9), each placed inside its official boundary (UC
   Davis AVA project) on a new map of the Americas and linked to its section
@@ -46,11 +48,24 @@ has the reasons.
   Valley AVA", "Wine of Origin Stellenbosch"), with the country or where it
   lies after a comma ("Margaret River, Western Australia"), or in English for
   a Chilean valley ("Maipo Valley" is Valle del Maipo).
+- **Within its country**: a region is read within the wine's own country, so
+  a wine from Argentina recorded as "Victoria" is not linked to the
+  Australian state — and wines saved before a name entered the atlas are
+  linked to it by the scheduled run, once per library build, without
+  changing the wine's version.
+- **A hyphenated name is one place**: "Sainte-Foy-Bordeaux" was also read as
+  "Bordeaux", "Chorey-lès-Beaune" as "Beaune", and a wine recorded as
+  Bordeaux matched neither. Only "Jerez-Xérès-Sherry" lists one place in
+  several languages. Sainte-Foy-Bordeaux, Chorey-lès-Beaune,
+  Savigny-lès-Beaune, Trentino and Oltrepò Pavese metodo classico no longer
+  carry another wine's Wikidata item, and the first three are placed at the
+  commune their register text names.
 - **Within and inside**: a name's page lists the names whose area holds it
   and those it holds — a ward's district and region, an AVA's larger AVAs.
 - **Deploying your own**: migration `0033` rebuilds the atlas table so it can
   hold names outside the EU register, `0034` adds where each lies, and `0035`
   and `0036` admit Australia's and Chile's kinds of area; the deploy's library load fills them.
+  `0037` records which library build last read each wine's region.
 
 ## 0.2.0 — 10 October 2026
 

@@ -72,12 +72,19 @@ Journal publishes it (`pnpm kb:fetch-register-links`, then
 the wine what it is, in the Union's own words. The Journal publishes it in
 every official language, translated by the Union itself, so the summary is
 taken in English, Spanish, French, Italian, German, Dutch and Portuguese as
-published — whole paragraphs, whole sentences, nothing reworded — and Catalan
-readers are shown another language's. It is never put over an article's
-summary, and the page says where it comes from. These texts are © European
-Union, reused under the Commission's reuse notice (Decision 2011/833/EU), and
-`data/kb/register-summaries.json` keeps each with the publication it was read
-from.
+published — whole paragraphs, whole sentences, nothing reworded. It is never
+put over an article's summary, and the page says where it comes from. These
+texts are © European Union, reused under the Commission's reuse notice
+(Decision 2011/833/EU), and `data/kb/register-summaries.json` keeps each with
+the publication it was read from.
+
+The Journal publishes no Catalan, and now and then leaves out another of the
+app's languages. Those are translated by hand from the Journal's own text — the
+Spanish where it has one — faithfully and nothing added
+(`data/kb/journal-translations.json`, by register id, with the text translated
+as `original`), checked like every other translation and marked as such on the
+page. A translation is used only while its original is still the text the
+library shows.
 
 A name protected before 2011 has no single document in the Journal: the
 Union never published or translated it. Its technical file in the register is

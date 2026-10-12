@@ -48,6 +48,11 @@ const files: { entities: Record<string, Translation>; name: string }[] = [
     ).regions,
     name: "atlas",
   },
+  {
+    entities: read<{ regions: Record<string, Translation> }>("data/kb/journal-translations.json")
+      .regions,
+    name: "journal",
+  },
 ];
 
 describe("translation checks", () => {
@@ -149,7 +154,10 @@ describe("translated originals are the texts the library shows", () => {
     for (const [id, entry] of Object.entries(files[0]!.entities)) {
       compare(id, entry, grapes.find((grape) => grape.wikidataId === id)?.summaries);
     }
-    for (const [id, entry] of Object.entries(files[2]!.entities)) {
+    for (const [id, entry] of [
+      ...Object.entries(files[2]!.entities),
+      ...Object.entries(files[3]!.entities),
+    ]) {
       // By the EU register's id, or the library's own beyond it ("us-napa-valley").
       compare(
         id,

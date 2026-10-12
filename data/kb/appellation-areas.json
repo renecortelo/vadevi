@@ -1,6 +1,28 @@
 {
   "about": "Places the register's own texts name for a registered wine name nothing more precise places: the demarcated area of its technical file in eAmbrosia, or of its single document in the Official Journal. Each place is the Wikidata item of the municipality, village or region named, with its coordinates; the build takes their median, approximate. Read by hand.",
   "areas": {
+    "EUGI00000002011": {
+      "places": [
+        {
+          "latitude": 44.84056,
+          "longitude": 0.21722,
+          "name": "Sainte-Foy-la-Grande",
+          "wikidata": "Q320233"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10783"
+    },
+    "EUGI00000002930": {
+      "places": [
+        {
+          "latitude": 47.04806,
+          "longitude": 4.8675,
+          "name": "Chorey-lès-Beaune",
+          "wikidata": "Q16171"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10463"
+    },
     "EUGI00000003027": {
       "places": [
         {
@@ -52,6 +74,17 @@
         }
       ],
       "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/21271"
+    },
+    "EUGI00000003602": {
+      "places": [
+        {
+          "latitude": 47.06361,
+          "longitude": 4.81833,
+          "name": "Savigny-lès-Beaune",
+          "wikidata": "Q16156"
+        }
+      ],
+      "source": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/10845"
     },
     "EUGI00000005124": {
       "places": [

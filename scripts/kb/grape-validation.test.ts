@@ -152,6 +152,8 @@ describe("registered wine names", () => {
       "Sherry",
     ]);
     expect(registerNames("Utiel-Requena")).toEqual(["Utiel-Requena"]);
+    expect(registerNames("Sainte-Foy-Bordeaux")).toEqual(["Sainte-Foy-Bordeaux"]);
+    expect(registerNames("Bourgogne Passe-tout-grains")).toEqual(["Bourgogne Passe-tout-grains"]);
     expect(registerNames("Mura / Murai")).toEqual(["Mura", "Murai"]);
     expect(registerNames("Cava; Cava ")).toEqual(["Cava"]);
     expect(registerCountries("be,nl")).toEqual(["BE", "NL"]);

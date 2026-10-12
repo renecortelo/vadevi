@@ -85,10 +85,17 @@ export const inEuRegister = (entry: RegionEntry): entry is EuRegionEntry =>
   entry.eambrosiaId !== null;
 
 /**
+ * The registered names that list one place in several languages, joined by
+ * hyphens: each word is a name readers use. Every other hyphenated name is one
+ * place — "Sainte-Foy-Bordeaux", "Nuits-Saint-Georges", "Utiel-Requena" — and
+ * its words are not names of it: Sainte-Foy-Bordeaux is not Bordeaux.
+ */
+const severalLanguages = new Set(["Jerez-Xérès-Sherry"]);
+
+/**
  * The names a register entry goes by. Alternatives are written with " / " or
- * ";" ("Mura / Murai"); a name of three or more hyphenated words lists the
- * same place in several languages ("Jerez-Xérès-Sherry"), and each word is a
- * name readers use. Two hyphenated words are one name ("Utiel-Requena").
+ * ";" ("Mura / Murai"); a few names list the same place in several languages
+ * ("Jerez-Xérès-Sherry").
  */
 export function registerNames(protectedName: string): string[] {
   const parts = protectedName
@@ -97,10 +104,8 @@ export function registerNames(protectedName: string): string[] {
     .filter((part) => part.length > 0);
   const names = new Set(parts);
   for (const part of parts) {
-    const words = part.split("-").map((word) => word.trim());
-    if (words.length >= 3 && words.every((word) => word.length >= 3)) {
-      for (const word of words) names.add(word);
-    }
+    if (!severalLanguages.has(part)) continue;
+    for (const word of part.split("-")) names.add(word.trim());
   }
   return [...names];
 }

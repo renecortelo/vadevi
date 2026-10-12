@@ -5,6 +5,7 @@ import { runDueDeletionJobs } from "./repositories/deletion";
 import { runHousekeeping } from "./repositories/housekeeping";
 import { purgeExpiredIdentifications } from "./repositories/identification";
 import { indexPendingNoteEmbeddings } from "./repositories/note-embeddings";
+import { linkWineRegions } from "./repositories/region-linking";
 import type { WorkerBindings } from "./types";
 
 const api = createApi();
@@ -20,6 +21,9 @@ export default {
     await purgeExpiredActionDraftContent(environment.DB, nowIso);
     // An abandoned identification proposal must not linger past its window.
     await purgeExpiredIdentifications(environment.DB, nowIso);
+    // Wines recorded before the library knew their region's name: linked
+    // once it does, a batch at a time.
+    await linkWineRegions(environment.DB);
     // Semantic note search is optional: the port exists only when the index
     // and Workers AI are both configured. A purge tells it which notes go.
     const notePort = createSemanticNotePort(environment);

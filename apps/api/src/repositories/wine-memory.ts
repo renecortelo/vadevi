@@ -455,7 +455,11 @@ export async function createWine(
     grapes.map((grape: WineGrape) => grape.name),
   );
   if (options.request.region !== undefined) {
-    const regionRef = await regionRefOf(database, options.request.region);
+    const regionRef = await regionRefOf(
+      database,
+      options.request.region,
+      options.request.countryCode ?? null,
+    );
     if (regionRef !== null) {
       await database
         .prepare(
@@ -1215,7 +1219,13 @@ export async function updateWine(
     (next.grapes ?? []).map((grape: WineGrape) => grape.name),
   );
   const regionRef =
-    typeof next.region === "string" ? await regionRefOf(database, next.region) : null;
+    typeof next.region === "string"
+      ? await regionRefOf(
+          database,
+          next.region,
+          next.countryCode !== undefined ? next.countryCode : row.country_code,
+        )
+      : null;
 
   await database.batch([
     database

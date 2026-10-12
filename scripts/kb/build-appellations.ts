@@ -908,6 +908,38 @@ for (const entry of entries) {
 }
 console.info(`  ${fromJournal} names described from the Official Journal's single document.`);
 
+// The Journal publishes no Catalan, and now and then leaves out another of
+// the app's languages: a faithful translation of one it does publish fills
+// it, marked as such (`data/kb/journal-translations.json`, by register id) —
+// only while that text is still the one shown.
+const journalTranslations = (
+  JSON.parse(readFileSync(resolve("data/kb/journal-translations.json"), "utf8")) as {
+    regions: Record<
+      string,
+      { from: string; original: string; sourceUrl: string; texts: Record<string, string> }
+    >;
+  }
+).regions;
+let journalTranslated = 0;
+for (const entry of entries) {
+  const translation = journalTranslations[entry.eambrosiaId ?? entry.id];
+  if (translation === undefined) continue;
+  const from = entry.summaries[translation.from === "pt-PT" ? "pt" : translation.from];
+  if (from?.text !== translation.original || from.license !== "EC-reuse-2011-833") continue;
+  for (const [locale, text] of Object.entries(translation.texts)) {
+    const key = locale === "pt-PT" ? "pt" : locale;
+    if (entry.summaries[key] !== undefined) continue;
+    entry.summaries[key] = {
+      license: "EC-reuse-2011-833",
+      text,
+      translated: true,
+      url: translation.sourceUrl,
+    };
+    journalTranslated += 1;
+  }
+}
+console.info(`  ${journalTranslated} summaries translated from the Journal's own text.`);
+
 // A name neither an article nor the Journal describes takes the opening of
 // its link from its technical file in the register, in the language it was
 // filed in (`pnpm kb:extract-technical-file-links`). Its translations into

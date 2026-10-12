@@ -40,6 +40,8 @@ const excluded = [
   "vadevi_implementation_spec.md",
   // The operator's own task list, with the state of their acceptance run.
   "docs/your-desk-todo.md",
+  // The running list of what is left, with notes on the operator's own cellar.
+  "docs/backlog.md",
 ];
 
 /**
