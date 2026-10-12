@@ -1038,3 +1038,158 @@ console.info(
   `  Decree 464: ${clRecords.length} Chilean denominations of origin, ${clItems.size} with an article on their wine, ` +
     `${clPoints.size} placed by the communes or provinces that define them.`,
 );
+
+// 10. Argentina: the geographical indications and controlled denominations
+//     of origin the INV has recognised under Law 25.163, from its list and
+//     the resolutions since (`data/kb/ar-indicaciones-geograficas.json`).
+//     Each is placed where OpenStreetMap has the place or department of its
+//     name in its province — a small one near its department's point — and
+//     approximately.
+type ArArea = {
+  departments?: string[];
+  englishNames?: string[];
+  in: string[];
+  key: string;
+  names: string[];
+  provinces: string[];
+  recognisedOn?: string;
+  resolutions: string[];
+  type: "DOC" | "IG";
+};
+const ar = JSON.parse(
+  readFileSync(resolve("data/kb/ar-indicaciones-geograficas.json"), "utf8"),
+) as { areas: ArArea[]; source: { url: string } };
+const arByKey = new Map(ar.areas.map((area) => [area.key, area]));
+const arWithin = (area: ArArea): string[] => {
+  const found: string[] = [];
+  let level = area.in;
+  while (level.length > 0) {
+    const next: string[] = [];
+    for (const key of level) {
+      if (found.includes(key)) continue;
+      found.push(key);
+      next.push(...(arByKey.get(key)?.in ?? []));
+    }
+    level = next;
+  }
+  return found;
+};
+const arItems = await wineArticleItems(
+  new Map(ar.areas.map((area) => [area.key, [...area.names, ...(area.englishNames ?? [])]])),
+  { mendoza: "Mendoza wine", "valle-de-uco": "Uco Valley" },
+);
+await leadLanguages([...new Set(arItems.values())]);
+/** The name as a place: "Tamberías – Valle de Calingasta" is Tamberías. */
+const arPlaceNames = (area: ArArea) => [
+  ...new Set(
+    area.names.flatMap((name) => {
+      const head = name.split(/\s+[–-]\s+|,\s*/)[0]!.trim();
+      const bare = head.replace(/^(Paraje|Distrito|Valle de|Valle del|Valles del?)\s+/, "");
+      // OpenStreetMap names Mendoza's districts "Distrito Lunlunta".
+      return [name, head, bare, `Distrito ${bare}`];
+    }),
+  ),
+];
+// The largest first: a department's point is there before its places'.
+const arOrder = [...ar.areas].sort((left, right) => arWithin(left).length - arWithin(right).length);
+const arPoints = new Map<string, { latitude: number; longitude: number }>();
+for (const area of arOrder) {
+  if (area.provinces.length !== 1) continue;
+  const province = area.provinces[0]!;
+  const holder = arWithin(area)
+    .map((key) => arPoints.get(key))
+    .find((point) => point !== undefined);
+  const resolutionC32 = area.resolutions[0]?.includes("C.32/2002") === true;
+  // The province's own indication: "Mendoza", "La Rioja Argentina".
+  const isProvince = [province, `${province} Argentina`].some(
+    (name) => fold(name) === fold(area.names[0]!),
+  );
+  const point = isProvince
+    ? await placeOf([province], "ar", [province], null)
+    : resolutionC32 || area.type === "DOC"
+      ? // Named after its department: the department.
+        await placeOf(
+          area.names.flatMap((name) => [`Departamento ${name}`, name]),
+          "ar",
+          [province],
+          null,
+        )
+      : await placeOf(
+          arPlaceNames(area),
+          "ar",
+          [province],
+          area.departments === undefined ? null : (holder ?? null),
+        );
+  if (point !== null) arPoints.set(area.key, point);
+}
+const arRecords = ar.areas.map((area) => ({
+  key: area.key,
+  latitude: arPoints.get(area.key)?.latitude ?? null,
+  longitude: arPoints.get(area.key)?.longitude ?? null,
+  names: area.names,
+  englishNames: area.englishNames ?? [],
+  qid: arItems.get(area.key) ?? null,
+  recognisedOn: area.recognisedOn ?? null,
+  resolutions: area.resolutions,
+  type: area.type,
+  within: arWithin(area),
+}));
+writeFileSync(
+  resolve(cache, "ar.json"),
+  JSON.stringify({ records: arRecords, sourceUrl: ar.source.url }, null, 1),
+);
+console.info(
+  `  INV: ${arRecords.length} Argentine indications, ${arItems.size} with an article on their wine, ` +
+    `${arPoints.size} placed.`,
+);
+
+// 11. The United Kingdom: its own wine names in the UK's register of
+//     protected food and drink names (GOV.UK, Open Government Licence v3.0),
+//     registered ones only; placed where OpenStreetMap has the country,
+//     county or place of the name, approximately.
+type GovUkResult = {
+  date_registration?: string | null;
+  link: string;
+  protection_type?: string;
+  status?: string;
+  title: string;
+};
+const govUk = JSON.parse(
+  await text(
+    "https://www.gov.uk/api/search.json?filter_format=protected_food_drink_name&filter_register=wines" +
+      "&filter_country_of_origin=united-kingdom&count=100" +
+      "&fields=title,link,status,protection_type,date_registration",
+  ),
+) as { results: GovUkResult[] };
+const gbNames = govUk.results
+  .filter((result) => result.status === "registered")
+  .map((result) => ({ ...result, title: result.title.trim() }))
+  .sort((left, right) => left.title.localeCompare(right.title));
+const gbItems = await wineArticleItems(new Map(gbNames.map((name) => [name.title, [name.title]])));
+await leadLanguages([...new Set(gbItems.values())]);
+// What each name is the wine of: "English" is England's, "Welsh Regional"
+// Wales's — the place a point is looked for.
+const gbPlaces: Record<string, string[]> = {
+  English: ["England"],
+  "English Regional": ["England"],
+  Welsh: ["Wales", "Cymru / Wales"],
+  "Welsh Regional": ["Wales", "Cymru / Wales"],
+};
+const gbRecords = [];
+for (const name of gbNames) {
+  const point = await placeOf(gbPlaces[name.title] ?? [name.title], "gb", [], null);
+  gbRecords.push({
+    designation: name.protection_type?.includes("geographical-indication") ? "PGI" : "PDO",
+    latitude: point?.latitude ?? null,
+    longitude: point?.longitude ?? null,
+    name: name.title,
+    qid: gbItems.get(name.title) ?? null,
+    registeredOn: name.date_registration?.slice(0, 10) ?? null,
+    url: `https://www.gov.uk${name.link}`,
+  });
+}
+writeFileSync(resolve(cache, "gb.json"), JSON.stringify(gbRecords, null, 1));
+console.info(
+  `  GOV.UK: ${gbRecords.length} British wine names, ${gbItems.size} with an article on their wine, ` +
+    `${gbRecords.filter((record) => record.latitude !== null).length} placed.`,
+);

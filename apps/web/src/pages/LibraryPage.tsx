@@ -15,6 +15,7 @@ const tabs: Tab[] = ["grapes", "regions", "topics"];
 
 /** The countries the atlas has registered names for. */
 const atlasCountries = [
+  "AR",
   "AT",
   "AU",
   "BE",
@@ -26,6 +27,7 @@ const atlasCountries = [
   "DK",
   "ES",
   "FR",
+  "GB",
   "GR",
   "HR",
   "HU",
@@ -52,7 +54,9 @@ const designationsOf = (country: string): RegionDesignation[] =>
         ? ["WO"]
         : country === "CL"
           ? ["DO"]
-          : ["PDO", "PGI"];
+          : country === "AR"
+            ? ["IG", "DOC"]
+            : ["PDO", "PGI"];
 
 /** Where a reader of each language most likely starts looking. */
 const homeCountry: Record<string, string> = {

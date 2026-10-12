@@ -1,0 +1,2151 @@
+{
+ "source": {
+  "title": "Indicaciones geográficas y denominaciones de origen reconocidas y protegidas de la República Argentina",
+  "publisher": "Instituto Nacional de Vitivinicultura (INV)",
+  "url": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+  "page": "https://www.argentina.gob.ar/inv/proteccion-del-origen",
+  "issued": "2022-04",
+  "later": "https://www.argentina.gob.ar/normativa/nacional/norma-60510/normas-modifican",
+  "note": "Transcribed by hand from the INV's list (revised April 2022): each name as the list writes it, its kind (I.G. or D.O.C.), its department and province, the resolutions that recognised it, and the English names the list gives (\"Uco Valley\"). Then the names recognised after it, each from its own resolution in the Boletín Oficial, as argentina.gob.ar lists the norms complementing Law 25.163, with that resolution's publication date. Resolution C.32/2002 (14 November 2002) recognised the areas of its Annex I, each under its province's indication; C.37/2002 (16 December 2002) the regional ones. A name lies in its province's indication (C.32/2002's Annex, or its resolution's province), in the one named after the department the list or its resolution places it in, and in the regions the list says comprise it: Cuyo the provinces of Mendoza, San Juan and La Rioja; Valle de Uco the departments of San Carlos, Tunuyán and Tupungato. recognisedOn is the date of the resolution (C.32/2002, C.37/2002) or of its publication (later ones), where known."
+ },
+ "areas": [
+  {
+   "key": "25-de-mayo",
+   "names": [
+    "25 de Mayo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "9-de-julio",
+   "names": [
+    "9 de Julio"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "agrelo",
+   "names": [
+    "Agrelo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Luján de Cuyo"
+   ],
+   "in": [
+    "lujan-de-cuyo-mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.21/2005"
+   ]
+  },
+  {
+   "key": "albardon",
+   "names": [
+    "Albardón"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "alto-valle-de-rio-negro",
+   "names": [
+    "Alto valle de Río Negro"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Río Negro"
+   ],
+   "in": [
+    "rio-negro"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.37/2002"
+   ],
+   "recognisedOn": "2002-12-16"
+  },
+  {
+   "key": "angaco",
+   "names": [
+    "Angaco"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "anelo",
+   "names": [
+    "Añelo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Neuquén"
+   ],
+   "in": [
+    "neuquen"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "arauco",
+   "names": [
+    "Arauco"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "avellaneda",
+   "names": [
+    "Avellaneda"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Río Negro"
+   ],
+   "in": [
+    "rio-negro"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "barrancas",
+   "names": [
+    "Barrancas"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Maipú"
+   ],
+   "in": [
+    "maipu"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.22/2005"
+   ]
+  },
+  {
+   "key": "barreal",
+   "names": [
+    "Barreal"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "departments": [
+    "Calingasta"
+   ],
+   "in": [
+    "calingasta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.42/2013"
+   ]
+  },
+  {
+   "key": "belen",
+   "names": [
+    "Belén"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Catamarca"
+   ],
+   "in": [
+    "catamarca"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "cachi",
+   "names": [
+    "Cachi"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Salta"
+   ],
+   "in": [
+    "salta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "valle-de-cafayate",
+   "names": [
+    "Valle de Cafayate",
+    "Cafayate"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Salta"
+   ],
+   "in": [
+    "salta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002",
+    "Resolución INV Nº C.15/04",
+    "Disposición INV Nº 08/2005"
+   ],
+   "recognisedOn": "2002-11-14",
+   "note": "Only the expression \"Valle de Cafayate\" may be used, Cafayate being a registered trademark in Argentina (Disposición INV Nº 08/2005)."
+  },
+  {
+   "key": "calingasta",
+   "names": [
+    "Calingasta",
+    "Valle de Calingasta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002",
+    "Resolución INV Nº C.41/2013"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "canota",
+   "names": [
+    "Canota",
+    "Valle de Canota"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Las Heras"
+   ],
+   "in": [
+    "las-heras"
+   ],
+   "resolutions": [
+    "RESOL-2020-19-APN-INV#MAGYP"
+   ],
+   "recognisedOn": "2020-05-22"
+  },
+  {
+   "key": "castro-barros",
+   "names": [
+    "Castro Barros"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "catamarca",
+   "names": [
+    "Catamarca"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Catamarca"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "caucete",
+   "names": [
+    "Caucete"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "chapadmalal",
+   "names": [
+    "Chapadmalal"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Buenos Aires"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.20/2014"
+   ]
+  },
+  {
+   "key": "chilecito",
+   "names": [
+    "Chilecito"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "chimbas",
+   "names": [
+    "Chimbas"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "colon",
+   "names": [
+    "Colón"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Córdoba"
+   ],
+   "in": [
+    "cordoba-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "colonia-caroya",
+   "names": [
+    "Colonia Caroya"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Córdoba"
+   ],
+   "departments": [
+    "Colón"
+   ],
+   "in": [
+    "colon"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.36/2004"
+   ]
+  },
+  {
+   "key": "confluencia",
+   "names": [
+    "Confluencia"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Neuquén"
+   ],
+   "in": [
+    "neuquen"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "cordoba-argentina",
+   "names": [
+    "Córdoba Argentina"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Córdoba"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "cruz-del-eje",
+   "names": [
+    "Cruz del Eje"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Córdoba"
+   ],
+   "in": [
+    "cordoba-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "cuyo",
+   "names": [
+    "Cuyo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza",
+    "San Juan",
+    "La Rioja"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.37/2002"
+   ],
+   "recognisedOn": "2002-12-16"
+  },
+  {
+   "key": "distrito-medrano",
+   "names": [
+    "Distrito Medrano"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Rivadavia",
+    "Junín"
+   ],
+   "in": [
+    "rivadavia-mendoza",
+    "junin"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.29/2014"
+   ]
+  },
+  {
+   "key": "el-paraiso",
+   "names": [
+    "El Paraíso"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Maipú"
+   ],
+   "in": [
+    "maipu"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.28/2007"
+   ]
+  },
+  {
+   "key": "famatina",
+   "names": [
+    "Famatina"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "felipe-varela",
+   "names": [
+    "Felipe Varela"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "general-alvear",
+   "names": [
+    "General Alvear"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "general-conesa",
+   "names": [
+    "General Conesa"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Río Negro"
+   ],
+   "in": [
+    "rio-negro"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "general-lamadrid",
+   "names": [
+    "General Lamadrid"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "general-roca",
+   "names": [
+    "General Roca"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Río Negro"
+   ],
+   "in": [
+    "rio-negro"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "godoy-cruz",
+   "names": [
+    "Godoy Cruz"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "guaymallen",
+   "names": [
+    "Guaymallén"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "iglesia",
+   "names": [
+    "Iglesia"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "jachal",
+   "names": [
+    "Jáchal"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "jujuy",
+   "names": [
+    "Jujuy"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Jujuy"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "junin",
+   "names": [
+    "Junín"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "la-consulta",
+   "names": [
+    "La Consulta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "San Carlos"
+   ],
+   "in": [
+    "san-carlos-mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.19/2014"
+   ]
+  },
+  {
+   "key": "la-paz",
+   "names": [
+    "La Paz"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "la-rioja-argentina",
+   "names": [
+    "La Rioja Argentina"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "cuyo"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "las-compuertas",
+   "names": [
+    "Las Compuertas"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Luján de Cuyo"
+   ],
+   "in": [
+    "lujan-de-cuyo-mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.30/2007"
+   ]
+  },
+  {
+   "key": "las-heras",
+   "names": [
+    "Las Heras"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "lavalle",
+   "names": [
+    "Lavalle",
+    "Desierto de Lavalle"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002",
+    "Resolución INV Nº C.06/09"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "los-chacayes",
+   "names": [
+    "Los Chacayes"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Tunuyán"
+   ],
+   "in": [
+    "tunuyan"
+   ],
+   "resolutions": [
+    "RESOL-2017-249-APN-INV#MA"
+   ],
+   "recognisedOn": "2017-11-03"
+  },
+  {
+   "key": "lujan-de-cuyo-mendoza",
+   "names": [
+    "Luján de Cuyo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "lujan-de-cuyo-doc",
+   "names": [
+    "Luján de Cuyo"
+   ],
+   "type": "DOC",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.15/2005"
+   ]
+  },
+  {
+   "key": "lunlunta",
+   "names": [
+    "Lunlunta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Maipú"
+   ],
+   "in": [
+    "maipu"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.04/2005"
+   ]
+  },
+  {
+   "key": "maipu",
+   "names": [
+    "Maipú"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "mendoza",
+   "names": [
+    "Mendoza"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "cuyo"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "molinos",
+   "names": [
+    "Molinos"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Salta"
+   ],
+   "in": [
+    "salta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "neuquen",
+   "names": [
+    "Neuquén"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Neuquén"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "pampa-el-cepillo",
+   "names": [
+    "Pampa el Cepillo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "San Carlos"
+   ],
+   "in": [
+    "san-carlos-mendoza"
+   ],
+   "resolutions": [
+    "RESOL-2019-1-APN-INV#MAGYP"
+   ],
+   "recognisedOn": "2019-09-17"
+  },
+  {
+   "key": "paraje-altamira",
+   "names": [
+    "Paraje Altamira"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "San Carlos"
+   ],
+   "in": [
+    "san-carlos-mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.44/2013"
+   ]
+  },
+  {
+   "key": "patagonia",
+   "names": [
+    "Patagonia",
+    "Patagonia Argentina"
+   ],
+   "type": "IG",
+   "provinces": [],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.37/2002",
+    "Resolución INV Nº 10/2009",
+    "RESOL-2022-1-APN-INV#MAGYP"
+   ],
+   "recognisedOn": "2002-12-16"
+  },
+  {
+   "key": "pichimahuida",
+   "names": [
+    "Pichimahuida"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Río Negro"
+   ],
+   "in": [
+    "rio-negro"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "pocito",
+   "names": [
+    "Pocito"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "poman",
+   "names": [
+    "Pomán"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Catamarca"
+   ],
+   "in": [
+    "catamarca"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "pozo-de-los-algarrobos",
+   "names": [
+    "Pozo de los Algarrobos"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "departments": [
+    "Caucete"
+   ],
+   "in": [
+    "caucete"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.33/2015"
+   ]
+  },
+  {
+   "key": "quebrada-de-humahuaca",
+   "names": [
+    "Quebrada de Humahuaca"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Jujuy"
+   ],
+   "in": [
+    "jujuy"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.39/2015"
+   ]
+  },
+  {
+   "key": "rawson",
+   "names": [
+    "Rawson"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "reduccion",
+   "names": [
+    "Reducción"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Rivadavia"
+   ],
+   "in": [
+    "rivadavia-mendoza"
+   ],
+   "resolutions": [
+    "RESOL-2020-34-APN-INV#MAGYP"
+   ],
+   "recognisedOn": "2020-12-31"
+  },
+  {
+   "key": "rio-negro",
+   "names": [
+    "Río Negro"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Río Negro"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "rivadavia-mendoza",
+   "names": [
+    "Rivadavia"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "rivadavia-san-juan",
+   "names": [
+    "Rivadavia"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "russel",
+   "names": [
+    "Russel"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Maipú"
+   ],
+   "in": [
+    "maipu"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.05/2005"
+   ]
+  },
+  {
+   "key": "salta",
+   "names": [
+    "Salta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Salta"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-blas-de-los-sauces",
+   "names": [
+    "San Blas de los Sauces"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-carlos-mendoza",
+   "names": [
+    "San Carlos"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "valle-de-uco"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-carlos-salta",
+   "names": [
+    "San Carlos"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Salta"
+   ],
+   "in": [
+    "salta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-javier",
+   "names": [
+    "San Javier"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Córdoba"
+   ],
+   "in": [
+    "cordoba-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-juan",
+   "names": [
+    "San Juan"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "cuyo"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-luis",
+   "names": [
+    "San Luis"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Luis"
+   ],
+   "in": [],
+   "resolutions": [
+    "RESOL-2019-10-APN-INV#MPYT"
+   ],
+   "recognisedOn": "2019-04-04"
+  },
+  {
+   "key": "san-martin-mendoza",
+   "names": [
+    "San Martín"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-martin-san-juan",
+   "names": [
+    "San Martín"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-rafael-mendoza",
+   "names": [
+    "San Rafael"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "san-rafael-doc",
+   "names": [
+    "San Rafael"
+   ],
+   "type": "DOC",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.31/2007"
+   ]
+  },
+  {
+   "key": "san-pablo",
+   "names": [
+    "San Pablo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Tunuyán"
+   ],
+   "in": [
+    "tunuyan"
+   ],
+   "resolutions": [
+    "RESOL-2019-10-APN-INV#MAGYP"
+   ],
+   "recognisedOn": "2019-09-26"
+  },
+  {
+   "key": "sanagasta",
+   "names": [
+    "Sanagasta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "santa-lucia",
+   "names": [
+    "Santa Lucía"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "santa-maria",
+   "names": [
+    "Santa María"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Catamarca"
+   ],
+   "in": [
+    "catamarca"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "santa-rosa",
+   "names": [
+    "Santa Rosa"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "sarmiento-san-juan",
+   "names": [
+    "Sarmiento"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "tafi",
+   "names": [
+    "Tafí"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Tucumán"
+   ],
+   "in": [
+    "tucuman"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "tinogasta",
+   "names": [
+    "Tinogasta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Catamarca"
+   ],
+   "in": [
+    "catamarca"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "trevelin",
+   "names": [
+    "Trevelin"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Chubut"
+   ],
+   "departments": [
+    "Futaleufú"
+   ],
+   "in": [],
+   "resolutions": [
+    "RESOL-2020-28-APN-INV#MAGYP"
+   ],
+   "recognisedOn": "2020-08-06"
+  },
+  {
+   "key": "tucuman",
+   "names": [
+    "Tucumán"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Tucumán"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "tunuyan",
+   "names": [
+    "Tunuyán"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "valle-de-uco"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "tupungato",
+   "names": [
+    "Tupungato",
+    "Valle de Tupungato"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "in": [
+    "valle-de-uco"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002",
+    "Resolución INV Nº C.20/2006"
+   ],
+   "recognisedOn": "2002-11-14",
+   "englishNames": [
+    "Tupungato Valley"
+   ]
+  },
+  {
+   "key": "ullum",
+   "names": [
+    "Ullum"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "valle-de-chanarmuyo",
+   "names": [
+    "Valle de Chañarmuyo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "departments": [
+    "Famatina"
+   ],
+   "in": [
+    "famatina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.28/2014"
+   ]
+  },
+  {
+   "key": "valle-de-uco",
+   "names": [
+    "Valle de Uco"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "San Carlos",
+    "Tunuyán",
+    "Tupungato"
+   ],
+   "in": [
+    "mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.37/2002"
+   ],
+   "recognisedOn": "2002-12-16",
+   "englishNames": [
+    "Uco Valley"
+   ]
+  },
+  {
+   "key": "valle-del-pedernal",
+   "names": [
+    "Valle del Pedernal"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "departments": [
+    "Sarmiento"
+   ],
+   "in": [
+    "sarmiento-san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.21/2007"
+   ]
+  },
+  {
+   "key": "valle-del-tulum",
+   "names": [
+    "Valle del Tulum"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14",
+   "englishNames": [
+    "Tulum Valley"
+   ]
+  },
+  {
+   "key": "valle-fertil",
+   "names": [
+    "Valle Fértil"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "valle-de-zonda",
+   "names": [
+    "Valle de Zonda"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "departments": [
+    "Zonda"
+   ],
+   "in": [
+    "zonda"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.04/2015"
+   ]
+  },
+  {
+   "key": "valles-calchaquies",
+   "names": [
+    "Valles Calchaquíes",
+    "Valle Calchaquí"
+   ],
+   "type": "IG",
+   "provinces": [],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.37/2002",
+    "Resolución INV Nº C.16/2010"
+   ],
+   "recognisedOn": "2002-12-16",
+   "englishNames": [
+    "Calchaquíes Valleys"
+   ]
+  },
+  {
+   "key": "valles-del-famatina",
+   "names": [
+    "Valles del Famatina"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.29/2004"
+   ],
+   "englishNames": [
+    "Famatina Valleys"
+   ]
+  },
+  {
+   "key": "victoria-entre-rios",
+   "names": [
+    "Victoria, Entre Ríos"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Entre Ríos"
+   ],
+   "departments": [
+    "Victoria"
+   ],
+   "in": [],
+   "resolutions": [
+    "RESOL-2021-5-APN-INV#MAGYP"
+   ],
+   "recognisedOn": "2021-05-04"
+  },
+  {
+   "key": "vinchina",
+   "names": [
+    "Vinchina"
+   ],
+   "type": "IG",
+   "provinces": [
+    "La Rioja"
+   ],
+   "in": [
+    "la-rioja-argentina"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "villa-ventana",
+   "names": [
+    "Villa Ventana"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Buenos Aires"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº C.46/2011"
+   ]
+  },
+  {
+   "key": "vista-flores",
+   "names": [
+    "Vista Flores"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Tunuyán"
+   ],
+   "in": [
+    "tunuyan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.11/2012"
+   ]
+  },
+  {
+   "key": "zonda",
+   "names": [
+    "Zonda"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "in": [
+    "san-juan"
+   ],
+   "resolutions": [
+    "Resolución INV Nº C.32/2002"
+   ],
+   "recognisedOn": "2002-11-14"
+  },
+  {
+   "key": "balcarce",
+   "names": [
+    "Balcarce"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Buenos Aires"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº 11/2022"
+   ],
+   "recognisedOn": "2022-07-01"
+  },
+  {
+   "key": "vistalba",
+   "names": [
+    "Vistalba"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Luján de Cuyo"
+   ],
+   "in": [
+    "lujan-de-cuyo-mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 12/2022"
+   ],
+   "recognisedOn": "2022-08-26"
+  },
+  {
+   "key": "cordon-el-cepillo",
+   "names": [
+    "Cordón El Cepillo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "San Carlos"
+   ],
+   "in": [
+    "san-carlos-mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 7/2022"
+   ],
+   "recognisedOn": "2022-12-26"
+  },
+  {
+   "key": "el-peral",
+   "names": [
+    "El Peral"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Tupungato"
+   ],
+   "in": [
+    "tupungato"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 1/2022"
+   ],
+   "recognisedOn": "2023-01-25"
+  },
+  {
+   "key": "sarmiento-chubut",
+   "names": [
+    "Sarmiento"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Chubut"
+   ],
+   "departments": [
+    "Sarmiento"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº 9/2023"
+   ],
+   "recognisedOn": "2023-05-29"
+  },
+  {
+   "key": "el-hoyo",
+   "names": [
+    "El Hoyo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Chubut"
+   ],
+   "departments": [
+    "Cushamen"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº 25/2023"
+   ],
+   "recognisedOn": "2023-09-11"
+  },
+  {
+   "key": "tamberias-valle-de-calingasta",
+   "names": [
+    "Tamberías – Valle de Calingasta",
+    "Paraje Tamberías - Valle de Calingasta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "departments": [
+    "Calingasta"
+   ],
+   "in": [
+    "calingasta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 35/2023"
+   ],
+   "recognisedOn": "2024-02-06"
+  },
+  {
+   "key": "sorocayense",
+   "names": [
+    "Sorocayense",
+    "Paraje Sorocayense"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "departments": [
+    "Calingasta"
+   ],
+   "in": [
+    "calingasta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 36/2023"
+   ],
+   "recognisedOn": "2024-02-06"
+  },
+  {
+   "key": "hilario-valle-de-calingasta",
+   "names": [
+    "Hilario – Valle de Calingasta",
+    "Paraje Hilario - Valle de Calingasta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "departments": [
+    "Calingasta"
+   ],
+   "in": [
+    "calingasta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 37/2023"
+   ],
+   "recognisedOn": "2024-02-06"
+  },
+  {
+   "key": "la-cienaga-zonda",
+   "names": [
+    "La Ciénaga – Zonda"
+   ],
+   "type": "IG",
+   "provinces": [
+    "San Juan"
+   ],
+   "departments": [
+    "Zonda"
+   ],
+   "in": [
+    "zonda"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 8/2024"
+   ],
+   "recognisedOn": "2024-05-07"
+  },
+  {
+   "key": "tandil",
+   "names": [
+    "Tandil"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Buenos Aires"
+   ],
+   "in": [],
+   "resolutions": [
+    "Resolución INV Nº 24/2024"
+   ],
+   "recognisedOn": "2024-07-17"
+  },
+  {
+   "key": "valle-de-pucara-salta",
+   "names": [
+    "Valle de Pucará – Salta"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Salta"
+   ],
+   "departments": [
+    "San Carlos"
+   ],
+   "in": [
+    "san-carlos-salta"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 8/2025"
+   ],
+   "recognisedOn": "2025-03-14"
+  },
+  {
+   "key": "alto-agrelo",
+   "names": [
+    "Alto Agrelo"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Mendoza"
+   ],
+   "departments": [
+    "Luján de Cuyo"
+   ],
+   "in": [
+    "lujan-de-cuyo-mendoza"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 27/2025"
+   ],
+   "recognisedOn": "2025-07-23"
+  },
+  {
+   "key": "valles-templados",
+   "names": [
+    "Valles Templados"
+   ],
+   "type": "IG",
+   "provinces": [
+    "Jujuy"
+   ],
+   "in": [
+    "jujuy"
+   ],
+   "resolutions": [
+    "Resolución INV Nº 28/2025"
+   ],
+   "recognisedOn": "2025-09-02"
+  }
+ ]
+}

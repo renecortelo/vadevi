@@ -277166,6 +277166,3616 @@
     "wikidataId": null
   },
   {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-25-de-mayo",
+    "latitude": -32.0271995,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.8606171,
+    "name": "25 de Mayo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "25 de Mayo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-9-de-julio",
+    "latitude": -31.6643417,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.3742919,
+    "name": "9 de Julio",
+    "names": [
+      {
+        "locale": "*",
+        "name": "9 de Julio",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-agrelo",
+    "latitude": -33.1184629,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.8859261,
+    "name": "Agrelo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Agrelo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.21/2005",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-lujan-de-cuyo-mendoza",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-albardon",
+    "latitude": -31.2175835,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.4370241,
+    "name": "Albardón",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Albardón",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-alto-valle-de-rio-negro",
+    "latitude": -40.4811973,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.6145911,
+    "name": "Alto valle de Río Negro",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Alto valle de Río Negro",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.37/2002",
+    "registeredOn": "2002-12-16",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-rio-negro"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-angaco",
+    "latitude": -31.1972746,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.1217646,
+    "name": "Angaco",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Angaco",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-anelo",
+    "latitude": -38.190367,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.0036425,
+    "name": "Añelo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Añelo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-neuquen"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-arauco",
+    "latitude": -28.5622038,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.7529001,
+    "name": "Arauco",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Arauco",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-avellaneda",
+    "latitude": -39.2394907,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -65.909496,
+    "name": "Avellaneda",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Avellaneda",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-rio-negro"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-barrancas",
+    "latitude": -32.9846171,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.7882043,
+    "name": "Barrancas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Barrancas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.22/2005",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-maipu",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-barreal",
+    "latitude": -31.6447415,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.4721794,
+    "name": "Barreal",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Barreal",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.42/2013",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-calingasta",
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-belen",
+    "latitude": -26.9816752,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.918776,
+    "name": "Belén",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Belén",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-catamarca"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-cachi",
+    "latitude": -25.1198873,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.1619367,
+    "name": "Cachi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cachi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-salta"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valle-de-cafayate",
+    "latitude": -26.0729166,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -65.9760315,
+    "name": "Valle de Cafayate",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Cafayate",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Cafayate",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002; Resolución INV Nº C.15/04; Disposición INV Nº 08/2005",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-salta"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-calingasta",
+    "latitude": -31.4476967,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.8827275,
+    "name": "Calingasta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Calingasta",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Valle de Calingasta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002; Resolución INV Nº C.41/2013",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-canota",
+    "latitude": -32.5202984,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.2066765,
+    "name": "Canota",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Canota",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Valle de Canota",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "RESOL-2020-19-APN-INV#MAGYP",
+    "registeredOn": "2020-05-22",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-las-heras",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-castro-barros",
+    "latitude": -28.929398,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.9140185,
+    "name": "Castro Barros",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Castro Barros",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-catamarca",
+    "latitude": -27.7758659,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.171292,
+    "name": "Catamarca",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Catamarca",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-caucete",
+    "latitude": -31.427026,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.6524147,
+    "name": "Caucete",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Caucete",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-chapadmalal",
+    "latitude": null,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": null,
+    "name": "Chapadmalal",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Chapadmalal",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.20/2014",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-chilecito",
+    "latitude": -29.4185987,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.4194828,
+    "name": "Chilecito",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Chilecito",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-chimbas",
+    "latitude": -31.4845946,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.5090248,
+    "name": "Chimbas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Chimbas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-colon",
+    "latitude": -31.1807799,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -64.1412392,
+    "name": "Colón",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Colón",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-cordoba-argentina"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-colonia-caroya",
+    "latitude": -31.0220578,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -64.0617445,
+    "name": "Colonia Caroya",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Colonia Caroya",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.36/2004",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-colon",
+      "ar-cordoba-argentina"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-confluencia",
+    "latitude": -38.8648434,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.7863142,
+    "name": "Confluencia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Confluencia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-neuquen"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-cordoba-argentina",
+    "latitude": -31.4166867,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -64.1834193,
+    "name": "Córdoba Argentina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Córdoba Argentina",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-cruz-del-eje",
+    "latitude": -30.673308,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -65.1055896,
+    "name": "Cruz del Eje",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cruz del Eje",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-cordoba-argentina"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-cuyo",
+    "latitude": -31.6894969,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.657512,
+    "name": "Cuyo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cuyo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.37/2002",
+    "registeredOn": "2002-12-16",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-distrito-medrano",
+    "latitude": -33.1941166,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.6479919,
+    "name": "Distrito Medrano",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Distrito Medrano",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.29/2014",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-rivadavia-mendoza",
+      "ar-junin",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-el-paraiso",
+    "latitude": -32.9846171,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.7882043,
+    "name": "El Paraíso",
+    "names": [
+      {
+        "locale": "*",
+        "name": "El Paraíso",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.28/2007",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-maipu",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-famatina",
+    "latitude": -28.6679717,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.5593338,
+    "name": "Famatina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Famatina",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-felipe-varela",
+    "latitude": -29.7824554,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.1147124,
+    "name": "Felipe Varela",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Felipe Varela",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-general-alvear",
+    "latitude": -35.2446554,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.0964446,
+    "name": "General Alvear",
+    "names": [
+      {
+        "locale": "*",
+        "name": "General Alvear",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-general-conesa",
+    "latitude": -40.1061818,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -64.4529666,
+    "name": "General Conesa",
+    "names": [
+      {
+        "locale": "*",
+        "name": "General Conesa",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-rio-negro"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-general-lamadrid",
+    "latitude": -28.7087096,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.8564002,
+    "name": "General Lamadrid",
+    "names": [
+      {
+        "locale": "*",
+        "name": "General Lamadrid",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-general-roca",
+    "latitude": -38.3787251,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.6764811,
+    "name": "General Roca",
+    "names": [
+      {
+        "locale": "*",
+        "name": "General Roca",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-rio-negro"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-godoy-cruz",
+    "latitude": -32.9283499,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.9050558,
+    "name": "Godoy Cruz",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Godoy Cruz",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-guaymallen",
+    "latitude": -32.9000655,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.7875327,
+    "name": "Guaymallén",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Guaymallén",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-iglesia",
+    "latitude": -29.5882642,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.4801625,
+    "name": "Iglesia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Iglesia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-jachal",
+    "latitude": -30.3101086,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.4505942,
+    "name": "Jáchal",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Jáchal",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-jujuy",
+    "latitude": -23.1546219,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.1110913,
+    "name": "Jujuy",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Jujuy",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-junin",
+    "latitude": -33.1491253,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.4997462,
+    "name": "Junín",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Junín",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-la-consulta",
+    "latitude": -33.7362676,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.1181471,
+    "name": "La Consulta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Consulta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.19/2014",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-carlos-mendoza",
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-la-paz",
+    "latitude": -33.6726664,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.3542268,
+    "name": "La Paz",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Paz",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-la-rioja-argentina",
+    "latitude": -29.7824554,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.1147124,
+    "name": "La Rioja Argentina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Rioja Argentina",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-las-compuertas",
+    "latitude": -33.0379787,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.9818314,
+    "name": "Las Compuertas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Las Compuertas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.30/2007",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-lujan-de-cuyo-mendoza",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-las-heras",
+    "latitude": -32.5202984,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.2066765,
+    "name": "Las Heras",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Las Heras",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-lavalle",
+    "latitude": -32.5905511,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.958156,
+    "name": "Lavalle",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lavalle",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Desierto de Lavalle",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002; Resolución INV Nº C.06/09",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-los-chacayes",
+    "latitude": -33.5908151,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.5633834,
+    "name": "Los Chacayes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Los Chacayes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "RESOL-2017-249-APN-INV#MA",
+    "registeredOn": "2017-11-03",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-tunuyan",
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-lujan-de-cuyo-mendoza",
+    "latitude": -33.1085238,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.0129984,
+    "name": "Luján de Cuyo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Luján de Cuyo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "DOC",
+    "grapes": [],
+    "id": "ar-lujan-de-cuyo-doc",
+    "latitude": -33.1085238,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.0129984,
+    "name": "Luján de Cuyo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Luján de Cuyo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.15/2005",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-lunlunta",
+    "latitude": -33.0349771,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.8326791,
+    "name": "Lunlunta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lunlunta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.04/2005",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-maipu",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-maipu",
+    "latitude": -32.9846171,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.7882043,
+    "name": "Maipú",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Maipú",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "In Europe, the grape is grown in Austria, ... France, ... Germany, ... Italy, ... In the New World, the grape is grown in California ... New Zealand ... Mendoza ... Chile. In the Middle East, the grape is grown in the Golan Heights.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Gew%C3%BCrztraminer"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "In France, Cabernet Franc is found predominantly in the Loire Valley and ... Bordeaux... In Italy ... Friuli ... Veneto... Hungary ... Villány and Szekszárd... Canada ... Ontario's Niagara Peninsula... United States ... Napa and Sonoma counties... Washington State ... Columbia Valley... Argentina ... Mendoza... Plantings are found throughout Europe, in the New World, China and Kazakhstan.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cabernet_Franc"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Malbec is the dominant red variety in Cahors ... In France, plantations of Malbec are now found primarily in Cahors ... Introduced to Argentina ... Mendoza ... Chile ... Colchagua Valley ... In California the grape is used to make Meritage ... Washington state it is grown predominately in the Columbia Valley",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Malbec"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "primarily grown in the central regions of Italy, particularly in Tuscany... also cultivated in ... Umbria and Marche... also grown in ... Emilia‑Romagna, Lombardy, and even as far south as Calabria... In France... Corsica... Argentina... Mendoza... In California...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
+      },
+      {
+        "grapeId": "marselan",
+        "quote": "mostly in the Languedoc wine region ... in the Northern Coast of California ... planted in Spain ... in the Catalonia region ... in the Penedès, Terra Alta and Valencia regions ... blended ... in the Vaud canton ... North Coast region ... Benton City, Washington ... Willcox, Arizona ... Mendoza wine region ... China ... Hebei province ... Shandong vineyard",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Marselan"
+      }
+    ],
+    "id": "ar-mendoza",
+    "latitude": -34.5970325,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.7304797,
+    "name": "Mendoza",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mendoza",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 2,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {
+      "en": {
+        "text": "Mendoza Province is Argentina's most important wine region, accounting for nearly two-thirds of the country's entire wine production. Located in the eastern foothills of the Andes, in the shadow of Aconcagua, vineyards are planted at some of the highest altitudes in the world, with the average site located 600–1,100 metres (2,000–3,600 ft) above sea level.",
+        "url": "https://en.wikipedia.org/wiki/Mendoza_wine"
+      },
+      "nl": {
+        "text": "De Mendoza wijnstreek is het belangrijkste wijnbouwgebied van Argentinië. In de provincie Mendoza wordt ongeveer driekwart van alle wijn geproduceerd. Aanvankelijk lag de nadruk op goedkope wijn voor binnenlands gebruik, maar sinds het begin van de negentiger jaren is de aandacht verlegd naar kwaliteitswijnen voor exportmarkten.",
+        "url": "https://nl.wikipedia.org/wiki/Mendoza_(wijnstreek)"
+      }
+    },
+    "wikidataId": "Q166014",
+    "within": [
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-molinos",
+    "latitude": -25.5753402,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.4556335,
+    "name": "Molinos",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Molinos",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-salta"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-neuquen",
+    "latitude": -38.8502546,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.832275,
+    "name": "Neuquén",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Neuquén",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-pampa-el-cepillo",
+    "latitude": -34.0929646,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.113331,
+    "name": "Pampa el Cepillo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pampa el Cepillo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "RESOL-2019-1-APN-INV#MAGYP",
+    "registeredOn": "2019-09-17",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-carlos-mendoza",
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-paraje-altamira",
+    "latitude": -34.0929646,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.113331,
+    "name": "Paraje Altamira",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Paraje Altamira",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.44/2013",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-carlos-mendoza",
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Sauvignon blanc is widely cultivated in many of the world's wine regions, including France, Argentina (also in Patagonia) Chile, Romania, Canada, Australia, New Zealand, South Africa, Bulgaria, and the states of Oregon, Washington, and California in the US ... In France, ... Loire Valley ... Bordeaux ... In the early 1990s ... Valparaíso ... In Australia, particularly the Margaret River region ... In the Marlborough wine region ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sauvignon_blanc"
+      }
+    ],
+    "id": "ar-patagonia",
+    "latitude": null,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": null,
+    "name": "Patagonia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Patagonia",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Patagonia Argentina",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.37/2002; Resolución INV Nº 10/2009; RESOL-2022-1-APN-INV#MAGYP",
+    "registeredOn": "2002-12-16",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-pichimahuida",
+    "latitude": -40.4811973,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.6145911,
+    "name": "Pichimahuida",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pichimahuida",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-rio-negro"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-pocito",
+    "latitude": -31.7380122,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.5853093,
+    "name": "Pocito",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pocito",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-poman",
+    "latitude": -28.3018455,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.3079272,
+    "name": "Pomán",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pomán",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-catamarca"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-pozo-de-los-algarrobos",
+    "latitude": -31.6894969,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.2398855,
+    "name": "Pozo de los Algarrobos",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pozo de los Algarrobos",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.33/2015",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-caucete",
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-quebrada-de-humahuaca",
+    "latitude": -23.3194113,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -65.4148914,
+    "name": "Quebrada de Humahuaca",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Quebrada de Humahuaca",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.39/2015",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-jujuy"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-rawson",
+    "latitude": -31.6891689,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.4639902,
+    "name": "Rawson",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rawson",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-reduccion",
+    "latitude": -33.4591826,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.5946564,
+    "name": "Reducción",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Reducción",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "RESOL-2020-34-APN-INV#MAGYP",
+    "registeredOn": "2020-12-31",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-rivadavia-mendoza",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [
+      {
+        "grapeId": "torrontes",
+        "quote": "Torrontés Riojano is widely grown in the La Rioja and Salta provinces ... In the arid San Juan province, Torrontés Sanjuanino is found ... Torrontés Mendocino ... is mostly found in the southern province of Rio Negro.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Torront%C3%A9s"
+      }
+    ],
+    "id": "ar-rio-negro",
+    "latitude": -40.4811973,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.6145911,
+    "name": "Río Negro",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Río Negro",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-rivadavia-mendoza",
+    "latitude": -33.4591826,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.5946564,
+    "name": "Rivadavia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rivadavia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-rivadavia-san-juan",
+    "latitude": -31.5465955,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.6505443,
+    "name": "Rivadavia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rivadavia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-russel",
+    "latitude": -32.9846171,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.7882043,
+    "name": "Russel",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Russel",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.05/2005",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-maipu",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [
+      {
+        "grapeId": "torrontes",
+        "quote": "Torrontés Riojano is widely grown in the La Rioja and Salta provinces ... In the arid San Juan province, Torrontés Sanjuanino is found ... Torrontés Mendocino ... is mostly found in the southern province of Rio Negro.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Torront%C3%A9s"
+      }
+    ],
+    "id": "ar-salta",
+    "latitude": -25.2269908,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -64.5911956,
+    "name": "Salta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Salta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-blas-de-los-sauces",
+    "latitude": -28.5774444,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.1331544,
+    "name": "San Blas de los Sauces",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Blas de los Sauces",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-carlos-mendoza",
+    "latitude": -34.0929646,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.113331,
+    "name": "San Carlos",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Carlos",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-carlos-salta",
+    "latitude": -25.7995047,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.0721546,
+    "name": "San Carlos",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Carlos",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-salta"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-javier",
+    "latitude": -32.0931051,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -65.0927904,
+    "name": "San Javier",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Javier",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-cordoba-argentina"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [
+      {
+        "grapeId": "torrontes",
+        "quote": "Torrontés Riojano is widely grown in the La Rioja and Salta provinces ... In the arid San Juan province, Torrontés Sanjuanino is found ... Torrontés Mendocino ... is mostly found in the southern province of Rio Negro.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Torront%C3%A9s"
+      }
+    ],
+    "id": "ar-san-juan",
+    "latitude": -30.7054363,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.1988222,
+    "name": "San Juan",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Juan",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-luis",
+    "latitude": -33.8985562,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.0614179,
+    "name": "San Luis",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Luis",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "RESOL-2019-10-APN-INV#MPYT",
+    "registeredOn": "2019-04-04",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-martin-mendoza",
+    "latitude": -32.9592288,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.3084797,
+    "name": "San Martín",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Martín",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-martin-san-juan",
+    "latitude": -31.5444387,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.2115623,
+    "name": "San Martín",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Martín",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-rafael-mendoza",
+    "latitude": -35.0506122,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.6676284,
+    "name": "San Rafael",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Rafael",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "DOC",
+    "grapes": [],
+    "id": "ar-san-rafael-doc",
+    "latitude": -35.0506122,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.6676284,
+    "name": "San Rafael",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Rafael",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.31/2007",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-san-pablo",
+    "latitude": -33.6208211,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.449909,
+    "name": "San Pablo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Pablo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "RESOL-2019-10-APN-INV#MAGYP",
+    "registeredOn": "2019-09-26",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-tunuyan",
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-sanagasta",
+    "latitude": -29.1455685,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.0614159,
+    "name": "Sanagasta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sanagasta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-santa-lucia",
+    "latitude": -31.5379349,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.4620112,
+    "name": "Santa Lucía",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Santa Lucía",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-santa-maria",
+    "latitude": -26.7216266,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.2355111,
+    "name": "Santa María",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Santa María",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-catamarca"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-santa-rosa",
+    "latitude": -33.633002,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.9973097,
+    "name": "Santa Rosa",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Santa Rosa",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-sarmiento-san-juan",
+    "latitude": -32.0775211,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.657512,
+    "name": "Sarmiento",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sarmiento",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-tafi",
+    "latitude": -27.0448424,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -65.3657954,
+    "name": "Tafí",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tafí",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-tucuman"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-tinogasta",
+    "latitude": -27.5416994,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.1360048,
+    "name": "Tinogasta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tinogasta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-catamarca"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-trevelin",
+    "latitude": -43.0791637,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -71.4640831,
+    "name": "Trevelin",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Trevelin",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "RESOL-2020-28-APN-INV#MAGYP",
+    "registeredOn": "2020-08-06",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-tucuman",
+    "latitude": -27.0448424,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -65.3657954,
+    "name": "Tucumán",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tucumán",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-tunuyan",
+    "latitude": -33.6208211,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.449909,
+    "name": "Tunuyán",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tunuyán",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-tupungato",
+    "latitude": -33.2755389,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.342634,
+    "name": "Tupungato",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tupungato",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Valle de Tupungato",
+        "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Tupungato Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002; Resolución INV Nº C.20/2006",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-ullum",
+    "latitude": -31.0285602,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.8323406,
+    "name": "Ullum",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ullum",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valle-de-chanarmuyo",
+    "latitude": -28.6032361,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.5833224,
+    "name": "Valle de Chañarmuyo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Chañarmuyo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.28/2014",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-famatina",
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valle-de-uco",
+    "latitude": -33.6208211,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.1950556,
+    "name": "Valle de Uco",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Uco",
+        "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Uco Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 2,
+    "registerRef": "Resolución INV Nº C.37/2002",
+    "registeredOn": "2002-12-16",
+    "summaries": {
+      "en": {
+        "text": "Valle de Uco is a viticultural region southwest of Mendoza, in Argentina. Situated along the Tunuyán River, the Uco Valley is widely considered one of the top wine regions in Mendoza, and all of Argentina. The annual average temperature is 14 °C (57 °F) and altitudes range from 900–1,200 metres (3,000–3,900 ft) above sea level.",
+        "url": "https://en.wikipedia.org/wiki/Uco_Valley"
+      }
+    },
+    "wikidataId": "Q7876801",
+    "within": [
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valle-del-pedernal",
+    "latitude": -31.9961261,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.7644217,
+    "name": "Valle del Pedernal",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Pedernal",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.21/2007",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-sarmiento-san-juan",
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valle-del-tulum",
+    "latitude": -30.7054363,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.1988222,
+    "name": "Valle del Tulum",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle del Tulum",
+        "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Tulum Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valle-fertil",
+    "latitude": -30.5981083,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.538897,
+    "name": "Valle Fértil",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle Fértil",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valle-de-zonda",
+    "latitude": -31.575441,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.9277926,
+    "name": "Valle de Zonda",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Zonda",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.04/2015",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-zonda",
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valles-calchaquies",
+    "latitude": null,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": null,
+    "name": "Valles Calchaquíes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valles Calchaquíes",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Valle Calchaquí",
+        "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Calchaquíes Valleys",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.37/2002; Resolución INV Nº C.16/2010",
+    "registeredOn": "2002-12-16",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valles-del-famatina",
+    "latitude": -28.9250137,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -67.5196474,
+    "name": "Valles del Famatina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valles del Famatina",
+        "source": "register"
+      },
+      {
+        "locale": "en",
+        "name": "Famatina Valleys",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.29/2004",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-victoria-entre-rios",
+    "latitude": -32.874961,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -60.3386655,
+    "name": "Victoria, Entre Ríos",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Victoria, Entre Ríos",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "RESOL-2021-5-APN-INV#MAGYP",
+    "registeredOn": "2021-05-04",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-vinchina",
+    "latitude": -28.3427026,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.5323266,
+    "name": "Vinchina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vinchina",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-la-rioja-argentina",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-villa-ventana",
+    "latitude": -38.0785715,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -61.9281153,
+    "name": "Villa Ventana",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Villa Ventana",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.46/2011",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-vista-flores",
+    "latitude": -33.6509493,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.1555479,
+    "name": "Vista Flores",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vista Flores",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.11/2012",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-tunuyan",
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-zonda",
+    "latitude": -31.575441,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.9277926,
+    "name": "Zonda",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Zonda",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº C.32/2002",
+    "registeredOn": "2002-11-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-balcarce",
+    "latitude": null,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": null,
+    "name": "Balcarce",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Balcarce",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 11/2022",
+    "registeredOn": "2022-07-01",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-vistalba",
+    "latitude": -33.0268948,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.9077783,
+    "name": "Vistalba",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vistalba",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 12/2022",
+    "registeredOn": "2022-08-26",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-lujan-de-cuyo-mendoza",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-cordon-el-cepillo",
+    "latitude": -34.0929646,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.113331,
+    "name": "Cordón El Cepillo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cordón El Cepillo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 7/2022",
+    "registeredOn": "2022-12-26",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-carlos-mendoza",
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-el-peral",
+    "latitude": -33.3882649,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.1950556,
+    "name": "El Peral",
+    "names": [
+      {
+        "locale": "*",
+        "name": "El Peral",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 1/2022",
+    "registeredOn": "2023-01-25",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-tupungato",
+      "ar-valle-de-uco",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-sarmiento-chubut",
+    "latitude": -45.5867861,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.0687743,
+    "name": "Sarmiento",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sarmiento",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 9/2023",
+    "registeredOn": "2023-05-29",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-el-hoyo",
+    "latitude": -42.0641396,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -71.5192657,
+    "name": "El Hoyo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "El Hoyo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 25/2023",
+    "registeredOn": "2023-09-11",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-tamberias-valle-de-calingasta",
+    "latitude": -31.4581122,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.4216893,
+    "name": "Tamberías – Valle de Calingasta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tamberías – Valle de Calingasta",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Paraje Tamberías - Valle de Calingasta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 35/2023",
+    "registeredOn": "2024-02-06",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-calingasta",
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-sorocayense",
+    "latitude": -31.5576815,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.4429614,
+    "name": "Sorocayense",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sorocayense",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Paraje Sorocayense",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 36/2023",
+    "registeredOn": "2024-02-06",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-calingasta",
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-hilario-valle-de-calingasta",
+    "latitude": -31.4782366,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.4020278,
+    "name": "Hilario – Valle de Calingasta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hilario – Valle de Calingasta",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Paraje Hilario - Valle de Calingasta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 37/2023",
+    "registeredOn": "2024-02-06",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-calingasta",
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-la-cienaga-zonda",
+    "latitude": -31.575441,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -68.9277926,
+    "name": "La Ciénaga – Zonda",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Ciénaga – Zonda",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 8/2024",
+    "registeredOn": "2024-05-07",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-zonda",
+      "ar-san-juan",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-tandil",
+    "latitude": -37.3282887,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -59.1356957,
+    "name": "Tandil",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tandil",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 24/2024",
+    "registeredOn": "2024-07-17",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valle-de-pucara-salta",
+    "latitude": -25.779836,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.2692925,
+    "name": "Valle de Pucará – Salta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Pucará – Salta",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 8/2025",
+    "registeredOn": "2025-03-14",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-san-carlos-salta",
+      "ar-salta"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-alto-agrelo",
+    "latitude": -33.1085238,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -69.0129984,
+    "name": "Alto Agrelo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Alto Agrelo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 27/2025",
+    "registeredOn": "2025-07-23",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-lujan-de-cuyo-mendoza",
+      "ar-mendoza",
+      "ar-cuyo"
+    ]
+  },
+  {
+    "countryCode": "AR",
+    "eambrosiaId": null,
+    "giType": "IG",
+    "grapes": [],
+    "id": "ar-valles-templados",
+    "latitude": -23.1546219,
+    "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
+    "longitude": -66.1110913,
+    "name": "Valles Templados",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valles Templados",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Resolución INV Nº 28/2025",
+    "registeredOn": "2025-09-02",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ar-jujuy"
+    ]
+  },
+  {
+    "countryCode": "GB",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "gb-darnibole",
+    "latitude": null,
+    "legalUrl": "https://www.gov.uk/protected-food-drink-names/darnibole",
+    "longitude": null,
+    "name": "Darnibole",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Darnibole",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registeredOn": "2021-03-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GB",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "gb-english",
+    "latitude": 52.5310214,
+    "legalUrl": "https://www.gov.uk/protected-food-drink-names/english",
+    "longitude": -1.2649062,
+    "name": "English",
+    "names": [
+      {
+        "locale": "*",
+        "name": "English",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2021-03-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GB",
+    "eambrosiaId": null,
+    "giType": "PGI",
+    "grapes": [],
+    "id": "gb-english-regional",
+    "latitude": 52.5310214,
+    "legalUrl": "https://www.gov.uk/protected-food-drink-names/english-regional",
+    "longitude": -1.2649062,
+    "name": "English Regional",
+    "names": [
+      {
+        "locale": "*",
+        "name": "English Regional",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2021-03-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GB",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "gb-sussex",
+    "latitude": 50.9345648,
+    "legalUrl": "https://www.gov.uk/protected-food-drink-names/sussex",
+    "longitude": -0.0461899,
+    "name": "Sussex",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sussex",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registeredOn": "2022-07-05",
+    "summaries": {
+      "en": {
+        "text": "Sussex wine is wine produced in the historic county of Sussex in southern England, a region divided for administrative purposes into East Sussex and West Sussex (as well as the unitary authority of Brighton and Hove). In 2022, Sussex wine gained Protected Designation of Origin status in the European Union's Geographic Indication scheme.",
+        "url": "https://en.wikipedia.org/wiki/Sussex_wine"
+      }
+    },
+    "wikidataId": "Q39056976"
+  },
+  {
+    "countryCode": "GB",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "gb-welsh",
+    "latitude": 52.2928116,
+    "legalUrl": "https://www.gov.uk/protected-food-drink-names/welsh",
+    "longitude": -3.73893,
+    "name": "Welsh",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Welsh",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2021-03-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GB",
+    "eambrosiaId": null,
+    "giType": "PGI",
+    "grapes": [],
+    "id": "gb-welsh-regional",
+    "latitude": 52.2928116,
+    "legalUrl": "https://www.gov.uk/protected-food-drink-names/welsh-regional",
+    "longitude": -3.73893,
+    "name": "Welsh Regional",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Welsh Regional",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2021-03-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",

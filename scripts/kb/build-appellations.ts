@@ -516,6 +516,117 @@ for (const entry of clEntries) {
   entry.pointSource = "area";
 }
 entries.push(...clEntries);
+
+// Argentina: the indications the INV has recognised, each placed where its
+// place or department is; one the map cannot find, at the middle of those it
+// holds or else at the one it lies in — approximately.
+const arPath = resolve(".kb-cache/world/ar.json");
+const arList = (
+  existsSync(arPath) ? JSON.parse(readFileSync(arPath, "utf8")) : { records: [], sourceUrl: "" }
+) as {
+  records: {
+    englishNames: string[];
+    key: string;
+    latitude: number | null;
+    longitude: number | null;
+    names: string[];
+    qid: string | null;
+    recognisedOn: string | null;
+    resolutions: string[];
+    type: "DOC" | "IG";
+    within: string[];
+  }[];
+  sourceUrl: string;
+};
+const arEntries: RegionEntry[] = arList.records.map((area) => {
+  const { leads, summaries } = wikipediaSummaries(area.qid);
+  return {
+    countryCode: "AR",
+    eambrosiaId: null,
+    giType: area.type,
+    grapes: [],
+    id: `ar-${area.key}`,
+    latitude: area.latitude,
+    legalUrl: arList.sourceUrl,
+    longitude: area.longitude,
+    name: area.names[0]!,
+    names: [
+      ...area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+      // The English names the INV's list itself gives: "Uco Valley".
+      ...area.englishNames.map((name) => ({ locale: "en", name, source: "register" as const })),
+    ],
+    pointSource: area.latitude === null ? null : ("place" as const),
+    prominence: leads,
+    registerRef: area.resolutions.join("; "),
+    registeredOn: area.recognisedOn,
+    summaries,
+    wikidataId: area.qid,
+    ...(area.within.length === 0 ? {} : { within: area.within.map((key) => `ar-${key}`) }),
+  };
+});
+for (const entry of arEntries) seen.add(entry.id);
+const arOwn = new Set(
+  arEntries.filter((entry) => entry.latitude !== null).map((entry) => entry.id),
+);
+for (const entry of arEntries) {
+  if (entry.latitude !== null) continue;
+  const inside = arEntries.filter(
+    (other) => other.within?.includes(entry.id) === true && arOwn.has(other.id),
+  );
+  if (inside.length === 0) continue;
+  entry.latitude = medianOf(inside.map((other) => other.latitude!));
+  entry.longitude = medianOf(inside.map((other) => other.longitude!));
+  entry.pointSource = "area";
+}
+for (const entry of arEntries) {
+  if (entry.latitude !== null) continue;
+  const holder = (entry.within ?? [])
+    .map((id) => arEntries.find((other) => other.id === id)!)
+    .find((other) => other.latitude !== null);
+  if (holder === undefined) continue;
+  entry.latitude = holder.latitude;
+  entry.longitude = holder.longitude;
+  entry.pointSource = "area";
+}
+entries.push(...arEntries);
+console.info(
+  `  ${arEntries.length} Argentine indications from the INV, ` +
+    `${arEntries.filter((entry) => entry.latitude !== null).length} placed.`,
+);
+
+// The United Kingdom: its own wine names in its register of protected food
+// and drink names.
+const gbPath = resolve(".kb-cache/world/gb.json");
+const gbList = (existsSync(gbPath) ? JSON.parse(readFileSync(gbPath, "utf8")) : []) as {
+  designation: "PDO" | "PGI";
+  latitude: number | null;
+  longitude: number | null;
+  name: string;
+  qid: string | null;
+  registeredOn: string | null;
+  url: string;
+}[];
+for (const name of gbList) {
+  const { leads, summaries } = wikipediaSummaries(name.qid);
+  entries.push({
+    countryCode: "GB",
+    eambrosiaId: null,
+    giType: name.designation,
+    grapes: [],
+    id: worldId("gb", name.name),
+    latitude: name.latitude,
+    legalUrl: name.url,
+    longitude: name.longitude,
+    name: name.name,
+    names: [{ locale: "*", name: name.name, source: "register" as const }],
+    pointSource: name.latitude === null ? null : "place",
+    prominence: leads,
+    registeredOn: name.registeredOn,
+    summaries,
+    wikidataId: name.qid,
+  });
+}
+console.info(`  ${gbList.length} British wine names from the UK register.`);
 console.info(
   `  ${clEntries.length} Chilean denominations of origin from Decree 464, ` +
     `${clEntries.filter((entry) => entry.latitude !== null).length} placed.`,

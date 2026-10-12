@@ -237,3 +237,32 @@ test("a Chilean area shows its place in the decree's zoning", async ({ page }) =
   await expect(nesting).toContainText("Región del Valle Central · region");
   await expect(page.locator(".library-map__point")).toBeVisible();
 });
+
+test("an Argentine indication shows its resolution and where it lies", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/ar-agrelo");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Agrelo", { timeout: 15_000 });
+  await expect(page.locator(".page-heading")).toContainText("Geographical indication (IG)");
+  await expect(page.locator("#region-register")).toHaveText(
+    "In Argentina's register of geographical indications (INV)",
+  );
+  await expect(page.getByText("Recognised by Resolución INV Nº C.21/2005.")).toBeVisible();
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting.getByRole("link", { name: "Luján de Cuyo" })).toBeVisible();
+  await expect(nesting.getByRole("link", { name: "Cuyo", exact: true })).toBeVisible();
+});
+
+test("a British wine name cites the UK register", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/gb-sussex");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Sussex", { timeout: 15_000 });
+  await expect(page.locator(".page-heading")).toContainText("Protected designation of origin");
+  await expect(page.locator("#region-register")).toHaveText(
+    "In the UK register of protected food and drink names",
+  );
+  await expect(page.locator('a[href*="gov.uk/protected-food-drink-names"]')).toBeVisible();
+});

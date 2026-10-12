@@ -87,9 +87,9 @@ export function LibraryRegionPage() {
   const fromRegister =
     region.summary?.license === "EC-reuse-2011-833" &&
     region.summary.sourceUrl.includes("/eambrosia-public-api/");
-  const euRegister = inEuRegister(region.giType);
+  const euRegister = inEuRegister(region);
   // The catalog keys of the name's own register: the EU's, or its country's.
-  const suffix = registerSuffix(region.giType, region.countryCode);
+  const suffix = registerSuffix(region);
   const registered =
     region.registeredOn === null
       ? null
@@ -204,6 +204,10 @@ export function LibraryRegionPage() {
         ) : (
           <p>{t(`library.registeredOn${suffix}`, { date: registered })}</p>
         )}
+        {/* Argentina's names are each recognised by a resolution of the INV. */}
+        {suffix === "Ar" && region.registerRef !== null ? (
+          <p className="section-help">{t("library.recognisedByAr", { ref: region.registerRef })}</p>
+        ) : null}
         {region.legalUrl === null ? null : (
           <p className="section-help">
             <a className="text-link" href={region.legalUrl} rel="noreferrer" target="_blank">

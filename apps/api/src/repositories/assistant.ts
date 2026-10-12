@@ -918,6 +918,12 @@ async function loadLibraryStatements(
     const registerId = await librarySourceId(`region:${region.id}`);
     // Each name's own register: the EU's, or its country's.
     const own: Record<string, { license: string; publisher: string; title: string }> = {
+      // The INV's list and resolutions: official texts; only their facts are used.
+      AR: {
+        license: "AR-official-text",
+        publisher: "Instituto Nacional de Vitivinicultura (INV), Ley 25.163",
+        title: `${region.name} — ${region.registerRef ?? "INV"}`,
+      },
       // Wine Australia's register; its boundaries are CC BY 4.0.
       AU: {
         license: "CC-BY-4.0",
@@ -929,6 +935,12 @@ async function loadLibraryStatements(
         license: "CL-official-text",
         publisher: "Decreto 464 de 1994, Ministerio de Agricultura de Chile (Ley Chile)",
         title: `${region.name} — Decreto 464 de 1994`,
+      },
+      // The UK's register of protected food and drink names, on GOV.UK.
+      GB: {
+        license: "OGL-UK-3.0",
+        publisher: "UK protected food and drink names register (GOV.UK)",
+        title: `${region.name} — UK protected wine name`,
       },
       // IPONZ's register is Crown copyright: only its facts are used.
       NZ: {
@@ -949,7 +961,7 @@ async function loadLibraryStatements(
         title: `${region.name} — Wine of Origin production areas`,
       },
     };
-    const european = region.giType === "PDO" || region.giType === "PGI";
+    const european = region.eambrosiaId !== null;
     const register = (european ? undefined : own[region.countryCode]) ?? {
       license: "EC-reuse-2011-833",
       publisher: "European Commission (eAmbrosia)",
@@ -992,7 +1004,11 @@ async function loadLibraryStatements(
               ? `a denomination of origin of Chile's viticultural zoning (Decree 464 of 1994)${kind}`
               : region.countryCode === "AU"
                 ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
-                : `a production area of South Africa's Wine of Origin scheme${kind}`,
+                : region.countryCode === "AR"
+                  ? `${region.giType === "DOC" ? "a controlled denomination of origin (DOC)" : "a geographical indication (IG)"} of Argentina, recognised by the INV${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("recognised")}`
+                  : region.countryCode === "GB"
+                    ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
+                    : `a production area of South Africa's Wine of Origin scheme${kind}`,
       [registerId],
     );
     if (region.within.length > 0) {

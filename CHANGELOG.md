@@ -30,6 +30,13 @@ has the reasons.
 - **Chile**: the 118 denominations of origin of its viticultural zoning
   (Decree 464 of 1994) — regions, subregions, zones and areas, Rapa Nui
   included — on a new map of South America.
+- **Argentina**: its 121 geographical indications and controlled
+  denominations of origin, from the INV's list and its resolutions to 2025,
+  each with the resolution that recognised it and where it lies — Agrelo
+  in Luján de Cuyo, in Mendoza, in Cuyo.
+- **The United Kingdom**: its six registered wine names (English, Welsh,
+  Sussex, Darnibole, English Regional, Welsh Regional), from the UK's own
+  register.
 - **Your wines find their names however the label writes them**: with the
   designation before or after the name ("DO Empordà", "Rioja DOCa", "Napa
   Valley AVA", "Wine of Origin Stellenbosch"), with the country or where it
