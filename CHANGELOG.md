@@ -37,6 +37,10 @@ has the reasons.
 - **The United Kingdom**: its six registered wine names (English, Welsh,
   Sussex, Darnibole, English Regional, Welsh Regional), from the UK's own
   register.
+- **In every language**: the summaries of the names beyond the EU — the
+  AVAs, Australia's, New Zealand's, South Africa's, Chile's, Argentina's and
+  the UK's — are in all eight of the app's languages, translated faithfully
+  from the article and marked as translations.
 - **Your wines find their names however the label writes them**: with the
   designation before or after the name ("DO Empordà", "Rioja DOCa", "Napa
   Valley AVA", "Wine of Origin Stellenbosch"), with the country or where it

@@ -129,7 +129,11 @@ describe("translated originals are the texts the library shows", () => {
         { summaries: Record<string, { text: string; translated?: boolean }>; wikidataId: string }[]
       >("data/kb/grapes.json");
     const regions = read<
-      { eambrosiaId: string; summaries: Record<string, { text: string; translated?: boolean }> }[]
+      {
+        eambrosiaId: string | null;
+        id: string;
+        summaries: Record<string, { text: string; translated?: boolean }>;
+      }[]
     >("data/kb/appellations.json");
     const stale: string[] = [];
     const compare = (
@@ -146,7 +150,12 @@ describe("translated originals are the texts the library shows", () => {
       compare(id, entry, grapes.find((grape) => grape.wikidataId === id)?.summaries);
     }
     for (const [id, entry] of Object.entries(files[2]!.entities)) {
-      compare(id, entry, regions.find((region) => region.eambrosiaId === id)?.summaries);
+      // By the EU register's id, or the library's own beyond it ("us-napa-valley").
+      compare(
+        id,
+        entry,
+        regions.find((region) => (region.eambrosiaId ?? region.id) === id)?.summaries,
+      );
     }
     expect(stale).toEqual([]);
   });
