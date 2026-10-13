@@ -288440,9 +288440,9 @@
     "giType": "IG",
     "grapes": [],
     "id": "ar-chapadmalal",
-    "latitude": null,
+    "latitude": -38.1944082,
     "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
-    "longitude": null,
+    "longitude": -57.6802111,
     "name": "Chapadmalal",
     "names": [
       {
@@ -288451,7 +288451,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerRef": "Resolución INV Nº C.20/2014",
     "registeredOn": null,
@@ -291031,9 +291031,9 @@
     "giType": "IG",
     "grapes": [],
     "id": "ar-balcarce",
-    "latitude": null,
+    "latitude": -37.846399,
     "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
-    "longitude": null,
+    "longitude": -58.2554648,
     "name": "Balcarce",
     "names": [
       {
@@ -291042,7 +291042,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerRef": "Resolución INV Nº 11/2022",
     "registeredOn": "2022-07-01",

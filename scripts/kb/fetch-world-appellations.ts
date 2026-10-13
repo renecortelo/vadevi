@@ -1101,13 +1101,20 @@ const arItems = await wineArticleItems(
 );
 await leadLanguages([...new Set(arItems.values())]);
 /** The name as a place: "Tamberías – Valle de Calingasta" is Tamberías. */
+// Places OpenStreetMap knows by their full name: the town of Balcarce is San
+// José de Balcarce, Chapadmalal's locality Colonia Chapadmalal (both in
+// Buenos Aires province, where the INV places the indications).
+const arPlaces: Record<string, string[]> = {
+  Balcarce: ["San José de Balcarce"],
+  Chapadmalal: ["Colonia Chapadmalal"],
+};
 const arPlaceNames = (area: ArArea) => [
   ...new Set(
     area.names.flatMap((name) => {
       const head = name.split(/\s+[–-]\s+|,\s*/)[0]!.trim();
       const bare = head.replace(/^(Paraje|Distrito|Valle de|Valle del|Valles del?)\s+/, "");
       // OpenStreetMap names Mendoza's districts "Distrito Lunlunta".
-      return [name, head, bare, `Distrito ${bare}`];
+      return [name, head, bare, `Distrito ${bare}`, ...(arPlaces[bare] ?? [])];
     }),
   ),
 ];

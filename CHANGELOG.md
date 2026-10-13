@@ -16,7 +16,8 @@ has the reasons.
 
 - **More of South Africa on the map**: Vredendal, Koekenaap and Still Bay are
   placed at their town (Still Bay was some 140 km off), and with them Olifants
-  River and the names inside it, approximately. 17 names remain unplaced.
+  River and the names inside it, approximately; in Argentina, Chapadmalal and
+  Balcarce at their towns. 15 names remain unplaced.
 
 ## 0.3.0 — 12 October 2026
 
