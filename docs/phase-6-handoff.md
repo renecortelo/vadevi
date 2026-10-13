@@ -60,6 +60,12 @@ pnpm audit --audit-level high
 These are judgement or environment items that code cannot close. They are the
 gate between "Phase 6 is code-complete" and "the MVP is production-ready".
 
+Status on 13 October 2026: items 1, 2 and 6 are closed — the end-to-end suite
+signs in through an emulator fixture (`e2e/fixtures/sign-in.ts`) and covers
+the authenticated screens; the preview environment is deployed and its
+acceptance checklist worked through (`docs/manual-acceptance.md`); the
+project is licensed AGPL-3.0-only. Items 3, 4 and 5 remain open.
+
 1. **Authenticated browser coverage.** A 20-test Playwright suite now covers the
    offline shell, service-worker update, manifest, accessibility, 320 px layout,
    and storage pressure on signed-out routes. The app signs in only through
