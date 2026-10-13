@@ -279564,9 +279564,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-cape-south-coast",
-    "latitude": -34.226759,
+    "latitude": -34.26328155,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 19.898056,
+    "longitude": 19.94899695,
     "name": "Cape South Coast",
     "names": [
       {
@@ -279598,9 +279598,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-coastal-region",
-    "latitude": -33.6988316,
+    "latitude": -33.666635,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 18.6865277,
+    "longitude": 18.6494444,
     "name": "Coastal Region",
     "names": [
       {
@@ -279693,9 +279693,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-olifants-river",
-    "latitude": null,
+    "latitude": -31.679444,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 18.492222,
     "name": "Olifants River",
     "names": [
       {
@@ -279709,7 +279709,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerLevel": "region",
     "registeredOn": null,
@@ -279754,9 +279754,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-cape-west-coast",
-    "latitude": -32.7613889,
+    "latitude": -32.2786549,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 18.2304858,
+    "longitude": 18.2613539,
     "name": "Cape West Coast",
     "names": [
       {
@@ -279854,9 +279854,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-lower-duivenhoks-river",
-    "latitude": -34.226759,
+    "latitude": -34.26328155,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 19.898056,
+    "longitude": 19.94899695,
     "name": "Lower Duivenhoks River",
     "names": [
       {
@@ -280014,9 +280014,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-still-bay",
-    "latitude": -34.226759,
+    "latitude": -34.368333,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 19.898056,
+    "longitude": 21.411111,
     "name": "Still Bay",
     "names": [
       {
@@ -280030,7 +280030,7 @@
         "source": "register"
       }
     ],
-    "pointSource": "area",
+    "pointSource": "place",
     "prominence": 0,
     "registerLevel": "district",
     "registeredOn": null,
@@ -280155,9 +280155,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-lutzville-valley",
-    "latitude": -32.7613889,
+    "latitude": -31.523056,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 18.2304858,
+    "longitude": 18.292222,
     "name": "Lutzville Valley",
     "names": [
       {
@@ -280531,9 +280531,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-citrusdal-mountain",
-    "latitude": null,
+    "latitude": -31.679444,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 18.492222,
     "name": "Citrusdal Mountain",
     "names": [
       {
@@ -280547,7 +280547,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerLevel": "district",
     "registeredOn": null,
@@ -280565,9 +280565,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-citrusdal-valley",
-    "latitude": null,
+    "latitude": -31.679444,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 18.492222,
     "name": "Citrusdal Valley",
     "names": [
       {
@@ -280581,7 +280581,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerLevel": "district",
     "registeredOn": null,
@@ -281368,9 +281368,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-goukou-river-valley",
-    "latitude": -34.226759,
+    "latitude": -34.368333,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 19.898056,
+    "longitude": 21.411111,
     "name": "Goukou River Valley",
     "names": [
       {
@@ -281620,9 +281620,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-koekenaap",
-    "latitude": -32.7613889,
+    "latitude": -31.523056,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 18.2304858,
+    "longitude": 18.292222,
     "name": "Koekenaap",
     "names": [
       {
@@ -281631,7 +281631,7 @@
         "source": "register"
       }
     ],
-    "pointSource": "area",
+    "pointSource": "place",
     "prominence": 0,
     "registerLevel": "ward",
     "registeredOn": null,
@@ -282468,9 +282468,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-lamberts-bay",
-    "latitude": -32.7613889,
+    "latitude": -32.2786549,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": 18.2304858,
+    "longitude": 18.2613539,
     "name": "Lamberts Bay",
     "names": [
       {
@@ -283447,9 +283447,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-piekenierskloof",
-    "latitude": null,
+    "latitude": -31.679444,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 18.492222,
     "name": "Piekenierskloof",
     "names": [
       {
@@ -283458,7 +283458,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerLevel": "ward",
     "registeredOn": null,
@@ -283477,9 +283477,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-spruitdrift",
-    "latitude": null,
+    "latitude": -31.679444,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 18.492222,
     "name": "Spruitdrift",
     "names": [
       {
@@ -283488,7 +283488,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerLevel": "ward",
     "registeredOn": null,
@@ -283506,9 +283506,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-vredendal",
-    "latitude": null,
+    "latitude": -31.679444,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 18.492222,
     "name": "Vredendal",
     "names": [
       {
@@ -283517,7 +283517,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerLevel": "ward",
     "registeredOn": null,

@@ -12,6 +12,12 @@ has the reasons.
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh
   added, dropped or changed in the atlas before it is committed.
 
+### The atlas
+
+- **More of South Africa on the map**: Vredendal, Koekenaap and Still Bay are
+  placed at their town (Still Bay was some 140 km off), and with them Olifants
+  River and the names inside it, approximately. 17 names remain unplaced.
+
 ## 0.3.0 — 12 October 2026
 
 ### The atlas beyond the EU

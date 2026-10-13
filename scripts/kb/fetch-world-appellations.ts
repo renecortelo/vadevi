@@ -456,6 +456,27 @@ async function placeOf(
     const first = matching[0]!;
     if (matching.every((point) => kilometres(point, first) <= 30)) return { ...first, query: name };
   }
+  if (near !== null || states.length === 0) return null;
+  // Failing that, a settlement of the name in the province the register
+  // gives: a town over a suburb of the same name (Vredendal) — and still only
+  // where every one of them is one place. Never in the whole country: a
+  // hamlet in San Luis is not the Balcarce of Buenos Aires.
+  const settlements = ["city", "town", "village", "hamlet"];
+  for (const name of names) {
+    const towns = (await lookUp(name, country))
+      .filter(
+        (result) =>
+          fold(result.name) === fold(name) &&
+          result.category === "place" &&
+          settlements.includes(result.type ?? "") &&
+          states.some((state) => fold(result.address?.state ?? "").includes(fold(state))),
+      )
+      .map((result) => ({ latitude: Number(result.lat), longitude: Number(result.lon) }));
+    const first = towns[0];
+    if (first !== undefined && towns.every((point) => kilometres(point, first) <= 30)) {
+      return { ...first, query: name };
+    }
+  }
   return null;
 }
 
