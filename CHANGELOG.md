@@ -4,6 +4,14 @@ What changed between releases, for readers and for anyone running their own
 deployment. Each release lists what you will notice first; the commit history
 has the reasons.
 
+## Unreleased
+
+### For operators
+
+- **Keeping the registers current**: the routine is in `data/kb/README.md`,
+  and `pnpm kb:diff-appellations` shows, country by country, what a refresh
+  added, dropped or changed in the atlas before it is committed.
+
 ## 0.3.0 — 12 October 2026
 
 ### The atlas beyond the EU

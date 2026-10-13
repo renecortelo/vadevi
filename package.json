@@ -39,6 +39,7 @@
     "kb:fetch-appellations": "tsx scripts/kb/fetch-appellations.ts",
     "kb:fetch-world-appellations": "tsx scripts/kb/fetch-world-appellations.ts",
     "kb:build-appellations": "tsx scripts/kb/build-appellations.ts",
+    "kb:diff-appellations": "tsx scripts/kb/diff-appellations.ts",
     "kb:geocode-appellations": "tsx scripts/kb/geocode-appellations.ts",
     "kb:search-appellation-names": "tsx scripts/kb/search-appellation-names.ts",
     "kb:fetch-grand-crus": "tsx scripts/kb/fetch-grand-crus.ts",

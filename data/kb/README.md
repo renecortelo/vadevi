@@ -226,6 +226,29 @@ The small map draws a country on its sheet: Europe's, North or South
 America's, Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural
 Earth).
 
+## Keeping the registers current
+
+Registers change: eCFR adds AVAs, the INV recognises new indications, IPONZ,
+Wine Australia and the UK register names, the EU registers and amends them.
+Every few months, or when a register announces a name:
+
+1. `pnpm kb:fetch-appellations` — the EU register, and Wikidata's items for
+   it. Wikipedia leads already fetched are kept; only new items are asked.
+2. `pnpm kb:fetch-world-appellations` — the registers beyond the EU.
+3. For EU names registered since: `pnpm kb:fetch-register-links` (the
+   Journal's single documents; EUR-Lex may answer with a challenge page, and
+   is then left alone, never worked around), `pnpm kb:fetch-register-documents`
+   and `pnpm kb:extract-technical-file-links`.
+4. `pnpm kb:build-appellations` and `pnpm kb:build-map`.
+5. `pnpm kb:diff-appellations` — by country, the names added or dropped and
+   those whose summary, point, Wikidata item or grapes changed. A dropped
+   name, a new item and a moved point are checked by hand; an item that is
+   another wine's goes in `scripts/kb/appellation-exclusions.ts`.
+6. `pnpm check`. `scripts/kb/translations.test.ts` names every translation
+   whose original is no longer the text shown: remove it, translate the new
+   text faithfully, and fill the languages a new summary lacks.
+7. Deploy: the library load writes only what changed.
+
 ## Licences
 
 - **Wikidata** names and aliases: CC0 1.0.
