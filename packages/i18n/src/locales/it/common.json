@@ -310,7 +310,21 @@
     "mapBoundaryAu": "All'interno del suo confine ufficiale, come lo traccia Wine Australia.",
     "summaryTranslated": "tradotto dall'articolo originale",
     "summaryTranslatedDocument": "tradotto dalla lingua del documento",
-    "backTo": "Torna a {{name}}"
+    "backTo": "Torna a {{name}}",
+    "coverage": {
+      "link": "L'atlante in cifre",
+      "title": "L'atlante in cifre",
+      "intro": "Ciò che la biblioteca sa dei nomi di vino registrati di ogni paese: quanti ne descrive nella tua lingua, quanti sono sulla mappa e quanti indicano i loro vitigni.",
+      "described": "Descritti",
+      "onMap": "Sulla mappa",
+      "grapes": "Con vitigni",
+      "total_one": "{{names}} nome in {{countries}} paesi.",
+      "total_other": "{{names}} nomi in {{countries}} paesi.",
+      "names_one": "{{names}} nome",
+      "names_other": "{{names}} nomi",
+      "approximate_one": "Di cui {{names}} collocato in modo approssimativo.",
+      "approximate_other": "Di cui {{names}} collocati in modo approssimativo."
+    }
   },
   "space": {
     "switchLabel": "Spazio attivo",

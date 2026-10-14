@@ -310,7 +310,21 @@
     "mapBoundaryAu": "Binnen de officiële grens, zoals Wine Australia die trekt.",
     "summaryTranslated": "vertaald uit het oorspronkelijke artikel",
     "summaryTranslatedDocument": "vertaald uit de taal van het document",
-    "backTo": "Terug naar {{name}}"
+    "backTo": "Terug naar {{name}}",
+    "coverage": {
+      "link": "De atlas in cijfers",
+      "title": "De atlas in cijfers",
+      "intro": "Wat de bibliotheek weet van de geregistreerde wijnnamen van elk land: hoeveel ze in jouw taal beschrijft, hoeveel er op de kaart staan en hoeveel hun druiven noemen.",
+      "described": "Beschreven",
+      "onMap": "Op de kaart",
+      "grapes": "Met druiven",
+      "total_one": "{{names}} naam in {{countries}} landen.",
+      "total_other": "{{names}} namen in {{countries}} landen.",
+      "names_one": "{{names}} naam",
+      "names_other": "{{names}} namen",
+      "approximate_one": "Waarvan {{names}} bij benadering geplaatst.",
+      "approximate_other": "Waarvan {{names}} bij benadering geplaatst."
+    }
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

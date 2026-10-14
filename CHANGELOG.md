@@ -14,7 +14,9 @@ has the reasons.
 - **The atlas in figures**: `GET /api/v1/library/atlas/coverage` answers, by
   country, how many registered names there are, how many are described in the
   reader's language and in all eight, how each is placed on the map, and how
-  many name their grapes. The page that shows it comes next.
+  many name their grapes — and a page shows it: Library → Atlas → «The atlas
+  in figures», each country's bars growing as the page arrives (still, where
+  the system asks for reduced motion).
 - **Where your cellar lies**: the statistics add `wines.regionPlaces`, each
   counted region that is a registered name with its point in the atlas — for
   the map of the cellar that comes next. A response cached before reads as

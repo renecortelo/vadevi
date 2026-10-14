@@ -365,6 +365,7 @@ export type LibraryRegion = z.infer<typeof LibraryRegionSchema>;
 export type LibraryGrape = z.infer<typeof LibraryGrapeSchema>;
 export type LibraryGrapeResponse = z.infer<typeof LibraryGrapeResponseSchema>;
 export type LibrarySearchResponse = z.infer<typeof LibrarySearchResponseSchema>;
+export type LibraryAtlasCoverageResponse = z.infer<typeof LibraryAtlasCoverageResponseSchema>;
 
 /** Registered names by id, as the register writes them. */
 export const LibraryRegionNamesQuerySchema = z

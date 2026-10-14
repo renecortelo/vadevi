@@ -71,6 +71,9 @@ const StatsPage = lazy(() =>
 const LibraryTopicPage = lazy(() =>
   import("./pages/LibraryTopicPage").then((module) => ({ default: module.LibraryTopicPage })),
 );
+const LibraryAtlasPage = lazy(() =>
+  import("./pages/LibraryAtlasPage").then((module) => ({ default: module.LibraryAtlasPage })),
+);
 const LibraryRegionPage = lazy(() =>
   import("./pages/LibraryRegionPage").then((module) => ({ default: module.LibraryRegionPage })),
 );
@@ -231,6 +234,14 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="library/grape"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <LibraryAtlasPage />
+              </DeferredPage>
+            }
+            path="library/atlas"
           />
           <Route
             element={

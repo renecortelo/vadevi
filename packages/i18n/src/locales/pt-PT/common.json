@@ -310,7 +310,21 @@
     "mapBoundaryAu": "Dentro do seu limite oficial, tal como a Wine Australia o traça.",
     "summaryTranslated": "traduzido do artigo original",
     "summaryTranslatedDocument": "traduzido da língua do documento",
-    "backTo": "Voltar a {{name}}"
+    "backTo": "Voltar a {{name}}",
+    "coverage": {
+      "link": "O atlas em números",
+      "title": "O atlas em números",
+      "intro": "O que a biblioteca sabe dos nomes de vinho registados de cada país: quantos descreve na sua língua, quantos estão no mapa e quantos indicam as suas castas.",
+      "described": "Descritos",
+      "onMap": "No mapa",
+      "grapes": "Com castas",
+      "total_one": "{{names}} nome em {{countries}} países.",
+      "total_other": "{{names}} nomes em {{countries}} países.",
+      "names_one": "{{names}} nome",
+      "names_other": "{{names}} nomes",
+      "approximate_one": "Dos quais {{names}} situado de forma aproximada.",
+      "approximate_other": "Dos quais {{names}} situados de forma aproximada."
+    }
   },
   "space": {
     "switchLabel": "Espaço ativo",

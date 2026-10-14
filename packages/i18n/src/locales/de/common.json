@@ -310,7 +310,21 @@
     "mapBoundaryAu": "Innerhalb seiner amtlichen Grenze, wie Wine Australia sie zieht.",
     "summaryTranslated": "aus dem Originalartikel übersetzt",
     "summaryTranslatedDocument": "aus der Sprache des Dokuments übersetzt",
-    "backTo": "Zurück zu {{name}}"
+    "backTo": "Zurück zu {{name}}",
+    "coverage": {
+      "link": "Der Atlas in Zahlen",
+      "title": "Der Atlas in Zahlen",
+      "intro": "Was die Bibliothek über die eingetragenen Weinnamen jedes Landes weiß: wie viele sie in Ihrer Sprache beschreibt, wie viele auf der Karte stehen und wie viele ihre Rebsorten nennen.",
+      "described": "Beschrieben",
+      "onMap": "Auf der Karte",
+      "grapes": "Mit Rebsorten",
+      "total_one": "{{names}} Name in {{countries}} Ländern.",
+      "total_other": "{{names}} Namen in {{countries}} Ländern.",
+      "names_one": "{{names}} Name",
+      "names_other": "{{names}} Namen",
+      "approximate_one": "Davon {{names}} ungefähr verortet.",
+      "approximate_other": "Davon {{names}} ungefähr verortet."
+    }
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

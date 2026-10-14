@@ -310,7 +310,21 @@
     "mapBoundaryAu": "Dins del seu límit oficial, tal com el traça Wine Australia.",
     "summaryTranslated": "traduït de l'article original",
     "summaryTranslatedDocument": "traduït de la llengua del document",
-    "backTo": "Tornar a {{name}}"
+    "backTo": "Tornar a {{name}}",
+    "coverage": {
+      "link": "L'atles en xifres",
+      "title": "L'atles en xifres",
+      "intro": "El que la biblioteca sap dels noms de vi registrats de cada país: quants en descriu en la teva llengua, quants són al mapa i quants en diuen els raïms.",
+      "described": "Descrits",
+      "onMap": "Al mapa",
+      "grapes": "Amb raïms",
+      "total_one": "{{names}} nom en {{countries}} països.",
+      "total_other": "{{names}} noms en {{countries}} països.",
+      "names_one": "{{names}} nom",
+      "names_other": "{{names}} noms",
+      "approximate_one": "{{names}} d'ells situat de manera aproximada.",
+      "approximate_other": "{{names}} d'ells situats de manera aproximada."
+    }
   },
   "space": {
     "switchLabel": "Espai actiu",

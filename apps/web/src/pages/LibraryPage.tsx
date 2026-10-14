@@ -225,6 +225,9 @@ function RegionFilters({ locale, search, update }: FilterProps) {
           ))}
         </select>
       </label>
+      <Link className="text-link" to="/library/atlas">
+        {t("library.coverage.link")}
+      </Link>
     </>
   );
 }

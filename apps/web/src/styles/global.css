@@ -4776,6 +4776,28 @@ p {
   overflow: hidden;
 }
 
+/* The atlas in figures: each bar grows to its share as the page arrives. */
+.atlas-coverage__country h2 {
+  font-size: var(--text-lg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .atlas-coverage .stats-bars__track > span {
+    animation: atlas-coverage-grow 600ms ease-out both;
+    transform-origin: left center;
+  }
+
+  [dir="rtl"] .atlas-coverage .stats-bars__track > span {
+    transform-origin: right center;
+  }
+}
+
+@keyframes atlas-coverage-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
 .stats-bars__track > span {
   background: var(--color-accent);
   border-radius: inherit;

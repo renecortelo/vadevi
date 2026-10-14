@@ -1,4 +1,6 @@
 import {
+  type LibraryAtlasCoverageResponse,
+  LibraryAtlasCoverageResponseSchema,
   type LibraryGrape,
   LibraryGrapeResponseSchema,
   type LibraryRegion,
@@ -112,6 +114,21 @@ export async function listLibraryRegions(
   );
   if (!response.ok) throw await apiError(response);
   return LibraryRegionSearchResponseSchema.parse(await response.json()).data;
+}
+
+/** The atlas in figures: what the library knows of each country's names. */
+export async function getLibraryAtlasCoverage(
+  tokenSource: TokenSource,
+  locale: SupportedLocale,
+  signal?: AbortSignal,
+): Promise<LibraryAtlasCoverageResponse["data"]> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/library/atlas/coverage?locale=${encodeURIComponent(locale)}`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return LibraryAtlasCoverageResponseSchema.parse(await response.json()).data;
 }
 
 /** Every style and method, explained in the reader's language. */
