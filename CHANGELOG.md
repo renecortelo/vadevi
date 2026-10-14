@@ -15,6 +15,10 @@ has the reasons.
   country, how many registered names there are, how many are described in the
   reader's language and in all eight, how each is placed on the map, and how
   many name their grapes. The page that shows it comes next.
+- **Where your cellar lies**: the statistics add `wines.regionPlaces`, each
+  counted region that is a registered name with its point in the atlas — for
+  the map of the cellar that comes next. A response cached before reads as
+  none.
 
 ### The atlas
 

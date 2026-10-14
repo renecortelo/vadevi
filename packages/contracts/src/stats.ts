@@ -148,6 +148,27 @@ export const WineStatsSchema = z
         byGrape: z.array(BucketSchema),
         byRegion: z.array(BucketSchema),
         byType: z.array(BucketSchema),
+        /**
+         * The regions of `byRegion` that are registered names with a point
+         * in the atlas: where each lies, for a map of the cellar.
+         */
+        regionPlaces: z
+          .array(
+            z
+              .object({
+                count: CountSchema,
+                countryCode: z.string(),
+                key: z.string(),
+                latitude: z.number(),
+                longitude: z.number(),
+                /** "area" and "place" are approximate; "boundary" lies inside it. */
+                pointSource: z.enum(["area", "boundary", "item", "place"]),
+                regionId: z.string(),
+              })
+              .strict(),
+          )
+          // A response cached before it was answered reads as none.
+          .default([]),
         /** Wines recorded without a country, placed by what their region says. */
         countriesInferred: CountSchema,
         total: CountSchema,

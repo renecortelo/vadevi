@@ -28,6 +28,8 @@ type Scope = Readonly<{
   canonicalRegions: string;
   /** Each grape name recorded, as one name (see `readGrapes`): JSON, recorded → name. */
   canonicalGrapes: string;
+  /** Each region read as a registered name, as that name → the atlas's id. */
+  regionRefs: Readonly<Record<string, string>>;
   /** The rows counted are the reader's own (personal), or everyone's (space). */
   ownerId: string | null;
   spaceIds: readonly string[];
@@ -58,7 +60,9 @@ async function placesIn(
   database: D1Database,
   spaceIds: readonly string[],
   locale: string,
-): Promise<Pick<Scope, "canonicalGrapes" | "canonicalRegions" | "inferredCountries">> {
+): Promise<
+  Pick<Scope, "canonicalGrapes" | "canonicalRegions" | "inferredCountries" | "regionRefs">
+> {
   const wines = await database
     .prepare(
       `SELECT id, region, country_code FROM wine_records
@@ -77,10 +81,12 @@ async function placesIn(
   );
   const countries: Record<string, string> = {};
   const regions: Record<string, string> = {};
+  const regionRefs: Record<string, string> = {};
   for (const wine of wines.results) {
     const reading = readings.get(wine.id);
     if (wine.country_code === null && reading?.country) countries[wine.id] = reading.country;
     if (reading?.region) regions[wine.id] = reading.region;
+    if (reading?.region && reading.regionRef) regionRefs[reading.region] = reading.regionRef;
   }
   const grapeRows = await database
     .prepare(
@@ -99,7 +105,55 @@ async function placesIn(
     canonicalGrapes: JSON.stringify(Object.fromEntries(grapes)),
     canonicalRegions: JSON.stringify(regions),
     inferredCountries: JSON.stringify(countries),
+    regionRefs,
   };
+}
+
+/**
+ * Where the counted regions lie: each one that is a registered name, with the
+ * atlas's point for it and where that point comes from. A region the atlas
+ * holds no point for is left out, as is one that is no registered name.
+ */
+async function regionPlaces(
+  database: D1Database,
+  regions: readonly { count: number; key: string }[],
+  scope: Scope,
+) {
+  const wanted = regions.flatMap((region) => {
+    const regionId = scope.regionRefs[region.key];
+    return regionId === undefined ? [] : [{ ...region, regionId }];
+  });
+  if (wanted.length === 0) return [];
+  const points = await database
+    .prepare(
+      `SELECT id, country_code, latitude, longitude, point_source FROM kb_regions
+      WHERE id IN (SELECT value FROM json_each(?)) AND latitude IS NOT NULL`,
+    )
+    .bind(JSON.stringify(wanted.map((region) => region.regionId)))
+    .all<{
+      country_code: string;
+      id: string;
+      latitude: number;
+      longitude: number;
+      point_source: "area" | "boundary" | "item" | "place" | null;
+    }>();
+  const byId = new Map(points.results.map((row) => [row.id, row]));
+  return wanted.flatMap((region) => {
+    const point = byId.get(region.regionId);
+    return point === undefined
+      ? []
+      : [
+          {
+            count: region.count,
+            countryCode: point.country_code,
+            key: region.key,
+            latitude: point.latitude,
+            longitude: point.longitude,
+            pointSource: point.point_source ?? "item",
+            regionId: region.regionId,
+          },
+        ];
+  });
 }
 
 function spaceFilter(alias: string, scope: Scope): Filter {
@@ -602,6 +656,7 @@ async function computeStats(
       byGrape: buckets(wineGrapes),
       byRegion: buckets(wineRegions),
       byType: buckets(wineTypes),
+      regionPlaces: await regionPlaces(database, buckets(wineRegions), scope),
       countriesInferred: rows<{ inferred: number | null }>(wineTotal)[0]?.inferred ?? 0,
       total: rows<{ total: number }>(wineTotal)[0]?.total ?? 0,
     },

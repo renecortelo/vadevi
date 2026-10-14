@@ -203,8 +203,9 @@ describe("a reader's numbers", () => {
     // The register's name for it, as the library holds it.
     await env.DB.batch([
       env.DB.prepare(
-        `INSERT OR IGNORE INTO kb_regions (id, eambrosia_id, name, country_code, gi_type)
-          VALUES ('es-castilla-stats', 'PGI-ES-STATS', 'Castilla', 'ES', 'PGI')`,
+        `INSERT OR IGNORE INTO kb_regions
+          (id, eambrosia_id, name, country_code, gi_type, latitude, longitude, point_source)
+          VALUES ('es-castilla-stats', 'PGI-ES-STATS', 'Castilla', 'ES', 'PGI', 39.9, -3.0, 'area')`,
       ),
       env.DB.prepare(
         `INSERT OR IGNORE INTO kb_names
@@ -225,6 +226,19 @@ describe("a reader's numbers", () => {
     // under the register's own ("D. O. Tierra de Castilla" is Castilla).
     expect(placed.wines.byRegion).toContainEqual({ count: 3, key: "Empordà" });
     expect(placed.wines.byRegion).toContainEqual({ count: 1, key: "Castilla" });
+    // Where the cellar's registered names lie, for its map; Empordà is no
+    // registered name here, and is left out.
+    expect(placed.wines.regionPlaces).toEqual([
+      {
+        count: 1,
+        countryCode: "ES",
+        key: "Castilla",
+        latitude: 39.9,
+        longitude: -3.0,
+        pointSource: "area",
+        regionId: "es-castilla-stats",
+      },
+    ]);
     const emporda = WineStatsResponseSchema.parse(
       (await stats(ownerToken, `/api/v1/me/stats?region=${encodeURIComponent("Empordà")}`)).body,
     ).data;

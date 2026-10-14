@@ -12637,6 +12637,53 @@
                   "additionalProperties": false
                 }
               },
+              "regionPlaces": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "countryCode": {
+                      "type": "string"
+                    },
+                    "key": {
+                      "type": "string"
+                    },
+                    "latitude": {
+                      "type": "number"
+                    },
+                    "longitude": {
+                      "type": "number"
+                    },
+                    "pointSource": {
+                      "type": "string",
+                      "enum": [
+                        "area",
+                        "boundary",
+                        "item",
+                        "place"
+                      ]
+                    },
+                    "regionId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "countryCode",
+                    "key",
+                    "latitude",
+                    "longitude",
+                    "pointSource",
+                    "regionId"
+                  ],
+                  "additionalProperties": false
+                },
+                "default": []
+              },
               "countriesInferred": {
                 "type": "integer",
                 "minimum": 0
