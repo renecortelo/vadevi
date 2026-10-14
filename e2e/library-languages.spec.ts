@@ -1,3 +1,4 @@
+import AxeBuilder from "@axe-core/playwright";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
@@ -265,4 +266,29 @@ test("a British wine name cites the UK register", async ({ page }) => {
     "In the UK register of protected food and drink names",
   );
   await expect(page.locator('a[href*="gov.uk/protected-food-drink-names"]')).toBeVisible();
+});
+
+test("the atlas in figures counts each country's names and leads to its list", async ({ page }) => {
+  const atlas = read<{ countryCode: string }[]>("data/kb/appellations.json");
+  const southAfrica = atlas.filter((entry) => entry.countryCode === "ZA").length;
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/atlas");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("The atlas in figures", { timeout: 15_000 });
+  const country = page.locator("article.atlas-coverage__country", {
+    has: page.getByRole("link", { name: /South Africa/ }),
+  });
+  await expect(country).toContainText(`${southAfrica} names`);
+  await expect(country.getByText("On the map")).toBeVisible();
+  const results = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+    .analyze();
+  expect(
+    results.violations
+      .filter((violation) => violation.impact === "serious" || violation.impact === "critical")
+      .map((violation) => `${violation.id} (${violation.impact}): ${violation.help}`),
+  ).toEqual([]);
+  await country.getByRole("link", { name: /South Africa/ }).click();
+  await expect(page).toHaveURL(/tab=regions&country=ZA/);
 });
