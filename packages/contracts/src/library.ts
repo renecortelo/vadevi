@@ -279,6 +279,48 @@ export const LibraryRegionSearchResponseSchema = z
   .strict()
   .openapi("LibraryRegionSearchResponse");
 
+export const LibraryAtlasCoverageQuerySchema = z
+  .object({ locale: SupportedLocaleSchema.default("en") })
+  .strict();
+
+/**
+ * How much the atlas knows of each country: its registered names, how many
+ * are described in the reader's language and in all eight, how each is placed
+ * on the map, and how many name their grapes.
+ */
+export const LibraryAtlasCoverageResponseSchema = z
+  .object({
+    data: z
+      .object({
+        countries: z.array(
+          z
+            .object({
+              countryCode: z.string(),
+              described: z.number().int().nonnegative(),
+              describedInEveryLanguage: z.number().int().nonnegative(),
+              names: z.number().int().positive(),
+              /** By where the point comes from; `none` is a name not on the map. */
+              points: z
+                .object({
+                  area: z.number().int().nonnegative(),
+                  boundary: z.number().int().nonnegative(),
+                  item: z.number().int().nonnegative(),
+                  none: z.number().int().nonnegative(),
+                  place: z.number().int().nonnegative(),
+                })
+                .strict(),
+              withGrapes: z.number().int().nonnegative(),
+            })
+            .strict(),
+        ),
+        /** The library build the figures describe. */
+        libraryVersion: z.string().nullable(),
+      })
+      .strict(),
+  })
+  .strict()
+  .openapi("LibraryAtlasCoverageResponse");
+
 /**
  * A style or a method: a kind of wine, a way of growing or making it, or a
  * concept, explained from its Wikipedia article in the reader's language.

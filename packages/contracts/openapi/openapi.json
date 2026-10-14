@@ -11651,6 +11651,99 @@
         ],
         "additionalProperties": false
       },
+      "LibraryAtlasCoverageResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "countries": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "countryCode": {
+                      "type": "string"
+                    },
+                    "described": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "describedInEveryLanguage": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "names": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "exclusiveMinimum": true
+                    },
+                    "points": {
+                      "type": "object",
+                      "properties": {
+                        "area": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "boundary": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "item": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "none": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "place": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "required": [
+                        "area",
+                        "boundary",
+                        "item",
+                        "none",
+                        "place"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "withGrapes": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "countryCode",
+                    "described",
+                    "describedInEveryLanguage",
+                    "names",
+                    "points",
+                    "withGrapes"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "libraryVersion": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "required": [
+              "countries",
+              "libraryVersion"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
       "LibraryGrapeResponse": {
         "type": "object",
         "properties": {
@@ -20205,6 +20298,63 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/LibraryRegionSearchResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/atlas/coverage": {
+      "get": {
+        "operationId": "getLibraryAtlasCoverage",
+        "tags": [
+          "Library"
+        ],
+        "summary": "The atlas in figures: what the library knows of each country's names",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "es",
+                "ca",
+                "fr",
+                "en",
+                "nl",
+                "pt-PT",
+                "it",
+                "de"
+              ],
+              "default": "en"
+            },
+            "required": false,
+            "name": "locale",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Each country's names, described, placed and with grapes; most names first.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryAtlasCoverageResponse"
                 }
               }
             }

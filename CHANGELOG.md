@@ -11,6 +11,10 @@ has the reasons.
 - **Keeping the registers current**: the routine is in `data/kb/README.md`,
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh
   added, dropped or changed in the atlas before it is committed.
+- **The atlas in figures**: `GET /api/v1/library/atlas/coverage` answers, by
+  country, how many registered names there are, how many are described in the
+  reader's language and in all eight, how each is placed on the map, and how
+  many name their grapes. The page that shows it comes next.
 
 ### The atlas
 

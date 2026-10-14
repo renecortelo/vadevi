@@ -362,6 +362,65 @@ export async function regionsMentionedIn(database: D1Database, message: string):
 }
 
 /** A registered wine name, best known first, by any of its names. */
+/**
+ * The atlas in figures, country by country: what the library knows of each
+ * country's registered names in the reader's language and in all eight. A
+ * point without a recorded source is counted as the wine's own item, the
+ * oldest way the EU atlas was placed.
+ */
+export async function libraryAtlasCoverage(database: D1Database, locale: string) {
+  const [version, rows] = await database.batch([
+    database.prepare(`SELECT value FROM kb_meta WHERE key = 'version'`),
+    database
+      .prepare(
+        `SELECT region.country_code AS country, COUNT(*) AS names,
+          SUM(EXISTS (SELECT 1 FROM kb_summaries summary WHERE summary.entity_type = 'region'
+            AND summary.entity_id = region.id AND summary.locale = ?)) AS described,
+          SUM((SELECT COUNT(DISTINCT summary.locale) FROM kb_summaries summary
+            WHERE summary.entity_type = 'region' AND summary.entity_id = region.id
+              AND summary.locale IN (SELECT value FROM json_each(?))) = ?) AS every_language,
+          SUM(region.latitude IS NULL) AS no_point,
+          SUM(region.latitude IS NOT NULL AND region.point_source = 'boundary') AS boundary,
+          SUM(region.latitude IS NOT NULL AND coalesce(region.point_source, 'item') = 'item') AS item,
+          SUM(region.latitude IS NOT NULL AND region.point_source = 'place') AS place,
+          SUM(region.latitude IS NOT NULL AND region.point_source = 'area') AS area,
+          SUM(EXISTS (SELECT 1 FROM kb_region_grapes link WHERE link.region_id = region.id))
+            AS with_grapes
+        FROM kb_regions region GROUP BY region.country_code ORDER BY names DESC, country`,
+      )
+      .bind(locale, JSON.stringify(fallbackOrder), fallbackOrder.length),
+  ]);
+  type Row = {
+    area: number;
+    boundary: number;
+    country: string;
+    described: number;
+    every_language: number;
+    item: number;
+    names: number;
+    no_point: number;
+    place: number;
+    with_grapes: number;
+  };
+  return {
+    countries: (rows!.results as Row[]).map((row) => ({
+      countryCode: row.country,
+      described: row.described,
+      describedInEveryLanguage: row.every_language,
+      names: row.names,
+      points: {
+        area: row.area,
+        boundary: row.boundary,
+        item: row.item,
+        none: row.no_point,
+        place: row.place,
+      },
+      withGrapes: row.with_grapes,
+    })),
+    libraryVersion: (version!.results[0] as { value: string } | undefined)?.value ?? null,
+  };
+}
+
 export async function searchLibraryRegions(
   database: D1Database,
   query: string | undefined,

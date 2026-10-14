@@ -1,6 +1,8 @@
 import { createRoute, type OpenAPIHono } from "@hono/zod-openapi";
 import {
   ErrorEnvelopeSchema,
+  LibraryAtlasCoverageQuerySchema,
+  LibraryAtlasCoverageResponseSchema,
   LibraryGrapePathSchema,
   LibraryGrapeQuerySchema,
   LibraryGrapeResponseSchema,
@@ -22,6 +24,7 @@ import {
   getLibraryRegion,
   libraryRegionNames,
   getLibraryTopic,
+  libraryAtlasCoverage,
   listLibraryTopics,
   searchLibraryGrapes,
   searchLibraryRegions,
@@ -128,6 +131,26 @@ const regionSearchRoute = createRoute({
     200: {
       content: { "application/json": { schema: LibraryRegionSearchResponseSchema } },
       description: "Matching names, best known first.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+  },
+});
+
+const atlasCoverageRoute = createRoute({
+  method: "get",
+  path: "/api/v1/library/atlas/coverage",
+  operationId: "getLibraryAtlasCoverage",
+  tags: ["Library"],
+  summary: "The atlas in figures: what the library knows of each country's names",
+  security: [{ FirebaseBearer: [] }],
+  request: { query: LibraryAtlasCoverageQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: LibraryAtlasCoverageResponseSchema } },
+      description: "Each country's names, described, placed and with grapes; most names first.",
     },
     401: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
@@ -244,6 +267,11 @@ export function registerLibraryRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const { country, query } = context.req.valid("query");
     const data = await searchLibraryRegions(context.env.DB!, query, country ?? null);
     return context.json(LibraryRegionSearchResponseSchema.parse({ data }), 200);
+  });
+
+  app.openapi(atlasCoverageRoute, async (context) => {
+    const data = await libraryAtlasCoverage(context.env.DB!, context.req.valid("query").locale);
+    return context.json(LibraryAtlasCoverageResponseSchema.parse({ data }), 200);
   });
 
   app.openapi(grapeRoute, async (context) => {

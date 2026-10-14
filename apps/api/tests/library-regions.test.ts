@@ -1,6 +1,7 @@
 import type { AssistantLanguageStatement } from "@vadevi/domain";
 import {
   BootstrapResponseSchema,
+  LibraryAtlasCoverageResponseSchema,
   LibraryGrapeResponseSchema,
   LibraryRegionResponseSchema,
   LibraryRegionSearchResponseSchema,
@@ -203,6 +204,45 @@ const token = emulatorIdToken({ email: "atlas@example.test", name: "Reader", sub
 const headers = { Authorization: `Bearer ${token}` };
 
 describe("the wine atlas", () => {
+  it("counts each country's names, described, placed and with grapes", async () => {
+    await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers });
+    const response = await SELF.fetch(
+      "https://vadevi.test/api/v1/library/atlas/coverage?locale=en",
+      { headers },
+    );
+    expect(response.status).toBe(200);
+    const { data } = LibraryAtlasCoverageResponseSchema.parse(await response.json());
+    expect(data.libraryVersion).toBe("test");
+    const seeded = [rioja, jerez, priorat, westernCape, stellenbosch, banghoek, marlborough, maipo];
+    for (const country of new Set(seeded.map((entry) => entry.countryCode))) {
+      const entries = seeded.filter((entry) => entry.countryCode === country);
+      const placed = (source: string) =>
+        entries.filter(
+          (entry) =>
+            entry.latitude !== null &&
+            ((entry as { pointSource?: string | null }).pointSource ?? "item") === source,
+        ).length;
+      expect(data.countries.find((row) => row.countryCode === country)).toEqual({
+        countryCode: country,
+        described: entries.filter((entry) => "en" in entry.summaries).length,
+        describedInEveryLanguage: entries.filter(
+          (entry) => Object.keys(entry.summaries).length === 8,
+        ).length,
+        names: entries.length,
+        points: {
+          area: placed("area"),
+          boundary: placed("boundary"),
+          item: placed("item"),
+          none: entries.filter((entry) => entry.latitude === null).length,
+          place: placed("place"),
+        },
+        withGrapes: entries.filter((entry) =>
+          entry.grapes.some((link) => link.grapeId === grape.id),
+        ).length,
+      });
+    }
+  });
+
   it("answers a registered name's entry, its summary in the reader's language and its grapes", async () => {
     await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers });
     const response = await SELF.fetch(
