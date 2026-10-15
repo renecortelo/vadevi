@@ -1,4 +1,5 @@
 import { expect, test } from "./fixtures/server";
+import { completeOnboarding, signIn } from "./fixtures/sign-in";
 
 /**
  * §14.1 requires responsive layouts from 320 CSS px upward. This project runs
@@ -19,6 +20,20 @@ test.describe("320 CSS px layout", () => {
       expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.clientWidth + 1);
     });
   }
+
+  test("has no horizontal overflow on the atlas in figures, signed in", async ({ page }) => {
+    await signIn(page);
+    await completeOnboarding(page);
+    await page.goto("/library/atlas");
+    await expect(page.locator("article.atlas-coverage__country").first()).toBeVisible({
+      timeout: 15_000,
+    });
+    const overflow = await page.evaluate(() => ({
+      clientWidth: document.documentElement.clientWidth,
+      scrollWidth: document.documentElement.scrollWidth,
+    }));
+    expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.clientWidth + 1);
+  });
 
   test("keeps every interactive control inside the viewport", async ({ page }) => {
     await page.goto("/");
