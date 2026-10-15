@@ -26,7 +26,8 @@ has the reasons.
 
 - **The cellar book moves like a dashboard**: its figures count up to their
   value as the page arrives, and its bars — scores, answers, countries,
-  regions, grapes, months — grow one row after another, and slide from old to
+  regions, grapes, months — grow one row after another as the reader reaches
+  them, and slide from old to
   new when a filter changes them. Screen readers read the value itself; with
   reduced motion, nothing moves.
 - **Pages change smoothly**: moving between the main sections, or from the

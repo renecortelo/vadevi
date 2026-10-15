@@ -11,6 +11,7 @@ import { trailFrom } from "../library/trail";
 import { useSession } from "../session/SessionContext";
 import { WineLink } from "../components/WineLink";
 import { CountUp } from "../motion/CountUp";
+import { useArrival } from "../motion/useArrival";
 import { getStats, type StatsPeriod } from "../services/stats";
 
 /** The name the server gives every personal Space when it is created. */
@@ -40,8 +41,9 @@ function Bars({
   items: { count: number; label: string; onSelect?: (() => void) | undefined }[];
 }) {
   const largest = Math.max(1, ...items.map((item) => item.count));
+  const arrival = useArrival<HTMLUListElement>();
   return (
-    <ul className="stats-bars">
+    <ul className="stats-bars" {...arrival}>
       {items.map((item, index) => (
         <li key={item.label} style={{ "--motion-index": index } as CSSProperties}>
           {item.onSelect === undefined ? (
@@ -70,8 +72,9 @@ function SplitBar({
   parts: { count: number; key: "no" | "unsure" | "yes"; label: string }[];
 }) {
   const total = parts.reduce((sum, part) => sum + part.count, 0);
+  const arrival = useArrival<HTMLElement>();
   return (
-    <figure className="stats-split">
+    <figure className="stats-split" {...arrival}>
       <figcaption>{label}</figcaption>
       {total === 0 ? (
         <p className="section-help">—</p>
@@ -118,8 +121,9 @@ function Meter({
   shown: string;
   value: number;
 }) {
+  const arrival = useArrival<HTMLElement>();
   return (
-    <figure className="stats-split">
+    <figure className="stats-split" {...arrival}>
       <figcaption>{label}</figcaption>
       <div aria-hidden="true" className="stats-split__bar">
         <span

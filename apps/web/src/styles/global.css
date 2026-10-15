@@ -4843,6 +4843,13 @@ p {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  /* Below the fold, a block waits at nothing until the reader reaches it. */
+  [data-arrival="waiting"] .stats-bars__track > span,
+  [data-arrival="waiting"] .stats-split__bar > span {
+    animation: none;
+    transform: scaleX(0);
+  }
+
   .stats-bars__track > span,
   .stats-split__bar > span {
     animation: stats-bar-grow var(--motion-slow) both;
