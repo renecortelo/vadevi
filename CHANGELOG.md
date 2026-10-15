@@ -31,7 +31,8 @@ has the reasons.
   reduced motion, nothing moves.
 - **Pages change smoothly**: moving between the main sections fades the page
   out and lets the next rise in while the menu stays still — where the
-  browser can, and never with reduced motion.
+  browser can, and never with reduced motion. Disclosures unfold to their
+  height and fold away instead of jumping open.
 - **More of South Africa on the map**: Vredendal, Koekenaap and Still Bay are
   placed at their town (Still Bay was some 140 km off), and with them Olifants
   River and the names inside it, approximately; in Argentina, Chapadmalal and

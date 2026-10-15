@@ -4815,6 +4815,27 @@ p {
   }
 }
 
+/* Opening and closing a disclosure: its content unfolds to its own height and
+   folds away, instead of appearing in one jump. Browsers without
+   `::details-content` or `interpolate-size` open it at once, as before. */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  details::details-content {
+    block-size: 0;
+    overflow-y: clip;
+    transition:
+      block-size var(--motion-medium),
+      content-visibility var(--motion-medium) allow-discrete;
+  }
+
+  details[open]::details-content {
+    block-size: auto;
+  }
+}
+
 /* A row's place in its list, set by the page; it staggers the rows. */
 .stats-bars li,
 .stats-split__bar > span {
