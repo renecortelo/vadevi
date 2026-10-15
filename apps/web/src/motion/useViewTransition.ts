@@ -5,8 +5,11 @@ import { type NavigateOptions, useNavigate } from "react-router";
 import { motionWelcome } from "./motion";
 
 type ViewTransitionDocument = Document & {
-  startViewTransition?: (update: () => void) => unknown;
+  startViewTransition?: (update: () => void) => { finished: Promise<void> };
 };
+
+/** The name the touched link and the new page's title share, to travel. */
+const travelling = "focus-title";
 
 /**
  * A link's click that changes page as one cross-fade instead of a cut: the
@@ -33,6 +36,20 @@ export function useViewTransition() {
       return;
     }
     event.preventDefault();
-    transitions.startViewTransition(() => flushSync(() => navigate(to, options)));
+    // What was touched travels to the new page's title: named before the old
+    // view is captured, and the title named once the new one is in place.
+    const link = event.currentTarget;
+    link.style.viewTransitionName = travelling;
+    let title: HTMLElement | null = null;
+    const transition = transitions.startViewTransition(() => {
+      flushSync(() => navigate(to, options));
+      link.style.viewTransitionName = "";
+      title = document.querySelector<HTMLElement>("#main-content h1");
+      if (title !== null) title.style.viewTransitionName = travelling;
+    });
+    void transition.finished.finally(() => {
+      link.style.viewTransitionName = "";
+      if (title !== null) title.style.viewTransitionName = "";
+    });
   };
 }

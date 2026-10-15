@@ -4871,6 +4871,31 @@ p {
     view-transition-name: page;
   }
 
+  /* The shell never moves: the top bar and the icon bar are their own
+     still layers, and the rest of the page does not cross-fade — only the
+     content changes, and an icon turns active as it always has. */
+  .topbar {
+    view-transition-name: topbar;
+  }
+
+  .primary-nav {
+    view-transition-name: primary-nav;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-group(topbar),
+  ::view-transition-new(topbar),
+  ::view-transition-group(primary-nav),
+  ::view-transition-new(primary-nav) {
+    animation: none;
+  }
+
+  ::view-transition-old(topbar),
+  ::view-transition-old(primary-nav) {
+    display: none;
+  }
+
   ::view-transition-old(page) {
     animation: page-leave var(--motion-fast) both;
   }

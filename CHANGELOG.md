@@ -36,7 +36,8 @@ has the reasons.
   library's lists to a grape, a registered name or a style, or from Memory,
   sessions and notes to a wine,
   fades the page
-  out and lets the next rise in while the menu stays still — where the
+  out and lets the next rise in, the title you touched travelling to the
+  new page's, while the top bar and the icon bar stay still — where the
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
