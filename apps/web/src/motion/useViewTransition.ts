@@ -1,6 +1,6 @@
 import type { MouseEvent } from "react";
 import { flushSync } from "react-dom";
-import { useNavigate } from "react-router";
+import { type NavigateOptions, useNavigate } from "react-router";
 
 import { motionWelcome } from "./motion";
 
@@ -18,7 +18,7 @@ type ViewTransitionDocument = Document & {
  */
 export function useViewTransition() {
   const navigate = useNavigate();
-  return (to: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+  return (to: string, options?: NavigateOptions) => (event: MouseEvent<HTMLAnchorElement>) => {
     const transitions = document as ViewTransitionDocument;
     if (
       event.defaultPrevented ||
@@ -33,6 +33,6 @@ export function useViewTransition() {
       return;
     }
     event.preventDefault();
-    transitions.startViewTransition(() => flushSync(() => navigate(to)));
+    transitions.startViewTransition(() => flushSync(() => navigate(to, options)));
   };
 }

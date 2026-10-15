@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Link, useNavigate } from "react-router";
 
+import { useViewTransition } from "../motion/useViewTransition";
 import { useSession } from "../session/SessionContext";
 
 /**
@@ -19,12 +20,14 @@ export function WineLink({
 }) {
   const { bootstrap, updateProfile } = useSession();
   const navigate = useNavigate();
+  const transition = useViewTransition();
   const here = bootstrap.data.user.activeSpaceId === wine.spaceId;
   return (
     <Link
       className="text-link"
       onClick={(event) => {
-        if (here) return;
+        // In this Space: the page changes as one smooth transition.
+        if (here) return transition(`/wines/${wine.wineId}/evidence`, { state })(event);
         event.preventDefault();
         void (async () => {
           await updateProfile({ activeSpaceId: wine.spaceId });
