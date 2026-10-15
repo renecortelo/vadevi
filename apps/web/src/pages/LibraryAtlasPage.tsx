@@ -5,7 +5,9 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { CoverageMap } from "../library/CoverageMap";
 import { flagOf } from "../library/flag";
+import { motionWelcome } from "../motion/motion";
 import { getLibraryAtlasCoverage } from "../services/library";
 
 type Coverage = LibraryAtlasCoverageResponse["data"];
@@ -96,8 +98,20 @@ export function LibraryAtlasPage() {
               names: number.format(all),
             })}
           </p>
+          <CoverageMap
+            countries={countries}
+            onSelect={(code) =>
+              document
+                .getElementById(`coverage-${code}`)
+                ?.scrollIntoView({ behavior: motionWelcome() ? "smooth" : "auto", block: "start" })
+            }
+          />
           {countries.map((country) => (
-            <article className="atlas-coverage__country" key={country.countryCode}>
+            <article
+              className="atlas-coverage__country"
+              id={`coverage-${country.countryCode}`}
+              key={country.countryCode}
+            >
               <h2>
                 <Link
                   className="text-link"

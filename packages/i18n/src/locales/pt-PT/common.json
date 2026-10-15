@@ -323,7 +323,16 @@
       "names_one": "{{names}} nome",
       "names_other": "{{names}} nomes",
       "approximate_one": "Dos quais {{names}} situado de forma aproximada.",
-      "approximate_other": "Dos quais {{names}} situados de forma aproximada."
+      "approximate_other": "Dos quais {{names}} situados de forma aproximada.",
+      "sheets": "Mapa",
+      "mapLabel": "Nomes de vinho registados por país",
+      "sheet": {
+        "europe": "Europa",
+        "america": "América do Norte",
+        "southAmerica": "América do Sul",
+        "oceania": "Oceânia",
+        "africa": "África Austral"
+      }
     }
   },
   "space": {

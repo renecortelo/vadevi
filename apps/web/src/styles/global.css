@@ -4777,6 +4777,34 @@ p {
 }
 
 /* The atlas in figures. */
+.coverage-map .segmented-control {
+  margin-block-end: var(--space-2);
+}
+
+/* A country of the atlas, darker with more names (`--share`, set by the map). */
+.coverage-map__held {
+  --share: 50%;
+  cursor: pointer;
+  fill: color-mix(in oklab, var(--color-plum) var(--share), var(--color-surface-raised));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .coverage-map svg {
+    animation: page-arrive var(--motion-medium) both;
+  }
+
+  .coverage-map__held {
+    animation: coverage-shade var(--motion-slow) both;
+    animation-delay: calc(var(--motion-index) * 35ms);
+  }
+}
+
+@keyframes coverage-shade {
+  from {
+    fill: var(--color-surface-raised);
+  }
+}
+
 .atlas-coverage__country h2 {
   font-size: var(--text-lg);
 }
@@ -4838,7 +4866,8 @@ p {
 
 /* A row's place in its list, set by the page; it staggers the rows. */
 .stats-bars li,
-.stats-split__bar > span {
+.stats-split__bar > span,
+.coverage-map__held {
   --motion-index: 0;
 }
 

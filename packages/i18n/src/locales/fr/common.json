@@ -323,7 +323,16 @@
       "names_one": "{{names}} nom",
       "names_other": "{{names}} noms",
       "approximate_one": "Dont {{names}} placé de façon approximative.",
-      "approximate_other": "Dont {{names}} placés de façon approximative."
+      "approximate_other": "Dont {{names}} placés de façon approximative.",
+      "sheets": "Carte",
+      "mapLabel": "Noms de vin enregistrés par pays",
+      "sheet": {
+        "europe": "Europe",
+        "america": "Amérique du Nord",
+        "southAmerica": "Amérique du Sud",
+        "oceania": "Océanie",
+        "africa": "Afrique australe"
+      }
     }
   },
   "space": {

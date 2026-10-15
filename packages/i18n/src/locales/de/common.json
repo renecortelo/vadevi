@@ -323,7 +323,16 @@
       "names_one": "{{names}} Name",
       "names_other": "{{names}} Namen",
       "approximate_one": "Davon {{names}} ungefähr verortet.",
-      "approximate_other": "Davon {{names}} ungefähr verortet."
+      "approximate_other": "Davon {{names}} ungefähr verortet.",
+      "sheets": "Karte",
+      "mapLabel": "Eingetragene Weinnamen nach Land",
+      "sheet": {
+        "europe": "Europa",
+        "america": "Nordamerika",
+        "southAmerica": "Südamerika",
+        "oceania": "Ozeanien",
+        "africa": "Südliches Afrika"
+      }
     }
   },
   "space": {

@@ -323,7 +323,16 @@
       "names_one": "{{names}} naam",
       "names_other": "{{names}} namen",
       "approximate_one": "Waarvan {{names}} bij benadering geplaatst.",
-      "approximate_other": "Waarvan {{names}} bij benadering geplaatst."
+      "approximate_other": "Waarvan {{names}} bij benadering geplaatst.",
+      "sheets": "Kaart",
+      "mapLabel": "Geregistreerde wijnnamen per land",
+      "sheet": {
+        "europe": "Europa",
+        "america": "Noord-Amerika",
+        "southAmerica": "Zuid-Amerika",
+        "oceania": "Oceanië",
+        "africa": "Zuidelijk Afrika"
+      }
     }
   },
   "space": {

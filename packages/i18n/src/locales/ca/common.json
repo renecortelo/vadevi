@@ -323,7 +323,16 @@
       "names_one": "{{names}} nom",
       "names_other": "{{names}} noms",
       "approximate_one": "{{names}} d'ells situat de manera aproximada.",
-      "approximate_other": "{{names}} d'ells situats de manera aproximada."
+      "approximate_other": "{{names}} d'ells situats de manera aproximada.",
+      "sheets": "Mapa",
+      "mapLabel": "Noms de vi registrats per país",
+      "sheet": {
+        "europe": "Europa",
+        "america": "Amèrica del Nord",
+        "southAmerica": "Amèrica del Sud",
+        "oceania": "Oceania",
+        "africa": "Àfrica austral"
+      }
     }
   },
   "space": {

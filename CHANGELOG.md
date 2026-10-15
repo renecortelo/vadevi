@@ -15,7 +15,8 @@ has the reasons.
   country, how many registered names there are, how many are described in the
   reader's language and in all eight, how each is placed on the map, and how
   many name their grapes — and a page shows it: Library → Atlas → «The atlas
-  in figures», each country's bars growing as the page arrives (still, where
+  in figures», a map shading each country by its names (touch one for its
+  figures), and each country's bars growing as the page arrives (still, where
   the system asks for reduced motion).
 - **Where your cellar lies**: the statistics add `wines.regionPlaces`, each
   counted region that is a registered name with its point in the atlas — for
