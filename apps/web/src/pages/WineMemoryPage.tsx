@@ -21,6 +21,7 @@ import { mergeWines } from "../services/data-rights";
 import { EditWineDialog } from "../components/EditWineDialog";
 import { useLibraryNames } from "../library/names";
 import { useSession } from "../session/SessionContext";
+import { SmoothLink } from "../motion/SmoothLink";
 
 function normalize(value: string): string {
   return value
@@ -918,9 +919,9 @@ export function WineMemoryPage() {
                 {/* The name is the card's obvious click target: it opens the
                     wine's evidence, so reaching it takes no hunting for a link. */}
                 <h2>
-                  <Link className="wine-card__title-link" to={`/wines/${wine.id}/evidence`}>
+                  <SmoothLink className="wine-card__title-link" to={`/wines/${wine.id}/evidence`}>
                     {wine.displayName}
-                  </Link>
+                  </SmoothLink>
                 </h2>
                 {/* Vintage, type and region on one line — what a shelf label says. */}
                 <p className="wine-card__meta">
@@ -1044,12 +1045,12 @@ export function WineMemoryPage() {
                   <td>{wine.noteCount}</td>
                   <td>
                     <div className="table-actions">
-                      <Link className="text-link" to={`/wines/${wine.id}/evidence`}>
+                      <SmoothLink className="text-link" to={`/wines/${wine.id}/evidence`}>
                         {t("evidence.openAction")}
-                      </Link>
-                      <Link className="text-link" to={`/wines/${wine.id}/taste`}>
+                      </SmoothLink>
+                      <SmoothLink className="text-link" to={`/wines/${wine.id}/taste`}>
                         {t("tasting.startAction")}
-                      </Link>
+                      </SmoothLink>
                     </div>
                   </td>
                 </tr>
@@ -1086,12 +1087,12 @@ export function WineMemoryPage() {
                     </span>
                   </div>
                   <div className="table-actions">
-                    <Link className="text-link" to={`/wines/${wine.id}/evidence`}>
+                    <SmoothLink className="text-link" to={`/wines/${wine.id}/evidence`}>
                       {t("evidence.openAction")}
-                    </Link>
-                    <Link className="text-link" to={`/wines/${wine.id}/taste`}>
+                    </SmoothLink>
+                    <SmoothLink className="text-link" to={`/wines/${wine.id}/taste`}>
                       {t("tasting.startAction")}
-                    </Link>
+                    </SmoothLink>
                   </div>
                 </li>
               );
@@ -1209,9 +1210,9 @@ export function WineMemoryPage() {
                 </time>
                 <h2>{session.name}</h2>
                 <p>{t("sessions.wineCount", { count: session.wineCount })}</p>
-                <Link className="text-link" to={`/sessions/${session.id}`}>
+                <SmoothLink className="text-link" to={`/sessions/${session.id}`}>
                   {t("sessions.openAction")}
-                </Link>
+                </SmoothLink>
               </article>
             ))}
           </div>

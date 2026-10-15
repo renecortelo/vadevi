@@ -33,7 +33,8 @@ has the reasons.
   new when a filter changes them. Screen readers read the value itself; with
   reduced motion, nothing moves.
 - **Pages change smoothly**: moving between the main sections, or from the
-  library's lists to a grape, a registered name or a style, or to any wine,
+  library's lists to a grape, a registered name or a style, or from Memory,
+  sessions and notes to a wine,
   fades the page
   out and lets the next rise in while the menu stays still — where the
   browser can, and never with reduced motion. Disclosures unfold to their

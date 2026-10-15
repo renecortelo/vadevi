@@ -10,6 +10,7 @@ import { sessionsChangedEvent } from "../offline/events";
 import { cacheSessionList } from "../offline/phase3";
 import { listTastingSessions } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
+import { SmoothLink } from "../motion/SmoothLink";
 
 type SessionSummary = TastingSessionResponse["data"];
 
@@ -130,9 +131,12 @@ export function SessionsPage() {
                 {t("sessions.wineCount", { count: session.wineCount })} ·{" "}
                 {t("sessions.submissionCount", { count: session.submittedNoteCount })}
               </p>
-              <Link className="action-link action-link--secondary" to={`/sessions/${session.id}`}>
+              <SmoothLink
+                className="action-link action-link--secondary"
+                to={`/sessions/${session.id}`}
+              >
                 {t("sessions.openAction")}
-              </Link>
+              </SmoothLink>
             </article>
           ))}
         </div>

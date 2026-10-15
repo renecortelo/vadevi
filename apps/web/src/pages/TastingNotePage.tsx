@@ -8,6 +8,7 @@ import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "../components/MapLink";
 import { getDeepTastingNote } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
+import { SmoothLink } from "../motion/SmoothLink";
 
 /**
  * A tasting you already wrote, to read.
@@ -85,9 +86,9 @@ export function TastingNotePage() {
       <div className="empty-state">
         <h2>{t("tastingRead.missingTitle")}</h2>
         <p>{t("tastingRead.missingBody")}</p>
-        <Link className="action-link action-link--primary" to={`/wines/${wineId}/evidence`}>
+        <SmoothLink className="action-link action-link--primary" to={`/wines/${wineId}/evidence`}>
           {t("evidence.openAction")}
-        </Link>
+        </SmoothLink>
       </div>
     );
   }
@@ -115,9 +116,9 @@ export function TastingNotePage() {
             </p>
           )}
         </div>
-        <Link className="text-link" to={`/wines/${wineId}/evidence`}>
+        <SmoothLink className="text-link" to={`/wines/${wineId}/evidence`}>
           {t("tastingRead.backAction")}
-        </Link>
+        </SmoothLink>
       </header>
 
       <div className="tasting-read__score">

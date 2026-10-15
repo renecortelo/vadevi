@@ -21,6 +21,7 @@ import { createUlid } from "../security/ulid";
 import { createAssistantTurn } from "../services/assistant";
 import { cancelActionDraft, confirmActionDraft, createActionDraft } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
+import { SmoothLink } from "../motion/SmoothLink";
 
 /** The chat lives on the device for a quarter hour, then clears itself. */
 const chatStorageKey = "vadevi.vicenc.chat.v1";
@@ -226,9 +227,9 @@ export function AssistantResult({
             <p className="assistant-context__summary">
               {Array.isArray(summary.value) ? summary.value.join(", ") : String(summary.value)}
             </p>
-            <Link className="text-link" to={`/wines/${context.wineId}/evidence`}>
+            <SmoothLink className="text-link" to={`/wines/${context.wineId}/evidence`}>
               {t("assistant.openEvidence")}
-            </Link>
+            </SmoothLink>
           </details>
         );
       })()}
