@@ -110,6 +110,8 @@
   --shadow-card: 0 18px 50px rgb(139 17 22 / 9%);
   --motion-fast: 160ms ease;
   --motion-medium: 280ms ease;
+  /* Figures arriving on a dashboard: a longer ease that settles gently. */
+  --motion-slow: 600ms cubic-bezier(0.2, 0, 0, 1);
 }
 
 /* Dark theme.

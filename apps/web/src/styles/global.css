@@ -4783,7 +4783,7 @@ p {
 
 @media (prefers-reduced-motion: no-preference) {
   .atlas-coverage .stats-bars__track > span {
-    animation: atlas-coverage-grow 600ms ease-out both;
+    animation: atlas-coverage-grow var(--motion-slow) both;
     transform-origin: left center;
   }
 
