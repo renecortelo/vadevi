@@ -38,7 +38,8 @@ has the reasons.
   fades the page
   out and lets the next rise in while the menu stays still — where the
   browser can, and never with reduced motion. Disclosures unfold to their
-  height and fold away instead of jumping open.
+  height and fold away instead of jumping open, and a card's tastings arrive
+  the way a page does.
 - **More of South Africa on the map**: Vredendal, Koekenaap and Still Bay are
   placed at their town (Still Bay was some 140 km off), and with them Olifants
   River and the names inside it, approximately; in Argentina, Chapadmalal and

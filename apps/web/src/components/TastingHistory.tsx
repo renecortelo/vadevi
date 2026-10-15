@@ -109,7 +109,7 @@ export function TastingHistory({
         <h2 id="tasting-history">{t("evidence.historyTitle")}</h2>
       )}
       {open ? (
-        <>
+        <div className="tasting-history__panel">
           {tastings === null ? (
             <p className="section-help">{t("evidence.historyLoading")}</p>
           ) : (
@@ -122,7 +122,7 @@ export function TastingHistory({
               {known === 0 ? t("evidence.firstTasting") : t("evidence.anotherTasting")}
             </Link>
           )}
-        </>
+        </div>
       ) : null}
     </section>
   );

@@ -4180,6 +4180,13 @@ p {
   margin-block-start: var(--space-3);
 }
 
+/* What opens below the toggle keeps the same spacing as the section. */
+.tasting-history__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
 .tasting-history__toggle {
   align-self: flex-start;
 }
@@ -4904,6 +4911,14 @@ p {
 
   details[open]::details-content {
     block-size: auto;
+  }
+}
+
+/* A panel that opens below its toggle (a card's tastings) arrives the way a
+   page does, instead of appearing in one jump. */
+@media (prefers-reduced-motion: no-preference) {
+  .tasting-history__panel {
+    animation: page-arrive var(--motion-medium) both;
   }
 }
 
