@@ -4785,6 +4785,36 @@ p {
    its share as the page arrives, one row a moment after the other, and moves
    from its old share to its new one when a filter changes it. Still, where
    the system asks for reduced motion. */
+/* Changing page from the primary navigation: the page's content fades out
+   and the new one rises in, the shell staying still (see
+   `motion/useViewTransition.ts`). Browsers without the API change at once. */
+@media (prefers-reduced-motion: no-preference) {
+  .main-content {
+    view-transition-name: page;
+  }
+
+  ::view-transition-old(page) {
+    animation: page-leave var(--motion-fast) both;
+  }
+
+  ::view-transition-new(page) {
+    animation: page-arrive var(--motion-medium) both;
+  }
+}
+
+@keyframes page-leave {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
 /* A row's place in its list, set by the page; it staggers the rows. */
 .stats-bars li,
 .stats-split__bar > span {

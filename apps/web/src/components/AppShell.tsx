@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation, useNavigate, useNavigationType } from "react-router";
 import { useTranslation } from "react-i18next";
 
+import { useViewTransition } from "../motion/useViewTransition";
 import { useSession } from "../session/SessionContext";
 
 type SpaceOption = BootstrapResponse["data"]["spaces"][number];
@@ -44,6 +45,7 @@ const defaultPersonalName = "Personal space";
 export function AppShell() {
   const { bootstrap, isUpdating, signOut, updateProfile } = useSession();
   const { t } = useTranslation();
+  const transition = useViewTransition();
   const navigate = useNavigate();
   // A new page opens at its top. It used to keep the last page's scroll, so a
   // wine opened from far down a list opened halfway down, its way back out of
@@ -141,6 +143,7 @@ export function AppShell() {
             className={({ isActive }) => `nav-link${isActive ? " nav-link--active" : ""}`}
             end={item.end}
             key={item.key}
+            onClick={transition(item.to)}
             to={item.to}
           >
             <item.Icon />

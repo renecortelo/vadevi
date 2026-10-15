@@ -29,6 +29,9 @@ has the reasons.
   regions, grapes, months — grow one row after another, and slide from old to
   new when a filter changes them. Screen readers read the value itself; with
   reduced motion, nothing moves.
+- **Pages change smoothly**: moving between the main sections fades the page
+  out and lets the next rise in while the menu stays still — where the
+  browser can, and never with reduced motion.
 - **More of South Africa on the map**: Vredendal, Koekenaap and Still Bay are
   placed at their town (Still Bay was some 140 km off), and with them Olifants
   River and the names inside it, approximately; in Argentina, Chapadmalal and
