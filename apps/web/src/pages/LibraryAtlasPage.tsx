@@ -76,7 +76,7 @@ export function LibraryAtlasPage() {
         <p role="alert">{t("library.error")}</p>
       ) : (
         <>
-          <ul className="stats-bars atlas-coverage">
+          <ul className="stats-bars">
             <Measure
               label={t("library.coverage.described")}
               of={all}
@@ -113,7 +113,7 @@ export function LibraryAtlasPage() {
                   })}
                 </span>
               </h2>
-              <ul className="stats-bars atlas-coverage">
+              <ul className="stats-bars">
                 <Measure
                   label={t("library.coverage.described")}
                   of={country.names}

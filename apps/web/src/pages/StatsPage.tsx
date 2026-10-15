@@ -1,6 +1,6 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { type CurrencyCode, fromMinorUnits, type WineStats } from "@vadevi/contracts";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 import { Link, useSearchParams } from "react-router";
@@ -10,6 +10,7 @@ import { CountryIcon, GrapeVarietyIcon, RegionIcon, WineTypeIcon } from "../bran
 import { trailFrom } from "../library/trail";
 import { useSession } from "../session/SessionContext";
 import { WineLink } from "../components/WineLink";
+import { CountUp } from "../motion/CountUp";
 import { getStats, type StatsPeriod } from "../services/stats";
 
 /** The name the server gives every personal Space when it is created. */
@@ -41,8 +42,8 @@ function Bars({
   const largest = Math.max(1, ...items.map((item) => item.count));
   return (
     <ul className="stats-bars">
-      {items.map((item) => (
-        <li key={item.label}>
+      {items.map((item, index) => (
+        <li key={item.label} style={{ "--motion-index": index } as CSSProperties}>
           {item.onSelect === undefined ? (
             <span className="stats-bars__label">{item.label}</span>
           ) : (
@@ -77,12 +78,17 @@ function SplitBar({
       ) : (
         <>
           <div aria-hidden="true" className="stats-split__bar">
-            {parts.map((part) =>
+            {parts.map((part, index) =>
               part.count === 0 ? null : (
                 <span
                   data-answer={part.key}
                   key={part.key}
-                  style={{ inlineSize: `${(part.count / total) * 100}%` }}
+                  style={
+                    {
+                      "--motion-index": index,
+                      inlineSize: `${(part.count / total) * 100}%`,
+                    } as CSSProperties
+                  }
                 />
               ),
             )}
@@ -316,20 +322,19 @@ export function StatsPage() {
       ) : (
         <>
           <dl className="stats-tiles">
-            {[
-              ["wines", number(stats.wines.total)],
-              ["tastings", number(stats.tastings.total)],
+            {(
               [
-                "averageScore",
-                stats.tastings.averageScore === null ? "—" : number(stats.tastings.averageScore),
-              ],
-              ["atOrAbove90", number(stats.tastings.atOrAbove90)],
-              ["inCellar", number(stats.cellar.owned)],
-              ["wishlist", number(stats.wishlist.active)],
-            ].map(([key, value]) => (
+                ["wines", stats.wines.total],
+                ["tastings", stats.tastings.total],
+                ["averageScore", stats.tastings.averageScore],
+                ["atOrAbove90", stats.tastings.atOrAbove90],
+                ["inCellar", stats.cellar.owned],
+                ["wishlist", stats.wishlist.active],
+              ] as const
+            ).map(([key, value]) => (
               <div key={key}>
                 <dt>{t(`stats.tile.${key}`)}</dt>
-                <dd>{value}</dd>
+                <dd>{value === null ? "—" : <CountUp format={number} value={value} />}</dd>
               </div>
             ))}
           </dl>

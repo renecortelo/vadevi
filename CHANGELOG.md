@@ -24,6 +24,11 @@ has the reasons.
 
 ### The atlas
 
+- **The cellar book moves like a dashboard**: its figures count up to their
+  value as the page arrives, and its bars — scores, answers, countries,
+  regions, grapes, months — grow one row after another, and slide from old to
+  new when a filter changes them. Screen readers read the value itself; with
+  reduced motion, nothing moves.
 - **More of South Africa on the map**: Vredendal, Koekenaap and Still Bay are
   placed at their town (Still Bay was some 140 km off), and with them Olifants
   River and the names inside it, approximately; in Argentina, Chapadmalal and
