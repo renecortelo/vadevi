@@ -29,7 +29,8 @@ has the reasons.
   regions, grapes, months — grow one row after another, and slide from old to
   new when a filter changes them. Screen readers read the value itself; with
   reduced motion, nothing moves.
-- **Pages change smoothly**: moving between the main sections fades the page
+- **Pages change smoothly**: moving between the main sections, or from the
+  library's lists to a grape, a registered name or a style, fades the page
   out and lets the next rise in while the menu stays still — where the
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open.

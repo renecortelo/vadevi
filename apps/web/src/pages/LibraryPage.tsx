@@ -8,6 +8,7 @@ import { useAuth } from "../auth/AuthContext";
 import { GrapesIcon } from "../brand/NavIcons";
 import { designationKey } from "../library/designation";
 import { flagOf } from "../library/flag";
+import { useViewTransition } from "../motion/useViewTransition";
 import { listLibraryGrapes, listLibraryRegions, listLibraryTopics } from "../services/library";
 
 type Tab = "grapes" | "regions" | "topics";
@@ -192,6 +193,7 @@ function GrapeFilters({ search, update }: FilterProps) {
 
 function RegionFilters({ locale, search, update }: FilterProps) {
   const { i18n, t } = useTranslation();
+  const transition = useViewTransition();
   const names = new Intl.DisplayNames([i18n.language], { type: "region" });
   const countries = atlasCountries
     .map((code) => ({ code, name: names.of(code) ?? code }))
@@ -225,7 +227,7 @@ function RegionFilters({ locale, search, update }: FilterProps) {
           ))}
         </select>
       </label>
-      <Link className="text-link" to="/library/atlas">
+      <Link className="text-link" onClick={transition("/library/atlas")} to="/library/atlas">
         {t("library.coverage.link")}
       </Link>
     </>
@@ -268,6 +270,7 @@ function GrapeGallery({
   search: URLSearchParams;
 }) {
   const { i18n, t } = useTranslation();
+  const transition = useViewTransition();
   const { user } = useAuth();
   const state = useList<LibrarySearchResponse["data"][number]>(
     `grapes:${locale}:${user?.uid ?? ""}`,
@@ -294,7 +297,10 @@ function GrapeGallery({
       <ul className="library-gallery">
         {shown.map((grape) => (
           <li key={grape.id}>
-            <Link to={`/library/grapes/${grape.id}`}>
+            <Link
+              onClick={transition(`/library/grapes/${grape.id}`)}
+              to={`/library/grapes/${grape.id}`}
+            >
               {grape.imagePath === null ? (
                 <span aria-hidden="true" className="library-gallery__placeholder">
                   <GrapesIcon />
@@ -332,6 +338,7 @@ function RegionList({
   search: URLSearchParams;
 }) {
   const { t } = useTranslation();
+  const transition = useViewTransition();
   const { user } = useAuth();
   const state = useList(`regions:${country}:${user?.uid ?? ""}`, (signal) =>
     user === null ? Promise.resolve([]) : listLibraryRegions(user, country, signal),
@@ -353,7 +360,10 @@ function RegionList({
       <ul className="library-rows">
         {shown.map((region) => (
           <li key={region.id}>
-            <Link to={`/library/regions/${region.id}`}>
+            <Link
+              onClick={transition(`/library/regions/${region.id}`)}
+              to={`/library/regions/${region.id}`}
+            >
               <span aria-hidden="true">{flagOf(region.countryCode)}</span>
               <strong>{region.name}</strong>
               <span className="library-rows__type">{t(designationKey(region.giType, true))}</span>
@@ -368,6 +378,7 @@ function RegionList({
 
 function TopicList({ locale, query }: { locale: string; query: string }) {
   const { t } = useTranslation();
+  const transition = useViewTransition();
   const { user } = useAuth();
   const state = useList<LibraryTopic>(`topics:${locale}:${user?.uid ?? ""}`, (signal) =>
     user === null
@@ -398,7 +409,11 @@ function TopicList({ locale, query }: { locale: string; query: string }) {
               {inCategory.map((topic) => (
                 <li className="settings-card" key={topic.id}>
                   <h3>
-                    <Link className="text-link" to={`/library/topics/${topic.id}`}>
+                    <Link
+                      className="text-link"
+                      onClick={transition(`/library/topics/${topic.id}`)}
+                      to={`/library/topics/${topic.id}`}
+                    >
                       {topic.name}
                     </Link>
                   </h3>
