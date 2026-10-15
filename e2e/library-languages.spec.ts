@@ -292,3 +292,18 @@ test("the atlas in figures counts each country's names and leads to its list", a
   await country.getByRole("link", { name: /South Africa/ }).click();
   await expect(page).toHaveURL(/tab=regions&country=ZA/);
 });
+
+test("figures move only for a reader who welcomes motion", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  const bar = page.locator(".stats-bars__track > span").first();
+  const animation = () => bar.evaluate((element) => getComputedStyle(element).animationName);
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/library/atlas");
+  await expect(bar).toBeAttached({ timeout: 15_000 });
+  expect(await animation()).toBe("none");
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.reload();
+  await expect(bar).toBeAttached({ timeout: 15_000 });
+  expect(await animation()).toBe("stats-bar-grow");
+});
