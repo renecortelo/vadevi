@@ -1544,7 +1544,13 @@
     "memorableMark": "Denkwürdig",
     "countriesInferred_one": "{{count}} Wein hat kein erfasstes Land; es ergibt sich aus der Region.",
     "countriesInferred_other": "{{count}} Weine haben kein erfasstes Land; es ergibt sich aus der Region.",
-    "tasteLink": "Ihr Geschmacksprofil ansehen"
+    "tasteLink": "Ihr Geschmacksprofil ansehen",
+    "cellarMap": {
+      "label": "Woher Ihre Weine kommen",
+      "point_one": "{{name}}: {{wines}} Wein",
+      "point_other": "{{name}}: {{wines}} Weine",
+      "caption": "Ein Punkt für jeden eingetragenen Namen, aus dem Ihre Weine stammen, größer mit mehr Weinen; hohl, wo der Atlas ihn nur ungefähr verortet. Tippen Sie darauf, um ihn zu öffnen."
+    }
   },
   "taste": {
     "eyebrow": "Ihr Geschmack",

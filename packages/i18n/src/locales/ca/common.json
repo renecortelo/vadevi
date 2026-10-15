@@ -1544,7 +1544,13 @@
     "memorableMark": "Memorable",
     "countriesInferred_one": "{{count}} vi no té país registrat; es dedueix de la seva regió.",
     "countriesInferred_other": "{{count}} vins no tenen país registrat; es dedueix de la seva regió.",
-    "tasteLink": "Veure el teu perfil de gust"
+    "tasteLink": "Veure el teu perfil de gust",
+    "cellarMap": {
+      "label": "D'on vénen els teus vins",
+      "point_one": "{{name}}: {{wines}} vi",
+      "point_other": "{{name}}: {{wines}} vins",
+      "caption": "Un punt per cada nom registrat d'on vénen els teus vins, més gran com més vins; buit on l'atles el situa de manera aproximada. Toca'l per obrir-lo."
+    }
   },
   "taste": {
     "eyebrow": "El teu gust",

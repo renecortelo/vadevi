@@ -18,10 +18,11 @@ has the reasons.
   in figures», a map shading each country by its names (touch one for its
   figures), and each country's bars growing as the page arrives (still, where
   the system asks for reduced motion).
-- **Where your cellar lies**: the statistics add `wines.regionPlaces`, each
-  counted region that is a registered name with its point in the atlas — for
-  the map of the cellar that comes next. A response cached before reads as
-  none.
+- **Your cellar on the map**: the cellar book's regions come with a map — a
+  point for each registered name your wines are from, larger with more wines,
+  hollow where the atlas places it approximately; each opens the name in the
+  atlas. The statistics add `wines.regionPlaces` for it (a response cached
+  before reads as none).
 
 ### The atlas
 

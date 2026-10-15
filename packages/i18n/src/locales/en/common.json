@@ -1544,7 +1544,13 @@
     "memorableMark": "Memorable",
     "countriesInferred_one": "{{count}} wine has no country recorded; its region says which.",
     "countriesInferred_other": "{{count}} wines have no country recorded; their region says which.",
-    "tasteLink": "See your taste profile"
+    "tasteLink": "See your taste profile",
+    "cellarMap": {
+      "label": "Where your wines come from",
+      "point_one": "{{name}}: {{wines}} wine",
+      "point_other": "{{name}}: {{wines}} wines",
+      "caption": "A point for each registered name your wines come from, larger with more wines; hollow where the atlas places it approximately. Touch one to open it."
+    }
   },
   "taste": {
     "eyebrow": "Your taste",

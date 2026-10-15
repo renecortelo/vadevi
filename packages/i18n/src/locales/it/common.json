@@ -1544,7 +1544,13 @@
     "memorableMark": "Memorabile",
     "countriesInferred_one": "{{count}} vino non ha un paese registrato; lo si deduce dalla regione.",
     "countriesInferred_other": "{{count}} vini non hanno un paese registrato; lo si deduce dalla regione.",
-    "tasteLink": "Vedi il tuo profilo di gusto"
+    "tasteLink": "Vedi il tuo profilo di gusto",
+    "cellarMap": {
+      "label": "Da dove vengono i tuoi vini",
+      "point_one": "{{name}}: {{wines}} vino",
+      "point_other": "{{name}}: {{wines}} vini",
+      "caption": "Un punto per ogni nome registrato da cui vengono i tuoi vini, più grande con più vini; vuoto dove l'atlante lo colloca in modo approssimativo. Toccalo per aprirlo."
+    }
   },
   "taste": {
     "eyebrow": "Il tuo gusto",

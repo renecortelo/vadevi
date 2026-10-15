@@ -10,6 +10,7 @@ import { CountryIcon, GrapeVarietyIcon, RegionIcon, WineTypeIcon } from "../bran
 import { trailFrom } from "../library/trail";
 import { useSession } from "../session/SessionContext";
 import { WineLink } from "../components/WineLink";
+import { CellarMap } from "../library/CellarMap";
 import { CountUp } from "../motion/CountUp";
 import { useArrival } from "../motion/useArrival";
 import { getStats, type StatsPeriod } from "../services/stats";
@@ -445,6 +446,9 @@ export function StatsPage() {
               {stats.wines.byRegion.length === 0 ? null : (
                 <div className="stats-group">
                   <GroupTitle icon={<RegionIcon />}>{t("stats.byRegion")}</GroupTitle>
+                  {stats.wines.regionPlaces.length === 0 ? null : (
+                    <CellarMap places={stats.wines.regionPlaces} />
+                  )}
                   <Bars
                     items={stats.wines.byRegion.map((row) => ({
                       count: row.count,

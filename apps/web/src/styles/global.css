@@ -4776,6 +4776,49 @@ p {
   overflow: hidden;
 }
 
+/* The cellar on the map: its countries, and a point per registered name. */
+.cellar-map .library-map__country.is-held {
+  fill: color-mix(in oklab, var(--color-plum) 18%, var(--color-surface-raised));
+}
+
+.cellar-map__point {
+  --motion-index: 0;
+  fill: var(--color-plum);
+  fill-opacity: 0.85;
+  stroke: var(--color-surface-raised);
+}
+
+/* Placed approximately (an area, a place of the name): drawn hollow. */
+.cellar-map__point.is-approximate {
+  fill: var(--color-surface-raised);
+  fill-opacity: 1;
+  stroke: var(--color-plum);
+}
+
+.cellar-map a:focus-visible .cellar-map__point {
+  stroke: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cellar-map svg {
+    animation: page-arrive var(--motion-medium) both;
+  }
+
+  .cellar-map__point {
+    animation: cellar-point-arrive var(--motion-slow) both;
+    animation-delay: calc(var(--motion-index) * 45ms);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+}
+
+@keyframes cellar-point-arrive {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
+
 /* The atlas in figures. */
 .coverage-map .segmented-control {
   margin-block-end: var(--space-2);
