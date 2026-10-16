@@ -1307,7 +1307,8 @@
       "price_lookups": "Preisabfrage",
       "research_lookups": "Externe Recherche",
       "websearch_calls": "Websuche",
-      "ocr_reads": "Etikett-Lesungen"
+      "ocr_reads": "Etikett-Lesungen",
+      "voice_transcriptions": "Sprachtranskriptionen"
     },
     "navAction": "Daten und Datenschutz",
     "noticeMedia": "Fotos werden auf deinem Gerät verkleinert und von ihrem Standort befreit, bevor sie gespeichert werden; nur Mitglieder des Bereichs können sie sehen.",

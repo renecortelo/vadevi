@@ -9,6 +9,7 @@ export type UsageMetric =
   | "ocr_reads"
   | "price_lookups"
   | "research_lookups"
+  | "voice_transcriptions"
   | "websearch_calls";
 
 /**
@@ -36,7 +37,13 @@ export type UsageMetric =
  *   The deployment cap is what bounds the cost; the member cap only shares it.
  * - `ocr_reads` at 80/day: ~45 Neurons a read on the 11b vision model → ~3,600.
  *
- * That is ~9,100 of 10,000. Tighter than it looks, because the per-call figures
+ * - `voice_transcriptions` at 15/day: ~47 Neurons a minute of audio on
+ *   `@cf/openai/whisper-large-v3-turbo` (about $0.0005 a minute), and a
+ *   recording is at most two minutes → up to ~1,400. Voice tastings are
+ *   planned and off (`STT_PROVIDER=none`); enabling them means making room
+ *   here first, because the two above already take most of the pool.
+ *
+ * That is ~9,100 of 10,000 without voice. Tighter than it looks, because the per-call figures
  * are already rounded up from measured token counts.
  *
  * `ai_language_calls` is drawn on by more than the assistant: rewriting the
@@ -73,6 +80,7 @@ export const dailyBudgets = {
   ocr_reads: { global: 80, user: 20 },
   price_lookups: { global: 500, user: 60 },
   research_lookups: { global: 300, user: 40 },
+  voice_transcriptions: { global: 15, user: 5 },
   websearch_calls: { global: 25, user: 10 },
 } as const satisfies Record<UsageMetric, Budget>;
 

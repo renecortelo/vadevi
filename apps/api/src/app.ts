@@ -34,6 +34,7 @@ import { registerStatsRoutes } from "./routes/stats";
 import { registerResearchRoutes } from "./routes/research";
 import { registerSpaceRoutes } from "./routes/spaces";
 import { registerTastingSessionRoutes } from "./routes/tasting-sessions";
+import { registerVoiceRoutes } from "./routes/voice";
 import { registerWineMemoryRoutes } from "./routes/wine-memory";
 import type { ApiEnvironment } from "./types";
 
@@ -388,6 +389,7 @@ export function createApi() {
   registerCellarRoutes(app);
   registerWineMemoryRoutes(app);
   registerTastingSessionRoutes(app);
+  registerVoiceRoutes(app);
   registerMapTileRoutes(app);
   registerPlaceRoutes(app);
   registerProvenanceRoutes(app);

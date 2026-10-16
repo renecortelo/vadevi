@@ -1307,7 +1307,8 @@
       "price_lookups": "Recherche de prix",
       "research_lookups": "Recherche externe",
       "websearch_calls": "Recherche sur le web ouvert",
-      "ocr_reads": "Lectures d’étiquette"
+      "ocr_reads": "Lectures d’étiquette",
+      "voice_transcriptions": "Transcriptions vocales"
     },
     "navAction": "Données et confidentialité",
     "noticeMedia": "Les photos sont redimensionnées et leur localisation retirée sur votre appareil avant l'enregistrement ; seuls les membres de l'Espace peuvent les voir.",

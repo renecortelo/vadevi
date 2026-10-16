@@ -1307,7 +1307,8 @@
       "price_lookups": "Prijzen opzoeken",
       "research_lookups": "Extern onderzoek",
       "websearch_calls": "Zoeken op het open web",
-      "ocr_reads": "Etiketlezingen"
+      "ocr_reads": "Etiketlezingen",
+      "voice_transcriptions": "Spraaktranscripties"
     },
     "navAction": "Gegevens en privacy",
     "noticeMedia": "Foto's worden op je apparaat verkleind en van hun locatie ontdaan voordat ze worden bewaard, en alleen leden van de Ruimte kunnen ze zien.",

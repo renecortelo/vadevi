@@ -1307,7 +1307,8 @@
       "price_lookups": "Ricerca prezzi",
       "research_lookups": "Ricerca esterna",
       "websearch_calls": "Ricerca sul web aperto",
-      "ocr_reads": "Letture di etichetta"
+      "ocr_reads": "Letture di etichetta",
+      "voice_transcriptions": "Trascrizioni vocali"
     },
     "navAction": "Dati e privacy",
     "noticeMedia": "Le foto vengono ridimensionate e private della posizione sul tuo dispositivo prima di essere salvate, e solo i membri dello Spazio possono vederle.",

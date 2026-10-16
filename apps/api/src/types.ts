@@ -30,6 +30,8 @@ export type WorkerBindings = {
   APP_ENV?: "local" | "preview" | "production";
   APP_VERSION?: string;
   AI_PROVIDER?: "none" | "cloudflare";
+  /** Voice tastings' speech to text; off unless the privacy review is approved. */
+  STT_PROVIDER?: "none" | "cloudflare";
   EXTERNAL_API_USER_AGENT?: string;
   FIREBASE_AUTH_EMULATOR_HOST?: string;
   FIREBASE_AUTH_DOMAIN?: string;

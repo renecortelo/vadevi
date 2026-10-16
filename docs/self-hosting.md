@@ -367,6 +367,7 @@ across the deployment:
 | Metric                                               | Per member | Whole deployment |
 | ---------------------------------------------------- | ---------- | ---------------- |
 | Label reads (OCR)                                    | 20         | 80               |
+| Voice tastings (speech to text; planned)             | 5          | 15               |
 | Vicenç, narrative and evidence translation (AI text) | 40         | 60               |
 | Open-web search (Brave)                              | 10         | 25               |
 | Research lookups (Wikidata, OFF, venues)             | 40         | 300              |

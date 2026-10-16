@@ -1307,7 +1307,8 @@
       "price_lookups": "Price lookup",
       "research_lookups": "External research",
       "websearch_calls": "Open-web search",
-      "ocr_reads": "Label reads"
+      "ocr_reads": "Label reads",
+      "voice_transcriptions": "Voice transcriptions"
     },
     "navAction": "Data and privacy",
     "noticeMedia": "Photos are resized and their location removed on your device before they are saved, and only members of the Space can see them.",

@@ -1676,7 +1676,8 @@
                         "barcode_lookups",
                         "price_lookups",
                         "ocr_reads",
-                        "websearch_calls"
+                        "websearch_calls",
+                        "voice_transcriptions"
                       ]
                     },
                     "status": {
@@ -9886,6 +9887,77 @@
         },
         "required": [
           "version"
+        ],
+        "additionalProperties": false
+      },
+      "VoiceTranscribeResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "language": {
+                "type": "string",
+                "nullable": true
+              },
+              "seconds": {
+                "type": "number",
+                "nullable": true,
+                "minimum": 0
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "language",
+              "seconds",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "VoiceTranscribeRequest": {
+        "type": "object",
+        "properties": {
+          "audio": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000000,
+            "pattern": "^[A-Za-z0-9+/]+={0,2}$"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "es",
+              "ca",
+              "fr",
+              "en",
+              "nl",
+              "pt-PT",
+              "it",
+              "de"
+            ]
+          },
+          "mimeType": {
+            "type": "string",
+            "enum": [
+              "audio/webm",
+              "audio/mp4",
+              "audio/ogg",
+              "audio/wav"
+            ]
+          }
+        },
+        "required": [
+          "audio",
+          "locale",
+          "mimeType"
         ],
         "additionalProperties": false
       },
@@ -18986,6 +19058,92 @@
           },
           "409": {
             "description": "The note version changed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/voice/transcribe": {
+      "post": {
+        "operationId": "transcribeVoice",
+        "tags": [
+          "Tastings"
+        ],
+        "summary": "Transcribe a spoken tasting, keeping nothing",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceTranscribeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "What was said, for the reader to correct before anything uses it.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceTranscribeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not an active member of the Space.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Today's voice budget is spent; the form works by hand.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Voice tastings are not switched on in this deployment.",
             "content": {
               "application/json": {
                 "schema": {

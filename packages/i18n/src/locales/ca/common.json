@@ -1307,7 +1307,8 @@
       "price_lookups": "Consulta de preus",
       "research_lookups": "Recerca externa",
       "websearch_calls": "Cerca a la web oberta",
-      "ocr_reads": "Lectures d’etiqueta"
+      "ocr_reads": "Lectures d’etiqueta",
+      "voice_transcriptions": "Transcripcions de veu"
     },
     "navAction": "Dades i privadesa",
     "noticeMedia": "Les fotos es redueixen i se'ls treu la ubicació al teu dispositiu abans de desar-les, i només els membres de l'Espai poden veure-les.",

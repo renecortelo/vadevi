@@ -18,6 +18,15 @@ has the reasons.
 
 - Migration `0038` adds `tasting_notes.creation_method`; the export schema is
   now `2026.3` and carries it with each tasting.
+- Migration `0039` rebuilds `usage_counters` without the metric `CHECK` (the
+  metrics are fixed by the code), for a new daily budget,
+  `voice_transcriptions`. Back up before deploying it.
+- **Voice tastings, step one (off)**: `POST
+/api/v1/spaces/{spaceId}/voice/transcribe` turns a spoken tasting into text
+  with Workers AI, keeping nothing. It answers "unavailable" unless the
+  deployment sets `STT_PROVIDER=cloudflare` after approving
+  `docs/privacy-review-voice-tasting.md`; the public default is `none`, and
+  the release scan checks it.
 
 - **Keeping the registers current**: the routine is in `data/kb/README.md`,
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh

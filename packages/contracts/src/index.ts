@@ -16,3 +16,4 @@ export * from "./stats";
 export * from "./taste";
 export * from "./tasting-sessions";
 export * from "./wine-memory";
+export * from "./voice";
