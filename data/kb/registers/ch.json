@@ -1,0 +1,534 @@
+{
+  "countryCode": "CH",
+  "source": {
+    "title": "Répertoire suisse des appellations d'origine contrôlée (AOC) — Situation au 1er janvier 2026",
+    "publisher": "Office fédéral de l'agriculture (OFAG), Switzerland",
+    "url": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "issued": "2026-01-01",
+    "note": "Transcribed by hand from the federal directory of the cantonal AOCs (art. 25 of the Wine Ordinance, RS 916.140): each AOC as it writes it, the canton it is listed under, and its column — cantonal, regional or local. Its 63 AOCs: Vully, listed under Fribourg and Vaud, and Zürichsee, under Schwyz and Zürich, are intercantonal and counted once, as the directory says; neither is nested in a canton's AOC. A regional or local AOC lies within its canton's cantonal one, as the directory groups them; which regional AOC a local one lies in, it does not say. The directory lists Basel-Stadt under the abbreviation BL, read as BS. Only its facts are taken: names, cantons and kinds. A cantonal AOC is placed at its canton; a regional or local one at the place its name is, where OpenStreetMap has it, and otherwise at its canton's AOC, approximately. Lavaux and La Côte stand at Vaud's AOC: OpenStreetMap's places of those names in Vaud are elsewhere. Jura takes no article: \"Jura wine\" is France's."
+  },
+  "areas": [
+    {
+      "key": "aargau",
+      "names": ["Aargau"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Aargau"],
+      "placeByName": false
+    },
+    {
+      "key": "appenzell-innerrhoden",
+      "names": ["Appenzell Innerrhoden"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Appenzell Innerrhoden"],
+      "placeByName": false
+    },
+    {
+      "key": "appenzell-ausserrhoden",
+      "names": ["Appenzell Ausserrhoden"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Appenzell Ausserrhoden"],
+      "placeByName": false
+    },
+    {
+      "key": "bern",
+      "names": ["Bern", "Berne"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Bern/Berne", "Bern"],
+      "placeByName": false
+    },
+    {
+      "key": "basel-landschaft",
+      "names": ["Basel-Landschaft"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Basel-Landschaft"],
+      "placeByName": false
+    },
+    {
+      "key": "basel-stadt",
+      "names": ["Basel-Stadt"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Basel-Stadt"],
+      "placeByName": false
+    },
+    {
+      "key": "geneve",
+      "names": ["Genève"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Genève"],
+      "placeByName": false
+    },
+    {
+      "key": "glarus",
+      "names": ["Glarus"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Glarus"],
+      "placeByName": false
+    },
+    {
+      "key": "graubunden",
+      "names": ["Graubünden", "Grigioni"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Graubünden/Grischun/Grigioni", "Graubünden"],
+      "placeByName": false
+    },
+    {
+      "key": "jura",
+      "names": ["Jura"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Jura"],
+      "placeByName": false,
+      "noArticle": true
+    },
+    {
+      "key": "luzern",
+      "names": ["Luzern"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Luzern"],
+      "placeByName": false
+    },
+    {
+      "key": "neuchatel",
+      "names": ["Neuchâtel"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Neuchâtel"],
+      "placeByName": false
+    },
+    {
+      "key": "nidwalden",
+      "names": ["Nidwalden"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Nidwalden"],
+      "placeByName": false
+    },
+    {
+      "key": "obwalden",
+      "names": ["Obwalden"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Obwalden"],
+      "placeByName": false
+    },
+    {
+      "key": "st-gallen",
+      "names": ["St. Gallen"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["St. Gallen"],
+      "placeByName": false
+    },
+    {
+      "key": "schaffhausen",
+      "names": ["Schaffhausen"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Schaffhausen"],
+      "placeByName": false
+    },
+    {
+      "key": "solothurn",
+      "names": ["Solothurn"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Solothurn"],
+      "placeByName": false
+    },
+    {
+      "key": "schwyz",
+      "names": ["Schwyz"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Schwyz"],
+      "placeByName": false
+    },
+    {
+      "key": "thurgau",
+      "names": ["Thurgau"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Thurgau"],
+      "placeByName": false
+    },
+    {
+      "key": "uri",
+      "names": ["Uri"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Uri"],
+      "placeByName": false
+    },
+    {
+      "key": "vaud",
+      "names": ["Vaud"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Vaud"],
+      "placeByName": false
+    },
+    {
+      "key": "valais",
+      "names": ["Valais", "Wallis"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Valais/Wallis", "Valais"],
+      "placeByName": false
+    },
+    {
+      "key": "zug",
+      "names": ["Zug"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Zug"],
+      "placeByName": false
+    },
+    {
+      "key": "zurich",
+      "names": ["Zürich"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Zürich"],
+      "placeByName": false
+    },
+    {
+      "key": "ticino",
+      "names": ["Ticino"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Ticino"],
+      "placeByName": false
+    },
+    {
+      "key": "rosso-del-ticino",
+      "names": ["Rosso del Ticino"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Ticino"],
+      "placeByName": false,
+      "within": ["ticino"]
+    },
+    {
+      "key": "bianco-del-ticino",
+      "names": ["Bianco del Ticino"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Ticino"],
+      "placeByName": false,
+      "within": ["ticino"]
+    },
+    {
+      "key": "rosato-del-ticino",
+      "names": ["Rosato del Ticino"],
+      "type": "AOC",
+      "level": "cantonal",
+      "places": ["Ticino"],
+      "placeByName": false,
+      "within": ["ticino"]
+    },
+    {
+      "key": "bielersee",
+      "names": ["Bielersee", "Lac de Bienne"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["bern"],
+      "states": ["Bern/Berne", "Bern"]
+    },
+    {
+      "key": "thunersee",
+      "names": ["Thunersee"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["bern"],
+      "states": ["Bern/Berne", "Bern"]
+    },
+    {
+      "key": "cheyres",
+      "names": ["Cheyres"],
+      "type": "AOC",
+      "level": "regional",
+      "states": ["Fribourg/Freiburg", "Fribourg"]
+    },
+    {
+      "key": "vully",
+      "names": ["Vully"],
+      "type": "AOC",
+      "level": "regional",
+      "places": ["Mont Vully"]
+    },
+    {
+      "key": "zurichsee",
+      "names": ["Zürichsee"],
+      "type": "AOC",
+      "level": "regional"
+    },
+    {
+      "key": "chablais",
+      "names": ["Chablais"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["vaud"],
+      "states": ["Vaud"]
+    },
+    {
+      "key": "lavaux",
+      "names": ["Lavaux"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["vaud"],
+      "states": ["Vaud"],
+      "placeByName": false
+    },
+    {
+      "key": "la-cote",
+      "names": ["La Côte"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["vaud"],
+      "states": ["Vaud"],
+      "placeByName": false
+    },
+    {
+      "key": "cotes-de-l-orbe",
+      "names": ["Côtes-de-l'Orbe"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["vaud"],
+      "states": ["Vaud"],
+      "places": ["Orbe"]
+    },
+    {
+      "key": "bonvillars",
+      "names": ["Bonvillars"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["vaud"],
+      "states": ["Vaud"]
+    },
+    {
+      "key": "dezaley",
+      "names": ["Dézaley"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["vaud"],
+      "states": ["Vaud"]
+    },
+    {
+      "key": "dezaley-marsens",
+      "names": ["Dézaley-Marsens"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["vaud"],
+      "states": ["Vaud"]
+    },
+    {
+      "key": "calamin",
+      "names": ["Calamin"],
+      "type": "AOC",
+      "level": "regional",
+      "within": ["vaud"],
+      "states": ["Vaud"]
+    },
+    {
+      "key": "coteau-de-chevrens",
+      "names": ["Coteau de Chevrens"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Chevrens"]
+    },
+    {
+      "key": "cotes-de-landecy",
+      "names": ["Côtes de Landecy"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Landecy"]
+    },
+    {
+      "key": "coteau-de-lully",
+      "names": ["Coteau de Lully"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Lully"]
+    },
+    {
+      "key": "coteau-de-choulex",
+      "names": ["Coteau de Choulex"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Choulex"]
+    },
+    {
+      "key": "chateau-de-collex",
+      "names": ["Château de Collex"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Collex"]
+    },
+    {
+      "key": "coteau-de-bossy",
+      "names": ["Coteau de Bossy"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Bossy"]
+    },
+    {
+      "key": "coteau-de-la-vigne-blanche",
+      "names": ["Coteau de la vigne blanche"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"]
+    },
+    {
+      "key": "coteaux-de-dardagny",
+      "names": ["Coteaux de Dardagny"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Dardagny"]
+    },
+    {
+      "key": "coteau-de-genthod",
+      "names": ["Coteau de Genthod"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Genthod"]
+    },
+    {
+      "key": "chateau-du-crest",
+      "names": ["Château du Crest"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"]
+    },
+    {
+      "key": "mandement-de-jussy",
+      "names": ["Mandement de Jussy"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Jussy"]
+    },
+    {
+      "key": "grand-carraz",
+      "names": ["Grand Carraz"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"]
+    },
+    {
+      "key": "domaine-de-l-abbaye",
+      "names": ["Domaine de l'Abbaye"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"]
+    },
+    {
+      "key": "cotes-de-russin",
+      "names": ["Côtes de Russin"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Russin"]
+    },
+    {
+      "key": "coteau-des-baillets",
+      "names": ["Coteau des Baillets"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"]
+    },
+    {
+      "key": "coteau-de-bourdigny",
+      "names": ["Coteau de Bourdigny"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Bourdigny"]
+    },
+    {
+      "key": "coteau-de-choully",
+      "names": ["Coteau de Choully"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Choully"]
+    },
+    {
+      "key": "coteau-de-peissy",
+      "names": ["Coteau de Peissy"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Peissy"]
+    },
+    {
+      "key": "coteaux-de-peney",
+      "names": ["Coteaux de Peney"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Peney"]
+    },
+    {
+      "key": "chateau-de-choully",
+      "names": ["Château de Choully"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"],
+      "places": ["Choully"]
+    },
+    {
+      "key": "rougemont",
+      "names": ["Rougemont"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"]
+    },
+    {
+      "key": "la-feuillee",
+      "names": ["La Feuillée"],
+      "type": "AOC",
+      "level": "local",
+      "within": ["geneve"],
+      "states": ["Genève"]
+    }
+  ]
+}

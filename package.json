@@ -38,6 +38,7 @@
     "kb:extract-technical-file-links": "tsx scripts/kb/extract-technical-file-links.ts",
     "kb:fetch-appellations": "tsx scripts/kb/fetch-appellations.ts",
     "kb:fetch-world-appellations": "tsx scripts/kb/fetch-world-appellations.ts",
+    "kb:fetch-registers": "tsx scripts/kb/fetch-registers.ts",
     "kb:build-appellations": "tsx scripts/kb/build-appellations.ts",
     "kb:diff-appellations": "tsx scripts/kb/diff-appellations.ts",
     "kb:geocode-appellations": "tsx scripts/kb/geocode-appellations.ts",

@@ -11573,6 +11573,9 @@
                     "district",
                     "ward",
                     "area",
+                    "cantonal",
+                    "regional",
+                    "local",
                     null
                   ]
                 },
@@ -11608,7 +11611,8 @@
               "DO",
               "IG",
               "IP",
-              "DOC"
+              "DOC",
+              "AOC"
             ]
           },
           "grapes": {
@@ -11700,6 +11704,9 @@
               "district",
               "ward",
               "area",
+              "cantonal",
+              "regional",
+              "local",
               null
             ]
           },
@@ -11804,6 +11811,9 @@
                     "district",
                     "ward",
                     "area",
+                    "cantonal",
+                    "regional",
+                    "local",
                     null
                   ]
                 },
@@ -11865,7 +11875,8 @@
                     "DO",
                     "IG",
                     "IP",
-                    "DOC"
+                    "DOC",
+                    "AOC"
                   ]
                 },
                 "id": {

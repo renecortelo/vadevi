@@ -291985,6 +291985,2000 @@
     "wikidataId": null
   },
   {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-aargau",
+    "latitude": 47.412396,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.1948321,
+    "name": "Aargau",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Aargau",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-appenzell-innerrhoden",
+    "latitude": 47.3007262,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 9.3991527,
+    "name": "Appenzell Innerrhoden",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Appenzell Innerrhoden",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-appenzell-ausserrhoden",
+    "latitude": 47.3960076,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 9.3705839,
+    "name": "Appenzell Ausserrhoden",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Appenzell Ausserrhoden",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-bern",
+    "latitude": 46.9484742,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.4521749,
+    "name": "Bern",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bern",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Berne",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-basel-landschaft",
+    "latitude": 47.5092938,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.6588333,
+    "name": "Basel-Landschaft",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Basel-Landschaft",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-basel-stadt",
+    "latitude": 47.5579097,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.5927728,
+    "name": "Basel-Stadt",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Basel-Stadt",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-geneve",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Genève",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Genève",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-glarus",
+    "latitude": 46.9796562,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 9.108812,
+    "name": "Glarus",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Glarus",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-graubunden",
+    "latitude": 46.6960615,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 9.6027351,
+    "name": "Graubünden",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Graubünden",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Grigioni",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-jura",
+    "latitude": 47.3566699,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.1598893,
+    "name": "Jura",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Jura",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-luzern",
+    "latitude": 47.052144,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.3058123,
+    "name": "Luzern",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Luzern",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-neuchatel",
+    "latitude": 46.9895828,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.9292641,
+    "name": "Neuchâtel",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Neuchâtel",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-nidwalden",
+    "latitude": 46.942756,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.4119773,
+    "name": "Nidwalden",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Nidwalden",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-obwalden",
+    "latitude": 46.8613857,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.2067825,
+    "name": "Obwalden",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Obwalden",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-st-gallen",
+    "latitude": 47.425618,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 9.3762397,
+    "name": "St. Gallen",
+    "names": [
+      {
+        "locale": "*",
+        "name": "St. Gallen",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-schaffhausen",
+    "latitude": 47.6960491,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.634513,
+    "name": "Schaffhausen",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Schaffhausen",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-solothurn",
+    "latitude": 47.31874,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.6698284,
+    "name": "Solothurn",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Solothurn",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [
+      {
+        "grapeId": "dornfelder",
+        "quote": "Nearly 3,000 hectares ... were found in Germany's two largest wine regions, the Palatinate and Rheinhessen. ... mostly in the cantons of Schwyz and Zürich. ... first introduced to England ... used for rosés and sparkling wine production. ... Lodi and Sta. Rita Hills AVA of California, the Finger Lakes AVA of New York ... British Columbia wine region of Vancouver Island. ... Rio Grande do Sul region of Brazil ... Hokkaido",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Dornfelder"
+      }
+    ],
+    "id": "ch-schwyz",
+    "latitude": 47.0571976,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.7222073,
+    "name": "Schwyz",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Schwyz",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-thurgau",
+    "latitude": 47.5859649,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 9.1428769,
+    "name": "Thurgau",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Thurgau",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-uri",
+    "latitude": 46.7864413,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.6420159,
+    "name": "Uri",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Uri",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [
+      {
+        "grapeId": "marselan",
+        "quote": "mostly in the Languedoc wine region ... in the Northern Coast of California ... planted in Spain ... in the Catalonia region ... in the Penedès, Terra Alta and Valencia regions ... blended ... in the Vaud canton ... North Coast region ... Benton City, Washington ... Willcox, Arizona ... Mendoza wine region ... China ... Hebei province ... Shandong vineyard",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Marselan"
+      }
+    ],
+    "id": "ch-vaud",
+    "latitude": 46.6356963,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.5320717,
+    "name": "Vaud",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vaud",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [
+      {
+        "grapeId": "savagnin",
+        "quote": "Savagnin blanc is mostly grown in the Jura ... Durbach is home to some plantings of Red Traminer in Germany ... Visperterminen in the Valais is home to some of the highest vineyards in Europe ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Savagnin"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "Most commonly found in the Northern Rhône region... It is a principal component of the white wines from the Hermitage, Crozes-Hermitage and Saint-Joseph AOCs... In the Saint-Péray AOC... In Australia, the grape was first planted in Victoria... In Switzerland, Marsanne is grown in Valais... In British Columbia and Washington State... In California...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Marsanne"
+      }
+    ],
+    "id": "ch-valais",
+    "latitude": 46.2303063,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.6605757,
+    "name": "Valais",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valais",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Wallis",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-zug",
+    "latitude": 47.1486137,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.5539378,
+    "name": "Zug",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Zug",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [
+      {
+        "grapeId": "dornfelder",
+        "quote": "Nearly 3,000 hectares ... were found in Germany's two largest wine regions, the Palatinate and Rheinhessen. ... mostly in the cantons of Schwyz and Zürich. ... first introduced to England ... used for rosés and sparkling wine production. ... Lodi and Sta. Rita Hills AVA of California, the Finger Lakes AVA of New York ... British Columbia wine region of Vancouver Island. ... Rio Grande do Sul region of Brazil ... Hokkaido",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Dornfelder"
+      }
+    ],
+    "id": "ch-zurich",
+    "latitude": 47.3744489,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.5410422,
+    "name": "Zürich",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Zürich",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [
+      {
+        "grapeId": "ancellotta",
+        "quote": "mainly grown in the Emilia-Romagna region of Italy ... (province of Modena) ... (province of Reggio Emilia) ... the red Colli di Faenza DOC. In the Province of Rimini it is employed in the Colli di Rimini DOC wine ... in the canton Ticino ... in the Cahul region ... in the Taman Peninsula ... Campos de Cima da Serra",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancellotta"
+      }
+    ],
+    "id": "ch-ticino",
+    "latitude": 46.3351913,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.7525902,
+    "name": "Ticino",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ticino",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-rosso-del-ticino",
+    "latitude": 46.3351913,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.7525902,
+    "name": "Rosso del Ticino",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rosso del Ticino",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-ticino"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-bianco-del-ticino",
+    "latitude": 46.3351913,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.7525902,
+    "name": "Bianco del Ticino",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bianco del Ticino",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-ticino"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-rosato-del-ticino",
+    "latitude": 46.3351913,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 8.7525902,
+    "name": "Rosato del Ticino",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rosato del Ticino",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "cantonal",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-ticino"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-bielersee",
+    "latitude": 46.9484742,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.4521749,
+    "name": "Bielersee",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bielersee",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Lac de Bienne",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-bern"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-thunersee",
+    "latitude": 46.7002897,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.6986393,
+    "name": "Thunersee",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Thunersee",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-bern"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-cheyres",
+    "latitude": 46.8172944,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.7784336,
+    "name": "Cheyres",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cheyres",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-vully",
+    "latitude": 46.9548166,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.0875464,
+    "name": "Vully",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vully",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-zurichsee",
+    "latitude": null,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": null,
+    "name": "Zürichsee",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Zürichsee",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-chablais",
+    "latitude": 46.2812827,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 7.0257784,
+    "name": "Chablais",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Chablais",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-vaud"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-lavaux",
+    "latitude": 46.6356963,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.5320717,
+    "name": "Lavaux",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lavaux",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-vaud"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-la-cote",
+    "latitude": 46.6356963,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.5320717,
+    "name": "La Côte",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Côte",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-vaud"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-cotes-de-l-orbe",
+    "latitude": 46.724144,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.5317943,
+    "name": "Côtes-de-l'Orbe",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Côtes-de-l'Orbe",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-vaud"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-bonvillars",
+    "latitude": 46.8375743,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.6706023,
+    "name": "Bonvillars",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bonvillars",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-vaud"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-dezaley",
+    "latitude": 46.6356963,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.5320717,
+    "name": "Dézaley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Dézaley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-vaud"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-dezaley-marsens",
+    "latitude": 46.6356963,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.5320717,
+    "name": "Dézaley-Marsens",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Dézaley-Marsens",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-vaud"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-calamin",
+    "latitude": 46.6356963,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.5320717,
+    "name": "Calamin",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Calamin",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "regional",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-vaud"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-chevrens",
+    "latitude": 46.2834299,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.2379237,
+    "name": "Coteau de Chevrens",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de Chevrens",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-cotes-de-landecy",
+    "latitude": 46.1446362,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1295124,
+    "name": "Côtes de Landecy",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Côtes de Landecy",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-lully",
+    "latitude": 46.1643877,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.0737604,
+    "name": "Coteau de Lully",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de Lully",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-choulex",
+    "latitude": 46.2231863,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.2242767,
+    "name": "Coteau de Choulex",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de Choulex",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-chateau-de-collex",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Château de Collex",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Château de Collex",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-bossy",
+    "latitude": 46.279214,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1142651,
+    "name": "Coteau de Bossy",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de Bossy",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-la-vigne-blanche",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Coteau de la vigne blanche",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de la vigne blanche",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteaux-de-dardagny",
+    "latitude": 46.1992031,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 5.9837588,
+    "name": "Coteaux de Dardagny",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteaux de Dardagny",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-genthod",
+    "latitude": 46.2644177,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1570636,
+    "name": "Coteau de Genthod",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de Genthod",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-chateau-du-crest",
+    "latitude": 46.2360214,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.2566776,
+    "name": "Château du Crest",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Château du Crest",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-mandement-de-jussy",
+    "latitude": 46.2367629,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.269155,
+    "name": "Mandement de Jussy",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mandement de Jussy",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-grand-carraz",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Grand Carraz",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Grand Carraz",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-domaine-de-l-abbaye",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Domaine de l'Abbaye",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Domaine de l'Abbaye",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-cotes-de-russin",
+    "latitude": 46.1876287,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.0130297,
+    "name": "Côtes de Russin",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Côtes de Russin",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-des-baillets",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Coteau des Baillets",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau des Baillets",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-bourdigny",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Coteau de Bourdigny",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de Bourdigny",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-choully",
+    "latitude": 46.2236166,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.0291317,
+    "name": "Coteau de Choully",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de Choully",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteau-de-peissy",
+    "latitude": 46.2110236,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.0217279,
+    "name": "Coteau de Peissy",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteau de Peissy",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-coteaux-de-peney",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Coteaux de Peney",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Coteaux de Peney",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-chateau-de-choully",
+    "latitude": 46.2236166,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.0291317,
+    "name": "Château de Choully",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Château de Choully",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-rougemont",
+    "latitude": 46.2017559,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.1466014,
+    "name": "Rougemont",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Rougemont",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "CH",
+    "eambrosiaId": null,
+    "giType": "AOC",
+    "grapes": [],
+    "id": "ch-la-feuillee",
+    "latitude": 46.1541187,
+    "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
+    "longitude": 6.0525618,
+    "name": "La Feuillée",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Feuillée",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerLevel": "local",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ch-geneve"
+    ]
+  },
+  {
+    "countryCode": "JP",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "jp-yamanashi",
+    "latitude": 35.6399328,
+    "legalUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+    "longitude": 138.6380495,
+    "name": "Yamanashi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Yamanashi",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "山梨",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2013-07-16",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "JP",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "kerner",
+        "quote": "Kerner is most commonly planted in the German regions of Palatinate, Rheinhessen, Mosel, and Württemberg, but it is also grown in Austria (Styria), Switzerland, the island of Hokkaido in Japan, Old Mission Peninsula in Michigan, and the Italian province of South Tyrol.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kerner_(grape)"
+      },
+      {
+        "grapeId": "dornfelder",
+        "quote": "Nearly 3,000 hectares ... were found in Germany's two largest wine regions, the Palatinate and Rheinhessen. ... mostly in the cantons of Schwyz and Zürich. ... first introduced to England ... used for rosés and sparkling wine production. ... Lodi and Sta. Rita Hills AVA of California, the Finger Lakes AVA of New York ... British Columbia wine region of Vancouver Island. ... Rio Grande do Sul region of Brazil ... Hokkaido",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Dornfelder"
+      }
+    ],
+    "id": "jp-hokkaido",
+    "latitude": 43.4519831,
+    "legalUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+    "longitude": 142.8197834,
+    "name": "Hokkaido",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Hokkaido",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "北海道",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2018-06-28",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "JP",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "jp-yamagata",
+    "latitude": 38.4746705,
+    "legalUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+    "longitude": 140.083237,
+    "name": "Yamagata",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Yamagata",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "山形",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2021-06-30",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "JP",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "jp-osaka",
+    "latitude": 34.6198813,
+    "legalUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+    "longitude": 135.490357,
+    "name": "Osaka",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Osaka",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "大阪",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2021-06-30",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "JP",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "jp-nagano",
+    "latitude": 36.1143945,
+    "legalUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+    "longitude": 138.0319015,
+    "name": "Nagano",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Nagano",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "長野",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": "2021-06-30",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MD",
+    "eambrosiaId": null,
+    "giType": "PGI",
+    "grapes": [],
+    "id": "md-codru",
+    "latitude": 47.2519272,
+    "legalUrl": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3211",
+    "longitude": 28.3638314,
+    "name": "Codru",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Codru",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "IG-1",
+    "registeredOn": "2013-07-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MD",
+    "eambrosiaId": null,
+    "giType": "PGI",
+    "grapes": [],
+    "id": "md-stefan-voda",
+    "latitude": 46.5159983,
+    "legalUrl": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3210",
+    "longitude": 28.9022084,
+    "name": "Ștefan Vodă",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ștefan Vodă",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "IG-4",
+    "registeredOn": "2013-12-13",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MD",
+    "eambrosiaId": null,
+    "giType": "PGI",
+    "grapes": [],
+    "id": "md-valul-lui-traian",
+    "latitude": 46.057226,
+    "legalUrl": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3212",
+    "longitude": 28.4022095,
+    "name": "Valul lui Traian",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valul lui Traian",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "IG-3",
+    "registeredOn": "2013-11-01",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MD",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "md-romanesti",
+    "latitude": 47.2262888,
+    "legalUrl": "http://db.agepi.md/GeogrIndications/Details.aspx?id=1",
+    "longitude": 28.2135488,
+    "name": "Romănești",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Romănești",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "DO-1",
+    "registeredOn": "1998-11-09",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MD",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "md-ciumai",
+    "latitude": 45.7808933,
+    "legalUrl": "http://db.agepi.md/GeogrIndications/Details.aspx?id=7",
+    "longitude": 28.5674027,
+    "name": "Ciumai",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ciumai",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "DO-7",
+    "registeredOn": "1999-10-13",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MD",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "md-dealul-cravet",
+    "latitude": 47.4322149,
+    "legalUrl": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3838",
+    "longitude": 28.3478919,
+    "name": "Dealul Craveț",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Dealul Craveț",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "DO-14",
+    "registeredOn": "2022-05-28",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MD",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "md-tigheci",
+    "latitude": 46.3860455,
+    "legalUrl": "http://db.agepi.md/GeogrIndications/Details.aspx?id=6049",
+    "longitude": 28.3756436,
+    "name": "Tigheci",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tigheci",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "DO-16",
+    "registeredOn": "2026-04-13",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "md-valul-lui-traian"
+    ]
+  },
+  {
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",

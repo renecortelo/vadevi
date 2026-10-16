@@ -61,8 +61,10 @@ type AllowedSpaceRow = {
 /** The kinds of area a register names, in its own words. */
 const levelWords: Record<RegionLevel, string> = {
   area: "area",
+  cantonal: "cantonal AOC",
   country: "country",
   district: "district",
+  local: "local AOC",
   multiStateZone: "multi-state zone",
   state: "state",
   superZone: "super zone",
@@ -70,6 +72,7 @@ const levelWords: Record<RegionLevel, string> = {
   overarchingRegion: "overarching region",
   overarchingUnit: "overarching geographical unit",
   region: "region",
+  regional: "regional AOC",
   subregion: "subregion",
   unit: "geographical unit",
   ward: "ward",
@@ -936,11 +939,29 @@ async function loadLibraryStatements(
         publisher: "Instituto Nacional da Propriedade Industrial (INPI), Brazil",
         title: `${region.name} — INPI ${region.registerRef ?? ""}`.trim(),
       },
+      // Switzerland's federal directory of the cantonal AOCs: only its facts.
+      CH: {
+        license: "CH-official-facts",
+        publisher: "Office fédéral de l'agriculture (OFAG), Répertoire suisse des AOC",
+        title: `${region.name} — Swiss AOC`,
+      },
       // Chile's zoning is a decree; only its facts are used, linked to Ley Chile.
       CL: {
         license: "CL-official-text",
         publisher: "Decreto 464 de 1994, Ministerio de Agricultura de Chile (Ley Chile)",
         title: `${region.name} — Decreto 464 de 1994`,
+      },
+      // Japan's National Tax Agency list of geographical indications: its facts.
+      JP: {
+        license: "JP-official-facts",
+        publisher: "National Tax Agency, Japan (list of geographical indications for liquor)",
+        title: `${region.name} — Japanese geographical indication`,
+      },
+      // Moldova's AGEPI register of geographical indications: its facts.
+      MD: {
+        license: "MD-official-facts",
+        publisher: "AGEPI, Republic of Moldova (register of geographical indications)",
+        title: `${region.name} — AGEPI ${region.registerRef ?? ""}`.trim(),
       },
       // The UK's register of protected food and drink names, on GOV.UK.
       GB: {
@@ -1019,13 +1040,19 @@ async function loadLibraryStatements(
                 ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
                 : region.countryCode === "AR"
                   ? `${region.giType === "DOC" ? "a controlled denomination of origin (DOC)" : "a geographical indication (IG)"} of Argentina, recognised by the INV${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("recognised")}`
-                  : region.countryCode === "BR"
-                    ? `${region.giType === "DO" ? "a denomination of origin (DO)" : "an indication of provenance (IP)"} of Brazil, in the INPI's list of recognised geographical indications${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("registered")}`
-                    : region.countryCode === "MX"
-                      ? `a protected geographical indication (IGP) of Mexico, declared by the IMPI in the Diario Oficial de la Federación${since("published")}`
-                      : region.countryCode === "GB"
-                        ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
-                        : `a production area of South Africa's Wine of Origin scheme${kind}`,
+                  : region.countryCode === "CH"
+                    ? `an appellation d'origine contrôlée (AOC) of Switzerland${kind}, in the federal directory of the cantonal AOCs`
+                    : region.countryCode === "JP"
+                      ? `a geographical indication for wine of Japan, designated by the National Tax Agency${since("designated")}`
+                      : region.countryCode === "MD"
+                        ? `${region.giType === "PDO" ? "a protected designation of origin (DO)" : "a protected geographical indication (IGP)"} of Moldova, in AGEPI's register${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("registered")}`
+                        : region.countryCode === "BR"
+                          ? `${region.giType === "DO" ? "a denomination of origin (DO)" : "an indication of provenance (IP)"} of Brazil, in the INPI's list of recognised geographical indications${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("registered")}`
+                          : region.countryCode === "MX"
+                            ? `a protected geographical indication (IGP) of Mexico, declared by the IMPI in the Diario Oficial de la Federación${since("published")}`
+                            : region.countryCode === "GB"
+                              ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
+                              : `a production area of South Africa's Wine of Origin scheme${kind}`,
       [registerId],
     );
     if (region.within.length > 0) {

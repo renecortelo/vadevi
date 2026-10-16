@@ -1,0 +1,57 @@
+{
+  "countryCode": "JP",
+  "source": {
+    "title": "Information on GIs protected in Japan (interim translation); 酒類の地理的表示一覧",
+    "publisher": "National Tax Agency (国税庁), Japan",
+    "url": "https://www.nta.go.jp/english/taxes/liquor_administration/geographical/02.htm",
+    "issued": "2025-10-01",
+    "note": "Transcribed by hand from the National Tax Agency's list of geographical indications for liquor, keeping those whose category is wine (ぶどう酒): each name as the list writes it in Japanese and in the romanization it gives in brackets (\"a reference information\", as the list says), the date of designation and the area, each a prefecture. The Japanese list is https://www.nta.go.jp/taxes/sake/hyoji/chiri/ichiran.htm. Yamanashi, Yamagata and Nagano are also GIs for sake, not taken here. The list shows no date of update; its latest entries are of 1 October 2025. Only its facts are taken. Each is placed at its prefecture."
+  },
+  "areas": [
+    {
+      "key": "yamanashi",
+      "names": ["Yamanashi", "山梨"],
+      "type": "GI",
+      "registeredOn": "2013-07-16",
+      "places": ["山梨県"],
+      "placeByName": false,
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm"
+    },
+    {
+      "key": "hokkaido",
+      "names": ["Hokkaido", "北海道"],
+      "type": "GI",
+      "registeredOn": "2018-06-28",
+      "places": ["北海道"],
+      "placeByName": false,
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm"
+    },
+    {
+      "key": "yamagata",
+      "names": ["Yamagata", "山形"],
+      "type": "GI",
+      "registeredOn": "2021-06-30",
+      "places": ["山形県"],
+      "placeByName": false,
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm"
+    },
+    {
+      "key": "osaka",
+      "names": ["Osaka", "大阪"],
+      "type": "GI",
+      "registeredOn": "2021-06-30",
+      "places": ["大阪府"],
+      "placeByName": false,
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm"
+    },
+    {
+      "key": "nagano",
+      "names": ["Nagano", "長野"],
+      "type": "GI",
+      "registeredOn": "2021-06-30",
+      "places": ["長野県"],
+      "placeByName": false,
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm"
+    }
+  ]
+}

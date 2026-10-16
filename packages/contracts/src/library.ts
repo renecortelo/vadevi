@@ -153,6 +153,7 @@ export const RegionDesignationSchema = z.enum([
   "IG",
   "IP",
   "DOC",
+  "AOC",
 ]);
 export type RegionDesignation = z.infer<typeof RegionDesignationSchema>;
 
@@ -176,6 +177,9 @@ export const RegionLevelSchema = z.enum([
   "district",
   "ward",
   "area",
+  "cantonal",
+  "regional",
+  "local",
 ]);
 export type RegionLevel = z.infer<typeof RegionLevelSchema>;
 

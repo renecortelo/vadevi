@@ -1,6 +1,7 @@
 import africa from "./africa-map.json";
 import america from "./america-map.json";
 import europe from "./europe-map.json";
+import japan from "./japan-map.json";
 import oceania from "./oceania-map.json";
 import southAmerica from "./south-america-map.json";
 
@@ -14,7 +15,7 @@ export type MapData = {
   width: number;
 };
 
-export type SheetId = "africa" | "america" | "europe" | "oceania" | "southAmerica";
+export type SheetId = "africa" | "america" | "europe" | "japan" | "oceania" | "southAmerica";
 
 /**
  * The map's sheets, drawn from Natural Earth's outlines (public domain) and
@@ -26,5 +27,6 @@ export const mapSheets = [
   { data: america, id: "america" },
   { data: southAmerica, id: "southAmerica" },
   { data: oceania, id: "oceania" },
+  { data: japan, id: "japan" },
   { data: africa, id: "africa" },
 ] as unknown as { data: MapData; id: SheetId }[];

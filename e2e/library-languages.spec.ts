@@ -290,6 +290,35 @@ test("a Brazilian denomination cites the INPI's list", async ({ page }) => {
   await expect(page.locator(".library-map__point")).toBeVisible();
 });
 
+test("a Swiss AOC shows its level and the canton's AOC it lies in", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/ch-dezaley");
+  await page.locator("#interface-locale").selectOption("fr");
+  await expect(page.locator("h1")).toHaveText("Dézaley", { timeout: 15_000 });
+  await expect(page.locator("#region-register")).toHaveText("Dans le répertoire suisse des AOC");
+  await expect(page.getByText("Une AOC régionale.")).toBeVisible();
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting.getByRole("link", { name: "Vaud" })).toBeVisible();
+});
+
+test("a Moldovan appellation cites AGEPI's register", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/md-tigheci");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Tigheci", { timeout: 15_000 });
+  await expect(page.locator("#region-register")).toHaveText(
+    "In Moldova's register of geographical indications (AGEPI)",
+  );
+  await expect(page.getByText("Registered on April 13, 2026.")).toBeVisible();
+  await expect(
+    page.locator('a[href*="db.agepi.md/GeogrIndications/Details.aspx?id=6049"]'),
+  ).toHaveText("See its entry in AGEPI's register (DO-16)");
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting.getByRole("link", { name: "Valul lui Traian" })).toBeVisible();
+});
+
 test("a British wine name cites the UK register", async ({ page }) => {
   await signIn(page);
   await completeOnboarding(page);

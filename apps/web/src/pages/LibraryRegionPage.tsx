@@ -193,7 +193,7 @@ export function LibraryRegionPage() {
         {region.registerLevel === null ? null : (
           <p>
             {t(
-              `library.${suffix === "Au" ? "auLevel" : suffix === "Cl" ? "clLevel" : "woLevel"}.${region.registerLevel}`,
+              `library.${suffix === "Au" ? "auLevel" : suffix === "Cl" ? "clLevel" : suffix === "Ch" ? "chLevel" : "woLevel"}.${region.registerLevel}`,
             )}
           </p>
         )}

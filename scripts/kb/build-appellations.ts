@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import {
@@ -709,6 +709,71 @@ for (const area of brList) {
   });
 }
 console.info(`  ${brList.length} Brazilian indications from the INPI.`);
+
+// The registers transcribed by hand, one file a country (`data/kb/registers/`,
+// fetched by `pnpm kb:fetch-registers`): each name placed where its place is,
+// or amid the places its delimitation names, or else at the area it lies in.
+const registersCache = resolve(".kb-cache/world/registers");
+for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort() : []) {
+  const register = JSON.parse(readFileSync(resolve(registersCache, file), "utf8")) as {
+    countryCode: string;
+    records: {
+      key: string;
+      latitude: number | null;
+      level: RegisterLevel | null;
+      longitude: number | null;
+      names: string[];
+      pointSource: "area" | "place" | null;
+      qid: string | null;
+      ref: string | null;
+      registeredOn: string | null;
+      type: RegionEntry["giType"];
+      url: string;
+      within: string[];
+    }[];
+  };
+  const prefix = register.countryCode.toLowerCase();
+  const registered: RegionEntry[] = register.records.map((area) => {
+    const { leads, summaries } = wikipediaSummaries(area.qid);
+    seen.add(`${prefix}-${area.key}`);
+    return {
+      countryCode: register.countryCode,
+      eambrosiaId: null,
+      giType: area.type,
+      grapes: [],
+      id: `${prefix}-${area.key}`,
+      latitude: area.latitude,
+      legalUrl: area.url,
+      longitude: area.longitude,
+      name: area.names[0]!,
+      names: area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+      pointSource: area.pointSource,
+      prominence: leads,
+      ...(area.ref === null ? {} : { registerRef: area.ref }),
+      ...(area.level === null ? {} : { registerLevel: area.level }),
+      registeredOn: area.registeredOn,
+      summaries,
+      wikidataId: area.qid,
+      ...(area.within.length === 0 ? {} : { within: area.within.map((key) => `${prefix}-${key}`) }),
+    };
+  });
+  // One the map cannot find stands, approximately, at the area it lies in.
+  for (const entry of registered) {
+    if (entry.latitude !== null) continue;
+    const holder = (entry.within ?? [])
+      .map((id) => registered.find((other) => other.id === id))
+      .find((other) => other !== undefined && other.latitude !== null);
+    if (holder === undefined) continue;
+    entry.latitude = holder.latitude;
+    entry.longitude = holder.longitude;
+    entry.pointSource = "area";
+  }
+  entries.push(...registered);
+  console.info(
+    `  ${registered.length} names of ${register.countryCode} from its transcribed register, ` +
+      `${registered.filter((entry) => entry.latitude !== null).length} placed.`,
+  );
+}
 console.info(
   `  ${clEntries.length} Chilean denominations of origin from Decree 464, ` +
     `${clEntries.filter((entry) => entry.latitude !== null).length} placed.`,

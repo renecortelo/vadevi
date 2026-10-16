@@ -242,12 +242,27 @@ Goethe became a DO in 2025, the date shown. Points are OpenStreetMap's for
 the place of each name in its state, or else the middle of the
 municipalities its delimitation names — approximately.
 
+**Registers transcribed by hand** (`registers/`, one file a country, read by
+`pnpm kb:fetch-registers`): each name as its official list writes it, its
+kind, number and date, and the places its delimitation names; placed where
+OpenStreetMap has its place, or amid those places, or else at the area it
+lies in — approximately. Each file says where it comes from and what it
+leaves out:
+
+- `ch.json` — Switzerland: the 63 cantonal, regional and local AOCs of the
+  federal directory (OFAG, 1 January 2026).
+- `jp.json` — Japan: the five geographical indications for wine of the
+  National Tax Agency's list (Yamanashi, Hokkaido, Yamagata, Osaka, Nagano).
+- `md.json` — Moldova: the three protected geographical indications and the
+  four appellations of origin for wine that AGEPI's register showed (it
+  counts more appellations than its list could show).
+
 **United Kingdom.** The UK's own wine names in its register of protected
 food and drink names on GOV.UK (Open Government Licence v3.0), registered
 ones only: their designation (PDO or PGI) and the date the register gives.
 
 The small map draws a country on its sheet: Europe's, North or South
-America's (from 6° S, for the Vale do São Francisco), Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural
+America's (from 6° S, for the Vale do São Francisco), Japan's, Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural
 Earth).
 
 ## Keeping the registers current
@@ -294,6 +309,10 @@ Every few months, or when a register announces a name:
 - **The INPI's lists of recognised geographical indications** (Brazil):
   official acts have no copyright in Brazil (Lei 9.610/1998, art. 8, IV);
   only their facts are taken, and each name links to its list.
+- **The registers transcribed by hand** (`registers/`): the Swiss federal
+  directory of AOCs, Japan's National Tax Agency list and Moldova's AGEPI
+  register — only their facts are taken (names, kinds, numbers, dates and
+  places), and each name links to its source.
 - **The IMPI's declarations in the Diario Oficial de la Federación**
   (Mexico): legislative, regulatory and administrative texts have no
   copyright in Mexico (Ley Federal del Derecho de Autor, art. 14, fr. VIII);

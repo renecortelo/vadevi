@@ -339,8 +339,24 @@
         "america": "North America",
         "southAmerica": "South America",
         "oceania": "Oceania",
+        "japan": "Japan",
         "africa": "Southern Africa"
       }
+    },
+    "aoc": "Appellation d'origine contrôlée (AOC)",
+    "aocShort": "AOC",
+    "registerTitleCh": "In the Swiss directory of AOCs",
+    "registerLinkCh": "See the federal directory of the cantonal AOCs (OFAG)",
+    "registerTitleJp": "In Japan's geographical indications for wine",
+    "registeredOnJp": "Designated on {{date}}.",
+    "registerLinkJp": "See its entry in the National Tax Agency's list",
+    "registerTitleMd": "In Moldova's register of geographical indications (AGEPI)",
+    "registeredOnMd": "Registered on {{date}}.",
+    "registerLinkMd": "See its entry in AGEPI's register ({{ref}})",
+    "chLevel": {
+      "cantonal": "A cantonal AOC.",
+      "regional": "A regional AOC.",
+      "local": "A local AOC."
     }
   },
   "space": {

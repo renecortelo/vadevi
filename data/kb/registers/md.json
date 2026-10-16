@@ -1,0 +1,104 @@
+{
+  "countryCode": "MD",
+  "source": {
+    "title": "Lista denumirilor de origine şi indicaţiilor geografice de origine moldovenească",
+    "publisher": "Agenția de Stat pentru Proprietatea Intelectuală (AGEPI), Republic of Moldova",
+    "url": "http://db.agepi.md/GeogrIndications/ListeDOIG.aspx",
+    "issued": "2026-10-16",
+    "note": "Transcribed by hand on 16 October 2026 from AGEPI's register of Moldovan geographical indications and appellations of origin, each from its own page: the wine names, as written there (in title case where the register writes capitals), their kind — indicaţie geografică (IG; protected geographical indication, IGP) or denumire de origine (DO; protected designation of origin) — their registration number and date, and the districts (raioane), towns or villages their delimitation names. Divin (IG-2), aged wine brandy, is not wine and is not taken. The register's list showed 8 of the 23 appellations of origin it counts; the others could not be read, so the list may be incomplete. Tigheci lies in part of Valul lui Traian, as its delimitation says. Only the register's facts are taken. Each is placed at its place where its name is one, or else amid the places its delimitation names, approximately."
+  },
+  "areas": [
+    {
+      "key": "codru",
+      "names": ["Codru"],
+      "type": "PGI",
+      "ref": "IG-1",
+      "registeredOn": "2013-07-14",
+      "placeByName": false,
+      "spread": [
+        "Hîncești",
+        "Ialoveni",
+        "Chișinău",
+        "Nisporeni",
+        "Călărași",
+        "Orhei",
+        "Telenești",
+        "Dubăsari",
+        "Fălești",
+        "Bălți"
+      ],
+      "url": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3211"
+    },
+    {
+      "key": "stefan-voda",
+      "names": ["Ștefan Vodă"],
+      "type": "PGI",
+      "ref": "IG-4",
+      "registeredOn": "2013-12-13",
+      "placeByName": false,
+      "spread": [
+        "Raionul Căușeni",
+        "Raionul Cimișlia",
+        "Raionul Basarabeasca",
+        "Raionul Ștefan Vodă"
+      ],
+      "url": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3210"
+    },
+    {
+      "key": "valul-lui-traian",
+      "names": ["Valul lui Traian"],
+      "type": "PGI",
+      "ref": "IG-3",
+      "registeredOn": "2013-11-01",
+      "placeByName": false,
+      "spread": [
+        "Raionul Leova",
+        "Raionul Cantemir",
+        "Raionul Cahul",
+        "Comrat",
+        "Ceadîr-Lunga",
+        "Raionul Taraclia",
+        "Vulcănești"
+      ],
+      "url": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3212"
+    },
+    {
+      "key": "romanesti",
+      "names": ["Romănești"],
+      "type": "PDO",
+      "ref": "DO-1",
+      "registeredOn": "1998-11-09",
+      "placeByName": false,
+      "spread": ["Romănești", "Rădeni"],
+      "url": "http://db.agepi.md/GeogrIndications/Details.aspx?id=1"
+    },
+    {
+      "key": "ciumai",
+      "names": ["Ciumai"],
+      "type": "PDO",
+      "ref": "DO-7",
+      "registeredOn": "1999-10-13",
+      "spread": ["Vinogradovca", "Ciumai", "Chirilovca", "Mirnoe"],
+      "url": "http://db.agepi.md/GeogrIndications/Details.aspx?id=7"
+    },
+    {
+      "key": "dealul-cravet",
+      "names": ["Dealul Craveț"],
+      "type": "PDO",
+      "ref": "DO-14",
+      "registeredOn": "2022-05-28",
+      "placeByName": false,
+      "spread": ["Budăi", "Crăsnășeni"],
+      "url": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3838"
+    },
+    {
+      "key": "tigheci",
+      "names": ["Tigheci"],
+      "type": "PDO",
+      "ref": "DO-16",
+      "registeredOn": "2026-04-13",
+      "within": ["valul-lui-traian"],
+      "url": "http://db.agepi.md/GeogrIndications/Details.aspx?id=6049"
+    }
+  ]
+}

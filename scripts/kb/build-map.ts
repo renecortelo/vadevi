@@ -6,7 +6,7 @@ import { dirname, resolve } from "node:path";
  * so a region or a grape's origin is shown on a map without asking a tile
  * server for anything — one sheet for Europe and its neighbours
  * (`apps/web/src/library/europe-map.json`), one each for North America
- * (`america-map.json`), South America (`south-america-map.json`), Oceania (`oceania-map.json`) and southern Africa
+ * (`america-map.json`), South America (`south-america-map.json`), Oceania (`oceania-map.json`), Japan (`japan-map.json`) and southern Africa
  * (`africa-map.json`), each in its own frame. Natural Earth's 1:50m
  * countries, public domain; download `ne_50m_admin_0_countries.geojson` into
  * `.kb-cache/map/` first.
@@ -174,5 +174,7 @@ buildSheet("america-map.json", { latMax: 62, latMin: 15, lonMax: -52, lonMin: -1
 buildSheet("south-america-map.json", { latMax: -6, latMin: -56, lonMax: -34, lonMin: -82 }, -35);
 // Oceania: New Zealand, with Australia beside it.
 buildSheet("oceania-map.json", { latMax: -9, latMin: -48, lonMax: 179.5, lonMin: 112 }, -36);
+// Japan: from Hokkaido to Kyushu, with Korea beside it for bearings.
+buildSheet("japan-map.json", { latMax: 46, latMin: 30, lonMax: 146, lonMin: 126 }, 38);
 // Southern Africa: South Africa and its neighbours.
 buildSheet("africa-map.json", { latMax: -15, latMin: -35.5, lonMax: 37, lonMin: 10 }, -27);

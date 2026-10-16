@@ -16,6 +16,10 @@ has the reasons.
 
 ### For operators
 
+- Migration `0040` rebuilds `kb_regions` without the list of designations
+  `gi_type` admitted, so each new register no longer needs a rebuild. Back up
+  before deploying it. `pnpm kb:fetch-registers` reads the registers
+  transcribed in `data/kb/registers/`.
 - Migration `0038` adds `tasting_notes.creation_method`; the export schema is
   now `2026.3` and carries it with each tasting.
 - Migration `0039` rebuilds `usage_counters` without the metric `CHECK` (the
@@ -97,6 +101,13 @@ has the reasons.
   article on its wine was found. Vale dos Vinhedos is both an IP (2002) and
   a DO (2012), so a wine that names it is linked to neither until it says
   which.
+- **Switzerland, Japan and Moldova in the atlas**: Switzerland's 63 AOCs from
+  the federal directory — cantonal, regional and local, each within its
+  canton's (Dézaley within Vaud); Japan's five geographical indications for
+  wine (Yamanashi, Hokkaido, Yamagata, Osaka, Nagano), on a new map sheet;
+  Moldova's three geographical indications (Codru, Ștefan Vodă, Valul lui
+  Traian) and four appellations of origin, Tigheci within Valul lui Traian.
+  Each links to its source. None has a summary yet.
 
 ## 0.3.0 — 12 October 2026
 

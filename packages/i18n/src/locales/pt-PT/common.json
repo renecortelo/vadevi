@@ -339,8 +339,24 @@
         "america": "América do Norte",
         "southAmerica": "América do Sul",
         "oceania": "Oceânia",
+        "japan": "Japão",
         "africa": "África Austral"
       }
+    },
+    "aoc": "Denominação de origem controlada (AOC)",
+    "aocShort": "AOC",
+    "registerTitleCh": "No repertório suíço de AOC",
+    "registerLinkCh": "Ver o repertório federal das AOC cantonais (OFAG)",
+    "registerTitleJp": "Nas indicações geográficas de vinho do Japão",
+    "registeredOnJp": "Designada a {{date}}.",
+    "registerLinkJp": "Ver a sua entrada na lista da Agência Nacional de Impostos",
+    "registerTitleMd": "No registo de indicações geográficas da Moldávia (AGEPI)",
+    "registeredOnMd": "Registada a {{date}}.",
+    "registerLinkMd": "Ver a sua entrada no registo da AGEPI ({{ref}})",
+    "chLevel": {
+      "cantonal": "Uma AOC cantonal.",
+      "regional": "Uma AOC regional.",
+      "local": "Uma AOC local."
     }
   },
   "space": {

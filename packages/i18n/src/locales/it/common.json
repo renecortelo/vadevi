@@ -339,8 +339,24 @@
         "america": "America del Nord",
         "southAmerica": "America del Sud",
         "oceania": "Oceania",
+        "japan": "Giappone",
         "africa": "Africa australe"
       }
+    },
+    "aoc": "Denominazione di origine controllata (AOC)",
+    "aocShort": "AOC",
+    "registerTitleCh": "Nel repertorio svizzero delle DOC",
+    "registerLinkCh": "Vedi il repertorio federale delle DOC cantonali (UFAG)",
+    "registerTitleJp": "Nelle indicazioni geografiche del vino del Giappone",
+    "registeredOnJp": "Designata il {{date}}.",
+    "registerLinkJp": "Vedi la sua voce nell'elenco dell'Agenzia nazionale delle imposte",
+    "registerTitleMd": "Nel registro delle indicazioni geografiche della Moldavia (AGEPI)",
+    "registeredOnMd": "Registrata il {{date}}.",
+    "registerLinkMd": "Vedi la sua voce nel registro dell'AGEPI ({{ref}})",
+    "chLevel": {
+      "cantonal": "Una DOC cantonale.",
+      "regional": "Una DOC regionale.",
+      "local": "Una DOC locale."
     }
   },
   "space": {

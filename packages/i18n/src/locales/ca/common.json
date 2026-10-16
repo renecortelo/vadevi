@@ -339,8 +339,24 @@
         "america": "Amèrica del Nord",
         "southAmerica": "Amèrica del Sud",
         "oceania": "Oceania",
+        "japan": "Japó",
         "africa": "Àfrica austral"
       }
+    },
+    "aoc": "Denominació d'origen controlada (AOC)",
+    "aocShort": "AOC",
+    "registerTitleCh": "Al repertori suís d'AOC",
+    "registerLinkCh": "Veure el repertori federal de les AOC cantonals (OFAG)",
+    "registerTitleJp": "A les indicacions geogràfiques de vi del Japó",
+    "registeredOnJp": "Designada el {{date}}.",
+    "registerLinkJp": "Veure'n l'entrada a la llista de l'Agència Tributària",
+    "registerTitleMd": "Al registre d'indicacions geogràfiques de Moldàvia (AGEPI)",
+    "registeredOnMd": "Registrada el {{date}}.",
+    "registerLinkMd": "Veure'n l'entrada al registre de l'AGEPI ({{ref}})",
+    "chLevel": {
+      "cantonal": "Una AOC cantonal.",
+      "regional": "Una AOC regional.",
+      "local": "Una AOC local."
     }
   },
   "space": {

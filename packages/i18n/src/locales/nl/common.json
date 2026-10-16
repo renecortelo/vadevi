@@ -339,8 +339,24 @@
         "america": "Noord-Amerika",
         "southAmerica": "Zuid-Amerika",
         "oceania": "Oceanië",
+        "japan": "Japan",
         "africa": "Zuidelijk Afrika"
       }
+    },
+    "aoc": "Gecontroleerde oorsprongsbenaming (AOC)",
+    "aocShort": "AOC",
+    "registerTitleCh": "In het Zwitserse register van AOC's",
+    "registerLinkCh": "Bekijk het federale register van de kantonale AOC's (OFAG)",
+    "registerTitleJp": "In de geografische aanduidingen voor wijn van Japan",
+    "registeredOnJp": "Aangewezen op {{date}}.",
+    "registerLinkJp": "Bekijk de vermelding in de lijst van het Nationaal Belastingagentschap",
+    "registerTitleMd": "In het register van geografische aanduidingen van Moldavië (AGEPI)",
+    "registeredOnMd": "Geregistreerd op {{date}}.",
+    "registerLinkMd": "Bekijk de vermelding in het register van AGEPI ({{ref}})",
+    "chLevel": {
+      "cantonal": "Een kantonale AOC.",
+      "regional": "Een regionale AOC.",
+      "local": "Een lokale AOC."
     }
   },
   "space": {
