@@ -19,6 +19,9 @@ export const voiceFields = {
   // sweetness, not a type of its own.
   wineType: ["red", "white", "rose", "sparkling", "fortified", "orange"],
   alcoholAbv: "percent",
+  bottleSizeMl: "volume",
+  priceAmount: "money",
+  currency: "currency",
   // The tasting.
   tastedAt: "date",
   score100: "score",
@@ -27,7 +30,11 @@ export const voiceFields = {
   wouldBuy: ["yes", "no", "unsure"],
   appearanceClarity: ["clear", "hazy"],
   appearanceColorFamily: ["white", "rose", "red", "orange", "brown"],
+  appearanceIntensity: "scale",
+  appearanceHue: "text",
   appearanceText: "text",
+  aromas: "list",
+  noseCondition: ["clean", "possible_fault"],
   noseText: "text",
   palateText: "text",
   conclusionText: "text",
@@ -37,6 +44,9 @@ export const voiceFields = {
   body: "scale",
   finishLength: "scale",
   tanninTexture: ["silky", "fine", "grippy", "coarse"],
+  palateTexture: ["lean", "round", "creamy", "oily"],
+  effervescence: "scale",
+  beadSize: ["fine", "medium", "coarse"],
   foodText: "text",
   servingTemperatureC: "temperature",
   decanted: "boolean",
@@ -118,6 +128,16 @@ function fit(field: VoiceField, raw: unknown, today: string): ProposedField["val
     }
     case "country":
       return /^[A-Z]{2}$/.test(text) ? text : null;
+    case "currency":
+      return /^[A-Z]{3}$/.test(text) ? text : null;
+    case "money": {
+      const value = Number(text.replace(",", "."));
+      return value > 0 && value <= 100_000 ? Math.round(value * 100) / 100 : null;
+    }
+    case "volume": {
+      const value = Number(text);
+      return Number.isInteger(value) && value >= 50 && value <= 20_000 ? value : null;
+    }
     case "percent": {
       const value = Number(text.replace(",", "."));
       return value >= 3 && value <= 25 ? Math.round(value * 10) / 10 : null;

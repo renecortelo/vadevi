@@ -53,6 +53,15 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
   Saturday"… against "today"; a date in the future is never given.
 - servingTemperatureC in degrees Celsius (convert Fahrenheit).
 - wineType is red, white, rose, sparkling, fortified or orange.
+- aromas: the aromas named, as a list in the taster's own words and language.
+- appearanceIntensity and effervescence are 1–5 like the scales above;
+  appearanceHue is the colour named ("rubí", "pale ruby"), in the taster's words.
+- noseCondition: "clean" when the taster says the nose is clean or names a
+  fault they do not find ("no cork", "no vinegar"); "possible_fault" when
+  they suspect one.
+- palateTexture is lean, round, creamy or oily; beadSize fine, medium or coarse.
+- priceAmount is the number paid, currency its ISO 4217 code (EUR, USD, GBP);
+  bottleSizeMl the bottle in millilitres (75 cl → 750, a magnum → 1500).
 - countryCode is the ISO 3166-1 alpha-2 code of the country named.
 - appearanceText, noseText, palateText, conclusionText, foodText are short
   phrases in the transcript's own language, close to the taster's words.

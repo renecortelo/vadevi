@@ -125,4 +125,58 @@ describe("a spoken note's proposal", () => {
     );
     expect(winery.fields.producerName?.status).toBe("explicit");
   });
+
+  it("reads price, bottle, aromas and texture as the form takes them", () => {
+    const text =
+      "La botella es de setenta y cinco centilitros. Me costó dieciocho euros con cincuenta. " +
+      "Huele a ciruela y violeta. En boca es redondo. Nariz limpia, sin corcho.";
+    const proposal = acceptProposal(
+      {
+        fields: [
+          { certain: true, name: "bottleSizeMl", quote: "setenta y cinco centilitros", value: 750 },
+          {
+            certain: true,
+            name: "priceAmount",
+            quote: "dieciocho euros con cincuenta",
+            value: 18.5,
+          },
+          { certain: true, name: "currency", quote: "dieciocho euros con cincuenta", value: "EUR" },
+          {
+            certain: true,
+            name: "aromas",
+            quote: "ciruela y violeta",
+            value: ["ciruela", "violeta"],
+          },
+          { certain: true, name: "palateTexture", quote: "En boca es redondo", value: "round" },
+          {
+            certain: true,
+            name: "noseCondition",
+            quote: "Nariz limpia, sin corcho",
+            value: "clean",
+          },
+        ],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(proposal.fields.bottleSizeMl?.value).toBe(750);
+    expect(proposal.fields.priceAmount?.value).toBe(18.5);
+    expect(proposal.fields.currency?.value).toBe("EUR");
+    expect(proposal.fields.aromas?.value).toEqual(["ciruela", "violeta"]);
+    expect(proposal.fields.palateTexture?.value).toBe("round");
+    expect(proposal.fields.noseCondition?.value).toBe("clean");
+    const wrong = acceptProposal(
+      {
+        fields: [
+          { certain: true, name: "currency", quote: "dieciocho euros", value: "euros" },
+          { certain: true, name: "bottleSizeMl", quote: "setenta y cinco", value: 75_000 },
+        ],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(wrong.fields).toEqual({});
+  });
 });
