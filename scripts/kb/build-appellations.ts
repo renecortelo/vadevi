@@ -627,6 +627,48 @@ for (const name of gbList) {
   });
 }
 console.info(`  ${gbList.length} British wine names from the UK register.`);
+
+// Mexico: the IMPI's declarations of protection for wine, each placed where
+// the state its zone is.
+const mxPath = resolve(".kb-cache/world/mx.json");
+const mxList = (
+  existsSync(mxPath) ? JSON.parse(readFileSync(mxPath, "utf8")) : { records: [], sourceUrl: "" }
+) as {
+  records: {
+    declaredOn: string;
+    key: string;
+    latitude: number | null;
+    longitude: number | null;
+    names: string[];
+    qid: string | null;
+    reference: string;
+    type: "PGI";
+  }[];
+  sourceUrl: string;
+};
+for (const area of mxList.records) {
+  const { leads, summaries } = wikipediaSummaries(area.qid);
+  seen.add(`mx-${area.key}`);
+  entries.push({
+    countryCode: "MX",
+    eambrosiaId: null,
+    giType: area.type,
+    grapes: [],
+    id: `mx-${area.key}`,
+    latitude: area.latitude,
+    legalUrl: mxList.sourceUrl,
+    longitude: area.longitude,
+    name: area.names[0]!,
+    names: area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+    pointSource: area.latitude === null ? null : "place",
+    prominence: leads,
+    registerRef: area.reference,
+    registeredOn: area.declaredOn,
+    summaries,
+    wikidataId: area.qid,
+  });
+}
+console.info(`  ${mxList.records.length} Mexican indications from the IMPI.`);
 console.info(
   `  ${clEntries.length} Chilean denominations of origin from Decree 464, ` +
     `${clEntries.filter((entry) => entry.latitude !== null).length} placed.`,

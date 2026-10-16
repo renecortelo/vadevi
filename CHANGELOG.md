@@ -80,6 +80,13 @@ has the reasons.
   placed at their town (Still Bay was some 140 km off), and with them Olifants
   River and the names inside it, approximately; in Argentina, Chapadmalal and
   Balcarce at their towns. 15 names remain unplaced.
+- **Mexico in the atlas**: «Vinos de la Región Vitivinícola de Querétaro»,
+  the protected geographical indication the IMPI declared in the Diario
+  Oficial de la Federación on 10 March 2025 — the only one for Mexican wine
+  so far — with its summary in the eight languages, its point in the state of
+  Querétaro, and a link to the declaration. A wine whose region reads
+  "Querétaro" is linked to it. Baja California, the Valle de Guadalupe and
+  Parras have no declaration yet, so their wines stay unlinked.
 
 ## 0.3.0 — 12 October 2026
 

@@ -942,6 +942,13 @@ async function loadLibraryStatements(
         publisher: "UK protected food and drink names register (GOV.UK)",
         title: `${region.name} — UK protected wine name`,
       },
+      // Mexico's declarations are official texts, published in the DOF.
+      MX: {
+        license: "MX-official-text",
+        publisher:
+          "Instituto Mexicano de la Propiedad Industrial (IMPI), Diario Oficial de la Federación",
+        title: `${region.name} — ${region.registerRef ?? "DOF"}`,
+      },
       // IPONZ's register is Crown copyright: only its facts are used.
       NZ: {
         license: "NZ-Crown-copyright",
@@ -1006,9 +1013,11 @@ async function loadLibraryStatements(
                 ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
                 : region.countryCode === "AR"
                   ? `${region.giType === "DOC" ? "a controlled denomination of origin (DOC)" : "a geographical indication (IG)"} of Argentina, recognised by the INV${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("recognised")}`
-                  : region.countryCode === "GB"
-                    ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
-                    : `a production area of South Africa's Wine of Origin scheme${kind}`,
+                  : region.countryCode === "MX"
+                    ? `a protected geographical indication (IGP) of Mexico, declared by the IMPI in the Diario Oficial de la Federación${since("published")}`
+                    : region.countryCode === "GB"
+                      ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
+                      : `a production area of South Africa's Wine of Origin scheme${kind}`,
       [registerId],
     );
     if (region.within.length > 0) {

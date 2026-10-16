@@ -172,6 +172,7 @@
     "registerTitleCl": "A la zonificació vitícola de Xile",
     "registerTitleAr": "Al registre d'indicacions geogràfiques de l'Argentina (INV)",
     "registerTitleGb": "Al registre britànic de noms protegits d'aliments i begudes",
+    "registerTitleMx": "A les declaracions d'indicacions geogràfiques de Mèxic (IMPI)",
     "registeredOn": "Protegida a la UE des del {{date}}.",
     "registeredOnUs": "Àrea vitícola nord-americana des del {{date}}.",
     "registeredOnNz": "Indicació geogràfica registrada des del {{date}}.",
@@ -179,6 +180,7 @@
     "registeredOnAr": "Reconeguda el {{date}}.",
     "recognisedByAr": "Reconeguda per {{ref}}.",
     "registeredOnGb": "Al registre britànic des del {{date}}.",
+    "registeredOnMx": "La seva declaració es va publicar el {{date}}.",
     "registerLink": "Veure-la al registre de la UE (eAmbrosia)",
     "registerLinkUs": "Veure'n la secció al Codi de Reglaments Federals dels EUA ({{ref}}, eCFR)",
     "registerLinkNz": "Veure-la al registre de Nova Zelanda (número IP {{ref}}, IPONZ)",
@@ -187,6 +189,7 @@
     "registerLinkCl": "Veure el Decret 464 de 1994 a Ley Chile",
     "registerLinkAr": "Veure el llistat d'indicacions geogràfiques de l'INV",
     "registerLinkGb": "Veure'n l'entrada al registre britànic (GOV.UK)",
+    "registerLinkMx": "Veure'n la declaració al Diario Oficial de la Federación ({{ref}})",
     "registerCategories": "Categories de producte",
     "wineCategory": {
       "1": "Vi",

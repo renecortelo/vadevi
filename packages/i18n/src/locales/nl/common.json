@@ -172,6 +172,7 @@
     "registerTitleCl": "In de Chileense wijnbouwzonering",
     "registerTitleAr": "In het Argentijnse register van geografische aanduidingen (INV)",
     "registerTitleGb": "In het Britse register van beschermde namen van levensmiddelen en dranken",
+    "registerTitleMx": "In de verklaringen van geografische aanduidingen van Mexico (IMPI)",
     "registeredOn": "Beschermd in de EU sinds {{date}}.",
     "registeredOnUs": "American Viticultural Area sinds {{date}}.",
     "registeredOnNz": "Geregistreerde geografische aanduiding sinds {{date}}.",
@@ -179,6 +180,7 @@
     "registeredOnAr": "Erkend op {{date}}.",
     "recognisedByAr": "Erkend door {{ref}}.",
     "registeredOnGb": "Sinds {{date}} in het Britse register.",
+    "registeredOnMx": "De verklaring is gepubliceerd op {{date}}.",
     "registerLink": "Bekijken in het EU-register (eAmbrosia)",
     "registerLinkUs": "De sectie in de Amerikaanse Code of Federal Regulations bekijken ({{ref}}, eCFR)",
     "registerLinkNz": "In het Nieuw-Zeelandse register bekijken (IP-nummer {{ref}}, IPONZ)",
@@ -187,6 +189,7 @@
     "registerLinkCl": "Decreet 464 van 1994 op Ley Chile bekijken",
     "registerLinkAr": "De lijst van geografische aanduidingen van het INV bekijken",
     "registerLinkGb": "De vermelding in het Britse register bekijken (GOV.UK)",
+    "registerLinkMx": "Bekijk de verklaring in de Diario Oficial de la Federación ({{ref}})",
     "registerCategories": "Productcategorieën",
     "wineCategory": {
       "1": "Wijn",

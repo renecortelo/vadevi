@@ -28,7 +28,9 @@ import { type Cell, readSheet, sheetDate } from "./xlsx";
  *
  * Australia: Wine Australia's register and its open data (CC BY 4.0). Chile:
  * the zoning of Decree 464 of 1994, transcribed in
- * `data/kb/cl-zonificacion-viticola.json`.
+ * `data/kb/cl-zonificacion-viticola.json`. Mexico: the IMPI's declarations
+ * of protection in the Diario Oficial de la Federación, transcribed in
+ * `data/kb/mx-indicaciones-geograficas.json`.
  *
  * No model is involved: nothing here costs AI quota.
  *
@@ -1220,4 +1222,46 @@ writeFileSync(resolve(cache, "gb.json"), JSON.stringify(gbRecords, null, 1));
 console.info(
   `  GOV.UK: ${gbRecords.length} British wine names, ${gbItems.size} with an article on their wine, ` +
     `${gbRecords.filter((record) => record.latitude !== null).length} placed.`,
+);
+
+// 12. Mexico: the declarations of protection for wine the IMPI has published
+//     in the Diario Oficial de la Federación, transcribed in
+//     `data/kb/mx-indicaciones-geograficas.json`; each placed where
+//     OpenStreetMap has the state its zone is, approximately.
+type MxArea = {
+  declaredOn: string;
+  key: string;
+  names: string[];
+  reference: string;
+  states: string[];
+  type: "PGI";
+};
+const mx = JSON.parse(
+  readFileSync(resolve("data/kb/mx-indicaciones-geograficas.json"), "utf8"),
+) as { areas: MxArea[]; source: { url: string } };
+const mxItems = await wineArticleItems(new Map(mx.areas.map((area) => [area.key, area.names])), {
+  queretaro: "Vinos de la Región Vitivinícola de Querétaro",
+});
+await leadLanguages([...new Set(mxItems.values())]);
+const mxRecords = [];
+for (const area of mx.areas) {
+  const point = await placeOf(area.states, "mx", [], null);
+  mxRecords.push({
+    declaredOn: area.declaredOn,
+    key: area.key,
+    latitude: point?.latitude ?? null,
+    longitude: point?.longitude ?? null,
+    names: area.names,
+    qid: mxItems.get(area.key) ?? null,
+    reference: area.reference,
+    type: area.type,
+  });
+}
+writeFileSync(
+  resolve(cache, "mx.json"),
+  JSON.stringify({ records: mxRecords, sourceUrl: mx.source.url }, null, 1),
+);
+console.info(
+  `  IMPI: ${mxRecords.length} Mexican indications, ${mxItems.size} with an article on their wine, ` +
+    `${mxRecords.filter((record) => record.latitude !== null).length} placed.`,
 );

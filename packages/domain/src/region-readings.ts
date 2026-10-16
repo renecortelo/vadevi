@@ -10,6 +10,10 @@
  */
 export function regionReadings(normalized: string): string[] {
   const valley = /^(.+) valley$/.exec(normalized);
-  if (valley === null) return [];
-  return [`valle del ${valley[1]}`, `valle de ${valley[1]}`];
+  if (valley !== null) return [`valle del ${valley[1]}`, `valle de ${valley[1]}`];
+  // Mexico's declarations name the wines of a region, not the region: the
+  // IMPI protects "Vinos de la Región Vitivinícola de Querétaro", and a label
+  // or the reader writes "Querétaro".
+  if (normalized.length === 0 || normalized.startsWith("vinos de ")) return [];
+  return [`vinos de la region vitivinicola de ${normalized}`];
 }

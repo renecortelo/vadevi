@@ -172,6 +172,7 @@
     "registerTitleCl": "Nella zonazione viticola del Cile",
     "registerTitleAr": "Nel registro delle indicazioni geografiche dell'Argentina (INV)",
     "registerTitleGb": "Nel registro britannico dei nomi protetti di alimenti e bevande",
+    "registerTitleMx": "Nelle dichiarazioni di indicazioni geografiche del Messico (IMPI)",
     "registeredOn": "Protetta nell'UE dal {{date}}.",
     "registeredOnUs": "Area viticola americana dal {{date}}.",
     "registeredOnNz": "Indicazione geografica registrata dal {{date}}.",
@@ -179,6 +180,7 @@
     "registeredOnAr": "Riconosciuta il {{date}}.",
     "recognisedByAr": "Riconosciuta da {{ref}}.",
     "registeredOnGb": "Nel registro britannico dal {{date}}.",
+    "registeredOnMx": "La sua dichiarazione è stata pubblicata il {{date}}.",
     "registerLink": "Vederla nel registro dell'UE (eAmbrosia)",
     "registerLinkUs": "Vederne la sezione nel Codice dei regolamenti federali degli Stati Uniti ({{ref}}, eCFR)",
     "registerLinkNz": "Vederla nel registro neozelandese (numero IP {{ref}}, IPONZ)",
@@ -187,6 +189,7 @@
     "registerLinkCl": "Vedere il decreto 464 del 1994 su Ley Chile",
     "registerLinkAr": "Vedere l'elenco delle indicazioni geografiche dell'INV",
     "registerLinkGb": "Vederne la voce nel registro britannico (GOV.UK)",
+    "registerLinkMx": "Vedi la sua dichiarazione nel Diario Oficial de la Federación ({{ref}})",
     "registerCategories": "Categorie di prodotti",
     "wineCategory": {
       "1": "Vino",

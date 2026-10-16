@@ -107,4 +107,23 @@ describe("linking wines to the library on the schedule", () => {
     expect(await regionRefOf(env.DB, "Victoria", "AR")).toBeNull();
     expect(await regionRefOf(env.DB, "Victoria")).toBe("link-victoria");
   });
+
+  it("reads a Mexican region as the wines its declaration protects", async () => {
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_regions (id, eambrosia_id, name, country_code, gi_type) VALUES
+          ('link-queretaro', NULL, 'Vinos de la Región Vitivinícola de Querétaro', 'MX', 'PGI')`,
+      ),
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_names
+          (entity_type, entity_id, locale, name, normalized_name, kind, source) VALUES
+          ('region', 'link-queretaro', '*', 'Vinos de la Región Vitivinícola de Querétaro',
+           'vinos de la region vitivinicola de queretaro', 'primary', 'register')`,
+      ),
+    ]);
+    expect(await regionRefOf(env.DB, "Querétaro", "MX")).toBe("link-queretaro");
+    expect(await regionRefOf(env.DB, "Querétaro IGP", "MX")).toBe("link-queretaro");
+    // Parras and the Valle de Guadalupe have no declaration.
+    expect(await regionRefOf(env.DB, "Parras", "MX")).toBeNull();
+  });
 });

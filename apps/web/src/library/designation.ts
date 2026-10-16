@@ -12,7 +12,7 @@ export function designationKey(type: RegionDesignation, short = false): string {
   return short ? `${key}Short` : key;
 }
 
-type RegisterSuffix = "" | "Ar" | "Au" | "Cl" | "Gb" | "Nz" | "Us" | "Za";
+type RegisterSuffix = "" | "Ar" | "Au" | "Cl" | "Gb" | "Mx" | "Nz" | "Us" | "Za";
 
 /**
  * The suffix of the catalog keys that speak of a name's register: none for
@@ -29,6 +29,7 @@ export function registerSuffix(
     AU: "Au",
     CL: "Cl",
     GB: "Gb",
+    MX: "Mx",
     NZ: "Nz",
     US: "Us",
     ZA: "Za",

@@ -255,6 +255,24 @@ test("an Argentine indication shows its resolution and where it lies", async ({ 
   await expect(nesting.getByRole("link", { name: "Cuyo", exact: true })).toBeVisible();
 });
 
+test("a Mexican indication cites its declaration in the Diario Oficial", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/mx-queretaro");
+  await page.locator("#interface-locale").selectOption("es");
+  await expect(page.locator("h1")).toHaveText("Vinos de la Región Vitivinícola de Querétaro", {
+    timeout: 15_000,
+  });
+  await expect(page.locator("#region-register")).toHaveText(
+    "En las declaraciones de indicaciones geográficas de México (IMPI)",
+  );
+  await expect(page.getByText("Su declaración se publicó el 10 de marzo de 2025.")).toBeVisible();
+  await expect(page.locator('a[href*="sidof.segob.gob.mx/notas/docFuente/5751385"]')).toHaveText(
+    "Ver su declaración en el Diario Oficial de la Federación (DOF 10-03-2025)",
+  );
+  await expect(page.locator(".library-map__point")).toBeVisible();
+});
+
 test("a British wine name cites the UK register", async ({ page }) => {
   await signIn(page);
   await completeOnboarding(page);

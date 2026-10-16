@@ -1,0 +1,20 @@
+{
+  "source": {
+    "title": "Declaración de Protección de la Indicación Geográfica Vinos de la Región Vitivinícola de Querétaro",
+    "publisher": "Instituto Mexicano de la Propiedad Industrial (IMPI), in the Diario Oficial de la Federación",
+    "url": "https://sidof.segob.gob.mx/notas/docFuente/5751385",
+    "page": "https://sidof.segob.gob.mx/notas/5751385",
+    "issued": "2025-03-10",
+    "note": "Transcribed by hand from the declaration as the Diario Oficial de la Federación published it (10 March 2025, morning edition): the name as it writes it, its kind (\"Indicación Geográfica Protegida\", whose abbreviation it gives as \"I.G.P.\"), and its zone, which it delimits as the state of Querétaro. The declaration lists no grape varieties. It was the only declaration of protection for a Mexican wine found in the DOF on 16 October 2026; none was found for Baja California, the Valle de Guadalupe or Parras. Legislative, regulatory and administrative texts have no copyright in Mexico (Ley Federal del Derecho de Autor, art. 14, fr. VIII)."
+  },
+  "areas": [
+    {
+      "key": "queretaro",
+      "names": ["Vinos de la Región Vitivinícola de Querétaro"],
+      "type": "PGI",
+      "states": ["Querétaro"],
+      "declaredOn": "2025-03-10",
+      "reference": "DOF 10-03-2025"
+    }
+  ]
+}
