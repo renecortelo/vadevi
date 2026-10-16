@@ -311,6 +311,20 @@ export function RegionIcon() {
   );
 }
 
+/**
+ * Written by voice: a microphone on its stand. Shown beside a tasting first
+ * recorded by speaking — where it came from, nothing about how good it is.
+ */
+export function VoiceIcon() {
+  return (
+    <Frame>
+      <rect height="10" rx="3" width="6" x="9" y="3.2" />
+      <path d="M6.2 11.2a5.8 5.8 0 0 0 11.6 0" />
+      <path d="M12 17v3.6M9 20.6h6" />
+    </Frame>
+  );
+}
+
 /** By grape: a small bunch. */
 export function GrapeVarietyIcon() {
   return (

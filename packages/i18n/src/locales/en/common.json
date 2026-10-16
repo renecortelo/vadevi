@@ -1239,7 +1239,8 @@
       "verdict": "Your verdict",
       "valueExpectation": "Value and expectation",
       "yourConclusion": "In your own words"
-    }
+    },
+    "voiceOrigin": "Recorded by voice"
   },
   "dataRights": {
     "accountScheduled": "Account deletion is scheduled in {{days}} days.",

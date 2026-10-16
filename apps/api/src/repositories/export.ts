@@ -95,7 +95,7 @@ export async function buildExportDocument(
     .prepare(
       `SELECT note.id, note.wine_id, note.author_user_id, note.mode, note.state,
         note.tasted_at, note.score_100, note.sentiment, note.would_drink_again,
-        note.would_buy,
+        note.would_buy, note.creation_method,
         ${authorOnly("note.comment")} AS comment,
         ${authorOnly("context.food_text")} AS food_text
       FROM tasting_notes note
@@ -106,6 +106,7 @@ export async function buildExportDocument(
     )
     .bind(actor.user_id, actor.user_id, spaceId, actor.user_id, scope)
     .all<{
+      creation_method: string;
       author_user_id: string;
       comment: string | null;
       food_text: string | null;
@@ -388,6 +389,7 @@ export async function buildExportDocument(
       tastings: tastings.results.map((row) => ({
         authorUserId: row.author_user_id,
         comment: row.comment,
+        creationMethod: row.creation_method,
         descriptorCodes: descriptorsByNote.get(row.id) ?? [],
         foodText: row.food_text,
         id: row.id,
@@ -480,6 +482,7 @@ const csvColumns: Record<ExportCsvDataset, readonly string[]> = {
     "descriptorCodes",
     "foodText",
     "comment",
+    "creationMethod",
   ],
   wines: [
     "id",

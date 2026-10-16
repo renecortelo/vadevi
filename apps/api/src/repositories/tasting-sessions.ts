@@ -45,6 +45,7 @@ type SessionRow = {
 
 type DeepRow = {
   acidity: number | null;
+  creation_method: "audio" | "manual";
   alcohol_perception: number | null;
   appearance_clarity: "clear" | "hazy" | null;
   appearance_color_family: "brown" | "orange" | "red" | "rose" | "white" | null;
@@ -680,6 +681,7 @@ async function getDeepNote(
   return {
     acidity: row.acidity ?? undefined,
     alcoholPerception: row.alcohol_perception ?? undefined,
+    creationMethod: row.creation_method,
     appearanceClarity: row.appearance_clarity ?? undefined,
     appearanceColorFamily: row.appearance_color_family ?? undefined,
     appearanceHue: row.appearance_hue ?? undefined,
@@ -1027,6 +1029,18 @@ export async function createDeepTastingNote(
           noteId,
           options.spaceId,
         ),
+    );
+  }
+  // Spoken, then written: the note keeps how it was first written. Only a
+  // note just created (version 1) is marked; an edit never changes it.
+  if (options.request.creationMethod === "audio") {
+    commands.push(
+      database
+        .prepare(
+          `UPDATE tasting_notes SET creation_method = 'audio'
+          WHERE id = ? AND space_id = ? AND version = 1`,
+        )
+        .bind(noteId, options.spaceId),
     );
   }
   for (const descriptor of options.request.descriptors) {
@@ -1521,7 +1535,7 @@ export async function listWineTastings(
 
   const rows = await database
     .prepare(
-      `SELECT note.id, note.mode, note.score_100, note.tasted_at,
+      `SELECT note.id, note.mode, note.score_100, note.tasted_at, note.creation_method,
         author.display_name AS author_name,
         CASE WHEN author.firebase_uid = ? THEN 1 ELSE 0 END AS is_self,
         ctx.venue_name, ctx.venue_latitude, ctx.venue_longitude
@@ -1538,6 +1552,7 @@ export async function listWineTastings(
     .bind(options.principal.firebaseUid, options.spaceId, options.wineId)
     .all<{
       author_name: string | null;
+      creation_method: "audio" | "manual";
       id: string;
       is_self: number;
       mode: "deep" | "quick";
@@ -1552,6 +1567,7 @@ export async function listWineTastings(
     const self = row.is_self === 1;
     return {
       authorName: row.author_name ?? "—",
+      creationMethod: row.creation_method,
       id: row.id,
       isSelf: self,
       mode: row.mode,

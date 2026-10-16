@@ -5,6 +5,7 @@ import {
   ResourceTimestampSchema,
   TernaryChoiceSchema,
   WineSummarySchema,
+  TastingCreationMethodSchema,
 } from "./wine-memory";
 
 export const TastingOntologyVersionSchema = z.literal("2026.1");
@@ -69,6 +70,7 @@ export const TastingContextSchema = z
 export const DeepTastingFieldsSchema = z
   .object({
     acidity: TastingScaleSchema.optional(),
+    creationMethod: TastingCreationMethodSchema.optional(),
     alcoholPerception: TastingScaleSchema.optional(),
     appearanceClarity: z.enum(["clear", "hazy"]).optional(),
     appearanceColorFamily: z.enum(["white", "rose", "red", "orange", "brown"]).optional(),
@@ -124,6 +126,7 @@ export const DeepTastingNoteSchema = DeepTastingFieldsSchema.omit({ clientId: tr
     authorUserId: ResourceIdSchema,
     context: TastingContextSchema.nullable(),
     createdAt: ResourceTimestampSchema,
+    creationMethod: TastingCreationMethodSchema,
     id: ResourceIdSchema,
     ontologyVersion: TastingOntologyVersionSchema,
     sessionWineId: ResourceIdSchema.nullable(),
@@ -140,6 +143,7 @@ export const DeepTastingResponseSchema = z
 /** The fields of a deep note an update may change, one by one. */
 const deepUpdatableFields = DeepTastingFieldsSchema.omit({
   clientId: true,
+  creationMethod: true,
   context: true,
   descriptors: true,
   mode: true,
@@ -201,6 +205,7 @@ export const SubmitTastingRequestSchema = z
 export const TastingHistoryEntrySchema = z
   .object({
     authorName: z.string().min(1).max(120),
+    creationMethod: TastingCreationMethodSchema,
     id: ResourceIdSchema,
     isSelf: z.boolean(),
     mode: z.enum(["quick", "deep"]),

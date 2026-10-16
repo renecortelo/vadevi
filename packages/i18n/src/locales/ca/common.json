@@ -1239,7 +1239,8 @@
       "verdict": "El teu veredicte",
       "valueExpectation": "Valor i expectativa",
       "yourConclusion": "Amb les teves paraules"
-    }
+    },
+    "voiceOrigin": "Registrada per veu"
   },
   "dataRights": {
     "accountScheduled": "L'esborrat del compte està programat d'aquí a {{days}} dies.",

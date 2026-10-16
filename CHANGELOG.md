@@ -6,7 +6,18 @@ has the reasons.
 
 ## Unreleased
 
+### Tastings
+
+- **Where a tasting came from**: a note first recorded by voice (voice
+  tastings are coming, see `docs/privacy-review-voice-tasting.md`) keeps a
+  quiet microphone in the wine's history and on the note itself — where it
+  came from, never a judgement of it, and no edit removes it. Every note
+  written so far reads as written by hand.
+
 ### For operators
+
+- Migration `0038` adds `tasting_notes.creation_method`; the export schema is
+  now `2026.3` and carries it with each tasting.
 
 - **Keeping the registers current**: the routine is in `data/kb/README.md`,
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh

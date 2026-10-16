@@ -1239,7 +1239,8 @@
       "verdict": "Il tuo verdetto",
       "valueExpectation": "Valore e aspettativa",
       "yourConclusion": "Con le tue parole"
-    }
+    },
+    "voiceOrigin": "Registrata a voce"
   },
   "dataRights": {
     "accountScheduled": "L'eliminazione dell'account è pianificata tra {{days}} giorni.",

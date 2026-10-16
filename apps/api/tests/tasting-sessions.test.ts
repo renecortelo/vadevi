@@ -219,6 +219,48 @@ async function createDeepNote(
 }
 
 describe("Deep tasting and collaborative sessions", () => {
+  it("keeps how a note was first written, whatever editing follows", async () => {
+    const { spaceId } = await sharedSpace();
+    const wine = await createWine(spaceId, "Spoken Wine");
+    const create = (body: Record<string, unknown>) =>
+      SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes`, {
+        body: JSON.stringify({
+          state: "submitted",
+          tastedAt: "2026-10-16T20:00:00.000Z",
+          wineId: wine.id,
+          ...body,
+        }),
+        headers: headers(ownerToken, randomOpaqueToken()),
+        method: "POST",
+      });
+    const spoken = await create({ creationMethod: "audio", mode: "deep", score100: 80 });
+    expect(spoken.status).toBe(201);
+    const note = DeepTastingResponseSchema.parse(await spoken.json()).data;
+    expect(note.creationMethod).toBe("audio");
+
+    const patch = (body: Record<string, unknown>) =>
+      SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/tasting-notes/${note.id}`, {
+        body: JSON.stringify(body),
+        headers: headers(ownerToken),
+        method: "PATCH",
+      });
+    // Edited by hand: still a note first written by voice.
+    const edited = await patch({ score100: 86, version: note.version });
+    expect(edited.status).toBe(200);
+    expect(DeepTastingResponseSchema.parse(await edited.json()).data.creationMethod).toBe("audio");
+    // And no edit may rewrite where it came from.
+    expect((await patch({ creationMethod: "manual", version: note.version + 1 })).status).toBe(400);
+
+    // A note written by hand says so, and the wine's history tells them apart.
+    expect((await create({ mode: "quick" })).status).toBe(201);
+    const history = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${wine.id}/tasting-notes`,
+      { headers: { Authorization: `Bearer ${ownerToken}` } },
+    );
+    const entries = (await history.json()) as { data: { creationMethod: string; id: string }[] };
+    expect(entries.data.map((entry) => entry.creationMethod).sort()).toEqual(["audio", "manual"]);
+  });
+
   it("lists a wine's tastings, sharing scores but never a peer's place", async () => {
     const { owner, spaceId } = await sharedSpace();
     const wine = await createWine(spaceId, "Vi d'Historial");

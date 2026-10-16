@@ -6,6 +6,7 @@ import { Link } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { getWineTastings } from "../services/tasting";
 import { MapLink } from "./MapLink";
+import { VoiceOrigin } from "./VoiceOrigin";
 
 /**
  * A wine's tastings, with the way in to record another.
@@ -63,7 +64,10 @@ export function TastingHistory({
         {shown.map((entry) => (
           <li key={entry.id}>
             <div>
-              <strong>{new Date(entry.tastedAt).toLocaleDateString(i18n.language)}</strong>
+              <strong>
+                {new Date(entry.tastedAt).toLocaleDateString(i18n.language)}{" "}
+                <VoiceOrigin creationMethod={entry.creationMethod} />
+              </strong>
               <span>
                 {entry.isSelf ? t("evidence.historyYou") : entry.authorName}
                 {entry.score100 === null ? "" : ` · ${entry.score100}/100`}

@@ -49,6 +49,7 @@ type WineRow = {
 
 type TastingRow = {
   comment: string | null;
+  creation_method: "audio" | "manual";
   food_text: string | null;
   id: string;
   mode: "quick";
@@ -868,6 +869,17 @@ export async function createTastingNote(
         ON CONFLICT(tasting_note_id) DO NOTHING`,
       )
       .bind(options.request.foodText ?? null, now, now, candidateId, options.spaceId),
+    // Spoken, then written: marked on the note just created, never by an edit.
+    ...(options.request.creationMethod === "audio"
+      ? [
+          database
+            .prepare(
+              `UPDATE tasting_notes SET creation_method = 'audio'
+              WHERE id = ? AND space_id = ? AND version = 1`,
+            )
+            .bind(candidateId, options.spaceId),
+        ]
+      : []),
     ...options.request.descriptorCodes.map((code: string) =>
       database
         .prepare(
@@ -941,7 +953,7 @@ async function getTastingNoteResponse(
     .prepare(
       `SELECT note.id, note.wine_id, note.mode, note.state, note.tasted_at,
         note.score_100, note.sentiment, note.would_drink_again, note.would_buy,
-        note.comment, note.version, context.food_text
+        note.comment, note.version, note.creation_method, context.food_text
       FROM tasting_notes note
       JOIN tasting_contexts context ON context.tasting_note_id = note.id AND context.space_id = note.space_id
       JOIN space_memberships membership ON membership.space_id = note.space_id
@@ -969,6 +981,7 @@ async function getTastingNoteResponse(
   return {
     data: {
       comment: row.comment,
+      creationMethod: row.creation_method,
       descriptorCodes: descriptors.results.map((entry) => entry.descriptor_code),
       foodText: row.food_text,
       id: row.id,

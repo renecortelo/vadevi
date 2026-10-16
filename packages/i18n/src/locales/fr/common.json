@@ -1239,7 +1239,8 @@
       "verdict": "Votre verdict",
       "valueExpectation": "Valeur et attente",
       "yourConclusion": "Avec vos mots"
-    }
+    },
+    "voiceOrigin": "Enregistrée à la voix"
   },
   "dataRights": {
     "accountScheduled": "La suppression du compte est programmée dans {{days}} jours.",

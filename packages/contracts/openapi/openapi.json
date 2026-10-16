@@ -1095,7 +1095,7 @@
               "schemaVersion": {
                 "type": "string",
                 "enum": [
-                  "2026.2"
+                  "2026.3"
                 ]
               },
               "scope": {
@@ -1193,6 +1193,9 @@
                       "type": "string",
                       "nullable": true
                     },
+                    "creationMethod": {
+                      "type": "string"
+                    },
                     "descriptorCodes": {
                       "type": "array",
                       "items": {
@@ -1249,6 +1252,7 @@
                   "required": [
                     "authorUserId",
                     "comment",
+                    "creationMethod",
                     "descriptorCodes",
                     "foodText",
                     "id",
@@ -5896,6 +5900,13 @@
                 "type": "string",
                 "nullable": true
               },
+              "creationMethod": {
+                "type": "string",
+                "enum": [
+                  "manual",
+                  "audio"
+                ]
+              },
               "descriptorCodes": {
                 "type": "array",
                 "items": {
@@ -5975,6 +5986,7 @@
             },
             "required": [
               "comment",
+              "creationMethod",
               "descriptorCodes",
               "foodText",
               "id",
@@ -6006,6 +6018,13 @@
                 "type": "integer",
                 "minimum": 1,
                 "maximum": 5
+              },
+              "creationMethod": {
+                "type": "string",
+                "enum": [
+                  "manual",
+                  "audio"
+                ]
               },
               "alcoholPerception": {
                 "type": "integer",
@@ -6437,6 +6456,7 @@
               }
             },
             "required": [
+              "creationMethod",
               "context",
               "mode",
               "sessionWineId",
@@ -6468,6 +6488,13 @@
           "comment": {
             "type": "string",
             "maxLength": 2000
+          },
+          "creationMethod": {
+            "type": "string",
+            "enum": [
+              "manual",
+              "audio"
+            ]
           },
           "descriptorCodes": {
             "type": "array",
@@ -6548,6 +6575,13 @@
             "type": "integer",
             "minimum": 1,
             "maximum": 5
+          },
+          "creationMethod": {
+            "type": "string",
+            "enum": [
+              "manual",
+              "audio"
+            ]
           },
           "alcoholPerception": {
             "type": "integer",
@@ -8451,6 +8485,13 @@
                           "type": "string",
                           "maxLength": 2000
                         },
+                        "creationMethod": {
+                          "type": "string",
+                          "enum": [
+                            "manual",
+                            "audio"
+                          ]
+                        },
                         "descriptorCodes": {
                           "type": "array",
                           "items": {
@@ -8812,6 +8853,13 @@
                   "minLength": 1,
                   "maxLength": 120
                 },
+                "creationMethod": {
+                  "type": "string",
+                  "enum": [
+                    "manual",
+                    "audio"
+                  ]
+                },
                 "id": {
                   "type": "string",
                   "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
@@ -8851,6 +8899,7 @@
               },
               "required": [
                 "authorName",
+                "creationMethod",
                 "id",
                 "isSelf",
                 "mode",

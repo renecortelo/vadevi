@@ -340,10 +340,18 @@ export const MergeWinesResponseSchema = z
   .strict()
   .openapi("MergeWinesResponse");
 
+/**
+ * How a tasting note was first written: by hand, or from a spoken
+ * description. Set when the note is created and never changed by editing it;
+ * it says where the note came from, nothing about how good it is.
+ */
+export const TastingCreationMethodSchema = z.enum(["manual", "audio"]);
+
 export const QuickTastingRequestSchema = z
   .object({
     clientId: ResourceIdSchema.optional(),
     comment: z.string().trim().max(2_000).optional(),
+    creationMethod: TastingCreationMethodSchema.optional(),
     descriptorCodes: z
       .array(z.string().regex(/^[a-z0-9]+(?:[._-][a-z0-9]+)*$/))
       .max(3)
@@ -364,6 +372,7 @@ export const QuickTastingRequestSchema = z
 export const TastingNoteSchema = z
   .object({
     comment: z.string().nullable(),
+    creationMethod: TastingCreationMethodSchema,
     descriptorCodes: z.array(z.string()),
     foodText: z.string().nullable(),
     id: ResourceIdSchema,

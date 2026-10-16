@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "../components/MapLink";
+import { VoiceOrigin } from "../components/VoiceOrigin";
 import { getDeepTastingNote } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
 import { SmoothLink } from "../motion/SmoothLink";
@@ -102,7 +103,10 @@ export function TastingNotePage() {
       <header className="page-heading">
         <div>
           <p className="eyebrow">{t("tastingRead.eyebrow")}</p>
-          <h1>{new Date(note.tastedAt).toLocaleDateString(i18n.language)}</h1>
+          <h1>
+            {new Date(note.tastedAt).toLocaleDateString(i18n.language)}{" "}
+            <VoiceOrigin creationMethod={note.creationMethod} />
+          </h1>
           {venue === null ? null : (
             <p className="tasting-read__venue">
               <MapLink

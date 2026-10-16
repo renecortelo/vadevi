@@ -1239,7 +1239,8 @@
       "verdict": "Ihr Urteil",
       "valueExpectation": "Wert und Erwartung",
       "yourConclusion": "In Ihren Worten"
-    }
+    },
+    "voiceOrigin": "Per Sprache erfasst"
   },
   "dataRights": {
     "accountScheduled": "Die Kontolöschung ist in {{days}} Tagen geplant.",

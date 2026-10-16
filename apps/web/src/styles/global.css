@@ -4783,6 +4783,19 @@ p {
   overflow: hidden;
 }
 
+/* A tasting first recorded by voice: a small, quiet microphone in the text's
+   own colour — never a warning colour or a badge. */
+.voice-origin {
+  color: var(--color-text-muted);
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.voice-origin .nav-icon {
+  block-size: 1em;
+  inline-size: 1em;
+}
+
 /* The cellar on the map: its countries, and a point per registered name. */
 .cellar-map .library-map__country.is-held {
   fill: color-mix(in oklab, var(--color-plum) 18%, var(--color-surface-raised));

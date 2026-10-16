@@ -7,7 +7,7 @@ import { ResourceIdSchema, ResourceTimestampSchema } from "./wine-memory";
  * The export payload carries its own schema version so an archive stays
  * interpretable after the application contract moves on.
  */
-export const ExportSchemaVersion = "2026.2";
+export const ExportSchemaVersion = "2026.3";
 
 export const ExportScopeSchema = z.enum(["space", "own"]);
 
@@ -57,6 +57,8 @@ const ExportTastingSchema = z
   .object({
     authorUserId: ResourceIdSchema,
     comment: z.string().nullable(),
+    /** How the note was first written ("manual" or "audio"); since 2026.3. */
+    creationMethod: z.string(),
     descriptorCodes: z.array(z.string()),
     foodText: z.string().nullable(),
     id: ResourceIdSchema,
