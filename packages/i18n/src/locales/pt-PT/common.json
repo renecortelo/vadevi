@@ -1692,5 +1692,27 @@
     "grapesTitle": "Castas",
     "grapesEmpty": "Nada para arrumar: cada casta está escrita de uma só forma.",
     "linkedNote": "O que a biblioteca reconhece já aparece unificado sem renomear nada: as castas na tua língua, as denominações com o nome oficial. Aqui só aparece o resto."
+  },
+  "voice": {
+    "title": "Descreva-o em voz alta",
+    "hint": "Diga o vinho, o produtor, a colheita e a região, depois o que vê, cheira e prova, e a sua nota. Só se preenchem os campos vazios.",
+    "record": "Gravar",
+    "again": "Gravar de novo",
+    "stop": "Parar",
+    "cancel": "Cancelar",
+    "recording": "A gravar… (até 2 minutos)",
+    "transcribing": "A ouvir a gravação…",
+    "transcript": "O que foi ouvido — corrija se for preciso",
+    "fill": "Preencher o formulário",
+    "filling": "A ler a nota… pode demorar alguns segundos.",
+    "filled_one": "{{count}} campo preenchido. Reveja-o antes de guardar.",
+    "filled_other": "{{count}} campos preenchidos. Reveja-os antes de guardar.",
+    "suggestions": "Dito com dúvida, deixado à sua escolha: {{fields}}.",
+    "severalWines": "Descreveu mais de um vinho: só o primeiro foi usado.",
+    "errorMicrophone": "Não foi possível abrir o microfone. Verifique a permissão do navegador; nada do que escreveu se perde.",
+    "errorService": "Não foi possível ler a nota agora. Nada do que escreveu se perde; tente de novo ou escreva-a.",
+    "errorQuota": "A quota de voz de hoje esgotou-se. O formulário funciona à mão como sempre.",
+    "privacy": "Nada é guardado até guardar. A gravação vai para o Cloudflare Workers AI e não é conservada.",
+    "offline": "A voz precisa de ligação; o formulário funciona sem ligação à mão."
   }
 }

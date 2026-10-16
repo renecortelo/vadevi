@@ -1692,5 +1692,27 @@
     "grapesTitle": "Grapes",
     "grapesEmpty": "Nothing to tidy: every grape is written one way.",
     "linkedNote": "What the library recognises already reads as one, with nothing renamed: grapes in your language, appellations by their official name. Only what it does not recognise appears here."
+  },
+  "voice": {
+    "title": "Describe it aloud",
+    "hint": "Say the wine, producer, vintage and region, then what you see, smell and taste, and your score. Only empty fields are filled.",
+    "record": "Record",
+    "again": "Record again",
+    "stop": "Stop",
+    "cancel": "Cancel",
+    "recording": "Recording… (up to 2 minutes)",
+    "transcribing": "Listening to the recording…",
+    "transcript": "What was heard — correct it if needed",
+    "fill": "Fill the form",
+    "filling": "Reading the note… this can take a few seconds.",
+    "filled_one": "{{count}} field filled. Review it before saving.",
+    "filled_other": "{{count}} fields filled. Review them before saving.",
+    "suggestions": "Said with doubt, left for you: {{fields}}.",
+    "severalWines": "You described more than one wine: only the first was used.",
+    "errorMicrophone": "The microphone could not be opened. Check the browser's permission; nothing you typed is lost.",
+    "errorService": "The note could not be read just now. Nothing you typed is lost; try again or type it.",
+    "errorQuota": "Today's voice budget is spent. The form works by hand as always.",
+    "privacy": "Nothing is saved until you save. The recording goes to Cloudflare Workers AI and is not kept.",
+    "offline": "Voice needs a connection; the form works offline by hand."
   }
 }

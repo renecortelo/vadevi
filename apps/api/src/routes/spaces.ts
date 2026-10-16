@@ -28,6 +28,7 @@ import {
 import { isAdmin } from "../access/allowlist";
 import { accessConfiguration } from "../access/cloudflare-access";
 import type { ApiEnvironment } from "../types";
+import { voiceInputEnabled } from "../adapters/voice-extraction";
 import {
   externalResearchEnabled,
   imageSearchEnabled,
@@ -431,6 +432,7 @@ export function registerSpaceRoutes(app: OpenAPIHono<ApiEnvironment>) {
       accessSecondFactor: accessConfiguration(context.env) !== null,
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
+      voiceInput: voiceInputEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
       mapTiles: mapTilesEnabled(context.env),
       placeSearch: placeSearchEnabled(context.env),

@@ -1692,5 +1692,27 @@
     "grapesTitle": "Cépages",
     "grapesEmpty": "Rien à ranger : chaque cépage est écrit d'une seule façon.",
     "linkedNote": "Ce que la bibliothèque reconnaît s'affiche déjà unifié, sans rien renommer : les cépages dans votre langue, les appellations sous leur nom officiel. Ici n'apparaît que le reste."
+  },
+  "voice": {
+    "title": "Décrivez-le à voix haute",
+    "hint": "Dites le vin, le producteur, le millésime et la région, puis ce que vous voyez, sentez et goûtez, et votre note. Seuls les champs vides sont remplis.",
+    "record": "Enregistrer",
+    "again": "Enregistrer à nouveau",
+    "stop": "Arrêter",
+    "cancel": "Annuler",
+    "recording": "Enregistrement… (jusqu'à 2 minutes)",
+    "transcribing": "Écoute de l'enregistrement…",
+    "transcript": "Ce qui a été entendu — corrigez-le si besoin",
+    "fill": "Remplir le formulaire",
+    "filling": "Lecture de la note… cela peut prendre quelques secondes.",
+    "filled_one": "{{count}} champ rempli. Vérifiez-le avant d'enregistrer.",
+    "filled_other": "{{count}} champs remplis. Vérifiez-les avant d'enregistrer.",
+    "suggestions": "Dit avec un doute, laissé à votre choix : {{fields}}.",
+    "severalWines": "Vous avez décrit plus d'un vin : seul le premier a été utilisé.",
+    "errorMicrophone": "Le micro n'a pas pu s'ouvrir. Vérifiez l'autorisation du navigateur ; rien de ce que vous avez saisi n'est perdu.",
+    "errorService": "La note n'a pas pu être lue pour l'instant. Rien de ce que vous avez saisi n'est perdu ; réessayez ou saisissez-la.",
+    "errorQuota": "Le quota vocal du jour est épuisé. Le formulaire fonctionne à la main comme toujours.",
+    "privacy": "Rien n'est enregistré avant que vous enregistriez. L'enregistrement va à Cloudflare Workers AI et n'est pas conservé.",
+    "offline": "La voix nécessite une connexion ; le formulaire fonctionne hors ligne à la main."
   }
 }

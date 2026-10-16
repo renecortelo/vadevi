@@ -1692,5 +1692,27 @@
     "grapesTitle": "Druiven",
     "grapesEmpty": "Niets op te ruimen: elke druif is op één manier geschreven.",
     "linkedNote": "Wat de bibliotheek herkent, staat al samengevoegd zonder hernoemen: druiven in je taal, herkomstbenamingen met hun officiële naam. Hier staat alleen de rest."
+  },
+  "voice": {
+    "title": "Beschrijf het hardop",
+    "hint": "Noem de wijn, producent, oogstjaar en streek, dan wat je ziet, ruikt en proeft, en je score. Alleen lege velden worden ingevuld.",
+    "record": "Opnemen",
+    "again": "Opnieuw opnemen",
+    "stop": "Stoppen",
+    "cancel": "Annuleren",
+    "recording": "Opname loopt… (tot 2 minuten)",
+    "transcribing": "Opname wordt beluisterd…",
+    "transcript": "Wat er gehoord is — verbeter het zo nodig",
+    "fill": "Formulier invullen",
+    "filling": "Notitie wordt gelezen… dat kan een paar seconden duren.",
+    "filled_one": "{{count}} veld ingevuld. Controleer het voor je opslaat.",
+    "filled_other": "{{count}} velden ingevuld. Controleer ze voor je opslaat.",
+    "suggestions": "Met twijfel gezegd, aan jou gelaten: {{fields}}.",
+    "severalWines": "Je hebt meer dan één wijn beschreven: alleen de eerste is gebruikt.",
+    "errorMicrophone": "De microfoon kon niet worden geopend. Controleer de browsertoestemming; niets van wat je typte gaat verloren.",
+    "errorService": "De notitie kon nu niet worden gelezen. Niets van wat je typte gaat verloren; probeer opnieuw of typ hem.",
+    "errorQuota": "Het spraakbudget van vandaag is op. Het formulier werkt zoals altijd met de hand.",
+    "privacy": "Er wordt niets bewaard tot je opslaat. De opname gaat naar Cloudflare Workers AI en wordt niet bewaard.",
+    "offline": "Spraak heeft een verbinding nodig; het formulier werkt offline met de hand."
   }
 }

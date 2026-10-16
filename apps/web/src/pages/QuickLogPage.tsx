@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 
 import { DecimalInput } from "../components/DecimalInput";
 import { ModalDialog } from "../components/ModalDialog";
+import { VoiceNote } from "../components/VoiceNote";
 import { RegionInput } from "../components/RegionInput";
 import { wineOptionLabel } from "../components/wine-label";
 import { Link } from "react-router";
@@ -26,6 +27,7 @@ import { createUlid } from "../security/ulid";
 import { listTastingSessions } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
 import { fromLocalDateTimeInput, toLocalDateTimeInput } from "../lib/local-date-time";
+import { applyVoiceProposal } from "../voice/apply";
 
 type SessionSummary = TastingSessionResponse["data"];
 
@@ -171,6 +173,29 @@ export function QuickLogPage() {
     setDraft((current) => ({ ...current, notePayload: { ...current.notePayload, [key]: value } }));
   }
 
+  /** A spoken note fills what is still empty; a filled note field opens the note. */
+  function applyVoice(proposal: Parameters<typeof applyVoiceProposal>[1]) {
+    const applied = applyVoiceProposal(draft, proposal);
+    const noteFields = [
+      "comment",
+      "foodText",
+      "score100",
+      "sentiment",
+      "wouldBuy",
+      "wouldDrinkAgain",
+    ];
+    setSaved(false);
+    setDraft({
+      ...applied.draft,
+      includeNote:
+        applied.draft.includeNote || applied.filled.some((name) => noteFields.includes(name)),
+    });
+    return {
+      filled: applied.filled,
+      suggestions: applied.suggestions.map(([, field]) => `"${field.quote}"`),
+    };
+  }
+
   async function choosePhoto(file: File | undefined) {
     if (file === undefined) return;
     setPhotoError(null);
@@ -297,6 +322,10 @@ export function QuickLogPage() {
           <strong>{t("quickLog.savedTitle")}</strong>
           <p>{t(`quickLog.savedBody.${status}`)}</p>
         </div>
+      ) : null}
+
+      {bootstrap.data.features.voiceInput && ready ? (
+        <VoiceNote onProposal={applyVoice} online={status !== "offline"} spaceId={spaceId} />
       ) : null}
 
       <form className="quick-log-form" onSubmit={beginReview}>

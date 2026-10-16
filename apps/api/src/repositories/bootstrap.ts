@@ -29,6 +29,8 @@ export type BootstrapOptions = {
   principal: FirebasePrincipal;
   placeSearch: boolean;
   requestId: string;
+  /** Voice tastings: speech to text and the language model both switched on. */
+  voiceInput: boolean;
 };
 
 export type UpdateProfileOptions = BootstrapOptions & {
@@ -210,7 +212,7 @@ export async function getBootstrapResponse(
         mapTiles: options.mapTiles,
         priceLookup: false,
         venuePlaceSearch: options.placeSearch,
-        voiceInput: false,
+        voiceInput: options.voiceInput,
       },
       spaces: spaces.results.map((space) => ({
         id: space.id,

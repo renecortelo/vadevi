@@ -1,6 +1,8 @@
 import { sanitizeExternalText } from "@vadevi/domain";
 
 import { voiceFields } from "../services/voice-proposal";
+import type { WorkerBindings } from "../types";
+import { createSpeechToTextPort } from "./speech-to-text";
 
 /**
  * Voice tastings, step two: a language model reads the reader's corrected
@@ -175,4 +177,11 @@ export function createVoiceExtractionPort(environment: {
     return null;
   }
   return new CloudflareVoiceExtraction(environment.AI as Runner, environment.AI_MODEL);
+}
+
+/** Voice tastings are offered only when both of their steps can run. */
+export function voiceInputEnabled(environment: WorkerBindings): boolean {
+  return (
+    createSpeechToTextPort(environment) !== null && createVoiceExtractionPort(environment) !== null
+  );
 }

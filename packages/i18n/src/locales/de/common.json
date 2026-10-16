@@ -1692,5 +1692,27 @@
     "grapesTitle": "Rebsorten",
     "grapesEmpty": "Nichts aufzuräumen: Jede Rebsorte ist nur auf eine Art geschrieben.",
     "linkedNote": "Was die Bibliothek erkennt, erscheint schon einheitlich: Rebsorten in Ihrer Sprache, Herkunftsbezeichnungen mit amtlichem Namen. Hier steht nur der Rest."
+  },
+  "voice": {
+    "title": "Laut beschreiben",
+    "hint": "Nennen Sie Wein, Erzeuger, Jahrgang und Region, dann was Sie sehen, riechen und schmecken, und Ihre Bewertung. Nur leere Felder werden ausgefüllt.",
+    "record": "Aufnehmen",
+    "again": "Neu aufnehmen",
+    "stop": "Stopp",
+    "cancel": "Abbrechen",
+    "recording": "Aufnahme läuft… (bis zu 2 Minuten)",
+    "transcribing": "Aufnahme wird angehört…",
+    "transcript": "Was gehört wurde — bei Bedarf korrigieren",
+    "fill": "Formular ausfüllen",
+    "filling": "Notiz wird gelesen… das kann einige Sekunden dauern.",
+    "filled_one": "{{count}} Feld ausgefüllt. Vor dem Speichern prüfen.",
+    "filled_other": "{{count}} Felder ausgefüllt. Vor dem Speichern prüfen.",
+    "suggestions": "Mit Zweifel gesagt, Ihnen überlassen: {{fields}}.",
+    "severalWines": "Sie haben mehr als einen Wein beschrieben: nur der erste wurde verwendet.",
+    "errorMicrophone": "Das Mikrofon ließ sich nicht öffnen. Prüfen Sie die Browserberechtigung; nichts Getipptes geht verloren.",
+    "errorService": "Die Notiz konnte gerade nicht gelesen werden. Nichts Getipptes geht verloren; erneut versuchen oder tippen.",
+    "errorQuota": "Das heutige Sprachkontingent ist aufgebraucht. Das Formular funktioniert wie immer von Hand.",
+    "privacy": "Gespeichert wird erst, wenn Sie speichern. Die Aufnahme geht an Cloudflare Workers AI und wird nicht aufbewahrt.",
+    "offline": "Sprache braucht eine Verbindung; das Formular funktioniert offline von Hand."
   }
 }

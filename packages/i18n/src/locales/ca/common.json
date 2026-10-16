@@ -1692,5 +1692,27 @@
     "grapesTitle": "Raïms",
     "grapesEmpty": "Res a endreçar: cada raïm està escrit d'una sola manera.",
     "linkedNote": "El que la biblioteca reconeix ja es veu unificat sense reanomenar res: els raïms en el teu idioma, les denominacions amb el nom oficial. Aquí només surt el que no reconeix."
+  },
+  "voice": {
+    "title": "Descriu-lo en veu alta",
+    "hint": "Digues el vi, el celler, l'anyada i la regió, després el que veus, olores i tastes, i la teva nota. Només s'omplen els camps buits.",
+    "record": "Gravar",
+    "again": "Tornar a gravar",
+    "stop": "Aturar",
+    "cancel": "Cancel·lar",
+    "recording": "Gravant… (fins a 2 minuts)",
+    "transcribing": "Escoltant la gravació…",
+    "transcript": "El que s'ha sentit — corregeix-ho si cal",
+    "fill": "Omplir el formulari",
+    "filling": "Llegint la nota… pot trigar uns segons.",
+    "filled_one": "{{count}} camp omplert. Revisa'l abans de desar.",
+    "filled_other": "{{count}} camps omplerts. Revisa'ls abans de desar.",
+    "suggestions": "Dit amb dubte, ho deixo a la teva elecció: {{fields}}.",
+    "severalWines": "Has descrit més d'un vi: només s'ha fet servir el primer.",
+    "errorMicrophone": "No s'ha pogut obrir el micròfon. Revisa el permís del navegador; no es perd res del que has escrit.",
+    "errorService": "Ara no s'ha pogut llegir la nota. No es perd res del que has escrit; torna-ho a provar o escriu-la.",
+    "errorQuota": "S'ha esgotat la quota de veu d'avui. El formulari funciona a mà com sempre.",
+    "privacy": "Res es desa fins que desis. La gravació va a Cloudflare Workers AI i no es conserva.",
+    "offline": "La veu necessita connexió; el formulari funciona sense connexió a mà."
   }
 }

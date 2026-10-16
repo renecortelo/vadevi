@@ -36,6 +36,12 @@ has the reasons.
   out of the wine's name is dropped; the region is placed in the atlas even
   when misheard ("Ries Baixes" → Rías Baixas). It draws on the assistant's
   daily budget and saves nothing.
+- **Voice tastings, the quick log (off)**: when a deployment turns voice
+  tastings on, the quick log offers to describe the wine aloud — record (up
+  to two minutes), read and correct what was heard, then fill the form. Only
+  empty fields are filled, a hedged value is offered with its words, a second
+  wine is pointed out, and nothing is saved until the reader saves. Offline
+  the button is off, with its reason.
 
 - **Keeping the registers current**: the routine is in `data/kb/README.md`,
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh

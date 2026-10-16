@@ -1692,5 +1692,27 @@
     "grapesTitle": "Uvas",
     "grapesEmpty": "Nada que ordenar: cada uva está escrita de una sola forma.",
     "linkedNote": "Lo que la biblioteca reconoce ya se ve unificado sin renombrar nada: las uvas en tu idioma, las denominaciones con su nombre oficial. Aquí solo aparece lo que no reconoce."
+  },
+  "voice": {
+    "title": "Descríbelo en voz alta",
+    "hint": "Di el vino, la bodega, la añada y la región, luego lo que ves, hueles y saboreas, y tu nota. Solo se rellenan los campos vacíos.",
+    "record": "Grabar",
+    "again": "Grabar de nuevo",
+    "stop": "Parar",
+    "cancel": "Cancelar",
+    "recording": "Grabando… (hasta 2 minutos)",
+    "transcribing": "Escuchando la grabación…",
+    "transcript": "Lo que se ha oído — corrígelo si hace falta",
+    "fill": "Rellenar el formulario",
+    "filling": "Leyendo la nota… puede tardar unos segundos.",
+    "filled_one": "{{count}} campo rellenado. Revísalo antes de guardar.",
+    "filled_other": "{{count}} campos rellenados. Revísalos antes de guardar.",
+    "suggestions": "Dicho con duda, lo dejo a tu elección: {{fields}}.",
+    "severalWines": "Has descrito más de un vino: solo se ha usado el primero.",
+    "errorMicrophone": "No se pudo abrir el micrófono. Revisa el permiso del navegador; no se pierde nada de lo escrito.",
+    "errorService": "No se pudo leer la nota ahora. No se pierde nada de lo escrito; inténtalo de nuevo o escríbela.",
+    "errorQuota": "Se ha agotado el cupo de voz de hoy. El formulario funciona a mano como siempre.",
+    "privacy": "Nada se guarda hasta que guardes. La grabación va a Cloudflare Workers AI y no se conserva.",
+    "offline": "La voz necesita conexión; el formulario funciona sin conexión a mano."
   }
 }

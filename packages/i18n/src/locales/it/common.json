@@ -1692,5 +1692,27 @@
     "grapesTitle": "Vitigni",
     "grapesEmpty": "Niente da riordinare: ogni vitigno è scritto in un solo modo.",
     "linkedNote": "Ciò che la biblioteca riconosce si vede già unificato senza rinominare nulla: i vitigni nella tua lingua, le denominazioni col nome ufficiale. Qui compare solo il resto."
+  },
+  "voice": {
+    "title": "Descrivilo a voce",
+    "hint": "Di' il vino, il produttore, l'annata e la regione, poi cosa vedi, senti e assaggi, e il tuo voto. Si riempiono solo i campi vuoti.",
+    "record": "Registra",
+    "again": "Registra di nuovo",
+    "stop": "Ferma",
+    "cancel": "Annulla",
+    "recording": "Registrazione… (fino a 2 minuti)",
+    "transcribing": "Ascolto della registrazione…",
+    "transcript": "Ciò che è stato sentito — correggilo se serve",
+    "fill": "Compila il modulo",
+    "filling": "Lettura della nota… può richiedere qualche secondo.",
+    "filled_one": "{{count}} campo compilato. Controllalo prima di salvare.",
+    "filled_other": "{{count}} campi compilati. Controllali prima di salvare.",
+    "suggestions": "Detto con dubbio, lasciato a te: {{fields}}.",
+    "severalWines": "Hai descritto più di un vino: è stato usato solo il primo.",
+    "errorMicrophone": "Non è stato possibile aprire il microfono. Controlla il permesso del browser; nulla di ciò che hai scritto va perso.",
+    "errorService": "Ora non è stato possibile leggere la nota. Nulla di ciò che hai scritto va perso; riprova o scrivila.",
+    "errorQuota": "La quota vocale di oggi è esaurita. Il modulo funziona a mano come sempre.",
+    "privacy": "Nulla si salva finché non salvi. La registrazione va a Cloudflare Workers AI e non viene conservata.",
+    "offline": "La voce richiede una connessione; il modulo funziona offline a mano."
   }
 }

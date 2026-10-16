@@ -37,6 +37,7 @@ import { registerTastingSessionRoutes } from "./routes/tasting-sessions";
 import { registerVoiceRoutes } from "./routes/voice";
 import { registerWineMemoryRoutes } from "./routes/wine-memory";
 import type { ApiEnvironment } from "./types";
+import { voiceInputEnabled } from "./adapters/voice-extraction";
 
 const healthRoute = createRoute({
   method: "get",
@@ -243,7 +244,7 @@ function runtimeConfigPayload(environment: ApiEnvironment["Bindings"], requestHo
         externalResearch: externalResearchEnabled(environment),
         priceLookup: false,
         venuePlaceSearch: placeSearchEnabled(environment),
-        voiceInput: false,
+        voiceInput: voiceInputEnabled(environment),
       },
     },
   };
@@ -340,6 +341,7 @@ export function createApi() {
       accessSecondFactor: accessConfiguration(context.env) !== null,
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
+      voiceInput: voiceInputEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
       mapTiles: mapTilesEnabled(context.env),
       placeSearch: placeSearchEnabled(context.env),
@@ -360,6 +362,7 @@ export function createApi() {
       accessSecondFactor: accessConfiguration(context.env) !== null,
       aiProvider: context.env.AI_PROVIDER ?? "none",
       bottlePhotoSearch: imageSearchEnabled(context.env),
+      voiceInput: voiceInputEnabled(context.env),
       externalResearch: externalResearchEnabled(context.env),
       mapTiles: mapTilesEnabled(context.env),
       placeSearch: placeSearchEnabled(context.env),
