@@ -9890,6 +9890,122 @@
         ],
         "additionalProperties": false
       },
+      "VoiceExtractResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "fields": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "quote": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "ambiguous",
+                        "explicit"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "quote",
+                    "status",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "region": {
+                "type": "object",
+                "nullable": true,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "regionId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "regionId"
+                ],
+                "additionalProperties": false
+              },
+              "severalWines": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "fields",
+              "region",
+              "severalWines"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "VoiceExtractRequest": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string",
+            "enum": [
+              "es",
+              "ca",
+              "fr",
+              "en",
+              "nl",
+              "pt-PT",
+              "it",
+              "de"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6000
+          },
+          "today": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        "required": [
+          "locale",
+          "text",
+          "today"
+        ],
+        "additionalProperties": false
+      },
       "VoiceTranscribeResponse": {
         "type": "object",
         "properties": {
@@ -19058,6 +19174,92 @@
           },
           "409": {
             "description": "The note version changed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/voice/extract": {
+      "post": {
+        "operationId": "extractVoiceTasting",
+        "tags": [
+          "Tastings"
+        ],
+        "summary": "Propose tasting fields from a spoken note, each with the words it came from",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceExtractRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A proposal for the reader to review; nothing is saved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceExtractResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not an active member of the Space.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Today's language-model budget is spent; the form works by hand.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Voice tastings, or the language model, are not switched on here.",
             "content": {
               "application/json": {
                 "schema": {

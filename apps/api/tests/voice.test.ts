@@ -3,7 +3,7 @@ import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { createSpeechToTextPort, speechModel } from "../src/adapters/speech-to-text";
-import { voiceVocabulary } from "../src/repositories/voice";
+import { placeHeardRegion, voiceVocabulary } from "../src/repositories/voice";
 import type { WorkerBindings } from "../src/types";
 import { emulatorIdToken } from "./fixtures/firebase-token";
 
@@ -112,5 +112,44 @@ describe("voice tastings", () => {
     expect(
       (await voiceVocabulary(env.DB, { locale: "pt-PT", spaceId })).startsWith("Prova de vinho:"),
     ).toBe(true);
+  });
+
+  it("propose fields only when switched on, and place a misheard region in the atlas", async () => {
+    const bootstrap = BootstrapResponseSchema.parse(
+      await (await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers })).json(),
+    );
+    const response = await SELF.fetch(
+      `https://vadevi.test/api/v1/spaces/${bootstrap.data.user.activeSpaceId}/voice/extract`,
+      {
+        body: JSON.stringify({
+          locale: "ca",
+          text: "Un albariño de Rías Baixas.",
+          today: "2026-10-16",
+        }),
+        headers,
+        method: "POST",
+      },
+    );
+    expect(response.status).toBe(503);
+
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_regions (id, eambrosia_id, name, country_code, gi_type)
+        VALUES ('es-voice-rias', 'PDO-ES-RIAS', 'Rías Baixas', 'ES', 'PDO')`,
+      ),
+      env.DB.prepare(
+        `INSERT OR IGNORE INTO kb_names
+          (entity_type, entity_id, locale, name, normalized_name, kind, source)
+        VALUES ('region', 'es-voice-rias', '*', 'Rías Baixas', 'rias baixas', 'primary', 'register')`,
+      ),
+    ]);
+    // Heard as said, misheard as transcribed, and nothing close.
+    expect(await placeHeardRegion(env.DB, "Rías Baixas", "ES")).toEqual({
+      name: "Rías Baixas",
+      regionId: "es-voice-rias",
+    });
+    expect((await placeHeardRegion(env.DB, "Ries Baixes", "ES"))?.regionId).toBe("es-voice-rias");
+    expect(await placeHeardRegion(env.DB, "Ries Baixes", null)).toBeNull();
+    expect(await placeHeardRegion(env.DB, "Yucca Valley", "ES")).toBeNull();
   });
 });

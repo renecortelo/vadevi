@@ -27,6 +27,15 @@ has the reasons.
   deployment sets `STT_PROVIDER=cloudflare` after approving
   `docs/privacy-review-voice-tasting.md`; the public default is `none`, and
   the release scan checks it.
+- **Voice tastings, step two (off)**: `POST
+/api/v1/spaces/{spaceId}/voice/extract` proposes tasting fields from the
+  corrected transcript with the deployment's language model, each with the
+  words it came from. A value whose words are not in the transcript is
+  dropped; a hedged one ("I think", "diria que") is only offered; the
+  taster's sentences stay in their own words and language; a producer read
+  out of the wine's name is dropped; the region is placed in the atlas even
+  when misheard ("Ries Baixes" → Rías Baixas). It draws on the assistant's
+  daily budget and saves nothing.
 
 - **Keeping the registers current**: the routine is in `data/kb/README.md`,
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh

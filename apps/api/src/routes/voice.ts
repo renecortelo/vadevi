@@ -2,12 +2,16 @@ import { createRoute, type OpenAPIHono } from "@hono/zod-openapi";
 import {
   ErrorEnvelopeSchema,
   SpaceIdPathSchema,
+  VoiceExtractRequestSchema,
+  VoiceExtractResponseSchema,
   VoiceTranscribeRequestSchema,
   VoiceTranscribeResponseSchema,
 } from "@vadevi/contracts";
 
 import { createSpeechToTextPort } from "../adapters/speech-to-text";
-import { voiceVocabulary } from "../repositories/voice";
+import { createVoiceExtractionPort } from "../adapters/voice-extraction";
+import { placeHeardRegion, voiceVocabulary } from "../repositories/voice";
+import { acceptProposal } from "../services/voice-proposal";
 import { reserveProviderBudget } from "../services/usage";
 import type { ApiEnvironment } from "../types";
 
@@ -53,7 +57,112 @@ const transcribeRoute = createRoute({
   },
 });
 
+const extractRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/voice/extract",
+  operationId: "extractVoiceTasting",
+  tags: ["Tastings"],
+  summary: "Propose tasting fields from a spoken note, each with the words it came from",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    body: { content: { "application/json": { schema: VoiceExtractRequestSchema } } },
+    params: SpaceIdPathSchema,
+  },
+  responses: {
+    200: {
+      content: { "application/json": { schema: VoiceExtractResponseSchema } },
+      description: "A proposal for the reader to review; nothing is saved.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    403: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Not an active member of the Space.",
+    },
+    429: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Today's language-model budget is spent; the form works by hand.",
+    },
+    503: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Voice tastings, or the language model, are not switched on here.",
+    },
+  },
+});
+
+/** Not a member, or out of budget: told apart for the answer. */
+async function refusal(database: D1Database, spaceId: string, firebaseUid: string) {
+  const member = await database
+    .prepare(
+      `SELECT 1 AS ok FROM users actor
+      JOIN space_memberships membership ON membership.user_id = actor.id
+        AND membership.space_id = ? AND membership.status = 'active'
+      WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL`,
+    )
+    .bind(spaceId, firebaseUid)
+    .first<{ ok: number }>();
+  return member === null ? ("FORBIDDEN" as const) : ("QUOTA_EXHAUSTED" as const);
+}
+
 export function registerVoiceRoutes(app: OpenAPIHono<ApiEnvironment>): void {
+  app.openapi(extractRoute, async (context) => {
+    const { spaceId } = context.req.valid("param");
+    const request = context.req.valid("json");
+    const firebaseUid = context.get("principal").firebaseUid;
+    const error = (
+      code: "FEATURE_UNAVAILABLE" | "FORBIDDEN" | "QUOTA_EXHAUSTED",
+      message: string,
+    ) =>
+      ErrorEnvelopeSchema.parse({ error: { code, message, requestId: context.get("requestId") } });
+    const extraction = createVoiceExtractionPort(context.env);
+    if (extraction === null) {
+      return context.json(
+        error("FEATURE_UNAVAILABLE", "Voice tastings are not switched on here."),
+        503,
+      );
+    }
+    // The language model is metered as the assistant's is: one shared budget.
+    const allowed = await reserveProviderBudget(context.env.DB!, {
+      firebaseUid,
+      metric: "ai_language_calls",
+      nowIso: new Date().toISOString(),
+      spaceId,
+    });
+    if (!allowed) {
+      const code = await refusal(context.env.DB!, spaceId, firebaseUid);
+      return code === "FORBIDDEN"
+        ? context.json(error(code, "Not a member of this Space."), 403)
+        : context.json(error(code, "Today's language-model budget is spent."), 429);
+    }
+    const proposal = acceptProposal(
+      await extraction.propose(request.text, request.today),
+      request.text,
+      request.today,
+    );
+    const heard = proposal.fields.region?.value;
+    const country = proposal.fields.countryCode?.value;
+    const region =
+      typeof heard === "string"
+        ? await placeHeardRegion(
+            context.env.DB!,
+            heard,
+            typeof country === "string" ? country : null,
+          )
+        : null;
+    // What was discarded is counted for the operator, never logged as words.
+    if (proposal.discarded.length > 0) {
+      console.info(`voice extraction: ${proposal.discarded.length} proposed values discarded`);
+    }
+    return context.json(
+      VoiceExtractResponseSchema.parse({
+        data: { fields: proposal.fields, region, severalWines: proposal.severalWines },
+      }),
+      200,
+    );
+  });
+
   app.openapi(transcribeRoute, async (context) => {
     const { spaceId } = context.req.valid("param");
     const request = context.req.valid("json");

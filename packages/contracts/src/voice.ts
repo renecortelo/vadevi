@@ -39,3 +39,42 @@ export const VoiceTranscribeResponseSchema = z
   .openapi("VoiceTranscribeResponse");
 
 export type VoiceTranscribeRequest = z.infer<typeof VoiceTranscribeRequestSchema>;
+
+/** A transcript, read and corrected by the reader, to propose form fields from. */
+export const VoiceExtractRequestSchema = z
+  .object({
+    locale: SupportedLocaleSchema,
+    text: z.string().trim().min(1).max(6_000),
+    /** The reader's own date, so "today" and "yesterday" mean theirs. */
+    today: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  })
+  .strict()
+  .openapi("VoiceExtractRequest");
+
+const VoiceFieldProposalSchema = z
+  .object({
+    /** The transcript's words the value came from. */
+    quote: z.string(),
+    /** "ambiguous": the speaker hedged; offered, never filled on its own. */
+    status: z.enum(["ambiguous", "explicit"]),
+    value: z.union([z.string(), z.number(), z.boolean(), z.array(z.string())]),
+  })
+  .strict();
+
+export const VoiceExtractResponseSchema = z
+  .object({
+    data: z
+      .object({
+        /** By form field; a field nobody spoke of is absent, never guessed. */
+        fields: z.record(z.string(), VoiceFieldProposalSchema),
+        /** The registered name the region heard is, when one is certain. */
+        region: z.object({ name: z.string(), regionId: z.string() }).strict().nullable(),
+        /** The note describes more than one wine: only the first is proposed. */
+        severalWines: z.boolean(),
+      })
+      .strict(),
+  })
+  .strict()
+  .openapi("VoiceExtractResponse");
+
+export type VoiceExtractResponse = z.infer<typeof VoiceExtractResponseSchema>;

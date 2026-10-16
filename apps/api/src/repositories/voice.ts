@@ -1,3 +1,6 @@
+import { regionRefOf } from "./region-names";
+import { normalizeWineText } from "./wine-memory";
+
 /**
  * The hint a voice tasting's transcription is given: the words a wine is
  * described with in the reader's language, the best-known grapes, and the
@@ -57,4 +60,66 @@ export async function voiceVocabulary(
     .filter((part) => part !== "")
     .join(" ");
   return hint.length <= hintLimit ? hint : hint.slice(0, hint.lastIndexOf(",", hintLimit));
+}
+
+/** How many single-letter edits turn one word into the other. */
+function editDistance(left: string, right: string): number {
+  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= left.length; i += 1) {
+    const current = [i];
+    for (let j = 1; j <= right.length; j += 1) {
+      current[j] = Math.min(
+        previous[j]! + 1,
+        current[j - 1]! + 1,
+        previous[j - 1]! + (left[i - 1] === right[j - 1] ? 0 : 1),
+      );
+    }
+    previous = current;
+  }
+  return previous[right.length]!;
+}
+
+/**
+ * The registered name a heard region is, if any: as the cellar reads one
+ * (`regionRefOf`), or else the one name of the country within a couple of
+ * letters of it — speech to text hears "Ries Baixes" for Rías Baixas, "Docai"
+ * for Tokaj (16 October 2026). Only one candidate that close is taken; two
+ * equally close are no answer.
+ */
+export async function placeHeardRegion(
+  database: D1Database,
+  heard: string,
+  countryCode: string | null,
+): Promise<{ name: string; regionId: string } | null> {
+  const exact = await regionRefOf(database, heard, countryCode);
+  if (exact !== null) {
+    const row = await database
+      .prepare(`SELECT name FROM kb_regions WHERE id = ?`)
+      .bind(exact)
+      .first<{ name: string }>();
+    return row === null ? null : { name: row.name, regionId: exact };
+  }
+  if (countryCode === null) return null;
+  const target = normalizeWineText(heard);
+  if (target.length < 4) return null;
+  const rows = await database
+    .prepare(
+      `SELECT DISTINCT name.normalized_name AS form, region.id, region.name
+      FROM kb_names name JOIN kb_regions region ON region.id = name.entity_id
+      WHERE name.entity_type = 'region' AND region.country_code = ?`,
+    )
+    .bind(countryCode)
+    .all<{ form: string; id: string; name: string }>();
+  const allowed = Math.max(1, Math.floor(target.length / 5));
+  let best: { distance: number; ids: Set<string>; name: string } | null = null;
+  for (const row of rows.results) {
+    const distance = editDistance(target, row.form);
+    if (distance > allowed) continue;
+    if (best === null || distance < best.distance) {
+      best = { distance, ids: new Set([row.id]), name: row.name };
+    } else if (distance === best.distance) best.ids.add(row.id);
+  }
+  return best === null || best.ids.size !== 1
+    ? null
+    : { name: best.name, regionId: [...best.ids][0]! };
 }
