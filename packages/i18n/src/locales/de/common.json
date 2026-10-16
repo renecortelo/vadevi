@@ -1584,7 +1584,7 @@
       "label": "Woher Ihre Weine kommen",
       "point_one": "{{name}}: {{wines}} Wein",
       "point_other": "{{name}}: {{wines}} Weine",
-      "caption": "Ein Punkt für jeden eingetragenen Namen, aus dem Ihre Weine stammen, größer mit mehr Weinen; hohl, wo der Atlas ihn nur ungefähr verortet. Tippen Sie darauf, um ihn zu öffnen."
+      "caption": "Ein Punkt für jeden Namen des Atlas, aus dem Ihre Weine stammen, größer mit mehr Weinen; hohl, wo der Atlas ihn nur ungefähr verortet. Tippen Sie darauf, um ihn zu öffnen."
     }
   },
   "taste": {

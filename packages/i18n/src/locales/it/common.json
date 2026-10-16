@@ -1584,7 +1584,7 @@
       "label": "Da dove vengono i tuoi vini",
       "point_one": "{{name}}: {{wines}} vino",
       "point_other": "{{name}}: {{wines}} vini",
-      "caption": "Un punto per ogni nome registrato da cui vengono i tuoi vini, più grande con più vini; vuoto dove l'atlante lo colloca in modo approssimativo. Toccalo per aprirlo."
+      "caption": "Un punto per ogni nome dell'atlante da cui vengono i tuoi vini, più grande con più vini; vuoto dove l'atlante lo colloca in modo approssimativo. Toccalo per aprirlo."
     }
   },
   "taste": {

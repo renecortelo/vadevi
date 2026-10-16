@@ -1584,7 +1584,7 @@
       "label": "Waar je wijnen vandaan komen",
       "point_one": "{{name}}: {{wines}} wijn",
       "point_other": "{{name}}: {{wines}} wijnen",
-      "caption": "Een punt voor elke geregistreerde naam waar je wijnen vandaan komen, groter met meer wijnen; hol waar de atlas hem bij benadering plaatst. Tik erop om hem te openen."
+      "caption": "Een punt voor elke naam uit de atlas waar je wijnen vandaan komen, groter met meer wijnen; hol waar de atlas hem bij benadering plaatst. Tik erop om hem te openen."
     }
   },
   "taste": {

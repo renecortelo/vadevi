@@ -1584,7 +1584,7 @@
       "label": "D'on vénen els teus vins",
       "point_one": "{{name}}: {{wines}} vi",
       "point_other": "{{name}}: {{wines}} vins",
-      "caption": "Un punt per cada nom registrat d'on vénen els teus vins, més gran com més vins; buit on l'atles el situa de manera aproximada. Toca'l per obrir-lo."
+      "caption": "Un punt per cada nom de l'atles d'on vénen els teus vins, més gran com més vins; buit on l'atles el situa de manera aproximada. Toca'l per obrir-lo."
     }
   },
   "taste": {
