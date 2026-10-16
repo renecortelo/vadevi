@@ -115,11 +115,90 @@ const ownWords = new Set<VoiceField>([
   "palateText",
 ]);
 
+/**
+ * The colour families a model names in the note's own language, read as the
+ * form's five: it answered "rojo", "rubí", "weiß" for most notes of the second
+ * batch, all of them out of range (16 October 2026).
+ */
+const colourFamilies: Record<string, string> = {
+  ambar: "brown",
+  amber: "brown",
+  ambre: "brown",
+  ambra: "brown",
+  bernstein: "brown",
+  brown: "brown",
+  castano: "brown",
+  marron: "brown",
+  tawny: "brown",
+  teja: "brown",
+  bianco: "white",
+  blanc: "white",
+  blanco: "white",
+  branco: "white",
+  dorado: "white",
+  gold: "white",
+  golden: "white",
+  lemon: "white",
+  limon: "white",
+  oro: "white",
+  paglia: "white",
+  paja: "white",
+  straw: "white",
+  weiss: "white",
+  wit: "white",
+  yellow: "white",
+  amarillo: "white",
+  geel: "white",
+  gelb: "white",
+  jaune: "white",
+  naranja: "orange",
+  orange: "orange",
+  arancione: "orange",
+  laranja: "orange",
+  taronja: "orange",
+  rosa: "rose",
+  rosado: "rose",
+  rosato: "rose",
+  rose: "rose",
+  salmon: "rose",
+  burgundy: "red",
+  cereza: "red",
+  garnet: "red",
+  granate: "red",
+  granato: "red",
+  granat: "red",
+  negre: "red",
+  negro: "red",
+  purple: "red",
+  red: "red",
+  rojo: "red",
+  rood: "red",
+  rosso: "red",
+  rot: "red",
+  rouge: "red",
+  ruby: "red",
+  rubi: "red",
+  rubino: "red",
+  tinto: "red",
+  vermelho: "red",
+  vermell: "red",
+  violet: "red",
+};
+
 /** A value as the form takes it, or null when it does not fit. */
 function fit(field: VoiceField, raw: unknown, today: string): ProposedField["value"] | null {
   const kind = voiceFields[field];
   const text = typeof raw === "string" ? raw.trim() : typeof raw === "number" ? String(raw) : "";
-  if (Array.isArray(kind)) return (kind as readonly string[]).includes(text) ? text : null;
+  if (Array.isArray(kind)) {
+    if ((kind as readonly string[]).includes(text)) return text;
+    // A colour named in the note's language, by its first word ("rojo rubí").
+    if (field === "appearanceColorFamily") {
+      for (const word of comparable(text).split(" ")) {
+        if (colourFamilies[word] !== undefined) return colourFamilies[word]!;
+      }
+    }
+    return null;
+  }
   switch (kind) {
     case "text":
       return text.length > 0 && text.length <= 2_000 ? text : null;

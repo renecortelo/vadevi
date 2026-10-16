@@ -204,4 +204,24 @@ describe("a spoken note's proposal", () => {
         .severalWines,
     ).toBe(false);
   });
+
+  it("reads a colour named in the note's language as the form's family", () => {
+    const text = "Tiene un rojo rubí brillante.";
+    const proposal = acceptProposal(
+      {
+        fields: [
+          {
+            certain: true,
+            name: "appearanceColorFamily",
+            quote: "un rojo rubí",
+            value: "rojo rubí",
+          },
+        ],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(proposal.fields.appearanceColorFamily?.value).toBe("red");
+  });
 });
