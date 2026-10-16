@@ -84,6 +84,10 @@ const days = (from: string, to: string) => (Date.parse(to) - Date.parse(from)) /
 const hedges =
   /\b(creo|me parece|diria|crec|em sembla|potser|quizas|quiza|tal vez|i think|maybe|perhaps|probably|i guess|je pense|je crois|peut etre|il me semble|credo|penso|forse|mi sembra|ich glaube|ich denke|vielleicht|wohl|ik denk|misschien|volgens mij|acho|talvez|parece me|suspeito)\b/;
 
+/** Words that say a name is a winery's, in the app's languages. */
+const winery =
+  /\b(bodega|bodegas|celler|cellers|cava|domaine|domaines|chateau|clos|maison|cave|weingut|winzer|cantina|tenuta|azienda|fattoria|quinta|adega|herdade|casa|winery|wines|estate|vineyards|cellars|wijnhuis|wijngoed|producer|productor|productora|elaborador|elabora|vigneron|produttore|produtor)\b/;
+
 /** Fields that hold the taster's own words: the quote itself, never a paraphrase. */
 const ownWords = new Set<VoiceField>([
   "appearanceText",
@@ -180,6 +184,26 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
         certain === false || hedges.test(comparable(quote as string)) ? "ambiguous" : "explicit",
       value: fitted,
     };
+  }
+  // A score of nought is only a nought that was said: models turned "no
+  // score yet" into 0 (lote 2, 16 October 2026).
+  const score = proposal.fields.score100;
+  if (
+    score?.value === 0 &&
+    !/\b(0|zero|cero|zero|null|nul|nulla)\b/.test(comparable(score.quote))
+  ) {
+    delete proposal.fields.score100;
+    proposal.discarded.push({ field: "score100", reason: "no-evidence" });
+  }
+  // A producer is a winery or a maker, said as one. A lone given name ("Laia",
+  // "Tosca") is far more often who brought the bottle: offered, not filled.
+  const maker = proposal.fields.producerName;
+  if (
+    maker !== undefined &&
+    !/\s/.test(String(maker.value).trim()) &&
+    !winery.test(comparable(maker.quote))
+  ) {
+    maker.status = "ambiguous";
   }
   // A producer heard inside the wine's own name ("Patio de Lucía" → "Lucía",
   // "Alina's High Path") is a reading of the name, not a producer that was

@@ -123,3 +123,22 @@ export async function placeHeardRegion(
     ? null
     : { name: best.name, regionId: [...best.ids][0]! };
 }
+
+/**
+ * Of the grapes a note names, those the library knows as grapes, by any of
+ * their names — a model offered "Soave", an appellation, as one (16 October
+ * 2026). A variety the library lacks is left out rather than guessed.
+ */
+export async function knownGrapes(database: D1Database, names: readonly string[]) {
+  if (names.length === 0) return [];
+  const forms = names.map((name) => normalizeWineText(name));
+  const rows = await database
+    .prepare(
+      `SELECT DISTINCT normalized_name AS form FROM kb_names
+      WHERE entity_type = 'grape' AND normalized_name IN (SELECT value FROM json_each(?))`,
+    )
+    .bind(JSON.stringify(forms))
+    .all<{ form: string }>();
+  const known = new Set(rows.results.map((row) => row.form));
+  return names.filter((_, index) => known.has(forms[index]!));
+}

@@ -10,7 +10,7 @@ import {
 
 import { createSpeechToTextPort } from "../adapters/speech-to-text";
 import { createVoiceExtractionPort } from "../adapters/voice-extraction";
-import { placeHeardRegion, voiceVocabulary } from "../repositories/voice";
+import { knownGrapes, placeHeardRegion, voiceVocabulary } from "../repositories/voice";
 import { acceptProposal } from "../services/voice-proposal";
 import { reserveProviderBudget } from "../services/usage";
 import type { ApiEnvironment } from "../types";
@@ -141,6 +141,14 @@ export function registerVoiceRoutes(app: OpenAPIHono<ApiEnvironment>): void {
       request.text,
       request.today,
     );
+    const grapes = proposal.fields.grapes;
+    if (grapes !== undefined && Array.isArray(grapes.value)) {
+      const known = await knownGrapes(context.env.DB!, grapes.value);
+      if (known.length === 0) {
+        delete proposal.fields.grapes;
+        proposal.discarded.push({ field: "grapes", reason: "out-of-range" });
+      } else grapes.value = known;
+    }
     const heard = proposal.fields.region?.value;
     const country = proposal.fields.countryCode?.value;
     const region =

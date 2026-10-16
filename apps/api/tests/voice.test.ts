@@ -3,7 +3,7 @@ import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { createSpeechToTextPort, speechModel } from "../src/adapters/speech-to-text";
-import { placeHeardRegion, voiceVocabulary } from "../src/repositories/voice";
+import { knownGrapes, placeHeardRegion, voiceVocabulary } from "../src/repositories/voice";
 import type { WorkerBindings } from "../src/types";
 import { emulatorIdToken } from "./fixtures/firebase-token";
 
@@ -151,5 +151,15 @@ describe("voice tastings", () => {
     expect((await placeHeardRegion(env.DB, "Ries Baixes", "ES"))?.regionId).toBe("es-voice-rias");
     expect(await placeHeardRegion(env.DB, "Ries Baixes", null)).toBeNull();
     expect(await placeHeardRegion(env.DB, "Yucca Valley", "ES")).toBeNull();
+  });
+
+  it("keep only the grapes the library knows", async () => {
+    await env.DB.prepare(
+      `INSERT OR IGNORE INTO kb_names
+        (entity_type, entity_id, locale, name, normalized_name, kind, source)
+      VALUES ('grape', 'garnacha', 'es', 'Garnacha', 'garnacha', 'primary', 'wikidata')`,
+    ).run();
+    expect(await knownGrapes(env.DB, ["Garnacha", "Soave"])).toEqual(["Garnacha"]);
+    expect(await knownGrapes(env.DB, [])).toEqual([]);
   });
 });

@@ -92,4 +92,37 @@ describe("a spoken note's proposal", () => {
       expect(acceptProposal(raw, transcript, today).fields).toEqual({});
     }
   });
+
+  it("takes a nought only when one was said, and a lone first name only as a guess", () => {
+    const text = "Me lo trajo Laia, de Bodega Senda Clara. Todavía sin nota, quizá otro día.";
+    const proposal = acceptProposal(
+      {
+        fields: [
+          { certain: true, name: "score100", quote: "Todavía sin nota", value: 0 },
+          { certain: true, name: "producerName", quote: "Me lo trajo Laia", value: "Laia" },
+        ],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(proposal.fields.score100).toBeUndefined();
+    expect(proposal.fields.producerName?.status).toBe("ambiguous");
+    const winery = acceptProposal(
+      {
+        fields: [
+          {
+            certain: true,
+            name: "producerName",
+            quote: "de Bodega Senda Clara",
+            value: "Bodega Senda Clara",
+          },
+        ],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(winery.fields.producerName?.status).toBe("explicit");
+  });
 });

@@ -37,7 +37,18 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
   vintage; a word not read on the label ("reserva" guessed) is not a fact.
 - score100 is 0–100: convert other scales exactly (8.5/10 → 85, 4/5 → 80,
   16/20 → 80, 3.5 of 5 stars → 70).
-- sweetness, acidity, tanninLevel, body, finishLength are 1 (low) to 5 (high).
+- sweetness, acidity, tanninLevel, body, finishLength are 1–5 by these words,
+  in any language: 1 very low / very light; 2 low, light, soft; 3 medium;
+  4 high, pronounced, full; 5 very high. "Acidez alta" is 4, "ligero" is 2.
+- sentiment: "like" when the taster says they like or enjoy it, "dislike"
+  when they say they do not, "neutral" when they say it is just correct.
+- conclusionText: the taster's closing verdict sentence, if there is one.
+- producerName only when a winery or maker is named as such ("de Bodega
+  X", "made by Y"); a first name alone is who brought or gave the wine.
+- grapes are grape varieties only; an appellation or region (Soave,
+  Chianti, Rioja) is never a grape.
+- score100 only from a score the taster gives this wine, never from a
+  comparison, a guess or "no score"; 0 only if they said zero.
 - tastedAt is a date (YYYY-MM-DD) resolved from "today", "yesterday", "last
   Saturday"… against "today"; a date in the future is never given.
 - servingTemperatureC in degrees Celsius (convert Fahrenheit).
