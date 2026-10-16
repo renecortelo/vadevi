@@ -66,7 +66,10 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
 - appearanceText, noseText, palateText, conclusionText, foodText are short
   phrases in the transcript's own language, close to the taster's words.
 - Comparisons with another wine ("more acidic than the last one") fill nothing.
-- wineCount is how many different wines are described; describe only the first.`;
+- wineCount is how many different wines are described, one after another
+  ("first… now another wine…", "després passo a…"); a wine only compared with
+  ("better than the last one") is not counted. Describe only the first wine:
+  nothing said about the second one goes into any field.`;
 
 const responseSchema = {
   properties: {

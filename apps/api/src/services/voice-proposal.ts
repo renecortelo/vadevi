@@ -67,7 +67,7 @@ export type VoiceProposal = {
   /** Proposed values left out, and why — counted, never shown as the reader's words. */
   discarded: {
     field: string;
-    reason: "name-overlap" | "no-evidence" | "not-a-field" | "out-of-range";
+    reason: "name-overlap" | "no-evidence" | "not-a-field" | "out-of-range" | "second-wine";
   }[];
   /** The speaker described more than one wine: only the first is proposed. */
   severalWines: boolean;
@@ -93,6 +93,14 @@ const days = (from: string, to: string) => (Date.parse(to) - Date.parse(from)) /
  */
 const hedges =
   /\b(creo|me parece|diria|crec|em sembla|potser|quizas|quiza|tal vez|i think|maybe|perhaps|probably|i guess|je pense|je crois|peut etre|il me semble|credo|penso|forse|mi sembra|ich glaube|ich denke|vielleicht|wohl|ik denk|misschien|volgens mij|acho|talvez|parece me|suspeito)\b/;
+
+/**
+ * Words that bring in another wine, in the app's languages, as `comparable`
+ * writes them: "ahora otro vino", "després passo a", "next wine". Models missed
+ * a second wine in two of four test notes (lote 2, 16 October 2026).
+ */
+const anotherWine =
+  /\b(otro vino|segundo vino|siguiente vino|despues paso a|luego paso a|un altre vi|segon vi|despres passo a|another wine|second wine|next wine|moving on to|un autre vin|deuxieme vin|vin suivant|ensuite je passe|un altro vino|secondo vino|poi passo a|ein anderer wein|zweiter wein|der zweite wein|naechster wein|een andere wijn|tweede wijn|volgende wijn|outro vinho|segundo vinho|depois passo a|a seguir o|otra botella|segunda botella|altra ampolla|segona ampolla|another bottle|a different bottle|different wine|second bottle|autre bouteille|deuxieme bouteille|altra bottiglia|seconda bottiglia|andere flasche|zweite flasche|andere fles|tweede fles|outra garrafa|segunda garrafa)\b/;
 
 /** Words that say a name is a winery's, in the app's languages. */
 const winery =
@@ -176,6 +184,11 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
   const answer = raw as { fields?: unknown; wineCount?: unknown };
   proposal.severalWines = typeof answer.wineCount === "number" && answer.wineCount > 1;
   const heard = ` ${comparable(transcript)} `;
+  // Where a second wine begins, if one does: what is said after it is that
+  // wine's, never the first's (two bottles' grapes must not mix).
+  const second = anotherWine.exec(heard);
+  const secondAt = second === null || second.index < 20 ? null : second.index;
+  if (secondAt !== null) proposal.severalWines = true;
   for (const item of Array.isArray(answer.fields) ? answer.fields.slice(0, 60) : []) {
     if (typeof item !== "object" || item === null) continue;
     const { certain, name, quote, value } = item as Record<string, unknown>;
@@ -192,6 +205,10 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
     }
     // A sentence of the taster's is kept in their words and language: models
     // translated or paraphrased them (an Italian note came back in English).
+    if (secondAt !== null && heard.indexOf(` ${words} `) > secondAt) {
+      proposal.discarded.push({ field, reason: "second-wine" });
+      continue;
+    }
     const fitted = fit(field, ownWords.has(field) ? quote : value, today);
     if (fitted === null) {
       proposal.discarded.push({ field, reason: "out-of-range" });

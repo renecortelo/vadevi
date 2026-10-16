@@ -179,4 +179,29 @@ describe("a spoken note's proposal", () => {
     );
     expect(wrong.fields).toEqual({});
   });
+
+  it("tells a second wine apart, and keeps its words out of the first", () => {
+    const text =
+      "Primero, Loma de Nerea: blanco, albariño, de Rías Baixas. El vino es seco. " +
+      "Ahora otro vino: Cauce de Elías, un tinto de mencía del Bierzo.";
+    const proposal = acceptProposal(
+      {
+        fields: [
+          { certain: true, name: "grapes", quote: "albariño", value: ["Albariño"] },
+          { certain: true, name: "region", quote: "del Bierzo", value: "Bierzo" },
+        ],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(proposal.severalWines).toBe(true);
+    expect(Object.keys(proposal.fields)).toEqual(["grapes"]);
+    expect(proposal.discarded).toEqual([{ field: "region", reason: "second-wine" }]);
+    // Comparing with another wine is not describing one.
+    expect(
+      acceptProposal({ fields: [], wineCount: 1 }, "Es más ácido que el anterior.", today)
+        .severalWines,
+    ).toBe(false);
+  });
 });
