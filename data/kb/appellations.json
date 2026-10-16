@@ -291668,6 +291668,323 @@
     "wikidataId": "Q133850305"
   },
   {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-vale-dos-vinhedos-ip",
+    "latitude": -29.1790428,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -51.5789598,
+    "name": "Vale dos Vinhedos",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vale dos Vinhedos",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "IG200002",
+    "registeredOn": "2002-11-19",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-pinto-bandeira",
+    "latitude": -29.0922692,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -51.4551712,
+    "name": "Pinto Bandeira",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Pinto Bandeira",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "IG200803",
+    "registeredOn": "2010-07-13",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-altos-montes",
+    "latitude": -29.030129,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -51.3075981,
+    "name": "Altos Montes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Altos Montes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "BR402012000002-0",
+    "registeredOn": "2012-12-11",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-monte-belo",
+    "latitude": -29.1656734,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -51.6548289,
+    "name": "Monte Belo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Monte Belo",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "BR402012000006-3",
+    "registeredOn": "2013-10-01",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-farroupilha",
+    "latitude": -29.22647,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -51.3468188,
+    "name": "Farroupilha",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Farroupilha",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "BR402014000006-9",
+    "registeredOn": "2015-07-14",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-campanha-gaucha",
+    "latitude": -30.3818093,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -55.5317694,
+    "name": "Campanha Gaúcha",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Campanha Gaúcha",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "BR402017000009-1",
+    "registeredOn": "2020-05-05",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-santa-catarina",
+    "latitude": -27.2900659,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -50.837585,
+    "name": "Santa Catarina",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Santa Catarina",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Vinhos de Altitude de Santa Catarina",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "BR402020000008-6",
+    "registeredOn": "2021-06-29",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-bituruna",
+    "latitude": -26.161281,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -51.5533319,
+    "name": "Bituruna",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bituruna",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "BR402021000001-1",
+    "registeredOn": "2022-10-18",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-vale-do-sao-francisco",
+    "latitude": -9.1880333,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -40.2716452,
+    "name": "Vale do São Francisco",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vale do São Francisco",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "BR402020000021-3",
+    "registeredOn": "2022-11-01",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "IP",
+    "grapes": [],
+    "id": "br-sul-de-minas",
+    "latitude": -21.3686224,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+    "longitude": -45.5660195,
+    "name": "Sul de Minas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sul de Minas",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "BR402023000001-7",
+    "registeredOn": "2025-02-11",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "br-vale-dos-vinhedos",
+    "latitude": -29.1790428,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+    "longitude": -51.5789598,
+    "name": "Vale dos Vinhedos",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vale dos Vinhedos",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "IG201008",
+    "registeredOn": "2012-09-25",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "br-vales-da-uva-goethe",
+    "latitude": -28.6007346,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+    "longitude": -49.2971441,
+    "name": "Vales da Uva Goethe",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vales da Uva Goethe",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "IG201009",
+    "registeredOn": "2025-06-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "BR",
+    "eambrosiaId": null,
+    "giType": "DO",
+    "grapes": [],
+    "id": "br-altos-de-pinto-bandeira",
+    "latitude": -29.1656734,
+    "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+    "longitude": -51.4551712,
+    "name": "Altos de Pinto Bandeira",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Altos de Pinto Bandeira",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "BR412021000003-4",
+    "registeredOn": "2022-11-29",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",

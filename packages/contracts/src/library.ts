@@ -143,7 +143,17 @@ export const LibraryGrapePathSchema = z
  * indications (IG) and controlled denominations of origin (DOC); the UK
  * names its own PDO and PGI as the EU does.
  */
-export const RegionDesignationSchema = z.enum(["PDO", "PGI", "AVA", "GI", "WO", "DO", "IG", "DOC"]);
+export const RegionDesignationSchema = z.enum([
+  "PDO",
+  "PGI",
+  "AVA",
+  "GI",
+  "WO",
+  "DO",
+  "IG",
+  "IP",
+  "DOC",
+]);
 export type RegionDesignation = z.infer<typeof RegionDesignationSchema>;
 
 /**

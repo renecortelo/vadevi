@@ -4,7 +4,8 @@ import type { LibraryRegion, RegionDesignation } from "@vadevi/contracts";
  * The catalog key that names a designation: the EU's and the UK's PDO and
  * PGI, the American Viticultural Area, New Zealand's and Australia's
  * geographical indications, South Africa's Wine of Origin, Chile's
- * denomination of origin, Argentina's IG and DOC — in full, or as the short
+ * denomination of origin, Argentina's IG and DOC, Brazil's IP and DO,
+ * Mexico's IGP — in full, or as the short
  * label a list shows.
  */
 export function designationKey(type: RegionDesignation, short = false): string {
@@ -12,7 +13,7 @@ export function designationKey(type: RegionDesignation, short = false): string {
   return short ? `${key}Short` : key;
 }
 
-type RegisterSuffix = "" | "Ar" | "Au" | "Cl" | "Gb" | "Mx" | "Nz" | "Us" | "Za";
+type RegisterSuffix = "" | "Ar" | "Au" | "Br" | "Cl" | "Gb" | "Mx" | "Nz" | "Us" | "Za";
 
 /**
  * The suffix of the catalog keys that speak of a name's register: none for
@@ -27,6 +28,7 @@ export function registerSuffix(
   const suffixes: Record<string, RegisterSuffix> = {
     AR: "Ar",
     AU: "Au",
+    BR: "Br",
     CL: "Cl",
     GB: "Gb",
     MX: "Mx",

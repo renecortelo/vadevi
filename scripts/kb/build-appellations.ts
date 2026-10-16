@@ -669,6 +669,46 @@ for (const area of mxList.records) {
   });
 }
 console.info(`  ${mxList.records.length} Mexican indications from the IMPI.`);
+
+// Brazil: the INPI's indications of provenance and denominations of origin
+// for wine, each placed where its place is, or amid its municipalities.
+const brPath = resolve(".kb-cache/world/br.json");
+const brList = (existsSync(brPath) ? JSON.parse(readFileSync(brPath, "utf8")) : []) as {
+  amendedOn: string | null;
+  key: string;
+  latitude: number | null;
+  longitude: number | null;
+  names: string[];
+  number: string;
+  pointSource: "area" | "place" | null;
+  qid: string | null;
+  registeredOn: string;
+  type: "DO" | "IP";
+  url: string;
+}[];
+for (const area of brList) {
+  const { leads, summaries } = wikipediaSummaries(area.qid);
+  seen.add(`br-${area.key}`);
+  entries.push({
+    countryCode: "BR",
+    eambrosiaId: null,
+    giType: area.type,
+    grapes: [],
+    id: `br-${area.key}`,
+    latitude: area.latitude,
+    legalUrl: area.url,
+    longitude: area.longitude,
+    name: area.names[0]!,
+    names: area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+    pointSource: area.pointSource,
+    prominence: leads,
+    registerRef: area.number,
+    registeredOn: area.registeredOn,
+    summaries,
+    wikidataId: area.qid,
+  });
+}
+console.info(`  ${brList.length} Brazilian indications from the INPI.`);
 console.info(
   `  ${clEntries.length} Chilean denominations of origin from Decree 464, ` +
     `${clEntries.filter((entry) => entry.latitude !== null).length} placed.`,

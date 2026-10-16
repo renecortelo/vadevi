@@ -10,6 +10,7 @@ describe("appellation resolution", () => {
     expect(resolveAppellationCountries("algo de Rioja")).toEqual(["ES"]);
     expect(resolveAppellationCountries("something from Napa Valley")).toEqual(["US"]);
     expect(resolveAppellationCountries("un vino de Parras")).toEqual(["MX"]);
+    expect(resolveAppellationCountries("um espumante do Vale dos Vinhedos")).toEqual(["BR"]);
     expect(resolveAppellationCountries("Barolo o Chianti")).toEqual(["IT"]);
     // Entries added from the wider eAmbrosia subset.
     expect(resolveAppellationCountries("un vino de Priorat")).toEqual(["ES"]);

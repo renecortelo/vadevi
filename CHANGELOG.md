@@ -87,6 +87,16 @@ has the reasons.
   Querétaro, and a link to the declaration. A wine whose region reads
   "Querétaro" is linked to it. Baja California, the Valle de Guadalupe and
   Parras have no declaration yet, so their wines stay unlinked.
+- **Brazil in the atlas**: the 13 indications for wine in the INPI's lists
+  of recognised geographical indications — ten indications of provenance
+  (IP) and three denominations of origin (DO), from Vale dos Vinhedos and
+  Pinto Bandeira to the Vale do São Francisco and the Sul de Minas — each
+  with its number, its date and a link to its list, and on the map at its
+  place or amid the municipalities its delimitation names (approximately;
+  the South America sheet now reaches 6° S). None has a summary yet: no
+  article on its wine was found. Vale dos Vinhedos is both an IP (2002) and
+  a DO (2012), so a wine that names it is linked to neither until it says
+  which.
 
 ## 0.3.0 — 12 October 2026
 

@@ -273,6 +273,23 @@ test("a Mexican indication cites its declaration in the Diario Oficial", async (
   await expect(page.locator(".library-map__point")).toBeVisible();
 });
 
+test("a Brazilian denomination cites the INPI's list", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/br-altos-de-pinto-bandeira");
+  await page.locator("#interface-locale").selectOption("pt-PT");
+  await expect(page.locator("h1")).toHaveText("Altos de Pinto Bandeira", { timeout: 15_000 });
+  await expect(page.locator(".page-heading")).toContainText("Denominação de origem (DO)");
+  await expect(page.locator("#region-register")).toHaveText(
+    "No registo de indicações geográficas do Brasil (INPI)",
+  );
+  await expect(page.getByText("Registada a 29 de novembro de 2022.")).toBeVisible();
+  await expect(page.locator('a[href*="LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS"]')).toHaveText(
+    "Ver a lista de indicações reconhecidas do INPI (número BR412021000003-4)",
+  );
+  await expect(page.locator(".library-map__point")).toBeVisible();
+});
+
 test("a British wine name cites the UK register", async ({ page }) => {
   await signIn(page);
   await completeOnboarding(page);

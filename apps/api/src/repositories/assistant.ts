@@ -930,6 +930,12 @@ async function loadLibraryStatements(
         publisher: "Wine Australia, Register of Protected GIs and Other Terms",
         title: `${region.name} — Australian geographical indication`,
       },
+      // Brazil's lists of recognised indications are official acts (INPI).
+      BR: {
+        license: "BR-official-text",
+        publisher: "Instituto Nacional da Propriedade Industrial (INPI), Brazil",
+        title: `${region.name} — INPI ${region.registerRef ?? ""}`.trim(),
+      },
       // Chile's zoning is a decree; only its facts are used, linked to Ley Chile.
       CL: {
         license: "CL-official-text",
@@ -1013,11 +1019,13 @@ async function loadLibraryStatements(
                 ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
                 : region.countryCode === "AR"
                   ? `${region.giType === "DOC" ? "a controlled denomination of origin (DOC)" : "a geographical indication (IG)"} of Argentina, recognised by the INV${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("recognised")}`
-                  : region.countryCode === "MX"
-                    ? `a protected geographical indication (IGP) of Mexico, declared by the IMPI in the Diario Oficial de la Federación${since("published")}`
-                    : region.countryCode === "GB"
-                      ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
-                      : `a production area of South Africa's Wine of Origin scheme${kind}`,
+                  : region.countryCode === "BR"
+                    ? `${region.giType === "DO" ? "a denomination of origin (DO)" : "an indication of provenance (IP)"} of Brazil, in the INPI's list of recognised geographical indications${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("registered")}`
+                    : region.countryCode === "MX"
+                      ? `a protected geographical indication (IGP) of Mexico, declared by the IMPI in the Diario Oficial de la Federación${since("published")}`
+                      : region.countryCode === "GB"
+                        ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
+                        : `a production area of South Africa's Wine of Origin scheme${kind}`,
       [registerId],
     );
     if (region.within.length > 0) {

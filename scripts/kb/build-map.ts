@@ -169,8 +169,9 @@ buildSheet("europe-map.json", { latMax: 72, latMin: 26.5, lonMax: 45, lonMin: -3
 // The Americas' wine countries so far: the United States from Hawaii to
 // Maine, with Canada and Mexico around it for bearings.
 buildSheet("america-map.json", { latMax: 62, latMin: 15, lonMax: -52, lonMin: -162 }, 38);
-// South America: Chile and Argentina, with their neighbours.
-buildSheet("south-america-map.json", { latMax: -15, latMin: -56, lonMax: -34, lonMin: -82 }, -35);
+// South America: Chile, Argentina and Brazil's wine country, from the Vale
+// do São Francisco (9° S) south, with their neighbours.
+buildSheet("south-america-map.json", { latMax: -6, latMin: -56, lonMax: -34, lonMin: -82 }, -35);
 // Oceania: New Zealand, with Australia beside it.
 buildSheet("oceania-map.json", { latMax: -9, latMin: -48, lonMax: 179.5, lonMin: 112 }, -36);
 // Southern Africa: South Africa and its neighbours.

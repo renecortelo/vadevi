@@ -260,6 +260,12 @@ const appellationCountry: readonly (readonly [string, string])[] = [
   ["baja california", "MX"],
   ["ensenada", "MX"],
   ["queretaro", "MX"],
+  // Brazil
+  ["vale dos vinhedos", "BR"],
+  ["serra gaucha", "BR"],
+  ["campanha gaucha", "BR"],
+  ["pinto bandeira", "BR"],
+  ["vale do sao francisco", "BR"],
 ];
 
 // Normalized phrase → country, and the reverse country → phrases, both built
