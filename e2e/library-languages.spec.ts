@@ -331,6 +331,22 @@ test("an Ontario bench lies within the areas its table names", async ({ page }) 
   await expect(nesting.getByRole("link", { name: "Niagara-on-the-Lake" })).toBeVisible();
 });
 
+test("a wine region no register protects says so, and links its source", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/mx-valle-de-guadalupe");
+  await page.locator("#interface-locale").selectOption("es");
+  await expect(page.locator("h1")).toHaveText("Valle de Guadalupe", { timeout: 15_000 });
+  await expect(page.locator("#region-register")).toHaveText("No es un nombre protegido");
+  await expect(page.getByText(/Una región vinícola que ningún registro protege/)).toBeVisible();
+  await expect(page.locator('a[href="https://en.wikipedia.org/wiki/Mexican_wine"]')).toHaveText(
+    "Leer el artículo que la nombra",
+  );
+  await expect(
+    page.getByText(/una región vitivinícola localizada en el municipio de Ensenada/),
+  ).toBeVisible();
+});
+
 test("a British wine name cites the UK register", async ({ page }) => {
   await signIn(page);
   await completeOnboarding(page);

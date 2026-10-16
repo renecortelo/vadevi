@@ -18984,6 +18984,19 @@
         "pt-PT": "Vinos de la Región Vitivinícola de Querétaro é a indicação geográfica (Indicación Geográfica Protegida - IGP) que reconhece e protege o vinho produzido na região de Querétaro, no México (Querétaro IGP). A denominação foi criada em março de 2025 pelo Instituto Mexicano da Propriedade Industrial e foi a primeira vez que uma IGP foi atribuída a uma região vitícola do México."
       }
     },
+    "mx-valle-de-guadalupe": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe",
+      "original": "The Valle de Guadalupe (Guadalupe Valley) is an agricultural region in the Ensenada Municipality, Baja California, Mexico that produces an estimated 70 percent of Mexican wine. In recent years, it has become a popular tourist destination for wine and Baja Med cuisine.",
+      "texts": {
+        "ca": "El Valle de Guadalupe (vall de Guadalupe) és una regió agrícola del municipi d'Ensenada, a la Baixa Califòrnia (Mèxic), que produeix aproximadament el 70 per cent del vi mexicà. En els darrers anys s'ha convertit en una destinació turística popular pel vi i per la cuina Baja Med.",
+        "de": "Das Valle de Guadalupe (Guadalupe-Tal) ist eine landwirtschaftliche Region im Municipio Ensenada in Baja California, Mexiko, die schätzungsweise 70 Prozent des mexikanischen Weins erzeugt. In den letzten Jahren ist es zu einem beliebten Reiseziel für Wein und die Baja-Med-Küche geworden.",
+        "fr": "Le Valle de Guadalupe (vallée de Guadalupe) est une région agricole de la municipalité d'Ensenada, en Basse-Californie (Mexique), qui produit environ 70 % du vin mexicain. Ces dernières années, elle est devenue une destination touristique prisée pour le vin et la cuisine Baja Med.",
+        "it": "La Valle de Guadalupe (valle di Guadalupe) è una regione agricola del comune di Ensenada, nella Bassa California (Messico), che produce circa il 70 per cento del vino messicano. Negli ultimi anni è diventata una meta turistica molto frequentata per il vino e la cucina Baja Med.",
+        "nl": "Het Valle de Guadalupe (Guadalupe-dal) is een landbouwgebied in de gemeente Ensenada in Baja California (Mexico) dat naar schatting 70 procent van de Mexicaanse wijn produceert. De laatste jaren is het een populaire toeristische bestemming geworden voor wijn en de Baja Med-keuken.",
+        "pt-PT": "O Valle de Guadalupe (vale de Guadalupe) é uma região agrícola do município de Ensenada, na Baixa Califórnia (México), que produz cerca de 70 por cento do vinho mexicano. Nos últimos anos tornou-se um destino turístico popular pelo vinho e pela cozinha Baja Med."
+      }
+    },
     "nz-auckland": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region",

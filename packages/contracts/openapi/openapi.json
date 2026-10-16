@@ -11613,7 +11613,8 @@
               "IP",
               "DOC",
               "AOC",
-              "VQA"
+              "VQA",
+              "WR"
             ]
           },
           "grapes": {
@@ -11878,7 +11879,8 @@
                     "IP",
                     "DOC",
                     "AOC",
-                    "VQA"
+                    "VQA",
+                    "WR"
                   ]
                 },
                 "id": {

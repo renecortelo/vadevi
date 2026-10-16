@@ -197,7 +197,9 @@ export function LibraryRegionPage() {
             )}
           </p>
         )}
-        {registered === null ? (
+        {suffix === "Wr" ? (
+          <p>{t("library.unprotectedWr")}</p>
+        ) : registered === null ? (
           region.registerLevel === null ? (
             <p>{t(designationKey(region.giType))}</p>
           ) : null

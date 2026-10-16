@@ -14,7 +14,21 @@ export function designationKey(type: RegionDesignation, short = false): string {
 }
 
 type RegisterSuffix =
-  "" | "Ar" | "Au" | "Br" | "Ca" | "Ch" | "Cl" | "Gb" | "Jp" | "Md" | "Mx" | "Nz" | "Us" | "Za";
+  | ""
+  | "Ar"
+  | "Au"
+  | "Br"
+  | "Ca"
+  | "Ch"
+  | "Cl"
+  | "Gb"
+  | "Jp"
+  | "Md"
+  | "Mx"
+  | "Nz"
+  | "Us"
+  | "Wr"
+  | "Za";
 
 /**
  * The suffix of the catalog keys that speak of a name's register: none for
@@ -23,9 +37,11 @@ type RegisterSuffix =
  * indication, and the UK its names PDO and PGI as the EU does.
  */
 export function registerSuffix(
-  region: Pick<LibraryRegion, "countryCode" | "eambrosiaId">,
+  region: Pick<LibraryRegion, "countryCode" | "eambrosiaId" | "giType">,
 ): RegisterSuffix {
   if (inEuRegister(region)) return "";
+  // A wine region no register protects: not a register's at all.
+  if (region.giType === "WR") return "Wr";
   const suffixes: Record<string, RegisterSuffix> = {
     AR: "Ar",
     AU: "Au",

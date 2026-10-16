@@ -1,0 +1,116 @@
+{
+  "countryCode": "MX",
+  "nameSource": "article",
+  "source": {
+    "title": "Mexican wine; Vino de México (Wikipedia)",
+    "publisher": "Wikipedia (CC BY-SA 4.0)",
+    "url": "https://en.wikipedia.org/wiki/Mexican_wine",
+    "issued": "2026-10-16",
+    "note": "Wine regions of Mexico that no register protects, each named as a wine-growing area by a sentence of the English article \"Mexican wine\" (revision 1374299167, 11 September 2026) or the Spanish \"Vino de México\" (revision 175727864, 8 October 2026). That sentence is its summary until an article of its own describes its wine, and its names are the ones those sentences give (\"Parras\" as the English article writes \"The wine is produced in Parras, Coahuila\"). The Parras Valley lies within La Laguna, as its sentence says. The Valle de Guadalupe is not nested: \"Mexican wine\" has the San Antonio de las Minas zone include it, while the valley's own articles count San Antonio de las Minas among its parts. San Antonio de las Minas stands at the place OpenStreetMap names \"Villa de Juárez (San Antonio de las Minas)\". A sentence that names several regions describes none of them: those regions show no summary, and their page links the sentence's article. None is a protected name: the only one Mexico has is Querétaro's (`mx-indicaciones-geograficas.json`). Points are OpenStreetMap's for the place of each name in its state, approximately; La Laguna stands at the Parras Valley, the only part of it named. The Valle de Guadalupe has articles of its own (Wikidata Q834310, \"una región vitivinícola localizada en el municipio de Ensenada\" in Spanish): they describe it, and its point is Wikidata's."
+  },
+  "areas": [
+    {
+      "key": "san-antonio-de-las-minas",
+      "names": ["San Antonio de las Minas"],
+      "type": "WR",
+      "states": ["Baja California"],
+      "summary": {
+        "locale": "en",
+        "text": "The North zone produces ninety percent of Mexico’s wines today, with almost all of that coming from three regions not far from the port city of Ensenada: the San Antonio de las Minas zone, which includes the Valle de Guadalupe, the San Vicente Valley and the Santo Tomás Valley.",
+        "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Mexican_wine",
+      "places": ["Villa de Juárez (San Antonio de las Minas)"]
+    },
+    {
+      "key": "valle-de-guadalupe",
+      "names": ["Valle de Guadalupe", "Valley of Guadalupe"],
+      "type": "WR",
+      "states": ["Baja California"],
+      "summary": {
+        "locale": "en",
+        "text": "The North zone produces ninety percent of Mexico’s wines today, with almost all of that coming from three regions not far from the port city of Ensenada: the San Antonio de las Minas zone, which includes the Valle de Guadalupe, the San Vicente Valley and the Santo Tomás Valley.",
+        "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Mexican_wine",
+      "item": "Q834310"
+    },
+    {
+      "key": "valle-de-san-vicente",
+      "names": ["Valle de San Vicente", "San Vicente Valley"],
+      "type": "WR",
+      "states": ["Baja California"],
+      "places": ["San Vicente"],
+      "summary": {
+        "locale": "en",
+        "text": "The North zone produces ninety percent of Mexico’s wines today, with almost all of that coming from three regions not far from the port city of Ensenada: the San Antonio de las Minas zone, which includes the Valle de Guadalupe, the San Vicente Valley and the Santo Tomás Valley.",
+        "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+    },
+    {
+      "key": "valle-de-santo-tomas",
+      "names": ["Valle de Santo Tomás", "Santo Tomás Valley"],
+      "type": "WR",
+      "states": ["Baja California"],
+      "places": ["Santo Tomás"],
+      "summary": {
+        "locale": "en",
+        "text": "The North zone produces ninety percent of Mexico’s wines today, with almost all of that coming from three regions not far from the port city of Ensenada: the San Antonio de las Minas zone, which includes the Valle de Guadalupe, the San Vicente Valley and the Santo Tomás Valley.",
+        "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+    },
+    {
+      "key": "valle-de-calafia",
+      "names": ["Valle de Calafia", "Calafia Valley"],
+      "type": "WR",
+      "states": ["Baja California"],
+      "summary": {
+        "locale": "es",
+        "text": "En el estado de Baja California existen subregiones productoras de vino, el Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia y Valle de Tecate.",
+        "url": "https://es.wikipedia.org/wiki/Vino_de_M%C3%A9xico"
+      },
+      "url": "https://es.wikipedia.org/wiki/Vino_de_M%C3%A9xico"
+    },
+    {
+      "key": "valle-de-tecate",
+      "names": ["Valle de Tecate"],
+      "type": "WR",
+      "states": ["Baja California"],
+      "places": ["Tecate"],
+      "summary": {
+        "locale": "es",
+        "text": "En el estado de Baja California existen subregiones productoras de vino, el Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia y Valle de Tecate.",
+        "url": "https://es.wikipedia.org/wiki/Vino_de_M%C3%A9xico"
+      },
+      "url": "https://es.wikipedia.org/wiki/Vino_de_M%C3%A9xico"
+    },
+    {
+      "key": "la-laguna",
+      "names": ["La Laguna"],
+      "type": "WR",
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The La Laguna region is the oldest wine-making area of Mexico, and straddles the states of Coahuila and Durango, with grapes thriving in the Parras Valley.",
+        "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+    },
+    {
+      "key": "valle-de-parras",
+      "names": ["Parras Valley", "Parras"],
+      "type": "WR",
+      "states": ["Coahuila"],
+      "places": ["Parras de la Fuente"],
+      "within": ["la-laguna"],
+      "summary": {
+        "locale": "en",
+        "text": "The La Laguna region is the oldest wine-making area of Mexico, and straddles the states of Coahuila and Durango, with grapes thriving in the Parras Valley.",
+        "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Mexican_wine"
+    }
+  ]
+}

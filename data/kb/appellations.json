@@ -294464,6 +294464,257 @@
     ]
   },
   {
+    "countryCode": "MX",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "mx-san-antonio-de-las-minas",
+    "latitude": 31.9678732,
+    "legalUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+    "longitude": -116.6500801,
+    "name": "San Antonio de las Minas",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San Antonio de las Minas",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MX",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "mx-valle-de-guadalupe",
+    "latitude": 32.097777777778,
+    "legalUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+    "longitude": -116.56694444444,
+    "name": "Valle de Guadalupe",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Guadalupe",
+        "source": "article"
+      },
+      {
+        "locale": "*",
+        "name": "Valley of Guadalupe",
+        "source": "article"
+      }
+    ],
+    "pointSource": "item",
+    "prominence": 5,
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "The Valle de Guadalupe (Guadalupe Valley) is an agricultural region in the Ensenada Municipality, Baja California, Mexico that produces an estimated 70 percent of Mexican wine. In recent years, it has become a popular tourist destination for wine and Baja Med cuisine.",
+        "url": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe"
+      },
+      "es": {
+        "text": "El Valle de Guadalupe es una región vitivinícola localizada en el municipio de Ensenada, Baja California, México y está conformado por las delegaciones municipales de Francisco Zarco, San Antonio de Las Minas y El Porvenir.",
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Guadalupe_(Baja_California)"
+      },
+      "ca": {
+        "text": "El Valle de Guadalupe (vall de Guadalupe) és una regió agrícola del municipi d'Ensenada, a la Baixa Califòrnia (Mèxic), que produeix aproximadament el 70 per cent del vi mexicà. En els darrers anys s'ha convertit en una destinació turística popular pel vi i per la cuina Baja Med.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe"
+      },
+      "de": {
+        "text": "Das Valle de Guadalupe (Guadalupe-Tal) ist eine landwirtschaftliche Region im Municipio Ensenada in Baja California, Mexiko, die schätzungsweise 70 Prozent des mexikanischen Weins erzeugt. In den letzten Jahren ist es zu einem beliebten Reiseziel für Wein und die Baja-Med-Küche geworden.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe"
+      },
+      "fr": {
+        "text": "Le Valle de Guadalupe (vallée de Guadalupe) est une région agricole de la municipalité d'Ensenada, en Basse-Californie (Mexique), qui produit environ 70 % du vin mexicain. Ces dernières années, elle est devenue une destination touristique prisée pour le vin et la cuisine Baja Med.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe"
+      },
+      "it": {
+        "text": "La Valle de Guadalupe (valle di Guadalupe) è una regione agricola del comune di Ensenada, nella Bassa California (Messico), che produce circa il 70 per cento del vino messicano. Negli ultimi anni è diventata una meta turistica molto frequentata per il vino e la cucina Baja Med.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe"
+      },
+      "nl": {
+        "text": "Het Valle de Guadalupe (Guadalupe-dal) is een landbouwgebied in de gemeente Ensenada in Baja California (Mexico) dat naar schatting 70 procent van de Mexicaanse wijn produceert. De laatste jaren is het een populaire toeristische bestemming geworden voor wijn en de Baja Med-keuken.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe"
+      },
+      "pt": {
+        "text": "O Valle de Guadalupe (vale de Guadalupe) é uma região agrícola do município de Ensenada, na Baixa Califórnia (México), que produz cerca de 70 por cento do vinho mexicano. Nos últimos anos tornou-se um destino turístico popular pelo vinho e pela cozinha Baja Med.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe"
+      }
+    },
+    "wikidataId": "Q834310"
+  },
+  {
+    "countryCode": "MX",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "mx-valle-de-san-vicente",
+    "latitude": 31.3253892,
+    "legalUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+    "longitude": -116.2471159,
+    "name": "Valle de San Vicente",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de San Vicente",
+        "source": "article"
+      },
+      {
+        "locale": "*",
+        "name": "San Vicente Valley",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MX",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "mx-valle-de-santo-tomas",
+    "latitude": 31.552872,
+    "legalUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+    "longitude": -116.4085624,
+    "name": "Valle de Santo Tomás",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Santo Tomás",
+        "source": "article"
+      },
+      {
+        "locale": "*",
+        "name": "Santo Tomás Valley",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MX",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "mx-valle-de-calafia",
+    "latitude": null,
+    "legalUrl": "https://es.wikipedia.org/wiki/Vino_de_M%C3%A9xico",
+    "longitude": null,
+    "name": "Valle de Calafia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Calafia",
+        "source": "article"
+      },
+      {
+        "locale": "*",
+        "name": "Calafia Valley",
+        "source": "article"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MX",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "mx-valle-de-tecate",
+    "latitude": 32.5653831,
+    "legalUrl": "https://es.wikipedia.org/wiki/Vino_de_M%C3%A9xico",
+    "longitude": -116.6298787,
+    "name": "Valle de Tecate",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Valle de Tecate",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MX",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "mx-la-laguna",
+    "latitude": 25.4436602,
+    "legalUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+    "longitude": -102.1782179,
+    "name": "La Laguna",
+    "names": [
+      {
+        "locale": "*",
+        "name": "La Laguna",
+        "source": "article"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "MX",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "mx-valle-de-parras",
+    "latitude": 25.4436602,
+    "legalUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+    "longitude": -102.1782179,
+    "name": "Parras Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Parras Valley",
+        "source": "article"
+      },
+      {
+        "locale": "*",
+        "name": "Parras",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "mx-la-laguna"
+    ]
+  },
+  {
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",

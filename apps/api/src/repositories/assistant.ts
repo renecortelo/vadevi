@@ -1002,7 +1002,17 @@ async function loadLibraryStatements(
       },
     };
     const european = region.eambrosiaId !== null;
-    const register = (european ? undefined : own[region.countryCode]) ?? {
+    // A wine region no register protects: the article that names it is its source.
+    const unprotected = region.giType === "WR";
+    const register = (unprotected
+      ? {
+          license: "CC-BY-SA-4.0",
+          publisher: "Wikipedia",
+          title: `${region.name} — a wine region named in Wikipedia`,
+        }
+      : european
+        ? undefined
+        : own[region.countryCode]) ?? {
       license: "EC-reuse-2011-833",
       publisher: "European Commission (eAmbrosia)",
       title: `${region.name} — eAmbrosia`,
@@ -1016,7 +1026,7 @@ async function loadLibraryStatements(
       licenseIdentifier: register.license,
       publisher: register.publisher,
       retrievedAt: now,
-      sourceType: "regulator",
+      sourceType: unprotected ? "open_dataset" : "regulator",
       title: register.title,
       updatedAt: now,
     });
@@ -1034,33 +1044,35 @@ async function loadLibraryStatements(
     const kind = region.registerLevel === null ? "" : ` (${levelWords[region.registerLevel]})`;
     say(
       "register",
-      european
-        ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of ${region.countryCode}${since("registered")}`
-        : region.countryCode === "US"
-          ? `an American Viticultural Area (AVA) of the United States${since("established")}`
-          : region.countryCode === "NZ"
-            ? `a geographical indication of New Zealand, in IPONZ's register${since("registered")}`
-            : region.countryCode === "CL"
-              ? `a denomination of origin of Chile's viticultural zoning (Decree 464 of 1994)${kind}`
-              : region.countryCode === "AU"
-                ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
-                : region.countryCode === "AR"
-                  ? `${region.giType === "DOC" ? "a controlled denomination of origin (DOC)" : "a geographical indication (IG)"} of Argentina, recognised by the INV${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("recognised")}`
-                  : region.countryCode === "CA"
-                    ? `a viticultural area of Ontario, Canada, under its VQA rules (O. Reg. 406/00, ${region.registerRef ?? "Table 1"})`
-                    : region.countryCode === "CH"
-                      ? `an appellation d'origine contrôlée (AOC) of Switzerland${kind}, in the federal directory of the cantonal AOCs`
-                      : region.countryCode === "JP"
-                        ? `a geographical indication for wine of Japan, designated by the National Tax Agency${since("designated")}`
-                        : region.countryCode === "MD"
-                          ? `${region.giType === "PDO" ? "a protected designation of origin (DO)" : "a protected geographical indication (IGP)"} of Moldova, in AGEPI's register${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("registered")}`
-                          : region.countryCode === "BR"
-                            ? `${region.giType === "DO" ? "a denomination of origin (DO)" : "an indication of provenance (IP)"} of Brazil, in the INPI's list of recognised geographical indications${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("registered")}`
-                            : region.countryCode === "MX"
-                              ? `a protected geographical indication (IGP) of Mexico, declared by the IMPI in the Diario Oficial de la Federación${since("published")}`
-                              : region.countryCode === "GB"
-                                ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
-                                : `a production area of South Africa's Wine of Origin scheme${kind}`,
+      unprotected
+        ? `a wine region of ${region.countryCode} that no register protects (not a protected name); Wikipedia's articles name it as a wine-growing area`
+        : european
+          ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of ${region.countryCode}${since("registered")}`
+          : region.countryCode === "US"
+            ? `an American Viticultural Area (AVA) of the United States${since("established")}`
+            : region.countryCode === "NZ"
+              ? `a geographical indication of New Zealand, in IPONZ's register${since("registered")}`
+              : region.countryCode === "CL"
+                ? `a denomination of origin of Chile's viticultural zoning (Decree 464 of 1994)${kind}`
+                : region.countryCode === "AU"
+                  ? `an Australian geographical indication${kind}, in Wine Australia's Register of Protected GIs${since("entered")}`
+                  : region.countryCode === "AR"
+                    ? `${region.giType === "DOC" ? "a controlled denomination of origin (DOC)" : "a geographical indication (IG)"} of Argentina, recognised by the INV${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("recognised")}`
+                    : region.countryCode === "CA"
+                      ? `a viticultural area of Ontario, Canada, under its VQA rules (O. Reg. 406/00, ${region.registerRef ?? "Table 1"})`
+                      : region.countryCode === "CH"
+                        ? `an appellation d'origine contrôlée (AOC) of Switzerland${kind}, in the federal directory of the cantonal AOCs`
+                        : region.countryCode === "JP"
+                          ? `a geographical indication for wine of Japan, designated by the National Tax Agency${since("designated")}`
+                          : region.countryCode === "MD"
+                            ? `${region.giType === "PDO" ? "a protected designation of origin (DO)" : "a protected geographical indication (IGP)"} of Moldova, in AGEPI's register${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("registered")}`
+                            : region.countryCode === "BR"
+                              ? `${region.giType === "DO" ? "a denomination of origin (DO)" : "an indication of provenance (IP)"} of Brazil, in the INPI's list of recognised geographical indications${region.registerRef === null ? "" : ` (${region.registerRef})`}${since("registered")}`
+                              : region.countryCode === "MX"
+                                ? `a protected geographical indication (IGP) of Mexico, declared by the IMPI in the Diario Oficial de la Federación${since("published")}`
+                                : region.countryCode === "GB"
+                                  ? `a ${region.giType === "PDO" ? "protected designation of origin (PDO)" : "protected geographical indication (PGI)"} of the United Kingdom, in its register of protected food and drink names${since("registered")}`
+                                  : `a production area of South Africa's Wine of Origin scheme${kind}`,
       [registerId],
     );
     if (region.within.length > 0) {

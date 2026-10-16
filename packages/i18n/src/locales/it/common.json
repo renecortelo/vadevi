@@ -361,7 +361,12 @@
     "vqa": "Area viticola (VQA)",
     "vqaShort": "VQA",
     "registerTitleCa": "Nelle aree viticole VQA dell'Ontario",
-    "registerLinkCa": "Vedi la tabella 1 dell'O. Reg. 406/00 ({{ref}}, e-Laws dell'Ontario)"
+    "registerLinkCa": "Vedi la tabella 1 dell'O. Reg. 406/00 ({{ref}}, e-Laws dell'Ontario)",
+    "wr": "Regione vinicola (non è un nome protetto)",
+    "wrShort": "Regione vinicola",
+    "registerTitleWr": "Non è un nome protetto",
+    "unprotectedWr": "Una regione vinicola che nessun registro tutela. È nell'atlante perché un articolo la nomina come zona di vigneti; il suo nome in etichetta non garantisce da dove venga il vino.",
+    "registerLinkWr": "Leggi l'articolo che la nomina"
   },
   "space": {
     "switchLabel": "Spazio attivo",

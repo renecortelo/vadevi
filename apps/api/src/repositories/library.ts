@@ -386,7 +386,11 @@ export async function libraryAtlasCoverage(database: D1Database, locale: string)
           SUM(region.latitude IS NOT NULL AND region.point_source = 'area') AS area,
           SUM(EXISTS (SELECT 1 FROM kb_region_grapes link WHERE link.region_id = region.id))
             AS with_grapes
-        FROM kb_regions region GROUP BY region.country_code ORDER BY names DESC, country`,
+        FROM kb_regions region
+        -- Registered names only: a wine region no register protects is in
+        -- the atlas, not in its count of registered names.
+        WHERE region.gi_type <> 'WR'
+        GROUP BY region.country_code ORDER BY names DESC, country`,
       )
       .bind(locale, JSON.stringify(fallbackOrder), fallbackOrder.length),
   ]);

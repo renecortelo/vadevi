@@ -108,6 +108,14 @@ has the reasons.
   Moldova's three geographical indications (Codru, Ștefan Vodă, Valul lui
   Traian) and four appellations of origin, Tigheci within Valul lui Traian.
   Each links to its source. None has a summary yet.
+- **Wine regions no register protects**: the atlas can now hold a wine
+  region that is not a protected name, marked as such on its page («Not a
+  protected name») and left out of the count of registered names. It enters
+  only where an article names it as a wine-growing area, and links that
+  article. First, Mexico's: the Valle de Guadalupe (with its own summary in
+  the eight languages), San Antonio de las Minas, the San Vicente, Santo
+  Tomás, Calafia and Tecate valleys, La Laguna and the Parras Valley. Wines
+  whose region reads «Valle de Guadalupe» or «Parras» are now linked to them.
 - **Ontario in the atlas**: the 17 viticultural areas of its VQA rules
   (Table 1 of O. Reg. 406/00), from the Niagara Peninsula and Prince Edward
   County to the benches of the Niagara Escarpment, each within the areas the

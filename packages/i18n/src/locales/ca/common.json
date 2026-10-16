@@ -361,7 +361,12 @@
     "vqa": "Àrea vitícola (VQA)",
     "vqaShort": "VQA",
     "registerTitleCa": "A les àrees vitícoles VQA d'Ontàrio",
-    "registerLinkCa": "Veure la taula 1 de l'O. Reg. 406/00 ({{ref}}, e-Laws d'Ontàrio)"
+    "registerLinkCa": "Veure la taula 1 de l'O. Reg. 406/00 ({{ref}}, e-Laws d'Ontàrio)",
+    "wr": "Regió vinícola (no és un nom protegit)",
+    "wrShort": "Regió vinícola",
+    "registerTitleWr": "No és un nom protegit",
+    "unprotectedWr": "Una regió vinícola que cap registre no protegeix. És a l'atles perquè un article l'esmenta com a zona de vinya; el seu nom en una etiqueta no garanteix d'on ve el vi.",
+    "registerLinkWr": "Llegir l'article que l'esmenta"
   },
   "space": {
     "switchLabel": "Espai actiu",

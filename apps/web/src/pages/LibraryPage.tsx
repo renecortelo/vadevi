@@ -70,7 +70,7 @@ const designationsOf = (country: string): RegionDesignation[] =>
                 : country === "BR"
                   ? ["IP", "DO"]
                   : country === "MX"
-                    ? ["PGI"]
+                    ? ["PGI", "WR"]
                     : ["PDO", "PGI"];
 
 /** Where a reader of each language most likely starts looking. */

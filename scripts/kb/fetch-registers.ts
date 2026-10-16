@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-import { cache, leadLanguages, placeOf, wineArticleItems } from "./world-sources";
+import { cache, fetchEntities, leadLanguages, placeOf, wineArticleItems } from "./world-sources";
 
 /**
  * The atlas beyond the EU, from registers transcribed by hand: one file per
@@ -18,6 +18,11 @@ import { cache, leadLanguages, placeOf, wineArticleItems } from "./world-sources
 export type TranscribedArea = {
   /** An English Wikipedia article on the name's wine, when its title is not "<name> wine". */
   article?: string;
+  /**
+   * Its Wikidata item, where its article is not titled "<name> wine" — the
+   * Valle de Guadalupe's is the valley's own; its point where the map has none.
+   */
+  item?: string;
   key: string;
   /** True where "<name> wine" is another place's wine (Jura's is France's). */
   noArticle?: boolean;
@@ -32,6 +37,11 @@ export type TranscribedArea = {
   registeredOn?: string;
   /** The places its delimitation names, to place it amid them. */
   spread?: string[];
+  /**
+   * For a wine region no register protects: the sentence that names it as
+   * one, which is its summary until an article of its own describes it.
+   */
+  summary?: { locale: string; text: string; url: string };
   /** The region, state or canton names OpenStreetMap files its places under. */
   states?: string[];
   type: string;
@@ -44,6 +54,8 @@ export type TranscribedArea = {
 export type TranscribedRegister = {
   areas: TranscribedArea[];
   countryCode: string;
+  /** "article" where the names come from articles, not a register. */
+  nameSource?: "article" | "register";
   source: { issued: string; note: string; publisher: string; title: string; url: string };
 };
 
@@ -65,7 +77,7 @@ async function main() {
     const items = await wineArticleItems(
       new Map(
         register.areas
-          .filter((area) => area.noArticle !== true)
+          .filter((area) => area.noArticle !== true && area.item === undefined)
           .map((area) => [area.key, area.names]),
       ),
       Object.fromEntries(
@@ -74,14 +86,29 @@ async function main() {
         ),
       ),
     );
+    for (const area of register.areas) {
+      if (area.item !== undefined) items.set(area.key, area.item);
+    }
     await leadLanguages([...new Set(items.values())]);
+    // The items' own points, for a name the map does not find.
+    const given = register.areas.flatMap((area) => (area.item === undefined ? [] : [area.item]));
+    const entities = given.length === 0 ? {} : await fetchEntities(given);
+    const itemPoint = (item: string | undefined) => {
+      const value = (item === undefined ? undefined : entities[item]?.claims?.P625?.[0])?.mainsnak
+        .datavalue?.value as { latitude: number; longitude: number } | undefined;
+      return value === undefined ? null : { latitude: value.latitude, longitude: value.longitude };
+    };
     const records = [];
     for (const area of register.areas) {
       const states = area.states ?? [];
       const byName = [...(area.places ?? []), ...(area.placeByName === false ? [] : area.names)];
       const own = byName.length === 0 ? null : await placeOf(byName, country, states, null);
       let point: { latitude: number; longitude: number } | null = own;
-      let pointSource: "area" | "place" | null = own === null ? null : "place";
+      let pointSource: "area" | "item" | "place" | null = own === null ? null : "place";
+      if (point === null && itemPoint(area.item) !== null) {
+        point = itemPoint(area.item);
+        pointSource = "item";
+      }
       if (point === null && (area.spread ?? []).length > 0) {
         const found = [];
         for (const place of area.spread!) {
@@ -106,14 +133,23 @@ async function main() {
         qid: items.get(area.key) ?? null,
         ref: area.ref ?? null,
         registeredOn: area.registeredOn ?? null,
+        summary: area.summary ?? null,
         type: area.type,
         url: area.url ?? register.source.url,
         within: area.within ?? [],
       });
     }
     writeFileSync(
-      resolve(outFolder, `${country}.json`),
-      JSON.stringify({ countryCode: register.countryCode, records }, null, 1),
+      resolve(outFolder, file),
+      JSON.stringify(
+        {
+          countryCode: register.countryCode,
+          nameSource: register.nameSource ?? "register",
+          records,
+        },
+        null,
+        1,
+      ),
     );
     console.info(
       `  ${register.countryCode}: ${records.length} names from ${register.source.publisher}, ` +

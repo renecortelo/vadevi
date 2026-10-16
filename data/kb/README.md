@@ -251,6 +251,10 @@ leaves out:
 
 - `ca.json` — Canada, Ontario: the 17 viticultural areas of Table 1 of
   O. Reg. 406/00 (VQA), nested where the table says one comprises others.
+- `mx-regions.json` — Mexico's wine regions that no register protects (the
+  Valle de Guadalupe, the Parras Valley…), each named as a wine-growing area
+  by a sentence of Wikipedia's articles on Mexican wine; marked in the app as
+  not protected names (`WR`), and left out of the count of registered names.
 - `ch.json` — Switzerland: the 63 cantonal, regional and local AOCs of the
   federal directory (OFAG, 1 January 2026).
 - `jp.json` — Japan: the five geographical indications for wine of the

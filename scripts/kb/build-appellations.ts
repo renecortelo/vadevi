@@ -717,16 +717,18 @@ const registersCache = resolve(".kb-cache/world/registers");
 for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort() : []) {
   const register = JSON.parse(readFileSync(resolve(registersCache, file), "utf8")) as {
     countryCode: string;
+    nameSource?: "article" | "register";
     records: {
       key: string;
       latitude: number | null;
       level: RegisterLevel | null;
       longitude: number | null;
       names: string[];
-      pointSource: "area" | "place" | null;
+      pointSource: "area" | "item" | "place" | null;
       qid: string | null;
       ref: string | null;
       registeredOn: string | null;
+      summary?: { locale: string; text: string; url: string } | null;
       type: RegionEntry["giType"];
       url: string;
       within: string[];
@@ -735,6 +737,11 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
   const prefix = register.countryCode.toLowerCase();
   const registered: RegionEntry[] = register.records.map((area) => {
     const { leads, summaries } = wikipediaSummaries(area.qid);
+    // A region no register holds is described by the sentence that names it,
+    // until an article of its own does.
+    if (Object.keys(summaries).length === 0 && area.summary != null) {
+      summaries[area.summary.locale] = { text: area.summary.text, url: area.summary.url };
+    }
     seen.add(`${prefix}-${area.key}`);
     return {
       countryCode: register.countryCode,
@@ -746,7 +753,11 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
       legalUrl: area.url,
       longitude: area.longitude,
       name: area.names[0]!,
-      names: area.names.map((name) => ({ locale: "*", name, source: "register" as const })),
+      names: area.names.map((name) => ({
+        locale: "*",
+        name,
+        source: register.nameSource ?? "register",
+      })),
       pointSource: area.pointSource,
       prominence: leads,
       ...(area.ref === null ? {} : { registerRef: area.ref }),

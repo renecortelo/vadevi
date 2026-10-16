@@ -361,7 +361,12 @@
     "vqa": "Weinbaugebiet (VQA)",
     "vqaShort": "VQA",
     "registerTitleCa": "In Ontarios VQA-Weinbaugebieten",
-    "registerLinkCa": "Tabelle 1 der O. Reg. 406/00 ansehen ({{ref}}, Ontario e-Laws)"
+    "registerLinkCa": "Tabelle 1 der O. Reg. 406/00 ansehen ({{ref}}, Ontario e-Laws)",
+    "wr": "Weinregion (kein geschützter Name)",
+    "wrShort": "Weinregion",
+    "registerTitleWr": "Kein geschützter Name",
+    "unprotectedWr": "Eine Weinregion, die kein Register schützt. Sie steht im Atlas, weil ein Artikel sie als Weinbaugebiet nennt; ihr Name auf einem Etikett garantiert nichts über die Herkunft des Weins.",
+    "registerLinkWr": "Den Artikel lesen, der sie nennt"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",
