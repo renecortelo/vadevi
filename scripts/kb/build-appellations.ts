@@ -757,7 +757,21 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
       ...(area.within.length === 0 ? {} : { within: area.within.map((key) => `${prefix}-${key}`) }),
     };
   });
-  // One the map cannot find stands, approximately, at the area it lies in.
+  // One the map cannot find stands, approximately, amid the areas it holds
+  // that have a point, or else at the area it lies in.
+  const own = new Set(
+    registered.filter((entry) => entry.latitude !== null).map((entry) => entry.id),
+  );
+  for (const entry of registered) {
+    if (entry.latitude !== null) continue;
+    const inside = registered.filter(
+      (other) => other.within?.includes(entry.id) === true && own.has(other.id),
+    );
+    if (inside.length === 0) continue;
+    entry.latitude = medianOf(inside.map((other) => other.latitude!));
+    entry.longitude = medianOf(inside.map((other) => other.longitude!));
+    entry.pointSource = "area";
+  }
   for (const entry of registered) {
     if (entry.latitude !== null) continue;
     const holder = (entry.within ?? [])

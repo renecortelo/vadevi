@@ -108,6 +108,11 @@ has the reasons.
   Moldova's three geographical indications (Codru, Ștefan Vodă, Valul lui
   Traian) and four appellations of origin, Tigheci within Valul lui Traian.
   Each links to its source. None has a summary yet.
+- **Ontario in the atlas**: the 17 viticultural areas of its VQA rules
+  (Table 1 of O. Reg. 406/00), from the Niagara Peninsula and Prince Edward
+  County to the benches of the Niagara Escarpment, each within the areas the
+  table says comprise it (St. David's Bench in both the Niagara Escarpment
+  and Niagara-on-the-Lake). Eight benches and shores have no point yet.
 
 ## 0.3.0 — 12 October 2026
 

@@ -319,6 +319,18 @@ test("a Moldovan appellation cites AGEPI's register", async ({ page }) => {
   await expect(nesting.getByRole("link", { name: "Valul lui Traian" })).toBeVisible();
 });
 
+test("an Ontario bench lies within the areas its table names", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/ca-st-davids-bench");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("St. David’s Bench", { timeout: 15_000 });
+  await expect(page.locator("#region-register")).toHaveText("In Ontario's VQA viticultural areas");
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting.getByRole("link", { name: "Niagara Escarpment" })).toBeVisible();
+  await expect(nesting.getByRole("link", { name: "Niagara-on-the-Lake" })).toBeVisible();
+});
+
 test("a British wine name cites the UK register", async ({ page }) => {
   await signIn(page);
   await completeOnboarding(page);

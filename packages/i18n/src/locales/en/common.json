@@ -357,7 +357,11 @@
       "cantonal": "A cantonal AOC.",
       "regional": "A regional AOC.",
       "local": "A local AOC."
-    }
+    },
+    "vqa": "Viticultural area (VQA)",
+    "vqaShort": "VQA",
+    "registerTitleCa": "In Ontario's VQA viticultural areas",
+    "registerLinkCa": "See Table 1 of O. Reg. 406/00 ({{ref}}, Ontario e-Laws)"
   },
   "space": {
     "switchLabel": "Active Space",

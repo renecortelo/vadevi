@@ -357,7 +357,11 @@
       "cantonal": "Una DOC cantonale.",
       "regional": "Una DOC regionale.",
       "local": "Una DOC locale."
-    }
+    },
+    "vqa": "Area viticola (VQA)",
+    "vqaShort": "VQA",
+    "registerTitleCa": "Nelle aree viticole VQA dell'Ontario",
+    "registerLinkCa": "Vedi la tabella 1 dell'O. Reg. 406/00 ({{ref}}, e-Laws dell'Ontario)"
   },
   "space": {
     "switchLabel": "Spazio attivo",

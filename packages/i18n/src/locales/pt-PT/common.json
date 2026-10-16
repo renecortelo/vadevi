@@ -357,7 +357,11 @@
       "cantonal": "Uma AOC cantonal.",
       "regional": "Uma AOC regional.",
       "local": "Uma AOC local."
-    }
+    },
+    "vqa": "Área vitícola (VQA)",
+    "vqaShort": "VQA",
+    "registerTitleCa": "Nas áreas vitícolas VQA do Ontário",
+    "registerLinkCa": "Ver o quadro 1 do O. Reg. 406/00 ({{ref}}, e-Laws do Ontário)"
   },
   "space": {
     "switchLabel": "Espaço ativo",

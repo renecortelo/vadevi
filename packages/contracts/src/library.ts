@@ -154,6 +154,7 @@ export const RegionDesignationSchema = z.enum([
   "IP",
   "DOC",
   "AOC",
+  "VQA",
 ]);
 export type RegionDesignation = z.infer<typeof RegionDesignationSchema>;
 

@@ -357,7 +357,11 @@
       "cantonal": "Een kantonale AOC.",
       "regional": "Een regionale AOC.",
       "local": "Een lokale AOC."
-    }
+    },
+    "vqa": "Wijnbouwgebied (VQA)",
+    "vqaShort": "VQA",
+    "registerTitleCa": "In de VQA-wijnbouwgebieden van Ontario",
+    "registerLinkCa": "Bekijk tabel 1 van O. Reg. 406/00 ({{ref}}, e-Laws van Ontario)"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

@@ -1,0 +1,154 @@
+{
+  "countryCode": "CA",
+  "source": {
+    "title": "O. Reg. 406/00: Rules of Vintners Quality Alliance Ontario relating to terms for VQA wine — Table 1, Viticultural areas",
+    "publisher": "Government of Ontario (e-Laws), under the Vintners Quality Alliance Act, 1999",
+    "url": "https://www.ontario.ca/laws/regulation/000406",
+    "issued": "2026-07-06",
+    "note": "Transcribed by hand from Table 1 of O. Reg. 406/00 as consolidated from 6 July 2026 (e-Laws currency date 13 October 2026; last amendment O. Reg. 226/26): the 17 viticultural areas, each name as the table writes it and its item number. The table describes Niagara Escarpment, Niagara-on-the-Lake and West Niagara as all the lands within the sub-viticultural areas it names, and South Islands as the Township of Pelee, which Lake Erie North Shore includes: those are the nestings kept. It does not say in so many words that the sub-areas lie within the Niagara Peninsula, so none is nested there. Only the regulation's facts are taken (names, items and the areas each comprises); the boundaries it describes are not drawn. Points are approximate: OpenStreetMap's for the place of a name where it is one (Prince Edward County, Niagara-on-the-Lake), the middle of the counties Lake Erie North Shore comprises, the Niagara region for the Niagara Peninsula, and otherwise the middle of the areas a name comprises or the area it lies in. Ontario only: British Columbia's geographical indications are another register."
+  },
+  "areas": [
+    {
+      "key": "lake-erie-north-shore",
+      "names": ["Lake Erie North Shore"],
+      "type": "VQA",
+      "ref": "Table 1, item 1",
+      "states": ["Ontario"],
+      "placeByName": false,
+      "spread": ["Essex County", "Chatham-Kent", "Elgin County"]
+    },
+    {
+      "key": "prince-edward-county",
+      "names": ["Prince Edward County"],
+      "type": "VQA",
+      "ref": "Table 1, item 2",
+      "states": ["Ontario"]
+    },
+    {
+      "key": "niagara-peninsula",
+      "names": ["Niagara Peninsula"],
+      "type": "VQA",
+      "ref": "Table 1, item 3",
+      "states": ["Ontario"],
+      "placeByName": false,
+      "places": ["Niagara Region", "Regional Municipality of Niagara"]
+    },
+    {
+      "key": "niagara-escarpment",
+      "names": ["Niagara Escarpment"],
+      "type": "VQA",
+      "ref": "Table 1, item 4",
+      "states": ["Ontario"],
+      "placeByName": false
+    },
+    {
+      "key": "niagara-on-the-lake",
+      "names": ["Niagara-on-the-Lake"],
+      "type": "VQA",
+      "ref": "Table 1, item 5",
+      "states": ["Ontario"]
+    },
+    {
+      "key": "west-niagara",
+      "names": ["West Niagara"],
+      "type": "VQA",
+      "ref": "Table 1, item 6",
+      "states": ["Ontario"]
+    },
+    {
+      "key": "south-islands",
+      "names": ["South Islands"],
+      "type": "VQA",
+      "ref": "Table 1, item 7",
+      "states": ["Ontario"],
+      "within": ["lake-erie-north-shore"],
+      "placeByName": false,
+      "spread": ["Pelee"]
+    },
+    {
+      "key": "niagara-river",
+      "names": ["Niagara River"],
+      "type": "VQA",
+      "ref": "Table 1, item 8",
+      "states": ["Ontario"],
+      "within": ["niagara-on-the-lake"],
+      "placeByName": false
+    },
+    {
+      "key": "niagara-lakeshore",
+      "names": ["Niagara Lakeshore"],
+      "type": "VQA",
+      "ref": "Table 1, item 9",
+      "states": ["Ontario"],
+      "within": ["niagara-on-the-lake"],
+      "placeByName": false
+    },
+    {
+      "key": "four-mile-creek",
+      "names": ["Four Mile Creek"],
+      "type": "VQA",
+      "ref": "Table 1, item 10",
+      "states": ["Ontario"],
+      "within": ["niagara-on-the-lake"],
+      "placeByName": false
+    },
+    {
+      "key": "st-davids-bench",
+      "names": ["St. David’s Bench"],
+      "type": "VQA",
+      "ref": "Table 1, item 11",
+      "states": ["Ontario"],
+      "within": ["niagara-escarpment", "niagara-on-the-lake"]
+    },
+    {
+      "key": "lincoln-lakeshore",
+      "names": ["Lincoln Lakeshore"],
+      "type": "VQA",
+      "ref": "Table 1, item 12",
+      "states": ["Ontario"],
+      "within": ["west-niagara"],
+      "placeByName": false
+    },
+    {
+      "key": "creek-shores",
+      "names": ["Creek Shores"],
+      "type": "VQA",
+      "ref": "Table 1, item 13",
+      "states": ["Ontario"],
+      "within": ["west-niagara"],
+      "placeByName": false
+    },
+    {
+      "key": "beamsville-bench",
+      "names": ["Beamsville Bench"],
+      "type": "VQA",
+      "ref": "Table 1, item 14",
+      "states": ["Ontario"],
+      "within": ["niagara-escarpment", "west-niagara"]
+    },
+    {
+      "key": "twenty-mile-bench",
+      "names": ["Twenty Mile Bench"],
+      "type": "VQA",
+      "ref": "Table 1, item 15",
+      "states": ["Ontario"],
+      "within": ["niagara-escarpment", "west-niagara"]
+    },
+    {
+      "key": "short-hills-bench",
+      "names": ["Short Hills Bench"],
+      "type": "VQA",
+      "ref": "Table 1, item 16",
+      "states": ["Ontario"],
+      "within": ["niagara-escarpment", "west-niagara"]
+    },
+    {
+      "key": "vinemount-ridge",
+      "names": ["Vinemount Ridge"],
+      "type": "VQA",
+      "ref": "Table 1, item 17",
+      "states": ["Ontario"],
+      "within": ["west-niagara"]
+    }
+  ]
+}

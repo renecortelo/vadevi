@@ -291985,6 +291985,491 @@
     "wikidataId": null
   },
   {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-lake-erie-north-shore",
+    "latitude": 42.41833,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -82.0898417,
+    "name": "Lake Erie North Shore",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lake Erie North Shore",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Table 1, item 1",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-prince-edward-county",
+    "latitude": 44.031827,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -77.246933,
+    "name": "Prince Edward County",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Prince Edward County",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "Table 1, item 2",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "Prince Edward County Wine is produced in Prince Edward County (PEC) located in south eastern part of southern Ontario, the most southerly part of Canada. Prince Edward County was designated as the fourth and newest Designated Viticultural Area (DVA) in Ontario in 2007. A DVA is a wine-producing region for which rules and regulations are set down by the Vintners Quality Alliance (VQA) of Ontario.",
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine"
+      },
+      "ca": {
+        "text": "El vi de Prince Edward County es produeix al comtat de Prince Edward (PEC), situat a la part sud-est del sud d'Ontàrio, la part més meridional del Canadà. Prince Edward County va ser designada el 2007 com la quarta i més recent àrea vitícola designada (Designated Viticultural Area, DVA) d'Ontàrio. Una DVA és una regió productora de vi per a la qual la Vintners Quality Alliance (VQA) d'Ontàrio estableix normes i reglaments.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine"
+      },
+      "es": {
+        "text": "El vino de Prince Edward County se produce en el condado de Prince Edward (PEC), situado en la parte sudeste del sur de Ontario, la parte más meridional de Canadá. Prince Edward County fue designada en 2007 como la cuarta y más reciente área vitícola designada (Designated Viticultural Area, DVA) de Ontario. Una DVA es una región productora de vino para la que la Vintners Quality Alliance (VQA) de Ontario establece normas y reglamentos.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine"
+      },
+      "fr": {
+        "text": "Le vin de Prince Edward County est produit dans le comté de Prince Edward (PEC), situé dans la partie sud-est du sud de l'Ontario, la partie la plus méridionale du Canada. Prince Edward County a été désignée en 2007 comme la quatrième et plus récente région viticole désignée (Designated Viticultural Area, DVA) de l'Ontario. Une DVA est une région productrice de vin pour laquelle la Vintners Quality Alliance (VQA) de l'Ontario fixe des règles et des règlements.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine"
+      },
+      "it": {
+        "text": "Il vino di Prince Edward County è prodotto nella contea di Prince Edward (PEC), situata nella parte sud-orientale dell'Ontario meridionale, la parte più meridionale del Canada. Prince Edward County è stata designata nel 2007 come la quarta e più recente area viticola designata (Designated Viticultural Area, DVA) dell'Ontario. Una DVA è una regione vinicola per la quale la Vintners Quality Alliance (VQA) dell'Ontario stabilisce norme e regolamenti.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine"
+      },
+      "de": {
+        "text": "Der Wein von Prince Edward County wird im Prince Edward County (PEC) erzeugt, das im südöstlichen Teil des südlichen Ontario liegt, dem südlichsten Teil Kanadas. Prince Edward County wurde 2007 als viertes und jüngstes ausgewiesenes Weinbaugebiet (Designated Viticultural Area, DVA) Ontarios ausgewiesen. Ein DVA ist ein Weinbaugebiet, für das die Vintners Quality Alliance (VQA) von Ontario Regeln und Vorschriften festlegt.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine"
+      },
+      "nl": {
+        "text": "Wijn uit Prince Edward County wordt gemaakt in Prince Edward County (PEC), gelegen in het zuidoosten van Zuid-Ontario, het zuidelijkste deel van Canada. Prince Edward County werd in 2007 aangewezen als het vierde en nieuwste aangewezen wijnbouwgebied (Designated Viticultural Area, DVA) van Ontario. Een DVA is een wijnregio waarvoor de Vintners Quality Alliance (VQA) van Ontario regels en voorschriften vastlegt.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine"
+      },
+      "pt": {
+        "text": "O vinho de Prince Edward County é produzido no condado de Prince Edward (PEC), situado na parte sudeste do sul do Ontário, a parte mais meridional do Canadá. Prince Edward County foi designada em 2007 como a quarta e mais recente área vitícola designada (Designated Viticultural Area, DVA) do Ontário. Uma DVA é uma região produtora de vinho para a qual a Vintners Quality Alliance (VQA) do Ontário estabelece regras e regulamentos.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine"
+      }
+    },
+    "wikidataId": "Q7243893"
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-niagara-peninsula",
+    "latitude": 43.0631891,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -79.3098089,
+    "name": "Niagara Peninsula",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Niagara Peninsula",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Table 1, item 3",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-niagara-escarpment",
+    "latitude": null,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": null,
+    "name": "Niagara Escarpment",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Niagara Escarpment",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Table 1, item 4",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-niagara-on-the-lake",
+    "latitude": 43.2556116,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -79.0723264,
+    "name": "Niagara-on-the-Lake",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Niagara-on-the-Lake",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "Table 1, item 5",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-west-niagara",
+    "latitude": null,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": null,
+    "name": "West Niagara",
+    "names": [
+      {
+        "locale": "*",
+        "name": "West Niagara",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Table 1, item 6",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-south-islands",
+    "latitude": 42.41833,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -82.0898417,
+    "name": "South Islands",
+    "names": [
+      {
+        "locale": "*",
+        "name": "South Islands",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Table 1, item 7",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-lake-erie-north-shore"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-niagara-river",
+    "latitude": 43.2556116,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -79.0723264,
+    "name": "Niagara River",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Niagara River",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Table 1, item 8",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-niagara-on-the-lake"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-niagara-lakeshore",
+    "latitude": 43.2556116,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -79.0723264,
+    "name": "Niagara Lakeshore",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Niagara Lakeshore",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Table 1, item 9",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-niagara-on-the-lake"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-four-mile-creek",
+    "latitude": 43.2556116,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -79.0723264,
+    "name": "Four Mile Creek",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Four Mile Creek",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Table 1, item 10",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-niagara-on-the-lake"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-st-davids-bench",
+    "latitude": 43.2556116,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": -79.0723264,
+    "name": "St. David’s Bench",
+    "names": [
+      {
+        "locale": "*",
+        "name": "St. David’s Bench",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "Table 1, item 11",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-niagara-escarpment",
+      "ca-niagara-on-the-lake"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-lincoln-lakeshore",
+    "latitude": null,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": null,
+    "name": "Lincoln Lakeshore",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lincoln Lakeshore",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Table 1, item 12",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-west-niagara"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-creek-shores",
+    "latitude": null,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": null,
+    "name": "Creek Shores",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Creek Shores",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Table 1, item 13",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-west-niagara"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-beamsville-bench",
+    "latitude": null,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": null,
+    "name": "Beamsville Bench",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Beamsville Bench",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Table 1, item 14",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-niagara-escarpment",
+      "ca-west-niagara"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-twenty-mile-bench",
+    "latitude": null,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": null,
+    "name": "Twenty Mile Bench",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Twenty Mile Bench",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Table 1, item 15",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-niagara-escarpment",
+      "ca-west-niagara"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-short-hills-bench",
+    "latitude": null,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": null,
+    "name": "Short Hills Bench",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Short Hills Bench",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Table 1, item 16",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-niagara-escarpment",
+      "ca-west-niagara"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "VQA",
+    "grapes": [],
+    "id": "ca-vinemount-ridge",
+    "latitude": null,
+    "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
+    "longitude": null,
+    "name": "Vinemount Ridge",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vinemount Ridge",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "Table 1, item 17",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-west-niagara"
+    ]
+  },
+  {
     "countryCode": "CH",
     "eambrosiaId": null,
     "giType": "AOC",

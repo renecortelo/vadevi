@@ -249,6 +249,8 @@ OpenStreetMap has its place, or amid those places, or else at the area it
 lies in — approximately. Each file says where it comes from and what it
 leaves out:
 
+- `ca.json` — Canada, Ontario: the 17 viticultural areas of Table 1 of
+  O. Reg. 406/00 (VQA), nested where the table says one comprises others.
 - `ch.json` — Switzerland: the 63 cantonal, regional and local AOCs of the
   federal directory (OFAG, 1 January 2026).
 - `jp.json` — Japan: the five geographical indications for wine of the
@@ -310,7 +312,7 @@ Every few months, or when a register announces a name:
   official acts have no copyright in Brazil (Lei 9.610/1998, art. 8, IV);
   only their facts are taken, and each name links to its list.
 - **The registers transcribed by hand** (`registers/`): the Swiss federal
-  directory of AOCs, Japan's National Tax Agency list and Moldova's AGEPI
+  directory of AOCs, Ontario's VQA regulation, Japan's National Tax Agency list and Moldova's AGEPI
   register — only their facts are taken (names, kinds, numbers, dates and
   places), and each name links to its source.
 - **The IMPI's declarations in the Diario Oficial de la Federación**
