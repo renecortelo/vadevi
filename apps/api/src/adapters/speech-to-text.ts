@@ -54,6 +54,11 @@ class CloudflareSpeechToText implements SpeechToTextPort {
     // "Mencía" and "taninos" right (docs/backlog.md, P18).
     const output = (await this.binding.run(speechModel, {
       audio: base64(audio),
+      // Without these the model can loop on a phrase ("zegt hij, zegt hij…"):
+      // it did in 4 of 40 real recordings on 16 October 2026, and in none with
+      // voice detection on and each segment heard on its own.
+      condition_on_previous_text: false,
+      vad_filter: true,
       ...(options.language === undefined ? {} : { language: options.language }),
       ...(options.vocabulary === "" ? {} : { initial_prompt: options.vocabulary }),
     })) as { text?: unknown; transcription_info?: { duration?: unknown; language?: unknown } };

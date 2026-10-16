@@ -105,11 +105,15 @@ the form's own fields and options are accepted.
 
 ## Honest assessment of value
 
-On a clean recording the model is accurate, and with the vocabulary hint it
-spells grape and region names correctly in Spanish and English (tested with
-synthetic voices). It has **not yet been tested** in Catalan, with real voices,
-or with restaurant noise. Treat it as a typing shortcut: the reader reviews
-every field before saving.
+Tested on 16 October 2026 with 40 real recordings, five in each of the app's
+languages (`docs/backlog.md`, P18). The model heard the language right every
+time. Spanish and English came out very well, Italian well and German
+acceptably; Catalan and Portuguese often misheard wine names, and French and
+Dutch looped on a phrase in four recordings until voice detection was switched
+on, which the adapter now does. Names are spelled right when the vocabulary
+hint contains them and wrong when it does not, so the extraction step has to
+match approximate names against the library. Treat it as a typing shortcut:
+the reader reviews every field before saving.
 
 ## Recommendation
 

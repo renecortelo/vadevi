@@ -68,8 +68,10 @@ describe("voice tastings", () => {
       {
         input: {
           audio: "AQID",
+          condition_on_previous_text: false,
           initial_prompt: "Cata de vino: taninos. Mencía, Ribeira Sacra",
           language: "es",
+          vad_filter: true,
         },
         model: speechModel,
       },
