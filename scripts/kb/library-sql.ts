@@ -69,7 +69,11 @@ export function libraryTables(
     pairing: { terms: {}, variants: {} },
   },
   regions: readonly RegionEntry[] = [],
-  extras: { images?: Record<string, ImageEntry>; topics?: readonly TopicEntry[] } = {},
+  extras: {
+    images?: Record<string, ImageEntry>;
+    topicImages?: Record<string, ImageEntry>;
+    topics?: readonly TopicEntry[];
+  } = {},
 ): LibraryTable[] {
   const topics = extras.topics ?? [];
   const images = extras.images ?? {};
@@ -358,17 +362,22 @@ export function libraryTables(
       ["entity_type", "entity_id", "path", "author", "license", "license_url", "source_url"],
       ["entity_type", "entity_id"],
       1,
-      Object.entries(images)
-        .filter(([grapeId]) => grapes.some((grape) => grape.id === grapeId))
-        .map(([grapeId, image]) => [
-          "grape",
-          grapeId,
-          image.path,
-          image.author,
-          image.license,
-          image.licenseUrl,
-          image.sourceUrl,
-        ]),
+      [
+        ...Object.entries(images)
+          .filter(([grapeId]) => grapes.some((grape) => grape.id === grapeId))
+          .map(([grapeId, image]) => ["grape", grapeId, image] as const),
+        ...Object.entries(extras.topicImages ?? {})
+          .filter(([topicId]) => (extras.topics ?? []).some((topic) => topic.id === topicId))
+          .map(([topicId, image]) => ["style", topicId, image] as const),
+      ].map(([type, id, image]) => [
+        type,
+        id,
+        image.path,
+        image.author,
+        image.license,
+        image.licenseUrl,
+        image.sourceUrl,
+      ]),
     ),
     table("kb_meta", ["key", "value"], ["key"], 1, [["version", version]]),
   ];

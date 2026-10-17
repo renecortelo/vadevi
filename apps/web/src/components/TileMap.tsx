@@ -48,6 +48,7 @@ export function TileMap({ points }: { points: MapPoint[] }) {
     for (const point of points) {
       bounds.push([point.latitude, point.longitude]);
       L.circleMarker([point.latitude, point.longitude], {
+        className: "tile-map__point",
         color: "#ffffff",
         fillColor: "#8b1116",
         fillOpacity: 0.9,

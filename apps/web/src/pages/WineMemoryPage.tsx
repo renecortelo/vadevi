@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router";
 
 import type { MapPoint } from "../components/PointsMap";
 import { PointsMap } from "../components/PointsMap";
+import { SheetPointsMap } from "../library/SheetPointsMap";
 import { PrivateWineImage } from "../components/PrivateWineImage";
 import { TastingHistory } from "../components/TastingHistory";
 const TileMap = lazy(() =>
@@ -1164,6 +1165,15 @@ export function WineMemoryPage() {
             );
             const active = mapKind === "venue" ? venuePoints : regions;
             const empty = mapKind === "venue" ? t("memory.mapEmpty") : t("memory.mapRegionEmpty");
+            // Regions on the app's own map, as the atlas and the cellar book
+            // draw them; venues need streets, which only tiles have.
+            if (mapKind === "region") {
+              return active.length === 0 ? (
+                <p className="section-help">{empty}</p>
+              ) : (
+                <SheetPointsMap label={t("memory.mapLabel")} points={active} />
+              );
+            }
             // A real map whenever the deployment serves tiles — empty or not, so
             // it draws the world even before any point exists rather than hiding
             // behind the schematic. The schematic is only the no-tiles fallback.

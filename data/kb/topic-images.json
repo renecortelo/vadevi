@@ -1,0 +1,135 @@
+{
+  "dessert-wine": {
+    "author": "Wujianbj at English Wikipedia",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "path": "library/topics/dessert-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vin_Santo.JPG"
+  },
+  "fino": {
+    "author": "Xemenendura",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/topics/fino.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zanahorias_ali%C3%B1%C3%A1s_1.jpg"
+  },
+  "fortified-wine": {
+    "author": "Jon Sullivan",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "path": "library/topics/fortified-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Port_wine.jpg"
+  },
+  "georgian-wine": {
+    "author": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "path": "library/topics/georgian-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:GWS_Versuchsweinberge.JPG"
+  },
+  "ice-wine": {
+    "author": "AKS.9955",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/topics/ice-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peller_Estates_Ice_Wine.jpg"
+  },
+  "lees": {
+    "author": "Agne27 at English Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "path": "library/topics/lees.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Merlot_wine_lees_after_fermentation.JPG"
+  },
+  "noble-rot": {
+    "author": "T.o.m.",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "path": "library/topics/noble-rot.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Botrytis_riesling.jpg"
+  },
+  "oak": {
+    "author": "Olivier Lemoine (https://Photo-Terroir.fr)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/topics/oak.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fut_bourguignon_barrique_bordelaise.jpg"
+  },
+  "orange-wine": {
+    "author": "uploader",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/topics/orange-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glass_quevri_rkatsiteli.JPG"
+  },
+  "qvevri": {
+    "author": "Carole Raddato",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "path": "library/topics/qvevri.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_terracotta_Kvevri_used_to_ferment_and_age_wine_decorated_with_depictions_of_bunches_of_grapes,_First_half_of_the_6th_millennium_BC,_from_Khramis_Didid_Gora,_National_Museum_of_Georgia,_Tbilisi,_Georgia.jpg"
+  },
+  "red-wine": {
+    "author": "CDC",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "path": "library/topics/red-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pouring_a_glass_of_red_wine.tiff"
+  },
+  "rose": {
+    "author": "THOR",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/topics/rose.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sancerre_rose_Wine.jpg"
+  },
+  "solera": {
+    "author": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "path": "library/topics/solera.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sherry_cellar,_Solera_system_2,_2003.jpg"
+  },
+  "sparkling-production": {
+    "author": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0 at",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/at/deed.en",
+    "path": "library/topics/sparkling-production.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sektkellerei_Foretnik.jpg"
+  },
+  "sparkling-wine": {
+    "author": "Gaetan Lee",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/topics/sparkling-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rose_champagne_infinite_bubbles.jpg"
+  },
+  "straw-wine": {
+    "author": "Photo de madame Marie Thérese Grappe - Libre de droit www.vindujura.com",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "path": "library/topics/straw-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vin_paille.jpg"
+  },
+  "vin-jaune": {
+    "author": "User:Arnaud 25",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "path": "library/topics/vin-jaune.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vin_Jaune.jpg"
+  },
+  "vin-santo": {
+    "author": "Salvadonica Borgo del Chianti",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/topics/vin-santo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantucci_con_Vin_Santo.jpg"
+  },
+  "white-wine": {
+    "author": "Tomas er",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/topics/white-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Two_Chenin_Blanc_wines_in_glass.jpg"
+  }
+}

@@ -354,6 +354,8 @@ export const LibraryTopicSchema = z
   .object({
     category: z.enum(["kind", "farming", "method", "concept"]),
     id: z.string(),
+    /** A picture of it from Wikimedia Commons, under a free licence. */
+    image: LibraryImageSchema.nullable(),
     name: z.string(),
     otherNames: z.array(z.string()),
     summary: z

@@ -373,7 +373,13 @@
     "registeredOnGe": "Enregistrée le {{date}}.",
     "registerLinkGe": "Voir son document dans le registre de Sakpatenti ({{ref}})",
     "registerTitleBc": "Dans les indications géographiques de la Colombie-Britannique",
-    "registerLinkBc": "Voir l'article 56 du Wines of Marked Quality Regulation ({{ref}}, BC Laws)"
+    "registerLinkBc": "Voir l'article 56 du Wines of Marked Quality Regulation ({{ref}}, BC Laws)",
+    "topicFilter": "Catégorie",
+    "topicOrder": {
+      "label": "Ordre",
+      "known": "Les plus connus d'abord",
+      "name": "De A à Z"
+    }
   },
   "space": {
     "switchLabel": "Espace actif",

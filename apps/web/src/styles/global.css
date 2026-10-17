@@ -4331,6 +4331,37 @@ p {
 }
 
 /* The real map fills the view; Leaflet needs an explicit height on its box. */
+/* Street tiles in the app's own warmth: the same paper and wine as its maps,
+   darkened at night; the points are the cellar book's. */
+.tile-map .leaflet-tile-pane {
+  filter: grayscale(0.85) sepia(0.35) saturate(1.2) brightness(1.02);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tile-map .leaflet-tile-pane {
+    filter: grayscale(1) invert(0.9) sepia(0.35) hue-rotate(-20deg) brightness(0.85);
+  }
+}
+
+:root[data-theme="dark"] .tile-map .leaflet-tile-pane {
+  filter: grayscale(1) invert(0.9) sepia(0.35) hue-rotate(-20deg) brightness(0.85);
+}
+
+.tile-map path.tile-map__point {
+  fill: var(--color-plum);
+  stroke: var(--color-surface-raised);
+}
+
+.tile-map .leaflet-container a.leaflet-popup-close-button,
+.tile-map .leaflet-popup-content a {
+  color: var(--color-plum);
+}
+
+.tile-map .leaflet-control-attribution {
+  font-size: 0.6rem;
+  opacity: 0.75;
+}
+
 .tile-map {
   block-size: 70vh;
   border-radius: var(--radius-md);
@@ -4485,6 +4516,30 @@ p {
   letter-spacing: 0.04em;
   margin-block: 0 var(--space-2);
   text-transform: uppercase;
+}
+
+/* Styles and methods: their filters in a row, and a gallery whose cards say
+   a line of what each is. */
+.library-topic-filters {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.library-topic-filters label {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.library-gallery__excerpt {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: var(--color-text-muted);
+  display: -webkit-box;
+  font-size: var(--text-xs);
+  line-height: 1.35;
+  overflow: hidden;
 }
 
 /* Where a text, a photo or a map's points come from: said, as the licence

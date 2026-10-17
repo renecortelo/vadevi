@@ -89,6 +89,16 @@ has the reasons.
   On the atlas in figures, touching a country chooses it — the page shows its
   figures alone — and frames it with a point for each of its names; touching
   a point names it, with its kind and a link to its page.
+- **Styles and methods, browsable**: a gallery like the grapes', each card
+  with its picture, its kind and a line of what it is; filtered by kind
+  (types of wine, in the vineyard and the cellar, how it is made, concepts)
+  and ordered by best known or A to Z. Pictures come from Wikimedia Commons
+  under free licences, each credited on its page (`pnpm
+kb:fetch-topic-images`; 19 of the 41 have one).
+- **The memory's map in the app's style**: «Where they're from» is drawn on
+  the app's own map, like the atlas and the cellar book, zooming and naming
+  the wines of a touched point; «Where I tasted» keeps street tiles, tinted
+  to the app's palette (dark at night), with its points in the app's colour.
 - **Credits, quietly**: every note of where a text, a photo or a map's
   points come from is set the same way across the app — smaller and fainter
   than what it credits. The maps no longer credit Natural Earth, which is

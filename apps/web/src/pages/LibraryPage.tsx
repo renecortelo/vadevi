@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { GrapesIcon } from "../brand/NavIcons";
+import { GrapesIcon, WineTypeIcon } from "../brand/NavIcons";
 import { designationKey } from "../library/designation";
 import { flagOf } from "../library/flag";
 import { LibraryTabs } from "../library/LibraryTabs";
@@ -378,6 +378,8 @@ function RegionList({
 
 function TopicList({ locale, query }: { locale: string; query: string }) {
   const { t } = useTranslation();
+  const [category, setCategory] = useState<LibraryTopic["category"] | null>(null);
+  const [order, setOrder] = useState<"known" | "name">("known");
   const transition = useViewTransition();
   const { user } = useAuth();
   const state = useList<LibraryTopic>(`topics:${locale}:${user?.uid ?? ""}`, (signal) =>
@@ -397,41 +399,65 @@ function TopicList({ locale, query }: { locale: string; query: string }) {
     [query, state],
   );
   if (state === null || state.status === "error") return <Status state={state} />;
+  const listed = shown
+    .filter((topic) => category === null || topic.category === category)
+    .toSorted((left, right) => (order === "name" ? left.name.localeCompare(right.name) : 0));
   return (
     <>
-      {topicCategories.map((category) => {
-        const inCategory = shown.filter((topic) => topic.category === category);
-        if (inCategory.length === 0) return null;
-        return (
-          <section aria-labelledby={`topics-${category}`} className="library-topics" key={category}>
-            <h2 id={`topics-${category}`}>{t(`library.topicCategory.${category}`)}</h2>
-            <ul>
-              {inCategory.map((topic) => (
-                <li className="settings-card" key={topic.id}>
-                  <h3>
-                    <Link
-                      className="text-link"
-                      onClick={transition(`/library/topics/${topic.id}`)}
-                      to={`/library/topics/${topic.id}`}
-                    >
-                      {topic.name}
-                    </Link>
-                  </h3>
-                  {topic.summary === null ? null : (
-                    <p
-                      className="library-topics__excerpt"
-                      lang={topic.summary.locale === "pt-PT" ? "pt" : topic.summary.locale}
-                    >
-                      {topic.summary.text}
-                    </p>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </section>
-        );
-      })}
-      {shown.length === 0 ? <p>{t("library.home.none")}</p> : null}
+      <div className="library-topic-filters">
+        <div aria-label={t("library.topicFilter")} className="segmented-control" role="group">
+          {[null, ...topicCategories].map((option) => (
+            <button
+              aria-pressed={category === option}
+              key={option ?? "all"}
+              onClick={() => setCategory(option)}
+              type="button"
+            >
+              {option === null ? t("library.home.any") : t(`library.topicCategory.${option}`)}
+            </button>
+          ))}
+        </div>
+        <label>
+          <span>{t("library.topicOrder.label")}</span>
+          <select
+            onChange={(event) => setOrder(event.target.value as "known" | "name")}
+            value={order}
+          >
+            <option value="known">{t("library.topicOrder.known")}</option>
+            <option value="name">{t("library.topicOrder.name")}</option>
+          </select>
+        </label>
+      </div>
+      <p className="section-help">{t("library.home.count", { count: listed.length })}</p>
+      <ul className="library-gallery library-gallery--topics">
+        {listed.map((topic) => (
+          <li key={topic.id}>
+            <Link
+              onClick={transition(`/library/topics/${topic.id}`)}
+              to={`/library/topics/${topic.id}`}
+            >
+              {topic.image === null ? (
+                <span aria-hidden="true" className="library-gallery__placeholder">
+                  <WineTypeIcon />
+                </span>
+              ) : (
+                <img alt="" decoding="async" loading="lazy" src={`/${topic.image.path}`} />
+              )}
+              <strong>{topic.name}</strong>
+              <span>{t(`library.topicCategory.${topic.category}`)}</span>
+              {topic.summary === null ? null : (
+                <span
+                  className="library-gallery__excerpt"
+                  lang={topic.summary.locale === "pt-PT" ? "pt" : topic.summary.locale}
+                >
+                  {topic.summary.text}
+                </span>
+              )}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      {listed.length === 0 ? <p>{t("library.home.none")}</p> : null}
     </>
   );
 }

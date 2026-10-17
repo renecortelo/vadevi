@@ -74,6 +74,24 @@ export function LibraryTopicPage() {
           <h1>{entry.name}</h1>
           {entry.otherNames.length === 0 ? null : <p>{entry.otherNames.join(" · ")}</p>}
         </div>
+        {entry.image === null ? null : (
+          <figure className="library-photo">
+            <img alt={t("library.photoAlt", { name: entry.name })} src={`/${entry.image.path}`} />
+            <figcaption className="source-note">
+              <a
+                className="text-link"
+                href={entry.image.sourceUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {t("library.photoCredit", {
+                  author: entry.image.author,
+                  license: entry.image.license,
+                })}
+              </a>
+            </figcaption>
+          </figure>
+        )}
       </header>
       {entry.summary === null ? null : (
         <section className="settings-card library-summary">

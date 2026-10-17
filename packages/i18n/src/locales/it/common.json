@@ -373,7 +373,13 @@
     "registeredOnGe": "Registrata il {{date}}.",
     "registerLinkGe": "Vedi il suo documento nel registro di Sakpatenti ({{ref}})",
     "registerTitleBc": "Nelle indicazioni geografiche della Columbia Britannica",
-    "registerLinkBc": "Vedi la sezione 56 del Wines of Marked Quality Regulation ({{ref}}, BC Laws)"
+    "registerLinkBc": "Vedi la sezione 56 del Wines of Marked Quality Regulation ({{ref}}, BC Laws)",
+    "topicFilter": "Categoria",
+    "topicOrder": {
+      "label": "Ordine",
+      "known": "Prima i più noti",
+      "name": "Dalla A alla Z"
+    }
   },
   "space": {
     "switchLabel": "Spazio attivo",

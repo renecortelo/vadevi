@@ -373,7 +373,13 @@
     "registeredOnGe": "Registered on {{date}}.",
     "registerLinkGe": "See its document in Sakpatenti's registry ({{ref}})",
     "registerTitleBc": "In British Columbia's geographical indications",
-    "registerLinkBc": "See section 56 of the Wines of Marked Quality Regulation ({{ref}}, BC Laws)"
+    "registerLinkBc": "See section 56 of the Wines of Marked Quality Regulation ({{ref}}, BC Laws)",
+    "topicFilter": "Kind",
+    "topicOrder": {
+      "label": "Order",
+      "known": "Best known first",
+      "name": "A to Z"
+    }
   },
   "space": {
     "switchLabel": "Active Space",

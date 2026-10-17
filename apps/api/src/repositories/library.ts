@@ -697,7 +697,7 @@ async function topicsFor(
   const ids = topics.map((topic) => topic.id);
   const placeholders = ids.map(() => "?").join(", ");
   const shortLocale = locale.split("-")[0]!;
-  const [names, summaries] = await database.batch([
+  const [names, summaries, images] = await database.batch([
     database
       .prepare(
         `SELECT entity_id, locale, name, kind FROM kb_names
@@ -710,7 +710,21 @@ async function topicsFor(
         WHERE entity_type = 'style' AND entity_id IN (${placeholders})`,
       )
       .bind(...ids),
+    database
+      .prepare(
+        `SELECT entity_id, path, author, license, license_url, source_url FROM kb_images
+        WHERE entity_type = 'style' AND entity_id IN (${placeholders})`,
+      )
+      .bind(...ids),
   ]);
+  const imageRows = (images?.results ?? []) as {
+    author: string;
+    entity_id: string;
+    license: string;
+    license_url: string | null;
+    path: string;
+    source_url: string;
+  }[];
   const nameRows = (names?.results ?? []) as {
     entity_id: string;
     kind: "primary" | "synonym";
@@ -733,9 +747,20 @@ async function topicsFor(
       topic.id;
     const mine = summaryRows.filter((row) => row.entity_id === topic.id);
     const summary = inReadersLanguage(mine, locale);
+    const image = imageRows.find((row) => row.entity_id === topic.id);
     return {
       category: topic.category,
       id: topic.id,
+      image:
+        image === undefined
+          ? null
+          : {
+              author: image.author,
+              license: image.license,
+              licenseUrl: image.license_url,
+              path: image.path,
+              sourceUrl: image.source_url,
+            },
       name,
       // The names a reader of this language might use, and the language-free
       // ones ("pet nat"); not every language's label.

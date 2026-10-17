@@ -373,7 +373,13 @@
     "registeredOnGe": "Eingetragen am {{date}}.",
     "registerLinkGe": "Ihr Dokument im Register von Sakpatenti ansehen ({{ref}})",
     "registerTitleBc": "In den geografischen Angaben von British Columbia",
-    "registerLinkBc": "Abschnitt 56 der Wines of Marked Quality Regulation ansehen ({{ref}}, BC Laws)"
+    "registerLinkBc": "Abschnitt 56 der Wines of Marked Quality Regulation ansehen ({{ref}}, BC Laws)",
+    "topicFilter": "Kategorie",
+    "topicOrder": {
+      "label": "Reihenfolge",
+      "known": "Bekannteste zuerst",
+      "name": "Von A bis Z"
+    }
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

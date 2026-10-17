@@ -11472,6 +11472,39 @@
           "id": {
             "type": "string"
           },
+          "image": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "author": {
+                "type": "string"
+              },
+              "license": {
+                "type": "string"
+              },
+              "licenseUrl": {
+                "type": "string",
+                "nullable": true,
+                "format": "uri"
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^library\\/[a-z0-9/._-]+$"
+              },
+              "sourceUrl": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "author",
+              "license",
+              "licenseUrl",
+              "path",
+              "sourceUrl"
+            ],
+            "additionalProperties": false
+          },
           "name": {
             "type": "string"
           },
@@ -11515,6 +11548,7 @@
         "required": [
           "category",
           "id",
+          "image",
           "name",
           "otherNames",
           "summary"

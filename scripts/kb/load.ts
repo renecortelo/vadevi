@@ -43,12 +43,14 @@ const vocabularySource = readFileSync(resolve("data/kb/terms.json"), "utf8");
 const regionsSource = readFileSync(resolve("data/kb/appellations.json"), "utf8");
 const topicsSource = readFileSync(resolve("data/kb/topics.json"), "utf8");
 const imagesSource = readFileSync(resolve("data/kb/grape-images.json"), "utf8");
+const topicImagesSource = readFileSync(resolve("data/kb/topic-images.json"), "utf8");
 const version = createHash("sha256")
   .update(source)
   .update(vocabularySource)
   .update(regionsSource)
   .update(topicsSource)
   .update(imagesSource)
+  .update(topicImagesSource)
   .digest("hex")
   .slice(0, 16);
 const grapes = JSON.parse(source) as GrapeEntry[];
@@ -56,6 +58,7 @@ const vocabulary = JSON.parse(vocabularySource) as Vocabulary;
 const regions = JSON.parse(regionsSource) as RegionEntry[];
 const topics = JSON.parse(topicsSource) as TopicEntry[];
 const images = JSON.parse(imagesSource) as Record<string, ImageEntry>;
+const topicImages = JSON.parse(topicImagesSource) as Record<string, ImageEntry>;
 
 function wrangler(args: string[]): string {
   const result = spawnSync(
@@ -101,7 +104,11 @@ if (!force) {
   }
 }
 
-const tables = libraryTables(grapes, version, vocabulary, regions, { images, topics });
+const tables = libraryTables(grapes, version, vocabulary, regions, {
+  images,
+  topicImages,
+  topics,
+});
 
 // What the database holds now, table by table. A table a migration has not
 // created yet reads as empty.
