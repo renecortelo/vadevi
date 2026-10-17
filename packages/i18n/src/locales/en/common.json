@@ -370,7 +370,9 @@
     "summarySourceOfficial": "From the name's official text, in its register",
     "registerTitleGe": "In Georgia's state registry (Sakpatenti)",
     "registeredOnGe": "Registered on {{date}}.",
-    "registerLinkGe": "See its document in Sakpatenti's registry ({{ref}})"
+    "registerLinkGe": "See its document in Sakpatenti's registry ({{ref}})",
+    "registerTitleBc": "In British Columbia's geographical indications",
+    "registerLinkBc": "See section 56 of the Wines of Marked Quality Regulation ({{ref}}, BC Laws)"
   },
   "space": {
     "switchLabel": "Active Space",

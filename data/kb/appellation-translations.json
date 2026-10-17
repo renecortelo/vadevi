@@ -18791,6 +18791,20 @@
         "nl": "Vale dos Vinhedos (wat dal van de wijngaarden betekent) is een Braziliaanse geografische aanduiding voor kwaliteitswijnen en tegelijk een wijnregio die bij ministeriële regeling is ingesteld. Het ligt in de Serra Gaúcha, tussen de gemeenten Bento Gonçalves, Garibaldi en Monte Belo do Sul, in de staat Rio Grande do Sul."
       }
     },
+    "ca-british-columbia": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/British_Columbia_wine",
+      "original": "British Columbia wine is Canadian wine produced in the province of British Columbia. Wines made from 100% British Columbia grapes can qualify for classification under one of British Columbia's two classification systems, depending on the variety, the winemaking techniques employed, and various other restrictions.",
+      "texts": {
+        "es": "El vino de la Columbia Británica es el vino canadiense producido en la provincia de la Columbia Británica. Los vinos elaborados con un 100 % de uva de la Columbia Británica pueden optar a la clasificación en uno de los dos sistemas de clasificación de la provincia, según la variedad, las técnicas de elaboración empleadas y otras restricciones.",
+        "ca": "El vi de la Colúmbia Britànica és el vi canadenc produït a la província de la Colúmbia Britànica. Els vins elaborats amb un 100 % de raïm de la Colúmbia Britànica poden optar a la classificació en un dels dos sistemes de classificació de la província, segons la varietat, les tècniques d'elaboració emprades i altres restriccions.",
+        "fr": "Le vin de Colombie-Britannique est le vin canadien produit dans la province de la Colombie-Britannique. Les vins issus à 100 % de raisins de Colombie-Britannique peuvent être classés dans l'un des deux systèmes de classification de la province, selon le cépage, les techniques de vinification employées et diverses autres restrictions.",
+        "de": "Wein aus British Columbia ist kanadischer Wein, der in der Provinz British Columbia erzeugt wird. Weine aus zu 100 % in British Columbia gewachsenen Trauben können je nach Rebsorte, den angewandten Kellertechniken und weiteren Einschränkungen in eines der beiden Klassifikationssysteme der Provinz eingestuft werden.",
+        "it": "Il vino della Columbia Britannica è il vino canadese prodotto nella provincia della Columbia Britannica. I vini ottenuti al 100% da uve della Columbia Britannica possono rientrare in uno dei due sistemi di classificazione della provincia, a seconda del vitigno, delle tecniche di vinificazione impiegate e di varie altre restrizioni.",
+        "nl": "Wijn uit Brits-Columbia is Canadese wijn die in de provincie Brits-Columbia wordt gemaakt. Wijnen van 100% druiven uit Brits-Columbia kunnen in een van de twee classificatiesystemen van de provincie worden ingedeeld, afhankelijk van het druivenras, de gebruikte wijnbouwtechnieken en diverse andere beperkingen.",
+        "pt-PT": "O vinho da Colúmbia Britânica é o vinho canadiano produzido na província da Colúmbia Britânica. Os vinhos feitos com 100% de uvas da Colúmbia Britânica podem ser classificados num dos dois sistemas de classificação da província, conforme a casta, as técnicas de vinificação usadas e várias outras restrições."
+      }
+    },
     "ca-prince-edward-county": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Prince_Edward_County_wine",

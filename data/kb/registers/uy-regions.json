@@ -1,0 +1,69 @@
+{
+  "countryCode": "UY",
+  "nameSource": "article",
+  "source": {
+    "title": "Uruguayan wine (Wikipedia)",
+    "publisher": "Wikipedia (CC BY-SA 4.0)",
+    "url": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+    "issued": "2026-10-17",
+    "note": "Uruguay has no register of wine regions: \"Uruguay's wine regions correspond to its administrative regions\", and the country classifies its wines only by quality (VCP, VC), as the English article \"Uruguayan wine\" (revision 1345493565, 26 March 2026) says; no decree delimiting wine areas was found. The four departments the article names as where most vineyards and wineries are — Canelones, Montevideo, Colonia and San José — enter as wine regions no register protects. One sentence names all four, so none takes it as its summary; each page links the article. Points are OpenStreetMap's for each department, approximately."
+  },
+  "areas": [
+    {
+      "key": "canelones",
+      "names": ["Canelones"],
+      "type": "WR",
+      "places": ["Canelones"],
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José.",
+        "url": "https://en.wikipedia.org/wiki/Uruguayan_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+      "noArticle": true
+    },
+    {
+      "key": "montevideo",
+      "names": ["Montevideo"],
+      "type": "WR",
+      "places": ["Montevideo"],
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José.",
+        "url": "https://en.wikipedia.org/wiki/Uruguayan_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+      "noArticle": true
+    },
+    {
+      "key": "colonia",
+      "names": ["Colonia"],
+      "type": "WR",
+      "places": ["Colonia"],
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José.",
+        "url": "https://en.wikipedia.org/wiki/Uruguayan_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+      "noArticle": true
+    },
+    {
+      "key": "san-jose",
+      "names": ["San José"],
+      "type": "WR",
+      "places": ["San José"],
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José.",
+        "url": "https://en.wikipedia.org/wiki/Uruguayan_wine"
+      },
+      "url": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+      "noArticle": true
+    }
+  ]
+}

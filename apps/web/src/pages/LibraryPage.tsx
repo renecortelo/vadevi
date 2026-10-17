@@ -49,6 +49,7 @@ const atlasCountries = [
   "SI",
   "SK",
   "US",
+  "UY",
   "ZA",
 ];
 
@@ -65,14 +66,16 @@ const designationsOf = (country: string): RegionDesignation[] =>
           : country === "AR"
             ? ["IG", "DOC"]
             : country === "CA"
-              ? ["VQA"]
+              ? ["VQA", "GI"]
               : country === "CH"
                 ? ["AOC"]
                 : country === "BR"
                   ? ["IP", "DO"]
-                  : country === "MX"
-                    ? ["PGI", "WR"]
-                    : ["PDO", "PGI"];
+                  : country === "UY"
+                    ? ["WR"]
+                    : country === "MX"
+                      ? ["PGI", "WR"]
+                      : ["PDO", "PGI"];
 
 /** Where a reader of each language most likely starts looking. */
 const homeCountry: Record<string, string> = {

@@ -1,0 +1,233 @@
+{
+  "countryCode": "CA",
+  "source": {
+    "title": "Wines of Marked Quality Regulation, B.C. Reg. 168/2018, section 56 — Geographical indications",
+    "publisher": "Province of British Columbia (BC Laws), under the Food and Agricultural Products Classification Act",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "issued": "2026-10-13",
+    "note": "Transcribed by hand from the table of section 56 of the Wines of Marked Quality Regulation, as consolidated to 13 October 2026 (last amended 14 July 2025 by B.C. Reg. 118/2025): its 22 geographical indications, each name as column 1 writes it and its item number, and \"a subdivision of\" the indication column 1 names (the Okanagan Valley's thirteen, the Cowichan Valley of Vancouver Island). Every other indication lies in British Columbia, whose indication is the whole province. The areas are drawn on maps the table cites, not read here. Text reproduced under the King's Printer Licence of British Columbia; only its facts are taken. Points are OpenStreetMap's, approximately: the place of the name, or the town or lake a subdivision is named after (Summerland, Kelowna, Naramata, Skaha Lake; Shuswap Lake for the Shuswap, OpenStreetMap's place of that name being in the Kootenays), or else the indication it lies in."
+  },
+  "areas": [
+    {
+      "key": "british-columbia",
+      "names": ["British Columbia"],
+      "type": "GI",
+      "ref": "s. 56, item 1",
+      "states": [],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "places": ["British Columbia"],
+      "placeByName": false
+    },
+    {
+      "key": "cowichan-valley",
+      "names": ["Cowichan Valley"],
+      "type": "GI",
+      "ref": "s. 56, item 2",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["vancouver-island"],
+      "places": ["Cowichan Valley Regional District"]
+    },
+    {
+      "key": "east-kelowna-slopes",
+      "names": ["East Kelowna Slopes"],
+      "type": "GI",
+      "ref": "s. 56, item 2.1",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": ["Kelowna"],
+      "placeByName": false
+    },
+    {
+      "key": "fraser-valley",
+      "names": ["Fraser Valley"],
+      "type": "GI",
+      "ref": "s. 56, item 3",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"],
+      "places": ["Fraser Valley Regional District"]
+    },
+    {
+      "key": "golden-mile-bench",
+      "names": ["Golden Mile Bench"],
+      "type": "GI",
+      "ref": "s. 56, item 4",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": [],
+      "placeByName": false
+    },
+    {
+      "key": "golden-mile-slopes",
+      "names": ["Golden Mile Slopes"],
+      "type": "GI",
+      "ref": "s. 56, item 4.1",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": [],
+      "placeByName": false
+    },
+    {
+      "key": "gulf-islands",
+      "names": ["Gulf Islands"],
+      "type": "GI",
+      "ref": "s. 56, item 5",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"]
+    },
+    {
+      "key": "lake-country",
+      "names": ["Lake Country"],
+      "type": "GI",
+      "ref": "s. 56, item 5.1",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"]
+    },
+    {
+      "key": "lillooet",
+      "names": ["Lillooet"],
+      "type": "GI",
+      "ref": "s. 56, item 6",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"]
+    },
+    {
+      "key": "kootenays",
+      "names": ["Kootenays"],
+      "type": "GI",
+      "ref": "s. 56, item 7",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"]
+    },
+    {
+      "key": "naramata-bench",
+      "names": ["Naramata Bench"],
+      "type": "GI",
+      "ref": "s. 56, item 8",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": ["Naramata"],
+      "placeByName": false
+    },
+    {
+      "key": "okanagan-falls",
+      "names": ["Okanagan Falls"],
+      "type": "GI",
+      "ref": "s. 56, item 9",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"]
+    },
+    {
+      "key": "okanagan-valley",
+      "names": ["Okanagan Valley"],
+      "type": "GI",
+      "ref": "s. 56, item 10",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"]
+    },
+    {
+      "key": "shuswap",
+      "names": ["Shuswap"],
+      "type": "GI",
+      "ref": "s. 56, item 11",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"],
+      "places": ["Shuswap Lake"],
+      "placeByName": false
+    },
+    {
+      "key": "similkameen-valley",
+      "names": ["Similkameen Valley"],
+      "type": "GI",
+      "ref": "s. 56, item 12",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"]
+    },
+    {
+      "key": "skaha-bench",
+      "names": ["Skaha Bench"],
+      "type": "GI",
+      "ref": "s. 56, item 13",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": ["Skaha Lake"],
+      "placeByName": false
+    },
+    {
+      "key": "south-kelowna-slopes",
+      "names": ["South Kelowna Slopes"],
+      "type": "GI",
+      "ref": "s. 56, item 13.1",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": ["Kelowna"],
+      "placeByName": false
+    },
+    {
+      "key": "summerland-bench",
+      "names": ["Summerland Bench"],
+      "type": "GI",
+      "ref": "s. 56, item 13.2",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": ["Summerland"],
+      "placeByName": false
+    },
+    {
+      "key": "summerland-lakefront",
+      "names": ["Summerland Lakefront"],
+      "type": "GI",
+      "ref": "s. 56, item 13.3",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": ["Summerland"],
+      "placeByName": false
+    },
+    {
+      "key": "summerland-valleys",
+      "names": ["Summerland Valleys"],
+      "type": "GI",
+      "ref": "s. 56, item 13.4",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["okanagan-valley"],
+      "places": ["Summerland"],
+      "placeByName": false
+    },
+    {
+      "key": "thompson-valley",
+      "names": ["Thompson Valley"],
+      "type": "GI",
+      "ref": "s. 56, item 14",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"]
+    },
+    {
+      "key": "vancouver-island",
+      "names": ["Vancouver Island"],
+      "type": "GI",
+      "ref": "s. 56, item 15",
+      "states": ["British Columbia"],
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+      "within": ["british-columbia"]
+    }
+  ]
+}

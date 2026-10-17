@@ -292026,6 +292026,676 @@
   {
     "countryCode": "CA",
     "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "zweigelt",
+        "quote": "Widely planted in Austria, Zweigelt vines have made inroads in the Canadian wine regions of Ontario's Niagara Peninsula and of British Columbia, with limited plantings in Hungary, Australia and New Zealand. In the Czech Republic it is known as Zweigeltrebe ... It grows in most of the wine regions in Slovakia. As of 2010, newly established Belgian and Polish vineyards have also started to plant Zweigelt. As of 2014, Washington state has several small plantings ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "grapeId": "dornfelder",
+        "quote": "Nearly 3,000 hectares ... were found in Germany's two largest wine regions, the Palatinate and Rheinhessen. ... mostly in the cantons of Schwyz and Zürich. ... first introduced to England ... used for rosés and sparkling wine production. ... Lodi and Sta. Rita Hills AVA of California, the Finger Lakes AVA of New York ... British Columbia wine region of Vancouver Island. ... Rio Grande do Sul region of Brazil ... Hokkaido",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "Most commonly found in the Northern Rhône region... It is a principal component of the white wines from the Hermitage, Crozes-Hermitage and Saint-Joseph AOCs... In the Saint-Péray AOC... In Australia, the grape was first planted in Victoria... In Switzerland, Marsanne is grown in Valais... In British Columbia and Washington State... In California...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Marsanne"
+      }
+    ],
+    "id": "ca-british-columbia",
+    "latitude": 55.001251,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -125.002441,
+    "name": "British Columbia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "British Columbia",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "s. 56, item 1",
+    "registeredOn": null,
+    "summaries": {
+      "en": {
+        "text": "British Columbia wine is Canadian wine produced in the province of British Columbia. Wines made from 100% British Columbia grapes can qualify for classification under one of British Columbia's two classification systems, depending on the variety, the winemaking techniques employed, and various other restrictions.",
+        "url": "https://en.wikipedia.org/wiki/British_Columbia_wine"
+      },
+      "es": {
+        "text": "El vino de la Columbia Británica es el vino canadiense producido en la provincia de la Columbia Británica. Los vinos elaborados con un 100 % de uva de la Columbia Británica pueden optar a la clasificación en uno de los dos sistemas de clasificación de la provincia, según la variedad, las técnicas de elaboración empleadas y otras restricciones.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/British_Columbia_wine"
+      },
+      "ca": {
+        "text": "El vi de la Colúmbia Britànica és el vi canadenc produït a la província de la Colúmbia Britànica. Els vins elaborats amb un 100 % de raïm de la Colúmbia Britànica poden optar a la classificació en un dels dos sistemes de classificació de la província, segons la varietat, les tècniques d'elaboració emprades i altres restriccions.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/British_Columbia_wine"
+      },
+      "fr": {
+        "text": "Le vin de Colombie-Britannique est le vin canadien produit dans la province de la Colombie-Britannique. Les vins issus à 100 % de raisins de Colombie-Britannique peuvent être classés dans l'un des deux systèmes de classification de la province, selon le cépage, les techniques de vinification employées et diverses autres restrictions.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/British_Columbia_wine"
+      },
+      "de": {
+        "text": "Wein aus British Columbia ist kanadischer Wein, der in der Provinz British Columbia erzeugt wird. Weine aus zu 100 % in British Columbia gewachsenen Trauben können je nach Rebsorte, den angewandten Kellertechniken und weiteren Einschränkungen in eines der beiden Klassifikationssysteme der Provinz eingestuft werden.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/British_Columbia_wine"
+      },
+      "it": {
+        "text": "Il vino della Columbia Britannica è il vino canadese prodotto nella provincia della Columbia Britannica. I vini ottenuti al 100% da uve della Columbia Britannica possono rientrare in uno dei due sistemi di classificazione della provincia, a seconda del vitigno, delle tecniche di vinificazione impiegate e di varie altre restrizioni.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/British_Columbia_wine"
+      },
+      "nl": {
+        "text": "Wijn uit Brits-Columbia is Canadese wijn die in de provincie Brits-Columbia wordt gemaakt. Wijnen van 100% druiven uit Brits-Columbia kunnen in een van de twee classificatiesystemen van de provincie worden ingedeeld, afhankelijk van het druivenras, de gebruikte wijnbouwtechnieken en diverse andere beperkingen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/British_Columbia_wine"
+      },
+      "pt": {
+        "text": "O vinho da Colúmbia Britânica é o vinho canadiano produzido na província da Colúmbia Britânica. Os vinhos feitos com 100% de uvas da Colúmbia Britânica podem ser classificados num dos dois sistemas de classificação da província, conforme a casta, as técnicas de vinificação usadas e várias outras restrições.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/British_Columbia_wine"
+      }
+    },
+    "wikidataId": "Q4969827"
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-cowichan-valley",
+    "latitude": 48.8359655,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -124.1502799,
+    "name": "Cowichan Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Cowichan Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 2",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-vancouver-island"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-east-kelowna-slopes",
+    "latitude": 49.8879177,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.495902,
+    "name": "East Kelowna Slopes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "East Kelowna Slopes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 2.1",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-fraser-valley",
+    "latitude": 49.5723178,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -121.8758984,
+    "name": "Fraser Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Fraser Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 3",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-golden-mile-bench",
+    "latitude": 49.6,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.58661525,
+    "name": "Golden Mile Bench",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Golden Mile Bench",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 4",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-golden-mile-slopes",
+    "latitude": 49.6,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.58661525,
+    "name": "Golden Mile Slopes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Golden Mile Slopes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 4.1",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-gulf-islands",
+    "latitude": 55.001251,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -125.002441,
+    "name": "Gulf Islands",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Gulf Islands",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 5",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-lake-country",
+    "latitude": 50.0302364,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.402331,
+    "name": "Lake Country",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lake Country",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 5.1",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-lillooet",
+    "latitude": 50.693938,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -121.933691,
+    "name": "Lillooet",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Lillooet",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 6",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-kootenays",
+    "latitude": 55.001251,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -125.002441,
+    "name": "Kootenays",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kootenays",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 7",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-naramata-bench",
+    "latitude": 49.5981383,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.5996165,
+    "name": "Naramata Bench",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Naramata Bench",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 8",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-okanagan-falls",
+    "latitude": 49.3454662,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.573614,
+    "name": "Okanagan Falls",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Okanagan Falls",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 9",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "pinot-blanc",
+        "quote": "In Alsace ... ; In Germany, where it is known as Weißer Burgunder or Weißburgunder ... ; In the United States it is mainly produced in California ... Canada's Okanagan Valley has developed a reputation for Pinot blanc ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_blanc"
+      }
+    ],
+    "id": "ca-okanagan-valley",
+    "latitude": 49.6,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.58661525,
+    "name": "Okanagan Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Okanagan Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 10",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-shuswap",
+    "latitude": 55.001251,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -125.002441,
+    "name": "Shuswap",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Shuswap",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 11",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "lagrein",
+        "quote": "Cultivation of Lagrein in South Tyrol ...; ... in Australia ...; ... in the Central Coast of California ...; ... in the Umpqua Valley AVA ...; ... in the Willamette Valley ...; ... in the Similkameen Valley in British Columbia ...",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Lagrein"
+      }
+    ],
+    "id": "ca-similkameen-valley",
+    "latitude": 55.001251,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -125.002441,
+    "name": "Similkameen Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Similkameen Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 12",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-skaha-bench",
+    "latitude": 49.6,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.58661525,
+    "name": "Skaha Bench",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Skaha Bench",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 13",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-south-kelowna-slopes",
+    "latitude": 49.8879177,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.495902,
+    "name": "South Kelowna Slopes",
+    "names": [
+      {
+        "locale": "*",
+        "name": "South Kelowna Slopes",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 13.1",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-summerland-bench",
+    "latitude": 49.6,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.666667,
+    "name": "Summerland Bench",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Summerland Bench",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 13.2",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-summerland-lakefront",
+    "latitude": 49.6,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.666667,
+    "name": "Summerland Lakefront",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Summerland Lakefront",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 13.3",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-summerland-valleys",
+    "latitude": 49.6,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -119.666667,
+    "name": "Summerland Valleys",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Summerland Valleys",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 13.4",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-okanagan-valley"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [],
+    "id": "ca-thompson-valley",
+    "latitude": 55.001251,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -125.002441,
+    "name": "Thompson Valley",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Thompson Valley",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "s. 56, item 14",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
+    "giType": "GI",
+    "grapes": [
+      {
+        "grapeId": "auxerrois-blanc",
+        "quote": "prevalent in the French region of Alsace, and is also grown in neighbouring Germany and Luxembourg ... with some in the Côtes de Toul of Lorraine ... The main growing areas were Baden (wine region)(71 hectares (175 acres)) and Palatinate ... known to grow Auxerrois blanc in Oregon ... on the Leelanau peninsula in Michigan ... grown on Vancouver Island ... in the Okanagan wine country ... A few vineyards in the United Kingdom grow Auxerrois",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auxerrois_blanc"
+      },
+      {
+        "grapeId": "black-muscat",
+        "quote": "In the United States, Black Muscat is grown in wine appellations in California, Virginia, Oregon, Texas, and Washington. In Canada, it is also found on Vancouver Island. In France, the grape is used chiefly as dessert grape including AOC varieties such as Muscat du Ventoux ... table wine component in China.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Black_Muscat"
+      }
+    ],
+    "id": "ca-vancouver-island",
+    "latitude": 49.5929495,
+    "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
+    "longitude": -125.702557,
+    "name": "Vancouver Island",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vancouver Island",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "s. 56, item 15",
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ca-british-columbia"
+    ]
+  },
+  {
+    "countryCode": "CA",
+    "eambrosiaId": null,
     "giType": "VQA",
     "grapes": [],
     "id": "ca-lake-erie-north-shore",
@@ -297187,6 +297857,98 @@
     "within": [
       "mx-la-laguna"
     ]
+  },
+  {
+    "countryCode": "UY",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "uy-canelones",
+    "latitude": -34.6222482,
+    "legalUrl": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+    "longitude": -55.9903797,
+    "name": "Canelones",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Canelones",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "UY",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "uy-montevideo",
+    "latitude": -34.9058916,
+    "legalUrl": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+    "longitude": -56.1913095,
+    "name": "Montevideo",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Montevideo",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "UY",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "uy-colonia",
+    "latitude": -34.1664516,
+    "legalUrl": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+    "longitude": -57.4993268,
+    "name": "Colonia",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Colonia",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "UY",
+    "eambrosiaId": null,
+    "giType": "WR",
+    "grapes": [],
+    "id": "uy-san-jose",
+    "latitude": -34.455,
+    "legalUrl": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+    "longitude": -56.616944,
+    "name": "San José",
+    "names": [
+      {
+        "locale": "*",
+        "name": "San José",
+        "source": "article"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
   },
   {
     "countryCode": "AU",

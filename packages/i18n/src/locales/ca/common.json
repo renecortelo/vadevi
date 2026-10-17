@@ -370,7 +370,9 @@
     "summarySourceOfficial": "Del text oficial del nom, al seu registre",
     "registerTitleGe": "Al registre estatal de Geòrgia (Sakpatenti)",
     "registeredOnGe": "Registrada el {{date}}.",
-    "registerLinkGe": "Veure'n el document al registre de Sakpatenti ({{ref}})"
+    "registerLinkGe": "Veure'n el document al registre de Sakpatenti ({{ref}})",
+    "registerTitleBc": "A les indicacions geogràfiques de la Colúmbia Britànica",
+    "registerLinkBc": "Veure l'article 56 del Wines of Marked Quality Regulation ({{ref}}, BC Laws)"
   },
   "space": {
     "switchLabel": "Espai actiu",

@@ -370,7 +370,9 @@
     "summarySourceOfficial": "Aus dem amtlichen Text des Namens, in seinem Register",
     "registerTitleGe": "Im staatlichen Register Georgiens (Sakpatenti)",
     "registeredOnGe": "Eingetragen am {{date}}.",
-    "registerLinkGe": "Ihr Dokument im Register von Sakpatenti ansehen ({{ref}})"
+    "registerLinkGe": "Ihr Dokument im Register von Sakpatenti ansehen ({{ref}})",
+    "registerTitleBc": "In den geografischen Angaben von British Columbia",
+    "registerLinkBc": "Abschnitt 56 der Wines of Marked Quality Regulation ansehen ({{ref}}, BC Laws)"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

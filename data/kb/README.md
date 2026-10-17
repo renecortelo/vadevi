@@ -256,6 +256,12 @@ leaves out:
   Valle de Guadalupe, the Parras Valley…), each named as a wine-growing area
   by a sentence of Wikipedia's articles on Mexican wine; marked in the app as
   not protected names (`WR`), and left out of the count of registered names.
+- `ca-bc.json` — Canada, British Columbia: the 22 geographical indications
+  of section 56 of its Wines of Marked Quality Regulation, the Okanagan
+  Valley's subdivisions within it.
+- `uy-regions.json` — Uruguay, which has no register of wine regions: the
+  four departments Wikipedia's article names as where most of its vineyards
+  are, as wine regions no register protects.
 - `ch.json` — Switzerland: the 63 cantonal, regional and local AOCs of the
   federal directory (OFAG, 1 January 2026).
 - `ge.json` — Georgia: the 31 appellations of origin for wine in

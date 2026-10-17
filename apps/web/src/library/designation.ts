@@ -17,6 +17,7 @@ type RegisterSuffix =
   | ""
   | "Ar"
   | "Au"
+  | "Bc"
   | "Br"
   | "Ca"
   | "Ch"
@@ -43,6 +44,8 @@ export function registerSuffix(
   if (inEuRegister(region)) return "";
   // A wine region no register protects: not a register's at all.
   if (region.giType === "WR") return "Wr";
+  // Canada's two registers: Ontario's VQA areas and British Columbia's GIs.
+  if (region.countryCode === "CA" && region.giType === "GI") return "Bc";
   const suffixes: Record<string, RegisterSuffix> = {
     AR: "Ar",
     AU: "Au",

@@ -377,6 +377,22 @@ test("a Georgian appellation cites its registered document", async ({ page }) =>
   await expect(nesting.getByRole("link", { name: "Kardenakhi" })).toBeVisible();
 });
 
+test("a British Columbia sub-GI lies within the Okanagan Valley", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/ca-naramata-bench");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Naramata Bench", { timeout: 15_000 });
+  await expect(page.locator("#region-register")).toHaveText(
+    "In British Columbia's geographical indications",
+  );
+  await expect(page.locator('a[href*="bclaws.gov.bc.ca"]')).toHaveText(
+    "See section 56 of the Wines of Marked Quality Regulation (s. 56, item 8, BC Laws)",
+  );
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting.getByRole("link", { name: "Okanagan Valley" })).toBeVisible();
+});
+
 test("a British wine name cites the UK register", async ({ page }) => {
   await signIn(page);
   await completeOnboarding(page);

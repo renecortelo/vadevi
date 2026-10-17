@@ -128,6 +128,13 @@ has the reasons.
   Tax Agency's own English translation, as written, and translated into the
   other languages. The page credits such a summary to the name's official
   text, not to Wikipedia.
+- **British Columbia and Uruguay in the atlas**: British Columbia's 22
+  geographical indications (section 56 of its Wines of Marked Quality
+  Regulation), the Okanagan Valley's thirteen subdivisions within it, with
+  the province's summary in the eight languages; and Uruguay, which protects
+  no wine region by law, through the four departments where most of its
+  vineyards are (Canelones, Montevideo, Colonia, San José), marked as not
+  protected names.
 - **Georgia in the atlas**: the 31 appellations of origin for wine in
   Sakpatenti's state registry — Khvanchkara, Mukuzani, Tsinandali,
   Kindzmarauli, Kakheti and the rest — and its three wine geographical

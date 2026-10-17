@@ -370,7 +370,9 @@
     "summarySourceOfficial": "Del texto oficial del nombre, en su registro",
     "registerTitleGe": "En el registro estatal de Georgia (Sakpatenti)",
     "registeredOnGe": "Registrada el {{date}}.",
-    "registerLinkGe": "Ver su documento en el registro de Sakpatenti ({{ref}})"
+    "registerLinkGe": "Ver su documento en el registro de Sakpatenti ({{ref}})",
+    "registerTitleBc": "En las indicaciones geográficas de la Columbia Británica",
+    "registerLinkBc": "Ver el artículo 56 del Wines of Marked Quality Regulation ({{ref}}, BC Laws)"
   },
   "space": {
     "switchLabel": "Espacio activo",
