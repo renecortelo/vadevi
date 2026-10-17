@@ -5,7 +5,7 @@
     "publisher": "National Tax Agency (国税庁), Japan",
     "url": "https://www.nta.go.jp/english/taxes/liquor_administration/geographical/02.htm",
     "issued": "2025-10-01",
-    "note": "Transcribed by hand from the National Tax Agency's list of geographical indications for liquor, keeping those whose category is wine (ぶどう酒): each name as the list writes it in Japanese and in the romanization it gives in brackets (\"a reference information\", as the list says), the date of designation and the area, each a prefecture. The Japanese list is https://www.nta.go.jp/taxes/sake/hyoji/chiri/ichiran.htm. Yamanashi, Yamagata and Nagano are also GIs for sake, not taken here. The list shows no date of update; its latest entries are of 1 October 2025. Only its facts are taken. Each is placed at its prefecture."
+    "note": "Transcribed by hand from the National Tax Agency's list of geographical indications for liquor, keeping those whose category is wine (ぶどう酒): each name as the list writes it in Japanese and in the romanization it gives in brackets (\"a reference information\", as the list says), the date of designation and the area, each a prefecture. The Japanese list is https://www.nta.go.jp/taxes/sake/hyoji/chiri/ichiran.htm. Yamanashi, Yamagata and Nagano are also GIs for sake, not taken here. The list shows no date of update; its latest entries are of 1 October 2025. Only its facts are taken. Each is placed at its prefecture. Each name's summary is the opening of the characteristics of the wine in its product specification, in the National Tax Agency's interim English translation, as written; notices of the State's organs have no copyright in Japan (Copyright Act, art. 13)."
   },
   "areas": [
     {
@@ -15,7 +15,13 @@
       "registeredOn": "2013-07-16",
       "places": ["山梨県"],
       "placeByName": false,
-      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm"
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+      "summary": {
+        "locale": "en",
+        "text": "Yamanashi wines are well-balanced beverages that reflect the characteristics of grape varieties such as their original aroma and taste.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      }
     },
     {
       "key": "hokkaido",
@@ -24,7 +30,13 @@
       "registeredOn": "2018-06-28",
       "places": ["北海道"],
       "placeByName": false,
-      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm"
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+      "summary": {
+        "locale": "en",
+        "text": "As for white wine, the color is in general nearly clear or slightly yellow. The flavor is rich and has a fruity aroma of a bright flower, green apple or orange fruit. White wine has a rich acidity.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      }
     },
     {
       "key": "yamagata",
@@ -33,7 +45,13 @@
       "registeredOn": "2021-06-30",
       "places": ["山形県"],
       "placeByName": false,
-      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm"
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+      "summary": {
+        "locale": "en",
+        "text": "Yamagata wines are generally characterized by a refreshing aftertaste of acidity that brings out the original grape flavor and aroma.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      }
     },
     {
       "key": "osaka",
@@ -42,7 +60,13 @@
       "registeredOn": "2021-06-30",
       "places": ["大阪府"],
       "placeByName": false,
-      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm"
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+      "summary": {
+        "locale": "en",
+        "text": "Osaka wines are made mainly from Delaware and other table grape varieties, and their characteristics are to utilize the table grape growing techniques that have been developed for a long period of time also for the production of wine grapes and thereby use fresh and beautiful grapes as raw materials of wine. Those wines generally have a concentrated fruity flavor, mild acidity, and moderate umami, offering a pleasant aftertaste, and go well with dishes.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      }
     },
     {
       "key": "nagano",
@@ -51,7 +75,13 @@
       "registeredOn": "2021-06-30",
       "places": ["長野県"],
       "placeByName": false,
-      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm"
+      "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+      "summary": {
+        "locale": "en",
+        "text": "Generally speaking, Nagano wines clearly show the natural flavor properties of each grape variety. Red wines generally have a deep color and a condensed taste with well-structured tannin and moderate acidity. White wines have a good expression of an aroma unique to each grape variety with fresh and lively acidity.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      }
     }
   ]
 }

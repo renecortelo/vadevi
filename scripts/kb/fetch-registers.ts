@@ -41,7 +41,7 @@ export type TranscribedArea = {
    * For a wine region no register protects: the sentence that names it as
    * one, which is its summary until an article of its own describes it.
    */
-  summary?: { locale: string; text: string; url: string };
+  summary?: { license?: string; locale: string; text: string; url: string };
   /** The region, state or canton names OpenStreetMap files its places under. */
   states?: string[];
   type: string;

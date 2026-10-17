@@ -366,7 +366,8 @@
     "wrShort": "Wine region",
     "registerTitleWr": "Not a protected name",
     "unprotectedWr": "A wine region no register protects. It is in the atlas because an article names it as a wine-growing area; its name on a label guarantees nothing about where the wine comes from.",
-    "registerLinkWr": "Read the article that names it"
+    "registerLinkWr": "Read the article that names it",
+    "summarySourceOfficial": "From the name's official text, in its register"
   },
   "space": {
     "switchLabel": "Active Space",

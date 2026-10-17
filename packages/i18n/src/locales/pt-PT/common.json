@@ -366,7 +366,8 @@
     "wrShort": "Região vinícola",
     "registerTitleWr": "Não é um nome protegido",
     "unprotectedWr": "Uma região vinícola que nenhum registo protege. Está no atlas porque um artigo a nomeia como zona de vinha; o seu nome num rótulo não garante a origem do vinho.",
-    "registerLinkWr": "Ler o artigo que a nomeia"
+    "registerLinkWr": "Ler o artigo que a nomeia",
+    "summarySourceOfficial": "Do texto oficial do nome, no seu registo"
   },
   "space": {
     "switchLabel": "Espaço ativo",

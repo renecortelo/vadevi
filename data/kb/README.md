@@ -259,7 +259,10 @@ leaves out:
 - `ch.json` — Switzerland: the 63 cantonal, regional and local AOCs of the
   federal directory (OFAG, 1 January 2026).
 - `jp.json` — Japan: the five geographical indications for wine of the
-  National Tax Agency's list (Yamanashi, Hokkaido, Yamagata, Osaka, Nagano).
+  National Tax Agency's list (Yamanashi, Hokkaido, Yamagata, Osaka, Nagano),
+  each summarised by the opening of its product specification's account of
+  the wine (the Agency's English translation; notices of the State have no
+  copyright in Japan), marked `JP-official-text`.
 - `md.json` — Moldova: the three protected geographical indications and the
   four appellations of origin for wine that AGEPI's register showed (it
   counts more appellations than its list could show).

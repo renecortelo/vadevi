@@ -294440,7 +294440,55 @@
     "pointSource": "place",
     "prominence": 0,
     "registeredOn": "2013-07-16",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "Yamanashi wines are well-balanced beverages that reflect the characteristics of grape varieties such as their original aroma and taste.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      },
+      "es": {
+        "text": "Los vinos de Yamanashi son bebidas equilibradas que reflejan las características de las variedades de uva, como su aroma y su sabor originales.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      },
+      "ca": {
+        "text": "Els vins de Yamanashi són begudes equilibrades que reflecteixen les característiques de les varietats de raïm, com ara el seu aroma i el seu gust originals.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      },
+      "fr": {
+        "text": "Les vins de Yamanashi sont des boissons équilibrées qui reflètent les caractéristiques des cépages, comme leur arôme et leur goût d'origine.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      },
+      "de": {
+        "text": "Die Weine aus Yamanashi sind ausgewogene Getränke, die die Eigenschaften der Rebsorten widerspiegeln, etwa ihr ursprüngliches Aroma und ihren ursprünglichen Geschmack.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      },
+      "it": {
+        "text": "I vini di Yamanashi sono bevande equilibrate che riflettono le caratteristiche dei vitigni, come il loro aroma e il loro gusto originari.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      },
+      "nl": {
+        "text": "Wijnen uit Yamanashi zijn evenwichtige dranken die de eigenschappen van de druivenrassen weerspiegelen, zoals hun oorspronkelijke aroma en smaak.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      },
+      "pt": {
+        "text": "Os vinhos de Yamanashi são bebidas equilibradas que refletem as características das castas, como o seu aroma e o seu sabor originais.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
+        "license": "JP-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -294479,7 +294527,55 @@
     "pointSource": "place",
     "prominence": 0,
     "registeredOn": "2018-06-28",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "As for white wine, the color is in general nearly clear or slightly yellow. The flavor is rich and has a fruity aroma of a bright flower, green apple or orange fruit. White wine has a rich acidity.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      },
+      "es": {
+        "text": "En cuanto al vino blanco, el color es en general casi transparente o ligeramente amarillo. El sabor es rico y tiene un aroma afrutado de flor luminosa, manzana verde o naranja. El vino blanco tiene una acidez rica.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      },
+      "ca": {
+        "text": "Pel que fa al vi blanc, el color és en general gairebé transparent o lleugerament groc. El gust és ric i té un aroma afruitat de flor lluminosa, poma verda o taronja. El vi blanc té una acidesa rica.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      },
+      "fr": {
+        "text": "Pour le vin blanc, la couleur est en général presque limpide ou légèrement jaune. La saveur est riche, avec un arôme fruité de fleur éclatante, de pomme verte ou d'orange. Le vin blanc a une acidité riche.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      },
+      "de": {
+        "text": "Beim Weißwein ist die Farbe im Allgemeinen fast klar oder leicht gelb. Der Geschmack ist reich und hat ein fruchtiges Aroma von heller Blüte, grünem Apfel oder Orange. Weißwein hat eine reiche Säure.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      },
+      "it": {
+        "text": "Quanto al vino bianco, il colore è in genere quasi limpido o leggermente giallo. Il sapore è ricco, con un aroma fruttato di fiore luminoso, mela verde o arancia. Il vino bianco ha un'acidità ricca.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      },
+      "nl": {
+        "text": "Witte wijn heeft in het algemeen een bijna heldere of lichtgele kleur. De smaak is vol en heeft een fruitig aroma van een heldere bloem, groene appel of sinaasappel. Witte wijn heeft een rijke zuurgraad.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      },
+      "pt": {
+        "text": "Quanto ao vinho branco, a cor é em geral quase límpida ou ligeiramente amarela. O sabor é rico, com um aroma frutado de flor luminosa, maçã verde ou laranja. O vinho branco tem uma acidez rica.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm",
+        "license": "JP-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -294507,7 +294603,55 @@
     "pointSource": "place",
     "prominence": 0,
     "registeredOn": "2021-06-30",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "Yamagata wines are generally characterized by a refreshing aftertaste of acidity that brings out the original grape flavor and aroma.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      },
+      "es": {
+        "text": "Los vinos de Yamagata se caracterizan en general por un final refrescante de acidez que realza el sabor y el aroma originales de la uva.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      },
+      "ca": {
+        "text": "Els vins de Yamagata es caracteritzen en general per un final refrescant d'acidesa que fa ressaltar el gust i l'aroma originals del raïm.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      },
+      "fr": {
+        "text": "Les vins de Yamagata se caractérisent en général par une finale rafraîchissante d'acidité qui fait ressortir la saveur et l'arôme d'origine du raisin.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      },
+      "de": {
+        "text": "Die Weine aus Yamagata zeichnen sich im Allgemeinen durch einen erfrischenden säurebetonten Nachgeschmack aus, der den ursprünglichen Geschmack und das Aroma der Traube hervorhebt.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      },
+      "it": {
+        "text": "I vini di Yamagata si caratterizzano in genere per un finale rinfrescante di acidità che esalta il sapore e l'aroma originari dell'uva.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      },
+      "nl": {
+        "text": "Wijnen uit Yamagata kenmerken zich over het algemeen door een verfrissende, zurige afdronk die de oorspronkelijke smaak en het aroma van de druif naar voren brengt.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      },
+      "pt": {
+        "text": "Os vinhos de Yamagata caracterizam-se em geral por um final refrescante de acidez que realça o sabor e o aroma originais da uva.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm",
+        "license": "JP-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -294535,7 +294679,55 @@
     "pointSource": "place",
     "prominence": 0,
     "registeredOn": "2021-06-30",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "Osaka wines are made mainly from Delaware and other table grape varieties, and their characteristics are to utilize the table grape growing techniques that have been developed for a long period of time also for the production of wine grapes and thereby use fresh and beautiful grapes as raw materials of wine. Those wines generally have a concentrated fruity flavor, mild acidity, and moderate umami, offering a pleasant aftertaste, and go well with dishes.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      },
+      "es": {
+        "text": "Los vinos de Osaka se elaboran sobre todo con Delaware y otras variedades de uva de mesa, y se caracterizan por aplicar también a la producción de uva para vino las técnicas de cultivo de uva de mesa desarrolladas durante mucho tiempo, y usar así uvas frescas y hermosas como materia prima del vino. Esos vinos tienen en general un sabor afrutado concentrado, una acidez suave y un umami moderado, ofrecen un final agradable y combinan bien con los platos.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      },
+      "ca": {
+        "text": "Els vins d'Osaka s'elaboren sobretot amb Delaware i altres varietats de raïm de taula, i es caracteritzen per aplicar també a la producció de raïm per a vi les tècniques de conreu de raïm de taula desenvolupades durant molt de temps, i fer servir així raïm fresc i bonic com a matèria primera del vi. Aquests vins tenen en general un gust afruitat concentrat, una acidesa suau i un umami moderat, ofereixen un final agradable i lliguen bé amb els plats.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      },
+      "fr": {
+        "text": "Les vins d'Osaka sont élaborés principalement à partir de Delaware et d'autres variétés de raisin de table ; ils se caractérisent par l'application à la production de raisin de cuve des techniques de culture du raisin de table développées depuis longtemps, afin d'utiliser des raisins frais et beaux comme matière première du vin. Ces vins ont en général une saveur fruitée concentrée, une acidité douce et un umami modéré, offrent une finale agréable et s'accordent bien avec les plats.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      },
+      "de": {
+        "text": "Die Weine aus Osaka werden hauptsächlich aus Delaware und anderen Tafeltraubensorten bereitet; kennzeichnend ist, dass die lange entwickelten Anbautechniken für Tafeltrauben auch für die Erzeugung von Weintrauben genutzt werden, sodass frische und schöne Trauben als Rohstoff des Weins dienen. Diese Weine haben im Allgemeinen einen konzentrierten fruchtigen Geschmack, milde Säure und moderates Umami, bieten einen angenehmen Nachgeschmack und passen gut zu Speisen.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      },
+      "it": {
+        "text": "I vini di Osaka sono prodotti soprattutto con Delaware e altre varietà di uva da tavola, e si caratterizzano per l'impiego, anche nella produzione di uva da vino, delle tecniche di coltivazione dell'uva da tavola sviluppate a lungo, così da usare uve fresche e belle come materia prima del vino. Questi vini hanno in genere un sapore fruttato concentrato, un'acidità delicata e un umami moderato, offrono un finale piacevole e si accompagnano bene ai piatti.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      },
+      "nl": {
+        "text": "Wijnen uit Osaka worden vooral gemaakt van Delaware en andere tafeldruivenrassen; kenmerkend is dat de lang ontwikkelde teelttechnieken voor tafeldruiven ook voor de productie van wijndruiven worden gebruikt, zodat verse en mooie druiven als grondstof voor de wijn dienen. Die wijnen hebben over het algemeen een geconcentreerde fruitige smaak, milde zuren en een gematigde umami, bieden een aangename afdronk en passen goed bij gerechten.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      },
+      "pt": {
+        "text": "Os vinhos de Osaka são feitos sobretudo com Delaware e outras castas de uva de mesa, e caracterizam-se por aplicar também à produção de uva para vinho as técnicas de cultivo de uva de mesa desenvolvidas durante muito tempo, usando assim uvas frescas e bonitas como matéria-prima do vinho. Esses vinhos têm em geral um sabor frutado concentrado, uma acidez suave e um umami moderado, oferecem um final agradável e combinam bem com os pratos.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm",
+        "license": "JP-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -294563,7 +294755,55 @@
     "pointSource": "place",
     "prominence": 0,
     "registeredOn": "2021-06-30",
-    "summaries": {},
+    "summaries": {
+      "en": {
+        "text": "Generally speaking, Nagano wines clearly show the natural flavor properties of each grape variety. Red wines generally have a deep color and a condensed taste with well-structured tannin and moderate acidity. White wines have a good expression of an aroma unique to each grape variety with fresh and lively acidity.",
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      },
+      "es": {
+        "text": "En general, los vinos de Nagano muestran con claridad las propiedades de sabor naturales de cada variedad de uva. Los tintos tienen en general un color profundo y un sabor concentrado, con taninos bien estructurados y una acidez moderada. Los blancos expresan bien un aroma propio de cada variedad, con una acidez fresca y viva.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      },
+      "ca": {
+        "text": "En general, els vins de Nagano mostren amb claredat les propietats de gust naturals de cada varietat de raïm. Els negres tenen en general un color profund i un gust concentrat, amb tanins ben estructurats i una acidesa moderada. Els blancs expressen bé un aroma propi de cada varietat, amb una acidesa fresca i viva.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      },
+      "fr": {
+        "text": "En général, les vins de Nagano montrent clairement les propriétés gustatives naturelles de chaque cépage. Les rouges ont en général une couleur profonde et un goût concentré, avec des tanins bien structurés et une acidité modérée. Les blancs expriment bien un arôme propre à chaque cépage, avec une acidité fraîche et vive.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      },
+      "de": {
+        "text": "Allgemein zeigen die Weine aus Nagano deutlich die natürlichen Geschmackseigenschaften jeder Rebsorte. Rotweine haben im Allgemeinen eine tiefe Farbe und einen konzentrierten Geschmack mit gut strukturiertem Tannin und moderater Säure. Weißweine bringen ein für jede Rebsorte eigenes Aroma gut zum Ausdruck, mit frischer und lebendiger Säure.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      },
+      "it": {
+        "text": "In generale, i vini di Nagano mostrano chiaramente le proprietà gustative naturali di ciascun vitigno. I rossi hanno in genere un colore profondo e un gusto concentrato, con tannini ben strutturati e un'acidità moderata. I bianchi esprimono bene un aroma proprio di ciascun vitigno, con un'acidità fresca e vivace.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      },
+      "nl": {
+        "text": "Over het algemeen tonen wijnen uit Nagano duidelijk de natuurlijke smaakeigenschappen van elk druivenras. Rode wijnen hebben over het algemeen een diepe kleur en een geconcentreerde smaak met goed gestructureerde tannine en gematigde zuren. Witte wijnen brengen een voor elk druivenras eigen aroma goed tot uitdrukking, met frisse en levendige zuren.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      },
+      "pt": {
+        "text": "De um modo geral, os vinhos de Nagano mostram claramente as propriedades de sabor naturais de cada casta. Os tintos têm em geral uma cor profunda e um sabor concentrado, com taninos bem estruturados e acidez moderada. Os brancos exprimem bem um aroma próprio de cada casta, com uma acidez fresca e viva.",
+        "translated": true,
+        "url": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm",
+        "license": "JP-official-text"
+      }
+    },
     "wikidataId": null
   },
   {

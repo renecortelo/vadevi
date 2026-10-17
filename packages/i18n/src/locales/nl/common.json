@@ -366,7 +366,8 @@
     "wrShort": "Wijnregio",
     "registerTitleWr": "Geen beschermde naam",
     "unprotectedWr": "Een wijnregio die geen register beschermt. Ze staat in de atlas omdat een artikel haar als wijnbouwgebied noemt; haar naam op een etiket zegt niets zekers over de herkomst van de wijn.",
-    "registerLinkWr": "Lees het artikel dat haar noemt"
+    "registerLinkWr": "Lees het artikel dat haar noemt",
+    "summarySourceOfficial": "Uit de officiële tekst van de naam, in zijn register"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

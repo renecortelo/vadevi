@@ -347,6 +347,19 @@ test("a wine region no register protects says so, and links its source", async (
   ).toBeVisible();
 });
 
+test("a summary from an official text credits it, and its translation", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/jp-nagano");
+  await page.locator("#interface-locale").selectOption("es");
+  await expect(page.locator("h1")).toHaveText("Nagano", { timeout: 15_000 });
+  const summary = page.locator(".library-summary");
+  await expect(summary).toContainText("En general, los vinos de Nagano");
+  await expect(summary).toContainText("Del texto oficial del nombre, en su registro");
+  await expect(summary).toContainText("traducido del idioma del documento");
+  await expect(summary.locator('a[href*="nta.go.jp/english"]')).toBeVisible();
+});
+
 test("a British wine name cites the UK register", async ({ page }) => {
   await signIn(page);
   await completeOnboarding(page);

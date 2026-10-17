@@ -123,6 +123,11 @@ has the reasons.
   the French, Zürichsee from the German, Short Hills Bench from the English
   — each translated faithfully into the eight languages and marked so.
   Lavaux takes its point from its article's item.
+- **Summaries from official texts**: Japan's five wine indications are
+  described by the opening of their product specifications, in the National
+  Tax Agency's own English translation, as written, and translated into the
+  other languages. The page credits such a summary to the name's official
+  text, not to Wikipedia.
 - **Ontario in the atlas**: the 17 viticultural areas of its VQA rules
   (Table 1 of O. Reg. 406/00), from the Niagara Peninsula and Prince Edward
   County to the benches of the Niagara Escarpment, each within the areas the

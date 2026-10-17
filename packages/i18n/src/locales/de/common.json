@@ -366,7 +366,8 @@
     "wrShort": "Weinregion",
     "registerTitleWr": "Kein geschützter Name",
     "unprotectedWr": "Eine Weinregion, die kein Register schützt. Sie steht im Atlas, weil ein Artikel sie als Weinbaugebiet nennt; ihr Name auf einem Etikett garantiert nichts über die Herkunft des Weins.",
-    "registerLinkWr": "Den Artikel lesen, der sie nennt"
+    "registerLinkWr": "Den Artikel lesen, der sie nennt",
+    "summarySourceOfficial": "Aus dem amtlichen Text des Namens, in seinem Register"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

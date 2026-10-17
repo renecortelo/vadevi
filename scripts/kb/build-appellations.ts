@@ -688,7 +688,7 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
       qid: string | null;
       ref: string | null;
       registeredOn: string | null;
-      summary?: { locale: string; text: string; url: string } | null;
+      summary?: { license?: string; locale: string; text: string; url: string } | null;
       type: RegionEntry["giType"];
       url: string;
       within: string[];
@@ -700,7 +700,11 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
     // A region no register holds is described by the sentence that names it,
     // until an article of its own does.
     if (Object.keys(summaries).length === 0 && area.summary != null) {
-      summaries[area.summary.locale] = { text: area.summary.text, url: area.summary.url };
+      summaries[area.summary.locale] = {
+        text: area.summary.text,
+        url: area.summary.url,
+        ...(area.summary.license === undefined ? {} : { license: area.summary.license }),
+      };
     }
     seen.add(`${prefix}-${area.key}`);
     return {
@@ -993,7 +997,10 @@ const registerAttachments =
 // marked as such (`data/kb/appellation-translations.json`, by register id).
 const translations = (
   JSON.parse(readFileSync(resolve("data/kb/appellation-translations.json"), "utf8")) as {
-    regions: Record<string, { from: string; sourceUrl: string; texts: Record<string, string> }>;
+    regions: Record<
+      string,
+      { from: string; license?: string; sourceUrl: string; texts: Record<string, string> }
+    >;
   }
 ).regions;
 let translated = 0;
@@ -1007,10 +1014,13 @@ for (const entry of entries) {
       text,
       translated: true,
       url: translation.sourceUrl,
-      // A translation of the register's own text is reused as the Union's is.
+      // A translation of the register's own text is reused as the Union's is,
+      // and one of another country's official text as that text is.
       ...(translation.sourceUrl.startsWith(registerAttachments)
         ? { license: "EC-reuse-2011-833" }
-        : {}),
+        : translation.license === undefined
+          ? {}
+          : { license: translation.license }),
     };
     translated += 1;
   }

@@ -366,7 +366,8 @@
     "wrShort": "Regió vinícola",
     "registerTitleWr": "No és un nom protegit",
     "unprotectedWr": "Una regió vinícola que cap registre no protegeix. És a l'atles perquè un article l'esmenta com a zona de vinya; el seu nom en una etiqueta no garanteix d'on ve el vi.",
-    "registerLinkWr": "Llegir l'article que l'esmenta"
+    "registerLinkWr": "Llegir l'article que l'esmenta",
+    "summarySourceOfficial": "Del text oficial del nom, al seu registre"
   },
   "space": {
     "switchLabel": "Espai actiu",

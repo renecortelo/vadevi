@@ -87,6 +87,8 @@ export function LibraryRegionPage() {
   const fromRegister =
     region.summary?.license === "EC-reuse-2011-833" &&
     region.summary.sourceUrl.includes("/eambrosia-public-api/");
+  // Another country's official text: a specification, a declaration.
+  const fromOfficialText = region.summary?.license.endsWith("-official-text") === true;
   const euRegister = inEuRegister(region);
   // The catalog keys of the name's own register: the EU's, or its country's.
   const suffix = registerSuffix(region);
@@ -146,12 +148,14 @@ export function LibraryRegionPage() {
                   register's technical file is the Member State's, as filed. */}
               {fromRegister
                 ? t("library.summarySourceRegister")
-                : region.summary.license === "EC-reuse-2011-833"
-                  ? t("library.summarySourceJournal")
-                  : t("library.summarySource")}
+                : fromOfficialText
+                  ? t("library.summarySourceOfficial")
+                  : region.summary.license === "EC-reuse-2011-833"
+                    ? t("library.summarySourceJournal")
+                    : t("library.summarySource")}
             </a>
             {region.summary.translated
-              ? ` · ${t(fromRegister ? "library.summaryTranslatedDocument" : "library.summaryTranslated")}`
+              ? ` · ${t(fromRegister || fromOfficialText ? "library.summaryTranslatedDocument" : "library.summaryTranslated")}`
               : region.summary.locale.split("-")[0] !== locale.split("-")[0]
                 ? ` · ${t("library.summaryOtherLanguage")}`
                 : null}

@@ -366,7 +366,8 @@
     "wrShort": "Regione vinicola",
     "registerTitleWr": "Non è un nome protetto",
     "unprotectedWr": "Una regione vinicola che nessun registro tutela. È nell'atlante perché un articolo la nomina come zona di vigneti; il suo nome in etichetta non garantisce da dove venga il vino.",
-    "registerLinkWr": "Leggi l'articolo che la nomina"
+    "registerLinkWr": "Leggi l'articolo che la nomina",
+    "summarySourceOfficial": "Dal testo ufficiale del nome, nel suo registro"
   },
   "space": {
     "switchLabel": "Spazio attivo",
