@@ -12,10 +12,24 @@ const duration = 600;
  * read the value itself, and a reader who asks for reduced motion sees it at
  * once.
  */
-export function CountUp({ format, value }: { format: (value: number) => string; value: number }) {
+export function CountUp({
+  format,
+  play = true,
+  value,
+}: {
+  format: (value: number) => string;
+  /** False while its block is out of sight: it counts again when it is back. */
+  play?: boolean;
+  value: number;
+}) {
   const [shown, setShown] = useState(value);
   const previous = useRef<number | null>(null);
   useLayoutEffect(() => {
+    if (!play) {
+      previous.current = null;
+      if (motionWelcome()) setShown(0);
+      return;
+    }
     const from = previous.current ?? 0;
     previous.current = value;
     if (from === value || !motionWelcome()) {
@@ -30,7 +44,7 @@ export function CountUp({ format, value }: { format: (value: number) => string; 
       if (progress < 1) frame = requestAnimationFrame(step);
     });
     return () => cancelAnimationFrame(frame);
-  }, [value]);
+  }, [play, value]);
   // A whole number counts in whole numbers; an average in tenths.
   const rounded = Number.isInteger(value) ? Math.round(shown) : Math.round(shown * 10) / 10;
   return (

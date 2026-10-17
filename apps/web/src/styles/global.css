@@ -1579,7 +1579,12 @@ p {
   padding: var(--space-1);
 }
 
-.segmented-control button {
+.segmented-control :is(button, a) {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
   background: transparent;
   border: 0;
   border-radius: var(--radius-pill);
@@ -1591,11 +1596,11 @@ p {
     color var(--motion-fast);
 }
 
-.segmented-control button:hover:not([aria-pressed="true"]) {
+.segmented-control :is(button, a):hover:not([aria-pressed="true"], [aria-current="page"]) {
   color: var(--color-text);
 }
 
-.segmented-control button[aria-pressed="true"] {
+.segmented-control :is(button[aria-pressed="true"], a[aria-current="page"]) {
   background: var(--color-surface-raised);
   color: var(--color-plum);
   font-weight: 750;
@@ -3300,7 +3305,7 @@ p {
     inline-size: 100%;
   }
 
-  .segmented-control button {
+  .segmented-control :is(button, a) {
     min-inline-size: 0;
     padding-inline: var(--space-2);
   }
@@ -4439,16 +4444,33 @@ p {
   margin: 0;
 }
 
+/* Where a text, a photo or a map's points come from: said, as the licence
+   asks, but quietly — smaller and fainter than what it credits, the same
+   everywhere in the app. */
+.source-note {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  margin-block: var(--space-1) 0;
+  opacity: 0.8;
+}
+
+.source-note .text-link {
+  color: inherit;
+  text-decoration-thickness: 1px;
+}
+
 /* The library, browsed: a tab for each shelf, the filters in a row, the
    grapes as a gallery of photographs, the appellations as a plain list. */
 /* Three tabs on one line, each as wide as its name needs: "Uvas" is short and
    "Denominaciones" is not, and equal thirds pushed the long one past its edge. */
 .library-tabs {
   display: flex;
-  inline-size: min(100%, 36rem);
+  flex-wrap: wrap;
+  inline-size: min(100%, 48rem);
 }
 
-.library-tabs button {
+.library-tabs :is(button, a) {
   flex: 1 1 auto;
   /* Only where a translation marks a break (German's long compound): a word
      is otherwise kept whole, and the tab with several words wraps instead. */
@@ -4463,7 +4485,7 @@ p {
 }
 
 @media (max-width: 520px) {
-  .library-tabs button {
+  .library-tabs :is(button, a) {
     font-size: var(--text-sm);
   }
 }
@@ -4634,7 +4656,7 @@ p {
 }
 
 .library-photo figcaption {
-  font-size: var(--text-xs, 0.75rem);
+  font-size: var(--text-xs);
   line-height: 1.3;
   overflow-wrap: anywhere;
 }
@@ -4870,6 +4892,14 @@ p {
 
 .atlas-coverage__country h2 {
   font-size: var(--text-lg);
+  margin-block-end: var(--space-1);
+}
+
+/* Its count and the way to its list, in the page's own body type. */
+.atlas-coverage__meta {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-block: 0 var(--space-2);
 }
 
 /* Dashboard motion (the cellar book, the atlas in figures): each bar grows to

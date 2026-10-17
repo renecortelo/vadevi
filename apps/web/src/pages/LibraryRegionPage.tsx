@@ -137,7 +137,7 @@ export function LibraryRegionPage() {
           <p lang={region.summary.locale === "pt-PT" ? "pt" : region.summary.locale}>
             {region.summary.text}
           </p>
-          <p className="section-help">
+          <p className="source-note">
             <a
               className="text-link"
               href={region.summary.sourceUrl}

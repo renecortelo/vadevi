@@ -314,7 +314,7 @@ export function VenuePicker({
         </ul>
       )}
       <p className="venue-picker__hint">{t("tasting.venue.hint")}</p>
-      <p className="venue-picker__attribution">{t("tasting.venue.attribution")}</p>
+      <p className="source-note venue-picker__attribution">{t("tasting.venue.attribution")}</p>
     </div>
   );
 }

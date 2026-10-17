@@ -104,7 +104,7 @@ test("a summary from the register's technical file names its source", async ({ p
     "Del pliego técnico de la denominación · Registro de indicaciones geográficas de la UE (eAmbrosia)",
   );
   await expect(source).toHaveAttribute("href", shown.url);
-  await expect(page.locator(".library-summary .section-help")).toContainText(
+  await expect(page.locator(".library-summary .source-note")).toContainText(
     entry.summaries.es === undefined
       ? "aún no disponible en tu idioma"
       : "traducido del idioma del documento",
@@ -284,9 +284,11 @@ test("a Brazilian denomination cites the INPI's list", async ({ page }) => {
     "No registo de indicações geográficas do Brasil (INPI)",
   );
   await expect(page.getByText("Registada a 29 de novembro de 2022.")).toBeVisible();
-  await expect(page.locator('a[href*="LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS"]')).toHaveText(
-    "Ver a lista de indicações reconhecidas do INPI (número BR412021000003-4)",
-  );
+  await expect(
+    page.locator(
+      'section[aria-labelledby="region-register"] a[href*="LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS"]',
+    ),
+  ).toHaveText("Ver a lista de indicações reconhecidas do INPI (número BR412021000003-4)");
   await expect(page.locator(".library-map__point")).toBeVisible();
 });
 
@@ -414,8 +416,14 @@ test("the atlas in figures counts each country's names and leads to its list", a
   await page.goto("/library/atlas");
   await page.locator("#interface-locale").selectOption("en");
   await expect(page.locator("h1")).toHaveText("The atlas in figures", { timeout: 15_000 });
+  // The fourth shelf of the library, with its way back.
+  await expect(page.getByRole("link", { name: "The atlas in figures" })).toHaveAttribute(
+    "aria-current",
+    "page",
+  );
+  await expect(page.locator(".library-back a")).toBeVisible();
   const country = page.locator("article.atlas-coverage__country", {
-    has: page.getByRole("link", { name: /South Africa/ }),
+    has: page.getByRole("heading", { name: /South Africa/ }),
   });
   await expect(country).toContainText(`${southAfrica} names`);
   await expect(country.getByText("On the map")).toBeVisible();
@@ -427,8 +435,21 @@ test("the atlas in figures counts each country's names and leads to its list", a
       .filter((violation) => violation.impact === "serious" || violation.impact === "critical")
       .map((violation) => `${violation.id} (${violation.impact}): ${violation.help}`),
   ).toEqual([]);
-  await country.getByRole("link", { name: /South Africa/ }).click();
+  await country.getByRole("link", { name: "See its names" }).click();
   await expect(page).toHaveURL(/tab=regions&country=ZA/);
+});
+
+test("figures play again each time they come back into view", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto("/library/atlas");
+  const first = page.locator("ul.stats-bars").first();
+  await expect(first).toHaveAttribute("data-arrival", "shown", { timeout: 15_000 });
+  await page.locator("article.atlas-coverage__country").last().scrollIntoViewIfNeeded();
+  await expect(first).toHaveAttribute("data-arrival", "waiting");
+  await first.scrollIntoViewIfNeeded();
+  await expect(first).toHaveAttribute("data-arrival", "shown");
 });
 
 test("figures move only for a reader who welcomes motion", async ({ page }) => {

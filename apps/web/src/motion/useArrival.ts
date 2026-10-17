@@ -1,13 +1,16 @@
 import { useLayoutEffect, useRef, useState } from "react";
 
 import { motionWelcome } from "./motion";
+import { pageSettled } from "./useViewTransition";
 
 /**
- * When a block of figures comes into view: `"waiting"` until it does, then
- * `"shown"` — for its bars to grow as the reader reaches them, not while they
- * are still below the fold. Without a browser, without the observer, or with
- * reduced motion, there is nothing to wait for (`undefined`), and the
- * stylesheet leaves the figures as they are.
+ * When a block of figures comes into view: `"waiting"` while it is out of
+ * sight, then `"shown"` — each time it comes back, so its bars grow and its
+ * figures count whenever the reader reaches them, and after a page change has
+ * finished, not beneath its cross-fade. Without a browser, without the
+ * observer, or with reduced motion, there is nothing to wait for
+ * (`undefined`), and the stylesheet leaves the figures as they are.
+ * `arrived` says whether figures in the block should show their value.
  */
 export function useArrival<Element extends HTMLElement>() {
   const ref = useRef<Element>(null);
@@ -17,18 +20,29 @@ export function useArrival<Element extends HTMLElement>() {
     if (element === null || !motionWelcome() || globalThis.IntersectionObserver === undefined) {
       return;
     }
+    let live = true;
+    let visible = false;
     setState("waiting");
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setState("shown");
-          observer.disconnect();
+        const entry = entries[entries.length - 1];
+        if (entry === undefined) return;
+        visible = entry.isIntersecting;
+        if (!visible) {
+          setState("waiting");
+          return;
         }
+        void pageSettled().then(() => {
+          if (live && visible) setState("shown");
+        });
       },
       { threshold: 0.2 },
     );
     observer.observe(element);
-    return () => observer.disconnect();
+    return () => {
+      live = false;
+      observer.disconnect();
+    };
   }, []);
-  return { "data-arrival": state, ref };
+  return { arrived: state !== "waiting", props: { "data-arrival": state, ref } };
 }

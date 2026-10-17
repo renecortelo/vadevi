@@ -304,11 +304,10 @@
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "Waar ze vandaan komt",
     "mapLabel": "Kaart met {{place}}",
-    "mapSource": "Kaart: Natural Earth · Punten: Wikidata, NUTS © EuroGeographics, © OpenStreetMap-bijdragers",
-    "mapSourceUs": "Kaart: Natural Earth · Punten: AVA-project van UC Davis, Wikidata",
-    "mapSourceOsm": "Kaart: Natural Earth · Punten: © OpenStreetMap-bijdragers",
-    "mapSourceAu": "Kaart: Natural Earth · Punten: Wine Australia (CC BY 4.0), © OpenStreetMap-bijdragers",
-    "mapSourceOutline": "Kaart: Natural Earth",
+    "mapSource": "Punten: Wikidata, NUTS © EuroGeographics, © OpenStreetMap-bijdragers",
+    "mapSourceUs": "Punten: AVA-project van UC Davis, Wikidata",
+    "mapSourceOsm": "Punten: © OpenStreetMap-bijdragers",
+    "mapSourceAu": "Punten: Wine Australia (CC BY 4.0), © OpenStreetMap-bijdragers",
     "mapCountryOnly": "Het precieze gebied staat nog niet in de bibliotheek; de kaart toont het land.",
     "mapApproximate": {
       "area": "Benaderd punt: het midden van het gebied waarin de benaming ligt.",
@@ -341,7 +340,8 @@
         "oceania": "Oceanië",
         "japan": "Japan",
         "africa": "Zuidelijk Afrika"
-      }
+      },
+      "seeList": "Bekijk de namen"
     },
     "aoc": "Gecontroleerde oorsprongsbenaming (AOC)",
     "aocShort": "AOC",

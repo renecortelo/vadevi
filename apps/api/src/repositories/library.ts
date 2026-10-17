@@ -384,8 +384,10 @@ export async function libraryAtlasCoverage(database: D1Database, locale: string)
           SUM(region.latitude IS NOT NULL AND coalesce(region.point_source, 'item') = 'item') AS item,
           SUM(region.latitude IS NOT NULL AND region.point_source = 'place') AS place,
           SUM(region.latitude IS NOT NULL AND region.point_source = 'area') AS area,
-          SUM(EXISTS (SELECT 1 FROM kb_region_grapes link WHERE link.region_id = region.id))
-            AS with_grapes
+          -- Its grapes: those its register's own document lists, or those
+          -- whose articles say they are grown there.
+          SUM(EXISTS (SELECT 1 FROM kb_region_grapes link WHERE link.region_id = region.id)
+            OR coalesce(json_array_length(region.register_grapes), 0) > 0) AS with_grapes
         FROM kb_regions region
         -- Registered names only: a wine region no register protects is in
         -- the atlas, not in its count of registered names.

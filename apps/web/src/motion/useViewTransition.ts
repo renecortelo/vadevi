@@ -8,6 +8,18 @@ type ViewTransitionDocument = Document & {
   startViewTransition?: (update: () => void) => { finished: Promise<void> };
 };
 
+/** The page change under way, if any: what arrives waits for it to end. */
+let changing: Promise<void> = Promise.resolve();
+
+/**
+ * Settles once the page change under way has finished — at once if none is:
+ * figures that animate as they arrive wait for it, or they would play
+ * beneath the cross-fade, unseen.
+ */
+export function pageSettled(): Promise<void> {
+  return changing;
+}
+
 /** The name the touched link and the new page's title share, to travel. */
 const travelling = "focus-title";
 
@@ -47,6 +59,7 @@ export function useViewTransition() {
       title = document.querySelector<HTMLElement>("#main-content h1");
       if (title !== null) title.style.viewTransitionName = travelling;
     });
+    changing = transition.finished.catch(() => undefined);
     void transition.finished.finally(() => {
       link.style.viewTransitionName = "";
       if (title !== null) title.style.viewTransitionName = "";

@@ -80,7 +80,7 @@ export function LibraryTopicPage() {
           <p lang={entry.summary.locale === "pt-PT" ? "pt" : entry.summary.locale}>
             {entry.summary.text}
           </p>
-          <p className="section-help">
+          <p className="source-note">
             <a
               className="text-link"
               href={entry.summary.sourceUrl}

@@ -1,13 +1,17 @@
 import type { LibraryAtlasCoverageResponse } from "@vadevi/contracts";
 import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
-import { useEffect, useState } from "react";
+import { type CSSProperties, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { CoverageMap } from "../library/CoverageMap";
 import { flagOf } from "../library/flag";
+import { LibraryTabs } from "../library/LibraryTabs";
+import { TrailBackLink } from "../library/TrailBackLink";
+import { CountUp } from "../motion/CountUp";
 import { motionWelcome } from "../motion/motion";
+import { useArrival } from "../motion/useArrival";
 import { getLibraryAtlasCoverage } from "../services/library";
 
 type Coverage = LibraryAtlasCoverageResponse["data"];
@@ -16,20 +20,32 @@ type Country = Coverage["countries"][number];
 /** On the map: every point, exact or approximate. */
 const placed = (country: Country) => country.names - country.points.none;
 
-/** One figure as a bar of its country's names, with the count beside it. */
-function Measure({ label, of, value }: { label: string; of: number; value: number }) {
+/** A country's figures as bars of its names, growing as they come into view. */
+function Measures({ items }: { items: { label: string; of: number; value: number }[] }) {
   const { i18n } = useTranslation();
-  const share = of === 0 ? 0 : value / of;
+  const arrival = useArrival<HTMLUListElement>();
+  const percent = new Intl.NumberFormat(i18n.language, { style: "percent" });
   return (
-    <li>
-      <span className="stats-bars__label">{label}</span>
-      <span aria-hidden="true" className="stats-bars__track">
-        <span style={{ inlineSize: `${share * 100}%` }} />
-      </span>
-      <span className="stats-bars__count">
-        {new Intl.NumberFormat(i18n.language, { style: "percent" }).format(share)}
-      </span>
-    </li>
+    <ul className="stats-bars" {...arrival.props}>
+      {items.map(({ label, of, value }, index) => {
+        const share = of === 0 ? 0 : value / of;
+        return (
+          <li key={label} style={{ "--motion-index": index } as CSSProperties}>
+            <span className="stats-bars__label">{label}</span>
+            <span aria-hidden="true" className="stats-bars__track">
+              <span style={{ inlineSize: `${share * 100}%` }} />
+            </span>
+            <span className="stats-bars__count">
+              <CountUp
+                format={(whole) => percent.format(whole / 100)}
+                play={arrival.arrived}
+                value={Math.round(share * 100)}
+              />
+            </span>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
@@ -65,6 +81,12 @@ export function LibraryAtlasPage() {
 
   return (
     <section className="library-page">
+      <p className="section-help library-back">
+        <TrailBackLink
+          fallback={{ label: t("library.home.title"), path: "/library?tab=regions" }}
+        />
+      </p>
+      <LibraryTabs current="atlas" />
       <header className="page-heading">
         <div>
           <p className="eyebrow">{t("library.atlasEyebrow")}</p>
@@ -78,19 +100,21 @@ export function LibraryAtlasPage() {
         <p role="alert">{t("library.error")}</p>
       ) : (
         <>
-          <ul className="stats-bars">
-            <Measure
-              label={t("library.coverage.described")}
-              of={all}
-              value={total((country) => country.described)}
-            />
-            <Measure label={t("library.coverage.onMap")} of={all} value={total(placed)} />
-            <Measure
-              label={t("library.coverage.grapes")}
-              of={all}
-              value={total((country) => country.withGrapes)}
-            />
-          </ul>
+          <Measures
+            items={[
+              {
+                label: t("library.coverage.described"),
+                of: all,
+                value: total((country) => country.described),
+              },
+              { label: t("library.coverage.onMap"), of: all, value: total(placed) },
+              {
+                label: t("library.coverage.grapes"),
+                of: all,
+                value: total((country) => country.withGrapes),
+              },
+            ]}
+          />
           <p className="section-help">
             {t("library.coverage.total", {
               count: all,
@@ -113,37 +137,36 @@ export function LibraryAtlasPage() {
               key={country.countryCode}
             >
               <h2>
+                {flagOf(country.countryCode)} {names.of(country.countryCode) ?? country.countryCode}
+              </h2>
+              <p className="atlas-coverage__meta">
+                {t("library.coverage.names", {
+                  count: country.names,
+                  names: number.format(country.names),
+                })}{" "}
+                ·{" "}
                 <Link
                   className="text-link"
                   to={`/library?tab=regions&country=${country.countryCode}`}
                 >
-                  {flagOf(country.countryCode)}{" "}
-                  {names.of(country.countryCode) ?? country.countryCode}
-                </Link>{" "}
-                <span className="section-help">
-                  {t("library.coverage.names", {
-                    count: country.names,
-                    names: number.format(country.names),
-                  })}
-                </span>
-              </h2>
-              <ul className="stats-bars">
-                <Measure
-                  label={t("library.coverage.described")}
-                  of={country.names}
-                  value={country.described}
-                />
-                <Measure
-                  label={t("library.coverage.onMap")}
-                  of={country.names}
-                  value={placed(country)}
-                />
-                <Measure
-                  label={t("library.coverage.grapes")}
-                  of={country.names}
-                  value={country.withGrapes}
-                />
-              </ul>
+                  {t("library.coverage.seeList")}
+                </Link>
+              </p>
+              <Measures
+                items={[
+                  {
+                    label: t("library.coverage.described"),
+                    of: country.names,
+                    value: country.described,
+                  },
+                  { label: t("library.coverage.onMap"), of: country.names, value: placed(country) },
+                  {
+                    label: t("library.coverage.grapes"),
+                    of: country.names,
+                    value: country.withGrapes,
+                  },
+                ]}
+              />
               {country.points.area + country.points.place > 0 ? (
                 <p className="section-help">
                   {t("library.coverage.approximate", {

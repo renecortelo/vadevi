@@ -84,10 +84,11 @@ export function AtlasMap({
           />
         )}
       </svg>
-      {/* The points' sources are credited only where a point is drawn. */}
-      <figcaption className="section-help">
-        {point === null ? t("library.mapSourceOutline") : (caption ?? t("library.mapSource"))}
-      </figcaption>
+      {/* The points' sources are credited only where a point is drawn; the
+          outline (Natural Earth) is public domain and asks for no credit. */}
+      {point === null ? null : (
+        <figcaption className="source-note">{caption ?? t("library.mapSource")}</figcaption>
+      )}
     </figure>
   );
 }

@@ -65,6 +65,21 @@ has the reasons.
 
 ### The atlas
 
+- **Figures move whenever you reach them**: the cellar book's and the atlas
+  in figures' bars grow, and their figures count, each time they come back
+  into view and after the page has finished changing — not only the first
+  time, and not unseen beneath the cross-fade. The atlas's country bars move
+  too.
+- **Credits, quietly**: every note of where a text, a photo or a map's
+  points come from is set the same way across the app — smaller and fainter
+  than what it credits. The maps no longer credit Natural Earth, which is
+  public domain and asks for none.
+- **The atlas in figures, a shelf of the library**: it is the fourth tab
+  (Grapes · Names · Styles and methods · The atlas in figures), with a way
+  back; each country reads in the page's own type with a link to its names;
+  and «With grapes» now counts the grapes a name's own register lists, not
+  only those a grape's article names (about 60 % of names, not 10 %).
+
 - **The cellar book moves like a dashboard**: its figures count up to their
   value as the page arrives, and its bars — scores, answers, countries,
   regions, grapes, months — grow one row after another as the reader reaches

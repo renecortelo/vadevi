@@ -8,6 +8,7 @@ import { useAuth } from "../auth/AuthContext";
 import { GrapesIcon } from "../brand/NavIcons";
 import { designationKey } from "../library/designation";
 import { flagOf } from "../library/flag";
+import { LibraryTabs } from "../library/LibraryTabs";
 import { useViewTransition } from "../motion/useViewTransition";
 import { listLibraryGrapes, listLibraryRegions, listLibraryTopics } from "../services/library";
 
@@ -134,22 +135,7 @@ export function LibraryPage() {
         </div>
       </header>
 
-      <div
-        aria-label={t("library.home.title")}
-        className="segmented-control library-tabs"
-        role="group"
-      >
-        {tabs.map((option) => (
-          <button
-            aria-pressed={tab === option}
-            key={option}
-            onClick={() => update({ q: null, tab: option })}
-            type="button"
-          >
-            {t(`library.home.tab.${option}`)}
-          </button>
-        ))}
-      </div>
+      <LibraryTabs current={tab} onSelect={(option) => update({ q: null, tab: option })} />
 
       <div className="library-filters">
         <label className="library-filters__search">
@@ -211,7 +197,6 @@ function GrapeFilters({ search, update }: FilterProps) {
 
 function RegionFilters({ locale, search, update }: FilterProps) {
   const { i18n, t } = useTranslation();
-  const transition = useViewTransition();
   const names = new Intl.DisplayNames([i18n.language], { type: "region" });
   const countries = atlasCountries
     .map((code) => ({ code, name: names.of(code) ?? code }))
@@ -245,9 +230,6 @@ function RegionFilters({ locale, search, update }: FilterProps) {
           ))}
         </select>
       </label>
-      <Link className="text-link" onClick={transition("/library/atlas")} to="/library/atlas">
-        {t("library.coverage.link")}
-      </Link>
     </>
   );
 }

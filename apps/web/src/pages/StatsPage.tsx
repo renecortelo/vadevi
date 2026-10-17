@@ -44,7 +44,7 @@ function Bars({
   const largest = Math.max(1, ...items.map((item) => item.count));
   const arrival = useArrival<HTMLUListElement>();
   return (
-    <ul className="stats-bars" {...arrival}>
+    <ul className="stats-bars" {...arrival.props}>
       {items.map((item, index) => (
         <li key={item.label} style={{ "--motion-index": index } as CSSProperties}>
           {item.onSelect === undefined ? (
@@ -75,7 +75,7 @@ function SplitBar({
   const total = parts.reduce((sum, part) => sum + part.count, 0);
   const arrival = useArrival<HTMLElement>();
   return (
-    <figure className="stats-split" {...arrival}>
+    <figure className="stats-split" {...arrival.props}>
       <figcaption>{label}</figcaption>
       {total === 0 ? (
         <p className="section-help">—</p>
@@ -124,7 +124,7 @@ function Meter({
 }) {
   const arrival = useArrival<HTMLElement>();
   return (
-    <figure className="stats-split" {...arrival}>
+    <figure className="stats-split" {...arrival.props}>
       <figcaption>{label}</figcaption>
       <div aria-hidden="true" className="stats-split__bar">
         <span
@@ -138,6 +138,34 @@ function Meter({
 }
 
 /** A breakdown's heading: its icon and name on a band of their own. */
+/** The book's headline figures, counting up each time they come into view. */
+function StatsTiles({
+  format,
+  tiles,
+}: {
+  format: (value: number) => string;
+  tiles: [string, number | null][];
+}) {
+  const { t } = useTranslation();
+  const arrival = useArrival<HTMLDListElement>();
+  return (
+    <dl className="stats-tiles" {...arrival.props}>
+      {tiles.map(([key, value]) => (
+        <div key={key}>
+          <dt>{t(`stats.tile.${key}`)}</dt>
+          <dd>
+            {value === null ? (
+              "—"
+            ) : (
+              <CountUp format={format} play={arrival.arrived} value={value} />
+            )}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
 function GroupTitle({ children, icon }: { children: ReactNode; icon: ReactNode }) {
   return (
     <h3 className="stats-group__title">
@@ -326,23 +354,17 @@ export function StatsPage() {
         </p>
       ) : (
         <>
-          <dl className="stats-tiles">
-            {(
-              [
-                ["wines", stats.wines.total],
-                ["tastings", stats.tastings.total],
-                ["averageScore", stats.tastings.averageScore],
-                ["atOrAbove90", stats.tastings.atOrAbove90],
-                ["inCellar", stats.cellar.owned],
-                ["wishlist", stats.wishlist.active],
-              ] as const
-            ).map(([key, value]) => (
-              <div key={key}>
-                <dt>{t(`stats.tile.${key}`)}</dt>
-                <dd>{value === null ? "—" : <CountUp format={number} value={value} />}</dd>
-              </div>
-            ))}
-          </dl>
+          <StatsTiles
+            format={number}
+            tiles={[
+              ["wines", stats.wines.total],
+              ["tastings", stats.tastings.total],
+              ["averageScore", stats.tastings.averageScore],
+              ["atOrAbove90", stats.tastings.atOrAbove90],
+              ["inCellar", stats.cellar.owned],
+              ["wishlist", stats.wishlist.active],
+            ]}
+          />
 
           {stats.tastings.total === 0 ? null : (
             <section aria-labelledby="stats-scores" className="settings-card">

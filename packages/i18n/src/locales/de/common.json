@@ -304,11 +304,10 @@
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "Woher sie stammt",
     "mapLabel": "Karte mit {{place}}",
-    "mapSource": "Karte: Natural Earth · Punkte: Wikidata, NUTS © EuroGeographics, © OpenStreetMap-Mitwirkende",
-    "mapSourceUs": "Karte: Natural Earth · Punkte: AVA-Projekt der UC Davis, Wikidata",
-    "mapSourceOsm": "Karte: Natural Earth · Punkte: © OpenStreetMap-Mitwirkende",
-    "mapSourceAu": "Karte: Natural Earth · Punkte: Wine Australia (CC BY 4.0), © OpenStreetMap-Mitwirkende",
-    "mapSourceOutline": "Karte: Natural Earth",
+    "mapSource": "Punkte: Wikidata, NUTS © EuroGeographics, © OpenStreetMap-Mitwirkende",
+    "mapSourceUs": "Punkte: AVA-Projekt der UC Davis, Wikidata",
+    "mapSourceOsm": "Punkte: © OpenStreetMap-Mitwirkende",
+    "mapSourceAu": "Punkte: Wine Australia (CC BY 4.0), © OpenStreetMap-Mitwirkende",
     "mapCountryOnly": "Das genaue Gebiet ist noch nicht in der Bibliothek; die Karte zeigt das Land.",
     "mapApproximate": {
       "area": "Ungefährer Punkt: die Mitte des Gebiets, in dem die Bezeichnung liegt.",
@@ -341,7 +340,8 @@
         "oceania": "Ozeanien",
         "japan": "Japan",
         "africa": "Südliches Afrika"
-      }
+      },
+      "seeList": "Seine Namen ansehen"
     },
     "aoc": "Kontrollierte Ursprungsbezeichnung (AOC)",
     "aocShort": "AOC",

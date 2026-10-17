@@ -236,8 +236,12 @@ describe("the wine atlas", () => {
           none: entries.filter((entry) => entry.latitude === null).length,
           place: placed("place"),
         },
-        withGrapes: entries.filter((entry) =>
-          entry.grapes.some((link) => link.grapeId === grape.id),
+        // Its grapes: its register's own list, or a grape's article.
+        withGrapes: entries.filter(
+          (entry) =>
+            entry.grapes.some((link) => link.grapeId === grape.id) ||
+            ((entry as { register?: { grapes: unknown[] } | null }).register?.grapes.length ?? 0) >
+              0,
         ).length,
       });
     }

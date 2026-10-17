@@ -304,11 +304,10 @@
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "De onde vem",
     "mapLabel": "Mapa com {{place}}",
-    "mapSource": "Mapa: Natural Earth · Pontos: Wikidata, NUTS © EuroGeographics, © colaboradores do OpenStreetMap",
-    "mapSourceUs": "Mapa: Natural Earth · Pontos: projeto AVA da UC Davis, Wikidata",
-    "mapSourceOsm": "Mapa: Natural Earth · Pontos: © contribuidores do OpenStreetMap",
-    "mapSourceAu": "Mapa: Natural Earth · Pontos: Wine Australia (CC BY 4.0), © contribuidores do OpenStreetMap",
-    "mapSourceOutline": "Mapa: Natural Earth",
+    "mapSource": "Pontos: Wikidata, NUTS © EuroGeographics, © colaboradores do OpenStreetMap",
+    "mapSourceUs": "Pontos: projeto AVA da UC Davis, Wikidata",
+    "mapSourceOsm": "Pontos: © contribuidores do OpenStreetMap",
+    "mapSourceAu": "Pontos: Wine Australia (CC BY 4.0), © contribuidores do OpenStreetMap",
     "mapCountryOnly": "A zona exata ainda não está na biblioteca; o mapa mostra o país.",
     "mapApproximate": {
       "area": "Ponto aproximado: o centro da zona onde fica a denominação.",
@@ -341,7 +340,8 @@
         "oceania": "Oceânia",
         "japan": "Japão",
         "africa": "África Austral"
-      }
+      },
+      "seeList": "Ver os seus nomes"
     },
     "aoc": "Denominação de origem controlada (AOC)",
     "aocShort": "AOC",

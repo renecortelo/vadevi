@@ -304,11 +304,10 @@
     "photoCredit": "Foto: {{author}} · {{license}}",
     "originTitle": "D'on ve",
     "mapLabel": "Mapa amb {{place}}",
-    "mapSource": "Mapa: Natural Earth · Punts: Wikidata, NUTS © EuroGeographics, © col·laboradors d'OpenStreetMap",
-    "mapSourceUs": "Mapa: Natural Earth · Punts: projecte AVA de UC Davis, Wikidata",
-    "mapSourceOsm": "Mapa: Natural Earth · Punts: © col·laboradors d'OpenStreetMap",
-    "mapSourceAu": "Mapa: Natural Earth · Punts: Wine Australia (CC BY 4.0), © col·laboradors d'OpenStreetMap",
-    "mapSourceOutline": "Mapa: Natural Earth",
+    "mapSource": "Punts: Wikidata, NUTS © EuroGeographics, © col·laboradors d'OpenStreetMap",
+    "mapSourceUs": "Punts: projecte AVA de UC Davis, Wikidata",
+    "mapSourceOsm": "Punts: © col·laboradors d'OpenStreetMap",
+    "mapSourceAu": "Punts: Wine Australia (CC BY 4.0), © col·laboradors d'OpenStreetMap",
     "mapCountryOnly": "La zona exacta encara no és a la biblioteca; el mapa mostra el país.",
     "mapApproximate": {
       "area": "Punt aproximat: el centre de la zona on és la denominació.",
@@ -341,7 +340,8 @@
         "oceania": "Oceania",
         "japan": "Japó",
         "africa": "Àfrica austral"
-      }
+      },
+      "seeList": "Veure'n els noms"
     },
     "aoc": "Denominació d'origen controlada (AOC)",
     "aocShort": "AOC",

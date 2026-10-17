@@ -115,7 +115,7 @@ export function LibraryGrapePage() {
         {grape.image === null ? null : (
           <figure className="library-photo">
             <img alt={t("library.photoAlt", { name: grape.name })} src={`/${grape.image.path}`} />
-            <figcaption>
+            <figcaption className="source-note">
               <a
                 className="text-link"
                 href={grape.image.sourceUrl}
@@ -137,7 +137,7 @@ export function LibraryGrapePage() {
           <p lang={grape.summary.locale === "pt-PT" ? "pt" : grape.summary.locale}>
             {grape.summary.text}
           </p>
-          <p className="section-help">
+          <p className="source-note">
             <a
               className="text-link"
               href={grape.summary.sourceUrl}
