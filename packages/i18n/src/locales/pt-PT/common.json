@@ -341,7 +341,8 @@
         "japan": "Japão",
         "africa": "África Austral"
       },
-      "seeList": "Ver os seus nomes"
+      "seeList": "Ver os seus nomes",
+      "allCountries": "Todos os países"
     },
     "aoc": "Denominação de origem controlada (AOC)",
     "aocShort": "AOC",
@@ -1772,5 +1773,12 @@
     "sessions": "Eventos",
     "about": "Definições e mais"
   },
-  "sourceShort": "Código-fonte"
+  "map": {
+    "controls": "Zoom do mapa",
+    "zoomIn": "Aproximar",
+    "zoomOut": "Afastar",
+    "reset": "Ver tudo",
+    "open": "Abrir a ficha",
+    "closeTag": "Fechar"
+  }
 }

@@ -341,7 +341,8 @@
         "japan": "Japan",
         "africa": "Southern Africa"
       },
-      "seeList": "See its names"
+      "seeList": "See its names",
+      "allCountries": "All countries"
     },
     "aoc": "Appellation d'origine contrôlée (AOC)",
     "aocShort": "AOC",
@@ -1772,5 +1773,12 @@
     "sessions": "Events",
     "about": "Settings and more"
   },
-  "sourceShort": "Source code"
+  "map": {
+    "controls": "Map zoom",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "reset": "Show it all",
+    "open": "Open its page",
+    "closeTag": "Close"
+  }
 }

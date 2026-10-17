@@ -11888,6 +11888,27 @@
                 },
                 "name": {
                   "type": "string"
+                },
+                "point": {
+                  "type": "object",
+                  "nullable": true,
+                  "properties": {
+                    "approximate": {
+                      "type": "boolean"
+                    },
+                    "latitude": {
+                      "type": "number"
+                    },
+                    "longitude": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "approximate",
+                    "latitude",
+                    "longitude"
+                  ],
+                  "additionalProperties": false
                 }
               },
               "required": [

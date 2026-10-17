@@ -5,14 +5,13 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { CoverageMap } from "../library/CoverageMap";
+import { type CoveragePoint, CoverageMap } from "../library/CoverageMap";
 import { flagOf } from "../library/flag";
 import { LibraryTabs } from "../library/LibraryTabs";
 import { TrailBackLink } from "../library/TrailBackLink";
 import { CountUp } from "../motion/CountUp";
-import { motionWelcome } from "../motion/motion";
 import { useArrival } from "../motion/useArrival";
-import { getLibraryAtlasCoverage } from "../services/library";
+import { getLibraryAtlasCoverage, listLibraryRegions } from "../services/library";
 
 type Coverage = LibraryAtlasCoverageResponse["data"];
 type Country = Coverage["countries"][number];
@@ -72,6 +71,35 @@ export function LibraryAtlasPage() {
     return () => controller.abort();
   }, [key, locale, user]);
   const current = state?.key === key ? state : null;
+  // A country chosen on the map: its figures alone, and its names as points.
+  const [selected, setSelected] = useState<string | null>(null);
+  const [points, setPoints] = useState<{ code: string; points: CoveragePoint[] } | null>(null);
+  useEffect(() => {
+    if (user === null || selected === null) return;
+    const controller = new AbortController();
+    listLibraryRegions(user, selected, controller.signal)
+      .then((regions) =>
+        setPoints({
+          code: selected,
+          points: regions.flatMap((region) =>
+            region.point == null
+              ? []
+              : [
+                  {
+                    approximate: region.point.approximate,
+                    giType: region.giType,
+                    id: region.id,
+                    latitude: region.point.latitude,
+                    longitude: region.point.longitude,
+                    name: region.name,
+                  },
+                ],
+          ),
+        }),
+      )
+      .catch(() => undefined);
+    return () => controller.abort();
+  }, [selected, user]);
   const names = new Intl.DisplayNames([i18n.language], { type: "region" });
   const number = new Intl.NumberFormat(i18n.language);
   const countries = current?.coverage?.countries ?? [];
@@ -124,59 +152,71 @@ export function LibraryAtlasPage() {
           </p>
           <CoverageMap
             countries={countries}
-            onSelect={(code) =>
-              document
-                .getElementById(`coverage-${code}`)
-                ?.scrollIntoView({ behavior: motionWelcome() ? "smooth" : "auto", block: "start" })
-            }
+            onSelect={setSelected}
+            points={selected !== null && points?.code === selected ? points.points : []}
+            selected={selected}
           />
-          {countries.map((country) => (
-            <article
-              className="atlas-coverage__country"
-              id={`coverage-${country.countryCode}`}
-              key={country.countryCode}
-            >
-              <h2>
-                {flagOf(country.countryCode)} {names.of(country.countryCode) ?? country.countryCode}
-              </h2>
-              <p className="atlas-coverage__meta">
-                {t("library.coverage.names", {
-                  count: country.names,
-                  names: number.format(country.names),
-                })}{" "}
-                ·{" "}
-                <Link
-                  className="text-link"
-                  to={`/library?tab=regions&country=${country.countryCode}`}
-                >
-                  {t("library.coverage.seeList")}
-                </Link>
-              </p>
-              <Measures
-                items={[
-                  {
-                    label: t("library.coverage.described"),
-                    of: country.names,
-                    value: country.described,
-                  },
-                  { label: t("library.coverage.onMap"), of: country.names, value: placed(country) },
-                  {
-                    label: t("library.coverage.grapes"),
-                    of: country.names,
-                    value: country.withGrapes,
-                  },
-                ]}
-              />
-              {country.points.area + country.points.place > 0 ? (
-                <p className="section-help">
-                  {t("library.coverage.approximate", {
-                    count: country.points.area + country.points.place,
-                    names: number.format(country.points.area + country.points.place),
-                  })}
+          {selected === null ? null : (
+            <p className="atlas-coverage__meta">
+              <button className="text-button" onClick={() => setSelected(null)} type="button">
+                ← {t("library.coverage.allCountries")}
+              </button>
+            </p>
+          )}
+          {countries
+            .filter((country) => selected === null || country.countryCode === selected)
+            .map((country) => (
+              <article
+                className="atlas-coverage__country"
+                id={`coverage-${country.countryCode}`}
+                key={country.countryCode}
+              >
+                <h2>
+                  {flagOf(country.countryCode)}{" "}
+                  {names.of(country.countryCode) ?? country.countryCode}
+                </h2>
+                <p className="atlas-coverage__meta">
+                  {t("library.coverage.names", {
+                    count: country.names,
+                    names: number.format(country.names),
+                  })}{" "}
+                  ·{" "}
+                  <Link
+                    className="text-link"
+                    to={`/library?tab=regions&country=${country.countryCode}`}
+                  >
+                    {t("library.coverage.seeList")}
+                  </Link>
                 </p>
-              ) : null}
-            </article>
-          ))}
+                <Measures
+                  items={[
+                    {
+                      label: t("library.coverage.described"),
+                      of: country.names,
+                      value: country.described,
+                    },
+                    {
+                      label: t("library.coverage.onMap"),
+                      of: country.names,
+                      value: placed(country),
+                    },
+                    {
+                      label: t("library.coverage.grapes"),
+                      of: country.names,
+                      value: country.withGrapes,
+                    },
+                  ]}
+                />
+                {country.points.area + country.points.place > 0 ? (
+                  <p className="section-help">
+                    {t("library.coverage.approximate", {
+                      count: country.points.area + country.points.place,
+                      names: number.format(country.points.area + country.points.place),
+                    })}
+                  </p>
+                ) : null}
+              </article>
+            ))}
         </>
       )}
     </section>

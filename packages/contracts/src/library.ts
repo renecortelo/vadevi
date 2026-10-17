@@ -288,12 +288,21 @@ export const LibraryRegionSearchResponseSchema = z
           giType: RegionDesignationSchema,
           id: z.string(),
           name: z.string(),
+          /** Its point on the map, in a country's full list; approximate where the
+           *  atlas places it by an area or a place of its name. */
+          point: z
+            .object({ approximate: z.boolean(), latitude: z.number(), longitude: z.number() })
+            .strict()
+            .nullable()
+            .optional(),
         })
         .strict(),
     ),
   })
   .strict()
   .openapi("LibraryRegionSearchResponse");
+
+export type LibraryRegionSearchResponse = z.infer<typeof LibraryRegionSearchResponseSchema>;
 
 export const LibraryAtlasCoverageQuerySchema = z
   .object({ locale: SupportedLocaleSchema.default("en") })

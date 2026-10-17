@@ -341,7 +341,8 @@
         "japan": "Japan",
         "africa": "Zuidelijk Afrika"
       },
-      "seeList": "Bekijk de namen"
+      "seeList": "Bekijk de namen",
+      "allCountries": "Alle landen"
     },
     "aoc": "Gecontroleerde oorsprongsbenaming (AOC)",
     "aocShort": "AOC",
@@ -1772,5 +1773,12 @@
     "sessions": "Events",
     "about": "Instellingen en meer"
   },
-  "sourceShort": "Broncode"
+  "map": {
+    "controls": "Kaartzoom",
+    "zoomIn": "Inzoomen",
+    "zoomOut": "Uitzoomen",
+    "reset": "Alles tonen",
+    "open": "Pagina openen",
+    "closeTag": "Sluiten"
+  }
 }

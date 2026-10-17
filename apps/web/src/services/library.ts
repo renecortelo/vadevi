@@ -1,4 +1,5 @@
 import {
+  type LibraryRegionSearchResponse,
   type LibraryAtlasCoverageResponse,
   LibraryAtlasCoverageResponseSchema,
   type LibraryGrape,
@@ -12,7 +13,6 @@ import {
   type LibraryTopic,
   LibraryTopicResponseSchema,
   LibraryTopicsResponseSchema,
-  type RegionDesignation,
   type SupportedLocale,
 } from "@vadevi/contracts";
 
@@ -106,7 +106,7 @@ export async function listLibraryRegions(
   tokenSource: TokenSource,
   country: string,
   signal?: AbortSignal,
-): Promise<{ countryCode: string; giType: RegionDesignation; id: string; name: string }[]> {
+): Promise<LibraryRegionSearchResponse["data"]> {
   const response = await authenticatedFetch(
     tokenSource,
     `/api/v1/library/regions?country=${encodeURIComponent(country.toUpperCase())}`,

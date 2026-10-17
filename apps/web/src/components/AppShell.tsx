@@ -1,6 +1,5 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
 import { BrandLockup } from "../brand/Wordmark";
-import { webEnvironment } from "../config/env";
 import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
 import { ThemeButton } from "./ThemeToggle";
@@ -84,16 +83,6 @@ export function AppShell() {
         <div className="topbar__preferences">
           <LocaleToggle />
           <ThemeButton />
-          {/* AGPL-3.0 §13: the Corresponding Source, one touch from every
-              screen — the bar's «More» that carried it is now inside «Me». */}
-          <a
-            className="text-button topbar__source"
-            href={webEnvironment.sourceUrl}
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            {t("sourceShort")}
-          </a>
           <button className="text-button" onClick={() => void signOut()} type="button">
             {t("auth.signOut")}
           </button>

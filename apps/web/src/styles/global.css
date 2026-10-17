@@ -474,7 +474,8 @@ button[aria-busy="true"]:disabled {
   bottom: 0;
   display: grid;
   grid-area: nav;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  /* Five destinations, each a fifth of the bar. */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   position: sticky;
   z-index: 10;
 }
@@ -491,8 +492,8 @@ button[aria-busy="true"]:disabled {
   text-decoration: none;
 }
 
-/* One line per label: six tabs on a phone leave a sixth of the width each,
-   and "Acerca de" broke onto a second line the bar then cut off. */
+/* One line per label: a long one ("Els meus vins") is cut rather than
+   breaking onto a second line the bar would cut off. */
 .nav-link > span {
   max-inline-size: 100%;
   overflow: hidden;
@@ -510,9 +511,9 @@ button[aria-busy="true"]:disabled {
 }
 
 .nav-icon {
-  block-size: 1.85rem;
+  block-size: 2.15rem;
   flex: 0 0 auto;
-  inline-size: 1.85rem;
+  inline-size: 2.15rem;
 }
 
 .nav-link__glyph {
@@ -4526,6 +4527,14 @@ p {
   padding-inline: var(--space-2);
 }
 
+/* Four shelves on a phone: two and two, not three and an orphan. */
+@media (max-width: 640px) {
+  .library-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 520px) {
   .library-tabs :is(button, a) {
     font-size: var(--text-sm);
@@ -4912,7 +4921,99 @@ p {
 .coverage-map__held {
   --share: 50%;
   cursor: pointer;
-  fill: color-mix(in oklab, var(--color-plum) var(--share), var(--color-surface-raised));
+  fill: color-mix(in srgb, var(--color-plum) var(--share), var(--color-surface-raised));
+}
+
+/* The chosen country lightens, so its names' points stand out on it. */
+.coverage-map__held.is-selected {
+  fill: color-mix(in srgb, var(--color-plum) 22%, var(--color-surface-raised));
+  stroke: var(--color-plum);
+}
+
+/* A map that comes closer: its buttons over its corner, its tag over a point. */
+.map-frame {
+  inline-size: min(100%, 22rem);
+  position: relative;
+}
+
+.coverage-map .map-frame,
+.cellar-map .map-frame {
+  inline-size: min(100%, 36rem);
+}
+
+.map-frame svg {
+  display: block;
+  inline-size: 100%;
+  user-select: none;
+}
+
+.map-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  inset-block-start: var(--space-2);
+  inset-inline-end: var(--space-2);
+  position: absolute;
+}
+
+.map-controls button {
+  background: rgb(var(--color-surface-rgb) / 92%);
+  block-size: 2.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text);
+  font-size: 1.1rem;
+  inline-size: 2.25rem;
+  line-height: 1;
+}
+
+.map-controls button:disabled {
+  opacity: 0.45;
+}
+
+.coverage-map__point {
+  cursor: pointer;
+  fill: var(--color-surface-raised);
+  stroke: var(--color-text);
+}
+
+.coverage-map__point.is-approximate {
+  fill: transparent;
+}
+
+.coverage-map__point.is-tagged {
+  fill: var(--color-accent);
+}
+
+.map-tag {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 16%);
+  display: grid;
+  font-size: var(--text-sm);
+  gap: 2px;
+  max-inline-size: 15rem;
+  min-inline-size: 9rem;
+  padding: var(--space-2) var(--space-6) var(--space-2) var(--space-3);
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 10px));
+  z-index: 2;
+}
+
+.map-tag span {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.map-tag button {
+  background: transparent;
+  border: 0;
+  color: var(--color-text-muted);
+  inset-block-start: 2px;
+  inset-inline-end: 4px;
+  padding: var(--space-1);
+  position: absolute;
 }
 
 @media (prefers-reduced-motion: no-preference) {

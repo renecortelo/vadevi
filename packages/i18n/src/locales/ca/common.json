@@ -341,7 +341,8 @@
         "japan": "Japó",
         "africa": "Àfrica austral"
       },
-      "seeList": "Veure'n els noms"
+      "seeList": "Veure'n els noms",
+      "allCountries": "Tots els països"
     },
     "aoc": "Denominació d'origen controlada (AOC)",
     "aocShort": "AOC",
@@ -1772,5 +1773,12 @@
     "sessions": "Tastos",
     "about": "Ajustos i més"
   },
-  "sourceShort": "Codi font"
+  "map": {
+    "controls": "Zoom del mapa",
+    "zoomIn": "Apropar",
+    "zoomOut": "Allunyar",
+    "reset": "Veure-ho tot",
+    "open": "Obrir-ne la fitxa",
+    "closeTag": "Tancar"
+  }
 }

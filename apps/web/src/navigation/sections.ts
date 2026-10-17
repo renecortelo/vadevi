@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 
-import { CrateIcon, GrapesIcon, PourIcon, StatsIcon, WineryIcon } from "../brand/NavIcons";
+import { BarrelIcon, CrateIcon, GrapesIcon, PourIcon, WineryIcon } from "../brand/NavIcons";
 
 export type SectionTab = Readonly<{ key: string; to: string }>;
 
@@ -58,7 +58,7 @@ export const sections: readonly Section[] = [
     to: "/library",
   },
   {
-    Icon: StatsIcon,
+    Icon: BarrelIcon,
     key: "me",
     owns: (path) =>
       /^\/(stats|profile|about|spaces|settings)(\/|$)/.test(path) ||

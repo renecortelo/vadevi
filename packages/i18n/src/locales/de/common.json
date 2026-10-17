@@ -341,7 +341,8 @@
         "japan": "Japan",
         "africa": "Südliches Afrika"
       },
-      "seeList": "Seine Namen ansehen"
+      "seeList": "Seine Namen ansehen",
+      "allCountries": "Alle Länder"
     },
     "aoc": "Kontrollierte Ursprungsbezeichnung (AOC)",
     "aocShort": "AOC",
@@ -1772,5 +1773,12 @@
     "sessions": "Events",
     "about": "Einstellungen und mehr"
   },
-  "sourceShort": "Quellcode"
+  "map": {
+    "controls": "Kartenzoom",
+    "zoomIn": "Vergrößern",
+    "zoomOut": "Verkleinern",
+    "reset": "Alles zeigen",
+    "open": "Seite öffnen",
+    "closeTag": "Schließen"
+  }
 }

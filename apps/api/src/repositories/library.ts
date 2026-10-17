@@ -431,22 +431,46 @@ export async function searchLibraryRegions(
   database: D1Database,
   query: string | undefined,
   country: string | null = null,
-): Promise<{ countryCode: string; giType: RegionDesignation; id: string; name: string }[]> {
+): Promise<
+  {
+    countryCode: string;
+    giType: RegionDesignation;
+    id: string;
+    name: string;
+    point?: { approximate: boolean; latitude: number; longitude: number } | null;
+  }[]
+> {
   if (query === undefined) {
     // A country's names, all of them, for the library's list.
     if (country === null) return [];
     const rows = await database
       .prepare(
-        `SELECT id, name, country_code, gi_type FROM kb_regions
-        WHERE country_code = ? ORDER BY name LIMIT 1000`,
+        `SELECT id, name, country_code, gi_type, latitude, longitude, point_source
+        FROM kb_regions WHERE country_code = ? ORDER BY name LIMIT 1000`,
       )
       .bind(country)
-      .all<{ country_code: string; gi_type: RegionDesignation; id: string; name: string }>();
+      .all<{
+        country_code: string;
+        gi_type: RegionDesignation;
+        id: string;
+        latitude: number | null;
+        longitude: number | null;
+        name: string;
+        point_source: string | null;
+      }>();
     return rows.results.map((row) => ({
       countryCode: row.country_code,
       giType: row.gi_type,
       id: row.id,
       name: row.name,
+      point:
+        row.latitude === null || row.longitude === null
+          ? null
+          : {
+              approximate: row.point_source === "area" || row.point_source === "place",
+              latitude: row.latitude,
+              longitude: row.longitude,
+            },
     }));
   }
   const typed = normalizeWineText(query);

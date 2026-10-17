@@ -12,8 +12,8 @@ has the reasons.
   and Me, and each section's pages are tabs at its head — Quick tasting ·
   Identify a bottle · New event; Memory · Cellar · Wishlist · Prices; Library
   · Vicenç; Cellar book · My taste profile · Events · Settings and more. The
-  home's shortcuts are grouped the same way. The source code is linked from
-  the top bar, one touch from every screen, as AGPL-3.0 asks.
+  home's shortcuts are grouped the same way, and the bar's icons are larger.
+  The source code (AGPL-3.0) is offered on «Settings and more».
 - **Always a way back**: every page deeper than a section's tabs opens with
   «← » and the name of the page you came from, and goes back to it in place;
   reached from outside, it leads to the section's first page. The library
@@ -83,6 +83,12 @@ has the reasons.
   into view and after the page has finished changing — not only the first
   time, and not unseen beneath the cross-fade. The atlas's country bars move
   too.
+- **Maps that come closer**: the atlas in figures', a name's and the cellar
+  book's maps zoom with the wheel, a pinch or their + and − buttons, and move
+  with a drag (one finger still scrolls the page until the map is zoomed).
+  On the atlas in figures, touching a country chooses it — the page shows its
+  figures alone — and frames it with a point for each of its names; touching
+  a point names it, with its kind and a link to its page.
 - **Credits, quietly**: every note of where a text, a photo or a map's
   points come from is set the same way across the app — smaller and fainter
   than what it credits. The maps no longer credit Natural Earth, which is

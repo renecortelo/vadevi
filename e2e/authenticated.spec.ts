@@ -130,24 +130,22 @@ test.describe("authenticated screens", () => {
     await expect(deleteButton).toBeEnabled();
   });
 
-  test("offers the source AGPL-3.0 requires, one click from anywhere", async ({ page }) => {
+  test("offers the source AGPL-3.0 requires, from anywhere", async ({ page }) => {
     await page.goto("/memory");
     await page.waitForLoadState("networkidle");
 
     // §13 obliges an operator to offer the Corresponding Source to anyone using
-    // the application over a network: the top bar carries it on every screen,
-    // and About («Me» → «Settings and more») says it again in full.
-    const link = page.locator(".topbar").getByRole("link", { name: /source code/i });
-    await expect(link).toBeVisible();
-    await expect(link).toHaveAttribute("href", /^https?:\/\//);
-
+    // the application over a network: it is on About, «Me» → «Settings and
+    // more», reachable from every screen. This walks that path.
     await page
       .getByRole("navigation", { name: "Primary" })
       .getByRole("link", { name: /^me$/i })
       .click();
     await page.getByRole("link", { name: /settings and more/i }).click();
     await expect(page).toHaveURL(/\/about$/);
-    await expect(page.getByRole("link", { name: /source code \(agpl/i })).toBeVisible();
+    const link = page.getByRole("link", { name: /source code \(agpl/i });
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute("href", /^https?:\/\//);
   });
 });
 
