@@ -1717,6 +1717,7 @@
       "winesBehind": "Els vins darrere de cadascun",
       "then": "Abans",
       "now": "Darrers 12 mesos",
+      "rest": "Altres",
       "pointsVersusAverage_one": "punts davant la teva mitjana, d'{{count}} tast",
       "pointsVersusAverage_other": "punts davant la teva mitjana, de {{count}} tastos",
       "kind": {
@@ -1767,6 +1768,8 @@
   "voice": {
     "title": "Descriu-lo en veu alta",
     "hint": "Digues el vi, el celler, l'anyada i la regió, després el que veus, olores i tastes, i la teva nota. Només s'omplen els camps buits.",
+    "hintDeep": "Digues el que veus, olores i tastes —color, aromes, acidesa, tanins, cos, final—, amb què el prens i la teva nota. Només s'omplen els camps buits, a tots els passos.",
+    "hintWine": "Digues el celler, el nom del vi, l'anyada, la regió i el tipus. Es cerca com si ho escrivissis, i només s'omplen els camps buits.",
     "record": "Gravar",
     "again": "Tornar a gravar",
     "stop": "Aturar",

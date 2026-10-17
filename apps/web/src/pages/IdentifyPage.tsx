@@ -12,21 +12,17 @@ import {
   stopStream,
 } from "../media/barcode";
 import { RegionInput } from "../components/RegionInput";
+import { VoiceNote } from "../components/VoiceNote";
 import { countryOptionsFor } from "../components/country-options";
+import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { confirmIdentification, identifyWine } from "../services/api";
 import { useSession } from "../session/SessionContext";
+import { applyVoiceToWine, type SpokenWine } from "../voice/apply";
 
 type Candidate = IdentificationResponse["data"]["candidates"][number];
 
 /** The wine fields a user can confirm or correct. */
-type WineDraft = {
-  countryCode: string;
-  displayName: string;
-  producerName: string;
-  region: string;
-  vintageYear: string;
-  wineType: string;
-};
+type WineDraft = SpokenWine;
 
 const emptyDraft: WineDraft = {
   countryCode: "",
@@ -82,6 +78,7 @@ export function IdentifyPage() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const { bootstrap } = useSession();
+  const { status } = useOfflineSync();
   const navigate = useNavigate();
   const spaceId = bootstrap.data.user.activeSpaceId;
 
@@ -159,8 +156,12 @@ export function IdentifyPage() {
     setScanning(false);
   }
 
-  async function runIdentification(input: { barcode?: string; manualHint?: string }) {
-    if (user === null) return;
+  /** The proposal's first wine, as the review form shows it; null if it failed. */
+  async function runIdentification(input: {
+    barcode?: string;
+    manualHint?: string;
+  }): Promise<WineDraft | null> {
+    if (user === null) return null;
     setBusy(true);
     setError(null);
     try {
@@ -170,13 +171,51 @@ export function IdentifyPage() {
       });
       setDraftResponse(response.data);
       const first = response.data.candidates[0];
+      const proposed = first === undefined ? emptyDraft : draftFromCandidate(first);
       setSelectedId(first?.candidateId ?? null);
-      setWine(first === undefined ? emptyDraft : draftFromCandidate(first));
+      setWine(proposed);
+      return proposed;
     } catch {
       setError(t("identify.identifyError"));
+      return null;
     } finally {
       setBusy(false);
     }
+  }
+
+  // The form as it is now, for a spoken description that comes back seconds
+  // after it was asked for.
+  const latest = useRef({ draftResponse, wine });
+  useEffect(() => {
+    latest.current = { draftResponse, wine };
+  }, [draftResponse, wine]);
+
+  /**
+   * A spoken description of the bottle: with no proposal yet, what was said of
+   * it is looked up first, as a typed hint would be; then whatever is still
+   * empty in the review takes what was said.
+   */
+  async function applyVoice(proposal: Parameters<typeof applyVoiceToWine>[1]) {
+    let current = latest.current.draftResponse === null ? null : latest.current.wine;
+    if (current === null) {
+      const said = (name: string) => {
+        const field = proposal.fields[name];
+        return field?.status === "explicit" ? String(field.value) : "";
+      };
+      const spoken = [said("producerName"), said("wineName"), said("vintageYear")]
+        .filter((part) => part !== "")
+        .join(" ");
+      if (spoken === "") return { filled: [], suggestions: [] };
+      setHint(spoken);
+      current = await runIdentification({ manualHint: spoken });
+      if (current === null) throw new Error("identification failed");
+    }
+    const applied = applyVoiceToWine(current, proposal);
+    setWine(applied.wine);
+    return {
+      filled: applied.filled,
+      suggestions: applied.suggestions.map(([, field]) => `"${field.quote}"`),
+    };
   }
 
   async function confirm(event: FormEvent<HTMLFormElement>) {
@@ -221,6 +260,15 @@ export function IdentifyPage() {
         <h1>{t("identify.title")}</h1>
         <p>{t("identify.body")}</p>
       </header>
+
+      {bootstrap.data.features.voiceInput ? (
+        <VoiceNote
+          hint="voice.hintWine"
+          onProposal={applyVoice}
+          online={status !== "offline"}
+          spaceId={spaceId}
+        />
+      ) : null}
 
       <section aria-labelledby="scan-title" className="settings-card">
         <h2 id="scan-title">{t("identify.scanTitle")}</h2>

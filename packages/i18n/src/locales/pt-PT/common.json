@@ -1717,6 +1717,7 @@
       "winesBehind": "Os vinhos por trás de cada um",
       "then": "Antes",
       "now": "Últimos 12 meses",
+      "rest": "Outros",
       "pointsVersusAverage_one": "pontos face à tua média, de {{count}} prova",
       "pointsVersusAverage_other": "pontos face à tua média, de {{count}} provas",
       "kind": {
@@ -1767,6 +1768,8 @@
   "voice": {
     "title": "Descreva-o em voz alta",
     "hint": "Diga o vinho, o produtor, a colheita e a região, depois o que vê, cheira e prova, e a sua nota. Só se preenchem os campos vazios.",
+    "hintDeep": "Diga o que vê, cheira e prova — cor, aromas, acidez, taninos, corpo, final —, com que o bebe e a sua nota. Só se preenchem os campos vazios, em todos os passos.",
+    "hintWine": "Diga o produtor, o nome do vinho, a colheita, a região e o tipo. É procurado como se o tivesse escrito, e só se preenchem os campos vazios.",
     "record": "Gravar",
     "again": "Gravar de novo",
     "stop": "Parar",

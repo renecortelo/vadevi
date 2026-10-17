@@ -1,6 +1,6 @@
 import { WineTypeSchema } from "@vadevi/contracts";
 import type { TastingSessionResponse, WineGrape, WineSummary, WineType } from "@vadevi/contracts";
-import { type FormEvent, useEffect, useMemo, useState } from "react";
+import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
   descriptorByCode,
   descriptorsForWineType,
@@ -119,6 +119,13 @@ export function QuickLogPage() {
     return () => globalThis.clearTimeout(timeout);
   }, [draft, ready, saved]);
 
+  // The draft as it is now, for a spoken note that comes back seconds after
+  // it was asked for — whatever was typed meanwhile is not lost.
+  const latestDraft = useRef(draft);
+  useEffect(() => {
+    latestDraft.current = draft;
+  }, [draft]);
+
   const previewUrl = useMemo(
     () => (draft.photo === undefined ? null : URL.createObjectURL(draft.photo.blob)),
     [draft.photo],
@@ -175,7 +182,7 @@ export function QuickLogPage() {
 
   /** A spoken note fills what is still empty; a filled note field opens the note. */
   function applyVoice(proposal: Parameters<typeof applyVoiceProposal>[1]) {
-    const applied = applyVoiceProposal(draft, proposal);
+    const applied = applyVoiceProposal(latestDraft.current, proposal);
     const noteFields = [
       "comment",
       "foodText",

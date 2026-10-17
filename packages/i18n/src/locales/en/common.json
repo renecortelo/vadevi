@@ -1717,6 +1717,7 @@
       "winesBehind": "The wines behind each one",
       "then": "Before",
       "now": "Last 12 months",
+      "rest": "Others",
       "pointsVersusAverage_one": "points against your average, from {{count}} tasting",
       "pointsVersusAverage_other": "points against your average, from {{count}} tastings",
       "kind": {
@@ -1767,6 +1768,8 @@
   "voice": {
     "title": "Describe it aloud",
     "hint": "Say the wine, producer, vintage and region, then what you see, smell and taste, and your score. Only empty fields are filled.",
+    "hintDeep": "Say what you see, smell and taste — colour, aromas, acidity, tannin, body, finish — what you drank it with, and your score. Only empty fields are filled, in every step.",
+    "hintWine": "Say the producer, the wine's name, the vintage, the region and the type. It is looked up as if you had typed it, and only empty fields are filled.",
     "record": "Record",
     "again": "Record again",
     "stop": "Stop",

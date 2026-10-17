@@ -1717,6 +1717,7 @@
       "winesBehind": "I vini dietro ciascuno",
       "then": "Prima",
       "now": "Ultimi 12 mesi",
+      "rest": "Altri",
       "pointsVersusAverage_one": "punti rispetto alla tua media, da {{count}} degustazione",
       "pointsVersusAverage_other": "punti rispetto alla tua media, da {{count}} degustazioni",
       "kind": {
@@ -1767,6 +1768,8 @@
   "voice": {
     "title": "Descrivilo a voce",
     "hint": "Di' il vino, il produttore, l'annata e la regione, poi cosa vedi, senti e assaggi, e il tuo voto. Si riempiono solo i campi vuoti.",
+    "hintDeep": "Di' cosa vedi, senti e assaggi — colore, aromi, acidità, tannini, corpo, finale —, con cosa lo bevi e il tuo voto. Si riempiono solo i campi vuoti, in ogni passo.",
+    "hintWine": "Di' il produttore, il nome del vino, l'annata, la regione e il tipo. Si cerca come se lo avessi scritto, e si riempiono solo i campi vuoti.",
     "record": "Registra",
     "again": "Registra di nuovo",
     "stop": "Ferma",

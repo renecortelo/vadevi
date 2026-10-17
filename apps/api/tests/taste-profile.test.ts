@@ -97,6 +97,22 @@ describe("a reader's taste", () => {
     );
   });
 
+  it("lists of each kind what holds 80 % of the tastings, leaving at most a fifth", () => {
+    const profile = buildTasteProfile(notes, [], [], now);
+    for (const kind of ["type", "country", "region", "grape"] as const) {
+      const entries = profile.habits.mostTasted.filter((entry) => entry.kind === kind);
+      if (entries.length === 0) continue;
+      const held = entries.reduce((sum, entry) => sum + entry.notes, 0);
+      // Enough to hold four fifths, and not one more than that took.
+      expect(held >= 0.8 * notes.length || entries.length === 10).toBe(true);
+      expect(held - entries.at(-1)!.notes).toBeLessThan(0.8 * notes.length);
+    }
+    // Red alone is 80 % of them: the rest is the white.
+    expect(
+      profile.habits.mostTasted.filter((entry) => entry.kind === "type").map((e) => e.key),
+    ).toEqual(["red"]);
+  });
+
   it("hears a tasting without a score through what was said of it", () => {
     const unscored = [1, 2, 3].map((index) =>
       note({ grapes: ["Mencía"], sentiment: "like", wineId: `mencia-${index}` }),

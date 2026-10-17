@@ -10,6 +10,7 @@ import { extractVoice, transcribeVoice } from "../services/voice";
 
 type Proposal = VoiceExtractResponse["data"];
 type Stage = "editing" | "filling" | "idle" | "recording" | "transcribing";
+type Applied = { filled: string[]; suggestions: string[] };
 
 /** Two minutes: enough for a full note, and what the API is sized for. */
 const longest = 120_000;
@@ -31,13 +32,17 @@ const quotaSpent = (reason: unknown) => reason instanceof ApiError && reason.sta
  * Whatever is already in the form is never lost, whatever fails.
  */
 export function VoiceNote({
+  hint = "voice.hint",
   online,
   onProposal,
   spaceId,
 }: {
+  /** What to say, for the form it fills (a catalog key). */
+  hint?: string;
   /** Both steps need the network; offline the form is filled by hand. */
   online: boolean;
-  onProposal: (proposal: Proposal) => { filled: string[]; suggestions: string[] };
+  /** Fills the form; it may first look something up (the wine being added). */
+  onProposal: (proposal: Proposal) => Applied | Promise<Applied>;
   spaceId: string;
 }) {
   const { i18n, t } = useTranslation();
@@ -130,7 +135,7 @@ export function VoiceNote({
         locale,
         new Date().toLocaleDateString("sv"),
       );
-      const applied = onProposal(proposal);
+      const applied = await onProposal(proposal);
       setResult({ ...applied, severalWines: proposal.severalWines });
       setStage("editing");
     } catch (reason) {
@@ -143,7 +148,7 @@ export function VoiceNote({
       <h2 id="voice-note-title">
         <VoiceIcon /> {t("voice.title")}
       </h2>
-      <p className="section-help">{t("voice.hint")}</p>
+      <p className="section-help">{t(hint)}</p>
       <p className="section-help">{t("voice.privacy")}</p>
       <div className="voice-note__actions">
         {stage === "recording" ? (

@@ -1717,6 +1717,7 @@
       "winesBehind": "Les vins derrière chacun",
       "then": "Avant",
       "now": "12 derniers mois",
+      "rest": "Autres",
       "pointsVersusAverage_one": "points par rapport à votre moyenne, sur {{count}} dégustation",
       "pointsVersusAverage_other": "points par rapport à votre moyenne, sur {{count}} dégustations",
       "kind": {
@@ -1767,6 +1768,8 @@
   "voice": {
     "title": "Décrivez-le à voix haute",
     "hint": "Dites le vin, le producteur, le millésime et la région, puis ce que vous voyez, sentez et goûtez, et votre note. Seuls les champs vides sont remplis.",
+    "hintDeep": "Dites ce que vous voyez, sentez et goûtez — couleur, arômes, acidité, tanins, corps, finale —, avec quoi vous le buvez, et votre note. Seuls les champs vides sont remplis, à chaque étape.",
+    "hintWine": "Dites le producteur, le nom du vin, le millésime, la région et le type. Il est recherché comme si vous l'aviez tapé, et seuls les champs vides sont remplis.",
     "record": "Enregistrer",
     "again": "Enregistrer à nouveau",
     "stop": "Arrêter",

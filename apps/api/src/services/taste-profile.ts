@@ -241,25 +241,41 @@ export function buildTasteProfile(
     .slice(0, 6)
     .map((entry) => traitOf(entry.group, "down"));
 
-  // What they reach for, by the kinds a wine is chosen by.
+  // What they reach for, by the kinds a wine is chosen by: of each kind, the
+  // most tasted first, until together they hold 80 % of the tastings — what is
+  // left, at most a fifth, is "the rest" — and never more than ten.
   const habitKinds: TasteTraitKind[] = ["type", "country", "region", "grape"];
-  const mostTasted = habitKinds.flatMap((kind) =>
-    [...groups.values()]
-      .filter((group) => group.kind === kind && group.notes >= 2)
+  const mostTasted = habitKinds.flatMap((kind) => {
+    const ranked = [...groups.values()]
+      .filter((group) => group.kind === kind)
       .sort(
         (left, right) => right.notes - left.notes || labelOf(left).localeCompare(labelOf(right)),
-      )
-      .slice(0, 3)
-      .map((group) => ({
-        key: group.key,
-        kind,
-        label: labelOf(group),
-        notes: group.notes,
-        share: Math.min(1, Math.round((group.notes / notes.length) * 100) / 100),
-      })),
+      );
+    const kept: Group[] = [];
+    let held = 0;
+    for (const group of ranked) {
+      if (held >= 0.8 * notes.length || kept.length === 10) break;
+      kept.push(group);
+      held += group.notes;
+    }
+    return kept.map((group) => ({
+      key: group.key,
+      kind,
+      label: labelOf(group),
+      notes: group.notes,
+      share: Math.min(1, Math.round((group.notes / notes.length) * 100) / 100),
+    }));
+  });
+  // Among the three they reach for most of each kind, what they score below
+  // their usual.
+  const reachedFor = new Set(
+    habitKinds.flatMap((kind) =>
+      mostTasted
+        .filter((entry) => entry.kind === kind && entry.notes >= 2)
+        .slice(0, 3)
+        .map((entry) => `${entry.kind}:${entry.key}`),
+    ),
   );
-  // Among what they reach for most, what they score below their usual.
-  const reachedFor = new Set(mostTasted.map((entry) => `${entry.kind}:${entry.key}`));
   const tensions = dislikes.filter((trait) => reachedFor.has(`${trait.kind}:${trait.key}`));
 
   const pricesByCurrency = new Map<CurrencyCode, number[]>();

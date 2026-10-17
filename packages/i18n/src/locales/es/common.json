@@ -1717,6 +1717,7 @@
       "winesBehind": "Los vinos detrás de cada uno",
       "then": "Antes",
       "now": "Últimos 12 meses",
+      "rest": "Otros",
       "pointsVersusAverage_one": "puntos frente a tu media, de {{count}} cata",
       "pointsVersusAverage_other": "puntos frente a tu media, de {{count}} catas",
       "kind": {
@@ -1767,6 +1768,8 @@
   "voice": {
     "title": "Descríbelo en voz alta",
     "hint": "Di el vino, la bodega, la añada y la región, luego lo que ves, hueles y saboreas, y tu nota. Solo se rellenan los campos vacíos.",
+    "hintDeep": "Di lo que ves, hueles y saboreas —color, aromas, acidez, taninos, cuerpo, final—, con qué lo tomas y tu nota. Solo se rellenan los campos vacíos, en todos los pasos.",
+    "hintWine": "Di la bodega, el nombre del vino, la añada, la región y el tipo. Se busca como si lo escribieras, y solo se rellenan los campos vacíos.",
     "record": "Grabar",
     "again": "Grabar de nuevo",
     "stop": "Parar",

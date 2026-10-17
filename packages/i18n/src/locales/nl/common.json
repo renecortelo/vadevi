@@ -1717,6 +1717,7 @@
       "winesBehind": "De wijnen achter elk",
       "then": "Eerder",
       "now": "Laatste 12 maanden",
+      "rest": "Overige",
       "pointsVersusAverage_one": "punten tegenover je gemiddelde, uit {{count}} proeverij",
       "pointsVersusAverage_other": "punten tegenover je gemiddelde, uit {{count}} proeverijen",
       "kind": {
@@ -1767,6 +1768,8 @@
   "voice": {
     "title": "Beschrijf het hardop",
     "hint": "Noem de wijn, producent, oogstjaar en streek, dan wat je ziet, ruikt en proeft, en je score. Alleen lege velden worden ingevuld.",
+    "hintDeep": "Noem wat je ziet, ruikt en proeft — kleur, aroma's, zuren, tannine, body, afdronk —, waarbij je hem drinkt, en je score. Alleen lege velden worden ingevuld, in elke stap.",
+    "hintWine": "Noem de producent, de naam van de wijn, het oogstjaar, de streek en het type. Er wordt gezocht alsof je het had getypt, en alleen lege velden worden ingevuld.",
     "record": "Opnemen",
     "again": "Opnieuw opnemen",
     "stop": "Stoppen",

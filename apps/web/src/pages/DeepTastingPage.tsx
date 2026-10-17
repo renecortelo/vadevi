@@ -15,6 +15,7 @@ import type { z } from "zod";
 import { DecimalInput } from "../components/DecimalInput";
 import { MapLink } from "../components/MapLink";
 import { VenuePicker } from "../components/VenuePicker";
+import { VoiceNote } from "../components/VoiceNote";
 import { countryOptionsFor } from "../components/country-options";
 import { colorFamiliesFor, hasTannin, hueOptionsFor } from "./deep-tasting-fields";
 import { useAuth } from "../auth/AuthContext";
@@ -25,6 +26,7 @@ import { deepDraftId, deepNoteToRequest, queueDeepTasting } from "../offline/pha
 import { createUlid } from "../security/ulid";
 import { getDeepTastingNote } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
+import { applyVoiceToDeepTasting } from "../voice/apply";
 import { fromLocalDateTimeInput, toLocalDateTimeInput } from "../lib/local-date-time";
 
 type TastingContext = z.infer<typeof TastingContextSchema>;
@@ -344,6 +346,24 @@ export function DeepTastingPage() {
       }
       return { ...current, payload: { ...current.payload, context } };
     });
+  }
+
+  // The draft as it is now, for a spoken note that comes back seconds after
+  // it was asked for — whatever was typed meanwhile is not lost.
+  const latestDraft = useRef(draft);
+  useEffect(() => {
+    latestDraft.current = draft;
+  }, [draft]);
+
+  /** A spoken note fills what is still empty in every step; nothing is saved. */
+  function applyVoice(proposal: Parameters<typeof applyVoiceToDeepTasting>[1]) {
+    const applied = applyVoiceToDeepTasting(latestDraft.current.payload, proposal);
+    setSaved(false);
+    setDraft((current) => ({ ...current, payload: applied.payload }));
+    return {
+      filled: applied.filled,
+      suggestions: applied.suggestions.map(([, field]) => `"${field.quote}"`),
+    };
   }
 
   function phaseDescriptors(phase: TastingPhase) {
@@ -1275,6 +1295,15 @@ export function DeepTastingPage() {
           {t("tasting.backAction")}
         </Link>
       </header>
+
+      {bootstrap.data.features.voiceInput && ready ? (
+        <VoiceNote
+          hint="voice.hintDeep"
+          onProposal={applyVoice}
+          online={status !== "offline"}
+          spaceId={spaceId}
+        />
+      ) : null}
 
       <nav aria-label={t("tasting.progressLabel")} className="tasting-progress" ref={stepTopRef}>
         {steps.map((item, index) => (

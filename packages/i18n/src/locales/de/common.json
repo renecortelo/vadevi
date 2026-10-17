@@ -1717,6 +1717,7 @@
       "winesBehind": "Die Weine hinter jedem Punkt",
       "then": "Vorher",
       "now": "Letzte 12 Monate",
+      "rest": "Andere",
       "pointsVersusAverage_one": "Punkte gegenüber Ihrem Durchschnitt, aus {{count}} Verkostung",
       "pointsVersusAverage_other": "Punkte gegenüber Ihrem Durchschnitt, aus {{count}} Verkostungen",
       "kind": {
@@ -1767,6 +1768,8 @@
   "voice": {
     "title": "Laut beschreiben",
     "hint": "Nennen Sie Wein, Erzeuger, Jahrgang und Region, dann was Sie sehen, riechen und schmecken, und Ihre Bewertung. Nur leere Felder werden ausgefüllt.",
+    "hintDeep": "Nennen Sie, was Sie sehen, riechen und schmecken — Farbe, Aromen, Säure, Tannin, Körper, Abgang —, wozu Sie ihn trinken, und Ihre Bewertung. Nur leere Felder werden ausgefüllt, in jedem Schritt.",
+    "hintWine": "Nennen Sie Erzeuger, Namen des Weins, Jahrgang, Region und Art. Er wird gesucht, als hätten Sie ihn eingetippt, und nur leere Felder werden ausgefüllt.",
     "record": "Aufnehmen",
     "again": "Neu aufnehmen",
     "stop": "Stopp",

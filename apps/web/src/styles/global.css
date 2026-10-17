@@ -4613,6 +4613,7 @@ p {
 
 .taste-donut svg {
   inline-size: 100%;
+  max-inline-size: 12rem;
   transform: rotate(0deg);
 }
 
@@ -4631,6 +4632,8 @@ p {
 }
 
 .taste-donut__legend {
+  /* Set on the list from its length; one row until then. */
+  --legend-rows: 1;
   display: grid;
   gap: var(--space-1);
   list-style: none;
@@ -4638,54 +4641,37 @@ p {
   padding: 0;
 }
 
+/* Many slices: two columns, read down the first and then the second. */
+.taste-donut__legend.is-two-columns {
+  column-gap: var(--space-4);
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  grid-template-rows: repeat(var(--legend-rows), auto);
+  justify-content: start;
+}
+
+@media (max-width: 420px) {
+  .taste-donut__legend {
+    justify-self: stretch;
+  }
+}
+
 .taste-donut__legend li {
   align-items: center;
   display: grid;
   gap: var(--space-2);
-  grid-template-columns: 0.8rem 1fr auto;
+  grid-template-columns: 0.8rem minmax(0, 1fr) auto;
+  min-inline-size: 9rem;
+}
+
+.taste-donut__legend li > span:nth-child(2) {
+  overflow-wrap: anywhere;
 }
 
 .taste-donut__swatch {
   block-size: 0.8rem;
   border-radius: 3px;
   inline-size: 0.8rem;
-}
-
-.taste-donut__slice.is-0 {
-  stroke: var(--color-plum);
-}
-.taste-donut__swatch.is-0 {
-  background: var(--color-plum);
-}
-.taste-donut__slice.is-1 {
-  stroke: #c4624f;
-}
-.taste-donut__swatch.is-1 {
-  background: #c4624f;
-}
-.taste-donut__slice.is-2 {
-  stroke: #d9a441;
-}
-.taste-donut__swatch.is-2 {
-  background: #d9a441;
-}
-.taste-donut__slice.is-3 {
-  stroke: #7a9a5b;
-}
-.taste-donut__swatch.is-3 {
-  background: #7a9a5b;
-}
-.taste-donut__slice.is-4 {
-  stroke: #5b7fa3;
-}
-.taste-donut__swatch.is-4 {
-  background: #5b7fa3;
-}
-.taste-donut__slice.is-5 {
-  stroke: var(--color-border);
-}
-.taste-donut__swatch.is-5 {
-  background: var(--color-border);
 }
 
 .taste-shifts li {

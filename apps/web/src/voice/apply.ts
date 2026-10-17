@@ -1,4 +1,4 @@
-import type { VoiceExtractResponse, WineType } from "@vadevi/contracts";
+import type { DeepTastingRequest, VoiceExtractResponse, WineType } from "@vadevi/contracts";
 
 import type { QuickLogDraft } from "../offline/database";
 
@@ -80,4 +80,132 @@ export function applyVoiceProposal(
   }
   if (filled.length > 0) note.creationMethod = "audio";
   return { draft: { ...draft, notePayload: note, winePayload: wine }, filled, suggestions };
+}
+
+/** The identification form's fields, as strings, the way its inputs hold them. */
+export type SpokenWine = {
+  countryCode: string;
+  displayName: string;
+  producerName: string;
+  region: string;
+  vintageYear: string;
+  wineType: string;
+};
+
+/**
+ * What was said of a bottle, laid onto the wine being added: only empty
+ * fields fill, and what was said of the tasting is not this form's.
+ */
+export function applyVoiceToWine(
+  wine: SpokenWine,
+  proposal: Proposal,
+): { filled: string[]; suggestions: [string, Field][]; wine: SpokenWine } {
+  const next = { ...wine };
+  const filled: string[] = [];
+  const suggestions: [string, Field][] = [];
+  const certain = (name: string) => {
+    const field = proposal.fields[name];
+    if (field === undefined) return undefined;
+    if (field.status === "ambiguous") {
+      suggestions.push([name, field]);
+      return undefined;
+    }
+    return field.value;
+  };
+  const fill = (name: string, key: keyof SpokenWine, value: unknown) => {
+    if ((typeof value !== "string" && typeof value !== "number") || next[key] !== "") return;
+    next[key] = String(value);
+    filled.push(name);
+  };
+  fill("producerName", "producerName", certain("producerName"));
+  fill("wineName", "displayName", certain("wineName"));
+  fill("vintageYear", "vintageYear", certain("vintageYear"));
+  // The registered name, when the atlas placed what was heard.
+  fill("region", "region", proposal.region?.name ?? certain("region"));
+  fill("countryCode", "countryCode", certain("countryCode"));
+  fill("wineType", "wineType", certain("wineType"));
+  return { filled, suggestions, wine: next };
+}
+
+/** The deep tasting's fields a spoken note may fill as said, one to one. */
+const deepFields = [
+  "score100",
+  "sentiment",
+  "wouldBuy",
+  "wouldDrinkAgain",
+  "appearanceClarity",
+  "appearanceColorFamily",
+  "appearanceIntensity",
+  "appearanceHue",
+  "appearanceText",
+  "noseCondition",
+  "noseText",
+  "palateText",
+  "conclusionText",
+  "sweetness",
+  "acidity",
+  "tanninLevel",
+  "body",
+  "finishLength",
+  "tanninTexture",
+  "palateTexture",
+  "effervescence",
+  "beadSize",
+] as const satisfies readonly (keyof DeepTastingRequest)[];
+
+/**
+ * The same, laid onto a deep tasting of a wine already chosen: what was said
+ * of the wine's identity is not this form's (the wine is the one being
+ * tasted), and the date stays the one the form has. Only empty fields fill;
+ * a hedged value comes back as a suggestion.
+ */
+export function applyVoiceToDeepTasting(
+  payload: DeepTastingRequest,
+  proposal: Proposal,
+): { filled: string[]; payload: DeepTastingRequest; suggestions: [string, Field][] } {
+  const next: Record<string, unknown> = { ...payload };
+  const context: Record<string, unknown> = { ...payload.context };
+  const filled: string[] = [];
+  const suggestions: [string, Field][] = [];
+  const certain = (name: string) => {
+    const field = proposal.fields[name];
+    if (field === undefined) return undefined;
+    if (field.status === "ambiguous") {
+      suggestions.push([name, field]);
+      return undefined;
+    }
+    return field.value;
+  };
+  const empty = (value: unknown) => value === undefined || value === null || value === "";
+
+  for (const name of deepFields) {
+    const value = certain(name);
+    if (value === undefined || !empty(next[name])) continue;
+    next[name] = value;
+    filled.push(name);
+  }
+  // The aromas named, in the taster's words, when nothing else was said of the nose.
+  const aromas = certain("aromas");
+  if (Array.isArray(aromas) && aromas.length > 0 && empty(next.noseText)) {
+    next.noseText = aromas.join(", ").slice(0, 2_000);
+    filled.push("aromas");
+  }
+  const food = certain("foodText");
+  if (typeof food === "string" && empty(context.foodText)) {
+    context.foodText = food.slice(0, 500);
+    filled.push("foodText");
+  }
+  const temperature = certain("servingTemperatureC");
+  if (typeof temperature === "number" && empty(context.servingTemperatureTenthsC)) {
+    context.servingTemperatureTenthsC = Math.round(temperature * 10);
+    filled.push("servingTemperatureC");
+  }
+  const decanted = certain("decanted");
+  if (typeof decanted === "boolean" && empty(context.decanted)) {
+    context.decanted = decanted;
+    filled.push("decanted");
+  }
+  if (Object.keys(context).length > 0) next.context = context;
+  if (filled.length > 0) next.creationMethod = "audio";
+  return { filled, payload: next as DeepTastingRequest, suggestions };
 }

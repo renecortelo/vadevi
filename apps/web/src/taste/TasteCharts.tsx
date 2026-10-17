@@ -49,48 +49,77 @@ export function DivergingBars({ rows }: { rows: readonly Row[] }) {
 
 type Slice = { key: string; label: string; share: number };
 
+/** One colour per slice, in order; the rest is always the quiet grey. */
+const sliceColours = [
+  "var(--color-plum)",
+  "#c4624f",
+  "#d9a441",
+  "#7a9a5b",
+  "#5b7fa3",
+  "#8a5a9e",
+  "#4f9a94",
+  "#b5793c",
+  "#a3485f",
+  "#6f7f3a",
+];
+
 /**
- * What the reader drinks most, as a ring: the first five and the rest, each
- * slice drawn round in turn as the ring comes into view, the shares written
- * in its legend.
+ * What the reader drinks most, as a ring: what together holds most of their
+ * tastings (the API lists up to four fifths of them) and the rest, each slice
+ * drawn round in turn as the ring comes into view, the shares written in its
+ * legend — in two columns when there are many.
  */
 export function Donut({ slices }: { slices: readonly Slice[] }) {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const arrival = useArrival<HTMLDivElement>();
   const percent = new Intl.NumberFormat(i18n.language, { style: "percent" });
-  const top = slices.slice(0, 5);
-  const rest = Math.max(0, 1 - top.reduce((sum, slice) => sum + slice.share, 0));
-  const parts = rest > 0.005 ? [...top, { key: "rest", label: "…", share: rest }] : top;
+  const top = slices.slice(0, sliceColours.length);
+  const listed = top.reduce((sum, slice) => sum + slice.share, 0);
+  const rest = Math.max(0, 1 - listed);
+  const parts =
+    rest > 0.005 ? [...top, { key: "rest", label: t("taste.chart.rest"), share: rest }] : top;
+  // A wine of several grapes counts for each: the ring then shares out what
+  // the legend says, so it still closes.
+  const whole = Math.max(1, listed + rest);
   const radius = 15.9155; // a circumference of 100
   // Where each slice starts round the ring, from the top.
   const starts = parts.map((_, index) =>
-    parts.slice(0, index).reduce((sum, part) => sum + part.share * 100, 0),
+    parts.slice(0, index).reduce((sum, part) => sum + (part.share / whole) * 100, 0),
   );
+  const colour = (index: number, key: string) =>
+    key === "rest" ? "var(--color-border)" : sliceColours[index]!;
   return (
     <div className="taste-donut" {...arrival.props}>
       <svg aria-hidden="true" viewBox="0 0 42 42">
         <circle className="taste-donut__ground" cx="21" cy="21" r={radius} />
         {parts.map((part, index) => {
-          const length = part.share * 100;
+          const length = (part.share / whole) * 100;
           const offset = 25 - starts[index]!;
           return (
             <circle
-              className={`taste-donut__slice is-${index}`}
+              className="taste-donut__slice"
               cx="21"
               cy="21"
               key={part.key}
               r={radius}
               strokeDasharray={`${arrival.arrived ? length : 0} ${100 - (arrival.arrived ? length : 0)}`}
               strokeDashoffset={offset}
-              style={{ "--motion-index": index } as CSSProperties}
+              style={{ "--motion-index": index, stroke: colour(index, part.key) } as CSSProperties}
             />
           );
         })}
       </svg>
-      <ul className="taste-donut__legend">
+      <ul
+        className={parts.length > 4 ? "taste-donut__legend is-two-columns" : "taste-donut__legend"}
+        style={{ "--legend-rows": Math.ceil(parts.length / 2) } as CSSProperties}
+      >
         {parts.map((part, index) => (
           <li key={part.key}>
-            <span aria-hidden="true" className={`taste-donut__swatch is-${index}`} />
+            <span
+              aria-hidden="true"
+              className="taste-donut__swatch"
+              style={{ background: colour(index, part.key) }}
+            />
             <span>{part.label}</span>
             <strong>
               <CountUp

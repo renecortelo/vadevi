@@ -59,6 +59,12 @@ has the reasons.
   empty fields are filled, a hedged value is offered with its words, a second
   wine is pointed out, and nothing is saved until the reader saves. Offline
   the button is off, with its reason.
+- **Voice tastings, the deep tasting and a new wine (off)**: the same in the
+  deep tasting, where what was said fills the empty fields of every step
+  (the serving temperature and the food in the context, the aromas as the
+  nose's note when nothing else was said of it), never the wine or the date;
+  and in «Identify a bottle», where what was said of the bottle is looked up
+  as a typed hint would be, then fills what the review leaves empty.
 
 - **Keeping the registers current**: the routine is in `data/kb/README.md`,
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh
@@ -96,7 +102,9 @@ has the reasons.
   opens.
 - **Your taste profile, drawn**: what you score above and below your own
   average is a chart of bars either side of a line, green and red; what you
-  drink most is a ring, by type, country or grape, its shares counting up;
+  drink most is a ring, by type, country or grape, its shares counting up —
+  as many as together hold four fifths of your tastings (up to ten), so
+  «Others» is never more than a fifth, the legend in two columns;
   and how your drinking moved is a pair of bars, before and the last twelve
   months. Each plays as it comes into view; the wines behind each trait are
   folded underneath.
