@@ -1,0 +1,122 @@
+{
+  "$comment": "Wikipedia articles for names beyond the EU that no title rule reached, each read and chosen by hand: an article whose opening says the name is a wine region, district, zone or appellation (not a town of the same name, nor another country's region). Keyed by atlas id; `pnpm kb:fetch-article-items` caches their leads, and `pnpm kb:build-appellations` describes the name by its article where nothing else does. Chosen on 17 October 2026 from a search of the English, Spanish, Portuguese, French, German and Italian Wikipedias.",
+  "items": {
+    "ar-cuyo": {
+      "qid": "Q1146743"
+    },
+    "ar-lujan-de-cuyo-doc": {
+      "qid": "Q5984737"
+    },
+    "au-alpine-valleys": {
+      "qid": "Q4735530"
+    },
+    "au-blackwood-valley": {
+      "qid": "Q16254915"
+    },
+    "au-high-eden": {
+      "qid": "Q5755353"
+    },
+    "au-king-valley": {
+      "qid": "Q6412131"
+    },
+    "au-mclaren-vale": {
+      "qid": "Q6802082"
+    },
+    "au-murray-darling": {
+      "qid": "Q25182598"
+    },
+    "au-north-east-victoria": {
+      "qid": "Q28183583"
+    },
+    "au-perricoota": {
+      "qid": "Q24521742"
+    },
+    "au-pyrenees": {
+      "qid": "Q3411307"
+    },
+    "au-shoalhaven-coast": {
+      "qid": "Q24090217"
+    },
+    "au-south-burnett": {
+      "qid": "Q7566458"
+    },
+    "au-southern-flinders-ranges": {
+      "qid": "Q7569916"
+    },
+    "au-upper-goulburn": {
+      "qid": "Q101212516"
+    },
+    "au-western-plains": {
+      "qid": "Q73334818"
+    },
+    "au-wrattonbully": {
+      "qid": "Q8037630"
+    },
+    "ca-okanagan-valley": {
+      "qid": "Q7081806"
+    },
+    "ch-calamin": {
+      "qid": "Q2933534"
+    },
+    "ch-la-cote": {
+      "qid": "Q666244"
+    },
+    "cl-valle-de-casablanca": {
+      "qid": "Q6159077"
+    },
+    "cl-valle-de-copiapo": {
+      "qid": "Q5168576"
+    },
+    "cl-valle-de-curico": {
+      "qid": "Q6159084"
+    },
+    "cl-valle-de-leyda": {
+      "qid": "Q11062539"
+    },
+    "cl-valle-de-san-antonio": {
+      "qid": "Q5803754"
+    },
+    "cl-valle-del-aconcagua": {
+      "qid": "Q6159199"
+    },
+    "cl-valle-del-cautin": {
+      "qid": "Q25406069"
+    },
+    "cl-valle-del-choapa": {
+      "qid": "Q6159202"
+    },
+    "cl-valle-del-claro": {
+      "qid": "Q6159204"
+    },
+    "cl-valle-del-huasco": {
+      "qid": "Q6159226"
+    },
+    "cl-valle-del-loncomilla": {
+      "qid": "Q6159233"
+    },
+    "cl-valle-del-malleco": {
+      "qid": "Q6159237"
+    },
+    "cl-valle-del-marga-marga": {
+      "qid": "Q6159239"
+    },
+    "cl-valle-del-teno": {
+      "qid": "Q5557008"
+    },
+    "cl-valle-del-tutuven": {
+      "qid": "Q6159265"
+    },
+    "md-codru": {
+      "qid": "Q5140375"
+    },
+    "us-ancient-lakes-of-columbia-valley": {
+      "qid": "Q23018002"
+    },
+    "us-swan-creek": {
+      "qid": "Q7653432"
+    },
+    "za-breede-river-valley": {
+      "qid": "Q4960213"
+    }
+  }
+}

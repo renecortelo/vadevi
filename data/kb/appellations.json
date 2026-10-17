@@ -271979,11 +271979,51 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "27 CFR 9.211",
     "registeredOn": "2008-05-27",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Swan Creek is an American Viticultural Area (AVA) located in northwestern North Carolina, United States, within portions of Iredell, Wilkes and Yadkin Counties that lie on the Piedmont plateau region.",
+        "url": "https://en.wikipedia.org/wiki/Swan_Creek_AVA"
+      },
+      "es": {
+        "text": "Swan Creek es un área vitícola estadounidense (AVA) situada en el noroeste de Carolina del Norte (Estados Unidos), en partes de los condados de Iredell, Wilkes y Yadkin que se encuentran en la meseta del Piedmont.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Swan_Creek_AVA"
+      },
+      "ca": {
+        "text": "Swan Creek és una àrea vitícola nord-americana (AVA) situada al nord-oest de Carolina del Nord (Estats Units), en parts dels comtats d'Iredell, Wilkes i Yadkin que són a l'altiplà del Piedmont.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Swan_Creek_AVA"
+      },
+      "fr": {
+        "text": "Swan Creek est une zone viticole américaine (AVA) située dans le nord-ouest de la Caroline du Nord (États-Unis), sur les parties des comtés d'Iredell, de Wilkes et de Yadkin qui se trouvent sur le plateau du Piedmont.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Swan_Creek_AVA"
+      },
+      "de": {
+        "text": "Swan Creek ist ein amerikanisches Weinbaugebiet (AVA) im Nordwesten von North Carolina (Vereinigte Staaten), in den Teilen der Countys Iredell, Wilkes und Yadkin, die auf dem Piedmont-Plateau liegen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Swan_Creek_AVA"
+      },
+      "it": {
+        "text": "Swan Creek è un'area viticola americana (AVA) situata nella Carolina del Nord nord-occidentale (Stati Uniti), nelle parti delle contee di Iredell, Wilkes e Yadkin che si trovano sull'altopiano del Piedmont.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Swan_Creek_AVA"
+      },
+      "nl": {
+        "text": "Swan Creek is een Amerikaans wijnbouwgebied (AVA) in het noordwesten van North Carolina (Verenigde Staten), in de delen van de county's Iredell, Wilkes en Yadkin die op het Piedmontplateau liggen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Swan_Creek_AVA"
+      },
+      "pt": {
+        "text": "Swan Creek é uma área vitícola americana (AVA) situada no noroeste da Carolina do Norte (Estados Unidos), nas partes dos condados de Iredell, Wilkes e Yadkin que ficam no planalto do Piedmont.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Swan_Creek_AVA"
+      }
+    },
+    "wikidataId": "Q7653432",
     "within": [
       "us-yadkin-valley"
     ]
@@ -273067,11 +273107,51 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "27 CFR 9.227",
     "registeredOn": "2012-11-19",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Ancient Lakes of Columbia Valley, also locally called Ancient Lakes, is an American Viticultural Area (AVA) located in the state of Washington on the western edge of the Columbia Basin, within the Quincy Basin landform encompassing portions of Douglas, Grant, and Kittitas Counties near the town of Quincy.",
+        "url": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      "es": {
+        "text": "Ancient Lakes of Columbia Valley, también llamada localmente Ancient Lakes, es un área vitícola estadounidense (AVA) situada en el estado de Washington, en el borde occidental de la cuenca del Columbia, dentro de la cuenca de Quincy, que abarca partes de los condados de Douglas, Grant y Kittitas, cerca de la localidad de Quincy.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      "ca": {
+        "text": "Ancient Lakes of Columbia Valley, també anomenada localment Ancient Lakes, és una àrea vitícola nord-americana (AVA) situada a l'estat de Washington, a la vora occidental de la conca del Columbia, dins la conca de Quincy, que abraça parts dels comtats de Douglas, Grant i Kittitas, a prop de la localitat de Quincy.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      "fr": {
+        "text": "Ancient Lakes of Columbia Valley, aussi appelée localement Ancient Lakes, est une zone viticole américaine (AVA) située dans l'État de Washington, à la lisière ouest du bassin du Columbia, dans le bassin de Quincy, qui englobe des parties des comtés de Douglas, Grant et Kittitas, près de la localité de Quincy.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      "de": {
+        "text": "Ancient Lakes of Columbia Valley, örtlich auch Ancient Lakes genannt, ist ein amerikanisches Weinbaugebiet (AVA) im Bundesstaat Washington am Westrand des Columbia-Beckens, im Quincy-Becken, das Teile der Countys Douglas, Grant und Kittitas nahe dem Ort Quincy umfasst.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      "it": {
+        "text": "Ancient Lakes of Columbia Valley, chiamata localmente anche Ancient Lakes, è un'area viticola americana (AVA) situata nello stato di Washington, sul margine occidentale del bacino del Columbia, nel bacino di Quincy, che comprende parti delle contee di Douglas, Grant e Kittitas, vicino alla località di Quincy.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      "nl": {
+        "text": "Ancient Lakes of Columbia Valley, plaatselijk ook Ancient Lakes genoemd, is een Amerikaans wijnbouwgebied (AVA) in de staat Washington, aan de westrand van het Columbiabekken, in het Quincybekken, dat delen van de county's Douglas, Grant en Kittitas omvat, bij het plaatsje Quincy.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      "pt": {
+        "text": "Ancient Lakes of Columbia Valley, também chamada localmente Ancient Lakes, é uma área vitícola americana (AVA) situada no estado de Washington, no limite ocidental da bacia do Columbia, na bacia de Quincy, que abrange partes dos condados de Douglas, Grant e Kittitas, perto da localidade de Quincy.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      }
+    },
+    "wikidataId": "Q23018002",
     "within": [
       "us-columbia-valley"
     ]
@@ -279649,11 +279729,50 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 2,
     "registerLevel": "region",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Breede River Valley is a region of Western Cape Province, South Africa known for being the largest fruit and wine producing valley in the Western Cape, as well as South Africa's leading race-horse breeding area. It is part of the Boland bordering on becoming Little Karoo towards the east.",
+        "url": "https://en.wikipedia.org/wiki/Breede_River_Valley"
+      },
+      "fr": {
+        "text": "La vallée de la rivière Breede est une vallée située dans la province du Cap-Occidental, en Afrique du Sud. Elle est traversée par la Breede et constitue l'une des principales régions agricoles du Cap-Occidental. Elle est connue pour sa production fruitière, sa viticulture et l'élevage de chevaux de course. La vallée fait partie du Boland et borde, à l'est, le Petit Karoo.",
+        "url": "https://fr.wikipedia.org/wiki/Vall%C3%A9e_de_la_rivi%C3%A8re_Breede"
+      },
+      "es": {
+        "text": "El Breede River Valley es una región de la provincia del Cabo Occidental (Sudáfrica) conocida por ser el mayor valle productor de fruta y vino del Cabo Occidental, y también la principal zona de cría de caballos de carreras de Sudáfrica. Forma parte del Boland y, hacia el este, linda ya con el Pequeño Karoo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Breede_River_Valley"
+      },
+      "ca": {
+        "text": "El Breede River Valley és una regió de la província del Cap Occidental (Sud-àfrica) coneguda per ser la vall productora de fruita i vi més gran del Cap Occidental, i també la principal zona de cria de cavalls de curses de Sud-àfrica. Forma part del Boland i, cap a l'est, ja toca el Petit Karoo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Breede_River_Valley"
+      },
+      "de": {
+        "text": "Das Breede River Valley ist eine Region der Provinz Westkap (Südafrika), bekannt als größtes Obst- und Weinbautal des Westkaps und als wichtigstes Rennpferdezuchtgebiet Südafrikas. Es gehört zum Boland und grenzt im Osten an die Kleine Karoo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Breede_River_Valley"
+      },
+      "it": {
+        "text": "La Breede River Valley è una regione della provincia del Capo Occidentale (Sudafrica) nota per essere la più grande valle produttrice di frutta e vino del Capo Occidentale, nonché la principale zona di allevamento di cavalli da corsa del Sudafrica. Fa parte del Boland e verso est confina ormai con il Piccolo Karoo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Breede_River_Valley"
+      },
+      "nl": {
+        "text": "De Breede River Valley is een regio in de provincie West-Kaap (Zuid-Afrika), bekend als de grootste fruit- en wijnvallei van de West-Kaap en als het belangrijkste fokgebied van renpaarden van Zuid-Afrika. Ze maakt deel uit van de Boland en grenst in het oosten bijna aan de Kleine Karoo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Breede_River_Valley"
+      },
+      "pt": {
+        "text": "O Breede River Valley é uma região da província do Cabo Ocidental (África do Sul) conhecida por ser o maior vale produtor de fruta e vinho do Cabo Ocidental e também a principal zona de criação de cavalos de corrida da África do Sul. Faz parte do Boland e, a leste, confina já com o Pequeno Karoo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Breede_River_Valley"
+      }
+    },
+    "wikidataId": "Q4960213",
     "within": [
       "za-western-cape",
       "za-greater-cape"
@@ -284111,11 +284230,50 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 2,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Copiapó Valley is a wine-producing region of Chile. It extends through the entirety of the Copiapó Province and has been considered in the law since 1994.",
+        "url": "https://en.wikipedia.org/wiki/Copiap%C3%B3_Valley"
+      },
+      "es": {
+        "text": "Valle de Copiapó es una denominación de origen para vinos y otros productos vinícolas procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura N.º  464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Copiap%C3%B3"
+      },
+      "ca": {
+        "text": "Valle de Copiapó és una denominació d'origen per a vins i altres productes vinícoles procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Copiap%C3%B3"
+      },
+      "fr": {
+        "text": "Valle de Copiapó est une dénomination d'origine pour les vins et autres produits vinicoles provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Copiap%C3%B3"
+      },
+      "de": {
+        "text": "Valle de Copiapó ist eine Ursprungsbezeichnung für Weine und andere Weinerzeugnisse aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Copiap%C3%B3"
+      },
+      "it": {
+        "text": "Valle de Copiapó è una denominazione di origine per vini e altri prodotti vinicoli provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Copiap%C3%B3"
+      },
+      "nl": {
+        "text": "Valle de Copiapó is een oorsprongsbenaming voor wijnen en andere wijnproducten uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Copiap%C3%B3"
+      },
+      "pt": {
+        "text": "Valle de Copiapó é uma denominação de origem para vinhos e outros produtos vínicos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Copiap%C3%B3"
+      }
+    },
+    "wikidataId": "Q5168576",
     "within": [
       "cl-region-de-atacama"
     ]
@@ -284143,11 +284301,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Huasco es una denominación de origen para vinos y otros productos vinícolas procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura nº 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Huasco_(vino)"
+      },
+      "en": {
+        "text": "Valle del Huasco is a denomination of origin for wines and other wine products from the subregion of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Huasco_(vino)"
+      },
+      "ca": {
+        "text": "Valle del Huasco és una denominació d'origen per a vins i altres productes vinícoles procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Huasco_(vino)"
+      },
+      "fr": {
+        "text": "Valle del Huasco est une dénomination d'origine pour les vins et autres produits vinicoles provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Huasco_(vino)"
+      },
+      "de": {
+        "text": "Valle del Huasco ist eine Ursprungsbezeichnung für Weine und andere Weinerzeugnisse aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Huasco_(vino)"
+      },
+      "it": {
+        "text": "Valle del Huasco è una denominazione di origine per vini e altri prodotti vinicoli provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Huasco_(vino)"
+      },
+      "nl": {
+        "text": "Valle del Huasco is een oorsprongsbenaming voor wijnen en andere wijnproducten uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Huasco_(vino)"
+      },
+      "pt": {
+        "text": "Valle del Huasco é uma denominação de origem para vinhos e outros produtos vínicos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Huasco_(vino)"
+      }
+    },
+    "wikidataId": "Q6159226",
     "within": [
       "cl-region-de-atacama"
     ]
@@ -284494,11 +284692,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Choapa es una denominación de origen chilena para vinos procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Choapa"
+      },
+      "en": {
+        "text": "Valle del Choapa is a Chilean denomination of origin for wines from the subregion of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Choapa"
+      },
+      "ca": {
+        "text": "Valle del Choapa és una denominació d'origen xilena per a vins procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Choapa"
+      },
+      "fr": {
+        "text": "Valle del Choapa est une dénomination d'origine chilienne pour les vins provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Choapa"
+      },
+      "de": {
+        "text": "Valle del Choapa ist eine chilenische Ursprungsbezeichnung für Weine aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Choapa"
+      },
+      "it": {
+        "text": "Valle del Choapa è una denominazione di origine cilena per vini provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Choapa"
+      },
+      "nl": {
+        "text": "Valle del Choapa is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Choapa"
+      },
+      "pt": {
+        "text": "Valle del Choapa é uma denominação de origem chilena para vinhos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Choapa"
+      }
+    },
+    "wikidataId": "Q6159202",
     "within": [
       "cl-region-de-coquimbo"
     ]
@@ -284650,11 +284888,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Aconcagua es una denominación de origen chilena para vinos procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_(vino)"
+      },
+      "en": {
+        "text": "Valle del Aconcagua is a Chilean denomination of origin for wines from the subregion of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_(vino)"
+      },
+      "ca": {
+        "text": "Valle del Aconcagua és una denominació d'origen xilena per a vins procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_(vino)"
+      },
+      "fr": {
+        "text": "Valle del Aconcagua est une dénomination d'origine chilienne pour les vins provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_(vino)"
+      },
+      "de": {
+        "text": "Valle del Aconcagua ist eine chilenische Ursprungsbezeichnung für Weine aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_(vino)"
+      },
+      "it": {
+        "text": "Valle del Aconcagua è una denominazione di origine cilena per vini provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_(vino)"
+      },
+      "nl": {
+        "text": "Valle del Aconcagua is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_(vino)"
+      },
+      "pt": {
+        "text": "Valle del Aconcagua é uma denominação de origem chilena para vinhos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_(vino)"
+      }
+    },
+    "wikidataId": "Q6159199",
     "within": [
       "cl-region-de-aconcagua"
     ]
@@ -284929,11 +285207,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle de Casablanca es una denominación de origen chilena para vinos procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      "en": {
+        "text": "Valle de Casablanca is a Chilean denomination of origin for wines from the subregion of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      "ca": {
+        "text": "Valle de Casablanca és una denominació d'origen xilena per a vins procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      "fr": {
+        "text": "Valle de Casablanca est une dénomination d'origine chilienne pour les vins provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      "de": {
+        "text": "Valle de Casablanca ist eine chilenische Ursprungsbezeichnung für Weine aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      "it": {
+        "text": "Valle de Casablanca è una denominazione di origine cilena per vini provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      "nl": {
+        "text": "Valle de Casablanca is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      "pt": {
+        "text": "Valle de Casablanca é uma denominação de origem chilena para vinhos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      }
+    },
+    "wikidataId": "Q6159077",
     "within": [
       "cl-region-de-aconcagua"
     ]
@@ -284956,11 +285274,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle de San Antonio es una denominación de origen chilena para vinos procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      "en": {
+        "text": "Valle de San Antonio is a Chilean denomination of origin for wines from the subregion of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      "ca": {
+        "text": "Valle de San Antonio és una denominació d'origen xilena per a vins procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      "fr": {
+        "text": "Valle de San Antonio est une dénomination d'origine chilienne pour les vins provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      "de": {
+        "text": "Valle de San Antonio ist eine chilenische Ursprungsbezeichnung für Weine aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      "it": {
+        "text": "Valle de San Antonio è una denominazione di origine cilena per vini provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      "nl": {
+        "text": "Valle de San Antonio is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      "pt": {
+        "text": "Valle de San Antonio é uma denominação de origem chilena para vinhos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      }
+    },
+    "wikidataId": "Q5803754",
     "within": [
       "cl-region-de-aconcagua"
     ]
@@ -284983,11 +285341,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "zone",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle de Leyda es una denominación de origen chilena para vinos procedentes de la zona vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura nº 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      "en": {
+        "text": "Valle de Leyda is a Chilean denomination of origin for wines from the zone of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      "ca": {
+        "text": "Valle de Leyda és una denominació d'origen xilena per a vins procedents de la zona vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      "fr": {
+        "text": "Valle de Leyda est une dénomination d'origine chilienne pour les vins provenant de la zone viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      "de": {
+        "text": "Valle de Leyda ist eine chilenische Ursprungsbezeichnung für Weine aus der gleichnamigen Weinbauzone, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      "it": {
+        "text": "Valle de Leyda è una denominazione di origine cilena per vini provenienti dalla zona viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      "nl": {
+        "text": "Valle de Leyda is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwzone die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      "pt": {
+        "text": "Valle de Leyda é uma denominação de origem chilena para vinhos provenientes da zona vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      }
+    },
+    "wikidataId": "Q11062539",
     "within": [
       "cl-valle-de-san-antonio",
       "cl-region-de-aconcagua"
@@ -285153,11 +285551,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "area",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Marga-Marga es una denominación de origen chilena para vinos procedentes del área vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Marga-Marga"
+      },
+      "en": {
+        "text": "Valle del Marga-Marga is a Chilean denomination of origin for wines from the area of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Marga-Marga"
+      },
+      "ca": {
+        "text": "Valle del Marga-Marga és una denominació d'origen xilena per a vins procedents de l'àrea vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Marga-Marga"
+      },
+      "fr": {
+        "text": "Valle del Marga-Marga est une dénomination d'origine chilienne pour les vins provenant de l'aire viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Marga-Marga"
+      },
+      "de": {
+        "text": "Valle del Marga-Marga ist eine chilenische Ursprungsbezeichnung für Weine aus dem gleichnamigen Weinbaugebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Marga-Marga"
+      },
+      "it": {
+        "text": "Valle del Marga-Marga è una denominazione di origine cilena per vini provenienti dall'area viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Marga-Marga"
+      },
+      "nl": {
+        "text": "Valle del Marga-Marga is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwgebied die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Marga-Marga"
+      },
+      "pt": {
+        "text": "Valle del Marga-Marga é uma denominação de origem chilena para vinhos provenientes da área vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Marga-Marga"
+      }
+    },
+    "wikidataId": "Q6159239",
     "within": [
       "cl-region-de-aconcagua"
     ]
@@ -286464,11 +286902,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle de Curicó es una denominación de origen chilena para vinos procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura nº 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      },
+      "en": {
+        "text": "Valle de Curicó is a Chilean denomination of origin for wines from the subregion of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      },
+      "ca": {
+        "text": "Valle de Curicó és una denominació d'origen xilena per a vins procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      },
+      "fr": {
+        "text": "Valle de Curicó est une dénomination d'origine chilienne pour les vins provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      },
+      "de": {
+        "text": "Valle de Curicó ist eine chilenische Ursprungsbezeichnung für Weine aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      },
+      "it": {
+        "text": "Valle de Curicó è una denominazione di origine cilena per vini provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      },
+      "nl": {
+        "text": "Valle de Curicó is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      },
+      "pt": {
+        "text": "Valle de Curicó é uma denominação de origem chilena para vinhos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      }
+    },
+    "wikidataId": "Q6159084",
     "within": [
       "cl-region-del-valle-central"
     ]
@@ -286491,11 +286969,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "zone",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Teno es una denominación de origen chilena para vinos procedentes de la zona vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura nº 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Teno"
+      },
+      "en": {
+        "text": "Valle del Teno is a Chilean denomination of origin for wines from the zone of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Teno"
+      },
+      "ca": {
+        "text": "Valle del Teno és una denominació d'origen xilena per a vins procedents de la zona vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Teno"
+      },
+      "fr": {
+        "text": "Valle del Teno est une dénomination d'origine chilienne pour les vins provenant de la zone viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Teno"
+      },
+      "de": {
+        "text": "Valle del Teno ist eine chilenische Ursprungsbezeichnung für Weine aus der gleichnamigen Weinbauzone, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Teno"
+      },
+      "it": {
+        "text": "Valle del Teno è una denominazione di origine cilena per vini provenienti dalla zona viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Teno"
+      },
+      "nl": {
+        "text": "Valle del Teno is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwzone die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Teno"
+      },
+      "pt": {
+        "text": "Valle del Teno é uma denominação de origem chilena para vinhos provenientes da zona vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Teno"
+      }
+    },
+    "wikidataId": "Q5557008",
     "within": [
       "cl-valle-de-curico",
       "cl-region-del-valle-central"
@@ -286833,11 +287351,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "zone",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Claro es una denominación de origen chilena para vinos procedentes de la zona vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Claro"
+      },
+      "en": {
+        "text": "Valle del Claro is a Chilean denomination of origin for wines from the zone of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Claro"
+      },
+      "ca": {
+        "text": "Valle del Claro és una denominació d'origen xilena per a vins procedents de la zona vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Claro"
+      },
+      "fr": {
+        "text": "Valle del Claro est une dénomination d'origine chilienne pour les vins provenant de la zone viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Claro"
+      },
+      "de": {
+        "text": "Valle del Claro ist eine chilenische Ursprungsbezeichnung für Weine aus der gleichnamigen Weinbauzone, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Claro"
+      },
+      "it": {
+        "text": "Valle del Claro è una denominazione di origine cilena per vini provenienti dalla zona viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Claro"
+      },
+      "nl": {
+        "text": "Valle del Claro is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwzone die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Claro"
+      },
+      "pt": {
+        "text": "Valle del Claro é uma denominação de origem chilena para vinhos provenientes da zona vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Claro"
+      }
+    },
+    "wikidataId": "Q6159204",
     "within": [
       "cl-valle-del-maule",
       "cl-region-del-valle-central"
@@ -287035,11 +287593,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "zone",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Loncomilla es una denominación de origen chilena para vinos procedentes de la zona vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Loncomilla"
+      },
+      "en": {
+        "text": "Valle del Loncomilla is a Chilean denomination of origin for wines from the zone of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Loncomilla"
+      },
+      "ca": {
+        "text": "Valle del Loncomilla és una denominació d'origen xilena per a vins procedents de la zona vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Loncomilla"
+      },
+      "fr": {
+        "text": "Valle del Loncomilla est une dénomination d'origine chilienne pour les vins provenant de la zone viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Loncomilla"
+      },
+      "de": {
+        "text": "Valle del Loncomilla ist eine chilenische Ursprungsbezeichnung für Weine aus der gleichnamigen Weinbauzone, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Loncomilla"
+      },
+      "it": {
+        "text": "Valle del Loncomilla è una denominazione di origine cilena per vini provenienti dalla zona viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Loncomilla"
+      },
+      "nl": {
+        "text": "Valle del Loncomilla is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwzone die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Loncomilla"
+      },
+      "pt": {
+        "text": "Valle del Loncomilla é uma denominação de origem chilena para vinhos provenientes da zona vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Loncomilla"
+      }
+    },
+    "wikidataId": "Q6159233",
     "within": [
       "cl-valle-del-maule",
       "cl-region-del-valle-central"
@@ -287266,11 +287864,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "zone",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Tutuvén es una denominación de origen chilena para vinos procedentes de la zona vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura nº 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Tutuv%C3%A9n"
+      },
+      "en": {
+        "text": "Valle del Tutuvén is a Chilean denomination of origin for wines from the zone of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Tutuv%C3%A9n"
+      },
+      "ca": {
+        "text": "Valle del Tutuvén és una denominació d'origen xilena per a vins procedents de la zona vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Tutuv%C3%A9n"
+      },
+      "fr": {
+        "text": "Valle del Tutuvén est une dénomination d'origine chilienne pour les vins provenant de la zone viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Tutuv%C3%A9n"
+      },
+      "de": {
+        "text": "Valle del Tutuvén ist eine chilenische Ursprungsbezeichnung für Weine aus der gleichnamigen Weinbauzone, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Tutuv%C3%A9n"
+      },
+      "it": {
+        "text": "Valle del Tutuvén è una denominazione di origine cilena per vini provenienti dalla zona viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Tutuv%C3%A9n"
+      },
+      "nl": {
+        "text": "Valle del Tutuvén is een Chileense oorsprongsbenaming voor wijnen uit de gelijknamige wijnbouwzone die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Tutuv%C3%A9n"
+      },
+      "pt": {
+        "text": "Valle del Tutuvén é uma denominação de origem chilena para vinhos provenientes da zona vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Tutuv%C3%A9n"
+      }
+    },
+    "wikidataId": "Q6159265",
     "within": [
       "cl-valle-del-maule",
       "cl-region-del-valle-central"
@@ -287668,11 +288306,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Malleco es una denominación de origen para vinos y otros productos vinícolas procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      },
+      "en": {
+        "text": "Valle del Malleco is a denomination of origin for wines and other wine products from the subregion of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      },
+      "ca": {
+        "text": "Valle del Malleco és una denominació d'origen per a vins i altres productes vinícoles procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      },
+      "fr": {
+        "text": "Valle del Malleco est une dénomination d'origine pour les vins et autres produits vinicoles provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      },
+      "de": {
+        "text": "Valle del Malleco ist eine Ursprungsbezeichnung für Weine und andere Weinerzeugnisse aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      },
+      "it": {
+        "text": "Valle del Malleco è una denominazione di origine per vini e altri prodotti vinicoli provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      },
+      "nl": {
+        "text": "Valle del Malleco is een oorsprongsbenaming voor wijnen en andere wijnproducten uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      },
+      "pt": {
+        "text": "Valle del Malleco é uma denominação de origem para vinhos e outros produtos vínicos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      }
+    },
+    "wikidataId": "Q6159237",
     "within": [
       "cl-region-del-sur"
     ]
@@ -287796,11 +288474,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "subregion",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Valle del Cautín es una denominación de origen para vinos y otros productos vinícolas procedentes de la subregión vitícola homónima que se ajusten a los requisitos establecidos por el Decreto de Agricultura n.º 464 de 14 de diciembre de 1994, que establece la zonificación vitícola del país y fija las normas para su utilización como denominaciones de origen.",
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Caut%C3%ADn"
+      },
+      "en": {
+        "text": "Valle del Cautín is a denomination of origin for wines and other wine products from the subregion of the same name that meet the requirements of Agriculture Decree No. 464 of 14 December 1994, which sets out the country's viticultural zoning and the rules for its use as denominations of origin.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Caut%C3%ADn"
+      },
+      "ca": {
+        "text": "Valle del Cautín és una denominació d'origen per a vins i altres productes vinícoles procedents de la subregió vitícola homònima que compleixin els requisits establerts pel Decret d'Agricultura núm. 464, de 14 de desembre de 1994, que estableix la zonificació vitícola del país i fixa les normes per al seu ús com a denominacions d'origen.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Caut%C3%ADn"
+      },
+      "fr": {
+        "text": "Valle del Cautín est une dénomination d'origine pour les vins et autres produits vinicoles provenant de la sous-région viticole du même nom qui satisfont aux exigences du décret de l'Agriculture n° 464 du 14 décembre 1994, qui établit le zonage viticole du pays et fixe les règles de son usage comme dénominations d'origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Caut%C3%ADn"
+      },
+      "de": {
+        "text": "Valle del Cautín ist eine Ursprungsbezeichnung für Weine und andere Weinerzeugnisse aus dem gleichnamigen Weinbau-Teilgebiet, die den Anforderungen des Landwirtschaftsdekrets Nr. 464 vom 14. Dezember 1994 entsprechen, das die Weinbauzonierung des Landes festlegt und die Regeln für ihre Verwendung als Ursprungsbezeichnungen bestimmt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Caut%C3%ADn"
+      },
+      "it": {
+        "text": "Valle del Cautín è una denominazione di origine per vini e altri prodotti vinicoli provenienti dalla sottoregione viticola omonima che rispettano i requisiti stabiliti dal Decreto dell'Agricoltura n. 464 del 14 dicembre 1994, che stabilisce la zonazione viticola del paese e fissa le norme per il suo uso come denominazioni di origine.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Caut%C3%ADn"
+      },
+      "nl": {
+        "text": "Valle del Cautín is een oorsprongsbenaming voor wijnen en andere wijnproducten uit de gelijknamige wijnbouwsubregio die voldoen aan de eisen van Landbouwdecreet nr. 464 van 14 december 1994, dat de wijnbouwzonering van het land vastlegt en de regels voor het gebruik ervan als oorsprongsbenamingen bepaalt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Caut%C3%ADn"
+      },
+      "pt": {
+        "text": "Valle del Cautín é uma denominação de origem para vinhos e outros produtos vínicos provenientes da sub-região vitícola homónima que cumpram os requisitos estabelecidos pelo Decreto de Agricultura n.º 464, de 14 de dezembro de 1994, que estabelece o zonamento vitícola do país e fixa as normas para a sua utilização como denominações de origem.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Valle_del_Caut%C3%ADn"
+      }
+    },
+    "wikidataId": "Q25406069",
     "within": [
       "cl-region-austral"
     ]
@@ -288665,11 +289383,40 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 8,
     "registerRef": "Resolución INV Nº C.37/2002",
     "registeredOn": "2002-12-16",
-    "summaries": {},
-    "wikidataId": null
+    "summaries": {
+      "en": {
+        "text": "Cuyo is the wine-producing, mountainous region of central-west Argentina. Historically it comprised the provinces of San Juan, San Luis and Mendoza. The modern New Cuyo includes both Cuyo proper and the province of La Rioja. New Cuyo is a political and economic macroregion, but culturally La Rioja is part of the North-West rather than of Cuyo.",
+        "url": "https://en.wikipedia.org/wiki/Cuyo_(Argentina)"
+      },
+      "es": {
+        "text": "Cuyo es una región geográfica e histórica situada en el centro oeste de la República Argentina y conformada por las provincias de Mendoza, San Juan y San Luis. Desde un punto de vista histórico y regional, Villa Dolores y todo el Departamento San Javier (Córdoba) también han integrado esta región, cuyos límites coinciden prácticamente con una región geográfica y una identidad cultural y tradición histórica en común.",
+        "url": "https://es.wikipedia.org/wiki/Cuyo"
+      },
+      "ca": {
+        "text": "Cuyo és una regió fisiogràfica i històrica de l'Argentina. Està situada al centre oest del país i tradicionalment la formen les províncies de Mendoza, San Juan i San Luis.",
+        "url": "https://ca.wikipedia.org/wiki/Cuyo_(regi%C3%B3_fisiogr%C3%A0fica)"
+      },
+      "fr": {
+        "text": "Cuyo est une région géographique de l'Argentine. Elle se situe aux pieds des Andes au Centre-Ouest du pays. C'est aussi une entité historique remontant à la colonisation espagnole de l'Amérique, qui regroupait les provinces argentines de Mendoza, de San Juan et de San Luis. Le Nouveau Cuyo est une macro-région qui inclut également la province de La Rioja.",
+        "url": "https://fr.wikipedia.org/wiki/Cuyo_(Argentine)"
+      },
+      "it": {
+        "text": "Cuyo (pronuncia: [ˈku.ʝo]) è una regione geografica e storica dell'Argentina centro-occidentale, caratterizzata da un territorio montuoso e nota per la produzione vinicola. Storicamente comprendeva le province di San Juan, San Luis e Mendoza. Il termine Nuovo Cuyo è di origine moderna, e indica sia il Cuyo propriamente detto che la provincia di La Rioja.",
+        "url": "https://it.wikipedia.org/wiki/Cuyo_(Argentina)"
+      },
+      "nl": {
+        "text": "Cuyo is de naam van een van de zes regio's van Argentinië.",
+        "url": "https://nl.wikipedia.org/wiki/Cuyo_(Argentini%C3%AB)"
+      },
+      "pt": {
+        "text": "O Cuyo é uma região geográfica e histórica localizada no centro-oeste da República Argentina, tradicionalmente formada pelas províncias de Mendoza, San Juan e San Luis, cujos limites praticamente coincidem com a região geográfica e que compartilham uma identidade cultural e tradição histórica comuns.",
+        "url": "https://pt.wikipedia.org/wiki/Cuyo"
+      }
+    },
+    "wikidataId": "Q1146743"
   },
   {
     "countryCode": "AR",
@@ -289311,11 +290058,51 @@
       }
     ],
     "pointSource": "place",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "Resolución INV Nº C.15/2005",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "es": {
+        "text": "Luján de Cuyo es una denominación de origen controlada (DOC) argentina para vinos elaborados con gran mayoría de la variedad malbec (con un 85% como mínimo) y procedentes de la zona de producción homónima de la provincia de Mendoza. Se trata de la primera DOC vinícola no solo de Argentina, si no del continente americano, marcando un hito importante en la historia de los vinos del Nuevo Mundo.",
+        "url": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)"
+      },
+      "en": {
+        "text": "Luján de Cuyo is an Argentine controlled denomination of origin (DOC) for wines made very largely from the malbec variety (at least 85%) and coming from the production zone of the same name in the province of Mendoza. It is the first wine DOC not only of Argentina but of the American continent, an important milestone in the history of New World wines.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)"
+      },
+      "ca": {
+        "text": "Luján de Cuyo és una denominació d'origen controlada (DOC) argentina per a vins elaborats en gran majoria amb la varietat malbec (com a mínim un 85%) i procedents de la zona de producció homònima de la província de Mendoza. És la primera DOC vinícola no només de l'Argentina, sinó del continent americà, una fita important en la història dels vins del Nou Món.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)"
+      },
+      "fr": {
+        "text": "Luján de Cuyo est une dénomination d'origine contrôlée (DOC) argentine pour des vins élaborés très majoritairement avec le cépage malbec (au moins 85%) et provenant de la zone de production du même nom, dans la province de Mendoza. C'est la première DOC viticole non seulement d'Argentine mais du continent américain, un jalon important dans l'histoire des vins du Nouveau Monde.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)"
+      },
+      "de": {
+        "text": "Luján de Cuyo ist eine argentinische kontrollierte Ursprungsbezeichnung (DOC) für Weine, die zum allergrößten Teil aus der Sorte Malbec (mindestens 85%) bereitet werden und aus dem gleichnamigen Erzeugungsgebiet in der Provinz Mendoza stammen. Sie ist die erste Wein-DOC nicht nur Argentiniens, sondern des amerikanischen Kontinents, ein wichtiger Meilenstein in der Geschichte der Weine der Neuen Welt.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)"
+      },
+      "it": {
+        "text": "Luján de Cuyo è una denominazione di origine controllata (DOC) argentina per vini prodotti in grandissima parte con il vitigno malbec (almeno l'85%) e provenienti dalla zona di produzione omonima della provincia di Mendoza. È la prima DOC vinicola non solo dell'Argentina ma del continente americano, una tappa importante nella storia dei vini del Nuovo Mondo.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)"
+      },
+      "nl": {
+        "text": "Luján de Cuyo is een Argentijnse gecontroleerde oorsprongsbenaming (DOC) voor wijnen die voor het allergrootste deel van het ras malbec (minstens 85%) worden gemaakt en uit het gelijknamige productiegebied in de provincie Mendoza komen. Het is de eerste wijn-DOC niet alleen van Argentinië maar van het Amerikaanse continent, een belangrijke mijlpaal in de geschiedenis van de wijnen van de Nieuwe Wereld.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)"
+      },
+      "pt": {
+        "text": "Luján de Cuyo é uma denominação de origem controlada (DOC) argentina para vinhos feitos em grande maioria com a casta malbec (no mínimo 85%) e provenientes da zona de produção homónima da província de Mendoza. É a primeira DOC vínica não só da Argentina, mas do continente americano, um marco importante na história dos vinhos do Novo Mundo.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)"
+      }
+    },
+    "wikidataId": "Q5984737",
     "within": [
       "ar-mendoza",
       "ar-cuyo"
@@ -291688,7 +292475,55 @@
     "prominence": 0,
     "registerRef": "IG200002",
     "registeredOn": "2002-11-19",
-    "summaries": {},
+    "summaries": {
+      "pt": {
+        "text": "A região do VALE DOS VINHEDOS possui,uma área total de 81,23Km2, distribuida na sua maior parte no Município de Bento Gonçalves, mas também nos Municipios de Garibaldi e Monte Belo do Sul.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "en": {
+        "text": "The VALE DOS VINHEDOS region has a total area of 81.23 km², mostly in the municipality of Bento Gonçalves, but also in the municipalities of Garibaldi and Monte Belo do Sul.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "es": {
+        "text": "La región del VALE DOS VINHEDOS tiene una superficie total de 81,23 km², distribuida en su mayor parte en el municipio de Bento Gonçalves, pero también en los municipios de Garibaldi y Monte Belo do Sul.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "ca": {
+        "text": "La regió del VALE DOS VINHEDOS té una superfície total de 81,23 km², distribuïda majoritàriament al municipi de Bento Gonçalves, però també als municipis de Garibaldi i Monte Belo do Sul.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "fr": {
+        "text": "La région du VALE DOS VINHEDOS a une superficie totale de 81,23 km², répartie pour l'essentiel dans la municipalité de Bento Gonçalves, mais aussi dans les municipalités de Garibaldi et de Monte Belo do Sul.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "de": {
+        "text": "Die Region VALE DOS VINHEDOS hat eine Gesamtfläche von 81,23 km², die größtenteils in der Gemeinde Bento Gonçalves liegt, aber auch in den Gemeinden Garibaldi und Monte Belo do Sul.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "it": {
+        "text": "La regione del VALE DOS VINHEDOS ha una superficie totale di 81,23 km², distribuita per la maggior parte nel comune di Bento Gonçalves, ma anche nei comuni di Garibaldi e Monte Belo do Sul.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "nl": {
+        "text": "De regio VALE DOS VINHEDOS heeft een totale oppervlakte van 81,23 km², grotendeels in de gemeente Bento Gonçalves, maar ook in de gemeenten Garibaldi en Monte Belo do Sul.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -291712,7 +292547,55 @@
     "prominence": 0,
     "registerRef": "IG200803",
     "registeredOn": "2010-07-13",
-    "summaries": {},
+    "summaries": {
+      "pt": {
+        "text": "A área geográfica delimitada se situa na Região Nordeste do Estado do Rio Grande do Sul, entre a Serra Geral e o Planalto dos Campos Gerais. A área geográfica delimitada totaliza 7.960,66 HA, sendo que, destes, 7.418 HA estão no município de Bento Gonçalves e 543 HA estão no município de Farroupilha.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "en": {
+        "text": "The delimited geographical area lies in the north-east of the State of Rio Grande do Sul, between the Serra Geral and the Planalto dos Campos Gerais. The delimited geographical area totals 7,960.66 ha, of which 7,418 ha are in the municipality of Bento Gonçalves and 543 ha in the municipality of Farroupilha.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "es": {
+        "text": "El área geográfica delimitada se sitúa en la región nordeste del estado de Rio Grande do Sul, entre la Serra Geral y el Planalto dos Campos Gerais. El área geográfica delimitada suma 7.960,66 ha, de las cuales 7.418 ha están en el municipio de Bento Gonçalves y 543 ha en el municipio de Farroupilha.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "ca": {
+        "text": "L'àrea geogràfica delimitada se situa a la regió nord-est de l'estat de Rio Grande do Sul, entre la Serra Geral i el Planalto dos Campos Gerais. L'àrea geogràfica delimitada suma 7.960,66 ha, de les quals 7.418 ha són al municipi de Bento Gonçalves i 543 ha al municipi de Farroupilha.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "fr": {
+        "text": "L'aire géographique délimitée se situe dans la région nord-est de l'État du Rio Grande do Sul, entre la Serra Geral et le Planalto dos Campos Gerais. L'aire géographique délimitée totalise 7 960,66 ha, dont 7 418 ha dans la municipalité de Bento Gonçalves et 543 ha dans celle de Farroupilha.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "de": {
+        "text": "Das abgegrenzte geografische Gebiet liegt im Nordosten des Bundesstaates Rio Grande do Sul, zwischen der Serra Geral und dem Planalto dos Campos Gerais. Das abgegrenzte geografische Gebiet umfasst insgesamt 7960,66 ha, davon 7418 ha in der Gemeinde Bento Gonçalves und 543 ha in der Gemeinde Farroupilha.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "it": {
+        "text": "L'area geografica delimitata si trova nella regione nord-orientale dello stato del Rio Grande do Sul, tra la Serra Geral e il Planalto dos Campos Gerais. L'area geografica delimitata misura in totale 7.960,66 ha, di cui 7.418 ha nel comune di Bento Gonçalves e 543 ha nel comune di Farroupilha.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "nl": {
+        "text": "Het afgebakende geografische gebied ligt in het noordoosten van de staat Rio Grande do Sul, tussen de Serra Geral en het Planalto dos Campos Gerais. Het afgebakende geografische gebied beslaat in totaal 7960,66 ha, waarvan 7418 ha in de gemeente Bento Gonçalves en 543 ha in de gemeente Farroupilha.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -291837,7 +292720,55 @@
     "prominence": 0,
     "registerRef": "BR402020000008-6",
     "registeredOn": "2021-06-29",
-    "summaries": {},
+    "summaries": {
+      "pt": {
+        "text": "A delimitação da área geográfica da Indicação de Procedência dos Vinhos de Altitude de Santa Catarina é única, contínua e está entre os paralelos e meridianos de 26º31’43,301”S, 51º54’1,015”W e 28º38’20,92”S, 48º54’27,098”W. Abrange totalmente a área territorial de 29 municípios de Santa Catarina, com área de 19.676 km2, correspondendo a 20% do território catarinense.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "en": {
+        "text": "The delimitation of the geographical area of the Indication of Provenance of the Vinhos de Altitude de Santa Catarina is single, continuous and lies between the parallels and meridians of 26º31’43.301”S, 51º54’1.015”W and 28º38’20.92”S, 48º54’27.098”W. It wholly covers the territory of 29 municipalities of Santa Catarina, with an area of 19,676 km², 20% of the territory of Santa Catarina.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "es": {
+        "text": "La delimitación del área geográfica de la Indicación de Procedencia de los Vinhos de Altitude de Santa Catarina es única, continua y está entre los paralelos y meridianos de 26º31’43,301”S, 51º54’1,015”W y 28º38’20,92”S, 48º54’27,098”W. Abarca totalmente el territorio de 29 municipios de Santa Catarina, con una superficie de 19.676 km², el 20 % del territorio catarinense.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "ca": {
+        "text": "La delimitació de l'àrea geogràfica de la Indicació de Procedència dels Vinhos de Altitude de Santa Catarina és única, contínua i se situa entre els paral·lels i meridians de 26º31’43,301”S, 51º54’1,015”W i 28º38’20,92”S, 48º54’27,098”W. Abraça totalment el territori de 29 municipis de Santa Catarina, amb una superfície de 19.676 km², el 20 % del territori de Santa Catarina.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "fr": {
+        "text": "La délimitation de l'aire géographique de l'Indication de provenance des Vinhos de Altitude de Santa Catarina est unique, continue et se situe entre les parallèles et méridiens 26º31’43,301”S, 51º54’1,015”W et 28º38’20,92”S, 48º54’27,098”W. Elle couvre entièrement le territoire de 29 municipalités de Santa Catarina, sur 19 676 km², soit 20 % du territoire de l'État.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "de": {
+        "text": "Die Abgrenzung des geografischen Gebiets der Herkunftsangabe der Vinhos de Altitude de Santa Catarina ist einheitlich, zusammenhängend und liegt zwischen den Breiten- und Längengraden 26º31’43,301”S, 51º54’1,015”W und 28º38’20,92”S, 48º54’27,098”W. Sie umfasst vollständig das Gebiet von 29 Gemeinden von Santa Catarina mit einer Fläche von 19.676 km², 20 % des Staatsgebiets von Santa Catarina.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "it": {
+        "text": "La delimitazione dell'area geografica dell'Indicazione di provenienza dei Vinhos de Altitude de Santa Catarina è unica, continua e si trova tra i paralleli e i meridiani 26º31’43,301”S, 51º54’1,015”W e 28º38’20,92”S, 48º54’27,098”W. Comprende interamente il territorio di 29 comuni di Santa Catarina, con una superficie di 19.676 km², il 20% del territorio dello stato.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "nl": {
+        "text": "De afbakening van het geografische gebied van de herkomstaanduiding Vinhos de Altitude de Santa Catarina is enkelvoudig, aaneengesloten en ligt tussen de breedte- en lengtegraden 26º31’43,301”S, 51º54’1,015”W en 28º38’20,92”S, 48º54’27,098”W. Ze omvat volledig het grondgebied van 29 gemeenten van Santa Catarina, met een oppervlakte van 19.676 km², 20% van het grondgebied van de staat.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -291909,7 +292840,55 @@
     "prominence": 0,
     "registerRef": "BR402023000001-7",
     "registeredOn": "2025-02-11",
-    "summaries": {},
+    "summaries": {
+      "pt": {
+        "text": "Localizada no Estado de Minas Gerais, é constituída por um território com altitude igual ou superior a 800m formando uma área descontínua de 4239,6 km2, cuja descrição dos limites se restringe às áreas dos seguintes municípios: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna e Ijaci.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "en": {
+        "text": "Located in the State of Minas Gerais, it is made up of land at an altitude of 800 m or more, forming a discontinuous area of 4,239.6 km², whose limits are restricted to the areas of the following municipalities: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna and Ijaci.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "es": {
+        "text": "Situada en el estado de Minas Gerais, está formada por un territorio con una altitud igual o superior a 800 m que forma un área discontinua de 4.239,6 km², cuyos límites se restringen a las áreas de los siguientes municipios: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna e Ijaci.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "ca": {
+        "text": "Situada a l'estat de Minas Gerais, està formada per un territori amb una altitud igual o superior a 800 m que forma una àrea discontínua de 4.239,6 km², els límits de la qual es restringeixen a les àrees dels municipis següents: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna i Ijaci.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "fr": {
+        "text": "Située dans l'État du Minas Gerais, elle est constituée d'un territoire d'une altitude égale ou supérieure à 800 m formant une aire discontinue de 4 239,6 km², dont les limites se restreignent aux territoires des municipalités suivantes : São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna et Ijaci.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "de": {
+        "text": "Im Bundesstaat Minas Gerais gelegen, besteht sie aus einem Gebiet mit einer Höhe von 800 m oder mehr, das eine nicht zusammenhängende Fläche von 4239,6 km² bildet, deren Grenzen sich auf die Gebiete folgender Gemeinden beschränken: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna und Ijaci.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "it": {
+        "text": "Situata nello stato di Minas Gerais, è costituita da un territorio con altitudine pari o superiore a 800 m che forma un'area discontinua di 4.239,6 km², i cui limiti si restringono alle aree dei seguenti comuni: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna e Ijaci.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      },
+      "nl": {
+        "text": "Gelegen in de staat Minas Gerais, bestaat ze uit een grondgebied op een hoogte van 800 m of meer dat een niet-aaneengesloten gebied van 4239,6 km² vormt, waarvan de grenzen beperkt zijn tot de gebieden van de volgende gemeenten: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna en Ijaci.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -291996,7 +292975,55 @@
     "prominence": 0,
     "registerRef": "IG201009",
     "registeredOn": "2025-06-10",
-    "summaries": {},
+    "summaries": {
+      "pt": {
+        "text": "A área geográfica delimitada para a produção de Vinhos Goethe, com qualidade D.O.V.U.G. localiza-se nos municípios Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza e Içara, no Estado de Santa Catarina, conforme estabelece o Art. 1º. do Estatuto da PROGOETHE, para área de abrangência e inclusão de seus associados.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "en": {
+        "text": "The geographical area delimited for the production of Goethe wines of D.O.V.U.G. quality lies in the municipalities of Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza and Içara, in the State of Santa Catarina, as Art. 1 of the PROGOETHE statute sets out for the area its members come from.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "es": {
+        "text": "El área geográfica delimitada para la producción de vinos Goethe de calidad D.O.V.U.G. se sitúa en los municipios de Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza e Içara, en el estado de Santa Catarina, como establece el art. 1 del estatuto de PROGOETHE para el ámbito y la inclusión de sus asociados.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "ca": {
+        "text": "L'àrea geogràfica delimitada per a la producció de vins Goethe de qualitat D.O.V.U.G. se situa als municipis d'Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza i Içara, a l'estat de Santa Catarina, tal com estableix l'art. 1 de l'estatut de PROGOETHE per a l'àmbit i la inclusió dels seus associats.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "fr": {
+        "text": "L'aire géographique délimitée pour la production des vins Goethe de qualité D.O.V.U.G. se situe dans les municipalités d'Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza et Içara, dans l'État de Santa Catarina, comme l'établit l'art. 1 des statuts de PROGOETHE pour l'aire et l'inclusion de ses membres.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "de": {
+        "text": "Das für die Erzeugung von Goethe-Weinen der Qualität D.O.V.U.G. abgegrenzte geografische Gebiet liegt in den Gemeinden Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza und Içara im Bundesstaat Santa Catarina, wie es Art. 1 der Satzung von PROGOETHE für das Gebiet und die Aufnahme ihrer Mitglieder festlegt.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "it": {
+        "text": "L'area geografica delimitata per la produzione dei vini Goethe di qualità D.O.V.U.G. si trova nei comuni di Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza e Içara, nello stato di Santa Catarina, come stabilisce l'art. 1 dello statuto di PROGOETHE per l'area e l'inclusione dei suoi associati.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "nl": {
+        "text": "Het geografische gebied dat is afgebakend voor de productie van Goethe-wijnen van D.O.V.U.G.-kwaliteit ligt in de gemeenten Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza en Içara, in de staat Santa Catarina, zoals artikel 1 van de statuten van PROGOETHE het vastlegt voor het gebied en de opname van haar leden.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -292020,7 +293047,55 @@
     "prominence": 0,
     "registerRef": "BR412021000003-4",
     "registeredOn": "2022-11-29",
-    "summaries": {},
+    "summaries": {
+      "pt": {
+        "text": "A área delimitada da Denominação de Origem de espumante natural Altos de Pinto Bandeira possui 65Km2 de área contínua, sendo 76,6% localizada no município de Pinto Bandeira, 19,0% no município de Farroupilha e 4,4% no município de Bento Gonçalves.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "en": {
+        "text": "The delimited area of the Denomination of Origin for natural sparkling wine Altos de Pinto Bandeira covers 65 km² of continuous land, 76.6% of it in the municipality of Pinto Bandeira, 19.0% in the municipality of Farroupilha and 4.4% in the municipality of Bento Gonçalves.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "es": {
+        "text": "El área delimitada de la Denominación de Origen de espumoso natural Altos de Pinto Bandeira tiene 65 km² de superficie continua, el 76,6 % en el municipio de Pinto Bandeira, el 19,0 % en el de Farroupilha y el 4,4 % en el de Bento Gonçalves.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "ca": {
+        "text": "L'àrea delimitada de la Denominació d'Origen d'escumós natural Altos de Pinto Bandeira té 65 km² de superfície contínua, el 76,6 % al municipi de Pinto Bandeira, el 19,0 % al de Farroupilha i el 4,4 % al de Bento Gonçalves.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "fr": {
+        "text": "L'aire délimitée de la Dénomination d'origine de vin mousseux naturel Altos de Pinto Bandeira couvre 65 km² d'un seul tenant, dont 76,6 % dans la municipalité de Pinto Bandeira, 19,0 % dans celle de Farroupilha et 4,4 % dans celle de Bento Gonçalves.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "de": {
+        "text": "Das abgegrenzte Gebiet der Ursprungsbezeichnung für natürlichen Schaumwein Altos de Pinto Bandeira umfasst 65 km² zusammenhängende Fläche, davon 76,6 % in der Gemeinde Pinto Bandeira, 19,0 % in der Gemeinde Farroupilha und 4,4 % in der Gemeinde Bento Gonçalves.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "it": {
+        "text": "L'area delimitata della Denominazione di origine di spumante naturale Altos de Pinto Bandeira misura 65 km² di superficie continua, per il 76,6% nel comune di Pinto Bandeira, per il 19,0% nel comune di Farroupilha e per il 4,4% nel comune di Bento Gonçalves.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      },
+      "nl": {
+        "text": "Het afgebakende gebied van de oorsprongsbenaming voor natuurlijke mousserende wijn Altos de Pinto Bandeira beslaat 65 km² aaneengesloten grond, voor 76,6% in de gemeente Pinto Bandeira, 19,0% in de gemeente Farroupilha en 4,4% in de gemeente Bento Gonçalves.",
+        "translated": true,
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      }
+    },
     "wikidataId": null
   },
   {
@@ -292424,11 +293499,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "s. 56, item 10",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "The  Okanagan Valley wine region, located within the region of the same name in the British Columbia Interior, is Canada's second-largest wine producing area.",
+        "url": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)"
+      },
+      "es": {
+        "text": "La región vinícola del Okanagan Valley, situada en la región del mismo nombre del interior de la Columbia Británica, es la segunda zona productora de vino más grande de Canadá.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)"
+      },
+      "ca": {
+        "text": "La regió vinícola de l'Okanagan Valley, situada a la regió del mateix nom de l'interior de la Colúmbia Britànica, és la segona zona productora de vi més gran del Canadà.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)"
+      },
+      "fr": {
+        "text": "La région viticole de l'Okanagan Valley, située dans la région du même nom à l'intérieur de la Colombie-Britannique, est la deuxième zone de production de vin du Canada.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)"
+      },
+      "de": {
+        "text": "Das Weinbaugebiet Okanagan Valley in der gleichnamigen Region im Landesinneren von British Columbia ist das zweitgrößte Weinbaugebiet Kanadas.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)"
+      },
+      "it": {
+        "text": "La regione vinicola dell'Okanagan Valley, situata nell'omonima regione dell'interno della Columbia Britannica, è la seconda zona di produzione vinicola del Canada per estensione.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)"
+      },
+      "nl": {
+        "text": "De wijnregio Okanagan Valley, in de gelijknamige streek in het binnenland van Brits-Columbia, is het op een na grootste wijnbouwgebied van Canada.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)"
+      },
+      "pt": {
+        "text": "A região vitícola do Okanagan Valley, situada na região do mesmo nome no interior da Colúmbia Britânica, é a segunda maior zona produtora de vinho do Canadá.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)"
+      }
+    },
+    "wikidataId": "Q7081806",
     "within": [
       "ca-british-columbia"
     ]
@@ -294308,11 +295423,50 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 2,
     "registerLevel": "regional",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "fr": {
+        "text": "L'appellation d'origine contrôlée La Côte concerne les vins de la région viticole autour de La Côte, dans le canton de Vaud, en Suisse.",
+        "url": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_(AOC)"
+      },
+      "de": {
+        "text": "La Côte ist eine Weinbau-Region des Kantons Waadt in der Schweiz. Das Weinbaugebiet dehnt sich auf 1900 Hektaren aus. Es liegt im Genfersee-Bogen und erstreckt sich über 45 km von der Kantons-Grenze von Genf bis in die unmittelbare Umgebung von Lausanne.",
+        "url": "https://de.wikipedia.org/wiki/La_C%C3%B4te_(Weinbaugebiet)"
+      },
+      "en": {
+        "text": "The appellation d'origine contrôlée La Côte covers the wines of the wine region around La Côte, in the canton of Vaud, Switzerland.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_(AOC)"
+      },
+      "es": {
+        "text": "La denominación de origen controlada La Côte se refiere a los vinos de la región vinícola de La Côte, en el cantón de Vaud (Suiza).",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_(AOC)"
+      },
+      "ca": {
+        "text": "La denominació d'origen controlada La Côte es refereix als vins de la regió vinícola de La Côte, al cantó de Vaud (Suïssa).",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_(AOC)"
+      },
+      "it": {
+        "text": "La denominazione di origine controllata La Côte riguarda i vini della regione vinicola di La Côte, nel canton Vaud, in Svizzera.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_(AOC)"
+      },
+      "nl": {
+        "text": "De gecontroleerde oorsprongsbenaming La Côte geldt voor de wijnen van de wijnstreek rond La Côte, in het kanton Vaud in Zwitserland.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_(AOC)"
+      },
+      "pt": {
+        "text": "A denominação de origem controlada La Côte diz respeito aos vinhos da região vitícola de La Côte, no cantão de Vaud, na Suíça.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_(AOC)"
+      }
+    },
+    "wikidataId": "Q666244",
     "within": [
       "ch-vaud"
     ]
@@ -294482,11 +295636,50 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 2,
     "registerLevel": "regional",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "fr": {
+        "text": "Le Calamin est un vin blanc de Lavaux, région viticole du canton de Vaud en Suisse. Il est protégé par une appellation d'origine contrôlée grand cru.",
+        "url": "https://fr.wikipedia.org/wiki/Calamin_grand_cru"
+      },
+      "de": {
+        "text": "Calamin ist eine Lage für Grand-Cru-Weine im Lavaux auf dem Gebiet der früheren Gemeinde Epesses im heutigen Bourg-en-Lavaux im Kanton Waadt in der Schweiz.",
+        "url": "https://de.wikipedia.org/wiki/Calamin"
+      },
+      "en": {
+        "text": "Calamin is a white wine of Lavaux, a wine region of the canton of Vaud in Switzerland. It is protected by a grand cru appellation d'origine contrôlée.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Calamin_grand_cru"
+      },
+      "es": {
+        "text": "El Calamin es un vino blanco de Lavaux, región vinícola del cantón de Vaud, en Suiza. Está protegido por una denominación de origen controlada grand cru.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Calamin_grand_cru"
+      },
+      "ca": {
+        "text": "El Calamin és un vi blanc de Lavaux, regió vinícola del cantó de Vaud, a Suïssa. Està protegit per una denominació d'origen controlada grand cru.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Calamin_grand_cru"
+      },
+      "it": {
+        "text": "Il Calamin è un vino bianco di Lavaux, regione vinicola del canton Vaud, in Svizzera. È tutelato da una denominazione di origine controllata grand cru.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Calamin_grand_cru"
+      },
+      "nl": {
+        "text": "Calamin is een witte wijn uit Lavaux, een wijnstreek in het kanton Vaud in Zwitserland. Hij is beschermd door een gecontroleerde oorsprongsbenaming grand cru.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Calamin_grand_cru"
+      },
+      "pt": {
+        "text": "O Calamin é um vinho branco de Lavaux, região vitícola do cantão de Vaud, na Suíça. Está protegido por uma denominação de origem controlada grand cru.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Calamin_grand_cru"
+      }
+    },
+    "wikidataId": "Q2933534",
     "within": [
       "ch-vaud"
     ]
@@ -297454,11 +298647,51 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "IG-1",
     "registeredOn": "2013-07-14",
-    "summaries": {},
-    "wikidataId": null
+    "summaries": {
+      "en": {
+        "text": "Codru Wine Region is a Moldovan wine region. The Central or Codru Zone  is the most industrially developed zone of Moldova. This is the site of the greater part of Moldovan vineyards (60%), and the majority of primary winemaking and bottling enterprises are also located here. The forests, hills and rolling countryside typical of this region protect the vineyards from winter frosts and dry summer winds.",
+        "url": "https://en.wikipedia.org/wiki/Codru_(wine)"
+      },
+      "es": {
+        "text": "La región vinícola de Codru es una región vinícola moldava. La zona central o de Codru es la zona más desarrollada industrialmente de Moldavia. Aquí se encuentra la mayor parte de los viñedos moldavos (60%), y aquí están también la mayoría de las empresas de vinificación primaria y embotellado. Los bosques, colinas y lomas típicos de la región protegen los viñedos de las heladas invernales y de los vientos secos del verano.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Codru_(wine)"
+      },
+      "ca": {
+        "text": "La regió vinícola de Codru és una regió vinícola moldava. La zona central o de Codru és la zona més desenvolupada industrialment de Moldàvia. Aquí hi ha la major part de les vinyes moldaves (60%), i aquí hi ha també la majoria de les empreses de vinificació primària i d'embotellament. Els boscos, turons i ondulacions típics de la regió protegeixen les vinyes de les gelades d'hivern i dels vents secs d'estiu.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Codru_(wine)"
+      },
+      "fr": {
+        "text": "La région viticole de Codru est une région viticole moldave. La zone centrale, ou de Codru, est la zone la plus industrialisée de Moldavie. C'est là que se trouve la plus grande partie du vignoble moldave (60%), ainsi que la plupart des entreprises de vinification primaire et de mise en bouteille. Les forêts, collines et paysages vallonnés typiques de la région protègent les vignes des gelées d'hiver et des vents secs d'été.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Codru_(wine)"
+      },
+      "de": {
+        "text": "Das Weinbaugebiet Codru ist ein moldauisches Weinbaugebiet. Die zentrale oder Codru-Zone ist die am stärksten industrialisierte Zone der Republik Moldau. Hier liegt der größte Teil der moldauischen Weinberge (60%), und hier befinden sich auch die meisten Betriebe der Erstverarbeitung und Abfüllung. Die für die Region typischen Wälder, Hügel und welligen Landschaften schützen die Reben vor Winterfrösten und trockenen Sommerwinden.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Codru_(wine)"
+      },
+      "it": {
+        "text": "La regione vinicola di Codru è una regione vinicola moldava. La zona centrale, o di Codru, è la zona più industrializzata della Moldavia. Qui si trova la maggior parte dei vigneti moldavi (60%) e qui hanno sede anche la maggior parte delle aziende di vinificazione primaria e imbottigliamento. Le foreste, le colline e il paesaggio ondulato tipici della regione proteggono i vigneti dalle gelate invernali e dai venti secchi estivi.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Codru_(wine)"
+      },
+      "nl": {
+        "text": "De wijnregio Codru is een Moldavische wijnregio. De centrale of Codru-zone is de meest geïndustrialiseerde zone van Moldavië. Hier ligt het grootste deel van de Moldavische wijngaarden (60%), en hier zijn ook de meeste bedrijven voor primaire wijnbereiding en botteling gevestigd. De bossen, heuvels en het glooiende landschap die typisch zijn voor de regio beschermen de wijngaarden tegen wintervorst en droge zomerwinden.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Codru_(wine)"
+      },
+      "pt": {
+        "text": "A região vitícola de Codru é uma região vitícola moldava. A zona central, ou de Codru, é a zona mais industrializada da Moldávia. Aqui fica a maior parte das vinhas moldavas (60%), e aqui estão também a maioria das empresas de vinificação primária e de engarrafamento. As florestas, colinas e paisagens onduladas típicas da região protegem as vinhas das geadas de inverno e dos ventos secos de verão.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Codru_(wine)"
+      }
+    },
+    "wikidataId": "Q5140375"
   },
   {
     "countryCode": "MD",
@@ -298417,12 +299650,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "75",
     "registerLevel": "subregion",
     "registeredOn": "2001-08-28",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "High Eden is the Australian geographical indication of a subregion of the Eden Valley wine region within the Barossa zone in Australia. The High Eden wine region was entered in the Register of Protected Names on 28 August 2001.",
+        "url": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      "es": {
+        "text": "High Eden es la indicación geográfica australiana de una subregión de la región vinícola de Eden Valley, dentro de la zona de Barossa, en Australia. La región vinícola de High Eden se inscribió en el Registro de Nombres Protegidos el 28 de agosto de 2001.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      "ca": {
+        "text": "High Eden és la indicació geogràfica australiana d'una subregió de la regió vinícola d'Eden Valley, dins la zona de Barossa, a Austràlia. La regió vinícola de High Eden es va inscriure al Registre de Noms Protegits el 28 d'agost de 2001.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      "fr": {
+        "text": "High Eden est l'indication géographique australienne d'une sous-région de la région viticole d'Eden Valley, dans la zone de la Barossa, en Australie. La région viticole de High Eden a été inscrite au registre des noms protégés le 28 août 2001.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      "de": {
+        "text": "High Eden ist die australische geografische Angabe einer Unterregion des Weinbaugebiets Eden Valley in der Zone Barossa in Australien. Das Weinbaugebiet High Eden wurde am 28. August 2001 in das Register der geschützten Namen eingetragen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      "it": {
+        "text": "High Eden è l'indicazione geografica australiana di una sottoregione della regione vinicola di Eden Valley, nella zona di Barossa, in Australia. La regione vinicola di High Eden è stata iscritta nel Registro dei nomi protetti il 28 agosto 2001.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      "nl": {
+        "text": "High Eden is de Australische geografische aanduiding van een subregio van de wijnregio Eden Valley, binnen de zone Barossa in Australië. De wijnregio High Eden werd op 28 augustus 2001 in het register van beschermde namen opgenomen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      "pt": {
+        "text": "High Eden é a indicação geográfica australiana de uma sub-região da região vitícola de Eden Valley, na zona de Barossa, na Austrália. A região vitícola de High Eden foi inscrita no Registo de Nomes Protegidos a 28 de agosto de 2001.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/High_Eden"
+      }
+    },
+    "wikidataId": "Q5755353",
     "within": [
       "au-eden-valley",
       "au-barossa",
@@ -298518,12 +299791,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "100",
     "registerLevel": "region",
     "registeredOn": "2003-08-19",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Southern Flinders Ranges is a South Australian wine region, located east of Spencer Gulf. It is located to the east and north-east of Port Pirie. Though vines have been planted in the area since the 1890s, the Southern Flinders Ranges is a relatively new wine-growing region that began to emerged during the last 20 years of the 20th century.",
+        "url": "https://en.wikipedia.org/wiki/Southern_Flinders_Ranges"
+      },
+      "es": {
+        "text": "Southern Flinders Ranges es una región vinícola de Australia Meridional, situada al este del golfo de Spencer, al este y nordeste de Port Pirie. Aunque en la zona se plantan viñas desde la década de 1890, Southern Flinders Ranges es una región vinícola relativamente nueva que empezó a surgir en los últimos 20 años del siglo XX.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Southern_Flinders_Ranges"
+      },
+      "ca": {
+        "text": "Southern Flinders Ranges és una regió vinícola d'Austràlia Meridional, situada a l'est del golf de Spencer, a l'est i al nord-est de Port Pirie. Tot i que a la zona s'hi planten vinyes des de la dècada de 1890, Southern Flinders Ranges és una regió vinícola relativament nova que va començar a sorgir els darrers 20 anys del segle XX.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Southern_Flinders_Ranges"
+      },
+      "fr": {
+        "text": "Southern Flinders Ranges est une région viticole d'Australie-Méridionale, située à l'est du golfe Spencer, à l'est et au nord-est de Port Pirie. Bien que la vigne y soit plantée depuis les années 1890, c'est une région viticole relativement récente, apparue au cours des 20 dernières années du XXe siècle.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Southern_Flinders_Ranges"
+      },
+      "de": {
+        "text": "Southern Flinders Ranges ist ein Weinbaugebiet in South Australia östlich des Spencer Gulf, östlich und nordöstlich von Port Pirie. Obwohl dort seit den 1890er-Jahren Reben gepflanzt werden, ist Southern Flinders Ranges ein relativ junges Weinbaugebiet, das in den letzten 20 Jahren des 20. Jahrhunderts entstand.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Southern_Flinders_Ranges"
+      },
+      "it": {
+        "text": "Southern Flinders Ranges è una regione vinicola dell'Australia Meridionale, situata a est del golfo di Spencer, a est e nord-est di Port Pirie. Sebbene vi si piantino viti dagli anni 1890, Southern Flinders Ranges è una regione vinicola relativamente nuova, emersa negli ultimi 20 anni del XX secolo.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Southern_Flinders_Ranges"
+      },
+      "nl": {
+        "text": "Southern Flinders Ranges is een wijnregio in Zuid-Australië, ten oosten van de Spencergolf, ten oosten en noordoosten van Port Pirie. Hoewel er sinds de jaren 1890 wijnstokken worden geplant, is Southern Flinders Ranges een vrij nieuwe wijnregio die in de laatste 20 jaar van de 20e eeuw opkwam.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Southern_Flinders_Ranges"
+      },
+      "pt": {
+        "text": "Southern Flinders Ranges é uma região vitícola da Austrália Meridional, situada a leste do golfo de Spencer, a leste e nordeste de Port Pirie. Embora ali se plantem vinhas desde a década de 1890, Southern Flinders Ranges é uma região vitícola relativamente nova, que começou a surgir nos últimos 20 anos do século XX.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Southern_Flinders_Ranges"
+      }
+    },
+    "wikidataId": "Q7569916",
     "within": [
       "au-far-north",
       "au-south-australia",
@@ -298848,12 +300161,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "51",
     "registerLevel": "region",
     "registeredOn": "1997-09-02",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "McLaren Vale is a wine region in the Australian state of South Australia located in the  Adelaide metropolitan area and centred on the town of McLaren Vale  about 38 kilometres (24 mi) south of the Adelaide city centre. It is internationally renowned for the wines it produces and is included within the Great Wine Capitals of the World.",
+        "url": "https://en.wikipedia.org/wiki/McLaren_Vale"
+      },
+      "es": {
+        "text": "McLaren Vale es una región vinícola del estado australiano de Australia Meridional, situada en el área metropolitana de Adelaida y centrada en la localidad de McLaren Vale, a unos 38 kilómetros (24 mi) al sur del centro de Adelaida. Es conocida internacionalmente por sus vinos y forma parte de las Great Wine Capitals of the World.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/McLaren_Vale"
+      },
+      "ca": {
+        "text": "McLaren Vale és una regió vinícola de l'estat australià d'Austràlia Meridional, situada a l'àrea metropolitana d'Adelaida i centrada a la localitat de McLaren Vale, a uns 38 quilòmetres (24 mi) al sud del centre d'Adelaida. És coneguda internacionalment pels seus vins i forma part de les Great Wine Capitals of the World.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/McLaren_Vale"
+      },
+      "fr": {
+        "text": "McLaren Vale est une région viticole de l'État australien d'Australie-Méridionale, située dans l'agglomération d'Adélaïde et centrée sur la localité de McLaren Vale, à environ 38 kilomètres (24 mi) au sud du centre d'Adélaïde. Elle est réputée dans le monde entier pour ses vins et fait partie des Great Wine Capitals of the World.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/McLaren_Vale"
+      },
+      "de": {
+        "text": "McLaren Vale ist ein Weinbaugebiet im australischen Bundesstaat South Australia im Großraum Adelaide, mit dem Ort McLaren Vale als Mittelpunkt, etwa 38 Kilometer (24 mi) südlich des Zentrums von Adelaide. Es ist international für seine Weine bekannt und gehört zu den Great Wine Capitals of the World.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/McLaren_Vale"
+      },
+      "it": {
+        "text": "McLaren Vale è una regione vinicola dello stato australiano dell'Australia Meridionale, situata nell'area metropolitana di Adelaide e incentrata sulla località di McLaren Vale, a circa 38 chilometri (24 mi) a sud del centro di Adelaide. È nota a livello internazionale per i suoi vini e fa parte delle Great Wine Capitals of the World.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/McLaren_Vale"
+      },
+      "nl": {
+        "text": "McLaren Vale is een wijnregio in de Australische deelstaat Zuid-Australië, gelegen in het grootstedelijk gebied van Adelaide en met de plaats McLaren Vale als middelpunt, ongeveer 38 kilometer (24 mi) ten zuiden van het centrum van Adelaide. Het is internationaal bekend om zijn wijnen en hoort bij de Great Wine Capitals of the World.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/McLaren_Vale"
+      },
+      "pt": {
+        "text": "McLaren Vale é uma região vitícola do estado australiano da Austrália Meridional, situada na área metropolitana de Adelaide e centrada na localidade de McLaren Vale, a cerca de 38 quilómetros (24 mi) a sul do centro de Adelaide. É conhecida internacionalmente pelos seus vinhos e faz parte das Great Wine Capitals of the World.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/McLaren_Vale"
+      }
+    },
+    "wikidataId": "Q6802082",
     "within": [
       "au-fleurieu",
       "au-adelaide",
@@ -299369,12 +300722,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "103",
     "registerLevel": "region",
     "registeredOn": "2005-07-05",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Wrattonbully is a wine region in the Limestone Coast region of South Australia's South East, between the Padthaway and Coonawarra regions, between the Riddoch Highway and the Victorian border.",
+        "url": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      "es": {
+        "text": "Wrattonbully es una región vinícola de la región de Limestone Coast, en el sudeste de Australia Meridional, entre las regiones de Padthaway y Coonawarra, entre la Riddoch Highway y la frontera con Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      "ca": {
+        "text": "Wrattonbully és una regió vinícola de la regió de Limestone Coast, al sud-est d'Austràlia Meridional, entre les regions de Padthaway i Coonawarra, entre la Riddoch Highway i la frontera amb Victòria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      "fr": {
+        "text": "Wrattonbully est une région viticole de la Limestone Coast, dans le sud-est de l'Australie-Méridionale, entre les régions de Padthaway et de Coonawarra, entre la Riddoch Highway et la frontière du Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      "de": {
+        "text": "Wrattonbully ist ein Weinbaugebiet in der Region Limestone Coast im Südosten von South Australia, zwischen den Gebieten Padthaway und Coonawarra, zwischen dem Riddoch Highway und der Grenze zu Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      "it": {
+        "text": "Wrattonbully è una regione vinicola della regione di Limestone Coast, nel sud-est dell'Australia Meridionale, tra le regioni di Padthaway e Coonawarra, tra la Riddoch Highway e il confine con il Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      "nl": {
+        "text": "Wrattonbully is een wijnregio in de regio Limestone Coast in het zuidoosten van Zuid-Australië, tussen de regio's Padthaway en Coonawarra, tussen de Riddoch Highway en de grens met Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      "pt": {
+        "text": "Wrattonbully é uma região vitícola da região de Limestone Coast, no sudeste da Austrália Meridional, entre as regiões de Padthaway e Coonawarra, entre a Riddoch Highway e a fronteira com Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Wrattonbully"
+      }
+    },
+    "wikidataId": "Q8037630",
     "within": [
       "au-limestone-coast",
       "au-south-australia",
@@ -300204,12 +301597,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "45",
     "registerLevel": "region",
     "registeredOn": "1997-06-16",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Murray Darling is  a wine region and Australian Geographical Indication which spans the Murray River and its confluence with the Darling River in northwestern Victoria and southwestern New South Wales. It was registered as a protected name on 16 June 1997.",
+        "url": "https://en.wikipedia.org/wiki/Murray_Darling"
+      },
+      "es": {
+        "text": "Murray Darling es una región vinícola e indicación geográfica australiana que abarca el río Murray y su confluencia con el río Darling, en el noroeste de Victoria y el suroeste de Nueva Gales del Sur. Se registró como nombre protegido el 16 de junio de 1997.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Murray_Darling"
+      },
+      "ca": {
+        "text": "Murray Darling és una regió vinícola i indicació geogràfica australiana que s'estén pel riu Murray i la seva confluència amb el riu Darling, al nord-oest de Victòria i el sud-oest de Nova Gal·les del Sud. Es va registrar com a nom protegit el 16 de juny de 1997.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Murray_Darling"
+      },
+      "fr": {
+        "text": "Murray Darling est une région viticole et une indication géographique australienne qui s'étend sur le Murray et son confluent avec le Darling, dans le nord-ouest du Victoria et le sud-ouest de la Nouvelle-Galles du Sud. Elle a été enregistrée comme nom protégé le 16 juin 1997.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Murray_Darling"
+      },
+      "de": {
+        "text": "Murray Darling ist ein Weinbaugebiet und eine australische geografische Angabe am Murray River und seinem Zusammenfluss mit dem Darling River, im Nordwesten von Victoria und im Südwesten von New South Wales. Es wurde am 16. Juni 1997 als geschützter Name eingetragen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Murray_Darling"
+      },
+      "it": {
+        "text": "Murray Darling è una regione vinicola e un'indicazione geografica australiana che si estende lungo il fiume Murray e la sua confluenza con il Darling, nel nord-ovest del Victoria e nel sud-ovest del Nuovo Galles del Sud. È stata registrata come nome protetto il 16 giugno 1997.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Murray_Darling"
+      },
+      "nl": {
+        "text": "Murray Darling is een wijnregio en Australische geografische aanduiding langs de Murray en de samenvloeiing met de Darling, in het noordwesten van Victoria en het zuidwesten van Nieuw-Zuid-Wales. Ze werd op 16 juni 1997 als beschermde naam geregistreerd.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Murray_Darling"
+      },
+      "pt": {
+        "text": "Murray Darling é uma região vitícola e indicação geográfica australiana que abrange o rio Murray e a sua confluência com o rio Darling, no noroeste de Victoria e no sudoeste da Nova Gales do Sul. Foi registada como nome protegido a 16 de junho de 1997.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Murray_Darling"
+      }
+    },
+    "wikidataId": "Q25182598",
     "within": [
       "au-big-rivers",
       "au-north-west-victoria",
@@ -300237,12 +301670,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "69",
     "registerLevel": "region",
     "registeredOn": "1999-03-25",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Perricoota is a wine region in the Big Rivers grape-growing area of Australia. It covers the area of New South Wales bordered on the south by the Murray River between Barmah and Torrumbarry (both are on the Victorian side of the river, so not in this region) with Moama near the centre. The town of Womboota is near the northwestern extent of the region. The name was registered on 25 March 1999.",
+        "url": "https://en.wikipedia.org/wiki/Perricoota"
+      },
+      "es": {
+        "text": "Perricoota es una región vinícola de la zona vitícola de Big Rivers, en Australia. Abarca la parte de Nueva Gales del Sur limitada al sur por el río Murray entre Barmah y Torrumbarry (ambas en la orilla victoriana del río, por lo que no forman parte de esta región), con Moama cerca del centro. La localidad de Womboota está cerca del extremo noroeste de la región. El nombre se registró el 25 de marzo de 1999.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Perricoota"
+      },
+      "ca": {
+        "text": "Perricoota és una regió vinícola de la zona vitícola de Big Rivers, a Austràlia. Abraça la part de Nova Gal·les del Sud limitada al sud pel riu Murray entre Barmah i Torrumbarry (totes dues a la riba victoriana del riu, de manera que no formen part d'aquesta regió), amb Moama a prop del centre. La localitat de Womboota és a prop de l'extrem nord-oest de la regió. El nom es va registrar el 25 de març de 1999.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Perricoota"
+      },
+      "fr": {
+        "text": "Perricoota est une région viticole de la zone de Big Rivers, en Australie. Elle couvre la partie de la Nouvelle-Galles du Sud bordée au sud par le Murray entre Barmah et Torrumbarry (toutes deux sur la rive victorienne, donc hors de cette région), avec Moama près du centre. La localité de Womboota se trouve près de l'extrémité nord-ouest de la région. Le nom a été enregistré le 25 mars 1999.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Perricoota"
+      },
+      "de": {
+        "text": "Perricoota ist ein Weinbaugebiet in der Weinbauzone Big Rivers in Australien. Es umfasst den Teil von New South Wales, der im Süden vom Murray River zwischen Barmah und Torrumbarry begrenzt wird (beide liegen am viktorianischen Ufer und gehören daher nicht zu diesem Gebiet), mit Moama nahe der Mitte. Der Ort Womboota liegt nahe der nordwestlichen Grenze des Gebiets. Der Name wurde am 25. März 1999 eingetragen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Perricoota"
+      },
+      "it": {
+        "text": "Perricoota è una regione vinicola della zona viticola di Big Rivers, in Australia. Comprende la parte del Nuovo Galles del Sud delimitata a sud dal fiume Murray tra Barmah e Torrumbarry (entrambe sulla sponda vittoriana del fiume, quindi non in questa regione), con Moama vicino al centro. La località di Womboota si trova vicino all'estremità nord-occidentale della regione. Il nome è stato registrato il 25 marzo 1999.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Perricoota"
+      },
+      "nl": {
+        "text": "Perricoota is een wijnregio in de wijnzone Big Rivers in Australië. Ze beslaat het deel van Nieuw-Zuid-Wales dat in het zuiden wordt begrensd door de Murray tussen Barmah en Torrumbarry (beide aan de Victoriaanse kant van de rivier, dus niet in deze regio), met Moama dicht bij het midden. Het plaatsje Womboota ligt bij de noordwestelijke grens van de regio. De naam werd op 25 maart 1999 geregistreerd.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Perricoota"
+      },
+      "pt": {
+        "text": "Perricoota é uma região vitícola da zona de Big Rivers, na Austrália. Abrange a parte da Nova Gales do Sul delimitada a sul pelo rio Murray entre Barmah e Torrumbarry (ambas na margem vitoriana do rio, pelo que não pertencem a esta região), com Moama perto do centro. A localidade de Womboota fica perto do extremo noroeste da região. O nome foi registado a 25 de março de 1999.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Perricoota"
+      }
+    },
+    "wikidataId": "Q24521742",
     "within": [
       "au-big-rivers",
       "au-new-south-wales",
@@ -301066,12 +302539,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "94",
     "registerLevel": "region",
     "registeredOn": "2002-08-06",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Shoalhaven Coast is an Australian wine region located in the state of New South Wales.",
+        "url": "https://en.wikipedia.org/wiki/Shoalhaven_Coast"
+      },
+      "es": {
+        "text": "Shoalhaven Coast es una región vinícola australiana situada en el estado de Nueva Gales del Sur.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Shoalhaven_Coast"
+      },
+      "ca": {
+        "text": "Shoalhaven Coast és una regió vinícola australiana situada a l'estat de Nova Gal·les del Sud.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Shoalhaven_Coast"
+      },
+      "fr": {
+        "text": "Shoalhaven Coast est une région viticole australienne située dans l'État de Nouvelle-Galles du Sud.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Shoalhaven_Coast"
+      },
+      "de": {
+        "text": "Shoalhaven Coast ist ein australisches Weinbaugebiet im Bundesstaat New South Wales.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Shoalhaven_Coast"
+      },
+      "it": {
+        "text": "Shoalhaven Coast è una regione vinicola australiana situata nello stato del Nuovo Galles del Sud.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Shoalhaven_Coast"
+      },
+      "nl": {
+        "text": "Shoalhaven Coast is een Australische wijnregio in de staat Nieuw-Zuid-Wales.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Shoalhaven_Coast"
+      },
+      "pt": {
+        "text": "Shoalhaven Coast é uma região vitícola australiana situada no estado da Nova Gales do Sul.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Shoalhaven_Coast"
+      }
+    },
+    "wikidataId": "Q24090217",
     "within": [
       "au-south-coast",
       "au-new-south-wales",
@@ -301793,12 +303306,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "64",
     "registerLevel": "region",
     "registeredOn": "1998-12-10",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Blackwood Valley is a wine region in the south-west of Western Australia, approximately 260 km (160 mi) south-south-east of Perth.",
+        "url": "https://en.wikipedia.org/wiki/Blackwood_Valley"
+      },
+      "es": {
+        "text": "Blackwood Valley es una región vinícola del suroeste de Australia Occidental, a unos 260 km (160 mi) al sur-sudeste de Perth.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Blackwood_Valley"
+      },
+      "ca": {
+        "text": "Blackwood Valley és una regió vinícola del sud-oest d'Austràlia Occidental, a uns 260 km (160 mi) al sud-sud-est de Perth.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Blackwood_Valley"
+      },
+      "fr": {
+        "text": "Blackwood Valley est une région viticole du sud-ouest de l'Australie-Occidentale, à environ 260 km (160 mi) au sud-sud-est de Perth.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Blackwood_Valley"
+      },
+      "de": {
+        "text": "Blackwood Valley ist ein Weinbaugebiet im Südwesten von Western Australia, etwa 260 km (160 mi) süd-südöstlich von Perth.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Blackwood_Valley"
+      },
+      "it": {
+        "text": "Blackwood Valley è una regione vinicola del sud-ovest dell'Australia Occidentale, a circa 260 km (160 mi) a sud-sud-est di Perth.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Blackwood_Valley"
+      },
+      "nl": {
+        "text": "Blackwood Valley is een wijnregio in het zuidwesten van West-Australië, ongeveer 260 km (160 mi) zuid-zuidoost van Perth.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Blackwood_Valley"
+      },
+      "pt": {
+        "text": "Blackwood Valley é uma região vitícola do sudoeste da Austrália Ocidental, a cerca de 260 km (160 mi) a sul-sudeste de Perth.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Blackwood_Valley"
+      }
+    },
+    "wikidataId": "Q16254915",
     "within": [
       "au-south-west-australia",
       "au-western-australia",
@@ -302316,12 +303869,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "82",
     "registerLevel": "region",
     "registeredOn": "2000-12-08",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "The South Burnett is a peanut growing and wine-producing area on the Great Dividing Range, north of the Darling Downs, in Queensland. It is with the basin of the Burnett River. The area is within  two local government areas, South Burnett Region and Gympie Region.",
+        "url": "https://en.wikipedia.org/wiki/South_Burnett"
+      },
+      "es": {
+        "text": "El South Burnett es una zona de cultivo de cacahuete y de producción de vino en la Gran Cordillera Divisoria, al norte de los Darling Downs, en Queensland. Está en la cuenca del río Burnett. La zona pertenece a dos áreas de gobierno local, South Burnett Region y Gympie Region.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/South_Burnett"
+      },
+      "ca": {
+        "text": "El South Burnett és una zona de conreu de cacauet i de producció de vi a la Gran Serralada Divisòria, al nord dels Darling Downs, a Queensland. És a la conca del riu Burnett. La zona pertany a dues àrees de govern local, South Burnett Region i Gympie Region.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/South_Burnett"
+      },
+      "fr": {
+        "text": "Le South Burnett est une région de culture de l'arachide et de production de vin sur la Cordillère australienne, au nord des Darling Downs, dans le Queensland. Il se trouve dans le bassin de la Burnett. La région relève de deux zones d'administration locale, South Burnett Region et Gympie Region.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/South_Burnett"
+      },
+      "de": {
+        "text": "Der South Burnett ist ein Erdnussanbau- und Weinbaugebiet an der Great Dividing Range nördlich der Darling Downs in Queensland. Er liegt im Einzugsgebiet des Burnett River. Das Gebiet gehört zu zwei Verwaltungseinheiten, South Burnett Region und Gympie Region.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/South_Burnett"
+      },
+      "it": {
+        "text": "Il South Burnett è una zona di coltivazione di arachidi e di produzione vinicola sulla Grande Catena Divisoria, a nord dei Darling Downs, nel Queensland. Si trova nel bacino del fiume Burnett. La zona rientra in due aree di governo locale, South Burnett Region e Gympie Region.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/South_Burnett"
+      },
+      "nl": {
+        "text": "De South Burnett is een gebied met pinda- en wijnbouw op de Great Dividing Range, ten noorden van de Darling Downs, in Queensland. Het ligt in het stroomgebied van de Burnett. Het gebied valt onder twee lokale bestuursgebieden, South Burnett Region en Gympie Region.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/South_Burnett"
+      },
+      "pt": {
+        "text": "O South Burnett é uma zona de cultivo de amendoim e de produção de vinho na Grande Cordilheira Divisória, a norte dos Darling Downs, em Queensland. Fica na bacia do rio Burnett. A zona pertence a duas áreas de governo local, South Burnett Region e Gympie Region.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/South_Burnett"
+      }
+    },
+    "wikidataId": "Q7566458",
     "within": [
       "au-queensland",
       "au-australia"
@@ -302735,12 +304328,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "102",
     "registerLevel": "region",
     "registeredOn": "2003-10-14",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Upper Goulburn is a wine region in the Australian state of Victoria. It was designated as an Australian Geographical Indication on  14 October 2003. It is located north of the Yarra Valley wine region on slopes that drain to the north and west into the Goulburn River and eventually the Murray River. To its north are the wine regions of Goulburn Valley, Strathbogie Ranges and King Valley.",
+        "url": "https://en.wikipedia.org/wiki/Upper_Goulburn"
+      },
+      "es": {
+        "text": "Upper Goulburn es una región vinícola del estado australiano de Victoria. Se designó indicación geográfica australiana el 14 de octubre de 2003. Está al norte de la región vinícola del Yarra Valley, en laderas que vierten al norte y al oeste hacia el río Goulburn y, al final, el río Murray. Al norte están las regiones vinícolas de Goulburn Valley, Strathbogie Ranges y King Valley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Upper_Goulburn"
+      },
+      "ca": {
+        "text": "Upper Goulburn és una regió vinícola de l'estat australià de Victòria. Es va designar indicació geogràfica australiana el 14 d'octubre de 2003. És al nord de la regió vinícola del Yarra Valley, en vessants que aboquen cap al nord i l'oest al riu Goulburn i, finalment, al riu Murray. Al nord hi ha les regions vinícoles de Goulburn Valley, Strathbogie Ranges i King Valley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Upper_Goulburn"
+      },
+      "fr": {
+        "text": "Upper Goulburn est une région viticole de l'État australien du Victoria. Elle a été désignée indication géographique australienne le 14 octobre 2003. Elle se trouve au nord de la région viticole de la Yarra Valley, sur des pentes qui s'écoulent au nord et à l'ouest vers la Goulburn et, au bout, le Murray. Au nord se trouvent les régions viticoles de Goulburn Valley, Strathbogie Ranges et King Valley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Upper_Goulburn"
+      },
+      "de": {
+        "text": "Upper Goulburn ist ein Weinbaugebiet im australischen Bundesstaat Victoria. Es wurde am 14. Oktober 2003 als australische geografische Angabe festgelegt. Es liegt nördlich des Weinbaugebiets Yarra Valley an Hängen, die nach Norden und Westen zum Goulburn River und schließlich zum Murray River entwässern. Im Norden liegen die Weinbaugebiete Goulburn Valley, Strathbogie Ranges und King Valley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Upper_Goulburn"
+      },
+      "it": {
+        "text": "Upper Goulburn è una regione vinicola dello stato australiano del Victoria. È stata designata indicazione geografica australiana il 14 ottobre 2003. Si trova a nord della regione vinicola della Yarra Valley, su pendii che drenano a nord e a ovest verso il fiume Goulburn e infine il Murray. A nord si trovano le regioni vinicole di Goulburn Valley, Strathbogie Ranges e King Valley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Upper_Goulburn"
+      },
+      "nl": {
+        "text": "Upper Goulburn is een wijnregio in de Australische deelstaat Victoria. Ze werd op 14 oktober 2003 aangewezen als Australische geografische aanduiding. Ze ligt ten noorden van de wijnregio Yarra Valley, op hellingen die naar het noorden en westen afwateren naar de Goulburn en uiteindelijk de Murray. Ten noorden liggen de wijnregio's Goulburn Valley, Strathbogie Ranges en King Valley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Upper_Goulburn"
+      },
+      "pt": {
+        "text": "Upper Goulburn é uma região vitícola do estado australiano de Victoria. Foi designada indicação geográfica australiana a 14 de outubro de 2003. Fica a norte da região vitícola do Yarra Valley, em encostas que drenam para norte e oeste para o rio Goulburn e, por fim, o rio Murray. A norte ficam as regiões vitícolas de Goulburn Valley, Strathbogie Ranges e King Valley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Upper_Goulburn"
+      }
+    },
+    "wikidataId": "Q101212516",
     "within": [
       "au-central-victoria",
       "au-victoria",
@@ -302796,12 +304429,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "13",
     "registerLevel": "zone",
     "registeredOn": "1996-05-01",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "North East Victoria is an Australian Geographical Indication for a wine zone in the Australian state of Victoria.",
+        "url": "https://en.wikipedia.org/wiki/North_East_Victoria"
+      },
+      "es": {
+        "text": "North East Victoria es una indicación geográfica australiana para una zona vinícola del estado australiano de Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/North_East_Victoria"
+      },
+      "ca": {
+        "text": "North East Victoria és una indicació geogràfica australiana per a una zona vinícola de l'estat australià de Victòria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/North_East_Victoria"
+      },
+      "fr": {
+        "text": "North East Victoria est une indication géographique australienne pour une zone viticole de l'État australien du Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/North_East_Victoria"
+      },
+      "de": {
+        "text": "North East Victoria ist eine australische geografische Angabe für eine Weinbauzone im australischen Bundesstaat Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/North_East_Victoria"
+      },
+      "it": {
+        "text": "North East Victoria è un'indicazione geografica australiana per una zona vinicola dello stato australiano del Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/North_East_Victoria"
+      },
+      "nl": {
+        "text": "North East Victoria is een Australische geografische aanduiding voor een wijnzone in de Australische deelstaat Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/North_East_Victoria"
+      },
+      "pt": {
+        "text": "North East Victoria é uma indicação geográfica australiana para uma zona vitícola do estado australiano de Victoria.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/North_East_Victoria"
+      }
+    },
+    "wikidataId": "Q28183583",
     "within": [
       "au-victoria",
       "au-south-eastern-australia",
@@ -302826,12 +304499,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "74",
     "registerLevel": "region",
     "registeredOn": "1999-11-29",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "The Alpine Valleys is an Australian wine region on the western slopes of the Victorian Alps in northeast Victoria. It was registered as an Australian Geographical Indication on 29 November 1999 (1999-11-29) It is bounded to the west by the King Valley and to the north by the Beechworth wine region. The area is distinctly cooler in climate than some of the other northeast wine regions like Rutherglen.",
+        "url": "https://en.wikipedia.org/wiki/Alpine_Valleys"
+      },
+      "es": {
+        "text": "Los Alpine Valleys son una región vinícola australiana en las laderas occidentales de los Alpes victorianos, en el nordeste de Victoria. Se registró como indicación geográfica australiana el 29 de noviembre de 1999 (1999-11-29). Limita al oeste con el King Valley y al norte con la región vinícola de Beechworth. La zona tiene un clima claramente más fresco que otras regiones vinícolas del nordeste, como Rutherglen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Alpine_Valleys"
+      },
+      "ca": {
+        "text": "Les Alpine Valleys són una regió vinícola australiana als vessants occidentals dels Alps de Victòria, al nord-est de Victòria. Es va registrar com a indicació geogràfica australiana el 29 de novembre de 1999 (1999-11-29). Limita a l'oest amb el King Valley i al nord amb la regió vinícola de Beechworth. La zona té un clima clarament més fresc que altres regions vinícoles del nord-est, com Rutherglen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Alpine_Valleys"
+      },
+      "fr": {
+        "text": "Les Alpine Valleys sont une région viticole australienne sur les versants ouest des Alpes victoriennes, dans le nord-est du Victoria. Elles ont été enregistrées comme indication géographique australienne le 29 novembre 1999 (1999-11-29). Elles sont bordées à l'ouest par la King Valley et au nord par la région viticole de Beechworth. Le climat y est nettement plus frais que dans d'autres régions viticoles du nord-est, comme Rutherglen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Alpine_Valleys"
+      },
+      "de": {
+        "text": "Die Alpine Valleys sind ein australisches Weinbaugebiet an den Westhängen der Victorian Alps im Nordosten von Victoria. Sie wurden am 29. November 1999 (1999-11-29) als australische geografische Angabe eingetragen. Im Westen grenzen sie an das King Valley, im Norden an das Weinbaugebiet Beechworth. Das Klima ist deutlich kühler als in anderen Weinbaugebieten des Nordostens wie Rutherglen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Alpine_Valleys"
+      },
+      "it": {
+        "text": "Le Alpine Valleys sono una regione vinicola australiana sui versanti occidentali delle Alpi del Victoria, nel nord-est del Victoria. Sono state registrate come indicazione geografica australiana il 29 novembre 1999 (1999-11-29). Confinano a ovest con la King Valley e a nord con la regione vinicola di Beechworth. Il clima è nettamente più fresco che in altre regioni vinicole del nord-est, come Rutherglen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Alpine_Valleys"
+      },
+      "nl": {
+        "text": "De Alpine Valleys zijn een Australische wijnregio op de westelijke hellingen van de Victoriaanse Alpen in het noordoosten van Victoria. Ze werden op 29 november 1999 (1999-11-29) geregistreerd als Australische geografische aanduiding. In het westen grenzen ze aan de King Valley en in het noorden aan de wijnregio Beechworth. Het klimaat is duidelijk koeler dan in andere wijnregio's in het noordoosten, zoals Rutherglen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Alpine_Valleys"
+      },
+      "pt": {
+        "text": "Os Alpine Valleys são uma região vitícola australiana nas encostas ocidentais dos Alpes vitorianos, no nordeste de Victoria. Foram registados como indicação geográfica australiana a 29 de novembro de 1999 (1999-11-29). Confinam a oeste com o King Valley e a norte com a região vitícola de Beechworth. O clima é claramente mais fresco do que noutras regiões vitícolas do nordeste, como Rutherglen.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Alpine_Valleys"
+      }
+    },
+    "wikidataId": "Q4735530",
     "within": [
       "au-north-east-victoria",
       "au-victoria",
@@ -302959,12 +304672,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "108",
     "registerLevel": "region",
     "registeredOn": "2007-10-12",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "The King Valley, or King River Valley, is a wine-producing and agricultural region centered on the King River between Wangaratta and the Alpine National Park in North East Victoria, Australia. There are several small towns within the region, including: Cheshunt, Whitfield, King Valley, Edi, Claremont, Moyhu, Byrne, Docker and Oxley.",
+        "url": "https://en.wikipedia.org/wiki/King_Valley"
+      },
+      "es": {
+        "text": "El King Valley, o King River Valley, es una región vinícola y agrícola centrada en el río King, entre Wangaratta y el Parque Nacional Alpino, en el nordeste de Victoria (Australia). En la región hay varias localidades pequeñas, entre ellas Cheshunt, Whitfield, King Valley, Edi, Claremont, Moyhu, Byrne, Docker y Oxley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/King_Valley"
+      },
+      "ca": {
+        "text": "El King Valley, o King River Valley, és una regió vinícola i agrícola centrada al riu King, entre Wangaratta i el Parc Nacional Alpí, al nord-est de Victòria (Austràlia). A la regió hi ha diverses localitats petites, entre les quals Cheshunt, Whitfield, King Valley, Edi, Claremont, Moyhu, Byrne, Docker i Oxley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/King_Valley"
+      },
+      "fr": {
+        "text": "La King Valley, ou King River Valley, est une région viticole et agricole centrée sur la rivière King, entre Wangaratta et le parc national Alpin, dans le nord-est du Victoria (Australie). Elle compte plusieurs petites localités, dont Cheshunt, Whitfield, King Valley, Edi, Claremont, Moyhu, Byrne, Docker et Oxley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/King_Valley"
+      },
+      "de": {
+        "text": "Das King Valley oder King River Valley ist ein Wein- und Agrargebiet am King River zwischen Wangaratta und dem Alpine National Park im Nordosten von Victoria (Australien). In der Region liegen mehrere kleine Orte, darunter Cheshunt, Whitfield, King Valley, Edi, Claremont, Moyhu, Byrne, Docker und Oxley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/King_Valley"
+      },
+      "it": {
+        "text": "La King Valley, o King River Valley, è una regione vinicola e agricola incentrata sul fiume King, tra Wangaratta e l'Alpine National Park, nel nord-est del Victoria (Australia). Nella regione si trovano diverse piccole località, tra cui Cheshunt, Whitfield, King Valley, Edi, Claremont, Moyhu, Byrne, Docker e Oxley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/King_Valley"
+      },
+      "nl": {
+        "text": "De King Valley, of King River Valley, is een wijn- en landbouwregio rond de King River tussen Wangaratta en het Alpine National Park, in het noordoosten van Victoria (Australië). In de regio liggen verschillende kleine plaatsen, waaronder Cheshunt, Whitfield, King Valley, Edi, Claremont, Moyhu, Byrne, Docker en Oxley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/King_Valley"
+      },
+      "pt": {
+        "text": "O King Valley, ou King River Valley, é uma região vitícola e agrícola centrada no rio King, entre Wangaratta e o Parque Nacional Alpino, no nordeste de Victoria (Austrália). Na região há várias localidades pequenas, entre elas Cheshunt, Whitfield, King Valley, Edi, Claremont, Moyhu, Byrne, Docker e Oxley.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/King_Valley"
+      }
+    },
+    "wikidataId": "Q6412131",
     "within": [
       "au-north-east-victoria",
       "au-victoria",
@@ -303657,12 +305410,52 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 4,
     "registerRef": "77",
     "registerLevel": "region",
     "registeredOn": "2000-06-29",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "The Pyrenees is a wine-producing region centred on the Pyrenees ranges in Victoria, Australia near the town of Avoca.",
+        "url": "https://en.wikipedia.org/wiki/Pyrenees_(Victoria)"
+      },
+      "es": {
+        "text": "Los Pyrenees son una región vinícola centrada en la sierra de los Pyrenees, en Victoria (Australia), cerca de la localidad de Avoca.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pyrenees_(Victoria)"
+      },
+      "ca": {
+        "text": "Els Pyrenees són una regió vinícola centrada a la serra dels Pyrenees, a Victòria (Austràlia), a prop de la localitat d'Avoca.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pyrenees_(Victoria)"
+      },
+      "fr": {
+        "text": "Les Pyrenees sont une région viticole centrée sur les monts Pyrenees, dans le Victoria (Australie), près de la localité d'Avoca.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pyrenees_(Victoria)"
+      },
+      "de": {
+        "text": "Die Pyrenees sind ein Weinbaugebiet rund um die Pyrenees Ranges in Victoria (Australien), nahe dem Ort Avoca.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pyrenees_(Victoria)"
+      },
+      "it": {
+        "text": "I Pyrenees sono una regione vinicola incentrata sui monti Pyrenees, nel Victoria (Australia), vicino alla località di Avoca.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pyrenees_(Victoria)"
+      },
+      "nl": {
+        "text": "De Pyrenees zijn een wijnregio rond de Pyrenees Ranges in Victoria (Australië), bij het plaatsje Avoca.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pyrenees_(Victoria)"
+      },
+      "pt": {
+        "text": "Os Pyrenees são uma região vitícola centrada na serra dos Pyrenees, em Victoria (Austrália), perto da localidade de Avoca.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Pyrenees_(Victoria)"
+      }
+    },
+    "wikidataId": "Q3411307",
     "within": [
       "au-western-victoria",
       "au-victoria",

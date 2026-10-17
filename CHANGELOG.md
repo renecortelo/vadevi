@@ -123,6 +123,12 @@ has the reasons.
   the French, Zürichsee from the German, Short Hills Bench from the English
   — each translated faithfully into the eight languages and marked so.
   Lavaux takes its point from its article's item.
+- **More names described**: 38 more names beyond the EU have a summary
+  from an article chosen by hand — fifteen of Chile's denominations, thirteen
+  Australian regions, Cuyo and the DOC Luján de Cuyo, the Okanagan Valley, La
+  Côte and Calamin, the Breede River Valley, Swan Creek, the Ancient Lakes of
+  Columbia Valley and Codru — and six Brazilian indications one from their
+  delimitation in the INPI's list; all in the eight languages.
 - **Summaries from official texts**: Japan's five wine indications are
   described by the opening of their product specifications, in the National
   Tax Agency's own English translation, as written, and translated into the

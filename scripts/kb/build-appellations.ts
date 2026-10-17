@@ -851,6 +851,32 @@ for (const grape of grapes) {
   }
 }
 
+// Articles found for names beyond the EU that no title rule reached, each
+// read and chosen by hand (`data/kb/article-items.json`, fetched by
+// `pnpm kb:fetch-article-items`): an article whose opening says the name is
+// a wine region, district or appellation. Only where nothing else describes
+// the name.
+const articleItemsPath = resolve("data/kb/article-items.json");
+const articleItems = existsSync(articleItemsPath)
+  ? (
+      JSON.parse(readFileSync(articleItemsPath, "utf8")) as {
+        items: Record<string, { qid: string }>;
+      }
+    ).items
+  : {};
+let fromArticleItems = 0;
+for (const entry of entries) {
+  const chosen = articleItems[entry.id];
+  if (chosen === undefined || Object.keys(entry.summaries).length > 0) continue;
+  const { leads, summaries } = wikipediaSummaries(chosen.qid);
+  if (Object.keys(summaries).length === 0) continue;
+  entry.summaries = summaries;
+  entry.wikidataId ??= chosen.qid;
+  entry.prominence = Math.max(entry.prominence, leads);
+  fromArticleItems += 1;
+}
+console.info(`  ${fromArticleItems} names described by an article chosen by hand.`);
+
 // Names no article of their own describes may be described in their
 // country's wine article (`pnpm kb:fetch-country-wine`): the sentences that
 // name one, about wine, and not a list of names, become its summary.

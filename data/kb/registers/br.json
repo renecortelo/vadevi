@@ -5,7 +5,7 @@
     "publisher": "Instituto Nacional da Propriedade Industrial (INPI), Brazil",
     "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
     "issued": "2026-09-29",
-    "note": "Transcribed by hand from the INPI's two lists — the recognised indications of provenance (Indicação de Procedência, IP; up to 29 September 2026) and the recognised denominations of origin (Denominação de Origem, DO; up to 23 June 2026) — keeping the Brazilian ones whose product is wine: each geographical name as the list writes it, its kind, its number, the product as written, the date of registration (and of any change the list gives), the state, and the municipalities its delimitation names. \"Santa Catarina\" is the list's geographical name for the indication its delimitation calls the \"Vinhos de Altitude de Santa Catarina\". Vale dos Vinhedos is in both lists, an IP since 2002 and a DO since 2012; Vales da Uva Goethe, an IP from 2012, became a DO on 10 June 2025. Pinto Bandeira's IP lay in the municipalities of Bento Gonçalves and Farroupilha when it was registered (2010). Official acts have no copyright in Brazil (Lei 9.610/1998, art. 8, IV). The date shown is when a name took its present kind: Vales da Uva Goethe's as a DO (10 June 2025), its first registration as an IP kept as firstRegisteredOn. Monte Belo and Santa Catarina are placed only amid their municipalities: OpenStreetMap's Monte Belo is another place, in the north-west of Rio Grande do Sul, and its Santa Catarina the whole state. Vale dos Vinhedos's article on the Portuguese Wikipedia (Wikidata Q1241994) describes the denomination's page; the indication of provenance of the same name takes no article, as one text on two pages would be dropped.",
+    "note": "Transcribed by hand from the INPI's two lists — the recognised indications of provenance (Indicação de Procedência, IP; up to 29 September 2026) and the recognised denominations of origin (Denominação de Origem, DO; up to 23 June 2026) — keeping the Brazilian ones whose product is wine: each geographical name as the list writes it, its kind, its number, the product as written, the date of registration (and of any change the list gives), the state, and the municipalities its delimitation names. \"Santa Catarina\" is the list's geographical name for the indication its delimitation calls the \"Vinhos de Altitude de Santa Catarina\". Vale dos Vinhedos is in both lists, an IP since 2002 and a DO since 2012; Vales da Uva Goethe, an IP from 2012, became a DO on 10 June 2025. Pinto Bandeira's IP lay in the municipalities of Bento Gonçalves and Farroupilha when it was registered (2010). Official acts have no copyright in Brazil (Lei 9.610/1998, art. 8, IV). The date shown is when a name took its present kind: Vales da Uva Goethe's as a DO (10 June 2025), its first registration as an IP kept as firstRegisteredOn. Monte Belo and Santa Catarina are placed only amid their municipalities: OpenStreetMap's Monte Belo is another place, in the north-west of Rio Grande do Sul, and its Santa Catarina the whole state. Vale dos Vinhedos's article on the Portuguese Wikipedia (Wikidata Q1241994) describes the denomination's page; the indication of provenance of the same name takes no article, as one text on two pages would be dropped. Six names are summarised by their delimitation's opening, as the list writes it (typos included), Altos de Pinto Bandeira's ended before its coordinates; the others' delimitations are lists of coordinates or municipalities and summarise nothing.",
     "urlDenominations": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
     "page": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos"
   },
@@ -20,7 +20,13 @@
       "spread": ["Bento Gonçalves", "Garibaldi", "Monte Belo do Sul"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
       "noArticle": true,
-      "products": "Vinhos: tinto, branco e espumante."
+      "products": "Vinhos: tinto, branco e espumante.",
+      "summary": {
+        "locale": "pt",
+        "text": "A região do VALE DOS VINHEDOS possui,uma área total de 81,23Km2, distribuida na sua maior parte no Município de Bento Gonçalves, mas também nos Municipios de Garibaldi e Monte Belo do Sul.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      }
     },
     {
       "key": "pinto-bandeira",
@@ -31,7 +37,13 @@
       "states": ["Rio Grande do Sul"],
       "spread": ["Bento Gonçalves", "Farroupilha"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
-      "products": "Vinhos tintos, brancos e espumantes"
+      "products": "Vinhos tintos, brancos e espumantes",
+      "summary": {
+        "locale": "pt",
+        "text": "A área geográfica delimitada se situa na Região Nordeste do Estado do Rio Grande do Sul, entre a Serra Geral e o Planalto dos Campos Gerais. A área geográfica delimitada totaliza 7.960,66 HA, sendo que, destes, 7.418 HA estão no município de Bento Gonçalves e 543 HA estão no município de Farroupilha.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      }
     },
     {
       "key": "altos-montes",
@@ -129,7 +141,13 @@
       ],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
       "placeByName": false,
-      "products": "Vinhos: vinho fino, vinho nobre, vinho licoroso, espumante natural e vinho moscatel espumante; e o brandy"
+      "products": "Vinhos: vinho fino, vinho nobre, vinho licoroso, espumante natural e vinho moscatel espumante; e o brandy",
+      "summary": {
+        "locale": "pt",
+        "text": "A delimitação da área geográfica da Indicação de Procedência dos Vinhos de Altitude de Santa Catarina é única, contínua e está entre os paralelos e meridianos de 26º31’43,301”S, 51º54’1,015”W e 28º38’20,92”S, 48º54’27,098”W. Abrange totalmente a área territorial de 29 municípios de Santa Catarina, com área de 19.676 km2, correspondendo a 20% do território catarinense.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      }
     },
     {
       "key": "bituruna",
@@ -173,7 +191,13 @@
         "Ijaci"
       ],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
-      "products": "Vinhos de inverno elaborados a partir de uvas Vitis vinifera L."
+      "products": "Vinhos de inverno elaborados a partir de uvas Vitis vinifera L.",
+      "summary": {
+        "locale": "pt",
+        "text": "Localizada no Estado de Minas Gerais, é constituída por um território com altitude igual ou superior a 800m formando uma área descontínua de 4239,6 km2, cuja descrição dos limites se restringe às áreas dos seguintes municípios: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna e Ijaci.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
+        "license": "BR-official-text"
+      }
     },
     {
       "key": "vale-dos-vinhedos",
@@ -206,7 +230,13 @@
       ],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
       "products": "Vinho Branco Seco, Vinho Branco Suave ou Demi Séc, Vinho Leve Branco Seco, Vinho Leve Branco Suave ou Demi Séc, Vinho Espumante Brut, ou Demi Séc obtidos pelo método “Champenoise”, Vinho Espumante Brut, ou Demi Séc obtidos pelo método “Charmat”, Vinho Licoroso.",
-      "firstRegisteredOn": "2012-02-14"
+      "firstRegisteredOn": "2012-02-14",
+      "summary": {
+        "locale": "pt",
+        "text": "A área geográfica delimitada para a produção de Vinhos Goethe, com qualidade D.O.V.U.G. localiza-se nos municípios Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza e Içara, no Estado de Santa Catarina, conforme estabelece o Art. 1º. do Estatuto da PROGOETHE, para área de abrangência e inclusão de seus associados.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      }
     },
     {
       "key": "altos-de-pinto-bandeira",
@@ -217,7 +247,13 @@
       "states": ["Rio Grande do Sul"],
       "spread": ["Pinto Bandeira", "Farroupilha", "Bento Gonçalves"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
-      "products": "Espumante natural"
+      "products": "Espumante natural",
+      "summary": {
+        "locale": "pt",
+        "text": "A área delimitada da Denominação de Origem de espumante natural Altos de Pinto Bandeira possui 65Km2 de área contínua, sendo 76,6% localizada no município de Pinto Bandeira, 19,0% no município de Farroupilha e 4,4% no município de Bento Gonçalves.",
+        "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+        "license": "BR-official-text"
+      }
     }
   ]
 }
