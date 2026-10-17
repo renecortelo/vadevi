@@ -128,6 +128,14 @@ has the reasons.
   Tax Agency's own English translation, as written, and translated into the
   other languages. The page credits such a summary to the name's official
   text, not to Wikipedia.
+- **Georgia in the atlas**: the 31 appellations of origin for wine in
+  Sakpatenti's state registry — Khvanchkara, Mukuzani, Tsinandali,
+  Kindzmarauli, Kakheti and the rest — and its three wine geographical
+  indications (Eniseli, Gremi, Vartsikhe), each with its registration number
+  and date and a link to its registered document; nested where the document
+  places it (Mukuzani in Kakheti, Tsarapi in Kardenakhi); described by its
+  own article or by its document's sentence on the kind of wine, in the eight
+  languages. The Europe map sheet now reaches all of Kakheti.
 - **Ontario in the atlas**: the 17 viticultural areas of its VQA rules
   (Table 1 of O. Reg. 406/00), from the Niagara Peninsula and Prince Edward
   County to the benches of the Niagara Escarpment, each within the areas the

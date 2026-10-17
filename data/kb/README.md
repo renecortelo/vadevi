@@ -258,6 +258,11 @@ leaves out:
   not protected names (`WR`), and left out of the count of registered names.
 - `ch.json` — Switzerland: the 63 cantonal, regional and local AOCs of the
   federal directory (OFAG, 1 January 2026).
+- `ge.json` — Georgia: the 31 appellations of origin for wine in
+  Sakpatenti's state registry (each registered document read for its
+  product) and its three recognised wine geographical indications; summaries
+  from their own articles or, failing one, from their document's sentence on
+  the kind of wine (`GE-official-text`).
 - `jp.json` — Japan: the five geographical indications for wine of the
   National Tax Agency's list (Yamanashi, Hokkaido, Yamagata, Osaka, Nagano),
   each summarised by the opening of its product specification's account of

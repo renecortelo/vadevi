@@ -22,6 +22,7 @@ type RegisterSuffix =
   | "Ch"
   | "Cl"
   | "Gb"
+  | "Ge"
   | "Jp"
   | "Md"
   | "Mx"
@@ -50,6 +51,7 @@ export function registerSuffix(
     CH: "Ch",
     CL: "Cl",
     GB: "Gb",
+    GE: "Ge",
     JP: "Jp",
     MD: "Md",
     MX: "Mx",

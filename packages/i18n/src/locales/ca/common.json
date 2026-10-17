@@ -367,7 +367,10 @@
     "registerTitleWr": "No és un nom protegit",
     "unprotectedWr": "Una regió vinícola que cap registre no protegeix. És a l'atles perquè un article l'esmenta com a zona de vinya; el seu nom en una etiqueta no garanteix d'on ve el vi.",
     "registerLinkWr": "Llegir l'article que l'esmenta",
-    "summarySourceOfficial": "Del text oficial del nom, al seu registre"
+    "summarySourceOfficial": "Del text oficial del nom, al seu registre",
+    "registerTitleGe": "Al registre estatal de Geòrgia (Sakpatenti)",
+    "registeredOnGe": "Registrada el {{date}}.",
+    "registerLinkGe": "Veure'n el document al registre de Sakpatenti ({{ref}})"
   },
   "space": {
     "switchLabel": "Espai actiu",

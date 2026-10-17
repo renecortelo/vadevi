@@ -367,7 +367,10 @@
     "registerTitleWr": "Non è un nome protetto",
     "unprotectedWr": "Una regione vinicola che nessun registro tutela. È nell'atlante perché un articolo la nomina come zona di vigneti; il suo nome in etichetta non garantisce da dove venga il vino.",
     "registerLinkWr": "Leggi l'articolo che la nomina",
-    "summarySourceOfficial": "Dal testo ufficiale del nome, nel suo registro"
+    "summarySourceOfficial": "Dal testo ufficiale del nome, nel suo registro",
+    "registerTitleGe": "Nel registro statale della Georgia (Sakpatenti)",
+    "registeredOnGe": "Registrata il {{date}}.",
+    "registerLinkGe": "Vedi il suo documento nel registro di Sakpatenti ({{ref}})"
   },
   "space": {
     "switchLabel": "Spazio attivo",

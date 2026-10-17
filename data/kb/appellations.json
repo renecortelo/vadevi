@@ -294416,6 +294416,1966 @@
     ]
   },
   {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "mujuretuli",
+        "quote": "Культивируется в области Рача-Лечхуми. Отдельно можно выделить область возле селения Хванчкара, где производится одноименное вино.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%B4%D0%B6%D1%83%D1%80%D0%B5%D1%82%D1%83%D0%BB%D0%B8"
+      },
+      {
+        "grapeId": "alexandrouli",
+        "quote": "Культивируется возле селения Хванчкара, где производится одноименное вино.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D1%83%D0%BB%D0%B8"
+      }
+    ],
+    "id": "ge-khvanchkara",
+    "latitude": 42.559126,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f3999ba7-fdcd-4735-8ced-6a9073ba87be.pdf",
+    "longitude": 43.020248,
+    "name": "Khvanchkara",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Khvanchkara",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 2,
+    "registerRef": "No. 1",
+    "registeredOn": "2005-07-14",
+    "summaries": {
+      "en": {
+        "text": "Khvanchkara (Georgian: ხვანჭკარა, romanized: khvanch'k'ara) is a naturally semi-sweet red Georgian wine. It is made from the Aleksandrouli and Mujuretuli grape merger varieties cultivated in the village of Khvanchkara, near the town of Ambrolauri, Racha region of the country.",
+        "url": "https://en.wikipedia.org/wiki/Khvanchkara"
+      },
+      "de": {
+        "text": "Chwantschkara (georgisch ხვანჭკარა) – auch Khvanchkara geschrieben – ist ein lieblicher Rotwein, der aus dem nördlichen Georgien stammt. Seinen Namen hat er von dem Anbaugebiet um das Dorf Chwantschkara, das in der historischen Provinz Ratscha, heute Teil der Region Ratscha-Letschchumi und Niederswanetien, liegt. Ein Wein darf nur dann den Namen \"Chwantschkara\" tragen, wenn er aus diesem Anbaugebiet stammt.",
+        "url": "https://de.wikipedia.org/wiki/Chwantschkara"
+      },
+      "es": {
+        "text": "Khvanchkara (en georgiano: ხვანჭკარა, romanizado: khvanch'k'ara) es un vino tinto georgiano naturalmente semidulce. Se elabora con la unión de las variedades Aleksandrouli y Mujuretuli cultivadas en el pueblo de Khvanchkara, cerca de la ciudad de Ambrolauri, en la región de Racha del país.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Khvanchkara"
+      },
+      "ca": {
+        "text": "El Khvanchkara (en georgià: ხვანჭკარა, romanitzat: khvanch'k'ara) és un vi negre georgià naturalment semidolç. S'elabora amb la unió de les varietats Aleksandrouli i Mujuretuli conreades al poble de Khvanchkara, prop de la ciutat d'Ambrolauri, a la regió de Ratxa del país.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Khvanchkara"
+      },
+      "fr": {
+        "text": "Le Khvanchkara (en géorgien : ხვანჭკარა, romanisé : khvanch'k'ara) est un vin rouge géorgien naturellement demi-doux. Il est élaboré à partir de l'assemblage des cépages Aleksandrouli et Mujuretuli cultivés dans le village de Khvanchkara, près de la ville d'Ambrolauri, dans la région de Ratcha du pays.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Khvanchkara"
+      },
+      "it": {
+        "text": "Il Khvanchkara (in georgiano: ხვანჭკარა, traslitterato: khvanch'k'ara) è un vino rosso georgiano naturalmente semidolce. È prodotto dall'unione dei vitigni Aleksandrouli e Mujuretuli coltivati nel villaggio di Khvanchkara, vicino alla città di Ambrolauri, nella regione di Racha del paese.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Khvanchkara"
+      },
+      "nl": {
+        "text": "Khvanchkara (Georgisch: ხვანჭკარა, geromaniseerd: khvanch'k'ara) is een natuurlijk halfzoete rode Georgische wijn. Hij wordt gemaakt van de combinatie van de druivenrassen Aleksandrouli en Mujuretuli, geteeld in het dorp Khvanchkara bij de stad Ambrolauri, in de regio Ratsja van het land.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Khvanchkara"
+      },
+      "pt": {
+        "text": "O Khvanchkara (em georgiano: ხვანჭკარა, romanizado: khvanch'k'ara) é um vinho tinto georgiano naturalmente meio-doce. É feito a partir da junção das castas Aleksandrouli e Mujuretuli cultivadas na aldeia de Khvanchkara, perto da cidade de Ambrolauri, na região de Racha do país.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Khvanchkara"
+      }
+    },
+    "wikidataId": "Q1090166"
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "saperavi",
+        "quote": "технический (винный) сорт чёрного винограда позднего созревания, происходящий из Кахетии ... самый ароматный саперави происходит из региона Рача-Лечхуми ... «черносливово-перечной основательности Кварели до элегантной малины Напареули ... как сухие (Мукузани, Напареули), так и полусладкие (Киндзмараули, Ахашени).",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D0%B5%D1%80%D0%B0%D0%B2%D0%B8"
+      }
+    ],
+    "id": "ge-mukuzani",
+    "latitude": 41.8068055,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/4dcca59d-cad4-43d3-8f34-a7ee250dbc6e.pdf",
+    "longitude": 45.7320157,
+    "name": "Mukuzani",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Mukuzani",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "No. 2",
+    "registeredOn": "2005-08-30",
+    "summaries": {
+      "en": {
+        "text": "Mukuzani (Georgian: მუკუზანი muk’uzani) is a dry red Georgian wine made from Saperavi grapes in Mukuzani, Kakheti. Mukuzani is distinct from the other wines made from the same grapes in that it is aged in oak casks for a longer time – at least three years.",
+        "url": "https://en.wikipedia.org/wiki/Mukuzani"
+      },
+      "es": {
+        "text": "El Mukuzani (en georgiano: მუკუზანი muk’uzani) es un vino tinto seco georgiano elaborado con uva Saperavi en Mukuzani, Kajetia. El Mukuzani se distingue de los demás vinos elaborados con la misma uva en que envejece más tiempo en barricas de roble: al menos tres años.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mukuzani"
+      },
+      "ca": {
+        "text": "El Mukuzani (en georgià: მუკუზანი muk’uzani) és un vi negre sec georgià elaborat amb raïm Saperavi a Mukuzani, Kakhètia. El Mukuzani es distingeix dels altres vins elaborats amb el mateix raïm perquè envelleix més temps en bótes de roure: com a mínim tres anys.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mukuzani"
+      },
+      "fr": {
+        "text": "Le Mukuzani (en géorgien : მუკუზანი muk’uzani) est un vin rouge sec géorgien élaboré à partir de raisin Saperavi à Mukuzani, en Kakhétie. Le Mukuzani se distingue des autres vins issus du même raisin par un élevage plus long en fûts de chêne : au moins trois ans.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mukuzani"
+      },
+      "de": {
+        "text": "Mukuzani (Georgisch: მუკუზანი muk’uzani) ist ein trockener georgischer Rotwein aus Saperavi-Trauben aus Mukuzani in Kachetien. Mukuzani unterscheidet sich von den anderen Weinen aus denselben Trauben dadurch, dass er länger in Eichenfässern reift – mindestens drei Jahre.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mukuzani"
+      },
+      "it": {
+        "text": "Il Mukuzani (in georgiano: მუკუზანი muk’uzani) è un vino rosso secco georgiano prodotto con uve Saperavi a Mukuzani, in Cachezia. Il Mukuzani si distingue dagli altri vini prodotti con le stesse uve per un affinamento più lungo in botti di rovere: almeno tre anni.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mukuzani"
+      },
+      "nl": {
+        "text": "Mukuzani (Georgisch: მუკუზანი muk’uzani) is een droge rode Georgische wijn van Saperavi-druiven uit Mukuzani, Kachetië. Mukuzani onderscheidt zich van de andere wijnen van dezelfde druiven doordat hij langer op eikenhouten vaten rijpt: minstens drie jaar.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mukuzani"
+      },
+      "pt": {
+        "text": "O Mukuzani (em georgiano: მუკუზანი muk’uzani) é um vinho tinto seco georgiano feito com uvas Saperavi em Mukuzani, Kakheti. O Mukuzani distingue-se dos outros vinhos feitos com as mesmas uvas por envelhecer mais tempo em barricas de carvalho: pelo menos três anos.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Mukuzani"
+      }
+    },
+    "wikidataId": "Q4306822",
+    "within": [
+      "ge-kakheti"
+    ]
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "rkatsiteli",
+        "quote": "В Болгарии уступает по занимаемым площадям только мускату Оттонель ... Кахетинские виноделы традиционно использовали ркацители для выработки в кувшинах (квеври) янтарных (оранжевых) вин. В современной Грузии из ркацители производятся такие вина, как «Цинандали», «Гурджаани» и «Вазисубани».",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BA%D0%B0%D1%86%D0%B8%D1%82%D0%B5%D0%BB%D0%B8"
+      },
+      {
+        "grapeId": "mtsvane",
+        "quote": "Уточнение «кахури» указывает на происхождение из Кахетии ... В купаже с виноградом ркацители из него готовят марочные вина Вазисубани, Гурджаани и Цинандали.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
+      }
+    ],
+    "id": "ge-tsinandali",
+    "latitude": 41.8941397,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/a1143eeb-092b-4935-bbae-0652d6122707.pdf",
+    "longitude": 45.5725423,
+    "name": "Tsinandali",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tsinandali",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 2,
+    "registerRef": "No. 3",
+    "registeredOn": "2005-08-30",
+    "summaries": {
+      "en": {
+        "text": "Tsinandali (Georgian: წინანდალი, romanized: ts'inandali) white wine comes from Georgia. It is made from Rkatsiteli and Mtsvane grapes and comes from the Telavi and Kvareli area of Kakheti. Tsinandali is fermented at cool temperatures and matured for two to three years to bring out the complexity. Tsinandali can be aged for a further five, adopting some nutty bottle-aged characters in the process.",
+        "url": "https://en.wikipedia.org/wiki/Tsinandali_wine"
+      },
+      "de": {
+        "text": "Zinandali oder auch Tsinandali (georgisch წინანდალი) ist der Markenname des bekanntesten Weißweins, der aus dem Weinbaugebiet des gleichnamigen Stadtteils von Telawi in der georgischen Region Kachetien stammt. Das Weinbaugebiet liegt im Tal des Alasani.",
+        "url": "https://de.wikipedia.org/wiki/Zinandali_(Wein)"
+      },
+      "es": {
+        "text": "El Tsinandali (en georgiano: წინანდალი, romanizado: ts'inandali) es un vino blanco de Georgia. Se elabora con uvas Rkatsiteli y Mtsvane y procede de la zona de Telavi y Kvareli, en Kajetia. El Tsinandali fermenta a temperaturas frescas y madura de dos a tres años para desarrollar su complejidad. Puede envejecer cinco años más y adquirir en el proceso algunos rasgos de frutos secos propios del envejecimiento en botella.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tsinandali_wine"
+      },
+      "ca": {
+        "text": "El Tsinandali (en georgià: წინანდალი, romanitzat: ts'inandali) és un vi blanc de Geòrgia. S'elabora amb raïm Rkatsiteli i Mtsvane i prové de la zona de Telavi i Kvareli, a Kakhètia. El Tsinandali fermenta a temperatures fresques i madura de dos a tres anys per fer aflorar la seva complexitat. Pot envellir cinc anys més i adquirir en el procés alguns trets de fruita seca propis de l'envelliment en ampolla.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tsinandali_wine"
+      },
+      "fr": {
+        "text": "Le Tsinandali (en géorgien : წინანდალი, romanisé : ts'inandali) est un vin blanc de Géorgie. Il est élaboré à partir de raisins Rkatsiteli et Mtsvane et provient de la région de Telavi et Kvareli, en Kakhétie. Le Tsinandali fermente à basse température et mûrit deux à trois ans pour révéler sa complexité. Il peut vieillir cinq ans de plus et prendre au passage quelques notes de fruits secs propres au vieillissement en bouteille.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tsinandali_wine"
+      },
+      "it": {
+        "text": "Lo Tsinandali (in georgiano: წინანდალი, traslitterato: ts'inandali) è un vino bianco della Georgia. È prodotto con uve Rkatsiteli e Mtsvane e proviene dalla zona di Telavi e Kvareli, in Cachezia. Lo Tsinandali fermenta a basse temperature e matura da due a tre anni per farne emergere la complessità. Può invecchiare altri cinque anni, acquisendo nel processo alcune note di frutta secca tipiche dell'affinamento in bottiglia.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tsinandali_wine"
+      },
+      "nl": {
+        "text": "Tsinandali (Georgisch: წინანდალი, geromaniseerd: ts'inandali) is een witte wijn uit Georgië. Hij wordt gemaakt van Rkatsiteli- en Mtsvane-druiven en komt uit het gebied van Telavi en Kvareli in Kachetië. Tsinandali gist bij koele temperaturen en rijpt twee tot drie jaar om zijn complexiteit naar boven te halen. Hij kan nog vijf jaar verder rijpen en krijgt daarbij enkele nootachtige trekken van flessenrijping.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tsinandali_wine"
+      },
+      "pt": {
+        "text": "O Tsinandali (em georgiano: წინანდალი, romanizado: ts'inandali) é um vinho branco da Geórgia. É feito com uvas Rkatsiteli e Mtsvane e provém da zona de Telavi e Kvareli, em Kakheti. O Tsinandali fermenta a temperaturas frescas e amadurece dois a três anos para revelar a sua complexidade. Pode envelhecer mais cinco anos, adquirindo no processo algumas notas de frutos secos próprias do envelhecimento em garrafa.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tsinandali_wine"
+      }
+    },
+    "wikidataId": "Q204269"
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "saperavi",
+        "quote": "технический (винный) сорт чёрного винограда позднего созревания, происходящий из Кахетии ... самый ароматный саперави происходит из региона Рача-Лечхуми ... «черносливово-перечной основательности Кварели до элегантной малины Напареули ... как сухие (Мукузани, Напареули), так и полусладкие (Киндзмараули, Ахашени).",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D0%B5%D1%80%D0%B0%D0%B2%D0%B8"
+      }
+    ],
+    "id": "ge-akhasheni",
+    "latitude": 41.7922121,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/dc87f7df-7b36-4849-a2a1-27a3a4c8cf27.pdf",
+    "longitude": 45.7476265,
+    "name": "Akhasheni",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Akhasheni",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "No. 4",
+    "registeredOn": "2005-08-30",
+    "summaries": {
+      "en": {
+        "text": "Akhasheni (Georgian: ახაშენი) is an appellation for wines produced in and around the village of Akhasheni in the Gurjaani Municipality of Kakheti, Georgia.",
+        "url": "https://en.wikipedia.org/wiki/Akhasheni"
+      },
+      "es": {
+        "text": "Akhasheni (en georgiano: ახაშენი) es una denominación para los vinos elaborados en el pueblo de Akhasheni y sus alrededores, en el municipio de Gurjaani de Kajetia (Georgia).",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Akhasheni"
+      },
+      "ca": {
+        "text": "Akhasheni (en georgià: ახაშენი) és una denominació per als vins elaborats al poble d'Akhasheni i els seus voltants, al municipi de Gurjaani de Kakhètia (Geòrgia).",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Akhasheni"
+      },
+      "fr": {
+        "text": "Akhasheni (en géorgien : ახაშენი) est une appellation pour les vins produits dans le village d'Akhasheni et ses environs, dans la municipalité de Gurjaani en Kakhétie (Géorgie).",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Akhasheni"
+      },
+      "de": {
+        "text": "Akhasheni (Georgisch: ახაშენი) ist eine Herkunftsbezeichnung für Weine, die im Dorf Akhasheni und seiner Umgebung in der Gemeinde Gurjaani in Kachetien (Georgien) erzeugt werden.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Akhasheni"
+      },
+      "it": {
+        "text": "Akhasheni (in georgiano: ახაშენი) è una denominazione per i vini prodotti nel villaggio di Akhasheni e dintorni, nel comune di Gurjaani in Cachezia (Georgia).",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Akhasheni"
+      },
+      "nl": {
+        "text": "Akhasheni (Georgisch: ახაშენი) is een herkomstbenaming voor wijnen uit het dorp Akhasheni en omgeving, in de gemeente Gurjaani in Kachetië (Georgië).",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Akhasheni"
+      },
+      "pt": {
+        "text": "Akhasheni (em georgiano: ახაშენი) é uma denominação para os vinhos produzidos na aldeia de Akhasheni e arredores, no município de Gurjaani, em Kakheti (Geórgia).",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Akhasheni"
+      }
+    },
+    "wikidataId": "Q5763543",
+    "within": [
+      "ge-kakheti"
+    ]
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "chinuri",
+        "quote": "Культивируется в регионе Картли (Мухрани, Атени, Каспи) и (в гораздо меньших количествах) в Кахетии (Гурджаани и Телави), в Имерети (Вани)",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D0%B8"
+      },
+      {
+        "grapeId": "rkatsiteli",
+        "quote": "В Болгарии уступает по занимаемым площадям только мускату Оттонель ... Кахетинские виноделы традиционно использовали ркацители для выработки в кувшинах (квеври) янтарных (оранжевых) вин. В современной Грузии из ркацители производятся такие вина, как «Цинандали», «Гурджаани» и «Вазисубани».",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BA%D0%B0%D1%86%D0%B8%D1%82%D0%B5%D0%BB%D0%B8"
+      },
+      {
+        "grapeId": "mtsvane",
+        "quote": "Уточнение «кахури» указывает на происхождение из Кахетии ... В купаже с виноградом ркацители из него готовят марочные вина Вазисубани, Гурджаани и Цинандали.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
+      }
+    ],
+    "id": "ge-gurjaani",
+    "latitude": 41.7463818,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/a133beca-3ec5-4814-8d89-8a311d7452e2.pdf",
+    "longitude": 45.7946722,
+    "name": "Gurjaani",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Gurjaani",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 5",
+    "registeredOn": "2005-08-30",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "saperavi",
+        "quote": "технический (винный) сорт чёрного винограда позднего созревания, происходящий из Кахетии ... самый ароматный саперави происходит из региона Рача-Лечхуми ... «черносливово-перечной основательности Кварели до элегантной малины Напареули ... как сухие (Мукузани, Напареули), так и полусладкие (Киндзмараули, Ахашени).",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D0%B5%D1%80%D0%B0%D0%B2%D0%B8"
+      }
+    ],
+    "id": "ge-kindzmarauli",
+    "latitude": 41.9482236,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/3ee48c15-7b85-4a19-af29-b8f4da34f21b.pdf",
+    "longitude": 45.8139601,
+    "name": "Kindzmarauli",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kindzmarauli",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "No. 787",
+    "registeredOn": "2006-03-30",
+    "summaries": {
+      "en": {
+        "text": "Kindzmarauli (Georgian: ქინძმარაული, romanized: kindzmarauli) is a dark red, naturally semi-sweet Georgian wine. It is made from an indigenous grape variety of Saperavi from Kakheti region of the country.",
+        "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
+      },
+      "es": {
+        "text": "El Kindzmarauli (en georgiano: ქინძმარაული, romanizado: kindzmarauli) es un vino tinto oscuro georgiano naturalmente semidulce. Se elabora con la variedad autóctona Saperavi de la región de Kajetia del país.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
+      },
+      "ca": {
+        "text": "El Kindzmarauli (en georgià: ქინძმარაული, romanitzat: kindzmarauli) és un vi negre fosc georgià naturalment semidolç. S'elabora amb la varietat autòctona Saperavi de la regió de Kakhètia del país.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
+      },
+      "fr": {
+        "text": "Le Kindzmarauli (en géorgien : ქინძმარაული, romanisé : kindzmarauli) est un vin rouge foncé géorgien naturellement demi-doux. Il est élaboré à partir du cépage autochtone Saperavi de la région de Kakhétie du pays.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
+      },
+      "de": {
+        "text": "Kindzmarauli (Georgisch: ქინძმარაული, romanisiert: kindzmarauli) ist ein dunkelroter, natürlich halbsüßer georgischer Wein. Er wird aus der einheimischen Rebsorte Saperavi aus der Region Kachetien gekeltert.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
+      },
+      "it": {
+        "text": "Il Kindzmarauli (in georgiano: ქინძმარაული, traslitterato: kindzmarauli) è un vino rosso scuro georgiano naturalmente semidolce. È prodotto con il vitigno autoctono Saperavi della regione di Cachezia del paese.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
+      },
+      "nl": {
+        "text": "Kindzmarauli (Georgisch: ქინძმარაული, geromaniseerd: kindzmarauli) is een donkerrode, natuurlijk halfzoete Georgische wijn. Hij wordt gemaakt van het inheemse druivenras Saperavi uit de regio Kachetië.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
+      },
+      "pt": {
+        "text": "O Kindzmarauli (em georgiano: ქინძმარაული, romanizado: kindzmarauli) é um vinho tinto escuro georgiano naturalmente meio-doce. É feito com a casta autóctone Saperavi da região de Kakheti do país.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
+      }
+    },
+    "wikidataId": "Q2030130"
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "mtsvane",
+        "quote": "Sie gibt aber auch einem Schaumwein in der georgischen Gegend um Manawi ihren Namen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mzwane"
+      }
+    ],
+    "id": "ge-manavi",
+    "latitude": 41.7184553,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+    "longitude": 45.4626562,
+    "name": "Manavi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Manavi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 788",
+    "registeredOn": "2006-08-21",
+    "summaries": {
+      "en": {
+        "text": "\"Manavi\" is white sec (dry) wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Manavi\" es un vino blanco sec (seco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Manavi\" és un vi blanc sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Manavi » est un vin blanc sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Manavi“ ist ein weißer Wein, sec (trocken).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Manavi\" è un vino bianco sec (secco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Manavi\" is een witte wijn, sec (droog).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Manavi\" é um vinho branco sec (seco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null,
+    "within": [
+      "ge-kakheti"
+    ]
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "kisi",
+        "quote": "Происходит из Кахетии, где главным образом и культивируется.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%81%D0%B8_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "grapeId": "chinuri",
+        "quote": "Культивируется в регионе Картли (Мухрани, Атени, Каспи) и (в гораздо меньших количествах) в Кахетии (Гурджаани и Телави), в Имерети (Вани)",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D0%B8"
+      },
+      {
+        "grapeId": "khikhvi",
+        "quote": "is a grape variety that is grown in Eastern Georgia, specifically in the region of Kakheti ... with some plantings also present in Kartli",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Khikhvi"
+      },
+      {
+        "grapeId": "tavkveri",
+        "quote": "Tavkveri is indigenous to the Kartli region, but it is also widely cultivated in Kakheti, as well as in Azerbaijan.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tavkveri"
+      },
+      {
+        "grapeId": "saperavi",
+        "quote": "технический (винный) сорт чёрного винограда позднего созревания, происходящий из Кахетии ... самый ароматный саперави происходит из региона Рача-Лечхуми ... «черносливово-перечной основательности Кварели до элегантной малины Напареули ... как сухие (Мукузани, Напареули), так и полусладкие (Киндзмараули, Ахашени).",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D0%B5%D1%80%D0%B0%D0%B2%D0%B8"
+      },
+      {
+        "grapeId": "rkatsiteli",
+        "quote": "В Болгарии уступает по занимаемым площадям только мускату Оттонель ... Кахетинские виноделы традиционно использовали ркацители для выработки в кувшинах (квеври) янтарных (оранжевых) вин. В современной Грузии из ркацители производятся такие вина, как «Цинандали», «Гурджаани» и «Вазисубани».",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BA%D0%B0%D1%86%D0%B8%D1%82%D0%B5%D0%BB%D0%B8"
+      },
+      {
+        "grapeId": "mtsvane",
+        "quote": "Уточнение «кахури» указывает на происхождение из Кахетии ... В купаже с виноградом ркацители из него готовят марочные вина Вазисубани, Гурджаани и Цинандали.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
+      }
+    ],
+    "id": "ge-kakheti",
+    "latitude": 41.737352,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+    "longitude": 45.6721781,
+    "name": "Kakheti",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kakheti",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 789",
+    "registeredOn": "2007-12-10",
+    "summaries": {
+      "en": {
+        "text": "Wine \"Kakheti\" can be white, red, rosé or amber, dry, naturally demi-sec (semi-dry), demi-doux (semi-sweet) and doux (sweet), in accordance to sugary.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "El vino \"Kakheti\" puede ser blanco, tinto, rosado o ámbar, seco, naturalmente demi-sec (semiseco), demi-doux (semidulce) y doux (dulce), según su azúcar.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "El vi \"Kakheti\" pot ser blanc, negre, rosat o ambre, sec, naturalment demi-sec (semisec), demi-doux (semidolç) i doux (dolç), segons el seu sucre.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "Le vin « Kakheti » peut être blanc, rouge, rosé ou ambré, sec, naturellement demi-sec, demi-doux et doux, selon son sucre.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "Der Wein „Kakheti“ kann weiß, rot, rosé oder bernsteinfarben sein, trocken, natürlich demi-sec (halbtrocken), demi-doux (halbsüß) und doux (süß), je nach seinem Zucker.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "Il vino \"Kakheti\" può essere bianco, rosso, rosato o ambrato, secco, naturalmente demi-sec (semisecco), demi-doux (semidolce) e doux (dolce), a seconda del suo zucchero.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "De wijn \"Kakheti\" kan wit, rood, rosé of amberkleurig zijn, droog, natuurlijk demi-sec (halfdroog), demi-doux (halfzoet) en doux (zoet), naargelang zijn suiker.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "O vinho \"Kakheti\" pode ser branco, tinto, rosado ou âmbar, seco, naturalmente demi-sec (meio-seco), demi-doux (meio-doce) e doux (doce), conforme o seu açúcar.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "saperavi",
+        "quote": "технический (винный) сорт чёрного винограда позднего созревания, происходящий из Кахетии ... самый ароматный саперави происходит из региона Рача-Лечхуми ... «черносливово-перечной основательности Кварели до элегантной малины Напареули ... как сухие (Мукузани, Напареули), так и полусладкие (Киндзмараули, Ахашени).",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D0%B5%D1%80%D0%B0%D0%B2%D0%B8"
+      }
+    ],
+    "id": "ge-napareuli",
+    "latitude": 42.0446316,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+    "longitude": 45.5037163,
+    "name": "Napareuli",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Napareuli",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 790",
+    "registeredOn": "2007-12-10",
+    "summaries": {
+      "en": {
+        "text": "\"Napareuli\" is dry wine, color can be white or red.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Napareuli\" es un vino seco; su color puede ser blanco o tinto.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Napareuli\" és un vi sec; el seu color pot ser blanc o negre.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Napareuli » est un vin sec ; sa couleur peut être blanche ou rouge.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Napareuli“ ist ein trockener Wein; seine Farbe kann weiß oder rot sein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Napareuli\" è un vino secco; il colore può essere bianco o rosso.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Napareuli\" is een droge wijn; de kleur kan wit of rood zijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Napareuli\" é um vinho seco; a cor pode ser branca ou tinta.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-teliani",
+    "latitude": null,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/16ffbcb2-9658-47cb-bf32-987b37a27b9e.pdf",
+    "longitude": null,
+    "name": "Teliani",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Teliani",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "No. 791",
+    "registeredOn": "2007-12-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "chinuri",
+        "quote": "Культивируется в регионе Картли (Мухрани, Атени, Каспи) и (в гораздо меньших количествах) в Кахетии (Гурджаани и Телави), в Имерети (Вани)",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D0%B8"
+      }
+    ],
+    "id": "ge-ateni",
+    "latitude": 41.9256178,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+    "longitude": 44.1085142,
+    "name": "Ateni",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Ateni",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Atenuri",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 792",
+    "registeredOn": "2007-12-10",
+    "summaries": {
+      "en": {
+        "text": "Wine \"Atenuri\" can be white dry, white dry sparkling and slightly sparkling.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "El vino \"Atenuri\" puede ser blanco seco, blanco seco espumoso y ligeramente espumoso.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "El vi \"Atenuri\" pot ser blanc sec, blanc sec escumós i lleugerament escumós.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "Le vin « Atenuri » peut être blanc sec, blanc sec mousseux et légèrement mousseux.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "Der Wein „Atenuri“ kann weiß und trocken, weiß, trocken und schäumend sowie leicht schäumend sein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "Il vino \"Atenuri\" può essere bianco secco, bianco secco spumante e leggermente frizzante.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "De wijn \"Atenuri\" kan wit en droog zijn, wit, droog en mousserend, en licht mousserend.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "O vinho \"Atenuri\" pode ser branco seco, branco seco espumante e ligeiramente espumante.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "tsolikouri",
+        "quote": "Виноград используется для приготовления белых столовых вин высокого качества (Свири, Твиши, Цоликаури) и игристых сладких вин.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A6%D0%BE%D0%BB%D0%B8%D0%BA%D0%BE%D1%83%D1%80%D0%B8"
+      }
+    ],
+    "id": "ge-sviri",
+    "latitude": null,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/32279df4-5697-47d1-98b1-fd1bbe529f92.pdf",
+    "longitude": null,
+    "name": "Sviri",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sviri",
+        "source": "register"
+      }
+    ],
+    "pointSource": null,
+    "prominence": 0,
+    "registerRef": "No. 793",
+    "registeredOn": "2007-12-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "rkatsiteli",
+        "quote": "В Болгарии уступает по занимаемым площадям только мускату Оттонель ... Кахетинские виноделы традиционно использовали ркацители для выработки в кувшинах (квеври) янтарных (оранжевых) вин. В современной Грузии из ркацители производятся такие вина, как «Цинандали», «Гурджаани» и «Вазисубани».",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BA%D0%B0%D1%86%D0%B8%D1%82%D0%B5%D0%BB%D0%B8"
+      },
+      {
+        "grapeId": "mtsvane",
+        "quote": "Уточнение «кахури» указывает на происхождение из Кахетии ... В купаже с виноградом ркацители из него готовят марочные вина Вазисубани, Гурджаани и Цинандали.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
+      }
+    ],
+    "id": "ge-vazisubani",
+    "latitude": 41.8233096,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/a9602fcf-9df6-49bb-b272-566f382b110b.pdf",
+    "longitude": 45.6952801,
+    "name": "Vazisubani",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vazisubani",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "No. 794",
+    "registeredOn": "2007-12-10",
+    "summaries": {
+      "en": {
+        "text": "Vazisubani (Georgian: ვაზისუბანი, romanized: vazisubani) is an appellation for wines produced in a 62-square-kilometer zone around Vazisubani village in eastern Georgia.",
+        "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
+      },
+      "es": {
+        "text": "Vazisubani (en georgiano: ვაზისუბანი, romanizado: vazisubani) es una denominación para los vinos elaborados en una zona de 62 kilómetros cuadrados alrededor del pueblo de Vazisubani, en el este de Georgia.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
+      },
+      "ca": {
+        "text": "Vazisubani (en georgià: ვაზისუბანი, romanitzat: vazisubani) és una denominació per als vins elaborats en una zona de 62 quilòmetres quadrats al voltant del poble de Vazisubani, a l'est de Geòrgia.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
+      },
+      "fr": {
+        "text": "Vazisubani (en géorgien : ვაზისუბანი, romanisé : vazisubani) est une appellation pour les vins produits dans une zone de 62 kilomètres carrés autour du village de Vazisubani, dans l'est de la Géorgie.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
+      },
+      "de": {
+        "text": "Vazisubani (Georgisch: ვაზისუბანი, romanisiert: vazisubani) ist eine Herkunftsbezeichnung für Weine aus einer 62 Quadratkilometer großen Zone um das Dorf Vazisubani im Osten Georgiens.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
+      },
+      "it": {
+        "text": "Vazisubani (in georgiano: ვაზისუბანი, traslitterato: vazisubani) è una denominazione per i vini prodotti in una zona di 62 chilometri quadrati intorno al villaggio di Vazisubani, nella Georgia orientale.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
+      },
+      "nl": {
+        "text": "Vazisubani (Georgisch: ვაზისუბანი, geromaniseerd: vazisubani) is een herkomstbenaming voor wijnen uit een zone van 62 vierkante kilometer rond het dorp Vazisubani in het oosten van Georgië.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
+      },
+      "pt": {
+        "text": "Vazisubani (em georgiano: ვაზისუბანი, romanizado: vazisubani) é uma denominação para os vinhos produzidos numa zona de 62 quilómetros quadrados em torno da aldeia de Vazisubani, no leste da Geórgia.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
+      }
+    },
+    "wikidataId": "Q25205273"
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "khikhvi",
+        "quote": "Культивируется главным образом на правом берегу Алазани, особенно в микрозоне вблизи села Карденахи края Кахетия",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A5%D0%B8%D1%85%D0%B2%D0%B8"
+      }
+    ],
+    "id": "ge-kardenakhi",
+    "latitude": 41.671563,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+    "longitude": 45.8848827,
+    "name": "Kardenakhi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kardenakhi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 795",
+    "registeredOn": "2007-12-10",
+    "summaries": {
+      "en": {
+        "text": "\"Kardenakhi\" can be amber dry or white fortified wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Kardenakhi\" puede ser un vino ámbar seco o un vino blanco generoso.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Kardenakhi\" pot ser un vi ambre sec o un vi blanc generós.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Kardenakhi » peut être un vin ambré sec ou un vin blanc muté.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Kardenakhi“ kann ein trockener Bernsteinwein oder ein weißer Likörwein sein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Kardenakhi\" può essere un vino ambrato secco o un vino bianco fortificato.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Kardenakhi\" kan een droge amberwijn of een versterkte witte wijn zijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Kardenakhi\" pode ser um vinho âmbar seco ou um vinho branco fortificado.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-tibaani",
+    "latitude": 41.5751721,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ec60c878-0ac3-42d9-9d7f-900fba12c41b.pdf",
+    "longitude": 46.0058156,
+    "name": "Tibaani",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tibaani",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 796",
+    "registeredOn": "2007-12-10",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ge-kakheti"
+    ]
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "tsolikouri",
+        "quote": "Виноград используется для приготовления белых столовых вин высокого качества (Свири, Твиши, Цоликаури) и игристых сладких вин.",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A6%D0%BE%D0%BB%D0%B8%D0%BA%D0%BE%D1%83%D1%80%D0%B8"
+      }
+    ],
+    "id": "ge-tvishi",
+    "latitude": 42.5129825,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/78988391-7fb0-4b86-87fb-675ad51029b1.pdf",
+    "longitude": 42.7940507,
+    "name": "Tvishi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tvishi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 1,
+    "registerRef": "No. 797",
+    "registeredOn": "2007-12-10",
+    "summaries": {
+      "en": {
+        "text": "Tvishi (Georgian: ტვიში, romanized: t'vishi) is a Georgian wine. It is an appellation for wines produced in a 15 km2 (3,700 acres) zone around Tvishi village in northwestern Georgia. The zone is on the right bank of the Rioni River and includes Alpana village.",
+        "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
+      },
+      "es": {
+        "text": "El Tvishi (en georgiano: ტვიში, romanizado: t'vishi) es un vino georgiano. Es una denominación para los vinos elaborados en una zona de 15 km² (3.700 acres) alrededor del pueblo de Tvishi, en el noroeste de Georgia. La zona está en la orilla derecha del río Rioni e incluye el pueblo de Alpana.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
+      },
+      "ca": {
+        "text": "El Tvishi (en georgià: ტვიში, romanitzat: t'vishi) és un vi georgià. És una denominació per als vins elaborats en una zona de 15 km² (3.700 acres) al voltant del poble de Tvishi, al nord-oest de Geòrgia. La zona és a la riba dreta del riu Rioni i inclou el poble d'Alpana.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
+      },
+      "fr": {
+        "text": "Le Tvishi (en géorgien : ტვიში, romanisé : t'vishi) est un vin géorgien. C'est une appellation pour les vins produits dans une zone de 15 km² (3 700 acres) autour du village de Tvishi, dans le nord-ouest de la Géorgie. La zone se trouve sur la rive droite du Rioni et comprend le village d'Alpana.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
+      },
+      "de": {
+        "text": "Tvishi (Georgisch: ტვიში, romanisiert: t'vishi) ist ein georgischer Wein. Es ist eine Herkunftsbezeichnung für Weine aus einer 15 km² (3700 Acres) großen Zone um das Dorf Tvishi im Nordwesten Georgiens. Die Zone liegt am rechten Ufer des Rioni und umfasst das Dorf Alpana.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
+      },
+      "it": {
+        "text": "Il Tvishi (in georgiano: ტვიში, traslitterato: t'vishi) è un vino georgiano. È una denominazione per i vini prodotti in una zona di 15 km² (3.700 acri) intorno al villaggio di Tvishi, nella Georgia nord-occidentale. La zona si trova sulla riva destra del fiume Rioni e comprende il villaggio di Alpana.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
+      },
+      "nl": {
+        "text": "Tvishi (Georgisch: ტვიში, geromaniseerd: t'vishi) is een Georgische wijn. Het is een herkomstbenaming voor wijnen uit een zone van 15 km² (3700 acre) rond het dorp Tvishi in het noordwesten van Georgië. De zone ligt op de rechteroever van de Rioni en omvat het dorp Alpana.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
+      },
+      "pt": {
+        "text": "O Tvishi (em georgiano: ტვიში, romanizado: t'vishi) é um vinho georgiano. É uma denominação para os vinhos produzidos numa zona de 15 km² (3700 acres) em torno da aldeia de Tvishi, no noroeste da Geórgia. A zona fica na margem direita do rio Rioni e inclui a aldeia de Alpana.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
+      }
+    },
+    "wikidataId": "Q25205317"
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [
+      {
+        "grapeId": "saperavi",
+        "quote": "технический (винный) сорт чёрного винограда позднего созревания, происходящий из Кахетии ... самый ароматный саперави происходит из региона Рача-Лечхуми ... «черносливово-перечной основательности Кварели до элегантной малины Напареули ... как сухие (Мукузани, Напареули), так и полусладкие (Киндзмараули, Ахашени).",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D0%B5%D1%80%D0%B0%D0%B2%D0%B8"
+      }
+    ],
+    "id": "ge-kvareli",
+    "latitude": 41.9482236,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f87c8bf7-efd6-45f0-b6ac-20ae11b2248b.pdf",
+    "longitude": 45.8139601,
+    "name": "Kvareli",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kvareli",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 798",
+    "registeredOn": "2007-12-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-kotekhi",
+    "latitude": 41.7521142,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/b71eabae-e249-4819-be89-864d371d3ef2.pdf",
+    "longitude": 45.7829667,
+    "name": "Kotekhi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kotekhi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 799",
+    "registeredOn": "2007-12-10",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-saperavi-khashmi",
+    "latitude": 41.7609033,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/17a1666d-e64e-4586-8a57-6067c3cb50b4.pdf",
+    "longitude": 45.1864222,
+    "name": "Saperavi Khashmi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Saperavi Khashmi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 975",
+    "registeredOn": "2018-06-04",
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-bolnisi",
+    "latitude": 41.4493333,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+    "longitude": 44.5369461,
+    "name": "Bolnisi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Bolnisi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 976",
+    "registeredOn": "2019-03-04",
+    "summaries": {
+      "en": {
+        "text": "\"BOLNISI\" – is as white, amber, red or rose dry wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"BOLNISI\" es un vino seco blanco, ámbar, tinto o rosado.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"BOLNISI\" és un vi sec blanc, ambre, negre o rosat.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« BOLNISI » est un vin sec blanc, ambré, rouge ou rosé.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„BOLNISI“ ist ein trockener Wein, weiß, bernsteinfarben, rot oder rosé.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"BOLNISI\" è un vino secco bianco, ambrato, rosso o rosato.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "Bij \"BOLNISI\" gaat het om een droge witte, amberkleurige, rode of roséwijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"BOLNISI\" é um vinho seco branco, âmbar, tinto ou rosado.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-salkhino-ojaleshi",
+    "latitude": 42.511054,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+    "longitude": 42.3403511,
+    "name": "Salkhino Ojaleshi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Salkhino Ojaleshi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 977",
+    "registeredOn": "2020-03-30",
+    "summaries": {
+      "en": {
+        "text": "\"Salkhino Ojaleshi\" is sec (dry) wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Salkhino Ojaleshi\" es un vino sec (seco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Salkhino Ojaleshi\" és un vi sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Salkhino Ojaleshi » est un vin sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Salkhino Ojaleshi“ ist ein Wein, sec (trocken).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Salkhino Ojaleshi\" è un vino sec (secco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Salkhino Ojaleshi\" is een wijn, sec (droog).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Salkhino Ojaleshi\" é um vinho sec (seco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-tsarapi",
+    "latitude": 41.671563,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+    "longitude": 45.8848827,
+    "name": "Tsarapi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Tsarapi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "No. 978",
+    "registeredOn": "2020-05-11",
+    "summaries": {
+      "en": {
+        "text": "\"TSARAPI\" is amber sec (dry) wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"TSARAPI\" es un vino ámbar sec (seco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"TSARAPI\" és un vi ambre sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« TSARAPI » est un vin ambré sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„TSARAPI“ ist ein Bernsteinwein, sec (trocken).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"TSARAPI\" è un vino ambrato sec (secco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"TSARAPI\" is een amberwijn, sec (droog).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"TSARAPI\" é um vinho âmbar sec (seco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null,
+    "within": [
+      "ge-kardenakhi"
+    ]
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-akhmeta",
+    "latitude": 42.0341864,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+    "longitude": 45.2108579,
+    "name": "Akhmeta",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Akhmeta",
+        "source": "register"
+      },
+      {
+        "locale": "*",
+        "name": "Akhmetis Mtsvane",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 979",
+    "registeredOn": "2020-05-11",
+    "summaries": {
+      "en": {
+        "text": "\"AKHMETA\" is white or amber wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"AKHMETA\" es un vino blanco o ámbar.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"AKHMETA\" és un vi blanc o ambre.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« AKHMETA » est un vin blanc ou ambré.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„AKHMETA“ ist ein weißer oder bernsteinfarbener Wein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"AKHMETA\" è un vino bianco o ambrato.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"AKHMETA\" is een witte of amberkleurige wijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"AKHMETA\" é um vinho branco ou âmbar.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-akhoebi",
+    "latitude": 41.671563,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+    "longitude": 45.8848827,
+    "name": "Akhoebi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Akhoebi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 980",
+    "registeredOn": "2020-05-29",
+    "summaries": {
+      "en": {
+        "text": "\"AKHOEBI\" is (dry) red wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"AKHOEBI\" es un vino tinto (seco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"AKHOEBI\" és un vi negre (sec).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« AKHOEBI » est un vin rouge (sec).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„AKHOEBI“ ist ein (trockener) Rotwein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"AKHOEBI\" è un vino rosso (secco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"AKHOEBI\" is een (droge) rode wijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"AKHOEBI\" é um vinho tinto (seco).",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-kisi-magraani",
+    "latitude": 41.737352,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ad8d46f7-6da3-4b89-82d6-4de26ee54c71.pdf",
+    "longitude": 45.6721781,
+    "name": "Kisi Magraani",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Kisi Magraani",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "No. 981",
+    "registeredOn": "2021-05-31",
+    "summaries": {},
+    "wikidataId": null,
+    "within": [
+      "ge-kakheti"
+    ]
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-zegaani",
+    "latitude": 41.7978908,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+    "longitude": 45.7311121,
+    "name": "Zegaani",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Zegaani",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 982",
+    "registeredOn": "2022-08-30",
+    "summaries": {
+      "en": {
+        "text": "\"Zegaani\" is red dry qvevri bio-wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Zegaani\" es un biovino tinto seco de qvevri.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Zegaani\" és un biovi negre sec de qvevri.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Zegaani » est un vin bio rouge sec de qvevri.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Zegaani“ ist ein trockener roter Qvevri-Biowein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Zegaani\" è un biovino rosso secco da qvevri.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Zegaani\" is een droge rode qvevri-biowijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Zegaani\" é um biovinho tinto seco de qvevri.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-okureshis-usakhelouri",
+    "latitude": 42.5440649,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+    "longitude": 42.6821442,
+    "name": "Okureshis Usakhelouri",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Okureshis Usakhelouri",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 983",
+    "registeredOn": "2022-08-30",
+    "summaries": {
+      "en": {
+        "text": "\"Okureshis Usakhelouri\" is red wine; according to sugar content it can be of three different categories: dry, naturally semi-dry or naturally semi-sweet.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Okureshis Usakhelouri\" es un vino tinto; según su contenido de azúcar puede ser de tres categorías: seco, naturalmente semiseco o naturalmente semidulce.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Okureshis Usakhelouri\" és un vi negre; segons el contingut de sucre pot ser de tres categories: sec, naturalment semisec o naturalment semidolç.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Okureshis Usakhelouri » est un vin rouge ; selon sa teneur en sucre, il peut être de trois catégories : sec, naturellement demi-sec ou naturellement demi-doux.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Okureshis Usakhelouri“ ist ein Rotwein; nach dem Zuckergehalt kann er drei Kategorien angehören: trocken, natürlich halbtrocken oder natürlich halbsüß.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Okureshis Usakhelouri\" è un vino rosso; in base al contenuto di zucchero può essere di tre categorie: secco, naturalmente semisecco o naturalmente semidolce.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Okureshis Usakhelouri\" is een rode wijn; naargelang het suikergehalte kan hij tot drie categorieën behoren: droog, natuurlijk halfdroog of natuurlijk halfzoet.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Okureshis Usakhelouri\" é um vinho tinto; conforme o teor de açúcar pode ser de três categorias: seco, naturalmente meio-seco ou naturalmente meio-doce.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-asuretuli-shala",
+    "latitude": 41.5934087,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+    "longitude": 44.6702626,
+    "name": "Asuretuli Shala",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Asuretuli Shala",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 984",
+    "registeredOn": "2022-11-24",
+    "summaries": {
+      "en": {
+        "text": "\"Asuretuli Shala\" is red dry wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Asuretuli Shala\" es un vino tinto seco.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Asuretuli Shala\" és un vi negre sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Asuretuli Shala » est un vin rouge sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Asuretuli Shala“ ist ein trockener Rotwein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Asuretuli Shala\" è un vino rosso secco.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Asuretuli Shala\" is een droge rode wijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Asuretuli Shala\" é um vinho tinto seco.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-okami",
+    "latitude": 41.9808227,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+    "longitude": 44.4716282,
+    "name": "Okami",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Okami",
+        "source": "register"
+      }
+    ],
+    "pointSource": "place",
+    "prominence": 0,
+    "registerRef": "No. 985",
+    "registeredOn": "2022-12-12",
+    "summaries": {
+      "en": {
+        "text": "\"Okami\" is dry wine, and it might be white or red.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Okami\" es un vino seco, y puede ser blanco o tinto.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Okami\" és un vi sec, i pot ser blanc o negre.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Okami » est un vin sec, qui peut être blanc ou rouge.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Okami“ ist ein trockener Wein und kann weiß oder rot sein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Okami\" è un vino secco, e può essere bianco o rosso.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Okami\" is een droge wijn en kan wit of rood zijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Okami\" é um vinho seco, e pode ser branco ou tinto.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PDO",
+    "grapes": [],
+    "id": "ge-sazanos-otskhanuri",
+    "latitude": 42.2411552,
+    "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+    "longitude": 43.0560644,
+    "name": "Sazanos Otskhanuri",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Sazanos Otskhanuri",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registerRef": "No. 990",
+    "registeredOn": "2025-09-30",
+    "summaries": {
+      "en": {
+        "text": "\"Sazanos Otskhanuri\" is red dry wine.",
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+        "license": "GE-official-text"
+      },
+      "es": {
+        "text": "\"Sazanos Otskhanuri\" es un vino tinto seco.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+        "license": "GE-official-text"
+      },
+      "ca": {
+        "text": "\"Sazanos Otskhanuri\" és un vi negre sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+        "license": "GE-official-text"
+      },
+      "fr": {
+        "text": "« Sazanos Otskhanuri » est un vin rouge sec.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+        "license": "GE-official-text"
+      },
+      "de": {
+        "text": "„Sazanos Otskhanuri“ ist ein trockener Rotwein.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+        "license": "GE-official-text"
+      },
+      "it": {
+        "text": "\"Sazanos Otskhanuri\" è un vino rosso secco.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+        "license": "GE-official-text"
+      },
+      "nl": {
+        "text": "\"Sazanos Otskhanuri\" is een droge rode wijn.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+        "license": "GE-official-text"
+      },
+      "pt": {
+        "text": "\"Sazanos Otskhanuri\" é um vinho tinto seco.",
+        "translated": true,
+        "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
+        "license": "GE-official-text"
+      }
+    },
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PGI",
+    "grapes": [],
+    "id": "ge-eniseli",
+    "latitude": 42.0002135,
+    "legalUrl": "https://www.sakpatenti.gov.ge/en/state_registry/",
+    "longitude": 45.6711209,
+    "name": "Eniseli",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Eniseli",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PGI",
+    "grapes": [],
+    "id": "ge-gremi",
+    "latitude": 42.0130648,
+    "legalUrl": "https://www.sakpatenti.gov.ge/en/state_registry/",
+    "longitude": 45.6733525,
+    "name": "Gremi",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Gremi",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
+    "countryCode": "GE",
+    "eambrosiaId": null,
+    "giType": "PGI",
+    "grapes": [],
+    "id": "ge-vartsikhe",
+    "latitude": 42.1409151,
+    "legalUrl": "https://www.sakpatenti.gov.ge/en/state_registry/",
+    "longitude": 42.7161804,
+    "name": "Vartsikhe",
+    "names": [
+      {
+        "locale": "*",
+        "name": "Vartsikhe",
+        "source": "register"
+      }
+    ],
+    "pointSource": "area",
+    "prominence": 0,
+    "registeredOn": null,
+    "summaries": {},
+    "wikidataId": null
+  },
+  {
     "countryCode": "JP",
     "eambrosiaId": null,
     "giType": "GI",

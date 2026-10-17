@@ -360,6 +360,23 @@ test("a summary from an official text credits it, and its translation", async ({
   await expect(summary.locator('a[href*="nta.go.jp/english"]')).toBeVisible();
 });
 
+test("a Georgian appellation cites its registered document", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/regions/ge-tsarapi");
+  await page.locator("#interface-locale").selectOption("en");
+  await expect(page.locator("h1")).toHaveText("Tsarapi", { timeout: 15_000 });
+  await expect(page.locator("#region-register")).toHaveText(
+    "In Georgia's state registry (Sakpatenti)",
+  );
+  await expect(page.getByText("Registered on May 11, 2020.")).toBeVisible();
+  const summary = page.locator(".library-summary");
+  await expect(summary).toContainText('"TSARAPI" is amber sec (dry) wine.');
+  await expect(summary).toContainText("From the name's official text, in its register");
+  const nesting = page.locator('section[aria-labelledby="region-nesting"]');
+  await expect(nesting.getByRole("link", { name: "Kardenakhi" })).toBeVisible();
+});
+
 test("a British wine name cites the UK register", async ({ page }) => {
   await signIn(page);
   await completeOnboarding(page);

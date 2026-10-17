@@ -32,6 +32,7 @@ const atlasCountries = [
   "ES",
   "FR",
   "GB",
+  "GE",
   "GR",
   "HR",
   "HU",

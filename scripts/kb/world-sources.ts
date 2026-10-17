@@ -123,6 +123,9 @@ const nominatim = (
   existsSync(nominatimPath) ? JSON.parse(readFileSync(nominatimPath, "utf8")) : {}
 ) as Record<string, Found[]>;
 let lastLookup = 0;
+/** Countries whose places are looked up by their English (Latin) names. */
+const latinNames = new Set(["ge"]);
+
 export async function lookUp(query: string, country: string): Promise<Found[]> {
   const cacheKey = `${country}:${query}`;
   if (nominatim[cacheKey] !== undefined) return nominatim[cacheKey]!;
@@ -131,7 +134,15 @@ export async function lookUp(query: string, country: string): Promise<Found[]> {
   const response = await fetch(
     "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=8&addressdetails=1" +
       `&countrycodes=${country}&q=${encodeURIComponent(query)}`,
-    { headers: { Accept: "application/json", "User-Agent": userAgent } },
+    {
+      headers: {
+        Accept: "application/json",
+        // Georgia's places are named in Georgian script; its registers write
+        // them in Latin letters, as OpenStreetMap's English names do.
+        ...(latinNames.has(country) ? { "Accept-Language": "en" } : {}),
+        "User-Agent": userAgent,
+      },
+    },
   );
   const found = response.ok ? ((await response.json()) as Found[]) : [];
   nominatim[cacheKey] = found;

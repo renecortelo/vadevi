@@ -164,8 +164,9 @@ function buildSheet(
   );
 }
 
-// Europe: the Azores to the Caspian, the Canaries to the North Cape.
-buildSheet("europe-map.json", { latMax: 72, latMin: 26.5, lonMax: 45, lonMin: -32 }, 49);
+// Europe: the Azores to the Caspian (all of Georgia's Kakheti), the Canaries
+// to the North Cape.
+buildSheet("europe-map.json", { latMax: 72, latMin: 26.5, lonMax: 47.5, lonMin: -32 }, 49);
 // The Americas' wine countries so far: the United States from Hawaii to
 // Maine, with Canada and Mexico around it for bearings.
 buildSheet("america-map.json", { latMax: 62, latMin: 15, lonMax: -52, lonMin: -162 }, 38);

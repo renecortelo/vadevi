@@ -200,6 +200,10 @@ const appellationCountry: readonly (readonly [string, string])[] = [
   ["dealu mare", "RO"],
   ["cotnari", "RO"],
   ["kakheti", "GE"],
+  ["mukuzani", "GE"],
+  ["tsinandali", "GE"],
+  ["kindzmarauli", "GE"],
+  ["khvanchkara", "GE"],
   // United States
   ["napa", "US"],
   ["napa valley", "US"],
