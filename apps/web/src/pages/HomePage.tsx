@@ -53,23 +53,42 @@ export function HomePage() {
         </div>
         {/* The same drawn family as the navigation rail, so a destination looks
             the same wherever it is offered. */}
-        <div className="home-tools__grid">
-          {[
-            { Icon: ReadLabelIcon, key: "identify", to: "/log/identify" },
-            { Icon: CellarIcon, key: "cellar", to: "/cellar" },
-            { Icon: WishlistIcon, key: "wishlist", to: "/wishlist" },
-            { Icon: PriceIcon, key: "shop", to: "/shop" },
-            { Icon: LibraryIcon, key: "library", to: "/library" },
-            { Icon: StatsIcon, key: "stats", to: "/stats" },
-            { Icon: WineTypeIcon, key: "taste", to: "/profile" },
-          ].map((tool) => (
-            <Link key={tool.key} to={tool.to}>
-              <tool.Icon />
-              <strong>{t(`homeTools.${tool.key}Title`)}</strong>
-              <span>{t(`homeTools.${tool.key}Body`)}</span>
-            </Link>
-          ))}
-        </div>
+        {/* Grouped as the navigation is, so a destination is found where
+            the bar puts it. */}
+        {(
+          [
+            ["log", [{ Icon: ReadLabelIcon, key: "identify", to: "/log/identify" }]],
+            [
+              "wines",
+              [
+                { Icon: CellarIcon, key: "cellar", to: "/cellar" },
+                { Icon: WishlistIcon, key: "wishlist", to: "/wishlist" },
+                { Icon: PriceIcon, key: "shop", to: "/shop" },
+              ],
+            ],
+            ["discover", [{ Icon: LibraryIcon, key: "library", to: "/library" }]],
+            [
+              "me",
+              [
+                { Icon: StatsIcon, key: "stats", to: "/stats" },
+                { Icon: WineTypeIcon, key: "taste", to: "/profile" },
+              ],
+            ],
+          ] as const
+        ).map(([group, tools]) => (
+          <div className="home-tools__group" key={group}>
+            <h3>{t(`nav.${group}`)}</h3>
+            <div className="home-tools__grid">
+              {tools.map((tool) => (
+                <Link key={tool.key} to={tool.to}>
+                  <tool.Icon />
+                  <strong>{t(`homeTools.${tool.key}Title`)}</strong>
+                  <span>{t(`homeTools.${tool.key}Body`)}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
 
       <Card aria-labelledby="foundation-title" className="foundation-card">

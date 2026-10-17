@@ -473,11 +473,10 @@ export function WineEvidencePage() {
         )}
         <div className="evidence-heading__text">
           {/* Reached from the cellar book, the way back to it first. */}
+          {/* The shell's way back names where the reader came from; a wine
+              reached from a library card goes back along its trail. */}
           <p className="evidence-heading__back">
             <TrailBackLink />
-            <Link className="text-link" to="/memory">
-              ← {t("evidence.backAction")}
-            </Link>
           </p>
           <p className="eyebrow">{t("evidence.eyebrow")}</p>
           <h1>{wine?.displayName ?? t("evidence.title")}</h1>

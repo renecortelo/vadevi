@@ -449,7 +449,10 @@
     "sessions": "Events",
     "memory": "Memory",
     "assistant": "Vicenç",
-    "about": "More"
+    "about": "More",
+    "wines": "My wines",
+    "discover": "Discover",
+    "me": "Me"
   },
   "about": {
     "eyebrow": "The small print",
@@ -1753,5 +1756,21 @@
     "errorQuota": "Today's voice budget is spent. The form works by hand as always.",
     "privacy": "Nothing is saved until you save. The recording goes to Cloudflare Workers AI and is not kept.",
     "offline": "Voice needs a connection; the form works offline by hand."
-  }
+  },
+  "sections": {
+    "quick": "Quick tasting",
+    "identify": "Identify a bottle",
+    "event": "New event",
+    "memory": "Memory",
+    "cellar": "Cellar",
+    "wishlist": "Wishlist",
+    "shop": "Prices",
+    "library": "Library",
+    "assistant": "Vicenç",
+    "stats": "Cellar book",
+    "profile": "My taste profile",
+    "sessions": "Events",
+    "about": "Settings and more"
+  },
+  "sourceShort": "Source code"
 }

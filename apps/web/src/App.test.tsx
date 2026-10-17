@@ -251,7 +251,7 @@ describe("authenticated app shell", () => {
     );
 
     expect(markup).toContain("Wine evidence");
-    expect(markup).toContain("Back to Wine Memory");
+    expect(markup).toContain("← Memory");
     expect(markup).toContain("Loading the evidence");
     expect(markup).toContain("observed, researched, inferred, or personal");
     expect(markup).toContain("External research is disabled in this deployment");

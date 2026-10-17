@@ -449,7 +449,10 @@
     "sessions": "Événements",
     "memory": "Mémoire",
     "assistant": "Vicenç",
-    "about": "Plus"
+    "about": "Plus",
+    "wines": "Mes vins",
+    "discover": "Découvrir",
+    "me": "Moi"
   },
   "about": {
     "eyebrow": "Les petits caractères",
@@ -1753,5 +1756,21 @@
     "errorQuota": "Le quota vocal du jour est épuisé. Le formulaire fonctionne à la main comme toujours.",
     "privacy": "Rien n'est enregistré avant que vous enregistriez. L'enregistrement va à Cloudflare Workers AI et n'est pas conservé.",
     "offline": "La voix nécessite une connexion ; le formulaire fonctionne hors ligne à la main."
-  }
+  },
+  "sections": {
+    "quick": "Dégustation rapide",
+    "identify": "Identifier une bouteille",
+    "event": "Nouvel événement",
+    "memory": "Mémoire",
+    "cellar": "Cave",
+    "wishlist": "Liste d'envies",
+    "shop": "Prix",
+    "library": "Bibliothèque",
+    "assistant": "Vicenç",
+    "stats": "Livre de cave",
+    "profile": "Mon profil de goût",
+    "sessions": "Événements",
+    "about": "Réglages et plus"
+  },
+  "sourceShort": "Code source"
 }

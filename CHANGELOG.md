@@ -6,6 +6,19 @@ has the reasons.
 
 ## Unreleased
 
+### Finding your way
+
+- **Five destinations**: the bar now holds Home, Log, My wines, Discover
+  and Me, and each section's pages are tabs at its head — Quick tasting ·
+  Identify a bottle · New event; Memory · Cellar · Wishlist · Prices; Library
+  · Vicenç; Cellar book · My taste profile · Events · Settings and more. The
+  home's shortcuts are grouped the same way. The source code is linked from
+  the top bar, one touch from every screen, as AGPL-3.0 asks.
+- **Always a way back**: every page deeper than a section's tabs opens with
+  «← » and the name of the page you came from, and goes back to it in place;
+  reached from outside, it leads to the section's first page. The library
+  keeps its own trail from card to card.
+
 ### Tastings
 
 - **Where a tasting came from**: a note first recorded by voice (voice

@@ -449,7 +449,10 @@
     "sessions": "Eventos",
     "memory": "Memória",
     "assistant": "Vicenç",
-    "about": "Mais"
+    "about": "Mais",
+    "wines": "Os meus vinhos",
+    "discover": "Descobrir",
+    "me": "Eu"
   },
   "about": {
     "eyebrow": "As letras pequenas",
@@ -1753,5 +1756,21 @@
     "errorQuota": "A quota de voz de hoje esgotou-se. O formulário funciona à mão como sempre.",
     "privacy": "Nada é guardado até guardar. A gravação vai para o Cloudflare Workers AI e não é conservada.",
     "offline": "A voz precisa de ligação; o formulário funciona sem ligação à mão."
-  }
+  },
+  "sections": {
+    "quick": "Prova rápida",
+    "identify": "Identificar uma garrafa",
+    "event": "Novo evento",
+    "memory": "Memória",
+    "cellar": "Garrafeira",
+    "wishlist": "Lista de desejos",
+    "shop": "Preços",
+    "library": "Biblioteca",
+    "assistant": "Vicenç",
+    "stats": "Livro de adega",
+    "profile": "O meu perfil de gosto",
+    "sessions": "Eventos",
+    "about": "Definições e mais"
+  },
+  "sourceShort": "Código-fonte"
 }

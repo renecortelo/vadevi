@@ -4444,6 +4444,48 @@ p {
   margin: 0;
 }
 
+/* «← Memory»: the way back from any page deeper than a section's tabs. */
+.back-link {
+  font-size: var(--text-sm);
+  margin-block: 0 var(--space-3);
+}
+
+/* A section's own pages as tabs at the head of each (navigation/sections.ts). */
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  inline-size: min(100%, 48rem);
+  margin-block-end: var(--space-4);
+}
+
+.section-tabs a {
+  flex: 1 1 auto;
+  line-height: 1.15;
+  min-inline-size: min-content;
+  padding-block: var(--space-1);
+  padding-inline: var(--space-3);
+}
+
+@media (max-width: 520px) {
+  .section-tabs a {
+    font-size: var(--text-sm);
+    padding-inline: var(--space-2);
+  }
+}
+
+/* The home's shortcuts, grouped as the navigation is. */
+.home-tools__group + .home-tools__group {
+  margin-block-start: var(--space-4);
+}
+
+.home-tools__group h3 {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  margin-block: 0 var(--space-2);
+  text-transform: uppercase;
+}
+
 /* Where a text, a photo or a map's points come from: said, as the licence
    asks, but quietly — smaller and fainter than what it credits, the same
    everywhere in the app. */

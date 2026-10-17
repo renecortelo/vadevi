@@ -449,7 +449,10 @@
     "sessions": "Tastos",
     "memory": "Memòria",
     "assistant": "Vicenç",
-    "about": "Més"
+    "about": "Més",
+    "wines": "Els meus vins",
+    "discover": "Descobrir",
+    "me": "Jo"
   },
   "about": {
     "eyebrow": "La lletra petita",
@@ -1753,5 +1756,21 @@
     "errorQuota": "S'ha esgotat la quota de veu d'avui. El formulari funciona a mà com sempre.",
     "privacy": "Res es desa fins que desis. La gravació va a Cloudflare Workers AI i no es conserva.",
     "offline": "La veu necessita connexió; el formulari funciona sense connexió a mà."
-  }
+  },
+  "sections": {
+    "quick": "Tast ràpid",
+    "identify": "Identifica una ampolla",
+    "event": "Nou tast",
+    "memory": "Memòria",
+    "cellar": "Celler",
+    "wishlist": "Llista de desitjos",
+    "shop": "Preus",
+    "library": "Biblioteca",
+    "assistant": "Vicenç",
+    "stats": "Llibre de celler",
+    "profile": "El meu perfil de gust",
+    "sessions": "Tastos",
+    "about": "Ajustos i més"
+  },
+  "sourceShort": "Codi font"
 }

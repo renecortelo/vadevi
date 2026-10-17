@@ -449,7 +449,10 @@
     "sessions": "Events",
     "memory": "Geheugen",
     "assistant": "Vicenç",
-    "about": "Meer"
+    "about": "Meer",
+    "wines": "Mijn wijnen",
+    "discover": "Ontdekken",
+    "me": "Ik"
   },
   "about": {
     "eyebrow": "De kleine lettertjes",
@@ -1753,5 +1756,21 @@
     "errorQuota": "Het spraakbudget van vandaag is op. Het formulier werkt zoals altijd met de hand.",
     "privacy": "Er wordt niets bewaard tot je opslaat. De opname gaat naar Cloudflare Workers AI en wordt niet bewaard.",
     "offline": "Spraak heeft een verbinding nodig; het formulier werkt offline met de hand."
-  }
+  },
+  "sections": {
+    "quick": "Snelle proeverij",
+    "identify": "Een fles identificeren",
+    "event": "Nieuw evenement",
+    "memory": "Geheugen",
+    "cellar": "Kelder",
+    "wishlist": "Verlanglijst",
+    "shop": "Prijzen",
+    "library": "Bibliotheek",
+    "assistant": "Vicenç",
+    "stats": "Kelderboek",
+    "profile": "Mijn smaakprofiel",
+    "sessions": "Events",
+    "about": "Instellingen en meer"
+  },
+  "sourceShort": "Broncode"
 }

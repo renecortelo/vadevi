@@ -1,13 +1,6 @@
 import type { BootstrapResponse } from "@vadevi/contracts";
-import {
-  BarrelIcon,
-  WineryIcon,
-  CrateIcon,
-  GrapesIcon,
-  PourIcon,
-  ToastIcon,
-} from "../brand/NavIcons";
 import { BrandLockup } from "../brand/Wordmark";
+import { webEnvironment } from "../config/env";
 import { ConnectionStatus } from "./ConnectionStatus";
 import { LocaleToggle } from "./LocaleToggle";
 import { ThemeButton } from "./ThemeToggle";
@@ -17,18 +10,12 @@ import { NavLink, Outlet, useLocation, useNavigate, useNavigationType } from "re
 import { useTranslation } from "react-i18next";
 
 import { useViewTransition } from "../motion/useViewTransition";
+import { BackLink } from "../navigation/BackLink";
+import { SectionTabs } from "../navigation/SectionTabs";
+import { sectionOf, sections } from "../navigation/sections";
 import { useSession } from "../session/SessionContext";
 
 type SpaceOption = BootstrapResponse["data"]["spaces"][number];
-
-const navigation = [
-  { to: "/", key: "home", Icon: WineryIcon, end: true },
-  { to: "/log/new", key: "log", Icon: PourIcon, end: false },
-  { to: "/sessions", key: "sessions", Icon: ToastIcon, end: false },
-  { to: "/memory", key: "memory", Icon: CrateIcon, end: false },
-  { to: "/vicenc", key: "assistant", Icon: GrapesIcon, end: false },
-  { to: "/about", key: "about", Icon: BarrelIcon, end: false },
-] as const;
 
 /**
  * The value that turns the Space menu into a way to reach Space management.
@@ -97,6 +84,16 @@ export function AppShell() {
         <div className="topbar__preferences">
           <LocaleToggle />
           <ThemeButton />
+          {/* AGPL-3.0 §13: the Corresponding Source, one touch from every
+              screen — the bar's «More» that carried it is now inside «Me». */}
+          <a
+            className="text-button topbar__source"
+            href={webEnvironment.sourceUrl}
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            {t("sourceShort")}
+          </a>
           <button className="text-button" onClick={() => void signOut()} type="button">
             {t("auth.signOut")}
           </button>
@@ -138,21 +135,28 @@ export function AppShell() {
       </div>
 
       <nav aria-label="Primary" className="primary-nav">
-        {navigation.map((item) => (
-          <NavLink
-            className={({ isActive }) => `nav-link${isActive ? " nav-link--active" : ""}`}
-            end={item.end}
-            key={item.key}
-            onClick={transition(item.to)}
-            to={item.to}
-          >
-            <item.Icon />
-            <span>{t(`nav.${item.key}`)}</span>
-          </NavLink>
-        ))}
+        {/* Five destinations; a section lights up on any of its pages. */}
+        {sections.map((item) => {
+          const active = sectionOf(pathname) === item;
+          return (
+            <NavLink
+              aria-current={active ? "page" : undefined}
+              className={`nav-link${active ? " nav-link--active" : ""}`}
+              end={item.key === "home"}
+              key={item.key}
+              onClick={transition(item.to)}
+              to={item.to}
+            >
+              <item.Icon />
+              <span>{t(`nav.${item.key}`)}</span>
+            </NavLink>
+          );
+        })}
       </nav>
 
       <main className="main-content" id="main-content" tabIndex={-1}>
+        <SectionTabs />
+        <BackLink />
         <Outlet />
       </main>
     </div>

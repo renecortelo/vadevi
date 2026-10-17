@@ -449,7 +449,10 @@
     "sessions": "Events",
     "memory": "Gedächtnis",
     "assistant": "Vicenç",
-    "about": "Mehr"
+    "about": "Mehr",
+    "wines": "Meine Weine",
+    "discover": "Entdecken",
+    "me": "Ich"
   },
   "about": {
     "eyebrow": "Das Kleingedruckte",
@@ -1753,5 +1756,21 @@
     "errorQuota": "Das heutige Sprachkontingent ist aufgebraucht. Das Formular funktioniert wie immer von Hand.",
     "privacy": "Gespeichert wird erst, wenn Sie speichern. Die Aufnahme geht an Cloudflare Workers AI und wird nicht aufbewahrt.",
     "offline": "Sprache braucht eine Verbindung; das Formular funktioniert offline von Hand."
-  }
+  },
+  "sections": {
+    "quick": "Schnellverkostung",
+    "identify": "Eine Flasche identifizieren",
+    "event": "Neues Event",
+    "memory": "Gedächtnis",
+    "cellar": "Keller",
+    "wishlist": "Wunschliste",
+    "shop": "Preise",
+    "library": "Bibliothek",
+    "assistant": "Vicenç",
+    "stats": "Kellerbuch",
+    "profile": "Mein Geschmacksprofil",
+    "sessions": "Events",
+    "about": "Einstellungen und mehr"
+  },
+  "sourceShort": "Quellcode"
 }

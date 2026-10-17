@@ -449,7 +449,10 @@
     "sessions": "Eventi",
     "memory": "Memoria",
     "assistant": "Vicenç",
-    "about": "Altro"
+    "about": "Altro",
+    "wines": "I miei vini",
+    "discover": "Scopri",
+    "me": "Io"
   },
   "about": {
     "eyebrow": "Le clausole in piccolo",
@@ -1753,5 +1756,21 @@
     "errorQuota": "La quota vocale di oggi è esaurita. Il modulo funziona a mano come sempre.",
     "privacy": "Nulla si salva finché non salvi. La registrazione va a Cloudflare Workers AI e non viene conservata.",
     "offline": "La voce richiede una connessione; il modulo funziona offline a mano."
-  }
+  },
+  "sections": {
+    "quick": "Degustazione rapida",
+    "identify": "Identifica una bottiglia",
+    "event": "Nuovo evento",
+    "memory": "Memoria",
+    "cellar": "Cantina",
+    "wishlist": "Lista dei desideri",
+    "shop": "Prezzi",
+    "library": "Biblioteca",
+    "assistant": "Vicenç",
+    "stats": "Libro di cantina",
+    "profile": "Il mio profilo di gusto",
+    "sessions": "Eventi",
+    "about": "Impostazioni e altro"
+  },
+  "sourceShort": "Codice sorgente"
 }

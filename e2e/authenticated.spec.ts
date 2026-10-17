@@ -135,19 +135,19 @@ test.describe("authenticated screens", () => {
     await page.waitForLoadState("networkidle");
 
     // §13 obliges an operator to offer the Corresponding Source to anyone using
-    // the application over a network. It used to sit in the shell's footer on
-    // every screen; it now lives on About, which is reachable from the primary
-    // navigation on every screen ("More"). This walks that path rather than
-    // assuming it.
-    await page
-      .getByRole("navigation", { name: "Primary" })
-      .getByRole("link", { name: /^more$/i })
-      .click();
-    await expect(page).toHaveURL(/\/about$/);
-
-    const link = page.getByRole("link", { name: /source code/i });
+    // the application over a network: the top bar carries it on every screen,
+    // and About («Me» → «Settings and more») says it again in full.
+    const link = page.locator(".topbar").getByRole("link", { name: /source code/i });
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute("href", /^https?:\/\//);
+
+    await page
+      .getByRole("navigation", { name: "Primary" })
+      .getByRole("link", { name: /^me$/i })
+      .click();
+    await page.getByRole("link", { name: /settings and more/i }).click();
+    await expect(page).toHaveURL(/\/about$/);
+    await expect(page.getByRole("link", { name: /source code \(agpl/i })).toBeVisible();
   });
 });
 
@@ -303,9 +303,7 @@ test.describe("interface language", () => {
     await expect(control).toBeVisible();
 
     await control.selectOption("es");
-    await expect(page.getByRole("navigation", { name: "Primary" })).toContainText(
-      /memòria|memoria/i,
-    );
+    await expect(page.getByRole("navigation", { name: "Primary" })).toContainText(/mis vinos/i);
     await expect(page.getByRole("link", { name: /inicio/i })).toBeVisible();
 
     // Stored on the account, so it follows the member to another device rather
