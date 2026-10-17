@@ -22,6 +22,7 @@ import {
   saveTasteDeclaration,
   writeTasteBio,
 } from "../services/taste";
+import { DivergingBars, DonutByKind, ShiftBars } from "../taste/TasteCharts";
 
 type Named = Pick<TasteTrait, "key" | "kind" | "label">;
 
@@ -210,33 +211,63 @@ export function ProfilePage() {
           </section>
 
           {profile.likes.length === 0 && profile.dislikes.length === 0 ? null : (
-            <div className="taste-columns">
-              {profile.likes.length === 0 ? null : (
-                <section aria-labelledby="taste-likes" className="settings-card">
-                  <h2 id="taste-likes">{t("taste.likesTitle")}</h2>
-                  {traitList(profile.likes)}
-                </section>
-              )}
-              {profile.dislikes.length === 0 ? null : (
-                <section aria-labelledby="taste-dislikes" className="settings-card">
-                  <h2 id="taste-dislikes">{t("taste.dislikesTitle")}</h2>
-                  {traitList(profile.dislikes)}
-                </section>
-              )}
-            </div>
+            <section aria-labelledby="taste-versus" className="settings-card">
+              <h2 id="taste-versus">{t("taste.chart.versusTitle")}</h2>
+              <p className="section-help">{t("taste.chart.versusHint")}</p>
+              <DivergingBars
+                rows={[...profile.likes, ...profile.dislikes]
+                  .toSorted((left, right) => right.pointsVersusAverage - left.pointsVersusAverage)
+                  .map((trait) => ({
+                    key: `${trait.kind}:${trait.key}`,
+                    label: nameOf(trait),
+                    notes: trait.notes,
+                    points: trait.pointsVersusAverage,
+                  }))}
+              />
+            </section>
           )}
-          <p className="section-help">{t("taste.pointsNote")}</p>
+          {profile.likes.length === 0 && profile.dislikes.length === 0 ? null : (
+            <details className="taste-details">
+              <summary>{t("taste.chart.winesBehind")}</summary>
+              <div className="taste-columns">
+                {profile.likes.length === 0 ? null : (
+                  <section aria-labelledby="taste-likes" className="settings-card">
+                    <h2 id="taste-likes">{t("taste.likesTitle")}</h2>
+                    {traitList(profile.likes)}
+                  </section>
+                )}
+                {profile.dislikes.length === 0 ? null : (
+                  <section aria-labelledby="taste-dislikes" className="settings-card">
+                    <h2 id="taste-dislikes">{t("taste.dislikesTitle")}</h2>
+                    {traitList(profile.dislikes)}
+                  </section>
+                )}
+              </div>
+            </details>
+          )}
+          {profile.likes.length === 0 && profile.dislikes.length === 0 ? null : (
+            <p className="section-help">{t("taste.pointsNote")}</p>
+          )}
 
           {profile.habits.mostTasted.length === 0 ? null : (
             <section aria-labelledby="taste-most" className="settings-card">
               <h2 id="taste-most">{t("taste.mostTastedTitle")}</h2>
-              <ul className="library-chips">
-                {profile.habits.mostTasted.map((entry) => (
-                  <li key={`${entry.kind}-${entry.key}`}>
-                    {nameOf(entry)} · {percent(entry.share)}
-                  </li>
-                ))}
-              </ul>
+              <DonutByKind
+                groups={[...new Set(profile.habits.mostTasted.map((entry) => entry.kind))].map(
+                  (kind) => ({
+                    kind,
+                    name: t(`taste.chart.kind.${kind}`),
+                    slices: profile.habits.mostTasted
+                      .filter((entry) => entry.kind === kind)
+                      .map((entry) => ({
+                        key: entry.key,
+                        label: nameOf(entry),
+                        share: entry.share,
+                      })),
+                  }),
+                )}
+                label={t("taste.mostTastedTitle")}
+              />
               {profile.tensions.length === 0 ? null : (
                 <p className="section-help">
                   {t("taste.tensions", {
@@ -315,17 +346,14 @@ export function ProfilePage() {
                 })}
               </p>
               {profile.evolution.shifts.length === 0 ? null : (
-                <ul className="stats-list">
-                  {profile.evolution.shifts.map((shift) => (
-                    <li key={`${shift.kind}-${shift.key}`}>
-                      {t("taste.shift", {
-                        from: percent(shift.earlierShare),
-                        label: nameOf(shift),
-                        to: percent(shift.recentShare),
-                      })}
-                    </li>
-                  ))}
-                </ul>
+                <ShiftBars
+                  rows={profile.evolution.shifts.map((shift) => ({
+                    key: `${shift.kind}-${shift.key}`,
+                    label: nameOf(shift),
+                    now: shift.recentShare,
+                    then: shift.earlierShare,
+                  }))}
+                />
               )}
             </section>
           )}

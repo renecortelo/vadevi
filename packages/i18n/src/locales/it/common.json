@@ -1710,6 +1710,28 @@
       "unavailable": "Vicenç non può scrivere ora (niente IA in questo deployment, o la quota di oggi è esaurita). Il riepilogo sopra resta esatto.",
       "not_kept": "Ciò che ha scritto non corrispondeva ai tuoi dati, quindi non viene mostrato. Il riepilogo sopra resta esatto.",
       "error": "Richiesta non riuscita. Riprova."
+    },
+    "chart": {
+      "versusTitle": "Sopra e sotto la tua media",
+      "versusHint": "Punti sopra (verde) o sotto (rosso) il voto che dai di solito, per ciò che hai degustato almeno tre volte.",
+      "winesBehind": "I vini dietro ciascuno",
+      "then": "Prima",
+      "now": "Ultimi 12 mesi",
+      "pointsVersusAverage_one": "punti rispetto alla tua media, da {{count}} degustazione",
+      "pointsVersusAverage_other": "punti rispetto alla tua media, da {{count}} degustazioni",
+      "kind": {
+        "type": "Tipi",
+        "country": "Paesi",
+        "region": "Regioni",
+        "grape": "Vitigni",
+        "descriptor": "Aromi",
+        "acidity": "Acidità",
+        "tannin": "Tannini",
+        "body": "Corpo",
+        "sweetness": "Dolcezza",
+        "finish": "Finale",
+        "price": "Prezzo"
+      }
     }
   },
   "regionTidy": {

@@ -1710,6 +1710,28 @@
       "unavailable": "Vicenç cannot write right now (no AI on this deployment, or today's allowance is spent). The summary above stays exact.",
       "not_kept": "What it wrote did not match your facts, so it is not shown. The summary above stays exact.",
       "error": "The request failed. Try again."
+    },
+    "chart": {
+      "versusTitle": "Above and below your average",
+      "versusHint": "Points above (green) or below (red) the average you give, for what you have tasted at least three times.",
+      "winesBehind": "The wines behind each one",
+      "then": "Before",
+      "now": "Last 12 months",
+      "pointsVersusAverage_one": "points against your average, from {{count}} tasting",
+      "pointsVersusAverage_other": "points against your average, from {{count}} tastings",
+      "kind": {
+        "type": "Types",
+        "country": "Countries",
+        "region": "Regions",
+        "grape": "Grapes",
+        "descriptor": "Aromas",
+        "acidity": "Acidity",
+        "tannin": "Tannin",
+        "body": "Body",
+        "sweetness": "Sweetness",
+        "finish": "Finish",
+        "price": "Price"
+      }
     }
   },
   "regionTidy": {

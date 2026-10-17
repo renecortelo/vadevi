@@ -1710,6 +1710,28 @@
       "unavailable": "Vicenç ne peut pas écrire maintenant (pas d'IA sur ce déploiement, ou l'allocation du jour est épuisée). Le résumé ci-dessus reste exact.",
       "not_kept": "Ce qu'il a écrit ne correspondait pas à vos données ; ce n'est donc pas affiché. Le résumé ci-dessus reste exact.",
       "error": "La demande a échoué. Réessayez."
+    },
+    "chart": {
+      "versusTitle": "Au-dessus et au-dessous de votre moyenne",
+      "versusHint": "Points au-dessus (vert) ou au-dessous (rouge) de la note que vous donnez d'habitude, pour ce que vous avez dégusté au moins trois fois.",
+      "winesBehind": "Les vins derrière chacun",
+      "then": "Avant",
+      "now": "12 derniers mois",
+      "pointsVersusAverage_one": "points par rapport à votre moyenne, sur {{count}} dégustation",
+      "pointsVersusAverage_other": "points par rapport à votre moyenne, sur {{count}} dégustations",
+      "kind": {
+        "type": "Types",
+        "country": "Pays",
+        "region": "Régions",
+        "grape": "Cépages",
+        "descriptor": "Arômes",
+        "acidity": "Acidité",
+        "tannin": "Tanins",
+        "body": "Corps",
+        "sweetness": "Sucrosité",
+        "finish": "Finale",
+        "price": "Prix"
+      }
     }
   },
   "regionTidy": {

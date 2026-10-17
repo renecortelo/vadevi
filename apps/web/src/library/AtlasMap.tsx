@@ -51,21 +51,19 @@ export function AtlasMap({
   // Some sea around it, and never so close that a small country fills it.
   const size = Math.max(x1 - x0, y1 - y0, 60) * 1.35;
   const centre = [(x0 + x1) / 2, (y0 + y1) / 2];
-  const zoom = useZoomPan({ h: size, w: size, x: centre[0]! - size / 2, y: centre[1]! - size / 2 });
+  // It opens on the country and goes out as far as its whole sheet.
+  const zoom = useZoomPan(
+    { h: data?.height ?? 1, w: data?.width ?? 1, x: 0, y: 0 },
+    { h: size, w: size, x: centre[0]! - size / 2, y: centre[1]! - size / 2 },
+  );
   if (data === undefined || box === undefined) return null;
   // Lines and the point keep their size on the screen however close.
-  const stroke = size / 260 / zoom.scale;
+  const stroke = zoom.view.w / 260;
   return (
     <figure className="library-map">
       <div className="map-frame">
         <svg aria-label={t("library.mapLabel", { place: label })} role="img" {...zoom.svgProps}>
-          <rect
-            className="library-map__sea"
-            height={size}
-            width={size}
-            x={centre[0]! - size / 2}
-            y={centre[1]! - size / 2}
-          />
+          <rect className="library-map__sea" height={data.height} width={data.width} />
           {Object.entries(data.countries).map(([country, path]) => (
             <path
               className={
@@ -81,8 +79,8 @@ export function AtlasMap({
               className="library-map__point"
               cx={point[0]}
               cy={point[1]}
-              r={size / 45 / Math.sqrt(zoom.scale)}
-              strokeWidth={size / 110 / zoom.scale}
+              r={zoom.view.w / 45}
+              strokeWidth={zoom.view.w / 110}
             />
           )}
         </svg>
@@ -90,7 +88,8 @@ export function AtlasMap({
           onIn={zoom.zoomIn}
           onOut={zoom.zoomOut}
           onReset={zoom.reset}
-          zoomed={zoom.zoomed}
+          canOut={zoom.canZoomOut}
+          moved={zoom.moved}
         />
       </div>
       {/* The points' sources are credited only where a point is drawn; the

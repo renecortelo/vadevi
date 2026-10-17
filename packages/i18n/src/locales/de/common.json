@@ -1710,6 +1710,28 @@
       "unavailable": "Vicenç kann gerade nicht schreiben (keine KI in dieser Installation, oder das heutige Kontingent ist aufgebraucht). Die Zusammenfassung oben bleibt genau.",
       "not_kept": "Was er schrieb, passte nicht zu Ihren Daten, daher wird es nicht gezeigt. Die Zusammenfassung oben bleibt genau.",
       "error": "Die Anfrage ist fehlgeschlagen. Bitte erneut versuchen."
+    },
+    "chart": {
+      "versusTitle": "Über und unter Ihrem Durchschnitt",
+      "versusHint": "Punkte über (grün) oder unter (rot) Ihrer üblichen Bewertung, für das, was Sie mindestens dreimal verkostet haben.",
+      "winesBehind": "Die Weine hinter jedem Punkt",
+      "then": "Vorher",
+      "now": "Letzte 12 Monate",
+      "pointsVersusAverage_one": "Punkte gegenüber Ihrem Durchschnitt, aus {{count}} Verkostung",
+      "pointsVersusAverage_other": "Punkte gegenüber Ihrem Durchschnitt, aus {{count}} Verkostungen",
+      "kind": {
+        "type": "Weinarten",
+        "country": "Länder",
+        "region": "Regionen",
+        "grape": "Rebsorten",
+        "descriptor": "Aromen",
+        "acidity": "Säure",
+        "tannin": "Tannin",
+        "body": "Körper",
+        "sweetness": "Süße",
+        "finish": "Abgang",
+        "price": "Preis"
+      }
     }
   },
   "regionTidy": {

@@ -56,24 +56,35 @@ export function CoverageMap({
     [...held].sort((left, right) => right.total - left.total)[0];
   const data = sheet?.data;
   const zoom = useZoomPan({ h: data?.height ?? 1, w: data?.width ?? 1, x: 0, y: 0 });
+  // Back to every country from the page: the map goes back out with it.
+  const [lastSelected, setLastSelected] = useState(selected);
+  if (lastSelected !== selected) {
+    setLastSelected(selected);
+    if (selected === null) {
+      setTag(null);
+      zoom.reset();
+    }
+  }
   if (sheet === undefined || data === undefined) return null;
   const largest = Math.max(1, ...countries.map((country) => country.names));
   const regionNames = new Intl.DisplayNames([i18n.language], { type: "region" });
   // Lines and points keep their size on the screen however close the map is.
   const stroke = Math.max(data.width, data.height) / 520 / zoom.scale;
-  const radius = Math.max(data.width, data.height) / 260 / Math.sqrt(zoom.scale);
+  // A point a few pixels across, and a finger's width to touch it by.
+  const pixel = zoom.unitsPerPixel();
+  const radius = 4 * pixel;
+  const reach = 15 * pixel;
   const project = (point: CoveragePoint) =>
     [
       (point.longitude - data.frame.lonMin) * data.squeeze * data.scale,
       (data.frame.latMax - point.latitude) * data.scale,
     ] as const;
+  // Once a country is chosen, its land is no longer a target: a touch meant
+  // for a point never throws the map elsewhere. «All countries» and «Show it
+  // all» lead back out.
   const choose = (code: string) => {
+    if (selected !== null) return;
     setTag(null);
-    if (code === selected) {
-      onSelect(null);
-      zoom.reset();
-      return;
-    }
     onSelect(code);
     const box = data.boxes[code];
     if (box !== undefined)
@@ -140,17 +151,15 @@ export function CoverageMap({
           {points.map((point) => {
             const [x, y] = project(point);
             return (
-              <circle
+              <g
                 className={`coverage-map__point${point.approximate ? " is-approximate" : ""}${tag?.id === point.id ? " is-tagged" : ""}`}
-                cx={x}
-                cy={y}
                 key={point.id}
                 onClick={() => setTag(point)}
-                r={radius}
-                strokeWidth={stroke * 1.5}
               >
                 <title>{point.name}</title>
-              </circle>
+                <circle className="coverage-map__reach" cx={x} cy={y} r={reach} />
+                <circle cx={x} cy={y} r={radius} strokeWidth={pixel} />
+              </g>
             );
           })}
         </svg>
@@ -161,7 +170,8 @@ export function CoverageMap({
             zoom.reset();
             setTag(null);
           }}
-          zoomed={zoom.zoomed}
+          canOut={zoom.canZoomOut}
+          moved={zoom.moved}
         />
         {tag === null || tagAt === null ? null : (
           <div

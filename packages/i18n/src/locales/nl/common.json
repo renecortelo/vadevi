@@ -1710,6 +1710,28 @@
       "unavailable": "Vicenç kan nu niet schrijven (geen AI in deze installatie, of het tegoed van vandaag is op). De samenvatting hierboven blijft exact.",
       "not_kept": "Wat hij schreef klopte niet met je gegevens, dus het wordt niet getoond. De samenvatting hierboven blijft exact.",
       "error": "Het verzoek is mislukt. Probeer het opnieuw."
+    },
+    "chart": {
+      "versusTitle": "Boven en onder je gemiddelde",
+      "versusHint": "Punten boven (groen) of onder (rood) het cijfer dat je meestal geeft, voor wat je minstens drie keer hebt geproefd.",
+      "winesBehind": "De wijnen achter elk",
+      "then": "Eerder",
+      "now": "Laatste 12 maanden",
+      "pointsVersusAverage_one": "punten tegenover je gemiddelde, uit {{count}} proeverij",
+      "pointsVersusAverage_other": "punten tegenover je gemiddelde, uit {{count}} proeverijen",
+      "kind": {
+        "type": "Soorten",
+        "country": "Landen",
+        "region": "Streken",
+        "grape": "Druiven",
+        "descriptor": "Aroma's",
+        "acidity": "Zuurgraad",
+        "tannin": "Tannine",
+        "body": "Body",
+        "sweetness": "Zoetheid",
+        "finish": "Afdronk",
+        "price": "Prijs"
+      }
     }
   },
   "regionTidy": {

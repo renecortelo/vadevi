@@ -52,7 +52,11 @@ export function CellarMap({ places }: { places: readonly Place[] }) {
   const centre = Number.isFinite(x0)
     ? ([(x0 + x1) / 2, (y0 + y1) / 2] as const)
     : ([0, 0] as const);
-  const zoom = useZoomPan({ h: size, w: size, x: centre[0] - size / 2, y: centre[1] - size / 2 });
+  // It opens on the points and goes out as far as their whole sheet.
+  const zoom = useZoomPan(
+    { h: data?.height ?? 1, w: data?.width ?? 1, x: 0, y: 0 },
+    { h: size, w: size, x: centre[0] - size / 2, y: centre[1] - size / 2 },
+  );
   if (sheet === undefined || data === undefined) return null;
   const largest = Math.max(1, ...sheet.places.map((place) => place.count));
   const countries = new Set(sheet.places.map((place) => place.countryCode));
@@ -74,13 +78,7 @@ export function CellarMap({ places }: { places: readonly Place[] }) {
       )}
       <div className="map-frame">
         <svg aria-label={t("stats.cellarMap.label")} key={sheet.id} {...zoom.svgProps}>
-          <rect
-            className="library-map__sea"
-            height={size}
-            width={size}
-            x={centre[0] - size / 2}
-            y={centre[1] - size / 2}
-          />
+          <rect className="library-map__sea" height={data.height} width={data.width} />
           {Object.entries(data.countries).map(([code, path]) => (
             <path
               className={
@@ -88,7 +86,7 @@ export function CellarMap({ places }: { places: readonly Place[] }) {
               }
               d={path}
               key={code}
-              strokeWidth={size / 400 / zoom.scale}
+              strokeWidth={zoom.view.w / 400}
             />
           ))}
           {points
@@ -111,10 +109,8 @@ export function CellarMap({ places }: { places: readonly Place[] }) {
                   }
                   cx={xy[0]}
                   cy={xy[1]}
-                  r={
-                    ((size / 70) * (0.7 + Math.sqrt(place.count / largest))) / Math.sqrt(zoom.scale)
-                  }
-                  strokeWidth={size / 160 / zoom.scale}
+                  r={(zoom.view.w / 70) * (0.7 + Math.sqrt(place.count / largest))}
+                  strokeWidth={zoom.view.w / 160}
                   style={{ "--motion-index": Math.min(index, 12) } as CSSProperties}
                 />
               </Link>
@@ -124,7 +120,8 @@ export function CellarMap({ places }: { places: readonly Place[] }) {
           onIn={zoom.zoomIn}
           onOut={zoom.zoomOut}
           onReset={zoom.reset}
-          zoomed={zoom.zoomed}
+          canOut={zoom.canZoomOut}
+          moved={zoom.moved}
         />
       </div>
       <figcaption className="section-help">{t("stats.cellarMap.caption")}</figcaption>

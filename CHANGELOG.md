@@ -88,7 +88,18 @@ has the reasons.
   with a drag (one finger still scrolls the page until the map is zoomed).
   On the atlas in figures, touching a country chooses it — the page shows its
   figures alone — and frames it with a point for each of its names; touching
-  a point names it, with its kind and a link to its page.
+  a point names it, with its kind and a link to its page. The points are
+  small solid dots (fainter where a name is placed only approximately), each
+  answering a fingertip around it; once a country is chosen, a touch on the
+  land around no longer chooses another, and «All countries» brings the whole
+  map back. Every map zooms out as far as its whole sheet, from wherever it
+  opens.
+- **Your taste profile, drawn**: what you score above and below your own
+  average is a chart of bars either side of a line, green and red; what you
+  drink most is a ring, by type, country or grape, its shares counting up;
+  and how your drinking moved is a pair of bars, before and the last twelve
+  months. Each plays as it comes into view; the wines behind each trait are
+  folded underneath.
 - **Styles and methods, browsable**: a gallery like the grapes', each card
   with its picture, its kind and a line of what it is; filtered by kind
   (types of wine, in the vineyard and the cellar, how it is made, concepts)
@@ -97,7 +108,8 @@ has the reasons.
 kb:fetch-topic-images`; 19 of the 41 have one).
 - **The memory's map in the app's style**: «Where they're from» is drawn on
   the app's own map, like the atlas and the cellar book, zooming and naming
-  the wines of a touched point; «Where I tasted» keeps street tiles, tinted
+  the wines of a touched point, and shows (Europe's sheet) even before any
+  region is placed; «Where I tasted» keeps street tiles, tinted
   to the app's palette (dark at night), with its points in the app's colour.
 - **Credits, quietly**: every note of where a text, a photo or a map's
   points come from is set the same way across the app — smaller and fainter

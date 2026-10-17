@@ -1710,6 +1710,28 @@
       "unavailable": "Vicenç no puede escribir ahora (sin IA en este despliegue o con la cuota de hoy agotada). El resumen de arriba sigue siendo exacto.",
       "not_kept": "Lo que escribió no cuadraba con tus datos, así que no se muestra. El resumen de arriba sigue siendo exacto.",
       "error": "No se pudo pedir. Inténtalo de nuevo."
+    },
+    "chart": {
+      "versusTitle": "Por encima y por debajo de tu media",
+      "versusHint": "Puntos por encima (verde) o por debajo (rojo) de la nota que sueles dar, en lo que has catado al menos tres veces.",
+      "winesBehind": "Los vinos detrás de cada uno",
+      "then": "Antes",
+      "now": "Últimos 12 meses",
+      "pointsVersusAverage_one": "puntos frente a tu media, de {{count}} cata",
+      "pointsVersusAverage_other": "puntos frente a tu media, de {{count}} catas",
+      "kind": {
+        "type": "Tipos",
+        "country": "Países",
+        "region": "Regiones",
+        "grape": "Uvas",
+        "descriptor": "Aromas",
+        "acidity": "Acidez",
+        "tannin": "Taninos",
+        "body": "Cuerpo",
+        "sweetness": "Dulzor",
+        "finish": "Final",
+        "price": "Precio"
+      }
     }
   },
   "regionTidy": {

@@ -4542,6 +4542,193 @@ p {
   overflow: hidden;
 }
 
+/* The taste profile's charts (taste/TasteCharts.tsx). */
+.taste-diverging,
+.taste-shifts {
+  display: grid;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.taste-diverging li {
+  align-items: center;
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: minmax(6rem, 34%) 1fr 3.2rem;
+}
+
+.taste-diverging__label,
+.taste-shifts__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The average is the line down the middle; a bar leaves it to either side. */
+.taste-diverging__track {
+  background: linear-gradient(var(--color-border), var(--color-border)) center / 1px 100% no-repeat;
+  block-size: 0.9rem;
+  position: relative;
+}
+
+.taste-diverging__track > span {
+  block-size: 100%;
+  border-radius: var(--radius-pill);
+  position: absolute;
+}
+
+.taste-diverging__track > .is-above {
+  background: var(--color-success);
+  inset-inline-start: 50%;
+  transform-origin: left center;
+}
+
+.taste-diverging__track > .is-below {
+  background: var(--color-danger);
+  inset-inline-end: 50%;
+  transform-origin: right center;
+}
+
+.taste-diverging__value {
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+}
+
+.taste-donut {
+  align-items: center;
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: minmax(8rem, 11rem) 1fr;
+  margin-block-start: var(--space-3);
+}
+
+@media (max-width: 420px) {
+  .taste-donut {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.taste-donut svg {
+  inline-size: 100%;
+  transform: rotate(0deg);
+}
+
+.taste-donut circle {
+  fill: none;
+  stroke-width: 6;
+}
+
+.taste-donut__ground {
+  stroke: var(--color-surface-muted);
+}
+
+.taste-donut__slice {
+  transition: stroke-dasharray var(--motion-slow) ease-out;
+  transition-delay: calc(var(--motion-index) * 90ms);
+}
+
+.taste-donut__legend {
+  display: grid;
+  gap: var(--space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.taste-donut__legend li {
+  align-items: center;
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: 0.8rem 1fr auto;
+}
+
+.taste-donut__swatch {
+  block-size: 0.8rem;
+  border-radius: 3px;
+  inline-size: 0.8rem;
+}
+
+.taste-donut__slice.is-0 {
+  stroke: var(--color-plum);
+}
+.taste-donut__swatch.is-0 {
+  background: var(--color-plum);
+}
+.taste-donut__slice.is-1 {
+  stroke: #c4624f;
+}
+.taste-donut__swatch.is-1 {
+  background: #c4624f;
+}
+.taste-donut__slice.is-2 {
+  stroke: #d9a441;
+}
+.taste-donut__swatch.is-2 {
+  background: #d9a441;
+}
+.taste-donut__slice.is-3 {
+  stroke: #7a9a5b;
+}
+.taste-donut__swatch.is-3 {
+  background: #7a9a5b;
+}
+.taste-donut__slice.is-4 {
+  stroke: #5b7fa3;
+}
+.taste-donut__swatch.is-4 {
+  background: #5b7fa3;
+}
+.taste-donut__slice.is-5 {
+  stroke: var(--color-border);
+}
+.taste-donut__swatch.is-5 {
+  background: var(--color-border);
+}
+
+.taste-shifts li {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.taste-shifts__pair {
+  align-items: center;
+  display: grid;
+  gap: var(--space-1) var(--space-2);
+  grid-template-columns: 1fr 9rem;
+}
+
+.taste-shifts__value {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.stats-bars__track.is-then > span {
+  background: var(--color-border);
+}
+
+.taste-details > summary {
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: var(--text-sm);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-arrival="waiting"] .taste-diverging__track > span,
+  [data-arrival="waiting"] .taste-shifts .stats-bars__track > span {
+    animation: none;
+    transform: scaleX(0);
+  }
+
+  .taste-diverging__track > span,
+  .taste-shifts .stats-bars__track > span {
+    animation: stats-bar-grow var(--motion-slow) both;
+    animation-delay: calc(min(var(--motion-index), 10) * 35ms);
+  }
+}
+
 /* Where a text, a photo or a map's points come from: said, as the licence
    asks, but quietly — smaller and fainter than what it credits, the same
    everywhere in the app. */
@@ -5028,16 +5215,27 @@ p {
 
 .coverage-map__point {
   cursor: pointer;
-  fill: var(--color-surface-raised);
-  stroke: var(--color-text);
 }
 
-.coverage-map__point.is-approximate {
-  fill: transparent;
+.coverage-map__point circle:last-child {
+  fill: var(--color-plum);
+  stroke: var(--color-surface-raised);
 }
 
-.coverage-map__point.is-tagged {
+/* Placed approximately: the same dot, fainter. */
+.coverage-map__point.is-approximate circle:last-child {
+  fill-opacity: 0.45;
+}
+
+.coverage-map__point.is-tagged circle:last-child {
   fill: var(--color-accent);
+  fill-opacity: 1;
+}
+
+/* The touchable reach around a dot: there, but not drawn. */
+.coverage-map__reach {
+  fill: transparent;
+  stroke: none;
 }
 
 .map-tag {

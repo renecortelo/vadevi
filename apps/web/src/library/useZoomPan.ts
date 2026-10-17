@@ -6,22 +6,23 @@ const clamp = (value: number, low: number, high: number) => Math.min(high, Math.
 
 /**
  * A map that comes closer and moves: the wheel and a pinch zoom where they
- * point, a drag moves the map, and buttons do the same for a keyboard. The
- * view never leaves the sheet, nor zooms past `maxZoom`. Until the map is
- * zoomed in, one finger still scrolls the page — a map is not a trap — and a
- * drag is never taken for a touch on what lies under it.
+ * point, a drag moves the map, and buttons do the same for a keyboard. It
+ * opens on `initial` (the points, a country) and can go out to the whole of
+ * `base` (the sheet), never past it, nor closer than `maxZoom` of it. Until
+ * the map is moved, one finger still scrolls the page — a map is not a trap —
+ * and a drag is never taken for a touch on what lies under it.
  */
-export function useZoomPan(base: Box, maxZoom = 16) {
-  const [view, setView] = useState<Box>(base);
-  const baseKey = `${base.x} ${base.y} ${base.w} ${base.h}`;
+export function useZoomPan(base: Box, initial: Box = base, maxZoom = 40) {
+  const [view, setView] = useState<Box>(initial);
+  const baseKey = `${base.x} ${base.y} ${base.w} ${base.h} ${initial.x} ${initial.y} ${initial.w} ${initial.h}`;
   const [shownBase, setShownBase] = useState(baseKey);
   if (shownBase !== baseKey) {
     setShownBase(baseKey);
-    setView(base);
+    setView(initial);
   }
   const svg = useRef<SVGSVGElement>(null);
   const pointers = useRef(new Map<number, { x: number; y: number }>());
-  const moved = useRef(0);
+  const dragged = useRef(0);
 
   const fit = useCallback(
     (next: Box): Box => {
@@ -90,7 +91,7 @@ export function useZoomPan(base: Box, maxZoom = 16) {
 
   const onPointerDown = (event: PointerEvent<SVGSVGElement>) => {
     pointers.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
-    if (pointers.current.size === 1) moved.current = 0;
+    if (pointers.current.size === 1) dragged.current = 0;
   };
   const onPointerMove = (event: PointerEvent<SVGSVGElement>) => {
     const before = pointers.current.get(event.pointerId);
@@ -98,8 +99,8 @@ export function useZoomPan(base: Box, maxZoom = 16) {
     const after = { x: event.clientX, y: event.clientY };
     const others = [...pointers.current.entries()].filter(([id]) => id !== event.pointerId);
     pointers.current.set(event.pointerId, after);
-    moved.current += Math.hypot(after.x - before.x, after.y - before.y);
-    if (moved.current > 4 && !svg.current?.hasPointerCapture(event.pointerId)) {
+    dragged.current += Math.hypot(after.x - before.x, after.y - before.y);
+    if (dragged.current > 4 && !svg.current?.hasPointerCapture(event.pointerId)) {
       svg.current?.setPointerCapture(event.pointerId);
     }
     const other = others[0]?.[1];
@@ -132,15 +133,25 @@ export function useZoomPan(base: Box, maxZoom = 16) {
   };
   /** A click that ends a drag is not a touch on what lies under it. */
   const onClickCapture = (event: { preventDefault(): void; stopPropagation(): void }) => {
-    if (moved.current > 4) {
+    if (dragged.current > 4) {
       event.preventDefault();
       event.stopPropagation();
     }
   };
 
-  const zoomed = view.w < base.w * 0.999;
+  const moved =
+    Math.abs(view.w - initial.w) > initial.w * 0.001 ||
+    Math.abs(view.x - initial.x) > initial.w * 0.001 ||
+    Math.abs(view.y - initial.y) > initial.h * 0.001;
+  const zoomed = moved || view.w < base.w * 0.999;
   return {
-    reset: () => setView(base),
+    /** Whether there is further out to go. */
+    canZoomOut: view.w < base.w * 0.999,
+    /** Whether the reader has moved it from where it opened. */
+    moved,
+    reset: () => setView(initial),
+    /** Map units in one screen pixel, to keep points a finger's size. */
+    unitsPerPixel: () => view.w / Math.max(1, svg.current?.getBoundingClientRect().width ?? 300),
     svgProps: {
       onClickCapture,
       onPointerCancel: onPointerUp,
@@ -148,7 +159,7 @@ export function useZoomPan(base: Box, maxZoom = 16) {
       onPointerMove,
       onPointerUp,
       ref: svg,
-      style: { cursor: zoomed ? "grab" : undefined, touchAction: zoomed ? "none" : "pan-y" },
+      style: { cursor: zoomed ? "grab" : undefined, touchAction: moved ? "none" : "pan-y" },
       viewBox: [view.x, view.y, view.w, view.h].map((value) => value.toFixed(2)).join(" "),
     },
     /** How far in: 1 at the whole sheet. */

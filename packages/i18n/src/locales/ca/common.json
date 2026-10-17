@@ -1710,6 +1710,28 @@
       "unavailable": "En Vicenç no pot escriure ara (sense IA en aquest desplegament o amb la quota d'avui exhaurida). El resum de dalt continua sent exacte.",
       "not_kept": "El que va escriure no quadrava amb les teves dades, així que no es mostra. El resum de dalt continua sent exacte.",
       "error": "No s'ha pogut demanar. Torna-ho a provar."
+    },
+    "chart": {
+      "versusTitle": "Per sobre i per sota de la teva mitjana",
+      "versusHint": "Punts per sobre (verd) o per sota (vermell) de la nota que sols donar, en el que has tastat almenys tres vegades.",
+      "winesBehind": "Els vins darrere de cadascun",
+      "then": "Abans",
+      "now": "Darrers 12 mesos",
+      "pointsVersusAverage_one": "punts davant la teva mitjana, d'{{count}} tast",
+      "pointsVersusAverage_other": "punts davant la teva mitjana, de {{count}} tastos",
+      "kind": {
+        "type": "Tipus",
+        "country": "Països",
+        "region": "Regions",
+        "grape": "Raïms",
+        "descriptor": "Aromes",
+        "acidity": "Acidesa",
+        "tannin": "Tanins",
+        "body": "Cos",
+        "sweetness": "Dolçor",
+        "finish": "Final",
+        "price": "Preu"
+      }
     }
   },
   "regionTidy": {

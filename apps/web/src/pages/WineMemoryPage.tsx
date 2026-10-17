@@ -1168,10 +1168,11 @@ export function WineMemoryPage() {
             // Regions on the app's own map, as the atlas and the cellar book
             // draw them; venues need streets, which only tiles have.
             if (mapKind === "region") {
-              return active.length === 0 ? (
-                <p className="section-help">{empty}</p>
-              ) : (
-                <SheetPointsMap label={t("memory.mapLabel")} points={active} />
+              return (
+                <>
+                  {active.length === 0 ? <p className="section-help">{empty}</p> : null}
+                  <SheetPointsMap label={t("memory.mapLabel")} points={active} />
+                </>
               );
             }
             // A real map whenever the deployment serves tiles — empty or not, so
