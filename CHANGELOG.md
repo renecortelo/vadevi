@@ -116,6 +116,13 @@ has the reasons.
   the eight languages), San Antonio de las Minas, the San Vicente, Santo
   Tomás, Calafia and Tecate valleys, La Laguna and the Parras Valley. Wines
   whose region reads «Valle de Guadalupe» or «Parras» are now linked to them.
+- **Summaries from each country's own Wikipedia**: names outside the EU are
+  now described also from articles in their country's language, not only
+  English ones titled "<name> wine" — the Vale dos Vinhedos from the
+  Portuguese and Spanish Wikipedias, Vaud, Valais, Lavaux and Dézaley from
+  the French, Zürichsee from the German, Short Hills Bench from the English
+  — each translated faithfully into the eight languages and marked so.
+  Lavaux takes its point from its article's item.
 - **Ontario in the atlas**: the 17 viticultural areas of its VQA rules
   (Table 1 of O. Reg. 406/00), from the Niagara Peninsula and Prince Edward
   County to the benches of the Niagara Escarpment, each within the areas the

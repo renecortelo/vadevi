@@ -39,7 +39,8 @@ import { type Cell, readSheet, sheetDate } from "./xlsx";
  * the zoning of Decree 464 of 1994, transcribed in
  * `data/kb/cl-zonificacion-viticola.json`. Mexico: the IMPI's declarations
  * of protection in the Diario Oficial de la Federación, transcribed in
- * `data/kb/mx-indicaciones-geograficas.json`.
+ * `data/kb/mx-indicaciones-geograficas.json`. Registers transcribed one file
+ * a country (Brazil's, Switzerland's…) are read by `fetch-registers.ts`.
  *
  * No model is involved: nothing here costs AI quota.
  *
@@ -1052,90 +1053,4 @@ writeFileSync(
 console.info(
   `  IMPI: ${mxRecords.length} Mexican indications, ${mxItems.size} with an article on their wine, ` +
     `${mxRecords.filter((record) => record.latitude !== null).length} placed.`,
-);
-
-// 13. Brazil: the indications of provenance (IP) and denominations of origin
-//     (DO) for wine the INPI has recognised, from its two lists, transcribed
-//     in `data/kb/br-indicacoes-geograficas.json`. Each is placed where
-//     OpenStreetMap has the place of its name in its state, or else at the
-//     middle of the municipalities its delimitation names — approximately.
-type BrArea = {
-  amendedOn?: string;
-  firstRegisteredOn?: string;
-  key: string;
-  municipalities: string[];
-  names: string[];
-  number: string;
-  /** False where the name is also another place than the indication's. */
-  placeByName?: boolean;
-  products: string;
-  registeredOn: string;
-  states: string[];
-  type: "DO" | "IP";
-};
-const br = JSON.parse(readFileSync(resolve("data/kb/br-indicacoes-geograficas.json"), "utf8")) as {
-  areas: BrArea[];
-  source: { url: string; urlDenominations: string };
-};
-const brStates: Record<string, string> = {
-  BA: "Bahia",
-  MG: "Minas Gerais",
-  PE: "Pernambuco",
-  PR: "Paraná",
-  RS: "Rio Grande do Sul",
-  SC: "Santa Catarina",
-};
-const brItems = await wineArticleItems(
-  new Map(
-    br.areas
-      // One article for a name in both lists: the denomination's.
-      .filter((area) => area.key !== "vale-dos-vinhedos-ip")
-      .map((area) => [area.key, area.names]),
-  ),
-  { "vale-dos-vinhedos": "Vale dos Vinhedos" },
-);
-await leadLanguages([...new Set(brItems.values())]);
-const middle = (values: number[]) => {
-  const sorted = [...values].sort((left, right) => left - right);
-  return sorted[Math.floor((sorted.length - 1) / 2)]!;
-};
-const brRecords = [];
-for (const area of br.areas) {
-  const states = area.states.map((code) => brStates[code]!);
-  const own = area.placeByName === false ? null : await placeOf(area.names, "br", states, null);
-  let point: { latitude: number; longitude: number } | null = own;
-  let pointSource: "area" | "place" | null = own === null ? null : "place";
-  if (point === null) {
-    const found = [];
-    for (const municipality of area.municipalities) {
-      const place = await placeOf([municipality], "br", states, null);
-      if (place !== null) found.push(place);
-    }
-    if (found.length > 0) {
-      point = {
-        latitude: middle(found.map((place) => place.latitude)),
-        longitude: middle(found.map((place) => place.longitude)),
-      };
-      pointSource = "area";
-    }
-  }
-  brRecords.push({
-    amendedOn: area.amendedOn ?? null,
-    key: area.key,
-    latitude: point?.latitude ?? null,
-    longitude: point?.longitude ?? null,
-    names: area.names,
-    number: area.number,
-    pointSource,
-    qid: brItems.get(area.key) ?? null,
-    registeredOn: area.registeredOn,
-    type: area.type,
-    url: area.type === "DO" ? br.source.urlDenominations : br.source.url,
-  });
-}
-writeFileSync(resolve(cache, "br.json"), JSON.stringify(brRecords, null, 1));
-console.info(
-  `  INPI: ${brRecords.length} Brazilian indications, ${brItems.size} with an article on their wine, ` +
-    `${brRecords.filter((record) => record.pointSource === "place").length} placed at their place, ` +
-    `${brRecords.filter((record) => record.pointSource === "area").length} amid their municipalities.`,
 );

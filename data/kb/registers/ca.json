@@ -5,7 +5,7 @@
     "publisher": "Government of Ontario (e-Laws), under the Vintners Quality Alliance Act, 1999",
     "url": "https://www.ontario.ca/laws/regulation/000406",
     "issued": "2026-07-06",
-    "note": "Transcribed by hand from Table 1 of O. Reg. 406/00 as consolidated from 6 July 2026 (e-Laws currency date 13 October 2026; last amendment O. Reg. 226/26): the 17 viticultural areas, each name as the table writes it and its item number. The table describes Niagara Escarpment, Niagara-on-the-Lake and West Niagara as all the lands within the sub-viticultural areas it names, and South Islands as the Township of Pelee, which Lake Erie North Shore includes: those are the nestings kept. It does not say in so many words that the sub-areas lie within the Niagara Peninsula, so none is nested there. Only the regulation's facts are taken (names, items and the areas each comprises); the boundaries it describes are not drawn. Points are approximate: OpenStreetMap's for the place of a name where it is one (Prince Edward County, Niagara-on-the-Lake), the middle of the counties Lake Erie North Shore comprises, the Niagara region for the Niagara Peninsula, and otherwise the middle of the areas a name comprises or the area it lies in. Ontario only: British Columbia's geographical indications are another register."
+    "note": "Transcribed by hand from Table 1 of O. Reg. 406/00 as consolidated from 6 July 2026 (e-Laws currency date 13 October 2026; last amendment O. Reg. 226/26): the 17 viticultural areas, each name as the table writes it and its item number. The table describes Niagara Escarpment, Niagara-on-the-Lake and West Niagara as all the lands within the sub-viticultural areas it names, and South Islands as the Township of Pelee, which Lake Erie North Shore includes: those are the nestings kept. It does not say in so many words that the sub-areas lie within the Niagara Peninsula, so none is nested there. Only the regulation's facts are taken (names, items and the areas each comprises); the boundaries it describes are not drawn. Points are approximate: OpenStreetMap's for the place of a name where it is one (Prince Edward County, Niagara-on-the-Lake), the middle of the counties Lake Erie North Shore comprises, the Niagara region for the Niagara Peninsula, and otherwise the middle of the areas a name comprises or the area it lies in. Ontario only: British Columbia's geographical indications are another register. Short Hills Bench takes its own article (Wikidata Q7501800), the only area of the table Wikipedia's category of Ontario's wine regions has one for besides Prince Edward County."
   },
   "areas": [
     {
@@ -140,7 +140,8 @@
       "type": "VQA",
       "ref": "Table 1, item 16",
       "states": ["Ontario"],
-      "within": ["niagara-escarpment", "west-niagara"]
+      "within": ["niagara-escarpment", "west-niagara"],
+      "item": "Q7501800"
     },
     {
       "key": "vinemount-ridge",

@@ -19,7 +19,6 @@ questions ("what does a Garnacha smell like?").
 | `appellations.json`                | `pnpm kb:fetch-appellations`, `pnpm kb:fetch-world-appellations`, `pnpm kb:build-appellations` | eAmbrosia (the EU register), 27 CFR part 9 (eCFR), the UC Davis AVA project, IPONZ's register of geographical indications, the Wine of Origin scheme's production areas (SAWIS), Wine Australia's register and open data, Chile's Decree 464 (Ley Chile), the INV's list and resolutions (Argentina), the UK register (GOV.UK), the IMPI's declarations in the Diario Oficial de la Federación (Mexico), the INPI's lists of recognised indications (Brazil), OpenStreetMap, Wikidata, Wikipedia |
 | `za-wine-of-origin.json`           | transcribed by hand                                                                            | The Wine of Origin scheme's list of production areas (SAWIS, February 2026)                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `mx-indicaciones-geograficas.json` | transcribed by hand                                                                            | The IMPI's declarations of protection for wine in the Diario Oficial de la Federación (Mexico, March 2025)                                                                                                                                                                                                                                                                                                                                                                                       |
-| `br-indicacoes-geograficas.json`   | transcribed by hand                                                                            | The INPI's lists of recognised indications of provenance and denominations of origin (Brazil, September 2026)                                                                                                                                                                                                                                                                                                                                                                                    |
 | `topics.json`                      | `pnpm kb:fetch-topics`, `pnpm kb:build-topics` (from `topics-include.json`)                    | Wikidata (names), Wikipedia (explanations)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `grape-images.json`                | `pnpm kb:fetch-grape-images`                                                                   | Wikimedia Commons (photographs, in `apps/web/public/library/grapes/`)                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
@@ -233,7 +232,7 @@ a name the declaration gives.
 
 **Brazil.** The indications of provenance (IP) and denominations of origin
 (DO) for wine the Instituto Nacional da Propriedade Industrial has
-recognised, transcribed by hand into `br-indicacoes-geograficas.json` from
+recognised, transcribed by hand into `registers/br.json` from
 its two lists (IPs up to 29 September 2026, DOs up to 23 June 2026): each
 geographical name as the list writes it, its kind and number, its product,
 its date and the municipalities its delimitation names. Vale dos Vinhedos
@@ -249,6 +248,8 @@ OpenStreetMap has its place, or amid those places, or else at the area it
 lies in — approximately. Each file says where it comes from and what it
 leaves out:
 
+- `br.json` — Brazil: the INPI's indications of provenance and
+  denominations of origin for wine (see Brazil above).
 - `ca.json` — Canada, Ontario: the 17 viticultural areas of Table 1 of
   O. Reg. 406/00 (VQA), nested where the table says one comprises others.
 - `mx-regions.json` — Mexico's wine regions that no register protects (the

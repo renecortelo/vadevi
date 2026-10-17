@@ -291930,11 +291930,50 @@
       }
     ],
     "pointSource": "place",
-    "prominence": 0,
+    "prominence": 3,
     "registerRef": "IG201008",
     "registeredOn": "2012-09-25",
-    "summaries": {},
-    "wikidataId": null
+    "summaries": {
+      "es": {
+        "text": "Vale dos Vinhedos (que significa valle de los viñedos) es una indicación geográfica brasileña para vinos finos y al mismo tiempo una región vinícola establecida por orden ministerial. Está localizada en la Sierra Gaúcha, entre los municipios de Bento Gonçalves, Garibaldi y Monte Belo do Sul, en el estado de Rio Grande do Sul.",
+        "url": "https://es.wikipedia.org/wiki/Vale_dos_Vinhedos"
+      },
+      "pt": {
+        "text": "O Vale dos Vinhedos é uma região que ocupa uma área de 82 quilômetros quadrados na Serra Gaúcha, no estado do Rio Grande do Sul, no Brasil. Situa-se a 120 quilômetros de Porto Alegre, a capital do estado.",
+        "url": "https://pt.wikipedia.org/wiki/Vale_dos_Vinhedos"
+      },
+      "en": {
+        "text": "Vale dos Vinhedos (meaning valley of the vineyards) is a Brazilian geographical indication for fine wines and at the same time a wine region established by ministerial order. It lies in the Serra Gaúcha, between the municipalities of Bento Gonçalves, Garibaldi and Monte Belo do Sul, in the state of Rio Grande do Sul.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vale_dos_Vinhedos"
+      },
+      "ca": {
+        "text": "Vale dos Vinhedos (que vol dir vall de les vinyes) és una indicació geogràfica brasilera per a vins fins i alhora una regió vinícola establerta per ordre ministerial. Es troba a la Serra Gaúcha, entre els municipis de Bento Gonçalves, Garibaldi i Monte Belo do Sul, a l'estat de Rio Grande do Sul.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vale_dos_Vinhedos"
+      },
+      "fr": {
+        "text": "Vale dos Vinhedos (qui signifie vallée des vignobles) est une indication géographique brésilienne pour les vins fins et en même temps une région viticole établie par arrêté ministériel. Elle se trouve dans la Serra Gaúcha, entre les municipalités de Bento Gonçalves, Garibaldi et Monte Belo do Sul, dans l'État du Rio Grande do Sul.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vale_dos_Vinhedos"
+      },
+      "de": {
+        "text": "Vale dos Vinhedos (was „Tal der Weinberge“ bedeutet) ist eine brasilianische geografische Angabe für Qualitätsweine und zugleich ein durch ministerielle Verordnung festgelegtes Weinbaugebiet. Es liegt in der Serra Gaúcha, zwischen den Gemeinden Bento Gonçalves, Garibaldi und Monte Belo do Sul, im Bundesstaat Rio Grande do Sul.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vale_dos_Vinhedos"
+      },
+      "it": {
+        "text": "Vale dos Vinhedos (che significa valle dei vigneti) è un'indicazione geografica brasiliana per vini fini e allo stesso tempo una regione vinicola istituita per decreto ministeriale. Si trova nella Serra Gaúcha, tra i comuni di Bento Gonçalves, Garibaldi e Monte Belo do Sul, nello stato del Rio Grande do Sul.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vale_dos_Vinhedos"
+      },
+      "nl": {
+        "text": "Vale dos Vinhedos (wat dal van de wijngaarden betekent) is een Braziliaanse geografische aanduiding voor kwaliteitswijnen en tegelijk een wijnregio die bij ministeriële regeling is ingesteld. Het ligt in de Serra Gaúcha, tussen de gemeenten Bento Gonçalves, Garibaldi en Monte Belo do Sul, in de staat Rio Grande do Sul.",
+        "translated": true,
+        "url": "https://es.wikipedia.org/wiki/Vale_dos_Vinhedos"
+      }
+    },
+    "wikidataId": "Q1241994"
   },
   {
     "countryCode": "BR",
@@ -292432,11 +292471,51 @@
       }
     ],
     "pointSource": null,
-    "prominence": 0,
+    "prominence": 1,
     "registerRef": "Table 1, item 16",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "The Short Hills Bench is a sub-appellation of the Niagara Peninsula viticultural area in Ontario, Canada. It is located within the Niagara Escarpment regional appellation, south of St. Catharines.",
+        "url": "https://en.wikipedia.org/wiki/Short_Hills_Bench"
+      },
+      "es": {
+        "text": "El Short Hills Bench es una subdenominación del área vitícola de la península del Niágara, en Ontario (Canadá). Se encuentra dentro de la denominación regional Niagara Escarpment, al sur de St. Catharines.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Short_Hills_Bench"
+      },
+      "ca": {
+        "text": "El Short Hills Bench és una subdenominació de l'àrea vitícola de la península del Niàgara, a Ontàrio (Canadà). Es troba dins la denominació regional Niagara Escarpment, al sud de St. Catharines.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Short_Hills_Bench"
+      },
+      "fr": {
+        "text": "Le Short Hills Bench est une sous-appellation de la région viticole de la péninsule du Niagara, en Ontario (Canada). Il se trouve dans l'appellation régionale Niagara Escarpment, au sud de St. Catharines.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Short_Hills_Bench"
+      },
+      "de": {
+        "text": "Die Short Hills Bench ist eine Unterappellation des Weinbaugebiets Niagara Peninsula in Ontario, Kanada. Sie liegt innerhalb der regionalen Appellation Niagara Escarpment, südlich von St. Catharines.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Short_Hills_Bench"
+      },
+      "it": {
+        "text": "Lo Short Hills Bench è una sottodenominazione dell'area viticola della penisola del Niagara, in Ontario (Canada). Si trova all'interno della denominazione regionale Niagara Escarpment, a sud di St. Catharines.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Short_Hills_Bench"
+      },
+      "nl": {
+        "text": "De Short Hills Bench is een subappellatie van het wijnbouwgebied Niagara Peninsula in Ontario, Canada. Ze ligt binnen de regionale appellatie Niagara Escarpment, ten zuiden van St. Catharines.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Short_Hills_Bench"
+      },
+      "pt": {
+        "text": "O Short Hills Bench é uma subdenominação da área vitícola da península do Niágara, no Ontário (Canadá). Situa-se dentro da denominação regional Niagara Escarpment, a sul de St. Catharines.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Short_Hills_Bench"
+      }
+    },
+    "wikidataId": "Q7501800",
     "within": [
       "ca-niagara-escarpment",
       "ca-west-niagara"
@@ -292989,11 +293068,51 @@
       }
     ],
     "pointSource": "place",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "cantonal",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null
+    "summaries": {
+      "fr": {
+        "text": "Le vignoble vaudois produit un quart des vins suisses et a une vaste diversité de cépages.",
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_canton_de_Vaud"
+      },
+      "en": {
+        "text": "Vaud's vineyards produce a quarter of Swiss wines and have a wide diversity of grape varieties.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_canton_de_Vaud"
+      },
+      "es": {
+        "text": "El viñedo valdense produce una cuarta parte de los vinos suizos y tiene una gran diversidad de variedades de uva.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_canton_de_Vaud"
+      },
+      "ca": {
+        "text": "La vinya del Vaud produeix una quarta part dels vins suïssos i té una gran diversitat de varietats de raïm.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_canton_de_Vaud"
+      },
+      "de": {
+        "text": "Der Waadtländer Weinbau erzeugt ein Viertel der Schweizer Weine und weist eine große Vielfalt an Rebsorten auf.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_canton_de_Vaud"
+      },
+      "it": {
+        "text": "Il vigneto vodese produce un quarto dei vini svizzeri e ha una vasta varietà di vitigni.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_canton_de_Vaud"
+      },
+      "nl": {
+        "text": "De wijngaarden van Vaud produceren een kwart van de Zwitserse wijnen en kennen een grote verscheidenheid aan druivenrassen.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_canton_de_Vaud"
+      },
+      "pt": {
+        "text": "A vinha do cantão de Vaud produz um quarto dos vinhos suíços e tem uma grande diversidade de castas.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_canton_de_Vaud"
+      }
+    },
+    "wikidataId": "Q3561252"
   },
   {
     "countryCode": "CH",
@@ -293029,11 +293148,51 @@
       }
     ],
     "pointSource": "place",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "cantonal",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null
+    "summaries": {
+      "fr": {
+        "text": "Le canton du Valais, avec ses 5 259 hectares de vignes, possède le plus grand vignoble de Suisse et représente environ 32% de la production nationale. L'essentiel de ses vignes est planté sur la rive droite de la vallée du Rhône dans une zone de 120 kilomètres de longueur qui s'étend de Martigny à Loèche.",
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais"
+      },
+      "en": {
+        "text": "The canton of Valais, with its 5,259 hectares of vines, has the largest vineyard area in Switzerland and accounts for about 32% of the national production. Most of its vines are planted on the right bank of the Rhône valley, in a zone 120 kilometres long that stretches from Martigny to Leuk.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais"
+      },
+      "es": {
+        "text": "El cantón del Valais, con sus 5.259 hectáreas de viñas, tiene el mayor viñedo de Suiza y representa alrededor del 32 % de la producción nacional. La mayor parte de sus viñas está plantada en la orilla derecha del valle del Ródano, en una zona de 120 kilómetros de longitud que se extiende de Martigny a Leuk.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais"
+      },
+      "ca": {
+        "text": "El cantó del Valais, amb les seves 5.259 hectàrees de vinya, té la vinya més gran de Suïssa i representa al voltant del 32 % de la producció nacional. La major part de les seves vinyes és plantada a la riba dreta de la vall del Roine, en una zona de 120 quilòmetres de llargada que s'estén de Martigny a Leuk.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais"
+      },
+      "de": {
+        "text": "Der Kanton Wallis besitzt mit seinen 5259 Hektar Reben das größte Weinbaugebiet der Schweiz und steht für rund 32 % der Landesproduktion. Der Großteil seiner Reben ist am rechten Ufer des Rhonetals gepflanzt, in einer 120 Kilometer langen Zone, die sich von Martigny bis Leuk erstreckt.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais"
+      },
+      "it": {
+        "text": "Il canton Vallese, con i suoi 5.259 ettari di vigne, possiede il più grande vigneto della Svizzera e rappresenta circa il 32% della produzione nazionale. La maggior parte delle sue vigne è piantata sulla riva destra della valle del Rodano, in una zona lunga 120 chilometri che si estende da Martigny a Leuk.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais"
+      },
+      "nl": {
+        "text": "Het kanton Wallis heeft met zijn 5259 hectare wijngaarden het grootste wijnbouwgebied van Zwitserland en is goed voor ongeveer 32% van de nationale productie. De meeste wijnstokken staan op de rechteroever van het Rhônedal, in een zone van 120 kilometer lang die zich uitstrekt van Martigny tot Leuk.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais"
+      },
+      "pt": {
+        "text": "O cantão do Valais, com os seus 5259 hectares de vinha, possui a maior área vitícola da Suíça e representa cerca de 32% da produção nacional. A maior parte das suas vinhas está plantada na margem direita do vale do Ródano, numa zona com 120 quilómetros de comprimento que se estende de Martigny a Leuk.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais"
+      }
+    },
+    "wikidataId": "Q3558206"
   },
   {
     "countryCode": "CH",
@@ -293325,11 +293484,51 @@
       }
     ],
     "pointSource": null,
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "regional",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null
+    "summaries": {
+      "de": {
+        "text": "Weinbau am Zürichsee beschreibt den Weinbau in der Region rund um den Zürichsee in den Kantonen Zürich, St. Gallen und Schwyz.",
+        "url": "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+      },
+      "en": {
+        "text": "Viticulture on Lake Zurich is the growing of vines in the region around Lake Zurich, in the cantons of Zurich, St. Gallen and Schwyz.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+      },
+      "es": {
+        "text": "La viticultura en el lago de Zúrich es el cultivo de la vid en la región que rodea el lago de Zúrich, en los cantones de Zúrich, San Galo y Schwyz.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+      },
+      "ca": {
+        "text": "La viticultura al llac de Zúric és el conreu de la vinya a la regió que envolta el llac de Zúric, als cantons de Zúric, Sankt Gallen i Schwyz.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+      },
+      "fr": {
+        "text": "La viticulture au bord du lac de Zurich est la culture de la vigne dans la région qui entoure le lac de Zurich, dans les cantons de Zurich, Saint-Gall et Schwytz.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+      },
+      "it": {
+        "text": "La viticoltura sul lago di Zurigo è la coltivazione della vite nella regione intorno al lago di Zurigo, nei cantoni di Zurigo, San Gallo e Svitto.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+      },
+      "nl": {
+        "text": "Wijnbouw aan het meer van Zürich is de wijnbouw in de streek rond het meer van Zürich, in de kantons Zürich, Sankt Gallen en Schwyz.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+      },
+      "pt": {
+        "text": "A viticultura no lago de Zurique é o cultivo da vinha na região em redor do lago de Zurique, nos cantões de Zurique, São Galo e Schwyz.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+      }
+    },
+    "wikidataId": "Q15853851"
   },
   {
     "countryCode": "CH",
@@ -293349,11 +293548,11 @@
       }
     ],
     "pointSource": "place",
-    "prominence": 0,
+    "prominence": 1,
     "registerLevel": "regional",
     "registeredOn": null,
     "summaries": {},
-    "wikidataId": null,
+    "wikidataId": "Q2947279",
     "within": [
       "ch-vaud"
     ]
@@ -293364,9 +293563,9 @@
     "giType": "AOC",
     "grapes": [],
     "id": "ch-lavaux",
-    "latitude": 46.6356963,
+    "latitude": 46.491944444444,
     "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
-    "longitude": 6.5320717,
+    "longitude": 6.7461111111111,
     "name": "Lavaux",
     "names": [
       {
@@ -293375,12 +293574,48 @@
         "source": "register"
       }
     ],
-    "pointSource": "area",
-    "prominence": 0,
+    "pointSource": "item",
+    "prominence": 8,
     "registerLevel": "regional",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Lavaux (French pronunciation: [lavo]) is a region in the canton of Vaud in Switzerland, in the district of Lavaux-Oron. Lavaux consists of 830 hectares (2,100 acres) of terraced vineyards that stretch for about 30 kilometres (19 mi) along the south-facing northern shores of Lake Geneva. The region is designated a UNESCO World Heritage Site with the formal name Lavaux, Vineyard Terraces.",
+        "url": "https://en.wikipedia.org/wiki/Lavaux"
+      },
+      "es": {
+        "text": "Los viñedos en terrazas de Lavaux  están situados en el cantón suizo de Vaud en el distrito de Lavaux. Fueron construidos por los cistercienses (comunidad monástica) hace 800 años con una superficie total de 830 hectáreas distribuidas en terrazas que se extienden a lo largo de 30 km por la ribera norte del Lago Lemán.",
+        "url": "https://es.wikipedia.org/wiki/Lavaux"
+      },
+      "ca": {
+        "text": "Lavaux és una regió vinícola al cantó suís de Vaud al districte de Lavaux. Les terrasses que ocupen les vinyes van ser construïdes pels monjos fa 800 anys amb una superfície total de 830 hectàrees. La principal varietat de raïm que creix en aquests vinyes és la Chasselas. Les vinyes estan protegides per les lleis locals i des del juliol del 2007 pertanyen al Patrimoni de la Humanitat de la UNESCO.",
+        "url": "https://ca.wikipedia.org/wiki/Lavaux"
+      },
+      "fr": {
+        "text": "Lavaux est une région viticole du canton de Vaud (Suisse), connue pour ses vignobles en terrasses au bord du Léman. Le 28 juin 2007, Lavaux entre au classement du patrimoine mondial de l'humanité de l'UNESCO.",
+        "url": "https://fr.wikipedia.org/wiki/Lavaux"
+      },
+      "de": {
+        "text": "Das Lavaux [lavo] (früher deutsch Ryf, wozu Ryfwyn, Reifwein ‚Wein vom Lavaux‘) ist ein Weinbaugebiet im Kanton Waadt in der Schweiz am nordöstlichen Ufer des Genfersees. Die im Lavaux verbreitetste Rebsorte ist der Gutedel, hier «Chasselas» genannt.",
+        "url": "https://de.wikipedia.org/wiki/Lavaux"
+      },
+      "it": {
+        "text": "Lavaux è una regione vinicola del canton Vaud (Svizzera), nota per i suoi vigneti terrazzati sulle rive del Lemano. Il 28 giugno 2007 Lavaux è entrato nel patrimonio dell'umanità dell'UNESCO.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Lavaux"
+      },
+      "nl": {
+        "text": "Lavaux is een wijnstreek in het kanton Vaud (Zwitserland), bekend om zijn terraswijngaarden aan het Meer van Genève. Op 28 juni 2007 werd Lavaux opgenomen op de Werelderfgoedlijst van UNESCO.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Lavaux"
+      },
+      "pt": {
+        "text": "Lavaux é uma região vitícola do cantão de Vaud (Suíça), conhecida pelas suas vinhas em socalcos nas margens do Lemano. A 28 de junho de 2007, Lavaux entrou na lista do património mundial da UNESCO.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/Lavaux"
+      }
+    },
+    "wikidataId": "Q688060",
     "within": [
       "ch-vaud"
     ]
@@ -293484,11 +293719,50 @@
       }
     ],
     "pointSource": "area",
-    "prominence": 0,
+    "prominence": 2,
     "registerLevel": "regional",
     "registeredOn": null,
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "fr": {
+        "text": "Le Dézaley Grand Cru est un vin de Lavaux, région viticole du canton de Vaud en Suisse, au bord du lac Léman.",
+        "url": "https://fr.wikipedia.org/wiki/D%C3%A9zaley_grand_cru"
+      },
+      "de": {
+        "text": "Dézaley ist (neben Calamin) eine von zwei Appellationen mit dem Zusatz „Grand Cru“ im Schweizer Weinbaugebiet Lavaux.",
+        "url": "https://de.wikipedia.org/wiki/D%C3%A9zaley"
+      },
+      "en": {
+        "text": "Dézaley Grand Cru is a wine of Lavaux, a wine region of the canton of Vaud in Switzerland, on the shore of Lake Geneva.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/D%C3%A9zaley_grand_cru"
+      },
+      "es": {
+        "text": "El Dézaley Grand Cru es un vino de Lavaux, región vinícola del cantón de Vaud, en Suiza, a orillas del lago Lemán.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/D%C3%A9zaley_grand_cru"
+      },
+      "ca": {
+        "text": "El Dézaley Grand Cru és un vi de Lavaux, regió vinícola del cantó de Vaud, a Suïssa, a la vora del llac Leman.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/D%C3%A9zaley_grand_cru"
+      },
+      "it": {
+        "text": "Il Dézaley Grand Cru è un vino di Lavaux, regione vinicola del canton Vaud, in Svizzera, sulle rive del lago Lemano.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/D%C3%A9zaley_grand_cru"
+      },
+      "nl": {
+        "text": "Dézaley Grand Cru is een wijn uit Lavaux, een wijnstreek in het kanton Vaud in Zwitserland, aan het Meer van Genève.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/D%C3%A9zaley_grand_cru"
+      },
+      "pt": {
+        "text": "O Dézaley Grand Cru é um vinho de Lavaux, região vitícola do cantão de Vaud, na Suíça, nas margens do lago Lemano.",
+        "translated": true,
+        "url": "https://fr.wikipedia.org/wiki/D%C3%A9zaley_grand_cru"
+      }
+    },
+    "wikidataId": "Q1270756",
     "within": [
       "ch-vaud"
     ]

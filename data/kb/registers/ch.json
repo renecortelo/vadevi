@@ -5,7 +5,7 @@
     "publisher": "Office fédéral de l'agriculture (OFAG), Switzerland",
     "url": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
     "issued": "2026-01-01",
-    "note": "Transcribed by hand from the federal directory of the cantonal AOCs (art. 25 of the Wine Ordinance, RS 916.140): each AOC as it writes it, the canton it is listed under, and its column — cantonal, regional or local. Its 63 AOCs: Vully, listed under Fribourg and Vaud, and Zürichsee, under Schwyz and Zürich, are intercantonal and counted once, as the directory says; neither is nested in a canton's AOC. A regional or local AOC lies within its canton's cantonal one, as the directory groups them; which regional AOC a local one lies in, it does not say. The directory lists Basel-Stadt under the abbreviation BL, read as BS. Only its facts are taken: names, cantons and kinds. A cantonal AOC is placed at its canton; a regional or local one at the place its name is, where OpenStreetMap has it, and otherwise at its canton's AOC, approximately. Lavaux and La Côte stand at Vaud's AOC: OpenStreetMap's places of those names in Vaud are elsewhere. Jura takes no article: \"Jura wine\" is France's."
+    "note": "Transcribed by hand from the federal directory of the cantonal AOCs (art. 25 of the Wine Ordinance, RS 916.140): each AOC as it writes it, the canton it is listed under, and its column — cantonal, regional or local. Its 63 AOCs: Vully, listed under Fribourg and Vaud, and Zürichsee, under Schwyz and Zürich, are intercantonal and counted once, as the directory says; neither is nested in a canton's AOC. A regional or local AOC lies within its canton's cantonal one, as the directory groups them; which regional AOC a local one lies in, it does not say. The directory lists Basel-Stadt under the abbreviation BL, read as BS. Only its facts are taken: names, cantons and kinds. A cantonal AOC is placed at its canton; a regional or local one at the place its name is, where OpenStreetMap has it, and otherwise at its canton's AOC, approximately. Lavaux and La Côte stand at Vaud's AOC: OpenStreetMap's places of those names in Vaud are elsewhere. Jura takes no article: \"Jura wine\" is France's. Six AOCs take an article of their own, found on the French and German Wikipedias: Lavaux, the Chablais (\"Chablais vaudois\", one of Vaud's six wine regions), Dézaley (\"Dézaley grand cru\"), Vaud and Valais (their vineyards' articles) and Zürichsee (\"Weinbau am Zürichsee\")."
   },
   "areas": [
     {
@@ -175,7 +175,8 @@
       "type": "AOC",
       "level": "cantonal",
       "places": ["Vaud"],
-      "placeByName": false
+      "placeByName": false,
+      "item": "Q3561252"
     },
     {
       "key": "valais",
@@ -183,7 +184,8 @@
       "type": "AOC",
       "level": "cantonal",
       "places": ["Valais/Wallis", "Valais"],
-      "placeByName": false
+      "placeByName": false,
+      "item": "Q3558206"
     },
     {
       "key": "zug",
@@ -270,7 +272,8 @@
       "key": "zurichsee",
       "names": ["Zürichsee"],
       "type": "AOC",
-      "level": "regional"
+      "level": "regional",
+      "item": "Q15853851"
     },
     {
       "key": "chablais",
@@ -278,7 +281,8 @@
       "type": "AOC",
       "level": "regional",
       "within": ["vaud"],
-      "states": ["Vaud"]
+      "states": ["Vaud"],
+      "item": "Q2947279"
     },
     {
       "key": "lavaux",
@@ -287,7 +291,8 @@
       "level": "regional",
       "within": ["vaud"],
       "states": ["Vaud"],
-      "placeByName": false
+      "placeByName": false,
+      "item": "Q688060"
     },
     {
       "key": "la-cote",
@@ -321,7 +326,8 @@
       "type": "AOC",
       "level": "regional",
       "within": ["vaud"],
-      "states": ["Vaud"]
+      "states": ["Vaud"],
+      "item": "Q1270756"
     },
     {
       "key": "dezaley-marsens",
