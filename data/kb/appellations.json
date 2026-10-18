@@ -911,7 +911,7 @@
           "name": "Ondenc"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -1510,7 +1510,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -1749,7 +1749,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -5008,7 +5008,7 @@
           "name": "Aglianico"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -5212,7 +5212,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -5665,7 +5665,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -6117,7 +6117,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -6684,7 +6684,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -6980,7 +6980,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -12666,7 +12666,7 @@
           "name": "Abrusco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -13160,7 +13160,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -13523,7 +13523,7 @@
           "name": "Refosco Nostrano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -13555,7 +13555,7 @@
           "name": "Pinot Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "pignolo",
           "name": "Pignolo"
         },
         {
@@ -13798,7 +13798,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -14203,7 +14203,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -14357,7 +14357,7 @@
           "name": "Malvasia del Lazio"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -15705,7 +15705,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -16365,7 +16365,7 @@
           "name": "Ondenc"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -17243,7 +17243,7 @@
           "name": "Cabernet Souvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -17729,7 +17729,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -18170,7 +18170,7 @@
           "name": "Muscat de Hambourg"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -18466,7 +18466,7 @@
           "name": "Mauzac Rose"
         },
         {
-          "grapeId": null,
+          "grapeId": "cardinal",
           "name": "Cardinal"
         },
         {
@@ -19047,7 +19047,7 @@
           "name": "Muller Thurgau"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -19147,7 +19147,7 @@
           "name": "Petit Verdot"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit manseng"
         },
         {
@@ -19932,7 +19932,7 @@
           "name": "Weißer Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -20223,7 +20223,7 @@
           "name": "Weißer Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -20650,7 +20650,7 @@
           "name": "Tocai Friulano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -24852,7 +24852,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -24912,7 +24912,7 @@
           "name": "Teroldego"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -25083,7 +25083,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -25151,7 +25151,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -25355,7 +25355,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -28057,7 +28057,7 @@
           "name": "Aglianico"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -28261,7 +28261,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -28902,7 +28902,7 @@
           "name": "Ansonica"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -31741,7 +31741,7 @@
           "name": "Solaris"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -31749,7 +31749,7 @@
           "name": "Sibera"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -33273,7 +33273,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -33345,7 +33345,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -33565,7 +33565,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -35078,7 +35078,7 @@
           "name": "Cot"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -35321,7 +35321,7 @@
           "name": "Petit Courbu"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -37673,7 +37673,7 @@
           "name": "Muller Thurgau"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -39474,7 +39474,7 @@
           "name": "Aglianico"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -39678,7 +39678,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -41453,7 +41453,7 @@
           "name": "Terrano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -46963,14 +46963,14 @@
     "giType": "PDO",
     "grapes": [
       {
-        "grapeId": "bourboulenc",
-        "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc"
-      },
-      {
         "grapeId": "clairette-blanche",
         "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
+      },
+      {
+        "grapeId": "bourboulenc",
+        "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc"
       }
     ],
     "id": "fr-chateauneuf-du-pape",
@@ -48340,7 +48340,7 @@
           "name": "Abbuoto"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -48420,7 +48420,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -48548,7 +48548,7 @@
           "name": "Petit Verdot"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         }
       ],
@@ -49929,7 +49929,7 @@
           "name": "Cabernet Souvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -50241,7 +50241,7 @@
           "name": "Pinot Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         },
         {
@@ -50375,7 +50375,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -50570,7 +50570,7 @@
           "name": "Abbuoto"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -50650,7 +50650,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -50778,7 +50778,7 @@
           "name": "Petit Verdot"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit manseng"
         }
       ],
@@ -50901,7 +50901,7 @@
           "name": "Canaiolo nero"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -50948,7 +50948,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000002968",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "moscato-giallo",
+        "quote": "most of it in the Lagarina Valley which includes the province of Trento ... It is also found in the nearby province of Bolzano ... In the Veneto and Friuli-Venezia Giulia ... In the area of Colli Euganei in the Veneto ... Moscato Giallo can be found in the Valais region of Switzerland ... The grape is also planted in Croatia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Moscato_Giallo"
+      }
+    ],
     "id": "it-colli-euganei",
     "latitude": 45.31666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002968",
@@ -51088,7 +51094,7 @@
           "name": "Carmenere"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -51243,7 +51249,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         }
       ],
@@ -51518,7 +51524,7 @@
           "name": "Cabernet Franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -51681,7 +51687,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -51944,7 +51950,7 @@
           "name": "Cabernet Souvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -52930,7 +52936,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -53101,7 +53107,7 @@
           "name": "Trebbiano Romagnolo"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -53513,7 +53519,7 @@
           "name": "Cabernet Souvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -54141,7 +54147,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -54295,7 +54301,7 @@
           "name": "Pinot Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -55347,7 +55353,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -55775,7 +55781,7 @@
           "name": "Canaiolo Nero"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -57312,7 +57318,7 @@
           "name": "Duras"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -57588,7 +57594,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -58532,7 +58538,7 @@
           "name": "Carmenere"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -58600,7 +58606,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -60087,7 +60093,7 @@
           "name": "Carmenere"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -60103,7 +60109,7 @@
           "name": "Tocai Friulano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -60443,7 +60449,7 @@
           "name": "Cabernet Souvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -60854,7 +60860,7 @@
           "name": "Abrusco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -62736,7 +62742,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -63197,7 +63203,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -64664,7 +64670,7 @@
           "name": "Poulsard"
         },
         {
-          "grapeId": null,
+          "grapeId": "cardinal",
           "name": "Cardinal"
         },
         {
@@ -65639,7 +65645,7 @@
           "name": "Muscat à Petits Grains Roses"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -69095,7 +69101,7 @@
           "name": "Muscat à Petits Grains Roses"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -69894,7 +69900,7 @@
           "name": "Muscat à Petits Grains Roses"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -70696,7 +70702,7 @@
           "name": "Muscat à Petits Grains Roses"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -71774,7 +71780,7 @@
           "name": "Ondenc"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -72446,7 +72452,7 @@
           "name": "cabernet Jura"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "cabernet dorsa"
         },
         {
@@ -72514,7 +72520,7 @@
           "name": "Madeleine Angevine"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "sieger"
         },
         {
@@ -72526,7 +72532,7 @@
           "name": "Traminer"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "rondo"
         },
         {
@@ -72715,7 +72721,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -73196,7 +73202,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -75142,7 +75148,7 @@
           "name": "Duras"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -75550,7 +75556,7 @@
           "name": "Ninčuša"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -75947,7 +75953,7 @@
           "name": "Riesling Italico"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -80583,7 +80589,7 @@
           "name": "Solaris"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -84720,7 +84726,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -88540,7 +88546,7 @@
           "name": "Cot"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -89652,7 +89658,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -89720,7 +89726,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -89924,7 +89930,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -90561,6 +90567,16 @@
     "giType": "PDO",
     "grapes": [
       {
+        "grapeId": "pignolo",
+        "quote": "grown predominantly in the Friuli Venezia Giulia region of northeast Italy ... a prominent variety in the Colli Orientali del Friuli",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pignolo_(grape)"
+      },
+      {
+        "grapeId": "refosco-dal-peduncolo-rosso",
+        "quote": "grown predominantly in the Friuli Venezia Giulia region ... Colli Orientali del Friuli, Friuli Aquileia, Friuli Grave and Friuli Latisana. It is also found in the Veneto portion of the Lison Pramaggiore and in the Slovenian wine region of Koper",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
+      },
+      {
         "grapeId": "cabernet-franc",
         "quote": "In France, Cabernet Franc is found predominantly in the Loire Valley and ... Bordeaux... In Italy ... Friuli ... Veneto... Hungary ... Villány and Szekszárd... Canada ... Ontario's Niagara Peninsula... United States ... Napa and Sonoma counties... Washington State ... Columbia Valley... Argentina ... Mendoza... Plantings are found throughout Europe, in the New World, China and Kazakhstan.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Cabernet_Franc"
@@ -90844,7 +90860,7 @@
           "name": "Tocai Friulano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -91015,7 +91031,7 @@
           "name": "Refosco Nostrano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -91035,6 +91051,16 @@
     "eambrosiaId": "EUGI00000006461",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "pignolo",
+        "quote": "grown predominantly in the Friuli Venezia Giulia region of northeast Italy ... a prominent variety in the Colli Orientali del Friuli",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pignolo_(grape)"
+      },
+      {
+        "grapeId": "refosco-dal-peduncolo-rosso",
+        "quote": "grown predominantly in the Friuli Venezia Giulia region ... Colli Orientali del Friuli, Friuli Aquileia, Friuli Grave and Friuli Latisana. It is also found in the Veneto portion of the Lison Pramaggiore and in the Slovenian wine region of Koper",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
+      },
       {
         "grapeId": "ribolla-gialla",
         "quote": "grown most famously in the Friuli Venezia Giulia region of northeast Italy ... the grape thrives in the region around Corno di Rosazzo and Gorizia. In Slovenia, the grape is grown prominently in the Brda and Vipava Valley regions ... the white DOC wines of Colli Orientali del Friuli and Collio Goriziano.",
@@ -91206,7 +91232,7 @@
           "name": "Refosco Nostrano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -91222,7 +91248,7 @@
           "name": "Pinot Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "pignolo",
           "name": "Pignolo"
         }
       ],
@@ -91234,6 +91260,11 @@
     "eambrosiaId": "EUGI00000006426",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "refosco-dal-peduncolo-rosso",
+        "quote": "grown predominantly in the Friuli Venezia Giulia region ... Colli Orientali del Friuli, Friuli Aquileia, Friuli Grave and Friuli Latisana. It is also found in the Veneto portion of the Lison Pramaggiore and in the Slovenian wine region of Koper",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
+      },
       {
         "grapeId": "sauvignon-vert",
         "quote": "It is widely planted in Chile ... especially in the Vipava Valley and Goriška Brda ... The grape's most noted homes are in the Friuli-Venezia Giulia and Goriška Brda ... Colli Orientali del Friuli, Collio Goriziano, Friuli Grave and Friuli Isonzo ... Argentina, with its close ties to Italian viticulture, also has a small amount of Friulano vines planted.",
@@ -91383,7 +91414,7 @@
           "name": "Riesling renano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -91547,7 +91578,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -91583,7 +91614,7 @@
           "name": "Riesling Italico"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -91599,7 +91630,7 @@
           "name": "Pinot Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "pignolo",
           "name": "Pignolo"
         }
       ],
@@ -91759,7 +91790,7 @@
           "name": "Riesling renano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -92185,7 +92216,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -92221,7 +92252,7 @@
           "name": "Greco Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -92484,7 +92515,7 @@
           "name": "Solaris"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -92492,7 +92523,7 @@
           "name": "Sibera"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -93485,7 +93516,7 @@
           "name": "Muscat à Petits Grains Roses"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -93741,7 +93772,7 @@
           "name": "Macabeu"
         },
         {
-          "grapeId": null,
+          "grapeId": "cardinal",
           "name": "Cardinal"
         },
         {
@@ -94778,7 +94809,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -98927,7 +98958,7 @@
           "name": "Pinot Blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -99246,7 +99277,7 @@
           "name": "Pinot Blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -100351,7 +100382,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -100851,7 +100882,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -101442,7 +101473,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -101518,7 +101549,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -101774,7 +101805,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -101867,7 +101898,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -102055,7 +102086,7 @@
           "name": "Nebiolo"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -102274,7 +102305,7 @@
           "name": "Pinot bijeli"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -102522,7 +102553,7 @@
           "name": "Nebiolo"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -103570,7 +103601,7 @@
           "name": "Petit Courbu"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -103991,7 +104022,13 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000006964",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ruby-cabernet",
+        "quote": "particularly in the San Joaquin Valley ... Small amounts are grown in the Hunter Valley and Murray-Darling area ... Vale do São Francisco winery in Pernambuco ... Vinícola Campos de Cima in Itaqui, Campanha Gaúcha, grows the grape ... Valle De Guadalupe, Baja California ... It is successfully grown in the Robertson district ... Several DOs on the Islas Canarias feature Ruby Cabernet",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
+      }
+    ],
     "id": "es-islas-canarias",
     "latitude": 28.37247222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006964",
@@ -104721,7 +104758,7 @@
           "name": "Nebiolo"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -105591,7 +105628,13 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000002008",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "petit-manseng",
+        "quote": "The grape is grown primarily in Gascony, Jurançon and around Madiran ... In Virginia, it is reported to be the second-most planted white wine in the state",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Petit_Manseng"
+      }
+    ],
     "id": "fr-jurancon",
     "latitude": 43.287222222222,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000002008",
@@ -105672,7 +105715,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -105972,7 +106015,7 @@
           "name": "Solaris"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -105980,7 +106023,7 @@
           "name": "Sibera"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -109054,7 +109097,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -110400,7 +110443,7 @@
           "name": "Muscat de Hambourg"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -110733,7 +110776,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -110801,7 +110844,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -111005,7 +111048,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -111188,7 +111231,7 @@
           "name": "Weißer Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -111483,7 +111526,7 @@
           "name": "Weißer Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -111786,7 +111829,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -111858,7 +111901,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -112114,7 +112157,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -112265,7 +112308,7 @@
           "name": "Weißer Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -112570,7 +112613,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -112606,7 +112649,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -112895,7 +112938,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -112927,7 +112970,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -113216,7 +113259,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -113252,7 +113295,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -113745,7 +113788,7 @@
           "name": "Sangiovese"
         },
         {
-          "grapeId": null,
+          "grapeId": "ruche",
           "name": "Ruchè"
         },
         {
@@ -113793,14 +113836,14 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Marselan"
       },
       {
-        "grapeId": "bourboulenc",
-        "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc"
-      },
-      {
         "grapeId": "clairette-blanche",
         "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
+      },
+      {
+        "grapeId": "bourboulenc",
+        "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bourboulenc"
       }
     ],
     "id": "fr-languedoc",
@@ -114360,6 +114403,11 @@
     "giType": "PGI",
     "grapes": [
       {
+        "grapeId": "grechetto",
+        "quote": "particularly in the Umbria region where it is used in the Denominazione di origine controllata (DOC) wine Orvieto ... DOCs of Torgiano and Colli Martani ... In Lazio, the grape is found in the Cervaro region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grechetto"
+      },
+      {
         "grapeId": "canaiolo",
         "quote": "grown through Central Italy but is most noted in Tuscany. Other regions with plantings of Canaiolo include Lazio, Marche and Sardegna.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Canaiolo"
@@ -114541,7 +114589,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -114577,7 +114625,7 @@
           "name": "Greco Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -117145,7 +117193,7 @@
           "name": "Tocai Friulano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -119208,7 +119256,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -119780,6 +119828,11 @@
     "eambrosiaId": "EUGI00000001701",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "petit-manseng",
+        "quote": "The grape is grown primarily in Gascony, Jurançon and around Madiran ... In Virginia, it is reported to be the second-most planted white wine in the state",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Petit_Manseng"
+      },
       {
         "grapeId": "tannat",
         "quote": "historically grown in South West France in the Madiran AOC, ... now one of the most prominent grapes in Uruguay ... also grown in Argentina, Australia, Brazil, Bolivia, Peru, South Africa, and in the Italian region of Apulia ... in the US states of Maryland, Virginia, and North Carolina ... plantings in California ... Washington State ... Arizona, Oregon and Texas",
@@ -122095,7 +122148,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -122326,7 +122379,7 @@
           "name": "Albana"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -122454,7 +122507,7 @@
           "name": "Riesling Italico"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -124148,7 +124201,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -125769,7 +125822,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -126253,7 +126306,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -127084,7 +127137,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -127128,7 +127181,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -127412,7 +127465,7 @@
           "name": "Osteiner"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -127568,7 +127621,7 @@
           "name": "Freisamer"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -127746,7 +127799,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -127834,7 +127887,7 @@
           "name": "Petit Verdot"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit manseng"
         }
       ],
@@ -128027,7 +128080,7 @@
           "name": "Trebbiano Modenese"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -128744,7 +128797,7 @@
           "name": "Sangiovese"
         },
         {
-          "grapeId": null,
+          "grapeId": "ruche",
           "name": "Ruche'"
         },
         {
@@ -129485,7 +129538,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -130570,7 +130623,7 @@
           "name": "Vermentino"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -130824,7 +130877,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -132860,7 +132913,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -133842,7 +133895,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -133878,7 +133931,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -134477,7 +134530,7 @@
           "name": "Neuburger"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -135627,7 +135680,7 @@
           "name": "Riesling Italico"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -137382,7 +137435,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -137734,7 +137787,7 @@
           "name": "Mauzac Rose"
         },
         {
-          "grapeId": null,
+          "grapeId": "cardinal",
           "name": "Cardinal"
         },
         {
@@ -138391,7 +138444,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -138851,7 +138904,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -138895,7 +138948,7 @@
           "name": "Ortega"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -139059,7 +139112,7 @@
           "name": "Septimer"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -139212,7 +139265,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -139256,7 +139309,7 @@
           "name": "Ortega"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -139420,7 +139473,7 @@
           "name": "Septimer"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -139761,7 +139814,7 @@
           "name": "Aglianico"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -139965,7 +140018,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -144942,7 +144995,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005484",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "grechetto",
+        "quote": "particularly in the Umbria region where it is used in the Denominazione di origine controllata (DOC) wine Orvieto ... DOCs of Torgiano and Colli Martani ... In Lazio, the grape is found in the Cervaro region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grechetto"
+      }
+    ],
     "id": "it-orvieto",
     "latitude": 42.71820031,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005484",
@@ -145042,7 +145101,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -145218,7 +145277,7 @@
           "name": "Moscato Nero di Acqui"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -145625,7 +145684,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -148480,7 +148539,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -148920,7 +148979,7 @@
           "name": "Muscat de Hambourg"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -149368,7 +149427,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -151495,7 +151554,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -151539,7 +151598,7 @@
           "name": "Ortega"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -151735,7 +151794,7 @@
           "name": "Nobling"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -151900,7 +151959,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -151944,7 +152003,7 @@
           "name": "Ortega"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -152140,7 +152199,7 @@
           "name": "Nobling"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -154439,7 +154498,7 @@
           "name": "Neuburger"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -154907,7 +154966,7 @@
           "name": "Phoenix"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -157821,7 +157880,7 @@
           "name": "Phoenix"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -158615,7 +158674,7 @@
           "name": "Nebiolo"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -159205,7 +159264,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -160028,7 +160087,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -160561,7 +160620,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -161530,7 +161589,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -162242,7 +162301,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -162915,7 +162974,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -163595,7 +163654,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -163663,7 +163722,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -163867,7 +163926,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -164215,7 +164274,7 @@
           "name": "Trebbiano Romagnolo"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -164444,7 +164503,7 @@
           "name": "Osteiner"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -164600,7 +164659,7 @@
           "name": "Freisamer"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -164792,7 +164851,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -164868,7 +164927,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -165124,7 +165183,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -165283,7 +165342,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -165359,7 +165418,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -165615,7 +165674,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -165635,6 +165694,11 @@
     "eambrosiaId": "EUGI00000004654",
     "giType": "PDO",
     "grapes": [
+      {
+        "grapeId": "rondo",
+        "quote": "Rondo is cultivated in Rheinhessen and in many locations in northern Europe including Denmark, England, Ireland, Wales, the Netherlands, Poland and Sweden",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Rondo_(grape)"
+      },
       {
         "grapeId": "muller-thurgau",
         "quote": "Rheinhessen, ... Baden, ... Palatinate, ... Austria, ... Hungary, ... Belgium, ... United Kingdom, ... Australia – Mudgee wine region, ... New Zealand – Now a marginal grape., ... United States of America, ... Japan, ... China",
@@ -165816,7 +165880,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -165880,7 +165944,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -166084,7 +166148,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -166261,7 +166325,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -166325,7 +166389,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -166529,7 +166593,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -168229,7 +168293,7 @@
           "name": "Pinot Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -168645,7 +168709,7 @@
           "name": "Tocai Friulano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -172459,7 +172523,7 @@
           "name": "Moscato Nero di Acqui"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -172950,7 +173014,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -172966,7 +173030,7 @@
           "name": "Pinot Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -173304,7 +173368,7 @@
           "name": "Barbera"
         },
         {
-          "grapeId": null,
+          "grapeId": "ruche",
           "name": "Ruche'"
         }
       ],
@@ -174136,7 +174200,7 @@
           "name": "Cabernet Jura"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -174348,7 +174412,7 @@
           "name": "Roter Elbling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -174489,7 +174553,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -174525,7 +174589,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -174920,7 +174984,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -175323,7 +175387,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -175467,7 +175531,7 @@
           "name": "Blauer Frühburgunder"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -176507,7 +176571,7 @@
           "name": "Duras"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -177115,7 +177179,7 @@
           "name": "Petit Courbu"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -178539,7 +178603,7 @@
           "name": "Rieslin renano"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -178941,7 +179005,7 @@
           "name": "Muller Thurgau"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -180829,7 +180893,7 @@
           "name": "Abrusco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -182857,7 +182921,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -183114,7 +183178,7 @@
           "name": "Weißer Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -183999,7 +184063,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -186548,7 +186612,7 @@
           "name": "Plavac mali crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -186959,7 +187023,7 @@
           "name": "Nebiolo"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -187546,7 +187610,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -188668,7 +188732,7 @@
           "name": "Aglianico"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -188864,7 +188928,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -189314,7 +189378,7 @@
           "name": "Ninčuša"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -189573,7 +189637,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -189649,7 +189713,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -189905,7 +189969,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -191023,7 +191087,7 @@
           "name": "Domina"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -191167,7 +191231,7 @@
           "name": "Blauer Frühburgunder"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -191984,7 +192048,7 @@
           "name": "Riesling Italico"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -192413,7 +192477,7 @@
           "name": "Weißer Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -196434,7 +196498,7 @@
           "name": "Aglianico"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -196594,7 +196658,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco Nostrano"
         },
         {
@@ -196845,7 +196909,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -197264,7 +197328,7 @@
           "name": "Muller Thurgau"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -197661,7 +197725,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -199664,7 +199728,7 @@
           "name": "Viognier"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -200367,7 +200431,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -200669,7 +200733,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000005555",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "grechetto",
+        "quote": "particularly in the Umbria region where it is used in the Denominazione di origine controllata (DOC) wine Orvieto ... DOCs of Torgiano and Colli Martani ... In Lazio, the grape is found in the Cervaro region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grechetto"
+      }
+    ],
     "id": "it-torgiano",
     "latitude": 43.02563097,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000005555",
@@ -201523,7 +201593,7 @@
           "name": "Abrusco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -202675,7 +202745,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -202750,7 +202820,13 @@
     "countryCode": "IT",
     "eambrosiaId": "EUGI00000003881",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "moscato-giallo",
+        "quote": "most of it in the Lagarina Valley which includes the province of Trento ... It is also found in the nearby province of Bolzano ... In the Veneto and Friuli-Venezia Giulia ... In the area of Colli Euganei in the Veneto ... Moscato Giallo can be found in the Valais region of Switzerland ... The grape is also planted in Croatia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Moscato_Giallo"
+      }
+    ],
     "id": "it-trento",
     "latitude": 46.06666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003881",
@@ -203769,7 +203845,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -204735,6 +204811,11 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Sagrantino"
       },
       {
+        "grapeId": "grechetto",
+        "quote": "particularly in the Umbria region where it is used in the Denominazione di origine controllata (DOC) wine Orvieto ... DOCs of Torgiano and Colli Martani ... In Lazio, the grape is found in the Cervaro region",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grechetto"
+      },
+      {
         "grapeId": "sangiovese",
         "quote": "primarily grown in the central regions of Italy, particularly in Tuscany... also cultivated in ... Umbria and Marche... also grown in ... Emilia‑Romagna, Lombardy, and even as far south as Calabria... In France... Corsica... Argentina... Mendoza... In California...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
@@ -204948,7 +205029,7 @@
           "name": "Aglianico"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -205144,7 +205225,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -206222,7 +206303,7 @@
           "name": "Vermentino"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -208556,7 +208637,7 @@
           "name": "Cabernet Franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -209121,7 +209202,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -209377,7 +209458,7 @@
           "name": "Muller Thurgau"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -209477,7 +209558,7 @@
           "name": "Petit Verdot"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit manseng"
         },
         {
@@ -210006,7 +210087,7 @@
           "name": "Riesling Italico"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -211902,7 +211983,7 @@
           "name": "Muscat de Hambourg"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -212178,7 +212259,7 @@
           "name": "Mauzac Rose"
         },
         {
-          "grapeId": null,
+          "grapeId": "cardinal",
           "name": "Cardinal"
         },
         {
@@ -212307,7 +212388,7 @@
           "name": "Muscat de Hambourg"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -213407,7 +213488,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -214338,7 +214419,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -214529,6 +214610,11 @@
         "grapeId": "glera",
         "quote": "It is grown mainly in the Veneto region of Italy, traditionally in an area near Conegliano and Valdobbiadene, in the hills north of Treviso.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Glera_(grape)"
+      },
+      {
+        "grapeId": "moscato-giallo",
+        "quote": "most of it in the Lagarina Valley which includes the province of Trento ... It is also found in the nearby province of Bolzano ... In the Veneto and Friuli-Venezia Giulia ... In the area of Colli Euganei in the Veneto ... Moscato Giallo can be found in the Valais region of Switzerland ... The grape is also planted in Croatia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Moscato_Giallo"
       },
       {
         "grapeId": "cabernet-franc",
@@ -214842,7 +214928,7 @@
           "name": "Muller-Thurgau"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -215253,7 +215339,7 @@
           "name": "Riesling"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco dal Peduncolo Rosso"
         },
         {
@@ -217036,7 +217122,7 @@
           "name": "Muller Thurgau"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -217456,7 +217542,7 @@
           "name": "Carmenere"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -217649,7 +217735,7 @@
           "name": "Muscardin"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -218401,7 +218487,7 @@
           "name": "Moscato Rosa"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -219715,7 +219801,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Grechetto"
         },
         {
@@ -220052,7 +220138,7 @@
           "name": "Sirius"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "sieger"
         },
         {
@@ -220060,7 +220146,7 @@
           "name": "saint laurent"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "rondo"
         },
         {
@@ -224006,6 +224092,11 @@
     "giType": "PDO",
     "grapes": [
       {
+        "grapeId": "cabernet-dorsa",
+        "quote": "in the Württemberg wine region of Germany",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cabernet_Dorsa"
+      },
+      {
         "grapeId": "pinot-meunier",
         "quote": "It is most prevalent in the cooler, north facing vineyards of the Vallee de la Marne and in the Aisne department. ... It is also widely grown in the Aube region ... found ... in the Loire Valley regions of Touraine and Orleans ... most German plantings ... are found in Württemberg ... most of the state's plantings are located in the Carneros AVA ... in the Grampians region of Victoria ... New Zealand wine industry ... German‑speaking parts of Switzerland ... small quantities in Austria.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Meunier"
@@ -224183,7 +224274,7 @@
           "name": "Hölder"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -224251,7 +224342,7 @@
           "name": "Merzling"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -224455,7 +224546,7 @@
           "name": "Blauer Silvaner"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -225265,7 +225356,7 @@
           "name": "Phoenix"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -225724,7 +225815,7 @@
           "name": "Neuburger"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Muškat žuti"
         },
         {
@@ -226305,7 +226396,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -226746,7 +226837,7 @@
           "name": "Pinot Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "grechetto",
           "name": "Pignoletto"
         }
       ],
@@ -227163,7 +227254,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -228371,7 +228462,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -228674,7 +228765,7 @@
           "name": "Cabernet Moravia"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -232532,7 +232623,7 @@
           "name": "Tempranillo"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         },
         {
@@ -233526,7 +233617,7 @@
           "name": "Koliniatiko"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         },
         {
@@ -236457,7 +236548,7 @@
           "name": "Athiri"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         },
         {
@@ -239501,7 +239592,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         }
       ],
@@ -240396,7 +240487,7 @@
           "name": "Cinsaut"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         },
         {
@@ -244350,7 +244441,7 @@
           "name": "Lagorthi"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         },
         {
@@ -245710,7 +245801,7 @@
           "name": "Athiri"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         },
         {
@@ -249529,7 +249620,7 @@
           "name": "Athiri"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         },
         {
@@ -257842,6 +257933,16 @@
     "giType": "AVA",
     "grapes": [
       {
+        "grapeId": "concord",
+        "quote": "The major growing areas are the Finger Lakes District of New York, the Lake Erie Viticultural Area, areas around Lake Ontario, Southwestern Michigan, and the Yakima Valley in Washington",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Concord_grape"
+      },
+      {
+        "grapeId": "siegerrebe",
+        "quote": "grown primarily in Germany with some plantings in England, Vancouver Island, Washington state, British Columbia's North Okanagan and Fraser Valley ... and another in the Finger Lakes AVA in New York State",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Siegerrebe"
+      },
+      {
         "grapeId": "rkatsiteli",
         "quote": "The grape is mostly planted in its ancestral home of Georgia, though there are still sizable plantings in other Eastern European countries like Russia, Armenia, Bulgaria, Moldova, Romania, Serbia, and North Macedonia, Azerbaijan and Ukraine. ... It is also planted, in small amounts, in Australia and the eastern United States, mainly in the Finger Lakes region of New York state ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Rkatsiteli"
@@ -260717,7 +260818,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "concord",
+        "quote": "The major growing areas are the Finger Lakes District of New York, the Lake Erie Viticultural Area, areas around Lake Ontario, Southwestern Michigan, and the Yakima Valley in Washington",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Concord_grape"
+      }
+    ],
     "id": "us-yakima-valley",
     "latitude": 46.349394981256566,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.69",
@@ -261859,7 +261966,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "concord",
+        "quote": "The major growing areas are the Finger Lakes District of New York, the Lake Erie Viticultural Area, areas around Lake Ontario, Southwestern Michigan, and the Yakima Valley in Washington",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Concord_grape"
+      }
+    ],
     "id": "us-lake-erie",
     "latitude": 41.7216222362484,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.83",
@@ -280532,7 +280645,13 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ruby-cabernet",
+        "quote": "particularly in the San Joaquin Valley ... Small amounts are grown in the Hunter Valley and Murray-Darling area ... Vale do São Francisco winery in Pernambuco ... Vinícola Campos de Cima in Itaqui, Campanha Gaúcha, grows the grape ... Valle De Guadalupe, Baja California ... It is successfully grown in the Robertson district ... Several DOs on the Islas Canarias feature Ruby Cabernet",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
+      }
+    ],
     "id": "za-robertson",
     "latitude": -33.8035849,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -292747,7 +292866,7 @@
           "name": "Sauvignon Blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -292821,7 +292940,7 @@
           "name": "Ancellotta"
         },
         {
-          "grapeId": null,
+          "grapeId": "refosco-dal-peduncolo-rosso",
           "name": "Refosco"
         },
         {
@@ -292845,7 +292964,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -292947,7 +293066,7 @@
           "name": "Moscato Branco"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -293009,7 +293128,7 @@
           "name": "Malvasia de Cândia"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -293036,7 +293155,13 @@
     "countryCode": "BR",
     "eambrosiaId": null,
     "giType": "IP",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ruby-cabernet",
+        "quote": "particularly in the San Joaquin Valley ... Small amounts are grown in the Hunter Valley and Murray-Darling area ... Vale do São Francisco winery in Pernambuco ... Vinícola Campos de Cima in Itaqui, Campanha Gaúcha, grows the grape ... Valle De Guadalupe, Baja California ... It is successfully grown in the Robertson district ... Several DOs on the Islas Canarias feature Ruby Cabernet",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
+      }
+    ],
     "id": "br-campanha-gaucha",
     "latitude": -30.3818093,
     "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
@@ -293135,7 +293260,7 @@
           "name": "Moscato de Hamburgo"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -293163,7 +293288,7 @@
           "name": "Riesling Renano"
         },
         {
-          "grapeId": null,
+          "grapeId": "ruby-cabernet",
           "name": "Ruby Cabernet"
         },
         {
@@ -293334,7 +293459,7 @@
           "name": "Moscato Bianco"
         },
         {
-          "grapeId": null,
+          "grapeId": "moscato-giallo",
           "name": "Moscato Giallo"
         },
         {
@@ -293346,7 +293471,7 @@
           "name": "Petit Verdot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pignolo",
           "name": "Pignolo"
         },
         {
@@ -293439,7 +293564,13 @@
     "countryCode": "BR",
     "eambrosiaId": null,
     "giType": "IP",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ruby-cabernet",
+        "quote": "particularly in the San Joaquin Valley ... Small amounts are grown in the Hunter Valley and Murray-Darling area ... Vale do São Francisco winery in Pernambuco ... Vinícola Campos de Cima in Itaqui, Campanha Gaúcha, grows the grape ... Valle De Guadalupe, Baja California ... It is successfully grown in the Robertson district ... Several DOs on the Islas Canarias feature Ruby Cabernet",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
+      }
+    ],
     "id": "br-vale-do-sao-francisco",
     "latitude": -9.1880333,
     "legalUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
@@ -293502,7 +293633,7 @@
           "name": "Chenin Blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "ruby-cabernet",
           "name": "Ruby Cabernet"
         },
         {
@@ -293961,6 +294092,11 @@
     "eambrosiaId": null,
     "giType": "GI",
     "grapes": [
+      {
+        "grapeId": "siegerrebe",
+        "quote": "grown primarily in Germany with some plantings in England, Vancouver Island, Washington state, British Columbia's North Okanagan and Fraser Valley ... and another in the Finger Lakes AVA in New York State",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Siegerrebe"
+      },
       {
         "grapeId": "zweigelt",
         "quote": "Widely planted in Austria, Zweigelt vines have made inroads in the Canadian wine regions of Ontario's Niagara Peninsula and of British Columbia, with limited plantings in Hungary, Australia and New Zealand. In the Czech Republic it is known as Zweigeltrebe ... It grows in most of the wine regions in Slovakia. As of 2010, newly established Belgian and Polish vineyards have also started to plant Zweigelt. As of 2014, Washington state has several small plantings ...",
@@ -295762,6 +295898,11 @@
     "eambrosiaId": null,
     "giType": "AOC",
     "grapes": [
+      {
+        "grapeId": "moscato-giallo",
+        "quote": "most of it in the Lagarina Valley which includes the province of Trento ... It is also found in the nearby province of Bolzano ... In the Veneto and Friuli-Venezia Giulia ... In the area of Colli Euganei in the Veneto ... Moscato Giallo can be found in the Valais region of Switzerland ... The grape is also planted in Croatia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Moscato_Giallo"
+      },
       {
         "grapeId": "savagnin",
         "quote": "Savagnin blanc is mostly grown in the Jura ... Durbach is home to some plantings of Red Traminer in Germany ... Visperterminen in the Valais is home to some of the highest vineyards in Europe ...",
@@ -299572,7 +299713,13 @@
     "countryCode": "JP",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "koshu",
+        "quote": "grown primarily in the Koshu Valley in Yamanashi Prefecture, Japan",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Koshu_(grape)"
+      }
+    ],
     "id": "jp-yamanashi",
     "latitude": 35.6399328,
     "legalUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm",
@@ -299647,7 +299794,7 @@
       "categories": [],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "koshu",
           "name": "Koshu"
         },
         {
@@ -299663,7 +299810,7 @@
           "name": "Bailey Alicante A"
         },
         {
-          "grapeId": null,
+          "grapeId": "delaware",
           "name": "Delaware"
         },
         {
@@ -299811,7 +299958,7 @@
           "name": "Carménère"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         }
       ],
@@ -299936,7 +300083,7 @@
           "name": "Morio-Muscat"
         },
         {
-          "grapeId": null,
+          "grapeId": "siegerrebe",
           "name": "Siegerrebe"
         },
         {
@@ -300016,7 +300163,7 @@
           "name": "Cabernet Mitos"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-dorsa",
           "name": "Cabernet Dorsa"
         },
         {
@@ -300028,7 +300175,7 @@
           "name": "Palas"
         },
         {
-          "grapeId": null,
+          "grapeId": "niagara",
           "name": "Niagara"
         },
         {
@@ -300036,7 +300183,7 @@
           "name": "Portland"
         },
         {
-          "grapeId": null,
+          "grapeId": "delaware",
           "name": "Delaware"
         },
         {
@@ -300044,7 +300191,7 @@
           "name": "Tabiji"
         },
         {
-          "grapeId": null,
+          "grapeId": "campbell-early",
           "name": "Campbell Early"
         },
         {
@@ -300052,7 +300199,7 @@
           "name": "New York Muscat"
         },
         {
-          "grapeId": null,
+          "grapeId": "concord",
           "name": "Concord"
         },
         {
@@ -300116,7 +300263,7 @@
           "name": "Zalagyongye"
         },
         {
-          "grapeId": null,
+          "grapeId": "rondo",
           "name": "Rondo"
         },
         {
@@ -300242,7 +300389,7 @@
           "name": "Albariño"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -300314,19 +300461,19 @@
           "name": "Tannat"
         },
         {
-          "grapeId": null,
+          "grapeId": "delaware",
           "name": "Delaware"
         },
         {
-          "grapeId": null,
+          "grapeId": "niagara",
           "name": "Niagara"
         },
         {
-          "grapeId": null,
+          "grapeId": "campbell-early",
           "name": "Campbell Early"
         },
         {
-          "grapeId": null,
+          "grapeId": "concord",
           "name": "Concord"
         },
         {
@@ -300350,7 +300497,7 @@
           "name": "Bijou Noir"
         },
         {
-          "grapeId": null,
+          "grapeId": "koshu",
           "name": "Koshu"
         },
         {
@@ -300500,11 +300647,11 @@
       "categories": [],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "delaware",
           "name": "Delaware"
         },
         {
-          "grapeId": null,
+          "grapeId": "koshu",
           "name": "Koshu"
         },
         {
@@ -300580,7 +300727,7 @@
           "name": "Grenache"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -300588,11 +300735,11 @@
           "name": "Osaka R N-1"
         },
         {
-          "grapeId": null,
+          "grapeId": "campbell-early",
           "name": "Campbell Early"
         },
         {
-          "grapeId": null,
+          "grapeId": "niagara",
           "name": "Niagara"
         },
         {
@@ -300810,7 +300957,7 @@
           "name": "Tannat"
         },
         {
-          "grapeId": null,
+          "grapeId": "petit-manseng",
           "name": "Petit Manseng"
         },
         {
@@ -300850,15 +300997,15 @@
           "name": "Seibel 9110"
         },
         {
-          "grapeId": null,
+          "grapeId": "delaware",
           "name": "Delaware"
         },
         {
-          "grapeId": null,
+          "grapeId": "concord",
           "name": "Concord"
         },
         {
-          "grapeId": null,
+          "grapeId": "niagara",
           "name": "Niagara"
         },
         {
@@ -300898,7 +301045,7 @@
           "name": "Ryugan"
         },
         {
-          "grapeId": null,
+          "grapeId": "koshu",
           "name": "Koshu"
         },
         {
@@ -301189,7 +301336,13 @@
     "countryCode": "MX",
     "eambrosiaId": null,
     "giType": "WR",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "ruby-cabernet",
+        "quote": "particularly in the San Joaquin Valley ... Small amounts are grown in the Hunter Valley and Murray-Darling area ... Vale do São Francisco winery in Pernambuco ... Vinícola Campos de Cima in Itaqui, Campanha Gaúcha, grows the grape ... Valle De Guadalupe, Baja California ... It is successfully grown in the Robertson district ... Several DOs on the Islas Canarias feature Ruby Cabernet",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
+      }
+    ],
     "id": "mx-valle-de-guadalupe",
     "latitude": 32.097777777778,
     "legalUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
@@ -301536,14 +301689,14 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Zweigelt"
       },
       {
-        "grapeId": "colombard",
-        "quote": "In France, it was traditionally grown in the Charentes and Gascony ... today it is still among the permitted white grape varieties in Bordeaux ... This grape is mainly grown in California ... it is widely grown in South Africa ... and to a lesser extent in Australia and Israel.",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Colombard"
-      },
-      {
         "grapeId": "tannat",
         "quote": "historically grown in South West France in the Madiran AOC, ... now one of the most prominent grapes in Uruguay ... also grown in Argentina, Australia, Brazil, Bolivia, Peru, South Africa, and in the Italian region of Apulia ... in the US states of Maryland, Virginia, and North Carolina ... plantings in California ... Washington State ... Arizona, Oregon and Texas",
         "sourceUrl": "https://en.wikipedia.org/wiki/Tannat"
+      },
+      {
+        "grapeId": "colombard",
+        "quote": "In France, it was traditionally grown in the Charentes and Gascony ... today it is still among the permitted white grape varieties in Bordeaux ... This grape is mainly grown in California ... it is widely grown in South Africa ... and to a lesser extent in Australia and Israel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Colombard"
       },
       {
         "grapeId": "graciano",
@@ -304452,6 +304605,11 @@
         "grapeId": "fiano",
         "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
         "sourceUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
+      },
+      {
+        "grapeId": "ruby-cabernet",
+        "quote": "particularly in the San Joaquin Valley ... Small amounts are grown in the Hunter Valley and Murray-Darling area ... Vale do São Francisco winery in Pernambuco ... Vinícola Campos de Cima in Itaqui, Campanha Gaúcha, grows the grape ... Valle De Guadalupe, Baja California ... It is successfully grown in the Robertson district ... Several DOs on the Islas Canarias feature Ruby Cabernet",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
       },
       {
         "grapeId": "verdelho",

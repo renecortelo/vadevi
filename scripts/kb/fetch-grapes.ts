@@ -100,7 +100,8 @@ async function wikipediaText(locale: string, title: string, full: boolean): Prom
 /**
  * The grapes the library must carry whatever their prominence, by name: the
  * item a name resolves to is the first grape-variety item Wikidata's search
- * returns for it, in English, then Spanish, Catalan or Portuguese.
+ * returns for it, in English, then Spanish, Catalan or Portuguese — or the
+ * item a line names ("Q975110 Koshu").
  */
 async function included(): Promise<{ qid: string; sitelinks: number }[]> {
   const path = resolve("data/kb/grapes-include.txt");
@@ -115,6 +116,16 @@ async function included(): Promise<{ qid: string; sitelinks: number }[]> {
   ];
   const found: { qid: string; sitelinks: number }[] = [];
   for (const name of names) {
+    // A line may give the item itself ("Q975110 Koshu"), where the name's
+    // search finds a city first or the item is not typed a grape variety.
+    const given = /^(Q\d+)\b/.exec(name)?.[1];
+    if (given !== undefined) {
+      found.push({
+        qid: given,
+        sitelinks: Object.keys((await entities([given]))[given]?.sitelinks ?? {}).length,
+      });
+      continue;
+    }
     let qid: string | null = null;
     for (const language of ["en", "es", "ca", "pt"]) {
       const search = await getJson<{ search: { id: string }[] }>(

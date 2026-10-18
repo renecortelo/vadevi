@@ -39,6 +39,7 @@
       "bramble": "blackberry",
       "burnt toast": "toast",
       "buttercup": "buttercup",
+      "candied lemon rind": "candied lemon peel",
       "caramel": "caramel",
       "carob": "carob",
       "cassis": "blackcurrant",
@@ -59,6 +60,7 @@
       "dark cherries": "black cherry",
       "dark chocolate": "chocolate",
       "dark fruit": "black fruit",
+      "diesel": "petrol",
       "dill": "dill",
       "dried berry": "dried fruit",
       "dried figs": "fig",
@@ -113,6 +115,7 @@
       "hops": "hops",
       "intense": null,
       "jammy": "jammy",
+      "jasmine": "jasmine",
       "jerky nose": "gamey",
       "lead pencil": "graphite",
       "leafy": "vegetal",
@@ -137,6 +140,8 @@
       "mossy minerality": "mineral",
       "mulberry": "mulberry",
       "muscat": "grape",
+      "musk": "musk",
+      "musky": "musk",
       "nettles": "nettles",
       "nuts": "nutty",
       "nutty": "nutty",
@@ -205,6 +210,7 @@
       "violet": "violet",
       "violets": "violet",
       "white pepper": "white pepper",
+      "wild berries": "wild berries",
       "wild game": "gamey",
       "wild herbs": "herbs",
       "winy": "grape"
@@ -439,6 +445,16 @@
         "it": "ranuncolo",
         "nl": "boterbloem",
         "pt-PT": "ranúnculo"
+      },
+      "candied lemon peel": {
+        "en": "candied lemon peel",
+        "es": "piel de limón confitada",
+        "ca": "pell de llimona confitada",
+        "fr": "zeste de citron confit",
+        "de": "kandierte Zitronenschale",
+        "it": "scorza di limone candita",
+        "nl": "gekonfijte citroenschil",
+        "pt-PT": "casca de limão cristalizada"
       },
       "caramel": {
         "en": "caramel",
@@ -860,6 +876,16 @@
         "nl": "jammy",
         "pt-PT": "compota"
       },
+      "jasmine": {
+        "en": "jasmine",
+        "es": "jazmín",
+        "ca": "gessamí",
+        "fr": "jasmin",
+        "de": "Jasmin",
+        "it": "gelsomino",
+        "nl": "jasmijn",
+        "pt-PT": "jasmim"
+      },
       "leather": {
         "en": "leather",
         "es": "cuero",
@@ -989,6 +1015,16 @@
         "it": "gelso",
         "nl": "moerbei",
         "pt-PT": "amora-branca"
+      },
+      "musk": {
+        "en": "musk",
+        "es": "almizcle",
+        "ca": "mesc",
+        "fr": "musc",
+        "de": "Moschus",
+        "it": "muschio",
+        "nl": "muskus",
+        "pt-PT": "almíscar"
       },
       "nettles": {
         "en": "nettle",
@@ -1399,6 +1435,16 @@
         "it": "pepe bianco",
         "nl": "witte peper",
         "pt-PT": "pimenta branca"
+      },
+      "wild berries": {
+        "en": "wild berries",
+        "es": "frutos del bosque",
+        "ca": "fruits del bosc",
+        "fr": "fruits des bois",
+        "de": "Waldbeeren",
+        "it": "frutti di bosco",
+        "nl": "bosvruchten",
+        "pt-PT": "frutos silvestres"
       }
     }
   },
@@ -1421,9 +1467,12 @@
       "grilled meat": "grilled meats",
       "grilled meats": "grilled meats",
       "hungarian dishes": null,
+      "japanese cuisine": "japanese cuisine",
       "lamb": "lamb",
       "lamb dishes": "lamb",
       "lobster": "lobster",
+      "mushrooms": "mushrooms",
+      "northern italian cheeses": "cheese",
       "pasta": "pasta",
       "pizza": "pizza",
       "pork": "pork",
@@ -1433,6 +1482,7 @@
       "salmon": "salmon",
       "seafood": "seafood",
       "shellfish": "shellfish",
+      "slow-cooked beef": "beef",
       "spicy dishes": "spicy dishes",
       "squid": "squid",
       "sushi": "sushi",
@@ -1453,6 +1503,16 @@
         "it": "asparagi",
         "nl": "asperges",
         "pt-PT": "espargos"
+      },
+      "beef": {
+        "en": "beef",
+        "es": "carne de vacuno",
+        "ca": "carn de vedella",
+        "fr": "bœuf",
+        "de": "Rindfleisch",
+        "it": "manzo",
+        "nl": "rundvlees",
+        "pt-PT": "carne de vaca"
       },
       "bittersweet dishes": {
         "en": "bittersweet dishes",
@@ -1604,6 +1664,16 @@
         "nl": "gegrild vlees",
         "pt-PT": "carne grelhada"
       },
+      "japanese cuisine": {
+        "en": "Japanese cuisine",
+        "es": "cocina japonesa",
+        "ca": "cuina japonesa",
+        "fr": "cuisine japonaise",
+        "de": "japanische Küche",
+        "it": "cucina giapponese",
+        "nl": "Japanse keuken",
+        "pt-PT": "cozinha japonesa"
+      },
       "lamb": {
         "en": "lamb",
         "es": "cordero",
@@ -1623,6 +1693,16 @@
         "it": "astice",
         "nl": "kreeft",
         "pt-PT": "lavagante"
+      },
+      "mushrooms": {
+        "en": "mushrooms",
+        "es": "setas",
+        "ca": "bolets",
+        "fr": "champignons",
+        "de": "Pilze",
+        "it": "funghi",
+        "nl": "paddenstoelen",
+        "pt-PT": "cogumelos"
       },
       "pasta": {
         "en": "pasta",

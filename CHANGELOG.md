@@ -189,6 +189,15 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
+- **Eighteen more grapes in the library**: those the registers beyond the EU
+  name — Koshu, Delaware, Concord, Niagara, Campbell Early, Petit Manseng,
+  Moscato Giallo, Ruby Cabernet, Grechetto, Pignolo, Refosco dal Peduncolo
+  Rosso, Rondo, Siegerrebe, Cabernet Dorsa, Usakhelouri, Ruché and others —
+  each with its facts quoted from its article and checked as every other
+  grape's, and a picture under a free licence where Commons has one: 209
+  grapes, and 372 of the varieties the registers name now link to a card.
+  `grapes-include.txt` may name a Wikidata item where a name's search finds
+  a city first (Koshu, Delaware).
 - **Japan's and Brazil's grapes from their own specifications**: Japan's
   five wine indications list the varieties their National Tax Agency
   specifications allow, and Brazil's thirteen the cultivars of their INPI

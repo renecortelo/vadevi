@@ -24,17 +24,35 @@ function literal(value: string | number | null): string {
   return `'${value.replaceAll("'", "''")}'`;
 }
 
-function insert(table: string, columns: string[], rows: (string | number | null)[][]): string[] {
-  const statements: string[] = [];
-  // Small statements: D1 caps a statement's size, and a reload is rare.
-  for (let start = 0; start < rows.length; start += 50) {
-    const values = rows
-      .slice(start, start + 50)
-      .map((row) => `(${row.map(literal).join(", ")})`)
-      .join(",\n  ");
-    statements.push(`INSERT OR IGNORE INTO ${table} (${columns.join(", ")}) VALUES\n  ${values};`);
+/**
+ * Rows as `VALUES` lists small enough for one statement each: at most 50
+ * rows, and well under D1's 100 KB cap on a statement's size — a grape's row
+ * carries its quoted facts, and 50 of the longest ran past it (18 October
+ * 2026, at 209 grapes).
+ */
+function valueLists(rows: readonly (string | number | null)[][]): string[] {
+  const lists: string[] = [];
+  let batch: string[] = [];
+  let size = 0;
+  for (const row of rows) {
+    const tuple = `(${row.map(literal).join(", ")})`;
+    if (batch.length > 0 && (batch.length === 50 || size + tuple.length > 80_000)) {
+      lists.push(batch.join(",\n  "));
+      batch = [];
+      size = 0;
+    }
+    batch.push(tuple);
+    size += tuple.length;
   }
-  return statements;
+  if (batch.length > 0) lists.push(batch.join(",\n  "));
+  return lists;
+}
+
+function insert(table: string, columns: string[], rows: (string | number | null)[][]): string[] {
+  // Small statements: D1 caps a statement's size, and a reload is rare.
+  return valueLists(rows).map(
+    (values) => `INSERT OR IGNORE INTO ${table} (${columns.join(", ")}) VALUES\n  ${values};`,
+  );
 }
 
 /** Wikipedia's prose is CC BY-SA 4.0; Wikidata's names are CC0. */
@@ -437,11 +455,7 @@ export function libraryDiffSql(
         keyOf(row.map((value) => value ?? null)),
     );
     const others = columns.filter((column) => !key.includes(column));
-    for (let start = 0; start < changed.length; start += 50) {
-      const values = changed
-        .slice(start, start + 50)
-        .map((row) => `(${row.map(literal).join(", ")})`)
-        .join(",\n  ");
+    for (const values of valueLists(changed)) {
       upserts.push(
         `INSERT INTO ${table} (${columns.join(", ")}) VALUES\n  ${values}\n` +
           `ON CONFLICT (${key.join(", ")}) DO ${

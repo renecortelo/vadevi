@@ -188,6 +188,13 @@
     "path": "library/grapes/bourboulenc.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bourboulenc.jpg"
   },
+  "cabernet-dorsa": {
+    "author": "Rosenzweig",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/grapes/cabernet-dorsa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cabernet_Dorsa_Weinsberg_20060908.jpg"
+  },
   "cabernet-franc": {
     "author": "Rosenzweig",
     "license": "CC BY-SA 3.0",
@@ -209,12 +216,26 @@
     "path": "library/grapes/caino-tinto.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ca%C3%AD%C3%B1o.jpg"
   },
+  "campbell-early": {
+    "author": "Tae Hun Kim",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "path": "library/grapes/campbell-early.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Campbell_Early.jpg"
+  },
   "canaiolo": {
     "author": "Giorgio Gallesio",
     "license": "Public domain",
     "licenseUrl": null,
     "path": "library/grapes/canaiolo.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uva_Canaiola_-_Giorgio_Gallesio.jpg"
+  },
+  "cardinal": {
+    "author": "Dezidor",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "path": "library/grapes/cardinal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kardin%C3%A1l.jpg"
   },
   "carignan": {
     "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
@@ -286,6 +307,13 @@
     "path": "library/grapes/colombard.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colombard_raisin.jpg"
   },
+  "concord": {
+    "author": "UnknownUnknown ; cropped, cleaned up, and levels adjustment by Howcheng",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "path": "library/grapes/concord.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:ConcordGrapes.jpg"
+  },
   "cortese": {
     "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
     "license": "CC BY-SA 4.0",
@@ -306,6 +334,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "path": "library/grapes/croatina.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Croatina_Grapes.jpg"
+  },
+  "delaware": {
+    "author": "Bio06940",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/grapes/delaware.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Delaware_(grape).JPG"
   },
   "dolcetto": {
     "author": "Agne27",
@@ -447,6 +482,13 @@
     "path": "library/grapes/graciano.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Graciano_Viala_et_Vermorel.jpg"
   },
+  "grechetto": {
+    "author": "marco valerio",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "path": "library/grapes/grechetto.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grechetto_grapes.jpg"
+  },
   "greco": {
     "author": "payhere",
     "license": "CC BY 2.0",
@@ -523,6 +565,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "path": "library/grapes/kerner.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kerner_Weinsberg_20060908.jpg"
+  },
+  "koshu": {
+    "author": "genta_hgr",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/grapes/koshu.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Katsunuma_vineyard_02.jpg"
   },
   "lagrein": {
     "author": "Nathan Jones",
@@ -636,6 +685,13 @@
     "path": "library/grapes/montepulciano.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Montepulciano_d_Abruzzo_03_(RaBoe).jpg"
   },
+  "moscato-giallo": {
+    "author": "Hildegard Fuchs, Weingut Fuchs",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "path": "library/grapes/moscato-giallo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goldmuskateller-Traube.jpg"
+  },
   "mourvedre": {
     "author": "Pancrat",
     "license": "CC BY-SA 3.0",
@@ -720,6 +776,13 @@
     "path": "library/grapes/neuburger.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neubrger_Kr_7.JPG"
   },
+  "niagara": {
+    "author": "Ulysses Prentiss Hedrick",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "path": "library/grapes/niagara.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niagara_grape.jpg"
+  },
   "ojaleshi": {
     "author": "Uka2000",
     "license": "CC BY-SA 4.0",
@@ -754,6 +817,13 @@
     "licenseUrl": null,
     "path": "library/grapes/pedro-ximenez.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pedro-ximenes_Viala_et_Vermorel.jpg"
+  },
+  "petit-manseng": {
+    "author": "Jymm (talk · contribs)",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "path": "library/grapes/petit-manseng.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Petit_manseng.jpg"
   },
   "petit-verdot": {
     "author": "Eric 先魁 Hwang",
@@ -832,6 +902,13 @@
     "path": "library/grapes/raboso.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:RABOSO_invaiatura.JPG"
   },
+  "refosco-dal-peduncolo-rosso": {
+    "author": "Fabio Bruna",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/grapes/refosco-dal-peduncolo-rosso.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Refosco_dal_Penduncolo_Rosso.jpg"
+  },
   "ribolla-gialla": {
     "author": "Doris Schneider, Ursula Brühl, Julius Kühn-Institut (JKI), www.vivc.de",
     "license": "CC BY-SA 4.0",
@@ -853,12 +930,26 @@
     "path": "library/grapes/rkatsiteli.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rka-tziteli.jpg"
   },
+  "rondo": {
+    "author": "Dr. Joachim Schmid, FG RZ, FA Geisenheim",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/grapes/rondo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rondo-07-1.JPG"
+  },
   "roussanne": {
     "author": "Jules Troncy",
     "license": "Public domain",
     "licenseUrl": null,
     "path": "library/grapes/roussanne.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Roussanne.jpg"
+  },
+  "ruby-cabernet": {
+    "author": "viZZZual.com",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/grapes/ruby-cabernet.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ruby_Cabernet_-_Winemakers_Seal_-_Gallo_family_-_E_%26_J_Gallo_Winery.jpg"
   },
   "sagrantino": {
     "author": "Zyance",
@@ -923,6 +1014,13 @@
     "path": "library/grapes/sercial.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sercial.jpg"
   },
+  "siegerrebe": {
+    "author": "Agne27",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/grapes/siegerrebe.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Siegerrebe_grapes.JPG"
+  },
   "silvaner": {
     "author": "Däisd at German Wikipedia",
     "license": "CC BY-SA 3.0",
@@ -943,6 +1041,13 @@
     "licenseUrl": null,
     "path": "library/grapes/st-laurent.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pinot_Saint_Laurent.jpg"
+  },
+  "sultana": {
+    "author": "Ursula Brühl, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Grapevine Breeding Geilweilerhof - 76833 Siebeldingen, GERMANY",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/sultana.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VIVC12051_SULTANINA_Cluster_in_the_field_12008.jpg"
   },
   "sumoll": {
     "author": "Angela Llop",
@@ -1048,6 +1153,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "path": "library/grapes/tsolikouri.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsolikouri.jpg"
+  },
+  "usakhelauri": {
+    "author": "Giorgi Abdaladze",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/grapes/usakhelauri.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Usakhelauri_Field.jpg"
   },
   "verdelho": {
     "author": "José Luís Ávila Silveira/Pedro Noronha e Costa",

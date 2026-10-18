@@ -54,6 +54,30 @@ Goruli Mtsvane
 Kakhuri Mtsvane
 Shavkapito
 Otskhanuri Sapere
-Usakhelouri
+Q7901690 Usakhelouri
 Aladasturi
 Aleksandrouli
+Tsitska
+# Named by registers beyond the EU (P9): Japan's NTA specifications, Brazil's INPI
+# cadernos. A line may give the Wikidata item where the name finds a city first.
+Q975110 Koshu
+Muscat Bailey A
+Black Queen
+Q6451943 Kyoho
+Q730314 Delaware
+Q393047 Concord
+Q392699 Niagara
+Q17990385 Campbell Early
+Petit Manseng
+Moscato Giallo
+Malvasia Bianca
+Ruby Cabernet
+Egiodola
+Grechetto
+Pignolo
+Refosco dal Peduncolo Rosso
+Rebo
+Regent
+Q116985 Rondo
+Siegerrebe
+Cabernet Dorsa
