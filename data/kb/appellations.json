@@ -279114,9 +279114,9 @@
     "giType": "GI",
     "grapes": [],
     "id": "nz-waipara-valley",
-    "latitude": null,
+    "latitude": -43.056,
     "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waipara-valley/",
-    "longitude": null,
+    "longitude": 172.759,
     "name": "Waipara Valley",
     "names": [
       {
@@ -279130,7 +279130,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerRef": "1010",
     "registeredOn": "2018-12-03",
@@ -279845,9 +279845,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-karoo-hoogland",
-    "latitude": null,
+    "latitude": -32.39361,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 20.66139,
     "name": "Karoo-Hoogland",
     "names": [
       {
@@ -279856,7 +279856,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerLevel": "region",
     "registeredOn": null,
@@ -280807,9 +280807,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-sutherland-karoo",
-    "latitude": null,
+    "latitude": -32.39361,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 20.66139,
     "name": "Sutherland-Karoo",
     "names": [
       {
@@ -280818,7 +280818,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerLevel": "district",
     "registeredOn": null,
@@ -283775,9 +283775,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-nieuwoudtville",
-    "latitude": null,
+    "latitude": -31.36667,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 19.1,
     "name": "Nieuwoudtville",
     "names": [
       {
@@ -283786,7 +283786,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerLevel": "ward",
     "registeredOn": null,
@@ -283831,9 +283831,9 @@
     "giType": "WO",
     "grapes": [],
     "id": "za-leipoldtville-sandveld",
-    "latitude": null,
+    "latitude": -32.222,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
-    "longitude": null,
+    "longitude": 18.481,
     "name": "Leipoldtville-Sandveld",
     "names": [
       {
@@ -283842,7 +283842,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerLevel": "ward",
     "registeredOn": null,
@@ -293926,9 +293926,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-niagara-escarpment",
-    "latitude": null,
+    "latitude": 43.155285,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": null,
+    "longitude": -79.3289,
     "name": "Niagara Escarpment",
     "names": [
       {
@@ -293937,7 +293937,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerRef": "Table 1, item 4",
     "registeredOn": null,
@@ -293974,9 +293974,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-west-niagara",
-    "latitude": null,
+    "latitude": 43.172272500000005,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": null,
+    "longitude": -79.43430000000001,
     "name": "West Niagara",
     "names": [
       {
@@ -293985,7 +293985,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerRef": "Table 1, item 6",
     "registeredOn": null,
@@ -294106,9 +294106,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-st-davids-bench",
-    "latitude": 43.2556116,
+    "latitude": 43.15667,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": -79.0723264,
+    "longitude": -79.10889,
     "name": "St. David’s Bench",
     "names": [
       {
@@ -294117,7 +294117,7 @@
         "source": "register"
       }
     ],
-    "pointSource": "area",
+    "pointSource": "place",
     "prominence": 0,
     "registerRef": "Table 1, item 11",
     "registeredOn": null,
@@ -294134,9 +294134,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-lincoln-lakeshore",
-    "latitude": null,
+    "latitude": 43.19347500000001,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": null,
+    "longitude": -79.51264,
     "name": "Lincoln Lakeshore",
     "names": [
       {
@@ -294145,7 +294145,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerRef": "Table 1, item 12",
     "registeredOn": null,
@@ -294161,9 +294161,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-creek-shores",
-    "latitude": null,
+    "latitude": 43.178745000000006,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": null,
+    "longitude": -79.323335,
     "name": "Creek Shores",
     "names": [
       {
@@ -294172,7 +294172,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerRef": "Table 1, item 13",
     "registeredOn": null,
@@ -294188,9 +294188,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-beamsville-bench",
-    "latitude": null,
+    "latitude": 43.1658,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": null,
+    "longitude": -79.4764,
     "name": "Beamsville Bench",
     "names": [
       {
@@ -294199,7 +294199,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerRef": "Table 1, item 14",
     "registeredOn": null,
@@ -294216,9 +294216,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-twenty-mile-bench",
-    "latitude": null,
+    "latitude": 43.1539,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": null,
+    "longitude": -79.3922,
     "name": "Twenty Mile Bench",
     "names": [
       {
@@ -294227,7 +294227,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registerRef": "Table 1, item 15",
     "registeredOn": null,
@@ -294244,9 +294244,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-short-hills-bench",
-    "latitude": null,
+    "latitude": 43.112,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": null,
+    "longitude": -79.2656,
     "name": "Short Hills Bench",
     "names": [
       {
@@ -294255,7 +294255,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 1,
     "registerRef": "Table 1, item 16",
     "registeredOn": null,
@@ -294312,9 +294312,9 @@
     "giType": "VQA",
     "grapes": [],
     "id": "ca-vinemount-ridge",
-    "latitude": null,
+    "latitude": 43.19806,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
-    "longitude": null,
+    "longitude": -79.67667,
     "name": "Vinemount Ridge",
     "names": [
       {
@@ -294323,7 +294323,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerRef": "Table 1, item 17",
     "registeredOn": null,
@@ -296955,9 +296955,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "ge-teliani",
-    "latitude": null,
+    "latitude": 41.9,
     "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/16ffbcb2-9658-47cb-bf32-987b37a27b9e.pdf",
-    "longitude": null,
+    "longitude": 45.583333,
     "name": "Teliani",
     "names": [
       {
@@ -296966,7 +296966,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerRef": "No. 791",
     "registeredOn": "2007-12-10",
@@ -297068,9 +297068,9 @@
       }
     ],
     "id": "ge-sviri",
-    "latitude": null,
+    "latitude": 42.116667,
     "legalUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/32279df4-5697-47d1-98b1-fd1bbe529f92.pdf",
-    "longitude": null,
+    "longitude": 42.916667,
     "name": "Sviri",
     "names": [
       {
@@ -297079,7 +297079,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "place",
     "prominence": 0,
     "registerRef": "No. 793",
     "registeredOn": "2007-12-10",

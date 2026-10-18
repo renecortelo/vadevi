@@ -144,6 +144,17 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
+- **Fifteen more names on the map**: Teliani and Sviri at the coordinates
+  their Sakpatenti documents state; Ontario's sub-appellations, which its
+  regulation bounds by roads and creeks, at the places it names or the
+  village of their name (Niagara Escarpment and West Niagara amid them, and
+  St. David's Bench at St. Davids rather than at Niagara-on-the-Lake);
+  Sutherland-Karoo, Leipoldtville-Sandveld and Nieuwoudtville at their towns
+  (Nieuwoudtville approximately: SAWIS lists it under the Western Cape, the
+  map puts the town in the Northern Cape), Karoo-Hoogland with them; and
+  Waipara Valley at Waipara. Each place is in `data/kb/appellation-areas.json`
+  with its source. 12 names remain unplaced, among them Greater Cape, which
+  spans three provinces and is left without one.
 - **More of South Africa on the map**: Vredendal, Koekenaap and Still Bay are
   placed at their town (Still Bay was some 140 km off), and with them Olifants
   River and the names inside it, approximately; in Argentina, Chapadmalal and

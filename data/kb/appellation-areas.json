@@ -1,5 +1,5 @@
 {
-  "about": "Places the register's own texts name for a registered wine name nothing more precise places: the demarcated area of its technical file in eAmbrosia, or of its single document in the Official Journal. Each place is the Wikidata item of the municipality, village or region named, with its coordinates; the build takes their median, approximate. Read by hand.",
+  "about": "Places the register's own texts name for a registered wine name nothing more precise places: the demarcated area of its technical file in eAmbrosia, or of its single document in the Official Journal. Each place is the Wikidata item of the municipality, village or region named, with its coordinates; the build takes their median, approximate. Read by hand. Beyond the EU, by the entry's id: the point a register's own document states (Sakpatenti's micro-zones), or the place its delimitation or its name names — Ontario's sub-appellations are bounded by roads and creeks, so the places they name or the village of their name; \"approximate\" where that place only stands near the area.",
   "areas": {
     "EUGI00000002011": {
       "places": [
@@ -3396,6 +3396,158 @@
         }
       ],
       "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:C_202501933"
+    },
+    "ca-beamsville-bench": {
+      "places": [
+        {
+          "latitude": 43.1658,
+          "longitude": -79.4764,
+          "name": "Beamsville",
+          "wikidata": "Q643758"
+        }
+      ],
+      "source": "https://www.ontario.ca/laws/regulation/000406"
+    },
+    "ca-creek-shores": {
+      "places": [
+        {
+          "latitude": 43.17889,
+          "longitude": -79.37417,
+          "name": "Jordan Harbour",
+          "wikidata": "Q115317200"
+        },
+        {
+          "latitude": 43.1786,
+          "longitude": -79.2725,
+          "name": "Twelve Mile Creek",
+          "wikidata": "Q7857625"
+        }
+      ],
+      "source": "https://www.ontario.ca/laws/regulation/000406"
+    },
+    "ca-lincoln-lakeshore": {
+      "places": [
+        {
+          "latitude": 43.20806,
+          "longitude": -79.65111,
+          "name": "Winona",
+          "wikidata": "Q14875486"
+        },
+        {
+          "latitude": 43.17889,
+          "longitude": -79.37417,
+          "name": "Jordan Harbour",
+          "wikidata": "Q115317200"
+        }
+      ],
+      "source": "https://www.ontario.ca/laws/regulation/000406"
+    },
+    "ca-short-hills-bench": {
+      "approximate": true,
+      "places": [
+        {
+          "latitude": 43.112,
+          "longitude": -79.2656,
+          "name": "Short Hills Provincial Park",
+          "wikidata": "Q7501804"
+        }
+      ],
+      "source": "https://www.ontario.ca/laws/regulation/000406"
+    },
+    "ca-st-davids-bench": {
+      "places": [
+        {
+          "latitude": 43.15667,
+          "longitude": -79.10889,
+          "name": "St. Davids",
+          "wikidata": "Q109229099"
+        }
+      ],
+      "source": "https://www.ontario.ca/laws/regulation/000406"
+    },
+    "ca-twenty-mile-bench": {
+      "approximate": true,
+      "places": [
+        {
+          "latitude": 43.1539,
+          "longitude": -79.3922,
+          "name": "Vineland",
+          "wikidata": "Q7932434"
+        }
+      ],
+      "source": "https://www.ontario.ca/laws/regulation/000406"
+    },
+    "ca-vinemount-ridge": {
+      "places": [
+        {
+          "latitude": 43.19806,
+          "longitude": -79.67667,
+          "name": "Vinemount",
+          "wikidata": "Q115200541"
+        }
+      ],
+      "source": "https://www.ontario.ca/laws/regulation/000406"
+    },
+    "ge-sviri": {
+      "point": {
+        "latitude": 42.116667,
+        "longitude": 42.916667,
+        "text": "The micro-zone \"Sviri\" is located in the left bank of the river Kvirila, on the coordinates – 42°07' … and 42°55' …"
+      },
+      "source": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/32279df4-5697-47d1-98b1-fd1bbe529f92.pdf"
+    },
+    "ge-teliani": {
+      "point": {
+        "latitude": 41.9,
+        "longitude": 45.583333,
+        "text": "The micro-zone Teliani is located in the middle stream of the River Alazani, on the coordinates – 41°54' … and 45°35' …"
+      },
+      "source": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/16ffbcb2-9658-47cb-bf32-987b37a27b9e.pdf"
+    },
+    "nz-waipara-valley": {
+      "places": [
+        {
+          "latitude": -43.056,
+          "longitude": 172.759,
+          "name": "Waipara",
+          "wikidata": "Q985544"
+        }
+      ],
+      "source": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waipara-valley/"
+    },
+    "za-leipoldtville-sandveld": {
+      "places": [
+        {
+          "latitude": -32.222,
+          "longitude": 18.481,
+          "name": "Leipoldtville",
+          "wikidata": "Q1536549"
+        }
+      ],
+      "source": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf"
+    },
+    "za-nieuwoudtville": {
+      "approximate": true,
+      "places": [
+        {
+          "latitude": -31.36667,
+          "longitude": 19.1,
+          "name": "Nieuwoudtville",
+          "wikidata": "Q506170"
+        }
+      ],
+      "source": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf"
+    },
+    "za-sutherland-karoo": {
+      "places": [
+        {
+          "latitude": -32.39361,
+          "longitude": 20.66139,
+          "name": "Sutherland",
+          "wikidata": "Q1750319"
+        }
+      ],
+      "source": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf"
     }
   }
 }

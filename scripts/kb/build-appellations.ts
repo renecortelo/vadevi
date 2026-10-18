@@ -72,9 +72,15 @@ const registerAreas = (
 // nothing more precise places it, those places, read by hand
 // (`appellation-areas.json`, each with its source): the median of their
 // points, or the median of the registered names it is made of.
+// Beyond the EU the same file holds, by the entry's id, a name its register
+// cannot place: the point its own document states ("on the coordinates
+// 41°54'…"), or the places its delimitation or its name names; `approximate`
+// where that place only stands near the area (a park at its edge).
 type CuratedArea = {
+  approximate?: boolean;
   parts?: string[];
   places?: { latitude: number; longitude: number; name: string; wikidata: string }[];
+  point?: { latitude: number; longitude: number; text: string };
   source: string;
 };
 const curatedAreas = (
@@ -88,13 +94,34 @@ const medianOf = (values: number[]) => {
   return sorted.length % 2 === 1 ? sorted[middle]! : (sorted[middle - 1]! + sorted[middle]!) / 2;
 };
 function curatedPoint(id: string) {
-  const places = curatedAreas[id]?.places ?? [];
+  const area = curatedAreas[id];
+  if (area?.point !== undefined) {
+    return {
+      latitude: area.point.latitude,
+      longitude: area.point.longitude,
+      pointSource: area.approximate === true ? ("area" as const) : ("place" as const),
+    };
+  }
+  const places = area?.places ?? [];
   if (places.length === 0) return null;
   return {
     latitude: medianOf(places.map((place) => place.latitude)),
     longitude: medianOf(places.map((place) => place.longitude)),
-    pointSource: places.length === 1 ? ("place" as const) : ("area" as const),
+    pointSource:
+      places.length === 1 && area?.approximate !== true ? ("place" as const) : ("area" as const),
   };
+}
+
+/** A name its register left without a point takes the one read by hand, if any. */
+function placeByHand(list: RegionEntry[]) {
+  for (const entry of list) {
+    if (entry.latitude !== null || entry.eambrosiaId !== null) continue;
+    const point = curatedPoint(entry.id);
+    if (point === null) continue;
+    entry.latitude = point.latitude;
+    entry.longitude = point.longitude;
+    entry.pointSource = point.pointSource;
+  }
 }
 
 function isoDate(value: string | null): string | null {
@@ -407,6 +434,7 @@ zaList.records.forEach((area, index) => {
   const within = area.within.map((name) => zaIds.get(name)!).filter(Boolean);
   if (within.length > 0) zaEntries[index]!.within = within;
 });
+placeByHand(zaEntries);
 // The largest last: a region's middle is that of its districts' and wards'.
 for (const entry of [...zaEntries].sort(
   (left, right) =>
@@ -732,6 +760,7 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
       ...(area.within.length === 0 ? {} : { within: area.within.map((key) => `${prefix}-${key}`) }),
     };
   });
+  placeByHand(registered);
   // One the map cannot find stands, approximately, amid the areas it holds
   // that have a point, or else at the area it lies in.
   const own = new Set(
@@ -943,6 +972,9 @@ for (const entry of entries) {
   }
 }
 console.info(`  ${described} names described by a sentence of their country's wine article.`);
+
+// The other registers' names a reading by hand places (New Zealand's, the UK's).
+placeByHand(entries);
 
 // A registered name the register describes as several others ("Istočna
 // kontinentalna Hrvatska consists of two subregions: Hrvatsko Podunavlje and
