@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { acceptProposal } from "../src/services/voice-proposal";
+import { acceptProposal, spokenDay } from "../src/services/voice-proposal";
 
 /**
  * What a model proposes from a spoken note stands only field by field: a value
@@ -315,5 +315,34 @@ describe("a spoken note's proposal", () => {
     // The nose and the mouth in the taster's words, though the model gave neither.
     expect(proposal.fields.noseText?.value).toBe("huele a vainilla, roble y un poco de madera");
     expect(proposal.fields.palateText?.value).toBe("Taninos suaves. un final algo largo");
+  });
+
+  it("counts the tasting's day from the words that say it, in every language", () => {
+    // Saturday 17 October 2026.
+    const saturday = "2026-10-17";
+    expect(spokenDay("last Saturday", saturday)).toBe("2026-10-10");
+    expect(spokenDay("el viernes", saturday)).toBe("2026-10-16");
+    expect(spokenDay("ayer", saturday)).toBe("2026-10-16");
+    expect(spokenDay("antes de ayer", saturday)).toBe("2026-10-15");
+    expect(spokenDay("avant-hier", saturday)).toBe("2026-10-15");
+    expect(spokenDay("vor drei Tagen", saturday)).toBe("2026-10-14");
+    expect(spokenDay("tre giorni fa", saturday)).toBe("2026-10-14");
+    expect(spokenDay("há dois dias", saturday)).toBe("2026-10-15");
+    expect(spokenDay("afgelopen zondag", saturday)).toBe("2026-10-11");
+    expect(spokenDay("na terça-feira", saturday)).toBe("2026-10-13");
+    expect(spokenDay("aquesta nit", saturday)).toBe(saturday);
+    // Two days named, or none: the model's answer stands.
+    expect(spokenDay("la abrí ayer y la pruebo hoy", saturday)).toBeNull();
+    expect(spokenDay("una botella de 2019", saturday)).toBeNull();
+
+    const proposal = acceptProposal(
+      {
+        fields: [{ certain: true, name: "tastedAt", quote: "last Saturday", value: "2026-10-11" }],
+        wineCount: 1,
+      },
+      "I tasted it last Saturday with friends.",
+      saturday,
+    );
+    expect(proposal.fields.tastedAt?.value).toBe("2026-10-10");
   });
 });

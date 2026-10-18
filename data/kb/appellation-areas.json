@@ -3488,6 +3488,30 @@
       ],
       "source": "https://www.ontario.ca/laws/regulation/000406"
     },
+    "ch-zurichsee": {
+      "approximate": true,
+      "places": [
+        {
+          "latitude": 47.2475,
+          "longitude": 8.6775,
+          "name": "Lake Zurich",
+          "wikidata": "Q14407"
+        }
+      ],
+      "source": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+    },
+    "gb-darnibole": {
+      "approximate": true,
+      "places": [
+        {
+          "latitude": 50.475665,
+          "longitude": -4.785262,
+          "name": "Camel Valley Vineyard",
+          "wikidata": "Q137392371"
+        }
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016D1208(01)"
+    },
     "ge-sviri": {
       "point": {
         "latitude": 42.116667,
@@ -3504,6 +3528,15 @@
       },
       "source": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/16ffbcb2-9658-47cb-bf32-987b37a27b9e.pdf"
     },
+    "nz-north-canterbury": {
+      "boundary": true,
+      "point": {
+        "latitude": -43.07131,
+        "longitude": 172.346324,
+        "text": "A point inside the boundary IPONZ publishes for the GI (geographical data of registration 1016, North_Canterbury.json), computed as the atlas computes one inside an AVA's."
+      },
+      "source": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/north-canterbury/"
+    },
     "nz-waipara-valley": {
       "places": [
         {
@@ -3514,6 +3547,15 @@
         }
       ],
       "source": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waipara-valley/"
+    },
+    "nz-waitaki-valley-north-otago": {
+      "boundary": true,
+      "point": {
+        "latitude": -44.72316,
+        "longitude": 170.427485,
+        "text": "A point inside the boundary IPONZ publishes for the GI (geographical data of registration 1019), computed as the atlas computes one inside an AVA's."
+      },
+      "source": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waitaki-valley-north-otago/"
     },
     "za-leipoldtville-sandveld": {
       "places": [

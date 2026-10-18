@@ -78,6 +78,8 @@ const registerAreas = (
 // where that place only stands near the area (a park at its edge).
 type CuratedArea = {
   approximate?: boolean;
+  /** The point lies inside the boundary the register itself publishes. */
+  boundary?: boolean;
   parts?: string[];
   places?: { latitude: number; longitude: number; name: string; wikidata: string }[];
   point?: { latitude: number; longitude: number; text: string };
@@ -99,7 +101,12 @@ function curatedPoint(id: string) {
     return {
       latitude: area.point.latitude,
       longitude: area.point.longitude,
-      pointSource: area.approximate === true ? ("area" as const) : ("place" as const),
+      pointSource:
+        area.boundary === true
+          ? ("boundary" as const)
+          : area.approximate === true
+            ? ("area" as const)
+            : ("place" as const),
     };
   }
   const places = area?.places ?? [];

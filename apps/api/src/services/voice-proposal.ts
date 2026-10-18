@@ -86,6 +86,168 @@ export function comparable(text: string): string {
 const days = (from: string, to: string) => (Date.parse(to) - Date.parse(from)) / 86_400_000;
 
 /**
+ * The day a tasting was, counted from the words that say it — the model's
+ * arithmetic missed by one ("last Saturday" on a Saturday, third batch, 18
+ * October 2026). The model finds which words name the tasting's day; this
+ * counts back from the reader's own "today". Written as `comparable` writes
+ * text. The longer phrases first: "antes de ayer" holds "ayer".
+ */
+const daysBack: [RegExp, number][] = [
+  [
+    /\b(anteayer|antes de ayer|abans d ahir|abans dahir|the day before yesterday|avant hier|l altro ieri|ieri l altro|altroieri|vorgestern|eergisteren|anteontem)\b/,
+    2,
+  ],
+  [/\b(ayer|ahir|yesterday|hier|ieri|gestern|gisteren|ontem)\b/, 1],
+  [
+    /\b(hoy|avui|today|tonight|aujourd hui|ce soir|oggi|stasera|heute|vandaag|hoje|esta noche|aquesta nit)\b/,
+    0,
+  ],
+];
+const weekdays: Record<string, number> = {
+  domingo: 0,
+  diumenge: 0,
+  sunday: 0,
+  dimanche: 0,
+  domenica: 0,
+  sonntag: 0,
+  zondag: 0,
+  lunes: 1,
+  dilluns: 1,
+  monday: 1,
+  lundi: 1,
+  lunedi: 1,
+  montag: 1,
+  maandag: 1,
+  martes: 2,
+  dimarts: 2,
+  tuesday: 2,
+  mardi: 2,
+  martedi: 2,
+  dienstag: 2,
+  dinsdag: 2,
+  miercoles: 3,
+  dimecres: 3,
+  wednesday: 3,
+  mercredi: 3,
+  mercoledi: 3,
+  mittwoch: 3,
+  woensdag: 3,
+  jueves: 4,
+  dijous: 4,
+  thursday: 4,
+  jeudi: 4,
+  giovedi: 4,
+  donnerstag: 4,
+  donderdag: 4,
+  viernes: 5,
+  divendres: 5,
+  friday: 5,
+  vendredi: 5,
+  venerdi: 5,
+  freitag: 5,
+  vrijdag: 5,
+  sabado: 6,
+  dissabte: 6,
+  saturday: 6,
+  samedi: 6,
+  sabato: 6,
+  samstag: 6,
+  sonnabend: 6,
+  zaterdag: 6,
+  "segunda feira": 1,
+  "terca feira": 2,
+  "quarta feira": 3,
+  "quinta feira": 4,
+  "sexta feira": 5,
+};
+const counts: Record<string, number> = {
+  un: 1,
+  una: 1,
+  uno: 1,
+  one: 1,
+  um: 1,
+  uma: 1,
+  een: 1,
+  einem: 1,
+  einen: 1,
+  dos: 2,
+  two: 2,
+  deux: 2,
+  due: 2,
+  zwei: 2,
+  twee: 2,
+  dois: 2,
+  duas: 2,
+  tres: 3,
+  three: 3,
+  trois: 3,
+  tre: 3,
+  drei: 3,
+  drie: 3,
+  cuatro: 4,
+  quatre: 4,
+  four: 4,
+  quattro: 4,
+  vier: 4,
+  quatro: 4,
+  cinco: 5,
+  cinc: 5,
+  five: 5,
+  cinq: 5,
+  cinque: 5,
+  funf: 5,
+  vijf: 5,
+  seis: 6,
+  sis: 6,
+  six: 6,
+  sei: 6,
+  sechs: 6,
+  zes: 6,
+  siete: 7,
+  set: 7,
+  seven: 7,
+  sept: 7,
+  sette: 7,
+  sieben: 7,
+  zeven: 7,
+  sete: 7,
+};
+const agoPhrase =
+  /\b(?:hace|fa|il y a|vor|ha)\s+(\w+)\s+(?:dias|dies|jours|tagen|dias)\b|\b(\w+)\s+(?:days ago|giorni fa|dagen geleden|dias atras)\b/;
+
+/**
+ * The date the words name, counted back from `today`; null when they name
+ * none, or more than one ("I opened it yesterday and taste it today").
+ */
+export function spokenDay(words: string, today: string): string | null {
+  const said = comparable(words);
+  const back = (count: number) =>
+    new Date(Date.parse(`${today}T12:00:00Z`) - count * 86_400_000).toISOString().slice(0, 10);
+  const named = new Set<string>();
+  let rest = said;
+  for (const [pattern, count] of daysBack) {
+    if (pattern.test(rest)) {
+      named.add(back(count));
+      // "antes de ayer" is not also "ayer".
+      rest = rest.replace(new RegExp(pattern.source, "g"), " ");
+    }
+  }
+  const ago = agoPhrase.exec(said);
+  const amount = ago === null ? undefined : (ago[1] ?? ago[2]);
+  if (amount !== undefined) {
+    const count = /^\d+$/.test(amount) ? Number(amount) : counts[amount];
+    if (count !== undefined && count >= 0 && count <= 60) named.add(back(count));
+  }
+  const todayWeekday = new Date(`${today}T12:00:00Z`).getUTCDay();
+  for (const [name, weekday] of Object.entries(weekdays)) {
+    if (!new RegExp(`\\b${name}\\b`).test(said)) continue;
+    // The last such day before today: "last Saturday" on a Saturday is a week ago.
+    named.add(back(((todayWeekday - weekday + 6) % 7) + 1));
+  }
+  return named.size === 1 ? [...named][0]! : null;
+}
+
+/**
  * Words that hedge what follows, in the app's languages: a value said after
  * one is offered as a guess, whatever the model marked. Models missed one in
  * three of eight test notes ("Diria que hi ha garnatxa…"). Written as
@@ -403,6 +565,12 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
         certain === false || hedges.test(comparable(quote as string)) ? "ambiguous" : "explicit",
       value: fitted,
     };
+  }
+  // The tasting's day, counted from the words the model found for it.
+  const tasted = proposal.fields.tastedAt;
+  if (tasted !== undefined) {
+    const day = spokenDay(tasted.quote, today);
+    if (day !== null) tasted.value = day;
   }
   // A name must have been said: the model answered "local region" for "de
   // aquí de la zona" (a real note, 18 October 2026). Half its words heard is

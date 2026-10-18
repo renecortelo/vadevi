@@ -81,6 +81,11 @@ has the reasons.
   replaces what the first one filled and the reader left alone, never what
   they typed; the quick log has «Clear the form»; and a draft begun on
   another day, its date never changed, is taken up today.
+- **The day a tasting was, counted, not guessed**: «ayer», «antes de
+  ayer», «el sábado», «hace tres días» and their like in the app's eight
+  languages are counted back from the reader's own day by the server; the
+  model only finds which words name it (it once put "last Saturday" a day
+  off). Words naming two days leave the model's answer.
 - **Send a spoken note to improve voice**: beside a voice note's result, a
   button keeps that one note — the transcript as corrected, what the app
   proposed and the form as left, never the audio — for thirty days, so real
@@ -173,7 +178,7 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
-- **Fifteen more names on the map**: Teliani and Sviri at the coordinates
+- **Nineteen more names on the map**: Teliani and Sviri at the coordinates
   their Sakpatenti documents state; Ontario's sub-appellations, which its
   regulation bounds by roads and creeks, at the places it names or the
   village of their name (Niagara Escarpment and West Niagara amid them, and
@@ -182,8 +187,13 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   (Nieuwoudtville approximately: SAWIS lists it under the Western Cape, the
   map puts the town in the Northern Cape), Karoo-Hoogland with them; and
   Waipara Valley at Waipara. Each place is in `data/kb/appellation-areas.json`
-  with its source. 12 names remain unplaced, among them Greater Cape, which
-  spans three provinces and is left without one.
+  with its source. Then North Canterbury and Waitaki Valley North Otago
+  inside the boundaries IPONZ publishes for them, Darnibole at the Camel
+  Valley winery its single document says it adjoins, and Zürichsee at its
+  lake, approximately. 8 names remain unplaced, for want of a source that
+  places them: Greater Cape, which spans three provinces; four South African
+  names the Wine of Origin list gives without places; Patagonia and Valles
+  Calchaquíes, whose resolutions name no province; and Valle de Calafia.
 - **More of South Africa on the map**: Vredendal, Koekenaap and Still Bay are
   placed at their town (Still Bay was some 140 km off), and with them Olifants
   River and the names inside it, approximately; in Argentina, Chapadmalal and

@@ -279090,9 +279090,9 @@
     "giType": "GI",
     "grapes": [],
     "id": "nz-north-canterbury",
-    "latitude": null,
+    "latitude": -43.07131,
     "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/north-canterbury/",
-    "longitude": null,
+    "longitude": 172.346324,
     "name": "North Canterbury",
     "names": [
       {
@@ -279101,7 +279101,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "boundary",
     "prominence": 0,
     "registerRef": "1016",
     "registeredOn": "2020-06-29",
@@ -279143,9 +279143,9 @@
     "giType": "GI",
     "grapes": [],
     "id": "nz-waitaki-valley-north-otago",
-    "latitude": null,
+    "latitude": -44.72316,
     "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waitaki-valley-north-otago/",
-    "longitude": null,
+    "longitude": 170.427485,
     "name": "Waitaki Valley North Otago",
     "names": [
       {
@@ -279159,7 +279159,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "boundary",
     "prominence": 1,
     "registerRef": "1019",
     "registeredOn": "2018-12-03",
@@ -292218,9 +292218,9 @@
     "giType": "PDO",
     "grapes": [],
     "id": "gb-darnibole",
-    "latitude": null,
+    "latitude": 50.475665,
     "legalUrl": "https://www.gov.uk/protected-food-drink-names/darnibole",
-    "longitude": null,
+    "longitude": -4.785262,
     "name": "Darnibole",
     "names": [
       {
@@ -292229,7 +292229,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 0,
     "registeredOn": "2021-03-10",
     "summaries": {},
@@ -295257,9 +295257,9 @@
     "giType": "AOC",
     "grapes": [],
     "id": "ch-zurichsee",
-    "latitude": null,
+    "latitude": 47.2475,
     "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
-    "longitude": null,
+    "longitude": 8.6775,
     "name": "Zürichsee",
     "names": [
       {
@@ -295268,7 +295268,7 @@
         "source": "register"
       }
     ],
-    "pointSource": null,
+    "pointSource": "area",
     "prominence": 1,
     "registerLevel": "regional",
     "registeredOn": null,
