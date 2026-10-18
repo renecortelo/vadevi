@@ -265899,8 +265899,13 @@
     "latitude": 42.36412901634552,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.132",
     "longitude": -123.13167241703826,
-    "name": "Rouge Valley",
+    "name": "Rogue Valley",
     "names": [
+      {
+        "locale": "*",
+        "name": "Rogue Valley",
+        "source": "register"
+      },
       {
         "locale": "*",
         "name": "Rouge Valley",
@@ -265908,11 +265913,50 @@
       }
     ],
     "pointSource": "boundary",
-    "prominence": 0,
+    "prominence": 2,
     "registerRef": "27 CFR 9.132",
     "registeredOn": "1991-02-22",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "en": {
+        "text": "Rogue Valley is an American Viticultural Area (AVA)  located in Jackson  and Josephine Counties, within Southern Oregon.",
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      },
+      "de": {
+        "text": "Das Rogue Valley AVA ist ein Weinanbaugebiet im Rogue Valley im Süden des US-Bundesstaates Oregon. Der moderne Weinbau begann in Oregon etwa Mitte der 1960er, die Anerkennung als American Viticultural Area (AVA) erfolgte im Jahre 2000.",
+        "url": "https://de.wikipedia.org/wiki/Rogue_Valley_AVA"
+      },
+      "es": {
+        "text": "Rogue Valley es una American Viticultural Area (AVA) situada en los condados de Jackson y Josephine, en el sur de Oregón.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      },
+      "ca": {
+        "text": "Rogue Valley és una American Viticultural Area (AVA) situada als comtats de Jackson i Josephine, al sud d'Oregon.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      },
+      "fr": {
+        "text": "Rogue Valley est une American Viticultural Area (AVA) située dans les comtés de Jackson et de Josephine, dans le sud de l'Oregon.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      },
+      "it": {
+        "text": "Rogue Valley è una American Viticultural Area (AVA) situata nelle contee di Jackson e Josephine, nell'Oregon meridionale.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      },
+      "nl": {
+        "text": "Rogue Valley is een American Viticultural Area (AVA) in de county's Jackson en Josephine, in het zuiden van Oregon.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      },
+      "pt": {
+        "text": "Rogue Valley é uma American Viticultural Area (AVA) situada nos condados de Jackson e Josephine, no sul do Oregon.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA"
+      }
+    },
+    "wikidataId": "Q266538",
     "within": [
       "us-southern-oregon"
     ]

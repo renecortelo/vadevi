@@ -22971,6 +22971,19 @@
         "pt-PT": "Rocky Reach é uma American Viticultural Area (AVA) situada em partes dos condados de Chelan e Douglas, entre as cidades de Chelan e Wenatchee, no centro do estado de Washington."
       }
     },
+    "us-rouge-valley": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Rogue_Valley_AVA",
+      "original": "Rogue Valley is an American Viticultural Area (AVA)  located in Jackson  and Josephine Counties, within Southern Oregon.",
+      "texts": {
+        "es": "Rogue Valley es una American Viticultural Area (AVA) situada en los condados de Jackson y Josephine, en el sur de Oregón.",
+        "ca": "Rogue Valley és una American Viticultural Area (AVA) situada als comtats de Jackson i Josephine, al sud d'Oregon.",
+        "fr": "Rogue Valley est une American Viticultural Area (AVA) située dans les comtés de Jackson et de Josephine, dans le sud de l'Oregon.",
+        "it": "Rogue Valley è una American Viticultural Area (AVA) situata nelle contee di Jackson e Josephine, nell'Oregon meridionale.",
+        "nl": "Rogue Valley is een American Viticultural Area (AVA) in de county's Jackson en Josephine, in het zuiden van Oregon.",
+        "pt-PT": "Rogue Valley é uma American Viticultural Area (AVA) situada nos condados de Jackson e Josephine, no sul do Oregon."
+      }
+    },
     "us-royal-slope": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Slope_AVA",

@@ -308,6 +308,14 @@ function wikipediaSummaries(qid: string | null): {
   return { leads: Object.keys(leads).length, summaries };
 }
 
+/**
+ * A name the regulation's own "(a) Name" paragraph misspells, and the
+ * spelling its section heading and every other line use: 27 CFR 9.132 names
+ * "Rouge Valley" once and "Rogue Valley" everywhere else (18 October 2026).
+ * The misspelling stays as one of its names; the id stays as it was.
+ */
+const avaNameErrata: Record<string, string> = { "Rouge Valley": "Rogue Valley" };
+
 const avaIds = new Map<string, string>();
 for (const ava of avas) {
   const id = worldId("us", ava.name);
@@ -322,8 +330,11 @@ for (const ava of avas) {
     latitude: ava.latitude,
     legalUrl: `https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-${ava.section}`,
     longitude: ava.longitude,
-    name: ava.name,
+    name: avaNameErrata[ava.name] ?? ava.name,
     names: [
+      ...(avaNameErrata[ava.name] === undefined
+        ? []
+        : [{ locale: "*", name: avaNameErrata[ava.name]!, source: "register" as const }]),
       { locale: "*", name: ava.name, source: "register" as const },
       ...Object.entries(ava.labels).map(([locale, name]) => ({
         locale,
