@@ -25,6 +25,18 @@ const articles: Record<string, string[]> = {
   RO: ["Romanian wine"],
   SI: ["Slovenian wine"],
   SK: ["Slovak wine"],
+  // Beyond the EU (18 October 2026): the registers' names no article of
+  // their own describes.
+  AR: ["Argentine wine", "Mendoza wine"],
+  AU: ["Australian wine", "South Australian wine", "Victorian wine", "Western Australian wine"],
+  BR: ["Brazilian wine"],
+  CA: ["Canadian wine", "Ontario wine", "British Columbia wine"],
+  CH: ["Swiss wine"],
+  CL: ["Chilean wine"],
+  GE: ["Georgian wine"],
+  MD: ["Moldovan wine"],
+  NZ: ["New Zealand wine"],
+  ZA: ["South African wine"],
 };
 
 const texts: Record<string, { text: string; title: string; url: string }[]> = {};

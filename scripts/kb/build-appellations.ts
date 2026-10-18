@@ -947,7 +947,15 @@ for (const entry of entries) {
   if (Object.keys(entry.summaries).length > 0) continue;
   // Only where the name's own articles leave almost nothing: elsewhere the
   // country article's sentences add more noise than description.
-  if (!["BG", "CY", "GR", "HR", "RO", "SI", "SK"].includes(entry.countryCode)) continue;
+  // Beyond the EU too (18 October 2026), where most names have no article.
+  if (
+    ![
+      ...["BG", "CY", "GR", "HR", "RO", "SI", "SK"],
+      ...["AR", "AU", "BR", "CA", "CH", "CL", "GE", "MD", "NZ", "ZA"],
+    ].includes(entry.countryCode)
+  ) {
+    continue;
+  }
   const articles = countryArticles[entry.countryCode] ?? [];
   if (articles.length === 0) continue;
   const keys = [
@@ -1033,6 +1041,17 @@ const notTheirSummary: Record<string, string[] | "all"> = {
   EUGI00000004201: ["pt"],
   // Blaye's French article is that of Blaye Côtes de Bordeaux, another name.
   EUGI00000001983: ["fr"],
+  // Country-article sentences read by hand and found not to describe the
+  // name (18 October 2026): Franschhoek's and Wellington's lean on the
+  // sentence before ("its wards"), Stellenbosch's is of its western reaches
+  // only, the Niagara Escarpment's is Bruce County's, and Gurjaani's and
+  // Kvareli's are about Saamo and Tsinandali.
+  "za-franschhoek": ["en"],
+  "za-wellington": ["en"],
+  "za-stellenbosch": ["en"],
+  "ca-niagara-escarpment": ["en"],
+  "ge-gurjaani": ["en"],
+  "ge-kvareli": ["en"],
 };
 for (const entry of entries) {
   const dropped = notTheirSummary[entry.eambrosiaId ?? entry.id];
@@ -1061,8 +1080,9 @@ for (const [text, holders] of sharing) {
     // pieces the register's hyphenated names are split into: "Beaune" is in
     // "Chorey-lès-Beaune" and says nothing of it.
     const pieces = new Set(entry.name.split("-").map((piece) => matchKey(piece)));
+    // A wine region no register holds is named by the article it comes from.
     const own = entry.names
-      .filter((name) => name.source === "register")
+      .filter((name) => name.source === "register" || name.source === "article")
       .map((name) => matchKey(transliterate(name.name)))
       .filter((key) => key.length > 2 && (key === matchKey(entry.name) || !pieces.has(key)));
     if (own.some((key) => body.includes(` ${key} `))) continue;
@@ -1120,7 +1140,7 @@ const journalSummariesPath = resolve("data/kb/register-summaries.json");
 const journalSummaries = existsSync(journalSummariesPath)
   ? (JSON.parse(readFileSync(journalSummariesPath, "utf8")) as Record<
       string,
-      { summaries: Record<string, { text: string; url: string }> }
+      { summaries: Record<string, { license?: string; text: string; url: string }> }
     >)
   : {};
 let fromJournal = 0;
@@ -1129,7 +1149,8 @@ for (const entry of entries) {
   if (journal === undefined || Object.keys(entry.summaries).length > 0) continue;
   for (const [locale, summary] of Object.entries(journal.summaries)) {
     const key = locale === "pt-PT" ? "pt" : locale;
-    entry.summaries[key] = { ...summary, license: "EC-reuse-2011-833" };
+    // The Journal's, unless the entry names its own (the UK's, under the OGL).
+    entry.summaries[key] = { ...summary, license: summary.license ?? "EC-reuse-2011-833" };
   }
   fromJournal += 1;
 }
@@ -1143,7 +1164,13 @@ const journalTranslations = (
   JSON.parse(readFileSync(resolve("data/kb/journal-translations.json"), "utf8")) as {
     regions: Record<
       string,
-      { from: string; original: string; sourceUrl: string; texts: Record<string, string> }
+      {
+        from: string;
+        license?: string;
+        original: string;
+        sourceUrl: string;
+        texts: Record<string, string>;
+      }
     >;
   }
 ).regions;
@@ -1152,16 +1179,12 @@ for (const entry of entries) {
   const translation = journalTranslations[entry.eambrosiaId ?? entry.id];
   if (translation === undefined) continue;
   const from = entry.summaries[translation.from === "pt-PT" ? "pt" : translation.from];
-  if (from?.text !== translation.original || from.license !== "EC-reuse-2011-833") continue;
+  const license = translation.license ?? "EC-reuse-2011-833";
+  if (from?.text !== translation.original || from.license !== license) continue;
   for (const [locale, text] of Object.entries(translation.texts)) {
     const key = locale === "pt-PT" ? "pt" : locale;
     if (entry.summaries[key] !== undefined) continue;
-    entry.summaries[key] = {
-      license: "EC-reuse-2011-833",
-      text,
-      translated: true,
-      url: translation.sourceUrl,
-    };
+    entry.summaries[key] = { license, text, translated: true, url: translation.sourceUrl };
     journalTranslated += 1;
   }
 }

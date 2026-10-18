@@ -18024,6 +18024,20 @@
         "pt-PT": "Luján de Cuyo é uma denominação de origem controlada (DOC) argentina para vinhos feitos em grande maioria com a casta malbec (no mínimo 85%) e provenientes da zona de produção homónima da província de Mendoza. É a primeira DOC vínica não só da Argentina, mas do continente americano, um marco importante na história dos vinhos do Novo Mundo."
       }
     },
+    "ar-maipu": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Argentine_wine",
+      "original": "The cooler climate and lower salinity in the soils of the Maipú region has been receiving attention for the quality of its Cabernet Sauvignon.",
+      "texts": {
+        "es": "El clima más fresco y la menor salinidad de los suelos de la región de Maipú han llamado la atención por la calidad de su cabernet sauvignon.",
+        "ca": "El clima més fresc i la menor salinitat dels sòls de la regió de Maipú han cridat l'atenció per la qualitat del seu cabernet sauvignon.",
+        "fr": "Le climat plus frais et la salinité plus faible des sols de la région de Maipú attirent l'attention pour la qualité de son cabernet sauvignon.",
+        "de": "Das kühlere Klima und der geringere Salzgehalt der Böden der Region Maipú haben wegen der Qualität ihres Cabernet Sauvignon Aufmerksamkeit erregt.",
+        "it": "Il clima più fresco e la minore salinità dei suoli della regione di Maipú hanno attirato l'attenzione per la qualità del suo cabernet sauvignon.",
+        "nl": "Het koelere klimaat en het lagere zoutgehalte van de bodems van de regio Maipú trekken de aandacht door de kwaliteit van haar cabernet sauvignon.",
+        "pt-PT": "O clima mais fresco e a menor salinidade dos solos da região de Maipú têm atraído atenção pela qualidade do seu cabernet sauvignon."
+      }
+    },
     "ar-mendoza": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Mendoza_wine",
@@ -18035,6 +18049,90 @@
         "it": "La provincia di Mendoza è la regione vinicola più importante dell'Argentina e rappresenta quasi due terzi dell'intera produzione vinicola del paese. Situati sulle pendici orientali delle Ande, all'ombra dell'Aconcagua, i vigneti vi sono piantati ad alcune delle altitudini più elevate del mondo, con un'altitudine media di 600–1.100 metri (2.000–3.600 ft) sul livello del mare.",
         "de": "Die Provinz Mendoza ist das wichtigste Weinbaugebiet Argentiniens und liefert fast zwei Drittel der gesamten Weinproduktion des Landes. In den östlichen Ausläufern der Anden, im Schatten des Aconcagua, stehen die Reben in einigen der höchsten Lagen der Welt, im Durchschnitt 600–1.100 Meter (2.000–3.600 ft) über dem Meeresspiegel.",
         "pt-PT": "A província de Mendoza é a mais importante região vinícola da Argentina, representando quase dois terços de toda a produção de vinho do país. Situadas nos contrafortes orientais dos Andes, à sombra do Aconcágua, as vinhas são aí plantadas a algumas das maiores altitudes do mundo, com uma altitude média de 600–1100 metros (2000–3600 ft) acima do nível do mar."
+      }
+    },
+    "ar-neuquen": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Argentine_wine",
+      "original": "In the cooler Patagonia region which contains the winemaking provinces of Río Negro and Neuquén, the soil is more chalky.",
+      "texts": {
+        "es": "En la región más fresca de la Patagonia, que comprende las provincias vitivinícolas de Río Negro y Neuquén, el suelo es más calcáreo.",
+        "ca": "A la regió més fresca de la Patagònia, que comprèn les províncies vitivinícoles de Río Negro i Neuquén, el sòl és més calcari.",
+        "fr": "Dans la région plus fraîche de Patagonie, qui comprend les provinces viticoles de Río Negro et de Neuquén, le sol est plus calcaire.",
+        "de": "In der kühleren Region Patagonien mit den Weinbauprovinzen Río Negro und Neuquén ist der Boden kalkhaltiger.",
+        "it": "Nella più fresca regione della Patagonia, che comprende le province vinicole di Río Negro e Neuquén, il suolo è più calcareo.",
+        "nl": "In de koelere regio Patagonië, met de wijnprovincies Río Negro en Neuquén, is de bodem kalkrijker.",
+        "pt-PT": "Na região mais fresca da Patagónia, que compreende as províncias vitivinícolas de Río Negro e Neuquén, o solo é mais calcário."
+      }
+    },
+    "ar-patagonia": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Argentine_wine",
+      "original": "In the cooler Patagonia region which contains the winemaking provinces of Río Negro and Neuquén, the soil is more chalky.",
+      "texts": {
+        "es": "En la región más fresca de la Patagonia, que comprende las provincias vitivinícolas de Río Negro y Neuquén, el suelo es más calcáreo.",
+        "ca": "A la regió més fresca de la Patagònia, que comprèn les províncies vitivinícoles de Río Negro i Neuquén, el sòl és més calcari.",
+        "fr": "Dans la région plus fraîche de Patagonie, qui comprend les provinces viticoles de Río Negro et de Neuquén, le sol est plus calcaire.",
+        "de": "In der kühleren Region Patagonien mit den Weinbauprovinzen Río Negro und Neuquén ist der Boden kalkhaltiger.",
+        "it": "Nella più fresca regione della Patagonia, che comprende le province vinicole di Río Negro e Neuquén, il suolo è più calcareo.",
+        "nl": "In de koelere regio Patagonië, met de wijnprovincies Río Negro en Neuquén, is de bodem kalkrijker.",
+        "pt-PT": "Na região mais fresca da Patagónia, que compreende as províncias vitivinícolas de Río Negro e Neuquén, o solo é mais calcário."
+      }
+    },
+    "ar-rio-negro": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Argentine_wine",
+      "original": "In the cooler Patagonia region which contains the winemaking provinces of Río Negro and Neuquén, the soil is more chalky.",
+      "texts": {
+        "es": "En la región más fresca de la Patagonia, que comprende las provincias vitivinícolas de Río Negro y Neuquén, el suelo es más calcáreo.",
+        "ca": "A la regió més fresca de la Patagònia, que comprèn les províncies vitivinícoles de Río Negro i Neuquén, el sòl és més calcari.",
+        "fr": "Dans la région plus fraîche de Patagonie, qui comprend les provinces viticoles de Río Negro et de Neuquén, le sol est plus calcaire.",
+        "de": "In der kühleren Region Patagonien mit den Weinbauprovinzen Río Negro und Neuquén ist der Boden kalkhaltiger.",
+        "it": "Nella più fresca regione della Patagonia, che comprende le province vinicole di Río Negro e Neuquén, il suolo è più calcareo.",
+        "nl": "In de koelere regio Patagonië, met de wijnprovincies Río Negro en Neuquén, is de bodem kalkrijker.",
+        "pt-PT": "Na região mais fresca da Patagónia, que compreende as províncias vitivinícolas de Río Negro e Neuquén, o solo é mais calcário."
+      }
+    },
+    "ar-salta": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Argentine_wine",
+      "original": "Torrontés is another typically Argentine grape and is mostly found in the provinces of La Rioja, San Juan, and Salta.",
+      "texts": {
+        "es": "El torrontés es otra uva típicamente argentina y se encuentra sobre todo en las provincias de La Rioja, San Juan y Salta.",
+        "ca": "El torrontés és un altre raïm típicament argentí i es troba sobretot a les províncies de La Rioja, San Juan i Salta.",
+        "fr": "Le torrontés est un autre cépage typiquement argentin, que l'on trouve surtout dans les provinces de La Rioja, de San Juan et de Salta.",
+        "de": "Torrontés ist eine weitere typisch argentinische Rebsorte und findet sich vor allem in den Provinzen La Rioja, San Juan und Salta.",
+        "it": "Il torrontés è un altro vitigno tipicamente argentino e si trova soprattutto nelle province di La Rioja, San Juan e Salta.",
+        "nl": "Torrontés is nog een typisch Argentijnse druif en komt vooral voor in de provincies La Rioja, San Juan en Salta.",
+        "pt-PT": "O torrontés é outra casta tipicamente argentina e encontra-se sobretudo nas províncias de La Rioja, San Juan e Salta."
+      }
+    },
+    "ar-san-juan": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Argentine_wine",
+      "original": "Torrontés is another typically Argentine grape and is mostly found in the provinces of La Rioja, San Juan, and Salta.",
+      "texts": {
+        "es": "El torrontés es otra uva típicamente argentina y se encuentra sobre todo en las provincias de La Rioja, San Juan y Salta.",
+        "ca": "El torrontés és un altre raïm típicament argentí i es troba sobretot a les províncies de La Rioja, San Juan i Salta.",
+        "fr": "Le torrontés est un autre cépage typiquement argentin, que l'on trouve surtout dans les provinces de La Rioja, de San Juan et de Salta.",
+        "de": "Torrontés ist eine weitere typisch argentinische Rebsorte und findet sich vor allem in den Provinzen La Rioja, San Juan und Salta.",
+        "it": "Il torrontés è un altro vitigno tipicamente argentino e si trova soprattutto nelle province di La Rioja, San Juan e Salta.",
+        "nl": "Torrontés is nog een typisch Argentijnse druif en komt vooral voor in de provincies La Rioja, San Juan en Salta.",
+        "pt-PT": "O torrontés é outra casta tipicamente argentina e encontra-se sobretudo nas províncias de La Rioja, San Juan e Salta."
+      }
+    },
+    "ar-valle-de-cafayate": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Argentine_wine",
+      "original": "In recent years the Salta region, and particularly its sub-region of Cafayate, have been gaining the most worldwide attention the quality of its full bodied whites made from Torrontés Riojano as well as its fruity reds made from Cabernet Sauvignon and Tannat.",
+      "texts": {
+        "es": "En los últimos años la región de Salta, y en particular su subregión de Cafayate, ha atraído la mayor atención mundial por la calidad de sus blancos con cuerpo de torrontés riojano y de sus tintos afrutados de cabernet sauvignon y tannat.",
+        "ca": "En els darrers anys la regió de Salta, i en particular la seva subregió de Cafayate, ha atret la major atenció mundial per la qualitat dels seus blancs amb cos de torrontés riojano i dels seus negres afruitats de cabernet sauvignon i tannat.",
+        "fr": "Ces dernières années, la région de Salta, et en particulier sa sous-région de Cafayate, a attiré le plus l'attention du monde pour la qualité de ses blancs corsés de torrontés riojano et de ses rouges fruités de cabernet sauvignon et de tannat.",
+        "de": "In den letzten Jahren hat die Region Salta, besonders ihre Subregion Cafayate, weltweit die meiste Aufmerksamkeit für die Qualität ihrer vollmundigen Weißweine aus Torrontés Riojano und ihrer fruchtigen Rotweine aus Cabernet Sauvignon und Tannat erhalten.",
+        "it": "Negli ultimi anni la regione di Salta, e in particolare la sua subregione di Cafayate, ha attirato la maggiore attenzione mondiale per la qualità dei suoi bianchi corposi di torrontés riojano e dei suoi rossi fruttati di cabernet sauvignon e tannat.",
+        "nl": "De laatste jaren krijgt de regio Salta, en vooral haar subregio Cafayate, wereldwijd de meeste aandacht voor de kwaliteit van haar volle witte wijnen van torrontés riojano en haar fruitige rode wijnen van cabernet sauvignon en tannat.",
+        "pt-PT": "Nos últimos anos, a região de Salta, e em particular a sua sub-região de Cafayate, tem atraído a maior atenção mundial pela qualidade dos seus brancos encorpados de torrontés riojano e dos seus tintos frutados de cabernet sauvignon e tannat."
       }
     },
     "ar-valle-de-uco": {
@@ -18335,6 +18433,20 @@
         "de": "Das Weinbaugebiet Great Southern liegt in der Region Great Southern in Western Australia. Es umfasst ein Gebiet von 200 Kilometern (120 mi) von Ost nach West und über 100 Kilometern (62 mi) von Nord nach Süd und ist das größte Weinbaugebiet Australiens.",
         "nl": "De wijnregio Great Southern ligt in de regio Great Southern van West-Australië. Ze beslaat een gebied van 200 kilometer (120 mi) van oost naar west en meer dan 100 kilometer (62 mi) van noord naar zuid en is de grootste wijnregio van Australië.",
         "pt-PT": "A região vinícola de Great Southern situa-se na região de Great Southern da Austrália Ocidental. Abrange uma área de 200 quilómetros (120 mi) de leste a oeste e de mais de 100 quilómetros (62 mi) de norte a sul, e é a maior região vinícola da Austrália."
+      }
+    },
+    "au-great-western": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine",
+      "original": "Grampians, with its sub region Great Western, is generally a cooler climate red wine-producing region known for juicy berry fruit Shiraz and Cabernets with distinctive eucalyptus and spice.",
+      "texts": {
+        "es": "Grampians, con su subregión Great Western, es en general una región de clima fresco que produce vino tinto, conocida por sus shiraz y cabernets de jugosa fruta de baya con un eucalipto y una especia característicos.",
+        "ca": "Grampians, amb la seva subregió Great Western, és en general una regió de clima fresc que produeix vi negre, coneguda pels seus shiraz i cabernets de fruita de baia sucosa amb un eucaliptus i una espècia característics.",
+        "fr": "Grampians, avec sa sous-région Great Western, est en général une région au climat frais productrice de vin rouge, connue pour ses shiraz et cabernets aux fruits rouges juteux, avec une note d'eucalyptus et d'épice caractéristique.",
+        "de": "Grampians mit der Subregion Great Western ist im Allgemeinen eine kühlere Rotweinregion, bekannt für saftig-beerige Shiraz und Cabernets mit markantem Eukalyptus und Würze.",
+        "it": "Grampians, con la sottoregione Great Western, è in genere una regione di clima più fresco che produce vino rosso, nota per shiraz e cabernet dal succoso frutto di bacca con un caratteristico eucalipto e spezia.",
+        "nl": "Grampians, met de subregio Great Western, is over het algemeen een koelere rodewijnregio, bekend om sappige, bessige shiraz en cabernets met kenmerkende eucalyptus en kruiden.",
+        "pt-PT": "Grampians, com a sua sub-região Great Western, é em geral uma região de clima mais fresco produtora de vinho tinto, conhecida pelos seus shiraz e cabernets de fruta de baga suculenta com um eucalipto e uma especiaria característicos."
       }
     },
     "au-gundagai": {
@@ -18869,6 +18981,20 @@
         "pt-PT": "A região vinícola de Sunbury é uma indicação geográfica australiana para o vinho feito com uvas cultivadas numa região em torno da localidade de Sunbury, a noroeste de Melbourne, no estado australiano de Victoria. É uma das cinco regiões da zona de Port Philip, em torno de Melbourne."
       }
     },
+    "au-swan-district": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Western_Australian_wine",
+      "original": "The Swan District, of which the Swan Valley forms part, is the hottest wine region in Australia, with the grape harvest usually beginning in January.",
+      "texts": {
+        "es": "El Swan District, del que forma parte el Swan Valley, es la región vinícola más cálida de Australia, y la vendimia suele empezar en enero.",
+        "ca": "El Swan District, del qual forma part el Swan Valley, és la regió vinícola més càlida d'Austràlia, i la verema sol començar al gener.",
+        "fr": "Le Swan District, dont fait partie la Swan Valley, est la région viticole la plus chaude d'Australie, et les vendanges commencent en général en janvier.",
+        "de": "Der Swan District, zu dem das Swan Valley gehört, ist die heißeste Weinregion Australiens; die Lese beginnt meist im Januar.",
+        "it": "Lo Swan District, di cui fa parte la Swan Valley, è la regione vinicola più calda dell'Australia, e la vendemmia di solito inizia a gennaio.",
+        "nl": "Het Swan District, waarvan de Swan Valley deel uitmaakt, is de warmste wijnregio van Australië; de oogst begint meestal in januari.",
+        "pt-PT": "O Swan District, de que faz parte o Swan Valley, é a região vinícola mais quente da Austrália, e a vindima costuma começar em janeiro."
+      }
+    },
     "au-swan-hill": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Swan_Hill_wine_region",
@@ -18881,6 +19007,20 @@
         "de": "Swan Hill ist der Name eines Weinbaugebiets, der durch eine australische geografische Angabe (AGI) geschützt ist. Er geht auf die Stadt Swan Hill am Südufer des Murray River im australischen Bundesstaat Victoria zurück. Das Weinbaugebiet erstreckt sich über beide Seiten des Murray, und sein nordöstlicher Teil liegt im Bundesstaat New South Wales. Der nordöstliche Teil der Region liegt in der Zone Big Rivers in New South Wales.",
         "nl": "Swan Hill is de naam van een wijnregio die beschermd is door een Australische geografische aanduiding (AGI). Ze is genoemd naar de stad Swan Hill aan de zuidoever van de rivier de Murray in de Australische staat Victoria. De wijnregio ligt aan weerszijden van de Murray en het noordoostelijke deel ervan ligt in de staat Nieuw-Zuid-Wales. Het noordoostelijke deel van de regio ligt in de zone Big Rivers van Nieuw-Zuid-Wales.",
         "pt-PT": "Swan Hill é um nome de região vinícola protegido por uma indicação geográfica australiana (AGI). Deve o nome à localidade de Swan Hill, na margem sul do rio Murray, no estado australiano de Victoria. A região vinícola estende-se de ambos os lados do Murray e a sua parte nordeste fica no estado da Nova Gales do Sul. A parte nordeste da região fica na zona de Big Rivers, da Nova Gales do Sul."
+      }
+    },
+    "au-swan-valley": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Western_Australian_wine",
+      "original": "The Swan District, of which the Swan Valley forms part, is the hottest wine region in Australia, with the grape harvest usually beginning in January.",
+      "texts": {
+        "es": "El Swan District, del que forma parte el Swan Valley, es la región vinícola más cálida de Australia, y la vendimia suele empezar en enero.",
+        "ca": "El Swan District, del qual forma part el Swan Valley, és la regió vinícola més càlida d'Austràlia, i la verema sol començar al gener.",
+        "fr": "Le Swan District, dont fait partie la Swan Valley, est la région viticole la plus chaude d'Australie, et les vendanges commencent en général en janvier.",
+        "de": "Der Swan District, zu dem das Swan Valley gehört, ist die heißeste Weinregion Australiens; die Lese beginnt meist im Januar.",
+        "it": "Lo Swan District, di cui fa parte la Swan Valley, è la regione vinicola più calda dell'Australia, e la vendemmia di solito inizia a gennaio.",
+        "nl": "Het Swan District, waarvan de Swan Valley deel uitmaakt, is de warmste wijnregio van Australië; de oogst begint meestal in januari.",
+        "pt-PT": "O Swan District, de que faz parte o Swan Valley, é a região vinícola mais quente da Austrália, e a vindima costuma começar em janeiro."
       }
     },
     "au-tasmania": {
@@ -19126,6 +19266,20 @@
         "pt-PT": "O vinho da Colúmbia Britânica é o vinho canadiano produzido na província da Colúmbia Britânica. Os vinhos feitos com 100% de uvas da Colúmbia Britânica podem ser classificados num dos dois sistemas de classificação da província, conforme a casta, as técnicas de vinificação usadas e várias outras restrições."
       }
     },
+    "ca-niagara-peninsula": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ontario_wine",
+      "original": "As opposed to other regions, the soil of the Niagara Peninsula varies significantly depending on the area.",
+      "texts": {
+        "es": "A diferencia de otras regiones, el suelo de la península del Niágara varía mucho según la zona.",
+        "ca": "A diferència d'altres regions, el sòl de la península del Niàgara varia molt segons la zona.",
+        "fr": "Contrairement à d'autres régions, le sol de la péninsule du Niagara varie beaucoup selon le secteur.",
+        "de": "Anders als in anderen Regionen ist der Boden der Niagara-Halbinsel je nach Gebiet sehr unterschiedlich.",
+        "it": "A differenza di altre regioni, il suolo della penisola del Niagara varia molto secondo la zona.",
+        "nl": "Anders dan in andere regio's verschilt de bodem van het Niagara-schiereiland sterk per gebied.",
+        "pt-PT": "Ao contrário de outras regiões, o solo da península do Niágara varia muito consoante a zona."
+      }
+    },
     "ca-okanagan-valley": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Okanagan_Valley_(wine_region)",
@@ -19257,6 +19411,20 @@
         "it": "La viticoltura sul lago di Zurigo è la coltivazione della vite nella regione intorno al lago di Zurigo, nei cantoni di Zurigo, San Gallo e Svitto.",
         "nl": "Wijnbouw aan het meer van Zürich is de wijnbouw in de streek rond het meer van Zürich, in de kantons Zürich, Sankt Gallen en Schwyz.",
         "pt-PT": "A viticultura no lago de Zurique é o cultivo da vinha na região em redor do lago de Zurique, nos cantões de Zurique, São Galo e Schwyz."
+      }
+    },
+    "cl-empedrado": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Chilean_wine",
+      "original": "Rich and volcanic soils predominate in the area, although certain parts of the valley have varying soil types, like the Empedrado area which is dominated by slate soils.",
+      "texts": {
+        "es": "En la zona predominan los suelos ricos y volcánicos, aunque algunas partes del valle tienen otros tipos de suelo, como el área de Empedrado, dominada por suelos de pizarra.",
+        "ca": "A la zona hi predominen els sòls rics i volcànics, tot i que algunes parts de la vall tenen altres tipus de sòl, com l'àrea d'Empedrado, dominada per sòls de pissarra.",
+        "fr": "Les sols riches et volcaniques prédominent dans la zone, bien que certaines parties de la vallée aient d'autres types de sol, comme le secteur d'Empedrado, dominé par des sols d'ardoise.",
+        "de": "In der Gegend herrschen reiche, vulkanische Böden vor, doch manche Teile des Tals haben andere Bodentypen, etwa das Gebiet von Empedrado, das von Schieferböden geprägt ist.",
+        "it": "Nella zona predominano suoli ricchi e vulcanici, anche se alcune parti della valle hanno altri tipi di suolo, come l'area di Empedrado, dominata da suoli di ardesia.",
+        "nl": "In het gebied overheersen rijke, vulkanische bodems, al hebben sommige delen van de vallei andere bodemtypen, zoals het gebied van Empedrado, waar leisteenbodems overheersen.",
+        "pt-PT": "Na zona predominam os solos ricos e vulcânicos, embora algumas partes do vale tenham outros tipos de solo, como a área de Empedrado, dominada por solos de ardósia."
       }
     },
     "cl-region-austral": {
@@ -20057,6 +20225,20 @@
         "pt-PT": "A região vitícola de Codru é uma região vitícola moldava. A zona central, ou de Codru, é a zona mais industrializada da Moldávia. Aqui fica a maior parte das vinhas moldavas (60%), e aqui estão também a maioria das empresas de vinificação primária e de engarrafamento. As florestas, colinas e paisagens onduladas típicas da região protegem as vinhas das geadas de inverno e dos ventos secos de verão."
       }
     },
+    "mx-la-laguna": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+      "original": "The La Laguna region is the oldest wine-making area of Mexico, and straddles the states of Coahuila and Durango, with grapes thriving in the Parras Valley.",
+      "texts": {
+        "es": "La región de La Laguna es la zona vitivinícola más antigua de México y se extiende por los estados de Coahuila y Durango, con uvas que prosperan en el valle de Parras.",
+        "ca": "La regió de La Laguna és la zona vitivinícola més antiga de Mèxic i s'estén pels estats de Coahuila i Durango, amb raïm que prospera a la vall de Parras.",
+        "fr": "La région de La Laguna est la plus ancienne zone viticole du Mexique ; elle s'étend sur les États de Coahuila et de Durango, et le raisin prospère dans la vallée de Parras.",
+        "de": "Die Region La Laguna ist das älteste Weinbaugebiet Mexikos und erstreckt sich über die Bundesstaaten Coahuila und Durango; die Trauben gedeihen im Parras-Tal.",
+        "it": "La regione di La Laguna è la più antica zona vitivinicola del Messico e si estende tra gli stati di Coahuila e Durango, con uve che prosperano nella valle di Parras.",
+        "nl": "De regio La Laguna is het oudste wijngebied van Mexico en strekt zich uit over de staten Coahuila en Durango; de druiven gedijen in het Parras-dal.",
+        "pt-PT": "A região de La Laguna é a zona vitivinícola mais antiga do México e estende-se pelos estados de Coahuila e Durango, com uvas que prosperam no vale de Parras."
+      }
+    },
     "mx-queretaro": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Vinos_de_la_Regi%C3%B3n_Vitivin%C3%ADcola_de_Quer%C3%A9taro",
@@ -20071,6 +20253,34 @@
         "pt-PT": "Vinos de la Región Vitivinícola de Querétaro é a indicação geográfica (Indicación Geográfica Protegida - IGP) que reconhece e protege o vinho produzido na região de Querétaro, no México (Querétaro IGP). A denominação foi criada em março de 2025 pelo Instituto Mexicano da Propriedade Industrial e foi a primeira vez que uma IGP foi atribuída a uma região vitícola do México."
       }
     },
+    "mx-san-antonio-de-las-minas": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+      "original": "The North zone produces ninety percent of Mexico’s wines today, with almost all of that coming from three regions not far from the port city of Ensenada: the San Antonio de las Minas zone, which includes the Valle de Guadalupe, the San Vicente Valley and the Santo Tomás Valley.",
+      "texts": {
+        "es": "La zona norte produce hoy el noventa por ciento de los vinos de México, y casi todo procede de tres regiones cercanas a la ciudad portuaria de Ensenada: la zona de San Antonio de las Minas, que incluye el Valle de Guadalupe, el valle de San Vicente y el valle de Santo Tomás.",
+        "ca": "La zona nord produeix avui el noranta per cent dels vins de Mèxic, i gairebé tot prové de tres regions properes a la ciutat portuària d'Ensenada: la zona de San Antonio de las Minas, que inclou la Vall de Guadalupe, la vall de San Vicente i la vall de Santo Tomás.",
+        "fr": "La zone nord produit aujourd'hui quatre-vingt-dix pour cent des vins du Mexique, et presque tout provient de trois régions proches de la ville portuaire d'Ensenada : la zone de San Antonio de las Minas, qui comprend le Valle de Guadalupe, la vallée de San Vicente et la vallée de Santo Tomás.",
+        "de": "Die Nordzone erzeugt heute neunzig Prozent der Weine Mexikos, und fast alles stammt aus drei Regionen nahe der Hafenstadt Ensenada: der Zone San Antonio de las Minas, zu der das Valle de Guadalupe gehört, dem San-Vicente-Tal und dem Santo-Tomás-Tal.",
+        "it": "La zona nord produce oggi il novanta per cento dei vini del Messico, e quasi tutto proviene da tre regioni vicine alla città portuale di Ensenada: la zona di San Antonio de las Minas, che comprende la Valle de Guadalupe, la valle di San Vicente e la valle di Santo Tomás.",
+        "nl": "De noordelijke zone produceert vandaag negentig procent van de Mexicaanse wijn, en bijna alles komt uit drie regio's niet ver van de havenstad Ensenada: de zone San Antonio de las Minas, waartoe de Valle de Guadalupe behoort, het San Vicente-dal en het Santo Tomás-dal.",
+        "pt-PT": "A zona norte produz hoje noventa por cento dos vinhos do México, e quase tudo provém de três regiões perto da cidade portuária de Ensenada: a zona de San Antonio de las Minas, que inclui o Valle de Guadalupe, o vale de San Vicente e o vale de Santo Tomás."
+      }
+    },
+    "mx-valle-de-calafia": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Vino_de_M%C3%A9xico",
+      "original": "En el estado de Baja California existen subregiones productoras de vino, el Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia y Valle de Tecate.",
+      "texts": {
+        "en": "In the state of Baja California there are wine-producing subregions: the Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia and Valle de Tecate.",
+        "ca": "A l'estat de Baixa Califòrnia hi ha subregions productores de vi: la Valle de Guadalupe, la Valle de Santo Tomás, la Valle de San Vicente, la Valle de Calafia i la Valle de Tecate.",
+        "fr": "Dans l'État de Basse-Californie, il existe des sous-régions productrices de vin : le Valle de Guadalupe, le Valle de Santo Tomás, le Valle de San Vicente, le Valle de Calafia et le Valle de Tecate.",
+        "de": "Im Bundesstaat Baja California gibt es Weinbau-Subregionen: das Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia und Valle de Tecate.",
+        "it": "Nello stato della Bassa California esistono subregioni produttrici di vino: la Valle de Guadalupe, la Valle de Santo Tomás, la Valle de San Vicente, la Valle de Calafia e la Valle de Tecate.",
+        "nl": "In de staat Baja California liggen wijnproducerende subregio's: de Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia en Valle de Tecate.",
+        "pt-PT": "No estado da Baixa Califórnia existem sub-regiões produtoras de vinho: o Valle de Guadalupe, o Valle de Santo Tomás, o Valle de San Vicente, o Valle de Calafia e o Valle de Tecate."
+      }
+    },
     "mx-valle-de-guadalupe": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe",
@@ -20082,6 +20292,62 @@
         "it": "La Valle de Guadalupe (valle di Guadalupe) è una regione agricola del comune di Ensenada, nella Bassa California (Messico), che produce circa il 70 per cento del vino messicano. Negli ultimi anni è diventata una meta turistica molto frequentata per il vino e la cucina Baja Med.",
         "nl": "Het Valle de Guadalupe (Guadalupe-dal) is een landbouwgebied in de gemeente Ensenada in Baja California (Mexico) dat naar schatting 70 procent van de Mexicaanse wijn produceert. De laatste jaren is het een populaire toeristische bestemming geworden voor wijn en de Baja Med-keuken.",
         "pt-PT": "O Valle de Guadalupe (vale de Guadalupe) é uma região agrícola do município de Ensenada, na Baixa Califórnia (México), que produz cerca de 70 por cento do vinho mexicano. Nos últimos anos tornou-se um destino turístico popular pelo vinho e pela cozinha Baja Med."
+      }
+    },
+    "mx-valle-de-parras": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+      "original": "The La Laguna region is the oldest wine-making area of Mexico, and straddles the states of Coahuila and Durango, with grapes thriving in the Parras Valley.",
+      "texts": {
+        "es": "La región de La Laguna es la zona vitivinícola más antigua de México y se extiende por los estados de Coahuila y Durango, con uvas que prosperan en el valle de Parras.",
+        "ca": "La regió de La Laguna és la zona vitivinícola més antiga de Mèxic i s'estén pels estats de Coahuila i Durango, amb raïm que prospera a la vall de Parras.",
+        "fr": "La région de La Laguna est la plus ancienne zone viticole du Mexique ; elle s'étend sur les États de Coahuila et de Durango, et le raisin prospère dans la vallée de Parras.",
+        "de": "Die Region La Laguna ist das älteste Weinbaugebiet Mexikos und erstreckt sich über die Bundesstaaten Coahuila und Durango; die Trauben gedeihen im Parras-Tal.",
+        "it": "La regione di La Laguna è la più antica zona vitivinicola del Messico e si estende tra gli stati di Coahuila e Durango, con uve che prosperano nella valle di Parras.",
+        "nl": "De regio La Laguna is het oudste wijngebied van Mexico en strekt zich uit over de staten Coahuila en Durango; de druiven gedijen in het Parras-dal.",
+        "pt-PT": "A região de La Laguna é a zona vitivinícola mais antiga do México e estende-se pelos estados de Coahuila e Durango, com uvas que prosperam no vale de Parras."
+      }
+    },
+    "mx-valle-de-san-vicente": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+      "original": "The North zone produces ninety percent of Mexico’s wines today, with almost all of that coming from three regions not far from the port city of Ensenada: the San Antonio de las Minas zone, which includes the Valle de Guadalupe, the San Vicente Valley and the Santo Tomás Valley.",
+      "texts": {
+        "es": "La zona norte produce hoy el noventa por ciento de los vinos de México, y casi todo procede de tres regiones cercanas a la ciudad portuaria de Ensenada: la zona de San Antonio de las Minas, que incluye el Valle de Guadalupe, el valle de San Vicente y el valle de Santo Tomás.",
+        "ca": "La zona nord produeix avui el noranta per cent dels vins de Mèxic, i gairebé tot prové de tres regions properes a la ciutat portuària d'Ensenada: la zona de San Antonio de las Minas, que inclou la Vall de Guadalupe, la vall de San Vicente i la vall de Santo Tomás.",
+        "fr": "La zone nord produit aujourd'hui quatre-vingt-dix pour cent des vins du Mexique, et presque tout provient de trois régions proches de la ville portuaire d'Ensenada : la zone de San Antonio de las Minas, qui comprend le Valle de Guadalupe, la vallée de San Vicente et la vallée de Santo Tomás.",
+        "de": "Die Nordzone erzeugt heute neunzig Prozent der Weine Mexikos, und fast alles stammt aus drei Regionen nahe der Hafenstadt Ensenada: der Zone San Antonio de las Minas, zu der das Valle de Guadalupe gehört, dem San-Vicente-Tal und dem Santo-Tomás-Tal.",
+        "it": "La zona nord produce oggi il novanta per cento dei vini del Messico, e quasi tutto proviene da tre regioni vicine alla città portuale di Ensenada: la zona di San Antonio de las Minas, che comprende la Valle de Guadalupe, la valle di San Vicente e la valle di Santo Tomás.",
+        "nl": "De noordelijke zone produceert vandaag negentig procent van de Mexicaanse wijn, en bijna alles komt uit drie regio's niet ver van de havenstad Ensenada: de zone San Antonio de las Minas, waartoe de Valle de Guadalupe behoort, het San Vicente-dal en het Santo Tomás-dal.",
+        "pt-PT": "A zona norte produz hoje noventa por cento dos vinhos do México, e quase tudo provém de três regiões perto da cidade portuária de Ensenada: a zona de San Antonio de las Minas, que inclui o Valle de Guadalupe, o vale de San Vicente e o vale de Santo Tomás."
+      }
+    },
+    "mx-valle-de-santo-tomas": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mexican_wine",
+      "original": "The North zone produces ninety percent of Mexico’s wines today, with almost all of that coming from three regions not far from the port city of Ensenada: the San Antonio de las Minas zone, which includes the Valle de Guadalupe, the San Vicente Valley and the Santo Tomás Valley.",
+      "texts": {
+        "es": "La zona norte produce hoy el noventa por ciento de los vinos de México, y casi todo procede de tres regiones cercanas a la ciudad portuaria de Ensenada: la zona de San Antonio de las Minas, que incluye el Valle de Guadalupe, el valle de San Vicente y el valle de Santo Tomás.",
+        "ca": "La zona nord produeix avui el noranta per cent dels vins de Mèxic, i gairebé tot prové de tres regions properes a la ciutat portuària d'Ensenada: la zona de San Antonio de las Minas, que inclou la Vall de Guadalupe, la vall de San Vicente i la vall de Santo Tomás.",
+        "fr": "La zone nord produit aujourd'hui quatre-vingt-dix pour cent des vins du Mexique, et presque tout provient de trois régions proches de la ville portuaire d'Ensenada : la zone de San Antonio de las Minas, qui comprend le Valle de Guadalupe, la vallée de San Vicente et la vallée de Santo Tomás.",
+        "de": "Die Nordzone erzeugt heute neunzig Prozent der Weine Mexikos, und fast alles stammt aus drei Regionen nahe der Hafenstadt Ensenada: der Zone San Antonio de las Minas, zu der das Valle de Guadalupe gehört, dem San-Vicente-Tal und dem Santo-Tomás-Tal.",
+        "it": "La zona nord produce oggi il novanta per cento dei vini del Messico, e quasi tutto proviene da tre regioni vicine alla città portuale di Ensenada: la zona di San Antonio de las Minas, che comprende la Valle de Guadalupe, la valle di San Vicente e la valle di Santo Tomás.",
+        "nl": "De noordelijke zone produceert vandaag negentig procent van de Mexicaanse wijn, en bijna alles komt uit drie regio's niet ver van de havenstad Ensenada: de zone San Antonio de las Minas, waartoe de Valle de Guadalupe behoort, het San Vicente-dal en het Santo Tomás-dal.",
+        "pt-PT": "A zona norte produz hoje noventa por cento dos vinhos do México, e quase tudo provém de três regiões perto da cidade portuária de Ensenada: a zona de San Antonio de las Minas, que inclui o Valle de Guadalupe, o vale de San Vicente e o vale de Santo Tomás."
+      }
+    },
+    "mx-valle-de-tecate": {
+      "from": "es",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Vino_de_M%C3%A9xico",
+      "original": "En el estado de Baja California existen subregiones productoras de vino, el Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia y Valle de Tecate.",
+      "texts": {
+        "en": "In the state of Baja California there are wine-producing subregions: the Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia and Valle de Tecate.",
+        "ca": "A l'estat de Baixa Califòrnia hi ha subregions productores de vi: la Valle de Guadalupe, la Valle de Santo Tomás, la Valle de San Vicente, la Valle de Calafia i la Valle de Tecate.",
+        "fr": "Dans l'État de Basse-Californie, il existe des sous-régions productrices de vin : le Valle de Guadalupe, le Valle de Santo Tomás, le Valle de San Vicente, le Valle de Calafia et le Valle de Tecate.",
+        "de": "Im Bundesstaat Baja California gibt es Weinbau-Subregionen: das Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia und Valle de Tecate.",
+        "it": "Nello stato della Bassa California esistono subregioni produttrici di vino: la Valle de Guadalupe, la Valle de Santo Tomás, la Valle de San Vicente, la Valle de Calafia e la Valle de Tecate.",
+        "nl": "In de staat Baja California liggen wijnproducerende subregio's: de Valle de Guadalupe, Valle de Santo Tomás, Valle de San Vicente, Valle de Calafia en Valle de Tecate.",
+        "pt-PT": "No estado da Baixa Califórnia existem sub-regiões produtoras de vinho: o Valle de Guadalupe, o Valle de Santo Tomás, o Valle de San Vicente, o Valle de Calafia e o Valle de Tecate."
       }
     },
     "nz-auckland": {
@@ -20162,6 +20428,20 @@
         "pt-PT": "O vinho da Nova Zelândia é produzido em várias regiões vitícolas distintas. Sendo um país insular do oceano Pacífico Sul, a Nova Zelândia tem um clima predominantemente marítimo, embora a sua geografia alongada produza uma variação regional considerável de norte a sul."
       }
     },
+    "nz-northland": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/New_Zealand_wine",
+      "original": "Although Chardonnay is the most planted variety, Northland is most well known for ripe Syrah red wines, and white wines from Pinot Gris, which together comprise the top three planted varieties.",
+      "texts": {
+        "es": "Aunque la chardonnay es la variedad más plantada, Northland es conocida sobre todo por sus tintos maduros de syrah y sus blancos de pinot gris, que juntas forman las tres variedades más plantadas.",
+        "ca": "Tot i que el chardonnay és la varietat més plantada, Northland és coneguda sobretot pels seus negres madurs de syrah i els seus blancs de pinot gris, que juntes formen les tres varietats més plantades.",
+        "fr": "Bien que le chardonnay soit le cépage le plus planté, le Northland est surtout connu pour ses rouges mûrs de syrah et ses blancs de pinot gris, qui forment ensemble les trois cépages les plus plantés.",
+        "de": "Obwohl Chardonnay die meistgepflanzte Sorte ist, ist Northland vor allem für reife Syrah-Rotweine und Weißweine aus Pinot Gris bekannt, die zusammen die drei meistgepflanzten Sorten bilden.",
+        "it": "Benché lo chardonnay sia il vitigno più piantato, il Northland è noto soprattutto per i rossi maturi di syrah e i bianchi di pinot grigio, che insieme sono i tre vitigni più piantati.",
+        "nl": "Hoewel chardonnay het meest aangeplante ras is, staat Northland vooral bekend om rijpe rode wijnen van syrah en witte wijnen van pinot gris, die samen de drie meest aangeplante rassen vormen.",
+        "pt-PT": "Embora a chardonnay seja a casta mais plantada, Northland é conhecida sobretudo pelos seus tintos maduros de syrah e pelos brancos de pinot gris, que juntas formam as três castas mais plantadas."
+      }
+    },
     "nz-waiheke-island": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Waiheke_Island_wine_region",
@@ -20174,6 +20454,20 @@
         "de": "Das Weinbaugebiet Waiheke Island ist eine geografische Angabe und ein Weinbaugebiet in Neuseeland.",
         "nl": "De wijnregio Waiheke Island is een geografische aanduiding en wijnbouwregio van Nieuw-Zeeland.",
         "pt-PT": "A região vinícola de Waiheke Island é uma indicação geográfica e região vitícola da Nova Zelândia."
+      }
+    },
+    "nz-waipara-valley": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/New_Zealand_wine",
+      "original": "Even the greywacke alluvial soils in the Waipara valley floor have a higher calcium carbonate concentration than the Côte-d'Or, indicated by the milky water that flows in the Waipara River.",
+      "texts": {
+        "es": "Incluso los suelos aluviales de grauvaca del fondo del valle de Waipara tienen una concentración de carbonato cálcico mayor que la Côte-d'Or, como indica el agua lechosa que corre por el río Waipara.",
+        "ca": "Fins i tot els sòls al·luvials de grauvaca del fons de la vall de Waipara tenen una concentració de carbonat càlcic més alta que la Côte-d'Or, com indica l'aigua lletosa que baixa pel riu Waipara.",
+        "fr": "Même les sols alluviaux de grauwacke du fond de la vallée de Waipara ont une concentration en carbonate de calcium plus élevée que la Côte-d'Or, comme l'indique l'eau laiteuse qui coule dans la rivière Waipara.",
+        "de": "Selbst die alluvialen Grauwackeböden der Talsohle von Waipara haben eine höhere Calciumcarbonatkonzentration als die Côte-d'Or, wie das milchige Wasser des Waipara River zeigt.",
+        "it": "Perfino i suoli alluvionali di grovacca del fondovalle di Waipara hanno una concentrazione di carbonato di calcio più alta della Côte-d'Or, come indica l'acqua lattiginosa che scorre nel fiume Waipara.",
+        "nl": "Zelfs de alluviale grauwackebodems van de vallei van Waipara hebben een hogere concentratie calciumcarbonaat dan de Côte-d'Or, zoals het melkachtige water van de rivier de Waipara laat zien.",
+        "pt-PT": "Até os solos aluviais de grauvaque do fundo do vale de Waipara têm uma concentração de carbonato de cálcio maior do que a Côte-d'Or, como indica a água leitosa que corre no rio Waipara."
       }
     },
     "nz-waitaki-valley-north-otago": {
@@ -23903,6 +24197,76 @@
         "pt-PT": "Yucaipa Valley é uma American Viticultural Area (AVA) situada no vale dos contrafortes das San Bernardino Mountains, nos condados de Riverside e San Bernardino."
       }
     },
+    "uy-canelones": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+      "original": "The majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José.",
+      "texts": {
+        "es": "La mayoría de los viñedos y bodegas están en las colinas al norte de la capital, Montevideo, sobre todo en los departamentos de Canelones, Montevideo, Colonia y San José.",
+        "ca": "La majoria de les vinyes i els cellers són als turons al nord de la capital, Montevideo, sobretot als departaments de Canelones, Montevideo, Colonia i San José.",
+        "fr": "La plupart des vignobles et des caves se trouvent sur les collines au nord de la capitale, Montevideo, surtout dans les départements de Canelones, Montevideo, Colonia et San José.",
+        "de": "Die meisten Weinberge und Weingüter liegen in den Hügeln nördlich der Hauptstadt Montevideo, vor allem in den Departamentos Canelones, Montevideo, Colonia und San José.",
+        "it": "La maggior parte dei vigneti e delle cantine si trova sulle colline a nord della capitale, Montevideo, soprattutto nei dipartimenti di Canelones, Montevideo, Colonia e San José.",
+        "nl": "De meeste wijngaarden en wijnhuizen liggen in de heuvels ten noorden van de hoofdstad Montevideo, vooral in de departementen Canelones, Montevideo, Colonia en San José.",
+        "pt-PT": "A maioria das vinhas e adegas fica nas colinas a norte da capital, Montevideu, sobretudo nos departamentos de Canelones, Montevideo, Colonia e San José."
+      }
+    },
+    "uy-colonia": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+      "original": "The majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José.",
+      "texts": {
+        "es": "La mayoría de los viñedos y bodegas están en las colinas al norte de la capital, Montevideo, sobre todo en los departamentos de Canelones, Montevideo, Colonia y San José.",
+        "ca": "La majoria de les vinyes i els cellers són als turons al nord de la capital, Montevideo, sobretot als departaments de Canelones, Montevideo, Colonia i San José.",
+        "fr": "La plupart des vignobles et des caves se trouvent sur les collines au nord de la capitale, Montevideo, surtout dans les départements de Canelones, Montevideo, Colonia et San José.",
+        "de": "Die meisten Weinberge und Weingüter liegen in den Hügeln nördlich der Hauptstadt Montevideo, vor allem in den Departamentos Canelones, Montevideo, Colonia und San José.",
+        "it": "La maggior parte dei vigneti e delle cantine si trova sulle colline a nord della capitale, Montevideo, soprattutto nei dipartimenti di Canelones, Montevideo, Colonia e San José.",
+        "nl": "De meeste wijngaarden en wijnhuizen liggen in de heuvels ten noorden van de hoofdstad Montevideo, vooral in de departementen Canelones, Montevideo, Colonia en San José.",
+        "pt-PT": "A maioria das vinhas e adegas fica nas colinas a norte da capital, Montevideu, sobretudo nos departamentos de Canelones, Montevideo, Colonia e San José."
+      }
+    },
+    "uy-montevideo": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+      "original": "The majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José.",
+      "texts": {
+        "es": "La mayoría de los viñedos y bodegas están en las colinas al norte de la capital, Montevideo, sobre todo en los departamentos de Canelones, Montevideo, Colonia y San José.",
+        "ca": "La majoria de les vinyes i els cellers són als turons al nord de la capital, Montevideo, sobretot als departaments de Canelones, Montevideo, Colonia i San José.",
+        "fr": "La plupart des vignobles et des caves se trouvent sur les collines au nord de la capitale, Montevideo, surtout dans les départements de Canelones, Montevideo, Colonia et San José.",
+        "de": "Die meisten Weinberge und Weingüter liegen in den Hügeln nördlich der Hauptstadt Montevideo, vor allem in den Departamentos Canelones, Montevideo, Colonia und San José.",
+        "it": "La maggior parte dei vigneti e delle cantine si trova sulle colline a nord della capitale, Montevideo, soprattutto nei dipartimenti di Canelones, Montevideo, Colonia e San José.",
+        "nl": "De meeste wijngaarden en wijnhuizen liggen in de heuvels ten noorden van de hoofdstad Montevideo, vooral in de departementen Canelones, Montevideo, Colonia en San José.",
+        "pt-PT": "A maioria das vinhas e adegas fica nas colinas a norte da capital, Montevideu, sobretudo nos departamentos de Canelones, Montevideo, Colonia e San José."
+      }
+    },
+    "uy-san-jose": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+      "original": "The majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José.",
+      "texts": {
+        "es": "La mayoría de los viñedos y bodegas están en las colinas al norte de la capital, Montevideo, sobre todo en los departamentos de Canelones, Montevideo, Colonia y San José.",
+        "ca": "La majoria de les vinyes i els cellers són als turons al nord de la capital, Montevideo, sobretot als departaments de Canelones, Montevideo, Colonia i San José.",
+        "fr": "La plupart des vignobles et des caves se trouvent sur les collines au nord de la capitale, Montevideo, surtout dans les départements de Canelones, Montevideo, Colonia et San José.",
+        "de": "Die meisten Weinberge und Weingüter liegen in den Hügeln nördlich der Hauptstadt Montevideo, vor allem in den Departamentos Canelones, Montevideo, Colonia und San José.",
+        "it": "La maggior parte dei vigneti e delle cantine si trova sulle colline a nord della capitale, Montevideo, soprattutto nei dipartimenti di Canelones, Montevideo, Colonia e San José.",
+        "nl": "De meeste wijngaarden en wijnhuizen liggen in de heuvels ten noorden van de hoofdstad Montevideo, vooral in de departementen Canelones, Montevideo, Colonia en San José.",
+        "pt-PT": "A maioria das vinhas e adegas fica nas colinas a norte da capital, Montevideu, sobretudo nos departamentos de Canelones, Montevideo, Colonia e San José."
+      }
+    },
+    "za-bottelary": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/South_African_wine",
+      "original": "The western reaches of Stellenbosch, such as Bottelary and near Elsenburg, also include a sizeable portion of Chenin blanc plantings in areas with light, sandy soils.",
+      "texts": {
+        "es": "La parte occidental de Stellenbosch, como Bottelary y las cercanías de Elsenburg, también tiene una parte considerable de las plantaciones de chenin blanc, en zonas de suelos ligeros y arenosos.",
+        "ca": "La part occidental de Stellenbosch, com Bottelary i els voltants d'Elsenburg, també té una part considerable de les plantacions de chenin blanc, en zones de sòls lleugers i sorrencs.",
+        "fr": "L'ouest de Stellenbosch, comme Bottelary et les environs d'Elsenburg, compte aussi une part importante des plantations de chenin blanc, dans des zones aux sols légers et sableux.",
+        "de": "Der westliche Teil von Stellenbosch, etwa Bottelary und die Gegend um Elsenburg, umfasst ebenfalls einen beträchtlichen Teil der Chenin-blanc-Pflanzungen, in Gebieten mit leichten, sandigen Böden.",
+        "it": "La parte occidentale di Stellenbosch, come Bottelary e i dintorni di Elsenburg, comprende anch'essa una parte considerevole degli impianti di chenin blanc, in zone dai suoli leggeri e sabbiosi.",
+        "nl": "Het westen van Stellenbosch, zoals Bottelary en de omgeving van Elsenburg, omvat ook een flink deel van de aanplant van chenin blanc, in gebieden met lichte, zandige bodems.",
+        "pt-PT": "A zona ocidental de Stellenbosch, como Bottelary e as proximidades de Elsenburg, inclui também uma parte considerável das plantações de chenin blanc, em zonas de solos leves e arenosos."
+      }
+    },
     "za-breede-river-valley": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Breede_River_Valley",
@@ -23929,6 +24293,34 @@
         "pt-PT": "O distrito vinícola de Breedekloof é um dos três distritos da região vinícola de Breede River Valley. Conta com um total de 28 adegas (11 adegas cooperativas e 17 adegas privadas). Breedekloof representa 14,24% (13 029 hectares) das plantações de vinha para vinho da África do Sul. Encontram-se aqui a maioria das castas tradicionais, sendo o Chenin Blanc a mais plantada."
       }
     },
+    "za-constantia": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/South_African_wine",
+      "original": "Other soil types found in South Africa include granite and sandstone in Constantia, shale in Elgin and arenaceous shale in Walker Bay.",
+      "texts": {
+        "es": "Otros tipos de suelo de Sudáfrica son el granito y la arenisca de Constantia, el esquisto de Elgin y el esquisto arenoso de Walker Bay.",
+        "ca": "Altres tipus de sòl de Sud-àfrica són el granit i el gres de Constantia, l'esquist d'Elgin i l'esquist arenós de Walker Bay.",
+        "fr": "Parmi les autres types de sol d'Afrique du Sud figurent le granite et le grès à Constantia, le schiste à Elgin et le schiste arénacé à Walker Bay.",
+        "de": "Zu den weiteren Bodentypen Südafrikas gehören Granit und Sandstein in Constantia, Schiefer in Elgin und sandiger Schiefer in Walker Bay.",
+        "it": "Altri tipi di suolo del Sudafrica sono il granito e l'arenaria a Constantia, lo scisto a Elgin e lo scisto arenaceo a Walker Bay.",
+        "nl": "Andere bodemtypen in Zuid-Afrika zijn graniet en zandsteen in Constantia, schalie in Elgin en zandige schalie in Walker Bay.",
+        "pt-PT": "Outros tipos de solo da África do Sul são o granito e o arenito em Constantia, o xisto em Elgin e o xisto arenoso em Walker Bay."
+      }
+    },
+    "za-elgin": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/South_African_wine",
+      "original": "Other soil types found in South Africa include granite and sandstone in Constantia, shale in Elgin and arenaceous shale in Walker Bay.",
+      "texts": {
+        "es": "Otros tipos de suelo de Sudáfrica son el granito y la arenisca de Constantia, el esquisto de Elgin y el esquisto arenoso de Walker Bay.",
+        "ca": "Altres tipus de sòl de Sud-àfrica són el granit i el gres de Constantia, l'esquist d'Elgin i l'esquist arenós de Walker Bay.",
+        "fr": "Parmi les autres types de sol d'Afrique du Sud figurent le granite et le grès à Constantia, le schiste à Elgin et le schiste arénacé à Walker Bay.",
+        "de": "Zu den weiteren Bodentypen Südafrikas gehören Granit und Sandstein in Constantia, Schiefer in Elgin und sandiger Schiefer in Walker Bay.",
+        "it": "Altri tipi di suolo del Sudafrica sono il granito e l'arenaria a Constantia, lo scisto a Elgin e lo scisto arenaceo a Walker Bay.",
+        "nl": "Andere bodemtypen in Zuid-Afrika zijn graniet en zandsteen in Constantia, schalie in Elgin en zandige schalie in Walker Bay.",
+        "pt-PT": "Outros tipos de solo da África do Sul são o granito e o arenito em Constantia, o xisto em Elgin e o xisto arenoso em Walker Bay."
+      }
+    },
     "za-kwazulu-natal": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/KwaZulu-Natal_wine",
@@ -23943,6 +24335,48 @@
         "pt-PT": "KwaZulu-Natal está designada como unidade geográfica na classificação Wine of Origin do vinho sul-africano. Corresponde à província de KwaZulu-Natal, no leste da África do Sul, que tem uma indústria vinícola embrionária."
       }
     },
+    "za-robertson": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/South_African_wine",
+      "original": "The Robertson district is located closest to the river, along alluvial soils and the occasional calcium-rich outcrop.",
+      "texts": {
+        "es": "El distrito de Robertson es el más cercano al río, sobre suelos aluviales y algún afloramiento rico en calcio.",
+        "ca": "El districte de Robertson és el més proper al riu, sobre sòls al·luvials i algun aflorament ric en calci.",
+        "fr": "Le district de Robertson est le plus proche du fleuve, sur des sols alluviaux et quelques affleurements riches en calcium.",
+        "de": "Der Bezirk Robertson liegt dem Fluss am nächsten, auf Schwemmböden mit gelegentlichen kalkreichen Ausbissen.",
+        "it": "Il distretto di Robertson è il più vicino al fiume, su suoli alluvionali e qualche affioramento ricco di calcio.",
+        "nl": "Het district Robertson ligt het dichtst bij de rivier, op alluviale bodems met hier en daar een kalkrijke ontsluiting.",
+        "pt-PT": "O distrito de Robertson é o mais próximo do rio, sobre solos aluviais e um ou outro afloramento rico em cálcio."
+      }
+    },
+    "za-slanghoek": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/South_African_wine",
+      "original": "In recent years, the Slanghoek ward and the Breedekloof district have been successful in growing botrytised and dry Sauvignon blanc wines.",
+      "texts": {
+        "es": "En los últimos años, el distrito (ward) de Slanghoek y el distrito de Breedekloof han tenido éxito con vinos de sauvignon blanc botritizados y secos.",
+        "ca": "En els darrers anys, el ward de Slanghoek i el districte de Breedekloof han tingut èxit amb vins de sauvignon blanc botritzats i secs.",
+        "fr": "Ces dernières années, le ward de Slanghoek et le district de Breedekloof ont réussi dans les vins de sauvignon blanc botrytisés et secs.",
+        "de": "In den letzten Jahren waren der Ward Slanghoek und der Bezirk Breedekloof mit botrytisierten und trockenen Sauvignon-blanc-Weinen erfolgreich.",
+        "it": "Negli ultimi anni il ward di Slanghoek e il distretto di Breedekloof hanno avuto successo con vini di sauvignon blanc botritizzati e secchi.",
+        "nl": "De laatste jaren zijn de ward Slanghoek en het district Breedekloof succesvol met gebotrytiseerde en droge sauvignon blanc.",
+        "pt-PT": "Nos últimos anos, o ward de Slanghoek e o distrito de Breedekloof têm tido êxito com vinhos de sauvignon blanc botritizados e secos."
+      }
+    },
+    "za-walker-bay": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/South_African_wine",
+      "original": "Other soil types found in South Africa include granite and sandstone in Constantia, shale in Elgin and arenaceous shale in Walker Bay.",
+      "texts": {
+        "es": "Otros tipos de suelo de Sudáfrica son el granito y la arenisca de Constantia, el esquisto de Elgin y el esquisto arenoso de Walker Bay.",
+        "ca": "Altres tipus de sòl de Sud-àfrica són el granit i el gres de Constantia, l'esquist d'Elgin i l'esquist arenós de Walker Bay.",
+        "fr": "Parmi les autres types de sol d'Afrique du Sud figurent le granite et le grès à Constantia, le schiste à Elgin et le schiste arénacé à Walker Bay.",
+        "de": "Zu den weiteren Bodentypen Südafrikas gehören Granit und Sandstein in Constantia, Schiefer in Elgin und sandiger Schiefer in Walker Bay.",
+        "it": "Altri tipi di suolo del Sudafrica sono il granito e l'arenaria a Constantia, lo scisto a Elgin e lo scisto arenaceo a Walker Bay.",
+        "nl": "Andere bodemtypen in Zuid-Afrika zijn graniet en zandsteen in Constantia, schalie in Elgin en zandige schalie in Walker Bay.",
+        "pt-PT": "Outros tipos de solo da África do Sul são o granito e o arenito em Constantia, o xisto em Elgin e o xisto arenoso em Walker Bay."
+      }
+    },
     "za-western-cape": {
       "from": "en",
       "sourceUrl": "https://en.wikipedia.org/wiki/Western_Cape_wine",
@@ -23955,6 +24389,20 @@
         "de": "Western Cape ist eine geografische Einheit im Klassifikationssystem Wine of Origin für südafrikanischen Wein. Sie entspricht der Provinz Westkap und umfasst die meisten Weinberge Südafrikas.",
         "nl": "Western Cape is een geografische eenheid binnen het classificatiestelsel Wine of Origin voor Zuid-Afrikaanse wijn. Ze komt overeen met de provincie West-Kaap en omvat de meeste wijngaarden van Zuid-Afrika.",
         "pt-PT": "Western Cape é uma unidade geográfica do sistema de classificação Wine of Origin do vinho sul-africano. Corresponde à província do Cabo Ocidental e inclui a maior parte das vinhas da África do Sul."
+      }
+    },
+    "za-worcester": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/South_African_wine",
+      "original": "Located just beyond Du Toit's Peak in the Breede River Valley, Worcester includes a broad fertile plain that relies on irrigation due to its dry, arid climate.",
+      "texts": {
+        "es": "Situado justo detrás del Du Toit's Peak, en el valle del río Breede, Worcester comprende una amplia llanura fértil que depende del riego por su clima seco y árido.",
+        "ca": "Situat just darrere del Du Toit's Peak, a la vall del riu Breede, Worcester inclou una àmplia plana fèrtil que depèn del reg pel seu clima sec i àrid.",
+        "fr": "Situé juste après le Du Toit's Peak, dans la vallée de la Breede, Worcester comprend une large plaine fertile qui dépend de l'irrigation en raison de son climat sec et aride.",
+        "de": "Gleich hinter dem Du Toit's Peak im Breede River Valley gelegen, umfasst Worcester eine weite fruchtbare Ebene, die wegen ihres trockenen, ariden Klimas auf Bewässerung angewiesen ist.",
+        "it": "Situato appena oltre il Du Toit's Peak, nella valle del fiume Breede, Worcester comprende un'ampia pianura fertile che dipende dall'irrigazione per il suo clima secco e arido.",
+        "nl": "Net voorbij Du Toit's Peak in de vallei van de Breede gelegen, omvat Worcester een brede vruchtbare vlakte die door het droge, aride klimaat van irrigatie afhangt.",
+        "pt-PT": "Situado logo além do Du Toit's Peak, no vale do rio Breede, Worcester inclui uma ampla planície fértil que depende da rega devido ao seu clima seco e árido."
       }
     }
   }

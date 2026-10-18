@@ -2121,6 +2121,81 @@
       "texts": {
         "ca": "La zona geogràfica definida comprèn tot el terme municipal dels municipis de Cirò i Cirò Marina. La zona pertany a la franja d'altitud coneguda com a turons costaners, que va des del nivell del mar fins a una altura màxima de 462 metres sobre el nivell del mar. La zona de la DOP (DOCG) «Cirò Classico» es troba a la província de Crotone, a la costa jònica i al seu interior muntanyós, protegit pels vessants de la Sila. Comprèn una superfície d'aproximadament 9 000 hectàrees que s'estén uns 15 km al llarg del litoral jònic i al voltant de 10 km a l'interior."
       }
+    },
+    "gb-darnibole": {
+      "from": "en",
+      "license": "OGL-UK-3.0",
+      "original": "Darnibole Bacchus is a dry still Cornish wine produced at Camel Valley winery from grapes grown in a unique and delineated area known as Darnibole.",
+      "sourceUrl": "https://assets.publishing.service.gov.uk/media/5fd36a7ad3bf7f3061e108aa/protected-food-name-darnibole-wine.pdf",
+      "texts": {
+        "es": "El Darnibole Bacchus es un vino tranquilo y seco de Cornualles, elaborado en la bodega Camel Valley con uvas cultivadas en una zona única y delimitada llamada Darnibole.",
+        "ca": "El Darnibole Bacchus és un vi tranquil i sec de Cornualla, elaborat al celler Camel Valley amb raïm cultivat en una zona única i delimitada anomenada Darnibole.",
+        "fr": "Le Darnibole Bacchus est un vin tranquille sec de Cornouailles, produit au domaine Camel Valley à partir de raisins cultivés dans une zone unique et délimitée appelée Darnibole.",
+        "de": "Darnibole Bacchus ist ein trockener Stillwein aus Cornwall, erzeugt im Weingut Camel Valley aus Trauben, die in einem einzigartigen, abgegrenzten Gebiet namens Darnibole wachsen.",
+        "it": "Il Darnibole Bacchus è un vino fermo e secco della Cornovaglia, prodotto nella cantina Camel Valley con uve coltivate in un'area unica e delimitata chiamata Darnibole.",
+        "nl": "Darnibole Bacchus is een droge stille wijn uit Cornwall, gemaakt bij wijnhuis Camel Valley van druiven uit een uniek, afgebakend gebied met de naam Darnibole.",
+        "pt-PT": "O Darnibole Bacchus é um vinho tranquilo e seco da Cornualha, produzido na adega Camel Valley com uvas cultivadas numa zona única e delimitada chamada Darnibole."
+      }
+    },
+    "gb-english": {
+      "from": "en",
+      "license": "OGL-UK-3.0",
+      "original": "English Wine is made from grapes grown close to the limit for viticulture. All vineyards are positioned at above 49.9 degrees north leading to long daylight hours in the growing season.",
+      "sourceUrl": "https://assets.publishing.service.gov.uk/media/5fd361f48fa8f54d6545da82/pfn-english-wine-pdo.pdf",
+      "texts": {
+        "es": "El English Wine (vino inglés) se elabora con uvas cultivadas cerca del límite de la viticultura. Todos los viñedos están situados por encima de los 49,9 grados norte, lo que da largas horas de luz en el periodo vegetativo.",
+        "ca": "El English Wine (vi anglès) s'elabora amb raïm cultivat a prop del límit de la viticultura. Totes les vinyes són per sobre dels 49,9 graus nord, cosa que dona llargues hores de llum durant el període vegetatiu.",
+        "fr": "Le English Wine (vin anglais) est élaboré à partir de raisins cultivés près de la limite de la viticulture. Tous les vignobles sont situés au-dessus de 49,9 degrés nord, ce qui donne de longues heures de jour pendant la saison végétative.",
+        "de": "English Wine (englischer Wein) wird aus Trauben gemacht, die nahe der Grenze des Weinbaus wachsen. Alle Weinberge liegen oberhalb von 49,9 Grad nördlicher Breite, was in der Vegetationszeit lange Tage bedeutet.",
+        "it": "Il English Wine (vino inglese) è prodotto con uve coltivate vicino al limite della viticoltura. Tutti i vigneti si trovano sopra i 49,9 gradi nord, il che dà lunghe ore di luce nella stagione vegetativa.",
+        "nl": "English Wine (Engelse wijn) wordt gemaakt van druiven die dicht bij de grens van de wijnbouw groeien. Alle wijngaarden liggen boven 49,9 graden noorderbreedte, wat in het groeiseizoen lange dagen geeft.",
+        "pt-PT": "O English Wine (vinho inglês) é feito com uvas cultivadas perto do limite da viticultura. Todas as vinhas estão acima dos 49,9 graus norte, o que dá longas horas de luz na estação de crescimento."
+      }
+    },
+    "gb-english-regional": {
+      "from": "en",
+      "license": "OGL-UK-3.0",
+      "original": "English Regional Wine is made from grapes grown close to the limit for viticulture. All vineyards are positioned at above 49.9 degrees north leading to long daylight hours in the growing season.",
+      "sourceUrl": "https://assets.publishing.service.gov.uk/media/5fd361dde90e07662c96cf2f/pfn-english-regional-wine-pgi.pdf",
+      "texts": {
+        "es": "El English Regional Wine (vino regional inglés) se elabora con uvas cultivadas cerca del límite de la viticultura. Todos los viñedos están situados por encima de los 49,9 grados norte, lo que da largas horas de luz en el periodo vegetativo.",
+        "ca": "El English Regional Wine (vi regional anglès) s'elabora amb raïm cultivat a prop del límit de la viticultura. Totes les vinyes són per sobre dels 49,9 graus nord, cosa que dona llargues hores de llum durant el període vegetatiu.",
+        "fr": "Le English Regional Wine (vin régional anglais) est élaboré à partir de raisins cultivés près de la limite de la viticulture. Tous les vignobles sont situés au-dessus de 49,9 degrés nord, ce qui donne de longues heures de jour pendant la saison végétative.",
+        "de": "English Regional Wine (englischer Regionalwein) wird aus Trauben gemacht, die nahe der Grenze des Weinbaus wachsen. Alle Weinberge liegen oberhalb von 49,9 Grad nördlicher Breite, was in der Vegetationszeit lange Tage bedeutet.",
+        "it": "Il English Regional Wine (vino regionale inglese) è prodotto con uve coltivate vicino al limite della viticoltura. Tutti i vigneti si trovano sopra i 49,9 gradi nord, il che dà lunghe ore di luce nella stagione vegetativa.",
+        "nl": "English Regional Wine (Engelse regionale wijn) wordt gemaakt van druiven die dicht bij de grens van de wijnbouw groeien. Alle wijngaarden liggen boven 49,9 graden noorderbreedte, wat in het groeiseizoen lange dagen geeft.",
+        "pt-PT": "O English Regional Wine (vinho regional inglês) é feito com uvas cultivadas perto do limite da viticultura. Todas as vinhas estão acima dos 49,9 graus norte, o que dá longas horas de luz na estação de crescimento."
+      }
+    },
+    "gb-welsh": {
+      "from": "en",
+      "license": "OGL-UK-3.0",
+      "original": "Welsh Wine is made from grapes grown close to the limit for viticulture. All vineyards are positioned at above 49.9 degrees north leading to long daylight hours in the growing season.",
+      "sourceUrl": "https://assets.publishing.service.gov.uk/media/5fd36910e90e076637bb5a45/pfn-welsh-wine-pdo.pdf",
+      "texts": {
+        "es": "El Welsh Wine (vino galés) se elabora con uvas cultivadas cerca del límite de la viticultura. Todos los viñedos están situados por encima de los 49,9 grados norte, lo que da largas horas de luz en el periodo vegetativo.",
+        "ca": "El Welsh Wine (vi gal·lès) s'elabora amb raïm cultivat a prop del límit de la viticultura. Totes les vinyes són per sobre dels 49,9 graus nord, cosa que dona llargues hores de llum durant el període vegetatiu.",
+        "fr": "Le Welsh Wine (vin gallois) est élaboré à partir de raisins cultivés près de la limite de la viticulture. Tous les vignobles sont situés au-dessus de 49,9 degrés nord, ce qui donne de longues heures de jour pendant la saison végétative.",
+        "de": "Welsh Wine (walisischer Wein) wird aus Trauben gemacht, die nahe der Grenze des Weinbaus wachsen. Alle Weinberge liegen oberhalb von 49,9 Grad nördlicher Breite, was in der Vegetationszeit lange Tage bedeutet.",
+        "it": "Il Welsh Wine (vino gallese) è prodotto con uve coltivate vicino al limite della viticoltura. Tutti i vigneti si trovano sopra i 49,9 gradi nord, il che dà lunghe ore di luce nella stagione vegetativa.",
+        "nl": "Welsh Wine (Welshe wijn) wordt gemaakt van druiven die dicht bij de grens van de wijnbouw groeien. Alle wijngaarden liggen boven 49,9 graden noorderbreedte, wat in het groeiseizoen lange dagen geeft.",
+        "pt-PT": "O Welsh Wine (vinho galês) é feito com uvas cultivadas perto do limite da viticultura. Todas as vinhas estão acima dos 49,9 graus norte, o que dá longas horas de luz na estação de crescimento."
+      }
+    },
+    "gb-welsh-regional": {
+      "from": "en",
+      "license": "OGL-UK-3.0",
+      "original": "Welsh Regional Wine is made from grapes grown close to the limit for viticulture. All vineyards are positioned at above 49.9 degrees north leading to long daylight hours in the growing season.",
+      "sourceUrl": "https://assets.publishing.service.gov.uk/media/5fd368f4d3bf7f306291b5a4/pfnwelsh-regional-wine-pgi.pdf",
+      "texts": {
+        "es": "El Welsh Regional Wine (vino regional galés) se elabora con uvas cultivadas cerca del límite de la viticultura. Todos los viñedos están situados por encima de los 49,9 grados norte, lo que da largas horas de luz en el periodo vegetativo.",
+        "ca": "El Welsh Regional Wine (vi regional gal·lès) s'elabora amb raïm cultivat a prop del límit de la viticultura. Totes les vinyes són per sobre dels 49,9 graus nord, cosa que dona llargues hores de llum durant el període vegetatiu.",
+        "fr": "Le Welsh Regional Wine (vin régional gallois) est élaboré à partir de raisins cultivés près de la limite de la viticulture. Tous les vignobles sont situés au-dessus de 49,9 degrés nord, ce qui donne de longues heures de jour pendant la saison végétative.",
+        "de": "Welsh Regional Wine (walisischer Regionalwein) wird aus Trauben gemacht, die nahe der Grenze des Weinbaus wachsen. Alle Weinberge liegen oberhalb von 49,9 Grad nördlicher Breite, was in der Vegetationszeit lange Tage bedeutet.",
+        "it": "Il Welsh Regional Wine (vino regionale gallese) è prodotto con uve coltivate vicino al limite della viticoltura. Tutti i vigneti si trovano sopra i 49,9 gradi nord, il che dà lunghe ore di luce nella stagione vegetativa.",
+        "nl": "Welsh Regional Wine (Welshe regionale wijn) wordt gemaakt van druiven die dicht bij de grens van de wijnbouw groeien. Alle wijngaarden liggen boven 49,9 graden noorderbreedte, wat in het groeiseizoen lange dagen geeft.",
+        "pt-PT": "O Welsh Regional Wine (vinho regional galês) é feito com uvas cultivadas perto do limite da viticultura. Todas as vinhas estão acima dos 49,9 graus norte, o que dá longas horas de luz na estação de crescimento."
+      }
     }
   }
 }

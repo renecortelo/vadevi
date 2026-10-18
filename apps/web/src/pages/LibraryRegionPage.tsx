@@ -88,7 +88,9 @@ export function LibraryRegionPage() {
     region.summary?.license === "EC-reuse-2011-833" &&
     region.summary.sourceUrl.includes("/eambrosia-public-api/");
   // Another country's official text: a specification, a declaration.
-  const fromOfficialText = region.summary?.license.endsWith("-official-text") === true;
+  const fromOfficialText =
+    region.summary?.license.endsWith("-official-text") === true ||
+    region.summary?.license === "OGL-UK-3.0";
   const euRegister = inEuRegister(region);
   // The catalog keys of the name's own register: the EU's, or its country's.
   const suffix = registerSuffix(region);

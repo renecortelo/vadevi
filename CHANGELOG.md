@@ -189,6 +189,13 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
+- **Thirty-seven more names described beyond the EU**: Mexico's and
+  Uruguay's regions keep the sentence chosen for them; the UK's five take
+  the opening of their GOV.UK specifications (Open Government Licence); and
+  21 South African, Argentine, Australian, New Zealand, Chilean and Canadian
+  names take the sentence their country's English wine article gives them,
+  each read by hand (six were refused: they leaned on the sentence before,
+  or spoke of another wine). All are translated into the eight languages.
 - **Every EU name described**: Samos, the one registered name with neither
   an item nor a summary, takes its German and French articles, translated
   faithfully into the other six languages.

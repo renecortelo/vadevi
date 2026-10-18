@@ -8768,5 +8768,50 @@
       }
     },
     "uri": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2023.141.01.0013.01.ENG&toc=OJ%3AC%3A2023%3A141%3ATOC"
+  },
+  "gb-darnibole": {
+    "summaries": {
+      "en": {
+        "license": "OGL-UK-3.0",
+        "text": "Darnibole Bacchus is a dry still Cornish wine produced at Camel Valley winery from grapes grown in a unique and delineated area known as Darnibole.",
+        "url": "https://assets.publishing.service.gov.uk/media/5fd36a7ad3bf7f3061e108aa/protected-food-name-darnibole-wine.pdf"
+      }
+    }
+  },
+  "gb-english": {
+    "summaries": {
+      "en": {
+        "license": "OGL-UK-3.0",
+        "text": "English Wine is made from grapes grown close to the limit for viticulture. All vineyards are positioned at above 49.9 degrees north leading to long daylight hours in the growing season.",
+        "url": "https://assets.publishing.service.gov.uk/media/5fd361f48fa8f54d6545da82/pfn-english-wine-pdo.pdf"
+      }
+    }
+  },
+  "gb-english-regional": {
+    "summaries": {
+      "en": {
+        "license": "OGL-UK-3.0",
+        "text": "English Regional Wine is made from grapes grown close to the limit for viticulture. All vineyards are positioned at above 49.9 degrees north leading to long daylight hours in the growing season.",
+        "url": "https://assets.publishing.service.gov.uk/media/5fd361dde90e07662c96cf2f/pfn-english-regional-wine-pgi.pdf"
+      }
+    }
+  },
+  "gb-welsh": {
+    "summaries": {
+      "en": {
+        "license": "OGL-UK-3.0",
+        "text": "Welsh Wine is made from grapes grown close to the limit for viticulture. All vineyards are positioned at above 49.9 degrees north leading to long daylight hours in the growing season.",
+        "url": "https://assets.publishing.service.gov.uk/media/5fd36910e90e076637bb5a45/pfn-welsh-wine-pdo.pdf"
+      }
+    }
+  },
+  "gb-welsh-regional": {
+    "summaries": {
+      "en": {
+        "license": "OGL-UK-3.0",
+        "text": "Welsh Regional Wine is made from grapes grown close to the limit for viticulture. All vineyards are positioned at above 49.9 degrees north leading to long daylight hours in the growing season.",
+        "url": "https://assets.publishing.service.gov.uk/media/5fd368f4d3bf7f306291b5a4/pfnwelsh-regional-wine-pgi.pdf"
+      }
+    }
   }
 }
