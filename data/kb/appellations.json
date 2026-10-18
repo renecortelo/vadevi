@@ -301067,7 +301067,25 @@
     "registerRef": "DO-1",
     "registeredOn": "1998-11-09",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "malbec",
+          "name": "Malbec"
+        }
+      ],
+      "sourceUrl": "https://db.agepi.md/GeogrIndications/Details.aspx?id=1&du=1&domain=0"
+    }
   },
   {
     "countryCode": "MD",
