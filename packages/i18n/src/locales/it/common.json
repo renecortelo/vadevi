@@ -379,7 +379,9 @@
       "label": "Ordine",
       "known": "Prima i più noti",
       "name": "Dalla A alla Z"
-    }
+    },
+    "registerGrapesNoteOther": "Come le scrive il documento del registro stesso; con link, quelle di cui la biblioteca sa con certezza di che vitigno si tratta.",
+    "registerDocumentOther": "Documento del registro"
   },
   "space": {
     "switchLabel": "Spazio attivo",

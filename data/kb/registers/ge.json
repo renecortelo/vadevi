@@ -5,7 +5,7 @@
     "publisher": "Sakpatenti, National Intellectual Property Center of Georgia",
     "url": "https://www.sakpatenti.gov.ge/en/state_registry/",
     "issued": "2026-10-17",
-    "note": "Transcribed by hand on 17 October 2026 from Sakpatenti's state registry: the appellations of origin whose registered document, in English, names wine as the good (31 of the 44, read one by one; the others are cheeses and waters, and Obcha, Lechkhumi and Racha, registered in 2024–2025, have no document to read, so they are left out), with their registration number and date; and the three wine geographical indications the registry recognises with their zones (Eniseli: villages Eniseli, Sabue and Shilda of Kvareli district; Gremi; Vartsikhe of Baghdati district). Names as the registry writes them, in title case where it writes capitals; \"Bolnisi (wine)\" is Bolnisi, \"AKHMETA (Akhmetis Mtsvane)\" Akhmeta, and Ateni's document names its wine \"Atenuri\". A micro-zone lies within Kakheti's appellation where its document places it in Kakheti (Inner or Outer), and Tsarapi within Kardenakhi, as its document says. Where no article describes a name, its summary is its document's own sentence on the kind of wine, ended at the word \"wine\"; official documents have no copyright in Georgia (Law on Copyright and Neighbouring Rights, art. 8). The documents' coordinates are not used (some are plainly wrong); points are OpenStreetMap's for each name's village or town, by its English name, in the region its document places it (Kakheti, Imereti…), approximately, or else the area it lies in."
+    "note": "Transcribed by hand on 17 October 2026 from Sakpatenti's state registry: the appellations of origin whose registered document, in English, names wine as the good (31 of the 44, read one by one; the others are cheeses and waters, and Obcha, Lechkhumi and Racha, registered in 2024–2025, have no document to read, so they are left out), with their registration number and date; and the three wine geographical indications the registry recognises with their zones (Eniseli: villages Eniseli, Sabue and Shilda of Kvareli district; Gremi; Vartsikhe of Baghdati district). Names as the registry writes them, in title case where it writes capitals; \"Bolnisi (wine)\" is Bolnisi, \"AKHMETA (Akhmetis Mtsvane)\" Akhmeta, and Ateni's document names its wine \"Atenuri\". A micro-zone lies within Kakheti's appellation where its document places it in Kakheti (Inner or Outer), and Tsarapi within Kardenakhi, as its document says. Where no article describes a name, its summary is its document's own sentence on the kind of wine, ended at the word \"wine\"; official documents have no copyright in Georgia (Law on Copyright and Neighbouring Rights, art. 8). The documents' coordinates are not used (some are plainly wrong), save Teliani's and Sviri's, which agree with the villages their documents name and whose names OpenStreetMap gives to other places (data/kb/appellation-areas.json); points are OpenStreetMap's for each name's village or town, by its English name, in the region its document places it (Kakheti, Imereti…), approximately, or else the area it lies in. The varieties each appellation allows are transcribed from its own specification (section \"Vine varieties\"), as written there, on 18 October 2026."
   },
   "areas": [
     {
@@ -16,7 +16,8 @@
       "ref": "No. 1",
       "registeredOn": "2005-07-14",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f3999ba7-fdcd-4735-8ced-6a9073ba87be.pdf",
-      "states": ["Racha-Lechkhumi"]
+      "states": ["Racha-Lechkhumi"],
+      "grapes": ["Aleksandrouli", "Mujuretuli"]
     },
     {
       "key": "mukuzani",
@@ -28,7 +29,8 @@
       "ref": "No. 2",
       "registeredOn": "2005-08-30",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/4dcca59d-cad4-43d3-8f34-a7ee250dbc6e.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Saperavi"]
     },
     {
       "key": "tsinandali",
@@ -39,7 +41,8 @@
       "ref": "No. 3",
       "registeredOn": "2005-08-30",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/a1143eeb-092b-4935-bbae-0652d6122707.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Rkatsiteli", "Mtsvane Kakhuri", "Saperavi"]
     },
     {
       "key": "akhasheni",
@@ -51,7 +54,8 @@
       "ref": "No. 4",
       "registeredOn": "2005-08-30",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/dc87f7df-7b36-4849-a2a1-27a3a4c8cf27.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Saperavi"]
     },
     {
       "key": "gurjaani",
@@ -60,7 +64,8 @@
       "ref": "No. 5",
       "registeredOn": "2005-08-30",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/a133beca-3ec5-4814-8d89-8a311d7452e2.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Rkatsiteli", "Kakhuri Mtsvane"]
     },
     {
       "key": "kindzmarauli",
@@ -72,7 +77,8 @@
       "ref": "No. 787",
       "registeredOn": "2006-03-30",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/3ee48c15-7b85-4a19-af29-b8f4da34f21b.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Saperavi", "Saperavi Budeshuri"]
     },
     {
       "key": "manavi",
@@ -88,7 +94,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Kakhuri Mtsvane"]
     },
     {
       "key": "kakheti",
@@ -102,7 +109,19 @@
         "text": "Wine \"Kakheti\" can be white, red, rosé or amber, dry, naturally demi-sec (semi-dry), demi-doux (semi-sweet) and doux (sweet), in accordance to sugary.",
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf",
         "license": "GE-official-text"
-      }
+      },
+      "grapes": [
+        "Rkatsiteli",
+        "Kakhuri Mtsvane",
+        "Kisi",
+        "Khikhvi",
+        "Mtsvivani Kakhuri",
+        "Chitistvala",
+        "Saperavi",
+        "Saperavi-Budeshuri-like",
+        "Rkatsiteli Rose",
+        "Cabernet Sauvignon"
+      ]
     },
     {
       "key": "napareuli",
@@ -117,7 +136,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Saperavi", "Saperavi-Budeshuri-like", "Rkatsiteli", "Kakhuri Mtsvane"]
     },
     {
       "key": "teliani",
@@ -126,7 +146,8 @@
       "ref": "No. 791",
       "registeredOn": "2007-12-10",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/16ffbcb2-9658-47cb-bf32-987b37a27b9e.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Cabernet Sauvignon"]
     },
     {
       "key": "ateni",
@@ -141,7 +162,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Shida Kartli"]
+      "states": ["Shida Kartli"],
+      "grapes": ["Chinuri", "Goruli Mtsvane", "Aligote"]
     },
     {
       "key": "sviri",
@@ -150,7 +172,8 @@
       "ref": "No. 793",
       "registeredOn": "2007-12-10",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/32279df4-5697-47d1-98b1-fd1bbe529f92.pdf",
-      "states": ["Imereti"]
+      "states": ["Imereti"],
+      "grapes": ["Tsolikouri", "Tsitska", "Krakhuna"]
     },
     {
       "key": "vazisubani",
@@ -161,7 +184,8 @@
       "ref": "No. 794",
       "registeredOn": "2007-12-10",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/a9602fcf-9df6-49bb-b272-566f382b110b.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Rkatsiteli", "Kakhuri Mtsvane"]
     },
     {
       "key": "kardenakhi",
@@ -177,7 +201,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Rkatsiteli", "Kakhuri Mtsvane", "Khikhvi"]
     },
     {
       "key": "tibaani",
@@ -187,7 +212,8 @@
       "ref": "No. 796",
       "registeredOn": "2007-12-10",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ec60c878-0ac3-42d9-9d7f-900fba12c41b.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Rkatsiteli", "Kakhuri Mtsvane", "Khikhvi"]
     },
     {
       "key": "tvishi",
@@ -198,7 +224,8 @@
       "ref": "No. 797",
       "registeredOn": "2007-12-10",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/78988391-7fb0-4b86-87fb-675ad51029b1.pdf",
-      "states": ["Racha-Lechkhumi"]
+      "states": ["Racha-Lechkhumi"],
+      "grapes": ["Tsolikouri"]
     },
     {
       "key": "kvareli",
@@ -207,7 +234,8 @@
       "ref": "No. 798",
       "registeredOn": "2007-12-10",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f87c8bf7-efd6-45f0-b6ac-20ae11b2248b.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Saperavi"]
     },
     {
       "key": "kotekhi",
@@ -216,7 +244,8 @@
       "ref": "No. 799",
       "registeredOn": "2007-12-10",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/b71eabae-e249-4819-be89-864d371d3ef2.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Rkatsiteli", "Saperavi"]
     },
     {
       "key": "saperavi-khashmi",
@@ -226,7 +255,8 @@
       "ref": "No. 975",
       "registeredOn": "2018-06-04",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/17a1666d-e64e-4586-8a57-6067c3cb50b4.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Saperavi"]
     },
     {
       "key": "bolnisi",
@@ -240,7 +270,16 @@
         "text": "\"BOLNISI\" – is as white, amber, red or rose dry wine.",
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf",
         "license": "GE-official-text"
-      }
+      },
+      "grapes": [
+        "Rkatsiteli",
+        "Chinuri",
+        "Goruli Mtsvane",
+        "Saperavi",
+        "Tavkveri",
+        "Shavkapito",
+        "Asuretuli Shavi"
+      ]
     },
     {
       "key": "salkhino-ojaleshi",
@@ -256,7 +295,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Samegrelo"]
+      "states": ["Samegrelo"],
+      "grapes": ["Ojaleshi"]
     },
     {
       "key": "tsarapi",
@@ -273,7 +313,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Rkatsiteli", "Kakhuri Mtsvane", "Khikhvi"]
     },
     {
       "key": "akhmeta",
@@ -289,7 +330,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Kakhuri Mtsvane", "Kisi", "Khikhvi"]
     },
     {
       "key": "akhoebi",
@@ -306,7 +348,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Saperavi", "Saperavi Budeshuri"]
     },
     {
       "key": "kisi-magraani",
@@ -317,7 +360,8 @@
       "ref": "No. 981",
       "registeredOn": "2021-05-31",
       "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ad8d46f7-6da3-4b89-82d6-4de26ee54c71.pdf",
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Kisi"]
     },
     {
       "key": "zegaani",
@@ -332,7 +376,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Kakheti"]
+      "states": ["Kakheti"],
+      "grapes": ["Saperavi"]
     },
     {
       "key": "okureshis-usakhelouri",
@@ -348,7 +393,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Racha-Lechkhumi"]
+      "states": ["Racha-Lechkhumi"],
+      "grapes": ["Usakhelouri"]
     },
     {
       "key": "asuretuli-shala",
@@ -363,7 +409,8 @@
         "text": "\"Asuretuli Shala\" is red dry wine.",
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf",
         "license": "GE-official-text"
-      }
+      },
+      "grapes": ["Asuretuli Shavi", "Takveri", "Shavkapito"]
     },
     {
       "key": "okami",
@@ -379,7 +426,8 @@
         "license": "GE-official-text"
       },
       "states": ["Shida Kartli"],
-      "places": ["Okami"]
+      "places": ["Okami"],
+      "grapes": ["Chinuri", "Goruli Mtsvane", "Shavkapito"]
     },
     {
       "key": "sazanos-otskhanuri",
@@ -396,7 +444,8 @@
         "url": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf",
         "license": "GE-official-text"
       },
-      "states": ["Imereti"]
+      "states": ["Imereti"],
+      "grapes": ["Otskhauri Sapere", "Saperavi"]
     },
     {
       "key": "eniseli",
@@ -425,5 +474,12 @@
       "placeByName": false,
       "states": ["Imereti"]
     }
-  ]
+  ],
+  "grapeCards": {
+    "$comment": "The document's spelling of a variety, and the library's card for the same variety: Aleksandrouli is Alexandrouli, Takveri Tavkveri, and Kakhuri Mtsvane (Mtsvane Kakhuri) the Mtsvane whose Wikidata item gives \"Mtsvane Kakhetian\" as its name.",
+    "Aleksandrouli": "alexandrouli",
+    "Kakhuri Mtsvane": "mtsvane",
+    "Mtsvane Kakhuri": "mtsvane",
+    "Takveri": "tavkveri"
+  }
 }

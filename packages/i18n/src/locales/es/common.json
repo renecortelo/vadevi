@@ -379,7 +379,9 @@
       "label": "Orden",
       "known": "Más conocidos primero",
       "name": "De la A a la Z"
-    }
+    },
+    "registerGrapesNoteOther": "Como las escribe el documento del propio registro; con enlace, las que la biblioteca sabe con certeza qué uva son.",
+    "registerDocumentOther": "Documento del registro"
   },
   "space": {
     "switchLabel": "Espacio activo",

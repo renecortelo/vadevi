@@ -44,11 +44,15 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
   4 high, pronounced, full; 5 very high. "Acidez alta" is 4, "ligero" is 2.
   A finish is 2 when short, 3 medium, 4 long; 1 and 5 only when very short
   or very long.
+- sweetness: dry 1, off-dry or slightly sweet 2, medium 3, sweet 4, very sweet
+  or a dessert wine 5. "Seco", "trocken", "sec" are 1.
 - wouldBuy and wouldDrinkAgain are "yes", "no" or "unsure" (undecided, not
   sure yet), as strings.
 - sentiment: "like" when the taster says they like or enjoy it, "dislike"
   when they say they do not, "neutral" when they say it is just correct.
 - conclusionText: the taster's closing verdict sentence, if there is one.
+- wineName is the name alone, without the words around it ("registro",
+  "estoy probando", "I'm tasting").
 - producerName only when a winery or maker is named as such ("de Bodega
   X", "made by Y"); a first name alone is who brought or gave the wine.
 - grapes are grape varieties only; an appellation or region (Soave,

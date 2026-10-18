@@ -379,7 +379,9 @@
       "label": "Ordre",
       "known": "Les plus connus d'abord",
       "name": "De A à Z"
-    }
+    },
+    "registerGrapesNoteOther": "Telles que les écrit le document du registre lui-même ; avec un lien, celles dont la bibliothèque sait avec certitude de quel cépage il s'agit.",
+    "registerDocumentOther": "Document du registre"
   },
   "space": {
     "switchLabel": "Espace actif",

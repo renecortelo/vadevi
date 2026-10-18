@@ -255,7 +255,9 @@ export function LibraryRegionPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="section-help">{t("library.registerGrapesNote")}</p>
+                <p className="section-help">
+                  {t(euRegister ? "library.registerGrapesNote" : "library.registerGrapesNoteOther")}
+                </p>
               </div>
             )}
             <p className="section-help">
@@ -265,7 +267,7 @@ export function LibraryRegionPage() {
                 rel="noreferrer"
                 target="_blank"
               >
-                {t("library.registerDocument")}
+                {t(euRegister ? "library.registerDocument" : "library.registerDocumentOther")}
               </a>
             </p>
           </>

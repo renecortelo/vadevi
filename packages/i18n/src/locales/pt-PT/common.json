@@ -379,7 +379,9 @@
       "label": "Ordem",
       "known": "Mais conhecidos primeiro",
       "name": "De A a Z"
-    }
+    },
+    "registerGrapesNoteOther": "Como as escreve o documento do próprio registo; com ligação, as que a biblioteca sabe com certeza que casta são.",
+    "registerDocumentOther": "Documento do registo"
   },
   "space": {
     "switchLabel": "Espaço ativo",

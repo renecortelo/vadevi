@@ -350,6 +350,70 @@ const ternary: Record<string, string> = {
 };
 
 /** Bubbles said to be absent ("no tiene burbujas", "with no bubbles") are no value. */
+/**
+ * The level a scale's words say, in the app's languages, as `comparable`
+ * writes them: models read German "hoher", "hohem", "hochintensiv" as 5 where
+ * the form's "high" is 4 (second batch, 18 October 2026). "Very" raises a
+ * high to 5 and lowers a low to 1.
+ */
+const levelWords: [RegExp, number][] = [
+  [
+    /\b(low|niedrig\w*|baj[ao]s?|bas|basse|bass[oa]|baix[ao]|laag|lage|feble|poc[ao]?|weinig|light|leicht\w*|liger[ao]|leger|legere|leggero|leggera|licht|lichte|leve|lleuger[ao]?|short|kurz\w*|cort[ao]|court|courte|kort|curt[ao]|suaves?|soft|mild\w*|zacht\w*|mous|souple)\b/,
+    2,
+  ],
+  [/\b(medium|mittel\w*|medi[ao]s?|moyen\w*|mitja|mitjana|gemiddeld\w*|middel\w*|media)\b/, 3],
+  [
+    /\b(high|hoch\w*|hoh(e|er|em|en|es)|alt[ao]?s?|elevee?s?|eleve|elevat[ao]|hoog|hoge|full|kraftig\w*|voll\w*|plen[ao]|pien[ao]|vol|volle|cheio|corse|ple|long|lang\w*|larg[ao]|lung[ao]|llarg[ao]?|pronounced|pronunciad[ao]|marcad[ao]|intens[ao]?|intense|potent\w*|firm\w*)\b/,
+    4,
+  ],
+];
+const very = /\b(very|muy|molt|tres|molto|sehr|zeer|muito|extremely|bien)\s+(\w+)/;
+const sweetWords: [RegExp, number][] = [
+  [/\b(dry|sec|seca|seco|secco|secca|trocken|droog|brut)\b/, 1],
+  [
+    /\b(off dry|ligeramente dulce|lleugerament dolc|legerement doux|leggermente dolce|halbtrocken|lieblich|licht zoet|ligeiramente doce|demi sec|semi seco|abboccato)\b/,
+    2,
+  ],
+  [/\b(sweet|dulce|dolc|doux|dolce|suss|zoet|doce|moelleux)\b/, 4],
+  [
+    /\b(very sweet|muy dulce|molt dolc|tres doux|molto dolce|sehr suss|zeer zoet|muito doce|passito|dessert wine|vino de postre|vin de dessert)\b/,
+    5,
+  ],
+];
+
+/** The level the words say for a scale, or null when they say none or several. */
+export function spokenLevel(field: VoiceField, quote: string): number | null {
+  const said = comparable(quote);
+  const found = new Set<number>();
+  if (field === "sweetness") {
+    // "Medium sweet", "three of five": the model's to read.
+    if (
+      /\b(medium|mittler\w*|medi[ao]|moyen\w*|mitja|gemiddeld\w*|middel\w*|three|drei|trois|tre|tres|drie|3)\b/.test(
+        said,
+      )
+    ) {
+      return null;
+    }
+    for (const [pattern, level] of sweetWords) if (pattern.test(said)) found.add(level);
+    // "I said dry, I correct that: slightly sweet" is slightly sweet.
+    if (found.has(2)) {
+      found.delete(1);
+      found.delete(4);
+    }
+    if (found.has(5)) found.delete(4);
+    if (found.has(1) && found.size > 1) found.delete(1);
+  } else {
+    for (const [pattern, level] of levelWords) {
+      const match = pattern.exec(said);
+      if (match === null) continue;
+      const before = very.exec(said);
+      const raised = before !== null && pattern.test(before[2]!);
+      found.add(raised ? (level === 4 ? 5 : level === 2 ? 1 : level) : level);
+    }
+  }
+  return found.size === 1 ? [...found][0]! : null;
+}
+
 const negation =
   /\b(no|not|without|sin|sans|pas|ohne|kein|keine|senza|nessuna|geen|zonder|sem|nenhuma|still|tranquilo|tranquille|fermo|stil)\b/;
 
@@ -565,6 +629,39 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
         certain === false || hedges.test(comparable(quote as string)) ? "ambiguous" : "explicit",
       value: fitted,
     };
+  }
+  // A wine said to be dry or sweet, when the model left its sweetness out
+  // (it did for nine of twenty notes of the second batch): the sentence that
+  // says it, of the first wine, not negated.
+  if (proposal.fields.sweetness === undefined) {
+    const firstWine = secondAt === null ? transcript : transcript.slice(0, secondAt);
+    for (const sentence of firstWine.split(/(?<=[.;!?:])\s+/)) {
+      const words = comparable(sentence);
+      if (!sweetWords.some(([pattern]) => pattern.test(words))) continue;
+      if (/\b(no|not|nicht|kein\w*|pas|non|niet|nao|ni)\b/.test(words)) continue;
+      const level = spokenLevel("sweetness", sentence);
+      if (level === null) continue;
+      proposal.fields.sweetness = {
+        quote: sentence.trim().slice(0, 300),
+        status: hedges.test(words) ? "ambiguous" : "explicit",
+        value: level,
+      };
+      break;
+    }
+  }
+  // A level the words say plainly is the words', not the model's arithmetic.
+  for (const field of [
+    "sweetness",
+    "acidity",
+    "tanninLevel",
+    "body",
+    "finishLength",
+    "appearanceIntensity",
+  ] as const) {
+    const said = proposal.fields[field];
+    if (said === undefined) continue;
+    const level = spokenLevel(field, said.quote);
+    if (level !== null) said.value = level;
   }
   // The tasting's day, counted from the words the model found for it.
   const tasted = proposal.fields.tastedAt;

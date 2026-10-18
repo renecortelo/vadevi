@@ -709,6 +709,11 @@ console.info(`  ${mxList.records.length} Mexican indications from the IMPI.`);
 // fetched by `pnpm kb:fetch-registers`): each name placed where its place is,
 // or amid the places its delimitation names, or else at the area it lies in.
 const registersCache = resolve(".kb-cache/world/registers");
+/** The varieties a transcribed register's documents allow, by entry id. */
+const transcribedVarieties = new Map<
+  string,
+  { cards: Record<string, string>; names: string[]; url: string }
+>();
 for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort() : []) {
   const register = JSON.parse(readFileSync(resolve(registersCache, file), "utf8")) as {
     countryCode: string;
@@ -730,6 +735,21 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
     }[];
   };
   const prefix = register.countryCode.toLowerCase();
+  // The varieties a register's own documents allow, transcribed by hand.
+  const transcribed = JSON.parse(readFileSync(resolve("data/kb/registers", file), "utf8")) as {
+    areas: { grapes?: string[]; key: string; url?: string }[];
+    /** A variety as the documents spell it, and the library's card for it. */
+    grapeCards?: Record<string, string>;
+    source: { url: string };
+  };
+  for (const area of transcribed.areas) {
+    if ((area.grapes ?? []).length === 0) continue;
+    transcribedVarieties.set(`${prefix}-${area.key}`, {
+      cards: transcribed.grapeCards ?? {},
+      names: area.grapes!,
+      url: area.url ?? transcribed.source.url,
+    });
+  }
   const registered: RegionEntry[] = register.records.map((area) => {
     const { leads, summaries } = wikipediaSummaries(area.qid);
     // A region no register holds is described by the sentence that names it,
@@ -1293,6 +1313,25 @@ for (const key of allVarieties) {
   if (words.length > 1) openings.set(words[0]!, (openings.get(words[0]!) ?? 0) + 1);
 }
 const families = new Set([...openings].filter(([, count]) => count >= 3).map(([word]) => word));
+// Beyond the EU: the varieties a transcribed register's own documents allow,
+// linked to the grape cards the same way.
+for (const entry of entries) {
+  const transcribed = transcribedVarieties.get(entry.id);
+  if (transcribed === undefined || entry.register !== undefined) continue;
+  const listed = new Set(
+    transcribed.names
+      .map((name) => primaryName.get(matchKey(name)))
+      .filter((id): id is string => Boolean(id)),
+  );
+  entry.register = {
+    categories: [],
+    grapes: transcribed.names.map((name) => ({
+      grapeId: transcribed.cards[name] ?? linkVariety(name, listed, families),
+      name,
+    })),
+    sourceUrl: transcribed.url,
+  };
+}
 let documented = 0;
 let linkedVarieties = 0;
 for (const entry of entries) {

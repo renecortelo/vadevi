@@ -379,7 +379,9 @@
       "label": "Volgorde",
       "known": "Bekendste eerst",
       "name": "Van A tot Z"
-    }
+    },
+    "registerGrapesNoteOther": "Zoals het document van het register zelf ze schrijft; met link waar de bibliotheek zeker weet welke druif het is.",
+    "registerDocumentOther": "Document van het register"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

@@ -379,7 +379,9 @@
       "label": "Reihenfolge",
       "known": "Bekannteste zuerst",
       "name": "Von A bis Z"
-    }
+    },
+    "registerGrapesNoteOther": "Wie sie das Dokument des Registers selbst schreibt; verlinkt, wo die Bibliothek sicher weiß, welche Rebsorte es ist.",
+    "registerDocumentOther": "Dokument des Registers"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

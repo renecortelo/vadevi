@@ -296350,7 +296350,21 @@
         "url": "https://en.wikipedia.org/wiki/Khvanchkara"
       }
     },
-    "wikidataId": "Q1090166"
+    "wikidataId": "Q1090166",
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "alexandrouli",
+          "name": "Aleksandrouli"
+        },
+        {
+          "grapeId": "mujuretuli",
+          "name": "Mujuretuli"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f3999ba7-fdcd-4735-8ced-6a9073ba87be.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296423,7 +296437,17 @@
     "wikidataId": "Q4306822",
     "within": [
       "ge-kakheti"
-    ]
+    ],
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/4dcca59d-cad4-43d3-8f34-a7ee250dbc6e.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296497,7 +296521,25 @@
         "url": "https://en.wikipedia.org/wiki/Tsinandali_wine"
       }
     },
-    "wikidataId": "Q204269"
+    "wikidataId": "Q204269",
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "mtsvane",
+          "name": "Mtsvane Kakhuri"
+        },
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/a1143eeb-092b-4935-bbae-0652d6122707.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296570,7 +296612,17 @@
     "wikidataId": "Q5763543",
     "within": [
       "ge-kakheti"
-    ]
+    ],
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/dc87f7df-7b36-4849-a2a1-27a3a4c8cf27.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296610,7 +296662,21 @@
     "registerRef": "No. 5",
     "registeredOn": "2005-08-30",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/a133beca-3ec5-4814-8d89-8a311d7452e2.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296680,7 +296746,21 @@
         "url": "https://en.wikipedia.org/wiki/Kindzmarauli"
       }
     },
-    "wikidataId": "Q2030130"
+    "wikidataId": "Q2030130",
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        },
+        {
+          "grapeId": null,
+          "name": "Saperavi Budeshuri"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/3ee48c15-7b85-4a19-af29-b8f4da34f21b.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296761,7 +296841,17 @@
     "wikidataId": null,
     "within": [
       "ge-kakheti"
-    ]
+    ],
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/bd82db3d-8c5f-4e66-8e44-b44cafdb3064.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296869,7 +296959,53 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        },
+        {
+          "grapeId": "kisi",
+          "name": "Kisi"
+        },
+        {
+          "grapeId": "khikhvi",
+          "name": "Khikhvi"
+        },
+        {
+          "grapeId": null,
+          "name": "Mtsvivani Kakhuri"
+        },
+        {
+          "grapeId": null,
+          "name": "Chitistvala"
+        },
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        },
+        {
+          "grapeId": null,
+          "name": "Saperavi-Budeshuri-like"
+        },
+        {
+          "grapeId": null,
+          "name": "Rkatsiteli Rose"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/9e436e4c-2036-4549-bda6-d691935a4162.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296947,7 +297083,29 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        },
+        {
+          "grapeId": null,
+          "name": "Saperavi-Budeshuri-like"
+        },
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/f393aa50-0305-4e85-8879-c8ea01fcd5cd.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -296971,7 +297129,17 @@
     "registerRef": "No. 791",
     "registeredOn": "2007-12-10",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-18/16ffbcb2-9658-47cb-bf32-987b37a27b9e.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297054,7 +297222,25 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "chinuri",
+          "name": "Chinuri"
+        },
+        {
+          "grapeId": "goruli-mtsvane",
+          "name": "Goruli Mtsvane"
+        },
+        {
+          "grapeId": "aligote",
+          "name": "Aligote"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/3fb88ddf-27e1-4a8a-a544-51762e64ce97.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297084,7 +297270,25 @@
     "registerRef": "No. 793",
     "registeredOn": "2007-12-10",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "tsolikouri",
+          "name": "Tsolikouri"
+        },
+        {
+          "grapeId": null,
+          "name": "Tsitska"
+        },
+        {
+          "grapeId": null,
+          "name": "Krakhuna"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/32279df4-5697-47d1-98b1-fd1bbe529f92.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297159,7 +297363,21 @@
         "url": "https://en.wikipedia.org/wiki/Vazisubani_(wine)"
       }
     },
-    "wikidataId": "Q25205273"
+    "wikidataId": "Q25205273",
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/a9602fcf-9df6-49bb-b272-566f382b110b.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297237,7 +297455,25 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        },
+        {
+          "grapeId": "khikhvi",
+          "name": "Khikhvi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/deedb664-caf7-403c-a24d-1a5ad84e18a2.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297264,7 +297500,25 @@
     "wikidataId": null,
     "within": [
       "ge-kakheti"
-    ]
+    ],
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        },
+        {
+          "grapeId": "khikhvi",
+          "name": "Khikhvi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ec60c878-0ac3-42d9-9d7f-900fba12c41b.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297334,7 +297588,17 @@
         "url": "https://en.wikipedia.org/wiki/Tvishi_(wine)"
       }
     },
-    "wikidataId": "Q25205317"
+    "wikidataId": "Q25205317",
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "tsolikouri",
+          "name": "Tsolikouri"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/78988391-7fb0-4b86-87fb-675ad51029b1.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297364,7 +297628,17 @@
     "registerRef": "No. 798",
     "registeredOn": "2007-12-10",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f87c8bf7-efd6-45f0-b6ac-20ae11b2248b.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297388,7 +297662,21 @@
     "registerRef": "No. 799",
     "registeredOn": "2007-12-10",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/b71eabae-e249-4819-be89-864d371d3ef2.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297412,7 +297700,17 @@
     "registerRef": "No. 975",
     "registeredOn": "2018-06-04",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/17a1666d-e64e-4586-8a57-6067c3cb50b4.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297484,7 +297782,41 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "chinuri",
+          "name": "Chinuri"
+        },
+        {
+          "grapeId": "goruli-mtsvane",
+          "name": "Goruli Mtsvane"
+        },
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        },
+        {
+          "grapeId": "tavkveri",
+          "name": "Tavkveri"
+        },
+        {
+          "grapeId": null,
+          "name": "Shavkapito"
+        },
+        {
+          "grapeId": null,
+          "name": "Asuretuli Shavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/39fea599-29f3-4de0-a776-194f4f89336c.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297556,7 +297888,17 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "ojaleshi",
+          "name": "Ojaleshi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f64af23a-1152-4312-a86a-de5bb6f1764a.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297631,7 +297973,25 @@
     "wikidataId": null,
     "within": [
       "ge-kardenakhi"
-    ]
+    ],
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "rkatsiteli",
+          "name": "Rkatsiteli"
+        },
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        },
+        {
+          "grapeId": "khikhvi",
+          "name": "Khikhvi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f11e8c96-4681-4588-bea5-da705ccf6da5.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297708,7 +298068,25 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "mtsvane",
+          "name": "Kakhuri Mtsvane"
+        },
+        {
+          "grapeId": "kisi",
+          "name": "Kisi"
+        },
+        {
+          "grapeId": "khikhvi",
+          "name": "Khikhvi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/0f8fdee1-c9e3-4185-ab0d-1d94e6838b7c.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297780,7 +298158,21 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        },
+        {
+          "grapeId": null,
+          "name": "Saperavi Budeshuri"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/f8d90ecd-897b-4809-a26a-c6f2c0d7a335.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297807,7 +298199,17 @@
     "wikidataId": null,
     "within": [
       "ge-kakheti"
-    ]
+    ],
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "kisi",
+          "name": "Kisi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ad8d46f7-6da3-4b89-82d6-4de26ee54c71.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297879,7 +298281,17 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/4348ed73-3532-4980-bdd5-090de20a7c16.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -297951,7 +298363,17 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": null,
+          "name": "Usakhelouri"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -298023,7 +298445,25 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": null,
+          "name": "Asuretuli Shavi"
+        },
+        {
+          "grapeId": "tavkveri",
+          "name": "Takveri"
+        },
+        {
+          "grapeId": null,
+          "name": "Shavkapito"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/71712ed1-e18a-4a8f-badf-f2d3b0a4f704.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -298095,7 +298535,25 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "chinuri",
+          "name": "Chinuri"
+        },
+        {
+          "grapeId": "goruli-mtsvane",
+          "name": "Goruli Mtsvane"
+        },
+        {
+          "grapeId": null,
+          "name": "Shavkapito"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/ccb5ec75-78bd-4467-aef7-1798615bba11.pdf"
+    }
   },
   {
     "countryCode": "GE",
@@ -298167,7 +298625,21 @@
         "license": "GE-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": null,
+          "name": "Otskhauri Sapere"
+        },
+        {
+          "grapeId": "saperavi",
+          "name": "Saperavi"
+        }
+      ],
+      "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cecf118c-53ad-4771-bc52-9cc76cb5f4c6.pdf"
+    }
   },
   {
     "countryCode": "GE",

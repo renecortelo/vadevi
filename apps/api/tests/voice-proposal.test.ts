@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { acceptProposal, spokenDay } from "../src/services/voice-proposal";
+import { acceptProposal, spokenDay, spokenLevel } from "../src/services/voice-proposal";
 
 /**
  * What a model proposes from a spoken note stands only field by field: a value
@@ -196,7 +196,9 @@ describe("a spoken note's proposal", () => {
       today,
     );
     expect(proposal.severalWines).toBe(true);
-    expect(Object.keys(proposal.fields)).toEqual(["grapes"]);
+    // The first wine's own words stay: its grape, and "es seco" as its sweetness.
+    expect(Object.keys(proposal.fields)).toEqual(["grapes", "sweetness", "palateText"]);
+    expect(proposal.fields.sweetness?.value).toBe(1);
     expect(proposal.discarded).toEqual([{ field: "region", reason: "second-wine" }]);
     // Comparing with another wine is not describing one.
     expect(
@@ -344,5 +346,44 @@ describe("a spoken note's proposal", () => {
       saturday,
     );
     expect(proposal.fields.tastedAt?.value).toBe("2026-10-10");
+  });
+
+  it("reads a level the words say plainly, in every language", () => {
+    // The second batch's German read as 5 where "high" is 4 (18 October 2026).
+    expect(spokenLevel("acidity", "mit hoher Säure")).toBe(4);
+    expect(spokenLevel("tanninLevel", "hohem Tannin")).toBe(4);
+    expect(spokenLevel("acidity", "acidez muy alta")).toBe(5);
+    expect(spokenLevel("tanninLevel", "tanino muito baixo")).toBe(1);
+    expect(spokenLevel("body", "cos alt")).toBe(4);
+    expect(spokenLevel("finishLength", "un final corto")).toBe(2);
+    expect(spokenLevel("body", "corps moyen")).toBe(3);
+    // Two levels in one quote: the model's reading stands.
+    expect(spokenLevel("acidity", "acidez alta y cuerpo ligero")).toBeNull();
+    expect(spokenLevel("sweetness", "Er ist trocken")).toBe(1);
+    expect(
+      spokenLevel("sweetness", "Dic que és sec, però ho rectifico: el noto lleugerament dolç."),
+    ).toBe(2);
+    expect(spokenLevel("sweetness", "un passito di zibibbo")).toBe(5);
+    expect(spokenLevel("sweetness", "corrijo a dulzor medio, tres de cinco")).toBeNull();
+
+    const text = "Un blanco de Rueda. Es seco, con acidez alta. Le pongo un 88.";
+    const proposal = acceptProposal(
+      {
+        fields: [{ certain: true, name: "acidity", quote: "acidez alta", value: 5 }],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(proposal.fields.acidity?.value).toBe(4);
+    // Dry, said plainly, though the model left the sweetness out.
+    expect(proposal.fields.sweetness).toEqual({
+      quote: "Es seco, con acidez alta.",
+      status: "explicit",
+      value: 1,
+    });
+    expect(
+      acceptProposal({ fields: [], wineCount: 1 }, "No es seco del todo.", today).fields.sweetness,
+    ).toBeUndefined();
   });
 });

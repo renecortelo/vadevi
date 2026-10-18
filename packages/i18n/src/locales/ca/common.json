@@ -379,7 +379,9 @@
       "label": "Ordre",
       "known": "Més coneguts primer",
       "name": "De la A a la Z"
-    }
+    },
+    "registerGrapesNoteOther": "Com les escriu el document del mateix registre; amb enllaç, les que la biblioteca sap amb certesa quin raïm són.",
+    "registerDocumentOther": "Document del registre"
   },
   "space": {
     "switchLabel": "Espai actiu",

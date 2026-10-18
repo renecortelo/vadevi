@@ -81,6 +81,13 @@ has the reasons.
   replaces what the first one filled and the reader left alone, never what
   they typed; the quick log has «Clear the form»; and a draft begun on
   another day, its date never changed, is taken up today.
+- **Voice tastings, levels from the words**: a level said plainly — «alta»,
+  «hoher», «corto», «ligero», «muy alta», in the app's eight languages — is
+  read from the words, not from the model's sense of the scale (it read
+  German "high" as 5); a wine said to be dry or sweet gets its sweetness
+  from that sentence when the model left it out. Measured on 20 notes it
+  had never seen: 97 % of the fields proposed right, 84 % of those expected
+  proposed.
 - **The day a tasting was, counted, not guessed**: «ayer», «antes de
   ayer», «el sábado», «hace tres días» and their like in the app's eight
   languages are counted back from the reader's own day by the server; the
@@ -178,6 +185,12 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
+- **Georgia's grapes from its own documents**: each of the 30 wine
+  appellations lists the varieties its Sakpatenti specification allows, as
+  written there, 57 of 73 linked to their grape cards (the documents' own
+  spellings — Aleksandrouli, Takveri, Kakhuri Mtsvane — matched to the
+  library's by hand). Outside the EU the page names the register's own
+  document rather than an EU single document.
 - **Nineteen more names on the map**: Teliani and Sviri at the coordinates
   their Sakpatenti documents state; Ontario's sub-appellations, which its
   regulation bounds by roads and creeks, at the places it names or the
