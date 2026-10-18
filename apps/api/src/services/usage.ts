@@ -35,15 +35,18 @@ export type UsageMetric =
  *   member reading a few wines in two languages spent 20 before lunch and
  *   found Vicenç answering "the AI could not reply" for the rest of the day.
  *   The deployment cap is what bounds the cost; the member cap only shares it.
- * - `ocr_reads` at 80/day: ~45 Neurons a read on the 11b vision model → ~3,600.
+ * - `ocr_reads` at 60/day: ~45 Neurons a read on the 11b vision model → ~2,700.
+ *   It was 80 until voice tastings were switched on (18 October 2026) and
+ *   needed the room; sixty labels a day is still far more than a household reads.
  *
  * - `voice_transcriptions` at 15/day: ~47 Neurons a minute of audio on
  *   `@cf/openai/whisper-large-v3-turbo` (about $0.0005 a minute), and a
- *   recording is at most two minutes → up to ~1,400. Voice tastings are
- *   planned and off (`STT_PROVIDER=none`); enabling them means making room
- *   here first, because the two above already take most of the pool.
+ *   recording is at most two minutes → up to ~1,400. A member may record ten
+ *   a day, so a few attempts at one note do not end the day; the deployment
+ *   cap of fifteen is what bounds the cost. The extraction step that follows
+ *   each is an `ai_language_calls` call, inside that budget.
  *
- * That is ~9,100 of 10,000 without voice. Tighter than it looks, because the per-call figures
+ * That is ~9,600 of 10,000 with voice. Tighter than it looks, because the per-call figures
  * are already rounded up from measured token counts.
  *
  * `ai_language_calls` is drawn on by more than the assistant: rewriting the
@@ -77,10 +80,10 @@ type Budget = { global: number; user: number };
 export const dailyBudgets = {
   ai_language_calls: { global: 60, user: 40 },
   barcode_lookups: { global: 500, user: 60 },
-  ocr_reads: { global: 80, user: 20 },
+  ocr_reads: { global: 60, user: 20 },
   price_lookups: { global: 500, user: 60 },
   research_lookups: { global: 300, user: 40 },
-  voice_transcriptions: { global: 15, user: 5 },
+  voice_transcriptions: { global: 15, user: 10 },
   websearch_calls: { global: 25, user: 10 },
 } as const satisfies Record<UsageMetric, Budget>;
 

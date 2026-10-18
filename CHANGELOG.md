@@ -29,6 +29,12 @@ has the reasons.
 
 ### For operators
 
+- **Voice tastings can be switched on**: the privacy review
+  (`docs/privacy-review-voice-tasting.md`) records the Workers AI terms as
+  read on 18 October 2026 — no retention of inputs, no training on them —
+  and the reference deployment's decision. To make room in the free Workers
+  AI pool, label reads go from 80 to 60 a day; voice allows ten recordings a
+  member and fifteen for the deployment, at most two minutes each.
 - Migration `0040` rebuilds `kb_regions` without the list of designations
   `gi_type` admitted, so each new register no longer needs a rebuild. Back up
   before deploying it. `pnpm kb:fetch-registers` reads the registers

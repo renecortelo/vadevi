@@ -8,16 +8,19 @@ by voice — planned, not yet built.
 a recording of the reader's own voice off the deployment, and a voice says more
 than a label: who is speaking, and anyone talking nearby.
 
-**Current state: not built, not enabled.** The planned switch,
-`STT_PROVIDER`, will default to `none` in `.dev.vars.example` and
-`wrangler.example.jsonc`, separate from `AI_PROVIDER`, so enabling the
-assistant or label reading does _not_ silently enable voice.
+**Current state: built, off by default.** The switch, `STT_PROVIDER`,
+defaults to `none` in `.dev.vars.example` and `wrangler.example.jsonc`,
+separate from `AI_PROVIDER`, so enabling the assistant or label reading does
+_not_ silently enable voice.
 
-- Decision: ☐ approved ☐ rejected
-- Decided by:
-- Date:
+- Decision: ☑ approved ☐ rejected
+- Decided by: the maintainer
+- Date: 18 October 2026
 
-The box is here because §12.5 asks each deployment to make this call. If you
+This records the decision taken for the reference deployment, on the terms check
+dated the same day and the real-voice tests of 16–18 October (`docs/backlog.md`,
+P18). It is not a decision taken on your behalf: the box is here because §12.5
+asks each deployment to make this call, and yours is still yours to make. If you
 are reading this in a repository you cloned, the honest starting point is that
 `STT_PROVIDER` is `none` and a recording goes nowhere.
 
@@ -61,9 +64,23 @@ recording. Before approving, check Cloudflare's current Workers AI terms on two
 points and record the date here: whether inputs are retained, and whether they
 are used to train models.
 
-- Terms checked on: \_\_\_\_\_\_\_\_\_\_\_\_
-- Retention of inputs: \_\_\_\_\_\_\_\_\_\_\_\_
-- Use for training: \_\_\_\_\_\_\_\_\_\_\_\_
+- Terms checked on: **2026-10-18**
+- Source: <https://developers.cloudflare.com/workers-ai/platform/data-usage/>,
+  which carries its own "last updated" date of 16 October 2026 — newer than the
+  check recorded in the label-reading review, so it was read afresh, not
+  carried over.
+- **Retention of inputs:** none for this use. The page calls it "zero data
+  retention": for standard inference Cloudflare "does not retain inputs or
+  outputs after they are no longer needed to process the request and deliver
+  the response". Storage happens only where the deployment directs it (R2, KV,
+  AI Gateway logging, its own logs); this application uses none of those for
+  voice. Operational metadata (model, timings, sizes, Neurons) is kept and
+  contains no content. Content may be kept where the law requires it, and is
+  then not used for training either.
+- **Use for training:** none. Cloudflare "does not use Customer Content
+  processed by Workers AI to train AI models", and does not make it available
+  to other customers. Whisper and Llama are third-party models under their own
+  licences; Cloudflare runs them and does not train them.
 
 The browser's own speech recognition (the Web Speech API) was considered and
 rejected: depending on the browser it sends the voice to Google or Apple, and
@@ -96,9 +113,11 @@ the form's own fields and options are accepted.
 - Measured on 16 October 2026 (`docs/backlog.md`, P18): 22 seconds of speech
   transcribed in 1–4 seconds, two minutes in under 9 seconds. Cloudflare lists
   the model at about $0.0005 a minute of audio.
-- Planned daily caps, enforced before the call, in `dailyBudgets` and the table
-  in `docs/self-hosting.md`: `voice_seconds` and `voice_extractions` per user
-  and globally. At the cap the button says so and the form works by hand.
+- Daily caps, enforced before the call, in `dailyBudgets` and the table in
+  `docs/self-hosting.md`: `voice_transcriptions` (ten a member, fifteen for
+  the deployment, each at most two minutes), and the extraction step counts
+  against `ai_language_calls` like an assistant reply. At the cap the button
+  says so and the form works by hand.
 - **The Workers AI free allocation is one shared pool.** Transcription and the
   extraction step draw on the same daily allowance as the assistant and label
   reading. Size the caps to the plan before enabling.

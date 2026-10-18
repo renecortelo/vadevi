@@ -366,8 +366,8 @@ across the deployment:
 
 | Metric                                               | Per member | Whole deployment |
 | ---------------------------------------------------- | ---------- | ---------------- |
-| Label reads (OCR)                                    | 20         | 80               |
-| Voice tastings (speech to text; planned)             | 5          | 15               |
+| Label reads (OCR)                                    | 20         | 60               |
+| Voice tastings (speech to text)                      | 10         | 15               |
 | Vicenç, narrative and evidence translation (AI text) | 40         | 60               |
 | Open-web search (Brave)                              | 10         | 25               |
 | Research lookups (Wikidata, OFF, venues)             | 40         | 300              |
@@ -390,13 +390,14 @@ about nine times the allowance and the published table listing numbers the code
 never had. What the providers give:
 
 - **Workers AI: 10,000 Neurons per day**, free, and it is a **single shared
-  pool** — OCR and assistant replies draw from the same allowance, so the two
-  budgets above are sized together rather than each against 10,000. Neurons are
+  pool** — OCR, voice and assistant replies draw from the same allowance, so
+  the budgets above are sized together rather than each against 10,000. Neurons are
   priced per model, which makes the model choice part of the cost. On
   `@cf/meta/llama-3.3-70b-instruct-fp8-fast` a reply of roughly 1,500 input and
   250 output tokens costs about 91 Neurons; the 11b vision model is about 22 a
-  label read. At the budgets above that is roughly 9,100 Neurons on a day that
-  hits every cap.
+  label read, and Whisper about 47 a minute of audio. At the budgets above that
+  is roughly 9,600 Neurons on a day that hits every cap, voice included (OCR
+  went from 80 to 60 reads to make room for it).
 
   `ai_language_calls` also pays for translating a wine's evidence the first
   time someone reads it in a language it was not written in — the evidence page

@@ -18,7 +18,7 @@ const rows: Record<keyof typeof dailyBudgets, string> = {
   ocr_reads: "Label reads (OCR)",
   price_lookups: "Price lookups (metric only; not built)",
   research_lookups: "Research lookups (Wikidata, OFF, venues)",
-  voice_transcriptions: "Voice tastings (speech to text; planned)",
+  voice_transcriptions: "Voice tastings (speech to text)",
   websearch_calls: "Open-web search (Brave)",
 };
 
