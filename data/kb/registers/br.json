@@ -5,7 +5,7 @@
     "publisher": "Instituto Nacional da Propriedade Industrial (INPI), Brazil",
     "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
     "issued": "2026-09-29",
-    "note": "Transcribed by hand from the INPI's two lists — the recognised indications of provenance (Indicação de Procedência, IP; up to 29 September 2026) and the recognised denominations of origin (Denominação de Origem, DO; up to 23 June 2026) — keeping the Brazilian ones whose product is wine: each geographical name as the list writes it, its kind, its number, the product as written, the date of registration (and of any change the list gives), the state, and the municipalities its delimitation names. \"Santa Catarina\" is the list's geographical name for the indication its delimitation calls the \"Vinhos de Altitude de Santa Catarina\". Vale dos Vinhedos is in both lists, an IP since 2002 and a DO since 2012; Vales da Uva Goethe, an IP from 2012, became a DO on 10 June 2025. Pinto Bandeira's IP lay in the municipalities of Bento Gonçalves and Farroupilha when it was registered (2010). Official acts have no copyright in Brazil (Lei 9.610/1998, art. 8, IV). The date shown is when a name took its present kind: Vales da Uva Goethe's as a DO (10 June 2025), its first registration as an IP kept as firstRegisteredOn. Monte Belo and Santa Catarina are placed only amid their municipalities: OpenStreetMap's Monte Belo is another place, in the north-west of Rio Grande do Sul, and its Santa Catarina the whole state. Vale dos Vinhedos's article on the Portuguese Wikipedia (Wikidata Q1241994) describes the denomination's page; the indication of provenance of the same name takes no article, as one text on two pages would be dropped. Six names are summarised by their delimitation's opening, as the list writes it (typos included), Altos de Pinto Bandeira's ended before its coordinates; the others' delimitations are lists of coordinates or municipalities and summarise nothing.",
+    "note": "Transcribed by hand from the INPI's two lists — the recognised indications of provenance (Indicação de Procedência, IP; up to 29 September 2026) and the recognised denominations of origin (Denominação de Origem, DO; up to 23 June 2026) — keeping the Brazilian ones whose product is wine: each geographical name as the list writes it, its kind, its number, the product as written, the date of registration (and of any change the list gives), the state, and the municipalities its delimitation names. \"Santa Catarina\" is the list's geographical name for the indication its delimitation calls the \"Vinhos de Altitude de Santa Catarina\". Vale dos Vinhedos is in both lists, an IP since 2002 and a DO since 2012; Vales da Uva Goethe, an IP from 2012, became a DO on 10 June 2025. Pinto Bandeira's IP lay in the municipalities of Bento Gonçalves and Farroupilha when it was registered (2010). Official acts have no copyright in Brazil (Lei 9.610/1998, art. 8, IV). The date shown is when a name took its present kind: Vales da Uva Goethe's as a DO (10 June 2025), its first registration as an IP kept as firstRegisteredOn. Monte Belo and Santa Catarina are placed only amid their municipalities: OpenStreetMap's Monte Belo is another place, in the north-west of Rio Grande do Sul, and its Santa Catarina the whole state. Vale dos Vinhedos's article on the Portuguese Wikipedia (Wikidata Q1241994) describes the denomination's page; the indication of provenance of the same name takes no article, as one text on two pages would be dropped. Six names are summarised by their delimitation's opening, as the list writes it (typos included), Altos de Pinto Bandeira's ended before its coordinates; the others' delimitations are lists of coordinates or municipalities and summarise nothing. The cultivars each indication allows are transcribed from its caderno de especificações técnicas on INPI's site (article \"Cultivares autorizadas\"), as written there, on 18 October 2026; scanned cadernos were read by optical character recognition and checked, with plain misreadings corrected (\"Meriot\", \"Pinotago\"). Group names the cadernos give (\"Moscatos\", \"Malvasias\") are kept as written.",
     "urlDenominations": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
     "page": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos"
   },
@@ -26,7 +26,31 @@
         "text": "A região do VALE DOS VINHEDOS possui,uma área total de 81,23Km2, distribuida na sua maior parte no Município de Bento Gonçalves, mas também nos Municipios de Garibaldi e Monte Belo do Sul.",
         "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
         "license": "BR-official-text"
-      }
+      },
+      "grapes": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Merlot",
+        "Tannat",
+        "Pinot Noir",
+        "Gamay",
+        "Pinotage",
+        "Alicante Bouschet",
+        "Ancelotta",
+        "Egiodola",
+        "Chardonnay",
+        "Riesling Itálico",
+        "Sauvignon Blanc",
+        "Sémillon",
+        "Trebbiano",
+        "Pinot Blanc",
+        "Gewurztraminer",
+        "Flora",
+        "Prosecco",
+        "Moscatos",
+        "Malvasias"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/ValedosVinhedosIP.pdf"
     },
     {
       "key": "pinto-bandeira",
@@ -43,7 +67,30 @@
         "text": "A área geográfica delimitada se situa na Região Nordeste do Estado do Rio Grande do Sul, entre a Serra Geral e o Planalto dos Campos Gerais. A área geográfica delimitada totaliza 7.960,66 HA, sendo que, destes, 7.418 HA estão no município de Bento Gonçalves e 543 HA estão no município de Farroupilha.",
         "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
         "license": "BR-official-text"
-      }
+      },
+      "grapes": [
+        "Ancellotta",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Pinotage",
+        "Sangiovese",
+        "Tannat",
+        "Pinot Noir",
+        "Chardonnay",
+        "Gewurztraminer",
+        "Malvasia Bianca",
+        "Malvasia de Candia",
+        "Moscato Branco",
+        "Sauvignon Blanc",
+        "Moscato Giallo",
+        "Viognier",
+        "Peverella",
+        "Riesling Itálico",
+        "Sémillon",
+        "Trebbiano"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/PintoBandeira.pdf"
     },
     {
       "key": "altos-montes",
@@ -54,7 +101,28 @@
       "states": ["Rio Grande do Sul"],
       "spread": ["Flores da Cunha", "Nova Pádua"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
-      "products": "Vinhos e espumantes"
+      "products": "Vinhos e espumantes",
+      "grapes": [
+        "Cabernet Franc",
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Pinot Noir",
+        "Ancellotta",
+        "Refosco",
+        "Marselan",
+        "Tannat",
+        "Riesling Itálico",
+        "Malvasia de Candia",
+        "Chardonnay",
+        "Moscato Giallo",
+        "Sauvignon Blanc",
+        "Gewurztraminer",
+        "Trebbiano",
+        "Moscato Branco",
+        "Malvasias",
+        "Moscato de Alexandria"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/AltosMontes.pdf"
     },
     {
       "key": "monte-belo",
@@ -66,7 +134,26 @@
       "spread": ["Monte Belo do Sul", "Bento Gonçalves", "Santa Tereza"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
       "placeByName": false,
-      "products": "Vinhos e espumantes"
+      "products": "Vinhos e espumantes",
+      "grapes": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Merlot",
+        "Egiodola",
+        "Tannat",
+        "Alicante Bouschet",
+        "Riesling Itálico",
+        "Chardonnay",
+        "Pinot Noir",
+        "Prosecco",
+        "Moscato Branco",
+        "Moscato Giallo",
+        "Moscato de Alexandria",
+        "Moscato de Hamburgo",
+        "Malvasia Bianca",
+        "Malvasia de Cândia"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/MonteBelo.pdf"
     },
     {
       "key": "farroupilha",
@@ -77,7 +164,18 @@
       "states": ["Rio Grande do Sul"],
       "spread": ["Farroupilha"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
-      "products": "Vinho Fino Branco Moscatel, Vinho Moscatel Espumante; Vinho Frisante Moscatel; Vinho Licoroso Moscatel; Mistela Simples Moscatel; Brandy de Vinho Moscatel"
+      "products": "Vinho Fino Branco Moscatel, Vinho Moscatel Espumante; Vinho Frisante Moscatel; Vinho Licoroso Moscatel; Mistela Simples Moscatel; Brandy de Vinho Moscatel",
+      "grapes": [
+        "Moscato Branco",
+        "Moscato Bianco",
+        "Malvasia de Cândia",
+        "Moscato Giallo",
+        "Moscatel de Alexandria",
+        "Malvasia Bianca",
+        "Moscato Rosado",
+        "Moscato de Hamburgo"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/Farroupilha.pdf"
     },
     {
       "key": "campanha-gaucha",
@@ -99,7 +197,46 @@
       ],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
       "products": "Vinho",
-      "amendedOn": "2025-05-27"
+      "amendedOn": "2025-05-27",
+      "grapes": [
+        "Alfrocheiro",
+        "Alicante Bouschet",
+        "Alvarinho",
+        "Ancellotta",
+        "Barbera",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Chardonnay",
+        "Chenin Blanc",
+        "French Colombard",
+        "Gamay",
+        "Gewurztraminer",
+        "Grenache",
+        "Longanesi",
+        "Malbec",
+        "Marselan",
+        "Merlot",
+        "Moscato Branco",
+        "Moscato de Hamburgo",
+        "Moscato Giallo",
+        "Petit Verdot",
+        "Pinot Grigio",
+        "Pinot Noir",
+        "Pinotage",
+        "Riesling Itálico",
+        "Riesling Renano",
+        "Ruby Cabernet",
+        "Sangiovese",
+        "Sauvignon Blanc",
+        "Semillon",
+        "Syrah",
+        "Tannat",
+        "Tempranillo",
+        "Touriga Nacional",
+        "Trebbiano",
+        "Viognier"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/CampanhaGacha.pdf"
     },
     {
       "key": "santa-catarina",
@@ -147,7 +284,37 @@
         "text": "A delimitação da área geográfica da Indicação de Procedência dos Vinhos de Altitude de Santa Catarina é única, contínua e está entre os paralelos e meridianos de 26º31’43,301”S, 51º54’1,015”W e 28º38’20,92”S, 48º54’27,098”W. Abrange totalmente a área territorial de 29 municípios de Santa Catarina, com área de 19.676 km2, correspondendo a 20% do território catarinense.",
         "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
         "license": "BR-official-text"
-      }
+      },
+      "grapes": [
+        "Aglianico",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Chardonnay",
+        "Garganega",
+        "Gewurztraminer",
+        "Grecheto",
+        "Malbec",
+        "Marselan",
+        "Merlot",
+        "Montepulciano",
+        "Moscato Bianco",
+        "Moscato Giallo",
+        "Nero d'Avola",
+        "Petit Verdot",
+        "Pignolo",
+        "Pinot Noir",
+        "Rebo",
+        "Refosco dal Pedunco Rosso",
+        "Ribolla Gialla",
+        "Rondinela",
+        "Sangiovese",
+        "Sauvignon Blanc",
+        "Sémillon",
+        "Syrah",
+        "Touriga Nacional",
+        "Vermentino"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/SantaCatarina.pdf"
     },
     {
       "key": "bituruna",
@@ -158,7 +325,9 @@
       "states": ["Paraná"],
       "spread": ["Bituruna"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
-      "products": "Vinhos"
+      "products": "Vinhos",
+      "grapes": ["Bordô", "Martha"],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/Bituruna.pdf"
     },
     {
       "key": "vale-do-sao-francisco",
@@ -169,7 +338,33 @@
       "states": ["Pernambuco", "Bahia"],
       "spread": ["Lagoa Grande", "Petrolina", "Santa Maria da Boa Vista", "Casa Nova", "Curaçá"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
-      "products": "Vinho fino, vinho nobre, espumante natural e vinho moscatel espumante"
+      "products": "Vinho fino, vinho nobre, espumante natural e vinho moscatel espumante",
+      "grapes": [
+        "Alicante Bouschet",
+        "Moscato Canelli",
+        "Aragonês",
+        "Arinto",
+        "Moscato Itália",
+        "Petit Verdot",
+        "Barbera",
+        "Cabernet Sauvignon",
+        "Chardonnay",
+        "Chenin Blanc",
+        "Ruby Cabernet",
+        "Sauvignon Blanc",
+        "Syrah",
+        "Tannat",
+        "Egiodola",
+        "Fernão Pires",
+        "Grenache",
+        "Malbec",
+        "Tempranillo",
+        "Touriga Nacional",
+        "Verdejo",
+        "Viognier",
+        "Merlot"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/ValedoSoFrancisco.pdf"
     },
     {
       "key": "sul-de-minas",
@@ -197,7 +392,23 @@
         "text": "Localizada no Estado de Minas Gerais, é constituída por um território com altitude igual ou superior a 800m formando uma área descontínua de 4239,6 km2, cuja descrição dos limites se restringe às áreas dos seguintes municípios: São João da Mata, Cordislândia, São Gonçalo do Sapucaí, Três Corações, Três Pontas, Campos Gerais, Boa Esperança, Bom Sucesso, Ibituruna e Ijaci.",
         "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTADASINDICAESDEPROCEDNCIARECONHECIDAS.At29Setembro2026.pdf",
         "license": "BR-official-text"
-      }
+      },
+      "grapes": [
+        "Syrah",
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Marselan",
+        "Tempranillo",
+        "Petit Verdot",
+        "Pinot noir",
+        "Grenache",
+        "Sauvignon Blanc",
+        "Viognier",
+        "Marsanne",
+        "Chardonnay"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/SuldeMinas.pdf"
     },
     {
       "key": "vale-dos-vinhedos",
@@ -209,7 +420,17 @@
       "spread": ["Bento Gonçalves", "Garibaldi", "Monte Belo do Sul"],
       "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
       "item": "Q1241994",
-      "products": "Vinho e espumantes"
+      "products": "Vinho e espumantes",
+      "grapes": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Merlot",
+        "Tannat",
+        "Chardonnay",
+        "Riesling Itálico",
+        "Pinot Noir"
+      ],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/ValedosVinhedosDO.pdf"
     },
     {
       "key": "vales-da-uva-goethe",
@@ -236,7 +457,9 @@
         "text": "A área geográfica delimitada para a produção de Vinhos Goethe, com qualidade D.O.V.U.G. localiza-se nos municípios Urussanga, Pedras Grandes, Morro da Fumaça, Cocal do Sul, Treze de Maio, Orleans, Nova Veneza e Içara, no Estado de Santa Catarina, conforme estabelece o Art. 1º. do Estatuto da PROGOETHE, para área de abrangência e inclusão de seus associados.",
         "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
         "license": "BR-official-text"
-      }
+      },
+      "grapes": ["Goethe"],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/ValesdaUvaGoethe.pdf"
     },
     {
       "key": "altos-de-pinto-bandeira",
@@ -253,7 +476,18 @@
         "text": "A área delimitada da Denominação de Origem de espumante natural Altos de Pinto Bandeira possui 65Km2 de área contínua, sendo 76,6% localizada no município de Pinto Bandeira, 19,0% no município de Farroupilha e 4,4% no município de Bento Gonçalves.",
         "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
         "license": "BR-official-text"
-      }
+      },
+      "grapes": ["Chardonnay", "Pinot Noir", "Riesling Itálico"],
+      "grapesUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/AltosdePintoBandeira.pdf"
     }
-  ]
+  ],
+  "grapeCards": {
+    "$comment": "A caderno's spelling of a cultivar, and the library's card for the same variety, where its Wikidata names give it: Aragonês is Tempranillo, Rondinela Rondinella, Moscato (Moscatel) de Alexandria Muscat of Alexandria, Moscato de Hamburgo Muscat Hamburg (Black Muscat), Moscato Canelli Muscat Blanc à Petits Grains. Brazil's Moscato Branco is a variety of its own and is not linked.",
+    "Aragonês": "tempranillo",
+    "Moscatel de Alexandria": "muscat-of-alexandria",
+    "Moscato Canelli": "muscat-blanc-a-petits-grains",
+    "Moscato de Alexandria": "muscat-of-alexandria",
+    "Moscato de Hamburgo": "black-muscat",
+    "Rondinela": "rondinella"
+  }
 }

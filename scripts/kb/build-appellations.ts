@@ -737,7 +737,7 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
   const prefix = register.countryCode.toLowerCase();
   // The varieties a register's own documents allow, transcribed by hand.
   const transcribed = JSON.parse(readFileSync(resolve("data/kb/registers", file), "utf8")) as {
-    areas: { grapes?: string[]; key: string; url?: string }[];
+    areas: { grapes?: string[]; grapesUrl?: string; key: string; url?: string }[];
     /** A variety as the documents spell it, and the library's card for it. */
     grapeCards?: Record<string, string>;
     source: { url: string };
@@ -747,7 +747,7 @@ for (const file of existsSync(registersCache) ? readdirSync(registersCache).sort
     transcribedVarieties.set(`${prefix}-${area.key}`, {
       cards: transcribed.grapeCards ?? {},
       names: area.grapes!,
-      url: area.url ?? transcribed.source.url,
+      url: area.grapesUrl ?? area.url ?? transcribed.source.url,
     });
   }
   const registered: RegionEntry[] = register.records.map((area) => {

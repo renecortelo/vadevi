@@ -292524,7 +292524,97 @@
         "license": "BR-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "gamay",
+          "name": "Gamay"
+        },
+        {
+          "grapeId": "pinotage",
+          "name": "Pinotage"
+        },
+        {
+          "grapeId": "alicante-bouschet",
+          "name": "Alicante Bouschet"
+        },
+        {
+          "grapeId": "ancellotta",
+          "name": "Ancelotta"
+        },
+        {
+          "grapeId": null,
+          "name": "Egiodola"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "italian-riesling",
+          "name": "Riesling Itálico"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": "semillon",
+          "name": "Sémillon"
+        },
+        {
+          "grapeId": "trebbiano",
+          "name": "Trebbiano"
+        },
+        {
+          "grapeId": "pinot-blanc",
+          "name": "Pinot Blanc"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewurztraminer"
+        },
+        {
+          "grapeId": null,
+          "name": "Flora"
+        },
+        {
+          "grapeId": "glera",
+          "name": "Prosecco"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscatos"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasias"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/ValedosVinhedosIP.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292596,7 +292686,93 @@
         "license": "BR-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "ancellotta",
+          "name": "Ancellotta"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "pinotage",
+          "name": "Pinotage"
+        },
+        {
+          "grapeId": "sangiovese",
+          "name": "Sangiovese"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewurztraminer"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasia Bianca"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasia de Candia"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Branco"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Giallo"
+        },
+        {
+          "grapeId": "viognier",
+          "name": "Viognier"
+        },
+        {
+          "grapeId": null,
+          "name": "Peverella"
+        },
+        {
+          "grapeId": "italian-riesling",
+          "name": "Riesling Itálico"
+        },
+        {
+          "grapeId": "semillon",
+          "name": "Sémillon"
+        },
+        {
+          "grapeId": "trebbiano",
+          "name": "Trebbiano"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/PintoBandeira.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292620,7 +292796,85 @@
     "registerRef": "BR402012000002-0",
     "registeredOn": "2012-12-11",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "ancellotta",
+          "name": "Ancellotta"
+        },
+        {
+          "grapeId": null,
+          "name": "Refosco"
+        },
+        {
+          "grapeId": "marselan",
+          "name": "Marselan"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": "italian-riesling",
+          "name": "Riesling Itálico"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasia de Candia"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Giallo"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewurztraminer"
+        },
+        {
+          "grapeId": "trebbiano",
+          "name": "Trebbiano"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Branco"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasias"
+        },
+        {
+          "grapeId": "muscat-of-alexandria",
+          "name": "Moscato de Alexandria"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/AltosMontes.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292644,7 +292898,77 @@
     "registerRef": "BR402012000006-3",
     "registeredOn": "2013-10-01",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": null,
+          "name": "Egiodola"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": "alicante-bouschet",
+          "name": "Alicante Bouschet"
+        },
+        {
+          "grapeId": "italian-riesling",
+          "name": "Riesling Itálico"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "glera",
+          "name": "Prosecco"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Branco"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Giallo"
+        },
+        {
+          "grapeId": "muscat-of-alexandria",
+          "name": "Moscato de Alexandria"
+        },
+        {
+          "grapeId": "black-muscat",
+          "name": "Moscato de Hamburgo"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasia Bianca"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasia de Cândia"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/MonteBelo.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292668,7 +292992,45 @@
     "registerRef": "BR402014000006-9",
     "registeredOn": "2015-07-14",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": null,
+          "name": "Moscato Branco"
+        },
+        {
+          "grapeId": "muscat-blanc-a-petits-grains",
+          "name": "Moscato Bianco"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasia de Cândia"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Giallo"
+        },
+        {
+          "grapeId": "muscat-of-alexandria",
+          "name": "Moscatel de Alexandria"
+        },
+        {
+          "grapeId": null,
+          "name": "Malvasia Bianca"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Rosado"
+        },
+        {
+          "grapeId": "black-muscat",
+          "name": "Moscato de Hamburgo"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/Farroupilha.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292692,7 +293054,157 @@
     "registerRef": "BR402017000009-1",
     "registeredOn": "2020-05-05",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "alfrocheiro-preto",
+          "name": "Alfrocheiro"
+        },
+        {
+          "grapeId": "alicante-bouschet",
+          "name": "Alicante Bouschet"
+        },
+        {
+          "grapeId": "albarino",
+          "name": "Alvarinho"
+        },
+        {
+          "grapeId": "ancellotta",
+          "name": "Ancellotta"
+        },
+        {
+          "grapeId": "barbera",
+          "name": "Barbera"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "chenin-blanc",
+          "name": "Chenin Blanc"
+        },
+        {
+          "grapeId": "colombard",
+          "name": "French Colombard"
+        },
+        {
+          "grapeId": "gamay",
+          "name": "Gamay"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewurztraminer"
+        },
+        {
+          "grapeId": "grenache",
+          "name": "Grenache"
+        },
+        {
+          "grapeId": null,
+          "name": "Longanesi"
+        },
+        {
+          "grapeId": "malbec",
+          "name": "Malbec"
+        },
+        {
+          "grapeId": "marselan",
+          "name": "Marselan"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Branco"
+        },
+        {
+          "grapeId": "black-muscat",
+          "name": "Moscato de Hamburgo"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Giallo"
+        },
+        {
+          "grapeId": "petit-verdot",
+          "name": "Petit Verdot"
+        },
+        {
+          "grapeId": "pinot-gris",
+          "name": "Pinot Grigio"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "pinotage",
+          "name": "Pinotage"
+        },
+        {
+          "grapeId": "italian-riesling",
+          "name": "Riesling Itálico"
+        },
+        {
+          "grapeId": "riesling",
+          "name": "Riesling Renano"
+        },
+        {
+          "grapeId": null,
+          "name": "Ruby Cabernet"
+        },
+        {
+          "grapeId": "sangiovese",
+          "name": "Sangiovese"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": "semillon",
+          "name": "Semillon"
+        },
+        {
+          "grapeId": "syrah",
+          "name": "Syrah"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": "tempranillo",
+          "name": "Tempranillo"
+        },
+        {
+          "grapeId": "touriga-nacional",
+          "name": "Touriga Nacional"
+        },
+        {
+          "grapeId": "trebbiano",
+          "name": "Trebbiano"
+        },
+        {
+          "grapeId": "viognier",
+          "name": "Viognier"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/CampanhaGacha.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292769,7 +293281,121 @@
         "license": "BR-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "aglianico",
+          "name": "Aglianico"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "garganega",
+          "name": "Garganega"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewurztraminer"
+        },
+        {
+          "grapeId": null,
+          "name": "Grecheto"
+        },
+        {
+          "grapeId": "malbec",
+          "name": "Malbec"
+        },
+        {
+          "grapeId": "marselan",
+          "name": "Marselan"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "montepulciano",
+          "name": "Montepulciano"
+        },
+        {
+          "grapeId": "muscat-blanc-a-petits-grains",
+          "name": "Moscato Bianco"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Giallo"
+        },
+        {
+          "grapeId": "nero-d-avola",
+          "name": "Nero d'Avola"
+        },
+        {
+          "grapeId": "petit-verdot",
+          "name": "Petit Verdot"
+        },
+        {
+          "grapeId": null,
+          "name": "Pignolo"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": null,
+          "name": "Rebo"
+        },
+        {
+          "grapeId": null,
+          "name": "Refosco dal Pedunco Rosso"
+        },
+        {
+          "grapeId": "ribolla-gialla",
+          "name": "Ribolla Gialla"
+        },
+        {
+          "grapeId": "rondinella",
+          "name": "Rondinela"
+        },
+        {
+          "grapeId": "sangiovese",
+          "name": "Sangiovese"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": "semillon",
+          "name": "Sémillon"
+        },
+        {
+          "grapeId": "syrah",
+          "name": "Syrah"
+        },
+        {
+          "grapeId": "touriga-nacional",
+          "name": "Touriga Nacional"
+        },
+        {
+          "grapeId": "vermentino",
+          "name": "Vermentino"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/SantaCatarina.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292793,7 +293419,21 @@
     "registerRef": "BR402021000001-1",
     "registeredOn": "2022-10-18",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Bordô"
+        },
+        {
+          "grapeId": null,
+          "name": "Martha"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/Bituruna.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292817,7 +293457,105 @@
     "registerRef": "BR402020000021-3",
     "registeredOn": "2022-11-01",
     "summaries": {},
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "alicante-bouschet",
+          "name": "Alicante Bouschet"
+        },
+        {
+          "grapeId": "muscat-blanc-a-petits-grains",
+          "name": "Moscato Canelli"
+        },
+        {
+          "grapeId": "tempranillo",
+          "name": "Aragonês"
+        },
+        {
+          "grapeId": "arinto",
+          "name": "Arinto"
+        },
+        {
+          "grapeId": null,
+          "name": "Moscato Itália"
+        },
+        {
+          "grapeId": "petit-verdot",
+          "name": "Petit Verdot"
+        },
+        {
+          "grapeId": "barbera",
+          "name": "Barbera"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "chenin-blanc",
+          "name": "Chenin Blanc"
+        },
+        {
+          "grapeId": null,
+          "name": "Ruby Cabernet"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": "syrah",
+          "name": "Syrah"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": null,
+          "name": "Egiodola"
+        },
+        {
+          "grapeId": "fernao-pires",
+          "name": "Fernão Pires"
+        },
+        {
+          "grapeId": "grenache",
+          "name": "Grenache"
+        },
+        {
+          "grapeId": "malbec",
+          "name": "Malbec"
+        },
+        {
+          "grapeId": "tempranillo",
+          "name": "Tempranillo"
+        },
+        {
+          "grapeId": "touriga-nacional",
+          "name": "Touriga Nacional"
+        },
+        {
+          "grapeId": "verdejo",
+          "name": "Verdejo"
+        },
+        {
+          "grapeId": "viognier",
+          "name": "Viognier"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/ValedoSoFrancisco.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292889,7 +293627,65 @@
         "license": "BR-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "syrah",
+          "name": "Syrah"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "marselan",
+          "name": "Marselan"
+        },
+        {
+          "grapeId": "tempranillo",
+          "name": "Tempranillo"
+        },
+        {
+          "grapeId": "petit-verdot",
+          "name": "Petit Verdot"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot noir"
+        },
+        {
+          "grapeId": "grenache",
+          "name": "Grenache"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": "viognier",
+          "name": "Viognier"
+        },
+        {
+          "grapeId": "marsanne",
+          "name": "Marsanne"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/SuldeMinas.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -292952,7 +293748,41 @@
         "url": "https://es.wikipedia.org/wiki/Vale_dos_Vinhedos"
       }
     },
-    "wikidataId": "Q1241994"
+    "wikidataId": "Q1241994",
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "italian-riesling",
+          "name": "Riesling Itálico"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/ValedosVinhedosDO.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -293024,7 +293854,17 @@
         "license": "BR-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": null,
+          "name": "Goethe"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/ValesdaUvaGoethe.pdf"
+    }
   },
   {
     "countryCode": "BR",
@@ -293096,7 +293936,25 @@
         "license": "BR-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "italian-riesling",
+          "name": "Riesling Itálico"
+        }
+      ],
+      "sourceUrl": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/cadernos-de-especificacoes-tecnicas/AltosdePintoBandeira.pdf"
+    }
   },
   {
     "countryCode": "CA",
@@ -298784,7 +299642,181 @@
         "license": "JP-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": null,
+          "name": "Koshu"
+        },
+        {
+          "grapeId": null,
+          "name": "Muscat Bailey A"
+        },
+        {
+          "grapeId": null,
+          "name": "Black Queen"
+        },
+        {
+          "grapeId": null,
+          "name": "Bailey Alicante A"
+        },
+        {
+          "grapeId": null,
+          "name": "Delaware"
+        },
+        {
+          "grapeId": null,
+          "name": "Kai Noir"
+        },
+        {
+          "grapeId": null,
+          "name": "Kai Blanc"
+        },
+        {
+          "grapeId": null,
+          "name": "Sun-Semillon"
+        },
+        {
+          "grapeId": null,
+          "name": "Harmo Noir"
+        },
+        {
+          "grapeId": null,
+          "name": "Bijou Noir"
+        },
+        {
+          "grapeId": null,
+          "name": "Monde Briller"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "semillon",
+          "name": "Semillon"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": "pinot-blanc",
+          "name": "Pinot Blanc"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "syrah",
+          "name": "Syrah"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "petit-verdot",
+          "name": "Petit Verdot"
+        },
+        {
+          "grapeId": "chenin-blanc",
+          "name": "Chenin Blanc"
+        },
+        {
+          "grapeId": "pinot-gris",
+          "name": "Pinot Gris"
+        },
+        {
+          "grapeId": "viognier",
+          "name": "Viognier"
+        },
+        {
+          "grapeId": null,
+          "name": "Schönberger"
+        },
+        {
+          "grapeId": "riesling",
+          "name": "Riesling"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewürztraminer"
+        },
+        {
+          "grapeId": "melon-de-bourgogne",
+          "name": "Muscadet"
+        },
+        {
+          "grapeId": "cinsaut",
+          "name": "Cinsaut"
+        },
+        {
+          "grapeId": "tempranillo",
+          "name": "Tempranillo"
+        },
+        {
+          "grapeId": "malbec",
+          "name": "Malbec"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": "albarino",
+          "name": "Albariño"
+        },
+        {
+          "grapeId": "sangiovese",
+          "name": "Sangiovese"
+        },
+        {
+          "grapeId": "nebbiolo",
+          "name": "Nebbiolo"
+        },
+        {
+          "grapeId": "barbera",
+          "name": "Barbera"
+        },
+        {
+          "grapeId": "pinot-meunier",
+          "name": "Pinot Meunier"
+        },
+        {
+          "grapeId": "zinfandel",
+          "name": "Zinfandel"
+        },
+        {
+          "grapeId": "zweigelt",
+          "name": "Zweigeltrebe"
+        },
+        {
+          "grapeId": "grenache",
+          "name": "Grenache"
+        },
+        {
+          "grapeId": "carmenere",
+          "name": "Carménère"
+        },
+        {
+          "grapeId": null,
+          "name": "Petit Manseng"
+        }
+      ],
+      "sourceUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_01.htm"
+    }
   },
   {
     "countryCode": "JP",
@@ -298871,7 +299903,237 @@
         "license": "JP-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "muller-thurgau",
+          "name": "Muller Thurgau"
+        },
+        {
+          "grapeId": "kerner",
+          "name": "Kerner"
+        },
+        {
+          "grapeId": "bacchus-weiss",
+          "name": "Bacchus"
+        },
+        {
+          "grapeId": null,
+          "name": "Perle"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewurztraminer"
+        },
+        {
+          "grapeId": "riesling",
+          "name": "Riesling"
+        },
+        {
+          "grapeId": null,
+          "name": "Morio-Muscat"
+        },
+        {
+          "grapeId": null,
+          "name": "Siegerrebe"
+        },
+        {
+          "grapeId": "irsai-oliver",
+          "name": "Irsai Olivér"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon Blanc"
+        },
+        {
+          "grapeId": "pinot-blanc",
+          "name": "Pinot Blanc"
+        },
+        {
+          "grapeId": "pinot-gris",
+          "name": "Pinot Gris"
+        },
+        {
+          "grapeId": "muscat-ottonel",
+          "name": "Muscat Ottonel"
+        },
+        {
+          "grapeId": "auxerrois-blanc",
+          "name": "Auxerrois"
+        },
+        {
+          "grapeId": "muscat-blanc-a-petits-grains",
+          "name": "Muskateller"
+        },
+        {
+          "grapeId": "zweigelt",
+          "name": "Zweigelt"
+        },
+        {
+          "grapeId": "blaufrankisch",
+          "name": "Lemberger"
+        },
+        {
+          "grapeId": "trollinger",
+          "name": "Trollinger"
+        },
+        {
+          "grapeId": "dornfelder",
+          "name": "Dornfelder"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot-Noir"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": null,
+          "name": "Harmo Noir"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": null,
+          "name": "Cabernet Cubin"
+        },
+        {
+          "grapeId": null,
+          "name": "Cabernet Mitos"
+        },
+        {
+          "grapeId": null,
+          "name": "Cabernet Dorsa"
+        },
+        {
+          "grapeId": "acolon",
+          "name": "Acolon"
+        },
+        {
+          "grapeId": null,
+          "name": "Palas"
+        },
+        {
+          "grapeId": null,
+          "name": "Niagara"
+        },
+        {
+          "grapeId": null,
+          "name": "Portland"
+        },
+        {
+          "grapeId": null,
+          "name": "Delaware"
+        },
+        {
+          "grapeId": null,
+          "name": "Tabiji"
+        },
+        {
+          "grapeId": null,
+          "name": "Campbell Early"
+        },
+        {
+          "grapeId": null,
+          "name": "New York Muscat"
+        },
+        {
+          "grapeId": null,
+          "name": "Concord"
+        },
+        {
+          "grapeId": null,
+          "name": "Red Niagara"
+        },
+        {
+          "grapeId": null,
+          "name": "Himaraya"
+        },
+        {
+          "grapeId": null,
+          "name": "Amurensis"
+        },
+        {
+          "grapeId": null,
+          "name": "Coignetiae"
+        },
+        {
+          "grapeId": null,
+          "name": "Seibel 9110"
+        },
+        {
+          "grapeId": null,
+          "name": "Seibel 5279"
+        },
+        {
+          "grapeId": null,
+          "name": "Seibel 10076"
+        },
+        {
+          "grapeId": null,
+          "name": "Seibel 13053"
+        },
+        {
+          "grapeId": null,
+          "name": "Kiyomi"
+        },
+        {
+          "grapeId": null,
+          "name": "Furano No.2"
+        },
+        {
+          "grapeId": null,
+          "name": "Kiyomai"
+        },
+        {
+          "grapeId": null,
+          "name": "Yamasachi"
+        },
+        {
+          "grapeId": null,
+          "name": "Yama Sauvignon"
+        },
+        {
+          "grapeId": null,
+          "name": "Yama Fredonia"
+        },
+        {
+          "grapeId": null,
+          "name": "Zalagyongye"
+        },
+        {
+          "grapeId": null,
+          "name": "Rondo"
+        },
+        {
+          "grapeId": null,
+          "name": "Regent"
+        },
+        {
+          "grapeId": null,
+          "name": "Hokujun"
+        },
+        {
+          "grapeId": null,
+          "name": "Iwamatsu No.5"
+        }
+      ],
+      "sourceUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_07.htm"
+    }
   },
   {
     "countryCode": "JP",
@@ -298947,7 +300209,217 @@
         "license": "JP-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "muller-thurgau",
+          "name": "Muller Thurgau"
+        },
+        {
+          "grapeId": "kerner",
+          "name": "Kerner"
+        },
+        {
+          "grapeId": "riesling",
+          "name": "Riesling"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "cortese",
+          "name": "Cortese"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewürztraminer"
+        },
+        {
+          "grapeId": "albarino",
+          "name": "Albariño"
+        },
+        {
+          "grapeId": null,
+          "name": "Petit Manseng"
+        },
+        {
+          "grapeId": "viognier",
+          "name": "Viognier"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon blanc"
+        },
+        {
+          "grapeId": "pinot-blanc",
+          "name": "Pinot Blanc"
+        },
+        {
+          "grapeId": "pinot-gris",
+          "name": "Pinot Gris"
+        },
+        {
+          "grapeId": "chasselas",
+          "name": "Chasselas"
+        },
+        {
+          "grapeId": "zweigelt",
+          "name": "Zweigelt-Rebe"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "pinot-meunier",
+          "name": "Pinot Meunier"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "syrah",
+          "name": "Syrah"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "petit-verdot",
+          "name": "Petit Verdot"
+        },
+        {
+          "grapeId": "malbec",
+          "name": "Malbec"
+        },
+        {
+          "grapeId": "gamay",
+          "name": "Gamay"
+        },
+        {
+          "grapeId": "nebbiolo",
+          "name": "Nebbiolo"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": null,
+          "name": "Delaware"
+        },
+        {
+          "grapeId": null,
+          "name": "Niagara"
+        },
+        {
+          "grapeId": null,
+          "name": "Campbell Early"
+        },
+        {
+          "grapeId": null,
+          "name": "Concord"
+        },
+        {
+          "grapeId": null,
+          "name": "Steuben"
+        },
+        {
+          "grapeId": null,
+          "name": "Muscat Bailey A"
+        },
+        {
+          "grapeId": null,
+          "name": "Black Queen"
+        },
+        {
+          "grapeId": null,
+          "name": "Bailey Alicante B"
+        },
+        {
+          "grapeId": null,
+          "name": "Bijou Noir"
+        },
+        {
+          "grapeId": null,
+          "name": "Koshu"
+        },
+        {
+          "grapeId": null,
+          "name": "Pione"
+        },
+        {
+          "grapeId": null,
+          "name": "Yama Sauvignon"
+        },
+        {
+          "grapeId": null,
+          "name": "Hokujun"
+        },
+        {
+          "grapeId": null,
+          "name": "Harmo Noir"
+        },
+        {
+          "grapeId": null,
+          "name": "Riesling Lion"
+        },
+        {
+          "grapeId": null,
+          "name": "Riesling Forte"
+        },
+        {
+          "grapeId": null,
+          "name": "Seibel 9110"
+        },
+        {
+          "grapeId": null,
+          "name": "Shine Muscat"
+        },
+        {
+          "grapeId": null,
+          "name": "Mondo Briller"
+        },
+        {
+          "grapeId": null,
+          "name": "Himalaya"
+        },
+        {
+          "grapeId": null,
+          "name": "Shokoshi"
+        },
+        {
+          "grapeId": null,
+          "name": "Black Pegal"
+        },
+        {
+          "grapeId": null,
+          "name": "Wine Grand"
+        },
+        {
+          "grapeId": null,
+          "name": "Coignetiae"
+        },
+        {
+          "grapeId": null,
+          "name": "Amurensis"
+        },
+        {
+          "grapeId": null,
+          "name": "Neo Muscat"
+        }
+      ],
+      "sourceUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_3.htm"
+    }
   },
   {
     "countryCode": "JP",
@@ -299023,7 +300495,157 @@
         "license": "JP-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": null,
+          "name": "Delaware"
+        },
+        {
+          "grapeId": null,
+          "name": "Koshu"
+        },
+        {
+          "grapeId": null,
+          "name": "Muscat Bailey A"
+        },
+        {
+          "grapeId": null,
+          "name": "Kyoho"
+        },
+        {
+          "grapeId": null,
+          "name": "Pione"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "riesling",
+          "name": "Riesling"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon blanc"
+        },
+        {
+          "grapeId": "syrah",
+          "name": "Syrah"
+        },
+        {
+          "grapeId": "chenin-blanc",
+          "name": "Chenin blanc"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": null,
+          "name": "Harmo Noir"
+        },
+        {
+          "grapeId": "petit-verdot",
+          "name": "Petit Verdot"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": "albarino",
+          "name": "Albariño"
+        },
+        {
+          "grapeId": "sangiovese",
+          "name": "Sangiovese"
+        },
+        {
+          "grapeId": "barbera",
+          "name": "Barbera"
+        },
+        {
+          "grapeId": "grenache",
+          "name": "Grenache"
+        },
+        {
+          "grapeId": null,
+          "name": "Petit Manseng"
+        },
+        {
+          "grapeId": null,
+          "name": "Osaka R N-1"
+        },
+        {
+          "grapeId": null,
+          "name": "Campbell Early"
+        },
+        {
+          "grapeId": null,
+          "name": "Niagara"
+        },
+        {
+          "grapeId": null,
+          "name": "Neo Muscat"
+        },
+        {
+          "grapeId": null,
+          "name": "Bailey Alicante B"
+        },
+        {
+          "grapeId": null,
+          "name": "Black Queen"
+        },
+        {
+          "grapeId": null,
+          "name": "Yama Sauvignon"
+        },
+        {
+          "grapeId": null,
+          "name": "Bijou Noir"
+        },
+        {
+          "grapeId": null,
+          "name": "Fuji No Yume"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": null,
+          "name": "Regent"
+        },
+        {
+          "grapeId": "bacchus-weiss",
+          "name": "Bacchus"
+        },
+        {
+          "grapeId": "kerner",
+          "name": "Kerner"
+        },
+        {
+          "grapeId": null,
+          "name": "Mondo Briller"
+        },
+        {
+          "grapeId": "tempranillo",
+          "name": "Tempranillo"
+        }
+      ],
+      "sourceUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_15.htm"
+    }
   },
   {
     "countryCode": "JP",
@@ -299099,7 +300721,217 @@
         "license": "JP-official-text"
       }
     },
-    "wikidataId": null
+    "wikidataId": null,
+    "register": {
+      "categories": [],
+      "grapes": [
+        {
+          "grapeId": "merlot",
+          "name": "Merlot"
+        },
+        {
+          "grapeId": "chardonnay",
+          "name": "Chardonnay"
+        },
+        {
+          "grapeId": "cabernet-sauvignon",
+          "name": "Cabernet Sauvignon"
+        },
+        {
+          "grapeId": "pinot-noir",
+          "name": "Pinot Noir"
+        },
+        {
+          "grapeId": "kerner",
+          "name": "Kerner"
+        },
+        {
+          "grapeId": "sauvignon-blanc",
+          "name": "Sauvignon blanc"
+        },
+        {
+          "grapeId": "pinot-blanc",
+          "name": "Pinot Blanc"
+        },
+        {
+          "grapeId": "cabernet-franc",
+          "name": "Cabernet Franc"
+        },
+        {
+          "grapeId": "semillon",
+          "name": "Semillon"
+        },
+        {
+          "grapeId": "muller-thurgau",
+          "name": "Muller Thurgau"
+        },
+        {
+          "grapeId": "sangiovese",
+          "name": "Sangiovese"
+        },
+        {
+          "grapeId": "syrah",
+          "name": "Syrah"
+        },
+        {
+          "grapeId": "viognier",
+          "name": "Viognier"
+        },
+        {
+          "grapeId": "barbera",
+          "name": "Barbera"
+        },
+        {
+          "grapeId": "pinot-gris",
+          "name": "Pinot Gris"
+        },
+        {
+          "grapeId": "gewurztraminer",
+          "name": "Gewurztraminer"
+        },
+        {
+          "grapeId": "riesling",
+          "name": "Riesling"
+        },
+        {
+          "grapeId": "bacchus-weiss",
+          "name": "Bacchus"
+        },
+        {
+          "grapeId": "malbec",
+          "name": "Malbec"
+        },
+        {
+          "grapeId": "petit-verdot",
+          "name": "Petit Verdot"
+        },
+        {
+          "grapeId": "tannat",
+          "name": "Tannat"
+        },
+        {
+          "grapeId": null,
+          "name": "Petit Manseng"
+        },
+        {
+          "grapeId": "albarino",
+          "name": "Albarino"
+        },
+        {
+          "grapeId": "marselan",
+          "name": "Marselan"
+        },
+        {
+          "grapeId": "chenin-blanc",
+          "name": "Chenin blanc"
+        },
+        {
+          "grapeId": null,
+          "name": "Schonburger"
+        },
+        {
+          "grapeId": null,
+          "name": "Zala Gyongye"
+        },
+        {
+          "grapeId": "zweigelt",
+          "name": "Zweigelt-Rebe"
+        },
+        {
+          "grapeId": "dornfelder",
+          "name": "Dornfelder"
+        },
+        {
+          "grapeId": null,
+          "name": "Seibel 13053"
+        },
+        {
+          "grapeId": null,
+          "name": "Seibel 9110"
+        },
+        {
+          "grapeId": null,
+          "name": "Delaware"
+        },
+        {
+          "grapeId": null,
+          "name": "Concord"
+        },
+        {
+          "grapeId": null,
+          "name": "Niagara"
+        },
+        {
+          "grapeId": null,
+          "name": "Asama Merlot"
+        },
+        {
+          "grapeId": null,
+          "name": "Sun Semillon"
+        },
+        {
+          "grapeId": null,
+          "name": "Shinano Riesling"
+        },
+        {
+          "grapeId": null,
+          "name": "Chardonnay de Corail"
+        },
+        {
+          "grapeId": null,
+          "name": "Muscat Bailey A"
+        },
+        {
+          "grapeId": null,
+          "name": "Black Queen"
+        },
+        {
+          "grapeId": null,
+          "name": "Shokoshi"
+        },
+        {
+          "grapeId": null,
+          "name": "Yama Sauvignon"
+        },
+        {
+          "grapeId": null,
+          "name": "Ryugan"
+        },
+        {
+          "grapeId": null,
+          "name": "Koshu"
+        },
+        {
+          "grapeId": null,
+          "name": "Wine Grand"
+        },
+        {
+          "grapeId": null,
+          "name": "Kokuho 3-go"
+        },
+        {
+          "grapeId": null,
+          "name": "White Pegal"
+        },
+        {
+          "grapeId": null,
+          "name": "Black Pegal"
+        },
+        {
+          "grapeId": null,
+          "name": "Amurensis"
+        },
+        {
+          "grapeId": null,
+          "name": "Coignetiae"
+        },
+        {
+          "grapeId": null,
+          "name": "Kyoho"
+        }
+      ],
+      "sourceUrl": "https://www.nta.go.jp/english/taxes/liquor_administration/02_16.htm"
+    }
   },
   {
     "countryCode": "MD",

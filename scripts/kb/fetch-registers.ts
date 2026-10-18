@@ -26,6 +26,8 @@ export type TranscribedArea = {
   key: string;
   /** The varieties its own document allows, as written there (Georgia's). */
   grapes?: string[];
+  /** The document the varieties are read from, where it is not the name's own page. */
+  grapesUrl?: string;
   /** True where "<name> wine" is another place's wine (Jura's is France's). */
   noArticle?: boolean;
   /** The kind of area the register gives it, where it gives several. */

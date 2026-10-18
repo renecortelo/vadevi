@@ -189,6 +189,13 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
+- **Japan's and Brazil's grapes from their own specifications**: Japan's
+  five wine indications list the varieties their National Tax Agency
+  specifications allow, and Brazil's thirteen the cultivars of their INPI
+  cadernos (scanned ones read by text recognition and checked); with
+  Georgia's, 504 varieties, 333 linked to their grape cards. Varieties the
+  library has no card for (Koshu, Muscat Bailey A, Brazil's Moscato Branco)
+  are listed as written.
 - **Georgia's grapes from its own documents**: each of the 30 wine
   appellations lists the varieties its Sakpatenti specification allows, as
   written there, 57 of 73 linked to their grape cards (the documents' own
