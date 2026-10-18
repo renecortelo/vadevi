@@ -49,6 +49,20 @@ concretely:
 - If a reviewer does become available, the table below is where their sign-off
   is recorded, and this waiver should be replaced by their entry.
 
+## How a reviewer works
+
+A reviewer needs no repository and no JSON:
+
+1. `pnpm i18n:export <folder>` writes one spreadsheet per language
+   (`<folder>/es.csv`, …): each string's key, its English source, the current
+   translation, and empty `correction` and `notes` columns.
+2. The reviewer opens their language's file in any spreadsheet program, writes
+   a correction only where the current translation should change, and keeps
+   `{{placeholders}}` as they are.
+3. `pnpm i18n:import <folder>` applies the filled corrections, and nothing else;
+   `pnpm i18n:check` then refuses any that broke a placeholder, a plural or the
+   layout budget.
+
 ## Sign-off table
 
 English is the source catalog and needs no translation review.
