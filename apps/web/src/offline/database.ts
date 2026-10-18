@@ -35,6 +35,12 @@ export type QuickLogDraft = {
   spaceId: string;
   updatedAt: string;
   userId: string;
+  /**
+   * What the last spoken note filled, field by field ("wine.displayName"), so
+   * the next note may replace what voice wrote and the reader left alone —
+   * never what the reader typed.
+   */
+  voiceFilled?: Record<string, unknown>;
   wineId: string;
   wineMutationId: string;
   winePayload: Omit<CreateWineRequest, "clientId" | "mediaId">;

@@ -16,9 +16,11 @@ type Field = Proposal["fields"][string];
 export function applyVoiceProposal(
   draft: QuickLogDraft,
   proposal: Proposal,
+  extra: { descriptors?: string[]; now?: Date } = {},
 ): { draft: QuickLogDraft; filled: string[]; suggestions: [string, Field][] } {
-  const wine = { ...draft.winePayload };
-  const note = { ...draft.notePayload };
+  const start = forgetVoice(draft);
+  const wine = { ...start.winePayload };
+  const note = { ...start.notePayload };
   const filled: string[] = [];
   const suggestions: [string, Field][] = [];
   const certain = (name: string) => {
@@ -78,8 +80,89 @@ export function applyVoiceProposal(
       filled.push("comment");
     }
   }
+  // The tasting words the form offers, ticked from what was said.
+  if (note.descriptorCodes.length === 0 && (extra.descriptors ?? []).length > 0) {
+    note.descriptorCodes = [...extra.descriptors!];
+    filled.push("descriptors");
+  }
+  // The day: the one said ("yesterday", "on Saturday"), or else today when
+  // the draft was begun on another day — "I'm tasting" is now, and a draft
+  // left unsaved for days kept the day it was begun (18 October 2026).
+  const now = extra.now ?? new Date();
+  const said = certain("tastedAt");
+  if (typeof said === "string" && /^\d{4}-\d{2}-\d{2}$/.test(said)) {
+    const [year, month, day] = said.split("-").map(Number);
+    const at = new Date(now);
+    at.setFullYear(year!, month! - 1, day!);
+    note.tastedAt = at.toISOString();
+    filled.push("tastedAt");
+  } else if (
+    filled.length > 0 &&
+    new Date(note.tastedAt).toDateString() !== now.toDateString() &&
+    new Date(note.tastedAt) < now
+  ) {
+    note.tastedAt = now.toISOString();
+  }
   if (filled.length > 0) note.creationMethod = "audio";
-  return { draft: { ...draft, notePayload: note, winePayload: wine }, filled, suggestions };
+  const next = { ...start, notePayload: note, winePayload: wine };
+  return { draft: { ...next, voiceFilled: changedBy(start, next) }, filled, suggestions };
+}
+
+/** A draft's fields by path, the way `voiceFilled` names them. */
+function fieldsOf(draft: QuickLogDraft): Record<string, unknown> {
+  return {
+    ...Object.fromEntries(
+      Object.entries(draft.winePayload).map(([key, value]) => [`wine.${key}`, value]),
+    ),
+    ...Object.fromEntries(
+      Object.entries(draft.notePayload).map(([key, value]) => [`note.${key}`, value]),
+    ),
+  };
+}
+
+const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
+
+/** What a spoken note changed, field by field (its marker aside). */
+function changedBy(before: QuickLogDraft, after: QuickLogDraft): Record<string, unknown> {
+  const old = fieldsOf(before);
+  return Object.fromEntries(
+    Object.entries(fieldsOf(after)).filter(
+      ([key, value]) => key !== "note.creationMethod" && !same(old[key], value),
+    ),
+  );
+}
+
+/** The empty value of a field the reader must still see as a field. */
+const emptyOf: Record<string, unknown> = {
+  "note.descriptorCodes": [],
+  "wine.displayName": "",
+  "wine.producerName": "",
+  "wine.vintageYear": null,
+};
+
+/**
+ * Before a new spoken note: what the last one filled and the reader left as it
+ * was is cleared, so a second wine described into an unsaved draft replaces
+ * the first's name and producer — what the reader typed or corrected stays.
+ */
+export function forgetVoice(draft: QuickLogDraft): QuickLogDraft {
+  const filled = draft.voiceFilled ?? {};
+  const wine: Record<string, unknown> = { ...draft.winePayload };
+  const note: Record<string, unknown> = { ...draft.notePayload };
+  for (const [path, value] of Object.entries(filled)) {
+    if (path === "note.tastedAt") continue;
+    const [part, key] = path.split(".") as ["note" | "wine", string];
+    const holder = part === "wine" ? wine : note;
+    if (!same(holder[key], value)) continue;
+    if (path in emptyOf) holder[key] = emptyOf[path];
+    else delete holder[key];
+  }
+  return {
+    ...draft,
+    notePayload: note as QuickLogDraft["notePayload"],
+    voiceFilled: {},
+    winePayload: wine as QuickLogDraft["winePayload"],
+  };
 }
 
 /** The identification form's fields, as strings, the way its inputs hold them. */
@@ -99,8 +182,19 @@ export type SpokenWine = {
 export function applyVoiceToWine(
   wine: SpokenWine,
   proposal: Proposal,
-): { filled: string[]; suggestions: [string, Field][]; wine: SpokenWine } {
+  /** What the last spoken description filled; replaced where left as it was. */
+  previous: Partial<SpokenWine> = {},
+): {
+  filled: string[];
+  set: Partial<SpokenWine>;
+  suggestions: [string, Field][];
+  wine: SpokenWine;
+} {
   const next = { ...wine };
+  for (const [key, value] of Object.entries(previous) as [keyof SpokenWine, string][]) {
+    if (next[key] === value) next[key] = "";
+  }
+  const before = { ...next };
   const filled: string[] = [];
   const suggestions: [string, Field][] = [];
   const certain = (name: string) => {
@@ -124,7 +218,12 @@ export function applyVoiceToWine(
   fill("region", "region", proposal.region?.name ?? certain("region"));
   fill("countryCode", "countryCode", certain("countryCode"));
   fill("wineType", "wineType", certain("wineType"));
-  return { filled, suggestions, wine: next };
+  const set = Object.fromEntries(
+    (Object.keys(next) as (keyof SpokenWine)[])
+      .filter((key) => next[key] !== before[key])
+      .map((key) => [key, next[key]]),
+  ) as Partial<SpokenWine>;
+  return { filled, set, suggestions, wine: next };
 }
 
 /** The deep tasting's fields a spoken note may fill as said, one to one. */
@@ -162,6 +261,7 @@ const deepFields = [
 export function applyVoiceToDeepTasting(
   payload: DeepTastingRequest,
   proposal: Proposal,
+  extra: { descriptors?: { nose: string[]; palate: string[] }; now?: Date } = {},
 ): { filled: string[]; payload: DeepTastingRequest; suggestions: [string, Field][] } {
   const next: Record<string, unknown> = { ...payload };
   const context: Record<string, unknown> = { ...payload.context };
@@ -204,6 +304,24 @@ export function applyVoiceToDeepTasting(
   if (typeof decanted === "boolean" && empty(context.decanted)) {
     context.decanted = decanted;
     filled.push("decanted");
+  }
+  // The tasting words of each step, ticked from what was said of it.
+  const descriptors = [...payload.descriptors];
+  for (const phase of ["nose", "palate"] as const) {
+    const heard = extra.descriptors?.[phase] ?? [];
+    if (heard.length === 0 || descriptors.some((item) => item.phase === phase)) continue;
+    descriptors.push(...heard.map((code) => ({ code, phase })));
+    filled.push(`${phase}Descriptors`);
+  }
+  next.descriptors = descriptors;
+  // The day said ("yesterday"), at the time the form already has.
+  const said = certain("tastedAt");
+  if (typeof said === "string" && /^\d{4}-\d{2}-\d{2}$/.test(said)) {
+    const [year, month, day] = said.split("-").map(Number);
+    const at = new Date(payload.tastedAt);
+    at.setFullYear(year!, month! - 1, day!);
+    next.tastedAt = at.toISOString();
+    filled.push("tastedAt");
   }
   if (Object.keys(context).length > 0) next.context = context;
   if (filled.length > 0) next.creationMethod = "audio";

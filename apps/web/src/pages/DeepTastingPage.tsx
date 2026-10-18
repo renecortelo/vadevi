@@ -27,6 +27,7 @@ import { createUlid } from "../security/ulid";
 import { getDeepTastingNote } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
 import { applyVoiceToDeepTasting } from "../voice/apply";
+import { heardDescriptors } from "../voice/descriptors";
 import { fromLocalDateTimeInput, toLocalDateTimeInput } from "../lib/local-date-time";
 
 type TastingContext = z.infer<typeof TastingContextSchema>;
@@ -357,7 +358,9 @@ export function DeepTastingPage() {
 
   /** A spoken note fills what is still empty in every step; nothing is saved. */
   function applyVoice(proposal: Parameters<typeof applyVoiceToDeepTasting>[1]) {
-    const applied = applyVoiceToDeepTasting(latestDraft.current.payload, proposal);
+    const applied = applyVoiceToDeepTasting(latestDraft.current.payload, proposal, {
+      descriptors: heardDescriptors(proposal, locale, wineType as OntologyWineType | null),
+    });
     setSaved(false);
     setDraft((current) => ({ ...current, payload: applied.payload }));
     return {

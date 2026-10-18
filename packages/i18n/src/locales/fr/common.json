@@ -563,7 +563,11 @@
     "prefillHelp": "Copie ses informations dans une nouvelle entrée — changez ensuite le millésime.",
     "moreDetails": "Plus de détails",
     "eventLabel": "Événement (facultatif)",
-    "eventNone": "Aucun événement"
+    "eventNone": "Aucun événement",
+    "clearAction": "Vider le formulaire",
+    "clearTitle": "Vider le formulaire ?",
+    "clearBody": "Tout ce qui est écrit ici et non enregistré est effacé, pour commencer le vin suivant de zéro.",
+    "clearConfirm": "Vider"
   },
   "memory": {
     "eyebrow": "Historique privé",

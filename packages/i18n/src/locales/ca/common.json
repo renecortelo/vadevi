@@ -563,7 +563,11 @@
     "prefillHelp": "Copia les seves dades en un registre nou — després només canvia l'anyada.",
     "moreDetails": "Més detalls",
     "eventLabel": "Esdeveniment (opcional)",
-    "eventNone": "Sense esdeveniment"
+    "eventNone": "Sense esdeveniment",
+    "clearAction": "Buidar el formulari",
+    "clearTitle": "Vols buidar el formulari?",
+    "clearBody": "S'esborra tot el que hi ha escrit i no desat, per començar el vi següent de zero.",
+    "clearConfirm": "Buidar"
   },
   "memory": {
     "eyebrow": "Historial privat",

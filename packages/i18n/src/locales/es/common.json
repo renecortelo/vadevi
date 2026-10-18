@@ -563,7 +563,11 @@
     "prefillHelp": "Copia sus datos en un registro nuevo — luego solo cambia la añada.",
     "moreDetails": "Más detalles",
     "eventLabel": "Evento (opcional)",
-    "eventNone": "Sin evento"
+    "eventNone": "Sin evento",
+    "clearAction": "Vaciar el formulario",
+    "clearTitle": "¿Vaciar el formulario?",
+    "clearBody": "Se borra todo lo escrito aquí y no guardado, para empezar el siguiente vino de cero.",
+    "clearConfirm": "Vaciar"
   },
   "memory": {
     "eyebrow": "Historial privado",

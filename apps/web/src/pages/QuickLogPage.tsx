@@ -28,6 +28,7 @@ import { listTastingSessions } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
 import { fromLocalDateTimeInput, toLocalDateTimeInput } from "../lib/local-date-time";
 import { applyVoiceProposal } from "../voice/apply";
+import { heardDescriptors } from "../voice/descriptors";
 
 type SessionSummary = TastingSessionResponse["data"];
 
@@ -73,6 +74,8 @@ export function QuickLogPage() {
   const [draft, setDraft] = useState<QuickLogDraft>(() => newDraft(userId, spaceId));
   const [ready, setReady] = useState(false);
   const [reviewing, setReviewing] = useState(false);
+  // Asking before the unsaved draft is emptied.
+  const [clearing, setClearing] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [photoError, setPhotoError] = useState<string | null>(null);
@@ -100,7 +103,24 @@ export function QuickLogPage() {
     const id = partitionId(userId, spaceId);
     void offlineDatabase.drafts.get(id).then((stored) => {
       if (!active) return;
-      setDraft(stored ?? newDraft(userId, spaceId));
+      // A draft left on another day, its date never changed from the day it
+      // was written on, is taken up today: the wine being described is the
+      // one in the glass now. A past date the reader chose stays.
+      const day = (iso: string) => new Date(iso).toDateString();
+      const stale =
+        stored !== undefined &&
+        day(stored.updatedAt) !== day(new Date().toISOString()) &&
+        day(stored.notePayload.tastedAt) === day(stored.updatedAt);
+      setDraft(
+        stored === undefined
+          ? newDraft(userId, spaceId)
+          : stale
+            ? {
+                ...stored,
+                notePayload: { ...stored.notePayload, tastedAt: new Date().toISOString() },
+              }
+            : stored,
+      );
       setReviewing(false);
       setSaved(false);
       setPhotoOpen(stored?.photo !== undefined);
@@ -182,9 +202,12 @@ export function QuickLogPage() {
 
   /** A spoken note fills what is still empty; a filled note field opens the note. */
   function applyVoice(proposal: Parameters<typeof applyVoiceProposal>[1]) {
-    const applied = applyVoiceProposal(latestDraft.current, proposal);
+    const applied = applyVoiceProposal(latestDraft.current, proposal, {
+      descriptors: heardDescriptors(proposal, locale, null).any,
+    });
     const noteFields = [
       "comment",
+      "descriptors",
       "foodText",
       "score100",
       "sentiment",
@@ -761,10 +784,51 @@ export function QuickLogPage() {
             {error}
           </p>
         ) : null}
-        <button className="primary-button" type="submit">
-          {t("quickLog.reviewAction")}
-        </button>
+        <div className="hero__actions">
+          <button className="primary-button" type="submit">
+            {t("quickLog.reviewAction")}
+          </button>
+          <button
+            className="action-link action-link--quiet"
+            onClick={() => setClearing(true)}
+            type="button"
+          >
+            {t("quickLog.clearAction")}
+          </button>
+        </div>
       </form>
+
+      <ModalDialog
+        labelledBy="clear-draft-title"
+        onDismiss={() => setClearing(false)}
+        open={clearing}
+      >
+        <h2 id="clear-draft-title">{t("quickLog.clearTitle")}</h2>
+        <p>{t("quickLog.clearBody")}</p>
+        <div className="hero__actions">
+          <button
+            className="primary-button"
+            onClick={() => {
+              const fresh = newDraft(userId, spaceId);
+              setDraft(fresh);
+              setSaved(false);
+              setPhotoOpen(false);
+              setClearing(false);
+              void offlineDatabase.drafts.put(fresh);
+            }}
+            type="button"
+          >
+            {t("quickLog.clearConfirm")}
+          </button>
+          <button
+            className="action-link action-link--secondary"
+            onClick={() => setClearing(false)}
+            type="button"
+          >
+            {t("quickLog.editAction")}
+          </button>
+        </div>
+      </ModalDialog>
 
       <ModalDialog
         labelledBy="confirm-wine-title"

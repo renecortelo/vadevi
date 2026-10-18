@@ -59,7 +59,9 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
   Saturday"… against "today"; a date in the future is never given.
 - servingTemperatureC in degrees Celsius (convert Fahrenheit).
 - wineType is red, white, rose, sparkling, fortified or orange.
-- aromas: the aromas named, as a list in the taster's own words and language.
+- aromas: the aromas named, as a list in the taster's own words and language,
+  never translated ("mantequilla", not "butter").
+- region only when a place is named; "from around here" names none.
 - appearanceIntensity and effervescence are 1–5 like the scales above;
   appearanceHue is the colour named ("rubí", "pale ruby"), in the taster's words.
 - noseCondition: "clean" when the taster says the nose is clean or names a

@@ -271,4 +271,49 @@ describe("a spoken note's proposal", () => {
     );
     expect(proposal.fields.appearanceColorFamily?.value).toBe("red");
   });
+
+  it("keeps names that were said, sizes that were said, and the taster's own sentences", () => {
+    // Cases like the first real notes sent for review (18 October 2026), in
+    // words written for the test.
+    const text =
+      "Pruebo un vino que se llama Brisa Alta del año 23, de aquí de la zona. " +
+      "Con la copa quieta huele a vainilla, roble y un poco de madera. " +
+      "Taninos suaves y un final algo largo. No sé cuántas copas me tomaría. " +
+      "Cuesta unos 20 euros la botella.";
+    const proposal = acceptProposal(
+      {
+        fields: [
+          { certain: true, name: "wineName", quote: "se llama Brisa Alta", value: "Brisa Alta" },
+          { certain: true, name: "region", quote: "de aquí de la zona", value: "local region" },
+          {
+            certain: true,
+            name: "aromas",
+            quote: "huele a vainilla, roble y un poco de madera",
+            value: ["vainilla", "roble", "madera"],
+          },
+          { certain: true, name: "tanninLevel", quote: "Taninos suaves", value: 2 },
+          { certain: true, name: "finishLength", quote: "un final algo largo", value: 4 },
+          {
+            certain: true,
+            name: "wouldDrinkAgain",
+            quote: "No sé cuántas copas me tomaría",
+            value: "yes",
+          },
+          { certain: true, name: "bottleSizeMl", quote: "la botella", value: 750 },
+        ],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(proposal.fields.wineName?.value).toBe("Brisa Alta");
+    // "local region" was never said; nor was a size.
+    expect(proposal.fields.region).toBeUndefined();
+    expect(proposal.fields.bottleSizeMl).toBeUndefined();
+    // "No sé…" is a doubt, offered rather than filled.
+    expect(proposal.fields.wouldDrinkAgain?.status).toBe("ambiguous");
+    // The nose and the mouth in the taster's words, though the model gave neither.
+    expect(proposal.fields.noseText?.value).toBe("huele a vainilla, roble y un poco de madera");
+    expect(proposal.fields.palateText?.value).toBe("Taninos suaves. un final algo largo");
+  });
 });

@@ -563,7 +563,11 @@
     "prefillHelp": "Copia i suoi dati in una nuova voce — poi cambia solo l'annata.",
     "moreDetails": "Altri dettagli",
     "eventLabel": "Evento (facoltativo)",
-    "eventNone": "Nessun evento"
+    "eventNone": "Nessun evento",
+    "clearAction": "Svuota il modulo",
+    "clearTitle": "Svuotare il modulo?",
+    "clearBody": "Si cancella tutto ciò che è scritto qui e non salvato, per iniziare il prossimo vino da zero.",
+    "clearConfirm": "Svuota"
   },
   "memory": {
     "eyebrow": "Cronologia privata",

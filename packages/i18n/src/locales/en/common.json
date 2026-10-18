@@ -563,7 +563,11 @@
     "prefillHelp": "Copies its details into a new entry — then just change the vintage.",
     "moreDetails": "More details",
     "eventLabel": "Event (optional)",
-    "eventNone": "No event"
+    "eventNone": "No event",
+    "clearAction": "Clear the form",
+    "clearTitle": "Clear the form?",
+    "clearBody": "Everything written here and not saved is removed, so the next wine starts from nothing.",
+    "clearConfirm": "Clear"
   },
   "memory": {
     "eyebrow": "Private history",

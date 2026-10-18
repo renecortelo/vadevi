@@ -563,7 +563,11 @@
     "prefillHelp": "Copia os seus dados para um novo registo — depois muda só a colheita.",
     "moreDetails": "Mais detalhes",
     "eventLabel": "Evento (opcional)",
-    "eventNone": "Sem evento"
+    "eventNone": "Sem evento",
+    "clearAction": "Limpar o formulário",
+    "clearTitle": "Limpar o formulário?",
+    "clearBody": "Apaga-se tudo o que está escrito aqui e não foi guardado, para começar o próximo vinho do zero.",
+    "clearConfirm": "Limpar"
   },
   "memory": {
     "eyebrow": "Histórico privado",

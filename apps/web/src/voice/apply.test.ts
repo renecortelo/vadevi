@@ -4,6 +4,7 @@ import type { DeepTastingRequest } from "@vadevi/contracts";
 
 import type { QuickLogDraft } from "../offline/database";
 import { applyVoiceProposal, applyVoiceToDeepTasting, applyVoiceToWine } from "./apply";
+import { heardDescriptors } from "./descriptors";
 
 const draft = {
   id: "d",
@@ -99,9 +100,10 @@ describe("a spoken note laid onto a deep tasting", () => {
       region: null,
       severalWines: false,
     });
-    // What was there stays; the wine and the date are not this form's to change.
+    // What was there stays, and the wine is not this form's to change; the
+    // day said ("ayer") is the tasting's, at the time the form had.
     expect(next.acidity).toBe(2);
-    expect(next.tastedAt).toBe(payload.tastedAt);
+    expect(new Date(next.tastedAt).getDate()).toBe(15);
     expect(next).not.toHaveProperty("producerName");
     expect(next.tanninLevel).toBe(3);
     expect(next.noseText).toBe("mora, regaliz");
@@ -113,6 +115,7 @@ describe("a spoken note laid onto a deep tasting", () => {
       "foodText",
       "servingTemperatureC",
       "tanninLevel",
+      "tastedAt",
     ]);
     expect(suggestions.map(([name]) => name)).toEqual(["body"]);
   });
@@ -160,5 +163,100 @@ describe("a spoken description laid onto a wine being added", () => {
       wineType: "red",
     });
     expect(filled.sort()).toEqual(["producerName", "region", "vintageYear", "wineType"]);
+  });
+});
+
+describe("a second spoken note into a draft never saved", () => {
+  it("replaces what the first one filled and the reader left, never what they typed", () => {
+    const now = new Date("2026-10-18T10:00:00.000Z");
+    const first = applyVoiceProposal(
+      { ...draft, winePayload: { ...draft.winePayload, displayName: "" } },
+      {
+        fields: {
+          producerName: { quote: "de Casa Uno", status: "explicit", value: "Casa Uno" },
+          sentiment: { quote: "me encanta", status: "explicit", value: "like" },
+          wineName: { quote: "Vino Uno", status: "explicit", value: "Vino Uno" },
+        },
+        region: null,
+        severalWines: false,
+      },
+      { now },
+    ).draft;
+    // The reader corrects the producer by hand; the name stays as voice left it.
+    const corrected = {
+      ...first,
+      winePayload: { ...first.winePayload, producerName: "Casa Uno Corregida" },
+    };
+    const second = applyVoiceProposal(
+      corrected,
+      {
+        fields: {
+          producerName: { quote: "de Casa Dos", status: "explicit", value: "Casa Dos" },
+          wineName: { quote: "Vino Dos", status: "explicit", value: "Vino Dos" },
+        },
+        region: null,
+        severalWines: false,
+      },
+      { now },
+    ).draft;
+    expect(second.winePayload.displayName).toBe("Vino Dos");
+    expect(second.winePayload.producerName).toBe("Casa Uno Corregida");
+    // Nothing of the first wine's liking survives into the second.
+    expect(second.notePayload.sentiment).toBeUndefined();
+    expect(second.voiceFilled).toEqual({ "wine.displayName": "Vino Dos" });
+  });
+
+  it("takes up a draft begun on another day today, or on the day that was said", () => {
+    const now = new Date("2026-10-18T10:00:00.000Z");
+    const stale = applyVoiceProposal(
+      draft,
+      {
+        fields: { score100: { quote: "un 90", status: "explicit", value: 90 } },
+        region: null,
+        severalWines: false,
+      },
+      { now },
+    ).draft;
+    expect(stale.notePayload.tastedAt).toBe(now.toISOString());
+    const said = applyVoiceProposal(
+      draft,
+      {
+        fields: { tastedAt: { quote: "ayer", status: "explicit", value: "2026-10-17" } },
+        region: null,
+        severalWines: false,
+      },
+      { now },
+    ).draft;
+    expect(new Date(said.notePayload.tastedAt).toISOString().slice(0, 10)).toBe("2026-10-17");
+  });
+});
+
+describe("the tasting words a spoken note names", () => {
+  it("ticks the form's descriptors from the reader's words and the model's list", () => {
+    const heard = heardDescriptors(
+      {
+        fields: {
+          aromas: {
+            quote: "huele a mantequilla, a brioche y a flor blanca",
+            status: "explicit",
+            value: ["butter", "brioche", "white flowers"],
+          },
+          palateText: {
+            quote: "me da como cereza",
+            status: "explicit",
+            value: "me da como cereza",
+          },
+        },
+        region: null,
+        severalWines: false,
+      },
+      "es",
+      null,
+    );
+    expect(heard.nose).toEqual(
+      expect.arrayContaining(["production.autolysis.brioche", "floral.white_flower"]),
+    );
+    // Cherry was said of the mouth: the quick note's single list counts it.
+    expect(heard.any).toContain("fruit.red.cherry");
   });
 });

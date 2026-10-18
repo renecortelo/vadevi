@@ -563,7 +563,11 @@
     "prefillHelp": "Kopieert de gegevens naar een nieuwe invoer — wijzig daarna alleen het jaar.",
     "moreDetails": "Meer details",
     "eventLabel": "Evenement (optioneel)",
-    "eventNone": "Geen evenement"
+    "eventNone": "Geen evenement",
+    "clearAction": "Formulier leegmaken",
+    "clearTitle": "Formulier leegmaken?",
+    "clearBody": "Alles wat hier staat en niet bewaard is, wordt gewist, zodat de volgende wijn bij nul begint.",
+    "clearConfirm": "Leegmaken"
   },
   "memory": {
     "eyebrow": "Privégeschiedenis",

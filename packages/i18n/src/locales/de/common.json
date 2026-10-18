@@ -563,7 +563,11 @@
     "prefillHelp": "Kopiert seine Angaben in einen neuen Eintrag — dann nur den Jahrgang ändern.",
     "moreDetails": "Mehr Details",
     "eventLabel": "Veranstaltung (optional)",
-    "eventNone": "Keine Veranstaltung"
+    "eventNone": "Keine Veranstaltung",
+    "clearAction": "Formular leeren",
+    "clearTitle": "Formular leeren?",
+    "clearBody": "Alles, was hier steht und nicht gespeichert ist, wird gelöscht, damit der nächste Wein bei null beginnt.",
+    "clearConfirm": "Leeren"
   },
   "memory": {
     "eyebrow": "Private Historie",

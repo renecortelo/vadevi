@@ -186,6 +186,8 @@ export function IdentifyPage() {
   // The form as it is now, for a spoken description that comes back seconds
   // after it was asked for.
   const latest = useRef({ draftResponse, wine });
+  // What the last spoken description filled, for the next one to replace.
+  const voiceSet = useRef<Partial<WineDraft>>({});
   useEffect(() => {
     latest.current = { draftResponse, wine };
   }, [draftResponse, wine]);
@@ -210,7 +212,8 @@ export function IdentifyPage() {
       current = await runIdentification({ manualHint: spoken });
       if (current === null) throw new Error("identification failed");
     }
-    const applied = applyVoiceToWine(current, proposal);
+    const applied = applyVoiceToWine(current, proposal, voiceSet.current);
+    voiceSet.current = applied.set;
     setWine(applied.wine);
     return {
       filled: applied.filled,

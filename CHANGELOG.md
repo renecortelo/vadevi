@@ -71,6 +71,16 @@ has the reasons.
   nose's note when nothing else was said of it), never the wine or the date;
   and in «Identify a bottle», where what was said of the bottle is looked up
   as a typed hint would be, then fills what the review leaves empty.
+- **Voice tastings, from the first real notes**: the nose and the mouth are
+  kept in the taster's own sentences when the model gives only aromas and
+  levels; the tasting words the form offers are ticked from what was said
+  («vainilla», «brioche», «flor blanca»); a name, a region or a bottle size
+  that was never said is dropped («local region» for «de aquí de la zona»);
+  «no sé…» is a doubt, offered rather than filled; and the day said
+  («ayer») becomes the tasting's. A second note into a draft never saved
+  replaces what the first one filled and the reader left alone, never what
+  they typed; the quick log has «Clear the form»; and a draft begun on
+  another day, its date never changed, is taken up today.
 - **Send a spoken note to improve voice**: beside a voice note's result, a
   button keeps that one note — the transcript as corrected, what the app
   proposed and the form as left, never the audio — for thirty days, so real

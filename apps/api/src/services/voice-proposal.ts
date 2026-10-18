@@ -92,7 +92,7 @@ const days = (from: string, to: string) => (Date.parse(to) - Date.parse(from)) /
  * `comparable` writes text: no accents, no hyphens.
  */
 const hedges =
-  /\b(creo|me parece|diria|crec|em sembla|potser|quizas|quiza|tal vez|i think|maybe|perhaps|probably|i guess|je pense|je crois|peut etre|il me semble|credo|penso|forse|mi sembra|ich glaube|ich denke|vielleicht|wohl|ik denk|misschien|volgens mij|acho|talvez|parece me|suspeito)\b/;
+  /\b(creo|me parece|diria|crec|em sembla|potser|quizas|quiza|tal vez|i think|maybe|perhaps|probably|i guess|je pense|je crois|peut etre|il me semble|credo|penso|forse|mi sembra|ich glaube|ich denke|vielleicht|wohl|ik denk|misschien|volgens mij|acho|talvez|parece me|suspeito|no se si|no se cuant\w*|no se como|no estoy segur\w*|not sure|i don t know|je ne sais pas|non so|weiss nicht|weet niet|nao sei)\b/;
 
 /**
  * Words that bring in another wine, in the app's languages, as `comparable`
@@ -402,6 +402,54 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
       status:
         certain === false || hedges.test(comparable(quote as string)) ? "ambiguous" : "explicit",
       value: fitted,
+    };
+  }
+  // A name must have been said: the model answered "local region" for "de
+  // aquí de la zona" (a real note, 18 October 2026). Half its words heard is
+  // enough, so a name the model spelled right ("Ribeira" for "Ribera") stays.
+  for (const field of ["producerName", "wineName", "region"] as const) {
+    const said = proposal.fields[field];
+    if (said === undefined) continue;
+    const words = comparable(String(said.value))
+      .split(" ")
+      .filter((word) => word.length > 2);
+    if (
+      words.length > 0 &&
+      words.filter((word) => heard.includes(` ${word}`)).length * 2 < words.length
+    ) {
+      delete proposal.fields[field];
+      proposal.discarded.push({ field, reason: "no-evidence" });
+    }
+  }
+  // A bottle's size only from a size that was said, not from "la botella".
+  const bottle = proposal.fields.bottleSizeMl;
+  if (
+    bottle !== undefined &&
+    !/\d|magnum|media|halbe|mezza|demi|meia|litro|liter|litre|cl|ml|jeroboam/.test(
+      comparable(bottle.quote),
+    )
+  ) {
+    delete proposal.fields.bottleSizeMl;
+    proposal.discarded.push({ field: "bottleSizeMl", reason: "no-evidence" });
+  }
+  // What was said of the nose and the mouth, in the taster's own words, when
+  // the model gave the aromas and the levels but not the sentences — it left
+  // them out in both real notes of 18 October 2026.
+  const aromas = proposal.fields.aromas;
+  if (proposal.fields.noseText === undefined && aromas !== undefined) {
+    proposal.fields.noseText = { quote: aromas.quote, status: aromas.status, value: aromas.quote };
+  }
+  const mouth = (
+    ["sweetness", "acidity", "tanninLevel", "body", "finishLength", "palateTexture"] as const
+  )
+    .map((field) => proposal.fields[field])
+    .filter((field): field is ProposedField => field !== undefined);
+  if (proposal.fields.palateText === undefined && mouth.length > 0) {
+    const quotes = [...new Set(mouth.map((field) => field.quote.trim()))];
+    proposal.fields.palateText = {
+      quote: quotes.join(". "),
+      status: mouth.every((field) => field.status === "explicit") ? "explicit" : "ambiguous",
+      value: quotes.join(". ").slice(0, 2_000),
     };
   }
   // A score of nought is only a nought that was said: models turned "no
