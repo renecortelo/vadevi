@@ -42,6 +42,10 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
 - sweetness, acidity, tanninLevel, body, finishLength are 1–5 by these words,
   in any language: 1 very low / very light; 2 low, light, soft; 3 medium;
   4 high, pronounced, full; 5 very high. "Acidez alta" is 4, "ligero" is 2.
+  A finish is 2 when short, 3 medium, 4 long; 1 and 5 only when very short
+  or very long.
+- wouldBuy and wouldDrinkAgain are "yes", "no" or "unsure" (undecided, not
+  sure yet), as strings.
 - sentiment: "like" when the taster says they like or enjoy it, "dislike"
   when they say they do not, "neutral" when they say it is just correct.
 - conclusionText: the taster's closing verdict sentence, if there is one.
@@ -67,6 +71,10 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
 - countryCode is the ISO 3166-1 alpha-2 code of the country named.
 - appearanceText, noseText, palateText, conclusionText, foodText are short
   phrases in the transcript's own language, close to the taster's words.
+  Give each that was spoken of — what was said of the colour, the nose, the
+  mouth — besides the scales read from the same words.
+- appearanceClarity is "clear" or "hazy"; effervescence is left out when
+  the wine is said to have no bubbles.
 - Comparisons with another wine ("more acidic than the last one") fill nothing.
 - wineCount is how many different wines are described, one after another
   ("first… now another wine…", "després passo a…"); a wine only compared with

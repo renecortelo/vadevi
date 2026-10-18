@@ -65,6 +65,13 @@ has the reasons.
   nose's note when nothing else was said of it), never the wine or the date;
   and in «Identify a bottle», where what was said of the bottle is looked up
   as a typed hint would be, then fills what the review leaves empty.
+- **Voice tastings, read more faithfully (off)**: measured on 35 new
+  recordings in seven languages, the fields proposed were right 93 % of the
+  time. "Would buy" and "would drink again" said as yes or no are now kept
+  (they were dropped); clarity, texture and type said in the note's own
+  language are read as the form's; "no bubbles" fills nothing instead of
+  the lowest level; a short or long finish is 2 or 4; and a change of
+  bottle is heard in every language, but "buy another bottle" is not one.
 
 - **Keeping the registers current**: the routine is in `data/kb/README.md`,
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh

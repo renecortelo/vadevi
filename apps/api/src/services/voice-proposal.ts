@@ -99,8 +99,97 @@ const hedges =
  * writes them: "ahora otro vino", "després passo a", "next wine". Models missed
  * a second wine in two of four test notes (lote 2, 16 October 2026).
  */
+// Changing bottles, said as such, was missed in four of eight notes of the
+// third batch ("ahora cambio de botella", "je passe maintenant à", "cambio
+// vino", "agora mudo de garrafa", 18 October 2026); and "buy another bottle"
+// is a purchase, not a second wine.
 const anotherWine =
-  /\b(otro vino|segundo vino|siguiente vino|despues paso a|luego paso a|un altre vi|segon vi|despres passo a|another wine|second wine|next wine|moving on to|un autre vin|deuxieme vin|vin suivant|ensuite je passe|un altro vino|secondo vino|poi passo a|ein anderer wein|zweiter wein|der zweite wein|naechster wein|een andere wijn|tweede wijn|volgende wijn|outro vinho|segundo vinho|depois passo a|a seguir o|otra botella|segunda botella|altra ampolla|segona ampolla|another bottle|a different bottle|different wine|second bottle|autre bouteille|deuxieme bouteille|altra bottiglia|seconda bottiglia|andere flasche|zweite flasche|andere fles|tweede fles|outra garrafa|segunda garrafa)\b/;
+  /(?<!\b(?:buy|buying|purchase|comprar|compraria|comprare|acheter|kaufen|kopen|comprei|compro) )\b(otro vino|segundo vino|siguiente vino|despues paso a|luego paso a|ahora paso a|cambio de botella|cambio de vino|un altre vi|segon vi|despres passo a|ara passo a|canvi d ampolla|canvio d ampolla|canvi de vi|another wine|second wine|next wine|moving on to|switching to|now on to|un autre vin|deuxieme vin|vin suivant|ensuite je passe|je passe maintenant a|je change de bouteille|je change de vin|un altro vino|secondo vino|poi passo a|ora passo a|cambio vino|cambio di vino|cambio bottiglia|cambio di bottiglia|ein anderer wein|zweiter wein|der zweite wein|naechster wein|ich wechsle die flasche|ich wechsle den wein|een andere wijn|tweede wijn|volgende wijn|ik wissel van fles|ik wissel van wijn|outro vinho|segundo vinho|depois passo a|agora passo a|mudo de garrafa|mudo de vinho|a seguir o|otra botella|segunda botella|altra ampolla|segona ampolla|another bottle|a different bottle|different wine|second bottle|autre bouteille|deuxieme bouteille|altra bottiglia|seconda bottiglia|andere flasche|zweite flasche|andere fles|tweede fles|outra garrafa|segunda garrafa)\b/;
+
+/**
+ * A choice said in the note's language, read as the form's: models answered
+ * `true`, "Yes" or "limpio" for most "would buy" and "would drink again" of
+ * the third batch, all out of range (18 October 2026). Keys as `comparable`
+ * writes them.
+ */
+const choiceWords: Partial<Record<VoiceField, Record<string, string>>> = {
+  appearanceClarity: {
+    brillant: "clear",
+    brillante: "clear",
+    bright: "clear",
+    clean: "clear",
+    clear: "clear",
+    helder: "clear",
+    klar: "clear",
+    limpido: "clear",
+    limpio: "clear",
+    limpo: "clear",
+    net: "clear",
+    cloudy: "hazy",
+    hazy: "hazy",
+    torbido: "hazy",
+    troebel: "hazy",
+    trouble: "hazy",
+    trub: "hazy",
+    turbio: "hazy",
+    turvo: "hazy",
+    velado: "hazy",
+  },
+  palateTexture: {
+    cremeux: "creamy",
+    cremig: "creamy",
+    cremoso: "creamy",
+    cremosa: "creamy",
+    romig: "creamy",
+    maigre: "lean",
+    mager: "lean",
+    magro: "lean",
+    schlank: "lean",
+    huileux: "oily",
+    olig: "oily",
+    oleoso: "oily",
+    untuoso: "oily",
+    redondo: "round",
+    rond: "round",
+    rotondo: "round",
+    rund: "round",
+  },
+  wineType: {
+    bianco: "white",
+    blanc: "white",
+    blanco: "white",
+    branco: "white",
+    weiss: "white",
+    weisswein: "white",
+    wit: "white",
+    rosado: "rose",
+    rosato: "rose",
+    rosso: "red",
+    rot: "red",
+    rotwein: "red",
+    rouge: "red",
+    rood: "red",
+    tinto: "red",
+  },
+};
+const ternary: Record<string, string> = {
+  false: "no",
+  maybe: "unsure",
+  nee: "no",
+  nein: "no",
+  non: "no",
+  nao: "no",
+  si: "yes",
+  sim: "yes",
+  true: "yes",
+  oui: "yes",
+  ja: "yes",
+  undecided: "unsure",
+};
+
+/** Bubbles said to be absent ("no tiene burbujas", "with no bubbles") are no value. */
+const negation =
+  /\b(no|not|without|sin|sans|pas|ohne|kein|keine|senza|nessuna|geen|zonder|sem|nenhuma|still|tranquilo|tranquille|fermo|stil)\b/;
 
 /** Words that say a name is a winery's, in the app's languages. */
 const winery =
@@ -188,9 +277,20 @@ const colourFamilies: Record<string, string> = {
 /** A value as the form takes it, or null when it does not fit. */
 function fit(field: VoiceField, raw: unknown, today: string): ProposedField["value"] | null {
   const kind = voiceFields[field];
-  const text = typeof raw === "string" ? raw.trim() : typeof raw === "number" ? String(raw) : "";
+  const text =
+    typeof raw === "string"
+      ? raw.trim()
+      : typeof raw === "number" || typeof raw === "boolean"
+        ? String(raw)
+        : "";
   if (Array.isArray(kind)) {
-    if ((kind as readonly string[]).includes(text)) return text;
+    const options = kind as readonly string[];
+    if (options.includes(text)) return text;
+    const plain = comparable(text);
+    if (options.includes(plain)) return plain;
+    if (options.includes("unsure") && ternary[plain] !== undefined) return ternary[plain]!;
+    const word = plain.split(" ").find((part) => choiceWords[field]?.[part] !== undefined);
+    if (word !== undefined) return choiceWords[field]![word]!;
     // A colour named in the note's language, by its first word ("rojo rubí").
     if (field === "appearanceColorFamily") {
       for (const word of comparable(text).split(" ")) {
@@ -289,7 +389,10 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
       continue;
     }
     const fitted = fit(field, ownWords.has(field) ? quote : value, today);
-    if (fitted === null) {
+    if (
+      fitted === null ||
+      ((field === "effervescence" || field === "beadSize") && negation.test(words))
+    ) {
       proposal.discarded.push({ field, reason: "out-of-range" });
       continue;
     }

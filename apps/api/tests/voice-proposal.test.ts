@@ -205,6 +205,53 @@ describe("a spoken note's proposal", () => {
     ).toBe(false);
   });
 
+  it("hears a change of bottle in every language, and not a purchase", () => {
+    // Cases of the third batch (18 October 2026), each a second wine.
+    for (const text of [
+      "Primero está Rastro de Aroa, un blanco de godello. Ahora cambio de botella: Vela de Siro.",
+      "D'abord La Maille de Léonie, un rosé. Je passe maintenant à La Colline d'Ysée.",
+      "Parto da La Trama di Sveva, un rosso. Cambio vino: ora è Il Nastro di Elia.",
+      "Primeiro provo A Bainha de Noa, um branco. Agora mudo de garrafa. Este é O Laço.",
+    ]) {
+      expect(acceptProposal({ fields: [], wineCount: 1 }, text, today).severalWines).toBe(true);
+    }
+    expect(
+      acceptProposal(
+        { fields: [], wineCount: 1 },
+        "I like it and would drink it again, but I haven't decided whether to buy another bottle.",
+        today,
+      ).severalWines,
+    ).toBe(false);
+  });
+
+  it("reads a choice said as true, yes or in the note's language as the form's", () => {
+    const text =
+      "Lo veo limpio, es un rosado. La textura es cremosa. Lo compraría y lo volvería a beber, " +
+      "pero no sé si repetiría. No tiene burbujas.";
+    const proposal = acceptProposal(
+      {
+        fields: [
+          { certain: true, name: "wouldBuy", quote: "Lo compraría", value: true },
+          { certain: true, name: "wouldDrinkAgain", quote: "lo volvería a beber", value: "Yes" },
+          { certain: true, name: "appearanceClarity", quote: "Lo veo limpio", value: "limpio" },
+          { certain: true, name: "wineType", quote: "es un rosado", value: "rosé" },
+          { certain: true, name: "palateTexture", quote: "textura es cremosa", value: "cremosa" },
+          { certain: true, name: "effervescence", quote: "No tiene burbujas", value: 1 },
+        ],
+        wineCount: 1,
+      },
+      text,
+      today,
+    );
+    expect(proposal.fields.wouldBuy?.value).toBe("yes");
+    expect(proposal.fields.wouldDrinkAgain?.value).toBe("yes");
+    expect(proposal.fields.appearanceClarity?.value).toBe("clear");
+    expect(proposal.fields.wineType?.value).toBe("rose");
+    expect(proposal.fields.palateTexture?.value).toBe("creamy");
+    // No bubbles is no effervescence at all, not the lowest.
+    expect(proposal.fields.effervescence).toBeUndefined();
+  });
+
   it("reads a colour named in the note's language as the form's family", () => {
     const text = "Tiene un rojo rubí brillante.";
     const proposal = acceptProposal(
