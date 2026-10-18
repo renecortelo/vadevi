@@ -11,17 +11,43 @@ shared runner would turn them into noise rather than evidence.
 
 ## What was measured
 
-Re-measured 18 September 2026, after the memory map, the tile proxy and the
-tasting history on cards. Nothing regressed.
+Re-measured 18 October 2026, after the atlas in figures, the cellar map, the
+library's 209 grapes and voice tastings. Nothing regressed; the new library
+read is well within.
 
 | Measure                              | Median | p95     | Budget  | Verdict |
 | ------------------------------------ | ------ | ------- | ------- | ------- |
-| LCP — sign-in, Slow 4G, 4× CPU       | 480 ms | 2176 ms | 2500 ms | within  |
-| API read `GET /me/bootstrap`         | 12 ms  | 16 ms   | 500 ms  | within  |
-| API read `GET /spaces/{id}/wines`    | 10 ms  | 19 ms   | 500 ms  | within  |
-| API read `GET /spaces/{id}/sessions` | 10 ms  | 105 ms  | 500 ms  | within  |
-| Interaction — Memory view switch     | 68 ms  | 77 ms   | 200 ms  | within  |
-| Quick-log save, online               | 25 ms  | 28 ms   | 800 ms  | within  |
+| LCP — sign-in, Slow 4G, 4× CPU       | 428 ms | 2124 ms | 2500 ms | within  |
+| API read `GET /me/bootstrap`         | 12 ms  | 34 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/wines`    | 12 ms  | 18 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/sessions` | 9 ms   | 90 ms   | 500 ms  | within  |
+| API read `GET /library/grapes`       | 15 ms  | 29 ms   | 500 ms  | within  |
+| Interaction — Memory view switch     | 71 ms  | 75 ms   | 200 ms  | within  |
+| Quick-log save, online               | 24 ms  | 30 ms   | 800 ms  | within  |
+
+### The deployed sign-in page, on a phone's profile
+
+The table above is served from the machine itself. On 18 October 2026 the
+deployed sign-in page was measured too — the real network and the real
+Firebase, a Pixel 5's viewport, 4× CPU, 1.6 Mbps down with 150 ms latency, a
+cold cache on each of eight loads:
+
+| Measure (deployed, cold)     | Median  | p95     | Budget  | Verdict   |
+| ---------------------------- | ------- | ------- | ------- | --------- |
+| LCP, before the change below | 2712 ms | 3144 ms | 2500 ms | over      |
+| LCP, after                   | 2568 ms | 2652 ms | 2500 ms | just over |
+| CLS                          | 0.000   | 0.000   | 0.1     | within    |
+| Time to first byte           | 99 ms   | 213 ms  | —       | —         |
+
+The largest paint is the sign-in paragraph, and it waits on a chain: the
+bundle, then `/runtime-config`, then Google's sign-in script and its iframe,
+which Firebase loads before it reports "no one is signed in" on phones and
+Safari. The page now asks for `/runtime-config` with itself (a preload the app
+reuses — one request, not two) and opens its connection to Google early,
+which took about 150 ms off the median and 500 ms off the p95. What remains is
+Google's script: removing it from start-up would mean opening the sign-in
+popup only after loading it, which Safari may block. The next step, if wanted,
+is to draw the sign-in screen at once when this device has never signed in.
 
 Every figure is within a few milliseconds of the previous run except one. The
 `sessions` p95 moved from 10 ms to 105 ms while its median did not move at all,

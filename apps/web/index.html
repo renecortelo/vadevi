@@ -10,6 +10,12 @@
     />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/boot.css" />
+    <!-- The first screen waits on a chain: the bundle, then the deployment's
+         configuration, then Google's sign-in script. Asking for the
+         configuration with the page, and opening the connection to Google
+         early, takes two round trips off it on a phone (18 October 2026). -->
+    <link rel="preload" href="/runtime-config" as="fetch" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://apis.google.com" />
     <script src="/theme-init.js"></script>
     <title>Va de Vi</title>
   </head>
