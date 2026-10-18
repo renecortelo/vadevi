@@ -1787,7 +1787,12 @@
     "errorService": "The note could not be read just now. Nothing you typed is lost; try again or type it.",
     "errorQuota": "Today's voice budget is spent. The form works by hand as always.",
     "privacy": "Nothing is saved until you save. The recording goes to Cloudflare Workers AI and is not kept.",
-    "offline": "Voice needs a connection; the form works offline by hand."
+    "offline": "Voice needs a connection; the form works offline by hand.",
+    "reviewHint": "Correct the form first, then send this note: what was heard, what the app proposed and the form as you left it are kept 30 days. Never the audio.",
+    "reviewSend": "Send this note to improve voice",
+    "reviewSent": "Sent, thank you. It deletes itself in 30 days.",
+    "reviewLimit": "You have sent enough notes for today.",
+    "reviewError": "It could not be sent now. Your form is unchanged."
   },
   "sections": {
     "quick": "Quick tasting",

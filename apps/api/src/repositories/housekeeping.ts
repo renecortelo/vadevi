@@ -67,6 +67,16 @@ export async function runHousekeeping(
       )
       .bind(daysBefore(nowIso, usageRetentionDays), batch),
   );
+  // Spoken notes sent for review are kept thirty days, and not one more.
+  await prune(
+    "voice_reviews",
+    database
+      .prepare(
+        `DELETE FROM voice_reviews WHERE rowid IN (
+          SELECT rowid FROM voice_reviews WHERE expires_at <= ? LIMIT ?)`,
+      )
+      .bind(nowIso, batch),
+  );
 
   // A reservation nobody uploaded to, or an upload that was rejected, past
   // its window and referenced by nothing. An object may exist for a rejected

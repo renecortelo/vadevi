@@ -1,3 +1,5 @@
+import { ulid } from "ulid";
+
 import { regionRefOf } from "./region-names";
 import { normalizeWineText } from "./wine-memory";
 
@@ -141,4 +143,69 @@ export async function knownGrapes(database: D1Database, names: readonly string[]
     .all<{ form: string }>();
   const known = new Set(rows.results.map((row) => row.form));
   return names.filter((_, index) => known.has(forms[index]!));
+}
+
+/** How long a note sent for review is kept, and how many a member may send a day. */
+export const voiceReviewDays = 30;
+const voiceReviewsPerDay = 30;
+
+/**
+ * Keep a spoken note the reader chose to send for review: the transcript as
+ * they corrected it, what the app proposed and the form as they left it —
+ * never the audio — for thirty days. Null when the reader is not an active
+ * member of the Space; "LIMIT" past a day's sending.
+ */
+export async function saveVoiceReview(
+  database: D1Database,
+  options: {
+    firebaseUid: string;
+    form: Record<string, unknown>;
+    kind: "deep" | "quick" | "wine";
+    locale: string;
+    nowIso: string;
+    proposal: unknown;
+    spaceId: string;
+    text: string;
+  },
+): Promise<{ expiresAt: string; id: string } | "LIMIT" | null> {
+  const member = await database
+    .prepare(
+      `SELECT actor.id AS id FROM users actor
+      JOIN space_memberships membership ON membership.user_id = actor.id
+        AND membership.space_id = ? AND membership.status = 'active'
+      WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL`,
+    )
+    .bind(options.spaceId, options.firebaseUid)
+    .first<{ id: string }>();
+  if (member === null) return null;
+  const since = new Date(Date.parse(options.nowIso) - 86_400_000).toISOString();
+  const sent = await database
+    .prepare(`SELECT COUNT(*) AS count FROM voice_reviews WHERE user_id = ? AND created_at > ?`)
+    .bind(member.id, since)
+    .first<{ count: number }>();
+  if ((sent?.count ?? 0) >= voiceReviewsPerDay) return "LIMIT";
+  const id = ulid();
+  const expiresAt = new Date(
+    Date.parse(options.nowIso) + voiceReviewDays * 86_400_000,
+  ).toISOString();
+  await database
+    .prepare(
+      `INSERT INTO voice_reviews
+        (id, space_id, user_id, form, locale, transcript, proposal_json, form_json, created_at, expires_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    )
+    .bind(
+      id,
+      options.spaceId,
+      member.id,
+      options.kind,
+      options.locale,
+      options.text,
+      JSON.stringify(options.proposal),
+      JSON.stringify(options.form),
+      options.nowIso,
+      expiresAt,
+    )
+    .run();
+  return { expiresAt, id };
 }

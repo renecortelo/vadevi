@@ -1299,8 +1299,10 @@ export function DeepTastingPage() {
       {bootstrap.data.features.voiceInput && ready ? (
         <VoiceNote
           hint="voice.hintDeep"
+          kind="deep"
           onProposal={applyVoice}
           online={status !== "offline"}
+          snapshot={() => ({ ...latestDraft.current.payload, wine: wineLabel })}
           spaceId={spaceId}
         />
       ) : null}

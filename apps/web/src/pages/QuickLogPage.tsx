@@ -332,7 +332,16 @@ export function QuickLogPage() {
       ) : null}
 
       {bootstrap.data.features.voiceInput && ready ? (
-        <VoiceNote onProposal={applyVoice} online={status !== "offline"} spaceId={spaceId} />
+        <VoiceNote
+          kind="quick"
+          onProposal={applyVoice}
+          online={status !== "offline"}
+          snapshot={() => ({
+            ...latestDraft.current.winePayload,
+            note: latestDraft.current.includeNote ? latestDraft.current.notePayload : null,
+          })}
+          spaceId={spaceId}
+        />
       ) : null}
 
       <form className="quick-log-form" onSubmit={beginReview}>

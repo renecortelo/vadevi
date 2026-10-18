@@ -90,7 +90,21 @@ it is not available everywhere.
 
 - **Not stored**: the audio (processed in memory and discarded), the
   transcript, the vocabulary hint, the raw model responses, and any discarded
-  proposal.
+  proposal — unless the reader sends that note for review (below).
+- **Stored only if the reader sends a note for review**: beside the result, a
+  button, "Send this note to improve voice", that the reader presses for one
+  note at a time. It keeps, in the deployment's own database
+  (`voice_reviews`), the transcript as the reader corrected it, what the app
+  proposed (with the words each value came from), the form as the reader left
+  it, the form's kind and the language. **Never the audio.** Each row is
+  removed thirty days after it was sent by the scheduled handler, and at once
+  with the Space or the account it belongs to; a member may send thirty a day.
+  It exists so the deployment's operator can read real notes and correct the
+  extraction — read by hand, with a database query, and never sent anywhere
+  else. The transcript may contain whatever was said, bystanders included:
+  the hint beside the button says what is kept and for how long. Approved
+  with the rest of this review on 18 October 2026. Not in the data export:
+  it is diagnostic and gone within thirty days.
 - **Stored only if the reader saves**: the tasting fields they kept, as an
   ordinary tasting note, marked `creation_method = 'audio'` — a neutral record
   of how it was first written, shown as a small microphone. It implies nothing
@@ -157,6 +171,7 @@ Plus an `AI` binding in your Wrangler configuration.
 
 ## How to disable
 
-Set `STT_PROVIDER=none` and redeploy. No stored data needs clearing, because no
-recording or transcript is retained; tastings already saved keep their
+Set `STT_PROVIDER=none` and redeploy. No recording is retained, and notes sent
+for review are removed within thirty days (at once with
+`DELETE FROM voice_reviews`); tastings already saved keep their
 microphone, which only records how they were first written.

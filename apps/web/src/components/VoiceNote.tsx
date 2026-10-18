@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useAuth } from "../auth/AuthContext";
 import { VoiceIcon } from "../brand/NavIcons";
 import { ApiError } from "../services/api";
-import { extractVoice, transcribeVoice } from "../services/voice";
+import { extractVoice, sendVoiceReview, transcribeVoice } from "../services/voice";
 
 type Proposal = VoiceExtractResponse["data"];
 type Stage = "editing" | "filling" | "idle" | "recording" | "transcribing";
@@ -33,16 +33,22 @@ const quotaSpent = (reason: unknown) => reason instanceof ApiError && reason.sta
  */
 export function VoiceNote({
   hint = "voice.hint",
+  kind,
   online,
   onProposal,
+  snapshot,
   spaceId,
 }: {
   /** What to say, for the form it fills (a catalog key). */
   hint?: string;
+  /** Which form it fills, for a note sent for review. */
+  kind: "deep" | "quick" | "wine";
   /** Both steps need the network; offline the form is filled by hand. */
   online: boolean;
   /** Fills the form; it may first look something up (the wine being added). */
   onProposal: (proposal: Proposal) => Applied | Promise<Applied>;
+  /** The form as the reader has left it, for a note sent for review. */
+  snapshot: () => Record<string, unknown>;
   spaceId: string;
 }) {
   const { i18n, t } = useTranslation();
@@ -56,6 +62,10 @@ export function VoiceNote({
     severalWines: boolean;
     suggestions: string[];
   } | null>(null);
+  // The last proposal and the words it was read from, to send for review if
+  // the reader chooses to; and how that went.
+  const [proposed, setProposed] = useState<{ proposal: Proposal; text: string } | null>(null);
+  const [review, setReview] = useState<"error" | "idle" | "limit" | "sending" | "sent">("idle");
   const recorder = useRef<MediaRecorder | null>(null);
   const timer = useRef<number | null>(null);
 
@@ -136,10 +146,30 @@ export function VoiceNote({
         new Date().toLocaleDateString("sv"),
       );
       const applied = await onProposal(proposal);
+      setProposed({ proposal, text });
+      setReview("idle");
       setResult({ ...applied, severalWines: proposal.severalWines });
       setStage("editing");
     } catch (reason) {
       fail(quotaSpent(reason) ? "voice.errorQuota" : "voice.errorService");
+    }
+  }
+
+  /** The note as heard, as proposed and as the form now stands: kept 30 days. */
+  async function sendForReview() {
+    if (user === null || proposed === null) return;
+    setReview("sending");
+    try {
+      await sendVoiceReview(user, spaceId, {
+        form: snapshot(),
+        kind,
+        locale,
+        proposal: proposed.proposal,
+        text: proposed.text,
+      });
+      setReview("sent");
+    } catch (reason) {
+      setReview(quotaSpent(reason) ? "limit" : "error");
     }
   }
 
@@ -208,6 +238,28 @@ export function VoiceNote({
             <p>{t("voice.suggestions", { fields: result.suggestions.join(", ") })}</p>
           )}
           {result.severalWines ? <p>{t("voice.severalWines")}</p> : null}
+        </div>
+      )}
+      {proposed === null ? null : (
+        <div className="voice-note__review">
+          <p className="section-help">{t("voice.reviewHint")}</p>
+          <button
+            className="secondary-button"
+            disabled={!online || review === "sending" || review === "sent"}
+            onClick={() => void sendForReview()}
+            type="button"
+          >
+            {t("voice.reviewSend")}
+          </button>
+          <p aria-live="polite" className="section-help" role="status">
+            {review === "sent"
+              ? t("voice.reviewSent")
+              : review === "limit"
+                ? t("voice.reviewLimit")
+                : review === "error"
+                  ? t("voice.reviewError")
+                  : ""}
+          </p>
         </div>
       )}
     </section>

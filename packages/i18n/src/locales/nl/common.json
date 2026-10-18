@@ -1787,7 +1787,12 @@
     "errorService": "De notitie kon nu niet worden gelezen. Niets van wat je typte gaat verloren; probeer opnieuw of typ hem.",
     "errorQuota": "Het spraakbudget van vandaag is op. Het formulier werkt zoals altijd met de hand.",
     "privacy": "Er wordt niets bewaard tot je opslaat. De opname gaat naar Cloudflare Workers AI en wordt niet bewaard.",
-    "offline": "Spraak heeft een verbinding nodig; het formulier werkt offline met de hand."
+    "offline": "Spraak heeft een verbinding nodig; het formulier werkt offline met de hand.",
+    "reviewHint": "Verbeter eerst het formulier en stuur dan: wat gehoord is, het voorstel van de app en het formulier blijven 30 dagen bewaard. Nooit de opname.",
+    "reviewSend": "Stuur deze notitie om spraak te verbeteren",
+    "reviewSent": "Verstuurd, dank je. Ze verdwijnt vanzelf na 30 dagen.",
+    "reviewLimit": "Je hebt vandaag genoeg notities gestuurd.",
+    "reviewError": "Versturen lukte nu niet. Je formulier blijft zoals het was."
   },
   "sections": {
     "quick": "Snelle proeverij",

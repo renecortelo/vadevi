@@ -1787,7 +1787,12 @@
     "errorService": "Ora non è stato possibile leggere la nota. Nulla di ciò che hai scritto va perso; riprova o scrivila.",
     "errorQuota": "La quota vocale di oggi è esaurita. Il modulo funziona a mano come sempre.",
     "privacy": "Nulla si salva finché non salvi. La registrazione va a Cloudflare Workers AI e non viene conservata.",
-    "offline": "La voce richiede una connessione; il modulo funziona offline a mano."
+    "offline": "La voce richiede una connessione; il modulo funziona offline a mano.",
+    "reviewHint": "Correggi prima il modulo, poi invia questa nota: ciò che è stato sentito, la proposta dell'app e il modulo restano 30 giorni. Mai l'audio.",
+    "reviewSend": "Invia questa nota per migliorare la voce",
+    "reviewSent": "Inviata, grazie. Si cancella da sola tra 30 giorni.",
+    "reviewLimit": "Per oggi hai già inviato abbastanza note.",
+    "reviewError": "Ora non è stato possibile inviarla. Il tuo modulo resta com'era."
   },
   "sections": {
     "quick": "Degustazione rapida",

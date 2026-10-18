@@ -1787,7 +1787,12 @@
     "errorService": "La note n'a pas pu être lue pour l'instant. Rien de ce que vous avez saisi n'est perdu ; réessayez ou saisissez-la.",
     "errorQuota": "Le quota vocal du jour est épuisé. Le formulaire fonctionne à la main comme toujours.",
     "privacy": "Rien n'est enregistré avant que vous enregistriez. L'enregistrement va à Cloudflare Workers AI et n'est pas conservé.",
-    "offline": "La voix nécessite une connexion ; le formulaire fonctionne hors ligne à la main."
+    "offline": "La voix nécessite une connexion ; le formulaire fonctionne hors ligne à la main.",
+    "reviewHint": "Corrigez d'abord le formulaire, puis envoyez cette note : ce qui a été entendu, la proposition de l'app et le formulaire sont gardés 30 jours. Jamais l'audio.",
+    "reviewSend": "Envoyer cette note pour améliorer la voix",
+    "reviewSent": "Envoyée, merci. Elle s'efface seule dans 30 jours.",
+    "reviewLimit": "Vous avez envoyé assez de notes pour aujourd'hui.",
+    "reviewError": "L'envoi n'a pas pu se faire. Votre formulaire reste tel quel."
   },
   "sections": {
     "quick": "Dégustation rapide",

@@ -88,6 +88,22 @@ test("a spoken note fills only the quick log's empty fields", async ({ page }) =
   await expect(page.locator("#wine-name")).toHaveValue("Typed by hand");
   await expect(page.locator("#producer-name")).toHaveValue("Bodega Nudo");
   await expect(page.locator("#comment")).toHaveValue("Cereza y clavo");
+
+  // Sent for review only when asked: the words, the proposal and the form as left.
+  let sent: { form: Record<string, unknown>; kind: string; text: string } | null = null;
+  await page.route("**/api/v1/spaces/*/voice/reviews", (route) => {
+    sent = route.request().postDataJSON();
+    return route.fulfill({
+      json: { data: { expiresAt: "2026-11-17T10:00:00.000Z", id: "r1" } },
+      status: 201,
+    });
+  });
+  await page.locator("#producer-name").fill("Bodega Nudo Corregida");
+  await page.getByRole("button", { name: "Send this note to improve voice" }).click();
+  await expect(page.getByText("Sent, thank you. It deletes itself in 30 days.")).toBeVisible();
+  expect(sent!.kind).toBe("quick");
+  expect(sent!.text).toBe(`${heard} Corregido.`);
+  expect(sent!.form.producerName).toBe("Bodega Nudo Corregida");
 });
 
 test("a spoken note fills a deep tasting's empty fields, in every step", async ({ page }) => {

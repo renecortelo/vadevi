@@ -3,7 +3,13 @@ import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { createSpeechToTextPort, speechModel } from "../src/adapters/speech-to-text";
-import { knownGrapes, placeHeardRegion, voiceVocabulary } from "../src/repositories/voice";
+import { runHousekeeping } from "../src/repositories/housekeeping";
+import {
+  knownGrapes,
+  placeHeardRegion,
+  saveVoiceReview,
+  voiceVocabulary,
+} from "../src/repositories/voice";
 import type { WorkerBindings } from "../src/types";
 import { emulatorIdToken } from "./fixtures/firebase-token";
 
@@ -161,5 +167,51 @@ describe("voice tastings", () => {
     ).run();
     expect(await knownGrapes(env.DB, ["Garnacha", "Soave"])).toEqual(["Garnacha"]);
     expect(await knownGrapes(env.DB, [])).toEqual([]);
+  });
+
+  it("keep a note sent for review only when switched on, from a member, for thirty days", async () => {
+    const bootstrap = BootstrapResponseSchema.parse(
+      await (await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers })).json(),
+    );
+    const spaceId = bootstrap.data.user.activeSpaceId;
+    const body = {
+      form: { producerName: "Bodega Nudo", score100: 85 },
+      kind: "quick",
+      locale: "es",
+      proposal: { fields: {}, region: null, severalWines: false },
+      text: "Loma de Nerea de Bodega Nudo. Un 85.",
+    };
+    const off = await SELF.fetch(`https://vadevi.test/api/v1/spaces/${spaceId}/voice/reviews`, {
+      body: JSON.stringify(body),
+      headers,
+      method: "POST",
+    });
+    expect(off.status).toBe(503);
+
+    const now = "2026-10-18T10:00:00.000Z";
+    const options = {
+      firebaseUid: "firebase-emulator-voice",
+      form: body.form,
+      kind: "quick" as const,
+      locale: "es",
+      nowIso: now,
+      proposal: body.proposal,
+      spaceId,
+      text: body.text,
+    };
+    const saved = await saveVoiceReview(env.DB, options);
+    expect(saved).toEqual({ expiresAt: "2026-11-17T10:00:00.000Z", id: expect.any(String) });
+    // Not a member of that Space: nothing kept.
+    expect(await saveVoiceReview(env.DB, { ...options, spaceId: "not-a-space" })).toBeNull();
+    const row = await env.DB.prepare(
+      `SELECT transcript, form_json FROM voice_reviews WHERE space_id = ?`,
+    )
+      .bind(spaceId)
+      .first<{ form_json: string; transcript: string }>();
+    expect(row?.transcript).toBe(body.text);
+    expect(JSON.parse(row!.form_json)).toEqual(body.form);
+    // Thirty days on, the scheduled handler removes it.
+    const removed = await runHousekeeping(env.DB, undefined, "2026-11-17T10:00:00.000Z");
+    expect(removed.voice_reviews).toBe(1);
   });
 });

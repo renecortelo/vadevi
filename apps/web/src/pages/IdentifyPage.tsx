@@ -264,8 +264,10 @@ export function IdentifyPage() {
       {bootstrap.data.features.voiceInput ? (
         <VoiceNote
           hint="voice.hintWine"
+          kind="wine"
           onProposal={applyVoice}
           online={status !== "offline"}
+          snapshot={() => ({ ...latest.current.wine })}
           spaceId={spaceId}
         />
       ) : null}

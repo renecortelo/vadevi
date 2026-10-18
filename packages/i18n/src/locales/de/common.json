@@ -1787,7 +1787,12 @@
     "errorService": "Die Notiz konnte gerade nicht gelesen werden. Nichts Getipptes geht verloren; erneut versuchen oder tippen.",
     "errorQuota": "Das heutige Sprachkontingent ist aufgebraucht. Das Formular funktioniert wie immer von Hand.",
     "privacy": "Gespeichert wird erst, wenn Sie speichern. Die Aufnahme geht an Cloudflare Workers AI und wird nicht aufbewahrt.",
-    "offline": "Sprache braucht eine Verbindung; das Formular funktioniert offline von Hand."
+    "offline": "Sprache braucht eine Verbindung; das Formular funktioniert offline von Hand.",
+    "reviewHint": "Erst das Formular korrigieren, dann senden: Gehörtes, Vorschlag der App und Formular werden 30 Tage aufbewahrt. Nie die Aufnahme.",
+    "reviewSend": "Diese Notiz senden, um die Spracheingabe zu verbessern",
+    "reviewSent": "Gesendet, danke. Sie löscht sich nach 30 Tagen von selbst.",
+    "reviewLimit": "Sie haben für heute genug Notizen gesendet.",
+    "reviewError": "Das Senden hat gerade nicht geklappt. Ihr Formular bleibt unverändert."
   },
   "sections": {
     "quick": "Schnellverkostung",

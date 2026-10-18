@@ -1787,7 +1787,12 @@
     "errorService": "No se pudo leer la nota ahora. No se pierde nada de lo escrito; inténtalo de nuevo o escríbela.",
     "errorQuota": "Se ha agotado el cupo de voz de hoy. El formulario funciona a mano como siempre.",
     "privacy": "Nada se guarda hasta que guardes. La grabación va a Cloudflare Workers AI y no se conserva.",
-    "offline": "La voz necesita conexión; el formulario funciona sin conexión a mano."
+    "offline": "La voz necesita conexión; el formulario funciona sin conexión a mano.",
+    "reviewHint": "Corrige primero el formulario y luego envía esta nota: se guardan 30 días lo que se oyó, lo que propuso la app y el formulario como quedó. Nunca el audio.",
+    "reviewSend": "Enviar esta nota para mejorar la voz",
+    "reviewSent": "Enviada, gracias. Se borra sola en 30 días.",
+    "reviewLimit": "Ya has enviado bastantes notas hoy.",
+    "reviewError": "No se pudo enviar ahora. Tu formulario sigue igual."
   },
   "sections": {
     "quick": "Cata rápida",

@@ -9890,6 +9890,150 @@
         ],
         "additionalProperties": false
       },
+      "VoiceReviewResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "expiresAt": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "expiresAt",
+              "id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
+      "VoiceReviewRequest": {
+        "type": "object",
+        "properties": {
+          "form": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            }
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "quick",
+              "deep",
+              "wine"
+            ]
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "es",
+              "ca",
+              "fr",
+              "en",
+              "nl",
+              "pt-PT",
+              "it",
+              "de"
+            ]
+          },
+          "proposal": {
+            "type": "object",
+            "properties": {
+              "fields": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "quote": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "ambiguous",
+                        "explicit"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "quote",
+                    "status",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "region": {
+                "type": "object",
+                "nullable": true,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "regionId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "regionId"
+                ],
+                "additionalProperties": false
+              },
+              "severalWines": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "fields",
+              "region",
+              "severalWines"
+            ],
+            "additionalProperties": false
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6000
+          }
+        },
+        "required": [
+          "form",
+          "kind",
+          "locale",
+          "proposal",
+          "text"
+        ],
+        "additionalProperties": false
+      },
       "VoiceExtractResponse": {
         "type": "object",
         "properties": {
@@ -19246,6 +19390,92 @@
           },
           "409": {
             "description": "The note version changed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{spaceId}/voice/reviews": {
+      "post": {
+        "operationId": "sendVoiceReview",
+        "tags": [
+          "Tastings"
+        ],
+        "summary": "Send a spoken note, as heard and as corrected, to improve voice tastings",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+            },
+            "required": true,
+            "in": "path",
+            "name": "spaceId"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceReviewRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Kept for review until the date given, then removed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceReviewResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not an active member of the Space.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Enough notes sent for one day.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Voice tastings are not switched on in this deployment.",
             "content": {
               "application/json": {
                 "schema": {

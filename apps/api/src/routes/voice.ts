@@ -4,13 +4,20 @@ import {
   SpaceIdPathSchema,
   VoiceExtractRequestSchema,
   VoiceExtractResponseSchema,
+  VoiceReviewRequestSchema,
+  VoiceReviewResponseSchema,
   VoiceTranscribeRequestSchema,
   VoiceTranscribeResponseSchema,
 } from "@vadevi/contracts";
 
 import { createSpeechToTextPort } from "../adapters/speech-to-text";
-import { createVoiceExtractionPort } from "../adapters/voice-extraction";
-import { knownGrapes, placeHeardRegion, voiceVocabulary } from "../repositories/voice";
+import { createVoiceExtractionPort, voiceInputEnabled } from "../adapters/voice-extraction";
+import {
+  knownGrapes,
+  placeHeardRegion,
+  saveVoiceReview,
+  voiceVocabulary,
+} from "../repositories/voice";
 import { acceptProposal } from "../services/voice-proposal";
 import { reserveProviderBudget } from "../services/usage";
 import type { ApiEnvironment } from "../types";
@@ -92,6 +99,46 @@ const extractRoute = createRoute({
   },
 });
 
+/**
+ * A spoken note sent for review, when the reader chooses to: the one exception
+ * to "nothing is stored", recorded in `docs/privacy-review-voice-tasting.md`.
+ * Kept thirty days, never the audio.
+ */
+const reviewRoute = createRoute({
+  method: "post",
+  path: "/api/v1/spaces/{spaceId}/voice/reviews",
+  operationId: "sendVoiceReview",
+  tags: ["Tastings"],
+  summary: "Send a spoken note, as heard and as corrected, to improve voice tastings",
+  security: [{ FirebaseBearer: [] }],
+  request: {
+    body: { content: { "application/json": { schema: VoiceReviewRequestSchema } } },
+    params: SpaceIdPathSchema,
+  },
+  responses: {
+    201: {
+      content: { "application/json": { schema: VoiceReviewResponseSchema } },
+      description: "Kept for review until the date given, then removed.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    403: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Not an active member of the Space.",
+    },
+    429: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Enough notes sent for one day.",
+    },
+    503: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Voice tastings are not switched on in this deployment.",
+    },
+  },
+});
+
 /** Not a member, or out of budget: told apart for the answer. */
 async function refusal(database: D1Database, spaceId: string, firebaseUid: string) {
   const member = await database
@@ -107,6 +154,37 @@ async function refusal(database: D1Database, spaceId: string, firebaseUid: strin
 }
 
 export function registerVoiceRoutes(app: OpenAPIHono<ApiEnvironment>): void {
+  app.openapi(reviewRoute, async (context) => {
+    const { spaceId } = context.req.valid("param");
+    const request = context.req.valid("json");
+    const error = (
+      code: "FEATURE_UNAVAILABLE" | "FORBIDDEN" | "QUOTA_EXHAUSTED",
+      message: string,
+    ) =>
+      ErrorEnvelopeSchema.parse({ error: { code, message, requestId: context.get("requestId") } });
+    if (!voiceInputEnabled(context.env)) {
+      return context.json(
+        error("FEATURE_UNAVAILABLE", "Voice tastings are not switched on here."),
+        503,
+      );
+    }
+    const saved = await saveVoiceReview(context.env.DB!, {
+      firebaseUid: context.get("principal").firebaseUid,
+      form: request.form,
+      kind: request.kind,
+      locale: request.locale,
+      nowIso: new Date().toISOString(),
+      proposal: request.proposal,
+      spaceId,
+      text: request.text,
+    });
+    if (saved === null) return context.json(error("FORBIDDEN", "Not a member of this Space."), 403);
+    if (saved === "LIMIT") {
+      return context.json(error("QUOTA_EXHAUSTED", "Enough notes sent for today."), 429);
+    }
+    return context.json(VoiceReviewResponseSchema.parse({ data: saved }), 201);
+  });
+
   app.openapi(extractRoute, async (context) => {
     const { spaceId } = context.req.valid("param");
     const request = context.req.valid("json");

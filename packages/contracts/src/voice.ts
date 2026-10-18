@@ -78,3 +78,31 @@ export const VoiceExtractResponseSchema = z
   .openapi("VoiceExtractResponse");
 
 export type VoiceExtractResponse = z.infer<typeof VoiceExtractResponseSchema>;
+
+/**
+ * A spoken note the reader chooses to send for review, to correct voice
+ * tastings on real use: the transcript as corrected, what the app proposed,
+ * and the form as the reader left it. Never the audio; kept thirty days.
+ */
+export const VoiceReviewRequestSchema = z
+  .object({
+    /** The form state as the reader left it, field by field. */
+    form: z
+      .record(z.string().max(60), z.unknown())
+      .refine((value) => JSON.stringify(value).length <= 20_000, "Form state too large."),
+    kind: z.enum(["quick", "deep", "wine"]),
+    locale: SupportedLocaleSchema,
+    proposal: VoiceExtractResponseSchema.shape.data,
+    text: z.string().trim().min(1).max(6_000),
+  })
+  .strict()
+  .openapi("VoiceReviewRequest");
+
+export type VoiceReviewRequest = z.infer<typeof VoiceReviewRequestSchema>;
+
+export const VoiceReviewResponseSchema = z
+  .object({
+    data: z.object({ expiresAt: z.string(), id: z.string() }).strict(),
+  })
+  .strict()
+  .openapi("VoiceReviewResponse");

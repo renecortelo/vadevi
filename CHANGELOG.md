@@ -71,6 +71,12 @@ has the reasons.
   nose's note when nothing else was said of it), never the wine or the date;
   and in «Identify a bottle», where what was said of the bottle is looked up
   as a typed hint would be, then fills what the review leaves empty.
+- **Send a spoken note to improve voice**: beside a voice note's result, a
+  button keeps that one note — the transcript as corrected, what the app
+  proposed and the form as left, never the audio — for thirty days, so real
+  use can correct the extraction. Only when pressed, at most thirty a day,
+  removed with the Space or the account. Migration `0041` adds
+  `voice_reviews`; the scheduled handler removes what has expired.
 - **Voice tastings, read more faithfully (off)**: measured on 35 new
   recordings in seven languages, the fields proposed were right 93 % of the
   time. "Would buy" and "would drink again" said as yes or no are now kept

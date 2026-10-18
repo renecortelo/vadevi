@@ -2,6 +2,9 @@ import {
   type SupportedLocale,
   type VoiceExtractResponse,
   VoiceExtractResponseSchema,
+  type VoiceReviewRequest,
+  VoiceReviewRequestSchema,
+  VoiceReviewResponseSchema,
   VoiceTranscribeRequestSchema,
   VoiceTranscribeResponseSchema,
 } from "@vadevi/contracts";
@@ -69,4 +72,27 @@ export async function extractVoice(
   );
   if (!response.ok) throw await apiError(response);
   return VoiceExtractResponseSchema.parse(await response.json()).data;
+}
+
+/**
+ * Send a spoken note for review, when the reader chooses to: what was heard
+ * (as corrected), what the app proposed and the form as they left it. Kept
+ * thirty days; never the audio.
+ */
+export async function sendVoiceReview(
+  tokenSource: TokenSource,
+  spaceId: string,
+  review: VoiceReviewRequest,
+): Promise<{ expiresAt: string; id: string }> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/voice/reviews`,
+    {
+      body: JSON.stringify(VoiceReviewRequestSchema.parse(review)),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    },
+  );
+  if (!response.ok) throw await apiError(response);
+  return VoiceReviewResponseSchema.parse(await response.json()).data;
 }

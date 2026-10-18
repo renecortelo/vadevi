@@ -474,6 +474,7 @@ export const spaceScopedTables = [
   "action_drafts",
   "assistant_tool_runs",
   "research_jobs",
+  "voice_reviews",
   "wine_media",
   "wine_aliases",
   "wine_grapes",
@@ -659,6 +660,12 @@ async function runDeletionJob(
       .bind(job.target_id)
       .run();
     rowsRemoved += drafts.meta.changes;
+    // Notes they sent for review, in any Space, shared ones included.
+    const reviews = await database
+      .prepare(`DELETE FROM voice_reviews WHERE user_id = ?`)
+      .bind(job.target_id)
+      .run();
+    rowsRemoved += reviews.meta.changes;
     const keys = await database
       .prepare(`DELETE FROM idempotency_keys WHERE user_id = ?`)
       .bind(job.target_id)

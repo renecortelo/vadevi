@@ -1787,7 +1787,12 @@
     "errorService": "Ara no s'ha pogut llegir la nota. No es perd res del que has escrit; torna-ho a provar o escriu-la.",
     "errorQuota": "S'ha esgotat la quota de veu d'avui. El formulari funciona a mà com sempre.",
     "privacy": "Res es desa fins que desis. La gravació va a Cloudflare Workers AI i no es conserva.",
-    "offline": "La veu necessita connexió; el formulari funciona sense connexió a mà."
+    "offline": "La veu necessita connexió; el formulari funciona sense connexió a mà.",
+    "reviewHint": "Corregeix primer el formulari i després envia aquesta nota: es guarden 30 dies el que s'ha sentit, el que ha proposat l'app i el formulari. Mai l'àudio.",
+    "reviewSend": "Envia aquesta nota per millorar la veu",
+    "reviewSent": "Enviada, gràcies. S'esborra sola d'aquí a 30 dies.",
+    "reviewLimit": "Avui ja has enviat prou notes.",
+    "reviewError": "Ara no s'ha pogut enviar. El teu formulari continua igual."
   },
   "sections": {
     "quick": "Tast ràpid",
