@@ -201,6 +201,8 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   grapes, and 372 of the varieties the registers name now link to a card.
   `grapes-include.txt` may name a Wikidata item where a name's search finds
   a city first (Koshu, Delaware).
+  Their summaries are in all eight languages: where no Wikipedia has one,
+  the English is translated faithfully and marked as a translation (74).
 - **Japan's and Brazil's grapes from their own specifications**: Japan's
   five wine indications list the varieties their National Tax Agency
   specifications allow, and Brazil's thirteen the cultivars of their INPI

@@ -18002,6 +18002,14 @@
         "de": "Der Sable de Camargue ist ein Roséwein von den sandigen Küstengebieten am Golfe du Lion. Er folgt auf die einfache Ursprungsbezeichnung „Vin des Sables“ von 1961, die ab 1973 Vin de Pays des Sables du Golfe du Lion hieß und seit dem Erlass vom 6. April 2011 die geschützte geografische Angabe (IGP, der neue Name der Vins de Pays) Sable de Camargue ist."
       }
     },
+    "ar-cuyo": {
+      "from": "en",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Cuyo_(Argentina)",
+      "original": "Cuyo is the wine-producing, mountainous region of central-west Argentina. Historically it comprised the provinces of San Juan, San Luis and Mendoza. The modern New Cuyo includes both Cuyo proper and the province of La Rioja. New Cuyo is a political and economic macroregion, but culturally La Rioja is part of the North-West rather than of Cuyo.",
+      "texts": {
+        "de": "Cuyo ist die gebirgige Weinbauregion im mittleren Westen Argentiniens. Historisch umfasste sie die Provinzen San Juan, San Luis und Mendoza. Das heutige Nuevo Cuyo umfasst das eigentliche Cuyo und die Provinz La Rioja. Nuevo Cuyo ist eine politische und wirtschaftliche Makroregion, kulturell gehört La Rioja jedoch eher zum Nordwesten als zu Cuyo."
+      }
+    },
     "ar-lujan-de-cuyo-doc": {
       "from": "es",
       "sourceUrl": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_(vino)",
