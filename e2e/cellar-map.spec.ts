@@ -4,7 +4,8 @@ import { completeOnboarding, signIn } from "./fixtures/sign-in";
 
 /**
  * The cellar on the map: a wine whose region is a registered name puts a point
- * on the cellar book's map, and the point opens the name in the atlas.
+ * on the cellar book's map; touching it names it, and its page in the atlas
+ * leads back to the cellar book.
  */
 test("a wine from a registered name puts a point on the cellar map", async ({ page }) => {
   await signIn(page);
@@ -32,8 +33,16 @@ test("a wine from a registered name puts a point on the cellar map", async ({ pa
 
   await page.goto("/stats");
   await page.locator("#interface-locale").selectOption("en");
-  const point = page.getByRole("link", { name: /Sauternes: 1 wine/ });
+  const point = page.getByRole("button", { name: /Sauternes: 1 wine/ });
   await expect(point).toBeAttached({ timeout: 15_000 });
+  // Touching a point names it first; its page is one more touch away, and
+  // leads back to the cellar book, not to the library.
   await point.click();
+  const tag = page.locator(".map-tag");
+  await expect(tag).toContainText("Sauternes");
+  await expect(tag).toContainText("1 of your wines");
+  await tag.getByRole("link", { name: "Open its page" }).click();
   await expect(page).toHaveURL(/\/library\/regions\/fr-sauternes/);
+  await page.getByRole("link", { name: /Back to Cellar book/ }).click();
+  await expect(page).toHaveURL(/\/stats/);
 });

@@ -5116,8 +5116,20 @@ p {
   stroke: var(--color-plum);
 }
 
-.cellar-map a:focus-visible .cellar-map__point {
-  stroke: var(--color-accent);
+.cellar-map__spot {
+  cursor: pointer;
+}
+
+.cellar-map__spot:focus {
+  outline: none;
+}
+
+.cellar-map__spot:focus-visible .cellar-map__point,
+.cellar-map__spot.is-tagged .cellar-map__point,
+.cellar-map__point.is-tagged {
+  fill: var(--color-accent);
+  fill-opacity: 1;
+  stroke: var(--color-surface-raised);
 }
 
 @media (prefers-reduced-motion: no-preference) {

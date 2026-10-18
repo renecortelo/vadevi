@@ -469,7 +469,7 @@ export function StatsPage() {
                 <div className="stats-group">
                   <GroupTitle icon={<RegionIcon />}>{t("stats.byRegion")}</GroupTitle>
                   {stats.wines.regionPlaces.length === 0 ? null : (
-                    <CellarMap places={stats.wines.regionPlaces} />
+                    <CellarMap places={stats.wines.regionPlaces} trail={backHere} />
                   )}
                   <Bars
                     items={stats.wines.byRegion.map((row) => ({

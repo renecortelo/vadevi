@@ -1606,7 +1606,9 @@
       "label": "De dónde vienen tus vinos",
       "point_one": "{{name}}: {{wines}} vino",
       "point_other": "{{name}}: {{wines}} vinos",
-      "caption": "Un punto por cada nombre del atlas del que vienen tus vinos, mayor cuantos más vinos; hueco donde el atlas lo sitúa de forma aproximada. Tócalo para abrirlo."
+      "caption": "Un punto por cada nombre del atlas del que vienen tus vinos, mayor cuantos más vinos; hueco donde el atlas lo sitúa de forma aproximada. Tócalo para ver su nombre y abrir su ficha.",
+      "wines_one": "{{wines}} vino tuyo",
+      "wines_other": "{{wines}} vinos tuyos"
     }
   },
   "taste": {

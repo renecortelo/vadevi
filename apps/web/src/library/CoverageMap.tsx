@@ -5,6 +5,7 @@ import { Link } from "react-router";
 
 import { designationKey } from "./designation";
 import { MapControls } from "./MapControls";
+import type { LibraryTrail } from "./trail";
 import { mapSheets, type SheetId } from "./map-sheets";
 import { useZoomPan } from "./useZoomPan";
 
@@ -30,7 +31,10 @@ export function CoverageMap({
   onSelect,
   points,
   selected,
+  trail,
 }: {
+  /** Where a name's page leads back to: this page, the atlas in figures. */
+  trail?: { libraryTrail: LibraryTrail };
   countries: { countryCode: string; names: number }[];
   onSelect: (countryCode: string | null) => void;
   points: readonly CoveragePoint[];
@@ -184,7 +188,7 @@ export function CoverageMap({
           >
             <strong>{tag.name}</strong>
             <span>{t(designationKey(tag.giType))}</span>
-            <Link className="text-link" to={`/library/regions/${tag.id}`}>
+            <Link className="text-link" state={trail} to={`/library/regions/${tag.id}`}>
               {t("map.open")}
             </Link>
             <button aria-label={t("map.closeTag")} onClick={() => setTag(null)} type="button">

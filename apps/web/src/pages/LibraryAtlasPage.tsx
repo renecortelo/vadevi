@@ -9,6 +9,7 @@ import { type CoveragePoint, CoverageMap } from "../library/CoverageMap";
 import { flagOf } from "../library/flag";
 import { LibraryTabs } from "../library/LibraryTabs";
 import { TrailBackLink } from "../library/TrailBackLink";
+import { trailFrom } from "../library/trail";
 import { CountUp } from "../motion/CountUp";
 import { useArrival } from "../motion/useArrival";
 import { getLibraryAtlasCoverage, listLibraryRegions } from "../services/library";
@@ -155,6 +156,7 @@ export function LibraryAtlasPage() {
             onSelect={setSelected}
             points={selected !== null && points?.code === selected ? points.points : []}
             selected={selected}
+            trail={trailFrom(t("library.coverage.title"), "/library/atlas")}
           />
           {selected === null ? null : (
             <p className="atlas-coverage__meta">

@@ -5,6 +5,7 @@ import { Link } from "react-router";
 
 import { MapControls } from "./MapControls";
 import { mapSheets, type SheetId } from "./map-sheets";
+import type { LibraryTrail } from "./trail";
 import { useZoomPan } from "./useZoomPan";
 
 type Place = WineStats["wines"]["regionPlaces"][number];
@@ -13,10 +14,18 @@ type Place = WineStats["wines"]["regionPlaces"][number];
  * Where the cellar's wines come from: a point for each registered name its
  * wines are from, larger with more wines, on one sheet of the map at a time.
  * A point the atlas places approximately (an area, a place of the name) is
- * drawn hollow. Each point opens the name's page in the atlas; the list of
- * regions beside it says the same in words.
+ * drawn hollow. Touching a point names it and its wines, with a way to the
+ * name's page in the atlas that leads back here; the list of regions beside
+ * it says the same in words.
  */
-export function CellarMap({ places }: { places: readonly Place[] }) {
+export function CellarMap({
+  places,
+  trail,
+}: {
+  places: readonly Place[];
+  /** Where the atlas page's way back leads: the page this map is on. */
+  trail?: { libraryTrail: LibraryTrail };
+}) {
   const { i18n, t } = useTranslation();
   // The sheets that hold a point, the one with most wines first.
   const held = mapSheets
@@ -30,6 +39,7 @@ export function CellarMap({ places }: { places: readonly Place[] }) {
       wines: sheet.places.reduce((sum, place) => sum + place.count, 0),
     }));
   const [chosen, setChosen] = useState<SheetId | null>(null);
+  const [tag, setTag] = useState<Place | null>(null);
   const sheet =
     held.find((candidate) => candidate.id === chosen) ??
     [...held].sort((left, right) => right.wines - left.wines)[0];
@@ -68,7 +78,10 @@ export function CellarMap({ places }: { places: readonly Place[] }) {
             <button
               aria-pressed={candidate.id === sheet.id}
               key={candidate.id}
-              onClick={() => setChosen(candidate.id)}
+              onClick={() => {
+                setChosen(candidate.id);
+                setTag(null);
+              }}
               type="button"
             >
               {t(`library.coverage.sheet.${candidate.id}`)}
@@ -91,38 +104,78 @@ export function CellarMap({ places }: { places: readonly Place[] }) {
           ))}
           {points
             .toSorted((left, right) => right.place.count - left.place.count)
-            .map(({ place, xy }, index) => (
-              <Link
-                aria-label={t("stats.cellarMap.point", {
-                  count: place.count,
-                  name: place.key,
-                  wines: new Intl.NumberFormat(i18n.language).format(place.count),
-                })}
-                key={place.regionId}
-                to={`/library/regions/${place.regionId}`}
-              >
-                <circle
-                  className={
-                    ["area", "place"].includes(place.pointSource)
-                      ? "cellar-map__point is-approximate"
-                      : "cellar-map__point"
-                  }
-                  cx={xy[0]}
-                  cy={xy[1]}
-                  r={(zoom.view.w / 70) * (0.7 + Math.sqrt(place.count / largest))}
-                  strokeWidth={zoom.view.w / 160}
-                  style={{ "--motion-index": Math.min(index, 12) } as CSSProperties}
-                />
-              </Link>
-            ))}
+            .map(({ place, xy }, index) => {
+              const label = t("stats.cellarMap.point", {
+                count: place.count,
+                name: place.key,
+                wines: new Intl.NumberFormat(i18n.language).format(place.count),
+              });
+              return (
+                <g
+                  aria-label={label}
+                  className={tag === place ? "cellar-map__spot is-tagged" : "cellar-map__spot"}
+                  key={place.regionId}
+                  onClick={() => setTag(place)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setTag(place);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <title>{label}</title>
+                  <circle
+                    className={
+                      ["area", "place"].includes(place.pointSource)
+                        ? "cellar-map__point is-approximate"
+                        : "cellar-map__point"
+                    }
+                    cx={xy[0]}
+                    cy={xy[1]}
+                    r={(zoom.view.w / 70) * (0.7 + Math.sqrt(place.count / largest))}
+                    strokeWidth={zoom.view.w / 160}
+                    style={{ "--motion-index": Math.min(index, 12) } as CSSProperties}
+                  />
+                </g>
+              );
+            })}
         </svg>
         <MapControls
           onIn={zoom.zoomIn}
           onOut={zoom.zoomOut}
-          onReset={zoom.reset}
+          onReset={() => {
+            zoom.reset();
+            setTag(null);
+          }}
           canOut={zoom.canZoomOut}
           moved={zoom.moved}
         />
+        {tag === null ? null : (
+          <div
+            className="map-tag"
+            role="status"
+            style={{
+              insetInlineStart: `${((project(tag)[0] - zoom.view.x) / zoom.view.w) * 100}%`,
+              insetBlockStart: `${((project(tag)[1] - zoom.view.y) / zoom.view.h) * 100}%`,
+            }}
+          >
+            <strong>{tag.key}</strong>
+            <span>
+              {t("stats.cellarMap.wines", {
+                count: tag.count,
+                wines: new Intl.NumberFormat(i18n.language).format(tag.count),
+              })}
+            </span>
+            <Link className="text-link" state={trail} to={`/library/regions/${tag.regionId}`}>
+              {t("map.open")}
+            </Link>
+            <button aria-label={t("map.closeTag")} onClick={() => setTag(null)} type="button">
+              ×
+            </button>
+          </div>
+        )}
       </div>
       <figcaption className="section-help">{t("stats.cellarMap.caption")}</figcaption>
     </figure>

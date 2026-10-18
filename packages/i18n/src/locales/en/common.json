@@ -1606,7 +1606,9 @@
       "label": "Where your wines come from",
       "point_one": "{{name}}: {{wines}} wine",
       "point_other": "{{name}}: {{wines}} wines",
-      "caption": "A point for each name in the atlas your wines come from, larger with more wines; hollow where the atlas places it approximately. Touch one to open it."
+      "caption": "A point for each name in the atlas your wines come from, larger with more wines; hollow where the atlas places it approximately. Touch it to see its name and open its page.",
+      "wines_one": "{{wines}} of your wines",
+      "wines_other": "{{wines}} of your wines"
     }
   },
   "taste": {

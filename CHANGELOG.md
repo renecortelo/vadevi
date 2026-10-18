@@ -81,6 +81,10 @@ has the reasons.
   replaces what the first one filled and the reader left alone, never what
   they typed; the quick log has «Clear the form»; and a draft begun on
   another day, its date never changed, is taken up today.
+- **The cellar book's map names before it opens**: touching a point shows
+  the name and how many of your wines come from it, with «Open its page»;
+  that page, and a name opened from the atlas in figures' map, now lead back
+  to where you came from instead of to the library.
 - **Voice tastings, levels from the words**: a level said plainly — «alta»,
   «hoher», «corto», «ligero», «muy alta», in the app's eight languages — is
   read from the words, not from the model's sense of the scale (it read
