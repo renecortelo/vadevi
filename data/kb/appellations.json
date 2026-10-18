@@ -248548,10 +248548,49 @@
         "source": "register"
       }
     ],
-    "prominence": 0,
+    "prominence": 2,
     "registeredOn": "1981-06-11",
-    "summaries": {},
-    "wikidataId": null,
+    "summaries": {
+      "fr": {
+        "text": "Le muscat de Samos est un vin doux naturel produit dans une île grecque de la mer Égée, proche de l'Asie Mineure. Ce vin inconnu sous l'Antiquité doit sa célébrité aux ravages du phylloxéra dans les vignobles européens producteurs de vin doux. Samos (alors vassale de l'Empire ottoman) va produire un vin muscat dont le succès fut important.",
+        "url": "https://fr.wikipedia.org/wiki/Muscat_de_Samos"
+      },
+      "de": {
+        "text": "Samos ist der Name einer ostägäischen Insel nahe der türkischen Küste, der Handelsname verschiedener süßer, meist gespriteter Dessertweine (Süßweine) sowie einer 1982 eingerichteten Appellation, also einer geschützten Herkunftsbezeichnung (O.P.E. für griechisch Ονομασία προελευσέως ελεγχομένη Onomasia Proelefseos Elenchomeni) vergleichbar der französischen Appellation d’Origine Contrôlée.",
+        "url": "https://de.wikipedia.org/wiki/Samos_(Wein)"
+      },
+      "en": {
+        "text": "Samos is the name of an island in the eastern Aegean near the Turkish coast, the trade name of various sweet, mostly fortified dessert wines, and of an appellation established in 1982, a protected designation of origin (O.P.E. for the Greek Ονομασία προελευσέως ελεγχομένη Onomasia Proelefseos Elenchomeni) comparable to the French appellation d’origine contrôlée.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Samos_(Wein)"
+      },
+      "es": {
+        "text": "Samos es el nombre de una isla del Egeo oriental cercana a la costa turca, la denominación comercial de diversos vinos de postre dulces, en su mayoría encabezados, y de una denominación creada en 1982, una denominación de origen protegida (O.P.E. por el griego Ονομασία προελευσέως ελεγχομένη Onomasia Proelefseos Elenchomeni) comparable a la appellation d’origine contrôlée francesa.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Samos_(Wein)"
+      },
+      "ca": {
+        "text": "Samos és el nom d'una illa de l'Egeu oriental propera a la costa turca, la denominació comercial de diversos vins de postres dolços, majoritàriament encabeçats, i d'una denominació creada el 1982, una denominació d'origen protegida (O.P.E. pel grec Ονομασία προελευσέως ελεγχομένη Onomasia Proelefseos Elenchomeni) comparable a l'appellation d’origine contrôlée francesa.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Samos_(Wein)"
+      },
+      "it": {
+        "text": "Samos è il nome di un'isola dell'Egeo orientale vicina alla costa turca, la denominazione commerciale di diversi vini da dessert dolci, per lo più fortificati, e di una denominazione istituita nel 1982, una denominazione di origine protetta (O.P.E. per il greco Ονομασία προελευσέως ελεγχομένη Onomasia Proelefseos Elenchomeni) paragonabile all'appellation d’origine contrôlée francese.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Samos_(Wein)"
+      },
+      "nl": {
+        "text": "Samos is de naam van een eiland in de oostelijke Egeïsche Zee bij de Turkse kust, de handelsnaam van verschillende zoete, meestal versterkte dessertwijnen en van een in 1982 ingestelde appellation, een beschermde oorsprongsbenaming (O.P.E. voor het Griekse Ονομασία προελευσέως ελεγχομένη Onomasia Proelefseos Elenchomeni) die vergelijkbaar is met de Franse appellation d’origine contrôlée.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Samos_(Wein)"
+      },
+      "pt": {
+        "text": "Samos é o nome de uma ilha do Egeu oriental perto da costa turca, a designação comercial de vários vinhos de sobremesa doces, na maioria fortificados, e de uma denominação criada em 1982, uma denominação de origem protegida (O.P.E. pelo grego Ονομασία προελευσέως ελεγχομένη Onomasia Proelefseos Elenchomeni) comparável à appellation d’origine contrôlée francesa.",
+        "translated": true,
+        "url": "https://de.wikipedia.org/wiki/Samos_(Wein)"
+      }
+    },
+    "wikidataId": "Q2217600",
     "register": {
       "categories": [
         3,

@@ -1,5 +1,5 @@
 {
-  "$comment": "Wikipedia articles for names beyond the EU that no title rule reached, each read and chosen by hand: an article whose opening says the name is a wine region, district, zone or appellation (not a town of the same name, nor another country's region). Keyed by atlas id; `pnpm kb:fetch-article-items` caches their leads, and `pnpm kb:build-appellations` describes the name by its article where nothing else does. Chosen on 17 October 2026 from a search of the English, Spanish, Portuguese, French, German and Italian Wikipedias.",
+  "$comment": "Wikipedia articles for names beyond the EU that no title rule reached, each read and chosen by hand: an article whose opening says the name is a wine region, district, zone or appellation (not a town of the same name, nor another country's region). Keyed by atlas id; `pnpm kb:fetch-article-items` caches their leads, and `pnpm kb:build-appellations` describes the name by its article where nothing else does. Chosen on 17 October 2026 from a search of the English, Spanish, Portuguese, French, German and Italian Wikipedias. Samos (gr-samos), the one EU name with no item and no summary, was added on 18 October 2026: its German article is about the appellation, its French one about the Muscat of Samos.",
   "items": {
     "ar-cuyo": {
       "qid": "Q1146743"
@@ -105,6 +105,9 @@
     },
     "cl-valle-del-tutuven": {
       "qid": "Q6159265"
+    },
+    "gr-samos": {
+      "qid": "Q2217600"
     },
     "md-codru": {
       "qid": "Q5140375"

@@ -189,6 +189,9 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
+- **Every EU name described**: Samos, the one registered name with neither
+  an item nor a summary, takes its German and French articles, translated
+  faithfully into the other six languages.
 - **Eighteen more grapes in the library**: those the registers beyond the EU
   name — Koshu, Delaware, Concord, Niagara, Campbell Early, Petit Manseng,
   Moscato Giallo, Ruby Cabernet, Grechetto, Pignolo, Refosco dal Peduncolo
