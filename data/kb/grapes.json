@@ -261,7 +261,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "floral",
       "citrus"
@@ -384,6 +384,12 @@
         "quote": "té els principals cultius al Penedès, Conca de Barberà i Camp de Tarragona.",
         "value": "ES: Camp de Tarragona",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Sie reift spät und erreicht nur einen relativ niedrigen Alkoholgehalt",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Parellada"
       }
     ],
     "id": "parellada",
@@ -2072,7 +2078,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "floral",
       "mineral",
@@ -2208,6 +2214,12 @@
         "quote": "originária no vale do rio Lima e cultivada em quase toda a região dos Vinhos Verdes e na Galiza.",
         "value": "ES: Galiza",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Loureiro_(casta)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Produce vinos poco alcohólicos",
+        "value": "low",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Loureira"
       }
     ],
     "id": "loureira",
@@ -6776,7 +6788,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Listan_Prieto"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "medium",
     "aromas": [
       "citrus",
@@ -6888,6 +6900,12 @@
         "field": "alcohol",
         "quote": "with notable acidity and a medium to moderate alcohol content",
         "value": "medium"
+      },
+      {
+        "field": "acidity",
+        "quote": "Poseen una alta acidez.",
+        "value": "high",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Courbu"
       }
     ],
     "id": "hondarrabi-zuri",
@@ -11078,7 +11096,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Petit_Manseng"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [],
     "body": null,
@@ -11168,6 +11186,11 @@
         "field": "sweetness",
         "quote": "in the still dry, sparkling and passito types",
         "value": "dry-sweet"
+      },
+      {
+        "field": "acidity",
+        "quote": "Moscato Giallo tends to produce deeply colored, golden wines that have moderate acidity levels but are highly aromatic",
+        "value": "medium"
       }
     ],
     "id": "moscato-giallo",
@@ -12892,7 +12915,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pinot_noir"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "grass",
@@ -13101,6 +13124,11 @@
         "field": "sweetness",
         "quote": "Dry and sweet white Bordeaux, including oak-aged examples from Pessac-Léognan and Graves",
         "value": "dry-sweet"
+      },
+      {
+        "field": "acidity",
+        "quote": "softening the naturally high acidity of the grape",
+        "value": "high"
       }
     ],
     "id": "sauvignon-blanc",
@@ -13736,7 +13764,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Riesling"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": null,
     "aromas": [
       "plum",
@@ -13805,6 +13833,11 @@
         "quote": "Merlot ( MUR-loh) is a dark-blue-colored wine grape variety that is used as both a blending grape and for varietal wines.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Merlot"
+      },
+      {
+        "field": "acidity",
+        "quote": "Merlot's low acidity serves as a balance for the higher acidity in many Italian wine grapes",
+        "value": "low"
       }
     ],
     "id": "merlot",
@@ -14304,6 +14337,11 @@
         "quote": "És una varietat utilitzada en els vins negres secs",
         "value": "dry",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Syrah"
+      },
+      {
+        "field": "tannin",
+        "quote": "Due to their concentrated flavours and high tannin content, many premium Syrah wines are at their best after some considerable bottle aging",
+        "value": "high"
       }
     ],
     "id": "syrah",
@@ -14436,7 +14474,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q332720",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Syrah"
   },
@@ -15555,7 +15593,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "red berry",
       "plum",
@@ -15761,6 +15799,12 @@
         "field": "regions",
         "quote": "The two major regions that grow Tempranillo are Rioja ... and Ribera del Duero ... Substantial quantities are also grown in the Penedès ... In Portugal ... Douro ... California ... Texas ... Oregon ... Australia ... Argentina, Chile, and Mexico ... Washington state ...",
         "value": "US: Washington"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Esta casta origina vinhos de elevado teor alcoólico",
+        "value": "high",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Aragonez"
       }
     ],
     "id": "tempranillo",
@@ -16128,7 +16172,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Chenin_blanc"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "tar",
@@ -16333,6 +16377,16 @@
         "quote": "Els vins elaborats amb nebbiolo tenen molt bona acidesa i tannicitat, bon cos i graduació alcohòlica elevada.",
         "value": "high",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Nebbiolo"
+      },
+      {
+        "field": "acidity",
+        "quote": "the grape's naturally high acidity and tannins",
+        "value": "high"
+      },
+      {
+        "field": "tannin",
+        "quote": "the grape's naturally high acidity and tannins",
+        "value": "high"
       }
     ],
     "id": "nebbiolo",
@@ -16471,7 +16525,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q202290",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nebbiolo"
   },
@@ -16739,7 +16793,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Silvaner"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "white pepper",
@@ -16827,6 +16881,12 @@
         "field": "sweetness",
         "quote": "Grüner Veltliner is usually produced dry",
         "value": "dry"
+      },
+      {
+        "field": "acidity",
+        "quote": "Los vinos de grüner veltliner tienden a tener un cuerpo medio, una ligera frutalidad, una alta acidez y notas a especias",
+        "value": "high",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Gr%C3%BCner_veltliner"
       }
     ],
     "id": "gruner-veltliner",
@@ -19304,6 +19364,11 @@
         "field": "body",
         "quote": "is known for deep color, full body, low tannins and high levels of acidity",
         "value": "high"
+      },
+      {
+        "field": "tannin",
+        "quote": "It produces good yields and is known for deep color, full body, low tannins and high levels of acidity",
+        "value": "low"
       }
     ],
     "id": "barbera",
@@ -19462,7 +19527,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q807812",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Barbera"
   },
@@ -20244,7 +20309,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Albari%C3%B1o"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "banana",
@@ -20340,6 +20405,12 @@
         "quote": "de color intens, amb un grau alcohòlic alt",
         "value": "high",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Petit_verdot"
+      },
+      {
+        "field": "acidity",
+        "quote": "Avec un degré alcoolique bon et une acidité élevée",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Petit_verdot"
       }
     ],
     "id": "petit-verdot",
@@ -20435,7 +20506,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Petit_Verdot"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [
       "fruity"
@@ -20594,6 +20665,11 @@
         "field": "sweetness",
         "quote": "The style of those wines ranges from simple, light, off-dry (halbtrocken) to rich, dry with substantial flavors.",
         "value": "dry-medium"
+      },
+      {
+        "field": "acidity",
+        "quote": "As a varietal red wine, Pinot Meunier tends to produce slightly jammy, fruity wines with moderate acidity and low tannins",
+        "value": "medium"
       }
     ],
     "id": "pinot-meunier",
@@ -30168,6 +30244,12 @@
         "quote": "Aus der Rebsorte wird hellgelber, neutraler Wein mit einem hohen Alkoholgehalt hergestellt.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Air%C3%A9n"
+      },
+      {
+        "field": "sweetness",
+        "quote": "wird Airén auch zu frischen, trockenen, schnell zu trinkenden Weißweinen vergoren",
+        "value": "dry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Air%C3%A9n"
       }
     ],
     "id": "airen",
@@ -30256,7 +30338,10 @@
         "url": "https://en.wikipedia.org/wiki/Air%C3%A9n"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Aiden",
@@ -34261,7 +34346,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Graciano"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [],
     "body": "high",
@@ -34292,6 +34377,12 @@
         "quote": "Il donne des vins blancs secs faciles à boire",
         "value": "dry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Verdejo"
+      },
+      {
+        "field": "acidity",
+        "quote": "Su acidez es media-alta",
+        "value": "medium",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Verdejo"
       }
     ],
     "id": "verdejo",
@@ -35207,7 +35298,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": "high",
     "aromas": [
       "nutty",
@@ -35422,6 +35513,12 @@
         "field": "sweetness",
         "quote": "Although Marsanne is mostly made into a dry wine, it is commonly made into a sweet wine in Valais",
         "value": "dry-sweet"
+      },
+      {
+        "field": "acidity",
+        "quote": "Les vins sont puissants, de faible acidité",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Marsanne_(c%C3%A9page)"
       }
     ],
     "id": "marsanne",
@@ -35605,7 +35702,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Marsanne"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "blackcurrant",
@@ -35754,6 +35851,12 @@
         "field": "sweetness",
         "quote": "the variety is often used for sweet wines, although dry Scheurebe wines have become more common in Germany",
         "value": "dry-sweet"
+      },
+      {
+        "field": "acidity",
+        "quote": "== particularites == synonyme : samling 88 precocite : moyenne a tardive vigueur : moyenne caracteristiques du vin : aromes riches ; notes de cassis et de muscat ; corse ; acidite assez forte ; race ; specialite.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Scheurebe"
       }
     ],
     "id": "scheurebe",
@@ -44352,6 +44455,12 @@
         "quote": "De wijnen zijn fris en fruitig met een aroma van limoen en toch is de zuurgraad niet extreem hoog.",
         "value": "still",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Athiri"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Auf Rhodos wird daraus der trockene und delikate Weißwein „Athiri de Rhodos“ hergestellt",
+        "value": "dry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Athiri"
       }
     ],
     "id": "athiri",
@@ -44417,7 +44526,10 @@
         "url": "https://en.wikipedia.org/wiki/Athiri"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Athiri Aspro",
@@ -46597,6 +46709,12 @@
         "quote": "Elle donne un vin très coloré et peu acide qui possède une palette aromatique très complète : violette, fraise, fruits noirs, réglisse, zan.",
         "value": "licorice",
         "sourceUrl": "https://fr.wikipedia.org/wiki/N%C3%A9grette"
+      },
+      {
+        "field": "tannin",
+        "quote": "einem geringen Anteil an Gerbstoffen",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/N%C3%A9grette"
       }
     ],
     "id": "negrette",
@@ -46716,7 +46834,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q464575",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/N%C3%A9grette"
   },
@@ -48317,7 +48435,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gamaret"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "low",
     "aromas": [
       "fruity"
@@ -48408,6 +48526,12 @@
         "quote": "amb poca aroma i baixa graduació alcohòlica",
         "value": "low",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Trepat"
+      },
+      {
+        "field": "acidity",
+        "quote": "Der Wein dieser Traube ist aufgrund des vergleichsweise hohen Säuregehalts frisch, leicht und fruchtig",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Trepat"
       }
     ],
     "id": "trepat",

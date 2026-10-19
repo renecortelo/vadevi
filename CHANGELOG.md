@@ -58,7 +58,12 @@ has the reasons.
   report, newer than any article's and credited to it.
 - **More grapes with alcohol, sweetness and body**: their articles in six
   more languages (`pnpm kb:fetch-grape-articles`) and 51 more values read by
-  hand bring alcohol to 58 grapes, sweetness to 85 and body to 71.
+  hand bring alcohol to 61 grapes, sweetness to 87 and body to 71; acidity
+  reaches 103 grapes and tannin 41.
+- **Grapes for regions beyond the EU**: 96 regions with no register list —
+  American AVAs, Australian GIs, a few in Chile, Argentina, New Zealand —
+  now show the grapes their own article says are grown there, each with its
+  sentence (404 links).
 - **Dry or sweet, and alcohol**: a grape's card adds two scales — the
   alcohol its wines typically reach, and how dry or sweet they are, as a
   range where its sources give one (Sémillon's «dry and sweet white wines»

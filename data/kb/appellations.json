@@ -161105,7 +161105,38 @@
     "countryCode": "FR",
     "eambrosiaId": "EUGI00000001442",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "syrah",
+        "quote": "The red wines of the Minervois appellation are produced from Syrah and Mourvedre, Grenache and Lladoner Pelut (minimum 60%); and Carignan, Cinsault, Piquepoul, Terret, and Rivairenc (maximum 40%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Minervois_AOC"
+      },
+      {
+        "grapeId": "mourvedre",
+        "quote": "The red wines of the Minervois appellation are produced from Syrah and Mourvedre, Grenache and Lladoner Pelut (minimum 60%); and Carignan, Cinsault, Piquepoul, Terret, and Rivairenc (maximum 40%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Minervois_AOC"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "The red wines of the Minervois appellation are produced from Syrah and Mourvedre, Grenache and Lladoner Pelut (minimum 60%); and Carignan, Cinsault, Piquepoul, Terret, and Rivairenc (maximum 40%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Minervois_AOC"
+      },
+      {
+        "grapeId": "carignan",
+        "quote": "The red wines of the Minervois appellation are produced from Syrah and Mourvedre, Grenache and Lladoner Pelut (minimum 60%); and Carignan, Cinsault, Piquepoul, Terret, and Rivairenc (maximum 40%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Minervois_AOC"
+      },
+      {
+        "grapeId": "cinsaut",
+        "quote": "The red wines of the Minervois appellation are produced from Syrah and Mourvedre, Grenache and Lladoner Pelut (minimum 60%); and Carignan, Cinsault, Piquepoul, Terret, and Rivairenc (maximum 40%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Minervois_AOC"
+      },
+      {
+        "grapeId": "piquepoul",
+        "quote": "The red wines of the Minervois appellation are produced from Syrah and Mourvedre, Grenache and Lladoner Pelut (minimum 60%); and Carignan, Cinsault, Piquepoul, Terret, and Rivairenc (maximum 40%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Minervois_AOC"
+      }
+    ],
     "id": "fr-minervois",
     "latitude": 43.354166666666664,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001442",
@@ -324490,7 +324521,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "mourvedre",
+        "quote": "The AVA is home to old vines' Mourvedre plantings and Zinfindel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Lime_Kiln_Valley_AVA"
+      }
+    ],
     "id": "us-lime-kiln-valley",
     "latitude": 36.69348780655541,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.27",
@@ -325121,7 +325158,18 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The climate has positioned Los Carneros ideal for the cultivation of cool climate varietals like Pinot noir and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Los_Carneros_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The climate has positioned Los Carneros ideal for the cultivation of cool climate varietals like Pinot noir and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Los_Carneros_AVA"
+      }
+    ],
     "id": "us-los-carneros",
     "latitude": 38.24512954405387,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.32",
@@ -325488,7 +325536,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "The region is best known for its Chardonnay, Pinot Noir and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Edna_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The region is best known for its Chardonnay, Pinot Noir and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Edna_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The region is best known for its Chardonnay, Pinot Noir and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Edna_Valley_AVA"
+      }
+    ],
     "id": "us-edna-valley",
     "latitude": 35.225270016045265,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.35",
@@ -326337,7 +326401,28 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Cabernet Sauvignon, Merlot Pinot Noir and Riesling are the most popular plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cole_Ranch_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Cabernet Sauvignon, Merlot Pinot Noir and Riesling are the most popular plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cole_Ranch_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Cabernet Sauvignon, Merlot Pinot Noir and Riesling are the most popular plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cole_Ranch_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Cabernet Sauvignon, Merlot Pinot Noir and Riesling are the most popular plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cole_Ranch_AVA"
+      }
+    ],
     "id": "us-cole-ranch",
     "latitude": 39.061256962700014,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.42",
@@ -326709,7 +326794,88 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "barbera",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "colombard",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "durif",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      }
+    ],
     "id": "us-suisun-valley",
     "latitude": 38.26792577577634,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.45",
@@ -327066,7 +327232,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "However, the most notable grapes grown in the area include Cabernet Franc, Chardonnay and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monticello_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "However, the most notable grapes grown in the area include Cabernet Franc, Chardonnay and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monticello_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "However, the most notable grapes grown in the area include Cabernet Franc, Chardonnay and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monticello_AVA"
+      }
+    ],
     "id": "us-monticello",
     "latitude": 37.98331096506834,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.48",
@@ -327428,7 +327610,28 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "delaware",
+        "quote": "Temperatures on the island during the growing season can be warmer than on the mainland due to the \"lake effect.\" Cool climate varietals such as Catawba, Delaware, Gewürztraminer, Pinot noir, and Riesling are the most important in Isle St.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Isle_St._George_AVA"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "Temperatures on the island during the growing season can be warmer than on the mainland due to the \"lake effect.\" Cool climate varietals such as Catawba, Delaware, Gewürztraminer, Pinot noir, and Riesling are the most important in Isle St.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Isle_St._George_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Temperatures on the island during the growing season can be warmer than on the mainland due to the \"lake effect.\" Cool climate varietals such as Catawba, Delaware, Gewürztraminer, Pinot noir, and Riesling are the most important in Isle St.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Isle_St._George_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Temperatures on the island during the growing season can be warmer than on the mainland due to the \"lake effect.\" Cool climate varietals such as Catawba, Delaware, Gewürztraminer, Pinot noir, and Riesling are the most important in Isle St.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Isle_St._George_AVA"
+      }
+    ],
     "id": "us-isle-st-george",
     "latitude": 41.71501027792441,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.51",
@@ -327554,7 +327757,18 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Chalk Hill's unique soils performs well with planting of white wine varietals like Chardonnay and Sauvignon Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Chalk_Hill_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Chalk Hill's unique soils performs well with planting of white wine varietals like Chardonnay and Sauvignon Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Chalk_Hill_AVA"
+      }
+    ],
     "id": "us-chalk-hill",
     "latitude": 38.568517997308064,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.52",
@@ -328192,7 +328406,33 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The climate in the Green Valley is even cooler than other parts of the Russian River Valley favoring cool climate varietals as Pinot Noir, Chardonnay and Gewürztraminer for which Green Valley is best known as well as a few examples of cool-climate Syrah and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Green_Valley_of_Russian_River_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The climate in the Green Valley is even cooler than other parts of the Russian River Valley favoring cool climate varietals as Pinot Noir, Chardonnay and Gewürztraminer for which Green Valley is best known as well as a few examples of cool-climate Syrah and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Green_Valley_of_Russian_River_Valley_AVA"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "The climate in the Green Valley is even cooler than other parts of the Russian River Valley favoring cool climate varietals as Pinot Noir, Chardonnay and Gewürztraminer for which Green Valley is best known as well as a few examples of cool-climate Syrah and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Green_Valley_of_Russian_River_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The climate in the Green Valley is even cooler than other parts of the Russian River Valley favoring cool climate varietals as Pinot Noir, Chardonnay and Gewürztraminer for which Green Valley is best known as well as a few examples of cool-climate Syrah and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Green_Valley_of_Russian_River_Valley_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "The climate in the Green Valley is even cooler than other parts of the Russian River Valley favoring cool climate varietals as Pinot Noir, Chardonnay and Gewürztraminer for which Green Valley is best known as well as a few examples of cool-climate Syrah and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Green_Valley_of_Russian_River_Valley_AVA"
+      }
+    ],
     "id": "us-green-valley-of-russian-river-valley",
     "latitude": 38.433497637781805,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.57",
@@ -328316,7 +328556,18 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Bordeaux varietals are popular with Cabernet Sauvignon and Merlot comprising more than 70% of the grapes grown in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Carmel_Valley_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Bordeaux varietals are popular with Cabernet Sauvignon and Merlot comprising more than 70% of the grapes grown in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Carmel_Valley_AVA"
+      }
+    ],
     "id": "us-carmel-valley",
     "latitude": 36.4219417839827,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.58",
@@ -329826,7 +330077,28 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The majority of the grape varieties grown in Sonoma County are grown in Northern Sonoma AVA, including Cabernet Sauvignon, Sauvignon blanc, Chardonnay, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Northern_Sonoma_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The majority of the grape varieties grown in Sonoma County are grown in Northern Sonoma AVA, including Cabernet Sauvignon, Sauvignon blanc, Chardonnay, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Northern_Sonoma_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The majority of the grape varieties grown in Sonoma County are grown in Northern Sonoma AVA, including Cabernet Sauvignon, Sauvignon blanc, Chardonnay, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Northern_Sonoma_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "The majority of the grape varieties grown in Sonoma County are grown in Northern Sonoma AVA, including Cabernet Sauvignon, Sauvignon blanc, Chardonnay, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Northern_Sonoma_AVA"
+      }
+    ],
     "id": "us-northern-sonoma",
     "latitude": 38.58352524648284,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.70",
@@ -330070,7 +330342,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Vineyards are widely distributed and consist of both French Hybrid grapes and Vinifera grapes, especially Chardonnay, White Riesling, and Pinot Noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Southeastern_New_England_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Vineyards are widely distributed and consist of both French Hybrid grapes and Vinifera grapes, especially Chardonnay, White Riesling, and Pinot Noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Southeastern_New_England_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Vineyards are widely distributed and consist of both French Hybrid grapes and Vinifera grapes, especially Chardonnay, White Riesling, and Pinot Noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Southeastern_New_England_AVA"
+      }
+    ],
     "id": "us-southeastern-new-england",
     "latitude": 41.7217260846879,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.72",
@@ -330179,7 +330467,33 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "The first Martha's Vineyard wines, Chardonnay and White Riesling, were produced in 1974 and sold in 1975.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Martha%27s_Vineyard_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The first Martha's Vineyard wines, Chardonnay and White Riesling, were produced in 1974 and sold in 1975.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Martha%27s_Vineyard_AVA"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "All grapes grown commercially were Vinifera varieties, primarily Chardonnay, White Riesling, Gewurztraminer, Cabernet, Pinot Noir, and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Martha%27s_Vineyard_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "All grapes grown commercially were Vinifera varieties, primarily Chardonnay, White Riesling, Gewurztraminer, Cabernet, Pinot Noir, and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Martha%27s_Vineyard_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "All grapes grown commercially were Vinifera varieties, primarily Chardonnay, White Riesling, Gewurztraminer, Cabernet, Pinot Noir, and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Martha%27s_Vineyard_AVA"
+      }
+    ],
     "id": "us-martha-s-vineyard",
     "latitude": 41.38872074547523,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.73",
@@ -330291,7 +330605,48 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Grapes grown here include Cabernet Sauvignon, Merlot, Chardonnay, Riesling, Syrah, Pinot Gris, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Grapes grown here include Cabernet Sauvignon, Merlot, Chardonnay, Riesling, Syrah, Pinot Gris, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Grapes grown here include Cabernet Sauvignon, Merlot, Chardonnay, Riesling, Syrah, Pinot Gris, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Grapes grown here include Cabernet Sauvignon, Merlot, Chardonnay, Riesling, Syrah, Pinot Gris, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Grapes grown here include Cabernet Sauvignon, Merlot, Chardonnay, Riesling, Syrah, Pinot Gris, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Grapes grown here include Cabernet Sauvignon, Merlot, Chardonnay, Riesling, Syrah, Pinot Gris, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Grapes grown here include Cabernet Sauvignon, Merlot, Chardonnay, Riesling, Syrah, Pinot Gris, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      },
+      {
+        "grapeId": "concord",
+        "quote": "Concord grapes and other Vitis labrusca grapes are grown in the region as well.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Valley_AVA"
+      }
+    ],
     "id": "us-columbia-valley",
     "latitude": 46.50478586224343,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.74",
@@ -330789,7 +331144,33 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "The area mostly cultivates hybrid grapes like Baco noir, Marechal Foch, Seyval blanc and Vidal with Vitis vinifera varieties such as Cabernet Franc, Cabernet Sauvignon, Chardonnay, Petit Manseng and Riesling being the most common.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ohio_River_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The area mostly cultivates hybrid grapes like Baco noir, Marechal Foch, Seyval blanc and Vidal with Vitis vinifera varieties such as Cabernet Franc, Cabernet Sauvignon, Chardonnay, Petit Manseng and Riesling being the most common.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ohio_River_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The area mostly cultivates hybrid grapes like Baco noir, Marechal Foch, Seyval blanc and Vidal with Vitis vinifera varieties such as Cabernet Franc, Cabernet Sauvignon, Chardonnay, Petit Manseng and Riesling being the most common.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ohio_River_Valley_AVA"
+      },
+      {
+        "grapeId": "petit-manseng",
+        "quote": "The area mostly cultivates hybrid grapes like Baco noir, Marechal Foch, Seyval blanc and Vidal with Vitis vinifera varieties such as Cabernet Franc, Cabernet Sauvignon, Chardonnay, Petit Manseng and Riesling being the most common.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ohio_River_Valley_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The area mostly cultivates hybrid grapes like Baco noir, Marechal Foch, Seyval blanc and Vidal with Vitis vinifera varieties such as Cabernet Franc, Cabernet Sauvignon, Chardonnay, Petit Manseng and Riesling being the most common.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ohio_River_Valley_AVA"
+      }
+    ],
     "id": "us-ohio-river-valley",
     "latitude": 38.785989058132046,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.78",
@@ -331273,7 +331654,33 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "The proximity to the nearby Eel River watershed has created favorable conditions for the production of botrytized wines, particularly Chardonnay, Pinot Noir, Riesling, Sauvignon Blanc, and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Potter_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The proximity to the nearby Eel River watershed has created favorable conditions for the production of botrytized wines, particularly Chardonnay, Pinot Noir, Riesling, Sauvignon Blanc, and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Potter_Valley_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The proximity to the nearby Eel River watershed has created favorable conditions for the production of botrytized wines, particularly Chardonnay, Pinot Noir, Riesling, Sauvignon Blanc, and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Potter_Valley_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The proximity to the nearby Eel River watershed has created favorable conditions for the production of botrytized wines, particularly Chardonnay, Pinot Noir, Riesling, Sauvignon Blanc, and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Potter_Valley_AVA"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "The proximity to the nearby Eel River watershed has created favorable conditions for the production of botrytized wines, particularly Chardonnay, Pinot Noir, Riesling, Sauvignon Blanc, and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Potter_Valley_AVA"
+      }
+    ],
     "id": "us-potter-valley",
     "latitude": 39.301957956553345,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.82",
@@ -331520,7 +331927,18 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "At the outset, the viticultural area encompassed 609,673 acres (953 sq mi) with approximately 18,500 acres (7,487 ha) cultivating wine grapes known for their heritage varietal Zinfandel, Cabernet Sauvignon, and Rhône-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Paso_Robles_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "At the outset, the viticultural area encompassed 609,673 acres (953 sq mi) with approximately 18,500 acres (7,487 ha) cultivating wine grapes known for their heritage varietal Zinfandel, Cabernet Sauvignon, and Rhône-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Paso_Robles_AVA"
+      }
+    ],
     "id": "us-paso-robles",
     "latitude": 35.61705599233606,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.84",
@@ -331751,7 +332169,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The viticultural area is known primarily for its Pinot Noir and sparkling wine production.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Anderson_Valley_AVA"
+      }
+    ],
     "id": "us-anderson-valley",
     "latitude": 39.075015646485035,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.86",
@@ -333232,7 +333656,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "In areas closer to the cold Pacific currents, Pinot Noir, Riesling and  are the predominant varieties, while in the warmer inland valleys further south, Bordeaux varietals are most often grown.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monterey_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "In areas closer to the cold Pacific currents, Pinot Noir, Riesling and  are the predominant varieties, while in the warmer inland valleys further south, Bordeaux varietals are most often grown.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monterey_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Approximately 50 percent of the vines in production are Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Monterey_AVA"
+      }
+    ],
     "id": "us-monterey",
     "latitude": 36.43067567698442,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.98",
@@ -333358,7 +333798,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Clear Lake AVA has one of the coolest climates in California, which has led to success with grape varietals like Sauvignon Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clear_Lake_AVA"
+      }
+    ],
     "id": "us-clear-lake",
     "latitude": 39.01596537631426,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.99",
@@ -333484,7 +333930,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Cabernet Sauvignon, Zinfandel and Syrah are the most important grape varieties planted there.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mesilla_Valley_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Cabernet Sauvignon, Zinfandel and Syrah are the most important grape varieties planted there.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mesilla_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Cabernet Sauvignon, Zinfandel and Syrah are the most important grape varieties planted there.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mesilla_Valley_AVA"
+      }
+    ],
     "id": "us-mesilla-valley",
     "latitude": 32.12192288082486,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.100",
@@ -333719,7 +334181,38 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The mountain area is known for its diverse micro-climates that occurs within the crevices and folds of the terrain on exposed hillsides and shaded drainages favoring production of a wide range of varieties including Cabernet Sauvignon, Chardonnay, Pinot Noir, Sauvignon Blanc, Sémillon, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sonoma_Mountain_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The mountain area is known for its diverse micro-climates that occurs within the crevices and folds of the terrain on exposed hillsides and shaded drainages favoring production of a wide range of varieties including Cabernet Sauvignon, Chardonnay, Pinot Noir, Sauvignon Blanc, Sémillon, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sonoma_Mountain_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The mountain area is known for its diverse micro-climates that occurs within the crevices and folds of the terrain on exposed hillsides and shaded drainages favoring production of a wide range of varieties including Cabernet Sauvignon, Chardonnay, Pinot Noir, Sauvignon Blanc, Sémillon, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sonoma_Mountain_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The mountain area is known for its diverse micro-climates that occurs within the crevices and folds of the terrain on exposed hillsides and shaded drainages favoring production of a wide range of varieties including Cabernet Sauvignon, Chardonnay, Pinot Noir, Sauvignon Blanc, Sémillon, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sonoma_Mountain_AVA"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "The mountain area is known for its diverse micro-climates that occurs within the crevices and folds of the terrain on exposed hillsides and shaded drainages favoring production of a wide range of varieties including Cabernet Sauvignon, Chardonnay, Pinot Noir, Sauvignon Blanc, Sémillon, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sonoma_Mountain_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "The mountain area is known for its diverse micro-climates that occurs within the crevices and folds of the terrain on exposed hillsides and shaded drainages favoring production of a wide range of varieties including Cabernet Sauvignon, Chardonnay, Pinot Noir, Sauvignon Blanc, Sémillon, and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sonoma_Mountain_AVA"
+      }
+    ],
     "id": "us-sonoma-mountain",
     "latitude": 38.35739062065409,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.102",
@@ -334178,7 +334671,38 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Cabernet Sauvignon is the primary wine grape grown with Rhône varietals Syrah, Grenache, Semillon, Viognier and Roussanne also flourishing.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Yuba_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Cabernet Sauvignon is the primary wine grape grown with Rhône varietals Syrah, Grenache, Semillon, Viognier and Roussanne also flourishing.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Yuba_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "Cabernet Sauvignon is the primary wine grape grown with Rhône varietals Syrah, Grenache, Semillon, Viognier and Roussanne also flourishing.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Yuba_AVA"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "Cabernet Sauvignon is the primary wine grape grown with Rhône varietals Syrah, Grenache, Semillon, Viognier and Roussanne also flourishing.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Yuba_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Cabernet Sauvignon is the primary wine grape grown with Rhône varietals Syrah, Grenache, Semillon, Viognier and Roussanne also flourishing.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Yuba_AVA"
+      },
+      {
+        "grapeId": "roussanne",
+        "quote": "Cabernet Sauvignon is the primary wine grape grown with Rhône varietals Syrah, Grenache, Semillon, Viognier and Roussanne also flourishing.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Yuba_AVA"
+      }
+    ],
     "id": "us-north-yuba",
     "latitude": 39.36255046452458,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.106",
@@ -335005,7 +335529,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "merlot",
+        "quote": "The most planted grape varieties in the region are Merlot, Chardonnay, and Cabernet Franc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Fork_of_Long_Island_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The most planted grape varieties in the region are Merlot, Chardonnay, and Cabernet Franc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Fork_of_Long_Island_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "The most planted grape varieties in the region are Merlot, Chardonnay, and Cabernet Franc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/North_Fork_of_Long_Island_AVA"
+      }
+    ],
     "id": "us-north-fork-of-long-island",
     "latitude": 40.986841964747924,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.113",
@@ -335136,7 +335676,43 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "riesling",
+        "quote": "Grape varietals suitable to cool climates, such as Riesling, Chardonnay, Gewürztraminer, Pinot gris, Pinot noir, Cabernet Franc, and Merlot do best in the Old Mission Peninsula AVA.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Old_Mission_Peninsula_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Grape varietals suitable to cool climates, such as Riesling, Chardonnay, Gewürztraminer, Pinot gris, Pinot noir, Cabernet Franc, and Merlot do best in the Old Mission Peninsula AVA.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Old_Mission_Peninsula_AVA"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "Grape varietals suitable to cool climates, such as Riesling, Chardonnay, Gewürztraminer, Pinot gris, Pinot noir, Cabernet Franc, and Merlot do best in the Old Mission Peninsula AVA.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Old_Mission_Peninsula_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Grape varietals suitable to cool climates, such as Riesling, Chardonnay, Gewürztraminer, Pinot gris, Pinot noir, Cabernet Franc, and Merlot do best in the Old Mission Peninsula AVA.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Old_Mission_Peninsula_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Grape varietals suitable to cool climates, such as Riesling, Chardonnay, Gewürztraminer, Pinot gris, Pinot noir, Cabernet Franc, and Merlot do best in the Old Mission Peninsula AVA.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Old_Mission_Peninsula_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Grape varietals suitable to cool climates, such as Riesling, Chardonnay, Gewürztraminer, Pinot gris, Pinot noir, Cabernet Franc, and Merlot do best in the Old Mission Peninsula AVA.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Old_Mission_Peninsula_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Grape varietals suitable to cool climates, such as Riesling, Chardonnay, Gewürztraminer, Pinot gris, Pinot noir, Cabernet Franc, and Merlot do best in the Old Mission Peninsula AVA.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Old_Mission_Peninsula_AVA"
+      }
+    ],
     "id": "us-old-mission-peninsula",
     "latitude": 44.8907931057477,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.114",
@@ -336178,7 +336754,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "For example, Cabernet Sauvignon grown on the mountain commonly shows \"briary\" flavors, moderate to bold tannins and herbal, floral aromatics.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Veeder_AVA"
+      }
+    ],
     "id": "us-mt-veeder",
     "latitude": 38.357361119547946,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.123",
@@ -336305,7 +336887,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The proximity to San Pablo Bay results in a cooler climate, making Wild Horse Valley attractive for the cultivation of grapes like Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wild_Horse_Valley_AVA"
+      }
+    ],
     "id": "us-wild-horse-valley",
     "latitude": 38.29277812598534,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.124",
@@ -336811,7 +337399,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "riesling",
+        "quote": "The most commercially important grape variety in the region is Riesling, although a wide variety of vitis vinifera and French hybrid grapes are grown.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Seneca_Lake_AVA"
+      }
+    ],
     "id": "us-seneca-lake",
     "latitude": 42.656801370434366,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.128",
@@ -336937,7 +337531,33 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "The valley is divided by a fog line produced by the cool maritime layer where Zinfandel, Petite Sirah and Rhône varietals are grown on the higher elevations near Lopez Lake and the cooler mid-valley vineyards being home to Chardonnay and Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arroyo_Grande_Valley_AVA"
+      },
+      {
+        "grapeId": "durif",
+        "quote": "The valley is divided by a fog line produced by the cool maritime layer where Zinfandel, Petite Sirah and Rhône varietals are grown on the higher elevations near Lopez Lake and the cooler mid-valley vineyards being home to Chardonnay and Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arroyo_Grande_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The valley is divided by a fog line produced by the cool maritime layer where Zinfandel, Petite Sirah and Rhône varietals are grown on the higher elevations near Lopez Lake and the cooler mid-valley vineyards being home to Chardonnay and Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arroyo_Grande_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The valley is divided by a fog line produced by the cool maritime layer where Zinfandel, Petite Sirah and Rhône varietals are grown on the higher elevations near Lopez Lake and the cooler mid-valley vineyards being home to Chardonnay and Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arroyo_Grande_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Within the viticultural area are four vineyards where 1,250 acres (506 ha) cultivate wine grapes and eleven bonded wineries consider Pinot Noir, Chardonnay and Syrah as the primary grapes.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Arroyo_Grande_Valley_AVA"
+      }
+    ],
     "id": "us-arroyo-grande-valley",
     "latitude": 35.148150152138726,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.129",
@@ -337416,7 +338036,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Rutherford, the seventh sub-appellation designated within Napa Valley AVA, is known for its unique terroir particularly with its Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Rutherford_AVA"
+      }
+    ],
     "id": "us-rutherford",
     "latitude": 38.468163581584285,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.133",
@@ -337669,7 +338295,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "As of 2025, three wineries in the AVA, Bloxom Vineyard, Barrel Oak Winery and Chatham Vineyard on Church Creek, produces Cabernet Franc, Chardonnay, Merlot and Seyval Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Virginia%27s_Eastern_Shore_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "As of 2025, three wineries in the AVA, Bloxom Vineyard, Barrel Oak Winery and Chatham Vineyard on Church Creek, produces Cabernet Franc, Chardonnay, Merlot and Seyval Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Virginia%27s_Eastern_Shore_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "As of 2025, three wineries in the AVA, Bloxom Vineyard, Barrel Oak Winery and Chatham Vineyard on Church Creek, produces Cabernet Franc, Chardonnay, Merlot and Seyval Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Virginia%27s_Eastern_Shore_AVA"
+      }
+    ],
     "id": "us-virginia-s-eastern-shore",
     "latitude": 37.6419312985631,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.135",
@@ -338044,7 +338686,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "At the outset, the viticultural area encompassed about 1,440 acres (2 sq mi) of which 125 acres (51 ha) were cultivating Chardonnay grapes.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Benmore_Valley_AVA"
+      }
+    ],
     "id": "us-benmore-valley",
     "latitude": 39.0100414483844,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.138",
@@ -338161,7 +338809,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Some of the vineyards lie as high as 1,200 feet (366 m) above sea level, with about half of them planted to the Pinot noir grape.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Lucia_Highlands_AVA"
+      }
+    ],
     "id": "us-santa-lucia-highlands",
     "latitude": 36.41096523044586,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.139",
@@ -338533,7 +339187,53 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "barbera",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "At the outset, its vineyards cultivated about 650 acres (260 ha) with Barbera, Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Merlot, Pinot Noir, Sauvignon Blanc and Syrah are the leading grape varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bennett_Valley_AVA"
+      }
+    ],
     "id": "us-bennett-valley",
     "latitude": 38.39007974238099,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.142",
@@ -339757,7 +340457,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "merlot",
+        "quote": "Varietials include Cabernet Savignon, Merlot, Cabernet Franc, Chardonnay and Petite Verdot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Malibu-Newton_Canyon_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Varietials include Cabernet Savignon, Merlot, Cabernet Franc, Chardonnay and Petite Verdot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Malibu-Newton_Canyon_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Varietials include Cabernet Savignon, Merlot, Cabernet Franc, Chardonnay and Petite Verdot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Malibu-Newton_Canyon_AVA"
+      }
+    ],
     "id": "us-malibu-newton-canyon",
     "latitude": 34.08141485444861,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.152",
@@ -340001,7 +340717,28 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The most planted grapes in Chiles Valley are Cabernet Sauvignon, Zinfandel, Chardonnay, and Sauvignon Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Chiles_Valley_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "The most planted grapes in Chiles Valley are Cabernet Sauvignon, Zinfandel, Chardonnay, and Sauvignon Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Chiles_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The most planted grapes in Chiles Valley are Cabernet Sauvignon, Zinfandel, Chardonnay, and Sauvignon Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Chiles_Valley_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The most planted grapes in Chiles Valley are Cabernet Sauvignon, Zinfandel, Chardonnay, and Sauvignon Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Chiles_Valley_AVA"
+      }
+    ],
     "id": "us-chiles-valley",
     "latitude": 38.545323545281356,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.154",
@@ -340481,7 +341218,58 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "Italian immigrants in the late 1800s planted on Greenwood Ridge and surrounding areas, preferring zinfandel which remains a popular varietal in the AVA, although Pinot noir has become the most common grape in the region since the 1990s.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Italian immigrants in the late 1800s planted on Greenwood Ridge and surrounding areas, preferring zinfandel which remains a popular varietal in the AVA, although Pinot noir has become the most common grape in the region since the 1990s.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "durif",
+        "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      },
+      {
+        "grapeId": "gruner-veltliner",
+        "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      }
+    ],
     "id": "us-mendocino-ridge",
     "latitude": 38.98017547772548,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.158",
@@ -340731,7 +341519,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "It is particularly known for its very tannic Cabernet Sauvignon varietal wines that have the capability of aging well in the bottle.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yountville_AVA"
+      }
+    ],
     "id": "us-yountville",
     "latitude": 38.396643361414085,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.160",
@@ -340858,7 +341652,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "merlot",
+        "quote": "The district is planted largely to Merlot, Chardonnay and Cabernet Sauvignon,  in that order.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Oak_Knoll_District_of_Napa_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The district is planted largely to Merlot, Chardonnay and Cabernet Sauvignon,  in that order.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Oak_Knoll_District_of_Napa_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The district is planted largely to Merlot, Chardonnay and Cabernet Sauvignon,  in that order.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Oak_Knoll_District_of_Napa_Valley_AVA"
+      }
+    ],
     "id": "us-oak-knoll-district-of-napa-valley",
     "latitude": 38.34726942467498,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.161",
@@ -341212,7 +342022,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "90% of the 1,300-acre (2.0 sq mi) viticultural area is planted with Chardonnay grapes.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/River_Junction_AVA"
+      }
+    ],
     "id": "us-river-junction",
     "latitude": 37.67610130738706,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.164",
@@ -341335,7 +342151,53 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "tempranillo",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      },
+      {
+        "grapeId": "tannat",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      },
+      {
+        "grapeId": "vermentino",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Grapes that thrive here include Tempranillo, Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah, Tannat, Vermentino, Chardonnay and Zinfandel.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Applegate_Valley_AVA"
+      }
+    ],
     "id": "us-applegate-valley",
     "latitude": 42.249590331505054,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.165",
@@ -341721,7 +342583,63 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "In its cultivated 350 acres (140 ha), the most popular red wine grape variety is Zinfandel, although varieties popular in Rhône Valley and Italy, such as Syrah, Grenache,  Petite Sirah, Mourvedre, Sangiovese, Tempranillo and Barbera are the common varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "In its cultivated 350 acres (140 ha), the most popular red wine grape variety is Zinfandel, although varieties popular in Rhône Valley and Italy, such as Syrah, Grenache,  Petite Sirah, Mourvedre, Sangiovese, Tempranillo and Barbera are the common varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "In its cultivated 350 acres (140 ha), the most popular red wine grape variety is Zinfandel, although varieties popular in Rhône Valley and Italy, such as Syrah, Grenache,  Petite Sirah, Mourvedre, Sangiovese, Tempranillo and Barbera are the common varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "durif",
+        "quote": "In its cultivated 350 acres (140 ha), the most popular red wine grape variety is Zinfandel, although varieties popular in Rhône Valley and Italy, such as Syrah, Grenache,  Petite Sirah, Mourvedre, Sangiovese, Tempranillo and Barbera are the common varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "mourvedre",
+        "quote": "In its cultivated 350 acres (140 ha), the most popular red wine grape variety is Zinfandel, although varieties popular in Rhône Valley and Italy, such as Syrah, Grenache,  Petite Sirah, Mourvedre, Sangiovese, Tempranillo and Barbera are the common varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "In its cultivated 350 acres (140 ha), the most popular red wine grape variety is Zinfandel, although varieties popular in Rhône Valley and Italy, such as Syrah, Grenache,  Petite Sirah, Mourvedre, Sangiovese, Tempranillo and Barbera are the common varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "In its cultivated 350 acres (140 ha), the most popular red wine grape variety is Zinfandel, although varieties popular in Rhône Valley and Italy, such as Syrah, Grenache,  Petite Sirah, Mourvedre, Sangiovese, Tempranillo and Barbera are the common varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "barbera",
+        "quote": "In its cultivated 350 acres (140 ha), the most popular red wine grape variety is Zinfandel, although varieties popular in Rhône Valley and Italy, such as Syrah, Grenache,  Petite Sirah, Mourvedre, Sangiovese, Tempranillo and Barbera are the common varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "White wine is less popular in Fair Play, but significant plantings of Viognier and Grenache Blanc, along with Sauvignon Blanc are most common.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "grenache-blanc",
+        "quote": "White wine is less popular in Fair Play, but significant plantings of Viognier and Grenache Blanc, along with Sauvignon Blanc are most common.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "White wine is less popular in Fair Play, but significant plantings of Viognier and Grenache Blanc, along with Sauvignon Blanc are most common.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fair_Play_AVA"
+      }
+    ],
     "id": "us-fair-play",
     "latitude": 38.597250876555634,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.168",
@@ -342215,7 +343133,43 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "riesling",
+        "quote": "Consequently, the valley features many of the central European grape varieties quite successfully, such as Riesling, Gewurztraminer, Chardonnay, Pinot Gris and other lesser-known whites as well as red varieties Cabernet Franc, Pinot Noir, Merlot, and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/West_Elks_AVA"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "Consequently, the valley features many of the central European grape varieties quite successfully, such as Riesling, Gewurztraminer, Chardonnay, Pinot Gris and other lesser-known whites as well as red varieties Cabernet Franc, Pinot Noir, Merlot, and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/West_Elks_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Consequently, the valley features many of the central European grape varieties quite successfully, such as Riesling, Gewurztraminer, Chardonnay, Pinot Gris and other lesser-known whites as well as red varieties Cabernet Franc, Pinot Noir, Merlot, and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/West_Elks_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Consequently, the valley features many of the central European grape varieties quite successfully, such as Riesling, Gewurztraminer, Chardonnay, Pinot Gris and other lesser-known whites as well as red varieties Cabernet Franc, Pinot Noir, Merlot, and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/West_Elks_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Consequently, the valley features many of the central European grape varieties quite successfully, such as Riesling, Gewurztraminer, Chardonnay, Pinot Gris and other lesser-known whites as well as red varieties Cabernet Franc, Pinot Noir, Merlot, and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/West_Elks_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Consequently, the valley features many of the central European grape varieties quite successfully, such as Riesling, Gewurztraminer, Chardonnay, Pinot Gris and other lesser-known whites as well as red varieties Cabernet Franc, Pinot Noir, Merlot, and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/West_Elks_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Consequently, the valley features many of the central European grape varieties quite successfully, such as Riesling, Gewurztraminer, Chardonnay, Pinot Gris and other lesser-known whites as well as red varieties Cabernet Franc, Pinot Noir, Merlot, and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/West_Elks_AVA"
+      }
+    ],
     "id": "us-west-elks",
     "latitude": 38.83152527171807,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.172",
@@ -342930,7 +343884,53 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "syrah",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "The region has about 90+ vineyards, growing a wide variety of grapes, including Syrah, Pinot noir, Chardonnay, Gewürztraminer, Zinfandel, Cabernet Sauvignon, Pinot gris, Riesling, and Sangiovese.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Gorge_AVA"
+      }
+    ],
     "id": "us-columbia-gorge",
     "latitude": 45.67438423389971,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.178",
@@ -343171,7 +344171,18 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Dundee Hills has been a grape growing region since 1966, when David Lett established Eyrie Vineyards, planting Pinot Noir and Pinot Gris.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Dundee_Hills_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Dundee Hills has been a grape growing region since 1966, when David Lett established Eyrie Vineyards, planting Pinot Noir and Pinot Gris.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Dundee_Hills_AVA"
+      }
+    ],
     "id": "us-dundee-hills",
     "latitude": 45.28118121972644,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.180",
@@ -343423,7 +344434,13 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The appellation is known for its exceptional Pinot Noir wine, with 90% of its vineyards planted with that varietal.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ribbon_Ridge_AVA"
+      }
+    ],
     "id": "us-ribbon-ridge",
     "latitude": 45.3566143046732,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.182",
@@ -343555,7 +344572,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "As of 2025, the appellation contains 127 vineyards cultivating 2,844 acres (1,151 ha) of primarily Pinot noir, Pinot gris, and Chardonnay sourcing 63 area wineries.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yamhill-Carlton_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "As of 2025, the appellation contains 127 vineyards cultivating 2,844 acres (1,151 ha) of primarily Pinot noir, Pinot gris, and Chardonnay sourcing 63 area wineries.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yamhill-Carlton_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "As of 2025, the appellation contains 127 vineyards cultivating 2,844 acres (1,151 ha) of primarily Pinot noir, Pinot gris, and Chardonnay sourcing 63 area wineries.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yamhill-Carlton_AVA"
+      }
+    ],
     "id": "us-yamhill-carlton",
     "latitude": 45.36094574491083,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.183",
@@ -343900,7 +344933,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "merlot",
+        "quote": "Wines range from traditional grape varieties such as Merlot, Cabernet Franc, Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Niagara_Escarpment_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Wines range from traditional grape varieties such as Merlot, Cabernet Franc, Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Niagara_Escarpment_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Wines range from traditional grape varieties such as Merlot, Cabernet Franc, Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Niagara_Escarpment_AVA"
+      }
+    ],
     "id": "us-niagara-escarpment",
     "latitude": 43.194580523263895,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.186",
@@ -344634,7 +345683,38 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "merlot",
+        "quote": "The region cultivates Merlot, Syrah, Cabernet Sauvignon, Riesling, Chardonnay and Chenin Blanc, but is primarily known for its Merlot and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wahluke_Slope_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The region cultivates Merlot, Syrah, Cabernet Sauvignon, Riesling, Chardonnay and Chenin Blanc, but is primarily known for its Merlot and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wahluke_Slope_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The region cultivates Merlot, Syrah, Cabernet Sauvignon, Riesling, Chardonnay and Chenin Blanc, but is primarily known for its Merlot and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wahluke_Slope_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The region cultivates Merlot, Syrah, Cabernet Sauvignon, Riesling, Chardonnay and Chenin Blanc, but is primarily known for its Merlot and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wahluke_Slope_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The region cultivates Merlot, Syrah, Cabernet Sauvignon, Riesling, Chardonnay and Chenin Blanc, but is primarily known for its Merlot and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wahluke_Slope_AVA"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "The region cultivates Merlot, Syrah, Cabernet Sauvignon, Riesling, Chardonnay and Chenin Blanc, but is primarily known for its Merlot and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wahluke_Slope_AVA"
+      }
+    ],
     "id": "us-wahluke-slope",
     "latitude": 46.72374422356585,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.192",
@@ -344883,7 +345963,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "durif",
+        "quote": "Taken together, these elements provide an excellent setting for growing full-bodied Rhône and Bordeaux varietals from Cabernet Sauvingon and Petite Sirah to Syrah and Marsanne.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Antonio_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Taken together, these elements provide an excellent setting for growing full-bodied Rhône and Bordeaux varietals from Cabernet Sauvingon and Petite Sirah to Syrah and Marsanne.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Antonio_Valley_AVA"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "Taken together, these elements provide an excellent setting for growing full-bodied Rhône and Bordeaux varietals from Cabernet Sauvingon and Petite Sirah to Syrah and Marsanne.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Antonio_Valley_AVA"
+      }
+    ],
     "id": "us-san-antonio-valley",
     "latitude": 35.93886278986578,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.194",
@@ -345009,7 +346105,103 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "verdelho",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "vermentino",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "albarino",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "grenache-blanc",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "moscato-giallo",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "torrontes",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "tannat",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "touriga-nacional",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "touriga-francesa",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "tinta-cao",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "souzao",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      },
+      {
+        "grapeId": "tinta-amarela",
+        "quote": "Initial plantings were standard red wine varieties of Cabernet Sauvignon, Merlot, Malbec, Syrah, Cabernet Franc and Zinfandel, then later diversified to include alternative varieties as Verdelho, Vermentino, Albariño/Alvarinho, Grenache blanc, Moscato Giallo, Torrontés, Tannat, and black skinned Port grapes such as Touriga Nacional, Touriga Francesa, Tinta Roriz/Tempranillo, Tinta Cão, Souzão, Alvarelhão and Tinta Amarela.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Alta_Mesa_AVA"
+      }
+    ],
     "id": "us-alta-mesa",
     "latitude": 38.34750229524273,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.195",
@@ -345256,7 +346448,38 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "tempranillo",
+        "quote": "The warm climate and poor-quality soils are well suited to the production of wines made from Spanish grape varieties such as Tempranillo, Grenache and Albariño.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clements_Hills_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "The warm climate and poor-quality soils are well suited to the production of wines made from Spanish grape varieties such as Tempranillo, Grenache and Albariño.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clements_Hills_AVA"
+      },
+      {
+        "grapeId": "albarino",
+        "quote": "The warm climate and poor-quality soils are well suited to the production of wines made from Spanish grape varieties such as Tempranillo, Grenache and Albariño.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clements_Hills_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "While these Spanish varieties thrive, there are also plantings of Zinfandel, Syrah and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clements_Hills_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "While these Spanish varieties thrive, there are also plantings of Zinfandel, Syrah and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clements_Hills_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "While these Spanish varieties thrive, there are also plantings of Zinfandel, Syrah and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clements_Hills_AVA"
+      }
+    ],
     "id": "us-clements-hills",
     "latitude": 38.143982536820424,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.197",
@@ -345382,7 +346605,43 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "The cooler Delta influences are beneficial to white wine varieties, Chardonnay, Sauvignon Blanc, Pinot Grigio and Vermentino, as well as reds, Cabernet Sauvignon, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cosumnes_River_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The cooler Delta influences are beneficial to white wine varieties, Chardonnay, Sauvignon Blanc, Pinot Grigio and Vermentino, as well as reds, Cabernet Sauvignon, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cosumnes_River_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The cooler Delta influences are beneficial to white wine varieties, Chardonnay, Sauvignon Blanc, Pinot Grigio and Vermentino, as well as reds, Cabernet Sauvignon, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cosumnes_River_AVA"
+      },
+      {
+        "grapeId": "vermentino",
+        "quote": "The cooler Delta influences are beneficial to white wine varieties, Chardonnay, Sauvignon Blanc, Pinot Grigio and Vermentino, as well as reds, Cabernet Sauvignon, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cosumnes_River_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The cooler Delta influences are beneficial to white wine varieties, Chardonnay, Sauvignon Blanc, Pinot Grigio and Vermentino, as well as reds, Cabernet Sauvignon, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cosumnes_River_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The cooler Delta influences are beneficial to white wine varieties, Chardonnay, Sauvignon Blanc, Pinot Grigio and Vermentino, as well as reds, Cabernet Sauvignon, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cosumnes_River_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The cooler Delta influences are beneficial to white wine varieties, Chardonnay, Sauvignon Blanc, Pinot Grigio and Vermentino, as well as reds, Cabernet Sauvignon, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cosumnes_River_AVA"
+      }
+    ],
     "id": "us-cosumnes-river",
     "latitude": 38.32494180671665,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.198",
@@ -345634,7 +346893,28 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "Its own rooted, head-trained Zinfandel, Carignan, and Alicante Bouschet, including Lodi's oldest planting, the Bechthold Vineyard Cinsaut, planted in 1886 as \"Black Malvoisie\", alongside a larger proportion of recent, trellised, continuously replanted vineyards.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mokelumne_River_AVA"
+      },
+      {
+        "grapeId": "carignan",
+        "quote": "Its own rooted, head-trained Zinfandel, Carignan, and Alicante Bouschet, including Lodi's oldest planting, the Bechthold Vineyard Cinsaut, planted in 1886 as \"Black Malvoisie\", alongside a larger proportion of recent, trellised, continuously replanted vineyards.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mokelumne_River_AVA"
+      },
+      {
+        "grapeId": "alicante-bouschet",
+        "quote": "Its own rooted, head-trained Zinfandel, Carignan, and Alicante Bouschet, including Lodi's oldest planting, the Bechthold Vineyard Cinsaut, planted in 1886 as \"Black Malvoisie\", alongside a larger proportion of recent, trellised, continuously replanted vineyards.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mokelumne_River_AVA"
+      },
+      {
+        "grapeId": "cinsaut",
+        "quote": "Its own rooted, head-trained Zinfandel, Carignan, and Alicante Bouschet, including Lodi's oldest planting, the Bechthold Vineyard Cinsaut, planted in 1886 as \"Black Malvoisie\", alongside a larger proportion of recent, trellised, continuously replanted vineyards.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mokelumne_River_AVA"
+      }
+    ],
     "id": "us-mokelumne-river",
     "latitude": 38.13119476518755,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.200",
@@ -345760,7 +347040,63 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "petit-verdot",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "durif",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "mourvedre",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "tannat",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "On the area's 7,000 acres (2,800 ha) of vineyards are grown standard varietals such as  Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot, Petite Sirah, Primitivo/Zinfandel, Grenache, Mourvèdre, Tannat, Teroldego, although there are extensive plantings of Chardonnay and Sauvignon Blanc, as well as Muscat varieties.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sloughhouse_AVA"
+      }
+    ],
     "id": "us-sloughhouse",
     "latitude": 38.45622885353757,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.201",
@@ -346115,7 +347451,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "nero-d-avola",
+        "quote": "The best known vintages are a range of Italian varietals, Nero d'Avola, Montepulciano and Sagrantino, produced by Jacuzzi Family Vineyards who are based in Sonoma Valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tracy_Hills_AVA"
+      },
+      {
+        "grapeId": "montepulciano",
+        "quote": "The best known vintages are a range of Italian varietals, Nero d'Avola, Montepulciano and Sagrantino, produced by Jacuzzi Family Vineyards who are based in Sonoma Valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tracy_Hills_AVA"
+      },
+      {
+        "grapeId": "sagrantino",
+        "quote": "The best known vintages are a range of Italian varietals, Nero d'Avola, Montepulciano and Sagrantino, produced by Jacuzzi Family Vineyards who are based in Sonoma Valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tracy_Hills_AVA"
+      }
+    ],
     "id": "us-tracy-hills",
     "latitude": 37.6380718783357,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.204",
@@ -348673,7 +350025,33 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "riesling",
+        "quote": "White wine grapes represent the bulk of the grape plantings with White Riesling, Chardonnay, and Pinot Gris along with red varieties used for rosé-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "White wine grapes represent the bulk of the grape plantings with White Riesling, Chardonnay, and Pinot Gris along with red varieties used for rosé-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "White wine grapes represent the bulk of the grape plantings with White Riesling, Chardonnay, and Pinot Gris along with red varieties used for rosé-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The lower elevation is considerably warmer, lending itself to production of Syrah, Merlot and others.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The lower elevation is considerably warmer, lending itself to production of Syrah, Merlot and others.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ancient_Lakes_of_Columbia_Valley"
+      }
+    ],
     "id": "us-ancient-lakes-of-columbia-valley",
     "latitude": 47.13061941351824,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.227",
@@ -349126,7 +350504,18 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "This mountainous region on the very eastern edge of Sonoma County has a historic reputation for producing rich, intensely-flavored wines from Cabernet Sauvignon and Syrah varietals since the 1880s.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Moon_Mountain_District_Sonoma_County"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "This mountainous region on the very eastern edge of Sonoma County has a historic reputation for producing rich, intensely-flavored wines from Cabernet Sauvignon and Syrah varietals since the 1880s.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Moon_Mountain_District_Sonoma_County"
+      }
+    ],
     "id": "us-moon-mountain-district-sonoma-county",
     "latitude": 38.35816084658814,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.231",
@@ -349244,7 +350633,43 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings in the area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
+      }
+    ],
     "id": "us-big-valley-district-lake-county",
     "latitude": 38.999906343818736,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.232",
@@ -349362,7 +350787,43 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
+      }
+    ],
     "id": "us-kelsey-bench-lake-county",
     "latitude": 38.948715491304974,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.233",
@@ -350938,7 +352399,38 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "syrah",
+        "quote": "Syrah has played a pivotal role in the AVA, with Cabernet Sauvignon, Zinfandel, Merlot, Pinot Noir and Chardonnay also featured in its grape inventory.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Syrah has played a pivotal role in the AVA, with Cabernet Sauvignon, Zinfandel, Merlot, Pinot Noir and Chardonnay also featured in its grape inventory.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Syrah has played a pivotal role in the AVA, with Cabernet Sauvignon, Zinfandel, Merlot, Pinot Noir and Chardonnay also featured in its grape inventory.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Syrah has played a pivotal role in the AVA, with Cabernet Sauvignon, Zinfandel, Merlot, Pinot Noir and Chardonnay also featured in its grape inventory.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Syrah has played a pivotal role in the AVA, with Cabernet Sauvignon, Zinfandel, Merlot, Pinot Noir and Chardonnay also featured in its grape inventory.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Syrah has played a pivotal role in the AVA, with Cabernet Sauvignon, Zinfandel, Merlot, Pinot Noir and Chardonnay also featured in its grape inventory.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
+      }
+    ],
     "id": "us-santa-margarita-ranch",
     "latitude": 35.37984620747437,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.247",
@@ -351283,7 +352775,48 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Primary grape varieties grown within Fountaingrove are Cabernet Sauvignon, Chardonnay, Sauvignon Blanc, Merlot, Cabernet Franc, Zinfandel, Syrah, and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Primary grape varieties grown within Fountaingrove are Cabernet Sauvignon, Chardonnay, Sauvignon Blanc, Merlot, Cabernet Franc, Zinfandel, Syrah, and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Primary grape varieties grown within Fountaingrove are Cabernet Sauvignon, Chardonnay, Sauvignon Blanc, Merlot, Cabernet Franc, Zinfandel, Syrah, and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Primary grape varieties grown within Fountaingrove are Cabernet Sauvignon, Chardonnay, Sauvignon Blanc, Merlot, Cabernet Franc, Zinfandel, Syrah, and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Primary grape varieties grown within Fountaingrove are Cabernet Sauvignon, Chardonnay, Sauvignon Blanc, Merlot, Cabernet Franc, Zinfandel, Syrah, and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Primary grape varieties grown within Fountaingrove are Cabernet Sauvignon, Chardonnay, Sauvignon Blanc, Merlot, Cabernet Franc, Zinfandel, Syrah, and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Primary grape varieties grown within Fountaingrove are Cabernet Sauvignon, Chardonnay, Sauvignon Blanc, Merlot, Cabernet Franc, Zinfandel, Syrah, and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Primary grape varieties grown within Fountaingrove are Cabernet Sauvignon, Chardonnay, Sauvignon Blanc, Merlot, Cabernet Franc, Zinfandel, Syrah, and Viognier.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Fountaingrove_District_AVA"
+      }
+    ],
     "id": "us-fountaingrove-district",
     "latitude": 38.51029577094508,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.250",
@@ -351496,7 +353029,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "The cool climate and relatively short growing season are suitable for growing early to mid-season varietals such as Chardonnay, Pinot Gris and Riesling.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Eagle_Foothills_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The cool climate and relatively short growing season are suitable for growing early to mid-season varietals such as Chardonnay, Pinot Gris and Riesling.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Eagle_Foothills_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The cool climate and relatively short growing season are suitable for growing early to mid-season varietals such as Chardonnay, Pinot Gris and Riesling.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Eagle_Foothills_AVA"
+      }
+    ],
     "id": "us-eagle-foothills",
     "latitude": 43.78096056603435,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.252",
@@ -351613,7 +353162,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The grapes are principally Sauvignon Blanc, Cabernet Franc, Cabernet Sauvignon, and Rhône varietals take prominence, although the AVA also includes Spanish and Italian varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Los_Olivos_District_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "The grapes are principally Sauvignon Blanc, Cabernet Franc, Cabernet Sauvignon, and Rhône varietals take prominence, although the AVA also includes Spanish and Italian varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Los_Olivos_District_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The grapes are principally Sauvignon Blanc, Cabernet Franc, Cabernet Sauvignon, and Rhône varietals take prominence, although the AVA also includes Spanish and Italian varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Los_Olivos_District_AVA"
+      }
+    ],
     "id": "us-los-olivos-district",
     "latitude": 34.62482213435057,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.253",
@@ -352503,7 +354068,23 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Around 75 percent of plantings are Pinot Noir, with Chardonnay at 13 percent, and Syrah 12 percent.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Petaluma_Gap_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Around 75 percent of plantings are Pinot Noir, with Chardonnay at 13 percent, and Syrah 12 percent.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Petaluma_Gap_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Around 75 percent of plantings are Pinot Noir, with Chardonnay at 13 percent, and Syrah 12 percent.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Petaluma_Gap_AVA"
+      }
+    ],
     "id": "us-petaluma-gap",
     "latitude": 38.247580454589944,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.261",
@@ -354315,7 +355896,28 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The primary varietals produced are Cabernet Sauvignon, Chardonnay, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goose_Gap_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The primary varietals produced are Cabernet Sauvignon, Chardonnay, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goose_Gap_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The primary varietals produced are Cabernet Sauvignon, Chardonnay, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goose_Gap_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The primary varietals produced are Cabernet Sauvignon, Chardonnay, Merlot and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goose_Gap_AVA"
+      }
+    ],
     "id": "us-goose-gap",
     "latitude": 46.24307605670027,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.277",
@@ -354748,7 +356350,18 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "It lies entirely within the Willamette Valley AVA and is primarily known for its Pinot Noir and Pinot gris.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Lower_Long_Tom_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "It lies entirely within the Willamette Valley AVA and is primarily known for its Pinot Noir and Pinot gris.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Lower_Long_Tom_AVA"
+      }
+    ],
     "id": "us-lower-long-tom",
     "latitude": 44.229339329774,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.281",
@@ -354865,7 +356478,33 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Cool weather varietals like Pinot Noir and Chardonnay are commonly grown while lesser varietals Sauvignon Blanc, Gewürztraminer and Gruner Veltliner also thrive.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Obispo_Coast_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Cool weather varietals like Pinot Noir and Chardonnay are commonly grown while lesser varietals Sauvignon Blanc, Gewürztraminer and Gruner Veltliner also thrive.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Obispo_Coast_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Cool weather varietals like Pinot Noir and Chardonnay are commonly grown while lesser varietals Sauvignon Blanc, Gewürztraminer and Gruner Veltliner also thrive.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Obispo_Coast_AVA"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "Cool weather varietals like Pinot Noir and Chardonnay are commonly grown while lesser varietals Sauvignon Blanc, Gewürztraminer and Gruner Veltliner also thrive.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Obispo_Coast_AVA"
+      },
+      {
+        "grapeId": "gruner-veltliner",
+        "quote": "Cool weather varietals like Pinot Noir and Chardonnay are commonly grown while lesser varietals Sauvignon Blanc, Gewürztraminer and Gruner Veltliner also thrive.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Obispo_Coast_AVA"
+      }
+    ],
     "id": "us-san-luis-obispo-coast",
     "latitude": 35.351397709346095,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.282",
@@ -355763,7 +357402,28 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "durif",
+        "quote": "Grape varietals grown in the AVA include Petite Syrah, Tempranillo, Malbec, and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Winters_Highlands_AVA"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "Grape varietals grown in the AVA include Petite Syrah, Tempranillo, Malbec, and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Winters_Highlands_AVA"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Grape varietals grown in the AVA include Petite Syrah, Tempranillo, Malbec, and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Winters_Highlands_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Grape varietals grown in the AVA include Petite Syrah, Tempranillo, Malbec, and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Winters_Highlands_AVA"
+      }
+    ],
     "id": "us-winters-highlands",
     "latitude": 38.530251460590435,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.290",
@@ -355868,7 +357528,33 @@
     "countryCode": "US",
     "eambrosiaId": null,
     "giType": "AVA",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "The most commonly grown grape varietal is Zinfandel, but other varieties grown in Contra Costa include Petite Sirah, Mourvedre, Chardonnay and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Contra_Costa_AVA"
+      },
+      {
+        "grapeId": "durif",
+        "quote": "The most commonly grown grape varietal is Zinfandel, but other varieties grown in Contra Costa include Petite Sirah, Mourvedre, Chardonnay and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Contra_Costa_AVA"
+      },
+      {
+        "grapeId": "mourvedre",
+        "quote": "The most commonly grown grape varietal is Zinfandel, but other varieties grown in Contra Costa include Petite Sirah, Mourvedre, Chardonnay and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Contra_Costa_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The most commonly grown grape varietal is Zinfandel, but other varieties grown in Contra Costa include Petite Sirah, Mourvedre, Chardonnay and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Contra_Costa_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The most commonly grown grape varietal is Zinfandel, but other varieties grown in Contra Costa include Petite Sirah, Mourvedre, Chardonnay and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Contra_Costa_AVA"
+      }
+    ],
     "id": "us-contra-costa",
     "latitude": 37.960742804223564,
     "legalUrl": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.291",
@@ -358976,7 +360662,13 @@
     "countryCode": "NZ",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "While Central Otago is best known for Pinot Noir, many white wine varieties are also popular.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Central_Otago_wine_region"
+      }
+    ],
     "id": "nz-central-otago",
     "latitude": -45.350509,
     "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/central-otago/",
@@ -361963,7 +363655,13 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "Most traditional cultivars can be found in the Breedekloof, with Chenin Blanc being the most planted.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Breedekloof"
+      }
+    ],
     "id": "za-breedekloof",
     "latitude": -33.6666667,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -370890,7 +372588,13 @@
     "countryCode": "CL",
     "eambrosiaId": null,
     "giType": "DO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "syrah",
+        "quote": "These conditions contribute to the production of excellent results for varietals like Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Elqui_Valley_%28wine_region%29"
+      }
+    ],
     "id": "cl-valle-del-elqui",
     "latitude": -29.7731758,
     "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
@@ -377452,7 +379156,18 @@
     "countryCode": "CL",
     "eambrosiaId": null,
     "giType": "DO",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The size of the region permits a range of distinct microclimates suitable for both red and white wines, though it is best known for its powerful Cabernet Sauvignon and aromatic and spicy Carménère wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Maule_Valley"
+      },
+      {
+        "grapeId": "carmenere",
+        "quote": "The size of the region permits a range of distinct microclimates suitable for both red and white wines, though it is best known for its powerful Cabernet Sauvignon and aromatic and spicy Carménère wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Maule_Valley"
+      }
+    ],
     "id": "cl-valle-del-maule",
     "latitude": -35.9671286,
     "legalUrl": "https://www.bcn.cl/leychile/navegar?idNorma=13601",
@@ -388103,7 +389818,23 @@
     "countryCode": "AR",
     "eambrosiaId": null,
     "giType": "IG",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "semillon",
+        "quote": "Traditionally, the varietals grown in this area are Sémillon and Malbec; together with Bonarda and Barbera in a smaller amount.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Uco_Valley"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Traditionally, the varietals grown in this area are Sémillon and Malbec; together with Bonarda and Barbera in a smaller amount.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Uco_Valley"
+      },
+      {
+        "grapeId": "barbera",
+        "quote": "Traditionally, the varietals grown in this area are Sémillon and Malbec; together with Bonarda and Barbera in a smaller amount.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Uco_Valley"
+      }
+    ],
     "id": "ar-valle-de-uco",
     "latitude": -33.6208211,
     "legalUrl": "https://www.argentina.gob.ar/sites/default/files/i.g._y_d.o.c._de_la_republica_argentina_1.pdf",
@@ -398075,7 +399806,13 @@
     "countryCode": "CH",
     "eambrosiaId": null,
     "giType": "AOC",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chasselas",
+        "quote": "The main wine grape variety grown here is the Chasselas.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Lavaux"
+      }
+    ],
     "id": "ch-lavaux",
     "latitude": 46.491944444444,
     "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
@@ -405346,7 +407083,18 @@
     "countryCode": "MD",
     "eambrosiaId": null,
     "giType": "PGI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "It is the best area for Feteasca, Sauvignon, Riesling, Traminer rose and Cabernet production.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Codru_%28wine%29"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "It is the best area for Feteasca, Sauvignon, Riesling, Traminer rose and Cabernet production.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Codru_%28wine%29"
+      }
+    ],
     "id": "md-codru",
     "latitude": 47.2519272,
     "legalUrl": "http://db.agepi.md/GeogrIndications/Details.aspx?id=3211",
@@ -407256,7 +409004,18 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "riesling",
+        "quote": "South Australia has a vast diversity in geography and climate which allows the state to be able to produce a range of grape varieties–from the cool climate Riesling variety in the Clare Valley wine region to the big, full bodied Shiraz wines of the Barossa Valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/South_Australian_wine"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "South Australia has a vast diversity in geography and climate which allows the state to be able to produce a range of grape varieties–from the cool climate Riesling variety in the Clare Valley wine region to the big, full bodied Shiraz wines of the Barossa Valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/South_Australian_wine"
+      }
+    ],
     "id": "au-south-australia",
     "latitude": -30.5343665,
     "legalUrl": "https://www.wineaustralia.com/labelling/register-of-protected-gis-and-other-terms/geographical-indications/south-australia",
@@ -407811,7 +409570,28 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "riesling",
+        "quote": "The main grape varieties grown are Riesling, Cabernet Sauvignon, Shiraz and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The main grape varieties grown are Riesling, Cabernet Sauvignon, Shiraz and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The main grape varieties grown are Riesling, Cabernet Sauvignon, Shiraz and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/High_Eden"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The main grape varieties grown are Riesling, Cabernet Sauvignon, Shiraz and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/High_Eden"
+      }
+    ],
     "id": "au-high-eden",
     "latitude": -34.635288846071106,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-high-eden",
@@ -408352,7 +410132,23 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "syrah",
+        "quote": "As of 2014, the most common plantings within the region within a total planted area of 140 ha (350 acres) was reported as being Shiraz (35.7%) followed by Cabernet Sauvignon (30.7%) and Chardonnay (7.1%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kangaroo_Island_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "As of 2014, the most common plantings within the region within a total planted area of 140 ha (350 acres) was reported as being Shiraz (35.7%) followed by Cabernet Sauvignon (30.7%) and Chardonnay (7.1%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kangaroo_Island_wine_region"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "As of 2014, the most common plantings within the region within a total planted area of 140 ha (350 acres) was reported as being Shiraz (35.7%) followed by Cabernet Sauvignon (30.7%) and Chardonnay (7.1%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Kangaroo_Island_wine_region"
+      }
+    ],
     "id": "au-kangaroo-island",
     "latitude": -35.82783727999031,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-kangaroo-island",
@@ -408938,7 +410734,13 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "It is known for the Cabernet Sauvignon wines produced on its \"terra rossa\" soil.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Coonawarra_wine_region"
+      }
+    ],
     "id": "au-coonawarra",
     "latitude": -37.312512629610296,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-coonawarra",
@@ -409513,7 +411315,33 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The first vines for winegrapes were planted in the late 1960s; however it was in the 1990s, after the test of time, that the excellent soils and elevated sites attracted many winemakers from surrounding areas to then plant most of the region's vineyards to varieties that had become proven performers like Cabernet Sauvignon, Shiraz, Chardonnay and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The first vines for winegrapes were planted in the late 1960s; however it was in the 1990s, after the test of time, that the excellent soils and elevated sites attracted many winemakers from surrounding areas to then plant most of the region's vineyards to varieties that had become proven performers like Cabernet Sauvignon, Shiraz, Chardonnay and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The first vines for winegrapes were planted in the late 1960s; however it was in the 1990s, after the test of time, that the excellent soils and elevated sites attracted many winemakers from surrounding areas to then plant most of the region's vineyards to varieties that had become proven performers like Cabernet Sauvignon, Shiraz, Chardonnay and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The first vines for winegrapes were planted in the late 1960s; however it was in the 1990s, after the test of time, that the excellent soils and elevated sites attracted many winemakers from surrounding areas to then plant most of the region's vineyards to varieties that had become proven performers like Cabernet Sauvignon, Shiraz, Chardonnay and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wrattonbully"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "More recently, the cool climate of the Wrattonbully wine region is attracting more recent experimental plantings of other varieties, like Malbec.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wrattonbully"
+      }
+    ],
     "id": "au-wrattonbully",
     "latitude": -37.011926807217314,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-wrattonbully",
@@ -410541,7 +412369,18 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "As of 2014, the most common plantings in The Peninsulas wine region within a total planted area of 77 ha (190 acres) were reported as being Cabernet Sauvignon (16.9%) and Shiraz (16.9%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/The_Peninsulas_zone_%28wine%29"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "As of 2014, the most common plantings in The Peninsulas wine region within a total planted area of 77 ha (190 acres) were reported as being Cabernet Sauvignon (16.9%) and Shiraz (16.9%).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/The_Peninsulas_zone_%28wine%29"
+      }
+    ],
     "id": "au-the-peninsulas",
     "latitude": -33.84068282431811,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-the-peninsulas",
@@ -410655,7 +412494,28 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "A large variety of grapes are grown in New South Wales, including Cabernet Sauvignon, Chardonnay, Shiraz and Sémillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/New_South_Wales_wine"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "A large variety of grapes are grown in New South Wales, including Cabernet Sauvignon, Chardonnay, Shiraz and Sémillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/New_South_Wales_wine"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "A large variety of grapes are grown in New South Wales, including Cabernet Sauvignon, Chardonnay, Shiraz and Sémillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/New_South_Wales_wine"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "A large variety of grapes are grown in New South Wales, including Cabernet Sauvignon, Chardonnay, Shiraz and Sémillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/New_South_Wales_wine"
+      }
+    ],
     "id": "au-new-south-wales",
     "latitude": -32.1629594,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-new-south-wales",
@@ -412283,7 +414143,28 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "The main styles produced now include Chardonnay, Semillon, Cabernet Sauvignon/Merlot and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hastings_River_wine_region"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "The main styles produced now include Chardonnay, Semillon, Cabernet Sauvignon/Merlot and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hastings_River_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The main styles produced now include Chardonnay, Semillon, Cabernet Sauvignon/Merlot and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hastings_River_wine_region"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The main styles produced now include Chardonnay, Semillon, Cabernet Sauvignon/Merlot and Chambourcin.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hastings_River_wine_region"
+      }
+    ],
     "id": "au-hastings-river",
     "latitude": -31.486797120531126,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-hastings-river",
@@ -413101,7 +414982,63 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The region produces a wide diversity of styles from Prosecco and Pinot Grigio to Fiano, Chardonnay and rosé.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "fiano",
+        "quote": "The region produces a wide diversity of styles from Prosecco and Pinot Grigio to Fiano, Chardonnay and rosé.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The region produces a wide diversity of styles from Prosecco and Pinot Grigio to Fiano, Chardonnay and rosé.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Red wines range from Shiraz and Cabernet Sauvignon to Italian origin grapes including Sangiovese and Nebbiolo.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Red wines range from Shiraz and Cabernet Sauvignon to Italian origin grapes including Sangiovese and Nebbiolo.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "Red wines range from Shiraz and Cabernet Sauvignon to Italian origin grapes including Sangiovese and Nebbiolo.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "nebbiolo",
+        "quote": "Red wines range from Shiraz and Cabernet Sauvignon to Italian origin grapes including Sangiovese and Nebbiolo.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "aleatico",
+        "quote": "Rarer grapes are also planted including Aleatico, Furmint and two reds – Corvina and Rondinella.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "furmint",
+        "quote": "Rarer grapes are also planted including Aleatico, Furmint and two reds – Corvina and Rondinella.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "corvina",
+        "quote": "Rarer grapes are also planted including Aleatico, Furmint and two reds – Corvina and Rondinella.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      },
+      {
+        "grapeId": "rondinella",
+        "quote": "Rarer grapes are also planted including Aleatico, Furmint and two reds – Corvina and Rondinella.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hilltops_wine_region"
+      }
+    ],
     "id": "au-hilltops",
     "latitude": -34.39493065553382,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-hilltops",
@@ -413217,7 +415154,18 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "The dominant white variety is chardonnay and the dominant red variety is pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tumbarumba_wine_region"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The dominant white variety is chardonnay and the dominant red variety is pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tumbarumba_wine_region"
+      }
+    ],
     "id": "au-tumbarumba",
     "latitude": -35.812734884201255,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-tumbarumba",
@@ -414376,7 +416324,38 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "riesling",
+        "quote": "This region is known for Riesling, Chardonnay, Cabernet Sauvignon, Pinot Noir, Shiraz, and Malbec.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Great_Southern_%28wine_region%29"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "This region is known for Riesling, Chardonnay, Cabernet Sauvignon, Pinot Noir, Shiraz, and Malbec.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Great_Southern_%28wine_region%29"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "This region is known for Riesling, Chardonnay, Cabernet Sauvignon, Pinot Noir, Shiraz, and Malbec.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Great_Southern_%28wine_region%29"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "This region is known for Riesling, Chardonnay, Cabernet Sauvignon, Pinot Noir, Shiraz, and Malbec.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Great_Southern_%28wine_region%29"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "This region is known for Riesling, Chardonnay, Cabernet Sauvignon, Pinot Noir, Shiraz, and Malbec.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Great_Southern_%28wine_region%29"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "This region is known for Riesling, Chardonnay, Cabernet Sauvignon, Pinot Noir, Shiraz, and Malbec.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Great_Southern_%28wine_region%29"
+      }
+    ],
     "id": "au-great-southern",
     "latitude": -34.584206625761176,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-great-southern",
@@ -415967,7 +417946,33 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "marsanne",
+        "quote": "As a result, the region is home to the oldest and largest plantings of Marsanne grape variety in the world.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goulburn_Valley_wine_region"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Other wine varieties grown  include Chardonnay, Cabernet Sauvignon, Riesling and Shiraz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goulburn_Valley_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Other wine varieties grown  include Chardonnay, Cabernet Sauvignon, Riesling and Shiraz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goulburn_Valley_wine_region"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Other wine varieties grown  include Chardonnay, Cabernet Sauvignon, Riesling and Shiraz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goulburn_Valley_wine_region"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Other wine varieties grown  include Chardonnay, Cabernet Sauvignon, Riesling and Shiraz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goulburn_Valley_wine_region"
+      }
+    ],
     "id": "au-goulburn-valley",
     "latitude": -36.352473191973935,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-goulburn-valley",
@@ -416074,7 +418079,38 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "syrah",
+        "quote": "The key varieties in the region include shiraz, chardonnay, cabernet sauvignon, sauvignon blanc, marsanne and merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nagambie_Lakes_wine_region"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The key varieties in the region include shiraz, chardonnay, cabernet sauvignon, sauvignon blanc, marsanne and merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nagambie_Lakes_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The key varieties in the region include shiraz, chardonnay, cabernet sauvignon, sauvignon blanc, marsanne and merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nagambie_Lakes_wine_region"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The key varieties in the region include shiraz, chardonnay, cabernet sauvignon, sauvignon blanc, marsanne and merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nagambie_Lakes_wine_region"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "The key varieties in the region include shiraz, chardonnay, cabernet sauvignon, sauvignon blanc, marsanne and merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nagambie_Lakes_wine_region"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The key varieties in the region include shiraz, chardonnay, cabernet sauvignon, sauvignon blanc, marsanne and merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Nagambie_Lakes_wine_region"
+      }
+    ],
     "id": "au-nagambie-lakes",
     "latitude": -36.79227566363122,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-nagambie-lakes",
@@ -416182,7 +418218,13 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "syrah",
+        "quote": "The region is famous for its Shiraz production.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Heathcote_wine_region"
+      }
+    ],
     "id": "au-heathcote",
     "latitude": -36.799571457546634,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-heathcote",
@@ -417527,7 +419569,28 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The region has a cool climate making wine growing ideal and focuses on Pinot noir production but has had success with other varietals including Chardonnay, Pinot gris and Tempranillo.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mornington_Peninsula_wine_region"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The region has a cool climate making wine growing ideal and focuses on Pinot noir production but has had success with other varietals including Chardonnay, Pinot gris and Tempranillo.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mornington_Peninsula_wine_region"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The region has a cool climate making wine growing ideal and focuses on Pinot noir production but has had success with other varietals including Chardonnay, Pinot gris and Tempranillo.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mornington_Peninsula_wine_region"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "The region has a cool climate making wine growing ideal and focuses on Pinot noir production but has had success with other varietals including Chardonnay, Pinot gris and Tempranillo.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mornington_Peninsula_wine_region"
+      }
+    ],
     "id": "au-mornington-peninsula",
     "latitude": -38.341815703701634,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-mornington-peninsula",
@@ -417643,7 +419706,23 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "syrah",
+        "quote": "Top grape varieties grown in the Sunbury region include Shiraz, Cabernet Franc and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sunbury_wine_region"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Top grape varieties grown in the Sunbury region include Shiraz, Cabernet Franc and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sunbury_wine_region"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Top grape varieties grown in the Sunbury region include Shiraz, Cabernet Franc and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Sunbury_wine_region"
+      }
+    ],
     "id": "au-sunbury",
     "latitude": -37.64213111995486,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-sunbury",
@@ -417759,7 +419838,18 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "It is a cool climate region that is best known for producing Chardonnay, sparkling wine and Pinot Noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yarra_Valley_wine_region"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "It is a cool climate region that is best known for producing Chardonnay, sparkling wine and Pinot Noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yarra_Valley_wine_region"
+      }
+    ],
     "id": "au-yarra-valley",
     "latitude": -37.721460588893564,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/yarra-valley",
@@ -418202,7 +420292,33 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "It has one of the cooler climates of any Australian wine region and is known for its white wine production of Chardonnay, Riesling, Semillon and Sauvignon blanc as well as a small red wine production of Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Henty_wine_region"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "It has one of the cooler climates of any Australian wine region and is known for its white wine production of Chardonnay, Riesling, Semillon and Sauvignon blanc as well as a small red wine production of Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Henty_wine_region"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "It has one of the cooler climates of any Australian wine region and is known for its white wine production of Chardonnay, Riesling, Semillon and Sauvignon blanc as well as a small red wine production of Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Henty_wine_region"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "It has one of the cooler climates of any Australian wine region and is known for its white wine production of Chardonnay, Riesling, Semillon and Sauvignon blanc as well as a small red wine production of Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Henty_wine_region"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "It has one of the cooler climates of any Australian wine region and is known for its white wine production of Chardonnay, Riesling, Semillon and Sauvignon blanc as well as a small red wine production of Pinot noir.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Henty_wine_region"
+      }
+    ],
     "id": "au-henty",
     "latitude": -37.83100871492024,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-henty",

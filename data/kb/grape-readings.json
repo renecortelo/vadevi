@@ -21,6 +21,12 @@
         "lang": "de",
         "value": "high",
         "quote": "Aus der Rebsorte wird hellgelber, neutraler Wein mit einem hohen Alkoholgehalt hergestellt."
+      },
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry",
+        "quote": "wird Airén auch zu frischen, trockenen, schnell zu trinkenden Weißweinen vergoren"
       }
     ],
     "albarino": [
@@ -99,12 +105,26 @@
         "quote": "Er ist ein säure- und körperreicher, meist blassgelber Wein"
       }
     ],
+    "athiri": [
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry",
+        "quote": "Auf Rhodos wird daraus der trockene und delikate Weißwein „Athiri de Rhodos“ hergestellt"
+      }
+    ],
     "barbera": [
       {
         "field": "body",
         "lang": "en",
         "value": "high",
         "quote": "is known for deep color, full body, low tannins and high levels of acidity"
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "value": "low",
+        "quote": "It produces good yields and is known for deep color, full body, low tannins and high levels of acidity"
       }
     ],
     "bastardo": [
@@ -491,6 +511,12 @@
         "lang": "en",
         "value": "dry",
         "quote": "Grüner Veltliner is usually produced dry"
+      },
+      {
+        "field": "acidity",
+        "lang": "es",
+        "value": "high",
+        "quote": "Los vinos de grüner veltliner tienden a tener un cuerpo medio, una ligera frutalidad, una alta acidez y notas a especias"
       }
     ],
     "harslevelu": [
@@ -513,6 +539,12 @@
         "lang": "en",
         "value": "medium",
         "quote": "with notable acidity and a medium to moderate alcohol content"
+      },
+      {
+        "field": "acidity",
+        "lang": "es",
+        "value": "high",
+        "quote": "Poseen una alta acidez."
       }
     ],
     "italian-riesling": [
@@ -529,6 +561,14 @@
         "lang": "en",
         "value": "medium",
         "quote": "Khikhvi wine is characterised by its moderate alcohol levels and soft acidity"
+      }
+    ],
+    "loureira": [
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "value": "low",
+        "quote": "Produce vinos poco alcohólicos"
       }
     ],
     "macabeo": [
@@ -565,6 +605,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "Although Marsanne is mostly made into a dry wine, it is commonly made into a sweet wine in Valais"
+      },
+      {
+        "field": "acidity",
+        "lang": "fr",
+        "value": "low",
+        "quote": "Les vins sont puissants, de faible acidité"
       }
     ],
     "mauzac": [
@@ -607,6 +653,14 @@
         "quote": "El alto grado alcohólico y la moderada acidez de la Mencía"
       }
     ],
+    "merlot": [
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "low",
+        "quote": "Merlot's low acidity serves as a balance for the higher acidity in many Italian wine grapes"
+      }
+    ],
     "molinara": [
       {
         "field": "alcohol",
@@ -637,6 +691,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "in the still dry, sparkling and passito types"
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "medium",
+        "quote": "Moscato Giallo tends to produce deeply colored, golden wines that have moderate acidity levels but are highly aromatic"
       }
     ],
     "mourvedre": [
@@ -719,6 +779,26 @@
         "lang": "ca",
         "value": "high",
         "quote": "Els vins elaborats amb nebbiolo tenen molt bona acidesa i tannicitat, bon cos i graduació alcohòlica elevada."
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "high",
+        "quote": "the grape's naturally high acidity and tannins"
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "value": "high",
+        "quote": "the grape's naturally high acidity and tannins"
+      }
+    ],
+    "negrette": [
+      {
+        "field": "tannin",
+        "lang": "de",
+        "value": "low",
+        "quote": "einem geringen Anteil an Gerbstoffen"
       }
     ],
     "negroamaro": [
@@ -759,6 +839,14 @@
         "quote": "Öküzgözü reveals low alcohol profile"
       }
     ],
+    "parellada": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "low",
+        "quote": "Sie reift spät und erreicht nur einen relativ niedrigen Alkoholgehalt"
+      }
+    ],
     "pedro-ximenez": [
       {
         "field": "sweetness",
@@ -781,6 +869,12 @@
         "lang": "ca",
         "value": "high",
         "quote": "de color intens, amb un grau alcohòlic alt"
+      },
+      {
+        "field": "acidity",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Avec un degré alcoolique bon et une acidité élevée"
       }
     ],
     "pinot-blanc": [
@@ -811,6 +905,12 @@
         "lang": "en",
         "value": "dry-medium",
         "quote": "The style of those wines ranges from simple, light, off-dry (halbtrocken) to rich, dry with substantial flavors."
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "medium",
+        "quote": "As a varietal red wine, Pinot Meunier tends to produce slightly jammy, fruity wines with moderate acidity and low tannins"
       }
     ],
     "pinot-noir": [
@@ -933,6 +1033,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "Dry and sweet white Bordeaux, including oak-aged examples from Pessac-Léognan and Graves"
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "high",
+        "quote": "softening the naturally high acidity of the grape"
       }
     ],
     "sauvignon-vert": [
@@ -969,6 +1075,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "the variety is often used for sweet wines, although dry Scheurebe wines have become more common in Germany"
+      },
+      {
+        "field": "acidity",
+        "lang": "fr",
+        "value": "high",
+        "quote": "acidité assez forte"
       }
     ],
     "semillon": [
@@ -1027,6 +1139,12 @@
         "lang": "ca",
         "value": "dry",
         "quote": "És una varietat utilitzada en els vins negres secs"
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "value": "high",
+        "quote": "Due to their concentrated flavours and high tannin content, many premium Syrah wines are at their best after some considerable bottle aging"
       }
     ],
     "tannat": [
@@ -1041,6 +1159,14 @@
         "lang": "en",
         "value": "high",
         "quote": "The resulting wines are typically full bodied and very fruity."
+      }
+    ],
+    "tempranillo": [
+      {
+        "field": "alcohol",
+        "lang": "pt",
+        "value": "high",
+        "quote": "Esta casta origina vinhos de elevado teor alcoólico"
       }
     ],
     "tinta-cao": [
@@ -1095,6 +1221,12 @@
         "lang": "ca",
         "value": "low",
         "quote": "amb poca aroma i baixa graduació alcohòlica"
+      },
+      {
+        "field": "acidity",
+        "lang": "de",
+        "value": "high",
+        "quote": "Der Wein dieser Traube ist aufgrund des vergleichsweise hohen Säuregehalts frisch, leicht und fruchtig"
       }
     ],
     "tsolikouri": [
@@ -1119,6 +1251,12 @@
         "lang": "fr",
         "value": "dry",
         "quote": "Il donne des vins blancs secs faciles à boire"
+      },
+      {
+        "field": "acidity",
+        "lang": "es",
+        "value": "medium",
+        "quote": "Su acidez es media-alta"
       }
     ],
     "verdelho": [

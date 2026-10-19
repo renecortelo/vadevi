@@ -1525,6 +1525,36 @@ console.info(
   `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs.`,
 );
 
+// Grapes a region's own English article names as grown or made there, read
+// by hand (`data/kb/region-grape-sentences.json`) for names whose register
+// lists no varieties. Each quote must still be in the cached article.
+const regionSentences = JSON.parse(
+  readFileSync(resolve("data/kb/region-grape-sentences.json"), "utf8"),
+) as { regions: Record<string, { grapeId: string; quote: string; sourceUrl: string }[]> };
+const entryById = new Map(entries.map((entry) => [entry.id, entry]));
+const grapeIds = new Set(grapes.map((grape) => grape.id));
+let fromRegionArticles = 0;
+for (const [id, found] of Object.entries(regionSentences.regions)) {
+  const entry = entryById.get(id);
+  if (entry === undefined) throw new Error(`region-grape-sentences: no name ${id}`);
+  const leadsPath = resolve(cache, "leads", `${entry.wikidataId}.json`);
+  const lead = existsSync(leadsPath)
+    ? (JSON.parse(readFileSync(leadsPath, "utf8")) as Record<string, { lead: string }>).en?.lead
+    : undefined;
+  for (const link of found) {
+    if (lead === undefined || !lead.includes(link.quote)) {
+      throw new Error(`region-grape-sentences: ${id}'s quote is not in its article`);
+    }
+    if (!grapeIds.has(link.grapeId))
+      throw new Error(`region-grape-sentences: no grape ${link.grapeId}`);
+    if (entry.grapes.some((known) => known.grapeId === link.grapeId)) continue;
+    entry.grapes.push(link);
+    fromRegionArticles += 1;
+    links += 1;
+  }
+}
+console.info(`  ${fromRegionArticles} grape links from regions' own articles.`);
+
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;
 const withPoint = entries.filter((entry) => entry.latitude !== null).length;
