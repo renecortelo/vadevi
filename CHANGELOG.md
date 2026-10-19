@@ -14,6 +14,11 @@ has the reasons.
 - **Pairings read by hand**: a hand reading can carry the dishes a grape's
   article pairs it with, in the article's own words; eleven more grapes
   have them — Chardonnay, Sangiovese, Albariño among them (34).
+- **More grapes for regions beyond the EU, from their whole article**: 72
+  more regions — Lodi, Alexander Valley, Walla Walla Valley, Eden Valley,
+  Canberra District among them — show the grapes their English article says
+  are grown there today, each with its sentence; history, a single estate
+  and a climate merely suited to a grape are left out (215 regions).
 
 ## 0.4.0 — 19 October 2026
 

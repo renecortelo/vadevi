@@ -1553,7 +1553,8 @@ console.info(
   `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV.`,
 );
 
-// Grapes a region's own article names as grown or made there, read
+// Grapes a region's own article names as grown or made there — its opening,
+// or the whole English article (`.kb-cache/appellations/articles`) — read
 // by hand (`data/kb/region-grape-sentences.json`) for names whose register
 // lists no varieties. Each quote must still be in the cached article.
 const regionSentences = JSON.parse(
@@ -1569,6 +1570,11 @@ for (const [id, found] of Object.entries(regionSentences.regions)) {
   const leads = existsSync(leadsPath)
     ? Object.values(JSON.parse(readFileSync(leadsPath, "utf8")) as Record<string, { lead: string }>)
     : [];
+  // Or the whole English article, cached for names beyond the EU.
+  const articlePath = resolve(cache, "articles", `${entry.wikidataId}.en.json`);
+  if (existsSync(articlePath)) {
+    leads.push({ lead: (JSON.parse(readFileSync(articlePath, "utf8")) as { text: string }).text });
+  }
   for (const link of found) {
     if (!leads.some(({ lead }) => lead.includes(link.quote))) {
       throw new Error(`region-grape-sentences: ${id}'s quote is not in its article`);
