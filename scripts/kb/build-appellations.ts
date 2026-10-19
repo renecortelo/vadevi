@@ -1575,8 +1575,32 @@ for (const entry of entries) {
   };
   destatis += 1;
 }
+// Austria's wine-growing regions, areas and states: their vineyard area from
+// Statistik Austria (`data/kb/at-weinbau-figures.json`, an extract transcribed
+// by hand; reuse allowed with the source named).
+const austrian = JSON.parse(readFileSync(resolve("data/kb/at-weinbau-figures.json"), "utf8")) as {
+  campaign: string;
+  regions: Record<string, { name: string; plantedHa: number }>;
+  sourceUrl: string;
+};
+let statistikAustria = 0;
+for (const entry of entries) {
+  const area = austrian.regions[entry.id];
+  if (area === undefined) continue;
+  entry.figures = {
+    planted: {
+      amount: area.plantedHa,
+      publisher: "statistik-austria",
+      quote: `Weingärten insgesamt, Fläche, ${area.name} (ha): ${area.plantedHa}`,
+      sourceUrl: austrian.sourceUrl,
+      year: austrian.campaign,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  statistikAustria += 1;
+}
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

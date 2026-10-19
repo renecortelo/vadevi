@@ -358,6 +358,12 @@ Every few months, or when a register announces a name:
   Ouverte / Etalab 2.0; each PDO's area and volume are shown with the year
   and a link to the file.
 
+- **Statistik Austria**, «Weingartenflächen nach Weinbauregionen 2020»
+  (`at-weinbau-figures.json`): reproduction for commercial and non-commercial
+  purposes allowed with «STATISTIK AUSTRIA» named and a note that the content
+  is an extract; each region, area and state shows its vineyard area so
+  credited, with the year and a link.
+
 - **Germany's Federal Statistical Office (Destatis)**, «Rebflächen 2022»
   (`de-anbaugebiete-figures.json`): its publications allow reproduction and
   distribution, in part too, with the source named; each of the 13

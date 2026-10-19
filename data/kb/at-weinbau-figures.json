@@ -1,0 +1,115 @@
+{
+  "about": "Vineyard area (ha, «Weingärten insgesamt — Fläche») in 2020 for Austria's wine-growing regions, areas and federal states, from Statistik Austria's table «Weingartenflächen nach Weinbauregionen 2020» (Weingartengrunderhebung 2020), an extract transcribed by hand; each state's areas add up to its total. Source: STATISTIK AUSTRIA — reproduction for commercial and non-commercial purposes allowed with the source named and a note that the content is an extract. Rosalia and Ruster Ausbruch have no row of their own, and Wiener Gemischter Satz is a style, not an area.",
+  "campaign": "2020",
+  "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+  "regions": {
+    "at-bergland": {
+      "name": "Bergland",
+      "plantedHa": 239.36
+    },
+    "at-burgenland": {
+      "name": "Burgenland",
+      "plantedHa": 12052.48
+    },
+    "at-carnuntum": {
+      "name": "Carnuntum",
+      "plantedHa": 905.3
+    },
+    "at-eisenberg": {
+      "name": "Eisenberg (Südburgenland)",
+      "plantedHa": 496.31
+    },
+    "at-kamptal": {
+      "name": "Kamptal",
+      "plantedHa": 3875.3
+    },
+    "at-karnten": {
+      "name": "Kärnten",
+      "plantedHa": 122.11
+    },
+    "at-kremstal": {
+      "name": "Kremstal",
+      "plantedHa": 2482.38
+    },
+    "at-leithaberg": {
+      "name": "Leithaberg (Neusiedlersee-Hügelland)",
+      "plantedHa": 2588.23
+    },
+    "at-mittelburgenland": {
+      "name": "Mittelburgenland",
+      "plantedHa": 2006.39
+    },
+    "at-neusiedlersee": {
+      "name": "Neusiedlersee",
+      "plantedHa": 6961.55
+    },
+    "at-niederosterreich": {
+      "name": "Niederösterreich",
+      "plantedHa": 28574.34
+    },
+    "at-oberosterreich": {
+      "name": "Oberösterreich",
+      "plantedHa": 87.4
+    },
+    "at-salzburg": {
+      "name": "Salzburg",
+      "plantedHa": 7.82
+    },
+    "at-steiermark": {
+      "name": "Steiermark",
+      "plantedHa": 4739.65
+    },
+    "at-steirerland": {
+      "name": "Steirerland",
+      "plantedHa": 4739.65
+    },
+    "at-sudsteiermark": {
+      "name": "Südsteiermark",
+      "plantedHa": 2278.62
+    },
+    "at-thermenregion": {
+      "name": "Thermenregion",
+      "plantedHa": 2074.09
+    },
+    "at-tirol": {
+      "name": "Tirol",
+      "plantedHa": 7.51
+    },
+    "at-traisental": {
+      "name": "Traisental",
+      "plantedHa": 881.75
+    },
+    "at-vorarlberg": {
+      "name": "Vorarlberg",
+      "plantedHa": 14.52
+    },
+    "at-vulkanland-steiermark": {
+      "name": "Vulkanland Steiermark (Südoststeiermark)",
+      "plantedHa": 1814.55
+    },
+    "at-wachau": {
+      "name": "Wachau",
+      "plantedHa": 1357.73
+    },
+    "at-wagram": {
+      "name": "Wagram",
+      "plantedHa": 2744.71
+    },
+    "at-weinland": {
+      "name": "Weinland",
+      "plantedHa": 41294.06
+    },
+    "at-weinviertel": {
+      "name": "Weinviertel",
+      "plantedHa": 14225.87
+    },
+    "at-weststeiermark": {
+      "name": "Weststeiermark",
+      "plantedHa": 646.08
+    },
+    "at-wien": {
+      "name": "Wien",
+      "plantedHa": 667.24
+    }
+  }
+}

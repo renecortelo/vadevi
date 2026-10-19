@@ -14,6 +14,10 @@ has the reasons.
 - **Pairings read by hand**: a hand reading can carry the dishes a grape's
   article pairs it with, in the article's own words; eleven more grapes
   have them — Chardonnay, Sangiovese, Albariño among them (34).
+- **Austria's vineyards, from Statistik Austria**: 27 Austrian names — the
+  states, the wine-growing areas such as Wachau, Kamptal or Neusiedlersee,
+  and the regions — show their vineyard area from the 2020 vineyard survey,
+  credited as an extract with the year and a link.
 - **Germany's vineyards, from Destatis**: the 13 German wine-growing regions
   — Rheinhessen, Pfalz, Baden, Mosel among them — show their planted area
   from the Federal Statistical Office's 2022 survey, credited with the year

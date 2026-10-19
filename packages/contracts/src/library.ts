@@ -205,9 +205,9 @@ const RegionFigureSchema = z
     /**
      * Who gives it, where not Wikipedia: Spain's Ministry ("mapa"), France's
      * customs ("douane"), Argentina's wine institute ("inv"), Germany's
-     * statistical office ("destatis").
+     * statistical office ("destatis"), Statistik Austria ("statistik-austria").
      */
-    publisher: z.enum(["destatis", "douane", "inv", "mapa"]).optional(),
+    publisher: z.enum(["destatis", "douane", "inv", "mapa", "statistik-austria"]).optional(),
     /** The infobox line it was read from. */
     quote: z.string(),
     sourceUrl: z.string().url(),

@@ -35343,6 +35343,16 @@
         -3.9,
         -7.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 239.36,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Bergland (ha): 239.36",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -44624,6 +44634,16 @@
         4.3,
         0.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 12052.48,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Burgenland (ha): 12052.48",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -52901,6 +52921,16 @@
         5.2,
         0.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 905.3,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Carnuntum (ha): 905.3",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -107337,6 +107367,16 @@
         4.5,
         0.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 496.31,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Eisenberg (Südburgenland) (ha): 496.31",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -135669,6 +135709,16 @@
         4.4,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3875.3,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Kamptal (ha): 3875.3",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -136125,6 +136175,16 @@
         4.4,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2482.38,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Kremstal (ha): 2482.38",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -136800,6 +136860,16 @@
         -0.4,
         -5.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 122.11,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Kärnten (ha): 122.11",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -146828,6 +146898,16 @@
         4.7,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2588.23,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Leithaberg (Neusiedlersee-Hügelland) (ha): 2588.23",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -162014,6 +162094,16 @@
         4.3,
         0.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2006.39,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Mittelburgenland (ha): 2006.39",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -179749,6 +179839,16 @@
         5.4,
         1.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6961.55,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Neusiedlersee (ha): 6961.55",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -180156,6 +180256,16 @@
         4.2,
         0.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 28574.34,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Niederösterreich (ha): 28574.34",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -182195,6 +182305,16 @@
         4.3,
         0.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 87.4,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Oberösterreich (ha): 87.4",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -227419,6 +227539,16 @@
         -5.7,
         -9.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 7.82,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Salzburg (ha): 7.82",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -240994,6 +241124,16 @@
         0.9,
         -3.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 4739.65,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Steiermark (ha): 4739.65",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -241183,6 +241323,16 @@
         2.8,
         -1.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 4739.65,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Steirerland (ha): 4739.65",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -242558,6 +242708,16 @@
         4.6,
         -0.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2278.62,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Südsteiermark (ha): 2278.62",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -252349,6 +252509,16 @@
         4.8,
         0.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2074.09,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Thermenregion (ha): 2074.09",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -253241,6 +253411,16 @@
         -5.7,
         -9.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 7.51,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Tirol (ha): 7.51",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -255534,6 +255714,16 @@
         4.4,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 881.75,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Traisental (ha): 881.75",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -280181,6 +280371,16 @@
         -2.6,
         -6.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 14.52,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Vorarlberg (ha): 14.52",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -280867,6 +281067,16 @@
         4.1,
         -0.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1814.55,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Vulkanland Steiermark (Südoststeiermark) (ha): 1814.55",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -281391,6 +281601,16 @@
         3.9,
         -0.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1357.73,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Wachau (ha): 1357.73",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -281641,6 +281861,16 @@
         4.5,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2744.71,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Wagram (ha): 2744.71",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -281842,6 +282072,16 @@
         4.9,
         0.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 41294.06,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Weinland (ha): 41294.06",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -281961,6 +282201,16 @@
         4.5,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 14225.87,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Weinviertel (ha): 14225.87",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -282211,6 +282461,16 @@
         4.4,
         -0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 646.08,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Weststeiermark (ha): 646.08",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -282461,6 +282721,16 @@
         4.9,
         0.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 667.24,
+        "publisher": "statistik-austria",
+        "quote": "Weingärten insgesamt, Fläche, Wien (ha): 667.24",
+        "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {

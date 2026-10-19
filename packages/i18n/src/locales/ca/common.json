@@ -478,7 +478,8 @@
     "glanceSourceMapa": "Ministeri d'Agricultura (MAPA), campanya {{campaign}}",
     "glanceSourceDouane": "Duanes de França, declaracions de collita {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Institut Nacional de Vitivinicultura de l'Argentina (INV), {{campaign}} · CC BY 4.0",
-    "glanceSourceDestatis": "Oficina Federal d'Estadística d'Alemanya (Destatis), {{campaign}}"
+    "glanceSourceDestatis": "Oficina Federal d'Estadística d'Alemanya (Destatis), {{campaign}}",
+    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, cens vitícola {{campaign}} (extracte)"
   },
   "space": {
     "switchLabel": "Espai actiu",

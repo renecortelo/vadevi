@@ -107,7 +107,11 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
                         ? t("library.glanceSourceInv", { campaign: figure.year ?? "" })
                         : figure.publisher === "destatis"
                           ? t("library.glanceSourceDestatis", { campaign: figure.year ?? "" })
-                          : t("library.summarySource")}
+                          : figure.publisher === "statistik-austria"
+                            ? t("library.glanceSourceStatistikAustria", {
+                                campaign: figure.year ?? "",
+                              })
+                            : t("library.summarySource")}
                 </a>
               </span>
             ),

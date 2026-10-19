@@ -478,7 +478,8 @@
     "glanceSourceMapa": "Spaans ministerie van Landbouw (MAPA), campagne {{campaign}}",
     "glanceSourceDouane": "Franse douane, oogstaangiften {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Argentijns Nationaal Wijnbouwinstituut (INV), {{campaign}} · CC BY 4.0",
-    "glanceSourceDestatis": "Duits Federaal Bureau voor de Statistiek (Destatis), {{campaign}}"
+    "glanceSourceDestatis": "Duits Federaal Bureau voor de Statistiek (Destatis), {{campaign}}",
+    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, wijngaardtelling {{campaign}} (uittreksel)"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",
