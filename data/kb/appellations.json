@@ -382939,6 +382939,16 @@
         24.3,
         26.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 7678.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Veinticinco de Mayo (San Juan) (ha): 7678.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -383003,6 +383013,16 @@
         23.2,
         25.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2830,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Nueve de Julio (San Juan) (ha): 2830",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -383212,6 +383232,16 @@
         22.2,
         24.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1446.4,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Albardón (San Juan) (ha): 1446.4",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -383379,6 +383409,16 @@
         23.2,
         25.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2089.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Angaco (San Juan) (ha): 2089.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -383442,6 +383482,16 @@
         21.6,
         24.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1351.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Añelo (Neuquén) (ha): 1351.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -383569,6 +383619,16 @@
         20.4,
         23.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 184,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Avellaneda (Río Negro) (ha): 184",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -383762,6 +383822,16 @@
         11.8,
         12.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 192.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Belén (Catamarca) (ha): 192.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -383825,6 +383895,16 @@
         15.6,
         16
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 116.8,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Cachi (Salta) (ha): 116.8",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -384002,6 +384082,16 @@
         3.3,
         7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 253.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Calingasta (San Juan) (ha): 253.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -384136,6 +384226,16 @@
         19.7,
         21.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 256.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Castro Barros (La Rioja) (ha): 256.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -384196,6 +384296,16 @@
         22.2,
         23.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2693.6,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de Catamarca (ha): 2693.6",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -384300,6 +384410,16 @@
         24,
         26.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6697.5,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Caucete (San Juan) (ha): 6697.5",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -384464,6 +384584,16 @@
         22,
         23.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 5330.6,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Chilecito (La Rioja) (ha): 5330.6",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -384568,6 +384698,16 @@
         22.4,
         25
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 700.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Chimbas (San Juan) (ha): 700.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -384798,6 +384938,16 @@
         17.8,
         20.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 109.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Confluencia (Neuquén) (ha): 109.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -384858,6 +385008,16 @@
         21.3,
         23.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 244.2,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de Córdoba (ha): 244.2",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -385210,6 +385370,16 @@
         13.2,
         14.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 525.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Famatina (La Rioja) (ha): 525.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -385274,6 +385444,16 @@
         19.3,
         21.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 696.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Coronel Felipe Varela (La Rioja) (ha): 696.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -385338,6 +385518,16 @@
         21.7,
         24.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3095.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento General Alvear (Mendoza) (ha): 3095.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -385505,6 +385695,16 @@
         7.9,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 67.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento General Lamadrid (La Rioja) (ha): 67.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -385608,6 +385808,16 @@
         19.8,
         22.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 841.3,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento General Roca (Río Negro) (ha): 841.3",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -385712,6 +385922,16 @@
         19.1,
         21.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 0.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Godoy Cruz (Mendoza) (ha): 0.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -385816,6 +386036,16 @@
         21.3,
         24
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 467.3,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Guaymallén (Mendoza) (ha): 467.3",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -385880,6 +386110,16 @@
         -2.9,
         0.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 4.8,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Iglesia (San Juan) (ha): 4.8",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -386004,6 +386244,16 @@
         10.3,
         11.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 73.3,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de Jujuy (ha): 73.3",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -386068,6 +386318,16 @@
         22.4,
         24.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 10848.8,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Junín (Mendoza) (ha): 10848.8",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -386238,6 +386498,16 @@
         22.7,
         25.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 135.5,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento La Paz (Mendoza) (ha): 135.5",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -386301,6 +386571,16 @@
         19.3,
         21.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 7010.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de La Rioja (ha): 7010.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -386510,6 +386790,16 @@
         9.2,
         11.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1289.4,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Las Heras (Mendoza) (ha): 1289.4",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -386619,6 +386909,16 @@
         23.9,
         26.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 12289.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Lavalle (Mendoza) (ha): 12289.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -386789,6 +387089,16 @@
         17.7,
         20.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 15210.3,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Luján de Cuyo (Mendoza) (ha): 15210.3",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -387118,6 +387428,16 @@
         20.7,
         23.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 10666,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Maipú (Mendoza) (ha): 10666",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -387261,6 +387581,16 @@
         17.4,
         20.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 142785.5,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de Mendoza (ha): 142785.5",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -387364,6 +387694,16 @@
         13.5,
         14.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 133,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Molinos (Salta) (ha): 133",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -387464,6 +387804,16 @@
         15.6,
         18.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1498.5,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de Neuquén (ha): 1498.5",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -387734,6 +388084,16 @@
         16.7,
         19.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 61.5,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Pichi Mahuida (Río Negro) (ha): 61.5",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -387838,6 +388198,16 @@
         21.7,
         24.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2852.4,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Pocito (San Juan) (ha): 2852.4",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -387941,6 +388311,16 @@
         25.4,
         26.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 24.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Pomán (Catamarca) (ha): 24.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388133,6 +388513,16 @@
         22.7,
         25.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1248.8,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Rawson (San Juan) (ha): 1248.8",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388304,6 +388694,16 @@
         16.7,
         19.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1286.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de Río Negro (ha): 1286.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388368,6 +388768,16 @@
         18.9,
         21.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 13929,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Rivadavia (Mendoza) (ha): 13929",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388432,6 +388842,16 @@
         21.3,
         23.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 187.2,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Rivadavia (San Juan) (ha): 187.2",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388603,6 +389023,16 @@
         24.4,
         25.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3700.3,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de Salta (ha): 3700.3",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388667,6 +389097,16 @@
         19.8,
         21.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 60,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento San Blas de los Sauces (La Rioja) (ha): 60",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388732,6 +389172,16 @@
         14.7,
         17.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 8825,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento San Carlos (Mendoza) (ha): 8825",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388795,6 +389245,16 @@
         18.3,
         19.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 673,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento San Carlos (Salta) (ha): 673",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -388967,6 +389427,16 @@
         12,
         14.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 39683.7,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de San Juan (ha): 39683.7",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389027,6 +389497,16 @@
         19.9,
         22.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 103.2,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de San Luis (ha): 103.2",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389091,6 +389571,16 @@
         23,
         25.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 25847.2,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento San Martín (Mendoza) (ha): 25847.2",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389195,6 +389685,16 @@
         21.3,
         23.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3558,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento San Martín (San Juan) (ha): 3558",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389299,6 +389799,16 @@
         16.1,
         18.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 11477.9,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento San Rafael (Mendoza) (ha): 11477.9",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389533,6 +390043,16 @@
         19.5,
         21.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 23.2,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Sanagasta (La Rioja) (ha): 23.2",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389597,6 +390117,16 @@
         22.7,
         25.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 879.6,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Santa Lucía (San Juan) (ha): 879.6",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389660,6 +390190,16 @@
         14,
         15.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 737.6,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Santa María (Catamarca) (ha): 737.6",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389724,6 +390264,16 @@
         22.4,
         24.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 7918.6,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Santa Rosa (Mendoza) (ha): 7918.6",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389788,6 +390338,16 @@
         21.4,
         24.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 7045.4,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Sarmiento (San Juan) (ha): 7045.4",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -389914,6 +390474,16 @@
         8.4,
         10
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1730.8,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Tinogasta (Catamarca) (ha): 1730.8",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -390114,6 +390684,16 @@
         23.5,
         25
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 145.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, provincia de Tucumán (ha): 145.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -390219,6 +390799,16 @@
         5,
         9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 10197.5,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Tunuyán (Mendoza) (ha): 10197.5",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -390334,6 +390924,16 @@
         10.2,
         13.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 10587.2,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Tupungato (Mendoza) (ha): 10587.2",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -390438,6 +391038,16 @@
         15.1,
         17.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1190.9,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Ullum (San Juan) (ha): 1190.9",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -390826,6 +391436,16 @@
         20.8,
         22.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 0.8,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Valle Fértil (San Juan) (ha): 0.8",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -391198,6 +391818,16 @@
         8.3,
         9.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 50.1,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Vinchina (La Rioja) (ha): 50.1",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -391468,6 +392098,16 @@
         15.9,
         18.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1020.9,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Zonda (San Juan) (ha): 1020.9",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -391528,6 +392168,16 @@
         16.2,
         18.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 14.9,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Balcarce (Buenos Aires) (ha): 14.9",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -392180,6 +392830,16 @@
         16.4,
         19.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 8.6,
+        "publisher": "inv",
+        "quote": "Superficie cultivada con vid, departamento Tandil (Buenos Aires) (ha): 8.6",
+        "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {

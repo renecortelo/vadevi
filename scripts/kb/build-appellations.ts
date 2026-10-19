@@ -1521,8 +1521,36 @@ for (const entry of entries) {
   };
   customs += 1;
 }
+// Argentina's indications named after a department or a province: its
+// vineyard area from the wine institute's yearly report
+// (`data/kb/ar-ig-figures.json`, transcribed by hand, CC BY 4.0).
+const argentine = JSON.parse(readFileSync(resolve("data/kb/ar-ig-figures.json"), "utf8")) as {
+  campaign: string;
+  regions: Record<string, { department: string | null; plantedHa: number; province: string }>;
+  sourceUrl: string;
+};
+let institute = 0;
+for (const entry of entries) {
+  const area = argentine.regions[entry.id];
+  if (area === undefined) continue;
+  const place =
+    area.department === null
+      ? `provincia de ${area.province}`
+      : `departamento ${area.department} (${area.province})`;
+  entry.figures = {
+    planted: {
+      amount: area.plantedHa,
+      publisher: "inv",
+      quote: `Superficie cultivada con vid, ${place} (ha): ${area.plantedHa}`,
+      sourceUrl: argentine.sourceUrl,
+      year: argentine.campaign,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  institute += 1;
+}
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV.`,
 );
 
 // Grapes a region's own article names as grown or made there, read

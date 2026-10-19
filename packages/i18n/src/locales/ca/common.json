@@ -476,7 +476,8 @@
     "yoursTastings_other": "{{count}} tastos",
     "yoursAverage": "mitjana {{score}}/100",
     "glanceSourceMapa": "Ministeri d'Agricultura (MAPA), campanya {{campaign}}",
-    "glanceSourceDouane": "Duanes de França, declaracions de collita {{campaign}} · Licence Ouverte"
+    "glanceSourceDouane": "Duanes de França, declaracions de collita {{campaign}} · Licence Ouverte",
+    "glanceSourceInv": "Institut Nacional de Vitivinicultura de l'Argentina (INV), {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Espai actiu",

@@ -476,7 +476,8 @@
     "yoursTastings_other": "{{count}} catas",
     "yoursAverage": "media {{score}}/100",
     "glanceSourceMapa": "Ministerio de Agricultura (MAPA), campaña {{campaign}}",
-    "glanceSourceDouane": "Aduanas de Francia, declaraciones de cosecha {{campaign}} · Licence Ouverte"
+    "glanceSourceDouane": "Aduanas de Francia, declaraciones de cosecha {{campaign}} · Licence Ouverte",
+    "glanceSourceInv": "Instituto Nacional de Vitivinicultura de Argentina (INV), {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Espacio activo",

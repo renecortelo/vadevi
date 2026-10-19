@@ -11849,6 +11849,7 @@
                     "type": "string",
                     "enum": [
                       "douane",
+                      "inv",
                       "mapa"
                     ]
                   },
@@ -11883,6 +11884,7 @@
                     "type": "string",
                     "enum": [
                       "douane",
+                      "inv",
                       "mapa"
                     ]
                   },

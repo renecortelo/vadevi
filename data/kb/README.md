@@ -358,6 +358,13 @@ Every few months, or when a register announces a name:
   Ouverte / Etalab 2.0; each PDO's area and volume are shown with the year
   and a link to the file.
 
+- **Argentina's Instituto Nacional de Vitivinicultura (INV)**, «Informe anual
+  de superficie 2024» (`ar-ig-figures.json`): published on argentina.gob.ar
+  under Creative Commons Attribution 4.0; each indication named after a
+  department or a province shows that area's vineyard surface, with the year
+  and a link to the report. Chile's vineyard survey (SAG/ODEPA) was not used:
+  its CC BY-NC-SA licence forbids commercial reuse.
+
 - **Copernicus DEM GLO-90** (doi:10.5270/ESA-c5d3d65), through
   Open-Meteo's elevation API: CC BY 4.0, credited to the Copernicus programme
   and Open-Meteo under the climate (`pnpm kb:fetch-elevation`).

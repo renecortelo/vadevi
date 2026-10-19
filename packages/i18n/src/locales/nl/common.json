@@ -476,7 +476,8 @@
     "yoursTastings_other": "{{count}} proeverijen",
     "yoursAverage": "gemiddeld {{score}}/100",
     "glanceSourceMapa": "Spaans ministerie van Landbouw (MAPA), campagne {{campaign}}",
-    "glanceSourceDouane": "Franse douane, oogstaangiften {{campaign}} · Licence Ouverte"
+    "glanceSourceDouane": "Franse douane, oogstaangiften {{campaign}} · Licence Ouverte",
+    "glanceSourceInv": "Argentijns Nationaal Wijnbouwinstituut (INV), {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

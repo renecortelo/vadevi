@@ -53,6 +53,10 @@ has the reasons.
   and premiers crus, and the wine declared as fit for it — so Champagne, the
   crémants, the Beaujolais crus and Côtes de Bordeaux's Blaye or Castillon
   count — and leaves out wine meant for Cognac or Armagnac.
+- **Argentina's vineyards, from the INV**: 66 Argentine indications named
+  after a department or a province — Mendoza, Luján de Cuyo, Maipú, San
+  Juan, Chilecito, show their vineyard area from the
+  wine institute's 2024 report (CC BY 4.0), credited with the year and a link.
 - **Spain's vineyards, from the Ministry**: 94 Spanish PDOs show their
   registered vineyard area from the Ministry of Agriculture's 2022/2023
   report, newer than any article's and credited to it.
