@@ -6,7 +6,8 @@ import { expect, test } from "./fixtures/server";
 
 /**
  * The sign-in screen's reel: what Va de Vi is for, in under twenty seconds.
- * Its figures are the library's own; it can be paused, every animation at
+ * It is told with the logo's own bottles; its figures are the library's own;
+ * it can be paused, every animation at
  * once; «Get started» leads to the sign-in button; it fits a phone; and with
  * reduced motion it is its last frame, still.
  */
@@ -44,6 +45,12 @@ test("the sign-in reel tells what the app is for, from the library's own figures
   );
   expect(states.length).toBeGreaterThan(10);
   expect(states.every((state) => state === "paused")).toBe(true);
+
+  // Told with the logo's own bottles: one for the opening and each step in
+  // the row, and at the close all seven with the word across them.
+  await expect(reel.locator(".reel__slot")).toHaveCount(5);
+  await expect(reel.locator(".reel-lockup__bottle")).toHaveCount(7);
+  await expect(reel.locator(".reel-lockup__letter")).toHaveCount(10);
 
   // At its end, «Get started» leads to the sign-in button.
   await page.evaluate(seek, 19);

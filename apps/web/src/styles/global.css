@@ -5948,11 +5948,14 @@ button.stats-bars__label:hover {
 }
 
 /* ── The sign-in reel ────────────────────────────────────────────────────
-   What Va de Vi is for, in nineteen seconds (`home/SignInReel.tsx`): cards
-   slide in along a dotted line, one step at a time, on the reel's own clock.
-   Every timing is relative to its shot's start (--start) and end (--end). */
+   What Va de Vi is for, in nineteen seconds (`home/SignInReel.tsx`), told
+   with the logo's bottles: each step a bottle that drops into a row of them,
+   and the row growing into the logo at the close. Every timing is relative
+   to its shot's start (--start) and end (--end). */
 .reel {
   /* Each shot sets its own; these are the reel's defaults. */
+  --at: 0s;
+  --bottle: var(--color-plum);
   --end: 19s;
   --i: 0;
   --start: 0s;
@@ -5963,8 +5966,10 @@ button.stats-bars__label:hover {
 }
 
 /* Its width is the reel's: with a minimum height, the ratio alone would
-   widen it past a narrow phone. */
+   widen it past a narrow phone. The background takes each step's bottle
+   colour, faintly. */
 .reel__stage {
+  animation: reel-tint 19s linear both;
   aspect-ratio: 16 / 10;
   inline-size: 100%;
   background: rgb(var(--color-surface-rgb) / 92%);
@@ -5973,6 +5978,53 @@ button.stats-bars__label:hover {
   min-block-size: 16rem;
   overflow: hidden;
   position: relative;
+}
+
+@keyframes reel-tint {
+  0%,
+  12% {
+    background-color: color-mix(
+      in srgb,
+      var(--color-bottle-4) 9%,
+      rgb(var(--color-surface-rgb) / 92%)
+    );
+  }
+  15%,
+  27% {
+    background-color: color-mix(
+      in srgb,
+      var(--color-bottle-1) 9%,
+      rgb(var(--color-surface-rgb) / 92%)
+    );
+  }
+  31%,
+  43% {
+    background-color: color-mix(
+      in srgb,
+      var(--color-bottle-2) 9%,
+      rgb(var(--color-surface-rgb) / 92%)
+    );
+  }
+  47%,
+  61% {
+    background-color: color-mix(
+      in srgb,
+      var(--color-bottle-3) 9%,
+      rgb(var(--color-surface-rgb) / 92%)
+    );
+  }
+  65%,
+  80% {
+    background-color: color-mix(
+      in srgb,
+      var(--color-bottle-5) 9%,
+      rgb(var(--color-surface-rgb) / 92%)
+    );
+  }
+  84%,
+  100% {
+    background-color: rgb(var(--color-surface-rgb) / 92%);
+  }
 }
 
 /* On a phone a fixed height: a ratio with a minimum height would ask the
@@ -5991,7 +6043,7 @@ button.stats-bars__label:hover {
   align-content: center;
   display: grid;
   gap: var(--space-3);
-  inset: 0 0 2.5rem;
+  inset: 0 0 2.6rem;
   justify-items: center;
   padding: var(--space-4);
   position: absolute;
@@ -5999,7 +6051,11 @@ button.stats-bars__label:hover {
 }
 
 .reel-shot--close {
-  animation: reel-enter 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) var(--start) both;
+  animation: reel-enter 0.4s ease-out var(--start) both;
+  gap: var(--space-2);
+  grid-template-columns: minmax(0, 1fr);
+  inset: 0;
+  padding-block: var(--space-3);
 }
 
 @keyframes reel-enter {
@@ -6017,85 +6073,212 @@ button.stats-bars__label:hover {
   }
 }
 
-.reel__brand {
-  animation: reel-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
-  color: var(--color-plum);
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 9vw, 3.4rem);
-  font-weight: 700;
-  margin: 0;
+/* A step: its bottle beside what it shows. */
+.reel-shot--bottle {
+  column-gap: var(--space-4);
+  grid-template-columns: minmax(3rem, 26%) minmax(0, 1fr);
+  justify-items: stretch;
+  text-align: start;
+}
+
+.reel-card {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+  min-inline-size: 0;
+}
+
+.reel-bottle {
+  block-size: 100%;
+  inline-size: auto;
+  justify-self: center;
+  max-block-size: 13rem;
+  overflow: visible;
+}
+
+.reel-shot--intro .reel-bottle {
+  block-size: 9rem;
+}
+
+/* On a phone the bottle stands behind the step, faintly. */
+@media (max-width: 30rem) {
+  .reel-shot--bottle {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .reel-shot--bottle .reel-bottle {
+    block-size: 85%;
+    inset: 6% auto auto 50%;
+    opacity: 0.22;
+    position: absolute;
+    translate: -50% 0;
+  }
+
+  .reel-card {
+    justify-items: center;
+    position: relative;
+  }
+}
+
+/* The bottle's outline drawn, then the glass filled, then a glint across it. */
+.reel-bottle__glass {
+  animation:
+    reel-draw 1s ease-out calc(var(--start) + 0.15s) both,
+    reel-pour 0.6s ease-out calc(var(--start) + 0.9s) both;
+  fill: var(--bottle);
+  stroke: var(--bottle);
+  stroke-dasharray: 1;
+  stroke-linejoin: round;
+  stroke-width: 6;
+}
+
+@keyframes reel-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes reel-pour {
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+.reel-bottle__glint {
+  animation: reel-glint 0.9s ease-in-out calc(var(--start) + 1.5s) both;
+  fill: #fff;
+  opacity: 0.35;
+}
+
+@keyframes reel-glint {
+  to {
+    transform: translateX(220px);
+  }
+}
+
+/* The row the steps' bottles drop into, each in its place in the logo; it
+   rises into the logo at the close. */
+.reel__row {
+  animation: reel-row-away 0.5s ease-in 15.55s forwards;
+  block-size: 2.2rem;
+  inline-size: 100%;
+  inset: auto 0 0.3rem;
+  position: absolute;
+}
+
+.reel__slot {
+  animation: reel-slot 0.7s cubic-bezier(0.3, 1.5, 0.5, 1) var(--at) both;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+@keyframes reel-slot {
+  from {
+    opacity: 0;
+    transform: translateY(-70%) scale(1.6);
+  }
+}
+
+@keyframes reel-row-away {
+  to {
+    opacity: 0;
+    transform: translateY(-40%) scale(1.4);
+  }
+}
+
+/* The close: the row grown into the logo, the last bottles sliding in, the
+   letters falling into place with a bounce. */
+.reel-lockup {
+  animation: reel-assemble 0.9s cubic-bezier(0.25, 1.3, 0.5, 1) var(--start) both;
+  /* A fixed height: a percentage would not resolve in the grid, and the
+     drawing would take the height of its full-width ratio. */
+  block-size: 5.6rem;
+  color: var(--color-lockup-ink);
+  inline-size: auto;
+  justify-self: center;
+  max-inline-size: 100%;
+  overflow: visible;
+  transform-origin: 50% 100%;
+}
+
+@media (max-width: 30rem) {
+  .reel-lockup {
+    block-size: 4.4rem;
+  }
+}
+
+@keyframes reel-assemble {
+  from {
+    opacity: 0.4;
+    transform: translateY(45%) scale(0.35);
+  }
+}
+
+.reel-lockup__bottle--late {
+  animation: reel-arrive 0.7s cubic-bezier(0.3, 1.4, 0.5, 1)
+    calc(var(--start) + 0.35s + var(--i) * 0.18s) both;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+@keyframes reel-arrive {
+  from {
+    opacity: 0;
+    transform: translateX(160%) rotate(8deg);
+  }
+}
+
+.reel-lockup__letter {
+  animation: reel-drop 0.6s cubic-bezier(0.3, 1.6, 0.45, 1)
+    calc(var(--start) + 0.95s + var(--i) * 0.07s) both;
+}
+
+@keyframes reel-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-160px);
+  }
 }
 
 .reel__tagline,
 .reel__sub {
-  animation: reel-rise 0.7s ease-out calc(var(--start) + 0.6s) both;
   color: var(--color-text-muted);
   margin: 0;
 }
 
+.reel__tagline {
+  animation: reel-rise 0.7s ease-out calc(var(--start) + 1.3s) both;
+}
+
+.reel__sub {
+  animation: reel-rise 0.7s ease-out calc(var(--start) + 2s) both;
+}
+
 .reel__closing {
-  animation: reel-rise 0.7s ease-out calc(var(--start) + 0.2s) both;
+  animation: reel-rise 0.7s ease-out calc(var(--start) + 1.7s) both;
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 5vw, 1.8rem);
+  font-size: clamp(1.1rem, 4.2vw, 1.5rem);
+  text-wrap: balance;
   font-weight: 700;
   margin: 0;
 }
 
 .reel__cta {
-  animation: reel-rise 0.6s ease-out calc(var(--start) + 1.2s) both;
+  animation: reel-rise 0.6s ease-out calc(var(--start) + 2.3s) both;
 }
 
 @keyframes reel-rise {
   from {
     opacity: 0;
     transform: translateY(0.6rem);
-  }
-}
-
-/* The dotted line and its dot, which steps to each card as it arrives. */
-.reel__line {
-  border-block-start: 2px dashed var(--color-border);
-  inset: auto 1.5rem 1.25rem;
-  position: absolute;
-}
-
-.reel__dot {
-  animation: reel-dot 19s linear both;
-  background: var(--color-plum);
-  block-size: 0.75rem;
-  border-radius: 50%;
-  inline-size: 0.75rem;
-  position: absolute;
-  inset-block-start: -0.45rem;
-  translate: -50% 0;
-}
-
-@keyframes reel-dot {
-  0%,
-  13% {
-    left: 4%;
-  }
-  16%,
-  29% {
-    left: 24%;
-  }
-  32%,
-  45% {
-    left: 44%;
-  }
-  48%,
-  63% {
-    left: 64%;
-  }
-  66%,
-  82% {
-    left: 84%;
-    opacity: 1;
-  }
-  86%,
-  100% {
-    left: 50%;
-    opacity: 0;
   }
 }
 
@@ -6316,15 +6499,27 @@ button.stats-bars__label:hover {
   margin: var(--space-2) 0 0;
 }
 
-/* Reduced motion: the reel is its last frame, still, with the figures. */
+/* Reduced motion: the reel is its last frame, still — the logo, the closing
+   words and the figures — at the height it needs. */
+.reel--still .reel__stage {
+  animation: none;
+  aspect-ratio: auto;
+  block-size: auto;
+}
+
 .reel--still .reel-shot,
-.reel--still .reel__line {
+.reel--still .reel__row {
   display: none;
 }
 
 .reel--still .reel-shot--close {
   animation: none;
   display: grid;
+  position: relative;
+}
+
+.reel--still .reel-lockup {
+  block-size: 4.5rem;
 }
 
 .reel--still .reel-shot--close * {

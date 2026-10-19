@@ -6,6 +6,15 @@ has the reasons.
 
 ## Unreleased
 
+### First impressions
+
+- **The sign-in reel, told with the logo's bottles**: the opening bottle draws
+  itself and fills; each step — a tasting, a label, the library, Vicenç — is
+  a bottle of the logo's colour that drops into a row as the step ends; at the
+  close the last two slide in, the row grows into the logo and the letters
+  fall into place, then «Get started». Same nineteen seconds, pause, still
+  frame for reduced motion, and the library's own figures.
+
 ### The library
 
 - **No tannin gauge for a white grape**: its wine has next to no tannin, so
