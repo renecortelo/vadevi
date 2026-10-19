@@ -90,6 +90,7 @@
       "medium": "Media",
       "high": "Alta"
     },
+    "noSourceValue": "sin dato en las fuentes",
     "kind": {
       "still": "vino tranquilo",
       "sparkling": "espumoso",
@@ -381,7 +382,40 @@
       "name": "De la A a la Z"
     },
     "registerGrapesNoteOther": "Como las escribe el documento del propio registro; con enlace, las que la biblioteca sabe con certeza qué uva son.",
-    "registerDocumentOther": "Documento del registro"
+    "registerDocumentOther": "Documento del registro",
+    "aromaFamily": {
+      "fruit": "Fruta",
+      "floral": "Flores",
+      "herbal": "Hierbas y vegetal",
+      "spice": "Especias",
+      "earth": "Tierra y mineral",
+      "oak": "Madera y tostado",
+      "nut": "Frutos secos",
+      "sweet": "Dulce",
+      "savoury": "Animal y sabroso"
+    },
+    "aromaGroup": {
+      "fruit_red": "Fruta roja",
+      "fruit_black": "Fruta negra",
+      "fruit_citrus": "Cítricos",
+      "fruit_orchard": "Fruta de pepita",
+      "fruit_stone": "Fruta de hueso",
+      "fruit_tropical": "Fruta tropical",
+      "fruit_dried": "Fruta pasificada y confitada",
+      "fruit_other": "Otras frutas",
+      "floral": "Flores",
+      "herbal_herbs": "Hierbas",
+      "herbal_vegetal": "Vegetal",
+      "spice": "Especias",
+      "earth_earth": "Tierra",
+      "earth_mineral": "Mineral",
+      "oak_wood": "Madera",
+      "oak_toast": "Tostado y humo",
+      "nut": "Frutos secos",
+      "sweet": "Dulce",
+      "savoury_animal": "Animal",
+      "savoury_savoury": "Sabroso"
+    }
   },
   "space": {
     "switchLabel": "Espacio activo",

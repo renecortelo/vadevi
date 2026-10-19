@@ -1,3 +1,5 @@
+export * from "./aromas";
+
 export const tastingOntologyVersion = "2026.1" as const;
 
 export type OntologyLocale = "ca" | "de" | "en" | "es" | "fr" | "it" | "nl" | "pt-PT";

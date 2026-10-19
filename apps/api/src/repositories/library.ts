@@ -238,6 +238,7 @@ export async function getLibraryGrape(
   return {
     acidity: grape.acidity,
     aromas: of("aroma"),
+    aromaTerms: attributeRows.filter((row) => row.kind === "aroma").map((row) => row.value),
     body: grape.body,
     color: grape.color,
     evidence: (

@@ -90,6 +90,7 @@
       "medium": "Mittel",
       "high": "Hoch"
     },
+    "noSourceValue": "keine Angabe in den Quellen",
     "kind": {
       "still": "Stillwein",
       "sparkling": "Schaumwein",
@@ -381,7 +382,40 @@
       "name": "Von A bis Z"
     },
     "registerGrapesNoteOther": "Wie sie das Dokument des Registers selbst schreibt; verlinkt, wo die Bibliothek sicher weiß, welche Rebsorte es ist.",
-    "registerDocumentOther": "Dokument des Registers"
+    "registerDocumentOther": "Dokument des Registers",
+    "aromaFamily": {
+      "fruit": "Frucht",
+      "floral": "Blüten",
+      "herbal": "Kräuter und Grün",
+      "spice": "Gewürze",
+      "earth": "Erde und Mineral",
+      "oak": "Holz und Röstung",
+      "nut": "Nüsse",
+      "sweet": "Süß",
+      "savoury": "Tierisch und herzhaft"
+    },
+    "aromaGroup": {
+      "fruit_red": "Rote Früchte",
+      "fruit_black": "Schwarze Früchte",
+      "fruit_citrus": "Zitrusfrüchte",
+      "fruit_orchard": "Kernobst",
+      "fruit_stone": "Steinobst",
+      "fruit_tropical": "Tropische Früchte",
+      "fruit_dried": "Getrocknete und gekochte Früchte",
+      "fruit_other": "Andere Früchte",
+      "floral": "Blüten",
+      "herbal_herbs": "Kräuter",
+      "herbal_vegetal": "Gemüse",
+      "spice": "Gewürze",
+      "earth_earth": "Erde",
+      "earth_mineral": "Mineralisch",
+      "oak_wood": "Holz",
+      "oak_toast": "Röstung und Rauch",
+      "nut": "Nüsse",
+      "sweet": "Süß",
+      "savoury_animal": "Tierisch",
+      "savoury_savoury": "Herzhaft"
+    }
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

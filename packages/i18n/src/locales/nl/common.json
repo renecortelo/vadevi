@@ -90,6 +90,7 @@
       "medium": "Gemiddeld",
       "high": "Hoog"
     },
+    "noSourceValue": "geen gegeven in de bronnen",
     "kind": {
       "still": "stille wijn",
       "sparkling": "mousserende wijn",
@@ -381,7 +382,40 @@
       "name": "Van A tot Z"
     },
     "registerGrapesNoteOther": "Zoals het document van het register zelf ze schrijft; met link waar de bibliotheek zeker weet welke druif het is.",
-    "registerDocumentOther": "Document van het register"
+    "registerDocumentOther": "Document van het register",
+    "aromaFamily": {
+      "fruit": "Fruit",
+      "floral": "Bloemen",
+      "herbal": "Kruiden en groen",
+      "spice": "Specerijen",
+      "earth": "Aarde en mineraal",
+      "oak": "Hout en toast",
+      "nut": "Noten",
+      "sweet": "Zoet",
+      "savoury": "Dierlijk en hartig"
+    },
+    "aromaGroup": {
+      "fruit_red": "Rood fruit",
+      "fruit_black": "Zwart fruit",
+      "fruit_citrus": "Citrusvruchten",
+      "fruit_orchard": "Pitvruchten",
+      "fruit_stone": "Steenvruchten",
+      "fruit_tropical": "Tropisch fruit",
+      "fruit_dried": "Gedroogd en gekookt fruit",
+      "fruit_other": "Ander fruit",
+      "floral": "Bloemen",
+      "herbal_herbs": "Kruiden",
+      "herbal_vegetal": "Groente",
+      "spice": "Specerijen",
+      "earth_earth": "Aarde",
+      "earth_mineral": "Mineraal",
+      "oak_wood": "Hout",
+      "oak_toast": "Toast en rook",
+      "nut": "Noten",
+      "sweet": "Zoet",
+      "savoury_animal": "Dierlijk",
+      "savoury_savoury": "Hartig"
+    }
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

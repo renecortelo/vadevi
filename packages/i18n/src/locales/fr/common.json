@@ -90,6 +90,7 @@
       "medium": "Moyenne",
       "high": "Élevée"
     },
+    "noSourceValue": "pas de donnée dans les sources",
     "kind": {
       "still": "vin tranquille",
       "sparkling": "effervescent",
@@ -381,7 +382,40 @@
       "name": "De A à Z"
     },
     "registerGrapesNoteOther": "Telles que les écrit le document du registre lui-même ; avec un lien, celles dont la bibliothèque sait avec certitude de quel cépage il s'agit.",
-    "registerDocumentOther": "Document du registre"
+    "registerDocumentOther": "Document du registre",
+    "aromaFamily": {
+      "fruit": "Fruits",
+      "floral": "Fleurs",
+      "herbal": "Herbes et végétal",
+      "spice": "Épices",
+      "earth": "Terre et minéral",
+      "oak": "Bois et grillé",
+      "nut": "Fruits à coque",
+      "sweet": "Notes sucrées",
+      "savoury": "Animal et savoureux"
+    },
+    "aromaGroup": {
+      "fruit_red": "Fruits rouges",
+      "fruit_black": "Fruits noirs",
+      "fruit_citrus": "Agrumes",
+      "fruit_orchard": "Fruits à pépins",
+      "fruit_stone": "Fruits à noyau",
+      "fruit_tropical": "Fruits tropicaux",
+      "fruit_dried": "Fruits séchés et confits",
+      "fruit_other": "Autres fruits",
+      "floral": "Fleurs",
+      "herbal_herbs": "Herbes",
+      "herbal_vegetal": "Végétal",
+      "spice": "Épices",
+      "earth_earth": "Terre",
+      "earth_mineral": "Minéral",
+      "oak_wood": "Bois",
+      "oak_toast": "Grillé et fumée",
+      "nut": "Fruits à coque",
+      "sweet": "Notes sucrées",
+      "savoury_animal": "Animal",
+      "savoury_savoury": "Savoureux"
+    }
   },
   "space": {
     "switchLabel": "Espace actif",

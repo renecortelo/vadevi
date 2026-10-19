@@ -35,6 +35,8 @@ export const LibraryGrapeSchema = z
   .object({
     acidity: LibraryLevelSchema.nullable(),
     aromas: z.array(z.string()),
+    /** Each aroma's term in the library's vocabulary, in the same order. */
+    aromaTerms: z.array(z.string()),
     body: LibraryLevelSchema.nullable(),
     color: z.enum(["white", "red", "pink"]).nullable(),
     evidence: z.array(LibraryEvidenceSchema),

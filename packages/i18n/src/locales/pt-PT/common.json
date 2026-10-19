@@ -90,6 +90,7 @@
       "medium": "Média",
       "high": "Alta"
     },
+    "noSourceValue": "sem dado nas fontes",
     "kind": {
       "still": "vinho tranquilo",
       "sparkling": "espumante",
@@ -381,7 +382,40 @@
       "name": "De A a Z"
     },
     "registerGrapesNoteOther": "Como as escreve o documento do próprio registo; com ligação, as que a biblioteca sabe com certeza que casta são.",
-    "registerDocumentOther": "Documento do registo"
+    "registerDocumentOther": "Documento do registo",
+    "aromaFamily": {
+      "fruit": "Fruta",
+      "floral": "Flores",
+      "herbal": "Ervas e vegetal",
+      "spice": "Especiarias",
+      "earth": "Terra e mineral",
+      "oak": "Madeira e tosta",
+      "nut": "Frutos secos",
+      "sweet": "Doce",
+      "savoury": "Animal e sápido"
+    },
+    "aromaGroup": {
+      "fruit_red": "Fruta vermelha",
+      "fruit_black": "Fruta preta",
+      "fruit_citrus": "Citrinos",
+      "fruit_orchard": "Fruta de pevide",
+      "fruit_stone": "Fruta de caroço",
+      "fruit_tropical": "Fruta tropical",
+      "fruit_dried": "Fruta passa e cozida",
+      "fruit_other": "Outras frutas",
+      "floral": "Flores",
+      "herbal_herbs": "Ervas",
+      "herbal_vegetal": "Vegetal",
+      "spice": "Especiarias",
+      "earth_earth": "Terra",
+      "earth_mineral": "Mineral",
+      "oak_wood": "Madeira",
+      "oak_toast": "Tosta e fumo",
+      "nut": "Frutos secos",
+      "sweet": "Doce",
+      "savoury_animal": "Animal",
+      "savoury_savoury": "Sápido"
+    }
   },
   "space": {
     "switchLabel": "Espaço ativo",

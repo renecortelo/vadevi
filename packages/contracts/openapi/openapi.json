@@ -12228,6 +12228,12 @@
               "type": "string"
             }
           },
+          "aromaTerms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "body": {
             "type": "string",
             "nullable": true,
@@ -12473,6 +12479,7 @@
         "required": [
           "acidity",
           "aromas",
+          "aromaTerms",
           "body",
           "color",
           "evidence",

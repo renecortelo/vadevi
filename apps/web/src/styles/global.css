@@ -4429,27 +4429,106 @@ p {
   margin-block-start: var(--space-3);
 }
 
-.library-structure {
+/* A grape's aromas: each with its line drawing over its name, in a grid that
+   wraps on a phone. */
+.aroma-grid {
   display: grid;
-  gap: var(--space-2);
-  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  gap: var(--space-3) var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(4.75rem, 1fr));
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  text-align: center;
+}
+
+.settings-card .aroma-grid li + li {
+  margin-block-start: 0;
+}
+
+.aroma-grid span {
+  display: block;
+  font-size: var(--text-sm);
+  line-height: 1.2;
+}
+
+/* The library's terms are common nouns ("frambuesa"); under a drawing they
+   read as a label. */
+.aroma-grid span::first-letter {
+  text-transform: uppercase;
+}
+
+.aroma-icon {
+  display: block;
+  fill: none;
+  height: 2.75rem;
+  margin: 0 auto var(--space-1);
+  stroke: var(--color-plum);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+  width: 2.75rem;
+}
+
+/* Acidity, tannin and body as three steps: low, medium, high. A value no
+   source gives shows hatched, and says so — never an empty bar. */
+.library-bars {
+  display: grid;
+  gap: var(--space-3);
   margin: 0;
 }
 
-.library-structure div {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-2) var(--space-3);
+.library-bar dt {
+  font-weight: 700;
 }
 
-.library-structure dt {
+.library-bar dd {
   color: var(--color-text-muted);
   font-size: var(--text-sm);
+  margin: 0;
 }
 
-.library-structure dd {
-  font-weight: 700;
-  margin: 0;
+.library-bar__steps {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-block: var(--space-1);
+}
+
+.library-bar__steps i {
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+  height: 0.5rem;
+}
+
+.library-bar__steps i.is-on {
+  background: var(--color-plum);
+}
+
+.library-bar--none .library-bar__steps i {
+  background: repeating-linear-gradient(45deg, var(--color-border) 0 4px, transparent 4px 8px);
+}
+
+/* The grape's colour, as a small round of its skin. */
+.grape-swatch {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px rgb(255 255 255 / 40%);
+  display: inline-block;
+  height: 1rem;
+  margin-inline-end: var(--space-2);
+  vertical-align: -0.15rem;
+  width: 1rem;
+}
+
+.grape-swatch--red {
+  background: radial-gradient(circle at 35% 35%, #8a2a4a, #3b0d2a);
+}
+
+.grape-swatch--white {
+  background: radial-gradient(circle at 35% 35%, #e3e7a0, #a5b04a);
+}
+
+.grape-swatch--pink {
+  background: radial-gradient(circle at 35% 35%, #e3a0a8, #a85868);
 }
 
 .library-evidence summary {

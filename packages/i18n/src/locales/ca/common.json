@@ -90,6 +90,7 @@
       "medium": "Mitjana",
       "high": "Alta"
     },
+    "noSourceValue": "sense dada a les fonts",
     "kind": {
       "still": "vi tranquil",
       "sparkling": "escumós",
@@ -381,7 +382,40 @@
       "name": "De la A a la Z"
     },
     "registerGrapesNoteOther": "Com les escriu el document del mateix registre; amb enllaç, les que la biblioteca sap amb certesa quin raïm són.",
-    "registerDocumentOther": "Document del registre"
+    "registerDocumentOther": "Document del registre",
+    "aromaFamily": {
+      "fruit": "Fruita",
+      "floral": "Flors",
+      "herbal": "Herbes i vegetal",
+      "spice": "Espècies",
+      "earth": "Terra i mineral",
+      "oak": "Fusta i torrat",
+      "nut": "Fruits secs",
+      "sweet": "Dolç",
+      "savoury": "Animal i saborós"
+    },
+    "aromaGroup": {
+      "fruit_red": "Fruita vermella",
+      "fruit_black": "Fruita negra",
+      "fruit_citrus": "Cítrics",
+      "fruit_orchard": "Fruita de llavor",
+      "fruit_stone": "Fruita de pinyol",
+      "fruit_tropical": "Fruita tropical",
+      "fruit_dried": "Fruita assecada i confitada",
+      "fruit_other": "Altres fruites",
+      "floral": "Flors",
+      "herbal_herbs": "Herbes",
+      "herbal_vegetal": "Vegetal",
+      "spice": "Espècies",
+      "earth_earth": "Terra",
+      "earth_mineral": "Mineral",
+      "oak_wood": "Fusta",
+      "oak_toast": "Torrat i fum",
+      "nut": "Fruits secs",
+      "sweet": "Dolç",
+      "savoury_animal": "Animal",
+      "savoury_savoury": "Saborós"
+    }
   },
   "space": {
     "switchLabel": "Espai actiu",

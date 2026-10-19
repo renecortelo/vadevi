@@ -90,6 +90,7 @@
       "medium": "Medium",
       "high": "High"
     },
+    "noSourceValue": "no figure in the sources",
     "kind": {
       "still": "still wine",
       "sparkling": "sparkling wine",
@@ -381,7 +382,40 @@
       "name": "A to Z"
     },
     "registerGrapesNoteOther": "As the register's own document writes them; linked where the library knows for certain which grape it is.",
-    "registerDocumentOther": "The register's document"
+    "registerDocumentOther": "The register's document",
+    "aromaFamily": {
+      "fruit": "Fruit",
+      "floral": "Flowers",
+      "herbal": "Herbs & greens",
+      "spice": "Spice",
+      "earth": "Earth & mineral",
+      "oak": "Oak & toast",
+      "nut": "Nuts",
+      "sweet": "Sweet",
+      "savoury": "Animal & savoury"
+    },
+    "aromaGroup": {
+      "fruit_red": "Red fruit",
+      "fruit_black": "Black fruit",
+      "fruit_citrus": "Citrus",
+      "fruit_orchard": "Orchard fruit",
+      "fruit_stone": "Stone fruit",
+      "fruit_tropical": "Tropical fruit",
+      "fruit_dried": "Dried & cooked fruit",
+      "fruit_other": "Other fruit",
+      "floral": "Flowers",
+      "herbal_herbs": "Herbs",
+      "herbal_vegetal": "Vegetal",
+      "spice": "Spice",
+      "earth_earth": "Earth",
+      "earth_mineral": "Mineral",
+      "oak_wood": "Wood",
+      "oak_toast": "Toast & smoke",
+      "nut": "Nuts",
+      "sweet": "Sweet",
+      "savoury_animal": "Animal",
+      "savoury_savoury": "Savoury"
+    }
   },
   "space": {
     "switchLabel": "Active Space",

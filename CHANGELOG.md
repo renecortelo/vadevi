@@ -19,6 +19,21 @@ has the reasons.
   reached from outside, it leads to the section's first page. The library
   keeps its own trail from card to card.
 
+### The library
+
+- **A grape at a glance**: a grape's card now draws its aromas — raspberry,
+  white pepper, leather — each over its name in your language, and shows
+  acidity, tannin and body as three steps; a value no source gives is marked
+  «no figure in the sources» instead of left blank. A small round shows the
+  grape's colour. The drawings are Va de Vi's own, in one line style; most
+  aromas take their group's drawing (red fruit, citrus, flowers), so a wheel
+  of them will not be a crowd.
+- **One aroma vocabulary**: the library's 123 aroma terms now sit in nine
+  families and twenty groups (`packages/i18n/src/ontology/aromas.ts`),
+  reusing the tasting ontology's codes where it has the aroma — the base for
+  the aroma wheel and the tasting picker to come. The grape API adds
+  `aromaTerms`, each aroma's term in the same order as `aromas`.
+
 ### Tastings
 
 - **Where a tasting came from**: a note first recorded by voice (voice

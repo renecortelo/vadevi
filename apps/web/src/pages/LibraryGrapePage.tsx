@@ -1,10 +1,11 @@
 import type { LibraryGrape } from "@vadevi/contracts";
-import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
+import { aromaFromTerm, resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { AromaIcon } from "../library/AromaIcon";
 import { AtlasMap } from "../library/AtlasMap";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
@@ -84,7 +85,9 @@ export function LibraryGrapePage() {
     );
   }
 
-  const structure = (["acidity", "tannin", "body"] as const).filter((axis) => grape[axis] !== null);
+  const axes = ["acidity", "tannin", "body"] as const;
+  const structure = axes.filter((axis) => grape[axis] !== null);
+  const steps = ["low", "medium", "high"] as const;
   const fromSource = grape.pairings;
   const suggested = grape.suggestedPairings;
   const origin = country(grape.originCountryCode);
@@ -102,6 +105,9 @@ export function LibraryGrapePage() {
           <p className="eyebrow">{t("library.eyebrow")}</p>
           <h1>{grape.name}</h1>
           <p>
+            {grape.color === null ? null : (
+              <span aria-hidden="true" className={`grape-swatch grape-swatch--${grape.color}`} />
+            )}
             {[
               grape.color === null ? null : t(`library.color.${grape.color}`),
               origin === null
@@ -159,25 +165,48 @@ export function LibraryGrapePage() {
       {structure.length === 0 && grape.aromas.length === 0 ? null : (
         <section aria-labelledby="library-profile" className="settings-card">
           <h2 id="library-profile">{t("library.profileTitle")}</h2>
-          {structure.length === 0 ? null : (
-            <dl className="library-structure">
-              {structure.map((axis) => (
-                <div key={axis}>
-                  <dt>{t(`library.axis.${axis}`)}</dt>
-                  <dd>{t(`library.level.${grape[axis]!}`)}</dd>
-                </div>
-              ))}
-            </dl>
-          )}
           {grape.aromas.length === 0 ? null : (
             <>
               <h3>{t("library.aromas")}</h3>
-              <ul className="library-chips">
-                {grape.aromas.map((aroma) => (
-                  <li key={aroma}>{aroma}</li>
-                ))}
+              {/* Each aroma with its drawing over its name in the reader's
+                  language. */}
+              <ul className="aroma-grid">
+                {grape.aromas.map((aroma, index) => {
+                  const term = grape.aromaTerms[index];
+                  const descriptor = term === undefined ? null : aromaFromTerm(term);
+                  return (
+                    <li key={term ?? aroma}>
+                      {descriptor === null ? null : <AromaIcon descriptor={descriptor} />}
+                      <span>{aroma}</span>
+                    </li>
+                  );
+                })}
               </ul>
             </>
+          )}
+          {structure.length === 0 ? null : (
+            <dl className="library-bars">
+              {axes.map((axis) => {
+                const level = grape[axis];
+                const filled = level === null ? 0 : steps.indexOf(level) + 1;
+                return (
+                  <div
+                    className={level === null ? "library-bar library-bar--none" : "library-bar"}
+                    key={axis}
+                  >
+                    <dt>{t(`library.axis.${axis}`)}</dt>
+                    <dd>
+                      <span aria-hidden="true" className="library-bar__steps">
+                        {steps.map((step, index) => (
+                          <i className={index < filled ? "is-on" : undefined} key={step} />
+                        ))}
+                      </span>
+                      {level === null ? t("library.noSourceValue") : t(`library.level.${level}`)}
+                    </dd>
+                  </div>
+                );
+              })}
+            </dl>
           )}
         </section>
       )}

@@ -1,0 +1,44 @@
+import AxeBuilder from "@axe-core/playwright";
+
+import { expect, test } from "./fixtures/server";
+
+import { completeOnboarding, signIn } from "./fixtures/sign-in";
+
+/**
+ * A grape's card at a glance: its aromas drawn and named in the reader's
+ * language, and acidity, tannin and body as three steps — a value no source
+ * gives says so instead of showing an empty bar. Grenache's sources give low
+ * acidity and tannin and no body.
+ */
+test("a grape card shows its aromas and its structure at a glance", async ({ page }) => {
+  test.setTimeout(120_000);
+  // A phone's width: the card is read in the cellar, glass in hand.
+  await page.setViewportSize({ height: 844, width: 390 });
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library/grapes/grenache");
+  await page.locator("#interface-locale").selectOption("es");
+
+  const aromas = page.locator(".aroma-grid li");
+  await expect(aromas.first()).toContainText("frambuesa", { timeout: 15_000 });
+  await expect(aromas).toContainText([
+    "frambuesa",
+    "fresa",
+    "pimienta blanca",
+    "cuero",
+    "alquitrán",
+  ]);
+  await expect(page.locator(".aroma-grid .aroma-icon")).toHaveCount(5);
+
+  const bars = page.locator(".library-bar");
+  await expect(bars).toHaveCount(3);
+  await expect(bars.nth(0)).toContainText("Baja");
+  await expect(bars.nth(0).locator("i.is-on")).toHaveCount(1);
+  await expect(bars.nth(2)).toHaveClass(/library-bar--none/);
+  await expect(bars.nth(2)).toContainText("sin dato en las fuentes");
+
+  const results = await new AxeBuilder({ page }).include(".library-page").analyze();
+  expect(results.violations).toEqual([]);
+
+  await page.screenshot({ fullPage: true, path: test.info().outputPath("grape-card.png") });
+});

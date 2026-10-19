@@ -90,6 +90,7 @@
       "medium": "Media",
       "high": "Alta"
     },
+    "noSourceValue": "nessun dato nelle fonti",
     "kind": {
       "still": "vino fermo",
       "sparkling": "spumante",
@@ -381,7 +382,40 @@
       "name": "Dalla A alla Z"
     },
     "registerGrapesNoteOther": "Come le scrive il documento del registro stesso; con link, quelle di cui la biblioteca sa con certezza di che vitigno si tratta.",
-    "registerDocumentOther": "Documento del registro"
+    "registerDocumentOther": "Documento del registro",
+    "aromaFamily": {
+      "fruit": "Frutta",
+      "floral": "Fiori",
+      "herbal": "Erbe e vegetale",
+      "spice": "Spezie",
+      "earth": "Terra e minerale",
+      "oak": "Legno e tostato",
+      "nut": "Frutta secca",
+      "sweet": "Dolce",
+      "savoury": "Animale e sapido"
+    },
+    "aromaGroup": {
+      "fruit_red": "Frutti rossi",
+      "fruit_black": "Frutti neri",
+      "fruit_citrus": "Agrumi",
+      "fruit_orchard": "Frutta a granella",
+      "fruit_stone": "Frutta a nocciolo",
+      "fruit_tropical": "Frutta tropicale",
+      "fruit_dried": "Frutta essiccata e cotta",
+      "fruit_other": "Altra frutta",
+      "floral": "Fiori",
+      "herbal_herbs": "Erbe",
+      "herbal_vegetal": "Vegetale",
+      "spice": "Spezie",
+      "earth_earth": "Terra",
+      "earth_mineral": "Minerale",
+      "oak_wood": "Legno",
+      "oak_toast": "Tostato e fumo",
+      "nut": "Frutta secca",
+      "sweet": "Dolce",
+      "savoury_animal": "Animale",
+      "savoury_savoury": "Sapido"
+    }
   },
   "space": {
     "switchLabel": "Spazio attivo",
