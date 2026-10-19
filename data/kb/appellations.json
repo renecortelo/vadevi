@@ -6665,15 +6665,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 82.55,
-        "quote": "Superficies en production (ha): 82.55"
+        "amount": 116.94,
+        "quote": "Superficies en production (ha): 116.94"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1847,
-        "quote": "Volumes totaux produits (hl): 1847"
+        "amount": 2560,
+        "quote": "Volumes totaux produits (hl): 2560"
       }
     }
   },
@@ -8796,15 +8796,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 9568.6,
-        "quote": "Superficies en production (ha): 9568.6"
+        "amount": 10195.85,
+        "quote": "Superficies en production (ha): 10195.85"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 553024,
-        "quote": "Volumes totaux produits (hl): 553024"
+        "amount": 577390,
+        "quote": "Volumes totaux produits (hl): 577390"
       }
     }
   },
@@ -8953,16 +8953,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 16.3,
-        "quote": "superficieplantée = 16,3 hectares (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Altenberg-de-bergbieten",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 12.21,
+        "quote": "Superficies en production (ha): 12.21"
       },
       "production": {
-        "amount": 809,
-        "quote": "volproduction = 809 [[Litre#Conversion|hectolitres]] (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Altenberg-de-bergbieten",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 528,
+        "quote": "Volumes totaux produits (hl): 528"
       }
     }
   },
@@ -10486,6 +10488,22 @@
         4.9,
         2
       ]
+    },
+    "figures": {
+      "planted": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 9.93,
+        "quote": "Superficies en production (ha): 9.93"
+      },
+      "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 312,
+        "quote": "Volumes totaux produits (hl): 312"
+      }
     }
   },
   {
@@ -11670,6 +11688,22 @@
         5.4,
         2.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 3.39,
+        "quote": "Superficies en production (ha): 3.39"
+      },
+      "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 123,
+        "quote": "Volumes totaux produits (hl): 123"
+      }
     }
   },
   {
@@ -15690,15 +15724,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 13.3,
-        "quote": "Superficies en production (ha): 13.3"
+        "amount": 17.52,
+        "quote": "Superficies en production (ha): 17.52"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 485,
-        "quote": "Volumes totaux produits (hl): 485"
+        "amount": 613,
+        "quote": "Volumes totaux produits (hl): 613"
       }
     }
   },
@@ -16286,15 +16320,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 24.83,
-        "quote": "Superficies en production (ha): 24.83"
+        "amount": 26.94,
+        "quote": "Superficies en production (ha): 26.94"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1052,
-        "quote": "Volumes totaux produits (hl): 1052"
+        "amount": 1134,
+        "quote": "Volumes totaux produits (hl): 1134"
       }
     }
   },
@@ -18979,15 +19013,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1327.22,
-        "quote": "Superficies en production (ha): 1327.22"
+        "amount": 1415.14,
+        "quote": "Superficies en production (ha): 1415.14"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 57443,
-        "quote": "Volumes totaux produits (hl): 57443"
+        "amount": 61965,
+        "quote": "Volumes totaux produits (hl): 61965"
       }
     }
   },
@@ -19106,6 +19140,22 @@
         8.4,
         5.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 57.02,
+        "quote": "Superficies en production (ha): 57.02"
+      },
+      "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1787,
+        "quote": "Volumes totaux produits (hl): 1787"
+      }
     }
   },
   {
@@ -20008,15 +20058,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 714.11,
-        "quote": "Superficies en production (ha): 714.11"
+        "amount": 803.95,
+        "quote": "Superficies en production (ha): 803.95"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 14369,
-        "quote": "Volumes totaux produits (hl): 14369"
+        "amount": 17117,
+        "quote": "Volumes totaux produits (hl): 17117"
       }
     }
   },
@@ -24051,15 +24101,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 48.75,
-        "quote": "Superficies en production (ha): 48.75"
+        "amount": 136.36,
+        "quote": "Superficies en production (ha): 136.36"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1855,
-        "quote": "Volumes totaux produits (hl): 1855"
+        "amount": 4296,
+        "quote": "Volumes totaux produits (hl): 4296"
       }
     }
   },
@@ -28720,15 +28770,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1241.19,
-        "quote": "Superficies en production (ha): 1241.19"
+        "amount": 1617.26,
+        "quote": "Superficies en production (ha): 1617.26"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 40491,
-        "quote": "Volumes totaux produits (hl): 40491"
+        "amount": 51309,
+        "quote": "Volumes totaux produits (hl): 51309"
       }
     }
   },
@@ -29123,15 +29173,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 481.19,
-        "quote": "Superficies en production (ha): 481.19"
+        "amount": 598.63,
+        "quote": "Superficies en production (ha): 598.63"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 5781,
-        "quote": "Volumes totaux produits (hl): 5781"
+        "amount": 7098,
+        "quote": "Volumes totaux produits (hl): 7098"
       }
     }
   },
@@ -32552,15 +32602,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 3453.23,
-        "quote": "Superficies en production (ha): 3453.23"
+        "amount": 6401.62,
+        "quote": "Superficies en production (ha): 6401.62"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 149098,
-        "quote": "Volumes totaux produits (hl): 149098"
+        "amount": 254334,
+        "quote": "Volumes totaux produits (hl): 254334"
       }
     }
   },
@@ -32914,15 +32964,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 100.31,
-        "quote": "Superficies en production (ha): 100.31"
+        "amount": 406.01,
+        "quote": "Superficies en production (ha): 406.01"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2442,
-        "quote": "Volumes totaux produits (hl): 2442"
+        "amount": 10347,
+        "quote": "Volumes totaux produits (hl): 10347"
       }
     }
   },
@@ -34014,16 +34064,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 55,
-        "quote": "superficieplantée = 55 ha (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Bellet_(AOC)",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 55.15,
+        "quote": "Superficies en production (ha): 55.15"
       },
       "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
         "amount": 1099,
-        "quote": "volproduction = {{unité|1099 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Bellet_(AOC)",
-        "year": "2024"
+        "quote": "Volumes totaux produits (hl): 1099"
       }
     }
   },
@@ -38426,16 +38478,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 4.46,
-        "quote": "superficieplantée = 4,46 ha, dont 4,1 en {{1er|cru}} (en 2022)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Blagny_(AOC)",
-        "year": "2022"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 4.11,
+        "quote": "Superficies en production (ha): 4.11"
       },
       "production": {
-        "amount": 145,
-        "quote": "volproduction = 145 hl, dont 132 de {{1ers|crus}} (moyenne 2017-2021)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Blagny_(AOC)",
-        "year": "moyenne 2017-2021"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 88,
+        "quote": "Volumes totaux produits (hl): 88"
       }
     }
   },
@@ -40069,15 +40123,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 45563.37,
-        "quote": "Superficies en production (ha): 45563.37"
+        "amount": 46749.22,
+        "quote": "Superficies en production (ha): 46749.22"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1714292,
-        "quote": "Volumes totaux produits (hl): 1714292"
+        "amount": 1772388,
+        "quote": "Volumes totaux produits (hl): 1772388"
       }
     }
   },
@@ -41017,16 +41071,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 2960,
-        "quote": "superficieplantée = {{unité|2960 [[hectare]]s}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/C%C3%B4tes-de-bourg",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 2532.13,
+        "quote": "Superficies en production (ha): 2532.13"
       },
       "production": {
-        "amount": 120493,
-        "quote": "volproduction = {{unité|120493 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/C%C3%B4tes-de-bourg",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 76855,
+        "quote": "Volumes totaux produits (hl): 76855"
       }
     }
   },
@@ -41198,15 +41254,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2961.37,
-        "quote": "Superficies en production (ha): 2961.37"
+        "amount": 6629.59,
+        "quote": "Superficies en production (ha): 6629.59"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 101769,
-        "quote": "Volumes totaux produits (hl): 101769"
+        "amount": 201584,
+        "quote": "Volumes totaux produits (hl): 201584"
       }
     }
   },
@@ -41942,6 +41998,22 @@
         10.6,
         7.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 259.85,
+        "quote": "Superficies en production (ha): 259.85"
+      },
+      "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 7136,
+        "quote": "Volumes totaux produits (hl): 7136"
+      }
     }
   },
   {
@@ -43437,16 +43509,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 1196,
-        "quote": "superficieplantée = {{unité|1196 [[hectare]]s}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Brouilly",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1205.89,
+        "quote": "Superficies en production (ha): 1205.89"
       },
       "production": {
-        "amount": 61704,
-        "quote": "volproduction = {{unité|61704 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Brouilly",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 51946,
+        "quote": "Volumes totaux produits (hl): 51946"
       }
     }
   },
@@ -44064,15 +44138,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 177.14,
-        "quote": "Superficies en production (ha): 177.14"
+        "amount": 414.58,
+        "quote": "Superficies en production (ha): 414.58"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 4111,
-        "quote": "Volumes totaux produits (hl): 4111"
+        "amount": 11960,
+        "quote": "Volumes totaux produits (hl): 11960"
       }
     }
   },
@@ -57507,15 +57581,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 3714.02,
-        "quote": "Superficies en production (ha): 3714.02"
+        "amount": 4479.17,
+        "quote": "Superficies en production (ha): 4479.17"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 132862,
-        "quote": "Volumes totaux produits (hl): 132862"
+        "amount": 154551,
+        "quote": "Volumes totaux produits (hl): 154551"
       }
     }
   },
@@ -57641,16 +57715,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 97,
-        "quote": "superficieplantée = 97 ha (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablis_grand_cru",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 92.61,
+        "quote": "Superficies en production (ha): 92.61"
       },
       "production": {
-        "amount": 5353,
-        "quote": "volproduction = {{unité|5353 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablis_grand_cru",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1636,
+        "quote": "Volumes totaux produits (hl): 1636"
       }
     }
   },
@@ -58098,15 +58174,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 91.68,
-        "quote": "Superficies en production (ha): 91.68"
+        "amount": 148.99,
+        "quote": "Superficies en production (ha): 148.99"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1526,
-        "quote": "Volumes totaux produits (hl): 1526"
+        "amount": 2628,
+        "quote": "Volumes totaux produits (hl): 2628"
       }
     }
   },
@@ -58279,16 +58355,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 31779,
-        "quote": "superficieplantée = {{unité|31779 [[hectare]]s}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Vignoble_de_Champagne",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 31654.02,
+        "quote": "Superficies en production (ha): 31654.02"
       },
       "production": {
-        "amount": 3162000,
-        "quote": "volproduction = {{unité|3162000 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Vignoble_de_Champagne",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1697617,
+        "quote": "Volumes totaux produits (hl): 1697617"
       }
     }
   },
@@ -59077,15 +59155,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 162.06,
-        "quote": "Superficies en production (ha): 162.06"
+        "amount": 307.14,
+        "quote": "Superficies en production (ha): 307.14"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 6585,
-        "quote": "Volumes totaux produits (hl): 6585"
+        "amount": 12249,
+        "quote": "Volumes totaux produits (hl): 12249"
       }
     }
   },
@@ -59987,16 +60065,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 278,
-        "quote": "superficieplantée = 278 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Chiroubles_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 275.45,
+        "quote": "Superficies en production (ha): 275.45"
       },
       "production": {
-        "amount": 12545,
-        "quote": "volproduction = {{unité|12545 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Chiroubles_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 9611,
+        "quote": "Volumes totaux produits (hl): 9611"
       }
     }
   },
@@ -60136,15 +60216,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 14.62,
-        "quote": "Superficies en production (ha): 14.62"
+        "amount": 139.22,
+        "quote": "Superficies en production (ha): 139.22"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 619,
-        "quote": "Volumes totaux produits (hl): 619"
+        "amount": 3984,
+        "quote": "Volumes totaux produits (hl): 3984"
       }
     }
   },
@@ -60384,16 +60464,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 52,
-        "quote": "superficieplantée = 52 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau-chalon_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 54.07,
+        "quote": "Superficies en production (ha): 54.07"
       },
       "production": {
-        "amount": 2243,
-        "quote": "volproduction = {{unité|2243 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau-chalon_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 649,
+        "quote": "Volumes totaux produits (hl): 649"
       }
     }
   },
@@ -61219,16 +61301,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 230,
-        "quote": "superficieplantée = 230 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Ch%C3%A9nas_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 228.63,
+        "quote": "Superficies en production (ha): 228.63"
       },
       "production": {
-        "amount": 10558,
-        "quote": "volproduction = {{unité|10558 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Ch%C3%A9nas_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 6959,
+        "quote": "Volumes totaux produits (hl): 6959"
       }
     }
   },
@@ -63657,16 +63741,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 49.1987,
-        "quote": "superficieplantée = 49,1987 ha (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Clos-de-vougeot",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 48.09,
+        "quote": "Superficies en production (ha): 48.09"
       },
       "production": {
-        "amount": 2206,
-        "quote": "volproduction = {{unité|2206 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Clos-de-vougeot",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 738,
+        "quote": "Volumes totaux produits (hl): 738"
       }
     }
   },
@@ -76618,6 +76704,22 @@
         6.6,
         4.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 2.59,
+        "quote": "Superficies en production (ha): 2.59"
+      },
+      "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 16,
+        "quote": "Volumes totaux produits (hl): 16"
+      }
     }
   },
   {
@@ -76815,16 +76917,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 1567,
-        "quote": "superficieplantée = {{unité|1567 [[hectare]]s}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Corse_(AOC)",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 2333.25,
+        "quote": "Superficies en production (ha): 2333.25"
       },
       "production": {
-        "amount": 69826,
-        "quote": "volproduction = {{unité|69826 [[Litre#Conversion|hectolitres]]}}",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Corse_(AOC)",
-        "year": null
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 95820,
+        "quote": "Volumes totaux produits (hl): 95820"
       }
     }
   },
@@ -80342,16 +80446,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 145,
-        "quote": "superficieplantée = 145 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Coteaux-d'ancenis",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 149.65,
+        "quote": "Superficies en production (ha): 149.65"
       },
       "production": {
-        "amount": 7545,
-        "quote": "volproduction = {{unité|7545 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Coteaux-d'ancenis",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 5578,
+        "quote": "Volumes totaux produits (hl): 5578"
       }
     }
   },
@@ -85293,6 +85399,22 @@
         8.4,
         5.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 179.61,
+        "quote": "Superficies en production (ha): 179.61"
+      },
+      "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 5419,
+        "quote": "Volumes totaux produits (hl): 5419"
+      }
     }
   },
   {
@@ -85419,15 +85541,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 71.8,
-        "quote": "Superficies en production (ha): 71.8"
+        "amount": 72.86,
+        "quote": "Superficies en production (ha): 72.86"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2048,
-        "quote": "Volumes totaux produits (hl): 2048"
+        "amount": 2088,
+        "quote": "Volumes totaux produits (hl): 2088"
       }
     }
   },
@@ -85877,16 +85999,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 2069,
-        "quote": "superficieplantée = {{unité|2069 [[hectare]]s}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Crozes-hermitage_(AOC)",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 2069.15,
+        "quote": "Superficies en production (ha): 2069.15"
       },
       "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
         "amount": 86139,
-        "quote": "volproduction = {{unité|86139 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Crozes-hermitage_(AOC)",
-        "year": "2024"
+        "quote": "Volumes totaux produits (hl): 86139"
       }
     }
   },
@@ -86043,16 +86167,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 3673,
-        "quote": "superficieplantée = {{unité|3673 [[hectare]]s}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_d'Alsace",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 4567.32,
+        "quote": "Superficies en production (ha): 4567.32"
       },
       "production": {
-        "amount": 290219,
-        "quote": "volproduction = {{unité|290219 hl}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_d'Alsace",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 336601,
+        "quote": "Volumes totaux produits (hl): 336601"
       }
     }
   },
@@ -86236,16 +86362,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 2007,
-        "quote": "superficieplantée = {{unité|2007 [[hectare]]s}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Bordeaux",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 2008.8,
+        "quote": "Superficies en production (ha): 2008.8"
       },
       "production": {
-        "amount": 137957,
-        "quote": "volproduction = {{unité|137957 [[Litre#Conversion|hectolitres]]}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Bordeaux",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 137958,
+        "quote": "Volumes totaux produits (hl): 137958"
       }
     }
   },
@@ -86406,16 +86534,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 3204,
-        "quote": "superficieplantée = {{unité|3204 [[hectare]]s}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Bourgogne",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 3464.62,
+        "quote": "Superficies en production (ha): 3464.62"
       },
       "production": {
-        "amount": 251585,
-        "quote": "volproduction = {{unité|251585 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Bourgogne",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 194342,
+        "quote": "Volumes totaux produits (hl): 194342"
       }
     }
   },
@@ -86551,16 +86681,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 65.9,
-        "quote": "superficieplantée = 65,9 hectares (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Die",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 65.94,
+        "quote": "Superficies en production (ha): 65.94"
       },
       "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
         "amount": 3038,
-        "quote": "volproduction = {{unité|3038 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Die",
-        "year": "2024"
+        "quote": "Volumes totaux produits (hl): 3038"
       }
     }
   },
@@ -86700,16 +86832,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 1176,
-        "quote": "superficieplantée = {{unité|1176 [[hectare]]s}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Limoux",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1176.49,
+        "quote": "Superficies en production (ha): 1176.49"
       },
       "production": {
-        "amount": 49821,
-        "quote": "volproduction = {{unité|49821 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Limoux",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 49822,
+        "quote": "Volumes totaux produits (hl): 49822"
       }
     }
   },
@@ -86869,16 +87003,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 3659,
-        "quote": "superficieplantée = {{unité|3659 ha}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Loire",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 3623.43,
+        "quote": "Superficies en production (ha): 3623.43"
       },
       "production": {
-        "amount": 271376,
-        "quote": "volproduction = {{unité|271376 hectolitres}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_de_Loire",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 215271,
+        "quote": "Volumes totaux produits (hl): 215271"
       }
     }
   },
@@ -87157,16 +87293,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 428,
-        "quote": "superficieplantée = 428 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_du_Jura",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 262.12,
+        "quote": "Superficies en production (ha): 262.12"
       },
       "production": {
-        "amount": 29315,
-        "quote": "volproduction = {{unité|29315 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Cr%C3%A9mant_du_Jura",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 5151,
+        "quote": "Volumes totaux produits (hl): 5151"
       }
     }
   },
@@ -90552,16 +90690,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 301,
-        "quote": "superficieplantée = 301 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/C%C3%B4te-de-brouilly",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 311.18,
+        "quote": "Superficies en production (ha): 311.18"
       },
       "production": {
-        "amount": 15288,
-        "quote": "volproduction = {{unité|15288 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/C%C3%B4te-de-brouilly",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 13056,
+        "quote": "Volumes totaux produits (hl): 13056"
       }
     }
   },
@@ -90699,16 +90839,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 160,
-        "quote": "superficieplantée = 160 ha (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/C%C3%B4te-de-nuits-villages",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 139.78,
+        "quote": "Superficies en production (ha): 139.78"
       },
       "production": {
-        "amount": 8637,
-        "quote": "volproduction = {{unité|8637 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/C%C3%B4te-de-nuits-villages",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 2859,
+        "quote": "Volumes totaux produits (hl): 2859"
       }
     }
   },
@@ -91302,15 +91444,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 175.38,
-        "quote": "Superficies en production (ha): 175.38"
+        "amount": 256.55,
+        "quote": "Superficies en production (ha): 256.55"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 4595,
-        "quote": "Volumes totaux produits (hl): 4595"
+        "amount": 6338,
+        "quote": "Volumes totaux produits (hl): 6338"
       }
     }
   },
@@ -91793,15 +91935,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 800.7,
-        "quote": "Superficies en production (ha): 800.7"
+        "amount": 8597.88,
+        "quote": "Superficies en production (ha): 8597.88"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 26811,
-        "quote": "Volumes totaux produits (hl): 26811"
+        "amount": 280950,
+        "quote": "Volumes totaux produits (hl): 280950"
       }
     }
   },
@@ -91942,16 +92084,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 20,
-        "quote": "superficieplantée = 20 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/C%C3%B4tes-de-bordeaux-saint-macaire",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 17.17,
+        "quote": "Superficies en production (ha): 17.17"
       },
       "production": {
-        "amount": 568,
-        "quote": "volproduction = 568 [[Litre#Conversion|hectolitres]] (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/C%C3%B4tes-de-bordeaux-saint-macaire",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 413,
+        "quote": "Volumes totaux produits (hl): 413"
       }
     }
   },
@@ -93095,15 +93239,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 17575.73,
-        "quote": "Superficies en production (ha): 17575.73"
+        "amount": 19874.41,
+        "quote": "Superficies en production (ha): 19874.41"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 738989,
-        "quote": "Volumes totaux produits (hl): 738989"
+        "amount": 830135,
+        "quote": "Volumes totaux produits (hl): 830135"
       }
     }
   },
@@ -94970,15 +95114,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 612.21,
-        "quote": "Superficies en production (ha): 612.21"
+        "amount": 616.69,
+        "quote": "Superficies en production (ha): 616.69"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 7031,
-        "quote": "Volumes totaux produits (hl): 7031"
+        "amount": 7057,
+        "quote": "Volumes totaux produits (hl): 7057"
       }
     }
   },
@@ -96037,15 +96181,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 3181.5,
-        "quote": "Superficies en production (ha): 3181.5"
+        "amount": 8133.45,
+        "quote": "Superficies en production (ha): 8133.45"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 98102,
-        "quote": "Volumes totaux produits (hl): 98102"
+        "amount": 253713,
+        "quote": "Volumes totaux produits (hl): 253713"
       }
     }
   },
@@ -108851,15 +108995,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 10.99,
-        "quote": "Superficies en production (ha): 10.99"
+        "amount": 16.54,
+        "quote": "Superficies en production (ha): 16.54"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 35,
-        "quote": "Volumes totaux produits (hl): 35"
+        "amount": 71,
+        "quote": "Volumes totaux produits (hl): 71"
       }
     }
   },
@@ -109023,15 +109167,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1401.04,
-        "quote": "Superficies en production (ha): 1401.04"
+        "amount": 1446.45,
+        "quote": "Superficies en production (ha): 1446.45"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 67366,
-        "quote": "Volumes totaux produits (hl): 67366"
+        "amount": 69574,
+        "quote": "Volumes totaux produits (hl): 69574"
       }
     }
   },
@@ -112437,16 +112581,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 337,
-        "quote": "superficieplantée = 337 [[hectare]]s (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Fiefs-vend%C3%A9ens",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 256.15,
+        "quote": "Superficies en production (ha): 256.15"
       },
       "production": {
-        "amount": 30000,
-        "quote": "volproduction = {{unité|30000 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2012)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Fiefs-vend%C3%A9ens",
-        "year": "2012"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 6922,
+        "quote": "Volumes totaux produits (hl): 6922"
       }
     }
   },
@@ -112893,15 +113039,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 112.32,
-        "quote": "Superficies en production (ha): 112.32"
+        "amount": 130.1,
+        "quote": "Superficies en production (ha): 130.1"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2585,
-        "quote": "Volumes totaux produits (hl): 2585"
+        "amount": 2958,
+        "quote": "Volumes totaux produits (hl): 2958"
       }
     }
   },
@@ -113043,16 +113189,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 799,
-        "quote": "superficieplantée = 799 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Fleurie_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 770.39,
+        "quote": "Superficies en production (ha): 770.39"
       },
       "production": {
-        "amount": 39251,
-        "quote": "volproduction = {{unité|39251 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Fleurie_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 28790,
+        "quote": "Volumes totaux produits (hl): 28790"
       }
     }
   },
@@ -118662,15 +118810,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2115.78,
-        "quote": "Superficies en production (ha): 2115.78"
+        "amount": 2308.19,
+        "quote": "Superficies en production (ha): 2308.19"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 85414,
-        "quote": "Volumes totaux produits (hl): 85414"
+        "amount": 92783,
+        "quote": "Volumes totaux produits (hl): 92783"
       }
     }
   },
@@ -121636,15 +121784,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 330.17,
-        "quote": "Superficies en production (ha): 330.17"
+        "amount": 409.34,
+        "quote": "Superficies en production (ha): 409.34"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 6620,
-        "quote": "Volumes totaux produits (hl): 6620"
+        "amount": 8089,
+        "quote": "Volumes totaux produits (hl): 8089"
       }
     }
   },
@@ -122475,15 +122623,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 172.86,
-        "quote": "Superficies en production (ha): 172.86"
+        "amount": 316.71,
+        "quote": "Superficies en production (ha): 316.71"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 6562,
-        "quote": "Volumes totaux produits (hl): 6562"
+        "amount": 11650,
+        "quote": "Volumes totaux produits (hl): 11650"
       }
     }
   },
@@ -129365,16 +129513,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 135,
-        "quote": "superficieplantée = 135 [[hectare]]s (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Hermitage_(AOC)",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 135.89,
+        "quote": "Superficies en production (ha): 135.89"
       },
       "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
         "amount": 3888,
-        "quote": "volproduction = {{unité|3888 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Hermitage_(AOC)",
-        "year": "2024"
+        "quote": "Volumes totaux produits (hl): 3888"
       }
     }
   },
@@ -134536,16 +134686,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 537,
-        "quote": "superficieplantée = 537 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Juli%C3%A9nas_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 520.41,
+        "quote": "Superficies en production (ha): 520.41"
       },
       "production": {
-        "amount": 25556,
-        "quote": "volproduction = {{unité|25556 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Juli%C3%A9nas_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 19305,
+        "quote": "Volumes totaux produits (hl): 19305"
       }
     }
   },
@@ -134906,15 +135058,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 944.56,
-        "quote": "Superficies en production (ha): 944.56"
+        "amount": 1367.53,
+        "quote": "Superficies en production (ha): 1367.53"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 21396,
-        "quote": "Volumes totaux produits (hl): 21396"
+        "amount": 38924,
+        "quote": "Volumes totaux produits (hl): 38924"
       }
     }
   },
@@ -137667,6 +137819,22 @@
         9.8,
         6.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 355.09,
+        "quote": "Superficies en production (ha): 355.09"
+      },
+      "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 9456,
+        "quote": "Volumes totaux produits (hl): 9456"
+      }
     }
   },
   {
@@ -138882,15 +139050,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 27.51,
-        "quote": "Superficies en production (ha): 27.51"
+        "amount": 106.91,
+        "quote": "Superficies en production (ha): 106.91"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1140,
-        "quote": "Volumes totaux produits (hl): 1140"
+        "amount": 2941,
+        "quote": "Volumes totaux produits (hl): 2941"
       }
     }
   },
@@ -144920,15 +145088,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 5829.02,
-        "quote": "Superficies en production (ha): 5829.02"
+        "amount": 6625.28,
+        "quote": "Superficies en production (ha): 6625.28"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 192506,
-        "quote": "Volumes totaux produits (hl): 192506"
+        "amount": 213133,
+        "quote": "Volumes totaux produits (hl): 213133"
       }
     }
   },
@@ -152041,15 +152209,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 18.43,
-        "quote": "Superficies en production (ha): 18.43"
+        "amount": 166.01,
+        "quote": "Superficies en production (ha): 166.01"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 211,
-        "quote": "Volumes totaux produits (hl): 211"
+        "amount": 2637,
+        "quote": "Volumes totaux produits (hl): 2637"
       }
     }
   },
@@ -152704,16 +152872,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 964,
-        "quote": "superficieplantée = 964 [[hectare]]s (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Madiran_(AOC)",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 964.28,
+        "quote": "Superficies en production (ha): 964.28"
       },
       "production": {
-        "amount": 38824,
-        "quote": "volproduction = {{unité|38824 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Madiran_(AOC)",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 38825,
+        "quote": "Volumes totaux produits (hl): 38825"
       }
     }
   },
@@ -155380,15 +155550,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 15.81,
-        "quote": "Superficies en production (ha): 15.81"
+        "amount": 198.77,
+        "quote": "Superficies en production (ha): 198.77"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 691,
-        "quote": "Volumes totaux produits (hl): 691"
+        "amount": 6226,
+        "quote": "Volumes totaux produits (hl): 6226"
       }
     }
   },
@@ -158662,16 +158832,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 328,
-        "quote": "superficieplantée = 328 ha (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Maury_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 380.82,
+        "quote": "Superficies en production (ha): 380.82"
       },
       "production": {
-        "amount": 6449,
-        "quote": "volproduction = {{unité|6449 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Maury_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 3688,
+        "quote": "Volumes totaux produits (hl): 3688"
       }
     }
   },
@@ -159932,15 +160104,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 472.26,
-        "quote": "Superficies en production (ha): 472.26"
+        "amount": 634.62,
+        "quote": "Superficies en production (ha): 634.62"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 14734,
-        "quote": "Volumes totaux produits (hl): 14734"
+        "amount": 19478,
+        "quote": "Volumes totaux produits (hl): 19478"
       }
     }
   },
@@ -160578,15 +160750,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 276.69,
-        "quote": "Superficies en production (ha): 276.69"
+        "amount": 388.65,
+        "quote": "Superficies en production (ha): 388.65"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 11396,
-        "quote": "Volumes totaux produits (hl): 11396"
+        "amount": 15708,
+        "quote": "Volumes totaux produits (hl): 15708"
       }
     }
   },
@@ -165346,15 +165518,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 148.54,
-        "quote": "Superficies en production (ha): 148.54"
+        "amount": 371.41,
+        "quote": "Superficies en production (ha): 371.41"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 7955,
-        "quote": "Volumes totaux produits (hl): 7955"
+        "amount": 19037,
+        "quote": "Volumes totaux produits (hl): 19037"
       }
     }
   },
@@ -167767,15 +167939,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 17.5,
-        "quote": "Superficies en production (ha): 17.5"
+        "amount": 123.57,
+        "quote": "Superficies en production (ha): 123.57"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 612,
-        "quote": "Volumes totaux produits (hl): 612"
+        "amount": 3124,
+        "quote": "Volumes totaux produits (hl): 3124"
       }
     }
   },
@@ -168252,15 +168424,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 209.7,
-        "quote": "Superficies en production (ha): 209.7"
+        "amount": 401.2,
+        "quote": "Superficies en production (ha): 401.2"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 4010,
-        "quote": "Volumes totaux produits (hl): 4010"
+        "amount": 11651,
+        "quote": "Volumes totaux produits (hl): 11651"
       }
     }
   },
@@ -169486,15 +169658,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 53.02,
-        "quote": "Superficies en production (ha): 53.02"
+        "amount": 92.2,
+        "quote": "Superficies en production (ha): 92.2"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1051,
-        "quote": "Volumes totaux produits (hl): 1051"
+        "amount": 2059,
+        "quote": "Volumes totaux produits (hl): 2059"
       }
     }
   },
@@ -169636,16 +169808,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 1114,
-        "quote": "superficieplantée = {{unité|1114 [[hectare]]s}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Morgon",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1073.52,
+        "quote": "Superficies en production (ha): 1073.52"
       },
       "production": {
-        "amount": 57126,
-        "quote": "volproduction = {{unité|57126 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Morgon",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 51427,
+        "quote": "Volumes totaux produits (hl): 51427"
       }
     }
   },
@@ -171452,16 +171626,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 626,
-        "quote": "superficieplantée = 626 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Moulin-%C3%A0-vent_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 616.21,
+        "quote": "Superficies en production (ha): 616.21"
       },
       "production": {
-        "amount": 29836,
-        "quote": "volproduction = {{unité|29836 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Moulin-%C3%A0-vent_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 23991,
+        "quote": "Volumes totaux produits (hl): 23991"
       }
     }
   },
@@ -171616,16 +171792,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 572,
-        "quote": "superficieplantée = 572 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Moulis_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 513.95,
+        "quote": "Superficies en production (ha): 513.95"
       },
       "production": {
-        "amount": 19292,
-        "quote": "volproduction = {{unité|19292 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Moulis_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 14813,
+        "quote": "Volumes totaux produits (hl): 14813"
       }
     }
   },
@@ -173231,15 +173409,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 4728.29,
-        "quote": "Superficies en production (ha): 4728.29"
+        "amount": 4804.45,
+        "quote": "Superficies en production (ha): 4804.45"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 108107,
-        "quote": "Volumes totaux produits (hl): 108107"
+        "amount": 108836,
+        "quote": "Volumes totaux produits (hl): 108836"
       }
     }
   },
@@ -173517,16 +173695,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 533,
-        "quote": "superficieplantée = 533 [[hectare]]s (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_de_Frontignan",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 533.19,
+        "quote": "Superficies en production (ha): 533.19"
       },
       "production": {
-        "amount": 11285,
-        "quote": "volproduction = {{unité|11285 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_de_Frontignan",
-        "year": "2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 11286,
+        "quote": "Volumes totaux produits (hl): 11286"
       }
     }
   },
@@ -175030,15 +175210,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 468.02,
-        "quote": "Superficies en production (ha): 468.02"
+        "amount": 4369.27,
+        "quote": "Superficies en production (ha): 4369.27"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 18563,
-        "quote": "Volumes totaux produits (hl): 18563"
+        "amount": 225816,
+        "quote": "Volumes totaux produits (hl): 225816"
       }
     }
   },
@@ -181068,15 +181248,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 167.25,
-        "quote": "Superficies en production (ha): 167.25"
+        "amount": 305.46,
+        "quote": "Superficies en production (ha): 305.46"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2308,
-        "quote": "Volumes totaux produits (hl): 2308"
+        "amount": 3926,
+        "quote": "Volumes totaux produits (hl): 3926"
       }
     }
   },
@@ -185370,15 +185550,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 156.3,
-        "quote": "Superficies en production (ha): 156.3"
+        "amount": 275.84,
+        "quote": "Superficies en production (ha): 275.84"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 4432,
-        "quote": "Volumes totaux produits (hl): 4432"
+        "amount": 9857,
+        "quote": "Volumes totaux produits (hl): 9857"
       }
     }
   },
@@ -191957,15 +192137,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 48.56,
-        "quote": "Superficies en production (ha): 48.56"
+        "amount": 142.27,
+        "quote": "Superficies en production (ha): 142.27"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1890,
-        "quote": "Volumes totaux produits (hl): 1890"
+        "amount": 4257,
+        "quote": "Volumes totaux produits (hl): 4257"
       }
     }
   },
@@ -197216,15 +197396,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 195.21,
-        "quote": "Superficies en production (ha): 195.21"
+        "amount": 312.46,
+        "quote": "Superficies en production (ha): 312.46"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 4731,
-        "quote": "Volumes totaux produits (hl): 4731"
+        "amount": 7454,
+        "quote": "Volumes totaux produits (hl): 7454"
       }
     }
   },
@@ -199128,15 +199308,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 602.12,
-        "quote": "Superficies en production (ha): 602.12"
+        "amount": 759.36,
+        "quote": "Superficies en production (ha): 759.36"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 29161,
-        "quote": "Volumes totaux produits (hl): 29161"
+        "amount": 36250,
+        "quote": "Volumes totaux produits (hl): 36250"
       }
     }
   },
@@ -199274,16 +199454,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 1400,
-        "quote": "superficieplantée = {{unité|1400 [[hectare]]s}} ({{abréviation|moy.|moyenne}} 2022-2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Pouilly-fum%C3%A9",
-        "year": null
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1406.66,
+        "quote": "Superficies en production (ha): 1406.66"
       },
       "production": {
-        "amount": 80000,
-        "quote": "volproduction = {{unité|80000 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} ({{abréviation|moy.|moyenne}} 2022-2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Pouilly-fum%C3%A9",
-        "year": null
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 64189,
+        "quote": "Volumes totaux produits (hl): 64189"
       }
     }
   },
@@ -199411,15 +199593,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 27.29,
-        "quote": "Superficies en production (ha): 27.29"
+        "amount": 34.37,
+        "quote": "Superficies en production (ha): 34.37"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1281,
-        "quote": "Volumes totaux produits (hl): 1281"
+        "amount": 1646,
+        "quote": "Volumes totaux produits (hl): 1646"
       }
     }
   },
@@ -199547,15 +199729,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 42.7,
-        "quote": "Superficies en production (ha): 42.7"
+        "amount": 59.27,
+        "quote": "Superficies en production (ha): 59.27"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1578,
-        "quote": "Volumes totaux produits (hl): 1578"
+        "amount": 2211,
+        "quote": "Volumes totaux produits (hl): 2211"
       }
     }
   },
@@ -203859,15 +204041,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 109.55,
-        "quote": "Superficies en production (ha): 109.55"
+        "amount": 206.19,
+        "quote": "Superficies en production (ha): 206.19"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 5142,
-        "quote": "Volumes totaux produits (hl): 5142"
+        "amount": 9335,
+        "quote": "Volumes totaux produits (hl): 9335"
       }
     }
   },
@@ -204245,16 +204427,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 450,
-        "quote": "superficieplantée = 450 [[hectare]]s (moyenne 2022-2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/P%C3%A9charmant",
-        "year": "moyenne 2022-2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 445.81,
+        "quote": "Superficies en production (ha): 445.81"
       },
       "production": {
-        "amount": 15250,
-        "quote": "volproduction = {{unité|15250 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (moyenne 2022-2024)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/P%C3%A9charmant",
-        "year": "moyenne 2022-2024"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 15170,
+        "quote": "Volumes totaux produits (hl): 15170"
       }
     }
   },
@@ -206161,15 +206345,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 12.63,
-        "quote": "Superficies en production (ha): 12.63"
+        "amount": 965.94,
+        "quote": "Superficies en production (ha): 965.94"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 347,
-        "quote": "Volumes totaux produits (hl): 347"
+        "amount": 29213,
+        "quote": "Volumes totaux produits (hl): 29213"
       }
     }
   },
@@ -213154,16 +213338,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 1083,
-        "quote": "superficieplantée = {{unité|1083 [[hectare]]s}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Rivesaltes_(VDN)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1001.91,
+        "quote": "Superficies en production (ha): 1001.91"
       },
       "production": {
-        "amount": 20727,
-        "quote": "volproduction = {{unité|20727 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Rivesaltes_(VDN)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 10925,
+        "quote": "Volumes totaux produits (hl): 10925"
       }
     }
   },
@@ -218469,16 +218655,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 215,
-        "quote": "superficieplantée = 215 [[hectare]]s (en 2022)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Roussette_de_Savoie",
-        "year": "2022"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 55.15,
+        "quote": "Superficies en production (ha): 55.15"
       },
       "production": {
-        "amount": 12257,
-        "quote": "volproduction = {{unité|12257 [[Litre#Conversion|hectolitres]]}} (en 2022)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Roussette_de_Savoie",
-        "year": "2022"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 2309,
+        "quote": "Volumes totaux produits (hl): 2309"
       }
     }
   },
@@ -218602,15 +218790,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 13.34,
-        "quote": "Superficies en production (ha): 13.34"
+        "amount": 22.1,
+        "quote": "Superficies en production (ha): 22.1"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 434,
-        "quote": "Volumes totaux produits (hl): 434"
+        "amount": 593,
+        "quote": "Volumes totaux produits (hl): 593"
       }
     }
   },
@@ -219634,15 +219822,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 266.47,
-        "quote": "Superficies en production (ha): 266.47"
+        "amount": 362.62,
+        "quote": "Superficies en production (ha): 362.62"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 10236,
-        "quote": "Volumes totaux produits (hl): 10236"
+        "amount": 14056,
+        "quote": "Volumes totaux produits (hl): 14056"
       }
     }
   },
@@ -219870,6 +220058,22 @@
         7.2,
         4.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 390.27,
+        "quote": "Superficies en production (ha): 390.27"
+      },
+      "production": {
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 15214,
+        "quote": "Volumes totaux produits (hl): 15214"
+      }
     }
   },
   {
@@ -221664,15 +221868,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1132.36,
-        "quote": "Superficies en production (ha): 1132.36"
+        "amount": 1230.28,
+        "quote": "Superficies en production (ha): 1230.28"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 70110,
-        "quote": "Volumes totaux produits (hl): 70110"
+        "amount": 74791,
+        "quote": "Volumes totaux produits (hl): 74791"
       }
     }
   },
@@ -222177,16 +222381,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 288,
-        "quote": "superficieplantée = 288 [[hectare]]s (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Saint-amour_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 299.16,
+        "quote": "Superficies en production (ha): 299.16"
       },
       "production": {
-        "amount": 16276,
-        "quote": "volproduction = {{unité|16276 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Saint-amour_(AOC)",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 14614,
+        "quote": "Volumes totaux produits (hl): 14614"
       }
     }
   },
@@ -222325,15 +222531,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 34.58,
-        "quote": "Superficies en production (ha): 34.58"
+        "amount": 163.23,
+        "quote": "Superficies en production (ha): 163.23"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1191,
-        "quote": "Volumes totaux produits (hl): 1191"
+        "amount": 6205,
+        "quote": "Volumes totaux produits (hl): 6205"
       }
     }
   },
@@ -222657,15 +222863,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2228.64,
-        "quote": "Superficies en production (ha): 2228.64"
+        "amount": 2428.34,
+        "quote": "Superficies en production (ha): 2428.34"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 67928,
-        "quote": "Volumes totaux produits (hl): 67928"
+        "amount": 74221,
+        "quote": "Volumes totaux produits (hl): 74221"
       }
     }
   },
@@ -222987,16 +223193,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 4177,
-        "quote": "superficieplantée = {{unité|4177 [[hectare]]s}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Saint-%C3%A9milion_grand_cru",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 4121.82,
+        "quote": "Superficies en production (ha): 4121.82"
       },
       "production": {
-        "amount": 173598,
-        "quote": "volproduction = {{unité|173598 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Saint-%C3%A9milion_grand_cru",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 153842,
+        "quote": "Volumes totaux produits (hl): 153842"
       }
     }
   },
@@ -224743,15 +224951,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 118.35,
-        "quote": "Superficies en production (ha): 118.35"
+        "amount": 122.51,
+        "quote": "Superficies en production (ha): 122.51"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 3034,
-        "quote": "Volumes totaux produits (hl): 3034"
+        "amount": 3095,
+        "quote": "Volumes totaux produits (hl): 3095"
       }
     }
   },
@@ -224890,15 +225098,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 73.22,
-        "quote": "Superficies en production (ha): 73.22"
+        "amount": 106.13,
+        "quote": "Superficies en production (ha): 106.13"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2687,
-        "quote": "Volumes totaux produits (hl): 2687"
+        "amount": 3546,
+        "quote": "Volumes totaux produits (hl): 3546"
       }
     }
   },
@@ -229492,15 +229700,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 49.73,
-        "quote": "Superficies en production (ha): 49.73"
+        "amount": 325.89,
+        "quote": "Superficies en production (ha): 325.89"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2187,
-        "quote": "Volumes totaux produits (hl): 2187"
+        "amount": 10326,
+        "quote": "Volumes totaux produits (hl): 10326"
       }
     }
   },
@@ -230025,15 +230233,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 859.46,
-        "quote": "Superficies en production (ha): 859.46"
+        "amount": 2566.2,
+        "quote": "Superficies en production (ha): 2566.2"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 44107,
-        "quote": "Volumes totaux produits (hl): 44107"
+        "amount": 145762,
+        "quote": "Volumes totaux produits (hl): 145762"
       }
     }
   },
@@ -230900,15 +231108,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 82.35,
-        "quote": "Superficies en production (ha): 82.35"
+        "amount": 394.75,
+        "quote": "Superficies en production (ha): 394.75"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1269,
-        "quote": "Volumes totaux produits (hl): 1269"
+        "amount": 8867,
+        "quote": "Volumes totaux produits (hl): 8867"
       }
     }
   },
@@ -234052,15 +234260,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 50.48,
-        "quote": "Superficies en production (ha): 50.48"
+        "amount": 60.94,
+        "quote": "Superficies en production (ha): 60.94"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1618,
-        "quote": "Volumes totaux produits (hl): 1618"
+        "amount": 2153,
+        "quote": "Volumes totaux produits (hl): 2153"
       }
     }
   },
@@ -254865,15 +255073,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 2570.23,
-        "quote": "Superficies en production (ha): 2570.23"
+        "amount": 4009.36,
+        "quote": "Superficies en production (ha): 4009.36"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 100487,
-        "quote": "Volumes totaux produits (hl): 100487"
+        "amount": 142706,
+        "quote": "Volumes totaux produits (hl): 142706"
       }
     }
   },
@@ -277001,16 +277209,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 2170,
-        "quote": "superficieplantée = {{unité|2170 [[hectare]]s}} en [[2006]]",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Vignoble_de_Savoie",
-        "year": null
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 1743.89,
+        "quote": "Superficies en production (ha): 1743.89"
       },
       "production": {
-        "amount": 108000,
-        "quote": "volproduction = {{unité|108000 [[Litre#Conversion|hectolitres]]}} (en 2023)",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Vignoble_de_Savoie",
-        "year": "2023"
+        "publisher": "douane",
+        "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
+        "year": "2024",
+        "amount": 87918,
+        "quote": "Volumes totaux produits (hl): 87918"
       }
     }
   },
@@ -278955,15 +279165,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 395.3,
-        "quote": "Superficies en production (ha): 395.3"
+        "amount": 448.48,
+        "quote": "Superficies en production (ha): 448.48"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 21827,
-        "quote": "Volumes totaux produits (hl): 21827"
+        "amount": 23819,
+        "quote": "Volumes totaux produits (hl): 23819"
       }
     }
   },
@@ -279517,15 +279727,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 85.23,
-        "quote": "Superficies en production (ha): 85.23"
+        "amount": 212.62,
+        "quote": "Superficies en production (ha): 212.62"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1950,
-        "quote": "Volumes totaux produits (hl): 1950"
+        "amount": 4930,
+        "quote": "Volumes totaux produits (hl): 4930"
       }
     }
   },
@@ -279915,15 +280125,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 91.6,
-        "quote": "Superficies en production (ha): 91.6"
+        "amount": 145.07,
+        "quote": "Superficies en production (ha): 145.07"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1626,
-        "quote": "Volumes totaux produits (hl): 1626"
+        "amount": 2675,
+        "quote": "Volumes totaux produits (hl): 2675"
       }
     }
   },
@@ -280063,15 +280273,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1.9,
-        "quote": "Superficies en production (ha): 1.9"
+        "amount": 14.54,
+        "quote": "Superficies en production (ha): 14.54"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 24,
-        "quote": "Volumes totaux produits (hl): 24"
+        "amount": 200,
+        "quote": "Volumes totaux produits (hl): 200"
       }
     }
   },
@@ -280203,15 +280413,15 @@
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 1182.03,
-        "quote": "Superficies en production (ha): 1182.03"
+        "amount": 2200.2,
+        "quote": "Superficies en production (ha): 2200.2"
       },
       "production": {
         "publisher": "douane",
         "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
         "year": "2024",
-        "amount": 35565,
-        "quote": "Volumes totaux produits (hl): 35565"
+        "amount": 72981,
+        "quote": "Volumes totaux produits (hl): 72981"
       }
     }
   },

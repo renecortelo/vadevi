@@ -1,5 +1,5 @@
 {
-  "about": "Area in production (ha) and total volume produced (hl, non-marketable included) for each French PDO, from the customs' open data «Superficies et volumes en production par produit — Déclaration de récolte et de production 2024 (campagne 2024-2025)», DGDDI, extraction of 5 February 2025 (casier viticole informatisé). Licence Ouverte / Etalab 2.0. A PDO's products (colours, and the base wines it names) are summed under its name; «Vin apte pour…» and «Vin destiné à l'élaboration…» rows, and confidential cells (secret statistique), are left out.",
+  "about": "Area in production (ha) and total volume produced (hl, non-marketable included) for each French PDO, from the customs' open data «Superficies et volumes en production par produit — Déclaration de récolte et de production 2024 (campagne 2024-2025)», DGDDI, extraction of 5 February 2025 (casier viticole informatisé). Licence Ouverte / Etalab 2.0. A PDO's products are summed under its name: its colours and styles, its alternative names («Brouilly ou Brouilly cru du Beaujolais»), its complementary geographical names and premiers crus («Côtes de Bordeaux Blaye», «Beaune premier cru»), and the wine declared as fit for it or meant for it («Vin apte Madiran», «Vin destiné à l'élaboration de Champagne»). Wine meant for spirits (Cognac, Armagnac, Fine Bordeaux) and confidential cells (secret statistique) are left out, so a PDO with a confidential product is a lower bound.",
   "campaign": "2024",
   "sourceUrl": "https://www.douane.gouv.fr/sites/default/files/2025-05/25/Superficies%20et%20volumes%20d%C3%A9clar%C3%A9s%20en%20production%202024%20publication%20OPENDATA_0.xlsx",
   "regions": {
@@ -10,13 +10,18 @@
     },
     "fr-aloxe-corton": {
       "name": "Aloxe-Corton",
-      "plantedHa": 82.55,
-      "producedHl": 1847
+      "plantedHa": 116.94,
+      "producedHl": 2560
     },
     "fr-alsace": {
       "name": "Alsace",
-      "plantedHa": 9568.6,
-      "producedHl": 553024
+      "plantedHa": 10195.85,
+      "producedHl": 577390
+    },
+    "fr-alsace-grand-cru-altenberg-de-bergbieten": {
+      "name": "Alsace grand cru Altenberg de Bergbieten",
+      "plantedHa": 12.21,
+      "producedHl": 528
     },
     "fr-alsace-grand-cru-altenberg-de-bergheim": {
       "name": "Alsace grand cru Altenberg de Bergheim",
@@ -63,6 +68,11 @@
       "plantedHa": 4.31,
       "producedHl": 197
     },
+    "fr-alsace-grand-cru-furstentum": {
+      "name": "Alsace grand cru Furstentum",
+      "plantedHa": 9.93,
+      "producedHl": 312
+    },
     "fr-alsace-grand-cru-geisberg": {
       "name": "Alsace grand cru Geisberg",
       "plantedHa": 4.81,
@@ -97,6 +107,11 @@
       "name": "Alsace grand cru Kanzlerberg",
       "plantedHa": 1.79,
       "producedHl": 88
+    },
+    "fr-alsace-grand-cru-kastelberg": {
+      "name": "Alsace grand cru Kastelberg",
+      "plantedHa": 3.39,
+      "producedHl": 123
     },
     "fr-alsace-grand-cru-kessler": {
       "name": "Alsace grand cru Kessler",
@@ -230,8 +245,8 @@
     },
     "fr-alsace-grand-cru-vorbourg": {
       "name": "Alsace grand cru Vorbourg",
-      "plantedHa": 13.3,
-      "producedHl": 485
+      "plantedHa": 17.52,
+      "producedHl": 613
     },
     "fr-alsace-grand-cru-wiebelsberg": {
       "name": "Alsace grand cru Wiebelsberg",
@@ -250,8 +265,8 @@
     },
     "fr-alsace-grand-cru-zinnkoepfle": {
       "name": "Alsace grand cru Zinnkoepflé",
-      "plantedHa": 24.83,
-      "producedHl": 1052
+      "plantedHa": 26.94,
+      "producedHl": 1134
     },
     "fr-alsace-grand-cru-zotzenberg": {
       "name": "Alsace grand cru Zotzenberg",
@@ -260,8 +275,13 @@
     },
     "fr-anjou": {
       "name": "Anjou",
-      "plantedHa": 1327.22,
-      "producedHl": 57443
+      "plantedHa": 1415.14,
+      "producedHl": 61965
+    },
+    "fr-anjou-brissac": {
+      "name": "Anjou Brissac",
+      "plantedHa": 57.02,
+      "producedHl": 1787
     },
     "fr-anjou-coteaux-de-la-loire": {
       "name": "Anjou-Coteaux de la Loire",
@@ -275,23 +295,23 @@
     },
     "fr-arbois": {
       "name": "Arbois",
-      "plantedHa": 714.11,
-      "producedHl": 14369
+      "plantedHa": 803.95,
+      "producedHl": 17117
     },
     "fr-auxey-duresses": {
       "name": "Auxey-Duresses",
-      "plantedHa": 48.75,
-      "producedHl": 1855
+      "plantedHa": 136.36,
+      "producedHl": 4296
     },
     "fr-bandol": {
       "name": "Bandol",
-      "plantedHa": 1241.19,
-      "producedHl": 40491
+      "plantedHa": 1617.26,
+      "producedHl": 51309
     },
     "fr-banyuls": {
       "name": "Banyuls",
-      "plantedHa": 481.19,
-      "producedHl": 5781
+      "plantedHa": 598.63,
+      "producedHl": 7098
     },
     "fr-barsac": {
       "name": "Barsac",
@@ -310,8 +330,8 @@
     },
     "fr-beaujolais": {
       "name": "Beaujolais",
-      "plantedHa": 3453.23,
-      "producedHl": 149098
+      "plantedHa": 6401.62,
+      "producedHl": 254334
     },
     "fr-beaumes-de-venise": {
       "name": "Beaumes de Venise",
@@ -320,8 +340,13 @@
     },
     "fr-beaune": {
       "name": "Beaune",
-      "plantedHa": 100.31,
-      "producedHl": 2442
+      "plantedHa": 406.01,
+      "producedHl": 10347
+    },
+    "fr-bellet": {
+      "name": "Bellet",
+      "plantedHa": 55.15,
+      "producedHl": 1099
     },
     "fr-bergerac": {
       "name": "Bergerac",
@@ -332,6 +357,11 @@
       "name": "Bienvenues-Bâtard-Montrachet",
       "plantedHa": 3.69,
       "producedHl": 148
+    },
+    "fr-blagny": {
+      "name": "Blagny",
+      "plantedHa": 4.11,
+      "producedHl": 88
     },
     "fr-bonnes-mares": {
       "name": "Bonnes-Mares",
@@ -345,13 +375,18 @@
     },
     "fr-bordeaux": {
       "name": "Bordeaux",
-      "plantedHa": 45563.37,
-      "producedHl": 1714292
+      "plantedHa": 46749.22,
+      "producedHl": 1772388
+    },
+    "fr-bourg": {
+      "name": "Bourg",
+      "plantedHa": 2532.13,
+      "producedHl": 76855
     },
     "fr-bourgogne": {
       "name": "Bourgogne",
-      "plantedHa": 2961.37,
-      "producedHl": 101769
+      "plantedHa": 6629.59,
+      "producedHl": 201584
     },
     "fr-bourgogne-aligote": {
       "name": "Bourgogne aligoté",
@@ -368,10 +403,20 @@
       "plantedHa": 1175.96,
       "producedHl": 49733
     },
+    "fr-boutenac": {
+      "name": "Boutenac",
+      "plantedHa": 259.85,
+      "producedHl": 7136
+    },
     "fr-bouzeron": {
       "name": "Bouzeron",
       "plantedHa": 64.53,
       "producedHl": 2248
+    },
+    "fr-brouilly": {
+      "name": "Brouilly",
+      "plantedHa": 1205.89,
+      "producedHl": 51946
     },
     "fr-brulhois": {
       "name": "Brulhois",
@@ -380,8 +425,8 @@
     },
     "fr-bugey": {
       "name": "Bugey",
-      "plantedHa": 177.14,
-      "producedHl": 4111
+      "plantedHa": 414.58,
+      "producedHl": 11960
     },
     "fr-buzet": {
       "name": "Buzet",
@@ -430,8 +475,13 @@
     },
     "fr-chablis": {
       "name": "Chablis",
-      "plantedHa": 3714.02,
-      "producedHl": 132862
+      "plantedHa": 4479.17,
+      "producedHl": 154551
+    },
+    "fr-chablis-grand-cru": {
+      "name": "Chablis grand cru",
+      "plantedHa": 92.61,
+      "producedHl": 1636
     },
     "fr-chambertin": {
       "name": "Chambertin",
@@ -445,8 +495,13 @@
     },
     "fr-chambolle-musigny": {
       "name": "Chambolle-Musigny",
-      "plantedHa": 91.68,
-      "producedHl": 1526
+      "plantedHa": 148.99,
+      "producedHl": 2628
+    },
+    "fr-champagne": {
+      "name": "Champagne",
+      "plantedHa": 31654.02,
+      "producedHl": 1697617
     },
     "fr-chapelle-chambertin": {
       "name": "Chapelle-Chambertin",
@@ -460,8 +515,13 @@
     },
     "fr-chassagne-montrachet": {
       "name": "Chassagne-Montrachet",
-      "plantedHa": 162.06,
-      "producedHl": 6585
+      "plantedHa": 307.14,
+      "producedHl": 12249
+    },
+    "fr-chateau-chalon": {
+      "name": "Château-Chalon",
+      "plantedHa": 54.07,
+      "producedHl": 649
     },
     "fr-chateaumeillant": {
       "name": "Châteaumeillant",
@@ -478,6 +538,11 @@
       "plantedHa": 30.51,
       "producedHl": 707
     },
+    "fr-chenas": {
+      "name": "Chénas",
+      "plantedHa": 228.63,
+      "producedHl": 6959
+    },
     "fr-chevalier-montrachet": {
       "name": "Chevalier-Montrachet",
       "plantedHa": 7.43,
@@ -493,10 +558,15 @@
       "plantedHa": 2358.38,
       "producedHl": 83492
     },
+    "fr-chiroubles": {
+      "name": "Chiroubles",
+      "plantedHa": 275.45,
+      "producedHl": 9611
+    },
     "fr-chorey-les-beaune": {
       "name": "Chorey-lès-Beaune",
-      "plantedHa": 14.62,
-      "producedHl": 619
+      "plantedHa": 139.22,
+      "producedHl": 3984
     },
     "fr-clairette-de-bellegarde": {
       "name": "Clairette de Bellegarde",
@@ -517,6 +587,11 @@
       "name": "Clos de la Roche",
       "plantedHa": 16.63,
       "producedHl": 334
+    },
+    "fr-clos-de-vougeot": {
+      "name": "Clos de Vougeot",
+      "plantedHa": 48.09,
+      "producedHl": 738
     },
     "fr-clos-saint-denis": {
       "name": "Clos Saint-Denis",
@@ -543,6 +618,16 @@
       "plantedHa": 163.82,
       "producedHl": 4996
     },
+    "fr-correze": {
+      "name": "Corrèze",
+      "plantedHa": 2.59,
+      "producedHl": 16
+    },
+    "fr-corse": {
+      "name": "Corse",
+      "plantedHa": 2333.25,
+      "producedHl": 95820
+    },
     "fr-corton": {
       "name": "Corton",
       "plantedHa": 87.99,
@@ -563,6 +648,16 @@
       "plantedHa": 31.97,
       "producedHl": 598
     },
+    "fr-cote-de-brouilly": {
+      "name": "Côte de Brouilly",
+      "plantedHa": 311.18,
+      "producedHl": 13056
+    },
+    "fr-cote-de-nuits-villages": {
+      "name": "Côte de Nuits-Villages",
+      "plantedHa": 139.78,
+      "producedHl": 2859
+    },
     "fr-cote-roannaise": {
       "name": "Côte Roannaise",
       "plantedHa": 166.34,
@@ -582,6 +677,11 @@
       "name": "Coteaux d'Aix-en-Provence",
       "plantedHa": 4346.82,
       "producedHl": 214340
+    },
+    "fr-coteaux-d-ancenis": {
+      "name": "Coteaux d'Ancenis",
+      "plantedHa": 149.65,
+      "producedHl": 5578
     },
     "fr-coteaux-de-die": {
       "name": "Coteaux de Die",
@@ -635,8 +735,8 @@
     },
     "fr-cotes-d-auvergne": {
       "name": "Côtes d'Auvergne",
-      "plantedHa": 175.38,
-      "producedHl": 4595
+      "plantedHa": 256.55,
+      "producedHl": 6338
     },
     "fr-cotes-de-bergerac": {
       "name": "Côtes de Bergerac",
@@ -645,8 +745,13 @@
     },
     "fr-cotes-de-bordeaux": {
       "name": "Côtes de Bordeaux",
-      "plantedHa": 800.7,
-      "producedHl": 26811
+      "plantedHa": 8597.88,
+      "producedHl": 280950
+    },
+    "fr-cotes-de-bordeaux-saint-macaire": {
+      "name": "Côtes de Bordeaux-Saint-Macaire",
+      "plantedHa": 17.17,
+      "producedHl": 413
     },
     "fr-cotes-de-duras": {
       "name": "Côtes de Duras",
@@ -665,8 +770,8 @@
     },
     "fr-cotes-de-provence": {
       "name": "Côtes de Provence",
-      "plantedHa": 17575.73,
-      "producedHl": 738989
+      "plantedHa": 19874.41,
+      "producedHl": 830135
     },
     "fr-cotes-de-toul": {
       "name": "Côtes de Toul",
@@ -680,8 +785,8 @@
     },
     "fr-cotes-du-jura": {
       "name": "Côtes du Jura",
-      "plantedHa": 612.21,
-      "producedHl": 7031
+      "plantedHa": 616.69,
+      "producedHl": 7057
     },
     "fr-cotes-du-marmandais": {
       "name": "Côtes du Marmandais",
@@ -695,8 +800,8 @@
     },
     "fr-cotes-du-rhone-villages": {
       "name": "Côtes du Rhône Villages",
-      "plantedHa": 3181.5,
-      "producedHl": 98102
+      "plantedHa": 8133.45,
+      "producedHl": 253713
     },
     "fr-cotes-du-roussillon": {
       "name": "Côtes du Roussillon",
@@ -713,15 +818,60 @@
       "plantedHa": 145.52,
       "producedHl": 4552
     },
+    "fr-coulee-de-serrant": {
+      "name": "Coulée de Serrant",
+      "plantedHa": 179.61,
+      "producedHl": 5419
+    },
     "fr-cour-cheverny": {
       "name": "Cour-Cheverny",
-      "plantedHa": 71.8,
-      "producedHl": 2048
+      "plantedHa": 72.86,
+      "producedHl": 2088
+    },
+    "fr-cremant-d-alsace": {
+      "name": "Crémant d'Alsace",
+      "plantedHa": 4567.32,
+      "producedHl": 336601
+    },
+    "fr-cremant-de-bordeaux": {
+      "name": "Crémant de Bordeaux",
+      "plantedHa": 2008.8,
+      "producedHl": 137958
+    },
+    "fr-cremant-de-bourgogne": {
+      "name": "Crémant de Bourgogne",
+      "plantedHa": 3464.62,
+      "producedHl": 194342
+    },
+    "fr-cremant-de-die": {
+      "name": "Crémant de Die",
+      "plantedHa": 65.94,
+      "producedHl": 3038
+    },
+    "fr-cremant-de-limoux": {
+      "name": "Crémant de Limoux",
+      "plantedHa": 1176.49,
+      "producedHl": 49822
+    },
+    "fr-cremant-de-loire": {
+      "name": "Crémant de Loire",
+      "plantedHa": 3623.43,
+      "producedHl": 215271
+    },
+    "fr-cremant-du-jura": {
+      "name": "Crémant du Jura",
+      "plantedHa": 262.12,
+      "producedHl": 5151
     },
     "fr-criots-batard-montrachet": {
       "name": "Criots-Bâtard-Montrachet",
       "plantedHa": 1.57,
       "producedHl": 66
+    },
+    "fr-crozes-hermitage": {
+      "name": "Crozes-Hermitage",
+      "plantedHa": 2069.15,
+      "producedHl": 86139
     },
     "fr-duche-d-uzes": {
       "name": "Duché d'Uzès",
@@ -735,13 +885,13 @@
     },
     "fr-entraygues-le-fel": {
       "name": "Entraygues - Le Fel",
-      "plantedHa": 10.99,
-      "producedHl": 35
+      "plantedHa": 16.54,
+      "producedHl": 71
     },
     "fr-entre-deux-mers": {
       "name": "Entre-deux-Mers",
-      "plantedHa": 1401.04,
-      "producedHl": 67366
+      "plantedHa": 1446.45,
+      "producedHl": 69574
     },
     "fr-estaing": {
       "name": "Estaing",
@@ -753,6 +903,11 @@
       "plantedHa": 1543.55,
       "producedHl": 46310
     },
+    "fr-fiefs-vendeens": {
+      "name": "Fiefs Vendéens",
+      "plantedHa": 256.15,
+      "producedHl": 6922
+    },
     "fr-fitou": {
       "name": "Fitou",
       "plantedHa": 1850.07,
@@ -760,8 +915,13 @@
     },
     "fr-fixin": {
       "name": "Fixin",
-      "plantedHa": 112.32,
-      "producedHl": 2585
+      "plantedHa": 130.1,
+      "producedHl": 2958
+    },
+    "fr-fleurie": {
+      "name": "Fleurie",
+      "plantedHa": 770.39,
+      "producedHl": 28790
     },
     "fr-floc-de-gascogne": {
       "name": "Floc de Gascogne",
@@ -780,8 +940,8 @@
     },
     "fr-gaillac": {
       "name": "Gaillac",
-      "plantedHa": 2115.78,
-      "producedHl": 85414
+      "plantedHa": 2308.19,
+      "producedHl": 92783
     },
     "fr-gaillac-premieres-cotes": {
       "name": "Gaillac premières côtes",
@@ -790,8 +950,8 @@
     },
     "fr-gevrey-chambertin": {
       "name": "Gevrey-Chambertin",
-      "plantedHa": 330.17,
-      "producedHl": 6620
+      "plantedHa": 409.34,
+      "producedHl": 8089
     },
     "fr-gigondas": {
       "name": "Gigondas",
@@ -800,8 +960,8 @@
     },
     "fr-givry": {
       "name": "Givry",
-      "plantedHa": 172.86,
-      "producedHl": 6562
+      "plantedHa": 316.71,
+      "producedHl": 11650
     },
     "fr-grands-echezeaux": {
       "name": "Grands-Echezeaux",
@@ -848,6 +1008,11 @@
       "plantedHa": 111.66,
       "producedHl": 6813
     },
+    "fr-hermitage": {
+      "name": "Hermitage",
+      "plantedHa": 135.89,
+      "producedHl": 3888
+    },
     "fr-irancy": {
       "name": "Irancy",
       "plantedHa": 208.53,
@@ -863,10 +1028,15 @@
       "plantedHa": 74.87,
       "producedHl": 1981
     },
+    "fr-julienas": {
+      "name": "Juliénas",
+      "plantedHa": 520.41,
+      "producedHl": 19305
+    },
     "fr-jurancon": {
       "name": "Jurançon",
-      "plantedHa": 944.56,
-      "producedHl": 21396
+      "plantedHa": 1367.53,
+      "producedHl": 38924
     },
     "fr-l-etoile": {
       "name": "L'Etoile",
@@ -878,10 +1048,15 @@
       "plantedHa": 907.39,
       "producedHl": 25901
     },
+    "fr-la-liviniere": {
+      "name": "La Livinière",
+      "plantedHa": 355.09,
+      "producedHl": 9456
+    },
     "fr-ladoix": {
       "name": "Ladoix",
-      "plantedHa": 27.51,
-      "producedHl": 1140
+      "plantedHa": 106.91,
+      "producedHl": 2941
     },
     "fr-lalande-de-pomerol": {
       "name": "Lalande-de-Pomerol",
@@ -890,8 +1065,8 @@
     },
     "fr-languedoc": {
       "name": "Languedoc",
-      "plantedHa": 5829.02,
-      "producedHl": 192506
+      "plantedHa": 6625.28,
+      "producedHl": 213133
     },
     "fr-latricieres-chambertin": {
       "name": "Latricières-Chambertin",
@@ -935,13 +1110,18 @@
     },
     "fr-macon": {
       "name": "Mâcon",
-      "plantedHa": 468.02,
-      "producedHl": 18563
+      "plantedHa": 4369.27,
+      "producedHl": 225816
     },
     "fr-macvin-du-jura": {
       "name": "Macvin du Jura",
-      "plantedHa": 18.43,
-      "producedHl": 211
+      "plantedHa": 166.01,
+      "producedHl": 2637
+    },
+    "fr-madiran": {
+      "name": "Madiran",
+      "plantedHa": 964.28,
+      "producedHl": 38825
     },
     "fr-malepere": {
       "name": "Malepère",
@@ -950,8 +1130,8 @@
     },
     "fr-maranges": {
       "name": "Maranges",
-      "plantedHa": 15.81,
-      "producedHl": 691
+      "plantedHa": 198.77,
+      "producedHl": 6226
     },
     "fr-marcillac": {
       "name": "Marcillac",
@@ -967,6 +1147,11 @@
       "name": "Marsannay",
       "plantedHa": 305.54,
       "producedHl": 6347
+    },
+    "fr-maury": {
+      "name": "Maury",
+      "plantedHa": 380.82,
+      "producedHl": 3688
     },
     "fr-mazis-chambertin": {
       "name": "Mazis-Chambertin",
@@ -990,13 +1175,13 @@
     },
     "fr-mercurey": {
       "name": "Mercurey",
-      "plantedHa": 472.26,
-      "producedHl": 14734
+      "plantedHa": 634.62,
+      "producedHl": 19478
     },
     "fr-meursault": {
       "name": "Meursault",
-      "plantedHa": 276.69,
-      "producedHl": 11396
+      "plantedHa": 388.65,
+      "producedHl": 15708
     },
     "fr-minervois": {
       "name": "Minervois",
@@ -1015,18 +1200,18 @@
     },
     "fr-montagny": {
       "name": "Montagny",
-      "plantedHa": 148.54,
-      "producedHl": 7955
+      "plantedHa": 371.41,
+      "producedHl": 19037
     },
     "fr-monthelie": {
       "name": "Monthélie",
-      "plantedHa": 17.5,
-      "producedHl": 612
+      "plantedHa": 123.57,
+      "producedHl": 3124
     },
     "fr-montlouis-sur-loire": {
       "name": "Montlouis-sur-Loire",
-      "plantedHa": 209.7,
-      "producedHl": 4010
+      "plantedHa": 401.2,
+      "producedHl": 11651
     },
     "fr-montrachet": {
       "name": "Montrachet",
@@ -1040,13 +1225,28 @@
     },
     "fr-morey-saint-denis": {
       "name": "Morey-Saint-Denis",
-      "plantedHa": 53.02,
-      "producedHl": 1051
+      "plantedHa": 92.2,
+      "producedHl": 2059
+    },
+    "fr-morgon": {
+      "name": "Morgon",
+      "plantedHa": 1073.52,
+      "producedHl": 51427
     },
     "fr-moselle": {
       "name": "Moselle",
       "plantedHa": 67.64,
       "producedHl": 2040
+    },
+    "fr-moulin-a-vent": {
+      "name": "Moulin-à-Vent",
+      "plantedHa": 616.21,
+      "producedHl": 23991
+    },
+    "fr-moulis": {
+      "name": "Moulis",
+      "plantedHa": 513.95,
+      "producedHl": 14813
     },
     "fr-muscadet": {
       "name": "Muscadet",
@@ -1065,13 +1265,18 @@
     },
     "fr-muscadet-sevre-et-maine": {
       "name": "Muscadet Sèvre et Maine",
-      "plantedHa": 4728.29,
-      "producedHl": 108107
+      "plantedHa": 4804.45,
+      "producedHl": 108836
     },
     "fr-muscat-de-beaumes-de-venise": {
       "name": "Muscat de Beaumes-de-Venise",
       "plantedHa": 280.48,
       "producedHl": 4432
+    },
+    "fr-muscat-de-frontignan": {
+      "name": "Muscat de Frontignan",
+      "plantedHa": 533.19,
+      "producedHl": 11286
     },
     "fr-muscat-de-lunel": {
       "name": "Muscat de Lunel",
@@ -1105,8 +1310,8 @@
     },
     "fr-nuits-saint-georges": {
       "name": "Nuits-Saint-Georges",
-      "plantedHa": 167.25,
-      "producedHl": 2308
+      "plantedHa": 305.46,
+      "producedHl": 3926
     },
     "fr-orleans": {
       "name": "Orléans",
@@ -1115,8 +1320,8 @@
     },
     "fr-pacherenc-du-vic-bilh": {
       "name": "Pacherenc du Vic-Bilh",
-      "plantedHa": 156.3,
-      "producedHl": 4432
+      "plantedHa": 275.84,
+      "producedHl": 9857
     },
     "fr-palette": {
       "name": "Palette",
@@ -1133,10 +1338,15 @@
       "plantedHa": 1230.91,
       "producedHl": 37146
     },
+    "fr-pecharmant": {
+      "name": "Pécharmant",
+      "plantedHa": 445.81,
+      "producedHl": 15170
+    },
     "fr-pernand-vergelesses": {
       "name": "Pernand-Vergelesses",
-      "plantedHa": 48.56,
-      "producedHl": 1890
+      "plantedHa": 142.27,
+      "producedHl": 4257
     },
     "fr-pessac-leognan": {
       "name": "Pessac-Léognan",
@@ -1175,18 +1385,23 @@
     },
     "fr-pommard": {
       "name": "Pommard",
-      "plantedHa": 195.21,
-      "producedHl": 4731
+      "plantedHa": 312.46,
+      "producedHl": 7454
     },
     "fr-pouilly-fuisse": {
       "name": "Pouilly-Fuissé",
-      "plantedHa": 602.12,
-      "producedHl": 29161
+      "plantedHa": 759.36,
+      "producedHl": 36250
+    },
+    "fr-pouilly-fume": {
+      "name": "Pouilly-Fumé",
+      "plantedHa": 1406.66,
+      "producedHl": 64189
     },
     "fr-pouilly-loche": {
       "name": "Pouilly-Loché",
-      "plantedHa": 27.29,
-      "producedHl": 1281
+      "plantedHa": 34.37,
+      "producedHl": 1646
     },
     "fr-pouilly-sur-loire": {
       "name": "Pouilly-sur-Loire",
@@ -1195,8 +1410,8 @@
     },
     "fr-pouilly-vinzelles": {
       "name": "Pouilly-Vinzelles",
-      "plantedHa": 42.7,
-      "producedHl": 1578
+      "plantedHa": 59.27,
+      "producedHl": 2211
     },
     "fr-premieres-cotes-de-bordeaux": {
       "name": "Premières Côtes de Bordeaux",
@@ -1210,8 +1425,8 @@
     },
     "fr-puligny-montrachet": {
       "name": "Puligny-Montrachet",
-      "plantedHa": 109.55,
-      "producedHl": 5142
+      "plantedHa": 206.19,
+      "producedHl": 9335
     },
     "fr-quincy": {
       "name": "Quincy",
@@ -1220,8 +1435,13 @@
     },
     "fr-rasteau": {
       "name": "Rasteau",
-      "plantedHa": 12.63,
-      "producedHl": 347
+      "plantedHa": 965.94,
+      "producedHl": 29213
+    },
+    "fr-regnie": {
+      "name": "Régnié",
+      "plantedHa": 390.27,
+      "producedHl": 15214
     },
     "fr-reuilly": {
       "name": "Reuilly",
@@ -1232,6 +1452,11 @@
       "name": "Richebourg",
       "plantedHa": 7.1,
       "producedHl": 138
+    },
+    "fr-rivesaltes": {
+      "name": "Rivesaltes",
+      "plantedHa": 1001.91,
+      "producedHl": 10925
     },
     "fr-romanee-saint-vivant": {
       "name": "Romanée-Saint-Vivant",
@@ -1253,10 +1478,15 @@
       "plantedHa": 41.44,
       "producedHl": 1117
     },
+    "fr-roussette-de-savoie": {
+      "name": "Roussette de Savoie",
+      "plantedHa": 55.15,
+      "producedHl": 2309
+    },
     "fr-roussette-du-bugey": {
       "name": "Roussette du Bugey",
-      "plantedHa": 13.34,
-      "producedHl": 434
+      "plantedHa": 22.1,
+      "producedHl": 593
     },
     "fr-ruchottes-chambertin": {
       "name": "Ruchottes-Chambertin",
@@ -1265,18 +1495,23 @@
     },
     "fr-rully": {
       "name": "Rully",
-      "plantedHa": 266.47,
-      "producedHl": 10236
+      "plantedHa": 362.62,
+      "producedHl": 14056
     },
     "fr-sable-de-camargue": {
       "name": "Sable de Camargue",
-      "plantedHa": 1132.36,
-      "producedHl": 70110
+      "plantedHa": 1230.28,
+      "producedHl": 74791
+    },
+    "fr-saint-amour": {
+      "name": "Saint-Amour",
+      "plantedHa": 299.16,
+      "producedHl": 14614
     },
     "fr-saint-aubin": {
       "name": "Saint-Aubin",
-      "plantedHa": 34.58,
-      "producedHl": 1191
+      "plantedHa": 163.23,
+      "producedHl": 6205
     },
     "fr-saint-bris": {
       "name": "Saint-Bris",
@@ -1285,13 +1520,18 @@
     },
     "fr-saint-chinian": {
       "name": "Saint-Chinian",
-      "plantedHa": 2228.64,
-      "producedHl": 67928
+      "plantedHa": 2428.34,
+      "producedHl": 74221
     },
     "fr-saint-emilion": {
       "name": "Saint-Emilion",
       "plantedHa": 1148.11,
       "producedHl": 49504
+    },
+    "fr-saint-emilion-grand-cru": {
+      "name": "Saint-Emilion Grand Cru",
+      "plantedHa": 4121.82,
+      "producedHl": 153842
     },
     "fr-saint-estephe": {
       "name": "Saint-Estèphe",
@@ -1325,8 +1565,8 @@
     },
     "fr-saint-peray": {
       "name": "Saint-Péray",
-      "plantedHa": 118.35,
-      "producedHl": 3034
+      "plantedHa": 122.51,
+      "producedHl": 3095
     },
     "fr-saint-pourcain": {
       "name": "Saint-Pourçain",
@@ -1335,8 +1575,8 @@
     },
     "fr-saint-romain": {
       "name": "Saint-Romain",
-      "plantedHa": 73.22,
-      "producedHl": 2687
+      "plantedHa": 106.13,
+      "producedHl": 3546
     },
     "fr-saint-sardos": {
       "name": "Saint-Sardos",
@@ -1360,13 +1600,13 @@
     },
     "fr-santenay": {
       "name": "Santenay",
-      "plantedHa": 49.73,
-      "producedHl": 2187
+      "plantedHa": 325.89,
+      "producedHl": 10326
     },
     "fr-saumur": {
       "name": "Saumur",
-      "plantedHa": 859.46,
-      "producedHl": 44107
+      "plantedHa": 2566.2,
+      "producedHl": 145762
     },
     "fr-saumur-champigny": {
       "name": "Saumur-Champigny",
@@ -1385,13 +1625,13 @@
     },
     "fr-savigny-les-beaune": {
       "name": "Savigny-lès-Beaune",
-      "plantedHa": 82.35,
-      "producedHl": 1269
+      "plantedHa": 394.75,
+      "producedHl": 8867
     },
     "fr-seyssel": {
       "name": "Seyssel",
-      "plantedHa": 50.48,
-      "producedHl": 1618
+      "plantedHa": 60.94,
+      "producedHl": 2153
     },
     "fr-tavel": {
       "name": "Tavel",
@@ -1405,8 +1645,8 @@
     },
     "fr-touraine": {
       "name": "Touraine",
-      "plantedHa": 2570.23,
-      "producedHl": 100487
+      "plantedHa": 4009.36,
+      "producedHl": 142706
     },
     "fr-touraine-noble-joue": {
       "name": "Touraine Noble Joué",
@@ -1438,6 +1678,11 @@
       "plantedHa": 72.24,
       "producedHl": 691
     },
+    "fr-vin-de-savoie": {
+      "name": "Vin de Savoie",
+      "plantedHa": 1743.89,
+      "producedHl": 87918
+    },
     "fr-vinsobres": {
       "name": "Vinsobres",
       "plantedHa": 553.04,
@@ -1445,28 +1690,28 @@
     },
     "fr-vire-clesse": {
       "name": "Viré-Clessé",
-      "plantedHa": 395.3,
-      "producedHl": 21827
+      "plantedHa": 448.48,
+      "producedHl": 23819
     },
     "fr-volnay": {
       "name": "Volnay",
-      "plantedHa": 85.23,
-      "producedHl": 1950
+      "plantedHa": 212.62,
+      "producedHl": 4930
     },
     "fr-vosne-romanee": {
       "name": "Vosne-Romanée",
-      "plantedHa": 91.6,
-      "producedHl": 1626
+      "plantedHa": 145.07,
+      "producedHl": 2675
     },
     "fr-vougeot": {
       "name": "Vougeot",
-      "plantedHa": 1.9,
-      "producedHl": 24
+      "plantedHa": 14.54,
+      "producedHl": 200
     },
     "fr-vouvray": {
       "name": "Vouvray",
-      "plantedHa": 1182.03,
-      "producedHl": 35565
+      "plantedHa": 2200.2,
+      "producedHl": 72981
     }
   }
 }

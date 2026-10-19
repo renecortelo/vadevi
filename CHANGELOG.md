@@ -46,9 +46,13 @@ has the reasons.
   sweet are drawn as one continuous gauge each, filled to where the level
   sits (a range for sweetness), with no figure: the sources give three
   levels, and the gauge claims no more.
-- **France's vineyards, from the customs**: 293 French PDOs show their area
+- **France's vineyards, from the customs**: 342 French PDOs show their area
   in production and the volume produced from the customs' 2024 harvest
-  declarations (Licence Ouverte), credited with the year and a link.
+  declarations (Licence Ouverte), credited with the year and a link. A PDO's
+  sum takes in its alternative names, its complementary geographical names
+  and premiers crus, and the wine declared as fit for it — so Champagne, the
+  crémants, the Beaujolais crus and Côtes de Bordeaux's Blaye or Castillon
+  count — and leaves out wine meant for Cognac or Armagnac.
 - **Spain's vineyards, from the Ministry**: 94 Spanish PDOs show their
   registered vineyard area from the Ministry of Agriculture's 2022/2023
   report, newer than any article's and credited to it.
