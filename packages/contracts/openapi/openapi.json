@@ -11726,6 +11726,58 @@
       "LibraryRegion": {
         "type": "object",
         "properties": {
+          "climate": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "growingDegreeDays": {
+                "type": "number"
+              },
+              "koppen": {
+                "type": "string"
+              },
+              "meanTemperature": {
+                "type": "number"
+              },
+              "pr": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "rainfall": {
+                "type": "number"
+              },
+              "tas": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "winkler": {
+                "type": "string",
+                "nullable": true,
+                "enum": [
+                  "I",
+                  "II",
+                  "III",
+                  "IV",
+                  "V",
+                  null
+                ]
+              }
+            },
+            "required": [
+              "growingDegreeDays",
+              "koppen",
+              "meanTemperature",
+              "pr",
+              "rainfall",
+              "tas",
+              "winkler"
+            ],
+            "additionalProperties": false
+          },
           "contains": {
             "type": "array",
             "items": {
@@ -11777,6 +11829,70 @@
           "eambrosiaId": {
             "type": "string",
             "nullable": true
+          },
+          "figures": {
+            "type": "object",
+            "properties": {
+              "planted": {
+                "type": "object",
+                "nullable": true,
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "quote": {
+                    "type": "string"
+                  },
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "year": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "required": [
+                  "amount",
+                  "quote",
+                  "sourceUrl",
+                  "year"
+                ],
+                "additionalProperties": false
+              },
+              "production": {
+                "type": "object",
+                "nullable": true,
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "quote": {
+                    "type": "string"
+                  },
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "year": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "required": [
+                  "amount",
+                  "quote",
+                  "sourceUrl",
+                  "year"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "planted",
+              "production"
+            ],
+            "additionalProperties": false
           },
           "giType": {
             "type": "string",
@@ -12011,9 +12127,11 @@
           }
         },
         "required": [
+          "climate",
           "contains",
           "countryCode",
           "eambrosiaId",
+          "figures",
           "giType",
           "grapes",
           "id",

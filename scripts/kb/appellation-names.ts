@@ -1,7 +1,15 @@
+import type { ClimateSummary, MonthlyClimate } from "./climate";
 /**
  * The atlas's shapes and the pure parts of its build, apart from the script
  * that reads the cache, so the tests and the SQL can use them.
  */
+
+export type RegionFigureSource = {
+  amount: number;
+  quote: string;
+  sourceUrl: string;
+  year: string | null;
+};
 
 export type RegionEntry = {
   countryCode: string;
@@ -32,6 +40,17 @@ export type RegionEntry = {
   registerLevel?: RegisterLevel;
   /** The ids of the names whose area holds this one's, the nearest first. */
   within?: string[];
+  /**
+   * The climate at its point, 1981–2010 (CHELSA V2.1): the monthly means and
+   * what they make — Köppen–Geiger class, yearly rain, mean temperature,
+   * Winkler's degree days and region.
+   */
+  climate?: ClimateSummary & MonthlyClimate;
+  /** Planted area (ha) and production (hl), from its article's infobox. */
+  figures?: {
+    planted: RegionFigureSource | null;
+    production: RegionFigureSource | null;
+  };
   /**
    * What the register's single document says of the wines: the categories of
    * grapevine product (Annex VII numbers) and the main grape varieties as it

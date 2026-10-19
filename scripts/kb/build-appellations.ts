@@ -6,6 +6,7 @@ import {
   leadIsAboutWine,
   matchKey,
   type RegionEntry,
+  type RegionFigureSource,
   type RegisterLevel,
   registerLevels,
   registerCountries,
@@ -17,6 +18,7 @@ import { regionReadings } from "../../packages/domain/src/region-readings";
 
 import { allowedItem } from "./appellation-exclusions";
 import type { TechnicalFileSummaries } from "./extract-technical-file-links";
+import { type MonthlyClimate, summarizeClimate } from "./climate";
 import { registerCategories, registerGrapes } from "./register-facts";
 
 /**
@@ -1409,6 +1411,57 @@ for (const entry of entries) {
 console.info(
   `  ${documented} names described from the register's single document; ${linkedVarieties} varieties linked to a grape card.`,
 );
+
+// The climate at each name's point, read while the point was where it is
+// (`pnpm kb:fetch-climate` after points move), and the planted area and
+// production its article's infobox gives (`pnpm kb:fetch-region-figures`).
+const climates = (
+  JSON.parse(readFileSync(resolve("data/kb/region-climate.json"), "utf8")) as {
+    regions: Record<string, MonthlyClimate & { point: [number, number] }>;
+  }
+).regions;
+const figures = (
+  JSON.parse(readFileSync(resolve("data/kb/region-figures.json"), "utf8")) as {
+    regions: Record<
+      string,
+      Record<"planted" | "production", (RegionFigureSource & { language: string }) | null>
+    >;
+  }
+).regions;
+let withClimate = 0;
+let withFigures = 0;
+for (const entry of entries) {
+  const climate = climates[entry.id];
+  if (
+    climate !== undefined &&
+    entry.latitude !== null &&
+    entry.longitude !== null &&
+    Math.abs(climate.point[0] - entry.latitude) < 0.001 &&
+    Math.abs(climate.point[1] - entry.longitude) < 0.001
+  ) {
+    entry.climate = {
+      ...summarizeClimate(climate, entry.latitude),
+      pr: climate.pr,
+      tas: climate.tas,
+    };
+    withClimate += 1;
+  }
+  const figure = figures[entry.id];
+  if (figure !== undefined) {
+    const strip = (value: (RegionFigureSource & { language: string }) | null) =>
+      value === null
+        ? null
+        : {
+            amount: value.amount,
+            quote: value.quote,
+            sourceUrl: value.sourceUrl,
+            year: value.year,
+          };
+    entry.figures = { planted: strip(figure.planted), production: strip(figure.production) };
+    withFigures += 1;
+  }
+}
+console.info(`  ${withClimate} names with their climate, ${withFigures} with area or production.`);
 
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;

@@ -517,13 +517,15 @@ export async function getLibraryRegion(
       `SELECT id, eambrosia_id, name, country_code, gi_type, registered_on, legal_url,
         latitude, longitude, wikidata_id, point_source,
         register_categories, register_grapes, register_source_url, register_ref,
-        register_level, within
+        register_level, within, climate, figures
       FROM kb_regions WHERE id = ?`,
     )
     .bind(regionId)
     .first<{
+      climate: string | null;
       country_code: string;
       eambrosia_id: string | null;
+      figures: string | null;
       gi_type: RegionDesignation;
       id: string;
       latitude: number | null;
@@ -602,13 +604,32 @@ export async function getLibraryRegion(
     translated: number;
   }[];
   const summary = inReadersLanguage(summaryRows, locale);
+  const climate =
+    region.climate === null ? null : (JSON.parse(region.climate) as LibraryRegion["climate"]);
+  const figures =
+    region.figures === null
+      ? { planted: null, production: null }
+      : (JSON.parse(region.figures) as LibraryRegion["figures"]);
   return {
+    climate:
+      climate === null
+        ? null
+        : {
+            growingDegreeDays: climate.growingDegreeDays,
+            koppen: climate.koppen,
+            meanTemperature: climate.meanTemperature,
+            pr: climate.pr,
+            rainfall: climate.rainfall,
+            tas: climate.tas,
+            winkler: climate.winkler,
+          },
     // Directly: not also inside another name that is inside this one.
     contains: heldRows
       .filter((row) => (JSON.parse(row.within) as string[]).every((holder) => !inside.has(holder)))
       .map(link),
     countryCode: region.country_code,
     eambrosiaId: region.eambrosia_id,
+    figures,
     giType: region.gi_type,
     grapes: (
       (grapes?.results ?? []) as {

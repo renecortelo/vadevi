@@ -28,6 +28,17 @@ has the reasons.
   grape's colour. The drawings are Va de Vi's own, in one line style; most
   aromas take their group's drawing (red fruit, citrus, flowers), so a wheel
   of them will not be a crowd.
+- **A region at a glance**: a registered name's card now opens with how many
+  varieties its specification lists, its planted hectares and its yearly
+  hectolitres — the last two from its Wikipedia article's infobox, with the
+  year and a link; a figure given in acres says it was converted. Then its
+  climate: the Köppen–Geiger type in words («Mediterranean, warm summer»),
+  the rain of a year, the mean temperature, the heat of the vine's season on
+  Winkler's five steps, and twelve months of rain and temperature in one
+  small chart. The climate is the one at the name's point on the map,
+  1981–2010, from CHELSA V2.1 (CC0), and the card says that for a large area
+  it is only a guide. 2613 names have a climate; 652 have area or
+  production.
 - **One aroma vocabulary**: the library's 123 aroma terms now sit in nine
   families and twenty groups (`packages/i18n/src/ontology/aromas.ts`),
   reusing the tasting ontology's codes where it has the aroma — the base for
@@ -44,6 +55,10 @@ has the reasons.
 
 ### For operators
 
+- Migration `0042` adds `kb_regions.climate` and `kb_regions.figures` in
+  place (nothing is rebuilt); `pnpm kb:load` fills them. New builds:
+  `pnpm kb:fetch-climate` and `pnpm kb:fetch-region-figures`
+  (`data/kb/README.md`).
 - **Voice tastings can be switched on**: the privacy review
   (`docs/privacy-review-voice-tasting.md`) records the Workers AI terms as
   read on 18 October 2026 — no retention of inputs, no training on them —

@@ -185,6 +185,8 @@ export function libraryTables(
         "register_ref",
         "register_level",
         "within",
+        "climate",
+        "figures",
       ],
       ["id"],
       3,
@@ -219,6 +221,8 @@ export function libraryTables(
         region.within === undefined || region.within.length === 0
           ? null
           : JSON.stringify(region.within),
+        region.climate === undefined ? null : JSON.stringify(region.climate),
+        region.figures === undefined ? null : JSON.stringify(region.figures),
       ]),
     ),
     table(

@@ -192,13 +192,48 @@ const RegionLinkSchema = z
   .strict();
 
 /** A protected wine name from its register, with what the library adds. */
+const RegionFigureSchema = z
+  .object({
+    /** Hectares, or hectolitres. */
+    amount: z.number(),
+    /** The infobox line it was read from. */
+    quote: z.string(),
+    sourceUrl: z.string().url(),
+    /** The year the article gives it for. */
+    year: z.string().nullable(),
+  })
+  .strict();
+
 export const LibraryRegionSchema = z
   .object({
+    /**
+     * The climate at the name's point on the map, 1981–2010 (CHELSA V2.1):
+     * one point, so only a guide for a large area. Null without a point.
+     */
+    climate: z
+      .object({
+        /** Winkler's growing degree days over 10 °C. */
+        growingDegreeDays: z.number(),
+        koppen: z.string(),
+        meanTemperature: z.number(),
+        /** Monthly precipitation, January first, in millimetres. */
+        pr: z.array(z.number()).length(12),
+        rainfall: z.number(),
+        /** Monthly mean temperature, January first, in °C. */
+        tas: z.array(z.number()).length(12),
+        winkler: z.enum(["I", "II", "III", "IV", "V"]).nullable(),
+      })
+      .strict()
+      .nullable(),
     /** The names whose area lies within this one's, directly: a district's wards. */
     contains: z.array(RegionLinkSchema),
     countryCode: z.string().length(2),
     /** The EU register's id; null for a name another country's register holds. */
     eambrosiaId: z.string().nullable(),
+    /** Planted area and yearly production, from its article's infobox. */
+    figures: z
+      .object({ planted: RegionFigureSchema.nullable(), production: RegionFigureSchema.nullable() })
+      .strict(),
     giType: RegionDesignationSchema,
     grapes: z.array(
       z

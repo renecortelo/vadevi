@@ -48,6 +48,8 @@
     "kb:search-appellation-names": "tsx scripts/kb/search-appellation-names.ts",
     "kb:fetch-grand-crus": "tsx scripts/kb/fetch-grand-crus.ts",
     "kb:fetch-country-wine": "tsx scripts/kb/fetch-country-wine.ts",
+    "kb:fetch-climate": "tsx scripts/kb/fetch-climate.ts",
+    "kb:fetch-region-figures": "tsx scripts/kb/fetch-region-figures.ts",
     "kb:fetch-topics": "tsx scripts/kb/fetch-topics.ts",
     "kb:build-topics": "tsx scripts/kb/build-topics.ts",
     "kb:fetch-grape-images": "tsx scripts/kb/fetch-grape-images.ts",

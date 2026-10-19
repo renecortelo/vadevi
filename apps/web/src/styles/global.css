@@ -4508,6 +4508,98 @@ p {
   background: repeating-linear-gradient(45deg, var(--color-border) 0 4px, transparent 4px 8px);
 }
 
+.library-bar__steps--five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.library-bar__ends {
+  display: flex;
+  font-size: var(--text-xs, 0.75rem);
+  justify-content: space-between;
+  margin-block-end: var(--space-1);
+}
+
+/* A registered name at a glance: a drawing, a figure, what it counts. */
+.region-glance {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.settings-card .region-glance li + li {
+  margin-block-start: 0;
+}
+
+.region-glance strong {
+  display: block;
+  font-size: var(--text-lg, 1.125rem);
+}
+
+.region-glance span {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: var(--text-sm);
+  line-height: 1.25;
+}
+
+.region-climate {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+}
+
+.region-climate > div:not(.library-bar) {
+  border-block-end: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-3);
+  justify-content: space-between;
+  padding-block-end: var(--space-2);
+}
+
+.region-climate dd {
+  font-weight: 700;
+  margin: 0;
+  text-align: end;
+}
+
+.region-climate .library-bar dd {
+  font-weight: 400;
+  text-align: start;
+}
+
+.region-climograph {
+  margin: 0 0 var(--space-2);
+}
+
+.climograph {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.climograph__rain {
+  fill: var(--color-plum-surface, var(--color-border));
+  stroke: var(--color-plum);
+  stroke-opacity: 0.4;
+}
+
+.climograph__temperature {
+  fill: none;
+  stroke: var(--color-plum);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+}
+
+.climograph__month {
+  fill: var(--color-text-muted);
+  font-size: 9px;
+}
+
 /* The grape's colour, as a small round of its skin. */
 .grape-swatch {
   border-radius: 50%;

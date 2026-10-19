@@ -288,6 +288,28 @@ The small map draws a country on its sheet: Europe's, North or South
 America's (from 6° S, for the Vale do São Francisco), Japan's, Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural
 Earth).
 
+## Climate, planted area and production
+
+Each name's card shows the climate at its point on the map and, where its
+article gives them, its vineyards' size and production.
+
+- `pnpm kb:fetch-climate` reads the monthly mean temperature and
+  precipitation, 1981–2010, at every point from CHELSA V2.1 — only the rows
+  of its GeoTIFFs the points fall on, by byte range — into
+  `region-climate.json`, with the point each was read at. The atlas build
+  works out the Köppen–Geiger class (Peel et al. 2007, with Beck et al.'s
+  0 °C line), the yearly rain, the mean temperature and Winkler's degree days
+  and region (April–October north, October–April south), and attaches them
+  only while the name's point is the one read: run it again after points
+  move. One point stands for the whole name, so for a large area the card
+  calls it a guide.
+- `pnpm kb:fetch-region-figures` reads the infobox of the Wikipedia articles
+  that already describe each name (English, French, Spanish, German): the
+  planted area in hectares and the production in hectolitres, with the line
+  each came from and its year where the article gives one. Only a wine
+  region's infobox counts, and only a figure with its unit. A figure in
+  acres is converted and marked as such.
+
 ## Keeping the registers current
 
 Registers change: eCFR adds AVAs, the INV recognises new indications, IPONZ,
@@ -318,6 +340,11 @@ Every few months, or when a register announces a name:
   and each grape records the article it came from (`url`, `wikipediaUrl`);
   the app shows that link next to the text. Text derived from these articles
   is shared under the same licence.
+
+- **CHELSA V2.1** climatologies (Karger et al. 2017, _Scientific Data_ 4,
+  170122; data: Karger et al. 2021, EnviDat, doi:10.16904/envidat.228):
+  CC0 1.0. The card credits it under the climate. WorldClim was not used:
+  its terms allow no redistribution without permission.
 
 - **27 CFR part 9** (eCFR): a work of the US government, public domain.
 - **UC Davis AVA project** boundaries
