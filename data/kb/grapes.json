@@ -2371,7 +2371,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Loureiro_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [
       "lemon"
@@ -2464,6 +2464,12 @@
         "quote": "Die spätreifende Sorte erbringt duftige, körperreiche und alkoholstarke Weine.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Trajadura"
+      },
+      {
+        "field": "acidity",
+        "quote": "una acidez total media-baja",
+        "value": "medium",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Treixadura"
       }
     ],
     "id": "treixadura",
@@ -2848,7 +2854,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cai%C3%B1o_tinto"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "raisin"
@@ -2951,6 +2957,12 @@
         "quote": "Le sousão ou vinhão est un cépage noir du Nord-Ouest du Portugal, région du Vinho verde, qui est autorisé pour l'élaboration d'un vin rouge de qualité.",
         "value": "red",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Sous%C3%A3o"
+      },
+      {
+        "field": "acidity",
+        "quote": "Die spätreifende Sorte ergibt tiefrote, tanninreiche, herbrauhe säurebetonte fruchtige Weine",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Vinh%C3%A3o"
       }
     ],
     "id": "souzao",
@@ -5012,7 +5024,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Encruzado"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "spice",
@@ -5100,6 +5112,12 @@
         "field": "regions",
         "quote": "especially in the Tejo and Bairrada ... Outside of Portugal there are some significant plantings in South Africa.",
         "value": "ZA: South Africa"
+      },
+      {
+        "field": "acidity",
+        "quote": "Diese vielseitige Rebe erbringt fruchtige, aroma- und säurebetonte Weine mit viel Bukett.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Fern%C3%A3o_Pires"
       }
     ],
     "id": "fernao-pires",
@@ -32085,7 +32103,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/%C5%BDilavka"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "tea",
@@ -32220,6 +32238,12 @@
         "field": "styles",
         "quote": "It is used for both still and sparkling wine production ... In blends, Roussanne adds aromatics, elegance and acidity ...",
         "value": "blending"
+      },
+      {
+        "field": "acidity",
+        "quote": "Die aus Roussanne gekelterten Weine sind säurereich und haben ein blumiges Aroma.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Roussanne"
       }
     ],
     "id": "roussanne",
@@ -32896,7 +32920,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Muscat_Ottonel"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "sour cherry",
@@ -32979,6 +33003,12 @@
         "field": "regions",
         "quote": "It is cultivated in Moldova in the regions of Orhei, Anenii Noi, Straseni, Ialoveni and in Romania in the regions of Moldavia, Dobruja and Wallachia... Băbească neagră can be found on limited acreages in the Finger Lakes region of New York State...",
         "value": "US: Finger Lakes (New York)"
+      },
+      {
+        "field": "acidity",
+        "quote": "donne des vins rouges typiquement riches en acide",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
       }
     ],
     "id": "babeasca-neagra",
@@ -41441,7 +41471,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Verdelho"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": "medium",
     "aromas": [
       "raisin"
@@ -41553,6 +41583,12 @@
         "field": "alcohol",
         "quote": "Ses vins sont moyennement alcooliques, peu acides et aromatiques.",
         "value": "medium",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscadelle"
+      },
+      {
+        "field": "acidity",
+        "quote": "Ses vins sont moyennement alcooliques, peu acides et aromatiques.",
+        "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Muscadelle"
       }
     ],
@@ -46195,7 +46231,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Poulsard"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": null,
     "aromas": [
       "nutty"
@@ -46253,6 +46289,12 @@
         "field": "aromas",
         "quote": "Die Weine sind eher säureärmer und haben ein nussiges Aroma",
         "value": "nutty",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Neuburger"
+      },
+      {
+        "field": "acidity",
+        "quote": "Die Weine sind eher säureärmer und haben ein nussiges Aroma",
+        "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Neuburger"
       }
     ],

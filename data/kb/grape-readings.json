@@ -129,6 +129,14 @@
         "quote": "Auf Rhodos wird daraus der trockene und delikate Weißwein „Athiri de Rhodos“ hergestellt"
       }
     ],
+    "babeasca-neagra": [
+      {
+        "field": "acidity",
+        "lang": "fr",
+        "value": "high",
+        "quote": "donne des vins rouges typiquement riches en acide"
+      }
+    ],
     "barbera": [
       {
         "field": "body",
@@ -422,6 +430,14 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "In addition to dry table wines, it is used to make sweet wines"
+      }
+    ],
+    "fernao-pires": [
+      {
+        "field": "acidity",
+        "lang": "de",
+        "value": "high",
+        "quote": "Diese vielseitige Rebe erbringt fruchtige, aroma- und säurebetonte Weine mit viel Bukett."
       }
     ],
     "feteasca-alba": [
@@ -935,6 +951,12 @@
         "lang": "fr",
         "value": "medium",
         "quote": "Ses vins sont moyennement alcooliques, peu acides et aromatiques."
+      },
+      {
+        "field": "acidity",
+        "lang": "fr",
+        "value": "low",
+        "quote": "Ses vins sont moyennement alcooliques, peu acides et aromatiques."
       }
     ],
     "muscat-blanc-a-petits-grains": [
@@ -1040,6 +1062,12 @@
         "words": {
           "nutty": "nussiges"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "de",
+        "value": "low",
+        "quote": "Die Weine sind eher säureärmer und haben ein nussiges Aroma"
       }
     ],
     "okuzgozu": [
@@ -1279,6 +1307,14 @@
         }
       }
     ],
+    "roussanne": [
+      {
+        "field": "acidity",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die aus Roussanne gekelterten Weine sind säurereich und haben ein blumiges Aroma."
+      }
+    ],
     "ruby-cabernet": [
       {
         "field": "body",
@@ -1406,6 +1442,14 @@
         "words": {
           "herbs": "Kräuter"
         }
+      }
+    ],
+    "souzao": [
+      {
+        "field": "acidity",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die spätreifende Sorte ergibt tiefrote, tanninreiche, herbrauhe säurebetonte fruchtige Weine"
       }
     ],
     "sultana": [
@@ -1549,6 +1593,12 @@
         "lang": "de",
         "value": "high",
         "quote": "Die spätreifende Sorte erbringt duftige, körperreiche und alkoholstarke Weine."
+      },
+      {
+        "field": "acidity",
+        "lang": "es",
+        "value": "medium",
+        "quote": "una acidez total media-baja"
       }
     ],
     "trepat": [
