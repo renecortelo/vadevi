@@ -1,6 +1,14 @@
 {
   "$comment": "Body, alcohol and sweetness of grapes, read by hand from their Wikipedia articles where the model's reading left them empty (19 October 2026): each value with the sentence it comes from, copied as written, and the article's language. scripts/kb/build-grapes.ts checks every quote against that article as it checks a model's, and keeps only what the quote states. Sweetness is the range of the wines the grape makes: dry, medium (off-dry) or sweet, or a range such as dry-sweet.",
   "readings": {
+    "abouriou": [
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Il donne des vins très colorés, charpentés, parfois astringents, mais manquant d'acidité."
+      }
+    ],
     "agiorgitiko": [
       {
         "field": "body",
@@ -176,6 +184,14 @@
         "words": {
           "herbaceous": "herbáceos"
         }
+      }
+    ],
+    "cabernet-dorsa": [
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Le cépage donne des vins corsés et bien colorés même dans des vignobles septentrionaux."
       }
     ],
     "cabernet-sauvignon": [
@@ -503,6 +519,12 @@
         "lang": "it",
         "value": "dry",
         "quote": "In bocca il vino si presenta sufficientemente alcolico, secco"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die Sorte liefert einen körperreichen Wein mit nussigem Aroma"
       }
     ],
     "greco": [
@@ -756,6 +778,12 @@
         "lang": "en",
         "value": "low",
         "quote": "Merlot's low acidity serves as a balance for the higher acidity in many Italian wine grapes"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die Sorte ergibt fruchtige, mollige, körperreiche und vollmundige Weine"
       }
     ],
     "molinara": [
@@ -1118,6 +1146,12 @@
           "blackcurrant": "schwarze Johannisbeere",
           "raspberry": "Himbeere"
         }
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "high",
+        "quote": "besitzt meist eine angenehme Säure und einen vollen Körper"
       }
     ],
     "piquepoul": [
@@ -1445,6 +1479,12 @@
         "lang": "de",
         "value": "high",
         "quote": "sind tanninreiche, geschmackvolle Rotweine mit einem hohen Alkoholgehalt"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "high",
+        "quote": "eignen sich als ausgesprochene Lagerweine mit hohem Reifepotenzial für körperreiche Weine"
       }
     ],
     "treixadura": [
@@ -1516,6 +1556,18 @@
         "lang": "de",
         "value": "high",
         "quote": "Sie bringt alkoholreiche Weine mittlerer Säure."
+      },
+      {
+        "field": "body",
+        "lang": "pt",
+        "value": "high",
+        "quote": "Ele varia entre o doce aveludado, com acidez equilibrada dotado de harmonia, e o seco, embora suave e encorpado."
+      },
+      {
+        "field": "sweetness",
+        "lang": "pt",
+        "value": "dry-sweet",
+        "quote": "Ele varia entre o doce aveludado, com acidez equilibrada dotado de harmonia, e o seco, embora suave e encorpado."
       }
     ],
     "vermentino": [

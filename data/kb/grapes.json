@@ -1273,7 +1273,7 @@
     "aromas": [
       "black fruit"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -1369,6 +1369,12 @@
       {
         "field": "alcohol",
         "quote": "sind tanninreiche, geschmackvolle Rotweine mit einem hohen Alkoholgehalt",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Touriga_Nacional"
+      },
+      {
+        "field": "body",
+        "quote": "eignen sich als ausgesprochene Lagerweine mit hohem Reifepotenzial für körperreiche Weine",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Touriga_Nacional"
       }
@@ -11529,7 +11535,7 @@
       "herbs",
       "nutty"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -11642,6 +11648,12 @@
         "quote": "In bocca il vino si presenta sufficientemente alcolico, secco",
         "value": "dry",
         "sourceUrl": "https://it.wikipedia.org/wiki/Grechetto"
+      },
+      {
+        "field": "body",
+        "quote": "Die Sorte liefert einen körperreichen Wein mit nussigem Aroma",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Grechetto"
       }
     ],
     "id": "grechetto",
@@ -12448,7 +12460,7 @@
       "cherry",
       "bell pepper"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -12480,6 +12492,12 @@
         "field": "regions",
         "quote": "in the Württemberg wine region of Germany",
         "value": "DE: Württemberg"
+      },
+      {
+        "field": "body",
+        "quote": "Le cépage donne des vins corsés et bien colorés même dans des vignobles septentrionaux.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Cabernet_dorsa"
       }
     ],
     "id": "cabernet-dorsa",
@@ -13861,7 +13879,7 @@
       "tea",
       "black cherry"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -13924,6 +13942,12 @@
         "field": "acidity",
         "quote": "Merlot's low acidity serves as a balance for the higher acidity in many Italian wine grapes",
         "value": "low"
+      },
+      {
+        "field": "body",
+        "quote": "Die Sorte ergibt fruchtige, mollige, körperreiche und vollmundige Weine",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Merlot"
       }
     ],
     "id": "merlot",
@@ -38326,7 +38350,7 @@
     "aromas": [
       "spice"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -38453,6 +38477,12 @@
         "field": "regions",
         "quote": "grown primarily in Southwest France and, in small quantities, California ... the Appellation d'origine contrôlée (AOC) wine of Côtes du Marmandais ... The vast majority were found in the Lot-et-Garonne department (200 hectares/494 acres)  of South West France and the Loire-Atlantique department ... particularly in the Russian River AVA",
         "value": "US: Russian River"
+      },
+      {
+        "field": "body",
+        "quote": "Il donne des vins très colorés, charpentés, parfois astringents, mais manquant d'acidité.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Abouriou"
       }
     ],
     "id": "abouriou",
@@ -41121,7 +41151,7 @@
       "floral",
       "citrus"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -41229,6 +41259,18 @@
         "quote": "Sie bringt alkoholreiche Weine mittlerer Säure.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Gouveio"
+      },
+      {
+        "field": "body",
+        "quote": "Ele varia entre o doce aveludado, com acidez equilibrada dotado de harmonia, e o seco, embora suave e encorpado.",
+        "value": "high",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Verdelho"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Ele varia entre o doce aveludado, com acidez equilibrada dotado de harmonia, e o seco, embora suave e encorpado.",
+        "value": "dry-sweet",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Verdelho"
       }
     ],
     "id": "verdelho",
@@ -41328,7 +41370,10 @@
         "url": "https://en.wikipedia.org/wiki/Verdelho"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Verdello",
@@ -42362,7 +42407,7 @@
       "blackcurrant",
       "raspberry"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -42472,6 +42517,12 @@
         "field": "aromas",
         "quote": "Typische im Wein zu findende Aromen sind: Kirsche, Brombeere, schwarze Johannisbeere, Mokka, Himbeere und oft auch Rauch.",
         "value": "raspberry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Fr%C3%BChburgunder"
+      },
+      {
+        "field": "body",
+        "quote": "besitzt meist eine angenehme Säure und einen vollen Körper",
+        "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Fr%C3%BChburgunder"
       }
     ],
