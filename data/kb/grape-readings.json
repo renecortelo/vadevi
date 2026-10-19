@@ -9,6 +9,21 @@
         "quote": "Il donne des vins très colorés, charpentés, parfois astringents, mais manquant d'acidité."
       }
     ],
+    "acolon": [
+      {
+        "field": "pairings",
+        "lang": "fr",
+        "value": [
+          "game",
+          "cheese"
+        ],
+        "quote": "en accompagnement de gibiers, de fromages forts",
+        "words": {
+          "game": "gibiers",
+          "cheese": "fromages"
+        }
+      }
+    ],
     "agiorgitiko": [
       {
         "field": "body",
@@ -43,6 +58,19 @@
         "lang": "it",
         "value": "dry",
         "quote": "Il vino albariño è un vino bianco, ampio, secco, molto leggero e delizioso."
+      },
+      {
+        "field": "pairings",
+        "lang": "de",
+        "value": [
+          "fish",
+          "seafood"
+        ],
+        "quote": "passt sehr gut zu Fisch und zu Meeresfrüchten",
+        "words": {
+          "fish": "Fisch",
+          "seafood": "Meeresfrüchten"
+        }
       }
     ],
     "aleatico": [
@@ -173,6 +201,17 @@
         "lang": "en",
         "value": "dry",
         "quote": "Blatina can produce dry red wine"
+      },
+      {
+        "field": "pairings",
+        "lang": "de",
+        "value": [
+          "game"
+        ],
+        "quote": "Blatina-Weine empfehlen sich mit 18 bis 20° Celsius zu intensiv gewürzten Speisen, Wild, Gegrilltem",
+        "words": {
+          "game": "Wild"
+        }
       }
     ],
     "blauer-portugieser": [
@@ -222,6 +261,19 @@
         "lang": "fr",
         "value": "high",
         "quote": "Le cépage donne des vins corsés et bien colorés même dans des vignobles septentrionaux."
+      },
+      {
+        "field": "pairings",
+        "lang": "fr",
+        "value": [
+          "game",
+          "cheese"
+        ],
+        "quote": "avec les gibiers, les fromages forts, les salaisons",
+        "words": {
+          "game": "gibiers",
+          "cheese": "fromages"
+        }
       }
     ],
     "cabernet-sauvignon": [
@@ -236,6 +288,14 @@
         "lang": "ca",
         "value": "dry",
         "quote": "El vi elaborat amb raïm cabernet sauvignon és sec, àcid, amb cos, ric en alcohol"
+      },
+      {
+        "field": "pairings",
+        "lang": "en",
+        "value": [
+          "cheese"
+        ],
+        "quote": "The wine can typically pair well with a variety of cheeses, such as Cheddar, mozzarella and Brie"
       }
     ],
     "caino-tinto": [
@@ -285,6 +345,15 @@
         "lang": "en",
         "value": "dry",
         "quote": "is normally made bone-dry"
+      },
+      {
+        "field": "pairings",
+        "lang": "en",
+        "value": [
+          "chicken",
+          "turkey"
+        ],
+        "quote": "It is most commonly paired with roast chicken and other white meats such as turkey."
       }
     ],
     "chasselas": [
@@ -301,6 +370,15 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "a popular expression of Chenin as a dry wine ... producing an intense, viscous dessert wine"
+      },
+      {
+        "field": "pairings",
+        "lang": "en",
+        "value": [
+          "fish",
+          "chicken"
+        ],
+        "quote": "Lighter, dry styles can pair well with light dishes such as salads, fish, and chicken."
       }
     ],
     "ciliegiolo": [
@@ -1260,6 +1338,19 @@
         "quote": "ein für kroatische Verhältnisse leichter, trockener und frischer Wein"
       }
     ],
+    "poulsard": [
+      {
+        "field": "pairings",
+        "lang": "de",
+        "value": [
+          "raclette"
+        ],
+        "quote": "Gastronomisch begleitet er hervorragend Grillgerichte, Raclette, Geflügelgerichte und Wurstwaren.",
+        "words": {
+          "raclette": "Raclette"
+        }
+      }
+    ],
     "prieto-picudo": [
       {
         "field": "alcohol",
@@ -1274,6 +1365,21 @@
         "lang": "en",
         "value": "medium",
         "quote": "with notably high levels of tannin and medium alcohol content"
+      }
+    ],
+    "ribolla-gialla": [
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "fish",
+          "vegetables"
+        ],
+        "quote": "la Ribolla si abbina bene a piatti leggeri e freschi, preferibilmente a base di pesce, verdure o formaggi freschi",
+        "words": {
+          "fish": "pesce",
+          "vegetables": "verdure"
+        }
       }
     ],
     "riesling": [
@@ -1337,6 +1443,15 @@
         "lang": "en",
         "value": "medium",
         "quote": "Sangiovese's high acidity and moderate alcohol"
+      },
+      {
+        "field": "pairings",
+        "lang": "en",
+        "value": [
+          "pasta",
+          "pizza"
+        ],
+        "quote": "One of the classic pairings in Italian cuisine is tomato-based pasta and pizza sauces with a Sangiovese-based Chianti."
       }
     ],
     "saperavi": [
@@ -1718,6 +1833,19 @@
         "lang": "fr",
         "value": "dry",
         "quote": "Il produit un vin rouge-pourpre, sec, équilibré."
+      },
+      {
+        "field": "pairings",
+        "lang": "fr",
+        "value": [
+          "grilled meats",
+          "cheese"
+        ],
+        "quote": "avec des viandes grillées et avec des fromages au goût prononcé",
+        "words": {
+          "grilled meats": "viandes grillées",
+          "cheese": "fromages"
+        }
       }
     ],
     "xarel-lo": [

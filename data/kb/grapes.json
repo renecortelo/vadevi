@@ -12532,6 +12532,18 @@
         "quote": "Le cépage donne des vins corsés et bien colorés même dans des vignobles septentrionaux.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Cabernet_dorsa"
+      },
+      {
+        "field": "pairings",
+        "quote": "avec les gibiers, les fromages forts, les salaisons",
+        "value": "game",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Cabernet_dorsa"
+      },
+      {
+        "field": "pairings",
+        "quote": "avec les gibiers, les fromages forts, les salaisons",
+        "value": "cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Cabernet_dorsa"
       }
     ],
     "id": "cabernet-dorsa",
@@ -12546,7 +12558,10 @@
       "pt": "Cabernet Dorsa"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "game",
+      "cheese"
+    ],
     "prominence": 6,
     "regions": [
       {
@@ -12748,6 +12763,11 @@
         "quote": "El vi elaborat amb raïm cabernet sauvignon és sec, àcid, amb cos, ric en alcohol",
         "value": "dry",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Cabernet_sauvignon"
+      },
+      {
+        "field": "pairings",
+        "quote": "The wine can typically pair well with a variety of cheeses, such as Cheddar, mozzarella and Brie",
+        "value": "cheese"
       }
     ],
     "id": "cabernet-sauvignon",
@@ -12762,7 +12782,9 @@
       "pt": "Cabernet sauvignon"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 54,
     "regions": [],
     "styles": [
@@ -13540,6 +13562,16 @@
         "field": "sweetness",
         "quote": "is normally made bone-dry",
         "value": "dry"
+      },
+      {
+        "field": "pairings",
+        "quote": "It is most commonly paired with roast chicken and other white meats such as turkey.",
+        "value": "chicken"
+      },
+      {
+        "field": "pairings",
+        "quote": "It is most commonly paired with roast chicken and other white meats such as turkey.",
+        "value": "turkey"
       }
     ],
     "id": "chardonnay",
@@ -13554,7 +13586,10 @@
       "pt": "Chardonnay"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "chicken",
+      "turkey"
+    ],
     "prominence": 47,
     "regions": [
       {
@@ -16226,6 +16261,16 @@
         "field": "sweetness",
         "quote": "a popular expression of Chenin as a dry wine ... producing an intense, viscous dessert wine",
         "value": "dry-sweet"
+      },
+      {
+        "field": "pairings",
+        "quote": "Lighter, dry styles can pair well with light dishes such as salads, fish, and chicken.",
+        "value": "fish"
+      },
+      {
+        "field": "pairings",
+        "quote": "Lighter, dry styles can pair well with light dishes such as salads, fish, and chicken.",
+        "value": "chicken"
       }
     ],
     "id": "chenin-blanc",
@@ -16240,7 +16285,10 @@
       "pt": "Chenin Blanc"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "chicken"
+    ],
     "prominence": 31,
     "regions": [],
     "styles": [
@@ -18159,6 +18207,16 @@
         "field": "alcohol",
         "quote": "Sangiovese's high acidity and moderate alcohol",
         "value": "medium"
+      },
+      {
+        "field": "pairings",
+        "quote": "One of the classic pairings in Italian cuisine is tomato-based pasta and pizza sauces with a Sangiovese-based Chianti.",
+        "value": "pasta"
+      },
+      {
+        "field": "pairings",
+        "quote": "One of the classic pairings in Italian cuisine is tomato-based pasta and pizza sauces with a Sangiovese-based Chianti.",
+        "value": "pizza"
       }
     ],
     "id": "sangiovese",
@@ -18173,7 +18231,10 @@
       "pt": "Sangiovese"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "pasta",
+      "pizza"
+    ],
     "prominence": 26,
     "regions": [
       {
@@ -20331,6 +20392,18 @@
         "quote": "Il vino albariño è un vino bianco, ampio, secco, molto leggero e delizioso.",
         "value": "dry",
         "sourceUrl": "https://it.wikipedia.org/wiki/Albari%C3%B1o"
+      },
+      {
+        "field": "pairings",
+        "quote": "passt sehr gut zu Fisch und zu Meeresfrüchten",
+        "value": "fish",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alvarinho"
+      },
+      {
+        "field": "pairings",
+        "quote": "passt sehr gut zu Fisch und zu Meeresfrüchten",
+        "value": "seafood",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alvarinho"
       }
     ],
     "id": "albarino",
@@ -20345,7 +20418,10 @@
       "pt": "Alvarinho"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood"
+    ],
     "prominence": 22,
     "regions": [
       {
@@ -24752,6 +24828,18 @@
         "quote": "Il produit un vin rouge-pourpre, sec, équilibré.",
         "value": "dry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Vranac"
+      },
+      {
+        "field": "pairings",
+        "quote": "avec des viandes grillées et avec des fromages au goût prononcé",
+        "value": "grilled meats",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Vranac"
+      },
+      {
+        "field": "pairings",
+        "quote": "avec des viandes grillées et avec des fromages au goût prononcé",
+        "value": "cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Vranac"
       }
     ],
     "id": "vranec",
@@ -24766,7 +24854,10 @@
       "nl": "Vranac"
     },
     "origin": "ME",
-    "pairings": [],
+    "pairings": [
+      "grilled meats",
+      "cheese"
+    ],
     "prominence": 18,
     "regions": [],
     "styles": [
@@ -36692,6 +36783,12 @@
         "field": "sweetness",
         "quote": "Blatina can produce dry red wine",
         "value": "dry"
+      },
+      {
+        "field": "pairings",
+        "quote": "Blatina-Weine empfehlen sich mit 18 bis 20° Celsius zu intensiv gewürzten Speisen, Wild, Gegrilltem",
+        "value": "game",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Blatina"
       }
     ],
     "id": "blatina",
@@ -36706,7 +36803,9 @@
       "nl": "Blatina"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "game"
+    ],
     "prominence": 12,
     "regions": [],
     "styles": [
@@ -42847,6 +42946,18 @@
         "field": "regions",
         "quote": "grown most famously in the Friuli Venezia Giulia region of northeast Italy ... the grape thrives in the region around Corno di Rosazzo and Gorizia. In Slovenia, the grape is grown prominently in the Brda and Vipava Valley regions ... the white DOC wines of Colli Orientali del Friuli and Collio Goriziano.",
         "value": "IT: Colli Orientali del Friuli"
+      },
+      {
+        "field": "pairings",
+        "quote": "la Ribolla si abbina bene a piatti leggeri e freschi, preferibilmente a base di pesce, verdure o formaggi freschi",
+        "value": "fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Ribolla_gialla"
+      },
+      {
+        "field": "pairings",
+        "quote": "la Ribolla si abbina bene a piatti leggeri e freschi, preferibilmente a base di pesce, verdure o formaggi freschi",
+        "value": "vegetables",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Ribolla_gialla"
       }
     ],
     "id": "ribolla-gialla",
@@ -42861,7 +42972,10 @@
       "pt": "Ribolla Gialla"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "vegetables"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -46118,6 +46232,12 @@
         "field": "regions",
         "quote": "It is a permitted grape in several Jura AOCs including the Arbois and Côtes du Jura AOC where it is blended with Trousseau noir and Pinot noir to produce red and rosé; the L'Etoile AOC ... Outside Jura, it is grown in the Bugey wine region located near the Beaujolais wine region.",
         "value": "FR: Bugey"
+      },
+      {
+        "field": "pairings",
+        "quote": "Gastronomisch begleitet er hervorragend Grillgerichte, Raclette, Geflügelgerichte und Wurstwaren.",
+        "value": "raclette",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Poulsard"
       }
     ],
     "id": "poulsard",
@@ -46132,7 +46252,9 @@
       "pt": "Poulsard"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "raclette"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -46598,6 +46720,18 @@
         "quote": "La acolon es una variedad de uva tinta alemana.",
         "value": "red",
         "sourceUrl": "https://es.wikipedia.org/wiki/Acolon"
+      },
+      {
+        "field": "pairings",
+        "quote": "en accompagnement de gibiers, de fromages forts",
+        "value": "game",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Acolon"
+      },
+      {
+        "field": "pairings",
+        "quote": "en accompagnement de gibiers, de fromages forts",
+        "value": "cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Acolon"
       }
     ],
     "id": "acolon",
@@ -46612,7 +46746,10 @@
       "pt": "Acolon"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "game",
+      "cheese"
+    ],
     "prominence": 8,
     "regions": [
       {

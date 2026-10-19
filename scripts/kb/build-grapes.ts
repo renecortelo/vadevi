@@ -108,15 +108,15 @@ const translations = (
 
 /**
  * Structure read by hand from a grape's articles (`data/kb/grape-readings.json`):
- * levels, sweetness and aromas, each with its quote and the article's language;
- * an aroma in another language gives the article's word for it (`words`).
+ * levels, sweetness, aromas and pairings, each with its quote and the article's language;
+ * an aroma or a dish in another language gives the article's word for it (`words`).
  */
 const handReadings = (
   JSON.parse(readFileSync(resolve("data/kb/grape-readings.json"), "utf8")) as {
     readings: Record<
       string,
       {
-        field: "acidity" | "alcohol" | "aromas" | "body" | "sweetness" | "tannin";
+        field: "acidity" | "alcohol" | "aromas" | "body" | "pairings" | "sweetness" | "tannin";
         lang: string;
         quote: string;
         value: string | string[];
@@ -271,9 +271,9 @@ for (const qid of index) {
       ...found.rejected.map((entry) => ({ ...entry, grape: `${raw.labels.en ?? qid} (by hand)` })),
     );
     const field = reading.field;
-    if (field === "aromas") {
-      if (result.aromas.length > 0 || found.aromas.length === 0) continue;
-      result.aromas = found.aromas;
+    if (field === "aromas" || field === "pairings") {
+      if (result[field].length > 0 || found[field].length === 0) continue;
+      result[field] = found[field];
     } else if (result[field] !== null || found[field] === null) continue;
     else if (field === "sweetness") result.sweetness = found.sweetness;
     else result[field] = found[field];

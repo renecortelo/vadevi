@@ -85,7 +85,11 @@ export function LibraryGrapePage() {
     );
   }
 
-  const axes = ["acidity", "tannin", "body", "alcohol"] as const;
+  // A white grape's wine has next to no tannin: no gauge for it, rather than
+  // an empty one that reads as a figure missing — unless a source gives one.
+  const axes = (["acidity", "tannin", "body", "alcohol"] as const).filter(
+    (axis) => !(axis === "tannin" && grape.color === "white" && grape.tannin === null),
+  );
   const structure = [
     ...axes.filter((axis) => grape[axis] !== null),
     ...(grape.sweetness === null ? [] : ["sweetness"]),

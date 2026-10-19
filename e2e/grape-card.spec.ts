@@ -46,10 +46,12 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await page.screenshot({ fullPage: true, path: test.info().outputPath("grape-card.png") });
 
   // A range: Sémillon makes "dry and sweet white wines", so its bar runs the
-  // whole way.
+  // whole way. A white grape has no tannin gauge, rather than an empty one.
   await page.goto("/library/grapes/semillon");
-  const sweetness = page.locator(".library-bar").nth(4);
+  const sweetness = page.locator(".library-bar").nth(3);
   await expect(sweetness).toContainText("De seco a dulce", { timeout: 15_000 });
+  await expect(page.locator(".library-bar")).toHaveCount(4);
+  await expect(page.locator(".library-bars")).not.toContainText("Tanino");
   await expect(sweetness.locator(".library-gauge i")).toHaveAttribute(
     "style",
     /--from: 0%; --to: 100%/,

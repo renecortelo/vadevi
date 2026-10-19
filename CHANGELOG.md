@@ -4,6 +4,17 @@ What changed between releases, for readers and for anyone running their own
 deployment. Each release lists what you will notice first; the commit history
 has the reasons.
 
+## Unreleased
+
+### The library
+
+- **No tannin gauge for a white grape**: its wine has next to no tannin, so
+  the card leaves the row out instead of showing an empty one that read as a
+  figure missing — unless a source gives a level.
+- **Pairings read by hand**: a hand reading can carry the dishes a grape's
+  article pairs it with, in the article's own words; eleven more grapes
+  have them — Chardonnay, Sangiovese, Albariño among them (34).
+
 ## 0.4.0 — 19 October 2026
 
 ### Finding your way
