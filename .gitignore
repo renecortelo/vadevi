@@ -51,3 +51,6 @@ backup*.sql
 # The wine library build cache: raw Wikidata/Wikipedia material, kept
 # only to extract from. What ships is data/kb/.
 .kb-cache/
+
+# Local launch configuration for the desktop app's browser preview.
+.claude/launch.json

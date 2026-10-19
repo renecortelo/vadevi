@@ -1917,5 +1917,29 @@
     "reset": "Ver todo",
     "open": "Abrir su ficha",
     "closeTag": "Cerrar"
+  },
+  "reel": {
+    "label": "Qué es Va de Vi, en menos de veinte segundos",
+    "tagline": "Tu memoria del vino",
+    "taste": "Anota cada cata, a mano o con la voz",
+    "identify": "Identifica la botella por su etiqueta",
+    "library": "Una biblioteca abierta del vino",
+    "namesUnit_one": "denominación",
+    "namesUnit_other": "denominaciones",
+    "grapesUnit_one": "uva",
+    "grapesUnit_other": "uvas",
+    "countriesUnit_one": "país",
+    "countriesUnit_other": "países",
+    "vicenc": "Vicenç responde y cita sus fuentes",
+    "vicencQuestion": "¿De dónde es la garnacha?",
+    "vicencAnswer": "Se cree que de España, según su artículo.",
+    "close": "Tu bodega, tu mapa, tu gusto",
+    "closeSub_one": "En {{count}} idioma, también sin conexión",
+    "closeSub_other": "En {{count}} idiomas, también sin conexión",
+    "cta": "Empieza",
+    "pause": "Pausar la animación",
+    "play": "Reanudar la animación",
+    "replay": "Ver de nuevo",
+    "summary": "Va de Vi: catas a mano o con la voz, botellas por su etiqueta, {{names}} denominaciones de {{countries}} países, {{grapes}} uvas y Vicenç, que cita sus fuentes. En {{languages}} idiomas."
   }
 }

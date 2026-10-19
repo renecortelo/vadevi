@@ -1917,5 +1917,29 @@
     "reset": "Ver tudo",
     "open": "Abrir a ficha",
     "closeTag": "Fechar"
+  },
+  "reel": {
+    "label": "Para que serve o Va de Vi, em menos de vinte segundos",
+    "tagline": "A tua memória do vinho",
+    "taste": "Regista cada prova, à mão ou com a voz",
+    "identify": "Identifica a garrafa pelo rótulo",
+    "library": "Uma biblioteca aberta do vinho",
+    "namesUnit_one": "denominação",
+    "namesUnit_other": "denominações",
+    "grapesUnit_one": "casta",
+    "grapesUnit_other": "castas",
+    "countriesUnit_one": "país",
+    "countriesUnit_other": "países",
+    "vicenc": "O Vicenç responde e cita as fontes",
+    "vicencQuestion": "De onde é a garnacha?",
+    "vicencAnswer": "Crê-se que de Espanha, segundo o seu artigo.",
+    "close": "A tua garrafeira, o teu mapa, o teu gosto",
+    "closeSub_one": "Em {{count}} língua, também sem ligação",
+    "closeSub_other": "Em {{count}} línguas, também sem ligação",
+    "cta": "Começar",
+    "pause": "Pausar a animação",
+    "play": "Retomar a animação",
+    "replay": "Ver de novo",
+    "summary": "Va de Vi: provas à mão ou com a voz, garrafas pelo rótulo, {{names}} denominações de {{countries}} países, {{grapes}} castas e o Vicenç, que cita as fontes. Em {{languages}} línguas."
   }
 }

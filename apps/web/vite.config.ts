@@ -2,9 +2,13 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
+import { libraryFiguresPlugin } from "./library-figures";
+
 export default defineConfig({
   plugins: [
     react(),
+    // The library's figures, counted from data/kb at build (the sign-in reel).
+    libraryFiguresPlugin(),
     VitePWA({
       registerType: "prompt",
       strategies: "injectManifest",

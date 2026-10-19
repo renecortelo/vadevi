@@ -1917,5 +1917,29 @@
     "reset": "Tout afficher",
     "open": "Ouvrir sa fiche",
     "closeTag": "Fermer"
+  },
+  "reel": {
+    "label": "À quoi sert Va de Vi, en moins de vingt secondes",
+    "tagline": "Ta mémoire du vin",
+    "taste": "Note chaque dégustation, à la main ou à la voix",
+    "identify": "Reconnais la bouteille à son étiquette",
+    "library": "Une bibliothèque ouverte du vin",
+    "namesUnit_one": "appellation",
+    "namesUnit_other": "appellations",
+    "grapesUnit_one": "cépage",
+    "grapesUnit_other": "cépages",
+    "countriesUnit_one": "pays",
+    "countriesUnit_other": "pays",
+    "vicenc": "Vicenç répond et cite ses sources",
+    "vicencQuestion": "D'où vient le grenache ?",
+    "vicencAnswer": "D'Espagne, croit-on, selon son article.",
+    "close": "Ta cave, ta carte, ton goût",
+    "closeSub_one": "En {{count}} langue, même hors ligne",
+    "closeSub_other": "En {{count}} langues, même hors ligne",
+    "cta": "Commencer",
+    "pause": "Mettre l'animation en pause",
+    "play": "Reprendre l'animation",
+    "replay": "Revoir",
+    "summary": "Va de Vi : dégustations à la main ou à la voix, bouteilles par l'étiquette, {{names}} appellations de {{countries}} pays, {{grapes}} cépages et Vicenç, qui cite ses sources. En {{languages}} langues."
   }
 }

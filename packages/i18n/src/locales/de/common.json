@@ -1917,5 +1917,29 @@
     "reset": "Alles zeigen",
     "open": "Seite öffnen",
     "closeTag": "Schließen"
+  },
+  "reel": {
+    "label": "Wofür Va de Vi da ist, in weniger als zwanzig Sekunden",
+    "tagline": "Dein Weingedächtnis",
+    "taste": "Notiere jede Verkostung, von Hand oder per Stimme",
+    "identify": "Erkenne die Flasche am Etikett",
+    "library": "Eine offene Weinbibliothek",
+    "namesUnit_one": "geschützter Name",
+    "namesUnit_other": "geschützte Namen",
+    "grapesUnit_one": "Rebsorte",
+    "grapesUnit_other": "Rebsorten",
+    "countriesUnit_one": "Land",
+    "countriesUnit_other": "Länder",
+    "vicenc": "Vicenç antwortet und nennt seine Quellen",
+    "vicencQuestion": "Woher stammt die Grenache?",
+    "vicencAnswer": "Vermutlich aus Spanien, laut ihrem Artikel.",
+    "close": "Dein Keller, deine Karte, dein Geschmack",
+    "closeSub_one": "In {{count}} Sprache, auch offline",
+    "closeSub_other": "In {{count}} Sprachen, auch offline",
+    "cta": "Los geht's",
+    "pause": "Animation anhalten",
+    "play": "Animation fortsetzen",
+    "replay": "Noch einmal ansehen",
+    "summary": "Va de Vi: Verkostungen per Hand oder Stimme, Flaschen am Etikett, {{names}} Weinnamen aus {{countries}} Ländern, {{grapes}} Rebsorten und Vicenç mit Quellen. In {{languages}} Sprachen."
   }
 }

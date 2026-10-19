@@ -21,6 +21,14 @@ has the reasons.
 
 ### The library
 
+- **What Va de Vi is for, in nineteen seconds**: the sign-in screen shows a
+  short reel below the sign-in card — a tasting by hand or voice, a label
+  read, the library counting up to its own figures, Vicenç citing a source —
+  and ends on «Get started», which leads to the sign-in button. Drawn in
+  code, so it is light, sharp, offline and in all eight languages; the
+  figures are counted from `data/kb` when the app is built
+  (`virtual:library-figures`), never written by hand. It loads after the
+  card, can be paused, and with reduced motion is its last frame, still.
 - **A grape at a glance**: a grape's card now draws its aromas — raspberry,
   white pepper, leather — each over its name in your language, and shows
   acidity, tannin and body as three steps; a value no source gives is marked

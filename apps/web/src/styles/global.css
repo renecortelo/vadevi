@@ -572,6 +572,10 @@ button[aria-busy="true"]:disabled {
   z-index: 1;
 }
 
+.access-page {
+  gap: var(--space-5);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .access-page__bottles {
     transition: opacity var(--motion-medium);
@@ -5916,4 +5920,394 @@ button.stats-bars__label:hover {
 
 .voice-note textarea {
   inline-size: 100%;
+}
+
+/* ── The sign-in reel ────────────────────────────────────────────────────
+   What Va de Vi is for, in nineteen seconds (`home/SignInReel.tsx`): cards
+   slide in along a dotted line, one step at a time, on the reel's own clock.
+   Every timing is relative to its shot's start (--start) and end (--end). */
+.reel {
+  /* Each shot sets its own; these are the reel's defaults. */
+  --end: 19s;
+  --i: 0;
+  --start: 0s;
+
+  inline-size: min(100%, 36rem);
+  position: relative;
+  z-index: 1;
+}
+
+/* Its width is the reel's: with a minimum height, the ratio alone would
+   widen it past a narrow phone. */
+.reel__stage {
+  aspect-ratio: 16 / 10;
+  inline-size: 100%;
+  background: rgb(var(--color-surface-rgb) / 92%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  min-block-size: 16rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* On a phone a fixed height: a ratio with a minimum height would ask the
+   page's grid for more width than the screen has. */
+@media (max-width: 30rem) {
+  .reel__stage {
+    aspect-ratio: auto;
+    block-size: 18rem;
+  }
+}
+
+.reel-shot {
+  animation:
+    reel-enter 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) var(--start) both,
+    reel-exit 0.45s ease-in var(--end) forwards;
+  align-content: center;
+  display: grid;
+  gap: var(--space-3);
+  inset: 0 0 2.5rem;
+  justify-items: center;
+  padding: var(--space-4);
+  position: absolute;
+  text-align: center;
+}
+
+.reel-shot--close {
+  animation: reel-enter 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) var(--start) both;
+}
+
+@keyframes reel-enter {
+  from {
+    opacity: 0;
+    transform: translateX(28%);
+  }
+}
+
+@keyframes reel-exit {
+  to {
+    filter: blur(4px);
+    opacity: 0;
+    transform: translateX(-22%);
+  }
+}
+
+.reel__brand {
+  animation: reel-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+  color: var(--color-plum);
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 9vw, 3.4rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.reel__tagline,
+.reel__sub {
+  animation: reel-rise 0.7s ease-out calc(var(--start) + 0.6s) both;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.reel__closing {
+  animation: reel-rise 0.7s ease-out calc(var(--start) + 0.2s) both;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 5vw, 1.8rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.reel__cta {
+  animation: reel-rise 0.6s ease-out calc(var(--start) + 1.2s) both;
+}
+
+@keyframes reel-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+}
+
+/* The dotted line and its dot, which steps to each card as it arrives. */
+.reel__line {
+  border-block-start: 2px dashed var(--color-border);
+  inset: auto 1.5rem 1.25rem;
+  position: absolute;
+}
+
+.reel__dot {
+  animation: reel-dot 19s linear both;
+  background: var(--color-plum);
+  block-size: 0.75rem;
+  border-radius: 50%;
+  inline-size: 0.75rem;
+  position: absolute;
+  inset-block-start: -0.45rem;
+  translate: -50% 0;
+}
+
+@keyframes reel-dot {
+  0%,
+  13% {
+    left: 4%;
+  }
+  16%,
+  29% {
+    left: 24%;
+  }
+  32%,
+  45% {
+    left: 44%;
+  }
+  48%,
+  63% {
+    left: 64%;
+  }
+  66%,
+  82% {
+    left: 84%;
+    opacity: 1;
+  }
+  86%,
+  100% {
+    left: 50%;
+    opacity: 0;
+  }
+}
+
+.reel-card__step {
+  color: var(--color-plum);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.reel-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 4.2vw, 1.45rem);
+  font-weight: 700;
+  margin: 0;
+  max-inline-size: 22rem;
+}
+
+/* 01 · A tasting: aromas pop in, acidity fills, the microphone breathes. */
+.reel-taste {
+  align-items: center;
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr auto;
+  inline-size: min(100%, 17rem);
+}
+
+.reel-taste ul {
+  display: flex;
+  gap: var(--space-3);
+  grid-column: 1 / -1;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reel-taste li {
+  animation: reel-pop 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.4)
+    calc(var(--start) + 0.6s + var(--i) * 0.25s) both;
+}
+
+.reel-taste .aroma-icon {
+  block-size: 2.8rem;
+  inline-size: 2.8rem;
+  margin: 0;
+}
+
+@keyframes reel-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+.reel-taste__bar {
+  background: var(--color-border);
+  block-size: 0.5rem;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.reel-taste__bar i {
+  animation: reel-fill 0.9s ease-out calc(var(--start) + 1.5s) both;
+  background: var(--color-plum);
+  block-size: 100%;
+  display: block;
+  inline-size: 66%;
+  transform-origin: left;
+}
+
+@keyframes reel-fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+.reel-taste__mic {
+  animation: reel-breathe 0.9s ease-in-out calc(var(--start) + 1.4s) 2 alternate both;
+  block-size: 2rem;
+  fill: none;
+  inline-size: 2rem;
+  stroke: var(--color-plum);
+  stroke-linecap: round;
+  stroke-width: 2.4;
+}
+
+@keyframes reel-breathe {
+  to {
+    transform: scale(1.18);
+  }
+}
+
+/* 02 · A label: its lines and barcode, and a scan passing over them. */
+.reel-label {
+  aspect-ratio: 5 / 3;
+  background: var(--color-surface-raised);
+  border: 2px solid var(--color-plum);
+  border-radius: var(--radius-md);
+  inline-size: min(70%, 12rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.reel-label__lines {
+  background: repeating-linear-gradient(to bottom, var(--color-border) 0 3px, transparent 3px 11px);
+  inset: 18% 30% 40% 12%;
+  position: absolute;
+}
+
+.reel-label__code {
+  background: repeating-linear-gradient(
+    to right,
+    var(--color-text) 0 2px,
+    transparent 2px 4px,
+    var(--color-text) 4px 5px,
+    transparent 5px 8px
+  );
+  inset: 68% 12% 12% 40%;
+  opacity: 0.75;
+  position: absolute;
+}
+
+.reel-label__scan {
+  animation: reel-scan 1.1s ease-in-out calc(var(--start) + 0.6s) 2 alternate both;
+  background: var(--color-plum);
+  block-size: 2px;
+  box-shadow: 0 0 12px var(--color-plum);
+  inset-inline: 0;
+  position: absolute;
+  inset-block-start: 6%;
+}
+
+@keyframes reel-scan {
+  to {
+    inset-block-start: 92%;
+  }
+}
+
+/* 03 · The library: its own figures counting up. */
+.reel-figures {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  inline-size: min(100%, 24rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reel-figures strong {
+  color: var(--color-plum);
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 7vw, 2.4rem);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.reel-figures li > span {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* 04 · Vicenç: a question, an answer written out, and its source. */
+.reel-chat {
+  display: grid;
+  gap: var(--space-2);
+  inline-size: min(100%, 20rem);
+}
+
+.reel-chat p {
+  border-radius: var(--radius-md);
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  text-align: start;
+}
+
+.reel-chat__question {
+  animation: reel-rise 0.5s ease-out calc(var(--start) + 0.5s) both;
+  background: var(--color-plum);
+  color: var(--color-on-accent);
+  justify-self: end;
+}
+
+.reel-chat__answer {
+  animation: reel-type 1.2s steps(24, end) calc(var(--start) + 1.2s) both;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  justify-self: start;
+}
+
+@keyframes reel-type {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.reel-chat__source {
+  animation: reel-pop 0.4s ease-out calc(var(--start) + 2.5s) both;
+  border: 1px solid var(--color-plum);
+  border-radius: var(--radius-pill);
+  color: var(--color-plum);
+  display: inline-block;
+  font-size: var(--text-sm);
+  margin-inline-start: var(--space-2);
+  padding: 0 var(--space-2);
+}
+
+.reel__controls {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin: var(--space-2) 0 0;
+}
+
+/* Reduced motion: the reel is its last frame, still, with the figures. */
+.reel--still .reel-shot,
+.reel--still .reel__line {
+  display: none;
+}
+
+.reel--still .reel-shot--close {
+  animation: none;
+  display: grid;
+}
+
+.reel--still .reel-shot--close * {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reel * {
+    animation: none !important;
+  }
 }

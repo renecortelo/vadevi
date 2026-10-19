@@ -1917,5 +1917,29 @@
     "reset": "Show it all",
     "open": "Open its page",
     "closeTag": "Close"
+  },
+  "reel": {
+    "label": "What Va de Vi is for, in under twenty seconds",
+    "tagline": "Your wine memory",
+    "taste": "Note every tasting, by hand or by voice",
+    "identify": "Know the bottle from its label",
+    "library": "An open wine library",
+    "namesUnit_one": "registered name",
+    "namesUnit_other": "registered names",
+    "grapesUnit_one": "grape",
+    "grapesUnit_other": "grapes",
+    "countriesUnit_one": "country",
+    "countriesUnit_other": "countries",
+    "vicenc": "Vicenç answers and cites its sources",
+    "vicencQuestion": "Where is Grenache from?",
+    "vicencAnswer": "Spain, its article believes.",
+    "close": "Your cellar, your map, your taste",
+    "closeSub_one": "In {{count}} language, offline too",
+    "closeSub_other": "In {{count}} languages, offline too",
+    "cta": "Get started",
+    "pause": "Pause the animation",
+    "play": "Play the animation",
+    "replay": "Watch again",
+    "summary": "Va de Vi: tastings by hand or voice, a bottle known by its label, {{names}} wine names from {{countries}} countries, {{grapes}} grapes, and Vicenç, who cites sources. In {{languages}} languages."
   }
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
@@ -7,11 +7,26 @@ import { SignedOutLocalePicker } from "../components/SignedOutLocalePicker";
 import { GoogleMark } from "../brand/GoogleMark";
 import { BrandLockup } from "../brand/Wordmark";
 
+// The reel waits until the sign-in card has been drawn and the browser is
+// idle: it is not what the first paint is for.
+const SignInReel = lazy(() => import("../home/SignInReel"));
+
 export function SignInPage() {
   const { isEmulator, signIn } = useAuth();
   const { t } = useTranslation();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const signInButton = useRef<HTMLButtonElement>(null);
+  const [showReel, setShowReel] = useState(false);
+  useEffect(() => {
+    const show = () => setShowReel(true);
+    if ("requestIdleCallback" in globalThis) {
+      const handle = requestIdleCallback(show, { timeout: 2500 });
+      return () => cancelIdleCallback(handle);
+    }
+    const handle = setTimeout(show, 1200);
+    return () => clearTimeout(handle);
+  }, []);
 
   async function handleSignIn() {
     setBusy(true);
@@ -39,6 +54,7 @@ export function SignInPage() {
         <button
           aria-busy={busy}
           className="primary-button"
+          ref={signInButton}
           disabled={busy}
           onClick={() => void handleSignIn()}
           type="button"
@@ -53,6 +69,16 @@ export function SignInPage() {
           </p>
         )}
       </section>
+      {showReel ? (
+        <Suspense fallback={null}>
+          <SignInReel
+            onStart={() => {
+              signInButton.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+              signInButton.current?.focus({ preventScroll: true });
+            }}
+          />
+        </Suspense>
+      ) : null}
     </main>
   );
 }
