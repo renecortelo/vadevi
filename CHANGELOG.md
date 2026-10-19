@@ -59,7 +59,8 @@ has the reasons.
 - **More grapes with alcohol, sweetness and body**: their articles in six
   more languages (`pnpm kb:fetch-grape-articles`) and 51 more values read by
   hand bring alcohol to 61 grapes, sweetness to 87 and body to 71; acidity
-  reaches 103 grapes and tannin 41.
+  reaches 103 grapes and tannin 41. Aromas can be read by hand too, in the
+  article's own words: 20 more grapes have them, Pinot noir among them (172).
 - **Grapes for regions beyond the EU**: 122 regions with no register list —
   American AVAs such as Napa Valley, Australian GIs, Chile's valleys, a few
   in Argentina and New Zealand — now show the grapes their own article, in

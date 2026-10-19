@@ -165,6 +165,17 @@
         "lang": "en",
         "value": "low",
         "quote": "The wines produced tend to be fruity, low in alcohol content"
+      },
+      {
+        "field": "aromas",
+        "lang": "es",
+        "value": [
+          "herbaceous"
+        ],
+        "quote": "Ofrece un aroma ligero con tonos herbáceos",
+        "words": {
+          "herbaceous": "herbáceos"
+        }
       }
     ],
     "cabernet-sauvignon": [
@@ -201,6 +212,19 @@
         "lang": "ca",
         "value": "high",
         "quote": "El vi varietal jove de raïm carinyena té molt de color i cos"
+      },
+      {
+        "field": "aromas",
+        "lang": "fr",
+        "value": [
+          "red fruit",
+          "spice"
+        ],
+        "quote": "les meilleurs vins sont produits sur les vignes de plus de quarante ans, donnant des vins dominés par les arômes de fruits rouges et d'épices.",
+        "words": {
+          "red fruit": "fruits rouges",
+          "spice": "épices"
+        }
       }
     ],
     "chardonnay": [
@@ -261,6 +285,17 @@
         "lang": "fr",
         "value": "dry-sweet",
         "quote": "C'est un vin sec ou moelleux"
+      },
+      {
+        "field": "aromas",
+        "lang": "fr",
+        "value": [
+          "apple"
+        ],
+        "quote": "au bouquet de pomme et de fleurs blanches",
+        "words": {
+          "apple": "pomme"
+        }
       }
     ],
     "colombard": [
@@ -285,6 +320,16 @@
         "lang": "fr",
         "value": "medium",
         "quote": "Les vins blancs sont d'une couleur jaune paille un peu verdâtre, moyennement alcoolique."
+      }
+    ],
+    "corvina": [
+      {
+        "field": "aromas",
+        "lang": "en",
+        "value": [
+          "bitter almond"
+        ],
+        "quote": "The grapes' naturally high acidity can make the wine somewhat tart with a slight, bitter almond note."
       }
     ],
     "croatina": [
@@ -437,6 +482,19 @@
         "lang": "it",
         "value": "dry",
         "quote": "Al gusto si rivela solitamente secco"
+      },
+      {
+        "field": "aromas",
+        "lang": "fr",
+        "value": [
+          "liquorice",
+          "prune"
+        ],
+        "quote": "Il présente des arômes de réglisse, de poivre et de pruneau.",
+        "words": {
+          "liquorice": "réglisse",
+          "prune": "pruneau"
+        }
       }
     ],
     "grechetto": [
@@ -583,6 +641,19 @@
         "lang": "fr",
         "value": "dry-sweet",
         "quote": "où il est utilisé particulièrement pour produire des vins doux naturels ... Le macabeu peut être utilisé pour l'élaboration de vin blanc sec."
+      },
+      {
+        "field": "aromas",
+        "lang": "ca",
+        "value": [
+          "grapefruit",
+          "apple"
+        ],
+        "quote": "Dona vins de graduació alcohòlica moderada amb aromes d'aranja i poma.",
+        "words": {
+          "grapefruit": "aranja",
+          "apple": "poma"
+        }
       }
     ],
     "mandilaria": [
@@ -613,12 +684,38 @@
         "quote": "Les vins sont puissants, de faible acidité"
       }
     ],
+    "marselan": [
+      {
+        "field": "aromas",
+        "lang": "fr",
+        "value": [
+          "spice",
+          "fruity"
+        ],
+        "quote": "La vinification de cette variété donne un vin rouge concentré, rustique et charnu aux arômes épicés et fruités, aux tanins prononcés.",
+        "words": {
+          "spice": "épicés",
+          "fruity": "fruités"
+        }
+      }
+    ],
     "mauzac": [
       {
         "field": "body",
         "lang": "de",
         "value": "high",
         "quote": "Der Mauzac liefert einen aromatischen und recht körperreichen Weißwein"
+      },
+      {
+        "field": "aromas",
+        "lang": "fr",
+        "value": [
+          "apple"
+        ],
+        "quote": "Il donne un vin aux arômes caractéristiques de pomme mûre.",
+        "words": {
+          "apple": "pomme"
+        }
       }
     ],
     "mavrodafni": [
@@ -683,6 +780,17 @@
         "lang": "de",
         "value": "high",
         "quote": "besitzen wenig Säure und sind alkoholreich"
+      },
+      {
+        "field": "aromas",
+        "lang": "it",
+        "value": [
+          "cherry"
+        ],
+        "quote": "per i sentori di ciliegia e di marasca",
+        "words": {
+          "cherry": "ciliegia"
+        }
       }
     ],
     "moscato-giallo": [
@@ -697,6 +805,17 @@
         "lang": "en",
         "value": "medium",
         "quote": "Moscato Giallo tends to produce deeply colored, golden wines that have moderate acidity levels but are highly aromatic"
+      },
+      {
+        "field": "aromas",
+        "lang": "de",
+        "value": [
+          "fruity"
+        ],
+        "quote": "Vom Geschmacksbild besitzt die Sorte eine ausgeprägt fruchtige Muskatnote",
+        "words": {
+          "fruity": "fruchtige"
+        }
       }
     ],
     "mourvedre": [
@@ -721,6 +840,17 @@
         "lang": "en",
         "value": "medium",
         "quote": "to cheaply produce large amounts of medium sweet German wines"
+      },
+      {
+        "field": "aromas",
+        "lang": "es",
+        "value": [
+          "fruity"
+        ],
+        "quote": "Los vinos de müller-thurgau son ligeros debido a su baja acidez, pero cuentan con un sabor afrutado.",
+        "words": {
+          "fruity": "afrutado"
+        }
       }
     ],
     "muscadelle": [
@@ -829,6 +959,17 @@
         "lang": "it",
         "value": "dry",
         "quote": "Il Neuburger viene vinificato principalmente come vino fermo secco."
+      },
+      {
+        "field": "aromas",
+        "lang": "de",
+        "value": [
+          "nutty"
+        ],
+        "quote": "Die Weine sind eher säureärmer und haben ein nussiges Aroma",
+        "words": {
+          "nutty": "nussiges"
+        }
       }
     ],
     "okuzgozu": [
@@ -837,6 +978,19 @@
         "lang": "en",
         "value": "low",
         "quote": "Öküzgözü reveals low alcohol profile"
+      }
+    ],
+    "palomino": [
+      {
+        "field": "aromas",
+        "lang": "es",
+        "value": [
+          "floral"
+        ],
+        "quote": "Es un vino seco y cuenta un aroma intenso y floral.",
+        "words": {
+          "floral": "floral"
+        }
       }
     ],
     "parellada": [
@@ -861,6 +1015,21 @@
         "lang": "en",
         "value": "sweet",
         "quote": "it is usually incorporated into sweet wines of Jurançon and Pacherenc du Vic-Bilh"
+      },
+      {
+        "field": "aromas",
+        "lang": "de",
+        "value": [
+          "cinnamon",
+          "honey",
+          "peach"
+        ],
+        "quote": "Im vollreifen Zustand erbringt Petit Manseng Weine mit Duftnoten von Zimt, exotischen Früchten, Honig und reifem Pfirsich.",
+        "words": {
+          "cinnamon": "Zimt",
+          "honey": "Honig",
+          "peach": "Pfirsich"
+        }
       }
     ],
     "petit-verdot": [
@@ -919,6 +1088,36 @@
         "lang": "en",
         "value": "dry",
         "quote": "Austrian Pinot noir wines are dry red wines similar in character to the red wines of Burgundy"
+      },
+      {
+        "field": "aromas",
+        "lang": "en",
+        "value": [
+          "red fruit",
+          "cherry",
+          "raspberry",
+          "strawberry"
+        ],
+        "quote": "When young, wines made from Pinot noir tend to have red fruit aromas of cherries, raspberries, and strawberries."
+      }
+    ],
+    "pinot-noir-precoce": [
+      {
+        "field": "aromas",
+        "lang": "de",
+        "value": [
+          "cherry",
+          "blackberry",
+          "blackcurrant",
+          "raspberry"
+        ],
+        "quote": "Typische im Wein zu findende Aromen sind: Kirsche, Brombeere, schwarze Johannisbeere, Mokka, Himbeere und oft auch Rauch.",
+        "words": {
+          "cherry": "Kirsche",
+          "blackberry": "Brombeere",
+          "blackcurrant": "schwarze Johannisbeere",
+          "raspberry": "Himbeere"
+        }
       }
     ],
     "piquepoul": [
@@ -987,6 +1186,21 @@
         "lang": "en",
         "value": "high",
         "quote": "its naturally high alcohol levels"
+      }
+    ],
+    "rondo": [
+      {
+        "field": "aromas",
+        "lang": "de",
+        "value": [
+          "cherry",
+          "blackberry"
+        ],
+        "quote": "Im Geruch und Geschmack erinnert er stark an dunkle Kirschen und Brombeeren",
+        "words": {
+          "cherry": "Kirschen",
+          "blackberry": "Brombeeren"
+        }
       }
     ],
     "ruby-cabernet": [
@@ -1105,6 +1319,17 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "and is sometimes made into a dessert wine ... which primarily stuck to dry white wines"
+      },
+      {
+        "field": "aromas",
+        "lang": "de",
+        "value": [
+          "herbs"
+        ],
+        "quote": "Als typische Aromen werden unter anderem Kräuter-, Stachelbeer- und Heunoten genannt.",
+        "words": {
+          "herbs": "Kräuter"
+        }
       }
     ],
     "sultana": [
@@ -1175,6 +1400,21 @@
         "lang": "fr",
         "value": "high",
         "quote": "riches en alcool et peuvent être très vivaces"
+      },
+      {
+        "field": "aromas",
+        "lang": "fr",
+        "value": [
+          "fruity",
+          "cherry",
+          "floral"
+        ],
+        "quote": "Les vins possèdent des arômes fruités (cerise), floraux (fleurs sauvages) et épicés (poivre)",
+        "words": {
+          "fruity": "fruités",
+          "cherry": "cerise",
+          "floral": "floraux"
+        }
       }
     ],
     "torrontes": [
@@ -1257,6 +1497,17 @@
         "lang": "es",
         "value": "medium",
         "quote": "Su acidez es media-alta"
+      },
+      {
+        "field": "aromas",
+        "lang": "es",
+        "value": [
+          "bitter almond"
+        ],
+        "quote": "Son muy aromáticos y destacan los aromas a almendra amarga.",
+        "words": {
+          "bitter almond": "almendra amarga"
+        }
       }
     ],
     "verdelho": [

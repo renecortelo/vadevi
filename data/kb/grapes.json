@@ -6138,7 +6138,9 @@
   {
     "acidity": "high",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "apple"
+    ],
     "body": "high",
     "color": "white",
     "evidence": [
@@ -6252,6 +6254,12 @@
         "quote": "Der Mauzac liefert einen aromatischen und recht körperreichen Weißwein",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Mauzac"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il donne un vin aux arômes caractéristiques de pomme mûre.",
+        "value": "apple",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Mauzac_(c%C3%A9page)"
       }
     ],
     "id": "mauzac",
@@ -8138,7 +8146,9 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
+    "aromas": [
+      "herbaceous"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -8312,6 +8322,12 @@
         "field": "alcohol",
         "quote": "The wines produced tend to be fruity, low in alcohol content",
         "value": "low"
+      },
+      {
+        "field": "aromas",
+        "quote": "Ofrece un aroma ligero con tonos herbáceos",
+        "value": "herbaceous",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Bobal"
       }
     ],
     "id": "bobal",
@@ -10833,7 +10849,11 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "cinnamon",
+      "honey",
+      "peach"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -10951,6 +10971,24 @@
         "field": "sweetness",
         "quote": "it is usually incorporated into sweet wines of Jurançon and Pacherenc du Vic-Bilh",
         "value": "sweet"
+      },
+      {
+        "field": "aromas",
+        "quote": "Im vollreifen Zustand erbringt Petit Manseng Weine mit Duftnoten von Zimt, exotischen Früchten, Honig und reifem Pfirsich.",
+        "value": "cinnamon",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Petit_Manseng"
+      },
+      {
+        "field": "aromas",
+        "quote": "Im vollreifen Zustand erbringt Petit Manseng Weine mit Duftnoten von Zimt, exotischen Früchten, Honig und reifem Pfirsich.",
+        "value": "honey",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Petit_Manseng"
+      },
+      {
+        "field": "aromas",
+        "quote": "Im vollreifen Zustand erbringt Petit Manseng Weine mit Duftnoten von Zimt, exotischen Früchten, Honig und reifem Pfirsich.",
+        "value": "peach",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Petit_Manseng"
       }
     ],
     "id": "petit-manseng",
@@ -11098,7 +11136,9 @@
   {
     "acidity": "medium",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -11191,6 +11231,12 @@
         "field": "acidity",
         "quote": "Moscato Giallo tends to produce deeply colored, golden wines that have moderate acidity levels but are highly aromatic",
         "value": "medium"
+      },
+      {
+        "field": "aromas",
+        "quote": "Vom Geschmacksbild besitzt die Sorte eine ausgeprägt fruchtige Muskatnote",
+        "value": "fruity",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Moscato_Giallo"
       }
     ],
     "id": "moscato-giallo",
@@ -12074,7 +12120,10 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "cherry",
+      "blackberry"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -12132,6 +12181,18 @@
         "field": "regions",
         "quote": "Rondo is cultivated in Rheinhessen and in many locations in northern Europe including Denmark, England, Ireland, Wales, the Netherlands, Poland and Sweden",
         "value": "SE: Sweden"
+      },
+      {
+        "field": "aromas",
+        "quote": "Im Geruch und Geschmack erinnert er stark an dunkle Kirschen und Brombeeren",
+        "value": "cherry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rondo_(Rebsorte)"
+      },
+      {
+        "field": "aromas",
+        "quote": "Im Geruch und Geschmack erinnert er stark an dunkle Kirschen und Brombeeren",
+        "value": "blackberry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rondo_(Rebsorte)"
       }
     ],
     "id": "rondo",
@@ -12764,7 +12825,12 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "red fruit",
+      "cherry",
+      "raspberry",
+      "strawberry"
+    ],
     "body": "medium",
     "color": "red",
     "evidence": [
@@ -12805,6 +12871,26 @@
         "field": "sweetness",
         "quote": "Austrian Pinot noir wines are dry red wines similar in character to the red wines of Burgundy",
         "value": "dry"
+      },
+      {
+        "field": "aromas",
+        "quote": "When young, wines made from Pinot noir tend to have red fruit aromas of cherries, raspberries, and strawberries.",
+        "value": "red fruit"
+      },
+      {
+        "field": "aromas",
+        "quote": "When young, wines made from Pinot noir tend to have red fruit aromas of cherries, raspberries, and strawberries.",
+        "value": "cherry"
+      },
+      {
+        "field": "aromas",
+        "quote": "When young, wines made from Pinot noir tend to have red fruit aromas of cherries, raspberries, and strawberries.",
+        "value": "raspberry"
+      },
+      {
+        "field": "aromas",
+        "quote": "When young, wines made from Pinot noir tend to have red fruit aromas of cherries, raspberries, and strawberries.",
+        "value": "strawberry"
       }
     ],
     "id": "pinot-noir",
@@ -16532,7 +16618,9 @@
   {
     "acidity": "high",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "herbs"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -16645,6 +16733,12 @@
         "field": "sweetness",
         "quote": "and is sometimes made into a dessert wine ... which primarily stuck to dry white wines",
         "value": "dry-sweet"
+      },
+      {
+        "field": "aromas",
+        "quote": "Als typische Aromen werden unter anderem Kräuter-, Stachelbeer- und Heunoten genannt.",
+        "value": "herbs",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Silvaner"
       }
     ],
     "id": "silvaner",
@@ -16956,7 +17050,9 @@
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -17114,6 +17210,12 @@
         "field": "sweetness",
         "quote": "to cheaply produce large amounts of medium sweet German wines",
         "value": "medium"
+      },
+      {
+        "field": "aromas",
+        "quote": "Los vinos de müller-thurgau son ligeros debido a su baja acidez, pero cuentan con un sabor afrutado.",
+        "value": "fruity",
+        "sourceUrl": "https://es.wikipedia.org/wiki/M%C3%BCller-thurgau"
       }
     ],
     "id": "muller-thurgau",
@@ -18118,7 +18220,10 @@
   {
     "acidity": "high",
     "alcohol": "high",
-    "aromas": [],
+    "aromas": [
+      "red fruit",
+      "spice"
+    ],
     "body": "high",
     "color": "red",
     "evidence": [
@@ -18159,6 +18264,18 @@
         "quote": "El vi varietal jove de raïm carinyena té molt de color i cos",
         "value": "high",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Carinyena"
+      },
+      {
+        "field": "aromas",
+        "quote": "les meilleurs vins sont produits sur les vignes de plus de quarante ans, donnant des vins dominés par les arômes de fruits rouges et d'épices.",
+        "value": "red fruit",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Carignan_N"
+      },
+      {
+        "field": "aromas",
+        "quote": "les meilleurs vins sont produits sur les vignes de plus de quarante ans, donnant des vins dominés par les arômes de fruits rouges et d'épices.",
+        "value": "spice",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Carignan_N"
       }
     ],
     "id": "carignan",
@@ -21024,7 +21141,9 @@
   {
     "acidity": "high",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "bitter almond"
+    ],
     "body": "medium",
     "color": "red",
     "evidence": [
@@ -21083,6 +21202,11 @@
         "quote": "Corvina is used with several other grapes to create the light red regional wines Bardolino and Valpolicella that have a mild fruity flavor with hints of almond.",
         "value": "red",
         "sourceUrl": "https://en.wikipedia.org/wiki/Corvina"
+      },
+      {
+        "field": "aromas",
+        "quote": "The grapes' naturally high acidity can make the wine somewhat tart with a slight, bitter almond note.",
+        "value": "bitter almond"
       }
     ],
     "id": "corvina",
@@ -24640,7 +24764,10 @@
   {
     "acidity": "low",
     "alcohol": "medium",
-    "aromas": [],
+    "aromas": [
+      "grapefruit",
+      "apple"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -24780,6 +24907,18 @@
         "quote": "où il est utilisé particulièrement pour produire des vins doux naturels ... Le macabeu peut être utilisé pour l'élaboration de vin blanc sec.",
         "value": "dry-sweet",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Macabeu"
+      },
+      {
+        "field": "aromas",
+        "quote": "Dona vins de graduació alcohòlica moderada amb aromes d'aranja i poma.",
+        "value": "grapefruit",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Macabeu_(ra%C3%AFm)"
+      },
+      {
+        "field": "aromas",
+        "quote": "Dona vins de graduació alcohòlica moderada amb aromes d'aranja i poma.",
+        "value": "apple",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Macabeu_(ra%C3%AFm)"
       }
     ],
     "id": "macabeo",
@@ -25495,7 +25634,9 @@
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "floral"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -25563,6 +25704,12 @@
         "field": "regions",
         "quote": "There are substantial plantings in Andalusia for sherry production, and it is also widely grown on the Canary Islands, and in Galicia ... in the Douro region of Portugal ...",
         "value": "PT: Douro"
+      },
+      {
+        "field": "aromas",
+        "quote": "Es un vino seco y cuenta un aroma intenso y floral.",
+        "value": "floral",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Palomino_(vid)"
       }
     ],
     "id": "palomino",
@@ -32879,7 +33026,9 @@
   {
     "acidity": "low",
     "alcohol": "high",
-    "aromas": [],
+    "aromas": [
+      "cherry"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -33038,6 +33187,12 @@
         "quote": "besitzen wenig Säure und sind alkoholreich",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Montepulciano_(Rebsorte)"
+      },
+      {
+        "field": "aromas",
+        "quote": "per i sentori di ciliegia e di marasca",
+        "value": "cherry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Montepulciano_(vitigno)"
       }
     ],
     "id": "montepulciano",
@@ -33996,7 +34151,10 @@
   {
     "acidity": "high",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "liquorice",
+      "prune"
+    ],
     "body": "high",
     "color": "red",
     "evidence": [
@@ -34164,6 +34322,18 @@
         "quote": "Al gusto si rivela solitamente secco",
         "value": "dry",
         "sourceUrl": "https://it.wikipedia.org/wiki/Cagnulari"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente des arômes de réglisse, de poivre et de pruneau.",
+        "value": "liquorice",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Graciano_(c%C3%A9page)"
+      },
+      {
+        "field": "aromas",
+        "quote": "Il présente des arômes de réglisse, de poivre et de pruneau.",
+        "value": "prune",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Graciano_(c%C3%A9page)"
       }
     ],
     "id": "graciano",
@@ -34348,7 +34518,9 @@
   {
     "acidity": "medium",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "bitter almond"
+    ],
     "body": "high",
     "color": "white",
     "evidence": [
@@ -34382,6 +34554,12 @@
         "field": "acidity",
         "quote": "Su acidez es media-alta",
         "value": "medium",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Verdejo"
+      },
+      {
+        "field": "aromas",
+        "quote": "Son muy aromáticos y destacan los aromas a almendra amarga.",
+        "value": "bitter almond",
         "sourceUrl": "https://es.wikipedia.org/wiki/Verdejo"
       }
     ],
@@ -36650,7 +36828,10 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "spice",
+      "fruity"
+    ],
     "body": "medium",
     "color": "red",
     "evidence": [
@@ -36739,6 +36920,18 @@
         "quote": "The grape usually produces a medium body red wine.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Marselan"
+      },
+      {
+        "field": "aromas",
+        "quote": "La vinification de cette variété donne un vin rouge concentré, rustique et charnu aux arômes épicés et fruités, aux tanins prononcés.",
+        "value": "spice",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Marselan"
+      },
+      {
+        "field": "aromas",
+        "quote": "La vinification de cette variété donne un vin rouge concentré, rustique et charnu aux arômes épicés et fruités, aux tanins prononcés.",
+        "value": "fruity",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Marselan"
       }
     ],
     "id": "marselan",
@@ -42163,7 +42356,12 @@
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "cherry",
+      "blackberry",
+      "blackcurrant",
+      "raspberry"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -42251,6 +42449,30 @@
         "field": "regions",
         "quote": "most of the current plantations are found in Germany. Up until the early 20th century, it was one of the most grown varieties in the Ahr region ... between 54°N in North Yorkshire, England to 58.5°N on Muhu island, Estonia.",
         "value": "EE: Muhu"
+      },
+      {
+        "field": "aromas",
+        "quote": "Typische im Wein zu findende Aromen sind: Kirsche, Brombeere, schwarze Johannisbeere, Mokka, Himbeere und oft auch Rauch.",
+        "value": "cherry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Fr%C3%BChburgunder"
+      },
+      {
+        "field": "aromas",
+        "quote": "Typische im Wein zu findende Aromen sind: Kirsche, Brombeere, schwarze Johannisbeere, Mokka, Himbeere und oft auch Rauch.",
+        "value": "blackberry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Fr%C3%BChburgunder"
+      },
+      {
+        "field": "aromas",
+        "quote": "Typische im Wein zu findende Aromen sind: Kirsche, Brombeere, schwarze Johannisbeere, Mokka, Himbeere und oft auch Rauch.",
+        "value": "blackcurrant",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Fr%C3%BChburgunder"
+      },
+      {
+        "field": "aromas",
+        "quote": "Typische im Wein zu findende Aromen sind: Kirsche, Brombeere, schwarze Johannisbeere, Mokka, Himbeere und oft auch Rauch.",
+        "value": "raspberry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Fr%C3%BChburgunder"
       }
     ],
     "id": "pinot-noir-precoce",
@@ -45884,7 +46106,9 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "nutty"
+    ],
     "body": "high",
     "color": "white",
     "evidence": [
@@ -45933,6 +46157,12 @@
         "quote": "Il Neuburger viene vinificato principalmente come vino fermo secco.",
         "value": "dry",
         "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
+      },
+      {
+        "field": "aromas",
+        "quote": "Die Weine sind eher säureärmer und haben ein nussiges Aroma",
+        "value": "nutty",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Neuburger"
       }
     ],
     "id": "neuburger",
@@ -46307,7 +46537,9 @@
   {
     "acidity": "low",
     "alcohol": "high",
-    "aromas": [],
+    "aromas": [
+      "apple"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -46435,6 +46667,12 @@
         "field": "sweetness",
         "quote": "C'est un vin sec ou moelleux",
         "value": "dry-sweet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Clairette_(c%C3%A9page)"
+      },
+      {
+        "field": "aromas",
+        "quote": "au bouquet de pomme et de fleurs blanches",
+        "value": "apple",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Clairette_(c%C3%A9page)"
       }
     ],
@@ -47212,7 +47450,11 @@
   {
     "acidity": null,
     "alcohol": "high",
-    "aromas": [],
+    "aromas": [
+      "fruity",
+      "cherry",
+      "floral"
+    ],
     "body": "high",
     "color": "red",
     "evidence": [
@@ -47258,6 +47500,24 @@
         "field": "alcohol",
         "quote": "riches en alcool et peuvent être très vivaces",
         "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_c%C3%A3o"
+      },
+      {
+        "field": "aromas",
+        "quote": "Les vins possèdent des arômes fruités (cerise), floraux (fleurs sauvages) et épicés (poivre)",
+        "value": "fruity",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_c%C3%A3o"
+      },
+      {
+        "field": "aromas",
+        "quote": "Les vins possèdent des arômes fruités (cerise), floraux (fleurs sauvages) et épicés (poivre)",
+        "value": "cherry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_c%C3%A3o"
+      },
+      {
+        "field": "aromas",
+        "quote": "Les vins possèdent des arômes fruités (cerise), floraux (fleurs sauvages) et épicés (poivre)",
+        "value": "floral",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_c%C3%A3o"
       }
     ],
