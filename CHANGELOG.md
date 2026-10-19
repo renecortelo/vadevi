@@ -60,10 +60,11 @@ has the reasons.
   more languages (`pnpm kb:fetch-grape-articles`) and 51 more values read by
   hand bring alcohol to 61 grapes, sweetness to 87 and body to 71; acidity
   reaches 103 grapes and tannin 41.
-- **Grapes for regions beyond the EU**: 96 regions with no register list —
-  American AVAs, Australian GIs, a few in Chile, Argentina, New Zealand —
-  now show the grapes their own article says are grown there, each with its
-  sentence (404 links).
+- **Grapes for regions beyond the EU**: 122 regions with no register list —
+  American AVAs such as Napa Valley, Australian GIs, Chile's valleys, a few
+  in Argentina and New Zealand — now show the grapes their own article, in
+  any of the library's languages, says are grown there, each with its
+  sentence (493 links).
 - **Dry or sweet, and alcohol**: a grape's card adds two scales — the
   alcohol its wines typically reach, and how dry or sweet they are, as a
   range where its sources give one (Sémillon's «dry and sweet white wines»

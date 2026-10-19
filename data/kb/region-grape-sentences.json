@@ -1,6 +1,23 @@
 {
-  "$comment": "Grapes a wine region's own English Wikipedia article names as grown or made there, for names no register lists varieties for (19 October 2026). Found by matching the library's grape names in the article's opening sentences that speak of growing, planting or producing, then read one by one by hand: a sentence that names a grape only in passing, history or another place, or a generic «Muscat», was left out. scripts/kb/build-appellations.ts checks each quote is still in the cached article. Wikipedia, CC BY-SA 4.0.",
+  "$comment": "Grapes a wine region's own Wikipedia article, in any of the library's languages, names as grown or made there, for names no register lists varieties for (19 October 2026). Found by matching the library's grape names in the article's opening sentences that speak of growing, planting or producing, then read one by one by hand: a sentence that names a grape only in passing, history or another place, or a generic «Muscat», was left out. scripts/kb/build-appellations.ts checks each quote is still in the cached article. Wikipedia, CC BY-SA 4.0.",
   "regions": {
+    "ar-lujan-de-cuyo-doc": [
+      {
+        "grapeId": "malbec",
+        "quote": "Luján de Cuyo es una denominación de origen controlada (DOC) argentina para vinos elaborados con gran mayoría de la variedad malbec (con un 85% como mínimo) y procedentes de la zona de producción homónima de la provincia de Mendoza.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_%28vino%29"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Si bien la mayoría de estos vinos son 100% de variedad malbec, muchos tienen su cortes con cabernet sauvignon, merlot y/o bonarda.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_%28vino%29"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Si bien la mayoría de estos vinos son 100% de variedad malbec, muchos tienen su cortes con cabernet sauvignon, merlot y/o bonarda.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Luj%C3%A1n_de_Cuyo_%28vino%29"
+      }
+    ],
     "ar-valle-de-uco": [
       {
         "grapeId": "semillon",
@@ -411,11 +428,150 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Lavaux"
       }
     ],
+    "cl-valle-de-casablanca": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Su condición de \"valle de clima frío\" le ha dado un excelente reconocimiento comercial, que se traduce en condiciones ideales para el cultivo de variedades tintas como Pinot Noir y Syrah, y de variedades blancas como Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Su condición de \"valle de clima frío\" le ha dado un excelente reconocimiento comercial, que se traduce en condiciones ideales para el cultivo de variedades tintas como Pinot Noir y Syrah, y de variedades blancas como Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Su condición de \"valle de clima frío\" le ha dado un excelente reconocimiento comercial, que se traduce en condiciones ideales para el cultivo de variedades tintas como Pinot Noir y Syrah, y de variedades blancas como Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Su condición de \"valle de clima frío\" le ha dado un excelente reconocimiento comercial, que se traduce en condiciones ideales para el cultivo de variedades tintas como Pinot Noir y Syrah, y de variedades blancas como Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Casablanca"
+      }
+    ],
+    "cl-valle-de-curico": [
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "El clima de la subregión se caracteriza por la alta variación de temperatura entre el día y la noche, lo que produce una acidez elevada en los vinos blancos elaborados a base de Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "En las área más cálidas se producen vinos de Cabernet Sauvignon de gran calidad, en viñedos que frecuentemente tienen casi cien años de edad.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Curic%C3%B3"
+      }
+    ],
+    "cl-valle-de-leyda": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Esta zona produce sobre todos vinos blancos de Chardonnay y Sauvignon Blanc, pero también se encuentran plantaciones de Syrah y Pinot Noir.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Esta zona produce sobre todos vinos blancos de Chardonnay y Sauvignon Blanc, pero también se encuentran plantaciones de Syrah y Pinot Noir.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Esta zona produce sobre todos vinos blancos de Chardonnay y Sauvignon Blanc, pero también se encuentran plantaciones de Syrah y Pinot Noir.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Esta zona produce sobre todos vinos blancos de Chardonnay y Sauvignon Blanc, pero también se encuentran plantaciones de Syrah y Pinot Noir.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_Leyda"
+      }
+    ],
+    "cl-valle-de-san-antonio": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "En los valles litorales de San Antonio se encuentran los viñedos más próximos al mar de todo Chile, sólo parcialmente protegidos de la influencia del mar, lo que propicia el cultivo de uvas de clima frío como Pinot Noir, Chardonnay y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "En los valles litorales de San Antonio se encuentran los viñedos más próximos al mar de todo Chile, sólo parcialmente protegidos de la influencia del mar, lo que propicia el cultivo de uvas de clima frío como Pinot Noir, Chardonnay y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "En los valles litorales de San Antonio se encuentran los viñedos más próximos al mar de todo Chile, sólo parcialmente protegidos de la influencia del mar, lo que propicia el cultivo de uvas de clima frío como Pinot Noir, Chardonnay y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_de_San_Antonio"
+      }
+    ],
+    "cl-valle-del-aconcagua": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "La superficie de viñedos ocupa unas 1.025 ha dedicadas a las variedades Cabernet Sauvignon, Merlot, Syrah, Carménère y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_%28vino%29"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "La superficie de viñedos ocupa unas 1.025 ha dedicadas a las variedades Cabernet Sauvignon, Merlot, Syrah, Carménère y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_%28vino%29"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "La superficie de viñedos ocupa unas 1.025 ha dedicadas a las variedades Cabernet Sauvignon, Merlot, Syrah, Carménère y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_%28vino%29"
+      },
+      {
+        "grapeId": "carmenere",
+        "quote": "La superficie de viñedos ocupa unas 1.025 ha dedicadas a las variedades Cabernet Sauvignon, Merlot, Syrah, Carménère y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_%28vino%29"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "La superficie de viñedos ocupa unas 1.025 ha dedicadas a las variedades Cabernet Sauvignon, Merlot, Syrah, Carménère y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Aconcagua_%28vino%29"
+      }
+    ],
+    "cl-valle-del-cachapoal": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Las variedades más extensamente plantadas son Chardonnay, Sauvignon Blanc, Cabernet Sauvignon, Merlot y Carménère.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Cachapoal_%28vino%29"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Las variedades más extensamente plantadas son Chardonnay, Sauvignon Blanc, Cabernet Sauvignon, Merlot y Carménère.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Cachapoal_%28vino%29"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Las variedades más extensamente plantadas son Chardonnay, Sauvignon Blanc, Cabernet Sauvignon, Merlot y Carménère.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Cachapoal_%28vino%29"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Las variedades más extensamente plantadas son Chardonnay, Sauvignon Blanc, Cabernet Sauvignon, Merlot y Carménère.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Cachapoal_%28vino%29"
+      },
+      {
+        "grapeId": "carmenere",
+        "quote": "Las variedades más extensamente plantadas son Chardonnay, Sauvignon Blanc, Cabernet Sauvignon, Merlot y Carménère.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Cachapoal_%28vino%29"
+      }
+    ],
     "cl-valle-del-elqui": [
       {
         "grapeId": "syrah",
         "quote": "These conditions contribute to the production of excellent results for varietals like Syrah.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Elqui_Valley_%28wine_region%29"
+      }
+    ],
+    "cl-valle-del-malleco": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Al ser una de las subregiones vitícolas más frías de Chile, las variedades más cultivadas son Pinot Noir, Chardonnay y Gewürtztraminer.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Al ser una de las subregiones vitícolas más frías de Chile, las variedades más cultivadas son Pinot Noir, Chardonnay y Gewürtztraminer.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Malleco"
       }
     ],
     "cl-valle-del-maule": [
@@ -428,6 +584,38 @@
         "grapeId": "carmenere",
         "quote": "The size of the region permits a range of distinct microclimates suitable for both red and white wines, though it is best known for its powerful Cabernet Sauvignon and aromatic and spicy Carménère wines.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Maule_Valley"
+      }
+    ],
+    "fr-correze": [
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "vins tranquilles rouges sous l'appellation « corrèze » (cépage principal : cabernet franc ; cépages accessoires : cabernet sauvignon et merlot), sur l'ensemble de l'aire d'appellation ;",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Corr%C3%A8ze_%28AOC%29"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "vins tranquilles rouges sous l'appellation « corrèze » (cépage principal : cabernet franc ; cépages accessoires : cabernet sauvignon et merlot), sur l'ensemble de l'aire d'appellation ;",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Corr%C3%A8ze_%28AOC%29"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "vins tranquilles rouges sous l'appellation « corrèze » (cépage principal : cabernet franc ; cépages accessoires : cabernet sauvignon et merlot), sur l'ensemble de l'aire d'appellation ;",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Corr%C3%A8ze_%28AOC%29"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "vins de paille (cépages : cabernet franc, cabernet sauvignon, chardonnay, merlot ou sauvignon), produits uniquement sur les 21 communes du Sud-Corrézien ;",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Corr%C3%A8ze_%28AOC%29"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "vins de paille (cépages : cabernet franc, cabernet sauvignon, chardonnay, merlot ou sauvignon), produits uniquement sur les 21 communes du Sud-Corrézien ;",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Corr%C3%A8ze_%28AOC%29"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "vins avec dénomination géographique complémentaire (DGC) « coteaux-de-la-vézère » rouges (cabernet franc) et blancs secs (chenin) sur trois communes du nord, avec des rendements maximum plus bas.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Corr%C3%A8ze_%28AOC%29"
       }
     ],
     "fr-minervois": [
@@ -460,6 +648,13 @@
         "grapeId": "piquepoul",
         "quote": "The red wines of the Minervois appellation are produced from Syrah and Mourvedre, Grenache and Lladoner Pelut (minimum 60%); and Carignan, Cinsault, Piquepoul, Terret, and Rivairenc (maximum 40%).",
         "sourceUrl": "https://en.wikipedia.org/wiki/Minervois_AOC"
+      }
+    ],
+    "fr-muscat-de-beaumes-de-venise": [
+      {
+        "grapeId": "muscat-blanc-a-petits-grains",
+        "quote": "Juni 1945 seine eigene Appellation d’Origine Contrôlée (kurz AOC), für den seit 1956 ausschließlich die Muskateller-Rebsorte Muscat blanc à petits grains zugelassen ist.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Muscat_de_Beaumes-de-Venise"
       }
     ],
     "md-codru": [
@@ -686,6 +881,23 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Arroyo_Grande_Valley_AVA"
       }
     ],
+    "us-arroyo-seco": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Dadurch gedeihen hier frühreifende Rebsorten wie Chardonnay, Pinot Noir und Riesling.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Arroyo_Seco_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Dadurch gedeihen hier frühreifende Rebsorten wie Chardonnay, Pinot Noir und Riesling.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Arroyo_Seco_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Dadurch gedeihen hier frühreifende Rebsorten wie Chardonnay, Pinot Noir und Riesling.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Arroyo_Seco_AVA"
+      }
+    ],
     "us-benmore-valley": [
       {
         "grapeId": "chardonnay",
@@ -775,6 +987,18 @@
         "grapeId": "cabernet-franc",
         "quote": "Sauvignon Blanc, Chardonnay, Viognier and Riesling are the principal white grape varieties within Kelsey Bench and its neighbor the Big Valley District while Zinfandel, Merlot and Cabernet Franc varieties are the majority of red grape plantings in the area.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Big_Valley_District-Lake_County_AVA"
+      }
+    ],
+    "us-california-shenandoah-valley": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "In den 1970er Jahren begann das bekannte Weingut Sutter Home Winery mit der Abfüllung von Zinfandel aus California Shenandoah Valley Trauben.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/California_Shenandoah_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Neben dem Zinfandel ist die Syrah die bedeutendste Rebsorte.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/California_Shenandoah_Valley_AVA"
       }
     ],
     "us-carmel-valley": [
@@ -1083,6 +1307,18 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Edna_Valley_AVA"
       }
     ],
+    "us-eola-amity-hills": [
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem Pinot gris und Chardonnay.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Eola-Amity_Hills_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem Pinot gris und Chardonnay.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Eola-Amity_Hills_AVA"
+      }
+    ],
     "us-fair-play": [
       {
         "grapeId": "zinfandel",
@@ -1229,6 +1465,28 @@
         "grapeId": "zinfandel",
         "quote": "The climate in the Green Valley is even cooler than other parts of the Russian River Valley favoring cool climate varietals as Pinot Noir, Chardonnay and Gewürztraminer for which Green Valley is best known as well as a few examples of cool-climate Syrah and Zinfandel.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Green_Valley_of_Russian_River_Valley_AVA"
+      }
+    ],
+    "us-hames-valley": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Neben den klassischen Rebsorten des Bordeaux wie Cabernet Sauvignon und Merlot findet man auch Sorten, die zur Erzeugung des portugiesischen Portwein, wie Tinto Cão und Touriga Nacional, dienen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Hames_Valley_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Neben den klassischen Rebsorten des Bordeaux wie Cabernet Sauvignon und Merlot findet man auch Sorten, die zur Erzeugung des portugiesischen Portwein, wie Tinto Cão und Touriga Nacional, dienen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Hames_Valley_AVA"
+      },
+      {
+        "grapeId": "tinta-cao",
+        "quote": "Neben den klassischen Rebsorten des Bordeaux wie Cabernet Sauvignon und Merlot findet man auch Sorten, die zur Erzeugung des portugiesischen Portwein, wie Tinto Cão und Touriga Nacional, dienen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Hames_Valley_AVA"
+      },
+      {
+        "grapeId": "touriga-nacional",
+        "quote": "Neben den klassischen Rebsorten des Bordeaux wie Cabernet Sauvignon und Merlot findet man auch Sorten, die zur Erzeugung des portugiesischen Portwein, wie Tinto Cão und Touriga Nacional, dienen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Hames_Valley_AVA"
       }
     ],
     "us-isle-st-george": [
@@ -1382,6 +1640,18 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Martha%27s_Vineyard_AVA"
       }
     ],
+    "us-mcminnville": [
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem die frühreifenden Pinot gris und Riesling.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/McMinnville_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem die frühreifenden Pinot gris und Riesling.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/McMinnville_AVA"
+      }
+    ],
     "us-mendocino-ridge": [
       {
         "grapeId": "zinfandel",
@@ -1432,6 +1702,13 @@
         "grapeId": "gruner-veltliner",
         "quote": "Other plantings (ordered by decreasing representation in total acres) include Chardonnay, Syrah, Merlot, Riesling, Sauvignon Blanc, Primitivo, Petite Sirah, Cabernet Sauvignon, and Grüner Veltliner.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_Ridge_AVA"
+      }
+    ],
+    "us-merritt-island": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Die kühlenden Meeresbrisen der nahe gelegenen San Francisco Bay und der häufige Frühnebel formen ein kühles maritimes Klima, das der frühreifenden Rebsorte Chardonnay zugutekommt.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Merritt_Island_AVA"
       }
     ],
     "us-mesilla-valley": [
@@ -1526,6 +1803,23 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Veeder_AVA"
       }
     ],
+    "us-napa-valley": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Aufgrund des mediterranen Klimas gedeihen im Napa-Valley Weine, die seit den 1960er-Jahren zu den Weltbesten zählen und vor allem aus Cabernet-Sauvignon-, Zinfandel- und Chardonnay-Trauben erzeugt werden.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Napa_Valley_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Aufgrund des mediterranen Klimas gedeihen im Napa-Valley Weine, die seit den 1960er-Jahren zu den Weltbesten zählen und vor allem aus Cabernet-Sauvignon-, Zinfandel- und Chardonnay-Trauben erzeugt werden.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Napa_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Aufgrund des mediterranen Klimas gedeihen im Napa-Valley Weine, die seit den 1960er-Jahren zu den Weltbesten zählen und vor allem aus Cabernet-Sauvignon-, Zinfandel- und Chardonnay-Trauben erzeugt werden.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Napa_Valley_AVA"
+      }
+    ],
     "us-niagara-escarpment": [
       {
         "grapeId": "merlot",
@@ -1558,6 +1852,58 @@
         "grapeId": "cabernet-franc",
         "quote": "The most planted grape varieties in the region are Merlot, Chardonnay, and Cabernet Franc.",
         "sourceUrl": "https://en.wikipedia.org/wiki/North_Fork_of_Long_Island_AVA"
+      }
+    ],
+    "us-north-fork-of-roanoke": [
+      {
+        "grapeId": "alicante-bouschet",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "petit-verdot",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Angebaut werden unter anderen die Rebsorten Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/North_Fork_of_Roanoke_AVA"
       }
     ],
     "us-north-yuba": [
@@ -1765,6 +2111,58 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/River_Junction_AVA"
       }
     ],
+    "us-rocky-knob": [
+      {
+        "grapeId": "alicante-bouschet",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "petit-verdot",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Angebaut werden unter anderen die Rebsorten Seyval Blanc, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Norton, Petit Verdot, Sangiovese, Syrah und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Rocky_Knob_AVA"
+      }
+    ],
     "us-rutherford": [
       {
         "grapeId": "cabernet-sauvignon",
@@ -1787,6 +2185,18 @@
         "grapeId": "marsanne",
         "quote": "Taken together, these elements provide an excellent setting for growing full-bodied Rhône and Bordeaux varietals from Cabernet Sauvingon and Petite Sirah to Syrah and Marsanne.",
         "sourceUrl": "https://en.wikipedia.org/wiki/San_Antonio_Valley_AVA"
+      }
+    ],
+    "us-san-lucas": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Dadurch können trotz des warmen Klimas frühreifende Rebsorten wie Chardonnay und Pinot Noir gedeihen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Lucas_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Dadurch können trotz des warmen Klimas frühreifende Rebsorten wie Chardonnay und Pinot Noir gedeihen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Lucas_AVA"
       }
     ],
     "us-san-luis-obispo-coast": [
@@ -1814,6 +2224,45 @@
         "grapeId": "gruner-veltliner",
         "quote": "Cool weather varietals like Pinot Noir and Chardonnay are commonly grown while lesser varietals Sauvignon Blanc, Gewürztraminer and Gruner Veltliner also thrive.",
         "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Obispo_Coast_AVA"
+      }
+    ],
+    "us-san-pasqual-valley": [
+      {
+        "grapeId": "grenache",
+        "quote": "Wichtigste Sorten sind Grenache, Merlot, Sangiovese, Syrah, Tempranillo und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Pasqual_Valley_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Wichtigste Sorten sind Grenache, Merlot, Sangiovese, Syrah, Tempranillo und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Pasqual_Valley_AVA"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "Wichtigste Sorten sind Grenache, Merlot, Sangiovese, Syrah, Tempranillo und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Pasqual_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Wichtigste Sorten sind Grenache, Merlot, Sangiovese, Syrah, Tempranillo und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Pasqual_Valley_AVA"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "Wichtigste Sorten sind Grenache, Merlot, Sangiovese, Syrah, Tempranillo und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Pasqual_Valley_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Wichtigste Sorten sind Grenache, Merlot, Sangiovese, Syrah, Tempranillo und Viognier.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Pasqual_Valley_AVA"
+      }
+    ],
+    "us-san-ysidro-district": [
+      {
+        "grapeId": "merlot",
+        "quote": "Über den Pajaro River werden die Rebflächen von den Meeresbrisen des Pazifik gekühlt, so dass hier die frühreifende Rebsorte Merlot angebaut werden kann.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/San_Ysidro_District_AVA"
       }
     ],
     "us-santa-lucia-highlands": [
@@ -1855,11 +2304,35 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
       }
     ],
+    "us-seiad-valley": [
+      {
+        "grapeId": "riesling",
+        "quote": "1,2 Hektar mit der Rebsorte Riesling bestockter Rebfläche, die sich auf einer Höhe von ca.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Seiad_Valley_AVA"
+      }
+    ],
     "us-seneca-lake": [
       {
         "grapeId": "riesling",
         "quote": "The most commercially important grape variety in the region is Riesling, although a wide variety of vitis vinifera and French hybrid grapes are grown.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Seneca_Lake_AVA"
+      }
+    ],
+    "us-sierra-foothills": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "Wichtigste Rebsorten sind der Zinfandel, Cabernet Sauvignon und Syrah.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Sierra_Foothills_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Wichtigste Rebsorten sind der Zinfandel, Cabernet Sauvignon und Syrah.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Sierra_Foothills_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Wichtigste Rebsorten sind der Zinfandel, Cabernet Sauvignon und Syrah.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Sierra_Foothills_AVA"
       }
     ],
     "us-sloughhouse": [
@@ -1968,6 +2441,13 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Southeastern_New_England_AVA"
       }
     ],
+    "us-stags-leap-district": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Bekannt ist Stags Leap District besonders für sortenreine Weine der Rebsorte Cabernet Sauvignon.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Stags_Leap_District_AVA"
+      }
+    ],
     "us-suisun-valley": [
       {
         "grapeId": "barbera",
@@ -2048,6 +2528,23 @@
         "grapeId": "riesling",
         "quote": "The Suisun Valley landform is approximately three miles (5 km) wide and eight miles (13 km) long encompassing about 15,000 acres (23 sq mi) with approximately 3,000 acres (1,214 ha) cultivating more than twenty varieties of wine grapes including Barbera, Cabernet Sauvignon, Chardonnay, French Colombard, Napa Gamay (Valdiguie), Grenache, Merlot, Mouvedre, Muscat Canelli, Petite Sirah, Petite Verdot, Pinot Gris, Pinot Noir, Primitivo, Rousanne, Sauvignon Blanc, Sangiovese, Shiraz, Syrah, Viognier, Riesling, and Zinfandel.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Suisun_Valley_AVA"
+      }
+    ],
+    "us-the-hamptons-long-island": [
+      {
+        "grapeId": "merlot",
+        "quote": "Dies ermöglicht den Anbau der aus dem Bordeaux bekannten Rebsorten  Merlot, Cabernet Sauvignon und Cabernet Franc.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/The_Hamptons%2C_Long_Island_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Dies ermöglicht den Anbau der aus dem Bordeaux bekannten Rebsorten  Merlot, Cabernet Sauvignon und Cabernet Franc.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/The_Hamptons%2C_Long_Island_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Dies ermöglicht den Anbau der aus dem Bordeaux bekannten Rebsorten  Merlot, Cabernet Sauvignon und Cabernet Franc.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/The_Hamptons%2C_Long_Island_AVA"
       }
     ],
     "us-tracy-hills": [
