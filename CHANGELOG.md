@@ -42,6 +42,9 @@ has the reasons.
   how many, how often tasted, their mean score, each linked to its page.
   Only wines whose region the library knows for certain to be that name
   count. The wine list takes a new filter, `regionRef`.
+- **Spain's vineyards, from the Ministry**: 94 Spanish PDOs show their
+  registered vineyard area from the Ministry of Agriculture's 2022/2023
+  report, newer than any article's and credited to it.
 - **More grapes with alcohol, sweetness and body**: their articles in six
   more languages (`pnpm kb:fetch-grape-articles`) and 51 more values read by
   hand bring alcohol to 58 grapes, sweetness to 85 and body to 71.

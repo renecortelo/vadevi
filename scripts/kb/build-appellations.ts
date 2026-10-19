@@ -1465,7 +1465,34 @@ for (const entry of entries) {
     withFigures += 1;
   }
 }
-console.info(`  ${withClimate} names with their climate, ${withFigures} with area or production.`);
+// Spain's PDOs: their registered vineyard area from the Ministry of
+// Agriculture's yearly report (`data/kb/es-dop-figures.json`), newer and
+// official, in place of an article's. Its "qualified wine" volume is not
+// production — what a campaign certified — and is not shown.
+const spanish = JSON.parse(readFileSync(resolve("data/kb/es-dop-figures.json"), "utf8")) as {
+  campaign: string;
+  regions: Record<string, { plantedHa: number | null }>;
+  sourceUrl: string;
+};
+let official = 0;
+for (const entry of entries) {
+  const area = spanish.regions[entry.id]?.plantedHa;
+  if (area === null || area === undefined) continue;
+  entry.figures = {
+    planted: {
+      amount: area,
+      publisher: "mapa",
+      quote: `Superficie inscrita al final de campaña (ha): ${area}`,
+      sourceUrl: spanish.sourceUrl,
+      year: spanish.campaign,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  official += 1;
+}
+console.info(
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry.`,
+);
 
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;

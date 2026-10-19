@@ -474,7 +474,8 @@
     "yoursWines_other": "{{count}} wijnen",
     "yoursTastings_one": "{{count}} proeverij",
     "yoursTastings_other": "{{count}} proeverijen",
-    "yoursAverage": "gemiddeld {{score}}/100"
+    "yoursAverage": "gemiddeld {{score}}/100",
+    "glanceSourceMapa": "Spaans ministerie van Landbouw (MAPA), campagne {{campaign}}"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

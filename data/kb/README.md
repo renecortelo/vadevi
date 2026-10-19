@@ -346,6 +346,12 @@ Every few months, or when a register announces a name:
   CC0 1.0. The card credits it under the climate. WorldClim was not used:
   its terms allow no redistribution without permission.
 
+- **Spain's Ministry of Agriculture (MAPA)**, «Datos de las Denominaciones de
+  Origen Protegidas de Vinos, Campaña 2022/2023» (`es-dop-figures.json`):
+  public-sector information, reusable citing the source (Ley 37/2007, RD
+  1495/2011); each PDO's registered area is shown with the campaign and a
+  link to the report.
+
 - **Copernicus DEM GLO-90** (doi:10.5270/ESA-c5d3d65), through
   Open-Meteo's elevation API: CC BY 4.0, credited to the Copernicus programme
   and Open-Meteo under the climate (`pnpm kb:fetch-elevation`).

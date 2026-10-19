@@ -474,7 +474,8 @@
     "yoursWines_other": "{{count}} Weine",
     "yoursTastings_one": "{{count}} Verkostung",
     "yoursTastings_other": "{{count}} Verkostungen",
-    "yoursAverage": "Schnitt {{score}}/100"
+    "yoursAverage": "Schnitt {{score}}/100",
+    "glanceSourceMapa": "Spanisches Landwirtschaftsministerium (MAPA), Kampagne {{campaign}}"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

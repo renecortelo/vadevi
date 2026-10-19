@@ -6,6 +6,8 @@ import type { ClimateSummary, MonthlyClimate } from "./climate";
 
 export type RegionFigureSource = {
   amount: number;
+  /** Who gives it, where not Wikipedia: Spain's Ministry of Agriculture. */
+  publisher?: "mapa";
   quote: string;
   sourceUrl: string;
   year: string | null;

@@ -474,7 +474,8 @@
     "yoursWines_other": "{{count}} vinos",
     "yoursTastings_one": "{{count}} cata",
     "yoursTastings_other": "{{count}} catas",
-    "yoursAverage": "media {{score}}/100"
+    "yoursAverage": "media {{score}}/100",
+    "glanceSourceMapa": "Ministerio de Agricultura (MAPA), campaña {{campaign}}"
   },
   "space": {
     "switchLabel": "Espacio activo",

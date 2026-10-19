@@ -474,7 +474,8 @@
     "yoursWines_other": "{{count}} vinhos",
     "yoursTastings_one": "{{count}} prova",
     "yoursTastings_other": "{{count}} provas",
-    "yoursAverage": "média {{score}}/100"
+    "yoursAverage": "média {{score}}/100",
+    "glanceSourceMapa": "Ministério da Agricultura de Espanha (MAPA), campanha {{campaign}}"
   },
   "space": {
     "switchLabel": "Espaço ativo",

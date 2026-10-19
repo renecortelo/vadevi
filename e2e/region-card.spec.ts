@@ -35,8 +35,11 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     "title",
     `${spanish.format(rioja.figures.planted.amount)} ha`,
   );
-  // Rioja's article gives hectares: no "≈", nothing converted.
+  // Rioja's area is the Ministry's, in hectares: no "≈", nothing converted.
   await expect(glance).not.toContainText("≈");
+  await expect(page.locator("#region-glance ~ .section-help")).toContainText(
+    "Ministerio de Agricultura (MAPA)",
+  );
   // Three figures, one row, on a phone.
   const tops = await glance
     .locator("li")

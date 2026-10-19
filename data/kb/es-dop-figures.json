@@ -1,0 +1,492 @@
+{
+  "about": "Registered vineyard area at the end of the 2022/2023 campaign (ha) and volume of wine qualified as PDO in the 2022/2023 campaign (hl) for each Spanish wine PDO, transcribed from the Ministry of Agriculture's report «Datos de las Denominaciones de Origen Protegidas de Vinos (DOPs), Campaña 2022/2023» (tables 2 and 4). Public-sector information, reusable citing the source (Ley 37/2007, RD 1495/2011). DOPs the report counts together (Jerez-Xérès-Sherry with Manzanilla-Sanlúcar de Barrameda; Málaga with Sierras de Málaga) are left out.",
+  "campaign": "2022/2023",
+  "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+  "regions": {
+    "es-abadia-retuerta": {
+      "name": "Abadía Retuerta",
+      "plantedHa": 193,
+      "qualifiedHl": 341
+    },
+    "es-abona": {
+      "name": "Abona",
+      "plantedHa": 808,
+      "qualifiedHl": 6672
+    },
+    "es-alicante": {
+      "name": "Alicante",
+      "plantedHa": 10628,
+      "qualifiedHl": 196433
+    },
+    "es-almansa": {
+      "name": "Almansa",
+      "plantedHa": 9800,
+      "qualifiedHl": 57000
+    },
+    "es-arabako-txakolina": {
+      "name": "Chacolí de Álava",
+      "plantedHa": 94,
+      "qualifiedHl": 4001
+    },
+    "es-arlanza": {
+      "name": "Arlanza",
+      "plantedHa": 300,
+      "qualifiedHl": 1218
+    },
+    "es-arribes": {
+      "name": "Arribes",
+      "plantedHa": 301,
+      "qualifiedHl": 717
+    },
+    "es-ayles": {
+      "name": "Aylés",
+      "plantedHa": 46,
+      "qualifiedHl": 2807
+    },
+    "es-bierzo": {
+      "name": "Bierzo",
+      "plantedHa": 2040,
+      "qualifiedHl": 30393
+    },
+    "es-binissalem": {
+      "name": "Binissalem",
+      "plantedHa": 579,
+      "qualifiedHl": 3539
+    },
+    "es-bizkaiko-txakolina": {
+      "name": "Chacolí de Bizkaia",
+      "plantedHa": 436,
+      "qualifiedHl": 16595
+    },
+    "es-bolandin": {
+      "name": "Bolandin",
+      "plantedHa": 114,
+      "qualifiedHl": 2395
+    },
+    "es-bullas": {
+      "name": "Bullas",
+      "plantedHa": 1150,
+      "qualifiedHl": 18582
+    },
+    "es-calatayud": {
+      "name": "Calatayud",
+      "plantedHa": 3606,
+      "qualifiedHl": 48893
+    },
+    "es-calzadilla": {
+      "name": "Calzadilla",
+      "plantedHa": 13,
+      "qualifiedHl": null
+    },
+    "es-campo-de-borja": {
+      "name": "Campo de Borja",
+      "plantedHa": 6065,
+      "qualifiedHl": 170944
+    },
+    "es-campo-de-la-guardia": {
+      "name": "Campo de la Guardia",
+      "plantedHa": 81,
+      "qualifiedHl": 1105
+    },
+    "es-cangas": {
+      "name": "Cangas",
+      "plantedHa": 60,
+      "qualifiedHl": 614
+    },
+    "es-carinena": {
+      "name": "Cariñena",
+      "plantedHa": 13890,
+      "qualifiedHl": 554233
+    },
+    "es-casa-del-blanco": {
+      "name": "Casa del Blanco",
+      "plantedHa": 136,
+      "qualifiedHl": 1029
+    },
+    "es-cataluna": {
+      "name": "Cataluña",
+      "plantedHa": 36982,
+      "qualifiedHl": 267376
+    },
+    "es-cava": {
+      "name": "Cava",
+      "plantedHa": 38099,
+      "qualifiedHl": 1798522
+    },
+    "es-cebreros": {
+      "name": "Cebreros",
+      "plantedHa": 523,
+      "qualifiedHl": 407
+    },
+    "es-chozas-carrascal": {
+      "name": "Chozas Carrascal",
+      "plantedHa": 29,
+      "qualifiedHl": 575
+    },
+    "es-cigales": {
+      "name": "Cigales",
+      "plantedHa": 1908,
+      "qualifiedHl": 21651
+    },
+    "es-conca-de-barbera": {
+      "name": "Conca de Barberá",
+      "plantedHa": 2655,
+      "qualifiedHl": 7995
+    },
+    "es-condado-de-huelva": {
+      "name": "Condado de Huelva",
+      "plantedHa": 2124,
+      "qualifiedHl": 77435
+    },
+    "es-costers-del-segre": {
+      "name": "Costers del Segre",
+      "plantedHa": 4109,
+      "qualifiedHl": 30633
+    },
+    "es-dehesa-del-carrizal": {
+      "name": "Dehesa del Carrizal",
+      "plantedHa": 26,
+      "qualifiedHl": 1008
+    },
+    "es-dehesa-penalba": {
+      "name": "Dehesa Peñalba",
+      "plantedHa": 78,
+      "qualifiedHl": null
+    },
+    "es-dominio-de-valdepusa": {
+      "name": "Dominio de Valdepusa",
+      "plantedHa": 49,
+      "qualifiedHl": 5184
+    },
+    "es-el-hierro": {
+      "name": "El Hierro",
+      "plantedHa": 122,
+      "qualifiedHl": 866
+    },
+    "es-el-terrerazo": {
+      "name": "El Terrerazo",
+      "plantedHa": 63,
+      "qualifiedHl": 1633
+    },
+    "es-el-vicario": {
+      "name": "Pago El Vicario",
+      "plantedHa": 131,
+      "qualifiedHl": 2524
+    },
+    "es-emporda": {
+      "name": "Empordà",
+      "plantedHa": 1829,
+      "qualifiedHl": 48533
+    },
+    "es-finca-elez": {
+      "name": "Finca Élez",
+      "plantedHa": 39,
+      "qualifiedHl": 3250
+    },
+    "es-getariako-txakolina": {
+      "name": "Chacolí de Getaria",
+      "plantedHa": 446,
+      "qualifiedHl": 20951
+    },
+    "es-gran-canaria": {
+      "name": "Gran Canaria",
+      "plantedHa": 190,
+      "qualifiedHl": 1413
+    },
+    "es-granada": {
+      "name": "Granada",
+      "plantedHa": 260,
+      "qualifiedHl": 5614
+    },
+    "es-guijoso": {
+      "name": "Guijoso",
+      "plantedHa": 58,
+      "qualifiedHl": 1921
+    },
+    "es-islas-canarias": {
+      "name": "Islas Canarias",
+      "plantedHa": 587,
+      "qualifiedHl": 6780
+    },
+    "es-jumilla": {
+      "name": "Jumilla",
+      "plantedHa": 22473,
+      "qualifiedHl": 81612
+    },
+    "es-la-gomera": {
+      "name": "La Gomera",
+      "plantedHa": 125,
+      "qualifiedHl": 414
+    },
+    "es-la-jaraba": {
+      "name": "Pago La Jaraba",
+      "plantedHa": 75,
+      "qualifiedHl": 7578
+    },
+    "es-la-mancha": {
+      "name": "La Mancha",
+      "plantedHa": 151870,
+      "qualifiedHl": 439239
+    },
+    "es-la-palma": {
+      "name": "La Palma",
+      "plantedHa": 461,
+      "qualifiedHl": 6032
+    },
+    "es-lanzarote": {
+      "name": "Lanzarote",
+      "plantedHa": 1877,
+      "qualifiedHl": 11621
+    },
+    "es-lebrija": {
+      "name": "Lebrija",
+      "plantedHa": 17,
+      "qualifiedHl": 275
+    },
+    "es-leon": {
+      "name": "León",
+      "plantedHa": 1223,
+      "qualifiedHl": 12319
+    },
+    "es-los-balagueses": {
+      "name": "Los Balagueses",
+      "plantedHa": 18,
+      "qualifiedHl": 1138
+    },
+    "es-los-cerrillos": {
+      "name": "Pago Los Cerrillos",
+      "plantedHa": 34,
+      "qualifiedHl": 483
+    },
+    "es-malaga": {
+      "name": "Málaga",
+      "plantedHa": null,
+      "qualifiedHl": 11106
+    },
+    "es-manchuela": {
+      "name": "Manchuela",
+      "plantedHa": 13431,
+      "qualifiedHl": 24543
+    },
+    "es-mentrida": {
+      "name": "Méntrida",
+      "plantedHa": 5800,
+      "qualifiedHl": 11824
+    },
+    "es-mondejar": {
+      "name": "Mondéjar",
+      "plantedHa": 358,
+      "qualifiedHl": 1853
+    },
+    "es-monterrei": {
+      "name": "Monterrei",
+      "plantedHa": 720,
+      "qualifiedHl": 50308
+    },
+    "es-montilla-moriles": {
+      "name": "Montilla-Moriles",
+      "plantedHa": 4362,
+      "qualifiedHl": 165757
+    },
+    "es-montsant": {
+      "name": "Montsant",
+      "plantedHa": 1876,
+      "qualifiedHl": 19874
+    },
+    "es-navarra": {
+      "name": "Navarra",
+      "plantedHa": 9362,
+      "qualifiedHl": 385684
+    },
+    "es-pago-de-arinzano": {
+      "name": "Pago de Arínzano",
+      "plantedHa": 127,
+      "qualifiedHl": 2469
+    },
+    "es-pago-de-otazu": {
+      "name": "Pago de Otazu",
+      "plantedHa": 95,
+      "qualifiedHl": null
+    },
+    "es-pago-florentino": {
+      "name": "Pago Florentino",
+      "plantedHa": 58,
+      "qualifiedHl": 637
+    },
+    "es-penedes": {
+      "name": "Penedés",
+      "plantedHa": null,
+      "qualifiedHl": 157904
+    },
+    "es-pla-de-bages": {
+      "name": "Pla de Bages",
+      "plantedHa": 481,
+      "qualifiedHl": 7125
+    },
+    "es-pla-i-llevant": {
+      "name": "Pla i Llevant",
+      "plantedHa": 516,
+      "qualifiedHl": 24904
+    },
+    "es-prado-de-irache": {
+      "name": "Prado de Irache",
+      "plantedHa": 15,
+      "qualifiedHl": 300
+    },
+    "es-priorat": {
+      "name": "Priorat",
+      "plantedHa": 2237,
+      "qualifiedHl": 38693
+    },
+    "es-rias-baixas": {
+      "name": "Rías Baixas",
+      "plantedHa": 4491,
+      "qualifiedHl": 273956
+    },
+    "es-ribeira-sacra": {
+      "name": "Ribeira Sacra",
+      "plantedHa": 1302,
+      "qualifiedHl": 13334
+    },
+    "es-ribeiro": {
+      "name": "Ribeiro",
+      "plantedHa": 1273,
+      "qualifiedHl": 69162
+    },
+    "es-ribera-del-duero": {
+      "name": "Ribera del Duero",
+      "plantedHa": 26744,
+      "qualifiedHl": 88761
+    },
+    "es-ribera-del-guadiana": {
+      "name": "Ribera del Guadiana",
+      "plantedHa": 41503,
+      "qualifiedHl": 71917
+    },
+    "es-ribera-del-jucar": {
+      "name": "Ribera del Júcar",
+      "plantedHa": 6779,
+      "qualifiedHl": 4760
+    },
+    "es-rioja": {
+      "name": "Rioja",
+      "plantedHa": 66986,
+      "qualifiedHl": 2907061
+    },
+    "es-rueda": {
+      "name": "Rueda",
+      "plantedHa": 20767,
+      "qualifiedHl": 816807
+    },
+    "es-sierra-de-salamanca": {
+      "name": "Sierra de Salamanca",
+      "plantedHa": 124,
+      "qualifiedHl": 496
+    },
+    "es-sierras-de-malaga": {
+      "name": "Sierras de Málaga",
+      "plantedHa": null,
+      "qualifiedHl": 10603
+    },
+    "es-somontano": {
+      "name": "Somontano",
+      "plantedHa": 3959,
+      "qualifiedHl": 118974
+    },
+    "es-tacoronte-acentejo": {
+      "name": "Tacoronte-Acentejo",
+      "plantedHa": 71,
+      "qualifiedHl": 6620
+    },
+    "es-tarragona": {
+      "name": "Tarragona",
+      "plantedHa": 2752,
+      "qualifiedHl": 5668
+    },
+    "es-terra-alta": {
+      "name": "Terra Alta",
+      "plantedHa": 5620,
+      "qualifiedHl": 59663
+    },
+    "es-tierra-del-vino-de-zamora": {
+      "name": "Tierra del Vino de Zamora",
+      "plantedHa": 585,
+      "qualifiedHl": 635
+    },
+    "es-toro": {
+      "name": "Toro",
+      "plantedHa": 5402,
+      "qualifiedHl": 129039
+    },
+    "es-ucles": {
+      "name": "Uclés",
+      "plantedHa": 1700,
+      "qualifiedHl": 44755
+    },
+    "es-uruena": {
+      "name": "Urueña",
+      "plantedHa": 16,
+      "qualifiedHl": 298
+    },
+    "es-utiel-requena": {
+      "name": "Utiel-Requena",
+      "plantedHa": 32594,
+      "qualifiedHl": 386311
+    },
+    "es-valdeorras": {
+      "name": "Valdeorras",
+      "plantedHa": 1174,
+      "qualifiedHl": 48489
+    },
+    "es-valdepenas": {
+      "name": "Valdepeñas",
+      "plantedHa": 13316,
+      "qualifiedHl": 312652
+    },
+    "es-valencia": {
+      "name": "Valencia",
+      "plantedHa": 7654,
+      "qualifiedHl": 146222
+    },
+    "es-valle-de-guimar": {
+      "name": "Valle de Güímar",
+      "plantedHa": 154,
+      "qualifiedHl": 2285
+    },
+    "es-valle-de-la-orotava": {
+      "name": "Valle de la Orotava",
+      "plantedHa": 184,
+      "qualifiedHl": 1716
+    },
+    "es-vallegarcia": {
+      "name": "Pago Vallegarcía",
+      "plantedHa": 50,
+      "qualifiedHl": 1160
+    },
+    "es-valles-de-benavente": {
+      "name": "Valles de Benavente",
+      "plantedHa": 146,
+      "qualifiedHl": 2544
+    },
+    "es-valtiendas": {
+      "name": "Valtiendas",
+      "plantedHa": 70,
+      "qualifiedHl": 1230
+    },
+    "es-vera-de-estenas": {
+      "name": "Vera de Estenas",
+      "plantedHa": 45,
+      "qualifiedHl": 202
+    },
+    "es-vinos-de-madrid": {
+      "name": "Vinos de Madrid",
+      "plantedHa": 8450,
+      "qualifiedHl": 26861
+    },
+    "es-ycoden-daute-isora": {
+      "name": "Ycoden-Daute-Isora",
+      "plantedHa": 97,
+      "qualifiedHl": 1240
+    }
+  }
+}

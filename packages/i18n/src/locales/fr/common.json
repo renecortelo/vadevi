@@ -474,7 +474,8 @@
     "yoursWines_other": "{{count}} vins",
     "yoursTastings_one": "{{count}} dégustation",
     "yoursTastings_other": "{{count}} dégustations",
-    "yoursAverage": "moyenne {{score}}/100"
+    "yoursAverage": "moyenne {{score}}/100",
+    "glanceSourceMapa": "Ministère espagnol de l'Agriculture (MAPA), campagne {{campaign}}"
   },
   "space": {
     "switchLabel": "Espace actif",

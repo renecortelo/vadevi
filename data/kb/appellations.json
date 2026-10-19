@@ -338,6 +338,16 @@
         8.4,
         5.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 193,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 193",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -523,10 +533,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 898,
-        "quote": "vineyards = {{convert|898|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Abona_(DO)",
-        "year": null
+        "amount": 808,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 808",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 4500,
@@ -5899,10 +5910,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 10379,
-        "quote": "planted = {{convert|10379|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Alicante_(DO)",
-        "year": null
+        "amount": 10628,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 10628",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 147206,
@@ -6492,10 +6504,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 7200,
-        "quote": "planted = {{convert|7200|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Almansa_(DO)",
-        "year": null
+        "amount": 9800,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 9800",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 27401,
@@ -19127,10 +19140,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 95,
-        "quote": "vineyards = {{convert|95|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Txakoli_de_%C3%81lava",
-        "year": null
+        "amount": 94,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 94",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 2523,
@@ -20868,10 +20882,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 330,
-        "quote": "planted = {{convert|330|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Arlanza_(DO)",
-        "year": null
+        "amount": 300,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 300",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 3669,
@@ -21035,10 +21050,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 245,
-        "quote": "planted = {{convert|245|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Arribes_(wine)",
-        "year": null
+        "amount": 301,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 301",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 2579,
@@ -24149,10 +24165,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 47,
-        "quote": "planted = {{convert|47|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Pago_Ayl%C3%A9s",
-        "year": null
+        "amount": 46,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 46",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": null
     }
@@ -36270,10 +36287,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 2854,
-        "quote": "planted = {{convert|2854|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Bierzo_(DO)",
-        "year": null
+        "amount": 2040,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 2040",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 59553,
@@ -36584,10 +36602,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 605,
-        "quote": "vineyards = {{convert|605|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Binissalem_(DOP)",
-        "year": null
+        "amount": 579,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 579",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 15198,
@@ -37534,10 +37553,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 403,
-        "quote": "vineyards = {{convert|403|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Bizkaiko_Txakolina",
-        "year": null
+        "amount": 436,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 436",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 12115,
@@ -38292,6 +38312,16 @@
         10.1,
         7.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 114,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 114",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -43466,10 +43496,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1811,
-        "quote": "planted = {{convert|1811|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Bullas_(DO)",
-        "year": null
+        "amount": 1150,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1150",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 13964,
@@ -46577,10 +46608,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 3200,
-        "quote": "vineyards = {{convert|3200|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Calatayud_(DO)",
-        "year": null
+        "amount": 3606,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 3606",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 100452,
@@ -47138,6 +47170,16 @@
         7.6,
         4.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 13,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 13",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -48414,10 +48456,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 6242,
-        "quote": "vineyards = {{convert|6242|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Campo_de_Borja_(DO)",
-        "year": null
+        "amount": 6065,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 6065",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 133342,
@@ -48795,7 +48838,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 81,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 81",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
       "production": {
         "amount": 114,
         "quote": "producción = 114 hl (2010)",
@@ -49446,10 +49495,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 32,
-        "quote": "vineyards = {{convert|32|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Cangas_(Vino_de_la_Tierra)",
-        "year": null
+        "amount": 60,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 60",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 316,
@@ -51526,10 +51576,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 13768,
-        "quote": "vineyards = {{convert|13768|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Cari%C3%B1ena_DOP",
-        "year": null
+        "amount": 13890,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 13890",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 651373,
@@ -52295,6 +52346,16 @@
         10.2,
         6.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 136,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 136",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -55038,10 +55099,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 42431,
-        "quote": "planted = {{convert|42431|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Catalunya_DOP",
-        "year": null
+        "amount": 36982,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 36982",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 346557,
@@ -55230,7 +55292,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 38099,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 38099",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
       "production": {
         "amount": 167122,
         "quote": "producción = {{esd|1 67 122 hl}} (2010)",
@@ -55372,6 +55440,16 @@
         9.1,
         6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 523,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 523",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -59334,6 +59412,16 @@
         10.2,
         7.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 29,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 29",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -60449,10 +60537,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1948,
-        "quote": "planted = {{convert|1948|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Cigales_(wine)",
-        "year": null
+        "amount": 1908,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1908",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 27157,
@@ -73523,10 +73612,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 4185,
-        "quote": "planted = {{convert|4185|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Conca_de_Barber%C3%A0_(DO)",
-        "year": null
+        "amount": 2655,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 2655",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 6787,
@@ -73715,10 +73805,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 2384,
-        "quote": "vineyards = {{convert|2384|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Condado_de_Huelva",
-        "year": null
+        "amount": 2124,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 2124",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 115497,
@@ -78375,10 +78466,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 4081,
-        "quote": "planted = {{convert|4081|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Costers_del_Segre",
-        "year": null
+        "amount": 4109,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 4109",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 85395,
@@ -99601,6 +99693,16 @@
         8.2,
         5.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 78,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 78",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -99752,7 +99854,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 26,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 26",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
       "production": {
         "amount": 2406,
         "quote": "producción = 2406&nbsp;hl (2010)",
@@ -102117,6 +102225,16 @@
         9.5,
         6.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 49,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 49",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -106278,10 +106396,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 126,
-        "quote": "vineyards = {{convert|126|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/El_Hierro_(DO)",
-        "year": null
+        "amount": 122,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 122",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 752,
@@ -106427,6 +106546,16 @@
         12.1,
         9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 63,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 63",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -106558,10 +106687,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 130,
-        "quote": "planted = {{convert|130|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/El_Vicario",
-        "year": null
+        "amount": 131,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 131",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": null
     }
@@ -107369,10 +107499,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1756,
-        "quote": "planted = {{convert|1756|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Empord%C3%A0_(DO)",
-        "year": null
+        "amount": 1829,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1829",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 70000,
@@ -111453,6 +111584,16 @@
         9.6,
         6.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 39,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 39",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -120332,6 +120473,16 @@
         12.6,
         10.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 446,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 446",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -122082,10 +122233,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 231,
-        "quote": "vineyards = {{convert|231|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Gran_Canaria_(DO)",
-        "year": null
+        "amount": 190,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 190",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 1342,
@@ -122287,10 +122439,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 213,
-        "quote": "vineyards = {{convert|213|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Granada_(wine)",
-        "year": null
+        "amount": 260,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 260",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 2476,
@@ -125067,7 +125220,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 58,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 58",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
       "production": {
         "amount": 2624,
         "quote": "producción = 2624&nbsp;hl (2010)",
@@ -131679,6 +131838,16 @@
         17.1,
         15.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 587,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 587",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -133512,10 +133681,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 18682,
-        "quote": "planted = {{convert|18682|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Jumilla_(DO)",
-        "year": null
+        "amount": 22473,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 22473",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 254973,
@@ -135960,9 +136130,10 @@
     "figures": {
       "planted": {
         "amount": 125,
-        "quote": "vineyards = {{convert|125|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/La_Gomera_(DO)",
-        "year": null
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 125",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 399,
@@ -136242,6 +136413,16 @@
         9.7,
         6.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 75,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 75",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -136563,10 +136744,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 165470,
-        "quote": "planted = {{convert|165470|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/La_Mancha_(DO)",
-        "year": null
+        "amount": 151870,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 151870",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 1347069,
@@ -136767,10 +136949,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 585,
-        "quote": "vineyards = {{convert|585|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/La_Palma_(DO)",
-        "year": null
+        "amount": 461,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 461",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 4092,
@@ -143813,10 +143996,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1849,
-        "quote": "vineyards = {{convert|1849|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Lanzarote_(DO)",
-        "year": null
+        "amount": 1877,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1877",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 8330,
@@ -145009,6 +145193,16 @@
         14.9,
         12
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 17,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 17",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -146121,10 +146315,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1370,
-        "quote": "planted = {{convert|1370|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Tierra_de_Le%C3%B3n_(DO)",
-        "year": null
+        "amount": 1223,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1223",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 13205,
@@ -149478,6 +149673,16 @@
         12.1,
         9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 18,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 18",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -149599,6 +149804,16 @@
         10.1,
         6.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 34,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 34",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -153536,10 +153751,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 6709,
-        "quote": "planted = {{convert|6709|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Manchuela_DO",
-        "year": null
+        "amount": 13431,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 13431",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 17409,
@@ -162151,10 +162367,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 446,
-        "quote": "planted = {{convert|446|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Mond%C3%A9jar_(DO)",
-        "year": null
+        "amount": 358,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 358",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 3353,
@@ -166048,10 +166265,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 566,
-        "quote": "planted = {{convert|566|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Monterrei_(DO)",
-        "year": null
+        "amount": 720,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 720",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 8246,
@@ -166720,10 +166938,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 5025,
-        "quote": "vineyards = {{convert|5025|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Montilla-Moriles",
-        "year": null
+        "amount": 4362,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 4362",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 211311,
@@ -167330,10 +167549,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1844,
-        "quote": "planted = {{convert|1844|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Montsant_DO",
-        "year": null
+        "amount": 1876,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1876",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 27760,
@@ -174450,9 +174670,10 @@
     "figures": {
       "planted": {
         "amount": 5800,
-        "quote": "planted = {{convert|5800|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/M%C3%A9ntrida_DO",
-        "year": null
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 5800",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 31071,
@@ -177034,6 +177255,16 @@
         8.8,
         5.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 9362,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 9362",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -184272,7 +184503,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 58,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 58",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
       "production": {
         "amount": 1039,
         "quote": "producción = 1039 hl (2010)",
@@ -184403,6 +184640,16 @@
         9.1,
         6.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 127,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 127",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -184531,6 +184778,16 @@
         9.1,
         6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 95,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 95",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -193690,10 +193947,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 480,
-        "quote": "planted = {{convert|480|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Pla_de_Bages",
-        "year": null
+        "amount": 481,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 481",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 8000,
@@ -193861,10 +194119,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 439,
-        "quote": "vineyards = {{convert|439|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Pla_i_Llevant_(DO)",
-        "year": null
+        "amount": 516,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 516",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 8854,
@@ -198235,7 +198494,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 15,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 15",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
       "production": {
         "amount": 80,
         "quote": "producción = 80 hl (2010)",
@@ -200026,10 +200291,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 2010,
-        "quote": "planted = {{convert|2010|ha|acres|0}} (2018)",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Priorat_DOQ",
-        "year": "2018"
+        "amount": 2237,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 2237",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 6568,
@@ -209099,10 +209365,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1241,
-        "quote": "planted = {{convert|1241|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Ribeira_Sacra_(DO)",
-        "year": null
+        "amount": 1302,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1302",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 29131,
@@ -209473,10 +209740,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1281,
-        "quote": "planted = {{convert|1281|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Ribeiro_(DO)",
-        "year": null
+        "amount": 1273,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1273",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": null
     }
@@ -209803,10 +210071,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 22040,
-        "quote": "superficieplantée = {{formatnum:22040}} hectares",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Ribera_del_Duero_(DO)",
-        "year": null
+        "amount": 26744,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 26744",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 566665,
@@ -209993,10 +210262,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 35797,
-        "quote": "planted = {{convert|35797|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Ribera_del_Guadiana",
-        "year": null
+        "amount": 41503,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 41503",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 69692,
@@ -210474,10 +210744,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 9000,
-        "quote": "planted = {{convert|9000|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Ribera_del_J%C3%BAcar",
-        "year": null
+        "amount": 6779,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 6779",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 5103,
@@ -211389,10 +211660,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 65326,
-        "quote": "planted = {{convert|65326|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Rioja_DOCa",
-        "year": null
+        "amount": 66986,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 66986",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 3173106,
@@ -217854,6 +218126,16 @@
         8.3,
         5.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 20767,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 20767",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -218395,10 +218677,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 4321,
-        "quote": "planted = {{convert|4321|ha}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/R%C3%ADas_Baixas_DO",
-        "year": null
+        "amount": 4491,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 4491",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 160116,
@@ -233617,6 +233900,16 @@
         8.4,
         5.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 124,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 124",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -236558,10 +236851,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 4700,
-        "quote": "superficieplantée = 4.700 Ha",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Somontano_(DO)",
-        "year": null
+        "amount": 3959,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 3959",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 120078,
@@ -240707,10 +241001,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1017,
-        "quote": "vineyards = {{convert|1017|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Tacoronte-Acentejo",
-        "year": null
+        "amount": 71,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 71",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 8000,
@@ -241451,10 +241746,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 4874,
-        "quote": "vineyards = {{convert|4874|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Tarragona_(DO)",
-        "year": null
+        "amount": 2752,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 2752",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 33504,
@@ -243531,10 +243827,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 6066,
-        "quote": "vineyards = {{convert|6066|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Terra_Alta_(DO)",
-        "year": null
+        "amount": 5620,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 5620",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 99940,
@@ -250512,10 +250809,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 645,
-        "quote": "planted = {{convert|645|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Tierra_del_Vino_de_Zamora_DO",
-        "year": null
+        "amount": 585,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 585",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 553,
@@ -252066,10 +252364,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 5851,
-        "quote": "planted = {{convert|5851|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Toro_(DO)",
-        "year": null
+        "amount": 5402,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 5402",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 98009,
@@ -256283,9 +256582,10 @@
     "figures": {
       "planted": {
         "amount": 1700,
-        "quote": "planted = {{convert|1700|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Ucl%C3%A9s_(DO)",
-        "year": null
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1700",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 11000,
@@ -257544,6 +257844,16 @@
         7.9,
         5.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 16,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 16",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -257723,10 +258033,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 34510,
-        "quote": "planted = {{convert|34510|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Utiel-Requena",
-        "year": null
+        "amount": 32594,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 32594",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 327842,
@@ -261109,10 +261420,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1182,
-        "quote": "planted = 1,182 hectares (2,921 acres)",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Valdeorras_(DO)",
-        "year": null
+        "amount": 1174,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 1174",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 30848,
@@ -261288,10 +261600,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 21832,
-        "quote": "planted = {{convert|21832|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Valdepe%C3%B1as_(DO)",
-        "year": null
+        "amount": 13316,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 13316",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 616017,
@@ -261833,10 +262146,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 13100,
-        "quote": "planted = {{convert|13100|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Valencia_(DO)",
-        "year": null
+        "amount": 7654,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 7654",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 517836,
@@ -263369,6 +263683,16 @@
         18.2,
         16.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 154,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 154",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -263564,6 +263888,16 @@
         18.2,
         16.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 184,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 184",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -264443,6 +264777,16 @@
         9.1,
         6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 50,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 50",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -264584,6 +264928,16 @@
         8.3,
         5.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 146,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 146",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -267011,6 +267365,16 @@
         7.5,
         4.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 70,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 70",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -270036,6 +270400,16 @@
         9.9,
         6.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 45,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 45",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
+      },
+      "production": null
     }
   },
   {
@@ -276511,10 +276885,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 8860,
-        "quote": "planted = {{convert|8860|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Vinos_de_Madrid",
-        "year": null
+        "amount": 8450,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 8450",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 28487,
@@ -281202,10 +281577,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 161,
-        "quote": "vineyards = {{convert|161|ha|acres|0}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Ycoden-Daute-Isora",
-        "year": null
+        "amount": 97,
+        "publisher": "mapa",
+        "quote": "Superficie inscrita al final de campaña (ha): 97",
+        "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
+        "year": "2022/2023"
       },
       "production": {
         "amount": 3633,

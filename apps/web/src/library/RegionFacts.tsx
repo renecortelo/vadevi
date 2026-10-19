@@ -94,14 +94,18 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
       {sources.length === 0 ? null : (
         <p className="section-help">
           {t("library.glanceSource")}{" "}
-          {[...new Set(sources.map((figure) => figure.sourceUrl))].map((url, index) => (
-            <span key={url}>
-              {index === 0 ? "" : " · "}
-              <a className="text-link" href={url} rel="noreferrer" target="_blank">
-                {t("library.summarySource")}
-              </a>
-            </span>
-          ))}
+          {[...new Map(sources.map((figure) => [figure.sourceUrl, figure])).values()].map(
+            (figure, index) => (
+              <span key={figure.sourceUrl}>
+                {index === 0 ? "" : " · "}
+                <a className="text-link" href={figure.sourceUrl} rel="noreferrer" target="_blank">
+                  {figure.publisher === "mapa"
+                    ? t("library.glanceSourceMapa", { campaign: figure.year ?? "" })
+                    : t("library.summarySource")}
+                </a>
+              </span>
+            ),
+          )}
         </p>
       )}
     </section>
