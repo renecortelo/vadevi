@@ -91,6 +91,14 @@
         "quote": "Il vino prodotto presenta una media alcolicità"
       }
     ],
+    "aramon": [
+      {
+        "field": "tannin",
+        "lang": "fr",
+        "value": "low",
+        "quote": "Le vin qu'il donne est peu coloré, léger et peu tannique."
+      }
+    ],
     "arneis": [
       {
         "field": "sweetness",
@@ -159,6 +167,14 @@
         "quote": "Blatina can produce dry red wine"
       }
     ],
+    "blauer-portugieser": [
+      {
+        "field": "tannin",
+        "lang": "de",
+        "value": "low",
+        "quote": "Die Sorte liefert säurearme, milde Rotweine mit vergleichsweise wenig Tannin, welche schnell trinkfertig sind."
+      }
+    ],
     "boal": [
       {
         "field": "sweetness",
@@ -184,6 +200,12 @@
         "words": {
           "herbaceous": "herbáceos"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "value": "high",
+        "quote": "The must is normally high in colorants and tannins"
       }
     ],
     "cabernet-dorsa": [
@@ -462,6 +484,14 @@
         "quote": "Il donne un vin au potentiel alcoolique élevé."
       }
     ],
+    "gamay": [
+      {
+        "field": "tannin",
+        "lang": "fr",
+        "value": "low",
+        "quote": "La vinification de son raisin permet l'élaboration de vins chaleureux, fruités et épicés, assez colorés, mais pauvres en tanins, et peu complexes aromatiquement."
+      }
+    ],
     "garnacha-roja": [
       {
         "field": "sweetness",
@@ -719,6 +749,12 @@
           "spice": "épicés",
           "fruity": "fruités"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "ca",
+        "value": "high",
+        "quote": "El raïm marselan produeix generalment vins aromàtics amb cos, de color fosc i tons porpra, rics en tanins"
       }
     ],
     "mauzac": [
@@ -852,6 +888,12 @@
         "lang": "en",
         "value": "high",
         "quote": "Mourvèdre tends to produce tannic wines that can be high in alcohol."
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "value": "high",
+        "quote": "small thick-skinned berries that are high in both color and flavor phenolics, particularly tannins"
       }
     ],
     "mujuretuli": [
@@ -1428,6 +1470,14 @@
         "quote": "Esta casta origina vinhos de elevado teor alcoólico"
       }
     ],
+    "tinta-amarela": [
+      {
+        "field": "tannin",
+        "lang": "fr",
+        "value": "high",
+        "quote": "La variété présente des tanins abondants et souples"
+      }
+    ],
     "tinta-cao": [
       {
         "field": "alcohol",
@@ -1449,6 +1499,12 @@
           "cherry": "cerise",
           "floral": "floraux"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "fr",
+        "value": "high",
+        "quote": "dans la qualité ferme mais mûre de ses riches tanins"
       }
     ],
     "torrontes": [

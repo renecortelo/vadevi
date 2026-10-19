@@ -4037,6 +4037,12 @@
         "field": "regions",
         "quote": "Its use in the Douro region has been increasing in recent years ... It is the oldest and most widely planted grape variety in the Alentejo region",
         "value": "PT: Alentejo"
+      },
+      {
+        "field": "tannin",
+        "quote": "La variété présente des tanins abondants et souples",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Trincadeira"
       }
     ],
     "id": "tinta-amarela",
@@ -4135,7 +4141,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q477351",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tinta_Amarela"
   },
@@ -8030,6 +8036,11 @@
         "field": "alcohol",
         "quote": "Mourvèdre tends to produce tannic wines that can be high in alcohol.",
         "value": "high"
+      },
+      {
+        "field": "tannin",
+        "quote": "small thick-skinned berries that are high in both color and flavor phenolics, particularly tannins",
+        "value": "high"
       }
     ],
     "id": "mourvedre",
@@ -8145,7 +8156,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q161864",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre"
   },
@@ -8334,6 +8345,11 @@
         "quote": "Ofrece un aroma ligero con tonos herbáceos",
         "value": "herbaceous",
         "sourceUrl": "https://es.wikipedia.org/wiki/Bobal"
+      },
+      {
+        "field": "tannin",
+        "quote": "The must is normally high in colorants and tannins",
+        "value": "high"
       }
     ],
     "id": "bobal",
@@ -8514,7 +8530,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q888380",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bobal"
   },
@@ -17759,6 +17775,12 @@
         "quote": "Gamay (French pronunciation: [ɡamɛ] ) is a purple-colored grape variety used to make red wines, most notably grown in Beaujolais and in the Loire Valley around Tours.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Gamay"
+      },
+      {
+        "field": "tannin",
+        "quote": "La vinification de son raisin permet l'élaboration de vins chaleureux, fruités et épicés, assez colorés, mais pauvres en tanins, et peu complexes aromatiquement.",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gamay"
       }
     ],
     "id": "gamay",
@@ -17832,7 +17854,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q12982",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gamay"
   },
@@ -25508,6 +25530,12 @@
         "field": "regions",
         "quote": "Blauer Portugieser is a red Austrian, Slovenian wine, Croatian wine, Moravian and German wine grape found primarily in the Rheinhessen, Pfalz and wine regions of Lower Austria, Slovenia and Croatia.",
         "value": "CZ: Moravia"
+      },
+      {
+        "field": "tannin",
+        "quote": "Die Sorte liefert säurearme, milde Rotweine mit vergleichsweise wenig Tannin, welche schnell trinkfertig sind.",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Blauer_Portugieser"
       }
     ],
     "id": "blauer-portugieser",
@@ -25651,7 +25679,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q646799",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Blauer_Portugieser"
   },
@@ -36956,6 +36984,12 @@
         "quote": "La vinification de cette variété donne un vin rouge concentré, rustique et charnu aux arômes épicés et fruités, aux tanins prononcés.",
         "value": "fruity",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Marselan"
+      },
+      {
+        "field": "tannin",
+        "quote": "El raïm marselan produeix generalment vins aromàtics amb cos, de color fosc i tons porpra, rics en tanins",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Marselan"
       }
     ],
     "id": "marselan",
@@ -37065,7 +37099,7 @@
     },
     "sweetness": null,
     "synonyms": [],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q833144",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Marselan"
   },
@@ -40630,6 +40664,12 @@
         "field": "regions",
         "quote": "grown primarily in Languedoc-Roussillon in southern France ... Aramon has also been grown in Algeria, Argentina and Chile ... primarily in the Hérault",
         "value": "CL: Chile"
+      },
+      {
+        "field": "tannin",
+        "quote": "Le vin qu'il donne est peu coloré, léger et peu tannique.",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Aramon_(c%C3%A9page)"
       }
     ],
     "id": "aramon",
@@ -40788,7 +40828,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q625777",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aramon_(grape)"
   },
@@ -47570,6 +47610,12 @@
         "quote": "Les vins possèdent des arômes fruités (cerise), floraux (fleurs sauvages) et épicés (poivre)",
         "value": "floral",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_c%C3%A3o"
+      },
+      {
+        "field": "tannin",
+        "quote": "dans la qualité ferme mais mûre de ses riches tanins",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_c%C3%A3o"
       }
     ],
     "id": "tinta-cao",
@@ -47648,7 +47694,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q501534",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tinta_C%C3%A3o"
   },
