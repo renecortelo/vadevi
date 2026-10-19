@@ -11730,6 +11730,10 @@
             "type": "object",
             "nullable": true,
             "properties": {
+              "elevation": {
+                "type": "number",
+                "nullable": true
+              },
               "growingDegreeDays": {
                 "type": "number"
               },
@@ -11768,6 +11772,7 @@
               }
             },
             "required": [
+              "elevation",
               "growingDegreeDays",
               "koppen",
               "meanTemperature",
@@ -17332,6 +17337,15 @@
             },
             "required": false,
             "name": "region",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "maxLength": 120
+            },
+            "required": false,
+            "name": "regionRef",
             "in": "query"
           },
           {

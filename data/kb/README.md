@@ -346,6 +346,10 @@ Every few months, or when a register announces a name:
   CC0 1.0. The card credits it under the climate. WorldClim was not used:
   its terms allow no redistribution without permission.
 
+- **Copernicus DEM GLO-90** (doi:10.5270/ESA-c5d3d65), through
+  Open-Meteo's elevation API: CC BY 4.0, credited to the Copernicus programme
+  and Open-Meteo under the climate (`pnpm kb:fetch-elevation`).
+
 - **27 CFR part 9** (eCFR): a work of the US government, public domain.
 - **UC Davis AVA project** boundaries
   (https://github.com/UCDavisLibrary/ava): CC0 1.0; credited under the map.

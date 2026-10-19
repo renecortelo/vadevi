@@ -466,7 +466,15 @@
       "medium": "Meio-seco",
       "sweet": "Doce"
     },
-    "sweetnessRange": "De {{from}} a {{to}}"
+    "sweetnessRange": "De {{from}} a {{to}}",
+    "climateElevation": "Altitude do ponto",
+    "climateElevationSource": "Altitude: Copernicus DEM GLO-90, via Open-Meteo (CC BY 4.0).",
+    "yoursTitle": "Os teus vinhos daqui",
+    "yoursWines_one": "{{count}} vinho",
+    "yoursWines_other": "{{count}} vinhos",
+    "yoursTastings_one": "{{count}} prova",
+    "yoursTastings_other": "{{count}} provas",
+    "yoursAverage": "média {{score}}/100"
   },
   "space": {
     "switchLabel": "Espaço ativo",

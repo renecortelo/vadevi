@@ -608,6 +608,7 @@ export type ListWinesFilters = {
   principal: FirebasePrincipal;
   query?: string | undefined;
   region?: string | undefined;
+  regionRef?: string | undefined;
   sentiment?: "dislike" | "like" | "neutral" | undefined;
   sort: "name" | "recent" | "score" | "tasted";
   spaceId: string;
@@ -656,6 +657,7 @@ export async function listWines(
           AND (? IS NULL OR wine.identity_status = ?)
           AND (? IS NULL OR wine.normalized_country_code = ?)
           AND (? IS NULL OR wine.normalized_region LIKE ?)
+          AND (? IS NULL OR wine.region_ref = ?)
           AND (? IS NULL OR wine.vintage_year >= ?)
           AND (? IS NULL OR wine.vintage_year <= ?)
           AND (? IS NULL OR EXISTS (
@@ -710,6 +712,8 @@ export async function listWines(
       options.countryCode?.toUpperCase() ?? null,
       region,
       region,
+      options.regionRef ?? null,
+      options.regionRef ?? null,
       options.vintageFrom ?? null,
       options.vintageFrom ?? null,
       options.vintageTo ?? null,

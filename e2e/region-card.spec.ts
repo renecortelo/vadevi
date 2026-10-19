@@ -13,7 +13,7 @@ import { completeOnboarding, signIn } from "./fixtures/sign-in";
  */
 const rioja = (
   JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as {
-    climate: { koppen: string; rainfall: number; winkler: string };
+    climate: { elevation: number; koppen: string; rainfall: number; winkler: string };
     figures: { planted: { amount: number } };
     id: string;
     register: { grapes: unknown[] };
@@ -47,6 +47,7 @@ test("a region card shows its figures and its climate", async ({ page }) => {
   await expect(climate).toContainText(`(${rioja.climate.koppen})`);
   await expect(climate).toContainText(`${spanish.format(rioja.climate.rainfall)} mm`);
   await expect(climate).toContainText(rioja.climate.winkler);
+  await expect(climate).toContainText(`${spanish.format(rioja.climate.elevation)} m`);
   await expect(page.locator(".climograph rect")).toHaveCount(12);
 
   const results = await new AxeBuilder({ page }).include(".library-page").analyze();

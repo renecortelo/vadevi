@@ -28,6 +28,12 @@ has the reasons.
   grape's colour. The drawings are Va de Vi's own, in one line style; most
   aromas take their group's drawing (red fruit, citrus, flowers), so a wheel
   of them will not be a crowd.
+- **A region's height, and your wines from it**: the climate adds the height
+  of the name's point (Copernicus DEM GLO-90, through Open-Meteo; CC BY 4.0),
+  and the card lists your own wines from that name in the Space you are in —
+  how many, how often tasted, their mean score, each linked to its page.
+  Only wines whose region the library knows for certain to be that name
+  count. The wine list takes a new filter, `regionRef`.
 - **Dry or sweet, and alcohol**: a grape's card adds two scales — the
   alcohol its wines typically reach, and how dry or sweet they are, as a
   range where its sources give one (Sémillon's «dry and sweet white wines»

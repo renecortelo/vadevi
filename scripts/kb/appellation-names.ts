@@ -45,7 +45,7 @@ export type RegionEntry = {
    * what they make — Köppen–Geiger class, yearly rain, mean temperature,
    * Winkler's degree days and region.
    */
-  climate?: ClimateSummary & MonthlyClimate;
+  climate?: ClimateSummary & MonthlyClimate & { elevation: number | null };
   /** Planted area (ha) and production (hl), from its article's infobox. */
   figures?: {
     planted: RegionFigureSource | null;

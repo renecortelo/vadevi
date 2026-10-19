@@ -218,6 +218,8 @@ export const LibraryRegionSchema = z
      */
     climate: z
       .object({
+        /** Metres above the sea at the point (Copernicus DEM GLO-90). */
+        elevation: z.number().nullable(),
         /** Winkler's growing degree days over 10 °C. */
         growingDegreeDays: z.number(),
         koppen: z.string(),

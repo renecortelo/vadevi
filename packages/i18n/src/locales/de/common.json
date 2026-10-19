@@ -466,7 +466,15 @@
       "medium": "Halbtrocken",
       "sweet": "Süß"
     },
-    "sweetnessRange": "{{from}} bis {{to}}"
+    "sweetnessRange": "{{from}} bis {{to}}",
+    "climateElevation": "Höhe des Punkts",
+    "climateElevationSource": "Höhe: Copernicus DEM GLO-90, über Open-Meteo (CC BY 4.0).",
+    "yoursTitle": "Deine Weine von hier",
+    "yoursWines_one": "{{count}} Wein",
+    "yoursWines_other": "{{count}} Weine",
+    "yoursTastings_one": "{{count}} Verkostung",
+    "yoursTastings_other": "{{count}} Verkostungen",
+    "yoursAverage": "Schnitt {{score}}/100"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

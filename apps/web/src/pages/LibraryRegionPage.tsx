@@ -8,6 +8,7 @@ import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "../components/MapLink";
 import { AtlasMap } from "../library/AtlasMap";
 import { RegionClimate, RegionGlance } from "../library/RegionFacts";
+import { RegionTastings } from "../library/RegionTastings";
 import { designationKey, inEuRegister, registerSuffix } from "../library/designation";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
@@ -168,6 +169,7 @@ export function LibraryRegionPage() {
 
       <RegionGlance region={region} />
       {region.climate === null ? null : <RegionClimate climate={region.climate} />}
+      <RegionTastings regionId={region.id} />
 
       <section aria-labelledby="region-map" className="settings-card">
         <h2 id="region-map">{t("library.whereTitle")}</h2>

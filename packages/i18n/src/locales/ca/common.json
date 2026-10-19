@@ -466,7 +466,15 @@
       "medium": "Semisec",
       "sweet": "Dolç"
     },
-    "sweetnessRange": "De {{from}} a {{to}}"
+    "sweetnessRange": "De {{from}} a {{to}}",
+    "climateElevation": "Altitud del punt",
+    "climateElevationSource": "Altitud: Copernicus DEM GLO-90, via Open-Meteo (CC BY 4.0).",
+    "yoursTitle": "Els teus vins d'aquí",
+    "yoursWines_one": "{{count}} vi",
+    "yoursWines_other": "{{count}} vins",
+    "yoursTastings_one": "{{count}} tast",
+    "yoursTastings_other": "{{count}} tastos",
+    "yoursAverage": "mitjana {{score}}/100"
   },
   "space": {
     "switchLabel": "Espai actiu",

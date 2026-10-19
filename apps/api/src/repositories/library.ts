@@ -625,6 +625,8 @@ export async function getLibraryRegion(
       climate === null
         ? null
         : {
+            // Loaded before elevations were read: none.
+            elevation: climate.elevation ?? null,
             growingDegreeDays: climate.growingDegreeDays,
             koppen: climate.koppen,
             meanTemperature: climate.meanTemperature,

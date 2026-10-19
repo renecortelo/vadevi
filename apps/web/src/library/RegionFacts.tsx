@@ -206,6 +206,12 @@ export function RegionClimate({ climate }: { climate: NonNullable<LibraryRegion[
           <dt>{t("library.climateMean")}</dt>
           <dd>{number.format(climate.meanTemperature)} °C</dd>
         </div>
+        {climate.elevation === null ? null : (
+          <div>
+            <dt>{t("library.climateElevation")}</dt>
+            <dd>{number.format(climate.elevation)} m</dd>
+          </div>
+        )}
         <div className={climate.winkler === null ? "library-bar library-bar--none" : "library-bar"}>
           <dt>{t("library.climateWinkler")}</dt>
           <dd>
@@ -231,7 +237,10 @@ export function RegionClimate({ climate }: { climate: NonNullable<LibraryRegion[
           <span className="sr-only">: {monthly}</span>
         </figcaption>
       </figure>
-      <p className="section-help">{t("library.climateNote")}</p>
+      <p className="section-help">
+        {t("library.climateNote")}
+        {climate.elevation === null ? null : ` ${t("library.climateElevationSource")}`}
+      </p>
     </section>
   );
 }

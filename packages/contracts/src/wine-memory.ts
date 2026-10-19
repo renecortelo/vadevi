@@ -260,6 +260,8 @@ export const WineMemoryQuerySchema = z
     minScore: z.coerce.number().int().min(0).max(100).optional(),
     query: z.string().trim().max(120).optional(),
     region: z.string().trim().max(160).optional(),
+    /** Only wines whose region is this registered name (the library's id). */
+    regionRef: z.string().trim().max(120).optional(),
     sentiment: z.enum(["dislike", "neutral", "like"]).optional(),
     sort: WineMemorySortSchema.default("recent"),
     tastedFrom: ResourceTimestampSchema.optional(),

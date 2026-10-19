@@ -466,7 +466,15 @@
       "medium": "Demi-sec",
       "sweet": "Doux"
     },
-    "sweetnessRange": "De {{from}} à {{to}}"
+    "sweetnessRange": "De {{from}} à {{to}}",
+    "climateElevation": "Altitude du point",
+    "climateElevationSource": "Altitude : Copernicus DEM GLO-90, via Open-Meteo (CC BY 4.0).",
+    "yoursTitle": "Tes vins d'ici",
+    "yoursWines_one": "{{count}} vin",
+    "yoursWines_other": "{{count}} vins",
+    "yoursTastings_one": "{{count}} dégustation",
+    "yoursTastings_other": "{{count}} dégustations",
+    "yoursAverage": "moyenne {{score}}/100"
   },
   "space": {
     "switchLabel": "Espace actif",

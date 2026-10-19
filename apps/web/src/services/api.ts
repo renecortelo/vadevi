@@ -241,6 +241,7 @@ export type WineMemoryFilters = {
   minScore?: number;
   query?: string;
   region?: string;
+  regionRef?: string;
   sentiment?: string;
   sort?: string;
   tastedFrom?: string;

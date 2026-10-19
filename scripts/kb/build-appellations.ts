@@ -1417,7 +1417,10 @@ console.info(
 // production its article's infobox gives (`pnpm kb:fetch-region-figures`).
 const climates = (
   JSON.parse(readFileSync(resolve("data/kb/region-climate.json"), "utf8")) as {
-    regions: Record<string, MonthlyClimate & { point: [number, number] }>;
+    regions: Record<
+      string,
+      MonthlyClimate & { elevation?: number | null; point: [number, number] }
+    >;
   }
 ).regions;
 const figures = (
@@ -1441,6 +1444,7 @@ for (const entry of entries) {
   ) {
     entry.climate = {
       ...summarizeClimate(climate, entry.latitude),
+      elevation: climate.elevation ?? null,
       pr: climate.pr,
       tas: climate.tas,
     };
