@@ -18,7 +18,9 @@ has the reasons.
   more regions — Lodi, Alexander Valley, Walla Walla Valley, Eden Valley,
   Canberra District among them — show the grapes their English article says
   are grown there today, each with its sentence; history, a single estate
-  and a climate merely suited to a grape are left out (215 regions).
+  and a climate merely suited to a grape are left out; 13 more from their
+  Spanish, French or German article — Chile's Maipo, Itata and Aconcagua,
+  Switzerland's La Côte, Chablais and Dézaley (228 regions).
 
 ## 0.4.0 — 19 October 2026
 

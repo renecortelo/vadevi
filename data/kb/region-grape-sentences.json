@@ -1156,11 +1156,372 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Yarra_Valley_wine_region"
       }
     ],
+    "ch-calamin": [
+      {
+        "grapeId": "chasselas",
+        "quote": "Die Rebfläche ist mit 98 % Chasselas und 2 % Viognier bestockt.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Calamin"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Die Rebfläche ist mit 98 % Chasselas und 2 % Viognier bestockt.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Calamin"
+      }
+    ],
+    "ch-chablais": [
+      {
+        "grapeId": "chasselas",
+        "quote": "Principalement du Chasselas en blanc et du Gamay et du Pinot noir en rouge, mais aussi du Gamaret, Garanoir, Merlot, Sauvignon blanc et Pinot gris.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablais_vaudois"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "Principalement du Chasselas en blanc et du Gamay et du Pinot noir en rouge, mais aussi du Gamaret, Garanoir, Merlot, Sauvignon blanc et Pinot gris.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablais_vaudois"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Principalement du Chasselas en blanc et du Gamay et du Pinot noir en rouge, mais aussi du Gamaret, Garanoir, Merlot, Sauvignon blanc et Pinot gris.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablais_vaudois"
+      },
+      {
+        "grapeId": "gamaret",
+        "quote": "Principalement du Chasselas en blanc et du Gamay et du Pinot noir en rouge, mais aussi du Gamaret, Garanoir, Merlot, Sauvignon blanc et Pinot gris.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablais_vaudois"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Principalement du Chasselas en blanc et du Gamay et du Pinot noir en rouge, mais aussi du Gamaret, Garanoir, Merlot, Sauvignon blanc et Pinot gris.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablais_vaudois"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Principalement du Chasselas en blanc et du Gamay et du Pinot noir en rouge, mais aussi du Gamaret, Garanoir, Merlot, Sauvignon blanc et Pinot gris.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablais_vaudois"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Principalement du Chasselas en blanc et du Gamay et du Pinot noir en rouge, mais aussi du Gamaret, Garanoir, Merlot, Sauvignon blanc et Pinot gris.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Chablais_vaudois"
+      }
+    ],
+    "ch-dezaley": [
+      {
+        "grapeId": "chasselas",
+        "quote": "Le chasselas y est le cépage roi avec près de 90 % des vignes.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/D%C3%A9zaley_grand_cru"
+      }
+    ],
+    "ch-la-cote": [
+      {
+        "grapeId": "chasselas",
+        "quote": "Le chasselas, le pinot noir et le gamay, cépages de tradition dans ce terroir, occupent 90 % de l’encépagement.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_%28AOC%29"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Le chasselas, le pinot noir et le gamay, cépages de tradition dans ce terroir, occupent 90 % de l’encépagement.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_%28AOC%29"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "Le chasselas, le pinot noir et le gamay, cépages de tradition dans ce terroir, occupent 90 % de l’encépagement.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_%28AOC%29"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "D'autres cépages ont été implantés comme le chardonnay, le traminer et l'aligoté .",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_%28AOC%29"
+      },
+      {
+        "grapeId": "aligote",
+        "quote": "D'autres cépages ont été implantés comme le chardonnay, le traminer et l'aligoté .",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/La_C%C3%B4te_%28AOC%29"
+      }
+    ],
     "ch-lavaux": [
       {
         "grapeId": "chasselas",
         "quote": "The main wine grape variety grown here is the Chasselas.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Lavaux"
+      }
+    ],
+    "cl-region-austral": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Las variedades cultivadas en Cautín son Chardonnay y Moscatel de Alejandría, en las comunas de Futrono y La Unión  son las variedades  Chardonnay, Riesling, y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_Austral"
+      },
+      {
+        "grapeId": "muscat-of-alexandria",
+        "quote": "Las variedades cultivadas en Cautín son Chardonnay y Moscatel de Alejandría, en las comunas de Futrono y La Unión  son las variedades  Chardonnay, Riesling, y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_Austral"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Las variedades cultivadas en Cautín son Chardonnay y Moscatel de Alejandría, en las comunas de Futrono y La Unión  son las variedades  Chardonnay, Riesling, y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_Austral"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Las variedades cultivadas en Cautín son Chardonnay y Moscatel de Alejandría, en las comunas de Futrono y La Unión  son las variedades  Chardonnay, Riesling, y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_Austral"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Mientras que el cultivo más austral de una cepa blanca es en la comuna de Cochamó con la variedad Viognier con 0,2 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_Austral"
+      },
+      {
+        "grapeId": "cinsaut",
+        "quote": "Los cultivos de variedades viníferas tintas poseen una superficie de 2.2 ha en Cautín de la variedad Cinsault.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_Austral"
+      }
+    ],
+    "cl-region-de-aconcagua": [
+      {
+        "grapeId": "alicante-bouschet",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "carignan",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "carmenere",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "marselan",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "petit-verdot",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "blauer-portugieser",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Las variedades tintas son 21 variedades distintas: Alicante Bouschet , Cabernet Franc, Cabernet Sauvignon, Carignan, Carménère, Malbec, Garnacha, Merlot, Monastrell, Misión (o país), Marselán, Petit Verdot, Petit Syrah, Portugais bleu, Sangiovese, Syrah, Tempranillo, Tintoreras, Petit Verdot, Zinfandel y Pinot Noir 1.916,64 ha que es la variedad tinta más cultivada en la región.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Aconcagua"
+      }
+    ],
+    "cl-region-de-atacama": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Las variedades blancas que actualmente se cultivan en Atacama son 7:  Chardonnay, Moscatel de Austria, Moscatel de Alejandría, Moscatel rosada (o pastilla), Sauvignon blanc, Viognier y Pedro Jiménez, esta última posee la mayor superficie cultivada con 61,70 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "muscat-of-alexandria",
+        "quote": "Las variedades blancas que actualmente se cultivan en Atacama son 7:  Chardonnay, Moscatel de Austria, Moscatel de Alejandría, Moscatel rosada (o pastilla), Sauvignon blanc, Viognier y Pedro Jiménez, esta última posee la mayor superficie cultivada con 61,70 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Las variedades blancas que actualmente se cultivan en Atacama son 7:  Chardonnay, Moscatel de Austria, Moscatel de Alejandría, Moscatel rosada (o pastilla), Sauvignon blanc, Viognier y Pedro Jiménez, esta última posee la mayor superficie cultivada con 61,70 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Las variedades blancas que actualmente se cultivan en Atacama son 7:  Chardonnay, Moscatel de Austria, Moscatel de Alejandría, Moscatel rosada (o pastilla), Sauvignon blanc, Viognier y Pedro Jiménez, esta última posee la mayor superficie cultivada con 61,70 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "alicante-bouschet",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "carmenere",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "nebbiolo",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Las variedades tintas son 14 variedades distintas: Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Carménère, Malbec, Lacrimae Christi, Merlot, Monastrell, Nebbiolo, Misión (o país), Sangiovese, Syrah, Tintoreras y Pinot Noir, esta última con 2,35 ha de cultivo.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_de_Atacama"
+      }
+    ],
+    "cl-region-del-sur": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Por su parte, en la provincia de Malleco, hay solo 4 variedades que se cultivan: Chardonnay, Gewürztraminer, Riesling, Moscatel de Alejandría,  y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "Por su parte, en la provincia de Malleco, hay solo 4 variedades que se cultivan: Chardonnay, Gewürztraminer, Riesling, Moscatel de Alejandría,  y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Por su parte, en la provincia de Malleco, hay solo 4 variedades que se cultivan: Chardonnay, Gewürztraminer, Riesling, Moscatel de Alejandría,  y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "muscat-of-alexandria",
+        "quote": "Por su parte, en la provincia de Malleco, hay solo 4 variedades que se cultivan: Chardonnay, Gewürztraminer, Riesling, Moscatel de Alejandría,  y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Por su parte, en la provincia de Malleco, hay solo 4 variedades que se cultivan: Chardonnay, Gewürztraminer, Riesling, Moscatel de Alejandría,  y Sauvignon Blanc.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "carignan",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "carmenere",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "cinsaut",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "petit-verdot",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "pinot-meunier",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "blauer-portugieser",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "La Región de Bio Bio, cuenta con 18 variedades de cepas tintas: Cabernet Franc, Cabernet Sauvignon, Cargadora, Carignan, Carménère, Cinsault, Corinto, Malbec, Lacrimae Christi, Merlot, Petit Verdot, Pinot meunier, Pinot Noir, Portugais bleu, Syrah, Tintoreras, Zinfandel y Misión (país), esta última con 2.559,61 ha.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Regi%C3%B3n_vit%C3%ADcola_del_Sur"
       }
     ],
     "cl-valle-de-casablanca": [
@@ -1295,6 +1656,50 @@
         "grapeId": "syrah",
         "quote": "These conditions contribute to the production of excellent results for varietals like Syrah.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Elqui_Valley_%28wine_region%29"
+      }
+    ],
+    "cl-valle-del-itata": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Los viñedos ocupan una extensión aproximada de 10.800 ha, siendo las variedades más cultivadas las blancas Chardonnay y Moscatel de Alejandría y la tintas País y Cabernet Sauvignon.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Itata"
+      },
+      {
+        "grapeId": "muscat-of-alexandria",
+        "quote": "Los viñedos ocupan una extensión aproximada de 10.800 ha, siendo las variedades más cultivadas las blancas Chardonnay y Moscatel de Alejandría y la tintas País y Cabernet Sauvignon.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Itata"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Los viñedos ocupan una extensión aproximada de 10.800 ha, siendo las variedades más cultivadas las blancas Chardonnay y Moscatel de Alejandría y la tintas País y Cabernet Sauvignon.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Itata"
+      }
+    ],
+    "cl-valle-del-maipo": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "La superficie de viñedos ocupa unas 10.401 ha, dedicadas principalmente a Cabernet Sauvignon , Merlot, Carménère, Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Maipo_%28vino%29"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "La superficie de viñedos ocupa unas 10.401 ha, dedicadas principalmente a Cabernet Sauvignon , Merlot, Carménère, Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Maipo_%28vino%29"
+      },
+      {
+        "grapeId": "carmenere",
+        "quote": "La superficie de viñedos ocupa unas 10.401 ha, dedicadas principalmente a Cabernet Sauvignon , Merlot, Carménère, Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Maipo_%28vino%29"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "La superficie de viñedos ocupa unas 10.401 ha, dedicadas principalmente a Cabernet Sauvignon , Merlot, Carménère, Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Maipo_%28vino%29"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "La superficie de viñedos ocupa unas 10.401 ha, dedicadas principalmente a Cabernet Sauvignon , Merlot, Carménère, Sauvignon Blanc y Chardonnay.",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Valle_del_Maipo_%28vino%29"
       }
     ],
     "cl-valle-del-malleco": [
@@ -1984,6 +2389,28 @@
         "grapeId": "merlot",
         "quote": "Bordeaux varietals are popular with Cabernet Sauvignon and Merlot comprising more than 70% of the grapes grown in the area.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Carmel_Valley_AVA"
+      }
+    ],
+    "us-central-delaware-valley": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Les principaux cépages utilisés sont : Chardonnay, Riesling, Cabernet sauvignon, Pinot noir.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Central_Delaware_Valley"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Les principaux cépages utilisés sont : Chardonnay, Riesling, Cabernet sauvignon, Pinot noir.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Central_Delaware_Valley"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Les principaux cépages utilisés sont : Chardonnay, Riesling, Cabernet sauvignon, Pinot noir.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Central_Delaware_Valley"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Les principaux cépages utilisés sont : Chardonnay, Riesling, Cabernet sauvignon, Pinot noir.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Central_Delaware_Valley"
       }
     ],
     "us-chalk-hill": [
@@ -4130,6 +4557,28 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA"
       }
     ],
+    "us-santa-maria-valley": [
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Das Tal ist für den Anbau der frühreifenden Rebsorten Pinot Noir, Syrah, Chardonnay und Pinot Blanc bekannt, die in diesem eher kühlen Klima gut gedeihen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Santa_Maria_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Das Tal ist für den Anbau der frühreifenden Rebsorten Pinot Noir, Syrah, Chardonnay und Pinot Blanc bekannt, die in diesem eher kühlen Klima gut gedeihen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Santa_Maria_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Das Tal ist für den Anbau der frühreifenden Rebsorten Pinot Noir, Syrah, Chardonnay und Pinot Blanc bekannt, die in diesem eher kühlen Klima gut gedeihen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Santa_Maria_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-blanc",
+        "quote": "Das Tal ist für den Anbau der frühreifenden Rebsorten Pinot Noir, Syrah, Chardonnay und Pinot Blanc bekannt, die in diesem eher kühlen Klima gut gedeihen.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Santa_Maria_Valley_AVA"
+      }
+    ],
     "us-santa-ynez-valley": [
       {
         "grapeId": "chardonnay",
@@ -4558,6 +5007,38 @@
         "grapeId": "sauvignon-blanc",
         "quote": "The first successful commercial vineyard in the Tehachapi area was planted in 2001 by Bob and Patti Souza and consists of six acres (2.4 ha) of Primitivo (Italian variant of Zinfandel) and Sauvignon Blanc vines.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Tehachapi_Mountains_AVA"
+      }
+    ],
+    "us-temecula-valley": [
+      {
+        "grapeId": "zinfandel",
+        "quote": "Neben der typischen Rebsorte Kaliforniens, dem Zinfandel, werden vermehrt die klassischen Sorten Chardonnay, Sauvignon Blanc, Chenin, Riesling und Viognier angebaut.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Temecula_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Neben der typischen Rebsorte Kaliforniens, dem Zinfandel, werden vermehrt die klassischen Sorten Chardonnay, Sauvignon Blanc, Chenin, Riesling und Viognier angebaut.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Temecula_Valley_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Neben der typischen Rebsorte Kaliforniens, dem Zinfandel, werden vermehrt die klassischen Sorten Chardonnay, Sauvignon Blanc, Chenin, Riesling und Viognier angebaut.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Temecula_Valley_AVA"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "Neben der typischen Rebsorte Kaliforniens, dem Zinfandel, werden vermehrt die klassischen Sorten Chardonnay, Sauvignon Blanc, Chenin, Riesling und Viognier angebaut.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Temecula_Valley_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Neben der typischen Rebsorte Kaliforniens, dem Zinfandel, werden vermehrt die klassischen Sorten Chardonnay, Sauvignon Blanc, Chenin, Riesling und Viognier angebaut.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Temecula_Valley_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Neben der typischen Rebsorte Kaliforniens, dem Zinfandel, werden vermehrt die klassischen Sorten Chardonnay, Sauvignon Blanc, Chenin, Riesling und Viognier angebaut.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Temecula_Valley_AVA"
       }
     ],
     "us-texas-davis-mountains": [
