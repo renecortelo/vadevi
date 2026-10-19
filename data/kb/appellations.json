@@ -85911,6 +85911,16 @@
         "grapeId": "marsanne",
         "quote": "Most commonly found in the Northern Rhône region... It is a principal component of the white wines from the Hermitage, Crozes-Hermitage and Saint-Joseph AOCs... In the Saint-Péray AOC... In Australia, the grape was first planted in Victoria... In Switzerland, Marsanne is grown in Valais... In British Columbia and Washington State... In California...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Marsanne"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Most of the wines produced here are red wines made from the Syrah grape, sometimes blended with small quantities of white Roussanne or Marsanne grapes.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Crozes-Hermitage_AOC"
+      },
+      {
+        "grapeId": "roussanne",
+        "quote": "Most of the wines produced here are red wines made from the Syrah grape, sometimes blended with small quantities of white Roussanne or Marsanne grapes.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Crozes-Hermitage_AOC"
       }
     ],
     "id": "fr-crozes-hermitage",
@@ -213288,6 +213298,11 @@
         "grapeId": "muscat-blanc-a-petits-grains",
         "quote": "Muscat de Beaumes-de-Venise, Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval, Muscat de Saint-Jean-de-Minervois, Muscat de Rivesaltes et Muscat du Cap-Corse. Outre le Muscat d'Alsace",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_blanc_%C3%A0_petits_grains"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "Predominen els vins muts negres a base principalment de garnatxa.",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Vi_de_Ribesaltes"
       }
     ],
     "id": "fr-rivesaltes",
@@ -328190,6 +328205,26 @@
         "grapeId": "arneis",
         "quote": "Arneis is found primarily in the Italian wine region of Piedmont ... Outside of Piedmont, limited plantings of the grape can be found in Liguria and on the Italian island of Sardinia. In the United States, Arneis is mostly found in California ... Sonoma County and the Oregon ... Willamette Valley. Other American Viticultural Areas ... Mendocino, Russian River Valley, Paicines and Santa Ynez Valley AVAs. It is also being grown in Willcox, Arizona. ... Australian wine regions of Tasmania, Victoria and New South Wales ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Arneis"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Chardonnay is the most planted grape variety in the cooler, western portion of the valley while Rhône varieties thrive in the eastern locales.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Ynez_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Im wärmeren Osten werden hingegen spätreifende Rebsorten der Rhône wie Syrah, Grenache und Roussanne eingesetzt.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Santa_Ynez_Valley_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "Im wärmeren Osten werden hingegen spätreifende Rebsorten der Rhône wie Syrah, Grenache und Roussanne eingesetzt.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Santa_Ynez_Valley_AVA"
+      },
+      {
+        "grapeId": "roussanne",
+        "quote": "Im wärmeren Osten werden hingegen spätreifende Rebsorten der Rhône wie Syrah, Grenache und Roussanne eingesetzt.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Santa_Ynez_Valley_AVA"
       }
     ],
     "id": "us-santa-ynez-valley",
@@ -329112,6 +329147,21 @@
         "grapeId": "fiano",
         "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
         "sourceUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Angebaut werden überwiegend die Rebsorten Zinfandel, Cabernet Sauvignon und Merlot.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/El_Dorado_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Angebaut werden überwiegend die Rebsorten Zinfandel, Cabernet Sauvignon und Merlot.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/El_Dorado_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Angebaut werden überwiegend die Rebsorten Zinfandel, Cabernet Sauvignon und Merlot.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/El_Dorado_AVA"
       }
     ],
     "id": "us-el-dorado",
@@ -329790,6 +329840,16 @@
         "grapeId": "arneis",
         "quote": "Arneis is found primarily in the Italian wine region of Piedmont ... Outside of Piedmont, limited plantings of the grape can be found in Liguria and on the Italian island of Sardinia. In the United States, Arneis is mostly found in California ... Sonoma County and the Oregon ... Willamette Valley. Other American Viticultural Areas ... Mendocino, Russian River Valley, Paicines and Santa Ynez Valley AVAs. It is also being grown in Willcox, Arizona. ... Australian wine regions of Tasmania, Victoria and New South Wales ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Arneis"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The area is known for its success with cool climate varietals, notably Pinot Noir and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Russian_River_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The area is known for its success with cool climate varietals, notably Pinot Noir and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Russian_River_Valley_AVA"
       }
     ],
     "id": "us-russian-river-valley",
@@ -330175,6 +330235,36 @@
         "grapeId": "concord",
         "quote": "The major growing areas are the Finger Lakes District of New York, the Lake Erie Viticultural Area, areas around Lake Ontario, Southwestern Michigan, and the Yakima Valley in Washington",
         "sourceUrl": "https://en.wikipedia.org/wiki/Concord_grape"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The most widely planted varietals in the area are Chardonnay, Riesling, Merlot, Cabernet Sauvignon, Pinot gris, and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yakima_Valley_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The most widely planted varietals in the area are Chardonnay, Riesling, Merlot, Cabernet Sauvignon, Pinot gris, and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yakima_Valley_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The most widely planted varietals in the area are Chardonnay, Riesling, Merlot, Cabernet Sauvignon, Pinot gris, and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yakima_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The most widely planted varietals in the area are Chardonnay, Riesling, Merlot, Cabernet Sauvignon, Pinot gris, and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yakima_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The most widely planted varietals in the area are Chardonnay, Riesling, Merlot, Cabernet Sauvignon, Pinot gris, and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yakima_Valley_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The most widely planted varietals in the area are Chardonnay, Riesling, Merlot, Cabernet Sauvignon, Pinot gris, and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yakima_Valley_AVA"
       }
     ],
     "id": "us-yakima-valley",
@@ -332791,6 +332881,36 @@
         "grapeId": "lagrein",
         "quote": "Cultivation of Lagrein in South Tyrol ...; ... in Australia ...; ... in the Central Coast of California ...; ... in the Umpqua Valley AVA ...; ... in the Willamette Valley ...; ... in the Similkameen Valley in British Columbia ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Lagrein"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Grapes produced in the area include Pinot Noir, Pinot Gris, Tempranillo, Cabernet Sauvignon, Chardonnay, Riesling and more.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Grapes produced in the area include Pinot Noir, Pinot Gris, Tempranillo, Cabernet Sauvignon, Chardonnay, Riesling and more.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "Grapes produced in the area include Pinot Noir, Pinot Gris, Tempranillo, Cabernet Sauvignon, Chardonnay, Riesling and more.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Grapes produced in the area include Pinot Noir, Pinot Gris, Tempranillo, Cabernet Sauvignon, Chardonnay, Riesling and more.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Grapes produced in the area include Pinot Noir, Pinot Gris, Tempranillo, Cabernet Sauvignon, Chardonnay, Riesling and more.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Grapes produced in the area include Pinot Noir, Pinot Gris, Tempranillo, Cabernet Sauvignon, Chardonnay, Riesling and more.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Umpqua_Valley_AVA"
       }
     ],
     "id": "us-umpqua-valley",
@@ -332919,6 +333039,31 @@
         "grapeId": "gouais-blanc",
         "quote": "Gouais blanc has continued to be commercially grown at several vineyards in Switzerland ... in the Van Duzer Corridor AVA of Oregon's Willamette Valley ... Gouais has also been grown for over 100 years by Chambers Rosewood Winery in Rutherglen, Australia.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Gouais_blanc"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem Pinot noir, Pinot gris, Chardonnay, Riesling und Cabernet Sauvignon.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Willamette_Valley_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem Pinot noir, Pinot gris, Chardonnay, Riesling und Cabernet Sauvignon.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Willamette_Valley_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem Pinot noir, Pinot gris, Chardonnay, Riesling und Cabernet Sauvignon.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Willamette_Valley_AVA"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem Pinot noir, Pinot gris, Chardonnay, Riesling und Cabernet Sauvignon.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Willamette_Valley_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Angebaut werden unter anderen Rebsorten vor allem Pinot noir, Pinot gris, Chardonnay, Riesling und Cabernet Sauvignon.",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Willamette_Valley_AVA"
       }
     ],
     "id": "us-willamette-valley",
@@ -333295,6 +333440,31 @@
         "grapeId": "arneis",
         "quote": "Arneis is found primarily in the Italian wine region of Piedmont ... Outside of Piedmont, limited plantings of the grape can be found in Liguria and on the Italian island of Sardinia. In the United States, Arneis is mostly found in California ... Sonoma County and the Oregon ... Willamette Valley. Other American Viticultural Areas ... Mendocino, Russian River Valley, Paicines and Santa Ynez Valley AVAs. It is also being grown in Willcox, Arizona. ... Australian wine regions of Tasmania, Victoria and New South Wales ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Arneis"
+      },
+      {
+        "grapeId": "carignan",
+        "quote": "The \"Mendocino\" name is synonymous with excellent wines, i.e., Carignan, Charbono, Grenache, Petite Sirah, Syrah and Zinfandel, that are sourced from the Mediterranean climate grapes cultivated in the area which for many years has been known as the \"Mendocino\" vintage.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "The \"Mendocino\" name is synonymous with excellent wines, i.e., Carignan, Charbono, Grenache, Petite Sirah, Syrah and Zinfandel, that are sourced from the Mediterranean climate grapes cultivated in the area which for many years has been known as the \"Mendocino\" vintage.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_AVA"
+      },
+      {
+        "grapeId": "durif",
+        "quote": "The \"Mendocino\" name is synonymous with excellent wines, i.e., Carignan, Charbono, Grenache, Petite Sirah, Syrah and Zinfandel, that are sourced from the Mediterranean climate grapes cultivated in the area which for many years has been known as the \"Mendocino\" vintage.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The \"Mendocino\" name is synonymous with excellent wines, i.e., Carignan, Charbono, Grenache, Petite Sirah, Syrah and Zinfandel, that are sourced from the Mediterranean climate grapes cultivated in the area which for many years has been known as the \"Mendocino\" vintage.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "The \"Mendocino\" name is synonymous with excellent wines, i.e., Carignan, Charbono, Grenache, Petite Sirah, Syrah and Zinfandel, that are sourced from the Mediterranean climate grapes cultivated in the area which for many years has been known as the \"Mendocino\" vintage.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendocino_AVA"
       }
     ],
     "id": "us-mendocino",
@@ -342751,6 +342921,31 @@
         "grapeId": "piquepoul",
         "quote": "grown primarily in the Rhone Valley and Languedoc regions of France as well as Catalonia, Spain ... in the Willcox AVA of southern Arizona ... Red Mountain AVA of eastern Washington State ... Piquepoul blanc is being grown in Sonoma, California ... Texas Hill Country AVA ... In Australia, Piquepoul blanc was first planted in 2013",
         "sourceUrl": "https://en.wikipedia.org/wiki/Piquepoul"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "As of 2025, there is more than 2,382 acres (964 ha) being cultivated with primarily red varietals including Cabernet Sauvignon, Merlot, Sangiovese, Cabernet Franc and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Red_Mountain_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "As of 2025, there is more than 2,382 acres (964 ha) being cultivated with primarily red varietals including Cabernet Sauvignon, Merlot, Sangiovese, Cabernet Franc and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Red_Mountain_AVA"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "As of 2025, there is more than 2,382 acres (964 ha) being cultivated with primarily red varietals including Cabernet Sauvignon, Merlot, Sangiovese, Cabernet Franc and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Red_Mountain_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "As of 2025, there is more than 2,382 acres (964 ha) being cultivated with primarily red varietals including Cabernet Sauvignon, Merlot, Sangiovese, Cabernet Franc and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Red_Mountain_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "As of 2025, there is more than 2,382 acres (964 ha) being cultivated with primarily red varietals including Cabernet Sauvignon, Merlot, Sangiovese, Cabernet Franc and Syrah.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Red_Mountain_AVA"
       }
     ],
     "id": "us-red-mountain",
@@ -359122,6 +359317,16 @@
         "grapeId": "zweigelt",
         "quote": "Widely planted in Austria, Zweigelt vines have made inroads in the Canadian wine regions of Ontario's Niagara Peninsula and of British Columbia, with limited plantings in Hungary, Australia and New Zealand. In the Czech Republic it is known as Zweigeltrebe ... It grows in most of the wine regions in Slovakia. As of 2010, newly established Belgian and Polish vineyards have also started to plant Zweigelt. As of 2014, Washington state has several small plantings ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "New Zealand is best known for its Marlborough Sauvignon Blanc, and more recently for premium cool-climate Pinot Noir from Marlborough, Martinborough, Central Otago and the limestone-rich Waitaki Valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/New_Zealand_wine"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "New Zealand is best known for its Marlborough Sauvignon Blanc, and more recently for premium cool-climate Pinot Noir from Marlborough, Martinborough, Central Otago and the limestone-rich Waitaki Valley.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/New_Zealand_wine"
       }
     ],
     "id": "nz-new-zealand",
@@ -386944,6 +387149,21 @@
         "grapeId": "marselan",
         "quote": "mostly in the Languedoc wine region ... in the Northern Coast of California ... planted in Spain ... in the Catalonia region ... in the Penedès, Terra Alta and Valencia regions ... blended ... in the Vaud canton ... North Coast region ... Benton City, Washington ... Willcox, Arizona ... Mendoza wine region ... China ... Hebei province ... Shandong vineyard",
         "sourceUrl": "https://en.wikipedia.org/wiki/Marselan"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The pink-skinned grapes of Criolla Grande and Cereza account for more than a quarter of all plantings but Malbec is the region's most important planting, followed closely by Cabernet Sauvignon, Tempranillo and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendoza_wine"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "The pink-skinned grapes of Criolla Grande and Cereza account for more than a quarter of all plantings but Malbec is the region's most important planting, followed closely by Cabernet Sauvignon, Tempranillo and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendoza_wine"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The pink-skinned grapes of Criolla Grande and Cereza account for more than a quarter of all plantings but Malbec is the region's most important planting, followed closely by Cabernet Sauvignon, Tempranillo and Chardonnay.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mendoza_wine"
       }
     ],
     "id": "ar-mendoza",
@@ -409316,6 +409536,46 @@
         "grapeId": "clairette-blanche",
         "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Clairette_blanche"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The major varieties are predominantly Shiraz, Cabernet Sauvignon, Chardonnay, Merlot, Sémillon, Pinot noir, Riesling, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Australian_wine"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The major varieties are predominantly Shiraz, Cabernet Sauvignon, Chardonnay, Merlot, Sémillon, Pinot noir, Riesling, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Australian_wine"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The major varieties are predominantly Shiraz, Cabernet Sauvignon, Chardonnay, Merlot, Sémillon, Pinot noir, Riesling, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Australian_wine"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The major varieties are predominantly Shiraz, Cabernet Sauvignon, Chardonnay, Merlot, Sémillon, Pinot noir, Riesling, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Australian_wine"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "The major varieties are predominantly Shiraz, Cabernet Sauvignon, Chardonnay, Merlot, Sémillon, Pinot noir, Riesling, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Australian_wine"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The major varieties are predominantly Shiraz, Cabernet Sauvignon, Chardonnay, Merlot, Sémillon, Pinot noir, Riesling, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Australian_wine"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The major varieties are predominantly Shiraz, Cabernet Sauvignon, Chardonnay, Merlot, Sémillon, Pinot noir, Riesling, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Australian_wine"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The major varieties are predominantly Shiraz, Cabernet Sauvignon, Chardonnay, Merlot, Sémillon, Pinot noir, Riesling, and Sauvignon blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Australian_wine"
       }
     ],
     "id": "au-australia",
@@ -409810,6 +410070,36 @@
         "grapeId": "muscadelle",
         "quote": "In France, it is a minor constituent in the dry and sweet wines of Bordeaux, such as Sauternes ... Some sweet wines from Monbazillac, on the other hand, can have a higher proportion of Muscadelle ... Those made in the Rutherglen region generally receive considerable aging in hot cellars ... A few other Australian wine regions, including the Barossa Valley, make similar wines.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Muscadelle"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Other grape varieties grown in the Barossa Valley include Grenache, Mourvedre, Cabernet Sauvignon, Riesling, Chardonnay and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Barossa_Valley_wine_region"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "Other grape varieties grown in the Barossa Valley include Grenache, Mourvedre, Cabernet Sauvignon, Riesling, Chardonnay and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Barossa_Valley_wine_region"
+      },
+      {
+        "grapeId": "mourvedre",
+        "quote": "Other grape varieties grown in the Barossa Valley include Grenache, Mourvedre, Cabernet Sauvignon, Riesling, Chardonnay and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Barossa_Valley_wine_region"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Other grape varieties grown in the Barossa Valley include Grenache, Mourvedre, Cabernet Sauvignon, Riesling, Chardonnay and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Barossa_Valley_wine_region"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Other grape varieties grown in the Barossa Valley include Grenache, Mourvedre, Cabernet Sauvignon, Riesling, Chardonnay and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Barossa_Valley_wine_region"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "Other grape varieties grown in the Barossa Valley include Grenache, Mourvedre, Cabernet Sauvignon, Riesling, Chardonnay and Semillon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Barossa_Valley_wine_region"
       }
     ],
     "id": "au-barossa-valley",
@@ -412724,6 +413014,11 @@
         "grapeId": "fiano",
         "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
         "sourceUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The Clare Valley wine region is one of Australia's oldest wine regions, best known for Riesling wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Clare_Valley_wine_region"
       }
     ],
     "id": "au-clare-valley",
@@ -413860,6 +414155,21 @@
         "grapeId": "aleatico",
         "quote": "the cult wine Aleatico di Portoferraio made in Elba. In Chile is known as Red Moscatel. The grape has also been cultivated at Mudgee in New South Wales and California ... Aleatico is most commonly found in Italy, Tuscany (primarily in Elba), Lazio, Umbria, Piedmont, Apulia ... Aleatico is found around Lake Bolsena",
         "sourceUrl": "https://en.wikipedia.org/wiki/Aleatico"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Mudgee grows predominantly red wine varieties, especially Shiraz, Cabernet Sauvignon and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mudgee_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Mudgee grows predominantly red wine varieties, especially Shiraz, Cabernet Sauvignon and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mudgee_wine_region"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Mudgee grows predominantly red wine varieties, especially Shiraz, Cabernet Sauvignon and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mudgee_wine_region"
       }
     ],
     "id": "au-mudgee",
@@ -414090,6 +414400,26 @@
         "grapeId": "verdelho",
         "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Verdelho"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "As well as Hunter Valley Sémillon, the region produces wine from a variety of grapes including Shiraz, Chardonnay, Cabernet Sauvignon and Verdelho.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hunter_Valley_wine_region"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "As well as Hunter Valley Sémillon, the region produces wine from a variety of grapes including Shiraz, Chardonnay, Cabernet Sauvignon and Verdelho.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hunter_Valley_wine_region"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "As well as Hunter Valley Sémillon, the region produces wine from a variety of grapes including Shiraz, Chardonnay, Cabernet Sauvignon and Verdelho.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hunter_Valley_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "As well as Hunter Valley Sémillon, the region produces wine from a variety of grapes including Shiraz, Chardonnay, Cabernet Sauvignon and Verdelho.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hunter_Valley_wine_region"
       }
     ],
     "id": "au-hunter-valley",
@@ -417557,6 +417887,36 @@
         "grapeId": "pedro-ximenez",
         "quote": "the vast majority of these plantings are found in the Spanish wine region of Montilla-Moriles ... the grape can also be found in the denominación de origen (DO) of Montilla-Moriles, Jerez de la Frontera, Málaga and Sierras de Málaga and Valencia. ... most widely planted in the Portuguese wine region of Evora and Borba in the Alentejo region ... has thrived in Western Australia's Swan Valley ... limited plantings ... Margaret River region ... producers in the Elqui Province ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Pedro_Xim%C3%A9nez"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The principal grape varieties are split 40/60 between red and white; Cabernet Sauvignon, Chardonnay, Sauvignon blanc, Sémillon, Shiraz, Merlot and Chenin Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Margaret_River_%28wine_region%29"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The principal grape varieties are split 40/60 between red and white; Cabernet Sauvignon, Chardonnay, Sauvignon blanc, Sémillon, Shiraz, Merlot and Chenin Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Margaret_River_%28wine_region%29"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "The principal grape varieties are split 40/60 between red and white; Cabernet Sauvignon, Chardonnay, Sauvignon blanc, Sémillon, Shiraz, Merlot and Chenin Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Margaret_River_%28wine_region%29"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The principal grape varieties are split 40/60 between red and white; Cabernet Sauvignon, Chardonnay, Sauvignon blanc, Sémillon, Shiraz, Merlot and Chenin Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Margaret_River_%28wine_region%29"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "The principal grape varieties are split 40/60 between red and white; Cabernet Sauvignon, Chardonnay, Sauvignon blanc, Sémillon, Shiraz, Merlot and Chenin Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Margaret_River_%28wine_region%29"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "The principal grape varieties are split 40/60 between red and white; Cabernet Sauvignon, Chardonnay, Sauvignon blanc, Sémillon, Shiraz, Merlot and Chenin Blanc.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Margaret_River_%28wine_region%29"
       }
     ],
     "id": "au-margaret-river",
@@ -418139,6 +418499,66 @@
         "grapeId": "marsanne",
         "quote": "Most commonly found in the Northern Rhône region... It is a principal component of the white wines from the Hermitage, Crozes-Hermitage and Saint-Joseph AOCs... In the Saint-Péray AOC... In Australia, the grape was first planted in Victoria... In Switzerland, Marsanne is grown in Valais... In British Columbia and Washington State... In California...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Marsanne"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "nebbiolo",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "graciano",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "lagrein",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
+      },
+      {
+        "grapeId": "tannat",
+        "quote": "Single varietal wines produced in Victoria include the Australian mainstays of Shiraz and Chardonnay as well as Cabernet, Merlot and Sauvignon Blanc with increasing plantings in the late 1990s and 2000s of Viognier, Sangiovese, Pinot noir, Pinot Gris and Nebbiolo, and even the more obscure Graciano, Lagrein and Tannat.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Victorian_wine"
       }
     ],
     "id": "au-victoria",
@@ -420547,6 +420967,16 @@
         "grapeId": "pinot-meunier",
         "quote": "It is most prevalent in the cooler, north facing vineyards of the Vallee de la Marne and in the Aisne department. ... It is also widely grown in the Aube region ... found ... in the Loire Valley regions of Touraine and Orleans ... most German plantings ... are found in Württemberg ... most of the state's plantings are located in the Carneros AVA ... in the Grampians region of Victoria ... New Zealand wine industry ... German‑speaking parts of Switzerland ... small quantities in Austria.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Meunier"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The area is dominated by red wine production, particularly Shiraz and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grampians_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The area is dominated by red wine production, particularly Shiraz and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grampians_wine_region"
       }
     ],
     "id": "au-grampians",
@@ -421013,6 +421443,36 @@
         "grapeId": "arneis",
         "quote": "Arneis is found primarily in the Italian wine region of Piedmont ... Outside of Piedmont, limited plantings of the grape can be found in Liguria and on the Italian island of Sardinia. In the United States, Arneis is mostly found in California ... Sonoma County and the Oregon ... Willamette Valley. Other American Viticultural Areas ... Mendocino, Russian River Valley, Paicines and Santa Ynez Valley AVAs. It is also being grown in Willcox, Arizona. ... Australian wine regions of Tasmania, Victoria and New South Wales ...",
         "sourceUrl": "https://en.wikipedia.org/wiki/Arneis"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "The area grows primarily Pinot noir, Chardonnay and Sauvignon blanc,  with some smaller plantings of Riesling, Pinot gris and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tasmanian_wine"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "The area grows primarily Pinot noir, Chardonnay and Sauvignon blanc,  with some smaller plantings of Riesling, Pinot gris and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tasmanian_wine"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "The area grows primarily Pinot noir, Chardonnay and Sauvignon blanc,  with some smaller plantings of Riesling, Pinot gris and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tasmanian_wine"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "The area grows primarily Pinot noir, Chardonnay and Sauvignon blanc,  with some smaller plantings of Riesling, Pinot gris and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tasmanian_wine"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The area grows primarily Pinot noir, Chardonnay and Sauvignon blanc,  with some smaller plantings of Riesling, Pinot gris and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tasmanian_wine"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "The area grows primarily Pinot noir, Chardonnay and Sauvignon blanc,  with some smaller plantings of Riesling, Pinot gris and Cabernet Sauvignon.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tasmanian_wine"
       }
     ],
     "id": "au-tasmania",

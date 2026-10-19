@@ -61,11 +61,11 @@ has the reasons.
   hand bring alcohol to 61 grapes, sweetness to 87 and body to 71; acidity
   reaches 103 grapes and tannin 41. Aromas can be read by hand too, in the
   article's own words: 20 more grapes have them, Pinot noir among them (172).
-- **Grapes for regions beyond the EU**: 122 regions with no register list —
-  American AVAs such as Napa Valley, Australian GIs, Chile's valleys, a few
-  in Argentina and New Zealand — now show the grapes their own article, in
-  any of the library's languages, says are grown there, each with its
-  sentence (493 links).
+- **Grapes for regions beyond the EU**: 143 regions with no register list —
+  American AVAs such as Napa Valley or Willamette Valley, Australia and its
+  GIs, Chile's valleys, Mendoza, New Zealand — now show the grapes their own
+  article, in any of the library's languages, says are grown there, each
+  with its sentence (585 links); 122 of them had no grape at all.
 - **Dry or sweet, and alcohol**: a grape's card adds two scales — the
   alcohol its wines typically reach, and how dry or sweet they are, as a
   range where its sources give one (Sémillon's «dry and sweet white wines»
