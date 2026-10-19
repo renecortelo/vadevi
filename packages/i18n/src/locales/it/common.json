@@ -477,7 +477,8 @@
     "yoursAverage": "media {{score}}/100",
     "glanceSourceMapa": "Ministero spagnolo dell'Agricoltura (MAPA), campagna {{campaign}}",
     "glanceSourceDouane": "Dogane francesi, dichiarazioni di vendemmia {{campaign}} · Licence Ouverte",
-    "glanceSourceInv": "Istituto nazionale di vitivinicoltura argentino (INV), {{campaign}} · CC BY 4.0"
+    "glanceSourceInv": "Istituto nazionale di vitivinicoltura argentino (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceDestatis": "Ufficio federale di statistica tedesco (Destatis), {{campaign}}"
   },
   "space": {
     "switchLabel": "Spazio attivo",

@@ -1549,8 +1549,34 @@ for (const entry of entries) {
   };
   institute += 1;
 }
+// Germany's 13 wine-growing regions: their vineyard area from the Federal
+// Statistical Office (`data/kb/de-anbaugebiete-figures.json`, transcribed by
+// hand; reproduction allowed with the source named), in place of an article's.
+const german = JSON.parse(
+  readFileSync(resolve("data/kb/de-anbaugebiete-figures.json"), "utf8"),
+) as {
+  campaign: string;
+  regions: Record<string, { name: string; plantedHa: number }>;
+  sourceUrl: string;
+};
+let destatis = 0;
+for (const entry of entries) {
+  const area = german.regions[entry.id];
+  if (area === undefined) continue;
+  entry.figures = {
+    planted: {
+      amount: area.plantedHa,
+      publisher: "destatis",
+      quote: `Mit Keltertrauben bestockte Rebfläche, ${area.name}, Insgesamt (ha): ${area.plantedHa}`,
+      sourceUrl: german.sourceUrl,
+      year: german.campaign,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  destatis += 1;
+}
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

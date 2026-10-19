@@ -2070,10 +2070,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 539,
-        "quote": "planted = 539 ha (2010)",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Ahr_(wine_region)",
-        "year": "2010"
+        "amount": 529,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Ahr, Insgesamt (ha): 529",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
       },
       "production": {
         "amount": 43038,
@@ -25920,6 +25921,16 @@
         4.2,
         1.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 15727,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Baden, Insgesamt (ha): 15727",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -115205,6 +115216,16 @@
         3.4,
         0.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6171,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Franken, Insgesamt (ha): 6171",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -130112,6 +130133,16 @@
         5.2,
         2.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 462,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Hessische Bergstraße, Insgesamt (ha): 462",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -162710,6 +162741,16 @@
         5.3,
         2.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 466,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Mittelrhein, Insgesamt (ha): 466",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -170908,6 +170949,16 @@
         4.5,
         1.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 8575,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Mosel, Insgesamt (ha): 8575",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -177440,6 +177491,16 @@
         4.5,
         1.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 4240,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Nahe, Insgesamt (ha): 4240",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -193043,6 +193104,16 @@
         4.7,
         1.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 23698,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Pfalz, Insgesamt (ha): 23698",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -209281,6 +209352,16 @@
         4.2,
         1.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3200,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Rheingau, Insgesamt (ha): 3200",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -210346,6 +210427,16 @@
         4.9,
         1.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 27312,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Rheinhessen, Insgesamt (ha): 27312",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -221033,6 +221124,16 @@
         4.5,
         1.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 847,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Saale-Unstrut, Insgesamt (ha): 847",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -222324,6 +222425,16 @@
         4.1,
         0.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 507,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Sachsen, Insgesamt (ha): 507",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -283092,7 +283203,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 11407,
+        "publisher": "destatis",
+        "quote": "Mit Keltertrauben bestockte Rebfläche, Württemberg, Insgesamt (ha): 11407",
+        "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+        "year": "2022"
+      },
       "production": {
         "amount": 1156532,
         "quote": "producción = 1.156.532 hl <small>''(2001)''</small>",

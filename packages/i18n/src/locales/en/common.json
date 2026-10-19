@@ -477,7 +477,8 @@
     "yoursAverage": "mean score {{score}}/100",
     "glanceSourceMapa": "Spain's Ministry of Agriculture (MAPA), {{campaign}} campaign",
     "glanceSourceDouane": "French customs, {{campaign}} harvest declarations · Licence Ouverte",
-    "glanceSourceInv": "Argentina's National Wine Institute (INV), {{campaign}} · CC BY 4.0"
+    "glanceSourceInv": "Argentina's National Wine Institute (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceDestatis": "Germany's Federal Statistical Office (Destatis), {{campaign}}"
   },
   "space": {
     "switchLabel": "Active Space",

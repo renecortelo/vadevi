@@ -105,7 +105,9 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
                       ? t("library.glanceSourceDouane", { campaign: figure.year ?? "" })
                       : figure.publisher === "inv"
                         ? t("library.glanceSourceInv", { campaign: figure.year ?? "" })
-                        : t("library.summarySource")}
+                        : figure.publisher === "destatis"
+                          ? t("library.glanceSourceDestatis", { campaign: figure.year ?? "" })
+                          : t("library.summarySource")}
                 </a>
               </span>
             ),

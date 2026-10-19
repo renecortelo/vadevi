@@ -477,7 +477,8 @@
     "yoursAverage": "Schnitt {{score}}/100",
     "glanceSourceMapa": "Spanisches Landwirtschaftsministerium (MAPA), Kampagne {{campaign}}",
     "glanceSourceDouane": "Französischer Zoll, Ernteerklärungen {{campaign}} · Licence Ouverte",
-    "glanceSourceInv": "Argentiniens Nationales Weinbauinstitut (INV), {{campaign}} · CC BY 4.0"
+    "glanceSourceInv": "Argentiniens Nationales Weinbauinstitut (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceDestatis": "Statistisches Bundesamt (Destatis), {{campaign}}"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

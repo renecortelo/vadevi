@@ -477,7 +477,8 @@
     "yoursAverage": "media {{score}}/100",
     "glanceSourceMapa": "Ministerio de Agricultura (MAPA), campaña {{campaign}}",
     "glanceSourceDouane": "Aduanas de Francia, declaraciones de cosecha {{campaign}} · Licence Ouverte",
-    "glanceSourceInv": "Instituto Nacional de Vitivinicultura de Argentina (INV), {{campaign}} · CC BY 4.0"
+    "glanceSourceInv": "Instituto Nacional de Vitivinicultura de Argentina (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceDestatis": "Oficina Federal de Estadística de Alemania (Destatis), {{campaign}}"
   },
   "space": {
     "switchLabel": "Espacio activo",

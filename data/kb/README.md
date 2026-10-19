@@ -358,6 +358,11 @@ Every few months, or when a register announces a name:
   Ouverte / Etalab 2.0; each PDO's area and volume are shown with the year
   and a link to the file.
 
+- **Germany's Federal Statistical Office (Destatis)**, «Rebflächen 2022»
+  (`de-anbaugebiete-figures.json`): its publications allow reproduction and
+  distribution, in part too, with the source named; each of the 13
+  Anbaugebiete shows its planted area with the year and a link.
+
 - **Argentina's Instituto Nacional de Vitivinicultura (INV)**, «Informe anual
   de superficie 2024» (`ar-ig-figures.json`): published on argentina.gob.ar
   under Creative Commons Attribution 4.0; each indication named after a

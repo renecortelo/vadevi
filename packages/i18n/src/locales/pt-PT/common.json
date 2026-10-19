@@ -477,7 +477,8 @@
     "yoursAverage": "média {{score}}/100",
     "glanceSourceMapa": "Ministério da Agricultura de Espanha (MAPA), campanha {{campaign}}",
     "glanceSourceDouane": "Alfândegas de França, declarações de colheita {{campaign}} · Licence Ouverte",
-    "glanceSourceInv": "Instituto Nacional de Vitivinicultura da Argentina (INV), {{campaign}} · CC BY 4.0"
+    "glanceSourceInv": "Instituto Nacional de Vitivinicultura da Argentina (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceDestatis": "Serviço Federal de Estatística da Alemanha (Destatis), {{campaign}}"
   },
   "space": {
     "switchLabel": "Espaço ativo",

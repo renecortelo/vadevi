@@ -477,7 +477,8 @@
     "yoursAverage": "moyenne {{score}}/100",
     "glanceSourceMapa": "Ministère espagnol de l'Agriculture (MAPA), campagne {{campaign}}",
     "glanceSourceDouane": "Douanes françaises, déclarations de récolte {{campaign}} · Licence Ouverte",
-    "glanceSourceInv": "Institut national de viticulture d'Argentine (INV), {{campaign}} · CC BY 4.0"
+    "glanceSourceInv": "Institut national de viticulture d'Argentine (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceDestatis": "Office fédéral de la statistique d'Allemagne (Destatis), {{campaign}}"
   },
   "space": {
     "switchLabel": "Espace actif",
