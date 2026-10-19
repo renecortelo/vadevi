@@ -29,9 +29,11 @@ const sprig: Drawing = [
   "M23 31c1-5 4-7 8-7 0 4-3 7-8 7z",
   "M29 23c1-5 4-7 7-7 0 4-3 7-7 7z",
 ];
-const starAnise: Drawing = [
-  "M24 8l4 10 10-4-4 10 10 4-10 4 4 10-10-4-4 10-4-10-10 4 4-10-10-4 10-4-4-10 10 4z",
-  "M24 27a3 3 0 1 0 0-6 3 3 0 0 0 0 6z",
+const mortar: Drawing = [
+  "M8 24h32a16 14 0 0 1-32 0z",
+  "M18 38l-2 4h16l-2-4",
+  "M27 23l11-15a2.5 2.5 0 0 1 4 3L30 24",
+  "M17 30h.1M24 32h.1M31 30h.1",
 ];
 const rocks: Drawing = ["M6 38l6-10 9 2 4 8z", "M22 38l7-13 9 3 4 10z", "M4 38h40"];
 const barrel: Drawing = [
@@ -113,7 +115,7 @@ const byFamily: Record<AromaFamilyId, Drawing> = {
   nut: acorn,
   oak: barrel,
   savoury: hide,
-  spice: starAnise,
+  spice: mortar,
   sweet: honeyJar,
 };
 

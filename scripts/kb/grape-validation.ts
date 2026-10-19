@@ -9,6 +9,9 @@
  */
 
 export type Level = "high" | "low" | "medium";
+/** From dry to sweet: the wines a grape makes, as a range ("dry to sweet"). */
+export type Sweetness = "dry" | "medium" | "sweet";
+export type SweetnessRange = { from: Sweetness; to: Sweetness };
 export type Evidence = {
   field: string;
   quote: string;
@@ -18,6 +21,8 @@ export type Evidence = {
 
 export type GrapeEntry = {
   acidity: Level | null;
+  /** The alcohol its wines typically reach, as its sources state it. */
+  alcohol: Level | null;
   aromas: string[];
   body: Level | null;
   color: "pink" | "red" | "white" | null;
@@ -31,6 +36,8 @@ export type GrapeEntry = {
   regions: { country: string; name: string }[];
   styles: string[];
   summaries: Record<string, { text: string; translated?: boolean; url: string }>;
+  /** Dry, off-dry or sweet — a range where its sources give one. */
+  sweetness: SweetnessRange | null;
   synonyms: { name: string; source: "article" | "wikidata" }[];
   tannin: Level | null;
   wikidataId: string;
@@ -116,11 +123,37 @@ const levelWords: Record<Level, RegExp> = {
     /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moderee?|moderad[ao]|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?)\b|средн|умеренн/,
 };
 
-const fieldWords: Record<"acidity" | "body" | "tannin", RegExp> = {
+const fieldWords: Record<"acidity" | "alcohol" | "body" | "tannin", RegExp> = {
   acidity: /acid|saure|кислот/,
+  alcohol: /alcohol|alkohol|alcool|alcol|graduaci|алкогол/,
   body: /bod(y|ied)|weight|structure|cuerpo|corps|corpo|\bcos\b|korper|struttur|estructur|estrutur|struktur|тел[оа]|телесн|полнотел|структур/,
   tannin: /tann?in|tannic|tanic|tannique|gerbstoff|танин/,
 };
+
+/**
+ * The words a wine's sweetness is stated in: dry, off-dry, sweet — and the
+ * sweet wines named by how they are made (late harvest, noble rot, passito).
+ */
+const sweetnessWords: Record<Sweetness, RegExp> = {
+  dry: /\b(dry|seco|secos|seca|secas|sec|secs|seche|seches|trocken[a-z]*|secco|secchi|secca|secche)\b/,
+  medium:
+    /\b(off-dry|medium[- ](sweet|dry)|semi-?(sweet|dry)|semi-?seco|semi-?dulce|demi-sec|halbtrocken|halbsu(ss|ß)[a-z]*|lieblich|feinherb|abboccato|amabile|meio-seco)\b/,
+  sweet:
+    /\b(sweet|sweeter|dessert|late[- ]harvest|botryti[sz]ed|noble rot|dulce|dulces|doux|douce|liquoreux|liquoreuse|moelleux|su(ss|ß)[a-z]*|edelsu[a-z]*|dolce|dolci|passito|doce|doces|licoroso|vendanges? tardives?|vendimia tardia|podredumbre noble|pourriture noble)\b/,
+};
+
+function toSweetness(value: unknown): SweetnessRange | null {
+  if (typeof value !== "string") return null;
+  const ends = normalize(value)
+    .split(/\s*(?:-|to|–)\s*/)
+    .map((end) => (["dry", "medium", "sweet"].includes(end) ? (end as Sweetness) : null));
+  if (ends.length === 0 || ends.length > 2 || ends.some((end) => end === null)) return null;
+  const order = ["dry", "medium", "sweet"];
+  const sorted = (ends as Sweetness[]).sort(
+    (one, other) => order.indexOf(one) - order.indexOf(other),
+  );
+  return { from: sorted[0]!, to: sorted.at(-1)! };
+}
 
 /** A country's name as English articles still write it, where it has changed. */
 const formerNames: Record<string, string[]> = {
@@ -203,6 +236,7 @@ export function validateExtraction(
   wikidataOrigin: string[],
 ): {
   acidity: Level | null;
+  alcohol: Level | null;
   aromas: string[];
   body: Level | null;
   color: "pink" | "red" | "white" | null;
@@ -213,6 +247,7 @@ export function validateExtraction(
   regions: { country: string; name: string }[];
   rejected: { field: string; reason: string; value: string }[];
   styles: string[];
+  sweetness: SweetnessRange | null;
   synonyms: string[];
   tannin: Level | null;
 } {
@@ -281,7 +316,7 @@ export function validateExtraction(
     } else reject("origin", originField.value, "country not named in the quote");
   }
 
-  const level = (name: "acidity" | "body" | "tannin"): Level | null => {
+  const level = (name: "acidity" | "alcohol" | "body" | "tannin"): Level | null => {
     const entry = quoted(name);
     if (entry === null) return null;
     const value = toLevel(entry.value);
@@ -296,6 +331,27 @@ export function validateExtraction(
   const acidity = level("acidity");
   const tannin = level("tannin");
   const body = level("body");
+  const alcohol = level("alcohol");
+  // Each end of the range in the quote: "both dry and sweet wines".
+  const sweetnessEntry = quoted("sweetness");
+  let sweetness: SweetnessRange | null = null;
+  if (sweetnessEntry !== null) {
+    const range = toSweetness(sweetnessEntry.value);
+    // "süß" ends in a letter a regular expression does not count as one.
+    const quote = normalize(sweetnessEntry.quote).replaceAll("ß", "ss");
+    if (
+      range !== null &&
+      sweetnessWords[range.from].test(quote) &&
+      sweetnessWords[range.to].test(quote)
+    ) {
+      sweetness = range;
+      evidence.push({
+        field: "sweetness",
+        quote: sweetnessEntry.quote,
+        value: range.from === range.to ? range.from : `${range.from}-${range.to}`,
+      });
+    } else reject("sweetness", JSON.stringify(sweetnessEntry.value), "quote does not state it");
+  }
 
   const items = (name: string, check: (item: string, quote: string) => boolean): string[] => {
     const entry = quoted(name);
@@ -338,6 +394,7 @@ export function validateExtraction(
 
   return {
     acidity,
+    alcohol,
     aromas,
     body,
     color,
@@ -348,6 +405,7 @@ export function validateExtraction(
     regions,
     rejected,
     styles,
+    sweetness,
     synonyms,
     tannin,
   };

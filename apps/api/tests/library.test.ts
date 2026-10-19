@@ -46,6 +46,8 @@ const tempranillo = {
     { name: "Tinto Fino", source: "article" as const },
   ],
   tannin: null,
+  alcohol: null,
+  sweetness: null,
   wikidataId: "Q519874",
   wikipediaUrl: "https://en.wikipedia.org/wiki/Tempranillo",
 };

@@ -1,6 +1,7 @@
 [
   {
     "acidity": "medium",
+    "alcohol": null,
     "aromas": [
       "honey",
       "floral",
@@ -195,6 +196,7 @@
         "url": "https://en.wikipedia.org/wiki/Godello"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Agodello",
@@ -259,6 +261,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "floral",
       "citrus"
@@ -455,6 +458,7 @@
         "url": "https://en.wikipedia.org/wiki/Parellada"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Martorella",
@@ -511,6 +515,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "red fruit"
     ],
@@ -661,6 +666,7 @@
         "url": "https://en.wikipedia.org/wiki/Sumoll"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "sumoi",
@@ -709,6 +715,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "citrus",
       "acacia",
@@ -871,6 +878,11 @@
         "field": "regions",
         "quote": "grown primarily in the Rhone Valley and Languedoc regions of France as well as Catalonia, Spain ... in the Willcox AVA of southern Arizona ... Red Mountain AVA of eastern Washington State ... Piquepoul blanc is being grown in Sonoma, California ... Texas Hill Country AVA ... In Australia, Piquepoul blanc was first planted in 2013",
         "value": "AU: Australia"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Its fresh, citrus notes are described as dry, tart, and 'lip-stinging' making it suited for accompanying seafood.",
+        "value": "dry"
       }
     ],
     "id": "piquepoul",
@@ -964,6 +976,10 @@
         "url": "https://en.wikipedia.org/wiki/Piquepoul"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Avello",
@@ -1044,6 +1060,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "fruity",
       "raspberry",
@@ -1131,6 +1148,12 @@
         "quote": "il y fait partie de l'encépagement de vins comme le coteaux-varois-en-provence, le rasteau, le banyuls, le collioure, le maury, et le rivesaltes.",
         "value": "FR: Rasteau",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_gris"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Da der natürliche Zuckergehalt der Beeren hoch ist, wird sie in Frankreich vor allem in Süßweinen des Roussillon",
+        "value": "sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Grenache_Gris"
       }
     ],
     "id": "garnacha-roja",
@@ -1216,6 +1239,10 @@
         "url": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
       }
     },
+    "sweetness": {
+      "from": "sweet",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Lledoner Roig",
@@ -1236,6 +1263,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "black fruit"
     ],
@@ -1396,6 +1424,7 @@
         "url": "https://es.wikipedia.org/wiki/Touriga_nacional"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bical Tinto",
@@ -1448,6 +1477,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "buttercup",
       "toast",
@@ -1556,6 +1586,11 @@
         "quote": "Sémillon (French pronunciation: [semijɔ̃] ) is a golden-skinned grape used to make dry and sweet white wines, mostly in France and Australia.",
         "value": "white",
         "sourceUrl": "https://en.wikipedia.org/wiki/S%C3%A9millon"
+      },
+      {
+        "field": "sweetness",
+        "quote": "is a golden-skinned grape used to make dry and sweet white wines",
+        "value": "dry-sweet"
       }
     ],
     "id": "semillon",
@@ -1612,6 +1647,10 @@
         "url": "https://pt.wikipedia.org/wiki/S%C3%A9millon"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Wyndruif",
@@ -1652,6 +1691,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -1829,6 +1869,7 @@
         "url": "https://en.wikipedia.org/wiki/Glera_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Ghera",
@@ -1873,6 +1914,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -1925,6 +1967,12 @@
         "quote": "Auf Sardinien wurde sie zuerst in der Gegend um Alghero angebaut ... Die Weine finden Eingang in den DOC-Weinen Mandrolisai, Cagliari und Monica di Sardegna.",
         "value": "IT: Cagliari",
         "sourceUrl": "https://de.wikipedia.org/wiki/Monica_Nera"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Con esta uva se hace un vino dulce notable, el Monica di Cagliari. ... El Monica di Sardegna es un vino seco.",
+        "value": "dry-sweet",
+        "sourceUrl": "https://es.wikipedia.org/wiki/M%C3%B3nica_(uva)"
       }
     ],
     "id": "monica",
@@ -2002,6 +2050,10 @@
         "url": "https://es.wikipedia.org/wiki/M%C3%B3nica_(uva)"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Monica Nera",
@@ -2014,6 +2066,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "floral",
       "mineral",
@@ -2226,6 +2279,7 @@
         "url": "https://en.wikipedia.org/wiki/Loureiro_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Branco Redondo",
@@ -2294,6 +2348,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "lemon"
     ],
@@ -2454,6 +2509,7 @@
         "url": "https://en.wikipedia.org/wiki/Treixadura"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Trajadura",
@@ -2498,6 +2554,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -2683,6 +2740,7 @@
         "url": "https://es.wikipedia.org/wiki/Ca%C3%AD%C3%B1o_tinto"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Azedo",
@@ -2755,6 +2813,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "raisin"
     ],
@@ -2944,6 +3003,7 @@
         "url": "https://es.wikipedia.org/wiki/Sous%C3%B3n"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Sousão",
@@ -2980,6 +3040,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -3112,6 +3173,7 @@
         "url": "https://en.wikipedia.org/wiki/Prieto_Picudo"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": "high",
     "wikidataId": "Q7242945",
@@ -3119,6 +3181,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "medium",
     "color": "red",
@@ -3319,6 +3382,7 @@
         "url": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Almuñeco",
@@ -3359,6 +3423,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -3525,6 +3590,7 @@
         "url": "https://en.wikipedia.org/wiki/Baga_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Baga de Louro",
@@ -3593,6 +3659,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -3797,6 +3864,7 @@
         "url": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bastardo Castico",
@@ -3869,6 +3937,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "blackberry",
       "herbs",
@@ -3993,6 +4062,7 @@
         "url": "https://en.wikipedia.org/wiki/Tinta_Amarela"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Trincadeira",
@@ -4029,6 +4099,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "red fruit",
       "cherry",
@@ -4237,6 +4308,7 @@
         "url": "https://es.wikipedia.org/wiki/Alfrocheiro_preto"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Albarín Negro",
@@ -4277,6 +4349,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "red fruit",
       "blackberry",
@@ -4458,6 +4531,7 @@
         "url": "https://es.wikipedia.org/wiki/Touriga_franca"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Albino de Souza",
@@ -4482,6 +4556,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "lemon"
     ],
@@ -4666,6 +4741,7 @@
         "url": "https://es.wikipedia.org/wiki/Arinto"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Arintho",
@@ -4738,6 +4814,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "lemon",
       "apple",
@@ -4866,6 +4943,7 @@
         "url": "https://en.wikipedia.org/wiki/Encruzado"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Salgueirinho",
@@ -4878,6 +4956,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "spice",
       "exotic fruit"
@@ -5033,6 +5112,7 @@
         "url": "https://es.wikipedia.org/wiki/Fern%C3%A3o_pires"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Camarate",
@@ -5077,6 +5157,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "honey",
       "spice",
@@ -5336,6 +5417,7 @@
         "url": "https://es.wikipedia.org/wiki/Fiano_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Apiana",
@@ -5392,6 +5474,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "peach",
       "herbs",
@@ -5545,6 +5628,11 @@
         "quote": "Le Greco est un cépage blanc italien cultivé dans le sud de l'Italie.",
         "value": "white",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Greco_(c%C3%A9page)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "In Calabria, a specific clone of Greco bianco is used to produce the sweet dessert wine Greco di Bianco ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina to produce dry-style wines.",
+        "value": "dry-sweet"
       }
     ],
     "id": "greco",
@@ -5639,6 +5727,10 @@
         "url": "https://en.wikipedia.org/wiki/Greco_(grape)"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Greco bianco",
@@ -5695,6 +5787,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": null,
     "aromas": [
       "lime",
       "greengage"
@@ -5936,6 +6029,7 @@
         "url": "https://es.wikipedia.org/wiki/Cortese"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bianca Fernanda",
@@ -5992,6 +6086,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -6173,6 +6268,7 @@
         "url": "https://es.wikipedia.org/wiki/Mauzac_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Mauzac blanc",
@@ -6233,6 +6329,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "red fruit",
       "plum",
@@ -6301,6 +6398,11 @@
         "field": "regions",
         "quote": "indigenous to the region of Umbria in Central Italy. It is grown primarily in the village of Montefalco and the surrounding area",
         "value": "IT: Montefalco"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Historically Sagrantino was used primarily for making sweet passito wines ... Since the 1970s however, the wines have been made principally in a dry secco style",
+        "value": "dry-sweet"
       }
     ],
     "id": "sagrantino",
@@ -6369,6 +6471,10 @@
         "url": "https://en.wikipedia.org/wiki/Sagrantino"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Sagratino di Montefalco",
@@ -6385,6 +6491,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -6572,6 +6679,7 @@
         "url": "https://en.wikipedia.org/wiki/Listan_Prieto"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Criolla Chica",
@@ -6624,6 +6732,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "medium",
     "aromas": [
       "citrus",
       "ripe fruit",
@@ -6729,6 +6838,11 @@
         "field": "regions",
         "quote": "native to the Basque Country, Spain ... DO Txakoli de Álava\nDO Getariako Txakolina\nDO Bizkaiko Txakolina",
         "value": "ES: Bizkaiko Txakolina"
+      },
+      {
+        "field": "alcohol",
+        "quote": "with notable acidity and a medium to moderate alcohol content",
+        "value": "medium"
       }
     ],
     "id": "hondarrabi-zuri",
@@ -6806,6 +6920,7 @@
         "url": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Hondarribi Zuri",
@@ -6842,6 +6957,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "high",
     "aromas": [
       "citrus",
       "herbaceous",
@@ -6974,6 +7090,11 @@
         "field": "regions",
         "quote": "Grenache blanc is an important variety in the French wine region of the Rhône Valley ... In Spain it is mostly found ... particularly in Navarra and the Terra Alta region ... also widely planted in the Priorat, Alella and Aragon",
         "value": "ES: Aragon"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Its wines are characterized by high alcohol and low acidity",
+        "value": "high"
       }
     ],
     "id": "grenache-blanc",
@@ -7056,6 +7177,7 @@
         "url": "https://en.wikipedia.org/wiki/Grenache_blanc"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Alicante blanca",
@@ -7104,6 +7226,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "grape"
     ],
@@ -7174,6 +7297,11 @@
         "field": "regions",
         "quote": "Muscat of Alexandria is cultivated very heavily on the island of Lemnos in the North Eastern Aegean region of Greece, ... In Italy wine is made from the grape on the island of Pantelleria, and it is grown in Calabria and Sicily ... In Spain, the grape is the sixth most planted white grape variety ... It is an important grape in the wine industries of Australia, Bolivia and South Africa.",
         "value": "ZA: South Africa"
+      },
+      {
+        "field": "sweetness",
+        "quote": "In Portugal, Vinho Moscatel (Moscatel Wine) is a sweet wine widely produced in the Setúbal Peninsula region",
+        "value": "sweet"
       }
     ],
     "id": "muscat-of-alexandria",
@@ -7262,6 +7390,10 @@
         "url": "https://es.wikipedia.org/wiki/Moscatel_de_Alejandr%C3%ADa"
       }
     },
+    "sweetness": {
+      "from": "sweet",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Zibibbo",
@@ -7294,6 +7426,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [],
     "body": "high",
     "color": "red",
@@ -7483,6 +7616,11 @@
         "quote": "Il est répandu dans le vignoble du Languedoc-Roussillon, en Algérie, au Portugal, en Espagne ... Au Sud de l'Alentejo, au Portugal",
         "value": "DZ: Algérie",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Alicante_Bouschet"
+      },
+      {
+        "field": "alcohol",
+        "quote": "to produce wines high in alcohol",
+        "value": "high"
       }
     ],
     "id": "alicante-bouschet",
@@ -7600,6 +7738,7 @@
         "url": "https://en.wikipedia.org/wiki/Alicante_Bouschet"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Alicant de Pays",
@@ -7680,6 +7819,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "gamey",
       "earthy",
@@ -7787,6 +7927,11 @@
         "quote": "Mourvèdre (French pronunciation: [muʁvɛdʁ] ; also known as Mataro or Monastrell) is a red wine grape variety grown in many regions around the world.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Mourvèdre tends to produce tannic wines that can be high in alcohol.",
+        "value": "high"
       }
     ],
     "id": "mourvedre",
@@ -7867,6 +8012,7 @@
         "url": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Monestrell",
@@ -7907,6 +8053,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "low",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -8076,6 +8223,11 @@
         "quote": "The wines produced tend to be fruity, low in alcohol content (around 11°) and high in acidity (5.5 to 6.5 tartaric acid).",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Bobal"
+      },
+      {
+        "field": "alcohol",
+        "quote": "The wines produced tend to be fruity, low in alcohol content",
+        "value": "low"
       }
     ],
     "id": "bobal",
@@ -8181,6 +8333,7 @@
         "url": "https://en.wikipedia.org/wiki/Bobal"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "bobos",
@@ -8261,6 +8414,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "high",
     "aromas": [
       "earthy",
       "vegetal",
@@ -8438,6 +8592,12 @@
         "quote": "Su distribución se localiza principalmente en El Bierzo así como en áreas del sureste de Galicia, donde se centra en las denominaciones de origen de Ribeira Sacra, Valdeorras y Monterrey ... En Asturias se encuentran en notable proporción en los viñedos de la zona de Cangas del Narcea. También hay un pequeño foco de viñas de esta variedad en el Valle de Liébana",
         "value": "ES: Liébana",
         "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "El alto grado alcohólico y la moderada acidez de la Mencía",
+        "value": "high",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
       }
     ],
     "id": "mencia",
@@ -8528,6 +8688,7 @@
         "url": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Fernao Pires Tinta",
@@ -8580,6 +8741,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "dried apple",
       "walnut",
@@ -8695,6 +8857,7 @@
         "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%81%D0%B8_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q12870330",
@@ -8702,6 +8865,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -8868,6 +9032,7 @@
         "url": "https://en.wikipedia.org/wiki/Chinuri"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q31355050",
@@ -8875,6 +9040,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "spice",
       "fruity"
@@ -8998,6 +9164,7 @@
         "url": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Odjaleschi",
@@ -9010,6 +9177,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "pomegranate",
       "raspberry"
@@ -9090,6 +9258,11 @@
         "quote": "Культивируется в области Рача-Лечхуми. Отдельно можно выделить область возле селения Хванчкара, где производится одноименное вино.",
         "value": "GE: Khvanchkara",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%B4%D0%B6%D1%83%D1%80%D0%B5%D1%82%D1%83%D0%BB%D0%B8"
+      },
+      {
+        "field": "sweetness",
+        "quote": "a medium bodied, semi-dry, chewy blend",
+        "value": "medium"
       }
     ],
     "id": "mujuretuli",
@@ -9163,6 +9336,10 @@
         "url": "https://en.wikipedia.org/wiki/Mujuretuli"
       }
     },
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Mudzhuretuli",
@@ -9183,6 +9360,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "medium",
     "aromas": [
       "floral",
       "apricot",
@@ -9260,6 +9438,11 @@
         "quote": "Культивируется главным образом на правом берегу Алазани, особенно в микрозоне вблизи села Карденахи края Кахетия",
         "value": "GE: Alazani Valley",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A5%D0%B8%D1%85%D0%B2%D0%B8"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Khikhvi wine is characterised by its moderate alcohol levels and soft acidity",
+        "value": "medium"
       }
     ],
     "id": "khikhvi",
@@ -9340,6 +9523,7 @@
         "url": "https://en.wikipedia.org/wiki/Khikhvi"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q12871467",
@@ -9347,6 +9531,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -9512,6 +9697,7 @@
         "url": "https://en.wikipedia.org/wiki/Tavkveri"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Takweri",
@@ -9540,6 +9726,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "high",
     "color": "white",
@@ -9650,6 +9837,7 @@
         "url": "https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%83%D0%BB%D0%B8_%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q20572365",
@@ -9657,6 +9845,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -9680,6 +9869,11 @@
         "field": "regions",
         "quote": "grown on the mountain slopes of the Lechkhumi, in western Georgia",
         "value": "GE: Lechkhumi"
+      },
+      {
+        "field": "sweetness",
+        "quote": "is a naturally semi-sweet Georgian wine",
+        "value": "medium"
       }
     ],
     "id": "usakhelauri",
@@ -9744,6 +9938,10 @@
         "url": "https://en.wikipedia.org/wiki/Usakhelouri"
       }
     },
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q7901690",
@@ -9751,6 +9949,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "pomegranate"
     ],
@@ -9817,6 +10016,11 @@
         "quote": "Культивируется возле селения Хванчкара, где производится одноименное вино.",
         "value": "GE: Khvanchkara",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D1%83%D0%BB%D0%B8"
+      },
+      {
+        "field": "sweetness",
+        "quote": "to produce a semi-sweet red wine known as Khvanchkara or as a medium bodied, semi-dry, chewy blend",
+        "value": "medium"
       }
     ],
     "id": "alexandrouli",
@@ -9884,6 +10088,10 @@
         "url": "https://es.wikipedia.org/wiki/Alexandrouli"
       }
     },
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Aleksandrouli Shavi",
@@ -9908,6 +10116,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "citrus",
       "peach",
@@ -10004,6 +10213,7 @@
         "url": "https://en.wikipedia.org/wiki/Koshu_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q975110",
@@ -10011,6 +10221,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "spice"
     ],
@@ -10056,6 +10267,11 @@
         "field": "regions",
         "quote": "grown in the Northeast and Midwest United States",
         "value": "US: Midwest"
+      },
+      {
+        "field": "sweetness",
+        "quote": "The grapes are used to make wines including dry, sweet, icewine",
+        "value": "dry-sweet"
       }
     ],
     "id": "delaware",
@@ -10122,6 +10338,10 @@
         "url": "https://en.wikipedia.org/wiki/Delaware_(grape)"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q730314",
@@ -10129,6 +10349,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "musk"
     ],
@@ -10174,6 +10395,11 @@
         "field": "regions",
         "quote": "The major growing areas are the Finger Lakes District of New York, the Lake Erie Viticultural Area, areas around Lake Ontario, Southwestern Michigan, and the Yakima Valley in Washington",
         "value": "US: Yakima Valley"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Traditionally, most commercially produced Concord wines are sweet, but dry versions are possible",
+        "value": "dry-sweet"
       }
     ],
     "id": "concord",
@@ -10245,6 +10471,10 @@
         "url": "https://en.wikipedia.org/wiki/Concord_grape"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Ripatella",
@@ -10257,6 +10487,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "candied lemon peel",
       "petrol",
@@ -10403,6 +10634,7 @@
         "url": "https://en.wikipedia.org/wiki/Niagara_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q392699",
@@ -10410,6 +10642,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -10490,6 +10723,7 @@
         "url": "https://en.wikipedia.org/wiki/Campbell_Early"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Boscoso",
@@ -10514,6 +10748,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -10627,6 +10862,11 @@
         "field": "regions",
         "quote": "The grape is grown primarily in Gascony, Jurançon and around Madiran ... In Virginia, it is reported to be the second-most planted white wine in the state",
         "value": "US: Virginia"
+      },
+      {
+        "field": "sweetness",
+        "quote": "it is usually incorporated into sweet wines of Jurançon and Pacherenc du Vic-Bilh",
+        "value": "sweet"
       }
     ],
     "id": "petit-manseng",
@@ -10701,6 +10941,10 @@
         "url": "https://en.wikipedia.org/wiki/Petit_Manseng"
       }
     },
+    "sweetness": {
+      "from": "sweet",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Escriberou",
@@ -10769,6 +11013,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -10852,6 +11097,11 @@
         "field": "regions",
         "quote": "most of it in the Lagarina Valley which includes the province of Trento ... It is also found in the nearby province of Bolzano ... In the Veneto and Friuli-Venezia Giulia ... In the area of Colli Euganei in the Veneto ... Moscato Giallo can be found in the Valais region of Switzerland ... The grape is also planted in Croatia",
         "value": "HR: Croatia"
+      },
+      {
+        "field": "sweetness",
+        "quote": "in the still dry, sparkling and passito types",
+        "value": "dry-sweet"
       }
     ],
     "id": "moscato-giallo",
@@ -10941,6 +11191,10 @@
         "url": "https://en.wikipedia.org/wiki/Moscato_Giallo"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Yellow Muscat",
@@ -10969,6 +11223,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "cherry"
     ],
@@ -11120,6 +11375,7 @@
         "url": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q356683",
@@ -11127,6 +11383,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "herbs",
       "nutty"
@@ -11314,6 +11571,7 @@
         "url": "https://en.wikipedia.org/wiki/Grechetto"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Greca del Piemonte",
@@ -11366,6 +11624,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "plum",
       "blackberry"
@@ -11473,6 +11732,7 @@
         "url": "https://en.wikipedia.org/wiki/Pignolo_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q2094692",
@@ -11480,6 +11740,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "plum",
       "almond"
@@ -11663,6 +11924,7 @@
         "url": "https://en.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Peteljcice",
@@ -11707,6 +11969,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -11850,6 +12113,7 @@
         "url": "https://en.wikipedia.org/wiki/Rondo_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Amurensis Walk",
@@ -11866,6 +12130,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "grape"
     ],
@@ -12000,6 +12265,7 @@
         "url": "https://en.wikipedia.org/wiki/Siegerrebe"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Sieger",
@@ -12012,6 +12278,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "cherry",
       "bell pepper"
@@ -12109,6 +12376,7 @@
         "url": "https://en.wikipedia.org/wiki/Cabernet_Dorsa"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q450880",
@@ -12116,6 +12384,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "high",
     "aromas": [
       "blackcurrant",
       "bell pepper",
@@ -12251,6 +12520,11 @@
         "field": "styles",
         "quote": "whether or not to produce a varietal or blended wine ... used to make rosé wine",
         "value": "rose"
+      },
+      {
+        "field": "alcohol",
+        "quote": "The wine's high tannin content, oak influences, and high alcohol levels associated with many regional styles",
+        "value": "high"
       }
     ],
     "id": "cabernet-sauvignon",
@@ -12307,6 +12581,7 @@
         "url": "https://pt.wikipedia.org/wiki/Cabernet_Sauvignon"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Petite Vidure",
@@ -12375,6 +12650,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "medium",
     "color": "red",
@@ -12411,6 +12687,11 @@
         "quote": "Pinot noir is now used to make red wines around the world, as well as Champagne, and sparkling white wines such as the Italian Franciacorta, along with English sparkling wines.",
         "value": "sparkling",
         "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_noir"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Austrian Pinot noir wines are dry red wines similar in character to the red wines of Burgundy",
+        "value": "dry"
       }
     ],
     "id": "pinot-noir",
@@ -12466,6 +12747,10 @@
         "url": "https://pt.wikipedia.org/wiki/Pinot_noir"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "pinot negre",
@@ -12518,6 +12803,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "grass",
       "bell pepper",
@@ -12720,6 +13006,11 @@
         "field": "regions",
         "quote": "Sauvignon blanc is widely cultivated in many of the world's wine regions, including France, Argentina (also in Patagonia) Chile, Romania, Canada, Australia, New Zealand, South Africa, Bulgaria, and the states of Oregon, Washington, and California in the US ... In France, ... Loire Valley ... Bordeaux ... In the early 1990s ... Valparaíso ... In Australia, particularly the Margaret River region ... In the Marlborough wine region ...",
         "value": "CA: Canada"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Dry and sweet white Bordeaux, including oak-aged examples from Pessac-Léognan and Graves",
+        "value": "dry-sweet"
       }
     ],
     "id": "sauvignon-blanc",
@@ -12829,6 +13120,10 @@
         "url": "https://pt.wikipedia.org/wiki/Sauvignon_blanc"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Fumé Blanc",
@@ -12869,6 +13164,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": "high",
     "aromas": [
       "pear",
       "citrus",
@@ -12978,6 +13274,16 @@
         "field": "regions",
         "quote": "The variety originated in the Burgundy wine region of east‑central France, but is now grown wherever wine is produced, from England to New Zealand.",
         "value": "FR: Burgundy"
+      },
+      {
+        "field": "alcohol",
+        "quote": "which translates into high potential alcohol levels",
+        "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "is normally made bone-dry",
+        "value": "dry"
       }
     ],
     "id": "chardonnay",
@@ -13037,6 +13343,10 @@
         "text": "Chardonnay é uma uva da família da Vitis vinifera, a partir da qual é fabricado vinho branco de qualidade. Também é conhecida como aubaine, beaunois, melon blanc e pinot chardonnay.",
         "url": "https://pt.wikipedia.org/wiki/Chardonnay_(uva)"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
     },
     "synonyms": [
       {
@@ -13126,6 +13436,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "apple",
       "citrus",
@@ -13282,6 +13593,7 @@
         "url": "https://pt.wikipedia.org/wiki/Riesling"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Rossling",
@@ -13326,6 +13638,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "plum",
       "blackberry",
@@ -13447,6 +13760,7 @@
         "url": "https://pt.wikipedia.org/wiki/Merlot"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Alicante",
@@ -13703,6 +14017,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "blackberry",
       "mint",
@@ -13716,7 +14031,7 @@
       "coffee",
       "truffle"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -13873,6 +14188,11 @@
         "field": "styles",
         "quote": "Smaller amounts of Syrah are also used in the production of other wine styles, such as rosé wine, fortified wine in Port wine style, and sparkling red wine... Syrah is used as a single varietal or as a blend.",
         "value": "blending"
+      },
+      {
+        "field": "body",
+        "quote": "Wines made from Syrah are often powerfully flavoured and full-bodied.",
+        "value": "high"
       }
     ],
     "id": "syrah",
@@ -13931,6 +14251,7 @@
         "url": "https://pt.wikipedia.org/wiki/Syrah"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Antourenein noir",
@@ -14007,6 +14328,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "high",
     "aromas": [
       "melon",
       "mango",
@@ -14104,6 +14426,11 @@
         "field": "styles",
         "quote": "late harvest wines ... single-variety rose wine ... often blended with Pinot Noir",
         "value": "blending"
+      },
+      {
+        "field": "alcohol",
+        "quote": "tend to have moderate to low acidity, higher alcohol levels",
+        "value": "high"
       }
     ],
     "id": "pinot-gris",
@@ -14164,6 +14491,7 @@
         "url": "https://es.wikipedia.org/wiki/Pinot_gris"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Ruländer",
@@ -14196,6 +14524,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "rose",
       "lychee"
@@ -14294,6 +14623,12 @@
         "quote": "Il peut être vinifié en vin blanc sec ou moelleux, parfois très sucré en vendange tardive ou en sélection de grains nobles.",
         "value": "still",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Il peut être vinifié en vin blanc sec ou moelleux",
+        "value": "dry-sweet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
       }
     ],
     "id": "gewurztraminer",
@@ -14380,6 +14715,10 @@
         "url": "https://pt.wikipedia.org/wiki/Gew%C3%BCrztraminer"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Traminer aromatico",
@@ -14420,6 +14759,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "black pepper",
       "tobacco",
@@ -14667,6 +15007,7 @@
         "url": "https://pt.wikipedia.org/wiki/Cabernet_Franc"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bouchy",
@@ -14691,6 +15032,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "raspberry",
       "blackberry",
@@ -14800,6 +15142,11 @@
         "field": "regions",
         "quote": "Zinfandel is grown across the continental United States, although California grows the largest proportion. ... Most Primitivo is grown in Apulia ... The ancient variety Kratošija is present ... in all the viticultural regions of Montenegro",
         "value": "ME: Montenegro"
+      },
+      {
+        "field": "alcohol",
+        "quote": "The grape's high sugar content can be fermented into levels of alcohol exceeding 15 percent.",
+        "value": "high"
       }
     ],
     "id": "zinfandel",
@@ -14871,6 +15218,7 @@
         "url": "https://es.wikipedia.org/wiki/Zinfandel"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Primitivo",
@@ -14911,6 +15259,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "high",
     "aromas": [
       "raspberry",
       "strawberry",
@@ -14971,6 +15320,11 @@
         "quote": "Grenache (, pronounced [ɡʁənaʃ] ) or Garnacha (pronounced [ɡaɾˈnatʃa]) is one of the most widely planted red wine grape varieties in the world.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Grenache"
+      },
+      {
+        "field": "alcohol",
+        "quote": "produces wine with a relatively high alcohol content",
+        "value": "high"
       }
     ],
     "id": "grenache",
@@ -15025,6 +15379,7 @@
         "url": "https://pt.wikipedia.org/wiki/Grenache"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "garnacha",
@@ -15077,6 +15432,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "red berry",
       "plum",
@@ -15383,6 +15739,7 @@
         "url": "https://pt.wikipedia.org/wiki/Aragonez"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Ull de Llebre",
@@ -15447,6 +15804,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "quince",
       "apple",
@@ -15552,6 +15910,11 @@
         "quote": "'White Chenin'; known also as Pineau de la Loire among other names) is a white wine grape variety from the Loire Valley of France.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Chenin_blanc"
+      },
+      {
+        "field": "sweetness",
+        "quote": "a popular expression of Chenin as a dry wine ... producing an intense, viscous dessert wine",
+        "value": "dry-sweet"
       }
     ],
     "id": "chenin-blanc",
@@ -15607,6 +15970,10 @@
         "url": "https://es.wikipedia.org/wiki/Chenin_blanc"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Pineau de la Loire",
@@ -15639,6 +16006,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "tar",
       "rose",
@@ -15911,6 +16279,7 @@
         "url": "https://pt.wikipedia.org/wiki/Nebbiolo"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Spanna",
@@ -15979,6 +16348,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -16087,6 +16457,11 @@
         "field": "styles",
         "quote": "It has high acidity but naturally reaches high must weights, so is often blended with other varieties … and is sometimes made into a dessert wine.",
         "value": "blending"
+      },
+      {
+        "field": "sweetness",
+        "quote": "and is sometimes made into a dessert wine ... which primarily stuck to dry white wines",
+        "value": "dry-sweet"
       }
     ],
     "id": "silvaner",
@@ -16143,6 +16518,10 @@
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Silvaner_(uva)"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
     },
     "synonyms": [
       {
@@ -16232,6 +16611,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "white pepper",
       "citrus",
@@ -16313,6 +16693,11 @@
         "field": "styles",
         "quote": "Grüner Veltliner can be produced in a variety of styles ... some is made into sparkling wine ... sweet Auslese and botryized Trockenbeerenauslese styles ...",
         "value": "sweet"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Grüner Veltliner is usually produced dry",
+        "value": "dry"
       }
     ],
     "id": "gruner-veltliner",
@@ -16370,6 +16755,10 @@
         "url": "https://es.wikipedia.org/wiki/Gr%C3%BCner_veltliner"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q180175",
@@ -16377,6 +16766,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -16530,6 +16920,11 @@
         "field": "regions",
         "quote": "Rheinhessen, ... Baden, ... Palatinate, ... Austria, ... Hungary, ... Belgium, ... United Kingdom, ... Australia – Mudgee wine region, ... New Zealand – Now a marginal grape., ... United States of America, ... Japan, ... China",
         "value": "CN: China"
+      },
+      {
+        "field": "sweetness",
+        "quote": "to cheaply produce large amounts of medium sweet German wines",
+        "value": "medium"
       }
     ],
     "id": "muller-thurgau",
@@ -16636,6 +17031,10 @@
         "url": "https://es.wikipedia.org/wiki/M%C3%BCller-thurgau"
       }
     },
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Rivaner",
@@ -16708,6 +17107,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "damson",
       "tobacco",
@@ -16912,6 +17312,7 @@
         "url": "https://pt.wikipedia.org/wiki/Malbec"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Côt",
@@ -16944,6 +17345,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "strawberry",
       "raspberry",
@@ -17096,6 +17498,7 @@
         "url": "https://pt.wikipedia.org/wiki/Gamay"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Gamay Noir à Jus Blanc",
@@ -17120,8 +17523,9 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -17148,6 +17552,16 @@
         "field": "synonyms",
         "quote": "also called the sultanina, Thompson Seedless (United States), Lady de Coverly (England), and oval-fruited Kishmish",
         "value": "Kishmish"
+      },
+      {
+        "field": "body",
+        "quote": "Sultaniye wines are dry and semi-dry, light-bodied wines produced in Turkey.",
+        "value": "low"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Sultaniye wines are dry and semi-dry, light-bodied wines produced in Turkey.",
+        "value": "dry-medium"
       }
     ],
     "id": "sultana",
@@ -17201,6 +17615,10 @@
         "translated": true,
         "url": "https://en.wikipedia.org/wiki/Sultana_(grape)"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
     },
     "synonyms": [
       {
@@ -17270,6 +17688,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "medium",
     "aromas": [
       "strawberry",
       "spice",
@@ -17380,6 +17799,11 @@
         "quote": "Sangiovese Grosso, used for traditionally powerful and slow maturing red wines, is primarily grown in the central regions of Italy, particularly in Tuscany, where it is the dominant grape variety.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Sangiovese"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Sangiovese's high acidity and moderate alcohol",
+        "value": "medium"
       }
     ],
     "id": "sangiovese",
@@ -17471,6 +17895,7 @@
         "url": "https://pt.wikipedia.org/wiki/Sangiovese"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Brunello",
@@ -17503,6 +17928,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -17587,6 +18013,7 @@
         "url": "https://en.wikipedia.org/wiki/Carignan"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Cariñena",
@@ -17615,6 +18042,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -17773,6 +18201,7 @@
         "url": "https://pt.wikipedia.org/wiki/Trebbiano"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Albano",
@@ -17913,6 +18342,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "red fruit",
       "spice",
@@ -18130,6 +18560,7 @@
         "url": "https://pt.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Grande Vidure",
@@ -18166,6 +18597,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "high",
     "aromas": [
       "prune",
       "black pepper",
@@ -18371,6 +18803,16 @@
         "quote": "технический (винный) сорт чёрного винограда позднего созревания, происходящий из Кахетии ... самый ароматный саперави происходит из региона Рача-Лечхуми ... «черносливово-перечной основательности Кварели до элегантной малины Напареули ... как сухие (Мукузани, Напареули), так и полусладкие (Киндзмараули, Ахашени).",
         "value": "GE: Kvareli",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D0%B5%D1%80%D0%B0%D0%B2%D0%B8"
+      },
+      {
+        "field": "alcohol",
+        "quote": "It has the potential to produce high alcohol levels",
+        "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Kindzmarauli: a natural semi-sweet wine ... Mukuzani: a dry wine",
+        "value": "dry-medium"
       }
     ],
     "id": "saperavi",
@@ -18470,6 +18912,10 @@
         "url": "https://es.wikipedia.org/wiki/Saperavi"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Didi Saperavi",
@@ -18542,6 +18988,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "cherry",
       "blackberry",
@@ -18552,7 +18999,7 @@
       "plum",
       "spice"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -18711,6 +19158,11 @@
         "quote": "Century-old vines still exist in many regional vineyards and allow for the production of long-aging, robust red wines with intense fruit and enhanced tannic content.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Barbera"
+      },
+      {
+        "field": "body",
+        "quote": "is known for deep color, full body, low tannins and high levels of acidity",
+        "value": "high"
       }
     ],
     "id": "barbera",
@@ -18766,6 +19218,7 @@
         "url": "https://pt.wikipedia.org/wiki/Barbera"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Barber a Raspo",
@@ -18874,6 +19327,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "high",
     "aromas": [
       "spice",
       "floral",
@@ -18994,6 +19448,11 @@
         "quote": "В Болгарии уступает по занимаемым площадям только мускату Оттонель ... Кахетинские виноделы традиционно использовали ркацители для выработки в кувшинах (квеври) янтарных (оранжевых) вин. В современной Грузии из ркацители производятся такие вина, как «Цинандали», «Гурджаани» и «Вазисубани».",
         "value": "BG: Bulgaria",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BA%D0%B0%D1%86%D0%B8%D1%82%D0%B5%D0%BB%D0%B8"
+      },
+      {
+        "field": "alcohol",
+        "quote": "its naturally high alcohol levels",
+        "value": "high"
       }
     ],
     "id": "rkatsiteli",
@@ -19081,6 +19540,7 @@
         "url": "https://es.wikipedia.org/wiki/Rkatsiteli"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Rkaziteli",
@@ -19093,6 +19553,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "apple",
       "citrus",
@@ -19227,6 +19688,11 @@
         "field": "regions",
         "quote": "In Alsace ... ; In Germany, where it is known as Weißer Burgunder or Weißburgunder ... ; In the United States it is mainly produced in California ... Canada's Okanagan Valley has developed a reputation for Pinot blanc ...",
         "value": "CA: Okanagan Valley"
+      },
+      {
+        "field": "sweetness",
+        "quote": "in Germany and Austria they can be either dry or sweet",
+        "value": "dry-sweet"
       }
     ],
     "id": "pinot-blanc",
@@ -19297,6 +19763,10 @@
         "url": "https://es.wikipedia.org/wiki/Pinot_blanc"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Pinot bianco",
@@ -19349,6 +19819,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "herbs",
       "citrus",
@@ -19555,6 +20026,7 @@
         "url": "https://pt.wikipedia.org/wiki/Alvarinho"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Albelleiro",
@@ -19623,6 +20095,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "banana",
       "graphite",
@@ -19766,6 +20239,7 @@
         "url": "https://pt.wikipedia.org/wiki/Petit_Verdot"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bouton",
@@ -19806,6 +20280,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -19958,6 +20433,11 @@
         "quote": "De druif wordt gebruikt voor het maken van rode wijn en champagne.",
         "value": "sparkling",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Pinot_meunier"
+      },
+      {
+        "field": "sweetness",
+        "quote": "The style of those wines ranges from simple, light, off-dry (halbtrocken) to rich, dry with substantial flavors.",
+        "value": "dry-medium"
       }
     ],
     "id": "pinot-meunier",
@@ -20047,6 +20527,10 @@
         "url": "https://es.wikipedia.org/wiki/Pinot_meunier"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Auvernat Meunier",
@@ -20123,6 +20607,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "high",
     "aromas": [
       "floral",
       "peach",
@@ -20208,6 +20693,16 @@
         "quote": "Viognier (French pronunciation: [vjɔɲje]) is a white wine grape variety.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Viognier"
+      },
+      {
+        "field": "alcohol",
+        "quote": "produce wine with a strong perfume and high in alcohol",
+        "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Viognier wines are predominantly dry, although sweet late-harvest dessert wines have been made",
+        "value": "dry-sweet"
       }
     ],
     "id": "viognier",
@@ -20285,6 +20780,10 @@
         "url": "https://pt.wikipedia.org/wiki/Viognier"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q965255",
@@ -20292,6 +20791,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": "medium",
     "color": "red",
@@ -20417,6 +20917,7 @@
         "url": "https://es.wikipedia.org/wiki/Corvina_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Corvina Veronese",
@@ -20433,6 +20934,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -20639,6 +21141,7 @@
         "url": "https://es.wikipedia.org/wiki/Kadarka"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Backator-Szőlő",
@@ -20711,6 +21214,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "floral",
       "fruity",
@@ -20916,6 +21420,12 @@
         "quote": "im südlichen Burgenland ... Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel",
         "value": "AT: Burgenland",
         "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel als Grundlage für trockene Weine",
+        "value": "dry-sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
       }
     ],
     "id": "italian-riesling",
@@ -21032,6 +21542,10 @@
         "url": "https://es.wikipedia.org/wiki/Welschriesling"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Graševina",
@@ -21096,6 +21610,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "apple",
       "lemon",
@@ -21268,6 +21783,11 @@
         "field": "styles",
         "quote": "used to make dry white wines ... sometimes included in the blend of Burgundian sparkling wine known as Crémant de Bourgogne",
         "value": "sparkling"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Aligoté is a white grape used to make dry white wines",
+        "value": "dry"
       }
     ],
     "id": "aligote",
@@ -21326,6 +21846,10 @@
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Aligot%C3%A9"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
     },
     "synonyms": [
       {
@@ -21431,12 +21955,13 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "blackberry",
       "fruity",
       "grape"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -21514,6 +22039,16 @@
         "quote": "'Black of Avola') is \"the most important red wine grape in Sicily\" and is one of Italy's most important indigenous varieties.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Nero_d'Avola"
+      },
+      {
+        "field": "body",
+        "quote": "Flavour: dry, slightly acidic, rounded, warm and full-bodied.",
+        "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Flavour: dry, slightly acidic, rounded, warm and full-bodied.",
+        "value": "dry"
       }
     ],
     "id": "nero-d-avola",
@@ -21597,6 +22132,10 @@
         "url": "https://es.wikipedia.org/wiki/Nero_d'Avola"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Calabrese",
@@ -21621,6 +22160,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "fruity",
       "mineral"
@@ -21726,6 +22266,11 @@
         "quote": "Le chasselas accompagne les poissons maigres, notamment, perche, féra et truite ... Il est apprécié à l'apéritif ou pour accompagner les mets au fromage typiquement suisses, tels que la fondue ou la raclette.",
         "value": "cheese",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Chasselas_(c%C3%A9page)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Chasselas is mostly vinified to be a full, dry and fruity white wine.",
+        "value": "dry"
       }
     ],
     "id": "chasselas",
@@ -21800,6 +22345,10 @@
         "url": "https://en.wikipedia.org/wiki/Chasselas"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Chasselas blanc",
@@ -21840,6 +22389,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "smoky",
       "pear",
@@ -22060,6 +22610,11 @@
         "field": "regions",
         "quote": "most noted widely grown in the Tokaj-Hegyalja wine region... also grown in the tiny Hungarian wine region of Somló... Furmint plays a similar role in the Slovak wine region of Tokaj... It is also grown in Austria... Smaller plantings are found in Slovenia... The grape is also planted in Croatia and Serbia... It is also found in Romania... small plantings of the grape have been done in the Swartland region of South Africa... In the United States, there are some isolated plantings of Furmint in the California wine region of the Russian River AVA",
         "value": "US: Russian River AVA"
+      },
+      {
+        "field": "sweetness",
+        "quote": "where it is used to produce single-varietal dry wines as well as being the principal grape in the better known Tokaji dessert",
+        "value": "dry-sweet"
       }
     ],
     "id": "furmint",
@@ -22154,6 +22709,10 @@
         "url": "https://es.wikipedia.org/wiki/Furmint"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Mainak",
@@ -22230,6 +22789,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "chocolate",
       "plum"
@@ -22504,6 +23064,7 @@
         "url": "https://pt.wikipedia.org/wiki/Aglianico"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Aglianco di Puglia",
@@ -22680,6 +23241,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "low",
     "aromas": [
       "red berry"
     ],
@@ -22805,6 +23367,11 @@
         "field": "regions",
         "quote": "Cinsaut is popular in Algeria ... It is also widely used for rosé wines in Provence ... South Africa ... Chile ... United States ...",
         "value": "ZA: South Africa"
+      },
+      {
+        "field": "alcohol",
+        "quote": "offering crunchy red berry flavors at low alcohols",
+        "value": "low"
       }
     ],
     "id": "cinsaut",
@@ -22870,6 +23437,7 @@
         "url": "https://pt.wikipedia.org/wiki/Cinsault"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Black Malvoisie",
@@ -22958,6 +23526,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "smoky",
       "blackberry",
@@ -23200,6 +23769,7 @@
         "url": "https://es.wikipedia.org/wiki/Pinotage"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Perold's Hermitage x Pinot",
@@ -23216,6 +23786,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": null,
     "aromas": [
       "black fruit",
       "spice",
@@ -23376,6 +23947,7 @@
         "url": "https://es.wikipedia.org/wiki/Blaufr%C3%A4nkisch"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Franconia",
@@ -23424,6 +23996,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "vanilla",
       "cherry",
@@ -23631,6 +24204,7 @@
         "url": "https://es.wikipedia.org/wiki/Zweigelt"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Rotburger",
@@ -23651,6 +24225,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": null,
     "aromas": [
       "red berry",
       "jammy",
@@ -23745,6 +24320,12 @@
         "quote": "Il produit un vin rouge-pourpre, sec, équilibré.",
         "value": "still",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Vranac"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Il produit un vin rouge-pourpre, sec, équilibré.",
+        "value": "dry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Vranac"
       }
     ],
     "id": "vranec",
@@ -23804,6 +24385,10 @@
         "url": "https://en.wikipedia.org/wiki/Vranac"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Vranac",
@@ -23816,6 +24401,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -24019,6 +24605,7 @@
         "url": "https://en.wikipedia.org/wiki/Macabeo"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Alcañol",
@@ -24091,6 +24678,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "earthy",
       "bitter"
@@ -24283,6 +24871,7 @@
         "url": "https://en.wikipedia.org/wiki/Negroamaro"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Abbruzzese",
@@ -24363,6 +24952,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [],
     "body": "low",
     "color": "red",
@@ -24576,6 +25166,7 @@
         "url": "https://es.wikipedia.org/wiki/Blauer_portugieser"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Autrichien",
@@ -24644,6 +25235,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -24785,6 +25377,7 @@
         "url": "https://es.wikipedia.org/wiki/Palomino_(vid)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Listán",
@@ -24813,6 +25406,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -24841,6 +25435,12 @@
         "field": "tannin",
         "quote": "Dort erbringt die Rebe intensiv vollen, trockenen und tanninherben Wein",
         "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mavrud"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Dort erbringt die Rebe intensiv vollen, trockenen und tanninherben Wein",
+        "value": "dry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Mavrud"
       }
     ],
@@ -24900,6 +25500,10 @@
         "url": "https://en.wikipedia.org/wiki/Mavrud"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Mavroudi",
@@ -24912,6 +25516,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "black cherry",
       "liquorice",
@@ -25041,6 +25646,11 @@
         "quote": "In any case the wines produced are nearly always dry.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Dolcetto"
+      },
+      {
+        "field": "sweetness",
+        "quote": "In any case the wines produced are nearly always dry.",
+        "value": "dry"
       }
     ],
     "id": "dolcetto",
@@ -25098,6 +25708,10 @@
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Dolcetto"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
     },
     "synonyms": [
       {
@@ -25179,6 +25793,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "lemon",
       "almond",
@@ -25359,6 +25974,7 @@
         "url": "https://es.wikipedia.org/wiki/Garganega"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "D'Oro",
@@ -25427,6 +26043,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "floral",
       "herbaceous",
@@ -25648,6 +26265,12 @@
         "quote": "anche noto come Pigato bianco in Liguria e Favorita in Piemonte e Corsica ... in Gallura (Sardegna) ... il Golfo del Tigullio e il Colli di Luni ... il Montecarlo bianco e il Bolgheri bianco ... nel Roero",
         "value": "IT: Colli di Luni",
         "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "alcohol",
+        "quote": "caratterizzati da una notevole struttura e alcolicità",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
       }
     ],
     "id": "vermentino",
@@ -25769,6 +26392,7 @@
         "url": "https://es.wikipedia.org/wiki/Vermentino"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Agostenga",
@@ -25825,6 +26449,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "savoury",
       "mineral",
@@ -25902,6 +26527,11 @@
         "field": "styles",
         "quote": "The mineral profile of the grape bodes well for blending ... Throughout Greece, the grape is vinified to make a variety of dry and sweet wines",
         "value": "blending"
+      },
+      {
+        "field": "sweetness",
+        "quote": "the grape is vinified to make a variety of dry and sweet wines",
+        "value": "dry-sweet"
       }
     ],
     "id": "assyrtiko",
@@ -25960,6 +26590,10 @@
         "url": "https://en.wikipedia.org/wiki/Assyrtiko"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Arcytico",
@@ -25988,11 +26622,12 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "raspberry",
       "blackberry"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -26080,6 +26715,16 @@
         "quote": "Tannat is a red wine grape, historically grown in South West France in the Madiran AOC, and is now one of the most prominent grapes in Uruguay, where it is considered the \"national grape\".",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Tannat"
+      },
+      {
+        "field": "alcohol",
+        "quote": "They often have a deep dark color with high level of alcohol.",
+        "value": "high"
+      },
+      {
+        "field": "body",
+        "quote": "The resulting wines are typically full bodied and very fruity.",
+        "value": "high"
       }
     ],
     "id": "tannat",
@@ -26177,6 +26822,7 @@
         "url": "https://es.wikipedia.org/wiki/Tannat_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Harriague",
@@ -26189,6 +26835,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "grape"
     ],
@@ -26388,6 +27035,7 @@
         "url": "https://es.wikipedia.org/wiki/Kerner_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Herold Triumpf",
@@ -26408,12 +27056,13 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "plum",
       "spice",
       "red fruit"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -26531,6 +27180,16 @@
         "quote": "The grape is typically made as a varietal, though it is notably blended with Cabernet Sauvignon in the area around Metsovo to make the table wine traditionally called katoi.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Agiorgitiko"
+      },
+      {
+        "field": "body",
+        "quote": "but lacks acidity and body",
+        "value": "low"
+      },
+      {
+        "field": "sweetness",
+        "quote": "The grape is most widely associated with the dry and sweet red wines of Nemea",
+        "value": "dry-sweet"
       }
     ],
     "id": "agiorgitiko",
@@ -26603,6 +27262,10 @@
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Agiorg%C3%ADtiko"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
     },
     "synonyms": [
       {
@@ -26688,6 +27351,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "almond",
       "apricot",
@@ -26857,6 +27521,11 @@
         "field": "regions",
         "quote": "Arneis is found primarily in the Italian wine region of Piedmont ... Outside of Piedmont, limited plantings of the grape can be found in Liguria and on the Italian island of Sardinia. In the United States, Arneis is mostly found in California ... Sonoma County and the Oregon ... Willamette Valley. Other American Viticultural Areas ... Mendocino, Russian River Valley, Paicines and Santa Ynez Valley AVAs. It is also being grown in Willcox, Arizona. ... Australian wine regions of Tasmania, Victoria and New South Wales ...",
         "value": "AU: Victoria"
+      },
+      {
+        "field": "sweetness",
+        "quote": "The white wines made from the Arneis grape tend to be dry and full bodied",
+        "value": "dry"
       }
     ],
     "id": "arneis",
@@ -26964,6 +27633,10 @@
         "url": "https://es.wikipedia.org/wiki/Arneis"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Bianchetta",
@@ -27004,6 +27677,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "spice",
       "pollen",
@@ -27133,6 +27807,18 @@
         "quote": "De Hárslevelű is een witte Hongaarse druivensoort, dat zowel droge als zoete wijn voortbrengt.",
         "value": "sweet",
         "sourceUrl": "https://nl.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Heute werden in der Region jedoch auch trockene, relativ alkoholreiche Weine",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Lindenbl%C3%A4ttriger"
+      },
+      {
+        "field": "sweetness",
+        "quote": "vor allem, um Süßweine zu gewinnen. ... Heute werden in der Region jedoch auch trockene, relativ alkoholreiche Weine",
+        "value": "dry-sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Lindenbl%C3%A4ttriger"
       }
     ],
     "id": "harslevelu",
@@ -27209,6 +27895,10 @@
         "url": "https://en.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Frunza de tei",
@@ -27273,6 +27963,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "guava"
     ],
@@ -27413,6 +28104,11 @@
         "field": "regions",
         "quote": "In France, it was traditionally grown in the Charentes and Gascony ... today it is still among the permitted white grape varieties in Bordeaux ... This grape is mainly grown in California ... it is widely grown in South Africa ... and to a lesser extent in Australia and Israel.",
         "value": "IL: Israel"
+      },
+      {
+        "field": "sweetness",
+        "quote": "in both dry and sweet versions",
+        "value": "dry-sweet"
       }
     ],
     "id": "colombard",
@@ -27500,6 +28196,10 @@
         "url": "https://es.wikipedia.org/wiki/Colombard"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Bardero",
@@ -27576,6 +28276,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "raisin",
       "fig",
@@ -27748,6 +28449,11 @@
         "field": "regions",
         "quote": "the vast majority of these plantings are found in the Spanish wine region of Montilla-Moriles ... the grape can also be found in the denominación de origen (DO) of Montilla-Moriles, Jerez de la Frontera, Málaga and Sierras de Málaga and Valencia. ... most widely planted in the Portuguese wine region of Evora and Borba in the Alentejo region ... has thrived in Western Australia's Swan Valley ... limited plantings ... Margaret River region ... producers in the Elqui Province ...",
         "value": "CL: Elqui Province"
+      },
+      {
+        "field": "sweetness",
+        "quote": "but will usually be very sweet and have a strong aroma and flavor of raisins and dried figs",
+        "value": "sweet"
       }
     ],
     "id": "pedro-ximenez",
@@ -27838,6 +28544,10 @@
         "url": "https://pt.wikipedia.org/wiki/Pedro_Xim%C3%A9nez"
       }
     },
+    "sweetness": {
+      "from": "sweet",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "PX",
@@ -27906,6 +28616,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -28102,6 +28813,7 @@
         "url": "https://es.wikipedia.org/wiki/Xin%C3%B3mavro"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Mavro Naoussis",
@@ -28118,6 +28830,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": null,
     "aromas": [
       "peach",
       "apricot",
@@ -28307,6 +29020,7 @@
         "url": "https://es.wikipedia.org/wiki/Torront%C3%A9s"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Malvasia",
@@ -28363,6 +29077,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -28486,6 +29201,11 @@
         "field": "regions",
         "quote": "cultivated mainly in Romania (Transylvania, Western Moldavia), as well as in Moldova, Slovakia, Hungary and Austria",
         "value": "AT: Austria"
+      },
+      {
+        "field": "sweetness",
+        "quote": "The wines are dry and fresh and have acidity and specific flavour.",
+        "value": "dry"
       }
     ],
     "id": "feteasca-regala",
@@ -28566,6 +29286,10 @@
         "url": "https://en.wikipedia.org/wiki/Feteasc%C4%83_regal%C4%83"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Danasana",
@@ -28638,6 +29362,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "cherry"
     ],
@@ -28790,6 +29515,7 @@
         "url": "https://es.wikipedia.org/wiki/Rondinella"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q860892",
@@ -28797,6 +29523,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "high",
     "aromas": [
       "vegetal"
     ],
@@ -28920,6 +29647,12 @@
         "quote": "Le vin de xarello est coloré, jaune or, puissant, riche en alcool et en acidité.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Le vin de xarello est coloré, jaune or, puissant, riche en alcool et en acidité.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     ],
     "id": "xarel-lo",
@@ -29005,6 +29738,7 @@
         "url": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Cartoixà",
@@ -29045,6 +29779,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "banana",
       "pineapple",
@@ -29296,6 +30031,7 @@
         "url": "https://en.wikipedia.org/wiki/Air%C3%A9n"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Aiden",
@@ -29376,6 +30112,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "high",
     "aromas": [
       "peach",
       "apricot"
@@ -29527,6 +30264,12 @@
         "quote": "Die Sorte wird aber im Verschnitt zum Beispiel für den berühmten Dessertwein Cotnari verwendet",
         "value": "blending",
         "sourceUrl": "https://de.wikipedia.org/wiki/Feteasc%C4%83_Alb%C4%83"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Die früh reifende Sorte erbringt alkoholreich sehr duftige Weine",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Feteasc%C4%83_Alb%C4%83"
       }
     ],
     "id": "feteasca-alba",
@@ -29603,6 +30346,7 @@
         "url": "https://en.wikipedia.org/wiki/Feteasc%C4%83_alb%C4%83"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Baratik",
@@ -29671,6 +30415,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -29918,6 +30663,7 @@
         "url": "https://es.wikipedia.org/wiki/Canaiolo"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Caccione nero",
@@ -29986,6 +30732,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "nutty",
       "vanilla",
@@ -30153,6 +30900,18 @@
         "quote": "dà luogo a un vino con una grande struttura, note di agrumi e frutti esotici, dotato di un buon potenziale di invecchiamento.",
         "value": "tropical fruit",
         "sourceUrl": "https://it.wikipedia.org/wiki/Savagnin_blanc"
+      },
+      {
+        "field": "alcohol",
+        "quote": "de vins blancs de garde, puissants, complexes et riches en alcool",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Savagnin"
+      },
+      {
+        "field": "sweetness",
+        "quote": "In Kanada erzeugen Winzer neben trockenen, fruchtigen Weinen vereinzelt auch edelsüße Eisweine aus dem Savagnin.",
+        "value": "dry-sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Savagnin"
       }
     ],
     "id": "savagnin",
@@ -30224,6 +30983,10 @@
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Savagnin"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
     },
     "synonyms": [
       {
@@ -30333,6 +31096,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "carob",
       "fig",
@@ -30433,6 +31197,16 @@
         "field": "regions",
         "quote": "Croatian wines from this grape include the reds from Dingač and Postup vineyards on the Pelješac peninsula, Hvar island, Brač island, Vis island, Komarna vineyards, Konavle and the rosé Opol (a vinification style)",
         "value": "HR: Konavle"
+      },
+      {
+        "field": "alcohol",
+        "quote": "rich, flavorful wines that are high in both alcohol",
+        "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "The wines from Plavac Mali can be created as dry, semi-dry or sweet.",
+        "value": "dry-sweet"
       }
     ],
     "id": "plavac-mali",
@@ -30516,6 +31290,10 @@
         "url": "https://es.wikipedia.org/wiki/Plavac_mali"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Mali Plavac",
@@ -30540,6 +31318,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "nutty",
       "apricot"
@@ -30755,6 +31534,7 @@
         "url": "https://en.wikipedia.org/wiki/%C5%BDilavka"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Mostarska",
@@ -30791,6 +31571,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "tea",
       "pear",
@@ -30981,6 +31762,7 @@
         "url": "https://es.wikipedia.org/wiki/Roussanne"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Barbin",
@@ -31049,6 +31831,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "red berry",
       "black cherry"
@@ -31253,6 +32036,7 @@
         "url": "https://es.wikipedia.org/wiki/St._Laurent_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Blauer Saint Laurent",
@@ -31333,6 +32117,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "floral"
     ],
@@ -31447,6 +32232,11 @@
         "quote": "qui s'accorde avec les asperges, l'artichaut, légumes qui dénaturent le goût du vin, également avec du foie gras, certains fromages",
         "value": "cheese",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_ottonel"
+      },
+      {
+        "field": "sweetness",
+        "quote": "It is most notable for its use in dessert wines from Austria, Bulgaria, Romania, Moldova, Croatia and Serbia as well as dry wines from Alsace and Hungary.",
+        "value": "dry-sweet"
       }
     ],
     "id": "muscat-ottonel",
@@ -31542,6 +32332,10 @@
         "url": "https://es.wikipedia.org/wiki/Muscat_ottonel"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Chasselas Saint Fiacre",
@@ -31582,6 +32376,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "sour cherry",
       "fruity"
@@ -31753,6 +32548,7 @@
         "url": "https://en.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q476277",
@@ -31760,6 +32556,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -31996,6 +32793,7 @@
         "url": "https://en.wikipedia.org/wiki/Montepulciano_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Cordicso",
@@ -32068,6 +32866,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "lemon",
       "bitter almond",
@@ -32199,6 +32998,7 @@
         "url": "https://en.wikipedia.org/wiki/Verdicchio"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q1937755",
@@ -32206,6 +33006,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -32424,6 +33225,7 @@
         "url": "https://es.wikipedia.org/wiki/Dornfelder"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": "high",
     "wikidataId": "Q1245736",
@@ -32431,6 +33233,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "blackcurrant"
     ],
@@ -32491,6 +33294,11 @@
         "field": "regions",
         "quote": "cultivated mainly in several areas in the Romanian regions of Moldavia, Muntenia, Oltenia, Banat, Northern Dobruja and also in the Republic of Moldova",
         "value": "MD: Moldova"
+      },
+      {
+        "field": "sweetness",
+        "quote": "These grapes produce dry, demi-dry or sweet wines",
+        "value": "dry-sweet"
       }
     ],
     "id": "feteasca-neagra",
@@ -32573,6 +33381,10 @@
         "url": "https://en.wikipedia.org/wiki/Feteasc%C4%83_neagr%C4%83"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Fetească",
@@ -32593,6 +33405,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "high",
     "aromas": [
       "red berry",
       "gamey",
@@ -32715,6 +33528,11 @@
         "field": "styles",
         "quote": "used in port wine ... some single varietal wines ... often used to stiffen blends",
         "value": "blending"
+      },
+      {
+        "field": "alcohol",
+        "quote": "It makes deep cherry red wines with high alcohol",
+        "value": "high"
       }
     ],
     "id": "bastardo",
@@ -32775,6 +33593,7 @@
         "url": "https://es.wikipedia.org/wiki/Bastardo_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bastardinha",
@@ -32839,6 +33658,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -33098,6 +33918,7 @@
         "url": "https://es.wikipedia.org/wiki/Graciano_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bastardo Nero",
@@ -33174,6 +33995,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "high",
     "color": "white",
@@ -33258,6 +34080,7 @@
         "url": "https://es.wikipedia.org/wiki/Verdejo"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q456276",
@@ -33265,6 +34088,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "caramel",
       "chocolate",
@@ -33390,6 +34214,11 @@
         "field": "regions",
         "quote": "associated with the Pátras area, though Kefalonia (Cephalonia) also identified as an important growing area.",
         "value": "GR: Kefalonia"
+      },
+      {
+        "field": "sweetness",
+        "quote": "While historically linked to sweet, fortified wines, contemporary production also includes dry red wines made from Mavrodaphne",
+        "value": "dry-sweet"
       }
     ],
     "id": "mavrodafni",
@@ -33460,6 +34289,10 @@
         "url": "https://es.wikipedia.org/wiki/Mavrodaphne"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Mavrodaphni",
@@ -33476,6 +34309,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "plum",
       "earthy",
@@ -33647,6 +34481,7 @@
         "url": "https://es.wikipedia.org/wiki/Lagrein"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": "high",
     "wikidataId": "Q1440662",
@@ -33654,6 +34489,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "spice",
       "rose",
@@ -33865,6 +34701,11 @@
         "quote": "мускат считался подходящим главным образом для выпуска марочных десертных вин высокой сладости с сильным приятным ароматом чайной розы и цитрона",
         "value": "citrus",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D1%81%D0%BA%D0%B0%D1%82_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9"
+      },
+      {
+        "field": "sweetness",
+        "quote": "On Samos, it produces a Vin Doux Naturel, aromatic dry white wines",
+        "value": "dry-sweet"
       }
     ],
     "id": "muscat-blanc-a-petits-grains",
@@ -33974,6 +34815,10 @@
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Moscatel_de_grano_menudo"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
     },
     "synonyms": [
       {
@@ -34087,6 +34932,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "nutty",
       "spice",
@@ -34290,6 +35136,16 @@
         "field": "regions",
         "quote": "Most commonly found in the Northern Rhône region... It is a principal component of the white wines from the Hermitage, Crozes-Hermitage and Saint-Joseph AOCs... In the Saint-Péray AOC... In Australia, the grape was first planted in Victoria... In Switzerland, Marsanne is grown in Valais... In British Columbia and Washington State... In California...",
         "value": "US: California"
+      },
+      {
+        "field": "alcohol",
+        "quote": "The wines can be high in alcohol",
+        "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Although Marsanne is mostly made into a dry wine, it is commonly made into a sweet wine in Valais",
+        "value": "dry-sweet"
       }
     ],
     "id": "marsanne",
@@ -34390,6 +35246,10 @@
         "url": "https://es.wikipedia.org/wiki/Marsanne_(uva)"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Avilleran",
@@ -34470,6 +35330,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "blackcurrant",
       "grapefruit",
@@ -34612,6 +35473,11 @@
         "field": "regions",
         "quote": "Plantings are most common in Palatinate, Rheinhessen and Nahe ... primarily in Burgenland and Styria ... Some Scheurebe is grown in California, Oregon, Western Australia, and Nova Scotia, Canada. ... recently been introduced in Switzerland ... Geneva.",
         "value": "CH: Geneva"
+      },
+      {
+        "field": "sweetness",
+        "quote": "the variety is often used for sweet wines, although dry Scheurebe wines have become more common in Germany",
+        "value": "dry-sweet"
       }
     ],
     "id": "scheurebe",
@@ -34711,6 +35577,10 @@
         "url": "https://es.wikipedia.org/wiki/Scheurebe"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Dr. Wagnerrebe",
@@ -34735,6 +35605,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "spice",
       "fruity",
@@ -35043,6 +35914,7 @@
         "url": "https://es.wikipedia.org/wiki/Pecorino_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Arquitano",
@@ -35143,6 +36015,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "spice",
       "coffee",
@@ -35175,6 +36048,11 @@
         "field": "styles",
         "quote": "Blatina can produce dry red wine",
         "value": "still"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Blatina can produce dry red wine",
+        "value": "dry"
       }
     ],
     "id": "blatina",
@@ -35235,6 +36113,10 @@
         "url": "https://en.wikipedia.org/wiki/Blatina"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Blaue Blatina",
@@ -35247,6 +36129,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "low",
     "color": "white",
@@ -35370,6 +36253,7 @@
         "url": "https://en.wikipedia.org/wiki/Po%C5%A1ip"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q832738",
@@ -35377,6 +36261,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "medium",
     "color": "red",
@@ -35573,6 +36458,7 @@
         "url": "https://en.wikipedia.org/wiki/Marselan"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q833144",
@@ -35580,6 +36466,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "fruity",
       "cherry",
@@ -35757,6 +36644,7 @@
         "url": "https://es.wikipedia.org/wiki/Tinta_barroca"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Tinta Grossa",
@@ -35773,6 +36661,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "herbs",
       "black pepper",
@@ -35994,6 +36883,7 @@
         "url": "https://es.wikipedia.org/wiki/Durif"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Petite Sirah",
@@ -36122,6 +37012,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "flint"
     ],
@@ -36254,6 +37145,7 @@
         "url": "https://es.wikipedia.org/wiki/Mel%C3%B3n_de_Borgo%C3%B1a"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Melón de Borgoña",
@@ -36270,6 +37162,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -36323,6 +37216,12 @@
         "quote": "Dá nome à mais seca das quatro qualidades tradicionais de vinho Madeira ... dando origem a vinhos de cor alambreada, secos e de excelente qualidade.",
         "value": "still",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Sercial"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Diese Rebsorte erbringt die trockensten Weine Madeiras.",
+        "value": "dry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Sercial"
       }
     ],
     "id": "sercial",
@@ -36385,6 +37284,10 @@
         "url": "https://es.wikipedia.org/wiki/Sercial"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "esgana",
@@ -36401,6 +37304,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "grape"
     ],
@@ -36544,6 +37448,7 @@
         "url": "https://en.wikipedia.org/wiki/Frappato"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Frappato di Vittoria",
@@ -36588,6 +37493,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "floral",
       "citrus"
@@ -36699,6 +37605,12 @@
         "quote": "Вина Грилло отличаются тельностью, обладают привлекательным цветочно-цитрусовым ароматом.",
         "value": "citrus",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%BB%D0%BB%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "la sua vocazione a diventare vino di alto grado alcolico",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Grillo_(vitigno)"
       }
     ],
     "id": "grillo",
@@ -36799,6 +37711,7 @@
         "url": "https://en.wikipedia.org/wiki/Grillo"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Riddu",
@@ -36819,6 +37732,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "spice"
     ],
@@ -37032,6 +37946,7 @@
         "url": "https://es.wikipedia.org/wiki/Abouriou"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Early Burgundy",
@@ -37088,6 +38003,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "medium",
     "aromas": [
       "mineral"
     ],
@@ -37130,6 +38046,12 @@
         "quote": "Apprezzata per le note minerali che apporta nei vini.",
         "value": "mineral",
         "sourceUrl": "https://it.wikipedia.org/wiki/Molinara_(vitigno)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Die Rotweine verfügen über wenig Farbe und über einen mittleren Alkoholgehalt.",
+        "value": "medium",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Molinara"
       }
     ],
     "id": "molinara",
@@ -37202,6 +38124,7 @@
         "url": "https://en.wikipedia.org/wiki/Molinara_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "ROSSANO",
@@ -37218,6 +38141,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -37409,6 +38333,7 @@
         "url": "https://en.wikipedia.org/wiki/Mtsvane"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Dedali Mtsvane",
@@ -37457,6 +38382,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "plum",
       "cherry",
@@ -37691,6 +38617,7 @@
         "url": "https://en.wikipedia.org/wiki/Marzemino"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Balsamina nera",
@@ -37763,6 +38690,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "spice",
       "fruity"
@@ -37972,6 +38900,7 @@
         "url": "https://es.wikipedia.org/wiki/Auxerrois_blanc"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Auxerrois Blanc de Laquenexy",
@@ -37992,6 +38921,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": null,
@@ -38055,6 +38985,7 @@
         "url": "https://en.wikipedia.org/wiki/Cardinal_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q858435",
@@ -38062,6 +38993,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -38164,6 +39096,7 @@
         "url": "https://es.wikipedia.org/wiki/Mavro"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Cipro Nero",
@@ -38180,6 +39113,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -38321,6 +39255,7 @@
         "url": "https://en.wikipedia.org/wiki/Elbling"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Weisser Elbling",
@@ -38365,6 +39300,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -38567,6 +39503,7 @@
         "url": "https://es.wikipedia.org/wiki/Falanghina"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Falanghina Greco",
@@ -38639,6 +39576,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": null,
     "aromas": [
       "strawberry",
       "smoky"
@@ -38870,6 +39808,7 @@
         "url": "https://es.wikipedia.org/wiki/Trollinger"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Schiava",
@@ -38934,6 +39873,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "spice",
       "earthy",
@@ -39140,6 +40080,7 @@
         "url": "https://en.wikipedia.org/wiki/Aramon_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Aramon noir",
@@ -39224,6 +40165,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -39353,6 +40295,11 @@
         "quote": "Il vino che ne viene tratto è ricco di tannini, senza retrogusto amaro, dal colore rosso rubino carico.",
         "value": "high",
         "sourceUrl": "https://it.wikipedia.org/wiki/Moscato_d'Amburgo"
+      },
+      {
+        "field": "sweetness",
+        "quote": "it has been used in the production of dessert wine ... In Eastern Europe, the grape produces a light, dry red wine.",
+        "value": "dry-sweet"
       }
     ],
     "id": "black-muscat",
@@ -39443,6 +40390,10 @@
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Moscatel_negro"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
     },
     "synonyms": [
       {
@@ -39564,6 +40515,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "lime",
       "honeysuckle",
@@ -39771,6 +40723,7 @@
         "url": "https://en.wikipedia.org/wiki/Verdelho"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Verdello",
@@ -39799,6 +40752,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "raisin"
     ],
@@ -39899,6 +40853,11 @@
         "field": "regions",
         "quote": "In France, it is a minor constituent in the dry and sweet wines of Bordeaux, such as Sauternes ... Some sweet wines from Monbazillac, on the other hand, can have a higher proportion of Muscadelle ... Those made in the Rutherglen region generally receive considerable aging in hot cellars ... A few other Australian wine regions, including the Barossa Valley, make similar wines.",
         "value": "AU: Barossa Valley"
+      },
+      {
+        "field": "sweetness",
+        "quote": "it is a minor constituent in the dry and sweet wines of Bordeaux",
+        "value": "dry-sweet"
       }
     ],
     "id": "muscadelle",
@@ -39979,6 +40938,10 @@
         "url": "https://es.wikipedia.org/wiki/Muscadelle"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Angelicaut",
@@ -40023,6 +40986,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -40160,6 +41124,7 @@
         "url": "https://es.wikipedia.org/wiki/Albana_(uva)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Albana di Romagna",
@@ -40208,6 +41173,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -40328,6 +41294,7 @@
         "url": "https://es.wikipedia.org/wiki/Xynisteri"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "xinisteri",
@@ -40340,6 +41307,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -40433,6 +41401,11 @@
         "field": "regions",
         "quote": "It was the traditional grape variety in Cognac and Armagnac production until the 20th century ... Folle blanche is used in the Loire Valley area and in Brittany around Nantes to produce Gros Plant du Pays Nantais ... Outside France Folle blanche is grown in the Basque Country ... In California there are a few limited plantings of the variety.",
         "value": "US: California"
+      },
+      {
+        "field": "sweetness",
+        "quote": "a very dry and often tartly acidic wine",
+        "value": "dry"
       }
     ],
     "id": "folle-blanche",
@@ -40517,6 +41490,10 @@
         "url": "https://es.wikipedia.org/wiki/Folle_blanche"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Picpoule",
@@ -40553,6 +41530,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "grape",
       "tropical fruit",
@@ -40723,6 +41701,7 @@
         "url": "https://en.wikipedia.org/wiki/Irsai_Oliv%C3%A9r"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Irsai",
@@ -40759,6 +41738,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -40922,6 +41902,7 @@
         "url": "https://en.wikipedia.org/wiki/Pinot_Noir_Pr%C3%A9coce"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Frühburgunder",
@@ -40966,6 +41947,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "floral",
       "nutty"
@@ -41179,6 +42161,7 @@
         "url": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Ribolla",
@@ -41231,6 +42214,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "nutty"
     ],
@@ -41463,6 +42447,7 @@
         "url": "https://en.wikipedia.org/wiki/Ansonica"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Inzolia",
@@ -41531,6 +42516,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -41587,6 +42573,11 @@
         "quote": "Виноград используется для приготовления белых столовых вин высокого качества (Свири, Твиши, Цоликаури) и игристых сладких вин.",
         "value": "GE: Tvishi",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A6%D0%BE%D0%BB%D0%B8%D0%BA%D0%BE%D1%83%D1%80%D0%B8"
+      },
+      {
+        "field": "sweetness",
+        "quote": "It has been used for production of premium dry, semi-sweet and semi-dry wines.",
+        "value": "dry-medium"
       }
     ],
     "id": "tsolikouri",
@@ -41666,6 +42657,10 @@
         "url": "https://en.wikipedia.org/wiki/Tsolikouri"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Tsolikauri",
@@ -41682,6 +42677,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -41812,6 +42808,7 @@
         "url": "https://en.wikipedia.org/wiki/Bacchus_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Weisser Bacchus",
@@ -41832,6 +42829,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "low",
     "aromas": [],
     "body": "low",
     "color": "red",
@@ -41951,6 +42949,16 @@
         "quote": "Os vinhos Grolleau tendem a ter baixo teor alcoólico e acidez relativamente alta.",
         "value": "still",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Grolleau"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Grolleau wines tend to have a low alcohol content",
+        "value": "low"
+      },
+      {
+        "field": "sweetness",
+        "quote": "It is often produced in off-dry to medium sweet style",
+        "value": "medium"
       }
     ],
     "id": "grolleau",
@@ -42030,6 +43038,10 @@
         "url": "https://en.wikipedia.org/wiki/Grolleau_(grape)"
       }
     },
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Grolleau noir",
@@ -42078,6 +43090,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "low",
     "aromas": [
       "blackberry",
       "mulberry",
@@ -42172,6 +43185,11 @@
         "field": "regions",
         "quote": "Elazığ, Diyarbakır, Mardin, Gaziantep, Kilis and Malatya are the vineyard regions within the Eastern and Southeastern Anatolia",
         "value": "TR: Gaziantep"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Öküzgözü reveals low alcohol profile",
+        "value": "low"
       }
     ],
     "id": "okuzgozu",
@@ -42249,6 +43267,7 @@
         "url": "https://en.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Okuezgoezue",
@@ -42261,6 +43280,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "low",
     "color": "red",
@@ -42371,6 +43391,12 @@
         "quote": "Die spätreifende Sorte mit ihren dickschaligen, harten und dunklen Beeren erbringt alkoholarme Weine mit wenig Körper und Struktur, die trocken bis süß ausgebaut werden können.",
         "value": "sweet",
         "sourceUrl": "https://de.wikipedia.org/wiki/Mandilaria"
+      },
+      {
+        "field": "sweetness",
+        "quote": "die trocken bis süß ausgebaut werden können",
+        "value": "dry-sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mandilaria"
       }
     ],
     "id": "mandilaria",
@@ -42436,6 +43462,10 @@
         "translated": true,
         "url": "https://es.wikipedia.org/wiki/Mandilaria"
       }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
     },
     "synonyms": [
       {
@@ -42505,6 +43535,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "low",
     "aromas": [],
     "body": null,
     "color": "white",
@@ -42559,6 +43590,12 @@
         "quote": "Der Wein ist dünn, extraktarm und säurereich.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Heunisch_(Rebsorte)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Il donne un vin de médiocre qualité (peu alcoolique, acide et sans bouquet)",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gouais"
       }
     ],
     "id": "gouais-blanc",
@@ -42630,6 +43667,7 @@
         "url": "https://es.wikipedia.org/wiki/Gouais_blanc"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Weisser Heunisch",
@@ -42670,6 +43708,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "medium",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -42780,6 +43819,12 @@
         "quote": "Il vino prodotto presenta una media alcolicità, una bassa acidità e un'abbondante quantità di pigmenti e di zuccheri.",
         "value": "low",
         "sourceUrl": "https://it.wikipedia.org/wiki/Ancellotta"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Il vino prodotto presenta una media alcolicità",
+        "value": "medium",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Ancellotta"
       }
     ],
     "id": "ancellotta",
@@ -42875,6 +43920,7 @@
         "url": "https://es.wikipedia.org/wiki/Ancellotta"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Ancelotta di Massenzatico",
@@ -42923,6 +43969,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "lemon"
     ],
@@ -43049,6 +44096,7 @@
         "url": "https://en.wikipedia.org/wiki/Athiri"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Athiri Aspro",
@@ -43081,6 +44129,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -43238,6 +44287,7 @@
         "url": "https://es.wikipedia.org/wiki/Croatina"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bonarda",
@@ -43250,6 +44300,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": null,
     "aromas": [
       "strawberry",
       "raspberry",
@@ -43387,6 +44438,11 @@
         "field": "regions",
         "quote": "grown in the Piedmont region of north-west Italy, primarily in Monferrato and in the Langhe ... Freisa di Chieri ... In the Canavese there is also a rosé ... there are a few hundred acres of the vine planted in Argentina ... It is most commonly found in the Asti, Langhe, Monferrato and Pinerolese regions.",
         "value": "AR: Argentina"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Wines made from the Freisa grape are red and usually somewhat sweet and lightly sparkling, or foaming. ... ferment the wine fully dry.",
+        "value": "dry-sweet"
       }
     ],
     "id": "freisa",
@@ -43479,6 +44535,10 @@
         "url": "https://es.wikipedia.org/wiki/Freisa"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Monferrina",
@@ -43519,6 +44579,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": "high",
     "aromas": [
       "floral",
       "green apple"
@@ -43645,6 +44706,11 @@
         "field": "regions",
         "quote": "It is widely planted in Chile ... especially in the Vipava Valley and Goriška Brda ... The grape's most noted homes are in the Friuli-Venezia Giulia and Goriška Brda ... Colli Orientali del Friuli, Collio Goriziano, Friuli Grave and Friuli Isonzo ... Argentina, with its close ties to Italian viticulture, also has a small amount of Friulano vines planted.",
         "value": "AR: Argentina"
+      },
+      {
+        "field": "alcohol",
+        "quote": "The grape also has the potential for very high levels of alcohol",
+        "value": "high"
       }
     ],
     "id": "sauvignon-vert",
@@ -43740,6 +44806,7 @@
         "url": "https://en.wikipedia.org/wiki/Sauvignonasse"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Sauvignonasse",
@@ -43784,6 +44851,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "high",
     "aromas": [
       "rose",
       "red berry",
@@ -43897,6 +44965,16 @@
         "quote": "L'Aleatico N est un cépage noir italien donnant des vins doux, très aromatisés et de couleur prononcée.",
         "value": "still",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Aleatico"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Aleatico wines tend to have high alcohol content",
+        "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Aleatico is often used to produce dessert wines.",
+        "value": "sweet"
       }
     ],
     "id": "aleatico",
@@ -43997,6 +45075,10 @@
         "url": "https://en.wikipedia.org/wiki/Aleatico"
       }
     },
+    "sweetness": {
+      "from": "sweet",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Red Moscatel",
@@ -44021,6 +45103,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "citrus"
     ],
@@ -44122,6 +45205,7 @@
         "url": "https://en.wikipedia.org/wiki/Vernaccia"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Vernaccia di San Gimignano",
@@ -44134,6 +45218,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "floral"
     ],
@@ -44305,6 +45390,7 @@
         "url": "https://es.wikipedia.org/wiki/Poulsard"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Ploussard",
@@ -44337,6 +45423,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "high",
     "color": "white",
@@ -44438,6 +45525,7 @@
         "url": "https://en.wikipedia.org/wiki/Neuburger"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Weisser Neuburger",
@@ -44462,6 +45550,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "nutty",
       "pistachio",
@@ -44540,6 +45629,11 @@
         "quote": "Die Traube ist groß, walzenförmig, dichtbeerig mit mittelgroßen, fleischfarbenen Beeren mit hohem Zuckergehalt (Trockenbeerenbildung).",
         "value": "pink",
         "sourceUrl": "https://de.wikipedia.org/wiki/Zierfandler"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Zierfandler wines are typically elegant and quite sweet",
+        "value": "sweet"
       }
     ],
     "id": "zierfandler",
@@ -44618,6 +45712,10 @@
         "url": "https://en.wikipedia.org/wiki/Zierfandler"
       }
     },
+    "sweetness": {
+      "from": "sweet",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Spätrot",
@@ -44638,6 +45736,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -44730,6 +45829,7 @@
         "url": "https://es.wikipedia.org/wiki/Acolon"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": "low",
     "wikidataId": "Q342037",
@@ -44737,6 +45837,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "high",
     "aromas": [],
     "body": null,
     "color": "white",
@@ -44855,6 +45956,11 @@
         "field": "regions",
         "quote": "most widely grown in the wine regions of Provence, Rhône and Languedoc in France ... the sparkling wine Clairette de Die ... It is also one of the thirteen grape varieties permitted in the Châteauneuf-du-Pape appellation ... Outside France it is also grown in South Africa for sparkling wine, Australia and Sardinia.",
         "value": "IT: Sardinia"
+      },
+      {
+        "field": "alcohol",
+        "quote": "it produces wine high in alcohol and low in acidity",
+        "value": "high"
       }
     ],
     "id": "clairette-blanche",
@@ -44947,6 +46053,7 @@
         "url": "https://es.wikipedia.org/wiki/Clairette_blanche"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Clairette",
@@ -44995,6 +46102,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [
       "violet",
       "strawberry",
@@ -45199,6 +46307,7 @@
         "url": "https://es.wikipedia.org/wiki/N%C3%A9grette"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Pinot St-George",
@@ -45247,6 +46356,7 @@
   },
   {
     "acidity": "medium",
+    "alcohol": null,
     "aromas": [
       "black pepper",
       "wild berries",
@@ -45401,6 +46511,7 @@
         "url": "https://en.wikipedia.org/wiki/Ruch%C3%A9"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Rouche",
@@ -45425,6 +46536,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "lemon",
       "caramel",
@@ -45513,6 +46625,12 @@
         "quote": "Die mittelfrüh bis spät reifende Sorte wird insbesondere im Verschnitt mit den Sorten Sercial, Malvasia Bianca und Verdelho in den verschiedenen Varianten des Madeiraweins eingesetzt. Boal Branco erzeugt einen halbsüßen Wein",
         "value": "blending",
         "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Boal Branco erzeugt einen halbsüßen Wein",
+        "value": "medium",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
       }
     ],
     "id": "boal",
@@ -45581,6 +46699,10 @@
         "url": "https://es.wikipedia.org/wiki/Boal_(uva)"
       }
     },
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Bual",
@@ -45605,6 +46727,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": "high",
     "color": "red",
@@ -45709,6 +46832,7 @@
         "url": "https://es.wikipedia.org/wiki/Tinta_c%C3%A3o"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Castellana Negra",
@@ -45729,6 +46853,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "citrus",
       "smoky"
@@ -45859,6 +46984,7 @@
         "url": "https://en.wikipedia.org/wiki/Bourboulenc"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q358780",
@@ -45866,6 +46992,7 @@
   },
   {
     "acidity": "high",
+    "alcohol": "medium",
     "aromas": [
       "violet",
       "sour cherry"
@@ -45937,6 +47064,11 @@
         "field": "regions",
         "quote": "Raboso is a red wine grape grown primarily in the eastern part of Veneto.",
         "value": "IT: Veneto"
+      },
+      {
+        "field": "alcohol",
+        "quote": "with notably high levels of tannin and medium alcohol content",
+        "value": "medium"
       }
     ],
     "id": "raboso",
@@ -46005,6 +47137,7 @@
         "url": "https://en.wikipedia.org/wiki/Raboso_(grape)"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Raboso Piave",
@@ -46025,6 +47158,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "apple"
     ],
@@ -46090,6 +47224,11 @@
         "field": "regions",
         "quote": "Erbaluce or Erbaluce bianca is a white Italian wine grape grown primarily in the Piedmont region around Caluso, in Canavese.",
         "value": "IT: Canavese"
+      },
+      {
+        "field": "sweetness",
+        "quote": "In addition to dry table wines, it is used to make sweet wines",
+        "value": "dry-sweet"
       }
     ],
     "id": "erbaluce",
@@ -46161,6 +47300,10 @@
         "url": "https://es.wikipedia.org/wiki/Erbaluce"
       }
     },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Albaluce",
@@ -46193,6 +47336,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": "high",
     "aromas": [
       "cherry"
     ],
@@ -46265,6 +47409,12 @@
         "quote": "Deve il suo nome al colore della bacca e ad uno degli aromi primari del vino rosso che se ne ricava, che richiama la ciliegia.",
         "value": "cherry",
         "sourceUrl": "https://it.wikipedia.org/wiki/Ciliegiolo"
+      },
+      {
+        "field": "alcohol",
+        "quote": "verfügen über einen hohen Alkohol-, aber geringen Säuregehalt",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Ciliegiolo"
       }
     ],
     "id": "ciliegiolo",
@@ -46336,6 +47486,7 @@
         "url": "https://en.wikipedia.org/wiki/Ciliegiolo"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Aleatico di Spagna",
@@ -46364,6 +47515,7 @@
   },
   {
     "acidity": "low",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -46492,6 +47644,7 @@
         "url": "https://en.wikipedia.org/wiki/Pamid"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q1099124",
@@ -46499,6 +47652,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -46653,6 +47807,7 @@
         "url": "https://de.wikipedia.org/wiki/Lambrusco_Viadanese"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Lambrusco Mantovano",
@@ -46673,6 +47828,7 @@
   },
   {
     "acidity": null,
+    "alcohol": null,
     "aromas": [
       "blackberry",
       "spice"
@@ -46782,6 +47938,7 @@
         "url": "https://en.wikipedia.org/wiki/Gamaret"
       }
     },
+    "sweetness": null,
     "synonyms": [],
     "tannin": "low",
     "wikidataId": "Q605464",
@@ -46789,6 +47946,7 @@
   },
   {
     "acidity": null,
+    "alcohol": "low",
     "aromas": [
       "fruity"
     ],
@@ -46872,6 +48030,12 @@
         "quote": "Les vins rouges sont frais, légers et fruités.",
         "value": "still",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Trepat"
+      },
+      {
+        "field": "alcohol",
+        "quote": "amb poca aroma i baixa graduació alcohòlica",
+        "value": "low",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Trepat"
       }
     ],
     "id": "trepat",
@@ -46945,6 +48109,7 @@
         "url": "https://en.wikipedia.org/wiki/Trepat"
       }
     },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Bonicaire",

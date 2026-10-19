@@ -20,10 +20,13 @@ import { normalizeWineText } from "./wine-memory";
 
 type GrapeRow = {
   acidity: LibraryGrape["acidity"];
+  alcohol: LibraryGrape["alcohol"];
   body: LibraryGrape["body"];
   color: LibraryGrape["color"];
   id: string;
   origin_country_code: string | null;
+  /** "dry", or a range: "dry-sweet". */
+  sweetness: string | null;
   tannin: LibraryGrape["tannin"];
   wikidata_id: string;
   wikipedia_url: string | null;
@@ -125,7 +128,8 @@ export async function getLibraryGrape(
 ): Promise<LibraryGrape | null> {
   const grape = await database
     .prepare(
-      `SELECT id, wikidata_id, color, origin_country_code, acidity, tannin, body, wikipedia_url
+      `SELECT id, wikidata_id, color, origin_country_code, acidity, tannin, body, wikipedia_url,
+        alcohol, sweetness
       FROM kb_grapes WHERE id = ?`,
     )
     .bind(grapeId)
@@ -235,8 +239,14 @@ export async function getLibraryGrape(
       .map((row) => labelOf.get(`${kind}:${row.value}`) ?? row.value);
 
   const styles = of("style");
+  const [sweetFrom, sweetTo] = (grape.sweetness ?? "").split("-") as [
+    "dry" | "medium" | "sweet" | "",
+    ("dry" | "medium" | "sweet") | undefined,
+  ];
   return {
     acidity: grape.acidity,
+    alcohol: grape.alcohol,
+    sweetness: sweetFrom === "" ? null : { from: sweetFrom, to: sweetTo ?? sweetFrom },
     aromas: of("aroma"),
     aromaTerms: attributeRows.filter((row) => row.kind === "aroma").map((row) => row.value),
     body: grape.body,

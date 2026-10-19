@@ -30,6 +30,16 @@ function GlanceIcon({ name }: { name: keyof typeof glanceDrawings }) {
 export function RegionGlance({ region }: { region: LibraryRegion }) {
   const { i18n, t } = useTranslation();
   const number = new Intl.NumberFormat(i18n.language, { maximumFractionDigits: 1 });
+  // Large figures in short ("65 mil", "3,2 M"), so the three fit on one row
+  // on a phone; the exact figure is the element's title.
+  const short = (digits: number) =>
+    new Intl.NumberFormat(i18n.language, { maximumFractionDigits: digits, notation: "compact" });
+  const amount = (value: number) =>
+    value >= 1_000_000
+      ? short(1).format(value)
+      : value >= 10_000
+        ? short(0).format(value)
+        : number.format(value);
   const varieties = region.register?.grapes.length ?? 0;
   const { planted, production } = region.figures;
   if (varieties === 0 && planted === null && production === null) return null;
@@ -55,9 +65,9 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
         {planted === null ? null : (
           <li>
             <GlanceIcon name="vineyard" />
-            <strong>
+            <strong title={`${number.format(planted.amount)} ha`}>
               {converted(planted.quote) ? "≈ " : ""}
-              {number.format(Math.round(planted.amount * 10) / 10)} ha
+              {amount(Math.round(planted.amount * 10) / 10)} ha
             </strong>
             <span>
               {t("library.glancePlanted")}
@@ -69,7 +79,9 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
         {production === null ? null : (
           <li>
             <GlanceIcon name="glass" />
-            <strong>{number.format(production.amount)} hl</strong>
+            <strong title={`${number.format(production.amount)} hl`}>
+              {amount(production.amount)} hl
+            </strong>
             <span>
               {t("library.glanceProduction")}
               {year(production.year)}
@@ -77,17 +89,16 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
           </li>
         )}
       </ul>
+      {/* Credited as the library credits every Wikipedia text: the article,
+          and its licence. */}
       {sources.length === 0 ? null : (
         <p className="section-help">
-          {t("library.glanceSource")}
-          {[...new Set(sources.map((figure) => figure.sourceUrl))].map((url) => (
+          {t("library.glanceSource")}{" "}
+          {[...new Set(sources.map((figure) => figure.sourceUrl))].map((url, index) => (
             <span key={url}>
-              {" · "}
+              {index === 0 ? "" : " · "}
               <a className="text-link" href={url} rel="noreferrer" target="_blank">
-                {decodeURIComponent(new URL(url).pathname.replace("/wiki/", "")).replaceAll(
-                  "_",
-                  " ",
-                )}
+                {t("library.summarySource")}
               </a>
             </span>
           ))}

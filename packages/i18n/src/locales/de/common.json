@@ -83,7 +83,9 @@
     "axis": {
       "acidity": "Säure",
       "tannin": "Tannin",
-      "body": "Körper"
+      "body": "Körper",
+      "alcohol": "Alkohol",
+      "sweetness": "Trocken oder süß"
     },
     "level": {
       "low": "Niedrig",
@@ -423,7 +425,7 @@
     "glanceProduction": "Wein im Jahr",
     "glanceYear": "{{year}}",
     "glanceConverted": "aus Acres umgerechnet",
-    "glanceSource": "Fläche und Erzeugung: die Infobox ihres Wikipedia-Artikels",
+    "glanceSource": "Fläche und Erzeugung:",
     "climateTitle": "Klima",
     "climateKoppen": "Klimatyp (Köppen)",
     "climateRainfall": "Niederschlag im Jahr",
@@ -458,7 +460,13 @@
       "b": "warmer Sommer",
       "c": "kühler Sommer",
       "d": "sehr kalter Winter"
-    }
+    },
+    "sweetness": {
+      "dry": "Trocken",
+      "medium": "Halbtrocken",
+      "sweet": "Süß"
+    },
+    "sweetnessRange": "{{from}} bis {{to}}"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

@@ -28,6 +28,17 @@ has the reasons.
   grape's colour. The drawings are Va de Vi's own, in one line style; most
   aromas take their group's drawing (red fruit, citrus, flowers), so a wheel
   of them will not be a crowd.
+- **Dry or sweet, and alcohol**: a grape's card adds two scales — the
+  alcohol its wines typically reach, and how dry or sweet they are, as a
+  range where its sources give one (Sémillon's «dry and sweet white wines»
+  fill the whole bar). 107 values read by hand from the grapes' articles in
+  seven languages, each with its sentence and checked against it like every
+  other: alcohol for 38 grapes, sweetness for 63, body for 62.
+- **Smaller fixes from a first look on a phone**: a region's three figures
+  stay on one row (large ones in short: «65 mil ha», «3,2 M hl», the exact
+  figure on hover); they are credited as every Wikipedia text is («De
+  Wikipedia · CC BY-SA 4.0»); the month-by-month chart and the bars keep a
+  phone's width on a wide screen; spice is drawn as a mortar and pestle.
 - **A region at a glance**: a registered name's card now opens with how many
   varieties its specification lists, its planted hectares and its yearly
   hectolitres — the last two from its Wikipedia article's infobox, with the
@@ -55,6 +66,9 @@ has the reasons.
 
 ### For operators
 
+- Migration `0043` adds `kb_grapes.alcohol` and `kb_grapes.sweetness` in
+  place; the grape API adds `alcohol` and `sweetness` (`{from, to}`). Body,
+  alcohol and sweetness read by hand live in `data/kb/grape-readings.json`.
 - Migration `0042` adds `kb_regions.climate` and `kb_regions.figures` in
   place (nothing is rebuilt); `pnpm kb:load` fills them. New builds:
   `pnpm kb:fetch-climate` and `pnpm kb:fetch-region-figures`

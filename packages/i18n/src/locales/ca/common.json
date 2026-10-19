@@ -83,7 +83,9 @@
     "axis": {
       "acidity": "Acidesa",
       "tannin": "Taní",
-      "body": "Cos"
+      "body": "Cos",
+      "alcohol": "Alcohol",
+      "sweetness": "Sec o dolç"
     },
     "level": {
       "low": "Baixa",
@@ -423,7 +425,7 @@
     "glanceProduction": "de vi l'any",
     "glanceYear": "el {{year}}",
     "glanceConverted": "convertit d'acres",
-    "glanceSource": "Superfície i producció: la fitxa del seu article de la Viquipèdia",
+    "glanceSource": "Superfície i producció:",
     "climateTitle": "Clima",
     "climateKoppen": "Tipus de clima (Köppen)",
     "climateRainfall": "Pluja l'any",
@@ -458,7 +460,13 @@
       "b": "estiu temperat",
       "c": "estiu fresc",
       "d": "hivern molt fred"
-    }
+    },
+    "sweetness": {
+      "dry": "Sec",
+      "medium": "Semisec",
+      "sweet": "Dolç"
+    },
+    "sweetnessRange": "De {{from}} a {{to}}"
   },
   "space": {
     "switchLabel": "Espai actiu",

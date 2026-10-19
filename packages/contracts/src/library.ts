@@ -31,9 +31,15 @@ export const LibraryImageSchema = z
   })
   .strict();
 
+const SweetnessSchema = z.enum(["dry", "medium", "sweet"]);
+
 export const LibraryGrapeSchema = z
   .object({
     acidity: LibraryLevelSchema.nullable(),
+    /** The alcohol its wines typically reach, as its sources state it. */
+    alcohol: LibraryLevelSchema.nullable(),
+    /** How dry or sweet its wines are: a range where its sources give one. */
+    sweetness: z.object({ from: SweetnessSchema, to: SweetnessSchema }).strict().nullable(),
     aromas: z.array(z.string()),
     /** Each aroma's term in the library's vocabulary, in the same order. */
     aromaTerms: z.array(z.string()),

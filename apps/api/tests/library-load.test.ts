@@ -26,6 +26,8 @@ const grape = (id: string, color: "red" | "white", names: Record<string, string>
   summaries: {},
   synonyms: [],
   tannin: null,
+  alcohol: null,
+  sweetness: null,
   wikidataId: `Q${id.length}${id.charCodeAt(0)}`,
   wikipediaUrl: `https://en.wikipedia.org/wiki/${id}`,
 });

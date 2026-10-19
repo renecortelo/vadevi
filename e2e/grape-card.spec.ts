@@ -31,14 +31,25 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await expect(page.locator(".aroma-grid .aroma-icon")).toHaveCount(5);
 
   const bars = page.locator(".library-bar");
-  await expect(bars).toHaveCount(3);
+  await expect(bars).toHaveCount(5);
   await expect(bars.nth(0)).toContainText("Baja");
   await expect(bars.nth(0).locator("i.is-on")).toHaveCount(1);
   await expect(bars.nth(2)).toHaveClass(/library-bar--none/);
   await expect(bars.nth(2)).toContainText("sin dato en las fuentes");
+  // Alcohol, from its quote: "a relatively high alcohol content".
+  await expect(bars.nth(3)).toContainText("Alta");
+  await expect(bars.nth(4)).toContainText("Seco o dulce");
 
   const results = await new AxeBuilder({ page }).include(".library-page").analyze();
   expect(results.violations).toEqual([]);
 
   await page.screenshot({ fullPage: true, path: test.info().outputPath("grape-card.png") });
+
+  // A range: Sémillon makes "dry and sweet white wines", so its bar runs the
+  // whole way.
+  await page.goto("/library/grapes/semillon");
+  const sweetness = page.locator(".library-bar").nth(4);
+  await expect(sweetness).toContainText("De seco a dulce", { timeout: 15_000 });
+  await expect(sweetness.locator("i.is-on")).toHaveCount(3);
+  await page.screenshot({ fullPage: true, path: test.info().outputPath("grape-range.png") });
 });

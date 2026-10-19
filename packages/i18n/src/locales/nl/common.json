@@ -83,7 +83,9 @@
     "axis": {
       "acidity": "Zuurgraad",
       "tannin": "Tannine",
-      "body": "Body"
+      "body": "Body",
+      "alcohol": "Alcohol",
+      "sweetness": "Droog of zoet"
     },
     "level": {
       "low": "Laag",
@@ -423,7 +425,7 @@
     "glanceProduction": "wijn per jaar",
     "glanceYear": "in {{year}}",
     "glanceConverted": "omgerekend uit acres",
-    "glanceSource": "Oppervlakte en productie: het infovak van het Wikipedia-artikel",
+    "glanceSource": "Oppervlakte en productie:",
     "climateTitle": "Klimaat",
     "climateKoppen": "Klimaattype (Köppen)",
     "climateRainfall": "Neerslag per jaar",
@@ -458,7 +460,13 @@
       "b": "warme zomer",
       "c": "koele zomer",
       "d": "zeer koude winter"
-    }
+    },
+    "sweetness": {
+      "dry": "Droog",
+      "medium": "Halfdroog",
+      "sweet": "Zoet"
+    },
+    "sweetnessRange": "{{from}} tot {{to}}"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

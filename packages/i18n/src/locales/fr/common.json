@@ -83,7 +83,9 @@
     "axis": {
       "acidity": "Acidité",
       "tannin": "Tanins",
-      "body": "Corps"
+      "body": "Corps",
+      "alcohol": "Alcool",
+      "sweetness": "Sec ou doux"
     },
     "level": {
       "low": "Faible",
@@ -423,7 +425,7 @@
     "glanceProduction": "de vin par an",
     "glanceYear": "en {{year}}",
     "glanceConverted": "converti d'acres",
-    "glanceSource": "Superficie et production : l'infobox de son article de Wikipédia",
+    "glanceSource": "Superficie et production :",
     "climateTitle": "Climat",
     "climateKoppen": "Type de climat (Köppen)",
     "climateRainfall": "Pluie par an",
@@ -458,7 +460,13 @@
       "b": "été tempéré",
       "c": "été frais",
       "d": "hiver très froid"
-    }
+    },
+    "sweetness": {
+      "dry": "Sec",
+      "medium": "Demi-sec",
+      "sweet": "Doux"
+    },
+    "sweetnessRange": "De {{from}} à {{to}}"
   },
   "space": {
     "switchLabel": "Espace actif",

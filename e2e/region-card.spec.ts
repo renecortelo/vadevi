@@ -31,9 +31,17 @@ test("a region card shows its figures and its climate", async ({ page }) => {
   const glance = page.locator(".region-glance");
   const spanish = new Intl.NumberFormat("es");
   await expect(glance).toContainText(String(rioja.register.grapes.length), { timeout: 15_000 });
-  await expect(glance).toContainText(`${spanish.format(rioja.figures.planted.amount)} ha`);
+  await expect(glance.locator("strong").nth(1)).toHaveAttribute(
+    "title",
+    `${spanish.format(rioja.figures.planted.amount)} ha`,
+  );
   // Rioja's article gives hectares: no "≈", nothing converted.
   await expect(glance).not.toContainText("≈");
+  // Three figures, one row, on a phone.
+  const tops = await glance
+    .locator("li")
+    .evaluateAll((items) => items.map((item) => item.getBoundingClientRect().top));
+  expect(new Set(tops).size).toBe(1);
 
   const climate = page.locator(".region-climate");
   await expect(climate).toContainText(`(${rioja.climate.koppen})`);
@@ -45,4 +53,10 @@ test("a region card shows its figures and its climate", async ({ page }) => {
   expect(results.violations).toEqual([]);
 
   await page.screenshot({ fullPage: true, path: test.info().outputPath("region-card.png") });
+  // On a wide screen the three figures stay on one row and the chart keeps
+  // a phone's proportions.
+  await page.setViewportSize({ height: 900, width: 1280 });
+  await page.locator(".region-climograph").scrollIntoViewIfNeeded();
+  expect((await page.locator(".climograph").boundingBox())!.width).toBeLessThanOrEqual(420);
+  await page.screenshot({ path: test.info().outputPath("region-card-wide.png") });
 });

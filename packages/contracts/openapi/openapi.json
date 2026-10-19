@@ -12340,6 +12340,43 @@
               null
             ]
           },
+          "alcohol": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              null
+            ]
+          },
+          "sweetness": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "from": {
+                "type": "string",
+                "enum": [
+                  "dry",
+                  "medium",
+                  "sweet"
+                ]
+              },
+              "to": {
+                "type": "string",
+                "enum": [
+                  "dry",
+                  "medium",
+                  "sweet"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to"
+            ],
+            "additionalProperties": false
+          },
           "aromas": {
             "type": "array",
             "items": {
@@ -12596,6 +12633,8 @@
         },
         "required": [
           "acidity",
+          "alcohol",
+          "sweetness",
           "aromas",
           "aromaTerms",
           "body",

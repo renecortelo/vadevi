@@ -37,6 +37,8 @@ const grape = (id: string, names: Record<string, string>, synonyms: string[]): G
   summaries: {},
   synonyms: synonyms.map((name) => ({ name, source: "article" as const })),
   tannin: "medium",
+  alcohol: null,
+  sweetness: null,
   wikidataId: `Q${id.length}${id.charCodeAt(0)}`,
   wikipediaUrl: `https://en.wikipedia.org/wiki/${id}`,
 });

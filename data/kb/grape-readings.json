@@ -1,0 +1,835 @@
+{
+  "$comment": "Body, alcohol and sweetness of grapes, read by hand from their Wikipedia articles where the model's reading left them empty (19 October 2026): each value with the sentence it comes from, copied as written, and the article's language. scripts/kb/build-grapes.ts checks every quote against that article as it checks a model's, and keeps only what the quote states. Sweetness is the range of the wines the grape makes: dry, medium (off-dry) or sweet, or a range such as dry-sweet.",
+  "readings": {
+    "agiorgitiko": [
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "low",
+        "quote": "but lacks acidity and body"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "The grape is most widely associated with the dry and sweet red wines of Nemea"
+      }
+    ],
+    "aleatico": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "Aleatico wines tend to have high alcohol content"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "sweet",
+        "quote": "Aleatico is often used to produce dessert wines."
+      }
+    ],
+    "alexandrouli": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "medium",
+        "quote": "to produce a semi-sweet red wine known as Khvanchkara or as a medium bodied, semi-dry, chewy blend"
+      }
+    ],
+    "alicante-bouschet": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "to produce wines high in alcohol"
+      }
+    ],
+    "aligote": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "Aligoté is a white grape used to make dry white wines"
+      }
+    ],
+    "ancellotta": [
+      {
+        "field": "alcohol",
+        "lang": "it",
+        "value": "medium",
+        "quote": "Il vino prodotto presenta una media alcolicità"
+      }
+    ],
+    "arneis": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "The white wines made from the Arneis grape tend to be dry and full bodied"
+      }
+    ],
+    "assyrtiko": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "the grape is vinified to make a variety of dry and sweet wines"
+      }
+    ],
+    "barbera": [
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "high",
+        "quote": "is known for deep color, full body, low tannins and high levels of acidity"
+      }
+    ],
+    "bastardo": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "It makes deep cherry red wines with high alcohol"
+      }
+    ],
+    "black-muscat": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "it has been used in the production of dessert wine ... In Eastern Europe, the grape produces a light, dry red wine."
+      }
+    ],
+    "blatina": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "Blatina can produce dry red wine"
+      }
+    ],
+    "boal": [
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "medium",
+        "quote": "Boal Branco erzeugt einen halbsüßen Wein"
+      }
+    ],
+    "bobal": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "low",
+        "quote": "The wines produced tend to be fruity, low in alcohol content"
+      }
+    ],
+    "cabernet-sauvignon": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "The wine's high tannin content, oak influences, and high alcohol levels associated with many regional styles"
+      }
+    ],
+    "chardonnay": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "which translates into high potential alcohol levels"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "is normally made bone-dry"
+      }
+    ],
+    "chasselas": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "Chasselas is mostly vinified to be a full, dry and fruity white wine."
+      }
+    ],
+    "chenin-blanc": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "a popular expression of Chenin as a dry wine ... producing an intense, viscous dessert wine"
+      }
+    ],
+    "ciliegiolo": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "verfügen über einen hohen Alkohol-, aber geringen Säuregehalt"
+      }
+    ],
+    "cinsaut": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "low",
+        "quote": "offering crunchy red berry flavors at low alcohols"
+      }
+    ],
+    "clairette-blanche": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "it produces wine high in alcohol and low in acidity"
+      }
+    ],
+    "colombard": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "in both dry and sweet versions"
+      }
+    ],
+    "concord": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "Traditionally, most commercially produced Concord wines are sweet, but dry versions are possible"
+      }
+    ],
+    "delaware": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "The grapes are used to make wines including dry, sweet, icewine"
+      }
+    ],
+    "dolcetto": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "In any case the wines produced are nearly always dry."
+      }
+    ],
+    "erbaluce": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "In addition to dry table wines, it is used to make sweet wines"
+      }
+    ],
+    "feteasca-alba": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die früh reifende Sorte erbringt alkoholreich sehr duftige Weine"
+      }
+    ],
+    "feteasca-neagra": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "These grapes produce dry, demi-dry or sweet wines"
+      }
+    ],
+    "feteasca-regala": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "The wines are dry and fresh and have acidity and specific flavour."
+      }
+    ],
+    "folle-blanche": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "a very dry and often tartly acidic wine"
+      }
+    ],
+    "freisa": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "Wines made from the Freisa grape are red and usually somewhat sweet and lightly sparkling, or foaming. ... ferment the wine fully dry."
+      }
+    ],
+    "furmint": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "where it is used to produce single-varietal dry wines as well as being the principal grape in the better known Tokaji dessert"
+      }
+    ],
+    "garnacha-roja": [
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "sweet",
+        "quote": "Da der natürliche Zuckergehalt der Beeren hoch ist, wird sie in Frankreich vor allem in Süßweinen des Roussillon"
+      }
+    ],
+    "gewurztraminer": [
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry-sweet",
+        "quote": "Il peut être vinifié en vin blanc sec ou moelleux"
+      }
+    ],
+    "gouais-blanc": [
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "low",
+        "quote": "Il donne un vin de médiocre qualité (peu alcoolique, acide et sans bouquet)"
+      }
+    ],
+    "greco": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "In Calabria, a specific clone of Greco bianco is used to produce the sweet dessert wine Greco di Bianco ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina to produce dry-style wines."
+      }
+    ],
+    "grenache": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "produces wine with a relatively high alcohol content"
+      }
+    ],
+    "grenache-blanc": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "Its wines are characterized by high alcohol and low acidity"
+      }
+    ],
+    "grillo": [
+      {
+        "field": "alcohol",
+        "lang": "it",
+        "value": "high",
+        "quote": "la sua vocazione a diventare vino di alto grado alcolico"
+      }
+    ],
+    "grolleau": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "low",
+        "quote": "Grolleau wines tend to have a low alcohol content"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "medium",
+        "quote": "It is often produced in off-dry to medium sweet style"
+      }
+    ],
+    "gruner-veltliner": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "Grüner Veltliner is usually produced dry"
+      }
+    ],
+    "harslevelu": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "Heute werden in der Region jedoch auch trockene, relativ alkoholreiche Weine"
+      },
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry-sweet",
+        "quote": "vor allem, um Süßweine zu gewinnen. ... Heute werden in der Region jedoch auch trockene, relativ alkoholreiche Weine"
+      }
+    ],
+    "hondarrabi-zuri": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "medium",
+        "quote": "with notable acidity and a medium to moderate alcohol content"
+      }
+    ],
+    "italian-riesling": [
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry-sweet",
+        "quote": "Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel als Grundlage für trockene Weine"
+      }
+    ],
+    "khikhvi": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "medium",
+        "quote": "Khikhvi wine is characterised by its moderate alcohol levels and soft acidity"
+      }
+    ],
+    "mandilaria": [
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry-sweet",
+        "quote": "die trocken bis süß ausgebaut werden können"
+      }
+    ],
+    "marsanne": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "The wines can be high in alcohol"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "Although Marsanne is mostly made into a dry wine, it is commonly made into a sweet wine in Valais"
+      }
+    ],
+    "mavrodafni": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "While historically linked to sweet, fortified wines, contemporary production also includes dry red wines made from Mavrodaphne"
+      }
+    ],
+    "mavrud": [
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry",
+        "quote": "Dort erbringt die Rebe intensiv vollen, trockenen und tanninherben Wein"
+      }
+    ],
+    "mencia": [
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "value": "high",
+        "quote": "El alto grado alcohólico y la moderada acidez de la Mencía"
+      }
+    ],
+    "molinara": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "medium",
+        "quote": "Die Rotweine verfügen über wenig Farbe und über einen mittleren Alkoholgehalt."
+      }
+    ],
+    "monica": [
+      {
+        "field": "sweetness",
+        "lang": "es",
+        "value": "dry-sweet",
+        "quote": "Con esta uva se hace un vino dulce notable, el Monica di Cagliari. ... El Monica di Sardegna es un vino seco."
+      }
+    ],
+    "moscato-giallo": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "in the still dry, sparkling and passito types"
+      }
+    ],
+    "mourvedre": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "Mourvèdre tends to produce tannic wines that can be high in alcohol."
+      }
+    ],
+    "mujuretuli": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "medium",
+        "quote": "a medium bodied, semi-dry, chewy blend"
+      }
+    ],
+    "muller-thurgau": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "medium",
+        "quote": "to cheaply produce large amounts of medium sweet German wines"
+      }
+    ],
+    "muscadelle": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "it is a minor constituent in the dry and sweet wines of Bordeaux"
+      }
+    ],
+    "muscat-blanc-a-petits-grains": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "On Samos, it produces a Vin Doux Naturel, aromatic dry white wines"
+      }
+    ],
+    "muscat-of-alexandria": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "sweet",
+        "quote": "In Portugal, Vinho Moscatel (Moscatel Wine) is a sweet wine widely produced in the Setúbal Peninsula region"
+      }
+    ],
+    "muscat-ottonel": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "It is most notable for its use in dessert wines from Austria, Bulgaria, Romania, Moldova, Croatia and Serbia as well as dry wines from Alsace and Hungary."
+      }
+    ],
+    "nero-d-avola": [
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "high",
+        "quote": "Flavour: dry, slightly acidic, rounded, warm and full-bodied."
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "Flavour: dry, slightly acidic, rounded, warm and full-bodied."
+      }
+    ],
+    "okuzgozu": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "low",
+        "quote": "Öküzgözü reveals low alcohol profile"
+      }
+    ],
+    "pedro-ximenez": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "sweet",
+        "quote": "but will usually be very sweet and have a strong aroma and flavor of raisins and dried figs"
+      }
+    ],
+    "petit-manseng": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "sweet",
+        "quote": "it is usually incorporated into sweet wines of Jurançon and Pacherenc du Vic-Bilh"
+      }
+    ],
+    "pinot-blanc": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "in Germany and Austria they can be either dry or sweet"
+      }
+    ],
+    "pinot-gris": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "tend to have moderate to low acidity, higher alcohol levels"
+      }
+    ],
+    "pinot-meunier": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-medium",
+        "quote": "The style of those wines ranges from simple, light, off-dry (halbtrocken) to rich, dry with substantial flavors."
+      }
+    ],
+    "pinot-noir": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "Austrian Pinot noir wines are dry red wines similar in character to the red wines of Burgundy"
+      }
+    ],
+    "piquepoul": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "Its fresh, citrus notes are described as dry, tart, and 'lip-stinging' making it suited for accompanying seafood."
+      }
+    ],
+    "plavac-mali": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "rich, flavorful wines that are high in both alcohol"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "The wines from Plavac Mali can be created as dry, semi-dry or sweet."
+      }
+    ],
+    "raboso": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "medium",
+        "quote": "with notably high levels of tannin and medium alcohol content"
+      }
+    ],
+    "rkatsiteli": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "its naturally high alcohol levels"
+      }
+    ],
+    "sagrantino": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "Historically Sagrantino was used primarily for making sweet passito wines ... Since the 1970s however, the wines have been made principally in a dry secco style"
+      }
+    ],
+    "sangiovese": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "medium",
+        "quote": "Sangiovese's high acidity and moderate alcohol"
+      }
+    ],
+    "saperavi": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "It has the potential to produce high alcohol levels"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-medium",
+        "quote": "Kindzmarauli: a natural semi-sweet wine ... Mukuzani: a dry wine"
+      }
+    ],
+    "sauvignon-blanc": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "Dry and sweet white Bordeaux, including oak-aged examples from Pessac-Léognan and Graves"
+      }
+    ],
+    "sauvignon-vert": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "The grape also has the potential for very high levels of alcohol"
+      }
+    ],
+    "savagnin": [
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "high",
+        "quote": "de vins blancs de garde, puissants, complexes et riches en alcool"
+      },
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry-sweet",
+        "quote": "In Kanada erzeugen Winzer neben trockenen, fruchtigen Weinen vereinzelt auch edelsüße Eisweine aus dem Savagnin."
+      }
+    ],
+    "scheurebe": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "the variety is often used for sweet wines, although dry Scheurebe wines have become more common in Germany"
+      }
+    ],
+    "semillon": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "is a golden-skinned grape used to make dry and sweet white wines"
+      }
+    ],
+    "sercial": [
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry",
+        "quote": "Diese Rebsorte erbringt die trockensten Weine Madeiras."
+      }
+    ],
+    "silvaner": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "and is sometimes made into a dessert wine ... which primarily stuck to dry white wines"
+      }
+    ],
+    "sultana": [
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "low",
+        "quote": "Sultaniye wines are dry and semi-dry, light-bodied wines produced in Turkey."
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-medium",
+        "quote": "Sultaniye wines are dry and semi-dry, light-bodied wines produced in Turkey."
+      }
+    ],
+    "syrah": [
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "high",
+        "quote": "Wines made from Syrah are often powerfully flavoured and full-bodied."
+      }
+    ],
+    "tannat": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "They often have a deep dark color with high level of alcohol."
+      },
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "high",
+        "quote": "The resulting wines are typically full bodied and very fruity."
+      }
+    ],
+    "trepat": [
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "low",
+        "quote": "amb poca aroma i baixa graduació alcohòlica"
+      }
+    ],
+    "tsolikouri": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-medium",
+        "quote": "It has been used for production of premium dry, semi-sweet and semi-dry wines."
+      }
+    ],
+    "usakhelauri": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "medium",
+        "quote": "is a naturally semi-sweet Georgian wine"
+      }
+    ],
+    "vermentino": [
+      {
+        "field": "alcohol",
+        "lang": "it",
+        "value": "high",
+        "quote": "caratterizzati da una notevole struttura e alcolicità"
+      }
+    ],
+    "viognier": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "produce wine with a strong perfume and high in alcohol"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry-sweet",
+        "quote": "Viognier wines are predominantly dry, although sweet late-harvest dessert wines have been made"
+      }
+    ],
+    "vranec": [
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry",
+        "quote": "Il produit un vin rouge-pourpre, sec, équilibré."
+      }
+    ],
+    "xarel-lo": [
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Le vin de xarello est coloré, jaune or, puissant, riche en alcool et en acidité."
+      }
+    ],
+    "zierfandler": [
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "sweet",
+        "quote": "Zierfandler wines are typically elegant and quite sweet"
+      }
+    ],
+    "zinfandel": [
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "high",
+        "quote": "The grape's high sugar content can be fermented into levels of alcohol exceeding 15 percent."
+      }
+    ]
+  }
+}

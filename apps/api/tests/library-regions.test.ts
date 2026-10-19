@@ -38,6 +38,8 @@ const grape = {
   summaries: {},
   synonyms: [],
   tannin: null,
+  alcohol: null,
+  sweetness: null,
   wikidataId: "Q519874",
   wikipediaUrl: "https://en.wikipedia.org/wiki/Tempranillo",
 };

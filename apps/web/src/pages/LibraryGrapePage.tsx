@@ -85,8 +85,15 @@ export function LibraryGrapePage() {
     );
   }
 
-  const axes = ["acidity", "tannin", "body"] as const;
-  const structure = axes.filter((axis) => grape[axis] !== null);
+  const axes = ["acidity", "tannin", "body", "alcohol"] as const;
+  const structure = [
+    ...axes.filter((axis) => grape[axis] !== null),
+    ...(grape.sweetness === null ? [] : ["sweetness"]),
+  ];
+  const sweetSteps = ["dry", "medium", "sweet"] as const;
+  // "Trocken bis süß": the range reads as a sentence, its first letter up.
+  const sentence = (text: string) =>
+    text.charAt(0).toLocaleUpperCase(i18n.language) + text.slice(1);
   const steps = ["low", "medium", "high"] as const;
   const fromSource = grape.pairings;
   const suggested = grape.suggestedPairings;
@@ -206,6 +213,49 @@ export function LibraryGrapePage() {
                   </div>
                 );
               })}
+              {/* From dry to sweet: the range of the wines it makes, as its
+                  sources give it — Riesling's runs the whole bar. */}
+              <div
+                className={
+                  grape.sweetness === null ? "library-bar library-bar--none" : "library-bar"
+                }
+              >
+                <dt>{t("library.axis.sweetness")}</dt>
+                <dd>
+                  <span aria-hidden="true" className="library-bar__steps">
+                    {sweetSteps.map((step, index) => (
+                      <i
+                        className={
+                          grape.sweetness !== null &&
+                          index >= sweetSteps.indexOf(grape.sweetness.from) &&
+                          index <= sweetSteps.indexOf(grape.sweetness.to)
+                            ? "is-on"
+                            : undefined
+                        }
+                        key={step}
+                      />
+                    ))}
+                  </span>
+                  <span aria-hidden="true" className="library-bar__ends">
+                    <span>{t("library.sweetness.dry")}</span>
+                    <span>{t("library.sweetness.sweet")}</span>
+                  </span>
+                  {grape.sweetness === null
+                    ? t("library.noSourceValue")
+                    : grape.sweetness.from === grape.sweetness.to
+                      ? t(`library.sweetness.${grape.sweetness.from}`)
+                      : sentence(
+                          t("library.sweetnessRange", {
+                            from: t(`library.sweetness.${grape.sweetness.from}`).toLocaleLowerCase(
+                              i18n.language,
+                            ),
+                            to: t(`library.sweetness.${grape.sweetness.to}`).toLocaleLowerCase(
+                              i18n.language,
+                            ),
+                          }),
+                        )}
+                </dd>
+              </div>
             </dl>
           )}
         </section>

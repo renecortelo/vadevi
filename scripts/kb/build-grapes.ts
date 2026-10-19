@@ -106,6 +106,35 @@ const translations = (
   }
 ).grapes;
 
+/**
+ * Structure read by hand from a grape's articles (`data/kb/grape-readings.json`):
+ * body, alcohol and sweetness, each with its quote and the article's language.
+ */
+const handReadings = (
+  JSON.parse(readFileSync(resolve("data/kb/grape-readings.json"), "utf8")) as {
+    readings: Record<
+      string,
+      {
+        field: "alcohol" | "body" | "sweetness";
+        lang: string;
+        quote: string;
+        value: string;
+      }[]
+    >;
+  }
+).readings;
+
+/** A grape's cached article in another language, with its address. */
+function articleIn(qid: string, lang: string): { article: string; url: string } | null {
+  const path = resolve(cache, "grapes-extra", `${qid}.${lang}.json`);
+  if (!existsSync(path)) return null;
+  const article = JSON.parse(readFileSync(path, "utf8")) as { text: string; title: string };
+  return {
+    article: article.text,
+    url: `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(article.title.replaceAll(" ", "_"))}`,
+  };
+}
+
 /** Names given by hand where Wikidata has none (`data/kb/grape-names.json`). */
 const givenNames = (
   JSON.parse(readFileSync(resolve("data/kb/grape-names.json"), "utf8")) as {
@@ -183,11 +212,15 @@ for (const qid of index) {
       result.color = found.color;
       result.evidence.push(...cite("color"));
     }
-    for (const axis of ["acidity", "tannin", "body"] as const) {
+    for (const axis of ["acidity", "tannin", "body", "alcohol"] as const) {
       if (result[axis] === null && found[axis] !== null) {
         result[axis] = found[axis];
         result.evidence.push(...cite(axis));
       }
+    }
+    if (result.sweetness === null && found.sweetness !== null) {
+      result.sweetness = found.sweetness;
+      result.evidence.push(...cite("sweetness"));
     }
     for (const listField of ["aromas", "pairings", "styles"] as const) {
       const fresh = found[listField].filter((item) => !result[listField].includes(item));
@@ -203,6 +236,41 @@ for (const qid of index) {
       result.regions.push(...freshRegions);
       result.evidence.push(...cite("regions"));
     }
+  }
+  // Read by hand where the readings above left a field empty
+  // (`data/kb/grape-readings.json`): each value with its quote, checked
+  // against the article it names exactly as a model's proposal is.
+  for (const reading of handReadings[slug(raw.labels.en ?? qid)] ?? []) {
+    const source =
+      reading.lang === "en" && raw.article !== null
+        ? { article: raw.article, url: undefined }
+        : articleIn(qid, reading.lang);
+    if (source === null) {
+      rejected.push({
+        field: reading.field,
+        grape: raw.labels.en ?? qid,
+        reason: `no ${reading.lang} article cached`,
+        value: reading.value,
+      });
+      continue;
+    }
+    const found = validateExtraction(
+      { [reading.field]: { quote: reading.quote, value: reading.value } },
+      source.article,
+      raw.wikidataOrigin,
+    );
+    rejected.push(
+      ...found.rejected.map((entry) => ({ ...entry, grape: `${raw.labels.en ?? qid} (by hand)` })),
+    );
+    const field = reading.field;
+    if (result[field] !== null || found[field] === null) continue;
+    if (field === "sweetness") result.sweetness = found.sweetness;
+    else result[field] = found[field];
+    result.evidence.push(
+      ...found.evidence
+        .filter((entry) => entry.field === field)
+        .map((entry) => (source.url === undefined ? entry : { ...entry, sourceUrl: source.url })),
+    );
   }
   const names: Record<string, string> = {};
   // Some languages write a variety in lower case in running text ("la
@@ -258,6 +326,7 @@ for (const qid of index) {
 
   entries.push({
     acidity: result.acidity,
+    alcohol: result.alcohol,
     aromas: terms("aroma", result.aromas),
     body: result.body,
     color: result.color,
@@ -270,6 +339,7 @@ for (const qid of index) {
     regions: result.regions,
     styles: result.styles,
     summaries,
+    sweetness: result.sweetness,
     synonyms,
     tannin: result.tannin,
     wikidataId: qid,

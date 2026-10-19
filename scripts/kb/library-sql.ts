@@ -149,6 +149,8 @@ export function libraryTables(
         "body",
         "prominence",
         "wikipedia_url",
+        "alcohol",
+        "sweetness",
       ],
       ["id"],
       2,
@@ -162,6 +164,12 @@ export function libraryTables(
         grape.body,
         grape.prominence,
         grape.wikipediaUrl,
+        grape.alcohol,
+        grape.sweetness === null
+          ? null
+          : grape.sweetness.from === grape.sweetness.to
+            ? grape.sweetness.from
+            : `${grape.sweetness.from}-${grape.sweetness.to}`,
       ]),
     ),
     table(
