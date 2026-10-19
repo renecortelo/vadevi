@@ -475,7 +475,8 @@
     "yoursTastings_one": "{{count}} dégustation",
     "yoursTastings_other": "{{count}} dégustations",
     "yoursAverage": "moyenne {{score}}/100",
-    "glanceSourceMapa": "Ministère espagnol de l'Agriculture (MAPA), campagne {{campaign}}"
+    "glanceSourceMapa": "Ministère espagnol de l'Agriculture (MAPA), campagne {{campaign}}",
+    "glanceSourceDouane": "Douanes françaises, déclarations de récolte {{campaign}} · Licence Ouverte"
   },
   "space": {
     "switchLabel": "Espace actif",

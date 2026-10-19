@@ -57,6 +57,14 @@ test("a region card shows its figures and its climate", async ({ page }) => {
   expect(results.violations).toEqual([]);
 
   await page.screenshot({ fullPage: true, path: test.info().outputPath("region-card.png") });
+
+  // A French PDO: area and volume from the customs' harvest declarations.
+  await page.goto("/library/regions/fr-chablis");
+  await expect(page.locator("#region-glance ~ .section-help")).toContainText("Aduanas de Francia", {
+    timeout: 15_000,
+  });
+  await expect(page.locator(".region-glance li")).toHaveCount(3);
+  await page.goto(`/library/regions/${rioja.id}`);
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.
   await page.setViewportSize({ height: 900, width: 1280 });

@@ -42,6 +42,9 @@ has the reasons.
   how many, how often tasted, their mean score, each linked to its page.
   Only wines whose region the library knows for certain to be that name
   count. The wine list takes a new filter, `regionRef`.
+- **France's vineyards, from the customs**: 293 French PDOs show their area
+  in production and the volume produced from the customs' 2024 harvest
+  declarations (Licence Ouverte), credited with the year and a link.
 - **Spain's vineyards, from the Ministry**: 94 Spanish PDOs show their
   registered vineyard area from the Ministry of Agriculture's 2022/2023
   report, newer than any article's and credited to it.

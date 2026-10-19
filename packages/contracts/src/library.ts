@@ -202,8 +202,8 @@ const RegionFigureSchema = z
   .object({
     /** Hectares, or hectolitres. */
     amount: z.number(),
-    /** Who gives it, where not Wikipedia: "mapa", Spain's Ministry of Agriculture. */
-    publisher: z.enum(["mapa"]).optional(),
+    /** Who gives it, where not Wikipedia: Spain's Ministry ("mapa"), France's customs ("douane"). */
+    publisher: z.enum(["douane", "mapa"]).optional(),
     /** The infobox line it was read from. */
     quote: z.string(),
     sourceUrl: z.string().url(),

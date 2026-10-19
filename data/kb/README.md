@@ -352,6 +352,11 @@ Every few months, or when a register announces a name:
   1495/2011); each PDO's registered area is shown with the campaign and a
   link to the report.
 
+- **French customs (DGDDI)**, «Superficies et volumes en production par
+  produit», 2024 harvest declarations (`fr-aop-figures.json`): Licence
+  Ouverte / Etalab 2.0; each PDO's area and volume are shown with the year
+  and a link to the file.
+
 - **Copernicus DEM GLO-90** (doi:10.5270/ESA-c5d3d65), through
   Open-Meteo's elevation API: CC BY 4.0, credited to the Copernicus programme
   and Open-Meteo under the climate (`pnpm kb:fetch-elevation`).

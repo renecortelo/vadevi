@@ -475,7 +475,8 @@
     "yoursTastings_one": "{{count}} degustazione",
     "yoursTastings_other": "{{count}} degustazioni",
     "yoursAverage": "media {{score}}/100",
-    "glanceSourceMapa": "Ministero spagnolo dell'Agricoltura (MAPA), campagna {{campaign}}"
+    "glanceSourceMapa": "Ministero spagnolo dell'Agricoltura (MAPA), campagna {{campaign}}",
+    "glanceSourceDouane": "Dogane francesi, dichiarazioni di vendemmia {{campaign}} · Licence Ouverte"
   },
   "space": {
     "switchLabel": "Spazio attivo",

@@ -475,7 +475,8 @@
     "yoursTastings_one": "{{count}} cata",
     "yoursTastings_other": "{{count}} catas",
     "yoursAverage": "media {{score}}/100",
-    "glanceSourceMapa": "Ministerio de Agricultura (MAPA), campaña {{campaign}}"
+    "glanceSourceMapa": "Ministerio de Agricultura (MAPA), campaña {{campaign}}",
+    "glanceSourceDouane": "Aduanas de Francia, declaraciones de cosecha {{campaign}} · Licence Ouverte"
   },
   "space": {
     "switchLabel": "Espacio activo",

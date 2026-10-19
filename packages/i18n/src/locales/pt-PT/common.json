@@ -475,7 +475,8 @@
     "yoursTastings_one": "{{count}} prova",
     "yoursTastings_other": "{{count}} provas",
     "yoursAverage": "média {{score}}/100",
-    "glanceSourceMapa": "Ministério da Agricultura de Espanha (MAPA), campanha {{campaign}}"
+    "glanceSourceMapa": "Ministério da Agricultura de Espanha (MAPA), campanha {{campaign}}",
+    "glanceSourceDouane": "Alfândegas de França, declarações de colheita {{campaign}} · Licence Ouverte"
   },
   "space": {
     "switchLabel": "Espaço ativo",

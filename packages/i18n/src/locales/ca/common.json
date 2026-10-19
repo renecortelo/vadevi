@@ -475,7 +475,8 @@
     "yoursTastings_one": "{{count}} tast",
     "yoursTastings_other": "{{count}} tastos",
     "yoursAverage": "mitjana {{score}}/100",
-    "glanceSourceMapa": "Ministeri d'Agricultura (MAPA), campanya {{campaign}}"
+    "glanceSourceMapa": "Ministeri d'Agricultura (MAPA), campanya {{campaign}}",
+    "glanceSourceDouane": "Duanes de França, declaracions de collita {{campaign}} · Licence Ouverte"
   },
   "space": {
     "switchLabel": "Espai actiu",

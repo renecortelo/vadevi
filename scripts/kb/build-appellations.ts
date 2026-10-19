@@ -1490,8 +1490,39 @@ for (const entry of entries) {
   };
   official += 1;
 }
+// France's PDOs: area in production and volume produced, from the customs'
+// harvest declarations (`data/kb/fr-aop-figures.json`, Licence Ouverte 2.0),
+// newer and official, in place of an article's.
+const french = JSON.parse(readFileSync(resolve("data/kb/fr-aop-figures.json"), "utf8")) as {
+  campaign: string;
+  regions: Record<string, { plantedHa: number; producedHl: number }>;
+  sourceUrl: string;
+};
+let customs = 0;
+for (const entry of entries) {
+  const figures = french.regions[entry.id];
+  if (figures === undefined) continue;
+  const source = {
+    publisher: "douane" as const,
+    sourceUrl: french.sourceUrl,
+    year: french.campaign,
+  };
+  entry.figures = {
+    planted: {
+      ...source,
+      amount: figures.plantedHa,
+      quote: `Superficies en production (ha): ${figures.plantedHa}`,
+    },
+    production: {
+      ...source,
+      amount: figures.producedHl,
+      quote: `Volumes totaux produits (hl): ${figures.producedHl}`,
+    },
+  };
+  customs += 1;
+}
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs.`,
 );
 
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);

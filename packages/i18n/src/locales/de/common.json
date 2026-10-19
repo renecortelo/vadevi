@@ -475,7 +475,8 @@
     "yoursTastings_one": "{{count}} Verkostung",
     "yoursTastings_other": "{{count}} Verkostungen",
     "yoursAverage": "Schnitt {{score}}/100",
-    "glanceSourceMapa": "Spanisches Landwirtschaftsministerium (MAPA), Kampagne {{campaign}}"
+    "glanceSourceMapa": "Spanisches Landwirtschaftsministerium (MAPA), Kampagne {{campaign}}",
+    "glanceSourceDouane": "Französischer Zoll, Ernteerklärungen {{campaign}} · Licence Ouverte"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

@@ -101,7 +101,9 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
                 <a className="text-link" href={figure.sourceUrl} rel="noreferrer" target="_blank">
                   {figure.publisher === "mapa"
                     ? t("library.glanceSourceMapa", { campaign: figure.year ?? "" })
-                    : t("library.summarySource")}
+                    : figure.publisher === "douane"
+                      ? t("library.glanceSourceDouane", { campaign: figure.year ?? "" })
+                      : t("library.summarySource")}
                 </a>
               </span>
             ),
