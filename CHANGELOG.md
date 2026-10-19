@@ -34,6 +34,9 @@ has the reasons.
   how many, how often tasted, their mean score, each linked to its page.
   Only wines whose region the library knows for certain to be that name
   count. The wine list takes a new filter, `regionRef`.
+- **More grapes with alcohol, sweetness and body**: their articles in six
+  more languages (`pnpm kb:fetch-grape-articles`) and 51 more values read by
+  hand bring alcohol to 58 grapes, sweetness to 85 and body to 71.
 - **Dry or sweet, and alcohol**: a grape's card adds two scales — the
   alcohol its wines typically reach, and how dry or sweet they are, as a
   range where its sources give one (Sémillon's «dry and sweet white wines»

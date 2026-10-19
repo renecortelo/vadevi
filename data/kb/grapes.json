@@ -1263,7 +1263,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "black fruit"
     ],
@@ -1359,6 +1359,12 @@
         "field": "regions",
         "quote": "in the blends used for ports, and is increasingly being used for table wine in the Douro and Dão ... In the Douro it is grown",
         "value": "PT: Dão"
+      },
+      {
+        "field": "alcohol",
+        "quote": "sind tanninreiche, geschmackvolle Rotweine mit einem hohen Alkoholgehalt",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Touriga_Nacional"
       }
     ],
     "id": "touriga-nacional",
@@ -2352,7 +2358,7 @@
     "aromas": [
       "lemon"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -2434,6 +2440,12 @@
         "field": "regions",
         "quote": "In Portugal, Treixadura is primarily found in the Minho wines of Vinho Verde ... In Spain, while Treixadura is most commonly found in the Rías Baixas and Ribeiro Denominación de Origen (DO)s, it is also found in other Galician wines such as the Monterrei DO ...",
         "value": "ES: Monterrei"
+      },
+      {
+        "field": "body",
+        "quote": "Die spätreifende Sorte erbringt duftige, körperreiche und alkoholstarke Weine.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Trajadura"
       }
     ],
     "id": "treixadura",
@@ -2554,7 +2566,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -2669,6 +2681,12 @@
         "quote": "In Spain, it is a permitted variety in the Denominación de Origens (DOs) of Rías Baixas and Ribeiro where it produces highly perfumed wines with noticeable tartness and high acidity.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Cai%C3%B1o_tinto"
+      },
+      {
+        "field": "alcohol",
+        "quote": "einen hellen, rubinroten Wein mit niedrigem Alkoholgehalt",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Borra%C3%A7al"
       }
     ],
     "id": "caino-tinto",
@@ -3040,7 +3058,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -3096,6 +3114,12 @@
         "quote": "La prieto picudo es una de las principales uvas tintas de los vinos de la Denominación de Origen (DO) española León y de la D.O.P. Valles de Benavente en la provincia de Zamora.",
         "value": "ES: Valles de Benavente",
         "sourceUrl": "https://es.wikipedia.org/wiki/Prieto_picudo"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Aus Prieto Picudo werden gute, alkoholreiche Rotweine",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Prieto_Picudo"
       }
     ],
     "id": "prieto-picudo",
@@ -4459,6 +4483,12 @@
         "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
         "value": "spice",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "sweetness",
+        "quote": "de vins tranquilles et secs du Douro et du Dão",
+        "value": "dry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
       }
     ],
     "id": "touriga-francesa",
@@ -4531,7 +4561,10 @@
         "url": "https://es.wikipedia.org/wiki/Touriga_franca"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Albino de Souza",
@@ -5787,7 +5820,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "lime",
       "greengage"
@@ -5934,6 +5967,12 @@
         "field": "regions",
         "quote": "predominantly grown in the southeastern regions of Piedmont in the provinces of Alessandria and Asti ... Colli Tortonesi ... Cortese di Gavi. Significant plantings of Cortese can also be found in the Lombardy region of Oltrepò Pavese and the DOC white blends of the Veneto wine region of Bianco di Custoza ... Garda Cortese DOC is produced in the hills near Lake Garda",
         "value": "IT: Bianco di Custoza"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Les vins blancs sont d'une couleur jaune paille un peu verdâtre, moyennement alcoolique.",
+        "value": "medium",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Cortese_(c%C3%A9page)"
       }
     ],
     "id": "cortese",
@@ -6088,7 +6127,7 @@
     "acidity": "high",
     "alcohol": null,
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -6195,6 +6234,12 @@
         "field": "regions",
         "quote": "It is mainly grown in the Gaillac and Limoux regions in southwest France ... The grape is also one of the seven permitted white varieties in Bordeaux wine.",
         "value": "FR: Bordeaux"
+      },
+      {
+        "field": "body",
+        "quote": "Der Mauzac liefert einen aromatischen und recht körperreichen Weißwein",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mauzac"
       }
     ],
     "id": "mauzac",
@@ -6963,7 +7008,7 @@
       "herbaceous",
       "dill"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -7095,6 +7140,18 @@
         "field": "alcohol",
         "quote": "Its wines are characterized by high alcohol and low acidity",
         "value": "high"
+      },
+      {
+        "field": "body",
+        "quote": "Produce vinos de gran cuerpo y mucho alcohol",
+        "value": "high",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Garnacha_blanca"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Le grenache blanc donne des vins blancs secs puissants et chaleureux ... il sert également à l'élaboration des vins doux naturels.",
+        "value": "dry-sweet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_blanc"
       }
     ],
     "id": "grenache-blanc",
@@ -7177,7 +7234,10 @@
         "url": "https://en.wikipedia.org/wiki/Grenache_blanc"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Alicante blanca",
@@ -7226,7 +7286,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "grape"
     ],
@@ -7302,6 +7362,12 @@
         "field": "sweetness",
         "quote": "In Portugal, Vinho Moscatel (Moscatel Wine) is a sweet wine widely produced in the Setúbal Peninsula region",
         "value": "sweet"
+      },
+      {
+        "field": "alcohol",
+        "quote": "dolce e con elevato grado alcolico",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Zibibbo"
       }
     ],
     "id": "muscat-of-alexandria",
@@ -11227,7 +11293,7 @@
     "aromas": [
       "cherry"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -11284,6 +11350,12 @@
         "field": "regions",
         "quote": "particularly in the San Joaquin Valley ... Small amounts are grown in the Hunter Valley and Murray-Darling area ... Vale do São Francisco winery in Pernambuco ... Vinícola Campos de Cima in Itaqui, Campanha Gaúcha, grows the grape ... Valle De Guadalupe, Baja California ... It is successfully grown in the Robertson district ... Several DOs on the Islas Canarias feature Ruby Cabernet",
         "value": "ES: Islas Canarias"
+      },
+      {
+        "field": "body",
+        "quote": "Le cépage produit des vins très colorés mais de qualité ordinaire, manquant de corps.",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Ruby_cabernet"
       }
     ],
     "id": "ruby-cabernet",
@@ -11495,6 +11567,12 @@
         "field": "regions",
         "quote": "particularly in the Umbria region where it is used in the Denominazione di origine controllata (DOC) wine Orvieto ... DOCs of Torgiano and Colli Martani ... In Lazio, the grape is found in the Cervaro region",
         "value": "IT: Lazio"
+      },
+      {
+        "field": "sweetness",
+        "quote": "In bocca il vino si presenta sufficientemente alcolico, secco",
+        "value": "dry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Grechetto"
       }
     ],
     "id": "grechetto",
@@ -11571,7 +11649,10 @@
         "url": "https://en.wikipedia.org/wiki/Grechetto"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Greca del Piemonte",
@@ -12525,6 +12606,12 @@
         "field": "alcohol",
         "quote": "The wine's high tannin content, oak influences, and high alcohol levels associated with many regional styles",
         "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "El vi elaborat amb raïm cabernet sauvignon és sec, àcid, amb cos, ric en alcohol",
+        "value": "dry",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Cabernet_sauvignon"
       }
     ],
     "id": "cabernet-sauvignon",
@@ -12581,7 +12668,10 @@
         "url": "https://pt.wikipedia.org/wiki/Cabernet_Sauvignon"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Petite Vidure",
@@ -13533,6 +13623,12 @@
         "field": "styles",
         "quote": "It is used to make dry, semi-sweet, sweet, and sparkling white wines.",
         "value": "sweet"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Los vinos hechos a partir de esta uva cubren un amplio espectro de sabores, desde dulce al seco",
+        "value": "dry-sweet",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Riesling_(uva)"
       }
     ],
     "id": "riesling",
@@ -13593,7 +13689,10 @@
         "url": "https://pt.wikipedia.org/wiki/Riesling"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Rossling",
@@ -14017,7 +14116,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "blackberry",
       "mint",
@@ -14193,6 +14292,18 @@
         "field": "body",
         "quote": "Wines made from Syrah are often powerfully flavoured and full-bodied.",
         "value": "high"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Els vins de syrah sobresurten pel seu color vermell profund, per la seva tannicitat, bona acidesa i elevat grau alcohòlic.",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Syrah"
+      },
+      {
+        "field": "sweetness",
+        "quote": "És una varietat utilitzada en els vins negres secs",
+        "value": "dry",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Syrah"
       }
     ],
     "id": "syrah",
@@ -14251,7 +14362,10 @@
         "url": "https://pt.wikipedia.org/wiki/Syrah"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Antourenein noir",
@@ -14431,6 +14545,12 @@
         "field": "alcohol",
         "quote": "tend to have moderate to low acidity, higher alcohol levels",
         "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Esto puede conducir a un vino más dulce o, en el caso de que se fermente para producir un vino seco",
+        "value": "dry-sweet",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Pinot_gris"
       }
     ],
     "id": "pinot-gris",
@@ -14491,7 +14611,10 @@
         "url": "https://es.wikipedia.org/wiki/Pinot_gris"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Ruländer",
@@ -16006,7 +16129,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "tar",
       "rose",
@@ -16204,6 +16327,12 @@
         "quote": "Nebbiolo produces lightly-colored red wines which can be highly tannic in youth with scents of tar and roses.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Nebbiolo"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Els vins elaborats amb nebbiolo tenen molt bona acidesa i tannicitat, bon cos i graduació alcohòlica elevada.",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Nebbiolo"
       }
     ],
     "id": "nebbiolo",
@@ -17928,9 +18057,9 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -17958,6 +18087,18 @@
         "quote": "The variety was historically a component of Rioja's red wine blend.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Carignan"
+      },
+      {
+        "field": "alcohol",
+        "quote": "El vi varietal jove de raïm carinyena té molt de color i cos, amb un grau alcohòlic elevat",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Carinyena"
+      },
+      {
+        "field": "body",
+        "quote": "El vi varietal jove de raïm carinyena té molt de color i cos",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Carinyena"
       }
     ],
     "id": "carignan",
@@ -19938,6 +20079,12 @@
         "field": "regions",
         "quote": "Spain produces Albariño ... in the Rías Baixas DO, as well as in Barbanza e Iria. In Portugal Alvarinho is common in the Vinho Verde region, but it is only authorised to be grown in Monção and Melgaço. ... Albariño is now produced in several California regions including the Santa Ynez Valley, ... Napa, ... and in Washington state. Albariño is also grown in Uruguay ...",
         "value": "UY: Uruguay"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Il vino albariño è un vino bianco, ampio, secco, molto leggero e delizioso.",
+        "value": "dry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Albari%C3%B1o"
       }
     ],
     "id": "albarino",
@@ -20026,7 +20173,10 @@
         "url": "https://pt.wikipedia.org/wiki/Alvarinho"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Albelleiro",
@@ -20095,7 +20245,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "banana",
       "graphite",
@@ -20184,6 +20334,12 @@
         "field": "styles",
         "quote": "principally used in classic Bordeaux blends... made into single varietal wine... used as 'seasoning' in Bordeaux-style blends",
         "value": "blending"
+      },
+      {
+        "field": "alcohol",
+        "quote": "de color intens, amb un grau alcohòlic alt",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Petit_verdot"
       }
     ],
     "id": "petit-verdot",
@@ -22389,7 +22545,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "smoky",
       "pear",
@@ -22615,6 +22771,12 @@
         "field": "sweetness",
         "quote": "where it is used to produce single-varietal dry wines as well as being the principal grape in the better known Tokaji dessert",
         "value": "dry-sweet"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Il donne un vin au potentiel alcoolique élevé.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Furmint"
       }
     ],
     "id": "furmint",
@@ -24401,7 +24563,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [],
     "body": null,
     "color": "white",
@@ -24530,6 +24692,18 @@
         "field": "regions",
         "quote": "It is widely grown in the Rioja region of northeastern Spain, the Cava producing areas south of Barcelona, and the Languedoc-Roussillon region of France. ... Since 2009, some Macabeo is grown in Israel.",
         "value": "IL: Israel"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Dona vins de graduació alcohòlica moderada",
+        "value": "medium",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Macabeu_(ra%C3%AFm)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "où il est utilisé particulièrement pour produire des vins doux naturels ... Le macabeu peut être utilisé pour l'élaboration de vin blanc sec.",
+        "value": "dry-sweet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Macabeu"
       }
     ],
     "id": "macabeo",
@@ -24605,7 +24779,10 @@
         "url": "https://en.wikipedia.org/wiki/Macabeo"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Alcañol",
@@ -24678,7 +24855,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "earthy",
       "bitter"
@@ -24805,6 +24982,12 @@
         "field": "regions",
         "quote": "It is grown almost exclusively in Apulia and particularly in Salento",
         "value": "IT: Salento"
+      },
+      {
+        "field": "alcohol",
+        "quote": "En boca són vins amb cos, càlids (alt grau alcohòlic)",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Negroamaro"
       }
     ],
     "id": "negroamaro",
@@ -25523,7 +25706,7 @@
       "prune",
       "almond"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -25651,6 +25834,12 @@
         "field": "sweetness",
         "quote": "In any case the wines produced are nearly always dry.",
         "value": "dry"
+      },
+      {
+        "field": "body",
+        "quote": "é utilizada essencialmente para produzir vinhos secos de corpo médio",
+        "value": "medium",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Dolcetto"
       }
     ],
     "id": "dolcetto",
@@ -26271,6 +26460,12 @@
         "quote": "caratterizzati da una notevole struttura e alcolicità",
         "value": "high",
         "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Ses grappes produisent un vin sec",
+        "value": "dry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Vermentino"
       }
     ],
     "id": "vermentino",
@@ -26392,7 +26587,10 @@
         "url": "https://es.wikipedia.org/wiki/Vermentino"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Agostenga",
@@ -26455,7 +26653,7 @@
       "mineral",
       "citrus"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -26532,6 +26730,12 @@
         "field": "sweetness",
         "quote": "the grape is vinified to make a variety of dry and sweet wines",
         "value": "dry-sweet"
+      },
+      {
+        "field": "body",
+        "quote": "Er ist ein säure- und körperreicher, meist blassgelber Wein",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Assyrtiko"
       }
     ],
     "id": "assyrtiko",
@@ -28830,7 +29034,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "peach",
       "apricot",
@@ -28948,6 +29152,18 @@
         "field": "regions",
         "quote": "Torrontés Riojano is widely grown in the La Rioja and Salta provinces ... In the arid San Juan province, Torrontés Sanjuanino is found ... Torrontés Mendocino ... is mostly found in the southern province of Rio Negro.",
         "value": "AR: Rio Negro"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Moyennement alcooliques, ils offrent un bon équilibre alcool-acidité.",
+        "value": "medium",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Torront%C3%A9s"
+      },
+      {
+        "field": "sweetness",
+        "quote": "che produce un vino secco",
+        "value": "dry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Torront%C3%A9s"
       }
     ],
     "id": "torrontes",
@@ -29020,7 +29236,10 @@
         "url": "https://es.wikipedia.org/wiki/Torront%C3%A9s"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Malvasia",
@@ -29779,7 +29998,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "banana",
       "pineapple",
@@ -29943,6 +30162,12 @@
         "field": "regions",
         "quote": "Airén is by far the most abundant in the Valdepeñas and La Mancha DOs, very abundant in the provinces of Ciudad Real, Toledo, ... Albacete and Cuenca. ... can also be found significantly in Madrid and as far south as Montilla-Moriles.",
         "value": "ES: Montilla-Moriles"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Aus der Rebsorte wird hellgelber, neutraler Wein mit einem hohen Alkoholgehalt hergestellt.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Air%C3%A9n"
       }
     ],
     "id": "airen",
@@ -31105,7 +31330,7 @@
       "black pepper",
       "spice"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -31207,6 +31432,12 @@
         "field": "sweetness",
         "quote": "The wines from Plavac Mali can be created as dry, semi-dry or sweet.",
         "value": "dry-sweet"
+      },
+      {
+        "field": "body",
+        "quote": "Die körperreichen Rotweine sind meist sehr dunkel, alkoholreich",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Plavac_Mali_Crni"
       }
     ],
     "id": "plavac-mali",
@@ -32117,7 +32348,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "floral"
     ],
@@ -32237,6 +32468,12 @@
         "field": "sweetness",
         "quote": "It is most notable for its use in dessert wines from Austria, Bulgaria, Romania, Moldova, Croatia and Serbia as well as dry wines from Alsace and Hungary.",
         "value": "dry-sweet"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Er ist mild, meist niedrig in Alkoholgehalt und Extrakt.",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Muskat_Ottonel"
       }
     ],
     "id": "muscat-ottonel",
@@ -32556,7 +32793,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -32710,6 +32947,12 @@
         "field": "regions",
         "quote": "The grape is widely planted throughout central and southern Italy, most notably in Abruzzo, Lazio, Marche, Molise, Umbria and Apulia",
         "value": "IT: Apulia"
+      },
+      {
+        "field": "alcohol",
+        "quote": "besitzen wenig Säure und sind alkoholreich",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Montepulciano_(Rebsorte)"
       }
     ],
     "id": "montepulciano",
@@ -33124,6 +33367,12 @@
         "quote": "Sie sollte als Verschnittpartner anderer roter Rebsorten dem daraus gekelterten Wein mehr Farbe verleihen ... Zunehmend wird Dornfelder auch weiß gekeltert und als Stillwein zu Schaumwein weiterverarbeitet. Bei kurzer Maischegärung entstehen (häufig liebliche) Roséweine.",
         "value": "still",
         "sourceUrl": "https://de.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Hoy, muchos de los ejemplares de dornfelder se fermentan secos",
+        "value": "dry",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Dornfelder"
       }
     ],
     "id": "dornfelder",
@@ -33225,7 +33474,10 @@
         "url": "https://es.wikipedia.org/wiki/Dornfelder"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": "high",
     "wikidataId": "Q1245736",
@@ -33660,7 +33912,7 @@
     "acidity": "high",
     "alcohol": null,
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -33815,6 +34067,18 @@
         "quote": "Sus aromas, peculiares y agradables, aportan finura a los vinos de mezcla que contienen esta variedad.",
         "value": "still",
         "sourceUrl": "https://es.wikipedia.org/wiki/Graciano_(uva)"
+      },
+      {
+        "field": "body",
+        "quote": "Al gusto si rivela solitamente secco, caldo, abbastanza morbido, abbastanza fresco, abbastanza tannico, sapido, di corpo tendente al robusto",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Cagnulari"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Al gusto si rivela solitamente secco",
+        "value": "dry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Cagnulari"
       }
     ],
     "id": "graciano",
@@ -33918,7 +34182,10 @@
         "url": "https://es.wikipedia.org/wiki/Graciano_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Bastardo Nero",
@@ -34019,6 +34286,12 @@
         "field": "regions",
         "quote": "grown in the Rueda region of Spain",
         "value": "ES: Rueda"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Il donne des vins blancs secs faciles à boire",
+        "value": "dry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Verdejo"
       }
     ],
     "id": "verdejo",
@@ -34080,7 +34353,10 @@
         "url": "https://es.wikipedia.org/wiki/Verdejo"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q456276",
@@ -36178,6 +36454,12 @@
         "field": "regions",
         "quote": "primarily grown in the Dalmatian region of Croatia on the island of Korčula ... municipalities of Čara and Smokvica",
         "value": "HR: Smokvica"
+      },
+      {
+        "field": "sweetness",
+        "quote": "ein für kroatische Verhältnisse leichter, trockener und frischer Wein",
+        "value": "dry",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Po%C5%A1ip"
       }
     ],
     "id": "posip",
@@ -36253,7 +36535,10 @@
         "url": "https://en.wikipedia.org/wiki/Po%C5%A1ip"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q832738",
@@ -37067,6 +37352,12 @@
         "quote": "elle est toutefois très répandue en Loire-Atlantique sous le nom de muscadet",
         "value": "FR: Loire-Atlantique",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Melon_(c%C3%A9page)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Le melon donne des vins équilibrés, secs, frais, légers aux arômes discrets.",
+        "value": "dry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Melon_(c%C3%A9page)"
       }
     ],
     "id": "melon-de-bourgogne",
@@ -37145,7 +37436,10 @@
         "url": "https://es.wikipedia.org/wiki/Mel%C3%B3n_de_Borgo%C3%B1a"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Melón de Borgoña",
@@ -39187,6 +39481,12 @@
         "field": "regions",
         "quote": "primarily grown in the upstream parts of the Mosel region in Germany and in Luxembourg",
         "value": "LU: Luxembourg"
+      },
+      {
+        "field": "sweetness",
+        "quote": "L’elbling est un cépage de raisin donnant un vin sec",
+        "value": "dry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Elbling"
       }
     ],
     "id": "elbling",
@@ -39255,7 +39555,10 @@
         "url": "https://en.wikipedia.org/wiki/Elbling"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Weisser Elbling",
@@ -40515,7 +40818,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "lime",
       "honeysuckle",
@@ -40624,6 +40927,12 @@
         "field": "regions",
         "quote": "though most associated with the island of Madeira ... grown on Pico Island in the Azores ... The grape is also grown in the Douro valley ... It is also a small component of some Vinho do Dão ... Verdelho can also be found in Argentina ... the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley ... Currently Verdelho is grown in Amador and Solano counties ... By the 1870s the grape was extensively grown in what is now Amador County.",
         "value": "US: Amador County"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Sie bringt alkoholreiche Weine mittlerer Säure.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Gouveio"
       }
     ],
     "id": "verdelho",
@@ -40752,7 +41061,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "raisin"
     ],
@@ -40858,6 +41167,12 @@
         "field": "sweetness",
         "quote": "it is a minor constituent in the dry and sweet wines of Bordeaux",
         "value": "dry-sweet"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Ses vins sont moyennement alcooliques, peu acides et aromatiques.",
+        "value": "medium",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscadelle"
       }
     ],
     "id": "muscadelle",
@@ -41307,7 +41622,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [],
     "body": null,
     "color": "white",
@@ -41406,6 +41721,12 @@
         "field": "sweetness",
         "quote": "a very dry and often tartly acidic wine",
         "value": "dry"
+      },
+      {
+        "field": "alcohol",
+        "quote": "elle donne un vin peu alcoolique, nerveux acide et pâle",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Folle-blanche"
       }
     ],
     "id": "folle-blanche",
@@ -44200,6 +44521,12 @@
         "field": "regions",
         "quote": "grown primarily in the Oltrepò Pavese region of Lombardy and in the Province of Piacenza within Emilia Romagna, but also in parts of Piedmont and the Veneto ... and in Roero",
         "value": "IT: Roero"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Il donne des vins rouges secs et tanniques",
+        "value": "dry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Croatina"
       }
     ],
     "id": "croatina",
@@ -44287,7 +44614,10 @@
         "url": "https://es.wikipedia.org/wiki/Croatina"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Bonarda",
@@ -44711,6 +45041,12 @@
         "field": "alcohol",
         "quote": "The grape also has the potential for very high levels of alcohol",
         "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Aus ihr werden sowohl trockene als auch süße Weine gewonnen",
+        "value": "dry-sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Friulano"
       }
     ],
     "id": "sauvignon-vert",
@@ -44806,7 +45142,10 @@
         "url": "https://en.wikipedia.org/wiki/Sauvignonasse"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Sauvignonasse",
@@ -45139,6 +45478,12 @@
         "field": "regions",
         "quote": "is most commonly associated with the Tuscan wine Vernaccia di San Gimignano",
         "value": "IT: Tuscany"
+      },
+      {
+        "field": "sweetness",
+        "quote": "donnant des vins blancs secs, structurés et aptes au vieillissement",
+        "value": "dry",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Vernaccia"
       }
     ],
     "id": "vernaccia",
@@ -45205,7 +45550,10 @@
         "url": "https://en.wikipedia.org/wiki/Vernaccia"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Vernaccia di San Gimignano",
@@ -45467,6 +45815,12 @@
         "field": "styles",
         "quote": "As varietal, it generally produces full bodied wines.",
         "value": "still"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Il Neuburger viene vinificato principalmente come vino fermo secco.",
+        "value": "dry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
       }
     ],
     "id": "neuburger",
@@ -45525,7 +45879,10 @@
         "url": "https://en.wikipedia.org/wiki/Neuburger"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Weisser Neuburger",
@@ -45961,6 +46318,12 @@
         "field": "alcohol",
         "quote": "it produces wine high in alcohol and low in acidity",
         "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "C'est un vin sec ou moelleux",
+        "value": "dry-sweet",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Clairette_(c%C3%A9page)"
       }
     ],
     "id": "clairette-blanche",
@@ -46053,7 +46416,10 @@
         "url": "https://es.wikipedia.org/wiki/Clairette_blanche"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Clairette",
@@ -46727,7 +47093,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [],
     "body": "high",
     "color": "red",
@@ -46769,6 +47135,12 @@
         "quote": "Die spätreifende Sorte erbringt einen Wein mit dunkelroter Farbe ... Sie ist eine der Produktion des Portweins zugelassenen Sorten.",
         "value": "still",
         "sourceUrl": "https://de.wikipedia.org/wiki/Tinto_C%C3%A3o"
+      },
+      {
+        "field": "alcohol",
+        "quote": "riches en alcool et peuvent être très vivaces",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_c%C3%A3o"
       }
     ],
     "id": "tinta-cao",

@@ -15,6 +15,22 @@
         "quote": "The grape is most widely associated with the dry and sweet red wines of Nemea"
       }
     ],
+    "airen": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "Aus der Rebsorte wird hellgelber, neutraler Wein mit einem hohen Alkoholgehalt hergestellt."
+      }
+    ],
+    "albarino": [
+      {
+        "field": "sweetness",
+        "lang": "it",
+        "value": "dry",
+        "quote": "Il vino albariño è un vino bianco, ampio, secco, molto leggero e delizioso."
+      }
+    ],
     "aleatico": [
       {
         "field": "alcohol",
@@ -75,6 +91,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "the grape is vinified to make a variety of dry and sweet wines"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "high",
+        "quote": "Er ist ein säure- und körperreicher, meist blassgelber Wein"
       }
     ],
     "barbera": [
@@ -131,6 +153,34 @@
         "lang": "en",
         "value": "high",
         "quote": "The wine's high tannin content, oak influences, and high alcohol levels associated with many regional styles"
+      },
+      {
+        "field": "sweetness",
+        "lang": "ca",
+        "value": "dry",
+        "quote": "El vi elaborat amb raïm cabernet sauvignon és sec, àcid, amb cos, ric en alcohol"
+      }
+    ],
+    "caino-tinto": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "low",
+        "quote": "einen hellen, rubinroten Wein mit niedrigem Alkoholgehalt"
+      }
+    ],
+    "carignan": [
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "high",
+        "quote": "El vi varietal jove de raïm carinyena té molt de color i cos, amb un grau alcohòlic elevat"
+      },
+      {
+        "field": "body",
+        "lang": "ca",
+        "value": "high",
+        "quote": "El vi varietal jove de raïm carinyena té molt de color i cos"
       }
     ],
     "chardonnay": [
@@ -185,6 +235,12 @@
         "lang": "en",
         "value": "high",
         "quote": "it produces wine high in alcohol and low in acidity"
+      },
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry-sweet",
+        "quote": "C'est un vin sec ou moelleux"
       }
     ],
     "colombard": [
@@ -203,6 +259,22 @@
         "quote": "Traditionally, most commercially produced Concord wines are sweet, but dry versions are possible"
       }
     ],
+    "cortese": [
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "medium",
+        "quote": "Les vins blancs sont d'une couleur jaune paille un peu verdâtre, moyennement alcoolique."
+      }
+    ],
+    "croatina": [
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry",
+        "quote": "Il donne des vins rouges secs et tanniques"
+      }
+    ],
     "delaware": [
       {
         "field": "sweetness",
@@ -217,6 +289,28 @@
         "lang": "en",
         "value": "dry",
         "quote": "In any case the wines produced are nearly always dry."
+      },
+      {
+        "field": "body",
+        "lang": "pt",
+        "value": "medium",
+        "quote": "é utilizada essencialmente para produzir vinhos secos de corpo médio"
+      }
+    ],
+    "dornfelder": [
+      {
+        "field": "sweetness",
+        "lang": "es",
+        "value": "dry",
+        "quote": "Hoy, muchos de los ejemplares de dornfelder se fermentan secos"
+      }
+    ],
+    "elbling": [
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry",
+        "quote": "L’elbling est un cépage de raisin donnant un vin sec"
       }
     ],
     "erbaluce": [
@@ -257,6 +351,12 @@
         "lang": "en",
         "value": "dry",
         "quote": "a very dry and often tartly acidic wine"
+      },
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "low",
+        "quote": "elle donne un vin peu alcoolique, nerveux acide et pâle"
       }
     ],
     "freisa": [
@@ -273,6 +373,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "where it is used to produce single-varietal dry wines as well as being the principal grape in the better known Tokaji dessert"
+      },
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Il donne un vin au potentiel alcoolique élevé."
       }
     ],
     "garnacha-roja": [
@@ -299,6 +405,28 @@
         "quote": "Il donne un vin de médiocre qualité (peu alcoolique, acide et sans bouquet)"
       }
     ],
+    "graciano": [
+      {
+        "field": "body",
+        "lang": "it",
+        "value": "high",
+        "quote": "Al gusto si rivela solitamente secco, caldo, abbastanza morbido, abbastanza fresco, abbastanza tannico, sapido, di corpo tendente al robusto"
+      },
+      {
+        "field": "sweetness",
+        "lang": "it",
+        "value": "dry",
+        "quote": "Al gusto si rivela solitamente secco"
+      }
+    ],
+    "grechetto": [
+      {
+        "field": "sweetness",
+        "lang": "it",
+        "value": "dry",
+        "quote": "In bocca il vino si presenta sufficientemente alcolico, secco"
+      }
+    ],
     "greco": [
       {
         "field": "sweetness",
@@ -321,6 +449,18 @@
         "lang": "en",
         "value": "high",
         "quote": "Its wines are characterized by high alcohol and low acidity"
+      },
+      {
+        "field": "body",
+        "lang": "es",
+        "value": "high",
+        "quote": "Produce vinos de gran cuerpo y mucho alcohol"
+      },
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry-sweet",
+        "quote": "Le grenache blanc donne des vins blancs secs puissants et chaleureux ... il sert également à l'élaboration des vins doux naturels."
       }
     ],
     "grillo": [
@@ -391,6 +531,20 @@
         "quote": "Khikhvi wine is characterised by its moderate alcohol levels and soft acidity"
       }
     ],
+    "macabeo": [
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "medium",
+        "quote": "Dona vins de graduació alcohòlica moderada"
+      },
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry-sweet",
+        "quote": "où il est utilisé particulièrement pour produire des vins doux naturels ... Le macabeu peut être utilisé pour l'élaboration de vin blanc sec."
+      }
+    ],
     "mandilaria": [
       {
         "field": "sweetness",
@@ -413,6 +567,14 @@
         "quote": "Although Marsanne is mostly made into a dry wine, it is commonly made into a sweet wine in Valais"
       }
     ],
+    "mauzac": [
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "high",
+        "quote": "Der Mauzac liefert einen aromatischen und recht körperreichen Weißwein"
+      }
+    ],
     "mavrodafni": [
       {
         "field": "sweetness",
@@ -427,6 +589,14 @@
         "lang": "de",
         "value": "dry",
         "quote": "Dort erbringt die Rebe intensiv vollen, trockenen und tanninherben Wein"
+      }
+    ],
+    "melon-de-bourgogne": [
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry",
+        "quote": "Le melon donne des vins équilibrés, secs, frais, légers aux arômes discrets."
       }
     ],
     "mencia": [
@@ -451,6 +621,14 @@
         "lang": "es",
         "value": "dry-sweet",
         "quote": "Con esta uva se hace un vino dulce notable, el Monica di Cagliari. ... El Monica di Sardegna es un vino seco."
+      }
+    ],
+    "montepulciano": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "besitzen wenig Säure und sind alkoholreich"
       }
     ],
     "moscato-giallo": [
@@ -491,6 +669,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "it is a minor constituent in the dry and sweet wines of Bordeaux"
+      },
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "medium",
+        "quote": "Ses vins sont moyennement alcooliques, peu acides et aromatiques."
       }
     ],
     "muscat-blanc-a-petits-grains": [
@@ -507,6 +691,12 @@
         "lang": "en",
         "value": "sweet",
         "quote": "In Portugal, Vinho Moscatel (Moscatel Wine) is a sweet wine widely produced in the Setúbal Peninsula region"
+      },
+      {
+        "field": "alcohol",
+        "lang": "it",
+        "value": "high",
+        "quote": "dolce e con elevato grado alcolico"
       }
     ],
     "muscat-ottonel": [
@@ -515,6 +705,28 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "It is most notable for its use in dessert wines from Austria, Bulgaria, Romania, Moldova, Croatia and Serbia as well as dry wines from Alsace and Hungary."
+      },
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "low",
+        "quote": "Er ist mild, meist niedrig in Alkoholgehalt und Extrakt."
+      }
+    ],
+    "nebbiolo": [
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "high",
+        "quote": "Els vins elaborats amb nebbiolo tenen molt bona acidesa i tannicitat, bon cos i graduació alcohòlica elevada."
+      }
+    ],
+    "negroamaro": [
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "high",
+        "quote": "En boca són vins amb cos, càlids (alt grau alcohòlic)"
       }
     ],
     "nero-d-avola": [
@@ -529,6 +741,14 @@
         "lang": "en",
         "value": "dry",
         "quote": "Flavour: dry, slightly acidic, rounded, warm and full-bodied."
+      }
+    ],
+    "neuburger": [
+      {
+        "field": "sweetness",
+        "lang": "it",
+        "value": "dry",
+        "quote": "Il Neuburger viene vinificato principalmente come vino fermo secco."
       }
     ],
     "okuzgozu": [
@@ -555,6 +775,14 @@
         "quote": "it is usually incorporated into sweet wines of Jurançon and Pacherenc du Vic-Bilh"
       }
     ],
+    "petit-verdot": [
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "high",
+        "quote": "de color intens, amb un grau alcohòlic alt"
+      }
+    ],
     "pinot-blanc": [
       {
         "field": "sweetness",
@@ -569,6 +797,12 @@
         "lang": "en",
         "value": "high",
         "quote": "tend to have moderate to low acidity, higher alcohol levels"
+      },
+      {
+        "field": "sweetness",
+        "lang": "es",
+        "value": "dry-sweet",
+        "quote": "Esto puede conducir a un vino más dulce o, en el caso de que se fermente para producir un vino seco"
       }
     ],
     "pinot-meunier": [
@@ -607,6 +841,28 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "The wines from Plavac Mali can be created as dry, semi-dry or sweet."
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die körperreichen Rotweine sind meist sehr dunkel, alkoholreich"
+      }
+    ],
+    "posip": [
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry",
+        "quote": "ein für kroatische Verhältnisse leichter, trockener und frischer Wein"
+      }
+    ],
+    "prieto-picudo": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "Aus Prieto Picudo werden gute, alkoholreiche Rotweine"
       }
     ],
     "raboso": [
@@ -617,12 +873,28 @@
         "quote": "with notably high levels of tannin and medium alcohol content"
       }
     ],
+    "riesling": [
+      {
+        "field": "sweetness",
+        "lang": "es",
+        "value": "dry-sweet",
+        "quote": "Los vinos hechos a partir de esta uva cubren un amplio espectro de sabores, desde dulce al seco"
+      }
+    ],
     "rkatsiteli": [
       {
         "field": "alcohol",
         "lang": "en",
         "value": "high",
         "quote": "its naturally high alcohol levels"
+      }
+    ],
+    "ruby-cabernet": [
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "low",
+        "quote": "Le cépage produit des vins très colorés mais de qualité ordinaire, manquant de corps."
       }
     ],
     "sagrantino": [
@@ -669,6 +941,12 @@
         "lang": "en",
         "value": "high",
         "quote": "The grape also has the potential for very high levels of alcohol"
+      },
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry-sweet",
+        "quote": "Aus ihr werden sowohl trockene als auch süße Weine gewonnen"
       }
     ],
     "savagnin": [
@@ -737,6 +1015,18 @@
         "lang": "en",
         "value": "high",
         "quote": "Wines made from Syrah are often powerfully flavoured and full-bodied."
+      },
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "high",
+        "quote": "Els vins de syrah sobresurten pel seu color vermell profund, per la seva tannicitat, bona acidesa i elevat grau alcohòlic."
+      },
+      {
+        "field": "sweetness",
+        "lang": "ca",
+        "value": "dry",
+        "quote": "És una varietat utilitzada en els vins negres secs"
       }
     ],
     "tannat": [
@@ -751,6 +1041,52 @@
         "lang": "en",
         "value": "high",
         "quote": "The resulting wines are typically full bodied and very fruity."
+      }
+    ],
+    "tinta-cao": [
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "high",
+        "quote": "riches en alcool et peuvent être très vivaces"
+      }
+    ],
+    "torrontes": [
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "medium",
+        "quote": "Moyennement alcooliques, ils offrent un bon équilibre alcool-acidité."
+      },
+      {
+        "field": "sweetness",
+        "lang": "it",
+        "value": "dry",
+        "quote": "che produce un vino secco"
+      }
+    ],
+    "touriga-francesa": [
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry",
+        "quote": "de vins tranquilles et secs du Douro et du Dão"
+      }
+    ],
+    "touriga-nacional": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "sind tanninreiche, geschmackvolle Rotweine mit einem hohen Alkoholgehalt"
+      }
+    ],
+    "treixadura": [
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die spätreifende Sorte erbringt duftige, körperreiche und alkoholstarke Weine."
       }
     ],
     "trepat": [
@@ -777,12 +1113,42 @@
         "quote": "is a naturally semi-sweet Georgian wine"
       }
     ],
+    "verdejo": [
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry",
+        "quote": "Il donne des vins blancs secs faciles à boire"
+      }
+    ],
+    "verdelho": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "Sie bringt alkoholreiche Weine mittlerer Säure."
+      }
+    ],
     "vermentino": [
       {
         "field": "alcohol",
         "lang": "it",
         "value": "high",
         "quote": "caratterizzati da una notevole struttura e alcolicità"
+      },
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry",
+        "quote": "Ses grappes produisent un vin sec"
+      }
+    ],
+    "vernaccia": [
+      {
+        "field": "sweetness",
+        "lang": "fr",
+        "value": "dry",
+        "quote": "donnant des vins blancs secs, structurés et aptes au vieillissement"
       }
     ],
     "viognier": [

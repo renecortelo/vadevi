@@ -33,6 +33,7 @@
     "i18n:import": "tsx scripts/translations-review.ts import",
     "kb:fetch-grapes": "tsx scripts/kb/fetch-grapes.ts",
     "kb:extract-grapes": "tsx scripts/kb/extract-grapes.ts",
+    "kb:fetch-grape-articles": "tsx scripts/kb/fetch-grape-articles.ts",
     "kb:build-grapes": "tsx scripts/kb/build-grapes.ts",
     "kb:fetch-appellation-areas": "tsx scripts/kb/fetch-appellation-areas.ts",
     "kb:fetch-register-documents": "tsx scripts/kb/fetch-register-documents.ts",
