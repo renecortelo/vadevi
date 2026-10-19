@@ -4,7 +4,7 @@ What changed between releases, for readers and for anyone running their own
 deployment. Each release lists what you will notice first; the commit history
 has the reasons.
 
-## Unreleased
+## 0.4.0 — 19 October 2026
 
 ### Finding your way
 
@@ -167,10 +167,6 @@ has the reasons.
   replaces what the first one filled and the reader left alone, never what
   they typed; the quick log has «Clear the form»; and a draft begun on
   another day, its date never changed, is taken up today.
-- **The cellar book's map names before it opens**: touching a point shows
-  the name and how many of your wines come from it, with «Open its page»;
-  that page, and a name opened from the atlas in figures' map, now lead back
-  to where you came from instead of to the library.
 - **Voice tastings, levels from the words**: a level said plainly — «alta»,
   «hoher», «corto», «ligero», «muy alta», in the app's eight languages — is
   read from the words, not from the model's sense of the scale (it read
@@ -200,6 +196,13 @@ has the reasons.
 - **Keeping the registers current**: the routine is in `data/kb/README.md`,
   and `pnpm kb:diff-appellations` shows, country by country, what a refresh
   added, dropped or changed in the atlas before it is committed.
+
+### The atlas
+
+- **The cellar book's map names before it opens**: touching a point shows
+  the name and how many of your wines come from it, with «Open its page»;
+  that page, and a name opened from the atlas in figures' map, now lead back
+  to where you came from instead of to the library.
 - **The atlas in figures**: `GET /api/v1/library/atlas/coverage` answers, by
   country, how many registered names there are, how many are described in the
   reader's language and in all eight, how each is placed on the map, and how
@@ -212,9 +215,6 @@ has the reasons.
   hollow where the atlas places it approximately; each opens the name in the
   atlas. The statistics add `wines.regionPlaces` for it (a response cached
   before reads as none).
-
-### The atlas
-
 - **Figures move whenever you reach them**: the cellar book's and the atlas
   in figures' bars grow, and their figures count, each time they come back
   into view and after the page has finished changing — not only the first
