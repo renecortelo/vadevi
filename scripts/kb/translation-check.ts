@@ -12,6 +12,7 @@
  */
 
 export type Language =
+  | "af"
   | "bg"
   | "ca"
   | "cs"
@@ -213,6 +214,24 @@ const commonWords: Record<Language, string[]> = {
     "na",
     "se",
     "mais",
+  ],
+  // Afrikaans: South Africa's place articles (18 October 2026).
+  af: [
+    "die",
+    "en",
+    "van",
+    "is",
+    "in",
+    "wat",
+    "met",
+    "vir",
+    "word",
+    "het",
+    "nie",
+    "op",
+    "te",
+    "sy",
+    "ook",
   ],
   ru: ["и", "в", "на", "с", "по", "из", "для", "что", "это", "как", "его", "от", "не"],
   // The originals' languages, where a wine's only article is in its country's.

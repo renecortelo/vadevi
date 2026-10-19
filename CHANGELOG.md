@@ -189,6 +189,17 @@ kb:fetch-topic-images`; 19 of the 41 have one).
   browser can, and never with reduced motion. Disclosures unfold to their
   height and fold away instead of jumping open, and a card's tastings arrive
   the way a page does.
+- **126 more names described by the article of their place**: where no
+  article describes a registered name, the article of its town, valley,
+  commune or wine region often has one sentence on its wine — Martinborough's
+  Pinot noir, Stellenbosch's Huguenot vines, the Calchaquí valleys'
+  Torrontés, Lake Thun's four winegrowing villages. Each was read by hand,
+  copied as written, and kept only if it reads on its own, speaks of wine
+  (not table grapes, raisins or pisco) and is about a place in the name's
+  own country; homonyms elsewhere — Spain's Salamanca, California's San
+  Carlos, France's Jura — were refused. Afrikaans articles count too. All
+  are translated into the eight languages. Names beyond the EU without a
+  summary go from 506 to 380.
 - **Rogue Valley, spelled right**: its regulation misspells it «Rouge
   Valley» once; the atlas now shows the name every other line of it uses,
   keeps the misspelling as an alias, and describes it by its article.

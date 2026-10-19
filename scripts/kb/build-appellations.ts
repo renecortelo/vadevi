@@ -1105,6 +1105,30 @@ for (const [text, holders] of sharing) {
 }
 console.info(`  ${unshared} summaries dropped: the text belongs to another registered name.`);
 
+// A name no article of its own describes, described by the sentence on its
+// wine in the article of its place — a town, a valley, a district, or the
+// commune, province or wine region it lies in — read and chosen by hand
+// (`data/kb/place-sentences.json`, 18 October 2026): a sentence that speaks of
+// that place's wine and reads on its own, copied as written, from an article
+// on a place in the name's own country. After the texts dropped above, so a
+// name whose only text was found not to be its own can still have one.
+const placeSentences = (
+  JSON.parse(readFileSync(resolve("data/kb/place-sentences.json"), "utf8")) as {
+    sentences: Record<string, { locale: string; text: string; title: string }>;
+  }
+).sentences;
+let fromPlaces = 0;
+for (const entry of entries) {
+  const chosen = placeSentences[entry.id];
+  if (chosen === undefined || Object.keys(entry.summaries).length > 0) continue;
+  entry.summaries[chosen.locale] = {
+    text: chosen.text,
+    url: `https://${chosen.locale}.wikipedia.org/wiki/${encodeURIComponent(chosen.title.replaceAll(" ", "_"))}`,
+  };
+  fromPlaces += 1;
+}
+console.info(`  ${fromPlaces} names described by the article of their place.`);
+
 const registerAttachments =
   "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/";
 

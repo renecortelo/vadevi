@@ -1,0 +1,635 @@
+{
+  "$comment": "Names no article of their own describes, described by one sentence on their wine from the Wikipedia article of their place (a town, a valley, a district, a commune) or of the commune, province or wine region it lies in, in the name's own country — read and chosen by hand on 18 October 2026, copied as written, rejecting homonyms elsewhere, sentences that lean on the one before, and sentences on table grapes, raisins or pisco rather than wine. Keyed by atlas id. Wikipedia text is CC BY-SA 4.0; translations into the app's other languages are in appellation-translations.json.",
+  "sentences": {
+    "ar-agrelo": {
+      "locale": "es",
+      "title": "Agrelo (Argentina)",
+      "text": "Es un área vitivinícola, especializada en la producción de uvas finas, con preponderancia de grandes productores y un alto grado de especialización en uvas tintas. El distrito de Agrelo abarca más de la mitad de las exportaciones de vino del departamento."
+    },
+    "ar-albardon": {
+      "locale": "es",
+      "title": "Departamento Albardón",
+      "text": "En números podría decirse que en Albardón hay 2.336 ha destinadas a la vid, 461 a los frutales, 213 a las pasturas, 118 a las semillas, 102 a arbolado público y las huertas familiares, 85 a las hortalizas, 57 al olivo, 9 a los cereales, y 3 a los forestales, entre los cultivos más importantes. La industria, en Albardón, desde fines del siglo XIX, está relacionada con la pequeña bodega."
+    },
+    "ar-angaco": {
+      "locale": "es",
+      "title": "Departamento Angaco",
+      "text": "La principal actividad económica es la vitivinícola."
+    },
+    "ar-caucete": {
+      "locale": "es",
+      "title": "Caucete",
+      "text": "Es núcleo de una importante región vinícola, por ello acá se realiza en forma anual la Fiesta Nacional de la Uva y el Vino."
+    },
+    "ar-chilecito": {
+      "locale": "es",
+      "title": "Chilecito",
+      "text": "Los principales cultivos son la vid y el olivo, destinados en gran parte a la producción vitivinícola y aceitera, respectivamente."
+    },
+    "ar-chimbas": {
+      "locale": "es",
+      "title": "Chimbas",
+      "text": "El principal sustento económico son las actividades vinculadas al cultivo e industrialización de la vid y la actividad comercial ya que la población se traslada hacia la ciudad de San Juan."
+    },
+    "ar-colonia-caroya": {
+      "locale": "es",
+      "title": "Colonia Caroya",
+      "text": "La producción del vino fue, en el pasado, la principal actividad económica de la Colonia, a punto tal que en la década del ´70, la localidad figuraba como uno de los municipios con mayor ingreso per cápita en el mundo, gracias a su producción de vino."
+    },
+    "ar-general-lamadrid": {
+      "locale": "es",
+      "title": "Departamento General Lamadrid",
+      "text": "Se cultiva fundamentalmente la vid y algunas parcelas de cereales."
+    },
+    "ar-general-roca": {
+      "locale": "es",
+      "title": "General Roca (Río Negro)",
+      "text": "En lo que respecta a la industria vitivinícola, se encuentra en sus tierras la histórica bodega familiar «Humberto Canale», reconocida por sus finos vinos Malbec y Cabernet Sauvignon."
+    },
+    "ar-godoy-cruz": {
+      "locale": "es",
+      "title": "Godoy Cruz",
+      "text": "Durante el siglo XIX, con la llegada de la inmigración, el ferrocarril y el mayor desarrollo de la vitivinicultura, Godoy Cruz se convirtió en un polo industrial bodeguero muy importante."
+    },
+    "ar-guaymallen": {
+      "locale": "es",
+      "title": "Departamento de Guaymallén",
+      "text": "La expansión a mediados del siglo XIX de la industria vitivinícola mendocina tuvo en el Departamento unos de sus baluartes económicos."
+    },
+    "ar-la-consulta": {
+      "locale": "es",
+      "title": "La Consulta",
+      "text": "Su principal fuente económica es la vitivinicultura, destacándose varias bodegas presentes tanto en la zona urbana como rural."
+    },
+    "ar-las-compuertas": {
+      "locale": "es",
+      "title": "Las Compuertas (Mendoza)",
+      "text": "En lo agrícola se destacan viñedos y frutales."
+    },
+    "ar-las-heras": {
+      "locale": "es",
+      "title": "Las Heras (Mendoza)",
+      "text": "La actividad económica se centra en el comercio y algunas industrias, dentro de las que podemos destacar fábricas de muebles y bodegas."
+    },
+    "ar-lavalle": {
+      "locale": "es",
+      "title": "Departamento de Lavalle (Mendoza)",
+      "text": "Un gran porcentaje de producción de uvas se destina a vinificación y otro a la elaboración de mostos, pasas y consumo en fresco."
+    },
+    "ar-lujan-de-cuyo-mendoza": {
+      "locale": "en",
+      "title": "Luján de Cuyo",
+      "text": "Situated in the upper Mendoza valley, where the river is half-way through its journey from the Andes mountains to the eastern plains, many Lujan de Cuyo vineyards sit at altitudes of around 1000 m (3280 ft)."
+    },
+    "ar-lunlunta": {
+      "locale": "es",
+      "title": "Lunlunta",
+      "text": "Es una importante zona vitivinícola y olivícola, además se destacan pequeños sectores frutihortícolas y apícolas."
+    },
+    "ar-molinos": {
+      "locale": "es",
+      "title": "Departamento de Molinos",
+      "text": "Se cultiva vid (los viñedos más importantes son los de Colomé y Tacuil), maíz, hortalizas y ganado caprino."
+    },
+    "ar-pocito": {
+      "locale": "es",
+      "title": "Departamento Pocito",
+      "text": "Pocito se destaca por formar parte de la Rutas del vino de San Juan y por poseer un destacado turismo rural en la provincia."
+    },
+    "ar-poman": {
+      "locale": "es",
+      "title": "Departamento Pomán",
+      "text": "La vid es de carácter artesanal, con producciones principalmente en la localidad de Siján, de vinos y aguardientes de calidad."
+    },
+    "ar-san-martin-san-juan": {
+      "locale": "es",
+      "title": "Departamento San Martín (San Juan)",
+      "text": "San Martín se ha destacado por formar parte de las Rutas del vino de San Juan y la ruta del turismo religioso en dicha provincia, puesto que aquí se encuentra el Santuario de Ceferino Namuncurá."
+    },
+    "ar-san-rafael-doc": {
+      "locale": "es",
+      "title": "Departamento de San Rafael",
+      "text": "Muy importante por su aporte al vino argentino, tiene numerosas bodegas, siendo éstas la principal actividad de la zona."
+    },
+    "ar-san-rafael-mendoza": {
+      "locale": "es",
+      "title": "Departamento de San Rafael",
+      "text": "Muy importante por su aporte al vino argentino, tiene numerosas bodegas, siendo éstas la principal actividad de la zona."
+    },
+    "ar-trevelin": {
+      "locale": "es",
+      "title": "Trevelin",
+      "text": "Trevelin cuenta con los viñedos más australes del mundo, cuya existencia representa un verdadero desafío a las latitudes meridionales en donde se encuentran, pero no menos desafiantes lo son como emprendimiento desde la faz técnica y económica."
+    },
+    "ar-tucuman": {
+      "locale": "es",
+      "title": "Provincia de Tucumán",
+      "text": "También se desarrolló recientemente la industria vitivinícola, principalmente en el Departamento Tafí del Valle."
+    },
+    "ar-tunuyan": {
+      "locale": "es",
+      "title": "Tunuyán",
+      "text": "Tunuyán es famoso por su importancia en la producción de los vinos de Argentina, siendo uno de los tres departamentos del valle de Uco, junto con Tupungato y San Carlos."
+    },
+    "ar-tupungato": {
+      "locale": "es",
+      "title": "Departamento de Tupungato",
+      "text": "El cultivo principal es la vid y representa el 30% de las áreas sembradas."
+    },
+    "ar-ullum": {
+      "locale": "es",
+      "title": "Departamento Ullum",
+      "text": "Ullum posee casi el 90% de su territorio deshabitado, sin embargo se caracteriza por su producción de vid y frutas."
+    },
+    "ar-valles-calchaquies": {
+      "locale": "es",
+      "title": "Valles Calchaquíes",
+      "text": "El Valle Calchaquí es una de las mejores zonas de cultivo de uvas blancas, entre las que destaca la uva Torrontés, tipo de uva que según estudios genéticos es resultado de la cruza de las variedades Moscatel de Alejandría y Listan Prieto (conocida como Criolla Chica en Argentina, como Mission en Estados Unidos y como País en Chile)."
+    },
+    "ar-vinchina": {
+      "locale": "es",
+      "title": "Departamento Vinchina",
+      "text": "Se cultiva fundamentalmente la vid y algunas parcelas de cereales."
+    },
+    "ar-vista-flores": {
+      "locale": "es",
+      "title": "Vista Flores",
+      "text": "La fruticultura y la vitivinicultura son sus principales actividades económicas."
+    },
+    "ar-zonda": {
+      "locale": "en",
+      "title": "Zonda Department",
+      "text": "Zonda has a hilly landscape with sparse vegetation and its economy centers around wine and fruit cultivation, as well as tourism."
+    },
+    "au-adelaide": {
+      "locale": "en",
+      "title": "Adelaide",
+      "text": "Adelaide is known for its food and wine industries, its coastline and hills, and defence and manufacturing industries."
+    },
+    "au-australian-capital-territory": {
+      "locale": "en",
+      "title": "Australian Capital Territory",
+      "text": "The territory also contains agricultural land (sheep, dairy cattle, vineyards and small amounts of crops) and a large area of national park (Namadgi National Park), much of it mountainous and forested."
+    },
+    "au-beechworth": {
+      "locale": "en",
+      "title": "Beechworth",
+      "text": "Beechworth's many historical buildings are well preserved and the town has re-invented itself and evolved into a popular tourist destination and growing wine-producing centre."
+    },
+    "au-bendigo": {
+      "locale": "en",
+      "title": "Bendigo",
+      "text": "The area produces premium wines, including Shiraz, from a growing viticulture industry."
+    },
+    "au-denmark": {
+      "locale": "en",
+      "title": "Denmark, Western Australia",
+      "text": "The first winery, Tinglewood, opened in 1976, and by 2008, over twenty vineyards had been established around Denmark."
+    },
+    "au-frankland-river": {
+      "locale": "en",
+      "title": "Frankland River, Western Australia",
+      "text": "Frankland River is one of the five subregions of the Great Southern wine region in Western Australia."
+    },
+    "au-geelong": {
+      "locale": "en",
+      "title": "Geelong",
+      "text": "Geelong was also the home of a prosperous wine industry until the emergence of the sap-sucking insect Phylloxera vastatrix at Fyansford in 1875, which led to the Victorian Government ordering the destruction of all vines in the Geelong area to prevent the spread of the pest, killing the industry until the 1960s."
+    },
+    "au-granite-belt": {
+      "locale": "en",
+      "title": "Granite Belt",
+      "text": "Stanthorpe and the surrounding Granite Belt and Granite Highlands area of South East Queensland and Northern New South Wales are the centre of a booming winery and national parks tourist destination."
+    },
+    "au-hunter": {
+      "locale": "en",
+      "title": "Hunter Valley",
+      "text": "The Hunter Valley wine region is one of Australia's best known wine regions, playing a pivotal role in the history of Australian wine as one of the first wine regions planted in the early 19th century."
+    },
+    "au-macedon-ranges": {
+      "locale": "en",
+      "title": "Macedon Ranges",
+      "text": "The Macedon Ranges is a region in Central Victoria, known for its expansive native forests, vibrant arts scene, thriving food and wine industries (including weekly farmers' markets) and natural attractions such as Hanging Rock and Mount Macedon."
+    },
+    "au-manjimup": {
+      "locale": "en",
+      "title": "Manjimup, Western Australia",
+      "text": "Timber is the town's major industry, but it has been joined by fruit and vegetable farms, dairy farms, wool, grain and vineyards."
+    },
+    "au-mount-barker": {
+      "locale": "en",
+      "title": "Mount Barker, Western Australia",
+      "text": "Mount Barker is one of the five nominated subregions of the Great Southern wine region in Western Australia, which is Australia's largest wine region, with a rectangle 200 kilometres from east to west and over 100 kilometres from north to south."
+    },
+    "au-orange": {
+      "locale": "en",
+      "title": "Orange, New South Wales",
+      "text": "The Orange wine region is defined as the area above 600m in the local government areas of Orange, Cabonne and Blayney and can be usefully described as a circle around Orange."
+    },
+    "au-pemberton": {
+      "locale": "en",
+      "title": "Pemberton, Western Australia",
+      "text": "Pemberton is recognised as one of the premier cool-climate wine regions in Australia, and hosts many wineries in the region."
+    },
+    "au-perth-hills": {
+      "locale": "en",
+      "title": "Perth Hills",
+      "text": "Perth Hills is also a wine region, with some 35 wineries."
+    },
+    "au-pokolbin": {
+      "locale": "en",
+      "title": "Pokolbin, New South Wales",
+      "text": "Pokolbin is surrounded by the Pokolbin subregion of the Hunter wine region, which includes numerous wineries, ranging from large multi-national to small family run operations, many of which are popular tourist destinations."
+    },
+    "au-porongurup": {
+      "locale": "en",
+      "title": "Porongurup, Western Australia",
+      "text": "Porongurup is the fifth of the subregions of the Great Southern wine region, bordering Mount Barker on its western boundary."
+    },
+    "au-southern-highlands": {
+      "locale": "en",
+      "title": "Southern Highlands (New South Wales)",
+      "text": "The Highlands in the last decade has become a small yet significantly growing wine and cellar door region in New South Wales (NSW)."
+    },
+    "au-western-plains": {
+      "locale": "en",
+      "title": "Western Plains wine zone",
+      "text": "Western Plains is an Australian Geographical Indication for a grape growing zone (larger than a \"region\") encompassing most of northwestern New South Wales in Australia."
+    },
+    "br-monte-belo": {
+      "locale": "pt",
+      "title": "Monte Belo do Sul",
+      "text": "O município está localizado na Região do Vale dos Vinhedos, na Serra Gaúcha."
+    },
+    "ca-cowichan-valley": {
+      "locale": "en",
+      "title": "Cowichan Valley",
+      "text": "The Cowichan Valley is the home of a growing number of vineyards and wineries."
+    },
+    "ca-lillooet": {
+      "locale": "en",
+      "title": "Lillooet",
+      "text": "Established in 2009, the Fort Berens Winery in East Lillooet was the first attempt at commercial viticulture."
+    },
+    "ca-okanagan-falls": {
+      "locale": "fr",
+      "title": "Okanagan Falls",
+      "text": "La communauté a été fondée sur l'agriculture et fournit aujourd'hui des fruits et légumes frais, des fruits secs et de nombreux vins."
+    },
+    "ca-vancouver-island": {
+      "locale": "en",
+      "title": "Vancouver Island",
+      "text": "The southeastern part of the island notably has a warm summer (Csb) Mediterranean climate with numerous vineyards."
+    },
+    "ch-bielersee": {
+      "locale": "de",
+      "title": "Bielersee",
+      "text": "Am linken Bielerseeufer zwischen Biel/Bienne und Le Landeron wird an den steilen, sonnenexponierten Hängen des Jurasüdfusses Wein kultiviert."
+    },
+    "ch-bonvillars": {
+      "locale": "de",
+      "title": "Bonvillars",
+      "text": "1948 wurden die Caves des viticulteurs de Bonvillars et environs gebaut, um den Wein aus dem Bezirk Grandson zu lagern."
+    },
+    "ch-chablais": {
+      "locale": "fr",
+      "title": "Chablais vaudois",
+      "text": "Le Chablais vaudois totalise une surface de 590 ha de vignobles sur la rive droite de la vallée du Rhône, soit 15,38 % de la surface viticole vaudoise."
+    },
+    "ch-schaffhausen": {
+      "locale": "de",
+      "title": "Kanton Schaffhausen",
+      "text": "Der grosse Stellenwert des Weinbaus im Kanton Schaffhausen findet seinen Ausdruck in den zahlreichen Wein- und Trottenfesten (Siblingen, Wilchingen, Osterfingen, Trasadingen) sowie den Herbstumzügen in Hallau."
+    },
+    "ch-thunersee": {
+      "locale": "de",
+      "title": "Thunersee",
+      "text": "An den Ufern des Thunersees wird in den Gemeinden Thun, Spiez, Oberhofen und Hilterfingen Weinbau betrieben."
+    },
+    "ch-ticino": {
+      "locale": "en",
+      "title": "Ticino (wine region)",
+      "text": "Geographically the wine region is located on the south side of the Alps and includes the canton of Ticino and the neighbouring district of Moesa (Misox and Calanca valleys) in the canton of the Grisons, both areas being Italian-speaking."
+    },
+    "ch-vully": {
+      "locale": "fr",
+      "title": "Mont Vully",
+      "text": "Les principaux cépages du Vully sont le chasselas, 60 % de la production, et le pinot noir (25 %)."
+    },
+    "cl-buin": {
+      "locale": "en",
+      "title": "Buin, Chile",
+      "text": "Buin is located about 35 km (22 mi) south of Santiago in the Maipo Valley wine region."
+    },
+    "cl-cauquenes": {
+      "locale": "en",
+      "title": "Cauquenes Province",
+      "text": "Cauquenes is located in the southern part of the Maule Valley, a wine making region in Chile."
+    },
+    "cl-chimbarongo": {
+      "locale": "es",
+      "title": "Chimbarongo",
+      "text": "La economía de Chimbarongo está basada principalmente en el cultivo de frutales y la producción de vino, destacándose dentro de la ciudad la Viña Concha y Toro y la Viña Cono Sur, dándose todo esto principalmente en la temporada estival (de diciembre a principios de marzo)."
+    },
+    "cl-coelemu": {
+      "locale": "es",
+      "title": "Coelemu (comuna)",
+      "text": "Las principales actividades locales son la tradicional producción de vinos, la industria forestal y agrícola."
+    },
+    "cl-linares": {
+      "locale": "en",
+      "title": "Linares Province",
+      "text": "The province is located at the very center of mainland Chile, and its capital lies 303 km south of Santiago and 50 km south of Talca, the regional capital, in the middle of a rich agricultural and wine-growing area."
+    },
+    "cl-lo-abarca": {
+      "locale": "es",
+      "title": "Cartagena (Chile)",
+      "text": "La principal actividad económica de Lo Abarca es la agricultura, famosa por sus lechugas, frutillas y la creciente actividad vitivinícola (viñas como Casa Marín y Majestic Vineyards)."
+    },
+    "cl-lolol": {
+      "locale": "es",
+      "title": "Lolol",
+      "text": "Su principal producción estaba basada en el cultivo de trigo y de uva vinífera, y en la crianza de ovejas."
+    },
+    "cl-melipilla": {
+      "locale": "en",
+      "title": "Melipilla Province",
+      "text": "Food processing, cheese production, and wine making are the major industries in the region."
+    },
+    "cl-molina": {
+      "locale": "es",
+      "title": "Molina (Chile)",
+      "text": "Molina se caracteriza, por antonomasia, por ser uno de los grandes polos de la industria vitivinícola chilena."
+    },
+    "cl-nancagua": {
+      "locale": "es",
+      "title": "Nancagua",
+      "text": "Actualmente su producción se centra en el desarrollo vitivinícola, pues en su territorio se encuentran las más importantes viñas de Chile, ya que su microclima, con claros caracteres mediterráneos, es apto para la generación de los más destacados mostos del Valle de Colchagua."
+    },
+    "cl-ovalle": {
+      "locale": "es",
+      "title": "Ovalle",
+      "text": "Posee un clima propicio para el cultivo de viñedos que dan origen al pisco y al vino chileno."
+    },
+    "cl-pirque": {
+      "locale": "es",
+      "title": "Pirque",
+      "text": "Pirque destaca profusamente de igual forma en el ámbito del enoturismo, al ser una reconocida comuna vitivinícola, encontrándose en la zona algunas de las principales viñas a nivel mundial."
+    },
+    "cl-portezuelo": {
+      "locale": "es",
+      "title": "Portezuelo (Chile)",
+      "text": "El pueblo de Portezuelo se encuentra a 34 km de Chillán, la capital regional. Es un gran productor de vinos en la región."
+    },
+    "cl-puente-alto": {
+      "locale": "es",
+      "title": "Puente Alto",
+      "text": "Fundada como un pequeño pueblo rural a fines del siglo XIX con el nombre de «Pueblito de Las Arañas», fue en sus inicios pionera en las actividades vitivinícolas de la Región Metropolitana, pero debido al aumento y expansión de la ciudad de Santiago, Puente Alto fue creciendo y pasando de ser un pequeño pueblo rural a ser la comuna con mayor población de Chile, superando los 500 000 habitantes."
+    },
+    "cl-quillon": {
+      "locale": "es",
+      "title": "Quillón",
+      "text": "La comuna de Quillón se caracteriza por sus hermosos parajes naturales y el exquisito microclima que posee, lo que permite el cultivo de productos frutícolas, agrícolas y vitivinícolas; además de ganaderos."
+    },
+    "cl-rancagua": {
+      "locale": "es",
+      "title": "Rancagua",
+      "text": "En el valle del Cachapoal, los grandes contrastes climáticos entre los faldeos de los Andes y los planos más cálidos del valle central favorecen la producción de vinos tintos generosos."
+    },
+    "cl-requinoa": {
+      "locale": "es",
+      "title": "Requínoa",
+      "text": "Es centro de una gran actividad agrícola, con viñedos de finísima calidad y variados frutos de exportación, también conocida por la celebración anual de las palomas calvas, en memoria a las aves que murieron a causa de la fiebre calva."
+    },
+    "cl-retiro": {
+      "locale": "en",
+      "title": "Retiro, Chile",
+      "text": "Agriculture, in particular wine producing and cereals cultivation constitutes the main economic activity of Retiro."
+    },
+    "cl-rio-hurtado": {
+      "locale": "es",
+      "title": "Río Hurtado (comuna)",
+      "text": "El periodo colonial es particularmente interesante en la zona del Valle del Río Hurtado, puesto que se constituiría, desde la llegada de los españoles, como una zona idónea para el cultivo de todo tipo de granos, árboles frutales y parras, dando origen a las primeras producciones de vinos y aguardientes."
+    },
+    "cl-sagrada-familia": {
+      "locale": "pt",
+      "title": "Sagrada Familia (Chile)",
+      "text": "A cidade é conhecida pela qualidade dos seus vinhos e a exportação de fruta a nível internacional."
+    },
+    "cl-salamanca": {
+      "locale": "es",
+      "title": "Salamanca (Chile)",
+      "text": "Salamanca también cuenta con una rica tradición vitivinícola."
+    },
+    "cl-san-javier": {
+      "locale": "es",
+      "title": "San Javier de Loncomilla",
+      "text": "Fundada el 18 de noviembre de 1852, ya para el 2021 la comuna tiene más de 46 000 habitantes. Se caracteriza por ser una región esencialmente vitivinícola."
+    },
+    "cl-san-rafael": {
+      "locale": "es",
+      "title": "San Rafael (Chile)",
+      "text": "Además de la tradicional agricultura de cereales y hortalizas, los viñedos han ido marcando importante presencia con la llegada de múltiples multinacionales vitivinícolas que han potenciado los feraces suelos de la comuna."
+    },
+    "cl-santa-cruz": {
+      "locale": "es",
+      "title": "Santa Cruz (Chile)",
+      "text": "La ciudad de Santa Cruz se encuentra en el corazón del denominado Valle de Colchagua, un área reconocida por su producción vitivinícola y la preservación de las características culturales del campo chileno."
+    },
+    "cl-santa-maria": {
+      "locale": "es",
+      "title": "Santa María (Chile)",
+      "text": "Desde la década de 1920 el cultivo principal de Santa María eran las viñas, destinadas a la producción de vino, chicha y aguardiente."
+    },
+    "cl-santiago": {
+      "locale": "en",
+      "title": "Santiago Metropolitan Region",
+      "text": "Though Santiago's expansion has caused newer vineyards to move to more rural locations, many of the country's oldest wineries, built in the 19th century, have preserved cellars in the valley."
+    },
+    "cl-talca": {
+      "locale": "es",
+      "title": "Talca",
+      "text": "Talca es también muy conocida por los vinos que se producen en el valle del Maule que lo circunda."
+    },
+    "cl-traiguen": {
+      "locale": "es",
+      "title": "Traiguén",
+      "text": "El siglo XXI ha traído nuevos desafíos para Traiguén, pero también oportunidades, con la incorporación del turismo y la vitivinicultura como sectores emergentes en la economía local."
+    },
+    "cl-valle-de-colchagua": {
+      "locale": "es",
+      "title": "Ruta del Vino del Valle de Colchagua",
+      "text": "La ruta del vino del Valle de Colchagua se encuentra ubicada en la región vitícola del Valle Central, subregión Valle del Rapel, Región del Libertador General Bernardo O'Higgins, Chile."
+    },
+    "cl-valle-del-limari": {
+      "locale": "es",
+      "title": "Valle del Limarí",
+      "text": "El valle del Limarí es una de las zonas del país donde se produce la mayor cantidad de uva pisquera, el valle se destaca por sus verdes claro por los Sauvignon Blanc, verde oscuro brillante por los Chardonnay y los Cabernet, y verde suave por los parronales de uva de mesa, es una tierra fértil para la producción de vinos y piscos."
+    },
+    "cl-villa-alegre": {
+      "locale": "es",
+      "title": "Villa Alegre",
+      "text": "La comuna es cuna de reconocidos viñedos, pertenecientes a la zona vitivinícola de Valle del Loncomilla, el que se encuadra dentro de la subregión del Valle del Maule."
+    },
+    "ge-gurjaani": {
+      "locale": "en",
+      "title": "Gurjaani",
+      "text": "During Soviet-era industrialization, Gurjaani had wine-making, canning, distilling, brick-making, and mechanical repair plants."
+    },
+    "ge-kvareli": {
+      "locale": "en",
+      "title": "Kvareli",
+      "text": "The area is in the center of the Kakheti wine-producing region, and the town itself is known for its Kindzmarauli wine, a semisweet red variety."
+    },
+    "md-stefan-voda": {
+      "locale": "en",
+      "title": "Ștefan Vodă District",
+      "text": "In the 16th-18th centuries, intense agriculture was developed, with important wine-making industries and population growth attested."
+    },
+    "nz-bannockburn": {
+      "locale": "en",
+      "title": "Bannockburn, New Zealand",
+      "text": "The climate of Bannockburn epitomizes that of the Central Otago wine region and claims some of the highest temperatures and lowest rainfall in the area."
+    },
+    "nz-gisborne": {
+      "locale": "en",
+      "title": "Gisborne, New Zealand",
+      "text": "The Poverty Bay flats encompass Gisborne city as well as surrounding areas Mākaraka, Matawhero and Ormond, where vineyards and farms predominate."
+    },
+    "nz-gladstone": {
+      "locale": "en",
+      "title": "Gladstone, New Zealand",
+      "text": "Gladstone is primarily a farming community and some viticulture occurs in the area."
+    },
+    "nz-kumeu": {
+      "locale": "en",
+      "title": "Kumeū",
+      "text": "Areas surrounding the Kumeū district produce labels such as Kumeu River, Cooper's Creek and Soljans Estate Winery have gained a good reputation for their Chardonnay and Sauvignon blanc wines."
+    },
+    "nz-martinborough": {
+      "locale": "en",
+      "title": "Martinborough",
+      "text": "Martinborough has a large number of vineyards producing wines, notably Pinot noir."
+    },
+    "nz-wairarapa": {
+      "locale": "en",
+      "title": "Wairarapa",
+      "text": "The area around Martinborough, in the south, is notable for its vineyards and wine, as are the outskirts of Masterton and Carterton."
+    },
+    "za-ashton": {
+      "locale": "en",
+      "title": "Ashton, South Africa",
+      "text": "Ashton is also home to various tourist attractions, including vineyards and the Ashton Steam Locomotive."
+    },
+    "za-bonnievale": {
+      "locale": "af",
+      "title": "Bonnievale",
+      "text": "Daar is drie koöperatiewe wynkelders in die distrik."
+    },
+    "za-calitzdorp": {
+      "locale": "en",
+      "title": "Calitzdorp",
+      "text": "Calitzdorp is renowned as a centre of the port wine industry in South Africa with several major wine estates famous for their award-winning products."
+    },
+    "za-cape-town": {
+      "locale": "en",
+      "title": "Cape Town",
+      "text": "Cape Town is also the home of the South African wine industry with the first wine produced in the country being bottled in the city; a number of notable wineries still exist in the city including Groot Constantia and Klein Constantia."
+    },
+    "za-cederberg": {
+      "locale": "en",
+      "title": "Cederberg",
+      "text": "The Cederberg area includes one winery, the highest in South Africa."
+    },
+    "za-durbanville": {
+      "locale": "en",
+      "title": "Durbanville",
+      "text": "The Durbanville Wine Valley is home to fifteen wine farms spread out along the scenic Tygerberg Hills, many of which offer wine tastings and fine dining."
+    },
+    "za-eastern-cape": {
+      "locale": "en",
+      "title": "Eastern Cape",
+      "text": "Whittlesea, Eastern Cape, situated in the Amatola Mountains, is known for the first wine estate in the province."
+    },
+    "za-elim": {
+      "locale": "en",
+      "title": "Elim, Western Cape",
+      "text": "Elim is becoming known for the export of fynbos, and as an emerging area in the production of wine."
+    },
+    "za-franschhoek": {
+      "locale": "af",
+      "title": "Franschhoek",
+      "text": "Wingerdbou en die wynbedryf is deur die Franse ingevoer; die voortreflike klimaat en vrugbare grond maak die vallei bowendien geskik vir die vrugtebedryf."
+    },
+    "za-groblershoop": {
+      "locale": "en",
+      "title": "Groblershoop",
+      "text": "Known as the gateway to the Green Kalahari, the Groblershoop region is a major wine-producing area."
+    },
+    "za-grootdrink": {
+      "locale": "af",
+      "title": "Grootdrink",
+      "text": "Die dorp is bekend as sentrum van wynproduksie in die Noord-Kaap."
+    },
+    "za-keimoes": {
+      "locale": "en",
+      "title": "Keimoes",
+      "text": "Wine is also a source of income to the town with one of the largest wine co-operatives, Orange River Wine Cellars, situated in Keimoes."
+    },
+    "za-klaasvoogds": {
+      "locale": "af",
+      "title": "Klaasvoogds",
+      "text": "Teenswoordig is die vernaamste aktiwiteit wingerdbou."
+    },
+    "za-klein-karoo": {
+      "locale": "af",
+      "title": "Olifantsrivier, Klein Karoo",
+      "text": "Die toerisme van die Klein Karoo draai om die wyn- en volstruisbedryf sowel as die Kangogrotte."
+    },
+    "za-paardeberg": {
+      "locale": "af",
+      "title": "Paardeberg (Swartland)",
+      "text": "In die streek word met koring, canola en wingerd geboer."
+    },
+    "za-paarl": {
+      "locale": "af",
+      "title": "Paarl",
+      "text": "Die Paarl behoort tot die vernaamste wynproduserende streke in Suid-Afrika en beskik oor 'n aantal koöperatiewe wynkelders en wynlandgoedere, wat ook belangrike toeristebestemmings geword het."
+    },
+    "za-porseleinberg": {
+      "locale": "af",
+      "title": "Porseleinberg",
+      "text": "Porseleinberg is ‘n bergpiek en ‘n groep wingerdplase in die Swartland."
+    },
+    "za-stellenbosch": {
+      "locale": "en",
+      "title": "Stellenbosch",
+      "text": "During 1690, some Huguenot refugees settled in Stellenbosch, grapes were planted in the fertile valleys around Stellenbosch and soon it became the centre of the South African wine industry."
+    },
+    "za-swartland": {
+      "locale": "en",
+      "title": "Swartland",
+      "text": "Viticulture in the Swartland is still comparatively young but a growing number of focused producers have moved here, resulting in the region rising in popularity in the last decade to become one of the most fashionable wine areas in South Africa."
+    },
+    "za-tulbagh": {
+      "locale": "af",
+      "title": "Tulbagh",
+      "text": "Wynbou het al lank 'n groot rol in die Tulbaghvallei gespeel, maar dié bedryf het sedert die negentigerjare van die 20ste eeu die vinnigste gegroei."
+    },
+    "za-upington": {
+      "locale": "en",
+      "title": "Upington",
+      "text": "Upington is located on the northern banks of the Orange River and is surrounded by irrigated vineyards."
+    },
+    "za-vinkrivier": {
+      "locale": "af",
+      "title": "Vinkrivier (Breede)",
+      "text": "Die omgewing is bekend vir sy wynmakery, daar is 'n kelder op die landgoed bekend as \"Vinkrivier\"."
+    },
+    "za-wellington": {
+      "locale": "en",
+      "title": "Wellington, South Africa",
+      "text": "Wellington's economy is centered on products of agriculture such as deciduous fruit, table grapes, wine and brandy."
+    }
+  }
+}
