@@ -12,7 +12,11 @@ import { wikimedia } from "./wikimedia";
  *
  * Usage: pnpm kb:fetch-region-figures
  */
-type Entry = { id: string; summaries: Record<string, { translated?: boolean; url?: string }> };
+type Entry = {
+  id: string;
+  summaries: Record<string, { translated?: boolean; url?: string }>;
+  wikidataId: string | null;
+};
 
 const entries = JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as Entry[];
 
@@ -27,6 +31,40 @@ for (const entry of entries) {
     const titles = wanted.get(match[1]!) ?? new Map<string, string[]>();
     titles.set(title, [...new Set([...(titles.get(title) ?? []), entry.id])]);
     wanted.set(match[1]!, titles);
+  }
+}
+
+// And the articles the name's own Wikidata item links in those languages:
+// an Italian DOC described in Italian often has an English article whose
+// infobox gives its planted area.
+const byItem = new Map<string, string[]>();
+for (const entry of entries) {
+  if (entry.wikidataId !== null) {
+    byItem.set(entry.wikidataId, [...(byItem.get(entry.wikidataId) ?? []), entry.id]);
+  }
+}
+const items = [...byItem.keys()];
+for (let start = 0; start < items.length; start += 50) {
+  const batch = items.slice(start, start + 50);
+  const response = await wikimedia<{
+    entities?: Record<string, { sitelinks?: Record<string, { title: string }> }>;
+  }>(
+    `https://www.wikidata.org/w/api.php?${new URLSearchParams({
+      action: "wbgetentities",
+      format: "json",
+      ids: batch.join("|"),
+      props: "sitelinks",
+      sitefilter: figureLanguages.map((language) => `${language}wiki`).join("|"),
+    })}`,
+  );
+  for (const [item, entity] of Object.entries(response.entities ?? {})) {
+    for (const language of figureLanguages) {
+      const title = entity.sitelinks?.[`${language}wiki`]?.title;
+      if (title === undefined) continue;
+      const titles = wanted.get(language) ?? new Map<string, string[]>();
+      titles.set(title, [...new Set([...(titles.get(title) ?? []), ...(byItem.get(item) ?? [])])]);
+      wanted.set(language, titles);
+    }
   }
 }
 

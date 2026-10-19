@@ -42,6 +42,10 @@ has the reasons.
   how many, how often tasted, their mean score, each linked to its page.
   Only wines whose region the library knows for certain to be that name
   count. The wine list takes a new filter, `regionRef`.
+- **A grape's levels as gauges**: acidity, tannin, body, alcohol and dry or
+  sweet are drawn as one continuous gauge each, filled to where the level
+  sits (a range for sweetness), with no figure: the sources give three
+  levels, and the gauge claims no more.
 - **France's vineyards, from the customs**: 293 French PDOs show their area
   in production and the volume produced from the customs' 2024 harvest
   declarations (Licence Ouverte), credited with the year and a link.

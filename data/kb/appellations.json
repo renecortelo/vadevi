@@ -347,7 +347,12 @@
         "sourceUrl": "https://www.mapa.gob.es/dam/mapa/contenido/alimentacion/temas/calidad-agroalimentaria/2017-calidad-diferenciada/2-etgs--especialidades-tradicionales-garantizadas/datos-estadisticos/vinos-con-dop--campanas-2000-2023/informedops2022-2023.pdf",
         "year": "2022/2023"
       },
-      "production": null
+      "production": {
+        "amount": 915978,
+        "quote": "wine produced = 915,978 hectolitres",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ribera_del_Duero",
+        "year": null
+      }
     }
   },
   {
@@ -38577,6 +38582,20 @@
         9.8,
         7.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 5399,
+        "quote": "superficieplantée = {{unité|5399 [[hectare]]s}} (en 2023)",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Blaye-c%C3%B4tes-de-bordeaux",
+        "year": "2023"
+      },
+      "production": {
+        "amount": 247681,
+        "quote": "volproduction = {{unité|247681 [[Litre#Conversion|hectolitres]]}} (en 2023)",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Blaye-c%C3%B4tes-de-bordeaux",
+        "year": "2023"
+      }
     }
   },
   {
@@ -282778,6 +282797,15 @@
         4.2,
         1.2
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1156532,
+        "quote": "producción = 1.156.532 hl <small>''(2001)''</small>",
+        "sourceUrl": "https://es.wikipedia.org/wiki/W%C3%BCrttemberg_(regi%C3%B3n_vin%C3%ADcola)",
+        "year": "2001"
+      }
     }
   },
   {
@@ -330418,6 +330446,15 @@
         11.6,
         8.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 809,
+        "quote": "planted = {{convert|2000|acre}}",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Knights_Valley_AVA",
+        "year": null
+      },
+      "production": null
     }
   },
   {

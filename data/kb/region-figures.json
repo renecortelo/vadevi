@@ -333,6 +333,32 @@
     "sourceUrl": "https://es.wikipedia.org/wiki/Ahr_(regi%C3%B3n_vin%C3%ADcola)"
    }
   },
+  "de-wurttemberg": {
+   "planted": null,
+   "production": {
+    "amount": 1156532,
+    "year": "2001",
+    "quote": "producción = 1.156.532 hl <small>''(2001)''</small>",
+    "language": "es",
+    "sourceUrl": "https://es.wikipedia.org/wiki/W%C3%BCrttemberg_(regi%C3%B3n_vin%C3%ADcola)"
+   }
+  },
+  "es-abadia-retuerta": {
+   "planted": {
+    "amount": 22395,
+    "year": null,
+    "quote": "planted = {{convert|22395|ha|acres|0}}",
+    "language": "en",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ribera_del_Duero"
+   },
+   "production": {
+    "amount": 915978,
+    "year": null,
+    "quote": "wine produced = 915,978 hectolitres",
+    "language": "en",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ribera_del_Duero"
+   }
+  },
   "es-abona": {
    "planted": {
     "amount": 898,
@@ -2225,6 +2251,22 @@
     "quote": "volproduction = 145 hl, dont 132 de {{1ers|crus}} (moyenne 2017-2021)",
     "language": "fr",
     "sourceUrl": "https://fr.wikipedia.org/wiki/Blagny_(AOC)"
+   }
+  },
+  "fr-blaye": {
+   "planted": {
+    "amount": 5399,
+    "year": "2023",
+    "quote": "superficieplantée = {{unité|5399 [[hectare]]s}} (en 2023)",
+    "language": "fr",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Blaye-c%C3%B4tes-de-bordeaux"
+   },
+   "production": {
+    "amount": 247681,
+    "year": "2023",
+    "quote": "volproduction = {{unité|247681 [[Litre#Conversion|hectolitres]]}} (en 2023)",
+    "language": "fr",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Blaye-c%C3%B4tes-de-bordeaux"
    }
   },
   "fr-bonnes-mares": {
@@ -4585,6 +4627,22 @@
     "quote": "volproduction = {{unité|38923 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
     "language": "fr",
     "sourceUrl": "https://fr.wikipedia.org/wiki/Juran%C3%A7on_(AOC)"
+   }
+  },
+  "fr-la-clape": {
+   "planted": {
+    "amount": 907,
+    "year": "2024",
+    "quote": "superficieplantée = 907 [[hectare]]s (en 2024)",
+    "language": "fr",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/La_clape"
+   },
+   "production": {
+    "amount": 25901,
+    "year": "2024",
+    "quote": "volproduction = {{unité|25901 [[Litre#Multiples, sous-multiples et conversion|hectolitres]]}} (en 2024)",
+    "language": "fr",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/La_clape"
    }
   },
   "fr-la-grande-rue": {
@@ -7780,6 +7838,16 @@
     "quote": "planted = {{convert|900|acre|0}}",
     "language": "en",
     "sourceUrl": "https://en.wikipedia.org/wiki/Kelsey_Bench-Lake_County_AVA"
+   },
+   "production": null
+  },
+  "us-knights-valley": {
+   "planted": {
+    "amount": 809,
+    "year": null,
+    "quote": "planted = {{convert|2000|acre}}",
+    "language": "en",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Knights_Valley_AVA"
    },
    "production": null
   },

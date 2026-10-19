@@ -4509,6 +4509,31 @@ p {
   background: var(--color-plum);
 }
 
+/* A level as one continuous gauge: the track, and a fill from --from to
+   --to (a range, for sweetness). */
+.library-gauge {
+  --from: 0%;
+  --to: 0%;
+
+  background: var(--color-border);
+  block-size: 0.55rem;
+  border-radius: var(--radius-pill);
+  display: block;
+  margin-block: var(--space-1);
+  overflow: hidden;
+  position: relative;
+}
+
+.library-gauge i {
+  background: linear-gradient(90deg, var(--color-plum-soft), var(--color-plum));
+  border-radius: var(--radius-pill);
+  inline-size: calc(var(--to) - var(--from));
+  inset-block: 0;
+  inset-inline-start: var(--from);
+  position: absolute;
+}
+
+.library-bar--none .library-gauge,
 .library-bar--none .library-bar__steps i {
   background: repeating-linear-gradient(45deg, var(--color-border) 0 4px, transparent 4px 8px);
 }

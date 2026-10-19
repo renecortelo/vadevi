@@ -1,6 +1,6 @@
 import type { LibraryGrape } from "@vadevi/contracts";
 import { aromaFromTerm, resolveSupportedLocale } from "@vadevi/i18n/runtime";
-import { useEffect, useState } from "react";
+import { type CSSProperties, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 
@@ -94,7 +94,6 @@ export function LibraryGrapePage() {
   // "Trocken bis süß": the range reads as a sentence, its first letter up.
   const sentence = (text: string) =>
     text.charAt(0).toLocaleUpperCase(i18n.language) + text.slice(1);
-  const steps = ["low", "medium", "high"] as const;
   const fromSource = grape.pairings;
   const suggested = grape.suggestedPairings;
   const origin = country(grape.originCountryCode);
@@ -195,7 +194,10 @@ export function LibraryGrapePage() {
             <dl className="library-bars">
               {axes.map((axis) => {
                 const level = grape[axis];
-                const filled = level === null ? 0 : steps.indexOf(level) + 1;
+                // One continuous gauge, filled to where the level sits; the
+                // sources give three levels, and the gauge claims no more.
+                const reach =
+                  level === null ? "0%" : { high: "85%", low: "25%", medium: "55%" }[level];
                 return (
                   <div
                     className={level === null ? "library-bar library-bar--none" : "library-bar"}
@@ -203,10 +205,8 @@ export function LibraryGrapePage() {
                   >
                     <dt>{t(`library.axis.${axis}`)}</dt>
                     <dd>
-                      <span aria-hidden="true" className="library-bar__steps">
-                        {steps.map((step, index) => (
-                          <i className={index < filled ? "is-on" : undefined} key={step} />
-                        ))}
+                      <span aria-hidden="true" className="library-gauge">
+                        <i style={{ "--from": "0%", "--to": reach } as CSSProperties} />
                       </span>
                       {level === null ? t("library.noSourceValue") : t(`library.level.${level}`)}
                     </dd>
@@ -222,19 +222,19 @@ export function LibraryGrapePage() {
               >
                 <dt>{t("library.axis.sweetness")}</dt>
                 <dd>
-                  <span aria-hidden="true" className="library-bar__steps">
-                    {sweetSteps.map((step, index) => (
+                  {/* Dry, off-dry and sweet are thirds of the gauge; the
+                      range fills from one to the other. */}
+                  <span aria-hidden="true" className="library-gauge">
+                    {grape.sweetness === null ? null : (
                       <i
-                        className={
-                          grape.sweetness !== null &&
-                          index >= sweetSteps.indexOf(grape.sweetness.from) &&
-                          index <= sweetSteps.indexOf(grape.sweetness.to)
-                            ? "is-on"
-                            : undefined
+                        style={
+                          {
+                            "--from": `${sweetSteps.indexOf(grape.sweetness.from) * 33}%`,
+                            "--to": `${(sweetSteps.indexOf(grape.sweetness.to) + 1) * 33 + (grape.sweetness.to === "sweet" ? 1 : 0)}%`,
+                          } as CSSProperties
                         }
-                        key={step}
                       />
-                    ))}
+                    )}
                   </span>
                   <span aria-hidden="true" className="library-bar__ends">
                     <span>{t("library.sweetness.dry")}</span>
