@@ -486,7 +486,7 @@
       "intro": "Vind een aroma via familie en groep, of een kleur via het soort wijn: tik op een deel van het wiel of op de naam eronder.",
       "aromas": "Aroma's",
       "colours": "Kleuren",
-      "back": "Terug uit {{name}}",
+      "back": "Terug naar {{name}}",
       "pick": "Tik op een aroma of een kleur om het hier te zien.",
       "grapesWith_one": "{{count}} druif in de bibliotheek heeft het:",
       "grapesWith_other": "{{count}} druiven in de bibliotheek hebben het:",

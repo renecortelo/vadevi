@@ -110,14 +110,33 @@ export function Wheel({
     return [...items, { end: start + (360 * weightOf(node)) / Math.max(total, 1), node, start }];
   }, []);
 
+  // A level with a single part (Flowers, whose one group is Flowers) is
+  // passed through on the way in and out: it would only repeat its name.
+  const lone = (node: WheelNode) => node.children?.length === 1 && hasParts(node.children[0]!);
   const choose = (node: WheelNode) => {
     setPointed(null);
-    if (hasParts(node)) setTrail([...trail, node.id]);
-    else onSelect(node);
+    if (!hasParts(node)) {
+      onSelect(node);
+      return;
+    }
+    const ids = [node.id];
+    let inside = node;
+    while (lone(inside)) {
+      inside = inside.children![0]!;
+      ids.push(inside.id);
+    }
+    setTrail([...trail, ...ids]);
   };
+  // Where the way back leads: the nearest level around this one with more
+  // than one part.
+  const backLength = (() => {
+    let length = path.length - 1;
+    while (length > 1 && lone(path[length - 1]!)) length -= 1;
+    return length;
+  })();
   const back = () => {
     setPointed(null);
-    setTrail(trail.slice(0, -1));
+    setTrail(trail.slice(0, backLength - 1));
   };
 
   const named =
@@ -174,10 +193,10 @@ export function Wheel({
         {/* Inside the ring, over the name: back up to the level around this one. */}
         {path.length > 1 ? (
           <button
-            aria-label={t("library.wheels.back", { name: path.at(-2)!.label })}
+            aria-label={t("library.wheels.back", { name: path[backLength - 1]!.label })}
             className="wheel__return"
             onClick={back}
-            title={t("library.wheels.back", { name: path.at(-2)!.label })}
+            title={t("library.wheels.back", { name: path[backLength - 1]!.label })}
             type="button"
           >
             <ReturnIcon />

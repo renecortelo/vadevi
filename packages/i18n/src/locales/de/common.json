@@ -486,7 +486,7 @@
       "intro": "Finde ein Aroma über Familie und Gruppe oder eine Farbe über die Weinart: tippe auf einen Teil des Rades oder auf seinen Namen darunter.",
       "aromas": "Aromen",
       "colours": "Farben",
-      "back": "Zurück aus {{name}}",
+      "back": "Zurück zu {{name}}",
       "pick": "Tippe auf ein Aroma oder eine Farbe, um es hier zu sehen.",
       "grapesWith_one": "{{count}} Rebsorte der Bibliothek hat es:",
       "grapesWith_other": "{{count}} Rebsorten der Bibliothek haben es:",

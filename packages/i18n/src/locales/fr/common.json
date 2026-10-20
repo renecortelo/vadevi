@@ -486,7 +486,7 @@
       "intro": "Trouve un arôme par sa famille et son groupe, ou une couleur par le type de vin : touche une part de la roue ou son nom en dessous.",
       "aromas": "Arômes",
       "colours": "Couleurs",
-      "back": "Revenir de {{name}}",
+      "back": "Revenir à {{name}}",
       "pick": "Touche un arôme ou une couleur pour le voir ici.",
       "grapesWith_one": "{{count}} cépage de la bibliothèque le porte :",
       "grapesWith_other": "{{count}} cépages de la bibliothèque le portent :",

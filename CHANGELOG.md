@@ -32,7 +32,9 @@ has the reasons.
   and is named large in the centre, with its grapes or its kind of wine; the
   level's parts are listed beneath as buttons, for touch, keyboard and screen
   reader alike; a round button with a drawn return arrow, in the ring's
-  centre, steps back. A colour leads to your own wines tasted in it
+  centre, steps back, naming where it leads («Back to Aromas»). A family
+  with a single group (Flowers, Spice, Nuts, Sweet) opens straight onto its
+  aromas, without a level that repeats its name. A colour leads to your own wines tasted in it
   (`GET …/wines?hue=`, matching the colour's name in any of the eight
   languages a tasting was written in).
   `GET /api/v1/library/aromas` answers each aroma's name and its number of

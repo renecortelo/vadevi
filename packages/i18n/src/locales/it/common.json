@@ -486,7 +486,7 @@
       "intro": "Trova un aroma per famiglia e gruppo, o un colore per tipo di vino: tocca una parte della ruota o il suo nome qui sotto.",
       "aromas": "Aromi",
       "colours": "Colori",
-      "back": "Torna indietro da {{name}}",
+      "back": "Torna a {{name}}",
       "pick": "Tocca un aroma o un colore per vederlo qui.",
       "grapesWith_one": "{{count}} vitigno della biblioteca lo ha:",
       "grapesWith_other": "{{count}} vitigni della biblioteca lo hanno:",

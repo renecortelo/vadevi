@@ -41,8 +41,16 @@ test("the aroma and colour wheels narrow to one aroma or one colour", async ({ p
   expect(results.violations).toEqual([]);
 
   // Back out a level.
-  await page.getByRole("button", { name: /Volver desde/ }).click();
+  await page.getByRole("button", { name: /Volver a/ }).click();
   await expect(level("Aromas: Fruta")).toBeVisible();
+
+  // A family with a single group opens straight onto its aromas, and the way
+  // back skips the group: Flowers, then back to all the families.
+  await page.getByRole("button", { name: "Volver a Aromas" }).click();
+  await page.getByRole("button", { name: "Flores", exact: true }).click();
+  await expect(page.getByRole("button", { name: "violeta", exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Volver a Aromas" }).click();
+  await expect(level("Aromas: Aromas")).toBeVisible();
 
   // The colours: a red wine's ruby.
   await page.getByRole("button", { name: "Colores", exact: true }).click();

@@ -486,7 +486,7 @@
       "intro": "Troba una aroma per la seva família i el seu grup, o un color pel tipus de vi: toca una part de la roda o el seu nom a sota.",
       "aromas": "Aromes",
       "colours": "Colors",
-      "back": "Torna des de {{name}}",
+      "back": "Torna a {{name}}",
       "pick": "Toca una aroma o un color per veure-ho aquí.",
       "grapesWith_one": "{{count}} raïm de la biblioteca la té:",
       "grapesWith_other": "{{count}} raïms de la biblioteca la tenen:",
