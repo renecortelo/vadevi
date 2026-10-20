@@ -23,6 +23,14 @@ has the reasons.
 
 ### The library
 
+- **Aroma and colour wheels**: a new shelf of the library. The aroma wheel
+  narrows the vocabulary by family and group to one aroma, drawn and named,
+  with the grapes whose sources name it; aromas no grape carries yet are
+  faint. The colour wheel holds the colours a tasting notes, by the kind of
+  wine that shows them, each in its own tint. Touch to go in, the centre to
+  step back; every part is a button to a keyboard and a screen reader.
+  `GET /api/v1/library/aromas` answers each aroma's name and its number of
+  grapes, and `GET /api/v1/library/grapes?aroma=` the grapes that carry one.
 - **No tannin gauge for a white grape**: its wine has next to no tannin, so
   the card leaves the row out instead of showing an empty one that read as a
   figure missing — unless a source gives a level.

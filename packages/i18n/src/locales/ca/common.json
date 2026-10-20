@@ -479,7 +479,20 @@
     "glanceSourceDouane": "Duanes de França, declaracions de collita {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Institut Nacional de Vitivinicultura de l'Argentina (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Oficina Federal d'Estadística d'Alemanya (Destatis), {{campaign}}",
-    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, cens vitícola {{campaign}} (extracte)"
+    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, cens vitícola {{campaign}} (extracte)",
+    "wheels": {
+      "tab": "Rodes",
+      "title": "Rodes d'aromes i colors",
+      "intro": "Troba una aroma per la seva família i el seu grup, o un color pel tipus de vi. Toca per entrar-hi; toca el centre per tornar.",
+      "aromas": "Aromes",
+      "colours": "Colors",
+      "back": "Torna des de {{name}}",
+      "pick": "Toca una aroma o un color per veure-ho aquí.",
+      "grapesWith_one": "{{count}} raïm de la biblioteca la té:",
+      "grapesWith_other": "{{count}} raïms de la biblioteca la tenen:",
+      "noGrape": "Encara cap raïm de la biblioteca no la té.",
+      "colourOf": "color de vi {{kind}}"
+    }
   },
   "space": {
     "switchLabel": "Espai actiu",

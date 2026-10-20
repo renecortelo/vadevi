@@ -6574,3 +6574,115 @@ button.stats-bars__label:hover {
     animation: none !important;
   }
 }
+
+/* ── The library's wheels ─────────────────────────────────────────────────
+   One drawing for every wheel (`library/Wheel.tsx`): the level in focus at
+   the centre, its parts around it, theirs on the rim. */
+.wheel-card {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+}
+
+.wheel {
+  inline-size: min(100%, 28rem);
+}
+
+.wheel__svg {
+  block-size: auto;
+  display: block;
+  inline-size: 100%;
+  overflow: visible;
+}
+
+.wheel__part {
+  cursor: pointer;
+  outline: none;
+}
+
+.wheel__part path {
+  stroke: rgb(var(--color-surface-rgb));
+  stroke-width: 0.6;
+  transition:
+    filter 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.wheel__part:hover path,
+.wheel__part:focus-visible path {
+  filter: brightness(1.06);
+  stroke: var(--color-text);
+  stroke-width: 1;
+}
+
+/* In the vocabulary, but no grape of the library carries it. */
+.wheel__part--muted path {
+  opacity: 0.4;
+}
+
+.wheel__part--chosen path {
+  stroke: var(--color-plum);
+  stroke-width: 2;
+}
+
+.wheel__labels {
+  pointer-events: none;
+}
+
+.wheel__label {
+  fill: #2b0709;
+  font-weight: 600;
+}
+
+.wheel__centre {
+  cursor: pointer;
+  outline: none;
+}
+
+.wheel__centre:focus-visible circle {
+  stroke: var(--color-plum);
+  stroke-width: 1.5;
+}
+
+.wheel__centre-label {
+  fill: var(--color-text);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.wheel-choice {
+  inline-size: 100%;
+  text-align: center;
+}
+
+.wheel-choice__title {
+  align-items: center;
+  display: flex;
+  font-size: var(--text-lg);
+  gap: var(--space-2);
+  justify-content: center;
+  margin: 0 0 var(--space-2);
+}
+
+.wheel-choice__title .aroma-icon {
+  block-size: 2.4rem;
+  inline-size: 2.4rem;
+  margin: 0;
+}
+
+.wheel-choice__title small {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.wheel-choice__swatch {
+  block-size: 1.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: inline-block;
+  inline-size: 1.6rem;
+}
+
+.wheel-choice .library-chips {
+  justify-content: center;
+}

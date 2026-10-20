@@ -3,12 +3,12 @@ import { Link } from "react-router";
 
 import { useViewTransition } from "../motion/useViewTransition";
 
-export type LibraryShelf = "atlas" | "grapes" | "regions" | "topics";
+export type LibraryShelf = "atlas" | "grapes" | "regions" | "topics" | "wheels";
 const shelves = ["grapes", "regions", "topics"] as const;
 
 /**
- * The library's shelves as one row of tabs — grapes, names, styles and the
- * atlas in figures — the same on every page that has them. On the library's
+ * The library's shelves as one row of tabs — grapes, names, styles, the
+ * wheels and the atlas in figures — the same on every page that has them. On the library's
  * own page a shelf is switched in place (`onSelect`); elsewhere each tab is a
  * link to it.
  */
@@ -17,7 +17,7 @@ export function LibraryTabs({
   onSelect,
 }: {
   current: LibraryShelf;
-  onSelect?: (shelf: Exclude<LibraryShelf, "atlas">) => void;
+  onSelect?: (shelf: Exclude<LibraryShelf, "atlas" | "wheels">) => void;
 }) {
   const { t } = useTranslation();
   const transition = useViewTransition();
@@ -43,6 +43,13 @@ export function LibraryTabs({
           </button>
         ),
       )}
+      <Link
+        aria-current={current === "wheels" ? "page" : undefined}
+        onClick={current === "wheels" ? undefined : transition("/library/wheels")}
+        to="/library/wheels"
+      >
+        {t("library.wheels.tab")}
+      </Link>
       <Link
         aria-current={current === "atlas" ? "page" : undefined}
         onClick={current === "atlas" ? undefined : transition("/library/atlas")}

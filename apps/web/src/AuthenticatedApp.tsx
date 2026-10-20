@@ -74,6 +74,9 @@ const LibraryTopicPage = lazy(() =>
 const LibraryAtlasPage = lazy(() =>
   import("./pages/LibraryAtlasPage").then((module) => ({ default: module.LibraryAtlasPage })),
 );
+const LibraryWheelsPage = lazy(() =>
+  import("./pages/LibraryWheelsPage").then((module) => ({ default: module.LibraryWheelsPage })),
+);
 const LibraryRegionPage = lazy(() =>
   import("./pages/LibraryRegionPage").then((module) => ({ default: module.LibraryRegionPage })),
 );
@@ -242,6 +245,14 @@ export function AuthenticatedRoutes() {
               </DeferredPage>
             }
             path="library/atlas"
+          />
+          <Route
+            element={
+              <DeferredPage>
+                <LibraryWheelsPage />
+              </DeferredPage>
+            }
+            path="library/wheels"
           />
           <Route
             element={

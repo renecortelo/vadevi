@@ -479,7 +479,20 @@
     "glanceSourceDouane": "Aduanas de Francia, declaraciones de cosecha {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Instituto Nacional de Vitivinicultura de Argentina (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Oficina Federal de Estadística de Alemania (Destatis), {{campaign}}",
-    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, censo vitícola {{campaign}} (extracto)"
+    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, censo vitícola {{campaign}} (extracto)",
+    "wheels": {
+      "tab": "Ruedas",
+      "title": "Ruedas de aromas y colores",
+      "intro": "Encuentra un aroma por su familia y su grupo, o un color por el tipo de vino. Toca para entrar; toca el centro para volver.",
+      "aromas": "Aromas",
+      "colours": "Colores",
+      "back": "Volver desde {{name}}",
+      "pick": "Toca un aroma o un color para verlo aquí.",
+      "grapesWith_one": "{{count}} uva de la biblioteca lo tiene:",
+      "grapesWith_other": "{{count}} uvas de la biblioteca lo tienen:",
+      "noGrape": "Ninguna uva de la biblioteca lo tiene todavía.",
+      "colourOf": "color de vino {{kind}}"
+    }
   },
   "space": {
     "switchLabel": "Espacio activo",

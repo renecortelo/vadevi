@@ -21420,6 +21420,16 @@
           {
             "schema": {
               "type": "string",
+              "minLength": 2,
+              "maxLength": 60
+            },
+            "required": false,
+            "name": "aroma",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
               "enum": [
                 "es",
                 "ca",
@@ -21454,6 +21464,93 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/LibrarySearchResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/aromas": {
+      "get": {
+        "operationId": "getLibraryAromaCounts",
+        "tags": [
+          "Library"
+        ],
+        "summary": "Every aroma, in the reader's language, with how many grapes carry it",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "es",
+                "ca",
+                "fr",
+                "en",
+                "nl",
+                "pt-PT",
+                "it",
+                "de"
+              ],
+              "default": "en"
+            },
+            "required": false,
+            "name": "locale",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Each aroma term with the number of grapes whose sources name it.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "grapeCount": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "term": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "grapeCount",
+                          "label",
+                          "term"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ],
+                  "additionalProperties": false
                 }
               }
             }

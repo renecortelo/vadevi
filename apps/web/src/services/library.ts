@@ -1,4 +1,6 @@
 import {
+  type LibraryAromaCountsResponse,
+  LibraryAromaCountsResponseSchema,
   type LibraryRegionSearchResponse,
   type LibraryAtlasCoverageResponse,
   LibraryAtlasCoverageResponseSchema,
@@ -95,6 +97,37 @@ export async function listLibraryGrapes(
   const response = await authenticatedFetch(
     tokenSource,
     `/api/v1/library/grapes?locale=${encodeURIComponent(locale)}`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return LibrarySearchResponseSchema.parse(await response.json()).data;
+}
+
+/** Every aroma of the library's vocabulary, named, with how many grapes carry it. */
+export async function getLibraryAromaCounts(
+  tokenSource: TokenSource,
+  locale: SupportedLocale,
+  signal?: AbortSignal,
+): Promise<LibraryAromaCountsResponse["data"]> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/library/aromas?locale=${encodeURIComponent(locale)}`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return LibraryAromaCountsResponseSchema.parse(await response.json()).data;
+}
+
+/** The grapes whose sources name an aroma. */
+export async function listGrapesWithAroma(
+  tokenSource: TokenSource,
+  term: string,
+  locale: SupportedLocale,
+  signal?: AbortSignal,
+): Promise<LibrarySearchResponse["data"]> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/library/grapes?aroma=${encodeURIComponent(term)}&locale=${encodeURIComponent(locale)}`,
     signal === undefined ? {} : { signal },
   );
   if (!response.ok) throw await apiError(response);

@@ -1,6 +1,8 @@
 import { createRoute, type OpenAPIHono } from "@hono/zod-openapi";
 import {
   ErrorEnvelopeSchema,
+  LibraryAromaCountsQuerySchema,
+  LibraryAromaCountsResponseSchema,
   LibraryAtlasCoverageQuerySchema,
   LibraryAtlasCoverageResponseSchema,
   LibraryGrapePathSchema,
@@ -24,6 +26,7 @@ import {
   getLibraryRegion,
   libraryRegionNames,
   getLibraryTopic,
+  libraryAromaCounts,
   libraryAtlasCoverage,
   listLibraryTopics,
   searchLibraryGrapes,
@@ -71,6 +74,26 @@ const grapeRoute = createRoute({
     404: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "The library has no such grape.",
+    },
+  },
+});
+
+const aromaCountsRoute = createRoute({
+  method: "get",
+  path: "/api/v1/library/aromas",
+  operationId: "getLibraryAromaCounts",
+  tags: ["Library"],
+  summary: "Every aroma, in the reader's language, with how many grapes carry it",
+  security: [{ FirebaseBearer: [] }],
+  request: { query: LibraryAromaCountsQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: LibraryAromaCountsResponseSchema } },
+      description: "Each aroma term with the number of grapes whose sources name it.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
     },
   },
 });
@@ -296,8 +319,13 @@ export function registerLibraryRoutes(app: OpenAPIHono<ApiEnvironment>) {
   });
 
   app.openapi(searchRoute, async (context) => {
-    const { locale, query } = context.req.valid("query");
-    const data = await searchLibraryGrapes(context.env.DB!, query, locale);
+    const { aroma, locale, query } = context.req.valid("query");
+    const data = await searchLibraryGrapes(context.env.DB!, query, locale, aroma);
     return context.json(LibrarySearchResponseSchema.parse({ data }), 200);
+  });
+
+  app.openapi(aromaCountsRoute, async (context) => {
+    const data = await libraryAromaCounts(context.env.DB!, context.req.valid("query").locale);
+    return context.json(LibraryAromaCountsResponseSchema.parse({ data }), 200);
   });
 }

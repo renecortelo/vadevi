@@ -117,8 +117,28 @@ export const LibraryGrapeQuerySchema = z
 /** By name; without one, every grape — the library's list. */
 export const LibrarySearchQuerySchema = z
   .object({
+    /** Only the grapes whose aromas include this library term ("raspberry"). */
+    aroma: z.string().trim().min(2).max(60).optional(),
     locale: SupportedLocaleSchema.default("en"),
     query: z.string().trim().min(2).max(120).optional(),
+  })
+  .strict();
+
+/**
+ * Every aroma term of the library's vocabulary, named in the reader's
+ * language, with how many grapes carry it: what the aroma wheel draws.
+ */
+export const LibraryAromaCountsQuerySchema = z
+  .object({ locale: SupportedLocaleSchema.default("en") })
+  .strict();
+
+export const LibraryAromaCountsResponseSchema = z
+  .object({
+    data: z.array(
+      z
+        .object({ grapeCount: z.number().int().min(0), label: z.string(), term: z.string() })
+        .strict(),
+    ),
   })
   .strict();
 
@@ -443,6 +463,7 @@ export type LibraryRegion = z.infer<typeof LibraryRegionSchema>;
 export type LibraryGrape = z.infer<typeof LibraryGrapeSchema>;
 export type LibraryGrapeResponse = z.infer<typeof LibraryGrapeResponseSchema>;
 export type LibrarySearchResponse = z.infer<typeof LibrarySearchResponseSchema>;
+export type LibraryAromaCountsResponse = z.infer<typeof LibraryAromaCountsResponseSchema>;
 export type LibraryAtlasCoverageResponse = z.infer<typeof LibraryAtlasCoverageResponseSchema>;
 
 /** Registered names by id, as the register writes them. */

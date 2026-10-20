@@ -479,7 +479,20 @@
     "glanceSourceDouane": "French customs, {{campaign}} harvest declarations · Licence Ouverte",
     "glanceSourceInv": "Argentina's National Wine Institute (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Germany's Federal Statistical Office (Destatis), {{campaign}}",
-    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, vineyard survey {{campaign}} (extract)"
+    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, vineyard survey {{campaign}} (extract)",
+    "wheels": {
+      "tab": "Wheels",
+      "title": "Aroma and colour wheels",
+      "intro": "Find an aroma by its family and group, or a colour by the kind of wine. Touch to go in; touch the centre to step back.",
+      "aromas": "Aromas",
+      "colours": "Colours",
+      "back": "Back from {{name}}",
+      "pick": "Touch an aroma or a colour to see it here.",
+      "grapesWith_one": "{{count}} grape in the library carries it:",
+      "grapesWith_other": "{{count}} grapes in the library carry it:",
+      "noGrape": "No grape in the library carries it yet.",
+      "colourOf": "a {{kind}} wine colour"
+    }
   },
   "space": {
     "switchLabel": "Active Space",

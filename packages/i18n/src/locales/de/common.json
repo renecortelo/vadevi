@@ -479,7 +479,20 @@
     "glanceSourceDouane": "Französischer Zoll, Ernteerklärungen {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Argentiniens Nationales Weinbauinstitut (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Statistisches Bundesamt (Destatis), {{campaign}}",
-    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, Weingartengrunderhebung {{campaign}} (Auszug)"
+    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, Weingartengrunderhebung {{campaign}} (Auszug)",
+    "wheels": {
+      "tab": "Räder",
+      "title": "Aroma- und Farbräder",
+      "intro": "Finde ein Aroma über seine Familie und Gruppe oder eine Farbe über die Weinart. Tippe, um hineinzugehen; tippe auf die Mitte, um zurückzugehen.",
+      "aromas": "Aromen",
+      "colours": "Farben",
+      "back": "Zurück aus {{name}}",
+      "pick": "Tippe auf ein Aroma oder eine Farbe, um es hier zu sehen.",
+      "grapesWith_one": "{{count}} Rebsorte der Bibliothek hat es:",
+      "grapesWith_other": "{{count}} Rebsorten der Bibliothek haben es:",
+      "noGrape": "Noch keine Rebsorte der Bibliothek hat es.",
+      "colourOf": "Weinfarbe: {{kind}}"
+    }
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

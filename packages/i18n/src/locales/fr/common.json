@@ -479,7 +479,20 @@
     "glanceSourceDouane": "Douanes françaises, déclarations de récolte {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Institut national de viticulture d'Argentine (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Office fédéral de la statistique d'Allemagne (Destatis), {{campaign}}",
-    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, recensement viticole {{campaign}} (extrait)"
+    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, recensement viticole {{campaign}} (extrait)",
+    "wheels": {
+      "tab": "Roues",
+      "title": "Roues des arômes et des couleurs",
+      "intro": "Trouve un arôme par sa famille et son groupe, ou une couleur par le type de vin. Touche pour entrer ; touche le centre pour revenir.",
+      "aromas": "Arômes",
+      "colours": "Couleurs",
+      "back": "Revenir de {{name}}",
+      "pick": "Touche un arôme ou une couleur pour le voir ici.",
+      "grapesWith_one": "{{count}} cépage de la bibliothèque le porte :",
+      "grapesWith_other": "{{count}} cépages de la bibliothèque le portent :",
+      "noGrape": "Aucun cépage de la bibliothèque ne le porte encore.",
+      "colourOf": "couleur de vin {{kind}}"
+    }
   },
   "space": {
     "switchLabel": "Espace actif",

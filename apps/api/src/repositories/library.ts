@@ -327,8 +327,19 @@ export async function searchLibraryGrapes(
   database: D1Database,
   query: string | undefined,
   locale: string,
+  aroma?: string,
 ): Promise<GrapeListItem[]> {
-  const ids = query === undefined ? null : await findGrapesByName(database, query, 10);
+  let ids = query === undefined ? null : await findGrapesByName(database, query, 10);
+  if (aroma !== undefined) {
+    // The grapes whose own sources name this aroma, within the name search
+    // when there is one.
+    const withAroma = await database
+      .prepare(`SELECT grape_id FROM kb_grape_attributes WHERE kind = 'aroma' AND value = ?`)
+      .bind(aroma)
+      .all<{ grape_id: string }>();
+    const found = withAroma.results.map((row) => row.grape_id);
+    ids = ids === null ? found : ids.filter((id) => found.includes(id));
+  }
   if (ids !== null && ids.length === 0) return [];
   const rows = await database
     .prepare(
@@ -436,6 +447,31 @@ export async function libraryAtlasCoverage(database: D1Database, locale: string)
     })),
     libraryVersion: (version!.results[0] as { value: string } | undefined)?.value ?? null,
   };
+}
+
+/**
+ * Every aroma term the library knows, named in the reader's language (English
+ * where it has no name in it), with how many grapes carry it.
+ */
+export async function libraryAromaCounts(
+  database: D1Database,
+  locale: string,
+): Promise<{ grapeCount: number; label: string; term: string }[]> {
+  const rows = await database
+    .prepare(
+      `SELECT terms.term,
+          coalesce(terms_local.label, terms.label) AS label,
+          (SELECT count(*) FROM kb_grape_attributes attribute
+            WHERE attribute.kind = 'aroma' AND attribute.value = terms.term) AS grapeCount
+        FROM kb_terms terms
+        LEFT JOIN kb_terms terms_local ON terms_local.kind = terms.kind
+          AND terms_local.term = terms.term AND terms_local.locale = ?
+        WHERE terms.kind = 'aroma' AND terms.locale = 'en'
+        ORDER BY terms.term`,
+    )
+    .bind(locale)
+    .all<{ grapeCount: number; label: string; term: string }>();
+  return rows.results;
 }
 
 export async function searchLibraryRegions(

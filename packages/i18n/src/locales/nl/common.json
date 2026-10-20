@@ -479,7 +479,20 @@
     "glanceSourceDouane": "Franse douane, oogstaangiften {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Argentijns Nationaal Wijnbouwinstituut (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Duits Federaal Bureau voor de Statistiek (Destatis), {{campaign}}",
-    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, wijngaardtelling {{campaign}} (uittreksel)"
+    "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, wijngaardtelling {{campaign}} (uittreksel)",
+    "wheels": {
+      "tab": "Wielen",
+      "title": "Aroma- en kleurwielen",
+      "intro": "Vind een aroma via zijn familie en groep, of een kleur via het soort wijn. Tik om erin te gaan; tik op het midden om terug te gaan.",
+      "aromas": "Aroma's",
+      "colours": "Kleuren",
+      "back": "Terug uit {{name}}",
+      "pick": "Tik op een aroma of een kleur om het hier te zien.",
+      "grapesWith_one": "{{count}} druif in de bibliotheek heeft het:",
+      "grapesWith_other": "{{count}} druiven in de bibliotheek hebben het:",
+      "noGrape": "Nog geen druif in de bibliotheek heeft het.",
+      "colourOf": "wijnkleur: {{kind}}"
+    }
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

@@ -1,4 +1,8 @@
-import { LibraryGrapeResponseSchema, LibrarySearchResponseSchema } from "@vadevi/contracts";
+import {
+  LibraryAromaCountsResponseSchema,
+  LibraryGrapeResponseSchema,
+  LibrarySearchResponseSchema,
+} from "@vadevi/contracts";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { beforeAll, describe, expect, it } from "vitest";
 
@@ -143,6 +147,30 @@ describe("the wine library", () => {
       (await SELF.fetch("https://vadevi.test/api/v1/library/grapes/no-such-grape", { headers }))
         .status,
     ).toBe(404);
+  });
+
+  it("tells the aroma wheel which grapes carry an aroma, and how many", async () => {
+    const withPlum = await SELF.fetch(
+      "https://vadevi.test/api/v1/library/grapes?aroma=plum&locale=en",
+      { headers },
+    );
+    expect(
+      LibrarySearchResponseSchema.parse(await withPlum.json()).data.map((grape) => grape.id),
+    ).toEqual(["tempranillo"]);
+    const none = await SELF.fetch(
+      "https://vadevi.test/api/v1/library/grapes?aroma=violet&locale=en",
+      { headers },
+    );
+    expect(LibrarySearchResponseSchema.parse(await none.json()).data).toEqual([]);
+
+    // Every term of the vocabulary, named in the reader's language.
+    const counts = await SELF.fetch("https://vadevi.test/api/v1/library/aromas?locale=es", {
+      headers,
+    });
+    expect(LibraryAromaCountsResponseSchema.parse(await counts.json()).data).toEqual([
+      { grapeCount: 1, label: "ciruela", term: "plum" },
+      { grapeCount: 1, label: "tabaco", term: "tobacco" },
+    ]);
   });
 
   it("finds a grape by a synonym, in any spelling", async () => {
