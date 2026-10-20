@@ -47,7 +47,11 @@ reuses — one request, not two) and opens its connection to Google early,
 which took about 150 ms off the median and 500 ms off the p95. What remains is
 Google's script: removing it from start-up would mean opening the sign-in
 popup only after loading it, which Safari may block. The next step, if wanted,
-is to draw the sign-in screen at once when this device has never signed in.
+is to draw the sign-in screen at once when this device has never signed in. Done on 20 October 2026: with no Firebase session in local storage and
+no Google redirect pending, the sign-in screen is drawn before
+`/runtime-config` and Google's script arrive (`e2e/instant-sign-in.spec.ts`
+holds the configuration back four seconds and finds the sign-in button
+within two). The deployed LCP is to be measured again on the phone profile.
 
 Every figure is within a few milliseconds of the previous run except one. The
 `sessions` p95 moved from 10 ms to 105 ms while its median did not move at all,

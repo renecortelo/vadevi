@@ -52,10 +52,45 @@ function localRuntimeConfig(): RuntimeConfigResponse {
   };
 }
 
+/**
+ * Whether this browser holds no session to restore: no signed-in user kept by
+ * Firebase (`firebase:authUser:…` in local storage) and no Google sign-in
+ * coming back from a redirect (`firebase:pendingRedirect…` in session
+ * storage). Then the sign-in screen can be drawn at once instead of after
+ * Google's script loads — the wait that kept the first paint over 2.5 s on a
+ * phone (`docs/performance-evidence.md`). Unreadable storage counts as
+ * "maybe": the app waits, as before.
+ */
+function nothingToRestore(): boolean {
+  try {
+    const stored = (storage: Storage, prefix: string) =>
+      Array.from({ length: storage.length }, (_, index) => storage.key(index) ?? "").some((key) =>
+        key.startsWith(prefix),
+      );
+    return (
+      !stored(globalThis.localStorage, "firebase:authUser:") &&
+      !stored(globalThis.sessionStorage, "firebase:pendingRedirect")
+    );
+  } catch {
+    return false;
+  }
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const authRef = useRef<Auth | null>(null);
   const previousUserIdRef = useRef<string | null>(null);
-  const [status, setStatus] = useState<AuthStatus>("loading");
+  const [status, setStatus] = useState<AuthStatus>(() =>
+    nothingToRestore() ? "signed-out" : "loading",
+  );
+  // Sign-in may be asked for before Firebase is ready, now that the screen
+  // is drawn without waiting for it: it waits for this.
+  const [ready] = useState(() => {
+    let resolve: (auth: Auth) => void = () => undefined;
+    const promise = new Promise<Auth>((settle) => {
+      resolve = settle;
+    });
+    return { promise, resolve };
+  });
   const [user, setUser] = useState<FirebaseUser | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [runtimeConfig, setRuntimeConfig] = useState<RuntimeConfigResponse | null>(null);
@@ -92,6 +127,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (!active) return;
 
         authRef.current = auth;
+        ready.resolve(auth);
         setRuntimeConfig(config);
         unsubscribe = onAuthStateChanged(
           auth,
@@ -135,7 +171,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       active = false;
       unsubscribe?.();
     };
-  }, []);
+    // `ready` is made once, with the provider: it never changes.
+  }, [ready]);
 
   const value = useMemo<AuthContextValue>(
     () => ({
@@ -143,8 +180,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       error,
       isEmulator: runtimeConfig?.data.firebase.emulatorHost !== undefined,
       signIn: async () => {
-        const auth = authRef.current;
-        if (auth === null) throw new Error("Authentication is not ready.");
+        const auth = authRef.current ?? (await ready.promise);
         const provider = new GoogleAuthProvider();
 
         // Redirect sign-in needs the app and the Firebase auth domain to share
@@ -174,7 +210,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       status,
       user,
     }),
-    [error, runtimeConfig, status, user],
+    [error, ready, runtimeConfig, status, user],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

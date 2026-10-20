@@ -8,6 +8,12 @@ has the reasons.
 
 ### Finding your way
 
+- **The sign-in screen at once**: a device that holds no session to restore
+  draws it without waiting for the configuration and Google's sign-in script
+  (the wait that kept the first paint over 2.5 s on a phone); «Continue with
+  Google» waits for them if touched first. A device with a session waits as
+  before, so it never flashes the sign-in screen.
+
 - **Sources and licences**, a page of its own under About: every source the
   library is built from — texts, registers, vineyard figures, climate, maps
   and photographs — each with what it gives and its terms, said in the
