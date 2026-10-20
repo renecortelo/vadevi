@@ -23,6 +23,10 @@ has the reasons.
   spagnola») or a region wholly within it («autòctona de Catalunya») — and
   checked against the article; a grape whose articles disagree or hedge
   keeps none (77 % of grapes now have an origin, from 64 %).
+- **Nine more grape levels read by hand** (acidity, tannin, body, alcohol)
+  from their articles in Spanish, French, German and English; the check now
+  also knows «rich in tannin», «richesse tannique», «noticeable acidity» and
+  «moderadamente alcohólicos».
 - **Every grape named in all eight languages**: a cultivar whose name is a
   proper name (Concord, Delaware, Niagara, Campbell Early, Rondo, Koshu…)
   takes it where Wikidata has no label; and a name taken from an article's

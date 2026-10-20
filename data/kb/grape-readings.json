@@ -197,6 +197,12 @@
         "lang": "en",
         "value": "high",
         "quote": "It makes deep cherry red wines with high alcohol"
+      },
+      {
+        "field": "body",
+        "lang": "fr",
+        "quote": "Il donne des vins à robe rubis, corsés, charpentés et chaleureux, qui se distinguent au nez par des notes de fruits rouges mais de couleur peu soutenue si les rendements sont élevés.",
+        "value": "high"
       }
     ],
     "black-muscat": [
@@ -292,6 +298,12 @@
           "game": "gibiers",
           "cheese": "fromages"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "quote": "Cabernet Dorsa wines are deep in colour, rich in tannin, have noticeable aromas of cherry and bell peppers and are considered well suited for oak barrel aging.",
+        "value": "high"
       }
     ],
     "cabernet-sauvignon": [
@@ -544,6 +556,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "In addition to dry table wines, it is used to make sweet wines"
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "quote": "Wines made from Erbaluce tend to be dry with noticeable acidity.",
+        "value": "high"
       }
     ],
     "fernao-pires": [
@@ -874,6 +892,12 @@
         "lang": "de",
         "value": "dry-sweet",
         "quote": "die trocken bis süß ausgebaut werden können"
+      },
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "quote": "Die spätreifende Sorte mit ihren dickschaligen, harten und dunklen Beeren erbringt alkoholarme Weine mit wenig Körper und Struktur, die trocken bis süß ausgebaut werden können.",
+        "value": "low"
       }
     ],
     "marsanne": [
@@ -1066,6 +1090,12 @@
         "lang": "en",
         "value": "high",
         "quote": "small thick-skinned berries that are high in both color and flavor phenolics, particularly tannins"
+      },
+      {
+        "field": "acidity",
+        "lang": "fr",
+        "quote": "Le vin de mourvèdre est assez faible en acidité, mais il est reconnu pour la qualité de sa structure tannique, sa richesse aromatique et son aptitude au vieillissement",
+        "value": "low"
       }
     ],
     "mujuretuli": [
@@ -1721,6 +1751,12 @@
         "lang": "en",
         "value": "high",
         "quote": "The resulting wines are typically full bodied and very fruity."
+      },
+      {
+        "field": "acidity",
+        "lang": "fr",
+        "quote": "À maturité, il donne des vins fruités (framboise), acides, charpentés.",
+        "value": "high"
       }
     ],
     "tempranillo": [
@@ -1901,6 +1937,12 @@
         "words": {
           "bitter almond": "almendra amarga"
         }
+      },
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "quote": "Los vinos son moderadamente alcohólicos.",
+        "value": "medium"
       }
     ],
     "verdelho": [
@@ -2016,6 +2058,12 @@
         "lang": "es",
         "quote": "Sumoll es un tipo de uva (Vitis vinifera) autóctona española.",
         "value": "ES"
+      },
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "quote": "Produce vinos de color intenso y graduación alcohólica alta.",
+        "value": "high"
       }
     ],
     "baga": [
@@ -2040,6 +2088,14 @@
         "lang": "fr",
         "quote": "Elle provient du sud de l'Italie.",
         "value": "IT"
+      }
+    ],
+    "durif": [
+      {
+        "field": "tannin",
+        "lang": "fr",
+        "quote": "En monocépage, le vin de durif est caractérisé par des arômes poivrés, une couleur intense et une belle richesse tannique.",
+        "value": "high"
       }
     ]
   }

@@ -521,7 +521,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "red fruit"
     ],
@@ -614,6 +614,12 @@
         "field": "origin",
         "quote": "Sumoll es un tipo de uva (Vitis vinifera) autóctona española.",
         "value": "ES",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Sumoll"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Produce vinos de color intenso y graduación alcohólica alta.",
+        "value": "high",
         "sourceUrl": "https://es.wikipedia.org/wiki/Sumoll"
       }
     ],
@@ -6904,6 +6910,11 @@
         "value": "ES"
       },
       {
+        "field": "acidity",
+        "quote": "with notable acidity and a medium to moderate alcohol content.",
+        "value": "high"
+      },
+      {
         "field": "aromas",
         "quote": "with aromas of citrus fruit, ripe fruit, herbs and flowers ... The wines have intense aromas of pear and exotic fruits",
         "value": "citrus"
@@ -6992,12 +7003,6 @@
         "field": "alcohol",
         "quote": "with notable acidity and a medium to moderate alcohol content",
         "value": "medium"
-      },
-      {
-        "field": "acidity",
-        "quote": "Poseen una alta acidez.",
-        "value": "high",
-        "sourceUrl": "https://es.wikipedia.org/wiki/Courbu"
       }
     ],
     "id": "hondarrabi-zuri",
@@ -7994,7 +7999,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Alicante_Bouschet"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": "high",
     "aromas": [
       "gamey",
@@ -8113,6 +8118,12 @@
         "field": "tannin",
         "quote": "small thick-skinned berries that are high in both color and flavor phenolics, particularly tannins",
         "value": "high"
+      },
+      {
+        "field": "acidity",
+        "quote": "Le vin de mourvèdre est assez faible en acidité, mais il est reconnu pour la qualité de sa structure tannique, sa richesse aromatique et son aptitude au vieillissement",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Mourv%C3%A8dre"
       }
     ],
     "id": "mourvedre",
@@ -12592,6 +12603,11 @@
         "value": "DE"
       },
       {
+        "field": "tannin",
+        "quote": "Cabernet Dorsa wines are deep in colour, rich in tannin",
+        "value": "high"
+      },
+      {
         "field": "aromas",
         "quote": "have noticeable aromas of cherry and bell peppers",
         "value": "cherry"
@@ -12694,7 +12710,7 @@
     },
     "sweetness": null,
     "synonyms": [],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q450880",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cabernet_Dorsa"
   },
@@ -13185,6 +13201,11 @@
         "value": "FR"
       },
       {
+        "field": "acidity",
+        "quote": "in cooler climates, the grape has a tendency to produce wines with noticeable acidity",
+        "value": "high"
+      },
+      {
         "field": "aromas",
         "quote": "flavor can range from aggressively grassy to sweetly tropical ... \"green flavors\" of grass, green bell peppers and nettles ... tropical fruit (such as passion fruit) and floral (such as elderflower) ... vegetal aromas reminiscent of peas and asparagus ... the asparagus, gooseberry and green flavor ...",
         "value": "grass"
@@ -13368,11 +13389,6 @@
         "field": "sweetness",
         "quote": "Dry and sweet white Bordeaux, including oak-aged examples from Pessac-Léognan and Graves",
         "value": "dry-sweet"
-      },
-      {
-        "field": "acidity",
-        "quote": "softening the naturally high acidity of the grape",
-        "value": "high"
       }
     ],
     "id": "sauvignon-blanc",
@@ -27311,7 +27327,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Assyrtiko"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "raspberry",
@@ -27415,6 +27431,12 @@
         "field": "body",
         "quote": "The resulting wines are typically full bodied and very fruity.",
         "value": "high"
+      },
+      {
+        "field": "acidity",
+        "quote": "À maturité, il donne des vins fruités (framboise), acides, charpentés.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Tannat"
       }
     ],
     "id": "tannat",
@@ -33151,6 +33173,11 @@
         "value": "RO"
       },
       {
+        "field": "acidity",
+        "quote": "In Moldova, Băbească neagră ... gives red wines which are typically rich in acid ...",
+        "value": "high"
+      },
+      {
         "field": "body",
         "quote": "Most wines produced from Băbească Neagră are light‑bodied, fruity red wines.",
         "value": "low"
@@ -33214,12 +33241,6 @@
         "field": "regions",
         "quote": "It is cultivated in Moldova in the regions of Orhei, Anenii Noi, Straseni, Ialoveni and in Romania in the regions of Moldavia, Dobruja and Wallachia... Băbească neagră can be found on limited acreages in the Finger Lakes region of New York State...",
         "value": "US: Finger Lakes (New York)"
-      },
-      {
-        "field": "acidity",
-        "quote": "donne des vins rouges typiquement riches en acide",
-        "value": "high",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
       }
     ],
     "id": "babeasca-neagra",
@@ -34196,7 +34217,7 @@
       "gamey",
       "mineral"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -34318,6 +34339,12 @@
         "field": "alcohol",
         "quote": "It makes deep cherry red wines with high alcohol",
         "value": "high"
+      },
+      {
+        "field": "body",
+        "quote": "Il donne des vins à robe rubis, corsés, charpentés et chaleureux, qui se distinguent au nez par des notes de fruits rouges mais de couleur peu soutenue si les rendements sont élevés.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Trousseau"
       }
     ],
     "id": "bastardo",
@@ -34816,7 +34843,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "bitter almond"
     ],
@@ -34859,6 +34886,12 @@
         "field": "aromas",
         "quote": "Son muy aromáticos y destacan los aromas a almendra amarga.",
         "value": "bitter almond",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Verdejo"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Los vinos son moderadamente alcohólicos.",
+        "value": "medium",
         "sourceUrl": "https://es.wikipedia.org/wiki/Verdejo"
       }
     ],
@@ -37682,6 +37715,12 @@
         "field": "regions",
         "quote": "Durif is mainly grown in Australia, California, France, and Israel. ... Washington's Yakima River Valley, Maryland, Arizona, Texas, West Virginia, Chile, Mexico's Baja California Peninsula, and Ontario's Niagara Peninsula have also produced wines from Durif grapes.",
         "value": "IL: Israel"
+      },
+      {
+        "field": "tannin",
+        "quote": "En monocépage, le vin de durif est caractérisé par des arômes poivrés, une couleur intense et une belle richesse tannique.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Durif"
       }
     ],
     "id": "durif",
@@ -37900,7 +37939,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q1267369",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Durif"
   },
@@ -44316,7 +44355,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [],
     "body": "low",
     "color": "red",
@@ -44432,6 +44471,12 @@
         "field": "sweetness",
         "quote": "die trocken bis süß ausgebaut werden können",
         "value": "dry-sweet",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mandilaria"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Die spätreifende Sorte mit ihren dickschaligen, harten und dunklen Beeren erbringt alkoholarme Weine mit wenig Körper und Struktur, die trocken bis süß ausgebaut werden können.",
+        "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Mandilaria"
       }
     ],
@@ -48362,7 +48407,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Raboso_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "apple"
@@ -48434,6 +48479,11 @@
         "field": "sweetness",
         "quote": "In addition to dry table wines, it is used to make sweet wines",
         "value": "dry-sweet"
+      },
+      {
+        "field": "acidity",
+        "quote": "Wines made from Erbaluce tend to be dry with noticeable acidity.",
+        "value": "high"
       }
     ],
     "id": "erbaluce",
