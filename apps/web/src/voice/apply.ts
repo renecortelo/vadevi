@@ -82,7 +82,8 @@ export function applyVoiceProposal(
   }
   // The tasting words the form offers, ticked from what was said.
   if (note.descriptorCodes.length === 0 && (extra.descriptors ?? []).length > 0) {
-    note.descriptorCodes = [...extra.descriptors!];
+    // The quick note keeps three: the first ones said.
+    note.descriptorCodes = extra.descriptors!.slice(0, 3);
     filled.push("descriptors");
   }
   // The day: the one said ("yesterday", "on Saturday"), or else today when
@@ -237,8 +238,12 @@ const deepFields = [
   "appearanceIntensity",
   "appearanceHue",
   "appearanceText",
+  "viscosity",
   "noseCondition",
+  "noseIntensity",
   "noseText",
+  "noseSwirledIntensity",
+  "noseSwirledText",
   "palateText",
   "conclusionText",
   "sweetness",
@@ -246,6 +251,8 @@ const deepFields = [
   "tanninLevel",
   "body",
   "finishLength",
+  "alcoholPerception",
+  "balance",
   "tanninTexture",
   "palateTexture",
   "effervescence",

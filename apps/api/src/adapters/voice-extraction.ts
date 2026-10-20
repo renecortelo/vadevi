@@ -45,14 +45,21 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
   A finish is 2 when short, 3 medium, 4 long; 1 and 5 only when very short
   or very long.
 - sweetness: dry 1, off-dry or slightly sweet 2, medium 3, sweet 4, very sweet
-  or a dessert wine 5. "Seco", "trocken", "sec" are 1.
+  or a dessert wine 5. "Seco", "trocken", "sec" are 1; "neither dry nor
+  sweet" ("ni seco ni dulce") is 3.
+- viscosity (the tears or legs), noseIntensity, noseSwirledIntensity,
+  alcoholPerception (the warmth of the alcohol felt) and balance are 1–5 like
+  the scales above; balance is 4 when the wine is said balanced, 5 very.
+- noseText is the nose with the glass still; noseSwirledText what came after
+  swirling ("al remover…", "after swirling…"), in the taster's words.
 - wouldBuy and wouldDrinkAgain are "yes", "no" or "unsure" (undecided, not
   sure yet), as strings.
 - sentiment: "like" when the taster says they like or enjoy it, "dislike"
   when they say they do not, "neutral" when they say it is just correct.
 - conclusionText: the taster's closing verdict sentence, if there is one.
 - wineName is the name alone, without the words around it ("registro",
-  "estoy probando", "I'm tasting").
+  "estoy probando", "I'm tasting"); in "estoy probando X, que es de la bodega
+  Y" the wine is X and the producer Y.
 - producerName only when a winery or maker is named as such ("de Bodega
   X", "made by Y"); a first name alone is who brought or gave the wine.
 - grapes are grape varieties only; an appellation or region (Soave,
@@ -67,7 +74,8 @@ Return JSON: {"wineCount": n, "fields": [{"name", "value", "quote", "certain"}]}
   never translated ("mantequilla", not "butter").
 - region only when a place is named; "from around here" names none.
 - appearanceIntensity and effervescence are 1–5 like the scales above;
-  appearanceHue is the colour named ("rubí", "pale ruby"), in the taster's words.
+  appearanceHue is the colour named ("rubí", "pale ruby", "cobre"), in the
+  taster's words.
 - noseCondition: "clean" when the taster says the nose is clean or names a
   fault they do not find ("no cork", "no vinegar"); "possible_fault" when
   they suspect one.

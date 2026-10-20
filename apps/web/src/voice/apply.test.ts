@@ -259,4 +259,70 @@ describe("the tasting words a spoken note names", () => {
     // Cherry was said of the mouth: the quick note's single list counts it.
     expect(heard.any).toContain("fruit.red.cherry");
   });
+
+  it("ticks the aroma wheel's aromas named in the nose, in the note's language", () => {
+    const heard = heardDescriptors(
+      {
+        fields: {
+          noseText: {
+            quote: "algo de miel y un poco cítrico",
+            status: "explicit",
+            value: "algo de miel y un poco cítrico",
+          },
+        },
+        region: null,
+        severalWines: false,
+      },
+      "es",
+      null,
+    );
+    expect(heard.nose).toEqual(expect.arrayContaining(["sweet.honey", "fruit.citrus.citrus"]));
+  });
+});
+
+describe("what a spoken note adds to a deep tasting since 19 October 2026", () => {
+  it("fills the tears, the swirled nose, the warmth and the balance", () => {
+    const { filled, payload: next } = applyVoiceToDeepTasting(
+      {
+        descriptors: [],
+        mode: "deep",
+        state: "draft",
+        tastedAt: "2026-10-19T20:00:00.000Z",
+        wineId: "w",
+      } as DeepTastingRequest,
+      {
+        fields: {
+          alcoholPerception: { quote: "un poco de alcohol", status: "explicit", value: 2 },
+          balance: { quote: "creo que está muy equilibrado", status: "ambiguous", value: 5 },
+          noseSwirledText: {
+            quote: "al remover",
+            status: "explicit",
+            value: "al remover sale más",
+          },
+          viscosity: { quote: "la lágrima mediana", status: "explicit", value: 3 },
+        },
+        region: null,
+        severalWines: false,
+      },
+    );
+    expect(next).toMatchObject({
+      alcoholPerception: 2,
+      noseSwirledText: "al remover sale más",
+      viscosity: 3,
+    });
+    // A hedged balance is offered, not filled.
+    expect(next.balance).toBeUndefined();
+    expect(filled).toEqual(
+      expect.arrayContaining(["viscosity", "noseSwirledText", "alcoholPerception"]),
+    );
+  });
+
+  it("keeps three of the words heard for the quick note, the first said", () => {
+    const { draft: next } = applyVoiceProposal(
+      draft,
+      { fields: {}, region: null, severalWines: false },
+      { descriptors: ["a.one", "a.two", "a.three", "a.four"] },
+    );
+    expect(next.notePayload.descriptorCodes).toEqual(["a.one", "a.two", "a.three"]);
+  });
 });

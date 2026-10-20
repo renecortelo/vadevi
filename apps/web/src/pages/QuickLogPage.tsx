@@ -2,8 +2,8 @@ import { WineTypeSchema } from "@vadevi/contracts";
 import type { TastingSessionResponse, WineGrape, WineSummary, WineType } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
-  descriptorByCode,
   descriptorsForWineType,
+  descriptorText,
   type OntologyWineType,
 } from "@vadevi/i18n/runtime";
 import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
@@ -142,6 +142,7 @@ export function QuickLogPage() {
   // The draft as it is now, for a spoken note that comes back seconds after
   // it was asked for — whatever was typed meanwhile is not lost.
   const latestDraft = useRef(draft);
+  const savedDraft = useRef<typeof draft | null>(null);
   useEffect(() => {
     latestDraft.current = draft;
   }, [draft]);
@@ -284,6 +285,10 @@ export function QuickLogPage() {
       });
       setSaved(true);
       setReviewing(false);
+      // A spoken note sent for review after saving carries the form as it
+      // was saved, not the empty one that follows (a real note of 19 October
+      // 2026 arrived empty).
+      savedDraft.current = draft;
       setDraft(newDraft(userId, spaceId));
     } catch {
       setError(t("quickLog.saveError"));
@@ -312,15 +317,18 @@ export function QuickLogPage() {
     ...descriptorsForWineType("palate", loggedType),
   ];
   // Anything already ticked stays listed even if the type changed since.
+  // An aroma heard from the wheel's vocabulary is named from it.
   const descriptors = [
-    ...offeredDescriptors,
+    ...offeredDescriptors.map((descriptor) => ({
+      code: descriptor.code,
+      label: descriptor.text[locale].label,
+    })),
     ...selectedDescriptors
       .filter((code: string) => !offeredDescriptors.some((one) => one.code === code))
-      .map((code: string) => descriptorByCode(code))
-      .filter(
-        (entry: ReturnType<typeof descriptorByCode>): entry is NonNullable<typeof entry> =>
-          entry !== undefined,
-      ),
+      .flatMap((code: string) => {
+        const text = descriptorText(code, locale);
+        return text === undefined ? [] : [{ code, label: text.label }];
+      }),
   ];
   /** Refresh the prefill candidates from the server as the reader types, so a
    *  wine past the first page can be reached at all. */
@@ -359,10 +367,17 @@ export function QuickLogPage() {
           kind="quick"
           onProposal={applyVoice}
           online={status !== "offline"}
-          snapshot={() => ({
-            ...latestDraft.current.winePayload,
-            note: latestDraft.current.includeNote ? latestDraft.current.notePayload : null,
-          })}
+          snapshot={() => {
+            const shown = latestDraft.current;
+            const empty =
+              shown.winePayload.displayName.trim() === "" &&
+              shown.winePayload.producerName.trim() === "";
+            const form = empty && savedDraft.current !== null ? savedDraft.current : shown;
+            return {
+              ...form.winePayload,
+              note: form.includeNote ? form.notePayload : null,
+            };
+          }}
           spaceId={spaceId}
         />
       ) : null}
@@ -749,7 +764,7 @@ export function QuickLogPage() {
                           }
                           type="checkbox"
                         />
-                        <span>{descriptor.text[locale].label}</span>
+                        <span>{descriptor.label}</span>
                       </label>
                     );
                   })}

@@ -386,4 +386,66 @@ describe("a spoken note's proposal", () => {
       acceptProposal({ fields: [], wineCount: 1 }, "No es seco del todo.", today).fields.sweetness,
     ).toBeUndefined();
   });
+
+  // Two real notes of 19 October 2026 lost the wine's name, its colour, the
+  // tears, the swirled nose and the warmth, and read "neither dry nor sweet"
+  // as sweet. The same turns of phrase, in a note made up for the test.
+  it("reads what the model left out of plain words", () => {
+    const said =
+      "Estoy probando Monte Alto que es de la bodega Pinar, del 2023, un vinito naranja. " +
+      "Tiene un color medio cobre, naranjoso. La lágrima mediana no está tan líquida. " +
+      "Copa parada me da algo de miel y tal vez algo de flor y al remover sale algo de hojas " +
+      "secas luego vamos a probarlo pues se siente un poco de alcohol al final y creo que " +
+      "está muy equilibrado no lo siento ni tan seco ni tan dulce";
+    const proposal = acceptProposal(
+      {
+        fields: [
+          { certain: true, name: "producerName", quote: "de la bodega Pinar", value: "Pinar" },
+          {
+            certain: false,
+            name: "noseText",
+            quote: "algo de miel y tal vez algo de flor",
+            value: "honey, maybe flowers",
+          },
+          {
+            certain: true,
+            name: "sweetness",
+            quote: "no lo siento ni tan seco ni tan dulce",
+            value: 4,
+          },
+        ],
+        wineCount: 1,
+      },
+      said,
+      today,
+    );
+    expect(proposal.fields.wineName?.value).toBe("Monte Alto");
+    expect(proposal.fields.appearanceHue?.value).toBe("Cobre");
+    expect(proposal.fields.appearanceColorFamily?.value).toBe("orange");
+    expect(proposal.fields.viscosity?.value).toBe(3);
+    expect(proposal.fields.noseSwirledText?.value).toBe("al remover sale algo de hojas secas");
+    expect(proposal.fields.alcoholPerception?.value).toBe(2);
+    expect(proposal.fields.balance).toMatchObject({ status: "ambiguous", value: 5 });
+    expect(proposal.fields.sweetness?.value).toBe(3);
+    // The taster's own sentence fills its field, doubt and all.
+    expect(proposal.fields.noseText).toMatchObject({
+      status: "explicit",
+      value: "algo de miel y tal vez algo de flor",
+    });
+  });
+
+  it("names no wine from a generic word, and no hue where no colour is spoken of", () => {
+    const proposal = acceptProposal(
+      {
+        fields: [
+          { certain: true, name: "producerName", quote: "de la bodega Pinar", value: "Pinar" },
+        ],
+        wineCount: 1,
+      },
+      "Estoy probando un vino que es de la bodega Pinar. Huele a rosa y a ámbar gris.",
+      today,
+    );
+    expect(proposal.fields.wineName).toBeUndefined();
+    expect(proposal.fields.appearanceHue).toBeUndefined();
+  });
 });

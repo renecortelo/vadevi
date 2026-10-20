@@ -1,3 +1,5 @@
+import { hueLabels } from "../repositories/hue-labels";
+
 /**
  * Voice tastings, step two, the part that trusts nothing: what a model proposes
  * from a transcript becomes a proposal only field by field, and a field only
@@ -33,9 +35,13 @@ export const voiceFields = {
   appearanceIntensity: "scale",
   appearanceHue: "text",
   appearanceText: "text",
+  viscosity: "scale",
   aromas: "list",
   noseCondition: ["clean", "possible_fault"],
+  noseIntensity: "scale",
   noseText: "text",
+  noseSwirledIntensity: "scale",
+  noseSwirledText: "text",
   palateText: "text",
   conclusionText: "text",
   sweetness: "scale",
@@ -43,6 +49,8 @@ export const voiceFields = {
   tanninLevel: "scale",
   body: "scale",
   finishLength: "scale",
+  alcoholPerception: "scale",
+  balance: "scale",
   tanninTexture: ["silky", "fine", "grippy", "coarse"],
   palateTexture: ["lean", "round", "creamy", "oily"],
   effervescence: "scale",
@@ -361,7 +369,10 @@ const levelWords: [RegExp, number][] = [
     /\b(low|niedrig\w*|baj[ao]s?|bas|basse|bass[oa]|baix[ao]|laag|lage|feble|poc[ao]?|weinig|light|leicht\w*|liger[ao]|leger|legere|leggero|leggera|licht|lichte|leve|lleuger[ao]?|short|kurz\w*|cort[ao]|court|courte|kort|curt[ao]|suaves?|soft|mild\w*|zacht\w*|mous|souple)\b/,
     2,
   ],
-  [/\b(medium|mittel\w*|medi[ao]s?|moyen\w*|mitja|mitjana|gemiddeld\w*|middel\w*|media)\b/, 3],
+  [
+    /\b(medium|mittel\w*|medi[ao]s?|median[ao]s?|moyen\w*|mitja|mitjana|gemiddeld\w*|middel\w*|media)\b/,
+    3,
+  ],
   [
     /\b(high|hoch\w*|hoh(e|er|em|en|es)|alt[ao]?s?|elevee?s?|eleve|elevat[ao]|hoog|hoge|full|kraftig\w*|voll\w*|plen[ao]|pien[ao]|vol|volle|cheio|corse|ple|long|lang\w*|larg[ao]|lung[ao]|llarg[ao]?|pronounced|pronunciad[ao]|marcad[ao]|intens[ao]?|intense|potent\w*|firm\w*)\b/,
     4,
@@ -381,10 +392,39 @@ const sweetWords: [RegExp, number][] = [
   ],
 ];
 
+/** "Neither dry nor sweet", in the app's languages, as `comparable` writes it. */
+const neitherDryNorSweet =
+  /\b((?:ni )?(?:tan |muy )?sec[oa] ni (?:tan |muy )?dulce|(?:ni )?(?:tan |muy )?dulce ni (?:tan |muy )?sec[oa]|neither dry nor sweet|ni sec ni doux|ne secco ne dolce|weder trocken noch suss|noch droog noch zoet|nem seco nem doce|ni sec ni dolc)\b/;
+
 /** The level the words say for a scale, or null when they say none or several. */
 export function spokenLevel(field: VoiceField, quote: string): number | null {
   const said = comparable(quote);
   const found = new Set<number>();
+  // "Ni tan seco ni tan dulce": the middle, not sweet (a real note read it as
+  // 4, 19 October 2026).
+  if (field === "sweetness" && neitherDryNorSweet.test(said)) return 3;
+  if (field === "balance") {
+    if (
+      /\b(desequilibrad\w*|unbalanced|desequilibre\w*|squilibrat\w*|unausgewogen\w*|onevenwichtig\w*)\b/.test(
+        said,
+      )
+    )
+      return 2;
+    if (
+      !/\b(equilibrad\w*|equilibrat\w*|balanced|equilibre\w*|ausgewogen\w*|evenwichtig\w*|armonic\w*|harmonious)\b/.test(
+        said,
+      )
+    )
+      return null;
+    if (
+      /\b(no|not|nicht|pas|non|niet|nao)\b(?: \w+){0,2} (equilibr|balanced|ausgewogen|evenwichtig)/.test(
+        said,
+      )
+    ) {
+      return 2;
+    }
+    return very.test(said) ? 5 : 4;
+  }
   if (field === "sweetness") {
     // "Medium sweet", "three of five": the model's to read.
     if (
@@ -426,6 +466,7 @@ const ownWords = new Set<VoiceField>([
   "appearanceText",
   "conclusionText",
   "foodText",
+  "noseSwirledText",
   "noseText",
   "palateText",
 ]);
@@ -467,6 +508,9 @@ const colourFamilies: Record<string, string> = {
   gelb: "white",
   jaune: "white",
   naranja: "orange",
+  naranjoso: "orange",
+  anaranjado: "orange",
+  ataronjat: "orange",
   orange: "orange",
   arancione: "orange",
   laranja: "orange",
@@ -623,10 +667,15 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
       continue;
     }
     // The first proposal of a field stands; a model repeating one adds nothing.
+    // The taster's own sentence is theirs to keep as said, doubts and all:
+    // a hedge inside it ("tal vez algo de flor") is part of the words, so it
+    // fills its field — a real nose note was left out for one (19 October 2026).
     proposal.fields[field] ??= {
       quote: (quote as string).trim().slice(0, 300),
       status:
-        certain === false || hedges.test(comparable(quote as string)) ? "ambiguous" : "explicit",
+        !ownWords.has(field) && (certain === false || hedges.test(comparable(quote as string)))
+          ? "ambiguous"
+          : "explicit",
       value: fitted,
     };
   }
@@ -657,6 +706,11 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
     "body",
     "finishLength",
     "appearanceIntensity",
+    "viscosity",
+    "noseIntensity",
+    "noseSwirledIntensity",
+    "alcoholPerception",
+    "balance",
   ] as const) {
     const said = proposal.fields[field];
     if (said === undefined) continue;
@@ -697,6 +751,7 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
     delete proposal.fields.bottleSizeMl;
     proposal.discarded.push({ field: "bottleSizeMl", reason: "no-evidence" });
   }
+  readWhatTheModelMissed(proposal, transcript, secondAt === null ? transcript : null);
   // What was said of the nose and the mouth, in the taster's own words, when
   // the model gave the aromas and the levels but not the sentences — it left
   // them out in both real notes of 18 October 2026.
@@ -750,4 +805,219 @@ export function acceptProposal(raw: unknown, transcript: string, today: string):
     }
   }
   return proposal;
+}
+
+/** Every name of each colour, as `comparable` writes it, the longest first. */
+const hueNames = Object.entries(hueLabels)
+  .flatMap(([code, labels]) => labels.map((label) => ({ code, label, said: comparable(label) })))
+  .sort((left, right) => right.said.length - left.said.length);
+/** Colours of one kind of wine only: their family follows from them. */
+const hueFamily: Record<string, string> = {
+  amber: "brown",
+  brick: "red",
+  brown: "brown",
+  garnet: "red",
+  gold: "white",
+  mahogany: "brown",
+  pale_pink: "rose",
+  purple: "red",
+  raspberry: "rose",
+  ruby: "red",
+  salmon: "rose",
+  straw: "white",
+  tawny: "red",
+  yellow: "white",
+};
+const colourWord =
+  /\b(color|colour|couleur|colore|farbe|kleur|cor|tono|tonalidad|tonalitat|tinte)\b/;
+/** Swirling the glass, said as such: what follows is the swirled nose. */
+const swirled =
+  /\b(al remover|al moverlo|al mover la copa|tras remover|despues de remover|removiendo|al agitar|after swirling|when swirled|once swirled|swirling|en remenar|despres de remenar|en agitant|apres agitation|dopo averlo ruotato|ruotando|nach dem schwenken|geschwenkt|na het walsen|na walsen|ao agitar|depois de agitar)\b/;
+/** The mouth begins: the swirled nose ends there. */
+const toTheMouth =
+  /\b(en boca|en la boca|de boca|al probarlo|(?:luego |ahora )?vamos a probarlo|lo pruebo|in the mouth|on the palate|tasting it|en bouche|in bocca|im mund|am gaumen|in de mond|na boca|al paladar)\b/;
+/** A taster tasting, before the wine's name: "estoy probando X, de la bodega Y". */
+const tastingVerb =
+  /\b(?:estoy probando|probando|estoy tomando|tomando|estoy catando|catando|estoy bebiendo|bebiendo|i m tasting|tasting|i m drinking|drinking|je goute|je deguste|sto assaggiando|sto bevendo|ich probiere|ich trinke|ik proef|ik drink|estou a provar|estou provando|estic tastant|tastant)\s+(?:un |una |el |la |le |il |lo |o |a |the |an |een |ein |eine )?/;
+const genericWine =
+  /^(?:vino|vinito|vi|wine|vin|wein|wijn|vinho|tinto|blanco|rosado|negre|blanc|este|esto|this|ce|questo|dieses|deze|este vinho)(?: \w+)?$/;
+
+/**
+ * What the model left out of plain words, read from the transcript itself,
+ * where a field is still empty: a colour named, the swirled nose, the wine's
+ * name said before its producer. Each from the words that say it, kept as
+ * said (two real notes of 19 October 2026 lost all three).
+ */
+function readWhatTheModelMissed(
+  proposal: VoiceProposal,
+  transcript: string,
+  /** The transcript of the first wine alone, when there is only one. */
+  oneWine: string | null,
+): void {
+  if (oneWine === null) return;
+  const sentences = oneWine
+    .split(/(?<=[.;!?])\s+/)
+    .map((sentence) => sentence.trim())
+    .filter((sentence) => sentence.length > 0);
+  // A colour named where the colour is spoken of: the hue, and its family
+  // when the hue belongs to one kind of wine only.
+  const said = proposal.fields.appearanceHue;
+  const saidHue =
+    said === undefined
+      ? undefined
+      : hueNames.find((name) => ` ${comparable(said.quote)} `.includes(` ${name.said} `));
+  if (said !== undefined && saidHue !== undefined) said.value = saidHue.label;
+  if (said === undefined) {
+    for (const sentence of sentences) {
+      const words = ` ${comparable(sentence)} `;
+      if (!colourWord.test(words)) continue;
+      const hue = hueNames.find((name) => words.includes(` ${name.said} `));
+      if (hue === undefined) continue;
+      proposal.fields.appearanceHue = {
+        quote: sentence.slice(0, 300),
+        status: hedges.test(words) ? "ambiguous" : "explicit",
+        value: hue.label,
+      };
+      break;
+    }
+  }
+  const hue = proposal.fields.appearanceHue;
+  if (proposal.fields.appearanceColorFamily === undefined && hue !== undefined) {
+    const words = comparable(hue.quote).split(" ");
+    const named = words.map((word) => colourFamilies[word]).find((family) => family !== undefined);
+    const code = hueNames.find((name) => name.label === hue.value)?.code;
+    const family = named ?? (code === undefined ? undefined : hueFamily[code]);
+    if (family !== undefined) {
+      proposal.fields.appearanceColorFamily = {
+        quote: hue.quote,
+        status: hue.status,
+        value: family,
+      };
+    }
+  }
+  // The swirled nose: from the words that say the glass was swirled to where
+  // the mouth begins, in the taster's words.
+  if (proposal.fields.noseSwirledText === undefined) {
+    const heard = comparable(oneWine);
+    const at = swirled.exec(heard);
+    if (at !== null) {
+      // Back to the transcript's own characters: the same words, unfolded.
+      const start = findSaid(oneWine, at[0]);
+      if (start >= 0) {
+        const rest = oneWine.slice(start);
+        const end = rest.search(/[.;!?]/);
+        let text = end < 0 ? rest : rest.slice(0, end);
+        const mouth = toTheMouth.exec(comparable(text));
+        if (mouth !== null) {
+          const cut = findSaid(text, mouth[0]);
+          if (cut > 0) text = text.slice(0, cut);
+        }
+        text = text.trim().replace(/[,\s]+$/, "");
+        if (text.split(/\s+/).length >= 3) {
+          proposal.fields.noseSwirledText = {
+            quote: text.slice(0, 300),
+            status: "explicit",
+            value: text.slice(0, 2_000),
+          };
+        }
+      }
+    }
+  }
+  // Tears, warmth and balance, read from the words around them: "la lágrima
+  // mediana", "se siente un poco de alcohol", "creo que está muy equilibrado".
+  levelAround(
+    proposal,
+    "viscosity",
+    oneWine,
+    /^(lagrima\w*|llagrim\w*|tears|legs|larmes|lacrim\w*|tranen|lagrimas|viscos\w*)$/,
+    [1, 3],
+  );
+  levelAround(proposal, "alcoholPerception", oneWine, /^(alcohol|alcool|alkohol)$/, [4, 2]);
+  levelAround(
+    proposal,
+    "balance",
+    oneWine,
+    /^(equilibrad\w*|equilibrat\w*|balanced|equilibre\w*|ausgewogen\w*|evenwichtig\w*|desequilibrad\w*|unbalanced)$/,
+    [4, 1],
+  );
+  // The wine's name, said between the tasting and its producer: "estoy
+  // probando Monte Alto, que es de la bodega Pinar".
+  const maker = proposal.fields.producerName;
+  if (proposal.fields.wineName === undefined && maker !== undefined) {
+    const heard = comparable(transcript);
+    const verb = tastingVerb.exec(heard);
+    const makerAt = heard.indexOf(comparable(maker.quote));
+    if (verb !== null && makerAt > verb.index) {
+      const between = heard
+        .slice(verb.index + verb[0].length, makerAt)
+        .replace(/\b(?:que es|que son|which is|qui est|che e|das ist|dat is|que e)\s*$/, "")
+        .trim();
+      const words = between.split(" ").filter((word) => word.length > 0);
+      if (words.length >= 1 && words.length <= 5 && !genericWine.test(between)) {
+        const start = findSaid(transcript, between);
+        const original = start < 0 ? between : transcript.slice(start, start + between.length);
+        const name = original
+          .split(/\s+/)
+          .map((word, index) =>
+            index > 0 && word.length <= 3
+              ? word.toLowerCase()
+              : word.charAt(0).toUpperCase() + word.slice(1),
+          )
+          .join(" ");
+        proposal.fields.wineName = { quote: original, status: "explicit", value: name };
+      }
+    }
+  }
+}
+
+/**
+ * Where words that `comparable` wrote stand in the original text, or null:
+ * the folded text and the original line up word for word.
+ */
+function spanOf(text: string, folded: string): { end: number; start: number } | null {
+  const target = folded.split(" ");
+  const words = [...text.matchAll(/[\p{L}\p{N}]+/gu)];
+  for (let index = 0; index + target.length <= words.length; index += 1) {
+    if (target.every((word, offset) => comparable(words[index + offset]![0]) === word)) {
+      const last = words[index + target.length - 1]!;
+      return { end: last.index! + last[0].length, start: words[index]!.index! };
+    }
+  }
+  return null;
+}
+
+const findSaid = (text: string, folded: string) => spanOf(text, folded)?.start ?? -1;
+
+/**
+ * The few words around the first that `keyword` finds, as said: a level read
+ * from a run-on note must be the level of that thing, not of the next one.
+ */
+function around(text: string, keyword: RegExp, before: number, after: number): string | null {
+  const words = comparable(text).split(" ");
+  const at = words.findIndex((word) => keyword.test(word));
+  if (at < 0) return null;
+  const folded = words.slice(Math.max(0, at - before), at + after + 1).join(" ");
+  const span = spanOf(text, folded);
+  return span === null ? null : text.slice(span.start, span.end);
+}
+
+/** A scale read from the words around what it is said of. */
+function levelAround(
+  proposal: VoiceProposal,
+  field: "alcoholPerception" | "balance" | "viscosity",
+  text: string,
+  keyword: RegExp,
+  /** How many words before and after it: the level's and a hedge's reach. */
+  [before, after]: [number, number],
+): void {
+  if (proposal.fields[field] !== undefined) return;
+  const quote = around(text, keyword, before, after);
+  if (quote === null) return;
+  const level = spokenLevel(field, quote);
+  if (level === null) return;
+  proposal.fields[field] = {
+    quote,
+    status: hedges.test(comparable(quote)) ? "ambiguous" : "explicit",
+    value: level,
+  };
 }

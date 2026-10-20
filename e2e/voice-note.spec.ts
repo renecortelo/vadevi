@@ -81,7 +81,9 @@ test("a spoken note fills only the quick log's empty fields", async ({ page }) =
   // The reader corrects what was heard before anything is read from it.
   await transcript.fill(`${heard} Corregido.`);
   await page.getByRole("button", { name: "Fill the form" }).click();
-  await expect(page.getByText("3 fields filled. Review them before saving.")).toBeVisible();
+  // The producer, the comment, the score, and the aromas said ticked as the
+  // form's words (cherry and clove, from the aroma wheel's vocabulary).
+  await expect(page.getByText("4 fields filled. Review them before saving.")).toBeVisible();
   expect(voice.extracted()).toBe(`${heard} Corregido.`);
   await expect(page.getByText('Said with doubt, left for you: "Creo que garnacha".')).toBeVisible();
 
@@ -143,7 +145,8 @@ test("a spoken note fills a deep tasting's empty fields, in every step", async (
   await page.locator("#interface-locale").selectOption("en");
   await record(page, heard);
   await page.getByRole("button", { name: "Fill the form" }).click();
-  await expect(page.getByText("4 fields filled. Review them before saving.")).toBeVisible();
+  // With the nose's words ticked: blackberry and liquorice.
+  await expect(page.getByText("5 fields filled. Review them before saving.")).toBeVisible();
   await expect(
     page.getByText('Said with doubt, left for you: "Creo que con cuerpo".'),
   ).toBeVisible();

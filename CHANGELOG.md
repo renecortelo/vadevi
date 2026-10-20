@@ -96,6 +96,27 @@ has the reasons.
   Spanish, French or German article — Chile's Maipo, Itata and Aconcagua,
   Switzerland's La Côte, Chablais and Dézaley (228 regions).
 
+### Tastings by voice
+
+What two real spoken notes of 19 October 2026 lost, now read from the words
+that say it, where the model left a field empty:
+
+- **The wine's name** said before its producer («estoy probando Monte Alto,
+  que es de la bodega Pinar»).
+- **The colour** named where the colour is spoken of («un color medio cobre,
+  naranjoso»): the hue as the form names it, and its family.
+- **The tears, the warmth and the balance**: viscosity, alcohol felt and
+  balance are new spoken fields, each read from the few words around what it
+  is said of; the swirled nose («al remover…») fills its own step.
+- **«Ni seco ni dulce» is the middle** of the sweetness scale, not sweet.
+- **The taster's own sentences fill their fields**, doubts and all: a «tal
+  vez» inside them is part of the words, not a reason to leave them out.
+- **Aromas named in any language tick the aroma wheel's words** in the nose
+  (honey, citrus…), three at most in the quick log, named there from the
+  wheel's vocabulary.
+- **A note sent for review after saving** carries the form as it was saved,
+  not the empty one that follows.
+
 ## 0.4.0 — 19 October 2026
 
 ### Finding your way

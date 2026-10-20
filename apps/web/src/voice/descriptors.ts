@@ -1,5 +1,7 @@
 import type { VoiceExtractResponse } from "@vadevi/contracts";
 import {
+  aromaDescriptors,
+  aromaNames,
   descriptorsForWineType,
   type OntologyLocale,
   type OntologyWineType,
@@ -65,7 +67,19 @@ export function heardDescriptors(
             )),
       )
       .map((descriptor) => descriptor.code);
+  // The nose's aromas from the library's vocabulary too — the aroma wheel's
+  // («miel», «cítricos»), named in any of the app's languages.
+  const fromWheel = (text: string) =>
+    aromaDescriptors
+      .filter((aroma) => {
+        const names = Object.values(aromaNames[aroma.term] ?? {});
+        return names.some((name) => says(text, name) || aromas.some((said) => says(said, name)));
+      })
+      .map((aroma) => aroma.code);
+  const nosed = [...new Set([...found("nose", nose), ...fromWheel(nose)])];
   // The quick note has one list for both: a cherry said of the mouth counts.
-  const any = [...new Set([...found("nose", `${nose} ${palate}`), ...found("palate", palate)])];
-  return { any, nose: found("nose", nose), palate: found("palate", palate) };
+  const any = [
+    ...new Set([...found("nose", `${nose} ${palate}`), ...found("palate", palate), ...nosed]),
+  ];
+  return { any, nose: nosed, palate: found("palate", palate) };
 }
