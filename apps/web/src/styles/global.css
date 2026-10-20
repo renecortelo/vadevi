@@ -6370,7 +6370,7 @@ button.stats-bars__label:hover {
 }
 
 .reel-map__pin circle {
-  fill: var(--color-surface);
+  fill: rgb(var(--color-surface-rgb));
 }
 
 @keyframes reel-pin {
