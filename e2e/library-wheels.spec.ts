@@ -22,6 +22,11 @@ test("the aroma and colour wheels narrow to one aroma or one colour", async ({ p
   await expect(level("Aromas: Aromas")).toBeVisible({ timeout: 15_000 });
   // Nine families around the ring, and listed beneath it.
   await expect(level("Aromas: Aromas").getByRole("button")).toHaveCount(9);
+  // The first two chips share a row, at the same height.
+  const chips = level("Aromas: Aromas").getByRole("button");
+  await expect
+    .poll(async () => (await chips.nth(1).boundingBox())!.y - (await chips.nth(0).boundingBox())!.y)
+    .toBe(0);
   await page.screenshot({ fullPage: true, path: test.info().outputPath("wheel-aromas.png") });
 
   // Into the fruit, then red fruit, then raspberry: its grapes.

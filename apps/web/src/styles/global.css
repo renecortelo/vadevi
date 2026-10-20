@@ -6726,6 +6726,12 @@ button.stats-bars__label:hover {
   animation: reel-rise 0.4s ease-out calc(var(--i) * 20ms) both;
 }
 
+/* As with the library's chips: the card's list rule would push every chip
+   but the first down a step; the flex gap spaces them. */
+.settings-card .wheel__list li + li {
+  margin-block-start: 0;
+}
+
 .wheel__chip {
   align-items: center;
   background: var(--color-surface-raised);
