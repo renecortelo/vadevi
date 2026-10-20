@@ -6009,6 +6009,7 @@ button.stats-bars__label:hover {
   --at: 0s;
   --bottle: var(--color-plum);
   --lag: 0s;
+  --settle: 1;
   --stretch: 1.2;
   --drop: 0s;
   --h: 50%;
@@ -6165,14 +6166,14 @@ button.stats-bars__label:hover {
   }
 }
 
-/* Each bottle stretches up by its own measure as the row grows, overshoots a
-   little and settles into its height in the logo; the row grows into it. */
+/* Each bottle stretches up — or first shrinks down — by its own measure as
+   the row grows, rebounds and settles into its height in the logo. */
 @keyframes reel-stretch {
   50% {
     scale: 1 var(--stretch);
   }
   78% {
-    scale: 1 0.94;
+    scale: 1 var(--settle);
   }
 }
 

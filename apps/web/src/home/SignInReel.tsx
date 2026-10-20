@@ -54,17 +54,18 @@ const lockupBox = `${bottleRow.start - 24} 150 ${bottleRow.span + 48} 574`;
 const arrivals = [3, 0, 1, 2, 4, 5, 6] as const;
 /**
  * How each bottle grows into the logo, by its place in it: how far it
- * stretches past its height, and how long after the others it starts — so
- * they grow unevenly, not as one block.
+ * stretches up — or first shrinks down — past its height, where it rebounds
+ * before it settles, and how long after the others it starts; so they grow
+ * unevenly, not as one block.
  */
 const growth = [
-  { lag: 0.12, stretch: 1.45 },
-  { lag: 0, stretch: 1.18 },
-  { lag: 0.22, stretch: 1.6 },
-  { lag: 0.06, stretch: 1.3 },
-  { lag: 0.28, stretch: 1.52 },
-  { lag: 0.1, stretch: 1.12 },
-  { lag: 0.18, stretch: 1.38 },
+  { lag: 0.12, settle: 0.94, stretch: 1.45 },
+  { lag: 0, settle: 1.08, stretch: 0.72 },
+  { lag: 0.22, settle: 0.93, stretch: 1.6 },
+  { lag: 0.06, settle: 1.06, stretch: 0.8 },
+  { lag: 0.28, settle: 0.94, stretch: 1.5 },
+  { lag: 0.1, settle: 1.1, stretch: 0.66 },
+  { lag: 0.18, settle: 0.95, stretch: 1.35 },
 ] as const;
 
 /** A figure that counts up to the library's own, on the reel's clock. */
@@ -222,7 +223,7 @@ function PlayPause({ playing }: { playing: boolean }) {
   );
 }
 
-const aromas = ["raspberry", "black pepper", "violet"]
+const aromas = ["raspberry", "lemon", "violet"]
   .map((term) => aromaFromTerm(term))
   .filter((descriptor) => descriptor !== null);
 
@@ -346,6 +347,7 @@ export default function SignInReel() {
                 {
                   "--at": `${shots[order]!.end - 0.4}s`,
                   "--lag": `${growth[index]!.lag}s`,
+                  "--settle": growth[index]!.settle,
                   "--stretch": growth[index]!.stretch,
                 } as CSSProperties
               }
