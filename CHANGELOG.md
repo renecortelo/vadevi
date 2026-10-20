@@ -4,6 +4,17 @@ What changed between releases, for readers and for anyone running their own
 deployment. Each release lists what you will notice first; the commit history
 has the reasons.
 
+## Unreleased
+
+### Finding your way
+
+- **Sources and licences**, a page of its own under About: every source the
+  library is built from — texts, registers, vineyard figures, climate, maps
+  and photographs — each with what it gives and its terms, said in the
+  reader's language where they are not a licence's own name, and how they
+  are used (Wikipedia's share-alike, the pairing rules, the licences
+  declined). Each card still credits its own beside what it shows.
+
 ## 0.5.0 — 20 October 2026
 
 ### First impressions

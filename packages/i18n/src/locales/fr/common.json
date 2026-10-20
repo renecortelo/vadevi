@@ -1980,5 +1980,46 @@
     "pause": "Mettre l'animation en pause",
     "play": "Reprendre l'animation",
     "summary": "Va de Vi : dégustations à la main ou à la voix, bouteilles par l'étiquette, {{names}} appellations de {{countries}} pays, {{grapes}} cépages et Vicenç, qui cite ses sources. En {{languages}} langues."
+  },
+  "sources": {
+    "title": "Sources et licences",
+    "aboutBody": "D’où vient chaque donnée, chiffre, carte et photo, et sous quelle licence.",
+    "intro": "La bibliothèque est faite uniquement de sources ouvertes. Chaque fiche cite les siennes à côté de ce qu’elle montre ; les voici toutes ensemble.",
+    "group": {
+      "texts": "Textes et noms",
+      "registers": "Registres de noms protégés",
+      "figures": "Surface de vigne et production",
+      "climate": "Climat et altitude",
+      "maps": "Cartes",
+      "images": "Photographies"
+    },
+    "what": {
+      "summaries": "résumés, et les phrases citées derrière les données de chaque cépage et région",
+      "names": "noms, alias et liens entre fiches",
+      "registerNames": "les noms protégés, leur type, leurs dates et lieux",
+      "areas": "surface de vigne et production",
+      "climate": "le climat moyen de chaque région",
+      "elevation": "l’altitude du point de chaque région",
+      "boundaries": "limites",
+      "points": "points approximatifs sur la carte",
+      "outlines": "contours des régions et des pays",
+      "photos": "photos de cépages et de styles et méthodes"
+    },
+    "terms": {
+      "commonsEach": "chaque fichier sous sa propre licence libre, créditée sous la photo",
+      "crownFacts": "seuls les faits sont repris",
+      "euReuse": "réutilisé selon l’avis de réutilisation de la Commission (décision 2011/833/UE)",
+      "extract": "un extrait",
+      "officialFacts": "textes officiels : seuls leurs faits sont repris",
+      "publicDomain": "domaine public",
+      "reuseCiting": "réutilisation permise en citant la source",
+      "usPublicDomain": "œuvres du gouvernement fédéral américain, dans le domaine public aux États-Unis"
+    },
+    "rulesTitle": "Comment elles sont utilisées",
+    "shareAlike": "Le texte repris ou traduit de Wikipédia est partagé sous la même licence, CC BY-SA 4.0.",
+    "pairings": "Avec quoi va un cépage, au-delà de ce que disent ses sources, vient des règles d’accord de l’app, chacune citant une source ouverte.",
+    "declined": "Les données dont la licence interdit l’usage commercial ne sont pas utilisées (le cadastre viticole du Chili, WorldClim).",
+    "noCommercial": "Rien n’est copié d’ouvrages commerciaux sur le vin.",
+    "readme": "La liste complète, dans le code source"
   }
 }

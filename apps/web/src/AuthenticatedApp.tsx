@@ -20,6 +20,9 @@ const DeepTastingPage = lazy(() =>
 const IdentifyPage = lazy(() =>
   import("./pages/IdentifyPage").then((module) => ({ default: module.IdentifyPage })),
 );
+const SourcesPage = lazy(() =>
+  import("./pages/SourcesPage").then((module) => ({ default: module.SourcesPage })),
+);
 const DataRightsPage = lazy(() =>
   import("./pages/DataRightsPage").then((module) => ({ default: module.DataRightsPage })),
 );
@@ -299,6 +302,14 @@ export function AuthenticatedRoutes() {
             path="library/topics/:topicId"
           />
           <Route element={<AboutPage />} path="about" />
+          <Route
+            element={
+              <DeferredPage>
+                <SourcesPage />
+              </DeferredPage>
+            }
+            path="about/sources"
+          />
           <Route element={<SpaceSettingsPage />} path="spaces" />
           <Route
             element={

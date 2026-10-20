@@ -1980,5 +1980,46 @@
     "pause": "Pausa l'animació",
     "play": "Reprèn l'animació",
     "summary": "Va de Vi: tastos a mà o amb la veu, ampolles per l'etiqueta, {{names}} denominacions de {{countries}} països, {{grapes}} raïms i en Vicenç, que cita les fonts. En {{languages}} idiomes."
+  },
+  "sources": {
+    "title": "Fonts i llicències",
+    "aboutBody": "D’on surt cada dada, xifra, mapa i foto, i amb quina llicència.",
+    "intro": "La biblioteca es fa només amb fonts obertes. Cada fitxa cita les seves al costat del que mostra; aquí hi són totes juntes.",
+    "group": {
+      "texts": "Textos i noms",
+      "registers": "Registres de noms protegits",
+      "figures": "Superfície de vinya i producció",
+      "climate": "Clima i altitud",
+      "maps": "Mapes",
+      "images": "Fotografies"
+    },
+    "what": {
+      "summaries": "resums, i les frases citades darrere de les dades de cada raïm i regió",
+      "names": "noms, àlies i enllaços entre fitxes",
+      "registerNames": "els noms protegits, el seu tipus, dates i llocs",
+      "areas": "superfície de vinya i producció",
+      "climate": "el clima mitjà de cada regió",
+      "elevation": "l’altitud del punt de cada regió",
+      "boundaries": "límits",
+      "points": "punts aproximats al mapa",
+      "outlines": "contorns de regions i països",
+      "photos": "fotos de raïms i d’estils i mètodes"
+    },
+    "terms": {
+      "commonsEach": "cada fitxer amb la seva pròpia llicència lliure, citada sota la foto",
+      "crownFacts": "només se’n prenen els fets",
+      "euReuse": "reutilitzat segons l’avís de reutilització de la Comissió (Decisió 2011/833/UE)",
+      "extract": "un extracte",
+      "officialFacts": "textos oficials: només se’n prenen els fets",
+      "publicDomain": "domini públic",
+      "reuseCiting": "reutilització permesa citant la font",
+      "usPublicDomain": "obres del govern federal dels EUA, de domini públic als Estats Units"
+    },
+    "rulesTitle": "Com s’utilitzen",
+    "shareAlike": "El text pres o traduït de la Viquipèdia es comparteix amb la mateixa llicència, CC BY-SA 4.0.",
+    "pairings": "Amb què va un raïm, més enllà del que diuen les seves fonts, surt de les regles de maridatge de l’app, i cadascuna cita una font oberta.",
+    "declined": "No s’utilitzen dades amb una llicència que prohibeix l’ús comercial (el cadastre vitícola de Xile, WorldClim).",
+    "noCommercial": "No es copia res d’obres comercials sobre vi.",
+    "readme": "La llista completa, al codi font"
   }
 }

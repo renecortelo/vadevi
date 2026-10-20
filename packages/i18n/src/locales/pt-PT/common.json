@@ -1980,5 +1980,46 @@
     "pause": "Pausar a animação",
     "play": "Retomar a animação",
     "summary": "Va de Vi: provas à mão ou com a voz, garrafas pelo rótulo, {{names}} denominações de {{countries}} países, {{grapes}} castas e o Vicenç, que cita as fontes. Em {{languages}} línguas."
+  },
+  "sources": {
+    "title": "Fontes e licenças",
+    "aboutBody": "De onde vem cada dado, número, mapa e fotografia, e com que licença.",
+    "intro": "A biblioteca é feita só com fontes abertas. Cada ficha cita as suas junto ao que mostra; aqui estão todas juntas.",
+    "group": {
+      "texts": "Textos e nomes",
+      "registers": "Registos de nomes protegidos",
+      "figures": "Área de vinha e produção",
+      "climate": "Clima e altitude",
+      "maps": "Mapas",
+      "images": "Fotografias"
+    },
+    "what": {
+      "summaries": "resumos, e as frases citadas por trás dos dados de cada casta e região",
+      "names": "nomes, aliases e ligações entre fichas",
+      "registerNames": "os nomes protegidos, o seu tipo, datas e lugares",
+      "areas": "área de vinha e produção",
+      "climate": "o clima médio de cada região",
+      "elevation": "a altitude do ponto de cada região",
+      "boundaries": "limites",
+      "points": "pontos aproximados no mapa",
+      "outlines": "contornos de regiões e países",
+      "photos": "fotografias de castas e de estilos e métodos"
+    },
+    "terms": {
+      "commonsEach": "cada ficheiro com a sua própria licença livre, citada sob a fotografia",
+      "crownFacts": "só se tomam os factos",
+      "euReuse": "reutilizado segundo o aviso de reutilização da Comissão (Decisão 2011/833/UE)",
+      "extract": "um extrato",
+      "officialFacts": "textos oficiais: só se tomam os seus factos",
+      "publicDomain": "domínio público",
+      "reuseCiting": "reutilização permitida citando a fonte",
+      "usPublicDomain": "obras do governo federal dos EUA, de domínio público nos Estados Unidos"
+    },
+    "rulesTitle": "Como se usam",
+    "shareAlike": "O texto tirado ou traduzido da Wikipédia é partilhado com a mesma licença, CC BY-SA 4.0.",
+    "pairings": "Com o que combina uma casta, para além do que dizem as suas fontes, vem das regras de harmonização da app, cada uma com uma fonte aberta.",
+    "declined": "Não se usam dados cuja licença proíbe o uso comercial (o cadastro vitícola do Chile, WorldClim).",
+    "noCommercial": "Nada é copiado de obras comerciais sobre vinho.",
+    "readme": "A lista completa, no código-fonte"
   }
 }

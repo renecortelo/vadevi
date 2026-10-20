@@ -1980,5 +1980,46 @@
     "pause": "Pause the animation",
     "play": "Play the animation",
     "summary": "Va de Vi: tastings by hand or voice, a bottle known by its label, {{names}} wine names from {{countries}} countries, {{grapes}} grapes, and Vicenç, who cites sources. In {{languages}} languages."
+  },
+  "sources": {
+    "title": "Sources and licences",
+    "aboutBody": "Where each fact, figure, map and photograph comes from, and under what licence.",
+    "intro": "The library is built from open sources only. Each card credits its own beside what it shows; here they all are together.",
+    "group": {
+      "texts": "Texts and names",
+      "registers": "Registers of protected names",
+      "figures": "Vineyard areas and production",
+      "climate": "Climate and height",
+      "maps": "Maps",
+      "images": "Photographs"
+    },
+    "what": {
+      "summaries": "summaries, and the quoted sentences behind each grape's and region's facts",
+      "names": "names, aliases and links between entries",
+      "registerNames": "the protected names, their kinds, dates and places",
+      "areas": "vineyard areas and production",
+      "climate": "climate normals of each region",
+      "elevation": "the height of each region's point",
+      "boundaries": "boundaries",
+      "points": "approximate points on the map",
+      "outlines": "outlines of regions and countries",
+      "photos": "photographs of grapes and of styles and methods"
+    },
+    "terms": {
+      "commonsEach": "each file under its own free licence, credited under the photograph",
+      "crownFacts": "only facts are taken",
+      "euReuse": "reused under the Commission's reuse notice (Decision 2011/833/EU)",
+      "extract": "an extract",
+      "officialFacts": "official texts: only their facts are taken",
+      "publicDomain": "public domain",
+      "reuseCiting": "reuse allowed with the source named",
+      "usPublicDomain": "works of the US federal government, public domain in the United States"
+    },
+    "rulesTitle": "How they are used",
+    "shareAlike": "Text taken or translated from Wikipedia is shared under the same licence, CC BY-SA 4.0.",
+    "pairings": "What a grape goes with, beyond what its own sources say, comes from the app's pairing rules, each quoting an open source.",
+    "declined": "Data whose licence forbids commercial reuse is not used (Chile's vineyard survey, WorldClim).",
+    "noCommercial": "Nothing is copied from commercial wine references.",
+    "readme": "The full list, in the source code"
   }
 }

@@ -1980,5 +1980,46 @@
     "pause": "Metti in pausa l'animazione",
     "play": "Riprendi l'animazione",
     "summary": "Va de Vi: degustazioni a mano o a voce, bottiglie dall'etichetta, {{names}} denominazioni di {{countries}} paesi, {{grapes}} vitigni e Vicenç, che cita le fonti. In {{languages}} lingue."
+  },
+  "sources": {
+    "title": "Fonti e licenze",
+    "aboutBody": "Da dove viene ogni dato, cifra, mappa e foto, e con quale licenza.",
+    "intro": "La biblioteca è fatta solo di fonti aperte. Ogni scheda cita le sue accanto a ciò che mostra; qui sono tutte insieme.",
+    "group": {
+      "texts": "Testi e nomi",
+      "registers": "Registri dei nomi protetti",
+      "figures": "Superficie vitata e produzione",
+      "climate": "Clima e altitudine",
+      "maps": "Mappe",
+      "images": "Fotografie"
+    },
+    "what": {
+      "summaries": "riassunti, e le frasi citate dietro i dati di ogni vitigno e regione",
+      "names": "nomi, alias e collegamenti tra le schede",
+      "registerNames": "i nomi protetti, il loro tipo, le date e i luoghi",
+      "areas": "superficie vitata e produzione",
+      "climate": "il clima medio di ogni regione",
+      "elevation": "l’altitudine del punto di ogni regione",
+      "boundaries": "confini",
+      "points": "punti approssimativi sulla mappa",
+      "outlines": "contorni di regioni e paesi",
+      "photos": "foto di vitigni e di stili e metodi"
+    },
+    "terms": {
+      "commonsEach": "ogni file con la propria licenza libera, citata sotto la foto",
+      "crownFacts": "si prendono solo i fatti",
+      "euReuse": "riutilizzato secondo l’avviso di riutilizzo della Commissione (decisione 2011/833/UE)",
+      "extract": "un estratto",
+      "officialFacts": "testi ufficiali: si prendono solo i loro fatti",
+      "publicDomain": "pubblico dominio",
+      "reuseCiting": "riutilizzo consentito citando la fonte",
+      "usPublicDomain": "opere del governo federale degli USA, di pubblico dominio negli Stati Uniti"
+    },
+    "rulesTitle": "Come si usano",
+    "shareAlike": "Il testo preso o tradotto da Wikipedia è condiviso con la stessa licenza, CC BY-SA 4.0.",
+    "pairings": "Con cosa si abbina un vitigno, oltre a ciò che dicono le sue fonti, viene dalle regole di abbinamento dell’app, ognuna con una fonte aperta.",
+    "declined": "Non si usano dati la cui licenza vieta l’uso commerciale (il catasto viticolo del Cile, WorldClim).",
+    "noCommercial": "Nulla è copiato da opere commerciali sul vino.",
+    "readme": "L’elenco completo, nel codice sorgente"
   }
 }

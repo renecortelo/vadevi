@@ -1980,5 +1980,46 @@
     "pause": "Pausar la animación",
     "play": "Reanudar la animación",
     "summary": "Va de Vi: catas a mano o con la voz, botellas por su etiqueta, {{names}} denominaciones de {{countries}} países, {{grapes}} uvas y Vicenç, que cita sus fuentes. En {{languages}} idiomas."
+  },
+  "sources": {
+    "title": "Fuentes y licencias",
+    "aboutBody": "De dónde sale cada dato, cifra, mapa y foto, y con qué licencia.",
+    "intro": "La biblioteca se hace solo con fuentes abiertas. Cada ficha cita las suyas junto a lo que muestra; aquí están todas juntas.",
+    "group": {
+      "texts": "Textos y nombres",
+      "registers": "Registros de nombres protegidos",
+      "figures": "Superficie de viñedo y producción",
+      "climate": "Clima y altitud",
+      "maps": "Mapas",
+      "images": "Fotografías"
+    },
+    "what": {
+      "summaries": "resúmenes, y las frases citadas detrás de los datos de cada uva y región",
+      "names": "nombres, alias y enlaces entre fichas",
+      "registerNames": "los nombres protegidos, su tipo, fechas y lugares",
+      "areas": "superficie de viñedo y producción",
+      "climate": "el clima medio de cada región",
+      "elevation": "la altitud del punto de cada región",
+      "boundaries": "límites",
+      "points": "puntos aproximados en el mapa",
+      "outlines": "contornos de regiones y países",
+      "photos": "fotos de uvas y de estilos y métodos"
+    },
+    "terms": {
+      "commonsEach": "cada archivo con su propia licencia libre, citada bajo la foto",
+      "crownFacts": "solo se toman los hechos",
+      "euReuse": "reutilizado según el aviso de reutilización de la Comisión (Decisión 2011/833/UE)",
+      "extract": "un extracto",
+      "officialFacts": "textos oficiales: solo se toman sus hechos",
+      "publicDomain": "dominio público",
+      "reuseCiting": "reutilización permitida citando la fuente",
+      "usPublicDomain": "obras del gobierno federal de EE. UU., de dominio público en Estados Unidos"
+    },
+    "rulesTitle": "Cómo se usan",
+    "shareAlike": "El texto tomado o traducido de Wikipedia se comparte con la misma licencia, CC BY-SA 4.0.",
+    "pairings": "Con qué va una uva, más allá de lo que dicen sus fuentes, sale de las reglas de maridaje de la app, y cada una cita una fuente abierta.",
+    "declined": "No se usan datos cuya licencia prohíbe el uso comercial (el catastro vitícola de Chile, WorldClim).",
+    "noCommercial": "Nada se copia de obras comerciales sobre vino.",
+    "readme": "La lista completa, en el código fuente"
   }
 }

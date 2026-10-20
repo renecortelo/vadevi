@@ -1980,5 +1980,46 @@
     "pause": "Animation anhalten",
     "play": "Animation fortsetzen",
     "summary": "Va de Vi: Verkostungen per Hand oder Stimme, Flaschen am Etikett, {{names}} Weinnamen aus {{countries}} Ländern, {{grapes}} Rebsorten und Vicenç mit Quellen. In {{languages}} Sprachen."
+  },
+  "sources": {
+    "title": "Quellen und Lizenzen",
+    "aboutBody": "Woher jede Angabe, Zahl, Karte und jedes Foto stammt, und unter welcher Lizenz.",
+    "intro": "Die Bibliothek besteht nur aus offenen Quellen. Jede Karte nennt ihre eigenen neben dem, was sie zeigt; hier stehen alle zusammen.",
+    "group": {
+      "texts": "Texte und Namen",
+      "registers": "Register geschützter Namen",
+      "figures": "Rebfläche und Erzeugung",
+      "climate": "Klima und Höhe",
+      "maps": "Karten",
+      "images": "Fotos"
+    },
+    "what": {
+      "summaries": "Zusammenfassungen und die zitierten Sätze hinter den Angaben zu Rebsorten und Regionen",
+      "names": "Namen, Aliasse und Verknüpfungen zwischen Einträgen",
+      "registerNames": "die geschützten Namen, ihre Art, Daten und Orte",
+      "areas": "Rebfläche und Erzeugung",
+      "climate": "das mittlere Klima jeder Region",
+      "elevation": "die Höhe des Punkts jeder Region",
+      "boundaries": "Grenzen",
+      "points": "ungefähre Punkte auf der Karte",
+      "outlines": "Umrisse von Regionen und Ländern",
+      "photos": "Fotos von Rebsorten sowie von Stilen und Verfahren"
+    },
+    "terms": {
+      "commonsEach": "jede Datei unter ihrer eigenen freien Lizenz, unter dem Foto genannt",
+      "crownFacts": "nur Fakten werden übernommen",
+      "euReuse": "weiterverwendet nach dem Weiterverwendungsbeschluss der Kommission (Beschluss 2011/833/EU)",
+      "extract": "ein Auszug",
+      "officialFacts": "amtliche Texte: nur ihre Fakten werden übernommen",
+      "publicDomain": "gemeinfrei",
+      "reuseCiting": "Weiterverwendung mit Quellenangabe erlaubt",
+      "usPublicDomain": "Werke der US-Bundesregierung, in den Vereinigten Staaten gemeinfrei"
+    },
+    "rulesTitle": "Wie sie verwendet werden",
+    "shareAlike": "Aus Wikipedia übernommener oder übersetzter Text wird unter derselben Lizenz geteilt, CC BY-SA 4.0.",
+    "pairings": "Wozu eine Rebsorte passt, über ihre eigenen Quellen hinaus, stammt aus den Kombinationsregeln der App, jede mit einer offenen Quelle belegt.",
+    "declined": "Daten, deren Lizenz kommerzielle Nutzung verbietet, werden nicht verwendet (Chiles Weinbaukataster, WorldClim).",
+    "noCommercial": "Nichts wird aus kommerziellen Weinwerken kopiert.",
+    "readme": "Die vollständige Liste, im Quellcode"
   }
 }

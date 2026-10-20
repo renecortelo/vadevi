@@ -1980,5 +1980,46 @@
     "pause": "Animatie pauzeren",
     "play": "Animatie hervatten",
     "summary": "Va de Vi: proeverijen met de hand of stem, flessen aan het etiket, {{names}} wijnnamen uit {{countries}} landen, {{grapes}} druiven en Vicenç met bronnen. In {{languages}} talen."
+  },
+  "sources": {
+    "title": "Bronnen en licenties",
+    "aboutBody": "Waar elk gegeven, cijfer, elke kaart en foto vandaan komt, en onder welke licentie.",
+    "intro": "De bibliotheek bestaat alleen uit open bronnen. Elke kaart noemt de hare naast wat ze toont; hier staan ze allemaal bij elkaar.",
+    "group": {
+      "texts": "Teksten en namen",
+      "registers": "Registers van beschermde namen",
+      "figures": "Wijngaardoppervlak en productie",
+      "climate": "Klimaat en hoogte",
+      "maps": "Kaarten",
+      "images": "Foto’s"
+    },
+    "what": {
+      "summaries": "samenvattingen, en de geciteerde zinnen achter de gegevens van elke druif en regio",
+      "names": "namen, aliassen en koppelingen tussen kaarten",
+      "registerNames": "de beschermde namen, hun soort, data en plaatsen",
+      "areas": "wijngaardoppervlak en productie",
+      "climate": "het gemiddelde klimaat van elke regio",
+      "elevation": "de hoogte van het punt van elke regio",
+      "boundaries": "grenzen",
+      "points": "benaderde punten op de kaart",
+      "outlines": "omtrekken van regio’s en landen",
+      "photos": "foto’s van druiven en van stijlen en methoden"
+    },
+    "terms": {
+      "commonsEach": "elk bestand onder zijn eigen vrije licentie, vermeld onder de foto",
+      "crownFacts": "alleen feiten worden overgenomen",
+      "euReuse": "hergebruikt volgens het hergebruikbesluit van de Commissie (Besluit 2011/833/EU)",
+      "extract": "een uittreksel",
+      "officialFacts": "officiële teksten: alleen hun feiten worden overgenomen",
+      "publicDomain": "publiek domein",
+      "reuseCiting": "hergebruik toegestaan met bronvermelding",
+      "usPublicDomain": "werken van de Amerikaanse federale overheid, publiek domein in de Verenigde Staten"
+    },
+    "rulesTitle": "Hoe ze worden gebruikt",
+    "shareAlike": "Tekst overgenomen of vertaald uit Wikipedia wordt gedeeld onder dezelfde licentie, CC BY-SA 4.0.",
+    "pairings": "Waar een druif bij past, buiten wat haar eigen bronnen zeggen, komt uit de combinatieregels van de app, elk met een open bron.",
+    "declined": "Gegevens waarvan de licentie commercieel gebruik verbiedt, worden niet gebruikt (het wijnbouwkadaster van Chili, WorldClim).",
+    "noCommercial": "Niets wordt gekopieerd uit commerciële wijnwerken.",
+    "readme": "De volledige lijst, in de broncode"
   }
 }

@@ -24,6 +24,7 @@ test.describe("authenticated screens", () => {
     { path: "/cellar", name: "cellar" },
     { path: "/settings/data", name: "data and privacy" },
     { path: "/about", name: "about" },
+    { path: "/about/sources", name: "sources and licences" },
     // Everything built since this list was written. The two most complex screens
     // in the application — the deep tasting form and the evidence page — had
     // never been checked at all.

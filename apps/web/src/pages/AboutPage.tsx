@@ -19,6 +19,7 @@ export function AboutPage() {
   const destinations = [
     { body: t("about.dataBody"), title: t("dataRights.navAction"), to: "/settings/data" },
     { body: t("about.spacesBody"), title: t("spaces.manageAction"), to: "/spaces" },
+    { body: t("sources.aboutBody"), title: t("sources.title"), to: "/about/sources" },
     // The door's keeper sees the door; nobody else has a use for the page.
     ...(bootstrap.data.features.accessAdmin
       ? [
