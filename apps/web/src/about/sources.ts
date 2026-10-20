@@ -37,7 +37,8 @@ export type Source = {
     | "photos"
     | "points"
     | "registerNames"
-    | "summaries";
+    | "summaries"
+    | "traits";
 };
 
 export const sourceGroups: SourceGroup[] = [
@@ -56,6 +57,13 @@ export const sources: Source[] = [
     name: "Wikipedia",
     url: "https://www.wikipedia.org/",
     what: "summaries",
+  },
+  {
+    group: "texts",
+    name: "P. Viala, V. Vermorel, «Ampélographie» (Internet Archive)",
+    terms: "publicDomain",
+    url: "https://archive.org/details/traitegeneralvol02unse",
+    what: "traits",
   },
   {
     group: "texts",

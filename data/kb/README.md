@@ -377,6 +377,13 @@ Every few months, or when a register announces a name:
   on the protected name that bears the region's name, with the year and a
   link to the table.
 
+- **P. Viala and V. Vermorel, «Ampélographie»** (Masson, 1901–1910; the
+  authors died in 1936 and 1927, so in the public domain): the Internet
+  Archive's text of its scanned volumes (`.kb-cache/ampelography/`, not in
+  the repository), where a grape's articles say nothing of a level; each
+  reading in `grape-readings.json` names its volume (`source`), its quote is
+  checked against that volume's text, and the fact links the scan.
+
 - **Tuscany's agricultural payments agency (ARTEA)**, «Artea - Raccolta Uva»
   on dati.toscana.it (`it-regional-figures.json`, `pnpm
 kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione

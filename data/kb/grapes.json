@@ -260,7 +260,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Godello"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "low",
     "aromas": [
       "floral",
@@ -390,6 +390,12 @@
         "quote": "Sie reift spät und erreicht nur einen relativ niedrigen Alkoholgehalt",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "field": "acidity",
+        "quote": "Ce cépage productif donne un vin très fin, élégant, fruité et acide.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Parellada"
       }
     ],
     "id": "parellada",
@@ -8205,7 +8211,7 @@
       "leather",
       "gingerbread"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -8319,6 +8325,12 @@
         "quote": "Le vin de mourvèdre est assez faible en acidité, mais il est reconnu pour la qualité de sa structure tannique, sa richesse aromatique et son aptitude au vieillissement",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Mourv%C3%A8dre"
+      },
+      {
+        "field": "body",
+        "quote": "les vins à la fois corsés, colorés, riches, solides el droits, dont il esl le type",
+        "value": "high",
+        "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
       }
     ],
     "id": "mourvedre",
@@ -13568,7 +13580,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "grass",
       "bell pepper",
@@ -13781,6 +13793,12 @@
         "field": "sweetness",
         "quote": "Dry and sweet white Bordeaux, including oak-aged examples from Pessac-Léognan and Graves",
         "value": "dry-sweet"
+      },
+      {
+        "field": "alcohol",
+        "quote": "El vi varietal de sauvignon blanc és d'una bona acidesa fruital, de complexitat aromàtica herbàcia i alt contingut alcohòlic.",
+        "value": "high",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Sauvignon_blanc"
       }
     ],
     "id": "sauvignon-blanc",
@@ -14430,7 +14448,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "plum",
       "blackberry",
@@ -14539,6 +14557,12 @@
         "quote": "Podávají se k různým jemným paštikám, k srnčímu nebo jelenímu ragú, k telecím ledvinkám, k hříběcímu masu, k pokrmům s výraznou chutí rajčat, k pokrmům z pernaté zvěře nebo k ementálu",
         "value": "cheese",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Merlot"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Le jus de ce cepage donne un vin superieur a tous les points de vue, mais surtout remarquable par son bouquet, sa seve, son moelleux et par son degre d'alcool eleve.",
+        "value": "high",
+        "sourceUrl": "https://archive.org/details/traitegeneraldev00unse_1"
       }
     ],
     "id": "merlot",
@@ -29803,7 +29827,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "guava"
     ],
@@ -29961,6 +29985,12 @@
         "quote": "Użyciu colombard do destylacji sprzyja zachowanie wysokiej kwasowości mimo plenności i cieplejszego klimatu",
         "value": "high",
         "sourceUrl": "https://pl.wikipedia.org/wiki/Colombard"
+      },
+      {
+        "field": "alcohol",
+        "quote": "c'est le Colombard qui a l'immense avantage de donner, nous le verrons plus loin, presque autant que la Folle, et dont le vin très alcoolique fera à volonté un bon vin de table ou un bon vin de chaudière.",
+        "value": "high",
+        "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
       }
     ],
     "id": "colombard",
@@ -35583,6 +35613,12 @@
         "field": "sweetness",
         "quote": "These grapes produce dry, demi-dry or sweet wines",
         "value": "dry-sweet"
+      },
+      {
+        "field": "tannin",
+        "quote": "Son raisin donne des vins colorés, tanniques, assez intenses en saveurs, et souvent aptes à la garde.",
+        "value": "high",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Feteasc%C4%83_neagr%C4%83"
       }
     ],
     "id": "feteasca-neagra",
@@ -35683,7 +35719,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q1409106",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Feteasc%C4%83_neagr%C4%83"
   },
@@ -39552,7 +39588,7 @@
     "aromas": [
       "flint"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -39626,6 +39662,12 @@
         "quote": "такие вина служат хорошим сопровождением к рыбе и морепродуктам Нантского края",
         "value": "seafood",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BB%D0%BE%D0%BD_%D0%B4%D0%B5_%D0%91%D1%83%D1%80%D0%B3%D0%BE%D0%BD%D1%8C"
+      },
+      {
+        "field": "body",
+        "quote": "Dans les crus à Melon de la Bourgogne, il donne un vin incolore, à reflets d'opale, léger au palais, sans mâche ni corps, qui coule, gratte avec un léger pétillement.",
+        "value": "low",
+        "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
       }
     ],
     "id": "melon-de-bourgogne",
@@ -40309,7 +40351,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "spice"
     ],
@@ -40446,6 +40488,12 @@
         "quote": "Il donne des vins très colorés, charpentés, parfois astringents, mais manquant d'acidité.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Abouriou"
+      },
+      {
+        "field": "alcohol",
+        "quote": "car il manque de toutes les autres qualites qui font apprecier le vin : alcool, monlant, finesse, parfum",
+        "value": "low",
+        "sourceUrl": "https://archive.org/details/traitegeneraldev00unse"
       }
     ],
     "id": "abouriou",
@@ -44551,7 +44599,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "cherry",
       "blackberry",
@@ -44687,6 +44735,12 @@
         "quote": "proto se podává jako zvláštnost při slavnostních tabulích ke zvěřině, k pečením, k tmavému masu, omáčkám nebo k nejkvalitnějším sýrům",
         "value": "cheese",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Jakubsk%C3%A9"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Son vin est agréable, fin et alcoolique.",
+        "value": "high",
+        "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
       }
     ],
     "id": "pinot-noir-precoce",
@@ -48994,7 +49048,7 @@
     "aromas": [
       "apple"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -49134,6 +49188,12 @@
         "quote": "De Clairette is een van oorsprong Franse witte druivensoort die veelal in Zuid-Frankrijk wordt verbouwd.",
         "value": "FR",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Clairette"
+      },
+      {
+        "field": "body",
+        "quote": "« Les vins de Clairette, désignés en Languedoc sous le nom de picardans, sont pleins, corsés, trés agréables",
+        "value": "high",
+        "sourceUrl": "https://archive.org/details/traitegeneraldev0005pvia"
       }
     ],
     "id": "clairette-blanche",
@@ -49278,7 +49338,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "violet",
       "strawberry",
@@ -49419,6 +49479,12 @@
         "quote": "Sie stammt aus Südwest-Frankreich und ist noch immer in der Weinbauregion Sud-Ouest heimisch.",
         "value": "FR",
         "sourceUrl": "https://de.wikipedia.org/wiki/N%C3%A9grette"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Le vin de Négrette pure est caractérisé par sa richesse en tanin et extrait sec, son degré alcoolique élevé (sur sols lui convenant) et sa pauvreté en acides.",
+        "value": "high",
+        "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
       }
     ],
     "id": "negrette",

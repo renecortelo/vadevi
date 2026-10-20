@@ -129,6 +129,8 @@ const handReadings = (
           | "tannin";
         lang: string;
         quote: string;
+        /** A volume of Viala and Vermorel's «Ampélographie», read where no article says. */
+        source?: { volume: string; work: "viala-vermorel" };
         value: string | string[];
         words?: Record<string, string>;
       }[]
@@ -144,6 +146,21 @@ function articleIn(qid: string, lang: string): { article: string; url: string } 
   return {
     article: article.text,
     url: `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(article.title.replaceAll(" ", "_"))}`,
+  };
+}
+
+/**
+ * A volume of Viala and Vermorel's «Ampélographie» (1901–1910, public domain),
+ * as the Internet Archive's text of its scan gives it
+ * (`.kb-cache/ampelography/<volume>_djvu.txt`): its words split across a line
+ * joined again, so a quote reads as the page does.
+ */
+function ampelography(volume: string): { article: string; url: string } | null {
+  const path = resolve(cache, "ampelography", `${volume}_djvu.txt`);
+  if (!existsSync(path)) return null;
+  return {
+    article: readFileSync(path, "utf8").replace(/(\p{L})-\s*\n\s*(\p{L})/gu, "$1$2"),
+    url: `https://archive.org/details/${volume}`,
   };
 }
 
@@ -254,9 +271,11 @@ for (const qid of index) {
   // against the article it names exactly as a model's proposal is.
   for (const reading of handReadings[slug(raw.labels.en ?? qid)] ?? []) {
     const source =
-      reading.lang === "en" && raw.article !== null
-        ? { article: raw.article, url: undefined }
-        : articleIn(qid, reading.lang);
+      reading.source !== undefined
+        ? ampelography(reading.source.volume)
+        : reading.lang === "en" && raw.article !== null
+          ? { article: raw.article, url: undefined }
+          : articleIn(qid, reading.lang);
     if (source === null) {
       rejected.push({
         field: reading.field,

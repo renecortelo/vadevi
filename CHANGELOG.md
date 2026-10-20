@@ -45,6 +45,13 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **A century-old ampelography as a source**: where no article says a
+  grape's acidity, alcohol or body, Viala and Vermorel's «Ampélographie»
+  (1901–1910, public domain) read by hand from the Internet Archive's scans
+  — Mourvèdre's full body, Merlot's high alcohol, Melon's light body and
+  five more, each with its quote and a link to the volume — and three more
+  levels from Wikipedia now that the check reads «acide», «tanniques» and
+  «alcoolique» as levels. On the sources page.
 - **Vineyard area for 89 Italian names**, from the two regions that publish
   it by name as open data: Tuscany's grape-harvest declarations (ARTEA,
   2025, CC BY 4.0) — each wine's types summed on its registered name, so

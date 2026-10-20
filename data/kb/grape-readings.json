@@ -7,6 +7,16 @@
         "lang": "fr",
         "value": "high",
         "quote": "Il donne des vins très colorés, charpentés, parfois astringents, mais manquant d'acidité."
+      },
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "low",
+        "quote": "car il manque de toutes les autres qualites qui font apprecier le vin : alcool, monlant, finesse, parfum",
+        "source": {
+          "volume": "traitegeneraldev00unse",
+          "work": "viala-vermorel"
+        }
       }
     ],
     "acolon": [
@@ -830,6 +840,16 @@
         "lang": "nl",
         "quote": "De Clairette is een van oorsprong Franse witte druivensoort die veelal in Zuid-Frankrijk wordt verbouwd.",
         "value": "FR"
+      },
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "high",
+        "quote": "« Les vins de Clairette, désignés en Languedoc sous le nom de picardans, sont pleins, corsés, trés agréables",
+        "source": {
+          "volume": "traitegeneraldev0005pvia",
+          "work": "viala-vermorel"
+        }
       }
     ],
     "colombard": [
@@ -850,6 +870,16 @@
         "lang": "pl",
         "value": "high",
         "quote": "Użyciu colombard do destylacji sprzyja zachowanie wysokiej kwasowości mimo plenności i cieplejszego klimatu"
+      },
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "high",
+        "quote": "c'est le Colombard qui a l'immense avantage de donner, nous le verrons plus loin, presque autant que la Folle, et dont le vin très alcoolique fera à volonté un bon vin de table ou un bon vin de chaudière.",
+        "source": {
+          "volume": "traitegeneralvol02unse",
+          "work": "viala-vermorel"
+        }
       }
     ],
     "concord": [
@@ -1079,6 +1109,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "These grapes produce dry, demi-dry or sweet wines"
+      },
+      {
+        "field": "tannin",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Son raisin donne des vins colorés, tanniques, assez intenses en saveurs, et souvent aptes à la garde."
       }
     ],
     "feteasca-regala": [
@@ -1860,6 +1896,16 @@
           "fish": "рыбе",
           "seafood": "морепродуктам"
         }
+      },
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "low",
+        "quote": "Dans les crus à Melon de la Bourgogne, il donne un vin incolore, à reflets d'opale, léger au palais, sans mâche ni corps, qui coule, gratte avec un léger pétillement.",
+        "source": {
+          "volume": "traitegeneralvol02unse",
+          "work": "viala-vermorel"
+        }
       }
     ],
     "mencia": [
@@ -1904,6 +1950,16 @@
           "veal": "telecím",
           "game": "pernaté zvěře",
           "cheese": "ementálu"
+        }
+      },
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Le jus de ce cepage donne un vin superieur a tous les points de vue, mais surtout remarquable par son bouquet, sa seve, son moelleux et par son degre d'alcool eleve.",
+        "source": {
+          "volume": "traitegeneraldev00unse_1",
+          "work": "viala-vermorel"
         }
       }
     ],
@@ -1991,6 +2047,16 @@
         "lang": "fr",
         "quote": "Le vin de mourvèdre est assez faible en acidité, mais il est reconnu pour la qualité de sa structure tannique, sa richesse aromatique et son aptitude au vieillissement",
         "value": "low"
+      },
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "high",
+        "quote": "les vins à la fois corsés, colorés, riches, solides el droits, dont il esl le type",
+        "source": {
+          "volume": "traitegeneralvol02unse",
+          "work": "viala-vermorel"
+        }
       }
     ],
     "mtsvane": [
@@ -2181,6 +2247,16 @@
         "lang": "de",
         "quote": "Sie stammt aus Südwest-Frankreich und ist noch immer in der Weinbauregion Sud-Ouest heimisch.",
         "value": "FR"
+      },
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Le vin de Négrette pure est caractérisé par sa richesse en tanin et extrait sec, son degré alcoolique élevé (sur sols lui convenant) et sa pauvreté en acides.",
+        "source": {
+          "volume": "traitegeneralvol02unse",
+          "work": "viala-vermorel"
+        }
       }
     ],
     "negroamaro": [
@@ -2359,6 +2435,12 @@
         "lang": "de",
         "value": "low",
         "quote": "Sie reift spät und erreicht nur einen relativ niedrigen Alkoholgehalt"
+      },
+      {
+        "field": "acidity",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Ce cépage productif donne un vin très fin, élégant, fruité et acide."
       }
     ],
     "pecorino": [
@@ -2588,6 +2670,16 @@
         "words": {
           "game": "zvěřině",
           "cheese": "sýrům"
+        }
+      },
+      {
+        "field": "alcohol",
+        "lang": "fr",
+        "value": "high",
+        "quote": "Son vin est agréable, fin et alcoolique.",
+        "source": {
+          "volume": "traitegeneralvol02unse",
+          "work": "viala-vermorel"
         }
       }
     ],
@@ -2907,6 +2999,12 @@
         "lang": "en",
         "value": "high",
         "quote": "softening the naturally high acidity of the grape"
+      },
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "high",
+        "quote": "El vi varietal de sauvignon blanc és d'una bona acidesa fruital, de complexitat aromàtica herbàcia i alt contingut alcohòlic."
       }
     ],
     "sauvignon-vert": [
