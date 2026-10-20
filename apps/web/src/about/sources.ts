@@ -195,6 +195,14 @@ export const sources: Source[] = [
     what: "areas",
   },
   {
+    credit: "Forrás: KSH",
+    group: "figures",
+    licence: "CC BY 4.0",
+    name: "Központi Statisztikai Hivatal (KSH)",
+    url: "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/index.html",
+    what: "areas",
+  },
+  {
     group: "figures",
     licence: "CC BY 4.0",
     name: "Instituto Nacional de Vitivinicultura",

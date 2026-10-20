@@ -7,7 +7,8 @@ import type { ClimateSummary, MonthlyClimate } from "./climate";
 export type RegionFigureSource = {
   amount: number;
   /** Who gives it, where not Wikipedia: Spain's Ministry, France's customs. */
-  publisher?: "destatis" | "douane" | "federal-register" | "inv" | "mapa" | "statistik-austria";
+  publisher?:
+    "destatis" | "douane" | "federal-register" | "inv" | "ksh" | "mapa" | "statistik-austria";
   quote: string;
   sourceUrl: string;
   year: string | null;

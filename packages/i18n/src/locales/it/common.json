@@ -500,7 +500,8 @@
       "byFamily": "Per famiglia",
       "seeWheel": "Vedi la ruota degli aromi"
     },
-    "glanceSourceFederalRegister": "Federal Register degli USA, la norma che ha istituito l’AVA ({{campaign}})"
+    "glanceSourceFederalRegister": "Federal Register degli USA, la norma che ha istituito l’AVA ({{campaign}})",
+    "glanceSourceKsh": "Forrás: KSH (statistica ungherese), vigneti {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Spazio attivo",

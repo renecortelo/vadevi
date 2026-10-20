@@ -1599,6 +1599,30 @@ for (const entry of entries) {
   };
   statistikAustria += 1;
 }
+// Hungary's wine regions: their vineyard area in 2020 from the Central
+// Statistical Office (`data/kb/hu-borvidek-figures.json`, CC BY 4.0, «Forrás:
+// KSH»), on the protected name that bears the region's name.
+const hungarian = JSON.parse(readFileSync(resolve("data/kb/hu-borvidek-figures.json"), "utf8")) as {
+  campaign: string;
+  regions: Record<string, { name: string; plantedHa: number }>;
+  sourceUrl: string;
+};
+let ksh = 0;
+for (const entry of entries) {
+  const area = hungarian.regions[entry.id];
+  if (area === undefined) continue;
+  entry.figures = {
+    planted: {
+      amount: area.plantedHa,
+      publisher: "ksh",
+      quote: `Az ültetvények területe, ${area.name}, ${hungarian.campaign} (ha): ${area.plantedHa}`,
+      sourceUrl: hungarian.sourceUrl,
+      year: hungarian.campaign,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  ksh += 1;
+}
 // American Viticultural Areas with no area from Wikipedia: the acres of
 // vineyards the Federal Register rule that established each one gives, read
 // by hand (`data/kb/us-ava-figures.json`; US federal works, public domain in
@@ -1640,7 +1664,7 @@ for (const entry of entries) {
   federalRegister += 1;
 }
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${federalRegister} American from the Federal Register.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${federalRegister} American from the Federal Register.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

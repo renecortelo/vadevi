@@ -500,7 +500,8 @@
       "byFamily": "Por família",
       "seeWheel": "Ver a roda de aromas"
     },
-    "glanceSourceFederalRegister": "Federal Register dos EUA, a norma que criou a AVA ({{campaign}})"
+    "glanceSourceFederalRegister": "Federal Register dos EUA, a norma que criou a AVA ({{campaign}})",
+    "glanceSourceKsh": "Forrás: KSH (estatística da Hungria), vinhas {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Espaço ativo",

@@ -500,7 +500,8 @@
       "byFamily": "Per família",
       "seeWheel": "Veure la roda d’aromes"
     },
-    "glanceSourceFederalRegister": "Federal Register dels EUA, la norma que va crear l’AVA ({{campaign}})"
+    "glanceSourceFederalRegister": "Federal Register dels EUA, la norma que va crear l’AVA ({{campaign}})",
+    "glanceSourceKsh": "Forrás: KSH (estadística d’Hongria), vinyes {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Espai actiu",

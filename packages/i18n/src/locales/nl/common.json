@@ -500,7 +500,8 @@
       "byFamily": "Per familie",
       "seeWheel": "Bekijk het aromawiel"
     },
-    "glanceSourceFederalRegister": "Amerikaanse Federal Register, de regel die de AVA instelde ({{campaign}})"
+    "glanceSourceFederalRegister": "Amerikaanse Federal Register, de regel die de AVA instelde ({{campaign}})",
+    "glanceSourceKsh": "Forrás: KSH (Hongaarse statistiek), wijngaarden {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

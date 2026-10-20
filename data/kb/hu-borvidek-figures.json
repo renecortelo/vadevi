@@ -1,0 +1,95 @@
+{
+  "about": "Vineyard area (ha, «Az ültetvények területe») in 2020 of Hungary's 22 wine regions (borvidék), from the Hungarian Central Statistical Office's «Szőlőültetvények, 2020», table 1 «A szőlőültetvények területe szőlőtermő helyenként ültetvényjellemzők szerint, 2001 – 2020», row 2020; the 22 add up to the table's «Borvidékek összesen» (61,888.24 ha). Each figure is placed on the protected name that bears its wine region's name; names that are part of one (Csopak, Tihany, Somlói…) or span several (Duna, Pannon) take none. Licence: CC BY 4.0, «Forrás: KSH» (www.ksh.hu/copyright).",
+  "campaign": "2020",
+  "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+  "regions": {
+    "hu-badacsony": {
+      "name": "Badacsonyi borvidék",
+      "plantedHa": 1320.61
+    },
+    "hu-balatonboglar": {
+      "name": "Balaton-boglári borvidék",
+      "plantedHa": 3399.43
+    },
+    "hu-balaton-felvidek": {
+      "name": "Balaton-felvidéki borvidék",
+      "plantedHa": 736.18
+    },
+    "hu-balatonfured-csopak": {
+      "name": "Balatonfüred-Csopaki borvidék",
+      "plantedHa": 1845.41
+    },
+    "hu-bukk": {
+      "name": "Bükki borvidék",
+      "plantedHa": 867.49
+    },
+    "hu-csongrad": {
+      "name": "Csongrádi borvidék",
+      "plantedHa": 875.44
+    },
+    "hu-eger": {
+      "name": "Egri borvidék",
+      "plantedHa": 5588.33
+    },
+    "hu-etyek-buda": {
+      "name": "Etyek-Budai borvidék",
+      "plantedHa": 1662.95
+    },
+    "hu-hajos-baja": {
+      "name": "Hajós-Bajai borvidék",
+      "plantedHa": 1833.44
+    },
+    "hu-kunsag": {
+      "name": "Kunsági borvidék",
+      "plantedHa": 20150.75
+    },
+    "hu-matra": {
+      "name": "Mátrai borvidék",
+      "plantedHa": 6130.38
+    },
+    "hu-mor": {
+      "name": "Móri borvidék",
+      "plantedHa": 485.08
+    },
+    "hu-nagy-somlo": {
+      "name": "Nagy-Somlói borvidék",
+      "plantedHa": 483.58
+    },
+    "hu-neszmely": {
+      "name": "Neszmélyi borvidék",
+      "plantedHa": 952.5
+    },
+    "hu-pannonhalma": {
+      "name": "Pannonhalmi borvidék",
+      "plantedHa": 586.98
+    },
+    "hu-pecs": {
+      "name": "Pécsi borvidék",
+      "plantedHa": 570.11
+    },
+    "hu-sopron": {
+      "name": "Soproni borvidék",
+      "plantedHa": 1435.84
+    },
+    "hu-szekszard": {
+      "name": "Szekszárdi borvidék",
+      "plantedHa": 2243.88
+    },
+    "hu-tokaj": {
+      "name": "Tokaji borvidék",
+      "plantedHa": 5427.36
+    },
+    "hu-tolna": {
+      "name": "Tolnai borvidék",
+      "plantedHa": 2236.65
+    },
+    "hu-villany": {
+      "name": "Villányi borvidék",
+      "plantedHa": 2381.11
+    },
+    "hu-zala": {
+      "name": "Zalai borvidék",
+      "plantedHa": 674.76
+    }
+  }
+}

@@ -371,6 +371,12 @@ Every few months, or when a register announces a name:
   of the US federal government, in the public domain in the United States;
   each AVA shows the area with the rule's year, its sentence and a link.
 
+- **Hungary's Central Statistical Office (KSH)**, «Szőlőültetvények, 2020»,
+  table 1 (`hu-borvidek-figures.json`): CC BY 4.0, credited «Forrás: KSH»
+  (www.ksh.hu/copyright); each of the 22 wine regions' vineyard area in 2020,
+  on the protected name that bears the region's name, with the year and a
+  link to the table.
+
 - **Germany's Federal Statistical Office (Destatis)**, «Rebflächen 2022»
   (`de-anbaugebiete-figures.json`): its publications allow reproduction and
   distribution, in part too, with the source named; each of the 13

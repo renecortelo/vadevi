@@ -25556,10 +25556,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 1794,
-        "quote": "superficieplantée = {{formatnum:1794}} hectares",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Badacsony_(vignoble)",
-        "year": null
+        "amount": 1320.61,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Badacsonyi borvidék, 2020 (ha): 1320.61",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
       },
       "production": null
     }
@@ -27555,6 +27556,16 @@
         4.9,
         0.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 736.18,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Balaton-felvidéki borvidék, 2020 (ha): 736.18",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -27744,6 +27755,16 @@
         5.7,
         1.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3399.43,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Balaton-boglári borvidék, 2020 (ha): 3399.43",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -27990,6 +28011,16 @@
         4.2,
         0.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1845.41,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Balatonfüred-Csopaki borvidék, 2020 (ha): 1845.41",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -45618,6 +45649,16 @@
         2.9,
         -1.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 867.49,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Bükki borvidék, 2020 (ha): 867.49",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -87606,6 +87647,16 @@
         5.6,
         0.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 875.44,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Csongrádi borvidék, 2020 (ha): 875.44",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -107248,10 +107299,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 22162,
-        "quote": "superficieplantée = {{formatnum:22162}} hectares",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Eger_(vignoble)",
-        "year": null
+        "amount": 5588.33,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Egri borvidék, 2020 (ha): 5588.33",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
       },
       "production": null
     }
@@ -110762,6 +110814,16 @@
         5.1,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1662.95,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Etyek-Budai borvidék, 2020 (ha): 1662.95",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -127073,6 +127135,16 @@
         5.4,
         0.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1833.44,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Hajós-Bajai borvidék, 2020 (ha): 1833.44",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -136429,6 +136501,16 @@
         5.2,
         0.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 20150.75,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Kunsági borvidék, 2020 (ha): 20150.75",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -175302,6 +175384,16 @@
         3.1,
         -1.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6130.38,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Mátrai borvidék, 2020 (ha): 6130.38",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -176514,6 +176606,16 @@
         4.8,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 485.08,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Móri borvidék, 2020 (ha): 485.08",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -177156,6 +177258,16 @@
         5.4,
         1.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 483.58,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Nagy-Somlói borvidék, 2020 (ha): 483.58",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -179422,6 +179534,16 @@
         5,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 952.5,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Neszmélyi borvidék, 2020 (ha): 952.5",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -188111,6 +188233,16 @@
         5.4,
         0.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 586.98,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Pannonhalmi borvidék, 2020 (ha): 586.98",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -204958,6 +205090,16 @@
         5.7,
         1.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 570.11,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Pécsi borvidék, 2020 (ha): 570.11",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -239087,6 +239229,16 @@
         4.9,
         0.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1435.84,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Soproni borvidék, 2020 (ha): 1435.84",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -241940,6 +242092,16 @@
         5.6,
         1.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2243.88,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Szekszárdi borvidék, 2020 (ha): 2243.88",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -253767,10 +253929,11 @@
     },
     "figures": {
       "planted": {
-        "amount": 5500,
-        "quote": "planted = 5,500 ha",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Tokaj_wine_region",
-        "year": null
+        "amount": 5427.36,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Tokaji borvidék, 2020 (ha): 5427.36",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
       },
       "production": null
     }
@@ -253947,6 +254110,16 @@
         5.6,
         1.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2236.65,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Tolnai borvidék, 2020 (ha): 2236.65",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -276748,6 +276921,16 @@
         5.9,
         1.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2381.11,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Villányi borvidék, 2020 (ha): 2381.11",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -284777,6 +284960,16 @@
         5.6,
         1.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 674.76,
+        "publisher": "ksh",
+        "quote": "Az ültetvények területe, Zalai borvidék, 2020 (ha): 674.76",
+        "sourceUrl": "https://www.ksh.hu/docs/hun/xftp/idoszaki/szoloultetvenyek/2020/assets/tablazat_01.xlsx",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {

@@ -17,6 +17,11 @@ has the reasons.
 
 ### The library
 
+- **Hungary's 22 wine regions with their vineyard area** in 2020, from the
+  Central Statistical Office (KSH, «Szőlőültetvények, 2020», CC BY 4.0,
+  credited «Forrás: KSH»), each on the protected name that bears its wine
+  region's name; a name that is part of a region or spans several takes
+  none.
 - **Eleven more American Viticultural Areas with their vineyard area** (47
   in all) from the rule that established each one: where a page of the
   Federal Register holds two rules, the day's whole issue, from govinfo's

@@ -500,7 +500,8 @@
       "byFamily": "By family",
       "seeWheel": "See the aroma wheel"
     },
-    "glanceSourceFederalRegister": "US Federal Register, the rule establishing the AVA ({{campaign}})"
+    "glanceSourceFederalRegister": "US Federal Register, the rule establishing the AVA ({{campaign}})",
+    "glanceSourceKsh": "Forrás: KSH (Hungarian statistics), vineyards {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Active Space",

@@ -226,10 +226,11 @@ const RegionFigureSchema = z
      * Who gives it, where not Wikipedia: Spain's Ministry ("mapa"), France's
      * customs ("douane"), Argentina's wine institute ("inv"), Germany's
      * statistical office ("destatis"), Statistik Austria ("statistik-austria"),
-     * the US Federal Register rule that established an AVA ("federal-register").
+     * the US Federal Register rule that established an AVA ("federal-register"),
+     * Hungary's Central Statistical Office ("ksh").
      */
     publisher: z
-      .enum(["destatis", "douane", "federal-register", "inv", "mapa", "statistik-austria"])
+      .enum(["destatis", "douane", "federal-register", "inv", "ksh", "mapa", "statistik-austria"])
       .optional(),
     /** The infobox line it was read from. */
     quote: z.string(),

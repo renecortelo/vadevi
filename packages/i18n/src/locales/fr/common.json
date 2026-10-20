@@ -500,7 +500,8 @@
       "byFamily": "Par famille",
       "seeWheel": "Voir la roue des arômes"
     },
-    "glanceSourceFederalRegister": "Federal Register des États-Unis, la règle créant l’AVA ({{campaign}})"
+    "glanceSourceFederalRegister": "Federal Register des États-Unis, la règle créant l’AVA ({{campaign}})",
+    "glanceSourceKsh": "Forrás : KSH (statistique hongroise), vignobles {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Espace actif",

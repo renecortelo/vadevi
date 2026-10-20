@@ -500,7 +500,8 @@
       "byFamily": "Nach Familie",
       "seeWheel": "Zum Aromarad"
     },
-    "glanceSourceFederalRegister": "US Federal Register, die Regel zur Einrichtung der AVA ({{campaign}})"
+    "glanceSourceFederalRegister": "US Federal Register, die Regel zur Einrichtung der AVA ({{campaign}})",
+    "glanceSourceKsh": "Forrás: KSH (ungarisches Statistikamt), Rebflächen {{campaign}} · CC BY 4.0"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",

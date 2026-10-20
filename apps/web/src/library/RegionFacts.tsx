@@ -111,11 +111,13 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
                             ? t("library.glanceSourceStatistikAustria", {
                                 campaign: figure.year ?? "",
                               })
-                            : figure.publisher === "federal-register"
-                              ? t("library.glanceSourceFederalRegister", {
-                                  campaign: figure.year ?? "",
-                                })
-                              : t("library.summarySource")}
+                            : figure.publisher === "ksh"
+                              ? t("library.glanceSourceKsh", { campaign: figure.year ?? "" })
+                              : figure.publisher === "federal-register"
+                                ? t("library.glanceSourceFederalRegister", {
+                                    campaign: figure.year ?? "",
+                                  })
+                                : t("library.summarySource")}
                 </a>
               </span>
             ),
