@@ -496,7 +496,9 @@
       "grapeCount_other": "{{count}} cépages",
       "noGrapeShort": "Aucun cépage encore",
       "yourWinesInColour": "Tes vins couleur {{colour}}",
-      "noWinesInColour": "Tu n'as encore dégusté aucun vin de cette couleur."
+      "noWinesInColour": "Tu n'as encore dégusté aucun vin de cette couleur.",
+      "byFamily": "Par famille",
+      "seeWheel": "Voir la roue des arômes"
     }
   },
   "space": {

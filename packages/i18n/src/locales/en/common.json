@@ -496,7 +496,9 @@
       "grapeCount_other": "{{count}} grapes",
       "noGrapeShort": "No grape yet",
       "yourWinesInColour": "Your {{colour}} wines",
-      "noWinesInColour": "You have not tasted a wine of this colour yet."
+      "noWinesInColour": "You have not tasted a wine of this colour yet.",
+      "byFamily": "By family",
+      "seeWheel": "See the aroma wheel"
     }
   },
   "space": {

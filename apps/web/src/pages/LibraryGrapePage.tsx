@@ -6,6 +6,7 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { AromaIcon } from "../library/AromaIcon";
+import { AromaRing } from "../library/AromaRing";
 import { AtlasMap } from "../library/AtlasMap";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
@@ -178,6 +179,12 @@ export function LibraryGrapePage() {
           {grape.aromas.length === 0 ? null : (
             <>
               <h3>{t("library.aromas")}</h3>
+              <AromaRing
+                descriptors={grape.aromaTerms.flatMap((term) => {
+                  const descriptor = aromaFromTerm(term);
+                  return descriptor === null ? [] : [descriptor];
+                })}
+              />
               {/* Each aroma with its drawing over its name in the reader's
                   language. */}
               <ul className="aroma-grid">

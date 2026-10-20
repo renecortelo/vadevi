@@ -1,6 +1,8 @@
 import { type CSSProperties, type ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { polar, slice } from "./ring";
+
 /**
  * A wheel to find one thing among many by narrowing: aromas by family and
  * group, wine colours by kind and hue. The same drawing serves every wheel —
@@ -27,31 +29,6 @@ export type WheelNode = {
   /** Its share of the ring; one by default. */
   weight?: number;
 };
-
-const innerRadius = 58;
-const outerRadius = 90;
-
-function polar(radius: number, angle: number): [number, number] {
-  const radians = ((angle - 90) * Math.PI) / 180;
-  return [radius * Math.cos(radians), radius * Math.sin(radians)];
-}
-
-/** The ring slice between two angles, in degrees clockwise from the top. */
-function slice(start: number, end: number): string {
-  const sweep = end - start;
-  if (sweep >= 359.99) {
-    return `${slice(start, start + 180)} ${slice(start + 180, end)}`;
-  }
-  const large = sweep > 180 ? 1 : 0;
-  const [x1, y1] = polar(outerRadius, start);
-  const [x2, y2] = polar(outerRadius, end);
-  const [x3, y3] = polar(innerRadius, end);
-  const [x4, y4] = polar(innerRadius, start);
-  return (
-    `M ${x1} ${y1} A ${outerRadius} ${outerRadius} 0 ${large} 1 ${x2} ${y2} ` +
-    `L ${x3} ${y3} A ${innerRadius} ${innerRadius} 0 ${large} 0 ${x4} ${y4} Z`
-  );
-}
 
 /** A part's share: its own weight, or its parts' together. */
 function weightOf(node: WheelNode): number {

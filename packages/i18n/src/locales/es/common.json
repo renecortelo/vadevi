@@ -496,7 +496,9 @@
       "grapeCount_other": "{{count}} uvas",
       "noGrapeShort": "Sin uvas aún",
       "yourWinesInColour": "Tus vinos de color {{colour}}",
-      "noWinesInColour": "Aún no has catado ningún vino de este color."
+      "noWinesInColour": "Aún no has catado ningún vino de este color.",
+      "byFamily": "Por familia",
+      "seeWheel": "Ver la rueda de aromas"
     }
   },
   "space": {

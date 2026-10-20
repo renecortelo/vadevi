@@ -496,7 +496,9 @@
       "grapeCount_other": "{{count}} raïms",
       "noGrapeShort": "Encara sense raïms",
       "yourWinesInColour": "Els teus vins de color {{colour}}",
-      "noWinesInColour": "Encara no has tastat cap vi d'aquest color."
+      "noWinesInColour": "Encara no has tastat cap vi d'aquest color.",
+      "byFamily": "Per família",
+      "seeWheel": "Veure la roda d’aromes"
     }
   },
   "space": {

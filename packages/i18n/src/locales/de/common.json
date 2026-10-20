@@ -496,7 +496,9 @@
       "grapeCount_other": "{{count}} Rebsorten",
       "noGrapeShort": "Noch keine Rebsorte",
       "yourWinesInColour": "Deine Weine in {{colour}}",
-      "noWinesInColour": "Du hast noch keinen Wein in dieser Farbe verkostet."
+      "noWinesInColour": "Du hast noch keinen Wein in dieser Farbe verkostet.",
+      "byFamily": "Nach Familie",
+      "seeWheel": "Zum Aromarad"
     }
   },
   "space": {

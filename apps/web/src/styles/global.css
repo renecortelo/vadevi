@@ -6585,6 +6585,44 @@ button.stats-bars__label:hover {
   justify-items: center;
 }
 
+/* The grape card's small ring of aroma families, its legend beside it. */
+.aroma-ring {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-block: var(--space-2) var(--space-3);
+}
+
+.aroma-ring__svg {
+  block-size: 5.5rem;
+  flex: none;
+  inline-size: 5.5rem;
+}
+
+.aroma-ring__legend {
+  display: grid;
+  gap: 0.15rem;
+  list-style: none;
+  margin: 0 0 var(--space-1);
+  padding: 0;
+}
+
+.settings-card .aroma-ring__legend li + li {
+  margin-block-start: 0;
+}
+
+.aroma-ring__legend li {
+  align-items: center;
+  display: flex;
+  gap: 0.45rem;
+}
+
+.aroma-ring__count {
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
 /* A wheel in the tasting form: the colour, and the aromas folded away. */
 .wheel-field {
   display: grid;

@@ -13,7 +13,7 @@ import type { WheelNode } from "./Wheel";
  * Each aroma family's colour on the wheel, from the wine palette, quiet
  * rather than bright; its groups and aromas are shades of it, each its own.
  */
-const familyColours = {
+export const familyColours = {
   earth: "#8f7663",
   floral: "#a27aa6",
   fruit: "#b85a5a",

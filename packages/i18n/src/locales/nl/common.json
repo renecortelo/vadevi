@@ -496,7 +496,9 @@
       "grapeCount_other": "{{count}} druiven",
       "noGrapeShort": "Nog geen druif",
       "yourWinesInColour": "Je wijnen in {{colour}}",
-      "noWinesInColour": "Je hebt nog geen wijn in deze kleur geproefd."
+      "noWinesInColour": "Je hebt nog geen wijn in deze kleur geproefd.",
+      "byFamily": "Per familie",
+      "seeWheel": "Bekijk het aromawiel"
     }
   },
   "space": {

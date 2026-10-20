@@ -6,7 +6,7 @@ import { completeOnboarding, signIn } from "./fixtures/sign-in";
 
 /**
  * A grape's card at a glance: its aromas drawn and named in the reader's
- * language, and acidity, tannin and body as three steps — a value no source
+ * language, and as a small ring of their families, and acidity, tannin and body as three steps — a value no source
  * gives says so instead of showing an empty bar. Grenache's sources give low
  * acidity and tannin and no body.
  */
@@ -29,6 +29,19 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
     "alquitrán",
   ]);
   await expect(page.locator(".aroma-grid .aroma-icon")).toHaveCount(5);
+  // The small ring of families, in the wheel's order: two fruits, a spice,
+  // one earthy and one animal — and the way to the whole wheel.
+  const families = page.getByRole("list", { name: "Por familia" }).getByRole("listitem");
+  await expect(families).toHaveText([
+    "Fruta2",
+    "Especias1",
+    "Tierra y mineral1",
+    "Animal y sabroso1",
+  ]);
+  await expect(page.getByRole("link", { name: "Ver la rueda de aromas" })).toHaveAttribute(
+    "href",
+    "/library?tab=wheels",
+  );
 
   const bars = page.locator(".library-bar");
   await expect(bars).toHaveCount(5);

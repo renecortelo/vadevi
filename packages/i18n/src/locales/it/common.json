@@ -496,7 +496,9 @@
       "grapeCount_other": "{{count}} vitigni",
       "noGrapeShort": "Nessun vitigno ancora",
       "yourWinesInColour": "I tuoi vini color {{colour}}",
-      "noWinesInColour": "Non hai ancora degustato un vino di questo colore."
+      "noWinesInColour": "Non hai ancora degustato un vino di questo colore.",
+      "byFamily": "Per famiglia",
+      "seeWheel": "Vedi la ruota degli aromi"
     }
   },
   "space": {

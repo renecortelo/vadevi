@@ -496,7 +496,9 @@
       "grapeCount_other": "{{count}} castas",
       "noGrapeShort": "Ainda sem castas",
       "yourWinesInColour": "Os teus vinhos cor {{colour}}",
-      "noWinesInColour": "Ainda não provaste nenhum vinho desta cor."
+      "noWinesInColour": "Ainda não provaste nenhum vinho desta cor.",
+      "byFamily": "Por família",
+      "seeWheel": "Ver a roda de aromas"
     }
   },
   "space": {
