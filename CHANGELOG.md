@@ -23,6 +23,10 @@ has the reasons.
   spagnola») or a region wholly within it («autòctona de Catalunya») — and
   checked against the article; a grape whose articles disagree or hedge
   keeps none (77 % of grapes now have an origin, from 64 %).
+- **A few more grape facts read by hand**: Torrontés's light body
+  («körperarm»), what Neuburger and Müller-Thurgau go with (from the
+  pairing sections of their Italian and French articles), and Mavrud's
+  grapey aroma.
 - **Nine more grape levels read by hand** (acidity, tannin, body, alcohol)
   from their articles in Spanish, French, German and English; the check now
   also knows «rich in tannin», «richesse tannique», «noticeable acidity» and

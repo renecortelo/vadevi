@@ -17428,6 +17428,18 @@
         "quote": "Los vinos de müller-thurgau son ligeros debido a su baja acidez, pero cuentan con un sabor afrutado.",
         "value": "fruity",
         "sourceUrl": "https://es.wikipedia.org/wiki/M%C3%BCller-thurgau"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il accompagne également les poissons, les viandes blanches et surtout les fromages doux.",
+        "value": "fish",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/M%C3%BCller-thurgau"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il accompagne également les poissons, les viandes blanches et surtout les fromages doux.",
+        "value": "cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/M%C3%BCller-thurgau"
       }
     ],
     "id": "muller-thurgau",
@@ -17442,7 +17454,10 @@
       "pt": "Müller-Thurgau"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "cheese"
+    ],
     "prominence": 28,
     "regions": [
       {
@@ -26086,7 +26101,9 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "grape"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -26127,6 +26144,12 @@
         "quote": "Le Mavroud ou Mavrud (aussi appelé Kakcivala, Kacivela, Kausanskii, Karvouniaris, Marvud, Mavraki, Mavro, Mavrouli, Mavrostaphylo, Mavroudion, Mavrudi) est un vieux cépage de raisin noir originaire de Thrace (Bulgarie).",
         "value": "BG",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Mavrud"
+      },
+      {
+        "field": "aromas",
+        "quote": "Conté aromes de raïm, combinades amb fruitades.",
+        "value": "grape",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Mavrud"
       }
     ],
     "id": "mavrud",
@@ -29554,7 +29577,7 @@
       "apricot",
       "grape"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -29678,6 +29701,12 @@
         "quote": "che produce un vino secco",
         "value": "dry",
         "sourceUrl": "https://it.wikipedia.org/wiki/Torront%C3%A9s"
+      },
+      {
+        "field": "body",
+        "quote": "Ihre etwas körperarmen Weine sind für ihren einem Muskateller ähnlichen Geschmack bekannt.",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Torront%C3%A9s"
       }
     ],
     "id": "torrontes",
@@ -46630,6 +46659,36 @@
         "quote": "Die Weine sind eher säureärmer und haben ein nussiges Aroma",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Neuburger"
+      },
+      {
+        "field": "pairings",
+        "quote": "Grazie alla sua struttura morbida, corpo medio e aromi delicati, il Neuburger si abbina bene a diversi piatti:\n\nAntipasti e piatti a base di verdure.\nCucina austriaca tradizionale, come la Wiener Schnitzel o il Tafelspitz leggero.\nPesce d'acqua dolce (trota, salmerino).\nCarni bianche (pollo, tacchino).\nFormaggi freschi o a media stagionatura.",
+        "value": "vegetables",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
+      },
+      {
+        "field": "pairings",
+        "quote": "Grazie alla sua struttura morbida, corpo medio e aromi delicati, il Neuburger si abbina bene a diversi piatti:\n\nAntipasti e piatti a base di verdure.\nCucina austriaca tradizionale, come la Wiener Schnitzel o il Tafelspitz leggero.\nPesce d'acqua dolce (trota, salmerino).\nCarni bianche (pollo, tacchino).\nFormaggi freschi o a media stagionatura.",
+        "value": "fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
+      },
+      {
+        "field": "pairings",
+        "quote": "Grazie alla sua struttura morbida, corpo medio e aromi delicati, il Neuburger si abbina bene a diversi piatti:\n\nAntipasti e piatti a base di verdure.\nCucina austriaca tradizionale, come la Wiener Schnitzel o il Tafelspitz leggero.\nPesce d'acqua dolce (trota, salmerino).\nCarni bianche (pollo, tacchino).\nFormaggi freschi o a media stagionatura.",
+        "value": "chicken",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
+      },
+      {
+        "field": "pairings",
+        "quote": "Grazie alla sua struttura morbida, corpo medio e aromi delicati, il Neuburger si abbina bene a diversi piatti:\n\nAntipasti e piatti a base di verdure.\nCucina austriaca tradizionale, come la Wiener Schnitzel o il Tafelspitz leggero.\nPesce d'acqua dolce (trota, salmerino).\nCarni bianche (pollo, tacchino).\nFormaggi freschi o a media stagionatura.",
+        "value": "turkey",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
+      },
+      {
+        "field": "pairings",
+        "quote": "Grazie alla sua struttura morbida, corpo medio e aromi delicati, il Neuburger si abbina bene a diversi piatti:\n\nAntipasti e piatti a base di verdure.\nCucina austriaca tradizionale, come la Wiener Schnitzel o il Tafelspitz leggero.\nPesce d'acqua dolce (trota, salmerino).\nCarni bianche (pollo, tacchino).\nFormaggi freschi o a media stagionatura.",
+        "value": "fresh cheese",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
       }
     ],
     "id": "neuburger",
@@ -46644,7 +46703,13 @@
       "pt": "Neuburger"
     },
     "origin": "AT",
-    "pairings": [],
+    "pairings": [
+      "vegetables",
+      "fish",
+      "chicken",
+      "turkey",
+      "fresh cheese"
+    ],
     "prominence": 8,
     "regions": [],
     "styles": [

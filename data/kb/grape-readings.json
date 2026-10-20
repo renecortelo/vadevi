@@ -980,6 +980,17 @@
         "lang": "fr",
         "quote": "Le Mavroud ou Mavrud (aussi appelé Kakcivala, Kacivela, Kausanskii, Karvouniaris, Marvud, Mavraki, Mavro, Mavrouli, Mavrostaphylo, Mavroudion, Mavrudi) est un vieux cépage de raisin noir originaire de Thrace (Bulgarie).",
         "value": "BG"
+      },
+      {
+        "field": "aromas",
+        "lang": "ca",
+        "quote": "Conté aromes de raïm, combinades amb fruitades.",
+        "value": [
+          "grape"
+        ],
+        "words": {
+          "grape": "raïm"
+        }
       }
     ],
     "melon-de-bourgogne": [
@@ -1122,6 +1133,19 @@
         "quote": "Los vinos de müller-thurgau son ligeros debido a su baja acidez, pero cuentan con un sabor afrutado.",
         "words": {
           "fruity": "afrutado"
+        }
+      },
+      {
+        "field": "pairings",
+        "lang": "fr",
+        "quote": "Il accompagne également les poissons, les viandes blanches et surtout les fromages doux.",
+        "value": [
+          "fish",
+          "cheese"
+        ],
+        "words": {
+          "fish": "poissons",
+          "cheese": "fromages"
         }
       }
     ],
@@ -1266,6 +1290,25 @@
         "lang": "de",
         "value": "low",
         "quote": "Die Weine sind eher säureärmer und haben ein nussiges Aroma"
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "quote": "Grazie alla sua struttura morbida, corpo medio e aromi delicati, il Neuburger si abbina bene a diversi piatti:\n\nAntipasti e piatti a base di verdure.\nCucina austriaca tradizionale, come la Wiener Schnitzel o il Tafelspitz leggero.\nPesce d'acqua dolce (trota, salmerino).\nCarni bianche (pollo, tacchino).\nFormaggi freschi o a media stagionatura.",
+        "value": [
+          "vegetables",
+          "fish",
+          "chicken",
+          "turkey",
+          "fresh cheese"
+        ],
+        "words": {
+          "vegetables": "verdure",
+          "fish": "Pesce",
+          "chicken": "pollo",
+          "turkey": "tacchino",
+          "fresh cheese": "Formaggi freschi"
+        }
       }
     ],
     "okuzgozu": [
@@ -1828,6 +1871,12 @@
         "lang": "it",
         "value": "dry",
         "quote": "che produce un vino secco"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "quote": "Ihre etwas körperarmen Weine sind für ihren einem Muskateller ähnlichen Geschmack bekannt.",
+        "value": "low"
       }
     ],
     "touriga-francesa": [
