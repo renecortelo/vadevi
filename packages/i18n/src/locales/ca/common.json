@@ -1862,6 +1862,14 @@
         "finish": "Final",
         "price": "Preu"
       }
+    },
+    "wheels": {
+      "intro": "Els aromes que has triat i els colors que has vist en els teus tastos: com més sovint, més espai a la roda.",
+      "noAromas": "Encara no has triat aromes en els teus tastos.",
+      "noColours": "Encara no has anotat colors en els teus tastos.",
+      "notes_one": "en {{count}} tast",
+      "notes_other": "en {{count}} tastos",
+      "title": "Les teves rodes"
     }
   },
   "regionTidy": {

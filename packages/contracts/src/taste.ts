@@ -131,6 +131,17 @@ export const TasteProfileSchema = z
     minimumNotes: z.literal(3),
     sampleSize: CountSchema,
     scored: CountSchema,
+    /**
+     * What the reader's own wheels hold: in how many tastings each cue was
+     * named (an aroma, among them) and each colour seen, by its code. Every
+     * one, not only those above the average — a wheel shows all one noticed.
+     */
+    wheels: z
+      .object({
+        descriptors: z.array(z.object({ code: z.string(), notes: CountSchema }).strict()),
+        hues: z.array(z.object({ code: z.string(), notes: CountSchema }).strict()),
+      })
+      .strict(),
   })
   .strict()
   .openapi("TasteProfile");

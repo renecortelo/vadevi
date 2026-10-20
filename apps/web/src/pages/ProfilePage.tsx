@@ -23,6 +23,7 @@ import {
   writeTasteBio,
 } from "../services/taste";
 import { DivergingBars, DonutByKind, ShiftBars } from "../taste/TasteCharts";
+import { TasteWheels } from "../taste/TasteWheels";
 
 type Named = Pick<TasteTrait, "key" | "kind" | "label">;
 
@@ -277,6 +278,10 @@ export function ProfilePage() {
                 </p>
               )}
             </section>
+          )}
+
+          {profile.wheels.descriptors.length + profile.wheels.hues.length === 0 ? null : (
+            <TasteWheels wheels={profile.wheels} />
           )}
 
           {profile.inCellar.length === 0 ? null : (

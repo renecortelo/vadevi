@@ -1862,6 +1862,14 @@
         "finish": "Afdronk",
         "price": "Prijs"
       }
+    },
+    "wheels": {
+      "intro": "De aroma’s die je koos en de kleuren die je zag in je proeverijen: hoe vaker, hoe meer ruimte op het wiel.",
+      "noAromas": "Je hebt nog geen aroma’s gekozen in je proeverijen.",
+      "noColours": "Je hebt nog geen kleuren genoteerd in je proeverijen.",
+      "notes_one": "in {{count}} proeverij",
+      "notes_other": "in {{count}} proeverijen",
+      "title": "Jouw wielen"
     }
   },
   "regionTidy": {

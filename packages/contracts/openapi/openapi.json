@@ -13918,6 +13918,56 @@
           "scored": {
             "type": "integer",
             "minimum": 0
+          },
+          "wheels": {
+            "type": "object",
+            "properties": {
+              "descriptors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "notes": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "notes"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "hues": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "notes": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "notes"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "descriptors",
+              "hues"
+            ],
+            "additionalProperties": false
           }
         },
         "required": [
@@ -13932,7 +13982,8 @@
           "inCellar",
           "minimumNotes",
           "sampleSize",
-          "scored"
+          "scored",
+          "wheels"
         ],
         "additionalProperties": false
       },

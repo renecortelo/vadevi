@@ -1862,6 +1862,14 @@
         "finish": "Final",
         "price": "Precio"
       }
+    },
+    "wheels": {
+      "intro": "Los aromas que has elegido y los colores que has visto en tus catas: cuanto más a menudo, más espacio en la rueda.",
+      "noAromas": "Aún no has elegido aromas en tus catas.",
+      "noColours": "Aún no has anotado colores en tus catas.",
+      "notes_one": "en {{count}} cata",
+      "notes_other": "en {{count}} catas",
+      "title": "Tus ruedas"
     }
   },
   "regionTidy": {

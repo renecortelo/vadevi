@@ -1862,6 +1862,14 @@
         "finish": "Finish",
         "price": "Price"
       }
+    },
+    "wheels": {
+      "intro": "The aromas you chose and the colours you saw in your tastings: the more often, the more room on the wheel.",
+      "noAromas": "You have not chosen aromas in your tastings yet.",
+      "noColours": "You have not noted colours in your tastings yet.",
+      "notes_one": "in {{count}} tasting",
+      "notes_other": "in {{count}} tastings",
+      "title": "Your wheels"
     }
   },
   "regionTidy": {

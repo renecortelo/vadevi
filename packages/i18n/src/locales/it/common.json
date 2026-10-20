@@ -1862,6 +1862,14 @@
         "finish": "Finale",
         "price": "Prezzo"
       }
+    },
+    "wheels": {
+      "intro": "Gli aromi che hai scelto e i colori che hai visto nelle tue degustazioni: più spesso, più spazio sulla ruota.",
+      "noAromas": "Non hai ancora scelto aromi nelle tue degustazioni.",
+      "noColours": "Non hai ancora annotato colori nelle tue degustazioni.",
+      "notes_one": "in {{count}} degustazione",
+      "notes_other": "in {{count}} degustazioni",
+      "title": "Le tue ruote"
     }
   },
   "regionTidy": {

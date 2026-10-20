@@ -5,7 +5,8 @@ import { completeOnboarding, signIn } from "./fixtures/sign-in";
 /**
  * The taste profile as pictures: what the reader scores above and below
  * their own average as bars either side of a line, and what they drink most
- * as a ring with its shares written beside it.
+ * as a ring with its shares written beside it; and the reader's own wheels,
+ * of the aromas they chose and the colours they saw.
  */
 test("the taste profile draws above and below the average, and a ring", async ({ page }) => {
   await signIn(page);
@@ -28,6 +29,7 @@ test("the taste profile draws above and below the average, and a ring", async ({
     ["Blanc Deux", "FR", "white", 78],
     ["Blanc Trois", "FR", "white", 77],
   ] as const;
+  const wineIds: string[] = [];
   for (const [index, [name, countryCode, wineType, score100]] of wines.entries()) {
     const wine = await page.request.post(`${api}/spaces/${spaceId}/wines`, {
       data: {
@@ -41,8 +43,12 @@ test("the taste profile draws above and below the average, and a ring", async ({
     });
     expect(wine.ok(), await wine.text()).toBeTruthy();
     const wineId = (await wine.json()).data.wine.id as string;
+    wineIds.push(wineId);
     const note = await page.request.post(`${api}/spaces/${spaceId}/tasting-notes`, {
       data: {
+        // The reds smell of raspberry and violet, the whites of lemon.
+        descriptorCodes:
+          wineType === "red" ? ["fruit.red.raspberry", "floral.violet"] : ["fruit.citrus.lemon"],
         mode: "quick",
         score100,
         state: "submitted",
@@ -50,6 +56,25 @@ test("the taste profile draws above and below the average, and a ring", async ({
         wineId,
       },
       headers: { ...headers, "Idempotency-Key": `N${index}`.padEnd(43, "n") },
+    });
+    expect(note.ok(), await note.text()).toBeTruthy();
+  }
+
+  // A colour is seen in a detailed tasting: one red, one white, so the ring's
+  // shares stay even.
+  for (const [index, [wineId, hue]] of [
+    [wineIds[0]!, "Ruby"],
+    [wineIds[3]!, "Gold"],
+  ].entries()) {
+    const note = await page.request.post(`${api}/spaces/${spaceId}/tasting-notes`, {
+      data: {
+        appearanceHue: hue,
+        mode: "deep",
+        state: "submitted",
+        tastedAt: new Date().toISOString(),
+        wineId,
+      },
+      headers: { ...headers, "Idempotency-Key": `D${index}`.padEnd(43, "d") },
     });
     expect(note.ok(), await note.text()).toBeTruthy();
   }
@@ -68,4 +93,19 @@ test("the taste profile draws above and below the average, and a ring", async ({
   await ring.scrollIntoViewIfNeeded();
   await expect(ring).toHaveAttribute("data-arrival", "shown");
   await expect(ring.locator(".taste-donut__legend li").first()).toContainText("50%");
+
+  // The reader's wheels: only what they noted — fruit and flowers among the
+  // aromas, a red's and a white's colour.
+  const wheels = page.getByRole("region", { name: "Your wheels" });
+  await wheels.scrollIntoViewIfNeeded();
+  await expect(
+    wheels.getByRole("list", { name: "Aromas: Aromas" }).getByRole("button"),
+  ).toHaveCount(2);
+  await wheels.getByRole("button", { name: "Fruit", exact: true }).click();
+  await expect(wheels.getByRole("button", { name: "Red fruit", exact: true })).toBeVisible();
+  await wheels.screenshot({ path: test.info().outputPath("taste-wheels.png") });
+  await wheels.getByRole("button", { name: "Colours", exact: true }).click();
+  await expect(
+    wheels.getByRole("list", { name: "Colours: Colours" }).getByRole("button"),
+  ).toHaveCount(2);
 });

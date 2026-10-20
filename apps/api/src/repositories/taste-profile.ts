@@ -9,6 +9,7 @@ import {
 } from "../services/taste-profile";
 import type { FirebasePrincipal } from "../types";
 import { readGrapes } from "./grape-names";
+import { hueLabels } from "./hue-labels";
 import { readPlaces } from "./region-names";
 
 function isCurrency(value: string): value is CurrencyCode {
@@ -50,7 +51,7 @@ export async function getTasteProfile(
       .prepare(
         `SELECT note.id, note.wine_id, note.space_id, note.score_100, note.sentiment,
           note.would_drink_again, note.acidity, note.tannin_level, note.body, note.sweetness,
-          note.finish_length, note.tasted_at, wine.display_name,
+          note.finish_length, note.tasted_at, note.appearance_hue, wine.display_name,
           coalesce(wine.wine_type_free, wine.wine_type) AS type, wine.country_code, wine.region
         FROM tasting_notes note
         JOIN wine_records wine ON wine.id = note.wine_id AND wine.deleted_at IS NULL
@@ -98,6 +99,7 @@ export async function getTasteProfile(
   };
   const notes = (noteRows?.results ?? []) as (WineRow & {
     acidity: number | null;
+    appearance_hue: string | null;
     body: number | null;
     finish_length: number | null;
     id: string;
@@ -183,6 +185,12 @@ export async function getTasteProfile(
     }
   }
 
+  // A colour is kept as its name in the taster's language: read back to its code.
+  const hueOf = new Map(
+    Object.entries(hueLabels).flatMap(([code, names]) =>
+      [code, ...names].map((name) => [name.toLowerCase(), code] as const),
+    ),
+  );
   const tasteNotes: TasteNote[] = notes.map((row) => ({
     acidity: row.acidity,
     body: row.body,
@@ -190,6 +198,7 @@ export async function getTasteProfile(
     descriptors: descriptorsOf.get(row.id) ?? [],
     finish: row.finish_length,
     grapes: grapesOf.get(row.wine_id) ?? [],
+    hue: hueOf.get(row.appearance_hue?.trim().toLowerCase() ?? "") ?? null,
     price: priceOf.get(row.wine_id) ?? null,
     region: places.get(row.wine_id)?.region ?? null,
     score: row.score_100,

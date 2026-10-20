@@ -1862,6 +1862,14 @@
         "finish": "Abgang",
         "price": "Preis"
       }
+    },
+    "wheels": {
+      "intro": "Die Aromen, die du gewählt, und die Farben, die du in deinen Verkostungen gesehen hast: je öfter, desto mehr Platz auf dem Rad.",
+      "noAromas": "Du hast in deinen Verkostungen noch keine Aromen gewählt.",
+      "noColours": "Du hast in deinen Verkostungen noch keine Farben notiert.",
+      "notes_one": "in {{count}} Verkostung",
+      "notes_other": "in {{count}} Verkostungen",
+      "title": "Deine Räder"
     }
   },
   "regionTidy": {

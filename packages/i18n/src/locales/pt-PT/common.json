@@ -1862,6 +1862,14 @@
         "finish": "Final",
         "price": "Preço"
       }
+    },
+    "wheels": {
+      "intro": "Os aromas que escolheu e as cores que viu nas suas provas: quanto mais vezes, mais espaço na roda.",
+      "noAromas": "Ainda não escolheu aromas nas suas provas.",
+      "noColours": "Ainda não anotou cores nas suas provas.",
+      "notes_one": "em {{count}} prova",
+      "notes_other": "em {{count}} provas",
+      "title": "As suas rodas"
     }
   },
   "regionTidy": {

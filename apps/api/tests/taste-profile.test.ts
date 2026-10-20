@@ -17,6 +17,7 @@ function note(overrides: Partial<TasteNote> & { wineId: string }): TasteNote {
     descriptors: [],
     finish: null,
     grapes: [],
+    hue: null,
     price: null,
     region: null,
     score: null,
@@ -217,5 +218,43 @@ describe("a reader's taste", () => {
     // A country by its name in the reader's language, never its code.
     expect(facts.some((fact) => fact.startsWith("España: 100% of their tastings"))).toBe(true);
     expect(numbers).toEqual(expect.arrayContaining([86.6, 4.3, 4, 100]));
+  });
+});
+
+describe("the reader's wheels", () => {
+  it("count each cue and each colour once per tasting, most first", () => {
+    const profile = buildTasteProfile(
+      [
+        note({
+          descriptors: [
+            { code: "fruit.red.raspberry", label: "fruit.red.raspberry" },
+            { code: "fruit.red.raspberry", label: "fruit.red.raspberry" },
+            { code: "floral.violet", label: "floral.violet" },
+          ],
+          hue: "ruby",
+          wineId: "a",
+        }),
+        note({
+          descriptors: [{ code: "fruit.red.raspberry", label: "fruit.red.raspberry" }],
+          hue: "ruby",
+          wineId: "b",
+        }),
+        note({ hue: "garnet", wineId: "c" }),
+        note({ wineId: "d" }),
+      ],
+      [],
+      [],
+      now,
+    );
+    expect(profile.wheels).toEqual({
+      descriptors: [
+        { code: "fruit.red.raspberry", notes: 2 },
+        { code: "floral.violet", notes: 1 },
+      ],
+      hues: [
+        { code: "ruby", notes: 2 },
+        { code: "garnet", notes: 1 },
+      ],
+    });
   });
 });

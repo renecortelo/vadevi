@@ -23,6 +23,11 @@ has the reasons.
 
 ### The library
 
+- **Your wheels, in the taste profile**: the aromas you chose and the colours
+  you saw in your own tastings, each part as large as the tastings that name
+  it, and nothing you did not note. The profile (`GET /api/v1/me/taste-profile`)
+  gains `wheels`: each cue's and each colour's count of tastings, the colour
+  read back to its code from the name it was written in.
 - **The wheels in the detailed tasting**: the colour is chosen on the colour
   wheel, with only the colours that kind of wine shows (a red's five, no
   white's), and names its colour family when none was chosen; a colour saved

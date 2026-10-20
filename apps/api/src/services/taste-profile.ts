@@ -24,6 +24,8 @@ export type TasteNote = Readonly<{
   descriptors: readonly { code: string; label: string }[];
   finish: number | null;
   grapes: readonly string[];
+  /** The colour seen, by its code, where the note's words name one. */
+  hue: string | null;
   /** The least this wine was bought for, when it was. */
   price: { currency: CurrencyCode; unitMinor: number } | null;
   region: string | null;
@@ -430,6 +432,24 @@ export function buildTasteProfile(
     scoreSpread: spread === null ? null : round(spread),
     scored: scores.length,
     tensions,
+    wheels: wheelsOf(notes),
+  };
+}
+
+/** In how many tastings each cue and each colour appears, most first. */
+function wheelsOf(notes: readonly TasteNote[]): TasteProfile["wheels"] {
+  const count = (codes: (note: TasteNote) => readonly string[]) => {
+    const counts = new Map<string, number>();
+    for (const note of notes) {
+      for (const code of new Set(codes(note))) counts.set(code, (counts.get(code) ?? 0) + 1);
+    }
+    return [...counts]
+      .map(([code, noted]) => ({ code, notes: noted }))
+      .sort((left, right) => right.notes - left.notes || left.code.localeCompare(right.code));
+  };
+  return {
+    descriptors: count((note) => note.descriptors.map((descriptor) => descriptor.code)),
+    hues: count((note) => (note.hue === null ? [] : [note.hue])),
   };
 }
 
