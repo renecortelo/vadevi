@@ -54,7 +54,9 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await page.getByRole("button", { name: "frambuesa", exact: true }).click();
   const another = page.locator(".wheel-choice .library-chips a").filter({ hasNotText: "Garnacha" });
   await another.first().click();
-  await page.getByRole("link", { name: "← Volver a Ruedas de aromas y colores" }).click();
+  await page
+    .getByRole("link", { name: "← Volver a Ruedas de aromas, colores y maridajes" })
+    .click();
   await page.getByRole("button", { name: "Uvas", exact: true }).click();
   await page.getByRole("button", { name: "Ruedas", exact: true }).click();
   await page.getByRole("link", { name: "← Volver a Garnacha" }).click();

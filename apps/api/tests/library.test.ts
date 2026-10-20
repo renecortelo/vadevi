@@ -1,4 +1,5 @@
 import {
+  LibraryPairingsResponseSchema,
   LibraryAromaCountsResponseSchema,
   LibraryGrapeResponseSchema,
   LibrarySearchResponseSchema,
@@ -205,6 +206,23 @@ describe("the wine library", () => {
     expect(card.suggestedPairings?.groups[0]?.style).toBe("medium_bodied_red");
     expect(card.suggestedPairings?.groups[0]?.families).toContain("red_meat");
     expect(card.suggestedPairings?.families).not.toContain("chocolate");
+
+    // The same, read the other way for the pairing wheel: each family of
+    // dishes with the grapes that go with it, a suggestion said as one.
+    const wheel = LibraryPairingsResponseSchema.parse(
+      await (
+        await SELF.fetch("https://vadevi.test/api/v1/library/pairings?locale=es", { headers })
+      ).json(),
+    ).data;
+    expect(wheel.length).toBeGreaterThan(30);
+    expect(wheel.find((entry) => entry.family === "red_meat")?.grapes).toContainEqual({
+      id: "tempranillo",
+      name: "Tempranillo",
+      said: false,
+    });
+    expect(wheel.find((entry) => entry.family === "chocolate")?.grapes).not.toContainEqual(
+      expect.objectContaining({ id: "tempranillo" }),
+    );
 
     // Named by no source: placed by colour and structure.
     const crisp = suggestedPairingsFor({

@@ -482,12 +482,12 @@
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, censo vitícola {{campaign}} (extracto)",
     "wheels": {
       "tab": "Ruedas",
-      "title": "Ruedas de aromas y colores",
-      "intro": "Encuentra un aroma por su familia y su grupo, o un color por el tipo de vino: toca una parte de la rueda o su nombre debajo.",
+      "title": "Ruedas de aromas, colores y maridajes",
+      "intro": "Encuentra un aroma por su familia y su grupo, un color por el tipo de vino, o qué va con un plato: toca una parte de la rueda o su nombre debajo.",
       "aromas": "Aromas",
       "colours": "Colores",
       "back": "Volver a {{name}}",
-      "pick": "Toca un aroma o un color para verlo aquí.",
+      "pick": "Toca un aroma, un color o un plato para verlo aquí.",
       "grapesWith_one": "{{count}} uva de la biblioteca lo tiene:",
       "grapesWith_other": "{{count}} uvas de la biblioteca lo tienen:",
       "noGrape": "Ninguna uva de la biblioteca lo tiene todavía.",
@@ -498,7 +498,19 @@
       "yourWinesInColour": "Tus vinos de color {{colour}}",
       "noWinesInColour": "Aún no has catado ningún vino de este color.",
       "byFamily": "Por familia",
-      "seeWheel": "Ver la rueda de aromas"
+      "seeWheel": "Ver la rueda de aromas",
+      "pairings": "Maridajes",
+      "pairingGroup": {
+        "meat": "Carnes",
+        "fish": "Pescado y marisco",
+        "dishes": "Arroz, pasta y verduras",
+        "spicy": "Picante, asiático y tapas",
+        "cheese": "Quesos",
+        "desserts": "Postres"
+      },
+      "pairingSaid": "Según sus fuentes, va con esto:",
+      "pairingSuggested": "Sugeridas por las reglas de maridaje, por su estilo:",
+      "noPairing": "Ninguna uva de la biblioteca va con esto todavía."
     },
     "glanceSourceFederalRegister": "Federal Register de EE. UU., la norma que creó la AVA ({{campaign}})",
     "glanceSourceKsh": "Forrás: KSH (estadística de Hungría), viñedos {{campaign}} · CC BY 4.0"

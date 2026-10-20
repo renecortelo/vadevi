@@ -482,12 +482,12 @@
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, recensement viticole {{campaign}} (extrait)",
     "wheels": {
       "tab": "Roues",
-      "title": "Roues des arômes et des couleurs",
-      "intro": "Trouve un arôme par sa famille et son groupe, ou une couleur par le type de vin : touche une part de la roue ou son nom en dessous.",
+      "title": "Roues des arômes, couleurs et accords",
+      "intro": "Trouvez un arôme par sa famille et son groupe, une couleur par le type de vin, ou ce qui va avec un plat : touchez une partie de la roue ou son nom dessous.",
       "aromas": "Arômes",
       "colours": "Couleurs",
       "back": "Revenir à {{name}}",
-      "pick": "Touche un arôme ou une couleur pour le voir ici.",
+      "pick": "Touchez un arôme, une couleur ou un plat pour le voir ici.",
       "grapesWith_one": "{{count}} cépage de la bibliothèque le porte :",
       "grapesWith_other": "{{count}} cépages de la bibliothèque le portent :",
       "noGrape": "Aucun cépage de la bibliothèque ne le porte encore.",
@@ -498,7 +498,19 @@
       "yourWinesInColour": "Tes vins couleur {{colour}}",
       "noWinesInColour": "Tu n'as encore dégusté aucun vin de cette couleur.",
       "byFamily": "Par famille",
-      "seeWheel": "Voir la roue des arômes"
+      "seeWheel": "Voir la roue des arômes",
+      "pairings": "Accords",
+      "pairingGroup": {
+        "meat": "Viandes",
+        "fish": "Poissons et fruits de mer",
+        "dishes": "Riz, pâtes et légumes",
+        "spicy": "Épicé, asiatique et tapas",
+        "cheese": "Fromages",
+        "desserts": "Desserts"
+      },
+      "pairingSaid": "Selon ses sources, il va avec :",
+      "pairingSuggested": "Suggérés par les règles d’accord, d’après son style :",
+      "noPairing": "Aucun cépage de la bibliothèque ne va encore avec."
     },
     "glanceSourceFederalRegister": "Federal Register des États-Unis, la règle créant l’AVA ({{campaign}})",
     "glanceSourceKsh": "Forrás : KSH (statistique hongroise), vignobles {{campaign}} · CC BY 4.0"

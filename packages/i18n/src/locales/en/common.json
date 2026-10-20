@@ -482,12 +482,12 @@
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, vineyard survey {{campaign}} (extract)",
     "wheels": {
       "tab": "Wheels",
-      "title": "Aroma and colour wheels",
-      "intro": "Find an aroma by its family and group, or a colour by the kind of wine: touch a part of the wheel, or its name below.",
+      "title": "Aromas, colours and pairings",
+      "intro": "Find an aroma by its family and group, a colour by the kind of wine, or what goes with a dish: touch a part of the wheel or its name beneath.",
       "aromas": "Aromas",
       "colours": "Colours",
       "back": "Back to {{name}}",
-      "pick": "Touch an aroma or a colour to see it here.",
+      "pick": "Touch an aroma, a colour or a dish to see it here.",
       "grapesWith_one": "{{count}} grape in the library carries it:",
       "grapesWith_other": "{{count}} grapes in the library carry it:",
       "noGrape": "No grape in the library carries it yet.",
@@ -498,7 +498,19 @@
       "yourWinesInColour": "Your {{colour}} wines",
       "noWinesInColour": "You have not tasted a wine of this colour yet.",
       "byFamily": "By family",
-      "seeWheel": "See the aroma wheel"
+      "seeWheel": "See the aroma wheel",
+      "pairings": "Pairings",
+      "pairingGroup": {
+        "meat": "Meat",
+        "fish": "Fish and seafood",
+        "dishes": "Rice, pasta and vegetables",
+        "spicy": "Spicy, Asian and tapas",
+        "cheese": "Cheese",
+        "desserts": "Desserts"
+      },
+      "pairingSaid": "What its sources say it goes with:",
+      "pairingSuggested": "Suggested by the pairing rules, from its style:",
+      "noPairing": "No grape of the library goes with it yet."
     },
     "glanceSourceFederalRegister": "US Federal Register, the rule establishing the AVA ({{campaign}})",
     "glanceSourceKsh": "Forrás: KSH (Hungarian statistics), vineyards {{campaign}} · CC BY 4.0"

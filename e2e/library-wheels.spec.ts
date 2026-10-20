@@ -69,6 +69,21 @@ test("the aroma and colour wheels narrow to one aroma or one colour", async ({ p
   await expect(page.getByText("Aún no has catado ningún vino de este color.")).toBeVisible();
   await page.screenshot({ fullPage: true, path: test.info().outputPath("wheel-colours.png") });
 
+  // The dishes: by meal, then the grapes that go with one — what their
+  // sources say apart from what the pairing rules suggest.
+  await page.getByRole("button", { name: "Maridajes", exact: true }).click();
+  await expect(level("Maridajes: Maridajes").getByRole("button")).toHaveCount(6, {
+    timeout: 15_000,
+  });
+  await page.getByRole("button", { name: "Carnes", exact: true }).click();
+  await page.getByRole("button", { name: "Carne roja a la brasa", exact: true }).click();
+  await expect(page.getByText("Según sus fuentes, va con esto:")).toBeVisible();
+  await expect(
+    page.getByText("Sugeridas por las reglas de maridaje, por su estilo:"),
+  ).toBeVisible();
+  await expect(page.locator(".wheel-choice .library-chips a").first()).toBeVisible();
+  await page.screenshot({ fullPage: true, path: test.info().outputPath("wheel-pairings.png") });
+
   // The wheels are a tab of the library's page, like the grapes: the page
   // stays, and its tabs switch between them.
   await expect(page.getByRole("heading", { level: 1, name: "Biblioteca del vino" })).toBeVisible();

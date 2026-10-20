@@ -142,6 +142,31 @@ export const LibraryAromaCountsResponseSchema = z
   })
   .strict();
 
+/**
+ * What the pairing wheel draws: for each family of dishes the rules know,
+ * the grapes that go with it — first those whose own sources say so, then
+ * those the pairing rules suggest from the grape's style (`said: false`).
+ */
+export const LibraryPairingsQuerySchema = z
+  .object({ locale: SupportedLocaleSchema.default("en") })
+  .strict();
+
+export const LibraryPairingsResponseSchema = z
+  .object({
+    data: z.array(
+      z
+        .object({
+          family: z.string(),
+          grapes: z.array(
+            z.object({ id: z.string(), name: z.string(), said: z.boolean() }).strict(),
+          ),
+        })
+        .strict(),
+    ),
+  })
+  .strict()
+  .openapi("LibraryPairings");
+
 export const LibrarySearchResponseSchema = z
   .object({
     data: z.array(
@@ -468,6 +493,7 @@ export type LibraryGrape = z.infer<typeof LibraryGrapeSchema>;
 export type LibraryGrapeResponse = z.infer<typeof LibraryGrapeResponseSchema>;
 export type LibrarySearchResponse = z.infer<typeof LibrarySearchResponseSchema>;
 export type LibraryAromaCountsResponse = z.infer<typeof LibraryAromaCountsResponseSchema>;
+export type LibraryPairingsResponse = z.infer<typeof LibraryPairingsResponseSchema>;
 export type LibraryAtlasCoverageResponse = z.infer<typeof LibraryAtlasCoverageResponseSchema>;
 
 /** Registered names by id, as the register writes them. */

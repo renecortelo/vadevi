@@ -482,12 +482,12 @@
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, wijngaardtelling {{campaign}} (uittreksel)",
     "wheels": {
       "tab": "Wielen",
-      "title": "Aroma- en kleurwielen",
-      "intro": "Vind een aroma via familie en groep, of een kleur via het soort wijn: tik op een deel van het wiel of op de naam eronder.",
+      "title": "Wielen van aroma’s, kleuren en combinaties",
+      "intro": "Vind een aroma via familie en groep, een kleur via het soort wijn, of wat bij een gerecht past: tik op een deel van het wiel of de naam eronder.",
       "aromas": "Aroma's",
       "colours": "Kleuren",
       "back": "Terug naar {{name}}",
-      "pick": "Tik op een aroma of een kleur om het hier te zien.",
+      "pick": "Tik op een aroma, een kleur of een gerecht om het hier te zien.",
       "grapesWith_one": "{{count}} druif in de bibliotheek heeft het:",
       "grapesWith_other": "{{count}} druiven in de bibliotheek hebben het:",
       "noGrape": "Nog geen druif in de bibliotheek heeft het.",
@@ -498,7 +498,19 @@
       "yourWinesInColour": "Je wijnen in {{colour}}",
       "noWinesInColour": "Je hebt nog geen wijn in deze kleur geproefd.",
       "byFamily": "Per familie",
-      "seeWheel": "Bekijk het aromawiel"
+      "seeWheel": "Bekijk het aromawiel",
+      "pairings": "Combinaties",
+      "pairingGroup": {
+        "meat": "Vlees",
+        "fish": "Vis en zeevruchten",
+        "dishes": "Rijst, pasta en groenten",
+        "spicy": "Pittig, Aziatisch en tapas",
+        "cheese": "Kaas",
+        "desserts": "Desserts"
+      },
+      "pairingSaid": "Volgens zijn bronnen past het bij:",
+      "pairingSuggested": "Voorgesteld door de combinatieregels, op basis van zijn stijl:",
+      "noPairing": "Nog geen druif van de bibliotheek past erbij."
     },
     "glanceSourceFederalRegister": "Amerikaanse Federal Register, de regel die de AVA instelde ({{campaign}})",
     "glanceSourceKsh": "Forrás: KSH (Hongaarse statistiek), wijngaarden {{campaign}} · CC BY 4.0"

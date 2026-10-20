@@ -70,6 +70,78 @@ export function aromaWheel(
 }
 
 /**
+ * The dishes, by the six groups a meal is chosen by, each family of the
+ * pairing rules (`library.dish.*`) in one; drawn in a quiet colour each.
+ */
+export const pairingGroups = [
+  {
+    colour: "#9b4a45",
+    families: [
+      "red_meat",
+      "lamb",
+      "game",
+      "stews",
+      "barbecue",
+      "poultry",
+      "pork",
+      "cured_meats",
+      "foie_gras",
+    ],
+    group: "meat",
+  },
+  {
+    colour: "#5f8aa0",
+    families: ["white_fish", "oily_fish", "shellfish", "rich_shellfish", "oysters", "sushi"],
+    group: "fish",
+  },
+  {
+    colour: "#b9974f",
+    families: [
+      "rice",
+      "pasta_tomato",
+      "pizza",
+      "legumes",
+      "eggs",
+      "mushrooms",
+      "vegetables",
+      "cream_sauces",
+    ],
+    group: "dishes",
+  },
+  { colour: "#c47248", families: ["spicy", "asian", "fried_tapas", "aperitif"], group: "spicy" },
+  {
+    colour: "#cbb26a",
+    families: ["fresh_cheese", "soft_cheese", "aged_cheese", "blue_cheese"],
+    group: "cheese",
+  },
+  { colour: "#8c6283", families: ["fruit_desserts", "pastries", "chocolate"], group: "desserts" },
+] as const;
+
+/** A dish family's node id on the wheel. */
+export const dishNodeId = (family: string) => `dish:${family}`;
+
+/** The pairing wheel: each family as large as the grapes that go with it. */
+export function pairingWheel(t: TFunction, grapeCount: (family: string) => number): WheelNode {
+  return {
+    children: pairingGroups.map(({ colour, families, group }) => ({
+      children: families.map((family, index) => ({
+        color: shade(colour, index),
+        id: dishNodeId(family),
+        label: t(`library.dish.${family}`),
+        muted: grapeCount(family) === 0,
+        weight: Math.max(1, grapeCount(family)),
+      })),
+      color: colour,
+      id: `meal:${group}`,
+      label: t(`library.wheels.pairingGroup.${group}`),
+    })),
+    color: "var(--color-surface-raised)",
+    id: "pairings",
+    label: t("library.wheels.pairings"),
+  };
+}
+
+/**
  * The colours of wine, by the kind that shows them, each drawn in its own
  * tint: the hues a tasting's appearance notes (`tasting.hueOption`).
  */

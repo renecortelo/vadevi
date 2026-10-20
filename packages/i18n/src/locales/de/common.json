@@ -482,12 +482,12 @@
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, Weingartengrunderhebung {{campaign}} (Auszug)",
     "wheels": {
       "tab": "Räder",
-      "title": "Aroma- und Farbräder",
-      "intro": "Finde ein Aroma über Familie und Gruppe oder eine Farbe über die Weinart: tippe auf einen Teil des Rades oder auf seinen Namen darunter.",
+      "title": "Räder der Aromen, Farben und Speisen",
+      "intro": "Finde ein Aroma nach Familie und Gruppe, eine Farbe nach Weinart oder was zu einem Gericht passt: tippe auf einen Teil des Rads oder seinen Namen darunter.",
       "aromas": "Aromen",
       "colours": "Farben",
       "back": "Zurück zu {{name}}",
-      "pick": "Tippe auf ein Aroma oder eine Farbe, um es hier zu sehen.",
+      "pick": "Tippe auf ein Aroma, eine Farbe oder ein Gericht, um es hier zu sehen.",
       "grapesWith_one": "{{count}} Rebsorte der Bibliothek hat es:",
       "grapesWith_other": "{{count}} Rebsorten der Bibliothek haben es:",
       "noGrape": "Noch keine Rebsorte der Bibliothek hat es.",
@@ -498,7 +498,19 @@
       "yourWinesInColour": "Deine Weine in {{colour}}",
       "noWinesInColour": "Du hast noch keinen Wein in dieser Farbe verkostet.",
       "byFamily": "Nach Familie",
-      "seeWheel": "Zum Aromarad"
+      "seeWheel": "Zum Aromarad",
+      "pairings": "Speisen",
+      "pairingGroup": {
+        "meat": "Fleisch",
+        "fish": "Fisch und Meeresfrüchte",
+        "dishes": "Reis, Pasta und Gemüse",
+        "spicy": "Scharf, asiatisch und Tapas",
+        "cheese": "Käse",
+        "desserts": "Desserts"
+      },
+      "pairingSaid": "Laut seinen Quellen passt er dazu:",
+      "pairingSuggested": "Von den Kombinationsregeln vorgeschlagen, nach seinem Stil:",
+      "noPairing": "Noch keine Rebsorte der Bibliothek passt dazu."
     },
     "glanceSourceFederalRegister": "US Federal Register, die Regel zur Einrichtung der AVA ({{campaign}})",
     "glanceSourceKsh": "Forrás: KSH (ungarisches Statistikamt), Rebflächen {{campaign}} · CC BY 4.0"

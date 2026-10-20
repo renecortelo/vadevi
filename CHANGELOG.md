@@ -17,6 +17,12 @@ has the reasons.
 
 ### The library
 
+- **The pairing wheel**, third of the library's wheels: the dishes by meal
+  (meat; fish and seafood; rice, pasta and vegetables; spicy, Asian and
+  tapas; cheese; desserts), each family of the pairing rules as large as the
+  grapes that go with it; a dish chosen shows its grapes — first those whose
+  own sources say so, then those the pairing rules suggest from the grape's
+  style, said as a suggestion (`GET /api/v1/library/pairings`).
 - **Hungary's 22 wine regions with their vineyard area** in 2020, from the
   Central Statistical Office (KSH, «Szőlőültetvények, 2020», CC BY 4.0,
   credited «Forrás: KSH»), each on the protected name that bears its wine

@@ -6,7 +6,8 @@ import type {
   RegionLevel,
 } from "@vadevi/contracts";
 
-import { suggestedPairingsFor } from "../adapters/grape-pairing";
+import { sourceFamilies, suggestedPairingsFor } from "../adapters/grape-pairing";
+import { dishFamilyOrder } from "../adapters/pairing-knowledge";
 import { nameForms } from "./region-names";
 import { normalizeWineText } from "./wine-memory";
 
@@ -453,6 +454,81 @@ export async function libraryAtlasCoverage(database: D1Database, locale: string)
  * Every aroma term the library knows, named in the reader's language (English
  * where it has no name in it), with how many grapes carry it.
  */
+/**
+ * Every family of dishes with the grapes that go with it: those whose own
+ * sources say so first, then those the pairing rules suggest from the
+ * grape's style — the grape card's «Goes well with», read the other way.
+ */
+export async function libraryPairings(
+  database: D1Database,
+  locale: string,
+): Promise<{ family: string; grapes: { id: string; name: string; said: boolean }[] }[]> {
+  const [grapeRows, attributeRows] = await database.batch([
+    database
+      .prepare(
+        `SELECT grape.id, grape.color, grape.acidity, grape.tannin, grape.body,
+          coalesce(
+            (SELECT name FROM kb_names WHERE entity_type = 'grape' AND entity_id = grape.id
+              AND kind = 'primary' AND locale = ?),
+            (SELECT name FROM kb_names WHERE entity_type = 'grape' AND entity_id = grape.id
+              AND kind = 'primary' AND locale = 'en'),
+            grape.id
+          ) AS name
+        FROM kb_grapes grape`,
+      )
+      .bind(locale.split("-")[0]),
+    database.prepare(
+      `SELECT grape_id, kind, value FROM kb_grape_attributes WHERE kind IN ('pairing', 'style')`,
+    ),
+  ]);
+  const grapes = (grapeRows?.results ?? []) as (Pick<
+    GrapeRow,
+    "acidity" | "body" | "color" | "id" | "tannin"
+  > & { name: string })[];
+  const attributes = (attributeRows?.results ?? []) as {
+    grape_id: string;
+    kind: string;
+    value: string;
+  }[];
+  const of = (id: string, kind: string) =>
+    attributes.filter((row) => row.grape_id === id && row.kind === kind).map((row) => row.value);
+  const said = new Map<string, Set<string>>();
+  const suggested = new Map<string, Set<string>>();
+  for (const grape of grapes) {
+    const sourcePairings = of(grape.id, "pairing");
+    for (const food of sourcePairings) {
+      const family = sourceFamilies[food];
+      if (family !== undefined) said.set(family, (said.get(family) ?? new Set()).add(grape.id));
+    }
+    const suggestion = suggestedPairingsFor({
+      acidity: grape.acidity,
+      body: grape.body,
+      color: grape.color,
+      id: grape.id,
+      sourcePairings,
+      styles: of(grape.id, "style"),
+      tannin: grape.tannin,
+    });
+    for (const family of suggestion?.families ?? []) {
+      suggested.set(family, (suggested.get(family) ?? new Set()).add(grape.id));
+    }
+  }
+  const nameOf = new Map(grapes.map((grape) => [grape.id, grape.name]));
+  const byName = (left: string, right: string) =>
+    nameOf.get(left)!.localeCompare(nameOf.get(right)!, locale);
+  return dishFamilyOrder.map((family) => {
+    const own = [...(said.get(family) ?? [])].sort(byName);
+    const rules = [...(suggested.get(family) ?? [])].filter((id) => !own.includes(id)).sort(byName);
+    return {
+      family,
+      grapes: [
+        ...own.map((id) => ({ id, name: nameOf.get(id)!, said: true })),
+        ...rules.map((id) => ({ id, name: nameOf.get(id)!, said: false })),
+      ],
+    };
+  });
+}
+
 export async function libraryAromaCounts(
   database: D1Database,
   locale: string,

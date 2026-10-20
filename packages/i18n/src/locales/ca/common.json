@@ -482,12 +482,12 @@
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, cens vitícola {{campaign}} (extracte)",
     "wheels": {
       "tab": "Rodes",
-      "title": "Rodes d'aromes i colors",
-      "intro": "Troba una aroma per la seva família i el seu grup, o un color pel tipus de vi: toca una part de la roda o el seu nom a sota.",
+      "title": "Rodes d’aromes, colors i maridatges",
+      "intro": "Troba un aroma per la seva família i el seu grup, un color pel tipus de vi, o què va amb un plat: toca una part de la roda o el seu nom a sota.",
       "aromas": "Aromes",
       "colours": "Colors",
       "back": "Torna a {{name}}",
-      "pick": "Toca una aroma o un color per veure-ho aquí.",
+      "pick": "Toca un aroma, un color o un plat per veure’l aquí.",
       "grapesWith_one": "{{count}} raïm de la biblioteca la té:",
       "grapesWith_other": "{{count}} raïms de la biblioteca la tenen:",
       "noGrape": "Encara cap raïm de la biblioteca no la té.",
@@ -498,7 +498,19 @@
       "yourWinesInColour": "Els teus vins de color {{colour}}",
       "noWinesInColour": "Encara no has tastat cap vi d'aquest color.",
       "byFamily": "Per família",
-      "seeWheel": "Veure la roda d’aromes"
+      "seeWheel": "Veure la roda d’aromes",
+      "pairings": "Maridatges",
+      "pairingGroup": {
+        "meat": "Carns",
+        "fish": "Peix i marisc",
+        "dishes": "Arròs, pasta i verdures",
+        "spicy": "Picant, asiàtic i tapes",
+        "cheese": "Formatges",
+        "desserts": "Postres"
+      },
+      "pairingSaid": "Segons les seves fonts, hi va bé:",
+      "pairingSuggested": "Suggerits per les regles de maridatge, pel seu estil:",
+      "noPairing": "Cap raïm de la biblioteca no hi va encara."
     },
     "glanceSourceFederalRegister": "Federal Register dels EUA, la norma que va crear l’AVA ({{campaign}})",
     "glanceSourceKsh": "Forrás: KSH (estadística d’Hongria), vinyes {{campaign}} · CC BY 4.0"

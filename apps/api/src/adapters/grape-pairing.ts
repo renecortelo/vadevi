@@ -160,7 +160,7 @@ const levelNumber = { high: 4.5, low: 2, medium: 3 } as const;
  * The library's words for what a source says a grape goes with, as the
  * families they belong to — so a suggestion never repeats the source.
  */
-const sourceFamilies: Readonly<Record<string, DishFamily>> = {
+export const sourceFamilies: Readonly<Record<string, DishFamily>> = {
   "buffalo mozzarella": "fresh_cheese",
   "chinese cuisine": "asian",
   feta: "fresh_cheese",

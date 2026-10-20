@@ -4,6 +4,8 @@ import {
   LibraryAromaCountsQuerySchema,
   LibraryAromaCountsResponseSchema,
   LibraryAtlasCoverageQuerySchema,
+  LibraryPairingsQuerySchema,
+  LibraryPairingsResponseSchema,
   LibraryAtlasCoverageResponseSchema,
   LibraryGrapePathSchema,
   LibraryGrapeQuerySchema,
@@ -28,6 +30,7 @@ import {
   getLibraryTopic,
   libraryAromaCounts,
   libraryAtlasCoverage,
+  libraryPairings,
   listLibraryTopics,
   searchLibraryGrapes,
   searchLibraryRegions,
@@ -90,6 +93,27 @@ const aromaCountsRoute = createRoute({
     200: {
       content: { "application/json": { schema: LibraryAromaCountsResponseSchema } },
       description: "Each aroma term with the number of grapes whose sources name it.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+  },
+});
+
+const pairingsRoute = createRoute({
+  method: "get",
+  path: "/api/v1/library/pairings",
+  operationId: "getLibraryPairings",
+  tags: ["Library"],
+  summary: "Each family of dishes, with the grapes that go with it",
+  security: [{ FirebaseBearer: [] }],
+  request: { query: LibraryPairingsQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: LibraryPairingsResponseSchema } },
+      description:
+        "Each dish family with its grapes: those whose sources say so, then the rules' suggestions.",
     },
     401: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
@@ -322,6 +346,11 @@ export function registerLibraryRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const { aroma, locale, query } = context.req.valid("query");
     const data = await searchLibraryGrapes(context.env.DB!, query, locale, aroma);
     return context.json(LibrarySearchResponseSchema.parse({ data }), 200);
+  });
+
+  app.openapi(pairingsRoute, async (context) => {
+    const data = await libraryPairings(context.env.DB!, context.req.valid("query").locale);
+    return context.json(LibraryPairingsResponseSchema.parse({ data }), 200);
   });
 
   app.openapi(aromaCountsRoute, async (context) => {

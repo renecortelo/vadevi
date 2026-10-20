@@ -1,6 +1,8 @@
 import {
   type LibraryAromaCountsResponse,
   LibraryAromaCountsResponseSchema,
+  type LibraryPairingsResponse,
+  LibraryPairingsResponseSchema,
   type LibraryRegionSearchResponse,
   type LibraryAtlasCoverageResponse,
   LibraryAtlasCoverageResponseSchema,
@@ -116,6 +118,21 @@ export async function getLibraryAromaCounts(
   );
   if (!response.ok) throw await apiError(response);
   return LibraryAromaCountsResponseSchema.parse(await response.json()).data;
+}
+
+/** Each family of dishes with the grapes that go with it: the pairing wheel. */
+export async function getLibraryPairings(
+  tokenSource: TokenSource,
+  locale: SupportedLocale,
+  signal?: AbortSignal,
+): Promise<LibraryPairingsResponse["data"]> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/library/pairings?locale=${encodeURIComponent(locale)}`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return LibraryPairingsResponseSchema.parse(await response.json()).data;
 }
 
 /** The grapes whose sources name an aroma. */

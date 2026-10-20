@@ -12735,6 +12735,54 @@
         ],
         "additionalProperties": false
       },
+      "LibraryPairings": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "family": {
+                  "type": "string"
+                },
+                "grapes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "said": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "said"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "family",
+                "grapes"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
       "WineStatsResponse": {
         "type": "object",
         "properties": {
@@ -21546,6 +21594,63 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/LibrarySearchResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/pairings": {
+      "get": {
+        "operationId": "getLibraryPairings",
+        "tags": [
+          "Library"
+        ],
+        "summary": "Each family of dishes, with the grapes that go with it",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "es",
+                "ca",
+                "fr",
+                "en",
+                "nl",
+                "pt-PT",
+                "it",
+                "de"
+              ],
+              "default": "en"
+            },
+            "required": false,
+            "name": "locale",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Each dish family with its grapes: those whose sources say so, then the rules' suggestions.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryPairings"
                 }
               }
             }

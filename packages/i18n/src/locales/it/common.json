@@ -482,12 +482,12 @@
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, censimento viticolo {{campaign}} (estratto)",
     "wheels": {
       "tab": "Ruote",
-      "title": "Ruote degli aromi e dei colori",
-      "intro": "Trova un aroma per famiglia e gruppo, o un colore per tipo di vino: tocca una parte della ruota o il suo nome qui sotto.",
+      "title": "Ruote di aromi, colori e abbinamenti",
+      "intro": "Trova un aroma per famiglia e gruppo, un colore per tipo di vino, o cosa si abbina a un piatto: tocca una parte della ruota o il suo nome sotto.",
       "aromas": "Aromi",
       "colours": "Colori",
       "back": "Torna a {{name}}",
-      "pick": "Tocca un aroma o un colore per vederlo qui.",
+      "pick": "Tocca un aroma, un colore o un piatto per vederlo qui.",
       "grapesWith_one": "{{count}} vitigno della biblioteca lo ha:",
       "grapesWith_other": "{{count}} vitigni della biblioteca lo hanno:",
       "noGrape": "Ancora nessun vitigno della biblioteca lo ha.",
@@ -498,7 +498,19 @@
       "yourWinesInColour": "I tuoi vini color {{colour}}",
       "noWinesInColour": "Non hai ancora degustato un vino di questo colore.",
       "byFamily": "Per famiglia",
-      "seeWheel": "Vedi la ruota degli aromi"
+      "seeWheel": "Vedi la ruota degli aromi",
+      "pairings": "Abbinamenti",
+      "pairingGroup": {
+        "meat": "Carni",
+        "fish": "Pesce e frutti di mare",
+        "dishes": "Riso, pasta e verdure",
+        "spicy": "Piccante, asiatico e tapas",
+        "cheese": "Formaggi",
+        "desserts": "Dolci"
+      },
+      "pairingSaid": "Secondo le sue fonti, si abbina a:",
+      "pairingSuggested": "Suggeriti dalle regole di abbinamento, dal suo stile:",
+      "noPairing": "Nessun vitigno della biblioteca si abbina ancora."
     },
     "glanceSourceFederalRegister": "Federal Register degli USA, la norma che ha istituito l’AVA ({{campaign}})",
     "glanceSourceKsh": "Forrás: KSH (statistica ungherese), vigneti {{campaign}} · CC BY 4.0"
