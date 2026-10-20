@@ -8,7 +8,9 @@ import { wikimedia } from "./wikimedia";
  * from — Spanish, French, Italian, German, Portuguese, Catalan, and the
  * languages of the grapes' own countries and of the Soviet ampelography
  * many of them were described in (Russian, Ukrainian, Bulgarian, Hungarian,
- * Croatian, Romanian, Czech, Slovenian, Greek, Polish, Georgian) — into
+ * Croatian, Romanian, Czech, Slovenian, Greek, Polish, Georgian), Dutch, and
+ * the other languages with many grape articles (Swedish, Japanese, Turkish,
+ * Finnish, Norwegian, Danish, Chinese, Galician, Basque) — into
  * `.kb-cache/grapes-extra/<qid>.<lang>.json`, beside its English one. An
  * article already there is kept. Its titles come from the grape's own cache
  * (`.kb-cache/grapes/<qid>.json`, from Wikidata's sitelinks), or for the
@@ -39,6 +41,16 @@ const languages = [
   "el",
   "pl",
   "ka",
+  "nl",
+  "sv",
+  "ja",
+  "tr",
+  "fi",
+  "no",
+  "da",
+  "zh",
+  "gl",
+  "eu",
 ];
 const sitelinksPath = resolve(cache, "grapes-sitelinks", "sitelinks.json");
 const sitelinks = (

@@ -93,6 +93,12 @@
           "white meat": "білого м'яса",
           "fish": "риби"
         }
+      },
+      {
+        "field": "origin",
+        "lang": "nl",
+        "quote": "Albana is een oude witte druivensoort afkomstig uit Emilia-Romagna in Italië.",
+        "value": "IT"
       }
     ],
     "albarino": [
@@ -128,6 +134,18 @@
         "lang": "en",
         "value": "sweet",
         "quote": "Aleatico is often used to produce dessert wines."
+      },
+      {
+        "field": "acidity",
+        "lang": "nl",
+        "value": "high",
+        "quote": "De Aleatico heeft een relatief hoog alcoholgehalte dat voor een mooi evenwicht zorgt met de hoge zuurgraad."
+      },
+      {
+        "field": "origin",
+        "lang": "nl",
+        "quote": "De Aleatico is een van oorsprong blauwe Italiaanse druivensoort die meestal gebruikt wordt om zoete rode wijn te maken.",
+        "value": "IT"
       }
     ],
     "alexandrouli": [
@@ -662,6 +680,20 @@
         }
       }
     ],
+    "castelao": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "medium",
+        "quote": "‘Castelão’ erbringt sehr kräftige und tanninbetonte Rotweine mit mittlerem Alkoholgehalt"
+      },
+      {
+        "field": "acidity",
+        "lang": "de",
+        "value": "high",
+        "quote": "die jung genießbar, aber auch lagerfähig sind, da sie über eine kräftige Säure verfügen."
+      }
+    ],
     "chardonnay": [
       {
         "field": "alcohol",
@@ -792,6 +824,12 @@
         "words": {
           "apple": "pomme"
         }
+      },
+      {
+        "field": "origin",
+        "lang": "nl",
+        "quote": "De Clairette is een van oorsprong Franse witte druivensoort die veelal in Zuid-Frankrijk wordt verbouwd.",
+        "value": "FR"
       }
     ],
     "colombard": [
@@ -925,6 +963,12 @@
         "lang": "fr",
         "quote": "En monocépage, le vin de durif est caractérisé par des arômes poivrés, une couleur intense et une belle richesse tannique.",
         "value": "high"
+      },
+      {
+        "field": "acidity",
+        "lang": "nl",
+        "value": "high",
+        "quote": "De kleur is zeer donker, zelfs inktachtig zwart met een relatief hoog zuurgehalte."
       }
     ],
     "elbling": [
@@ -992,6 +1036,12 @@
         "lang": "de",
         "value": "high",
         "quote": "Diese vielseitige Rebe erbringt fruchtige, aroma- und säurebetonte Weine mit viel Bukett."
+      },
+      {
+        "field": "origin",
+        "lang": "nl",
+        "quote": "De oorsprong ligt in de buurt van de gemeente Bairradas in het westen van de noordelijke regio Beira Baixa.",
+        "value": "PT"
       }
     ],
     "feteasca-alba": [
@@ -1162,6 +1212,14 @@
         "quote": "Сорт является основой для создания сухих, столовых и игристых вин"
       }
     ],
+    "garganega": [
+      {
+        "field": "acidity",
+        "lang": "nl",
+        "value": "high",
+        "quote": "De zuurgraad van de Garganega is zodanig hoog, dat het gebruikt wordt voor de productie van de zoete recioto"
+      }
+    ],
     "garnacha-roja": [
       {
         "field": "sweetness",
@@ -1194,6 +1252,12 @@
         "lang": "bg",
         "value": "high",
         "quote": "Сортовите вина се отличават със златистожълт цвят, високо алкохолно съдържание и екстракт"
+      },
+      {
+        "field": "body",
+        "lang": "zh",
+        "value": "high",
+        "quote": "其色泽从浅黄至深金黄色，酒体丰厚，酒精度高，酸度则较低。"
       }
     ],
     "gouais-blanc": [
@@ -1202,6 +1266,21 @@
         "lang": "fr",
         "value": "low",
         "quote": "Il donne un vin de médiocre qualité (peu alcoolique, acide et sans bouquet)"
+      },
+      {
+        "field": "aromas",
+        "lang": "nl",
+        "value": [
+          "citrus",
+          "green apple",
+          "pear"
+        ],
+        "quote": "De aroma's die vrijkomen zijn die van citrusvruchten, groene appel en peer.",
+        "words": {
+          "citrus": "citrusvruchten",
+          "green apple": "groene appel",
+          "pear": "peer"
+        }
       }
     ],
     "graciano": [
@@ -1280,6 +1359,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "In Calabria, a specific clone of Greco bianco is used to produce the sweet dessert wine Greco di Bianco ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina to produce dry-style wines."
+      },
+      {
+        "field": "acidity",
+        "lang": "ja",
+        "value": "high",
+        "quote": "白ワインおよび強い酸味を生かしたスプマンテが生産されている。"
       }
     ],
     "grenache": [
@@ -1364,6 +1449,12 @@
         "lang": "de",
         "value": "dry-sweet",
         "quote": "vor allem, um Süßweine zu gewinnen. ... Heute werden in der Region jedoch auch trockene, relativ alkoholreiche Weine"
+      },
+      {
+        "field": "origin",
+        "lang": "nl",
+        "quote": "Door DNA-onderzoek is gebleken dat dit ras een kruising is van de Hongaarse druif Furmint en de oude Zwitserse variëteit Plantscher, die op zijn beurt van Hongaarse afkomst is en waarmee dus is aangetoond dat de Hárslevelű echt uit dit land afkomstig is.",
+        "value": "HU"
       }
     ],
     "hondarrabi-zuri": [
@@ -1504,6 +1595,26 @@
         "quote": "З кісі виробляється біле сухе або бурштинове вино"
       }
     ],
+    "koshu": [
+      {
+        "field": "acidity",
+        "lang": "tr",
+        "value": "high",
+        "quote": "Damakta düşük alkollü ve yüksek asitlidir."
+      },
+      {
+        "field": "alcohol",
+        "lang": "tr",
+        "value": "low",
+        "quote": "Damakta düşük alkollü ve yüksek asitlidir."
+      },
+      {
+        "field": "sweetness",
+        "lang": "nl",
+        "value": "dry-sweet",
+        "quote": "Na vinificatie kan het resultaat zowel droge als zoete wijn zijn."
+      }
+    ],
     "lagrein": [
       {
         "field": "sweetness",
@@ -1621,6 +1732,17 @@
         "lang": "fr",
         "value": "low",
         "quote": "Les vins sont puissants, de faible acidité"
+      },
+      {
+        "field": "pairings",
+        "lang": "nl",
+        "value": [
+          "fish"
+        ],
+        "quote": "De wijn past meestal goed bij visgerechten.",
+        "words": {
+          "fish": "visgerechten"
+        }
       }
     ],
     "marselan": [
@@ -1680,6 +1802,12 @@
         "words": {
           "desserts": "sladkým pokrmům"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "de",
+        "value": "high",
+        "quote": "Diese tanninreiche Sorte ergibt im klassischen Weinausbau tiefrote Weine"
       }
     ],
     "mavrud": [
@@ -1965,6 +2093,19 @@
         "lang": "it",
         "value": "high",
         "quote": "dolce e con elevato grado alcolico"
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "shellfish",
+          "white fish"
+        ],
+        "quote": "le cui uve producono un vino secco di grande pregio, ideale per abbinamenti con ostriche e pesci dalla carne bianca",
+        "words": {
+          "shellfish": "ostriche",
+          "white fish": "pesci dalla carne bianca"
+        }
       }
     ],
     "muscat-ottonel": [
@@ -2020,6 +2161,12 @@
           "game": "zvěřině",
           "hard cheese": "tvrdým sýrům"
         }
+      },
+      {
+        "field": "sweetness",
+        "lang": "no",
+        "value": "dry",
+        "quote": "Resultatet er en tørr og voldsom tanninrik vin."
       }
     ],
     "negrette": [
@@ -2054,6 +2201,12 @@
         "lang": "uk",
         "value": "dry",
         "quote": "Здебільшого виробляються сухі червоні вина"
+      },
+      {
+        "field": "acidity",
+        "lang": "da",
+        "value": "low",
+        "quote": "Druen besidder karakteristisk kraft og fylde, lavt syreindhold, rig på tanniner"
       }
     ],
     "nero-d-avola": [
@@ -2139,6 +2292,12 @@
         "lang": "ru",
         "value": "dry-medium",
         "quote": "Из оджалеши производятся природно-полусладкие вина и сухие вина"
+      },
+      {
+        "field": "origin",
+        "lang": "sv",
+        "quote": "Den har sitt ursprung i Georgien.",
+        "value": "GE"
       }
     ],
     "okuzgozu": [
@@ -2147,6 +2306,19 @@
         "lang": "en",
         "value": "low",
         "quote": "Öküzgözü reveals low alcohol profile"
+      },
+      {
+        "field": "pairings",
+        "lang": "tr",
+        "value": [
+          "hard cheese",
+          "cured meats"
+        ],
+        "quote": "Peynir ve Şarküteri: \"Biberli\" tabir edilen sert yıllanmış kaşar peynirleri, isli kuru etler ve pastırma.",
+        "words": {
+          "hard cheese": "sert yıllanmış kaşar peynirleri",
+          "cured meats": "isli kuru etler"
+        }
       }
     ],
     "palomino": [
@@ -2209,6 +2381,17 @@
         "lang": "en",
         "value": "sweet",
         "quote": "but will usually be very sweet and have a strong aroma and flavor of raisins and dried figs"
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "desserts"
+        ],
+        "quote": "Il vino prodotto da questo vitigno è dolce e scuro e viene usato per accompagnare i dessert.",
+        "words": {
+          "desserts": "dessert"
+        }
       }
     ],
     "petit-manseng": [
@@ -2498,6 +2681,12 @@
         "words": {
           "raclette": "Raclette"
         }
+      },
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "low",
+        "quote": "Le poulsard donne des vins de grande finesse, aromatiques (fruité et notes animales), mais de structure et couleur légère."
       }
     ],
     "prieto-picudo": [
@@ -2506,6 +2695,12 @@
         "lang": "de",
         "value": "high",
         "quote": "Aus Prieto Picudo werden gute, alkoholreiche Rotweine"
+      },
+      {
+        "field": "acidity",
+        "lang": "es",
+        "value": "high",
+        "quote": "Es una variedad con mucha materia colorante, con una acidez notable y con gran cantidad de azúcar y tanino."
       }
     ],
     "raboso": [
@@ -2520,6 +2715,14 @@
         "lang": "uk",
         "value": "dry-sweet",
         "quote": "З рабосо піаве зазвичай виробляють сухі червоні вина, моносортові або купажні … Іноді з цього сорту виробляють десертні вина з в'яленого винограду"
+      }
+    ],
+    "refosco-dal-peduncolo-rosso": [
+      {
+        "field": "tannin",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die Sorte erbringt einen granatfarbenen, säure- und tanninreichen Wein mit einem fruchtigen Bouquet."
       }
     ],
     "ribolla-gialla": [
@@ -2625,6 +2828,21 @@
         "lang": "uk",
         "value": "high",
         "quote": "Вино має дуже високий вміст танінів та алкоголю"
+      },
+      {
+        "field": "pairings",
+        "lang": "nl",
+        "value": [
+          "red meat",
+          "game",
+          "hard cheese"
+        ],
+        "quote": "Sagrantino Secco past bij geroosterd rood vlees, hert en ander wild of harde kazen.",
+        "words": {
+          "red meat": "rood vlees",
+          "game": "wild",
+          "hard cheese": "harde kazen"
+        }
       }
     ],
     "sangiovese": [
@@ -2750,6 +2968,17 @@
         "lang": "fr",
         "value": "high",
         "quote": "acidité assez forte"
+      },
+      {
+        "field": "pairings",
+        "lang": "fr",
+        "value": [
+          "desserts"
+        ],
+        "quote": "Les vins du cépage Scheurebe sont souvent destinés à accompagner les desserts.",
+        "words": {
+          "desserts": "desserts"
+        }
       }
     ],
     "semillon": [
@@ -2758,6 +2987,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "is a golden-skinned grape used to make dry and sweet white wines"
+      },
+      {
+        "field": "body",
+        "lang": "it",
+        "value": "high",
+        "quote": "I vini Sémillon sono piuttosto pesanti, con bassa acidità e una struttura quasi oleosa."
       }
     ],
     "sercial": [
@@ -2804,6 +3039,12 @@
     "souzao": [
       {
         "field": "acidity",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die spätreifende Sorte ergibt tiefrote, tanninreiche, herbrauhe säurebetonte fruchtige Weine"
+      },
+      {
+        "field": "tannin",
         "lang": "de",
         "value": "high",
         "quote": "Die spätreifende Sorte ergibt tiefrote, tanninreiche, herbrauhe säurebetonte fruchtige Weine"
@@ -2917,6 +3158,17 @@
         "lang": "fr",
         "quote": "À maturité, il donne des vins fruités (framboise), acides, charpentés.",
         "value": "high"
+      },
+      {
+        "field": "pairings",
+        "lang": "pt",
+        "value": [
+          "red meat"
+        ],
+        "quote": "Estes vinhos acompanham muito bem pratos de carnes vermelhas, com molhos fortes.",
+        "words": {
+          "red meat": "carnes vermelhas"
+        }
       }
     ],
     "tavkveri": [
@@ -3134,6 +3386,12 @@
         "lang": "es",
         "quote": "La treixadura es una uva blanca autóctona de Galicia,​ España, aunque también se encuentra en Portugal.",
         "value": "ES"
+      },
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "Die spätreifende Sorte erbringt duftige, körperreiche und alkoholstarke Weine."
       }
     ],
     "trepat": [
@@ -3194,6 +3452,12 @@
         "words": {
           "fruity": "ხილის"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "sv",
+        "value": "high",
+        "quote": "Tsolikouri har hög syra och gjord enligt europeisk metod producerar den ett aromatiskt lätt syrligt vin."
       }
     ],
     "usakhelauri": [
@@ -3312,6 +3576,12 @@
         "lang": "fr",
         "value": "dry",
         "quote": "donnant des vins blancs secs, structurés et aptes au vieillissement"
+      },
+      {
+        "field": "acidity",
+        "lang": "nl",
+        "value": "high",
+        "quote": "De zuurgraad is relatief hoog en de wijn heeft een aromatische neus van voornamelijk citrusvruchten."
       }
     ],
     "viognier": [
@@ -3404,6 +3674,20 @@
         "quote": "Zierfandler wines are typically elegant and quite sweet"
       }
     ],
+    "zilavka": [
+      {
+        "field": "alcohol",
+        "lang": "de",
+        "value": "high",
+        "quote": "Žilavka erbringt mittelschwere, gelb-grünliche, alkoholstarke (12 bis 14 %), säurebetonte (5 bis 6 g/l Gesamtsäure) Weißweine"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "medium",
+        "quote": "Žilavka erbringt mittelschwere, gelb-grünliche, alkoholstarke (12 bis 14 %), säurebetonte (5 bis 6 g/l Gesamtsäure) Weißweine"
+      }
+    ],
     "zinfandel": [
       {
         "field": "alcohol",
@@ -3439,6 +3723,12 @@
         "words": {
           "steak": "стейком"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "no",
+        "value": "medium",
+        "quote": "Vinene har bra med tanniner, moderat syre og god balanse."
       }
     ],
     "zweigelt": [

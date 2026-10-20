@@ -147,8 +147,46 @@ export function readFigure(
   return { amount, year };
 }
 
+/**
+ * The production an Italian article lists under «Produzione» — «Provincia,
+ * stagione, volume in ettolitri», one line per province and season, from the
+ * yearly statistics of the 1990s — for its latest season: the provinces' lines
+ * for that season, quoted, and their sum. An article without a wine's
+ * template («Vino», «Denominazione vino») — a town's, a province's — has no
+ * such list to read.
+ */
+export function italianProduction(wikitext: string): RegionFigure | null {
+  if (!/\{\{\s*(?:Denominazione vino|Vino)\s*\n?\|/i.test(wikitext)) return null;
+  const heading =
+    /==\s*Produzione\s*==\s*\n\s*''Provincia, stagione, volume in \[\[ettolitro\|ettolitri\]\]''/.exec(
+      wikitext,
+    );
+  if (heading === null) return null;
+  const section = wikitext.slice(heading.index + heading[0].length).split(/\n==/)[0] ?? "";
+  const lines = [
+    ...section.matchAll(/^\*\s*([^\n(]+?)\s*\((\d{4}\/\d{2})\)\s*([\d.,]+)\s*$/gm),
+  ].map((match) => ({
+    amount: parseNumber(match[3]!, "it"),
+    line: `${match[1]!.trim()} (${match[2]}) ${match[3]}`,
+    season: match[2]!,
+  }));
+  if (lines.length === 0 || lines.some((line) => line.amount === null)) return null;
+  const latest = lines
+    .map((line) => line.season)
+    .sort()
+    .at(-1)!;
+  const those = lines.filter((line) => line.season === latest);
+  const amount = Math.round(those.reduce((sum, line) => sum + line.amount!, 0));
+  if (amount <= 0) return null;
+  return { amount, quote: those.map((line) => line.line).join("; "), year: latest };
+}
+
 /** The planted area and production a region's article gives, if any. */
 export function regionFigures(wikitext: string, language: string): RegionFigures | null {
+  if (language === "it") {
+    const production = italianProduction(wikitext);
+    return production === null ? null : { planted: null, production };
+  }
   const spec = fields[language];
   if (spec === undefined) return null;
   const parameters = infobox(wikitext, spec.templates);
@@ -165,4 +203,4 @@ export function regionFigures(wikitext: string, language: string): RegionFigures
   return { planted: first(spec.planted, "ha"), production: first(spec.production, "hl") };
 }
 
-export const figureLanguages = Object.keys(fields);
+export const figureLanguages = [...Object.keys(fields), "it"];

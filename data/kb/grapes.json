@@ -1545,7 +1545,7 @@
       "green apple",
       "herbs"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -1648,6 +1648,12 @@
         "field": "sweetness",
         "quote": "is a golden-skinned grape used to make dry and sweet white wines",
         "value": "dry-sweet"
+      },
+      {
+        "field": "body",
+        "quote": "I vini Sémillon sono piuttosto pesanti, con bassa acidità e una struttura quasi oleosa.",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/S%C3%A9millon"
       }
     ],
     "id": "semillon",
@@ -2411,7 +2417,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "lemon"
     ],
@@ -2515,6 +2521,12 @@
         "quote": "La treixadura es una uva blanca autóctona de Galicia,​ España, aunque también se encuentra en Portugal.",
         "value": "ES",
         "sourceUrl": "https://es.wikipedia.org/wiki/Treixadura"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Die spätreifende Sorte erbringt duftige, körperreiche und alkoholstarke Weine.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Trajadura"
       }
     ],
     "id": "treixadura",
@@ -3008,6 +3020,12 @@
         "quote": "Die spätreifende Sorte ergibt tiefrote, tanninreiche, herbrauhe säurebetonte fruchtige Weine",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Vinh%C3%A3o"
+      },
+      {
+        "field": "tannin",
+        "quote": "Die spätreifende Sorte ergibt tiefrote, tanninreiche, herbrauhe säurebetonte fruchtige Weine",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Vinh%C3%A3o"
       }
     ],
     "id": "souzao",
@@ -3127,12 +3145,12 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q1421949",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sez%C3%A3o"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [],
     "body": null,
@@ -3195,6 +3213,12 @@
         "quote": "Aus Prieto Picudo werden gute, alkoholreiche Rotweine",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Prieto_Picudo"
+      },
+      {
+        "field": "acidity",
+        "quote": "Es una variedad con mucha materia colorante, con una acidez notable y con gran cantidad de azúcar y tanino.",
+        "value": "high",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Prieto_picudo"
       }
     ],
     "id": "prieto-picudo",
@@ -3777,8 +3801,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Baga_(grape)"
   },
   {
-    "acidity": null,
-    "alcohol": null,
+    "acidity": "high",
+    "alcohol": "medium",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -3910,6 +3934,18 @@
         "quote": "A região da Península de Setúbal produz os mais conhecidos vinhos desta casta. Nos Vinhos Regionais do Algarve a Castelão é frequentemente combinada",
         "value": "PT: Algarve",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Castel%C3%A3o_(uva)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "‘Castelão’ erbringt sehr kräftige und tanninbetonte Rotweine mit mittlerem Alkoholgehalt",
+        "value": "medium",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Castel%C3%A3o_(Rebsorte)"
+      },
+      {
+        "field": "acidity",
+        "quote": "die jung genießbar, aber auch lagerfähig sind, da sie über eine kräftige Säure verfügen.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Castel%C3%A3o_(Rebsorte)"
       }
     ],
     "id": "castelao",
@@ -5222,6 +5258,12 @@
         "quote": "Diese vielseitige Rebe erbringt fruchtige, aroma- und säurebetonte Weine mit viel Bukett.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Fern%C3%A3o_Pires"
+      },
+      {
+        "field": "origin",
+        "quote": "De oorsprong ligt in de buurt van de gemeente Bairradas in het westen van de noordelijke regio Beira Baixa.",
+        "value": "PT",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Fern%C3%A3o_Pires"
       }
     ],
     "id": "fernao-pires",
@@ -5235,7 +5277,7 @@
       "nl": "Fernão Pires",
       "pt": "Fernão-Pires"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -5683,7 +5725,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "peach",
@@ -5843,6 +5885,12 @@
         "field": "sweetness",
         "quote": "In Calabria, a specific clone of Greco bianco is used to produce the sweet dessert wine Greco di Bianco ... On the island of Capri, Greco is usually blended with Biancolella and Falanghina to produce dry-style wines.",
         "value": "dry-sweet"
+      },
+      {
+        "field": "acidity",
+        "quote": "グレコ (greco) とは、ギリシャが起源ではないかといわれている、一連のイタリアのワイン用ブドウ品種である。この呼称は白ブドウ品種 (グレコ・ディ・トゥーフォ (greco di tufo) やグレコ・ビアンコ (greco bianco) など) にも黒ブドウ品種 (グレコ・ネロ (greco nero) ) にも用いられている。グレコ・ネロの栽培に用いられている面積のほうが大きいが、「グレコ」の呼び名が指すものとしてもっとも一般的なのは、白ブドウ品種のほうである。グレコ種は、カンパーニャ州では保証つき統制原産地呼称 (d.o.c.g.) 認定ワインであるグレコ・ディ・トゥーフォ (greco di tufo) の生産に用いられている。カラブリア州では、グレコ・ビアンコ種が原産地統制呼称 (d.o.c.) 認定ワインであるグレコ・ディ・ビアンコ (greco di bianco) の生産に用いられている。時として「グレコ」という名称は、ギリシャが起源だと考えられている複数の品種----もっとも有名なものではトレッビアーノなど----の別名として用いられることがある。 == 歴史 == 一連のグレコ種の祖先となるブドウは、2500年以上前にギリシャ人入植者によってイタリア南部にもたらされたのではないかと言われている。歴史家や生産者たちは、このブドウが古代ローマのいわゆる「カルトワイン」にあたるファレルヌムやアミネウムと混醸されていたかもしれないと推測している。この品種がイタリア各地に広まっていくにつれ、「グレコ」の名称は歴史的にギリシャと関係がありそうないくつかの品種に対して用いられるようになった。「グレコ」がいくつかの枝変わり種をもつ単一の品種であるのか、それとも複数の品種を「グレコ」の名で一括りにしているのかについては、ブドウ品種学者たちの間でも見解が分かれている。また、イタリアのいわゆる「ギリシャ系ブドウ」のうち、現在ギリシャで栽培されているものがあるのかどうかについても、見解の一致をみていない。 第二次世界大戦後、多くのイタリア南部のブドウ品種と同様、グレコの命運も危うくなった。戦時中のブドウ園の荒廃とならんで、イタリアのブドウ農家が農業から海外や都市部の都市型産業へと大量に移ったことによって、同地域のブドウ栽培が全体的に衰退する時期が到来したのである。植栽が減少しブドウ園が掘り返されていくなかで、多くの品種が絶滅の瀬戸際に立たされた。家族単位のワイン生産者の努力や、ピエロ・マストロベラルディーノ主導の秘儀荘 (villa dei misteri) プロジェクトといったワイン醸造の文化財事業のおかげで、イタリア南部におけるグレコ種は生き残ることができた。 === 近年において判明したこと === 21世紀初頭に行なわれたdna型鑑定の結果、イタリアにおいて「グレコ」の名で栽培されているものは、遺伝子的にアスプリーニョと同一であることが確認された。 2005年に行なわれたdna型鑑定によって、グレコ・ビアンコの名を冠する品種のうち、少なくとも別名グレコ・ディ・ジェラーチェ (greco di gerace) もしくはグレコ・ディ・ビアンコ (greco di bianco) と呼ばれるものは遺伝子的にマルヴァジーア・デッレ・リーパリと同一種であると発表された。ただし、名称が「グレコ・ビアンコ」で始まる別名をもつブドウは少なくとも4つはあるうえ、グレコ・ディ・ビアンコ docの地元カラブリア州ビアンコではこの研究結果に異論を唱える者もおり、全ての「グレコ・ビアンコ 」がマルヴァジーア・デッレ・リーパリであるかは不明である。 == グレコ (およびグレコ・ビアンコ) == グレコ種はブドウ樹の生長周期において果実の成熟する時期が非常に遅い傾向があり、ブドウ栽培するうえではべと病やうどんこ病の害を被りがちである。ブドウ品種学者はこのブドウを見分ける際、特徴的な岐肩をもつ果房に注目する。果実は成熟すると黄金がかった灰色になる。この果実に含まれるフェノール化合物のおかげで、ワインの色は特有の深みを増す。グレコのワインは豊かなアロマが特徴であり、ジャンシス・ロビンソンなどのワイン専門家のなかには、どこかヴィオニエに似た香りと評する者もいる。一般的にこのブドウと結びつきのあるアロマとしては、モモや若葉などがある。グレコのワインは熟成が進むと、ハーブの香りが現れることがある。 グレコがもっとも広く見受けられるのはイタリア南部で、いくつかのd.o.c.認定ワインの主要品種になっている。2006年の時点での栽培面積は1,000ヘクタール (2,500エーカー) にのぼる。カラブリア州では、枝変わり種のグレコ・ビアンコ (greco bianco) が甘口のデザートワインであるグレコ・ディ・ビアンコ (greco di bianco) を作るのに使用されており、収穫後半乾燥させたブドウから一部パッシート方式を用いて製造される。カプリ島では、グレコは通常ビアンコレッラやファランギーナとブレンドされ、辛口のワインを作る。プッリャ州では、グラヴィーナ doc (gravina doc) のブレンドに使用することが許されている。カンパーニャ州では、アヴェッリーノ県トゥーフォの町周辺で生産されるd.o.c.g.認定ワイン、グレコ・ディ・トゥーフォ (greco di tufo) の主要品種となっている。また、ヴェスヴィオ山の斜面で生産されているラクリマ・クリスティにブレンドすることも認められている。 === アスプリーニョ・ビアンコ === 以前はグレコとアスプリーニョは別の品種と考えられていたが、2000年にdna型鑑定によって遺伝子的に同一種であると判明した。しかしながら、果房の形状が異なる (前者は円錐形で岐肩が目立つほど大きく、後者は長円筒形で岐肩は目立たないことがある) だけでなく、栽培法にも両者の違いが見られる。特にアスプリーニョの伝統的な仕立て方であるアルベラータは、高さ30メートルに及ぶ樫の高木を支柱として、カーテン状に枝を這わせるものである。収穫は細い木製のはしごを架けて行なうため、危険が伴う。 === d.o.c.g.およびd.o.c.認定地域 === グレコが主体となっているd.o.c.g.認定地域は2つであるが、ブレンドの一部として認められているd.o.c.認定地域であれば、イタリア南部にいくつか存在する。カンパーニャ州のグレコ・ディ・トゥーフォ docgはフィアーノ ・ディ・アヴェッリーノ docg (fiano di avellino docg) の北側に位置し、トゥーフォの町のほか丘陵地にある7つのコムーネを含む。この地域は2003年にd.o.c.g.に昇格した。グレコ・ディ・トゥーフォの広さはフィアーノ ・ディ・アヴェッリーノの3分の1にすぎないが、d.o.c./g.認定の高品質ワインの生産量はカンパーニャ州で最大である。この地域のブドウ畑の土壌は、火山灰から形成された凝灰岩 (イタリア語: tufo) が元となっており、トゥーフォ (tufo) という町名もそこからとられている。同地域のすべてのd.o.c.g.認定ワインは85%以上がグレコでなければならず、ブレンドの残りの部分はたいていコーダ・ディ・ヴォルペが占める。マスター・オブ・ワインのメアリー・ユーイング=マリガンによると、グレコ・ディ・トゥーフォのワインは通常収穫年から3、4年後に飲み頃を迎え、優に10年から12年は熟成を続けるだけの力があるという。発泡性であるスプマンテの製法も認められている。 カラブリア州のグレコ・ディ・ビアンコ docは、イタリア半島の「つま先」におけるイオニア海側の沿岸部、ビアンコの街の周囲一帯に位置する。使用するブドウ品種はグレコ・ビアンコ (別名グレコ・ディ・ジェラーチェ) で、95%以上を占める。これは半乾燥させたブドウからつくられるデザートワイン的なもので、アルコール度数は17%以上なければいけない (既得アルコール14%) 。このワインの特徴としては、暗い琥珀色を帯び、柑橘類やハーブのアロマをもつ。ブドウの収穫量は1ヘクタールあたり最大10トンまでに制限されている。ワイン専門家のピーター・ソーンダーズによると、グレコ・ディ・ビアンコは最高のイタリア産デザートワインのひとつと評されることが多いという。 グレコ (およびグレコ・ビアンコ) の使用が認められているその他のd.o.c.認定地域は以下の通りである。 アヴェルサ doc (aversa doc) - カンパーニャ州カゼルタ県南部のアヴェルサを中心とし、一部ナポリ県北部までを含むワイン生産地域。白ワインおよび強い酸味を生かしたスプマンテが生産されている。前者はアスプリーニョを85%以上、後者は100%使用しなければいけない。 ビヴォンジ doc (bivongi doc) - カラブリア州のコンソリーノ山の斜面、スティラーロ川沿岸に位置するワイン生産地域。ビヴォンジの白ワインにおいて、グレコはグアルダヴァッレ、モントニコ・ビアンコ、マルヴァジーア・ビアンカ、アンソニカ/インツォリアとならんでブレンドの30-50%を占めることがある。 カプリ doc (capri doc) - カンパーニャ州のカプリ島に位置するワイン生産地域。ファランギーナおよびビアンコレッラとならんでグレコはブレンドの50%まで使用することが認められている (ビアンコレッラは20%まで) 。 チレント doc (cilento doc) - カンパーニャ州サレルノ県のチレントに位置するワイン生産地域。白ワインのブレンドはフィアーノを主体とし、トレッビアーノ、マルヴァジーア・ビアンカとならんでグレコ・ビアンコを10-15%使用することが認められている。 チロ doc (ciro doc) - カラブリア州カタンザーロ県に位置するワイン生産地域。白ワインはグレコ・ビアンコを90%以上使用し、トレッビアーノは10%まで使用できる。赤ワインのブレンドはほぼ全てガリオッポで占められている (95%以上) が、トレッビアーノとならんでグレコ・ビアンコもわずかながら (5%以下) 入ることがある。この赤ワインに白ブドウが含まれるているのは、その目的や歴史において、キアンティの赤ワインに白ブドウが含まれている事情と一部共通する。 フィアーノ・ディ・アヴェッリーノ docg (fiano di avellino docg) - カンパーニャ州のワイン生産地域で、2003年にd.o.c.g.認定地域に昇格した。フィアーノを主体 (85%以上) とするブレンドにおいて、グレコはトレッビアーノおよびコーダ・ディ・ヴォルペとならんで15%まで使用することが認められている。 グラヴィーナ doc (gravina doc) - プッリャ州のグラヴィーナの町を中心とするワイン生産地域。ブレンドのうちグレコは50%以上を占める。マルヴァジーア・ビアンカは20%以上を占め、残りの部分にはヴェルデーカ、ビアンコ・ダレッサーノ、シャルドネを使用することができる。 メリッサ doc (melissa doc) - カラブリア州メリッサ周辺のd.o.c.認定地域。この地域名はギリシャ語で「甘い」「蜂蜜」を意味する言葉(ギリシア語: μελι)に由来しており、この地域の気候だからこそ達することのできるワイン用ブドウの高い糖度を形容するのに用いられる。赤ワインの場合、グレコ・ネロとグレコ・ビアンコの両方もしくはいずれかを5-25%使用することが認められている (主体はガリオッポの75-95%) 。白ワインの場合、グレコ・ビアンコはブレンドの80-95%を占め、残りの部分にはトレッビアーノやマルヴァジーア・ビアンカを使用する。 モリーゼ doc (molise doc) - この広大なd.o.c.は、アブルッツォ州の南に位置する山がちなモリーゼ州の各地に広がっている。1998年にd.o.c.の認定を受けた同地域は、グレコ・ビアンコのセパージュワインを認めている数少ないワイン生産地域のひとつで、その場合ワインの85%以上がグレコ・ビアンコでなければいけない。 ペニゾーラ・ソッレンティーナ doc (penisola sorrentina doc) - カンパーニャ州のソレント半島にあるワイン生産地域。このd.o.c.の白ワインのブレンドを構成するグレコ、ファランギーナ、ビアンコレッラのうち、グレコは60%まで使用が認められている (ファランギーナが40%以上のため) 。 サンニオ doc (sannio doc) - カンパーニャ州の丘陵地帯中央に位置するワイン生産地域で、歴史上のぶどう栽培地域であったサムニウムと部分的に重なる。同地域では、グレコはスティルワインにも、伝統的なスパークリングワインの製法で作られたスプマンテ方式のワインにも使われている。白のスティルワインの場合、トレッビアーノを50%以上とし、他はグレコ、コーダ・ディ・ヴォルペ、ファランギーナ、フィアーノ、モスカートのいずれかもしくは複数とのブレンドになる。したがってグレコは50%まで使用することが認められている。ただしグレコのセパージュワインも存在し、その場合グレコは85%以上となる。スプマンテの場合、使用の認められている品種はグレコとファランギーナの2つのみである。 サンタガタ・デ・ゴーティ doc (sant'agata dei goti doc) - カンパーニャ州の町、サンタガタ・デ・ゴーティの周辺一帯に位置するワイン生産地域であり、サンニオの下位区分地区にあたる。グレコとファランギーナとのブレンドで、グレコは40-60%を占めることが認められている。 サンタンナ・ディ・イーゾラ・カーポ・リッツート doc (sant'anna di isola capo rizzuto doc) - カラブリア州クロトーネ県の南端に位置するワイン生産地域。このd.o.c.の赤ワインのブレンドにおいては、白ブドウのグレコ・ビアンコを35%まで使用することが認められている。 スカヴィーニャ doc (scavigna doc) - カラブリア州カンタンザーロ県のファレルナ付近にあるワイン生産地域であり、歴史上ファレルナでは古代ローマのワイン、ファレルヌムが生産されていた。トラミネール・アロマティコとシャルドネを主体にし、グレコ・ビアンコにかんしては2019年現在の認定基準では特に規定がないが、その他の地元産ブドウ (45%以下) の枠に含まれることが多い。 == グレコ・ネロ == グレコ種のなかでは赤ワイン用の品種となるグレコ・ネロ (greco nero) は、全グレコ種のうちイタリア国内での栽培面積がもっとも広く、推計3,200ヘクタール (7,900エーカー) に達する。たいがいのグレコ・ネロはカラブリア州で見かけられるものであり、ガリオッポとブレンドされることが多い。 グレコ・ネロの使用を認めているd.o.c.認定地域には、以下のようなものがある。 ビヴォンジ doc (bivongi doc) - 赤およびロゼワインの場合、ガリオッポ、ノチェラ、ネロ・ダヴォラ、カスティリオーネとのブレンドにおいて、グレコ・ネロは30-50%使用することが認められている。 カンピダーノ・ディ・テッラルバ doc (campidano di terralba doc) - サルデーニャ島の西海岸、カンピダーノ平野に位置するワイン生産地域 (ただし現在の規定でブドウ園は海抜400m以上) 。ボヴァーレ (bovale、別名bovale sardo) およびボヴァーレ・グランデ (bovale grande、別名bovale di spagna) を主体とし (85%以上) 、グレコ・ネロはパスカーレ・ディ・カリャリ、モニカとともにブレンドの15%まで使用することが認められている。 ドンニチ (donnici doc) - カラブリア州の都市コゼンツァの周辺一帯に位置するワイン生産地域。現在はテッレ・ディ・コゼンツァ doc (terre di cosenza doc) の下位区分地区にあたる。赤およびロゼワインはマリオッコを主体とし (60%以上) 、グレコ・ネロは10%以上使用する。その他ガリオッポ、マルヴァジーア・ビアンカ、マントニコ・ビアンコ、ペコレッロの使用は10%以下まで認められている。 ラメツィア doc (lamezia doc) - カラブリア州の都市ラメツィアの周辺一帯に位置するワイン生産地域。赤およびロゼワインの場合、ガリオッポ、マリオッコ、マルシリャーナ、ネレッロ・マスカレーゼ、ネレッロ・カップッチョとのブレンドにおいて、グレコ・ネロは25-45%使用することが認められている。なお、グレコ・ネロのセパージュワインも存在し、その場合グレコ・ネロは85%以上となる。 メリッサ (melissa doc) - 赤ワインの場合、ガリオッポを主体とし (75-95%) 、残りの5-25%にグレコ・ネロおよび白ブドウ品種のグレコ・ビアンコ、トレッビアーノ、マルヴァジーア・ビアンカを使用することが認められている。 ポッリーノ (pollino doc) - カラブリア州最北端のワイン生産地域で、サン・バジーレなどのコムーネを含むポッリーノ山麓に位置する。現在はテッレ・ディ・コゼンツァ doc (terre di cosenza doc) の下位区分地区にあたる。ガリオッポおよびマリオッコを主体とし (60%以上) 、残りの40%以下にグレコ・ネロおよび白ブドウ品種のマルヴァジーア・ビアンカ、モントニコ・ビアンコ、グアルナッチャ・ビアンカなどを使用することが認められている。 == 別名 == グレコの別名:グレコ・デル・ヴェスヴィオ (greco del vesuvio) 、グレコ・デッレ・トッレ (greco delle torre) 、グレコ・ディ・トゥーフォ (greco di tufo) 、 グレコ・ディ・ナポリ (greco di napoli) など アスプリーニョ・ビアンコの別名:アスプリーノ (asprino) 、アスプリーニャ・ディ・アヴェルサ (asprinia di aversa) 、オリヴェーゼ (olivese) 、ラグザーノ・ビアンコ (ragusano bianco) 、ウーヴァ・アスプリーナ (uva asprina) など グレコ・ネロの別名:グレク・ニウル (grecu niuru) 、サンビアーゼ (sambiase) 、ヴェルディッキオ・ネーラ (verdicchio nera) など グレコ・ビアンコをマルヴァジーア・ディ・リーパリと同一種とする説にもとづき、「グレコ」の別名扱いにされているもの (実際はグレコ・ディ・ジェラーチェ (greco di gerace) /グレコ・ディ・ビアンコ (greco di bianco) の別名に相当) :バルサミーナ・ビアンカ (balsamina bianca) 、ビアンカーメ (biancame) 、グレッコ・ビオンデッロ (greco biondello) 、グレコ・カステッラーノ (greco castellano) 、グレコ・マチェラティーノ (greco maceratino) 、グレコ・モネッチョ (greco moneccio) 、グリエコ (grieco) 、モンテッキエーゼ (montecchiese) 、モルビデッラ (morbidella) など == 関連項目 == ヴィーノ・グレコ ワイン用ブドウ品種の一覧 イタリアのブドウ品種の一覧 イタリアワイン == 脚注 ==",
+        "value": "high",
+        "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%82%B3_(%E3%83%96%E3%83%89%E3%82%A6)"
       }
     ],
     "id": "greco",
@@ -6654,6 +6702,24 @@
         "quote": "Вино має дуже високий вміст танінів та алкоголю",
         "value": "high",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B3%D1%80%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Sagrantino Secco past bij geroosterd rood vlees, hert en ander wild of harde kazen.",
+        "value": "red meat",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Sagrantino"
+      },
+      {
+        "field": "pairings",
+        "quote": "Sagrantino Secco past bij geroosterd rood vlees, hert en ander wild of harde kazen.",
+        "value": "game",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Sagrantino"
+      },
+      {
+        "field": "pairings",
+        "quote": "Sagrantino Secco past bij geroosterd rood vlees, hert en ander wild of harde kazen.",
+        "value": "hard cheese",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Sagrantino"
       }
     ],
     "id": "sagrantino",
@@ -6668,7 +6734,11 @@
       "pt": "Sagrantino"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "red meat",
+      "game",
+      "hard cheese"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -7579,6 +7649,18 @@
         "quote": "dolce e con elevato grado alcolico",
         "value": "high",
         "sourceUrl": "https://it.wikipedia.org/wiki/Zibibbo"
+      },
+      {
+        "field": "pairings",
+        "quote": "le cui uve producono un vino secco di grande pregio, ideale per abbinamenti con ostriche e pesci dalla carne bianca",
+        "value": "shellfish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Zibibbo"
+      },
+      {
+        "field": "pairings",
+        "quote": "le cui uve producono un vino secco di grande pregio, ideale per abbinamenti con ostriche e pesci dalla carne bianca",
+        "value": "white fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Zibibbo"
       }
     ],
     "id": "muscat-of-alexandria",
@@ -7593,7 +7675,10 @@
       "pt": "Moscatel de Alexandria"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "shellfish",
+      "white fish"
+    ],
     "prominence": 19,
     "regions": [
       {
@@ -9448,6 +9533,12 @@
         "quote": "Из оджалеши производятся природно-полусладкие вина и сухие вина",
         "value": "dry-medium",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
+      },
+      {
+        "field": "origin",
+        "quote": "Den har sitt ursprung i Georgien.",
+        "value": "GE",
+        "sourceUrl": "https://sv.wikipedia.org/wiki/Ojaleshi"
       }
     ],
     "id": "ojaleshi",
@@ -9461,7 +9552,7 @@
       "pt": "Ojaleshi",
       "nl": "Ojaleshi"
     },
-    "origin": null,
+    "origin": "GE",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -10517,8 +10608,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aleksandrouli"
   },
   {
-    "acidity": null,
-    "alcohol": null,
+    "acidity": "high",
+    "alcohol": "low",
     "aromas": [
       "citrus",
       "peach",
@@ -10556,6 +10647,24 @@
         "field": "regions",
         "quote": "grown primarily in the Koshu Valley in Yamanashi Prefecture, Japan",
         "value": "JP: Yamanashi"
+      },
+      {
+        "field": "acidity",
+        "quote": "Damakta düşük alkollü ve yüksek asitlidir.",
+        "value": "high",
+        "sourceUrl": "https://tr.wikipedia.org/wiki/Koshu_(%C3%BCz%C3%BCm)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Damakta düşük alkollü ve yüksek asitlidir.",
+        "value": "low",
+        "sourceUrl": "https://tr.wikipedia.org/wiki/Koshu_(%C3%BCz%C3%BCm)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Na vinificatie kan het resultaat zowel droge als zoete wijn zijn.",
+        "value": "dry-sweet",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Koshu_(druivensoort)"
       }
     ],
     "id": "koshu",
@@ -10619,7 +10728,10 @@
         "url": "https://en.wikipedia.org/wiki/Koshu_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q975110",
@@ -12361,6 +12473,12 @@
         "field": "regions",
         "quote": "grown predominantly in the Friuli Venezia Giulia region ... Colli Orientali del Friuli, Friuli Aquileia, Friuli Grave and Friuli Latisana. It is also found in the Veneto portion of the Lison Pramaggiore and in the Slovenian wine region of Koper",
         "value": "SI: Koper"
+      },
+      {
+        "field": "tannin",
+        "quote": "Die Sorte erbringt einen granatfarbenen, säure- und tanninreichen Wein mit einem fruchtigen Bouquet.",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
       }
     ],
     "id": "refosco-dal-peduncolo-rosso",
@@ -12477,7 +12595,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q2137197",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
   },
@@ -15310,7 +15428,7 @@
       "rose",
       "lychee"
     ],
-    "body": null,
+    "body": "high",
     "color": "pink",
     "evidence": [
       {
@@ -15422,6 +15540,12 @@
         "quote": "Сортовите вина се отличават със златистожълт цвят, високо алкохолно съдържание и екстракт",
         "value": "high",
         "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%A2%D1%80%D0%B0%D0%BC%D0%B8%D0%BD%D0%B5%D1%80"
+      },
+      {
+        "field": "body",
+        "quote": "琼瑶浆(德語:gewurztraminer,發音:[ɡəˈvʏɐtstʁaˈmiːnɐ])是一个芳香型葡萄品种,用于酿造白葡萄酒。其原产于意大利北部南蒂罗尔的村庄泰尔梅诺(意大利语为termeno,德语为tramin)。其名称中的traminer即源于该村庄之名,gewurz则为德语中\"香料\"之意。 琼瑶浆目前在法国、意大利、德国、美国、澳大利亚、新西兰、阿根廷、奥地利、匈牙利、保加利亚、乌克兰、中国等世界各地均有种植,尤以法国阿尔萨斯地区出产的琼瑶浆最为知名。 琼瑶浆葡萄果粒较小,果皮厚、成熟后呈粉红色,果汁含糖量较高。由其酿造的葡萄酒香气浓郁,以其独特的荔枝香气而闻名。其色泽从浅黄至深金黄色,酒体丰厚,酒精度高,酸度则较低。 == 参考文献 ==",
+        "value": "high",
+        "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%90%BC%E7%91%B6%E6%B5%86"
       }
     ],
     "id": "gewurztraminer",
@@ -15848,7 +15972,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cabernet_Franc"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": "high",
     "aromas": [
       "raspberry",
@@ -15988,6 +16112,12 @@
         "quote": "подобное вино оптимально совмещать со стейком и другими мясными блюдами",
         "value": "steak",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%97%D0%B8%D0%BD%D1%84%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C"
+      },
+      {
+        "field": "acidity",
+        "quote": "Vinene har bra med tanniner, moderat syre og god balanse.",
+        "value": "medium",
+        "sourceUrl": "https://no.wikipedia.org/wiki/Zinfandel"
       }
     ],
     "id": "zinfandel",
@@ -17103,6 +17233,12 @@
         "quote": "Doporučuje se podávat k hovězímu masu, zvěřině a tvrdým sýrům",
         "value": "hard cheese",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Nebbiolo"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Resultatet er en tørr og voldsom tanninrik vin.",
+        "value": "dry",
+        "sourceUrl": "https://no.wikipedia.org/wiki/Nebbiolo"
       }
     ],
     "id": "nebbiolo",
@@ -17182,7 +17318,10 @@
         "url": "https://pt.wikipedia.org/wiki/Nebbiolo"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Spanna",
@@ -26104,7 +26243,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Macabeo"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": "high",
     "aromas": [
       "earthy",
@@ -26250,6 +26389,12 @@
         "quote": "Здебільшого виробляються сухі червоні вина",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B3%D1%80%D0%BE%D0%B0%D0%BC%D0%B0%D1%80%D0%BE"
+      },
+      {
+        "field": "acidity",
+        "quote": "Druen besidder karakteristisk kraft og fylde, lavt syreindhold, rig på tanniner",
+        "value": "low",
+        "sourceUrl": "https://da.wikipedia.org/wiki/Negroamaro"
       }
     ],
     "id": "negroamaro",
@@ -27380,7 +27525,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dolcetto"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "lemon",
@@ -27504,6 +27649,12 @@
         "field": "styles",
         "quote": "It forms the basis of Venetian white wine Soave and is also a major portion of the blend used to make Gambellara. ... The acid levels in Garganega lends itself well to the production of sweet recioto wines ...",
         "value": "blending"
+      },
+      {
+        "field": "acidity",
+        "quote": "De zuurgraad van de Garganega is zodanig hoog, dat het gebruikt wordt voor de productie van de zoete recioto",
+        "value": "high",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Garganega"
       }
     ],
     "id": "garganega",
@@ -28334,6 +28485,12 @@
         "quote": "À maturité, il donne des vins fruités (framboise), acides, charpentés.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Tannat"
+      },
+      {
+        "field": "pairings",
+        "quote": "Estes vinhos acompanham muito bem pratos de carnes vermelhas, com molhos fortes.",
+        "value": "red meat",
+        "sourceUrl": "https://pt.wikipedia.org/wiki/Tannat"
       }
     ],
     "id": "tannat",
@@ -28348,7 +28505,9 @@
       "pt": "Tannat"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "red meat"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -29494,6 +29653,12 @@
         "quote": "vor allem, um Süßweine zu gewinnen. ... Heute werden in der Region jedoch auch trockene, relativ alkoholreiche Weine",
         "value": "dry-sweet",
         "sourceUrl": "https://de.wikipedia.org/wiki/Lindenbl%C3%A4ttriger"
+      },
+      {
+        "field": "origin",
+        "quote": "Door DNA-onderzoek is gebleken dat dit ras een kruising is van de Hongaarse druif Furmint en de oude Zwitserse variëteit Plantscher, die op zijn beurt van Hongaarse afkomst is en waarmee dus is aangetoond dat de Hárslevelű echt uit dit land afkomstig is.",
+        "value": "HU",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
       }
     ],
     "id": "harslevelu",
@@ -29507,7 +29672,7 @@
       "nl": "Hárslevelű",
       "pt": "Hárslevelű"
     },
-    "origin": null,
+    "origin": "HU",
     "pairings": [],
     "prominence": 15,
     "regions": [
@@ -30141,6 +30306,12 @@
         "field": "sweetness",
         "quote": "but will usually be very sweet and have a strong aroma and flavor of raisins and dried figs",
         "value": "sweet"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il vino prodotto da questo vitigno è dolce e scuro e viene usato per accompagnare i dessert.",
+        "value": "desserts",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Pedro_xim%C3%A9nez"
       }
     ],
     "id": "pedro-ximenez",
@@ -30155,7 +30326,9 @@
       "pt": "Pedro Ximénez"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "desserts"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -33246,12 +33419,12 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "nutty",
       "apricot"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -33336,6 +33509,12 @@
         "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
       },
       {
+        "field": "body",
+        "quote": "Žilavka erbringt mittelschwere, gelb-grünliche, alkoholstarke (12 bis 14 %), säurebetonte (5 bis 6 g/l Gesamtsäure) Weißweine",
+        "value": "medium",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
         "field": "aromas",
         "quote": "Weißweine mit einem Extrakt von 20 bis 27 g/l und Aromen nach Nüssen und Aprikosen.",
         "value": "nutty",
@@ -33375,6 +33554,12 @@
         "field": "styles",
         "quote": "In Jugoslawien wurde Žilavka angeblich häufig nur als Verschnittwein genutzt ... Viele Žilavka-Weine werden fruchtbetont und unkompliziert ausgebaut",
         "value": "blending",
+        "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Žilavka erbringt mittelschwere, gelb-grünliche, alkoholstarke (12 bis 14 %), säurebetonte (5 bis 6 g/l Gesamtsäure) Weißweine",
+        "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/%C5%BDilavka"
       }
     ],
@@ -36407,6 +36592,12 @@
         "quote": "Víno je vhodné ke sladkým pokrmům, případně jako aperitiv",
         "value": "desserts",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Mavrodaphne"
+      },
+      {
+        "field": "tannin",
+        "quote": "Diese tanninreiche Sorte ergibt im klassischen Weinausbau tiefrote Weine",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Mavrodaphne_(Rebsorte)"
       }
     ],
     "id": "mavrodafni",
@@ -36493,7 +36684,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q475684",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mavrodafni"
   },
@@ -37351,6 +37542,12 @@
         "quote": "Les vins sont puissants, de faible acidité",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Marsanne_(c%C3%A9page)"
+      },
+      {
+        "field": "pairings",
+        "quote": "De wijn past meestal goed bij visgerechten.",
+        "value": "fish",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Marsanne_(wit_druivenras)"
       }
     ],
     "id": "marsanne",
@@ -37365,7 +37562,9 @@
       "pt": "Marsanne"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -37689,6 +37888,12 @@
         "quote": "== particularites == synonyme : samling 88 precocite : moyenne a tardive vigueur : moyenne caracteristiques du vin : aromes riches ; notes de cassis et de muscat ; corse ; acidite assez forte ; race ; specialite.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Scheurebe"
+      },
+      {
+        "field": "pairings",
+        "quote": "Les vins du cépage Scheurebe sont souvent destinés à accompagner les desserts.",
+        "value": "desserts",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Scheurebe"
       }
     ],
     "id": "scheurebe",
@@ -37703,7 +37908,9 @@
       "pt": "Scheurebe"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "desserts"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -38977,7 +39184,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tinta_Barroca"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "herbs",
@@ -39111,6 +39318,12 @@
         "quote": "En monocépage, le vin de durif est caractérisé par des arômes poivrés, une couleur intense et une belle richesse tannique.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Durif"
+      },
+      {
+        "field": "acidity",
+        "quote": "De kleur is zeer donker, zelfs inktachtig zwart met een relatief hoog zuurgehalte.",
+        "value": "high",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Durif"
       }
     ],
     "id": "durif",
@@ -43620,6 +43833,12 @@
         "quote": "Гарно поєднується з м'якими сирами, стравами з білого м'яса та риби",
         "value": "fish",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D0%B1%D0%B0%D0%BD%D0%B0"
+      },
+      {
+        "field": "origin",
+        "quote": "Albana is een oude witte druivensoort afkomstig uit Emilia-Romagna in Italië.",
+        "value": "IT",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Albana_(druif)"
       }
     ],
     "id": "albana",
@@ -43633,7 +43852,7 @@
       "nl": "Albana",
       "pt": "Albana"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "soft cheese",
       "white meat",
@@ -45211,7 +45430,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ansonica"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "fruity"
@@ -45282,6 +45501,12 @@
         "quote": "ღვინოს ახასიათებს ნაზი გემო, ხილის არომატი, სიტკბო და ბუნებრივი ცქრიალი",
         "value": "fruity",
         "sourceUrl": "https://ka.wikipedia.org/wiki/%E1%83%AA%E1%83%9D%E1%83%9A%E1%83%98%E1%83%99%E1%83%9D%E1%83%A3%E1%83%A0%E1%83%98"
+      },
+      {
+        "field": "acidity",
+        "quote": "Tsolikouri har hög syra och gjord enligt europeisk metod producerar den ett aromatiskt lätt syrligt vin.",
+        "value": "high",
+        "sourceUrl": "https://sv.wikipedia.org/wiki/Tsolikouri"
       }
     ],
     "id": "tsolikouri",
@@ -45909,6 +46134,18 @@
         "field": "alcohol",
         "quote": "Öküzgözü reveals low alcohol profile",
         "value": "low"
+      },
+      {
+        "field": "pairings",
+        "quote": "Peynir ve Şarküteri: \"Biberli\" tabir edilen sert yıllanmış kaşar peynirleri, isli kuru etler ve pastırma.",
+        "value": "hard cheese",
+        "sourceUrl": "https://tr.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC"
+      },
+      {
+        "field": "pairings",
+        "quote": "Peynir ve Şarküteri: \"Biberli\" tabir edilen sert yıllanmış kaşar peynirleri, isli kuru etler ve pastırma.",
+        "value": "cured meats",
+        "sourceUrl": "https://tr.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC"
       }
     ],
     "id": "okuzgozu",
@@ -45923,7 +46160,10 @@
       "pt": "Öküzgözü"
     },
     "origin": "TR",
-    "pairings": [],
+    "pairings": [
+      "hard cheese",
+      "cured meats"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -46261,7 +46501,11 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
+    "aromas": [
+      "citrus",
+      "green apple",
+      "pear"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -46321,6 +46565,24 @@
         "quote": "Il donne un vin de médiocre qualité (peu alcoolique, acide et sans bouquet)",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Gouais"
+      },
+      {
+        "field": "aromas",
+        "quote": "De aroma's die vrijkomen zijn die van citrusvruchten, groene appel en peer.",
+        "value": "citrus",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Gouais_Blanc"
+      },
+      {
+        "field": "aromas",
+        "quote": "De aroma's die vrijkomen zijn die van citrusvruchten, groene appel en peer.",
+        "value": "green apple",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Gouais_Blanc"
+      },
+      {
+        "field": "aromas",
+        "quote": "De aroma's die vrijkomen zijn die van citrusvruchten, groene appel en peer.",
+        "value": "pear",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Gouais_Blanc"
       }
     ],
     "id": "gouais-blanc",
@@ -47620,7 +47882,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sauvignonasse"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "rose",
@@ -47745,6 +48007,18 @@
         "field": "sweetness",
         "quote": "Aleatico is often used to produce dessert wines.",
         "value": "sweet"
+      },
+      {
+        "field": "acidity",
+        "quote": "De Aleatico heeft een relatief hoog alcoholgehalte dat voor een mooi evenwicht zorgt met de hoge zuurgraad.",
+        "value": "high",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Aleatico"
+      },
+      {
+        "field": "origin",
+        "quote": "De Aleatico is een van oorsprong blauwe Italiaanse druivensoort die meestal gebruikt wordt om zoete rode wijn te maken.",
+        "value": "IT",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Aleatico"
       }
     ],
     "id": "aleatico",
@@ -47758,7 +48032,7 @@
       "nl": "Aleatico",
       "pt": "Aleatico"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -47872,7 +48146,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aleatico"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "citrus"
@@ -47915,6 +48189,12 @@
         "quote": "donnant des vins blancs secs, structurés et aptes au vieillissement",
         "value": "dry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Vernaccia"
+      },
+      {
+        "field": "acidity",
+        "quote": "De zuurgraad is relatief hoog en de wijn heeft een aromatische neus van voornamelijk citrusvruchten.",
+        "value": "high",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Vernaccia"
       }
     ],
     "id": "vernaccia",
@@ -48001,7 +48281,7 @@
     "aromas": [
       "floral"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -48094,6 +48374,12 @@
         "quote": "Gastronomisch begleitet er hervorragend Grillgerichte, Raclette, Geflügelgerichte und Wurstwaren.",
         "value": "raclette",
         "sourceUrl": "https://de.wikipedia.org/wiki/Poulsard"
+      },
+      {
+        "field": "body",
+        "quote": "Le poulsard donne des vins de grande finesse, aromatiques (fruité et notes animales), mais de structure et couleur légère.",
+        "value": "low",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Poulsard"
       }
     ],
     "id": "poulsard",
@@ -48842,6 +49128,12 @@
         "quote": "au bouquet de pomme et de fleurs blanches",
         "value": "apple",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Clairette_(c%C3%A9page)"
+      },
+      {
+        "field": "origin",
+        "quote": "De Clairette is een van oorsprong Franse witte druivensoort die veelal in Zuid-Frankrijk wordt verbouwd.",
+        "value": "FR",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Clairette"
       }
     ],
     "id": "clairette-blanche",
@@ -48855,7 +49147,7 @@
       "nl": "Clairette",
       "pt": "Clairette blanche"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [],
     "prominence": 8,
     "regions": [

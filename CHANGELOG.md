@@ -35,6 +35,22 @@ has the reasons.
   Nineteen dishes join the vocabulary in the eight languages (poultry, veal,
   steak, risotto, cured meats, soft and hard cheese among them), each tied
   to its family on the pairing wheel.
+- **And in ten more**: Dutch, Swedish, Japanese, Turkish, Finnish,
+  Norwegian, Danish, Chinese, Galician and Basque, read the same way — 13
+  more levels and ranges (Koshu's high acidity and low alcohol, Garganega's
+  and Vernaccia's acidity, Nebbiolo dry), what Sagrantino, Marsanne and
+  Öküzgözü go with, Gouais Blanc's aromas and six more origins. A Chinese
+  or Japanese quote, written without spaces, counts by its length.
+- **Fifteen more levels and lists from the earlier languages**, read
+  again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
+  Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
+  and Scheurebe go with.
+- **Italy's production**: where an Italian article lists its wine's volume by
+  province and season («Provincia, stagione, volume in ettolitri»), the
+  latest season's, from the yearly statistics of the 1990s — shown with its
+  season, so it reads as the history it is. Only an article titled as the
+  registered name counts, never one of its types («Montescudaio bianco»),
+  whose volume would be only part of it.
 - **Spain's production**: each PDO's wine qualified that campaign, from the
   Ministry of Agriculture's yearly report, said as such, where no other
   source gives its production.

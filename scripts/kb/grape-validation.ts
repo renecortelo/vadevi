@@ -95,7 +95,11 @@ export function quoteIsVerbatim(quote: string, article: string): boolean {
     .filter((piece) => piece.length > 0);
   if (pieces.length === 0) return false;
   // At least one piece must carry real content; a stray "and" proves nothing.
-  if (!pieces.some((piece) => piece.split(" ").length >= 4)) return false;
+  // Chinese and Japanese leave no spaces between words: there, ten characters.
+  const substantial = (piece: string) =>
+    piece.split(" ").length >= 4 ||
+    (/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(piece) && piece.length >= 10);
+  if (!pieces.some(substantial)) return false;
   return pieces.every((piece) => piece.length < 3 || haystack.includes(piece));
 }
 
@@ -117,19 +121,20 @@ export function mentions(quote: string, value: string): boolean {
  * and German — accents set aside, as `normalize` leaves them.
  */
 const levelWords: Record<Level, RegExp> = {
-  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]?s?|alts?|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|rics?|abondante?s?|abundante?s?|corsee?s?|charpentee?s?|encorpad[ao]s?|vollen?|viel(e[nrs]?)?|rich|riches?|richesse|noticeable|notables?|molt[ae]?s?|markante?[nrs]?|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?|magas|magasabb|eros|testes|bogat[aei]?|ridicat[aei]?|visok[aeiou]?|visoki[hm]?|vysok[a-z]*|vyss[a-z]*|pun(a|e|i|im|o|og)?|plny|plna|plne|wysok[a-z]*|pełn[a-z]*)\b|высок|повышенн|значительн|полнотел|насыщенн|висок|підвищен|повишен|плътн|повнотіл|насичен|υψηλ|πλουσι|εντον|მაღალ/,
-  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix(a|os|es)?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrig(e[mnrs]?)?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao]|geringe[mnrs]?|pauvres?|wenig|(saure|tannin|alkohol|korper)arm[a-z]*|alacsony|konnyu|keves|nizak|nisk[a-z]*|nizk[a-z]*|lagan[aio]?|lahk[a-z]*|lehk[a-z]*|lekk[a-z]*|scazut[aei]?|redus[aei]?|slab[a-z]*|nizs[a-z]*|chud[a-z]*)\b|низк|невысок|невисок|невелик|мягк|легк|низьк|ниск|(?<![а-яё])лек(а|о|и|ото)?(?![а-яё])|м.як|χαμηλ|ελαφρ|დაბალ|მსუბუქ/,
+  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]?s?|alts?|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|rics?|abondante?s?|abundante?s?|corsee?s?|charpentee?s?|encorpad[ao]s?|vollen?|viel(e[nrs]?)?|rich|riches?|richesse|noticeable|notables?|molt[ae]?s?|markante?[nrs]?|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?|magas|magasabb|eros|testes|bogat[aei]?|ridicat[aei]?|visok[aeiou]?|visoki[hm]?|vysok[a-z]*|vyss[a-z]*|pesant[ei]|alkoholstark[a-z]*|hoog|hoge|hogere|krachtige?|stevige?|volle|hog[at]?|fyllig[at]?|kraftig[at]?|høy[et]?|høj[et]?|fyldig[et]?|korkea[a-z]*|taytelai[a-z]*|yuksek|altua|pun(a|e|i|im|o|og)?|plny|plna|plne|wysok[a-z]*|pełn[a-z]*)\b|высок|повышенн|значительн|полнотел|насыщенн|висок|підвищен|повишен|плътн|повнотіл|насичен|υψηλ|πλουσι|εντον|მაღალ|高い|高め|豊か|強い|フルボディ|較高|较高|很高|浓郁|濃郁|饱满|飽滿|丰厚|豐厚/,
+  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix(a|os|es)?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrig(e[mnrs]?)?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao]|geringe[mnrs]?|pauvres?|wenig|(saure|tannin|alkohol|korper)arm[a-z]*|alacsony|konnyu|keves|nizak|nisk[a-z]*|nizk[a-z]*|lagan[aio]?|lahk[a-z]*|lehk[a-z]*|lekk[a-z]*|scazut[aei]?|redus[aei]?|slab[a-z]*|nizs[a-z]*|chud[a-z]*|laag|lage|lagere|weinig|lichte?|zachte?|lag[at]?|latt[a]?|mjuk[a]?|lav[et]?|lett[e]?|matala[a-z]*|alhai[a-z]*|dusuk|baxua)\b|низк|невысок|невисок|невелик|мягк|легк|низьк|ниск|(?<![а-яё])лек(а|о|и|ото)?(?![а-яё])|м.як|χαμηλ|ελαφρ|დაბალ|მსუბუქ|低い|低め|少な|穏やか|軽い|ライトボディ|較低|较低|清淡|轻盈|輕盈/,
   medium:
-    /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moyennement|mediamente|moderee?|moderad[ao]|moderadamente|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?|kozepes|srednj[a-z]*|stredn[a-z]*|sredni[a-z]*|mediu|medie)\b|средн|умеренн|середн|помірн|умерен|μετρι|μεσαι|საშუალო/,
+    /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moyennement|mediamente|moderee?|moderad[ao]|moderadamente|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?|kozepes|gemiddelde?|matige?|medel|mellan|middels|mellem|keskitas[a-z]*|keski[a-z]*|orta|ertain[a-z]*|srednj[a-z]*|stredn[a-z]*|sredni[a-z]*|mediu|medie)\b|средн|умеренн|середн|помірн|умерен|μετρι|μεσαι|საშუალო|中程度|ミディアム|中等|適度|适中|適中/,
 };
 
 const fieldWords: Record<"acidity" | "alcohol" | "body" | "tannin", RegExp> = {
   acidity:
-    /acid|saure|кислот|киселин|\bsav(tartalm[a-z]*|ass[a-z]*|as|asabb|ak|a|ai[a-z]*)?\b|kiselin|kislin|kysel|kwas|aciditat|οξυτητ|მჟავ/,
-  alcohol: /alcohol|alkohol|alcool|alcol|graduaci|алкогол|алкохол|спирт|αλκοολ|ალკოჰოლ/,
-  body: /bod(y|ied)|weight|structure|cuerpo|corps|corpo|\bcos\b|korper|struttur|estructur|estrutur|struktur|\bcorsee?s?\b|charpentee?s?|encorpad[ao]s?|тел[оа]|телесн|полнотел|структур|\btestes[a-z]*|\btestu\b|\btijel[a-z]*|\btel(o|a|esa|esn[a-z]*)\b|\bcorp(ul)?\b|ciał|тяло|тіл|σωμα|სხეულ/,
+    /acid|saure|кислот|киселин|\bsav(tartalm[a-z]*|ass[a-z]*|as|asabb|ak|a|ai[a-z]*)?\b|kiselin|kislin|kysel|kwas|aciditat|οξυτητ|მჟავ|zuur|\bsyr(a|lig[a-z]*|ahalt|or)\b|\bsyre|happo|hapo|asid|asit|azido|酸/,
+  alcohol:
+    /alcohol|alkohol|alcool|alcol|graduaci|алкогол|алкохол|спирт|αλκοολ|ალკოჰოლ|\balkol|アルコール|酒精/,
+  body: /bod(y|ied)|weight|mittelschwer|structure|cuerpo|corps|corpo|\bcos\b|korper|struttur|estructur|estrutur|struktur|\bcorsee?s?\b|charpentee?s?|encorpad[ao]s?|тел[оа]|телесн|полнотел|структур|\btestes[a-z]*|\btestu\b|\btijel[a-z]*|\btel(o|a|esa|esn[a-z]*)\b|\bcorp(ul)?\b|ciał|тяло|тіл|σωμα|სხეულ|structuur|corpus|kropp|\bkrop\b|fyld|runko|govde|gorputz|ボディ|骨格|酒体|酒體/,
   tannin:
-    /tann?in|tannic|tanic|tannique|gerbstoff|танин|танін|дубильн|csersav|cserzoanyag|garbnik|trislovin|τανιν|ταννιν|ტანინ/,
+    /tann?in|tannic|tanic|tannique|gerbstoff|танин|танін|дубильн|csersav|cserzoanyag|garbnik|trislovin|τανιν|ταννιν|ტანინ|\btanen|タンニン|渋|单宁|單寧/,
 };
 
 /**
@@ -137,11 +142,11 @@ const fieldWords: Record<"acidity" | "alcohol" | "body" | "tannin", RegExp> = {
  * sweet wines named by how they are made (late harvest, noble rot, passito).
  */
 const sweetnessWords: Record<Sweetness, RegExp> = {
-  dry: /\b(dry|seco|secos|seca|secas|sec|secs|seche|seches|trocken[a-z]*|secco|secchi|secca|secche|szaraz|suh[aoie]?|suv[aoi]?|seci|seaca|such[aey]|suche|wytrawn[a-z]*)\b|(?<![а-яёіїє])сух|ξηρ|მშრალ/,
+  dry: /\b(dry|seco|secos|seca|secas|sec|secs|seche|seches|trocken[a-z]*|secco|secchi|secca|secche|szaraz|suh[aoie]?|suv[aoi]?|seci|seaca|such[aey]|suche|wytrawn[a-z]*|droge?|torr[at]?|tørr?[et]?|kuiva[a-z]*|sek|lehor[a-z]*)\b|(?<![а-яёіїє])сух|ξηρ|მშრალ|辛口|干型|干白|干红|乾型/,
   medium:
-    /\b(off-dry|medium[- ](sweet|dry)|semi-?(sweet|dry)|semi-?seco|semi-?dulce|demi-sec|halbtrocken|halbsu(ss|ß)[a-z]*|lieblich|feinherb|abboccato|amabile|meio-seco|felszaraz|feledes|polusuh[a-z]*|polsuh[a-z]*|polsuch[a-z]*|polosuch[a-z]*|połwytrawn[a-z]*|połsłodk[a-z]*|demisec[a-z]*|demidulc[a-z]*)\b|полусух|полусладк|напівсух|напівсолодк|ημιξηρ|ημιγλυκ/,
+    /\b(off-dry|medium[- ](sweet|dry)|semi-?(sweet|dry)|semi-?seco|semi-?dulce|demi-sec|halbtrocken|halbsu(ss|ß)[a-z]*|lieblich|feinherb|abboccato|amabile|meio-seco|felszaraz|feledes|polusuh[a-z]*|polsuh[a-z]*|polsuch[a-z]*|polosuch[a-z]*|połwytrawn[a-z]*|połsłodk[a-z]*|demisec[a-z]*|demidulc[a-z]*|halfdroog|halfzoet|halvtorr[at]?|halvsot[a]?|halvtørr?[et]?|puolikuiva[a-z]*|puolimakea[a-z]*)\b|полусух|полусладк|напівсух|напівсолодк|ημιξηρ|ημιγλυκ|やや甘口|半甘口|半辛口|半干|半甜/,
   sweet:
-    /\b(sweet|sweeter|dessert|late[- ]harvest|botryti[sz]ed|noble rot|dulce|dulces|doux|douce|liquoreux|liquoreuse|moelleux|su(ss|ß)[a-z]*|edelsu[a-z]*|dolce|dolci|passito|doce|doces|licoroso|vendanges? tardives?|vendimia tardia|podredumbre noble|pourriture noble|edes|slatk[a-z]*|sladk[a-z]*|dulc[ei]|słodk[a-z]*|desertn[a-z]*)\b|(?<![а-яёіїє])сладк|солодк|десертн|ликерн|γλυκ|ტკბილ/,
+    /\b(sweet|sweeter|dessert|late[- ]harvest|botryti[sz]ed|noble rot|dulce|dulces|doux|douce|liquoreux|liquoreuse|moelleux|su(ss|ß)[a-z]*|edelsu[a-z]*|dolce|dolci|passito|doce|doces|licoroso|vendanges? tardives?|vendimia tardia|podredumbre noble|pourriture noble|edes|slatk[a-z]*|sladk[a-z]*|dulc[ei]|słodk[a-z]*|desertn[a-z]*|zoete?|dessertwijn[a-z]*|sot[a]?|søte?|søde?|dessertvin[a-z]*|makea[a-z]*|tatl[ıi]|gozo[a-z]*)\b|(?<![а-яёіїє])сладк|солодк|десертн|ликерн|γλυκ|ტკბილ|甘口|甜型|甜酒|デザートワイン|貴腐/,
 };
 
 function toSweetness(value: unknown): SweetnessRange | null {
@@ -313,8 +318,12 @@ const countryStems: Readonly<Record<string, readonly string[]>> = {
     "андалус",
   ],
   FR: ["franci", "frant", "francouz", "francusk", "франц", "бургунд", "burgundi", "burgundsk"],
-  GE: ["грузи", "грузин", "кахет", "საქართველ", "კახეთ"],
+  GE: ["georgi", "грузи", "грузин", "кахет", "საქართველ", "კახეთ"],
+  HU: ["hongaar", "hungar", "magyar", "madar", "wegier", "венгер", "угорськ", "унгар"],
   IT: [
+    "italiaans",
+    "italiensk",
+    "italialai",
     "włoch",
     "włosk",
     "italsk",
@@ -328,7 +337,7 @@ const countryStems: Readonly<Record<string, readonly string[]>> = {
     "умбри",
     "венето",
   ],
-  PT: ["portugal", "portugalsk", "португал", "мадеир", "madeir"],
+  PT: ["bairrad", "portugal", "portugalsk", "португал", "мадеир", "madeir"],
 };
 
 /** The quote says the country, in the article's language or in English. */

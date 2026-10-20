@@ -1,19 +1,23 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
+import { matchKey } from "./appellation-names";
 import { figureLanguages, type RegionFigure, regionFigures } from "./region-figures";
 import { wikimedia } from "./wikimedia";
 
 /**
  * Each registered name's planted area and production, from the infobox of
  * the Wikipedia articles that already describe it (its summaries' sources),
- * in English, French, Spanish and German. Where several give one, the most
- * recent year wins; then French, English, Spanish, German.
+ * in English, French, Spanish and German; and the production an Italian
+ * article lists by province and season. Where several give one, the most
+ * recent year wins; then French, English, Spanish, German, Italian.
  *
  * Usage: pnpm kb:fetch-region-figures
  */
 type Entry = {
+  countryCode: string;
   id: string;
+  name: string;
   summaries: Record<string, { translated?: boolean; url?: string }>;
   wikidataId: string | null;
 };
@@ -68,6 +72,43 @@ for (let start = 0; start < items.length; start += 50) {
   }
 }
 
+// And the Italian articles that list a production by province and season,
+// found by that list's heading: one titled exactly as an Italian name is
+// registered («Lugana», «Marino (vino)») describes that name — not one of its
+// types («Montescudaio bianco»), whose volume is only part of the name's.
+const italian = new Map<string, string>(
+  entries
+    .filter((entry) => entry.countryCode === "IT")
+    .map((entry) => [matchKey(entry.name), entry.id]),
+);
+const italianTitle = (title: string) =>
+  matchKey(title.replace(/\s+\((?:vino|DOCG?)\)$|\s+DOCG?$/, ""));
+let offset: number | undefined = 0;
+while (offset !== undefined) {
+  const response: {
+    continue?: { sroffset: number };
+    query?: { search?: { title: string }[] };
+  } = await wikimedia(
+    `https://it.wikipedia.org/w/api.php?${new URLSearchParams({
+      action: "query",
+      format: "json",
+      list: "search",
+      sroffset: String(offset),
+      srlimit: "500",
+      srprop: "",
+      srsearch: 'insource:"Provincia, stagione, volume"',
+    })}`,
+  );
+  for (const { title } of response.query?.search ?? []) {
+    const id = italian.get(italianTitle(title));
+    if (id === undefined) continue;
+    const titles = wanted.get("it") ?? new Map<string, string[]>();
+    titles.set(title, [...new Set([...(titles.get(title) ?? []), id])]);
+    wanted.set("it", titles);
+  }
+  offset = response.continue?.sroffset;
+}
+
 type Found = RegionFigure & { language: string; sourceUrl: string };
 const found = new Map<string, { planted: Found[]; production: Found[] }>();
 
@@ -109,6 +150,10 @@ for (const [language, titles] of wanted) {
       if (figures === null) continue;
       const sourceUrl = `https://${language}.wikipedia.org/wiki/${encodeURIComponent(page.title.replaceAll(" ", "_"))}`;
       for (const id of titles.get(original) ?? []) {
+        // An Italian article's list is its subject's: a type's article
+        // («Montescudaio bianco»), even when the name's item links it, gives
+        // only part of the name's volume.
+        if (language === "it" && italian.get(italianTitle(page.title)) !== id) continue;
         const into = found.get(id) ?? { planted: [], production: [] };
         if (figures.planted !== null)
           into.planted.push({ ...figures.planted, language, sourceUrl });
@@ -122,7 +167,7 @@ for (const [language, titles] of wanted) {
   }
 }
 
-const preference = ["fr", "en", "es", "de"];
+const preference = ["fr", "en", "es", "de", "it"];
 const yearOf = (figure: Found) => Number(/(\d{4})\D*$/.exec(figure.year ?? "")?.[1] ?? 0);
 const best = (figures: Found[]) =>
   [...figures].sort(

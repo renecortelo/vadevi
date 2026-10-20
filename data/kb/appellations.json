@@ -1616,6 +1616,15 @@
         8.5,
         5.2
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 9836,
+        "quote": "Potenza (1996/97) 9835,6",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Aglianico_del_Vulture",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -36145,6 +36154,15 @@
         12.6,
         9.4
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 12212,
+        "quote": "Pesaro (1996/97) 12211,87",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Bianchello_del_Metauro",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -39505,6 +39523,15 @@
         13.5,
         10.4
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1742,
+        "quote": "Livorno (1996/97) 1741,56",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Bolgheri_Sassicaia",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -40957,6 +40984,15 @@
         8.7,
         4.5
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1000,
+        "quote": "Brescia (1996/97) 999,6",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Botticino_(vino)",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -49230,6 +49266,15 @@
         14.7,
         11.6
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 177,
+        "quote": "Oristano (1996/97) 177,24",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Campidano_di_Terralba",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -56600,6 +56645,15 @@
         7.9,
         3.7
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1155,
+        "quote": "Brescia (1996/97) 1155,14",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Cellatica_(vino)",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -57552,6 +57606,15 @@
         9.4,
         5.7
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 634,
+        "quote": "Roma (1995/96) 634,47",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Cesanese_di_Olevano_Romano",
+        "year": "1995/96"
+      }
     }
   },
   {
@@ -66644,6 +66707,15 @@
         12.6,
         9.1
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 27471,
+        "quote": "Roma (1995/96) 27470,5",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Colli_Lanuvini",
+        "year": "1995/96"
+      }
     }
   },
   {
@@ -111448,6 +111520,15 @@
         10.3,
         6.8
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 24659,
+        "quote": "Ascoli Piceno (1996/97) 24659,36",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Falerio_(vino)",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -119671,6 +119752,15 @@
         8.2,
         3.9
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 76349,
+        "quote": "Vicenza (1996/97) 76349,12",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Gambellara_(vino)",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -122559,6 +122649,15 @@
         11.8,
         8.6
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 411,
+        "quote": "Bari (1995/96) 411,0",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Gioia_del_Colle_(vino)",
+        "year": "1995/96"
+      }
     }
   },
   {
@@ -140730,6 +140829,15 @@
         8.6,
         4.3
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 18907,
+        "quote": "Mantova (1996/97) 18907,0",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Lambrusco_Mantovano",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -141046,6 +141154,15 @@
         9.4,
         5
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 82307,
+        "quote": "Modena (1996/97) 82307,0",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Lambrusco_di_Sorbara",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -150748,6 +150865,15 @@
         12.1,
         8.9
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 7083,
+        "quote": "Brindisi (1996/97) 7083,02",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Locorotondo_(vino)",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -152062,6 +152188,15 @@
         8.5,
         4.3
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 38000,
+        "quote": "Brescia (1996/97) 31843,18; Verona (1996/97) 6157,31",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Lugana",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -154109,6 +154244,15 @@
         16.3,
         13.3
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 323,
+        "quote": "Messina (1995/96) 323,0",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Malvasia_delle_Lipari",
+        "year": "1995/96"
+      }
     }
   },
   {
@@ -157243,6 +157387,15 @@
         12.6,
         9.1
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 48263,
+        "quote": "Roma (1995/96) 48262,8",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Marino_(vino)",
+        "year": "1995/96"
+      }
     }
   },
   {
@@ -166982,6 +167135,15 @@
         9,
         5.4
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 4627,
+        "quote": "Perugia (1996/97) 4626,78",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Montefalco_(vino)",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -170500,6 +170662,15 @@
         12.3,
         9.2
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 137,
+        "quote": "Cagliari (1996/97) 136,5",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Moscato_di_Sardegna",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -185129,6 +185300,15 @@
         8.4,
         4.1
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 15439,
+        "quote": "Piacenza (1996/97) 15439,0",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Ortrugo_dei_Colli_Piacentini",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -201337,6 +201517,15 @@
         13.8,
         10.6
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 8744,
+        "quote": "Brindisi (1996/97) 231,0; Taranto (1996/97) 8512,84",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Primitivo_di_Manduria",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -217844,6 +218033,15 @@
         10.8,
         7.4
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 21255,
+        "quote": "Ancona (1996/97) 5614,0; Ascoli Piceno (1996/97) 12267,43; Macerata (1996/97) 3373,13",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rosso_Piceno",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -218166,6 +218364,15 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 970,
+        "quote": "Siena (1996/97) 970,11",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rosso_di_Montalcino",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -218315,6 +218522,15 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 2941,
+        "quote": "Siena (1996/97) 2941,12",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rosso_di_Montepulciano",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -228668,6 +228884,15 @@
         8.5,
         4.3
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 3070,
+        "quote": "Brescia (1996/97) 3069,5",
+        "sourceUrl": "https://it.wikipedia.org/wiki/San_Martino_della_Battaglia_(vino)",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -240305,6 +240530,15 @@
         14.5,
         11.3
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 7337,
+        "quote": "Brindisi (1996/97) 6272,91; Lecce (1996/97) 1064,5",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Squinzano_(vino)",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -273728,6 +273962,15 @@
         12.3,
         9.2
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 28061,
+        "quote": "Cagliari (1996/97) 19083,54; Oristano (1996/97) 868,92; Sassari (1996/97) 8108,98",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vermentino_di_Sardegna",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -273878,6 +274121,15 @@
         14.7,
         11.7
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1039,
+        "quote": "Oristano (1996/97) 1039,22",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vernaccia_di_Oristano",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -277401,6 +277653,15 @@
         8.2,
         4.8
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1085,
+        "quote": "Firenze (1996/97) 609,55; Siena (1996/97) 475,58",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vin_Santo_del_Chianti_Classico",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -277555,6 +277816,15 @@
         9.7,
         6
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 68,
+        "quote": "Prato (1996/97) 67,91",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vin_Santo_di_Carmignano",
+        "year": "1996/97"
+      }
     }
   },
   {
@@ -284607,6 +284877,15 @@
         10.4,
         6.8
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 66,
+        "quote": "Roma (1995/96) 65,95",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Zagarolo_(vino)",
+        "year": "1995/96"
+      }
     }
   },
   {

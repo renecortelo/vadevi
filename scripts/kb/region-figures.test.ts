@@ -44,3 +44,31 @@ describe("a region's infobox", () => {
     expect(regionFigures(town, "en")).toBeNull();
   });
 });
+
+describe("an Italian article's production list", () => {
+  const article = (lines: string) =>
+    `{{Denominazione vino\n|Denominazione = DOC\n}}\nIl '''Lambrusco di Sorbara''' è un vino DOC.\n\n== Produzione ==\n''Provincia, stagione, volume in [[ettolitro|ettolitri]]''\n${lines}\n== Voci correlate ==\n* [[Modena]] (2000/01) 1,0\n`;
+
+  it("gives the latest season's volume, summed over its provinces, with its lines", () => {
+    const figures = regionFigures(
+      article(
+        "* Modena  (1995/96)  63063,0 \n* Modena  (1996/97)  82307,0 \n* Reggio Emilia  (1996/97)  1200,5 ",
+      ),
+      "it",
+    );
+    expect(figures?.production).toEqual({
+      amount: 83508,
+      quote: "Modena (1996/97) 82307,0; Reggio Emilia (1996/97) 1200,5",
+      year: "1996/97",
+    });
+    expect(figures?.planted).toBeNull();
+  });
+
+  it("reads nothing from an article that is not a wine's", () => {
+    const town = article("* Modena  (1996/97)  82307,0").replace(
+      "{{Denominazione vino",
+      "{{Comune",
+    );
+    expect(regionFigures(town, "it")).toBeNull();
+  });
+});

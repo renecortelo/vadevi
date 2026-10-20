@@ -362,6 +362,32 @@ describe("a grape read in its own language", () => {
   });
 });
 
+describe("a grape read in Dutch, Swedish, Turkish and Japanese", () => {
+  const level = (field: "acidity" | "alcohol", quote: string, value: string) =>
+    validateExtraction({ [field]: { quote, value } }, quote, [])[field];
+
+  it("reads their words for a level", () => {
+    expect(level("acidity", "De zuurgraad is relatief hoog en de wijn is fris.", "high")).toBe(
+      "high",
+    );
+    expect(level("acidity", "Tsolikouri har hög syra och ger ett aromatiskt vin.", "high")).toBe(
+      "high",
+    );
+    expect(level("alcohol", "Damakta düşük alkollü ve yüksek asitlidir.", "low")).toBe("low");
+  });
+
+  it("takes a Japanese sentence, written without spaces, as a quote of its own", () => {
+    const quote = "白ワインおよび強い酸味を生かしたスプマンテが生産されている。";
+    expect(quoteIsVerbatim(quote, `グレコ。${quote}`)).toBe(true);
+    expect(level("acidity", quote, "high")).toBe("high");
+    expect(quoteIsVerbatim("強い酸味", `グレコ。${quote}`)).toBe(false);
+  });
+
+  it("does not take the grape Syrah for the Swedish word for acid", () => {
+    expect(level("acidity", "Syrah ger kraftiga viner med mycket färg.", "high")).toBeNull();
+  });
+});
+
 describe("an origin read by hand", () => {
   it("knows a country in a declined form or another script, and only that country", () => {
     expect(
@@ -372,6 +398,9 @@ describe("an origin read by hand", () => {
     expect(
       originNamed("Dolcetto – czerwony szczep winorośli, pochodzący z Włoch.", "ES", "pl"),
     ).toBe(false);
+    expect(
+      originNamed("Door DNA-onderzoek is gebleken dat het van Hongaarse afkomst is.", "HU", "nl"),
+    ).toBe(true);
     // A country after an elided article is still a word of its own.
     expect(originNamed("Le cépage provient du nord de l'Italie.", "IT", "fr")).toBe(true);
   });
