@@ -5,6 +5,8 @@ import { leadIsAboutWine } from "./appellation-names";
 import {
   type GrapeEntry,
   normalize,
+  originNamed,
+  quoteIsVerbatim,
   slug,
   summaryOf,
   validateExtraction,
@@ -116,7 +118,15 @@ const handReadings = (
     readings: Record<
       string,
       {
-        field: "acidity" | "alcohol" | "aromas" | "body" | "pairings" | "sweetness" | "tannin";
+        field:
+          | "acidity"
+          | "alcohol"
+          | "aromas"
+          | "body"
+          | "origin"
+          | "pairings"
+          | "sweetness"
+          | "tannin";
         lang: string;
         quote: string;
         value: string | string[];
@@ -256,6 +266,35 @@ for (const qid of index) {
       });
       continue;
     }
+    // An origin read by hand: the sentence stands in the article and says
+    // the country — its name, its adjective or a region wholly within it.
+    if (reading.field === "origin") {
+      const code = String(reading.value);
+      if (!quoteIsVerbatim(reading.quote, source.article)) {
+        rejected.push({
+          field: "origin",
+          grape: `${raw.labels.en ?? qid} (by hand)`,
+          reason: "quote not found in the article",
+          value: code,
+        });
+      } else if (!originNamed(reading.quote, code, reading.lang)) {
+        rejected.push({
+          field: "origin",
+          grape: `${raw.labels.en ?? qid} (by hand)`,
+          reason: "country not named in the quote",
+          value: code,
+        });
+      } else if (result.origin === null) {
+        result.origin = code;
+        result.evidence.push({
+          field: "origin",
+          quote: reading.quote,
+          value: code,
+          ...(source.url === undefined ? {} : { sourceUrl: source.url }),
+        });
+      }
+      continue;
+    }
     const found = validateExtraction(
       {
         [reading.field]: {
@@ -286,7 +325,10 @@ for (const qid of index) {
   const names: Record<string, string> = {};
   // Some languages write a variety in lower case in running text ("la
   // garnacha"); as the name on a card it takes a capital.
-  for (const [locale, label] of Object.entries(raw.labels)) {
+  for (const [locale, given] of Object.entries(raw.labels)) {
+    // An article's title as a label: «Uva monastrell», «uva Pinot Noir» name
+    // the variety with the word for grape in front, which a card leaves off.
+    const label = given.replace(/^uva\s+/i, "");
     names[locale] =
       label === label.toLowerCase() ? label.charAt(0).toUpperCase() + label.slice(1) : label;
   }

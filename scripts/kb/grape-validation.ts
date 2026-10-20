@@ -162,6 +162,156 @@ const formerNames: Record<string, string[]> = {
   TR: ["Turkey"],
 };
 
+/**
+ * How an article in any of the library's languages may say a country, for an
+ * origin read by hand: the country's own name (in English and in the
+ * article's language), its adjective («autóctona española», «di origine
+ * spagnola»), or a region that lies wholly within it («autòctona de
+ * Catalunya», «originaire du Languedoc»). Written as `normalize` writes text.
+ */
+const countryWords: Readonly<Record<string, readonly string[]>> = {
+  BG: ["bulgaro", "bulgara", "bulgare", "bulgarisch", "bulgarische", "bulgaars", "bulgarian"],
+  ES: [
+    "espanol",
+    "espanola",
+    "espanyol",
+    "espanyola",
+    "espagnol",
+    "espagnole",
+    "spanisch",
+    "spanische",
+    "spanischen",
+    "spagnolo",
+    "spagnola",
+    "spaans",
+    "spaanse",
+    "espanhol",
+    "espanhola",
+    "spanish",
+    "catalunya",
+    "cataluna",
+    "catalonia",
+    "catalogne",
+    "katalonien",
+    "catalogna",
+    "galicia",
+    "galice",
+    "galizien",
+    "galizia",
+    "galicia",
+    "andalucia",
+    "andalusia",
+    "andalousie",
+    "andalusien",
+    "rioja",
+  ],
+  FR: [
+    "frances",
+    "francesa",
+    "francais",
+    "francaise",
+    "franzosisch",
+    "franzosische",
+    "francese",
+    "frans",
+    "franse",
+    "french",
+    "languedoc",
+    "charentes",
+    "burgundy",
+    "bourgogne",
+    "burgund",
+    "borgogna",
+    "alsace",
+    "elsass",
+    "alsazia",
+    "angers",
+  ],
+  GB: ["uk", "british", "britanico", "britannique", "britisch", "britannico", "brits"],
+  GR: [
+    "griego",
+    "griega",
+    "grec",
+    "grecque",
+    "griechisch",
+    "griechische",
+    "greco",
+    "greca",
+    "grieks",
+    "grego",
+    "grega",
+    "greek",
+  ],
+  IT: [
+    "italiano",
+    "italiana",
+    "italien",
+    "italienne",
+    "italienisch",
+    "italienische",
+    "italiaans",
+    "italian",
+    "sicilia",
+    "sicily",
+    "sicile",
+    "sizilien",
+    "siciliano",
+    "siciliana",
+    "sardegna",
+    "sardinia",
+    "trentino",
+    "toscana",
+    "tuscany",
+    "toscane",
+    "piemonte",
+    "piedmont",
+    "piemont",
+  ],
+  PT: [
+    "portugues",
+    "portuguesa",
+    "portugais",
+    "portugaise",
+    "portugiesisch",
+    "portugiesische",
+    "portoghese",
+    "portugees",
+    "portuguese",
+    "douro",
+  ],
+  US: [
+    "american",
+    "americano",
+    "americain",
+    "amerikanisch",
+    "california",
+    "californie",
+    "kalifornien",
+  ],
+};
+
+/** The quote says the country, in the article's language or in English. */
+export function originNamed(quote: string, code: string, lang: string): boolean {
+  const body = ` ${normalize(quote).replace(/[^a-z0-9]+/g, " ")} `;
+  const names = [
+    ...new Set(
+      [lang, "en"].flatMap((language) => {
+        const name = new Intl.DisplayNames([language], { type: "region" }).of(code);
+        return name === undefined || name === code ? [] : [name];
+      }),
+    ),
+    ...(formerNames[code] ?? []),
+    ...(countryWords[code] ?? []),
+  ];
+  return names.some((name) =>
+    body.includes(
+      ` ${normalize(name)
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim()} `,
+    ),
+  );
+}
+
 function toLevel(value: unknown): Level | null {
   if (typeof value !== "string") return null;
   const text = normalize(value);

@@ -1,5 +1,5 @@
 {
-  "$comment": "Names for grapes in the app's languages where Wikidata has no label in that language, given by hand. Dutch writes varieties by their international name. A name here never replaces a Wikidata label.",
+  "$comment": "Names for grapes in the app's languages where Wikidata has no label in that language, given by hand. Dutch writes varieties by their international name, and so does every language for a cultivar whose name is a proper name — an American variety (Concord, Delaware, Niagara, Campbell Early), a crossing (Rondo, Cardinal) or a Japanese or Georgian one (Koshu, Usakhelauri): the name the variety is registered and sold under. A name here never replaces a Wikidata label.",
   "grapes": {
     "Q3064821": {
       "nl": "Sumoll"
@@ -103,6 +103,48 @@
     "Q1651827": {
       "ca": "Moscatell d'Alexandria",
       "pt-PT": "Moscatel de Alexandria"
+    },
+    "Q7901690": {
+      "nl": "Usakhelauri"
+    },
+    "Q975110": {
+      "es": "Koshu",
+      "ca": "Koshu",
+      "it": "Koshu",
+      "pt-PT": "Koshu"
+    },
+    "Q730314": {
+      "es": "Delaware",
+      "ca": "Delaware",
+      "it": "Delaware",
+      "nl": "Delaware",
+      "pt-PT": "Delaware"
+    },
+    "Q393047": {
+      "es": "Concord",
+      "ca": "Concord",
+      "it": "Concord"
+    },
+    "Q392699": {
+      "es": "Niagara",
+      "ca": "Niagara",
+      "fr": "Niagara",
+      "it": "Niagara"
+    },
+    "Q17990385": {
+      "es": "Campbell Early",
+      "ca": "Campbell Early",
+      "fr": "Campbell Early",
+      "it": "Campbell Early",
+      "nl": "Campbell Early",
+      "pt-PT": "Campbell Early"
+    },
+    "Q116985": {
+      "es": "Rondo",
+      "pt-PT": "Rondo"
+    },
+    "Q858435": {
+      "nl": "Cardinal"
     }
   }
 }

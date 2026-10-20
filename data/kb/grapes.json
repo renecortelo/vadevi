@@ -609,6 +609,12 @@
         "quote": "Sie erbringt hellrote, nicht zu alkoholreiche, filigrane Rotweine mit erfrischender Säure und an rote Früchte erinnernde Aromen.",
         "value": "red fruit",
         "sourceUrl": "https://de.wikipedia.org/wiki/Sumoll"
+      },
+      {
+        "field": "origin",
+        "quote": "Sumoll es un tipo de uva (Vitis vinifera) autóctona española.",
+        "value": "ES",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Sumoll"
       }
     ],
     "id": "sumoll",
@@ -622,7 +628,7 @@
       "pt": "Sumoll",
       "nl": "Sumoll"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -889,6 +895,12 @@
         "field": "sweetness",
         "quote": "Its fresh, citrus notes are described as dry, tart, and 'lip-stinging' making it suited for accompanying seafood.",
         "value": "dry"
+      },
+      {
+        "field": "origin",
+        "quote": "Originaire du Languedoc, il se présente en blanc, noir et gris.",
+        "value": "FR",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Picpoul"
       }
     ],
     "id": "piquepoul",
@@ -902,7 +914,7 @@
       "nl": "Picpoul",
       "pt": "Piquepoul"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [
       "seafood"
     ],
@@ -1160,6 +1172,12 @@
         "quote": "Da der natürliche Zuckergehalt der Beeren hoch ist, wird sie in Frankreich vor allem in Süßweinen des Roussillon",
         "value": "sweet",
         "sourceUrl": "https://de.wikipedia.org/wiki/Grenache_Gris"
+      },
+      {
+        "field": "origin",
+        "quote": "Die Weißweinsorte Grenache Gris stammt aus Spanien (sie heißt dort Garnacha Roja), ist aber auch in Australien, Bulgarien, Frankreich, Portugal und Südafrika zu Hause.",
+        "value": "ES",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Grenache_Gris"
       }
     ],
     "id": "garnacha-roja",
@@ -1173,7 +1191,7 @@
       "pt": "Garnacha Roja",
       "nl": "Garnacha roja"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 3,
     "regions": [
@@ -2470,6 +2488,12 @@
         "quote": "una acidez total media-baja",
         "value": "medium",
         "sourceUrl": "https://es.wikipedia.org/wiki/Treixadura"
+      },
+      {
+        "field": "origin",
+        "quote": "La treixadura es una uva blanca autóctona de Galicia,​ España, aunque también se encuentra en Portugal.",
+        "value": "ES",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Treixadura"
       }
     ],
     "id": "treixadura",
@@ -2483,7 +2507,7 @@
       "pt": "Treixadura",
       "nl": "Treixadura"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -3582,6 +3606,12 @@
         "quote": "As a varietal, Baga produces tannic wines with high acidity.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Baga_(grape)"
+      },
+      {
+        "field": "origin",
+        "quote": "Ist eine alte autochthone Sorte aus Portugal.",
+        "value": "PT",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Baga_(Rebsorte)"
       }
     ],
     "id": "baga",
@@ -3595,7 +3625,7 @@
       "pt": "Baga",
       "nl": "Baga"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -4055,6 +4085,12 @@
         "quote": "La variété présente des tanins abondants et souples",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Trincadeira"
+      },
+      {
+        "field": "origin",
+        "quote": "Die Sorte stammt aus Portugal.",
+        "value": "PT",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Trincadeira"
       }
     ],
     "id": "tinta-amarela",
@@ -4068,7 +4104,7 @@
       "nl": "Trincadeira",
       "pt": "Trincadeira"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -4284,6 +4320,12 @@
         "quote": "Reinsortig ausgebaute Weine sind farbkräftige, fruchtigfrische Rotweine oder Roséweine",
         "value": "still",
         "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
+      },
+      {
+        "field": "origin",
+        "quote": "Autochthone Rotweinsorte aus Portugal.",
+        "value": "PT",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
       }
     ],
     "id": "alfrocheiro-preto",
@@ -4297,7 +4339,7 @@
       "nl": "Alfrocheiro Preto",
       "pt": "Alfrocheiro Preto"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 7,
     "regions": [
@@ -4525,6 +4567,12 @@
         "quote": "de vins tranquilles et secs du Douro et du Dão",
         "value": "dry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
+      },
+      {
+        "field": "origin",
+        "quote": "Die Rotweinsorte ‘Touriga Franca’ ist eine natürliche Kreuzung der Sorten ‘Marufo’ × ‘Touriga Nacional’ und ist eine authochtone Rebsorte aus Portugal.",
+        "value": "PT",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Touriga_Franca"
       }
     ],
     "id": "touriga-francesa",
@@ -4538,7 +4586,7 @@
       "nl": "Touriga Franca",
       "pt": "Touriga Francesa"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 7,
     "regions": [
@@ -6015,6 +6063,12 @@
         "quote": "Les vins blancs sont d'une couleur jaune paille un peu verdâtre, moyennement alcoolique.",
         "value": "medium",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Cortese_(c%C3%A9page)"
+      },
+      {
+        "field": "origin",
+        "quote": "Il provient du nord de l’Italie.",
+        "value": "IT",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Cortese_(c%C3%A9page)"
       }
     ],
     "id": "cortese",
@@ -6028,7 +6082,7 @@
       "nl": "Cortese",
       "pt": "Cortese"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "seafood",
       "fish"
@@ -8064,7 +8118,7 @@
     "id": "mourvedre",
     "names": {
       "en": "Mourvèdre",
-      "es": "Uva monastrell",
+      "es": "Monastrell",
       "ca": "Monestrell",
       "fr": "Mourvèdre",
       "de": "Mourvèdre",
@@ -10024,7 +10078,8 @@
       "fr": "Usakhelauri",
       "de": "Usakhelauri",
       "it": "Usakhelauri",
-      "pt": "Usakhelauri"
+      "pt": "Usakhelauri",
+      "nl": "Usakhelauri"
     },
     "origin": "GE",
     "pairings": [],
@@ -10301,7 +10356,11 @@
       "en": "Kōshū",
       "fr": "Koshu",
       "de": "Kōshū",
-      "nl": "Koshu"
+      "nl": "Koshu",
+      "es": "Koshu",
+      "ca": "Koshu",
+      "it": "Koshu",
+      "pt": "Koshu"
     },
     "origin": null,
     "pairings": [
@@ -10418,7 +10477,12 @@
     "names": {
       "en": "Delaware",
       "fr": "Delaware",
-      "de": "Delaware"
+      "de": "Delaware",
+      "es": "Delaware",
+      "ca": "Delaware",
+      "it": "Delaware",
+      "nl": "Delaware",
+      "pt": "Delaware"
     },
     "origin": "US",
     "pairings": [],
@@ -10548,7 +10612,10 @@
       "fr": "Concord",
       "de": "Concord",
       "nl": "Concord",
-      "pt": "Concord"
+      "pt": "Concord",
+      "es": "Concord",
+      "ca": "Concord",
+      "it": "Concord"
     },
     "origin": "US",
     "pairings": [],
@@ -10703,7 +10770,11 @@
       "en": "Niagara",
       "de": "Niagara",
       "nl": "Niagara",
-      "pt": "Uva niagara"
+      "pt": "Niagara",
+      "es": "Niagara",
+      "ca": "Niagara",
+      "fr": "Niagara",
+      "it": "Niagara"
     },
     "origin": "US",
     "pairings": [],
@@ -10816,7 +10887,13 @@
     "id": "campbell-early",
     "names": {
       "en": "Campbell Early",
-      "de": "Campbell Early"
+      "de": "Campbell Early",
+      "es": "Campbell Early",
+      "ca": "Campbell Early",
+      "fr": "Campbell Early",
+      "it": "Campbell Early",
+      "nl": "Campbell Early",
+      "pt": "Campbell Early"
     },
     "origin": null,
     "pairings": [],
@@ -11465,6 +11542,11 @@
         "quote": "Le cépage produit des vins très colorés mais de qualité ordinaire, manquant de corps.",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Ruby_cabernet"
+      },
+      {
+        "field": "origin",
+        "quote": "Ruby Cabernet is a cross between Cabernet Sauvignon and Carignan created in 1936 by Dr Harold Olmo at UC Davis in California.",
+        "value": "US"
       }
     ],
     "id": "ruby-cabernet",
@@ -11478,7 +11560,7 @@
       "nl": "Ruby Cabernet",
       "pt": "Ruby Cabernet"
     },
-    "origin": null,
+    "origin": "US",
     "pairings": [],
     "prominence": 5,
     "regions": [
@@ -12248,7 +12330,9 @@
       "fr": "Rondo",
       "de": "Rondo",
       "it": "Rondo",
-      "nl": "Rondo"
+      "nl": "Rondo",
+      "es": "Rondo",
+      "pt": "Rondo"
     },
     "origin": null,
     "pairings": [],
@@ -12970,7 +13054,7 @@
     "id": "pinot-noir",
     "names": {
       "en": "Pinot noir",
-      "es": "uva Pinot Noir",
+      "es": "Pinot Noir",
       "ca": "Pinot negre",
       "fr": "Pinot noir",
       "de": "Pinot noir",
@@ -14969,6 +15053,12 @@
         "quote": "Il peut être vinifié en vin blanc sec ou moelleux",
         "value": "dry-sweet",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Gewurztraminer_(c%C3%A9page)"
+      },
+      {
+        "field": "origin",
+        "quote": "La gewürztraminer (pronunciación en alemán: /ɡəˈvʏʁtstʁaˈmiːnɐ/) es una variedad de uva originaria de las frescas laderas alpinas del Trentino-Alto Adigio en el noreste de Italia, y su nombre deriva de la localidad de Tramin, en el Bajo Tirol.",
+        "value": "IT",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Gew%C3%BCrztraminer"
       }
     ],
     "id": "gewurztraminer",
@@ -14982,7 +15072,7 @@
       "nl": "Gewürztraminer",
       "pt": "Gewürztraminer"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "spicy dishes",
       "fresh cheese",
@@ -17974,7 +18064,7 @@
       "ca": "Panses sultanes",
       "fr": "Sultanine",
       "de": "Sultana",
-      "it": "Uva sultanina",
+      "it": "Sultanina",
       "nl": "Sultana",
       "pt": "Sultanina"
     },
@@ -25074,6 +25164,12 @@
         "quote": "Dona vins de graduació alcohòlica moderada amb aromes d'aranja i poma.",
         "value": "apple",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Macabeu_(ra%C3%AFm)"
+      },
+      {
+        "field": "origin",
+        "quote": "És una varietat autòctona de Catalunya que avui es conrea, sobretot, al Penedès, el Camp de Tarragona, el Rosselló, la Plana d'Utiel, Mallorca i a l'Empordà, a més de La Rioja, Navarra i Califòrnia.",
+        "value": "ES",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Macabeu_(ra%C3%AFm)"
       }
     ],
     "id": "macabeo",
@@ -25087,7 +25183,7 @@
       "nl": "Viura",
       "pt": "Macabeo"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 18,
     "regions": [
@@ -26009,6 +26105,12 @@
         "quote": "Dort erbringt die Rebe intensiv vollen, trockenen und tanninherben Wein",
         "value": "dry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Mavrud"
+      },
+      {
+        "field": "origin",
+        "quote": "Le Mavroud ou Mavrud (aussi appelé Kakcivala, Kacivela, Kausanskii, Karvouniaris, Marvud, Mavraki, Mavro, Mavrouli, Mavrostaphylo, Mavroudion, Mavrudi) est un vieux cépage de raisin noir originaire de Thrace (Bulgarie).",
+        "value": "BG",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Mavrud"
       }
     ],
     "id": "mavrud",
@@ -26022,7 +26124,7 @@
       "nl": "Mavrud",
       "pt": "Mavrud"
     },
-    "origin": null,
+    "origin": "BG",
     "pairings": [],
     "prominence": 17,
     "regions": [],
@@ -28697,6 +28799,12 @@
         "field": "sweetness",
         "quote": "in both dry and sweet versions",
         "value": "dry-sweet"
+      },
+      {
+        "field": "origin",
+        "quote": "Il est originaire des Charentes, plus précisément des Borderies, un cru de cognac au nord de Cognac.",
+        "value": "FR",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Colombar_(c%C3%A9page)"
       }
     ],
     "id": "colombard",
@@ -28710,7 +28818,7 @@
       "nl": "Colombard",
       "pt": "Colombard"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [],
     "prominence": 15,
     "regions": [
@@ -29047,7 +29155,7 @@
     "id": "pedro-ximenez",
     "names": {
       "en": "Pedro Ximénez",
-      "es": "Uva Pedro Ximénez",
+      "es": "Pedro Ximénez",
       "ca": "Pedro ximenes",
       "fr": "Pedro ximénez",
       "de": "Pedro Ximénez",
@@ -30256,6 +30364,12 @@
         "quote": "Le vin de xarello est coloré, jaune or, puissant, riche en alcool et en acidité.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "field": "origin",
+        "quote": "Lo Xarel·lo è un vitigno a bacca bianca di origine spagnola coltivato appositamente in Catalogna.",
+        "value": "ES",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     ],
     "id": "xarel-lo",
@@ -30269,7 +30383,7 @@
       "nl": "Xarel·lo",
       "pt": "Xarel·lo"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 14,
     "regions": [
@@ -32873,6 +32987,12 @@
         "quote": "Er ist mild, meist niedrig in Alkoholgehalt und Extrakt.",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Muskat_Ottonel"
+      },
+      {
+        "field": "origin",
+        "quote": "Ce cépage a été obtenu par Jean-Pierre Vibert en 1839, alors installé à Angers.",
+        "value": "FR",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_ottonel"
       }
     ],
     "id": "muscat-ottonel",
@@ -32886,7 +33006,7 @@
       "pt": "Muscat Ottonel",
       "nl": "Muscat ottonel"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [
       "asparagus",
       "foie gras",
@@ -33791,13 +33911,13 @@
     "id": "dornfelder",
     "names": {
       "en": "Dornfelder",
-      "es": "Uva Dornfelder",
+      "es": "Dornfelder",
       "ca": "Dornfelder",
       "fr": "Dornfelder",
       "de": "Dornfelder",
       "it": "Dornfelder",
       "nl": "Dornfelder",
-      "pt": "uva Dornfelder"
+      "pt": "Dornfelder"
     },
     "origin": "DE",
     "pairings": [],
@@ -34507,6 +34627,12 @@
         "quote": "Il présente des arômes de réglisse, de poivre et de pruneau.",
         "value": "prune",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Graciano_(c%C3%A9page)"
+      },
+      {
+        "field": "origin",
+        "quote": "Le graciano est un cépage noir espagnol originaire de la région viticole de la Rioja.",
+        "value": "ES",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Graciano_(c%C3%A9page)"
       }
     ],
     "id": "graciano",
@@ -34520,7 +34646,7 @@
       "nl": "Graciano",
       "pt": "Graciano"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 12,
     "regions": [
@@ -37841,6 +37967,11 @@
         "quote": "Le melon donne des vins équilibrés, secs, frais, légers aux arômes discrets.",
         "value": "dry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Melon_(c%C3%A9page)"
+      },
+      {
+        "field": "origin",
+        "quote": "As its name suggests, the grape originated in Burgundy and was grown there until its destruction was ordered in the early 18th century.",
+        "value": "FR"
       }
     ],
     "id": "melon-de-bourgogne",
@@ -37854,7 +37985,7 @@
       "nl": "Melon de Bourgogne",
       "pt": "Melon de Bourgogne"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [],
     "prominence": 11,
     "regions": [
@@ -38388,6 +38519,12 @@
         "quote": "la sua vocazione a diventare vino di alto grado alcolico",
         "value": "high",
         "sourceUrl": "https://it.wikipedia.org/wiki/Grillo_(vitigno)"
+      },
+      {
+        "field": "origin",
+        "quote": "Die Weißweinsorte Grillo stammt aus Italien und wird heute vorwiegend auf Sizilien angebaut.",
+        "value": "IT",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Grillo_(Rebsorte)"
       }
     ],
     "id": "grillo",
@@ -38401,7 +38538,7 @@
       "nl": "Grillo",
       "pt": "Grillo"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [],
     "prominence": 11,
     "regions": [
@@ -39718,12 +39855,13 @@
     "id": "cardinal",
     "names": {
       "en": "Cardinal",
-      "es": "Uva cardinal",
+      "es": "Cardinal",
       "ca": "Cardinal",
       "fr": "Cardinal",
       "de": "Cardinal",
       "it": "Cardinal",
-      "pt": "Cardinal"
+      "pt": "Cardinal",
+      "nl": "Cardinal"
     },
     "origin": "US",
     "pairings": [],
@@ -41098,6 +41236,11 @@
         "field": "sweetness",
         "quote": "it has been used in the production of dessert wine ... In Eastern Europe, the grape produces a light, dry red wine.",
         "value": "dry-sweet"
+      },
+      {
+        "field": "origin",
+        "quote": "Black Muscat (or Muscat Hamburg) is a red Vitis vinifera grape variety derived from the crossing of the Schiava Grossa and Muscat of Alexandria by Seward Snow, Head Gardener to Earl de Grey at Wrest Park, Bedfordshire UK in 1850, according to the Vitis International Variety Catalogue.",
+        "value": "GB"
       }
     ],
     "id": "black-muscat",
@@ -41111,7 +41254,7 @@
       "nl": "Black Muscat",
       "pt": "Moscatel de Hamburgo"
     },
-    "origin": null,
+    "origin": "GB",
     "pairings": [],
     "prominence": 10,
     "regions": [
@@ -43242,6 +43385,12 @@
         "field": "regions",
         "quote": "planted primarily in western Sicily ... In Tuscany, the grape is known as Ansonica ... on the island of Giglio ... Calabria: Bivongi DOC; ... Sicily: Alcamo DOC ... Marsala DOC, Menfi DOC ... Tuscany: Ansonica Costa dell'Argentario DOC, Elba DOC",
         "value": "IT: Alcamo"
+      },
+      {
+        "field": "origin",
+        "quote": "Elle provient du sud de l'Italie.",
+        "value": "IT",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Ansonica"
       }
     ],
     "id": "ansonica",
@@ -43255,7 +43404,7 @@
       "nl": "Ansonica",
       "pt": "Ansonica"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -44712,6 +44861,12 @@
         "quote": "Il vino prodotto presenta una media alcolicità",
         "value": "medium",
         "sourceUrl": "https://it.wikipedia.org/wiki/Ancellotta"
+      },
+      {
+        "field": "origin",
+        "quote": "Le cépage « Ancellotta » provient du nord de l’Italie.",
+        "value": "IT",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Ancellotta"
       }
     ],
     "id": "ancellotta",
@@ -44725,7 +44880,7 @@
       "nl": "Ancellotta",
       "pt": "Ancellotta"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -44924,6 +45079,12 @@
         "quote": "Auf Rhodos wird daraus der trockene und delikate Weißwein „Athiri de Rhodos“ hergestellt",
         "value": "dry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Athiri"
+      },
+      {
+        "field": "origin",
+        "quote": "Athiri (griechisch Αθήρι) ist eine in Griechenland heimische Weißweinsorte.",
+        "value": "GR",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Athiri"
       }
     ],
     "id": "athiri",
@@ -44937,7 +45098,7 @@
       "nl": "Athiri",
       "pt": "Athiri"
     },
-    "origin": null,
+    "origin": "GR",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -45102,6 +45263,12 @@
         "quote": "Il donne des vins rouges secs et tanniques",
         "value": "dry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Croatina"
+      },
+      {
+        "field": "origin",
+        "quote": "Le cépage Croatina provient du nord de l'Italie.",
+        "value": "IT",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Croatina"
       }
     ],
     "id": "croatina",
@@ -45115,7 +45282,7 @@
       "nl": "Croatina",
       "pt": "Croatina"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -47223,6 +47390,12 @@
         "quote": "einem geringen Anteil an Gerbstoffen",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/N%C3%A9grette"
+      },
+      {
+        "field": "origin",
+        "quote": "Sie stammt aus Südwest-Frankreich und ist noch immer in der Weinbauregion Sud-Ouest heimisch.",
+        "value": "FR",
+        "sourceUrl": "https://de.wikipedia.org/wiki/N%C3%A9grette"
       }
     ],
     "id": "negrette",
@@ -47236,7 +47409,7 @@
       "nl": "Négrette",
       "pt": "Négrette"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -47795,6 +47968,12 @@
         "quote": "dans la qualité ferme mais mûre de ses riches tanins",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_c%C3%A3o"
+      },
+      {
+        "field": "origin",
+        "quote": "Ist eine autochthone Rotweinsorte aus Portugal und wurde erstmals Mitte des 17.",
+        "value": "PT",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Tinto_C%C3%A3o"
       }
     ],
     "id": "tinta-cao",
@@ -47808,7 +47987,7 @@
       "nl": "Tinto Cão",
       "pt": "Tinta Cão"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -49068,6 +49247,12 @@
         "quote": "Der Wein dieser Traube ist aufgrund des vergleichsweise hohen Säuregehalts frisch, leicht und fruchtig",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Trepat"
+      },
+      {
+        "field": "origin",
+        "quote": "Der Trepat oder Trepadell ist eine einheimische Rotweinsorte aus dem Weinanbaugebiet Conca de Barberà in Katalonien (Spanien).",
+        "value": "ES",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Trepat"
       }
     ],
     "id": "trepat",
@@ -49081,7 +49266,7 @@
       "pt": "Trepat",
       "nl": "Trepat"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 8,
     "regions": [

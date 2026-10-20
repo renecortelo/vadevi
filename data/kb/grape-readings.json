@@ -1,5 +1,5 @@
 {
-  "$comment": "Body, alcohol and sweetness of grapes, read by hand from their Wikipedia articles where the model's reading left them empty (19 October 2026): each value with the sentence it comes from, copied as written, and the article's language. scripts/kb/build-grapes.ts checks every quote against that article as it checks a model's, and keeps only what the quote states. Sweetness is the range of the wines the grape makes: dry, medium (off-dry) or sweet, or a range such as dry-sweet.",
+  "$comment": "Body, alcohol and sweetness of grapes, read by hand from their Wikipedia articles where the model's reading left them empty (19 October 2026): each value with the sentence it comes from, copied as written, and the article's language. scripts/kb/build-grapes.ts checks every quote against that article as it checks a model's, and keeps only what the quote states. Sweetness is the range of the wines the grape makes: dry, medium (off-dry) or sweet, or a range such as dry-sweet. Origins too (20 October 2026): the country a grape comes from, read by hand only from a sentence that says so plainly — its name, its adjective or a region wholly within it — and never where the articles disagree or hedge.",
   "readings": {
     "abouriou": [
       {
@@ -117,6 +117,12 @@
         "lang": "it",
         "value": "medium",
         "quote": "Il vino prodotto presenta una media alcolicità"
+      },
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Le cépage « Ancellotta » provient du nord de l’Italie.",
+        "value": "IT"
       }
     ],
     "aramon": [
@@ -155,6 +161,12 @@
         "lang": "de",
         "value": "dry",
         "quote": "Auf Rhodos wird daraus der trockene und delikate Weißwein „Athiri de Rhodos“ hergestellt"
+      },
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Athiri (griechisch Αθήρι) ist eine in Griechenland heimische Weißweinsorte.",
+        "value": "GR"
       }
     ],
     "babeasca-neagra": [
@@ -193,6 +205,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "it has been used in the production of dessert wine ... In Eastern Europe, the grape produces a light, dry red wine."
+      },
+      {
+        "field": "origin",
+        "lang": "en",
+        "quote": "Black Muscat (or Muscat Hamburg) is a red Vitis vinifera grape variety derived from the crossing of the Schiava Grossa and Muscat of Alexandria by Seward Snow, Head Gardener to Earl de Grey at Wrest Park, Bedfordshire UK in 1850, according to the Vitis International Variety Catalogue.",
+        "value": "GB"
       }
     ],
     "blatina": [
@@ -428,6 +446,12 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "in both dry and sweet versions"
+      },
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Il est originaire des Charentes, plus précisément des Borderies, un cru de cognac au nord de Cognac.",
+        "value": "FR"
       }
     ],
     "concord": [
@@ -444,6 +468,12 @@
         "lang": "fr",
         "value": "medium",
         "quote": "Les vins blancs sont d'une couleur jaune paille un peu verdâtre, moyennement alcoolique."
+      },
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Il provient du nord de l’Italie.",
+        "value": "IT"
       }
     ],
     "corvina": [
@@ -462,6 +492,12 @@
         "lang": "fr",
         "value": "dry",
         "quote": "Il donne des vins rouges secs et tanniques"
+      },
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Le cépage Croatina provient du nord de l'Italie.",
+        "value": "IT"
       }
     ],
     "delaware": [
@@ -592,6 +628,12 @@
         "lang": "de",
         "value": "sweet",
         "quote": "Da der natürliche Zuckergehalt der Beeren hoch ist, wird sie in Frankreich vor allem in Süßweinen des Roussillon"
+      },
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Die Weißweinsorte Grenache Gris stammt aus Spanien (sie heißt dort Garnacha Roja), ist aber auch in Australien, Bulgarien, Frankreich, Portugal und Südafrika zu Hause.",
+        "value": "ES"
       }
     ],
     "gewurztraminer": [
@@ -600,6 +642,12 @@
         "lang": "fr",
         "value": "dry-sweet",
         "quote": "Il peut être vinifié en vin blanc sec ou moelleux"
+      },
+      {
+        "field": "origin",
+        "lang": "es",
+        "quote": "La gewürztraminer (pronunciación en alemán: /ɡəˈvʏʁtstʁaˈmiːnɐ/) es una variedad de uva originaria de las frescas laderas alpinas del Trentino-Alto Adigio en el noreste de Italia, y su nombre deriva de la localidad de Tramin, en el Bajo Tirol.",
+        "value": "IT"
       }
     ],
     "gouais-blanc": [
@@ -635,6 +683,12 @@
           "liquorice": "réglisse",
           "prune": "pruneau"
         }
+      },
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Le graciano est un cépage noir espagnol originaire de la région viticole de la Rioja.",
+        "value": "ES"
       }
     ],
     "grechetto": [
@@ -693,6 +747,12 @@
         "lang": "it",
         "value": "high",
         "quote": "la sua vocazione a diventare vino di alto grado alcolico"
+      },
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Die Weißweinsorte Grillo stammt aus Italien und wird heute vorwiegend auf Sizilien angebaut.",
+        "value": "IT"
       }
     ],
     "grolleau": [
@@ -800,6 +860,12 @@
           "grapefruit": "aranja",
           "apple": "poma"
         }
+      },
+      {
+        "field": "origin",
+        "lang": "ca",
+        "quote": "És una varietat autòctona de Catalunya que avui es conrea, sobretot, al Penedès, el Camp de Tarragona, el Rosselló, la Plana d'Utiel, Mallorca i a l'Empordà, a més de La Rioja, Navarra i Califòrnia.",
+        "value": "ES"
       }
     ],
     "mandilaria": [
@@ -884,6 +950,12 @@
         "lang": "de",
         "value": "dry",
         "quote": "Dort erbringt die Rebe intensiv vollen, trockenen und tanninherben Wein"
+      },
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Le Mavroud ou Mavrud (aussi appelé Kakcivala, Kacivela, Kausanskii, Karvouniaris, Marvud, Mavraki, Mavro, Mavrouli, Mavrostaphylo, Mavroudion, Mavrudi) est un vieux cépage de raisin noir originaire de Thrace (Bulgarie).",
+        "value": "BG"
       }
     ],
     "melon-de-bourgogne": [
@@ -892,6 +964,12 @@
         "lang": "fr",
         "value": "dry",
         "quote": "Le melon donne des vins équilibrés, secs, frais, légers aux arômes discrets."
+      },
+      {
+        "field": "origin",
+        "lang": "en",
+        "quote": "As its name suggests, the grape originated in Burgundy and was grown there until its destruction was ordered in the early 18th century.",
+        "value": "FR"
       }
     ],
     "mencia": [
@@ -1071,6 +1149,12 @@
         "lang": "de",
         "value": "low",
         "quote": "Er ist mild, meist niedrig in Alkoholgehalt und Extrakt."
+      },
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Ce cépage a été obtenu par Jean-Pierre Vibert en 1839, alors installé à Angers.",
+        "value": "FR"
       }
     ],
     "nebbiolo": [
@@ -1099,6 +1183,12 @@
         "lang": "de",
         "value": "low",
         "quote": "einem geringen Anteil an Gerbstoffen"
+      },
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Sie stammt aus Südwest-Frankreich und ist noch immer in der Weinbauregion Sud-Ouest heimisch.",
+        "value": "FR"
       }
     ],
     "negroamaro": [
@@ -1308,6 +1398,12 @@
         "lang": "en",
         "value": "dry",
         "quote": "Its fresh, citrus notes are described as dry, tart, and 'lip-stinging' making it suited for accompanying seafood."
+      },
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Originaire du Languedoc, il se présente en blanc, noir et gris.",
+        "value": "FR"
       }
     ],
     "plavac-mali": [
@@ -1427,6 +1523,12 @@
         "lang": "fr",
         "value": "low",
         "quote": "Le cépage produit des vins très colorés mais de qualité ordinaire, manquant de corps."
+      },
+      {
+        "field": "origin",
+        "lang": "en",
+        "quote": "Ruby Cabernet is a cross between Cabernet Sauvignon and Carignan created in 1936 by Dr Harold Olmo at UC Davis in California.",
+        "value": "US"
       }
     ],
     "sagrantino": [
@@ -1635,6 +1737,12 @@
         "lang": "fr",
         "value": "high",
         "quote": "La variété présente des tanins abondants et souples"
+      },
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Die Sorte stammt aus Portugal.",
+        "value": "PT"
       }
     ],
     "tinta-cao": [
@@ -1664,6 +1772,12 @@
         "lang": "fr",
         "value": "high",
         "quote": "dans la qualité ferme mais mûre de ses riches tanins"
+      },
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Ist eine autochthone Rotweinsorte aus Portugal und wurde erstmals Mitte des 17.",
+        "value": "PT"
       }
     ],
     "torrontes": [
@@ -1686,6 +1800,12 @@
         "lang": "fr",
         "value": "dry",
         "quote": "de vins tranquilles et secs du Douro et du Dão"
+      },
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Die Rotweinsorte ‘Touriga Franca’ ist eine natürliche Kreuzung der Sorten ‘Marufo’ × ‘Touriga Nacional’ und ist eine authochtone Rebsorte aus Portugal.",
+        "value": "PT"
       }
     ],
     "touriga-nacional": [
@@ -1714,6 +1834,12 @@
         "lang": "es",
         "value": "medium",
         "quote": "una acidez total media-baja"
+      },
+      {
+        "field": "origin",
+        "lang": "es",
+        "quote": "La treixadura es una uva blanca autóctona de Galicia,​ España, aunque también se encuentra en Portugal.",
+        "value": "ES"
       }
     ],
     "trepat": [
@@ -1728,6 +1854,12 @@
         "lang": "de",
         "value": "high",
         "quote": "Der Wein dieser Traube ist aufgrund des vergleichsweise hohen Säuregehalts frisch, leicht und fruchtig"
+      },
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Der Trepat oder Trepadell ist eine einheimische Rotweinsorte aus dem Weinanbaugebiet Conca de Barberà in Katalonien (Spanien).",
+        "value": "ES"
       }
     ],
     "tsolikouri": [
@@ -1854,6 +1986,12 @@
         "lang": "fr",
         "value": "high",
         "quote": "Le vin de xarello est coloré, jaune or, puissant, riche en alcool et en acidité."
+      },
+      {
+        "field": "origin",
+        "lang": "it",
+        "quote": "Lo Xarel·lo è un vitigno a bacca bianca di origine spagnola coltivato appositamente in Catalogna.",
+        "value": "ES"
       }
     ],
     "zierfandler": [
@@ -1870,6 +2008,38 @@
         "lang": "en",
         "value": "high",
         "quote": "The grape's high sugar content can be fermented into levels of alcohol exceeding 15 percent."
+      }
+    ],
+    "sumoll": [
+      {
+        "field": "origin",
+        "lang": "es",
+        "quote": "Sumoll es un tipo de uva (Vitis vinifera) autóctona española.",
+        "value": "ES"
+      }
+    ],
+    "baga": [
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Ist eine alte autochthone Sorte aus Portugal.",
+        "value": "PT"
+      }
+    ],
+    "alfrocheiro-preto": [
+      {
+        "field": "origin",
+        "lang": "de",
+        "quote": "Autochthone Rotweinsorte aus Portugal.",
+        "value": "PT"
+      }
+    ],
+    "ansonica": [
+      {
+        "field": "origin",
+        "lang": "fr",
+        "quote": "Elle provient du sud de l'Italie.",
+        "value": "IT"
       }
     ]
   }

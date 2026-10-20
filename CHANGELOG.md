@@ -17,6 +17,16 @@ has the reasons.
 
 ### The library
 
+- **Where 27 more grapes come from**, read by hand from their articles in
+  any of the library's languages, each from a sentence that says it plainly —
+  the country's name, its adjective («autóctona española», «di origine
+  spagnola») or a region wholly within it («autòctona de Catalunya») — and
+  checked against the article; a grape whose articles disagree or hedge
+  keeps none (77 % of grapes now have an origin, from 64 %).
+- **Every grape named in all eight languages**: a cultivar whose name is a
+  proper name (Concord, Delaware, Niagara, Campbell Early, Rondo, Koshu…)
+  takes it where Wikidata has no label; and a name taken from an article's
+  title loses the «Uva» in front («Monastrell», not «Uva monastrell»).
 - **The pairing wheel**, third of the library's wheels: the dishes by meal
   (meat; fish and seafood; rice, pasta and vegetables; spicy, Asian and
   tapas; cheese; desserts), each family of the pairing rules as large as the
