@@ -17,9 +17,9 @@ import { AromaIcon } from "../library/AromaIcon";
  * told with the logo's own bottles: it opens on the word, and with each
  * step — a tasting, a label, the library, Vicenç, your cellar on the map,
  * your taste — one small bottle drops into its place in a row until all seven
- * are there; then the row grows into the logo, the letters fall into place
- * just above «Continue with Google», and the logo stays a while before it
- * begins again.
+ * are there; then the bottles stretch up and the row grows into the logo,
+ * the letters falling into place across it, just above «Continue with
+ * Google», and the logo stays a while before it begins again.
  *
  * The bottles and the letters are the brand's geometry (`brand/marks`, made
  * by `scripts/generate-brand.ts`), not drawings of them. Drawn in SVG and CSS,
@@ -124,7 +124,7 @@ function Letters() {
   ));
 }
 
-/** The logo, assembled: the seven bottles the row gathered, the word across them. */
+/** The logo, whole and still: the last frame, for reduced motion. */
 function Lockup() {
   const scale = lockupWordmark.width / wordmarkBox.width;
   return (
@@ -318,7 +318,9 @@ export default function SignInReel() {
           <TasteBars />
         </div>
 
-        {/* The row the bottles gather in, each in its place in the logo. */}
+        {/* The row the bottles gather in, each in its place in the logo; at
+            the close the bottles stretch up and the row grows into the logo,
+            the word falling into place across it. */}
         <svg aria-hidden="true" className="reel__row" focusable="false" viewBox={lockupBox}>
           {arrivals.map((index, order) => (
             <path
@@ -326,13 +328,24 @@ export default function SignInReel() {
               d={bottleRowPaths[index]}
               fill={`var(--color-bottle-${index + 1})`}
               key={index}
-              style={{ "--at": `${shots[order]!.end - 0.4}s` } as CSSProperties}
+              style={{ "--at": `${shots[order]!.end - 0.4}s`, "--i": index } as CSSProperties}
             />
           ))}
+          <g
+            className="reel__word"
+            style={{ "--drop": "0.8s", "--start": `${shots[7].start}s` } as CSSProperties}
+            transform={
+              `translate(${lockupWordmark.centre - lockupWordmark.width / 2} ${lockupWordmark.baseline}) ` +
+              `scale(${lockupWordmark.width / wordmarkBox.width}) ` +
+              `translate(0 ${-(wordmarkBox.top + wordmarkBox.height)})`
+            }
+          >
+            <Letters />
+          </g>
         </svg>
 
         <div className="reel-shot reel-shot--close" style={timing(7)}>
-          <Lockup />
+          {still ? <Lockup /> : null}
           <p className="reel__closing">{t("reel.close")}</p>
           {still ? <Figures still /> : null}
         </div>

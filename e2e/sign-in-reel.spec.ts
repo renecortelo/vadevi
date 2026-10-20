@@ -47,10 +47,18 @@ test("the sign-in reel tells what the app is for, from the library's own figures
   expect(states.every((state) => state === "paused")).toBe(true);
 
   // Told with the logo's own bottles: one for the opening and each of the six
-  // steps gathers in the row, and at the close all seven carry the word.
+  // steps gathers in the row, and at the close the row itself becomes the
+  // logo, the word falling across it.
   await expect(reel.locator(".reel__slot")).toHaveCount(7);
-  await expect(reel.locator(".reel-lockup__bottle")).toHaveCount(7);
-  await expect(reel.locator(".reel-lockup .reel-letter")).toHaveCount(10);
+  await expect(reel.locator(".reel__row .reel-letter")).toHaveCount(10);
+
+  // Light or dark can be chosen before signing in, beside the language.
+  const theme = page.locator(".access-locale .theme-button");
+  const before = await page.evaluate(() => document.documentElement.dataset.theme ?? "system");
+  await theme.click();
+  await expect
+    .poll(() => page.evaluate(() => document.documentElement.dataset.theme ?? "system"))
+    .not.toBe(before);
 
   // One card: the reel and the sign-in button together, and no other control
   // than the pause.
@@ -84,6 +92,9 @@ test("the reel fits a phone, and stands still for reduced motion", async ({ page
   const reel = page.locator(".reel");
   await expect(reel).toHaveClass(/reel--still/, { timeout: 15_000 });
   await expect(reel.locator(".reel-shot--close")).toBeVisible();
+  // Still, the logo is drawn whole, its seven bottles and its word.
+  await expect(reel.locator(".reel-shot--close .reel-lockup__bottle")).toHaveCount(7);
+  await expect(reel.locator(".reel-shot--close .reel-letter")).toHaveCount(10);
   await expect(reel.locator(".reel-shot--close .reel-figures")).toContainText(
     english.format(names),
   );

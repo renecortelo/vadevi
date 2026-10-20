@@ -2,9 +2,11 @@ import { localeLabels, supportedLocales, type SupportedLocale } from "@vadevi/i1
 import { useTranslation } from "react-i18next";
 
 import { changeLanguage, rememberLocale } from "../i18n";
+import { SignedOutThemeButton } from "./ThemeToggle";
 
 /**
- * Interface language, before there is an account to hang it on.
+ * Interface language — and, beside it, light or dark — before there is an
+ * account to hang them on.
  *
  * The signed-in control saves to the account. This one cannot — there is no
  * account yet — so it keeps the choice on the device until there is. Which is
@@ -23,6 +25,7 @@ export function SignedOutLocalePicker() {
 
   return (
     <div className="access-locale">
+      <SignedOutThemeButton />
       <label className="sr-only" htmlFor="access-locale">
         {t("locale.label")}
       </label>

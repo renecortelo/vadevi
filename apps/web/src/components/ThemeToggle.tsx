@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useSession } from "../session/SessionContext";
-import { applyTheme, resolveTheme, themePreferences } from "../theme/theme";
+import { applyTheme, resolveTheme, themePreferences, themeStorageKey } from "../theme/theme";
 
 /** The account's theme, with a local choice shown until it is saved. */
 function useThemeChoice() {
@@ -86,6 +86,41 @@ export function ThemeButton() {
         </span>
       ) : null}
     </>
+  );
+}
+
+/**
+ * The same sun or moon before there is an account: the choice stays on the
+ * device (`applyTheme` keeps it in local storage, which `theme-init.js`
+ * reads before the first paint) until signing in, when the account's own
+ * preference takes over.
+ */
+export function SignedOutThemeButton() {
+  const { t } = useTranslation();
+  const [preference, setPreference] = useState<ThemePreference>(() => {
+    try {
+      const stored = globalThis.localStorage?.getItem(themeStorageKey);
+      return stored === "light" || stored === "dark" ? stored : "system";
+    } catch {
+      return "system";
+    }
+  });
+  const painted = resolveTheme(preference);
+  const next = painted === "dark" ? "light" : "dark";
+  return (
+    <button
+      aria-label={t(next === "light" ? "theme.toLight" : "theme.toDark")}
+      className="theme-button"
+      data-painted={painted}
+      onClick={() => {
+        applyTheme(next);
+        setPreference(next);
+      }}
+      title={t(next === "light" ? "theme.toLight" : "theme.toDark")}
+      type="button"
+    >
+      {painted === "dark" ? <MoonIcon /> : <SunIcon />}
+    </button>
   );
 }
 
