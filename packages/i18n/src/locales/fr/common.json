@@ -1932,7 +1932,10 @@
     "reviewSend": "Envoyer cette note pour améliorer la voix",
     "reviewSent": "Envoyée, merci. Elle s'efface seule dans 30 jours.",
     "reviewLimit": "Vous avez envoyé assez de notes pour aujourd'hui.",
-    "reviewError": "L'envoi n'a pas pu se faire. Votre formulaire reste tel quel."
+    "reviewError": "L'envoi n'a pas pu se faire. Votre formulaire reste tel quel.",
+    "dictate": "Dicter : {{field}}",
+    "dictateStop": "Arrêter et l’écrire : {{field}}",
+    "dictating": "À l’écoute… touchez à nouveau pour arrêter"
   },
   "sections": {
     "quick": "Dégustation rapide",

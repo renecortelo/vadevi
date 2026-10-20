@@ -1932,7 +1932,10 @@
     "reviewSend": "Envia aquesta nota per millorar la veu",
     "reviewSent": "Enviada, gràcies. S'esborra sola d'aquí a 30 dies.",
     "reviewLimit": "Avui ja has enviat prou notes.",
-    "reviewError": "Ara no s'ha pogut enviar. El teu formulari continua igual."
+    "reviewError": "Ara no s'ha pogut enviar. El teu formulari continua igual.",
+    "dictate": "Dictar: {{field}}",
+    "dictateStop": "Atura i escriu-ho: {{field}}",
+    "dictating": "Escoltant… toca un altre cop per aturar"
   },
   "sections": {
     "quick": "Tast ràpid",

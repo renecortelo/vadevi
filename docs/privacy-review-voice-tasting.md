@@ -36,6 +36,13 @@ came from; a proposed value with no such words is discarded. Region and grape
 are resolved against the library, not by the model. The proposal fills only
 empty fields, and **nothing is saved until the reader saves the form as usual**.
 
+**Dictation** (from 20 October 2026): every free-text note field — the
+tasting notes, the quick log's comment, the taste profile's own words, an
+event's description — has its own small microphone. It uses the same
+speech-to-text step only: what was heard is written after what the field
+already holds, as said, and no language model reads it. The audio is not
+kept, as above; each dictation counts against the same daily voice allowance.
+
 ## What leaves the deployment
 
 | Sent                                    | Notes                                                                                                                                                                                                            |

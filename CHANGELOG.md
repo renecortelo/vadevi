@@ -98,6 +98,13 @@ has the reasons.
 
 ### Tastings by voice
 
+- **Dictation in every note field**: a small microphone beneath each free-text
+  note — the tasting's notes at every step, the quick log's comment, the
+  taste profile's own words, an event's description. Tap, speak, tap again:
+  what was heard is written after what is there, as said, and nothing else
+  is read from it. The audio is not kept; it counts against the day's voice
+  allowance.
+
 What two real spoken notes of 19 October 2026 lost, now read from the words
 that say it, where the model left a field empty:
 

@@ -1932,7 +1932,10 @@
     "reviewSend": "Stuur deze notitie om spraak te verbeteren",
     "reviewSent": "Verstuurd, dank je. Ze verdwijnt vanzelf na 30 dagen.",
     "reviewLimit": "Je hebt vandaag genoeg notities gestuurd.",
-    "reviewError": "Versturen lukte nu niet. Je formulier blijft zoals het was."
+    "reviewError": "Versturen lukte nu niet. Je formulier blijft zoals het was.",
+    "dictate": "Dicteren: {{field}}",
+    "dictateStop": "Stoppen en opschrijven: {{field}}",
+    "dictating": "Luistert… tik nogmaals om te stoppen"
   },
   "sections": {
     "quick": "Snelle proeverij",

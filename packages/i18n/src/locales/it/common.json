@@ -1932,7 +1932,10 @@
     "reviewSend": "Invia questa nota per migliorare la voce",
     "reviewSent": "Inviata, grazie. Si cancella da sola tra 30 giorni.",
     "reviewLimit": "Per oggi hai già inviato abbastanza note.",
-    "reviewError": "Ora non è stato possibile inviarla. Il tuo modulo resta com'era."
+    "reviewError": "Ora non è stato possibile inviarla. Il tuo modulo resta com'era.",
+    "dictate": "Detta: {{field}}",
+    "dictateStop": "Ferma e scrivilo: {{field}}",
+    "dictating": "In ascolto… tocca di nuovo per fermare"
   },
   "sections": {
     "quick": "Degustazione rapida",

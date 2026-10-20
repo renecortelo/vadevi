@@ -1932,7 +1932,10 @@
     "reviewSend": "Diese Notiz senden, um die Spracheingabe zu verbessern",
     "reviewSent": "Gesendet, danke. Sie löscht sich nach 30 Tagen von selbst.",
     "reviewLimit": "Sie haben für heute genug Notizen gesendet.",
-    "reviewError": "Das Senden hat gerade nicht geklappt. Ihr Formular bleibt unverändert."
+    "reviewError": "Das Senden hat gerade nicht geklappt. Ihr Formular bleibt unverändert.",
+    "dictate": "Diktieren: {{field}}",
+    "dictateStop": "Stoppen und aufschreiben: {{field}}",
+    "dictating": "Hört zu… zum Beenden erneut tippen"
   },
   "sections": {
     "quick": "Schnellverkostung",

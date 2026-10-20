@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { Dictate } from "../components/Dictate";
 import { VenuePicker } from "../components/VenuePicker";
 import { offlineDatabase } from "../offline/database";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
@@ -181,13 +182,19 @@ export function NewSessionPage() {
             </>
           )}
           <label htmlFor="session-description">{t("sessions.descriptionLabel")}</label>
-          <textarea
-            id="session-description"
-            maxLength={2000}
-            onChange={(event) => setDescription(event.target.value)}
-            rows={4}
+          <Dictate
+            label={t("sessions.descriptionLabel")}
+            onChange={setDescription}
             value={description}
-          />
+          >
+            <textarea
+              id="session-description"
+              maxLength={2000}
+              onChange={(event) => setDescription(event.target.value)}
+              rows={4}
+              value={description}
+            />
+          </Dictate>
         </fieldset>
         <fieldset className="form-section">
           <legend>{t("sessions.flightTitle")}</legend>

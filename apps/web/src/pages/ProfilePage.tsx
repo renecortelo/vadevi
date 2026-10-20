@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { Dictate } from "../components/Dictate";
 import { WineLink } from "../components/WineLink";
 import { trailFrom } from "../library/trail";
 import {
@@ -532,16 +533,23 @@ function DeclaredForm({
   }
 
   const field = (name: "dislikes" | "exploring" | "likes") => (
-    <label className="taste-form__field">
-      <span>{t(`taste.declared.${name}`)}</span>
-      <textarea
-        maxLength={500}
-        onChange={(event) => setForm({ ...form, [name]: event.target.value })}
-        placeholder={t(`taste.declared.${name}Placeholder`)}
-        rows={2}
-        value={form[name]}
-      />
-    </label>
+    <Dictate
+      label={t(`taste.declared.${name}`)}
+      limit={500}
+      onChange={(text) => setForm({ ...form, [name]: text })}
+      value={form[name]}
+    >
+      <label className="taste-form__field">
+        <span>{t(`taste.declared.${name}`)}</span>
+        <textarea
+          maxLength={500}
+          onChange={(event) => setForm({ ...form, [name]: event.target.value })}
+          placeholder={t(`taste.declared.${name}Placeholder`)}
+          rows={2}
+          value={form[name]}
+        />
+      </label>
+    </Dictate>
   );
 
   return (
@@ -582,15 +590,22 @@ function DeclaredForm({
             />
           </label>
         </fieldset>
-        <label className="taste-form__field">
-          <span>{t("taste.declared.note")}</span>
-          <textarea
-            maxLength={1_000}
-            onChange={(event) => setForm({ ...form, note: event.target.value })}
-            rows={3}
-            value={form.note}
-          />
-        </label>
+        <Dictate
+          label={t("taste.declared.note")}
+          limit={1_000}
+          onChange={(text) => setForm({ ...form, note: text })}
+          value={form.note}
+        >
+          <label className="taste-form__field">
+            <span>{t("taste.declared.note")}</span>
+            <textarea
+              maxLength={1_000}
+              onChange={(event) => setForm({ ...form, note: event.target.value })}
+              rows={3}
+              value={form.note}
+            />
+          </label>
+        </Dictate>
         <div className="taste-form__actions">
           <button
             className="action-link action-link--primary"

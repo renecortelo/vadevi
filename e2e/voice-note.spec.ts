@@ -152,9 +152,9 @@ test("a spoken note fills a deep tasting's empty fields, in every step", async (
   ).toBeVisible();
 
   await page.getByRole("button", { name: "Nose" }).click();
-  await expect(page.getByLabel("Nose notes")).toHaveValue("Mora y regaliz");
+  await expect(page.getByRole("textbox", { name: "Nose notes" })).toHaveValue("Mora y regaliz");
   await page.getByRole("button", { name: "Conclusion" }).click();
-  await expect(page.getByLabel("Personal conclusion")).toHaveValue("Muy rico.");
+  await expect(page.getByRole("textbox", { name: "Personal conclusion" })).toHaveValue("Muy rico.");
 });
 
 test("a spoken description finds the wine being added and fills its review", async ({ page }) => {
@@ -192,4 +192,51 @@ test("a spoken description finds the wine being added and fills its review", asy
   await expect(page.locator("#wine-name")).toHaveValue("Loma de Nerea");
   await expect(page.locator("#wine-vintage")).toHaveValue("2022");
   await expect(page.locator("#wine-type")).toHaveValue("red");
+});
+
+test("a note field takes dictation, written after what is there, as said", async ({ page }) => {
+  // Only the transcription answers: dictation proposes no fields.
+  await speak(page, "Huele a pera madura y algo de tiza.", {});
+  let extracted = false;
+  await page.route("**/api/v1/spaces/*/voice/extract", (route) => {
+    extracted = true;
+    return route.abort();
+  });
+  await signIn(page);
+  await completeOnboarding(page);
+  const token = await page.evaluate(() => {
+    const key = Object.keys(localStorage).find((k) => k.startsWith("firebase:authUser:"));
+    return key === undefined
+      ? ""
+      : (JSON.parse(localStorage.getItem(key) ?? "{}").stsTokenManager?.accessToken ?? "");
+  });
+  const headers = { Authorization: `Bearer ${token}` };
+  const api = "http://127.0.0.1:8788/api/v1";
+  const me = await page.request.get(`${api}/me/bootstrap`, { headers });
+  const spaceId = (await me.json()).data.user.activeSpaceId as string;
+  const wine = await page.request.post(`${api}/spaces/${spaceId}/wines`, {
+    data: { displayName: "Dictat", identityStatus: "confirmed", producerName: "Celler Veu" },
+    headers: { ...headers, "Idempotency-Key": "D".padEnd(43, "d") },
+  });
+  const wineId = (await wine.json()).data.wine.id as string;
+
+  await page.goto(`/wines/${wineId}/taste`);
+  await page.locator("#interface-locale").selectOption("en");
+  const notes = page.getByRole("textbox", { name: "Appearance notes" });
+  await notes.fill("Bright.");
+  await page.getByRole("button", { name: "Dictate: Appearance notes" }).click();
+  await expect(page.getByText("Listening… tap again to stop")).toBeVisible();
+  await page.waitForTimeout(400);
+  await page.getByRole("button", { name: "Stop and write it down: Appearance notes" }).click();
+  await expect(notes).toHaveValue("Bright. Huele a pera madura y algo de tiza.", {
+    timeout: 15_000,
+  });
+  await page
+    .locator(".dictate")
+    .first()
+    .screenshot({ path: test.info().outputPath("dictate.png") });
+  // Written as said: nothing else in the form was read from it.
+  expect(extracted).toBe(false);
+  await page.getByRole("button", { name: "Nose" }).click();
+  await expect(page.getByRole("textbox", { name: "Nose notes" })).toHaveValue("");
 });

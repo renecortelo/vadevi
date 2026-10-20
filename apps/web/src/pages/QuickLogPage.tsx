@@ -10,6 +10,7 @@ import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useTranslation } from "react-i18next";
 
 import { DecimalInput } from "../components/DecimalInput";
+import { Dictate } from "../components/Dictate";
 import { ModalDialog } from "../components/ModalDialog";
 import { VoiceNote } from "../components/VoiceNote";
 import { RegionInput } from "../components/RegionInput";
@@ -778,13 +779,19 @@ export function QuickLogPage() {
                 value={draft.notePayload.foodText ?? ""}
               />
               <label htmlFor="comment">{t("quickLog.comment")}</label>
-              <textarea
-                id="comment"
-                maxLength={2000}
-                onChange={(event) => updateNote("comment", event.target.value || undefined)}
-                rows={4}
+              <Dictate
+                label={t("quickLog.comment")}
+                onChange={(text) => updateNote("comment", text || undefined)}
                 value={draft.notePayload.comment ?? ""}
-              />
+              >
+                <textarea
+                  id="comment"
+                  maxLength={2000}
+                  onChange={(event) => updateNote("comment", event.target.value || undefined)}
+                  rows={4}
+                  value={draft.notePayload.comment ?? ""}
+                />
+              </Dictate>
             </div>
           ) : (
             <p className="section-help">{t("quickLog.logOnlyHelp")}</p>

@@ -1932,7 +1932,10 @@
     "reviewSend": "Send this note to improve voice",
     "reviewSent": "Sent, thank you. It deletes itself in 30 days.",
     "reviewLimit": "You have sent enough notes for today.",
-    "reviewError": "It could not be sent now. Your form is unchanged."
+    "reviewError": "It could not be sent now. Your form is unchanged.",
+    "dictate": "Dictate: {{field}}",
+    "dictateStop": "Stop and write it down: {{field}}",
+    "dictating": "Listening… tap again to stop"
   },
   "sections": {
     "quick": "Quick tasting",

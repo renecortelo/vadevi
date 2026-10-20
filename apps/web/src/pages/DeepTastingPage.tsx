@@ -13,6 +13,7 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import type { z } from "zod";
 
 import { DecimalInput } from "../components/DecimalInput";
+import { Dictate } from "../components/Dictate";
 import { MapLink } from "../components/MapLink";
 import { VenuePicker } from "../components/VenuePicker";
 import { VoiceNote } from "../components/VoiceNote";
@@ -569,14 +570,20 @@ export function DeepTastingPage() {
             phase="appearance"
             wineType={wineType}
           />
-          <label>
-            <span>{t("tasting.field.appearanceText")}</span>
-            <textarea
-              maxLength={2000}
-              onChange={(event) => update("appearanceText", event.target.value || undefined)}
-              value={draft.payload.appearanceText ?? ""}
-            />
-          </label>
+          <Dictate
+            label={t("tasting.field.appearanceText")}
+            onChange={(text) => update("appearanceText", text || undefined)}
+            value={draft.payload.appearanceText ?? ""}
+          >
+            <label>
+              <span>{t("tasting.field.appearanceText")}</span>
+              <textarea
+                maxLength={2000}
+                onChange={(event) => update("appearanceText", event.target.value || undefined)}
+                value={draft.payload.appearanceText ?? ""}
+              />
+            </label>
+          </Dictate>
         </div>
       </fieldset>
     ),
@@ -624,14 +631,20 @@ export function DeepTastingPage() {
               value={draft.payload.noseDevelopment}
             />
           </div>
-          <label>
-            <span>{t("tasting.field.noseText")}</span>
-            <textarea
-              maxLength={2000}
-              onChange={(event) => update("noseText", event.target.value || undefined)}
-              value={draft.payload.noseText ?? ""}
-            />
-          </label>
+          <Dictate
+            label={t("tasting.field.noseText")}
+            onChange={(text) => update("noseText", text || undefined)}
+            value={draft.payload.noseText ?? ""}
+          >
+            <label>
+              <span>{t("tasting.field.noseText")}</span>
+              <textarea
+                maxLength={2000}
+                onChange={(event) => update("noseText", event.target.value || undefined)}
+                value={draft.payload.noseText ?? ""}
+              />
+            </label>
+          </Dictate>
         </div>
         <div className="form-group">
           <h3>{t("tasting.nosePhase.swirled")}</h3>
@@ -642,14 +655,20 @@ export function DeepTastingPage() {
               value={draft.payload.noseSwirledIntensity}
             />
           </div>
-          <label>
-            <span>{t("tasting.field.noseSwirledText")}</span>
-            <textarea
-              maxLength={2000}
-              onChange={(event) => update("noseSwirledText", event.target.value || undefined)}
-              value={draft.payload.noseSwirledText ?? ""}
-            />
-          </label>
+          <Dictate
+            label={t("tasting.field.noseSwirledText")}
+            onChange={(text) => update("noseSwirledText", text || undefined)}
+            value={draft.payload.noseSwirledText ?? ""}
+          >
+            <label>
+              <span>{t("tasting.field.noseSwirledText")}</span>
+              <textarea
+                maxLength={2000}
+                onChange={(event) => update("noseSwirledText", event.target.value || undefined)}
+                value={draft.payload.noseSwirledText ?? ""}
+              />
+            </label>
+          </Dictate>
         </div>
         {/* The picker carries its own title ("memory cues"), so the group has
             only the rule above it. */}
@@ -806,14 +825,20 @@ export function DeepTastingPage() {
             phase="palate"
             wineType={wineType}
           />
-          <label>
-            <span>{t("tasting.field.palateText")}</span>
-            <textarea
-              maxLength={2000}
-              onChange={(event) => update("palateText", event.target.value || undefined)}
-              value={draft.payload.palateText ?? ""}
-            />
-          </label>
+          <Dictate
+            label={t("tasting.field.palateText")}
+            onChange={(text) => update("palateText", text || undefined)}
+            value={draft.payload.palateText ?? ""}
+          >
+            <label>
+              <span>{t("tasting.field.palateText")}</span>
+              <textarea
+                maxLength={2000}
+                onChange={(event) => update("palateText", event.target.value || undefined)}
+                value={draft.payload.palateText ?? ""}
+              />
+            </label>
+          </Dictate>
         </div>
       </fieldset>
     ),
@@ -1254,14 +1279,20 @@ export function DeepTastingPage() {
         </div>
         <div className="form-group">
           <h3>{t("tasting.group.yourConclusion")}</h3>
-          <label>
-            <span>{t("tasting.field.conclusionText")}</span>
-            <textarea
-              maxLength={2000}
-              onChange={(event) => update("conclusionText", event.target.value || undefined)}
-              value={draft.payload.conclusionText ?? ""}
-            />
-          </label>
+          <Dictate
+            label={t("tasting.field.conclusionText")}
+            onChange={(text) => update("conclusionText", text || undefined)}
+            value={draft.payload.conclusionText ?? ""}
+          >
+            <label>
+              <span>{t("tasting.field.conclusionText")}</span>
+              <textarea
+                maxLength={2000}
+                onChange={(event) => update("conclusionText", event.target.value || undefined)}
+                value={draft.payload.conclusionText ?? ""}
+              />
+            </label>
+          </Dictate>
         </div>
       </fieldset>
     ),
