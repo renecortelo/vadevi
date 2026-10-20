@@ -483,7 +483,7 @@
     "wheels": {
       "tab": "Ruedas",
       "title": "Ruedas de aromas y colores",
-      "intro": "Encuentra un aroma por su familia y su grupo, o un color por el tipo de vino. Toca para entrar; toca el centro para volver.",
+      "intro": "Encuentra un aroma por su familia y su grupo, o un color por el tipo de vino: toca una parte de la rueda o su nombre debajo.",
       "aromas": "Aromas",
       "colours": "Colores",
       "back": "Volver desde {{name}}",
@@ -491,7 +491,10 @@
       "grapesWith_one": "{{count}} uva de la biblioteca lo tiene:",
       "grapesWith_other": "{{count}} uvas de la biblioteca lo tienen:",
       "noGrape": "Ninguna uva de la biblioteca lo tiene todavía.",
-      "colourOf": "color de vino {{kind}}"
+      "colourOf": "color de vino {{kind}}",
+      "grapeCount_one": "{{count}} uva",
+      "grapeCount_other": "{{count}} uvas",
+      "noGrapeShort": "Sin uvas aún"
     }
   },
   "space": {

@@ -483,7 +483,7 @@
     "wheels": {
       "tab": "Roues",
       "title": "Roues des arômes et des couleurs",
-      "intro": "Trouve un arôme par sa famille et son groupe, ou une couleur par le type de vin. Touche pour entrer ; touche le centre pour revenir.",
+      "intro": "Trouve un arôme par sa famille et son groupe, ou une couleur par le type de vin : touche une part de la roue ou son nom en dessous.",
       "aromas": "Arômes",
       "colours": "Couleurs",
       "back": "Revenir de {{name}}",
@@ -491,7 +491,10 @@
       "grapesWith_one": "{{count}} cépage de la bibliothèque le porte :",
       "grapesWith_other": "{{count}} cépages de la bibliothèque le portent :",
       "noGrape": "Aucun cépage de la bibliothèque ne le porte encore.",
-      "colourOf": "couleur de vin {{kind}}"
+      "colourOf": "couleur de vin {{kind}}",
+      "grapeCount_one": "{{count}} cépage",
+      "grapeCount_other": "{{count}} cépages",
+      "noGrapeShort": "Aucun cépage encore"
     }
   },
   "space": {

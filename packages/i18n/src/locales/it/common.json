@@ -483,7 +483,7 @@
     "wheels": {
       "tab": "Ruote",
       "title": "Ruote degli aromi e dei colori",
-      "intro": "Trova un aroma per famiglia e gruppo, o un colore per tipo di vino. Tocca per entrare; tocca il centro per tornare indietro.",
+      "intro": "Trova un aroma per famiglia e gruppo, o un colore per tipo di vino: tocca una parte della ruota o il suo nome qui sotto.",
       "aromas": "Aromi",
       "colours": "Colori",
       "back": "Torna indietro da {{name}}",
@@ -491,7 +491,10 @@
       "grapesWith_one": "{{count}} vitigno della biblioteca lo ha:",
       "grapesWith_other": "{{count}} vitigni della biblioteca lo hanno:",
       "noGrape": "Ancora nessun vitigno della biblioteca lo ha.",
-      "colourOf": "colore di vino {{kind}}"
+      "colourOf": "colore di vino {{kind}}",
+      "grapeCount_one": "{{count}} vitigno",
+      "grapeCount_other": "{{count}} vitigni",
+      "noGrapeShort": "Nessun vitigno ancora"
     }
   },
   "space": {

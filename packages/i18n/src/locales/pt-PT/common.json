@@ -483,7 +483,7 @@
     "wheels": {
       "tab": "Rodas",
       "title": "Rodas de aromas e cores",
-      "intro": "Encontra um aroma pela sua família e grupo, ou uma cor pelo tipo de vinho. Toca para entrar; toca no centro para voltar.",
+      "intro": "Encontra um aroma pela família e pelo grupo, ou uma cor pelo tipo de vinho: toca numa parte da roda ou no nome por baixo.",
       "aromas": "Aromas",
       "colours": "Cores",
       "back": "Voltar de {{name}}",
@@ -491,7 +491,10 @@
       "grapesWith_one": "{{count}} casta da biblioteca tem-no:",
       "grapesWith_other": "{{count}} castas da biblioteca têm-no:",
       "noGrape": "Ainda nenhuma casta da biblioteca o tem.",
-      "colourOf": "cor de vinho {{kind}}"
+      "colourOf": "cor de vinho {{kind}}",
+      "grapeCount_one": "{{count}} casta",
+      "grapeCount_other": "{{count}} castas",
+      "noGrapeShort": "Ainda sem castas"
     }
   },
   "space": {

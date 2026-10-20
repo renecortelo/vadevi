@@ -27,8 +27,11 @@ has the reasons.
   narrows the vocabulary by family and group to one aroma, drawn and named,
   with the grapes whose sources name it; aromas no grape carries yet are
   faint. The colour wheel holds the colours a tasting notes, by the kind of
-  wine that shows them, each in its own tint. Touch to go in, the centre to
-  step back; every part is a button to a keyboard and a screen reader.
+  wine that shows them, each in its own tint. One thin ring at a time, its
+  parts fanning out as a level opens; the part pointed at or chosen steps out
+  and is named large in the centre, with its grapes or its kind of wine; the
+  level's parts are listed beneath as buttons, for touch, keyboard and screen
+  reader alike.
   `GET /api/v1/library/aromas` answers each aroma's name and its number of
   grapes, and `GET /api/v1/library/grapes?aroma=` the grapes that carry one.
 - **No tannin gauge for a white grape**: its wine has next to no tannin, so

@@ -483,7 +483,7 @@
     "wheels": {
       "tab": "Räder",
       "title": "Aroma- und Farbräder",
-      "intro": "Finde ein Aroma über seine Familie und Gruppe oder eine Farbe über die Weinart. Tippe, um hineinzugehen; tippe auf die Mitte, um zurückzugehen.",
+      "intro": "Finde ein Aroma über Familie und Gruppe oder eine Farbe über die Weinart: tippe auf einen Teil des Rades oder auf seinen Namen darunter.",
       "aromas": "Aromen",
       "colours": "Farben",
       "back": "Zurück aus {{name}}",
@@ -491,7 +491,10 @@
       "grapesWith_one": "{{count}} Rebsorte der Bibliothek hat es:",
       "grapesWith_other": "{{count}} Rebsorten der Bibliothek haben es:",
       "noGrape": "Noch keine Rebsorte der Bibliothek hat es.",
-      "colourOf": "Weinfarbe: {{kind}}"
+      "colourOf": "Weinfarbe: {{kind}}",
+      "grapeCount_one": "{{count}} Rebsorte",
+      "grapeCount_other": "{{count}} Rebsorten",
+      "noGrapeShort": "Noch keine Rebsorte"
     }
   },
   "space": {

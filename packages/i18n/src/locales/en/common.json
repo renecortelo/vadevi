@@ -483,7 +483,7 @@
     "wheels": {
       "tab": "Wheels",
       "title": "Aroma and colour wheels",
-      "intro": "Find an aroma by its family and group, or a colour by the kind of wine. Touch to go in; touch the centre to step back.",
+      "intro": "Find an aroma by its family and group, or a colour by the kind of wine: touch a part of the wheel, or its name below.",
       "aromas": "Aromas",
       "colours": "Colours",
       "back": "Back from {{name}}",
@@ -491,7 +491,10 @@
       "grapesWith_one": "{{count}} grape in the library carries it:",
       "grapesWith_other": "{{count}} grapes in the library carry it:",
       "noGrape": "No grape in the library carries it yet.",
-      "colourOf": "a {{kind}} wine colour"
+      "colourOf": "a {{kind}} wine colour",
+      "grapeCount_one": "{{count}} grape",
+      "grapeCount_other": "{{count}} grapes",
+      "noGrapeShort": "No grape yet"
     }
   },
   "space": {

@@ -1,15 +1,14 @@
 import type { LibrarySearchResponse } from "@vadevi/contracts";
-import { aromaFromTerm, resolveSupportedLocale } from "@vadevi/i18n/runtime";
+import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { AromaIcon } from "../library/AromaIcon";
 import { LibraryTabs } from "../library/LibraryTabs";
 import { trailFrom } from "../library/trail";
 import { Wheel, type WheelNode } from "../library/Wheel";
-import { aromaWheel, colourKinds, colourWheel, hueColours } from "../library/wheels";
+import { aromaWheel, colourKinds, colourWheel } from "../library/wheels";
 import { getLibraryAromaCounts, listGrapesWithAroma } from "../services/library";
 
 type Kind = "aromas" | "colours";
@@ -65,13 +64,6 @@ export function LibraryWheelsPage() {
     setSelected(null);
   };
 
-  const hue = selected?.startsWith("hue:") === true ? selected.slice("hue:".length) : null;
-  const hueKind =
-    hue === null
-      ? null
-      : colourKinds.find((entry) => (entry.hues as readonly string[]).includes(hue));
-  const descriptor = term === null ? null : aromaFromTerm(term);
-  const known = term === null ? undefined : map.get(term);
   const list = grapes?.term === term ? grapes.list : null;
   const trail = trailFrom(t("library.wheels.title"), "/library/wheels");
 
@@ -96,6 +88,23 @@ export function LibraryWheelsPage() {
           ))}
         </div>
         <Wheel
+          detail={(node) => {
+            if (node.id.startsWith("aroma:")) {
+              const count = map.get(node.id.slice("aroma:".length))?.grapeCount ?? 0;
+              return count === 0
+                ? t("library.wheels.noGrapeShort")
+                : t("library.wheels.grapeCount", { count });
+            }
+            if (node.id.startsWith("hue:")) {
+              const found = colourKinds.find((entry) =>
+                (entry.hues as readonly string[]).includes(node.id.slice("hue:".length)),
+              );
+              return found === undefined
+                ? null
+                : t("library.wheels.colourOf", { kind: t(`tasting.value.${found.kind}`) });
+            }
+            return null;
+          }}
           key={kind}
           label={t(`library.wheels.${kind}`)}
           onSelect={(node) => setSelected(node.id)}
@@ -104,51 +113,21 @@ export function LibraryWheelsPage() {
         />
         <div aria-live="polite" className="wheel-choice">
           {selected === null ? <p className="section-help">{t("library.wheels.pick")}</p> : null}
-          {term !== null ? (
+          {term !== null && list !== null && list.length > 0 ? (
             <>
-              <h2 className="wheel-choice__title">
-                {descriptor === null ? null : <AromaIcon descriptor={descriptor} />}
-                <span>{known?.label ?? term}</span>
-              </h2>
-              {list === null ? null : list.length === 0 ? (
-                <p className="section-help">{t("library.wheels.noGrape")}</p>
-              ) : (
-                <>
-                  <p className="section-help">
-                    {t("library.wheels.grapesWith", { count: list.length })}
-                  </p>
-                  <ul className="library-chips">
-                    {list.map((grape) => (
-                      <li key={grape.id}>
-                        <Link
-                          className="text-link"
-                          state={trail}
-                          to={`/library/grapes/${grape.id}`}
-                        >
-                          {grape.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
+              <p className="section-help">
+                {t("library.wheels.grapesWith", { count: list.length })}
+              </p>
+              <ul className="library-chips">
+                {list.map((grape) => (
+                  <li key={grape.id}>
+                    <Link className="text-link" state={trail} to={`/library/grapes/${grape.id}`}>
+                      {grape.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </>
-          ) : null}
-          {hue !== null && hueKind != null ? (
-            <h2 className="wheel-choice__title">
-              <span
-                aria-hidden="true"
-                className="wheel-choice__swatch"
-                style={{ background: hueColours[hue] }}
-              />
-              <span>
-                {t(`tasting.hueOption.${hue}`)}
-                <small>
-                  {" "}
-                  · {t("library.wheels.colourOf", { kind: t(`tasting.value.${hueKind.kind}`) })}
-                </small>
-              </span>
-            </h2>
           ) : null}
         </div>
       </section>

@@ -483,7 +483,7 @@
     "wheels": {
       "tab": "Rodes",
       "title": "Rodes d'aromes i colors",
-      "intro": "Troba una aroma per la seva família i el seu grup, o un color pel tipus de vi. Toca per entrar-hi; toca el centre per tornar.",
+      "intro": "Troba una aroma per la seva família i el seu grup, o un color pel tipus de vi: toca una part de la roda o el seu nom a sota.",
       "aromas": "Aromes",
       "colours": "Colors",
       "back": "Torna des de {{name}}",
@@ -491,7 +491,10 @@
       "grapesWith_one": "{{count}} raïm de la biblioteca la té:",
       "grapesWith_other": "{{count}} raïms de la biblioteca la tenen:",
       "noGrape": "Encara cap raïm de la biblioteca no la té.",
-      "colourOf": "color de vi {{kind}}"
+      "colourOf": "color de vi {{kind}}",
+      "grapeCount_one": "{{count}} raïm",
+      "grapeCount_other": "{{count}} raïms",
+      "noGrapeShort": "Encara sense raïms"
     }
   },
   "space": {

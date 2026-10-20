@@ -1,4 +1,4 @@
-import { type KeyboardEvent, useState } from "react";
+import { type CSSProperties, type ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 /**
@@ -7,19 +7,20 @@ import { useTranslation } from "react-i18next";
  * the library's, the tasting picker's, a member's own — so each only says
  * what its rings hold.
  *
- * It shows two rings around a centre: the level in focus at the centre, its
- * parts in the inner ring, and their parts in the outer one. Touching a part
- * that has parts of its own goes into it; touching one that has none chooses
- * it; touching the centre steps back out. Every part is a button to a
- * keyboard and a screen reader, named and marked when chosen.
+ * One thin ring at a time: the parts of the level in focus, with gaps
+ * between them. Their names are not written on the ring: the part pointed at
+ * or chosen is named large in the centre, and the level's parts are listed
+ * beneath as buttons — the controls a keyboard and a screen reader use; the
+ * ring answers a touch too. Going into a part fans its own parts out; a
+ * button steps back.
  */
 export type WheelNode = {
   children?: WheelNode[];
   /** Its colour on the wheel. */
   color: string;
+  /** A small drawing beside its name in the list. */
+  icon?: ReactNode;
   id: string;
-  /** Its label's colour, where the default would not read on it. */
-  ink?: string;
   label: string;
   /** Drawn faintly: present in the vocabulary, absent from what is shown. */
   muted?: boolean;
@@ -27,9 +28,8 @@ export type WheelNode = {
   weight?: number;
 };
 
-const centreRadius = 25;
-const innerRadius = 62;
-const outerRadius = 99;
+const innerRadius = 58;
+const outerRadius = 90;
 
 function polar(radius: number, angle: number): [number, number] {
   const radians = ((angle - 90) * Math.PI) / 180;
@@ -37,20 +37,19 @@ function polar(radius: number, angle: number): [number, number] {
 }
 
 /** The ring slice between two angles, in degrees clockwise from the top. */
-function slice(inner: number, outer: number, start: number, end: number): string {
+function slice(start: number, end: number): string {
   const sweep = end - start;
-  // A whole ring cannot be drawn as one arc: two halves.
   if (sweep >= 359.99) {
-    return `${slice(inner, outer, start, start + 180)} ${slice(inner, outer, start + 180, end)}`;
+    return `${slice(start, start + 180)} ${slice(start + 180, end)}`;
   }
   const large = sweep > 180 ? 1 : 0;
-  const [x1, y1] = polar(outer, start);
-  const [x2, y2] = polar(outer, end);
-  const [x3, y3] = polar(inner, end);
-  const [x4, y4] = polar(inner, start);
+  const [x1, y1] = polar(outerRadius, start);
+  const [x2, y2] = polar(outerRadius, end);
+  const [x3, y3] = polar(innerRadius, end);
+  const [x4, y4] = polar(innerRadius, start);
   return (
-    `M ${x1} ${y1} A ${outer} ${outer} 0 ${large} 1 ${x2} ${y2} ` +
-    `L ${x3} ${y3} A ${inner} ${inner} 0 ${large} 0 ${x4} ${y4} Z`
+    `M ${x1} ${y1} A ${outerRadius} ${outerRadius} 0 ${large} 1 ${x2} ${y2} ` +
+    `L ${x3} ${y3} A ${innerRadius} ${innerRadius} 0 ${large} 0 ${x4} ${y4} Z`
   );
 }
 
@@ -62,69 +61,17 @@ function weightOf(node: WheelNode): number {
   return node.weight ?? 1;
 }
 
-type Placed = { end: number; node: WheelNode; start: number };
-
-function place(nodes: readonly WheelNode[], start: number, end: number): Placed[] {
-  const total = nodes.reduce((sum, node) => sum + weightOf(node), 0);
-  let at = start;
-  return nodes.map((node) => {
-    const span = ((end - start) * weightOf(node)) / total;
-    const placed = { end: at + span, node, start: at };
-    at += span;
-    return placed;
-  });
-}
-
-/** A label along the middle of its slice, turned so it reads upright. */
-function Label({
-  end,
-  ink,
-  radius,
-  size,
-  start,
-  text,
-  thickness,
-}: {
-  end: number;
-  ink: string | undefined;
-  radius: number;
-  size: number;
-  start: number;
-  text: string;
-  thickness: number;
-}) {
-  const middle = (start + end) / 2;
-  // As large as it may be, but no longer than the ring is thick and no taller
-  // than the slice is wide; a slice too narrow to read keeps no label.
-  const along = (radius * Math.PI * (end - start)) / 180;
-  const fitted = Math.min(size, (thickness * 0.92) / Math.max(1, text.length * 0.56), along * 0.8);
-  if (fitted < 2.6) return null;
-  const [x, y] = polar(radius, middle);
-  // Radial, outward on the right half and inward on the left, so no word
-  // hangs upside down.
-  const turn = middle <= 180 ? middle - 90 : middle + 90;
-  return (
-    <text
-      className="wheel__label"
-      dominantBaseline="middle"
-      style={ink === undefined ? undefined : { fill: ink }}
-      fontSize={fitted}
-      textAnchor="middle"
-      transform={`rotate(${turn} ${x} ${y})`}
-      x={x}
-      y={y}
-    >
-      {text}
-    </text>
-  );
-}
+const hasParts = (node: WheelNode) => node.children !== undefined && node.children.length > 0;
 
 export function Wheel({
+  detail,
   label,
   onSelect,
   root,
   selected,
 }: {
+  /** A line under a part's name in the centre: how many grapes, what kind. */
+  detail?: (node: WheelNode) => string | null;
   /** The wheel's own name, for assistive technology. */
   label: string;
   onSelect: (node: WheelNode) => void;
@@ -135,6 +82,7 @@ export function Wheel({
   // The path from the root to the level in focus, by id: the nodes are read
   // afresh from the current root, so a change of language relabels them.
   const [trail, setTrail] = useState<string[]>([]);
+  const [pointed, setPointed] = useState<string | null>(null);
   const path = trail.reduce<WheelNode[]>(
     (nodes, id) => {
       const next = nodes.at(-1)!.children?.find((child) => child.id === id);
@@ -142,115 +90,106 @@ export function Wheel({
     },
     [root],
   );
-  const setPath = (nodes: WheelNode[]) => setTrail(nodes.slice(1).map((node) => node.id));
   const focus = path.at(-1)!;
-  const inner = place(focus.children ?? [], 0, 360);
-  const outer = inner.flatMap((placed) =>
-    place(placed.node.children ?? [], placed.start, placed.end),
-  );
-  // At the last level there is no rim: its ring reaches the edge.
-  const ringEdge = outer.length === 0 ? outerRadius : innerRadius;
+  const parts = focus.children ?? [];
+  const total = parts.reduce((sum, node) => sum + weightOf(node), 0);
+  // A gap between parts, smaller when there are many.
+  const gap = parts.length > 30 ? 0.6 : parts.length > 12 ? 1.2 : 2;
+  const placed = parts.reduce<{ end: number; node: WheelNode; start: number }[]>((items, node) => {
+    const start = items.at(-1)?.end ?? 0;
+    return [...items, { end: start + (360 * weightOf(node)) / Math.max(total, 1), node, start }];
+  }, []);
 
-  const choose = (node: WheelNode, parent: WheelNode | null) => {
-    if (node.children !== undefined && node.children.length > 0) {
-      setPath(parent === null ? [...path, node] : [...path, parent, node]);
-      return;
-    }
-    // A part chosen from the outer ring brings its own ring to the middle.
-    if (parent !== null) setPath([...path, parent]);
-    onSelect(node);
+  const choose = (node: WheelNode) => {
+    setPointed(null);
+    if (hasParts(node)) setTrail([...trail, node.id]);
+    else onSelect(node);
   };
   const back = () => {
-    if (path.length > 1) setPath(path.slice(0, -1));
+    setPointed(null);
+    setTrail(trail.slice(0, -1));
   };
-  const keys = (action: () => void) => (event: KeyboardEvent) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      action();
-    }
-  };
-  const segment = (placed: Placed, inside: number, outside: number, parent: WheelNode | null) => {
-    const { end, node, start } = placed;
-    const chosen = node.id === selected;
-    return (
-      <g
-        aria-label={node.label}
-        aria-pressed={node.children === undefined ? chosen : undefined}
-        className={`wheel__part${node.muted === true ? " wheel__part--muted" : ""}${chosen ? " wheel__part--chosen" : ""}`}
-        key={node.id}
-        onClick={() => choose(node, parent)}
-        onKeyDown={keys(() => choose(node, parent))}
-        role="button"
-        tabIndex={0}
-      >
-        <path d={slice(inside, outside, start, end)} fill={node.color} />
-      </g>
-    );
-  };
-  const labelSize = (count: number) => (count > 40 ? 5 : count > 20 ? 6 : 7);
+
+  const named =
+    parts.find((node) => node.id === pointed) ?? parts.find((node) => node.id === selected) ?? null;
+  const centre = named ?? focus;
+  const line = named === null ? null : (detail?.(named) ?? null);
 
   return (
     <div className="wheel">
-      <svg aria-label={label} className="wheel__svg" role="group" viewBox="-102 -102 204 204">
-        {inner.map((placed) => segment(placed, centreRadius, ringEdge, null))}
-        {outer.map((placed) => {
-          const parent = inner.find(
-            (item) => item.start <= placed.start && placed.end <= item.end + 1e-6,
-          );
-          return segment(placed, innerRadius, outerRadius, parent?.node ?? null);
-        })}
-        <g aria-hidden="true" className="wheel__labels">
-          {inner.map(({ end, node, start }) => (
-            <Label
-              end={end}
-              ink={node.ink}
-              key={node.id}
-              radius={(centreRadius + ringEdge) / 2}
-              size={labelSize(inner.length)}
-              start={start}
-              text={node.label}
-              thickness={ringEdge - centreRadius}
-            />
-          ))}
-          {outer.map(({ end, node, start }) => (
-            <Label
-              end={end}
-              ink={node.ink}
-              key={node.id}
-              radius={(innerRadius + outerRadius) / 2}
-              size={labelSize(outer.length)}
-              start={start}
-              text={node.label}
-              thickness={outerRadius - innerRadius}
-            />
-          ))}
+      <svg aria-hidden="true" className="wheel__svg" viewBox="-100 -100 200 200">
+        <g className="wheel__ring" key={focus.id}>
+          {placed.map(({ end, node, start }, index) => {
+            const [dx, dy] = polar(5, (start + end) / 2);
+            return (
+              <path
+                className={
+                  `wheel__part${node.muted === true ? " wheel__part--muted" : ""}` +
+                  `${node.id === selected ? " wheel__part--chosen" : ""}` +
+                  `${pointed === node.id ? " wheel__part--pointed" : ""}`
+                }
+                d={slice(start + gap / 2, end - gap / 2)}
+                fill={node.color}
+                key={node.id}
+                onClick={() => choose(node)}
+                onPointerEnter={() => setPointed(node.id)}
+                onPointerLeave={() => setPointed(null)}
+                style={{ "--dx": `${dx}px`, "--dy": `${dy}px`, "--i": index } as CSSProperties}
+              />
+            );
+          })}
         </g>
-        <g
-          aria-label={
-            path.length > 1 ? t("library.wheels.back", { name: focus.label }) : focus.label
-          }
-          className="wheel__centre"
-          onClick={back}
-          onKeyDown={keys(back)}
-          role={path.length > 1 ? "button" : undefined}
-          tabIndex={path.length > 1 ? 0 : undefined}
-        >
-          <circle
-            fill={path.length > 1 ? focus.color : "var(--color-surface-raised)"}
-            r={centreRadius - 1}
-          />
+        <g className="wheel__centre" key={`${focus.id}:${centre.id}`}>
           <text
-            className="wheel__centre-label"
+            className="wheel__name"
             dominantBaseline="middle"
-            style={path.length > 1 ? { fill: focus.ink ?? "#2b0709" } : undefined}
-            fontSize={6}
             textAnchor="middle"
+            y={line === null ? 0 : -6}
           >
-            {path.length > 1 ? "↩ " : ""}
-            {focus.label}
+            {centre.label}
           </text>
+          {line === null ? null : (
+            <text className="wheel__detail" dominantBaseline="middle" textAnchor="middle" y={12}>
+              {line}
+            </text>
+          )}
         </g>
       </svg>
+      {path.length > 1 ? (
+        <button className="wheel__back text-button" onClick={back} type="button">
+          ← {t("library.wheels.back", { name: path.at(-2)!.label })}
+        </button>
+      ) : null}
+      <ul aria-label={`${label}: ${focus.label}`} className="wheel__list" key={focus.id}>
+        {placed.map(({ node }, index) => (
+          <li key={node.id} style={{ "--i": index } as CSSProperties}>
+            <button
+              aria-pressed={hasParts(node) ? undefined : node.id === selected}
+              className={`wheel__chip${node.muted === true ? " wheel__chip--muted" : ""}`}
+              onBlur={() => setPointed(null)}
+              onClick={() => choose(node)}
+              onFocus={() => setPointed(node.id)}
+              onPointerEnter={() => setPointed(node.id)}
+              onPointerLeave={() => setPointed(null)}
+              type="button"
+            >
+              {node.icon ?? (
+                <span
+                  aria-hidden="true"
+                  className="wheel__dot"
+                  style={{ background: node.color }}
+                />
+              )}
+              <span>{node.label}</span>
+              {hasParts(node) ? (
+                <span aria-hidden="true" className="wheel__more">
+                  ›
+                </span>
+              ) : null}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

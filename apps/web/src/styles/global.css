@@ -6576,8 +6576,9 @@ button.stats-bars__label:hover {
 }
 
 /* ── The library's wheels ─────────────────────────────────────────────────
-   One drawing for every wheel (`library/Wheel.tsx`): the level in focus at
-   the centre, its parts around it, theirs on the rim. */
+   One drawing for every wheel (`library/Wheel.tsx`): one thin ring of the
+   level in focus, its parts fanning out when it opens; the part pointed at
+   or chosen named large in the centre; the level's parts listed beneath. */
 .wheel-card {
   display: grid;
   gap: var(--space-4);
@@ -6585,69 +6586,157 @@ button.stats-bars__label:hover {
 }
 
 .wheel {
-  inline-size: min(100%, 28rem);
+  /* Each part sets its own: how far it steps out, and its place in the fan. */
+  --dx: 0px;
+  --dy: 0px;
+  --i: 0;
+
+  display: grid;
+  gap: var(--space-3);
+  inline-size: min(100%, 26rem);
+  justify-items: center;
 }
 
 .wheel__svg {
   block-size: auto;
   display: block;
-  inline-size: 100%;
+  inline-size: min(100%, 20rem);
   overflow: visible;
 }
 
 .wheel__part {
+  animation: wheel-fan 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--i) * 18ms) both;
   cursor: pointer;
-  outline: none;
-}
-
-.wheel__part path {
-  stroke: rgb(var(--color-surface-rgb));
-  stroke-width: 0.6;
-  transition:
-    filter 0.2s ease,
-    opacity 0.2s ease;
-}
-
-.wheel__part:hover path,
-.wheel__part:focus-visible path {
-  filter: brightness(1.06);
   stroke: var(--color-text);
-  stroke-width: 1;
+  stroke-opacity: 0;
+  stroke-width: 0;
+  transform-box: view-box;
+  transform-origin: 0 0;
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease,
+    translate 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Each part fans out from the centre, one after the other. */
+@keyframes wheel-fan {
+  from {
+    opacity: 0;
+    transform: rotate(-24deg) scale(0.82);
+  }
 }
 
 /* In the vocabulary, but no grape of the library carries it. */
-.wheel__part--muted path {
-  opacity: 0.4;
+.wheel__part--muted {
+  opacity: 0.32;
 }
 
-.wheel__part--chosen path {
+/* Pointed at or chosen: it steps out of the ring, a soft shadow under it. */
+.wheel__part--pointed,
+.wheel__part--chosen {
+  filter: drop-shadow(0 2px 3px rgb(43 7 9 / 25%));
+  opacity: 1;
+  translate: var(--dx) var(--dy);
+}
+
+.wheel__part--chosen {
   stroke: var(--color-plum);
-  stroke-width: 2;
-}
-
-.wheel__labels {
-  pointer-events: none;
-}
-
-.wheel__label {
-  fill: #2b0709;
-  font-weight: 600;
+  stroke-opacity: 1;
+  stroke-width: 1.4;
 }
 
 .wheel__centre {
-  cursor: pointer;
-  outline: none;
+  animation: wheel-name 0.3s ease-out both;
 }
 
-.wheel__centre:focus-visible circle {
-  stroke: var(--color-plum);
-  stroke-width: 1.5;
+@keyframes wheel-name {
+  from {
+    opacity: 0;
+  }
 }
 
-.wheel__centre-label {
+.wheel__name {
   fill: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 13px;
   font-weight: 700;
-  pointer-events: none;
+}
+
+.wheel__detail {
+  fill: var(--color-text-muted);
+  font-size: 7.5px;
+  letter-spacing: 0.04em;
+}
+
+.wheel__back {
+  font-size: var(--text-sm);
+}
+
+.wheel__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wheel__list li {
+  animation: reel-rise 0.4s ease-out calc(var(--i) * 20ms) both;
+}
+
+.wheel__chip {
+  align-items: center;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--text-sm);
+  gap: 0.4rem;
+  min-block-size: 2.25rem;
+  padding: 0.2rem 0.75rem 0.2rem 0.5rem;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.wheel__chip:hover,
+.wheel__chip:focus-visible {
+  border-color: var(--color-plum);
+  transform: translateY(-1px);
+}
+
+.wheel__chip[aria-pressed="true"] {
+  background: var(--color-plum);
+  border-color: var(--color-plum);
+  color: var(--color-on-accent);
+}
+
+.wheel__chip[aria-pressed="true"] .aroma-icon {
+  stroke: currentColor;
+}
+
+.wheel__chip--muted {
+  opacity: 0.6;
+}
+
+.wheel__chip .aroma-icon {
+  block-size: 1.4rem;
+  inline-size: 1.4rem;
+  margin: 0;
+}
+
+.wheel__dot {
+  block-size: 0.8rem;
+  border-radius: 50%;
+  inline-size: 0.8rem;
+}
+
+.wheel__more {
+  color: var(--color-text-muted);
 }
 
 .wheel-choice {
@@ -6655,34 +6744,15 @@ button.stats-bars__label:hover {
   text-align: center;
 }
 
-.wheel-choice__title {
-  align-items: center;
-  display: flex;
-  font-size: var(--text-lg);
-  gap: var(--space-2);
-  justify-content: center;
-  margin: 0 0 var(--space-2);
-}
-
-.wheel-choice__title .aroma-icon {
-  block-size: 2.4rem;
-  inline-size: 2.4rem;
-  margin: 0;
-}
-
-.wheel-choice__title small {
-  color: var(--color-text-muted);
-  font-weight: 400;
-}
-
-.wheel-choice__swatch {
-  block-size: 1.6rem;
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  display: inline-block;
-  inline-size: 1.6rem;
-}
-
 .wheel-choice .library-chips {
   justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wheel__part,
+  .wheel__centre,
+  .wheel__list li {
+    animation: none;
+    transition: none;
+  }
 }

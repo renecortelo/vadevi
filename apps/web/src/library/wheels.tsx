@@ -1,6 +1,7 @@
 import { aromaDescriptors, aromaFamilies, aromaGroups } from "@vadevi/i18n/runtime";
 import type { TFunction } from "i18next";
 
+import { AromaIcon } from "./AromaIcon";
 import type { WheelNode } from "./Wheel";
 
 /**
@@ -8,21 +9,25 @@ import type { WheelNode } from "./Wheel";
  * and the colours a tasting notes, by the kind of wine that shows them.
  */
 
-/** Each aroma family's colour on the wheel; its groups and aromas are lighter. */
+/**
+ * Each aroma family's colour on the wheel, from the wine palette, quiet
+ * rather than bright; its groups and aromas are shades of it, each its own.
+ */
 const familyColours = {
-  earth: "#a1887f",
-  floral: "#ce93d8",
-  fruit: "#e57373",
-  herbal: "#9ccc65",
-  nut: "#e6c79c",
-  oak: "#d7b98e",
-  savoury: "#b0726a",
-  spice: "#e0a458",
-  sweet: "#f2c94c",
+  earth: "#8f7663",
+  floral: "#a27aa6",
+  fruit: "#b85a5a",
+  herbal: "#7f9a62",
+  nut: "#c3a983",
+  oak: "#b39572",
+  savoury: "#85544f",
+  spice: "#c2874e",
+  sweet: "#cfa64d",
 } as const;
 
-const lighter = (colour: string, share: number) =>
-  `color-mix(in srgb, ${colour} ${share}%, #ffffff)`;
+/** The nth shade of a colour: a little lighter for each step, then again. */
+const shade = (colour: string, step: number) =>
+  `color-mix(in srgb, ${colour} ${100 - (step % 5) * 13}%, #ffffff)`;
 
 /** An aroma's node id on the wheel. */
 export const aromaNodeId = (term: string) => `aroma:${term}`;
@@ -35,19 +40,20 @@ export function aromaWheel(
     children: aromaFamilies.map((family) => ({
       children: aromaGroups
         .filter((group) => group.family === family)
-        .map((group) => ({
+        .map((group, groupIndex) => ({
           children: aromaDescriptors
             .filter((descriptor) => descriptor.group === group.id)
-            .map((descriptor) => {
+            .map((descriptor, index) => {
               const known = aromas.get(descriptor.term);
               return {
-                color: lighter(familyColours[family], 55),
+                color: shade(familyColours[family], index),
+                icon: <AromaIcon descriptor={descriptor} />,
                 id: aromaNodeId(descriptor.term),
                 label: known?.label ?? descriptor.term,
                 muted: (known?.grapeCount ?? 0) === 0,
               };
             }),
-          color: lighter(familyColours[family], 80),
+          color: shade(familyColours[family], groupIndex),
           id: `group:${group.id}`,
           label: t(`library.aromaGroup.${group.id}`),
         })),
@@ -93,9 +99,6 @@ export const hueColours: Record<string, string> = {
   yellow: "#f1d66b",
 };
 
-/** Hues dark enough to need a light label. */
-const darkHues = new Set(["brick", "brown", "garnet", "mahogany", "purple", "ruby", "tawny"]);
-
 /** A colour's node id on the wheel. */
 export const hueNodeId = (hue: string) => `hue:${hue}`;
 
@@ -105,12 +108,10 @@ export function colourWheel(t: TFunction): WheelNode {
       children: hues.map((hue) => ({
         color: hueColours[hue]!,
         id: hueNodeId(hue),
-        ...(darkHues.has(hue) ? { ink: "#fff7f1" } : {}),
         label: t(`tasting.hueOption.${hue}`),
       })),
       color: hueColours[hues[Math.floor(hues.length / 2)]!]!,
       id: `kind:${kind}`,
-      ...(kind === "red" || kind === "brown" ? { ink: "#fff7f1" } : {}),
       label: t(`tasting.value.${kind}`),
     })),
     color: "var(--color-surface-raised)",
