@@ -129,8 +129,12 @@ const handReadings = (
           | "tannin";
         lang: string;
         quote: string;
-        /** A volume of Viala and Vermorel's «Ampélographie», read where no article says. */
-        source?: { volume: string; work: "viala-vermorel" };
+        /**
+         * A public-domain book read where no article says — Viala and
+         * Vermorel's «Ampélographie», Hilgard's reports — by its Internet
+         * Archive identifier.
+         */
+        source?: { volume: string; work: string };
         value: string | string[];
         words?: Record<string, string>;
       }[]
@@ -150,8 +154,9 @@ function articleIn(qid: string, lang: string): { article: string; url: string } 
 }
 
 /**
- * A volume of Viala and Vermorel's «Ampélographie» (1901–1910, public domain),
- * as the Internet Archive's text of its scan gives it
+ * A public-domain book on grapes — a volume of Viala and Vermorel's
+ * «Ampélographie» (1901–1910), the University of California's reports of
+ * viticultural work (1885–1896) — as the Internet Archive's text of its scan gives it
  * (`.kb-cache/ampelography/<volume>_djvu.txt`): its words split across a line
  * joined again, so a quote reads as the page does.
  */

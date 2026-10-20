@@ -6817,7 +6817,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sagrantino"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": null,
     "aromas": [],
     "body": null,
@@ -6922,6 +6922,12 @@
         "field": "regions",
         "quote": "there are still 29 ha planted on the Canary Islands in 2008 ... made its way to the Spanish colonies in Mexico and Peru. From there, the grape spread throughout North and South America where it developed clonal variations that became grape varieties that are now known as Mission in California and Mexico, Pais in Chile and Criolla Chica in Argentina.",
         "value": "PE: Peru"
+      },
+      {
+        "field": "acidity",
+        "quote": "Its total lack of character and low acid render it unfit for any other purpose than blending where a neutral ingredient is desired.",
+        "value": "low",
+        "sourceUrl": "https://archive.org/details/reportofviticult8793cali"
       }
     ],
     "id": "listan-prieto",
@@ -8003,6 +8009,12 @@
         "quote": "з виразними фруктовими нотами, м'якою оксамитовою текстурою і насиченим смаком",
         "value": "fruity",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%96%D0%BA%D0%B0%D0%BD%D1%82_%D0%91%D1%83%D1%88%D0%B5"
+      },
+      {
+        "field": "tannin",
+        "quote": "This variety has shown itself to be one of the most \" solid \" wines yet tested. With a good amount of sugar, it has high acid, tannin, and body",
+        "value": "high",
+        "sourceUrl": "https://archive.org/details/reportviticultu02biolgoog"
       }
     ],
     "id": "alicante-bouschet",
@@ -8195,7 +8207,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q2308139",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Alicante_Bouschet"
   },
@@ -13591,7 +13603,7 @@
       "asparagus",
       "gooseberry"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -13799,6 +13811,12 @@
         "quote": "El vi varietal de sauvignon blanc és d'una bona acidesa fruital, de complexitat aromàtica herbàcia i alt contingut alcohòlic.",
         "value": "high",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Sauvignon_blanc"
+      },
+      {
+        "field": "body",
+        "quote": "יינות סוביניון בלאן לרוב יתאפיינו בחומציות ובגוף קל.",
+        "value": "low",
+        "sourceUrl": "https://he.wikipedia.org/wiki/%D7%A1%D7%95%D7%91%D7%99%D7%A0%D7%99%D7%95%D7%9F_%D7%91%D7%9C%D7%90%D7%9F"
       }
     ],
     "id": "sauvignon-blanc",
@@ -17784,6 +17802,30 @@
         "quote": "Los vinos de grüner veltliner tienden a tener un cuerpo medio, una ligera frutalidad, una alta acidez y notas a especias",
         "value": "high",
         "sourceUrl": "https://es.wikipedia.org/wiki/Gr%C3%BCner_veltliner"
+      },
+      {
+        "field": "pairings",
+        "quote": "Mladé sú vhodné k studenému mäsu, omáčkam a slaným predjedlám, vyzreté k hovädziemu, filé z morských rýb a neutrálnym omáčkam.",
+        "value": "cured meats",
+        "sourceUrl": "https://sk.wikipedia.org/wiki/Veltl%C3%ADnske_zelen%C3%A9"
+      },
+      {
+        "field": "pairings",
+        "quote": "Mladé sú vhodné k studenému mäsu, omáčkam a slaným predjedlám, vyzreté k hovädziemu, filé z morských rýb a neutrálnym omáčkam.",
+        "value": "appetizers",
+        "sourceUrl": "https://sk.wikipedia.org/wiki/Veltl%C3%ADnske_zelen%C3%A9"
+      },
+      {
+        "field": "pairings",
+        "quote": "Mladé sú vhodné k studenému mäsu, omáčkam a slaným predjedlám, vyzreté k hovädziemu, filé z morských rýb a neutrálnym omáčkam.",
+        "value": "beef",
+        "sourceUrl": "https://sk.wikipedia.org/wiki/Veltl%C3%ADnske_zelen%C3%A9"
+      },
+      {
+        "field": "pairings",
+        "quote": "Mladé sú vhodné k studenému mäsu, omáčkam a slaným predjedlám, vyzreté k hovädziemu, filé z morských rýb a neutrálnym omáčkam.",
+        "value": "fish",
+        "sourceUrl": "https://sk.wikipedia.org/wiki/Veltl%C3%ADnske_zelen%C3%A9"
       }
     ],
     "id": "gruner-veltliner",
@@ -17798,7 +17840,12 @@
       "pt": "Grüner Veltliner"
     },
     "origin": "AT",
-    "pairings": [],
+    "pairings": [
+      "cured meats",
+      "appetizers",
+      "beef",
+      "fish"
+    ],
     "prominence": 28,
     "regions": [],
     "styles": [
@@ -19234,7 +19281,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [],
     "body": null,
     "color": "white",
@@ -19338,6 +19385,12 @@
         "field": "styles",
         "quote": "The major plantings are in New South Wales and South Australia, where it is mostly used for brandy and for blending with other grapes in table wine",
         "value": "blending"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Niski procent šećera osigurava da će i vino napravljeno od njega imati niski procent alkohola.",
+        "value": "low",
+        "sourceUrl": "https://sh.wikipedia.org/wiki/Trebbiano"
       }
     ],
     "id": "trebbiano",
@@ -22307,7 +22360,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corvina"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [
       "fruity",
@@ -22457,6 +22510,12 @@
         "quote": "Powstałe z kadarki wino charakteryzuje się czerwonym lub ciemnoczerwonym kolorem, jest przyjemnie lekkie i owocowe, bogatsze z taninową i korzenną nutą na południu",
         "value": "spice",
         "sourceUrl": "https://pl.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "acidity",
+        "quote": "Odlikuje se elegancijom, lakoćom, pitkošću, rafiniranošću i umerenim prisustvom odgovarajuće kiseline",
+        "value": "medium",
+        "sourceUrl": "https://sr.wikipedia.org/wiki/Kadarka"
       }
     ],
     "id": "kadarka",
@@ -25770,7 +25829,7 @@
       "herbs",
       "oak"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -25877,6 +25936,12 @@
         "quote": "Zawartość alkoholu jest wysoka, smak pełny, charakterystyczny taninowy",
         "value": "high",
         "sourceUrl": "https://pl.wikipedia.org/wiki/Vranac"
+      },
+      {
+        "field": "body",
+        "quote": "Вино је пуног тела, интензивне рубин-црвене боје",
+        "value": "high",
+        "sourceUrl": "https://sr.wikipedia.org/wiki/%D0%92%D1%80%D0%B0%D0%BD%D0%B0%D1%86_(%D0%B3%D1%80%D0%BE%D0%B6%D1%92%D0%B5)"
       }
     ],
     "id": "vranec",
@@ -38611,7 +38676,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Blatina"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": "high",
     "aromas": [
       "vanilla",
@@ -38702,6 +38767,12 @@
         "quote": "В аромате ванильные и миндальные тона, яблочные и цитрусовые ноты",
         "value": "citrus",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%88%D0%B8%D0%BF"
+      },
+      {
+        "field": "acidity",
+        "quote": "Ради умерених киселина савршено пристаје уз сва јела од рибе, шкољака и белог меса.",
+        "value": "medium",
+        "sourceUrl": "https://sr.wikipedia.org/wiki/%D0%9F%D0%BE%D1%88%D0%B8%D0%BF"
       }
     ],
     "id": "posip",
@@ -39231,7 +39302,7 @@
       "blueberry",
       "chocolate"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -39360,6 +39431,12 @@
         "quote": "De kleur is zeer donker, zelfs inktachtig zwart met een relatief hoog zuurgehalte.",
         "value": "high",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Durif"
+      },
+      {
+        "field": "body",
+        "quote": "על פי רוב מדובר ביין כהה מאוד (כהה יותר מאשר שיראז ובעל גוונים סגולים יותר), חומצי במקצת, ובעל גוף חזק ומודגש.",
+        "value": "high",
+        "sourceUrl": "https://he.wikipedia.org/wiki/%D7%93%D7%95%D7%A8%D7%99%D7%A3"
       }
     ],
     "id": "durif",
@@ -41998,7 +42075,7 @@
     "acidity": null,
     "alcohol": null,
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -42131,6 +42208,12 @@
         "quote": "Сорт є автохтонним для регіону Кампанія.",
         "value": "IT",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BB%D0%B0%D0%BD%D0%B3%D1%96%D0%BD%D0%B0"
+      },
+      {
+        "field": "body",
+        "quote": "לפאלאנגינה גוף מלא (בדומה לשרדונה) עם טעמי אפרסק, לימון ואגס",
+        "value": "high",
+        "sourceUrl": "https://he.wikipedia.org/wiki/%D7%A4%D7%90%D7%9C%D7%90%D7%A0%D7%92%D7%99%D7%A0%D7%94"
       }
     ],
     "id": "falanghina",
@@ -42745,6 +42828,12 @@
         "quote": "Vino od ove sorte je nepopularno radi slabe arome, svijetle boje i niske količine alkohola",
         "value": "low",
         "sourceUrl": "https://hr.wikipedia.org/wiki/Aramon"
+      },
+      {
+        "field": "origin",
+        "quote": "L'origina d'aqueste vitatge es Provença o Lengadòc.",
+        "value": "FR",
+        "sourceUrl": "https://oc.wikipedia.org/wiki/Aramon_(vitatge)"
       }
     ],
     "id": "aramon",
@@ -42758,7 +42847,7 @@
       "nl": "Aramon Noir",
       "pt": "Aramon (uva)"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [],
     "prominence": 10,
     "regions": [
@@ -48434,6 +48523,12 @@
         "quote": "Le poulsard donne des vins de grande finesse, aromatiques (fruité et notes animales), mais de structure et couleur légère.",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Poulsard"
+      },
+      {
+        "field": "tannin",
+        "quote": "The Ploussard yields a wine of very light tint and body, with little tannin, but of high quality",
+        "value": "low",
+        "sourceUrl": "https://archive.org/details/reportviticultu01biolgoog"
       }
     ],
     "id": "poulsard",
@@ -48544,7 +48639,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1409433",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Poulsard"
   },
@@ -48923,7 +49018,12 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "black fruit",
+      "blackberry",
+      "black cherry",
+      "spice"
+    ],
     "body": "high",
     "color": "red",
     "evidence": [
@@ -48970,6 +49070,30 @@
         "quote": "Mají ještě intenzivnější barevnost, jsou plná, jemně ovocitá a harmonická, s dobrou strukturou",
         "value": "high",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Acolon"
+      },
+      {
+        "field": "aromas",
+        "quote": "acolon係一種專門釀酒用嘅提子。 acolon 主要用來釀造紅酒,係由葡萄品種 dornfelder同lemberger(又叫做 blaufrankisch)雜交而成。佢顏色深紅、皮薄、果實大小中等,擁有豐富嘅果香同輕至中等嘅單寧。 acolon 主要喺德國葡萄酒產區種植,尤其係巴登(baden)地區。德國嘅巴登地區出名生產優質紅酒,而 acolon 係嗰度嘅重要品種之一。 acolon 釀造嘅紅酒通常具有濃郁嘅黑色水果風味,例如係黑莓同黑櫻桃,重帶有一定嘅香料同辛香味道。爾種葡萄酒通常具有中至高等嘅酸度同單寧,可以嚮陳年後發展出更複雜嘅風味。 不過,葡萄品種喺唔同產區或者唔同釀酒風格中可能會有唔同特點,所以 acolon 紅酒風格會因為酒廠同產區而有唔同。",
+        "value": "black fruit",
+        "sourceUrl": "https://zh_yue.wikipedia.org/wiki/Acolon"
+      },
+      {
+        "field": "aromas",
+        "quote": "acolon係一種專門釀酒用嘅提子。 acolon 主要用來釀造紅酒,係由葡萄品種 dornfelder同lemberger(又叫做 blaufrankisch)雜交而成。佢顏色深紅、皮薄、果實大小中等,擁有豐富嘅果香同輕至中等嘅單寧。 acolon 主要喺德國葡萄酒產區種植,尤其係巴登(baden)地區。德國嘅巴登地區出名生產優質紅酒,而 acolon 係嗰度嘅重要品種之一。 acolon 釀造嘅紅酒通常具有濃郁嘅黑色水果風味,例如係黑莓同黑櫻桃,重帶有一定嘅香料同辛香味道。爾種葡萄酒通常具有中至高等嘅酸度同單寧,可以嚮陳年後發展出更複雜嘅風味。 不過,葡萄品種喺唔同產區或者唔同釀酒風格中可能會有唔同特點,所以 acolon 紅酒風格會因為酒廠同產區而有唔同。",
+        "value": "blackberry",
+        "sourceUrl": "https://zh_yue.wikipedia.org/wiki/Acolon"
+      },
+      {
+        "field": "aromas",
+        "quote": "acolon係一種專門釀酒用嘅提子。 acolon 主要用來釀造紅酒,係由葡萄品種 dornfelder同lemberger(又叫做 blaufrankisch)雜交而成。佢顏色深紅、皮薄、果實大小中等,擁有豐富嘅果香同輕至中等嘅單寧。 acolon 主要喺德國葡萄酒產區種植,尤其係巴登(baden)地區。德國嘅巴登地區出名生產優質紅酒,而 acolon 係嗰度嘅重要品種之一。 acolon 釀造嘅紅酒通常具有濃郁嘅黑色水果風味,例如係黑莓同黑櫻桃,重帶有一定嘅香料同辛香味道。爾種葡萄酒通常具有中至高等嘅酸度同單寧,可以嚮陳年後發展出更複雜嘅風味。 不過,葡萄品種喺唔同產區或者唔同釀酒風格中可能會有唔同特點,所以 acolon 紅酒風格會因為酒廠同產區而有唔同。",
+        "value": "black cherry",
+        "sourceUrl": "https://zh_yue.wikipedia.org/wiki/Acolon"
+      },
+      {
+        "field": "aromas",
+        "quote": "acolon係一種專門釀酒用嘅提子。 acolon 主要用來釀造紅酒,係由葡萄品種 dornfelder同lemberger(又叫做 blaufrankisch)雜交而成。佢顏色深紅、皮薄、果實大小中等,擁有豐富嘅果香同輕至中等嘅單寧。 acolon 主要喺德國葡萄酒產區種植,尤其係巴登(baden)地區。德國嘅巴登地區出名生產優質紅酒,而 acolon 係嗰度嘅重要品種之一。 acolon 釀造嘅紅酒通常具有濃郁嘅黑色水果風味,例如係黑莓同黑櫻桃,重帶有一定嘅香料同辛香味道。爾種葡萄酒通常具有中至高等嘅酸度同單寧,可以嚮陳年後發展出更複雜嘅風味。 不過,葡萄品種喺唔同產區或者唔同釀酒風格中可能會有唔同特點,所以 acolon 紅酒風格會因為酒廠同產區而有唔同。",
+        "value": "spice",
+        "sourceUrl": "https://zh_yue.wikipedia.org/wiki/Acolon"
       }
     ],
     "id": "acolon",

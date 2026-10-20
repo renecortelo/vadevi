@@ -38,6 +38,23 @@
         "lang": "cs",
         "value": "high",
         "quote": "Mají ještě intenzivnější barevnost, jsou plná, jemně ovocitá a harmonická, s dobrou strukturou"
+      },
+      {
+        "field": "aromas",
+        "lang": "zh_yue",
+        "value": [
+          "black fruit",
+          "blackberry",
+          "black cherry",
+          "spice"
+        ],
+        "quote": "Acolon 釀造嘅紅酒通常具有濃郁嘅黑色水果風味，例如係黑莓同黑櫻桃，重帶有一定嘅香料同辛香味道。",
+        "words": {
+          "black fruit": "黑色水果",
+          "blackberry": "黑莓",
+          "black cherry": "黑櫻桃",
+          "spice": "香料"
+        }
       }
     ],
     "agiorgitiko": [
@@ -197,6 +214,16 @@
         "words": {
           "fruity": "фруктовими"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "value": "high",
+        "quote": "This variety has shown itself to be one of the most \" solid \" wines yet tested. With a good amount of sugar, it has high acid, tannin, and body",
+        "source": {
+          "volume": "reportviticultu02biolgoog",
+          "work": "uc-viticultural-reports"
+        }
       }
     ],
     "aligote": [
@@ -262,6 +289,12 @@
         "lang": "hr",
         "value": "low",
         "quote": "Vino od ove sorte je nepopularno radi slabe arome, svijetle boje i niske količine alkohola"
+      },
+      {
+        "field": "origin",
+        "lang": "oc",
+        "quote": "L'origina d'aqueste vitatge es Provença o Lengadòc.",
+        "value": "FR"
       }
     ],
     "arinto": [
@@ -999,6 +1032,12 @@
         "lang": "nl",
         "value": "high",
         "quote": "De kleur is zeer donker, zelfs inktachtig zwart met een relatief hoog zuurgehalte."
+      },
+      {
+        "field": "body",
+        "lang": "he",
+        "value": "high",
+        "quote": "על פי רוב מדובר ביין כהה מאוד (כהה יותר מאשר שיראז ובעל גוונים סגולים יותר), חומצי במקצת, ובעל גוף חזק ומודגש."
       }
     ],
     "elbling": [
@@ -1058,6 +1097,12 @@
         "lang": "uk",
         "quote": "Сорт є автохтонним для регіону Кампанія.",
         "value": "IT"
+      },
+      {
+        "field": "body",
+        "lang": "he",
+        "value": "high",
+        "quote": "לפאלאנגינה גוף מלא (בדומה לשרדונה) עם טעמי אפרסק, לימון ואגס"
       }
     ],
     "fernao-pires": [
@@ -1471,6 +1516,23 @@
         "lang": "es",
         "value": "high",
         "quote": "Los vinos de grüner veltliner tienden a tener un cuerpo medio, una ligera frutalidad, una alta acidez y notas a especias"
+      },
+      {
+        "field": "pairings",
+        "lang": "sk",
+        "value": [
+          "cured meats",
+          "appetizers",
+          "beef",
+          "fish"
+        ],
+        "quote": "Mladé sú vhodné k studenému mäsu, omáčkam a slaným predjedlám, vyzreté k hovädziemu, filé z morských rýb a neutrálnym omáčkam.",
+        "words": {
+          "cured meats": "studenému mäsu",
+          "appetizers": "predjedlám",
+          "beef": "hovädziemu",
+          "fish": "rýb"
+        }
       }
     ],
     "harslevelu": [
@@ -1580,6 +1642,12 @@
           "fruity": "owocowe",
           "spice": "korzenną"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "sr",
+        "value": "medium",
+        "quote": "Odlikuje se elegancijom, lakoćom, pitkošću, rafiniranošću i umerenim prisustvom odgovarajuće kiseline"
       }
     ],
     "kerner": [
@@ -1676,6 +1744,18 @@
         "lang": "ru",
         "quote": "Автохтонный сорт Канарских островов, где широко распространён, особенно на севере острова Тенерифе.",
         "value": "ES"
+      }
+    ],
+    "listan-prieto": [
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "low",
+        "quote": "Its total lack of character and low acid render it unfit for any other purpose than blending where a neutral ingredient is desired.",
+        "source": {
+          "volume": "reportofviticult8793cali",
+          "work": "uc-viticultural-reports"
+        }
       }
     ],
     "loureira": [
@@ -2760,6 +2840,12 @@
           "apple": "яблочные",
           "citrus": "цитрусовые"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "sr",
+        "value": "medium",
+        "quote": "Ради умерених киселина савршено пристаје уз сва јела од рибе, шкољака и белог меса."
       }
     ],
     "poulsard": [
@@ -2779,6 +2865,16 @@
         "lang": "fr",
         "value": "low",
         "quote": "Le poulsard donne des vins de grande finesse, aromatiques (fruité et notes animales), mais de structure et couleur légère."
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "value": "low",
+        "quote": "The Ploussard yields a wine of very light tint and body, with little tannin, but of high quality",
+        "source": {
+          "volume": "reportviticultu01biolgoog",
+          "work": "uc-viticultural-reports"
+        }
       }
     ],
     "prieto-picudo": [
@@ -3005,6 +3101,12 @@
         "lang": "ca",
         "value": "high",
         "quote": "El vi varietal de sauvignon blanc és d'una bona acidesa fruital, de complexitat aromàtica herbàcia i alt contingut alcohòlic."
+      },
+      {
+        "field": "body",
+        "lang": "he",
+        "value": "low",
+        "quote": "יינות סוביניון בלאן לרוב יתאפיינו בחומציות ובגוף קל."
       }
     ],
     "sauvignon-vert": [
@@ -3466,6 +3568,14 @@
         "quote": "торига-насионал придаёт сухим красным винам тело и танинную структуру … Помимо десертных вин (типа портвейна) торига-насионал всё чаще используется"
       }
     ],
+    "trebbiano": [
+      {
+        "field": "alcohol",
+        "lang": "sh",
+        "value": "low",
+        "quote": "Niski procent šećera osigurava da će i vino napravljeno od njega imati niski procent alkohola."
+      }
+    ],
     "treixadura": [
       {
         "field": "body",
@@ -3727,6 +3837,12 @@
         "lang": "pl",
         "value": "high",
         "quote": "Zawartość alkoholu jest wysoka, smak pełny, charakterystyczny taninowy"
+      },
+      {
+        "field": "body",
+        "lang": "sr",
+        "value": "high",
+        "quote": "Вино је пуног тела, интензивне рубин-црвене боје"
       }
     ],
     "xarel-lo": [

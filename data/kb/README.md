@@ -377,6 +377,11 @@ Every few months, or when a register announces a name:
   on the protected name that bears the region's name, with the year and a
   link to the table.
 
+- **The University of California's «Report of the viticultural work»**
+  (1885–1896, E. W. Hilgard and others; US public domain): the same way, for
+  a variety's wine described as such («The Ploussard yields a wine of very
+  light tint and body, with little tannin»), never a single sample's.
+
 - **P. Viala and V. Vermorel, «Ampélographie»** (Masson, 1901–1910; the
   authors died in 1936 and 1927, so in the public domain): the Internet
   Archive's text of its scanned volumes (`.kb-cache/ampelography/`, not in

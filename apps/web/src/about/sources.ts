@@ -67,6 +67,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "University of California, «Report of the viticultural work» 1885–1896 (Internet Archive)",
+    terms: "publicDomain",
+    url: "https://archive.org/details/reportofviticult8793cali",
+    what: "traits",
+  },
+  {
+    group: "texts",
     licence: "CC0 1.0",
     name: "Wikidata",
     url: "https://www.wikidata.org/",

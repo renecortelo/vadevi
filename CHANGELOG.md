@@ -45,6 +45,14 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **Wikipedia in every language a grape is written in**: the articles of
+  grapes still missing a fact, in some forty more languages (Hebrew,
+  Serbian, Slovak, Occitan, Cantonese, Indonesian, Vietnamese, Persian…),
+  read the same way — Durif's and Falanghina's full body, Pošip's moderate
+  acidity, what Grüner Veltliner goes with, Acolon's aromas, Aramon's French
+  origin — and the University of California's viticultural reports of the
+  1890s for three more (the Mission grape's low acid, Alicante Bouschet's
+  tannin, Ploussard's).
 - **A century-old ampelography as a source**: where no article says a
   grape's acidity, alcohol or body, Viala and Vermorel's «Ampélographie»
   (1901–1910, public domain) read by hand from the Internet Archive's scans
