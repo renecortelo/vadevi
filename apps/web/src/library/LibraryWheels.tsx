@@ -7,7 +7,7 @@ import { Link } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { getLibraryAromaCounts, listGrapesWithAroma } from "../services/library";
 import { YourWines } from "./RegionTastings";
-import { trailFrom } from "./trail";
+import { trailFrom, useLibraryTrail } from "./trail";
 import { Wheel, type WheelNode } from "./Wheel";
 import { aromaWheel, colourKinds, colourWheel } from "./wheels";
 
@@ -73,7 +73,8 @@ export function LibraryWheels() {
 
   const list = grapes?.term === term ? grapes.list : null;
   const hue = selected?.startsWith("hue:") === true ? selected.slice("hue:".length) : null;
-  const trail = trailFrom(t("library.wheels.title"), "/library?tab=wheels");
+  // Grapes and wines reached from here lead back here, and on from here.
+  const trail = trailFrom(t("library.wheels.title"), "/library?tab=wheels", useLibraryTrail());
 
   return (
     <>
@@ -137,6 +138,7 @@ export function LibraryWheels() {
         {/* A colour chosen: the reader's own wines tasted in it. */}
         {hue === null ? null : (
           <YourWines
+            backHere={trail}
             empty={t("library.wheels.noWinesInColour")}
             filter={{ hue }}
             key={hue}

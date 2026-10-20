@@ -10,7 +10,7 @@ import { useArrival } from "../motion/useArrival";
 import { getLibraryAtlasCoverage, listLibraryRegions } from "../services/library";
 import { type CoveragePoint, CoverageMap } from "./CoverageMap";
 import { flagOf } from "./flag";
-import { trailFrom } from "./trail";
+import { trailFrom, useLibraryTrail } from "./trail";
 
 type Coverage = LibraryAtlasCoverageResponse["data"];
 type Country = Coverage["countries"][number];
@@ -99,6 +99,7 @@ export function LibraryAtlas() {
       .catch(() => undefined);
     return () => controller.abort();
   }, [selected, user]);
+  const cameFrom = useLibraryTrail();
   const names = new Intl.DisplayNames([i18n.language], { type: "region" });
   const number = new Intl.NumberFormat(i18n.language);
   const countries = current?.coverage?.countries ?? [];
@@ -142,7 +143,7 @@ export function LibraryAtlas() {
             onSelect={setSelected}
             points={selected !== null && points?.code === selected ? points.points : []}
             selected={selected}
-            trail={trailFrom(t("library.coverage.title"), "/library?tab=atlas")}
+            trail={trailFrom(t("library.coverage.title"), "/library?tab=atlas", cameFrom)}
           />
           {selected === null ? null : (
             <p className="atlas-coverage__meta">

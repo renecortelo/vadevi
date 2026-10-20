@@ -42,11 +42,19 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
     "href",
     "/library?tab=wheels",
   );
-  // The wheel keeps the way back to the grape, while the shelves change too.
+  // The wheel keeps the way back to the grape, and the ways back chain: from
+  // the wheel to another grape, back to the wheel, and on back to Grenache —
+  // while the shelves change too.
   await page.getByRole("link", { name: "Ver la rueda de aromas" }).click();
-  await expect(page.getByRole("list", { name: "Aromas: Aromas", exact: true })).toBeVisible({
+  await expect(page.getByRole("link", { name: "← Volver a Garnacha" })).toBeVisible({
     timeout: 15_000,
   });
+  await page.getByRole("button", { name: "Fruta", exact: true }).click();
+  await page.getByRole("button", { name: "Fruta roja", exact: true }).click();
+  await page.getByRole("button", { name: "frambuesa", exact: true }).click();
+  const another = page.locator(".wheel-choice .library-chips a").filter({ hasNotText: "Garnacha" });
+  await another.first().click();
+  await page.getByRole("link", { name: "← Volver a Ruedas de aromas y colores" }).click();
   await page.getByRole("button", { name: "Uvas", exact: true }).click();
   await page.getByRole("button", { name: "Ruedas", exact: true }).click();
   await page.getByRole("link", { name: "← Volver a Garnacha" }).click();

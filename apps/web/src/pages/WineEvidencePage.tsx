@@ -15,7 +15,7 @@ import { EditWineDialog } from "../components/EditWineDialog";
 import { useLibraryNames } from "../library/names";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
-import { trailFrom } from "../library/trail";
+import { trailFrom, useLibraryTrail } from "../library/trail";
 import { TastingHistory } from "../components/TastingHistory";
 import { BottlePhotoPicker } from "../components/BottlePhotoPicker";
 import { ModalDialog } from "../components/ModalDialog";
@@ -221,6 +221,8 @@ export function FactCard({
 
 export function WineEvidencePage() {
   const { i18n, t } = useTranslation();
+  // Where the reader came in from, for the library pages this one links to.
+  const cameFrom = useLibraryTrail();
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const { wineId = "" } = useParams();
@@ -447,6 +449,7 @@ export function WineEvidencePage() {
   const backHere = trailFrom(
     wine?.displayName ?? t("evidence.title"),
     `${location.pathname}${location.search}`,
+    cameFrom,
   );
 
   return (

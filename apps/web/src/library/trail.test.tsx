@@ -36,4 +36,15 @@ describe("the way back out of the library", () => {
     );
     expect(markup).toBe("");
   });
+
+  it("chains each way back to the one before, and never goes round in circles", () => {
+    const wine = trailFrom("Viña Tondonia", "/wines/w1/evidence");
+    const grape = trailFrom("Tempranillo", "/library/grapes/tempranillo", wine);
+    const wheel = trailFrom("Wheels", "/library?tab=wheels", grape);
+    expect(wheel.libraryTrail.back?.label).toBe("Tempranillo");
+    expect(wheel.libraryTrail.back?.back?.label).toBe("Viña Tondonia");
+    // Back on Tempranillo by another way: its trail is the one it had.
+    const again = trailFrom("Tempranillo", "/library/grapes/tempranillo", wheel);
+    expect(again.libraryTrail.back).toEqual(wine.libraryTrail);
+  });
 });

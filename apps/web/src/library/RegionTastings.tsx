@@ -6,7 +6,7 @@ import { useAuth } from "../auth/AuthContext";
 import { WineLink } from "../components/WineLink";
 import { getWineMemory } from "../services/api";
 import { useSession } from "../session/SessionContext";
-import { useLibraryTrail } from "./trail";
+import { type LibraryTrail, useLibraryTrail } from "./trail";
 
 /**
  * The reader's own wines that a filter picks, in the Space they are in — from
@@ -15,10 +15,13 @@ import { useLibraryTrail } from "./trail";
  * `empty` says.
  */
 export function YourWines({
+  backHere,
   empty,
   filter,
   title,
 }: {
+  /** The way back from a wine to this page; the trail it came with otherwise. */
+  backHere?: { libraryTrail: LibraryTrail };
   empty?: string;
   filter: { hue?: string; regionRef?: string };
   title: string;
@@ -26,7 +29,8 @@ export function YourWines({
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const { bootstrap } = useSession();
-  const trail = useLibraryTrail();
+  const incoming = useLibraryTrail();
+  const trail = backHere ?? incoming;
   const spaceId = bootstrap.data.user.activeSpaceId;
   const [wines, setWines] = useState<WineSummary[]>([]);
   const { hue, regionRef } = filter;
@@ -93,7 +97,19 @@ export function YourWines({
  * the library knows for certain to be this name count — a region typed
  * loosely is not guessed at.
  */
-export function RegionTastings({ regionId }: { regionId: string }) {
+export function RegionTastings({
+  backHere,
+  regionId,
+}: {
+  backHere: { libraryTrail: LibraryTrail };
+  regionId: string;
+}) {
   const { t } = useTranslation();
-  return <YourWines filter={{ regionRef: regionId }} title={t("library.yoursTitle")} />;
+  return (
+    <YourWines
+      backHere={backHere}
+      filter={{ regionRef: regionId }}
+      title={t("library.yoursTitle")}
+    />
+  );
 }

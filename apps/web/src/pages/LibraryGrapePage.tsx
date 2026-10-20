@@ -103,11 +103,14 @@ export function LibraryGrapePage() {
   const suggested = grape.suggestedPairings;
   const origin = country(grape.originCountryCode);
 
+  // The pages this card links to lead back here, and on from here.
+  const backHere = trailFrom(grape.name, `/library/grapes/${grape.id}`, trail);
+
   return (
     <section className="library-page">
       <p className="section-help library-back">
         <TrailBackLink />
-        <Link className="text-link" state={trail} to="/library">
+        <Link className="text-link" state={backHere} to="/library">
           ← {t("library.home.title")}
         </Link>
       </p>
@@ -184,7 +187,7 @@ export function LibraryGrapePage() {
                   const descriptor = aromaFromTerm(term);
                   return descriptor === null ? [] : [descriptor];
                 })}
-                trail={trailFrom(grape.name, `/library/grapes/${grape.id}`)}
+                trail={backHere}
               />
               {/* Each aroma with its drawing over its name in the reader's
                   language. */}
@@ -329,7 +332,7 @@ export function LibraryGrapePage() {
                   ) : (
                     <Link
                       className="text-link"
-                      state={trail}
+                      state={backHere}
                       to={`/library/regions/${region.regionId}`}
                     >
                       {region.name}

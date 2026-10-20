@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { TrailBackLink } from "../library/TrailBackLink";
-import { useLibraryTrail } from "../library/trail";
+import { trailFrom, useLibraryTrail } from "../library/trail";
 import { getLibraryTopic } from "../services/library";
 
 /**
@@ -60,11 +60,14 @@ export function LibraryTopicPage() {
     entry.summary !== null &&
     entry.summary.locale !== locale &&
     entry.summary.locale !== i18n.language.split("-")[0];
+  // The pages this card links to lead back here, and on from here.
+  const backHere = trailFrom(entry.name, `/library/topics/${topicId}`, trail);
+
   return (
     <section className="library-page">
       <p className="section-help library-back">
         <TrailBackLink />
-        <Link className="text-link" state={trail} to="/library?tab=topics">
+        <Link className="text-link" state={backHere} to="/library?tab=topics">
           ← {t("library.home.title")}
         </Link>
       </p>

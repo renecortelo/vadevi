@@ -12,7 +12,7 @@ import { RegionTastings } from "../library/RegionTastings";
 import { designationKey, inEuRegister, registerSuffix } from "../library/designation";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
-import { useLibraryTrail } from "../library/trail";
+import { trailFrom, useLibraryTrail } from "../library/trail";
 import { getLibraryRegion, searchLibraryRegions } from "../services/library";
 
 /**
@@ -104,13 +104,16 @@ export function LibraryRegionPage() {
           timeZone: "UTC",
         });
 
+  // The pages this card links to lead back here, and on from here.
+  const backHere = trailFrom(region.name, `/library/regions/${region.id}`, trail);
+
   return (
     <section className="library-page">
       <p className="section-help library-back">
         <TrailBackLink />
         <Link
           className="text-link"
-          state={trail}
+          state={backHere}
           to={`/library?tab=regions&country=${region.countryCode}`}
         >
           ← {t("library.home.title")}
@@ -169,7 +172,7 @@ export function LibraryRegionPage() {
 
       <RegionGlance region={region} />
       {region.climate === null ? null : <RegionClimate climate={region.climate} />}
-      <RegionTastings regionId={region.id} />
+      <RegionTastings backHere={backHere} regionId={region.id} />
 
       <section aria-labelledby="region-map" className="settings-card">
         <h2 id="region-map">{t("library.whereTitle")}</h2>
@@ -254,7 +257,7 @@ export function LibraryRegionPage() {
                       ) : (
                         <Link
                           className="text-link"
-                          state={trail}
+                          state={backHere}
                           to={`/library/grapes/${variety.grapeId}`}
                         >
                           {variety.name}
@@ -291,7 +294,11 @@ export function LibraryRegionPage() {
               <ul className="library-chips">
                 {region.within.map((holder) => (
                   <li key={holder.id}>
-                    <Link className="text-link" state={trail} to={`/library/regions/${holder.id}`}>
+                    <Link
+                      className="text-link"
+                      state={backHere}
+                      to={`/library/regions/${holder.id}`}
+                    >
                       {holder.name}
                     </Link>
                     {holder.level === null ? null : ` · ${t(`library.levelName.${holder.level}`)}`}
@@ -306,7 +313,7 @@ export function LibraryRegionPage() {
               <ul className="library-chips">
                 {region.contains.map((held) => (
                   <li key={held.id}>
-                    <Link className="text-link" state={trail} to={`/library/regions/${held.id}`}>
+                    <Link className="text-link" state={backHere} to={`/library/regions/${held.id}`}>
                       {held.name}
                     </Link>
                     {held.level === null ? null : ` · ${t(`library.levelName.${held.level}`)}`}
@@ -324,7 +331,7 @@ export function LibraryRegionPage() {
           <ul className="library-chips">
             {region.grapes.map((grape) => (
               <li key={grape.id}>
-                <Link className="text-link" state={trail} to={`/library/grapes/${grape.id}`}>
+                <Link className="text-link" state={backHere} to={`/library/grapes/${grape.id}`}>
                   {grape.name}
                 </Link>
               </li>

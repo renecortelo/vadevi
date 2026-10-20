@@ -28,7 +28,11 @@ has the reasons.
   with the families and their counts beside it and the way to the whole
   wheel, which leads back to the grape («← Back to Grenache»). The library's
   page shows the way back to wherever the reader came in from, and keeps it
-  while they switch shelves.
+  while they switch shelves. The ways back now chain: each card, the wheels,
+  the atlas and a wine's page leave a way back to themselves that leads on to
+  where they were reached from (a wine → its grape → the wheel → another
+  grape, and back step by step), never going round in circles and at most
+  eight steps deep.
 - **Your wheels, in the taste profile**: the aromas you chose and the colours
   you saw in your own tastings, each part as large as the tastings that name
   it, and nothing you did not note. The profile (`GET /api/v1/me/taste-profile`)
