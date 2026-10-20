@@ -46,11 +46,11 @@ test("the sign-in reel tells what the app is for, from the library's own figures
   expect(states.length).toBeGreaterThan(10);
   expect(states.every((state) => state === "paused")).toBe(true);
 
-  // Told with the logo's own bottles: one for the opening and each step in
-  // the row, and at the close all seven with the word across them.
-  await expect(reel.locator(".reel__slot")).toHaveCount(5);
+  // Told with the logo's own bottles: one for the opening and each of the six
+  // steps gathers in the row, and at the close all seven carry the word.
+  await expect(reel.locator(".reel__slot")).toHaveCount(7);
   await expect(reel.locator(".reel-lockup__bottle")).toHaveCount(7);
-  await expect(reel.locator(".reel-lockup__letter")).toHaveCount(10);
+  await expect(reel.locator(".reel-lockup .reel-letter")).toHaveCount(10);
 
   // One card: the reel and the sign-in button together, and no other control
   // than the pause.
@@ -64,7 +64,7 @@ test("the sign-in reel tells what the app is for, from the library's own figures
   const stage = await reel.locator(".reel__stage").elementHandle();
   await page.evaluate(() => {
     for (const animation of document.querySelector(".reel")!.getAnimations({ subtree: true })) {
-      animation.currentTime = 20_900;
+      animation.currentTime = 19_700;
       animation.play();
     }
   });

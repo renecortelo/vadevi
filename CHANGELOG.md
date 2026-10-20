@@ -9,12 +9,14 @@ has the reasons.
 ### First impressions
 
 - **The sign-in card, with the reel in it**: one card instead of two. Its head
-  is the reel, told with the logo's bottles: with each step — a tasting, a
-  label, the library, Vicenç — a small bottle drops into its place in a row;
-  at the close the last two slide in, the row grows into the logo and the
-  letters fall into place, just above «Continue with Google». It loops, with
-  one quiet pause button in its corner instead of the controls below; still
-  for reduced motion, and the logo holds its place until it loads.
+  is the reel, told with the logo's bottles: it opens on the word, and with
+  each of six quick steps — a tasting, a label, the library, Vicenç, your
+  cellar on the map, your taste — a small bottle drops into its place in a
+  row until all seven are there; then the row grows into the logo, the
+  letters fall into place just above «Continue with Google», and the logo
+  stays a while. Fewer words, under twenty seconds a pass, and it loops, with
+  one quiet pause button in its corner; still for reduced motion, and the
+  logo holds its place until it loads.
 
 ### The library
 

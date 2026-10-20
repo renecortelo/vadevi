@@ -13,12 +13,13 @@ import {
 import { AromaIcon } from "../library/AromaIcon";
 
 /**
- * What Va de Vi is for, in nineteen seconds, at the top of the sign-in card,
- * told with the logo's own bottles: with each step — a tasting, a label, the
- * library, Vicenç — one small bottle drops into its place in a row; at the
- * close the last bottles slide in, the row grows into the logo and the
- * letters fall into place, just above «Continue with Google». Then it begins
- * again.
+ * What Va de Vi is for, in under twenty seconds, at the top of the sign-in card,
+ * told with the logo's own bottles: it opens on the word, and with each
+ * step — a tasting, a label, the library, Vicenç, your cellar on the map,
+ * your taste — one small bottle drops into its place in a row until all seven
+ * are there; then the row grows into the logo, the letters fall into place
+ * just above «Continue with Google», and the logo stays a while before it
+ * begins again.
  *
  * The bottles and the letters are the brand's geometry (`brand/marks`, made
  * by `scripts/generate-brand.ts`), not drawings of them. Drawn in SVG and CSS,
@@ -28,16 +29,18 @@ import { AromaIcon } from "../library/AromaIcon";
  * be possible to stop. With reduced motion the reel is its last frame, still.
  */
 const shots = [
-  { end: 2.5, start: 0 },
-  { end: 5.5, start: 2.5 },
-  { end: 8.5, start: 5.5 },
-  { end: 12, start: 8.5 },
-  { end: 15.5, start: 12 },
-  { end: 19, start: 15.5 },
+  { end: 1.4, start: 0 },
+  { end: 3.4, start: 1.4 },
+  { end: 5.4, start: 3.4 },
+  { end: 7.4, start: 5.4 },
+  { end: 9.4, start: 7.4 },
+  { end: 11.4, start: 9.4 },
+  { end: 13.4, start: 11.4 },
+  { end: 19.8, start: 13.4 },
 ] as const;
 
-/** The length of one pass, the last frame held a moment before it begins again. */
-const loopSeconds = 21;
+/** The length of one pass: the logo stays, whole, before it begins again. */
+const loopSeconds = 19.8;
 
 const timing = (shot: number): CSSProperties =>
   ({
@@ -47,8 +50,8 @@ const timing = (shot: number): CSSProperties =>
 
 /** The lockup's frame: the bottles' row, with room for the word across it. */
 const lockupBox = `${bottleRow.start - 24} 150 ${bottleRow.span + 48} 574`;
-/** The bottles the row receives, in the order the shots bring them. */
-const arrivals = [3, 0, 1, 2, 4] as const;
+/** The bottles the row receives, in the order the shots bring them: all seven. */
+const arrivals = [3, 0, 1, 2, 4, 5, 6] as const;
 
 /** A figure that counts up to the library's own, on the reel's clock. */
 function Count({ delay, value }: { delay: number; value: number }) {
@@ -62,7 +65,7 @@ function Count({ delay, value }: { delay: number; value: number }) {
     // others, its progress is how far the figure has counted.
     const clock = element.animate([{ opacity: 1 }, { opacity: 1 }], {
       delay: delay * 1000,
-      duration: 1600,
+      duration: 1000,
       easing: "cubic-bezier(.2,.7,.2,1)",
       fill: "both",
     });
@@ -98,7 +101,7 @@ function Figures({ still }: { still: boolean }) {
             {still ? (
               format.format(item.value)
             ) : (
-              <Count delay={8.9 + index * 0.25} value={item.value} />
+              <Count delay={shots[3].start + 0.3 + index * 0.15} value={item.value} />
             )}
           </strong>
           <span>{t(`reel.${item.key}Unit`, { count: item.value })}</span>
@@ -108,23 +111,30 @@ function Figures({ still }: { still: boolean }) {
   );
 }
 
-/**
- * The logo, assembled: its seven bottles — the five the row gathered, then
- * the two still missing — and the word falling into place across them.
- */
+/** The word `vadevi`, its letters falling into place one after the other. */
+function Letters() {
+  return wordmarkShapes.map((shape, index) => (
+    <g className="reel-letter" key={shape.d} style={{ "--i": index } as CSSProperties}>
+      {shape.stroke === undefined ? (
+        <path d={shape.d} fill="currentColor" />
+      ) : (
+        <path d={shape.d} fill="none" stroke="currentColor" strokeWidth={shape.stroke} />
+      )}
+    </g>
+  ));
+}
+
+/** The logo, assembled: the seven bottles the row gathered, the word across them. */
 function Lockup() {
   const scale = lockupWordmark.width / wordmarkBox.width;
   return (
     <svg aria-hidden="true" className="reel-lockup" focusable="false" viewBox={lockupBox}>
       {bottleRowPaths.map((path, index) => (
         <path
-          className={
-            index < 5 ? "reel-lockup__bottle" : "reel-lockup__bottle reel-lockup__bottle--late"
-          }
+          className="reel-lockup__bottle"
           d={path}
           fill={`var(--color-bottle-${index + 1})`}
           key={path}
-          style={{ "--i": index - 5 } as CSSProperties}
         />
       ))}
       <g
@@ -133,21 +143,59 @@ function Lockup() {
           `scale(${scale}) translate(0 ${-(wordmarkBox.top + wordmarkBox.height)})`
         }
       >
-        {wordmarkShapes.map((shape, index) => (
-          <g
-            className="reel-lockup__letter"
-            key={shape.d}
-            style={{ "--i": index } as CSSProperties}
-          >
-            {shape.stroke === undefined ? (
-              <path d={shape.d} fill="currentColor" />
-            ) : (
-              <path d={shape.d} fill="none" stroke="currentColor" strokeWidth={shape.stroke} />
-            )}
-          </g>
-        ))}
+        <Letters />
       </g>
     </svg>
+  );
+}
+
+/** Your cellar on the map: pins falling where your bottles come from. */
+function CellarMap() {
+  const pins = [
+    { x: 32, y: 30 },
+    { x: 58, y: 44 },
+    { x: 80, y: 24 },
+    { x: 96, y: 48 },
+  ];
+  return (
+    <svg aria-hidden="true" className="reel-map" focusable="false" viewBox="0 0 128 72">
+      <path
+        className="reel-map__land"
+        d="M10 40c4-16 20-26 38-24s24-10 42-8 30 14 28 30-18 26-36 24-24 6-42 2S6 56 10 40z"
+      />
+      {pins.map((pin, index) => (
+        <g
+          className="reel-map__pin"
+          key={pin.x}
+          style={{ "--i": index, "--bottle": `var(--color-bottle-${index + 2})` } as CSSProperties}
+          transform={`translate(${pin.x} ${pin.y})`}
+        >
+          <path d="M0 0c-5-7-8-10-8-14a8 8 0 0 1 16 0c0 4-3 7-8 14z" />
+          <circle cy="-14" r="3" />
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+/** Your taste, drawn: bars rising to what you score highest. */
+function TasteBars() {
+  const heights = [55, 85, 40, 70, 30];
+  return (
+    <div aria-hidden="true" className="reel-profile">
+      {heights.map((height, index) => (
+        <i
+          key={index}
+          style={
+            {
+              "--h": `${height}%`,
+              "--i": index,
+              "--bottle": `var(--color-bottle-${index + 1})`,
+            } as CSSProperties
+          }
+        />
+      ))}
+    </div>
   );
 }
 
@@ -199,7 +247,14 @@ export default function SignInReel() {
     <section aria-label={t("reel.label")} className={`reel${still ? " reel--still" : ""}`}>
       <div className="reel__stage" key={run} ref={stage}>
         <div className="reel-shot reel-shot--intro" style={timing(0)}>
-          <p className="reel__tagline">{t("reel.tagline")}</p>
+          <svg
+            aria-hidden="true"
+            className="reel-word"
+            focusable="false"
+            viewBox={`0 ${wordmarkBox.top} ${wordmarkBox.width} ${wordmarkBox.height}`}
+          >
+            <Letters />
+          </svg>
         </div>
 
         <div className="reel-shot" style={timing(1)}>
@@ -251,6 +306,18 @@ export default function SignInReel() {
           </div>
         </div>
 
+        <div className="reel-shot" style={timing(5)}>
+          <p className="reel-card__step">05</p>
+          <p className="reel-card__title">{t("reel.cellar")}</p>
+          <CellarMap />
+        </div>
+
+        <div className="reel-shot" style={timing(6)}>
+          <p className="reel-card__step">06</p>
+          <p className="reel-card__title">{t("reel.profile")}</p>
+          <TasteBars />
+        </div>
+
         {/* The row the bottles gather in, each in its place in the logo. */}
         <svg aria-hidden="true" className="reel__row" focusable="false" viewBox={lockupBox}>
           {arrivals.map((index, order) => (
@@ -264,10 +331,9 @@ export default function SignInReel() {
           ))}
         </svg>
 
-        <div className="reel-shot reel-shot--close" style={timing(5)}>
+        <div className="reel-shot reel-shot--close" style={timing(7)}>
           <Lockup />
           <p className="reel__closing">{t("reel.close")}</p>
-          <p className="reel__sub">{t("reel.closeSub", { count: figures.languages })}</p>
           {still ? <Figures still /> : null}
         </div>
       </div>
