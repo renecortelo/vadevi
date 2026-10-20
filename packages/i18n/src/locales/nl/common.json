@@ -1268,7 +1268,7 @@
     "field": {
       "clarity": "Helderheid",
       "colorFamily": "Kleurfamilie",
-      "hue": "Tint (in je eigen woorden)",
+      "hue": "Tint",
       "intensity": "Intensiteit",
       "rimEvolution": "Ontwikkeling aan de rand",
       "viscosity": "Viscositeit",
@@ -1411,7 +1411,12 @@
       "valueExpectation": "Waarde en verwachting",
       "yourConclusion": "In je eigen woorden"
     },
-    "voiceOrigin": "Met de stem vastgelegd"
+    "voiceOrigin": "Met de stem vastgelegd",
+    "hueKept": "Bewaard als ‘{{value}}’; kies een kleur op het wiel om die te wijzigen.",
+    "aromaWheel": {
+      "close": "Aromawiel verbergen",
+      "open": "Kiezen op het aromawiel"
+    }
   },
   "dataRights": {
     "accountScheduled": "De accountverwijdering staat over {{days}} dagen ingepland.",

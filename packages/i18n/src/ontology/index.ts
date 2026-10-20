@@ -1,3 +1,7 @@
+import { aromaNames } from "./aroma-names";
+import { aromaDescriptors } from "./aromas";
+
+export * from "./aroma-names";
 export * from "./aromas";
 
 export const tastingOntologyVersion = "2026.1" as const;
@@ -672,8 +676,16 @@ export const tastingDescriptors = [
   },
 ] as const satisfies readonly TastingDescriptorDefinition[];
 
-export function descriptorText(code: string, locale: OntologyLocale) {
-  return tastingDescriptors.find((descriptor) => descriptor.code === code)?.text[locale];
+export function descriptorText(
+  code: string,
+  locale: OntologyLocale,
+): { help: string; label: string } | undefined {
+  const own = tastingDescriptors.find((descriptor) => descriptor.code === code)?.text[locale];
+  if (own !== undefined) return own;
+  // An aroma chosen on the wheel: the library's vocabulary names it.
+  const aroma = aromaDescriptors.find((descriptor) => descriptor.code === code);
+  const name = aroma === undefined ? undefined : aromaNames[aroma.term]?.[locale];
+  return name === undefined ? undefined : { help: "", label: name };
 }
 
 /**

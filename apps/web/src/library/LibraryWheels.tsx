@@ -58,7 +58,14 @@ export function LibraryWheels() {
   }, [locale, term, user]);
 
   const map: Aromas = aromas?.key === key ? aromas.map : new Map();
-  const root: WheelNode = kind === "aromas" ? aromaWheel(t, map) : colourWheel(t);
+  const root: WheelNode =
+    kind === "aromas"
+      ? aromaWheel(
+          t,
+          (term) => map.get(term)?.label ?? term,
+          (term) => (map.get(term)?.grapeCount ?? 0) === 0,
+        )
+      : colourWheel(t);
   const switchTo = (next: Kind) => {
     setKind(next);
     setSelected(null);

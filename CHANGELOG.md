@@ -23,6 +23,14 @@ has the reasons.
 
 ### The library
 
+- **The wheels in the detailed tasting**: the colour is chosen on the colour
+  wheel, with only the colours that kind of wine shows (a red's five, no
+  white's), and names its colour family when none was chosen; a colour saved
+  earlier in other words is kept and shown until another is chosen. The nose
+  finds its aromas on the aroma wheel, folded away until asked for: each one
+  chosen becomes one of the nose's cues, beside the ones the form offers, with
+  its intensity. Saved notes, the profile and the sessions name these aromas
+  in the reader's language, from the library's vocabulary, offline too.
 - **The wheels and the atlas in figures are tabs of the library's page**,
   like the grapes and the names: the page stays as it is and only what is
   beneath the tabs changes (`/library?tab=wheels`, `/library?tab=atlas`; the

@@ -1268,7 +1268,7 @@
     "field": {
       "clarity": "Limpidité",
       "colorFamily": "Famille de couleur",
-      "hue": "Nuance (avec vos mots)",
+      "hue": "Nuance",
       "intensity": "Intensité",
       "rimEvolution": "Évolution du bord",
       "viscosity": "Viscosité",
@@ -1411,7 +1411,12 @@
       "valueExpectation": "Valeur et attente",
       "yourConclusion": "Avec vos mots"
     },
-    "voiceOrigin": "Enregistrée à la voix"
+    "voiceOrigin": "Enregistrée à la voix",
+    "hueKept": "Enregistré comme « {{value}} » ; choisissez une couleur sur la roue pour la changer.",
+    "aromaWheel": {
+      "close": "Masquer la roue des arômes",
+      "open": "Choisir sur la roue des arômes"
+    }
   },
   "dataRights": {
     "accountScheduled": "La suppression du compte est programmée dans {{days}} jours.",

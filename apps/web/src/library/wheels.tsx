@@ -32,9 +32,14 @@ const shade = (colour: string, step: number) =>
 /** An aroma's node id on the wheel. */
 export const aromaNodeId = (term: string) => `aroma:${term}`;
 
+/**
+ * The aroma vocabulary as a wheel: each aroma by its name (`name`), and faint
+ * where `faint` says so — in the library, an aroma no grape carries yet.
+ */
 export function aromaWheel(
   t: TFunction,
-  aromas: ReadonlyMap<string, { grapeCount: number; label: string }>,
+  name: (term: string) => string,
+  faint: (term: string) => boolean = () => false,
 ): WheelNode {
   return {
     children: aromaFamilies.map((family) => ({
@@ -43,16 +48,13 @@ export function aromaWheel(
         .map((group, groupIndex) => ({
           children: aromaDescriptors
             .filter((descriptor) => descriptor.group === group.id)
-            .map((descriptor, index) => {
-              const known = aromas.get(descriptor.term);
-              return {
-                color: shade(familyColours[family], index),
-                icon: <AromaIcon descriptor={descriptor} />,
-                id: aromaNodeId(descriptor.term),
-                label: known?.label ?? descriptor.term,
-                muted: (known?.grapeCount ?? 0) === 0,
-              };
-            }),
+            .map((descriptor, index) => ({
+              color: shade(familyColours[family], index),
+              icon: <AromaIcon descriptor={descriptor} />,
+              id: aromaNodeId(descriptor.term),
+              label: name(descriptor.term),
+              muted: faint(descriptor.term),
+            })),
           color: shade(familyColours[family], groupIndex),
           id: `group:${group.id}`,
           label: t(`library.aromaGroup.${group.id}`),

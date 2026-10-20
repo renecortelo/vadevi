@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 
 import { describe, expect, it } from "vitest";
 
+import { aromaNames } from "../../packages/i18n/src/ontology/aroma-names";
 import {
   aromaDescriptors,
   aromaFamilies,
@@ -22,6 +23,10 @@ const terms = (
 ).aroma.terms;
 
 describe("the aroma vocabulary", () => {
+  it("names each aroma in the app as the library's terms do", () => {
+    expect(aromaNames).toEqual(terms);
+  });
+
   it("places every aroma term of the library, and only those", () => {
     const placed = aromaDescriptors.map((descriptor) => descriptor.term).sort();
     expect(placed).toEqual(Object.keys(terms).sort());

@@ -1268,7 +1268,7 @@
     "field": {
       "clarity": "Klarheit",
       "colorFamily": "Farbfamilie",
-      "hue": "Farbton (in eigenen Worten)",
+      "hue": "Farbton",
       "intensity": "Intensität",
       "rimEvolution": "Randentwicklung",
       "viscosity": "Viskosität",
@@ -1411,7 +1411,12 @@
       "valueExpectation": "Wert und Erwartung",
       "yourConclusion": "In Ihren Worten"
     },
-    "voiceOrigin": "Per Sprache erfasst"
+    "voiceOrigin": "Per Sprache erfasst",
+    "hueKept": "Gespeichert als „{{value}}“; wähle eine Farbe auf dem Rad, um sie zu ändern.",
+    "aromaWheel": {
+      "close": "Aromarad ausblenden",
+      "open": "Im Aromarad wählen"
+    }
   },
   "dataRights": {
     "accountScheduled": "Die Kontolöschung ist in {{days}} Tagen geplant.",

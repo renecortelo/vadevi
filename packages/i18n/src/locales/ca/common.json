@@ -1268,7 +1268,7 @@
     "field": {
       "clarity": "Claredat",
       "colorFamily": "Família de color",
-      "hue": "Tonalitat (amb les teves paraules)",
+      "hue": "Tonalitat",
       "intensity": "Intensitat",
       "rimEvolution": "Evolució de la vora",
       "viscosity": "Viscositat",
@@ -1411,7 +1411,12 @@
       "valueExpectation": "Valor i expectativa",
       "yourConclusion": "Amb les teves paraules"
     },
-    "voiceOrigin": "Registrada per veu"
+    "voiceOrigin": "Registrada per veu",
+    "hueKept": "Desat com a «{{value}}»; tria un color a la roda per canviar-lo.",
+    "aromaWheel": {
+      "close": "Amagar la roda d’aromes",
+      "open": "Triar a la roda d’aromes"
+    }
   },
   "dataRights": {
     "accountScheduled": "L'esborrat del compte està programat d'aquí a {{days}} dies.",

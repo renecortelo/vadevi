@@ -1,8 +1,8 @@
 import { DeepTastingNoteSchema, type DeepTastingRequest, type WineType } from "@vadevi/contracts";
 import type { TastingContextSchema, TastingDescriptorInputSchema } from "@vadevi/contracts";
 import {
-  descriptorByCode,
   descriptorsForWineType,
+  descriptorText,
   type OntologyWineType,
   resolveSupportedLocale,
   type TastingPhase,
@@ -17,7 +17,8 @@ import { MapLink } from "../components/MapLink";
 import { VenuePicker } from "../components/VenuePicker";
 import { VoiceNote } from "../components/VoiceNote";
 import { countryOptionsFor } from "../components/country-options";
-import { colorFamiliesFor, hasTannin, hueOptionsFor } from "./deep-tasting-fields";
+import { colorFamiliesFor, hasTannin } from "./deep-tasting-fields";
+import { AromaWheel, HueWheel } from "./deep-tasting-wheels";
 import { useAuth } from "../auth/AuthContext";
 import { type DeepTastingDraft, offlineDatabase, type SyncConflict } from "../offline/database";
 import { deepTastingChangedEvent } from "../offline/events";
@@ -112,12 +113,18 @@ function DescriptorPicker({
   const { t } = useTranslation();
   // Only the words that belong to this wine: no oak on a cava, no brioche on a
   // young red. Anything already ticked stays on screen even if the type changed
-  // since — a choice already made is never taken away quietly.
-  const offered = descriptorsForWineType(phase, wineType);
+  // since — a choice already made is never taken away quietly. So do the
+  // aromas chosen on the wheel, named from the library's vocabulary.
+  const offered = descriptorsForWineType(phase, wineType).map((descriptor) => ({
+    code: descriptor.code,
+    text: descriptor.text[locale],
+  }));
   const chosenElsewhere = descriptors
     .filter((entry) => entry.phase === phase && !offered.some((one) => one.code === entry.code))
-    .map((entry) => descriptorByCode(entry.code))
-    .filter((entry): entry is NonNullable<typeof entry> => entry !== undefined);
+    .flatMap((entry) => {
+      const text = descriptorText(entry.code, locale);
+      return text === undefined ? [] : [{ code: entry.code, text }];
+    });
   const choices = [...offered, ...chosenElsewhere];
   return (
     <fieldset className="descriptor-fieldset">
@@ -126,7 +133,7 @@ function DescriptorPicker({
       <div className="descriptor-grid descriptor-grid--detailed">
         {choices.map((descriptor) => {
           const selected = descriptors.find((entry) => entry.code === descriptor.code);
-          const text = descriptor.text[locale];
+          const text = descriptor.text;
           return (
             <div className="descriptor-choice" key={descriptor.code}>
               <label className="descriptor-chip">
@@ -143,7 +150,7 @@ function DescriptorPicker({
                 />
                 <span>{text.label}</span>
               </label>
-              <small>{text.help}</small>
+              {text.help === "" ? null : <small>{text.help}</small>}
               {selected === undefined ? null : (
                 <select
                   aria-label={t("tasting.descriptorIntensity", { descriptor: text.label })}
@@ -519,31 +526,21 @@ export function DeepTastingPage() {
               </select>
             </label>
           </div>
-          <label>
-            <span>{t("tasting.field.hue")}</span>
-            <select
-              onChange={(event) => update("appearanceHue", event.target.value || undefined)}
-              value={draft.payload.appearanceHue ?? ""}
-            >
-              <option value="">{t("tasting.notSet")}</option>
-              {hueOptionsFor(wineType).map((code) => (
-                <option key={code} value={t(`tasting.hueOption.${code}`)}>
-                  {t(`tasting.hueOption.${code}`)}
-                </option>
-              ))}
-              {/* A hue saved earlier that this type's list does not offer — a value
-                from another language, or before the wine's type was known — is
-                kept as its own option so choosing it again is possible and it is
-                never silently dropped. */}
-              {draft.payload.appearanceHue !== undefined &&
-              draft.payload.appearanceHue !== "" &&
-              !hueOptionsFor(wineType).some(
-                (code) => t(`tasting.hueOption.${code}`) === draft.payload.appearanceHue,
-              ) ? (
-                <option value={draft.payload.appearanceHue}>{draft.payload.appearanceHue}</option>
-              ) : null}
-            </select>
-          </label>
+          <HueWheel
+            onChange={(label, kind) => {
+              update("appearanceHue", label);
+              // The colour names its family, where none was chosen yet.
+              if (
+                kind !== undefined &&
+                draft.payload.appearanceColorFamily === undefined &&
+                (colorFamiliesFor(wineType) as readonly string[]).includes(kind)
+              ) {
+                update("appearanceColorFamily", kind);
+              }
+            }}
+            value={draft.payload.appearanceHue}
+            wineType={wineType}
+          />
           <div className="form-grid form-grid--three">
             <ScaleField
               label={t("tasting.field.intensity")}
@@ -657,6 +654,11 @@ export function DeepTastingPage() {
         {/* The picker carries its own title ("memory cues"), so the group has
             only the rule above it. */}
         <div className="form-group">
+          <AromaWheel
+            descriptors={phaseDescriptors("nose")}
+            onChange={(value) => updateDescriptors("nose", value)}
+            phase="nose"
+          />
           <DescriptorPicker
             descriptors={phaseDescriptors("nose")}
             locale={locale}

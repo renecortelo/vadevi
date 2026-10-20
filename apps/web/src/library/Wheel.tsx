@@ -86,7 +86,8 @@ export function Wheel({
   label: string;
   onSelect: (node: WheelNode) => void;
   root: WheelNode;
-  selected: string | null;
+  /** What is chosen: one part, or several (the aromas a taster noticed). */
+  selected: string | readonly string[] | null;
 }) {
   const { t } = useTranslation();
   // The path from the root to the level in focus, by id: the nodes are read
@@ -139,8 +140,14 @@ export function Wheel({
     setTrail(trail.slice(0, backLength - 1));
   };
 
+  const chosen = (id: string) =>
+    selected === null
+      ? false
+      : typeof selected === "string"
+        ? id === selected
+        : selected.includes(id);
   const named =
-    parts.find((node) => node.id === pointed) ?? parts.find((node) => node.id === selected) ?? null;
+    parts.find((node) => node.id === pointed) ?? parts.find((node) => chosen(node.id)) ?? null;
   const centre = named ?? focus;
   const line = named === null ? null : (detail?.(named) ?? null);
 
@@ -155,7 +162,7 @@ export function Wheel({
                 <path
                   className={
                     `wheel__part${node.muted === true ? " wheel__part--muted" : ""}` +
-                    `${node.id === selected ? " wheel__part--chosen" : ""}` +
+                    `${chosen(node.id) ? " wheel__part--chosen" : ""}` +
                     `${pointed === node.id ? " wheel__part--pointed" : ""}`
                   }
                   d={slice(start + gap / 2, end - gap / 2)}
@@ -207,7 +214,7 @@ export function Wheel({
         {placed.map(({ node }, index) => (
           <li key={node.id} style={{ "--i": index } as CSSProperties}>
             <button
-              aria-pressed={hasParts(node) ? undefined : node.id === selected}
+              aria-pressed={hasParts(node) ? undefined : chosen(node.id)}
               className={`wheel__chip${node.muted === true ? " wheel__chip--muted" : ""}`}
               onBlur={() => setPointed(null)}
               onClick={() => choose(node)}

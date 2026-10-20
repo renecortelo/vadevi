@@ -6585,6 +6585,23 @@ button.stats-bars__label:hover {
   justify-items: center;
 }
 
+/* A wheel in the tasting form: the colour, and the aromas folded away. */
+.wheel-field {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: center;
+  margin-block: var(--space-2);
+}
+
+.wheel-field__label {
+  font-weight: 600;
+  justify-self: start;
+}
+
+.wheel-field__toggle {
+  justify-self: start;
+}
+
 .wheel {
   /* Each part sets its own: how far it steps out, and its place in the fan. */
   --dx: 0px;
@@ -6726,9 +6743,9 @@ button.stats-bars__label:hover {
   animation: reel-rise 0.4s ease-out calc(var(--i) * 20ms) both;
 }
 
-/* As with the library's chips: the card's list rule would push every chip
-   but the first down a step; the flex gap spaces them. */
-.settings-card .wheel__list li + li {
+/* As with the library's chips: a card's or a form's list rule would push
+   every chip but the first down a step; the flex gap spaces them. */
+.wheel .wheel__list li + li {
   margin-block-start: 0;
 }
 

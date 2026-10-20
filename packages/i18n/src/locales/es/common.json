@@ -1268,7 +1268,7 @@
     "field": {
       "clarity": "Claridad",
       "colorFamily": "Familia de color",
-      "hue": "Tonalidad (con tus palabras)",
+      "hue": "Tonalidad",
       "intensity": "Intensidad",
       "rimEvolution": "Evolución del ribete",
       "viscosity": "Viscosidad",
@@ -1411,7 +1411,12 @@
       "valueExpectation": "Valor y expectativa",
       "yourConclusion": "Con tus palabras"
     },
-    "voiceOrigin": "Registrada por voz"
+    "voiceOrigin": "Registrada por voz",
+    "hueKept": "Guardado como «{{value}}»; elige un color en la rueda para cambiarlo.",
+    "aromaWheel": {
+      "close": "Ocultar la rueda de aromas",
+      "open": "Elegir en la rueda de aromas"
+    }
   },
   "dataRights": {
     "accountScheduled": "La eliminación de la cuenta está programada dentro de {{days}} días.",

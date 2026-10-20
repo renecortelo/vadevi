@@ -1268,7 +1268,7 @@
     "field": {
       "clarity": "Clarity",
       "colorFamily": "Color family",
-      "hue": "Hue (your words)",
+      "hue": "Hue",
       "intensity": "Intensity",
       "rimEvolution": "Rim evolution",
       "viscosity": "Viscosity",
@@ -1411,7 +1411,12 @@
       "valueExpectation": "Value and expectation",
       "yourConclusion": "In your own words"
     },
-    "voiceOrigin": "Recorded by voice"
+    "voiceOrigin": "Recorded by voice",
+    "hueKept": "Kept as «{{value}}»; choose a colour on the wheel to change it.",
+    "aromaWheel": {
+      "close": "Hide the aroma wheel",
+      "open": "Choose on the aroma wheel"
+    }
   },
   "dataRights": {
     "accountScheduled": "Account deletion is scheduled in {{days}} days.",
