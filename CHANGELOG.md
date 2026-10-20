@@ -12,8 +12,8 @@ has the reasons.
   is the reel, told with the logo's bottles: it opens on the word, and with
   each of six quick steps — a tasting, a label, the library, Vicenç, your
   cellar on the map, your taste — a small bottle drops into its place in a
-  row until all seven are there; then the bottles stretch up and the row grows
-  into the logo, the letters falling across it, above a one-line close and
+  row until all seven are there; then the bottles stretch up, each by its own
+  measure and a moment apart, and the row grows into the logo, the letters falling across it, above a one-line close and
   «Continue with Google», and the logo stays a while. Under twenty seconds a
   pass, it loops, with one quiet pause button in its corner; still for
   reduced motion, and the logo holds its place until it loads.

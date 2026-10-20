@@ -6008,6 +6008,8 @@ button.stats-bars__label:hover {
   /* Each shot sets its own; these are the reel's defaults. */
   --at: 0s;
   --bottle: var(--color-plum);
+  --lag: 0s;
+  --stretch: 1.2;
   --drop: 0s;
   --h: 50%;
   --end: 19s;
@@ -6151,7 +6153,7 @@ button.stats-bars__label:hover {
 .reel__slot {
   animation:
     reel-slot 0.7s cubic-bezier(0.3, 1.5, 0.5, 1) var(--at) both,
-    reel-stretch 0.8s ease-out calc(13.45s + var(--i) * 0.05s) both;
+    reel-stretch 0.9s ease-out calc(13.45s + var(--lag)) both;
   transform-box: fill-box;
   transform-origin: 50% 100%;
 }
@@ -6163,10 +6165,14 @@ button.stats-bars__label:hover {
   }
 }
 
-/* Each bottle stretches up as the row grows; the row grows into the logo. */
+/* Each bottle stretches up by its own measure as the row grows, overshoots a
+   little and settles into its height in the logo; the row grows into it. */
 @keyframes reel-stretch {
-  55% {
-    scale: 1 1.22;
+  50% {
+    scale: 1 var(--stretch);
+  }
+  78% {
+    scale: 1 0.94;
   }
 }
 
