@@ -5,14 +5,12 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { type CoveragePoint, CoverageMap } from "../library/CoverageMap";
-import { flagOf } from "../library/flag";
-import { LibraryTabs } from "../library/LibraryTabs";
-import { TrailBackLink } from "../library/TrailBackLink";
-import { trailFrom } from "../library/trail";
 import { CountUp } from "../motion/CountUp";
 import { useArrival } from "../motion/useArrival";
 import { getLibraryAtlasCoverage, listLibraryRegions } from "../services/library";
+import { type CoveragePoint, CoverageMap } from "./CoverageMap";
+import { flagOf } from "./flag";
+import { trailFrom } from "./trail";
 
 type Coverage = LibraryAtlasCoverageResponse["data"];
 type Country = Coverage["countries"][number];
@@ -53,9 +51,9 @@ function Measures({ items }: { items: { label: string; of: number; value: number
  * The atlas in figures: for each country, how many registered names the
  * library holds, how many it describes in the reader's language, how many are
  * on the map and how many name their grapes — the library saying what it
- * knows, and what it does not yet.
+ * knows, and what it does not yet. A shelf of the library's page.
  */
-export function LibraryAtlasPage() {
+export function LibraryAtlas() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const locale = resolveSupportedLocale(i18n.language);
@@ -109,20 +107,8 @@ export function LibraryAtlasPage() {
   const all = total((country) => country.names);
 
   return (
-    <section className="library-page">
-      <p className="section-help library-back">
-        <TrailBackLink
-          fallback={{ label: t("library.home.title"), path: "/library?tab=regions" }}
-        />
-      </p>
-      <LibraryTabs current="atlas" />
-      <header className="page-heading">
-        <div>
-          <p className="eyebrow">{t("library.atlasEyebrow")}</p>
-          <h1>{t("library.coverage.title")}</h1>
-          <p>{t("library.coverage.intro")}</p>
-        </div>
-      </header>
+    <>
+      <p className="section-help">{t("library.coverage.intro")}</p>
       {current === null ? (
         <p role="status">{t("library.loading")}</p>
       ) : current.coverage === null ? (
@@ -156,7 +142,7 @@ export function LibraryAtlasPage() {
             onSelect={setSelected}
             points={selected !== null && points?.code === selected ? points.points : []}
             selected={selected}
-            trail={trailFrom(t("library.coverage.title"), "/library/atlas")}
+            trail={trailFrom(t("library.coverage.title"), "/library?tab=atlas")}
           />
           {selected === null ? null : (
             <p className="atlas-coverage__meta">
@@ -221,6 +207,6 @@ export function LibraryAtlasPage() {
             ))}
         </>
       )}
-    </section>
+    </>
   );
 }

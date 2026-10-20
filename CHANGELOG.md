@@ -23,6 +23,10 @@ has the reasons.
 
 ### The library
 
+- **The wheels and the atlas in figures are tabs of the library's page**,
+  like the grapes and the names: the page stays as it is and only what is
+  beneath the tabs changes (`/library?tab=wheels`, `/library?tab=atlas`; the
+  old addresses lead there).
 - **Aroma and colour wheels**: a new shelf of the library. The aroma wheel
   narrows the vocabulary by family and group to one aroma, drawn and named,
   with the grapes whose sources name it; aromas no grape carries yet are

@@ -1,62 +1,38 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
 
-import { useViewTransition } from "../motion/useViewTransition";
-
-export type LibraryShelf = "atlas" | "grapes" | "regions" | "topics" | "wheels";
-const shelves = ["grapes", "regions", "topics"] as const;
+import { type LibraryShelf, libraryShelves } from "./shelves";
 
 /**
  * The library's shelves as one row of tabs — grapes, names, styles, the
- * wheels and the atlas in figures — the same on every page that has them. On the library's
- * own page a shelf is switched in place (`onSelect`); elsewhere each tab is a
- * link to it.
+ * wheels and the atlas in figures. Each is switched in place on the library's
+ * own page, which stays as it is: only what is beneath the tabs changes.
  */
 export function LibraryTabs({
   current,
   onSelect,
 }: {
   current: LibraryShelf;
-  onSelect?: (shelf: Exclude<LibraryShelf, "atlas" | "wheels">) => void;
+  onSelect: (shelf: LibraryShelf) => void;
 }) {
   const { t } = useTranslation();
-  const transition = useViewTransition();
+  const label = (shelf: LibraryShelf) =>
+    shelf === "wheels"
+      ? t("library.wheels.tab")
+      : shelf === "atlas"
+        ? t("library.coverage.title")
+        : t(`library.home.tab.${shelf}`);
   return (
     <nav aria-label={t("library.home.title")} className="segmented-control library-tabs">
-      {shelves.map((shelf) =>
-        onSelect === undefined ? (
-          <Link
-            key={shelf}
-            onClick={transition(`/library?tab=${shelf}`)}
-            to={`/library?tab=${shelf}`}
-          >
-            {t(`library.home.tab.${shelf}`)}
-          </Link>
-        ) : (
-          <button
-            aria-pressed={current === shelf}
-            key={shelf}
-            onClick={() => onSelect(shelf)}
-            type="button"
-          >
-            {t(`library.home.tab.${shelf}`)}
-          </button>
-        ),
-      )}
-      <Link
-        aria-current={current === "wheels" ? "page" : undefined}
-        onClick={current === "wheels" ? undefined : transition("/library/wheels")}
-        to="/library/wheels"
-      >
-        {t("library.wheels.tab")}
-      </Link>
-      <Link
-        aria-current={current === "atlas" ? "page" : undefined}
-        onClick={current === "atlas" ? undefined : transition("/library/atlas")}
-        to="/library/atlas"
-      >
-        {t("library.coverage.title")}
-      </Link>
+      {libraryShelves.map((shelf) => (
+        <button
+          aria-pressed={current === shelf}
+          key={shelf}
+          onClick={() => onSelect(shelf)}
+          type="button"
+        >
+          {label(shelf)}
+        </button>
+      ))}
     </nav>
   );
 }

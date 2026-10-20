@@ -413,15 +413,14 @@ test("the atlas in figures counts each country's names and leads to its list", a
   const southAfrica = atlas.filter((entry) => entry.countryCode === "ZA").length;
   await signIn(page);
   await completeOnboarding(page);
-  await page.goto("/library/atlas");
+  await page.goto("/library?tab=atlas");
   await page.locator("#interface-locale").selectOption("en");
-  await expect(page.locator("h1")).toHaveText("The atlas in figures", { timeout: 15_000 });
-  // The fourth shelf of the library, with its way back.
-  await expect(page.getByRole("link", { name: "The atlas in figures" })).toHaveAttribute(
-    "aria-current",
-    "page",
+  // A shelf of the library's own page: the page stays, its tab is the one on.
+  await expect(page.locator("h1")).toHaveText("Wine library", { timeout: 15_000 });
+  await expect(page.getByRole("button", { name: "The atlas in figures" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
   );
-  await expect(page.locator(".library-back a")).toBeVisible();
   const country = page.locator("article.atlas-coverage__country", {
     has: page.getByRole("heading", { name: /South Africa/ }),
   });
@@ -443,7 +442,7 @@ test("figures play again each time they come back into view", async ({ page }) =
   await signIn(page);
   await completeOnboarding(page);
   await page.emulateMedia({ reducedMotion: "no-preference" });
-  await page.goto("/library/atlas");
+  await page.goto("/library?tab=atlas");
   const first = page.locator("ul.stats-bars").first();
   await expect(first).toHaveAttribute("data-arrival", "shown", { timeout: 15_000 });
   await page.locator("article.atlas-coverage__country").last().scrollIntoViewIfNeeded();
@@ -458,7 +457,7 @@ test("figures move only for a reader who welcomes motion", async ({ page }) => {
   const bar = page.locator(".stats-bars__track > span").first();
   const animation = () => bar.evaluate((element) => getComputedStyle(element).animationName);
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/library/atlas");
+  await page.goto("/library?tab=atlas");
   await expect(bar).toBeAttached({ timeout: 15_000 });
   expect(await animation()).toBe("none");
   await page.emulateMedia({ reducedMotion: "no-preference" });

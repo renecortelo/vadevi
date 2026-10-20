@@ -24,7 +24,7 @@ test.describe("320 CSS px layout", () => {
   test("has no horizontal overflow on the atlas in figures, signed in", async ({ page }) => {
     await signIn(page);
     await completeOnboarding(page);
-    await page.goto("/library/atlas");
+    await page.goto("/library?tab=atlas");
     await expect(page.locator("article.atlas-coverage__country").first()).toBeVisible({
       timeout: 15_000,
     });

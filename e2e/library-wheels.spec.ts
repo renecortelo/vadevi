@@ -15,7 +15,7 @@ test("the aroma and colour wheels narrow to one aroma or one colour", async ({ p
   await page.setViewportSize({ height: 900, width: 430 });
   await signIn(page);
   await completeOnboarding(page);
-  await page.goto("/library/wheels");
+  await page.goto("/library?tab=wheels");
   await page.locator("#interface-locale").selectOption("es");
 
   const level = (name: string) => page.getByRole("list", { name, exact: true });
@@ -68,4 +68,16 @@ test("the aroma and colour wheels narrow to one aroma or one colour", async ({ p
   // A colour leads to the reader's own wines tasted in it: none yet here.
   await expect(page.getByText("Aún no has catado ningún vino de este color.")).toBeVisible();
   await page.screenshot({ fullPage: true, path: test.info().outputPath("wheel-colours.png") });
+
+  // The wheels are a tab of the library's page, like the grapes: the page
+  // stays, and its tabs switch between them.
+  await expect(page.getByRole("heading", { level: 1, name: "Biblioteca del vino" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Ruedas", exact: true })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await page.getByRole("button", { name: "Uvas", exact: true }).click();
+  await expect(page.locator(".library-gallery")).toBeVisible();
+  await page.getByRole("button", { name: "Ruedas", exact: true }).click();
+  await expect(level("Aromas: Aromas")).toBeVisible();
 });

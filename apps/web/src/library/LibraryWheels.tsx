@@ -5,23 +5,22 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
-import { LibraryTabs } from "../library/LibraryTabs";
-import { YourWines } from "../library/RegionTastings";
-import { trailFrom } from "../library/trail";
-import { Wheel, type WheelNode } from "../library/Wheel";
-import { aromaWheel, colourKinds, colourWheel } from "../library/wheels";
 import { getLibraryAromaCounts, listGrapesWithAroma } from "../services/library";
+import { YourWines } from "./RegionTastings";
+import { trailFrom } from "./trail";
+import { Wheel, type WheelNode } from "./Wheel";
+import { aromaWheel, colourKinds, colourWheel } from "./wheels";
 
 type Kind = "aromas" | "colours";
 type Aromas = Map<string, { grapeCount: number; label: string }>;
 
 /**
- * The library's wheels: the aroma vocabulary, by family and group, with the
- * grapes whose sources name each aroma; and the colours of wine, by the kind
- * of wine that shows them. A wheel narrows by touch; what is chosen is shown
- * beneath it.
+ * The library's wheels, a shelf of its page like the grapes: the aroma
+ * vocabulary, by family and group, with the grapes whose sources name each
+ * aroma; and the colours of wine, by the kind of wine that shows them. A
+ * wheel narrows by touch; what is chosen is shown beneath it.
  */
-export function LibraryWheelsPage() {
+export function LibraryWheels() {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const locale = resolveSupportedLocale(i18n.language);
@@ -67,16 +66,12 @@ export function LibraryWheelsPage() {
 
   const list = grapes?.term === term ? grapes.list : null;
   const hue = selected?.startsWith("hue:") === true ? selected.slice("hue:".length) : null;
-  const trail = trailFrom(t("library.wheels.title"), "/library/wheels");
+  const trail = trailFrom(t("library.wheels.title"), "/library?tab=wheels");
 
   return (
-    <section className="library-page">
-      <LibraryTabs current="wheels" />
-      <header className="page-header">
-        <h1>{t("library.wheels.title")}</h1>
-        <p className="section-help">{t("library.wheels.intro")}</p>
-      </header>
-      <section className="settings-card wheel-card">
+    <>
+      <p className="section-help">{t("library.wheels.intro")}</p>
+      <section aria-label={t("library.wheels.title")} className="settings-card wheel-card">
         <div aria-label={t("library.wheels.title")} className="segmented-control" role="group">
           {(["aromas", "colours"] as const).map((option) => (
             <button
@@ -144,6 +139,6 @@ export function LibraryWheelsPage() {
           />
         )}
       </section>
-    </section>
+    </>
   );
 }

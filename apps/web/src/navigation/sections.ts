@@ -84,9 +84,5 @@ export function sectionOf(pathname: string): Section {
  */
 export function tabOf(pathname: string): SectionTab | null {
   const section = sectionOf(pathname);
-  return (
-    section.tabs.find(
-      (tab) => tab.to === pathname || (tab.to === "/library" && pathname === "/library/atlas"),
-    ) ?? null
-  );
+  return section.tabs.find((tab) => tab.to === pathname) ?? null;
 }

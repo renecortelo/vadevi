@@ -1,6 +1,6 @@
 import { lazy, type ReactNode, Suspense } from "react";
 import { useTranslation } from "react-i18next";
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 
 import type { FirebaseUser } from "./auth/firebase";
 import { AppShell } from "./components/AppShell";
@@ -70,12 +70,6 @@ const StatsPage = lazy(() =>
 );
 const LibraryTopicPage = lazy(() =>
   import("./pages/LibraryTopicPage").then((module) => ({ default: module.LibraryTopicPage })),
-);
-const LibraryAtlasPage = lazy(() =>
-  import("./pages/LibraryAtlasPage").then((module) => ({ default: module.LibraryAtlasPage })),
-);
-const LibraryWheelsPage = lazy(() =>
-  import("./pages/LibraryWheelsPage").then((module) => ({ default: module.LibraryWheelsPage })),
 );
 const LibraryRegionPage = lazy(() =>
   import("./pages/LibraryRegionPage").then((module) => ({ default: module.LibraryRegionPage })),
@@ -239,19 +233,13 @@ export function AuthenticatedRoutes() {
             path="library/grape"
           />
           <Route
-            element={
-              <DeferredPage>
-                <LibraryAtlasPage />
-              </DeferredPage>
-            }
+            // The atlas in figures became a tab of the library's own page.
+            element={<Navigate replace to="/library?tab=atlas" />}
             path="library/atlas"
           />
           <Route
-            element={
-              <DeferredPage>
-                <LibraryWheelsPage />
-              </DeferredPage>
-            }
+            // The wheels became a tab of the library's own page.
+            element={<Navigate replace to="/library?tab=wheels" />}
             path="library/wheels"
           />
           <Route

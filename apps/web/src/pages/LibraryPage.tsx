@@ -1,6 +1,6 @@
 import type { LibrarySearchResponse, LibraryTopic, RegionDesignation } from "@vadevi/contracts";
 import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
-import { useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useSearchParams } from "react-router";
 
@@ -9,11 +9,20 @@ import { GrapesIcon, WineTypeIcon } from "../brand/NavIcons";
 import { designationKey } from "../library/designation";
 import { flagOf } from "../library/flag";
 import { LibraryTabs } from "../library/LibraryTabs";
+import { type LibraryShelf, libraryShelves } from "../library/shelves";
 import { useViewTransition } from "../motion/useViewTransition";
 import { listLibraryGrapes, listLibraryRegions, listLibraryTopics } from "../services/library";
 
-type Tab = "grapes" | "regions" | "topics";
-const tabs: Tab[] = ["grapes", "regions", "topics"];
+type Tab = LibraryShelf;
+
+// The wheels and the atlas draw and load more than a list: fetched when
+// their tab opens.
+const LibraryWheels = lazy(() =>
+  import("../library/LibraryWheels").then((module) => ({ default: module.LibraryWheels })),
+);
+const LibraryAtlas = lazy(() =>
+  import("../library/LibraryAtlas").then((module) => ({ default: module.LibraryAtlas })),
+);
 
 /** The countries the atlas has registered names for. */
 const atlasCountries = [
@@ -110,7 +119,9 @@ export function LibraryPage() {
   const { i18n, t } = useTranslation();
   const locale = resolveSupportedLocale(i18n.language);
   const [search, setSearch] = useSearchParams();
-  const tab: Tab = tabs.includes(search.get("tab") as Tab) ? (search.get("tab") as Tab) : "grapes";
+  const tab: Tab = libraryShelves.includes(search.get("tab") as Tab)
+    ? (search.get("tab") as Tab)
+    : "grapes";
   const query = search.get("q") ?? "";
 
   const update = (changes: Record<string, string | null>) =>
@@ -137,6 +148,28 @@ export function LibraryPage() {
 
       <LibraryTabs current={tab} onSelect={(option) => update({ q: null, tab: option })} />
 
+      {tab === "wheels" || tab === "atlas" ? (
+        <Suspense fallback={<p role="status">{t("library.loading")}</p>}>
+          {tab === "wheels" ? <LibraryWheels /> : <LibraryAtlas />}
+        </Suspense>
+      ) : (
+        <LibraryShelf locale={locale} query={query} search={search} tab={tab} update={update} />
+      )}
+    </section>
+  );
+}
+
+/** A shelf that is a list: searched, filtered, and its items each a link. */
+function LibraryShelf({
+  locale,
+  query,
+  search,
+  tab,
+  update,
+}: FilterProps & { query: string; tab: Exclude<Tab, "atlas" | "wheels"> }) {
+  const { t } = useTranslation();
+  return (
+    <>
       <div className="library-filters">
         <label className="library-filters__search">
           <span>{t("library.home.search")}</span>
@@ -165,7 +198,7 @@ export function LibraryPage() {
       ) : (
         <TopicList locale={locale} query={query} />
       )}
-    </section>
+    </>
   );
 }
 
