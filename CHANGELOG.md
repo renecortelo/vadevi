@@ -26,7 +26,9 @@ has the reasons.
 - **A small aroma ring on the grape card**: the grape's aromas by family,
   each as large as the aromas of it the sources name, in the wheel's colours,
   with the families and their counts beside it and the way to the whole
-  wheel.
+  wheel, which leads back to the grape («← Back to Grenache»). The library's
+  page shows the way back to wherever the reader came in from, and keeps it
+  while they switch shelves.
 - **Your wheels, in the taste profile**: the aromas you chose and the colours
   you saw in your own tastings, each part as large as the tastings that name
   it, and nothing you did not note. The profile (`GET /api/v1/me/taste-profile`)

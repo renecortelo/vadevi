@@ -42,6 +42,18 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
     "href",
     "/library?tab=wheels",
   );
+  // The wheel keeps the way back to the grape, while the shelves change too.
+  await page.getByRole("link", { name: "Ver la rueda de aromas" }).click();
+  await expect(page.getByRole("list", { name: "Aromas: Aromas", exact: true })).toBeVisible({
+    timeout: 15_000,
+  });
+  await page.getByRole("button", { name: "Uvas", exact: true }).click();
+  await page.getByRole("button", { name: "Ruedas", exact: true }).click();
+  await page.getByRole("link", { name: "← Volver a Garnacha" }).click();
+  await expect(page).toHaveURL(/\/library\/grapes\/grenache$/);
+  await expect(page.locator(".aroma-grid li").first()).toContainText("frambuesa", {
+    timeout: 15_000,
+  });
 
   const bars = page.locator(".library-bar");
   await expect(bars).toHaveCount(5);

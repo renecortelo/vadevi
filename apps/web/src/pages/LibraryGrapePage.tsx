@@ -10,7 +10,7 @@ import { AromaRing } from "../library/AromaRing";
 import { AtlasMap } from "../library/AtlasMap";
 import { flagOf } from "../library/flag";
 import { TrailBackLink } from "../library/TrailBackLink";
-import { useLibraryTrail } from "../library/trail";
+import { trailFrom, useLibraryTrail } from "../library/trail";
 import { getLibraryGrape, searchLibraryGrapes } from "../services/library";
 
 /**
@@ -184,6 +184,7 @@ export function LibraryGrapePage() {
                   const descriptor = aromaFromTerm(term);
                   return descriptor === null ? [] : [descriptor];
                 })}
+                trail={trailFrom(grape.name, `/library/grapes/${grape.id}`)}
               />
               {/* Each aroma with its drawing over its name in the reader's
                   language. */}

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { slice } from "./ring";
+import type { LibraryTrail } from "./trail";
 import { familyColours } from "./wheels";
 
 /**
@@ -11,7 +12,14 @@ import { familyColours } from "./wheels";
  * colours, with the families and their counts written beside it — the ring is
  * a picture of that list — and the way to the whole wheel.
  */
-export function AromaRing({ descriptors }: { descriptors: readonly AromaDescriptor[] }) {
+export function AromaRing({
+  descriptors,
+  trail,
+}: {
+  descriptors: readonly AromaDescriptor[];
+  /** The way back from the wheel: to this grape. */
+  trail: { libraryTrail: LibraryTrail };
+}) {
   const { t } = useTranslation();
   const counts = aromaFamilies
     .map((family) => ({
@@ -52,7 +60,7 @@ export function AromaRing({ descriptors }: { descriptors: readonly AromaDescript
             </li>
           ))}
         </ul>
-        <Link className="text-link" to="/library?tab=wheels">
+        <Link className="text-link" state={trail} to="/library?tab=wheels">
           {t("library.wheels.seeWheel")}
         </Link>
       </div>

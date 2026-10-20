@@ -2,7 +2,7 @@ import type { LibrarySearchResponse, LibraryTopic, RegionDesignation } from "@va
 import { resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useSearchParams } from "react-router";
+import { Link, useLocation, useSearchParams } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { GrapesIcon, WineTypeIcon } from "../brand/NavIcons";
@@ -10,6 +10,8 @@ import { designationKey } from "../library/designation";
 import { flagOf } from "../library/flag";
 import { LibraryTabs } from "../library/LibraryTabs";
 import { type LibraryShelf, libraryShelves } from "../library/shelves";
+import { useLibraryTrail } from "../library/trail";
+import { TrailBackLink } from "../library/TrailBackLink";
 import { useViewTransition } from "../motion/useViewTransition";
 import { listLibraryGrapes, listLibraryRegions, listLibraryTopics } from "../services/library";
 
@@ -123,6 +125,10 @@ export function LibraryPage() {
     ? (search.get("tab") as Tab)
     : "grapes";
   const query = search.get("q") ?? "";
+  // The way back to where the reader came in from (a grape's card, a wine),
+  // kept while they switch shelves and filters.
+  const { state } = useLocation();
+  const cameFrom = useLibraryTrail();
 
   const update = (changes: Record<string, string | null>) =>
     setSearch(
@@ -134,11 +140,16 @@ export function LibraryPage() {
         }
         return next;
       },
-      { replace: true },
+      { replace: true, state },
     );
 
   return (
     <section className="library-page">
+      {cameFrom === null ? null : (
+        <p className="section-help library-back">
+          <TrailBackLink />
+        </p>
+      )}
       <header className="page-heading">
         <div>
           <h1>{t("library.home.title")}</h1>
