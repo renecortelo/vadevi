@@ -4,7 +4,7 @@ What changed between releases, for readers and for anyone running their own
 deployment. Each release lists what you will notice first; the commit history
 has the reasons.
 
-## Unreleased
+## 0.5.0 — 20 October 2026
 
 ### First impressions
 
