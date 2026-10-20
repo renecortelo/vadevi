@@ -494,7 +494,9 @@
       "colourOf": "wijnkleur: {{kind}}",
       "grapeCount_one": "{{count}} druif",
       "grapeCount_other": "{{count}} druiven",
-      "noGrapeShort": "Nog geen druif"
+      "noGrapeShort": "Nog geen druif",
+      "yourWinesInColour": "Je wijnen in {{colour}}",
+      "noWinesInColour": "Je hebt nog geen wijn in deze kleur geproefd."
     }
   },
   "space": {

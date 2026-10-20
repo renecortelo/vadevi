@@ -494,7 +494,9 @@
       "colourOf": "couleur de vin {{kind}}",
       "grapeCount_one": "{{count}} cépage",
       "grapeCount_other": "{{count}} cépages",
-      "noGrapeShort": "Aucun cépage encore"
+      "noGrapeShort": "Aucun cépage encore",
+      "yourWinesInColour": "Tes vins couleur {{colour}}",
+      "noWinesInColour": "Tu n'as encore dégusté aucun vin de cette couleur."
     }
   },
   "space": {

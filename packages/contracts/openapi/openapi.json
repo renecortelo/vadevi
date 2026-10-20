@@ -17372,6 +17372,33 @@
             "schema": {
               "type": "string",
               "enum": [
+                "straw",
+                "yellow",
+                "gold",
+                "amber",
+                "copper",
+                "pale_pink",
+                "salmon",
+                "raspberry",
+                "coral",
+                "purple",
+                "ruby",
+                "garnet",
+                "brick",
+                "tawny",
+                "mahogany",
+                "brown",
+                "orange"
+              ]
+            },
+            "required": false,
+            "name": "hue",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
                 "dislike",
                 "neutral",
                 "like"

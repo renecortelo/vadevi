@@ -9,18 +9,27 @@ import { useSession } from "../session/SessionContext";
 import { useLibraryTrail } from "./trail";
 
 /**
- * The reader's own wines from a registered name, in the Space they are in:
- * how many, how often tasted, their mean score, and each one's page. Only the
- * wines whose region the library knows for certain to be this name count —
- * a region typed loosely is not guessed at. Nothing shows without one.
+ * The reader's own wines that a filter picks, in the Space they are in — from
+ * a registered name, or tasted in a colour: how many, how often tasted, their
+ * mean score, and each one's page. Without one, nothing shows, or what
+ * `empty` says.
  */
-export function RegionTastings({ regionId }: { regionId: string }) {
+export function YourWines({
+  empty,
+  filter,
+  title,
+}: {
+  empty?: string;
+  filter: { hue?: string; regionRef?: string };
+  title: string;
+}) {
   const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const trail = useLibraryTrail();
   const spaceId = bootstrap.data.user.activeSpaceId;
   const [wines, setWines] = useState<WineSummary[]>([]);
+  const { hue, regionRef } = filter;
 
   useEffect(() => {
     if (user === null || spaceId === null) return;
@@ -28,15 +37,23 @@ export function RegionTastings({ regionId }: { regionId: string }) {
     getWineMemory(
       user,
       spaceId,
-      { limit: 100, regionRef: regionId, sort: "recent" },
+      {
+        limit: 100,
+        ...(hue === undefined ? {} : { hue }),
+        ...(regionRef === undefined ? {} : { regionRef }),
+        sort: "recent",
+      },
       controller.signal,
     )
       .then((page) => setWines(page.data))
       .catch(() => setWines([]));
     return () => controller.abort();
-  }, [regionId, spaceId, user]);
+  }, [hue, regionRef, spaceId, user]);
 
-  if (wines.length === 0 || spaceId === null) return null;
+  if (spaceId === null) return null;
+  if (wines.length === 0) {
+    return empty === undefined ? null : <p className="section-help">{empty}</p>;
+  }
   const tastings = wines.reduce((total, wine) => total + wine.noteCount, 0);
   const scored = wines.filter((wine) => wine.score100 !== null);
   const average =
@@ -46,8 +63,8 @@ export function RegionTastings({ regionId }: { regionId: string }) {
   const number = new Intl.NumberFormat(i18n.language);
 
   return (
-    <section aria-labelledby="region-yours" className="settings-card">
-      <h2 id="region-yours">{t("library.yoursTitle")}</h2>
+    <section aria-labelledby="your-wines" className="settings-card your-wines">
+      <h2 id="your-wines">{title}</h2>
       <p>
         {[
           t("library.yoursWines", { count: wines.length }),
@@ -69,4 +86,14 @@ export function RegionTastings({ regionId }: { regionId: string }) {
       </ul>
     </section>
   );
+}
+
+/**
+ * The reader's own wines from a registered name. Only the wines whose region
+ * the library knows for certain to be this name count — a region typed
+ * loosely is not guessed at.
+ */
+export function RegionTastings({ regionId }: { regionId: string }) {
+  const { t } = useTranslation();
+  return <YourWines filter={{ regionRef: regionId }} title={t("library.yoursTitle")} />;
 }

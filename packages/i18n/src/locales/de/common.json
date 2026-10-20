@@ -494,7 +494,9 @@
       "colourOf": "Weinfarbe: {{kind}}",
       "grapeCount_one": "{{count}} Rebsorte",
       "grapeCount_other": "{{count}} Rebsorten",
-      "noGrapeShort": "Noch keine Rebsorte"
+      "noGrapeShort": "Noch keine Rebsorte",
+      "yourWinesInColour": "Deine Weine in {{colour}}",
+      "noWinesInColour": "Du hast noch keinen Wein in dieser Farbe verkostet."
     }
   },
   "space": {

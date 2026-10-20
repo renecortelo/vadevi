@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
  * or chosen is named large in the centre, and the level's parts are listed
  * beneath as buttons — the controls a keyboard and a screen reader use; the
  * ring answers a touch too. Going into a part fans its own parts out; a
- * button steps back.
+ * round button in the centre steps back.
  */
 export type WheelNode = {
   children?: WheelNode[];
@@ -62,6 +62,16 @@ function weightOf(node: WheelNode): number {
 }
 
 const hasParts = (node: WheelNode) => node.children !== undefined && node.children.length > 0;
+
+/** Back up a level: a line drawn to sit with the aroma drawings. */
+function ReturnIcon() {
+  return (
+    <svg aria-hidden="true" className="wheel__return-icon" focusable="false" viewBox="0 0 24 24">
+      <path d="M9.5 6.5 5 11l4.5 4.5" />
+      <path d="M5.5 11h8.25a4.75 4.75 0 0 1 0 9.5H11" />
+    </svg>
+  );
+}
 
 export function Wheel({
   detail,
@@ -117,49 +127,63 @@ export function Wheel({
 
   return (
     <div className="wheel">
-      <svg aria-hidden="true" className="wheel__svg" viewBox="-100 -100 200 200">
-        <g className="wheel__ring" key={focus.id}>
-          {placed.map(({ end, node, start }, index) => {
-            const [dx, dy] = polar(5, (start + end) / 2);
-            return (
-              <path
-                className={
-                  `wheel__part${node.muted === true ? " wheel__part--muted" : ""}` +
-                  `${node.id === selected ? " wheel__part--chosen" : ""}` +
-                  `${pointed === node.id ? " wheel__part--pointed" : ""}`
-                }
-                d={slice(start + gap / 2, end - gap / 2)}
-                fill={node.color}
-                key={node.id}
-                onClick={() => choose(node)}
-                onPointerEnter={() => setPointed(node.id)}
-                onPointerLeave={() => setPointed(null)}
-                style={{ "--dx": `${dx}px`, "--dy": `${dy}px`, "--i": index } as CSSProperties}
-              />
-            );
-          })}
-        </g>
-        <g className="wheel__centre" key={`${focus.id}:${centre.id}`}>
-          <text
-            className="wheel__name"
-            dominantBaseline="middle"
-            textAnchor="middle"
-            y={line === null ? 0 : -6}
-          >
-            {centre.label}
-          </text>
-          {line === null ? null : (
-            <text className="wheel__detail" dominantBaseline="middle" textAnchor="middle" y={12}>
-              {line}
+      <div className="wheel__stage">
+        <svg aria-hidden="true" className="wheel__svg" viewBox="-100 -100 200 200">
+          <g className="wheel__ring" key={focus.id}>
+            {placed.map(({ end, node, start }, index) => {
+              const [dx, dy] = polar(5, (start + end) / 2);
+              return (
+                <path
+                  className={
+                    `wheel__part${node.muted === true ? " wheel__part--muted" : ""}` +
+                    `${node.id === selected ? " wheel__part--chosen" : ""}` +
+                    `${pointed === node.id ? " wheel__part--pointed" : ""}`
+                  }
+                  d={slice(start + gap / 2, end - gap / 2)}
+                  fill={node.color}
+                  key={node.id}
+                  onClick={() => choose(node)}
+                  onPointerEnter={() => setPointed(node.id)}
+                  onPointerLeave={() => setPointed(null)}
+                  style={{ "--dx": `${dx}px`, "--dy": `${dy}px`, "--i": index } as CSSProperties}
+                />
+              );
+            })}
+          </g>
+          <g className="wheel__centre" key={`${focus.id}:${centre.id}`}>
+            <text
+              className="wheel__name"
+              dominantBaseline="middle"
+              textAnchor="middle"
+              y={(line === null ? 0 : -6) + (path.length > 1 ? 9 : 0)}
+            >
+              {centre.label}
             </text>
-          )}
-        </g>
-      </svg>
-      {path.length > 1 ? (
-        <button className="wheel__back text-button" onClick={back} type="button">
-          ← {t("library.wheels.back", { name: path.at(-2)!.label })}
-        </button>
-      ) : null}
+            {line === null ? null : (
+              <text
+                className="wheel__detail"
+                dominantBaseline="middle"
+                textAnchor="middle"
+                y={12 + (path.length > 1 ? 9 : 0)}
+              >
+                {line}
+              </text>
+            )}
+          </g>
+        </svg>
+        {/* Inside the ring, over the name: back up to the level around this one. */}
+        {path.length > 1 ? (
+          <button
+            aria-label={t("library.wheels.back", { name: path.at(-2)!.label })}
+            className="wheel__return"
+            onClick={back}
+            title={t("library.wheels.back", { name: path.at(-2)!.label })}
+            type="button"
+          >
+            <ReturnIcon />
+          </button>
+        ) : null}
+      </div>
       <ul aria-label={`${label}: ${focus.label}`} className="wheel__list" key={focus.id}>
         {placed.map(({ node }, index) => (
           <li key={node.id} style={{ "--i": index } as CSSProperties}>

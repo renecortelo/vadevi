@@ -494,7 +494,9 @@
       "colourOf": "colore di vino {{kind}}",
       "grapeCount_one": "{{count}} vitigno",
       "grapeCount_other": "{{count}} vitigni",
-      "noGrapeShort": "Nessun vitigno ancora"
+      "noGrapeShort": "Nessun vitigno ancora",
+      "yourWinesInColour": "I tuoi vini color {{colour}}",
+      "noWinesInColour": "Non hai ancora degustato un vino di questo colore."
     }
   },
   "space": {

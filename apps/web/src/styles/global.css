@@ -6600,7 +6600,7 @@ button.stats-bars__label:hover {
 .wheel__svg {
   block-size: auto;
   display: block;
-  inline-size: min(100%, 20rem);
+  inline-size: 100%;
   overflow: visible;
 }
 
@@ -6668,8 +6668,48 @@ button.stats-bars__label:hover {
   letter-spacing: 0.04em;
 }
 
-.wheel__back {
-  font-size: var(--text-sm);
+/* The ring and, in its centre, the way back up. */
+.wheel__stage {
+  display: grid;
+  inline-size: min(100%, 20rem);
+  place-items: center;
+  position: relative;
+}
+
+.wheel__return {
+  align-items: center;
+  animation: wheel-name 0.3s ease-out both;
+  background: var(--color-surface-raised);
+  block-size: 2.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-plum);
+  cursor: pointer;
+  display: inline-flex;
+  inline-size: 2.4rem;
+  inset-block-start: calc(50% - 3.1rem);
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.wheel__return:hover,
+.wheel__return:focus-visible {
+  border-color: var(--color-plum);
+  transform: translateX(-2px);
+}
+
+.wheel__return-icon {
+  block-size: 1.3rem;
+  fill: none;
+  inline-size: 1.3rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .wheel__list {

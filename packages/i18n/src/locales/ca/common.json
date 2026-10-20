@@ -494,7 +494,9 @@
       "colourOf": "color de vi {{kind}}",
       "grapeCount_one": "{{count}} raïm",
       "grapeCount_other": "{{count}} raïms",
-      "noGrapeShort": "Encara sense raïms"
+      "noGrapeShort": "Encara sense raïms",
+      "yourWinesInColour": "Els teus vins de color {{colour}}",
+      "noWinesInColour": "Encara no has tastat cap vi d'aquest color."
     }
   },
   "space": {

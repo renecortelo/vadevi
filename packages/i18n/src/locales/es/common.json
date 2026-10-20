@@ -494,7 +494,9 @@
       "colourOf": "color de vino {{kind}}",
       "grapeCount_one": "{{count}} uva",
       "grapeCount_other": "{{count}} uvas",
-      "noGrapeShort": "Sin uvas aún"
+      "noGrapeShort": "Sin uvas aún",
+      "yourWinesInColour": "Tus vinos de color {{colour}}",
+      "noWinesInColour": "Aún no has catado ningún vino de este color."
     }
   },
   "space": {

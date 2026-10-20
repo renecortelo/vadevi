@@ -242,6 +242,8 @@ export type WineMemoryFilters = {
   query?: string;
   region?: string;
   regionRef?: string;
+  /** A colour a tasting saw the wine in (`tasting.hueOption` code). */
+  hue?: string;
   sentiment?: string;
   sort?: string;
   tastedFrom?: string;

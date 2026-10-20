@@ -722,6 +722,15 @@ describe("Wine Memory filters and confirmed merge (AC-031, AC-013)", () => {
     const bySentiment = await search("sentiment=dislike");
     expect(bySentiment.data.map((wine: { id: string }) => wine.id)).toEqual([rioja.id]);
 
+    // By the colour a tasting saw it in, under any of its names: a note
+    // written in Spanish keeps «Dorado», found by its code.
+    await env.DB.prepare(`UPDATE tasting_notes SET appearance_hue = 'Dorado' WHERE wine_id = ?`)
+      .bind(penedes.id)
+      .run();
+    const byHue = await search("hue=gold");
+    expect(byHue.data.map((wine: { id: string }) => wine.id)).toEqual([penedes.id]);
+    expect((await search("hue=ruby")).data).toEqual([]);
+
     const byMedia = await search("hasMedia=true");
     expect(byMedia.data).toHaveLength(0);
 

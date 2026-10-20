@@ -6,6 +6,7 @@ import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { LibraryTabs } from "../library/LibraryTabs";
+import { YourWines } from "../library/RegionTastings";
 import { trailFrom } from "../library/trail";
 import { Wheel, type WheelNode } from "../library/Wheel";
 import { aromaWheel, colourKinds, colourWheel } from "../library/wheels";
@@ -65,6 +66,7 @@ export function LibraryWheelsPage() {
   };
 
   const list = grapes?.term === term ? grapes.list : null;
+  const hue = selected?.startsWith("hue:") === true ? selected.slice("hue:".length) : null;
   const trail = trailFrom(t("library.wheels.title"), "/library/wheels");
 
   return (
@@ -130,6 +132,17 @@ export function LibraryWheelsPage() {
             </>
           ) : null}
         </div>
+        {/* A colour chosen: the reader's own wines tasted in it. */}
+        {hue === null ? null : (
+          <YourWines
+            empty={t("library.wheels.noWinesInColour")}
+            filter={{ hue }}
+            key={hue}
+            title={t("library.wheels.yourWinesInColour", {
+              colour: t(`tasting.hueOption.${hue}`).toLowerCase(),
+            })}
+          />
+        )}
       </section>
     </section>
   );

@@ -18,6 +18,7 @@ import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { jsonList } from "../services/sql-list";
 import { libraryGrapeIds } from "./grape-names";
+import { hueLabels } from "./hue-labels";
 import { countryOfProducer, countryOfRegion, readPlaces, regionRefOf } from "./region-names";
 
 type IdempotentResult<T> =
@@ -609,6 +610,8 @@ export type ListWinesFilters = {
   query?: string | undefined;
   region?: string | undefined;
   regionRef?: string | undefined;
+  /** A colour a tasting saw it in (`tasting.hueOption` code). */
+  hue?: string | undefined;
   sentiment?: "dislike" | "like" | "neutral" | undefined;
   sort: "name" | "recent" | "score" | "tasted";
   spaceId: string;
@@ -641,6 +644,12 @@ export async function listWines(
   const query = options.query === undefined ? null : `%${normalizeWineText(options.query)}%`;
   const region = options.region === undefined ? null : `%${normalizeWineText(options.region)}%`;
   const grape = options.grape === undefined ? null : `%${normalizeWineText(options.grape)}%`;
+  // A tasting keeps a colour's name in the language it was written in: match
+  // every name the interface gives it, and the code itself.
+  const hueNames =
+    options.hue === undefined
+      ? null
+      : JSON.stringify([options.hue, ...(hueLabels[options.hue] ?? [])]);
   const sort = sortKeys[options.sort];
   const comparison = sort.direction === "DESC" ? "<" : ">";
 
@@ -675,6 +684,12 @@ export async function listWines(
             SELECT 1 FROM tasting_notes note
             WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
               AND note.deleted_at IS NULL AND note.sentiment = ?
+          ))
+          AND (? IS NULL OR EXISTS (
+            SELECT 1 FROM tasting_notes note
+            WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
+              AND note.deleted_at IS NULL
+              AND lower(note.appearance_hue) IN (SELECT lower(value) FROM json_each(?))
           ))
           AND (? IS NULL OR EXISTS (
             SELECT 1 FROM tasting_notes note
@@ -724,6 +739,8 @@ export async function listWines(
       options.hasMedia ?? null,
       options.sentiment ?? null,
       options.sentiment ?? null,
+      hueNames,
+      hueNames,
       options.tastedFrom ?? null,
       options.tastedFrom ?? null,
       options.tastedTo ?? null,

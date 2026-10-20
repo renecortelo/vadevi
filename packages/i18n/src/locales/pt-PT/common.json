@@ -494,7 +494,9 @@
       "colourOf": "cor de vinho {{kind}}",
       "grapeCount_one": "{{count}} casta",
       "grapeCount_other": "{{count}} castas",
-      "noGrapeShort": "Ainda sem castas"
+      "noGrapeShort": "Ainda sem castas",
+      "yourWinesInColour": "Os teus vinhos cor {{colour}}",
+      "noWinesInColour": "Ainda não provaste nenhum vinho desta cor."
     }
   },
   "space": {

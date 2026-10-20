@@ -52,5 +52,7 @@ test("the aroma and colour wheels narrow to one aroma or one colour", async ({ p
     "aria-pressed",
     "true",
   );
+  // A colour leads to the reader's own wines tasted in it: none yet here.
+  await expect(page.getByText("Aún no has catado ningún vino de este color.")).toBeVisible();
   await page.screenshot({ fullPage: true, path: test.info().outputPath("wheel-colours.png") });
 });

@@ -31,7 +31,10 @@ has the reasons.
   parts fanning out as a level opens; the part pointed at or chosen steps out
   and is named large in the centre, with its grapes or its kind of wine; the
   level's parts are listed beneath as buttons, for touch, keyboard and screen
-  reader alike.
+  reader alike; a round button with a drawn return arrow, in the ring's
+  centre, steps back. A colour leads to your own wines tasted in it
+  (`GET …/wines?hue=`, matching the colour's name in any of the eight
+  languages a tasting was written in).
   `GET /api/v1/library/aromas` answers each aroma's name and its number of
   grapes, and `GET /api/v1/library/grapes?aroma=` the grapes that carry one.
 - **No tannin gauge for a white grape**: its wine has next to no tannin, so
