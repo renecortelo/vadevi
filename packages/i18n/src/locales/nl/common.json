@@ -513,6 +513,8 @@
       "noPairing": "Nog geen druif van de bibliotheek past erbij."
     },
     "glanceSourceFederalRegister": "Amerikaanse Federal Register, de regel die de AVA instelde ({{campaign}})",
+    "glanceSourceArtea": "Bron: ARTEA – Regione Toscana, oogst {{campaign}} · CC BY 4.0",
+    "glanceSourceLombardia": "Bron: Regione Lombardia, opgegeven oppervlakte bij de oogst {{campaign}} · CC0",
     "glanceSourceKsh": "Forrás: KSH (Hongaarse statistiek), wijngaarden {{campaign}} · CC BY 4.0"
   },
   "space": {

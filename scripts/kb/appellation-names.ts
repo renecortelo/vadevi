@@ -8,7 +8,15 @@ export type RegionFigureSource = {
   amount: number;
   /** Who gives it, where not Wikipedia: Spain's Ministry, France's customs. */
   publisher?:
-    "destatis" | "douane" | "federal-register" | "inv" | "ksh" | "mapa" | "statistik-austria";
+    | "artea"
+    | "destatis"
+    | "douane"
+    | "federal-register"
+    | "inv"
+    | "ksh"
+    | "mapa"
+    | "regione-lombardia"
+    | "statistik-austria";
   quote: string;
   sourceUrl: string;
   year: string | null;

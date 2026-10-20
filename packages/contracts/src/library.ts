@@ -252,10 +252,21 @@ const RegionFigureSchema = z
      * customs ("douane"), Argentina's wine institute ("inv"), Germany's
      * statistical office ("destatis"), Statistik Austria ("statistik-austria"),
      * the US Federal Register rule that established an AVA ("federal-register"),
-     * Hungary's Central Statistical Office ("ksh").
+     * Hungary's Central Statistical Office ("ksh"), Tuscany's agricultural
+     * payments agency ("artea"), the Lombardy region ("regione-lombardia").
      */
     publisher: z
-      .enum(["destatis", "douane", "federal-register", "inv", "ksh", "mapa", "statistik-austria"])
+      .enum([
+        "artea",
+        "destatis",
+        "douane",
+        "federal-register",
+        "inv",
+        "ksh",
+        "mapa",
+        "regione-lombardia",
+        "statistik-austria",
+      ])
       .optional(),
     /** The infobox line it was read from. */
     quote: z.string(),

@@ -203,6 +203,21 @@ export const sources: Source[] = [
     what: "areas",
   },
   {
+    credit: "Fonte: ARTEA – Regione Toscana",
+    group: "figures",
+    licence: "CC BY 4.0",
+    name: "ARTEA · dati.toscana.it",
+    url: "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+    what: "areas",
+  },
+  {
+    group: "figures",
+    licence: "CC0 1.0",
+    name: "Regione Lombardia · dati.lombardia.it",
+    url: "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+    what: "areas",
+  },
+  {
     group: "figures",
     licence: "CC BY 4.0",
     name: "Instituto Nacional de Vitivinicultura",

@@ -377,6 +377,15 @@ Every few months, or when a register announces a name:
   on the protected name that bears the region's name, with the year and a
   link to the table.
 
+- **Tuscany's agricultural payments agency (ARTEA)**, «Artea - Raccolta Uva»
+  on dati.toscana.it (`it-regional-figures.json`, `pnpm
+kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
+  Toscana»; the area declared at the latest grape harvest for each wine,
+  summed over its types, on the registered name each type begins with.
+  **Regione Lombardia**, «Superfici rivendicate per la produzione vini
+  DOC_DOCG_IGT» on dati.lombardia.it: CC0; the area claimed at the 2013
+  harvest. Names that span another region take none.
+
 - **Germany's Federal Statistical Office (Destatis)**, «Rebflächen 2022»
   (`de-anbaugebiete-figures.json`): its publications allow reproduction and
   distribution, in part too, with the source named; each of the 13

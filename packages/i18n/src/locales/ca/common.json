@@ -513,6 +513,8 @@
       "noPairing": "Cap raïm de la biblioteca no hi va encara."
     },
     "glanceSourceFederalRegister": "Federal Register dels EUA, la norma que va crear l’AVA ({{campaign}})",
+    "glanceSourceArtea": "Font: ARTEA – Regione Toscana, verema {{campaign}} · CC BY 4.0",
+    "glanceSourceLombardia": "Font: Regione Lombardia, superfície reivindicada a la verema {{campaign}} · CC0",
     "glanceSourceKsh": "Forrás: KSH (estadística d’Hongria), vinyes {{campaign}} · CC BY 4.0"
   },
   "space": {

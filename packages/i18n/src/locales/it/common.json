@@ -513,6 +513,8 @@
       "noPairing": "Nessun vitigno della biblioteca si abbina ancora."
     },
     "glanceSourceFederalRegister": "Federal Register degli USA, la norma che ha istituito l’AVA ({{campaign}})",
+    "glanceSourceArtea": "Fonte: ARTEA – Regione Toscana, raccolta uva {{campaign}} · CC BY 4.0",
+    "glanceSourceLombardia": "Fonte: Regione Lombardia, superficie rivendicata alla vendemmia {{campaign}} · CC0",
     "glanceSourceKsh": "Forrás: KSH (statistica ungherese), vigneti {{campaign}} · CC BY 4.0"
   },
   "space": {

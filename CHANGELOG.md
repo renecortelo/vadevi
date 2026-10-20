@@ -45,6 +45,13 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **Vineyard area for 89 Italian names**, from the two regions that publish
+  it by name as open data: Tuscany's grape-harvest declarations (ARTEA,
+  2025, CC BY 4.0) — each wine's types summed on its registered name, so
+  Chianti Classico never falls into Chianti — and the area Lombardy's names
+  claimed at the 2013 harvest (CC0). A name that spans another region (Colli
+  di Luni, Lugana, Garda, San Martino della Battaglia) takes none. Both are
+  on the sources page.
 - **Italy's production**: where an Italian article lists its wine's volume by
   province and season («Provincia, stagione, volume in ettolitri»), the
   latest season's, from the yearly statistics of the 1990s — shown with its

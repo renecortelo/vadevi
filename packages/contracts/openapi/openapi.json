@@ -11848,12 +11848,14 @@
                   "publisher": {
                     "type": "string",
                     "enum": [
+                      "artea",
                       "destatis",
                       "douane",
                       "federal-register",
                       "inv",
                       "ksh",
                       "mapa",
+                      "regione-lombardia",
                       "statistik-austria"
                     ]
                   },
@@ -11887,12 +11889,14 @@
                   "publisher": {
                     "type": "string",
                     "enum": [
+                      "artea",
                       "destatis",
                       "douane",
                       "federal-register",
                       "inv",
                       "ksh",
                       "mapa",
+                      "regione-lombardia",
                       "statistik-austria"
                     ]
                   },

@@ -54,6 +54,7 @@
     "kb:fetch-elevation": "tsx scripts/kb/fetch-elevation.ts",
     "kb:fetch-region-figures": "tsx scripts/kb/fetch-region-figures.ts",
     "kb:fetch-ava-rules": "tsx scripts/kb/fetch-ava-rules.ts",
+    "kb:fetch-it-regional-figures": "tsx scripts/kb/fetch-it-regional-figures.ts",
     "kb:fetch-topics": "tsx scripts/kb/fetch-topics.ts",
     "kb:build-topics": "tsx scripts/kb/build-topics.ts",
     "kb:fetch-grape-images": "tsx scripts/kb/fetch-grape-images.ts",

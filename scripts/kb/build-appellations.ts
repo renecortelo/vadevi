@@ -1640,6 +1640,40 @@ for (const entry of entries) {
   };
   ksh += 1;
 }
+// Italian names from the regions that publish their area by name as open data
+// (`data/kb/it-regional-figures.json`, `pnpm kb:fetch-it-regional-figures`):
+// Tuscany's harvest declarations (ARTEA, CC BY 4.0) and Lombardy's claimed
+// area (CC0), where nothing else gives one.
+const italianRegions = JSON.parse(
+  readFileSync(resolve("data/kb/it-regional-figures.json"), "utf8"),
+) as {
+  regions: Record<
+    string,
+    {
+      plantedHa: number;
+      publisher: "artea" | "regione-lombardia";
+      quote: string;
+      sourceUrl: string;
+      year: string;
+    }
+  >;
+};
+let italianRegional = 0;
+for (const entry of entries) {
+  const figure = italianRegions.regions[entry.id];
+  if (figure === undefined || entry.figures?.planted) continue;
+  entry.figures = {
+    planted: {
+      amount: figure.plantedHa,
+      publisher: figure.publisher,
+      quote: figure.quote,
+      sourceUrl: figure.sourceUrl,
+      year: figure.year,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  italianRegional += 1;
+}
 // American Viticultural Areas with no area from Wikipedia: the acres of
 // vineyards the Federal Register rule that established each one gives, read
 // by hand (`data/kb/us-ava-figures.json`; US federal works, public domain in
@@ -1681,7 +1715,7 @@ for (const entry of entries) {
   federalRegister += 1;
 }
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${federalRegister} American from the Federal Register.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany and Lombardy, ${federalRegister} American from the Federal Register.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

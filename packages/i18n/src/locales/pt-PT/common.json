@@ -513,6 +513,8 @@
       "noPairing": "Nenhuma casta da biblioteca combina ainda."
     },
     "glanceSourceFederalRegister": "Federal Register dos EUA, a norma que criou a AVA ({{campaign}})",
+    "glanceSourceArtea": "Fonte: ARTEA – Regione Toscana, vindima {{campaign}} · CC BY 4.0",
+    "glanceSourceLombardia": "Fonte: Regione Lombardia, área reivindicada na vindima {{campaign}} · CC0",
     "glanceSourceKsh": "Forrás: KSH (estatística da Hungria), vinhas {{campaign}} · CC BY 4.0"
   },
   "space": {

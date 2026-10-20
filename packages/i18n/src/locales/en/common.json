@@ -513,6 +513,8 @@
       "noPairing": "No grape of the library goes with it yet."
     },
     "glanceSourceFederalRegister": "US Federal Register, the rule establishing the AVA ({{campaign}})",
+    "glanceSourceArtea": "Source: ARTEA – Regione Toscana, grape harvest {{campaign}} · CC BY 4.0",
+    "glanceSourceLombardia": "Source: Regione Lombardia, area claimed at the {{campaign}} harvest · CC0",
     "glanceSourceKsh": "Forrás: KSH (Hungarian statistics), vineyards {{campaign}} · CC BY 4.0"
   },
   "space": {

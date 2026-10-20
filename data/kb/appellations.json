@@ -17071,6 +17071,16 @@
         9.7,
         6.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 4.37,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «ALTA VALLE DELLA GREVE ROSSO, ROSATO E NOVELLO» 3,75 ha; «ALTA VALLE DELLA GREVE BIANCO» 0,62 ha — in tutto 4,37 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -18344,6 +18354,16 @@
         8.6,
         4.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 75.3,
+        "publisher": "regione-lombardia",
+        "quote": "ALTO MINCIO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 75.3",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -19593,6 +19613,16 @@
         12.9,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 10.8,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «ANSONICA COSTA DELL'ARGENTARIO» 10,8 ha — in tutto 10,8 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -30801,6 +30831,16 @@
         9.7,
         6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 26.29,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «BARCO REALE DI CARMIGNANO» 14,57 ha; «BARCO REALE DI CARMIGNANO ROSATO» 11,71 ha — in tutto 26,29 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -34502,6 +34542,16 @@
         8.5,
         4.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 50.86,
+        "publisher": "regione-lombardia",
+        "quote": "BENACO BRESCIANO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 50.86",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -35003,6 +35053,16 @@
         7.1,
         3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 127.44,
+        "publisher": "regione-lombardia",
+        "quote": "BERGAMASCA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 127.44",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -36648,6 +36708,16 @@
         10,
         6.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 5.56,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «BIANCO DELL'EMPOLESE» 3,52 ha; «BIANCO DELL'EMPOLESE VIN SANTO» 2,04 ha — in tutto 5,56 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -36838,6 +36908,16 @@
         12.9,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 209.4,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «BIANCO DI PITIGLIANO, SPUMANTE, D.ZERO, EXTRA BRUT, BRUT, EXTRA DRY, DRY, VINSANTO» 187,14 ha; «BIANCO DI PITIGLIANO SUPERIORE» 22,26 ha — in tutto 209,4 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -39376,6 +39456,16 @@
         12.3,
         9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1098.95,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «BOLGHERI ROSSO» 497,79 ha; «BOLGHERI ROSSO SUPERIORE» 419,98 ha; «BOLGHERI VERMENTINO» 103,54 ha; «BOLGHERI BIANCO» 38,71 ha; e altre 2 tipologie — in tutto 1098,95 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -39525,7 +39615,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 78,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «BOLGHERI SASSICAIA» 78 ha — in tutto 78 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
       "production": {
         "amount": 1742,
         "quote": "Livorno (1996/97) 1741,56",
@@ -39696,6 +39792,16 @@
         8.1,
         3.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2696.87,
+        "publisher": "regione-lombardia",
+        "quote": "BONARDA DELL'OLTREPO' PAVESE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 2696.87",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -40986,7 +41092,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 24,
+        "publisher": "regione-lombardia",
+        "quote": "BOTTICINO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 24",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
       "production": {
         "amount": 1000,
         "quote": "Brescia (1996/97) 999,6",
@@ -43924,6 +44036,16 @@
         9.4,
         6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2017.09,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «BRUNELLO DI MONTALCINO» 2017,09 ha — in tutto 2017,09 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -44892,6 +45014,16 @@
         8.1,
         3.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 64.21,
+        "publisher": "regione-lombardia",
+        "quote": "BUTTAFUOCO DELL'OLTREPO' PAVESE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 64.21",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -50197,6 +50329,16 @@
         8.1,
         4.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 21.04,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «CANDIA DEI COLLI APUANI VERMENTINO BIANCO» 11,76 ha; «CANDIA DEI COLLI APUANI ROSSO» 3,85 ha; «CANDIA DEI COLLI APUANI BIANCO, SECCO AMABILE» 3,45 ha; «CANDIA DEI COLLI APUANI VERMENTINO NERO» 0,99 ha; e altre 1 tipologie — in tutto 21,04 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -51591,6 +51733,16 @@
         12.8,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1.29,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «CAPALBIO CABERNET SAUVIGNON» 0,5 ha; «CAPALBIO ROSSO, ROSATO E RISERVA» 0,4 ha; «CAPALBIO SANGIOVESE» 0,39 ha — in tutto 1,29 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -51913,6 +52065,16 @@
         8.5,
         4.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 37.9,
+        "publisher": "regione-lombardia",
+        "quote": "CAPRIANO DEL COLLE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 37.9",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -52766,6 +52928,16 @@
         9.1,
         5.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 120.74,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «CARMIGNANO ROSSO» 116,63 ha; «CARMIGNANO VIN SANTO» 2,92 ha; «CARMIGNANO VIN SANTO OCCHIO DI PERNICE» 1,2 ha — in tutto 120,74 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -53983,6 +54155,16 @@
         8.3,
         4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6.69,
+        "publisher": "regione-lombardia",
+        "quote": "CASTEGGIO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 6.69",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -56647,7 +56829,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 7.35,
+        "publisher": "regione-lombardia",
+        "quote": "CELLATICA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 7.35",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
       "production": {
         "amount": 1155,
         "quote": "Brescia (1996/97) 1155,14",
@@ -59802,6 +59990,16 @@
         9.9,
         6.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 13129.1,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «CHIANTI» 9331,23 ha; «CHIANTI SUPERIORE» 1853,46 ha; «CHIANTI COLLI SENESI» 922,15 ha; «CHIANTI RUFINA» 535,95 ha; e altre 5 tipologie — in tutto 13129,1 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -59950,6 +60148,16 @@
         8.7,
         5.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6790.17,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «CHIANTI CLASSICO» 4411,65 ha; «Chianti Classico Castellina» 577,44 ha; «Chianti Classico Gaiole» 362,89 ha; «Chianti Classico Vagliagli» 268,57 ha; e altre 8 tipologie — in tutto 6790,17 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -69473,6 +69681,16 @@
         9.2,
         5.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 5.48,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «COLLI DELL'ETRURIA CENTRALE ROSSO E ROSATO» 4,01 ha; «COLLI DELL'ETRURIA CENTRALE BIANCO» 0,97 ha; «COLLI DELL'ETRURIA CENTRALE VIN SANTO» 0,5 ha — in tutto 5,48 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -69859,6 +70077,16 @@
         8.1,
         4.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 40.9,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «COLLI DELLA TOSCANA CENTRALE ROSSO E ROSATO» 16,26 ha; «COLLI DELLA TOSCANA CENTRALE SANGIOVESE ROSSO, ROSATO E NOVELLO» 7,26 ha; «COLLI DELLA TOSCANA CENTRALE CABERNET SAUVIGNON ROSSO E ROSATO» 3,29 ha; «COLLI DELLA TOSCANA CENTRALE SYRAH ROSSO E ROSATO» 3,18 ha; e altre 8 tipologie — in tutto 40,9 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -71681,6 +71909,16 @@
         7.9,
         3.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 89.9,
+        "publisher": "regione-lombardia",
+        "quote": "COLLINA DEL MILANESE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 89.9",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -72041,6 +72279,16 @@
         10.4,
         6.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 71.18,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «COLLINE LUCCHESI ROSSO, ROSSO RISERVA» 42,54 ha; «COLLINE LUCCHESI MERLOT, MERLOT RISERVA» 13,2 ha; «COLLINE LUCCHESI VERMENTINO» 5,84 ha; «COLLINE LUCCHESI SANGIOVESE, SANGIOVESE RISERVA» 4,23 ha; e altre 4 tipologie — in tutto 71,18 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -78001,6 +78249,16 @@
         8.5,
         5.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 250.25,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «CORTONA SYRAH, SYRAH Riserva» 147,3 ha; «CORTONA SANGIOVESE, SANGIOVESE Riserva» 44,12 ha; «CORTONA MERLOT, MERLOT Riserva» 42,1 ha; «CORTONA CABERNET SAUVIGNON, CABERNET SAUVIGNON Riserva» 13,31 ha; e altre 3 tipologie — in tutto 250,25 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -78636,6 +78894,16 @@
         9.7,
         6.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 769.64,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «COSTA TOSCANA ROSSO» 221,79 ha; «COSTA TOSCANA VERMENTINO» 129,5 ha; «COSTA TOSCANA BIANCO» 64,54 ha; «COSTA TOSCANA SANGIOVESE» 52,03 ha; e altre 40 tipologie — in tutto 769,64 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -88248,6 +88516,16 @@
         8.5,
         4.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 67.49,
+        "publisher": "regione-lombardia",
+        "quote": "CURTEFRANCA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 67.49",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -108232,6 +108510,16 @@
         13.8,
         11.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 69.74,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «ELBA VERMENTINO» 17,78 ha; «ELBA ANSONICA» 15,22 ha; «ELBA BIANCO, BIANCO SPUMANTE» 13,3 ha; «ELBA ROSSO, ROSSO RISERVA» 11,91 ha; e altre 6 tipologie — in tutto 69,74 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -108391,6 +108679,16 @@
         13,
         9.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 11.03,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «ELBA ALEATICO PASSITO» 11,03 ha — in tutto 11,03 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -114928,6 +115226,16 @@
         7.6,
         3.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2536.94,
+        "publisher": "regione-lombardia",
+        "quote": "FRANCIACORTA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 2536.94",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -120649,6 +120957,16 @@
         8.6,
         4.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 35.49,
+        "publisher": "regione-lombardia",
+        "quote": "GARDA COLLI MANTOVANI — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 35.49",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -124104,6 +124422,16 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 7.33,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «GRANCE SENESI SANGIOVESE» 5,15 ha; «GRANCE SENESI CABERNET SAUVIGNON» 0,88 ha; «GRANCE SENESI MERLOT» 0,75 ha; «GRANCE SENESI ROSSO» 0,51 ha; e altre 1 tipologie — in tutto 7,33 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -140831,7 +141159,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 367.4,
+        "publisher": "regione-lombardia",
+        "quote": "LAMBRUSCO MANTOVANO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 367.4",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
       "production": {
         "amount": 18907,
         "quote": "Mantova (1996/97) 18907,0",
@@ -157052,6 +157386,16 @@
         11.7,
         8.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2246.03,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «DOC MAREMMA TOSCANA SANGIOVESE, SANGIOVESE PASSITO» 450,78 ha; «DOC MAREMMA TOSCANA VERMENTINO, VERMENTINO PASSITO, VERMENTINO SPUMANTE, VERMENTINO VENDEMMIA TARDIV» 436,49 ha; «DOC MAREMMA TOSCANA ROSSO, NOVELLO, PASSITO ROSSO» 284,2 ha; «DOC MAREMMA TOSCANA CABERNET SAUVIGNON, CABERNET SAUVIGNON PASSITO» 226,96 ha; e altre 23 tipologie — in tutto 2246,03 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -166271,6 +166615,16 @@
         9.7,
         6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 47.58,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «MONTECARLO ROSSO, ROSSO RISERVA» 21,58 ha; «MONTECARLO BIANCO» 18,52 ha; «MONTECARLO VERMENTINO» 3,4 ha; «MONTECARLO SYRAH» 2,84 ha; e altre 2 tipologie — in tutto 47,58 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -166457,6 +166811,16 @@
         9.1,
         5.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3.37,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «MONTECASTELLI ROSSO E NOVELLO» 1,27 ha; «MONTECASTELLI SANGIOVESE» 0,9 ha; «MONTECASTELLI VERMENTINO» 0,9 ha; «MONTECASTELLI MERLOT» 0,3 ha — in tutto 3,37 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -166821,6 +167185,16 @@
         12.9,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 95.31,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «MONTECUCCO ROSSO, ROSSO RISERVA» 82,46 ha; «MONTECUCCO ROSATO» 6,71 ha; «MONTECUCCO VERMENTINO» 5,4 ha; «MONTECUCCO BIANCO» 0,75 ha — in tutto 95,31 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -166972,6 +167346,16 @@
         12.9,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 180.39,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «Montecucco Sangiovese DOCG» 180,39 ha — in tutto 180,39 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -167666,6 +168050,16 @@
         8.5,
         4.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 24.49,
+        "publisher": "regione-lombardia",
+        "quote": "MONTENETTO DI BRESCIA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 24.49",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -167980,6 +168374,16 @@
         12.9,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 20.28,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «MONTEREGIO DI MASSA MARITTIMA SANGIOVESE» 9,96 ha; «MONTEREGIO DI MASSA MARITTIMA ROSSO, ROSATO E NOVELLO» 8,92 ha; «MONTEREGIO DI MASSA MARITTIMA BIANCO» 0,91 ha; «MONTEREGIO DI MASSA MARITTIMA VERMENTINO» 0,29 ha; e altre 1 tipologie — in tutto 20,28 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -168338,6 +168742,16 @@
         11.9,
         8.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 37.5,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «MONTESCUDAIO ROSSO» 24,08 ha; «MONTESCUDAIO MERLOT» 4,8 ha; «MONTESCUDAIO CABERNET SAUVIGNON» 3,51 ha; «MONTESCUDAIO BIANCO» 3,47 ha; e altre 2 tipologie — in tutto 37,5 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -170053,6 +170467,16 @@
         12.9,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1188.19,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «MORELLINO DI SCANSANO» 1188,19 ha — in tutto 1188,19 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -170508,6 +170932,16 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 11.92,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «MOSCADELLO DI MONTALCINO» 6,47 ha; «MOSCADELLO DI MONTALCINO VENDEMMIA TARDIVA» 5,44 ha — in tutto 11,92 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -183924,6 +184358,16 @@
         8.2,
         3.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2928.75,
+        "publisher": "regione-lombardia",
+        "quote": "OLTREPO' PAVESE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 2928.75",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -184080,6 +184524,16 @@
         7.7,
         3.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 69.1,
+        "publisher": "regione-lombardia",
+        "quote": "OLTREPO' PAVESE PINOT GRIGIO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 69.1",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -184239,6 +184693,16 @@
         8.1,
         3.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 169.44,
+        "publisher": "regione-lombardia",
+        "quote": "OLTREPO' PAVESE METODO CLASSICO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 169.44",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -184526,6 +184990,16 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 118.98,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «ORCIA SANGIOVESE, SANGIOVESE RISERVA» 58,72 ha; «ORCIA, ORCIA RISERVA» 54,29 ha; «ORCIA BIANCO» 3,47 ha; «ORCIA ROSATO» 1,66 ha; e altre 1 tipologie — in tutto 118,98 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -188862,6 +189336,16 @@
         12.9,
         9.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 19.57,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «PARRINA ROSSO E ROSATO» 9,93 ha; «PARRINA CABERNET SAUVIGNON» 2,94 ha; «PARRINA BIANCO» 2,15 ha; «PARRINA SANGIOVESE» 2 ha; e altre 4 tipologie — in tutto 19,57 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -195970,6 +196454,16 @@
         8.1,
         3.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 125.77,
+        "publisher": "regione-lombardia",
+        "quote": "PINOT NERO DELL'OLTREPO' PAVESE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 125.77",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -197941,6 +198435,16 @@
         7.4,
         3.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 67.41,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «POMINO BIANCO» 49,21 ha; «POMINO SPUMANTE BIANCO E ROSATO» 8,75 ha; «POMINO PINOT NERO» 6,8 ha; «POMINO ROSSO» 1,91 ha; e altre 1 tipologie — in tutto 67,41 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -203111,6 +203615,16 @@
         8.6,
         4.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 316.63,
+        "publisher": "regione-lombardia",
+        "quote": "PROVINCIA DI MANTOVA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 316.63",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -204006,6 +204520,16 @@
         8.1,
         3.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 4814.48,
+        "publisher": "regione-lombardia",
+        "quote": "PROVINCIA DI PAVIA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 4814.48",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -206677,6 +207201,16 @@
         8.7,
         4.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 46.24,
+        "publisher": "regione-lombardia",
+        "quote": "QUISTELLO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 46.24",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -216642,6 +217176,16 @@
         7.5,
         3.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 5.16,
+        "publisher": "regione-lombardia",
+        "quote": "RONCHI VARESINI — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 5.16",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -216841,6 +217385,16 @@
         8.5,
         4.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 12.2,
+        "publisher": "regione-lombardia",
+        "quote": "RONCHI DI BRESCIA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 12.2",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -218366,7 +218920,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 747.12,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «ROSSO DI MONTALCINO» 747,12 ha — in tutto 747,12 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
       "production": {
         "amount": 970,
         "quote": "Siena (1996/97) 970,11",
@@ -218524,7 +219084,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 320.73,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «ROSSO DI MONTEPULCIANO» 320,73 ha — in tutto 320,73 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
       "production": {
         "amount": 2941,
         "quote": "Siena (1996/97) 2941,12",
@@ -222534,6 +223100,16 @@
         8.5,
         4.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2.89,
+        "publisher": "regione-lombardia",
+        "quote": "SABBIONETA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 2.89",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -228377,6 +228953,16 @@
         8.2,
         3.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 62.57,
+        "publisher": "regione-lombardia",
+        "quote": "SAN COLOMBANO AL LAMBRO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 62.57",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -228557,6 +229143,16 @@
         9.1,
         5.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 27,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «SAN GIMIGNANO ROSSO, ROSSO RISERVA» 7,89 ha; «SAN GIMIGNANO SANGIOVESE, SANGIOVESE RISERVA» 5,42 ha; «SAN GIMIGNANO MERLOT, MERLOT RISERVA» 4,1 ha; «SAN GIMIGNANO PINOT NERO, PINOT NERO RISERVA» 3,09 ha; e altre 4 tipologie — in tutto 27 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -229571,6 +230167,16 @@
         8.1,
         3.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 255.12,
+        "publisher": "regione-lombardia",
+        "quote": "SANGUE DI GIUDA DELL'OLTREPO' PAVESE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 255.12",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -230208,6 +230814,16 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 98.38,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «SANT'ANTIMO ROSSO E NOVELLO» 70,47 ha; «SANT'ANTIMO CABERNET SAUVIGNON» 10,9 ha; «SANT'ANTIMO PINOT GRIGIO» 7,17 ha; «SANT'ANTIMO CHARDONNAY» 3,29 ha; e altre 3 tipologie — in tutto 98,38 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -232445,6 +233061,16 @@
         7.1,
         3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 12.81,
+        "publisher": "regione-lombardia",
+        "quote": "SCANZO O MOSCATO DI SCANZO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 12.81",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -234282,6 +234908,16 @@
         7.4,
         3.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 18.62,
+        "publisher": "regione-lombardia",
+        "quote": "SEBINO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 18.62",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -235230,6 +235866,16 @@
         -12.7,
         -18.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 99.27,
+        "publisher": "regione-lombardia",
+        "quote": "SFORZATO DI VALTELLINA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 99.27",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -239746,6 +240392,16 @@
         10.4,
         7.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 164.76,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «SOVANA ROSSO, ROSATO E RISERVA» 84,02 ha; «SOVANA MERLOT SUPERIORE» 31,08 ha; «SOVANA SANGIOVESE SUPERIORE» 23,76 ha; «SOVANA CABERNET SAUVIGNON SUPERIORE» 12,95 ha; e altre 3 tipologie — in tutto 164,76 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -242270,6 +242926,16 @@
         12,
         8.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 55.88,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «Suvereto Merlot, Suvereto Merlot riserva» 20,04 ha; «Suvereto Cabernet Sauvignon, Suvereto Cabernet Sauvignon riserva» 12,69 ha; «Suvereto Sangiovese, Suvereto Sangiovese riserva» 8,61 ha; «Suvereto Syrah, Syrah riserva» 6,06 ha; e altre 2 tipologie — in tutto 55,88 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -248708,6 +249374,16 @@
         13,
         9.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 4.96,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «TERRATICO DI BIBBONA ROSSO E ROSATO» 2,1 ha; «TERRATICO DI BIBBONA VERMENTINO» 1,74 ha; «TERRATICO DI BIBBONA BIANCO» 0,81 ha; «TERRATICO DI BIBBONA MERLOT» 0,32 ha — in tutto 4,96 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -249967,6 +250643,16 @@
         7.3,
         3.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 30.33,
+        "publisher": "regione-lombardia",
+        "quote": "TERRE LARIANE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 30.33",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -250739,6 +251425,16 @@
         7.1,
         3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 12.72,
+        "publisher": "regione-lombardia",
+        "quote": "COLLEONI — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 12.72",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -251366,6 +252062,16 @@
         10.1,
         6.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 17.39,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «TERRE DI CASOLE SANGIOVESE» 11,68 ha; «TERRE DI CASOLE ROSSO» 5,71 ha — in tutto 17,39 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -251966,6 +252672,16 @@
         9.8,
         6.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 85.3,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «Terre di Pisa rosso» 46,71 ha; «Terre di Pisa Vermentino» 15,51 ha; «Terre di Pisa Sangiovese» 12,26 ha; «Terre di Pisa Rosato» 6,23 ha; e altre 1 tipologie — in tutto 85,3 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -255777,6 +256493,16 @@
         9.5,
         6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 14653.9,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «TOSCANO O TOSCANA ROSSO» 4608,88 ha; «TOSCANO O TOSCANA SANGIOVESE» 2299,21 ha; «TOSCANO O TOSCANA BIANCO» 1362,93 ha; «TOSCANO O TOSCANA MERLOT» 1176,57 ha; e altre 77 tipologie — in tutto 14653,9 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -261687,6 +262413,16 @@
         8.8,
         5.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 67.56,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «Valdarno di Sopra Sangiovese, riserva, rosato» 20,39 ha; «Valdarno di Sopra Rosso, Rosso riserva, vendemmia tardiva» 16,41 ha; «Valdarno di Sopra Merlot, Merlot riserva» 16,2 ha; «VALDARNO DI SOPRA TREBBIANO, TREBBIANO RISERVA» 5,53 ha; e altre 12 tipologie — in tutto 67,56 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -262104,6 +262840,16 @@
         11.5,
         8.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 14.15,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «VAL DI CORNIA SANGIOVESE» 5,08 ha; «VAL DI CORNIA MERLOT» 4,24 ha; «VAL DI CORNIA CABERNET SAUVIGNON» 2,62 ha; «VAL DI CORNIA ANSONICA PASSITO» 0,53 ha; e altre 4 tipologie — in tutto 14,15 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -262262,6 +263008,16 @@
         9.7,
         6.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1.2,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «Val di Cornia Rosso» 1,2 ha — in tutto 1,2 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -262452,6 +263208,16 @@
         9.9,
         6.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6.47,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «VAL DI MAGRA ROSSO» 2,52 ha; «VAL DI MAGRA BIANCO» 1,49 ha; «VAL DI MAGRA POLLERA NERA ROSSO E ROSATO» 1,2 ha; «VAL DI MAGRA VERMENTINO» 0,86 ha; e altre 1 tipologie — in tutto 6,47 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -262878,6 +263644,16 @@
         5.3,
         1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 174.72,
+        "publisher": "regione-lombardia",
+        "quote": "VALCALEPIO — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 174.72",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -263044,6 +263820,16 @@
         1.4,
         -2.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 24.66,
+        "publisher": "regione-lombardia",
+        "quote": "VALCAMONICA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 24.66",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -264417,6 +265203,16 @@
         9.2,
         5.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 52.25,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «BIANCO O BIANCO VERGINE VALDICHIANA, SPUMANTE, FRIZZANTE» 26,52 ha; «VALDICHIANA VIN SANTO» 11,39 ha; «VALDICHIANA ROSSO E ROSATO» 9,93 ha; «VALDICHIANA SANGIOVESE» 2,85 ha; e altre 1 tipologie — in tutto 52,25 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -269733,6 +270529,16 @@
         -12.7,
         -18.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 343.86,
+        "publisher": "regione-lombardia",
+        "quote": "VALTELLINA SUPERIORE — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 343.86",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -269882,6 +270688,16 @@
         -12.7,
         -18.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 87.11,
+        "publisher": "regione-lombardia",
+        "quote": "VALTELLINA ROSSO O ROSSO DI VALTELLINA — SUPERFICIE_RIVENDICATA_VENDEMMIA_2013_HA: 87.11",
+        "sourceUrl": "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -274277,6 +275093,16 @@
         9.1,
         5.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 715.27,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «VERNACCIA DI SAN GIMIGNANO» 715,27 ha — in tutto 715,27 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -277499,6 +278325,16 @@
         10,
         6.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 114.13,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «VIN SANTO DEL CHIANTI» 87,79 ha; «VIN SANTO DEL CHIANTI OCCHIO DI PERNICE» 14,81 ha; «VIN SANTO DEL CHIANTI MONTALBANO» 3,46 ha; «VIN SANTO DEL CHIANTI COLLI FIORENTINI» 3,34 ha; e altre 4 tipologie — in tutto 114,13 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -277655,7 +278491,13 @@
       ]
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 51.07,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «VIN SANTO DEL CHIANTI CLASSICO» 40,76 ha; «VIN SANTO DEL CHIANTI CLASSICO OCCHIO DI PERNICE» 10,31 ha — in tutto 51,07 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
       "production": {
         "amount": 1085,
         "quote": "Firenze (1996/97) 609,55; Siena (1996/97) 475,58",
@@ -277983,6 +278825,16 @@
         9.7,
         6.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 10.24,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «VIN SANTO MONTEPULCIANO» 7,44 ha; «VIN SANTO MONTEPULCIANO OCCHIO DI PERNICE» 2,8 ha — in tutto 10,24 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
@@ -279319,6 +280171,16 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1192.09,
+        "publisher": "artea",
+        "quote": "Superficie dichiarata alla raccolta uva 2025: «VINO NOBILE DI MONTEPULCIANO» 1042,94 ha; «Nobile Pieve SANT'ILARIO» 33,2 ha; «Nobile Pieve VALIANO» 29,74 ha; «Nobile Pieve CERLIANA» 14,72 ha; e altre 9 tipologie — in tutto 1192,09 ha",
+        "sourceUrl": "https://dati.toscana.it/dataset/artea-raccolta-uva-dal-2004",
+        "year": "2025"
+      },
+      "production": null
     }
   },
   {
