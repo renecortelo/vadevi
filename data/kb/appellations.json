@@ -341653,6 +341653,16 @@
         8,
         4.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1,
+        "publisher": "federal-register",
+        "quote": "It contains approximately 2,160 acres, of which approximately 2.5 acres are planted to vineyards.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-1994-05-19/html/94-12201.htm",
+        "year": "1994"
+      },
+      "production": null
     }
   },
   {
@@ -342170,6 +342180,16 @@
         13.6,
         10.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 5.7,
+        "publisher": "federal-register",
+        "quote": "Approximately 14 of these acres are planted with premium wine producing vineyards.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-1996-06-13/html/96-14857.htm",
+        "year": "1996"
+      },
+      "production": null
     }
   },
   {
@@ -342560,6 +342580,16 @@
         8.4,
         4.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 20.2,
+        "publisher": "federal-register",
+        "quote": "With the addition of these two vineyards, the viticultural area has three growers and approximately 50 acres planted to grapes.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-1998-03-11/html/98-6005.htm",
+        "year": "1998"
+      },
+      "production": null
     }
   },
   {
@@ -342978,6 +343008,16 @@
         9.6,
         7.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 30.4,
+        "publisher": "federal-register",
+        "quote": "There are approximately 75 acres of grapes currently growing within the boundaries of the viticultural area.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-1997-10-27/html/97-28280.htm",
+        "year": "1997"
+      },
+      "production": null
     }
   },
   {
@@ -344700,6 +344740,16 @@
         9.3,
         4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1011.7,
+        "publisher": "federal-register",
+        "quote": "Over 2,500 acres of vineyards are currently planted in the viticultural area and the area presently boasts thirty-eight vineyard and/or winery businesses.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2001-05-15/html/01-12161.htm",
+        "year": "2001"
+      },
+      "production": null
     }
   },
   {
@@ -345350,6 +345400,16 @@
         9.2,
         6.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2.4,
+        "publisher": "federal-register",
+        "quote": "Currently, six acres of commercial vineyards are planted within the proposed area, with the potential for additional plantings.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2005-10-14/html/05-20546.htm",
+        "year": "2005"
+      },
+      "production": null
     }
   },
   {
@@ -346574,6 +346634,16 @@
         7.3,
         3.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 12.1,
+        "publisher": "federal-register",
+        "quote": "There are currently four vineyards, encompassing 30 acres, producing wine grapes within the viticultural area.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2005-02-28/html/05-3714.htm",
+        "year": "2005"
+      },
+      "production": null
     }
   },
   {
@@ -346679,6 +346749,16 @@
         12.5,
         7.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 22.3,
+        "publisher": "federal-register",
+        "quote": "The proposed viticultural area contains four wineries and a number of small vineyards with approximately 55 acres planted to vines.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2005-12-07/html/05-23683.htm",
+        "year": "2005"
+      },
+      "production": null
     }
   },
   {
@@ -346932,6 +347012,16 @@
         10.1,
         6.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 0.8,
+        "publisher": "federal-register",
+        "quote": "This 38,000-acre proposed viticultural area has 2 acres of planted grape vines, with the potential for more vineyard development in the valley and on the surrounding hillsides.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-02-16/html/06-1457.htm",
+        "year": "2006"
+      },
+      "production": null
     }
   },
   {
@@ -347435,6 +347525,16 @@
         14.1,
         10.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 18.2,
+        "publisher": "federal-register",
+        "quote": "The proposed 89,000-acre Ramona Valley viticultural area contains 17 vineyards currently cultivating an estimated 45 acres of wine grapes.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2005-12-07/html/05-23684.htm",
+        "year": "2005"
+      },
+      "production": null
     }
   },
   {
@@ -348960,6 +349060,16 @@
         12,
         8.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2832.8,
+        "publisher": "federal-register",
+        "quote": "Located in the northeastern portion of the existing Lodi viticultural area, approximately 7,000 acres within the 78,800-acre proposed Sloughhouse viticultural area are currently planted to grapes, according to the petition.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-07-17/html/E6-11079.htm",
+        "year": "2006"
+      },
+      "production": null
     }
   },
   {
@@ -349230,6 +349340,16 @@
         13.4,
         10.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 28.3,
+        "publisher": "federal-register",
+        "quote": "Wine grape production within the proposed Saddle Rock-Malibu viticultural area began in 1997, according to the petition, and as of February 2005 the area had 70 vineyard acres in commercial production.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-07-17/html/E6-11076.htm",
+        "year": "2006"
+      },
+      "production": null
     }
   },
   {
@@ -349355,6 +349475,16 @@
         12.6,
         9.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 406.7,
+        "publisher": "federal-register",
+        "quote": "Located approximately 55 miles east-southeast of San Francisco, the proposed Tracy Hills viticultural area currently encompasses 1,005 acres of vineyards.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-11-08/html/E6-18894.htm",
+        "year": "2006"
+      },
+      "production": null
     }
   },
   {
@@ -349597,6 +349727,16 @@
         8.8,
         2.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 64.7,
+        "publisher": "federal-register",
+        "quote": "Currently, there are eight wineries and 51 vineyards with approximately 160 acres planted to wine varietals within the proposed Shawnee Hills viticultural area, the petition states, citing \"1999 Grape Growers and Vintner's Survey,\" in \"Illinois Grape Growers and Vintners Association Conference Proceedings\" (2000).",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-11-27/html/E6-20023.htm",
+        "year": "2006"
+      },
+      "production": null
     }
   },
   {
@@ -349711,6 +349851,16 @@
         9.2,
         3.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 303.5,
+        "publisher": "federal-register",
+        "quote": "According to the petitioner, the area currently includes thirteen wineries, several vineyards, and approximately 750 acres planted to vines.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2007-02-09/html/07-575.htm",
+        "year": "2007"
+      },
+      "production": null
     }
   },
   {
@@ -350209,6 +350359,16 @@
         9.3,
         4.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 30.4,
+        "publisher": "federal-register",
+        "quote": "Three wineries and 75 acres of vineyards are located within the proposed Swan Creek viticulture area.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2008-04-25/html/E8-9106.htm",
+        "year": "2008"
+      },
+      "production": null
     }
   },
   {
@@ -350355,6 +350515,16 @@
         11,
         7.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 8.1,
+        "publisher": "federal-register",
+        "quote": "The area currently includes 20 acres of vineyards, and more acreage for wine grape growing is under development.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2008-10-29/html/E8-25747.htm",
+        "year": "2008"
+      },
+      "production": null
     }
   },
   {
@@ -350578,6 +350748,16 @@
         10.6,
         5.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 24.3,
+        "publisher": "federal-register",
+        "quote": "According to the petitioner, the proposed viticultural area encompasses approximately 868 square miles and includes 60 acres of vineyards and 6 wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2009-03-30/html/E9-7035.htm",
+        "year": "2009"
+      },
+      "production": null
     }
   },
   {
@@ -351023,6 +351203,16 @@
         12.1,
         8.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 38.8,
+        "publisher": "federal-register",
+        "quote": "The proposed viticultural area covers 9.7 square miles and contains 96 acres of commercial vineyards.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2010-07-22/html/2010-17960.htm",
+        "year": "2010"
+      },
+      "production": null
     }
   },
   {
@@ -351128,6 +351318,16 @@
         12.7,
         8.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 51.8,
+        "publisher": "federal-register",
+        "quote": "In 2007, the proposed viticultural area included 128 planted acres in 16 commercial vineyards, and 2 bonded wineries, according to a listing in the petition exhibits.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2011-05-24/html/2011-12823.htm",
+        "year": "2011"
+      },
+      "production": null
     }
   },
   {
@@ -351237,6 +351437,16 @@
         9.3,
         6.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 93.1,
+        "publisher": "federal-register",
+        "quote": "The proposed area currently has 230 acres of commercial vineyards, the petition states, with another 150 acres under development.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2011-10-27/html/2011-27813.htm",
+        "year": "2011"
+      },
+      "production": null
     }
   },
   {
@@ -351572,6 +351782,16 @@
         12.6,
         9.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 550.4,
+        "publisher": "federal-register",
+        "quote": "The proposed viticultural area contains 11,075 acres, 1,360 acres of which are in 26 commercial vineyards, according to the petition.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2011-12-14/html/2011-32018.htm",
+        "year": "2011"
+      },
+      "production": null
     }
   },
   {
@@ -351677,6 +351897,16 @@
         3.1,
         -4.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 129.5,
+        "publisher": "federal-register",
+        "quote": "The proposed viticultural area contains approximately 3,800 square miles, with approximately 320 acres of vineyards in at least 14 commercially-producing vineyards and wineries, and an additional 70 acres projected to be planted within the next two years.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2012-03-22/html/2012-6927.htm",
+        "year": "2012"
+      },
+      "production": null
     }
   },
   {
@@ -351782,6 +352012,16 @@
         8.3,
         2.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 101.6,
+        "publisher": "federal-register",
+        "quote": "With the petitioner's modified boundary line, the proposed Middleburg Virginia viticultural area contains 251 acres of commercial grape growing in 10 vineyards and 14 wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2012-09-13/html/2012-22596.htm",
+        "year": "2012"
+      },
+      "production": null
     }
   },
   {
@@ -351887,6 +352127,16 @@
         9.2,
         5.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 25.3,
+        "publisher": "federal-register",
+        "quote": "The boundary modification adds 143 acres to the Inwood Valley viticultural area, for a total of 28,441 acres, with approximately 62.5 acres dedicated to 5 commercially-producing vineyards.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2012-09-13/html/2012-22595.htm",
+        "year": "2012"
+      },
+      "production": null
     }
   },
   {
@@ -352130,6 +352380,16 @@
         7.9,
         1.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 80.9,
+        "publisher": "federal-register",
+        "quote": "The proposed Indiana Uplands viticultural area contains 19 vineyards with approximately 200 acres under cultivation, 2 planned vineyards of 15 to 20 acres each, and 17 wineries; the existing and planned vineyards are geographically distributed throughout the proposed viticultural area, according to a map submitted with the petition.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2013-02-05/html/2013-02454.htm",
+        "year": "2013"
+      },
+      "production": null
     }
   },
   {
@@ -353153,6 +353413,16 @@
         8,
         4.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 80.9,
+        "publisher": "federal-register",
+        "quote": "Eleven commercial vineyards, covering approximately 200 acres, are distributed across the proposed AVA.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2014-08-01/html/2014-18265.htm",
+        "year": "2014"
+      },
+      "production": null
     }
   },
   {
@@ -354870,6 +355140,16 @@
         11.3,
         8.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 202.3,
+        "publisher": "federal-register",
+        "quote": "The proposed AVA covers approximately 38,000 acres and has approximately 35 commercially-producing vineyards covering a total of 500 acres.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2015-02-18/html/2015-03371.htm",
+        "year": "2015"
+      },
+      "production": null
     }
   },
   {
@@ -354975,6 +355255,16 @@
         10.1,
         6.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3,
+        "publisher": "federal-register",
+        "quote": "The proposed Squaw Valley-Miramonte AVA contains approximately 44,690 acres and has 3 bonded wineries and 5 commercially producing vineyards, covering a total of 7.5 acres, distributed across the proposed AVA.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2015-08-07/html/2015-19454.htm",
+        "year": "2015"
+      },
+      "production": null
     }
   },
   {
@@ -355798,6 +356088,16 @@
         3.7,
         -2.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6.3,
+        "publisher": "federal-register",
+        "quote": "There are 11 commercial vineyards covering a total of approximately 15.47 acres within the proposed AVA, as well as 6 wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2016-08-22/html/2016-19992.htm",
+        "year": "2016"
+      },
+      "production": null
     }
   },
   {
@@ -355909,6 +356209,16 @@
         12.1,
         7.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 183.7,
+        "publisher": "federal-register",
+        "quote": "The proposed AVA contains approximately 526,000 acres, and there are 21 commercially-producing vineyards covering a total of approximately 454 acres distributed throughout the proposed AVA, along with 18 wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2016-09-12/html/2016-21849.htm",
+        "year": "2016"
+      },
+      "production": null
     }
   },
   {
@@ -356014,6 +356324,16 @@
         4,
         -0.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 28.7,
+        "publisher": "federal-register",
+        "quote": "There are 21 commercially-producing vineyards covering a total of approximately 71 acres distributed throughout the proposed AVA, along with 10 wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2016-10-27/html/2016-25970.htm",
+        "year": "2016"
+      },
+      "production": null
     }
   },
   {
@@ -356370,6 +356690,16 @@
         10,
         5.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 44.5,
+        "publisher": "federal-register",
+        "quote": "The petition notes that, at present, there are 7 wineries and 8 commercial vineyards covering a total of approximately 110 acres distributed throughout the proposed AVA.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2018-06-29/html/2018-14035.htm",
+        "year": "2018"
+      },
+      "production": null
     }
   },
   {
@@ -356475,6 +356805,16 @@
         4.6,
         -1.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 27.3,
+        "publisher": "federal-register",
+        "quote": "There are 19 commercial vineyards with attached wineries covering approximately 67.5 acres within the proposed AVA.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2018-12-06/html/2018-26320.htm",
+        "year": "2018"
+      },
+      "production": null
     }
   },
   {
@@ -357435,6 +357775,16 @@
         5.2,
         0.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 21.9,
+        "publisher": "federal-register",
+        "quote": "Within the 815-acre proposed AVA, there are currently two producing commercial vineyards, Candy Mountain Vineyard and Kitzke Cellars, which cover a total of approximately 54 acres.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2020-09-25/html/2020-18741.htm",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {
@@ -357561,6 +357911,16 @@
         8.1,
         4.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 10.1,
+        "publisher": "federal-register",
+        "quote": "The proposed Tehachapi Mountains AVA contains approximately 58,000 acres and has 6 commercially-producing vineyards covering approximately 25 acres, as well as 1 winery.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2020-11-19/html/2020-25301.htm",
+        "year": "2020"
+      },
+      "production": null
     }
   },
   {

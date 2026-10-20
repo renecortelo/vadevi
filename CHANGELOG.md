@@ -23,6 +23,14 @@ has the reasons.
 
 ### The library
 
+- **Vineyard areas for 36 American Viticultural Areas** from the Federal
+  Register rule that established each one (govinfo.gov, US federal works),
+  read by hand: only the acres planted within the whole AVA count, not land
+  «plantable to vines», a historical figure or one grower's vineyard. Shown
+  with the rule's year and its sentence (`pnpm kb:fetch-ava-rules`).
+- **The data score says why a gap is there**: beside a field, how many of its
+  gaps are a licence we declined (Chile's, non-commercial) or data awaiting a
+  publisher's permission (IVV, VIVC); the score itself is unchanged.
 - **A small aroma ring on the grape card**: the grape's aromas by family,
   each as large as the aromas of it the sources name, in the wheel's colours,
   with the families and their counts beside it and the way to the whole

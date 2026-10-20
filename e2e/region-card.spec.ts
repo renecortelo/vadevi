@@ -64,6 +64,14 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     timeout: 15_000,
   });
   await expect(page.locator(".region-glance li")).toHaveCount(3);
+  // An American AVA: its vineyard acres from the rule that established it,
+  // 1,005 acres shown as about 406.7 ha, converted from acres.
+  await page.goto("/library/regions/us-tracy-hills");
+  await expect(page.locator("#region-glance ~ .section-help")).toContainText(
+    "Federal Register de EE. UU., la norma que creó la AVA (2006)",
+    { timeout: 15_000 },
+  );
+  await expect(page.locator(".region-glance")).toContainText("≈ 406,7 ha");
   await page.goto(`/library/regions/${rioja.id}`);
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.

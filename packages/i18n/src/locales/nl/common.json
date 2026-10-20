@@ -499,7 +499,8 @@
       "noWinesInColour": "Je hebt nog geen wijn in deze kleur geproefd.",
       "byFamily": "Per familie",
       "seeWheel": "Bekijk het aromawiel"
-    }
+    },
+    "glanceSourceFederalRegister": "Amerikaanse Federal Register, de regel die de AVA instelde ({{campaign}})"
   },
   "space": {
     "switchLabel": "Actieve Ruimte",

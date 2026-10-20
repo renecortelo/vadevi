@@ -499,7 +499,8 @@
       "noWinesInColour": "Non hai ancora degustato un vino di questo colore.",
       "byFamily": "Per famiglia",
       "seeWheel": "Vedi la ruota degli aromi"
-    }
+    },
+    "glanceSourceFederalRegister": "Federal Register degli USA, la norma che ha istituito l’AVA ({{campaign}})"
   },
   "space": {
     "switchLabel": "Spazio attivo",

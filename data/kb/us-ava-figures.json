@@ -1,0 +1,293 @@
+{
+  "about": "Vineyard acres, as the Federal Register rule that established each American Viticultural Area states them (the petition's count when the rule was written), for AVAs with no area from Wikipedia. Read by hand from each rule, fetched from govinfo.gov by scripts/kb/fetch-ava-rules.ts: only a sentence giving the area planted within the AVA as a whole counts, not land 'plantable to vines', a historical figure, one grower's vineyard, or a figure for several AVAs together. Rules are works of the US federal government, in the public domain in the United States. The build converts acres to hectares.",
+  "regions": {
+    "us-seiad-valley": {
+      "acres": 2.5,
+      "name": "Seiad Valley",
+      "quote": "It contains approximately 2,160 acres, of which approximately 2.5 acres are planted to vineyards.",
+      "section": "9.148",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-1994-05-19/html/94-12201.htm",
+      "year": "1994"
+    },
+    "us-malibu-newton-canyon": {
+      "acres": 14,
+      "name": "Malibu-Newton Canyon",
+      "quote": "Approximately 14 of these acres are planted with premium wine producing vineyards.",
+      "section": "9.152",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-1996-06-13/html/96-14857.htm",
+      "year": "1996"
+    },
+    "us-texas-davis-mountains": {
+      "acres": 50,
+      "name": "Texas Davis Mountains",
+      "quote": "With the addition of these two vineyards, the viticultural area has three growers and approximately 50 acres planted to grapes.",
+      "section": "9.155",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-1998-03-11/html/98-6005.htm",
+      "year": "1998"
+    },
+    "us-mendocino-ridge": {
+      "acres": 75,
+      "name": "Mendocino Ridge",
+      "quote": "There are approximately 75 acres of grapes currently growing within the boundaries of the viticultural area.",
+      "section": "9.158",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-1997-10-27/html/97-28280.htm",
+      "year": "1997"
+    },
+    "us-long-island": {
+      "acres": 2500,
+      "name": "Long Island",
+      "quote": "Over 2,500 acres of vineyards are currently planted in the viticultural area and the area presently boasts thirty-eight vineyard and/or winery businesses.",
+      "section": "9.170",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2001-05-15/html/01-12161.htm",
+      "year": "2001"
+    },
+    "us-dos-rios": {
+      "acres": 6,
+      "name": "Dos Rios",
+      "quote": "Currently, six acres of commercial vineyards are planted within the proposed area, with the potential for additional plantings.",
+      "section": "9.175",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2005-10-14/html/05-20546.htm",
+      "year": "2005"
+    },
+    "us-trinity-lakes": {
+      "acres": 30,
+      "name": "Trinity Lakes",
+      "quote": "There are currently four vineyards, encompassing 30 acres, producing wine grapes within the viticultural area.",
+      "section": "9.184",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2005-02-28/html/05-3714.htm",
+      "year": "2005"
+    },
+    "us-texoma": {
+      "acres": 55,
+      "name": "Texoma",
+      "quote": "The proposed viticultural area contains four wineries and a number of small vineyards with approximately 55 acres planted to vines.",
+      "section": "9.185",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2005-12-07/html/05-23683.htm",
+      "year": "2005"
+    },
+    "us-covelo": {
+      "acres": 2,
+      "name": "Covelo",
+      "quote": "This 38,000-acre proposed viticultural area has 2 acres of planted grape vines, with the potential for more vineyard development in the valley and on the surrounding hillsides.",
+      "section": "9.187",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-02-16/html/06-1457.htm",
+      "year": "2006"
+    },
+    "us-ramona-valley": {
+      "acres": 45,
+      "name": "Ramona Valley",
+      "quote": "The proposed 89,000-acre Ramona Valley viticultural area contains 17 vineyards currently cultivating an estimated 45 acres of wine grapes.",
+      "section": "9.191",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2005-12-07/html/05-23684.htm",
+      "year": "2005"
+    },
+    "us-sloughhouse": {
+      "acres": 7000,
+      "name": "Sloughhouse",
+      "quote": "Located in the northeastern portion of the existing Lodi viticultural area, approximately 7,000 acres within the 78,800-acre proposed Sloughhouse viticultural area are currently planted to grapes, according to the petition.",
+      "section": "9.201",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-07-17/html/E6-11079.htm",
+      "year": "2006"
+    },
+    "us-saddle-rock-malibu": {
+      "acres": 70,
+      "name": "Saddle Rock-Malibu",
+      "quote": "Wine grape production within the proposed Saddle Rock-Malibu viticultural area began in 1997, according to the petition, and as of February 2005 the area had 70 vineyard acres in commercial production.",
+      "section": "9.203",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-07-17/html/E6-11076.htm",
+      "year": "2006"
+    },
+    "us-tracy-hills": {
+      "acres": 1005,
+      "name": "Tracy Hills",
+      "quote": "Located approximately 55 miles east-southeast of San Francisco, the proposed Tracy Hills viticultural area currently encompasses 1,005 acres of vineyards.",
+      "section": "9.204",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-11-08/html/E6-18894.htm",
+      "year": "2006"
+    },
+    "us-shawnee-hills": {
+      "acres": 160,
+      "name": "Shawnee Hills",
+      "quote": "Currently, there are eight wineries and 51 vineyards with approximately 160 acres planted to wine varietals within the proposed Shawnee Hills viticultural area, the petition states, citing \"1999 Grape Growers and Vintner's Survey,\" in \"Illinois Grape Growers and Vintners Association Conference Proceedings\" (2000).",
+      "section": "9.206",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2006-11-27/html/E6-20023.htm",
+      "year": "2006"
+    },
+    "us-outer-coastal-plain": {
+      "acres": 750,
+      "name": "Outer Coastal Plain",
+      "quote": "According to the petitioner, the area currently includes thirteen wineries, several vineyards, and approximately 750 acres planted to vines.",
+      "section": "9.207",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2007-02-09/html/07-575.htm",
+      "year": "2007"
+    },
+    "us-swan-creek": {
+      "acres": 75,
+      "name": "Swan Creek",
+      "quote": "Three wineries and 75 acres of vineyards are located within the proposed Swan Creek viticulture area.",
+      "section": "9.211",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2008-04-25/html/E8-9106.htm",
+      "year": "2008"
+    },
+    "us-leona-valley": {
+      "acres": 20,
+      "name": "Leona Valley",
+      "quote": "The area currently includes 20 acres of vineyards, and more acreage for wine grape growing is under development.",
+      "section": "9.212",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2008-10-29/html/E8-25747.htm",
+      "year": "2008"
+    },
+    "us-haw-river-valley": {
+      "acres": 60,
+      "name": "Haw River Valley",
+      "quote": "According to the petitioner, the proposed viticultural area encompasses approximately 868 square miles and includes 60 acres of vineyards and 6 wineries.",
+      "section": "9.214",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2009-03-30/html/E9-7035.htm",
+      "year": "2009"
+    },
+    "us-sierra-pelona-valley": {
+      "acres": 96,
+      "name": "Sierra Pelona Valley",
+      "quote": "The proposed viticultural area covers 9.7 square miles and contains 96 acres of commercial vineyards.",
+      "section": "9.218",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2010-07-22/html/2010-17960.htm",
+      "year": "2010"
+    },
+    "us-antelope-valley-of-the-california-high-desert": {
+      "acres": 128,
+      "name": "Antelope Valley of the California High Desert",
+      "quote": "In 2007, the proposed viticultural area included 128 planted acres in 16 commercial vineyards, and 2 bonded wineries, according to a listing in the petition exhibits.",
+      "section": "9.219",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2011-05-24/html/2011-12823.htm",
+      "year": "2011"
+    },
+    "us-pine-mountain-cloverdale-peak": {
+      "acres": 230,
+      "name": "Pine Mountain-Cloverdale Peak",
+      "quote": "The proposed area currently has 230 acres of commercial vineyards, the petition states, with another 150 acres under development.",
+      "section": "9.220",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2011-10-27/html/2011-27813.htm",
+      "year": "2011"
+    },
+    "us-coombsville": {
+      "acres": 1360,
+      "name": "Coombsville",
+      "quote": "The proposed viticultural area contains 11,075 acres, 1,360 acres of which are in 26 commercial vineyards, according to the petition.",
+      "section": "9.223",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2011-12-14/html/2011-32018.htm",
+      "year": "2011"
+    },
+    "us-wisconsin-ledge": {
+      "acres": 320,
+      "name": "Wisconsin Ledge",
+      "quote": "The proposed viticultural area contains approximately 3,800 square miles, with approximately 320 acres of vineyards in at least 14 commercially-producing vineyards and wineries, and an additional 70 acres projected to be planted within the next two years.",
+      "section": "9.224",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2012-03-22/html/2012-6927.htm",
+      "year": "2012"
+    },
+    "us-middleburg-virginia": {
+      "acres": 251,
+      "name": "Middleburg Virginia",
+      "quote": "With the petitioner's modified boundary line, the proposed Middleburg Virginia viticultural area contains 251 acres of commercial grape growing in 10 vineyards and 14 wineries.",
+      "section": "9.225",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2012-09-13/html/2012-22596.htm",
+      "year": "2012"
+    },
+    "us-inwood-valley": {
+      "acres": 62.5,
+      "name": "Inwood Valley",
+      "quote": "The boundary modification adds 143 acres to the Inwood Valley viticultural area, for a total of 28,441 acres, with approximately 62.5 acres dedicated to 5 commercially-producing vineyards.",
+      "section": "9.226",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2012-09-13/html/2012-22595.htm",
+      "year": "2012"
+    },
+    "us-indiana-uplands": {
+      "acres": 200,
+      "name": "Indiana Uplands",
+      "quote": "The proposed Indiana Uplands viticultural area contains 19 vineyards with approximately 200 acres under cultivation, 2 planned vineyards of 15 to 20 acres each, and 17 wineries; the existing and planned vineyards are geographically distributed throughout the proposed viticultural area, according to a map submitted with the petition.",
+      "section": "9.228",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2013-02-05/html/2013-02454.htm",
+      "year": "2013"
+    },
+    "us-manton-valley": {
+      "acres": 200,
+      "name": "Manton Valley",
+      "quote": "Eleven commercial vineyards, covering approximately 200 acres, are distributed across the proposed AVA.",
+      "section": "9.236",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2014-08-01/html/2014-18265.htm",
+      "year": "2014"
+    },
+    "us-fountaingrove-district": {
+      "acres": 500,
+      "name": "Fountaingrove District",
+      "quote": "The proposed AVA covers approximately 38,000 acres and has approximately 35 commercially-producing vineyards covering a total of 500 acres.",
+      "section": "9.250",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2015-02-18/html/2015-03371.htm",
+      "year": "2015"
+    },
+    "us-squaw-valley-miramonte": {
+      "acres": 7.5,
+      "name": "Squaw Valley-Miramonte",
+      "quote": "The proposed Squaw Valley-Miramonte AVA contains approximately 44,690 acres and has 3 bonded wineries and 5 commercially producing vineyards, covering a total of 7.5 acres, distributed across the proposed AVA.",
+      "section": "9.251",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2015-08-07/html/2015-19454.htm",
+      "year": "2015"
+    },
+    "us-champlain-valley-of-new-york": {
+      "acres": 15.47,
+      "name": "Champlain Valley of New York",
+      "quote": "There are 11 commercial vineyards covering a total of approximately 15.47 acres within the proposed AVA, as well as 6 wineries.",
+      "section": "9.258",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2016-08-22/html/2016-19992.htm",
+      "year": "2016"
+    },
+    "us-willcox": {
+      "acres": 454,
+      "name": "Willcox",
+      "quote": "The proposed AVA contains approximately 526,000 acres, and there are 21 commercially-producing vineyards covering a total of approximately 454 acres distributed throughout the proposed AVA, along with 18 wineries.",
+      "section": "9.259",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2016-09-12/html/2016-21849.htm",
+      "year": "2016"
+    },
+    "us-appalachian-high-country": {
+      "acres": 71,
+      "name": "Appalachian High Country",
+      "quote": "There are 21 commercially-producing vineyards covering a total of approximately 71 acres distributed throughout the proposed AVA, along with 10 wineries.",
+      "section": "9.260",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2016-10-27/html/2016-25970.htm",
+      "year": "2016"
+    },
+    "us-dahlonega-plateau": {
+      "acres": 110,
+      "name": "Dahlonega Plateau",
+      "quote": "The petition notes that, at present, there are 7 wineries and 8 commercial vineyards covering a total of approximately 110 acres distributed throughout the proposed AVA.",
+      "section": "9.263",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2018-06-29/html/2018-14035.htm",
+      "year": "2018"
+    },
+    "us-upper-hudson": {
+      "acres": 67.5,
+      "name": "Upper Hudson",
+      "quote": "There are 19 commercial vineyards with attached wineries covering approximately 67.5 acres within the proposed AVA.",
+      "section": "9.264",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2018-12-06/html/2018-26320.htm",
+      "year": "2018"
+    },
+    "us-candy-mountain": {
+      "acres": 54,
+      "name": "Candy Mountain",
+      "quote": "Within the 815-acre proposed AVA, there are currently two producing commercial vineyards, Candy Mountain Vineyard and Kitzke Cellars, which cover a total of approximately 54 acres.",
+      "section": "9.272",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2020-09-25/html/2020-18741.htm",
+      "year": "2020"
+    },
+    "us-tehachapi-mountains": {
+      "acres": 25,
+      "name": "Tehachapi Mountains",
+      "quote": "The proposed Tehachapi Mountains AVA contains approximately 58,000 acres and has 6 commercially-producing vineyards covering approximately 25 acres, as well as 1 winery.",
+      "section": "9.273",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2020-11-19/html/2020-25301.htm",
+      "year": "2020"
+    }
+  }
+}

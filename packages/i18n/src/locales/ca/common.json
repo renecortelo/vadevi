@@ -499,7 +499,8 @@
       "noWinesInColour": "Encara no has tastat cap vi d'aquest color.",
       "byFamily": "Per família",
       "seeWheel": "Veure la roda d’aromes"
-    }
+    },
+    "glanceSourceFederalRegister": "Federal Register dels EUA, la norma que va crear l’AVA ({{campaign}})"
   },
   "space": {
     "switchLabel": "Espai actiu",

@@ -11850,6 +11850,7 @@
                     "enum": [
                       "destatis",
                       "douane",
+                      "federal-register",
                       "inv",
                       "mapa",
                       "statistik-austria"
@@ -11887,6 +11888,7 @@
                     "enum": [
                       "destatis",
                       "douane",
+                      "federal-register",
                       "inv",
                       "mapa",
                       "statistik-austria"

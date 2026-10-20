@@ -364,6 +364,13 @@ Every few months, or when a register announces a name:
   is an extract; each region, area and state shows its vineyard area so
   credited, with the year and a link.
 
+- **The US Federal Register** (`us-ava-figures.json`): for American
+  Viticultural Areas with no area from Wikipedia, the acres of vineyards the
+  rule that established each one states, read by hand from the rule as
+  govinfo.gov serves it (`pnpm kb:fetch-ava-rules`, rules from 1994 on). Works
+  of the US federal government, in the public domain in the United States;
+  each AVA shows the area with the rule's year, its sentence and a link.
+
 - **Germany's Federal Statistical Office (Destatis)**, «Rebflächen 2022»
   (`de-anbaugebiete-figures.json`): its publications allow reproduction and
   distribution, in part too, with the source named; each of the 13

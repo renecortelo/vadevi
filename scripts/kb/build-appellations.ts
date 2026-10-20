@@ -1599,8 +1599,48 @@ for (const entry of entries) {
   };
   statistikAustria += 1;
 }
+// American Viticultural Areas with no area from Wikipedia: the acres of
+// vineyards the Federal Register rule that established each one gives, read
+// by hand (`data/kb/us-ava-figures.json`; US federal works, public domain in
+// the United States). The quote must stand in the rule as cached by
+// `fetch-ava-rules.ts`, where the cache is present.
+const usRules = JSON.parse(readFileSync(resolve("data/kb/us-ava-figures.json"), "utf8")) as {
+  regions: Record<
+    string,
+    { acres: number; name: string; quote: string; section: string; sourceUrl: string; year: string }
+  >;
+};
+const flat = (text: string) =>
+  text
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/``|''/g, '"')
+    .replace(/\s+/g, " ");
+let federalRegister = 0;
+for (const entry of entries) {
+  const rule = usRules.regions[entry.id];
+  if (rule === undefined || entry.figures?.planted) continue;
+  const cachedRule = resolve(".kb-cache/us-fr", `${rule.section}.htm`);
+  if (
+    existsSync(cachedRule) &&
+    !flat(readFileSync(cachedRule, "utf8")).includes(flat(rule.quote))
+  ) {
+    throw new Error(`${rule.name}: the quote is not in its rule.`);
+  }
+  entry.figures = {
+    planted: {
+      amount: Math.round(rule.acres * 0.40468564224 * 10) / 10,
+      publisher: "federal-register",
+      quote: rule.quote,
+      sourceUrl: rule.sourceUrl,
+      year: rule.year,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  federalRegister += 1;
+}
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${federalRegister} American from the Federal Register.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

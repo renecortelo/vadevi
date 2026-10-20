@@ -499,7 +499,8 @@
       "noWinesInColour": "You have not tasted a wine of this colour yet.",
       "byFamily": "By family",
       "seeWheel": "See the aroma wheel"
-    }
+    },
+    "glanceSourceFederalRegister": "US Federal Register, the rule establishing the AVA ({{campaign}})"
   },
   "space": {
     "switchLabel": "Active Space",

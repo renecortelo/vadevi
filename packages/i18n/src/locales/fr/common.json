@@ -499,7 +499,8 @@
       "noWinesInColour": "Tu n'as encore dégusté aucun vin de cette couleur.",
       "byFamily": "Par famille",
       "seeWheel": "Voir la roue des arômes"
-    }
+    },
+    "glanceSourceFederalRegister": "Federal Register des États-Unis, la règle créant l’AVA ({{campaign}})"
   },
   "space": {
     "switchLabel": "Espace actif",

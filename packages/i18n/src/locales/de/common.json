@@ -499,7 +499,8 @@
       "noWinesInColour": "Du hast noch keinen Wein in dieser Farbe verkostet.",
       "byFamily": "Nach Familie",
       "seeWheel": "Zum Aromarad"
-    }
+    },
+    "glanceSourceFederalRegister": "US Federal Register, die Regel zur Einrichtung der AVA ({{campaign}})"
   },
   "space": {
     "switchLabel": "Aktiver Bereich",
