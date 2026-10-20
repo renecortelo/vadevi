@@ -117,17 +117,19 @@ export function mentions(quote: string, value: string): boolean {
  * and German — accents set aside, as `normalize` leaves them.
  */
 const levelWords: Record<Level, RegExp> = {
-  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]?s?|alts?|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|rics?|abondante?s?|abundante?s?|corsee?s?|charpentee?s?|encorpad[ao]s?|vollen?|viel(e[nrs]?)?|rich|riches?|richesse|noticeable|notables?|molt[ae]?s?|markante?[nrs]?|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?)\b|высок|повышенн|значительн|полнотел|насыщенн/,
-  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix(a|os|es)?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrig(e[mnrs]?)?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao]|geringe[mnrs]?|pauvres?|wenig|(saure|tannin|alkohol|korper)arm[a-z]*)\b|низк|невысок|мягк|легк/,
+  high: /\b(high|higher|highly|full|full-bodied|pronounced|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]?s?|alts?|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|plen[ao]|corpulent[ao]s?|marcad[ao]s?|marcat[ao]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|rics?|abondante?s?|abundante?s?|corsee?s?|charpentee?s?|encorpad[ao]s?|vollen?|viel(e[nrs]?)?|rich|riches?|richesse|noticeable|notables?|molt[ae]?s?|markante?[nrs]?|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?|magas|magasabb|eros|testes|bogat[aei]?|ridicat[aei]?|visok[aeiou]?|visoki[hm]?|vysok[a-z]*|vyss[a-z]*|pun(a|e|i|im|o|og)?|plny|plna|plne|wysok[a-z]*|pełn[a-z]*)\b|высок|повышенн|значительн|полнотел|насыщенн|висок|підвищен|повишен|плътн|повнотіл|насичен|υψηλ|πλουσι|εντον|მაღალ/,
+  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[ao]|baix(a|os|es)?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrig(e[mnrs]?)?|leichte[rn]?|manquant|manque|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao]|geringe[mnrs]?|pauvres?|wenig|(saure|tannin|alkohol|korper)arm[a-z]*|alacsony|konnyu|keves|nizak|nisk[a-z]*|nizk[a-z]*|lagan[aio]?|lahk[a-z]*|lehk[a-z]*|lekk[a-z]*|scazut[aei]?|redus[aei]?|slab[a-z]*|nizs[a-z]*|chud[a-z]*)\b|низк|невысок|невисок|невелик|мягк|легк|низьк|ниск|(?<![а-яё])лек(а|о|и|ото)?(?![а-яё])|м.як|χαμηλ|ελαφρ|დაბალ|მსუბუქ/,
   medium:
-    /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moyennement|mediamente|moderee?|moderad[ao]|moderadamente|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?)\b|средн|умеренн/,
+    /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moyennement|mediamente|moderee?|moderad[ao]|moderadamente|moderat[ao]?|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?|kozepes|srednj[a-z]*|stredn[a-z]*|sredni[a-z]*|mediu|medie)\b|средн|умеренн|середн|помірн|умерен|μετρι|μεσαι|საშუალო/,
 };
 
 const fieldWords: Record<"acidity" | "alcohol" | "body" | "tannin", RegExp> = {
-  acidity: /acid|saure|кислот/,
-  alcohol: /alcohol|alkohol|alcool|alcol|graduaci|алкогол/,
-  body: /bod(y|ied)|weight|structure|cuerpo|corps|corpo|\bcos\b|korper|struttur|estructur|estrutur|struktur|\bcorsee?s?\b|charpentee?s?|encorpad[ao]s?|тел[оа]|телесн|полнотел|структур/,
-  tannin: /tann?in|tannic|tanic|tannique|gerbstoff|танин/,
+  acidity:
+    /acid|saure|кислот|киселин|\bsav(tartalm[a-z]*|ass[a-z]*|as|asabb|ak|a|ai[a-z]*)?\b|kiselin|kislin|kysel|kwas|aciditat|οξυτητ|მჟავ/,
+  alcohol: /alcohol|alkohol|alcool|alcol|graduaci|алкогол|алкохол|спирт|αλκοολ|ალკოჰოლ/,
+  body: /bod(y|ied)|weight|structure|cuerpo|corps|corpo|\bcos\b|korper|struttur|estructur|estrutur|struktur|\bcorsee?s?\b|charpentee?s?|encorpad[ao]s?|тел[оа]|телесн|полнотел|структур|\btestes[a-z]*|\btestu\b|\btijel[a-z]*|\btel(o|a|esa|esn[a-z]*)\b|\bcorp(ul)?\b|ciał|тяло|тіл|σωμα|სხეულ/,
+  tannin:
+    /tann?in|tannic|tanic|tannique|gerbstoff|танин|танін|дубильн|csersav|cserzoanyag|garbnik|trislovin|τανιν|ταννιν|ტანინ/,
 };
 
 /**
@@ -135,11 +137,11 @@ const fieldWords: Record<"acidity" | "alcohol" | "body" | "tannin", RegExp> = {
  * sweet wines named by how they are made (late harvest, noble rot, passito).
  */
 const sweetnessWords: Record<Sweetness, RegExp> = {
-  dry: /\b(dry|seco|secos|seca|secas|sec|secs|seche|seches|trocken[a-z]*|secco|secchi|secca|secche)\b/,
+  dry: /\b(dry|seco|secos|seca|secas|sec|secs|seche|seches|trocken[a-z]*|secco|secchi|secca|secche|szaraz|suh[aoie]?|suv[aoi]?|seci|seaca|such[aey]|suche|wytrawn[a-z]*)\b|(?<![а-яёіїє])сух|ξηρ|მშრალ/,
   medium:
-    /\b(off-dry|medium[- ](sweet|dry)|semi-?(sweet|dry)|semi-?seco|semi-?dulce|demi-sec|halbtrocken|halbsu(ss|ß)[a-z]*|lieblich|feinherb|abboccato|amabile|meio-seco)\b/,
+    /\b(off-dry|medium[- ](sweet|dry)|semi-?(sweet|dry)|semi-?seco|semi-?dulce|demi-sec|halbtrocken|halbsu(ss|ß)[a-z]*|lieblich|feinherb|abboccato|amabile|meio-seco|felszaraz|feledes|polusuh[a-z]*|polsuh[a-z]*|polsuch[a-z]*|polosuch[a-z]*|połwytrawn[a-z]*|połsłodk[a-z]*|demisec[a-z]*|demidulc[a-z]*)\b|полусух|полусладк|напівсух|напівсолодк|ημιξηρ|ημιγλυκ/,
   sweet:
-    /\b(sweet|sweeter|dessert|late[- ]harvest|botryti[sz]ed|noble rot|dulce|dulces|doux|douce|liquoreux|liquoreuse|moelleux|su(ss|ß)[a-z]*|edelsu[a-z]*|dolce|dolci|passito|doce|doces|licoroso|vendanges? tardives?|vendimia tardia|podredumbre noble|pourriture noble)\b/,
+    /\b(sweet|sweeter|dessert|late[- ]harvest|botryti[sz]ed|noble rot|dulce|dulces|doux|douce|liquoreux|liquoreuse|moelleux|su(ss|ß)[a-z]*|edelsu[a-z]*|dolce|dolci|passito|doce|doces|licoroso|vendanges? tardives?|vendimia tardia|podredumbre noble|pourriture noble|edes|slatk[a-z]*|sladk[a-z]*|dulc[ei]|słodk[a-z]*|desertn[a-z]*)\b|(?<![а-яёіїє])сладк|солодк|десертн|ликерн|γλυκ|ტკბილ/,
 };
 
 function toSweetness(value: unknown): SweetnessRange | null {
@@ -290,9 +292,49 @@ const countryWords: Readonly<Record<string, readonly string[]>> = {
   ],
 };
 
+/**
+ * The beginnings of a country's words where an article's language declines
+ * them — «z Włoch», «z Hiszpanii», «автохтонним іспанським сортом», «на
+ * острове Мадейра» — or writes them in another script: a word of the quote
+ * that starts so names the country. Each a country's name, its adjective or a
+ * region wholly within it, as `normalize` writes it.
+ */
+const countryStems: Readonly<Record<string, readonly string[]>> = {
+  BA: ["hercegovin", "герцеговин"],
+  ES: [
+    "hiszpan",
+    "spanel",
+    "spanyol",
+    "spanjolsk",
+    "испан",
+    "іспан",
+    "канарск",
+    "канарськ",
+    "андалус",
+  ],
+  FR: ["franci", "frant", "francouz", "francusk", "франц", "бургунд", "burgundi", "burgundsk"],
+  GE: ["грузи", "грузин", "кахет", "საქართველ", "კახეთ"],
+  IT: [
+    "włoch",
+    "włosk",
+    "italsk",
+    "olasz",
+    "talijansk",
+    "итал",
+    "італ",
+    "пьемонт",
+    "кампани",
+    "кампані",
+    "умбри",
+    "венето",
+  ],
+  PT: ["portugal", "portugalsk", "португал", "мадеир", "madeir"],
+};
+
 /** The quote says the country, in the article's language or in English. */
 export function originNamed(quote: string, code: string, lang: string): boolean {
-  const body = ` ${normalize(quote).replace(/[^a-z0-9]+/g, " ")} `;
+  const body = ` ${normalize(quote).replace(/[^\p{L}\p{N}]+/gu, " ")} `;
+  if ((countryStems[code] ?? []).some((stem) => body.includes(` ${stem}`))) return true;
   const names = [
     ...new Set(
       [lang, "en"].flatMap((language) => {
@@ -306,7 +348,7 @@ export function originNamed(quote: string, code: string, lang: string): boolean 
   return names.some((name) =>
     body.includes(
       ` ${normalize(name)
-        .replace(/[^a-z0-9]+/g, " ")
+        .replace(/[^\p{L}\p{N}]+/gu, " ")
         .trim()} `,
     ),
   );

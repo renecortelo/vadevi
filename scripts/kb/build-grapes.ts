@@ -311,7 +311,9 @@ for (const qid of index) {
     );
     const field = reading.field;
     if (field === "aromas" || field === "pairings") {
-      if (result[field].length > 0 || found[field].length === 0) continue;
+      // A list the vocabulary drops entirely («Hungarian dishes») is empty.
+      const kind = field === "aromas" ? "aroma" : "pairing";
+      if (terms(kind, result[field]).length > 0 || found[field].length === 0) continue;
       result[field] = found[field];
     } else if (result[field] !== null || found[field] === null) continue;
     else if (field === "sweetness") result.sweetness = found.sweetness;

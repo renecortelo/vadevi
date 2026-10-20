@@ -1467,26 +1467,43 @@ for (const entry of entries) {
 }
 // Spain's PDOs: their registered vineyard area from the Ministry of
 // Agriculture's yearly report (`data/kb/es-dop-figures.json`), newer and
-// official, in place of an article's. Its "qualified wine" volume is not
-// production — what a campaign certified — and is not shown.
+// official, in place of an article's; and, where nothing else gives the
+// production, the wine the PDO qualified that campaign — the volume it
+// certified as its own, which is the PDO's production as a PDO, said as such.
 const spanish = JSON.parse(readFileSync(resolve("data/kb/es-dop-figures.json"), "utf8")) as {
   campaign: string;
-  regions: Record<string, { plantedHa: number | null }>;
+  regions: Record<string, { plantedHa: number | null; qualifiedHl?: number | null }>;
   sourceUrl: string;
 };
 let official = 0;
 for (const entry of entries) {
-  const area = spanish.regions[entry.id]?.plantedHa;
-  if (area === null || area === undefined) continue;
+  const figures = spanish.regions[entry.id];
+  if (figures === undefined) continue;
+  const area = figures.plantedHa;
+  const qualified = figures.qualifiedHl;
+  const production =
+    entry.figures?.production ??
+    (qualified === null || qualified === undefined
+      ? null
+      : {
+          amount: qualified,
+          publisher: "mapa" as const,
+          quote: `Vino calificado como DOP en la campaña (hl): ${qualified}`,
+          sourceUrl: spanish.sourceUrl,
+          year: spanish.campaign,
+        });
   entry.figures = {
-    planted: {
-      amount: area,
-      publisher: "mapa",
-      quote: `Superficie inscrita al final de campaña (ha): ${area}`,
-      sourceUrl: spanish.sourceUrl,
-      year: spanish.campaign,
-    },
-    production: entry.figures?.production ?? null,
+    planted:
+      area === null || area === undefined
+        ? (entry.figures?.planted ?? null)
+        : {
+            amount: area,
+            publisher: "mapa",
+            quote: `Superficie inscrita al final de campaña (ha): ${area}`,
+            sourceUrl: spanish.sourceUrl,
+            year: spanish.campaign,
+          },
+    production,
   };
   official += 1;
 }

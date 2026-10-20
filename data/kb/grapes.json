@@ -1292,7 +1292,7 @@
     "wikipediaUrl": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "black fruit"
@@ -1401,6 +1401,18 @@
         "quote": "eignen sich als ausgesprochene Lagerweine mit hohem Reifepotenzial für körperreiche Weine",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Touriga_Nacional"
+      },
+      {
+        "field": "acidity",
+        "quote": "Сорт даёт вина насыщенного, глубокого красного цвета с фиолетовым оттенком, с содержанием алкоголя от среднего до высокого, с высокой кислотностью и высокими танинами",
+        "value": "high",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D0%B8%D0%B3%D0%B0_%D0%9D%D0%B0%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB"
+      },
+      {
+        "field": "sweetness",
+        "quote": "торига-насионал придаёт сухим красным винам тело и танинную структуру … Помимо десертных вин (типа портвейна) торига-насионал всё чаще используется",
+        "value": "dry-sweet",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D0%B8%D0%B3%D0%B0_%D0%9D%D0%B0%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB"
       }
     ],
     "id": "touriga-nacional",
@@ -1466,7 +1478,10 @@
         "url": "https://es.wikipedia.org/wiki/Touriga_nacional"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Bical Tinto",
@@ -3266,7 +3281,9 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": "medium",
     "color": "red",
     "evidence": [
@@ -3369,6 +3386,18 @@
         "field": "regions",
         "quote": "permitted variety in the Denominaciones de Origen (DO) wines of Tacoronte-Acentejo, Valle de la Orotava, Ycoden-Daute-Isora, and Valle de Güímar. It is also permitted in the Spanish wine regions of El Hierro, Gran Canaria, La Gomera, La Palma, Lanzarote.",
         "value": "ES: Lanzarote"
+      },
+      {
+        "field": "aromas",
+        "quote": "для отримання м'яких фруктових вин, які можуть бути надзвичайно ароматичними",
+        "value": "fruity",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/List%C3%A1n_negro"
+      },
+      {
+        "field": "origin",
+        "quote": "Автохтонный сорт Канарских островов, где широко распространён, особенно на севере острова Тенерифе.",
+        "value": "ES",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%81%D1%82%D0%B0%D0%BD_%D0%9D%D0%B5%D0%B3%D1%80%D0%BE"
       }
     ],
     "id": "listan-negro",
@@ -3382,7 +3411,7 @@
       "pt": "Listán negro",
       "nl": "Listán negro"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 6,
     "regions": [
@@ -4026,7 +4055,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "blackberry",
@@ -4097,6 +4126,12 @@
         "quote": "Die Sorte stammt aus Portugal.",
         "value": "PT",
         "sourceUrl": "https://de.wikipedia.org/wiki/Trincadeira"
+      },
+      {
+        "field": "acidity",
+        "quote": "Такі вина характеризуються смаком та ароматом червоних фруктів, відчутними але м'якими танінами та порівняно високою кислотністю",
+        "value": "high",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D1%96%D0%BD%D0%BA%D0%B0%D0%B4%D0%B5%D0%B9%D1%80%D0%B0"
       }
     ],
     "id": "tinta-amarela",
@@ -4795,6 +4830,18 @@
         "field": "regions",
         "quote": "planted primarily in the Bucelas, Tejo and Vinho Verde regions",
         "value": "PT: Vinho Verde"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднуються зі стравами з овочів та морепродуктів",
+        "value": "vegetables",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D1%80%D1%96%D0%BD%D1%82%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднуються зі стравами з овочів та морепродуктів",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D1%80%D1%96%D0%BD%D1%82%D0%BE"
       }
     ],
     "id": "arinto",
@@ -4809,7 +4856,10 @@
       "pt": "Arinto"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "vegetables",
+      "seafood"
+    ],
     "prominence": 7,
     "regions": [
       {
@@ -5446,6 +5496,30 @@
         "field": "regions",
         "quote": "grown primarily in the Campania region of southern Italy and on the island of Sicily. In Campania, this fairly strong flavored white wine grape is particularly noted around Avellino ... A major place of production is in the McLaren Vale wine region of South Australia along with the Clare Valley and in the Hunter Valley wine region of New South Wales. More recently, some winemakers in Argentina are producing Fiano in the La Rioja district ... from grapes in the Russian River Valley AVA and El Dorado AVA respectively ... Cilento DOC – must contain between 60 and 65% Fiano",
         "value": "US: El Dorado"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З фіано зазвичай виробляють сухі вина, але можуть вироблятись також десертні вина з в'яленого винограду",
+        "value": "dry-sweet",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BD%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднуються зі стравами з риби, білого м'яса та м'якими сирами",
+        "value": "fish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BD%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднуються зі стравами з риби, білого м'яса та м'якими сирами",
+        "value": "white meat",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BD%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднуються зі стравами з риби, білого м'яса та м'якими сирами",
+        "value": "soft cheese",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BD%D0%BE"
       }
     ],
     "id": "fiano",
@@ -5460,7 +5534,11 @@
       "nl": "Fiano"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "white meat",
+      "soft cheese"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -5546,7 +5624,10 @@
         "url": "https://es.wikipedia.org/wiki/Fiano_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Apiana",
@@ -6075,6 +6156,12 @@
         "quote": "Il provient du nord de l’Italie.",
         "value": "IT",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Cortese_(c%C3%A9page)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З кортезе виробляють як сухі, так і ігристі вина",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D1%82%D0%B5%D0%B7%D0%B5"
       }
     ],
     "id": "cortese",
@@ -6170,7 +6257,10 @@
         "url": "https://es.wikipedia.org/wiki/Cortese"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Bianca Fernanda",
@@ -6484,7 +6574,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "red fruit",
       "plum",
@@ -6558,6 +6648,12 @@
         "field": "sweetness",
         "quote": "Historically Sagrantino was used primarily for making sweet passito wines ... Since the 1970s however, the wines have been made principally in a dry secco style",
         "value": "dry-sweet"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Вино має дуже високий вміст танінів та алкоголю",
+        "value": "high",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B3%D1%80%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE"
       }
     ],
     "id": "sagrantino",
@@ -7606,9 +7702,11 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Muscat_of_Alexandria"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": "high",
     "color": "red",
     "evidence": [
@@ -7802,6 +7900,18 @@
         "field": "alcohol",
         "quote": "to produce wines high in alcohol",
         "value": "high"
+      },
+      {
+        "field": "acidity",
+        "quote": "Вината са плътни, груби, с тъмночервен цвят, висока екстрактивност и киселинност",
+        "value": "high",
+        "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%90%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%82_%D0%91%D1%83%D1%88%D0%B5"
+      },
+      {
+        "field": "aromas",
+        "quote": "з виразними фруктовими нотами, м'якою оксамитовою текстурою і насиченим смаком",
+        "value": "fruity",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%96%D0%BA%D0%B0%D0%BD%D1%82_%D0%91%D1%83%D1%88%D0%B5"
       }
     ],
     "id": "alicante-bouschet",
@@ -8433,6 +8543,12 @@
         "field": "tannin",
         "quote": "The must is normally high in colorants and tannins",
         "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Бобаль використовують для виробництва червоних, рожевих сухих та ігристих вин",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     ],
     "id": "bobal",
@@ -8538,7 +8654,10 @@
         "url": "https://en.wikipedia.org/wiki/Bobal"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "bobos",
@@ -8994,6 +9113,12 @@
         "field": "regions",
         "quote": "Происходит из Кахетии, где главным образом и культивируется.",
         "value": "GE: Kakheti"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З кісі виробляється біле сухе або бурштинове вино",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D1%81%D1%96_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     ],
     "id": "kisi",
@@ -9062,7 +9187,10 @@
         "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%81%D0%B8_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q12870330",
@@ -9071,7 +9199,9 @@
   {
     "acidity": "high",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -9145,6 +9275,18 @@
         "quote": "Культивируется в регионе Картли (Мухрани, Атени, Каспи) и (в гораздо меньших количествах) в Кахетии (Гурджаани и Телави), в Имерети (Вани)",
         "value": "GE: Imereti",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D0%B8"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Також використовується для виготовлення сухих білих вин",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D1%96"
+      },
+      {
+        "field": "aromas",
+        "quote": "Вина з цього сорту винограду відрізняються підвищеною кислотністю та фруктовим букетом",
+        "value": "fruity",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D1%96"
       }
     ],
     "id": "chinuri",
@@ -9237,7 +9379,10 @@
         "url": "https://en.wikipedia.org/wiki/Chinuri"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q31355050",
@@ -9296,6 +9441,12 @@
         "field": "regions",
         "quote": "распространённый в Лечхуми (Грузия) ... Вина высокого качества из этого сорта винограда вырабатываются в нагорной полосе Мегрелии",
         "value": "GE: Samegrelo",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Из оджалеши производятся природно-полусладкие вина и сухие вина",
+        "value": "dry-medium",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
       }
     ],
@@ -9369,7 +9520,10 @@
         "url": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B6%D0%B0%D0%BB%D0%B5%D1%88%D0%B8"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Odjaleschi",
@@ -9735,10 +9889,13 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Khikhvi"
   },
   {
-    "acidity": null,
-    "alcohol": null,
-    "aromas": [],
-    "body": null,
+    "acidity": "high",
+    "alcohol": "medium",
+    "aromas": [
+      "rose",
+      "red fruit"
+    ],
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -9818,6 +9975,42 @@
         "quote": "В основном его культивируют в северо-западных районах страны - Шамхорском, Ханларском, Акстафинском и в окрестностях города Гянджа",
         "value": "AZ: Shamkir",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B2%D0%BA%D0%B2%D0%B5%D1%80%D0%B8"
+      },
+      {
+        "field": "acidity",
+        "quote": "Вино з рубіновим забарвленням, присмаком чорних ягід, помірним рівнем алкоголю та підвищеною кислотністю",
+        "value": "high",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B2%D0%BA%D0%B2%D0%B5%D1%80%D1%96"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Вино з рубіновим забарвленням, присмаком чорних ягід, помірним рівнем алкоголю та підвищеною кислотністю",
+        "value": "medium",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B2%D0%BA%D0%B2%D0%B5%D1%80%D1%96"
+      },
+      {
+        "field": "body",
+        "quote": "ჯიშური და კუპაჟში გამოყენებული ღვინო ხასიათდება მსუბუქი სხეულით",
+        "value": "low",
+        "sourceUrl": "https://ka.wikipedia.org/wiki/%E1%83%97%E1%83%90%E1%83%95%E1%83%99%E1%83%95%E1%83%94%E1%83%A0%E1%83%98"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З тавквері виробляють червоне сухе вино середньої якості для масового вжитку",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B2%D0%BA%D0%B2%D0%B5%D1%80%D1%96"
+      },
+      {
+        "field": "aromas",
+        "quote": "თავკვერისგან დგება საინტერესო წითელი და მშრალი ან ვარდისფერი ღვინო ველური ვარდისა და წითელი ხილის სურნელით",
+        "value": "rose",
+        "sourceUrl": "https://ka.wikipedia.org/wiki/%E1%83%97%E1%83%90%E1%83%95%E1%83%99%E1%83%95%E1%83%94%E1%83%A0%E1%83%98"
+      },
+      {
+        "field": "aromas",
+        "quote": "თავკვერისგან დგება საინტერესო წითელი და მშრალი ან ვარდისფერი ღვინო ველური ვარდისა და წითელი ხილის სურნელით",
+        "value": "red fruit",
+        "sourceUrl": "https://ka.wikipedia.org/wiki/%E1%83%97%E1%83%90%E1%83%95%E1%83%99%E1%83%95%E1%83%94%E1%83%A0%E1%83%98"
       }
     ],
     "id": "tavkveri",
@@ -9902,7 +10095,10 @@
         "url": "https://en.wikipedia.org/wiki/Tavkveri"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Takweri",
@@ -11781,6 +11977,30 @@
         "quote": "Die Sorte liefert einen körperreichen Wein mit nussigem Aroma",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Grechetto"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина з грекетто гарно поєднуються з супами, пастою, морепродуктами, білим м'ясом",
+        "value": "soups",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D0%BA%D0%B5%D1%82%D1%82%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина з грекетто гарно поєднуються з супами, пастою, морепродуктами, білим м'ясом",
+        "value": "pasta",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D0%BA%D0%B5%D1%82%D1%82%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина з грекетто гарно поєднуються з супами, пастою, морепродуктами, білим м'ясом",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D0%BA%D0%B5%D1%82%D1%82%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина з грекетто гарно поєднуються з супами, пастою, морепродуктами, білим м'ясом",
+        "value": "white meat",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D0%BA%D0%B5%D1%82%D1%82%D0%BE"
       }
     ],
     "id": "grechetto",
@@ -11795,7 +12015,12 @@
       "pt": "Grechetto"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "soups",
+      "pasta",
+      "seafood",
+      "white meat"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -12436,7 +12661,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "grape"
     ],
@@ -12492,6 +12717,12 @@
         "field": "regions",
         "quote": "grown primarily in Germany with some plantings in England, Vancouver Island, Washington state, British Columbia's North Okanagan and Fraser Valley ... and another in the Finger Lakes AVA in New York State",
         "value": "US: Finger Lakes"
+      },
+      {
+        "field": "alcohol",
+        "quote": "produkuje odrůda silně aromatická, zelenožlutá až zlatožlutá vína … s vyšším alkoholem a extraktem",
+        "value": "high",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Siegerrebe"
       }
     ],
     "id": "siegerrebe",
@@ -13065,6 +13296,42 @@
         "field": "aromas",
         "quote": "When young, wines made from Pinot noir tend to have red fruit aromas of cherries, raspberries, and strawberries.",
         "value": "strawberry"
+      },
+      {
+        "field": "pairings",
+        "quote": "Завдяки легкому фруктовому характеру піно-нуар добре комбінується з ароматними стравами, такими як прошуто, сири, молода яловичина, омари, креветки, баранина",
+        "value": "prosciutto",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE-%D0%BD%D1%83%D0%B0%D1%80"
+      },
+      {
+        "field": "pairings",
+        "quote": "Завдяки легкому фруктовому характеру піно-нуар добре комбінується з ароматними стравами, такими як прошуто, сири, молода яловичина, омари, креветки, баранина",
+        "value": "cheese",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE-%D0%BD%D1%83%D0%B0%D1%80"
+      },
+      {
+        "field": "pairings",
+        "quote": "Завдяки легкому фруктовому характеру піно-нуар добре комбінується з ароматними стравами, такими як прошуто, сири, молода яловичина, омари, креветки, баранина",
+        "value": "beef",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE-%D0%BD%D1%83%D0%B0%D1%80"
+      },
+      {
+        "field": "pairings",
+        "quote": "Завдяки легкому фруктовому характеру піно-нуар добре комбінується з ароматними стравами, такими як прошуто, сири, молода яловичина, омари, креветки, баранина",
+        "value": "lobster",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE-%D0%BD%D1%83%D0%B0%D1%80"
+      },
+      {
+        "field": "pairings",
+        "quote": "Завдяки легкому фруктовому характеру піно-нуар добре комбінується з ароматними стравами, такими як прошуто, сири, молода яловичина, омари, креветки, баранина",
+        "value": "shellfish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE-%D0%BD%D1%83%D0%B0%D1%80"
+      },
+      {
+        "field": "pairings",
+        "quote": "Завдяки легкому фруктовому характеру піно-нуар добре комбінується з ароматними стравами, такими як прошуто, сири, молода яловичина, омари, креветки, баранина",
+        "value": "lamb",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE-%D0%BD%D1%83%D0%B0%D1%80"
       }
     ],
     "id": "pinot-noir",
@@ -13079,7 +13346,14 @@
       "pt": "Pinot noir"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "prosciutto",
+      "cheese",
+      "beef",
+      "lobster",
+      "shellfish",
+      "lamb"
+    ],
     "prominence": 50,
     "regions": [],
     "styles": [
@@ -14117,6 +14391,36 @@
         "quote": "Die Sorte ergibt fruchtige, mollige, körperreiche und vollmundige Weine",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Merlot"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Bora mélyvörös, telt, sajátos, zamat- és ízgazdag, fekete ribizlis, szilvás tónusú, bársonyosan savas, gyorsan fejlődő, száraz minőségi vörösbor",
+        "value": "dry",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Merlot"
+      },
+      {
+        "field": "pairings",
+        "quote": "Podávají se k různým jemným paštikám, k srnčímu nebo jelenímu ragú, k telecím ledvinkám, k hříběcímu masu, k pokrmům s výraznou chutí rajčat, k pokrmům z pernaté zvěře nebo k ementálu",
+        "value": "pâté",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Merlot"
+      },
+      {
+        "field": "pairings",
+        "quote": "Podávají se k různým jemným paštikám, k srnčímu nebo jelenímu ragú, k telecím ledvinkám, k hříběcímu masu, k pokrmům s výraznou chutí rajčat, k pokrmům z pernaté zvěře nebo k ementálu",
+        "value": "veal",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Merlot"
+      },
+      {
+        "field": "pairings",
+        "quote": "Podávají se k různým jemným paštikám, k srnčímu nebo jelenímu ragú, k telecím ledvinkám, k hříběcímu masu, k pokrmům s výraznou chutí rajčat, k pokrmům z pernaté zvěře nebo k ementálu",
+        "value": "game",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Merlot"
+      },
+      {
+        "field": "pairings",
+        "quote": "Podávají se k různým jemným paštikám, k srnčímu nebo jelenímu ragú, k telecím ledvinkám, k hříběcímu masu, k pokrmům s výraznou chutí rajčat, k pokrmům z pernaté zvěře nebo k ementálu",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Merlot"
       }
     ],
     "id": "merlot",
@@ -14131,7 +14435,12 @@
       "pt": "Merlot"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "pâté",
+      "veal",
+      "game",
+      "cheese"
+    ],
     "prominence": 45,
     "regions": [],
     "styles": [
@@ -14171,7 +14480,10 @@
         "url": "https://pt.wikipedia.org/wiki/Merlot"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Alicante",
@@ -14621,6 +14933,30 @@
         "field": "tannin",
         "quote": "Due to their concentrated flavours and high tannin content, many premium Syrah wines are at their best after some considerable bottle aging",
         "value": "high"
+      },
+      {
+        "field": "pairings",
+        "quote": "Vina dobivena od Syraha najbilje odgovaraju uz jela s roštilja, bifteke, divljač, suhomesnate proizvode",
+        "value": "grilled meats",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Syrah"
+      },
+      {
+        "field": "pairings",
+        "quote": "Vina dobivena od Syraha najbilje odgovaraju uz jela s roštilja, bifteke, divljač, suhomesnate proizvode",
+        "value": "steak",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Syrah"
+      },
+      {
+        "field": "pairings",
+        "quote": "Vina dobivena od Syraha najbilje odgovaraju uz jela s roštilja, bifteke, divljač, suhomesnate proizvode",
+        "value": "game",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Syrah"
+      },
+      {
+        "field": "pairings",
+        "quote": "Vina dobivena od Syraha najbilje odgovaraju uz jela s roštilja, bifteke, divljač, suhomesnate proizvode",
+        "value": "cured meats",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Syrah"
       }
     ],
     "id": "syrah",
@@ -14635,7 +14971,12 @@
       "pt": "Syrah"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "grilled meats",
+      "steak",
+      "game",
+      "cured meats"
+    ],
     "prominence": 39,
     "regions": [],
     "styles": [
@@ -14964,7 +15305,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "rose",
       "lychee"
@@ -15075,6 +15416,12 @@
         "quote": "La gewürztraminer (pronunciación en alemán: /ɡəˈvʏʁtstʁaˈmiːnɐ/) es una variedad de uva originaria de las frescas laderas alpinas del Trentino-Alto Adigio en el noreste de Italia, y su nombre deriva de la localidad de Tramin, en el Bajo Tirol.",
         "value": "IT",
         "sourceUrl": "https://es.wikipedia.org/wiki/Gew%C3%BCrztraminer"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Сортовите вина се отличават със златистожълт цвят, високо алкохолно съдържание и екстракт",
+        "value": "high",
+        "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%A2%D1%80%D0%B0%D0%BC%D0%B8%D0%BD%D0%B5%D1%80"
       }
     ],
     "id": "gewurztraminer",
@@ -15355,6 +15702,24 @@
         "field": "regions",
         "quote": "In France, Cabernet Franc is found predominantly in the Loire Valley and ... Bordeaux... In Italy ... Friuli ... Veneto... Hungary ... Villány and Szekszárd... Canada ... Ontario's Niagara Peninsula... United States ... Napa and Sonoma counties... Washington State ... Columbia Valley... Argentina ... Mendoza... Plantings are found throughout Europe, in the New World, China and Kazakhstan.",
         "value": "KZ: Kazakhstan"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З Каберне Фран виробляють червоні або рожеві сухі вина",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B1%D0%B5%D1%80%D0%BD%D0%B5_%D0%A4%D1%80%D0%B0%D0%BD"
+      },
+      {
+        "field": "pairings",
+        "quote": "fiatal borai (az éretlen tanninok) jól harmonizálnak a könnyű halételekkel és az angolosra sütött marhahúsételekkel",
+        "value": "fish",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Cabernet_franc"
+      },
+      {
+        "field": "pairings",
+        "quote": "fiatal borai (az éretlen tanninok) jól harmonizálnak a könnyű halételekkel és az angolosra sütött marhahúsételekkel",
+        "value": "beef",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Cabernet_franc"
       }
     ],
     "id": "cabernet-franc",
@@ -15369,7 +15734,10 @@
       "pt": "Cabernet Franc"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "beef"
+    ],
     "prominence": 35,
     "regions": [
       {
@@ -15453,7 +15821,10 @@
         "url": "https://pt.wikipedia.org/wiki/Cabernet_Franc"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Bouchy",
@@ -15486,7 +15857,7 @@
       "black pepper",
       "red berry"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -15593,6 +15964,30 @@
         "field": "alcohol",
         "quote": "The grape's high sugar content can be fermented into levels of alcohol exceeding 15 percent.",
         "value": "high"
+      },
+      {
+        "field": "tannin",
+        "quote": "Найчастіше з нього виготовляють сухі червоні вина з гарною структурою і тілом, високим вмістом алкоголю та танінів",
+        "value": "high",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BC%D1%96%D1%82%D0%B8%D0%B2%D0%BE"
+      },
+      {
+        "field": "body",
+        "quote": "классическим красным винам из зинфанделя (примитиво) присущи густой, насыщенный цвет и выраженная структура («тельность»)",
+        "value": "high",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%97%D0%B8%D0%BD%D1%84%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Служит основой для создания самых разнообразных вин — сухих, полусухих, полусладких, сладких, игристых",
+        "value": "dry-sweet",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%97%D0%B8%D0%BD%D1%84%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C"
+      },
+      {
+        "field": "pairings",
+        "quote": "подобное вино оптимально совмещать со стейком и другими мясными блюдами",
+        "value": "steak",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%97%D0%B8%D0%BD%D1%84%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C"
       }
     ],
     "id": "zinfandel",
@@ -15607,7 +16002,9 @@
       "pt": "Zinfandel"
     },
     "origin": "ME",
-    "pairings": [],
+    "pairings": [
+      "steak"
+    ],
     "prominence": 31,
     "regions": [
       {
@@ -15664,7 +16061,10 @@
         "url": "https://es.wikipedia.org/wiki/Zinfandel"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Primitivo",
@@ -15699,7 +16099,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q204433",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Zinfandel"
   },
@@ -16685,6 +17085,24 @@
         "field": "tannin",
         "quote": "the grape's naturally high acidity and tannins",
         "value": "high"
+      },
+      {
+        "field": "pairings",
+        "quote": "Doporučuje se podávat k hovězímu masu, zvěřině a tvrdým sýrům",
+        "value": "beef",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Nebbiolo"
+      },
+      {
+        "field": "pairings",
+        "quote": "Doporučuje se podávat k hovězímu masu, zvěřině a tvrdým sýrům",
+        "value": "game",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Nebbiolo"
+      },
+      {
+        "field": "pairings",
+        "quote": "Doporučuje se podávat k hovězímu masu, zvěřině a tvrdým sýrům",
+        "value": "hard cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Nebbiolo"
       }
     ],
     "id": "nebbiolo",
@@ -16699,7 +17117,11 @@
       "pt": "Nebbiolo"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "beef",
+      "game",
+      "hard cheese"
+    ],
     "prominence": 29,
     "regions": [
       {
@@ -16829,7 +17251,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "herbs"
     ],
@@ -16951,6 +17373,12 @@
         "quote": "Als typische Aromen werden unter anderem Kräuter-, Stachelbeer- und Heunoten genannt.",
         "value": "herbs",
         "sourceUrl": "https://de.wikipedia.org/wiki/Silvaner"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Vino, svetlo rumenkaste do rumenkasto zelenkaste barve ima srednjo vsebnost alkohola",
+        "value": "medium",
+        "sourceUrl": "https://sl.wikipedia.org/wiki/Zeleni_silvanec"
       }
     ],
     "id": "silvaner",
@@ -17755,6 +18183,24 @@
         "quote": "Malbec (French pronunciation: [malbɛk] ) is a purple grape variety used in making red wine.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Malbec"
+      },
+      {
+        "field": "pairings",
+        "quote": "Краще за все мальбек пасує до традиційних страв аргентинської кухні: свинячих ковбасок чорісо, м'яса на грилі (асадо) та стейку",
+        "value": "sausages",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8C%D0%B1%D0%B5%D0%BA"
+      },
+      {
+        "field": "pairings",
+        "quote": "Краще за все мальбек пасує до традиційних страв аргентинської кухні: свинячих ковбасок чорісо, м'яса на грилі (асадо) та стейку",
+        "value": "grilled meats",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8C%D0%B1%D0%B5%D0%BA"
+      },
+      {
+        "field": "pairings",
+        "quote": "Краще за все мальбек пасує до традиційних страв аргентинської кухні: свинячих ковбасок чорісо, м'яса на грилі (асадо) та стейку",
+        "value": "steak",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8C%D0%B1%D0%B5%D0%BA"
       }
     ],
     "id": "malbec",
@@ -17769,7 +18215,11 @@
       "pt": "Malbec"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "sausages",
+      "grilled meats",
+      "steak"
+    ],
     "prominence": 27,
     "regions": [
       {
@@ -17863,7 +18313,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "strawberry",
       "raspberry",
@@ -17968,6 +18418,18 @@
         "quote": "La vinification de son raisin permet l'élaboration de vins chaleureux, fruités et épicés, assez colorés, mais pauvres en tanins, et peu complexes aromatiquement.",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Gamay"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Vinul astfel produs are procent scăzut de alcool",
+        "value": "low",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/Gamay"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Сорт является основой для создания сухих, столовых и игристых вин",
+        "value": "dry",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D0%BC%D0%B5"
       }
     ],
     "id": "gamay",
@@ -18022,7 +18484,10 @@
         "url": "https://pt.wikipedia.org/wiki/Gamay"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Gamay Noir à Jus Blanc",
@@ -19377,6 +19842,24 @@
         "field": "sweetness",
         "quote": "Kindzmarauli: a natural semi-sweet wine ... Mukuzani: a dry wine",
         "value": "dry-medium"
+      },
+      {
+        "field": "tannin",
+        "quote": "Завдяки високому вмісту танінів, вино має гарний потенціал для витримки",
+        "value": "high",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D0%B5%D1%80%D0%B0%D0%B2%D1%96_(%D1%81%D0%BE%D1%80%D1%82_%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Suchá vína se obecně doporučují podávat k teplým pokrmům z telecího nebo vepřového masa",
+        "value": "veal",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Saperavi"
+      },
+      {
+        "field": "pairings",
+        "quote": "Suchá vína se obecně doporučují podávat k teplým pokrmům z telecího nebo vepřového masa",
+        "value": "pork",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Saperavi"
       }
     ],
     "id": "saperavi",
@@ -19391,7 +19874,10 @@
       "pt": "Saperavi"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "veal",
+      "pork"
+    ],
     "prominence": 25,
     "regions": [
       {
@@ -19546,13 +20032,13 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q1446649",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Saperavi"
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "cherry",
       "blackberry",
@@ -19732,6 +20218,18 @@
         "field": "tannin",
         "quote": "It produces good yields and is known for deep color, full body, low tannins and high levels of acidity",
         "value": "low"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Вината са с високо съдържание на алкохол, киселини и екстракт",
+        "value": "high",
+        "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D0%B0"
+      },
+      {
+        "field": "sweetness",
+        "quote": "На основе барберы вырабатываются сухие столовые вина",
+        "value": "dry",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D0%B0_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     ],
     "id": "barbera",
@@ -19787,7 +20285,10 @@
         "url": "https://pt.wikipedia.org/wiki/Barbera"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Barber a Raspo",
@@ -20022,6 +20523,18 @@
         "field": "alcohol",
         "quote": "its naturally high alcohol levels",
         "value": "high"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Используется для производства широкого спектра вин — от сухих до креплёных и бренди … Из ркацители приготовляются столовые и десертные вина",
+        "value": "dry-sweet",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BA%D0%B0%D1%86%D0%B8%D1%82%D0%B5%D0%BB%D0%B8"
+      },
+      {
+        "field": "pairings",
+        "quote": "Víno se podává chlazené a doporučuje se ke kořeněným pokrmům blízkovýchodní kuchyně",
+        "value": "spicy dishes",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Rkaciteli"
       }
     ],
     "id": "rkatsiteli",
@@ -20036,7 +20549,9 @@
       "pt": "Rkatsiteli"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "spicy dishes"
+    ],
     "prominence": 24,
     "regions": [
       {
@@ -20109,7 +20624,10 @@
         "url": "https://es.wikipedia.org/wiki/Rkatsiteli"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Rkaziteli",
@@ -20262,6 +20780,30 @@
         "field": "sweetness",
         "quote": "in Germany and Austria they can be either dry or sweet",
         "value": "dry-sweet"
+      },
+      {
+        "field": "pairings",
+        "quote": "Відчутний букет та освіжаюча кислота цього вина найкраще підходять до страв з морепродуктів, риби, птиці",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE_%D0%91%D0%BB%D0%B0%D0%BD"
+      },
+      {
+        "field": "pairings",
+        "quote": "Відчутний букет та освіжаюча кислота цього вина найкраще підходять до страв з морепродуктів, риби, птиці",
+        "value": "fish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE_%D0%91%D0%BB%D0%B0%D0%BD"
+      },
+      {
+        "field": "pairings",
+        "quote": "Відчутний букет та освіжаюча кислота цього вина найкраще підходять до страв з морепродуктів, риби, птиці",
+        "value": "poultry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE_%D0%91%D0%BB%D0%B0%D0%BD"
+      },
+      {
+        "field": "origin",
+        "quote": "Amint neve is mutatja, Burgundiából származik.",
+        "value": "FR",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Feh%C3%A9r_burgundi"
       }
     ],
     "id": "pinot-blanc",
@@ -20275,8 +20817,12 @@
       "nl": "Pinot blanc",
       "pt": "Pinot blanc"
     },
-    "origin": null,
-    "pairings": [],
+    "origin": "FR",
+    "pairings": [
+      "seafood",
+      "fish",
+      "poultry"
+    ],
     "prominence": 24,
     "regions": [
       {
@@ -20789,6 +21335,12 @@
         "quote": "Avec un degré alcoolique bon et une acidité élevée",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Petit_verdot"
+      },
+      {
+        "field": "tannin",
+        "quote": "Вината направени от Пети Вердо са с висока плътност, с тъмен, дълбок цвят, високи танини и алкохол",
+        "value": "high",
+        "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%9F%D0%B5%D1%82%D0%B8_%D0%92%D0%B5%D1%80%D0%B4%D0%BE"
       }
     ],
     "id": "petit-verdot",
@@ -20879,7 +21431,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q637453",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Petit_Verdot"
   },
@@ -21048,6 +21600,36 @@
         "field": "acidity",
         "quote": "As a varietal red wine, Pinot Meunier tends to produce slightly jammy, fruity wines with moderate acidity and low tannins",
         "value": "medium"
+      },
+      {
+        "field": "pairings",
+        "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
+        "value": "pork",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Mlyn%C3%A1%C5%99ka_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
+        "value": "lamb",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Mlyn%C3%A1%C5%99ka_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Mlyn%C3%A1%C5%99ka_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
+        "value": "appetizers",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Mlyn%C3%A1%C5%99ka_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
+        "value": "soups",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Mlyn%C3%A1%C5%99ka_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
       }
     ],
     "id": "pinot-meunier",
@@ -21062,7 +21644,13 @@
       "pt": "Pinot meunier"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "pork",
+      "lamb",
+      "cheese",
+      "appetizers",
+      "soups"
+    ],
     "prominence": 21,
     "regions": [
       {
@@ -21313,6 +21901,12 @@
         "field": "sweetness",
         "quote": "Viognier wines are predominantly dry, although sweet late-harvest dessert wines have been made",
         "value": "dry-sweet"
+      },
+      {
+        "field": "origin",
+        "quote": "Viognier este un soi de struguri care provine din sudul Franței.",
+        "value": "FR",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/Viognier"
       }
     ],
     "id": "viognier",
@@ -21326,7 +21920,7 @@
       "nl": "Viognier",
       "pt": "Viognier"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [
       "thai cuisine"
     ],
@@ -21552,8 +22146,11 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "fruity",
+      "spice"
+    ],
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -21679,6 +22276,24 @@
         "quote": "Die besten reinsortigen Weine aus dieser Rebe werden im südungarischen Villány, besonders aber in der Region Szekszárd gekeltert.",
         "value": "HU: Szekszárd",
         "sourceUrl": "https://de.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "body",
+        "quote": "puna rubinska boja, srednje tijelo",
+        "value": "medium",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "aromas",
+        "quote": "Powstałe z kadarki wino charakteryzuje się czerwonym lub ciemnoczerwonym kolorem, jest przyjemnie lekkie i owocowe, bogatsze z taninową i korzenną nutą na południu",
+        "value": "fruity",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "aromas",
+        "quote": "Powstałe z kadarki wino charakteryzuje się czerwonym lub ciemnoczerwonym kolorem, jest przyjemnie lekkie i owocowe, bogatsze z taninową i korzenną nutą na południu",
+        "value": "spice",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Kadarka"
       }
     ],
     "id": "kadarka",
@@ -21830,8 +22445,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kadarka"
   },
   {
-    "acidity": null,
-    "alcohol": null,
+    "acidity": "high",
+    "alcohol": "medium",
     "aromas": [
       "floral",
       "fruity",
@@ -22043,6 +22658,30 @@
         "quote": "Während rund um den Neusiedler See eher Süßweine ausgebaut werden, dient die Traube in der Steiermark und im Weinviertel als Grundlage für trockene Weine",
         "value": "dry-sweet",
         "sourceUrl": "https://de.wikipedia.org/wiki/Welschriesling"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Vino graševine je najčešće slamnatožute boje, izraženog mirisa, suho, srednjeg sadržaja alkohola i ekstrakta",
+        "value": "medium",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Gra%C5%A1evina"
+      },
+      {
+        "field": "acidity",
+        "quote": "Vino ima dokaj visoko stopnjo kisline (7 do 7,6 g/l)",
+        "value": "high",
+        "sourceUrl": "https://sl.wikipedia.org/wiki/La%C5%A1ki_rizling"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина гарно поєднуються зі стравами з морепродуктів, солодкі — з морозивом та десертами",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D1%8C%D1%88%D1%80%D0%B8%D1%81%D0%BB%D1%96%D0%BD%D0%B3"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина гарно поєднуються зі стравами з морепродуктів, солодкі — з морозивом та десертами",
+        "value": "desserts",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D1%8C%D1%88%D1%80%D0%B8%D1%81%D0%BB%D1%96%D0%BD%D0%B3"
       }
     ],
     "id": "italian-riesling",
@@ -22057,7 +22696,10 @@
       "pt": "Italian Riesling"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "seafood",
+      "desserts"
+    ],
     "prominence": 20,
     "regions": [
       {
@@ -22233,7 +22875,7 @@
       "lemon",
       "herbs"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -22405,6 +23047,12 @@
         "field": "sweetness",
         "quote": "Aligoté is a white grape used to make dry white wines",
         "value": "dry"
+      },
+      {
+        "field": "body",
+        "quote": "Obecně je Aligoté živější víno středního těla s vyšší aciditou",
+        "value": "medium",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Aligot%C3%A9"
       }
     ],
     "id": "aligote",
@@ -22571,7 +23219,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aligot%C3%A9"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": null,
     "aromas": [
       "blackberry",
@@ -22666,6 +23314,24 @@
         "field": "sweetness",
         "quote": "Flavour: dry, slightly acidic, rounded, warm and full-bodied.",
         "value": "dry"
+      },
+      {
+        "field": "acidity",
+        "quote": "Вино має повне тіло, відносно невелику кислотність та м'які таніни",
+        "value": "low",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
+      },
+      {
+        "field": "pairings",
+        "quote": "Неро д'Авола гарно поєднується зі стравами з м'яса, пастою, тушкованими овочами",
+        "value": "pasta",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
+      },
+      {
+        "field": "pairings",
+        "quote": "Неро д'Авола гарно поєднується зі стравами з м'яса, пастою, тушкованими овочами",
+        "value": "vegetables",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
       }
     ],
     "id": "nero-d-avola",
@@ -22680,7 +23346,10 @@
       "pt": "Nero d'Avola"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "pasta",
+      "vegetables"
+    ],
     "prominence": 20,
     "regions": [
       {
@@ -22776,8 +23445,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nero_d'Avola"
   },
   {
-    "acidity": null,
-    "alcohol": null,
+    "acidity": "low",
+    "alcohol": "low",
     "aromas": [
       "fruity",
       "mineral"
@@ -22888,6 +23557,18 @@
         "field": "sweetness",
         "quote": "Chasselas is mostly vinified to be a full, dry and fruity white wine.",
         "value": "dry"
+      },
+      {
+        "field": "acidity",
+        "quote": "Z odrůdy získáváme velmi lehká, víceméně neutrální vína, chudá na kyseliny",
+        "value": "low",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Chrupka_b%C3%ADl%C3%A1"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Z odrůdy získáváme velmi lehká, víceméně neutrální vína, chudá na kyseliny, s nižším obsahem alkoholu",
+        "value": "low",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Chrupka_b%C3%ADl%C3%A1"
       }
     ],
     "id": "chasselas",
@@ -23589,6 +24270,12 @@
         "field": "regions",
         "quote": "In Basilicata, Aglianico is the basis of the Aglianico del Vulture DOC ... In Campania, the area ... The grape has also recently been planted in Australia, California, and Texas ... Producers in Sierra Foothills, McLaren Vale, Margaret River, Mudgee and Riverland ... trialled in Arizona and in Ontario, Canada",
         "value": "CA: Ontario"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Сорт слугує основою у виробництві вин: сухих і столових",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D1%8F%D0%BD%D1%96%D0%BA%D0%BE"
       }
     ],
     "id": "aglianico",
@@ -23687,7 +24374,10 @@
         "url": "https://pt.wikipedia.org/wiki/Aglianico"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Aglianco di Puglia",
@@ -23995,6 +24685,12 @@
         "field": "alcohol",
         "quote": "offering crunchy red berry flavors at low alcohols",
         "value": "low"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Зазвичай він використовується для створення купажів сухих червоних вин",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BD%D1%81%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     ],
     "id": "cinsaut",
@@ -24060,7 +24756,10 @@
         "url": "https://pt.wikipedia.org/wiki/Cinsault"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Black Malvoisie",
@@ -24148,7 +24847,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cinsaut"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "smoky",
@@ -24296,6 +24995,18 @@
         "field": "regions",
         "quote": "In addition to South Africa, Pinotage is also grown in Brazil, Canada, Germany, Israel, New Zealand, Switzerland, the United States and Zimbabwe",
         "value": "ZW: Zimbabwe"
+      },
+      {
+        "field": "acidity",
+        "quote": "Молоді вина мають виражений фруктовий смак та відносно високу кислотність",
+        "value": "high",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE%D1%82%D0%B0%D0%B6"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Цей сорт винограду зазвичай використовується для виробництва сухих червоних",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE%D1%82%D0%B0%D0%B6"
       }
     ],
     "id": "pinotage",
@@ -24392,7 +25103,10 @@
         "url": "https://es.wikipedia.org/wiki/Pinotage"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Perold's Hermitage x Pinot",
@@ -24492,6 +25206,12 @@
         "field": "regions",
         "quote": "It is possible that Blaufränkisch ... is the second most important red grape variety after Zweigelt, with ... Burgenland ... In Hungary, the grape is known as Kékfrankos ... In Germany, there are ... Württemberg ... In the New World Blaufränkisch is found in the Australian wine region of the Adelaide Hills ... The grape can be found across the United States ... Washington State ...",
         "value": "AU: Adelaide Hills"
+      },
+      {
+        "field": "sweetness",
+        "quote": "melyből tipikusan savhangsúlyos, gyümölcsös, tanninban közepesen gazdag, fűszeres karakterű száraz vörösborokat készítenek",
+        "value": "dry",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/K%C3%A9kfrankos"
       }
     ],
     "id": "blaufrankisch",
@@ -24570,7 +25290,10 @@
         "url": "https://es.wikipedia.org/wiki/Blaufr%C3%A4nkisch"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Franconia",
@@ -24733,6 +25456,24 @@
         "quote": "Il vino tende ad essere di colore più scuro rispetto al Pinot nero coltivato nella stessa zona e produce un raccolto più ampio del Pinot nero.",
         "value": "still",
         "sourceUrl": "https://it.wikipedia.org/wiki/Zweigelt"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Зазвичай виробляють сухі вина, крім того крижане вино та десертні вина",
+        "value": "dry-sweet",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A6%D0%B2%D0%B0%D0%B9%D0%B3%D0%B5%D0%BB%D1%8C%D1%82"
+      },
+      {
+        "field": "pairings",
+        "quote": "Vína doprovázejí bez problémů nejrůznější masité pokrmy i vydatné sýry, případně těstoviny",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Zweigeltrebe"
+      },
+      {
+        "field": "pairings",
+        "quote": "Vína doprovázejí bez problémů nejrůznější masité pokrmy i vydatné sýry, případně těstoviny",
+        "value": "pasta",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Zweigeltrebe"
       }
     ],
     "id": "zweigelt",
@@ -24747,7 +25488,10 @@
       "pt": "Zweigelt"
     },
     "origin": "AT",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "pasta"
+    ],
     "prominence": 18,
     "regions": [
       {
@@ -24827,7 +25571,10 @@
         "url": "https://es.wikipedia.org/wiki/Zweigelt"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Rotburger",
@@ -24848,7 +25595,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "red berry",
       "jammy",
@@ -24961,6 +25708,12 @@
         "quote": "avec des viandes grillées et avec des fromages au goût prononcé",
         "value": "cheese",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Vranac"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Zawartość alkoholu jest wysoka, smak pełny, charakterystyczny taninowy",
+        "value": "high",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Vranac"
       }
     ],
     "id": "vranec",
@@ -25485,6 +26238,18 @@
         "quote": "En boca són vins amb cos, càlids (alt grau alcohòlic)",
         "value": "high",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Negroamaro"
+      },
+      {
+        "field": "tannin",
+        "quote": "Негроамаро даёт красные вина с высоким содержанием алкоголя и танинов",
+        "value": "high",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B3%D1%80%D0%BE%D0%B0%D0%BC%D0%B0%D1%80%D0%BE"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Здебільшого виробляються сухі червоні вина",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B3%D1%80%D0%BE%D0%B0%D0%BC%D0%B0%D1%80%D0%BE"
       }
     ],
     "id": "negroamaro",
@@ -25551,7 +26316,10 @@
         "url": "https://en.wikipedia.org/wiki/Negroamaro"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Abbruzzese",
@@ -25626,14 +26394,18 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q936512",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Negroamaro"
   },
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "floral",
+      "cherry",
+      "blackcurrant"
+    ],
     "body": "low",
     "color": "red",
     "evidence": [
@@ -25772,6 +26544,72 @@
         "quote": "Die Sorte liefert säurearme, milde Rotweine mit vergleichsweise wenig Tannin, welche schnell trinkfertig sind.",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Blauer_Portugieser"
+      },
+      {
+        "field": "pairings",
+        "quote": "Jsou vhodná k pokrmům jako drůbeží maso, biftek, bažant, kachna, husa, zajíc na divoko, sýrový nářez, těstoviny, šunka, salám",
+        "value": "poultry",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "pairings",
+        "quote": "Jsou vhodná k pokrmům jako drůbeží maso, biftek, bažant, kachna, husa, zajíc na divoko, sýrový nářez, těstoviny, šunka, salám",
+        "value": "steak",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "pairings",
+        "quote": "Jsou vhodná k pokrmům jako drůbeží maso, biftek, bažant, kachna, husa, zajíc na divoko, sýrový nářez, těstoviny, šunka, salám",
+        "value": "game",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "pairings",
+        "quote": "Jsou vhodná k pokrmům jako drůbeží maso, biftek, bažant, kachna, husa, zajíc na divoko, sýrový nářez, těstoviny, šunka, salám",
+        "value": "duck",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "pairings",
+        "quote": "Jsou vhodná k pokrmům jako drůbeží maso, biftek, bažant, kachna, husa, zajíc na divoko, sýrový nářez, těstoviny, šunka, salám",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "pairings",
+        "quote": "Jsou vhodná k pokrmům jako drůbeží maso, biftek, bažant, kachna, husa, zajíc na divoko, sýrový nářez, těstoviny, šunka, salám",
+        "value": "pasta",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "pairings",
+        "quote": "Jsou vhodná k pokrmům jako drůbeží maso, biftek, bažant, kachna, husa, zajíc na divoko, sýrový nářez, těstoviny, šunka, salám",
+        "value": "ham",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "pairings",
+        "quote": "Jsou vhodná k pokrmům jako drůbeží maso, biftek, bažant, kachna, husa, zajíc na divoko, sýrový nářez, těstoviny, šunka, salám",
+        "value": "cured meats",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "aromas",
+        "quote": "Ve vůni a chuti můžeme hledat květiny, čerstvé seno, třešně, cassis",
+        "value": "floral",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "aromas",
+        "quote": "Ve vůni a chuti můžeme hledat květiny, čerstvé seno, třešně, cassis",
+        "value": "cherry",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "field": "aromas",
+        "quote": "Ve vůni a chuti můžeme hledat květiny, čerstvé seno, třešně, cassis",
+        "value": "blackcurrant",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
       }
     ],
     "id": "blauer-portugieser",
@@ -25786,7 +26624,16 @@
       "pt": "Blauer Portugieser"
     },
     "origin": "SI",
-    "pairings": [],
+    "pairings": [
+      "poultry",
+      "steak",
+      "game",
+      "duck",
+      "cheese",
+      "pasta",
+      "ham",
+      "cured meats"
+    ],
     "prominence": 17,
     "regions": [
       {
@@ -25998,6 +26845,24 @@
         "quote": "Es un vino seco y cuenta un aroma intenso y floral.",
         "value": "floral",
         "sourceUrl": "https://es.wikipedia.org/wiki/Palomino_(vid)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухий херес вживається як аперитив, гарно поєднується зі стравами з морепродуктів та сирами",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BB%D0%BE%D0%BC%D1%96%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухий херес вживається як аперитив, гарно поєднується зі стравами з морепродуктів та сирами",
+        "value": "cheese",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BB%D0%BE%D0%BC%D1%96%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "origin",
+        "quote": "Odmiana pochodzi z Hiszpanii, a bardziej szczegółowe informacje wskazują na Andaluzję",
+        "value": "ES",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Palomino_fino"
       }
     ],
     "id": "palomino",
@@ -26011,8 +26876,11 @@
       "nl": "Palomino",
       "pt": "Palomino"
     },
-    "origin": null,
-    "pairings": [],
+    "origin": "ES",
+    "pairings": [
+      "seafood",
+      "cheese"
+    ],
     "prominence": 17,
     "regions": [
       {
@@ -26365,6 +27233,12 @@
         "quote": "é utilizada essencialmente para produzir vinhos secos de corpo médio",
         "value": "medium",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Dolcetto"
+      },
+      {
+        "field": "origin",
+        "quote": "Dolcetto – czerwony szczep winorośli, pochodzący z Włoch.",
+        "value": "IT",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Dolcetto"
       }
     ],
     "id": "dolcetto",
@@ -26378,7 +27252,7 @@
       "nl": "Dolcetto",
       "pt": "Dolcetto"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "pasta",
       "pizza"
@@ -27574,7 +28448,7 @@
     "aromas": [
       "grape"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -27677,6 +28551,48 @@
         "quote": "Les vins issus de ce cépage ressemblent au riesling, ont de hautes teneurs en sucre, sont assez acides avec parfois un léger arôme de muscade.",
         "value": "still",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Kerner_(c%C3%A9page)"
+      },
+      {
+        "field": "body",
+        "quote": "Typická vína mají zelenožlutou až slámově žlutou barvu a plné tělo",
+        "value": "high",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Kerner_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "ga pogosto pridelujejo z ostankom naravnega nepovretega sladkorja kot polsladko ali sladko vino, lahko pa je tudi v polsuhi izvedbi",
+        "value": "medium-sweet",
+        "sourceUrl": "https://sl.wikipedia.org/wiki/Kerner"
+      },
+      {
+        "field": "pairings",
+        "quote": "lepo pa se prilega k sladicam, sirom in jedem iz svinjine, teletine in jangjetine",
+        "value": "desserts",
+        "sourceUrl": "https://sl.wikipedia.org/wiki/Kerner"
+      },
+      {
+        "field": "pairings",
+        "quote": "lepo pa se prilega k sladicam, sirom in jedem iz svinjine, teletine in jangjetine",
+        "value": "cheese",
+        "sourceUrl": "https://sl.wikipedia.org/wiki/Kerner"
+      },
+      {
+        "field": "pairings",
+        "quote": "lepo pa se prilega k sladicam, sirom in jedem iz svinjine, teletine in jangjetine",
+        "value": "pork",
+        "sourceUrl": "https://sl.wikipedia.org/wiki/Kerner"
+      },
+      {
+        "field": "pairings",
+        "quote": "lepo pa se prilega k sladicam, sirom in jedem iz svinjine, teletine in jangjetine",
+        "value": "veal",
+        "sourceUrl": "https://sl.wikipedia.org/wiki/Kerner"
+      },
+      {
+        "field": "pairings",
+        "quote": "lepo pa se prilega k sladicam, sirom in jedem iz svinjine, teletine in jangjetine",
+        "value": "lamb",
+        "sourceUrl": "https://sl.wikipedia.org/wiki/Kerner"
       }
     ],
     "id": "kerner",
@@ -27691,7 +28607,13 @@
       "pt": "Kerner"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "desserts",
+      "cheese",
+      "pork",
+      "veal",
+      "lamb"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -27770,7 +28692,10 @@
         "url": "https://es.wikipedia.org/wiki/Kerner_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "medium",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Herold Triumpf",
@@ -28261,6 +29186,18 @@
         "field": "sweetness",
         "quote": "The white wines made from the Arneis grape tend to be dry and full bodied",
         "value": "dry"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднується з рибними та овочевими стравами",
+        "value": "fish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D1%80%D0%BD%D0%B5%D1%97%D1%81"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднується з рибними та овочевими стравами",
+        "value": "vegetables",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D1%80%D0%BD%D0%B5%D1%97%D1%81"
       }
     ],
     "id": "arneis",
@@ -28275,7 +29212,10 @@
       "pt": "Arneis"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "vegetables"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -28697,7 +29637,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "guava"
@@ -28850,6 +29790,12 @@
         "quote": "Il est originaire des Charentes, plus précisément des Borderies, un cru de cognac au nord de Cognac.",
         "value": "FR",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Colombar_(c%C3%A9page)"
+      },
+      {
+        "field": "acidity",
+        "quote": "Użyciu colombard do destylacji sprzyja zachowanie wysokiej kwasowości mimo plenności i cieplejszego klimatu",
+        "value": "high",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Colombard"
       }
     ],
     "id": "colombard",
@@ -29358,7 +30304,13 @@
   {
     "acidity": "high",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "red fruit",
+      "strawberry",
+      "plum",
+      "olive",
+      "dried fruit"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -29446,6 +30398,36 @@
         "field": "regions",
         "quote": "This grape is primarily cultivated in Naousa, Goumenissa, Amyntaio, Rapsani, Trikomo, Siatista, Velventos, and, on a lesser scale, on Mount Athos, at Ossa, Ioannina, Magnesia, Kastoria ...",
         "value": "GR: Kastoria"
+      },
+      {
+        "field": "aromas",
+        "quote": "Обычно, во вкусе можно обнаружить красные фрукты и ягоды, например, клубника и слива, но с возрастом вкус меняется в сторону более пикантных тонов томатов, оливок и сухофруктов",
+        "value": "red fruit",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9A%D1%81%D0%B8%D0%BD%D0%BE%D0%BC%D0%B0%D0%B2%D1%80%D0%BE"
+      },
+      {
+        "field": "aromas",
+        "quote": "Обычно, во вкусе можно обнаружить красные фрукты и ягоды, например, клубника и слива, но с возрастом вкус меняется в сторону более пикантных тонов томатов, оливок и сухофруктов",
+        "value": "strawberry",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9A%D1%81%D0%B8%D0%BD%D0%BE%D0%BC%D0%B0%D0%B2%D1%80%D0%BE"
+      },
+      {
+        "field": "aromas",
+        "quote": "Обычно, во вкусе можно обнаружить красные фрукты и ягоды, например, клубника и слива, но с возрастом вкус меняется в сторону более пикантных тонов томатов, оливок и сухофруктов",
+        "value": "plum",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9A%D1%81%D0%B8%D0%BD%D0%BE%D0%BC%D0%B0%D0%B2%D1%80%D0%BE"
+      },
+      {
+        "field": "aromas",
+        "quote": "Обычно, во вкусе можно обнаружить красные фрукты и ягоды, например, клубника и слива, но с возрастом вкус меняется в сторону более пикантных тонов томатов, оливок и сухофруктов",
+        "value": "olive",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9A%D1%81%D0%B8%D0%BD%D0%BE%D0%BC%D0%B0%D0%B2%D1%80%D0%BE"
+      },
+      {
+        "field": "aromas",
+        "quote": "Обычно, во вкусе можно обнаружить красные фрукты и ягоды, например, клубника и слива, но с возрастом вкус меняется в сторону более пикантных тонов томатов, оливок и сухофруктов",
+        "value": "dried fruit",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9A%D1%81%D0%B8%D0%BD%D0%BE%D0%BC%D0%B0%D0%B2%D1%80%D0%BE"
       }
     ],
     "id": "xinomavro",
@@ -29707,6 +30689,42 @@
         "quote": "Ihre etwas körperarmen Weine sind für ihren einem Muskateller ähnlichen Geschmack bekannt.",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Torront%C3%A9s"
+      },
+      {
+        "field": "pairings",
+        "quote": "він також гарно поєднується зі стравами з риби й морепродуктів, пряними стравами індійської, китайської і тайської кухні",
+        "value": "fish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D1%81"
+      },
+      {
+        "field": "pairings",
+        "quote": "він також гарно поєднується зі стравами з риби й морепродуктів, пряними стравами індійської, китайської і тайської кухні",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D1%81"
+      },
+      {
+        "field": "pairings",
+        "quote": "він також гарно поєднується зі стравами з риби й морепродуктів, пряними стравами індійської, китайської і тайської кухні",
+        "value": "spicy dishes",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D1%81"
+      },
+      {
+        "field": "pairings",
+        "quote": "він також гарно поєднується зі стравами з риби й морепродуктів, пряними стравами індійської, китайської і тайської кухні",
+        "value": "indian cuisine",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D1%81"
+      },
+      {
+        "field": "pairings",
+        "quote": "він також гарно поєднується зі стравами з риби й морепродуктів, пряними стравами індійської, китайської і тайської кухні",
+        "value": "chinese cuisine",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D1%81"
+      },
+      {
+        "field": "pairings",
+        "quote": "він також гарно поєднується зі стравами з риби й морепродуктів, пряними стравами індійської, китайської і тайської кухні",
+        "value": "thai cuisine",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D1%81"
       }
     ],
     "id": "torrontes",
@@ -29721,7 +30739,14 @@
       "pt": "Torrontés"
     },
     "origin": "AR",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood",
+      "spicy dishes",
+      "indian cuisine",
+      "chinese cuisine",
+      "thai cuisine"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -29840,8 +30865,11 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "floral",
+      "jasmine"
+    ],
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -29968,6 +30996,48 @@
         "field": "sweetness",
         "quote": "The wines are dry and fresh and have acidity and specific flavour.",
         "value": "dry"
+      },
+      {
+        "field": "body",
+        "quote": "Bora diszkréten muskotályos illatú vagy virágillatú (jázmin, petúnia, kökörcsin), finom, harmonikus, testes",
+        "value": "high",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Kir%C3%A1lyle%C3%A1nyka"
+      },
+      {
+        "field": "pairings",
+        "quote": "asociat cu mâncăruri ușoare pe bază de pește, fructe de mare, brânzeturi dulci nefermentate, carne albă",
+        "value": "fish",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/Feteasc%C4%83_regal%C4%83"
+      },
+      {
+        "field": "pairings",
+        "quote": "asociat cu mâncăruri ușoare pe bază de pește, fructe de mare, brânzeturi dulci nefermentate, carne albă",
+        "value": "seafood",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/Feteasc%C4%83_regal%C4%83"
+      },
+      {
+        "field": "pairings",
+        "quote": "asociat cu mâncăruri ușoare pe bază de pește, fructe de mare, brânzeturi dulci nefermentate, carne albă",
+        "value": "fresh cheese",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/Feteasc%C4%83_regal%C4%83"
+      },
+      {
+        "field": "pairings",
+        "quote": "asociat cu mâncăruri ușoare pe bază de pește, fructe de mare, brânzeturi dulci nefermentate, carne albă",
+        "value": "white meat",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/Feteasc%C4%83_regal%C4%83"
+      },
+      {
+        "field": "aromas",
+        "quote": "Bora diszkréten muskotályos illatú vagy virágillatú (jázmin, petúnia, kökörcsin)",
+        "value": "floral",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Kir%C3%A1lyle%C3%A1nyka"
+      },
+      {
+        "field": "aromas",
+        "quote": "Bora diszkréten muskotályos illatú vagy virágillatú (jázmin, petúnia, kökörcsin)",
+        "value": "jasmine",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Kir%C3%A1lyle%C3%A1nyka"
       }
     ],
     "id": "feteasca-regala",
@@ -29982,7 +31052,12 @@
       "pt": "Fetească regală"
     },
     "origin": "RO",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood",
+      "fresh cheese",
+      "white meat"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -30900,7 +31975,7 @@
       "peach",
       "apricot"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -31053,6 +32128,30 @@
         "quote": "Die früh reifende Sorte erbringt alkoholreich sehr duftige Weine",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Feteasc%C4%83_Alb%C4%83"
+      },
+      {
+        "field": "body",
+        "quote": "Bora gyakran nektárillatú, testes, de kissé lágy",
+        "value": "high",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Le%C3%A1nyka"
+      },
+      {
+        "field": "pairings",
+        "quote": "Az egri leánykát szárnyasokhoz, borjú- és báránysülthöz ajánlják",
+        "value": "poultry",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Le%C3%A1nyka"
+      },
+      {
+        "field": "pairings",
+        "quote": "Az egri leánykát szárnyasokhoz, borjú- és báránysülthöz ajánlják",
+        "value": "veal",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Le%C3%A1nyka"
+      },
+      {
+        "field": "pairings",
+        "quote": "Az egri leánykát szárnyasokhoz, borjú- és báránysülthöz ajánlják",
+        "value": "lamb",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Le%C3%A1nyka"
       }
     ],
     "id": "feteasca-alba",
@@ -31067,7 +32166,11 @@
       "nl": "Fetească albă"
     },
     "origin": "RO",
-    "pairings": [],
+    "pairings": [
+      "poultry",
+      "veal",
+      "lamb"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -31695,6 +32798,36 @@
         "quote": "In Kanada erzeugen Winzer neben trockenen, fruchtigen Weinen vereinzelt auch edelsüße Eisweine aus dem Savagnin.",
         "value": "dry-sweet",
         "sourceUrl": "https://de.wikipedia.org/wiki/Savagnin"
+      },
+      {
+        "field": "pairings",
+        "quote": "K „Vin Jaune“ se doporučuje jako ideální partner sýr Comte, nebo pstruh či humr připravený právě na žlutém víně, případně husí játra (Foie Gras) či kachna na pomerančích",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Tram%C3%ADn_b%C3%ADl%C3%BD"
+      },
+      {
+        "field": "pairings",
+        "quote": "K „Vin Jaune“ se doporučuje jako ideální partner sýr Comte, nebo pstruh či humr připravený právě na žlutém víně, případně husí játra (Foie Gras) či kachna na pomerančích",
+        "value": "fish",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Tram%C3%ADn_b%C3%ADl%C3%BD"
+      },
+      {
+        "field": "pairings",
+        "quote": "K „Vin Jaune“ se doporučuje jako ideální partner sýr Comte, nebo pstruh či humr připravený právě na žlutém víně, případně husí játra (Foie Gras) či kachna na pomerančích",
+        "value": "lobster",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Tram%C3%ADn_b%C3%ADl%C3%BD"
+      },
+      {
+        "field": "pairings",
+        "quote": "K „Vin Jaune“ se doporučuje jako ideální partner sýr Comte, nebo pstruh či humr připravený právě na žlutém víně, případně husí játra (Foie Gras) či kachna na pomerančích",
+        "value": "foie gras",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Tram%C3%ADn_b%C3%ADl%C3%BD"
+      },
+      {
+        "field": "pairings",
+        "quote": "K „Vin Jaune“ se doporučuje jako ideální partner sýr Comte, nebo pstruh či humr připravený právě na žlutém víně, případně husí játra (Foie Gras) či kachna na pomerančích",
+        "value": "duck",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Tram%C3%ADn_b%C3%ADl%C3%BD"
       }
     ],
     "id": "savagnin",
@@ -31709,7 +32842,13 @@
       "pt": "Savagnin"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "fish",
+      "lobster",
+      "foie gras",
+      "duck"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -32625,7 +33764,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Roussanne"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "red berry",
@@ -32756,6 +33895,18 @@
         "quote": "Der Wein ist von mittlerem Körper und weist einen intensiven Duft nach Waldbeeren und Schwarzkirschen auf.",
         "value": "black cherry",
         "sourceUrl": "https://de.wikipedia.org/wiki/St._Laurent"
+      },
+      {
+        "field": "acidity",
+        "quote": "Вина обладают тенденцией к повышенной кислотности",
+        "value": "high",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BD-%D0%9B%D0%BE%D1%80%D0%B0%D0%BD_(%D1%81%D0%BE%D1%80%D1%82_%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D0%B0)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Velmi dobře se hodí jako doprovod tmavého masa a sýrů s intenzivní chutí",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Svatovav%C5%99ineck%C3%A9"
       }
     ],
     "id": "st-laurent",
@@ -32770,7 +33921,9 @@
       "nl": "St. Laurent"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 13,
     "regions": [
       {
@@ -33183,7 +34336,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "sour cherry",
       "fruity"
@@ -33270,6 +34423,42 @@
         "field": "regions",
         "quote": "It is cultivated in Moldova in the regions of Orhei, Anenii Noi, Straseni, Ialoveni and in Romania in the regions of Moldavia, Dobruja and Wallachia... Băbească neagră can be found on limited acreages in the Finger Lakes region of New York State...",
         "value": "US: Finger Lakes (New York)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Datorită conținutului moderat de alcool și acidității ridicate, vinurile din Băbească neagră se pretează",
+        "value": "medium",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Серексия чёрная используется для приготовления сухих вин и соков",
+        "value": "dry",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%B5%D0%BA%D1%81%D0%B8%D1%8F_%D1%87%D1%91%D1%80%D0%BD%D0%B0%D1%8F"
+      },
+      {
+        "field": "pairings",
+        "quote": "Se consumă de preferință la preparate din carne - pui fript sau la cuptor, frigărui, cotlet de miel sau friptură de vițel",
+        "value": "chicken",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
+      },
+      {
+        "field": "pairings",
+        "quote": "Se consumă de preferință la preparate din carne - pui fript sau la cuptor, frigărui, cotlet de miel sau friptură de vițel",
+        "value": "grilled meats",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
+      },
+      {
+        "field": "pairings",
+        "quote": "Se consumă de preferință la preparate din carne - pui fript sau la cuptor, frigărui, cotlet de miel sau friptură de vițel",
+        "value": "lamb",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
+      },
+      {
+        "field": "pairings",
+        "quote": "Se consumă de preferință la preparate din carne - pui fript sau la cuptor, frigărui, cotlet de miel sau friptură de vițel",
+        "value": "veal",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
       }
     ],
     "id": "babeasca-neagra",
@@ -33284,7 +34473,12 @@
       "pt": "Băbească Neagră"
     },
     "origin": "RO",
-    "pairings": [],
+    "pairings": [
+      "chicken",
+      "grilled meats",
+      "lamb",
+      "veal"
+    ],
     "prominence": 13,
     "regions": [
       {
@@ -33360,7 +34554,10 @@
         "url": "https://en.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q476277",
@@ -33755,6 +34952,36 @@
         "field": "regions",
         "quote": "Verdicchio ... grown primarily in the Marche region of central Italy... while Verdicchio is widely grown throughout the Marche, Umbria and Lazio regions",
         "value": "IT: Lazio"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З вердикіо зазвичай виготовляють купажні сухі вина",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B8%D0%BA%D1%96%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина вживаються у вигляді аперитиву, гарно поєднуються з ризото, м'якими сирами, рибними стравами та стравами з морепродуктів",
+        "value": "risotto",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B8%D0%BA%D1%96%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина вживаються у вигляді аперитиву, гарно поєднуються з ризото, м'якими сирами, рибними стравами та стравами з морепродуктів",
+        "value": "soft cheese",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B8%D0%BA%D1%96%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина вживаються у вигляді аперитиву, гарно поєднуються з ризото, м'якими сирами, рибними стравами та стравами з морепродуктів",
+        "value": "fish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B8%D0%BA%D1%96%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "Сухі вина вживаються у вигляді аперитиву, гарно поєднуються з ризото, м'якими сирами, рибними стравами та стравами з морепродуктів",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B8%D0%BA%D1%96%D0%BE"
       }
     ],
     "id": "verdicchio",
@@ -33769,7 +34996,12 @@
       "pt": "Verdicchio"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "risotto",
+      "soft cheese",
+      "fish",
+      "seafood"
+    ],
     "prominence": 13,
     "regions": [
       {
@@ -33824,7 +35056,10 @@
         "url": "https://en.wikipedia.org/wiki/Verdicchio"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q1937755",
@@ -33956,6 +35191,30 @@
         "quote": "Hoy, muchos de los ejemplares de dornfelder se fermentan secos",
         "value": "dry",
         "sourceUrl": "https://es.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "pairings",
+        "quote": "Svěží vína se hodí k těstovinám, plná vína podáváme k těžším či kořeněným úpravám masa, grilovaným pokrmům, zvěřině a výrazným sýrům",
+        "value": "pasta",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "pairings",
+        "quote": "Svěží vína se hodí k těstovinám, plná vína podáváme k těžším či kořeněným úpravám masa, grilovaným pokrmům, zvěřině a výrazným sýrům",
+        "value": "grilled meats",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "pairings",
+        "quote": "Svěží vína se hodí k těstovinám, plná vína podáváme k těžším či kořeněným úpravám masa, grilovaným pokrmům, zvěřině a výrazným sýrům",
+        "value": "game",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "field": "pairings",
+        "quote": "Svěží vína se hodí k těstovinám, plná vína podáváme k těžším či kořeněným úpravám masa, grilovaným pokrmům, zvěřině a výrazným sýrům",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Dornfelder"
       }
     ],
     "id": "dornfelder",
@@ -33970,7 +35229,12 @@
       "pt": "Dornfelder"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "pasta",
+      "grilled meats",
+      "game",
+      "cheese"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -34689,6 +35953,12 @@
         "quote": "Le graciano est un cépage noir espagnol originaire de la région viticole de la Rioja.",
         "value": "ES",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Graciano_(c%C3%A9page)"
+      },
+      {
+        "field": "tannin",
+        "quote": "Czyste graciano cechuje się wysoką kwasowością i zawartością garbników",
+        "value": "high",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Graciano"
       }
     ],
     "id": "graciano",
@@ -34866,7 +36136,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q119794",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Graciano"
   },
@@ -34922,6 +36192,12 @@
         "quote": "Los vinos son moderadamente alcohólicos.",
         "value": "medium",
         "sourceUrl": "https://es.wikipedia.org/wiki/Verdejo"
+      },
+      {
+        "field": "origin",
+        "quote": "Вердехо є автохтонним іспанським сортом, найбільш розповсюджений у регіоні Руеда у центральній частині Іспанії (Кастилія-Леон).",
+        "value": "ES",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B5%D1%85%D0%BE"
       }
     ],
     "id": "verdejo",
@@ -34935,7 +36211,7 @@
       "nl": "Verdejo",
       "pt": "Verdejo"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 12,
     "regions": [
@@ -35125,6 +36401,12 @@
         "field": "sweetness",
         "quote": "While historically linked to sweet, fortified wines, contemporary production also includes dry red wines made from Mavrodaphne",
         "value": "dry-sweet"
+      },
+      {
+        "field": "pairings",
+        "quote": "Víno je vhodné ke sladkým pokrmům, případně jako aperitiv",
+        "value": "desserts",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Mavrodaphne"
       }
     ],
     "id": "mavrodafni",
@@ -35139,7 +36421,9 @@
       "pt": "Mavrodafni"
     },
     "origin": "GR",
-    "pairings": [],
+    "pairings": [
+      "desserts"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -35308,6 +36592,12 @@
         "field": "regions",
         "quote": "Cultivation of Lagrein in South Tyrol ...; ... in Australia ...; ... in the Central Coast of California ...; ... in the Umpqua Valley AVA ...; ... in the Willamette Valley ...; ... in the Similkameen Valley in British Columbia ...",
         "value": "CA: Similkameen Valley"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Лагрейн — сорт чёрного винограда, используемый для производства сухих красных вин",
+        "value": "dry",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%B3%D1%80%D0%B5%D0%B9%D0%BD"
       }
     ],
     "id": "lagrein",
@@ -35387,7 +36677,10 @@
         "url": "https://es.wikipedia.org/wiki/Lagrein"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": "high",
     "wikidataId": "Q1440662",
@@ -36523,7 +37816,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "spice",
       "fruity",
@@ -36745,6 +38038,18 @@
         "quote": "В аромате фруктовые и цветочные тона, яблоки, груши, ноты шалфея, тимьяна, мяты.",
         "value": "mint",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Вина получаются освежающие, с высокой кислотностью и высоким алкоголем",
+        "value": "high",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D0%B8%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З Пекоріно виробляють сухі або ігристі вина категорій DOCG, DOC, IGT",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D1%96%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
       }
     ],
     "id": "pecorino",
@@ -36832,7 +38137,10 @@
         "url": "https://es.wikipedia.org/wiki/Pecorino_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Arquitano",
@@ -36977,6 +38285,12 @@
         "quote": "Blatina-Weine empfehlen sich mit 18 bis 20° Celsius zu intensiv gewürzten Speisen, Wild, Gegrilltem",
         "value": "game",
         "sourceUrl": "https://de.wikipedia.org/wiki/Blatina"
+      },
+      {
+        "field": "origin",
+        "quote": "je crna autohtona sorta grožđa Hercegovine.",
+        "value": "BA",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Blatina"
       }
     ],
     "id": "blatina",
@@ -36990,7 +38304,7 @@
       "pt": "Blatina",
       "nl": "Blatina"
     },
-    "origin": null,
+    "origin": "BA",
     "pairings": [
       "game"
     ],
@@ -37055,8 +38369,13 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
-    "aromas": [],
+    "alcohol": "high",
+    "aromas": [
+      "vanilla",
+      "almond",
+      "apple",
+      "citrus"
+    ],
     "body": "low",
     "color": "white",
     "evidence": [
@@ -37110,6 +38429,36 @@
         "quote": "ein für kroatische Verhältnisse leichter, trockener und frischer Wein",
         "value": "dry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Po%C5%A1ip"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Пошип характеризується високим відсотком алкоголю (від 13 до 14,5 %)",
+        "value": "high",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D1%88%D0%B8%D0%BF"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате ванильные и миндальные тона, яблочные и цитрусовые ноты",
+        "value": "vanilla",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%88%D0%B8%D0%BF"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате ванильные и миндальные тона, яблочные и цитрусовые ноты",
+        "value": "almond",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%88%D0%B8%D0%BF"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате ванильные и миндальные тона, яблочные и цитрусовые ноты",
+        "value": "apple",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%88%D0%B8%D0%BF"
+      },
+      {
+        "field": "aromas",
+        "quote": "В аромате ванильные и миндальные тона, яблочные и цитрусовые ноты",
+        "value": "citrus",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%88%D0%B8%D0%BF"
       }
     ],
     "id": "posip",
@@ -37421,8 +38770,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Marselan"
   },
   {
-    "acidity": null,
-    "alcohol": null,
+    "acidity": "low",
+    "alcohol": "high",
     "aromas": [
       "fruity",
       "cherry",
@@ -37520,6 +38869,18 @@
         "quote": "Il donne un vin fruité, d'une couleur rouge rubis, possédant des arômes de cerise, épices, fleurs, et framboise.",
         "value": "raspberry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Tinta_Barroca"
+      },
+      {
+        "field": "alcohol",
+        "quote": "позволява да се получат вина с високо алкохолно съдържание – до 14% спирта",
+        "value": "high",
+        "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BD%D1%82%D0%B0_%D0%91%D0%B0%D1%80%D0%BE%D0%BA%D0%B0"
+      },
+      {
+        "field": "acidity",
+        "quote": "позволява да се получат вина с високо алкохолно съдържание – до 14% спирта, при невисока киселинност",
+        "value": "low",
+        "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BD%D1%82%D0%B0_%D0%91%D0%B0%D1%80%D0%BE%D0%BA%D0%B0"
       }
     ],
     "id": "tinta-barroca",
@@ -38040,6 +39401,18 @@
         "field": "origin",
         "quote": "As its name suggests, the grape originated in Burgundy and was grown there until its destruction was ordered in the early 18th century.",
         "value": "FR"
+      },
+      {
+        "field": "pairings",
+        "quote": "такие вина служат хорошим сопровождением к рыбе и морепродуктам Нантского края",
+        "value": "fish",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BB%D0%BE%D0%BD_%D0%B4%D0%B5_%D0%91%D1%83%D1%80%D0%B3%D0%BE%D0%BD%D1%8C"
+      },
+      {
+        "field": "pairings",
+        "quote": "такие вина служат хорошим сопровождением к рыбе и морепродуктам Нантского края",
+        "value": "seafood",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BB%D0%BE%D0%BD_%D0%B4%D0%B5_%D0%91%D1%83%D1%80%D0%B3%D0%BE%D0%BD%D1%8C"
       }
     ],
     "id": "melon-de-bourgogne",
@@ -38054,7 +39427,10 @@
       "pt": "Melon de Bourgogne"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood"
+    ],
     "prominence": 11,
     "regions": [
       {
@@ -38361,6 +39737,12 @@
         "field": "regions",
         "quote": "planted primarily in Sicily",
         "value": "IT: Sicily"
+      },
+      {
+        "field": "tannin",
+        "quote": "Вино має гранатовий колір, порівняно низький вміст танінів",
+        "value": "low",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BF%D0%BF%D0%B0%D1%82%D0%BE"
       }
     ],
     "id": "frappato",
@@ -38463,7 +39845,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q512279",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Frappato"
   },
@@ -39040,6 +40422,12 @@
         "quote": "Die Rotweine verfügen über wenig Farbe und über einen mittleren Alkoholgehalt.",
         "value": "medium",
         "sourceUrl": "https://de.wikipedia.org/wiki/Molinara"
+      },
+      {
+        "field": "origin",
+        "quote": "odmiana winorośli właściwej o ciemnej skórce, pochodząca z Włoch.",
+        "value": "IT",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Molinara_(winoro%C5%9Bl)"
       }
     ],
     "id": "molinara",
@@ -39053,7 +40441,7 @@
       "nl": "Molinara",
       "pt": "Molinara"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [],
     "prominence": 11,
     "regions": [
@@ -39128,7 +40516,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Molinara_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "fruity"
@@ -39237,6 +40625,24 @@
         "quote": "Уточнение «кахури» указывает на происхождение из Кахетии ... В купаже с виноградом ркацители из него готовят марочные вина Вазисубани, Гурджаани и Цинандали.",
         "value": "GE: Tsinandali",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
+      },
+      {
+        "field": "acidity",
+        "quote": "ღვინოს ახასიათებს ციტრუსის არომატიც, ტროპიკული ხილის ტონები, მაღალი ალკოპოლის შემცველობა და მჟავიანობა",
+        "value": "high",
+        "sourceUrl": "https://ka.wikipedia.org/wiki/%E1%83%9B%E1%83%AC%E1%83%95%E1%83%90%E1%83%9C%E1%83%94_%E1%83%99%E1%83%90%E1%83%AE%E1%83%A3%E1%83%A0%E1%83%98"
+      },
+      {
+        "field": "sweetness",
+        "quote": "მწვანე კახურისგან ამზადებენ ევროპული ტიპისა და ქვევრის თეთრ მშრალ ღვინოებს",
+        "value": "dry",
+        "sourceUrl": "https://ka.wikipedia.org/wiki/%E1%83%9B%E1%83%AC%E1%83%95%E1%83%90%E1%83%9C%E1%83%94_%E1%83%99%E1%83%90%E1%83%AE%E1%83%A3%E1%83%A0%E1%83%98"
+      },
+      {
+        "field": "origin",
+        "quote": "Уточнение «кахури» указывает на происхождение из Кахетии.",
+        "value": "GE",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
       }
     ],
     "id": "mtsvane",
@@ -39250,7 +40656,7 @@
       "pt": "Mtsvane",
       "nl": "Mtsvane"
     },
-    "origin": null,
+    "origin": "GE",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -39321,7 +40727,10 @@
         "url": "https://en.wikipedia.org/wiki/Mtsvane"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Dedali Mtsvane",
@@ -39788,6 +41197,24 @@
         "quote": "donnent ensemble des vins d’une qualité constante, bien équilibrés, discrètement fruités ... On reconnaît un vin issu 100 % de l’auxerrois à son caractère épicé",
         "value": "fruity",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Auxerrois_(c%C3%A9page_blanc)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Mladé víno Auxerrois je vhodné k předkrmům, k uzeným rybám nebo k plodům moře",
+        "value": "appetizers",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Auxerrois_Blanc"
+      },
+      {
+        "field": "pairings",
+        "quote": "Mladé víno Auxerrois je vhodné k předkrmům, k uzeným rybám nebo k plodům moře",
+        "value": "smoked fish",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Auxerrois_Blanc"
+      },
+      {
+        "field": "pairings",
+        "quote": "Mladé víno Auxerrois je vhodné k předkrmům, k uzeným rybám nebo k plodům moře",
+        "value": "seafood",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Auxerrois_Blanc"
       }
     ],
     "id": "auxerrois-blanc",
@@ -39802,7 +41229,11 @@
       "pt": "Auxerrois Blanc"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "appetizers",
+      "smoked fish",
+      "seafood"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -40102,7 +41533,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [],
     "body": null,
     "color": "white",
@@ -40182,6 +41613,12 @@
         "quote": "L’elbling est un cépage de raisin donnant un vin sec",
         "value": "dry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Elbling"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Вина из эльблинга лёгкие и свежие, с высокой кислотностью и невысоким содержанием алкоголя",
+        "value": "low",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D1%8C%D0%B1%D0%BB%D0%B8%D0%BD%D0%B3"
       }
     ],
     "id": "elbling",
@@ -40421,6 +41858,18 @@
         "quote": "originario delle pendici del Taburno e di alcune zone dei Campi Flegrei ... Dà origine a diverse DOC della Campania, tra cui Falanghina del Taburno, Campi Flegrei, Galluccio ... Il vitigno è il più diffuso della provincia di Benevento",
         "value": "IT: Galluccio",
         "sourceUrl": "https://it.wikipedia.org/wiki/Falanghina"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З фалангіни зазвичай виробляють сухі моносортові або купажні вина … Також можуть вироблятись солодкі вина за технологією пассіто",
+        "value": "dry-sweet",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BB%D0%B0%D0%BD%D0%B3%D1%96%D0%BD%D0%B0"
+      },
+      {
+        "field": "origin",
+        "quote": "Сорт є автохтонним для регіону Кампанія.",
+        "value": "IT",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BB%D0%B0%D0%BD%D0%B3%D1%96%D0%BD%D0%B0"
       }
     ],
     "id": "falanghina",
@@ -40434,7 +41883,7 @@
       "nl": "Falanghina",
       "pt": "Falanghina"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "seafood"
     ],
@@ -40501,7 +41950,10 @@
         "url": "https://es.wikipedia.org/wiki/Falanghina"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Falanghina Greco",
@@ -40721,6 +42173,24 @@
         "field": "regions",
         "quote": "was likely originally cultivated in the wine regions of South Tyrol and Trentino, but today is almost exclusively cultivated on steep, sunny locations in the Württemberg wine region ... throughout the Neckar valley ... including the Santa Maddalena DOC ... Caldaro DOC",
         "value": "IT: Caldaro"
+      },
+      {
+        "field": "tannin",
+        "quote": "Dobré Trolínské je rubínové barvy, aromatické, příjemně harmonické, s vyšší kyselinkou, s nízkými taniny",
+        "value": "low",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Trol%C3%ADnsk%C3%A9"
+      },
+      {
+        "field": "pairings",
+        "quote": "Pijí se vychlazená až na 12 °C a dobře se hodí k rybám asijské kuchyně",
+        "value": "fish",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Trol%C3%ADnsk%C3%A9"
+      },
+      {
+        "field": "pairings",
+        "quote": "Pijí se vychlazená až na 12 °C a dobře se hodí k rybám asijské kuchyně",
+        "value": "asian cuisine",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Trol%C3%ADnsk%C3%A9"
       }
     ],
     "id": "trollinger",
@@ -40735,7 +42205,10 @@
       "pt": "Trollinger"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "asian cuisine"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -40865,13 +42338,13 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q560783",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trollinger"
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "spice",
       "earthy",
@@ -41005,6 +42478,12 @@
         "quote": "Le vin qu'il donne est peu coloré, léger et peu tannique.",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Aramon_(c%C3%A9page)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Vino od ove sorte je nepopularno radi slabe arome, svijetle boje i niske količine alkohola",
+        "value": "low",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Aramon"
       }
     ],
     "id": "aramon",
@@ -41651,6 +43130,12 @@
         "quote": "Ele varia entre o doce aveludado, com acidez equilibrada dotado de harmonia, e o seco, embora suave e encorpado.",
         "value": "dry-sweet",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Verdelho"
+      },
+      {
+        "field": "origin",
+        "quote": "На родине — острове Мадейра входит в состав одного из двух официальных вин — Атлантис вайт.",
+        "value": "PT",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B5%D0%BB%D1%8C%D1%8E"
       }
     ],
     "id": "verdelho",
@@ -41664,7 +43149,7 @@
       "nl": "Verdelho",
       "pt": "Verdelho"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 10,
     "regions": [
@@ -42032,7 +43517,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -42105,6 +43590,36 @@
         "quote": "Il produit des vins blancs très agréables et fruités.",
         "value": "fruity",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Albana"
+      },
+      {
+        "field": "body",
+        "quote": "Punog je tijela a iza nje ostaje ugodna lagana gorčina",
+        "value": "high",
+        "sourceUrl": "https://hr.wikipedia.org/wiki/Albana"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З Альбана отримують різноманітні вина — сухі, напівсолодкі та солодкі",
+        "value": "dry-sweet",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D0%B1%D0%B0%D0%BD%D0%B0"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднується з м'якими сирами, стравами з білого м'яса та риби",
+        "value": "soft cheese",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D0%B1%D0%B0%D0%BD%D0%B0"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднується з м'якими сирами, стравами з білого м'яса та риби",
+        "value": "white meat",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D0%B1%D0%B0%D0%BD%D0%B0"
+      },
+      {
+        "field": "pairings",
+        "quote": "Гарно поєднується з м'якими сирами, стравами з білого м'яса та риби",
+        "value": "fish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D0%B1%D0%B0%D0%BD%D0%B0"
       }
     ],
     "id": "albana",
@@ -42119,7 +43634,11 @@
       "pt": "Albana"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "soft cheese",
+      "white meat",
+      "fish"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -42166,7 +43685,10 @@
         "url": "https://es.wikipedia.org/wiki/Albana_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Albana di Romagna",
@@ -42677,6 +44199,24 @@
         "quote": "Irsai Olivér is a Hungarian white wine variety, cross-bred between Pozsonyi and Pearl of Csaba in 1930.",
         "value": "still",
         "sourceUrl": "https://en.wikipedia.org/wiki/Irsai_Oliv%C3%A9r"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З Іршаї Олівер виробляють сухі, напівсолодкі та десертні вина",
+        "value": "dry-sweet",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%86%D1%80%D1%88%D0%B0%D1%97_%D0%9E%D0%BB%D1%96%D0%B2%D0%B5%D1%80"
+      },
+      {
+        "field": "pairings",
+        "quote": "doporučováno k chodům jako dezertní přípitek, eventuálně k těžkým a hutným sýrům či k dezertům",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Irsai_Oliver"
+      },
+      {
+        "field": "pairings",
+        "quote": "doporučováno k chodům jako dezertní přípitek, eventuálně k těžkým a hutným sýrům či k dezertům",
+        "value": "desserts",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Irsai_Oliver"
       }
     ],
     "id": "irsai-oliver",
@@ -42691,7 +44231,10 @@
       "pt": "Irsai Olivér"
     },
     "origin": "HU",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "desserts"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -42749,7 +44292,10 @@
         "url": "https://en.wikipedia.org/wiki/Irsai_Oliv%C3%A9r"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Irsai",
@@ -42910,6 +44456,18 @@
         "quote": "besitzt meist eine angenehme Säure und einen vollen Körper",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Fr%C3%BChburgunder"
+      },
+      {
+        "field": "pairings",
+        "quote": "proto se podává jako zvláštnost při slavnostních tabulích ke zvěřině, k pečením, k tmavému masu, omáčkám nebo k nejkvalitnějším sýrům",
+        "value": "game",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Jakubsk%C3%A9"
+      },
+      {
+        "field": "pairings",
+        "quote": "proto se podává jako zvláštnost při slavnostních tabulích ke zvěřině, k pečením, k tmavému masu, omáčkám nebo k nejkvalitnějším sýrům",
+        "value": "cheese",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Jakubsk%C3%A9"
       }
     ],
     "id": "pinot-noir-precoce",
@@ -42924,7 +44482,10 @@
       "pt": "Pinot Noir Précoce"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "game",
+      "cheese"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -43169,6 +44730,12 @@
         "quote": "la Ribolla si abbina bene a piatti leggeri e freschi, preferibilmente a base di pesce, verdure o formaggi freschi",
         "value": "vegetables",
         "sourceUrl": "https://it.wikipedia.org/wiki/Ribolla_gialla"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Сорт слугує основою для виробництва сухих та ігристих вин",
+        "value": "dry",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B1%D0%BE%D0%BB%D0%BB%D0%B0_%D0%B4%D0%B6%D0%B0%D0%BB%D0%BB%D0%B0"
       }
     ],
     "id": "ribolla-gialla",
@@ -43259,7 +44826,10 @@
         "url": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Ribolla",
@@ -43459,6 +45029,24 @@
         "quote": "Elle provient du sud de l'Italie.",
         "value": "IT",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Ansonica"
+      },
+      {
+        "field": "pairings",
+        "quote": "гарно поєднуються з ризото, рибними стравами та стравами з морепродуктів",
+        "value": "risotto",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D1%81%D0%BE%D0%BD%D1%96%D0%BA%D0%B0"
+      },
+      {
+        "field": "pairings",
+        "quote": "гарно поєднуються з ризото, рибними стравами та стравами з морепродуктів",
+        "value": "fish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D1%81%D0%BE%D0%BD%D1%96%D0%BA%D0%B0"
+      },
+      {
+        "field": "pairings",
+        "quote": "гарно поєднуються з ризото, рибними стравами та стравами з морепродуктів",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D1%81%D0%BE%D0%BD%D1%96%D0%BA%D0%B0"
       }
     ],
     "id": "ansonica",
@@ -43473,7 +45061,11 @@
       "pt": "Ansonica"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "risotto",
+      "fish",
+      "seafood"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -43621,7 +45213,9 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -43682,6 +45276,12 @@
         "field": "sweetness",
         "quote": "It has been used for production of premium dry, semi-sweet and semi-dry wines.",
         "value": "dry-medium"
+      },
+      {
+        "field": "aromas",
+        "quote": "ღვინოს ახასიათებს ნაზი გემო, ხილის არომატი, სიტკბო და ბუნებრივი ცქრიალი",
+        "value": "fruity",
+        "sourceUrl": "https://ka.wikipedia.org/wiki/%E1%83%AA%E1%83%9D%E1%83%9A%E1%83%98%E1%83%99%E1%83%9D%E1%83%A3%E1%83%A0%E1%83%98"
       }
     ],
     "id": "tsolikouri",
@@ -43782,7 +45382,10 @@
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "fruity",
+      "apple"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -43840,6 +45443,18 @@
         "field": "regions",
         "quote": "Within Germany, Franconia is considered as the source of some of the more successful varietal Bacchus wines. Bacchus is also increasingly grown in several vineyards in England ... more than half were in Rheinhessen",
         "value": "GB: England"
+      },
+      {
+        "field": "aromas",
+        "quote": "s ovocitým aroma žlutých jablek, červeného rybízu, pomerančů, kmínu a vavřínu",
+        "value": "fruity",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Bacchus_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "field": "aromas",
+        "quote": "s ovocitým aroma žlutých jablek, červeného rybízu, pomerančů, kmínu a vavřínu",
+        "value": "apple",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Bacchus_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
       }
     ],
     "id": "bacchus-weiss",
@@ -46969,7 +48584,7 @@
     "acidity": null,
     "alcohol": null,
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -47009,6 +48624,12 @@
         "quote": "en accompagnement de gibiers, de fromages forts",
         "value": "cheese",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Acolon"
+      },
+      {
+        "field": "body",
+        "quote": "Mají ještě intenzivnější barevnost, jsou plná, jemně ovocitá a harmonická, s dobrou strukturou",
+        "value": "high",
+        "sourceUrl": "https://cs.wikipedia.org/wiki/Acolon"
       }
     ],
     "id": "acolon",
@@ -47906,6 +49527,12 @@
         "quote": "Boal Branco erzeugt einen halbsüßen Wein",
         "value": "medium",
         "sourceUrl": "https://de.wikipedia.org/wiki/Boal_Branco"
+      },
+      {
+        "field": "origin",
+        "quote": "Среди автохтонных белых сортов Португалии «изысканная мальвазия» выделяется потенциалом к выработке долговечных вин высокого качества.",
+        "value": "PT",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D0%B7%D0%B8%D1%8F_%D1%84%D0%B8%D0%BD%D0%B0"
       }
     ],
     "id": "boal",
@@ -47919,7 +49546,7 @@
       "nl": "Boal",
       "pt": "Boal"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -48384,6 +50011,12 @@
         "field": "alcohol",
         "quote": "with notably high levels of tannin and medium alcohol content",
         "value": "medium"
+      },
+      {
+        "field": "sweetness",
+        "quote": "З рабосо піаве зазвичай виробляють сухі червоні вина, моносортові або купажні … Іноді з цього сорту виробляють десертні вина з в'яленого винограду",
+        "value": "dry-sweet",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B1%D0%BE%D1%81%D0%BE_%D0%BF%D1%96%D0%B0%D0%B2%D0%B5"
       }
     ],
     "id": "raboso",
@@ -48452,7 +50085,10 @@
         "url": "https://en.wikipedia.org/wiki/Raboso_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Raboso Piave",
@@ -48549,6 +50185,30 @@
         "field": "acidity",
         "quote": "Wines made from Erbaluce tend to be dry with noticeable acidity.",
         "value": "high"
+      },
+      {
+        "field": "pairings",
+        "quote": "Вживається з легкими закусками, стравами з риби та морепродуктів, м'якими сирами",
+        "value": "appetizers",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%95%D1%80%D0%B1%D0%B0%D0%BB%D1%83%D1%87%D0%B5"
+      },
+      {
+        "field": "pairings",
+        "quote": "Вживається з легкими закусками, стравами з риби та морепродуктів, м'якими сирами",
+        "value": "fish",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%95%D1%80%D0%B1%D0%B0%D0%BB%D1%83%D1%87%D0%B5"
+      },
+      {
+        "field": "pairings",
+        "quote": "Вживається з легкими закусками, стравами з риби та морепродуктів, м'якими сирами",
+        "value": "seafood",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%95%D1%80%D0%B1%D0%B0%D0%BB%D1%83%D1%87%D0%B5"
+      },
+      {
+        "field": "pairings",
+        "quote": "Вживається з легкими закусками, стравами з риби та морепродуктів, м'якими сирами",
+        "value": "soft cheese",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%95%D1%80%D0%B1%D0%B0%D0%BB%D1%83%D1%87%D0%B5"
       }
     ],
     "id": "erbaluce",
@@ -48563,7 +50223,12 @@
       "pt": "Erbaluce"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "appetizers",
+      "fish",
+      "seafood",
+      "soft cheese"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -48735,6 +50400,12 @@
         "quote": "verfügen über einen hohen Alkohol-, aber geringen Säuregehalt",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Ciliegiolo"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Також можуть вироблятись сухі рожеві вина та десертні за технологією «пасито»",
+        "value": "dry-sweet",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BB%D1%8C%D1%94%D0%B4%D0%B6%D0%BE%D0%BB%D0%BE"
       }
     ],
     "id": "ciliegiolo",
@@ -48806,7 +50477,10 @@
         "url": "https://en.wikipedia.org/wiki/Ciliegiolo"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Aleatico di Spagna",

@@ -1450,6 +1450,8 @@
   },
   "pairing": {
     "variants": {
+      "appetizers": "appetizers",
+      "asian cuisine": "asian cuisine",
       "asparagus": "asparagus",
       "buffalo mozzarella": "buffalo mozzarella",
       "cassis": "blackcurrant",
@@ -1457,7 +1459,10 @@
       "chevre": "goat cheese",
       "chicken": "chicken",
       "chinese cuisine": "chinese cuisine",
+      "cured meats": "cured meats",
+      "desserts": "desserts",
       "dishes with bittersweet flavors": "bittersweet dishes",
+      "duck": "duck",
       "eggplant": "eggplant",
       "feta": "feta",
       "fish": "fish",
@@ -1466,7 +1471,10 @@
       "fondue": "fondue",
       "grilled meat": "grilled meats",
       "grilled meats": "grilled meats",
+      "ham": "ham",
+      "hard cheese": "hard cheese",
       "hungarian dishes": null,
+      "indian cuisine": "indian cuisine",
       "japanese cuisine": "japanese cuisine",
       "lamb": "lamb",
       "lamb dishes": "lamb",
@@ -1476,24 +1484,55 @@
       "pasta": "pasta",
       "pizza": "pizza",
       "pork": "pork",
+      "poultry": "poultry",
       "pršut": "prosciutto",
+      "pâté": "pâté",
       "raclette": "raclette",
       "red meats": "red meat",
+      "risotto": "risotto",
       "salmon": "salmon",
+      "sausages": "sausages",
       "seafood": "seafood",
       "shellfish": "shellfish",
       "slow-cooked beef": "beef",
+      "smoked fish": "smoked fish",
+      "soft cheese": "soft cheese",
+      "soups": "soups",
       "spicy dishes": "spicy dishes",
       "squid": "squid",
+      "steak": "steak",
+      "stews": "stews",
       "sushi": "sushi",
       "thai cuisine": "thai cuisine",
       "turkey": "turkey",
+      "veal": "veal",
       "vegetables": "vegetables",
       "white fish": "white fish",
       "white fresh cheeses": "fresh cheese",
+      "white meat": "white meat",
       "zucchini": "zucchini"
     },
     "terms": {
+      "appetizers": {
+        "en": "appetizers",
+        "es": "entrantes",
+        "ca": "entrants",
+        "fr": "entrées",
+        "de": "Vorspeisen",
+        "it": "antipasti",
+        "nl": "voorgerechten",
+        "pt-PT": "entradas"
+      },
+      "asian cuisine": {
+        "en": "Asian food",
+        "es": "cocina asiática",
+        "ca": "cuina asiàtica",
+        "fr": "cuisine asiatique",
+        "de": "asiatische Küche",
+        "it": "cucina asiatica",
+        "nl": "Aziatisch eten",
+        "pt-PT": "cozinha asiática"
+      },
       "asparagus": {
         "en": "asparagus",
         "es": "espárragos",
@@ -1573,6 +1612,36 @@
         "it": "cucina cinese",
         "nl": "Chinees eten",
         "pt-PT": "cozinha chinesa"
+      },
+      "cured meats": {
+        "en": "cured meats",
+        "es": "embutidos",
+        "ca": "embotits",
+        "fr": "charcuterie",
+        "de": "Wurstwaren",
+        "it": "salumi",
+        "nl": "vleeswaren",
+        "pt-PT": "enchidos"
+      },
+      "desserts": {
+        "en": "desserts",
+        "es": "postres",
+        "ca": "postres",
+        "fr": "desserts",
+        "de": "Desserts",
+        "it": "dessert",
+        "nl": "desserts",
+        "pt-PT": "sobremesas"
+      },
+      "duck": {
+        "en": "duck",
+        "es": "pato",
+        "ca": "ànec",
+        "fr": "canard",
+        "de": "Ente",
+        "it": "anatra",
+        "nl": "eend",
+        "pt-PT": "pato"
       },
       "eggplant": {
         "en": "aubergine",
@@ -1664,6 +1733,36 @@
         "nl": "gegrild vlees",
         "pt-PT": "carne grelhada"
       },
+      "ham": {
+        "en": "ham",
+        "es": "jamón",
+        "ca": "pernil",
+        "fr": "jambon",
+        "de": "Schinken",
+        "it": "prosciutto cotto",
+        "nl": "ham",
+        "pt-PT": "fiambre"
+      },
+      "hard cheese": {
+        "en": "hard cheese",
+        "es": "queso curado",
+        "ca": "formatge curat",
+        "fr": "fromage à pâte dure",
+        "de": "Hartkäse",
+        "it": "formaggio stagionato",
+        "nl": "harde kaas",
+        "pt-PT": "queijo curado"
+      },
+      "indian cuisine": {
+        "en": "Indian food",
+        "es": "cocina india",
+        "ca": "cuina índia",
+        "fr": "cuisine indienne",
+        "de": "indische Küche",
+        "it": "cucina indiana",
+        "nl": "Indiaas eten",
+        "pt-PT": "cozinha indiana"
+      },
       "japanese cuisine": {
         "en": "Japanese cuisine",
         "es": "cocina japonesa",
@@ -1734,6 +1833,16 @@
         "nl": "varkensvlees",
         "pt-PT": "porco"
       },
+      "poultry": {
+        "en": "poultry",
+        "es": "aves",
+        "ca": "aviram",
+        "fr": "volaille",
+        "de": "Geflügel",
+        "it": "pollame",
+        "nl": "gevogelte",
+        "pt-PT": "aves"
+      },
       "prosciutto": {
         "en": "cured ham",
         "es": "jamón curado",
@@ -1743,6 +1852,16 @@
         "it": "prosciutto crudo",
         "nl": "rauwe ham",
         "pt-PT": "presunto"
+      },
+      "pâté": {
+        "en": "pâté",
+        "es": "paté",
+        "ca": "paté",
+        "fr": "pâté",
+        "de": "Pastete",
+        "it": "paté",
+        "nl": "paté",
+        "pt-PT": "patê"
       },
       "raclette": {
         "en": "raclette",
@@ -1764,6 +1883,16 @@
         "nl": "rood vlees",
         "pt-PT": "carne vermelha"
       },
+      "risotto": {
+        "en": "risotto",
+        "es": "risotto",
+        "ca": "risotto",
+        "fr": "risotto",
+        "de": "Risotto",
+        "it": "risotto",
+        "nl": "risotto",
+        "pt-PT": "risoto"
+      },
       "salmon": {
         "en": "salmon",
         "es": "salmón",
@@ -1773,6 +1902,16 @@
         "it": "salmone",
         "nl": "zalm",
         "pt-PT": "salmão"
+      },
+      "sausages": {
+        "en": "sausages",
+        "es": "salchichas",
+        "ca": "salsitxes",
+        "fr": "saucisses",
+        "de": "Würste",
+        "it": "salsicce",
+        "nl": "worsten",
+        "pt-PT": "salsichas"
       },
       "seafood": {
         "en": "seafood",
@@ -1794,6 +1933,36 @@
         "nl": "schaaldieren",
         "pt-PT": "marisco"
       },
+      "smoked fish": {
+        "en": "smoked fish",
+        "es": "pescado ahumado",
+        "ca": "peix fumat",
+        "fr": "poisson fumé",
+        "de": "Räucherfisch",
+        "it": "pesce affumicato",
+        "nl": "gerookte vis",
+        "pt-PT": "peixe fumado"
+      },
+      "soft cheese": {
+        "en": "soft cheese",
+        "es": "queso blando",
+        "ca": "formatge tou",
+        "fr": "fromage à pâte molle",
+        "de": "Weichkäse",
+        "it": "formaggio molle",
+        "nl": "zachte kaas",
+        "pt-PT": "queijo de pasta mole"
+      },
+      "soups": {
+        "en": "soups",
+        "es": "sopas",
+        "ca": "sopes",
+        "fr": "soupes",
+        "de": "Suppen",
+        "it": "zuppe",
+        "nl": "soepen",
+        "pt-PT": "sopas"
+      },
       "spicy dishes": {
         "en": "spicy dishes",
         "es": "platos picantes",
@@ -1813,6 +1982,26 @@
         "it": "calamaro",
         "nl": "inktvis",
         "pt-PT": "lula"
+      },
+      "steak": {
+        "en": "steak",
+        "es": "bistec",
+        "ca": "bistec",
+        "fr": "steak",
+        "de": "Steak",
+        "it": "bistecca",
+        "nl": "biefstuk",
+        "pt-PT": "bife"
+      },
+      "stews": {
+        "en": "stews",
+        "es": "guisos",
+        "ca": "guisats",
+        "fr": "ragoûts",
+        "de": "Schmorgerichte",
+        "it": "stufati",
+        "nl": "stoofschotels",
+        "pt-PT": "guisados"
       },
       "sushi": {
         "en": "sushi",
@@ -1844,6 +2033,16 @@
         "nl": "kalkoen",
         "pt-PT": "peru"
       },
+      "veal": {
+        "en": "veal",
+        "es": "ternera",
+        "ca": "vedella",
+        "fr": "veau",
+        "de": "Kalbfleisch",
+        "it": "vitello",
+        "nl": "kalfsvlees",
+        "pt-PT": "vitela"
+      },
       "vegetables": {
         "en": "vegetables",
         "es": "verduras",
@@ -1863,6 +2062,16 @@
         "it": "pesce bianco",
         "nl": "witte vis",
         "pt-PT": "peixe branco"
+      },
+      "white meat": {
+        "en": "white meat",
+        "es": "carne blanca",
+        "ca": "carn blanca",
+        "fr": "viande blanche",
+        "de": "helles Fleisch",
+        "it": "carne bianca",
+        "nl": "wit vlees",
+        "pt-PT": "carne branca"
       },
       "zucchini": {
         "en": "courgette",

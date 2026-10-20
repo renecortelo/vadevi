@@ -5,10 +5,15 @@ import { wikimedia } from "./wikimedia";
 
 /**
  * Each grape's full articles in the other languages its facts may be read
- * from — Spanish, French, Italian, German, Portuguese, Catalan — into
+ * from — Spanish, French, Italian, German, Portuguese, Catalan, and the
+ * languages of the grapes' own countries and of the Soviet ampelography
+ * many of them were described in (Russian, Ukrainian, Bulgarian, Hungarian,
+ * Croatian, Romanian, Czech, Slovenian, Greek, Polish, Georgian) — into
  * `.kb-cache/grapes-extra/<qid>.<lang>.json`, beside its English one. An
  * article already there is kept. Its titles come from the grape's own cache
- * (`.kb-cache/grapes/<qid>.json`, from Wikidata's sitelinks).
+ * (`.kb-cache/grapes/<qid>.json`, from Wikidata's sitelinks), or for the
+ * languages beyond the app's from every sitelink, read in one pass
+ * (`.kb-cache/grapes-sitelinks/sitelinks.json`).
  *
  * These are what body, alcohol and sweetness are read from by hand
  * (`data/kb/grape-readings.json`) where the English article says nothing.
@@ -16,7 +21,29 @@ import { wikimedia } from "./wikimedia";
  * Usage: pnpm kb:fetch-grape-articles
  */
 const cache = resolve(".kb-cache");
-const languages = ["es", "fr", "it", "de", "pt", "ca"];
+const languages = [
+  "es",
+  "fr",
+  "it",
+  "de",
+  "pt",
+  "ca",
+  "ru",
+  "uk",
+  "bg",
+  "hu",
+  "hr",
+  "ro",
+  "cs",
+  "sl",
+  "el",
+  "pl",
+  "ka",
+];
+const sitelinksPath = resolve(cache, "grapes-sitelinks", "sitelinks.json");
+const sitelinks = (
+  existsSync(sitelinksPath) ? JSON.parse(readFileSync(sitelinksPath, "utf8")) : {}
+) as Record<string, Record<string, string>>;
 
 type Pages = { query?: { pages?: Record<string, { extract?: string; title: string }> } };
 
@@ -28,7 +55,7 @@ for (const file of readdirSync(resolve(cache, "grapes")).filter((name) => name.e
     titles?: Record<string, string>;
   };
   for (const lang of languages) {
-    const title = grape.titles?.[lang];
+    const title = grape.titles?.[lang] ?? sitelinks[grape.qid]?.[`${lang}wiki`];
     if (title === undefined) continue;
     const path = resolve(cache, "grapes-extra", `${grape.qid}.${lang}.json`);
     if (existsSync(path)) {

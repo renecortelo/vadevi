@@ -23,6 +23,21 @@ has the reasons.
 
 ### The library
 
+- **Grapes read in eleven more languages**: their Wikipedia articles in
+  Russian, Ukrainian, Bulgarian, Hungarian, Croatian, Romanian, Czech,
+  Slovenian, Greek, Polish and Georgian, read by hand where the other
+  languages left a gap, each value from a sentence that says it and checked
+  against the article as before — 44 levels, 32 dry-or-sweet ranges, 38 lists
+  of what a grape goes with (Pinot Noir, Merlot, Syrah, Nebbiolo, Malbec
+  among them; 35 % of grapes now say, from 17 %), 11 aroma lists and 12
+  origins. The check knows those languages' words for each level and a
+  country's name declined or in another script («z Włoch», «іспанським»).
+  Nineteen dishes join the vocabulary in the eight languages (poultry, veal,
+  steak, risotto, cured meats, soft and hard cheese among them), each tied
+  to its family on the pairing wheel.
+- **Spain's production**: each PDO's wine qualified that campaign, from the
+  Ministry of Agriculture's yearly report, said as such, where no other
+  source gives its production.
 - **Where 27 more grapes come from**, read by hand from their articles in
   any of the library's languages, each from a sentence that says it plainly —
   the country's name, its adjective («autóctona española», «di origine

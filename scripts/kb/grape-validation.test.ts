@@ -9,6 +9,7 @@ import {
 } from "./appellation-names";
 import {
   mentions,
+  originNamed,
   parseRegion,
   quoteIsVerbatim,
   summaryOf,
@@ -339,6 +340,40 @@ describe("a grape read in its own language", () => {
       [],
     );
     expect(read.origin).toBe("TR");
+  });
+
+  it("reads levels in Ukrainian, Czech, Croatian and Georgian", () => {
+    const level = (field: "acidity" | "alcohol" | "body", quote: string, value: string) =>
+      validateExtraction({ [field]: { quote, value } }, quote, [])[field];
+    expect(
+      level(
+        "acidity",
+        "Вино має повне тіло, відносно невелику кислотність та м'які таніни.",
+        "low",
+      ),
+    ).toBe("low");
+    expect(level("alcohol", "Vína jsou zlatožlutá, s vyšším alkoholem a extraktem.", "high")).toBe(
+      "high",
+    );
+    expect(level("body", "Punog je tijela a iza nje ostaje ugodna lagana gorčina.", "high")).toBe(
+      "high",
+    );
+    expect(level("body", "ღვინო ხასიათდება მსუბუქი სხეულით.", "low")).toBe("low");
+  });
+});
+
+describe("an origin read by hand", () => {
+  it("knows a country in a declined form or another script, and only that country", () => {
+    expect(
+      originNamed("Dolcetto – czerwony szczep winorośli, pochodzący z Włoch.", "IT", "pl"),
+    ).toBe(true);
+    expect(originNamed("Вердехо є автохтонним іспанським сортом.", "ES", "uk")).toBe(true);
+    expect(originNamed("На родине — острове Мадейра.", "PT", "ru")).toBe(true);
+    expect(
+      originNamed("Dolcetto – czerwony szczep winorośli, pochodzący z Włoch.", "ES", "pl"),
+    ).toBe(false);
+    // A country after an elided article is still a word of its own.
+    expect(originNamed("Le cépage provient du nord de l'Italie.", "IT", "fr")).toBe(true);
   });
 });
 
