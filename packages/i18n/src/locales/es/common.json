@@ -1941,10 +1941,8 @@
     "close": "Tu bodega, tu mapa, tu gusto",
     "closeSub_one": "En {{count}} idioma, también sin conexión",
     "closeSub_other": "En {{count}} idiomas, también sin conexión",
-    "cta": "Empieza",
     "pause": "Pausar la animación",
     "play": "Reanudar la animación",
-    "replay": "Ver de nuevo",
     "summary": "Va de Vi: catas a mano o con la voz, botellas por su etiqueta, {{names}} denominaciones de {{countries}} países, {{grapes}} uvas y Vicenç, que cita sus fuentes. En {{languages}} idiomas."
   }
 }

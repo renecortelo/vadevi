@@ -604,6 +604,55 @@ button[aria-busy="true"]:disabled {
   margin-block-end: var(--space-3);
 }
 
+/* The reel's frame at the head of the sign-in card: the logo it ends on
+   holds the place until it arrives, so nothing moves. */
+.access-card__reel {
+  aspect-ratio: 16 / 11;
+  display: grid;
+  inline-size: 100%;
+  margin-block-end: var(--space-5);
+  min-block-size: 15rem;
+  place-items: center;
+}
+
+/* On a phone a fixed height: a ratio with a minimum height would ask for
+   more width than the screen has. */
+@media (max-width: 30rem) {
+  .access-card__reel {
+    aspect-ratio: auto;
+    block-size: 17rem;
+    min-block-size: 0;
+  }
+
+  .reel-shot {
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-3) 0;
+  }
+
+  /* The step's number is decoration; on a phone its title says enough. */
+  .reel-card__step {
+    display: none;
+  }
+
+  .reel-card__title {
+    font-size: 1.05rem;
+  }
+
+  .reel-chat p {
+    font-size: var(--text-sm);
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+.access-card__reel:has(.reel--still) {
+  aspect-ratio: auto;
+  block-size: auto;
+}
+
+.access-card__reel .access-card__lockup {
+  margin-block-end: 0;
+}
+
 .access-card__lockup {
   /* The full artwork, bottles and all. There is room for it here, and it is the
      first thing anyone sees of the application, so it is centred on the card
@@ -5960,22 +6009,19 @@ button.stats-bars__label:hover {
   --i: 0;
   --start: 0s;
 
-  inline-size: min(100%, 36rem);
+  block-size: 100%;
+  inline-size: 100%;
   position: relative;
-  z-index: 1;
 }
 
-/* Its width is the reel's: with a minimum height, the ratio alone would
-   widen it past a narrow phone. The background takes each step's bottle
+/* The card's frame is the stage's; its background takes each step's bottle
    colour, faintly. */
 .reel__stage {
   animation: reel-tint 19s linear both;
-  aspect-ratio: 16 / 10;
-  inline-size: 100%;
   background: rgb(var(--color-surface-rgb) / 92%);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  min-block-size: 16rem;
+  block-size: 100%;
+  border-radius: var(--radius-md);
+  inline-size: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -6027,15 +6073,6 @@ button.stats-bars__label:hover {
   }
 }
 
-/* On a phone a fixed height: a ratio with a minimum height would ask the
-   page's grid for more width than the screen has. */
-@media (max-width: 30rem) {
-  .reel__stage {
-    aspect-ratio: auto;
-    block-size: 18rem;
-  }
-}
-
 .reel-shot {
   animation:
     reel-enter 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) var(--start) both,
@@ -6043,7 +6080,7 @@ button.stats-bars__label:hover {
   align-content: center;
   display: grid;
   gap: var(--space-3);
-  inset: 0 0 2.6rem;
+  inset: 0 0 3.2rem;
   justify-items: center;
   padding: var(--space-4);
   position: absolute;
@@ -6073,102 +6110,11 @@ button.stats-bars__label:hover {
   }
 }
 
-/* A step: its bottle beside what it shows. */
-.reel-shot--bottle {
-  column-gap: var(--space-4);
-  grid-template-columns: minmax(3rem, 26%) minmax(0, 1fr);
-  justify-items: stretch;
-  text-align: start;
-}
-
-.reel-card {
-  display: grid;
-  gap: var(--space-3);
-  justify-items: start;
-  min-inline-size: 0;
-}
-
-.reel-bottle {
-  block-size: 100%;
-  inline-size: auto;
-  justify-self: center;
-  max-block-size: 13rem;
-  overflow: visible;
-}
-
-.reel-shot--intro .reel-bottle {
-  block-size: 9rem;
-}
-
-/* On a phone the bottle stands behind the step, faintly. */
-@media (max-width: 30rem) {
-  .reel-shot--bottle {
-    grid-template-columns: minmax(0, 1fr);
-    justify-items: center;
-    text-align: center;
-  }
-
-  .reel-shot--bottle .reel-bottle {
-    block-size: 85%;
-    inset: 6% auto auto 50%;
-    opacity: 0.22;
-    position: absolute;
-    translate: -50% 0;
-  }
-
-  .reel-card {
-    justify-items: center;
-    position: relative;
-  }
-}
-
-/* The bottle's outline drawn, then the glass filled, then a glint across it. */
-.reel-bottle__glass {
-  animation:
-    reel-draw 1s ease-out calc(var(--start) + 0.15s) both,
-    reel-pour 0.6s ease-out calc(var(--start) + 0.9s) both;
-  fill: var(--bottle);
-  stroke: var(--bottle);
-  stroke-dasharray: 1;
-  stroke-linejoin: round;
-  stroke-width: 6;
-}
-
-@keyframes reel-draw {
-  from {
-    stroke-dashoffset: 1;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes reel-pour {
-  from {
-    fill-opacity: 0;
-  }
-  to {
-    fill-opacity: 1;
-  }
-}
-
-.reel-bottle__glint {
-  animation: reel-glint 0.9s ease-in-out calc(var(--start) + 1.5s) both;
-  fill: #fff;
-  opacity: 0.35;
-}
-
-@keyframes reel-glint {
-  to {
-    transform: translateX(220px);
-  }
-}
-
-/* The row the steps' bottles drop into, each in its place in the logo; it
-   rises into the logo at the close. */
+/* The row the bottles gather in, one with each step, each in its place in
+   the logo; it rises into the logo at the close. */
 .reel__row {
   animation: reel-row-away 0.5s ease-in 15.55s forwards;
-  block-size: 2.2rem;
+  block-size: 2.8rem;
   inline-size: 100%;
   inset: auto 0 0.3rem;
   position: absolute;
@@ -6255,7 +6201,42 @@ button.stats-bars__label:hover {
 }
 
 .reel__tagline {
-  animation: reel-rise 0.7s ease-out calc(var(--start) + 1.3s) both;
+  animation: reel-rise 0.7s ease-out calc(var(--start) + 0.3s) both;
+}
+
+.reel-shot--intro .reel__tagline {
+  color: var(--color-plum);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 4.6vw, 1.7rem);
+  font-weight: 700;
+}
+
+/* The one control: pause or play, in the stage's lower corner beside the row. A loop that
+   moves on its own has to be possible to stop. */
+.reel__toggle {
+  background: rgb(var(--color-surface-rgb) / 85%);
+  block-size: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: grid;
+  inline-size: 2rem;
+  inset: auto 0.5rem 0.6rem auto;
+  padding: 0;
+  place-items: center;
+  position: absolute;
+  z-index: 2;
+}
+
+.reel__toggle:hover {
+  color: var(--color-plum);
+}
+
+.reel__toggle svg {
+  block-size: 1rem;
+  fill: currentColor;
+  inline-size: 1rem;
 }
 
 .reel__sub {
@@ -6269,10 +6250,6 @@ button.stats-bars__label:hover {
   text-wrap: balance;
   font-weight: 700;
   margin: 0;
-}
-
-.reel__cta {
-  animation: reel-rise 0.6s ease-out calc(var(--start) + 2.3s) both;
 }
 
 @keyframes reel-rise {
@@ -6492,18 +6469,10 @@ button.stats-bars__label:hover {
   padding: 0 var(--space-2);
 }
 
-.reel__controls {
-  display: flex;
-  gap: var(--space-4);
-  justify-content: center;
-  margin: var(--space-2) 0 0;
-}
-
 /* Reduced motion: the reel is its last frame, still — the logo, the closing
    words and the figures — at the height it needs. */
 .reel--still .reel__stage {
   animation: none;
-  aspect-ratio: auto;
   block-size: auto;
 }
 

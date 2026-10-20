@@ -8,12 +8,13 @@ has the reasons.
 
 ### First impressions
 
-- **The sign-in reel, told with the logo's bottles**: the opening bottle draws
-  itself and fills; each step — a tasting, a label, the library, Vicenç — is
-  a bottle of the logo's colour that drops into a row as the step ends; at the
-  close the last two slide in, the row grows into the logo and the letters
-  fall into place, then «Get started». Same nineteen seconds, pause, still
-  frame for reduced motion, and the library's own figures.
+- **The sign-in card, with the reel in it**: one card instead of two. Its head
+  is the reel, told with the logo's bottles: with each step — a tasting, a
+  label, the library, Vicenç — a small bottle drops into its place in a row;
+  at the close the last two slide in, the row grows into the logo and the
+  letters fall into place, just above «Continue with Google». It loops, with
+  one quiet pause button in its corner instead of the controls below; still
+  for reduced motion, and the logo holds its place until it loads.
 
 ### The library
 

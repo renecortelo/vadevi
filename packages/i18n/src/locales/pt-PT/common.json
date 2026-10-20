@@ -1941,10 +1941,8 @@
     "close": "A tua garrafeira, o teu mapa, o teu gosto",
     "closeSub_one": "Em {{count}} língua, também sem ligação",
     "closeSub_other": "Em {{count}} línguas, também sem ligação",
-    "cta": "Começar",
     "pause": "Pausar a animação",
     "play": "Retomar a animação",
-    "replay": "Ver de novo",
     "summary": "Va de Vi: provas à mão ou com a voz, garrafas pelo rótulo, {{names}} denominações de {{countries}} países, {{grapes}} castas e o Vicenç, que cita as fontes. Em {{languages}} línguas."
   }
 }

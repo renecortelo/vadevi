@@ -1941,10 +1941,8 @@
     "close": "Dein Keller, deine Karte, dein Geschmack",
     "closeSub_one": "In {{count}} Sprache, auch offline",
     "closeSub_other": "In {{count}} Sprachen, auch offline",
-    "cta": "Los geht's",
     "pause": "Animation anhalten",
     "play": "Animation fortsetzen",
-    "replay": "Noch einmal ansehen",
     "summary": "Va de Vi: Verkostungen per Hand oder Stimme, Flaschen am Etikett, {{names}} Weinnamen aus {{countries}} Ländern, {{grapes}} Rebsorten und Vicenç mit Quellen. In {{languages}} Sprachen."
   }
 }

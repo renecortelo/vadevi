@@ -1941,10 +1941,8 @@
     "close": "El teu celler, el teu mapa, el teu gust",
     "closeSub_one": "En {{count}} idioma, també sense connexió",
     "closeSub_other": "En {{count}} idiomes, també sense connexió",
-    "cta": "Comença",
     "pause": "Pausa l'animació",
     "play": "Reprèn l'animació",
-    "replay": "Torna-la a veure",
     "summary": "Va de Vi: tastos a mà o amb la veu, ampolles per l'etiqueta, {{names}} denominacions de {{countries}} països, {{grapes}} raïms i en Vicenç, que cita les fonts. En {{languages}} idiomes."
   }
 }

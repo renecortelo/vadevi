@@ -1,6 +1,6 @@
 import { aromaFromTerm } from "@vadevi/i18n/runtime";
 import figures from "virtual:library-figures";
-import { type CSSProperties, type ReactNode, useEffect, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -13,19 +13,19 @@ import {
 import { AromaIcon } from "../library/AromaIcon";
 
 /**
- * What Va de Vi is for, in nineteen seconds, on the sign-in screen, told with
- * the logo's own bottles: one draws itself and fills, then each step — a
- * tasting, a label, the library, Vicenç — is a bottle of the logo's colour,
- * which drops into its place in a row of bottles below as the step ends (the
- * opening's bottle too). At the close the missing two slide in, the row grows into the logo, the
- * letters fall into place, and «Get started».
+ * What Va de Vi is for, in nineteen seconds, at the top of the sign-in card,
+ * told with the logo's own bottles: with each step — a tasting, a label, the
+ * library, Vicenç — one small bottle drops into its place in a row; at the
+ * close the last bottles slide in, the row grows into the logo and the
+ * letters fall into place, just above «Continue with Google». Then it begins
+ * again.
  *
  * The bottles and the letters are the brand's geometry (`brand/marks`, made
  * by `scripts/generate-brand.ts`), not drawings of them. Drawn in SVG and CSS,
  * so it is sharp, light, offline and in every language; the library's figures
  * are counted from its files at build. Every animation, CSS or Web Animations,
- * is paused and played together through `getAnimations`. With reduced motion
- * the reel is its last frame, still.
+ * is paused and played together through `getAnimations` — a moving loop must
+ * be possible to stop. With reduced motion the reel is its last frame, still.
  */
 const shots = [
   { end: 2.5, start: 0 },
@@ -36,74 +36,19 @@ const shots = [
   { end: 19, start: 15.5 },
 ] as const;
 
+/** The length of one pass, the last frame held a moment before it begins again. */
+const loopSeconds = 21;
+
 const timing = (shot: number): CSSProperties =>
   ({
     "--end": `${shots[shot]!.end - 0.45}s`,
     "--start": `${shots[shot]!.start}s`,
   }) as CSSProperties;
 
-/** The distance from one bottle of the row to the next. */
-const pitch = bottleRow.span / bottleRowPaths.length;
 /** The lockup's frame: the bottles' row, with room for the word across it. */
 const lockupBox = `${bottleRow.start - 24} 150 ${bottleRow.span + 48} 574`;
-
-/**
- * One of the logo's bottles, large: its outline drawn, then filled, then a
- * glint running over the glass. `index` is its place in the logo, which also
- * gives its colour.
- */
-function HeroBottle({ index }: { index: number }) {
-  const left = bottleRow.start + index * pitch;
-  const clip = `reel-glass-${index}`;
-  return (
-    <svg
-      aria-hidden="true"
-      className="reel-bottle"
-      focusable="false"
-      style={{ "--bottle": `var(--color-bottle-${index + 1})` } as CSSProperties}
-      viewBox={`${left - 12} 170 ${pitch + 36} 540`}
-    >
-      <defs>
-        <clipPath id={clip}>
-          <path d={bottleRowPaths[index]} />
-        </clipPath>
-      </defs>
-      <path className="reel-bottle__glass" d={bottleRowPaths[index]} pathLength={1} />
-      <g clipPath={`url(#${clip})`}>
-        <rect className="reel-bottle__glint" height="560" width="46" x={left - 60} y="160" />
-      </g>
-    </svg>
-  );
-}
-
-/** A step: its bottle, and what the step shows beside it. */
-function Step({
-  bottle,
-  children,
-  shot,
-  step,
-  title,
-}: {
-  bottle: number;
-  children: ReactNode;
-  shot: number;
-  step: string;
-  title: string;
-}) {
-  return (
-    <div
-      className="reel-shot reel-shot--bottle"
-      style={{ ...timing(shot), "--bottle": `var(--color-bottle-${bottle + 1})` } as CSSProperties}
-    >
-      <HeroBottle index={bottle} />
-      <div className="reel-card">
-        <p className="reel-card__step">{step}</p>
-        <p className="reel-card__title">{title}</p>
-        {children}
-      </div>
-    </div>
-  );
-}
+/** The bottles the row receives, in the order the shots bring them. */
+const arrivals = [3, 0, 1, 2, 4] as const;
 
 /** A figure that counts up to the library's own, on the reel's clock. */
 function Count({ delay, value }: { delay: number; value: number }) {
@@ -164,7 +109,7 @@ function Figures({ still }: { still: boolean }) {
 }
 
 /**
- * The logo, assembled: its seven bottles — the four the steps brought, then
+ * The logo, assembled: its seven bottles — the five the row gathered, then
  * the two still missing — and the word falling into place across them.
  */
 function Lockup() {
@@ -206,11 +151,20 @@ function Lockup() {
   );
 }
 
+/** A pause or a play sign, for the reel's one control. */
+function PlayPause({ playing }: { playing: boolean }) {
+  return (
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+      {playing ? <path d="M8 6h3v12H8zM13 6h3v12h-3z" /> : <path d="M8 5.5v13l10.5-6.5z" />}
+    </svg>
+  );
+}
+
 const aromas = ["raspberry", "black pepper", "violet"]
   .map((term) => aromaFromTerm(term))
   .filter((descriptor) => descriptor !== null);
 
-export default function SignInReel({ onStart }: { onStart: () => void }) {
+export default function SignInReel() {
   const { i18n, t } = useTranslation();
   const format = new Intl.NumberFormat(i18n.language);
   const stage = useRef<HTMLDivElement>(null);
@@ -220,6 +174,19 @@ export default function SignInReel({ onStart }: { onStart: () => void }) {
     () => globalThis.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false,
   );
 
+  // The loop: an invisible animation as long as one pass is its clock, so
+  // pausing the reel pauses the loop too; when it ends, the stage is drawn
+  // again from the start.
+  useEffect(() => {
+    const element = stage.current;
+    if (element === null || still) return;
+    const clock = element.animate([{ opacity: 1 }, { opacity: 1 }], {
+      duration: loopSeconds * 1000,
+    });
+    clock.onfinish = () => setRun((count) => count + 1);
+    return () => clock.cancel();
+  }, [run, still]);
+
   // Pause and play every animation of the reel, CSS and scripted, together.
   useEffect(() => {
     for (const animation of stage.current?.getAnimations({ subtree: true }) ?? []) {
@@ -228,20 +195,16 @@ export default function SignInReel({ onStart }: { onStart: () => void }) {
     }
   }, [playing, run]);
 
-  const replay = () => {
-    setRun((count) => count + 1);
-    setPlaying(true);
-  };
-
   return (
     <section aria-label={t("reel.label")} className={`reel${still ? " reel--still" : ""}`}>
       <div className="reel__stage" key={run} ref={stage}>
         <div className="reel-shot reel-shot--intro" style={timing(0)}>
-          <HeroBottle index={3} />
           <p className="reel__tagline">{t("reel.tagline")}</p>
         </div>
 
-        <Step bottle={0} shot={1} step="01" title={t("reel.taste")}>
+        <div className="reel-shot" style={timing(1)}>
+          <p className="reel-card__step">01</p>
+          <p className="reel-card__title">{t("reel.taste")}</p>
           <div className="reel-taste" aria-hidden="true">
             <ul>
               {aromas.map((descriptor, index) => (
@@ -258,21 +221,27 @@ export default function SignInReel({ onStart }: { onStart: () => void }) {
               <path d="M14 24a10 10 0 0 0 20 0M24 34v6M18 40h12" />
             </svg>
           </div>
-        </Step>
+        </div>
 
-        <Step bottle={1} shot={2} step="02" title={t("reel.identify")}>
+        <div className="reel-shot" style={timing(2)}>
+          <p className="reel-card__step">02</p>
+          <p className="reel-card__title">{t("reel.identify")}</p>
           <div className="reel-label" aria-hidden="true">
             <span className="reel-label__lines" />
             <span className="reel-label__code" />
             <span className="reel-label__scan" />
           </div>
-        </Step>
+        </div>
 
-        <Step bottle={2} shot={3} step="03" title={t("reel.library")}>
+        <div className="reel-shot" style={timing(3)}>
+          <p className="reel-card__step">03</p>
+          <p className="reel-card__title">{t("reel.library")}</p>
           <Figures still={still} />
-        </Step>
+        </div>
 
-        <Step bottle={4} shot={4} step="04" title={t("reel.vicenc")}>
+        <div className="reel-shot" style={timing(4)}>
+          <p className="reel-card__step">04</p>
+          <p className="reel-card__title">{t("reel.vicenc")}</p>
           <div className="reel-chat" aria-hidden="true">
             <p className="reel-chat__question">{t("reel.vicencQuestion")}</p>
             <p className="reel-chat__answer">
@@ -280,11 +249,11 @@ export default function SignInReel({ onStart }: { onStart: () => void }) {
               <span className="reel-chat__source">Wikipedia</span>
             </p>
           </div>
-        </Step>
+        </div>
 
-        {/* The row the steps' bottles drop into, in their places in the logo. */}
+        {/* The row the bottles gather in, each in its place in the logo. */}
         <svg aria-hidden="true" className="reel__row" focusable="false" viewBox={lockupBox}>
-          {[3, 0, 1, 2, 4].map((index, order) => (
+          {arrivals.map((index, order) => (
             <path
               className="reel__slot"
               d={bottleRowPaths[index]}
@@ -300,25 +269,21 @@ export default function SignInReel({ onStart }: { onStart: () => void }) {
           <p className="reel__closing">{t("reel.close")}</p>
           <p className="reel__sub">{t("reel.closeSub", { count: figures.languages })}</p>
           {still ? <Figures still /> : null}
-          <button className="primary-button reel__cta" onClick={onStart} type="button">
-            {t("reel.cta")}
-          </button>
         </div>
       </div>
+      {/* Outside the stage, which is drawn again on every pass, so the
+          button keeps its focus. */}
       {still ? null : (
-        <p className="reel__controls">
-          <button
-            aria-pressed={!playing}
-            className="text-button"
-            onClick={() => setPlaying((value) => !value)}
-            type="button"
-          >
-            {playing ? t("reel.pause") : t("reel.play")}
-          </button>
-          <button className="text-button" onClick={replay} type="button">
-            {t("reel.replay")}
-          </button>
-        </p>
+        <button
+          aria-label={playing ? t("reel.pause") : t("reel.play")}
+          aria-pressed={!playing}
+          className="reel__toggle"
+          onClick={() => setPlaying((value) => !value)}
+          title={playing ? t("reel.pause") : t("reel.play")}
+          type="button"
+        >
+          <PlayPause playing={playing} />
+        </button>
       )}
       <p className="sr-only">
         {t("reel.summary", {

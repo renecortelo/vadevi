@@ -1941,10 +1941,8 @@
     "close": "Ta cave, ta carte, ton goût",
     "closeSub_one": "En {{count}} langue, même hors ligne",
     "closeSub_other": "En {{count}} langues, même hors ligne",
-    "cta": "Commencer",
     "pause": "Mettre l'animation en pause",
     "play": "Reprendre l'animation",
-    "replay": "Revoir",
     "summary": "Va de Vi : dégustations à la main ou à la voix, bouteilles par l'étiquette, {{names}} appellations de {{countries}} pays, {{grapes}} cépages et Vicenç, qui cite ses sources. En {{languages}} langues."
   }
 }

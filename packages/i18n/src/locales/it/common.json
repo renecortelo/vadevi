@@ -1941,10 +1941,8 @@
     "close": "La tua cantina, la tua mappa, il tuo gusto",
     "closeSub_one": "In {{count}} lingua, anche offline",
     "closeSub_other": "In {{count}} lingue, anche offline",
-    "cta": "Inizia",
     "pause": "Metti in pausa l'animazione",
     "play": "Riprendi l'animazione",
-    "replay": "Rivedi",
     "summary": "Va de Vi: degustazioni a mano o a voce, bottiglie dall'etichetta, {{names}} denominazioni di {{countries}} paesi, {{grapes}} vitigni e Vicenç, che cita le fonti. In {{languages}} lingue."
   }
 }

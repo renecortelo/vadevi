@@ -5,11 +5,11 @@ import { resolve } from "node:path";
 import { expect, test } from "./fixtures/server";
 
 /**
- * The sign-in screen's reel: what Va de Vi is for, in under twenty seconds.
- * It is told with the logo's own bottles; its figures are the library's own;
- * it can be paused, every animation at
- * once; «Get started» leads to the sign-in button; it fits a phone; and with
- * reduced motion it is its last frame, still.
+ * The sign-in card's reel: what Va de Vi is for, in under twenty seconds,
+ * told with the logo's own bottles and ending on the logo just above
+ * «Continue with Google», in the same card. Its figures are the library's
+ * own; it loops, and its one control pauses every animation at once; it fits
+ * a phone; and with reduced motion it is its last frame, still.
  */
 const names = (JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as unknown[])
   .length;
@@ -52,10 +52,26 @@ test("the sign-in reel tells what the app is for, from the library's own figures
   await expect(reel.locator(".reel-lockup__bottle")).toHaveCount(7);
   await expect(reel.locator(".reel-lockup__letter")).toHaveCount(10);
 
-  // At its end, «Get started» leads to the sign-in button.
+  // One card: the reel and the sign-in button together, and no other control
+  // than the pause.
+  const card = page.locator(".access-card");
+  await expect(card).toHaveCount(1);
+  await expect(card.locator(".reel")).toHaveCount(1);
+  await expect(card.getByRole("button", { name: /Google/ })).toBeVisible();
+  await expect(reel.getByRole("button")).toHaveCount(1);
+
+  // A loop: past the end of a pass, the reel begins again from its opening.
+  const stage = await reel.locator(".reel__stage").elementHandle();
+  await page.evaluate(() => {
+    for (const animation of document.querySelector(".reel")!.getAnimations({ subtree: true })) {
+      animation.currentTime = 20_900;
+      animation.play();
+    }
+  });
+  await expect
+    .poll(() => reel.locator(".reel__stage").evaluate((element, old) => element !== old, stage))
+    .toBe(true);
   await page.evaluate(seek, 19);
-  await reel.getByRole("button", { name: "Get started" }).click();
-  await expect(page.getByRole("button", { name: /Google/ })).toBeFocused();
 
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations).toEqual([]);

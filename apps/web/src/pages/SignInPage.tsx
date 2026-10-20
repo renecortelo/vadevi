@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../auth/AuthContext";
@@ -8,7 +8,8 @@ import { GoogleMark } from "../brand/GoogleMark";
 import { BrandLockup } from "../brand/Wordmark";
 
 // The reel waits until the sign-in card has been drawn and the browser is
-// idle: it is not what the first paint is for.
+// idle: it is not what the first paint is for. Until then the card shows the
+// logo the reel ends on, in the same frame, so nothing moves when it arrives.
 const SignInReel = lazy(() => import("../home/SignInReel"));
 
 export function SignInPage() {
@@ -16,7 +17,6 @@ export function SignInPage() {
   const { t } = useTranslation();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const signInButton = useRef<HTMLButtonElement>(null);
   const [showReel, setShowReel] = useState(false);
   useEffect(() => {
     const show = () => setShowReel(true);
@@ -47,14 +47,21 @@ export function SignInPage() {
       <AccessBackdrop />
       <SignedOutLocalePicker />
       <section className="access-card access-card--signin">
-        <BrandLockup className="access-card__lockup" />
+        <div className="access-card__reel">
+          {showReel ? (
+            <Suspense fallback={<BrandLockup className="access-card__lockup" />}>
+              <SignInReel />
+            </Suspense>
+          ) : (
+            <BrandLockup className="access-card__lockup" />
+          )}
+        </div>
         <p className="eyebrow">{t("auth.signInEyebrow")}</p>
         <h1>{t("auth.signInTitle")}</h1>
         <p>{t("auth.signInBody")}</p>
         <button
           aria-busy={busy}
           className="primary-button"
-          ref={signInButton}
           disabled={busy}
           onClick={() => void handleSignIn()}
           type="button"
@@ -69,16 +76,6 @@ export function SignInPage() {
           </p>
         )}
       </section>
-      {showReel ? (
-        <Suspense fallback={null}>
-          <SignInReel
-            onStart={() => {
-              signInButton.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-              signInButton.current?.focus({ preventScroll: true });
-            }}
-          />
-        </Suspense>
-      ) : null}
     </main>
   );
 }
