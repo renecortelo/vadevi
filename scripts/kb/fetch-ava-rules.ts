@@ -14,7 +14,9 @@ import { userAgent } from "./wikimedia";
  * («T.D. TTB-41, 71 FR 40400, July 17, 2006»). Only rules from 1994 on, which
  * govinfo serves as text; earlier ones exist only as the whole day's scanned
  * issue. A page shared by two rules may lead to the other one: then the day's
- * list of documents (govinfo's public API, its demonstration key) names it.
+ * whole issue, as govinfo's bulk data gives it in XML, names the rule and its
+ * document number, which is the rule's own page (the public API's
+ * demonstration key was spent within the hour, 20 October 2026).
  *
  * Serial, one request at a time, each cached in `.kb-cache/us-fr/`.
  *
@@ -105,19 +107,27 @@ for (const region of wanted) {
     let html = response === null ? "" : await response.text();
     if (response !== null) url = response.url;
     if (!isIt(html)) {
-      // Another rule on the same page: the day's documents, by title.
+      // Another rule on the same page: the day's issue names it, and its
+      // document number is its page.
       const date = `${year}-${months[month!] ?? "01"}-${day!.padStart(2, "0")}`;
-      const list = await get(
-        `https://api.govinfo.gov/packages/FR-${date}/granules?offsetMark=*&pageSize=1000&api_key=DEMO_KEY`,
-      );
-      const granules = (
-        list === null ? { granules: [] } : ((await list.json()) as { granules?: unknown[] })
-      ).granules as { granuleId: string; title: string }[] | undefined;
-      const match = (granules ?? []).find((granule) =>
-        names.some((name) => granule.title.toLowerCase().includes(name)),
-      );
-      if (match !== undefined) {
-        url = `https://www.govinfo.gov/content/pkg/FR-${date}/html/${match.granuleId}.htm`;
+      const issuePath = resolve(cache, "issues", `FR-${date}.xml`);
+      mkdirSync(resolve(cache, "issues"), { recursive: true });
+      if (!existsSync(issuePath)) {
+        const issue = await get(
+          `https://www.govinfo.gov/bulkdata/FR/${year}/${months[month!] ?? "01"}/FR-${date}.xml`,
+        );
+        if (issue !== null) writeFileSync(issuePath, await issue.text());
+      }
+      const issue = existsSync(issuePath) ? readFileSync(issuePath, "utf8") : "";
+      const rule = [...issue.matchAll(/<RULE>([\s\S]*?)<\/RULE>/g)]
+        .map((match) => match[1]!)
+        .find((text) => {
+          const subject = /<SUBJECT>([\s\S]*?)<\/SUBJECT>/.exec(text)?.[1] ?? "";
+          return names.some((name) => plain(subject).includes(name));
+        });
+      const number = rule === undefined ? undefined : /FR Doc\.\s*([\dE-]+)/.exec(rule)?.[1];
+      if (number !== undefined) {
+        url = `https://www.govinfo.gov/content/pkg/FR-${date}/html/${number}.htm`;
         response = await get(url);
         html = response === null ? "" : await response.text();
       }

@@ -15,6 +15,13 @@ has the reasons.
   are used (Wikipedia's share-alike, the pairing rules, the licences
   declined). Each card still credits its own beside what it shows.
 
+### The library
+
+- **Eleven more American Viticultural Areas with their vineyard area** (47
+  in all) from the rule that established each one: where a page of the
+  Federal Register holds two rules, the day's whole issue, from govinfo's
+  bulk data, names the right one.
+
 ## 0.5.0 — 20 October 2026
 
 ### First impressions

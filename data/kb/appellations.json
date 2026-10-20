@@ -355983,6 +355983,16 @@
         2,
         -4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 38,
+        "publisher": "federal-register",
+        "quote": "The proposed AVA contains approximately 2,760 square miles, and there are 41 commercially-producing vineyards covering a total of 94 acres distributed throughout the proposed AVA, along with 8 wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2016-07-21/html/2016-17274.htm",
+        "year": "2016"
+      },
+      "production": null
     }
   },
   {
@@ -358037,6 +358047,16 @@
         14.4,
         11.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2.8,
+        "publisher": "federal-register",
+        "quote": "Within the 15,900-acre proposed AVA, there are 7 acres of commercial vineyards.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2021-06-17/html/2021-12770.htm",
+        "year": "2021"
+      },
+      "production": null
     }
   },
   {
@@ -358552,6 +358572,16 @@
         22.1,
         20.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 6.5,
+        "publisher": "federal-register",
+        "quote": "The proposed AVA contains approximately 70 acres, with approximately 16 acres of vineyards.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2021-07-01/html/2021-14058.htm",
+        "year": "2021"
+      },
+      "production": null
     }
   },
   {
@@ -358657,6 +358687,16 @@
         10.9,
         5.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 45.3,
+        "publisher": "federal-register",
+        "quote": "At the time the petition was submitted, the proposed AVA contained five commercial vineyards covering a total of approximately 112 acres.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2021-08-25/html/2021-18209.htm",
+        "year": "2021"
+      },
+      "production": null
     }
   },
   {
@@ -358813,6 +358853,16 @@
         11.2,
         6.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 50.6,
+        "publisher": "federal-register",
+        "quote": "There are 24 commercially- producing vineyards covering a total of approximately 125 acres within the proposed AVA, as well as 11 wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2021-11-10/html/2021-23978.htm",
+        "year": "2021"
+      },
+      "production": null
     }
   },
   {
@@ -359200,6 +359250,16 @@
         10.7,
         8.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 416,
+        "publisher": "federal-register",
+        "quote": "The proposed West Sonoma Coast AVA contains 141,846 acres and has approximately 47 commercial vineyards covering approximately 1,028 acres distributed throughout the proposed AVA.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2022-05-23/html/2022-10590.htm",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -359689,6 +359749,16 @@
         3.6,
         -1.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 47.3,
+        "publisher": "federal-register",
+        "quote": "Within the proposed AVA, there are 7 commercial vineyards, which cover a total of approximately 117 acres.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2022-06-03/html/2022-11709.htm",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -359794,6 +359864,16 @@
         9.4,
         6.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 176.4,
+        "publisher": "federal-register",
+        "quote": "Within the proposed AVA, there are 6 commercial vineyards, which cover a total of approximately 436 acres, as well as 4 wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2022-08-15/html/2022-17508.htm",
+        "year": "2022"
+      },
+      "production": null
     }
   },
   {
@@ -360055,6 +360135,16 @@
         12.9,
         9.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 54.2,
+        "publisher": "federal-register",
+        "quote": "There are planted vineyards covering approximately 134 acres within the proposed AVA, as well as three wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2023-08-29/html/2023-18588.htm",
+        "year": "2023"
+      },
+      "production": null
     }
   },
   {
@@ -360534,6 +360624,16 @@
         9.8,
         4.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 28.7,
+        "publisher": "federal-register",
+        "quote": "There are 55 commercially producing vineyards covering a total of approximately 71 acres within the proposed AVA, as well as nine wineries.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2024-05-15/html/2024-10626.htm",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {
@@ -360642,6 +360742,16 @@
         15.6,
         12.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 103.6,
+        "publisher": "federal-register",
+        "quote": "There are 44 commercially-producing vineyards covering a total of approximately 256 acres, along with 29 acres of planned vineyards.",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2024-08-30/html/2024-19578.htm",
+        "year": "2024"
+      },
+      "production": null
     }
   },
   {

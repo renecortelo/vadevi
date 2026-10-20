@@ -233,6 +233,14 @@
       "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2015-08-07/html/2015-19454.htm",
       "year": "2015"
     },
+    "us-tip-of-the-mitt": {
+      "acres": 94,
+      "name": "Tip of the Mitt",
+      "quote": "The proposed AVA contains approximately 2,760 square miles, and there are 41 commercially-producing vineyards covering a total of 94 acres distributed throughout the proposed AVA, along with 8 wineries.",
+      "section": "9.257",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2016-07-21/html/2016-17274.htm",
+      "year": "2016"
+    },
     "us-champlain-valley-of-new-york": {
       "acres": 15.47,
       "name": "Champlain Valley of New York",
@@ -288,6 +296,86 @@
       "section": "9.273",
       "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2020-11-19/html/2020-25301.htm",
       "year": "2020"
+    },
+    "us-palos-verdes-peninsula": {
+      "acres": 7,
+      "name": "Palos Verdes Peninsula",
+      "quote": "Within the 15,900-acre proposed AVA, there are 7 acres of commercial vineyards.",
+      "section": "9.274",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2021-06-17/html/2021-12770.htm",
+      "year": "2021"
+    },
+    "us-ulupalakua": {
+      "acres": 16,
+      "name": "Ulupalakua",
+      "quote": "The proposed AVA contains approximately 70 acres, with approximately 16 acres of vineyards.",
+      "section": "9.278",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2021-07-01/html/2021-14058.htm",
+      "year": "2021"
+    },
+    "us-virginia-peninsula": {
+      "acres": 112,
+      "name": "Virginia Peninsula",
+      "quote": "At the time the petition was submitted, the proposed AVA contained five commercial vineyards covering a total of approximately 112 acres.",
+      "section": "9.279",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2021-08-25/html/2021-18209.htm",
+      "year": "2021"
+    },
+    "us-verde-valley": {
+      "acres": 125,
+      "name": "Verde Valley",
+      "quote": "There are 24 commercially- producing vineyards covering a total of approximately 125 acres within the proposed AVA, as well as 11 wineries.",
+      "section": "9.280",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2021-11-10/html/2021-23978.htm",
+      "year": "2021"
+    },
+    "us-west-sonoma-coast": {
+      "acres": 1028,
+      "name": "West Sonoma Coast",
+      "quote": "The proposed West Sonoma Coast AVA contains 141,846 acres and has approximately 47 commercial vineyards covering approximately 1,028 acres distributed throughout the proposed AVA.",
+      "section": "9.283",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2022-05-23/html/2022-10590.htm",
+      "year": "2022"
+    },
+    "us-rocky-reach": {
+      "acres": 117,
+      "name": "Rocky Reach",
+      "quote": "Within the proposed AVA, there are 7 commercial vineyards, which cover a total of approximately 117 acres.",
+      "section": "9.287",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2022-06-03/html/2022-11709.htm",
+      "year": "2022"
+    },
+    "us-gabilan-mountains": {
+      "acres": 436,
+      "name": "Gabilan Mountains",
+      "quote": "Within the proposed AVA, there are 6 commercial vineyards, which cover a total of approximately 436 acres, as well as 4 wineries.",
+      "section": "9.288",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2022-08-15/html/2022-17508.htm",
+      "year": "2022"
+    },
+    "us-winters-highlands": {
+      "acres": 134,
+      "name": "Winters Highlands",
+      "quote": "There are planted vineyards covering approximately 134 acres within the proposed AVA, as well as three wineries.",
+      "section": "9.290",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2023-08-29/html/2023-18588.htm",
+      "year": "2023"
+    },
+    "us-upper-cumberland": {
+      "acres": 71,
+      "name": "Upper Cumberland",
+      "quote": "There are 55 commercially producing vineyards covering a total of approximately 71 acres within the proposed AVA, as well as nine wineries.",
+      "section": "9.294",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2024-05-15/html/2024-10626.htm",
+      "year": "2024"
+    },
+    "us-san-luis-rey": {
+      "acres": 256,
+      "name": "San Luis Rey",
+      "quote": "There are 44 commercially-producing vineyards covering a total of approximately 256 acres, along with 29 acres of planned vineyards.",
+      "section": "9.295",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2024-08-30/html/2024-19578.htm",
+      "year": "2024"
     }
   }
 }
