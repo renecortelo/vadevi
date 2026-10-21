@@ -172,9 +172,14 @@ deployment still cannot sign in.
 ### 5. Deploy
 
 ```bash
-pnpm --filter @vadevi/web build
-npx wrangler deploy --config wrangler.preview.jsonc
+pnpm deploy:preview
 ```
+
+It applies the migrations, loads the wine library (about 49,000 rows the
+first time — do it on a fresh day, as D1's free plan allows 100,000 written
+rows a day; afterwards only the rows that changed), builds the web bundle and
+deploys the Worker, in that order, stopping at the first failure. See
+`docs/self-hosting.md` for the steps by hand.
 
 Then return to step 3 of the Firebase setup and confirm the deployed origin is
 the authorized domain.

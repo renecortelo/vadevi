@@ -104,12 +104,32 @@ itself unavailable rather than failing.
 ## 5. Deploy
 
 ```bash
+pnpm exec tsx scripts/deploy.ts --config wrangler.production.jsonc
+```
+
+The script does the four steps in the one safe order, stopping at the first
+failure: it applies the migrations, loads the wine library, builds the web
+bundle and deploys the Worker. Copy the URL it prints.
+
+The wine library (grapes, the atlas of registered wine names, the styles of
+wine) is reference data loaded from `data/kb/` into D1. The first load writes
+about 49,000 rows; D1's free plan allows 100,000 written rows a day for the
+whole database, so do the first deploy on a fresh day (after 00:00 UTC). After
+that a deploy reloads the library only when `data/kb/` has changed, and then
+writes only the rows that changed. A load that would write more than 25,000
+rows (60,000 into an empty library) stops before writing anything and says so;
+run `pnpm kb:load --config wrangler.production.jsonc --max-writes <n>` the
+next day if that is intended. `data/kb/README.md` says where every fact comes
+from and under what licence.
+
+The steps by hand, if you prefer them, in this order:
+
+```bash
 pnpm exec wrangler d1 migrations apply vadevi --remote --config wrangler.production.jsonc
+pnpm kb:load --config wrangler.production.jsonc
 pnpm --filter @vadevi/web build
 pnpm exec wrangler deploy --config wrangler.production.jsonc
 ```
-
-Copy the URL it prints.
 
 ## 6. Authorize your origin — twice
 
@@ -466,13 +486,12 @@ Brave changed to this credit model since the first review of it.
 ```bash
 git pull
 pnpm install
-pnpm exec wrangler d1 migrations apply vadevi --remote --config wrangler.production.jsonc
-pnpm --filter @vadevi/web build
-pnpm exec wrangler deploy --config wrangler.production.jsonc
+pnpm exec tsx scripts/deploy.ts --config wrangler.production.jsonc
 ```
 
 Migrations are immutable and forward-only. Apply them before deploying the
-Worker, never after.
+Worker, never after — the script does. It also reloads the wine library when
+`data/kb/` has changed, writing only what changed.
 
 ### An error you can ignore, once
 

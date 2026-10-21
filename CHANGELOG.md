@@ -186,6 +186,13 @@ has the reasons.
   (GHSA-5r4p-p66f-jhc7: `serveStatic` decoded a path twice). The API serves
   no static files through Hono, so it was never reachable; the copies under
   firebase-tools are lifted too.
+- **The self-hosting and preview guides load the wine library**: they
+  deploy with `scripts/deploy.ts` (migrations, library, bundle, Worker), and
+  say the first load writes about 49,000 rows, so it goes on a fresh day of
+  D1's free allowance. Before, a deployment that followed them by hand had an
+  empty library. The data dictionary now covers the library's tables and
+  `voice_reviews`; the architecture notes the library's and voice's
+  boundaries; `data/kb/README.md` lists every build, file and source.
 - `pnpm kb:score` now splits each field's gaps by cause (awaiting
   permission, permission not asked yet, licence declined, no open source)
   and prints the score every permission would give: 74.8, or 75.6 with

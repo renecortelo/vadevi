@@ -37,3 +37,11 @@ Phase 6 adds the data-rights, budget, and release-hardening boundary:
 - optional-provider budgets are reserved before the provider is called, and reaching a cap routes the request to the same deterministic or manual path an unconfigured deployment uses
 - service-worker cache policy lives in a plain module so the boundaries in §14.2 are asserted by tests as well as applied by the worker
 - the web API client is split into eager and lazy modules so contract schemas for cellar, tasting, assistant, and data-rights routes load with those routes, keeping initial-route JavaScript inside its budget
+
+After Phase 6, the open wine library and voice tastings:
+
+- the library is reference data in D1's `kb_` tables, built offline from open sources by `scripts/kb/` into `data/kb/` (versioned with the code, with each value's quote and source) and loaded by the deploy, which writes only the rows that changed; no model and no network call are involved at request time, and Vicenç reads it like any repository
+- a grape value is kept only if its quote stands in the text it cites (`scripts/kb/grape-validation.ts`); a model may propose, never decide, and the atlas of registered names involves no model at all (`data/kb/README.md`)
+- the library belongs to no Space and holds nothing about any reader; the reader's own wines link to it by id (a grape, a registered name), so deleting a Space never touches it
+- the wheels of aromas, colours and pairings are views over the library's vocabulary and the pairing rules (`docs/pairing-rules.md`), each rule quoting an open source
+- a voice tasting sends audio to the configured speech provider only on the reader's action and keeps none of it; the transcript fills the form for the reader to confirm, and a note is kept for review only when the reader sends it, for thirty days (`docs/privacy-review-voice-tasting.md`)

@@ -1,8 +1,9 @@
 # The wine library
 
 Reference knowledge about grapes and the world's registered wine names — the
-EU's, and the American Viticultural Areas so far — loaded into D1 (migrations
-`0025`–`0030` and `0033`) by
+EU's, and those of each other country's own register: 2,621 names in 35
+countries as of October 2026 — loaded into D1 (the `wine_library` migrations,
+`0025`–`0043`) by
 `pnpm kb:load` — and by every deploy, which reloads only when this directory
 changes, and then writes only the rows that changed. D1's free plan allows
 100,000 written rows a day for the whole database, the application's own
@@ -24,12 +25,27 @@ questions ("what does a Garnacha smell like?").
 | `topics.json`                      | `pnpm kb:fetch-topics`, `pnpm kb:build-topics` (from `topics-include.json`)                    | Wikidata (names), Wikipedia (explanations)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `grape-images.json`                | `pnpm kb:fetch-grape-images`                                                                   | Wikimedia Commons (photographs, in `apps/web/public/library/grapes/`)                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `topic-images.json`                | `pnpm kb:fetch-topic-images`                                                                   | Wikimedia Commons (each picture under its own free licence, credited on its page), chosen by each style's Wikidata item (P18) and looked at by eye                                                                                                                                                                                                                                                                                                                                               |
+| `grape-readings.json`              | read by hand                                                                                   | A grape's levels, sweetness, aromas, pairings and origin from its articles in any language (`pnpm kb:fetch-grape-articles`, `--every` for all of them) or a public-domain book, each with its quote, checked by the grape build                                                                                                                                                                                                                                                                  |
+| `grape-names.json`                 | given by hand                                                                                  | A grape's name in an app language Wikidata has no label in (an international name, a proper name)                                                                                                                                                                                                                                                                                                                                                                                                |
+| `place-sentences.json`             | chosen by hand                                                                                 | One sentence on a name's wine from the Wikipedia article of its place, for names no article of their own describes                                                                                                                                                                                                                                                                                                                                                                               |
+| `region-climate.json`              | `pnpm kb:fetch-climate`, `pnpm kb:fetch-elevation`                                             | CHELSA V2.1, Copernicus DEM GLO-90 (see «Climate, planted area and production»)                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `region-figures.json`              | `pnpm kb:fetch-region-figures`                                                                 | Area and production from the infobox of a name's Wikipedia articles                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `*-figures.json`, `adelaide.json`  | transcribed by hand, or read from the publisher's files                                        | Official statistics on vineyard area and production, and the University of Adelaide's areas by region and variety (see «Licences»)                                                                                                                                                                                                                                                                                                                                                               |
+| `registers/`                       | transcribed by hand                                                                            | The registers of Switzerland, Canada, Japan, Moldova, Georgia, Brazil and the regions of Mexico and Uruguay (see «Registers transcribed by hand»)                                                                                                                                                                                                                                                                                                                                                |
 
-Every structured value carries `evidence`: the sentence of the English
-Wikipedia article it was read from. A language model reads the article and
-proposes values with quotes; `scripts/kb/grape-validation.ts` keeps a value
-only if its quote occurs in the article and says it. The model is the reader,
-never the source.
+`pnpm kb:score` measures how complete the library is: the mean of seventeen
+fields' coverage (ten for grapes, seven for registered names), with each
+field's gaps by cause — awaiting a publisher's permission, a permission not
+asked for yet, a licence declined, or no open source found — and the score
+the permissions would give.
+
+Every structured value carries `evidence`: the sentence it was read from — of
+the grape's English Wikipedia article, of its article in another language,
+or of a public-domain book (see «Licences») — or, for an origin no text
+gives, the row of the University of Adelaide's table. A language model, or a
+reader by hand, proposes values with quotes; `scripts/kb/grape-validation.ts`
+keeps a value only if its quote occurs in the text and says it. The model is
+the reader, never the source.
 
 The atlas (`appellations.json`) involves no model at all. Every registered
 wine PDO and PGI comes from the EU register itself; Wikidata adds names in
@@ -54,8 +70,11 @@ point is approximate; a Wikipedia lead becomes the summary only when it is
 about the wine rather than the town it is named for. Where a wine's only
 article is in its country's language (Greek, Hungarian, Romanian…), that
 lead is the original a faithful translation is made from. A grape is listed under a
-registered name only where the grape's own article says it is grown there,
-with that sentence — the full list of authorised varieties is in each name's
+registered name only where a source says it is grown or allowed there, with
+that source's words: the register's single document (the main varieties, see
+below), a canton's wine law, the grape's own article or the name's, the
+grapes line of the name's infobox, or the University of Adelaide's areas by
+region and variety — the full list of authorised varieties is in each name's
 product specification, linked from the register.
 
 What each name's own single document says of its wines is read from it, with
@@ -291,8 +310,12 @@ Earth).
 
 ## Climate, planted area and production
 
-Each name's card shows the climate at its point on the map and, where its
-article gives them, its vineyards' size and production.
+Each name's card shows the climate at its point on the map and, where a
+source gives them, its vineyards' size and production: an official
+statistic first (Spain's Ministry, France's customs, Argentina's INV,
+Destatis, Statistik Austria, the KSH, ARTEA, Lombardy, Umbria, the Federal
+Register), then its Wikipedia article's infobox or text, then the University
+of Adelaide's areas — each credited as «Licences» says.
 
 - `pnpm kb:fetch-climate` reads the monthly mean temperature and
   precipitation, 1981–2010, at every point from CHELSA V2.1 — only the rows
@@ -310,6 +333,11 @@ article gives them, its vineyards' size and production.
   each came from and its year where the article gives one. Only a wine
   region's infobox counts, and only a figure with its unit. A figure in
   acres is converted and marked as such.
+- `pnpm kb:fetch-elevation` reads the elevation at every point (Copernicus
+  DEM GLO-90, through Open-Meteo) into `region-climate.json`.
+- `pnpm kb:fetch-region-articles` caches the full articles of each name
+  (`--every`: in every language Wikidata links), which the figures and grape
+  sentences read by hand are checked against.
 
 ## Keeping the registers current
 
@@ -333,6 +361,14 @@ Every few months, or when a register announces a name:
    whose original is no longer the text shown: remove it, translate the new
    text faithfully, and fill the languages a new summary lacks.
 7. Deploy: the library load writes only what changed.
+
+The figures follow their publishers' calendars: Spain's Ministry publishes
+each campaign's PDO report the following year, France's customs and the INV
+their harvest and area reports in spring, Destatis its production in March;
+the University of Adelaide revises its database every few years
+(`pnpm kb:read-adelaide` after downloading its files again). A new report
+is transcribed into its file, the atlas rebuilt, and `pnpm kb:score` read
+for what moved.
 
 ## Licences
 
@@ -531,11 +567,19 @@ also read in a working session with Claude, under the same rules and the same
 check: every value with its verbatim quote, kept only if `grape-validation.ts`
 finds the quote in the article and the quote says it.
 
-Where a grape's English article says nothing of its wine, its article in its
-own language (Spanish, Catalan, French, Italian, Portuguese or German) was
-read the same way: the check knows how levels are stated in those languages,
-an aroma is given as the library's term with the article's own word for it,
-and each fact keeps the article it came from, which the card links.
+Where a grape's English article says nothing of its wine, its articles in
+other languages were read the same way: first its own language's (Spanish,
+Catalan, French, Italian, Portuguese or German), then, in October 2026, those
+of the grapes' countries and of the Soviet ampelography many were described
+in (Russian, Ukrainian, Bulgarian, Hungarian, Croatian, Romanian, Czech,
+Slovenian, Greek, Polish, Georgian), and the other languages with many grape
+articles (Dutch, Swedish, Japanese, Turkish, Finnish, Norwegian, Danish,
+Chinese, Galician, Basque, and any other with `--every`). The check knows how
+levels are stated in those languages and a country's name declined or in
+another script; an aroma or a dish is given as the library's term with the
+article's own word for it, and each fact keeps the article it came from,
+which the card links. A sentence that is conditional, regional, comparative,
+or contradicted by another language's article is left unread.
 
 Georgia's grapes were read in Russian, the language their best articles are
 in, the same way: a place is given by its English name with the article's own
@@ -548,9 +592,12 @@ for, translated from the English lead the card shows.
 
 A few registered names with no article of their own (Greek, Bulgarian,
 Romanian, Slovenian) take their summary from one whole sentence of their
-country's wine article on English Wikipedia — only a sentence that names them,
-describes the wine, and carries no figures or lists. Alsace's grand crus take
-the coordinates of their vineyards from French Wikipedia's article on them.
+country's wine article on English Wikipedia (`pnpm kb:fetch-country-wine`) —
+only a sentence that names them, describes the wine, and carries no figures
+or lists. Others take one sentence on their wine from the article of their
+place (`place-sentences.json`, chosen by hand). Alsace's grand crus take the
+coordinates of their vineyards from French Wikipedia's article on them
+(`pnpm kb:fetch-grand-crus`).
 
 Where a style or method has a wine-specific article in one language only
 (sulphites: French and German), the other languages carry a faithful

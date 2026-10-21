@@ -2,6 +2,8 @@
 
 Va de Vi is a private, collaborative wine memory, tasting, and discovery PWA. Phases 0–6 are implemented: identity and shared Spaces, Wine Memory and offline logging, deep tasting sessions, sourced research and deterministic Vicenç reads, a light cellar with wishlist and sourced prices, confirmed assistant actions, and now data export, confirmed deletion, the full Wine Memory filter surface, eight-locale release hardening, and private usage budgets.
 
+Beside the memory sits an open wine library, read from sources that say what they are and checked quote by quote: 209 grapes in eight languages, 2,621 registered wine names in 35 countries on an atlas with their climate, vineyards and grapes, the styles and methods of wine, and wheels of aromas, colours and pairings. Tastings can be dictated (`docs/privacy-review-voice-tasting.md`). Where each fact comes from, and under what licence, is in `data/kb/README.md` and on the app's «Sources and licences» page.
+
 Phase 6 is code-complete, but the MVP is not yet production-ready. Fluent-human review of the seven non-English catalogs, browser drills for the new screens, and preview-environment acceptance against isolated non-production resources are still open. See `docs/phase-6-handoff.md` for the exact remaining work, and `docs/release-review.md` for evidence separated into automated, browser, human-review, and preview-environment results.
 
 ## Prerequisites
@@ -54,7 +56,7 @@ The checked-in Wrangler file contains placeholder identifiers only. Preview and 
 pnpm check
 ```
 
-This runs formatting, linting, strict TypeScript checks, tests, OpenAPI drift detection, translation and pseudo-locale checks, production builds, and the initial-route JavaScript budget. To intentionally refresh the generated contract:
+This runs formatting, linting, strict TypeScript checks, tests, OpenAPI drift detection, translation and pseudo-locale checks, the documentation, migration, brand and third-party-notice checks, production builds, the initial-route JavaScript budget, and the release scan. End-to-end drills run apart with `pnpm e2e`. To intentionally refresh the generated contract:
 
 ```powershell
 pnpm openapi:generate
@@ -69,6 +71,9 @@ pnpm openapi:generate
 - `packages/i18n` — eight locale catalogs and the versioned tasting ontology
 - `packages/ui` — accessible primitives and design tokens
 - `migrations` — immutable D1 migrations
+- `data/kb` — the wine library's data, with its sources and licences
+- `scripts` — the library's builds (`scripts/kb`), checks and release tooling
+- `e2e` — Playwright drills
 - `docs/adr` — architecture decisions
 
 ## Data rights
@@ -138,8 +143,8 @@ VITE_SOURCE_URL=https://your-host/your-fork
 Leaving it pointing at the upstream repository while running modified code does
 not satisfy the obligation — the link must reach _your_ Corresponding Source.
 
-Of the 1,136 third-party packages in the tree, one carries a copyleft licence:
-`@img/sharp-libvips-darwin-arm64` (LGPL-3.0-or-later), reached through
+Of the 1,140 third-party packages in the tree (October 2026), one carries a
+copyleft licence: `@img/sharp-libvips-*`, the platform's build (LGPL-3.0-or-later), reached through
 `sharp → miniflare → wrangler`. It is a development dependency only and never
 ships in the Worker or the web bundle, and LGPL is compatible with AGPL in any
 case. Nothing in the tree forced this licence — AGPL is a deliberate choice.

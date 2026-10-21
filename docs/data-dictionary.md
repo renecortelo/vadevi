@@ -47,6 +47,8 @@ Phase 2 wine and quick-note mutations use the batched sync endpoint. Phase 3 ses
 
 Session detail exposes only each caller's own note identity/state plus aggregate submitted-note counts. Comparison reads submitted notes only. Draft text remains author-private at the repository boundary.
 
+`0038_tasting_creation_method.sql` records how a note was first written (see below). `0041_voice_reviews.sql` adds `voice_reviews`: a spoken note its author chose to send for review, so voice tastings can be corrected on real use — the form it filled (`quick`, `deep` or `wine`), the locale, the transcript as corrected, what the app proposed and the form as the author left it (JSON). Never the audio. A row exists only when the author presses the button for that note; `expires_at` is thirty days on, and the scheduled handler removes expired rows. Deleting the Space or the account removes its rows (`ON DELETE CASCADE`). See `docs/privacy-review-voice-tasting.md`.
+
 ## Provenance and facts
 
 `0007_provenance.sql` starts the Phase 4 evidence model:
@@ -94,6 +96,20 @@ Migration `0011` also extends the registered assistant tool names with price loo
 ## Phase 5 browser cache
 
 Dexie version 4 adds user/Space-partitioned cellar, wishlist, and price snapshots for read-only offline rendering. Purchase, bottle, wishlist, price, and assistant-confirmation writes remain visibly disabled offline; they are not added to the existing tasting mutation queue. Logout, account switching, removed-Space cleanup, and explicit offline-data clearing include the new snapshot tables.
+
+## Wine library (reference data)
+
+The `kb_` tables hold the open wine library: reference data, the same for every reader, owned by no Space and holding nothing about anyone. `pnpm kb:load` fills them from `data/kb/` on every deploy, writing only the rows that changed; `data/kb/README.md` says where each value comes from and under what licence.
+
+- `kb_grapes` — one row per grape: Wikidata item, berry colour, country of origin, the levels of acidity, tannin, body and alcohol, how dry or sweet its wines are (`0043`), its prominence and its Wikipedia article.
+- `kb_grape_attributes` — a grape's lists: its aromas and pairings (terms of `kb_terms`), the styles it makes, and the regions its articles name (with their country).
+- `kb_regions` — one row per registered wine name: its register id or reference, designation (`gi_type`, open since `0040`), level and nesting (`register_level`, `within`), date, point and how it was placed (`point_source`), the varieties its register lists, and, as JSON, its climate and its vineyards' area and production with their sources (`climate`, `figures`, `0042`).
+- `kb_region_grapes` — a grape placed under a name by a source, with that source's words (`quote`) and link.
+- `kb_names` — every name of a grape, a region or a style in each language, with its normalised form for search.
+- `kb_summaries` — each entity's summary per locale, with its source, licence and whether it is a translation.
+- `kb_evidence` — the quote each grape value was read from, and its source.
+- `kb_terms`, `kb_topics`, `kb_images` — the vocabulary in eight languages, the styles and methods, and the photographs with their author and licence.
+- `kb_meta` — the version of the data loaded, so a deploy reloads only when `data/kb/` changes.
 
 ## Data rights, budgets, and merge tombstones
 
