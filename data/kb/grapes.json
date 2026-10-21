@@ -4283,7 +4283,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tinta_Amarela"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "red fruit",
@@ -4415,6 +4415,12 @@
         "quote": "Autochthone Rotweinsorte aus Portugal.",
         "value": "PT",
         "sourceUrl": "https://de.wikipedia.org/wiki/Alfrocheiro"
+      },
+      {
+        "field": "acidity",
+        "quote": "Wines of this variety are known for their high natural acidity, which provides freshness and structure",
+        "value": "high",
+        "sourceUrl": "https://doi.org/10.19040/ecocycles.v11i3.648"
       }
     ],
     "id": "alfrocheiro-preto",

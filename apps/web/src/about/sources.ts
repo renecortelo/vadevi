@@ -69,6 +69,21 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "P. P. Demaria, C. Leardi, «Ampelografia della provincia di Alessandria», 1875 (Internet Archive)",
+    terms: "publicDomain",
+    url: "https://archive.org/details/ampelografiadel00leargoog",
+    what: "traits",
+  },
+  {
+    credit: "M. Kreidlmayer (2026), «Wines of Fire and Earth», Ecocycles 11(3)",
+    group: "texts",
+    licence: "CC BY 4.0",
+    name: "Ecocycles · European Ecocycles Society",
+    url: "https://doi.org/10.19040/ecocycles.v11i3.648",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "University of California, «Report of the viticultural work» 1885–1896 (Internet Archive)",
     terms: "publicDomain",
     url: "https://archive.org/details/reportofviticult8793cali",

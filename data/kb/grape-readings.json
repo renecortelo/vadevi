@@ -189,6 +189,17 @@
         "lang": "de",
         "quote": "Autochthone Rotweinsorte aus Portugal.",
         "value": "PT"
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "high",
+        "quote": "Wines of this variety are known for their high natural acidity, which provides freshness and structure",
+        "source": {
+          "url": "https://doi.org/10.19040/ecocycles.v11i3.648",
+          "volume": "ecocycles-v11i3-648",
+          "work": "kreidlmayer-2026-canary-islands"
+        }
       }
     ],
     "alicante-bouschet": [

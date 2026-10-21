@@ -23,6 +23,10 @@ has the reasons.
 
 ### The library
 
+- **Alfrocheiro's acidity, from an open-access article**: Kreidlmayer's study
+  of the Canary Islands' volcanic terroirs (Ecocycles, 2026, CC BY 4.0) says
+  the wines of Baboso Negro — Alfrocheiro — are known for their high natural
+  acidity. Book and article readings can now link their own address.
 - **Switzerland's cantons, from the 2025 harvest report**: the 21 cantonal
   AOCs show their canton's vineyard area and harvest in 2025, from the Federal
   Office for Agriculture (its reports are free of copyright under Swiss law),

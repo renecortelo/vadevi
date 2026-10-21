@@ -450,6 +450,14 @@ for what moved.
   française» (1857) was read too and gave nothing usable (its sentences are
   comparative or about a place's wine).
 
+- **Open-access articles under CC BY 4.0**, read the same way where a
+  sentence states a level for the variety itself: M. Kreidlmayer, «Wines of
+  Fire and Earth: Exploring the Volcanic Terroirs of the Canary Islands»,
+  Ecocycles 11(3), 2026 (doi:10.19040/ecocycles.v11i3.648) — Baboso Negro,
+  that is Alfrocheiro, «known for their high natural acidity». The text
+  extracted from its PDF is cached beside the books, and the reading names
+  the article's address (`source.url`).
+
 - **P. Viala and V. Vermorel, «Ampélographie»** (Masson, 1901–1910; the
   authors died in 1936 and 1927, so in the public domain): the Internet
   Archive's text of its scanned volumes (`.kb-cache/ampelography/`, not in
