@@ -463,7 +463,12 @@ for what moved.
   sentence states a level for the variety itself: M. Kreidlmayer, «Wines of
   Fire and Earth: Exploring the Volcanic Terroirs of the Canary Islands»,
   Ecocycles 11(3), 2026 (doi:10.19040/ecocycles.v11i3.648) — Baboso Negro,
-  that is Alfrocheiro, «known for their high natural acidity». The text
+  that is Alfrocheiro, «known for their high natural acidity»; M. Plantevin
+  et al., «Characterization of varietal effects on the acidity and pH of
+  grape berries for selection of varieties better adapted to climate
+  change», Frontiers in Plant Science 15, 2024 (doi:10.3389/fpls.2024.1439114,
+  read from Europe PMC) — «two white varieties known for their high acidity:
+  Alvarinho and Petit Manseng». The text
   extracted from its PDF is cached beside the books, and the reading names
   the article's address (`source.url`).
 

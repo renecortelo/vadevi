@@ -11361,7 +11361,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Campbell_Early"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "cinnamon",
@@ -11503,6 +11503,12 @@
         "quote": "Im vollreifen Zustand erbringt Petit Manseng Weine mit Duftnoten von Zimt, exotischen Früchten, Honig und reifem Pfirsich.",
         "value": "peach",
         "sourceUrl": "https://de.wikipedia.org/wiki/Petit_Manseng"
+      },
+      {
+        "field": "acidity",
+        "quote": "two white varieties known for their high acidity: Alvarinho and Petit Manseng",
+        "value": "high",
+        "sourceUrl": "https://doi.org/10.3389/fpls.2024.1439114"
       }
     ],
     "id": "petit-manseng",

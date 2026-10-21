@@ -2609,6 +2609,17 @@
           "honey": "Honig",
           "peach": "Pfirsich"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "high",
+        "quote": "two white varieties known for their high acidity: Alvarinho and Petit Manseng",
+        "source": {
+          "url": "https://doi.org/10.3389/fpls.2024.1439114",
+          "volume": "frontiers-fpls-2024-1439114",
+          "work": "plantevin-2024-acidity"
+        }
       }
     ],
     "petit-verdot": [

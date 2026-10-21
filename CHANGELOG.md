@@ -23,6 +23,10 @@ has the reasons.
 
 ### The library
 
+- **Petit Manseng's acidity, from an open-access article**: a 2024 study of
+  grape acidity in a changing climate (Frontiers in Plant Science, CC BY 4.0)
+  names Alvarinho and Petit Manseng as «two white varieties known for their
+  high acidity».
 - **Aramon's body, from Guyot's «Étude des vignobles de France»** (1876,
   public domain): its wines «n'ont pas assez d'alcool, de corps ni de
   couleur», as its articles also say.

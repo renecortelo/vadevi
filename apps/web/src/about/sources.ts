@@ -90,6 +90,14 @@ export const sources: Source[] = [
     what: "traits",
   },
   {
+    credit: "Plantevin et al. (2024), Frontiers in Plant Science 15:1439114",
+    group: "texts",
+    licence: "CC BY 4.0",
+    name: "Frontiers in Plant Science · Frontiers Media",
+    url: "https://doi.org/10.3389/fpls.2024.1439114",
+    what: "traits",
+  },
+  {
     group: "texts",
     name: "University of California, «Report of the viticultural work» 1885–1896 (Internet Archive)",
     terms: "publicDomain",
