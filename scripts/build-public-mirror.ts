@@ -42,6 +42,8 @@ const excluded = [
   "docs/your-desk-todo.md",
   // The running list of what is left, with notes on the operator's own cellar.
   "docs/backlog.md",
+  // Draft letters asking publishers for permission, to be sent by the operator.
+  "docs/permission-requests.md",
 ];
 
 /**
