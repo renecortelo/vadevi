@@ -235,6 +235,13 @@ export const sources: Source[] = [
   },
   {
     group: "figures",
+    licence: "CC BY 4.0",
+    name: "Regione Umbria · dati.regione.umbria.it",
+    url: "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+    what: "areas",
+  },
+  {
+    group: "figures",
     licence: "CC0 1.0",
     name: "Regione Lombardia · dati.lombardia.it",
     url: "https://www.dati.lombardia.it/Agricoltura/Superfici-rivendicate-per-la-produzione-vini-DOC_D/gp6s-ezv4",

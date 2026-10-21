@@ -515,6 +515,7 @@
     "glanceSourceFederalRegister": "US Federal Register, die Regel zur Einrichtung der AVA ({{campaign}})",
     "glanceSourceArtea": "Quelle: ARTEA – Regione Toscana, Lese {{campaign}} · CC BY 4.0",
     "glanceSourceLombardia": "Quelle: Regione Lombardia, beanspruchte Fläche bei der Lese {{campaign}} · CC0",
+    "glanceSourceUmbria": "Quelle: Regione Umbria, für die Herkunftsbezeichnung zertifizierter Wein {{campaign}} · CC BY 4.0",
     "glanceSourceKsh": "Forrás: KSH (ungarisches Statistikamt), Rebflächen {{campaign}} · CC BY 4.0"
   },
   "space": {

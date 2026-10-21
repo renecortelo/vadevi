@@ -1,5 +1,84 @@
 {
- "about": "Vineyard area (ha) of Italian wine names from the regions that publish it by name as open data: Tuscany, the area declared at the latest grape harvest (ARTEA «Raccolta Uva», dati.toscana.it, CC BY 4.0, credited «Fonte: ARTEA – Regione Toscana»), summed over each name's types; Lombardy, the area claimed at the 2013 harvest («Superfici rivendicate per la produzione vini DOC_DOCG_IGT», dati.lombardia.it, CC0). Names that span another region take none. Built by scripts/kb/fetch-it-regional-figures.ts.",
+ "about": "Vineyard area (ha) of Italian wine names from the regions that publish it by name as open data: Tuscany, the area declared at the latest grape harvest (ARTEA «Raccolta Uva», dati.toscana.it, CC BY 4.0, credited «Fonte: ARTEA – Regione Toscana»), summed over each name's types; Lombardy, the area claimed at the 2013 harvest («Superfici rivendicate per la produzione vini DOC_DOCG_IGT», dati.lombardia.it, CC0). Umbria (under «production»), the wine each name certified as fit for its DO in the latest year («Produzioni Certificate», dati.regione.umbria.it, CC BY 4.0). Names that span another region take none. Built by scripts/kb/fetch-it-regional-figures.ts.",
+ "production": {
+  "it-assisi": {
+   "amountHl": 1736,
+   "publisher": "regione-umbria",
+   "quote": "Assisi — ETTOLITRI_VINO_IDONEO 2020: 1736",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-bettona": {
+   "amountHl": 276,
+   "publisher": "regione-umbria",
+   "quote": "Bettona — ETTOLITRI_VINO_IDONEO 2020: 276",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-colli-altotiberini": {
+   "amountHl": 425,
+   "publisher": "regione-umbria",
+   "quote": "Colli Altotiberini — ETTOLITRI_VINO_IDONEO 2020: 425",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-colli-del-trasimeno": {
+   "amountHl": 2626,
+   "publisher": "regione-umbria",
+   "quote": "Colli del Trasimeno — ETTOLITRI_VINO_IDONEO 2020: 2626",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-colli-martani": {
+   "amountHl": 4016,
+   "publisher": "regione-umbria",
+   "quote": "Colli Martani — ETTOLITRI_VINO_IDONEO 2020: 4016",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-colli-perugini": {
+   "amountHl": 502,
+   "publisher": "regione-umbria",
+   "quote": "Colli Perugini — ETTOLITRI_VINO_IDONEO 2020: 502",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-montefalco": {
+   "amountHl": 19506,
+   "publisher": "regione-umbria",
+   "quote": "Montefalco — ETTOLITRI_VINO_IDONEO 2020: 19506",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-montefalco-sagrantino": {
+   "amountHl": 6996,
+   "publisher": "regione-umbria",
+   "quote": "Montefalco Sagrantino — ETTOLITRI_VINO_IDONEO 2020: 6996",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-spoleto": {
+   "amountHl": 1433,
+   "publisher": "regione-umbria",
+   "quote": "Spoleto — ETTOLITRI_VINO_IDONEO 2020: 1433",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-todi": {
+   "amountHl": 1899,
+   "publisher": "regione-umbria",
+   "quote": "Todi — ETTOLITRI_VINO_IDONEO 2020: 1899",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  },
+  "it-umbria": {
+   "amountHl": 129694,
+   "publisher": "regione-umbria",
+   "quote": "Umbria — ETTOLITRI_VINO_IDONEO 2020: 129694",
+   "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+   "year": "2020"
+  }
+ },
  "regions": {
   "it-alta-valle-della-greve": {
    "name": "Alta Valle della Greve",

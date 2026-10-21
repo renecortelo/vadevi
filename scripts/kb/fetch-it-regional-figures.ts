@@ -18,6 +18,11 @@ import { userAgent } from "./wikimedia";
  *   (dati.lombardia.it, CC0), the area claimed for each name at the 2013
  *   harvest.
  *
+ * - **Umbria**: «Produzioni Certificate» (dati.regione.umbria.it, CC BY 4.0),
+ *   the wine each name certified as fit for its DO («ettolitri vino idoneo»)
+ *   in the latest year the table gives — its production as a DO, said as
+ *   such; a name that certified none is left out.
+ *
  * A name that spans another region (Colli di Luni with Liguria; Lugana, Garda
  * and San Martino della Battaglia with Veneto) takes none: one region's part
  * is not the name's area. Grapes in quintals are not wine, and are not used.
@@ -158,12 +163,50 @@ for (const row of rows) {
   };
 }
 
+// Umbria: each wine's latest year of certified wine.
+type Certified = { ANNO: number; ETTOLITRI_VINO_IDONEO: string; VINO: string };
+const umbriaApi = "https://dati.regione.umbria.it/api/3/action";
+const umbriaDataset = await json<{ result: { resources: { id: string; name: string }[] } }>(
+  `${umbriaApi}/package_show?id=produzioni_certificate`,
+);
+const wines = umbriaDataset.result.resources.find((resource) =>
+  /^VINI_DOC_IGT/i.test(resource.name),
+);
+if (wines === undefined) throw new Error("No VINI_DOC_IGT resource on dati.regione.umbria.it");
+const umbria = await json<{ result: { records: Certified[] } }>(
+  `${umbriaApi}/datastore_search?resource_id=${wines.id}&limit=1000`,
+);
+const latest = new Map<string, Certified>();
+for (const record of umbria.result.records) {
+  const known = latest.get(record.VINO);
+  if (known === undefined || record.ANNO > known.ANNO) latest.set(record.VINO, record);
+}
+const production: Record<
+  string,
+  { amountHl: number; publisher: "regione-umbria"; quote: string; sourceUrl: string; year: string }
+> = {};
+for (const [wine, record] of latest) {
+  const entry = byName.get(key(wine));
+  const amount = Number(record.ETTOLITRI_VINO_IDONEO.replace(",", "."));
+  if (entry === undefined || interregional.has(entry.id) || !(amount > 0)) continue;
+  production[entry.id] = {
+    amountHl: Math.round(amount),
+    publisher: "regione-umbria",
+    quote: `${wine} — ETTOLITRI_VINO_IDONEO ${record.ANNO}: ${record.ETTOLITRI_VINO_IDONEO}`,
+    sourceUrl: "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+    year: String(record.ANNO),
+  };
+}
+
 writeFileSync(
   resolve("data/kb/it-regional-figures.json"),
   `${JSON.stringify(
     {
       about:
-        "Vineyard area (ha) of Italian wine names from the regions that publish it by name as open data: Tuscany, the area declared at the latest grape harvest (ARTEA «Raccolta Uva», dati.toscana.it, CC BY 4.0, credited «Fonte: ARTEA – Regione Toscana»), summed over each name's types; Lombardy, the area claimed at the 2013 harvest («Superfici rivendicate per la produzione vini DOC_DOCG_IGT», dati.lombardia.it, CC0). Names that span another region take none. Built by scripts/kb/fetch-it-regional-figures.ts.",
+        "Vineyard area (ha) of Italian wine names from the regions that publish it by name as open data: Tuscany, the area declared at the latest grape harvest (ARTEA «Raccolta Uva», dati.toscana.it, CC BY 4.0, credited «Fonte: ARTEA – Regione Toscana»), summed over each name's types; Lombardy, the area claimed at the 2013 harvest («Superfici rivendicate per la produzione vini DOC_DOCG_IGT», dati.lombardia.it, CC0). Umbria (under «production»), the wine each name certified as fit for its DO in the latest year («Produzioni Certificate», dati.regione.umbria.it, CC BY 4.0). Names that span another region take none. Built by scripts/kb/fetch-it-regional-figures.ts.",
+      production: Object.fromEntries(
+        Object.entries(production).sort(([one], [other]) => one.localeCompare(other)),
+      ),
       regions: Object.fromEntries(
         Object.entries(figures).sort(([one], [other]) => one.localeCompare(other)),
       ),
@@ -175,5 +218,5 @@ writeFileSync(
 const count = (publisher: Figure["publisher"]) =>
   Object.values(figures).filter((figure) => figure.publisher === publisher).length;
 console.info(
-  `Vineyard area for ${count("artea")} Tuscan names (${yearly.year}) and ${count("regione-lombardia")} Lombard ones (2013).`,
+  `Vineyard area for ${count("artea")} Tuscan names (${yearly.year}) and ${count("regione-lombardia")} Lombard ones (2013); certified wine for ${Object.keys(production).length} Umbrian ones.`,
 );

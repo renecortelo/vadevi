@@ -113,17 +113,19 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
                               })
                             : figure.publisher === "artea"
                               ? t("library.glanceSourceArtea", { campaign: figure.year ?? "" })
-                              : figure.publisher === "regione-lombardia"
-                                ? t("library.glanceSourceLombardia", {
-                                    campaign: figure.year ?? "",
-                                  })
-                                : figure.publisher === "ksh"
-                                  ? t("library.glanceSourceKsh", { campaign: figure.year ?? "" })
-                                  : figure.publisher === "federal-register"
-                                    ? t("library.glanceSourceFederalRegister", {
-                                        campaign: figure.year ?? "",
-                                      })
-                                    : t("library.summarySource")}
+                              : figure.publisher === "regione-umbria"
+                                ? t("library.glanceSourceUmbria", { campaign: figure.year ?? "" })
+                                : figure.publisher === "regione-lombardia"
+                                  ? t("library.glanceSourceLombardia", {
+                                      campaign: figure.year ?? "",
+                                    })
+                                  : figure.publisher === "ksh"
+                                    ? t("library.glanceSourceKsh", { campaign: figure.year ?? "" })
+                                    : figure.publisher === "federal-register"
+                                      ? t("library.glanceSourceFederalRegister", {
+                                          campaign: figure.year ?? "",
+                                        })
+                                      : t("library.summarySource")}
                 </a>
               </span>
             ),

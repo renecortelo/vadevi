@@ -45,6 +45,10 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **Umbria's production**: the wine each Umbrian name certified as fit for
+  its DO in 2020 («Produzioni Certificate», Regione Umbria, CC BY 4.0), said
+  as such — eleven names, Montefalco's and Montefalco Sagrantino's in place
+  of older article figures. On the sources page.
 - **Grapes of 102 more names from their Wikipedia infobox**: where nothing
   else gives varieties, the «grapes» line of the English article's wine
   region infobox — 101 American Viticultural Areas, Western Plains and

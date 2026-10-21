@@ -253,7 +253,8 @@ const RegionFigureSchema = z
      * statistical office ("destatis"), Statistik Austria ("statistik-austria"),
      * the US Federal Register rule that established an AVA ("federal-register"),
      * Hungary's Central Statistical Office ("ksh"), Tuscany's agricultural
-     * payments agency ("artea"), the Lombardy region ("regione-lombardia").
+     * payments agency ("artea"), the Lombardy region ("regione-lombardia"), the Umbria region
+     * ("regione-umbria").
      */
     publisher: z
       .enum([
@@ -265,6 +266,7 @@ const RegionFigureSchema = z
         "ksh",
         "mapa",
         "regione-lombardia",
+        "regione-umbria",
         "statistik-austria",
       ])
       .optional(),

@@ -1647,6 +1647,16 @@ for (const entry of entries) {
 const italianRegions = JSON.parse(
   readFileSync(resolve("data/kb/it-regional-figures.json"), "utf8"),
 ) as {
+  production?: Record<
+    string,
+    {
+      amountHl: number;
+      publisher: "regione-umbria";
+      quote: string;
+      sourceUrl: string;
+      year: string;
+    }
+  >;
   regions: Record<
     string,
     {
@@ -1671,6 +1681,25 @@ for (const entry of entries) {
       year: figure.year,
     },
     production: entry.figures?.production ?? null,
+  };
+  italianRegional += 1;
+}
+// Umbria's names: the wine each certified as fit for its DO, in place of an
+// article's figure.
+for (const entry of entries) {
+  const figure = italianRegions.production?.[entry.id];
+  if (figure === undefined) continue;
+  const known = entry.figures?.production as { publisher?: string } | null | undefined;
+  if (known && known.publisher !== undefined) continue;
+  entry.figures = {
+    planted: entry.figures?.planted ?? null,
+    production: {
+      amount: figure.amountHl,
+      publisher: figure.publisher,
+      quote: figure.quote,
+      sourceUrl: figure.sourceUrl,
+      year: figure.year,
+    },
   };
   italianRegional += 1;
 }
@@ -1763,7 +1792,7 @@ for (const entry of entries) {
   federalRegister += 1;
 }
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany and Lombardy, ${fromText} from articles' text, ${federalRegister} American from the Federal Register.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

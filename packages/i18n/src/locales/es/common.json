@@ -515,6 +515,7 @@
     "glanceSourceFederalRegister": "Federal Register de EE. UU., la norma que creó la AVA ({{campaign}})",
     "glanceSourceArtea": "Fuente: ARTEA – Regione Toscana, vendimia {{campaign}} · CC BY 4.0",
     "glanceSourceLombardia": "Fuente: Regione Lombardia, superficie reivindicada en la vendimia {{campaign}} · CC0",
+    "glanceSourceUmbria": "Fuente: Regione Umbria, vino certificado para su DO en {{campaign}} · CC BY 4.0",
     "glanceSourceKsh": "Forrás: KSH (estadística de Hungría), viñedos {{campaign}} · CC BY 4.0"
   },
   "space": {

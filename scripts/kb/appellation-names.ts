@@ -16,6 +16,7 @@ export type RegionFigureSource = {
     | "ksh"
     | "mapa"
     | "regione-lombardia"
+    | "regione-umbria"
     | "statistik-austria";
   quote: string;
   sourceUrl: string;

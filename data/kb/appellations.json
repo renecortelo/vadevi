@@ -22705,6 +22705,16 @@
         9,
         5.4
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1736,
+        "publisher": "regione-umbria",
+        "quote": "Assisi — ETTOLITRI_VINO_IDONEO 2020: 1736",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {
@@ -36230,6 +36240,16 @@
         9.3,
         5.7
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 276,
+        "publisher": "regione-umbria",
+        "quote": "Bettona — ETTOLITRI_VINO_IDONEO 2020: 276",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {
@@ -65524,6 +65544,16 @@
         8.6,
         5.1
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 425,
+        "publisher": "regione-umbria",
+        "quote": "Colli Altotiberini — ETTOLITRI_VINO_IDONEO 2020: 425",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {
@@ -67686,6 +67716,16 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 4016,
+        "publisher": "regione-umbria",
+        "quote": "Colli Martani — ETTOLITRI_VINO_IDONEO 2020: 4016",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {
@@ -68005,6 +68045,16 @@
         8.6,
         5.1
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 502,
+        "publisher": "regione-umbria",
+        "quote": "Colli Perugini — ETTOLITRI_VINO_IDONEO 2020: 502",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {
@@ -69896,6 +69946,16 @@
         9,
         5.5
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 2626,
+        "publisher": "regione-umbria",
+        "quote": "Colli del Trasimeno — ETTOLITRI_VINO_IDONEO 2020: 2626",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {
@@ -168522,10 +168582,11 @@
     "figures": {
       "planted": null,
       "production": {
-        "amount": 4627,
-        "quote": "Perugia (1996/97) 4626,78",
-        "sourceUrl": "https://it.wikipedia.org/wiki/Montefalco_(vino)",
-        "year": "1996/97"
+        "amount": 19506,
+        "publisher": "regione-umbria",
+        "quote": "Montefalco — ETTOLITRI_VINO_IDONEO 2020: 19506",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
       }
     }
   },
@@ -168683,10 +168744,11 @@
         "year": null
       },
       "production": {
-        "amount": 10490,
-        "quote": "wine produced = {{convert|10490|hl}}",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Montefalco_Sagrantino",
-        "year": null
+        "amount": 6996,
+        "publisher": "regione-umbria",
+        "quote": "Montefalco Sagrantino — ETTOLITRI_VINO_IDONEO 2020: 6996",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
       }
     }
   },
@@ -242192,6 +242254,16 @@
         9.5,
         5.8
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1433,
+        "publisher": "regione-umbria",
+        "quote": "Spoleto — ETTOLITRI_VINO_IDONEO 2020: 1433",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {
@@ -256032,6 +256104,16 @@
         9.3,
         5.8
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1899,
+        "publisher": "regione-umbria",
+        "quote": "Todi — ETTOLITRI_VINO_IDONEO 2020: 1899",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {
@@ -262001,6 +262083,16 @@
         10,
         6.3
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 129694,
+        "publisher": "regione-umbria",
+        "quote": "Umbria — ETTOLITRI_VINO_IDONEO 2020: 129694",
+        "sourceUrl": "https://dati.regione.umbria.it/dataset/produzioni_certificate",
+        "year": "2020"
+      }
     }
   },
   {

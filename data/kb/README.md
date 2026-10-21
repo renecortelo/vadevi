@@ -414,7 +414,9 @@ kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
   summed over its types, on the registered name each type begins with.
   **Regione Lombardia**, «Superfici rivendicate per la produzione vini
   DOC_DOCG_IGT» on dati.lombardia.it: CC0; the area claimed at the 2013
-  harvest. Names that span another region take none.
+  harvest. Names that span another region take none. **Regione Umbria**,
+  «Produzioni Certificate» on dati.regione.umbria.it: CC BY 4.0; the wine
+  each name certified as fit for its DO in the latest year.
 
 - **Germany's Federal Statistical Office (Destatis)**, «Rebflächen 2022»
   (`de-anbaugebiete-figures.json`): its publications allow reproduction and
