@@ -45,6 +45,11 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **Grapes of seven more names from their whole articles**: Drôme (its
+  specification's main varieties), Puget Sound, Naches Heights (the
+  varieties «currently grown»), San Miguel, Templeton Gap, San Luis Rey and
+  Auckland (its most planted) — 61 links; a variety an article only calls
+  suitable, or one an estate grows, is left out.
 - **Area and production from the body of each name's article**: where the
   infobox says nothing, the sentence that does — the German articles'
   «Im Jahr 2017 wurden von 908 Hektar Rebfläche 35.859 Hektoliter DOC-Wein

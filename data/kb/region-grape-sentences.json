@@ -1770,6 +1770,58 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Crozes-Hermitage_AOC"
       }
     ],
+    "fr-drome": [
+      {
+        "grapeId": "grenache",
+        "quote": "Selon le cahier des charges, les cépages principalement utilisés pour faire du rouge et du rosé sont le grenache, le merlot, la syrah, le cabernet-sauvignon, le gamay, le cinsault et le carignan.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Selon le cahier des charges, les cépages principalement utilisés pour faire du rouge et du rosé sont le grenache, le merlot, la syrah, le cabernet-sauvignon, le gamay, le cinsault et le carignan.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Selon le cahier des charges, les cépages principalement utilisés pour faire du rouge et du rosé sont le grenache, le merlot, la syrah, le cabernet-sauvignon, le gamay, le cinsault et le carignan.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Selon le cahier des charges, les cépages principalement utilisés pour faire du rouge et du rosé sont le grenache, le merlot, la syrah, le cabernet-sauvignon, le gamay, le cinsault et le carignan.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "Selon le cahier des charges, les cépages principalement utilisés pour faire du rouge et du rosé sont le grenache, le merlot, la syrah, le cabernet-sauvignon, le gamay, le cinsault et le carignan.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "cinsaut",
+        "quote": "Selon le cahier des charges, les cépages principalement utilisés pour faire du rouge et du rosé sont le grenache, le merlot, la syrah, le cabernet-sauvignon, le gamay, le cinsault et le carignan.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "carignan",
+        "quote": "Selon le cahier des charges, les cépages principalement utilisés pour faire du rouge et du rosé sont le grenache, le merlot, la syrah, le cabernet-sauvignon, le gamay, le cinsault et le carignan.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Les vins blancs sont issus de chardonnay, aligoté et viognier.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "aligote",
+        "quote": "Les vins blancs sont issus de chardonnay, aligoté et viognier.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Les vins blancs sont issus de chardonnay, aligoté et viognier.",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Drôme_(IGP)"
+      }
+    ],
     "fr-minervois": [
       {
         "grapeId": "syrah",
@@ -1826,6 +1878,43 @@
         "grapeId": "riesling",
         "quote": "It is the best area for Feteasca, Sauvignon, Riesling, Traminer rose and Cabernet production.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Codru_%28wine%29"
+      }
+    ],
+    "nz-auckland": [
+      {
+        "grapeId": "chardonnay",
+        "quote": "Overall, the region's most planted variety is Chardonnay, which accounts for nearly a quarter of the vineyard area.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "The next-most planted varieties are Syrah and Pinot Gris.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "The next-most planted varieties are Syrah and Pinot Gris.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Taken together, the red varieties Merlot, Cabernet Franc, Cabernet Sauvignon, and Malbec make up a slightly larger proportion than Chardonnay of 28.2 percent in 2024, which produce Auckland's well regarded Bordeaux-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Taken together, the red varieties Merlot, Cabernet Franc, Cabernet Sauvignon, and Malbec make up a slightly larger proportion than Chardonnay of 28.2 percent in 2024, which produce Auckland's well regarded Bordeaux-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Taken together, the red varieties Merlot, Cabernet Franc, Cabernet Sauvignon, and Malbec make up a slightly larger proportion than Chardonnay of 28.2 percent in 2024, which produce Auckland's well regarded Bordeaux-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Taken together, the red varieties Merlot, Cabernet Franc, Cabernet Sauvignon, and Malbec make up a slightly larger proportion than Chardonnay of 28.2 percent in 2024, which produce Auckland's well regarded Bordeaux-style wines.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region"
       }
     ],
     "nz-canterbury": [
@@ -3816,6 +3905,138 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Veeder_AVA"
       }
     ],
+    "us-naches-heights": [
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Five red Bordeaux varieties; Cabernet Franc, Cabernet Sauvignon, Malbec, Merlot and Petite Verdot",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Five red Bordeaux varieties; Cabernet Franc, Cabernet Sauvignon, Malbec, Merlot and Petite Verdot",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "Five red Bordeaux varieties; Cabernet Franc, Cabernet Sauvignon, Malbec, Merlot and Petite Verdot",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Five red Bordeaux varieties; Cabernet Franc, Cabernet Sauvignon, Malbec, Merlot and Petite Verdot",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "petit-verdot",
+        "quote": "Five red Bordeaux varieties; Cabernet Franc, Cabernet Sauvignon, Malbec, Merlot and Petite Verdot",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "Two white Bordeaux varieties; Semillon and Sauvignon Blanc",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Two white Bordeaux varieties; Semillon and Sauvignon Blanc",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Three Burgundy varieties:  Pinot Noir, Chardonnay and Pinot Meunier",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Three Burgundy varieties:  Pinot Noir, Chardonnay and Pinot Meunier",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "pinot-meunier",
+        "quote": "Three Burgundy varieties:  Pinot Noir, Chardonnay and Pinot Meunier",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Four Rhone varieties; Syrah, Mourvedre, Roussanne and Viognier",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "mourvedre",
+        "quote": "Four Rhone varieties; Syrah, Mourvedre, Roussanne and Viognier",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "roussanne",
+        "quote": "Four Rhone varieties; Syrah, Mourvedre, Roussanne and Viognier",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Four Rhone varieties; Syrah, Mourvedre, Roussanne and Viognier",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "barbera",
+        "quote": "Italian varietals; Barbera, Gewurtztraminer, Nebbiolo, Sangiovese, Sagrantino (the first such planting in Washington State) and Pinot Grigio",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "Italian varietals; Barbera, Gewurtztraminer, Nebbiolo, Sangiovese, Sagrantino (the first such planting in Washington State) and Pinot Grigio",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "nebbiolo",
+        "quote": "Italian varietals; Barbera, Gewurtztraminer, Nebbiolo, Sangiovese, Sagrantino (the first such planting in Washington State) and Pinot Grigio",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "sangiovese",
+        "quote": "Italian varietals; Barbera, Gewurtztraminer, Nebbiolo, Sangiovese, Sagrantino (the first such planting in Washington State) and Pinot Grigio",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "sagrantino",
+        "quote": "Italian varietals; Barbera, Gewurtztraminer, Nebbiolo, Sangiovese, Sagrantino (the first such planting in Washington State) and Pinot Grigio",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Italian varietals; Barbera, Gewurtztraminer, Nebbiolo, Sangiovese, Sagrantino (the first such planting in Washington State) and Pinot Grigio",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "souzao",
+        "quote": "Five Portuguese varieties; Sezao (formerly Souzao), Tinta Cao, Touriga Nacional, Touriga Franca, and Tinta Roriz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "tinta-cao",
+        "quote": "Five Portuguese varieties; Sezao (formerly Souzao), Tinta Cao, Touriga Nacional, Touriga Franca, and Tinta Roriz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "touriga-nacional",
+        "quote": "Five Portuguese varieties; Sezao (formerly Souzao), Tinta Cao, Touriga Nacional, Touriga Franca, and Tinta Roriz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "touriga-francesa",
+        "quote": "Five Portuguese varieties; Sezao (formerly Souzao), Tinta Cao, Touriga Nacional, Touriga Franca, and Tinta Roriz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "tempranillo",
+        "quote": "Five Portuguese varieties; Sezao (formerly Souzao), Tinta Cao, Touriga Nacional, Touriga Franca, and Tinta Roriz.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      },
+      {
+        "grapeId": "zweigelt",
+        "quote": "The Austrian variety Zweigelt",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Naches_Heights_AVA"
+      }
+    ],
     "us-napa-valley": [
       {
         "grapeId": "cabernet-sauvignon",
@@ -4156,6 +4377,28 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Potter_Valley_AVA"
       }
     ],
+    "us-puget-sound": [
+      {
+        "grapeId": "muller-thurgau",
+        "quote": "Die nördliche Lage erfordert zumeist frühreifende Rebsorten wie Madeleine Angevine, Madeline Sylvaner, Müller-Thurgau und Siegerrebe aber auch speziell selektierte Klone der Sorten Spätburgunder (hier Pinot Noir genannt) und Grauburgunder (hier Pinot Gris genannt).",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Puget_Sound_AVA"
+      },
+      {
+        "grapeId": "siegerrebe",
+        "quote": "Die nördliche Lage erfordert zumeist frühreifende Rebsorten wie Madeleine Angevine, Madeline Sylvaner, Müller-Thurgau und Siegerrebe aber auch speziell selektierte Klone der Sorten Spätburgunder (hier Pinot Noir genannt) und Grauburgunder (hier Pinot Gris genannt).",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Puget_Sound_AVA"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Die nördliche Lage erfordert zumeist frühreifende Rebsorten wie Madeleine Angevine, Madeline Sylvaner, Müller-Thurgau und Siegerrebe aber auch speziell selektierte Klone der Sorten Spätburgunder (hier Pinot Noir genannt) und Grauburgunder (hier Pinot Gris genannt).",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Puget_Sound_AVA"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Die nördliche Lage erfordert zumeist frühreifende Rebsorten wie Madeleine Angevine, Madeline Sylvaner, Müller-Thurgau und Siegerrebe aber auch speziell selektierte Klone der Sorten Spätburgunder (hier Pinot Noir genannt) und Grauburgunder (hier Pinot Gris genannt).",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Puget_Sound_AVA"
+      }
+    ],
     "us-red-hills-lake-county": [
       {
         "grapeId": "cabernet-sauvignon",
@@ -4450,6 +4693,65 @@
         "grapeId": "gruner-veltliner",
         "quote": "Cool weather varietals like Pinot Noir and Chardonnay are commonly grown while lesser varietals Sauvignon Blanc, Gewürztraminer and Gruner Veltliner also thrive.",
         "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Obispo_Coast_AVA"
+      }
+    ],
+    "us-san-luis-rey": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "Its 44 vineyards and 23 wineries produce mainly Cabernet Sauvignon, Merlot, Cabernet Franc, Syrah, and Grenache.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Rey_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Its 44 vineyards and 23 wineries produce mainly Cabernet Sauvignon, Merlot, Cabernet Franc, Syrah, and Grenache.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Rey_AVA"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "Its 44 vineyards and 23 wineries produce mainly Cabernet Sauvignon, Merlot, Cabernet Franc, Syrah, and Grenache.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Rey_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Its 44 vineyards and 23 wineries produce mainly Cabernet Sauvignon, Merlot, Cabernet Franc, Syrah, and Grenache.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Rey_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "Its 44 vineyards and 23 wineries produce mainly Cabernet Sauvignon, Merlot, Cabernet Franc, Syrah, and Grenache.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Luis_Rey_AVA"
+      }
+    ],
+    "us-san-miguel-district": [
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "San Miguel's predominant grape varieties are congruent with the greater Paso Robles viticultural area, with its red wines led by Cabernet Sauvignon and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Miguel_District_AVA"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "San Miguel's predominant grape varieties are congruent with the greater Paso Robles viticultural area, with its red wines led by Cabernet Sauvignon and Merlot.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Miguel_District_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "Zinfandel historically makes up a significant amount, followed by southern Rhône red varieties such as Grenache, Syrah, and notably Mourvèdre, a variety that does well in warm, dry climates.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Miguel_District_AVA"
+      },
+      {
+        "grapeId": "grenache",
+        "quote": "Zinfandel historically makes up a significant amount, followed by southern Rhône red varieties such as Grenache, Syrah, and notably Mourvèdre, a variety that does well in warm, dry climates.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Miguel_District_AVA"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Zinfandel historically makes up a significant amount, followed by southern Rhône red varieties such as Grenache, Syrah, and notably Mourvèdre, a variety that does well in warm, dry climates.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Miguel_District_AVA"
+      },
+      {
+        "grapeId": "mourvedre",
+        "quote": "Zinfandel historically makes up a significant amount, followed by southern Rhône red varieties such as Grenache, Syrah, and notably Mourvèdre, a variety that does well in warm, dry climates.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/San_Miguel_District_AVA"
       }
     ],
     "us-san-pasqual-valley": [
@@ -5039,6 +5341,23 @@
         "grapeId": "viognier",
         "quote": "Neben der typischen Rebsorte Kaliforniens, dem Zinfandel, werden vermehrt die klassischen Sorten Chardonnay, Sauvignon Blanc, Chenin, Riesling und Viognier angebaut.",
         "sourceUrl": "https://de.wikipedia.org/wiki/Temecula_Valley_AVA"
+      }
+    ],
+    "us-templeton-gap-district": [
+      {
+        "grapeId": "syrah",
+        "quote": "However, vineyards in the district also produce several of the wines the Paso Robles AVA is widely known for, Syrah, Zinfandel, and Cabernet Sauvignon varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Templeton_Gap_District_AVA"
+      },
+      {
+        "grapeId": "zinfandel",
+        "quote": "However, vineyards in the district also produce several of the wines the Paso Robles AVA is widely known for, Syrah, Zinfandel, and Cabernet Sauvignon varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Templeton_Gap_District_AVA"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "However, vineyards in the district also produce several of the wines the Paso Robles AVA is widely known for, Syrah, Zinfandel, and Cabernet Sauvignon varietals.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Templeton_Gap_District_AVA"
       }
     ],
     "us-texas-davis-mountains": [
