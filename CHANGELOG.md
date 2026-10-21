@@ -23,6 +23,20 @@ has the reasons.
 
 ### The library
 
+- **Vineyards by region and variety, from the University of Adelaide**:
+  Anderson, Nelgen and Puga's database of winegrape bearing areas (CC BY
+  4.0) gives 99 names their area where nothing else did — Australian and New
+  Zealand GIs, Slovenian and Czech districts, Portugal's wine regions,
+  Japanese prefectures, Swiss cantons — and 118 names the grapes most planted
+  there (each at least 2 % of the area, the twelve largest), Argentina's
+  departments and South Africa's districts among them, matched by province
+  and department, never by a name alone. Region grapes now 82 %, from 77 %.
+  Twenty-one grapes without an origin in any article take the country its
+  table gives (Fiano, Aglianico, Koshu, Pinot Meunier, Zierfandler…); those
+  whose origin is disputed stay without one. «Sources and licences» credits
+  it, and says what was changed.
+- **Swiss names say their level in words**: the names a Swiss AOC contains
+  read «Lavaux · regional AOC», not the text's key.
 - **The pairing wheel's suggestions, best known first**: a dish's grapes
   that the pairing rules suggest by style (up to 65 for some) show twelve at
   first, the most prominent, with «Show all 59» for the rest and «Show

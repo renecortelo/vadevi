@@ -42,8 +42,26 @@ const unescape = (value: string) =>
 
 export type Cell = { link?: string; value: string };
 
-/** The first sheet's rows, each a map from column letter to cell. */
-export function readSheet(file: Uint8Array): Record<string, Cell>[] {
+/** The part that holds the sheet of that name, by the workbook's own links. */
+function sheetPath(part: (name: string) => string, name: string): string {
+  const sheet = [...part("xl/workbook.xml").matchAll(/<sheet ([^>]*)\/?>/g)].find(
+    ([, attributes]) => unescape(/name="([^"]*)"/.exec(attributes!)?.[1] ?? "") === name,
+  );
+  if (sheet === undefined) throw new Error(`No sheet named ${name}.`);
+  const id = /r:id="([^"]+)"/.exec(sheet[1]!)?.[1];
+  const target = [...part("xl/_rels/workbook.xml.rels").matchAll(/<Relationship ([^>]*)\/?>/g)]
+    .map(([, attributes]) => attributes!)
+    .find((attributes) => /Id="([^"]+)"/.exec(attributes)?.[1] === id);
+  const path = target === undefined ? undefined : /Target="([^"]+)"/.exec(target)?.[1];
+  if (path === undefined) throw new Error(`No part for the sheet ${name}.`);
+  return path.startsWith("/") ? path.slice(1) : `xl/${path}`;
+}
+
+/**
+ * A sheet's rows, each a map from column letter to cell: the first sheet, or
+ * the one of that name.
+ */
+export function readSheet(file: Uint8Array, name?: string): Record<string, Cell>[] {
   const entries = zipEntries(file);
   const part = (name: string) => {
     const data = entries.get(name);
@@ -53,9 +71,10 @@ export function readSheet(file: Uint8Array): Record<string, Cell>[] {
     ([, item]) =>
       unescape([...item!.matchAll(/<t[^>]*>([\s\S]*?)<\/t>/g)].map(([, t]) => t).join("")),
   );
-  const sheet = part("xl/worksheets/sheet1.xml");
+  const path = name === undefined ? "xl/worksheets/sheet1.xml" : sheetPath(part, name);
+  const sheet = part(path);
   const targets = new Map(
-    [...part("xl/worksheets/_rels/sheet1.xml.rels").matchAll(/<Relationship ([^>]*)\/?>/g)].map(
+    [...part(path.replace(/([^/]+)$/, "_rels/$1.rels")).matchAll(/<Relationship ([^>]*)\/?>/g)].map(
       ([, attributes]) => [
         /Id="([^"]+)"/.exec(attributes!)?.[1] ?? "",
         unescape(/Target="([^"]+)"/.exec(attributes!)?.[1] ?? ""),

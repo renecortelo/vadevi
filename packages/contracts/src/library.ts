@@ -254,10 +254,12 @@ const RegionFigureSchema = z
      * the US Federal Register rule that established an AVA ("federal-register"),
      * Hungary's Central Statistical Office ("ksh"), Tuscany's agricultural
      * payments agency ("artea"), the Lombardy region ("regione-lombardia"), the Umbria region
-     * ("regione-umbria").
+     * ("regione-umbria"), the University of Adelaide's database of winegrape
+     * areas ("adelaide").
      */
     publisher: z
       .enum([
+        "adelaide",
         "artea",
         "destatis",
         "douane",

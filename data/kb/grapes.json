@@ -3225,6 +3225,12 @@
         "quote": "Es una variedad con mucha materia colorante, con una acidez notable y con gran cantidad de azúcar y tanino.",
         "value": "high",
         "sourceUrl": "https://es.wikipedia.org/wiki/Prieto_picudo"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Prieto Picudo: Spain",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "ES"
       }
     ],
     "id": "prieto-picudo",
@@ -3238,7 +3244,7 @@
       "nl": "Prieto Picudo",
       "pt": "Prieto Picudo"
     },
-    "origin": null,
+    "origin": "ES",
     "pairings": [],
     "prominence": 7,
     "regions": [
@@ -4884,6 +4890,12 @@
         "quote": "Гарно поєднуються зі стравами з овочів та морепродуктів",
         "value": "seafood",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D1%80%D1%96%D0%BD%D1%82%D0%BE"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Arinto de Bucelas: Portugal",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "PT"
       }
     ],
     "id": "arinto",
@@ -4897,7 +4909,7 @@
       "nl": "Arinto",
       "pt": "Arinto"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [
       "vegetables",
       "seafood"
@@ -5093,6 +5105,12 @@
         "quote": "Usada sobretudo em lotes com outras castas, actualmente tem sido utilizada também em vinhos varietais com sucesso.",
         "value": "still",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Encruzado"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Encruzado: Portugal",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "PT"
       }
     ],
     "id": "encruzado",
@@ -5106,7 +5124,7 @@
       "nl": "Encruzado",
       "pt": "Encruzado"
     },
-    "origin": null,
+    "origin": "PT",
     "pairings": [],
     "prominence": 3,
     "regions": [
@@ -5568,6 +5586,12 @@
         "quote": "Гарно поєднуються зі стравами з риби, білого м'яса та м'якими сирами",
         "value": "soft cheese",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BD%D0%BE"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Fiano: Italy",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "IT"
       }
     ],
     "id": "fiano",
@@ -5581,7 +5605,7 @@
       "pt": "Fiano",
       "nl": "Fiano"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "fish",
       "white meat",
@@ -5897,6 +5921,12 @@
         "quote": "グレコ (greco) とは、ギリシャが起源ではないかといわれている、一連のイタリアのワイン用ブドウ品種である。この呼称は白ブドウ品種 (グレコ・ディ・トゥーフォ (greco di tufo) やグレコ・ビアンコ (greco bianco) など) にも黒ブドウ品種 (グレコ・ネロ (greco nero) ) にも用いられている。グレコ・ネロの栽培に用いられている面積のほうが大きいが、「グレコ」の呼び名が指すものとしてもっとも一般的なのは、白ブドウ品種のほうである。グレコ種は、カンパーニャ州では保証つき統制原産地呼称 (d.o.c.g.) 認定ワインであるグレコ・ディ・トゥーフォ (greco di tufo) の生産に用いられている。カラブリア州では、グレコ・ビアンコ種が原産地統制呼称 (d.o.c.) 認定ワインであるグレコ・ディ・ビアンコ (greco di bianco) の生産に用いられている。時として「グレコ」という名称は、ギリシャが起源だと考えられている複数の品種----もっとも有名なものではトレッビアーノなど----の別名として用いられることがある。 == 歴史 == 一連のグレコ種の祖先となるブドウは、2500年以上前にギリシャ人入植者によってイタリア南部にもたらされたのではないかと言われている。歴史家や生産者たちは、このブドウが古代ローマのいわゆる「カルトワイン」にあたるファレルヌムやアミネウムと混醸されていたかもしれないと推測している。この品種がイタリア各地に広まっていくにつれ、「グレコ」の名称は歴史的にギリシャと関係がありそうないくつかの品種に対して用いられるようになった。「グレコ」がいくつかの枝変わり種をもつ単一の品種であるのか、それとも複数の品種を「グレコ」の名で一括りにしているのかについては、ブドウ品種学者たちの間でも見解が分かれている。また、イタリアのいわゆる「ギリシャ系ブドウ」のうち、現在ギリシャで栽培されているものがあるのかどうかについても、見解の一致をみていない。 第二次世界大戦後、多くのイタリア南部のブドウ品種と同様、グレコの命運も危うくなった。戦時中のブドウ園の荒廃とならんで、イタリアのブドウ農家が農業から海外や都市部の都市型産業へと大量に移ったことによって、同地域のブドウ栽培が全体的に衰退する時期が到来したのである。植栽が減少しブドウ園が掘り返されていくなかで、多くの品種が絶滅の瀬戸際に立たされた。家族単位のワイン生産者の努力や、ピエロ・マストロベラルディーノ主導の秘儀荘 (villa dei misteri) プロジェクトといったワイン醸造の文化財事業のおかげで、イタリア南部におけるグレコ種は生き残ることができた。 === 近年において判明したこと === 21世紀初頭に行なわれたdna型鑑定の結果、イタリアにおいて「グレコ」の名で栽培されているものは、遺伝子的にアスプリーニョと同一であることが確認された。 2005年に行なわれたdna型鑑定によって、グレコ・ビアンコの名を冠する品種のうち、少なくとも別名グレコ・ディ・ジェラーチェ (greco di gerace) もしくはグレコ・ディ・ビアンコ (greco di bianco) と呼ばれるものは遺伝子的にマルヴァジーア・デッレ・リーパリと同一種であると発表された。ただし、名称が「グレコ・ビアンコ」で始まる別名をもつブドウは少なくとも4つはあるうえ、グレコ・ディ・ビアンコ docの地元カラブリア州ビアンコではこの研究結果に異論を唱える者もおり、全ての「グレコ・ビアンコ 」がマルヴァジーア・デッレ・リーパリであるかは不明である。 == グレコ (およびグレコ・ビアンコ) == グレコ種はブドウ樹の生長周期において果実の成熟する時期が非常に遅い傾向があり、ブドウ栽培するうえではべと病やうどんこ病の害を被りがちである。ブドウ品種学者はこのブドウを見分ける際、特徴的な岐肩をもつ果房に注目する。果実は成熟すると黄金がかった灰色になる。この果実に含まれるフェノール化合物のおかげで、ワインの色は特有の深みを増す。グレコのワインは豊かなアロマが特徴であり、ジャンシス・ロビンソンなどのワイン専門家のなかには、どこかヴィオニエに似た香りと評する者もいる。一般的にこのブドウと結びつきのあるアロマとしては、モモや若葉などがある。グレコのワインは熟成が進むと、ハーブの香りが現れることがある。 グレコがもっとも広く見受けられるのはイタリア南部で、いくつかのd.o.c.認定ワインの主要品種になっている。2006年の時点での栽培面積は1,000ヘクタール (2,500エーカー) にのぼる。カラブリア州では、枝変わり種のグレコ・ビアンコ (greco bianco) が甘口のデザートワインであるグレコ・ディ・ビアンコ (greco di bianco) を作るのに使用されており、収穫後半乾燥させたブドウから一部パッシート方式を用いて製造される。カプリ島では、グレコは通常ビアンコレッラやファランギーナとブレンドされ、辛口のワインを作る。プッリャ州では、グラヴィーナ doc (gravina doc) のブレンドに使用することが許されている。カンパーニャ州では、アヴェッリーノ県トゥーフォの町周辺で生産されるd.o.c.g.認定ワイン、グレコ・ディ・トゥーフォ (greco di tufo) の主要品種となっている。また、ヴェスヴィオ山の斜面で生産されているラクリマ・クリスティにブレンドすることも認められている。 === アスプリーニョ・ビアンコ === 以前はグレコとアスプリーニョは別の品種と考えられていたが、2000年にdna型鑑定によって遺伝子的に同一種であると判明した。しかしながら、果房の形状が異なる (前者は円錐形で岐肩が目立つほど大きく、後者は長円筒形で岐肩は目立たないことがある) だけでなく、栽培法にも両者の違いが見られる。特にアスプリーニョの伝統的な仕立て方であるアルベラータは、高さ30メートルに及ぶ樫の高木を支柱として、カーテン状に枝を這わせるものである。収穫は細い木製のはしごを架けて行なうため、危険が伴う。 === d.o.c.g.およびd.o.c.認定地域 === グレコが主体となっているd.o.c.g.認定地域は2つであるが、ブレンドの一部として認められているd.o.c.認定地域であれば、イタリア南部にいくつか存在する。カンパーニャ州のグレコ・ディ・トゥーフォ docgはフィアーノ ・ディ・アヴェッリーノ docg (fiano di avellino docg) の北側に位置し、トゥーフォの町のほか丘陵地にある7つのコムーネを含む。この地域は2003年にd.o.c.g.に昇格した。グレコ・ディ・トゥーフォの広さはフィアーノ ・ディ・アヴェッリーノの3分の1にすぎないが、d.o.c./g.認定の高品質ワインの生産量はカンパーニャ州で最大である。この地域のブドウ畑の土壌は、火山灰から形成された凝灰岩 (イタリア語: tufo) が元となっており、トゥーフォ (tufo) という町名もそこからとられている。同地域のすべてのd.o.c.g.認定ワインは85%以上がグレコでなければならず、ブレンドの残りの部分はたいていコーダ・ディ・ヴォルペが占める。マスター・オブ・ワインのメアリー・ユーイング=マリガンによると、グレコ・ディ・トゥーフォのワインは通常収穫年から3、4年後に飲み頃を迎え、優に10年から12年は熟成を続けるだけの力があるという。発泡性であるスプマンテの製法も認められている。 カラブリア州のグレコ・ディ・ビアンコ docは、イタリア半島の「つま先」におけるイオニア海側の沿岸部、ビアンコの街の周囲一帯に位置する。使用するブドウ品種はグレコ・ビアンコ (別名グレコ・ディ・ジェラーチェ) で、95%以上を占める。これは半乾燥させたブドウからつくられるデザートワイン的なもので、アルコール度数は17%以上なければいけない (既得アルコール14%) 。このワインの特徴としては、暗い琥珀色を帯び、柑橘類やハーブのアロマをもつ。ブドウの収穫量は1ヘクタールあたり最大10トンまでに制限されている。ワイン専門家のピーター・ソーンダーズによると、グレコ・ディ・ビアンコは最高のイタリア産デザートワインのひとつと評されることが多いという。 グレコ (およびグレコ・ビアンコ) の使用が認められているその他のd.o.c.認定地域は以下の通りである。 アヴェルサ doc (aversa doc) - カンパーニャ州カゼルタ県南部のアヴェルサを中心とし、一部ナポリ県北部までを含むワイン生産地域。白ワインおよび強い酸味を生かしたスプマンテが生産されている。前者はアスプリーニョを85%以上、後者は100%使用しなければいけない。 ビヴォンジ doc (bivongi doc) - カラブリア州のコンソリーノ山の斜面、スティラーロ川沿岸に位置するワイン生産地域。ビヴォンジの白ワインにおいて、グレコはグアルダヴァッレ、モントニコ・ビアンコ、マルヴァジーア・ビアンカ、アンソニカ/インツォリアとならんでブレンドの30-50%を占めることがある。 カプリ doc (capri doc) - カンパーニャ州のカプリ島に位置するワイン生産地域。ファランギーナおよびビアンコレッラとならんでグレコはブレンドの50%まで使用することが認められている (ビアンコレッラは20%まで) 。 チレント doc (cilento doc) - カンパーニャ州サレルノ県のチレントに位置するワイン生産地域。白ワインのブレンドはフィアーノを主体とし、トレッビアーノ、マルヴァジーア・ビアンカとならんでグレコ・ビアンコを10-15%使用することが認められている。 チロ doc (ciro doc) - カラブリア州カタンザーロ県に位置するワイン生産地域。白ワインはグレコ・ビアンコを90%以上使用し、トレッビアーノは10%まで使用できる。赤ワインのブレンドはほぼ全てガリオッポで占められている (95%以上) が、トレッビアーノとならんでグレコ・ビアンコもわずかながら (5%以下) 入ることがある。この赤ワインに白ブドウが含まれるているのは、その目的や歴史において、キアンティの赤ワインに白ブドウが含まれている事情と一部共通する。 フィアーノ・ディ・アヴェッリーノ docg (fiano di avellino docg) - カンパーニャ州のワイン生産地域で、2003年にd.o.c.g.認定地域に昇格した。フィアーノを主体 (85%以上) とするブレンドにおいて、グレコはトレッビアーノおよびコーダ・ディ・ヴォルペとならんで15%まで使用することが認められている。 グラヴィーナ doc (gravina doc) - プッリャ州のグラヴィーナの町を中心とするワイン生産地域。ブレンドのうちグレコは50%以上を占める。マルヴァジーア・ビアンカは20%以上を占め、残りの部分にはヴェルデーカ、ビアンコ・ダレッサーノ、シャルドネを使用することができる。 メリッサ doc (melissa doc) - カラブリア州メリッサ周辺のd.o.c.認定地域。この地域名はギリシャ語で「甘い」「蜂蜜」を意味する言葉(ギリシア語: μελι)に由来しており、この地域の気候だからこそ達することのできるワイン用ブドウの高い糖度を形容するのに用いられる。赤ワインの場合、グレコ・ネロとグレコ・ビアンコの両方もしくはいずれかを5-25%使用することが認められている (主体はガリオッポの75-95%) 。白ワインの場合、グレコ・ビアンコはブレンドの80-95%を占め、残りの部分にはトレッビアーノやマルヴァジーア・ビアンカを使用する。 モリーゼ doc (molise doc) - この広大なd.o.c.は、アブルッツォ州の南に位置する山がちなモリーゼ州の各地に広がっている。1998年にd.o.c.の認定を受けた同地域は、グレコ・ビアンコのセパージュワインを認めている数少ないワイン生産地域のひとつで、その場合ワインの85%以上がグレコ・ビアンコでなければいけない。 ペニゾーラ・ソッレンティーナ doc (penisola sorrentina doc) - カンパーニャ州のソレント半島にあるワイン生産地域。このd.o.c.の白ワインのブレンドを構成するグレコ、ファランギーナ、ビアンコレッラのうち、グレコは60%まで使用が認められている (ファランギーナが40%以上のため) 。 サンニオ doc (sannio doc) - カンパーニャ州の丘陵地帯中央に位置するワイン生産地域で、歴史上のぶどう栽培地域であったサムニウムと部分的に重なる。同地域では、グレコはスティルワインにも、伝統的なスパークリングワインの製法で作られたスプマンテ方式のワインにも使われている。白のスティルワインの場合、トレッビアーノを50%以上とし、他はグレコ、コーダ・ディ・ヴォルペ、ファランギーナ、フィアーノ、モスカートのいずれかもしくは複数とのブレンドになる。したがってグレコは50%まで使用することが認められている。ただしグレコのセパージュワインも存在し、その場合グレコは85%以上となる。スプマンテの場合、使用の認められている品種はグレコとファランギーナの2つのみである。 サンタガタ・デ・ゴーティ doc (sant'agata dei goti doc) - カンパーニャ州の町、サンタガタ・デ・ゴーティの周辺一帯に位置するワイン生産地域であり、サンニオの下位区分地区にあたる。グレコとファランギーナとのブレンドで、グレコは40-60%を占めることが認められている。 サンタンナ・ディ・イーゾラ・カーポ・リッツート doc (sant'anna di isola capo rizzuto doc) - カラブリア州クロトーネ県の南端に位置するワイン生産地域。このd.o.c.の赤ワインのブレンドにおいては、白ブドウのグレコ・ビアンコを35%まで使用することが認められている。 スカヴィーニャ doc (scavigna doc) - カラブリア州カンタンザーロ県のファレルナ付近にあるワイン生産地域であり、歴史上ファレルナでは古代ローマのワイン、ファレルヌムが生産されていた。トラミネール・アロマティコとシャルドネを主体にし、グレコ・ビアンコにかんしては2019年現在の認定基準では特に規定がないが、その他の地元産ブドウ (45%以下) の枠に含まれることが多い。 == グレコ・ネロ == グレコ種のなかでは赤ワイン用の品種となるグレコ・ネロ (greco nero) は、全グレコ種のうちイタリア国内での栽培面積がもっとも広く、推計3,200ヘクタール (7,900エーカー) に達する。たいがいのグレコ・ネロはカラブリア州で見かけられるものであり、ガリオッポとブレンドされることが多い。 グレコ・ネロの使用を認めているd.o.c.認定地域には、以下のようなものがある。 ビヴォンジ doc (bivongi doc) - 赤およびロゼワインの場合、ガリオッポ、ノチェラ、ネロ・ダヴォラ、カスティリオーネとのブレンドにおいて、グレコ・ネロは30-50%使用することが認められている。 カンピダーノ・ディ・テッラルバ doc (campidano di terralba doc) - サルデーニャ島の西海岸、カンピダーノ平野に位置するワイン生産地域 (ただし現在の規定でブドウ園は海抜400m以上) 。ボヴァーレ (bovale、別名bovale sardo) およびボヴァーレ・グランデ (bovale grande、別名bovale di spagna) を主体とし (85%以上) 、グレコ・ネロはパスカーレ・ディ・カリャリ、モニカとともにブレンドの15%まで使用することが認められている。 ドンニチ (donnici doc) - カラブリア州の都市コゼンツァの周辺一帯に位置するワイン生産地域。現在はテッレ・ディ・コゼンツァ doc (terre di cosenza doc) の下位区分地区にあたる。赤およびロゼワインはマリオッコを主体とし (60%以上) 、グレコ・ネロは10%以上使用する。その他ガリオッポ、マルヴァジーア・ビアンカ、マントニコ・ビアンコ、ペコレッロの使用は10%以下まで認められている。 ラメツィア doc (lamezia doc) - カラブリア州の都市ラメツィアの周辺一帯に位置するワイン生産地域。赤およびロゼワインの場合、ガリオッポ、マリオッコ、マルシリャーナ、ネレッロ・マスカレーゼ、ネレッロ・カップッチョとのブレンドにおいて、グレコ・ネロは25-45%使用することが認められている。なお、グレコ・ネロのセパージュワインも存在し、その場合グレコ・ネロは85%以上となる。 メリッサ (melissa doc) - 赤ワインの場合、ガリオッポを主体とし (75-95%) 、残りの5-25%にグレコ・ネロおよび白ブドウ品種のグレコ・ビアンコ、トレッビアーノ、マルヴァジーア・ビアンカを使用することが認められている。 ポッリーノ (pollino doc) - カラブリア州最北端のワイン生産地域で、サン・バジーレなどのコムーネを含むポッリーノ山麓に位置する。現在はテッレ・ディ・コゼンツァ doc (terre di cosenza doc) の下位区分地区にあたる。ガリオッポおよびマリオッコを主体とし (60%以上) 、残りの40%以下にグレコ・ネロおよび白ブドウ品種のマルヴァジーア・ビアンカ、モントニコ・ビアンコ、グアルナッチャ・ビアンカなどを使用することが認められている。 == 別名 == グレコの別名:グレコ・デル・ヴェスヴィオ (greco del vesuvio) 、グレコ・デッレ・トッレ (greco delle torre) 、グレコ・ディ・トゥーフォ (greco di tufo) 、 グレコ・ディ・ナポリ (greco di napoli) など アスプリーニョ・ビアンコの別名:アスプリーノ (asprino) 、アスプリーニャ・ディ・アヴェルサ (asprinia di aversa) 、オリヴェーゼ (olivese) 、ラグザーノ・ビアンコ (ragusano bianco) 、ウーヴァ・アスプリーナ (uva asprina) など グレコ・ネロの別名:グレク・ニウル (grecu niuru) 、サンビアーゼ (sambiase) 、ヴェルディッキオ・ネーラ (verdicchio nera) など グレコ・ビアンコをマルヴァジーア・ディ・リーパリと同一種とする説にもとづき、「グレコ」の別名扱いにされているもの (実際はグレコ・ディ・ジェラーチェ (greco di gerace) /グレコ・ディ・ビアンコ (greco di bianco) の別名に相当) :バルサミーナ・ビアンカ (balsamina bianca) 、ビアンカーメ (biancame) 、グレッコ・ビオンデッロ (greco biondello) 、グレコ・カステッラーノ (greco castellano) 、グレコ・マチェラティーノ (greco maceratino) 、グレコ・モネッチョ (greco moneccio) 、グリエコ (grieco) 、モンテッキエーゼ (montecchiese) 、モルビデッラ (morbidella) など == 関連項目 == ヴィーノ・グレコ ワイン用ブドウ品種の一覧 イタリアのブドウ品種の一覧 イタリアワイン == 脚注 ==",
         "value": "high",
         "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%82%B3_(%E3%83%96%E3%83%89%E3%82%A6)"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Greco: Italy",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "IT"
       }
     ],
     "id": "greco",
@@ -5910,7 +5940,7 @@
       "pt": "Greco",
       "nl": "Greco"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -6494,6 +6524,12 @@
         "quote": "Il donne un vin aux arômes caractéristiques de pomme mûre.",
         "value": "apple",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Mauzac_(c%C3%A9page)"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Mauzac Blanc: France",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "FR"
       }
     ],
     "id": "mauzac",
@@ -6507,7 +6543,7 @@
       "nl": "Mauzac",
       "pt": "Mauzac"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [],
     "prominence": 5,
     "regions": [
@@ -10689,6 +10725,12 @@
         "quote": "Na vinificatie kan het resultaat zowel droge als zoete wijn zijn.",
         "value": "dry-sweet",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Koshu_(druivensoort)"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Koshu: Japan",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "JP"
       }
     ],
     "id": "koshu",
@@ -10702,7 +10744,7 @@
       "it": "Koshu",
       "pt": "Koshu"
     },
-    "origin": null,
+    "origin": "JP",
     "pairings": [
       "japanese cuisine"
     ],
@@ -11225,6 +11267,12 @@
         "field": "synonyms",
         "quote": "It is also known by several other names, including Boscoso, Island Belle, Campbell's Early, and Early Campbell",
         "value": "Early Campbell"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Campbell Early: United States",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "US"
       }
     ],
     "id": "campbell-early",
@@ -11238,7 +11286,7 @@
       "nl": "Campbell Early",
       "pt": "Campbell Early"
     },
-    "origin": null,
+    "origin": "US",
     "pairings": [],
     "prominence": 4,
     "regions": [],
@@ -12137,6 +12185,12 @@
         "quote": "Сухі вина з грекетто гарно поєднуються з супами, пастою, морепродуктами, білим м'ясом",
         "value": "white meat",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D0%BA%D0%B5%D1%82%D1%82%D0%BE"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Grechetto di Orvieto: Italy",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "IT"
       }
     ],
     "id": "grechetto",
@@ -12150,7 +12204,7 @@
       "nl": "Grechetto",
       "pt": "Grechetto"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "soups",
       "pasta",
@@ -12699,6 +12753,12 @@
         "quote": "Im Geruch und Geschmack erinnert er stark an dunkle Kirschen und Brombeeren",
         "value": "blackberry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Rondo_(Rebsorte)"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Rondo: Germany",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "DE"
       }
     ],
     "id": "rondo",
@@ -12712,7 +12772,7 @@
       "es": "Rondo",
       "pt": "Rondo"
     },
-    "origin": null,
+    "origin": "DE",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -18761,6 +18821,12 @@
         "field": "sweetness",
         "quote": "Sultaniye wines are dry and semi-dry, light-bodied wines produced in Turkey.",
         "value": "dry-medium"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Sultaniye: Turkey",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "TR"
       }
     ],
     "id": "sultana",
@@ -18774,7 +18840,7 @@
       "nl": "Sultana",
       "pt": "Sultanina"
     },
-    "origin": null,
+    "origin": "TR",
     "pairings": [],
     "prominence": 27,
     "regions": [],
@@ -21846,6 +21912,12 @@
         "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
         "value": "soups",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Mlyn%C3%A1%C5%99ka_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Pinot Meunier: France",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "FR"
       }
     ],
     "id": "pinot-meunier",
@@ -21859,7 +21931,7 @@
       "nl": "Pinot Meunier",
       "pt": "Pinot meunier"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [
       "pork",
       "lamb",
@@ -24498,6 +24570,12 @@
         "quote": "Сорт слугує основою у виробництві вин: сухих і столових",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D1%8F%D0%BD%D1%96%D0%BA%D0%BE"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Aglianico: Italy",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "IT"
       }
     ],
     "id": "aglianico",
@@ -24511,7 +24589,7 @@
       "nl": "Aglianico",
       "pt": "Aglianico"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "lamb"
     ],
@@ -34187,6 +34265,12 @@
         "quote": "Velmi dobře se hodí jako doprovod tmavého masa a sýrů s intenzivní chutí",
         "value": "cheese",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Svatovav%C5%99ineck%C3%A9"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Sankt Laurent: Austria",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "AT"
       }
     ],
     "id": "st-laurent",
@@ -34200,7 +34284,7 @@
       "pt": "St. Laurent",
       "nl": "St. Laurent"
     },
-    "origin": null,
+    "origin": "AT",
     "pairings": [
       "cheese"
     ],
@@ -41957,6 +42041,12 @@
         "quote": "Вина из эльблинга лёгкие и свежие, с высокой кислотностью и невысоким содержанием алкоголя",
         "value": "low",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D1%8C%D0%B1%D0%BB%D0%B8%D0%BD%D0%B3"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Elbling: Germany",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "DE"
       }
     ],
     "id": "elbling",
@@ -41970,7 +42060,7 @@
       "nl": "Elbling",
       "pt": "Elbling"
     },
-    "origin": null,
+    "origin": "DE",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -43735,6 +43825,12 @@
         "quote": "Ses vins sont moyennement alcooliques, peu acides et aromatiques.",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Muscadelle"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Muscadelle: France",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "FR"
       }
     ],
     "id": "muscadelle",
@@ -43748,7 +43844,7 @@
       "nl": "Muscadelle",
       "pt": "Muscadelle"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [],
     "prominence": 10,
     "regions": [
@@ -44830,6 +44926,12 @@
         "quote": "Son vin est agréable, fin et alcoolique.",
         "value": "high",
         "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Pinot Noir Précoce: France",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "FR"
       }
     ],
     "id": "pinot-noir-precoce",
@@ -44843,7 +44945,7 @@
       "nl": "Frühburgunder",
       "pt": "Pinot Noir Précoce"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [
       "game",
       "cheese"
@@ -46505,6 +46607,12 @@
         "quote": "Die spätreifende Sorte mit ihren dickschaligen, harten und dunklen Beeren erbringt alkoholarme Weine mit wenig Körper und Struktur, die trocken bis süß ausgebaut werden können.",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Mandilaria"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Mandilaria: Greece",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "GR"
       }
     ],
     "id": "mandilaria",
@@ -46518,7 +46626,7 @@
       "nl": "Mandilaria",
       "pt": "Mandilaria"
     },
-    "origin": null,
+    "origin": "GR",
     "pairings": [],
     "prominence": 9,
     "regions": [
@@ -48915,6 +49023,12 @@
         "field": "sweetness",
         "quote": "Zierfandler wines are typically elegant and quite sweet",
         "value": "sweet"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Zierfandler: Austria",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "AT"
       }
     ],
     "id": "zierfandler",
@@ -48928,7 +49042,7 @@
       "nl": "Zierfandler",
       "pt": "Zierfandler"
     },
-    "origin": null,
+    "origin": "AT",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -50329,6 +50443,12 @@
         "field": "regions",
         "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
         "value": "FR: Châteauneuf-du-Pape"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Bourboulenc: France",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "FR"
       }
     ],
     "id": "bourboulenc",
@@ -50342,7 +50462,7 @@
       "nl": "Bourboulenc",
       "pt": "Bourboulenc"
     },
-    "origin": null,
+    "origin": "FR",
     "pairings": [],
     "prominence": 8,
     "regions": [
@@ -50499,6 +50619,12 @@
         "quote": "З рабосо піаве зазвичай виробляють сухі червоні вина, моносортові або купажні … Іноді з цього сорту виробляють десертні вина з в'яленого винограду",
         "value": "dry-sweet",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B1%D0%BE%D1%81%D0%BE_%D0%BF%D1%96%D0%B0%D0%B2%D0%B5"
+      },
+      {
+        "field": "origin",
+        "quote": "Country of origin of prime varieties, Raboso Piave: Italy",
+        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
+        "value": "IT"
       }
     ],
     "id": "raboso",
@@ -50512,7 +50638,7 @@
       "nl": "Raboso",
       "pt": "Raboso"
     },
-    "origin": null,
+    "origin": "IT",
     "pairings": [
       "game",
       "red meat",

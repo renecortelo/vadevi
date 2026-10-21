@@ -29,7 +29,8 @@ test("a region card shows its figures and its climate", async ({ page }) => {
   await page.locator("#interface-locale").selectOption("es");
 
   const glance = page.locator(".region-glance");
-  const spanish = new Intl.NumberFormat("es");
+  // The card shows a tenth of a hectare at most, as the title does.
+  const spanish = new Intl.NumberFormat("es", { maximumFractionDigits: 1 });
   await expect(glance).toContainText(String(rioja.register.grapes.length), { timeout: 15_000 });
   await expect(glance.locator("strong").nth(1)).toHaveAttribute(
     "title",
@@ -72,6 +73,18 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     { timeout: 15_000 },
   );
   await expect(page.locator(".region-glance")).toContainText("≈ 406,7 ha");
+  // A Swiss canton: its bearing area and its most planted grapes from the
+  // University of Adelaide's database, credited with its licence.
+  await page.goto("/library/regions/ch-vaud");
+  await expect(page.locator("#region-glance ~ .section-help")).toContainText(
+    "Universidad de Adelaida, superficie en producción 2022 (CC BY 4.0)",
+    { timeout: 15_000 },
+  );
+  await expect(page.getByRole("link", { name: "Chasselas", exact: true })).toBeVisible();
+  // The names it contains say their level, in words: «Lavaux · AOC regional».
+  await expect(page.getByText("· AOC regional").first()).toBeVisible();
+  await expect(page.getByText(/library\.levelName/)).toHaveCount(0);
+  await page.screenshot({ fullPage: true, path: test.info().outputPath("region-adelaide.png") });
   await page.goto(`/library/regions/${rioja.id}`);
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.

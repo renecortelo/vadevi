@@ -364,6 +364,27 @@ Every few months, or when a register announces a name:
   is an extract; each region, area and state shows its vineyard area so
   credited, with the year and a link.
 
+- **The University of Adelaide**, «Database of Regional, National and Global
+  Winegrape Bearing Areas by Variety, 2000 to 2023» (K. Anderson, S. Nelgen
+  and G. Puga, Wine Economics Research Centre, December 2025, revised March
+  2026; CC BY 4.0, https://doi.org/10.25909/32870405.v1), read from its
+  files in `.kb-cache/adelaide/` by `pnpm kb:read-adelaide` into
+  `adelaide.json`. Changed, as the licence asks to say: its rows summed by
+  region and by library grape. A name that is one of its regions — an
+  Australian or New Zealand GI, a Slovenian or Czech district, a Portuguese
+  region, a Japanese prefecture, a Swiss canton (by its code), an Argentine
+  department (by the INV's province and department, never the name alone)
+  — takes the region's bearing area where nothing else gives one, and the
+  library's grapes covering at least 2 % of it (the twelve largest) where
+  the register lists none, beside any an article names. South Africa's units are SAWIS's statistical
+  regions, not the Wine of Origin districts: grapes only. A grape no
+  article gives an origin for takes the country its table gives the prime
+  variety, unless the sources the library reads dispute it (Albariño,
+  Loureiro, Graševina, Kadarka, Muscat of Alexandria, Gouais, Savagnin) or
+  the prime is another grape (Vernaccia). Compared with the origins the
+  library already quotes it agrees on 156 of 176; where it differs, the
+  quoted one stays. The database calls itself a beta and may hold errors.
+
 - **The US Federal Register** (`us-ava-figures.json`): for American
   Viticultural Areas with no area from Wikipedia, the acres of vineyards the
   rule that established each one states, read by hand from the rule as

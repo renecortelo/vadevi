@@ -1,0 +1,9329 @@
+{
+ "about": "From the University of Adelaide's «Database of Regional, National and Global Winegrape Bearing Areas by Variety, 2000 to 2023» (K. Anderson, S. Nelgen and G. Puga, Wine Economics Research Centre, December 2025, revised March 2026; CC BY 4.0). Changed: rows summed by region and by library grape; a region's grapes are those covering at least 2 % of its bearing area, the twelve largest; South Africa's statistical regions give grapes only; origins left out where disputed. Built by scripts/kb/read-adelaide.ts.",
+ "origins": {
+  "abouriou": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Abouriou"
+  },
+  "acolon": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Acolon"
+  },
+  "agiorgitiko": {
+   "code": "GR",
+   "country": "Greece",
+   "prime": "Agiorgitiko"
+  },
+  "aglianico": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Aglianico"
+  },
+  "airen": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Airén"
+  },
+  "albana": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Albana"
+  },
+  "aleatico": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Aleatico"
+  },
+  "alfrocheiro-preto": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Alfrocheiro"
+  },
+  "alicante-bouschet": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Alicante Henri Bouschet"
+  },
+  "aligote": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Aligoté"
+  },
+  "ancellotta": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Ancellotta"
+  },
+  "ansonica": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Inzolia"
+  },
+  "aramon": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Aramon Noir"
+  },
+  "arinto": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Arinto de Bucelas"
+  },
+  "arneis": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Arneis"
+  },
+  "assyrtiko": {
+   "code": "GR",
+   "country": "Greece",
+   "prime": "Assyrtiko"
+  },
+  "athiri": {
+   "code": "GR",
+   "country": "Greece",
+   "prime": "Athiri"
+  },
+  "auxerrois-blanc": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Auxerrois"
+  },
+  "bacchus-weiss": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Bacchus"
+  },
+  "baga": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Baga"
+  },
+  "barbera": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Barbera"
+  },
+  "bastardo": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Trousseau"
+  },
+  "blauer-portugieser": {
+   "code": "AT",
+   "country": "Austria",
+   "prime": "Blauer Portugieser"
+  },
+  "blaufrankisch": {
+   "code": "AT",
+   "country": "Austria",
+   "prime": "Blaufränkisch"
+  },
+  "bobal": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Bobal"
+  },
+  "bourboulenc": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Bourboulenc"
+  },
+  "cabernet-dorsa": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Cabernet Dorsa"
+  },
+  "cabernet-franc": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Cabernet Franc"
+  },
+  "cabernet-sauvignon": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Cabernet Sauvignon"
+  },
+  "caino-tinto": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Borraçal"
+  },
+  "campbell-early": {
+   "code": "US",
+   "country": "United States",
+   "prime": "Campbell Early"
+  },
+  "canaiolo": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Canaiolo Nero"
+  },
+  "cardinal": {
+   "code": "US",
+   "country": "United States",
+   "prime": "Cardinal"
+  },
+  "carignan": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Mazuelo"
+  },
+  "carmenere": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Carmenère"
+  },
+  "castelao": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Castelão"
+  },
+  "chardonnay": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Chardonnay"
+  },
+  "chenin-blanc": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Chenin Blanc"
+  },
+  "ciliegiolo": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Ciliegiolo"
+  },
+  "cinsaut": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Cinsaut"
+  },
+  "clairette-blanche": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Clairette"
+  },
+  "colombard": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Colombard"
+  },
+  "concord": {
+   "code": "US",
+   "country": "United States",
+   "prime": "Concord"
+  },
+  "cortese": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Cortese"
+  },
+  "corvina": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Corvina Veronese"
+  },
+  "delaware": {
+   "code": "US",
+   "country": "United States",
+   "prime": "Delaware"
+  },
+  "dolcetto": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Dolcetto"
+  },
+  "dornfelder": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Dornfelder"
+  },
+  "durif": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Durif"
+  },
+  "elbling": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Elbling"
+  },
+  "encruzado": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Encruzado"
+  },
+  "erbaluce": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Erbaluce"
+  },
+  "falanghina": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Falanghina"
+  },
+  "fernao-pires": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Fernão Pires"
+  },
+  "fiano": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Fiano"
+  },
+  "folle-blanche": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Folle Blanche"
+  },
+  "frappato": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Frappato"
+  },
+  "freisa": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Freisa"
+  },
+  "furmint": {
+   "code": "HU",
+   "country": "Hungary",
+   "prime": "Furmint"
+  },
+  "gamay": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Gamay Noir"
+  },
+  "garganega": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Garganega"
+  },
+  "garnacha-roja": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Garnacha Roja (Gris)"
+  },
+  "gewurztraminer": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Gewürztraminer"
+  },
+  "glera": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Prosecco"
+  },
+  "godello": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Godello"
+  },
+  "graciano": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Graciano"
+  },
+  "grechetto": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Grechetto di Orvieto"
+  },
+  "greco": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Greco"
+  },
+  "grenache": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Garnacha Tinta"
+  },
+  "grenache-blanc": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Garnacha Blanca"
+  },
+  "grillo": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Grillo"
+  },
+  "grolleau": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Grolleau Noir"
+  },
+  "gruner-veltliner": {
+   "code": "AT",
+   "country": "Austria",
+   "prime": "Grüner Veltliner"
+  },
+  "harslevelu": {
+   "code": "HU",
+   "country": "Hungary",
+   "prime": "Hárslevelű"
+  },
+  "hondarrabi-zuri": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Hondarribi Zuri"
+  },
+  "irsai-oliver": {
+   "code": "HU",
+   "country": "Hungary",
+   "prime": "Irsai Oliver"
+  },
+  "kerner": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Kerner"
+  },
+  "koshu": {
+   "code": "JP",
+   "country": "Japan",
+   "prime": "Koshu"
+  },
+  "lagrein": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Lagrein"
+  },
+  "lambrusco-viadanese": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Lambrusco Viadanese"
+  },
+  "listan-negro": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Listan Negro"
+  },
+  "listan-prieto": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Listán Prieto"
+  },
+  "macabeo": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Macabeo"
+  },
+  "malbec": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Côt"
+  },
+  "mandilaria": {
+   "code": "GR",
+   "country": "Greece",
+   "prime": "Mandilaria"
+  },
+  "marsanne": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Marsanne"
+  },
+  "marselan": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Marselan"
+  },
+  "marzemino": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Marzemino"
+  },
+  "mauzac": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Mauzac Blanc"
+  },
+  "mavrodafni": {
+   "code": "GR",
+   "country": "Greece",
+   "prime": "Mavrodafni"
+  },
+  "melon-de-bourgogne": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Melon"
+  },
+  "mencia": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Mencía"
+  },
+  "merlot": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Merlot"
+  },
+  "molinara": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Molinara"
+  },
+  "monica": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Monica Nera"
+  },
+  "montepulciano": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Montepulciano"
+  },
+  "moscato-giallo": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Moscato Giallo"
+  },
+  "mourvedre": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Monastrell"
+  },
+  "muller-thurgau": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Müller-Thurgau"
+  },
+  "muscadelle": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Muscadelle"
+  },
+  "muscat-blanc-a-petits-grains": {
+   "code": "GR",
+   "country": "Greece",
+   "prime": "Muscat Blanc à Petits Grains"
+  },
+  "nebbiolo": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Nebbiolo"
+  },
+  "negrette": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Négrette"
+  },
+  "negroamaro": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Negroamaro"
+  },
+  "nero-d-avola": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Nero d'Avola"
+  },
+  "neuburger": {
+   "code": "AT",
+   "country": "Austria",
+   "prime": "Neuburger"
+  },
+  "niagara": {
+   "code": "US",
+   "country": "United States",
+   "prime": "Niagara"
+  },
+  "okuzgozu": {
+   "code": "TR",
+   "country": "Turkey",
+   "prime": "Öküzgözü"
+  },
+  "palomino": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Palomino Fino"
+  },
+  "parellada": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Parellada"
+  },
+  "pecorino": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Pecorino"
+  },
+  "pedro-ximenez": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Pedro Ximénez"
+  },
+  "petit-manseng": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Petit Manseng"
+  },
+  "petit-verdot": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Petit Verdot"
+  },
+  "pignolo": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Pignolo"
+  },
+  "pinot-blanc": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Pinot Blanc"
+  },
+  "pinot-gris": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Pinot Gris"
+  },
+  "pinot-meunier": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Pinot Meunier"
+  },
+  "pinot-noir": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Pinot Noir"
+  },
+  "pinot-noir-precoce": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Pinot Noir Précoce"
+  },
+  "piquepoul": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Piquepoul Noir"
+  },
+  "poulsard": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Poulsard"
+  },
+  "prieto-picudo": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Prieto Picudo"
+  },
+  "raboso": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Raboso Piave"
+  },
+  "refosco-dal-peduncolo-rosso": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Refosco dal Peduncolo Rosso"
+  },
+  "ribolla-gialla": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Ribolla Gialla"
+  },
+  "riesling": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Riesling"
+  },
+  "rondinella": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Rondinella"
+  },
+  "rondo": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Rondo"
+  },
+  "roussanne": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Roussanne"
+  },
+  "ruby-cabernet": {
+   "code": "US",
+   "country": "United States",
+   "prime": "Ruby Cabernet"
+  },
+  "ruche": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Ruche"
+  },
+  "sagrantino": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Sagrantino"
+  },
+  "sangiovese": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Sangiovese"
+  },
+  "sauvignon-blanc": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Sauvignon Blanc"
+  },
+  "sauvignon-vert": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Sauvignonasse"
+  },
+  "scheurebe": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Scheurebe"
+  },
+  "semillon": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Semillon"
+  },
+  "sercial": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Sercial"
+  },
+  "siegerrebe": {
+   "code": "DE",
+   "country": "Germany",
+   "prime": "Siegerrebe"
+  },
+  "souzao": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Vinhao"
+  },
+  "st-laurent": {
+   "code": "AT",
+   "country": "Austria",
+   "prime": "Sankt Laurent"
+  },
+  "sultana": {
+   "code": "TR",
+   "country": "Turkey",
+   "prime": "Sultaniye"
+  },
+  "sumoll": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Sumoll"
+  },
+  "syrah": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Syrah"
+  },
+  "tannat": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Tannat"
+  },
+  "tempranillo": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Tempranillo"
+  },
+  "tinta-amarela": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Trincadeira"
+  },
+  "tinta-barroca": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Tinta Barroca"
+  },
+  "tinta-cao": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Tinto Cão"
+  },
+  "touriga-francesa": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Touriga Franca"
+  },
+  "touriga-nacional": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Touriga Nacional"
+  },
+  "trebbiano": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Trebbiano Toscano"
+  },
+  "treixadura": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Trajadura"
+  },
+  "trepat": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Trepat"
+  },
+  "trollinger": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Schiava Grossa"
+  },
+  "verdejo": {
+   "code": "ES",
+   "country": "Spain",
+   "prime": "Verdejo"
+  },
+  "verdelho": {
+   "code": "PT",
+   "country": "Portugal",
+   "prime": "Verdelho"
+  },
+  "verdicchio": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Verdicchio Bianco"
+  },
+  "vermentino": {
+   "code": "IT",
+   "country": "Italy",
+   "prime": "Vermentino"
+  },
+  "viognier": {
+   "code": "FR",
+   "country": "France",
+   "prime": "Viognier"
+  },
+  "xinomavro": {
+   "code": "GR",
+   "country": "Greece",
+   "prime": "Xinomavro"
+  },
+  "zierfandler": {
+   "code": "AT",
+   "country": "Austria",
+   "prime": "Zierfandler"
+  },
+  "zweigelt": {
+   "code": "AT",
+   "country": "Austria",
+   "prime": "Zweigelt"
+  }
+ },
+ "regions": {
+  "ar-25-de-mayo": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 415.4,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 409.2,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 315.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 217.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sultana",
+     "ha": 191.8,
+     "prime": "Sultaniye"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 175.9,
+     "prime": "Torrontés Sanjuanino"
+    }
+   ],
+   "area": true,
+   "totalHa": 7769.4,
+   "unit": "Veinticinco de Mayo, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-9-de-julio": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 144.6,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "sultana",
+     "ha": 137.4,
+     "prime": "Sultaniye"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 127.5,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 68.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 65.2,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 2977.5,
+   "unit": "Nueve de Julio, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-albardon": {
+   "grapes": [
+    {
+     "grapeId": "cardinal",
+     "ha": 77.9,
+     "prime": "Cardinal"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 75.6,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 53,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 1511.3,
+   "unit": "Albardón, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-anelo": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 591.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 255.6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 219.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 212.1,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 122.7,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 78.1,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 1592.2,
+   "unit": "Añelo, Neuquén, Argentina",
+   "year": "2022"
+  },
+  "ar-angaco": {
+   "grapes": [
+    {
+     "grapeId": "torrontes",
+     "ha": 223.3,
+     "prime": "Torrontés Sanjuanino"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 72.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 46.2,
+     "prime": "Côt"
+    }
+   ],
+   "area": true,
+   "totalHa": 2113.6,
+   "unit": "Angaco, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-avellaneda": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 67.3,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 24.1,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 15.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 13.1,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 12.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 10.1,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 8.4,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 6.2,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 205.8,
+   "unit": "Avellaneda, Río Negro, Argentina",
+   "year": "2022"
+  },
+  "ar-balcarce": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 2.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 2.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 2.1,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 2,
+     "prime": "Tannat"
+    },
+    {
+     "grapeId": "albarino",
+     "ha": 0.9,
+     "prime": "Alvarinho"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 0.9,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 0.9,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 12,
+   "unit": "Balcarce, Buenos Aires, Argentina",
+   "year": "2022"
+  },
+  "ar-belen": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 71,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 6.8,
+     "prime": "Listán Prieto"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 6,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 197.5,
+   "unit": "Belén, Catamarca, Argentina",
+   "year": "2022"
+  },
+  "ar-cachi": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 77.4,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 4.7,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 4.2,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 3.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 3,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 100,
+   "unit": "Cachi, Salta, Argentina",
+   "year": "2022"
+  },
+  "ar-calingasta": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 137.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 36.4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 7.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 7.2,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 5.3,
+     "prime": "Torrontés Sanjuanino"
+    }
+   ],
+   "area": true,
+   "totalHa": 215.6,
+   "unit": "Calingasta, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-castro-barros": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 71.4,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 53.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 18.2,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 16,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 9.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "petit-verdot",
+     "ha": 8.1,
+     "prime": "Petit Verdot"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 5.7,
+     "prime": "Cabernet Franc"
+    }
+   ],
+   "area": true,
+   "totalHa": 258.4,
+   "unit": "Castro Barros, La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-catamarca": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 354.4,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 306,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 189.5,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 2794.3,
+   "unit": "Catamarca, Argentina",
+   "year": "2022"
+  },
+  "ar-caucete": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 434,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 418.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 402.8,
+     "prime": "Torrontés Sanjuanino"
+    },
+    {
+     "grapeId": "sultana",
+     "ha": 240.1,
+     "prime": "Sultaniye"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 190.8,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 137.8,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 6888.3,
+   "unit": "Caucete, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-chilecito": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 578.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 561.2,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 467.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 245.3,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "sultana",
+     "ha": 140.2,
+     "prime": "Sultaniye"
+    }
+   ],
+   "area": true,
+   "totalHa": 5838.5,
+   "unit": "Chilecito, La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-chimbas": {
+   "grapes": [
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 38.4,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 35.6,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 19.4,
+     "prime": "Torrontés Sanjuanino"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 18.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "cardinal",
+     "ha": 16.8,
+     "prime": "Cardinal"
+    }
+   ],
+   "area": true,
+   "totalHa": 735,
+   "unit": "Chimbas, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-confluencia": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 55.3,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 22.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 13.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 10.1,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 9.5,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 9,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 3.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 3.1,
+     "prime": "Cabernet Franc"
+    }
+   ],
+   "area": true,
+   "totalHa": 141.8,
+   "unit": "Confluencia, Neuquén, Argentina",
+   "year": "2022"
+  },
+  "ar-cordoba-argentina": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 57.1,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 29.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 23.1,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 22.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "ancellotta",
+     "ha": 13.2,
+     "prime": "Ancellotta"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 11.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 10.5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 8,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 5.7,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 5.4,
+     "prime": "Tannat"
+    }
+   ],
+   "area": true,
+   "totalHa": 245.1,
+   "unit": "Córdoba, Argentina",
+   "year": "2022"
+  },
+  "ar-famatina": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 139.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 27.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 21.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 9.4,
+     "prime": "Listán Prieto"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 8,
+     "prime": "Cabernet Franc"
+    }
+   ],
+   "area": true,
+   "totalHa": 370.6,
+   "unit": "Famatina, La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-felipe-varela": {
+   "grapes": [
+    {
+     "grapeId": "sultana",
+     "ha": 60.9,
+     "prime": "Sultaniye"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 45.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 27.1,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 25.8,
+     "prime": "Côt"
+    }
+   ],
+   "area": true,
+   "totalHa": 749.4,
+   "unit": "Coronel Felipe Varela, La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-general-alvear": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 420,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 417,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 254.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 229.8,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 3647.5,
+   "unit": "General Alvear, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-general-lamadrid": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 8.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 4.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 2.5,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 1.5,
+     "prime": "Muscat of Alexandria"
+    }
+   ],
+   "area": true,
+   "totalHa": 66.3,
+   "unit": "General Lamadrid, La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-general-roca": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 242,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 160.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 101.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 59.9,
+     "prime": "Torrontés Sanjuanino"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 55.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 43.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 35.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "bastardo",
+     "ha": 23.2,
+     "prime": "Trousseau"
+    }
+   ],
+   "area": true,
+   "totalHa": 1082.5,
+   "unit": "General Roca, Río Negro, Argentina",
+   "year": "2022"
+  },
+  "ar-godoy-cruz": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 0.7,
+     "prime": "Côt"
+    }
+   ],
+   "area": true,
+   "totalHa": 0.7,
+   "unit": "Godoy Cruz, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-guaymallen": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 121.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 52.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 23.8,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 23.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 17.2,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 16.6,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    }
+   ],
+   "area": true,
+   "totalHa": 497.4,
+   "unit": "Guaymallén, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-iglesia": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 2,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 1.8,
+     "prime": "Torrontés Sanjuanino"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 0.1,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 0.1,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 4.8,
+   "unit": "Iglesia, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-jujuy": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 26.1,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 7.8,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 7.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 1.7,
+     "prime": "Tannat"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 1.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 1.4,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 1.4,
+     "prime": "Sémillon"
+    }
+   ],
+   "area": true,
+   "totalHa": 57.9,
+   "unit": "Jujuy, Argentina",
+   "year": "2022"
+  },
+  "ar-junin": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 2023,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 480,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 478.6,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 395.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 371.8,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 294.9,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 229.1,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 11062,
+   "unit": "Junín, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-la-paz": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 24.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 20,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 10.2,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 7.6,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 5.9,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 169.2,
+   "unit": "La Paz, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-la-rioja-argentina": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 814.1,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 698.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 559.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 252.8,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "sultana",
+     "ha": 208.4,
+     "prime": "Sultaniye"
+    }
+   ],
+   "area": true,
+   "totalHa": 7426.8,
+   "unit": "La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-las-heras": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 125.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 85.2,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 80.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 71.2,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "trebbiano",
+     "ha": 38.4,
+     "prime": "Trebbiano Toscano"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 32.3,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 1380.5,
+   "unit": "Las Heras, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-lavalle": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 1473,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 835.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 533.8,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 389,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 335.1,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "ancellotta",
+     "ha": 290.8,
+     "prime": "Ancellotta"
+    }
+   ],
+   "area": true,
+   "totalHa": 12779.6,
+   "unit": "Lavalle, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-lujan-de-cuyo-mendoza": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 8962.8,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 2052.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 525.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 390.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 366.8,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 319.4,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 15388.4,
+   "unit": "Luján de Cuyo, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-maipu": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 4034,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1259.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 447.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 416.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 390.3,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 305.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sangiovese",
+     "ha": 239.1,
+     "prime": "Sangiovese"
+    }
+   ],
+   "area": true,
+   "totalHa": 10964.9,
+   "unit": "Maipú, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-mendoza": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 39462.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 10301,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 8085.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 4958.3,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 4871,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 4627.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 3644.1,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 147379.2,
+   "unit": "Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-molinos": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 92.3,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 18.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 5.3,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 4.2,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 136.2,
+   "unit": "Molinos, Salta, Argentina",
+   "year": "2022"
+  },
+  "ar-neuquen": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 662.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 266.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 239.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 238.7,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 137.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 81.5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 36,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 1770,
+   "unit": "Neuquén, Argentina",
+   "year": "2022"
+  },
+  "ar-pichimahuida": {
+   "grapes": [
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 9.8,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 8,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cardinal",
+     "ha": 2.1,
+     "prime": "Cardinal"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 1.9,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 1.4,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1.3,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 61.5,
+   "unit": "Pichi Mahuida, Río Negro, Argentina",
+   "year": "2022"
+  },
+  "ar-pocito": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 196.5,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cardinal",
+     "ha": 148.2,
+     "prime": "Cardinal"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 98.3,
+     "prime": "Côt"
+    }
+   ],
+   "area": true,
+   "totalHa": 3245.4,
+   "unit": "Pocito, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-poman": {
+   "grapes": [
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 10,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 7.8,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "alicante-bouschet",
+     "ha": 3.9,
+     "prime": "Alicante Henri Bouschet"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1.1,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 37.6,
+   "unit": "Pomán, Catamarca, Argentina",
+   "year": "2022"
+  },
+  "ar-rawson": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 65.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "sultana",
+     "ha": 47.4,
+     "prime": "Sultaniye"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 29.5,
+     "prime": "Côt"
+    }
+   ],
+   "area": true,
+   "totalHa": 1314.6,
+   "unit": "Rawson, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-rio-negro": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 377.4,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 220.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 126.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 94,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 60.5,
+     "prime": "Torrontés Sanjuanino"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 50,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 48.3,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 47.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 39.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 31.3,
+     "prime": "Sémillon"
+    }
+   ],
+   "area": true,
+   "totalHa": 1549.2,
+   "unit": "Río Negro, Argentina",
+   "year": "2022"
+  },
+  "ar-rivadavia-mendoza": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 2473.7,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 783.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 545,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 541,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 426.7,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 313.1,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 14317.5,
+   "unit": "Rivadavia, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-rivadavia-san-juan": {
+   "grapes": [
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 38.9,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 22.6,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 9.2,
+     "prime": "Listán Prieto"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 5.7,
+     "prime": "Côt"
+    }
+   ],
+   "area": true,
+   "totalHa": 196.9,
+   "unit": "Rivadavia, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-salta": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 1679.1,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 471.6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 138,
+     "prime": "Tannat"
+    }
+   ],
+   "area": true,
+   "totalHa": 3637.9,
+   "unit": "Salta, Argentina",
+   "year": "2022"
+  },
+  "ar-san-blas-de-los-sauces": {
+   "grapes": [
+    {
+     "grapeId": "sultana",
+     "ha": 7.2,
+     "prime": "Sultaniye"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 4.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "petit-verdot",
+     "ha": 3.5,
+     "prime": "Petit Verdot"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 2.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 1.7,
+     "prime": "Listán Prieto"
+    }
+   ],
+   "area": true,
+   "totalHa": 63.5,
+   "unit": "San Blas de los Sauces, La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-san-carlos-mendoza": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 5914.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 802.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 641.5,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 238.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 218,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 199.3,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 186.8,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 8932.9,
+   "unit": "San Carlos, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-san-carlos-salta": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 196.8,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 47.2,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 24.1,
+     "prime": "Listán Prieto"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 15.6,
+     "prime": "Tannat"
+    }
+   ],
+   "area": true,
+   "totalHa": 659.1,
+   "unit": "San Carlos, Salta, Argentina",
+   "year": "2022"
+  },
+  "ar-san-juan": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 2840,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 2091.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 1421.3,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 1229.8,
+     "prime": "Torrontés Sanjuanino"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1217,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sultana",
+     "ha": 871.1,
+     "prime": "Sultaniye"
+    }
+   ],
+   "area": true,
+   "totalHa": 41279.3,
+   "unit": "San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-san-luis": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 30.1,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 27.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 15.2,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "viognier",
+     "ha": 8.9,
+     "prime": "Viognier"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 3.9,
+     "prime": "Tannat"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 3.8,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 3.1,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 3,
+     "prime": "Cabernet Franc"
+    }
+   ],
+   "area": true,
+   "totalHa": 105.4,
+   "unit": "San Luis, Argentina",
+   "year": "2022"
+  },
+  "ar-san-martin-mendoza": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 1552.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 1469.7,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 1348.5,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 1298.9,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 817.2,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "ancellotta",
+     "ha": 629.1,
+     "prime": "Ancellotta"
+    }
+   ],
+   "area": true,
+   "totalHa": 26805.8,
+   "unit": "San Martín, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-san-martin-san-juan": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 226.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 180.6,
+     "prime": "Torrontés Sanjuanino"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 175.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 98.4,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 79.1,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sultana",
+     "ha": 77.2,
+     "prime": "Sultaniye"
+    }
+   ],
+   "area": true,
+   "totalHa": 3565.2,
+   "unit": "San Martín, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-san-rafael-mendoza": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 2234.8,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1174.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 1109.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 1043.3,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 487.5,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 432.4,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 285.4,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 12557.6,
+   "unit": "San Rafael, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-sanagasta": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 13.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 1.6,
+     "prime": "Listán Prieto"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1.6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 0.7,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 30,
+   "unit": "Sanagasta, La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-santa-lucia": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 46.1,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 44.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 42.5,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 24.4,
+     "prime": "Listán Prieto"
+    },
+    {
+     "grapeId": "greco",
+     "ha": 20.7,
+     "prime": "Greco Nero"
+    }
+   ],
+   "area": true,
+   "totalHa": 998.4,
+   "unit": "Santa Lucía, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-santa-maria": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 259.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 212.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 49,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 41.7,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 772.1,
+   "unit": "Santa María, Catamarca, Argentina",
+   "year": "2022"
+  },
+  "ar-santa-rosa": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 684.3,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 663.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 381.6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 367.5,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 288.8,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "ancellotta",
+     "ha": 210.7,
+     "prime": "Ancellotta"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 196.9,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 8535.7,
+   "unit": "Santa Rosa, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-sarmiento-san-juan": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 951,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 506.4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 432.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 251.3,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 153.9,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 7342.4,
+   "unit": "Sarmiento, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-tandil": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 2.2,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 1.7,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 1.4,
+     "prime": "Tannat"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 0.9,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 0.8,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 0.8,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 0.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 0.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 0.2,
+     "prime": "Sémillon"
+    }
+   ],
+   "area": true,
+   "totalHa": 8.6,
+   "unit": "Tandil, Buenos Aires, Argentina",
+   "year": "2022"
+  },
+  "ar-tinogasta": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 141.5,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 61.1,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 44,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 1771.2,
+   "unit": "Tinogasta, Catamarca, Argentina",
+   "year": "2022"
+  },
+  "ar-tucuman": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 58.3,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 20.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 6.4,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 6,
+     "prime": "Listán Prieto"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 5.1,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 3,
+     "prime": "Tannat"
+    }
+   ],
+   "area": true,
+   "totalHa": 128.4,
+   "unit": "Tucumán, Argentina",
+   "year": "2022"
+  },
+  "ar-tunuyan": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 5429.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1221.6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 542.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 498.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 341.2,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 328.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 317.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 317.1,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 246.4,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 9905.8,
+   "unit": "Tunuyán, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-tupungato": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 4876.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 1150.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 916.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 556.9,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 550.8,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 274.8,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 215.7,
+     "prime": "Cabernet Franc"
+    }
+   ],
+   "area": true,
+   "totalHa": 10433.5,
+   "unit": "Tupungato, Mendoza, Argentina",
+   "year": "2022"
+  },
+  "ar-ullum": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 85.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 52.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 45.2,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 44.8,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 1307.9,
+   "unit": "Ullum, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-valle-fertil": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 0.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 0.1,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 0.1,
+     "prime": "Muscat Blanc à Petits Grains (G)"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 0,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 0,
+     "prime": "Tannat"
+    }
+   ],
+   "area": true,
+   "totalHa": 0.5,
+   "unit": "Valle Fértil, San Juan, Argentina",
+   "year": "2022"
+  },
+  "ar-vinchina": {
+   "grapes": [
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 3.5,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "listan-prieto",
+     "ha": 2.9,
+     "prime": "Listán Prieto"
+    }
+   ],
+   "area": true,
+   "totalHa": 50.1,
+   "unit": "Vinchina, La Rioja, Argentina",
+   "year": "2022"
+  },
+  "ar-zonda": {
+   "grapes": [
+    {
+     "grapeId": "malbec",
+     "ha": 235.6,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 112.3,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "tannat",
+     "ha": 77.6,
+     "prime": "Tannat"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 37.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 31.8,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 1092.4,
+   "unit": "Zonda, San Juan, Argentina",
+   "year": "2022"
+  },
+  "au-adelaide-hills": {
+   "grapes": [
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 839,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 811,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 651,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 387,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 251,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 197,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 121,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 3587,
+   "unit": "Adelaide Hills, Australia",
+   "year": "2023"
+  },
+  "au-adelaide-plains": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 136,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 49,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 32,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 26,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "grenache",
+     "ha": 19,
+     "prime": "Garnacha Tinta"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 16,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 16,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 13,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 351,
+   "unit": "Adelaide Plains, Australia",
+   "year": "2023"
+  },
+  "au-alpine-valleys": {
+   "grapes": [
+    {
+     "grapeId": "chardonnay",
+     "ha": 55.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 43.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 38.5,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 37.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "glera",
+     "ha": 28.6,
+     "prime": "Prosecco"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 25.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 5.8,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 272.4,
+   "unit": "Alpine Valleys, Australia",
+   "year": "2023"
+  },
+  "au-barossa-valley": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 7568,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1657,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "grenache",
+     "ha": 649,
+     "prime": "Garnacha Tinta"
+    },
+    {
+     "grapeId": "mourvedre",
+     "ha": 300,
+     "prime": "Monastrell"
+    }
+   ],
+   "area": true,
+   "totalHa": 11638,
+   "unit": "Barossa Valley, Australia",
+   "year": "2023"
+  },
+  "au-beechworth": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 31.3,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 29.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 20.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 13.8,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 10,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sangiovese",
+     "ha": 8.3,
+     "prime": "Sangiovese"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 7.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "nebbiolo",
+     "ha": 4.9,
+     "prime": "Nebbiolo"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 3.9,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 140.4,
+   "unit": "Beechworth, Australia",
+   "year": "2023"
+  },
+  "au-bendigo": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 277.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 111.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 84.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 51,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 31.2,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 17.6,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 631.2,
+   "unit": "Bendigo, Australia",
+   "year": "2023"
+  },
+  "au-blackwood-valley": {
+   "grapes": [
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 81.5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 68.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 65.6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 43.8,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 24.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 17.5,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 314.3,
+   "unit": "Blackwood Valley, Australia",
+   "year": "2023"
+  },
+  "au-canberra-district": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 103,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 42.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 37.4,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 26.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 24.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "viognier",
+     "ha": 22.3,
+     "prime": "Viognier"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 14.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 10.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 9.2,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 6.9,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "sangiovese",
+     "ha": 6.8,
+     "prime": "Sangiovese"
+    }
+   ],
+   "area": true,
+   "totalHa": 318.4,
+   "unit": "Canberra District, Australia",
+   "year": "2023"
+  },
+  "au-clare-valley": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 1939,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1105,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 1050,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 220,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 113,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 4952,
+   "unit": "Clare Valley, Australia",
+   "year": "2023"
+  },
+  "au-coonawarra": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 3628,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 1141,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 348,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 246,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 5641,
+   "unit": "Coonawarra, Australia",
+   "year": "2023"
+  },
+  "au-cowra": {
+   "grapes": [
+    {
+     "grapeId": "chardonnay",
+     "ha": 444.8,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 144.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 115.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 93.9,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 28.5,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 22.2,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 20.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 19.3,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 930,
+   "unit": "Cowra, Australia",
+   "year": "2023"
+  },
+  "au-eden-valley": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 810,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 521,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 335,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 240,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 54,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 50,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 2267,
+   "unit": "Eden Valley, Australia",
+   "year": "2023"
+  },
+  "au-geelong": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 197.1,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 90.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 76,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 29.7,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 26.6,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 13.1,
+     "prime": "Riesling"
+    }
+   ],
+   "area": true,
+   "totalHa": 464,
+   "unit": "Geelong, Australia",
+   "year": "2023"
+  },
+  "au-geographe": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 169,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 146,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 130.7,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 103.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 87.7,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 41.2,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 32.3,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 16.2,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "grenache",
+     "ha": 15.9,
+     "prime": "Garnacha Tinta"
+    }
+   ],
+   "area": true,
+   "totalHa": 787.8,
+   "unit": "Geographe, Australia",
+   "year": "2023"
+  },
+  "au-gippsland": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 82.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 43.7,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 38.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 14.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 8.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 5.5,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 5,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 4.5,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 216.2,
+   "unit": "Gippsland, Australia",
+   "year": "2023"
+  },
+  "au-glenrowan": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 65.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 63.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "durif",
+     "ha": 31.1,
+     "prime": "Durif"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 13.2,
+     "prime": "Muscat Blanc à Petits Grains"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 11.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "nero-d-avola",
+     "ha": 8.7,
+     "prime": "Nero d'Avola"
+    },
+    {
+     "grapeId": "muscadelle",
+     "ha": 6.9,
+     "prime": "Muscadelle"
+    }
+   ],
+   "area": true,
+   "totalHa": 202.5,
+   "unit": "Glenrowan, Australia",
+   "year": "2023"
+  },
+  "au-goulburn-valley": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 354.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 174,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 149,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 119.6,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 98.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 74.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "marsanne",
+     "ha": 40.6,
+     "prime": "Marsanne"
+    },
+    {
+     "grapeId": "viognier",
+     "ha": 29,
+     "prime": "Viognier"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 28.5,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 1211.4,
+   "unit": "Goulburn Valley, Australia",
+   "year": "2023"
+  },
+  "au-grampians": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 461,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 61.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 34.3,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 15.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 14.3,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 633.6,
+   "unit": "Grampians, Australia",
+   "year": "2023"
+  },
+  "au-granite-belt": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 62.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 47,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 34.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 32.8,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 28.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 23.4,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "viognier",
+     "ha": 21,
+     "prime": "Viognier"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 15.5,
+     "prime": "Muscat Blanc à Petits Grains (R)"
+    },
+    {
+     "grapeId": "nebbiolo",
+     "ha": 13.3,
+     "prime": "Nebbiolo"
+    },
+    {
+     "grapeId": "petit-verdot",
+     "ha": 12.1,
+     "prime": "Petit Verdot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 7.4,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 350.5,
+   "unit": "Granite Belt, Australia",
+   "year": "2023"
+  },
+  "au-great-southern": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 768.6,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 518.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 304.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 280.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 173,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 127,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 87.1,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 2414.6,
+   "unit": "Great Southern, Australia",
+   "year": "2023"
+  },
+  "au-gundagai": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 314.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 131.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 118.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 37.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 16.4,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 634.5,
+   "unit": "Gundagai, Australia",
+   "year": "2023"
+  },
+  "au-hastings-river": {
+   "grapes": [
+    {
+     "grapeId": "semillon",
+     "ha": 9,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 2.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 1,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 0.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 0.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "viognier",
+     "ha": 0.7,
+     "prime": "Viognier"
+    },
+    {
+     "grapeId": "savagnin",
+     "ha": 0.5,
+     "prime": "Savagnin Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 23.8,
+   "unit": "Hastings River, Australia",
+   "year": "2023"
+  },
+  "au-heathcote": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 891.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 258.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 95.6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "grenache",
+     "ha": 83.1,
+     "prime": "Garnacha Tinta"
+    },
+    {
+     "grapeId": "mourvedre",
+     "ha": 62.2,
+     "prime": "Monastrell"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 61.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 52.3,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 1686.2,
+   "unit": "Heathcote, Australia",
+   "year": "2023"
+  },
+  "au-henty": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 63.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 40.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-meunier",
+     "ha": 12.8,
+     "prime": "Pinot Meunier"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 9.7,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 4.9,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 158.6,
+   "unit": "Henty, Australia",
+   "year": "2023"
+  },
+  "au-hilltops": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 256.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 189.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 34.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 26.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 14.5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 14.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 13.7,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 590.5,
+   "unit": "Hilltops, Australia",
+   "year": "2023"
+  },
+  "au-hunter-valley": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 765.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 664.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 419.8,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 313.2,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 103.8,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 2622.2,
+   "unit": "Hunter Valley, Australia",
+   "year": "2023"
+  },
+  "au-langhorne-creek": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 2276,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1940,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 458,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 375,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 160,
+     "prime": "Riesling"
+    }
+   ],
+   "area": true,
+   "totalHa": 5812,
+   "unit": "Langhorne Creek, Australia",
+   "year": "2023"
+  },
+  "au-macedon-ranges": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 49.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 32.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 21.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 8.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 4.6,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 4.5,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 4.3,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 4.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 3.5,
+     "prime": "Cabernet Franc"
+    }
+   ],
+   "area": true,
+   "totalHa": 140.9,
+   "unit": "Macedon Ranges, Australia",
+   "year": "2023"
+  },
+  "au-manjimup": {
+   "grapes": [
+    {
+     "grapeId": "merlot",
+     "ha": 60.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 24.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 19.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 15,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 12.9,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 10,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 8.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 6.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 3.3,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 161.6,
+   "unit": "Manjimup, Australia",
+   "year": "2023"
+  },
+  "au-margaret-river": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1435.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 996.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 945.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 765.6,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 736.5,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 283.5,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 5591.7,
+   "unit": "Margaret River, Australia",
+   "year": "2023"
+  },
+  "au-mclaren-vale": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 4113,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1298,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "grenache",
+     "ha": 457,
+     "prime": "Garnacha Tinta"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 264,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 182,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 7189,
+   "unit": "McLaren Vale, Australia",
+   "year": "2023"
+  },
+  "au-mornington-peninsula": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 495.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 240.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 79.1,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 40.4,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 901.2,
+   "unit": "Mornington Peninsula, Australia",
+   "year": "2023"
+  },
+  "au-mudgee": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 484.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 410.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 390.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 167.9,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 166.2,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 71.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 65.1,
+     "prime": "Gewürztraminer"
+    }
+   ],
+   "area": true,
+   "totalHa": 1908.8,
+   "unit": "Mudgee, Australia",
+   "year": "2023"
+  },
+  "au-northern-slopes": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 42.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 28.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 16.9,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 14.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 13,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 7.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "nebbiolo",
+     "ha": 6,
+     "prime": "Nebbiolo"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 3.9,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 3.5,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 3.3,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "savagnin",
+     "ha": 3.3,
+     "prime": "Savagnin Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 162,
+   "unit": "Northern Slopes, Australia",
+   "year": "2023"
+  },
+  "au-orange": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 246.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 188.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 151,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 101.3,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 100.9,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 92.6,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 61.2,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 1061.1,
+   "unit": "Orange, Australia",
+   "year": "2023"
+  },
+  "au-padthaway": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 1175,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1051,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 734,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 161,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 148,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 138,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 97,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 86,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 3742,
+   "unit": "Padthaway, Australia",
+   "year": "2023"
+  },
+  "au-peel": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 20.6,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 15.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 5.5,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 5.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 1.5,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 1.4,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 1.3,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 1.3,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 1.3,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 63.1,
+   "unit": "Peel, Australia",
+   "year": "2023"
+  },
+  "au-pemberton": {
+   "grapes": [
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 225.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 120.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 23.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 20.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 17.7,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 14.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 12.6,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 469.1,
+   "unit": "Pemberton, Australia",
+   "year": "2023"
+  },
+  "au-perricoota": {
+   "grapes": [
+    {
+     "grapeId": "merlot",
+     "ha": 142.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "durif",
+     "ha": 92.1,
+     "prime": "Durif"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 84.4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 41.5,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 34.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 23.4,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 459.2,
+   "unit": "Perricoota, Australia",
+   "year": "2023"
+  },
+  "au-perth-hills": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 57.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 18,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 17.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "viognier",
+     "ha": 9.2,
+     "prime": "Viognier"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 8.8,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "grenache",
+     "ha": 8.8,
+     "prime": "Garnacha Tinta"
+    },
+    {
+     "grapeId": "petit-verdot",
+     "ha": 4.6,
+     "prime": "Petit Verdot"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 4.3,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 4.2,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 3.3,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 156.9,
+   "unit": "Perth Hills, Australia",
+   "year": "2023"
+  },
+  "au-pyrenees": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 319.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 133.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 126.2,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 95.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 58.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 37.7,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 877.7,
+   "unit": "Pyrenees, Australia",
+   "year": "2023"
+  },
+  "au-riverina": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 3689.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 3192.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1658,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 1216.4,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 1197,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 1079.3,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 717.9,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 717.8,
+     "prime": "Muscat Blanc à Petits Grains"
+    },
+    {
+     "grapeId": "ruby-cabernet",
+     "ha": 411.3,
+     "prime": "Ruby Cabernet"
+    },
+    {
+     "grapeId": "durif",
+     "ha": 401.9,
+     "prime": "Durif"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 347.3,
+     "prime": "Gewürztraminer"
+    }
+   ],
+   "area": true,
+   "totalHa": 17108.2,
+   "unit": "Riverina, Australia",
+   "year": "2023"
+  },
+  "au-riverland": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 5615,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 4211,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 3358,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 1212,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 799,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "colombard",
+     "ha": 687,
+     "prime": "Colombard"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 545,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "petit-verdot",
+     "ha": 486,
+     "prime": "Petit Verdot"
+    }
+   ],
+   "area": true,
+   "totalHa": 20054,
+   "unit": "Riverland, Australia",
+   "year": "2023"
+  },
+  "au-rutherglen": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 275.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "durif",
+     "ha": 141.2,
+     "prime": "Durif"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 129.9,
+     "prime": "Muscat Blanc à Petits Grains (R)"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 54.5,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "muscadelle",
+     "ha": 27,
+     "prime": "Muscadelle"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 20.4,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 790.5,
+   "unit": "Rutherglen, Australia",
+   "year": "2023"
+  },
+  "au-south-burnett": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 111.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 37.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 20.8,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 10.9,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 8.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 7.3,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 6.9,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "nebbiolo",
+     "ha": 6.4,
+     "prime": "Nebbiolo"
+    }
+   ],
+   "area": true,
+   "totalHa": 236.9,
+   "unit": "South Burnett, Australia",
+   "year": "2023"
+  },
+  "au-southern-highlands": {
+   "grapes": [
+    {
+     "grapeId": "pinot-gris",
+     "ha": 135.9,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 23.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 20.5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 16,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 15,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 13.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 10.3,
+     "prime": "Riesling"
+    }
+   ],
+   "area": true,
+   "totalHa": 247.1,
+   "unit": "Southern Highlands, Australia",
+   "year": "2023"
+  },
+  "au-strathbogie-ranges": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 162.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 144.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 79.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 48.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 30.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 11.8,
+     "prime": "Riesling"
+    }
+   ],
+   "area": true,
+   "totalHa": 536,
+   "unit": "Strathbogie Ranges, Australia",
+   "year": "2023"
+  },
+  "au-sunbury": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 66.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 31.4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 12.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 8.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 4.7,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 4.2,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 133.9,
+   "unit": "Sunbury, Australia",
+   "year": "2023"
+  },
+  "au-swan-district": {
+   "grapes": [
+    {
+     "grapeId": "verdelho",
+     "ha": 178.9,
+     "prime": "Verdelho"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 174.2,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 155.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 92.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscadelle",
+     "ha": 85.4,
+     "prime": "Muscadelle"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 66.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 32.9,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "grenache",
+     "ha": 26.9,
+     "prime": "Garnacha Tinta"
+    }
+   ],
+   "area": true,
+   "totalHa": 893.4,
+   "unit": "Swan District, Australia",
+   "year": "2023"
+  },
+  "au-tumbarumba": {
+   "grapes": [
+    {
+     "grapeId": "chardonnay",
+     "ha": 100.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 49.7,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 26.6,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 16.1,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "glera",
+     "ha": 12.4,
+     "prime": "Prosecco"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 6.8,
+     "prime": "Syrah"
+    }
+   ],
+   "area": true,
+   "totalHa": 219.1,
+   "unit": "Tumbarumba, Australia",
+   "year": "2023"
+  },
+  "au-upper-goulburn": {
+   "grapes": [
+    {
+     "grapeId": "chardonnay",
+     "ha": 93.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 66.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 45.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 36.3,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 30.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 26.3,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 17.6,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 13.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 13,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 367.9,
+   "unit": "Upper Goulburn, Australia",
+   "year": "2023"
+  },
+  "au-western-plains": {
+   "grapes": [
+    {
+     "grapeId": "syrah",
+     "ha": 65.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 53.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 50.1,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "ruby-cabernet",
+     "ha": 48.8,
+     "prime": "Ruby Cabernet"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 5.4,
+     "prime": "Verdelho"
+    }
+   ],
+   "area": true,
+   "totalHa": 236.3,
+   "unit": "Western Plains, Australia",
+   "year": "2023"
+  },
+  "au-wrattonbully": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1284,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 761,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 209,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 157,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 99,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 63,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 59,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 2696,
+   "unit": "Wrattonbully, Australia",
+   "year": "2023"
+  },
+  "au-yarra-valley": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 981.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 653.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 219.5,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 197,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 100.1,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 74.4,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 58.6,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 2477.6,
+   "unit": "Yarra Valley, Australia",
+   "year": "2023"
+  },
+  "ca-british-columbia": {
+   "grapes": [
+    {
+     "grapeId": "merlot",
+     "ha": 771.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 670.1,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 528.6,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 504.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 393.6,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 380.3,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 269.3,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 268.2,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 264.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 178,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "gamay",
+     "ha": 104.2,
+     "prime": "Gamay Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 5132.1,
+   "unit": "British Columbia, Canada",
+   "year": "2022"
+  },
+  "ch-aargau": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 192.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 67.6,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 17.5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 9.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 7.8,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 383.1,
+   "unit": "AG, Switzerland",
+   "year": "2022"
+  },
+  "ch-appenzell-ausserrhoden": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 1.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 0.9,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 0.3,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "kerner",
+     "ha": 0.1,
+     "prime": "Kerner"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 0.1,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 5.1,
+   "unit": "AR, Switzerland",
+   "year": "2022"
+  },
+  "ch-appenzell-innerrhoden": {
+   "grapes": [
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 0.6,
+     "prime": "Müller-Thurgau"
+    }
+   ],
+   "area": true,
+   "totalHa": 0.7,
+   "unit": "AI, Switzerland",
+   "year": "2022"
+  },
+  "ch-basel-landschaft": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 54.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 11.7,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "kerner",
+     "ha": 4.8,
+     "prime": "Kerner"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 4.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 3.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 2.8,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chasselas",
+     "ha": 2.3,
+     "prime": "Chasselas"
+    }
+   ],
+   "area": true,
+   "totalHa": 113.8,
+   "unit": "BL, Switzerland",
+   "year": "2022"
+  },
+  "ch-basel-stadt": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 2.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 0.6,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 0.5,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 0.5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 0.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "chasselas",
+     "ha": 0.2,
+     "prime": "Chasselas"
+    }
+   ],
+   "area": true,
+   "totalHa": 4.8,
+   "unit": "BS, Switzerland",
+   "year": "2022"
+  },
+  "ch-bern": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 88.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chasselas",
+     "ha": 66.3,
+     "prime": "Chasselas"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 13.4,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 11.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 11.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 8.5,
+     "prime": "Müller-Thurgau"
+    }
+   ],
+   "area": true,
+   "totalHa": 247.8,
+   "unit": "BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland",
+   "year": "2022"
+  },
+  "ch-bielersee": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 81.8,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chasselas",
+     "ha": 66,
+     "prime": "Chasselas"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 13,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 11.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 11.4,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 221.8,
+   "unit": "BE Lac de Bienne, Switzerland",
+   "year": "2022"
+  },
+  "ch-geneve": {
+   "grapes": [
+    {
+     "grapeId": "gamay",
+     "ha": 280.5,
+     "prime": "Gamay Noir"
+    },
+    {
+     "grapeId": "chasselas",
+     "ha": 259.7,
+     "prime": "Chasselas"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 158.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "gamaret",
+     "ha": 117.6,
+     "prime": "Gamaret"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 113.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 52.2,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 47.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 37.8,
+     "prime": "Pinot Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 1348.5,
+   "unit": "GE, Switzerland",
+   "year": "2022"
+  },
+  "ch-glarus": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 1.1,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 0.4,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 0.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 0.1,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 1.9,
+   "unit": "GL, Switzerland",
+   "year": "2022"
+  },
+  "ch-graubunden": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 290.2,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 31.7,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 29.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 27.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 15.1,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 14,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 10.7,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 452.2,
+   "unit": "GR Mesolcina + GR übriges Gebiet, Switzerland",
+   "year": "2022"
+  },
+  "ch-jura": {
+   "grapes": [
+    {
+     "grapeId": "pinot-gris",
+     "ha": 1.9,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 1.3,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 1,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 17.7,
+   "unit": "JU, Switzerland",
+   "year": "2022"
+  },
+  "ch-luzern": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 14.2,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 8.4,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 6.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 4.1,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "gamaret",
+     "ha": 3.1,
+     "prime": "Gamaret"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 2.9,
+     "prime": "Zweigelt"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 2,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 2,
+     "prime": "Riesling"
+    }
+   ],
+   "area": true,
+   "totalHa": 78.7,
+   "unit": "LU, Switzerland",
+   "year": "2022"
+  },
+  "ch-neuchatel": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 334.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chasselas",
+     "ha": 147.7,
+     "prime": "Chasselas"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 27.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 24,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "gamaret",
+     "ha": 14.1,
+     "prime": "Gamaret"
+    }
+   ],
+   "area": true,
+   "totalHa": 604.8,
+   "unit": "NE, Switzerland",
+   "year": "2022"
+  },
+  "ch-nidwalden": {
+   "grapes": [
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 0.2,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 0.1,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 1.6,
+   "unit": "NW, Switzerland",
+   "year": "2022"
+  },
+  "ch-obwalden": {
+   "grapes": [],
+   "area": true,
+   "totalHa": 1.6,
+   "unit": "OW, Switzerland",
+   "year": "2022"
+  },
+  "ch-schaffhausen": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 273.8,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 69.2,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 13.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 11.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 10.8,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 467.4,
+   "unit": "SH, Switzerland",
+   "year": "2022"
+  },
+  "ch-schwyz": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 12,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 7.7,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 2.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "gamaret",
+     "ha": 0.8,
+     "prime": "Gamaret"
+    }
+   ],
+   "area": true,
+   "totalHa": 36.3,
+   "unit": "SZ, Switzerland",
+   "year": "2022"
+  },
+  "ch-solothurn": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 2.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 1.6,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 0.8,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 0.4,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 0.3,
+     "prime": "Côt"
+    }
+   ],
+   "area": true,
+   "totalHa": 11.4,
+   "unit": "SO, Switzerland",
+   "year": "2022"
+  },
+  "ch-st-gallen": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 118.2,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 19.8,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 12.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 9.2,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 213.5,
+   "unit": "SG, Switzerland",
+   "year": "2022"
+  },
+  "ch-thunersee": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 5.7,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 5.1,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "cabernet-dorsa",
+     "ha": 0.4,
+     "prime": "Cabernet Dorsa"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 0.4,
+     "prime": "Muscat Blanc à Petits Grains"
+    }
+   ],
+   "area": true,
+   "totalHa": 19,
+   "unit": "BE Thunersee, Switzerland",
+   "year": "2022"
+  },
+  "ch-thurgau": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 109.3,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 50.3,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 5.8,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 5.6,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 236.2,
+   "unit": "TG, Switzerland",
+   "year": "2022"
+  },
+  "ch-ticino": {
+   "grapes": [
+    {
+     "grapeId": "merlot",
+     "ha": 891.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 47.9,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 1163,
+   "unit": "TI, Switzerland",
+   "year": "2022"
+  },
+  "ch-uri": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 1.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 0.4,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "cabernet-dorsa",
+     "ha": 0.2,
+     "prime": "Cabernet Dorsa"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 0.2,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 0.2,
+     "prime": "Zweigelt"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 0.1,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 0.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "silvaner",
+     "ha": 0.1,
+     "prime": "Arvine"
+    }
+   ],
+   "area": true,
+   "totalHa": 3.2,
+   "unit": "UR, Switzerland",
+   "year": "2022"
+  },
+  "ch-valais": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 1304.7,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "chasselas",
+     "ha": 769.4,
+     "prime": "Chasselas"
+    },
+    {
+     "grapeId": "silvaner",
+     "ha": 566.1,
+     "prime": "Silvaner"
+    },
+    {
+     "grapeId": "gamay",
+     "ha": 475,
+     "prime": "Gamay Noir"
+    },
+    {
+     "grapeId": "savagnin",
+     "ha": 212.4,
+     "prime": "Savagnin Blanc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 172.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 145.1,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "gamaret",
+     "ha": 103.2,
+     "prime": "Gamaret"
+    }
+   ],
+   "area": true,
+   "totalHa": 4680.5,
+   "unit": "VS, Switzerland",
+   "year": "2022"
+  },
+  "ch-vaud": {
+   "grapes": [
+    {
+     "grapeId": "chasselas",
+     "ha": 2242.8,
+     "prime": "Chasselas"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 483.2,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "gamay",
+     "ha": 328,
+     "prime": "Gamay Noir"
+    },
+    {
+     "grapeId": "gamaret",
+     "ha": 150.8,
+     "prime": "Gamaret"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 78.3,
+     "prime": "Merlot"
+    }
+   ],
+   "area": true,
+   "totalHa": 3787.4,
+   "unit": "VD, Switzerland",
+   "year": "2022"
+  },
+  "ch-zug": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 0.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 0.3,
+     "prime": "Müller-Thurgau"
+    }
+   ],
+   "area": true,
+   "totalHa": 6.1,
+   "unit": "ZG, Switzerland",
+   "year": "2022"
+  },
+  "ch-zurich": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 271.1,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 112.4,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 19.8,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 16.8,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 14.5,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 605.1,
+   "unit": "ZH, Switzerland",
+   "year": "2022"
+  },
+  "cz-cechy": {
+   "grapes": [
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 114,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 87.6,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 84.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "st-laurent",
+     "ha": 55.6,
+     "prime": "Sankt Laurent"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 51.5,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 42.6,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 35.4,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "blauer-portugieser",
+     "ha": 32.3,
+     "prime": "Blauer Portugieser"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 22.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 17.9,
+     "prime": "Zweigelt"
+    }
+   ],
+   "area": true,
+   "totalHa": 707.8,
+   "unit": "Čechy, Czechia",
+   "year": "2023"
+  },
+  "cz-litomericka": {
+   "grapes": [
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 75,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 35.7,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 34,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "st-laurent",
+     "ha": 32.4,
+     "prime": "Sankt Laurent"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 27.6,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 18.3,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "blauer-portugieser",
+     "ha": 17.5,
+     "prime": "Blauer Portugieser"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 14.3,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 10.2,
+     "prime": "Zweigelt"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 8.8,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 339,
+   "unit": "Litoměřická, Czechia",
+   "year": "2023"
+  },
+  "cz-melnicka": {
+   "grapes": [
+    {
+     "grapeId": "riesling",
+     "ha": 51.9,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 48.1,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 38.2,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 23.2,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "st-laurent",
+     "ha": 23,
+     "prime": "Sankt Laurent"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 21.8,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 20.7,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "blauer-portugieser",
+     "ha": 14.4,
+     "prime": "Blauer Portugieser"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 13.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "dornfelder",
+     "ha": 10.9,
+     "prime": "Dornfelder"
+    }
+   ],
+   "area": true,
+   "totalHa": 343.5,
+   "unit": "Mělnická, Czechia",
+   "year": "2023"
+  },
+  "cz-mikulovska": {
+   "grapes": [
+    {
+     "grapeId": "italian-riesling",
+     "ha": 641.3,
+     "prime": "Graševina"
+    },
+    {
+     "grapeId": "gruner-veltliner",
+     "ha": 394.2,
+     "prime": "Grüner Veltliner"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 377.7,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 349.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 326.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 307.1,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 263.7,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 217.9,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 193.2,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 187.2,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 167.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "st-laurent",
+     "ha": 151.4,
+     "prime": "Sankt Laurent"
+    }
+   ],
+   "area": true,
+   "totalHa": 4975.4,
+   "unit": "Mikulovská, Czechia",
+   "year": "2023"
+  },
+  "cz-morava": {
+   "grapes": [
+    {
+     "grapeId": "gruner-veltliner",
+     "ha": 1486.3,
+     "prime": "Grüner Veltliner"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 1223.9,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 1166.9,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "italian-riesling",
+     "ha": 1116.3,
+     "prime": "Graševina"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 1001.7,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 973.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 934.8,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 932.3,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 745.1,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "st-laurent",
+     "ha": 741.7,
+     "prime": "Sankt Laurent"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 721.5,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 651.2,
+     "prime": "Zweigelt"
+    }
+   ],
+   "area": true,
+   "totalHa": 16992.3,
+   "unit": "Morava, Czechia",
+   "year": "2023"
+  },
+  "cz-slovacka": {
+   "grapes": [
+    {
+     "grapeId": "riesling",
+     "ha": 386,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 319.7,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 309.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 289.8,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 282.3,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "gruner-veltliner",
+     "ha": 258.3,
+     "prime": "Grüner Veltliner"
+    },
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 247.1,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 184.9,
+     "prime": "Zweigelt"
+    },
+    {
+     "grapeId": "blauer-portugieser",
+     "ha": 157,
+     "prime": "Blauer Portugieser"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 156.4,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 155.5,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "st-laurent",
+     "ha": 153.6,
+     "prime": "Sankt Laurent"
+    }
+   ],
+   "area": true,
+   "totalHa": 4191.3,
+   "unit": "Slovácká, Czechia",
+   "year": "2023"
+  },
+  "cz-velkopavlovicka": {
+   "grapes": [
+    {
+     "grapeId": "gruner-veltliner",
+     "ha": 465.8,
+     "prime": "Grüner Veltliner"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 332.3,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 329.1,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "st-laurent",
+     "ha": 260.3,
+     "prime": "Sankt Laurent"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 241.8,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "italian-riesling",
+     "ha": 235.4,
+     "prime": "Graševina"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 219.8,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 219.3,
+     "prime": "Zweigelt"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 214.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 206.8,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 192.7,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "blauer-portugieser",
+     "ha": 190.6,
+     "prime": "Blauer Portugieser"
+    }
+   ],
+   "area": true,
+   "totalHa": 4679.5,
+   "unit": "Velkopavlovická, Czechia",
+   "year": "2023"
+  },
+  "cz-znojemska": {
+   "grapes": [
+    {
+     "grapeId": "gruner-veltliner",
+     "ha": 367.5,
+     "prime": "Grüner Veltliner"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 281.8,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 250.8,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 243.1,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 177.9,
+     "prime": "Gewürztraminer"
+    },
+    {
+     "grapeId": "st-laurent",
+     "ha": 176.3,
+     "prime": "Sankt Laurent"
+    },
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 165.2,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 162.3,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 132.6,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 113.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 101.6,
+     "prime": "Zweigelt"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 99.9,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 3137.3,
+   "unit": "Znojemská, Czechia",
+   "year": "2023"
+  },
+  "ge-kakheti": {
+   "grapes": [
+    {
+     "grapeId": "rkatsiteli",
+     "ha": 18239,
+     "prime": "Rkatsiteli"
+    },
+    {
+     "grapeId": "saperavi",
+     "ha": 17406,
+     "prime": "Saperavi"
+    },
+    {
+     "grapeId": "mtsvane",
+     "ha": 1110,
+     "prime": "Mtsvane Kakhuri"
+    }
+   ],
+   "area": true,
+   "totalHa": 42578,
+   "unit": "Kakheti, Georgia",
+   "year": "2023"
+  },
+  "jp-hokkaido": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 61,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "kerner",
+     "ha": 60.6,
+     "prime": "Kerner"
+    },
+    {
+     "grapeId": "niagara",
+     "ha": 53.2,
+     "prime": "Niagara"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 47.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "zweigelt",
+     "ha": 44,
+     "prime": "Zweigelt"
+    },
+    {
+     "grapeId": "campbell-early",
+     "ha": 32.3,
+     "prime": "Campbell Early"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 23.4,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 18.5,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "bacchus-weiss",
+     "ha": 15.5,
+     "prime": "Bacchus"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 14,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 13.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 13.5,
+     "prime": "Gewürztraminer"
+    }
+   ],
+   "area": true,
+   "totalHa": 602.8,
+   "unit": "Hokkaido, Japan",
+   "year": "2022"
+  },
+  "jp-nagano": {
+   "grapes": [
+    {
+     "grapeId": "merlot",
+     "ha": 145.1,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "concord",
+     "ha": 120.3,
+     "prime": "Concord"
+    },
+    {
+     "grapeId": "niagara",
+     "ha": 115.1,
+     "prime": "Niagara"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 98.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 27.6,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 20.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 13.5,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 673.2,
+   "unit": "Nagano, Japan",
+   "year": "2022"
+  },
+  "jp-osaka": {
+   "grapes": [
+    {
+     "grapeId": "delaware",
+     "ha": 5,
+     "prime": "Delaware"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 2.2,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1.4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 1.2,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 12.2,
+   "unit": "Osaka, Japan",
+   "year": "2022"
+  },
+  "jp-yamagata": {
+   "grapes": [
+    {
+     "grapeId": "delaware",
+     "ha": 298.2,
+     "prime": "Delaware"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 48.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 21.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 14.3,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 592.2,
+   "unit": "Yamagata, Japan",
+   "year": "2022"
+  },
+  "jp-yamanashi": {
+   "grapes": [
+    {
+     "grapeId": "koshu",
+     "ha": 484,
+     "prime": "Koshu"
+    }
+   ],
+   "area": true,
+   "totalHa": 636.9,
+   "unit": "Yamanashi, Japan",
+   "year": "2022"
+  },
+  "nz-auckland": {
+   "grapes": [
+    {
+     "grapeId": "chardonnay",
+     "ha": 64.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 48.9,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 33.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 32.7,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 18.1,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 17.4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 12,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 8.3,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 269.3,
+   "unit": "Auckland, New Zealand",
+   "year": "2023"
+  },
+  "nz-central-otago": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 1716.4,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 169.6,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 102.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 55.1,
+     "prime": "Riesling"
+    }
+   ],
+   "area": true,
+   "totalHa": 2114.7,
+   "unit": "Central Otago, New Zealand",
+   "year": "2023"
+  },
+  "nz-gisborne": {
+   "grapes": [
+    {
+     "grapeId": "chardonnay",
+     "ha": 533.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 316.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 264.4,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 26.9,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 1238.7,
+   "unit": "Gisborne, New Zealand",
+   "year": "2023"
+  },
+  "nz-hawke-s-bay": {
+   "grapes": [
+    {
+     "grapeId": "chardonnay",
+     "ha": 1033.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 1030.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 904.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 655.7,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 316.4,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 220.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 172.2,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 4622.9,
+   "unit": "Hawkes Bay, New Zealand",
+   "year": "2023"
+  },
+  "nz-marlborough": {
+   "grapes": [
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 24697.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 2546.8,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 1250.1,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 1080.8,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 29969.6,
+   "unit": "Marlborough, New Zealand",
+   "year": "2023"
+  },
+  "nz-nelson": {
+   "grapes": [
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 619.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 153.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 112.6,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 108.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 22.4,
+     "prime": "Riesling"
+    }
+   ],
+   "area": true,
+   "totalHa": 1068.9,
+   "unit": "Nelson, New Zealand",
+   "year": "2023"
+  },
+  "nz-north-canterbury": {
+   "grapes": [
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 436.6,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 410.3,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 257.9,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 218.3,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 88.3,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 1467.3,
+   "unit": "North Canterbury, New Zealand",
+   "year": "2023"
+  },
+  "nz-northland": {
+   "grapes": [
+    {
+     "grapeId": "chardonnay",
+     "ha": 19.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 13.5,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 10.3,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 5.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 3.4,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "viognier",
+     "ha": 3.1,
+     "prime": "Viognier"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 3,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "niagara",
+     "ha": 2.5,
+     "prime": "Niagara"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 2,
+     "prime": "Sauvignon Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 74.1,
+   "unit": "Northland, New Zealand",
+   "year": "2023"
+  },
+  "nz-wairarapa": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 513.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 397.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 60.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 47,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 1080.7,
+   "unit": "Wairarapa, New Zealand",
+   "year": "2023"
+  },
+  "nz-waitaki-valley-north-otago": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 19.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 14.6,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 6.4,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 4.1,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "gewurztraminer",
+     "ha": 2.1,
+     "prime": "Gewürztraminer"
+    }
+   ],
+   "area": true,
+   "totalHa": 47.8,
+   "unit": "Waitaki Valley, New Zealand",
+   "year": "2023"
+  },
+  "pt-alentejo": {
+   "grapes": [
+    {
+     "grapeId": "tempranillo",
+     "ha": 4562.6,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "alicante-bouschet",
+     "ha": 4303.4,
+     "prime": "Alicante Henri Bouschet"
+    },
+    {
+     "grapeId": "tinta-amarela",
+     "ha": 2618.3,
+     "prime": "Trincadeira"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 2307.2,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 1607.3,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "castelao",
+     "ha": 1088.8,
+     "prime": "Castelão"
+    },
+    {
+     "grapeId": "arinto",
+     "ha": 1011,
+     "prime": "Arinto de Bucelas"
+    },
+    {
+     "grapeId": "touriga-francesa",
+     "ha": 829.6,
+     "prime": "Touriga Franca"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 751.8,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 25924,
+   "unit": "Alentejo, Portugal",
+   "year": "2022"
+  },
+  "pt-algarve": {
+   "grapes": [
+    {
+     "grapeId": "castelao",
+     "ha": 242.3,
+     "prime": "Castelão"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 100.9,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 99.5,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 88,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "tinta-amarela",
+     "ha": 49,
+     "prime": "Trincadeira"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 46.1,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "alicante-bouschet",
+     "ha": 44.7,
+     "prime": "Alicante Henri Bouschet"
+    },
+    {
+     "grapeId": "arinto",
+     "ha": 44.7,
+     "prime": "Arinto de Bucelas"
+    }
+   ],
+   "area": true,
+   "totalHa": 1442,
+   "unit": "Algarve, Portugal",
+   "year": "2022"
+  },
+  "pt-beira-atlantico": {
+   "grapes": [
+    {
+     "grapeId": "baga",
+     "ha": 6307.2,
+     "prime": "Baga"
+    },
+    {
+     "grapeId": "fernao-pires",
+     "ha": 2892.5,
+     "prime": "Fernão Pires"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 388.3,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 374.9,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 348.2,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 13391,
+   "unit": "Beira Atlântico, Portugal",
+   "year": "2022"
+  },
+  "pt-douro": {
+   "grapes": [
+    {
+     "grapeId": "touriga-francesa",
+     "ha": 12213.9,
+     "prime": "Touriga Franca"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 6737.2,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 5042.1,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "tinta-barroca",
+     "ha": 2868.8,
+     "prime": "Tinta Barroca"
+    },
+    {
+     "grapeId": "tinta-amarela",
+     "ha": 1304,
+     "prime": "Trincadeira"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 912.8,
+     "prime": "Muscat Blanc à Petits Grains"
+    }
+   ],
+   "area": true,
+   "totalHa": 43466,
+   "unit": "Douro, Portugal",
+   "year": "2022"
+  },
+  "pt-lisboa": {
+   "grapes": [
+    {
+     "grapeId": "castelao",
+     "ha": 2443.9,
+     "prime": "Castelão"
+    },
+    {
+     "grapeId": "fernao-pires",
+     "ha": 2245.2,
+     "prime": "Fernão Pires"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 2126,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "alicante-bouschet",
+     "ha": 1947.2,
+     "prime": "Alicante Henri Bouschet"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 1311.4,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 794.8,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "arinto",
+     "ha": 655.7,
+     "prime": "Arinto de Bucelas"
+    },
+    {
+     "grapeId": "palomino",
+     "ha": 596.1,
+     "prime": "Palomino Fino"
+    }
+   ],
+   "area": true,
+   "totalHa": 19869,
+   "unit": "Lisboa, Portugal",
+   "year": "2022"
+  },
+  "pt-minho": {
+   "grapes": [
+    {
+     "grapeId": "loureira",
+     "ha": 7213.8,
+     "prime": "Loureiro"
+    },
+    {
+     "grapeId": "arinto",
+     "ha": 3826.2,
+     "prime": "Arinto de Bucelas"
+    },
+    {
+     "grapeId": "albarino",
+     "ha": 3801.9,
+     "prime": "Alvarinho"
+    },
+    {
+     "grapeId": "souzao",
+     "ha": 3680,
+     "prime": "Vinhao"
+    },
+    {
+     "grapeId": "treixadura",
+     "ha": 1462.3,
+     "prime": "Trajadura"
+    },
+    {
+     "grapeId": "fernao-pires",
+     "ha": 755.5,
+     "prime": "Fernão Pires"
+    }
+   ],
+   "area": true,
+   "totalHa": 24371,
+   "unit": "Minho, Portugal",
+   "year": "2022"
+  },
+  "pt-peninsula-de-setubal": {
+   "grapes": [
+    {
+     "grapeId": "castelao",
+     "ha": 3596.1,
+     "prime": "Castelão"
+    },
+    {
+     "grapeId": "fernao-pires",
+     "ha": 786.6,
+     "prime": "Fernão Pires"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 714.4,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 537.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "alicante-bouschet",
+     "ha": 433.5,
+     "prime": "Alicante Henri Bouschet"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 272.9,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 256.9,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 232.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "arinto",
+     "ha": 160.5,
+     "prime": "Arinto de Bucelas"
+    }
+   ],
+   "area": true,
+   "totalHa": 8027,
+   "unit": "Península De Setúbal, Portugal",
+   "year": "2022"
+  },
+  "pt-tejo": {
+   "grapes": [
+    {
+     "grapeId": "fernao-pires",
+     "ha": 4714.8,
+     "prime": "Fernão Pires"
+    },
+    {
+     "grapeId": "castelao",
+     "ha": 1618.7,
+     "prime": "Castelão"
+    },
+    {
+     "grapeId": "tinta-amarela",
+     "ha": 822.2,
+     "prime": "Trincadeira"
+    },
+    {
+     "grapeId": "alicante-bouschet",
+     "ha": 758,
+     "prime": "Alicante Henri Bouschet"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 706.6,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 680.9,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 616.7,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 308.3,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": true,
+   "totalHa": 12847,
+   "unit": "Tejo, Portugal",
+   "year": "2022"
+  },
+  "pt-terras-da-beira": {
+   "grapes": [
+    {
+     "grapeId": "tempranillo",
+     "ha": 2094.8,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 871.7,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "touriga-francesa",
+     "ha": 829.5,
+     "prime": "Touriga Franca"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 660.8,
+     "prime": "Malvasia"
+    },
+    {
+     "grapeId": "arinto",
+     "ha": 309.3,
+     "prime": "Arinto de Bucelas"
+    },
+    {
+     "grapeId": "tinta-amarela",
+     "ha": 309.3,
+     "prime": "Trincadeira"
+    }
+   ],
+   "area": true,
+   "totalHa": 14059,
+   "unit": "Terras Da Beira, Portugal",
+   "year": "2022"
+  },
+  "pt-terras-de-cister": {
+   "grapes": [
+    {
+     "grapeId": "touriga-francesa",
+     "ha": 286.5,
+     "prime": "Touriga Franca"
+    },
+    {
+     "grapeId": "tinta-amarela",
+     "ha": 175.1,
+     "prime": "Trincadeira"
+    },
+    {
+     "grapeId": "palomino",
+     "ha": 166,
+     "prime": "Palomino Fino"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 100.1,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "godello",
+     "ha": 65.9,
+     "prime": "Godello"
+    },
+    {
+     "grapeId": "tinta-barroca",
+     "ha": 65.9,
+     "prime": "Tinta Barroca"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 56.9,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 47.8,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "verdelho",
+     "ha": 45.5,
+     "prime": "Verdelho"
+    }
+   ],
+   "area": true,
+   "totalHa": 2274,
+   "unit": "Terras De Cister, Portugal",
+   "year": "2022"
+  },
+  "pt-terras-do-dao": {
+   "grapes": [
+    {
+     "grapeId": "mencia",
+     "ha": 3057.3,
+     "prime": "Mencía"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 2856.1,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 2360,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "alfrocheiro-preto",
+     "ha": 791.1,
+     "prime": "Alfrocheiro"
+    },
+    {
+     "grapeId": "encruzado",
+     "ha": 737.5,
+     "prime": "Encruzado"
+    },
+    {
+     "grapeId": "baga",
+     "ha": 657,
+     "prime": "Baga"
+    }
+   ],
+   "area": true,
+   "totalHa": 13409,
+   "unit": "Terras Do Dão, Portugal",
+   "year": "2022"
+  },
+  "pt-tras-os-montes": {
+   "grapes": [
+    {
+     "grapeId": "tempranillo",
+     "ha": 1581.3,
+     "prime": "Tempranillo"
+    },
+    {
+     "grapeId": "tinta-amarela",
+     "ha": 863.4,
+     "prime": "Trincadeira"
+    },
+    {
+     "grapeId": "bastardo",
+     "ha": 834.3,
+     "prime": "Trousseau"
+    },
+    {
+     "grapeId": "touriga-nacional",
+     "ha": 805.2,
+     "prime": "Touriga Nacional"
+    },
+    {
+     "grapeId": "touriga-francesa",
+     "ha": 756.7,
+     "prime": "Touriga Franca"
+    },
+    {
+     "grapeId": "torrontes",
+     "ha": 426.8,
+     "prime": "Malvasia"
+    },
+    {
+     "grapeId": "godello",
+     "ha": 300.7,
+     "prime": "Godello"
+    },
+    {
+     "grapeId": "tinta-barroca",
+     "ha": 300.7,
+     "prime": "Tinta Barroca"
+    }
+   ],
+   "area": true,
+   "totalHa": 9701,
+   "unit": "Trás-Os-Montes, Portugal",
+   "year": "2022"
+  },
+  "si-bela-krajina": {
+   "grapes": [
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 59.5,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "italian-riesling",
+     "ha": 49.9,
+     "prime": "Graševina"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 17.7,
+     "prime": "Muscat Blanc à Petits Grains"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 14.1,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 11.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 9.6,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "blauer-portugieser",
+     "ha": 6.4,
+     "prime": "Blauer Portugieser"
+    }
+   ],
+   "area": true,
+   "totalHa": 303.1,
+   "unit": "Bela Krajina, Slovenia",
+   "year": "2022"
+  },
+  "si-bizeljsko-sremic": {
+   "grapes": [
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 129.4,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "italian-riesling",
+     "ha": 126.2,
+     "prime": "Graševina"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 38.1,
+     "prime": "Muscat Blanc à Petits Grains"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 32,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 25.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 22.5,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "silvaner",
+     "ha": 13.9,
+     "prime": "Silvaner"
+    }
+   ],
+   "area": true,
+   "totalHa": 677.1,
+   "unit": "Bizeljsko-Sremič, Slovenia",
+   "year": "2022"
+  },
+  "si-dolenjska": {
+   "grapes": [
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 253.1,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "italian-riesling",
+     "ha": 131.1,
+     "prime": "Graševina"
+    }
+   ],
+   "area": true,
+   "totalHa": 1335.4,
+   "unit": "Dolenjska, Slovenia",
+   "year": "2022"
+  },
+  "si-goriska-brda": {
+   "grapes": [
+    {
+     "grapeId": "ribolla-gialla",
+     "ha": 384.7,
+     "prime": "Ribolla Gialla"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 293.7,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 290,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-vert",
+     "ha": 197.9,
+     "prime": "Sauvignonasse"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 178.3,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 117.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 99.9,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 48.2,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 46.8,
+     "prime": "Pinot Blanc"
+    }
+   ],
+   "area": true,
+   "totalHa": 1816.7,
+   "unit": "Goriška Brda, Slovenia",
+   "year": "2022"
+  },
+  "si-kras": {
+   "grapes": [
+    {
+     "grapeId": "refosco-dal-peduncolo-rosso",
+     "ha": 393.8,
+     "prime": "Refosco"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 19.3,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 543.5,
+   "unit": "Kras, Slovenia",
+   "year": "2022"
+  },
+  "si-prekmurje": {
+   "grapes": [
+    {
+     "grapeId": "italian-riesling",
+     "ha": 137.5,
+     "prime": "Graševina"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 45.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 40.6,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "furmint",
+     "ha": 25.9,
+     "prime": "Furmint"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 24.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 21.2,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 15.4,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 12.9,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 429.2,
+   "unit": "Prekmurje, Slovenia",
+   "year": "2022"
+  },
+  "si-slovenska-istra": {
+   "grapes": [
+    {
+     "grapeId": "refosco-dal-peduncolo-rosso",
+     "ha": 746.5,
+     "prime": "Refosco"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 101.7,
+     "prime": "Muscat Blanc à Petits Grains"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 84.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 82.4,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 60.7,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 1830.8,
+   "unit": "Slovenska Istra, Slovenia",
+   "year": "2022"
+  },
+  "si-stajerska-slovenija": {
+   "grapes": [
+    {
+     "grapeId": "italian-riesling",
+     "ha": 976.4,
+     "prime": "Graševina"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 643.4,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 490,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 408,
+     "prime": "Muscat Blanc à Petits Grains"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 393.3,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "furmint",
+     "ha": 362.4,
+     "prime": "Furmint"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 217.4,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 204.9,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "savagnin",
+     "ha": 166,
+     "prime": "Savagnin Blanc"
+    },
+    {
+     "grapeId": "muller-thurgau",
+     "ha": 134.9,
+     "prime": "Müller-Thurgau"
+    },
+    {
+     "grapeId": "blaufrankisch",
+     "ha": 134.6,
+     "prime": "Blaufränkisch"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 125.3,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": true,
+   "totalHa": 5211.1,
+   "unit": "Štajerska Slovenija, Slovenia",
+   "year": "2022"
+  },
+  "si-vipavska-dolina": {
+   "grapes": [
+    {
+     "grapeId": "merlot",
+     "ha": 291.7,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 218.9,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "ribolla-gialla",
+     "ha": 209.6,
+     "prime": "Ribolla Gialla"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 202.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 143.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "italian-riesling",
+     "ha": 139.6,
+     "prime": "Graševina"
+    },
+    {
+     "grapeId": "barbera",
+     "ha": 75.8,
+     "prime": "Barbera"
+    },
+    {
+     "grapeId": "refosco-dal-peduncolo-rosso",
+     "ha": 71.6,
+     "prime": "Refosco"
+    },
+    {
+     "grapeId": "pinot-blanc",
+     "ha": 60.1,
+     "prime": "Pinot Blanc"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 57.7,
+     "prime": "Muscat Blanc à Petits Grains"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 49.4,
+     "prime": "Pinot Gris"
+    }
+   ],
+   "area": true,
+   "totalHa": 2098.5,
+   "unit": "Vipavska Dolina, Slovenia",
+   "year": "2022"
+  },
+  "us-champlain-valley-of-new-york": {
+   "grapes": [],
+   "area": true,
+   "totalHa": 4,
+   "unit": "Champlain Valley Of New York, United States",
+   "year": "2023"
+  },
+  "us-finger-lakes": {
+   "grapes": [
+    {
+     "grapeId": "concord",
+     "ha": 428.2,
+     "prime": "Concord"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 336.7,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "niagara",
+     "ha": 142.9,
+     "prime": "Niagara"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 119.4,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 104.8,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 80.9,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 59.5,
+     "prime": "Vidal"
+    }
+   ],
+   "area": true,
+   "totalHa": 2280.7,
+   "unit": "Finger Lakes, United States",
+   "year": "2023"
+  },
+  "us-hudson-river-region": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 11.7,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 7.3,
+     "prime": "Vidal"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 7.3,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 5.7,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "concord",
+     "ha": 4.9,
+     "prime": "Concord"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 4.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "gamay",
+     "ha": 4,
+     "prime": "Gamay Noir"
+    },
+    {
+     "grapeId": "niagara",
+     "ha": 4,
+     "prime": "Niagara"
+    },
+    {
+     "grapeId": "sauvignon-vert",
+     "ha": 3.2,
+     "prime": "Sauvignonasse"
+    }
+   ],
+   "area": true,
+   "totalHa": 86.2,
+   "unit": "Hudson River Region, United States",
+   "year": "2023"
+  },
+  "us-lake-erie": {
+   "grapes": [
+    {
+     "grapeId": "concord",
+     "ha": 2136.8,
+     "prime": "Concord"
+    },
+    {
+     "grapeId": "niagara",
+     "ha": 171.2,
+     "prime": "Niagara"
+    }
+   ],
+   "area": true,
+   "totalHa": 2599.4,
+   "unit": "Lake Erie, United States",
+   "year": "2023"
+  },
+  "us-long-island": {
+   "grapes": [
+    {
+     "grapeId": "merlot",
+     "ha": 73.7,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 70,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 38.9,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 36.4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 19,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 16.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 13.4,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "pinot-meunier",
+     "ha": 10.9,
+     "prime": "Pinot Meunier"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 7.7,
+     "prime": "Côt"
+    }
+   ],
+   "area": true,
+   "totalHa": 351.7,
+   "unit": "Long Island, United States",
+   "year": "2023"
+  },
+  "us-niagara-escarpment": {
+   "grapes": [
+    {
+     "grapeId": "concord",
+     "ha": 29.1,
+     "prime": "Concord"
+    },
+    {
+     "grapeId": "niagara",
+     "ha": 15.8,
+     "prime": "Niagara"
+    },
+    {
+     "grapeId": "riesling",
+     "ha": 6.9,
+     "prime": "Riesling"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 6.1,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 2.8,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 2.4,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 2.4,
+     "prime": "Chardonnay"
+    }
+   ],
+   "area": true,
+   "totalHa": 77.5,
+   "unit": "Niagara Escarpment, United States",
+   "year": "2023"
+  },
+  "us-rouge-valley": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 591.7,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 254.6,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 251.3,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinot-gris",
+     "ha": 233.9,
+     "prime": "Pinot Gris"
+    },
+    {
+     "grapeId": "viognier",
+     "ha": 125.9,
+     "prime": "Viognier"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 97.9,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 91.5,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 71.2,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "malbec",
+     "ha": 61.9,
+     "prime": "Côt"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 57.1,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 2128.7,
+   "unit": "Rogue Valley, United States",
+   "year": "2022"
+  },
+  "us-umpqua-valley": {
+   "grapes": [
+    {
+     "grapeId": "pinot-noir",
+     "ha": 942.5,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 167.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 64.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "tempranillo",
+     "ha": 63.5,
+     "prime": "Tempranillo"
+    }
+   ],
+   "area": true,
+   "totalHa": 1403.9,
+   "unit": "Umpqua Valley, United States",
+   "year": "2022"
+  },
+  "us-upper-hudson": {
+   "grapes": [],
+   "area": true,
+   "totalHa": 11.3,
+   "unit": "Upper Hudson, United States",
+   "year": "2023"
+  },
+  "za-breedekloof": {
+   "grapes": [
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 2735.8,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "colombard",
+     "ha": 1757.6,
+     "prime": "Colombard"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 1557.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 910.6,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 801.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 721.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 636.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 610.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 545.6,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "ruby-cabernet",
+     "ha": 524.9,
+     "prime": "Ruby Cabernet"
+    },
+    {
+     "grapeId": "cinsaut",
+     "ha": 515.8,
+     "prime": "Cinsaut"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 343,
+     "prime": "Sémillon"
+    }
+   ],
+   "area": false,
+   "totalHa": 12659,
+   "unit": "Breedekloof, South Africa",
+   "year": "2023"
+  },
+  "za-cape-south-coast": {
+   "grapes": [
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 757.2,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 378,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 358.6,
+     "prime": "Pinot Noir"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 319.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 158.1,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 142,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 86.5,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "semillon",
+     "ha": 72.3,
+     "prime": "Sémillon"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 59.2,
+     "prime": "Pinotage"
+    }
+   ],
+   "area": false,
+   "totalHa": 2646.3,
+   "unit": "Cape South Coast, South Africa",
+   "year": "2023"
+  },
+  "za-cape-town": {
+   "grapes": [
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 943.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 396.9,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 268,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 261.5,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 168.1,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 151.9,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 106.3,
+     "prime": "Chenin Blanc"
+    }
+   ],
+   "area": false,
+   "totalHa": 2578,
+   "unit": "Cape Town, South Africa",
+   "year": "2023"
+  },
+  "za-klein-karoo": {
+   "grapes": [
+    {
+     "grapeId": "colombard",
+     "ha": 686.3,
+     "prime": "Colombard"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 437.3,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 92.5,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 77.5,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 75.9,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 68,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "ruby-cabernet",
+     "ha": 66.6,
+     "prime": "Ruby Cabernet"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 56.4,
+     "prime": "Muscat Blanc à Petits Grains"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 50.5,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 45.1,
+     "prime": "Cabernet Sauvignon"
+    }
+   ],
+   "area": false,
+   "totalHa": 2001.6,
+   "unit": "Klein Karoo, South Africa",
+   "year": "2023"
+  },
+  "za-northern-cape": {
+   "grapes": [
+    {
+     "grapeId": "sultana",
+     "ha": 2434.7,
+     "prime": "Sultaniye"
+    },
+    {
+     "grapeId": "colombard",
+     "ha": 1033.5,
+     "prime": "Colombard"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 706.2,
+     "prime": "Chenin Blanc"
+    }
+   ],
+   "area": false,
+   "totalHa": 4840.2,
+   "unit": "Northern Cape, South Africa",
+   "year": "2023"
+  },
+  "za-olifants-river": {
+   "grapes": [
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 2496.1,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "colombard",
+     "ha": 2231.8,
+     "prime": "Colombard"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 688.7,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 546.2,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 462,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "ruby-cabernet",
+     "ha": 314.6,
+     "prime": "Ruby Cabernet"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 300.2,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 269.8,
+     "prime": "Muscat of Alexandria"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 195.6,
+     "prime": "Merlot"
+    }
+   ],
+   "area": false,
+   "totalHa": 8522.6,
+   "unit": "Olifants River, South Africa",
+   "year": "2023"
+  },
+  "za-paarl": {
+   "grapes": [
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 2668.4,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 2115,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 2061.7,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 1296,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 1190.6,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 953.3,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 881.9,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "cinsaut",
+     "ha": 565.9,
+     "prime": "Cinsaut"
+    },
+    {
+     "grapeId": "colombard",
+     "ha": 308,
+     "prime": "Colombard"
+    }
+   ],
+   "area": false,
+   "totalHa": 14248,
+   "unit": "Paarl, South Africa",
+   "year": "2023"
+  },
+  "za-robertson": {
+   "grapes": [
+    {
+     "grapeId": "colombard",
+     "ha": 1824.9,
+     "prime": "Colombard"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 1689.6,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 1674.3,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 1512.8,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1269.2,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 926.8,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 779,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 574.2,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "ruby-cabernet",
+     "ha": 522.8,
+     "prime": "Ruby Cabernet"
+    },
+    {
+     "grapeId": "muscat-blanc-a-petits-grains",
+     "ha": 409.4,
+     "prime": "Muscat Blanc à Petits Grains"
+    }
+   ],
+   "area": false,
+   "totalHa": 12776.4,
+   "unit": "Robertson, South Africa",
+   "year": "2023"
+  },
+  "za-stellenbosch": {
+   "grapes": [
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 2351.1,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 1548.3,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 1436.1,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 1414.7,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 1270.2,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 1021.8,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 960.9,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cabernet-franc",
+     "ha": 349.8,
+     "prime": "Cabernet Franc"
+    },
+    {
+     "grapeId": "pinot-noir",
+     "ha": 243.1,
+     "prime": "Pinot Noir"
+    }
+   ],
+   "area": false,
+   "totalHa": 11815.4,
+   "unit": "Stellenbosch, South Africa",
+   "year": "2023"
+  },
+  "za-swartland": {
+   "grapes": [
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 2439,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 1959.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 1572.8,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 1337.2,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 1093.8,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 696.6,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 666.2,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "cinsaut",
+     "ha": 282.3,
+     "prime": "Cinsaut"
+    }
+   ],
+   "area": false,
+   "totalHa": 12177.7,
+   "unit": "Swartland, South Africa",
+   "year": "2023"
+  },
+  "za-worcester": {
+   "grapes": [
+    {
+     "grapeId": "chenin-blanc",
+     "ha": 1733.7,
+     "prime": "Chenin Blanc"
+    },
+    {
+     "grapeId": "colombard",
+     "ha": 1048.7,
+     "prime": "Colombard"
+    },
+    {
+     "grapeId": "sauvignon-blanc",
+     "ha": 748.8,
+     "prime": "Sauvignon Blanc"
+    },
+    {
+     "grapeId": "chardonnay",
+     "ha": 468.8,
+     "prime": "Chardonnay"
+    },
+    {
+     "grapeId": "pinotage",
+     "ha": 415.7,
+     "prime": "Pinotage"
+    },
+    {
+     "grapeId": "syrah",
+     "ha": 404.1,
+     "prime": "Syrah"
+    },
+    {
+     "grapeId": "cabernet-sauvignon",
+     "ha": 250,
+     "prime": "Cabernet Sauvignon"
+    },
+    {
+     "grapeId": "merlot",
+     "ha": 204.8,
+     "prime": "Merlot"
+    },
+    {
+     "grapeId": "ruby-cabernet",
+     "ha": 167.6,
+     "prime": "Ruby Cabernet"
+    },
+    {
+     "grapeId": "muscat-of-alexandria",
+     "ha": 131.2,
+     "prime": "Muscat of Alexandria"
+    }
+   ],
+   "area": false,
+   "totalHa": 6518.2,
+   "unit": "Worcester, South Africa",
+   "year": "2023"
+  }
+ },
+ "sourceUrl": "https://doi.org/10.25909/32870405.v1"
+}

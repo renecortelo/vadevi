@@ -125,7 +125,11 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
                                       ? t("library.glanceSourceFederalRegister", {
                                           campaign: figure.year ?? "",
                                         })
-                                      : t("library.summarySource")}
+                                      : figure.publisher === "adelaide"
+                                        ? t("library.glanceSourceAdelaide", {
+                                            campaign: figure.year ?? "",
+                                          })
+                                        : t("library.summarySource")}
                 </a>
               </span>
             ),

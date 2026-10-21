@@ -169,6 +169,14 @@ function ampelography(volume: string): { article: string; url: string } | null {
   };
 }
 
+/** Countries of origin from the University of Adelaide (`pnpm kb:read-adelaide`). */
+const { origins: adelaideOrigins, sourceUrl: adelaideSource } = JSON.parse(
+  readFileSync(resolve("data/kb/adelaide.json"), "utf8"),
+) as {
+  origins: Record<string, { code: string; country: string; prime: string }>;
+  sourceUrl: string;
+};
+
 /** Names given by hand where Wikidata has none (`data/kb/grape-names.json`). */
 const givenNames = (
   JSON.parse(readFileSync(resolve("data/kb/grape-names.json"), "utf8")) as {
@@ -347,6 +355,19 @@ for (const qid of index) {
         .filter((entry) => entry.field === field)
         .map((entry) => (source.url === undefined ? entry : { ...entry, sourceUrl: source.url })),
     );
+  }
+  // Where no article says where the grape comes from: the country of origin
+  // the University of Adelaide's database gives its prime variety
+  // (`data/kb/adelaide.json`, CC BY 4.0), never for an origin in dispute.
+  const fromTable = adelaideOrigins[slug(raw.labels.en ?? qid)];
+  if (result.origin === null && fromTable !== undefined) {
+    result.origin = fromTable.code;
+    result.evidence.push({
+      field: "origin",
+      quote: `Country of origin of prime varieties, ${fromTable.prime}: ${fromTable.country}`,
+      sourceUrl: adelaideSource,
+      value: fromTable.code,
+    });
   }
   const names: Record<string, string> = {};
   // Some languages write a variety in lower case in running text ("la

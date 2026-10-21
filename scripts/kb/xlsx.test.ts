@@ -71,6 +71,23 @@ describe("readSheet", () => {
       },
     ]);
   });
+
+  it("reads a sheet by its name, through the workbook's links", () => {
+    const file = zip({
+      "xl/_rels/workbook.xml.rels":
+        '<Relationships><Relationship Id="rId1" Target="worksheets/sheet1.xml"/>' +
+        '<Relationship Id="rId2" Target="/xl/worksheets/sheet2.xml"/></Relationships>',
+      "xl/workbook.xml":
+        '<workbook><sheets><sheet name="Title page" sheetId="1" r:id="rId1"/>' +
+        '<sheet name="All countries" sheetId="2" r:id="rId2"/></sheets></workbook>',
+      "xl/worksheets/sheet1.xml":
+        '<worksheet><sheetData><row r="1"><c r="A1" t="inlineStr"><is><t>Title</t></is></c></row></sheetData></worksheet>',
+      "xl/worksheets/sheet2.xml":
+        '<worksheet><sheetData><row r="1"><c r="A1" t="inlineStr"><is><t>Albania</t></is></c></row></sheetData></worksheet>',
+    });
+    expect(readSheet(file, "All countries")).toEqual([{ A: { value: "Albania" } }]);
+    expect(() => readSheet(file, "Origin")).toThrow("No sheet named Origin.");
+  });
 });
 
 describe("sheetDate", () => {

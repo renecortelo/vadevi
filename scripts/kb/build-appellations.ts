@@ -1829,8 +1829,42 @@ for (const entry of entries) {
   };
   federalRegister += 1;
 }
+// Where nothing above gives an area: the bearing area of the region of the
+// name's own name in the University of Adelaide's database of winegrape areas
+// by region and variety (`data/kb/adelaide.json`, CC BY 4.0,
+// `pnpm kb:read-adelaide`) — an Australian or New Zealand GI, a Slovenian or
+// Czech district, a Portuguese region, a Japanese prefecture, a Swiss canton.
+const adelaide = JSON.parse(readFileSync(resolve("data/kb/adelaide.json"), "utf8")) as {
+  regions: Record<
+    string,
+    {
+      area: boolean;
+      grapes: { grapeId: string; ha: number; prime: string }[];
+      totalHa: number;
+      unit: string;
+      year: string;
+    }
+  >;
+  sourceUrl: string;
+};
+let fromAdelaide = 0;
+for (const entry of entries) {
+  const region = adelaide.regions[entry.id];
+  if (region === undefined || !region.area || entry.figures?.planted) continue;
+  entry.figures = {
+    planted: {
+      amount: region.totalHa,
+      publisher: "adelaide",
+      quote: `Bearing area, all varieties, ${region.unit}, ${region.year} (ha): ${region.totalHa}`,
+      sourceUrl: adelaide.sourceUrl,
+      year: region.year,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  fromAdelaide += 1;
+}
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,
@@ -1928,6 +1962,29 @@ for (const [id, { grapes: listed, quote, sourceUrl }] of Object.entries(infoboxG
   }
 }
 console.info(`  ${fromInfoboxes} grape links from regions' infoboxes.`);
+
+// The library's grapes most planted in the region of the name's own name, in
+// the University of Adelaide's database, where the register lists none: those
+// covering at least 2 % of its bearing area, the twelve largest, beside any an
+// article names (Vaud's one article grape, Marselan, gains its Chasselas).
+let fromAdelaideGrapes = 0;
+for (const [id, region] of Object.entries(adelaide.regions)) {
+  const entry = entryById.get(id);
+  if (entry === undefined) throw new Error(`adelaide: no name ${id}`);
+  if ((entry.register?.grapes.length ?? 0) > 0) continue;
+  for (const { grapeId, ha, prime } of region.grapes) {
+    if (!grapeIds.has(grapeId)) throw new Error(`adelaide: no grape ${grapeId}`);
+    if (entry.grapes.some((known) => known.grapeId === grapeId)) continue;
+    entry.grapes.push({
+      grapeId,
+      quote: `Bearing area, ${region.unit}, ${region.year}: ${prime} ${ha} ha of ${region.totalHa} ha`,
+      sourceUrl: adelaide.sourceUrl,
+    });
+    fromAdelaideGrapes += 1;
+    links += 1;
+  }
+}
+console.info(`  ${fromAdelaideGrapes} grape links from the University of Adelaide.`);
 
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;

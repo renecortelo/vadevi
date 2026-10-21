@@ -35,6 +35,7 @@ export type Source = {
     | "names"
     | "outlines"
     | "photos"
+    | "plantings"
     | "points"
     | "registerNames"
     | "summaries"
@@ -239,6 +240,15 @@ export const sources: Source[] = [
     name: "Regione Umbria · dati.regione.umbria.it",
     url: "https://dati.regione.umbria.it/dataset/produzioni_certificate",
     what: "areas",
+  },
+  {
+    credit:
+      "Anderson, K., S. Nelgen and G. Puga, Database of Regional, National and Global Winegrape Bearing Areas by Variety, 2000 to 2023, Wine Economics Research Centre, University of Adelaide, December 2025 (revised March 2026); summed by region and grape",
+    group: "figures",
+    licence: "CC BY 4.0",
+    name: "University of Adelaide · Wine Economics Research Centre",
+    url: "https://doi.org/10.25909/32870405.v1",
+    what: "plantings",
   },
   {
     group: "figures",
