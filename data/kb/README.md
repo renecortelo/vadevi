@@ -348,7 +348,7 @@ Every few months, or when a register announces a name:
   its terms allow no redistribution without permission.
 
 - **Spain's Ministry of Agriculture (MAPA)**, «Datos de las Denominaciones de
-  Origen Protegidas de Vinos, Campaña 2022/2023» (`es-dop-figures.json`):
+  Origen Protegidas de Vinos, Campaña 2023/2024» (`es-dop-figures.json`):
   public-sector information, reusable citing the source (Ley 37/2007, RD
   1495/2011); each PDO's registered area is shown with the campaign and a
   link to the report.
@@ -418,7 +418,8 @@ kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
   «Produzioni Certificate» on dati.regione.umbria.it: CC BY 4.0; the wine
   each name certified as fit for its DO in the latest year.
 
-- **Germany's Federal Statistical Office (Destatis)**, «Rebflächen 2022»
+- **Germany's Federal Statistical Office (Destatis)**, «Weinerzeugung 2025»
+  (press release no. 105, 30 March 2026) for production, and «Rebflächen 2022»
   (`de-anbaugebiete-figures.json`): its publications allow reproduction and
   distribution, in part too, with the source named; each of the 13
   Anbaugebiete shows its planted area with the year and a link.

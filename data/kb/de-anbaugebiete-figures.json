@@ -1,59 +1,102 @@
 {
-  "about": "Area planted with wine grapes (ha) in 2022 for each of Germany's 13 wine-growing regions (Anbaugebiete), from the Federal Statistical Office's «Rebflächen 2022» (Fachserie 3, Reihe 3.1.5; the series continues in GENESIS-Online as 41252, Weinbaukataster), table 2 «Mit Keltertrauben bestockte Rebfläche nach Rebsorten und Anbaugebieten», row «Insgesamt», transcribed by hand; the 13 add up to 103,141 ha of Germany's 103,391 (the rest lies outside them). Statistisches Bundesamt (Destatis): «Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellenangabe gestattet».",
-  "campaign": "2022",
-  "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
-  "regions": {
-    "de-ahr": {
-      "name": "Ahr",
-      "plantedHa": 529
-    },
-    "de-baden": {
-      "name": "Baden",
-      "plantedHa": 15727
-    },
-    "de-franken": {
-      "name": "Franken",
-      "plantedHa": 6171
-    },
-    "de-hessische-bergstra-e": {
-      "name": "Hessische Bergstraße",
-      "plantedHa": 462
-    },
-    "de-mittelrhein": {
-      "name": "Mittelrhein",
-      "plantedHa": 466
-    },
-    "de-mosel": {
-      "name": "Mosel",
-      "plantedHa": 8575
-    },
-    "de-nahe": {
-      "name": "Nahe",
-      "plantedHa": 4240
-    },
-    "de-pfalz": {
-      "name": "Pfalz",
-      "plantedHa": 23698
-    },
-    "de-rheingau": {
-      "name": "Rheingau",
-      "plantedHa": 3200
-    },
-    "de-rheinhessen": {
-      "name": "Rheinhessen",
-      "plantedHa": 27312
-    },
-    "de-saale-unstrut": {
-      "name": "Saale-Unstrut",
-      "plantedHa": 847
-    },
-    "de-sachsen": {
-      "name": "Sachsen",
-      "plantedHa": 507
-    },
-    "de-wurttemberg": {
-      "name": "Württemberg",
-      "plantedHa": 11407
-    }
+ "about": "Area planted with wine grapes (ha) in 2022 for each of Germany's 13 wine-growing regions (Anbaugebiete), from the Federal Statistical Office's «Rebflächen 2022» (Fachserie 3, Reihe 3.1.5; the series continues in GENESIS-Online as 41252, Weinbaukataster), table 2 «Mit Keltertrauben bestockte Rebfläche nach Rebsorten und Anbaugebieten», row «Insgesamt», transcribed by hand; the 13 add up to 103,141 ha of Germany's 103,391 (the rest lies outside them). Statistisches Bundesamt (Destatis): «Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellenangabe gestattet».",
+ "campaign": "2022",
+ "sourceUrl": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf",
+ "regions": {
+  "de-ahr": {
+   "name": "Ahr",
+   "plantedHa": 529
+  },
+  "de-baden": {
+   "name": "Baden",
+   "plantedHa": 15727
+  },
+  "de-franken": {
+   "name": "Franken",
+   "plantedHa": 6171
+  },
+  "de-hessische-bergstra-e": {
+   "name": "Hessische Bergstraße",
+   "plantedHa": 462
+  },
+  "de-mittelrhein": {
+   "name": "Mittelrhein",
+   "plantedHa": 466
+  },
+  "de-mosel": {
+   "name": "Mosel",
+   "plantedHa": 8575
+  },
+  "de-nahe": {
+   "name": "Nahe",
+   "plantedHa": 4240
+  },
+  "de-pfalz": {
+   "name": "Pfalz",
+   "plantedHa": 23698
+  },
+  "de-rheingau": {
+   "name": "Rheingau",
+   "plantedHa": 3200
+  },
+  "de-rheinhessen": {
+   "name": "Rheinhessen",
+   "plantedHa": 27312
+  },
+  "de-saale-unstrut": {
+   "name": "Saale-Unstrut",
+   "plantedHa": 847
+  },
+  "de-sachsen": {
+   "name": "Sachsen",
+   "plantedHa": 507
+  },
+  "de-wurttemberg": {
+   "name": "Württemberg",
+   "plantedHa": 11407
   }
+ },
+ "production": {
+  "about": "Wine and must produced (hl) in 2025 in the wine-growing regions the Federal Statistical Office's press release names («Weinerzeugung 2025», no. 105 of 30 March 2026), each with its sentence. Mosel is left out: the release says its figure is shaped by merchant wineries that also process grapes from other regions. Same terms as above.",
+  "campaign": "2025",
+  "sourceUrl": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/03/PD26_105_412.html",
+  "regions": {
+   "de-rheinhessen": {
+    "amountHl": 2100000,
+    "quote": "In den beiden größten Weinanbaugebieten Rheinhessen (2,10 Millionen Hektoliter) und Pfalz (1,53 Millionen Hektoliter)"
+   },
+   "de-pfalz": {
+    "amountHl": 1530000,
+    "quote": "In den beiden größten Weinanbaugebieten Rheinhessen (2,10 Millionen Hektoliter) und Pfalz (1,53 Millionen Hektoliter)"
+   },
+   "de-baden": {
+    "amountHl": 997800,
+    "quote": "Mit einem Zuwachs von 4,5 % auf 997 800 Hektolitern gegenüber dem Vorjahr lag die Erzeugung von Wein und Most im Weinanbaugebiet Baden leicht über dem Vorjahresniveau."
+   },
+   "de-wurttemberg": {
+    "amountHl": 741100,
+    "quote": "In den Weinanbaugebieten Württemberg und Franken stieg die Weinerzeugung um 11,0 % auf 741 100 Hektoliter beziehungsweise um 21,1 % auf 366 000."
+   },
+   "de-franken": {
+    "amountHl": 366000,
+    "quote": "In den Weinanbaugebieten Württemberg und Franken stieg die Weinerzeugung um 11,0 % auf 741 100 Hektoliter beziehungsweise um 21,1 % auf 366 000."
+   },
+   "de-rheingau": {
+    "amountHl": 180100,
+    "quote": "sank die Erzeugung von Wein und Most im Rheingau um 10,2 % auf 180 100 Hektoliter"
+   },
+   "de-nahe": {
+    "amountHl": 170800,
+    "quote": "im Weinanbaugebiet Nahe mit 170 800 Hektoliter um 2,5 % über Vorjahresniveau blieb"
+   },
+   "de-sachsen": {
+    "amountHl": 29500,
+    "quote": "So stieg die Weinerzeugung in Sachsen um 20 500 Hektoliter oder 227,9 % auf 29 500 Hektoliter"
+   },
+   "de-ahr": {
+    "amountHl": 38400,
+    "quote": "Auch an der Ahr konnten mit einer Steigerung von 16 000 Hektoliter oder 71,2 % auf 38 400 Hektoliter deutliche Zuwächse verzeichnet werden."
+   }
+  }
+ }
 }

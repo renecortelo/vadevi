@@ -45,6 +45,18 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **Germany's and Argentina's production**: the wine and must each German
+  wine-growing region produced in 2025, from the Federal Statistical
+  Office's press release (nine regions; Mosel left out, as the release says
+  its merchant wineries also process other regions' grapes), and the wine
+  made in 2024 in each department or province an Argentine indication is
+  named after, from the wine institute's yearly harvest report (57
+  indications, CC BY 4.0) — counted where it was made, as the table counts
+  it.
+- **Spain's figures for 2023/2024**: each PDO's registered vineyard area and
+  qualified wine from the Ministry of Agriculture's newest report, in place
+  of 2022/2023's; the PDOs it counts together (Jerez with Manzanilla, Málaga
+  with Sierras de Málaga) still take none.
 - **Umbria's production**: the wine each Umbrian name certified as fit for
   its DO in 2020 («Produzioni Certificate», Regione Umbria, CC BY 4.0), said
   as such — eleven names, Montefalco's and Montefalco Sagrantino's in place

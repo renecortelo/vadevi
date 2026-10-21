@@ -1539,10 +1539,15 @@ for (const entry of entries) {
   customs += 1;
 }
 // Argentina's indications named after a department or a province: its
-// vineyard area from the wine institute's yearly report
+// vineyard area, and the wine made there, from the wine institute's yearly reports
 // (`data/kb/ar-ig-figures.json`, transcribed by hand, CC BY 4.0).
 const argentine = JSON.parse(readFileSync(resolve("data/kb/ar-ig-figures.json"), "utf8")) as {
   campaign: string;
+  production?: {
+    campaign: string;
+    regions: Record<string, { amountHl: number }>;
+    sourceUrl: string;
+  };
   regions: Record<string, { department: string | null; plantedHa: number; province: string }>;
   sourceUrl: string;
 };
@@ -1564,15 +1569,32 @@ for (const entry of entries) {
     },
     production: entry.figures?.production ?? null,
   };
+  // And the wine made there that year, by where it was made.
+  const made = argentine.production?.regions[entry.id];
+  if (made !== undefined && argentine.production !== undefined) {
+    entry.figures.production = {
+      amount: made.amountHl,
+      publisher: "inv",
+      quote: `Elaboración de vinos, total vinos, ${place} (hl): ${made.amountHl}`,
+      sourceUrl: argentine.production.sourceUrl,
+      year: argentine.production.campaign,
+    };
+  }
   institute += 1;
 }
-// Germany's 13 wine-growing regions: their vineyard area from the Federal
-// Statistical Office (`data/kb/de-anbaugebiete-figures.json`, transcribed by
-// hand; reproduction allowed with the source named), in place of an article's.
+// Germany's 13 wine-growing regions: their vineyard area (and, for most, the
+// wine they produced) from the Federal Statistical Office
+// (`data/kb/de-anbaugebiete-figures.json`, transcribed by hand; reproduction
+// allowed with the source named), in place of an article's.
 const german = JSON.parse(
   readFileSync(resolve("data/kb/de-anbaugebiete-figures.json"), "utf8"),
 ) as {
   campaign: string;
+  production?: {
+    campaign: string;
+    regions: Record<string, { amountHl: number; quote: string }>;
+    sourceUrl: string;
+  };
   regions: Record<string, { name: string; plantedHa: number }>;
   sourceUrl: string;
 };
@@ -1589,6 +1611,22 @@ for (const entry of entries) {
       year: german.campaign,
     },
     production: entry.figures?.production ?? null,
+  };
+  destatis += 1;
+}
+// And the wine and must each produced, from its yearly press release.
+for (const entry of entries) {
+  const made = german.production?.regions[entry.id];
+  if (made === undefined || german.production === undefined) continue;
+  entry.figures = {
+    planted: entry.figures?.planted ?? null,
+    production: {
+      amount: made.amountHl,
+      publisher: "destatis",
+      quote: made.quote,
+      sourceUrl: german.production.sourceUrl,
+      year: german.production.campaign,
+    },
   };
   destatis += 1;
 }
