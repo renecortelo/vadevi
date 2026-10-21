@@ -485,7 +485,7 @@ kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
   Anbaugebiete shows its planted area with the year and a link.
 
 - **Argentina's Instituto Nacional de Vitivinicultura (INV)**, «Informe anual
-  de superficie 2024» (`ar-ig-figures.json`): published on argentina.gob.ar
+  de superficie 2025» (`ar-ig-figures.json`): published on argentina.gob.ar
   under Creative Commons Attribution 4.0; each indication named after a
   department or a province shows that area's vineyard surface, with the year
   and a link to the report. Chile's vineyard survey (SAG/ODEPA) was not used:

@@ -1,57 +1,57 @@
 {
- "about": "Area cultivated with vines (ha) in 2024 for each Argentine geographical indication named after a department or a province, from the Instituto Nacional de Vitivinicultura's «Informe anual de superficie 2024» (database frozen on 31 December 2024), tables 5.1 «Cantidad de viñedos y superficie — distribución por provincias / por departamentos», transcribed by hand; each province's departments add up to its total. Argentina.gob.ar, Creative Commons Attribution 4.0. The figure is the department's or province's vineyard area: an indication named after a district, a valley or a DOC is left out.",
- "campaign": "2024",
- "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+ "about": "Area cultivated with vines (ha) in 2025 for each Argentine geographical indication named after a department or a province, from the Instituto Nacional de Vitivinicultura's «Informe anual de superficie 2025» (database frozen on 31 December 2025), tables 5.1 «Cantidad de viñedos y superficie — distribución por provincias / por departamentos», read from the report's text; each province's departments add up to its total. Argentina.gob.ar, Creative Commons Attribution 4.0. The figure is the department's or province's vineyard area: an indication named after a district, a valley or a DOC is left out.",
+ "campaign": "2025",
+ "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2025.pdf",
  "regions": {
   "ar-25-de-mayo": {
    "department": "Veinticinco de Mayo",
    "province": "San Juan",
-   "plantedHa": 7678.7
+   "plantedHa": 7417.7
   },
   "ar-9-de-julio": {
    "department": "Nueve de Julio",
    "province": "San Juan",
-   "plantedHa": 2830.0
+   "plantedHa": 2773.6
   },
   "ar-albardon": {
    "department": "Albardón",
    "province": "San Juan",
-   "plantedHa": 1446.4
+   "plantedHa": 1439.4
   },
   "ar-anelo": {
    "department": "Añelo",
    "province": "Neuquén",
-   "plantedHa": 1351.7
+   "plantedHa": 1365.3
   },
   "ar-angaco": {
    "department": "Angaco",
    "province": "San Juan",
-   "plantedHa": 2089.1
+   "plantedHa": 2085.5
   },
   "ar-avellaneda": {
    "department": "Avellaneda",
    "province": "Río Negro",
-   "plantedHa": 184.0
+   "plantedHa": 171.0
   },
   "ar-balcarce": {
    "department": "Balcarce",
    "province": "Buenos Aires",
-   "plantedHa": 14.9
+   "plantedHa": 14.7
   },
   "ar-belen": {
    "department": "Belén",
    "province": "Catamarca",
-   "plantedHa": 192.1
+   "plantedHa": 142.2
   },
   "ar-cachi": {
    "department": "Cachi",
    "province": "Salta",
-   "plantedHa": 116.8
+   "plantedHa": 123.3
   },
   "ar-calingasta": {
    "department": "Calingasta",
    "province": "San Juan",
-   "plantedHa": 253.1
+   "plantedHa": 253.9
   },
   "ar-castro-barros": {
    "department": "Castro Barros",
@@ -61,57 +61,57 @@
   "ar-catamarca": {
    "department": null,
    "province": "Catamarca",
-   "plantedHa": 2693.6
+   "plantedHa": 2370.0
   },
   "ar-caucete": {
    "department": "Caucete",
    "province": "San Juan",
-   "plantedHa": 6697.5
+   "plantedHa": 6415.6
   },
   "ar-chilecito": {
    "department": "Chilecito",
    "province": "La Rioja",
-   "plantedHa": 5330.6
+   "plantedHa": 5138.9
   },
   "ar-chimbas": {
    "department": "Chimbas",
    "province": "San Juan",
-   "plantedHa": 700.1
+   "plantedHa": 686.5
   },
   "ar-confluencia": {
    "department": "Confluencia",
    "province": "Neuquén",
-   "plantedHa": 109.1
+   "plantedHa": 109.3
   },
   "ar-cordoba-argentina": {
    "department": null,
    "province": "Córdoba",
-   "plantedHa": 244.2
+   "plantedHa": 267.8
   },
   "ar-famatina": {
    "department": "Famatina",
    "province": "La Rioja",
-   "plantedHa": 525.1
+   "plantedHa": 514.5
   },
   "ar-felipe-varela": {
    "department": "Coronel Felipe Varela",
    "province": "La Rioja",
-   "plantedHa": 696.7
+   "plantedHa": 624.5
   },
   "ar-general-alvear": {
    "department": "General Alvear",
    "province": "Mendoza",
-   "plantedHa": 3095.1
+   "plantedHa": 2998.5
   },
   "ar-general-lamadrid": {
    "department": "General Lamadrid",
    "province": "La Rioja",
-   "plantedHa": 67.7
+   "plantedHa": 60.1
   },
   "ar-general-roca": {
    "department": "General Roca",
    "province": "Río Negro",
-   "plantedHa": 841.3
+   "plantedHa": 821.1
   },
   "ar-godoy-cruz": {
    "department": "Godoy Cruz",
@@ -121,7 +121,7 @@
   "ar-guaymallen": {
    "department": "Guaymallén",
    "province": "Mendoza",
-   "plantedHa": 467.3
+   "plantedHa": 457.3
   },
   "ar-iglesia": {
    "department": "Iglesia",
@@ -131,57 +131,57 @@
   "ar-jujuy": {
    "department": null,
    "province": "Jujuy",
-   "plantedHa": 73.3
+   "plantedHa": 71.8
   },
   "ar-junin": {
    "department": "Junín",
    "province": "Mendoza",
-   "plantedHa": 10848.8
+   "plantedHa": 10764.9
   },
   "ar-la-paz": {
    "department": "La Paz",
    "province": "Mendoza",
-   "plantedHa": 135.5
+   "plantedHa": 104.0
   },
   "ar-la-rioja-argentina": {
    "department": null,
    "province": "La Rioja",
-   "plantedHa": 7010.1
+   "plantedHa": 6703.2
   },
   "ar-las-heras": {
    "department": "Las Heras",
    "province": "Mendoza",
-   "plantedHa": 1289.4
+   "plantedHa": 1203.3
   },
   "ar-lavalle": {
    "department": "Lavalle",
    "province": "Mendoza",
-   "plantedHa": 12289.7
+   "plantedHa": 12093.9
   },
   "ar-lujan-de-cuyo-mendoza": {
    "department": "Luján de Cuyo",
    "province": "Mendoza",
-   "plantedHa": 15210.3
+   "plantedHa": 15166.6
   },
   "ar-maipu": {
    "department": "Maipú",
    "province": "Mendoza",
-   "plantedHa": 10666.0
+   "plantedHa": 10630.7
   },
   "ar-mendoza": {
    "department": null,
    "province": "Mendoza",
-   "plantedHa": 142785.5
+   "plantedHa": 140681.5
   },
   "ar-molinos": {
    "department": "Molinos",
    "province": "Salta",
-   "plantedHa": 133.0
+   "plantedHa": 133.2
   },
   "ar-neuquen": {
    "department": null,
    "province": "Neuquén",
-   "plantedHa": 1498.5
+   "plantedHa": 1507.6
   },
   "ar-pichimahuida": {
    "department": "Pichi Mahuida",
@@ -191,37 +191,37 @@
   "ar-pocito": {
    "department": "Pocito",
    "province": "San Juan",
-   "plantedHa": 2852.4
+   "plantedHa": 2834.1
   },
   "ar-poman": {
    "department": "Pomán",
    "province": "Catamarca",
-   "plantedHa": 24.7
+   "plantedHa": 23.6
   },
   "ar-rawson": {
    "department": "Rawson",
    "province": "San Juan",
-   "plantedHa": 1248.8
+   "plantedHa": 1218.4
   },
   "ar-rio-negro": {
    "department": null,
    "province": "Río Negro",
-   "plantedHa": 1286.7
+   "plantedHa": 1259.8
   },
   "ar-rivadavia-mendoza": {
    "department": "Rivadavia",
    "province": "Mendoza",
-   "plantedHa": 13929.0
+   "plantedHa": 13640.6
   },
   "ar-rivadavia-san-juan": {
    "department": "Rivadavia",
    "province": "San Juan",
-   "plantedHa": 187.2
+   "plantedHa": 178.8
   },
   "ar-salta": {
    "department": null,
    "province": "Salta",
-   "plantedHa": 3700.3
+   "plantedHa": 3701.2
   },
   "ar-san-blas-de-los-sauces": {
    "department": "San Blas de los Sauces",
@@ -231,17 +231,17 @@
   "ar-san-carlos-mendoza": {
    "department": "San Carlos",
    "province": "Mendoza",
-   "plantedHa": 8825.0
+   "plantedHa": 8679.6
   },
   "ar-san-carlos-salta": {
    "department": "San Carlos",
    "province": "Salta",
-   "plantedHa": 673.0
+   "plantedHa": 634.2
   },
   "ar-san-juan": {
    "department": null,
    "province": "San Juan",
-   "plantedHa": 39683.7
+   "plantedHa": 38703.4
   },
   "ar-san-luis": {
    "department": null,
@@ -251,17 +251,17 @@
   "ar-san-martin-mendoza": {
    "department": "San Martín",
    "province": "Mendoza",
-   "plantedHa": 25847.2
+   "plantedHa": 25416.9
   },
   "ar-san-martin-san-juan": {
    "department": "San Martín",
    "province": "San Juan",
-   "plantedHa": 3558.0
+   "plantedHa": 3459.9
   },
   "ar-san-rafael-mendoza": {
    "department": "San Rafael",
    "province": "Mendoza",
-   "plantedHa": 11477.9
+   "plantedHa": 10739.1
   },
   "ar-sanagasta": {
    "department": "Sanagasta",
@@ -271,52 +271,52 @@
   "ar-santa-lucia": {
    "department": "Santa Lucía",
    "province": "San Juan",
-   "plantedHa": 879.6
+   "plantedHa": 821.8
   },
   "ar-santa-maria": {
    "department": "Santa María",
    "province": "Catamarca",
-   "plantedHa": 737.6
+   "plantedHa": 720.5
   },
   "ar-santa-rosa": {
    "department": "Santa Rosa",
    "province": "Mendoza",
-   "plantedHa": 7918.6
+   "plantedHa": 7530.4
   },
   "ar-sarmiento-san-juan": {
    "department": "Sarmiento",
    "province": "San Juan",
-   "plantedHa": 7045.4
+   "plantedHa": 6790.4
   },
   "ar-tandil": {
    "department": "Tandil",
    "province": "Buenos Aires",
-   "plantedHa": 8.6
+   "plantedHa": 7.9
   },
   "ar-tinogasta": {
    "department": "Tinogasta",
    "province": "Catamarca",
-   "plantedHa": 1730.8
+   "plantedHa": 1475.3
   },
   "ar-tucuman": {
    "department": null,
    "province": "Tucumán",
-   "plantedHa": 145.1
+   "plantedHa": 111.4
   },
   "ar-tunuyan": {
    "department": "Tunuyán",
    "province": "Mendoza",
-   "plantedHa": 10197.5
+   "plantedHa": 10444.6
   },
   "ar-tupungato": {
    "department": "Tupungato",
    "province": "Mendoza",
-   "plantedHa": 10587.2
+   "plantedHa": 10810.3
   },
   "ar-ullum": {
    "department": "Ullum",
    "province": "San Juan",
-   "plantedHa": 1190.9
+   "plantedHa": 1359.7
   },
   "ar-valle-fertil": {
    "department": "Valle Fértil",
@@ -326,12 +326,12 @@
   "ar-vinchina": {
    "department": "Vinchina",
    "province": "La Rioja",
-   "plantedHa": 50.1
+   "plantedHa": 25.4
   },
   "ar-zonda": {
    "department": "Zonda",
    "province": "San Juan",
-   "plantedHa": 1020.9
+   "plantedHa": 962.7
   }
  },
  "production": {
